@@ -99,22 +99,24 @@ To begin ingesting data into Experience Platform, you can use Catalog Service to
 
 See the [Catalog Service overview](../catalog/home.md) for more information. See the [Data Ingestion overview](../ingestion/home.md) for more information on Adobe Experience Platform Data Ingestion.
 
-### Relational schemas {#relational-schemas}
+### Model-based schemas {#model-based-schemas}
 
 >[!AVAILABILITY]
 >
->Currently, relational schemas are **record-based only** and available based on your license or feature enablement. This includes Adobe Journey Optimizer **Campaign Orchestration**, **Data Distiller**, and **Real-Time CDP B2B** editions.
+>Currently, model-based schemas are available based on your license or feature enablement. This includes Adobe Journey Optimizer **Campaign Orchestration**, **Data Distiller**, and **Real-Time CDP B2B** editions.
 
-Relational schemas are designed for structured, relational-style data patterns. They enforce primary keys, support version descriptors, and define schema-to-schema relationships using primary and foreign keys. Unlike standard XDM schemas, they do not require classes or field groups and are optimized for ingestion through change data capture workflows.
+Model-based schemas are designed for structured, relational-style data patterns. They enforce primary keys, support version identifiers, and define schema-to-schema relationships using primary and foreign keys. Unlike standard XDM schemas, they do not require classes or field groups and are optimized for change data capture ingestion workflows. 
 
-Use a relational schema when you need to:
+For details on how to define schema-to-schema relationships, see the [descriptors endpoint documentation](./api/descriptors.md).
+
+Use a model-based schema when you need to:
 
 * Enforce primary keys and track record versions.
 * Create relationships between schemas with primary and foreign keys.
 * Ingest data through change data capture-enabled sources.
-* Support use cases such as cross-channel campaign orchestration, advanced analytics with Data Distiller, or business-to-business relationship modeling.
+* Support use cases such as cross-channel campaign orchestration, advanced analytics with Data Distiller, or B2B relationship modeling.
 
-To create a relational schema, select **[!UICONTROL relational]** when creating a schema. Relational schemas do not use classes or field groups. Instead, you define the structure manually or by uploading a DDL file. Relational schemas require you to add a required primary key, version descriptor, and—if applicable—timestamp descriptor fields. You can then configure additional fields and define relationships with other schemas.
+To create a model-based schema, select **[!UICONTROL model-based]** when creating a schema. Model-based schemas do not use classes or field groups. Instead, you define the structure manually or upload a DDL file. Model-based schemas require a primary key, version identifier, and if applicable, timestamp identifier fields. You can then configure additional fields and define relationships with other schemas.
 
 >[!NOTE]
 >
@@ -125,7 +127,7 @@ For detailed steps, see:
 * [Relational schema overview](./schema/relational.md)
 * [UI tutorial](./ui/resources/schemas.md#relational-creation)
 * [API tutorial](./api/schemas.md#create-relational-schema)
-* [Descriptor documentation](./api/descriptors.md#relationship-descriptor)
+* [Descriptor (identifier) documentation](./api/descriptors.md#relationship-descriptor)
 * [Enable change data capture](../sources/tutorials/api/change-data-capture.md)
 
 ### Query Service {#query-service}

@@ -41,7 +41,7 @@ The **[!UICONTROL Create a relational schema]** dialog appears. You can choose e
 
 In the **[!UICONTROL Create a relational schema]** dialog, select **[!UICONTROL Create manually]**, then select **[!UICONTROL Next]**.  
    
-![The Create a relational schema dialog with [!UICONTROL Create manually] selected and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/relational-dialog.png)
+![The Create a relational schema dialog with Create manually selected and Next highlighted.](../../images/ui/resources/schemas/relational-dialog.png)
 
 The **[!UICONTROL Relational schema details]** page appears. Enter a schema display name and an optional description, then select **[!UICONTROL Finish]** to create the schema.  
    
@@ -53,13 +53,13 @@ The Schema Editor opens with an empty canvas for defining the schema structure. 
 
 #### Add a version identifier field {#add-version-identifier}
 
-To enable version tracking and support change data capture, you must designate a version identifier field in your schema. In the Schema Editor, select the plus (**+**) icon next to the schema name to add a new field.
+To enable version tracking and support change data capture, you must designate a version identifier field in your schema. In the Schema Editor, select the plus (![A plus icon.](/help/images/icons/plus.png)) icon next to the schema name to add a new field.
 
-Enter a field name such as `lastmodified`, and choose a data type of **[!UICONTROL DateTime]** or **[!UICONTROL Number]**.
+Enter a field name such as `updateSequence`, and choose a data type of **[!UICONTROL DateTime]** or **[!UICONTROL Number]**.
 
 In the right rail, enable the **[!UICONTROL Version Identifier]** checkbox, then select **[!UICONTROL Apply]** to confirm the field.
 
-![The Schema Editor with a DateTime field named `lastmodified` added and the Version Identifier checkbox selected.](../../images/ui/resources/schemas/add-version-identifier.png)
+![The Schema Editor with a DateTime field named `updateSequence` added and the Version Identifier checkbox selected.](../../images/ui/resources/schemas/add-version-identifier.png)
 
 >[!IMPORTANT]
 >
@@ -83,7 +83,7 @@ The [!UICONTROL Select entities and fields to import] dialog appears, allowing y
 
 >[!IMPORTANT]
 >
->The table structure must contain a **primary key** and a **version identifier**, such as a `lastmodified` field of type datetime or number.
+>The table structure must contain a **primary key** and a **version identifier**, such as a `updateSequence` field of type datetime or number.
 >
 >For change data capture ingestion, a special column named `_change_request_type` of type String is also required to enable incremental processing. This field indicates the type of data change (for example,  `u` (upsert) or `d` (delete)).
 

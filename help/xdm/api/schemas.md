@@ -192,7 +192,7 @@ A successful response returns the details of the schema. The fields that are ret
 
 The schema composition process begins by assigning a class. The class defines key behavioral aspects of the data (record or time series), as well as the minimum fields that are required to describe the data that will be ingested.
 
-For instructions on creating a schema without classes or field groups, known as a relational schema, see the [Create a relational schema](#create-a-relational-schema) section.
+For instructions on creating a schema without classes or field groups, known as a model-based schema, see the [Create a model-based schema](#create-model-based-schema) section.
 
 >[!NOTE]
 >
@@ -275,7 +275,7 @@ Performing a GET request to [list all schemas](#list) in the tenant container wo
 
 To add additional fields to a schema, you can perform a [PATCH operation](#patch) to add field groups to the schema's `allOf` and `meta:extends` arrays.
 
-## Create a relational schema {#create-relational-schema}
+## Create a model-based schema {#create-model-based-schema}
 
 >[!AVAILABILITY]
 >
@@ -289,20 +289,22 @@ Create a relational schema by making a POST request to the `/schemas` endpoint. 
 
 Create the schema first with `POST /tenant/schemas`. Then add the required descriptors with the [Descriptors API (`POST /tenant/descriptors`)](../api/descriptors.md):
 
-- [Primary key descriptor](../api/descriptors.md#primary-key-descriptor): Primary-key fields are **required** and must be **root-level**. 
+- [Primary key descriptor](../api/descriptors.md#primary-key-descriptor): A primary-key field must be at the **root-level** and **marked as required**. 
 - [Version descriptor](../api/descriptors.md#version-descriptor): **Required** when a primary key exists. 
-- [Relationship descriptor](../api/descriptors.md#relationship-descriptor): Optional, defines joins; cardinality not enforced at ingestion. 
+- [Relationship descriptor](../api/descriptors.md#relationship-descriptor): Optional, defines joins; cardinality not enforced at ingestion.
+- [Timestamp descriptor](../api/descriptors.md#timestamp-descriptor): For time-series schemas, the primary key must be a **composite** key that includes the timestamp field.
 
-<!-- For Sept
-- [Timestamp descriptor](../api/descriptors.md#timestamp-descriptor): For time-series schemas, the primary key must be a **composite** key that includes the timestamp field. -->
-
->[!AVAILABILITY]
+>[!NOTE]
 >
->Although `meta:behaviorType` technically accepts `time-series`, support is not currently available for relational schemas. Set `meta:behaviorType` to `"record"`.
+>In the UI Schema Editor, the version descriptor and timestamp descriptors appears as "[!UICOTRNOL Version identifier]" and "[!UICOTRNOL Timestamp identifier]" respectively.
+
+<!-- >[!AVAILABILITY]
+>
+>Although `meta:behaviorType` technically accepts `time-series`, support is not currently available for relational schemas. Set `meta:behaviorType` to `"record"`. -->
 
 >[!CAUTION]
 >
->Relational schemas **do not participate in union schemas**. Do not add a `union` tag to `meta:immutableTags`. See the [unions endpoint guide](./unions.md) for details on union behavior in standard XDM.
+>Relational schemas are **not compatible with union schemas**. Do not apply the `union` tag to `meta:immutableTags` when working with relational schemas. This configuration is blocked in the UI but is not currently blocked by the API. See the [unions endpoint guide](./unions.md) for more information on union schema behavior.
 
 **API format**
 
@@ -326,7 +328,7 @@ curl --request POST \
   "type": "object",
   "description": "Schema of the Marketing Customers table.",
   "definitions": {
-    "marketing_customers": {
+    "customFields": {
       "type": "object",
       "properties": {
         "customer_id": {
@@ -352,17 +354,16 @@ curl --request POST \
     }
   },
   "allOf": [
-    { "$ref": "#/definitions/marketing_customers" }
+    {
+      "$ref": "#/definitions/customFields",
+      "meta:xdmType": "object"
+    }
   ],
   "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
   "meta:behaviorType": "record"
 }
 '
 ```
-
->[!NOTE]
->
-> This example uses a local `definitions` object referenced via `allOf` to keep fields flat and avoid tenant namespaces. You can also define fields directly under root `properties` for simplified/relational schemas.
 
 ### Request body properties
 
@@ -379,7 +380,7 @@ curl --request POST \
 
 >[!IMPORTANT]
 >
->Schema evolution for relational schemas is additive only. Add new fields with PATCH. Do not remove, rename, or change the type of existing fields.
+>Schema evolution for model-based schemas follows the same additive rules as standard schemas. You can add new fields with a PATCH request. Changes like renaming or removing fields are only allowed if no data has been ingested into the dataset.
 
 **Response**
 
@@ -452,13 +453,13 @@ A successful request returns **HTTP 201 (Created)** and the created schema.
 | `meta:behaviorType` | String | Behavior type (`record` or `time-series`, when enabled).    |
 | `meta:containerId`  | String | Container in which the schema is stored (e.g., `tenant`).   |
 
-To add fields to a relational schema after it's been created, make a[PATCH request](#patch). Relational schemas do not inherit or auto-evolve and support **additive changes only**.
+To add fields to a relational schema after it's been created, make a [PATCH request](#patch). Relational schemas do not inherit or auto-evolve. Structural changes like renaming or deleting fields are only allowed if no data has been ingested into the dataset. Once data exists, only **additive changes** (such as adding new fields) are supported.
 
 You can add new root-level fields (within the root definition or root `properties`), but you cannot remove, rename, or change the type of existing fields.
 
 >[!CAUTION]
 >
->Schema evolution is **append-only**. Plan field names and types carefully before publishing. Once in use, fields cannot be deleted or modified.
+>Schema evolution becomes restricted after a dataset is initialized using the schema. Plan field names and types carefully beforehand as once data has been ingested, fields cannot be deleted or modified.
 
 ## Update a schema {#put}
 

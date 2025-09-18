@@ -13,43 +13,40 @@ With change data capture, each flow captures and applies inserts, updates, and d
 
 You can use change data capture with the following sources:
 
-## Using change data capture with relational schemas
+## Using change data capture with Model-based schemas
 
 >[!AVAILABILITY]
 >
->Currently, relational schemas are **record-based only** and available based on your license or feature enablement.
+>Currently, model-based schemas are available depending on your license or feature enablement.
 
-Relational schemas extend Experience Platform to enforce primary keys, track row-level changes, and define schema-level relationships. With change data capture, they apply inserts, updates, and deletes directly in the data lake, reducing the need for Extract, Transform, Load (ETL) or manual reconciliation.
+Model-based schemas extend Experience Platform to enforce primary keys, track row-level changes, and define schema-level relationships. With change data capture, they apply inserts, updates, and deletes directly in the data lake, reducing the need for Extract, Transform, Load (ETL) or manual reconciliation.
 
-### Relational schema requirements for change data capture
+### Model-based schema requirements for change data capture
 
-Before you use a relational schema with change data capture, configure the following descriptors:
+Before you use a model-based schema with change data capture, configure the following identifiers:
 
 * Uniquely identify each record with a primary key.  
-* Apply updates in sequence using a version descriptor.  
-
-<!-- For Sept:
- * For time-series schemas, add a timestamp descriptor.   -->
+* Apply updates in sequence using a version identifier.  
+* For time-series schemas, add a timestamp identifier.
 
 ### Control column handling
 
-Use the `_change_request_type` column to indicate how each row should be processed:
+Use the `_change_request_type` column to specify how each row should be processed:
 
-* `u` = upsert (default if the column is absent)  
-* `d` = delete  
+* `u` — upsert (default if the column is absent)  
+* `d` — delete  
 
 This column is evaluated only during ingestion and is not stored or mapped to XDM fields.  
 
 ### Workflow
 
-To enable change data capture with a relational schema:
+To enable change data capture with a model-based schema:
 
-1. [Create a relational schema](../../../xdm/ui/resources/schemas#create-a-relational-schema).  
+1. [Create a model-based schema](../../../xdm/ui/resources/schemas#create-a-relational-schema).  
 2. Add the [required descriptors](../../../xdm/api/descriptors.md#relationship-descriptor):  
    * Primary key  
-   * Version descriptor  
-   <!--For Sept:
-   * Timestamp descriptor (time-series only) -->
+   * Version identifier  
+   * Timestamp identifier (time-series only)
 3. Create a dataset from the schema and enable change data capture.  
 4. Add the `_change_request_type` column to your source files or tables.  
 5. Complete the source connection setup to enable ingestion.  
@@ -58,8 +55,8 @@ To enable change data capture with a relational schema:
 
 For file-based sources ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage], and [!DNL SFTP]), include a `_change_request_type` column in your files:
 
-* `u`: upsert (default if omitted)  
-* `d`: delete  
+* `u`— upsert (default if omitted)  
+* `d`— delete  
 
 Follow the source-specific steps below.
 

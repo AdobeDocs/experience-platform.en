@@ -63,11 +63,8 @@ A pop-up window appears presenting you with the option to browse templates or us
 >[!NOTE]
 >
 >Templates can auto-generate relational schemas when working with sources that require change data capture workflows or support multiple data models.  
->When using templates with relational schemas, the auto-generated assets will include the required primary key, and version descriptor.  
->For more information on relational schemas, see [relational schema overview](../../../xdm/schema/relational.md).
-
-<!-- For Sept:
-Replace above with: >When using templates with relational schemas, the auto-generated assets will include the required primary key, version descriptor, and timestamp descriptor fields. -->
+>When using templates with relational schemas, the auto-generated assets will include the required primary key, version identifier, and timestamp identifier fields.  
+>For more information, see the [Model-based schemas overview](../../../xdm/schema/relational.md).
 
 To use auto-generated assets, select **[!UICONTROL Browse templates]** and then select **[!UICONTROL Select]**.
 

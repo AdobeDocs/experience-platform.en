@@ -42,19 +42,15 @@ Use the following capabilities to model structured data in the data lake while m
   > Support for **Time-series behavior** is not currently available in the UI or API.
 
 * **Primary key enforcement**: Define a primary key to uniquely identify each record and prevent duplicates during ingestion.
-* **Version control**: Use a **version descriptor** to ensure updates are applied in the correct order, even if records arrive out of sequence.
-* **Relationship mapping**: Create one-to-many or many-to-one relationships between relational schemas or between relational and standard schemas. Relationship definitions are stored as descriptors to enable efficient joins.
+* **Version control**: Use a **version identifier** (a descriptor) to ensure updates are applied in the correct order, even if records arrive out of sequence.
+* **Relationship mapping**: Create one-to-one or many-to-one relationships between relational schemas or between relational and standard schemas. Relationship definitions are stored as descriptors to enable efficient joins.
 * **Simplified evolution**: Relational schemas do not participate in union views and are not updated when shared field groups change, preventing unexpected downstream changes.
-* **Flexible field definition**: Add fields directly without tenant-id namespacing. You may still use existing XDM field groups, but changes to them do not automatically propagate to your schema.
+* **Flexible field definition**: Add fields directly without tenant-id namespacing. Relational schemas do not support XDM field groups.
 * **No dependency on union schemas**: Improves query performance and reduces the operational overhead of managing global schema views.
-
-<!-- For Sept:
 * **Schema behavior support**: Configure with:
   * **Record behavior**: Captures the current state of an entity, such as a customer, account, or campaign.
   * **Time-series behavior**: Captures events and the time they occur, useful for tracking sequences or changes over time.
-
-* **Event-time ordering**: For time-series schemas, use a **timestamp descriptor** to order events by occurrence time instead of ingestion time. 
--->
+* **Event-time ordering**: For time-series schemas, use a **timestamp identifier** to order events by occurrence time instead of ingestion time.
 
 ## Required fields
 
@@ -65,11 +61,11 @@ Relational schemas require certain descriptors—metadata in the schema definiti
 Use a primary key descriptor to ensure each record is uniquely identifiable. The supported configurations are:
 
 * **Single-field primary key**: Use one field with a unique value for each record.
-* **Composite primary key**: Use multiple fields to form a unique identifier.
+* **Composite primary key**: Use multiple fields to form a unique identifier. For time-series schemas, the composite key must include the timestamp field identified by the timestamp descriptor.
 
-<!-- For Sept:
-* **Composite primary key**: Use multiple fields to form a unique identifier. For time-series schemas, the composite key must include the timestamp field identified by the timestamp descriptor. 
--->
+>[!NOTE]
+>
+>In the UI Schema Editor, the version descriptor and timestamp descriptors appears as "[!UICOTRNOL Version identifier]" and "[!UICOTRNOL Timestamp identifier]" respectively.
 
 **Example (single-field):**
 
@@ -80,7 +76,6 @@ Use a primary key descriptor to ensure each record is uniquely identifiable. The
 }
 ```
 
-<!-- To be included in September:
 **Example (composite for time-series)**
 
 ```json
@@ -88,11 +83,11 @@ Use a primary key descriptor to ensure each record is uniquely identifiable. The
   "xdm:descriptor": "xdm:descriptorPrimaryKey",
   "xdm:sourceProperty": ["customerId", "eventTimestamp"]
 }
-``` -->
+```
 
-### Version descriptor
+### Version descriptor (identifier)
 
-Define a version descriptor to maintain correct record state and ensure the latest update is applied. When multiple records share the same primary key, the record with the highest version value is considered the most recent.
+Define a version descriptor (identifier) to maintain correct record state and ensure the latest update is applied. When multiple records share the same primary key, the record with the highest version value is considered the most recent.
 
 **Example:**
 
@@ -103,9 +98,9 @@ Define a version descriptor to maintain correct record state and ensure the late
 }
 ```
 
-### Timestamp descriptor
+### Timestamp descriptor (identifier)
 
-For time-series schemas, define a timestamp descriptor to set the event time for ordering.
+For time-series schemas, define a timestamp descriptor (identifier) to set the event time for ordering.
 
 **Example:**
 
@@ -124,20 +119,23 @@ For instructions on creating descriptors in the Schema Editor, see [Create descr
 
 ## Relationship support {#relationship-support}
 
-Relational schemas support relationship descriptors that define how datasets connect across schemas. These relationships improve referential integrity, enable reusable modeling patterns, and support connected queries across applications—without embedding foreign keys directly in data rows.
+Relational schemas support relationship descriptors, which define connections between datasets across schemas. These relationships improve referential integrity, enable reusable modeling patterns, and support connected queries across applications. This is done without embedding foreign keys directly in data rows.
 
-Relationship descriptors are defined at the schema level and resolved at query time. This allows for greater flexibility and governance across datasets.
+Define relationship descriptors at the schema level so they can be resolved dynamically at query time. Cardinality values (such as 1:1 or many-to-one) provide guidance but do not enforce data constraints during ingestion. This design supports flexible schema relationships and makes it easier to manage how data connects across datasets.
 
 Before you add relationship descriptors, determine the appropriate type and target:
 
-* **One-to-many** – A single record in a schema maps to multiple related records in another schema.
-* **Many-to-one** – Multiple records in a schema map to a single record in another schema.
+* **One-to-one** – Each record in the source schema corresponds to at most one record in the destination schema.
+* **Many-to-one** – Multiple records in the source schema may reference the same record in the destination schema.
 
 >[!NOTE]
 >
 >You can define relationships between two relational schemas or between a relational schema and a standard schema. Relationships to ad-hoc schemas are not supported.
 
-**Example: One-to-many relationship**
+<!-- Q) 
+Madeline commented: "relational to standard might only be offered for b2b customers; that's how it will be on the UI" - is that still accurate? -->
+
+**Example: One-to-one relationship**
 
 ```json
 {
@@ -147,6 +145,8 @@ Before you add relationship descriptors, determine the appropriate type and targ
   "xdm:destinationProperty": "accountId"
 }
 ```
+<!-- Q) 
+Should these be `@type: "xdm:descriptorRelationship",` This could be a copy-pasting error? -->
 
 **Example: Many-to-one relationship**
 
@@ -177,20 +177,20 @@ For a list of relationship descriptor types and syntax, see the [descriptors API
 
 Use [change data capture](../../sources/tutorials/api/change-data-capture.md) in your data connections to keep relational datasets synchronized with source systems. You can also ingest data using SQL via Data Distiller or upload files manually. Choose the path that aligns with your operational model, then apply the change data capture rules consistently.
 
-Change data capture in Experience Platform captures and applies all changes—inserts, updates, and deletes—in real time, ensuring full alignment between source and destination data. Unlike incremental copy, which only tracks new or updated records using a timestamp column (such as `LastModified`) and cannot detect deletions, change data capture provides a complete change history.
+Change data capture in Experience Platform captures and applies all changes, including inserts, updates, and deletes, in real time, ensuring full alignment between source and destination data. Unlike incremental copy, which tracks only new or updated records using a timestamp column (such as `LastModified`) and cannot detect deletions, change data capture provides a complete change history.
 
 Supported ingestion methods include:
 
 * **Sources with change data capture** – Include a `_change_request_type` column in the source data to indicate how each row should be processed:
-  * `U` = upsert (default if column is missing)  
-  * `D` = delete  
+  * `U` — upsert (default if column is missing)  
+  * `D` — delete  
     This column is evaluated during ingestion only and is not stored in XDM or mapped to XDM fields.
 
-  >[!IMPORTANT]
-  >
-  > For **file-based sources only**, each row in the data file must include a `_change_request_type` column with either `U` (upsert) or `D` (delete). Without this column, the system will not recognize the data as supporting change tracking. As a result, options such as the **Orchestrated Campaign** toggle will not appear, and the dataset cannot be selected for targeting.
+>[!IMPORTANT]
+>
+> For **file-based sources only**, each row in the data file must include a `_change_request_type` column with either `U` (upsert) or `D` (delete). Without this column, the system will not recognize the data as supporting change tracking. As a result, options such as the **Orchestrated Campaign** toggle will not appear, and the dataset cannot be selected for targeting.
 
-  For step-by-step instructions on enabling change data capture in the Sources workflow, see [Enable change data capture for source connections](../../sources/tutorials/api/change-data-capture.md).
+For step-by-step instructions on enabling change data capture in the Sources workflow, see [Enable change data capture for source connections](../../sources/tutorials/api/change-data-capture.md).
 
 * **Data Distiller**: Ingest using SQL queries to write into relational datasets.
 * **Local file upload**: Upload files manually when needed for non-source ingestion workflows.
@@ -209,9 +209,11 @@ The following list of descriptors indicate their relevance to hygiene operations
 
 * **Primary key descriptor**: Identifies records for updates or deletes.
 * **Version descriptor**: Ensures deletes and updates apply in the correct order.
+* **Timestamp descriptor (time-series)**: Aligns deletes with event occurrence times.
 
-<!-- For September:
-* **Timestamp descriptor (time-series)**: Aligns deletes with event occurrence times. -->
+<!-- Q)
+Madeline commented:
+"We added the ability for there to be non-primary Identity descriptors for relational schemas and I heard that was to serve the needs of hygiene. Not sure of the details, apologies" - can anyone clarify? -->
 
 >[!NOTE]
 >
@@ -226,13 +228,11 @@ Review the following limitations before using relational schemas:
 * Relational schemas do not participate in union schemas.
 * Schema evolution is manual; they do not auto-update when field groups change.
 
-  >[!IMPORTANT]
-  >
-  >Schema evolution is additive only. You can add new fields after publication, but cannot remove or alter existing ones.
+>[!IMPORTANT]
+>
+>Schema evolution becomes restricted after a dataset is initialized using the schema. Plan field names and types carefully beforehand as once data has been ingested, fields cannot be deleted or modified.
 
-* Relationships are limited to one-to-many and many-to-one.
+* Relationships are limited to one-to-one and many-to-one.
 * Availability depends on your license or feature enablement.
-
-<!-- For sept:
-* Composite primary keys are required for time-series schemas. -->
+* Composite primary keys are required for time-series schemas.
 
