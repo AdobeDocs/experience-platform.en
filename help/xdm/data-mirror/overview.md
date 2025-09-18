@@ -6,7 +6,7 @@ description: Learn how Data Mirror enables row-level change ingestion from exter
 ---
 # Data Mirror overview
 
-Data Mirror is a data ingestion capability in Adobe Experience Platform that enables the ingestion of row-level changes from external databases into the data lake using model-based schemas. This capability preserves data relationships, enforces uniqueness, and supports versioning without requiring upstream ETL processes.
+Data Mirror is a capability in Adobe Experience Platform that enables row-level change ingestion from external databases into the data lake using model-based schemas. This capability preserves data relationships, enforces uniqueness, and supports versioning without requiring upstream ETL processes.
 
 Use Data Mirror to synchronize mutable data (inserts, updates, and deletes) from external systems—such as Snowflake, Databricks, or BigQuery—directly into Experience Platform while maintaining the integrity and structure of your existing database models.
 
@@ -36,26 +36,26 @@ Data Mirror addresses common data integration challenges and unlocks new platfor
 * **Preserves data integrity**: Maintains relationships and constraints that support complex analytical and operational workflows.
 * **Supports real-time sync**: Keeps Experience Platform data current with source system changes.
 
-## How Data Mirror works
+## Implement Data Mirror
 
-Data Mirror operates through model-based schemas, which differ from standard XDM schemas by providing explicit control over data structure and relationships. The process involves:
+Data Mirror operates through model-based schemas (flexible data structures with enforced constraints), which differ from standard XDM schemas by providing explicit control over data structure and relationships. To implement Data Mirror:
 
-1. **Schema definition**: Create model-based schemas with required descriptors (primary key, version, and optionally timestamp).
+1. **Schema definition**: Create model-based schemas with required descriptors (metadata that define primary key, version, and optionally timestamp).
 2. **Relationship mapping**: Define connections between datasets using relationship descriptors.
-3. **Source configuration**: Set up change data capture connections with cloud data warehouses or other sources.
+3. **Source configuration**: Set up change data capture (CDC) connections with cloud data warehouses or other sources.
 4. **Change ingestion**: Ingest row-level changes while maintaining uniqueness and applying updates in correct order.
 
 Unlike standard ingestion approaches, Data Mirror respects your database model structure within the Experience Platform data lake, eliminating the need for external preprocessing.
 
 ## Prerequisites and requirements
 
-Before implementing Data Mirror, ensure you have:
+Before you implement Data Mirror, ensure you have:
 
 ### Technical requirements
 
-* **Model-based schemas**: Data Mirror is exclusive to model-based schemas and cannot be used with standard XDM schemas.
-* **Schema descriptors**: All schemas must include primary key and version descriptors; time-series schemas additionally require timestamp descriptors.
-* **Source system support**: Your external database must support change data capture or provide change metadata.
+* **Model-based schemas**: Use model-based schemas exclusively; Data Mirror cannot be used with standard XDM schemas.
+* **Schema descriptors**: Include primary key and version descriptors in all schemas; time-series schemas additionally require timestamp descriptors.
+* **Source system support**: Ensure your external database supports change data capture or provides change metadata.
 
 ### Knowledge prerequisites
 
@@ -74,15 +74,25 @@ Before implementing Data Mirror, ensure you have:
 
 Data Mirror is designed for scenarios requiring precise data synchronization and relationship preservation:
 
-* **Warehouse-to-lake synchronization**: Mirror event data, customer interaction logs, campaign events, and auxiliary data from cloud data warehouses like Snowflake, BigQuery, or Databricks directly into Experience Platform. This capability supports campaign eligibility, targeting precision, and message sequencing by ensuring lake data reflects the most recent changes from the warehouse. Adobe Journey Optimizer and Real-Time CDP B2B benefit directly, as both rely on near-real-time lake data for segmentation and orchestration logic.
+### Warehouse-to-lake synchronization
 
-* **Customer Journey Analytics integration**: Sync time-series events such as web clicks, support interactions, product views, purchases, and behavioral engagement data from secondary systems like call centers or chat logs. Having complete change history enables accurate trend analysis, funnel performance, and behavioral segmentation by accounting for updates or corrections to event data over time. CJA's Warehouse Sync feature specifically relies on this capability to reflect upserts and deletes, ensuring event datasets mirror the current state of external sources.
+Mirror event data, customer interaction logs, campaign events, and auxiliary data from cloud data warehouses like Snowflake, BigQuery, or Databricks directly into Experience Platform. This capability supports campaign eligibility, targeting precision, and message sequencing to ensure lake data reflects the most recent changes from the warehouse. Adobe Journey Optimizer and Real-Time CDP B2B benefit directly, as both rely on near-real-time lake data for segmentation and orchestration logic.
 
-* **B2B relationship modeling**: Maintain critical relationships such as account-to-contact, opportunity-to-account, subscription-to-account, and contact-to-region hierarchies across datasets. These preserved relationships support B2B workflows including segmentation, lead scoring, opportunity pipeline tracking, and coordinated multichannel outreach across teams or territories. Unlike standard B2B data ingestion that flattens relationships, Data Mirror preserves them natively using primary and foreign key descriptors, enabling more accurate and reusable data modeling in-platform.
+### Customer Journey Analytics integration
 
-* **Subscription management**: Track critical subscription events including renewals, upgrades/downgrades, cancellations, pause/resume events, and changes in billing status or plan details with complete change history. This comprehensive tracking supports retention campaigns, churn prediction models, lifecycle-based segmentation, and billing/revenue analytics. Having full change history allows organizations to identify behavioral patterns leading to churn, predict at-risk accounts, and personalize offers based on precise lifecycle stage data.
+Sync time-series events such as web clicks, support interactions, product views, purchases, and behavioral engagement data from secondary systems like call centers or chat logs. Having complete change history enables accurate trend analysis, funnel performance, and behavioral segmentation by accounting for updates or corrections to event data over time. CJA's Warehouse Sync feature specifically relies on this capability to reflect upserts and deletes, to ensure event datasets mirror the current state of external sources.
 
-* **Data hygiene operations**: Enable precise record-level deletions via change data capture for compliance requirements, such as deleting specific customer data while preserving it in source systems, and for general platform cleanup workflows. This capability supports regulated industries including healthcare, finance, and government that require granular data control. Data Mirror's change tracking ensures deletions are applied accurately without affecting related records or compromising data integrity across connected datasets.
+### B2B relationship modeling
+
+Maintain critical relationships such as account-to-contact, opportunity-to-account, subscription-to-account, and contact-to-region hierarchies across datasets. These preserved relationships support B2B workflows including segmentation, lead scoring, opportunity pipeline tracking, and coordinated multichannel outreach across teams or territories. Unlike standard B2B data ingestion that flattens relationships, Data Mirror preserves them natively using primary and foreign key descriptors (metadata that define schema behavior), enabling more accurate and reusable data modeling in-platform.
+
+### Subscription management
+
+Track critical subscription events including renewals, upgrades/downgrades, cancellations, pause/resume events, and changes in billing status or plan details with complete change history. This comprehensive tracking supports retention campaigns, churn prediction models, lifecycle-based segmentation, and billing/revenue analytics. Having full change history allows organizations to identify behavioral patterns leading to churn, predict at-risk accounts, and personalize offers based on precise lifecycle stage data.
+
+### Data hygiene operations
+
+Enable precise record-level deletions via change data capture (CDC) for compliance requirements, such as deleting specific customer data while preserving it in source systems, and for general platform cleanup workflows. This capability supports regulated industries including healthcare, finance, and government that require granular data control. Data Mirror's change tracking ensures deletions are applied accurately without affecting related records or compromising data integrity across connected datasets.
 
 ## Important considerations
 
@@ -129,4 +139,4 @@ After reviewing this overview, you should be able to determine if Data Mirror fi
 3. **Plan your schema design**: Identify required descriptors and relationships for your use case.
 4. **Choose your ingestion method**: Select the appropriate pathway based on your source systems and operational requirements.
 
-For detailed implementation guidance, see [Data Mirror use cases](./use-cases.md) and the technical documentation for [model-based schemas](../schema/model-based.md).
+For detailed implementation guidance, see the technical documentation for [model-based schemas](../schema/model-based.md).
