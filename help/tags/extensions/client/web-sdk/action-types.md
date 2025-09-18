@@ -124,6 +124,21 @@ Use the **[!UICONTROL Instance]** selector to choose your Web SDK instance that 
     * **[!UICONTROL Disabled]**: Explicitly suppress the request for the page scope and default surface. This corresponds to `requestDefaultPersonalization` set to `false`.
 * **[!UICONTROL Decision context]**: This is a key-value map that is used when evaluating Adobe Journey Optimizer rulesets for on-device decisioning. You can provide the decision context manually or through a data element.
 
+### Advertising {#advertising}
+
+When you select the **[!UICONTROL Advertising]** component for the Web SDK custom build component, the rule settings for `sendEvent` actions include an [!UICONTROL Advertising] sction, which defines how advertising data is used for attribution measurement. This setting is helpful when the rule includes a sequence of multiple actions.
+
+![Experience Platform Tags UI image showing the Advertising settings for the Send Event action type.](assets/send-event-advertising.png)
+
+The **[!UICONTROL Request default Advertising data]** section provides the following options:
+
+* **[!UICONTROL Automatic]**: Any advertising data available at the time of this event will be automatically added to XDM.
+* **[!UICONTROL Wait]**: Delay the execution of this call until the advertising data has been retrieved and resolved. Then, add the data to XDM.
+* **[!UICONTROL Disabled]**: Do not add advertising data to XDM. Use this for any requests that are not intended for Customer Journey Analytics or Adobe Analytics.
+* **[!UICONTROL Provide a data element]**: Use a data element to include or exclude advertising data during page load. Resolved values for the data element can include `automatic`, `wait`, and `disabled`.
+
+If you do not use a rule to configure a `sendEvent` action, then advertising data is sent as a separate Advertisement enrichment event.
+
 ### Datastream configuration overrides {#datastream-overrides}
 
 Datastream overrides allow you to define additional configurations for your datastreams, which get passed to the Edge Network via the Web SDK.
