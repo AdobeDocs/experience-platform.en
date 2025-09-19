@@ -152,11 +152,11 @@ For each scenario, assume that Experience Events contains the following events:
 
 **Scenario 1: 2 GAIDs, 1 ECID**
 
-* In this scenario, an incoming Experience Event contains 2 GAIDs and 1 ECID. Between these namespaces, GAID is configured as the namespace with the highest namespace priority. However, because there are 2 GAIDs, Profile **does not** store this Experience Event. This is because any incoming Experience Event that contains two or more identity values of the namespace marked as the namespace with the highest priority is considered bad data.
+* In this scenario, an incoming Experience Event contains 2 GAIDs and 1 ECID. Between these namespaces, GAID is configured as the namespace with the highest namespace priority. However, because there are 2 GAIDs, Profile **does not** store this Experience Event.
 
 **Scenario 2: 2 CRMIDs, 1 GAID**
 
-* In this scenario, an incoming Experience Event contains 2 CRMIDs and 1 GAID. Between these namespaces, CRMID is configured as the namespace with the highest namespace priority. However, because there are 2 GAIDs, Profile **does not** store this Experience Event. This is because any incoming Experience Event that contains two or more identity values of the namespace marked as the namespace with the highest priority is considered bad data.
+* In this scenario, an incoming Experience Event contains 2 CRMIDs and 1 GAID. Between these namespaces, CRMID is configured as the namespace with the highest namespace priority. However, because there are 2 GAIDs, Profile **does not** store this Experience Event.
 
 **Scenario 3: 1 CRMID, 2 GAIDs**
 
