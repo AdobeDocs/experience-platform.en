@@ -47,7 +47,7 @@ Data Mirror operates through model-based schemas (flexible data structures with 
 
 1. **Schema definition**: Create model-based schemas with required descriptors (metadata that define schema behavior and constraints).
 1. **Relationship mapping**: Define connections between datasets using relationship descriptors.
-1. **Source configuration**: Set up change data capture (CDC) connections with cloud data warehouses or other sources.
+1. **Source configuration**: Set up change data capture connections with cloud data warehouses or other sources.
 1. **Change ingestion**: Ingest row-level changes while maintaining uniqueness and applying updates in correct order.
 
 Unlike standard ingestion approaches, Data Mirror respects your database model structure within the Experience Platform data lake, eliminating the need for external preprocessing.
@@ -97,7 +97,7 @@ Track critical subscription events including renewals, upgrades/downgrades, canc
 
 ### Data hygiene operations
 
-Enable precise record-level deletions via change data capture (CDC) for compliance requirements, such as deleting specific customer data while preserving it in source systems, and for general platform cleanup workflows. This capability supports regulated industries including healthcare, finance, and government that require granular data control. Data Mirror's change tracking ensures deletions are applied accurately without affecting related records or compromising data integrity across connected datasets.
+Enable precise record-level deletions via change data capture for compliance requirements, such as deleting specific customer data while preserving it in source systems, and for general platform cleanup workflows. This capability supports regulated industries including healthcare, finance, and government that require granular data control. Data Mirror's change tracking ensures deletions are applied accurately without affecting related records or compromising data integrity across connected datasets.
 
 ## Important considerations
 
@@ -107,7 +107,7 @@ Model-based schemas default to **record behavior**, which captures entity states
 
 ### Change data capture vs. Data Distiller
 
-* **Sources with CDC**: Use for real-time synchronization from supported cloud warehouses
+* **Sources with change data capture**: Use for real-time synchronization from supported cloud warehouses
 * **Data Distiller**: Use for SQL-based ingestion and complex transformation workflows
 * **File upload**: Use for manual or batch-based change ingestion
 
@@ -126,7 +126,7 @@ Choose your implementation approach based on your specific requirements:
 
 ### Data ingestion
 
-* **Change data capture**: [Enable CDC in source connections](../../sources/tutorials/api/change-data-capture.md)
+* **Change data capture**: [Enable change data capture in source connections](../../sources/tutorials/api/change-data-capture.md)
 * **SQL ingestion**: Use Data Distiller to ingest data using SQL queries to write into relational datasets
 * **File upload**: Upload files manually when needed for non-source ingestion workflows, particularly useful for batch processing or one-time data loads
 

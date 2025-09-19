@@ -90,7 +90,7 @@ Control columns such as `_change_request_type`, used for change data capture, ar
 
 Model-based schemas also support relationships between datasets using primary and foreign key mappings.
 
-For more information, see [Data Mirror overview](../../../../xdm/data-mirror/overview.md) and the [model-based schemas technical reference](../../../../xdm/schema/model-based.md).
+For more information, see the [Data Mirror overview](../../../../xdm/data-mirror/overview.md) and the [model-based schemas technical reference](../../../../xdm/schema/model-based.md).
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
