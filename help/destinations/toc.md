@@ -16,6 +16,7 @@ role: Admin,User
   * [Configurable and common export settings in destinations](./how-destinations-work/destinations-configurations.md)
   * [Profile export behavior for different destination types](./how-destinations-work/profile-export-behavior.md)
   * [Identity handling in the destinations activation workflow](./how-destinations-work/identity-handling.md)
+  * [Audience lifecycle in streaming destinations](./how-destinations-work/audience-lifecycle-streaming-destinations.md)
 * API tutorials {#api}
     * [Activate data to file-based destinations by using the Flow Service API](/help/destinations/api/activate-segments-file-based-destinations.md) 
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
@@ -190,7 +191,6 @@ role: Admin,User
         * [Moengage connection](./catalog/mobile-engagement/moengage.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
-        * [(Limited availability) Audience Analysis](./catalog/personalization/audience-analysis.md)
         * [Adobe Commerce connection](./catalog/personalization/adobe-commerce.md)
         * [Adobe Target connection](./catalog/personalization/adobe-target-connection.md)
         * [Adobe Target extension](./catalog/personalization/adobe-target.md)
