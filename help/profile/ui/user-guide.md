@@ -139,7 +139,9 @@ You can also choose to toggle between viewing the attribute names as their displ
 
 #### Auto-classified widgets {#auto-classified-widgets}
 
-The **[!UICONTROL Auto-classified widgets]** section displays widgets that leverage the union schema to determine the source field groups an attribute belongs to, providing clearer context on where the data originates from. You can use these widgets to explore the structure of your profile's data to better structure your [customizable widgets](#customizable-widgets).
+The **[!UICONTROL Auto-classified widgets]** section displays widgets that leverage the union schema to determine the source field groups an attribute belongs to, providing clearer context on where the data originates from. You can use the search bar to more easily look for keywords within your widgets.
+
+These widgets combine both event data (with the Experience events widget) and attribute data, letting you have a unified view of your profile. You can use these widgets to explore the structure of your profile's data to better structure your [customizable widgets](#customizable-widgets).
 
 >[!NOTE]
 >
