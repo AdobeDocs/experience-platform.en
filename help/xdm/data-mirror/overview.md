@@ -3,6 +3,7 @@ keywords: Experience Platform;data mirror;model-based schema;change data capture
 solution: Experience Platform
 title: Data Mirror overview
 description: Learn how Data Mirror enables row-level change ingestion from external databases into Adobe Experience Platform using model-based schemas with enforced uniqueness, relationships, and versioning.
+badge: Limited Availability
 ---
 # Data Mirror overview
 
@@ -12,7 +13,7 @@ description: Learn how Data Mirror enables row-level change ingestion from exter
 
 Data Mirror is an Adobe Experience Platform capability that enables row-level change ingestion from external databases into the data lake using model-based schemas. It preserves data relationships, enforces uniqueness, and supports versioning without requiring upstream extract, transform, load (ETL) processes.
 
-Use Data Mirror to synchronize inserts, updates, and deletes (mutable data) rom external systems such as [!DNL Snowflake], [!DNL Databricks], or [!DNL BigQuery] directly into Experience Platform. This helps you preserve your existing database models, including their structure and integrity, as you bring data into Platform.
+Use Data Mirror to synchronize inserts, updates, and deletes (mutable data) from external systems such as [!DNL Snowflake], [!DNL Databricks], or [!DNL BigQuery] directly into Experience Platform. This helps you preserve your existing database model structure and data integrity as you bring data into Platform.
 
 ## Capabilities and benefits
 
@@ -24,59 +25,60 @@ Data Mirror provides the following essential capabilities for database synchroni
 * **Out-of-order event handling**: Processes change events using version and timestamp descriptors, even when they arrive out of sequence.
 * **Direct warehouse integration**: Connects with supported cloud data warehouses for real-time change synchronization.
 
-Use Data Mirror to synchronize data without ETL, maintain schema relationships, and use advanced tools for analytics, orchestration, and data governance.
+Use Data Mirror to ingest changes directly from your source systems, enforce schema integrity, and activate data for analytics, journey orchestration, and governance workflows. Data Mirror eliminates complex upstream ETL processes and accelerates implementation by enabling direct mirroring of existing database models. This can enhance data governance through precise control over deletions and data hygiene operations.
 
-Data Mirror improves operational efficiency by reducing implementation effort and streamlining data onboarding and cleanup workflows. It eliminates the need for complex upstream ETL, accelerates setup by enabling direct mirroring of existing database models, and enhances governance through precise control over deletions and data hygiene operations.
+## Prerequisites {#prerequisites}
 
-### Platform enablement
-
-These capabilities enable advanced Experience Platform features and ensure data consistency across connected services.
-
-* **Enables advanced use cases**: Supports Customer Journey Analytics, Journey Optimizer, and Real-Time CDP B2B through native data modeling.
-* **Preserves data integrity**: Maintains relationships and constraints that support complex analytical and operational workflows.
-* **Supports real-time sync**: Keeps Experience Platform data current with source system changes.
-
-## Implement Data Mirror
-
-Data Mirror operates through model-based schemas, which are flexible data structures with enforced constraints. Unlike standard XDM schemas, they offer direct control over structure and relationships.
-
-To implement Data Mirror:
-
-1. **Schema definition**: Create model-based schemas with required descriptors (metadata that define schema behavior and constraints).
-2. **Relationship mapping**: Define connections between datasets using relationship descriptors.
-3. **Source configuration**: Set up change data capture connections with supported cloud data warehouses.
-4. **Change ingestion**: Ingest row-level changes while maintaining uniqueness and applying updates in the correct order.
-
-Unlike standard ingestion approaches, Data Mirror preserves your database model structure within the Experience Platform data lake. This data structure consistency eliminates the need for external preprocessing.
-
-## Requirements {#requirements} 
-
-Before using Data Mirror, confirm your environment meets the technical and structural requirements. These ensure successful ingestion and consistent schema behavior.
-
-### Technical requirements
-
-Confirm your Platform instance includes the required components for Data Mirror to work.
-
-* **Model-based schemas**: Data Mirror works only with model-based schemas.
-* **Schema descriptors**: Include primary key and version descriptors. Time-series schemas also require timestamp descriptors.
-* **Source system support**: Your external database must support change data capture or provide change metadata.
-
-### Data structure requirements
-
-Your source data must follow certain structural rules to support accurate synchronization and change tracking. These rules include a unique primary key (single or composite), track version information to ensure updates are applied in order, and specify change type metadata (such as `_change_request_type`) to distinguish upserts from deletes.
-
-### Knowledge prerequisites
-
-Before using Data Mirror, you should understand the following components of Adobe Experience Platform:
+Before getting started, you should understand the following components of Adobe Experience Platform and confirm your environment meets the technical and structural requirements:
 
 * [Create schemas in Experience Platform UI](../ui/resources/schemas.md) or [API](../api/schemas.md)
 * [Configure cloud source connections](../../sources/home.md#cloud-storage)
 * [Apply change data capture concepts](../../sources/tutorials/api/change-data-capture.md) (upserts, deletes)
 * Distinguish between [standard](../schema/composition.md) and [model-based schemas](../schema/model-based.md)
+* [Define structural relationships with descriptors](../api/descriptors.md)
+
+### Implementation requirements
+
+Your Platform instance and source data must meet specific requirements for Data Mirror to function properly. Data Mirror exclusively requires **model-based schemas**, which are flexible data structures with enforced constraints, and cannot work with standard XDM schemas. Include a **primary key and version descriptor** in all schemas, with **timestamp descriptors** additionally required for time-series schemas. Your **external database** must support change data capture or provide change metadata. Source data must contain **unique identifiers** (single field or composite primary keys) and **version information** to ensure updates apply in the correct order. For delete operations, include a **`_change_request_type` column** with values to distinguish upserts from deletes.
+
+## Implement Data Mirror
+
+Unlike standard ingestion approaches, Data Mirror preserves your database model structure within the Experience Platform data lake. This data structure consistency eliminates the need for external preprocessing. The following is a high level Data Mirror implementation workflow:
+
+1. **Define your schema structure**: Create [model-based schemas](../schema/model-based.md) with required descriptors (metadata that define schema behavior and constraints).
+2. **Map schema relationships**: Define connections between datasets using relationship descriptors.
+3. **Configure your source connection**: Set up change data capture connections with supported cloud data warehouses.
+4. **Ingest data changes**: Ingest row-level changes while maintaining uniqueness and applying updates in the correct order.
+
+## Choose your implementation method
+
+Based on your team's workflow and source system, choose from the following implementation methods:
+
+### Schema creation
+
+Define the structure of your data using model-based schemas. Choose a method that fits your team's workflow, either through the UI or directly through the API.
+
+* **UI approach**: [Create model-based schemas in the Schema Editor](../ui/resources/schemas.md)
+* **API approach**: [Create schemas via Schema Registry API](../api/schemas.md)
+
+### Data ingestion
+
+Select an ingestion method based on your source system and use case. Each option supports different levels of automation, transformation, and scalability.
+
+* **Change data capture**: [Enable change data capture in source connections](../../sources/tutorials/api/change-data-capture.md)
+* **SQL ingestion**: Use Data Distiller to write into relational datasets
+* **File upload**: Upload files manually for batch or one-time ingestion
+
+### Relationship and data management
+
+Manage relationships and maintain data quality across datasets. These tasks ensure consistent joins and support compliance with data hygiene requirements.
+
+* **Schema relationships**: [Define relationships between datasets](../tutorials/relationship-ui.md)
+* **Record hygiene**: [Manage precision record deletes](../../hygiene/ui/record-delete.md)
 
 ## Common use cases
 
-Review common use cases where Data Mirror supports precise data synchronization and relationship preservation. Each scenario demonstrates how these capabilities help meet business needs across analytics, orchestration, and compliance.
+Review the common use cases listed below where Data Mirror supports precise data synchronization and relationship preservation. Each scenario demonstrates how these capabilities can help meet your business needs across analytics, orchestration, and compliance.
 
 ### Warehouse-to-lake synchronization
 
@@ -84,7 +86,7 @@ Mirror event data, customer interaction logs, campaign events, and auxiliary dat
 
 ### Customer Journey Analytics integration
 
-Sync time-series events such as web clicks, product views, purchases, and support interactions from systems like call centers or chat logs. A complete change history supports accurate trend analysis and behavioral segmentation. CJA's Warehouse Sync feature uses this to reflect upserts and deletes from source systems.
+Synchronize time-series events such as web clicks, product views, purchases, and support interactions from systems like call centers or chat logs. A complete change history supports accurate trend analysis and behavioral segmentation. Customer Journey Analytics's Warehouse synchronization feature uses this to reflect upserts and deletes from source systems.
 
 ### B2B relationship modeling
 
@@ -120,40 +122,14 @@ Use this comparison table to choose the best ingestion method for your data need
 
 Data Mirror supports **one-to-one** and **many-to-one** relationships using descriptors. **Many-to-many** relationships require additional modeling and are not directly supported.
 
-## Implementation pathways
-
-Choose your implementation approach based on your requirements:
-
-### Schema creation
-
-Define the structure of your data using model-based schemas. Choose a method that fits your team's workflow, either through the UI or directly via API.
-
-* **UI approach**: [Create model-based schemas in the Schema Editor](../ui/resources/schemas.md)
-* **API approach**: [Create schemas via Schema Registry API](../api/schemas.md)
-
-### Data ingestion
-
-Select an ingestion method based on your source system and use case. Each option supports different levels of automation, transformation, and scalability.
-
-* **Change data capture**: [Enable change data capture in source connections](../../sources/tutorials/api/change-data-capture.md)
-* **SQL ingestion**: Use Data Distiller to write into relational datasets
-* **File upload**: Upload files manually for batch or one-time ingestion
-
-### Relationship and data management
-
-Manage relationships and maintain data quality across datasets. These tasks ensure consistent joins and support compliance with data hygiene requirements.
-
-* **Schema relationships**: [Define relationships between datasets](../tutorials/relationship-ui.md)
-* **Record hygiene**: [Manage precision record deletes](../../hygiene/ui/record-delete.md)
-
 ## Next steps
 
 After reviewing this overview, you should be able to determine if Data Mirror fits your use case and understand the requirements for implementation. To get started:
 
-1. Assess your data model to ensure it supports primary keys, versioning, and change tracking.
-2. Review your license to confirm your license includes model-based schema support.
-3. Plan your schema design to identify required descriptors and relationships.
-4. Choose an ingestion method based on your sources and operational needs.
+1. **Data architects** should assess your data model to ensure it supports primary keys, versioning, and change tracking capabilities.
+2. **Business stakeholders** should confirm your license includes model-based schema support and required Experience Platform editions.
+3. **Schema designers** should plan your schema structure to identify required descriptors, field relationships, and data governance needs.
+4. **Implementation teams** should choose an ingestion method based on your source systems, real-time requirements, and operational workflows.
 
 For implementation details, see the [model-based schemas documentation](../schema/model-based.md).
 
