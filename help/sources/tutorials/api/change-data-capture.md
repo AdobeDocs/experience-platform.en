@@ -17,7 +17,7 @@ You can use change data capture with the following sources:
 
 >[!AVAILABILITY]
 >
->Currently, model-based schemas are available depending on your license or feature enablement.
+>Currently, model-based schemas are only available through Adobe Journey Optimizer **Orchestrated campaigns** and the limited release based on your license or feature enablement. This includes **Customer Journey Analytics**, and **Real-Time CDP B2B** editions. Contact your Adobe representative for inclusion in this limited release.
 
 Model-based schemas extend Experience Platform to enforce primary keys, track row-level changes, and define schema-level relationships. With change data capture, they apply inserts, updates, and deletes directly in the data lake, reducing the need for Extract, Transform, Load (ETL) or manual reconciliation.
 
