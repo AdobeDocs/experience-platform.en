@@ -47,7 +47,9 @@ This column is evaluated only during ingestion and is not stored or mapped to XD
 
 To enable change data capture with a model-based schema:
 
-1. [Create a model-based schema](../../../xdm/ui/resources/schema.md#create-a-model-based-schema).
+<!-- CONSTANTLY BREAKS VALIDATION : 1. [Create a model-based schema](../../../xdm/ui/resources/schema.md#create-a-model-based-schema). -->
+
+1. Create a model-based schema.
 2. Add the required descriptors:
    * [Primary key descriptor](../../../xdm/api/descriptors.md#primary-key-descriptor)
    * [Version descriptor](../../../xdm/api/descriptors.md#version-descriptor)
