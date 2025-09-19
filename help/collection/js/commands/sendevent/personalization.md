@@ -27,7 +27,7 @@ The `personalization` object contains the following properties:
 
 ## `personalization.decisionScopes`
 
-The `decisionScopes` property is an array of strings that instructs the Web SDK to retrieve and return personalization decisions. Each item in the array identifies a location, context, or logical placement where personalized content is desired. The global scope (`__view__`) is always included on the first `sendEvent` call after a page load, in addition to what `decisionScopes` is set to. If this property is omitted, it defaults to the global scope (`__view__`).
+The `decisionScopes` property is an array of strings that instructs the Web SDK to retrieve and return personalization decisions. Each item in the array identifies a location, context, or logical placement where personalized content is desired.
 
 This property is useful when you want to explicitly fetch personalized content for specific areas or components of a page. It is especially valuable in single-page applications that might require different sets of offers as the user's navigation or view changes. You can also use this property to optimize performance by only retrieving offers for the UI elements relevant to the user.
 
@@ -38,6 +38,10 @@ personalization: {
 ```
 
 In Adobe Target, each decision scope maps to an mbox or activity. In Adobe Journey Optimizer, each decision scope maps to decision-based web content placements or campaigns. In Offer Decisioning, decision scopes map to which offers or propositions that the visitor should receive.
+
+>[!TIP]
+>
+>If you want to request (or block) the global scope, use [`defaultPersonalizationEnabled`](#personalizationdefaultpersonalizationenabled) instead of specifying it here in `decisionScopes`.
 
 ## `personalization.surfaces`
 
