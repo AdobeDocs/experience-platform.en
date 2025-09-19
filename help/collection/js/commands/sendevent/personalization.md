@@ -132,4 +132,4 @@ This property uses the following logic depending on how it is set:
 
 ## Personalization components using the Web SDK tag extension
 
-The Web SDK tag extension equivalent of this property is the [**Personalization**](/help/tags/extensions/client/web-sdk/actions/send-event.md#personalization-fields) section when configuring a '[!UICONTROL Send event]' action.
+The Web SDK tag extension equivalent of this property is the [**[!UICONTROL Personalization]**](/help/tags/extensions/client/web-sdk/actions/send-event.md#personalization-fields) section when configuring a '[!UICONTROL Send event]' action.
