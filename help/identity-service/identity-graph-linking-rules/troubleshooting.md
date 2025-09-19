@@ -162,8 +162,6 @@ For each scenario, assume that Experience Events contains the following events:
 
 * In this scenario, an incoming Experience Event contains 1 CRMID and 2 GAIDs. Between these namespaces, CRMID is configured as the namespace with the highest namespace priority. Since there is only one CRMID, Profile will ingest the Experience Events because there is only one instance of the namespace with the highest namespace priority.
 
-In summary, if an incoming event contains two or more identity values for the namespace with the highest priority, the event is considered invalid and will be rejected by both Profile and Identity Service. Only events with a single identity value for the highest-priority namespace are accepted.
-
 **Troubleshooting steps**
 
 If your data is sent to data lake, but not Profile, and you believe that this is due to sending two or more identities with the highest namespace priority in a single event, then you may run the following query to validate that there are two different identity values sent against the same namespace:
