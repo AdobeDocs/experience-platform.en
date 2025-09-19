@@ -11,15 +11,20 @@ Experience Platform currently supports **incremental data copy**, which periodic
 
 In contrast, change data capture captures and applies inserts, updates, and deletes in real time. This ensures that datasets stay fully aligned with the source system and provides a complete change history, beyond what incremental copy supports.
 
-You can use change data capture with the following sources:
+You can use change data capture in two ways:
 
-## Using change data capture with model-based schemas
+* **[Standard change data capture](#file-based-sources)**: Track changes with regular XDM schemas
+* **[Data Mirror](../../../xdm/data-mirror/overview.md)**: Advanced change tracking with model-based schemas that preserves relationships and enforces uniqueness
+
+## Data Mirror with model-based schemas
 
 >[!AVAILABILITY]
 >
->Currently, model-based schemas are only available through Adobe Journey Optimizer **Orchestrated campaigns** and the limited release based on your license or feature enablement. This includes **Customer Journey Analytics**, and **Real-Time CDP B2B** editions. Contact your Adobe representative for inclusion in this limited release.
+>Data Mirror is only available through Adobe Journey Optimizer **Orchestrated campaigns** and the limited release based on your license or feature enablement. This includes **Customer Journey Analytics**, and **Real-Time CDP B2B** editions. Contact your Adobe representative for inclusion in this limited release.
 
-Model-based schemas extend Experience Platform to enforce primary keys, track row-level changes, and define schema-level relationships. With change data capture, they apply inserts, updates, and deletes directly in the data lake, reducing the need for Extract, Transform, Load (ETL) or manual reconciliation.
+Data Mirror uses model-based schemas to extend change data capture and enable advanced database synchronization capabilities. For an overview of Data Mirror, see [Data Mirror overview](../../../xdm/data-mirror/overview.md).
+
+Model-based schemas extend Experience Platform to enforce primary key uniqueness, track row-level changes, and define schema-level relationships. With change data capture, they apply inserts, updates, and deletes directly in the data lake, reducing the need for Extract, Transform, Load (ETL) or manual reconciliation.
 
 ### Model-based schema requirements for change data capture
 
@@ -51,7 +56,7 @@ To enable change data capture with a model-based schema:
 4. Add the `_change_request_type` column to your source files or tables.  
 5. Complete the source connection setup to enable ingestion.  
 
-## File-based sources {#file-based-sources}
+## Standard change data capture for file-based sources {#file-based-sources}
 
 For file-based sources ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage], and [!DNL SFTP]), include a `_change_request_type` column in your files:
 
