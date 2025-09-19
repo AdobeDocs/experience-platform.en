@@ -28,7 +28,7 @@ The `/descriptors` endpoint in the [!DNL Schema Registry] API allows you to prog
 
 The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-In addition to standard descriptors, the [!DNL Schema Registry] supports descriptor types for model-based schemas, such as **primary key**, **version** and **timestamp**. These enforce uniqueness, control versioning, and define time-series fields at the schema level. If you are unfamiliar with model-based schemas, review the [model-based schemas overview](./model-based.md) before continuing.
+In addition to standard descriptors, the [!DNL Schema Registry] supports descriptor types for model-based schemas, such as **primary key**, **version** and **timestamp**. These enforce uniqueness, control versioning, and define time-series fields at the schema level. If you are unfamiliar with model-based schemas, review the [Data Mirror overview](../data-mirror/overview.md) and [model-based schemas technical reference](../schema/model-based.md) before continuing.
 
 >[!IMPORTANT]
 >

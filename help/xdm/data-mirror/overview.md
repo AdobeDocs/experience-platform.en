@@ -47,8 +47,8 @@ Data Mirror operates through model-based schemas (flexible data structures with 
 
 1. **Schema definition**: Create model-based schemas with required descriptors (metadata that define schema behavior and constraints).
 1. **Relationship mapping**: Define connections between datasets using relationship descriptors.
-2. **Source configuration**: Set up change data capture (CDC) connections with cloud data warehouses or other sources.
-3. **Change ingestion**: Ingest row-level changes while maintaining uniqueness and applying updates in correct order.
+1. **Source configuration**: Set up change data capture (CDC) connections with cloud data warehouses or other sources.
+1. **Change ingestion**: Ingest row-level changes while maintaining uniqueness and applying updates in correct order.
 
 Unlike standard ingestion approaches, Data Mirror respects your database model structure within the Experience Platform data lake, eliminating the need for external preprocessing.
 

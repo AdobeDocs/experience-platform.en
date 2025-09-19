@@ -42,11 +42,11 @@ This column is evaluated only during ingestion and is not stored or mapped to XD
 
 To enable change data capture with a model-based schema:
 
-1. [Create a model-based schema](../../../xdm/ui/resources/schemas#create-a-model-based-schema).  
-2. Add the [required descriptors](../../../xdm/api/descriptors.md#relationship-descriptor):  
-   * Primary key  
-   * Version identifier  
-   * Timestamp identifier (time-series only)
+1. [Create a model-based schema](../../../xdm/ui/resources/schemas#create-a-model-based-schema).
+2. Add the required descriptors:
+   * [Primary key descriptor](../../../xdm/api/descriptors.md#primary-key-descriptor)
+   * [Version descriptor](../../../xdm/api/descriptors.md#version-descriptor)
+   * [Timestamp descriptor](../../../xdm/api/descriptors.md#timestamp-descriptor) (time-series only)
 3. Create a dataset from the schema and enable change data capture.  
 4. Add the `_change_request_type` column to your source files or tables.  
 5. Complete the source connection setup to enable ingestion.  
