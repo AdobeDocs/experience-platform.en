@@ -298,7 +298,7 @@ role: Developer
   * [Hosting third-party libraries](./extension-dev/third-party-libraries.md)
   * [Turbine free variable](./extension-dev/turbine.md)
   * [Backwards compatibility standard](./extension-dev/backwards-compatibility.md)
-  * [Shared private extensions](./extension-dev/shared-private-extensions)
+  * [Shared private extensions](./extension-dev/shared-private-extensions.md)
 * Reactor API {#api}
   * [Overview](./api/overview.md)
   * [Authenticate and access the Reactor API](./api/getting-started.md)
