@@ -3,8 +3,13 @@ keywords: Experience Platform;home;popular topics;model-based schema; schema;Sch
 solution: Experience Platform
 title: Model-based schemas
 description: Learn about model-based schemas in Adobe Experience Platform, including features, required fields, relationships, and limitations.
+badge: Limited Availability
 ---
 # Model-based schemas
+
+>[!AVAILABILITY]
+>
+>Currently, model-based schemas are only available available through Adobe Journey Optimizer **Orchestrated campaigns** and the limited release based on your license or feature enablement. This includes **Customer Journey Analytics**, and **Real-Time CDP B2B** editions. Contact your Adobe representative for inclusion in this limited release.
 
 Model-based schemas provide a flexible, governed modeling pattern for representing structured data in the Adobe Experience Platform data lake. They support enforced primary keys, schema-level relationships, and fine-grained control over records—all without relying on union schemas or full relational database systems.
 
@@ -15,10 +20,6 @@ Use model-based schemas to:
 * Define reusable schema-level relationships to model real-world entity connections.
 * Avoid duplicating schema structures across applications by supporting multiple data models.
 * Bypass union schema constraints to streamline onboarding, reduce schema bloat, and simplify evolution.
-
->[!AVAILABILITY]
->
->Currently, model-based schemas are available based on your license or feature enablement. This includes Adobe Journey Optimizer **Campaign Orchestration**, **Data Distiller**, and **Real-Time CDP B2B** editions. Contact your Adobe representative for inclusion in this limited release.
 
 ## How model-based schemas differ from standard XDM schemas
 

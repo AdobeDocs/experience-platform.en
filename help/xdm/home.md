@@ -103,7 +103,7 @@ See the [Catalog Service overview](../catalog/home.md) for more information. See
 
 >[!AVAILABILITY]
 >
->Currently, model-based schemas are available based on your license or feature enablement. This includes Adobe Journey Optimizer **Campaign Orchestration**, **Data Distiller**, and **Real-Time CDP B2B** editions.
+>Currently, model-based schemas are available through Adobe Journey Optimizer **Orchestrated campaigns** and the limited release based on your license or feature enablement. This includes **Customer Journey Analytics**, and **Real-Time CDP B2B** editions. Contact your Adobe representative for inclusion in this limited release.
 
 Model-based schemas are designed for structured, relational-style data patterns. They enforce primary keys, support version identifiers, and define schema-to-schema relationships using primary and foreign keys. Unlike standard XDM schemas, they do not require classes or field groups and are optimized for change data capture ingestion workflows. 
 
