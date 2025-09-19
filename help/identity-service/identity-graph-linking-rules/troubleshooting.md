@@ -140,7 +140,7 @@ There are various reasons that contribute as to why your experience event fragme
   * For example, an experience event must contain both an `_id` and a `timestamp`.
   * Additionally, the `_id` must be unique for each event (record).
 
-In the context of namespace priority, Profile will reject any event that contains two or more identities with the highest namespace priority in the given incoming event. For example, assume that your identity settings are configured like the following:
+In the context of namespace priority, Profile will reject any event that contains two or more identities with the highest namespace priority in the **given incoming event**. For example, assume that your identity settings are configured like the following:
 
 | Namespace | Unique per graph | Priority |
 | --- | --- | --- |
@@ -150,12 +150,17 @@ In the context of namespace priority, Profile will reject any event that contain
 
 For each scenario, assume that Experience Events contains the following events:
 
-* Scenario 1: 2 GAIDs, 1 ECID
-  * In this scenario, Profile **does not** store any Experience Events because within this event, GAID has the highest namespace priority and any incoming event that contains two or more identity values for the namespace with the highest priority does not get ingested. 
-* Scenario 2: 2 CRMIDs, 1 GAID
-  * In this scenario, Profile **does not** store any Experience Events because within this event, CRMID has the highest namespace priority and any incoming event that contains two or more identity values for the namespace with the highest priority does not get ingested. 
-* Scenario 3: 1 CRMID, 2 GAIDs
-  * In this scenario, Profile will ingest the Experience Events because the namespace with the highest namespace priority is a single CRMID.
+**Scenario 1: 2 GAIDs, 1 ECID**
+
+* In this scenario, an incoming Experience Event contains 2 GAIDs and 1 ECID. Between these namespaces, GAID is configured as the namespace with the highest namespace priority. However, because there are 2 GAIDs, Profile **does not** store this Experience Event. This is because any incoming Experience Event that contains two or more identity values of the namespace marked as the namespace with the highest priority is considered bad data.
+
+**Scenario 2: 2 CRMIDs, 1 GAID**
+
+* In this scenario, an incoming Experience Event contains 2 CRMIDs and 1 GAID. Between these namespaces, CRMID is configured as the namespace with the highest namespace priority. However, because there are 2 GAIDs, Profile **does not** store this Experience Event. This is because any incoming Experience Event that contains two or more identity values of the namespace marked as the namespace with the highest priority is considered bad data.
+
+**Scenario 3: 1 CRMID, 2 GAIDs**
+
+* In this scenario, an incoming Experience Event contains 1 CRMID and 2 GAIDs. Between these namespaces, CRMID is configured as the namespace with the highest namespace priority. Since there is only one CRMID, Profile will ingest the Experience Events because there is only one instance of the namespace with the highest namespace priority.
 
 In summary, if an incoming event contains two or more identity values for the namespace with the highest priority, the event is considered invalid and will be rejected by both Profile and Identity Service. Only events with a single identity value for the highest-priority namespace are accepted.
 
