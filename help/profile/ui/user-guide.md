@@ -32,43 +32,15 @@ To learn more, visit the [profile dashboard guide](../../dashboards/guides/profi
 
 ![The Profile dashboard is displayed.](../../dashboards/images/profiles/dashboard-overview.png)
 
-## [!UICONTROL Browse] tab metrics
+## [!UICONTROL Browse] tab 
 
-Select the **[!UICONTROL Browse]** tab to display several metrics related to your organization's profile data. You can also use this tab to browse the Profile store using a merge policy or an identity, as outlined in the next section of this guide.
+On the **[!UICONTROL Browse]** tab you can view your profiles either in a **card** view or a **graph** view by selecting the toggle.
 
-On the right-hand side of the **[!UICONTROL Browse]** tab is the [profile count](#profile-count) as well as a listing of [profiles by namespace](#profiles-by-namespace). 
+![The card and graph view toggle is highlighted.](../images/user-guide/card-graph-view.png)
 
->[!NOTE]
->
->These profile metrics may vary from the metrics displayed on the [profile dashboard](#profile-dashboard) because they are evaluated using the default merge policy of your organization. For more information on working with merge policies, including how to define a default merge policy, see the [merge policies overview](../merge-policies/overview.md).
+Additionally, you can browse your profiles using a merge policy or look up specific profiles using an identity namespace and value.
 
-In addition to these metrics, this section provides a last updated date and time, showing when the metrics were last evaluated.
-
-![The Profile metrics are displayed and highlighted.](../images/user-guide/browse-metrics.png)
-
-### Profile count {#profile-count}
-
-The profile count displays the total number of profiles your organization has within Experience Platform, after your organization's default merge policy has merged together profile fragments to form a single profile for each individual customer. In other words, your organization may have multiple profile fragments related to a single customer who interacts with your brand across different channels, but these fragments would be merged together (according to the default merge policy) and would return a count of "1" profile because they are all related to the same individual.
-
-The profile count also includes both profiles with attributes (record data) as well as profiles containing only time series (event) data, such as Adobe Analytics profiles. The profile count is refreshed regularly to provide an up-to-date total number of profiles within Experience Platform. 
-
-#### Updating the profile count metric
-
-When the ingestion of records into the [!DNL Profile] store increases or decreases the count by more than 3%, a job is triggered to update the count. For streaming data workflows, a check is done on an hourly basis to determine if the 3% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the profile count. For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile store, if the 3% increase or decrease threshold is met, a job is run to update the profile count.
-
-### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
-
-The **[!UICONTROL Profiles by namespace]** metric displays the total count and breakdown of namespaces across all of the merged profiles in your Profile store. The total number of profiles by namespace (in other words, adding together the values shown for each namespace) will always be higher than the profile count metric because one profile could have multiple namespaces associated with it. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.
-
-#### Updating the [!UICONTROL Profiles by namespace] metric
-
-Similar to the [profile count](#profile-count) metric, when the ingestion of records into the [!DNL Profile] store increases or decreases the count by more than 5%, a job is triggered to update the namespace metrics. For streaming data workflows, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the profile count. For batch ingestion, within 15 minutes of successfully ingesting a batch into the [!DNL Profile] store, if the 5% increase or decrease threshold is met, a job is run to update the metrics.
-
-## Use [!UICONTROL Browse] tab to view profiles
-
-On the **[!UICONTROL Browse]** tab you can view sample profiles using a merge policy or look up specific profiles using an identity namespace and value.
-
-![The Profiles that belong to the organization are displayed.](../images/user-guide/none-selected.png)
+![The Profiles that belong to the organization are displayed.](../images/user-guide/profile-browse.png)
 
 ### Browse by [!UICONTROL Merge policy]
 
@@ -88,7 +60,7 @@ The profiles that are shown represent a sample of up to 20 profiles from your or
 
 To view the details of one of the sample profiles, select the **[!UICONTROL Profile ID]**. For more information, see the section later in this guide on [viewing profile details](#profile-detail).
 
-![Sample profiles that match the merge policy are displayed.](../images/user-guide/sample-profiles.png)
+![Sample profiles that match the merge policy are displayed.](../images/user-guide/profile-browse-table.png)
 
 To learn more about merge policies and their role within Experience Platform, see the [merge policies overview](../merge-policies/overview.md).
 
@@ -114,7 +86,7 @@ After selecting an [!UICONTROL Identity namespace] and returning to the [!UICONT
 >
 >This value is specific to an individual customer profile and must be a valid entry for the namespace provided. For example, selecting the identity namespace "Email" would require an identity value in the form of a valid email address. 
 
-![The identity value that you want to filter by is highlighted.](../images/user-guide/filter-identity-value.png)
+![The identity value that you want to filter by is highlighted.](../images/user-guide/browse-identity.png)
 
 Once a value has been entered, select **[!UICONTROL View]** and a single profile matching the value is returned. Select the **[!UICONTROL Profile ID]** to view a profile.
 
