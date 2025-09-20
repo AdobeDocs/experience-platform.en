@@ -231,7 +231,7 @@ Beyond the standard record deletion workflow, model-based schemas support additi
 * **Safe-copy dataset approach**: Duplicate the production dataset and apply deletes to the copy for controlled testing or reconciliation before applying changes to production data.
 * **Deletes-only batch upload**: Upload a file containing only delete operations for targeted hygiene when you need to remove specific records without affecting other data.
 
-### Descriptor support for hygiene operations
+### Descriptor support for hygiene operations {#descriptor-support}
 
 Model-based schema descriptors provide essential metadata for precise hygiene operations:
 
