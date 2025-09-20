@@ -316,6 +316,7 @@ role: Developer
       - [Oracle NetSuite Activities](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
       - [Oracle NetSuite Entities](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
       - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
+      - [Relay Connector](tutorials/ui/create/marketing-automation/relay-connector.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [Square](tutorials/ui/create/payments/square.md)
