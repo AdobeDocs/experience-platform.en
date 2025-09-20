@@ -27,13 +27,21 @@ In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in 
 
 ## Create a model-based schema {#create-model-based-schema}
 
-Select [!UICONTROL Model-based] to define structured, model-based-style schemas with fine-grained control over records. Model-based schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture, and support multiple data models used in Campaign Orchestration, Data Distiller, and B2B implementations.
+>[!AVAILABILITY]
+>
+>Data Mirror is in **limited availability**. It is currently offered through Adobe Journey Optimizer (**Orchestrated campaigns**), **Customer Journey Analytics**, and **Real-Time CDP B2B**, based on license or feature enablement. Contact your Adobe representative to request access.
 
-To learn more, see the [Model-based schema overview](../../schema/model-based.md).
+Select **[!UICONTROL Model-based]** to define structured, model-based-style schemas with fine-grained control over records. Model-based schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture, and support multiple data models used in Campaign Orchestration, Data Distiller, and B2B implementations.
 
-The **[!UICONTROL Create a model-based schema]** dialog appears. You can choose either **[!UICONTROL Create manually]** or [**[!UICONTROL Upload DDL file]**](#upload-ddl-file) to define the schema structure.
+To learn more, see the [Data Mirror](../../data-mirror/overview.md) or [Model-based schema](../../schema/model-based.md) overview.
 
 ### Create manually {#create-manually}
+
+>[!AVAILABILITY]
+>
+>DDL file upload is only available for Adobe Journey Optimizer Orchestrated campaign license holders. Your UI may appear differently.
+
+The **[!UICONTROL Create a model-based schema]** dialog appears. You can choose either **[!UICONTROL Create manually]** or [**[!UICONTROL Upload DDL file]**](#upload-ddl-file) to define the schema structure.
 
 In the **[!UICONTROL Create a model-based schema]** dialog, select **[!UICONTROL Create manually]**, then select **[!UICONTROL Next]**.  
    
@@ -43,9 +51,7 @@ The **[!UICONTROL Model-based schema details]** page appears. Enter a schema dis
    
 ![The Model-based schema details view with [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/relational-details.png)
 
-The Schema Editor opens with an empty canvas for defining the schema structure. The [!UICONTROL Type] field in the [!UICONTROL  Schema properties] sidebar indicates this is a [!UICONTROL Model-based] schema.
-
-![The Schema Editor canvas showing an empty model-based schema structure with Model-based type highlighted.](../../images/ui/resources/schemas/relational-empty-canvas.png)
+The Schema Editor opens with an empty canvas for defining the schema structure. You can add fields as usual.
 
 #### Add a version identifier field {#add-version-identifier}
 
@@ -67,9 +73,14 @@ Next, proceed to [define primary keys](../fields/identity.md#define-a-identity-f
 
 >[!NOTE]
 >
->Model-based schemas currently support **record behavior** only. Time-series schemas are not supported in the UI.
+>Once saved, the [!UICONTROL Type] field in the [!UICONTROL  Schema properties] sidebar indicates this is a [!UICONTROL Model-based] schema. This is also indicated in the details sidebar in the schema inventory view.
+>![The Schema Editor canvas showing an empty model-based schema structure with Model-based type highlighted.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Upload a DDL file {#upload-ddl-file}
+
+>[!AVAILABILITY]
+>
+>DDL file upload is only available for Adobe Journey Optimizer Orchestrated campaign license holders.
 
 Use this workflow to define the schema by uploading a DDL file. In the **[!UICONTROL Create a model-based schema]** dialog, select **[!UICONTROL Upload DDL file]**, then either drag a local DDL file from your system or select **[!UICONTROL Choose files]**. Experience Platform validates the schema and displays a green checkmark if the file upload is successful. Select **[!UICONTROL Next]** to confirm the upload.  
 
@@ -88,8 +99,6 @@ Although required during ingestion, control columns like `_change_request_type` 
 >[!NOTE]
 >
 >The maximum supported file size for a DDL upload is 10MB.
-
-<!-- NOTE: Below is an AJO screenshot. I did not get access in time. I will confirm and update. -->
 
 ![The Model-based schema review view with imported fields shown and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/entities-and-files-to-inport.png)
     
