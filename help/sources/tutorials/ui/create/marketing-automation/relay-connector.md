@@ -14,17 +14,17 @@ Read this guide to learn how to use the [!DNL Relay Connector] within the source
 
 >[!IMPORTANT]
 >
->This documentation page is created by the *[!DNL Relay Network]* team. For any inquiries or update requests, please contact them directly at *[[!DNL Relay Network]](https://www.relaynetwork.com/) or send an email to [info@relaynetwork.com](mailto:info@relaynetwork.com)*.
+>This documentation page is maintained by the *[!DNL Relay Network]* team. For any inquiries or update requests, please contact them directly at *[[!DNL Relay Network]](https://www.relaynetwork.com/) or email [info@relaynetwork.com](mailto:info@relaynetwork.com)*.
 
 ## Connect your [!DNL Relay Connector] source
 
-In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account. You can select the appropriate category from the catalog on the left-hand side of your screen or use the search option to find a specific source.
 
 Under the *[!UICONTROL Marketing automation]* category, select the [!DNL Relay Connector] source card and select **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
->Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account exists, this option changes to **[!UICONTROL Add data]**.
+>Sources in the sources catalog display the **[!UICONTROL Set up]** option when no authenticated account exists. Once an account is authenticated, this option changes to **[!UICONTROL Add data]**.
 
 ![The catalog page of the sources workspace.](../../../../images/tutorials/create/relay-connector/relay-source.jpg)
 
@@ -50,7 +50,7 @@ Next, use the *[!UICONTROL Dataflow details]* interface to provide a **name** an
 
 ### Mapping
 
-You can map your source fields to XDM schema fields using auto-map functionality that matches fields based on their names, or create custom mappings for more precise control. If needed, you can also apply transformations such as concatenation, formatting, or renaming to ensure your data fits perfectly into the target schema. For more information on mapping, read the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
+You can map your source fields to XDM schema fields using the auto-map functionality, which matches fields based on their names, or create custom mappings for more precise control. If needed, you can also apply transformations such as concatenation, formatting, or renaming to ensure your data fits perfectly into the target schema. For more information on mapping, read the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
 ![The mapping interface in the sources workflow.](../../../../images/tutorials/create/relay-connector/mapping.jpg)
 
