@@ -7,7 +7,7 @@ description: Adform is a leading provider of programmatic media buying and selli
 
 ## Overview {#overview}
 
-Adform is a leading provider of programmatic media buying and selling solutions. By connecting Adform to the Adobe Experience Platform, you can activate your 1st party audiences through Adform based on the Experience Cloud ID (ECID).
+Adform is a leading provider of programmatic media buying and selling solutions. By connecting Adform to the Adobe Experience Platform, you can activate your first party audiences through Adform based on the Experience Cloud ID (ECID).
 
 >[!IMPORTANT]
 >
@@ -17,16 +17,18 @@ Adform is a leading provider of programmatic media buying and selling solutions.
 
 To help you better understand how and when you should use the Adform destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Adobe RTCDP audience activation {#use-case-1}
+### Adobe Real-Time CDP audience activation {#use-case-1}
 
-Use this destination to send Adobe RTCDP audiences to Adform for activation based on the Experience Cloud ID (ECID) and Adform's ID Fusion. 
+Use this destination to send Adobe Real-Time CDP audiences to Adform for activation based on the Experience Cloud ID (ECID) and Adform's ID Fusion. Adform's ID Fusion is Adform's ID resolution service that allows you to activate your first party audiences based on the Experience Cloud ID (ECID).
+
+A common case is re-targeting of your website visitors to your website or app based on the Experience Cloud ID (ECID). All you need to do is to send the Experience Cloud ID (ECID) to Adform via the readily available [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) or [client-side](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) Adform extensions. After that you can share audiences with Adform via the Adform destination for activation - solely based on the Experience Cloud ID (ECID).
 
 ## Prerequisites {#prerequisites}
 
 * You need to be an existing Adform customer to use this destination.
 * You need to have your Adform Audience Base Data Connection credentials.
     * If you don't have Adform Audience Base Data Connection credentials, please contact your Adform representative.
-* For proper synching you need to either have an Event Streaming or client-side connection from your entities to Adform Site Tracking.
+* For proper synchronization you need to either have an [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) or [client-side](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) connection from your entities to Adform Site Tracking.
     * If you don't have an Event Streaming or client-side connection from your entities to Adform Site Tracking, please contact your Adform representative.
     * Adform provides Adobe Experience Cloud extensions for both [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) and [client-side](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform).
 
@@ -49,13 +51,11 @@ This section describes which type of audiences you can export to this destinatio
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | X | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
 ## Export type and frequency {#export-type-frequency}
-
-*In the table, keep only the lines that correspond to your destination. You should have one line for Export type and one line for Export frequency. Delete the values that don't apply to your destination.*
 
 Refer to the table below for information about the destination export type and frequency.
 
@@ -78,9 +78,9 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![Add a link here to one or more sample screenshots that show users how to authenticate to your destination](help/destinations/assets/catalog/advertising/adform/authenticate-destination.png)
+![Authenticate to the destination](help/destinations/assets/catalog/advertising/adform/authenticate-destination.png)
 
-* **[!UICONTROL Account name]**: Fill in the account name which is displayed in the Adobe Experience Platform UI.
+* **[!UICONTROL Account name]**: Enter an account name by which you can identify this destination connection in the future..
 * **[!UICONTROL S3 Access Key ID]**: Fill in the S3 Access Key provided by Adform.
 * **[!UICONTROL S3 Secret Access Key]**: Fill in the S3 Secret Access Key provided by Adform.
 
@@ -88,11 +88,11 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Add a link here to one or more sample screenshots that show users how to fill in details for your destination](help/destinations/assets/catalog/advertising/adform/configure-destination-details.png)
+![Fill in the destination details](help/destinations/assets/catalog/advertising/adform/configure-destination-details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL providerName]**: Your Adform account name provided by Adform.
+*  **[!UICONTROL Provider Name]**: Your Adform account name provided by Adform.
 
 ### Enable alerts {#enable-alerts}
 
@@ -100,7 +100,7 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
@@ -113,11 +113,11 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 * **ECID** (Experience Cloud ID)
 
-It is crucial that the mapping consists soley of the ECID identity. Any other mapped field will prevent the activation from being completed.
+During the mapping step, use only the [!DNL ECID] target identity mapping. Do not include any other identity fields, as this will prevent the activation from completing successfully.
 
 ## Exported data / Validate data export {#exported-data}
 
-The extension only exports the ECID identity to the destination. No other identity is exported.
+The destination connector exports only the ECID identity to the destination. No other identity is exported. To check if the data export was successful, please log into your Adform Audience Base account and check if the audiences are available.
 
 ## Data usage and governance {#data-usage-governance}
 
@@ -125,4 +125,4 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-After the data is exported you will see audiences created in your Adform Audience Base account. You can then use these audiences to create retargeting or audience-targeted digital campaigns.
+For additional information about the Adform Audience Base, see the [Adform Audience Base documentation](https://www.adformhelp.com/hc/en-us/categories/9738365991697-Data-Management-Platform).
