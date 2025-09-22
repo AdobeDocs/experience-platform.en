@@ -2,65 +2,40 @@
 title: Connect Capillary to Experience Platform using the Flow Service API
 description: Learn how to connect Capillary to Experience Platform using APIs.
 ---
-# Connect [!DNL Capillary] to Experience Platform using the [!DNL Flow Service] API
+# Connect [!DNL Capillary Streaming Events] to Experience Platform using the [!DNL Flow Service] API
 
-[!DNL Capillary Technologies] is a leading loyalty and engagement platform, trusted by over 300 brands around the world. Use the [!DNL Capillary] source to enable your business to seamlessly stream customer profiles, loyalty data, and transactional events from [!DNL Capillary] into Adobe Experience Platform. Connect your [!DNL Capillary] source to enable real-time personalization, advanced audience segmentation, and omnichannel campaign orchestration.
+Read this guide to learn how to use the [!DNL Capillary Streaming Events] and the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) to stream data from your [!DNL Capillary] account to Adobe Experience Platform.
 
-By integrating [!DNL Capillary] with Experience Platform, you can:
+## Getting started
 
-* Synchronize **loyalty points, tiers, and rewards** in real-time.
-* Send **transactional data** into Experience PLatform for analytics and activation.
-* Leverage Real-Time CDP, Experience Platform, and Adobe Journey Optimizer for segmentation, journey orchestration, and personalization.
+This guide requires a working understanding of the following components of Experience Platform:
 
-## Prerequisites
-
-Before you connect [!DNL Capillary] to Adobe Experience Platform, make sure you have:
-
-* A valid **Adobe Organization ID** and access to an enabled Experience Platform sandbox.
-* **[!DNL Capillary] source credentials** (Client ID and Client Secret).
-* The necessary permissions in the Adobe Admin Console to create sources and dataflows.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Gather required credentials
 
-You must provide values for the following credentials to connect your [!DNL Capillary] account to Experience Platform:
+Read the [[!DNL Capillary Streaming Events] overview](../../../../connectors/loyalty/capillary.md) for information on authentication.
 
-| Credential | Description | Example |
-| --- | --- | --- |
-| Client ID | The client identifier for the [!DNL Capillary] source. | `321c8a8fee0d4a06838d46f9d3109e8a` |
-| Client Secret | The client secret issued with the Client ID | `xxxxxxxxxxxxxxxxxx` |
-| Org ID | Your Adobe Organization ID | `0A7D42FC5DB9D3360A495FD3@AdobeOrg` |
+### Using Experience Platform APIs
 
-For more information on generating access tokens, read the [Adobe authentication guide](https://developer.adobe.com/developer-console/docs/guides/authentication/).
+Read the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md) for information on how to successfully make calls to Experience Platform APIs.
 
-### Generate an access token
+>[!BEGINSHADEBOX]
 
-Next, use your Client ID and Client Secret to generate an access token from Adobe.
+## Developer process checklist
 
-**Request**
+1. Create or choose your target **Experience Data Model (XDM) schema** using the Schema Registry. Use this XDM schema to **create a dataset** in Catalog Service.
+2. Create a **base connection** to store your [!DNL Capillary] credentials.
+3. Create a **source connection** to bind to your `baseConnectionId`.
+4. Create a **target connection** to ensure that your data lands in data lake.
+5. Use Data Prep to create mappings that map your [!DNL Capillary] source fields to the correct XDM fields.
+6. Create a dataflow using your `sourceConnectionId`, `targetConnectionId`, and `mappingID`
+7. eTest with single sample profile/transaction events to verify your dataflow.
 
-```shell
-curl -X POST 'https://ims-na1.adobelogin.com/ims/token' \
-  -d 'client_id={CLIENT_ID}' \
-  -d 'client_secret={CLIENT_SECRET}' \
-  -d 'grant_type=client_credentials' \
-  -d 'scope=openid AdobeID read_organizations additional_info.projectedProductContext session'
-```
+>[!ENDSHADEBOX]
 
-**Response**
-
-```json
-{
-  "access_token": "eyJhbGciOi...",
-  "token_type": "bearer",
-  "expires_in": 86399994
-}
-```
-
-## Connect Capillary to Platform using the [!DNL Flow Service] API
-
-Follow these steps to connect your [!DNL Capillary] account and start streaming your customer profiles and transaction data into Experience Platform.
-
-### Create a base connection {#base-connection}
+## Create a base connection {#base-connection}
 
 A base connection retains credentials and connection details. To create a base connection for [!DNL Capillary], make a POST request to the `/connections` endpoint of the [!DNL Flow Service] API and provide your [!DNL Capillary] credentials in the request body.
 
@@ -387,7 +362,13 @@ curl -X POST \
   }'
 ```
 
+>[!NOTE]
+>
+>`startTime` is in UNIX epoch seconds.
+
 **Response**
+
+A successful response returns your dataflow with it's corresponding dataflow ID.
 
 ```json
 {
@@ -408,6 +389,22 @@ The connector includes robust error handling for the following scenarios:
 
 All errors are logged with details such as error type, timestamp, request payload, and Adobe API response to facilitate troubleshooting and debugging.
 
+## Test your connection
+
+Follow the steps below to learn how you to test your connection:
+
+* Make a GET request to `/connections/{BASE_CONNECTION_ID}` and provide your base connection ID to verify that your base connection exists. During this step, you can also verify that the status of your base connection is set to `active`.
+* Make a GET request to `/flowservice/sourceConnections/{SOURCE_CONNECTION_ID}` and provide your source connection ID to verify your source connection.
+* Use your streaming endpoint URL to send a sample profile payload (use the Profile ingestion JSON).
+* Navigate to your dataset in Experience Platform UI and run a query on the dataset to confirm your records.
+* Use the Data Prep logs to inspect for errors.
+* If you must open a support ticket, ensure that you have the following:
+  * Request payload
+  * Response body
+  * Request-id
+  * timestamp
+  * Resource IDs.
+  
 ## Appendix
 
 Visit the following documentation for guides on additional operations
