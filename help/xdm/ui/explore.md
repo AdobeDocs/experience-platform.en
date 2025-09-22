@@ -53,7 +53,9 @@ Use the [!UICONTROL Schemas] workspace filtering capabilities and organizational
 
 The browse table displays additional columns that provide immediate visibility into schema characteristics and usage. View tags, schema type, Profile enablement status, and other metadata directly in the table view without opening individual schemas.
 
-![The Schemas workspace browse table showing the new columns for tags, schema type, and Profile enablement.](../images/ui/explore/browse-table-columns.png) The enhanced filter panel supports multiple filter types simultaneously, allowing you to narrow results by tag presence, schema type, relationship configuration, and custom metadata attributes.
+![The Schemas workspace browse table showing the new columns for tags, schema type, and Profile enablement.](../images/ui/explore/browse-table-columns.png) 
+
+The enhanced filter panel supports multiple filter types simultaneously, allowing you to narrow results by tag presence, schema type, relationship configuration, and custom metadata attributes.
 
 ![The enhanced filter panel in the Schemas workspace showing filters for schema type, tags, relationships, and custom attributes.](../images/ui/explore/enhanced-filters.png)
 
@@ -63,7 +65,9 @@ Use filters to find Profile-enabled schemas with specific tags. Locate schemas o
 
 Each schema row provides access to contextual actions through an ellipsis menu, eliminating the need to navigate into individual schema details for common tasks.
 
-![The ellipsis menu for a schema row showing inline actions such as Edit, Apply labels, Create dataset, and Manage tags.](../images/ui/explore/schema-inline-actions.png) Edit schema properties, apply data governance labels, create datasets, and manage organizational metadata directly from the browse view. Additional actions include moving schemas to folders, adding them to deployment packages, copying JSON structures for development workflows, and downloading sample files for testing.
+![The ellipsis menu for a schema row showing inline actions such as Edit, Apply labels, Create dataset, and Manage tags.](../images/ui/explore/schema-inline-actions.png)
+
+Edit schema properties, apply data governance labels, create datasets, and manage organizational metadata directly from the browse view. Additional actions include moving schemas to folders, adding them to deployment packages, copying JSON structures for development workflows, and downloading sample files for testing.
 
 >[!NOTE]
 >
