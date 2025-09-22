@@ -1,8 +1,8 @@
 ---
 title: Audience lifecycle in Experience Platform and streaming destinations
 description: Learn how audience names and mappings from Experience Platform are reflected in streaming destination platforms.
+exl-id: 8a9a9e2f-d52f-41c9-ae27-9d2cd797bb85
 ---
-
 # Audience lifecycle in streaming destinations
 
 This page describes how audience name updates and mappings in Experience Platform are synchronized with streaming destination platforms. When you modify audience names or remove audience mappings in Experience Platform, the behavior varies depending on the destination platform's capabilities.
