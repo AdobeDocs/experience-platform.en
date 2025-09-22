@@ -7,7 +7,6 @@ exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
 ---
 # [!UICONTROL Schemas] UI overview 
 
-<!-- Add link somewhere in this page to the explore.md file -->
 
 The [!UICONTROL Schemas] workspace in the Adobe Experience Platform user interface allows you to manage Experience Data Model (XDM) resources, including schemas, classes, schema field groups, and data types. You can view and explore core resources provided by Adobe, and create custom resources and schemas for your organization.
 
@@ -17,7 +16,7 @@ To access to the workspace in the Experience Platform UI, select **[!UICONTROL S
 
 ## Getting started
 
-If you are using the workspace for the first time, start with the guide on [exploring existing resources in the UI](./explore.md) to familiarize yourself with the different tabs and the schema canvas.
+If you are using the workspace for the first time, start with the guide on [exploring existing resources in the UI](./explore.md) to familiarize yourself with the different tabs, enhanced filtering capabilities, and the schema canvas.
 
 It is also recommended that you follow the [schema creation tutorial](../tutorials/create-schema-ui.md) to create an example schema and get a full tour of the [!DNL Schema Editor]'s capabilities in the process.
 

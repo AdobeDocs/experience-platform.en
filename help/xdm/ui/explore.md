@@ -93,9 +93,9 @@ Use the [!UICONTROL Schemas] workspace filtering capabilities and organizational
 
 ### Browse and filter metadata
 
-The browse table displays additional columns that provide immediate visibility into schema characteristics and usage. View tags, schema type, Profile enablement status, and other metadata directly in the table view without opening individual schemas.
+The browse table displays additional columns that provide immediate visibility into schema characteristics and usage. View tags, schema type, Profile enablement status, created date, last modified, class, identities, relationships, behavior, and other metadata directly in the table view without opening individual schemas.
 
-![The Schemas workspace browse table showing the new columns for tags, schema type, and Profile enablement.](../images/ui/explore/browse-table-columns.png) 
+![The Schemas workspace browse table showing the enhanced columns including tags, schema type, Profile enablement, created date, last modified, class, identities, relationships, and behavior.](../images/ui/explore/browse-table-columns.png) 
 
 Apply multiple filters simultaneously to create targeted schema discovery workflows. Combine metadata filters (schema type, class, tags), attribute filters (relationships, identity configuration), and temporal filters (creation or modification dates) to locate exactly the schemas you need.
 
@@ -107,7 +107,7 @@ Filter combinations support complex discovery scenarios such as finding Standard
 
 Each schema row provides access to contextual actions through an ellipsis menu, eliminating the need to navigate into individual schema details for common tasks.
 
-![The ellipsis menu for a schema row showing inline actions such as Edit, Apply labels, Create dataset, and Manage tags.](../images/ui/explore/schema-inline-actions.png)
+![The ellipsis menu for a schema row showing inline actions such as Edit, Delete, Apply labels, and Manage tags.](../images/ui/explore/schema-inline-actions.png)
 
 Edit schema properties, apply data governance labels, delete schemas, and manage organizational metadata directly from the browse view. Additional actions include moving schemas to folders, adding them to deployment packages, copying JSON structures for development workflows, and downloading sample files for testing.
 
