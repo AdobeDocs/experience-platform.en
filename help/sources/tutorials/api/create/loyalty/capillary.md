@@ -391,7 +391,7 @@ All errors are logged with details such as error type, timestamp, request payloa
 
 ## Test your connection
 
-Follow the steps below to learn how you to test your connection:
+Follow the steps below to learn steps you can take to test your connection:
 
 * Make a GET request to `/connections/{BASE_CONNECTION_ID}` and provide your base connection ID to verify that your base connection exists. During this step, you can also verify that the status of your base connection is set to `active`.
 * Make a GET request to `/flowservice/sourceConnections/{SOURCE_CONNECTION_ID}` and provide your source connection ID to verify your source connection.
