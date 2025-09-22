@@ -1,6 +1,8 @@
 ---
 title: Capillary Streaming Events Overview
 description: Learn how to stream data from Capillary to Experience Platform.
+hide: true
+hidefromtoc: true
 ---
 # [!DNL Capillary Streaming Events]
 
