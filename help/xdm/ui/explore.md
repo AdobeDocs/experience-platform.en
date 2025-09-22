@@ -18,26 +18,66 @@ In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left navig
 
 ![The Schemas workspace with several tabs highlighted.](../images/ui/explore/tabs.png)
 
-Select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to open filtering options in the left rail. Resource filters are available for schemas and relationships on the **[!UICONTROL Browse]** and **[!UICONTROL Relationships]** tabs respectively.
+## Filter and search schemas {#filter-search}
 
-On the [!UICONTROL Browse] tab of the [!UICONTROL Schemas] workspace, you can filter your schema inventory. Use the **[!UICONTROL Included in Profile]** toggle to only show schemas that have been enabled for use in [Real-Time Customer Profile](../../profile/home.md). Use the **[!UICONTROL Show adhoc schemas]** toggle to filter the list of schemas created with fields namespaced for use only by a single dataset.
+Use the comprehensive filter panel to locate schemas efficiently based on multiple criteria. Select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to access filtering options that help you discover schemas that meet specific requirements for your data modeling and governance workflows.
 
-<!-- Update image below -->
+![The [!UICONTROL Schemas] workspace [!UICONTROL Browse] tab with the comprehensive filters panel highlighted.](../images/ui/explore/filters.png)
 
-![The [!UICONTROL Schemas] workspace [!UICONTROL Browse] tab with the filters panel highlighted.](../images/ui/explore/filters.png)
+### Schema metadata filters
 
-On the [!UICONTROL Relationship] tab of the [!UICONTROL Schemas] workspace, you can filter the list of relationships based on four criteria. The filters include [!UICONTROL Source schema], [!UICONTROL Destination schema], [!UICONTROL Source class], and the [!UICONTROL Destination class]. The table below provides a description of the filters.
+Filter schemas by their fundamental characteristics and organizational attributes.
 
-| Filter                            |Description |
-|-----------------------------------|------------|
-| [!UICONTROL Source schema]        | To see all relationships where the selected schema is the starting point or "source", select a schema from the [!UICONTROL Source schema] dropdown menu. |
-| [!UICONTROL Destination schema]   | To view all relationships where the selected schema is the target or "destination", select a schema from the [!UICONTROL Destination schema] dropdown menu. |
-| [!UICONTROL Source class]         | To filter relationships based on the class of the initiating schema, select a class from the [!UICONTROL Source class] dropdown menu. |
-| [!UICONTROL Destination class]    | To display relationships that end with schemas of a specific class, select a class from the [!UICONTROL Destination class] dropdown menu. |
+**Show profiles**
+Choose profile enablement status using radio buttons to display All schemas, Profile-enabled schemas only, or Profile-disabled schemas only. Profile-enabled schemas participate in [Real-Time Customer Profile](../../profile/home.md) and support unified customer views across your organization.
 
-{style="table-layout:auto"}
+**Schema type**
+Filter by schema origin using checkboxes: Standard schemas (provided by Adobe), Model-based schemas (built from industry templates), or Adhoc schemas (created with fields namespaced for use by a single dataset).
 
-![The Relationships tab with the filters section highlighted.](../images/ui/explore/relationships-filter.png)
+**Class**
+Select from available schema classes using the dropdown menu to show only schemas built on specific class foundations such as XDM Individual Profile, XDM ExperienceEvent, or custom classes defined by your organization.
+
+**Has any tag**
+Filter schemas by applied user-defined tags using the dropdown menu. Locate schemas organized by project, team, business domain, or custom taxonomies that support your organizational schema management practices.
+
+### Schema attribute filters
+
+Narrow results based on schema structure and identity configuration.
+
+**Has relationship**
+Use Yes/No checkboxes to show only schemas that contain relationship fields connecting to other schemas. Relationship fields enable data connections across different schemas and support complex data modeling scenarios.
+
+**Has primary identity**
+Filter for schemas with designated primary identity fields using Yes/No checkboxes. Primary identity fields are required for Profile enablement and serve as the foundation for customer data unification.
+
+**Primary identity namespace**
+Select specific identity namespaces from the dropdown menu to find schemas using particular identity types such as Email, ECID, Phone, or custom namespaces as their primary identifier.
+
+### Temporal and creator filters
+
+Filter schemas based on creation patterns and ownership.
+
+**Creation date**
+Filter schemas by creation date ranges using start and end date pickers. Locate recently created schemas or find schemas built during specific project phases or time periods.
+
+**Modified date**  
+Filter schemas by modification date ranges using start and end date pickers. Identify schemas with recent updates or changes to support maintenance and governance workflows.
+
+**Created by**
+Filter schemas by their original creator using the dropdown menu. Locate schemas built by specific team members, systems, or service accounts to support ownership tracking and collaboration.
+
+### Relationship tab filters
+
+When viewing schema relationships on the [!UICONTROL Relationships] tab, use additional filters to explore schema connections:
+
+- **Source schema**: Display relationships where the selected schema is the starting point or "source"
+- **Destination schema**: Show relationships where the selected schema is the target or "destination"  
+- **Source class**: Filter relationships based on the class of the initiating schema
+- **Destination class**: Display relationships that end with schemas of a specific class
+
+### Combine multiple filters
+
+Apply multiple filters simultaneously to create precise schema discovery queries. For example, find Standard schemas with Customer tags that are Profile-enabled and created within the last month, or locate Adhoc schemas with Email primary identity that contain relationship fields.
 
 Use the search bar to narrow down results further.
 
@@ -57,11 +97,11 @@ The browse table displays additional columns that provide immediate visibility i
 
 ![The Schemas workspace browse table showing the new columns for tags, schema type, and Profile enablement.](../images/ui/explore/browse-table-columns.png) 
 
-The enhanced filter panel supports multiple filter types simultaneously, allowing you to narrow results by tag presence, schema type, relationship configuration, and custom metadata attributes.
+Apply multiple filters simultaneously to create targeted schema discovery workflows. Combine metadata filters (schema type, class, tags), attribute filters (relationships, identity configuration), and temporal filters (creation or modification dates) to locate exactly the schemas you need.
 
-![The enhanced filter panel in the Schemas workspace showing filters for schema type, tags, relationships, and custom attributes.](../images/ui/explore/enhanced-filters.png)
+![The enhanced filter panel in the Schemas workspace showing multiple filter types applied simultaneously.](../images/ui/explore/enhanced-filters.png)
 
-Use filters to find Profile-enabled schemas with specific tags. Locate schemas of a particular type or those that contain relationship fields.
+Filter combinations support complex discovery scenarios such as finding Standard schemas with Customer tags that are Profile-enabled and created within the last month, or locating Event schemas with Email primary identity that contain relationship fields.
 
 ### Take inline actions on schemas
 
