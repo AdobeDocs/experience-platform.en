@@ -254,8 +254,8 @@ An Experience Data Model (XDM) schema provides a standardized way to organize an
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). For detailed steps on how to create a target XDM schema, read the following guides:
 
-* [Create a schema using the API](../../../../xdm/api/schemas.md).
-* [Create a schema using the UI](../../../../xdm/tutorials/create-schema-ui.md). 
+* [Create a schema using the API](../../../../../xdm/api/schemas.md).
+* [Create a schema using the UI](../../../../../xdm/tutorials/create-schema-ui.md). 
 
 Once created, the target XDM schema `$id` will be required later for your target dataset and mapping.
 
@@ -263,7 +263,7 @@ Once created, the target XDM schema `$id` will be required later for your target
 
 A dataset is a storage and management construct for a collection of data, typically structured like a table with columns (schema) and rows (fields). Data that is successfully ingested into Experience Platform is stored within the data lake as datasets. During this step, you can either create a new dataset or use an existing one.
 
-You can create a target dataset by making a POST request to the [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/), while providing the ID of the target schema within the payload. For detailed steps on how to create a target dataset, read the guide on [creating a dataset using the API](../../../../catalog/api/create-dataset.md).
+You can create a target dataset by making a POST request to the [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/), while providing the ID of the target schema within the payload. For detailed steps on how to create a target dataset, read the guide on [creating a dataset using the API](../../../../../catalog/api/create-dataset.md).
 
 
 ## Create a target connection {#target}
