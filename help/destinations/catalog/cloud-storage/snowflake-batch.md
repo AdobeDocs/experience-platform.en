@@ -2,16 +2,17 @@
 title: Snowflake Batch connection
 description: Export data to your Snowflake account using private listings.
 badgeBeta: label="Beta" type="Informative"
+badgeUltimate: label="Ultimate" type="Positive"
 ---
 # Snowflake Batch connection {#snowflake-destination}
 
 >[!IMPORTANT]
 >
->This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative.
+>This destination connector is in beta and only available to Real-Time CDP Ultimate customers. The functionality and documentation is subject to change.
 
 ## Overview {#overview}
 
-Use the Snowflake destination connector to export data to Adobe's Snowflake instance, which Adobe then shares with your instance through [private listings](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
+Use this destination to send audience data into dynamic tables in your Snowflake account. Dynamic tables provide access to your data without requiring physical data copies.
 
 Read the following sections to understand how the Snowflake destination works and how data is transferred between Adobe and Snowflake.
 
@@ -19,7 +20,7 @@ Read the following sections to understand how the Snowflake destination works an
 
 This destination uses a [!DNL Snowflake] data share, which means that no data is physically exported or transferred to your own Snowflake instance. Instead, Adobe grants you read-only access to a live table hosted within Adobe's Snowflake environment. You can query this shared table directly from your Snowflake account, but you do not own the table and cannot modify or retain it beyond the specified retention period. Adobe fully manages the lifecycle and structure of the shared table.
 
-The first time you share data from Adobe's Snowflake instance to yours, you are prompted to accept the private listing from Adobe.
+The first time after you set up a dataflow from Adobe to your Snowflake account, you are prompted to accept the private listing from Adobe.
 
 ![Screenshot showing the Snowflake private listing acceptance screen](../../assets/catalog/cloud-storage/snowflake-batch/snowflake-accept-listing.png)
 
@@ -39,7 +40,9 @@ When a dataflow runs for an audience for the first time, it performs a backfill 
 
 Experience Platform provides two types of Snowflake destinations: [Snowflake Streaming](/help/destinations/catalog/cloud-storage/snowflake.md) and [Snowflake Batch](snowflake-batch.md).
 
-The table below will help you decide which destination to use by outlining the scenarios where each data sharing method is most appropriate.
+While both destinations give you access to your data in Snowflake in a zero-copy manner, there are some recommended best practices in terms of use cases for each connector.
+
+The table below will help you decide which connector to use by outlining the scenarios where each data sharing method is most appropriate.
 
 |  | Choose [Snowflake Batch](snowflake-batch.md) when you need | Choose [Snowflake Streaming](/help/destinations/catalog/cloud-storage/snowflake.md) when you need |
 |--------|-------------------|----------------------|
@@ -106,7 +109,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authenticate to destination {#authenticate}
 
-To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
+To authenticate to the destination, select **[!UICONTROL Connect to destination]** and provide an account name and, optionally, an account description.
 
 ![Sample screenshot showing how to authenticate to the destination](../../assets/catalog/cloud-storage/snowflake-batch/authenticate-destination.png)
 
@@ -149,15 +152,33 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 ### Map attributes {#map}
 
-The [!DNL Snowflake Batch] destination supports the mapping of identities and profile attributes to custom attributes.
+You can export identities and profile attributes to this destination.
 
 ![Experience Platform user interface image showing the mapping screen for the Snowflake destination.](../../assets/catalog/cloud-storage/snowflake-batch/mapping.png)
+
+You can use the [calculated fields control](../../ui/data-transformations-calculated-fields.md) to export and perform operations on arrays.
 
 The target attributes are automatically created in Snowflake using the attribute name that you provide in the **[!UICONTROL Attribute name]** field.
 
 ## Exported data / Validate data export {#exported-data}
 
-Check your Snowflake account to verify that the data was exported correctly.
+The data is staged into your Snowflake account via a dynamic table. Check your Snowflake account to verify that the data was exported correctly.
+
+### Data structure {#data-structure}
+
+The dynamic table contains the following columns:
+
+* **TS**: A timestamp column that represents when each row was last updated
+* **Mapping attributes**: Every mapping attribute that you select during the activation workflow is represented as a column header in Snowflake
+* **Audience membership**: Membership to any audience mapped to the dataflow is indicated via an `active` entry in the corresponding cell
+
+![Screenshot showing the Snowflake interface with dynamic table data](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png)
+
+## Known limitations {#known-limitations}
+
+### Multiple merge policies
+
+Audiences with multiple merge policies are not supported in a single dataflow. Different merge policies produce different snapshots, and in practice, data related to one audience would be overwritten by the data from the other audience, instead of data from both being exported as expected.
 
 ## Data usage and governance {#data-usage-governance}
 
