@@ -22,6 +22,8 @@ Select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to 
 
 On the [!UICONTROL Browse] tab of the [!UICONTROL Schemas] workspace, you can filter your schema inventory. Use the **[!UICONTROL Included in Profile]** toggle to only show schemas that have been enabled for use in [Real-Time Customer Profile](../../profile/home.md). Use the **[!UICONTROL Show adhoc schemas]** toggle to filter the list of schemas created with fields namespaced for use only by a single dataset.
 
+<!-- Update image below -->
+
 ![The [!UICONTROL Schemas] workspace [!UICONTROL Browse] tab with the filters panel highlighted.](../images/ui/explore/filters.png)
 
 On the [!UICONTROL Relationship] tab of the [!UICONTROL Schemas] workspace, you can filter the list of relationships based on four criteria. The filters include [!UICONTROL Source schema], [!UICONTROL Destination schema], [!UICONTROL Source class], and the [!UICONTROL Destination class]. The table below provides a description of the filters.
@@ -67,13 +69,13 @@ Each schema row provides access to contextual actions through an ellipsis menu, 
 
 ![The ellipsis menu for a schema row showing inline actions such as Edit, Apply labels, Create dataset, and Manage tags.](../images/ui/explore/schema-inline-actions.png)
 
-Edit schema properties, apply data governance labels, create datasets, and manage organizational metadata directly from the browse view. Additional actions include moving schemas to folders, adding them to deployment packages, copying JSON structures for development workflows, and downloading sample files for testing.
+Edit schema properties, apply data governance labels, delete schemas, and manage organizational metadata directly from the browse view. Additional actions include moving schemas to folders, adding them to deployment packages, copying JSON structures for development workflows, and downloading sample files for testing.
 
 >[!NOTE]
 >
 >Sample files are for testing schema structure and should not contain production data.
 
-These inline actions accelerate schema-related workflows by reducing navigation steps and enabling batch operations on multiple schemas when needed.
+These inline actions accelerate schema-related workflows by reducing navigation steps and enabling batch operations on multiple schemas when needed. For detailed guidance on each inline action, see the [schema actions guide](./resources/schemas.md#more).
 
 ### Organize schemas using tags and folders
 

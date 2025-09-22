@@ -81,6 +81,8 @@ The Schema Editor appears, with the schema's structure shown in the canvas. If d
 
 To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then select the name of the schema you want to edit. You can also use the search bar to narrow the list of available options.
 
+<!-- Add in a cross link here to the explore.md page. Explain how you can search, categorize etc.. Possibly under the More actions heading. Decide which is best suited in the flow of the document -->
+
 ![The Schema workspace with a schema highlighted.](../../images/ui/resources/schemas/edit-schema.png)
 
 >[!TIP]
@@ -89,9 +91,45 @@ To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then sel
 
 Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add field groups](#add-field-groups) to the schema (or [add individual fields](#add-individual-fields) from those groups), [edit field display names](#display-names), or [edit existing custom field groups](./field-groups.md#edit) if the schema employs any.
 
-## More actions {#more}
+## Schema actions {#more}
 
-Within the Schema Editor you can also conduct quick actions to copy the JSON structure of the schema or delete the schema if it has not been enabled for Real-Time Customer Profile or has associated datasets. Select [!UICONTROL More] at the top of the view to display a drop down with quick actions. 
+Perform various actions on schemas both from the browse view and within the Schema Editor. Browse-level actions help you manage schemas efficiently without opening individual schema details, while Schema Editor actions support schema development workflows.
+
+### Browse-level inline actions
+
+Access contextual actions for each schema directly from the [!UICONTROL Browse] tab using the ellipsis (…) menu. These actions streamline schema management by eliminating navigation steps. To discover and filter schemas before taking actions, see the [enhanced schema browsing guide](../explore.md#enhanced-schema-browsing-and-organization).
+
+**Edit schema properties**
+Modify basic schema information including display name, description, and tags. Use this to update schema metadata without opening the full Schema Editor. Schema properties changes are immediately visible in the browse table and affect how the schema appears in search results.
+
+**Delete schema**
+Remove schemas that are no longer needed from your organization. Delete is only available for schemas that have not been enabled for Real-Time Customer Profile and have no associated datasets. Once deleted, schemas cannot be recovered, so ensure the schema is no longer required before proceeding.
+
+**Apply data governance labels**
+Assign data usage labels to categorize schemas according to privacy policies and compliance requirements. Labels applied at the schema level propagate to all datasets created from that schema. This action opens the data governance labeling interface where you can select appropriate contract, identity, and sensitive data labels.
+
+**Manage tags**
+Add or remove user-defined tags to organize schemas by project, team, business domain, or custom taxonomies. Tags improve schema discoverability through filtering and search. Both categorized tags (created by administrators) and uncategorized tags (created by users) are supported.
+
+**Move to folder**
+Organize schemas into folder hierarchies for structured browsing and access control. Moving schemas to folders helps maintain organization-wide schema governance and supports team-based access patterns. Create new folders directly from this action if needed.
+
+**Add to package**
+Include schemas in deployment packages for promotion across environments or sandboxes. This action supports schema lifecycle management by enabling controlled deployment of schema changes. Packages maintain schema dependencies and ensure consistent deployments.
+
+**Copy JSON structure**
+Copy the complete JSON representation of the schema to your clipboard. Use this for API integrations, documentation, or sharing schema structures with developers. The JSON includes all field definitions, data types, and schema metadata in XDM-compliant format.
+
+**Download sample file**
+Generate and download sample data files that match the schema structure. These files support testing and development workflows by providing correctly formatted example data. Sample files contain placeholder values and should not include production data.
+
+>[!NOTE]
+>
+>Sample files are for testing schema structure and should not contain production data.
+
+### Schema Editor actions
+
+Within the Schema Editor conduct quick actions to copy the JSON structure of the schema or delete the schema if it has not been enabled for Real-Time Customer Profile or has associated datasets. Select [!UICONTROL More] at the top of the view to display a drop down with quick actions. 
 
 The Copy JSON structure functionality allows you to see what a sample payload would look like while you are still building the schema and your data pipelines. It is especially helpful for situations where there are complex object map structures in the schema such as an identity map.
 
