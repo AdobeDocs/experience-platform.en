@@ -5,7 +5,9 @@ title: Schemas UI Overview
 description: This overview covers the major capabilities of the Schemas workspace in Experience Platform.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
 ---
-# [!UICONTROL Schemas] UI overview
+# [!UICONTROL Schemas] UI overview 
+
+<!-- Add link somewhere in this page to the explore.md file -->
 
 The [!UICONTROL Schemas] workspace in the Adobe Experience Platform user interface allows you to manage Experience Data Model (XDM) resources, including schemas, classes, schema field groups, and data types. You can view and explore core resources provided by Adobe, and create custom resources and schemas for your organization.
 

@@ -6,7 +6,7 @@ description: Learn how to explore existing schemas, classes, schema field groups
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 ---
-# Explore schema resources in the UI
+# Explore schema resources in the UI 
 
 In Adobe Experience Platform, all Experience Data Model (XDM) schema resources are stored in the [!DNL Schema Library], including standard resources provided by Adobe and custom resources defined by your organization. In the Experience Platform UI, you can view the structure and fields of any existing schema, class, field group, or data type in the [!DNL Schema Library]. This is especially useful when planning and preparing for data ingestion, as the UI provides information on the expected data types and use cases of each field provided by these XDM resources.
 
@@ -44,6 +44,10 @@ You can also use the search bar to narrow down results further.
 The resources displayed in search results are ordered first by title matches, then by description matches. In turn, the more word matches in either of these categories, the higher the resource appears in the list.
 
 When you have found the resource you want to explore, select its name from the list to view its structure in the canvas.
+
+### Related documentation
+
+The schema exploration capabilities detailed in this guide work seamlessly with other Experience Platform organizational and governance features. For comprehensive information on organizing your business objects with user-defined tags and categories, see the [managing unified tags guide](../../administrative-tags/ui/managing-tags.md). To understand consistent UI patterns for advanced search, filtering, and inline actions that are applied across Experience Platform workspaces, refer to the datasets user guide. When working with data governance labels and policies on your schemas, consult the data usage labels user guide for instructions on applying and managing labels to support compliance requirements.
 
 ## Explore an XDM resource in the canvas {#explore}
 
