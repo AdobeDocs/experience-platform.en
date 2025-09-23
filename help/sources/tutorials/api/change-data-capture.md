@@ -24,6 +24,10 @@ Both approaches require Data Mirror with model-based schemas to preserve relatio
 >
 >Data Mirror is available to Adobe Journey Optimizer **Orchestrated campaigns** license holders and as a limited release for Customer Journey Analytics customers or based on your license and feature enablement. Contact your Adobe representative for access.
 
+>[!NOTE]
+>
+>**Orchestrated campaigns users**: Use the Data Mirror capabilities described in this document to work with customer data that maintains referential integrity. Even if your source does not use change data capture formatting, Data Mirror supports relational features such as primary key enforcement, record-level upserts, and schema relationships. These features ensure consistent and reliable data modeling across connected datasets.
+
 Data Mirror uses model-based schemas to extend change data capture and enable advanced database synchronization capabilities. For an overview of Data Mirror, see [Data Mirror overview](../../../xdm/data-mirror/overview.md).
 
 Model-based schemas extend Experience Platform to enforce primary key uniqueness, track row-level changes, and define schema-level relationships. With change data capture, they apply inserts, updates, and deletes directly in the data lake, reducing the need for Extract, Transform, Load (ETL) or manual reconciliation.
