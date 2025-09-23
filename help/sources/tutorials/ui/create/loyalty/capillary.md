@@ -1,11 +1,14 @@
 ---
-title: Connect Capillary to Experience Platform Using the UI
+title: Connect Capillary to Experience Platform using the UI
 description: Learn how to connect Capillary to Experience Platform using the the UI
-hide: true
-hidefromtoc: true
+badge: Beta
 exl-id: c90e6500-b92c-44ba-8de6-84e772bd9db1
 ---
-# Connect [!DNL Capillary] to Experience Platform using the UI
+# Connect [!DNL Capillary Streaming Events] to Experience Platform using the UI
+
+>[!AVAILABILITY]
+>
+>The [!DNL Capillary Streaming Events] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
 Read this guide to learn how to connect your [!DNL Capillary] database to Adobe Experience Platform using the sources workspace in the Experience Platform user interface.
 
@@ -69,19 +72,23 @@ Once your dataset is configured, you must then provide details on your dataflow,
 | --- | --- |
 | Dataflow name | The name of the dataflow.  By default, this will use the name of the file that is being imported. |
 | Description | (Optional) A brief description of your dataflow. |
-| Alerts | Experience Platform can produce event-based alerts which users can subscribe to, these options all a running dataflow to trigger these.  For more information, read the [alerts overview](../../alerts.md) <ul><li>**Sources Dataflow Run Start**: Select this alert to receive a notification when your dataflow run begins.</li><li>**Sources Dataflow Run Success**: Select this alert to receive a notification if your dataflow ends without any errors.</li><li>**Sources Dataflow Run Failure**: Select this alert to receive a notification if your dataflow run ends with any errors.</li></ul> |
+| Alerts | Experience Platform can produce event-based alerts which users can subscribe to, these options allow a running dataflow to trigger these.  For more information, read the [alerts overview](../../alerts.md) <ul><li>**Sources Dataflow Run Start**: Select this alert to receive a notification when your dataflow run begins.</li><li>**Sources Dataflow Run Success**: Select this alert to receive a notification if your dataflow ends without any errors.</li><li>**Sources Dataflow Run Failure**: Select this alert to receive a notification if your dataflow run ends with any errors.</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Mapping
 
-Use the mapping interface to map your source data to the appropriate schema fields before ingesting data to Experience Platform.  For more information, read the [mapping guide in the UI](../../../../../data-prep/ui/mapping.md).
+Use the mapping interface to map your source data to the appropriate schema fields before ingesting data to Experience Platform. For more information, read the [mapping guide in the UI](../../../../../data-prep/ui/mapping.md).
+
+>[!TIP]
+>
+>You can download the [Events and Profile mappings](../../../../images/tutorials/create/capillary/mappings.zip) for [!DNL Capillary] and [import the files to Data Prep](../../../../../data-prep/ui/mapping.md#import-mapping) when you are ready to map your data.
 
 ![The mapping interface for Capillary.](../../../../images/tutorials/create/capillary/mappings.png)
 
 ## Review
 
-The *[!UICONTROL Review]* step appears, allowing you to review the details of your dataflow before it is created. Details are group within the following categories:
+The *[!UICONTROL Review]* step appears, allowing you to review the details of your dataflow before it is created. Details are grouped within the following categories:
 
 * **[!UICONTROL Connection]**: Shows the account name, source platform, and the source name.
 * **[!UICONTROL Assign dataset and map fields]**: Shows the target dataset and the schema that the dataset adheres to.
