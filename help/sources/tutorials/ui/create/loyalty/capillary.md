@@ -3,6 +3,7 @@ title: Connect Capillary to Experience Platform using the UI
 description: Learn how to connect Capillary to Experience Platform using the the UI
 hide: true
 hidefromtoc: true
+exl-id: c90e6500-b92c-44ba-8de6-84e772bd9db1
 ---
 # Connect [!DNL Capillary] to Experience Platform using the UI
 
