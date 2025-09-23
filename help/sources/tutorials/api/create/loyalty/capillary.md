@@ -33,7 +33,7 @@ Read the guide on [getting started with Experience Platform APIs](../../../../..
 4. Create a **target connection** to ensure that your data lands in data lake.
 5. Use Data Prep to create mappings that map your [!DNL Capillary] source fields to the correct XDM fields.
 6. Create a dataflow using your `sourceConnectionId`, `targetConnectionId`, and `mappingID`
-7. eTest with single sample profile/transaction events to verify your dataflow.
+7. Test with single sample profile/transaction events to verify your dataflow.
 
 >[!ENDSHADEBOX]
 
@@ -224,7 +224,7 @@ Transactions capture commerce activities. View the following payload for an exam
 
 >[!ENDTABS]
 
-### Supported Events
+<!--### Supported Events
 
 The [!DNL Capillary] source supports the following events:
 
@@ -241,8 +241,7 @@ The [!DNL Capillary] source supports the following events:
 * `pointsRedeemed`
 * `transactionAdded`
 * `tierRenewed`
-* `customerUpdated`
-
+* `customerUpdated`-->
 
 ### Historical data migration
 
@@ -313,9 +312,9 @@ Map the Capillary fields to the corresponding XDM schema fields as follows:
 
 | Source schema                | Target schema                  |
 |------------------------------|-------------------------------|
-| `identityMap.email.id`       | `xdm:identityMap.email`       |
-| `loyalty.points`             | `xdm:loyaltyPoints`           |
-| `loyalty.tier`               | `xdm:loyaltyTier`             |
+| `identityMap.email.id`       | `xdm:identityMap.email[0].id`       |
+| `loyalty.points`             | `xdm:loyalty.points`           |
+| `loyalty.tier`               | `xdm:loyalty.tier`             |
 | `commerce.order.priceTotal`  | `xdm:commerce.order.priceTotal`|
 | `productLineItems.SKU`       | `xdm:productListItems.SKU`    |
 
@@ -370,7 +369,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns your dataflow with it's corresponding dataflow ID.
+A successful response returns your dataflow with its corresponding dataflow ID.
 
 ```json
 {

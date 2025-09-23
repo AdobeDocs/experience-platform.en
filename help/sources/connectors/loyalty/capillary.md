@@ -11,7 +11,7 @@ hidefromtoc: true
 By integrating [!DNL Capillary] with Experience Platform, you can:
 
 * Synchronize **loyalty points, tiers, and rewards** in real-time.
-* Send **transactional data** into Experience PLatform for analytics and activation.
+* Send **transactional data** into Experience Platform for analytics and activation.
 * Leverage Real-Time CDP, Experience Platform, and Adobe Journey Optimizer for segmentation, journey orchestration, and personalization.
 
 ## Prerequisites

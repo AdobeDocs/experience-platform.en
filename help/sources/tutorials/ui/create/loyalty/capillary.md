@@ -1,5 +1,5 @@
 ---
-title: Connect Capillary to Experience Platform Using the UI
+title: Connect Capillary to Experience Platform using the UI
 description: Learn how to connect Capillary to Experience Platform using the the UI
 hide: true
 hidefromtoc: true
@@ -68,7 +68,7 @@ Once your dataset is configured, you must then provide details on your dataflow,
 | --- | --- |
 | Dataflow name | The name of the dataflow.  By default, this will use the name of the file that is being imported. |
 | Description | (Optional) A brief description of your dataflow. |
-| Alerts | Experience Platform can produce event-based alerts which users can subscribe to, these options all a running dataflow to trigger these.  For more information, read the [alerts overview](../../alerts.md) <ul><li>**Sources Dataflow Run Start**: Select this alert to receive a notification when your dataflow run begins.</li><li>**Sources Dataflow Run Success**: Select this alert to receive a notification if your dataflow ends without any errors.</li><li>**Sources Dataflow Run Failure**: Select this alert to receive a notification if your dataflow run ends with any errors.</li></ul> |
+| Alerts | Experience Platform can produce event-based alerts which users can subscribe to, these options allow a running dataflow to trigger these.  For more information, read the [alerts overview](../../alerts.md) <ul><li>**Sources Dataflow Run Start**: Select this alert to receive a notification when your dataflow run begins.</li><li>**Sources Dataflow Run Success**: Select this alert to receive a notification if your dataflow ends without any errors.</li><li>**Sources Dataflow Run Failure**: Select this alert to receive a notification if your dataflow run ends with any errors.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -80,7 +80,7 @@ Use the mapping interface to map your source data to the appropriate schema fiel
 
 ## Review
 
-The *[!UICONTROL Review]* step appears, allowing you to review the details of your dataflow before it is created. Details are group within the following categories:
+The *[!UICONTROL Review]* step appears, allowing you to review the details of your dataflow before it is created. Details are grouped within the following categories:
 
 * **[!UICONTROL Connection]**: Shows the account name, source platform, and the source name.
 * **[!UICONTROL Assign dataset and map fields]**: Shows the target dataset and the schema that the dataset adheres to.
