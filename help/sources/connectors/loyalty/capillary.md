@@ -1,11 +1,15 @@
 ---
 title: Capillary Streaming Events Overview
 description: Learn how to stream data from Capillary to Experience Platform.
-hide: true
-hidefromtoc: true
+last-substantial-update: 2025-09-23
+badge: Beta
 exl-id: 3b8eb2f6-3b4a-4b91-89d4-b6d9027c6ab4
 ---
 # [!DNL Capillary Streaming Events]
+
+>[!AVAILABILITY]
+>
+>The [!DNL Capillary Streaming Events] source is in beta. Read the [terms and conditions](../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
 [!DNL Capillary Technologies] is a leading loyalty and engagement platform, trusted by over 300 brands around the world. Use the [!DNL Capillary Streaming Events] source to enable your business to seamlessly stream customer profiles, loyalty data, and transactional events from [!DNL Capillary] into Adobe Experience Platform. Connect your [!DNL Capillary] source to enable real-time personalization, advanced audience segmentation, and omnichannel campaign orchestration.
 

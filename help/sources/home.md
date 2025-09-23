@@ -213,6 +213,14 @@ You can use the following sources to ingest data from your local system to Exper
 
 {style="table-layout:auto"}
 
+### Loyalty {#loyalty}
+
+You can use the following sources to ingest data loyalty to Experience Platform.
+
+| Source | Ingestion type | Cloud |
+| --- | --- | --- |
+| [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Streaming | Azure |
+
 ### Marketing Automation {#marketing-automation}
 
 You can use the following sources to ingest marketing automation data to Experience Platform.

@@ -1,11 +1,14 @@
 ---
 title: Connect Capillary to Experience Platform using the Flow Service API
 description: Learn how to connect Capillary to Experience Platform using APIs.
-hide: true
-hidefromtoc: true
+badge: Beta
 exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
 ---
 # Connect [!DNL Capillary Streaming Events] to Experience Platform using the [!DNL Flow Service] API
+
+>[!AVAILABILITY]
+>
+>The [!DNL Capillary Streaming Events] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
 Read this guide to learn how to use the [!DNL Capillary Streaming Events] and the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) to stream data from your [!DNL Capillary] account to Adobe Experience Platform.
 
@@ -318,6 +321,10 @@ Map the Capillary fields to the corresponding XDM schema fields as follows:
 | `loyalty.tier`               | `xdm:loyalty.tier`             |
 | `commerce.order.priceTotal`  | `xdm:commerce.order.priceTotal`|
 | `productLineItems.SKU`       | `xdm:productListItems.SKU`    |
+
+>[!TIP]
+>
+>You can download the [Events and Profile mappings](../../../../images/tutorials/create/capillary/mappings.zip) for [!DNL Capillary] and [import the files to Data Prep](../../../../../data-prep/ui/mapping.md#import-mapping) when you are ready to map your data.
 
 ### Create a dataflow {#flow}
 

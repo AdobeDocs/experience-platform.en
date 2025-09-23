@@ -1,11 +1,14 @@
 ---
 title: Connect Capillary to Experience Platform using the UI
 description: Learn how to connect Capillary to Experience Platform using the the UI
-hide: true
-hidefromtoc: true
+badge: Beta
 exl-id: c90e6500-b92c-44ba-8de6-84e772bd9db1
 ---
-# Connect [!DNL Capillary] to Experience Platform using the UI
+# Connect [!DNL Capillary Streaming Events] to Experience Platform using the UI
+
+>[!AVAILABILITY]
+>
+>The [!DNL Capillary Streaming Events] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
 Read this guide to learn how to connect your [!DNL Capillary] database to Adobe Experience Platform using the sources workspace in the Experience Platform user interface.
 
@@ -75,7 +78,11 @@ Once your dataset is configured, you must then provide details on your dataflow,
 
 ## Mapping
 
-Use the mapping interface to map your source data to the appropriate schema fields before ingesting data to Experience Platform.  For more information, read the [mapping guide in the UI](../../../../../data-prep/ui/mapping.md).
+Use the mapping interface to map your source data to the appropriate schema fields before ingesting data to Experience Platform. For more information, read the [mapping guide in the UI](../../../../../data-prep/ui/mapping.md).
+
+>[!TIP]
+>
+>You can download the [Events and Profile mappings](../../../../images/tutorials/create/capillary/mappings.zip) for [!DNL Capillary] and [import the files to Data Prep](../../../../../data-prep/ui/mapping.md#import-mapping) when you are ready to map your data.
 
 ![The mapping interface for Capillary.](../../../../images/tutorials/create/capillary/mappings.png)
 
