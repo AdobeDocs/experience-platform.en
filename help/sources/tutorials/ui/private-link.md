@@ -12,6 +12,8 @@ exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
 >* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
 >* [[!DNL ADLS Gen2]](../../connectors/cloud-storage/adls-gen2.md)
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
+>
+>Private Link Support is currently only available for organizations that have purchased Adobe Healthcare Shield or Adobe Privacy & Security Shield.
 
 You can use the Private Links feature to create private endpoints for your Adobe Experience Platform sources to connect to. Securely connect your sources to  a virtual network using private IP addresses, eliminating the need for public IPs and reduce your attack surface. Simplify your network setup by removing the need for complex firewall or Network Address Translation configurations, while ensuring data traffic only reaches approved services.
 
