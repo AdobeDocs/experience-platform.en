@@ -18,27 +18,26 @@ description: The September 2025 release notes for Adobe Experience Platform.
 
 New features and updates to existing features in Adobe Experience Platform:
 
-- [AI Assistant](#ai-assistant)
+- [Agent Orchestrator](#agent-orchestrator)
 - [Alerts](#alerts)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [Query Service](#query-service)
 - [Real-Time Customer Profile](#profile)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
-## AI Assistant {#ai-assistant}
+## Agent Orchestrator {#agent-orchestrator}
 
-Adobe Experience Platform AI Assistant is a conversational experience that you can use to accelerate and optimize workflows across Adobe Experience Cloud applications.
+Adobe Experience Platform Agent Orchestrator is the new agentic layer in Adobe Experience Platform.
 
 **New features**
 
 | Feature | Description |
 | --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator is the intelligent layer powering AI Assistant. When you ask questions or request help, Agent Orchestrator automatically calls upon specialized agents to get you the right answers. Agent Orchestrator remembers your conversation history, enabling you to build on previous questions naturally without repeating context, and combines insights from multiple agents to present you with clear, unified responses. |
+| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator is the new agentic layer in Adobe Experience Platform. Designed to leverage the platform's rich data and customer knowledge, Experience Platform Agent Orchestrator powers the intelligence and reasoning behind purpose-built expert Adobe Experience Platform Agents, enabling them to execute complex decision-making and problem-solving tasks at speed and scale — all with human oversight. When you ask questions or request help via natural language in a conversational interface like AI Assistant, Agent Orchestrator automatically calls upon specialized agents to get you the right answers. Agent Orchestrator remembers your conversation history, enabling you to build on previous questions naturally without repeating context, and combines insights from multiple agents to present you with clear, unified responses. |
 | Audience Agent | The Audience Agent lets you view insights about audiences, including detecting significant audience size changes, detecting duplicate audiences, explore your audience inventory, and retrieve your audiences' size. |
 
-For more information, read the [AI Assistant overview](../ai-assistant/home.md).
+For more information, read the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home).
 
 ## Alerts {#alerts}
 
@@ -62,18 +61,18 @@ For more information about alerts, read the [[!DNL Observability Insights] overv
 
 | Destination | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Snowflake Batch] connector | A new [!DNL Snowflake Batch] connector is now available, providing an alternative to the streaming connector for specific use cases. |
-| [!DNL Adform] destination | [!DNL Adform] is a leading provider of programmatic media buying and selling solutions. By connecting Adform to the Adobe Experience Platform, you can activate your first party audiences through Adform, based on the Experience Cloud ID (ECID). |
-| [!DNL Data Landing Zone] encryption support | You can now attach RSA-formatted public keys to encrypt your exported files, giving you the same level of security that other cloud storage destinations provide for your sensitive information. |
-| Authentication expiration details for [!DNL Pinterest] destinations | Authentication expiration information for [!DNL Pinterest] destinations is now visible directly in the Experience Platform interface, so you can see when your authentication will expire and renew it before it causes any disruptions to your dataflows. You can monitor your token expiration dates from the **[!UICONTROL Account expiration date]** column in either the **[[!UICONTROL Accounts]](../destinations/ui/destinations-workspace.md#accounts)** or the **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)** tabs.|
+| [!BADGE Beta]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) connector | A new [!DNL Snowflake Batch] connector is now available, providing an alternative to the streaming connector for specific use cases. |
+| [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) encryption support | You can now attach RSA-formatted public keys to encrypt your exported files, giving you the same level of security that other cloud storage destinations provide for your sensitive information. |
+| Authentication expiration details for [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) destinations | Authentication expiration information for [!DNL Pinterest] destinations is now visible directly in the Experience Platform interface, so you can see when your authentication will expire and renew it before it causes any disruptions to your dataflows. You can monitor your token expiration dates from the **[!UICONTROL Account expiration date]** column in either the **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** or the **[[!UICONTROL Browse]](../destinations/ui/destinations-workspace.md#browse)** tabs.|
 
 **New or updated functionality**
 
 | Feature | Description |
 | --- | --- |
-| Enhanced destination management capabilities in the Experience Platform UI | Improve your destination management workflow with new sorting capabilities across the [[!UICONTROL Browse]](../destinations/ui/destinations-workspace.md#browse) and [[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts) tabs. You can now also see a visual indicator when your account authentication is about to expire. |
+| Enhanced destination management capabilities in the Experience Platform UI | Improve your destination management workflow with new sorting capabilities across the [[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse) and [[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts) tabs. You can now also see a visual indicator when your account authentication is about to expire. <br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
+| Persistent column width settings | Column width settings now persist when navigating away from a page and returning to it. For example, if you adjust a column width in the [[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse) tab, your custom column width will remain the same when you navigate away and return to that tab. |
 
-For more information, read the [Destinations overview](../../destinations/home.md).
+For more information, read the [Destinations overview](../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
