@@ -9,7 +9,7 @@ Use change data capture in Adobe Experience Platform sources to keep your source
 
 Experience Platform currently supports **incremental data copy**, which periodically transfers newly created or updated records from the source system to the ingested datasets. This method relies on a **timestamp column** to track changes, but it does not detect deletions, which can lead to data inconsistencies over time.
 
-In contrast, change data capture captures and applies inserts, updates, and deletes in real time. This ensures that datasets stay fully aligned with the source system and provides a complete change history, beyond what incremental copy supports.
+In contrast, change data capture captures and applies inserts, updates, and deletes in near real-time. This ensures that datasets stay fully aligned with the source system and provides a complete change history, beyond what incremental copy supports.
 
 Change data capture in Experience Platform requires **[Data Mirror](../../../xdm/data-mirror/overview.md)** with model-based schemas. You can provide change data to Data Mirror in two ways:
 

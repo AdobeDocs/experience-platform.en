@@ -115,7 +115,7 @@ Use Data Mirror when you need to:
 
 * Synchronize data changes from external systems like Snowflake, Databricks, or BigQuery
 * Preserve database relationships and enforce data integrity during ingestion  
-* Support advanced analytics, journey orchestration, or B2B relationship modeling
+* Support advanced analytics and journey orchestration
 * Enable precise change tracking with upserts and deletes
 
 To create a model-based schema, select **[!UICONTROL model-based]** when creating a schema. Model-based schemas do not use classes or field groups. Instead, you define the structure manually or upload a DDL file. Model-based schemas require a primary key, version identifier, and if applicable, timestamp identifier fields. You can then configure additional fields and define relationships with other schemas.

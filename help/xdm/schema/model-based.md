@@ -9,9 +9,9 @@ badge: Limited Availability
 
 >[!AVAILABILITY]
 >
->Currently, model-based schemas are only available through Adobe Journey Optimizer **Orchestrated campaigns** and the limited release based on your license or feature enablement. This includes **Customer Journey Analytics**, and **Real-Time CDP B2B** editions. Contact your Adobe representative for inclusion in this limited release.
+>Data Mirror and model-based schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
 
-Model-based schemas provide a flexible, governed modeling pattern for representing structured data in the Adobe Experience Platform data lake. They support enforced primary keys, schema-level relationships, and fine-grained control over records—all without relying on union schemas or full relational database systems.
+Model-based schemas provide a flexible, controlled modeling pattern for representing structured data in the Adobe Experience Platform data lake. They support enforced primary keys, schema-level relationships, and fine-grained control over records—all without relying on union schemas or full relational database systems.
 
 Use model-based schemas to:
 
@@ -19,7 +19,7 @@ Use model-based schemas to:
 * Enable precise change tracking using versioning for inserts, updates, and deletes.
 * Define reusable schema-level relationships to model real-world entity connections.
 * Avoid duplicating schema structures across applications by supporting multiple data models.
-* Bypass union schema constraints to streamline onboarding, reduce schema bloat, and simplify evolution.
+* Bypass union schema constraints to streamline onboarding, reduce schema bloat, and avoid unwanted schema changes.
 
 ## How model-based schemas differ from standard XDM schemas
 
@@ -27,7 +27,7 @@ Standard XDM schemas in Experience Platform follow one of three data behaviors: 
 
 In the traditional model, record and time-series schemas participate in [union schemas](../api/unions.md) (also see the [union schema UI guide](../../profile/ui/union-schema.md)). These schemas automatically evolve as shared [field groups](./composition.md#field-group) are updated and custom fields must be nested under a tenant namespace. While powerful, this model can slow onboarding, produce overly complex schemas with unused fields, and require additional data mapping or transformation. These factors increase the learning curve and ongoing maintenance effort.
 
-Model-based schemas remove union schema dependencies, eliminate auto-evolution from shared field groups, and allow direct field definitions without tenant namespace restrictions. You gain explicit control over primary keys, relationships, and schema evolution, making it easier to model data to fit your needs.
+Model-based schemas remove union schema dependencies, which eliminate automatic updates from shared field groups and allows direct field definitions without tenant namespace restrictions. You gain explicit control over primary keys, relationships, and initial schema design, making it easier to model data to fit your needs at creation time.
 
 ## Features of model-based schemas
 
@@ -111,9 +111,9 @@ For instructions on creating descriptors in the Schema Editor, see [Create descr
 
 ## Relationship support {#relationship-support}
 
-Model-based schemas support relationship descriptors, which define connections between datasets across schemas. These relationships improve referential integrity, enable reusable modeling patterns, and support connected queries across applications. This is done without embedding foreign keys directly in data rows.
+Relational data modeling is a primary use of model-based schemas. Application use cases may even refer to these schemas as 'relational schemas'. Relationship descriptors enable these connections by linking datasets across schemas without embedding foreign keys in data rows. They improve referential integrity, enable reusable modeling patterns, and support connected queries across applications. 
 
-Define relationship descriptors at the schema level so they can be resolved dynamically at query time. Cardinality values (such as 1:1 or many-to-one) provide guidance but do not enforce data constraints during ingestion. This design supports flexible schema relationships and makes it easier to manage how data connects across datasets.
+Create relationship descriptors at the schema level for dynamic resolution at query time. Cardinality values (1:1, many-to-one) provide guidance but do not enforce constraints during ingestion, supporting flexible data modeling across connected datasets.
 
 Before you add relationship descriptors, determine the appropriate type and target:
 
