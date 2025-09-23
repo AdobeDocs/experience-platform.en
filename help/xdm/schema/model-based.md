@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;model-based schema; schema;Schema;xdm;experience data model;
+keywords: Experience Platform;home;popular topics;model-based schema;relational schema;relational schemas;schema;Schema;xdm;experience data model;
 solution: Experience Platform
 title: Model-based schemas
-description: Learn about model-based schemas in Adobe Experience Platform, including features, required fields, relationships, and limitations.
+description: Learn about model-based schemas (also called relational schemas) in Adobe Experience Platform, including features, required fields, relationships, and limitations.
 badge: Limited Availability
 ---
 # Model-based schemas
@@ -12,6 +12,10 @@ badge: Limited Availability
 >Data Mirror and model-based schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
 
 Model-based schemas provide a flexible, controlled modeling pattern for representing structured data in the Adobe Experience Platform data lake. They support enforced primary keys, schema-level relationships, and fine-grained control over records—all without relying on union schemas or full relational database systems.
+
+>[!IMPORTANT]
+>
+>Data deletion considerations apply to all model-based schema implementations. Applications using these schemas must understand how deletions affect related datasets, compliance requirements, and downstream processes. Plan for deletion scenarios and review [data hygiene guidance](../../hygiene/ui/record-delete.md#model-based-record-delete) before implementation.
 
 Use model-based schemas to:
 
@@ -166,11 +170,21 @@ For a list of relationship descriptor types and syntax, see the [descriptors API
 >
 > Model-based schemas can link to standard schemas, but cannot link to ad-hoc schemas.
 
-## Data hygiene support {#data-hygiene-support}
+## Data deletion and hygiene considerations {#data-hygiene-support}
 
-<!-- Add intro sentence to integrate it into the existing limitations section. -->
+Model-based schemas enable precise record-level deletions that have universal implications for all applications and use cases. Primary key, version, and timestamp descriptors provide the foundation for accurate record identification during deletion operations.
 
-Primary key, version, and timestamp descriptors enable precise record identification for hygiene operations. For detailed hygiene guidance, see [Deleting records from model-based datasets](../../hygiene/ui/record-delete.md#model-based-record-delete).
+### Universal deletion impacts
+
+All applications using model-based schemas must consider:
+
+* **Referential integrity**: Deletions can affect related records across connected datasets
+* **Compliance requirements**: Some industries require specific deletion behaviors and audit trails
+* **Application behavior**: Downstream systems may need to handle deletion events appropriately
+* **Data consistency**: Related datasets must maintain consistency during deletion operations
+* **Deletion planning**: Account for downstream impacts across all connected datasets and applications during the design phase
+
+For implementation guidance, see [Deleting records from model-based datasets](../../hygiene/ui/record-delete.md#model-based-record-delete).
 
 ## Limitations and considerations {#limitations}
 

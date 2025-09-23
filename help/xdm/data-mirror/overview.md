@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;data mirror;model-based schema;change data capture;database sync;primary key;relationships
+keywords: Experience Platform;data mirror;model-based schema;relational schema;change data capture;database sync;primary key;relationships
 solution: Experience Platform
 title: Data Mirror overview
 description: Learn how Data Mirror enables row-level change ingestion from external databases into Adobe Experience Platform using model-based schemas with enforced uniqueness, relationships, and versioning.
@@ -25,7 +25,9 @@ Data Mirror provides the following essential capabilities for database synchroni
 * **Out-of-order event handling**: Processes change events using version and timestamp descriptors, even when they arrive out of sequence.
 * **Direct warehouse integration**: Connects with supported cloud data warehouses for near real-time change synchronization.
 
-Use Data Mirror to ingest changes directly from your source systems, enforce schema integrity, and make the data available for analytics, journey orchestration, and compliance workflows. Data Mirror eliminates complex upstream ETL processes and accelerates implementation by enabling direct mirroring of existing database models. This can enhance data governance through precise control over deletions and data hygiene operations.
+Use Data Mirror to ingest changes directly from your source systems, enforce schema integrity, and make the data available for analytics, journey orchestration, and compliance workflows. Data Mirror eliminates complex upstream ETL processes and accelerates implementation by enabling direct mirroring of existing database models.
+
+Plan for deletion and data hygiene requirements when implementing model-based schemas with Data Mirror. All applications must consider how deletions affect related datasets, compliance workflows, and downstream processes before deployment.
 
 ## Prerequisites {#prerequisites}
 
@@ -85,7 +87,7 @@ Review the common use cases listed below where Data Mirror supports precise data
 
 ### Relational data modeling 
 
-Use model-based schemas in Data Mirror to represent entities, process inserts, updates, and deletes at the row level, and maintain the primary and foreign key relationships that exist in your data sources. This approach brings relational data modeling principles to Experience Platform and ensures structural consistency across datasets.
+Use [model-based schemas](../schema/model-based.md) (also called relational schemas) in Data Mirror to represent entities, process inserts, updates, and deletes at the row level, and maintain the primary and foreign key relationships that exist in your data sources. This approach brings relational data modeling principles to Experience Platform and ensures structural consistency across datasets.
 
 ### Warehouse-to-lake synchronization
 
@@ -110,6 +112,10 @@ Use change data capture to enable precise record-level deletions for compliance 
 ## Important considerations {#considerations}
 
 Review these key considerations to ensure your implementation aligns with supported schema behaviors, ingestion methods, and relationship patterns. Proper planning helps avoid integration issues and ensures accurate data modeling.
+
+### Data deletion and hygiene requirements
+
+All applications using model-based schemas and Data Mirror must understand data deletion implications. Model-based schemas enable precise record-level deletions that can impact related data across connected datasets. These deletion capabilities affect data integrity, compliance, and downstream application behavior regardless of your specific use case. Review [data hygiene requirements](../../hygiene/ui/record-delete.md#model-based-record-delete) and plan for deletion scenarios before implementation.
 
 ### Schema behavior selection
 

@@ -9,9 +9,9 @@ Use change data capture in Adobe Experience Platform sources to keep your source
 
 Experience Platform currently supports **incremental data copy**, which periodically transfers newly created or updated records from the source system to the ingested datasets. This method relies on a **timestamp column** to track changes, but it does not detect deletions, which can lead to data inconsistencies over time.
 
-In contrast, change data capture captures and applies inserts, updates, and deletes in near real-time. This ensures that datasets stay fully aligned with the source system and provides a complete change history, beyond what incremental copy supports.
+In contrast, change data capture captures and applies inserts, updates, and deletes in near real-time. This comprehensive change tracking ensures that datasets stay fully aligned with the source system and provides a complete change history, beyond what incremental copy supports. However, delete operations require special consideration as they affect all applications using the target datasets.
 
-Change data capture in Experience Platform requires **[Data Mirror](../../../xdm/data-mirror/overview.md)** with model-based schemas. You can provide change data to Data Mirror in two ways:
+Change data capture in Experience Platform requires **[Data Mirror](../../../xdm/data-mirror/overview.md)** with [model-based schemas](../../../xdm/schema/model-based.md) (also called relational schemas). You can provide change data to Data Mirror in two ways:
 
 * **[Manual change tracking](#file-based-sources)**: Include a `_change_request_type` column in your dataset for sources that don't natively generate change data capture records
 * **[Native change data capture exports](#database-sources)**: Use change data capture records exported directly from your source system
@@ -67,6 +67,10 @@ To enable change data capture with a model-based schema:
 >[!NOTE]
 >
 >The `_change_request_type` column is only required for file-based sources (Amazon S3, Azure Blob, Google Cloud Storage, SFTP) when you want to explicitly control row-level change behavior. For database sources with native CDC capabilities, change operations are handled automatically through CDC export configurations. File-based ingestion assumes upsert operations by default—you only need to add this column if you want to specify delete operations in your file uploads.
+
+>[!IMPORTANT]
+>
+>**Data deletion planning is required**. All applications that use model-based schemas must understand deletion implications before implementing change data capture. Plan for how deletions will affect related datasets, compliance requirements, and downstream processes. See [data hygiene considerations](../../hygiene/ui/record-delete.md#model-based-record-delete) for guidance.
 
 ## Providing change data for file-based sources {#file-based-sources}
 
