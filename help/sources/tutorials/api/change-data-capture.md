@@ -5,16 +5,18 @@ exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
 ---
 # Enable change data capture for source connections in the API
 
-Use change data capture in Adobe Experience Platform sources to keep your source and destination systems synchronized in real time.
+Use change data capture in Adobe Experience Platform sources to keep your source and destination systems synchronized in near real-time.
 
 Experience Platform currently supports **incremental data copy**, which periodically transfers newly created or updated records from the source system to the ingested datasets. This method relies on a **timestamp column** to track changes, but it does not detect deletions, which can lead to data inconsistencies over time.
 
 In contrast, change data capture captures and applies inserts, updates, and deletes in real time. This ensures that datasets stay fully aligned with the source system and provides a complete change history, beyond what incremental copy supports.
 
-You can use change data capture in two ways:
+Change data capture in Experience Platform requires **[Data Mirror](../../../xdm/data-mirror/overview.md)** with model-based schemas. You can provide change data to Data Mirror in two ways:
 
-* **[Standard change data capture](#file-based-sources)**: Track changes with regular XDM schemas
-* **[Data Mirror](../../../xdm/data-mirror/overview.md)**: Advanced change tracking with model-based schemas that preserves relationships and enforces uniqueness
+* **[Manual change tracking](#file-based-sources)**: Include a `_change_request_type` column in your dataset for sources that don't natively generate CDC records
+* **[Native change data capture exports](#file-based-sources)**: Use change data capture records exported directly from your source system
+
+Both approaches require Data Mirror with model-based schemas to preserve relationships and enforce uniqueness.
 
 ## Data Mirror with model-based schemas
 
@@ -25,6 +27,8 @@ You can use change data capture in two ways:
 Data Mirror uses model-based schemas to extend change data capture and enable advanced database synchronization capabilities. For an overview of Data Mirror, see [Data Mirror overview](../../../xdm/data-mirror/overview.md).
 
 Model-based schemas extend Experience Platform to enforce primary key uniqueness, track row-level changes, and define schema-level relationships. With change data capture, they apply inserts, updates, and deletes directly in the data lake, reducing the need for Extract, Transform, Load (ETL) or manual reconciliation.
+
+See [Model-based schemas overview](../../../xdm/schema/model-based.md) for more information.
 
 ### Model-based schema requirements for change data capture
 
@@ -47,18 +51,24 @@ This column is evaluated only during ingestion and is not stored or mapped to XD
 
 To enable change data capture with a model-based schema:
 
-<!-- CONSTANTLY BREAKS VALIDATION : 1. [Create a model-based schema](../../../xdm/ui/resources/schema.md#create-a-model-based-schema). -->
-
 1. Create a model-based schema.
 2. Add the required descriptors:
    * [Primary key descriptor](../../../xdm/api/descriptors.md#primary-key-descriptor)
    * [Version descriptor](../../../xdm/api/descriptors.md#version-descriptor)
    * [Timestamp descriptor](../../../xdm/api/descriptors.md#timestamp-descriptor) (time-series only)
 3. Create a dataset from the schema and enable change data capture.  
-4. Add the `_change_request_type` column to your source files or tables.  
+4. For file-based ingestion only: Add the `_change_request_type` column to your source files if you need to explicitly specify delete operations. CDC export configurations handle this automatically for database sources.  
 5. Complete the source connection setup to enable ingestion.  
 
-## Standard change data capture for file-based sources {#file-based-sources}
+>[!NOTE]
+>
+>The `_change_request_type` column is only required for file-based sources (Amazon S3, Azure Blob, Google Cloud Storage, SFTP) when you want to explicitly control row-level change behavior. For database sources with native CDC capabilities, change operations are handled automatically through CDC export configurations. File-based ingestion assumes upsert operations by default—you only need to add this column if you want to specify delete operations in your file uploads.
+
+## Providing change data for file-based sources {#file-based-sources}
+
+>[!IMPORTANT]
+>
+>File-based change data capture requires Data Mirror with model-based schemas. The steps below describe how to format your data files to include change tracking information that will be processed by Data Mirror.
 
 For file-based sources ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage], and [!DNL SFTP]), include a `_change_request_type` column in your files:
 
@@ -67,7 +77,7 @@ For file-based sources ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud 
 
 >[!IMPORTANT]
 >
->For **file-based sources only**, each row in the data file must include a `_change_request_type` column with either `u` (upsert) or `d` (delete). Without this column, the system will not recognize the data as supporting change tracking. As a result, options such as the **Orchestrated campaign** toggle will not appear, and the dataset cannot be selected for targeting.
+>For **file-based sources only**, certain applications may require a `_change_request_type` column with either `u` (upsert) or `d` (delete) to validate change tracking capabilities. For example, Adobe Journey Optimizer's **Orchestrated campaigns** feature requires this column to enable the "Orchestrated campaign" toggle and allow dataset selection for targeting. Application-specific validation requirements may vary.
 
 Follow the source-specific steps below.
 
@@ -109,7 +119,7 @@ See [File-based sources](#file-based-sources) for details on using `_change_requ
 
 ## [!DNL Azure Databricks]
 
-You must enable **change data feed** in your [!DNL Azure Databricks] tables to use change data capture in your source connection.
+To use change data capture with [!DNL Azure Databricks], you must both enable **change data feed** in your source tables and configure Data Mirror with model-based schemas in Experience Platform.
 
 Use the following commands to enable change data feed on your tables:
 
@@ -146,7 +156,7 @@ Read the following documentation for steps on how to enable change data capture 
 
 ## [!DNL Data Landing Zone]
 
-You must enable **change data feed** in your [!DNL Data Landing Zone] tables to use change data capture in your source connection.
+To use change data capture with [!DNL Data Landing Zone], you must both enable **change data feed** in your source tables and configure Data Mirror with model-based schemas in Experience Platform.
 
 Read the following documentation for steps on how to enable change data capture for your [!DNL Data Landing Zone] source connection:
 
@@ -155,7 +165,9 @@ Read the following documentation for steps on how to enable change data capture 
 
 ## [!DNL Google BigQuery]
 
-To use change data capture in your [!DNL Google BigQuery] source connection. Navigate to your [!DNL Google BigQuery] page in the [!DNL Google Cloud] console and set `enable_change_history` to `TRUE`. This property enables change history for your data table.
+To use change data capture with [!DNL Google BigQuery], you must both enable change history in your source tables and configure Data Mirror with model-based schemas in Experience Platform.
+
+To enable change history in your [!DNL Google BigQuery] source connection, navigate to your [!DNL Google BigQuery] page in the [!DNL Google Cloud] console and set `enable_change_history` to `TRUE`. This property enables change history for your data table.
 
 For more information, read the guide on [data definition language statements in [!DNL GoogleSQL]](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list).
 
@@ -166,7 +178,7 @@ Read the following documentation for steps on how to enable change data capture 
 
 ## [!DNL Snowflake]
 
-You must enable **change tracking** in your [!DNL Snowflake] tables to use change data capture in your source connections.
+To use change data capture with [!DNL Snowflake], you must both enable **change tracking** in your source tables and configure Data Mirror with model-based schemas in Experience Platform.
 
 In [!DNL Snowflake], enable change tracking by using the `ALTER TABLE` and setting `CHANGE_TRACKING` to `TRUE`.
 
