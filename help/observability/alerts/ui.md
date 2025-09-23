@@ -90,10 +90,12 @@ Alert thresholds can be customized for the following alert types:
 | Destiation Flow Run Delay | Delay threshold |
 | Identity Service Flow Run Delay | Delay threshold |
 | Profile Flow Run Delay | Delay threshold |
+| Profile Streaming Ingestion Failure Rate Exceeded | Error threshold |
+| Profile Streaming Ingestion Skip Rate Exceeded | Error threshold |
 | Sources Flow Run Delay | Delay threshold |
+| Sources Ingestion Error Rate Exceeded | Error threshold |
 | Query Run Delay | Delay threshold |
 | Activation Skip Rate Exceeded | Error threshold |
-| Sources Ingestion Error Rate Exceeded | Error threshold |
 
 Select the ellipsis (**...**) next to a rule's name, a dropdown displays controls. Select **[!UICONTROL Edit]**.
 
