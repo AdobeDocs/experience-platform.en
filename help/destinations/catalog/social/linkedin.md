@@ -24,7 +24,7 @@ A software company organizes a conference and wants to keep in touch with partic
 
 >[!IMPORTANT]
 >
->Starting with September 2025, the [!DNL LinkedIn Matched Audiences] destination no longer supports [!DNL IDFA] (Identifier for Advertisers) identities.  This change is due to LinkedIn's requirements, and is not related to any Experience Platform destination service upgrades.
+>Starting with September 2025, you can no longer map [!DNL IDFA] as a target identity, since [!DNL IDFA] is no longer supported by the [!DNL LinkedIn Matched Audiences] destination. See the [!DNL LinkedIn Matched Audiences] integration [documentation](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) for more details. This change is due to LinkedIn's requirements, and is not related to any Experience Platform destination service upgrades.
 
 
 |Target Identity|Description|Considerations|
