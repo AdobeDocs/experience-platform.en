@@ -9,7 +9,7 @@ badge: Limited Availability
 
 >[!AVAILABILITY]
 >
->Data Mirror is in **limited availability**. It is currently offered through Adobe Journey Optimizer (**Orchestrated campaigns**), **Customer Journey Analytics**, and **Real-Time CDP B2B**, based on license or feature enablement. Contact your Adobe representative to request access.
+>Data Mirror and model-based schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
 
 Data Mirror is an Adobe Experience Platform capability that enables row-level change ingestion from external databases into the data lake using model-based schemas. It preserves data relationships, enforces uniqueness, and supports versioning without requiring upstream extract, transform, load (ETL) processes.
 

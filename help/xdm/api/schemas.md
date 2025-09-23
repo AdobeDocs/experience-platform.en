@@ -279,7 +279,7 @@ To add additional fields to a schema, you can perform a [PATCH operation](#patch
 
 >[!AVAILABILITY]
 >
->Model-based schemas currently support record behavior only. Time-series behavior is not yet supported in the UI or API for model-based schemas.
+>Data Mirror and model-based schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
 
 Create a model-based schema by making a POST request to the `/schemas` endpoint. Model-based schemas store structured, relational-style data **without** classes or field groups. Define fields directly on the schema, and identify the schema as model-based using a logical behavior tag.
 

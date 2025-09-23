@@ -22,7 +22,7 @@ Both approaches require Data Mirror with model-based schemas to preserve relatio
 
 >[!AVAILABILITY]
 >
->Data Mirror is available to Adobe Journey Optimizer **Orchestrated campaigns** license holders and as a limited release for Customer Journey Analytics customers or based on your license and feature enablement. Contact your Adobe representative for access.
+>Data Mirror and model-based schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
 
 >[!NOTE]
 >

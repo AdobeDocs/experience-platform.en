@@ -29,7 +29,7 @@ In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in 
 
 >[!AVAILABILITY]
 >
->Data Mirror is in **limited availability**. It is currently offered through Adobe Journey Optimizer (**Orchestrated campaigns**), **Customer Journey Analytics**, and **Real-Time CDP B2B**, based on license or feature enablement. Contact your Adobe representative to request access.
+>Data Mirror and model-based schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
 
 Select **[!UICONTROL Model-based]** to define structured, model-based-style schemas with fine-grained control over records. Model-based schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture, and support multiple data models used in Campaign Orchestration, Data Distiller, and B2B implementations.
 
