@@ -17,9 +17,17 @@ You can use the Private Links feature to create private endpoints for your Adobe
 
 Read this guide to learn how you can use the sources workspace in the Experience Platform UI to create and use a private endpoint.
 
->[!NOTE]
->
->You can only have one private endpoint per source account for all development sandboxes in your organization.
+>[!BEGINSHADEBOX]
+
+## License usage entitlement for private link support
+
+The license usage entitlement metrics for private link support in sources is as follows:
+
+* Customers are entitled to up to 2 TB per year of data transfer through supported sources ([!DNL Azure Blob Storage], [!DNL ADLS Gen2], and [!DNL Azure File Storage]), across all sandboxes and organizations.
+* Each organization can have a maximum of 10 endpoints for all production sandboxes.
+* Each organization can have a maximum of 1 endpoint for all development sandboxes.
+
+>[!ENDSHADEBOX]
 
 ## Create a private endpoint
 
