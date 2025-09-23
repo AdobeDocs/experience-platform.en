@@ -7,14 +7,6 @@ exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
 
 ## Overview {#overview}
 
->[!IMPORTANT]
->
->* Starting September 9, 2025, you can see two **[!DNL Twitter Custom Audiences]** cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing **[!DNL Twitter Custom Audiences]** destination connector has been renamed to **[!UICONTROL (Deprecated) Twitter Custom Audiences]** and a new card with the name **[!UICONTROL Twitter Custom Audiences]** is now available to you. 
->* Use the new **[!UICONTROL Twitter Custom Audiences]** connection in the catalog for new activation data flows. If you have any active dataflows to the **[!UICONTROL (Deprecated) Twitter Custom Audiences]** destination, they will be updated automatically, so no action is required from you.
->* If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values:
->   * Flow spec ID: `903da9e4-7cf5-442a-9498-a237e4f064f9`
->   * Connection spec ID: `9eb18875-a095-4b89-854e-39b9e29ccd41`
-
 Target your existing followers and customers in Twitter and create relevant re-marketing campaigns by activating your audiences built within Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
