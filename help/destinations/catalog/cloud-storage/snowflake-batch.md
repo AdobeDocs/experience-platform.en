@@ -26,7 +26,11 @@ The first time after you set up a dataflow from Adobe to your Snowflake account,
 
 ### Data retention and Time-to-Live (TTL) {#ttl}
 
-All data shared through this integration has a fixed Time-to-Live (TTL) of seven days. Seven days after the last export, the shared table automatically expires and becomes inaccessible, regardless of whether the dataflow is still active. If you need to retain the data for longer than seven days, you must copy the contents into a table that you own in your own Snowflake instance before the TTL expires.
+All data shared through this integration has a fixed Time-to-Live (TTL) of seven days. Seven days after the last export, the dynamic table automatically expires and becomes inaccessible, regardless of whether the dataflow is still active. If you need to retain the data for longer than seven days, you must copy the contents into a table that you own in your own Snowflake instance before the TTL expires.
+
+>[!IMPORTANT]
+>
+>Deleting a dataflow in Experience Platform will result in the dynamic table disappearing from your Snowflake account.
 
 ### Audience update behavior {#audience-update-behavior}
 
