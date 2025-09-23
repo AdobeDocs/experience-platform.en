@@ -1,6 +1,7 @@
 ---
 title: Legal Disclaimer - Personal Data, Language Support, and Verifying Responses
 description: Learn about legal disclaimers regarding personal data, language support, and verifying responses when using AI Assistant.
+exl-id: 1a3c698e-49eb-4a3b-8e1d-4da909581d57
 ---
 # Legal Disclaimer: Personal Data, Language Support, and Verifying Responses
 

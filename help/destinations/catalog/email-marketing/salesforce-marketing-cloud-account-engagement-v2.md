@@ -4,6 +4,7 @@ description: Learn how to use the (V2) Salesforce Marketing Cloud Account Engage
 badge: label="Alpha" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
 ---
 # [!DNL (V2) Salesforce Marketing Cloud Account Engagement] connection
 
@@ -201,4 +202,4 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 * [!DNL Marketing Cloud Account Engagement] [API documentation](https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html)
 * [Salesforce Import API v5 Documentation](https://developer.salesforce.com/docs/marketing/pardot/guide/import-v5.html)
-* [Salesforce Prospect API v5 Documentation](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html) 
+* [Salesforce Prospect API v5 Documentation](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html)
