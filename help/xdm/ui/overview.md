@@ -20,29 +20,25 @@ The [!UICONTROL Schemas] workspace enables enterprise-grade data modeling with a
 
 ## Key capabilities by user role
 
-Different teams interact with the Schemas workspace in unique ways based on their responsibilities and goals.
+Different roles across the organization benefit from distinct schema capabilities, such as compliance tagging, machine-assisted schema development, and advanced metadata filtering.
 
-**Data Stewards and Governance Teams**: Use administrative tags, folder organization, and governance labels to maintain compliance standards and enable cross-organizational schema discovery.
-
-**Data Engineers and Developers**: Leverage ML-assisted schema creation, JSON export capabilities, inline editing actions, and deployment packages for streamlined development workflows.
-
-**Business Analysts and Data Scientists**: Discover relevant schemas using advanced filtering, view comprehensive metadata in browse tables, and collaborate through organizational tagging systems.
+The following image illustrates how key roles interact with the Schemas workspace:
 
 ![Graphic to convey the key capabilities by user role, with quotes about the schema-related goals of each role.](../images/ui/overview/capabilities-by-role.png)
 
 ## Getting started
 
-If you are using the workspace for the first time, start with the guide on [exploring existing resources in the UI](./explore.md) to familiarize yourself with the different tabs, enhanced filtering capabilities, and the schema canvas.
+If you are using the workspace for the first time, start with the guide on [exploring existing resources in the UI](./explore.md) to familiarize yourself with the different tabs, filtering capabilities, and the schema canvas.
 
 It is also recommended that you follow the [schema creation tutorial](../tutorials/create-schema-ui.md) to create an example schema and get a full tour of the [!DNL Schema Editor]'s capabilities in the process.
 
 ## Discovering and organizing schemas
 
-Locate and organize schemas efficiently using advanced discovery tools. Filter schemas by type, Profile enablement, tags, identity configuration, relationships, creation dates, and creators. The enhanced browse table displays comprehensive metadata including tags, schema type, class, identities, relationships, behavior, and creation details directly in the table view.
+Locate and organize schemas efficiently using advanced discovery tools. Filter schemas by type, Profile enablement, tags, identity configuration, relationships, creation dates, and creators. The schema inventory table displays comprehensive metadata including tags, schema type, class, identities, relationships, behavior, and creation details directly in the table view.
 
 Organize schemas using user-defined tags for project-based categorization or folder hierarchies for structured browsing and access control. Both organizational approaches integrate with the filtering system to support team-based workflows and governance requirements.
 
-![The Schemas workspace browse table showing comprehensive metadata columns including tags, schema type, identities, and relationships and the filter sidebar highlighted.](../images/ui/overview/schemas-filter-sidebar.png)
+![The Schemas browse tab showing comprehensive metadata columns including tags, schema type, identities, and relationships with the filter sidebar highlighted.](../images/ui/overview/schemas-filter-sidebar.png)
 
 For detailed guidance on schema discovery and filtering capabilities, see the [exploring schemas guide](./explore.md).
 

@@ -8,6 +8,8 @@ exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 ---
 # Explore schema resources in the UI 
 
+<!-- TODO: Make sure that adding Meta tags is included and moving to files functionality -->
+
 In Adobe Experience Platform, all Experience Data Model (XDM) schema resources are stored in the [!DNL Schema Library], including standard resources provided by Adobe and custom resources defined by your organization. In the Experience Platform UI, you can view the structure and fields of any existing schema, class, field group, or data type in the [!DNL Schema Library]. This is especially useful when planning and preparing for data ingestion, as the UI provides information on the expected data types and use cases of each field provided by these XDM resources.
 
 This tutorial covers the steps for exploring existing schemas, classes, field groups, and data types in the Experience Platform UI.
@@ -20,7 +22,7 @@ In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left navig
 
 ## Filter and search schemas {#filter-search}
 
-Use the comprehensive filter panel to locate schemas efficiently based on multiple criteria. Select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to access filtering options that help you discover schemas that meet specific requirements for your data modeling and governance workflows.
+Use the filter panel to locate schemas efficiently based on multiple criteria. Select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to access filtering options that help you discover schemas that meet specific requirements for your data modeling and governance workflows.
 
 ![The [!UICONTROL Schemas] workspace [!UICONTROL Browse] tab with the comprehensive filters panel highlighted.](../images/ui/explore/filters.png)
 
@@ -93,9 +95,9 @@ Use the [!UICONTROL Schemas] workspace filtering capabilities and organizational
 
 ### Browse and filter metadata
 
-The browse table displays additional columns that provide immediate visibility into schema characteristics and usage. View tags, schema type, Profile enablement status, created date, last modified, class, identities, relationships, behavior, and other metadata directly in the table view without opening individual schemas.
+The schema inventory table displays additional columns that provide immediate visibility into schema characteristics and usage. View tags, schema type, Profile enablement status, created date, last modified, class, identities, relationships, behavior, and other metadata directly in the table view without opening individual schemas.
 
-![The Schemas workspace browse table showing the enhanced columns including tags, schema type, Profile enablement, created date, last modified, class, identities, relationships, and behavior.](../images/ui/explore/browse-table-columns.png) 
+![The Schemas workspace schema inventory table showing the tags, schema type, Profile enablement, created date, last modified, class, identities, relationships, and behavior columns.](../images/ui/explore/schema-inventory-table-columns.png) 
 
 Apply multiple filters simultaneously to create targeted schema discovery workflows. Combine metadata filters (schema type, class, tags), attribute filters (relationships, identity configuration), and temporal filters (creation or modification dates) to locate exactly the schemas you need.
 
@@ -121,7 +123,7 @@ These inline actions accelerate schema-related workflows by reducing navigation 
 
 The workspace supports both tag-based and folder-based organization systems to accommodate different organizational preferences and use cases. Apply user-defined tags to categorize schemas by project, team, data domain, or any custom taxonomy that suits your organization. Alternatively, organize schemas into folder hierarchies for more structured browsing and access control.
 
-![Schemas organized with user-defined tags visible in the browse table.](../images/ui/explore/schema-tags.png)
+![Schemas organized with user-defined tags visible in the schema inventory table.](../images/ui/explore/schema-tags.png)
 
 ![Schemas organized into folders in the left navigation panel of the Schemas workspace.](../images/ui/explore/schema-folders.png)
 
