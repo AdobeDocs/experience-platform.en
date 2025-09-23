@@ -2,6 +2,7 @@
 title: Snap Pixel Extension Overview
 description: Learn how you can use the Snap Pixel tag extension to capture valuble user interactions in Adobe Experience Platform.
 last-substantial-update: 2025-09-17
+exl-id: 786fc3fd-29c8-4ca0-be6d-38b420de31ae
 ---
 # [!DNL Snap Pixel] extension overview
 
