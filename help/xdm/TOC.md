@@ -106,6 +106,7 @@ role: Developer
     * [Partner Prospect Details (Sample)](./field-groups/prospect-profile/partner-prospect-details.md)
   * XDM ExperienceEvent {#event}
     * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
+    * [Adobe Advertising Cloud Full Extension](./field-groups/event/advertising-full-extension.md)
     * [Advertising Details](./field-groups/event/advertising-details.md)
     * [Application Details](./field-groups/event/application-details.md)
     * [Balance Transfers](./field-groups/event/balance-transfers.md)

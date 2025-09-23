@@ -66,7 +66,7 @@ There are two required steps to preview or get an estimate of your segment defin
   
 ### How estimates are generated
 
-As data enabled for Real-Time Customer Profile is ingested into Experience Platform, it is stored within the Profile data store. When the ingestion of records into the Profile store increases or decreases the total profile count by more than 5%, a sampling job is triggered to update the count. If the profile count does not change by more than 5%, the sampling job will run automatically on a weekly basis. 
+As data enabled for Real-Time Customer Profile is ingested into Experience Platform, it is stored within the Profile data store. When the ingestion of records into the Profile store increases or decreases the total profile count by more than 3%, a sampling job is triggered to update the count. If the profile count does not change by more than 3%, the sampling job will run automatically on a weekly basis. 
 
 The way in which the sample is triggered depends on the type of ingestion being used:
 
