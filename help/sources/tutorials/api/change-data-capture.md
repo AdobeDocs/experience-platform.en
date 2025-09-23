@@ -13,8 +13,8 @@ In contrast, change data capture captures and applies inserts, updates, and dele
 
 Change data capture in Experience Platform requires **[Data Mirror](../../../xdm/data-mirror/overview.md)** with model-based schemas. You can provide change data to Data Mirror in two ways:
 
-* **[Manual change tracking](#file-based-sources)**: Include a `_change_request_type` column in your dataset for sources that don't natively generate CDC records
-* **[Native change data capture exports](#file-based-sources)**: Use change data capture records exported directly from your source system
+* **[Manual change tracking](#file-based-sources)**: Include a `_change_request_type` column in your dataset for sources that don't natively generate change data capture records
+* **[Native change data capture exports](#database-sources)**: Use change data capture records exported directly from your source system
 
 Both approaches require Data Mirror with model-based schemas to preserve relationships and enforce uniqueness.
 
@@ -22,7 +22,7 @@ Both approaches require Data Mirror with model-based schemas to preserve relatio
 
 >[!AVAILABILITY]
 >
->Data Mirror is only available through Adobe Journey Optimizer **Orchestrated campaigns** and the limited release based on your license or feature enablement. This includes **Customer Journey Analytics**, and **Real-Time CDP B2B** editions. Contact your Adobe representative for inclusion in this limited release.
+>Data Mirror is available to Adobe Journey Optimizer **Orchestrated campaigns** license holders and as a limited release for Customer Journey Analytics customers or based on your license and feature enablement. Contact your Adobe representative for access.
 
 Data Mirror uses model-based schemas to extend change data capture and enable advanced database synchronization capabilities. For an overview of Data Mirror, see [Data Mirror overview](../../../xdm/data-mirror/overview.md).
 
@@ -38,7 +38,7 @@ Before you use a model-based schema with change data capture, configure the foll
 * Apply updates in sequence using a version identifier.  
 * For time-series schemas, add a timestamp identifier.
 
-### Control column handling
+### Control column handling {#control-column-handling}
 
 Use the `_change_request_type` column to specify how each row should be processed:
 
@@ -47,7 +47,7 @@ Use the `_change_request_type` column to specify how each row should be processe
 
 This column is evaluated only during ingestion and is not stored or mapped to XDM fields.  
 
-### Workflow
+### Workflow {#workflow}
 
 To enable change data capture with a model-based schema:
 
@@ -68,12 +68,11 @@ To enable change data capture with a model-based schema:
 
 >[!IMPORTANT]
 >
->File-based change data capture requires Data Mirror with model-based schemas. The steps below describe how to format your data files to include change tracking information that will be processed by Data Mirror.
+>File-based change data capture requires Data Mirror with model-based schemas. Before following the file formatting steps below, ensure you have completed the [Data Mirror setup workflow](#workflow) described earlier in this document. The steps below describe how to format your data files to include change tracking information that will be processed by Data Mirror.
 
-For file-based sources ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage], and [!DNL SFTP]), include a `_change_request_type` column in your files:
+For file-based sources ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage], and [!DNL SFTP]), include a `_change_request_type` column in your files.
 
-* `u`— upsert (default if omitted)  
-* `d`— delete  
+Use the `_change_request_type` values defined in the [Control column handling](#control-column-handling) section above.  
 
 >[!IMPORTANT]
 >
@@ -81,43 +80,26 @@ For file-based sources ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud 
 
 Follow the source-specific steps below.
 
-### [!DNL Amazon S3]
+### Cloud Storage Sources {#cloud-storage-sources}
 
-Read the following documentation for steps on how to enable change data capture for your [!DNL Amazon S3] source connection:
+Enable change data capture for cloud storage sources by following these steps:
 
-* [Create a [!DNL Amazon S3] base connection](../api/create/cloud-storage/s3.md).  
-* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).  
+1. Create a base connection for your source:
 
-See [File-based sources](#file-based-sources) for details on using `_change_request_type` with [!DNL Amazon S3].
+   | Source | Base Connection Guide |
+   |---|---|
+   | [!DNL Amazon S3] | [Create a [!DNL Amazon S3] base connection](../api/create/cloud-storage/s3.md) |
+   | [!DNL Azure Blob] | [Create a [!DNL Azure Blob] base connection](../api/create/cloud-storage/blob.md) |
+   | [!DNL Google Cloud Storage] | [Create a [!DNL Google Cloud Storage] base connection](../api/create/cloud-storage/google.md) |
+   | [!DNL SFTP] | [Create a [!DNL SFTP] base connection](../api/create/cloud-storage/sftp.md) |
 
-### [!DNL Azure Blob]
+2. [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
 
-Read the following documentation for steps on how to enable change data capture for your [!DNL Azure Blob] source connection:
+All cloud storage sources use the same `_change_request_type` column format described in the [File-based sources](#file-based-sources) section above.
 
-* [Create a [!DNL Azure Blob] base connection](../api/create/cloud-storage/blob.md).  
-* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
+## Database sources {#database-sources}
 
-See [File-based sources](#file-based-sources) for details on using `_change_request_type` with [!DNL Azure Blob].
-
-### [!DNL Google Cloud Storage]
-
-Read the following documentation for steps on how to enable change data capture for your [!DNL Google Cloud Storage] source connection:
-
-* [Create a [!DNL Google Cloud Storage] base connection](../api/create/cloud-storage/google.md).  
-* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
-
-See [File-based sources](#file-based-sources) for details on using `_change_request_type` with [!DNL Google Cloud Storage].
-
-### [!DNL SFTP]
-
-Read the following documentation for steps on how to enable change data capture for your [!DNL SFTP] source connection:
-
-* [Create a [!DNL SFTP] base connection](../api/create/cloud-storage/sftp.md).  
-* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
-
-See [File-based sources](#file-based-sources) for details on using `_change_request_type` with [!DNL SFTP].
-
-## [!DNL Azure Databricks]
+### [!DNL Azure Databricks]
 
 To use change data capture with [!DNL Azure Databricks], you must both enable **change data feed** in your source tables and configure Data Mirror with model-based schemas in Experience Platform.
 
@@ -154,7 +136,7 @@ Read the following documentation for steps on how to enable change data capture 
 * [Create a [!DNL Azure Databricks] base connection](../api/create/databases/databricks.md).
 * [Create a source connection for a database](../api/collect/database-nosql.md#create-a-source-connection).
 
-## [!DNL Data Landing Zone]
+### [!DNL Data Landing Zone]
 
 To use change data capture with [!DNL Data Landing Zone], you must both enable **change data feed** in your source tables and configure Data Mirror with model-based schemas in Experience Platform.
 
@@ -163,7 +145,7 @@ Read the following documentation for steps on how to enable change data capture 
 * [Create a [!DNL Data Landing Zone] base connection](../api/create/cloud-storage/data-landing-zone.md).
 * [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
 
-## [!DNL Google BigQuery]
+### [!DNL Google BigQuery]
 
 To use change data capture with [!DNL Google BigQuery], you must both enable change history in your source tables and configure Data Mirror with model-based schemas in Experience Platform.
 
@@ -176,7 +158,7 @@ Read the following documentation for steps on how to enable change data capture 
 * [Create a [!DNL Google BigQuery] base connection](../api/create/databases/bigquery.md).
 * [Create a source connection for a database](../api/collect/database-nosql.md#create-a-source-connection).
 
-## [!DNL Snowflake]
+### [!DNL Snowflake]
 
 To use change data capture with [!DNL Snowflake], you must both enable **change tracking** in your source tables and configure Data Mirror with model-based schemas in Experience Platform.
 
