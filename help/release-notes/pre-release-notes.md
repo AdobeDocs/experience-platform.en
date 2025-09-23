@@ -40,9 +40,8 @@ Adobe Experience Platform AI Assistant is a conversational experience that you c
 
 | Feature | Description |
 | --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator is your intelligent assistant for Experience Cloud applications. When you ask questions or request help, Agent Orchestrator automatically calls upon specialized agents to get you the right answers. Agent Orchestrator remembers your conversation history, enabling you to build on previous questions naturally without repeating context, and combines insights from multiple agents to present you with clear, unified responses. You can make use of the Agent Orchestrator capabilities through the AI Assistant conversational interface. |
+| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator is the intelligent layer powering AI Assistant. When you ask questions or request help, Agent Orchestrator automatically calls upon specialized agents to get you the right answers. Agent Orchestrator remembers your conversation history, enabling you to build on previous questions naturally without repeating context, and combines insights from multiple agents to present you with clear, unified responses. |
 | Audience Agent | The Audience Agent lets you view insights about audiences, including detecting significant audience size changes, detecting duplicate audiences, explore your audience inventory, and retrieve your audiences' size. |
-| Field Discovery Agent | The Field Discovery Agent helps users automatically discover and understand data fields within their schemas and datasets. This intelligent agent analyzes your data structure and provides insights about field usage, relationships, and recommendations for optimization. |
 
 For more information, read the [AI Assistant overview](../ai-assistant/home.md).
 
