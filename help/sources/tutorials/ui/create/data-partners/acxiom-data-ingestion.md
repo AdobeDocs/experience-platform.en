@@ -1,15 +1,9 @@
 ---
 title: Acxiom Data Ingestion
 description: Use the Acxiom Data Ingestion to ingest Acxiom data into Real-Time CDP and enrich first-party profiles. Use your Acxiom-enriched first-party profiles to improve audiences and activate across marketing channels.
-last-substantial-update: 2024-03-19
-badge: Beta
 exl-id: a0a080ef-4603-437f-8a68-11dbf530ac90
 ---
 # Create an [!DNL Acxiom Data Ingestion] source connection and dataflow in the UI
-
->[!NOTE]
->
->The [!DNL Acxiom Data Ingestion] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
 Use the [!DNL Acxiom Data Ingestion] source to ingest [!DNL Acxiom] data into Real-Time Customer Data Platform and enrich first-party profiles. Then, you can use your [!DNL Acxiom]-enriched first-party profiles to improve audiences and activate across marketing channels.
 
