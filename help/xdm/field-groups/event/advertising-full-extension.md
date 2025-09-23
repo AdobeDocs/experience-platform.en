@@ -2,6 +2,7 @@
 title: Adobe Advertising Cloud ExperienceEvent Full Extension Schema Field Group
 description: Learn about the Adobe Advertising Cloud ExperienceEvent Full Extension schema field group.
 badgeBeta: label="Beta" type="Informative"
+exl-id: 4a9f6bff-6098-424a-b8f4-0f14ec52d906
 ---
 # [!UICONTROL Adobe Advertising Cloud ExperienceEvent Full Extension] schema field group
 
