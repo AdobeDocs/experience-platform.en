@@ -54,25 +54,33 @@ For more information on these credentials, read the [[!DNL Google Cloud Storage]
 
 Read this section for information on the [!DNL Demandbase] schema and data structure. 
 
-The [!DNL Demandbase] schema is called **Company Intent Weekly**. It is the weekly intent information (anonymous B2B buyer research and content consumption) on specified account and keywords. The data is in parquet format.
+The [!DNL Demandbase] schema is called **B2B Demandbase Account Intent**. It is the weekly intent information (anonymous B2B buyer research and content consumption) on specified account and keywords. The data is in parquet format.
 
-| Field name | Datatype | Required | Business key | Notes |
-| --- | --- | --- | --- | --- |
-| `company_id` | STRING | TRUE | YES | The canonical company ID. |
-| `domain` | STRING | TRUE | YES | The identified domain of the account showing intent. |
-| `start_date` | DATE | TRUE | YES | The start date of when the intent activity occurred in the duration period. |
-| `end_date` | DATE | TRUE | YES | The end date of when the intent activity occurred in the duration period. |
-| `duration_type` | STRING | TRUE | YES | The type of duration. Generally, this value may be daily, weekly, or monthly depending on the chosen roll-up duration. For this data sample, this value is `week`. |
-| `keyword_set_id` | STRING | TRUE | YES | The keyword set ID. This is unique per given customer. |
-| `keyword_set` | STRING | TRUE | YES | The keyword set name. |
-| `keyword` | STRING | TRUE | | The intent keyword. |
-| `is_trending` | STRING | TRUE | | The current state of a given trend. Trending state is measured as a burst in intent activity in the last week relative to averages for the prior seven weeks. |
-| `intent_strength` | ENUM[STRING] | TRUE | | A quantified measure of the intent strength. Accepted values include: `HIGH`, `MED`, and `LOW`. |
-| `num_people_researching` | INTEGER | TRUE | | The count of people belonging to the `company_id` researching the keyword in the last seven days. |
-| `num_trending_days` | INTEGER | TRUE | | The number of days that the keyword was trending in a given duration. |
-| `trending_score` | INTEGER | TRUE | | The trending score. |
-| `record_id` | STRING | TRUE | | The unique primary record ID. |
-| `partition_date` | DATE | TRUE | | The calendar date of the snapshot. This is done weekly, at the end-of-week. |
+* Class - XDM [!DNL Demandbase Account Intent]
+* Namespace - B2B [!DNL Demandbase Account Intent]
+* Primary identity - `intentID`
+* Relationships - B2B Account
+
+| Field Name               | Data Type | Description                                                                                                 |
+|--------------------------|-----------|-------------------------------------------------------------------------------------------------------------|
+| `extSourceSystemAudit`   | OBJECT    | This field contains system audit information from the external source.                                      |
+| `_id`                    | STRING    | This is the unique system identifier for the record.                                                        |
+| `accountDomain`          | STRING    | This field contains the account domain.                                                                     |
+| `accountID`              | STRING    | This is the B2B Account ID with which this intent record is associated.                                     |
+| `demandbaseAccountID`    | STRING    | This is the company's ID in [!DNL Demandbase].                                                                     |
+| `durationType`           | STRING    | This field specifies the intent validity period type, for example, "week."                                  |
+| `endDate`                | DATE      | This is the end date of the intent validity period.                                                         |
+| `intentID`               | STRING    | This is a system-generated unique value for the intent record.                                              |
+| `intentStrength`         | STRING    | This field specifies the intent validity period type, such as "DAY," "WEEK," or "MONTH."                    |
+| `isTrending`             | BOOLEAN   | This field indicates whether the keyword is trending, with possible values being Low, Medium, or High.      |
+| `keyword`                | STRING    | This field contains the keyword or phrase indicating intent from [!DNL Demandbase].                                |
+| `keywordSetID`           | STRING    | This is the identifier for the keyword set.                                                                 |
+| `keywordSetName`         | STRING    | This is the name of the keyword set.                                                                        |
+| `numTrendingDays`        | INTEGER   | This field indicates the number of days the keyword has been trending.                                      |
+| `partitionDate`          | DATE      | This is the partition date for the record.                                                                  |
+| `peopleResearchingCount` | INTEGER   | This field indicates the number of people researching the keyword.                                          |
+| `startDate`              | DATE      | This is the start date of the intent validity period.                                                       |
+| `trendingScore`          | INTEGER   | This field contains the trending score for the keyword.                                                     |
 
 {style="table-layout:auto"}
 

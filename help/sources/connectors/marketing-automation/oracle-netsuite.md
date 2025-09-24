@@ -2,14 +2,9 @@
 title: Oracle NetSuite Source Overview
 description: Learn how to connect Oracle NetSuite to Adobe Experience Platform using APIs or the user interface.
 last-substantial-update: 2024-01-30
-badge: Beta
 exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
 ---
 # [!DNL Oracle NetSuite]
-
->[!NOTE]
->
->The [!DNL Oracle NetSuite] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 

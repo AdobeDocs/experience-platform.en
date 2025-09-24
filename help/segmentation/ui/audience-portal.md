@@ -321,9 +321,9 @@ Underneath is a sampling of profiles that qualify for the segment, detailing inf
 
 The way data sampling gets triggered depends on the method of ingestion.
 
-For batch ingestion, the Profile store is automatically scanned every fifteen minutes to see if a new batch was successfully ingested since the last sampling job was run. If that is the case, the Profile store is subsequently scanned to see if there's been at least a 5% change in the number of records. If these conditions are met, a new sampling job is triggered.
+For batch ingestion, the Profile store is automatically scanned every fifteen minutes to see if a new batch was successfully ingested since the last sampling job was run. If that is the case, the Profile store is subsequently scanned to see if there's been at least a 3% change in the number of records. If these conditions are met, a new sampling job is triggered.
 
-For streaming ingestion, the Profile store is automatically scanned every hour to see if there's been at least a 5% change in the number of records. If this condition is met, a new sampling job is triggered.
+For streaming ingestion, the Profile store is automatically scanned every hour to see if there's been at least a 3% change in the number of records. If this condition is met, a new sampling job is triggered.
 
 The sample size of the scan depends on the overall number of entities in your Profile store. These sample sizes are represented in the following table:
 
@@ -401,7 +401,7 @@ More information about Data Distiller can be found in the [building audiences us
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_importaudience_dataexpiration"
 >title="Data expiration"
->abstract="The number of days that the audience membership will expire. This value can be set from 1 day to 180 days."
+>abstract="The number of days that the audience membership will expire. This value can be set from 1 day to 180 days. Once the audience membership expires, evaluation will stop and all the profiles will exit the audience membership. You can refresh the expiration window when there are less than 7 days remaining in audience membership. However, once there are 0 days remaining, you will not be able to refresh the expiration window."
 
 >[!IMPORTANT]
 >

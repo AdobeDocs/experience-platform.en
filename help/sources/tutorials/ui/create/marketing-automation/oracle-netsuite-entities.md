@@ -1,16 +1,9 @@
 ---
 title: Create a [!DNL Oracle NetSuite Entities] source connection in the UI
 description: Learn how to create a Oracle NetSuite Entities source connection using the Adobe Experience Platform UI.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: ce0ea37f-16e0-4aef-9809-72c0b11e0440
 ---
 # Create a [!DNL Oracle NetSuite Entities] source connection in the UI
-
->[!NOTE]
->
->The [!DNL Oracle NetSuite Entities] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Read the following tutorial to learn how to bring contacts and customers data from your [!DNL Oracle NetSuite Entities] account to Adobe Experience Platform in the UI.
 

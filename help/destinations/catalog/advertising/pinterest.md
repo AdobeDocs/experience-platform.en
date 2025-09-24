@@ -69,7 +69,9 @@ When [setting up](../../ui/connect-destination.md) this destination, you must pr
 
 ### Refresh authentication credentials {#refresh-authentication-credentials}
 
-Pinterest tokens expire every 30 days. Once the token is expired, data exports to the destination stop working. To prevent this situation, reauthenticate by performing the following steps:
+Pinterest tokens expire every 30 days. You can monitor your token expiration dates from the **[!UICONTROL Account expiration date]** column in either the **[[!UICONTROL Accounts]](../../ui/destinations-workspace.md#accounts)** or the **[[!UICONTROL Browse]](../../ui/destinations-workspace.md#browse)** tabs.
+
+Once the token is expired, data exports to the destination stop working. To prevent this situation, reauthenticate by performing the following steps:
 
 1. Navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
 2. (Optional) Use the available filters on the page to display Pinterest accounts only.
