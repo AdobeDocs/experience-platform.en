@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Model-based schemas
 description: Learn about model-based schemas (also called relational schemas) in Adobe Experience Platform, including features, required fields, relationships, and limitations.
 badge: Limited Availability
+exl-id: 397e5937-b892-4fd3-b90e-29ed9229dc69
 ---
 # Model-based schemas
 
@@ -204,4 +205,3 @@ Review the following limitations before using model-based schemas:
 * Relationships are limited to one-to-one and many-to-one.
 * Availability depends on your license or feature enablement.
 * Composite primary keys are required for time-series schemas.
-
