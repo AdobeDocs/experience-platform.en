@@ -1,7 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes August 2025
-description: The August 2025 release notes for Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+title: Adobe Experience Platform Release Notes September 2025
+description: The September 2025 release notes for Adobe Experience Platform.
 ---
 # Adobe Experience Platform release notes
 
@@ -86,6 +85,7 @@ XDM is an open-source specification that provides common structures and definiti
 | Model-based schemas | Simplify your data modeling with Model-Based Schemas. You can now create schemas more easily with comprehensive how-to examples and guidance. This feature is currently available to Campaign Orchestration license holders and will expand to Data Distiller customers at GA, making data modeling more accessible and efficient. The feature includes support for time-series data and change data capture capabilities. |
 
 For more information, read the [XDM overview](../../xdm/home.md).
+
 <!--
 
 | Data Mirror | Ingest row-level changes from cloud data warehouses (e.g., Snowflake, Databricks, BigQuery) into Adobe Experience Platform using model-based schemas. Data Mirror eliminates upstream ETL and preserves relationships, versioning, and deletions by mirroring existing database structures directly into the data lake. Time-series and record event schema behavior with change data capture capabilities are all supported. This feature is currently available for Campaign Orchestration license holders and will expand through this limited release, also including Customer Journey Analytics customers. See the [Data Mirror documentation](../../xdm/data-mirror/overview.md) for more details. Contact your Adobe representative for access. |
