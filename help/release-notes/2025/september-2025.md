@@ -63,7 +63,7 @@ For more information about alerts, read the [[!DNL Observability Insights] overv
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) connector | A new [!DNL Snowflake Batch] connector is now available, providing an alternative to the streaming connector for specific use cases. |
 | [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) encryption support | You can now attach RSA-formatted public keys to encrypt your exported files, giving you the same level of security that other cloud storage destinations provide for your sensitive information. |
-| Authentication expiration details for [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) destinations | Authentication expiration information for [!DNL Pinterest] destinations is now visible directly in the Experience Platform interface, so you can see when your authentication will expire and renew it before it causes any disruptions to your dataflows. You can monitor your token expiration dates from the **[!UICONTROL Account expiration date]** column in either the **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** or the **[[!UICONTROL Browse]](../destinations/ui/destinations-workspace.md#browse)** tabs.|
+| Authentication expiration details for [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) destinations | Authentication expiration information for [!DNL Pinterest] destinations is now visible directly in the Experience Platform interface, so you can see when your authentication will expire and renew it before it causes any disruptions to your dataflows. You can monitor your token expiration dates from the **[!UICONTROL Account expiration date]** column in either the **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** or the **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)** tabs.|
 
 **New or updated functionality**
 
@@ -72,7 +72,7 @@ For more information about alerts, read the [[!DNL Observability Insights] overv
 | Enhanced destination management capabilities in the Experience Platform UI | Improve your destination management workflow with new sorting capabilities across the [[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse) and [[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts) tabs. You can now also see a visual indicator when your account authentication is about to expire. <br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
 | Persistent column width settings | Column width settings now persist when navigating away from a page and returning to it. For example, if you adjust a column width in the [[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse) tab, your custom column width will remain the same when you navigate away and return to that tab. |
 
-For more information, read the [Destinations overview](../destinations/home.md).
+For more information, read the [Destinations overview](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
