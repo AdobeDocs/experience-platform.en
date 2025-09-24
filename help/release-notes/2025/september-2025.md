@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes September 2025
 description: The September 2025 release notes for Adobe Experience Platform.
+exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
 ---
 # Adobe Experience Platform release notes
 
