@@ -81,7 +81,7 @@ You can see a list of shared extensions including those **Awaiting Approval** in
 
 Select **[!UICONTROL OK]** in the **[!UICONTROL Authorization Usages]** dialog.
 
-![The [!UICONTROL Authorization Usages] dialog, highlighting [!UICONTROL OK]]()
+![The [!UICONTROL Authorization Usages] dialog, highlighting [!UICONTROL OK]](../images/shared-extensions/confirmation.png)
 
 You are returned to the [!UICONTROL Usage Authorizations] tab where you can see the extension now shows an **Approved** status.
 
