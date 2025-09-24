@@ -22,8 +22,6 @@ After choosing to modify the dashboard, you can reorder the cards by selecting t
 
 The selected card adjusts to the desired size and surrounding cards are repositioned dynamically. This may cause some cards to be moved to additional rows, requiring you to scroll down in order to see all cards. For example, when the "[!UICONTROL Basic attributes]" card is resized the "[!UICONTROL Linked identities]" card is no longer visible on the top row and now appears on a new second row within the profile (not shown). To return the "[!UICONTROL Linked identities]" card to the top row, you could drag and drop it into the current position of the "[!UICONTROL Channel preferences]" card.
 
-![A re-sized card is highlighted.](../images/profile-customization/resized.png)
-
 ## Edit and remove cards
 
 In addition to resizing and reordering cards, you can edit the content of certain cards and remove some cards from the dashboard entirely. Select the ellipses (`...`) in the top-right corner of the card in order to edit or remove it. This opens a dropdown with options to either edit or remove the card, depending on the properties of the card selected.
@@ -64,8 +62,6 @@ When you return to the **[!UICONTROL Edit widget]** screen, the list of attribut
 
 After saving, you are returned to the **[!UICONTROL Detail]** tab where the updated card and attributes are visible.
 
-![The newly added attributes are displayed on the card within the Profile dashboard.](../images/profile-customization/added-attributes.png)
-
 ## Add a new card {#add-a-new-card}
 
 To further customize the look of profiles within Experience Platform, you can elect to add new cards to the dashboard and select the attributes that you would like to display on those cards. To begin, select **[!UICONTROL Modify dashboard]** on the **[!UICONTROL Detail]** tab.
@@ -93,8 +89,6 @@ In order to save your new card you must first provide a **[!UICONTROL Card title
 ![The new widget is previewed within the Edit widget screen.](../images/profile-customization/new-widget.png)
 
 After saving, you are returned to the **[!UICONTROL Detail]** tab where your new card and attributes are visible.
-
-![The new widget is added to the Profile dashboard.](../images/profile-customization/added-widget.png)
 
 ## Restore default cards
 
