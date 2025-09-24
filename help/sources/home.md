@@ -213,6 +213,7 @@ You can use the following sources to ingest data from your local system to Exper
 
 {style="table-layout:auto"}
 
+<!--
 ### Loyalty {#loyalty}
 
 You can use the following sources to ingest data loyalty to Experience Platform.
@@ -220,6 +221,10 @@ You can use the following sources to ingest data loyalty to Experience Platform.
 | Source | Ingestion type | Cloud |
 | --- | --- | --- |
 | [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Streaming | Azure |
+
+| [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Streaming | Azure |
+
+-->
 
 ### Marketing Automation {#marketing-automation}
 
@@ -235,7 +240,6 @@ You can use the following sources to ingest marketing automation data to Experie
 | [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | Batch | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | Batch | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | Batch | Azure |
-| [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Streaming | Azure |
 | [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | Batch | Azure, AWS |
 
 {style="table-layout:auto"}
@@ -300,7 +304,11 @@ With attribute-based access control, you can apply mapping configurations to fie
 
 - Apply labels to schema fields to define access to specific schema fields in your organization. Once access to specific schema fields are established, users will only be able to create mappings for the fields that they have access to.
 - Users without the appropriate roles will not be able to create or update dataflows with mappings that involve inaccessible schema fields. Furthermore, unauthorized users cannot update, delete, enable, or disable existing dataflows with inaccessible schema fields.
-- Additionally, a dataflow must have the exact same schema ID and version in its mapping, target dataset, and target connection.
+- Additionally, a dataflow must have the exact same schema ID and version in its mapping, target dataset, and target connection. This applies to both standard XDM schemas and model-based schemas.
+
+>[!NOTE]
+>
+>Model-based schemas have additional requirements including primary key and version identifier fields. For more information, see the [model-based schema overview](../xdm/schema/model-based.md).
 
 For more information on attribute-based access control, read the [attribute-based access control overview](../access-control/abac/overview.md).
 

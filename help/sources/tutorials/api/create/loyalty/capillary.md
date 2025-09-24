@@ -1,6 +1,8 @@
 ---
 title: Connect Capillary to Experience Platform using the Flow Service API
 description: Learn how to connect Capillary to Experience Platform using APIs.
+hide: true
+hidefromtoc: true
 badge: Beta
 exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
 ---
