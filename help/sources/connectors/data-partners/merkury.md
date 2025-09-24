@@ -1,15 +1,9 @@
 ---
 title: Merkury Enterprise Identity Resolution Source Overview
 description: Learn how to connect Merkury Enterprise Identity Resolution to Adobe Experience Platform using the user interface.
-last-substantial-update: 2023-12-12
-badge: Beta
 exl-id: c5eaa561-d620-4c82-bce1-972d0a422c3f
 ---
 # [!DNL Merkury Enterprise Identity Resolution]
-
->[!NOTE]
->
->The [!DNL Merkury Enterprise Identity Resolution] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Adobe Experience Platform provides support for ingesting data from a data partner application. Support for data partners include [!DNL Merkury Enterprise Identity Resolution].
 
@@ -17,17 +11,17 @@ You can use [!DNL Merkury] by [!DNL Merkle] to recognize more digital visitors -
 
 You can utilize the **person ID** as part of the [!DNL Merkury] source to combine everything that your organization knows about an individual into a single comprehensive profile. These details can include: 
 
-- digital behaviors
-- buying preferences
-- identifying information such as a name, email address, physical address, or device ID.
+- Digital behaviors
+- Buying preferences
+- Identifying information such as a name, email address, physical address, or device ID.
 
 You can format ingested data as Experience Data Model (XDM) JSON, XDM Parquet, or delimited. Every step of the process is integrated into the sources work
 
 ![An illustration of the data processing workflow for the Merkury source.](../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/architecture.png)
 
-## IP address allow list
+## IP address allowlist
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+Before you can use source connectors, you must add the required IP addresses for your region to your allowlist. If you do not add these IP addresses, the source connectors may not work correctly or may produce errors. For detailed instructions and the list of IP addresses to allow, read the [IP address allowlist](../../ip-address-allow-list.md) page.
 
 ## Naming constraints for files and directories
 
