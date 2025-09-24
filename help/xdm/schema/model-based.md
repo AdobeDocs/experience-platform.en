@@ -17,6 +17,10 @@ Model-based schemas provide a flexible, controlled modeling pattern for represen
 >
 >Data deletion considerations apply to all model-based schema implementations. Applications using these schemas must understand how deletions affect related datasets, compliance requirements, and downstream processes. Plan for deletion scenarios and review [data hygiene guidance](../../hygiene/ui/record-delete.md#model-based-record-delete) before implementation.
 
+>[!NOTE]
+>
+>Applications may refer to model-based schemas as "relational schemas" when requesting schema creation for relational data modeling use cases.
+
 Use model-based schemas to:
 
 * Ensure data integrity with enforced single-field or composite primary keys.

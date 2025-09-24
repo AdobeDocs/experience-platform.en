@@ -70,7 +70,7 @@ To enable change data capture with a model-based schema:
 
 >[!IMPORTANT]
 >
->**Data deletion planning is required**. All applications that use model-based schemas must understand deletion implications before implementing change data capture. Plan for how deletions will affect related datasets, compliance requirements, and downstream processes. See [data hygiene considerations](../../hygiene/ui/record-delete.md#model-based-record-delete) for guidance.
+>**Data deletion planning is required**. All applications that use model-based schemas must understand deletion implications before implementing change data capture. Plan for how deletions will affect related datasets, compliance requirements, and downstream processes. See [data hygiene considerations](../../../hygiene/ui/record-delete.md#model-based-record-delete) for guidance.
 
 ## Providing change data for file-based sources {#file-based-sources}
 
