@@ -357,7 +357,7 @@ role: Developer
   - [Subscribe to sources alerts](tutorials/ui/alerts.md)
   - [Save a dataflow as a draft](tutorials/ui/draft.md)
   - [Apply access labels to a dataflow](tutorials/ui/labels.md)
-  - [Create an Azure private endpoint](tutorials/ui/private-link.md)
+  - [Create a private endpoint](tutorials/ui/private-link.md)
 - Self-Serve Sources (Batch SDK) {#sdk}
   - [Overview](sources-sdk/overview.md)
   - Configure your connection specification {#config}
