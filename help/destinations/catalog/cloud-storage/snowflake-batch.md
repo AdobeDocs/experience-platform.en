@@ -3,6 +3,7 @@ title: Snowflake Batch connection
 description: Export data to your Snowflake account using private listings.
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
+exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
 ---
 # Snowflake Batch connection {#snowflake-destination}
 
