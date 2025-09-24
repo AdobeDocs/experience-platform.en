@@ -1,14 +1,9 @@
 ---
 title: Create a SAP Commerce source connection in the UI
 description: Learn how to create a SAP Commerce source connection using the Adobe Experience Platform UI.
-badge: Beta
 exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
 ---
 # Create a [!DNL SAP Commerce] source connection in the UI
-
->[!NOTE]
->
->The [!DNL SAP Commerce] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 The following tutorial walks you through the steps to create a [!DNL SAP Commerce] source connection to bring [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) contacts and customer data using the Adobe Experience Platform user interface.
 
