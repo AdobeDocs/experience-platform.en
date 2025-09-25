@@ -1,6 +1,8 @@
 ---
 title: Connect Relay to Experience Platform in the UI
 description: Learn how to create a Relay Connector custom source connection using the Adobe Experience Platform UI.
+hide: true
+hidefromtoc: true
 exl-id: f80855f5-0769-4253-b737-28c46e4dea6e
 ---
 # Connect Relay to Experience Platform in the UI
