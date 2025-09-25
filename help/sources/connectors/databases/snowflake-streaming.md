@@ -13,7 +13,6 @@ exl-id: ed937689-e844-487e-85fb-e3536c851fe5
 >
 >* You can now use the [!DNL Snowflake] streaming source when running Adobe Experience Platform on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
 
-
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for streaming data from a [!DNL Snowflake] database.
@@ -38,6 +37,10 @@ The documentation below provides information on how to connect [!DNL Amazon Reds
 
 In order for [!DNL Flow Service] to connect with [!DNL Snowflake], you must provide the following connection properties:
 
+>[!BEGINTABS]
+
+>[!TAB Basic Authentication]
+
 | Credential | Description |
 | --- | --- |
 | `account` | The full account identifier (account name or account locator) of your [!DNL Snowflake] account appended with the suffix `snowflakecomputing.com`. The account identifier can be of different formats: <ul><li>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com (e.g. `acme-abc12345.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.snowflakecomputing.com (e.g. `acme12345.ap-southeast-1.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.{CLOUD}.snowflakecomputing.com (e.g. `acme12345.east-us-2.azure.snowflakecomputing.com`)</li></ul> For more information, read the [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
@@ -48,7 +51,10 @@ In order for [!DNL Flow Service] to connect with [!DNL Snowflake], you must prov
 | `role` | (Optional) A custom-defined role that can be provided for a user, for a given connection. If unprovided, this value defaults to `public`. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Snowflake] is `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
-{style="table-layout:auto"}
+>[!TAB Key-Pair]
+
+
+>[!ENDTABS]
 
 ### Configure role settings {#configure-role-settings}
 
