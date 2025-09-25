@@ -127,6 +127,7 @@ Read this section for intermediate implementations of [!DNL Identity Graph Linki
 >[!NOTE]
 >
 >To complete the implementations below, you must create the following custom namespaces with the identity symbols (case sensitive) of:
+>
 >* `CRMID`
 >* `CChash` (This is a custom namespace that represents a hashed credit card number.)
 
@@ -222,6 +223,7 @@ CRMID: Jill, CChash: undefined
 >[!NOTE]
 >
 >To complete the implementations below, you must create custom namespaces with the identity symbols (case sensitive) of:
+>
 >* `CRMID`
 >* `CRMIDhash`
 
@@ -471,6 +473,7 @@ loginID: JanePersonal, ECID: 222
 >[!NOTE]
 >
 >To complete the implementations below, you must create custom namespaces with the identity symbols (case sensitive) of:
+>
 >* `CRMID`
 >* `loyaltyID`
 >* `thirdPartyID`
