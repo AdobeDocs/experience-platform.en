@@ -66,7 +66,7 @@ Use a primary key descriptor to ensure each record is uniquely identifiable. The
 
 >[!NOTE]
 >
->In the UI Schema Editor, the version descriptor and timestamp descriptors appears as "[!UICOTRNOL Version identifier]" and "[!UICOTRNOL Timestamp identifier]" respectively.
+>In the UI Schema Editor, the version descriptor and timestamp descriptors appears as "[!UICONTROL Version identifier]" and "[!UICONTROL Timestamp identifier]" respectively.
 
 **Example (single-field):**
 
