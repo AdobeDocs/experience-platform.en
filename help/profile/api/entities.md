@@ -61,6 +61,10 @@ To access a Profile entity, you **must** provide the following query parameters:
 - `entityId`: The ID of the entity you're trying to retrieve.
 - `entityIdNS`: The namespace of the entity you're trying to retrieve. This value must be provided if the `entityId` is **not** an XID.
 
+Additionally, usage of the following query parameter is *highly* recommended:
+
+- `mergePolicyId`: The ID of the merge policy you want to filter the data with. If no merge policy is specified, your organization's default merge policy will be used.
+
 A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
 
 **Request**
@@ -174,6 +178,10 @@ To access the B2B Account data, you **must** provide the following query paramet
 - `entityId`: The ID of the entity you're trying to retrieve.
 - `entityIdNS`: The namespace of the entity you're trying to retrieve. This value must be provided if the `entityId` is **not** an XID.
 
+Additionally, usage of the following query parameter is *highly* recommended:
+
+- `mergePolicyId`: The ID of the merge policy you want to filter the data with. If no merge policy is specified, your organization's default merge policy will be used.
+
 A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
 
 **Request**
@@ -265,6 +273,10 @@ To access a B2B Opportunity entity, you **must** provide the following query par
 - `schema.name`: The name of the entity's XDM schema. In this use case, the `schema.name=_xdm.context.opportunity`.
 - `entityId`: The ID of the entity you're trying to retrieve.
 - `entityIdNS`: The namespace of the entity you're trying to retrieve. This value must be provided if the `entityId` is **not** an XID.
+
+Additionally, usage of the following query parameter is *highly* recommended:
+
+- `mergePolicyId`: The ID of the merge policy you want to filter the data with. If no merge policy is specified, your organization's default merge policy will be used.
 
 A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
 
@@ -1201,7 +1213,9 @@ A successful response returns the next page of results. This response does not h
 
 >[!IMPORTANT]
 >
->Delete requests for the following B2B entities have been deprecated:
+>The delete entity endpoint will be deprecated by the end of October 2025. If you want to perform record delete operations, you can use the [Data Lifecycle record delete API workflow](/help/hygiene/api/workorder.md) or the [Data Lifecycle record delete UI workflow](/help/hygiene/ui/record-delete.md) instead. 
+>
+>Additionally, delete requests for the following B2B entities have already been deprecated:
 >
 >- Account
 >- Account-Person Relation
@@ -1270,7 +1284,7 @@ The following parameters are used in the path for GET requests to the `/access/e
 | `relatedEntityId` | If `schema.name` is `_xdm.context.experienceevent`, this value **must** specify the related profile entity's ID. This value follows the same rules as `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
 | `relatedEntityIdNS` | If `schema.name` is "_xdm.context.experienceevent", this value must specify the identity namespace for the entity specified in `relatedEntityId`. |`relatedEntityIdNS=CRMID`|
 | `fields` | Filters the data returned in the response. Use this to specify which schema field values to include in data retrieved. For multiple fields, separate values by a comma with no spaces between. | `fields=personalEmail,person.name,person.gender` |
-| `mergePolicyId` | Identifies the merge policy by which to govern the data returned. If one is not specified in the call, your organization's default for that schema will be used. If no default merge policy has been configured, the default is no profile merge and no identity stitching. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
+| `mergePolicyId` | *Recommended* Identifies the merge policy by which to govern the data returned. If one is not specified in the call, your organization's default for that schema will be used. If no default merge policy has been configured, the default is no profile merge and no identity stitching. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
 | `orderBy` | The sort order of retrieved entities by timestamp. This is written as `(+/-)timestamp`, with the default being `+timestamp`. | `orderby=-timestamp` |
 | `startTime` | Specifies the start time to filter the entities (in milliseconds). | `startTime=1539838505` |
 | `endTime` | Specifies the end time to filter entities (in milliseconds). | `endTime=1539838510` |
