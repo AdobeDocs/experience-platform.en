@@ -10,9 +10,15 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.30.0 - September 24, 2025
+
+**New features**
+
+- Added support for showing push notifications.
+
 ## Version 2.29.0 - September 4, 2025
 
-**New Features**
+**New features**
 
 - Added support for collecting Adobe Advertisement data for Adobe Journey Analytics
 - Added support for recording push subscription details in user's profiles.

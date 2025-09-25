@@ -17,6 +17,8 @@ Before configuring push notifications, ensure that you have:
 1. **User permission**: Users must explicitly grant permission for notifications
 2. **Service worker**: A registered service worker is required for push notifications to function
 3. **VAPID keys**: Generate VAPID (Voluntary Application Server Identification) keys for secure communication
+4. **Application ID**: The app ID used when saving the VAPID keys inside Adobe Journey Optimizer -> Channels -> Push Settings -> Push Credentials
+5. **Tracking dataset ID**: The ID of the system dataset with the name "AJO Push Tracking Experience Event Dataset". Get this from Adobe Journey Optimizer -> Datasets
 
 ## Generate VAPID keys {#generate-vapid-keys}
 
@@ -29,6 +31,21 @@ web-push generate-vapid-keys
 
 This action generates a public and private key pair. Use the public key in your Web SDK configuration and store the private key within the Adobe Journey Optimizer push notifications channel.
 
+## Install the service worker JavaScript
+
+Service worker code needs to be served from the same domain as the website. Download the service worker code from Adobe's CDN and then host the JavaScript file from your own server. The Web SDK service worker code is available using the following URL structure:
+
+- **Minified**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloyServiceWorker.min.js`
+- **Full**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloyServiceWorker.js`
+
+Here is an example of how to install the service worker:
+
+```html
+<script>
+  navigator.serviceWorker.register("/alloyServiceWorker.js", { scope: "/" });
+</script>
+```
+
 ## Implementation
 
 Set the `pushNotifications` object when running the `configure` command:
@@ -40,15 +57,19 @@ alloy("configure", {
   pushNotifications: {
     vapidPublicKey:
       "BEl62iUYgUivElbkzaBgNL3r3vOAhvJyFXjS6FjjRRojYD4NElJkLBJKZvS3xAAh4_gE3WnMaZNu_KGP4jAQlJz",
+    applicationId: "my-app-id",
+    trackingDatasetId: "4dc19305cdd27e03dd9a6bbe",
   },
 });
 ```
 
 ## Properties {#properties}
 
-| Property  | Type   | Required | Description  |
-| ------ | ------ | -------- | ----- |
-| `vapidPublicKey` | String | Yes  | The VAPID public key used for push subscriptions. Must be a Base64-encoded string. |
+| Property | Type | Required | Description |
+|---|---|---|---|
+| **`vapidPublicKey`** | String | Yes | The VAPID public key used for push subscriptions. Must be a Base64-encoded string. |
+| **`applicationId`** | String | Yes | The application ID associated with the VAPID public key. |
+| **`trackingDatasetId`** | String | Yes | The system dataset ID used for push notification tracking. |
 
 ## Important considerations {#important-considerations}
 

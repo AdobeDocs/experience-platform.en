@@ -140,7 +140,27 @@ There are various reasons that contribute as to why your experience event fragme
   * For example, an experience event must contain both an `_id` and a `timestamp`.
   * Additionally, the `_id` must be unique for each event (record).
 
-In the context of namespace priority, Profile will reject any event that contains two or more identities with the highest namespace priority. For example, if GAID is not marked as a unique namespace and two identities both with a GAID namespace and different identity values came in, then Profile will not store any of the events.
+In the context of namespace priority, Profile will reject any event that contains two or more identities with the highest namespace priority in the **given incoming event**. For example, assume that your identity settings are configured like the following:
+
+| Namespace | Unique per graph | Priority |
+| --- | --- | --- |
+| CRMID |  ✔️  | 1 |
+| GAID | | 2 |
+| ECID | | 3 |
+
+For each scenario, assume that Experience Events contains the following events:
+
+**Scenario 1: 2 GAIDs, 1 ECID**
+
+* In this scenario, an incoming Experience Event contains 2 GAIDs and 1 ECID. Between these namespaces, GAID is configured as the namespace with the highest namespace priority. However, because there are 2 GAIDs, Profile **does not** store this Experience Event.
+
+**Scenario 2: 2 CRMIDs, 1 GAID**
+
+* In this scenario, an incoming Experience Event contains 2 CRMIDs and 1 GAID. Between these namespaces, CRMID is configured as the namespace with the highest namespace priority. However, because there are 2 GAIDs, Profile **does not** store this Experience Event.
+
+**Scenario 3: 1 CRMID, 2 GAIDs**
+
+* In this scenario, an incoming Experience Event contains 1 CRMID and 2 GAIDs. Between these namespaces, CRMID is configured as the namespace with the highest namespace priority. Since there is only one CRMID, Profile will ingest the Experience Events because there is only one instance of the namespace with the highest namespace priority.
 
 **Troubleshooting steps**
 
