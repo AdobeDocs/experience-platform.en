@@ -16,6 +16,7 @@ role: Admin,User
   * [Configurable and common export settings in destinations](./how-destinations-work/destinations-configurations.md)
   * [Profile export behavior for different destination types](./how-destinations-work/profile-export-behavior.md)
   * [Identity handling in the destinations activation workflow](./how-destinations-work/identity-handling.md)
+  * [Audience lifecycle in streaming destinations](./how-destinations-work/audience-lifecycle-streaming-destinations.md)
 * API tutorials {#api}
     * [Activate data to file-based destinations by using the Flow Service API](/help/destinations/api/activate-segments-file-based-destinations.md) 
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
@@ -140,6 +141,7 @@ role: Admin,User
         * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
         * [(Beta) Snowflake Streaming connection](./catalog/cloud-storage/snowflake.md)
+        * [(Beta) Snowflake Batch connection](./catalog/cloud-storage/snowflake-batch.md)
         * [IP address allowlist for file-based cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
     * Customer Relationship Management (CRM) destinations {#crm}
         * [Hubspot connection](./catalog/crm/hubspot.md)
@@ -175,6 +177,7 @@ role: Admin,User
         * [(API) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
         * [(Files) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud.md)
         * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
+        * [[!DNL (V2) Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2.md)
         * [SendGrid connection](./catalog/email-marketing/sendgrid.md)
     * Tag extensions {#launch-extensions}
         * [Tag extension overview](./catalog/launch-extensions/overview.md)
@@ -189,7 +192,6 @@ role: Admin,User
         * [Moengage connection](./catalog/mobile-engagement/moengage.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
-        * [(Limited availability) Audience Analysis](./catalog/personalization/audience-analysis.md)
         * [Adobe Commerce connection](./catalog/personalization/adobe-commerce.md)
         * [Adobe Target connection](./catalog/personalization/adobe-target-connection.md)
         * [Adobe Target extension](./catalog/personalization/adobe-target.md)

@@ -43,6 +43,7 @@ To create a custom Web SDK build by using the Web SDK tag extension, follow the 
 1. In the tag extension configuration page, expand the **[!UICONTROL Custom build components]** section.
 1. Enable or disable the components, based on your needs. You can select from the following components:
     * **[!UICONTROL Activity collector]**: This component enables automatic link collection and activity map tracking.
+    * **[!UICONTROL Advertising]**: This component includes all JavaScript code needed for Adobe Advertising. It also adds [!UICONTROL Adobe Advertising] settings in the [!UICONTROL SDK Instances] section and an [!UICONTROL Advertising] setting in tag rules, to define how advertising data is used for attribution measurement.
     * **[!UICONTROL Audiences]**: This components enables Audience Manager integration, including URL and cookie-based destinations, and ID syncs.
     * **[!UICONTROL Consent]**: This component enables consent integrations. Disabling this component disables the following elements:
       * [Set consent](action-types.md#set-consent) action type
@@ -53,7 +54,8 @@ To create a custom Web SDK build by using the Web SDK tag extension, follow the 
     * **[!UICONTROL Media analytics bridge]**: This component enables Edge Network Streaming Media using the media analytics interface. Disabling this component disables the following elements:
       * [Get Media Analytics Tracker](action-types.md#get-media-analytics-tracker) action type
     * **[!UICONTROL Personalization]**: This component enables the Adobe Target and Adobe Journey Optimizer integrations. Disabling this component disables the following elements:
-      * [Apply propositions action](action-types.md) type
+      * [Apply propositions](action-types.md#apply-propositions)action type
+    * **[!UICONTROL Push notifications]**: This component enables web push notifications for Adobe Journey Optimizer.
     * **[!UICONTROL Rules engine]**: This component enables the Adobe Journey Optimizer on-device decisioning. Disabling this component disables the following elements:
       * [Evaluate rulesets](action-types.md#evaluate-rulesets) action type
       * [Subscribe ruleset items](event-types.md#subscribe-ruleset-items) event type
@@ -69,6 +71,11 @@ The configuration options at the top of the page tell Adobe Experience Platform 
 * **[!UICONTROL Name]**: The Adobe Experience Platform Web SDK extension supports multiple instances on the page. The name is used to send data to multiple organizations with a tag configuration. The instance name defaults to `alloy`. However, you can change the instance name to any valid JavaScript object name.
 * **[!UICONTROL IMS organization ID]**: The ID of the organization that you would like the data sent to at Adobe. Most of the time, use the default value that is autopopulated. When you have multiple instances on the page, populate this field with the value of the second organization you want to send data to.
 * **[!UICONTROL Edge domain]**: The domain that the extension sends and receives data from. Adobe recommends using a 1st-party domain (CNAME) for this extension. The default 3rd-party domain works for development environments but is not suitable for production environments. Instructions on how to set up a first-party CNAME are listed [here](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
+* **[!UICONTROL Adobe Advertising]**: Available when the `Advertising` component is selected. Settings for organizations with Adobe Advertising DSP only:
+  * **[!UICONTROL Adobe Advertising DSP]**: Enables view-through tracking.
+  * **[!UICONTROL Advertisers]**: Available when [!UICONTROL Adobe Advertising DSP] is enabled. The advertisers for which to enable view-through tracking.
+  * **[!UICONTROL ID5 partner ID]**: Optional. Available when [!UICONTROL Adobe Advertising DSP] is enabled. Your organization's ID5 partner ID. This setting allows Web SDK to collect ID5 universal IDs.
+  * **[!UICONTROL RampID JavaScript path]**: Optional. Available when [!UICONTROL Adobe Advertising DSP] is enabled. The path to your organization's [!DNL LiveRamp RampID] JavaScript code (`ats.js`).  This setting allows Web SDK to collect [!DNL RampID] universal IDs.
 
 ## Configure datastream settings {#datastreams}
 

@@ -7,17 +7,32 @@ exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
 ---
 # Descriptors endpoint
 
-Schemas define a static view of data entities, but do not provide specific details on how data based on these schemas (datasets, for example) may relate to one another. Adobe Experience Platform allows you to describe these relationships and other interpretive metadata about a schema using descriptors. 
+Schemas define the structure of data entities but don't specify how any datasets created from these schemas relate to each other. In Adobe Experience Platform, you can use descriptors to describe these relationships and add interpretive metadata to a schema. 
 
-Schema descriptors are tenant-level metadata, meaning they are unique to your organization and all descriptor operations take place in the tenant container. 
+Descriptors are tenant-level metadata objects applied to schemas in Adobe Experience Platform. They define structural relationships, keys, and behavioral fields (such as timestamps or versioning) that influence how data is validated, joined, or interpreted downstream.
 
-Each schema can have one or more schema descriptor entities applied to it. Each schema descriptor entity includes a descriptor `@type` and the `sourceSchema` to which it applies. Once applied, these descriptors will apply to all datasets created using the schema.
+A schema can have one or more descriptors. Each descriptor defines a `@type` and the `sourceSchema` it applies to. The descriptor automatically applies to all datasets created from that schema.
+
+In Adobe Experience Platform, a descriptor is metadata that adds behavioral rules or structural meaning to a schema.
+There are several types of descriptors, including:
+
+- [Identity descriptor](#identity-descriptor) – marks a field as an identity
+- [Primary key descriptor](#primary-key-descriptor) – enforces uniqueness
+- [Relationship descriptor](#relationship-descriptor) – defines a foreign-key join
+- [Alternate display info descriptor](#friendly-name) – lets you rename a field in the UI
+- [Version](#version-descriptor) and [timestamp](#timestamp-descriptor) descriptors – track event ordering and change detection
 
 The `/descriptors` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage descriptors within your experience application.
 
 ## Getting started
 
 The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+
+In addition to standard descriptors, the [!DNL Schema Registry] supports descriptor types for model-based schemas, such as **primary key**, **version** and **timestamp**. These enforce uniqueness, control versioning, and define time-series fields at the schema level. If you are unfamiliar with model-based schemas, review the [Data Mirror overview](../data-mirror/overview.md) and [model-based schemas technical reference](../schema/model-based.md) before continuing.
+
+>[!IMPORTANT]
+>
+>See the [Appendix](#defining-descriptors) for details on all descriptor types.
 
 ## Retrieve a list of descriptors {#list}
 
@@ -80,7 +95,7 @@ When using the `link` `Accept` header, each descriptor is shown as an array item
 
 ## Look up a descriptor {#lookup}
 
-If you wish to view the details of a specific descriptor, you can look up (GET) an individual descriptor using its `@id`.
+To view the details of a specific descriptor, send a GET request using its `@id`.
 
 **API format**
 
@@ -277,7 +292,7 @@ A successful response returns HTTP status 204 (No Content) and a blank body.
 
 To confirm the descriptor has been deleted, you can perform a [lookup request](#lookup) against the descriptor `@id`. The response returns HTTP status 404 (Not Found) because the descriptor has been removed from the [!DNL Schema Registry].
 
-## Appendix
+## Appendix {#appendix}
 
 The following section provides additional information regarding working with descriptors in the [!DNL Schema Registry] API.
 
@@ -293,9 +308,9 @@ The following sections provide an overview of available descriptor types, includ
 >
 >You cannot label the tenant namespace object, as the system would apply that label to every custom field across that sandbox. Instead, you must specify the leaf node under that object that you need to label.
 
-#### Identity descriptor
+#### Identity descriptor {#identity-descriptor}
 
-An identity descriptor signals that the "[!UICONTROL sourceProperty]" of the "[!UICONTROL sourceSchema]" is an [!DNL Identity] field as described by [Adobe Experience Platform Identity Service](../../identity-service/home.md).
+An identity descriptor signals that the "[!UICONTROL sourceProperty]" of the "[!UICONTROL sourceSchema]" is an [!DNL Identity] field as described by [Experience Platform Identity Service](../../identity-service/home.md).
 
 ```json
 {
@@ -365,21 +380,36 @@ Friendly name descriptors allow a user to modify the `title`, `description`, and
 
 #### Relationship descriptor {#relationship-descriptor}
 
-Relationship descriptors describe a relationship between two different schemas, keyed on the properties described in `sourceProperty` and `destinationProperty`. See the tutorial on [defining a relationship between two schemas](../tutorials/relationship-api.md) for more information.
+Relationship descriptors describe a relationship between two different schemas, keyed on the properties described in `xdm:sourceProperty` and `xdm:destinationProperty`. See the tutorial on [defining a relationship between two schemas](../tutorials/relationship-api.md) for more information. 
+
+Use these properties to declare how a source field (foreign key) relates to a destination field ([primary key](#primary-key-descriptor) or candidate key). 
+
+>[!TIP]
+>
+>A **foreign key** is a field in the source schema (defined by `xdm:sourceProperty`) that references a key field in another schema. A **candidate key** is any field (or set of fields) in the destination schema that uniquely identifies a record and can be used instead of the primary key.
+
+The API supports two patterns:
+
+- `xdm:descriptorOneToOne`: standard 1:1 relationship.
+- `xdm:descriptorRelationship`: general pattern for new work and model-based schemas (supports cardinality, naming, and non-primary key targets).
+
+##### One-to-one relationship (standard schemas)
+
+Use this when maintaining existing standard-schema integrations that already rely on `xdm:descriptorOneToOne`.
 
 ```json
 {
   "@type": "xdm:descriptorOneToOne",
-  "xdm:sourceSchema":
-    "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
   "xdm:sourceVersion": 1,
   "xdm:sourceProperty": "/parentField/subField",
-  "xdm:destinationSchema": 
-    "https://ns.adobe.com/{TENANT_ID}/schemas/78bab6346b9c5102b60591e15e75d254",
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
   "xdm:destinationVersion": 1,
   "xdm:destinationProperty": "/parentField/subField"
 }
 ```
+
+The following table describes the fields required to define a one-to-one relationship descriptor.
 
 | Property | Description |
 | --- | --- |
@@ -391,7 +421,143 @@ Relationship descriptors describe a relationship between two different schemas, 
 | `xdm:destinationVersion` | The major version of the reference schema. |
 | `xdm:destinationProperty` | (Optional) Path to a target field within the reference schema. If this property is omitted, the target field is inferred by any fields that contain a matching reference identity descriptor (see below). |
 
-{style="table-layout:auto"}
+##### General relationship (model-based schemas and recommended for new projects)
+
+Use this descriptor for all new implementations and for model-based schemas. It allows you to define the relationship's cardinality (such as one-to-one or many-to-one), specify relationship names, and link to a destination field that is not the primary key (non-primary key).
+
+The following examples show how to define a general relationship descriptor.
+
+**Minimal example:**
+
+This minimal example includes only the required fields to define a many-to-one relationship between two schemas.
+
+```json
+{
+  "@type": "xdm:descriptorRelationship",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
+  "xdm:sourceProperty": "/customer_ref",
+  "xdm:sourceVersion": 1,
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
+  "xdm:cardinality": "M:1"
+}
+```
+
+**Example with all optional fields:**
+
+This example includes all optional fields, such as relationship names, display titles, and an explicit non-primary key destination field.
+
+```json
+{
+  "@type": "xdm:descriptorRelationship",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/customer_ref",
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
+  "xdm:destinationProperty": "/customer_id",
+  "xdm:sourceToDestinationName": "CampaignToCustomer",
+  "xdm:destinationToSourceName": "CustomerToCampaign",
+  "xdm:sourceToDestinationTitle": "Customer campaigns",
+  "xdm:destinationToSourceTitle": "Campaign customers",
+  "xdm:cardinality": "M:1"
+}
+```
+
+##### Choosing a relationship descriptor
+
+Use the following guidelines to decide which relationship descriptor to apply:
+
+| Situation                       | Descriptor to use             |
+| --------------------------------------------------------------------- | ----------------------------------------- |
+| New work or model-based schemas                                       | `xdm:descriptorRelationship`              |
+| Existing 1:1 mapping in standard schemas                              | Continue using `xdm:descriptorOneToOne` unless you need features supported only by `xdm:descriptorRelationship`.     |
+| Need many-to-one or optional cardinality (`1:1`, `1:0`, `M:1`, `M:0`) | `xdm:descriptorRelationship`              |
+| Need relationship names or titles for UI/downstream readability       | `xdm:descriptorRelationship`              |
+| Need a destination target that is not an identity                     | `xdm:descriptorRelationship`              |
+
+>[!NOTE]
+>
+>For existing `xdm:descriptorOneToOne` descriptors in standard schemas, continue using them unless you need features such as non-primary identity destination targets, custom naming, or expanded cardinality options.
+
+##### Capabilities comparison
+
+The following table compares the capabilities of the two descriptor types:
+
+| Capability         | `xdm:descriptorOneToOne` | `xdm:descriptorRelationship`                                             |
+| ------------------ | ------------------------ | ------------------------------------------------------------------------ |
+| Cardinality        | 1:1                      | 1:1, 1:0, M:1, M:0 (informational)                                       |
+| Destination target | Identity/explicit field  | Primary key by default, or non-primary key via `xdm:destinationProperty`          |
+| Naming fields      | Not supported            | `xdm:sourceToDestinationName`, `xdm:destinationToSourceName`, and titles |
+| Relational fit     | Limited                  | Primary pattern for model-based schemas                                  |
+
+##### Constraints and validation
+
+Follow these requirements and recommendations when defining a general relationship descriptor:
+
+- For model-based schemas, place the source field (foreign key) at the root level. This is a current technical limitation for ingestion, not just a best-practice recommendation.
+- Ensure that data types of source and destination fields are compatible (numeric, date, boolean, string).
+- Remember that cardinality is informational; storage does not enforce it. Specify cardinality in `<source>:<destination>` format. Accepted values are: `1:1`, `1:0`, `M:1`, or `M:0`.
+
+#### Primary key descriptor {#primary-key-descriptor}
+
+The primary key descriptor (`xdm:descriptorPrimaryKey`) enforces uniqueness and non-null constraints on one or more fields in a schema.
+
+```json
+{
+  "@type": "xdm:descriptorPrimaryKey",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": ["/orderId", "/orderLineId"]
+}
+```
+
+| Property             | Description                                                                   |
+| -------------------- | ----------------------------------------------------------------------------- |
+| `@type`              | Must be `xdm:descriptorPrimaryKey`.                                           |
+| `xdm:sourceSchema`   | `$id` URI of the schema.                                                      |
+| `xdm:sourceProperty` | JSON Pointer(s) to the primary key field(s). Use an array for composite keys. For time-series schemas, the composite key must include the timestamp field to ensure uniqueness across event records. |
+
+#### Version descriptor {#version-descriptor}
+
+>[!NOTE]
+>
+>In the UI Schema Editor, the version descriptor appears as "[!UICONTROL Version identifier]."
+
+The version descriptor (`xdm:descriptorVersion`) designates a field to detect and prevent conflicts from out-of-order change events.
+
+```json
+{
+  "@type": "xdm:descriptorVersion",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": "/versionNumber"
+}
+```
+
+| Property             | Description                                                   |
+| -------------------- | ------------------------------------------------------------- |
+| `@type`              | Must be `xdm:descriptorVersion`.                              |
+| `xdm:sourceSchema`   | `$id` URI of the schema.                                      |
+| `xdm:sourceProperty` | JSON Pointer to the version field. Must be marked `required`. |
+
+#### Timestamp descriptor {#timestamp-descriptor}
+
+>[!NOTE]
+>
+>In the UI Schema Editor, the timestamp descriptor appears as "[!UICONTROL Timestamp identifier]."
+
+The timestamp descriptor (`xdm:descriptorTimestamp`) designates a date-time field as the timestamp for schemas with `"meta:behaviorType": "time-series"`.
+
+```json
+{
+  "@type": "xdm:descriptorTimestamp",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": "/eventTime"
+}
+```
+
+| Property             | Description                                                                                |
+| -------------------- | ------------------------------------------------------------------------------------------ |
+| `@type`              | Must be `xdm:descriptorTimestamp`.                                                         |
+| `xdm:sourceSchema`   | `$id` URI of the schema.                                                                   |
+| `xdm:sourceProperty` | JSON Pointer to the timestamp field. Must be marked `required` and be of type `date-time`. |
 
 ##### B2B relationship descriptor {#B2B-relationship-descriptor}
 
@@ -421,7 +587,7 @@ The Real-Time CDP B2B Edition introduces an alternative way to define relationsh
 | `xdm:sourceProperty` | Path to the field in the source schema where the relationship is being defined. Should begin with a "/" and not end with "/". Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address"). |
 | `xdm:destinationSchema` | The `$id` URI of the reference schema this descriptor is defining a relationship with. |
 | `xdm:destinationVersion` | The major version of the reference schema. |
-| `xdm:destinationProperty` | (Optional) Path to a target field within the reference schema, which must be the schema's primary ID. If this property is omitted, the target field is inferred by any fields that contain a matching reference identity descriptor (see below). |
+| `xdm:destinationProperty` | (Optional) Path to a target field within the reference schema. This must resolve to the schema's primary ID, or to another field with a compatible data type to `xdm:sourceProperty`. If omitted, the relationship may not function as expected. |
 | `xdm:destinationNamespace` | The namespace of the primary ID from the reference schema. |
 | `xdm:destinationToSourceTitle` | The display name of the relationship from the reference schema to the source schema. |
 | `xdm:sourceToDestinationTitle` | The display name of the relationship from the source schema to the reference schema. |
