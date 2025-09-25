@@ -12,7 +12,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 **New features**
 
-- Added support for showing push notifications.
+- Added support for showing push notifications
 - Contains [version 2.30.0](../../../../web-sdk/release-notes.md#2-30-0) of the Adobe Experience Platform Web SDK.
 
 ## Version 2.32.0 - September 4, 2025

@@ -5,7 +5,7 @@ description: Configure push notifications for the Web SDK to enable browser-base
 
 # `pushNotifications` {#push-notifications}
 
-> [!AVAILABILITY]
+>[!AVAILABILITY]
 >
 > Push notifications for the Web SDK are currently in **beta**. The functionality and documentation may change.
 
@@ -39,7 +39,7 @@ Service worker code needs to be served from the same domain as the website. Down
 - **Minified**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloyServiceWorker.min.js`
 - **Full**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloyServiceWorker.js`
 
-Here is an example on how to install the service worker:
+Here is an example of how to install the service worker:
 
 ```html
 <script>
@@ -55,14 +55,14 @@ Follow these steps to enable and configure push notifications:
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Select the desired tag property.
 1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
-1. **Enable push notifications** from the "Custom build components" section.
+1. From the **[!UICONTROL Custom build components]** section, enable **[!UICONTROL Push notifications]**.
 1. Scroll down to locate the [!UICONTROL Push Notifications] section.
 1. Enter your VAPID public key in the **[!UICONTROL VAPID Public Key]** field.
 1. Enter your application ID in the **[!UICONTROL Application ID]** field.
 1. Enter your tracking dataset ID in the **[!UICONTROL Tracking Dataset ID]** field.
 1. Click **[!UICONTROL Save]**, then publish your changes.
 
-> [!NOTE]
+>[!NOTE]
 >
 > Push notifications must be explicitly enabled in the tag extension configuration. The feature is disabled by default.
 
@@ -85,11 +85,11 @@ alloy("configure", {
 
 ## Properties {#properties}
 
-| Property            | Type   | Required | Description                                                                       |
-| ------------------- | ------ | -------- | --------------------------------------------------------------------------------- |
-| `vapidPublicKey`    | String | Yes      | The VAPID public key used for push subscription. Must be a Base64-encoded string. |
-| `applicationId`     | String | Yes      | The application ID associated with this VAPID public key.                         |
-| `trackingDatasetId` | String | Yes      | The system dataset ID used for push notification tracking.                        |
+|Property|Type|Required|Description|
+|---------|----|---------|-----------|
+|`vapidPublicKey`|String|Yes|The VAPID public key used for push subscription. Must be a Base64-encoded string.|
+|`applicationId`|String|Yes|The application ID associated with this VAPID public key.|
+|`trackingDatasetId`|String|Yes|The system dataset ID used for push notification tracking.|
 
 ## Important considerations {#important-considerations}
 
