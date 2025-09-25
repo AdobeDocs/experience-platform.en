@@ -8,7 +8,7 @@ description: Configure push notifications for the Web SDK to enable browser-base
 >
 >Push notifications for the Web SDK are currently in **beta**. The functionality and documentation are subject to change.
 
-The `pushNotifications` property lets you configure push notifications for web applications. This feature allows your web app to receive messages pushed from a server, even when the website is not currently loaded in the browser or when the browser is not running.
+The `pushNotifications` property lets you configure push notifications for web applications. This feature allows your web app to receive messages pushed from a server, even when the website is not currently loaded in the browser.
 
 ## Prerequisites {#prerequisites}
 
@@ -31,9 +31,9 @@ web-push generate-vapid-keys
 
 This action generates a public and private key pair. Use the public key in your Web SDK configuration and store the private key within the Adobe Journey Optimizer push notifications channel.
 
-## Install the service worker JavaScript
+## Install the service worker
 
-Service worker code needs to be served from the same domain as the website. Download the service worker code from Adobe's CDN and then host the JavaScript file from your own server. The Web SDK service worker code is available using the following URL structure:
+The service worker code must be served from the same domain as the website. Download the service worker code from Adobe's CDN and host the JavaScript file from your own server. The Web SDK service worker code is available using the following URL structure:
 
 - **Minified**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloyServiceWorker.min.js`
 - **Full**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloyServiceWorker.js`
@@ -55,8 +55,7 @@ alloy("configure", {
   datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   pushNotifications: {
-    vapidPublicKey:
-      "BEl62iUYgUivElbkzaBgNL3r3vOAhvJyFXjS6FjjRRojYD4NElJkLBJKZvS3xAAh4_gE3WnMaZNu_KGP4jAQlJz",
+    vapidPublicKey: "BEl62iUYgU[...]KGP4jAQlJz",
     applicationId: "my-app-id",
     trackingDatasetId: "4dc19305cdd27e03dd9a6bbe",
   },
