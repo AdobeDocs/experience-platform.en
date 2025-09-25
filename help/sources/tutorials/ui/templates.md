@@ -60,6 +60,12 @@ A pop-up window appears presenting you with the option to browse templates or us
 * **Browse templates**: Sources templates auto-creates schemas, identities, datasets, and dataflows with mapping rules for you. You can customize these assets as needed.
 * **Use my existing assets**: Ingest your data using existing datasets and schemas that you created. You can also create new datasets and schemas if needed.
 
+>[!NOTE]
+>
+>Templates can auto-generate model-based schemas when working with sources that require change data capture workflows or support multiple data models. These schemas enable Data Mirror capabilities for real-time data synchronization.  
+>When using templates with model-based schemas, the auto-generated assets will include the required primary key, version identifier, and timestamp identifier fields.  
+>For more information, see the [Data Mirror overview](../../../xdm/data-mirror/overview.md) and [model-based schemas technical reference](../../../xdm/schema/model-based.md).
+
 To use auto-generated assets, select **[!UICONTROL Browse templates]** and then select **[!UICONTROL Select]**.
 
 ![A pop-up window with options to browse templates or use existing assets.](../../images/tutorials/templates/browse-templates.png)

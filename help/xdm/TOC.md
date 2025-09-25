@@ -15,6 +15,7 @@ role: Developer
   * [Best practices for data modeling](schema/best-practices.md)
   * [Sensitive and personal data](./schema/sensitive-and-personal-data.md)
   * [XDM field type constraints](schema/field-constraints.md)
+  * [Model-based schema](./schema/model-based.md)
   * [Namespacing in XDM](./schema/namespaces.md)
   * Industry data models {#industries}
     * [Overview](./schema/industries/overview.md)
@@ -67,6 +68,8 @@ role: Developer
       * [Timing](./schema/healthcare/data-types/timing.md)
       * [Virtual Service](./schema/healthcare/data-types/virtual-service-detail.md)
   * [XDM field dictionary](schema/field-dictionary.md)
+* Data Mirror {#data-mirror}
+  * [Overview](./data-mirror/overview.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
