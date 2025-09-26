@@ -24,10 +24,20 @@ This configuration section allows you to set a VAPID public key for push notific
 
 ![Image showing push notifications settings using the Web SDK tag extension](../assets/push-notifications.png)
 
-Currently, there is one option available.
+The following fields are available:
 
 ## [!UICONTROL VAPID public key]
 
 The VAPID public key used for push subscriptions. It is a Base64-encoded string.
 
-This field is the tag equivalent of [`pushNotifications`](/help/collection/js/commands/configure/pushnotifications.md) when configuring the JavaScript library. The linked page also provides information about prerequisites and generating a VAPID public key.
+## [!UICONTROL Application ID]
+
+The application ID associated with the VAPID public key.
+
+## [!UICONTROL Tracking dataset ID]
+
+The dataset ID for push notification tracking and analytics.
+
+## Push notifications using the JavaScript library
+
+This section is the tag equivalent of [`pushNotifications`](/help/collection/js/commands/configure/pushnotifications.md) when configuring the JavaScript library. The linked page also provides information about prerequisites and generating a VAPID public key.
