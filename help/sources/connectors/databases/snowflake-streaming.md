@@ -27,9 +27,9 @@ By using [!DNL Kafka Connect], the [!DNL Snowflake] streaming source tracks the 
 
 The following section outlines prerequisite steps to complete before you can stream data from your [!DNL Snowflake] database to Experience Platform:
 
-### Update your IP address allow list
+### IP address allowlist 
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources) page for more information.
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform](../../ip-address-allow-list.md) for more information.
 
 The documentation below provides information on how to connect [!DNL Amazon Redshift] to Experience Platform using APIs or the user interface:
 
