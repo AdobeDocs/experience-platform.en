@@ -153,7 +153,7 @@ curl -X POST \
 
 +++Response
 
-A successful response returns the newly created connection, including its unique connection identifier (`id`). This ID is required to explore your data in the next tutorial.
+A successful response returns details of the newly created connection, including its unique identifier (`id`). 
 
 ```json
 {
@@ -177,8 +177,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Snowflake base connection with encrypted private key",
-      "description": "Snowflake base connection with encrypted private key",
+      "name": "Snowflake base connection with unencrypted private key",
+      "description": "Snowflake base connection with unencrypted private key",
       "auth": {
         "specName": "KeyPair Authentication",
         "params": {
@@ -209,7 +209,7 @@ curl -X POST \
 
 +++Response
 
-A successful response returns the newly created connection, including its unique connection identifier (`id`). This ID is required to explore your data in the next tutorial.
+A successful response returns details of the newly created connection, including its unique identifier (`id`). 
 
 ```json
 {
@@ -238,11 +238,13 @@ Read the steps below for information on how to connect your [!DNL Snowflake] sou
 POST /connections
 ```
 
-**Request**
+>[!BEGINTABS]
 
-The following request creates a base connection for [!DNL Snowflake] to ingest date to Experience Platform on AWS:
+>[!TAB Basic authentication]
 
-+++Select to view example
+The following request creates a base connection for [!DNL Snowflake] to ingest data to Experience Platform on AWS:
+
++++Request
 
 ```shell
 curl -X POST \
@@ -286,11 +288,9 @@ curl -X POST \
 
 +++
 
-**Response**
++++Response
 
-A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your storage in the next tutorial.
-
-+++Select to view example
+A successful response returns details of the newly created connection, including its unique identifier (`id`). 
 
 ```json
 {
@@ -300,6 +300,65 @@ A successful response returns details of the newly created connection, including
 ```
 
 +++
+
+>[!TAB Key-pair authentication with unencrypted private key]
+
++++Request
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Snowflake base connection with unencrypted private key",
+      "description": "Snowflake base connection with unencrypted private key",
+      "auth": {
+        "specName": "KeyPair Authentication",
+        "params": {
+            "account": "acme-snowflake123",
+            "username": "acme-cj123",
+            "database": "ACME_DB",
+            "privateKey": "{BASE_64_ENCODED_PRIVATE_KEY}",
+            "warehouse": "COMPUTE_WH"
+        }
+    },
+    "connectionSpec": {
+        "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+        "version": "1.0"
+    }
+  }'
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `auth.params.account` | The name of your [!DNL Snowflake] account. |
+| `auth.params.username` | The username associated with your [!DNL Snowflake] account.|
+| `auth.params.database` | The [!DNL Snowflake] database from where the data will be pulled from. |
+| `auth.params.privateKey` | The [!DNL Base64-]encoded unencrypted private key of your [!DNL Snowflake] account. |
+| `auth.params.warehouse` | The [!DNL Snowflake] warehouse that you are using. |
+| `connectionSpec.id` | The [!DNL Snowflake] connection specification ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
+
++++
+
+
++++Response
+
+A successful response returns details of the newly created connection, including its unique identifier (`id`). 
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"1700d77b-0000-0200-0000-5e3b41a10000\""
+}
+```
+
++++
+
+>[!ENDTABS]
 
 By following this tutorial, you have created a [!DNL Snowflake] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
 
