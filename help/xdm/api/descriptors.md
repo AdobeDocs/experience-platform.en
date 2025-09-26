@@ -519,7 +519,7 @@ The primary key descriptor (`xdm:descriptorPrimaryKey`) enforces uniqueness and 
 
 >[!NOTE]
 >
->In the UI Schema Editor, the version descriptor appears as "[!UICOTRNOL Version identifier]."
+>In the UI Schema Editor, the version descriptor appears as "[!UICONTROL Version identifier]."
 
 The version descriptor (`xdm:descriptorVersion`) designates a field to detect and prevent conflicts from out-of-order change events.
 
@@ -541,7 +541,7 @@ The version descriptor (`xdm:descriptorVersion`) designates a field to detect an
 
 >[!NOTE]
 >
->In the UI Schema Editor, the timestamp descriptor appears as "[!UICOTRNOL Timestamp identifier]."
+>In the UI Schema Editor, the timestamp descriptor appears as "[!UICONTROL Timestamp identifier]."
 
 The timestamp descriptor (`xdm:descriptorTimestamp`) designates a date-time field as the timestamp for schemas with `"meta:behaviorType": "time-series"`.
 
