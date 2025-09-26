@@ -124,15 +124,6 @@ If you already have an existing dataset, select **[!UICONTROL Existing dataset]*
 
 >[!ENDTABS]
 
-+++Select for steps to enable Profile ingestion, error diagnostics, and partial ingestion.
-
-If your dataset is enabled for Real-Time Customer Profile, then during this step, you can toggle **[!UICONTROL Profile dataset]** to enable your data for Profile-ingestion. You can also use this step to enable **[!UICONTROL Error diagnostics]** and **[!UICONTROL Partial ingestion]**.
-
-* **[!UICONTROL Error diagnostics]**: Select **[!UICONTROL Error diagnostics]** to instruct the source to produce error diagnostics that you can later reference when monitoring your dataset activity and dataflow status.
-* **[!UICONTROL Partial ingestion]**: Partial batch ingestion is the ability to ingest data containing errors, up to a certain configurable threshold. This feature allows you to successfully ingest all of your accurate data into Experience Platform, while all of your incorrect data is batched separately with information on why it is invalid.
-
-+++
-
 ### Dataflow details {#dataflow-details}
 
 Once your dataset is configured, you must then provide details on your dataflow, including a name, an optional description, and alert configurations.
