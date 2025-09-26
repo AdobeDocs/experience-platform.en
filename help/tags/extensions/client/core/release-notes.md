@@ -9,6 +9,15 @@ exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
+## September 25, 2025
+
+v3.4.4
+
+* Add the `releaseNotesUrl` field to the extension.json with this page as the value.
+* Audit dependencies.
+* Remove Yarn and bring the build process in line with our other open-source repositories.
+
+
 ## May 8, 2025
 
 v3.4.3
