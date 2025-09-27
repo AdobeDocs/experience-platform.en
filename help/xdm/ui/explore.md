@@ -103,7 +103,7 @@ The schema inventory columns provide immediate visibility into schema characteri
 ![The Schemas workspace schema inventory showing the tags, schema type, Profile enablement, created date, last modified, class, identities, relationships, and behavior columns.](../images/ui/explore/schema-inventory-columns.png) 
 
 ### Take inline actions on schemas
-<!-- Reviewing -im up to here ... -->
+
 Each schema row provides access to contextual actions through an ellipsis menu, eliminating the need to navigate into individual schema details for common tasks.
 
 ![The ellipsis menu for a schema row showing inline actions such as Edit, Delete, Apply labels, and Manage tags.](../images/ui/explore/schema-inline-actions.png)
