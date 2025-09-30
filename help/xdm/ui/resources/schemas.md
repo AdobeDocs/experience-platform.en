@@ -7,7 +7,7 @@ exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 ---
 # Create and edit schemas in the UI {#create-edit-schemas-in-ui}
 
-This guide provides an overview of how to create, edit, and manage Experience Data Model (XDM) schemas for your organization in the Adobe Experience Platform UI.
+This guide provides an overview of how to create, edit, and manage Experience Data Model (XDM) schemas for your organization in the Adobe Experience Platform UI. You'll learn how to create both model-based and standard schemas, customize schema structures, manage schemas from the Browse view, and finalize schemas for production use.
 
 >[!IMPORTANT]
 >
@@ -21,11 +21,16 @@ This guide requires a working understanding of XDM System. Refer to the [XDM ove
 
 ## Create a new schema {#create}
 
+Experience Platform offers two types of schemas to meet different use cases. Choose the approach that best fits your data modeling requirements:
+
+- **[Model-based schemas](#create-model-based-schema)**: Ideal for structured, relational data with primary keys, versioning, and change data capture capabilities.
+- **[Standard schemas](#standard-based-creation)**: Perfect for event and profile data using Adobe's predefined classes and field groups.
+
 In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner. The 'Select schema type' dropdown menu appears with options for [!UICONTROL Standard] or [!UICONTROL Model-based] schemas.
 
 ![The Schemas workspace with [!UICONTROL Create Schema] highlighted and the 'Select schema type' dropdown displayed](../../images/ui/resources/schemas/create-schema.png).
 
-## Create a model-based schema {#create-model-based-schema}
+### Create a model-based schema {#create-model-based-schema}
 
 >[!AVAILABILITY]
 >
@@ -108,7 +113,7 @@ Next, proceed to [add additional fields](#add-field-groups), and [add additional
 
 For guidance on how to enable change data capture in Experience Platform Sources, see the [change data capture ingestion guide](../../../sources/tutorials/api/change-data-capture.md).
 
-## Standard schema creation {#standard-based-creation}
+### Create a standard schema {#standard-based-creation}
 
 If you select 'Standard schema type from the 'Select schema type' dropdown menu, the [!UICONTROL Create a schema] dialog appears. In this dialog, you can choose to either manually create a schema by adding fields and field groups, or you can upload a CSV file and use ML algorithms to generate a schema. Select a schema creation workflow from the dialog.
 
@@ -170,78 +175,13 @@ To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then sel
 >
 >You can use the workspace's search and filtering capabilities to help find the schema easier. See the guide on [exploring XDM resources](../explore.md) for more information.
 
-Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add field groups](#add-field-groups) to the schema (or [add individual fields](#add-individual-fields) from those groups), [edit field display names](#display-names), or [edit existing custom field groups](./field-groups.md#edit) if the schema employs any.
+Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now customize your schema using the tools and options described in the following section.
 
-## Schema management actions {#schema-management-actions}
+## Customize a schema {#customize-schema}
 
-The following sections provide detailed instructions for performing various schema management actions available from the browse view.
+Once you have a schema open in the Schema Editor, you can customize its structure, fields, and display properties. This section covers the main customization options available for tailoring schemas to your specific requirements.
 
-### Edit schema properties {#edit-schema-properties}
-
-PLACEHOLDER TEXT
-
-### Delete schema {#delete-schema}
-
-PLACEHOLDER TEXT
-
-### Apply data governance labels {#apply-data-governance-labels}
-
-PLACEHOLDER TEXT
-
-### Manage tags {#manage-tags}
-
-PLACEHOLDER TEXT
-
-### Move to folder {#move-to-folder}
-
-PLACEHOLDER TEXT
-
-### Add to package {#add-to-package}
-
-PLACEHOLDER TEXT
-
-### Copy JSON structure {#copy-json-structure}
-
-PLACEHOLDER TEXT
-
-### Download sample file {#download-sample-file}
-
-PLACEHOLDER TEXT
-
-## Schema actions {#more}
-
-Perform various actions on schemas both from the browse view and within the Schema Editor. Browse-level actions help you manage schemas efficiently without opening individual schema details, while Schema Editor actions support schema development workflows.
-
-### Browse-level inline actions
-
-Access contextual actions for each schema directly from the [!UICONTROL Browse] tab using the ellipsis (…) menu. These actions streamline schema management by eliminating navigation steps. To discover and filter schemas before taking actions, see the [enhanced schema browsing guide](../explore.md#enhanced-schema-browsing-and-organization).
-
-| Action | Description |
-|--------|-------------|
-| [!UICONTROL Edit schema properties] | Modify basic schema information including display name, description, and tags. Use this to update schema metadata without opening the full Schema Editor. For detailed instructions, see [Edit schema properties](#edit-schema-properties). |
-| [!UICONTROL Delete schema] | Remove schemas that are no longer needed from your organization. Delete is only available for schemas that have not been enabled for Real-Time Customer Profile and have no associated datasets. For detailed instructions, see [Delete schema](#delete-schema). |
-| [!UICONTROL Apply data governance labels] | Assign data usage labels to categorize schemas according to privacy policies and compliance requirements. Labels applied at the schema level propagate to all datasets created from that schema. For detailed instructions, see [Apply data governance labels](#apply-data-governance-labels). |
-| [!UICONTROL Manage tags] | Add or remove user-defined tags to organize schemas by project, team, business domain, or custom taxonomies. Tags improve schema discoverability through filtering and search. For detailed instructions, see [Manage tags](#manage-tags). |
-| [!UICONTROL Move to folder] | Organize schemas into folder hierarchies for structured browsing and access control. Moving schemas to folders helps maintain organization-wide schema governance and supports team-based access patterns. For detailed instructions, see [Move to folder](#move-to-folder). |
-| [!UICONTROL Add to package] | Include the schema in a deployment package for promotion across environments or sandboxes. Use this action to manage the schema lifecycle through controlled deployment of changes. For detailed instructions, see [Add to package](#add-to-package). |
-| [!UICONTROL Copy JSON structure] | Copy the complete JSON representation of the schema to your clipboard. Use this for API integrations, documentation, or sharing schema structures with developers. For detailed instructions, see [Copy JSON structure](#copy-json-structure). |
-| [!UICONTROL Download sample file] | Generate and download sample data files that match the schema structure. These files support testing and development workflows by providing correctly formatted example data. For detailed instructions, see [Download sample file](#download-sample-file). |
-
-{style="table-layout:auto"}
-
->[!NOTE]
->
->Sample files are for testing schema structure and should not contain production data.
-
-### Schema Editor actions
-
-Within the Schema Editor conduct quick actions to copy the JSON structure of the schema or delete the schema if it has not been enabled for Real-Time Customer Profile or has associated datasets. Select [!UICONTROL More] at the top of the view to display a drop down with quick actions. 
-
-The Copy JSON structure functionality allows you to see what a sample payload would look like while you are still building the schema and your data pipelines. It is especially helpful for situations where there are complex object map structures in the schema such as an identity map.
-
-![The Schema Editor with the More button highlighted and the drop down options displayed.](../../images/tutorials/create-schema/more-actions.png)
-
-## Display name toggle {#display-name-toggle}
+### Display name toggle {#display-name-toggle}
 
 For your convenience, the Schema Editor provides a toggle to change between the original field names and the more human-readable display names. This flexibility allows for improved field discoverability and editing of your schemas. The toggle is found at the top right of the Schema Editor view.
 
@@ -253,7 +193,7 @@ For your convenience, the Schema Editor provides a toggle to change between the 
 
 The display names for standard field groups are system generated but can be customized, as described in the [display names](#display-names) section. Display names are reflected across multiple UI views, including mapping and dataset previews. The default setting is off, and shows field names by their original values.
 
-## Add field groups to a schema {#add-field-groups}
+### Add field groups to a schema {#add-field-groups}
 
 >[!NOTE]
 >
@@ -303,7 +243,7 @@ The [!DNL Schema Editor] reappears with the field-group-provided fields represen
 
 After adding a field group to a schema, you can optionally [remove existing fields](#remove-fields) or [add new custom fields](#add-fields) to those groups, depending on your needs.
 
-### Remove fields added from field groups {#remove-fields}
+#### Remove fields added from field groups {#remove-fields}
 
 Once you've added a field group to a schema, you can either remove fields globally from the field group or hide them locally from the current schema. Understanding the difference between these actions is critical to avoid unintended schema changes.
 
@@ -329,7 +269,7 @@ Select **[!UICONTROL Confirm]** to update the canvas and reflect your selected f
 
 ![Fields added](../../images/ui/resources/schemas/fields-added.png)
 
-### Field behavior when removing or deprecating fields {#field-removal-deprecation-behavior}
+#### Field behavior when removing or deprecating fields {#field-removal-deprecation-behavior}
 
 Use the table below to understand the scope of each action.
 
@@ -339,11 +279,13 @@ Use the table below to understand the scope of each action.
 | **Manage related fields**| Yes                            | No                   | No                     | Hides fields from the current schema only. The field group remains unchanged. |
 | **Deprecate field**      | No                             | Yes                  | Yes                    | Marks the field as deprecated in the field group. It is no longer available for use in any schema. |
 
+{style="table-layout:auto"}
+
 >[!NOTE]
 >
 >This behavior is consistent across both record-based and event-based schemas.
 
-### Add custom fields to field groups {#add-fields}
+#### Add custom fields to field groups {#add-fields}
 
 After you have added a field group to a schema, you can define additional fields for that group. However, any fields added to a field group in one schema will also appear in all other schemas that employ that same field group.
 
@@ -353,13 +295,96 @@ If you want to add a custom field to a standard field group, refer to the [secti
 
 If you do not want to alter any existing field groups, you can [create a new custom field group](./field-groups.md#create) to define additional fields instead.
 
-## Add individual fields to a schema {#add-individual-fields}
+### Add individual fields to a schema {#add-individual-fields}
 
 The Schema Editor allows you to add individual fields directly to a schema if you want to avoid adding an entire field group for a specific use case. You can [add individual fields from standard field groups](#add-standard-fields) or [add your own custom fields](#add-custom-fields) instead.
 
 >[!IMPORTANT]
 >
 >Even though the Schema Editor functionally allows you to add individual fields directly to a schema, this does not change the fact that all fields in an XDM schema must be provided by its class or a field group that is compatible with that class. As the sections below explain, all individual fields are still associated with a class or field group as a key step when they are added to a schema.
+
+### Edit display names for schema fields {#display-names}
+
+Once you have assigned a class and added field groups to a schema, you can edit the display names of any of the schema's fields, regardless of whether those fields have been provided by standard or custom XDM resources.
+
+>[!NOTE]
+>
+>Keep in mind that the display names of fields that belong to standard classes or field groups can only be edited in the context of a specific schema. In other words, changing the display name of a standard field in one schema does not affect other schemas that employ the same associated class or field group.
+>
+>Once you make changes the display names for a schema's fields, those changes are immediately reflected in any existing datasets based on that schema.
+
+Change the field names to the display names by toggling on **[!UICONTROL Show display names for fields]**. To edit the display name of a schema field, select the field in the canvas. In the right rail, provide the new name under **[!UICONTROL Display name]**.
+
+![](../../images/ui/resources/schemas/display-name.png)
+
+Select **[!UICONTROL Apply]** in the right rail, and the canvas updates to show the field's new display name. Select **[!UICONTROL Save]** to apply the changes to the schema.
+
+![](../../images/ui/resources/schemas/display-name-changed.png)
+
+## Manage schemas {#manage-schemas}
+
+Schema management tasks are available from two main locations in the Experience Platform UI. Choose the appropriate workflow based on where you're working with your schemas.
+
+### Manage schemas from the Browse view {#manage-from-browse}
+
+The following sections provide detailed instructions for performing various schema management actions available from the [!UICONTROL Browse] tab. You can also access these actions quickly using the ellipsis (…) menu next to each schema for streamlined workflow management.
+
+| Action | Description |
+|--------|-------------|
+| [!UICONTROL Edit schema properties] | Modify basic schema information including display name, description, and tags. Use this to update schema metadata without opening the full Schema Editor. For detailed instructions, see [Edit schema properties](#edit-schema-properties). |
+| [!UICONTROL Delete schema] | Remove schemas that are no longer needed from your organization. Delete is only available for schemas that have not been enabled for Real-Time Customer Profile and have no associated datasets. For detailed instructions, see [Delete schema](#delete-schema). |
+| [!UICONTROL Apply data governance labels] | Assign data usage labels to categorize schemas according to privacy policies and compliance requirements. Labels applied at the schema level propagate to all datasets created from that schema. For detailed instructions, see [Apply data governance labels](#apply-data-governance-labels). |
+| [!UICONTROL Manage tags] | Add or remove user-defined tags to organize schemas by project, team, business domain, or custom taxonomies. Tags improve schema discoverability through filtering and search. For detailed instructions, see [Manage tags](#manage-tags). |
+| [!UICONTROL Move to folder] | Organize schemas into folder hierarchies for structured browsing and access control. Moving schemas to folders helps maintain organization-wide schema governance and supports team-based access patterns. For detailed instructions, see [Move to folder](#move-to-folder). |
+| [!UICONTROL Add to package] | Include the schema in a deployment package for promotion across environments or sandboxes. Use this action to manage the schema lifecycle through controlled deployment of changes. For detailed instructions, see [Add to package](#add-to-package). |
+| [!UICONTROL Copy JSON structure] | Copy the complete JSON representation of the schema to your clipboard. Use this for API integrations, documentation, or sharing schema structures with developers. For detailed instructions, see [Copy JSON structure](#copy-json-structure). |
+| [!UICONTROL Download sample file] | Generate and download sample data files that match the schema structure. These files support testing and development workflows by providing correctly formatted example data. For detailed instructions, see [Download sample file](#download-sample-file). |
+
+{style="table-layout:auto"}
+
+>[!NOTE]
+>
+>Sample files are for testing schema structure and should not contain production data.
+
+#### Edit schema properties {#edit-schema-properties}
+
+PLACEHOLDER TEXT
+
+#### Delete schema {#delete-schema}
+
+PLACEHOLDER TEXT
+
+#### Apply data governance labels {#apply-data-governance-labels}
+
+PLACEHOLDER TEXT
+
+#### Manage tags {#manage-tags}
+
+PLACEHOLDER TEXT
+
+#### Move to folder {#move-to-folder}
+
+PLACEHOLDER TEXT
+
+#### Add to package {#add-to-package}
+
+PLACEHOLDER TEXT
+
+#### Copy JSON structure {#copy-json-structure}
+
+PLACEHOLDER TEXT
+
+#### Download sample file {#download-sample-file}
+
+PLACEHOLDER TEXT
+
+### Manage schemas from the Schema Editor {#manage-from-editor}
+
+Within the Schema Editor, you can perform quick actions to copy the JSON structure of the schema or delete the schema if it has not been enabled for Real-Time Customer Profile or has associated datasets. Select [!UICONTROL More] at the top of the view to display a dropdown with quick actions.
+
+![The Schema Editor with the More button highlighted and the drop down options displayed.](../../images/tutorials/create-schema/more-actions.png)
+
+The Copy JSON structure functionality allows you to see what a sample payload would look like while you are still building the schema and your data pipelines. It is especially helpful for situations where there are complex object map structures in the schema such as an identity map.
 
 ### Add standard fields {#add-standard-fields}
 
@@ -465,7 +490,11 @@ After applying your changes, the new field appears under your tenant ID namespac
 
 ![Field added to standard object](../../images/ui/resources/schemas/added-to-standard-object.png)
 
-## Enable a schema for Real-Time Customer Profile {#profile}
+## Finalize a schema {#finalize-schema}
+
+Once you have finished customizing your schema structure and fields, you may need to take additional steps to prepare it for production use. These final configuration steps ensure your schema is properly integrated with Experience Platform services.
+
+### Enable a schema for Real-Time Customer Profile {#profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
@@ -498,25 +527,7 @@ To finish the process, select **[!UICONTROL Save]** to save the schema.
 
 The schema is now enabled for use in Real-Time Customer Profile. When Experience Platform ingests data into datasets based on this schema, that data will be incorporated into your amalgamated Profile data.
 
-## Edit display names for schema fields {#display-names}
-
-Once you have assigned a class and added field groups to a schema, you can edit the display names of any of the schema's fields, regardless of whether those fields have been provided by standard or custom XDM resources.
-
->[!NOTE]
->
->Keep in mind that the display names of fields that belong to standard classes or field groups can only be edited in the context of a specific schema. In other words, changing the display name of a standard field in one schema does not affect other schemas that employ the same associated class or field group.
->
->Once you make changes the display names for a schema's fields, those changes are immediately reflected in any existing datasets based on that schema.
-
-Change the field names to the display names by toggling on **[!UICONTROL Show display names for fields]**. To edit the display name of a schema field, select the field in the canvas. In the right rail, provide the new name under **[!UICONTROL Display name]**.
-
-![](../../images/ui/resources/schemas/display-name.png)
-
-Select **[!UICONTROL Apply]** in the right rail, and the canvas updates to show the field's new display name. Select **[!UICONTROL Save]** to apply the changes to the schema.
-
-![](../../images/ui/resources/schemas/display-name-changed.png)
-
-## Change a schema's class {#change-class}
+### Change a schema's class {#change-class}
 
 You can change the class of a schema at any point during the initial composition process before the schema has been saved.
 
