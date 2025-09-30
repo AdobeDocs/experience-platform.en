@@ -8,8 +8,6 @@ exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 ---
 # Explore schema resources in the UI 
 
-<!-- TODO: Make sure that adding Meta tags is included and moving to files functionality -->
-
 In Adobe Experience Platform, all Experience Data Model (XDM) schema resources are stored in the [!DNL Schema Library], including standard resources provided by Adobe and custom resources defined by your organization. In the Experience Platform UI, you can view the structure and fields of any existing schema, class, field group, or data type in the [!DNL Schema Library]. This is especially useful when planning and preparing for data ingestion, as the UI provides information on the expected data types and use cases of each field provided by these XDM resources.
 
 This tutorial covers the steps for exploring existing schemas, classes, field groups, and data types in the Experience Platform UI.
