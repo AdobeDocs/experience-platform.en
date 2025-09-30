@@ -172,6 +172,42 @@ To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then sel
 
 Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add field groups](#add-field-groups) to the schema (or [add individual fields](#add-individual-fields) from those groups), [edit field display names](#display-names), or [edit existing custom field groups](./field-groups.md#edit) if the schema employs any.
 
+## Schema management actions {#schema-management-actions}
+
+The following sections provide detailed instructions for performing various schema management actions available from the browse view.
+
+### Edit schema properties {#edit-schema-properties}
+
+PLACEHOLDER TEXT
+
+### Delete schema {#delete-schema}
+
+PLACEHOLDER TEXT
+
+### Apply data governance labels {#apply-data-governance-labels}
+
+PLACEHOLDER TEXT
+
+### Manage tags {#manage-tags}
+
+PLACEHOLDER TEXT
+
+### Move to folder {#move-to-folder}
+
+PLACEHOLDER TEXT
+
+### Add to package {#add-to-package}
+
+PLACEHOLDER TEXT
+
+### Copy JSON structure {#copy-json-structure}
+
+PLACEHOLDER TEXT
+
+### Download sample file {#download-sample-file}
+
+PLACEHOLDER TEXT
+
 ## Schema actions {#more}
 
 Perform various actions on schemas both from the browse view and within the Schema Editor. Browse-level actions help you manage schemas efficiently without opening individual schema details, while Schema Editor actions support schema development workflows.
@@ -180,29 +216,18 @@ Perform various actions on schemas both from the browse view and within the Sche
 
 Access contextual actions for each schema directly from the [!UICONTROL Browse] tab using the ellipsis (…) menu. These actions streamline schema management by eliminating navigation steps. To discover and filter schemas before taking actions, see the [enhanced schema browsing guide](../explore.md#enhanced-schema-browsing-and-organization).
 
-**Edit schema properties**
-Modify basic schema information including display name, description, and tags. Use this to update schema metadata without opening the full Schema Editor. Schema properties changes are immediately visible in the browse table and affect how the schema appears in search results.
+| Action | Description |
+|--------|-------------|
+| [!UICONTROL Edit schema properties] | Modify basic schema information including display name, description, and tags. Use this to update schema metadata without opening the full Schema Editor. For detailed instructions, see [Edit schema properties](#edit-schema-properties). |
+| [!UICONTROL Delete schema] | Remove schemas that are no longer needed from your organization. Delete is only available for schemas that have not been enabled for Real-Time Customer Profile and have no associated datasets. For detailed instructions, see [Delete schema](#delete-schema). |
+| [!UICONTROL Apply data governance labels] | Assign data usage labels to categorize schemas according to privacy policies and compliance requirements. Labels applied at the schema level propagate to all datasets created from that schema. For detailed instructions, see [Apply data governance labels](#apply-data-governance-labels). |
+| [!UICONTROL Manage tags] | Add or remove user-defined tags to organize schemas by project, team, business domain, or custom taxonomies. Tags improve schema discoverability through filtering and search. For detailed instructions, see [Manage tags](#manage-tags). |
+| [!UICONTROL Move to folder] | Organize schemas into folder hierarchies for structured browsing and access control. Moving schemas to folders helps maintain organization-wide schema governance and supports team-based access patterns. For detailed instructions, see [Move to folder](#move-to-folder). |
+| [!UICONTROL Add to package] | Include the schema in a deployment package for promotion across environments or sandboxes. Use this action to manage the schema lifecycle through controlled deployment of changes. For detailed instructions, see [Add to package](#add-to-package). |
+| [!UICONTROL Copy JSON structure] | Copy the complete JSON representation of the schema to your clipboard. Use this for API integrations, documentation, or sharing schema structures with developers. For detailed instructions, see [Copy JSON structure](#copy-json-structure). |
+| [!UICONTROL Download sample file] | Generate and download sample data files that match the schema structure. These files support testing and development workflows by providing correctly formatted example data. For detailed instructions, see [Download sample file](#download-sample-file). |
 
-**Delete schema**
-Remove schemas that are no longer needed from your organization. Delete is only available for schemas that have not been enabled for Real-Time Customer Profile and have no associated datasets. Once deleted, schemas cannot be recovered, so ensure the schema is no longer required before proceeding.
-
-**Apply data governance labels**
-Assign data usage labels to categorize schemas according to privacy policies and compliance requirements. Labels applied at the schema level propagate to all datasets created from that schema. This action opens the data governance labeling interface where you can select appropriate contract, identity, and sensitive data labels.
-
-**Manage tags**
-Add or remove user-defined tags to organize schemas by project, team, business domain, or custom taxonomies. Tags improve schema discoverability through filtering and search. Both categorized tags (created by administrators) and uncategorized tags (created by users) are supported.
-
-**Move to folder**
-Organize schemas into folder hierarchies for structured browsing and access control. Moving schemas to folders helps maintain organization-wide schema governance and supports team-based access patterns. Create new folders directly from this action if needed.
-
-**Add to package**
-Include schemas in deployment packages for promotion across environments or sandboxes. This action supports schema lifecycle management by enabling controlled deployment of schema changes. Packages maintain schema dependencies and ensure consistent deployments.
-
-**Copy JSON structure**
-Copy the complete JSON representation of the schema to your clipboard. Use this for API integrations, documentation, or sharing schema structures with developers. The JSON includes all field definitions, data types, and schema metadata in XDM-compliant format.
-
-**Download sample file**
-Generate and download sample data files that match the schema structure. These files support testing and development workflows by providing correctly formatted example data. Sample files contain placeholder values and should not include production data.
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

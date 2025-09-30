@@ -116,13 +116,17 @@ Edit schema properties, apply data governance labels, delete schemas, and manage
 
 These inline actions accelerate schema-related workflows by reducing navigation steps and enabling batch operations on multiple schemas when needed. For detailed guidance on each inline action, see the [schema actions guide](./resources/schemas.md#more).
 
-### Organize schemas using tags and folders
+### Navigate schemas using tags and folders
 
-The workspace supports both tag-based and folder-based organization systems to accommodate different organizational preferences and use cases. Apply user-defined tags to categorize schemas by project, team, data domain, or any custom taxonomy that suits your organization. Alternatively, organize schemas into folder hierarchies for more structured browsing and access control.
+The workspace supports both [tag-based]() and [folder-based organization]() systems to help you discover and navigate schemas efficiently. Use the tag filtering system to locate schemas categorized by project, team, data domain, or any custom taxonomy applied by your organization. Alternatively, browse folder hierarchies in the left navigation panel for structured schema discovery and access.
 
-![Schemas organized with user-defined tags visible in the schema inventory.](../images/ui/explore/schema-tags.png)
+To filter schemas using tags, select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to open the filter panel. Then, use the **[!UICONTROL Has any tag]** dropdown to choose from your available tags.
 
-![Schemas organized into folders in the left navigation panel of the Schemas workspace.](../images/ui/explore/schema-folders.png)
+![Filter schemas by user-defined tags in the schema inventory to locate specific schemas.](../images/ui/explore/user-defined-tags.png)
+
+To open your folder structure, select the show folders icon (![The show folders icon](/help/images/icons/rail-left.png)). Next, select your chosen folder to see all associated schemas.
+
+![Navigate folder hierarchies in the left navigation panel to browse and locate schemas.](../images/ui/explore/move-to-folder.png)
 
 Both organizational approaches integrate with the filtering system, allowing you to quickly locate schemas based on their assigned tags or folder placement. For detailed guidance on creating and managing tags across Experience Platform, see the [managing unified tags guide](../../../administrative-tags/ui/managing-tags.md).
 
