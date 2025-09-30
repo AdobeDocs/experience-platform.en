@@ -9,7 +9,7 @@ exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
 
 In the Adobe Experience Platform user interface (UI) you can easily view any union schema within your organization and preview the fields, identities, relationships, and contributing schemas for a specific class. This guide provides detailed information on how to view and explore union schemas using the Experience Platform UI.
 
-## Getting started
+## Getting started {#getting-started}
 
 This UI guide requires an understanding of the various [!DNL Experience Platform] services involved with managing Real-Time Customer Profile data. Before reading this guide, or working in the UI, please review the documentation for the following services:
 
@@ -17,7 +17,7 @@ This UI guide requires an understanding of the various [!DNL Experience Platform
 * [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-Time Customer Profile] by bridging identities from disparate data sources as they are ingested into [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 
-## Understanding union schemas
+## Understanding union schemas {#understanding-union-schemas}
 
 >[!CONTEXTUALHELP]
 >id="rtcdp_collaboration_union_schema"
@@ -32,13 +32,13 @@ Schemas can be created for multiple use cases, referencing the same class but co
 
 Working with union schemas requires a deep understanding of XDM schemas. For more information, please begin by reading the [basics of schema composition](../../xdm/schema/composition.md).
 
-## View union schemas
+## View union schemas {#view-union-schemas}
 
 To navigate to union schemas within the Experience Platform UI, select **[!UICONTROL Profiles]** from the left navigation, then select the **[!UICONTROL Union Schema]** tab. The [!UICONTROL Union Schema] tab opens to display the union schema for the currently selected class. 
 
 ![The Union Schema page is displayed, with the Profile and Union Schema tab highlighted.](../images/union-schema/landing.png)
 
-## Select a class
+## Select a class {#select-a-class}
 
 To display the union schema for a specific XDM class, select the class from the **[!UICONTROL Class]** dropdown. Due to the fact that not all classes have union schemas, only classes with union schemas (meaning classes with schemas that have been enabled for Profile) are available in the dropdown. 
 
@@ -46,7 +46,7 @@ After a class has been selected, the schema that is displayed updates to reflect
 
 ![A dropdown containing the union schema's classes are highlighted.](../images/union-schema/class.png)
 
-## Explore union schemas
+## Explore union schemas {#explore-union-schemas}
 
 You can explore the union schema by scrolling up and down to view the complete schema structure and by selecting a right angle bracket (`>`) to expand nested fields.
 
@@ -62,7 +62,7 @@ For more information on datasets, including viewing dataset activity and preview
 
 ![The list of datasets related to the schema are highlighted.](../images/union-schema/datasets.png)
 
-## View contributing schemas
+## View contributing schemas {#view-contributing-schemas}
 
 You can also view which specific schemas are contributing to the union schema by selecting **[!UICONTROL All contributing schemas]** to expand the list of schemas. Depending on the class you have selected and the number of schemas that your organization has created within Experience Platform, this could be a short list containing a single schema or a long list containing many schemas.
 
@@ -72,7 +72,7 @@ Selecting the name of a specific schema highlights the fields within the union s
 
 ![The selected contributing schema is highlighted. The fields that are part of the contributing schema remain in black, while the fields that are not part of the contributing schema are greyed out.](../images/union-schema/select-schema.png)
 
-## View identities
+## View identities {#view-identities}
 
 Through the UI you can view a list of identities that are included in the union schema by selecting **[!UICONTROL Identities]** to expand the list. 
 
@@ -84,7 +84,7 @@ The identity field is highlighted within the union schema and the details of the
 
 ![The selected identity is highlighted. Details about the selected identity are displayed on the right sidebar.](../images/union-schema/select-identity.png)
 
-## View relationships
+## View relationships {#view-relationships}
 
 The union schema UI also enables you to see relationships that have been defined for schemas based on the selected schema class. Defining a relationship is a way of connecting two schemas belonging to different classes in order to gain more complex insights into customer data.
 
