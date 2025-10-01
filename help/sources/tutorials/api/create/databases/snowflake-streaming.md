@@ -28,7 +28,6 @@ For information on how to successfully make calls to Experience Platform APIs, s
 
 Read the [[!DNL Snowflake] overview](../../../../connectors/databases/snowflake-streaming.md#prerequisites) for information on authentication.
 
-
 ## Create a base connection {#create-a-base-connection}
 
 A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
