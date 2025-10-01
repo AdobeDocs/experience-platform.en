@@ -125,16 +125,33 @@ When mapping audiences, Adobe recommends that you use the Experience Platform au
 
 ### Mandatory mappings {#mandatory-mappings}
 
-All target identities described in the [supported identities](#supported-identities) section are mandatory and must be mapped during the audience activation process. This includes:
+All target identities described in the [supported identities](#supported-identities) section must be mapped in the mapping step of the audience activation workflow. This includes:
 
-* **GAID** (Google Advertising ID)
-* **IDFA** (Apple ID for Advertisers) 
-* **ECID** (Experience Cloud ID)
-* **The Trade Desk ID**
-
-Failure to map all required identities prevents you from completing the activation workflow. Each identity serves a specific purpose in the integration, and all are required for the destination to work correctly.
+* [!DNL GAID] (Google Advertising ID)
+* [!DNL IDFA] (Apple ID for Advertisers)
+* [!DNL ECID] (Experience Cloud ID)
+* [!DNL The Trade Desk ID]
 
 ![Screenshot showing the mandatory mappings](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
+
+Mapping all target identities ensures the activation can correctly split and deliver profiles using any identity present. This does not mean that all identities must be present on each profile.
+
+For export to The Trade Desk to succeed, a profile must contain:
+
+* [!DNL ECID], and
+* at least one of: [!DNL GAID], [!DNL IDFA], or [!DNL The Trade Desk ID]
+
+Examples:
+
+* [!DNL ECID] only: not exported
+* [!DNL ECID] + [!DNL The Trade Desk ID]: exported
+* [!DNL ECID] + [!DNL IDFA]: exported
+* [!DNL ECID] + [!DNL GAID]: exported
+* [!DNL IDFA] + [!DNL The Trade Desk ID] (no [!DNL ECID]): not exported
+
+>[!NOTE]
+> 
+>Following the [July 2025 upgrade](/help/release-notes/2025/july-2025.md#destinations) to the destinations service, [!DNL ECID] mapping is enforced. Profiles missing [!DNL ECID] are now dropped as expected, which may surface lower activation counts compared to legacy behavior.
 
 ## Exported data {#exported-data}
 
