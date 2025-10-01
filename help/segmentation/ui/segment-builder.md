@@ -54,7 +54,80 @@ You can see these building blocks in the **[!UICONTROL Fields]** section on the 
 
 The **[!UICONTROL Attributes]** tab allows you to browse [!DNL Profile] attributes belonging to the [!DNL XDM Individual Profile] class. Each folder can be expanded to reveal additional attributes, where each attribute is a tile that can be dragged onto the rule builder canvas in the center of the workspace. The [rule builder canvas](#rule-builder-canvas) is discussed in more detail later in this guide.
 
-![The attributes section of the Segment Builder fields is highlighted.](../images/ui/segment-builder/attributes.png)  
+![The attributes section of the Segment Builder fields is highlighted.](../images/ui/segment-builder/attributes.png)
+
+The attributes you add can be one of the following data types:
+
+| Data type | Common use cases | 
+| ---------  ---------------- |
+| String | Names, email addresses, product categories |
+| Numeric | Age, revenue, product quantities, loyalty scores |
+| Boolean | Preferences, status indicators, user flags |
+| Enum | Predefined lists such as gender or status |
+| Date/Time | Purchase dates, visit times, birthday |
+
+You can use the following operators for the respective data types:
+
++++ String operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Equals | Find an exact match to the specified value | Email **equals** "sample@example.com" |
+| Not equals | Excludes the specified value | Status **does not equal** "Cancelled" |
+| Contains | The text includes the specified value | Product name **contains** "iPhone" |
+| Does not contain | The text does not include the specified value | Description **does not contain** "discontinued" |
+| Starts with | The text begins with the specified value | Customer ID **starts with** "PREM" |
+| Ends with | The text finishes with the specified value | Email **ends with** "@company.com" |
+| Exists | The value exists | Middle name **exists** |
+| Does not exist | The value does not exist | Loyalty status **does not exist** |
+
++++
+
++++ Numeric operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Equals | Find an exact match to the specified value | Age **equals** 25 |
+| Not equals | Excludes the specified value | Order count **does not equal** 0 |
+| Greater than | The number is **larger** than the specified value. This value is **exclusive** of the specified number. | Annual revenue **greater than** 50000 |
+| Greater than or equal | The number is **larger** than the specified value. This value is **inclusive** of the specified number.| Age **greater than or equal** 21 |
+| Less than | The number is **smaller** than the specified value. This value is **exclusive** of the specified number. | Days since purchase **less than** 30 |
+| Less than or equal | The number is **smaller** than the specified value. This value is **inclusive** of the specified number.| Cart value **less than or equal** 100 |
+| Between | The number is **between** the specified values. These values are **inclusive** of the specified numbers. | Age **between** 25 and 45 |
+| Exists | The value exists | Credit score **exists** |
+| Does not exist | The value does not exist | Credit score **does not exist** |
+
++++
+
++++ Boolean operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Equals | The boolean value is set to the specified value (True or False) | Email opt-in **equals True** |
+| Not equals | The boolean value is **not** set to the specified value (True or False) | Mobile app installed **not equals True** |
+
++++
+
++++ Enum operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Equals | The value equals the specified enum values | Gender **equals** Female |
+| Not equals | The value does not equal the specified enum value | Order status **does not equal** Cancelled |
+| Exists | The enum value has been set | Preferred language **exists** |
+| Does not exist | The enum value has not been set | Preferred language **does not exist** |
+
++++
+
++++ Date/Time operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Today | The value occurred today | |
+| Yesterday | The value occurred yesterday | |
+
+
++++
 
 ### Events
 
