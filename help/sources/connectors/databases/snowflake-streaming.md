@@ -2,7 +2,6 @@
 title: Snowflake Streaming Source Connector Overview
 description: Learn how to create a source connection and dataflow to ingest streaming data from your Snowflake instance to Adobe Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
-last-substantial-update: 2023-09-24
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
 ---
 # [!DNL Snowflake] streaming source
@@ -60,13 +59,81 @@ To use key-pair authentication, you must generate a 2048-bit RSA key pair and th
 | `account` | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `orgname-account_name`. Read the guide on [retrieving your [!DNL Snowflake] account identifier](./snowflake.md#retrieve-your-account-identifier) for additional guidance. For more information, refer to the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `username` | The username of your [!DNL Snowflake] account. |
 | `privateKey` | The [!DNL Base64-]encoded private key of your [!DNL Snowflake] account. You can generate either encrypted or unencrypted private keys. If you are using an encrypted private key, then you must also provide a private key passphrase when authenticating against Experience Platform. Read the guide on [retrieving your [!DNL Snowflake] private key](./snowflake.md) for more information.  |
-| `privateKeyPassphrase` | The private key passphrase is an additional layer of security that you must use when authenticating with an encrypted private key. You are not required to provide the passphrase if you are using an unencrypted private key. |
+| `passphrase` | The passphrase is an additional layer of security that you must use when authenticating with an encrypted private key. You are not required to provide the passphrase if you are using an unencrypted private key. |
 | `database` | The [!DNL Snowflake] database that contains the data you want to ingest to Experience Platform. |
 | `warehouse` | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Experience Platform. |
 
 For more information about these values, refer the [[!DNL Snowflake] key-pair authentication guide](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 >[!ENDTABS]
+
+### Retrieve your account identifier {#retrieve-your-account-identifier}
+
+To authenticate your [!DNL Snowflake] instance with Experience Platform, you need to obtain your account identifier from the [!DNL Snowflake] UI dashboard.
+
+Follow these steps to find your account identifier:
+
+* Navigate to your account on the [[!DNL Snowflake] application UI dashboard](https://app.snowflake.com/).
+* In the left navigation, select **[!DNL Accounts]**, followed by **[!DNL Active Accounts]** from the header.
+* Next, select the information icon and then select and copy the domain name of the current URL.
+
+### Retrieve your private key {#retrieve-your-private-key}
+
+If you plan to use key-pair authentication for your [!DNL Snowflake] connection, you need to generate a private key before connecting to Experience Platform.
+
+>[!BEGINTABS]
+
+>[!TAB Create an encrypted private key]
+
+To generate your encrypted [!DNL Snowflake] private key, run the following command on your terminal:
+
+```shell
+openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8
+```
+
+If successful, you should receive your private key in PEM format.
+
+```shell
+-----BEGIN ENCRYPTED PRIVATE KEY-----
+MIIE6T...
+-----END ENCRYPTED PRIVATE KEY-----
+```
+
+>[!TAB Create an unencrypted private key]
+
+To generate your unencrypted [!DNL Snowflake] private key, run the following command on your terminal:
+
+```shell
+openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out rsa_key.p8 -nocrypt
+```
+
+If successful, you should receive your private key in PEM format.
+
+```shell
+-----BEGIN PRIVATE KEY-----
+MIIE6T...
+-----END PRIVATE KEY-----
+```
+
+>[!ENDTABS]
+
+After generating your private key, encode it directly in [!DNL Base64] without making any changes to its format or content. Before encoding, make sure there are no extra spaces or blank lines (including trailing newlines) at the end of the private key.
+
+### Verify configurations
+
+Before you can create a source connection for your [!DNL Snowflake] data, you must also ensure that the following configurations are met:
+
+* The default warehouse assigned to a given user must be the same as the warehouse that you input when authenticating to Experience Platform.
+* The default role assigned to a given user must have access to the same database that you input when authenticating to Experience Platform.
+
+To verify your role and warehouse:
+
+* Select **[!DNL Admin]** on the left navigation and then select **[!DNL Users & Roles]**.
+* Select the appropriate user and then select the ellipses (`...`) on the top-right corner.
+* In the [!DNL Edit user] window that appears, navigate to [!DNL Default Role] to view the role associated with the given user.
+* In the same window, navigate to [!DNL Default Warehouse] to view the warehouse associated with the given user.
+
+Once successfully encoded, you may then used that [!DNL Base64]-encoded private key on Experience Platform to authenticate your [!DNL Snowflake] account.
 
 ### Configure role settings {#configure-role-settings}
 
