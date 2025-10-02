@@ -100,7 +100,7 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 | Feature | Description |
 | ------- | ----------- |
-| Profile viewer enhancements | The September 2025 release includes the following enhancements to the Profile viewer. <ul><li>**Combined view**: Attribute, events, and insights have been combined into a single view.</li><li>**AI-generated insights**: The profile details page now displays AI-generated insights, letting you know details generated from your profile. These insights can include information such as propensity scores and trend analysis.</li><li>**Style update**: The profile details page has been visually refreshed.</li><li>**Browse**: You can now explore your profiles through an interactive card-based carousel with search and customization.</li></ul> |
+| [!BADGE Alpha]{type=Informative} This feature is currently in Alpha. Profile viewer enhancements | The September 2025 release includes the following enhancements to the Profile viewer. <ul><li>**Combined view**: Attribute, events, and insights have been combined into a single view.</li><li>**AI-generated insights**: The profile details page now displays AI-generated insights, letting you know details generated from your profile. These insights can include information such as propensity scores and trend analysis.</li><li>**Style update**: The profile details page has been visually refreshed.</li><li>**Browse**: You can now explore your profiles through an interactive card-based carousel with search and customization.</li></ul> |
 
 For more information, read the [Real-Time Customer Profile overview](../../profile/home.md).
 
