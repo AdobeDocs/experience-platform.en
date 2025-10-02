@@ -2,13 +2,14 @@
 title: Snowflake Streaming connection
 description: Export data to your Snowflake account using private listings.
 badgeBeta: label="Beta" type="Informative"
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 ---
 # Snowflake Streaming connection {#snowflake-destination}
 
 >[!IMPORTANT]
 >
->This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative.
+>This destination connector is in beta and only available to Real-Time CDP Ultimate customers. The functionality and documentation is subject to change.
 
 ## Overview {#overview}
 
