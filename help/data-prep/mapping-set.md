@@ -77,6 +77,10 @@ The following JSON is an example of a typical mapping set:
 
 In a mapping, the `source` can be a field, expression, or a static value. Based on the source type given, the value can be extracted in various ways.
 
+>[!TIP]
+>
+>Wait up to 10 minutes after saving your mappings before starting data ingestion to ensure they are fully saved.
+
 ### Field in columnar data
 
 When mapping a field in columnar data, such as a CSV file, use the `ATTRIBUTE` source type. If the field contains `.` within its name, use `\` to escape the value. An example of this mapping can be found below:

@@ -1,7 +1,6 @@
 ---
 title: Capillary Streaming Events Overview
 description: Learn how to stream data from Capillary to Experience Platform.
-last-substantial-update: 2025-09-23
 badge: Beta
 exl-id: 3b8eb2f6-3b4a-4b91-89d4-b6d9027c6ab4
 ---

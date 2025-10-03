@@ -68,6 +68,10 @@ Identity Service provides the following operations to achieve its mission:
 
 ## How Identity Service links identities
 
+>[!IMPORTANT]
+>
+>Identity Service is case-sensitive. For example, **abc<span>@gmail.com** and **ABC<span>@GMAIL.COM** would be treated as two separate Email identities.
+
 A link between two identities is established when the identity namespace and the identity values match.
 
 A typical login event **sends two identities** into Experience Platform:

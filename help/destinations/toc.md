@@ -86,7 +86,6 @@ role: Admin,User
         * [Facebook Pixel extension](./catalog/advertising/facebook-pixel.md)
         * [Flashtalking OneTag extension](./catalog/advertising/flashtalking.md)
         * [Google Ads connection](./catalog/advertising/google-ads-destination.md)
-        * [Google Ads extension](./catalog/advertising/google-ads-extension.md)
         * [Google Ad Manager connection](./catalog/advertising/google-ad-manager.md)
         * [(Beta) Google Ad Manager 360 connection](./catalog/advertising/google-ad-manager-360-connection.md)
         * [Google Customer Match connection](./catalog/advertising/google-customer-match.md)
