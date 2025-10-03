@@ -30,6 +30,8 @@ XDM places the following restrictions on the use of this data type:
 * Map types MUST include an `additionalProperties.type` field that describes the values that may be placed within the map, either `string` or `integer`.
 * Multi-entity segmentation can only be defined based on the map keys and not the values.     
 * Maps are not supported for account audiences.
+* Maps defined in custom XDM objects are limited to a single level. Nested maps cannot be created. This restriction does not apply to maps defined in standard XDM objects.
+* Arrays of maps are not supported. Each map must be defined as a standalone field.
 
 Ensure that you are only using map-type fields when absolutely necessary, as they carry the following performance drawbacks:
 

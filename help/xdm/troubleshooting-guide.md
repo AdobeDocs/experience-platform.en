@@ -57,11 +57,13 @@ For more information on field types, see the document on [XDM field type constra
 
 XDM places the following restrictions on the use of this data type:
 
-- Map types MUST be of type object.
-- Map types MUST NOT have properties defined (in other words, they define "empty" objects).
-- Map types MUST include an additionalProperties.type field that describes the values that may be placed within the map, either string or integer.
-- Multi-entity segmentation can only be defined based on the map keys and not the values.
-- Maps are not supported for account audiences.
+* Map types MUST be of type `object`.
+* Map types MUST NOT have properties defined (in other words, they define "empty" objects).
+* Map types MUST include an `additionalProperties.type` field that describes the values that may be placed within the map, either `string` or `integer`.
+* Multi-entity segmentation can only be defined based on the map keys and not the values.     
+* Maps are not supported for account audiences.
+* Maps defined in custom XDM objects are limited to a single level. Nested maps cannot be created. This restriction does not apply to maps defined in standard XDM objects.
+* Arrays of maps are not supported. Each map must be defined as a standalone field.
 
 See the [usage restrictions for map objects](./ui/fields/map.md#restrictions) for more details.
 
