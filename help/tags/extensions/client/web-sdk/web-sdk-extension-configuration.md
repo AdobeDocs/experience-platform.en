@@ -54,7 +54,8 @@ To create a custom Web SDK build by using the Web SDK tag extension, follow the 
     * **[!UICONTROL Media analytics bridge]**: This component enables Edge Network Streaming Media using the media analytics interface. Disabling this component disables the following elements:
       * [Get Media Analytics Tracker](action-types.md#get-media-analytics-tracker) action type
     * **[!UICONTROL Personalization]**: This component enables the Adobe Target and Adobe Journey Optimizer integrations. Disabling this component disables the following elements:
-      * [Apply propositions action](action-types.md) type
+      * [Apply propositions](action-types.md#apply-propositions)action type
+    * **[!UICONTROL Push notifications]**: This component enables web push notifications for Adobe Journey Optimizer.
     * **[!UICONTROL Rules engine]**: This component enables the Adobe Journey Optimizer on-device decisioning. Disabling this component disables the following elements:
       * [Evaluate rulesets](action-types.md#evaluate-rulesets) action type
       * [Subscribe ruleset items](event-types.md#subscribe-ruleset-items) event type
