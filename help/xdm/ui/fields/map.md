@@ -7,7 +7,7 @@ exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
 
 Adobe Experience Platform allows you to fully customize the structure of your custom Experience Data Model (XDM) classes, schema field groups, and data types. 
 
-You can also define map fields in the Schema Editor to model flexible and dynamic data structures or store a collection of key-value pairs.
+You can also define map fields in the Schema Editor to store a collection of key-value pairs with flexible, dynamic keys.
 
 When defining a new field in the Experience Platform user interface (UI), use the **[!UICONTROL Type]** dropdown and select "**[!UICONTROL Map]**" from the list.
 
