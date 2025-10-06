@@ -42,7 +42,7 @@ Before you can create an external audience within Experience Platform, you'll ne
 
 For this example, you should use a CSV file. Ensure your CSV file contains **at least** one column with an identity value such as an ECID, email ID, or CRM ID. Additionally, make sure contains all the enrichment attributes you'll need for segmentation and activation.
 
-You'l also need to make sure that the file conforms to your Experience Platform schema's requirements. For more information on creating a schema, read either the [tutorial on creating a schema using the API](/help/xdm/tutorials/create-schema-api.md) or the [tutorial on creating a schema using the UI](/help/xdm/tutorials/create-schema-ui.md).
+You'll also need to make sure that the file conforms to your Experience Platform schema's requirements. For more information on creating a schema, read either the [tutorial on creating a schema using the API](/help/xdm/tutorials/create-schema-api.md) or the [tutorial on creating a schema using the UI](/help/xdm/tutorials/create-schema-ui.md).
 
 After you've confirmed your CSV file contains all the information you need and conforms to the schema, you'll need to upload the CSV file to your cloud storage provider so you can use sources to ingest the data into Experience Platform. For more information on using a cloud storage source, read either the [tutorial on exploring cloud storage options using the API](/help/sources/tutorials/api/explore/cloud-storage.md) or the [sources overview](/help/sources/home.md#cloud-storage).
 
