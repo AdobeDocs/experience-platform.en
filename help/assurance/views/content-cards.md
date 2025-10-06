@@ -1,7 +1,6 @@
 ---
 title: Content Cards View
 description: This guide details information about the Content Cards view in Adobe Experience Platform Assurance.
-exl-id: ?
 ---
 # Content Cards view in Assurance
 
@@ -54,54 +53,43 @@ The **[!UICONTROL Interactions]** tab summarizes each card’s lifecycle as a se
 
 ### Analyze Rules Tab
 
-The **[!UICONTROL Analyze]** tab shows an events table with up to three rules columns—**[!UICONTROL Display]**, **[!UICONTROL Dismiss]**, and [**!UICONTROL Disqualify]**—based on the card’s rules. If the card defines only one rule, only that column appears. Each row represents a session event, and each column indicates whether the card’s rule matched for that outcome. You can sort/filter to focus on events that meet (or nearly meet) the rule.
+The **[!UICONTROL Analyze]** tab shows an events table with up to three rules columns—**[!UICONTROL Display]**, **[!UICONTROL Dismiss]**, and [**!UICONTROL Disqualify]**—based on the card’s rules. If the card defines only one rule, only that column appears. 
+
+Each row represents a session event, and each column indicates whether the card’s rule matched for that event's conditions. A 0% score means no conditions matched; 100% is a full match (the rule would fire). 
+
+If the event matches a condition, it will show a green checkmark. If the event does not match, it will show a red icon.
 
 ![Rules](./images/content-cards/rules-tab.png)
 
-The example shows three different conditions for the rule. If you select an event (from an events list, the Analyze tab, or in the timeline), that event will be evaluated against these rules. If the event matches a condition, it will show a green checkmark:
+Use the **[!UICONTROL Match Threshold]** slider to filter events by minimum match percentage.
 
-![Rule Match](./images/in-app-messaging/rule-match.png)
+![Match Threshold](./images/content-cards/match-threshold.png)
 
-If the event does not match, it will show a red icon:
+When you select an event, a details panel opens on the right with an accordion listing the three rules: **[!UICONTROL Display]**, **[!UICONTROL Dismiss]**, and **[!UICONTROL Disqualify]**. 
 
-![Rule Mismatch](./images/in-app-messaging/rule-mismatch.png)
+![Rules Panel](./images/content-cards/rules-panel.png)
 
-If all three conditions match the current event, the message will be displayed.
+Expand any section to see the rule’s conditions, which conditions matched, and the calculated match percentage for that outcome.
 
-### Analyze Tab
+![Rules Panel](./images/content-cards/expanded-accordion.png)
 
-The **[!UICONTROL Analyze]** tab provides additional insights into the rules. Here, we filter every event in the session based on how close our message rule matches the event.
+## Requests
 
-![Analyze](./images/in-app-messaging/analyze.png)
+The **[!UICONTROL Requests]** tab focuses on Adobe Journey Optimizer (AJO) propositions for Content Cards—proposition fetches and related interaction/notification calls. 
 
-In the example in the **[!UICONTROL Rules Tab]** section, there are three conditions in the rule. This tab shows what percentage of the rule each event matches. The majority of events match at 33% (one of three conditions) and the rest match at 100%.
+![Requests](./images/content-cards/requests-tab.png)
 
-As a result, you can find events that are close to matching but not fully matching the rule.
+Use the **[!UICONTROL View Card]** button to go back to the info tab of a specific content card.
 
-![Threshold](./images/in-app-messaging/threshold.png)
+## Event List
+The **[!UICONTROL Event List]** tab shows session events relevant to Content Cards, including AJO proposition requests/responses, card lifecycle events, and interaction tracking. You can search, filter, sort, and customize columns, as well as export results. 
 
-The **[!UICONTROL Match Threshold]** slider lets you filter which events should be displayed. For example, this could be set to 50% - 90% to get a list of events that match exact two of the three conditions.
+Selecting an event opens a right-side details panel with the raw payload and key attributes; you can also flag events for follow‑up. This view is useful for correlating requests, rule outcomes, and interactions across the session.
+
+![Event List](./images/content-cards/event-list.png)
 
 ## Validation
 
-The **[!UICONTROL Validation]** tab runs validations against your current session, checking to see if the app has been configured for In-App Messaging correctly:
+The **[!UICONTROL Validation]** tab runs validations against your current session, checking to see if the app has been configured for Messaging correctly:
 
-![Validation](./images/in-app-messaging/validation.png)
-
-If any errors were found, details on how to fix those errors will be provided.
-
-## Event List
-
-![Validation](./images/in-app-messaging/event-list.png)
-
-The **[!UICONTROL Event List]** tab provides a quick look at all the events in the Assurance session that are related to In-App Messaging. Some of the events you may see here are:
-
-* Requests and responses to retrieve messages
-* Display message events
-* Interaction tracking events
-
-In this view, you can use many of the standard event list features including applying searches, applying filters, adding or removing columns, and exporting data.
-
-Select an event to view the raw details of the event in the right panel.
-
-From the right details panel, the selected event can be flagged, which is helpful to mark something that should be reviewed by another person.
+![Validation](./images/content-cards/validation.png)
