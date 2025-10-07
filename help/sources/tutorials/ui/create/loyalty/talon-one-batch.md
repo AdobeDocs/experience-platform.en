@@ -42,4 +42,12 @@ To use an existing account, select **[!UICONTROL Existing account]** and select 
 
 Next, provide values for your **applicationId** and **sessionType**. During this step, you can use the preview functionalities to inspect the structure of your data. When finished, select **[!UICONTROL Next]** to proceed.
 
+<<<<<<< Updated upstream
 ##
+=======
+>[!BEGINTABS]
+
+>[!TAB ]
+
+>[!ENDTABS]
+>>>>>>> Stashed changes
