@@ -65,7 +65,7 @@ If your dataset is enabled for Real-Time Customer Profile, then during this step
 
 Once your dataset is configured, you must then provide details on your dataflow, including a name, an optional description, and alert configurations.
 
-![The dataflow details interface]
+![The dataflow details interface](../../../../images/tutorials/create/talon-one-streaming/dataflow-details.png)
 
 | Dataflow configurations | Description |
 | --- | --- |
@@ -85,7 +85,7 @@ Use the mapping interface to map your source data to the appropriate schema fiel
 >You can download the [Events and Profile mappings](../../../../images/tutorials/create/capillary/mappings.zip) for [!DNL Capillary] and [import the files to Data Prep](../../../../../data-prep/ui/mapping.md#import-mapping) when you are ready to map your data.
 -->
 
-![The mapping interface for Capillary.]
+![The mapping interface for Talon.One streaming.](../../../../images/tutorials/create/talon-one-streaming/mapping.png)
 
 ## Review
 
@@ -96,10 +96,10 @@ The *[!UICONTROL Review]* step appears, allowing you to review the details of yo
 
 After confirming the details are correct, select **[!UICONTROL Finish]**.
 
-![The review step in the sources workflow.]
+![The review step in the sources workflow.](../../../../images/tutorials/create/talon-one-streaming/review.png)
 
 ## Retrieve the streaming endpoint URL
 
 With the connection created, the sources detail page appears. This page shows details of your newly created connection, including previously run dataflows, ID, and streaming endpoint URL.
 
-![The streaming endpoint URL.]
+![The streaming endpoint URL.](../../../../images/tutorials/create/talon-one-streaming/streaming-endpoint.png)
