@@ -35,7 +35,8 @@ If the card does not include rules, you’ll see two tabs: **[!UICONTROL Info]**
 ![Tabs No Rules](./images/content-cards/tabs-no-rules.png)
 
 ### Info Tab
-The **[!UICONTROL Info]** tab shows **[!UICONTROL Card Properties]** section at the top, including badges for the **[!UICONTROL Current State]** (trigger, display, dimiss, disqualify) plus meta details like **[!UICONTROL Template]** (Small Image, Large Image, or Image Only), **[!UICONTROL Surface]**, and any custom key–value pairs.
+
+The **[!UICONTROL Info]** tab shows **[!UICONTROL Card Properties]** section at the top, including badges for the **[!UICONTROL Current State]** (trigger, display, dismiss, disqualify) plus meta details like **[!UICONTROL Template]** (Small Image, Large Image, or Image Only), **[!UICONTROL Surface]**, and any custom key–value pairs.
 
 ![Card Properties](./images/content-cards/card-properties.png)
 
@@ -53,7 +54,7 @@ The **[!UICONTROL Interactions]** tab summarizes each card’s lifecycle as a se
 
 ### Analyze Rules Tab
 
-The **[!UICONTROL Analyze]** tab shows an events table with up to three rules columns—**[!UICONTROL Display]**, **[!UICONTROL Dismiss]**, and [**!UICONTROL Disqualify]**—based on the card’s rules. If the card defines only one rule, only that column appears. 
+The **[!UICONTROL Analyze]** tab shows an events table with up to three rules columns—**[!UICONTROL Display]**, **[!UICONTROL Dismiss]**, and **[!UICONTROL Disqualify]**—based on the card’s rules. If the card defines only one rule, only that column appears. 
 
 Each row represents a session event, and each column indicates whether the card’s rule matched for that event's conditions. A 0% score means no conditions matched; 100% is a full match (the rule would fire). 
 
@@ -81,7 +82,9 @@ The **[!UICONTROL Requests]** tab focuses on Adobe Journey Optimizer (AJO) propo
 
 Use the **[!UICONTROL View Card]** button to go back to the info tab of a specific content card.
 
+ 
 ## Event List
+
 The **[!UICONTROL Event List]** tab shows session events relevant to Content Cards, including AJO proposition requests/responses, card lifecycle events, and interaction tracking. You can search, filter, sort, and customize columns, as well as export results. 
 
 Selecting an event opens a right-side details panel with the raw payload and key attributes; you can also flag events for follow‑up. This view is useful for correlating requests, rule outcomes, and interactions across the session.
