@@ -7,7 +7,7 @@ exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
 
 Adobe Experience Platform allows you to fully customize the structure of your custom Experience Data Model (XDM) classes, schema field groups, and data types. 
 
-You can also define map fields in the Schema Editor to model flexible and dynamic data structures or store a collection of key-value pairs.
+You can also define map fields in the Schema Editor to store a collection of key-value pairs with flexible, dynamic keys.
 
 When defining a new field in the Experience Platform user interface (UI), use the **[!UICONTROL Type]** dropdown and select "**[!UICONTROL Map]**" from the list.
 
@@ -30,6 +30,8 @@ XDM places the following restrictions on the use of this data type:
 * Map types MUST include an `additionalProperties.type` field that describes the values that may be placed within the map, either `string` or `integer`.
 * Multi-entity segmentation can only be defined based on the map keys and not the values.     
 * Maps are not supported for account audiences.
+* Maps defined in custom XDM objects are limited to a single level. Nested maps cannot be created. This restriction does not apply to maps defined in standard XDM objects.
+* Arrays of maps are not supported.
 
 Ensure that you are only using map-type fields when absolutely necessary, as they carry the following performance drawbacks:
 
