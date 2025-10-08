@@ -14,6 +14,7 @@ exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 >   - This permission lets you **view** the capacity home.
 >- **Manage Sandboxes**
 >   - This permission lets you **edit** your capacity allocations.
+>   - Additionally, you **must** be assigned access to all the sandboxes you want to edit the capacity allocations for.
 >
 >More information about permissions within Experience Platform can be found in the [access control overview](/help/access-control/home.md#permissions)
 >
