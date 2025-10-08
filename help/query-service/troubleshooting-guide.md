@@ -632,7 +632,7 @@ No. Data Distiller enforces TLS on port 80 and rejects any plaintext HTTP reques
 ### Are there any risks or limitations when using port 80 with Query Service or Data Distiller?
 
 +++Answer
-Yes. TLS is enforced on port 80, and unencrypted connections are not supported. Some organizations block outbound traffic on port 80 by policy; if this applies to your network, use port 5432 instead. Both ports provide the same level of security because TLS is required in all cases.
+Yes. TLS is enforced on port 80, and unencrypted connections are not supported. Some organizations block outbound traffic on port 80 due to policy restrictions. If this applies to your network, use port 5432 instead. Both ports provide the same level of security because TLS is required in all cases.
 +++
 
 ## Data Distiller {#data-distiller}
