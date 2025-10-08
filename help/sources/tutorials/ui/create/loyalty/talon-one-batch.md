@@ -30,13 +30,19 @@ To ingest data from [!DNL Talon.One], select the **[!UICONTROL Talon.One Batch S
 >
 >Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account is created, this option changes to **[!UICONTROL Add data]**.
 
+![The sources catalog with the Talon.One batch source connector card selected.]
+
 ### Create a new account
 
 To create a new account for your [!DNL Talon.One] source, select **[!UICONTROL New account]** and provide a name and an optional description for your account. Next, provide your [!DNL Talon.One] domain and your [!UICONTROL Talon One Management API Key]. When finished, select **[!UICONTROL Connect to source]** and allow for a few moments for your connection to establish.
 
+![The create new account step of the sources workflow.]
+
 ### Use an existing account
 
 To use an existing account, select **[!UICONTROL Existing account]** and select the [!DNL Talon.One] account that you want to use from the accounts interface.
+
+![The use an existing account step of the sources workflow.]
 
 ## Select data
 
@@ -91,6 +97,8 @@ Once your dataset is configured, you must then provide details on your dataflow,
 
 With your dataset and dataflow details configured, you can now proceed to map your source data fields to their appropriate target XDM fields. Use the mapping interface to map your source data to the appropriate schema fields before ingesting data to Experience Platform. For more information, read the [mapping guide in the UI](../../../../../data-prep/ui/mapping.md).
 
+![The mapping interface of the sources workflow.]
+
 ## Review
 
 The *[!UICONTROL Review]* step appears, allowing you to review the details of your dataflow before it is created. Details are grouped within the following categories:
@@ -99,3 +107,5 @@ The *[!UICONTROL Review]* step appears, allowing you to review the details of yo
 * **[!UICONTROL Assign dataset and map fields]**: Shows the target dataset and the schema that the dataset adheres to.
 
 After confirming the details are correct, select **[!UICONTROL Finish]**.
+
+![The review step of the sources workflow.]
