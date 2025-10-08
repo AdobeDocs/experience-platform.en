@@ -576,7 +576,31 @@ Yes. Data-in-transit is always HTTPS compliant. The currently supported version 
 ### Does a connection made on port 80 still use https?
 
 +++Answer
-Yes, a connection made on port 80 still uses SSL. You can also use port 5432. 
+Yes. Connections on port 80 are TLS-encrypted and TLS is enforced by the service. Plain HTTP is not accepted. Port 80 support exists to meet certain customer network policies; if your organization blocks port 80, use port 5432. Both ports require TLS and provide the same security posture.
++++
+
+### Does Adobe's Query Service expose data over unencrypted HTTP (port 80)?
+
++++Answer
+No. Connections on port 80 require TLS and plaintext HTTP is rejected server-side. Port 5432 is also supported and is TLS-encrypted.
++++
+
+### Is the use of port 80 for Query Service and Data Distiller a legacy configuration?
+
++++Answer
+No. Port 80 with mandatory TLS is a supported configuration driven by specific customer network requirements. It is not a legacy or insecure mode. If your environment does not allow outbound 80, use port 5432; both ports enforce TLS.
++++
+
+### Are there any risks or limitations when using port 80 with Query Service or Data Distiller?
+
++++Answer
+TLS is enforced on port 80; there is no unencrypted option. Some organizations block outbound 80 by policy—if so, use port 5432. Security posture is equivalent because TLS is required on both ports.
++++
+
+### Is port 80 unencrypted when used with Data Distiller?
+
++++Answer
+No. Data Distiller requires TLS on port 80 and rejects plaintext HTTP. Port 5432 is also supported and TLS-encrypted.
 +++
 
 ### Can I control access to specific datasets and columns for a particular connection? How is this configured?
