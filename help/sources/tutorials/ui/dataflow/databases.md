@@ -82,6 +82,16 @@ The [!UICONTROL Mapping] step appears, providing you with an interface to map th
 
 Experience Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../data-prep/ui/mapping.md).
 
+>[!NOTE]
+>
+>When mapping to model-based schemas, ensure your source data includes the required fields, such as a primary key and a version identifier, or a timestamp identifier for time-series schemas, .
+
+Control columns such as `_change_request_type`, used for change data capture, are read during ingestion but are not stored in the target schema.
+
+Model-based schemas also support relationships between datasets using primary and foreign key mappings.
+
+For more information, see the [Data Mirror overview](../../../../xdm/data-mirror/overview.md) and the [model-based schemas technical reference](../../../../xdm/schema/model-based.md).
+
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
 ![mapping](../../../images/tutorials/dataflow/table-based/mapping.png)
@@ -117,7 +127,7 @@ See the table below for more information on scheduling configurations.
 The **[!UICONTROL Review]** step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
 
 * **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
-* **[!UICONTROL Assign dataset & map fields]**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
+* **[!UICONTROL Assign dataset & map fields]**: Displays the dataset that the source data will be ingested into, along with the associated schema. If you're using a model-based schema, verify that required fields, such as the primary key and version identifier, are correctly mapped. Also, ensure that any change data capture control columns are properly configured. Datasets using model-based schemas support multiple data models and enable [change data capture workflows](../../api/change-data-capture.md).
 * **[!UICONTROL Scheduling]**: Shows the active period, frequency, and interval of the ingestion schedule.
 
 Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.

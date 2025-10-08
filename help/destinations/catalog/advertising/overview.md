@@ -53,7 +53,6 @@ To understand the difference between connections and extensions, see [Connection
 * [DoubleClick Floodlight extension](doubleclick-floodlight.md)
 * [Facebook Pixel extension](facebook-pixel.md)
 * [Flashtalking OneTag extension](flashtalking.md)
-* [Google Ads extension](google-ads-extension.md)
 * [Google gtag extension](gtag-advertising.md)
 * [LinkedIn Insight Tag extension](linkedin.md)
 * [Pinterest Conversion Tracking extension](pinterest-extension.md)

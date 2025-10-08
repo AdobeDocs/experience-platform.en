@@ -24,7 +24,6 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Catalog Service](#catalog-service)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [Real-Time Customer Profile](#profile)
 - [Sandboxes](#sandboxes)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
@@ -92,7 +91,6 @@ For more information about Catalog Service, read the the [Catalog Service overvi
 | Destination | Description |
 | --- | --- |
 | [[!DNL Acxiom Real ID Audience Connection]](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) destination  | Use the [!DNL Acxiom Real ID Audience Connection] destination to enhance audiences with [!DNL Acxiom's] [Real ID](https://www.acxiom.com/real-id/real-id/) technology and activate audiences to multiple platforms, such as [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], and more. |
-| Enhanced [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) destination  | The enhanced [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) destination is an upgraded version of the existing [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) connector. This new connector brings profile sync capabilities in addition to the existing audience sync capabilities from the legacy connector, providing a tighter integration with [!DNL Marketo Engage]. <br> The [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) connector will be deprecated in **March 2026**. To ensure a smooth transition to the new **[[!UICONTROL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md)** destination, review the following key points and required actions: <ul><li>All users of the existing **[!UICONTROL (Legacy) (V2) Marketo Engage]** must migrate to the new **[!UICONTROL Marketo Engage]** destination by March 2026.</li><li> **Existing dataflows will not be migrated automatically.** You must [set up a new connection](../../destinations/ui/connect-destination.md) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there.</li></ul>|
 
 **Updated destinations**
 
@@ -100,6 +98,7 @@ For more information about Catalog Service, read the the [Catalog Service overvi
 | --- | --- |
 | [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) internal upgrade | Starting August 11, 2025, for a short period of time, you may have seen two **[!DNL Microsoft Bing]** cards side-by-side in the destinations catalog. This is due to an internal upgrade to the destinations service. The existing **[!DNL Microsoft Bing]** destination connector has been renamed to **[!UICONTROL (Deprecated) Microsoft Bing]** and a new card with the name **[!UICONTROL Microsoft Bing]** is now available to you. <br> The upgrade has been completed and the deprecated card has been removed from the destination catalog. Use the **[!UICONTROL Microsoft Bing]** connection in the catalog for new activation data flows. If you had any active dataflows to the **[!UICONTROL (Deprecated) Microsoft Bing]** destination, they will be updated automatically, so no action is required from you. <br><br>If you are creating dataflows through the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), you must update your [!DNL flow spec ID] and [!DNL connection spec ID] to the following values:<ul><li>Flow spec ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Connection spec ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Following this upgrade, you may experience a **drop in the number of activated profiles** in your dataflows to [!DNL Microsoft Bing]. This drop is caused by the introduction of the **ECID mapping requirement** for all activations to this destination platform.|
 | Authentication expiration details for [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) and [LinkedIn Matched Audiences](../../destinations/catalog/social/linkedin-b2b.md) destinations | Authentication expiration information for [!DNL LinkedIn] destinations is now visible directly in the Experience Platform interface, so you can see when your authentication will expire and renew it before it causes any disruptions to your dataflows. You can monitor your token expiration dates from the **[!UICONTROL Account expiration date]** column in either the **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** or the **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)** tabs.|
+| [LinkedIn Matched Audiences](../../destinations/catalog/social/linkedin-b2b.md) [!DNL IDFA] identity support removal |Starting with September 2025, you can no longer map [!DNL IDFA] as a target identity, since [!DNL IDFA] is no longer supported by the [!DNL LinkedIn Matched Audiences] destination. See the [!DNL LinkedIn Matched Audiences] integration [documentation](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) for more details. This change is due to LinkedIn's requirements, and is not related to any Experience Platform destination service upgrades. |
 
 **New or updated functionality**
 
@@ -119,6 +118,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 For more information, read the [XDM overview](../../xdm/home.md).
 
+<!--
 ## Real-Time Customer Profile {#profile}
 
 Real-Time Customer Profile provides a unified, actionable view of each customer by consolidating data from all channels into a single profile.
@@ -130,6 +130,8 @@ Real-Time Customer Profile provides a unified, actionable view of each customer 
 | Enhanced lookup functionality in the Entities API | The Entities API now supports the following: <ul><li>Person (Profile)</li><li>Experience Events</li><li>Account</li><li>Opportunity</li></ul> This update simplifies API usage and helps ensure optimal performance and reliability. If you previously used lookups for other entity types—including join tables and custom Multi-Entity types—now is a great opportunity to review your API usage and take advantage of the improved experience. For more information, read the [Real-Time CDB B2B Edition architecture upgrade guide](../../rtcdp/b2b-architecture-upgrade.md). |
 
 For more information on Real-Time Customer Profile, read the [Profile overview](../../profile/home.md).
+
+-->
 
 ## Sandboxes {#sandboxes}
 
@@ -152,7 +154,7 @@ For more information on sandboxes, read the [sandboxes overview](../../sandboxes
 
 | Feature | Description |
 | ------- | ----------- |
-| Audience estimates | Audience estimates are now automatically generated within Segment Builder. This value will be updated whenever you modify the audience, and always reflects the latest audience rules. Additionally, the estimate will now be displayed as a **range**, which is based on the confidence interval of the sampling data. |
+| Audience estimates | Audience estimates are now displayed as a **range**, which is based on the confidence interval of the sampling data. To learn more about estimates, read the [Segment Builder guide](/help/segmentation/ui/segment-builder.md#audience-properties). |
 
 For more information, read the [[!DNL Segmentation Service] overview](../../segmentation/home.md).
 
@@ -164,11 +166,16 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} Support for [!DNL Azure Private Links] in the UI | You can now use [!DNL Azure Private Links] for a select group of sources in the UI. Use this feature to create a private endpoint that which your source can connect to. With private endpoints, you can set up connections and dataflows that bypass the public internet, giving you enhanced security and network isolation for your sensitive data. Support for [!DNL Azure Private Links] is available to the following following sources: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> For more information, read the guide on [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md). |
+| General availability of the [!DNL Oracle NetSuite] source | The [!DNL Oracle NetSuite] source is now generally available. You can now connect your [!DNL Oracle NetSuite] account to Experience Platform to ingest activities and entities data for unified analysis and activation. For more information, read the [[!DNL Oracle NetSuite] overview](../../sources/connectors/marketing-automation/oracle-netsuite.md). |
+| General availability of the [!DNL PathFactory] source | The [!DNL PathFactory] source is now generally available. You can connect your [!DNL PathFactory] account to Experience Platform to ingest visitors, sessions, and page views data for unified analysis and activation. For more information, read the [[!DNL PathFactory] overview](../../sources/connectors/marketing-automation/pathfactory.md). |
+| General availability of the [!DNL Stripe] source | The [!DNL Stripe] source is now generally available. You can connect your [!DNL Stripe] account to Experience Platform to ingest payment and transaction data for unified analysis and activation. For more information, read the [[!DNL Stripe] overview](../../sources/connectors/payments/stripe.md). |
 | Enhanced authentication for [!DNL Azure Blob Storage] | You can now use service principal based authentication to connect your [!DNL Azure Blob Storage] source to Experience Platform. Use service principal based authentication for enhanced security, easier credential rotation, and a more granular access control for your account. For more information, read the [[!DNL Azure Blob Storage] overview](../../sources/connectors/cloud-storage/blob.md). |
 
 For more information, read the [sources overview](../../sources/home.md).
 
 <!--
 | [!DNL Marketo] source documentation updates | Get complete visibility into how your [!DNL Marketo] data is transformed when it enters Experience Platform. All field mappings now include detailed explanations of data transformations, so you can understand exactly how your `PersonID` becomes `leadID` and `eventType` becomes `activityType`. |
+| [!BADGE Beta]{type=Informative} Support for [!DNL Azure Private Links] in the UI | You can now use [!DNL Azure Private Links] for a select group of sources in the UI. Use this feature to create a private endpoint that which your source can connect to. With private endpoints, you can set up connections and dataflows that bypass the public internet, giving you enhanced security and network isolation for your sensitive data. Support for [!DNL Azure Private Links] is available to the following following sources: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> For more information, read the guide on [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md). |
+
+| Enhanced [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) destination  | The enhanced [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) destination is an upgraded version of the existing [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) connector. This new connector brings profile sync capabilities in addition to the existing audience sync capabilities from the legacy connector, providing a tighter integration with [!DNL Marketo Engage]. <br> The [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) connector will be deprecated in **March 2026**. To ensure a smooth transition to the new **[[!UICONTROL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md)** destination, review the following key points and required actions: <ul><li>All users of the existing **[!UICONTROL (Legacy) (V2) Marketo Engage]** must migrate to the new **[!UICONTROL Marketo Engage]** destination by March 2026.</li><li> **Existing dataflows will not be migrated automatically.** You must [set up a new connection](../../destinations/ui/connect-destination.md) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there.</li></ul>|
 -->

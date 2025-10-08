@@ -124,7 +124,7 @@ Once the report suites have been mapped, you can use these newly mapped fields w
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="External audiences"
->abstract="Audiences imported through the Audiences tab are now automatically surfaced through Audience Portal. Audiences ingested from Audience Manager, Customer Journey Analytics, Segment Match, and other custom integrations are readily available, without configuring in Segment Builder first. As of September 1, 2025, all audiences are retrieved exclusively through Unified Search, and the previous workflow is no longer supported."
+>abstract="Audiences imported through the Audiences tab are now automatically surfaced through Audience Portal. This includes audiences ingested from Audience Manager, Customer Journey Analytics, Segment Match, and other custom integrations.<br/><br/>By the end of September 2025, audiences will be retrieved exclusively through Unified Search, and the previous workflow will no longer supported. Segment Match remains available only for a small number of designated customers while we transition the service. Access for new Segment Match customers can still be enabled on request before the service is fully retired.<br/><br/>For ongoing data collaboration use cases, Adobe recommends moving to Collaboration, which is the long-term supported solution."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
 
 >[!NOTE]
@@ -400,10 +400,7 @@ The timestamp for qualified profiles indicates the most recent **batch** segment
 
 **[!UICONTROL Estimated Profiles]** indicates an **approximate range** of profiles, based off of the **sample job**. This means the sample data is projected on the larger profile set, resulting in an estimated number that may differ from the actual number of qualified profiles. The estimated profile sample has a 95% confidence interval.
 
-This number is updated in two scenarios:
-
-1. There is a greater than 3% change in customer data or the last sample job is older than three days.
-2. The audience's rules have been modified or removed.
+When you make changes to the audience's rules, you can select the **[!UICONTROL Refresh estimate]** button to see an updated count of estimated profiles. However, this number is still based off of the previous sample job. The sample job is updated when there is a greater than 3% change in customer data or the last sample job is older than three days.
 
 Selecting the information bubble gives the date and time the last sample job was run.
 
