@@ -49,3 +49,53 @@ Next, provide values for your **applicationId** and **sessionType**. During this
 >[!TAB Session type]
 
 >[!ENDTABS]
+
+## Configure dataset and dataflow details
+
+Next, you must provide information regarding your dataset and your dataflow.
+
+### Dataset details
+
+A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Data that is successfully ingested into Experience Platform is persisted within the data lake as datasets. 
+
+During this step, you can either use an existing dataset or create a new dataset.
+
+>[!NOTE]
+>
+>Regardless of whether you use an existing dataset or create a new dataset, you must ensure that your dataset is **enabled for Profile** ingestion.
+
++++Select for steps to enable Profile ingestion, error diagnostics, and partial ingestion.
+
+If your dataset is enabled for Real-Time Customer Profile, then during this step, you can toggle **[!UICONTROL Profile dataset]** to enable your data for Profile-ingestion. You can also use this step to enable **[!UICONTROL Error diagnostics]** and **[!UICONTROL Partial ingestion]**.
+
+* **[!UICONTROL Error diagnostics]**: Select **[!UICONTROL Error diagnostics]** to instruct the source to produce error diagnostics that you can later reference when monitoring your dataset activity and dataflow status.
+* **[!UICONTROL Partial ingestion]**: Partial batch ingestion is the ability to ingest data containing errors, up to a certain configurable threshold. This feature allows you to successfully ingest all of your accurate data into Experience Platform, while all of your incorrect data is batched separately with information on why it is invalid.
+
++++
+
+## Dataflow details
+
+Once your dataset is configured, you must then provide details on your dataflow, including a name, an optional description, and alert configurations.
+
+![The dataflow details interface]
+
+| Dataflow configurations | Description |
+| --- | --- |
+| Dataflow name | The name of the dataflow.  By default, this will use the name of the file that is being imported. |
+| Description | (Optional) A brief description of your dataflow. |
+| Alerts | Experience Platform can produce event-based alerts which users can subscribe to, these options allow a running dataflow to trigger these.  For more information, read the [alerts overview](../../alerts.md) <ul><li>**Sources Dataflow Run Start**: Select this alert to receive a notification when your dataflow run begins.</li><li>**Sources Dataflow Run Success**: Select this alert to receive a notification if your dataflow ends without any errors.</li><li>**Sources Dataflow Run Failure**: Select this alert to receive a notification if your dataflow run ends with any errors.</li></ul> |
+
+{style="table-layout:auto"}
+
+## Mapping
+
+With your dataset and dataflow details configured, you can now proceed to map your source data fields to their appropriate target XDM fields. Use the mapping interface to map your source data to the appropriate schema fields before ingesting data to Experience Platform. For more information, read the [mapping guide in the UI](../../../../../data-prep/ui/mapping.md).
+
+## Review
+
+The *[!UICONTROL Review]* step appears, allowing you to review the details of your dataflow before it is created. Details are grouped within the following categories:
+
+* **[!UICONTROL Connection]**: Shows the account name, source platform, and the source name.
+* **[!UICONTROL Assign dataset and map fields]**: Shows the target dataset and the schema that the dataset adheres to.
+
+After confirming the details are correct, select **[!UICONTROL Finish]**.
