@@ -20,6 +20,10 @@ This tutorial requires a working understanding of the following components of Ex
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
+>[!IMPORTANT]
+>
+>Read the [[!DNL Talon.One] overview](../../../../connectors/loyalty/talon-one.md) to learn about prerequisite steps that you need to complete before connecting your account to Experience Platform.
+
 ## Navigate the sources catalog
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. Select the appropriate category in the *[!UICONTROL Categories]* panel Alternatively, use the search bar to navigate to the specific source that you want to use.
@@ -103,3 +107,7 @@ After confirming the details are correct, select **[!UICONTROL Finish]**.
 With the connection created, the sources detail page appears. This page shows details of your newly created connection, including previously run dataflows, ID, and streaming endpoint URL.
 
 ![The streaming endpoint URL.](../../../../images/tutorials/create/talon-one-streaming/streaming-endpoint.png)
+
+## Monitor your dataflow
+
+Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on ingestion rates, success, and errors. For more information on how to monitor dataflow, see the tutorial on [monitoring accounts and dataflows in the UI](../../monitor-streaming.md)
