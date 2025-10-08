@@ -24,7 +24,7 @@ Use the **[!UICONTROL Theme]** toggle to view the card in light or dark mode.
 
 ![Preview Dark Mode](./images/content-cards/preview-dark.png)
 
-### Available Tabs
+### Available tabs
 
 In the left section, the available tabs depend on the selected card. If the card includes rules, you’ll see three tabs: **[!UICONTROL Info]**, **[!UICONTROL Interactions]**, and **[!UICONTROL Analyze Rules]**. 
 
@@ -34,25 +34,25 @@ If the card does not include rules, you’ll see two tabs: **[!UICONTROL Info]**
 
 ![Tabs No Rules](./images/content-cards/tabs-no-rules.png)
 
-### Info Tab
+### Info tab
 
 The **[!UICONTROL Info]** tab shows **[!UICONTROL Card Properties]** section at the top, including badges for the **[!UICONTROL Current State]** (trigger, display, dismiss, disqualify) plus meta details like **[!UICONTROL Template]** (Small Image, Large Image, or Image Only), **[!UICONTROL Surface]**, and any custom key–value pairs.
 
 ![Card Properties](./images/content-cards/card-properties.png)
 
-Below that, the **[!UICONTROL Campaign Properties]** section  shows information loaded from Adobe Journey Optimizer (AJO). 
+Below that, the **[!UICONTROL Campaign Properties]** section shows information loaded from Adobe Journey Optimizer (AJO). 
 
 You can also select **[!UICONTROL View Campaign]** to open the card in AJO for inspection or editing.
 
 ![Campaign Properties](./images/content-cards/campaign-properties.png)
 
-### Interactions Tab
+### Interactions tab
 
 The **[!UICONTROL Interactions]** tab summarizes each card’s lifecycle as a sequence of badges: it always starts with **[!UICONTROL trigger]**, followed by whichever outcome the rules produced—**[!UICONTROL display]**, **[!UICONTROL dismiss]**, or **[!UICONTROL disqualify]**.
 
 ![Interactions](./images/content-cards/interactions-tab.png)
 
-### Analyze Rules Tab
+### Analyze Rules tab
 
 The **[!UICONTROL Analyze]** tab shows an events table with up to three rules columns—**[!UICONTROL Display]**, **[!UICONTROL Dismiss]**, and **[!UICONTROL Disqualify]**—based on the card’s rules. If the card defines only one rule, only that column appears. 
 
@@ -74,16 +74,15 @@ Expand any section to see the rule’s conditions, which conditions matched, and
 
 ![Rules Panel](./images/content-cards/expanded-accordion.png)
 
-## Requests
+## Requests tab
 
 The **[!UICONTROL Requests]** tab focuses on Adobe Journey Optimizer (AJO) propositions for Content Cards—proposition fetches and related interaction/notification calls. 
 
 ![Requests](./images/content-cards/requests-tab.png)
 
 Use the **[!UICONTROL View Card]** button to go back to the info tab of a specific content card.
-
  
-## Event List
+## Event List tab
 
 The **[!UICONTROL Event List]** tab shows session events relevant to Content Cards, including AJO proposition requests/responses, card lifecycle events, and interaction tracking. You can search, filter, sort, and customize columns, as well as export results. 
 
@@ -91,7 +90,7 @@ Selecting an event opens a right-side details panel with the raw payload and key
 
 ![Event List](./images/content-cards/event-list.png)
 
-## Validation
+## Validation tab
 
 The **[!UICONTROL Validation]** tab runs validations against your current session, checking to see if the app has been configured for Messaging correctly:
 
