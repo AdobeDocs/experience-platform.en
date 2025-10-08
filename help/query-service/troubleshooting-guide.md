@@ -602,7 +602,7 @@ Yes. Although, certain third-party clients, such as DbVisualizer, may require a 
 ### Does a connection made on port 80 still use HTTPS and TLS encryption?
 
 +++Answer
-Yes. Connections on port 80 are protected using TLS encryption, and TLS enforcement is required by the service. Plain HTTP connections are not accepted. Port 80 support exists to accommodate certain customer network policies; if your organization blocks port 80, use port 5432 instead. Both ports require TLS and provide the same security posture.
+Yes. Connections on port 80 are protected using TLS encryption, and TLS enforcement is required by the service. Plain HTTP connections are not accepted. Port 80 support exists to accommodate certain customer network policies. If your organization blocks port 80, use port 5432 instead. Both ports require TLS and provide the same security posture.
 +++
 
 ### Does Adobe's Query Service expose data over unencrypted HTTP (port 80)?
