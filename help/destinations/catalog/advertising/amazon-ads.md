@@ -131,8 +131,8 @@ The [!DNL Amazon Ads] connection supports hashed email address and hashed phone 
 * *NEW starting with the September 2024 release*: Amazon Ads requires you to map a field containing a `countryCode` value in the 2-character ISO format in order to facilitate the identity resolution process (for example: US, GB, MX, CA, and so on). Connections without `countryCode` mappings will result in negative impact to identity match rates.
 
 > To use these fields:
-> - All identity values should be normalized before ingestion refer [normalization Guide](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C).
-> - SHA256 hashing is required either on the client side or by enabling Adobe's transformation setting.
+> - All identity values should be normalized before ingestion. Refer to the [normalization Guide](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C).
+> - SHA256 hashing is required, either on the client side or by enabling Adobe's transformation setting.
 > - Adobe UI provides a checkbox to apply transformation per identity field during connector setup.
 
 You only select a given target field one time in a destination configuration of the [!DNL Amazon Ads] connector.  For example, if you submit business email, you cannot also map personal email in the same destination configuration.
