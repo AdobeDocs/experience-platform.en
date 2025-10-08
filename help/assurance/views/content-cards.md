@@ -78,7 +78,7 @@ Expand any section to see the rule’s conditions, which conditions matched, and
 
 The **[!UICONTROL Requests]** tab shows which Content Cards were requested and on which surface. 
 
-![Requests tab showing AJO proposition fetches and interaction/notification calls](./images/content-cards/requests-tab.png)
+![Requests tab showing Content Card requests](./images/content-cards/requests-tab.png)
 
 Use the **[!UICONTROL View Card]** button to go back to the info tab of a specific content card.
  
