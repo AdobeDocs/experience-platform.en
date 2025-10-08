@@ -1,9 +1,9 @@
 ---
-title: Talon.One Batch
-description:
+title: Ingest Batch Data From Talon.One Into Experience Platform Using The UI
+description: Learn how to ingest batch data from Talon.One into Adobe Experience Platform using the UI. This guide covers setup, data selection, and dataflow configuration.
 badge: Beta
 ---
-# Ingest batch data from [!DNL Talone.One] into Experience Platform using the UI
+# Ingest batch data from [!DNL Talon.One] into Experience Platform using the UI
 
 >[!AVAILABILITY]
 >
@@ -30,31 +30,23 @@ To ingest data from [!DNL Talon.One], select the **[!UICONTROL Talon.One Batch S
 >
 >Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account is created, this option changes to **[!UICONTROL Add data]**.
 
-![The sources catalog with the Talon.One batch source connector card selected.]
+![The sources catalog with the Talon.One batch source connector card selected.](../../../../images/tutorials/create/talon-one-batch/catalog.png)
 
 ### Create a new account
 
 To create a new account for your [!DNL Talon.One] source, select **[!UICONTROL New account]** and provide a name and an optional description for your account. Next, provide your [!DNL Talon.One] domain and your [!UICONTROL Talon One Management API Key]. When finished, select **[!UICONTROL Connect to source]** and allow for a few moments for your connection to establish.
 
-![The create new account step of the sources workflow.]
+![The create new account step of the sources workflow.](../../../../images/tutorials/create/talon-one-batch/new.png)
 
 ### Use an existing account
 
 To use an existing account, select **[!UICONTROL Existing account]** and select the [!DNL Talon.One] account that you want to use from the accounts interface.
 
-![The use an existing account step of the sources workflow.]
-
 ## Select data
 
-Next, provide values for your **applicationId** and **sessionType**. During this step, you can use the preview functionalities to inspect the structure of your data. When finished, select **[!UICONTROL Next]** to proceed.
+Once you have authenticated, provide values for your **applicationId** and **sessionType**. During this step, you can use the preview functionalities to inspect the structure of your data. When finished, select **[!UICONTROL Next]** to proceed.
 
->[!BEGINTABS]
-
->[!TAB Session state]
-
->[!TAB Session type]
-
->[!ENDTABS]
+![The select data and preview steps of the sources workflow.](../../../../images/tutorials/create/talon-one-batch/select-data.png)
 
 ## Configure dataset and dataflow details
 
@@ -83,7 +75,7 @@ If your dataset is enabled for Real-Time Customer Profile, then during this step
 
 Once your dataset is configured, you must then provide details on your dataflow, including a name, an optional description, and alert configurations.
 
-![The dataflow details interface]
+![The dataflow details interface.](../../../../images/tutorials/create/talon-one-batch/dataflow-detail.png)
 
 | Dataflow configurations | Description |
 | --- | --- |
@@ -97,7 +89,30 @@ Once your dataset is configured, you must then provide details on your dataflow,
 
 With your dataset and dataflow details configured, you can now proceed to map your source data fields to their appropriate target XDM fields. Use the mapping interface to map your source data to the appropriate schema fields before ingesting data to Experience Platform. For more information, read the [mapping guide in the UI](../../../../../data-prep/ui/mapping.md).
 
-![The mapping interface of the sources workflow.]
+![The mapping interface of the sources workflow.](../../../../images/tutorials/create/talon-one-batch/mapping.png)
+
+## Schedule your dataflow ingestion
+
+The [!UICONTROL Scheduling] step appears. Use the interface to configure an ingestion schedule to automatically ingest the selected source data using the configured mappings. By default, scheduling is set to `Once`. To adjust your ingestion frequency, select **[!UICONTROL Frequency]** and then select an option from the dropdown menu.
+
+>[!TIP]
+>
+>Interval and backfill are not visible during a one-time ingestion.
+
+If you set your ingestion frequency to `Minute`, `Hour`, `Day`, or `Week`, then you must set an interval to establish a set time frame between every ingestion. For example, an ingestion frequency set to `Day` and  an interval set to `15` means that your dataflow is scheduled to ingest data every 15 days.
+
+During this step, you can also enable **backfill** and define a column for the incremental ingestion of data. Backfill is used to ingest historical data, while the column you define for incremental ingestion allows new data to be differentiated from existing data.
+
+See the table below for more information on scheduling configurations.
+
+| Scheduling configuration | Description |
+| --- | --- |
+| Frequency | Configure frequency to indicate how often the dataflow should run. You can set your frequency to: <ul><li>**Once**: Set your frequency to `once` to create a one-time ingestion. Configurations for interval and backfill are unavailable when creating a one-time ingestion dataflow. By default, the scheduling frequency is set to once.</li><li>**Minute**: Set your frequency to `minute` to schedule your dataflow to ingest data on a per-minute basis.</li><li>**Hour**: Set your frequency to `hour` to schedule your dataflow to ingest data on a per-hour basis.</li><li>**Day**: Set your frequency to `day` to schedule your dataflow to ingest data on a per-day basis.</li><li>**Week**: Set your frequency to `week` to schedule your dataflow to ingest data on a per-week basis.</li></ul> |
+| Interval |  Once you select a frequency, you can then configure the interval setting to establish the time frame between every ingestion. For example, if you set your frequency to day and configure the interval to 15, then your dataflow will run every 15 days. You cannot set the interval to zero. The minimum accepted interval value for each frequency is as follows:<ul><li>**Once**: n/a</li><li>**Minute**: 15</li><li>**Hour**: 1</li><li>**Day**: 1</li><li>**Week**: 1</li></ul> |
+| Start Time | The timestamp for the projected run, presented in UTC time zone. |
+| Backfill | Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to the start time will not be ingested. |
+
+![The schedule configuration step of the sources workflow.](../../../../images/tutorials/create/talon-one-batch/scheduling.png)
 
 ## Review
 
@@ -108,4 +123,4 @@ The *[!UICONTROL Review]* step appears, allowing you to review the details of yo
 
 After confirming the details are correct, select **[!UICONTROL Finish]**.
 
-![The review step of the sources workflow.]
+![The review step of the sources workflow.](../../../../images/tutorials/create/talon-one-batch/review.png)
