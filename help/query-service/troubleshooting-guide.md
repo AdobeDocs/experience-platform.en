@@ -599,40 +599,40 @@ Yes. Although, certain third-party clients, such as DbVisualizer, may require a 
 
 ## TLS, Port Access, and Encryption {#tls-port-questions}
 
-### Does a connection made on port 80 still use HTTPS and TLS encryption? 
+### Does a connection made on port 80 still use HTTPS and TLS encryption?
 
 +++Answer
-Yes. Connections on port 80 are TLS-encrypted and TLS is enforced by the service. Plain HTTP is not accepted. Port 80 support exists to meet certain customer network policies; if your organization blocks port 80, use port 5432. Both ports require TLS and provide the same security posture.
+Yes. Connections on port 80 are protected using TLS encryption, and TLS enforcement is required by the service. Plain HTTP connections are not accepted. Port 80 support exists to accommodate certain customer network policies; if your organization blocks port 80, use port 5432 instead. Both ports require TLS and provide the same security posture.
 +++
 
 ### Does Adobe's Query Service expose data over unencrypted HTTP (port 80)?
 
 +++Answer
-No. Connections on port 80 require TLS and plaintext HTTP is rejected server-side. Port 5432 is also supported and is TLS-encrypted.
+No. Connections on port 80 require TLS, and any plaintext HTTP requests are rejected server-side. Port 5432 is also supported and is TLS encrypted.
 +++
 
 ### Is the use of port 80 for Query Service and Data Distiller a legacy configuration?
 
 +++Answer
-No. Port 80 with mandatory TLS is a supported configuration driven by specific customer network requirements. It is not a legacy or insecure mode. If your environment does not allow outbound 80, use port 5432; both ports enforce TLS.
+No. Port 80 with mandatory TLS is a supported configuration designed for customers with specific network requirements. It is not a legacy or insecure mode. If your environment restricts outbound connections on port 80, use port 5432 instead; both ports enforce TLS.
 +++
 
-### Do we use TLS 1.2 for all connections from Power BI clients to query service?
+### Do we use TLS 1.2 for all connections from Power BI clients to Query Service?
 
 +++Answer
-Yes. Data-in-transit is always HTTPS compliant. The currently supported version is TLS1.2.
+Yes. Data in transit is always protected using HTTPS, and the currently supported version is TLS 1.2. All Power BI connections to Query Service require encrypted transport.
 +++
 
 ### Is port 80 unencrypted when used with Data Distiller?
 
 +++Answer
-No. Data Distiller requires TLS on port 80 and rejects plaintext HTTP. Port 5432 is also supported and TLS-encrypted.
+No. Data Distiller enforces TLS on port 80 and rejects any plaintext HTTP requests. Port 5432 is also supported and is TLS encrypted.
 +++
 
 ### Are there any risks or limitations when using port 80 with Query Service or Data Distiller?
 
 +++Answer
-TLS is enforced on port 80; there is no unencrypted option. Some organizations block outbound 80 by policy—if so, use port 5432. Security posture is equivalent because TLS is required on both ports.
+Yes. TLS is enforced on port 80, and unencrypted connections are not supported. Some organizations block outbound traffic on port 80 by policy; if this applies to your network, use port 5432 instead. Both ports provide the same level of security because TLS is required in all cases.
 +++
 
 ## Data Distiller {#data-distiller}
