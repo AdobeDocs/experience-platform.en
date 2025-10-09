@@ -110,9 +110,9 @@ As the owning organization, you can delete an authorization at any point, regard
 
 When you revoke an authorization, the receiving organization retains certain rights to protect their existing implementations:
 
-- **Continued use**: They can keep using any private version they've already installed, even after you revoke access.
-- **Build protection**: If they installed your private v1.0.0 and you later release a private v1.0.1, they won't see the newer version but can continue building with v1.0.0 without disruption.
-- **Future upgrades**: If you later make your extension public (for example, releasing v2.0.0 publicly), they can upgrade from their private v1.0.0 directly to the new public v2.0.0.
+- **Continued use**: The receiving organization can keep using any private version they've already installed, even after you revoke access.
+- **Build protection**: If the receiving organization installed your private v1.0.0 and you later release a private v1.0.1, they won't see the newer version but can continue building with v1.0.0 without disruption.
+- **Future upgrades**: If you later make your extension public (for example, releasing v2.0.0 publicly), the receiving organization can upgrade from their private v1.0.0 directly to the new public v2.0.0.
 
 >[!IMPORTANT]
 >
