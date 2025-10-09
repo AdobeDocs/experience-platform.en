@@ -105,17 +105,25 @@ For more information about these values, refer to [this Snowflake document](http
 
 To create a new [!DNL Snowflake] account and connect to Experience Platform on AWS, ensure that you are in a VA6 sandbox and then provide the necessary credentials for authentication.
 
+>[!BEGINTABS]
+
+>[!TAB Key-pair authentication]
+
+To connect using key-pairs, select **[!UICONTROL KeyPair Authentication]**, provide your authentication credentials and then select **[!UICONTROL Connect to source]**. For more information on these credentials, read the [[!DNL Snowflake] batch overview](../../../../connectors/databases/snowflake.md#gather-required-credentials).
+
+![The new account creation step for key pair authentication.](../../../../images/tutorials/create/snowflake/key-pair-aws.png)
+
+>[!TAB Basic authentication]
+
+>[!WARNING]
+>
+>Basic authentication (or account key authentication) for the [!DNL Snowflake] source will be deprecated on November 2025. You must move to key-pair based authentication in order to continue using the source and ingesting data from your database to Experience Platform. For more information on the deprecation, read the [[!DNL Snowflake] best practices guide on mitigating the risks of credential compromise](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+
+To connect using a username and password combination, select **[!UICONTROL Basic authentication]**, provide your authentication credentials and then select **[!UICONTROL Connect to source]**. For more information on these credentials, read the [[!DNL Snowflake] batch overview](../../../../connectors/databases/snowflake.md#gather-required-credentials).
+
 ![The new account step in the sources workflow where you can connect Snowflake to Experience Platform on AWS.](../../../../images/tutorials/create/snowflake/aws-auth.png)
 
-| Credential | Description |
-| --- | --- |
-| Host | The host URL that your [!DNL Snowflake] account connects to. |
-| Port | The port number that is used by [!DNL Snowflake] when connecting to a server over the internet. |
-| Username | The username associated with your [!DNL Snowflake] account. | 
-| Password | The password associated with your [!DNL Snowflake] account. |
-| Database | The [!DNL Snowflake] database from where the data will be pulled from. |
-| Schema | The name of the schema associated with your [!DNL Snowflake] database. You must ensure that the user you want to give database access to, also has access to this schema. |
-| Warehouse | The [!DNL Snowflake] warehouse that you are using. |
+>[!ENDTABS]
 
 ### Skip preview of sample data {#skip-preview-of-sample-data}
 

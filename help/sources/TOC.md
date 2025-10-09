@@ -97,6 +97,8 @@ role: Developer
     - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
   - Local system {#local-system}
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
+  - Loyalty {#loyalty}
+    - [Capillary Streaming Events](connectors/loyalty/capillary.md)
   - Marketing automation {#marketing-automation}
     - [Braze Currents](connectors/marketing-automation/braze.md)
     - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
@@ -173,6 +175,8 @@ role: Developer
       - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
+    - Loyalty {#loyalty}
+      - [Capillary Streaming Events](tutorials/api/create/loyalty/capillary.md)
     - Marketing automation {#marketing-automation}
       - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
       - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -305,6 +309,8 @@ role: Developer
       - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
     - Local system {#local-system}
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
+    - Loyalty {#loyalty}
+      - [Capillary Streaming Events](tutorials/ui/create/loyalty/capillary.md)
     - Marketing automation {#marketing-automation}
       - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
       - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
@@ -316,6 +322,7 @@ role: Developer
       - [Oracle NetSuite Activities](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
       - [Oracle NetSuite Entities](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
       - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
+      - [Relay Connector](tutorials/ui/create/marketing-automation/relay-connector.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [Square](tutorials/ui/create/payments/square.md)
@@ -350,7 +357,7 @@ role: Developer
   - [Subscribe to sources alerts](tutorials/ui/alerts.md)
   - [Save a dataflow as a draft](tutorials/ui/draft.md)
   - [Apply access labels to a dataflow](tutorials/ui/labels.md)
-  - [Create an Azure private endpoint](tutorials/ui/private-link.md)
+  - [Create a private endpoint](tutorials/ui/private-link.md)
 - Self-Serve Sources (Batch SDK) {#sdk}
   - [Overview](sources-sdk/overview.md)
   - Configure your connection specification {#config}

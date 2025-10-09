@@ -1,14 +1,9 @@
 ---
 title: Acxiom Data Ingestion
 description: Learn how to ingest [!DNL Acxiom] data to Real-Time Customer Data Platform, enrich first-party profiles, and improve audiences and activate across marketing channels.
-badge: Beta
 exl-id: 3bbbe4e1-5e34-4104-bf39-2c452865b807
 ---
 # [!DNL Acxiom Data Ingestion]
-
->[!NOTE]
->
->The [!DNL Acxiom Prospecting Data Import] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Use the [!DNL Acxiom Data Ingestion] source to ingest [!DNL Acxiom] data into Real-Time Customer Data Platform and enrich first-party profiles. Then, you can use your [!DNL Acxiom]-enriched first-party profiles to improve audiences and activate across marketing channels.
 
@@ -27,9 +22,9 @@ In order to connect your [!DNL Acxiom Data Ingestion] account to Experience Plat
 | [!DNL Amazon S3] secret key | The secret key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team. |
 | Bucket name | This is your bucket where files will be shared. You can retrieve this value from the [!DNL Acxiom] team. |
 
-## IP address allow list
+## IP address allowlist
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+Before you can use source connectors, you must add the required IP addresses for your region to your allowlist. If you do not add these IP addresses, the source connectors may not work correctly or may produce errors. For detailed instructions and the list of IP addresses to allow, read the [IP address allowlist](../../ip-address-allow-list.md) page.
 
 ### Configure permissions on Experience Platform
 

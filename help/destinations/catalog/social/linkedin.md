@@ -22,10 +22,14 @@ A software company organizes a conference and wants to keep in touch with partic
 
 [!DNL LinkedIn Matched Audiences] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
+>[!IMPORTANT]
+>
+>Starting with September 2025, you can no longer map [!DNL IDFA] as a target identity, since [!DNL IDFA] is no longer supported by the [!DNL LinkedIn Matched Audiences] destination. See the [!DNL LinkedIn Matched Audiences] integration [documentation](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) for more details. This change is due to LinkedIn's requirements, and is not related to any Experience Platform destination service upgrades.
+
+
 |Target Identity|Description|Considerations|
 |---|---|---|
 |GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select this target identity when your source identity is an IDFA namespace.|
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed emails, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
 
 {style="table-layout:auto"}
