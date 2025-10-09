@@ -26,7 +26,7 @@ This tutorial requires a working understanding of the following components of Ex
 
 ## Navigate the sources catalog
 
-In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. Select the appropriate category in the *[!UICONTROL Categories]* panel Alternatively, use the search bar to navigate to the specific source that you want to use.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. Select the appropriate category in the *[!UICONTROL Categories]* panel. Alternatively, use the search bar to navigate to the specific source that you want to use.
 
 To ingest data from [!DNL Talon.One], select the **[!UICONTROL Talon.One Batch Source Connector]** source card under *[!UICONTROL Loyalty]* and then select **[!UICONTROL Add data]**.
 
@@ -58,7 +58,7 @@ Next, you must provide information regarding your dataset and your dataflow.
 
 ### Dataset details
 
-A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Data that is successfully ingested into Experience Platform is persisted within the data lake as datasets. 
+A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns/fields) and records (rows). Data that is successfully ingested into Experience Platform is persisted within the data lake as datasets. 
 
 During this step, you can either use an existing dataset or create a new dataset.
 
@@ -68,7 +68,7 @@ During this step, you can either use an existing dataset or create a new dataset
 
 +++Select for steps to enable Profile ingestion, error diagnostics, and partial ingestion.
 
-If your dataset is enabled for Real-Time Customer Profile, then during this step, you can toggle **[!UICONTROL Profile dataset]** to enable your data for Profile-ingestion. You can also use this step to enable **[!UICONTROL Error diagnostics]** and **[!UICONTROL Partial ingestion]**.
+If your dataset is enabled for Real-Time Customer Profile, then during this step, you can toggle **[!UICONTROL Profile dataset]** to enable your data for Profile ingestion. You can also use this step to enable **[!UICONTROL Error diagnostics]** and **[!UICONTROL Partial ingestion]**.
 
 * **[!UICONTROL Error diagnostics]**: Select **[!UICONTROL Error diagnostics]** to instruct the source to produce error diagnostics that you can later reference when monitoring your dataset activity and dataflow status.
 * **[!UICONTROL Partial ingestion]**: Partial batch ingestion is the ability to ingest data containing errors, up to a certain configurable threshold. This feature allows you to successfully ingest all of your accurate data into Experience Platform, while all of your incorrect data is batched separately with information on why it is invalid.
@@ -83,7 +83,7 @@ Once your dataset is configured, you must then provide details on your dataflow,
 
 | Dataflow configurations | Description |
 | --- | --- |
-| Dataflow name | The name of the dataflow.  By default, this will use the name of the file that is being imported. |
+| Dataflow name | The name of the dataflow. By default, this will use the name of the file that is being imported. |
 | Description | (Optional) A brief description of your dataflow. |
 | Alerts | Experience Platform can produce event-based alerts which users can subscribe to, these options allow a running dataflow to trigger these.  For more information, read the [alerts overview](../../alerts.md) <ul><li>**Sources Dataflow Run Start**: Select this alert to receive a notification when your dataflow run begins.</li><li>**Sources Dataflow Run Success**: Select this alert to receive a notification if your dataflow ends without any errors.</li><li>**Sources Dataflow Run Failure**: Select this alert to receive a notification if your dataflow run ends with any errors.</li></ul> |
 
@@ -107,7 +107,7 @@ The [!UICONTROL Scheduling] step appears. Use the interface to configure an inge
 >
 >Interval and backfill are not visible during a one-time ingestion.
 
-If you set your ingestion frequency to `Minute`, `Hour`, `Day`, or `Week`, then you must set an interval to establish a set time frame between every ingestion. For example, an ingestion frequency set to `Day` and  an interval set to `15` means that your dataflow is scheduled to ingest data every 15 days.
+If you set your ingestion frequency to `Minute`, `Hour`, `Day`, or `Week`, then you must set an interval to establish a set time frame between every ingestion. For example, an ingestion frequency set to `Day` and an interval set to `15` means that your dataflow is scheduled to ingest data every 15 days.
 
 During this step, you can also enable **backfill** and define a column for the incremental ingestion of data. Backfill is used to ingest historical data, while the column you define for incremental ingestion allows new data to be differentiated from existing data.
 

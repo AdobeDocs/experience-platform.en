@@ -26,7 +26,7 @@ Provide values for the following credentials to authenticate and connect the [!D
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| Domain | The unique URL associated with your [!DNL Talon.One] application environment. | `acmetalonone.us-east4` |
+| Domain | The unique URL associated with your [!DNL Talon.One] application environment. Ensure that you do not include the protocol or path when inputting your domain. | `acmetalonone.us-east4` |
 | [!DNL Talon.One] Management API Key | The Management API Key is a credential used to authenticate and authorize access to [!DNL Talon.One]'s Management API. This handles operations such as: <ul><li>Importing coupons</li><li>Retrieving campaign data</li><li>Managing applications and endpoints</li></ul> | `ManagementKey-v1 {YOUR_MANAGEMENT_KEY}` |
 
 ## Mapping {#mapping}
@@ -35,14 +35,14 @@ To help you map each effect object based on its unique `effectType` value, you c
 
 | Source  | Destination |
 | ---- | --- |
-| `array_to_map(data.effects, "effectType").addLoyaltyPoints.campaignId` | `_cjmprodnld2.loyalty.pointsGained[0].promotionId` |
-| `array_to_map(data.effects, "effectType").addLoyaltyPoints.props.value`| `_cjmprodnld2.loyalty.pointsGained[0].value` |
-| `array_to_map(data.effects, "effectType").deductLoyaltyPoints.campaignId` | `_cjmprodnld2.loyalty.pointsRedemption[0].promotionId` |
-| `array_to_map(data.effects, "effectType").acceptCoupon.campaignId` | `_cjmprodnld2.loyalty.couponRedemption[0].campaignId` |
-| `array_to_map(data.effects, "effectType").deductLoyaltyPoints.props.value` | `_cjmprodnld2.loyalty.pointsRedemption[0].value`|
-| `array_to_map(data.effects, "effectType").acceptCoupon.props.value` | `_cjmprodnld2.loyalty.couponRedemption[0].id` |
-| `array_to_map(data.effects, "effectType").setDiscount.campaignId` | `_cjmprodnld2.loyalty.discounts[0].promotionId`|
-| `array_to_map(data.effects, "effectType").setDiscount.props.value` | `_cjmprodnld2.loyalty.discounts[0].value` |
+| `array_to_map(data.effects, "effectType").addLoyaltyPoints.campaignId` | `_{TENANT_ID}.loyalty.pointsGained[0].promotionId` |
+| `array_to_map(data.effects, "effectType").addLoyaltyPoints.props.value`| `_{TENANT_ID}.loyalty.pointsGained[0].value` |
+| `array_to_map(data.effects, "effectType").deductLoyaltyPoints.campaignId` | `_{TENANT_ID}.loyalty.pointsRedemption[0].promotionId` |
+| `array_to_map(data.effects, "effectType").acceptCoupon.campaignId` | `_{TENANT_ID}.loyalty.couponRedemption[0].campaignId` |
+| `array_to_map(data.effects, "effectType").deductLoyaltyPoints.props.value` | `_{TENANT_ID}.loyalty.pointsRedemption[0].value`|
+| `array_to_map(data.effects, "effectType").acceptCoupon.props.value` | `_{TENANT_ID}.loyalty.couponRedemption[0].id` |
+| `array_to_map(data.effects, "effectType").setDiscount.campaignId` | `_{TENANT_ID}.loyalty.discounts[0].promotionId`|
+| `array_to_map(data.effects, "effectType").setDiscount.props.value` | `_{TENANT_ID}.loyalty.discounts[0].value` |
 | `data.created` | `timestamp` |
 | `data.attributes.params.profileId` | `personID` |
 | `data.attributes.integrationId` | `_id` |
