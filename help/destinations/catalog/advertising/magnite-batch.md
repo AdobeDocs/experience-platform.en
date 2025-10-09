@@ -164,9 +164,9 @@ On the "Configure a filename and export schedule for each audience" screen, you 
 >
 > A Mapping ID or "NONE" is required for this destination.
 >
-> A Mapping ID should be provided when an audience has a pre-existing Segment ID previously known to [!DNL Magnite]. Otherwise, "NONE" should be used as the Mapping ID.
+> Provide a Mapping ID when your audience has a pre-existing Segment ID previously known to [!DNL Magnite]. Otherwise, enter "NONE" as the Mapping ID.
 >
-> When configuring the filename for each audience, please include the Mapping ID via the "Custom Text" field to add. The Mapping ID will be appended as: `{previous_filename}\_\[MAPPING_ID\].` If this audience is new to [!DNL Magnite], and you will not be providing a Mapping ID, "NONE" should be entered into the "Custom Text" field. The new filename in this case should be: `{previous_filename}\_\[NONE\]`.
+> When configuring the filename for each audience, please include the Mapping ID via the "Custom Text" field to add. The Mapping ID will be appended as: `{previous_filename}\_\[MAPPING_ID\].` If this audience is new to [!DNL Magnite], and you will not be providing a Mapping ID, "NONE" should be entered into the "Custom Text" field. The new filename in this case should be: `{previous_filename}\_\[NONE\]`. !["ExistingMappingId" was entered](../../assets/catalog/advertising/magnite/destination-batch-existing-mapping-id.png) !["NONE" was entered for MappingId](../../assets/catalog/advertising/magnite/destination-batch-mapping-id-NONE.png)
 
 ## Exported data / Validate data export {#exported-data}
 

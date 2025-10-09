@@ -42,7 +42,7 @@ If you do not have a [!DNL Magnite] account, please reach out to adobe-tech@magn
 
 ## Supported identities {#supported-identities}
 
-The [!DNL Magnite: Real-Time] destination supports the activation of any attributes and/or identities stored in [!DNL Adobe Experience Platform], which will need to be mapped to a [!DNL Magnite] supported device type. The list of supported device types is managed by [!DNL Magnite], and may change and/or grow over time. The current list of supported device types will be available from a dropdown in the Target Field, during the Mapping step of Audience Activation (described below). Learn more about [identities](/help/identity-service/features/namespaces.md).
+The [!DNL Magnite: Real-Time] destination supports the activation of any attributes and/or identities stored in [!DNL Adobe Experience Platform], which will need to be mapped to a [!DNL Magnite] supported device type. The list of supported device types is managed by [!DNL Magnite], and may change and/or grow over time. The current list of supported device types will be available from the 'Select target field' popout window, during the Mapping step of Audience Activation (described below). Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 ## Supported audiences {#supported-audiences}
 
@@ -122,9 +122,9 @@ Once the destination connection has been created, you can proceed to the audienc
 
 The next step is mapping Source Field identifiers to the [!DNL Magnite] Device Type identifier of your choice, located in the Target Field.
 
-The current list of [!DNL Magnite] supported device types will be available via a dropdown list, by clicking the Target Field's target attribute button.
+The current list of [!DNL Magnite] supported device types will be available via the 'Select target field' popout window, by clicking the Target Field's target attribute button.
 
-In order to support a dynamic list of device types, the dropdown will provide a list of integers (from 0-50), each of which represents a specific device type in [!DNL Magnite]'s system. To understand which device type id in the list of integers corresponds to which [!DNL Magnite] device type, reach out to your [!DNL Magnite] account representative. 
+In order to support a dynamic list of device types, the popout window will provide a list of integers (from 0-50), each of which represents a specific device type in [!DNL Magnite]'s system. To understand which device type id in the list of integers corresponds to which [!DNL Magnite] device type, reach out to your [!DNL Magnite] account representative. If you are still unsure, you should select 0 (zero).
 
 ![Choose desired device type integer from target field dropdown](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-target-dropdown.png)
 
