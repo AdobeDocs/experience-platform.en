@@ -1,6 +1,6 @@
 ---
 title: Magnite Real-Time destination
-description: Use this destination to deliver Adobe CDP audiences to the Magnite platform in real-time.
+description: Use this destination to deliver Adobe Real-Time CDP audiences to the Magnite platform in real-time.
 last-substantial-update: 2024-11-18
 exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
 ---
@@ -33,7 +33,7 @@ To help you better understand how and when you should use the [!DNL Magnite: Rea
 
 ### Activation and targeting {#activation-and-targeting}
 
-This integration with [!DNL Magnite] allows customers to pass their CDP audiences from [!DNL Adobe Experience Platform] to [!DNL Magnite], and any [!DNL Magnite] platforms, for advertising targeting. Audiences may be selected within [!DNL Magnite] for positive targeting as well as negative targeting (suppression). 
+This integration with [!DNL Magnite] allows customers to pass their Real-Time CDP audiences from [!DNL Adobe Experience Platform] to [!DNL Magnite], and any [!DNL Magnite] platforms, for advertising targeting. Audiences may be selected within [!DNL Magnite] for positive targeting as well as negative targeting (suppression). 
 
 ## Prerequisites {#prerequisites}
 
@@ -126,7 +126,7 @@ The current list of [!DNL Magnite] supported device types will be available via 
 
 In order to support a dynamic list of device types, the popout window will provide a list of integers (from 0-50), each of which represents a specific device type in [!DNL Magnite]'s system. To understand which device type id in the list of integers corresponds to which [!DNL Magnite] device type, reach out to your [!DNL Magnite] account representative. If you are still unsure, you should select 0 (zero).
 
-![Choose desired device type integer from target field dropdown](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-target-dropdown.png)
+![Choose desired device type integer from 'Select target field' popout window](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-target-popout.png)
 
 This example using the Real-Time destination shows a row that contains a generic deviceId source identifier mapped to the [!DNL Magnite] device type with integer id: "1". When you are satisfied with the mappings, select [!UICONTROL Next].
 

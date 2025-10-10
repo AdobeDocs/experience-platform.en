@@ -1,6 +1,6 @@
 ---
 title: Magnite Batch destination
-description: Use this destination to deliver Adobe CDP audiences to the Magnite platform in batch.
+description: Use this destination to deliver Adobe Real-Time CDP audiences to the Magnite platform in batch.
 last-substantial-update: 2024-11-18
 exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
 ---
@@ -14,13 +14,13 @@ This document describes the [!DNL Magnite: Batch] destination and provides sampl
 >
 >The [!DNL Magnite] destinations can be used for ingestion into any [!DNL Magnite] platform: Streaming, DV+, SpringServe, etc.
 
-Adobe CDP audiences can be delivered to the [!DNL Magnite] platform in two ways - they can be delivered once per day, or they can be delivered in real-time:
+Adobe Real-Time CDP audiences can be delivered to the [!DNL Magnite] platform in two ways - they can be delivered once per day, or they can be delivered in real-time:
 
 1. If you only want and/or need to deliver audiences once per day, you can use the [!DNL Magnite: Batch] destination, which delivers audiences to [!DNL Magnite] via a daily S3 batch file delivery. These batch audiences are stored more persistently in the [!DNL Magnite] platform, unlike real-time audiences, which are only stored for a couple days.
 
 2. However, if you want or need to deliver audiences more frequently, you will need to use the [Magnite: Real-Time destination](/help/destinations/catalog/advertising/magnite-streaming.md). When using the real-time destination, [!DNL Magnite] will receive audiences in real-time, but [!DNL Magnite] can only store real-time audiences temporarily in their platform, and they will be removed from the system within a couple days. For this reason, if you want to use the [!DNL Magnite: Real-Time] destination, you will *also* need to use the [!DNL Magnite: Batch] destination - each audience that you activate to the real-time destination, you also need to activate to the batch destination.
 
-To recap: If you only want to deliver Adobe CDP audiences once per day, you will use the [!DNL Magnite: Batch] destination only, and audiences will be delivered once per day. If you want to deliver Adobe CDP audiences in real-time, you will use *both* the [!DNL Magnite: Batch] destination, and the[!DNL Magnite: Real-Time] destination. For more information, reach out to [!DNL Magnite].
+To recap: If you only want to deliver Adobe Real-Time CDP audiences once per day, you will use the [!DNL Magnite: Batch] destination only, and audiences will be delivered once per day. If you want to deliver Adobe Real-Time CDP audiences in real-time, you will use *both* the [!DNL Magnite: Batch] destination, and the[!DNL Magnite: Real-Time] destination. For more information, reach out to [!DNL Magnite].
 
 
 Continue reading below for more information about the [!DNL Magnite: Batch] destination, how to connect to it, and how to activate Adobe Real-Time CDP audiences to it.
@@ -52,7 +52,7 @@ To use the [!DNL Magnite] destinations in [!DNL Adobe Experience Platform], you 
 
 ## Supported identities {#supported-identities}
 
-The [!DNL Magnite: Real-Time] destination supports the activation of any attributes and/or identities stored in [!DNL Adobe Experience Platform], which will need to be mapped to a [!DNL Magnite] supported device type. The list of supported device types is managed by [!DNL Magnite], and may change and/or grow over time. The current list of supported device types will be available from a dropdown in the Target Field, during the Mapping step of Audience Activation (described below). Learn more about [identities](/help/identity-service/features/namespaces.md).
+The [!DNL Magnite: Real-Time] destination supports the activation of any attributes and/or identities stored in [!DNL Adobe Experience Platform], which will need to be mapped to a [!DNL Magnite] supported device type. The list of supported device types is managed by [!DNL Magnite], and may change and/or grow over time. The current list of supported device types will be available from a 'Select target field' popout window, during the Mapping step of Audience Activation (described below). Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 ## Supported audiences {#supported-audiences}
 
@@ -141,11 +141,11 @@ In the **[!UICONTROL Source field]**, you can select any attribute or identity f
 In the **[!UICONTROL Target field]**:
 The next step is mapping Source Field identifiers to the [!DNL Magnite] Device Type identifier of your choice, located in the Target Field.
 
-The current list of [!DNL Magnite] supported device types will be available via a dropdown list, by clicking the Target Field's target attribute button.
+The current list of [!DNL Magnite] supported device types will be available via a 'Select target field' popout window, by clicking the Target Field's target attribute button.
 
-In order to support a dynamic list of device types, the dropdown will provide a list of integers (from 0-50), each of which represents a specific device type in [!DNL Magnite]'s system. To understand which device type id in the list of integers corresponds to which [!DNL Magnite] device type, reach out to your [!DNL Magnite] account representative.
+In order to support a dynamic list of device types, the 'Select target field' popout window will provide a list of integers (from 0-50), each of which represents a specific device type in [!DNL Magnite]'s system. To understand which device type id in the list of integers corresponds to which [!DNL Magnite] device type, reach out to your [!DNL Magnite] account representative.
 
-![Choose desired device type integer attribute from target field dropdown](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png)
+![Choose desired device type integer attribute from 'Select target field' popout window](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png)
 
 See [Supported Identities](#supported-identities) for more information.
 In this example, we've selected the **[!UICONTROL Target field]**: Attribute: "00".
@@ -166,7 +166,9 @@ On the "Configure a filename and export schedule for each audience" screen, you 
 >
 > Provide a Mapping ID when your audience has a pre-existing Segment ID previously known to [!DNL Magnite]. Otherwise, enter "NONE" as the Mapping ID.
 >
-> When configuring the filename for each audience, please include the Mapping ID via the "Custom Text" field to add. The Mapping ID will be appended as: `{previous_filename}\_\[MAPPING_ID\].` If this audience is new to [!DNL Magnite], and you will not be providing a Mapping ID, "NONE" should be entered into the "Custom Text" field. The new filename in this case should be: `{previous_filename}\_\[NONE\]`. !["ExistingMappingId" was entered](../../assets/catalog/advertising/magnite/destination-batch-existing-mapping-id.png) !["NONE" was entered for MappingId](../../assets/catalog/advertising/magnite/destination-batch-mapping-id-NONE.png)
+> When configuring the filename for each audience, please include the Mapping ID via the "Custom Text" field to add. The Mapping ID will be appended as: `{previous_filename}\_\[MAPPING_ID\].` If this audience is new to [!DNL Magnite], and you will not be providing a Mapping ID, "NONE" should be entered into the "Custom Text" field. The new filename in this case should be: `{previous_filename}\_\[NONE\]`. 
+!["ExistingMappingId" was entered](../../assets/catalog/advertising/magnite/destination-batch-existing-mapping-id.png) 
+!["NONE" was entered for MappingId](../../assets/catalog/advertising/magnite/destination-batch-mapping-id-NONE.png)
 
 ## Exported data / Validate data export {#exported-data}
 
