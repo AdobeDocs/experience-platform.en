@@ -230,8 +230,8 @@ role: Admin,User
         * [Talk URL Inbox extension](./catalog/voice/talkurl.md)
     * Warehouse destinations {#warehouse}
         * [Warehouse destinations overview](./catalog/warehouses/overview.md)
-        * [(Beta) Snowflake Batch connection](./catalog/warehouses/snowflake-batch.md)
-        * [(Beta) Snowflake Streaming connection](./catalog/warehouses/snowflake.md)
+        * [Snowflake Batch connection](./catalog/warehouses/snowflake-batch.md)
+        * [Snowflake Streaming connection](./catalog/warehouses/snowflake.md)
 * Destination SDK {#destination-sdk}
     * [Overview](./destination-sdk/overview.md)
     * [Integration prerequisites](./destination-sdk/integration-prerequisites.md)
