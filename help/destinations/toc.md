@@ -139,8 +139,6 @@ role: Admin,User
         * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
         * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
-        * [(Beta) Snowflake Streaming connection](./catalog/cloud-storage/snowflake.md)
-        * [(Beta) Snowflake Batch connection](./catalog/cloud-storage/snowflake-batch.md)
         * [IP address allowlist for file-based cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
     * Customer Relationship Management (CRM) destinations {#crm}
         * [Hubspot connection](./catalog/crm/hubspot.md)
@@ -230,6 +228,10 @@ role: Admin,User
         * [Medallia connection](./catalog/voice/medallia-connector.md)
         * [Medallia extension](./catalog/voice/medallia.md)
         * [Talk URL Inbox extension](./catalog/voice/talkurl.md)
+    * Warehouse destinations {#warehouse}
+        * [Warehouse destinations overview](./catalog/warehouses/overview.md)
+        * [(Beta) Snowflake Batch connection](./catalog/warehouses/snowflake-batch.md)
+        * [(Beta) Snowflake Streaming connection](./catalog/warehouses/snowflake.md)
 * Destination SDK {#destination-sdk}
     * [Overview](./destination-sdk/overview.md)
     * [Integration prerequisites](./destination-sdk/integration-prerequisites.md)

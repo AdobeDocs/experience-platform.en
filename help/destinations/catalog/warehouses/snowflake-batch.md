@@ -43,13 +43,13 @@ When a dataflow runs for an audience for the first time, it performs a backfill 
 
 ## Streaming versus batch data sharing {#batch-vs-streaming}
 
-Experience Platform provides two types of Snowflake destinations: [Snowflake Streaming](/help/destinations/catalog/cloud-storage/snowflake.md) and [Snowflake Batch](snowflake-batch.md).
+Experience Platform provides two types of Snowflake destinations: [Snowflake Streaming](snowflake.md) and [Snowflake Batch](snowflake-batch.md).
 
 While both destinations give you access to your data in Snowflake in a zero-copy manner, there are some recommended best practices in terms of use cases for each connector.
 
 The table below will help you decide which connector to use by outlining the scenarios where each data sharing method is most appropriate.
 
-|  | Choose [Snowflake Batch](snowflake-batch.md) when you need | Choose [Snowflake Streaming](/help/destinations/catalog/cloud-storage/snowflake.md) when you need |
+|  | Choose [Snowflake Batch](snowflake-batch.md) when you need | Choose [Snowflake Streaming](snowflake.md) when you need |
 |--------|-------------------|----------------------|
 | **Update frequency** | Periodic snapshots | Continuous updates in real-time |
 | **Data presentation** | Complete audience snapshot that replaces previous data | Incremental updates based on profile changes |
@@ -57,7 +57,7 @@ The table below will help you decide which connector to use by outlining the sce
 | **Data management** | Always see latest complete snapshot | Incremental updates based on audience membership changes |
 | **Example scenarios** | Business reporting, data analysis, ML model training | Marketing campaign suppression, real-time personalization |
 
-For more information about streaming data sharing, see the [Snowflake Streaming connection](../cloud-storage/snowflake.md) documentation.
+For more information about streaming data sharing, see the [Snowflake Streaming connection](snowflake.md) documentation.
 
 ## Use cases {#use-cases}
 
@@ -70,6 +70,35 @@ Batch data sharing is ideal for scenarios where you need a complete snapshot of 
 * **ETL processes**: When you need to transform or process audience data in batches
 
 Batch data sharing simplifies data management by providing complete snapshots, eliminating the need to manage incremental updates or merge changes manually.
+
+## Prerequisites {#prerequisites}
+
+Before configuring your Snowflake connection, make sure you meet the following prerequisites:
+
+* You have access to a [!DNL Snowflake] account.
+* Your Snowflake account is subscribed to private listings. You or someone in your company who has account administrator privileges on Snowflake can configure this.
+
+## Required Snowflake permissions {#required-permissions}
+
+To successfully receive and access data shared from Adobe's Snowflake instance, you need specific Snowflake account permissions. The following permissions are required:
+
+### Accepting private listings
+
+To accept Adobe's private listing and establish the data share connection, you need:
+
+* **ACCOUNTADMIN role**: Only users with the `ACCOUNTADMIN` role can accept private listings in Snowflake. This is a Snowflake platform requirement for security and governance purposes.
+
+If you do not have `ACCOUNTADMIN` privileges, contact your Snowflake account administrator to accept the private listing on your behalf.
+
+### Viewing and querying shared data
+
+Once the private listing is accepted, you need permissions to view and query the shared data:
+
+* **CREATE DATABASE privilege**: Required to create a database from the share, which makes the shared data visible and queryable in your Snowflake account.
+* **IMPORT SHARE privilege**: Allows you to view and use shares provided by Adobe.
+* **Usage permissions**: Once the database is created from the share, you need `USAGE` privileges on the database to query the shared tables.
+
+Your Snowflake administrator can grant these privileges to other users or roles after accepting the private listing. For more information about Snowflake data sharing permissions, see the [Snowflake Secure Data Sharing documentation](https://docs.snowflake.com/en/user-guide/data-sharing-intro).
 
 ## Supported audiences {#supported-audiences}
 
