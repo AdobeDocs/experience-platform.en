@@ -72,28 +72,6 @@ Before configuring your Snowflake connection, make sure you meet the following p
 * You have access to a [!DNL Snowflake] account.
 * Your Snowflake account is subscribed to private listings. You or someone in your company who has account administrator privileges on Snowflake can configure this.
 
-## Required Snowflake permissions {#required-permissions}
-
-To successfully receive and access data shared from Adobe's Snowflake instance, you need specific Snowflake account permissions. The following permissions are required:
-
-### Accepting private listings
-
-To accept Adobe's private listing and establish the data share connection, you need:
-
-* **ACCOUNTADMIN role**: Only users with the `ACCOUNTADMIN` role can accept private listings in Snowflake. This is a Snowflake platform requirement for security and governance purposes.
-
-If you do not have `ACCOUNTADMIN` privileges, contact your Snowflake account administrator to accept the private listing on your behalf.
-
-### Viewing and querying shared data
-
-Once the private listing is accepted, you need permissions to view and query the shared data:
-
-* **CREATE DATABASE privilege**: Required to create a database from the share, which makes the shared data visible and queryable in your Snowflake account.
-* **IMPORT SHARE privilege**: Allows you to view and use shares provided by Adobe.
-* **Usage permissions**: Once the database is created from the share, you need `USAGE` privileges on the database to query the shared tables.
-
-Your Snowflake administrator can grant these privileges to other users or roles after accepting the private listing. For more information about Snowflake data sharing permissions, see the [Snowflake Secure Data Sharing documentation](https://docs.snowflake.com/en/user-guide/data-sharing-intro).
-
 ## Supported audiences {#supported-audiences}
 
 This section describes which types of audiences you can export to this destination. The two tables below indicate which audiences this connector supports, by _audience origin_ and _profile types included in the audience_:
