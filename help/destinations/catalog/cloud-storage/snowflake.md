@@ -7,9 +7,9 @@ exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 ---
 # Snowflake Streaming connection {#snowflake-destination}
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->This destination connector is in beta and only available to Real-Time CDP Ultimate customers. The functionality and documentation is subject to change.
+>This destination connector is in limited availability and only available to Real-Time CDP Ultimate customers provisioned in the [VA7 region](/help/landing/multi-cloud.md#azure-regions).
 
 ## Overview {#overview}
 

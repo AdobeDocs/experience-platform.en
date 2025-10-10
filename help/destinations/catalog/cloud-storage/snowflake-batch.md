@@ -7,9 +7,9 @@ exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
 ---
 # Snowflake Batch connection {#snowflake-destination}
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->This destination connector is in beta and only available to Real-Time CDP Ultimate customers. The functionality and documentation is subject to change.
+>This destination connector is in limited availability and only available to Real-Time CDP Ultimate customers provisioned in the [VA7 region](/help/landing/multi-cloud.md#azure-regions).
 
 ## Overview {#overview}
 
