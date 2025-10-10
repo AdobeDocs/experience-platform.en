@@ -174,6 +174,10 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 * **[!UICONTROL Description]**: provide a description for this destination connection
 * **[!UICONTROL Account ID]**: your [Google Ads customer ID](https://support.google.com/google-ads/answer/1704344?hl=en). The format of the ID is xxx-xxx-xxxx. If you are using the [!DNL Google Ads Manager Account (My Client Center)], do not use your Manager Account ID. Use the [Google Ads customer ID](https://support.google.com/google-ads/answer/1704344?hl=en) instead.
 
+>[!NOTE]
+>
+>During the OAuth2 connection process, you may see "Marketo Test" displayed as the Google OAuth project name. This is a normal behavior, as Adobe uses this project name for the Google Customer Match integration. This does not affect your destination configuration.
+
 >[!IMPORTANT]
 >
 > * The **[!UICONTROL Combine with PII]** marketing action is selected by default for the [!DNL Google Customer Match] destination and cannot be removed.

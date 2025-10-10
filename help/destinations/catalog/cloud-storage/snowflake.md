@@ -2,13 +2,14 @@
 title: Snowflake Streaming connection
 description: Export data to your Snowflake account using private listings.
 badgeBeta: label="Beta" type="Informative"
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 ---
 # Snowflake Streaming connection {#snowflake-destination}
 
 >[!IMPORTANT]
 >
->This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative.
+>This destination connector is in beta and only available to Real-Time CDP Ultimate customers. The functionality and documentation is subject to change.
 
 ## Overview {#overview}
 
@@ -35,6 +36,34 @@ If your audience is evaluated in [batch mode](../../../segmentation/methods/batc
 ### Incremental export logic {#incremental-export}
 
 When a dataflow runs for an audience for the first time, it performs a backfill and shares all currently qualified profiles. After this initial backfill, only incremental updates are reflected in the shared table. This means profiles which are added to or removed from the audience. This approach ensures efficient updates and keeps the shared table up to date.
+
+## Streaming versus batch data sharing {#batch-vs-streaming}
+
+Experience Platform provides two types of Snowflake destinations: [Snowflake Streaming](snowflake.md) and [Snowflake Batch](../cloud-storage/snowflake-batch.md).
+
+The table below will help you decide which destination to use by outlining the scenarios where each data sharing method is most appropriate.
+
+|  | Choose [Snowflake Batch](../cloud-storage/snowflake-batch.md) when you need | Choose [Snowflake Streaming](snowflake.md) when you need |
+|--------|-------------------|----------------------|
+| **Update frequency** | Periodic snapshots | Continuous updates in real-time |
+| **Data presentation** | Complete audience snapshot that replaces previous data | Incremental updates based on profile changes |
+| **Use case focus** | Analytical/ML workloads where latency is not critical | Immediate action scenarios requiring real-time updates |
+| **Data management** | Always see latest complete snapshot | Incremental updates based on audience membership changes |
+| **Example scenarios** | Business reporting, data analysis, ML model training | Marketing campaign suppression, real-time personalization |
+
+For more information about batch data sharing, see the [Snowflake Batch connection](../cloud-storage/snowflake-batch.md) documentation.
+
+## Use cases {#use-cases}
+
+Streaming data sharing is ideal for scenarios where you need immediate updates when a profile changes its membership or other attributes. This is crucial for use cases requiring real-time responsiveness, such as:
+
+* **Marketing campaign suppression**: Immediately suppress marketing campaigns for users who have taken specific actions, such as signing up for a service or making a purchase
+* **Real-time personalization**: Update user experiences instantly when profile attributes change, such as when a user visits a website, views a product page, or adds items to a shopping cart
+* **Immediate action scenarios**: Execute quick suppression and retargeting based on real-time data to reduce delays and ensure marketing campaigns are more relevant and timely
+* **Efficiency and nuance**: Enable greater efficiency and nuance in marketing efforts by allowing quick response to user behavior changes
+* **Real-time customer journey optimization**: Update customer experiences immediately when segment membership or profile attributes change
+
+Streaming data sharing provides continuous updates based on segment changes, identity map changes, or attribute changes, making it suitable for scenarios where latency is critical and immediate updates are required.
 
 ## Prerequisites {#prerequisites}
 

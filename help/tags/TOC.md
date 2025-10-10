@@ -86,6 +86,7 @@ role: Developer
       * [Release notes](./extensions/client/client-data-layer/release-notes.md)
     * Adobe Content Analytics {#content-analytics}
       * [Overview](./extensions/client/content-analytics/overview.md)
+      * [Release notes](./extensions/client/content-analytics/release-notes.md)
     * Adobe ContextHub {#contexthub}
       * [Overview](./extensions/client/contexthub/overview.md)
     * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
@@ -195,6 +196,8 @@ role: Developer
     * [SDI Survey](https://exchange.adobe.com/apps/ec/102991)
     * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
     * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
+    * [!DNL Snap Pixel] {#snap-pixel}
+      * [Overview](./extensions/client/snap-pixel/overview.md)
     * [Storage Spanner](https://exchange.adobe.com/apps/ec/102990)
     * [TAGS by Loop Horizon](https://exchange.adobe.com/apps/ec/106092)
     * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)

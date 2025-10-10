@@ -1,27 +1,39 @@
 ---
-title: Use Azure Private Link for Sources in the UI
+title: Private Link Support For Sources In The UI
 description: Learn how to use Azure Private Links for Sources in the Experience Platform UI.
-badge: Beta
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
 ---
-# Use [!DNL Azure Private Link] for Sources in the UI
+# Private Link Support for Sources in the UI
 
 >[!AVAILABILITY]
 >
->This feature is in beta and is currently only supported for the following sources:
+>This feature is supported by the following sources:
 >
 >* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
 >* [[!DNL ADLS Gen2]](../../connectors/cloud-storage/adls-gen2.md)
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
->* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>
+>Private Link Support is currently only available for organizations that have purchased Adobe Healthcare Shield or Adobe Privacy & Security Shield.
 
-You can use the [!DNL Azure Private Link] feature to create private endpoints for your Adobe Experience Platform sources to connect to. Securely connect your sources to  a virtual network using private IP addresses, eliminating the need for public IPs and reduce your attack surface.Simplify your network setup by removing the need for complex firewall or Network Address Translation configurations, while ensuring data traffic only reaches approved services.
+You can use the Private Links feature to create private endpoints for your Adobe Experience Platform sources to connect to. Securely connect your sources to  a virtual network using private IP addresses, eliminating the need for public IPs and reduce your attack surface. Simplify your network setup by removing the need for complex firewall or Network Address Translation configurations, while ensuring data traffic only reaches approved services.
 
 Read this guide to learn how you can use the sources workspace in the Experience Platform UI to create and use a private endpoint.
 
+>[!BEGINSHADEBOX]
+
+## License usage entitlement for private link support
+
+The license usage entitlement metrics for private link support in sources is as follows:
+
+* Customers are entitled to up to 2 TB per year of data transfer through supported sources ([!DNL Azure Blob Storage], [!DNL ADLS Gen2], and [!DNL Azure File Storage]), across all sandboxes and organizations.
+* Each organization can have a maximum of 10 endpoints for all production sandboxes.
+* Each organization can have a maximum of 1 endpoint for all development sandboxes.
+
+>[!ENDSHADEBOX]
+
 ## Create a private endpoint
 
-To get started with [!DNL Azure Private Link], navigate to the *[!UICONTROL Sources]* catalog of the Experience Platform UI and select **[!UICONTROL Private endpoints]** from the menu of tabs in the sources workspace.
+To get started with Private Links, navigate to the *[!UICONTROL Sources]* catalog of the Experience Platform UI and select **[!UICONTROL Private endpoints]** from the menu of tabs in the sources workspace.
 
 ![The sources catalog with "Private endpoints".](../../images/tutorials/private-links/catalog.png)
 
@@ -37,7 +49,6 @@ Next, choose your desired source, and then enter values for the following proper
 | `subscriptionId` | The ID associated with your [!DNL Azure] subscription. For more information, read the [!DNL Azure] guide on [retrieving your subscription and tenant IDs from the [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
 | `resourceGroupName` | The name of your resource group on [!DNL Azure]. A resource group contains related resources for an [!DNL Azure] solution. For more information, read the [!DNL Azure] guide on [managing resource groups](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). | 
 | `resourceGroup` | The name of your resource. In [!DNL Azure], a resource refers to instances like virtual machines, web apps, and databases. For more information, read the [!DNL Azure] guide on [understanding the [!DNL Azure] resource manager](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview). |
-| `fqdns` | The fully-qualified domain names for your source. **NOTE**: This property is required only when using the [!DNL Snowflake] source. |
 
 {style="table-layout:auto"}
 

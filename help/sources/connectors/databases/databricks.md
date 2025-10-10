@@ -1,20 +1,20 @@
 ---
-title: Azure Databricks
-description: Learn about the prerequisite steps needed in order to connect Azure Databricks to Experience Platform.
+title: Databricks
+description: Learn about the prerequisite steps needed in order to connect Databricks to Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-06-17
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
 ---
-# [!DNL Azure Databricks]
+# [!DNL Databricks]
 
 >[!AVAILABILITY]
 >
->* The [!DNL Azure Databricks] source is available in the sources catalog to users who have purchased Real-Time CDP Ultimate.
+>* The [!DNL Databricks] source is available in the sources catalog to users who have purchased Real-Time CDP Ultimate.
 >
->* The [!DNL Azure Databricks] source is in beta. Read the [terms and conditions](../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
+>* The [!DNL Databricks] source is in beta. Read the [terms and conditions](../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
-[!DNL Azure Databricks] is a cloud-based platform designed for data analytics, machine learning, and AI. You can use [!DNL Databricks] to integrate with [!DNL Azure] and provide a holistic environment for building, deploying, and managing data solutions at scale.
+[!DNL Databricks] is a cloud-based platform designed for data analytics, machine learning, and AI. You can use [!DNL Databricks] to integrate and provide a holistic environment for building, deploying, and managing data solutions at scale.
 
 Use the [!DNL Databricks] source to connect your account and ingest your [!DNL Databricks] data to Adobe Experience Platform.
 

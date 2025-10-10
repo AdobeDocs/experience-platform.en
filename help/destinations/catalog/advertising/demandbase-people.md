@@ -94,6 +94,21 @@ Now you're ready to activate your audiences within Demandbase People.
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
+### Mandatory mappings {#mandatory-mappings}
+
+When activating audiences to the [!DNL Demandbase People] destination, you must configure the following mandatory field mappings in the mapping step:
+
+| Source field | Target field | Description |
+|--------------|--------------|-------------|
+| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | The unique identifier for the person |
+| `xdm: person.name.lastName` | `xdm: lastName` | The last name of the person |
+| `xdm: person.name.firstName` | `xdm: firstName` | The first name of the person |
+| `xdm: workEmail.address` | `Identity: email` | The work email address of the person |
+
+![Demandbase People mappings](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
+
+These mappings are required for the destination to function properly and must be configured before you can proceed with the activation workflow.
+
 ## Additional notes and important callouts {#additional-notes}
 
 * **Demandbase API guardrails**: If you have exported audiences to Demandbase and the exports are successful in Experience Platform, yet not all of the data reaches Demandbase, you might have encountered API throttling on the Demandbase side. Reach out to them for clarification.
