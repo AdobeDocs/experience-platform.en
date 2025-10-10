@@ -41,7 +41,6 @@ Adform supports the activation of identities described in the table below. Learn
 |---|---|---|
 |ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the following document on [ECID](/help/identity-service/ecid.md) for more information.|
 
-
 {style="table-layout:auto"}
 
 ## Supported audiences {#supported-audiences}
