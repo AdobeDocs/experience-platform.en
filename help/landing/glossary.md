@@ -335,6 +335,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Marketing action**: In the data governance framework, a marketing action (also known as a marketing use case) is an action that an Experience Platform data consumer takes, for which there is a need to check for violations of data usage policies.
 
+<!-- **MCDPA**: Minnesota Consumer Data Privacy Act ... -->
+
 **Merge method**: When defining a merge policy using the Experience Platform UI, the merge method specifies how data fragments should be prioritized when a conflict occurs. When using the Real-Time Customer Profile API to define a merge policy, the merge method is determined using the `attributeMerge` object.
 
 **Merge policy**: Merge policies are rules that Experience Platform uses to determine how customer data fragments from multiple sources will be combined to create an individual profile. When a data conflict occurs, the merge policy determines which data should be prioritized for inclusion in the profile.
@@ -376,6 +378,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 **Parquet files**: A Parquet file is a columnar storage file format with complex nested data structures. Parquet files are required for adding data to populate a schema dataset.
 
 **PDPA**: The [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) was introduced to safeguard Thai data owners from the illegal collection, use, or disclosure of their personal data. Inspired by the European Union's GDPR, the regulation grants Thai citizens the right to request access to, or the deletion of, their stored personal data.
+
+<!-- **PIPA** (South Korea): ... -->
 
 <!-- Not yet released
 **PDPD**: The [[!DNL Personal Data Protection Decree] (PDPD) 

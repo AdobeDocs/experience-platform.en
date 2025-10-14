@@ -101,6 +101,8 @@ This document provides definitions for key terms related to privacy regulations 
 
 **Main establishment**: The place within the Union that the main decisions surrounding data processing are made; with regard to the processor.
 
+<!-- **MCDPA**: Minnesota Consumer Data Privacy Act ... -->
+
 **MHMDAa**: The [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) enhances privacy rights for consumers regarding their health data. It mandates disclosures, consumer consent, and deletion rights for health data, and prohibits the sale of health data without authorization. Additionally, the Act makes it unlawful to use geofencing around healthcare facilities.
 
 **[!DNL Minnesota Consumer Data Privacy Act]** (MCDPA): Effective July 31, 2025, the MCDPA gives Minnesota residents rights to access, correct, delete, and obtain their personal data, as well as opt out of data sales, targeted advertising, and certain profiling. It applies to businesses operating in or targeting Minnesota that process data of 100,000+ consumers annually (excluding payment-only data), or 25,000+ consumers if over 25% of revenue comes from data sales. Covered entities must implement reasonable data security measures and conduct risk assessments.The Minnesota Attorney General enforces the law and may issue fines of up to $7,500 per violation. However, businesses have until January 31, 2026, to fix any violations before penalties are applied.
@@ -127,6 +129,8 @@ This document provides definitions for key terms related to privacy regulations 
 **Personal data**: Any information related to a natural person or 'Data Subject', that can be used to directly or indirectly identify the person.
 
 **Personal data breach**: A breach of security leading to the accidental or unlawful access to, destruction, misuse, and so on, of personal data.
+
+<!-- **PIPA** (South Korea): ... -->
 
 **Privacy by design**: A principle that calls for the inclusion of data protection from the onset of the designing of systems, rather than an addition.
 
