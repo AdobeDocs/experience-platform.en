@@ -73,6 +73,7 @@ role: Admin,User
         * [Advertising destinations overview](./catalog/advertising/overview.md)
         * [Adobe Advertising Cloud connection](./catalog/advertising/adobe-advertising-cloud-connection.md)
         * [Adobe Advertising Cloud extension](./catalog/advertising/adobe-advertising-cloud.md)
+        * [Adform connection](./catalog/advertising/adform.md)
         * [Amazon Ads connection](./catalog/advertising/amazon-ads.md)
         * [Awin Advertiser Conversion Tag extension](./catalog/advertising/awin-conversiontag.md)
         * [Awin Advertiser Mastertag extension](./catalog/advertising/awin-mastertag.md)
