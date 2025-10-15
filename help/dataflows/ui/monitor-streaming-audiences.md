@@ -29,6 +29,7 @@ This guide requires a working understanding of the following components of Exper
 >id="platform_monitoring_streaming_audience_p95_latency"
 >title="P95 ingestion latency"
 >abstract="This metric measures the 95th percentile latency of successful event arrival and evaluation into the audience."
+>text="Learn more in documentation"
 
 The following table provides more detailed information about the metrics that are used for streaming audiences.
 
