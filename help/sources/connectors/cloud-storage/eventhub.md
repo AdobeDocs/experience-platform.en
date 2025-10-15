@@ -32,7 +32,9 @@ To increase the rate of speed of ingestion on the Experience Platform side, Expe
 
 ## Use a virtual network to connect to [!DNL Event Hubs] to Experience Platform
 
-You can set up a virtual network to connect [!DNL Event Hubs] to Experience Platform while having your firewall measures enabled. To set up a virtual network, head to this [[!DNL Event Hubs] network rule set document](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) and follow the steps listed below:
+Experience Platform supports connecting to [!DNL Event Hubs] via a virtual network. This lets you transfer data over a secure, private connection instead of the public internet. You can allowlist the Experience Platform VNet to securely route [!DNL Event Hubs] traffic through the [!DNL Azure] private backbone while maintaining your existing firewall protections.
+
+To set up a virtual network, head to this [[!DNL Event Hubs] network rule set document](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) and follow the steps listed below:
 
 * Select **Try It** from the REST API panel; 
 * Authenticate your [!DNL Azure] account using your credentials in the same browser;
