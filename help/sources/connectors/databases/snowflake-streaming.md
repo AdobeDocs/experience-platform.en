@@ -154,7 +154,7 @@ For more information on role and privilege management, refer to the [[!DNL Snowf
 
 ## Convert Unix time to date fields
 
-The [!DNL Snowflake Streaming] source stores `DATE` fields as integers, where each number represents the number of days since January 1, 1970 (the Unix epoch). For example, a `DATE` value of 0 means January 1, 1970, while a value of 1 means January 2, 1970. Therefore, When preparing the file to create mappings in the [!DNL Snowflake Streaming] source, ensure that the DATE column is represented as an integer.
+The [!DNL Snowflake Streaming] parses and writes` DATE` fields as the number of days since the Unix epoch (1970-01-01). For example, a `DATE` value of 0 means January 1, 1970, while a value of 1 means January 2, 1970. Therefore, When preparing the file to create mappings in the [!DNL Snowflake Streaming] source, ensure that the `DATE` column is represented as an integer.
 
 You can use [Data Prep data and time functions](../../../data-prep/functions.md#date-and-time-functions) to convert Unix time into date fields that can be ingested into Experience Platform. For example:
 
