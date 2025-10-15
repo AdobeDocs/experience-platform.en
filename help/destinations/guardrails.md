@@ -118,8 +118,8 @@ The dataset export guardrails apply to two types of datasets exported from Exper
 **Datasets based on the XDM Experience Events schema**
 In the case of datasets based on the XDM Experience Events schema, the dataset schema includes a top level *timestamp* column. Data is ingested in an append-only fashion.
 
-**Datasets based on the XDM Individual Profile schema**
-In the case of datasets based on the XDM Individual Profile schema, the dataset schema does not include a top level *timestamp* column. Data is ingested in an upsert fashion.
+**Datasets based on any schema apart from the XDM Experience Events schema**
+In the case of datasets based on any schema, the dataset schema does not include a top level *timestamp* column. Data is ingested in an upsert fashion.
 
 The soft guardrail below applies to all datasets exported out of Experience Platform. Review also the hard guardrails further below, specific to different dataset and compression types.
 
