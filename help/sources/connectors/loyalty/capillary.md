@@ -62,9 +62,6 @@ curl -X POST 'https://ims-na1.adobelogin.com/ims/token' \
 }
 ```
 
-## Next steps
+## Connect [!DNL Capillary Streaming Events] to Experience Platform
 
-Once you have completed the prerequisite setup for [!DNL Capillary], read the following documentation to learn how you can connect your account and start streaming data from [!DNL Capillary] to Experience Platform.
-
-* [Connect [!DNL Capillary Streaming Events] to Experience Platform using the API](../../tutorials/api/create/loyalty/capillary.md)
-* [Connect [!DNL Capillary Streaming Events] to Experience Platform using the UI](../../tutorials/ui/create/loyalty/capillary.md)
+Once you have completed the prerequisite setup for [!DNL Capillary], read the [[!DNL Capillary Streaming Events] UI tutorial](../../tutorials/ui/create/loyalty/capillary.md) to learn how you can connect your account and stream data from [!DNL Capillary] to Experience Platform.
