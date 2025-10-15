@@ -98,6 +98,12 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 | ------- | ----------- |
 | [!BADGE Alpha]{type=Informative} Profile viewer enhancements | The September 2025 release includes the following enhancements to the Profile viewer. <ul><li>**Combined view**: Attribute, events, and insights have been combined into a single view.</li><li>**AI-generated insights**: The profile details page now displays AI-generated insights, letting you know details generated from your profile. These insights can include information such as propensity scores and trend analysis.</li><li>**Style update**: The profile details page has been visually refreshed.</li><li>**Browse**: You can now explore your profiles through an interactive card-based carousel with search and customization.</li></ul> |
 
+**Important updates**
+
+| Update | Description |
+| ------ | ----------- |
+| Profile delete API deprecation | The [Profile delete API](/help/profile/api/entities.md#delete-entity) will be deprecated by the end of October 2025. If you want to perform record delete operations, you can use the [Data Lifecycle record delete API workflow](/help/hygiene/api/workorder.md) or the [Data Lifecycle record delete UI workflow](/help/hygiene/ui/record-delete.md) instead. The Data Lifecycle workflows provide end-to-end lifecycle tracking as well as monthly quotas you can view and manage against. <br/><br/>After the endpoint has been deprecated, any user who currently uses this endpoint will continue to have access to this endpoint. End of life for this will be announced separately. If you have any questions, contact Adobe Customer Care. |
+
 For more information, read the [Real-Time Customer Profile overview](../../profile/home.md).
 
 ## Segmentation Service {#segmentation-service}
