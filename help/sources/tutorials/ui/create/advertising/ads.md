@@ -1,13 +1,14 @@
 ---
 title: Connect Google Ads to Experience Platform Using The UI
 description: Learn how to connect your Google Ads account to Adobe Experience Platform in the UI.
+badge: Beta
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
 ---
 # Connect [!DNL Google Ads] to Experience Platform using the UI
 
->[!WARNING]
+>[!NOTE]
 >
->The [!DNL Google Ads] source is currently not available in the UI. You can continue to ingest your [!DNL Google Ads] data to Experience Platform [using the API](../../../api/create/advertising/ads.md).
+> The [!DNL Google Ads] source is currently not available in the UI. You can perform the incremental data ingestion of your [!DNL Google Ads] data into Experience Platform [using the API method](../../../api/create/advertising/ads.md). Note that only one-time ingestion is supported at this time.
 
 >[!NOTE]
 >
@@ -58,7 +59,7 @@ To create a new account, select **[!UICONTROL New account]** and then provide an
 * **Refresh token**: The refresh token is a part of [!DNL OAuth2] authentication. This token allows you to regenerate your access tokens after they expire. 
 * **Client ID**: The client ID is used in tandem with the client secret as part of [!DNL OAuth2] authentication. Together, the client ID and client secret enables your application to operate on behalf of your account by identifying your application to [!DNL Google].
 * **Client secret**: The client secret is used in tandem with the client ID as part of [!DNL OAuth2] authentication. Together, the client ID and client secret enables your application to operate on behalf of your account by identifying your application to [!DNL Google].
-* **[!DNL Google Ads] API version**: The current API version supported by [!DNL Google Ads]. While the latest version is `v18`, the latest supported version on Experience Platform is `v17`. 
+* **[!DNL Google Ads] API version**: The current API version supported by [!DNL Google Ads]. While the latest version is `v21`, Experience Platform supports `v19` and all newer versions. 
 
 Once you have inputted your credentials, select **[!UICONTROL Connect to source]** and allow for a few moments for the connection to process. When finished, select **[!UICONTROL Next]**.
 
@@ -66,7 +67,7 @@ Once you have inputted your credentials, select **[!UICONTROL Connect to source]
 
 ## Select data {#select-data}
 
-With [!DNL Google Ads], you must provide the list of attributes for ingestion during the data selection phase of the workflow. In order to retrieve these attributes, you must use the [[!DNL Google Ads Query Builder]](https://developers.google.com/google-ads/api/fields/v17/overview_query_builder).
+With [!DNL Google Ads], you must provide the list of attributes for ingestion during the data selection phase of the workflow. In order to retrieve these attributes, you must use the [[!DNL Google Ads Query Builder]](https://developers.google.com/google-ads/api/fields/v19/overview_query_builder).
 
 In the [!DNL Google Ads Query Builder], navigate to the resource type that you want to use and then use the attributes selector to select your attributes, segments, and metrics.
 

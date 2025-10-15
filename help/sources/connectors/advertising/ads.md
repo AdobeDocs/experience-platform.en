@@ -15,9 +15,9 @@ Experience Platform provides support for ingesting data from a third-party adver
 
 ## Prerequisites {#prerequisites}
 
-### IP address allow list
+### IP address allowlist
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform](../../ip-address-allow-list.md) for more information.
 
 ### Configure permissions on Experience Platform
 
@@ -35,7 +35,7 @@ You must provide the appropriate values to the following credentials in order to
 | `refreshToken` | The refresh token is a part of [!DNL OAuth2] authentication. This token allows you to regenerate your access tokens after they expire. |
 | `clientId` |  The client ID is used in tandem with the client secret as part of [!DNL OAuth2] authentication. Together, the client ID and client secret enables your application to operate on behalf of your account by identifying your application to [!DNL Google]. |
 | `clientSecret` | The client secret is used in tandem with the client ID as part of [!DNL OAuth2] authentication. Together, the client ID and client secret enables your application to operate on behalf of your account by identifying your application to [!DNL Google]. |
-| `googleAdsApiVersion` | The current API version supported by [!DNL Google Ads]. While the latest version is `v18`, the latest supported version on Experience Platform is `v17`. |
+| `googleAdsApiVersion` | The current API version supported by [!DNL Google Ads]. While the latest version is `v21`, Experience Platform supports `v19` and all newer versions. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Google Ads] is: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. This value is required if you are connecting your [!DNL Google Ads] account using the [!DNL Flow Service] API.|
 
 ## Connect [!DNL Google Ads] to Experience Platform

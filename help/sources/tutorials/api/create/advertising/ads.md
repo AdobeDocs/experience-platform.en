@@ -5,10 +5,6 @@ exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
 ---
 # Connect [!DNL Google Ads] to Experience Platform using the [!DNL Flow Service] API
 
->[!NOTE]
->
->The [!DNL Google Ads] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
-
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
 Read this tutorial to learn how to connect your [!DNL Google Ads] account to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
@@ -66,7 +62,7 @@ curl -X POST \
               "refreshToken": "{REFRESH_TOKEN}",
               "clientId": "{CLIENT_ID}",
               "clientSecret": "{CLIENT_SECRET}",
-              "googleAdsApiVersion": "v17"
+              "googleAdsApiVersion": "v19"
 
           }
       },
@@ -85,7 +81,7 @@ curl -X POST \
 | `auth.params.refreshToken` | The refresh token of your [!DNL Google Ads] account. |
 | `auth.params.clientID` | The client ID of your [!DNL Google Ads] account. |
 | `auth.params.clientSecret` | The client secret of your [!DNL Google Ads] account. |
-| `auth.params.googleAdsApiVersion` | The [!DNL Google Ads] API version that you are using. The latest supported version on Experience Platform is `v17`. |
+| `auth.params.googleAdsApiVersion` | The [!DNL Google Ads] API version that you are using. Experience Platform supports `v19` and all newer versions. |
 | `connectionSpec.id` | The [!DNL Google Ads] connection specification ID: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 **Response**
