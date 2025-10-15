@@ -43,25 +43,22 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 | [!UICONTROL HIPPA_USA (United States)]| The [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL ICDPA_USA] (Iowa)       | The [!DNL Iowa Consumer Data Protection Act] |
 | [!UICONTROL LGPD_BRA (Brazil)]      | Brazil's "[!DNL General Data Protection Law]" [!DNL Lei Geral de Proteção de Dados]|
-| [!UICONTROL MHMDA_USA (Washington)] | The [!DNL Washington My Health My Data Act] |
 | [!UICONTROL MCDPA_USA (Montana)]    | The [!DNL Montana Consumer Data Privacy Act] |
+| [!UICONTROL MHMDA_USA (Washington)] | The [!DNL Washington My Health My Data Act] |
+| [!UICONTROL MODPA_MD_USA (Maryland)]| The [!DNL Maryland Online Data Privacy Act] |
 | [!UICONTROL NDPA_USA (Nebraska)]    | The [!DNL Nebraska Data Protection Act] |
 | [!UICONTROL NZPA_NZL (New Zealand)] | New Zealand's [!DNL Privacy Act] |
 | [!UICONTROL NHPA_USA (New Hampshire)]| The [!DNL New Hampshire Privacy Act] |
 | [!UICONTROL NJDPA_USA (New Jersey)] | The [!DNL New Jersey Data Protection Act] |
 | [!UICONTROL OCPA USA (Oregon)]      | The [!DNL Oregon Consumer Privacy Act] |
 | [!UICONTROL PDPA_THA (Thailand)]    | Thailand's [!DNL Personal Data Protection Act] |
+| [!UICONTROL PIPA_KOR (South Korea)] | South Korea's [!DNL Personal Information Privacy Act] |
 | [!UICONTROL QL25_CAN (Quebec)]      | [!DNL Quebec Law 25]   |
 | [!UICONTROL TDPSA USA (Texas)]      | The [!DNL Texas Data Privacy and Security Act] |
 | [!UICONTROL UCPA_USA (Utah)]        | The [!DNL Utah Consumer Privacy Act] |
 | [!UICONTROL VCDPA_USA (Virginia)]   | The [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
-
-<!-- 
-Waiting:
-| **[!UICONTROL PIPA_KOR]**  ?        | South Korea [!DNL Personal Information Privacy Act] |
- -->
 
 >[!NOTE]
 >
