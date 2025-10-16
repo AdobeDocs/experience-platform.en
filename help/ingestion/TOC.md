@@ -14,6 +14,7 @@ role: Developer
   - [Overview](streaming-ingestion/overview.md)
   - [Kafka connector](streaming-ingestion/kafka.md)
   - [Troubleshooting](streaming-ingestion/troubleshooting.md)
+  - [IP Allowlisting](streaming-ingestion/allowlisting.md)
 - Batch ingestion{#batch}
   - [Getting started with batch ingestion APIs](batch-ingestion/getting-started.md)
   - [API Overview](batch-ingestion/overview.md)
