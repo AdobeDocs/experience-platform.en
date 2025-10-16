@@ -81,7 +81,7 @@ curl -X POST \
 | `auth.params.refreshToken` | The refresh token of your [!DNL Google Ads] account. |
 | `auth.params.clientID` | The client ID of your [!DNL Google Ads] account. |
 | `auth.params.clientSecret` | The client secret of your [!DNL Google Ads] account. |
-| `auth.params.googleAdsApiVersion` | The [!DNL Google Ads] API version that you are using. Experience Platform supports `v19` and all newer versions. |
+| `auth.params.googleAdsApiVersion` | The [!DNL Google Ads] API version that you are using. Experience Platform currently supports version `v19` and newer. Make sure you're using one of these supported versions to ensure compatibility. |
 | `connectionSpec.id` | The [!DNL Google Ads] connection specification ID: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 **Response**
