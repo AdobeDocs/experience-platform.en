@@ -21,6 +21,10 @@ This tutorial requires a working understanding of the following components of Ex
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
+>[!NOTE]
+>
+>Read the [[!DNL Capillary Streaming Events] overview](../../../../connectors/loyalty/capillary.md) for information on set up required for the [!DNL Capillary] source.
+
 ## Navigate the sources catalog
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. Select the appropriate category in the *[!UICONTROL Categories]* panel Alternatively, use the search bar to navigate to the specific source that you want to use.
@@ -36,6 +40,10 @@ To use [!DNL Capillary], select the **[!UICONTROL Capillary Streaming Events]** 
 ## Select data
 
 Next, use the *[!UICONTROL Select data]* interface to upload a sample JSON file to define your source schema. During this step, you can use the preview interface to view the file structure of the payload. When finished, select **[!UICONTROL Next]**.
+
+>[!TIP]
+>
+>You can download the [Events and Profile schemas](../../../../images/tutorials/create/capillary/schemas.zip) for [!DNL Capillary] to use in the data selection interface.
 
 ![The select data step of the sources workflow](../../../../images/tutorials/create/capillary/select-data.png)
 
