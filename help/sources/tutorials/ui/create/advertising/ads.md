@@ -9,8 +9,6 @@ exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
 >[!NOTE]
 >
 > The [!DNL Google Ads] source is currently in beta and only supports one-time ingestion. You can use [the API method](../../../api/create/advertising/ads.md) to perform incremental data ingestion of your [!DNL Google Ads] data into Experience Platform.
-
->[!NOTE]
 >
 >See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
