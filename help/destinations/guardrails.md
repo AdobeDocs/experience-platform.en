@@ -115,11 +115,9 @@ Dataset exports are currently supported in a **[!UICONTROL First Full and then I
 
 The dataset export guardrails apply to two types of datasets exported from Experience Platform, as described below:
 
-**Datasets based on the XDM Experience Events schema**
-In the case of datasets based on the XDM Experience Events schema, the dataset schema includes a top level *timestamp* column. Data is ingested in an append-only fashion.
+**Datasets based on the XDM Experience Events schema and datasets based on any other schema**
 
-**Datasets based on any schema apart from the XDM Experience Events schema**
-In the case of datasets based on any schema, the dataset schema does not include a top level *timestamp* column. Data is ingested in an upsert fashion.
+In the case of datasets based on the XDM Experience Events schema, the dataset schema includes a top level timestamp column. Data is ingested in an append-only fashion. In the case of datasets based on any other schema, the dataset schema may include a timestamp column and data is ingested in an upsert fashion.
 
 The soft guardrail below applies to all datasets exported out of Experience Platform. Review also the hard guardrails further below, specific to different dataset and compression types.
 
@@ -140,7 +138,7 @@ For scheduled, or recurring dataset exports, the guardrails below are identical 
 |Dataset type | Guardrail | Guardrail type | Description |
 ---------|----------|---------|-------|
 | Datasets based on the **XDM Experience Events schema** | Last 365 days of data | System-enforced guardrail | The data from the last calendar year is exported. |
-| Datasets based on the **XDM Individual Profile schema** | Ten billion records across all exported files in a dataflow | System-enforced guardrail | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
+| Datasets based on **any schema apart from the XDM Experience Events schema** | Ten billion records across all exported files in a dataflow | System-enforced guardrail | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
 
 {style="table-layout:auto"}
 
