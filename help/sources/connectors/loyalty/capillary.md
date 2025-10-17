@@ -20,51 +20,41 @@ By integrating [!DNL Capillary] with Experience Platform, you can:
 
 ## Prerequisites
 
-Before you connect [!DNL Capillary] to Adobe Experience Platform, make sure you have:
+Before you connect [!DNL Capillary] to Adobe Experience Platform, ensure that you have the following:
 
 * A valid **Adobe Organization ID** and access to an enabled Experience Platform sandbox.
-* **[!DNL Capillary] source credentials** (Client ID and Client Secret).
-* The necessary permissions in the Adobe Admin Console to create sources and dataflows.
+* You must have both **[!UICONTROL View Sources]** and **[!UICONTROL Manage Sources]** permissions enabled for your account in order to connect your [!DNL Capillary] account to Experience Platform. Contact your product administrator to obtain the necessary permissions. For more information, read the [access control UI guide](../../../access-control/ui/overview.md).
 
-### Gather required credentials
+### Create a schema
 
-You must provide values for the following credentials to connect your [!DNL Capillary] account to Experience Platform:
+You must create an Experience Data Model (XDM) schema to describe a dataset which can store the possible fields and data types that will be sent from [!DNL Capillary].
 
-| Credential | Description | Example |
-| --- | --- | --- |
-| Client ID | The client identifier for the [!DNL Capillary] source. | `321c8a8fee0d4a06838d46f9d3109e8a` |
-| Client Secret | The client secret issued with the Client ID | `xxxxxxxxxxxxxxxxxx` |
-| Org ID | Your Adobe Organization ID | `0A7D42FC5DB9D3360A495FD3@AdobeOrg` |
+1. Log in to Adobe Experience Platform and access the Experience Platform via your organization's login.
+2. In the left navigation panel, select **[!UICONTROL Schemas]** to open the [!UICONTROL Schemas] workspace.
+3. Select **[!UICONTROL Create schema]** in the top-right corner.
+4. In the create schema dialog, pick between **[!UICONTROL Manual creation]** (Add fields and field groups yourself) or **[!UICONTROL ML-assisted creation]** (Upload a CSV file and use machine learning to generate a recommended schema).
+5. Choose a base class for your schema (e.g., XDM Individual Profile, XDM ExperienceEvent, or Other). If you select **[!UICONTROL Other]**, you can select from available custom or standard classes.
+6. Enter a human-friendly name and description for your schema.
+7. Use the Schema Editor to: Add field groups (reusable blocks of fields), define individual fields (customize names, data types, and options), and optionally, create custom data types or field groups if existing ones do not fit your needs.
+8. Review the schema structure in the canvas. Select **[!UICONTROL Finish]** to create the schema.
+9. (Optional) Edit fields, add descriptions, and adjust field groups as needed in the Schema Editor.
 
-For more information on generating access tokens, read the [Adobe authentication guide](https://developer.adobe.com/developer-console/docs/guides/authentication/).
+For a detailed instructions on how to create an XDM schema, read the guide on [creating a schema using the schema editor](../../../xdm/tutorials/create-schema-ui.md).
 
-### Generate an access token
+### Create a dataset
 
-Next, use your Client ID and Client Secret to generate an access token from Adobe.
+Next, you must create a dataset that references the schema you just created.
 
-**Request**
+1. In the Experience Platform UI, select [!UICONTROL Datasets] in the left navigation to open the [!UICONTROL Datasets] workspace.
+2. Select **[!UICONTROL Create dataset]** at the top right.
+3. In the creation options, select **[!UICONTROL Create dataset from schema]**.
+4. From the list, search for and select the XDM schema you previously created. Once you locate your schema, select **[!UICONTROL Next]**.
+5. Enter a unique, descriptive name for your dataset.
+6. Optionally, add a description that helps future users identify the dataset.
+7. Select **[!UICONTROL Finish]** to create the dataset.
+   
+For a detailed instructions on how to create a dataset, read the [datasets UI guide](../../../catalog/datasets/user-guide.md).
 
-```shell
-curl -X POST 'https://ims-na1.adobelogin.com/ims/token' \
-  -d 'client_id={CLIENT_ID}' \
-  -d 'client_secret={CLIENT_SECRET}' \
-  -d 'grant_type=client_credentials' \
-  -d 'scope=openid AdobeID read_organizations additional_info.projectedProductContext session'
-```
+## Connect [!DNL Capillary Streaming Events] to Experience Platform
 
-**Response**
-
-```json
-{
-  "access_token": "eyJhbGciOi...",
-  "token_type": "bearer",
-  "expires_in": 86399994
-}
-```
-
-## Next steps
-
-Once you have completed the prerequisite setup for [!DNL Capillary], read the following documentation to learn how you can connect your account and start streaming data from [!DNL Capillary] to Experience Platform.
-
-* [Connect [!DNL Capillary Streaming Events] to Experience Platform using the API](../../tutorials/api/create/loyalty/capillary.md)
-* [Connect [!DNL Capillary Streaming Events] to Experience Platform using the UI](../../tutorials/ui/create/loyalty/capillary.md)
+Once you have completed the prerequisite setup for [!DNL Capillary], read the [[!DNL Capillary Streaming Events] UI tutorial](../../tutorials/ui/create/loyalty/capillary.md) to learn how you can connect your account and stream data from [!DNL Capillary] to Experience Platform.
