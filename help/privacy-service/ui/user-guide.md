@@ -28,37 +28,49 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 
 ### Regulation Type 
 
-[!DNL Privacy Service] supports job requests for several privacy regulations. The following table lists the supported regulations and their corresponding label as represented in the UI: 
+[!DNL Privacy Service] supports job requests for several privacy regulations. The following table lists the supported regulations and their corresponding label as represented in the UI. 
 
-| UI Label                            |  Regulation    |
-|-------------------------------------|------------------------|
-| [!UICONTROL APA_AUS  (Australia)]   | The [!DNL Australia Privacy Act] |
-| [!UICONTROL CCPA (California)]      | The [!DNL California Consumer Privacy Act]|
-| [!UICONTROL CPA_USA (Colorado)]     | The [!DNL Colorado Privacy Act] |
-| [!UICONTROL CPRA_USA (California)]  | The [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL CTDPA_USA (Connecticut)]| The [!DNL Connecticut Data Privacy Act] |
-| [!UICONTROL DPDPA_USA (Delaware)]   | The [!DNL Delaware Personal Data Privacy Act]   |
-| [!UICONTROL FDBR_USA (Florida)]     | The [!DNL Florida Digital Bill of Rights]|
-| [!UICONTROL GDPR (European Union)]  | The European Union's [!DNL General Data Protection Regulation]|
-| [!UICONTROL HIPPA_USA (United States)]| The [!DNL Health Insurance Portability and Accountability Act] |
-| [!UICONTROL ICDPA_USA] (Iowa)       | The [!DNL Iowa Consumer Data Protection Act] |
-| [!UICONTROL LGPD_BRA (Brazil)]      | Brazil's "[!DNL General Data Protection Law]" [!DNL Lei Geral de Proteção de Dados]|
-| [!UICONTROL MCDPA_USA (Montana)]    | The [!DNL Montana Consumer Data Privacy Act] |
-| [!UICONTROL MHMDA_USA (Washington)] | The [!DNL Washington My Health My Data Act] |
-| [!UICONTROL MODPA_MD_USA (Maryland)]| The [!DNL Maryland Online Data Privacy Act] |
-| [!UICONTROL NDPA_USA (Nebraska)]    | The [!DNL Nebraska Data Protection Act] |
-| [!UICONTROL NZPA_NZL (New Zealand)] | New Zealand's [!DNL Privacy Act] |
-| [!UICONTROL NHPA_USA (New Hampshire)]| The [!DNL New Hampshire Privacy Act] |
-| [!UICONTROL NJDPA_USA (New Jersey)] | The [!DNL New Jersey Data Protection Act] |
-| [!UICONTROL OCPA USA (Oregon)]      | The [!DNL Oregon Consumer Privacy Act] |
-| [!UICONTROL PDPA_THA (Thailand)]    | Thailand's [!DNL Personal Data Protection Act] |
-| [!UICONTROL PIPA_KOR (South Korea)] | South Korea's [!DNL Personal Information Privacy Act] |
-| [!UICONTROL QL25_CAN (Quebec)]      | [!DNL Quebec Law 25]   |
-| [!UICONTROL TDPSA USA (Texas)]      | The [!DNL Texas Data Privacy and Security Act] |
-| [!UICONTROL UCPA_USA (Utah)]        | The [!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_USA (Virginia)]   | The [!DNL Virginia Consumer Data Protection Act] |
+Refer to the [Privacy regulations overview](../regulations/overview.md) for a description of each regulation that explains the consumer rights and mandated business obligations.
+
+>[!TIP]
+>
+>The API regulation type has been included for general convenience.
+
+| UI Label                                  | API `regulation_type` |  Regulation    |
+|-------------------------------------------|-----------------------|----------------|
+| [!UICONTROL APA_AUS (Australia)]          | `apa_aus` | [!DNL Australia Privacy Act]|
+| [!UICONTROL CCCA (California)]            | `ccpa`| [!DNL California Consumer Privacy Act] (CCPA) |
+| [!UICONTROL CPA_CO_USA (Colorado)]        | `cpa_co_usa` | [!DNL Colorado Privacy Act]|
+| [!UICONTROL CPRA_CA_USA (California)]     | `cpra_ca_usa` |  [!DNL California Privacy Rights Act] (CPRA) |
+| [!UICONTROL CTDPA_CT_USA (Connecticut)]   | `ctdpa_ct_usa` | [!DNL Connecticut Data Privacy Act]|
+| [!UICONTROL DPDPA_DE_USA (Delaware)]      | `dpdpa_de_usa` | [!DNL Delaware Personal Data Privacy Act]|
+| [!UICONTROL FDBR_FL_USA (Florida)]        | `fdbr_fl_usa` | [!DNL Florida Digital Bill of Rights]|
+| [!UICONTROL GDPR (European Union)]        | `gdpr` | The European Union's [!DNL General Data Protection Regulation] |
+| [!UICONTROL HIPAA_USA (United States)]    | `hipaa_usa` | [!DNL Health Insurance Portability and Accountability Act]|
+| [!UICONTROL ICDPALIA_USA (Iowa)]          | `icdpa_ia_usa` | [!DNL Iowa Consumer Data Protection Act]|
+| [!UICONTROL LGPD_BRA (Brazil)]            | `lgpd_bra` | Brazil's "[!DNL General Data Protection Law]" [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL MCDPA_MN_USA (Minnesota)]     | `mcdpa_mn_usa` | [!DNL Minnesota Consumer Data Privacy Act]|
+| [!UICONTROL MCDPA_MT_USA (Montana)]       | `mcdpa_mt_usa` | [!DNL Montana Consumer Data Privacy Act]|
+| [!UICONTROL MHMDA_WA_USA (Washington)]    | `mhmda_wa_usa` | [!DNL Washington My Health My Data Act]|
+| [!UICONTROL MODPA_MD_USA (Maryland)]      | `modpa_md_usa` | [!DNL Maryland Online Data Privacy Act]|
+| [!UICONTROL NDPA_NE_USA (Nebraska)]       | `ndpa_ne_usa` | [!DNL Nebraska Data Protection Act]|
+| [!UICONTROL NHPA_NH_USA (New Hampshire)]  | `nhpa_nh_usa` | [!DNL New Hampshire Privacy Act]|
+| [!UICONTROL NJDPA_NJ_USA (New Jersey)]    | `njdpa_nj_usa` | [!DNL New Jersey Data Protection Act]|
+| [!UICONTROL NZPA_NZL (New Zealand)]       | `nzpa_nzl` | New Zealand's [!DNL Privacy Act] (PA) |
+| [!UICONTROL OCPA_OR_USA (Oregon)]         | `ocpa_or_usa` | [!DNL Oregon Consumer Privacy Act]|
+| [!UICONTROL PDPA_THA (Thailand)]          | `pdpa_tha` | Thailand's [!DNL Personal Data Protection Act] (PDPA) |
+| [!UICONTROL PIPA_KOR (South Korea)]       | `pipa_kor` | South Korea's [!DNL Personal Information Privacy Act] (PIPA)|
+| [!UICONTROL QL25_QC_CAN (Quebec)]         | `ql25_qc_can` | [!DNL Quebec Law 25]|
+| [!UICONTROL TDPSA_TX_USA (Texas)]         | `tdpsa_tx_usa` | [!DNL Texas Data Privacy and Security Act]|
+| [!UICONTROL TIPA_TN_USA (Tennessee)]      | `tipa_tn_usa` | [!DNL Tennessee Information Protection Act]|
+| [!UICONTROL UCPA_UT_USA (Utah)]           | `ucpa_ut_usa` | [!DNL Utah Consumer Privacy Act]|
+| [!UICONTROL VCDPA_VA_USA (Virginia)]      | `vcdpa_va_usa` | [!DNL Virginia Consumer Data Protection Act] (VCDPA) |
 
 {style="table-layout:auto"}
+
+<!-- | [!UICONTROL ICDPA_IN_USA (Indiana)]       | `icdpa_in_usa` | [!DNL Indiana Consumer Data Protection Act]| NOT SUPP YET JAN 1st ### ... -->
+<!-- | [!UICONTROL KCDPA_KY_USA (Kentucky)]      | `kcdpa_ky_usa`| [!DNL Kentucky Consumer Data Protection Act]|  NOT SUPP YET JAN 1st ### ... -->
+<!-- | [!UICONTROL RIDTPPA_RI_USA (Rhode Island)]| `ridtppa_ri_usa` | [!DNL Rhode Island Data Transparency and Privacy Protection Act]|  NOT SUPP YET JAN 1st ### ... -->
 
 >[!NOTE]
 >

@@ -335,8 +335,6 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Marketing action**: In the data governance framework, a marketing action (also known as a marketing use case) is an action that an Experience Platform data consumer takes, for which there is a need to check for violations of data usage policies.
 
-<!-- **MCDPA**: Minnesota Consumer Data Privacy Act ... -->
-
 **Merge method**: When defining a merge policy using the Experience Platform UI, the merge method specifies how data fragments should be prioritized when a conflict occurs. When using the Real-Time Customer Profile API to define a merge policy, the merge method is determined using the `attributeMerge` object.
 
 **Merge policy**: Merge policies are rules that Experience Platform uses to determine how customer data fragments from multiple sources will be combined to create an individual profile. When a data conflict occurs, the merge policy determines which data should be prioritized for inclusion in the profile.
@@ -346,6 +344,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 **Mixin**: See "Schema field group".
 
 **Module**: In the context of tags, a module is a snippet of executable JavaScript provided by an extension, which performs actions in a client environment without needing to create a rule.
+
+**MODPA**: The [!DNL Maryland Online Data Privacy Act] (MODPA) of 2024 grants Maryland residents rights including access, correction, deletion, and data portability. Residents may opt out of targeted advertising, personal data sales, and profiling. Controllers must provide the privacy notices and conduct data protection assessments for high-risk processing. MODPA stands out by prohibiting geofencing around mental or reproductive health facilities. The law applies to entities that process data from more than 35,000 consumers, or to those that process data from more than 10,000 consumers and derive over 20% of their revenue from selling that data. It is enforced by the Maryland Attorney General.
 
 ## N
 
@@ -379,13 +379,9 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **PDPA**: The [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) was introduced to safeguard Thai data owners from the illegal collection, use, or disclosure of their personal data. Inspired by the European Union's GDPR, the regulation grants Thai citizens the right to request access to, or the deletion of, their stored personal data.
 
-<!-- **PIPA** (South Korea): ... -->
-
-<!-- Not yet released
-**PDPD**: The [[!DNL Personal Data Protection Decree] (PDPD) 
--->
-
 **Personalized offers**: A personalized offer is a customizable marketing message based on eligibility rules and constraints.
+
+**PIPA** (South Korea): The [[!DNL Personal Information Protection Act] (PIPA)](https://elaw.klri.re.kr/eng_service/lawView.do?hseq=53044&lang=ENG) regulates the processing and protection of personal data for South Korean residents. PIPA grants rights to be informed, access, obtain copies, and request correction, deletion, or suspension of processing. Personal information controllers must specify collection purposes, process data lawfully to the minimum extent necessary, and ensure data accuracy. PIPA also established the Personal Information Protection Commission to investigate and enforce personal data protection regulations.
 
 **Placements**: A placement is the location and or context in which an offer appears for an end-user.
 
