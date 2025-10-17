@@ -1,19 +1,19 @@
 ---
-title: Connect Azure Databricks To Experience Platform Using The UI
-description: Learn how to connect Azure Databricks to Experience Platform using the user interface.
+title: Connect Databricks To Experience Platform Using The UI
+description: Learn how to connect Databricks to Experience Platform using the user interface.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
 ---
-# Connect [!DNL Azure Databricks] to Experience Platform in the UI
+# Connect [!DNL Databricks] to Experience Platform in the UI
 
 >[!AVAILABILITY]
 >
->* The [!DNL Azure Databricks] source is available in the sources catalog to users who have purchased Real-Time CDP Ultimate.
+>* The [!DNL Databricks] source is available in the sources catalog to users who have purchased Real-Time CDP Ultimate.
 >
->* The [!DNL Azure Databricks] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
+>* The [!DNL Databricks] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
-Read this guide to learn how to connect your [!DNL Azure Databricks] account to Adobe Experience Platform using the sources workspace in the UI.
+Read this guide to learn how to connect your [!DNL Databricks] account to Adobe Experience Platform using the sources workspace in the UI.
 
 ## Get started
 
@@ -24,22 +24,22 @@ This guide requires a working understanding of the following components of Exper
 
 ### Gather required credentials
 
-Provide values for the following credentials to connect [!DNL Azure Databricks] to Experience Platform.
+Provide values for the following credentials to connect [!DNL Databricks] to Experience Platform.
 
 | Credential | Description |
 | --- | --- |
-| Domain | The URL of your [!DNL Azure Databricks] workspace. For example, `https://adb-1234567890123456.7.azuredatabricks.net`. |
-| Cluster ID | The ID of your cluster in [!DNL Azure Databricks]. This cluster must already be an existing cluster and should be an interactive cluster. |
-| Access token | The access token that authenticates your [!DNL Azure Databricks] account. You can generate your access token using the [!DNL Azure Databricks] workspace. |
+| Domain | The URL of your [!DNL Databricks] workspace. For example, `https://adb-1234567890123456.7.azuredatabricks.net`. |
+| Cluster ID | The ID of your cluster in [!DNL Databricks]. This cluster must already be an existing cluster and should be an interactive cluster. |
+| Access token | The access token that authenticates your [!DNL Databricks] account. You can generate your access token using the [!DNL Databricks] workspace. |
 | Database | The name of your database in the delta lake. |
 
-For more information, read the [[!DNL Azure Databricks] overview](../../../../connectors/databases/databricks.md).
+For more information, read the [[!DNL Databricks] overview](../../../../connectors/databases/databricks.md).
 
 ## Navigate the sources catalog
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. Choose a category or use the search bar to find your source.
 
-To connect to [!DNL Azure Databricks], go to the *[!UICONTROL Databases]* category, select the **[!UICONTROL Azure Databricks]** source card, and then select **[!UICONTROL Set up]**.
+To connect to [!DNL Databricks], go to the *[!UICONTROL Databases]* category, select the **[!UICONTROL Azure Databricks]** source card, and then select **[!UICONTROL Set up]**.
 
 >[!TIP]
 >

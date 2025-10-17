@@ -175,8 +175,6 @@ role: Developer
       - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
-    - Loyalty {#loyalty}
-      - [Capillary Streaming Events](tutorials/api/create/loyalty/capillary.md)
     - Marketing automation {#marketing-automation}
       - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
       - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -357,7 +355,7 @@ role: Developer
   - [Subscribe to sources alerts](tutorials/ui/alerts.md)
   - [Save a dataflow as a draft](tutorials/ui/draft.md)
   - [Apply access labels to a dataflow](tutorials/ui/labels.md)
-  - [Create an Azure private endpoint](tutorials/ui/private-link.md)
+  - [Create a private endpoint](tutorials/ui/private-link.md)
 - Self-Serve Sources (Batch SDK) {#sdk}
   - [Overview](sources-sdk/overview.md)
   - Configure your connection specification {#config}

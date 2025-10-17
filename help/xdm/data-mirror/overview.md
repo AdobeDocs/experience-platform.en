@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Data Mirror overview
 description: Learn how Data Mirror enables row-level change ingestion from external databases into Adobe Experience Platform using model-based schemas with enforced uniqueness, relationships, and versioning.
 badge: Limited Availability
+exl-id: bb92c77a-6c7a-47df-885a-794cf55811dd
 ---
 # Data Mirror overview
 

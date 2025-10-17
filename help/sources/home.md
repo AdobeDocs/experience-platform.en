@@ -221,6 +221,8 @@ You can use the following sources to ingest data loyalty to Experience Platform.
 | --- | --- | --- |
 | [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Streaming | Azure |
 
+{style="table-layout:auto"}
+
 ### Marketing Automation {#marketing-automation}
 
 You can use the following sources to ingest marketing automation data to Experience Platform.

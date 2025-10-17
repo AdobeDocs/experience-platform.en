@@ -296,7 +296,7 @@ Create the schema first with `POST /tenant/schemas`. Then add the required descr
 
 >[!NOTE]
 >
->In the UI Schema Editor, the version descriptor and timestamp descriptors appears as "[!UICOTRNOL Version identifier]" and "[!UICOTRNOL Timestamp identifier]" respectively.
+>In the UI Schema Editor, the version descriptor and timestamp descriptors appears as "[!UICONTROL Version identifier]" and "[!UICONTROL Timestamp identifier]" respectively.
 
 <!-- >[!AVAILABILITY]
 >
