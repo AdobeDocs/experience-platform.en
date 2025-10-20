@@ -137,7 +137,7 @@ Audience-level monitoring for streaming destinations is currently available only
 - [[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)
 - [[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)
 - [[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)
-- [[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)
+- [[!DNL Snowflake]](../../destinations/catalog/warehouses/snowflake-batch.md)
 - [[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)
 - [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
 
@@ -339,7 +339,7 @@ For example, you are activating an audience called "Loyalty Members in Californi
 >   - [[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)
 >   - [[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)
 >   - [[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)
->   - [[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)
+>   - [[!DNL Snowflake]](../../destinations/catalog/warehouses/snowflake-batch.md)
 >   - [[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)
 >   - [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
 >   - Batch (file-based) destinations
