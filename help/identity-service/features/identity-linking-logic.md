@@ -17,6 +17,10 @@ There are two types of identities that get linked:
 * **Profile records**: These identities usually come from CRM systems.
 * **Experience Events**: These identities usually come from WebSDK implementation or the Adobe Analytics source.
 
+>[!IMPORTANT]
+>
+>Identity Service is case-sensitive. For example, **abc<span>@gmail.com** and **ABC<span>@GMAIL.COM** would be treated as two separate Email identities.
+
 ## Semantic meaning of establishing links
 
 An identity represents a real-world entity. If there is a link established between two identities, this means that the two identities are associated to one another. The following are some examples that illustrate this concept:
