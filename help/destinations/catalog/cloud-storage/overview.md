@@ -10,10 +10,6 @@ exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
 
 Adobe Experience Platform can deliver your audiences as data files to your cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV files for [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage], and SFTP. For [!DNL Amazon Kinesis] and [!DNL Azure Event Hubs] destinations, data is streamed out of Experience Platform in [!DNL JSON] format.
 
->[!NOTE]
->
->Looking for data warehouse destinations like Snowflake? See the [Warehouse destinations overview](../warehouses/overview.md).
-
 ![Adobe cloud storage destinations](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
 ## Supported cloud storage destinations {#supported-destinations}

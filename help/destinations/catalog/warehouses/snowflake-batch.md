@@ -190,7 +190,15 @@ The dynamic table contains the following columns:
 
 ### Multiple merge policies
 
-Audiences with multiple merge policies are not supported in a single dataflow. Different merge policies produce different snapshots, and in practice, data related to one audience would be overwritten by the data from the other audience, instead of data from both being exported as expected.
+Audiences with multiple merge policies are not supported in a single dataflow. Different merge policies produce different snapshots, and in practice, data related to one audience would be overwritten by the data from the other audience, instead of data from both being exported as expected. 
+
+### Default merge policy restriction
+
+Currently, only audiences mapped to the default merge policy can be exported.
+
+### Regional availability
+
+The Snowflake batch destination is currently only available in the VA7 region.
 
 ## Data usage and governance {#data-usage-governance}
 

@@ -157,6 +157,16 @@ The target attributes are automatically created in Snowflake using the attribute
 
 Check your Snowflake account to verify that the data was exported correctly.
 
+## Known limitations {#known-limitations}
+
+### Default merge policy restriction
+
+Currently, only audiences mapped to the default merge policy can be exported.
+
+### Regional availability
+
+The Snowflake batch destination is currently only available in the VA7 region.
+
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).

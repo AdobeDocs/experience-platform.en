@@ -33,4 +33,3 @@ You can activate your data to different destination categories in Adobe Experien
 - [[!UICONTROL Streaming] [!UICONTROL destinations] (links to HTTP destination)](streaming/http-destination.md)
 - [[!UICONTROL Survey] [!UICONTROL destinations] overview](survey/overview.md)
 - [[!UICONTROL Voice of the Customer] [!UICONTROL destinations] overview](voice/overview.md)
-- [[!UICONTROL Warehouse] [!UICONTROL destinations] overview](warehouses/overview.md)

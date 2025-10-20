@@ -230,7 +230,6 @@ role: Admin,User
         * [Medallia extension](./catalog/voice/medallia.md)
         * [Talk URL Inbox extension](./catalog/voice/talkurl.md)
     * Warehouse destinations {#warehouse}
-        * [Warehouse destinations overview](./catalog/warehouses/overview.md)
         * [Snowflake Batch connection](./catalog/warehouses/snowflake-batch.md)
         * [Snowflake Streaming connection](./catalog/warehouses/snowflake.md)
 * Destination SDK {#destination-sdk}
