@@ -2,6 +2,8 @@
 title: Stream Data From Talon.One To Experience Platform Using The UI
 description: Learn how to stream data from Talon.One into Adobe Experience Platform using the UI. This guide covers setup, data selection, and dataflow configuration.
 badge: Beta
+hide: true
+hidefromtoc: true
 ---
 # Stream [!DNL Talon.One] data to Experience Platform using the UI
 
@@ -28,13 +30,13 @@ This tutorial requires a working understanding of the following components of Ex
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. Select the appropriate category in the *[!UICONTROL Categories]* panel. Alternatively, use the search bar to navigate to the specific source that you want to use.
 
-To stream data from [!DNL Talon.One], select the **[!UICONTROL Talon One Streaming Events]** source card under *[!UICONTROL Loyalty]* and then select **[!UICONTROL Add data]**.
+To stream data from [!DNL Talon.One], select the **[!UICONTROL Talon.One Streaming Events]** source card under *[!UICONTROL Loyalty]* and then select **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
 >Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account is created, this option changes to **[!UICONTROL Add data]**.
 
-![The sources catalog in the UI with the Talon One Streaming Events card selected.](../../../../images/tutorials/create/talon-one-streaming/catalog.png)
+![The sources catalog in the UI with the Talon.One Streaming Events card selected.](../../../../images/tutorials/create/talon-one-streaming/catalog.png)
 
 ## Select data
 

@@ -2,6 +2,8 @@
 title: Talon.One Source Overview
 description: Learn about the Talon.One sources on Adobe Experience Platform
 badge: Beta
+hide: true
+hidefromtoc: true
 ---
 # [!DNL Talon.One]
 

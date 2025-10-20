@@ -2,6 +2,8 @@
 title: Ingest Batch Data From Talon.One Into Experience Platform Using The UI
 description: Learn how to ingest batch data from Talon.One into Adobe Experience Platform using the UI. This guide covers setup, data selection, and dataflow configuration.
 badge: Beta
+hide: true
+hidefromtoc: true
 ---
 # Ingest batch data from [!DNL Talon.One] into Experience Platform using the UI
 
@@ -38,7 +40,7 @@ To ingest data from [!DNL Talon.One], select the **[!UICONTROL Talon.One Batch S
 
 ### Create a new account
 
-To create a new account for your [!DNL Talon.One] source, select **[!UICONTROL New account]** and provide a name and an optional description for your account. Next, provide your [!DNL Talon.One] domain and your [!UICONTROL Talon One Management API Key]. When finished, select **[!UICONTROL Connect to source]** and allow for a few moments for your connection to establish.
+To create a new account for your [!DNL Talon.One] source, select **[!UICONTROL New account]** and provide a name and an optional description for your account. Next, provide your [!DNL Talon.One] domain and your [!UICONTROL Talon.One Management API Key]. When finished, select **[!UICONTROL Connect to source]** and allow for a few moments for your connection to establish.
 
 ![The create new account step of the sources workflow.](../../../../images/tutorials/create/talon-one-batch/new.png)
 
