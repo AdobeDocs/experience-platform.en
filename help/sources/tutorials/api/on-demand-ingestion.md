@@ -12,6 +12,10 @@ On-demand ingestion provides you with the capability to create a flow run agains
 
 This tutorial covers the steps on how to use on-demand ingestion and create a flow run using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
+>[!TIP]
+>
+>Retrying a flow run will only process files with timestamps that fall within the range of the original run.
+
 ## Getting started
 
 >[!NOTE]
