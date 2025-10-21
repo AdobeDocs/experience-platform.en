@@ -21,19 +21,25 @@ This guide requires a working understanding of XDM System. Refer to the [XDM ove
 
 ## Create a new schema {#create}
 
-In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner. The 'Select schema type' dropdown menu appears with options for [!UICONTROL Standard] or [!UICONTROL Model-based] schemas.
+In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner. The 'Select schema type' dropdown menu appears with options for [!UICONTROL Standard] or [!UICONTROL Relational] schemas.
 
 ![The Schemas workspace with [!UICONTROL Create Schema] highlighted and the 'Select schema type' dropdown displayed](../../images/ui/resources/schemas/create-schema.png).
 
-## Create a model-based schema {#create-model-based-schema}
+## Create a relational schema {#create-relational-schema}
 
 >[!AVAILABILITY]
 >
->Data Mirror and model-based schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
+>Data Mirror and relational schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
 
-Select **[!UICONTROL Model-based]** to define structured, model-based-style schemas with fine-grained control over records. Model-based schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture, and support multiple data models used in Campaign Orchestration, Data Distiller, and B2B implementations.
+>[!NOTE]
+>
+>Relational schemas were previously referred to as model-based schemas in earlier versions of Adobe Experience Platform documentation.
 
-To learn more, see the [Data Mirror](../../data-mirror/overview.md) or [Model-based schema](../../schema/model-based.md) overview.
+Select **[!UICONTROL Relational]** to define structured, relational-style schemas with fine-grained control over records. Relational schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture, and support multiple data models used in Campaign Orchestration, Data Distiller, and B2B implementations.
+
+To learn more, see the [Data Mirror](../../data-mirror/overview.md) or [Relational schema](../../schema/model-based.md) overview.
+
+<!-- NOTE: PLAT-251418 The link ../../schema/model-based.md may need to be updated to ../../schema/relational.md when the file is renamed -->
 
 ### Create manually {#create-manually}
 
@@ -41,13 +47,13 @@ To learn more, see the [Data Mirror](../../data-mirror/overview.md) or [Model-ba
 >
 >DDL file upload is only available for Adobe Journey Optimizer Orchestrated campaign license holders. Your UI may appear differently.
 
-The **[!UICONTROL Create a model-based schema]** dialog appears. You can choose either **[!UICONTROL Create manually]** or [**[!UICONTROL Upload DDL file]**](#upload-ddl-file) to define the schema structure.
+The **[!UICONTROL Create a relational schema]** dialog appears. You can choose either **[!UICONTROL Create manually]** or [**[!UICONTROL Upload DDL file]**](#upload-ddl-file) to define the schema structure.
 
-In the **[!UICONTROL Create a model-based schema]** dialog, select **[!UICONTROL Create manually]**, then select **[!UICONTROL Next]**.  
+In the **[!UICONTROL Create a relational schema]** dialog, select **[!UICONTROL Create manually]**, then select **[!UICONTROL Next]**.
    
 ![The Create a model-based schema dialog with Create manually selected and Next highlighted.](../../images/ui/resources/schemas/relational-dialog.png)
 
-The **[!UICONTROL Model-based schema details]** page appears. Enter a schema display name and an optional description, then select **[!UICONTROL Finish]** to create the schema.  
+The **[!UICONTROL Relational schema details]** page appears. Enter a schema display name and an optional description, then select **[!UICONTROL Finish]** to create the schema.
    
 ![The Model-based schema details view with [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/relational-details.png)
 
@@ -65,7 +71,7 @@ In the right rail, enable the **[!UICONTROL Version Identifier]** checkbox, then
 
 >[!IMPORTANT]
 >
->A model-based schema must include a version identifier field to support record-level updates and change data capture ingestion.
+>A relational schema must include a version identifier field to support record-level updates and change data capture ingestion.
 
 To define relationships, select **[!UICONTROL Add Relationship]** in the Schema Editor to create schema-level primary/foreign key relationships. See the tutorial on [adding schema-level relationships](../../tutorials/relationship-ui.md#relationship-field) for more information.
 
@@ -73,7 +79,7 @@ Next, proceed to [define primary keys](../fields/identity.md#define-a-identity-f
 
 >[!NOTE]
 >
->Once saved, the [!UICONTROL Type] field in the [!UICONTROL  Schema properties] sidebar indicates this is a [!UICONTROL Model-based] schema. This is also indicated in the details sidebar in the schema inventory view.
+>Once saved, the [!UICONTROL Type] field in the [!UICONTROL  Schema properties] sidebar indicates this is a [!UICONTROL Relational] schema. This is also indicated in the details sidebar in the schema inventory view.
 >![The Schema Editor canvas showing an empty model-based schema structure with Model-based type highlighted.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Upload a DDL file {#upload-ddl-file}
@@ -82,7 +88,7 @@ Next, proceed to [define primary keys](../fields/identity.md#define-a-identity-f
 >
 >DDL file upload is only available for Adobe Journey Optimizer Orchestrated campaign license holders.
 
-Use this workflow to define the schema by uploading a DDL file. In the **[!UICONTROL Create a model-based schema]** dialog, select **[!UICONTROL Upload DDL file]**, then either drag a local DDL file from your system or select **[!UICONTROL Choose files]**. Experience Platform validates the schema and displays a green checkmark if the file upload is successful. Select **[!UICONTROL Next]** to confirm the upload.  
+Use this workflow to define the schema by uploading a DDL file. In the **[!UICONTROL Create a relational schema]** dialog, select **[!UICONTROL Upload DDL file]**, then either drag a local DDL file from your system or select **[!UICONTROL Choose files]**. Experience Platform validates the schema and displays a green checkmark if the file upload is successful. Select **[!UICONTROL Next]** to confirm the upload.
 
 ![The Create a model-based schema dialog with [!UICONTROL Upload DDL file] selected and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/upload-ddl-file.png)
 
