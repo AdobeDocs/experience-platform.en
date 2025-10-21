@@ -131,12 +131,9 @@ To create a relational schema, select **[!UICONTROL Relational]** when creating 
 For detailed steps and use case guidance, see:
 
 * [Data Mirror overview](./data-mirror/overview.md) - Capabilities, use cases, and implementation planning
-* [Relational schema technical reference](./schema/model-based.md) - Technical specifications and constraints  
-<!-- NOTE: PLAT-251418 The link ./schema/model-based.md may need to be updated to ./schema/relational.md when the file is renamed -->
-* [UI tutorial](./ui/resources/schemas.md#create-model-based-schema)
-<!-- NOTE: PLAT-251418 The anchor #create-model-based-schema may need to be updated to #create-relational-schema -->
-* [API tutorial](./api/schemas.md#create-model-based-schema)
-<!-- NOTE: PLAT-251418 The anchor #create-model-based-schema may need to be updated to #create-relational-schema -->
+* [Relational schema technical reference](./schema/relational.md) - Technical specifications and constraints  
+* [UI tutorial](./ui/resources/schemas.md#create-relational-schema)
+* [API tutorial](./api/schemas.md#create-relational-schema)
 * [Descriptor (identifier) documentation](./api/descriptors.md#relationship-descriptor)
 * [Enable change data capture](../sources/tutorials/api/change-data-capture.md)
 

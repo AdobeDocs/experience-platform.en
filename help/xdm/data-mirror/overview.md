@@ -41,9 +41,7 @@ Before getting started, you should understand the following components of Experi
 * [Create schemas in Experience Platform UI](../ui/resources/schemas.md) or [API](../api/schemas.md)
 * [Configure cloud source connections](../../sources/home.md#cloud-storage)
 * [Apply change data capture concepts](../../sources/tutorials/api/change-data-capture.md) (upserts, deletes)
-* Distinguish between [standard](../schema/composition.md) and [relational schemas](../schema/model-based.md)
-
-<!-- NOTE: PLAT-251418 The link ../schema/model-based.md may need to be updated to ../schema/relational.md when the file is renamed -->
+* Distinguish between [standard](../schema/composition.md) and [relational schemas](../schema/relational.md)
 * [Define structural relationships with descriptors](../api/descriptors.md)
 
 ### Implementation requirements
@@ -62,7 +60,7 @@ Unlike standard ingestion approaches, Data Mirror preserves your database model 
 
 ### Define your schema structure
 
-Create [relational schemas](../schema/model-based.md) with required descriptors (metadata that define schema behavior and constraints). Choose a method that fits your team's workflow, either through the UI or directly through the API.
+Create [relational schemas](../schema/relational.md) with required descriptors (metadata that define schema behavior and constraints). Choose a method that fits your team's workflow, either through the UI or directly through the API.
 
 * **UI approach**: [Create relational schemas in the Schema Editor](../ui/resources/schemas.md#create-relational-schema)
 * **API approach**: [Create schemas via Schema Registry API](../api/schemas.md#create-relational-schema)
@@ -72,9 +70,7 @@ Create [relational schemas](../schema/model-based.md) with required descriptors 
 Define connections between datasets using relationship descriptors. Manage relationships and maintain data quality across datasets. These tasks ensure consistent joins and support compliance with data hygiene requirements.
 
 * **Schema relationships**: [Define relationships between datasets using descriptors](../api/descriptors.md)
-* **Record hygiene**: [Manage precision record deletes for datasets based on relational schemas](../../hygiene/ui/record-delete.md#model-based-record-delete)
-
-<!-- NOTE: PLAT-251418 The link anchor #model-based-record-delete may need to be updated in the target document -->
+* **Record hygiene**: [Manage precision record deletes for datasets based on relational schemas](../../hygiene/ui/record-delete.md#relational-record-delete)
 
 ### Configure your source connection
 
@@ -124,9 +120,7 @@ Review these key considerations to ensure your implementation aligns with suppor
 
 ### Data deletion and hygiene requirements
 
-All applications using relational schemas and Data Mirror must understand data deletion implications. Relational schemas enable precise record-level deletions that can impact related data across connected datasets. These deletion capabilities affect data integrity, compliance, and downstream application behavior regardless of your specific use case. Review [data hygiene requirements for datasets based on relational schemas](../../hygiene/ui/record-delete.md#model-based-record-delete) and plan for deletion scenarios before implementation.
-
-<!-- NOTE: PLAT-251418 The link anchor #model-based-record-delete may need to be updated in the target document -->
+All applications using relational schemas and Data Mirror must understand data deletion implications. Relational schemas enable precise record-level deletions that can impact related data across connected datasets. These deletion capabilities affect data integrity, compliance, and downstream application behavior regardless of your specific use case. Review [data hygiene requirements for datasets based on relational schemas](../../hygiene/ui/record-delete.md#relational-record-delete) and plan for deletion scenarios before implementation.
 
 ### Schema behavior selection
 
@@ -155,6 +149,4 @@ After reviewing this overview, you should be able to determine if Data Mirror fi
 3. **Schema designers** should plan your schema structure to identify required descriptors, field relationships, and data governance needs.
 4. **Implementation teams** should choose an ingestion method based on your source systems, real-time requirements, and operational workflows.
 
-For implementation details, see the [relational schemas documentation](../schema/model-based.md).
-
-<!-- NOTE: PLAT-251418 The link ../schema/model-based.md may need to be updated to ../schema/relational.md when the file is renamed -->
+For implementation details, see the [relational schemas documentation](../schema/relational.md).

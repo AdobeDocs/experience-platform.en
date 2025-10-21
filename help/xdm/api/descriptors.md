@@ -28,13 +28,11 @@ The `/descriptors` endpoint in the [!DNL Schema Registry] API allows you to prog
 
 The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-In addition to standard descriptors, the [!DNL Schema Registry] supports descriptor types for relational schemas, such as **primary key**, **version** and **timestamp**. These enforce uniqueness, control versioning, and define time-series fields at the schema level. If you are unfamiliar with relational schemas, review the [Data Mirror overview](../data-mirror/overview.md) and [relational schemas technical reference](../schema/model-based.md) before continuing.
+In addition to standard descriptors, the [!DNL Schema Registry] supports descriptor types for relational schemas, such as **primary key**, **version** and **timestamp**. These enforce uniqueness, control versioning, and define time-series fields at the schema level. If you are unfamiliar with relational schemas, review the [Data Mirror overview](../data-mirror/overview.md) and [relational schemas technical reference](../schema/relational.md) before continuing.
 
 >[!NOTE]
 >
 >Relational schemas were previously referred to as model-based schemas in earlier versions of the Adobe Experience Platform documentation. The descriptor functionality and API endpoints remain unchanged. Only the terminology has been updated for clarity.
-
-<!-- NOTE: PLAT-251418 The link ../schema/model-based.md may need to be updated to ../schema/relational.md when the file is renamed -->
 
 >[!IMPORTANT]
 >

@@ -37,9 +37,7 @@ In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in 
 
 Select **[!UICONTROL Relational]** to define structured, relational-style schemas with fine-grained control over records. Relational schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture, and support multiple data models used in Campaign Orchestration, Data Distiller, and B2B implementations.
 
-To learn more, see the [Data Mirror](../../data-mirror/overview.md) or [Relational schema](../../schema/model-based.md) overview.
-
-<!-- NOTE: PLAT-251418 The link ../../schema/model-based.md may need to be updated to ../../schema/relational.md when the file is renamed -->
+To learn more, see the [Data Mirror](../../data-mirror/overview.md) or [Relational schema](../../schema/relational.md) overview.
 
 ### Create manually {#create-manually}
 
@@ -51,11 +49,11 @@ The **[!UICONTROL Create a relational schema]** dialog appears. You can choose e
 
 In the **[!UICONTROL Create a relational schema]** dialog, select **[!UICONTROL Create manually]**, then select **[!UICONTROL Next]**.
    
-![The Create a model-based schema dialog with Create manually selected and Next highlighted.](../../images/ui/resources/schemas/relational-dialog.png)
+![The Create a relational schema dialog with Create manually selected and Next highlighted.](../../images/ui/resources/schemas/relational-dialog.png)
 
 The **[!UICONTROL Relational schema details]** page appears. Enter a schema display name and an optional description, then select **[!UICONTROL Finish]** to create the schema.
    
-![The Model-based schema details view with [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/relational-details.png)
+![The relational schema details view with [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/relational-details.png)
 
 The Schema Editor opens with an empty canvas for defining the schema structure. You can add fields as usual.
 
@@ -80,7 +78,9 @@ Next, proceed to [define primary keys](../fields/identity.md#define-a-identity-f
 >[!NOTE]
 >
 >Once saved, the [!UICONTROL Type] field in the [!UICONTROL  Schema properties] sidebar indicates this is a [!UICONTROL Relational] schema. This is also indicated in the details sidebar in the schema inventory view.
->![The Schema Editor canvas showing an empty model-based schema structure with Model-based type highlighted.](../../images/ui/resources/schemas/relational-empty-canvas.png)
+>![The Schema Editor canvas showing an empty relational schema structure with relational type highlighted.](../../images/ui/resources/schemas/relational-empty-canvas.png)
+
+<!-- PLAT-251418 image .png to update -->
 
 ### Upload a DDL file {#upload-ddl-file}
 
@@ -90,7 +90,9 @@ Next, proceed to [define primary keys](../fields/identity.md#define-a-identity-f
 
 Use this workflow to define the schema by uploading a DDL file. In the **[!UICONTROL Create a relational schema]** dialog, select **[!UICONTROL Upload DDL file]**, then either drag a local DDL file from your system or select **[!UICONTROL Choose files]**. Experience Platform validates the schema and displays a green checkmark if the file upload is successful. Select **[!UICONTROL Next]** to confirm the upload.
 
-![The Create a model-based schema dialog with [!UICONTROL Upload DDL file] selected and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/upload-ddl-file.png)
+![The Create a relational schema dialog with [!UICONTROL Upload DDL file] selected and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/upload-ddl-file.png)
+
+<!-- PLAT-251418 image .png to update -->
 
 The [!UICONTROL Select entities and fields to import] dialog appears, allowing you to preview the schema. Review the schema structure, and use the radio buttons and checkboxes to ensure that each entity has a primary key and version identifier specified.
 
@@ -106,7 +108,9 @@ Although required during ingestion, control columns like `_change_request_type` 
 >
 >The maximum supported file size for a DDL upload is 10MB.
 
-![The Model-based schema review view with imported fields shown and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/entities-and-files-to-inport.png)
+![The Relational schema review view with imported fields shown and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/entities-and-files-to-inport.png)
+
+<!-- PLAT-251418 image .png to update -->
     
 The schema opens in the Schema Editor, where you can adjust the structure before saving.
 

@@ -16,11 +16,11 @@ Relational schemas provide a flexible, controlled modeling pattern for represent
 
 >[!IMPORTANT]
 >
->Data deletion considerations apply to all relational schema implementations. Applications using these schemas must understand how deletions affect related datasets, compliance requirements, and downstream processes. Plan for deletion scenarios and review [data hygiene guidance](../../hygiene/ui/record-delete.md#model-based-record-delete) before implementation.
+>Data deletion considerations apply to all relational schema implementations. Applications using these schemas must understand how deletions affect related datasets, compliance requirements, and downstream processes. Plan for deletion scenarios and review [data hygiene guidance](../../hygiene/ui/record-delete.md#relational-record-delete) before implementation.
 
 >[!NOTE]
 >
->Relational schemas were previously referred to as model-based schemas in earlier versions of the Adobe Experience Platform documentation. Some applications may still use the term model-based schemas when creating schemas for relational data modeling use cases.
+>Relational schemas were previously referred to as model-based schemas in earlier versions of the Adobe Experience Platform documentation.
 
 Use relational schemas to:
 
@@ -183,9 +183,7 @@ All applications using relational schemas must consider:
 * **Data consistency**: Related datasets must maintain consistency during deletion operations
 * **Deletion planning**: Account for downstream impacts across all connected datasets and applications during the design phase
 
-For implementation guidance, see [Deleting records from datasets based on relational schemas](../../hygiene/ui/record-delete.md#model-based-record-delete).
-
-<!-- NOTE: The link anchor #model-based-record-delete may need to be updated in the target document to reflect the new terminology -->
+For implementation guidance, see [Deleting records from datasets based on relational schemas](../../hygiene/ui/record-delete.md#relational-record-delete).
 
 ## Limitations and considerations {#limitations}
 
