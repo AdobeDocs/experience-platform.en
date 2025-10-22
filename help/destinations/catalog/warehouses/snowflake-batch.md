@@ -1,7 +1,6 @@
 ---
 title: Snowflake Batch connection
-description: Export data to your Snowflake account using private listings.
-badgeBeta: label="Beta" type="Informative"
+description: Create a live Snowflake data share to receive daily audience updates directly as shared tables into your account.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
 ---
@@ -77,6 +76,8 @@ Before configuring your Snowflake connection, make sure you meet the following p
 
 * You have access to a [!DNL Snowflake] account.
 * Your Snowflake account is subscribed to private listings. You or someone in your company who has account administrator privileges on Snowflake can configure this.
+
+Read the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) for more information on the necessary permissions.
 
 ## Supported audiences {#supported-audiences}
 
@@ -188,17 +189,13 @@ The dynamic table contains the following columns:
 
 ## Known limitations {#known-limitations}
 
-### Multiple merge policies
-
-Audiences with multiple merge policies are not supported in a single dataflow. Different merge policies produce different snapshots, and in practice, data related to one audience would be overwritten by the data from the other audience, instead of data from both being exported as expected. 
-
-### Default merge policy restriction
+### Default merge policy restriction {#default-merge-policy-restriction}
 
 Currently, only audiences mapped to the default merge policy can be exported.
 
-### Regional availability
+### Regional availability {#regional-availability}
 
-The Snowflake batch destination is currently only available in the VA7 region.
+The [!DNL Snowflake] batch destination is currently only available to Real-Time CDP customers provisioned in the Experience Platform VA7 region.
 
 ## Data usage and governance {#data-usage-governance}
 
