@@ -22,10 +22,10 @@ This enhancement enables Experience Platform to identify and unify multiple reco
 
 Previously, Accounts and Opportunities relied on identity graph-based resolution that connected identities, including all historical ingestions. In the new entity-resolution approach, identities are linked based on the latest data only.
 
-* Account and Opportunity are entity resolved with a time-precedence based merging:
-  * Account: identities using the `b2b_account` namespace.
-  * Opportunity: identities using the `b2b_opportunity` namespace.
-* All other entities are simply unified and only primary identity overlaps are merged with time-precedence based merging.
+- Account and Opportunity are entity resolved with a time-precedence based merging:
+  - Account: identities using the `b2b_account` namespace.
+  - Opportunity: identities using the `b2b_opportunity` namespace.
+- All other entities are simply unified and only primary identity overlaps are merged with time-precedence based merging.
 
 >[!NOTE]
 >
