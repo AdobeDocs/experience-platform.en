@@ -28,7 +28,11 @@ The `/descriptors` endpoint in the [!DNL Schema Registry] API allows you to prog
 
 The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-In addition to standard descriptors, the [!DNL Schema Registry] supports descriptor types for model-based schemas, such as **primary key**, **version** and **timestamp**. These enforce uniqueness, control versioning, and define time-series fields at the schema level. If you are unfamiliar with model-based schemas, review the [Data Mirror overview](../data-mirror/overview.md) and [model-based schemas technical reference](../schema/model-based.md) before continuing.
+In addition to standard descriptors, the [!DNL Schema Registry] supports descriptor types for relational schemas, such as **primary key**, **version** and **timestamp**. These enforce uniqueness, control versioning, and define time-series fields at the schema level. If you are unfamiliar with relational schemas, review the [Data Mirror overview](../data-mirror/overview.md) and [relational schemas technical reference](../schema/relational.md) before continuing.
+
+>[!NOTE]
+>
+>Relational schemas were previously referred to as model-based schemas in earlier versions of the Adobe Experience Platform documentation. The descriptor functionality and API endpoints remain unchanged. Only the terminology has been updated for clarity.
 
 >[!IMPORTANT]
 >
@@ -391,7 +395,7 @@ Use these properties to declare how a source field (foreign key) relates to a de
 The API supports two patterns:
 
 - `xdm:descriptorOneToOne`: standard 1:1 relationship.
-- `xdm:descriptorRelationship`: general pattern for new work and model-based schemas (supports cardinality, naming, and non-primary key targets).
+- `xdm:descriptorRelationship`: general pattern for new work and relational schemas (supports cardinality, naming, and non-primary key targets).
 
 ##### One-to-one relationship (standard schemas)
 
@@ -421,9 +425,9 @@ The following table describes the fields required to define a one-to-one relatio
 | `xdm:destinationVersion` | The major version of the reference schema. |
 | `xdm:destinationProperty` | (Optional) Path to a target field within the reference schema. If this property is omitted, the target field is inferred by any fields that contain a matching reference identity descriptor (see below). |
 
-##### General relationship (model-based schemas and recommended for new projects)
+##### General relationship (relational schemas and recommended for new projects)
 
-Use this descriptor for all new implementations and for model-based schemas. It allows you to define the relationship's cardinality (such as one-to-one or many-to-one), specify relationship names, and link to a destination field that is not the primary key (non-primary key).
+Use this descriptor for all new implementations and for relational schemas. It allows you to define the relationship's cardinality (such as one-to-one or many-to-one), specify relationship names, and link to a destination field that is not the primary key (non-primary key).
 
 The following examples show how to define a general relationship descriptor.
 
@@ -468,7 +472,7 @@ Use the following guidelines to decide which relationship descriptor to apply:
 
 | Situation                       | Descriptor to use             |
 | --------------------------------------------------------------------- | ----------------------------------------- |
-| New work or model-based schemas                                       | `xdm:descriptorRelationship`              |
+| New work or relational schemas                                       | `xdm:descriptorRelationship`              |
 | Existing 1:1 mapping in standard schemas                              | Continue using `xdm:descriptorOneToOne` unless you need features supported only by `xdm:descriptorRelationship`.     |
 | Need many-to-one or optional cardinality (`1:1`, `1:0`, `M:1`, `M:0`) | `xdm:descriptorRelationship`              |
 | Need relationship names or titles for UI/downstream readability       | `xdm:descriptorRelationship`              |
@@ -487,13 +491,13 @@ The following table compares the capabilities of the two descriptor types:
 | Cardinality        | 1:1                      | 1:1, 1:0, M:1, M:0 (informational)                                       |
 | Destination target | Identity/explicit field  | Primary key by default, or non-primary key via `xdm:destinationProperty`          |
 | Naming fields      | Not supported            | `xdm:sourceToDestinationName`, `xdm:destinationToSourceName`, and titles |
-| Relational fit     | Limited                  | Primary pattern for model-based schemas                                  |
+| Relational fit     | Limited                  | Primary pattern for relational schemas                                  |
 
 ##### Constraints and validation
 
 Follow these requirements and recommendations when defining a general relationship descriptor:
 
-- For model-based schemas, place the source field (foreign key) at the root level. This is a current technical limitation for ingestion, not just a best-practice recommendation.
+- For relational schemas, place the source field (foreign key) at the root level. This is a current technical limitation for ingestion, not just a best-practice recommendation.
 - Ensure that data types of source and destination fields are compatible (numeric, date, boolean, string).
 - Remember that cardinality is informational; storage does not enforce it. Specify cardinality in `<source>:<destination>` format. Accepted values are: `1:1`, `1:0`, `M:1`, or `M:0`.
 
