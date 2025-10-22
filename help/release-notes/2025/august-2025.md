@@ -114,7 +114,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 | Feature | Description |
 | ------- | ----------- |
-| Model-Based Schemas | Simplify your data modeling with Model-Based Schemas. You can now create schemas more easily with comprehensive how-to examples and guidance. This feature is currently available to Campaign Orchestration license holders and will expand to Data Distiller customers at GA, making data modeling more accessible and efficient. |
+| Relational schemas | Simplify your data modeling with Relational Schemas (formerly known as Model-Based Schemas). You can now create schemas more easily with comprehensive how-to examples and guidance. This feature is currently available to Campaign Orchestration license holders and will expand to Data Distiller customers at GA, making data modeling more accessible and efficient. |
 
 For more information, read the [XDM overview](../../xdm/home.md).
 
