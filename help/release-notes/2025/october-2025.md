@@ -30,7 +30,7 @@ Experience Platform allows you to subscribe to event-based alerts for various Ex
 
 | Feature | Description |
 | --- | --- |
-| Destination failure rate alert | A new alert has been added for destinations: **Destination failure rate exceeds threshold**. This alert notifies you when the number of failed records during data activation has exceeded the allowed threshold, enabling you to respond quickly to activation issues. |
+| Destination failure rate alert | A new alert has been added for destinations: **Destination failure rate exceeds threshold**. This alert notifies you when the number of failed records during data activation has exceeded the allowed threshold, enabling you to respond quickly to activation issues. Read the documentation on [standard alerts rules](../../observability/alerts/rules.md) for more information. |
 
 {style="table-layout:auto"}
 
