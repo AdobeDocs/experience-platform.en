@@ -117,7 +117,7 @@ The details page also displays a list of identities that failed and identities t
 
 You can view information about the activated, excluded, or failed identities broken down on an audience level, for each audience that is part of the dataflow.
 
-Audience-level monitoring for streaming destinations is only available for certain destinations. See the [audience level view](#audience-level-view) section for the list.
+Audience-level monitoring for streaming destinations is only available for certain destinations. See the [audience level view](#audience-level-view) section for a list of supported destinations.
 
 ![Audience-level monitoring for streaming destinations.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
