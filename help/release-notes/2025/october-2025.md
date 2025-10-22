@@ -17,6 +17,7 @@ description: The October 2025 release notes for Adobe Experience Platform.
 **Release date: October 22, 2025**
 
 New features and updates to existing features in Adobe Experience Platform:
+
 - [Alerts](#alerts)
 - [Destinations](#destinations)
 - [Sources](#sources)
@@ -43,8 +44,8 @@ For more information about alerts, read the [[!DNL Observability Insights] overv
 
 | Destination | Description |
 | --- | --- |
-| [!DNL AdForm] | Use this destination to send Adobe Real-Time CDP audiences to [!DNL AdForm] for activation based on the Experience Cloud ID (ECID) and [!DNL AdForm]'s ID Fusion. [!DNL AdForm]'s ID Fusion is an ID resolution service that enables you to activate your first party audiences based on the Experience Cloud ID (ECID). |
-| [!DNL Amazon Ads] | We have added additional personal identifiers support such as `firstName`, `lastName`, `street`, `city`, `state`, `zip`, and `country`. Mapping these fields as target identities can improve audience match rates. |
+| [!DNL Adform] | Use this destination to send Adobe Real-Time CDP audiences to [!DNL Adform] for activation based on the Experience Cloud ID (ECID) and [!DNL Adform]'s ID Fusion. [!DNL Adform]'s ID Fusion is an ID resolution service that enables you to activate your first party audiences based on the Experience Cloud ID (ECID). Read the [[!DNL Adform] documentation](../../destinations/catalog/advertising/adform.md) for more information |
+| [!DNL Amazon Ads] | We have added additional personal identifiers support such as `firstName`, `lastName`, `street`, `city`, `state`, `zip`, and `country`. Mapping these fields as target identities can improve audience match rates. Read the [[!DNL Amazon Ads] documentation](../../destinations/catalog/advertising/amazon-ads.md) for more information. |
 
 {style="table-layout:auto"}
 
@@ -75,9 +76,15 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Feature | Description |
 | --- | --- |
 | Dataset creation change for Adobe Analytics source | As part of the dataflow creation process between Adobe Analytics and Experience Platform, a dataset is created via Catalog Service. This dataset serves as a container for the data to land in. Currently, this process involves a DataSource ID that is pulled from the Analytics report suite, sent to Catalog Service, and then is associated with the newly created dataset. After the change, the option to provide the DataSource ID will no longer be available during dataset creation. Therefore, new datasets created by the Analytics source will no longer have a DataSource ID associated with it in Catalog Service. This change applies only to the metadata and does not change the storage of data in the dataset in any way. However, it is important to know that the DataSource ID provided by Catalog Service will no longer be available in newly created datasets for Adobe Analytics. Read the [Adobe Analytics source documentation](../../sources/connectors/adobe-applications/analytics.md) for more information on the Adobe Analytics source connector. |
-| General Availability of [!DNL Google Ads] source (API-only) | The API version of the [!DNL Google Ads] source is now in General Availability. The API documentation has been updated to reflect that the latest version is now `v21`, and Experience Platform supports all versions v19 and above. The UI version remains in beta and only supports one-time ingestion. To use incremental data ingestion, use the API route. |
-| [!DNL Azure Event Hubs] virtual network support | Adobe now explicitly supports virtual network connections to Azure Event Hubs, enabling data transfer over private networks rather than public networks. Customers can allowlist the Experience Platform VNet to route Event Hubs traffic privately through the Azure private backbone, providing enhanced security and compliance for data ingestion workflows. |
+| General Availability of [!DNL Google Ads] source (API-only) | The [API version of the [!DNL Google Ads]](../../sources/tutorials/api/create/advertising/ads.md) source is now in General Availability. The API documentation has been updated to reflect that the latest version is now `v21`, and Experience Platform supports all versions v19 and above. [The UI version](../../sources/tutorials/ui/create/advertising/ads.md) remains in beta and only supports one-time ingestion. To use incremental data ingestion, use the API route. |
+| [!DNL Azure Event Hubs] virtual network support | Adobe now explicitly supports virtual network connections to [[!DNL Azure Event Hubs]](../../sources/connectors/cloud-storage/eventhub.md), enabling data transfer over private networks rather than public networks. Customers can allowlist the Experience Platform VNet to route Event Hubs traffic privately through the Azure private backbone, providing enhanced security and compliance for data ingestion workflows. |
 
 {style="table-layout:auto"}
 
 For more information, read the [sources overview](../../sources/home.md).
+
+<!--
+| Source | Description |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} [!DNL Talon.one] sources for loyalty data | Use the [[!DNL Talon.One] sources](../../sources/connectors/loyalty/talon-one.md) to ingest batch and streaming loyalty data into Experience Platform. The connector supports streaming of profile data, transaction data, and loyalty data including points earned, points redeemed, points expired, and tier data. For more information, read the [!DNL Talon.One] [batch](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md) and [streaming](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md) documentation. |
+-->
