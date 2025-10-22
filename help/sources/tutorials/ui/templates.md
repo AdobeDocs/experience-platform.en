@@ -62,9 +62,9 @@ A pop-up window appears presenting you with the option to browse templates or us
 
 >[!NOTE]
 >
->Templates can auto-generate model-based schemas when working with sources that require change data capture workflows or support multiple data models. These schemas enable Data Mirror capabilities for real-time data synchronization.  
->When using templates with model-based schemas, the auto-generated assets will include the required primary key, version identifier, and timestamp identifier fields.  
->For more information, see the [Data Mirror overview](../../../xdm/data-mirror/overview.md) and [model-based schemas technical reference](../../../xdm/schema/model-based.md).
+>Templates can auto-generate relational schemas when working with sources that require change data capture workflows or support multiple data models. These schemas enable Data Mirror capabilities for real-time data synchronization.  
+>When using templates with relational schemas, the auto-generated assets will include the required primary key, version identifier, and timestamp identifier fields.  
+>For more information, see the [Data Mirror overview](../../../xdm/data-mirror/overview.md) and [relational schemas technical reference](../../../xdm/schema/relational.md).
 
 To use auto-generated assets, select **[!UICONTROL Browse templates]** and then select **[!UICONTROL Select]**.
 
