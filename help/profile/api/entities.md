@@ -29,7 +29,7 @@ Previously, Accounts and Opportunities relied on identity graph-based resolution
 
 >[!NOTE]
 >
->Entity resolution only supports `b2b_account` and `b2b_opportunity`. Identities from other spaces are not used in entity resolution. If you are using custom namespaces, then you will not be able to find accounts and opportunities. 
+>Entity resolution only supports `b2b_account` and `b2b_opportunity`. Identities from other namespaces are not used in entity resolution. If you are using custom namespaces, then you will not be able to find accounts and opportunities. 
 
 ### How does entity resolution work?
 
