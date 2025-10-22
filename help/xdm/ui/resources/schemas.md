@@ -51,9 +51,13 @@ In the **[!UICONTROL Create a relational schema]** dialog, select **[!UICONTROL 
    
 ![The Create a relational schema dialog with Create manually selected and Next highlighted.](../../images/ui/resources/schemas/relational-dialog.png)
 
+<!-- PLAT-251418 Update image .png -->
+
 The **[!UICONTROL Relational schema details]** page appears. Enter a schema display name and an optional description, then select **[!UICONTROL Finish]** to create the schema.
    
 ![The relational schema details view with [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/relational-details.png)
+
+<!-- PLAT-251418 Update image .png -->
 
 The Schema Editor opens with an empty canvas for defining the schema structure. You can add fields as usual.
 
