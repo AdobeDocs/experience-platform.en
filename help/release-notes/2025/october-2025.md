@@ -17,7 +17,6 @@ description: The October 2025 release notes for Adobe Experience Platform.
 **Release date: October 22, 2025**
 
 New features and updates to existing features in Adobe Experience Platform:
-
 - [Alerts](#alerts)
 - [Destinations](#destinations)
 - [Sources](#sources)
@@ -46,8 +45,6 @@ For more information about alerts, read the [[!DNL Observability Insights] overv
 | --- | --- |
 | [!DNL AdForm] | Use this destination to send Adobe Real-Time CDP audiences to [!DNL AdForm] for activation based on the Experience Cloud ID (ECID) and [!DNL AdForm]'s ID Fusion. [!DNL AdForm]'s ID Fusion is an ID resolution service that enables you to activate your first party audiences based on the Experience Cloud ID (ECID). |
 | [!DNL Amazon Ads] | We have added additional personal identifiers support such as `firstName`, `lastName`, `street`, `city`, `state`, `zip`, and `country`. Mapping these fields as target identities can improve audience match rates. |
-| [!DNL Snowflake Batch] (Limited availability) | Create a live [!DNL Snowflake] data share to receive daily audience updates directly as shared tables into your account. This integration is currently available for customer organizations provisioned in the VA7 region. |
-| [!DNL Snowflake Streaming] (Limited availability) | Create a live [!DNL Snowflake] data share to receive streaming audience updates directly as shared tables into your account. This integration is currently available for customer organizations provisioned in the VA7 region. |
 
 {style="table-layout:auto"}
 
@@ -63,6 +60,11 @@ For more information about alerts, read the [[!DNL Observability Insights] overv
 {style="table-layout:auto"}
 
 For more information, read the [Destinations overview](../../destinations/home.md).
+
+<!--
+| [!DNL Snowflake Batch] (Limited availability) | Create a live [!DNL Snowflake] data share to receive daily audience updates directly as shared tables into your account. This integration is currently available for customer organizations provisioned in the VA7 region. |
+| [!DNL Snowflake Streaming] (Limited availability) | Create a live [!DNL Snowflake] data share to receive streaming audience updates directly as shared tables into your account. This integration is currently available for customer organizations provisioned in the VA7 region. |
+-->
 
 ## Sources {#sources}
 
