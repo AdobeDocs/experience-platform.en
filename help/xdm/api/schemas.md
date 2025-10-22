@@ -194,8 +194,6 @@ The schema composition process begins by assigning a class. The class defines ke
 
 For instructions on creating a schema without classes or field groups, known as a relational schema, see the [Create a relational schema](#create-relational-schema) section.
 
-<!-- NOTE: PLAT-251418 The anchor #create-relational-schema may need to be updated if the section ID is changed -->
-
 >[!NOTE]
 >
 >The example call below is only a baseline example of how to create a schema in the API, with the minimal composition requirements of a class and no field groups. For complete steps on how to create a schema in the API, including how to assign fields using field groups and data types, see the [schema creation tutorial](../tutorials/create-schema-api.md).

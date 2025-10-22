@@ -51,13 +51,9 @@ In the **[!UICONTROL Create a relational schema]** dialog, select **[!UICONTROL 
    
 ![The Create a relational schema dialog with Create manually selected and Next highlighted.](../../images/ui/resources/schemas/relational-dialog.png)
 
-<!-- PLAT-251418 Update image .png -->
-
 The **[!UICONTROL Relational schema details]** page appears. Enter a schema display name and an optional description, then select **[!UICONTROL Finish]** to create the schema.
    
 ![The relational schema details view with [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/relational-details.png)
-
-<!-- PLAT-251418 Update image .png -->
 
 The Schema Editor opens with an empty canvas for defining the schema structure. You can add fields as usual.
 
@@ -84,8 +80,6 @@ Next, proceed to [define primary keys](../fields/identity.md#define-a-identity-f
 >Once saved, the [!UICONTROL Type] field in the [!UICONTROL  Schema properties] sidebar indicates this is a [!UICONTROL Relational] schema. This is also indicated in the details sidebar in the schema inventory view.
 >![The Schema Editor canvas showing an empty relational schema structure with relational type highlighted.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
-<!-- PLAT-251418 image .png to update -->
-
 ### Upload a DDL file {#upload-ddl-file}
 
 >[!AVAILABILITY]
@@ -95,8 +89,6 @@ Next, proceed to [define primary keys](../fields/identity.md#define-a-identity-f
 Use this workflow to define the schema by uploading a DDL file. In the **[!UICONTROL Create a relational schema]** dialog, select **[!UICONTROL Upload DDL file]**, then either drag a local DDL file from your system or select **[!UICONTROL Choose files]**. Experience Platform validates the schema and displays a green checkmark if the file upload is successful. Select **[!UICONTROL Next]** to confirm the upload.
 
 ![The Create a relational schema dialog with [!UICONTROL Upload DDL file] selected and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/upload-ddl-file.png)
-
-<!-- PLAT-251418 image .png to update -->
 
 The [!UICONTROL Select entities and fields to import] dialog appears, allowing you to preview the schema. Review the schema structure, and use the radio buttons and checkboxes to ensure that each entity has a primary key and version identifier specified.
 
@@ -114,8 +106,7 @@ Although required during ingestion, control columns like `_change_request_type` 
 
 ![The Relational schema review view with imported fields shown and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/entities-and-files-to-inport.png)
 
-<!-- PLAT-251418 image .png to update -->
-    
+
 The schema opens in the Schema Editor, where you can adjust the structure before saving.
 
 Next, proceed to [add additional fields](#add-field-groups), and [add additional schema-level relationships](../../tutorials/relationship-ui.md#relationship-field) as needed.
