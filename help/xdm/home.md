@@ -99,15 +99,19 @@ To begin ingesting data into Experience Platform, you can use Catalog Service to
 
 See the [Catalog Service overview](../catalog/home.md) for more information. See the [Data Ingestion overview](../ingestion/home.md) for more information on Adobe Experience Platform Data Ingestion.
 
-### Data Mirror and model-based schemas {#model-based-schemas}
+### Data Mirror and relational schemas {#relational-schemas}
 
 >[!AVAILABILITY]
 >
->Data Mirror and model-based schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
+>Data Mirror and relational schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
 
-Data Mirror is an Adobe Experience Platform capability that enables advanced database synchronization using model-based schemas. For a complete overview of Data Mirror capabilities and use cases, see the [Data Mirror overview](./data-mirror/overview.md).
+>[!NOTE]
+>
+>Relational schemas were previously referred to as model-based schemas in earlier versions of Adobe Experience Platform documentation. The functionality remains the same, only the terminology has changed for clarity.
 
-Data Mirror operates through model-based schemas, which are designed for structured, relational-style data patterns. They enforce primary keys, support version identifiers, and define schema-to-schema relationships using primary and foreign keys. Unlike standard XDM schemas, they do not require classes or field groups and are optimized for change data capture ingestion workflows. 
+Data Mirror is an Adobe Experience Platform capability that enables advanced database synchronization using relational schemas. For a complete overview of Data Mirror capabilities and use cases, see the [Data Mirror overview](./data-mirror/overview.md).
+
+Data Mirror operates through relational schemas, which are designed for structured, relational-style data patterns. They enforce primary keys, support version identifiers, and define schema-to-schema relationships using primary and foreign keys. Unlike standard XDM schemas, they do not require classes or field groups and are optimized for change data capture ingestion workflows. 
 
 For details on how to define schema-to-schema relationships, see the [descriptors endpoint documentation](./api/descriptors.md).
 
@@ -118,7 +122,7 @@ Use Data Mirror when you need to:
 * Support advanced analytics and journey orchestration
 * Enable precise change tracking with upserts and deletes
 
-To create a model-based schema, select **[!UICONTROL model-based]** when creating a schema. Model-based schemas do not use classes or field groups. Instead, you define the structure manually or upload a DDL file. Model-based schemas require a primary key, version identifier, and if applicable, timestamp identifier fields. You can then configure additional fields and define relationships with other schemas.
+To create a relational schema, select **[!UICONTROL Relational]** when creating a schema. Relational schemas do not use classes or field groups. Instead, you define the structure manually or upload a DDL file. Relational schemas require a primary key, version identifier, and if applicable, timestamp identifier fields. You can then configure additional fields and define relationships with other schemas.
 
 >[!NOTE]
 >
@@ -127,9 +131,9 @@ To create a model-based schema, select **[!UICONTROL model-based]** when creatin
 For detailed steps and use case guidance, see:
 
 * [Data Mirror overview](./data-mirror/overview.md) - Capabilities, use cases, and implementation planning
-* [Model-based schema technical reference](./schema/model-based.md) - Technical specifications and constraints  
-* [UI tutorial](./ui/resources/schemas.md#create-model-based-schema)
-* [API tutorial](./api/schemas.md#create-model-based-schema)
+* [Relational schema technical reference](./schema/relational.md) - Technical specifications and constraints  
+* [UI tutorial](./ui/resources/schemas.md#create-relational-schema)
+* [API tutorial](./api/schemas.md#create-relational-schema)
 * [Descriptor (identifier) documentation](./api/descriptors.md#relationship-descriptor)
 * [Enable change data capture](../sources/tutorials/api/change-data-capture.md)
 
