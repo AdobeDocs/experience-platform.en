@@ -31,7 +31,7 @@ Experience Platform allows you to subscribe to event-based alerts for various Ex
 
 | Feature | Description |
 | --- | --- |
-| Destination failure rate alert | A new alert has been added for destinations: **Destination failure rate exceeds threshold**. This alert notifies you when the number of failed records during data activation has exceeded the allowed threshold, enabling you to respond quickly to activation issues. Read the documentation on [standard alerts rules](../../observability/alerts/rules.md) for more information. |
+| Activation failure rate alert | A new alert has been added for destinations: **Activation failure rate exceeds threshold**. This alert notifies you when the number of failed records during data activation has exceeded the allowed threshold, enabling you to respond quickly to activation issues. Read the documentation on [standard alerts rules](../../observability/alerts/rules.md) for more information. |
 
 {style="table-layout:auto"}
 
@@ -47,6 +47,8 @@ For more information about alerts, read the [[!DNL Observability Insights] overv
 | --- | --- |
 | [!DNL Adform] | Use this destination to send Adobe Real-Time CDP audiences to [!DNL Adform] for activation based on the Experience Cloud ID (ECID) and [!DNL Adform]'s ID Fusion. [!DNL Adform]'s ID Fusion is an ID resolution service that enables you to activate your first party audiences based on the Experience Cloud ID (ECID). Read the [[!DNL Adform] documentation](../../destinations/catalog/advertising/adform.md) for more information |
 | [!DNL Amazon Ads] | Additional personal identifier support has been added. This includes fields such as `firstName`, `lastName`, `street`, `city`, `state`, `zip`, and `country`. Mapping these fields as target identities can improve audience match rates. Read the [[!DNL Amazon Ads] documentation](../../destinations/catalog/advertising/amazon-ads.md) for more information. |
+| [!DNL Snowflake Batch] (Limited availability) | Create a live [!DNL Snowflake] data share to receive daily audience updates directly as shared tables into your account. This integration is currently available for customer organizations provisioned in the VA7 region. Read the [[!DNL Snowflake Batch] documentation](../../destinations/catalog/cloud-storage/) |
+| [!DNL Snowflake Streaming] (Limited availability) | Create a live [!DNL Snowflake] data share to receive streaming audience updates directly as shared tables into your account. This integration is currently available for customer organizations provisioned in the VA7 region. |
 
 {style="table-layout:auto"}
 
@@ -54,7 +56,6 @@ For more information about alerts, read the [[!DNL Observability Insights] overv
 
 | Feature | Description |
 | --- | --- |
-| Support for [!DNL AES256] server-side encryption in [!DNL Amazon S3] destinations | [!DNL Amazon S3] destinations now support [!DNL AES256] server-side encryption, providing enhanced security for your exported data. You can configure this encryption method when setting up or updating your [!DNL Amazon S3] destination connections, ensuring that your data is encrypted at rest using industry-standard [!DNL AES256] encryption algorithms. For more information, read the [[!DNL Amazon] documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingEncryption.html). |
 | [Several new destinations that support audience-level monitoring](../../dataflows/ui/monitor-destinations.md#audience-level-view) | The following destinations now support audience-level monitoring: <ul><li>[!DNL Airship Tags]</li><li>(API) [!DNL Salesforce Marketing Cloud]</li><li>[!DNL Marketo Engage]</li><li>[!DNL Microsoft Bing]</li><li>(V1) [!DNL Pega CDH Realtime Audience]</li><li>(V2) [!DNL Pega CDH Realtime Audience]</li><li>[!DNL Salesforce Marketing Cloud] Account Engagement</li><li>[!DNL The Trade Desk]</li></ul> |
 | Dataset export guardrails fix | A fix has been implemented to the dataset export guardrails. Previously, some datasets that included a timestamp column but were _not_ based on the XDM Experience Events schema were incorrectly treated as Experience Events datasets, limiting exports to a 365-day lookback window. The documented 365-day lookback guardrail now applies exclusively to Experience Events datasets. Datasets using any schema other than the XDM Experience Events schema are now governed by the 10 billion records guardrail. Some customers may see increased export numbers for datasets which erroneously fell under the 365-day lookback window. This enables you to export datasets for predictive workflows that have a long lookback window. For more information, read the [dataset export guardrails](../../destinations/guardrails.md#dataset-exports). |
 | Enhanced audience-level reporting for enterprise destinations | After this release, customers will see more accurate audience reporting numbers that include only audiences relevant for the selected destination. This monitoring adjustment ensures reporting includes only audiences mapped on the dataflow, providing clearer insights into actual data activation. This does not affect the amount of data being activated—it is purely a monitoring enhancement to improve reporting accuracy. |
@@ -62,11 +63,6 @@ For more information about alerts, read the [[!DNL Observability Insights] overv
 {style="table-layout:auto"}
 
 For more information, read the [Destinations overview](../../destinations/home.md).
-
-<!--
-| [!DNL Snowflake Batch] (Limited availability) | Create a live [!DNL Snowflake] data share to receive daily audience updates directly as shared tables into your account. This integration is currently available for customer organizations provisioned in the VA7 region. |
-| [!DNL Snowflake Streaming] (Limited availability) | Create a live [!DNL Snowflake] data share to receive streaming audience updates directly as shared tables into your account. This integration is currently available for customer organizations provisioned in the VA7 region. |
--->
 
 ## Sources {#sources}
 
