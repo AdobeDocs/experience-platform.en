@@ -323,8 +323,8 @@ For example, you are activating an audience called "Loyalty Members in Californi
 >   - [[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)
 >   - [[!DNL Salesforce Marketing Cloud] (API)](../../destinations/catalog/email-marketing/salesforce-marketing-cloud.md)
 >   - [[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)
+>   - [[!DNL Snowflake]](../../destinations/catalog/warehouses/snowflake-batch.md)
 >   - [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md)
->   - [[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)
 >   - [[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)
 >   - [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
 >   - Batch (file-based) destinations
