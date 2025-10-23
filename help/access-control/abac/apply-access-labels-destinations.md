@@ -70,7 +70,7 @@ You can add standard and custom labels to destination dataflows. After you add a
 * Currently, access labels can only be applied to existing dataflows. This means that you need to create a dataflow to a destination before you can apply access labels.
 * You cannot apply an access label to a destination dataflow if you do not have access to that label.
 * When adding multiple labels to a destination dataflow, users who should be able to view and edit the dataflow must be added to a role with at least the same combination of labels. For example, if you apply the labels C1, I2, and another custom label to a destination dataflow, only users added to roles with access to the combination of these three labels are able to view and edit this specific destination dataflow.
-* Destination dataflows that a user does not have access to may appear in the UI in a greyed-out state; users cannot perform any actions on those dataflows.
+* Destination dataflows that a user does not have access to due to access label configurations may appear in the UI in a greyed-out state; users cannot perform any actions on those dataflows.
 
 ![The destinations browse catalog with the actions window greyed out.](../images/olac/destinations-greyed-edit.png)
 
