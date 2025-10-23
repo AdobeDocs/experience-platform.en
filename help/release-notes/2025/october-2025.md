@@ -18,9 +18,22 @@ description: The October 2025 release notes for Adobe Experience Platform.
 
 New features and updates to existing features in Adobe Experience Platform:
 
+- [Agent Orchestrator](#agent-orchestrator)
 - [Alerts](#alerts)
 - [Destinations](#destinations)
 - [Sources](#sources)
+
+## Agent Orchestrator {#agent-orchestrator}
+
+Adobe Experience Platform Agent Orchestrator is the new agentic layer in Adobe Experience Platform.
+
+**Updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Audience Agent | The Audience Agent now supports account-based audiences for conversational audience exploration and detecting duplicate audiences. For more information, read the [Audience Agent documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). | 
+
+For more information on agents, read the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home).
 
 ## Alerts {#alerts}
 
