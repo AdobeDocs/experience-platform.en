@@ -22,6 +22,7 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Agent Orchestrator](#agent-orchestrator)
 - [Alerts](#alerts)
 - [Destinations](#destinations)
+- [Real-Time CDP B2B Edition](#b2b)
 - [Sources](#sources)
 
 ## Agent Orchestrator {#agent-orchestrator}
@@ -77,6 +78,18 @@ For more information about alerts, read the [[!DNL Observability Insights] overv
 {style="table-layout:auto"}
 
 For more information, read the [Destinations overview](../../destinations/home.md).
+
+## Real-Time CDP B2B Edition {#b2b}
+
+Real-Time CDP B2B Edition provides comprehensive B2B customer data management capabilities, enabling organizations to build unified customer profiles, create sophisticated B2B audiences, and activate data across various marketing channels.
+
+**New or updated functionality**
+
+| Feature | Description |
+| --- | --- |
+| Deprecation of B2B support for non-standard relationships between B2B entities | Starting January 2026, Real-Time CDP B2B Edition will no longer support **non-standard** relationships between B2B entities. Therefore, you are encouraged to update your B2B entities to use the standard relationships outlined in the [B2B namespaces and schemas guide](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).  |
+
+{style="table-layout:auto"}
 
 ## Sources {#sources}
 
