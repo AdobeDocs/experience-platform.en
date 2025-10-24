@@ -197,18 +197,20 @@ Operator: is equal to
 Value: "promotional"
 Result: Include profiles where any email category is "promotional"
 ```
-
+<!-- ... -->
 ## V. Combining Rules (Complex Logic)
 
-### A. Combining Multiple Conditions (AND/OR Logic)
+### Combining multiple conditions (AND or OR logic)
 
-Individual rules can be combined using AND/OR logic to create sophisticated consent policies that target specific audience segments. **AND logic** requires all conditions to be true, creating more restrictive targeting with fewer matching profiles. **OR logic** allows any condition to be true, creating more inclusive targeting that expands your audience reach.
+You can combine multiple rule conditions using AND or OR logic to build more sophisticated consent policies that target specific profile segments.  
+**AND logic** requires all conditions to be true, producing narrower audience matches.  
+**OR logic** allows any condition to be true, expanding the audience reach.
 
-In the consent policy UI, you can toggle between AND and OR conditions using the logic selector that appears between rule conditions.
+In the consent policy interface, use the logic selector that appears between rule conditions to switch between AND and OR logic.
 
-### B. General Complex Rule Example
+### General complex rule example
 
-This example demonstrates combining basic consent status with preference limitations to create targeted audience segments.
+The following example combines basic consent status with preference frequency to create a targeted segment.
 
 ```
 Field: consent.marketing.email
@@ -273,7 +275,7 @@ Value: "newsletter"
 Result: Includes profiles where ANY category entry has enabled=true OR ANY category entry has type="newsletter"
 Note: OR conditions allow matching across different array entries - one entry can match the first condition while another entry matches the second condition.
 ```
-
+<!-- ... -->
 ## VI. Next Steps
 
 ### Further Resources
