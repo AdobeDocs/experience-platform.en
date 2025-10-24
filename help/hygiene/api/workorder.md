@@ -295,6 +295,104 @@ The following table describes the properties in the response.
 >
 >The action property for record delete work orders is currently `identity-delete` in API responses. If the API changes to use a different value (such as `delete_identity`), this documentation will be updated accordingly.
 
+## Generate JSON payloads for identity-delete requests
+
+To create a record delete work order from CSV, TSV, or TXT files containing identifiers, you can use conversion scripts to produce the required JSON payloads for the `/workorder` endpoint. This approach is especially helpful when working with existing data files. For ready-to-use scripts and comprehensive instructions, visit the [csv-to-data-hygiene GitHub repository](https://github.com/perlmonger42/csv-to-data-hygiene).
+
+**Generate JSON payloads**
+
+The following bash script examples demonstrate how to run the conversion scripts in Python or Ruby:
+
+>[!BEGINTABS]
+>
+>[!TAB Example to run Python script]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.py sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!TAB Example to run Ruby script]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.rb sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!ENDTABS]
+
+| Parameter     | Description |
+| ---           | ---     |
+| `verbose`     | Enable verbose output. |
+| `column`      | Column index (1-based) or name. Defaults to the first column. |
+| `namespace`   | An object with a `code` property specifying the identity namespace (e.g., “email”). |
+| `dataset-id`  | The unique identifier for the dataset associated with the work order. If the request applies to all datasets, this field will be set to ALL. |
+| `description` | A description of the record delete work order. |
+| `output-dir`  | The directory to write the output JSON payloads. |
+
+A successful JSON payload converted from CSV, TSV, or TXT files contains the records associated with the specified namespace, for example email address.
+
+{style="table-layout:auto"}
+
+```json
+{
+  "action": "delete_identity",
+  "datasetId": "66f4161cc19b0f2aef3edf10",
+  "displayName": "output/sample-big-001.json",
+  "description": "a simple sample",
+  "identities": [
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "1"
+    },
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "2"
+    }
+  ]
+}
+```
+
+The following table describes the properties in the JSON payload.
+
+| Property     | Description |
+| ---          | ---     |
+| `action`     | The action requested for the record delete work order. Automatically set to `delete_identity` by the conversion script. |
+| `datasetId`  | The unique identifier for the dataset. |
+| `displayName`| A human-readable label for this record delete work order. |
+| `description`| A description of the record delete work order. |
+| `identities` | An array of objects, each containing:<br><ul><li> `namespace`: An object with a `code` property specifying the identity namespace (e.g., "email").</li><li> `id`: The identity value to delete for this namespace.</li></ul> |
+
+{style="table-layout:auto"}
+
 ## Retrieve details for a specific record delete work order {#lookup}
 
 Retrieve information for a specific record delete work order by making a GET request to `/workorder/{WORKORDER_ID}`. The response includes action type, status, associated dataset and user information, and audit metadata.
