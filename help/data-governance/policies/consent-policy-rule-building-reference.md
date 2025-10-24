@@ -1,10 +1,12 @@
 ---
-title: Consent Policy Rule Building: Field Types and Operators Reference
+title: Consent Policy Rule Building Reference
 description: A technical reference guide to XDM data types, supported operators, and advanced logic for creating granular consent policy rules in the Adobe Experience Platform UI.
 ---
-# Consent Policy Rule Building: Field Types and Operators Reference
+# Consent policy rule building reference
 
 Use this reference on advanced rule logic to set precise, legally valid rules in the **"[!UICONTROL Then]"** clause of the Consent Policy builder in Adobe Experience Platform.
+
+![The consent policy builder interface highlighting the "[!UICONTROL Then]" clause section, where users define rule conditions.](../images/policies/multiple-rules.png)
 
 Learn how policy rules work with your consent data's structure and types to precisely enforce customer preferences. This document explains how to filter profiles based on consent by navigating into container fields in your XDM schema to select a primitive field. From there, use the right operator to define the exact value a profile must match.
 
@@ -105,7 +107,8 @@ Building effective consent policy rules requires understanding how to navigate y
 Follow these steps to build a rule:
 
 1. **Select a field** – Navigate through container fields to reach a primitive field.  
-2. **Choose an operator** – Select the operator supported by the field type.  
+2. **Choose an operator** – Select the operator supported by the field type.
+   ![The hierarchical schema navigation panel, showing a user expanding a container to reach a primitive field.](../images/policies/consent-policy-map-field.png)
 3. **Set a value** – Define the value or condition to match.  
 4. **Match map keys** – Choose whether to target a specific key or match across all keys in a map.  
 5. **Add conditions** – Combine multiple rules using AND or OR logic as needed.
@@ -150,6 +153,8 @@ Result: Includes profiles who set the email frequency to weekly (for the "email_
 **Any key matching**
 
 Use the "**[!UICONTROL find any matching item]**" checkbox option to match across all dynamic keys in a map.
+
+![Policy rule builder showing the "Find any matching item" checkbox for Map fields, used to match values across all dynamic keys.](../images/policies/find-any-matching-item.png)
 
 ```
 Field: consent.preferences.*.frequency (string)
