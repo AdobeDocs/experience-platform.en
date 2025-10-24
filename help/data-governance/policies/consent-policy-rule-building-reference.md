@@ -214,55 +214,56 @@ The following example combines basic consent status with preference frequency to
 
 ```
 Field: consent.marketing.email
-Operator: equals true
+Operator: is equal to true
 AND
 Field: consent.preferences.frequency
-Operator: does not equal "daily"
-Result: Include profiles who consent to email marketing but not daily frequency
+Operator: is not equal to "daily"
+Result: Include profiles who consent to email marketing but not to a daily frequency
 ```
 
-### C. Advanced Logic for Arrays of Objects
+### Advanced logic for arrays of objects
 
-Combining conditions within arrays of objects has specific behaviors that depend on whether you use AND or OR logic between the conditions.
+When combining conditions within arrays of objects, behavior depends on whether you use AND or OR logic between the conditions.
 
 **Example: Array of objects with AND conditions**
 
 Use AND logic when all conditions must apply to the *same* array element.
 
 ```
-Field: consent.preferences["email_preferences"].categories[].enabled (Boolean)
+Field: consent.preferences["email_preferences"].categories[].enabled (boolean)
 Operator: is equal to
 Value: true
 AND
-Field: consent.preferences["email_preferences"].categories[].type (String)
+Field: consent.preferences["email_preferences"].categories[].type (string)
 Operator: is equal to
 Value: "promotional"
-Result: Includes profiles where the SAME category entry has both enabled=true AND type="promotional"
-Note: AND conditions are applied to the same array entry. If you use OR conditions, the profile is included if ANY array entry matches ANY of the conditions.
+Result: Includes profiles where the same category entry has both enabled=true and type="promotional".
+Note: AND conditions apply to the same array entry. Using OR logic would include profiles if any array entry matches any of the conditions.
 ```
 
 >[!TIP]
 >
->**Best practices: AND condition logic**
+>**Best practices for AND logic**
 >
 >Keep these key behaviors in mind when building AND-based array conditions:
 >
->* **Use** AND logic when all conditions must apply to the **same** array element.
->* **Remember** that AND creates restrictive targeting — fewer profiles will match.
->* **Avoid** expecting AND conditions to match across different array entries — they apply to individual entries.
->* **Don't use** AND logic when you want flexible matching across multiple array elements.
+>* Use AND logic when all conditions must apply to the **same array element**.  
+>* Remember that AND creates restrictive targeting — fewer profiles will match.  
+>* Do not expect AND logic to match across multiple array entries; it applies within each entry.  
+>* Avoid using AND logic when you need flexible matching across entries.
 
 >[!IMPORTANT]
 >
->With AND logic, you're looking for array entries that satisfy all your conditions simultaneously - like finding categories that are both enabled AND promotional. This creates more restrictive targeting.
+>With AND logic, each array entry must satisfy all specified conditions at once. This behavior is ideal when you need to match combined attributes, such as categories that are both enabled and promotional.
 
 >[!NOTE]
 >
->AND conditions apply to the same array entry **only when working with arrays of objects.** For arrays of primitives, AND logic is evaluated at the field level across the entire array.
+>AND logic applies to the same array entry **only for arrays of objects.**  
+>For arrays of primitives, AND logic is evaluated at the field level across the entire array.
 
 **Example: Array of objects with OR conditions**
 
-Use OR logic when you want to create inclusive audiences by matching *any* condition across array entries.
+Use OR logic to create inclusive audience matches by allowing any condition to be true across array entries.
 
 ```
 Field: consent.preferences["email_preferences"].categories[].enabled (Boolean)
