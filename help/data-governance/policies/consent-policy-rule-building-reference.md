@@ -92,40 +92,108 @@ consent.marketing (Object)
 
 ### Rule Building Components and Steps
 
-Introductory paragraph: Summarize the five steps for building a rule (Select field, Choose operator, Set value, Map key matching, Add conditions).
+Building effective consent policy rules requires understanding how to navigate your schema structure and apply the appropriate operators for each field type. Every rule follows the same fundamental approach: navigate to a primitive field, select the appropriate operator, and define the matching criteria.
 
-<!-- Acts as a transition to the detailed use-case examples. -->
+The five essential steps for building a rule are:
+
+1. **Select field** - Navigate through container types to reach a primitive field
+2. **Choose operator** - Select the appropriate operator for the primitive type
+3. **Set value** - Define the value or condition to match against
+4. **Map key matching** - Choose specific key or any key matching for Map fields
+5. **Add conditions** - Combine multiple rules using AND/OR logic as needed
 
 ### A. Working with Boolean Fields (Implicit Consent Logic)
 
-Explain the significance of Boolean fields for simple consent status.  
-Detail the flexibility of the `is not equal to` operator.  
-**Table:** Clearly list the four available operators and explain the outcome of each (e.g., `does not equal false` → "Include profiles who haven't explicitly opted out").  
-**Example:** Include *Example 1* and the *Boolean example use case* from the source content.
+Boolean fields represent the most common consent attributes, storing simple true/false consent status. The `is not equal to` operator provides powerful flexibility for targeting profiles who haven't explicitly opted out, enabling implicit consent scenarios.
 
-<!-- Highlights a specific, powerful nuance required for compliant consent management. -->
+**Boolean Operators and Outcomes:**
+
+| Operator | Value | Result |
+|----------|-------|--------|
+| `is equal to` | `true` | Includes profiles with explicit consent (true) |
+| `is equal to` | `false` | Includes profiles with explicit opt-out (false) |
+| `is not equal to` | `true` | Includes profiles without explicit consent (false or missing) |
+| `is not equal to` | `false` | Includes profiles who haven't explicitly opted out (true or missing) |
+
+**Example: Implicit email consent**
+
+```
+Field: consent.marketing.email (Boolean)
+Operator: is not equal to
+Value: false
+Result: Include profiles who haven't explicitly opted out of email marketing (includes both true values and missing/null values)
+```
 
 ### B. Working with Map Fields (Dynamic Preferences)
 
-Explain the difference between **Object** (fixed) and **Map** (dynamic keys).  
-Introduce the two key matching options: **Specific Key Matching** and **Any Key Matching** (the wildcard `*`).  
-**Examples:** Include *Example 2* (Specific Key) and *Example 3* (Any Key) from the source content, using the `consent.preferences` structure as context.
+Map fields provide dynamic key-value storage, unlike Objects which have fixed schemas. Maps are ideal for preference centers where new preference categories can be added without schema changes. You can target either specific keys or use wildcard matching across all keys.
 
-<!-- Addresses the complexity of preference centers, which often rely on Map fields. -->
+**Specific Key Matching:**
+
+Use this approach when targeting a particular preference category.
+
+```
+Field: consent.preferences["email_preferences"].frequency (String) - navigated from Map
+Operator: is equal to
+Value: "weekly"
+Result: Include profiles who have set email frequency to weekly (only for email_preferences key)
+```
+
+**Any Key Matching:**
+
+Use the "find any matching item" checkbox to match across all dynamic keys in the Map.
+
+```
+Field: consent.preferences.*.frequency (String) - using "find any matching item" checkbox
+Operator: is equal to
+Value: "weekly"
+Result: Include profiles who have set frequency to weekly in ANY preference category (email_preferences, sms_preferences, or push_preferences)
+```
 
 ### C. Working with Object Fields (Fixed Navigation)
 
-Explain Object fields are straightforward containers for navigation.  
-**Example:** Include the `consent.marketing (Object) -> navigate to -> consent.marketing.email (Boolean)` example.
+Object fields serve as straightforward containers with fixed schemas. They are used purely for navigation to reach nested primitive fields and cannot be used directly in policy conditions.
 
-<!-- Provides a distinct contrast to Map fields. -->
+**Navigation Example:**
+
+```
+consent.marketing (Object) → navigate to → consent.marketing.email (Boolean)
+```
+
+**Example use case:**
+
+```
+Field: consent.marketing.email (Boolean) - navigated from Object
+Operator: is equal to
+Value: true
+Result: Include profiles who have explicitly consented to marketing emails
+```
 
 ### D. Working with Array Fields (Multiple Values)
 
-Explain Array fields hold multiple values of the same type.  
-Provide examples for both **Array of primitives** (using `contains`) and **Array of Objects** (navigating to an index).
+Array fields contain multiple values of the same type and require different approaches depending on whether they hold primitive values or complex objects. Navigation and operator selection varies based on the array contents.
 
-<!-- Covers the logic needed for multi-select preferences (e.g., communication channels). -->
+**Array of Primitives Example:**
+
+Use the `contains` operator to check for specific values within the array.
+
+```
+Field: consent.communication_channels (Array of Strings)
+Operator: contains
+Value: "email"
+Result: Include profiles who have consented to email communication
+```
+
+**Array of Objects Example:**
+
+Navigate into the array to access primitive fields within the objects.
+
+```
+Field: consent.preferences["email_preferences"].categories[].type - navigated from Array
+Operator: is equal to
+Value: "promotional"
+Result: Include profiles where any email category is "promotional"
+```
 
 ## V. Combining Rules (Complex Logic)
 
