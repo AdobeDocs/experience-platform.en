@@ -5,47 +5,117 @@ exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
 ---
 # Enable change data capture for source connections in the API
 
-Change data capture in Adobe Experience Platform sources is a capability that you can use to maintain real-time data synchronization between your source and destination systems.
+Use change data capture in Adobe Experience Platform sources to keep your source and destination systems synchronized in near real-time.
 
-Currently, Experience Platform supports **incremental data copy**, which ensures that newly created or updated records in the source system are periodically copied to the ingested datasets. This process relies on usage of the **timestamp column**, such as `LastModified` in order to track changes and capture **only the newly inserted or updated data**. However, this method does not account for deleted records, which can lead to data inconsistencies over time.
+Experience Platform currently supports **incremental data copy**, which periodically transfers newly created or updated records from the source system to the ingested datasets. This method relies on a **timestamp column** to track changes, but it does not detect deletions, which can lead to data inconsistencies over time.
 
-With change data capture, a given flow captures and applies all changes, including inserts, updates, and deletes. Similarly, Experience Platform datasets remain fully synchronized with the source system.
+In contrast, change data capture captures and applies inserts, updates, and deletes in near real-time. This comprehensive change tracking ensures that datasets stay fully aligned with the source system and provides a complete change history, beyond what incremental copy supports. However, delete operations require special consideration as they affect all applications using the target datasets.
 
-You can use change data capture for the following sources:
+Change data capture in Experience Platform requires **[Data Mirror](../../../xdm/data-mirror/overview.md)** with [relational schemas](../../../xdm/schema/relational.md). You can provide change data to Data Mirror in two ways:
 
-## [!DNL Amazon S3]
+* **[Manual change tracking](#file-based-sources)**: Include a `_change_request_type` column in your dataset for sources that don't natively generate change data capture records
+* **[Native change data capture exports](#database-sources)**: Use change data capture records exported directly from your source system
 
-Ensure that `_change_request_type` is present in the [!DNL Amazon S3] file that you intend to ingest to Experience Platform. Additionally, you must ensure that the following valid values are included in the file:
+Both approaches require Data Mirror with relational schemas to preserve relationships and enforce uniqueness.
 
-* `u`: for inserts and updates
-* `d`: for deletions.
+## Data Mirror with relational schemas
 
-If `_change_request_type` is not present in your file, then the default value of `u` will be used.
+>[!AVAILABILITY]
+>
+>Data Mirror and relational schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
 
-Read the following documentation for steps on how to enable change data capture for your [!DNL Amazon S3] source connection:
+>[!NOTE]
+>
+>Relational schemas were previously referred to as model-based schemas in earlier versions of Adobe Experience Platform documentation. The functionality and change data capture capabilities remain the same.
 
-* [Create a [!DNL Amazon S3] base connection](../api/create/cloud-storage/s3.md).
-* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
+>[!NOTE]
+>
+>**Orchestrated campaigns users**: Use the Data Mirror capabilities described in this document to work with customer data that maintains referential integrity. Even if your source does not use change data capture formatting, Data Mirror supports relational features such as primary key enforcement, record-level upserts, and schema relationships. These features ensure consistent and reliable data modeling across connected datasets.
 
-## [!DNL Azure Blob]
+Data Mirror uses relational schemas to extend change data capture and enable advanced database synchronization capabilities. For an overview of Data Mirror, see [Data Mirror overview](../../../xdm/data-mirror/overview.md).
 
-Ensure that `_change_request_type` is present in the [!DNL Azure Blob] file that you intend to ingest to Experience Platform. Additionally, you must ensure that the following valid values are included in the file:
+Relational schemas extend Experience Platform to enforce primary key uniqueness, track row-level changes, and define schema-level relationships. With change data capture, they apply inserts, updates, and deletes directly in the data lake, reducing the need for Extract, Transform, Load (ETL) or manual reconciliation.
 
-* `u`: for inserts and updates
-* `d`: for deletions.
+See [Relational schemas overview](../../../xdm/schema/relational.md) for more information.
 
-If `_change_request_type` is not present in your file, then the default value of `u` will be used.
+### Relational schema requirements for change data capture
 
-Read the following documentation for steps on how to enable change data capture for your [!DNL Azure Blob] source connection:
+Before you use a relational schema with change data capture, configure the following identifiers:
 
-* [Create a [!DNL Azure Blob] base connection](../api/create/cloud-storage/blob.md).
-* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
+* Uniquely identify each record with a primary key.  
+* Apply updates in sequence using a version identifier.  
+* For time-series schemas, add a timestamp identifier.
 
-## [!DNL Azure Databricks]
+### Control column handling {#control-column-handling}
 
-You must enable **change data feed** in your [!DNL Azure Databricks] table in order to use change data capture in your source connection.
+Use the `_change_request_type` column to specify how each row should be processed:
 
-Use the following commands to explicitly enable the change data feed option in [!DNL Azure Databricks]
+* `u` — upsert (default if the column is absent)  
+* `d` — delete  
+
+This column is evaluated only during ingestion and is not stored or mapped to XDM fields.  
+
+### Workflow {#workflow}
+
+To enable change data capture with a relational schema:
+
+1. Create a relational schema.
+2. Add the required descriptors:
+   * [Primary key descriptor](../../../xdm/api/descriptors.md#primary-key-descriptor)
+   * [Version descriptor](../../../xdm/api/descriptors.md#version-descriptor)
+   * [Timestamp descriptor](../../../xdm/api/descriptors.md#timestamp-descriptor) (time-series only)
+3. Create a dataset from the schema and enable change data capture.  
+4. For file-based ingestion only: Add the `_change_request_type` column to your source files if you need to explicitly specify delete operations. CDC export configurations handle this automatically for database sources.  
+5. Complete the source connection setup to enable ingestion.  
+
+>[!NOTE]
+>
+>The `_change_request_type` column is only required for file-based sources (Amazon S3, Azure Blob, Google Cloud Storage, SFTP) when you want to explicitly control row-level change behavior. For database sources with native CDC capabilities, change operations are handled automatically through CDC export configurations. File-based ingestion assumes upsert operations by default—you only need to add this column if you want to specify delete operations in your file uploads.
+
+>[!IMPORTANT]
+>
+>**Data deletion planning is required**. All applications that use relational schemas must understand deletion implications before implementing change data capture. Plan for how deletions will affect related datasets, compliance requirements, and downstream processes. See [data hygiene considerations](../../../hygiene/ui/record-delete.md#relational-record-delete) for guidance.
+
+## Providing change data for file-based sources {#file-based-sources}
+
+>[!IMPORTANT]
+>
+>File-based change data capture requires Data Mirror with relational schemas. Before following the file formatting steps below, ensure you have completed the [Data Mirror setup workflow](#workflow) described earlier in this document. The steps below describe how to format your data files to include change tracking information that will be processed by Data Mirror.
+
+For file-based sources ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage], and [!DNL SFTP]), include a `_change_request_type` column in your files.
+
+Use the `_change_request_type` values defined in the [Control column handling](#control-column-handling) section above.  
+
+>[!IMPORTANT]
+>
+>For **file-based sources only**, certain applications may require a `_change_request_type` column with either `u` (upsert) or `d` (delete) to validate change tracking capabilities. For example, Adobe Journey Optimizer's **Orchestrated campaigns** feature requires this column to enable the "Orchestrated campaign" toggle and allow dataset selection for targeting. Application-specific validation requirements may vary.
+
+Follow the source-specific steps below.
+
+### Cloud Storage Sources {#cloud-storage-sources}
+
+Enable change data capture for cloud storage sources by following these steps:
+
+1. Create a base connection for your source:
+
+   | Source | Base Connection Guide |
+   |---|---|
+   | [!DNL Amazon S3] | [Create a [!DNL Amazon S3] base connection](../api/create/cloud-storage/s3.md) |
+   | [!DNL Azure Blob] | [Create a [!DNL Azure Blob] base connection](../api/create/cloud-storage/blob.md) |
+   | [!DNL Google Cloud Storage] | [Create a [!DNL Google Cloud Storage] base connection](../api/create/cloud-storage/google.md) |
+   | [!DNL SFTP] | [Create a [!DNL SFTP] base connection](../api/create/cloud-storage/sftp.md) |
+
+2. [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
+
+All cloud storage sources use the same `_change_request_type` column format described in the [File-based sources](#file-based-sources) section above.
+
+## Database sources {#database-sources}
+
+### [!DNL Azure Databricks]
+
+To use change data capture with [!DNL Azure Databricks], you must both enable **change data feed** in your source tables and configure Data Mirror with relational schemas in Experience Platform.
+
+Use the following commands to enable change data feed on your tables:
 
 **New table**
 
@@ -78,20 +148,20 @@ Read the following documentation for steps on how to enable change data capture 
 * [Create a [!DNL Azure Databricks] base connection](../api/create/databases/databricks.md).
 * [Create a source connection for a database](../api/collect/database-nosql.md#create-a-source-connection).
 
-## [!DNL Data Landing Zone]
+### [!DNL Data Landing Zone]
 
-You must enable **change data feed** in your [!DNL Data Landing Zone] table in order to use change data capture in your source connection.
-
-Use the following commands to explicitly enable the change data feed option in [!DNL Data Landing Zone].
+To use change data capture with [!DNL Data Landing Zone], you must both enable **change data feed** in your source tables and configure Data Mirror with relational schemas in Experience Platform.
 
 Read the following documentation for steps on how to enable change data capture for your [!DNL Data Landing Zone] source connection:
 
 * [Create a [!DNL Data Landing Zone] base connection](../api/create/cloud-storage/data-landing-zone.md).
 * [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
 
-## [!DNL Google BigQuery]
+### [!DNL Google BigQuery]
 
-To use change data capture in your [!DNL Google BigQuery] source connection. Navigate to your [!DNL Google BigQuery] page in the [!DNL Google Cloud] console and set `enable_change_history` to `TRUE`. This property enables change history for your data table.
+To use change data capture with [!DNL Google BigQuery], you must both enable change history in your source tables and configure Data Mirror with relational schemas in Experience Platform.
+
+To enable change history in your [!DNL Google BigQuery] source connection, navigate to your [!DNL Google BigQuery] page in the [!DNL Google Cloud] console and set `enable_change_history` to `TRUE`. This property enables change history for your data table.
 
 For more information, read the guide on [data definition language statements in [!DNL GoogleSQL]](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list).
 
@@ -100,39 +170,9 @@ Read the following documentation for steps on how to enable change data capture 
 * [Create a [!DNL Google BigQuery] base connection](../api/create/databases/bigquery.md).
 * [Create a source connection for a database](../api/collect/database-nosql.md#create-a-source-connection).
 
-## [!DNL Google Cloud Storage]
+### [!DNL Snowflake]
 
-Ensure that `_change_request_type` is present in the [!DNL Google Cloud Storage] file that you intend to ingest to Experience Platform. Additionally, you must ensure that the following valid values are included in the file:
-
-* `u`: for inserts and updates
-* `d`: for deletions.
-
-If `_change_request_type` is not present in your file, then the default value of `u` will be used.
-
-Read the following documentation for steps on how to enable change data capture for your [!DNL Google Cloud Storage] source connection:
-
-* [Create a [!DNL Google Cloud Storage] base connection](../api/create/cloud-storage/google.md).
-* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
-
-
-## [!DNL SFTP]
-
-Ensure that `_change_request_type` is present in the [!DNL SFTP] file that you intend to ingest to Experience Platform. Additionally, you must ensure that the following valid values are included in the file:
-
-* `u`: for inserts and updates
-* `d`: for deletions.
-
-If `_change_request_type` is not present in your file, then the default value of `u` will be used.
-
-Read the following documentation for steps on how to enable change data capture for your [!DNL SFTP] source connection:
-
-* [Create a [!DNL SFTP] base connection](../api/create/cloud-storage/sftp.md).
-* [Create a source connection for a cloud storage](../api/collect/cloud-storage.md#create-a-source-connection).
-
-
-## [!DNL Snowflake]
-
-You must enable **change tracking** in your [!DNL Snowflake] tables in order to use change data capture in your source connections.
+To use change data capture with [!DNL Snowflake], you must both enable **change tracking** in your source tables and configure Data Mirror with relational schemas in Experience Platform.
 
 In [!DNL Snowflake], enable change tracking by using the `ALTER TABLE` and setting `CHANGE_TRACKING` to `TRUE`.
 

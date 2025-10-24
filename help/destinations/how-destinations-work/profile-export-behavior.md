@@ -11,6 +11,11 @@ There are several destination types in Experience Platform, as shown in the diag
 >
 >This documentation page only describes the profile export behavior for the connections highlighted at the bottom of the diagram.
 
+<!--
+>* Note the export behavior change introduced in September 2025 for [enterprise destinations](#enterprise-behavior)
+>* This documentation page only describes the profile export behavior for the connections highlighted at the bottom of the diagram.
+-->
+
 ![Types of destinations diagram](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
 ## Message aggregation in streaming destinations
@@ -50,7 +55,7 @@ In all the cases described above, only the profiles where relevant updates have 
 
 Note that all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
 
-### What determines a data export and what is included in the export
+### What determines a data export and what is included in the export {#enterprise-behavior}
 
 Regarding the data that is exported for a given profile, it is important to understand the two different concepts of *what determines a data export to your enterprise destination* and *which data is included in the export*.
 
@@ -97,7 +102,7 @@ In all the cases described above, only the profiles where relevant updates have 
 
 Note that all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
 
-### What determines a data export and what is included in the export
+### What determines a data export and what is included in the export {#streaming-behavior}
 
 Regarding the data that is exported for a given profile, it is important to understand the two different concepts of what determines a data export to your streaming API destination and which data is included in the export.
 

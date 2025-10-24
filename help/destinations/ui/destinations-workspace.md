@@ -60,6 +60,10 @@ For more information on destination categories and information on each destinati
 
 ## [!UICONTROL Browse] {#browse}
 
+>[!NOTE]
+>
+>Due to access label configurations, destination dataflows that a user does not have access to may appear in the UI in a greyed-out state. Read the documentation on [using access labels to manage user access to destination dataflows](../../access-control/abac/apply-access-labels-destinations.md#important-callouts-and-items-to-know) for more information.
+
 The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection.
 
 >[!TIP]
@@ -87,12 +91,13 @@ See the table below for all the information that is provided for each destinatio
 |Name | The name you provided for your activation flow to this destination.|
 |Data Type | The type of data supported by the destination connection. Supported data types: <ul><li>**[!UICONTROL Customers]**</li><li>**[!UICONTROL Prospects]**</li><li>**[!UICONTROL Accounts]**</li><li>**[!UICONTROL Datasets]**</li></ul> |
 |[!UICONTROL Last Dataflow Run Status] | The status of the last dataflow run. See [View destination details](destination-details-page.md) for more information about dataflow runs.|
-|[!UICONTROL Last Dataflow Run Date] | Time and date when the last dataflow run has occurred. See [View destination details](destination-details-page.md) for more information about dataflow runs.|
+|[!UICONTROL Last Dataflow Run Date] | Time and date when the last dataflow run has occurred. Select the column header to access sorting options (**[!UICONTROL Sort Ascending]**, **[!UICONTROL Sort Descending]**). See [View destination details](destination-details-page.md) for more information about dataflow runs.|
 |[!UICONTROL Destination] | The destination platform that you selected for your activation flow.|
-|[!UICONTROL Account Expiration Date] | The date when the connection authorization to this destination will expire. <br>**Important**: This column is currently available only for the [Facebook](../catalog/social/facebook.md) connection.|
+|[!UICONTROL Account Expiration Date] | The date when the connection authorization to this destination will expire. <br> A warning icon ![Warning: account expiration icon](/help/images/icons/alert-expiration.png) appears before the expiration date to alert you that the connection will expire and may require renewal. Dataflows to expired connections are stopped and you must reauthenticate to resume your activation workflows. <br>**Important**: This column is currently available only for the [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md), and [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md) connections. <br> ![Example of account expiration warning in Browse tab](../assets/ui/workspace/account-expiration-browse.png){width="100" zoomable="yes" alt="Screenshot showing the account expiration warning icon and expiration date in the Browse tab."}|
 |[!UICONTROL Username] | The account credentials you selected for the destination flow.|
 |[!UICONTROL Activation Data] | Indicates the number of audiences that are being activated to this destination. Select this control to find out more about the activated audiences. Refer to [Activation Data](/help/destinations/ui/destination-details-page.md#activation-data) in the destination details page for more information about the activated audiences.|
-|[!UICONTROL Created] | The date and UTC time when the activation flow to the destination was created. Select the up/down arrow symbol to sort the activation flows by newest first or oldest first.|
+|[!UICONTROL Created] | The date and time when the activation flow to the destination was created. Select the up/down arrow symbol to sort the activation flows by newest first or oldest first.|
+|[!UICONTROL Modified] | The date and time when the activation flow to the destination was last modified.|
 | [!UICONTROL Status] | `Enabled` or `Disabled`. Indicates whether data is being activated to this destination.|
 | [!UICONTROL Access labels] | Displays any access labels that were added to this destination dataflow. Read more about [applying access labels to destination dataflows](/help/access-control/abac/apply-access-labels-destinations.md).|
 | [!UICONTROL Tags] | Displays any tags that were added to this destination dataflow. Use tags to organize and categorize your dataflows for easier management.|
@@ -110,10 +115,6 @@ The **[!UICONTROL Browse]** tab includes enhanced filtering and search capabilit
 ### Search functionality {#search-browse}
 
 Use the search bar at the top of the table to quickly find dataflows by name. As you type, the results automatically filter to show only matching dataflows.
-
->[!NOTE]
->
-> When searching for dataflows using the search box, the results may include dataflows which your [user access labels](/help/access-control/abac/apply-access-labels-destinations.md) restrict you from seeing. This behavior will be corrected in a future update. Selecting such dataflows does not display the information in the right rail and users without access to the required labels are not able to perform any modifications such as mapping audiences to the dataflow or editing its schedule.
 
 ![Animated demonstration of searching for a destination dataflow in the Browse tab](../assets/ui/workspace/search.gif)
 
@@ -184,13 +185,13 @@ The **[!UICONTROL Accounts]** tab shows you details about the connections that y
 
 | Element | Description |
 |---|---|
-|[!UICONTROL Name] | The name you assigned to the destination account while [setting up](connect-destination.md#authenticate) the destination.|
+|[!UICONTROL Name] | The name you assigned to the destination account while [setting up](connect-destination.md#authenticate) the destination. Select the column header to access sorting options (**[!UICONTROL Sort Ascending]**, **[!UICONTROL Sort Descending]**).|
 |[!UICONTROL Destination] | The destination connector for which you have set up the connection.|
 |[!UICONTROL Connection Type] | Represents the account connection type to your storage bucket or destination. Depending on the destination, authentication options are: <ul><li>For email marketing destinations: Can be S3, FTP, or Azure Blob.</li><li>For real-time advertising destinations: Server-to-server</li><li>For Amazon S3 cloud storage destinations: Access Key </li><li>For SFTP cloud storage destinations: Basic authentication for SFTP</li><li>OAuth 1 or OAuth 2 authentication</li><li>Bearer token authentication</li></ul>|
 |[!UICONTROL Username] | The username you selected in the [connect destination workflow](../catalog/email-marketing/overview.md#connect-destination).|
 |[!UICONTROL Connections] | Represents the number of unique successful destination dataflows connected with basic information created for a destination.|
 |[!UICONTROL Authorization date] | The date when the connection to this destination was authorized.|
-|[!UICONTROL Expiration date] | The date when the connection authorization to this destination will expire. <br>**Important**: This column is currently available only for the [Facebook](../catalog/social/facebook.md), [LinkedIn](../catalog/social/linkedin.md), and [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md)  onnections.|
+|[!UICONTROL Expiration date] | The date when the connection authorization to this destination will expire. <br> A warning icon ![Account expired warning icon.](/help/images/icons/alert-expiration.png) appears before the expiration date to alert you that the connection will expire and may require renewal. Dataflows to expired connections are stopped and you must reauthenticate to resume your activation workflows. <br>**Important**: This column is currently available only for the [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md), and [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md)  onnections. <br> ![](../assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"}|
 
 {style="table-layout:auto"}
 
