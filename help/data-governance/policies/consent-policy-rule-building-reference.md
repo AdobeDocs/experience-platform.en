@@ -120,19 +120,19 @@ Boolean fields store true or false consent values and represent the most common 
 **Example: Implicit email consent**
 
 ```
-Field: consent.marketing.email (Boolean)
+Field: consent.marketing.email (boolean)
 Operator: is not equal to
 Value: false
-Result: Include profiles who haven't explicitly opted out of email marketing (includes both true values and missing/null values)
+Result: Includes profiles who have not explicitly opted out of email marketing (includes both true and missing/null values).
 ```
 
-### B. Working with Map Fields (Dynamic Preferences)
+### Working with map fields (dynamic preferences)
 
-Map fields provide dynamic key-value storage, unlike Objects which have fixed schemas. Maps are ideal for preference centers where new preference categories can be added without schema changes. You can target either specific keys or use wildcard matching across all keys.
+Map fields store key-value pairs with dynamic keys, unlike objects that have fixed schemas. Maps are often used in preference centers where new categories can be added without schema updates. You can target specific keys or use wildcard matching across all keys.
 
-**Specific Key Matching:**
+**Specific key matching**
 
-Use this approach when targeting a particular preference category.
+Use this approach to target a specific preference category.
 
 ```
 Field: consent.preferences["email_preferences"].frequency (String) - navigated from Map
