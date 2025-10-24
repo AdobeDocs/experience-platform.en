@@ -89,33 +89,33 @@ consent.marketing (Object)
 │       └── categories (Array of Strings)
 └── lastUpdated (Date)
 ```
-
+<!-- ... -->
 ## IV. Advanced Rule Building by Field Type
 
-### Rule Building Components and Steps
+### Rule building components and steps
 
-Building effective consent policy rules requires understanding how to navigate your schema structure and apply the appropriate operators for each field type. Every rule follows the same fundamental approach: navigate to a primitive field, select the appropriate operator, and define the matching criteria.
+Building effective consent policy rules requires understanding how to navigate your schema structure and apply the correct operators for each field type. Each rule follows the same basic approach: navigate to a primitive field, select the appropriate operator, and define the condition that must be met.
 
-The five essential steps for building a rule are:
+Follow these steps to build a rule:
 
-1. **Select field** - Navigate through container types to reach a primitive field
-2. **Choose operator** - Select the appropriate operator for the primitive type
-3. **Set value** - Define the value or condition to match against
-4. **Map key matching** - Choose specific key or any key matching for Map fields
-5. **Add conditions** - Combine multiple rules using AND/OR logic as needed
+1. **Select a field** – Navigate through container fields to reach a primitive field.  
+2. **Choose an operator** – Select the operator supported by the field type.  
+3. **Set a value** – Define the value or condition to match.  
+4. **Match map keys** – Choose whether to target a specific key or match across all keys in a map.  
+5. **Add conditions** – Combine multiple rules using AND or OR logic as needed.
 
-### A. Working with Boolean Fields (Implicit Consent Logic)
+### Working with boolean fields (implicit consent logic)
 
-Boolean fields represent the most common consent attributes, storing simple true/false consent status. The `is not equal to` operator provides powerful flexibility for targeting profiles who haven't explicitly opted out, enabling implicit consent scenarios.
+Boolean fields store true or false consent values and represent the most common consent attributes. The `is not equal to` operator allows you to include profiles that have not explicitly opted out, supporting implicit consent scenarios.
 
-**Boolean Operators and Outcomes:**
+**Boolean operators and outcomes**
 
 | Operator | Value | Result |
 |----------|-------|--------|
-| `is equal to` | `true` | Includes profiles with explicit consent (true) |
-| `is equal to` | `false` | Includes profiles with explicit opt-out (false) |
-| `is not equal to` | `true` | Includes profiles without explicit consent (false or missing) |
-| `is not equal to` | `false` | Includes profiles who haven't explicitly opted out (true or missing) |
+| `is equal to` | `true` | Includes profiles with explicit consent (`true`). |
+| `is equal to` | `false` | Includes profiles with explicit opt-out (`false`). |
+| `is not equal to` | `true` | Includes profiles without explicit consent (`false` or missing). |
+| `is not equal to` | `false` | Includes profiles who have not explicitly opted out (`true` or missing). |
 
 **Example: Implicit email consent**
 
@@ -196,7 +196,7 @@ Operator: is equal to
 Value: "promotional"
 Result: Include profiles where any email category is "promotional"
 ```
-
+<!-- ... -->
 ## V. Combining Rules (Complex Logic)
 
 ### A. Combining Multiple Conditions (AND/OR Logic)
