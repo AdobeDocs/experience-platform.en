@@ -24,13 +24,11 @@ This document serves as a technical reference for advanced consent policy rule b
 
 ### Supported Field Types and Rule Logic
 
-<!-- Introduce the two main categories of XDM fields used in rule building. -->
+Consent policies support various field types with specific operators for building rules. Field types are organized into two categories: **container types** and **primitive types**.
 
 ### A. Container Types (Schema Navigation)
 
-Consent policies support various field types with specific operators for building rules. Field types are organized into two categories: **container types** and **primitive types**.
-
-Refer to the table below for descriptions of supported container types.
+Container types structure your consent data but cannot be used directly in policy conditions. They serve as navigation points to reach the primitive fields that hold actual values.
 
 | Container Type | Description |
 |----------------|-------------|
@@ -42,9 +40,9 @@ Refer to the table below for descriptions of supported container types.
 >
 >**Container fields cannot be selected directly in consent policy conditions.** You must navigate into containers to select primitive fields (String, Number, Boolean) for rule building. Container operators are used for schema navigation, not for policy conditions.
 
-<!-- Establishes the boundary between structure and value. The "Object vs. Map" distinction is critical and should be introduced here. -->
-
 ### B. Primitive Types (Rule Conditions)
+
+Primitive fields hold the actual data values (for example, `true`, "weekly") and are the only field types that can be used to set policy conditions.
 
 Refer to the table below for descriptions of supported primitive types and the operators for each type.
 
