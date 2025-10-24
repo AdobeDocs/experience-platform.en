@@ -23,36 +23,37 @@ Ensure you should meet the following prerequisites:
 
 ## II. Core Concepts: Primitive vs. Container Fields
 
-### Supported Field Types and Rule Logic
+### Supported field types and rule logic
 
-Consent policies support various field types with specific operators for building rules. Field types are organized into two categories: **container types** and **primitive types**.
+Consent policies support multiple field types, each with specific operators for building rule conditions. Field types are grouped into two categories: **container types** and **primitive types**.
 
-### A. Container Types (Schema Navigation)
+### Container types (schema navigation)
 
-Container types structure your consent data but cannot be used directly in policy conditions. They serve as navigation points to reach the primitive fields that hold actual values.
+Container types organize consent data but cannot be used directly in policy conditions. They serve as navigation paths to reach the primitive fields that hold actual values.
 
-| Container Type | Description |
+| Container type | Description |
 |----------------|-------------|
-| **Object** | Container with fixed schema that holds multiple fields of different types |
-| **Array** | Container that holds multiple values of the same type |
-| **Map** | Container with dynamic keys that can hold Objects or other field types |
+| **Object** | A container with a fixed schema that holds multiple fields of different types. |
+| **Array** | A container that holds multiple values of the same type. |
+| **Map** | A container with dynamic keys that can hold objects or other field types. |
 
 >[!IMPORTANT]
 >
->**Container fields cannot be selected directly in consent policy conditions.** You must navigate into containers to select primitive fields (String, Number, Boolean) for rule building. Container operators are used for schema navigation, not for policy conditions.
+>Container fields cannot be selected directly in consent policy conditions. You must navigate into containers to select **primitive fields** (such as string, number, or boolean) for rule building. Container operators are used only for schema navigation, not for setting policy conditions.
 
-### B. Primitive Types (Rule Conditions)
+### Primitive types (rule conditions)
 
-Primitive fields hold the actual data values (for example, `true`, "weekly") and are the only field types that can be used to set policy conditions.
+Primitive fields hold the actual consent data values (for example, `true` or `"weekly"`) and are the only field types that can be used to define policy conditions.
 
-Refer to the table below for descriptions of supported primitive types and the operators for each type.
+The table below describes each supported primitive type and the available operators.
 
-| Primitive Type | Supported Operators | Description |
-|----------------|-------------------|-------------|
-| **String** | `is equal to`, `is not equal to`, `exists`, `does not exist` | Text-based consent attributes |
-| **Number** | `is equal to`, `is not equal to`, `is greater than`, `is less than`, `exists`, `does not exist` | Numeric consent attributes |
-| **Boolean** | `is equal to`, `is not equal to` | True/false consent values |
-| **Date** | `is equal to`, `is not equal to`, `exists`, `does not exist` | Date-based consent attributes |
+| Primitive type | Supported operators | Description |
+|----------------|---------------------|-------------|
+| **String** | `is equal to`, `is not equal to`, `exists`, `does not exist` | Text-based consent attributes. |
+| **Number** | `is equal to`, `is not equal to`, `is greater than`, `is less than`, `exists`, `does not exist` | Numeric consent attributes. |
+| **Boolean** | `is equal to`, `is not equal to` | True or false consent values. |
+| **Date** | `is equal to`, `is not equal to`, `exists`, `does not exist` | Date-based consent attributes. |
+
 
 ## III. Working with Complex Data Structures
 
