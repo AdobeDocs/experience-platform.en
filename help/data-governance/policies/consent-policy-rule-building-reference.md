@@ -248,7 +248,7 @@ Note: AND conditions apply to the same array entry. Using OR logic would include
 >Keep these key behaviors in mind when building AND-based array conditions:
 >
 >* Use AND logic when all conditions must apply to the **same array element**.  
->* Remember that AND creates restrictive targeting — fewer profiles will match.  
+>* Remember that AND creates restrictive targeting (fewer profiles will match).  
 >* Do not expect AND logic to match across multiple array entries; it applies within each entry.  
 >* Avoid using AND logic when you need flexible matching across entries.
 
@@ -266,15 +266,15 @@ Note: AND conditions apply to the same array entry. Using OR logic would include
 Use OR logic to create inclusive audience matches by allowing any condition to be true across array entries.
 
 ```
-Field: consent.preferences["email_preferences"].categories[].enabled (Boolean)
+Field: consent.preferences["email_preferences"].categories[].enabled (boolean)
 Operator: is equal to
 Value: true
 OR
-Field: consent.preferences["email_preferences"].categories[].type (String)
+Field: consent.preferences["email_preferences"].categories[].type (string)
 Operator: is equal to
 Value: "newsletter"
-Result: Includes profiles where ANY category entry has enabled=true OR ANY category entry has type="newsletter"
-Note: OR conditions allow matching across different array entries - one entry can match the first condition while another entry matches the second condition.
+Result: Includes profiles where any category entry has enabled=true or any entry has type="newsletter".
+Note: OR logic allows matching across different array entries. One entry can meet the first condition while another meets the second.
 ```
 <!-- ... -->
 ## VI. Next Steps
