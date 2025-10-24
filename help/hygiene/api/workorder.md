@@ -354,9 +354,9 @@ done
 | `description` | A description of the record delete work order. |
 | `output-dir`  | The directory to write the output JSON payload. |
 
-A successful JSON payload converted from CSV, TSV, or TXT files contains the records associated with the specified namespace, for example email address.
-
 {style="table-layout:auto"}
+
+A successful JSON payload converted from CSV, TSV, or TXT files contains the records associated with the specified namespace, for example email address.
 
 ```json
 {
