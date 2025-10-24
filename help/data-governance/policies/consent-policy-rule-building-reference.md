@@ -197,19 +197,79 @@ Result: Include profiles where any email category is "promotional"
 
 ## V. Combining Rules (Complex Logic)
 
-### Combining Multiple Conditions (AND/OR Logic)
+### A. Combining Multiple Conditions (AND/OR Logic)
 
-Explain how to use the **AND/OR** logic gate to combine rules to achieve a precise segment of consented users.  
-Reference the image showing the UI logic (`multiple-rules.png`).
+Individual rules can be combined using AND/OR logic to create sophisticated consent policies that target specific audience segments. **AND logic** requires all conditions to be true, creating more restrictive targeting with fewer matching profiles. **OR logic** allows any condition to be true, creating more inclusive targeting that expands your audience reach.
 
-<!-- Connects the individual rule-building concepts into a complete policy workflow. -->
+In the consent policy UI, you can toggle between AND and OR conditions using the logic selector that appears between rule conditions.
 
-### Complex Rule Example
+### B. General Complex Rule Example
 
-Include **Example 4: Complex rule with multiple conditions** from the source content.  
-Provide a clear breakdown of how the **AND** condition restricts the resulting audience.
+This example demonstrates combining basic consent status with preference limitations to create targeted audience segments.
 
-<!-- Provides a final, authoritative illustration of advanced policy building. -->
+```
+Field: consent.marketing.email
+Operator: equals true
+AND
+Field: consent.preferences.frequency
+Operator: does not equal "daily"
+Result: Include profiles who consent to email marketing but not daily frequency
+```
+
+### C. Advanced Logic for Arrays of Objects
+
+Combining conditions within arrays of objects has specific behaviors that depend on whether you use AND or OR logic between the conditions.
+
+**Example: Array of objects with AND conditions**
+
+Use AND logic when all conditions must apply to the *same* array element.
+
+```
+Field: consent.preferences["email_preferences"].categories[].enabled (Boolean)
+Operator: is equal to
+Value: true
+AND
+Field: consent.preferences["email_preferences"].categories[].type (String)
+Operator: is equal to
+Value: "promotional"
+Result: Includes profiles where the SAME category entry has both enabled=true AND type="promotional"
+Note: AND conditions are applied to the same array entry. If you use OR conditions, the profile is included if ANY array entry matches ANY of the conditions.
+```
+
+>[!TIP]
+>
+>**Best practices: AND condition logic**
+>
+>Keep these key behaviors in mind when building AND-based array conditions:
+>
+>* **Use** AND logic when all conditions must apply to the **same** array element.
+>* **Remember** that AND creates restrictive targeting — fewer profiles will match.
+>* **Avoid** expecting AND conditions to match across different array entries — they apply to individual entries.
+>* **Don't use** AND logic when you want flexible matching across multiple array elements.
+
+>[!IMPORTANT]
+>
+>With AND logic, you're looking for array entries that satisfy all your conditions simultaneously - like finding categories that are both enabled AND promotional. This creates more restrictive targeting.
+
+>[!NOTE]
+>
+>AND conditions apply to the same array entry **only when working with arrays of objects.** For arrays of primitives, AND logic is evaluated at the field level across the entire array.
+
+**Example: Array of objects with OR conditions**
+
+Use OR logic when you want to create inclusive audiences by matching *any* condition across array entries.
+
+```
+Field: consent.preferences["email_preferences"].categories[].enabled (Boolean)
+Operator: is equal to
+Value: true
+OR
+Field: consent.preferences["email_preferences"].categories[].type (String)
+Operator: is equal to
+Value: "newsletter"
+Result: Includes profiles where ANY category entry has enabled=true OR ANY category entry has type="newsletter"
+Note: OR conditions allow matching across different array entries - one entry can match the first condition while another entry matches the second condition.
+```
 
 ## VI. Next Steps
 
