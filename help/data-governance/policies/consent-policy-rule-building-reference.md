@@ -4,20 +4,22 @@ description: A technical reference guide to XDM data types, supported operators,
 ---
 # Consent Policy Rule Building: Field Types and Operators Reference
 
-This technical reference guide provides the in-depth specifications and advanced rule-building logic required to define granular, legally compliant conditions within the **"[!UICONTROL Then]"** clause of an Adobe Experience Platform Consent Policy.
+Use this reference on advanced rule logic to set precise, legally valid rules in the **"[!UICONTROL Then]"** clause of the Consent Policy builder in Adobe Experience Platform.
 
-The core objective is to understand how your policy rules interact with the structure and data types of your collected customer consent data. To accurately filter profiles based on consent, you must navigate your XDM schema's **Container Fields** to select a **Primitive Field**, and then use the appropriate operator to define the exact value(s) a profile must contain. This allows for precise enforcement of customer consent preferences.
+Learn how policy rules work with your consent data's structure and types to precisely enforce customer preferences. This document explains how to filter profiles based on consent by navigating into container fields in your XDM schema to select a primitive field. From there, use the right operator to define the exact value a profile must match.
 
 ## Prerequisites
 
-This document serves as a technical reference for advanced consent policy rule building and assumes you have completed basic policy setup and possess foundational knowledge of Adobe Experience Platform's data architecture and governance framework.
+Before using this reference, ensure that your consent policy setup is complete and that you understand the foundational concepts of Adobe Experience Platform's data architecture and governance framework.
 
-* **Policy Setup Complete**: You must have already created or started creating a consent policy in the Adobe Experience Platform UI. For a step-by-step guide on how to initiate and configure a policy in the UI, see the [data usage policies user guide](user-guide.md).
+Ensure you should meet the following prerequisites:
+
+* **Policy Setup Complete**: You have created or started creating a consent policy in the Adobe Experience Platform UI. For detailed steps, see the [data usage policies user guide](user-guide.md#consent-policy).
 
 * **Familiarity with Data Structures**: This reference requires working knowledge of the following core concepts:
-  * **XDM and Union Schema**: Understanding of Experience Data Model structure and how union schemas represent unified customer profiles. See the [XDM System overview](../../xdm/home.md).
-  * **Data Governance Framework**: Knowledge of Adobe Experience Platform's data usage policies and enforcement mechanisms. See the [Data Governance overview](../home.md).
-  * **Customer Consent Processing**: Basic understanding of how consent data is collected, stored, and applied in customer experience workflows. See the [consent processing overview](../../landing/governance-privacy-security/consent/adobe/overview.md).
+  * **XDM and Union Schema**: Understand how Experience Data Model structures define data relationships and how the union schema represents unified customer profiles. See the [XDM System overview](../../xdm/home.md) to learn more.
+  * **Data Governance Framework**: Know how Adobe Experience Platform enforces data usage policies and governance rules. See the [Data Governance overview](../home.md) for details.
+  * **Customer Consent Processing**: Understand how consent data is collected, stored, and applied within customer experience workflows. See the [consent processing overview](../../landing/governance-privacy-security/consent/adobe/overview.md).
 
 ## II. Core Concepts: Primitive vs. Container Fields
 
