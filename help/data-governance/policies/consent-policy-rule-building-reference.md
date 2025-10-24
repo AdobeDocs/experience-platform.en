@@ -21,7 +21,9 @@ Ensure you should meet the following prerequisites:
   * **Data Governance Framework**: Know how Adobe Experience Platform enforces data usage policies and governance rules. See the [Data Governance overview](../home.md) for details.
   * **Customer Consent Processing**: Understand how consent data is collected, stored, and applied within customer experience workflows. See the [consent processing overview](../../landing/governance-privacy-security/consent/adobe/overview.md).
 
-## II. Core Concepts: Primitive vs. Container Fields
+## Core concepts: primitive and container fields
+
+This section explains how consent policy rules use different field types in XDM schemas. Understanding the distinction between container and primitive fields helps you select the correct field and operator when defining policy conditions.
 
 ### Supported field types and rule logic
 
@@ -55,7 +57,9 @@ The table below describes each supported primitive type and the available operat
 | **Date** | `is equal to`, `is not equal to`, `exists`, `does not exist` | Date-based consent attributes. |
 
 
-## III. Working with Complex Data Structures
+## Working with complex data structures
+
+This section describes how to navigate nested containers in your consent schema to reach primitive fields. It introduces common schema patterns and explains how deeper structures enable more granular consent logic.
 
 ### Handling nested and complex schema structures
 
@@ -90,7 +94,9 @@ consent.marketing (Object)
 └── lastUpdated (Date)
 ```
 
-## IV. Advanced Rule Building by Field Type
+## Advanced rule building by field type
+
+This section provides detailed guidance on creating consent policy rules based on field type. You'll learn how to configure rule logic for booleans, maps, objects, and arrays to capture precise consent conditions.
 
 ### Rule building components and steps
 
@@ -197,8 +203,10 @@ Operator: is equal to
 Value: "promotional"
 Result: Include profiles where any email category is "promotional"
 ```
-<!-- ... -->
-## V. Combining Rules (Complex Logic)
+
+## Combining rules with complex logic
+
+This section explains how to combine multiple rule conditions using AND or OR logic. You'll learn how logical operators work together to define advanced, multi-condition consent policies.
 
 ### Combining multiple conditions (AND or OR logic)
 
@@ -276,20 +284,11 @@ Value: "newsletter"
 Result: Includes profiles where any category entry has enabled=true or any entry has type="newsletter".
 Note: OR logic allows matching across different array entries. One entry can meet the first condition while another meets the second.
 ```
-<!-- ... -->
-## VI. Next Steps
 
-### Further Resources
+### Next steps
 
-Once you have defined your advanced policy rules using this reference, use the resources below to complete your policy configuration and verify its enforcement.
+After building and refining your consent policy rules, use the following resources to finalize configuration, validate policy enforcement, and review underlying data models.
 
-* **Policy Creation Workflow**
-    * **Purpose:** Implement the rules you defined in the policy builder UI.
-    * **Link:** [Main Consent Policy UI Guide](../consent-policy-ui-guide.md)
-* **Consent Policy Evaluation and Enforcement**
-    * **Purpose:** Verify how the enabled policy affects audience activation and profile data use.
-    * **Link:** [Policy Enforcement Guide](../enforcement/policy-evaluation-enforcement.md)
-* **XDM (Experience Data Model) Reference**
-    * **Purpose:** Referencing the underlying data structure and definitions of consent attributes.
-    * **Link:** [XDM Documentation](../../xdm/xdm-overview.md)
-
+* **Policy Creation Workflow**: Implement the rules you defined in the policy builder UI with the [Consent Policy UI Guide](user-guide.md#consent-policy.md)
+* **Consent Policy Evaluation and Enforcement**: Verify how the enabled policy affects audience activation and profile data use. See the [Automatic policy enforcement guide](../enforcement/auto-enforcement.md) for details
+* **XDM Consent Data Types**: Reference the specific schema structures and field definitions for consent attributes used in your policy rules. See the [XDM Consents and Preferences data type](../../xdm/data-types/consents.md) guide.
