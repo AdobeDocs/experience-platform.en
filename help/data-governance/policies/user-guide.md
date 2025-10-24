@@ -212,7 +212,7 @@ To add additional consent attributes, select **[!UICONTROL Add result]**. This c
 >
 >To edit an existing attribute, select the attribute name and then select the pencil icon (![A pencil icon.](/help/images/icons/edit.png)). The **[!UICONTROL Select union schema field]** dialog opens for you to make changes.
 >
->![The consent policy builder UI with the consent attribute and the edit icon highlighted.](../images/policies/Screenshot-3-edit-then-attributes.png)
+>![The consent policy builder UI with the consent attribute and the edit icon highlighted.](../images/policies/edit-then-attributes.png)
 
 Continue adding or adjusting conditions and consent attributes until the policy matches your requirements. When finished, enter a name and (optional) description, then select **[!UICONTROL Save]** to create the policy.
 
