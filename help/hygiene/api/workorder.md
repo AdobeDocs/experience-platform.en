@@ -352,7 +352,7 @@ done
 | `namespace`   | An object with a `code` property specifying the identity namespace (e.g., “email”). |
 | `dataset-id`  | The unique identifier for the dataset associated with the work order. If the request applies to all datasets, this field will be set to ALL. |
 | `description` | A description of the record delete work order. |
-| `output-dir`  | The directory to write the output JSON payloads. |
+| `output-dir`  | The directory to write the output JSON payload. |
 
 A successful JSON payload converted from CSV, TSV, or TXT files contains the records associated with the specified namespace, for example email address.
 
@@ -392,6 +392,10 @@ The following table describes the properties in the JSON payload.
 | `identities` | An array of objects, each containing:<br><ul><li> `namespace`: An object with a `code` property specifying the identity namespace (e.g., "email").</li><li> `id`: The identity value to delete for this namespace.</li></ul> |
 
 {style="table-layout:auto"}
+
+**Submit the generated JSON data to the `/workorder` endpoint**
+
+For submission, follow the guideline in [Create a record delete work order](https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/api/workorder#create). Use the converted JSON payload as the `-d` value when sending your `curl` POST request to the `/workorder` API endpoint.
 
 ## Retrieve details for a specific record delete work order {#lookup}
 
