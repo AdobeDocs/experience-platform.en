@@ -4,9 +4,9 @@ description: A technical reference guide to XDM data types, supported operators,
 ---
 # Consent Policy Rule Building: Field Types and Operators Reference
 
-Briefly state the purpose: This document provides the technical specifications needed to build highly specific and legally compliant rules in the **"Then"** condition of a consent policy. Emphasize the core takeaway: You must navigate your schema structure to target **primitive fields** with precise operators. 
+This technical reference guide provides the in-depth specifications and advanced rule-building logic required to define granular, legally compliant conditions within the **"[!UICONTROL Then]"** clause of an Adobe Experience Platform Consent Policy.
 
-<!-- Sets the context and value proposition for the reader immediately. -->
+The core objective is to understand how your policy rules interact with the structure and data types of your collected customer consent data. To accurately filter profiles based on consent, you must navigate your XDM schema's **Container Fields** to select a **Primitive Field**, and then use the appropriate operator to define the exact value(s) a profile must contain. This allows for precise enforcement of customer consent preferences.
 
 ## Prerequisites
 
@@ -275,9 +275,15 @@ Note: OR conditions allow matching across different array entries - one entry ca
 
 ### Further Resources
 
-Link to the main **Consent Policy UI Guide** (for how to implement/save the rule).  
-Link to the **Policy Enforcement** guide (for how to verify the policy).  
-Link to the **XDM** documentation (for general schema reference).
+Once you have defined your advanced policy rules using this reference, use the resources below to complete your policy configuration and verify its enforcement.
 
-<!-- A standard practice to guide the reader to the next logical step in their workflow. -->
+* **Policy Creation Workflow**
+    * **Purpose:** Implement the rules you defined in the policy builder UI.
+    * **Link:** [Main Consent Policy UI Guide](../consent-policy-ui-guide.md)
+* **Consent Policy Evaluation and Enforcement**
+    * **Purpose:** Verify how the enabled policy affects audience activation and profile data use.
+    * **Link:** [Policy Enforcement Guide](../enforcement/policy-evaluation-enforcement.md)
+* **XDM (Experience Data Model) Reference**
+    * **Purpose:** Referencing the underlying data structure and definitions of consent attributes.
+    * **Link:** [XDM Documentation](../../xdm/xdm-overview.md)
 
