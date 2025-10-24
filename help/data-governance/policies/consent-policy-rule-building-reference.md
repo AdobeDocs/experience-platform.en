@@ -57,21 +57,21 @@ The table below describes each supported primitive type and the available operat
 
 ## III. Working with Complex Data Structures
 
-### A. Handling Nested and Complex Schema Structures
+### Handling nested and complex schema structures
 
-Complex consent schemas often use nested container structures to allow for flexible and scalable data management. Since you can only set policy rules on primitive fields, you must navigate through this hierarchy to reach the primitive fields that can be used in consent policy conditions. The deeper the nesting, the more specific your consent rules can be.
+Complex consent schemas often include nested container structures that support flexible and scalable data management. Because policy rules can only reference primitive fields, you must navigate through container hierarchies to reach the fields that can be used in consent policy conditions. Deeper nesting enables more granular and specific rule targeting.
 
 Common nested container patterns include:
 
-* **Map of Map**: Dynamic keys containing other Maps
-* **Map of Object**: Dynamic keys containing Objects with fixed schemas
-* **Array of Map**: Arrays containing Maps with dynamic keys
-* **Array of Object**: Arrays containing Objects with fixed schemas
-* **Object with Map/Array properties**: Objects containing Map or Array fields
+* **Map of map** – Dynamic keys that contain other maps.  
+* **Map of object** – Dynamic keys that contain objects with fixed schemas.  
+* **Array of map** – Arrays that contain maps with dynamic keys.  
+* **Array of object** – Arrays that contain objects with fixed schemas.  
+* **Object with map or array properties** – Objects that include map or array fields.
 
-### B. Field Structure Example
+### Field structure example
 
-The following structure serves as the primary visual reference for all rule examples throughout this guide.
+The following structure serves as the visual reference for rule examples throughout this guide.
 
 ```
 consent.marketing (Object)
