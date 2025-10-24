@@ -89,7 +89,7 @@ consent.marketing (Object)
 │       └── categories (Array of Strings)
 └── lastUpdated (Date)
 ```
-<!-- ... -->
+
 ## IV. Advanced Rule Building by Field Type
 
 ### Rule building components and steps
@@ -135,68 +135,69 @@ Map fields store key-value pairs with dynamic keys, unlike objects that have fix
 Use this approach to target a specific preference category.
 
 ```
-Field: consent.preferences["email_preferences"].frequency (String) - navigated from Map
+Field: consent.preferences["email_preferences"].frequency (string) - navigated to from the map container
 Operator: is equal to
 Value: "weekly"
-Result: Include profiles who have set email frequency to weekly (only for email_preferences key)
+Result: Includes profiles who set the email frequency to weekly (for the "email_preferences" key)
 ```
 
-**Any Key Matching:**
+**Any key matching**
 
-Use the "find any matching item" checkbox to match across all dynamic keys in the Map.
+Use the "**[!UICONTROL find any matching item]**" checkbox option to match across all dynamic keys in a map.
 
 ```
-Field: consent.preferences.*.frequency (String) - using "find any matching item" checkbox
+Field: consent.preferences.*.frequency (string)
 Operator: is equal to
 Value: "weekly"
-Result: Include profiles who have set frequency to weekly in ANY preference category (email_preferences, sms_preferences, or push_preferences)
+Result: Includes profiles who set frequency to weekly in ANY preference category (for example, email_preferences, sms_preferences, or push_preferences)
 ```
 
-### C. Working with Object Fields (Fixed Navigation)
+### Working with object fields (fixed navigation)
 
-Object fields serve as straightforward containers with fixed schemas. They are used purely for navigation to reach nested primitive fields and cannot be used directly in policy conditions.
+Object fields act as containers with fixed schemas. They are used only for navigation and cannot be referenced directly in policy conditions.
 
-**Navigation Example:**
+**Navigation example**
 
 ```
-consent.marketing (Object) → navigate to → consent.marketing.email (Boolean)
+consent.marketing (object) → consent.marketing.email (boolean)
 ```
 
 **Example use case:**
 
 ```
-Field: consent.marketing.email (Boolean) - navigated from Object
+Field: consent.marketing.email (Boolean) - navigated to from the object
 Operator: is equal to
 Value: true
 Result: Include profiles who have explicitly consented to marketing emails
 ```
 
-### D. Working with Array Fields (Multiple Values)
 
-Array fields contain multiple values of the same type and require different approaches depending on whether they hold primitive values or complex objects. Navigation and operator selection varies based on the array contents.
+### Working with array fields (multiple values)
 
-**Array of Primitives Example:**
+Array fields contain multiple values of the same type and require different handling depending on whether they store primitives or objects. Navigation and operator options vary by array type.
 
-Use the `contains` operator to check for specific values within the array.
+**Array of primitives example**
+
+Use the `contains` operator to identify profiles based on specific values within an array.
 
 ```
-Field: consent.communication_channels (Array of Strings)
+Field: consent.communication_channels (array of strings)
 Operator: contains
 Value: "email"
 Result: Include profiles who have consented to email communication
 ```
 
-**Array of Objects Example:**
+**Array of objects example**
 
-Navigate into the array to access primitive fields within the objects.
+Navigate into the array to access primitive fields within nested objects.
 
 ```
-Field: consent.preferences["email_preferences"].categories[].type - navigated from Array
+Field: consent.preferences["email_preferences"].categories[].type - navigated to from the array
 Operator: is equal to
 Value: "promotional"
 Result: Include profiles where any email category is "promotional"
 ```
-<!-- ... -->
+
 ## V. Combining Rules (Complex Logic)
 
 ### A. Combining Multiple Conditions (AND/OR Logic)
