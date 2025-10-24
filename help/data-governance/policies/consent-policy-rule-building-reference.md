@@ -12,13 +12,12 @@ The core objective is to understand how your policy rules interact with the stru
 
 This document serves as a technical reference for advanced consent policy rule building and assumes you have completed basic policy setup and possess foundational knowledge of Adobe Experience Platform's data architecture and governance framework.
 
-* **Policy Setup Complete**: You must have already created or started creating a consent policy in the Adobe Experience Platform UI. For a step-by-step guide on how to initiate and configure a policy in the UI, see the [Placeholder: Link to UI Guide].
+* **Policy Setup Complete**: You must have already created or started creating a consent policy in the Adobe Experience Platform UI. For a step-by-step guide on how to initiate and configure a policy in the UI, see the [data usage policies user guide](user-guide.md).
 
 * **Familiarity with Data Structures**: This reference requires working knowledge of the following core concepts:
-  * **XDM and Union Schema**: Understanding of Experience Data Model structure and how union schemas represent unified customer profiles. See [Placeholder: Link to XDM Docs].
-  * **Data Governance Framework**: Knowledge of Adobe Experience Platform's data usage policies and enforcement mechanisms. See [Placeholder: Link to Data Governance Overview].
-  * **Customer Consent Processing**: Basic understanding of how consent data is collected, stored, and applied in customer experience workflows. See [Placeholder: Link to Consent Processing Guide].
-
+  * **XDM and Union Schema**: Understanding of Experience Data Model structure and how union schemas represent unified customer profiles. See the [XDM System overview](../../xdm/home.md).
+  * **Data Governance Framework**: Knowledge of Adobe Experience Platform's data usage policies and enforcement mechanisms. See the [Data Governance overview](../home.md).
+  * **Customer Consent Processing**: Basic understanding of how consent data is collected, stored, and applied in customer experience workflows. See the [consent processing overview](../../landing/governance-privacy-security/consent/adobe/overview.md).
 
 ## II. Core Concepts: Primitive vs. Container Fields
 
