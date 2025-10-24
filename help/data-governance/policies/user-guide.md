@@ -147,11 +147,11 @@ Under the **[!UICONTROL Then]** section, select at least one consent attribute f
 >
 >Consent policies support primitive field types (String, Number, Boolean, Date) and container types (Object, Map, Array). You can navigate into containers to select specific attributes and apply AND/OR logic to combine rules. For a full reference of supported field types, operators, and rule-building examples, see the [consent policy rule building reference](consent-policy-rules-reference.md).
 
-![The consent policy builder UI showing the If and Then sections, with View all highlighted.](../images/policies/Screenshot-1-view-all.png)
+![The consent policy builder UI showing the If and Then sections, with View all highlighted.](../images/policies/view-all.png)
 
 If you select **[!UICONTROL View all]**, the **[!UICONTROL Select consent attribute]** dialog appears. Select the consent attribute(s) that you want this policy to check for. Alternatively, from this dialog, you can select **[!UICONTROL Advanced Schema search]** to choose a nested primitive field to be assessed as part of the policy. Select **[!UICONTROL Done]** to confirm your settings.
 
-![The Select consent attribute dialog with an attribute and done highlighted.](../images/policies/Screenshot-2-select-consent-attribute.png)
+![The Select consent attribute dialog with an attribute and done highlighted.](../images/policies/select-consent-attribute.png)
 
 ### Advanced schema search {#advanced-schema-search}
 
@@ -177,7 +177,7 @@ To define the condition, select the checkboxes for the values you want the polic
 
 When you select a primitive field contained in a Map data type, additional configuration options appear in the **[!UICONTROL Selected attributes]** panel. Use these options to configure consent checks across multiple keys without needing a separate policy for each key. This configuration method simplifies policy management by reducing the number of policies you need to create.
 
-![The Consent policies map section highlighted in the the attributes panel.](consent-policies-map.png)
+![The Consent policies map section highlighted in the the attributes panel.](../images/policies/consent-policies-map.png)
 
 ##### Configure Map data type attributes {#configure-map-attributes}
 
@@ -185,21 +185,18 @@ To configure a Map-type attribute, follow the steps below:
 
 In the union schema diagram, select a primitive field (such as a string or number) contained within a Map data type. The **[!UICONTROL Selected attributes]** panel updates to display additional configuration options for that field.
 
-![Updated attribute options for a primitive field contained in a Map data type.](../images/policies/Screenshot-4-select-union-schema-field.png)
+![Updated attribute options for a primitive field contained in a Map data type.](../images/policies/select-union-schema-field.png)
 
 In the **[!UICONTROL Selected attributes]** panel, configure how the policy evaluates map keys by selecting or clearing the **[!UICONTROL Find any matching item]** checkbox.
 
 | Option | Action | Policy Behavior |
 | --- | --- | --- |
 | **[!UICONTROL Find any matching item]** checkbox is **selected** | The **[!UICONTROL within]** text field is disabled. | The policy checks **every key** within the map. Any key where the nested field meets the value condition is considered a match for the policy. This is useful for enforcing global compliance across dynamically keyed attributes. |
-| **[!UICONTROL Find any matching item]** checkbox is **unselected** | You must enter a specific key name in the **[!UICONTROL within]** text field. | The policy checks only the map key specified in the **[!UICONTROL within]** field. Only profiles where that *specific key's* nested field meets the value condition is considered a match. This is useful for policies targeting a specific program or frequency key (for example, `frequencyMap.m1`). |
-
-<!-- MUST reword this to be clearer: 'Only profiles where that *specific key's* nested field meets the value condition is considered a match.' -->
+| **[!UICONTROL Find any matching item]** checkbox is **unselected** | You must enter a specific key name in the **[!UICONTROL within]** text field. | The policy checks only the map key specified in the **[!UICONTROL within]** field. Only profiles where the nested field for a specific key meets the defined value are matched. This is useful for policies targeting a specific program or frequency key (for example, `frequencyMap.m1`). |
 
 Enter the value for the selected primitive field that the policy should evaluate. For example, if the field type is `Integer`, enter a numeric value.
 
-![The Selected attributes sidebar with the map configuration options highlighted.](../images/policies/Screenshot-6-within-option.png)
-<!-- ths could be the same image as consent-policies-map.png  -->
+![The Selected attributes sidebar with the map configuration options highlighted.](../images/policies/within-option.png)
 
 Select **[!UICONTROL Select]** to confirm your configuration and return to the policy builder.
 
