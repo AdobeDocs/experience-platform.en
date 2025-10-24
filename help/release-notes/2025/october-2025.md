@@ -86,7 +86,7 @@ Real-Time CDP B2B Edition provides comprehensive B2B customer data management ca
 
 | Feature | Description |
 | --- | --- |
-| Deprecation of B2B support for non-standard relationships between B2B entities | Starting January 2026, Real-Time CDP B2B Edition will no longer support **non-standard** relationships between B2B entities. Therefore, you are encouraged to update your B2B entities to use the standard relationships outlined in the [B2B namespaces and schemas guide](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).  |
+| Deprecation of B2B support for non-standard relationships between B2B entities | Starting January 2026, Real-Time CDP B2B Edition will no longer support **non-standard** relationships between B2B entities. Therefore, you are encouraged to update your B2B entities to use the standard relationships outlined in the [B2B namespaces and schemas guide](../../rtcdp/schemas/b2b.md).  |
 
 {style="table-layout:auto"}
 
