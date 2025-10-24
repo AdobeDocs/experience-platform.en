@@ -55,18 +55,38 @@ Refer to the table below for descriptions of supported primitive types and the o
 
 ## III. Working with Complex Data Structures
 
-### Handling Nested and Complex Schema Structures
+### A. Handling Nested and Complex Schema Structures
 
-Explain that complex consent schemas require navigation.  
-List and briefly explain the **Common nested container patterns** (Map of Map, Array of Object, etc.).
+Complex consent schemas often use nested container structures to allow for flexible and scalable data management. Since you can only set policy rules on primitive fields, you must navigate through this hierarchy to reach the primitive fields that can be used in consent policy conditions. The deeper the nesting, the more specific your consent rules can be.
 
-<!-- Addresses the real-world complexity of XDM schemas. -->
+Common nested container patterns include:
 
-### Field Structure Example
+* **Map of Map**: Dynamic keys containing other Maps
+* **Map of Object**: Dynamic keys containing Objects with fixed schemas
+* **Array of Map**: Arrays containing Maps with dynamic keys
+* **Array of Object**: Arrays containing Objects with fixed schemas
+* **Object with Map/Array properties**: Objects containing Map or Array fields
 
-Include the `Field Structure Example` (the `consent.marketing` code block) as a visual reference for the rest of the document.
+### B. Field Structure Example
 
-<!-- Provides a running anchor point/contextual reference for all advanced examples that follow. -->
+The following structure serves as the primary visual reference for all rule examples throughout this guide.
+
+```
+consent.marketing (Object)
+├── email (Boolean)
+├── sms (Boolean)
+├── preferences (Map with dynamic keys)
+│   ├── "email_preferences" (Object)
+│   │   ├── frequency (String)
+│   │   └── channels (Array of Strings)
+│   ├── "sms_preferences" (Object)
+│   │   ├── frequency (String)
+│   │   └── opt_in_time (Date)
+│   └── "push_preferences" (Object)
+│       ├── frequency (String)
+│       └── categories (Array of Strings)
+└── lastUpdated (Date)
+```
 
 ## IV. Advanced Rule Building by Field Type
 
