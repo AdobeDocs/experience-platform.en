@@ -194,9 +194,12 @@ In the **[!UICONTROL Selected attributes]** panel, configure how the policy eval
 | **[!UICONTROL Find any matching item]** checkbox is **selected** | The **[!UICONTROL within]** text field is disabled. | The policy checks **every key** within the map. Any key where the nested field meets the value condition is considered a match for the policy. This is useful for enforcing global compliance across dynamically keyed attributes. |
 | **[!UICONTROL Find any matching item]** checkbox is **unselected** | You must enter a specific key name in the **[!UICONTROL within]** text field. | The policy checks only the map key specified in the **[!UICONTROL within]** field. Only profiles where that *specific key's* nested field meets the value condition is considered a match. This is useful for policies targeting a specific program or frequency key (for example, `frequencyMap.m1`). |
 
+<!-- MUST reword this to be clearer: 'Only profiles where that *specific key's* nested field meets the value condition is considered a match.' -->
+
 Enter the value for the selected primitive field that the policy should evaluate. For example, if the field type is `Integer`, enter a numeric value.
 
 ![The Selected attributes sidebar with the map configuration options highlighted.](../images/policies/Screenshot-6-within-option.png)
+<!-- ths could be the same image as consent-policies-map.png  -->
 
 Select **[!UICONTROL Select]** to confirm your configuration and return to the policy builder.
 
