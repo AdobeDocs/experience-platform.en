@@ -24,9 +24,9 @@ The Privacy Service UI allows you to coordinate privacy and compliance requests 
 >
 >You must have an Adobe ID in order to authenticate to the [!DNL Privacy Service] UI. 
 
-To access the UI, log in to [Adobe Experience Cloud](https://experience.adobe.com/) and select **[!UICONTROL Privacy UI]** under the quick access menu.
+To access the UI, log in to [Adobe Experience Cloud](https://experience.adobe.com/) and select **[!UICONTROL Privacy Service]** under the quick access menu.
 
-![The Experience Cloud dashboard with Privacy UI highlighted.](../images/ui-overview/quick-access.png)
+![The Experience Cloud dashboard with Privacy Service highlighted.](../images/ui-overview/quick-access.png)
 
 
 ### Logging in from [!DNL Experience Platform]

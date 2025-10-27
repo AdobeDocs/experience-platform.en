@@ -567,18 +567,6 @@ There are three approaches to restricting access. They are as follows:
 Yes, SSL modes are supported. See the [SSL modes documentation](./clients/ssl-modes.md) for a breakdown of the different SSL modes available and the level of protection they provide.
 +++
 
-### Do we use TLS 1.2 for all connections from Power BI clients to query service?
-
-+++Answer
-Yes. Data-in-transit is always HTTPS compliant. The currently supported version is TLS1.2.
-+++
-
-### Does a connection made on port 80 still use https?
-
-+++Answer
-Yes, a connection made on port 80 still uses SSL. You can also use port 5432. 
-+++
-
 ### Can I control access to specific datasets and columns for a particular connection? How is this configured?
 
 +++Answer
@@ -607,6 +595,44 @@ Yes, you can use `CREATE VIEW` command without Data Distiller access. This comma
 
 +++Answer
 Yes. Although, certain third-party clients, such as DbVisualizer, may require a separate identifier before and after an SQL block to indicate that a part of a script should be handled as a single statement. More details can be found in the [anonymous block documentation](./key-concepts/anonymous-block.md) or in [the official DbVisualizer documentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect). 
++++
+
+## TLS, Port Access, and Encryption {#tls-port-questions}
+
+### Does a connection made on port 80 still use HTTPS and TLS encryption?
+
++++Answer
+Yes. Connections on port 80 are protected using TLS encryption, and TLS enforcement is required by the service. Plain HTTP connections are not accepted. Port 80 support exists to accommodate certain customer network policies. If your organization blocks port 80, use port 5432 instead. Both ports require TLS and provide the same security posture.
++++
+
+### Does Adobe's Query Service expose data over unencrypted HTTP (port 80)?
+
++++Answer
+No. Connections on port 80 require TLS, and any plaintext HTTP requests are rejected server-side. Port 5432 is also supported and is TLS encrypted.
++++
+
+### Is the use of port 80 for Query Service and Data Distiller a legacy configuration?
+
++++Answer
+No. Port 80 with mandatory TLS is a supported configuration designed for customers with specific network requirements. It is not a legacy or insecure mode. If your environment restricts outbound connections on port 80, use port 5432 instead; both ports enforce TLS.
++++
+
+### Do we use TLS 1.2 for all connections from Power BI clients to Query Service?
+
++++Answer
+Yes. Data in transit is always protected using HTTPS, and the currently supported version is TLS 1.2. All Power BI connections to Query Service require encrypted transport.
++++
+
+### Is port 80 unencrypted when used with Data Distiller?
+
++++Answer
+No. Data Distiller enforces TLS on port 80 and rejects any plaintext HTTP requests. Port 5432 is also supported and is TLS encrypted.
++++
+
+### Are there any risks or limitations when using port 80 with Query Service or Data Distiller?
+
++++Answer
+Yes. TLS is enforced on port 80, and unencrypted connections are not supported. Some organizations block outbound traffic on port 80 due to policy restrictions. If this applies to your network, use port 5432 instead. Both ports provide the same level of security because TLS is required in all cases.
 +++
 
 ## Data Distiller {#data-distiller}
@@ -639,6 +665,14 @@ Compute hours for a query can fluctuate due to multiple factors. These include t
 
 +++Answer  
 Backend infrastructure is constantly improved to optimize Compute Hour utilization and processing time. As a result, you may notice changes over time as performance enhancements are implemented.
++++
+
+### Does Data Distiller performance differ between development and production sandboxes?
+
++++Answer
+You can expect similar performance when you run queries in both development and production sandboxes. Both environments are designed to provide the same level of processing capability. However, differences in compute hours can occur, depending on the amount of data you process and overall system activity at the time you run your query.
+
+Track your compute hour usage in the [License Usage dashboard](../dashboards/guides/license-usage.md) in the Experience Platform UI.
 +++
 
 ## Queries UI
@@ -746,6 +780,12 @@ Yes, third-party desktop clients can be connected to Query Service through a one
 +++Answer
 The value for non-expiring credentials are the concatenated arguments from the `technicalAccountID` and the `credential` taken from the configuration JSON file. The password value takes the form: `{{technicalAccountId}:{credential}}`.
 See the documentation for more information on how to [connect to external clients with credentials](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
++++
+
+### Are there any restrictions on special characters for non-expiring credentials passwords?
+
++++Answer
+Yes. When you set a password for non-expiring credentials, you must include at least one number, one lowercase letter, one uppercase letter, and one special character. The dollar sign ($) is not supported. Use special characters such as !, @, #, ^, or & instead.
 +++
 
 ### What kind of third-party SQL editors can I connect to Query Service Editor?

@@ -199,6 +199,74 @@ After the request is submitted, a work order is created and appears on the [!UIC
 
 ![The [!UICONTROL Record] tab of the [!UICONTROL Data Lifecycle] workspace with the new request highlighted.](../images/ui/record-delete/request-log.png)
 
+## Deleting records from datasets based on relational schemas {#relational-record-delete}
+
+If the dataset you are deleting from is based on a relational schema, review the following considerations to ensure records are removed correctly and not re-ingested due to mismatches between Experience Platform and your source system.
+
+>[!NOTE]
+>
+>Relational schemas were previously referred to as model-based schemas in earlier versions of Adobe Experience Platform documentation. The functionality and deletion behavior remain the same.
+
+### Record deletion behavior
+
+The following table outlines how record deletions behave across Experience Platform and source systems, depending on the ingestion method and change data capture configuration.
+
+| Aspect              | Behavior                                                                 |
+|---------------------|--------------------------------------------------------------------------|
+| Platform deletion   | Records are removed from the Experience Platform dataset and data lake. |
+| Source retention    | Records remain in the source system unless explicitly deleted there.     |
+| Full refresh impact | If using full refresh, deleted records may be re-ingested unless removed or excluded from the source. |
+| Change data capture behavior | Records flagged with `_change_request_type = 'd'` are deleted during ingestion. Unflagged records may be re-ingested. |
+
+To prevent re-ingestion, apply the same deletion approach in both your source system and Experience Platform, either by removing records from both systems or including `_change_request_type = 'd'` for records you intend to delete.
+
+### Change data capture and control columns
+
+Relational schemas that use Sources with change data capture can use the `_change_request_type` control column when distinguishing deletes from upserts. During ingestion, records flagged with `d` are deleted from the dataset, while those flagged with `u` or without the column are treated as upserts. The `_change_request_type` column is read at ingestion time only and is not stored in the target schema or mapped to XDM fields.
+
+>[!NOTE]
+>
+>Deleting records through the Data Lifecycle UI does not affect the source system. To remove data from both locations, delete it in both Experience Platform and the source.
+
+### Additional deletion methods for relational schemas
+
+Beyond the standard record deletion workflow, relational schemas support additional methods for specific use cases:
+
+* **Safe-copy dataset approach**: Duplicate the production dataset and apply deletes to the copy for controlled testing or reconciliation before applying changes to production data.
+* **Deletes-only batch upload**: Upload a file containing only delete operations for targeted hygiene when you need to remove specific records without affecting other data.
+
+### Descriptor support for hygiene operations {#descriptor-support}
+
+Relational schema descriptors provide essential metadata for precise hygiene operations:
+
+* **Primary key descriptor**: Identifies records uniquely for targeted updates or deletes, ensuring the correct records are affected.
+* **Version descriptor**: Ensures deletes and updates apply in the correct chronological order, preventing out-of-sequence operations.
+* **Timestamp descriptor (time-series schemas)**: Aligns delete operations with event occurrence times rather than ingestion times.
+
+>[!NOTE]
+>
+>Hygiene processes operate at the dataset level. For profile-enabled datasets, additional profile workflows may be required to maintain consistency across Real-Time Customer Profile.
+
+### Scheduled retention for relational schemas
+
+For automated hygiene based on data age rather than specific identities, see [Manage Experience Event dataset retention (TTL)](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) for scheduled row-level retention in the data lake. 
+
+>[!NOTE]
+>
+>Row-level expiration is only supported for datasets that use time-series behavior.
+
+### Best practices for relational record deletion
+
+To avoid unintentional re-ingestion and maintain data consistency across systems, follow these best practices:
+
+* **Coordinate deletions**: Align record deletions with your change data capture configuration and source data management strategy.
+* **Monitor change data capture flows**: After deleting records in Platform, monitor dataflows and confirm that the source system either removes the same records or includes them with `_change_request_type = 'd'`.
+* **Clean up the source**: For sources using full refresh ingestion or those that do not support deletes through change data capture, delete records directly from the source system to avoid re-ingestion.
+
+For more details on schema requirements, see [relational schema descriptor requirements](../../xdm/schema/relational.md#relational-schemas).  
+
+To learn how change data capture works with sources, see [Enable change data capture in sources](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-relational-schemas).
+
 ## Next steps
 
 This document covered how to delete records in the Experience Platform UI. For information on how to perform other data lifecycle management tasks in the UI, refer to the [Data Lifecycle UI overview](./overview.md).

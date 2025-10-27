@@ -15,6 +15,7 @@ role: Developer
   * [Best practices for data modeling](schema/best-practices.md)
   * [Sensitive and personal data](./schema/sensitive-and-personal-data.md)
   * [XDM field type constraints](schema/field-constraints.md)
+  * [Relational schema](./schema/relational.md)
   * [Namespacing in XDM](./schema/namespaces.md)
   * Industry data models {#industries}
     * [Overview](./schema/industries/overview.md)
@@ -67,6 +68,8 @@ role: Developer
       * [Timing](./schema/healthcare/data-types/timing.md)
       * [Virtual Service](./schema/healthcare/data-types/virtual-service-detail.md)
   * [XDM field dictionary](schema/field-dictionary.md)
+* Data Mirror {#data-mirror}
+  * [Overview](./data-mirror/overview.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -106,6 +109,7 @@ role: Developer
     * [Partner Prospect Details (Sample)](./field-groups/prospect-profile/partner-prospect-details.md)
   * XDM ExperienceEvent {#event}
     * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
+    * [Adobe Advertising Cloud Full Extension](./field-groups/event/advertising-full-extension.md)
     * [Advertising Details](./field-groups/event/advertising-details.md)
     * [Application Details](./field-groups/event/application-details.md)
     * [Balance Transfers](./field-groups/event/balance-transfers.md)

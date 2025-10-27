@@ -27,7 +27,7 @@ GET /audit/export
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/audit/events
+  https://platform.adobe.io/data/foundation/audit/export
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -37,4 +37,4 @@ curl -X POST \
 
 **Response**
 
-The results are generated into a CSV file for export. A successful response returns HTTP 307 with no response body. A link to the export file is provided in the `Location` response header.
+The results are generated into a CSV file for export, each entry representing a core or enhanced audit event. A successful response returns HTTP 307 with no response body. A link to the export file is provided in the `Location` response header.

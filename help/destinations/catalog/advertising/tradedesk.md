@@ -1,18 +1,35 @@
 ---
 keywords: advertising; the trade desk; advertising trade desk
 title: The Trade Desk connection
-description: The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video, and mobile inventory sources.
+description: The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience-targeted digital campaigns across display, video, and mobile inventory sources.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 ---
 # [!DNL The Trade Desk] connection
 
 ## Overview {#overview}
 
+
+>[!IMPORTANT]
+>
+> Following the [internal upgrade](../../../release-notes/2025/july-2025.md#destinations) to the destinations service from July 2025, you may experience a **drop in the number of activated profiles** in your dataflows to [!DNL The Trade Desk].
+> This drop is caused by the introduction of the **ECID mapping requirement** for all activations to this destination platform. See the [mandatory mapping](#mandatory-mappings) section in this page for detailed information.
+>
+>**What changed:**
+>
+>* ECID (Experience Cloud ID) mapping is now **mandatory** for all profile activations.
+>* Profiles without ECID mapping will be **dropped** from existing activation dataflows.
+>
+>**What you need to do:**
+>
+>* Review your audience data to confirm profiles have valid ECID values.
+>* Monitor your activation metrics to verify expected profile counts.
+
+
 Use this destination connector to send profile data to [!DNL The Trade Desk]. This connector sends data to the [!DNL The Trade Desk] first-party endpoint. The integration between Adobe Experience Platform and [!DNL The Trade Desk] does not support exporting data to the [!DNL The Trade Desk] third-party endpoint.
 
 [!DNL The Trade Desk] is a self-service platform for ad buyers to execute retargeting and audience-targeted digital campaigns across display, video, and mobile inventory sources.
 
-To send profile data to [!DNL Trade Desk], you must first connect to the destination, as described in the following sections of this page.
+To send profile data to [!DNL The Trade Desk], you must first connect to the destination, as described in the following sections of this page.
 
 ## Use cases {#use-cases}
 
@@ -22,11 +39,16 @@ As a marketer, I want to be able to use audiences built off of [!DNL Trade Desk 
 
 [!DNL The Trade Desk] supports the activation of audiences based on the identities shown in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-|Identity|Description|
-|---|---|
-|GAID|[!DNL Google Advertising ID]|
-|IDFA|[!DNL Apple ID for Advertisers]|
-|The Trade Desk ID|Advertiser ID in The Trade Desk platform|
+Below are the identities supported by [!DNL The Trade Desk] destination. These identities can be used to activate audiences to [!DNL The Trade Desk].
+
+All identities in the table below are mandatory mappings.
+
+|Target identity|Description|Considerations|
+|---|---|---|
+|GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
+|IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
+|ECID|Experience Cloud ID|This identity is mandatory for the integration to work correctly but is not used for audience activation.|
+|The Trade Desk ID|Advertiser ID in the [!DNL The Trade Desk] platform|Use this identity when activating audiences based on The Trade Desk's proprietary ID.|
 
 {style="table-layout:auto"}
 
@@ -72,14 +94,15 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Account ID]**: Your [!DNL Trade Desk] [!UICONTROL Account ID].
-* **[!UICONTROL Server Location]**: Ask your [!DNL Trade Desk] representative which regional server you should use. Below are the available regional servers that you can choose from:
-  * **[!UICONTROL Europe]**
-  * **[!UICONTROL Singapore]**
+* **[!UICONTROL Account ID]**: Your [!DNL The Trade Desk] [!UICONTROL Account ID].
+* **[!UICONTROL Server Location]**: Ask your [!DNL The Trade Desk] representative which regional server you should use. Below are the available regional servers that you can choose from:
+
+  * **[!UICONTROL APAC]**
+  * **[!UICONTROL China]**
   * **[!UICONTROL Tokyo]**
-  * **[!UICONTROL North America East]**
-  * **[!UICONTROL North America West]**
-  * **[!UICONTROL Latin America]**
+  * **[!UICONTROL UK/EU]**
+  * **[!UICONTROL US East Coast]**
+  * **[!UICONTROL US West Coast]**
 
 ### Enable alerts {#enable-alerts}
 
@@ -100,10 +123,36 @@ In the [Audience schedule](../../ui/activate-segment-streaming-destinations.md#s
 
 When mapping audiences, Adobe recommends that you use the Experience Platform audience name or a shorter form of it, for ease of use. However, the audience ID or name in your destination does not need to match the one in your Experience Platform account. Any value you insert in the mapping field will be reflected by the destination.
 
-If you are using multiple device mappings (cookie IDs, [!DNL IDFA], [!DNL GAID]), make sure to use the same mapping value for all three mappings. [!DNL The Trade Desk] will aggregate all of them into a single segment, with a device-level breakdown.
+### Mandatory mappings {#mandatory-mappings}
 
-![Segment Mapping ID](../../assets/common/segment-mapping-id.png)
+All target identities described in the [supported identities](#supported-identities) section must be mapped in the mapping step of the audience activation workflow. This includes:
+
+* [!DNL GAID] (Google Advertising ID)
+* [!DNL IDFA] (Apple ID for Advertisers)
+* [!DNL ECID] (Experience Cloud ID)
+* [!DNL The Trade Desk ID]
+
+![Screenshot showing the mandatory mappings](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
+
+Mapping all target identities ensures the activation can correctly split and deliver profiles using any identity present. This does not mean that all identities must be present on each profile.
+
+For export to The Trade Desk to succeed, a profile must contain:
+
+* [!DNL ECID], and
+* at least one of: [!DNL GAID], [!DNL IDFA], or [!DNL The Trade Desk ID]
+
+Examples:
+
+* [!DNL ECID] only: not exported
+* [!DNL ECID] + [!DNL The Trade Desk ID]: exported
+* [!DNL ECID] + [!DNL IDFA]: exported
+* [!DNL ECID] + [!DNL GAID]: exported
+* [!DNL IDFA] + [!DNL The Trade Desk ID] (no [!DNL ECID]): not exported
+
+>[!NOTE]
+> 
+>Following the [July 2025 upgrade](/help/release-notes/2025/july-2025.md#destinations) to the destinations service, [!DNL ECID] mapping is enforced. Profiles missing [!DNL ECID] are now dropped as expected, which may surface lower activation counts compared to legacy behavior.
 
 ## Exported data {#exported-data}
 
-To verify if data has been exported successfully to the [!DNL The Trade Desk] destination, check your [!DNL Trade Desk] account. If activation was successful, audiences are populated in your account.
+To verify if data has been exported successfully to the [!DNL The Trade Desk] destination, check your [!DNL The Trade Desk] account. If activation was successful, audiences are populated in your account.

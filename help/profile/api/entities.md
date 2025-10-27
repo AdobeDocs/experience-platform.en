@@ -8,17 +8,43 @@ exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
 ---
 # Entities endpoint (Profile access)
 
->[!IMPORTANT]
->
->ExperienceEvent lookup using the Profile access API will be deprecated. Please use features such as computed attributes for use cases that require looking up ExperienceEvents. For more information about this change, contact Adobe Customer Care.
-
 Adobe Experience Platform enables you to access [!DNL Real-Time Customer Profile] data using RESTful APIs or the user interface. This guide outlines how to access entities, more commonly known as "profiles", using the API. For more information on accessing profiles using the [!DNL Experience Platform] UI, please refer to the [Profile user guide](../ui/user-guide.md). 
 
 ## Getting started
 
 The API endpoint used in this guide is part of the [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
+## Entity resolution
+
+As part of the architecture upgrade, Adobe is introducing entity resolution for Accounts and Opportunities, using deterministic ID matching based on the latest data. Entity resolution job runs daily during batch segmentation, prior to evaluating multi-entity audiences with B2B attributes.
+
+This enhancement enables Experience Platform to identify and unify multiple records that represent the same entity, improving data consistency and enabling more accurate audience segmentation.
+
+Previously, Accounts and Opportunities relied on identity graph-based resolution that connected identities, including all historical ingestions. In the new entity-resolution approach, identities are linked based on the latest data only.
+
+- Account and Opportunity are entity resolved with a time-precedence based merging:
+  - Account: identities using the `b2b_account` namespace.
+  - Opportunity: identities using the `b2b_opportunity` namespace.
+- All other entities are simply unified and only primary identity overlaps are merged with time-precedence based merging.
+
+>[!NOTE]
+>
+>Entity resolution only supports `b2b_account` and `b2b_opportunity`. Identities from other namespaces are not used in entity resolution. If you are using custom namespaces, then you will not be able to find accounts and opportunities. 
+
+### How does entity resolution work?
+
+- **Before**: If a Data Universal Numbering System (DUNS) number was used as an additional identity and account's DUNS number was updated in a source system like CRM, the account ID is linked to both old and new DUNS numbers.
+- **After**: If the DUNS number was used as an additional identity and the account's DUNS number was updated in a source system like a CRM, the account ID is only linked to the new DUNS number, thereby reflecting the current state of account more accurately.
+
+As a result of this update, the [!DNL Profile Access] API now reflects the latest merge profile view after an entity resolution job cycle completes. Additionally, the consistent data provides use cases such as segmentation, activation, and analytics with improved data accuracy and consistency.
+
 ## Retrieve an entity {#retrieve-entity}
+
+>[!IMPORTANT]
+>
+>The following B2B entities are no longer supported for lookup requests via the API: **Account-Person Relation, Opportunity-Person Relation, Campaign, Campaign Member, Marketing List, and Marketing List Member**. 
+>
+>Support for these entities has been deprecated. If you have existing integrations or workflows that rely on accessing these entities, please update them to use supported entity types to ensure continued functionality.
 
 You can retrieve a Profile entity by making a GET request to the `/access/entities` endpoint along with the required query parameters.
 
@@ -39,6 +65,10 @@ To access a Profile entity, you **must** provide the following query parameters:
 - `schema.name`: The name of the entity's XDM schema. In this use case, the `schema.name=_xdm.context.profile`.
 - `entityId`: The ID of the entity you're trying to retrieve.
 - `entityIdNS`: The namespace of the entity you're trying to retrieve. This value must be provided if the `entityId` is **not** an XID.
+
+Additionally, usage of the following query parameter is *highly* recommended:
+
+- `mergePolicyId`: The ID of the merge policy you want to filter the data with. If no merge policy is specified, your organization's default merge policy will be used.
 
 A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
 
@@ -153,6 +183,10 @@ To access the B2B Account data, you **must** provide the following query paramet
 - `entityId`: The ID of the entity you're trying to retrieve.
 - `entityIdNS`: The namespace of the entity you're trying to retrieve. This value must be provided if the `entityId` is **not** an XID.
 
+Additionally, usage of the following query parameter is *highly* recommended:
+
+- `mergePolicyId`: The ID of the merge policy you want to filter the data with. If no merge policy is specified, your organization's default merge policy will be used.
+
 A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
 
 **Request**
@@ -244,6 +278,10 @@ To access a B2B Opportunity entity, you **must** provide the following query par
 - `schema.name`: The name of the entity's XDM schema. In this use case, the `schema.name=_xdm.context.opportunity`.
 - `entityId`: The ID of the entity you're trying to retrieve.
 - `entityIdNS`: The namespace of the entity you're trying to retrieve. This value must be provided if the `entityId` is **not** an XID.
+
+Additionally, usage of the following query parameter is *highly* recommended:
+
+- `mergePolicyId`: The ID of the merge policy you want to filter the data with. If no merge policy is specified, your organization's default merge policy will be used.
 
 A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
 
@@ -1178,6 +1216,21 @@ A successful response returns the next page of results. This response does not h
 
 ## Delete an entity {#delete-entity}
 
+>[!IMPORTANT]
+>
+>The delete entity endpoint will be deprecated by the end of October 2025. If you want to perform record delete operations, you can use the [Data Lifecycle record delete API workflow](/help/hygiene/api/workorder.md) or the [Data Lifecycle record delete UI workflow](/help/hygiene/ui/record-delete.md) instead. 
+>
+>Additionally, delete requests for the following B2B entities have already been deprecated:
+>
+>- Account
+>- Account-Person Relation
+>- Opportunity
+>- Opportunity-Person Relation
+>- Campaign
+>- Campaign Member
+>- Marketing List
+>- Marketing List Members
+
 You can delete an entity from the Profile Store by making a DELETE request to the`/access/entities` endpoint along with the required query parameters.
 
 **API format**
@@ -1236,7 +1289,7 @@ The following parameters are used in the path for GET requests to the `/access/e
 | `relatedEntityId` | If `schema.name` is `_xdm.context.experienceevent`, this value **must** specify the related profile entity's ID. This value follows the same rules as `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
 | `relatedEntityIdNS` | If `schema.name` is "_xdm.context.experienceevent", this value must specify the identity namespace for the entity specified in `relatedEntityId`. |`relatedEntityIdNS=CRMID`|
 | `fields` | Filters the data returned in the response. Use this to specify which schema field values to include in data retrieved. For multiple fields, separate values by a comma with no spaces between. | `fields=personalEmail,person.name,person.gender` |
-| `mergePolicyId` | Identifies the merge policy by which to govern the data returned. If one is not specified in the call, your organization's default for that schema will be used. If no default merge policy has been configured, the default is no profile merge and no identity stitching. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
+| `mergePolicyId` | *Recommended* Identifies the merge policy by which to govern the data returned. If one is not specified in the call, your organization's default for that schema will be used. If no default merge policy has been defined for the schema you are requesting, the API will return an HTTP 422 error status code. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
 | `orderBy` | The sort order of retrieved entities by timestamp. This is written as `(+/-)timestamp`, with the default being `+timestamp`. | `orderby=-timestamp` |
 | `startTime` | Specifies the start time to filter the entities (in milliseconds). | `startTime=1539838505` |
 | `endTime` | Specifies the end time to filter entities (in milliseconds). | `endTime=1539838510` |

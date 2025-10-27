@@ -20,7 +20,8 @@ To understand the difference between connections and extensions, see [Connection
 
 ### Connections
 
-* [(Beta) Acxiom Audience Distribution](acxiom-audience-distribution.md)
+* [(Beta) Acxiom Audience Distribution](acxiom-audience-connection.md)
+* [(Beta) Acxiom Real ID Audience Connection](acxiom-real-id-audience-connection.md)
 * [Adobe Advertising Cloud connection](adobe-advertising-cloud-connection.md)
 * [Amazon Ads connection](amazon-ads.md)
 * [Bombora connection](bombora.md)
@@ -52,7 +53,6 @@ To understand the difference between connections and extensions, see [Connection
 * [DoubleClick Floodlight extension](doubleclick-floodlight.md)
 * [Facebook Pixel extension](facebook-pixel.md)
 * [Flashtalking OneTag extension](flashtalking.md)
-* [Google Ads extension](google-ads-extension.md)
 * [Google gtag extension](gtag-advertising.md)
 * [LinkedIn Insight Tag extension](linkedin.md)
 * [Pinterest Conversion Tracking extension](pinterest-extension.md)

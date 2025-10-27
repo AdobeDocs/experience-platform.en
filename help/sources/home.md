@@ -64,7 +64,7 @@ The following sources are available to [Adobe Real-Time Customer Data Platform U
 | [[!DNL Azure Databricks]](connectors/databases/databricks.md) | Database | Batch | Azure |
 | [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | Cloud Storage | Streaming | Azure, AWS |
 | [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) | Database | Batch | Azure |
-| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | Database | Batch | Azure |
+| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | Database | Batch | Azure, AWS |
 | [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | Cloud Storage | Streaming | Azure |
 | [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | Database | Streaming | Azure, AWS |
 | [[!DNL Snowflake]](connectors/databases/snowflake.md) | Database | Batch | Azure, AWS |
@@ -102,7 +102,7 @@ You can use the following sources to ingest cloud storage data to Experience Pla
 | Source | Ingestion type | Cloud |
 | --- | --- | --- |
 | [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) | Batch | Azure |
-| [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) | Batch | Azure |
+| [[!DNL Azure Blob Storage]](connectors/cloud-storage/blob.md) | Batch | Azure |
 | [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) | Batch | Azure, AWS |
 | [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) | Batch | Azure |
 | [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) | Batch | Azure |
@@ -120,6 +120,7 @@ You can use the following sources to ingest consent and preferences data to Expe
 
 | Source | Ingestion type | Cloud |
 | --- | --- | --- |
+| [[!DNL Didomi]](../sources/connectors/consent-and-preferences/didomi.md) | Streaming | Azure |
 | [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) | Batch | Azure |
 
 {style="table-layout:auto"}
@@ -169,7 +170,7 @@ You can use the following sources to ingest data from your database to Experienc
 | [[!DNL MariaDB]](connectors/databases/mariadb.md) | Batch | Azure |
 | [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) | Batch | Azure |
 | [[!DNL MySQL]](connectors/databases/mysql.md) | Batch | Azure, AWS |
-| [[!DNL Oracle]](connectors/databases/oracle.md) | Batch | Azure |
+| [[!DNL Oracle]](connectors/databases/oracle.md) | Batch | Azure, AWS |
 | [[!DNL PostgreSQL]](connectors/databases/postgres.md) | Batch | Azure, AWS |
 | [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) | Batch | Azure |
 
@@ -212,6 +213,16 @@ You can use the following sources to ingest data from your local system to Exper
 
 {style="table-layout:auto"}
 
+### Loyalty {#loyalty}
+
+You can use the following sources to ingest data loyalty to Experience Platform.
+
+| Source | Ingestion type | Cloud |
+| --- | --- | --- |
+| [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Streaming | Azure |
+
+{style="table-layout:auto"}
+
 ### Marketing Automation {#marketing-automation}
 
 You can use the following sources to ingest marketing automation data to Experience Platform.
@@ -226,6 +237,7 @@ You can use the following sources to ingest marketing automation data to Experie
 | [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | Batch | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | Batch | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | Batch | Azure |
+| [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Streaming | Azure |
 | [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | Batch | Azure, AWS |
 
 {style="table-layout:auto"}
@@ -290,7 +302,11 @@ With attribute-based access control, you can apply mapping configurations to fie
 
 - Apply labels to schema fields to define access to specific schema fields in your organization. Once access to specific schema fields are established, users will only be able to create mappings for the fields that they have access to.
 - Users without the appropriate roles will not be able to create or update dataflows with mappings that involve inaccessible schema fields. Furthermore, unauthorized users cannot update, delete, enable, or disable existing dataflows with inaccessible schema fields.
-- Additionally, a dataflow must have the exact same schema ID and version in its mapping, target dataset, and target connection.
+- Additionally, a dataflow must have the exact same schema ID and version in its mapping, target dataset, and target connection. This applies to both standard XDM schemas and relational schemas.
+
+>[!NOTE]
+>
+>Relational schemas have additional requirements including primary key and version identifier fields. For more information, see the [relational schema overview](../xdm/schema/relational.md).
 
 For more information on attribute-based access control, read the [attribute-based access control overview](../access-control/abac/overview.md).
 

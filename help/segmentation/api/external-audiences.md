@@ -1,8 +1,6 @@
 ---
 title: External Audiences API Endpoint
 description: Learn how to use the external audiences API to create, update, activate, and delete your external audiences from Adobe Experience Platform.
-hide: yes
-hidefromtoc: yes
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
 ---
 # External audiences endpoint
@@ -74,10 +72,12 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
         },
         "ttlInDays": "40",
         "labels": ["core/C1"],
@@ -91,8 +91,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `name` | String | The name for the external audience. |
 | `description` | String | An optional description for the external audience. |
 | `customAudienceId` | String | An optional identifier for your external audience. |
-| `fields` | Array of objects | The list of fields and their data types. When creating the list of fields, you can add the following items: <ul><li>`name`: **Required** The name of the field that is part of the external audience specification.</li><li>`type`: **Required** The type of data that goes into the field. Supported values include `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`), and `boolean`.</li>`identityNs`: **Required for identity field** The namespace that is used by the identity field. Supported values include all valid namespaces, such as `ECID` or `email`.li><li>`labels`: *Optional* An array of access control labels for the field. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). </li></ul> |
-| `sourceSpec` | Object | An object that contains the information where the external audience is located. When using this object, you **must** include the following information: <ul><li>`path`: **Required**: The location of the external audience or the folder that contains the external audience within the source.</li><li>`type`: **Required** The type of the object you're retrieving from the source. This value can either be `file` or `folder`.</li><li>`sourceType`: *Optional* The type of source you're retrieving from. Currently, the only supported value is `Cloud Storage`.</li><li>`cloudType`: *Optional* The type of cloud storage, based off of the source type. Supported values include `S3`, `DLZ`, `GCS`, and `SFTP`.</li><li>`baseConnectionId`: The ID of the base connection, and is provided from your source provider. This value is **required** if using a `cloudType` value of `S3`, `GCS`, or `SFTP`. For more information, please read the [source connectors overview](../../sources/home.md)li></ul> |
+| `fields` | Array of objects | The list of fields and their data types. When creating the list of fields, you can add the following items: <ul><li>`name`: **Required** The name of the field that is part of the external audience specification.</li><li>`type`: **Required** The type of data that goes into the field. Supported values include `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`), and `boolean`.</li><li>`identityNs`: **Required for identity field** The namespace that is used by the identity field. Supported values include all valid namespaces, such as `ECID` or `email`.</li><li>`labels`: *Optional* An array of access control labels for the field. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). </li></ul> |
+| `sourceSpec` | Object | An object that contains the information where the external audience is located. When using this object, you **must** include the following information: <ul><li>`path`: **Required**: The location of the external audience or the folder that contains the external audience within the source. The file path **cannot** contain any spaces. For example, if your path is `activation/sample-source/Example CSV File.csv`, set the path to `activation/sample-source/ExampleCSVFile.csv`. You can find the path to your source within the **Source data** column of the dataflows section.</li><li>`type`: **Required** The type of the object you're retrieving from the source. This value can either be `file` or `folder`.</li><li>`sourceType`: *Optional* The type of source you're retrieving from. Currently, the only supported value is `Cloud Storage`.</li><li>`cloudType`: **Required** The type of cloud storage, based off of the source type. Supported values include `S3`, `DLZ`, `GCS`, `Azure`, and `SFTP`.</li><li>`baseConnectionId`: The ID of the base connection, and is provided from your source provider. This value is **required** if using a `cloudType` value of `S3`, `GCS`, or `SFTP`. Otherwise, you do **not** need to include this parameter. For more information, please read the [source connectors overview](../../sources/home.md).</li></ul> |
 | `ttlInDays` | Integer | The data expiration for the external audience, in days. This value can be set from 1 to 90. By default, the data expiration is set to 30 days. |
 | `audienceType` | String | The audience type for the external audience. Currently, only `people` is supported. |
 | `originName` | String | **Required** The origin of the audience. This states where the audience comes from. For external audiences, you should use `CUSTOM_UPLOAD`. |
@@ -135,11 +135,13 @@ A successful response returns HTTP status 202 with details of your newly created
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
-            },
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
+        },
         "ttlInDays": 40,
         "labels": ["core/C1"],
         "audienceType": "people",
@@ -227,11 +229,13 @@ A successful response returns HTTP status 200 with details of the external audie
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
-            },
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
+        },
         "ttlInDays": 40,
         "labels": ["core/C1"],
         "audienceType": "people",
@@ -272,6 +276,7 @@ When using this endpoint, you can update the following fields:
 - Audience description
 - Field-level access control labels
 - Audience-level access control labels
+- The audience's data expiration
 
 Updating the field using this endpoint **replaces** the content of the field you requested.
 
@@ -397,9 +402,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `dataFilterStartTime` | Epoch timestamp | **Required** The range specifying the starting time which the flow will run to select which files will be processed. |
-| `dataFilterEndTime` | Epoch timestamp | The range specifying the ending time which the flow will run to select which files will be processed. |
-| `differentialIngestion` | Boolean | A field that determines if the ingestion will be a partial ingestion based off of the difference since the last ingestion or a full audience ingestion. By default, this value is `true`. |
+| `dataFilterStartTime` | Epoch timestamp | **Required** The range specifying the starting time to determine which files will be processed. This means that the files selected will be files **after** the specified time. |
+| `dataFilterEndTime` | Epoch timestamp | The range specifying the ending time which the flow will run to select which files will be processed. This means that the files selected will be files **before** the specified time. |
 
 +++
 
@@ -522,14 +526,13 @@ You can retrieve all the ingestion runs for the selected external audience by ma
 
 **API format**
 
-The following endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help focus your results.
+<!-- The following endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help focus your results. -->
 
 ```http
 GET /external-audience/{AUDIENCE_ID}/runs
-GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 ```
 
-**Query parameters**
+<!-- **Query parameters**
 
 +++ A list of available query parameters. 
 
@@ -539,7 +542,7 @@ GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 | `sortBy` | The order in which the returned items are sorted. You can sort by either `name` or by `createdAt`. Additionally, you can add a `-` sign to sort by **descending** order instead of **ascending** order. By default, the items are sorted by `createdAt` in descending order. | `sortBy=name` |
 | `property` | A filter to determine which audience ingestion runs are displayed. You can filter on the following properties: <ul><li>`name`: Lets you filter by the audience name. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li><li>`createdAt`: Lets you filter by the ingestion time. If using this property, you can compare by using `>=` or `<=`.</li><li>`status`: Lets you filter by the ingestion run's status. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li></ul>  | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
-+++
++++ -->
 
 **Request**
 
@@ -588,19 +591,23 @@ A successful response returns HTTP status 200 with a list of ingestion runs for 
             "createdAt": 1749324248,
             "createdBy": "{USER_ID}"
         }
-    ],
+    ]
+}
+```
+
+<!-- ,
     "_page": {
         "limit": 20,
         "count": 2,
         "totalCount": 2
     }
-}
-```
+    
+| `_page` | Object | An object that contains the pagination information about the list of results. |
+     -->
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `runs` | Object | An object that contains the list of ingestion runs that belongs to the audience. More information about this object can be found in the [retrieve ingestion status section](#retrieve-ingestion-status). |
-| `_page` | Object | An object that contains the pagination information about the list of results. |
 
 +++
 

@@ -1,7 +1,7 @@
 ---
 title: Amazon Ads
 description: Amazon Ads offers a range of options to help you achieve your advertising goals to registered sellers, vendors, book vendors, Kindle Direct Publishing (KDP) authors, app developers, and/or agencies. The Amazon Ads integration with Adobe Experience Platform provides turn-key integration to Amazon Ads products, including the Amazon DSP (ADSP). Using the Amazon Ads destination in Adobe Experience Platform, users are able to define advertiser audiences for targeting and activation on the Amazon DSP.
-last-substantial-update: 2025-01-07
+last-substantial-update: 2025-10-08
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
 ---
 # Amazon Ads connection {#amazon-ads}
@@ -51,6 +51,13 @@ The *[!DNL Amazon Ads]* connection supports the activation of identities describ
 |---|---|---|
 |phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
+| `firstName`     | First name of the user                   | Supports plain text or SHA256. If plain text is used, enable [!UICONTROL Apply transformation] in Adobe UI. |
+| `lastName`      | Last name of the user                    | Supports plain text or SHA256. If plain text is used, enable [!UICONTROL Apply transformation] in Adobe UI. |
+| `street`        | Street-level address of the user         | Only SHA256 hashed input is supported. Normalize before hashing. Do **not** enable Adobe-side transformation. |
+| `city`          | City of the user                         | Supports plain text or SHA256. If plain text is used, enable [!UICONTROL Apply transformation] in Adobe UI. |
+| `state`         | State or province of the user            | Supports plain text or SHA256. If plain text is used, enable [!UICONTROL Apply transformation] in Adobe UI. |
+| `zip`           | ZIP or postal code of the user           | Supports plain text or SHA256. If plain text is used, enable [!UICONTROL Apply transformation] in Adobe UI. |
+| `country`       | Country of the user                      | Supports plain text or SHA256. If plain text is used, enable [!UICONTROL Apply transformation] in Adobe UI. |
 
 {style="table-layout:auto"}
 
@@ -59,7 +66,7 @@ The *[!DNL Amazon Ads]* connection supports the activation of identities describ
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+| ---------|----------|---------|
 | Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the *[!DNL Amazon Ads]* destination.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
@@ -123,6 +130,14 @@ The [!DNL Amazon Ads] connection supports hashed email address and hashed phone 
 * To map unhashed email addresses or phone numbers, select the corresponding identity namespaces as source fields, and check the `Apply Transformation` option to have Experience Platform hash the identities on activation.
 * *NEW starting with the September 2024 release*: Amazon Ads requires you to map a field containing a `countryCode` value in the 2-character ISO format in order to facilitate the identity resolution process (for example: US, GB, MX, CA, and so on). Connections without `countryCode` mappings will result in negative impact to identity match rates.
 
+>[!NOTE]
+>
+>To use these fields:
+> 
+>* All identity values should be normalized before ingestion. Refer to the [normalization Guide](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C).
+>* SHA256 hashing is required, either on the client side or by enabling Adobe's transformation setting.
+>* Adobe UI provides a checkbox to apply transformation per identity field during connector setup.
+
 You only select a given target field one time in a destination configuration of the [!DNL Amazon Ads] connector.  For example, if you submit business email, you cannot also map personal email in the same destination configuration.
 
 It is strongly recommended that you map as many fields as you have available. If only one source attribute is available, you may map a single field. The [!DNL Amazon Ads] destination utilizes all mapped fields for mapping purposes, yielding higher match rates if more fields are provided. For more information about the accepted identifiers, visit the [Amazon Ads hashed audience help page](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
@@ -163,6 +178,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
+|October 2025|Added the support to additional identity fields|Added additional personal identifiers support such as `firstName`, `lastName`, `street`, `city`, `state`, `zip`, and `country`. Mapping these fields can improve audience match rates.|
 |February 2025|Added the requirement to add **[!UICONTROL Amazon Ads Consent Signal]** to export dataflows and promoted the destination from beta to generally available. |
 |May 2024|Functionality and documentation update| Added the mapping option to export `countryCode` parameter into Amazon Ads. Use `countryCode` in the [mapping step](#map) to improve your identity match rates with Amazon. |
 |March 2024|Functionality and documentation update| Added the option to export audiences to be used in [!DNL Amazon Marketing Cloud] (AMC).|

@@ -284,11 +284,15 @@ At this point in time, no. However, this capability should be available in the n
 
 ### Can I send audiences from Audience Composition to all downstream destinations and channels?
 
-At this point in time, no. Currently, you can use audiences from Audience Composition in Adobe Journey Optimizer Campaigns and Real-Time CDP destinations. Adobe Journey Optimizer Journeys will be supported in a future release.
+Yes! You can use audiences from Audience Composition in Adobe Journey Optimizer Campaigns, Real-Time CDP destinations, and Adobe Journey Optimizer Journeys.
 
 ### Are there any guardrails on the number of compositions?
 
-At this point in time, you can only have **10** published compositions per sandbox. This guardrail is planned to be increased in a future release.
+>[!IMPORTANT]
+>
+>This guardrail only applies to compositions created with Audience Composition and does **not** apply to compositions created with Federated Audience Composition.
+
+At this point in time, you can only have **10** published compositions per sandbox. This guardrail is planned to be increased in a future release. 
 
 ### What are the workflow guardrails for Audience Composition?
 
@@ -300,7 +304,7 @@ The composition component placing follows a rigid structure as follows:
 4. You can optionally add a [!UICONTROL Rank] or [!UICONTROL Split] block. You can **only** have one of these blocks per composition.
 5. You **always** end with a [!UICONTROL Save] block to save your audience.
 
-Additionally, the following restrictions(?) apply when using these blocks:
+Additionally, the following restrictions apply when using these blocks:
 
 - Split block
   - This block only supports **String** data types. The Split block does **not** support the date or boolean data type.
@@ -320,7 +324,7 @@ After the audience composition has been created, it can take up to 48 hours for 
 
 ### When can I use the audience I created?
 
-The audience created in Audience Composition will **immediately** show up in Audience Portal. However, in order to use it in Adobe Journey Optimizer, you must wait at least 24 hours after evaluation.
+The audience created in Audience Composition will **immediately** show up in Audience Portal. However, in order to use it in downstream services such as Adobe Journey Optimizer, you must wait at least 24 hours after evaluation.
 
 ### Are evaluation jobs visible within the monitoring section?
 

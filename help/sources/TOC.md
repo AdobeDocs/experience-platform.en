@@ -53,6 +53,7 @@ role: Developer
     - [SFTP connector](connectors/cloud-storage/sftp.md)
     - [Amazon S3 and Azure Blob connector](connectors/cloud-storage/blob-s3.md)
   - Consent & Preferences {#consent}
+    - [Didomi](connectors/consent-and-preferences/didomi.md)
     - [OneTrust Integration](connectors/consent-and-preferences/onetrust.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
@@ -96,6 +97,9 @@ role: Developer
     - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
   - Local system {#local-system}
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
+  - Loyalty {#loyalty}
+    - [Capillary Streaming Events](connectors/loyalty/capillary.md)
+    - [Talon.One](connectors/loyalty/talon-one.md)
   - Marketing automation {#marketing-automation}
     - [Braze Currents](connectors/marketing-automation/braze.md)
     - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
@@ -225,6 +229,7 @@ role: Developer
   - [Save a dataflow as a draft](tutorials/api/draft.md)
   - [Apply access labels to a dataflow](tutorials/api/labels.md)
   - [Use private endpoints](tutorials/api/private-link.md)
+  - [Enable change data capture](tutorials/api/change-data-capture.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
     - Adobe applications {#adobe-applications}
@@ -258,6 +263,7 @@ role: Developer
       - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
       - [Amazon S3 and Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
     - Consent & Preferences {#consent}
+      - [Didomi](tutorials/ui/create/consent-and-preferences/didomi.md)
       - [OneTrust Integration](tutorials/ui/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
@@ -302,6 +308,10 @@ role: Developer
       - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
     - Local system {#local-system}
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
+    - Loyalty {#loyalty}
+      - [Capillary Streaming Events](tutorials/ui/create/loyalty/capillary.md)
+      - [Talon.One Streaming Events](tutorials/ui/create/loyalty/talon-one-streaming.md)
+      - [Talon.One Batch Source Connector](tutorials/ui/create/loyalty/talon-one-batch.md)
     - Marketing automation {#marketing-automation}
       - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
       - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
@@ -313,6 +323,7 @@ role: Developer
       - [Oracle NetSuite Activities](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
       - [Oracle NetSuite Entities](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
       - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
+      - [Relay Connector](tutorials/ui/create/marketing-automation/relay-connector.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [Square](tutorials/ui/create/payments/square.md)
@@ -347,6 +358,7 @@ role: Developer
   - [Subscribe to sources alerts](tutorials/ui/alerts.md)
   - [Save a dataflow as a draft](tutorials/ui/draft.md)
   - [Apply access labels to a dataflow](tutorials/ui/labels.md)
+  - [Create a private endpoint](tutorials/ui/private-link.md)
 - Self-Serve Sources (Batch SDK) {#sdk}
   - [Overview](sources-sdk/overview.md)
   - Configure your connection specification {#config}
