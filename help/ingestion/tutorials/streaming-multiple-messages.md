@@ -62,7 +62,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -72,7 +72,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -121,7 +121,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -131,7 +131,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -238,7 +238,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -248,7 +248,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -297,7 +297,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -308,7 +308,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "invalidIMSOrg@AdobeOrg",
         "datasetId": "{DATASET_ID}",
@@ -318,7 +318,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -367,7 +367,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -377,7 +377,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -492,7 +492,7 @@ The second message failed because it lacked a message body. The collection reque
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
