@@ -1,6 +1,6 @@
 ---
 title: Audience Composition Enhancements
-description: Learn about the enhancements made to Audience Composition with audience enrichment and chained activation.
+description: Learn about the enhancements made to Audience Composition with audience enrichment and faster activation.
 hide: yes
 hidefromtoc: yes
 ---
@@ -10,7 +10,7 @@ hidefromtoc: yes
 You now have access to **two** enhancements for Audience Composition:
 
 - Audience enrichment
-- Chained activation
+- Faster activation
 
 ## Audience enrichment
 
@@ -48,8 +48,8 @@ Please keep the following details and guardrails in mind while using audience en
   - Only the first **twenty** columns of the array are outputted
 - Only **ten** audience compositions are available for use at this time
 
-## Chained activation
+## Faster activation
 
-Chained activation lets you activate your audience to a downstream destination immediately after the composition has evaluated. As a result, if your destination is set to activate after segment evaluation, you no longer need to wait for 24 hours for the evaluation job to finish.
+Faster activation lets you activate your audience to a downstream destination immediately after the composition has evaluated. As a result, if your destination is set to activate after segment evaluation, you no longer need to wait for 24 hours for the evaluation job to finish.
 
-For more information, read the [activate batch profile destinations guide](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files).
+For more information, read the [activate audiences to batch profile destinations guide](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files).
