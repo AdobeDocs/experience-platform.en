@@ -122,7 +122,7 @@ See the table below for more information on scheduling configurations.
 
 ![backfill](../../../images/tutorials/dataflow/table-based/backfill.png)
 
-#### Understanding weekly ingestion schedule {#weekly}
+### Understanding weekly ingestion schedule {#weekly}
 
 When you choose to set your dataflow to run on a weekly schedule, the dataflow will run based on one of these scenarios:
 <ul>
