@@ -304,7 +304,7 @@ To create a record delete work order from CSV, TSV, or TXT files containing iden
 The following bash script examples demonstrate how to run the conversion scripts in Python or Ruby:
 
 >[!BEGINTABS]
->
+
 >[!TAB Example to run Python script]
 
 ```bash
@@ -349,7 +349,7 @@ done
 | ---           | ---     |
 | `verbose`     | Enable verbose output. |
 | `column`      | Column index (1-based) or name. Defaults to the first column. |
-| `namespace`   | An object with a `code` property specifying the identity namespace (e.g., “email”). |
+| `namespace`   | An object with a `code` property specifying the identity namespace (e.g., "email"). |
 | `dataset-id`  | The unique identifier for the dataset associated with the work order. If the request applies to all datasets, this field will be set to ALL. |
 | `description` | A description of the record delete work order. |
 | `output-dir`  | The directory to write the output JSON payload. |
