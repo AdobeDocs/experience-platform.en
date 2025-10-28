@@ -16,25 +16,21 @@ You now have access to **two** enhancements for Audience Composition:
 
 Audience enrichment lets you output the array of values that let your profiles qualify for the audience you created.
 
-To add audience enrichments to your composition, select the topmost **Audience** block within the canvas.
+To add audience enrichments to your composition, select the topmost **[!UICONTROL Audience]** block within the canvas. After giving the audience, a name, select **[!UICONTROL Build rule]** to open the rule-builder canvas.
 
-IMAGE
+![The Audience block is highlighted, as well as the Build rule button.](/help/segmentation/images/ui/composition-enhancements/select-build-rule.png)
 
-After giving the audience, a name, select **Build rule** to open the rule-builder canvas.
+The rule-builder canvas appears. You can now create a filter criteria for your audience enrichment. This filter criteria **must** include an attribute that is within an array. The attribute being an array is dependent on your organization's schema structure. 
 
-IMAGE
+![The rule builder canvas shows an example of an audience that can have enrichments. The View enrichment button is also highlighted.](/help/segmentation/images/ui/composition-enhancements/view-enrichment.png)
 
-The rule-builder canvas appears. You can now create a filter criteria for your audience enrichment. 
+After you created your filter criteria, select **[!UICONTROL View enrichment]** within the right-hand panel. Choose the object array you want to use for enrichment from the list on the left panel, as well as the fields you want to be used in the enrichment. If there is only one array on the profile, the array is automatically selected for you. Select **[!UICONTROL Save]** to return to audience composition.
 
-IMAGE
+![The schema tree for the enrichment tree is displayed.](/help/segmentation/images/ui/composition-enhancements/enrichment-tree.png)
 
-After you created your filter criteria, select **Delivery** within the right-hand panel. Choose the object array you want to use for enrichment from the list on the left panel. If there is only one array on the profile, the array is automatically selected for you. Select **Save** to return to audience composition.
+Within audience composition, your [!UICONTROL Audience] block is now a "[!UICONTROL Rule builder with enhancement]" type. Select **[!UICONTROL Publish]** to activate your audience with the next daily batch.
 
-IMAGE
-
-Within audience composition, your Audience block is now a "Rule builder with enhancement" type. Select **Publish** to activate your audience with the next daily batch.
-
-IMAGE
+![The Audience block is highlighted, showing that an audience with enrichment is added.](/help/segmentation/images/ui/composition-enhancements/rule-builder-with-enrichment.png)
 
 ### Behavior details and guardrails
 
