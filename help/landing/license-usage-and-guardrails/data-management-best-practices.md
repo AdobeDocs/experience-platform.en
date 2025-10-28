@@ -169,3 +169,99 @@ The following is a list of some recommended best practices that you can follow t
 * Configure [Experience Event expirations](../../catalog/datasets/user-guide.md#data-retention-policy) and [Pseudonymous Profile data expirations](../../profile/pseudonymous-profiles.md) for high-frequency data like web data.
 * Configure [Time-to-Live (TTL) retention policies for Experience Event datasets](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) in the data lake to automatically remove outdated records and optimize storage usage in line with your license entitlements.
 * Periodically check the [Profile Composition Reports](#profile-store-composition-reports) to understand your Profile store composition. This allows you to understand the data sources contributing most to your license usage consumption.
+
+## Use case: License Usage Compliance
+
+### Why consider this use case
+
+By ensuring your compliance with **license usage provisions** for both data lake and Profile storage, you can confidently prevent overages, optimize costs, and align your data retention policies with your business requirements.
+
+### Prerequisites and planning
+
+Consider the following prerequisites in your planning process:
+
+* **Access and permissions**:
+  * Ensure that you have the **Manage Datasets** permission to use Experience Event TTL.
+  * Ensure that you have the **Manage Profile Settings** to use Pseudonymous Profile TTL.
+* **Understanding of data retention policy**:
+  * Organizational policies regarding data retention and compliance
+  * Business needs for data analytics and segmentation lookback windows
+
+### UI functionality, Experience Platform components, and Experience Cloud products that you will use
+
+To successfully implement this use case, you must use multiple areas of Adobe Experience Platform. Ensure you have the necessary attribute-based access control permissions for all these areas, or ask your system administrator to grant them.
+
+* License usage dashboard - View your current entitlement usage at the sandbox level.
+* Dataset management - Monitor and manage dataset-level retention policies.
+* Audiences (Real-Time Customer Profile) - Ensure segmentation rules look back window aligns with data retention windows.
+* Monitoring and alerts - Track updates and receive insights on dataset retention operations.
+
+### How to achieve the use case: Step-by-step instructions
+
+Read through the sections below, which include links to further documentation, to complete each of the steps in the high-level overview above.
+
+**Check your current license usage**
+
+First, navigate to the **license usage dashboard** and review your entitlement usage at the sandbox level.
+
+>[!BEGINTABS]
+
+>[!TAB Production sandbox]
+
+Use the [!UICONTROL Metrics] interface to view your license usage metrics. The interface displays information for your production sandbox by default.
+
+![The license usage dashboard UI displaying your license usage metrics for a production sandbox.](../images/data-management/prod-sandbox.png)
+
+>[!TAB Development sandbox]
+
+Select [!UICONTROL Development] to view license usage metrics related to your development sandboxes.
+
+![The license usage dashboard UI displaying your license usage metrics for development sandboxes.](../images/data-management/dev-sandbox.png)
+
+>[!ENDTABS]
+
+For more information, read the documentation on [using the license usage dashboard](../../dashboards/guides/license-usage.md).
+
+**Analyze dataset-level storage usage**
+
+Use the **Dataset browse view** to review your dataset usage metrics for both data lake and Real-Time Customer Profile. Select the column headers for either **[!UICONTROL Data Lake Storage]** or **[!UICONTROL Profile Storage]**, then select **[!UICONTROL Sort Descending]** from the pop up panel.
+
+>[!BEGINTABS]
+
+>[!TAB Data lake storage]
+
+Your datasets in data lake are sorted by storage size. Use this feature to identify the largest consumers of storage in data lake.
+
+![The datasets in data lake sorted from largest to smallest.](../images/data-management/data-lake-storage.png)
+
+>[!TAB Profile storage]
+
+Your datasets in Profile are sorted by storage size. Use this feature to identify the largest consumers of storage in Profile.
+
+![The datasets in Profile sorted from largest to smallest.](../images/data-management/profile-storage.png)
+
+>[!ENDTABS]
+
+**Evaluate and configure retention rule**
+
+Next, determine if your datasets have the appropriate retention policies based on license limits and business requirements for Analytics and Segmentation. To view a dataset's retention policy, select the ellipses (`...`) beside your dataset, then select **[!UICONTROL Set data retention policy]**.
+
+![The pop up panel with dataset options, including "Set data retention policy"](../images/data-management/set-retention-policy.png)
+
+The *[!UICONTROL Set dataset retention]* interface appears. Use this interface to configure a retention policy for your dataset. You can also use it to view how much storage space your dataset is consuming in either the data lake or Profile.
+
+![The "set dataset retention" interface.](../images/data-management/dataset-retention.png)
+
+You can further analyze the retention impact of your dataset using the impact forecaster. Select **[!UICONTROL View ExperienceEvent data distribution]** to view a chart that displays your retention window and the total percentage of storage that is set to expire.
+
+When finished, select **[!UICONTROL Save]**
+
+![The impact forecaster from within the dataset retention interface.](../images/data-management/impact-forecaster.png)
+
+**Validate retention changes**
+
+Once you have applied your retention policies, you can use the following tools to validate your changes:
+
+* [Dataset usage metrics](../../catalog/datasets/user-guide.md#enhanced-visibility-of-retention-periods-and-storage-metrics) in the dataset browse view.
+* The [monitoring dashboard](../../dataflows/ui/monitor.md) to view and analyze impact of retention.
+* The [license usage dashboard](../../dashboards/guides/license-usage.md) to view daily snapshots, predictive trends, and sandbox-level insights.
