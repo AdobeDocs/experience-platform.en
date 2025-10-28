@@ -114,13 +114,21 @@ See the table below for more information on scheduling configurations.
 
 | Scheduling configuration | Description |
 | --- | --- |
-| Frequency | Configure frequency to indicate how often the dataflow should run. You can set your frequency to: <ul><li>**Once**: Set your frequency to `once` to create a one-time ingestion. Configurations for interval and backfill are unavailable when creating a one-time ingestion dataflow. By default, the scheduling frequency is set to once.</li><li>**Minute**: Set your frequency to `minute` to schedule your dataflow to ingest data on a per-minute basis.</li><li>**Hour**: Set your frequency to `hour` to schedule your dataflow to ingest data on a per-hour basis.</li><li>**Day**: Set your frequency to `day` to schedule your dataflow to ingest data on a per-day basis.</li><li>**Week**: Set your frequency to `week` to schedule your dataflow to ingest data on a per-week basis.</li></ul> |
+| Frequency | Configure frequency to indicate how often the dataflow should run. You can set your frequency to: <ul><li>**Once**: Set your frequency to `once` to create a one-time ingestion. Configurations for interval and backfill are unavailable when creating a one-time ingestion dataflow. By default, the scheduling frequency is set to once.</li><li>**Minute**: Set your frequency to `minute` to schedule your dataflow to ingest data on a per-minute basis.</li><li>**Hour**: Set your frequency to `hour` to schedule your dataflow to ingest data on a per-hour basis.</li><li>**Day**: Set your frequency to `day` to schedule your dataflow to ingest data on a per-day basis.</li><li>**Week**: Set your frequency to `week` to schedule your dataflow to ingest data on a per-week basis. For more information, read the section on [Understanding weekly ingestion schedule] (#weekly).</li></ul> |
 | Interval |  Once you select a frequency, you can then configure the interval setting to establish the time frame between every ingestion. For example, if you set your frequency to day and configure the interval to 15, then your dataflow will run every 15 days. You cannot set the interval to zero. The minimum accepted interval value for each frequency is as follows:<ul><li>**Once**: n/a</li><li>**Minute**: 15</li><li>**Hour**: 1</li><li>**Day**: 1</li><li>**Week**: 1</li></ul> |
 | Start Time | The timestamp for the projected run, presented in UTC time zone. |
 | Backfill | Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to the start time will not be ingested. |
 | Load incremental data by | An option with a filtered set of source schema fields of type, date, or time. The field that you select for **[!UICONTROL Load incremental data by]** must have its date-time values in UTC timezone in order to correctly load incremental data. All table-based batch sources pick incremental data by comparing a delta column time stamp value to the corresponding flow run window UTC time, and then copying the data from the source, if any new data is found within the UTC time window. |
 
 ![backfill](../../../images/tutorials/dataflow/table-based/backfill.png)
+
+#### Understanding weekly ingestion schedule {#weekly}
+
+When you choose to set your dataflow to run on a weekly schedule, the dataflow will run based on one of these scenarios:
+<ul>
+<li>If your data source has been created but no data has been ingested yet, the first weekly dataflow will run 7 days after the source creation date. This 7-day interval always starts from when the source was created, regardless of when you set up the schedule. After the initial run, the dataflow will continue to execute on a weekly basis according to the configured schedule. </li>
+<li>If data from your source has been previously ingested and you schedule it for weekly ingestion again, the next dataflow will run 7 days after the most recent successful ingestion. </li>
+</ul>
 
 ## Review your dataflow
 
