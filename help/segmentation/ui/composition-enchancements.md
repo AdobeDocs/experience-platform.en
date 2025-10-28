@@ -46,8 +46,8 @@ Please keep the following details and guardrails in mind while using audience en
 - Only **one** object array can be used to generate the enrichment payload within a single audience
   - The payload array can be nested within an object (up to seven layers within the profile schema), but **cannot** be contained in another array.
   - The payload array **must** have 50 or fewer rows.
-  - All the columns output within the payload **must** be a primitive type
-  - Only the first **twenty** columns of the array are outputted
+  - All the columns output within the payload **must** be a primitive type.
+  - Only the first **twenty** columns of the array are outputted.
 - Only **ten** audience compositions are available for use at this time
 
 ## Faster activation {#faster-activation}
