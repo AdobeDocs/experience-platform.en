@@ -9,10 +9,10 @@ hidefromtoc: yes
 
 You now have access to **two** enhancements for Audience Composition:
 
-- Audience enrichment
-- Faster activation
+- [Audience enrichment](#audience-enrichment)
+- [Faster activation](#faster-activation)
 
-## Audience enrichment
+## Audience enrichment {#audience-enrichment}
 
 Audience enrichment lets you output the array of values that let your profiles qualify for the audience you created.
 
@@ -50,7 +50,7 @@ Please keep the following details and guardrails in mind while using audience en
   - Only the first **twenty** columns of the array are outputted
 - Only **ten** audience compositions are available for use at this time
 
-## Faster activation
+## Faster activation {#faster-activation}
 
 Faster activation lets you activate your audience to a downstream destination immediately after the composition has evaluated. As a result, if your destination is set to activate after segment evaluation, you no longer need to wait for 24 hours for the evaluation job to finish.
 
