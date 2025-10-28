@@ -115,7 +115,7 @@ Consent policies are comprised of two logical components:
 
 >[!NOTE]
 >
->Consent policies support advanced rule building with various field types and operators. For a complete reference of supported field types, operators, and rule-building examples, see the [Consent policy rules reference](consent-rules.md).
+>Consent policies support advanced rule building with various field types and operators. For a complete reference of supported field types, operators, and rule-building examples, see the [Consent policy rules reference](./consent-policy-rule-building-reference.md).
 
 #### Configure conditions {#consent-conditions}
 
@@ -145,7 +145,7 @@ Under the **[!UICONTROL Then]** section, select at least one consent attribute f
 
 >[!NOTE]
 >
->Consent policies support primitive field types (String, Number, Boolean, Date) and container types (Object, Map, Array). You can navigate into containers to select specific attributes and apply AND/OR logic to combine rules. For a full reference of supported field types, operators, and rule-building examples, see the [consent policy rule building reference](consent-policy-rules-reference.md).
+>Consent policies support primitive field types (String, Number, Boolean, Date) and container types (Object, Map, Array). You can navigate into containers to select specific attributes and apply AND/OR logic to combine rules. For a full reference of supported field types, operators, and rule-building examples, see the [consent policy rule building reference](./consent-policy-rule-building-reference.md).
 
 ![The consent policy builder UI showing the If and Then sections, with View all highlighted.](../images/policies/view-all.png)
 
