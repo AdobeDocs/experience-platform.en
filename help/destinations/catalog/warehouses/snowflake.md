@@ -1,6 +1,7 @@
 ---
 title: Snowflake Streaming connection
 description: Create a live Snowflake data share to receive streaming audience updates directly as shared tables into your account.
+last-substantial-update: 2025-10-23
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 ---
