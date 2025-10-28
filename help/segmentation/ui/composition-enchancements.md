@@ -20,11 +20,11 @@ To add audience enrichments to your composition, select the topmost **[!UICONTRO
 
 ![The Audience block is highlighted, as well as the Build rule button.](/help/segmentation/images/ui/composition-enhancements/select-build-rule.png)
 
-The rule-builder canvas appears. You can now create a filter criteria for your audience enrichment. This filter criteria **must** include an attribute that is within an array. The attribute being an array is dependent on your organization's schema structure. 
+The rule-builder canvas appears. You can now create a filter criteria for your audience enrichment. This filter criteria **must** include an attribute that is within an array. The attribute being an array is dependent on your organization's schema structure. After you created your filter criteria, select **[!UICONTROL Delivery]** within the right-hand panel.
 
-![The rule builder canvas shows an example of an audience that can have enrichments. The View enrichment button is also highlighted.](/help/segmentation/images/ui/composition-enhancements/view-enrichment.png)
+![The rule builder canvas shows an example of an audience that can have enrichments. The Delivery button is also highlighted.](/help/segmentation/images/ui/composition-enhancements/view-delivery.png)
 
-After you created your filter criteria, select **[!UICONTROL View enrichment]** within the right-hand panel. Choose the object array you want to use for enrichment from the list on the left panel, as well as the fields you want to be used in the enrichment. If there is only one array on the profile, the array is automatically selected for you. Select **[!UICONTROL Save]** to return to audience composition.
+ Choose the object array you want to use for enrichment from the list on the left panel, as well as the fields you want to be used in the enrichment. If there is only one array on the profile, the array is automatically selected for you. Select **[!UICONTROL Save]** to return to audience composition.
 
 ![The schema tree for the enrichment tree is displayed.](/help/segmentation/images/ui/composition-enhancements/enrichment-tree.png)
 
