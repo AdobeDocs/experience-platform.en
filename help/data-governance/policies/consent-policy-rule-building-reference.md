@@ -1,20 +1,22 @@
 ---
 title: Consent Policy Rule Building Reference
-description: A technical reference guide to XDM data types, supported operators, and advanced logic for creating granular consent policy rules in the Adobe Experience Platform UI.
+description: Learn how to use XDM data types, supported operators, and advanced logic for creating granular consent policy rules in the Adobe Experience Platform UI.
 ---
 # Consent policy rule building reference
 
-Use this reference on advanced rule logic to set precise, legally valid rules in the **"[!UICONTROL Then]"** clause of the Consent Policy builder in Adobe Experience Platform.
+Use this reference on advanced rule logic to set precise, legally valid rules in the **[!UICONTROL Then]** clause of the Consent Policy builder in Adobe Experience Platform.
 
-![The consent policy builder interface highlighting the "[!UICONTROL Then]" clause section, where users define rule conditions.](../images/policies/multiple-rules.png)
+![The consent policy builder interface highlighting the [!UICONTROL Then] clause section, where users define rule conditions.](../images/policies/multiple-rules.png)
 
-Learn how policy rules work with your consent data's structure and types to precisely enforce customer preferences. This document explains how to filter profiles based on consent by navigating into container fields in your XDM schema to select a primitive field. From there, use the right operator to define the exact value a profile must match.
+Learn how policy rules apply to your consent data's structure and types to accurately enforce customer consent preferences. 
+
+Read this document to learn how to filter profiles based on consent by navigating into container fields in your XDM schema and selecting a primitive field. Then use the appropriate operator to define the exact value a profile must match.
 
 ## Prerequisites
 
 Before using this reference, ensure that your consent policy setup is complete and that you understand the foundational concepts of Adobe Experience Platform's data architecture and governance framework.
 
-Ensure you should meet the following prerequisites:
+Ensure that you meet the following prerequisites:
 
 * **Policy Setup Complete**: You have created or started creating a consent policy in the Adobe Experience Platform UI. For detailed steps, see the [data usage policies user guide](user-guide.md#consent-policy).
 
@@ -25,7 +27,7 @@ Ensure you should meet the following prerequisites:
 
 ## Core concepts: primitive and container fields
 
-This section explains how consent policy rules use different field types in XDM schemas. Understanding the distinction between container and primitive fields helps you select the correct field and operator when defining policy conditions.
+Read this section to learn how consent policy rules use different field types in XDM schemas. Understanding the distinction between container and primitive fields helps you select the correct field and operator when defining policy conditions.
 
 ### Supported field types and rule logic
 
@@ -61,7 +63,7 @@ The table below describes each supported primitive type and the available operat
 
 ## Working with complex data structures
 
-This section describes how to navigate nested containers in your consent schema to reach primitive fields. It introduces common schema patterns and explains how deeper structures enable more granular consent logic.
+Read this section to learn how to navigate nested containers in your consent schema to reach primitive fields. It introduces common schema patterns and explains how deeper structures enable more granular consent logic.
 
 ### Handling nested and complex schema structures
 
@@ -98,7 +100,7 @@ consent.marketing (Object)
 
 ## Advanced rule building by field type
 
-This section provides detailed guidance on creating consent policy rules based on field type. You'll learn how to configure rule logic for booleans, maps, objects, and arrays to capture precise consent conditions.
+Read this section for a detailed guidance on creating consent policy rules based on field type. You'll learn how to configure rule logic for booleans, maps, objects, and arrays to capture precise consent conditions.
 
 ### Rule building components and steps
 
