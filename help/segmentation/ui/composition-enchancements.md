@@ -24,9 +24,11 @@ The rule-builder canvas appears. You can now create a filter criteria for your a
 
 ![The rule builder canvas shows an example of an audience that can have enrichments. The Delivery button is also highlighted.](/help/segmentation/images/ui/composition-enhancements/view-delivery.png)
 
- Choose the object array you want to use for enrichment from the list on the left panel, as well as the fields you want to be used in the enrichment. If there is only one array on the profile, the array is automatically selected for you. Select **[!UICONTROL Save]** to return to audience composition.
+ Choose the object array you want to use for enrichment from the list on the left panel. If there is only one array on the profile, the array is automatically selected for you. Select **[!UICONTROL Save]** to return to audience composition.
 
-![The schema tree for the enrichment tree is displayed.](/help/segmentation/images/ui/composition-enhancements/enrichment-tree.png)
+ <!-- , as well as the fields you want to be used in the enrichment. -->
+
+![The schema tree for the enrichment tree is displayed.](/help/segmentation/images/ui/composition-enhancements/view-schema-tree.png)
 
 Within audience composition, your [!UICONTROL Audience] block is now a "[!UICONTROL Rule builder with enhancement]" type. Select **[!UICONTROL Publish]** to activate your audience with the next daily batch.
 
