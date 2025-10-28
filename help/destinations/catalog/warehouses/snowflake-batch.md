@@ -1,6 +1,7 @@
 ---
 title: Snowflake Batch connection
 description: Create a live Snowflake data share to receive daily audience updates directly as shared tables into your account.
+last-substantial-update: 2025-10-23
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
 ---

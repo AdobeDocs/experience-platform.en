@@ -31,10 +31,10 @@ To learn more about profiles and their role within Experience Platform, please b
 
 ## How the sample job is triggered
 
-As data enabled for Real-Time Customer Profile is ingested into [!DNL Experience Platform], it is stored within the Profile data store. When the ingestion of records into the Profile store increases or decreases the total profile count by more than 5%, a sampling job is triggered to update the count. The way in which the sample is triggered depends on the type of ingestion being used:
+As data enabled for Real-Time Customer Profile is ingested into [!DNL Experience Platform], it is stored within the Profile data store. When the ingestion of records into the Profile store increases or decreases the total profile count by more than 3%, a sampling job is triggered to update the count. The way in which the sample is triggered depends on the type of ingestion being used:
 
-* For **streaming data workflows**, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a sample job is automatically triggered to update the count. 
-* For **batch ingestion**, within 15 minutes of successfully ingesting a batch into the Profile store, if the 5% increase or decrease threshold is met, a job is run to update the count. Using the Profile API you can preview the latest successful sample job, as well as list profile distribution by dataset and by identity namespace.
+* For **streaming data workflows**, a check is done on an hourly basis to determine if the 3% increase or decrease threshold has been met. If it has, a sample job is automatically triggered to update the count. 
+* For **batch ingestion**, within 15 minutes of successfully ingesting a batch into the Profile store, if the 3% increase or decrease threshold is met, a job is run to update the count. Using the Profile API you can preview the latest successful sample job, as well as list profile distribution by dataset and by identity namespace.
 
 The profile count and profiles by namespace metrics are also available within the [!UICONTROL Profiles] section of the Experience Platform UI. For information on how to access Profile data using the UI, please visit the [[!DNL Profile] UI guide](../ui/user-guide.md).
 
