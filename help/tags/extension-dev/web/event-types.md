@@ -32,7 +32,7 @@ module.exports = function(settings, trigger) { … };
 
 | Parameter | Description |
 | --- | --- |
-`settings` | An object containing any settings the user configured in the event type's view. You have ultimate control over what goes into this object. |
+| `settings` | An object containing any settings the user configured in the event type's view. You have ultimate control over what goes into this object. |
 | `trigger` | A function that the module should call whenever the rule should be fired. There is a one-to-one relationship amongst a `settings` object, a `trigger` function, and a rule. This means that the trigger function you received for one rule cannot be used to fire a different rule. |
 
 >[!NOTE]

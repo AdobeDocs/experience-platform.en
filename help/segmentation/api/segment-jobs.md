@@ -37,7 +37,7 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `start` | Specifies the starting offset for the segment jobs returned. | `start=1` |
 | `limit` | Specifies the number of segment jobs returned per page. | `limit=20` |
 | `status` | Filters the results based on status. The supported values are NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELLING, CANCELLED | `status=NEW` |
-| `sort` | Orders the segment jobs returned. Is written in the format `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
+| `sort` | Orders the segment jobs returned. Is written in the format `[attributeName]:[desc|asc]`.  `sort=creationTime:desc` |
 | `property` | Filters segment jobs and gets exact matches for the filter given. It can be written in either of the following formats: <ul><li>`[jsonObjectPath]==[value]` - filtering on the object key</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtering within the array</li></ul> | `property=segments~segmentId==workInUS` |
 
 +++

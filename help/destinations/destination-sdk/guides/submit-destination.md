@@ -261,6 +261,7 @@ If you are an Independent Software Vendor (ISV) or System Integrator (SI) creati
 The destinations catalog includes a logo for each destination card. In your submission email, include an image with the logo for your destination.
 
 The image requirements are:
+
 * **Format**: `SVG`
 * **Size**: less than 2MB
 
