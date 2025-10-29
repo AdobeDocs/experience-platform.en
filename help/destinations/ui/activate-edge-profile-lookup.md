@@ -44,9 +44,9 @@ Follow the steps in the [datastream configuration](../../datastreams/configure.m
 * **[!UICONTROL Edge Segmentation]**: If you require edge segmentation, enable this option. If you are only interested in looking up profile attributes on the edge, but do not want to perform any segmentation based on the edge profiles, then leave this option disabled.
 
 
-    <!-- >[!IMPORTANT]
-    >
-    >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
+<!-- >[!IMPORTANT]
+>
+>Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
     ![Experience Platform UI image showing the datastream configuration screen.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 

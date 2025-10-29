@@ -136,7 +136,7 @@ For scheduled, or recurring dataset exports, the guardrails below are identical 
 >Exports to JSON files are supported in a compressed mode only.
 
 |Dataset type | Guardrail | Guardrail type | Description |
----------|----------|---------|-------|
+|---------|----------|---------|-------|
 | Datasets based on the **XDM Experience Events schema** | Last 365 days of data | System-enforced guardrail | The data from the last calendar year is exported. |
 | Datasets based on **any schema apart from the XDM Experience Events schema** | Ten billion records across all exported files in a dataflow | System-enforced guardrail | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
 

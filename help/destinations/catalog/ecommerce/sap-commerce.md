@@ -125,7 +125,7 @@ This destination also supports the activation of the audiences described in the 
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of an audience, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> For each selected audience in Experience Platform, the corresponding [!DNL SAP Commerce] additional attribute gets updated with its audience status from Experience Platform.</li></ul> |
 | Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. When a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
@@ -322,6 +322,7 @@ Refer to the [[!DNL SAP Subscription Billing] Error Types](https://help.sap.com/
 ## Additional resources {#additional-resources}
 
 Additional useful information from the [!DNL SAP] documentation is below:
+
 * [Onboard SAP Subscription Billing](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/e4b8badf7d124026991e4ab6b57d2a33.html)
 
 ### Changelog
