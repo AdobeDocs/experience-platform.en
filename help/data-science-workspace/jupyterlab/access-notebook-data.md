@@ -529,7 +529,9 @@ df1.show(10)
 You can auto generate the above example in JupyterLab buy using the following method:
 
 Select the Data icon tab (highlighted below) in the left-navigation of JupyterLab. The **[!UICONTROL Datasets]** and **[!UICONTROL Schemas]** directories appear. Select **[!UICONTROL Datasets]** and right-click, then select the **[!UICONTROL Explore Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of your notebook. 
+
 And 
+
 - Use **[!UICONTROL Explore Data in Notebook]** to generate a read cell.
 - Use **[!UICONTROL Write Data in Notebook]** to generate a write cell.
 

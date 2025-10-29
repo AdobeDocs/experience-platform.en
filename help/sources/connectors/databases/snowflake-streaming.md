@@ -94,9 +94,9 @@ openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8
 If successful, you should receive your private key in PEM format.
 
 ```shell
------BEGIN ENCRYPTED PRIVATE KEY-----
+|-----BEGIN ENCRYPTED PRIVATE KEY-----
 MIIE6T...
------END ENCRYPTED PRIVATE KEY-----
+|-----END ENCRYPTED PRIVATE KEY-----
 ```
 
 >[!TAB Create an unencrypted private key]
@@ -110,9 +110,9 @@ openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out rsa_key.p8 -nocrypt
 If successful, you should receive your private key in PEM format.
 
 ```shell
------BEGIN PRIVATE KEY-----
+|-----BEGIN PRIVATE KEY-----
 MIIE6T...
------END PRIVATE KEY-----
+|-----END PRIVATE KEY-----
 ```
 
 >[!ENDTABS]

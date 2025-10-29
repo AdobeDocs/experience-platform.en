@@ -20,6 +20,7 @@ This tutorial provides you with the prerequisites and assets required for all ot
 ## Getting started
 
 Before starting this tutorial, you must have the following prerequisites:
+
 -   Access to [!DNL Adobe Experience Platform]. If you do not have access to an organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 -   Authorization to make [!DNL Experience Platform] API calls. Complete the [Authenticate and access Adobe Experience Platform APIs](https://www.adobe.com/go/platform-api-authentication-en) tutorial to obtain the following values in order to successful complete this tutorial:
     -   Authorization: `{ACCESS_TOKEN}`
@@ -111,6 +112,7 @@ for more information.
 You have also successfully ingested Retail Sales sample data into [!DNL Experience Platform] using the provided bootstrap script.
 
 To continue working with the ingested data:
+
 - [Analyze your data using Jupyter Notebooks](../jupyterlab/analyze-your-data.md)
     - Use Jupyter Notebooks in Data Science Workspace to access, explore, visualize, and understand your data.
 - [Package source files into a Recipe](./package-source-files-recipe.md)

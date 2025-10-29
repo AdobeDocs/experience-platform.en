@@ -45,7 +45,7 @@ The following certificate details are displayed:
 
 | Field Name | Description | 
 | --- | --- |
-| Certificate | Details of the certificate, which include:<ul><li>**Name**: The name of the cerificate.</li><li>**Date created**: The date when the certificate was created.</li><li>**Status**: The current status of the certificate:<ul><li>**Current**: The certificate is actively in use.</li><li>**Obsolete**: The certificate is not in use but hasn’t expired yet. It can still be selected for use.</li><li>**Expired**: The certificate is expired, grayed out, and no longer available for use.</li></ul></ul>  |
+| Certificate | Details of the certificate, which include:<ul><li>**Name**: The name of the cerificate.</li><li>**Date created**: The date when the certificate was created.</li><li>**Status**: The current status of the certificate:<ul><li>**Current**: The certificate is actively in use.</li><li>**Obsolete**: The certificate is not in use but hasn't expired yet. It can still be selected for use.</li><li>**Expired**: The certificate is expired, grayed out, and no longer available for use.</li></ul></ul>  |
 | Expires | Date the certificate will expire. |
 | Variable Name | The variable name of the certificate. |
 | Status | The current status of the certificate:<ul><li>**Depolyed**: The certificate has been successfully deployed and is active.</li><li>**Deploying**: The certificate is in the process of being deployed.</li><li>**Needs Deployment**: This status appears when an obsolete certificate is selected.</li></ul> |
@@ -71,4 +71,4 @@ To deploy the certificate, select **[!UICONTROL Save and deploy]** in the **[!UI
 
 This document demonstrated how to create an environment for your Event Forwarding property, add a certificate, and use an obsolete certificate. For more information about the [!DNL mTLS] certificates, see [[!DNL mTLS] Service API Overview](../../../../data-governance/mtls-api/overview.md)
 
-To learn how to use [!DNL mTLS] certificates in Event Forwarding rules, refer to the [Cloud Connector extension overview](../cloud-connector/overview.md/#mtls-rules).
+To learn how to use [!DNL mTLS] certificates in Event Forwarding rules, refer to the [Cloud Connector extension overview](../cloud-connector/overview.md#mtls-rules).
