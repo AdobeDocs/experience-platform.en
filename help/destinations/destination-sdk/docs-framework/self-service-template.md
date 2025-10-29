@@ -86,7 +86,7 @@ This section describes which types of audiences you can export to this destinati
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the *YourDestination* destination.|
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all members of an audience, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
 | Export type | **[!UICONTROL Dataset export]** | You are exporting raw datasets, which are not grouped or structured by audience interests or qualifications.|

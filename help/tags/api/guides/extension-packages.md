@@ -88,10 +88,10 @@ curl -X PATCH \
   -d '{
         "data": {
           "attributes": {
-	          "state": "approved"
-	        },
-	        "id": ":extension_package_usage_authorization_id",
-	        "type": "extension_package_usage_authorizations"
+            "state": "approved"
+            },
+            "id": ":extension_package_usage_authorization_id",
+            "type": "extension_package_usage_authorizations"
         }
       }
 ```

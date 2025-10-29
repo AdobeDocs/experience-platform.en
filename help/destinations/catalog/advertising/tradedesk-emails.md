@@ -9,6 +9,7 @@ exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 >[!IMPORTANT]
 >
 >With the release of EUID (European Unified ID), you are now seeing two [!DNL The Trade Desk - CRM] destinations in the [destinations catalog](/help/destinations/catalog/overview.md).
+>
 >* If you source data in the EU, please use the **[!DNL The Trade Desk - CRM (EU)]** destination. 
 >* If you source data in the APAC or NAMER regions, please use the **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destination. 
 >
@@ -68,7 +69,7 @@ If you select to hash the email addresses yourself, make sure to comply with the
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (email or hashed email) used in the Trade Desk destination. |
 | Export frequency | **[!UICONTROL Daily Batch]** | As a profile is updated in Experience Platform based on audience evaluation, the profile (identities) are updated once a day downstream to the destination platform. Read more about [batch exports](/help/destinations/destination-types.md#file-based).|
 

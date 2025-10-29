@@ -107,7 +107,7 @@ Supported audiences by audience data type:
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL Snowflake] destination.|
 | Export frequency | **[!UICONTROL Batch]** | This destination provides periodic snapshots of complete audience membership through Snowflake data sharing. Each snapshot replaces the previous data, ensuring you always have the latest complete view of your audience.|
 

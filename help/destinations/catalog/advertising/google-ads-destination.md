@@ -52,7 +52,7 @@ This section describes which types of audiences you can export to this destinati
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience to the Google destination.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 

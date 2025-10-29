@@ -50,6 +50,7 @@ An example setup within [!DNL Dynamics 365] is shown below:
 #### Register an application and application user within Azure Active Directory {#prerequisites-app-user}
 
 To enable [!DNL Dynamics 365] to access resources you will need to log in with your [!DNL Azure Account] to [[!DNL Azure Active Directory]](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal) and create the following:
+
 * An [!DNL Azure Active Directory] application
 * A Service principal
 * An application secret
@@ -95,7 +96,7 @@ This destination supports the activation of all audiences generated through the 
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of an audience, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each audience status in [!DNL Dynamics 365] gets updated with the corresponding audience status from Experience Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-audience-export-example) step.</li></ul> |
 | Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
@@ -117,6 +118,7 @@ To authenticate to the destination, select **[!UICONTROL Connect to destination]
 ![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
 
 Fill in the required fields below. Refer to the [Gather Dynamics 365 credentials](#gather-credentials) section for any guidance.
+
 * **[!UICONTROL Client ID]**: The [!DNL Dynamics 365] Client ID for your [!DNL Azure Active Directory] application.
 * **[!UICONTROL Tenant ID]**: The [!DNL Dynamics 365] Tenant ID for your [!DNL Azure Active Directory] application. 
 * **[!UICONTROL Client Secret]**: The [!DNL Dynamics 365] Client Secret for your [!DNL Azure Active Directory] application.
@@ -238,6 +240,7 @@ To fix this error, verify that the **[!UICONTROL Mapping ID]** you provided in [
 ## Additional resources {#additional-resources}
 
 Additional useful information from the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/) is below:
+
 * [IOrganizationService.Update(Entity) Method](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update?view=dataverse-sdk-latest)
 * [Update and delete table rows using the Web API](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)
 
