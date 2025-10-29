@@ -57,7 +57,7 @@ role: User
   - [Multi-entity segmentation](tutorials/multi-entity-segmentation.md)
   - [Honoring consent](tutorials/consents.md)
   - [Evaluate a segment definition](tutorials/evaluate-a-segment.md)
-  - [Creating an external audiences](tutorials/create-external-audience.md)
+  - [Creating an external audience](tutorials/create-external-audience.md)
   - [Create a dataset to export data](tutorials/create-dataset-export-segment.md)
   - [Enforce data usage compliance for audiences](tutorials/governance.md)
 - Profile Query Language {#pql}
