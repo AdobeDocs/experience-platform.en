@@ -53,6 +53,12 @@ This user guide requires a working understanding of the following components of 
 >title="Orchestrated campaigns"
 >abstract="Enable this toggle to allow the selected dataset to be used in Adobe Journey Optimizer Orchestrated campaigns. The dataset must use a relational schema and only one dataset can be created per schema."
 
+>[!CONTEXTUALHELP]
+>id="platform_datasets_enableforlookup_toggle"
+>title="Enable for lookup"
+>abstract="Enabling a dataset for lookup allows you to leverage its data within Journey Optimizer personalization, Decisioning and journey orchestration capabilities."
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Use Adobe Experience Platform data in Journey Optimizer"
+
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and the status of the most recent ingestion run.
 
 ![The Experience Platform UI with the Datasets item highlighted in the left navigation bar.](../images/datasets/user-guide/browse-datasets.png)
