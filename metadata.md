@@ -13,7 +13,7 @@ git-repo: https://github.com/AdobeDocs/experience-platform.en
 solution: Experience Platform
 type: Documentation
 index: yes
-role: Architect, Developer, Data Architect, Data Engineer, User, Admin, Leader
+role: Developer, User, Admin, Leader
 auto-video-transcripts: true
 ---
 

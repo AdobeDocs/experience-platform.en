@@ -85,7 +85,7 @@ Additionally, refer to the [!DNL Mailchimp] [rate limits](https://mailchimp.com/
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> For each selected audience in Experience Platform, the corresponding [!DNL Mailchimp Interest Categories] segment status gets updated with its audience status from Experience Platform.</li></ul>|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. When a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
@@ -231,6 +231,7 @@ Refer to the [[!DNL Mailchimp] errors page](https://mailchimp.com/developer/mark
 ## Additional resources {#additional-resources}
 
 Additional useful information from the [!DNL Mailchimp] documentation is below:
+
 * [Getting started with [!DNL Mailchimp]](https://mailchimp.com/help/getting-started-with-mailchimp/)
 * [Getting started with Audiences](https://mailchimp.com/help/getting-started-audience/)
 * [Create an Audience](https://mailchimp.com/help/create-audience/)

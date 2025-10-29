@@ -133,6 +133,7 @@ For an in-depth tutorial on using the `platform_sdk` data loader, please visit t
 ### External sources {#external-sources}
 
 This section shows you how to import a JSON or CSV file to a pandas object. Official documentation from the pandas library can be found here:
+
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
 - [read_json](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_json.html)
 
@@ -172,6 +173,7 @@ def load(config_properties):
 >[!NOTE]
 >
 >As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from Experience Platform using `client_context = get_client_context(config_properties)`:
+>
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID` 
 > - `ML_FRAMEWORK_IMS_TOKEN` 
 > - `ML_FRAMEWORK_IMS_ML_TOKEN` 

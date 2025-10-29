@@ -142,6 +142,7 @@ A successful response returns the current details of your connection including i
 >
 >Before deleting the destination account, you must delete any existing dataflows to the destination account.
 >To delete existing dataflows, refer to the pages below:
+>
 >* [Use the Experience Platform UI](../ui/delete-destinations.md) to delete existing dataflows;
 >* [Use the Flow Service API](delete-destination-dataflow.md) to delete existing dataflows.
 
