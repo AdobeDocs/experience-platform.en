@@ -29,7 +29,7 @@ role: User
     - [Audience dashboard](ui/audience-dashboard.md)
     - [Audience Portal](ui/audience-portal.md)
     - [Audience Composition](ui/audience-composition.md)
-    - [Audience Composition enhancements](ui/composition-enchancements.md)
+    - [Audience Composition enhancements](ui/composition-enhancements.md)
     - [Segment Builder](ui/segment-builder.md)
     - [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
     - [Ignore year time constraint update](ui/ignore-year.md)
