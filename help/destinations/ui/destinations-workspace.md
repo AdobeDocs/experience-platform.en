@@ -60,6 +60,10 @@ For more information on destination categories and information on each destinati
 
 ## [!UICONTROL Browse] {#browse}
 
+>[!NOTE]
+>
+>Due to access label configurations, destination dataflows that a user does not have access to may appear in the UI in a greyed-out state. Read the documentation on [using access labels to manage user access to destination dataflows](../../access-control/abac/apply-access-labels-destinations.md#important-callouts-and-items-to-know) for more information.
+
 The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection.
 
 >[!TIP]
@@ -111,10 +115,6 @@ The **[!UICONTROL Browse]** tab includes enhanced filtering and search capabilit
 ### Search functionality {#search-browse}
 
 Use the search bar at the top of the table to quickly find dataflows by name. As you type, the results automatically filter to show only matching dataflows.
-
->[!NOTE]
->
-> When searching for dataflows using the search box, the results may include dataflows which your [user access labels](/help/access-control/abac/apply-access-labels-destinations.md) restrict you from seeing. This behavior will be corrected in a future update. Selecting such dataflows does not display the information in the right rail and users without access to the required labels are not able to perform any modifications such as mapping audiences to the dataflow or editing its schedule.
 
 ![Animated demonstration of searching for a destination dataflow in the Browse tab](../assets/ui/workspace/search.gif)
 

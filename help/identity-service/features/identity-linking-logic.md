@@ -17,10 +17,6 @@ There are two types of identities that get linked:
 * **Profile records**: These identities usually come from CRM systems.
 * **Experience Events**: These identities usually come from WebSDK implementation or the Adobe Analytics source.
 
->[!IMPORTANT]
->
->Identity Service is case-sensitive. For example, **abc<span>@gmail.com** and **ABC<span>@GMAIL.COM** would be treated as two separate Email identities.
-
 ## Semantic meaning of establishing links
 
 An identity represents a real-world entity. If there is a link established between two identities, this means that the two identities are associated to one another. The following are some examples that illustrate this concept:
@@ -38,6 +34,7 @@ An identity consists of an identity namespace and an identity value.
 
 * An identity namespace is the context of a given identity value to. Common examples of identity namespaces include CRMID, Email, and Phone.
 * An identity value is the string that represents a real-world entity. For example: "julien<span>@acme.com" can be an identity value for an Email namespace and 555-555-1234 can be a corresponding identity value for a Phone namespace.
+* Identity Service is case-sensitive. For example, **julien<span>@gmail.com** and **JULIEN<span>@GMAIL.COM** would be treated as two separate Email identities.
 
 >[!TIP]
 >
