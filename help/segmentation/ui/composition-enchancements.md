@@ -42,12 +42,16 @@ Please keep the following details and guardrails in mind while using audience en
 - The first block used within the composition **must** be a rule-based audience.
 - You **cannot** use any other operations within the composition.
 - Once published, you **cannot** edit the composition on the rule-based audience.
+
   - You *can* copy the composition into a draft and edit the draft if you wish to make changes to the base composition or rule-based audience.
+
 - Only **one** object array can be used to generate the enrichment payload within a single audience
+
   - The payload array can be nested within an object (up to seven layers within the profile schema), but **cannot** be contained in another array.
   - The payload array **must** have 50 or fewer rows.
   - All the columns output within the payload **must** be a primitive type.
   - Only the first **twenty** columns of the array are outputted.
+
 - Only **ten** audience compositions are available for use at this time
 
 ## Faster activation {#faster-activation}
