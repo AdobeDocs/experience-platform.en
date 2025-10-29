@@ -7,101 +7,78 @@ last-substantial-update: 2025-10-17
 # Nextdoor Conversion API Extension - User Guide
 
 ## Overview
+ 
+[!DNL Nextdoor] is a social networking service for neighborhoods that connects people to their local communities. It is a platform where neighbors can communicate, share information, and stay updated on local events, news, buy and sell items, and more.
 
-The Nextdoor Conversion API Extension for Adobe Experience Platform Launch allows you to send conversion events directly to Nextdoor's Conversion API. This extension helps you track and measure the performance of your Nextdoor advertising campaigns by sending server-side conversion data.
+Use the [[!DNL Nextdoor] Conversion API Extension](https://help.nextdoor.com/s/article/About-the-Nextdoor-Conversion-API) to send conversion events directly to Nextdoor's Conversion API. Use this extension to help you track and measure the performance of your Nextdoor advertising campaigns by sending server-side conversion data.
 
-## Prerequisites
+Read this guide to learn how to install, configure, and use the [!DNL Nextdoor] Conversion API extension in your event forwarding [rules](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules).
 
-Before using this extension, you'll need:
+## Prerequisites {#prerequisites}
 
-- **Nextdoor Ads Manager Account**: Access to Nextdoor's advertising platform
-- **Data Source ID**: Obtained from your Nextdoor Ads Manager
-- **Access Token**: API access token from Nextdoor for authentication
-- **Adobe Experience Platform Launch**: Property with appropriate permissions
+You must have a valid [!DNL Nextdoor] Ads Manager account to use this extension. Go to [[!DNL Nextdoor Ads] registration page](https://ads.nextdoor.com/v2/signup) to register and create an account if you do not have one already.
 
-## Installation
+### Gather required configuration details {#configuration-details}
 
-1. **Access Adobe Experience Platform Launch**
+To connect the Experience Platform to [!DNL Nextdoor], the following inputs are required:
 
-   - Log into your Adobe Experience Platform Launch account
-   - Navigate to your desired property
+| Credential | Description | Security Notes |
+| --- | --- | --- |
+| Data Source ID | Your unique data source identifier from Nextdoor, which can be found from your Nextdoor Ads Manager account in the Conversion API settings. | It is safe to share this within your organization. |
+| Access Token | API authentication access token for secure communication. Generate this token by logging into your Nextdoor Ads Manager account in the API settings. | Keep this token secure, it provides account access. |
 
-2. **Install the Extension**
+## Install and configure the [!DNL Nextdoor] extension {#install}
 
-   - Go to the Extensions catalog
-   - Search for "Nextdoor Conversion API Extension"
-   - Click "Install" and follow the prompts
+To install the extension, select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL Catalog]** tab, select the **[!UICONTROL Nextdoor Conversion API Extension]** and then select **[!UICONTROL Install]**.
 
-3. **Configure the Extension**
-   - After installation, you'll be prompted to configure the extension
-   - See the [Configuration](#configuration) section below
+![The extension catalog showing the [!DNL Nextdoor] extension card highlighting install.](../../../images/extensions/server/nextdoor/install-extension.png)
 
-## Configuration
+On the next screen, input the following configuration values that you previously generated from [!DNL Nextdoor] Ads Manager:
 
-The extension requires global configuration before you can create actions. This configuration applies to all actions within your property.
+* **[!UICONTROL Data Source ID]**
+* **[!UICONTROL Access Token]**
 
-![Extension Configuration](extension-configuration-view.png "Extension Configuration View")
+When finished, select **[!UICONTROL Save]**.
 
-### Required Configuration Fields
+![[!DNL TikTok] configuration screen for the [!DNL TikTok] web events API extension.](../../../images/extensions/server/tiktok/configure.png)
 
-| Field              | Description                                       | Where to Find                                        | Format                   | Security Notes                         |
-| ------------------ | ------------------------------------------------- | ---------------------------------------------------- | ------------------------ | -------------------------------------- |
-| **Data Source ID** | Your unique data source identifier from Nextdoor  | Nextdoor Ads Manager → Conversion API settings       | Alphanumeric string      | Safe to share within your organization |
-| **Access Token**   | API authentication token for secure communication | Nextdoor Ads Manager → API settings → Generate Token | Long alphanumeric string | Keep secure - provides account access  |
+## Configure an event forwarding rule {#config-rule}
 
-### Configuration Example
+Once all your data elements are set up, you can start creating event forwarding rules that determine when and how your events will be sent to [!DNL Nextdoor].
 
-Here's how the configuration looks when filled out:
+Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Nextdoor Conversion API Extension]**. To send Edge Network events to [!DNL Nextdoor], set the **[!UICONTROL Action Type]** to **[!UICONTROL Report Web Conversions].**
 
-![Extension Configuration Filled](extension-configuration-filled.png "Extension Configuration Filled")
+![The [!UICONTROL Send TikTok Web Events API Event] action type being selected for a [!DNL TikTok] rule in the Data Collection UI.](../../../images/extensions/server/tiktok/select-action.png)
 
-## Setting Up Actions
+After selection, additional controls appear to further configure the event, as outlined below. Once complete, select **[!UICONTROL Keep Changes]** to save the rule.
 
-After configuring the extension, you can create actions to send conversion events. Actions are triggered by rules you define in Launch.
+**Main-body Parameters**
 
-### Creating a New Action
+The main-body parameters are core parameters that define the conversion event.
 
-1. **Navigate to Rules**
+| Parameter      | Description    | Data Type      | Required       | Options/Format | Example        |
+| -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
+| [!UICONTROL Event Name] | Specifies the type of conversion event being tracked. | String (dropdown) | Required | Purchase, Lead, Sign Up, Add to Cart, Initiate Checkout, Page View, Search, View Content, Add to Wishlist, Subscribe, Custom Conversion 1-10 | `Purchase` |
+| [!UICONTROL Event ID] | Unique identifier to prevent duplicate event reporting. This will be auto-generated if blank. | String | Optional | Unique string identifier | `order_12345` |
+| [!UICONTROL Event Time (Unix Epoch)] | Timestamp when the conversion event occurred. Defaults to current time if left blank. | Integer | Optional | Unix timestamp in seconds | `1703980800` (Dec 30, 2023) |
+| [!UICONTROL Action Source] | Channel or platform where the conversion occurred. | String (dropdown) | Required | website, email, app, phone_call, chat, physical_store, system_generated, other | `website` |
+| [!UICONTROL Data Source ID] | Override the global data source ID for specific events. Will inherit from the config if left blank. | String | Optional | Alphanumeric string | `12345`|
+| [UICONTROL Action Source URL] | The specific URL where the conversion occurred. | String | Optional | Full URL including protocol | `https://example.com/checkout/success` |
 
-   - Go to the Rules section in your Launch property
-   - Create a new rule or edit an existing one
+The following are privacy and compliance parameters.
 
-2. **Add Action**
-   - In the rule builder, add a new action
-   - Select "Nextdoor Conversion API Extension" as the extension
-   - Choose "Report Web Conversions" as the action type
+| Parameter                                    | Description                                          | Data Type | Required | Values/Format                          | Example    |
+| -------------------------------------------- | ---------------------------------------------------  | --------- | -------- | -------------------------------------- | ---------- |
+| [!UICONTROL Restricted Data Usage]           | Flag to restrict data usage for privacy compliance.  | Integer   | Optional | 0 = No restrictions, 1 = Restrict      | `0`        |
+| [!UICONTROL Restricted Data Usage (Country)] | Country-specific data processing restrictions.       | Integer   | Optional | 1 = USA (other codes may be supported) | `1`        |
+| [!UICONTOL Restricted Data Usage (State)]    | State-specific restrictions for US users.            | Integer   | Optional | 1000 = CA, 1001 = CO, etc.             | `1000`     |
+| [!UICONTROL Test Event]                      | Marks the event as a test for development/debugging. | String    | Optional | Any non-empty string                   | `test`     |
 
-### Action Configuration Interface
+**Customer Information Parameters**
 
-The action configuration interface is organized into three main sections:
-
-![Extension Action View](extension-action-view.png "Extension Action View")
-
-#### 1. Main-body Parameters
-
-These are the core parameters that define the conversion event itself:
-
-| Parameter                   | Description                                            | Data Type         | Required                            | Options/Format                                                                                                                               | Example                                        |
-| --------------------------- | ------------------------------------------------------ | ----------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| **Event Name**              | Specifies the type of conversion event being tracked   | String (dropdown) | **Required**                        | Purchase, Lead, Sign Up, Add to Cart, Initiate Checkout, Page View, Search, View Content, Add to Wishlist, Subscribe, Custom Conversion 1-10 | `Purchase`, `Lead`                             |
-| **Event ID**                | Unique identifier to prevent duplicate event reporting | String            | Optional (auto-generated if blank)  | Any unique string identifier                                                                                                                 | `order_12345`, `lead_abc123`, `evt_1234567890` |
-| **Event Time (Unix Epoch)** | Timestamp when the conversion event occurred           | Integer           | Optional (defaults to current time) | Unix timestamp in seconds                                                                                                                    | `1703980800` (Dec 30, 2023)                    |
-| **Action Source**           | Channel or platform where the conversion occurred      | String (dropdown) | **Required**                        | website, email, app, phone_call, chat, physical_store, system_generated, other                                                               | `website`, `app`                               |
-| **Data Source ID**          | Override the global data source ID for specific events | String            | Optional (inherits from config)     | Alphanumeric string                                                                                                                          | `12345`                                        |
-| **Action Source URL**       | The specific URL where the conversion occurred         | String            | Optional                            | Full URL including protocol                                                                                                                  | `https://example.com/checkout/success`         |
-
-##### Privacy and Compliance Parameters
-
-| Parameter                           | Description                                         | Data Type | Required | Values/Format                          | Example                          |
-| ----------------------------------- | --------------------------------------------------- | --------- | -------- | -------------------------------------- | -------------------------------- |
-| **Restricted Data Usage**           | Flag to restrict data usage for privacy compliance  | Integer   | Optional | 0 = No restrictions, 1 = Restrict      | `0`, `1`                         |
-| **Restricted Data Usage (Country)** | Country-specific data processing restrictions       | Integer   | Optional | 1 = USA (other codes may be supported) | `1`                              |
-| **Restricted Data Usage (State)**   | State-specific restrictions for US users            | Integer   | Optional | 1000 = CA, 1001 = CO, etc.             | `1000`, `1001`                   |
-| **Test Event**                      | Marks the event as a test for development/debugging | String    | Optional | Any non-empty string                   | `test`, `development`, `staging` |
-
-#### 2. Customer Information Parameters
-
-**Important**: At least one customer information parameter is required for proper event attribution and matching.
+>[!IMPORTANT]
+>
+>At least one customer information parameter is required for proper event attribution and matching.
 
 | Parameter             | Description                                    | Data Type | Required                             | Format                               | Example                    |
 | --------------------- | ---------------------------------------------- | --------- | ------------------------------------ | ------------------------------------ | -------------------------- |
@@ -110,57 +87,40 @@ These are the core parameters that define the conversion event itself:
 | **First Name**        | Customer's first name for enhanced matching    | String    | At least one customer field required | Plain text or SHA-256 hash           | `John`                     |
 | **Last Name**         | Customer's last name for enhanced matching     | String    | At least one customer field required | Plain text or SHA-256 hash           | `Smith`                    |
 | **Date of Birth**     | Customer's birth date for demographic matching | String    | Optional                             | YYYYMMDD (SHA-256 hashed)            | `19900115`                 |
-| **Gender**            | Customer's gender for demographic targeting    | String    | Optional                             | M/F/O (SHA-256 hashed)               | `M`, `F`, `O`              |
+| **Gender**            | Customer's gender for demographic targeting    | String    | Optional                             | M/F/O (SHA-256 hashed)               | `M`                        |
 | **External ID**       | Your internal customer identifier              | String    | Optional                             | Any unique string                    | `customer_12345`           |
 | **Street Address**    | Customer's street address                      | String    | Optional                             | SHA-256 hashed                       | `123 Main Street` (hashed) |
 | **City**              | Customer's city                                | String    | Optional                             | SHA-256 hashed                       | `San Francisco` (hashed)   |
-| **State**             | Customer's state/province                      | String    | Optional                             | Two-letter code (SHA-256 hashed)     | `CA`, `NY` (hashed)        |
+| **State**             | Customer's state/province                      | String    | Optional                             | Two-letter code (SHA-256 hashed)     | `CA` (hashed)              |
 | **Zip Code**          | Customer's postal code                         | String    | Optional                             | First 5 digits US (SHA-256 hashed)   | `94102` (hashed)           |
-| **Country**           | Customer's country                             | String    | Optional                             | ISO-3166-1 alpha-2 (SHA-256 hashed)  | `US`, `CA` (hashed)        |
+| **Country**           | Customer's country                             | String    | Optional                             | ISO-3166-1 alpha-2 (SHA-256 hashed)  | `US` (hashed)              |
 | **Click ID**          | Nextdoor click identifier for attribution      | String    | Optional                             | Captured from `ndclid` URL parameter | `nd_click_12345abcdef`     |
 | **Client IP Address** | IP address of the user's device                | String    | Optional                             | IPv4 or IPv6 address                 | `192.168.1.1`              |
 | **Client User Agent** | Browser user agent string                      | String    | Optional                             | Raw browser user-agent string        | `Mozilla/5.0 (Windows...)` |
 
-#### 3. Advertiser-custom Parameters
+**Advertiser-custom Parameters**
 
-These parameters provide additional context about the conversion event:
+The following parameters provide additional context about the conversion event:
 
-##### E-commerce Parameters
-
-| Parameter             | Description                                   | Data Type           | Required                         | Format                                  | Example                             |
-| --------------------- | --------------------------------------------- | ------------------- | -------------------------------- | --------------------------------------- | ----------------------------------- |
-| **Order Value**       | Total value of the purchase transaction       | String              | **REQUIRED for Purchase events** | ISO 4217 Currency + Amount (no spaces)  | `USD123.45`, `EUR99.99`             |
-| **Order ID**          | Unique transaction or order identifier        | String              | Optional                         | Any unique string                       | `order_12345`, `txn_abc123`         |
-| **Delivery Category** | Method of product/service delivery            | String              | Optional                         | `in_store`, `curbside`, `home_delivery` | `home_delivery`                     |
+| Parameter             | Description                                   | Data Type           | Required                         | Format                                  | Example                 |
+| --------------------- | --------------------------------------------- | ------------------- | -------------------------------- | --------------------------------------- | ----------------------- |
+| **Order Value**       | Total value of the purchase transaction       | String              | **REQUIRED for Purchase events** | ISO 4217 Currency + Amount (no spaces)  | `USD123.45`             |
+| **Order ID**          | Unique transaction or order identifier        | String              | Optional                         | Any unique string                       | `order_12345`           |
+| **Delivery Category** | Method of product/service delivery            | String              | Optional                         | `in_store`, `curbside`, `home_delivery` | `home_delivery`         |
 | **Product Context**   | Detailed information about purchased products | String (JSON array) | Optional                         | JSON array of product objects           | `[{"id":"SKU123","name":"Widget"}]` |
 
-##### Mobile App Parameters (Required when Action Source = 'APP')
+The following parameters are mobile app parameters and are required when `Action Source = 'APP'`:
 
-| Parameter                | Description                                  | Data Type | Required                    | Format                                    | Example                        |
-| ------------------------ | -------------------------------------------- | --------- | --------------------------- | ----------------------------------------- | ------------------------------ |
-| **App ID**               | Mobile application identifier                | String    | **REQUIRED for APP events** | Bundle ID (iOS) or Package Name (Android) | `com.company.app`, `123456789` |
-| **App Tracking Enabled** | iOS App Tracking Transparency consent status | String    | **REQUIRED for APP events** | Boolean string                            | `true`, `false`                |
-| **Platform**             | Mobile operating system                      | String    | **REQUIRED for APP events** | `iOS` or `Android`                        | `iOS`, `Android`               |
-| **App Version**          | Version of the mobile application            | String    | **REQUIRED for APP events** | Version string as defined by your app     | `1.2.3`, `2.0.0-beta`          |
-
-### Example Configuration
-
-Here's an example of a configured Purchase event:
-
-![Extension Action Filled](extension-action-filled.png "Extension Action Filled")
-
-In this example:
-
-| Field             | Value            | Purpose                                  |
-| ----------------- | ---------------- | ---------------------------------------- |
-| **Event Name**    | Purchase         | Identifies this as a purchase conversion |
-| **Action Source** | website          | Indicates conversion occurred on website |
-| **Email**         | user@example.com | Customer identifier for attribution      |
-| **Order Value**   | USD123.45        | Transaction value for ROAS calculation   |
+| Parameter                | Description                                  | Data Type | Required                    | Format                                    | Example                 |
+| ------------------------ | -------------------------------------------- | --------- | --------------------------- | ----------------------------------------- | ----------------------- |
+| **App ID**               | Mobile application identifier                | String    | **REQUIRED for APP events** | Bundle ID (iOS) or Package Name (Android) | `com.company.app`       |
+| **App Tracking Enabled** | iOS App Tracking Transparency consent status | String    | **REQUIRED for APP events** | Boolean string                            | `true`                  |
+| **Platform**             | Mobile operating system                      | String    | **REQUIRED for APP events** | `iOS` or `Android`                        | `Android`               |
+| **App Version**          | Version of the mobile application            | String    | **REQUIRED for APP events** | Version string as defined by your app     | `2.0.0-beta`            |
 
 ## Event Types
 
-The extension supports various event types for different conversion scenarios:
+The following event types are supported for different conversion scenarios :
 
 ### Supported Event Types
 
@@ -257,3 +217,7 @@ All fields support Adobe Launch data elements. Click the data element icon (📊
 The Nextdoor Conversion API Extension provides a powerful way to track conversions and measure the effectiveness of your Nextdoor advertising campaigns. By following this guide and implementing best practices, you can ensure accurate conversion tracking and optimize your advertising performance.
 
 For the most up-to-date information and additional resources, visit the [Nextdoor Ads Manager](https://ads.nextdoor.com) and [Adobe Experience Platform Launch documentation](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html).
+
+## Next steps
+
+This guide covered how to send server-side event data to [!DNL Nextdoor] using the [!DNL Nextdoor] web events API extension. For more information on event forwarding capabilities in [!DNL Adobe Experience Platform], refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md).
