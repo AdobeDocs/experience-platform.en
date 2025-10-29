@@ -52,6 +52,7 @@ This user guide requires a working understanding of the following components of 
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="Orchestrated campaigns"
 >abstract="Enable this toggle to allow the selected dataset to be used in Adobe Journey Optimizer Orchestrated campaigns. The dataset must use a relational schema and only one dataset can be created per schema."
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Enable Dataset for Orchestrated Campaigns"
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_enableforlookup_toggle"
