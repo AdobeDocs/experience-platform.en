@@ -213,6 +213,7 @@ Before proceeding with this tutorial, it is recommended to first review the [ret
 The following example shows what happens when the batch includes valid and invalid messages.
 
 The request payload is an array of JSON objects representing the event in XDM schema. Note that the following conditions needs to be met for successful validation of the message:
+
 - The `imsOrgId` field in the message header has to match the inlet definition. If the request payload does not include an `imsOrgId` field, the [!DNL Data Collection Core Service] (DCCS) will add the field automatically.
 - The header of the message should reference an existing XDM schema created in the [!DNL Experience Platform] UI.
 - The `datasetId` field needs to reference an existing dataset in [!DNL Experience Platform], and its schema needs to match the schema provided in the `header` object within each message included in the request body.

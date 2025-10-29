@@ -12,7 +12,7 @@ Adobe Experience Platform Tags now supports **[!UICONTROL Usage Authorizations]*
 >
 >Extension packages must have a version that is either private or public in order to be shared through [!UICONTROL Usage Authorizations]. Versions marked as Development availability are not eligible for sharing and will not appear in the authorization dropdown. This applies even if an earlier version (e.g., 1.0.0) has already been shared. Newer versions (e.g., 1.0.1) must be made at least private before they can be authorized or installed by receiving organizations.
 >
->All guidance regarding the sharing of private extension packages also applies if you later choose to make these packages public. The same considerations around visibility, versioning, security, compatibility, support, and documentation remain relevant regardless of the package’s availability status.
+>All guidance regarding the sharing of private extension packages also applies if you later choose to make these packages public. The same considerations around visibility, versioning, security, compatibility, support, and documentation remain relevant regardless of the package's availability status.
 
 Both public and private extension packages can be shared through [!UICONTROL Usage Authorizations], though extensions in Development availability cannot have authorizations tied to them. 
 
@@ -100,10 +100,12 @@ Once the authorization is approved, the extension is available in your catalog a
 As the owning organization, you can delete an authorization at any point, regardless of its current status (Awaiting approval, Rejected, or Approved).
 
 **If your extension was never made public:**
+
 - Any private version the receiving organization already installed will continue to appear in their installed extensions list.
 - If the receiving organization never installed your extension, it will no longer appear anywhere in their interface.
 
 **If your extension was made public:**
+
 - Any private version the receiving organization installed will remain visible in their installed extensions list.
 - If they never installed your private version, they will still see the latest public version in their catalog and can install it.
 - They can also downgrade from your private version to the latest available public version if desired.

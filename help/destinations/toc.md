@@ -300,7 +300,7 @@ role: Admin,User
         * Streaming destination testing API {#streaming-destinations}
             * [Streaming destination testing API overview](./destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)
             * [Generate sample profiles based on a source schema](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
-            * [Generate a sample message transformation template ](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
+            * [Generate a sample message transformation template](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
             * [Validate exported profile structure](./destination-sdk/testing-api/streaming-destinations/render-template-api.md)
             * [Test your streaming destination with sample profiles](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
             * [Create and test a message transformation template](./destination-sdk/testing-api/streaming-destinations/create-template.md)

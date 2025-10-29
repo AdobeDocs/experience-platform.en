@@ -111,7 +111,7 @@ Below is an example of correct identity mapping when exporting audiences to TikT
 
 Selecting source fields:
 
-* Select an identifier (For example:` Email_LC_SHA256`) as source identity that uniquely identifies a profile in Adobe Experience Platform and [!DNL TikTok Ads Manager].
+* Select an identifier (For example: `Email_LC_SHA256`) as source identity that uniquely identifies a profile in Adobe Experience Platform and [!DNL TikTok Ads Manager].
 
 Selecting target fields:
 

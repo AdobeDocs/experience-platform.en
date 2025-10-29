@@ -11,44 +11,44 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 
 | Source field | Target XDM field | Notes |
 | --- | --- | --- |
-| `address1_addressid` | `workAddress._id` |
-| `address1_city` | `workAddress.city` |
-| `address1_country` | `workAddress.country` |
-| `address1_county` | `workAddress.stateProvince` |
-| `address1_latitude` | `workAddress._schema.latitude` |
-| `address1_line1` | `workAddress.street1` |
-| `address1_line2` | `workAddress.street2` |
-| `address1_line3` | `workAddress.street3` |
-| `address1_longitude` | `workAddress._schema.longitude` |
-| `address1_postalcode` | `workAddress.postalCode` |
-| `address1_postofficebox` | `workAddress.postOfficeBox` |
-| `address1_stateorprovince` | `workAddress.state` |
-| `assistantname` | `extendedWorkDetails.assistantDetails.name.fullName` |
-| `assistantphone` | `extendedWorkDetails.assistantDetails.phone.number` |
-| `birthdate` | `person.birthDate` |
-| `"Dynamics"` | `b2b.personKey.sourceType` |
+| `address1_addressid` | `workAddress._id` ||
+| `address1_city` | `workAddress.city` ||
+| `address1_country` | `workAddress.country` ||
+| `address1_county` | `workAddress.stateProvince` ||
+| `address1_latitude` | `workAddress._schema.latitude` ||
+| `address1_line1` | `workAddress.street1` ||
+| `address1_line2` | `workAddress.street2` ||
+| `address1_line3` | `workAddress.street3` ||
+| `address1_longitude` | `workAddress._schema.longitude` ||
+| `address1_postalcode` | `workAddress.postalCode` ||
+| `address1_postofficebox` | `workAddress.postOfficeBox` ||
+| `address1_stateorprovince` | `workAddress.state` ||
+| `assistantname` | `extendedWorkDetails.assistantDetails.name.fullName` ||
+| `assistantphone` | `extendedWorkDetails.assistantDetails.phone.number` ||
+| `birthdate` | `person.birthDate` ||
+| `"Dynamics"` | `b2b.personKey.sourceType` ||
 | `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
-| `contactid` | `b2b.personKey.sourceID` |
+| `contactid` | `b2b.personKey.sourceID` ||
 | `concat(contactid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Primary identity. The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
-| `iif(contactid != null && contactid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", contactid, "sourceKey", concat(contactid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |
-| `department` | `extendedWorkDetails.departments` |
-| `fullname` | `person.name.fullName` |
-| `suffix` |`person.name.suffix` |
-| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey", concat(parentcustomerid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourceAccountKey` |
-| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey",  concat(parentcustomerid, "@${CRM_ORG_ID}.Dynamics")), null)` | `b2b.accountKey` |
-| `createdon` | `extSourceSystemAudit.createdDate` |
+| `iif(contactid != null && contactid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", contactid, "sourceKey", concat(contactid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` ||
+| `department` | `extendedWorkDetails.departments` ||
+| `fullname` | `person.name.fullName` ||
+| `suffix` |`person.name.suffix` ||
+| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey", concat(parentcustomerid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourceAccountKey` ||
+| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey",  concat(parentcustomerid, "@${CRM_ORG_ID}.Dynamics")), null)` | `b2b.accountKey` ||
+| `createdon` | `extSourceSystemAudit.createdDate` ||
 | `emailaddress1` | `workEmail.address` | Secondary identifier. |
-| `emailaddress2` | `personalEmail.address` |
-| `emailaddress1` | `personComponents.workEmail.address` |
-| `firstname` | `person.name.firstName` |
-| `fullname` | `person.name.fullName` |
-| `lastname` | `person.name.lastName` |
-| `jobtitle` | `extendedWorkDetails.jobTitle` |
-| `middlename` | `person.name.middleName` |
-| `mobilephone` | `mobilePhone.number` |
-| `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
-| `salutation` | `person.name.courtesyTitle` |
-| `telephone1` | `workPhone.number` |
+| `emailaddress2` | `personalEmail.address` ||
+| `emailaddress1` | `personComponents.workEmail.address` ||
+| `firstname` | `person.name.firstName` ||
+| `fullname` | `person.name.fullName` ||
+| `lastname` | `person.name.lastName` ||
+| `jobtitle` | `extendedWorkDetails.jobTitle` ||
+| `middlename` | `person.name.middleName` ||
+| `mobilephone` | `mobilePhone.number` ||
+| `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` ||
+| `salutation` | `person.name.courtesyTitle` ||
+| `telephone1` | `workPhone.number` ||
 
 {style="table-layout:auto"}
 
