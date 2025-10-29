@@ -10,7 +10,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 * [Experience Platform overview](home.md)
 * [Experience Platform overview (Video)](video/platform-overview.md)
 * [Multi-cloud overview](multi-cloud.md)
-  * [Whitepaper for multi-region, multi-brand enterprises](./multi-region-multi-brand-whitepaper.md)
+* [Whitepaper for multi-region, multi-brand enterprises](./multi-region-multi-brand-whitepaper.md)
 * [Edge Network and hub comparison](./edge-and-hub-comparison.md)
 * [Experience Platform tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [A customer experience powered by Experience Platform (Video)](video/customer-experience.md)
