@@ -242,7 +242,7 @@ For information on the object copy feature, see the section [below](#object-copy
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| json_to_object | Deserialize JSON content from the given string. | <ul><li>STRING: **Required** The JSON string to be deserialized.</li></ul> | json_to_object​(STRING) | json_to_object​({"info":{"firstName":"John","lastName": "Doe"}}) | An object representing the JSON. |
+| json_to_object | Deserialize JSON content from the given string. | <ul><li>STRING: **Required** The JSON string to be deserialized.</li></ul> | json_to_object​(STRING) | `json_to_object​({"info":{"firstName":"John","lastName": "Doe"}})` | An object representing the JSON. |
 
 {style="table-layout:auto"}
 

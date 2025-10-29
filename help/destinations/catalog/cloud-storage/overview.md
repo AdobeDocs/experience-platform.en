@@ -67,6 +67,7 @@ Similar to the examples above, you can use further macros to create a custom fol
 ## Data export type {#export-type}
 
 Cloud storage destinations support the following export types: 
+
 * **Profile-based export**. This means that you are exporting details about the individuals in the audience. These details are needed for personalization and can include attributes, events, audience memberships, and more.
 * **Dataset export**. This functionality allows you to export entire datasets to cloud storage destinations. [Read more](/help/destinations/ui/export-datasets.md) about the functionality. 
 
