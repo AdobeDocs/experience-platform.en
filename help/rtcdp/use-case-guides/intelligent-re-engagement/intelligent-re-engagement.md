@@ -408,7 +408,7 @@ The following events are used for the abandoned cart scenario where users added 
 The following fields and conditions are required when setting up this audience:
 
 * `eventType: commerce.productListAdds`
-    * `Timestamp: >= 1 days before now AND <= 4 days before now `
+    * `Timestamp: >= 1 days before now AND <= 4 days before now`
 * `eventType: commerce.purchases`
     * `Timestamp: <= 4 days before now` 
 * `eventType: commerce.productListRemovals`

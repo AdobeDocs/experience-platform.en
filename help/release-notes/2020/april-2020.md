@@ -12,9 +12,11 @@ exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
 **Release date: April 8, 2020**
 
 New features in Adobe Experience Platform:
+
 * [[!DNL Intelligent Services]](#intelligent)
 
 Updates to existing features:
+
 * [[!DNL Experience Data Model (XDM)]](#xdm)
 * [Data Governance](#governance)
 * [[!DNL Destinations]](#destinations)

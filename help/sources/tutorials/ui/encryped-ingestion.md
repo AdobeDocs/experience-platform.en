@@ -127,7 +127,7 @@ Authenticate with the cloud storage source of your choice. During the data selec
 
 Next, select a sample file from your source data. Since your data is encrypted, Experience Platform will require a sample file in order to create an XDM schema that can be mapped to your source data.
 
-![The "Is this file encrypted?" toggle enabled and the "Select sample file" button selected. ](../../images/tutorials/edi/select_sample_file.png)
+![The "Is this file encrypted?" toggle enabled and the "Select sample file" button selected](../../images/tutorials/edi/select_sample_file.png).
 
 Once you have selected your sample file, configure settings of your data, such as its corresponding data format, delimiter, and compression type. Allow some time for the preview interface to fully render, and then select **[!UICONTROL Save]**.
 

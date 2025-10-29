@@ -10,6 +10,7 @@ The instructions below show you how to use the GitHub web interface to author do
 >[!TIP]
 >
 >Refer also to the supporting documentation in Adobe's contributor guide:
+
 >* [Install Git and Markdown Authoring tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
 >* [Set up Git repository locally for documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
 >* [GitHub contribution workflow for major changes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
