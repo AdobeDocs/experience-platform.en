@@ -117,7 +117,7 @@ The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTRO
 
 ## Enable partial ingestion and error diagnostics for an existing dataflow
 
-If a dataflow in Experience Platform was created without enabling partial ingestion or error diagnostics, you can still enable these features without recreating the flow. Read the sections below to learn how to enable partial ingestion and error diagnostics for an existing dataflow using the [!DNL Flow Service] API.
+If a dataflow in Experience Platform was created without enabling partial ingestion or error diagnostics, you can still enable these features without recreating the flow. By enabling partial ingestion and robust error diagnostics, you can greatly enhance the reliability and ease of troubleshooting in your data ingestion workflows. Read the sections below to learn how to enable partial ingestion and error diagnostics for an existing dataflow using the [!DNL Flow Service] API.
 
 By default, dataflows may not have partial ingestion or error diagnostics enabled. These features are helpful for identifying and isolating issues during data ingestion. Using the [!DNL Flow Service] API, you can retrieve your current dataflow configuration and apply the necessary changes using a PATCH request.
 
@@ -172,7 +172,7 @@ curl -X PATCH \
 
 **Response**
 
-A successful response returns your `flow ID` and an updated `etag`.
+A successful response returns your dataflow's `id` and an updated `etag`.
 
 ```json
 {
@@ -214,8 +214,6 @@ A successful response returns your dataflow details, confirming that partial ing
     "errorDiagnosticsEnabled": true
 }
 ```
-
-Enabling partial ingestion and error diagnostics can significantly improve the reliability and debuggability of your data ingestion workflows.
 
 ## Next steps {#next-steps}
 
