@@ -145,9 +145,9 @@ The following event types are supported for different conversion scenarios:
 
 All fields support Adobe event forwarding data elements. Select the data element icon ![data elements](../../../images/extensions/server/nextdoor/data-element-icon.png) next to any field to:
 
-- **Select Existing Data Elements**: Select from data elements that have already been created.
-- **Add New Data Elements**: Create and define new data elements as needed.
-- **Apply Dynamic Values**: Populate fields with dynamic content sourced from your website.
+* **Select Existing Data Elements**: Select from data elements that have already been created.
+* **Add New Data Elements**: Create and define new data elements as needed.
+* **Apply Dynamic Values**: Populate fields with dynamic content sourced from your website.
 
 ## Best practices {#best-practices}
 
@@ -157,52 +157,52 @@ Follow these best practices to ensure accurate conversion tracking, improve data
 
 Proper data handling is essential for maximizing conversion attribution accuracy while maintaining user privacy and regulatory compliance. These practices help ensure your customer data is formatted correctly, processed securely, and handled according to privacy regulations.
 
-- **Use consistent data formatting**: Format emails, phone numbers, and other data consistently:
+* **Use consistent data formatting**: Format emails, phone numbers, and other data consistently:
 
-  - **Email normalization**: Convert emails to lowercase, trim whitespace, and remove dots from Gmail addresses.
-  - **Phone number standardization**: Use E.164 format (+1234567890) for international compatibility.
-  - **Address normalization**: Standardize street abbreviations (St., Ave., Rd.), and remove any extra spaces.
-  - **Name formatting**: Convert names to lowercase, remove extra spaces, and handle special characters consistently.
+  * **Email normalization**: Convert emails to lowercase, trim whitespace, and remove dots from Gmail addresses.
+  * **Phone number standardization**: Use E.164 format (+1234567890) for international compatibility.
+  * **Address normalization**: Standardize street abbreviations (St., Ave., Rd.), and remove any extra spaces.
+  * **Name formatting**: Convert names to lowercase, remove extra spaces, and handle special characters consistently.
 
-- **Hash sensitive data**: Consider hashing sensitive customer data before sending it. Always normalize your data before hashing to ensure consistent hash values:
+* **Hash sensitive data**: Consider hashing sensitive customer data before sending it. Always normalize your data before hashing to ensure consistent hash values:
 
-  - Use SHA-256 hashing for phone numbers, addresses, and other PII.
-  - The extension automatically hashes plain text emails - you can send either format.
-  - Hash data consistently across all your tracking implementations.
-    - **Example**: Normalize "John@Example.COM" → "john@example.com" before hashing.
+  * Use SHA-256 hashing for phone numbers, addresses, and other PII.
+  * The extension automatically hashes plain text emails - you can send either format.
+  * Hash data consistently across all your tracking implementations.
+    * **Example**: Normalize "John@Example.COM" → "john@example.com" before hashing.
 
-- **Provide complete information**: Include as much customer information as possible for better matching:
+* **Provide complete information**: Include as much customer information as possible for better matching:
 
-  - Include multiple identifiers (email + phone, or email + name + address) when available.
-  - Use external customer IDs to link conversion events to your CRM data.
-  - Provide demographic data (age, gender) when available and compliant with privacy laws.
+  * Include multiple identifiers (email + phone, or email + name + address) when available.
+  * Use external customer IDs to link conversion events to your CRM data.
+  * Provide demographic data (age, gender) when available and compliant with privacy laws.
 
-- **Consent Management**: Ensure you have proper consent for data collection:
+* **Consent Management**: Ensure you have proper consent for data collection:
 
-  - Implement proper consent mechanisms before collecting customer data.
-  - Respect user opt-out preferences and data deletion requests.
-  - Use the Restricted Data Usage parameters for users who have opted out.
-  - **Resources**:
-    - [GDPR Compliance Guide](https://gdpr.eu/compliance/)
-    - [CCPA Privacy Requirements](https://oag.ca.gov/privacy/ccpa)
+  * Implement proper consent mechanisms before collecting customer data.
+  * Respect user opt-out preferences and data deletion requests.
+  * Use the Restricted Data Usage parameters for users who have opted out.
+  * **Resources**:
+    * [GDPR Compliance Guide](https://gdpr.eu/compliance/)
+    * [CCPA Privacy Requirements](https://oag.ca.gov/privacy/ccpa)
 
-- **Data Minimization**: Only send necessary data for conversion tracking:
+* **Data Minimization**: Only send necessary data for conversion tracking:
 
-  - Only collect and send data that's essential for attribution and optimization.
-  - Regularly review and audit the data fields you're sending.
-  - Remove unnecessary customer information to reduce privacy risk.
+  * Only collect and send data that's essential for attribution and optimization.
+  * Regularly review and audit the data fields you're sending.
+  * Remove unnecessary customer information to reduce privacy risk.
 
-- **Use accurate timestamps**: Ensure event timestamps are accurate for proper attribution.
-  - Use the actual time when the conversion occurred, not when you processed the data.
-  - Ensure timestamps are in Unix epoch format (seconds since January 1, 1970).
-  - Account for timezone differences in your timestamp calculations.
+* **Use accurate timestamps**: Ensure event timestamps are accurate for proper attribution.
+  * Use the actual time when the conversion occurred, not when you processed the data.
+  * Ensure timestamps are in Unix epoch format (seconds since January 1, 1970).
+  * Account for timezone differences in your timestamp calculations.
 
 ### Event Deduplication
 
 Prevent duplicate conversion events to ensure accurate campaign measurement and avoid inflated performance metrics. Implement proper deduplication so that each conversion is counted only once, providing reliable data for your optimization decisions.
 
-- **Provide unique event IDs**: Always use unique event IDs to prevent duplicate conversions.
-- **Use consistent naming**: Apply consistent event naming across your implementation.
+* **Provide unique event IDs**: Always use unique event IDs to prevent duplicate conversions.
+* **Use consistent naming**: Apply consistent event naming across your implementation.
 
 ## Conclusion {#conclusion}
 
