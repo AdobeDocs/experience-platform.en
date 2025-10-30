@@ -11,7 +11,7 @@ Adobe Experience Platform is at the forefront of transformative solutions, empow
 
 Experience Platform empowers you to represent structure, and govern your business data for scalable, flexible implementations. Implementing Platform applications is a significant journey that requires strategic planning and careful considerations, especially if you operate across global, regional, and brand-specific domains or a combination of all these aspects.
 
-This whitepaper serves as a reference, offering a product point of view and a set of guidelines. Its primary aim is to empower you and your implementation teams with the tools and insights needed to navigate the intricacies of Experience Platform effectively. By providing a structured framework for evaluating your specific requirements, considerations, and real-world use cases, it equips you with the knowledge necessary to unlock the full potential of Experience Platform and platform-based applications. As you read the following sections, you will find invaluable insights and recommendations to streamline the implementation process and elevate your organization’s capability to deliver exceptional experiences to your audience while providing the governance and controls to maintain privacy and compliance.
+This whitepaper serves as a reference, offering a product point of view and a set of guidelines. Its primary aim is to empower you and your implementation teams with the tools and insights needed to navigate the intricacies of Experience Platform effectively. By providing a structured framework for evaluating your specific requirements, considerations, and real-world use cases, it equips you with the knowledge necessary to unlock the full potential of Experience Platform and platform-based applications. As you read the following sections, you will find invaluable insights and recommendations to streamline the implementation process and elevate your organization's capability to deliver exceptional experiences to your audience while providing the governance and controls to maintain privacy and compliance.
 
 ![CDP-Unified Profile](./images/whitepaper/CDPoverview.png)
 
@@ -22,18 +22,21 @@ If you operate a multi-brand, multi-region enterprise, you likely have unique da
 When exploring deployment options, you need to understand and consider the personas that will interact with Experience Platform and platform-based applications. Designing their experience based on their roles and interests ensures a successful implementation. Here are three key personas you should consider as you explore the options:
 
 **Mary, the marketer:**
+
 - Focus: Customer acquisition and experience personalization at scale.
 - Goals: Creating comprehensive profiles, enhancing media efficiency.
 
 **Ted, the technologist**
+
 - Focus: Organizational data management.
 - Goals: Ensuring compliance, managing data silos, servicing various lines of business.
 
 **Dan, the data architect**
+
 - Focus: Data accuracy and quality.
 - Goals: Ensuring data privacy and trust, designing schemas and data models, managing data sources.
 
-### 1. An enterprise operating With limited data isolation
+### An enterprise operating With limited data isolation
 
 A key architectural principle in Experience Platform is one where customer data is restricted to a specific production sandbox based on governance policies and requirements.
 
@@ -77,7 +80,7 @@ If desired, consider adding granular access controls to limit access to specific
 
 **Development lifecycle with development sandboxes**
 
-A development sandbox behaves the same way as a production sandbox in all functional aspects. It’s different in that it will have some contractual guardrails to keep you within your license limits. It is designed exclusively for development and testing with non-production profiles, supporting up to 10% of your licensed profile commitment (measured cumulatively across all authorized development sandboxes). For additional details and guardrails, see the [sandboxes overview documentation](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home) and the [product descriptions page](https://helpx.adobe.com/legal/product-descriptions.html) for entitlement details.
+A development sandbox behaves the same way as a production sandbox in all functional aspects. It's different in that it will have some contractual guardrails to keep you within your license limits. It is designed exclusively for development and testing with non-production profiles, supporting up to 10% of your licensed profile commitment (measured cumulatively across all authorized development sandboxes). For additional details and guardrails, see the [sandboxes overview documentation](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home) and the [product descriptions page](https://helpx.adobe.com/legal/product-descriptions.html) for entitlement details.
 
 You can have multiple development sandboxes (up to 4 in this enterprise example, since we are using one production sandbox) for the development and testing lifecycle.
 
@@ -98,7 +101,7 @@ For additional details on sandbox tooling, see the [sandbox tooling documentatio
 | ![CDP-Create a Package](./images/whitepaper/create-package.png) | ![CDP-List Packages](./images/whitepaper/list-packages.png) |
 | --- | --- |
 
-### 2. Region or brand-specific data isolation
+### Region or brand-specific data isolation
 
 If you require complete isolation (e.g., regional or brand-based), you may operate under strict data access policies or legal requirements restricting your brand teams' access to data specific to their respective regions or brands. You define access patterns based on region or brand-specific data, ensuring compliance with internal, regulatory, and data governance protocols. This approach is crucial if you operate in highly regulated industries (e.g., handling PII data) or need to maintain distinct and segmented data for different geographic regions or brand identities.
 
@@ -222,9 +225,9 @@ This segment-sharing service allows two or more users to exchange segment data i
 
 For additional details on the Segment Match feature, see the [Segment Match documentation](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
 
-### 3. A blend of approaches for global operations, regional, and brand-specific
+### A blend of approaches for global operations, regional, and brand-specific
 
-Many multi-brand enterprises operate on a global scale and, as such, often seek a blend of both unified and isolated data management approaches. They seek to separate data for multiple regions or countries in this scenario. Brands within the organization can expect to operate exclusively on the data associated with their specific brand, all within the same data boundaries of a geography or country. This approach allows for centralized regional or country data management while still facilitating brand-specific marketing and data operations. It’s a model that combines the advantages of unified data management with the necessity for brand and region-specific isolation.
+Many multi-brand enterprises operate on a global scale and, as such, often seek a blend of both unified and isolated data management approaches. They seek to separate data for multiple regions or countries in this scenario. Brands within the organization can expect to operate exclusively on the data associated with their specific brand, all within the same data boundaries of a geography or country. This approach allows for centralized regional or country data management while still facilitating brand-specific marketing and data operations. It's a model that combines the advantages of unified data management with the necessity for brand and region-specific isolation.
 
 Recognizing these varying requirements, Experience Platform can be configured to provide you with a highly adaptable and flexible data management solution, ensuring that multi-brand, multi-region enterprises can effectively represent your business within the platform. Whether the goal is to maximize the collective customer data, maintain strict data isolation, or achieve a balance between the two, Experience Platform is equipped to meet the diverse needs of your enterprise.
 
@@ -232,7 +235,7 @@ Recognizing these varying requirements, Experience Platform can be configured to
 
 #### How this works
 
-Let’s begin by planning your implementation, configuring your top-level environment, and deciding on the number of sandboxes, roles, and permissions required to operate Experience Platform and platform-based applications optimally for this enterprise.
+Let's begin by planning your implementation, configuring your top-level environment, and deciding on the number of sandboxes, roles, and permissions required to operate Experience Platform and platform-based applications optimally for this enterprise.
 
 ##### General setup for this enterprise
 
@@ -258,7 +261,7 @@ Roles and user permissions:
 
 - Create roles and grant access only to certain features for the right persona. For example, the user roles "**Marketer—Germany**" and "**Marketer—France**" would only get permission to create, view, and manage audiences on country data enabled by a combination of field-level access control, object level access control, and default audiences.
 
-- Create the role ”**Technologist—Global**" and grant the right permissions to create and manage schemas, datasets, policies, sources, and so on. This role would be responsible for all the necessary administration and configurations.
+- Create the role "**Technologist—Global**" and grant the right permissions to create and manage schemas, datasets, policies, sources, and so on. This role would be responsible for all the necessary administration and configurations.
 
 ###### Schema design and attribute-based access control: Field-level access control
 
@@ -279,23 +282,23 @@ XDM Individual Profile Schema:
 ```
 \- PII
 \- Germany
-	\- name --> Label: "Germany"
-	\- email --> Label: "Germany"
-	\- birthdate --> Label: "Germany"
+    \- name --> Label: "Germany"
+    \- email --> Label: "Germany"
+    \- birthdate --> Label: "Germany"
 
 \- France
-	\- name --> Label: "France"
-	\- email --> Label: "France"
-	\- birthdate --> Label: "France"
+    \- name --> Label: "France"
+    \- email --> Label: "France"
+    \- birthdate --> Label: "France"
 
 \- Netherland
-	\- name --> Label: "Netherland", "Germany"
-	\- email --> Label: "Netherland", "Germany"
-	\- birthdate --> Label: "Netherland", "Germany"
+    \- name --> Label: "Netherland", "Germany"
+    \- email --> Label: "Netherland", "Germany"
+    \- birthdate --> Label: "Netherland", "Germany"
 
 \- Loyalty
-	\- member
-	\- registrationDate
+    \- member
+    \- registrationDate
 ```
 
 ###### Audiences: Use attribute-based access control: Object level access control to control access to brand/country-specific audiences
@@ -352,11 +355,11 @@ In some scenarios, you may opt for deploying Experience Platform and platform-ba
 
 ### What is an organization ID
 
-- An organization ID is Adobe’s implementation of Federated ID and OAuth 2.0 protocol.
+- An organization ID is Adobe's implementation of Federated ID and OAuth 2.0 protocol.
 
 - An organization ID is a collection of all the applications, users, and permissions that an organization has the rights to under their Adobe contractual terms.
 
-- User accounts and permissions are managed through each organization’s Admin Console.
+- User accounts and permissions are managed through each organization's Admin Console.
 
 - Organization IDs also govern how Adobe solutions interact with each other. Solutions within the same organization can have interoperability.
 
@@ -368,7 +371,7 @@ In some scenarios, you may opt for deploying Experience Platform and platform-ba
 
 | Benefits | Considerations |
 | -------- | -------------- |
-| The following are a list of benefits of having multiple organization IDs: <ul><li>Flexibility to store data in particular global regions.</li><li>​Separate user logins per instance – i.e., Wholefoods can’t log in to Audible.​</li><li>Dedicated API endpoints that give each Market/BU the ability to build custom connections as needed into their own environment​.</li><li>Each business unit would have their own customer-managed keys​.</li><li>GDPR requests can be made per-business unit​.</li><li>Completely isolated storage and compute between business units​.</li><li>Alleviates some organization-level performance guardrails/limits​.</li><li>More flexibility with provisioning and mixing SKUs between business units. For example, one organization can have a different SKU of Adobe Journey Optimizer versus another organization.</li></ul> | The following are things to consider when having multiple organization IDs: <ul><li>Multiple organization IDs to manage, versus one.​</li><li>Multiple separate instances/environments to manage (integrations, data loads, and so on).</li><li>​ECIDs will be unique per organization, making it difficult to match data up between business units​.</li><li>Would need to migrate/reimplement Analytics and Target per organization – lose global roll-up (if currently being used).​</li><li>More orchestration required to make GDPR requests across business units​.</li><li>Some Experience Platform based application integrations store metadata at the organization level. Not everything is “sandboxed” by sandboxes.​</li><li>Organization ID is pinned to a region. The Adobe AWS hosting location is currently in the US only. Adobe does not support migrating from one hosting region to another.​</li><li>Edge is not sandbox aware (for event forwarding).</li></ul> |
+| The following are a list of benefits of having multiple organization IDs: <ul><li>Flexibility to store data in particular global regions.</li><li>​Separate user logins per instance – i.e., Wholefoods can't log in to Audible.​</li><li>Dedicated API endpoints that give each Market/BU the ability to build custom connections as needed into their own environment​.</li><li>Each business unit would have their own customer-managed keys​.</li><li>GDPR requests can be made per-business unit​.</li><li>Completely isolated storage and compute between business units​.</li><li>Alleviates some organization-level performance guardrails/limits​.</li><li>More flexibility with provisioning and mixing SKUs between business units. For example, one organization can have a different SKU of Adobe Journey Optimizer versus another organization.</li></ul> | The following are things to consider when having multiple organization IDs: <ul><li>Multiple organization IDs to manage, versus one.​</li><li>Multiple separate instances/environments to manage (integrations, data loads, and so on).</li><li>​ECIDs will be unique per organization, making it difficult to match data up between business units​.</li><li>Would need to migrate/reimplement Analytics and Target per organization – lose global roll-up (if currently being used).​</li><li>More orchestration required to make GDPR requests across business units​.</li><li>Some Experience Platform based application integrations store metadata at the organization level. Not everything is "sandboxed" by sandboxes.​</li><li>Organization ID is pinned to a region. The Adobe AWS hosting location is currently in the US only. Adobe does not support migrating from one hosting region to another.​</li><li>Edge is not sandbox aware (for event forwarding).</li></ul> |
 
 **Single organization ID: Benefits and considerations**
 
@@ -376,7 +379,7 @@ In some scenarios, you may opt for deploying Experience Platform and platform-ba
 
 | Benefits | Considerations |
 | -------- | -------------- |
-| The following are a list of benefits of having a single organization ID: <ul><li>Provision individual sandboxes to create logical separation between business units within a deployed region</li><li>Single organization ID for IT to manage for users, provisioning, and so on.</li><li>No migration of Adobe Tags, Target, Analytics, and more, if staying in same organization ID.</li><li>No reset required for existing ECIDs – prevents “cliffing” in Adobe Analytics data.</li><li>Single login for global marketing resources.</li><li>User access rights to control who has access to what sandboxes, with appropriate levels of role-based access control.</li><li>Leverage Global Analytics and Target instances and report suite data.</li></ul> | The following are things to consider when having a single organization ID: <ul><li>Data will be stored in a single region.</li><li>Potential need to consolidate data into a single organization ID.</li><li>All business units would be sharing the same infrastructure across applications (core Experience Platform, Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics).</li><li>Guardrails: Some are global per organization, such as streaming segmentation, which is 1.5k RPS.</li><li>GDPR requests operate at the organization-level and cannot be targeted to specific sandboxes.</li><li>Customer-Managed Keys are set at the organization ID level – all business unit sandboxes would share the same encryption key with this approach.</li><li>Will require clarity on enterprise licensing across DX and CC to ensure that applications are provisioned in the correct organization IDs.</ul></li> |
+| The following are a list of benefits of having a single organization ID: <ul><li>Provision individual sandboxes to create logical separation between business units within a deployed region</li><li>Single organization ID for IT to manage for users, provisioning, and so on.</li><li>No migration of Adobe Tags, Target, Analytics, and more, if staying in same organization ID.</li><li>No reset required for existing ECIDs – prevents "cliffing" in Adobe Analytics data.</li><li>Single login for global marketing resources.</li><li>User access rights to control who has access to what sandboxes, with appropriate levels of role-based access control.</li><li>Leverage Global Analytics and Target instances and report suite data.</li></ul> | The following are things to consider when having a single organization ID: <ul><li>Data will be stored in a single region.</li><li>Potential need to consolidate data into a single organization ID.</li><li>All business units would be sharing the same infrastructure across applications (core Experience Platform, Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics).</li><li>Guardrails: Some are global per organization, such as streaming segmentation, which is 1.5k RPS.</li><li>GDPR requests operate at the organization-level and cannot be targeted to specific sandboxes.</li><li>Customer-Managed Keys are set at the organization ID level – all business unit sandboxes would share the same encryption key with this approach.</li><li>Will require clarity on enterprise licensing across DX and CC to ensure that applications are provisioned in the correct organization IDs.</ul></li> |
 
 **Benefits and considerations**
 

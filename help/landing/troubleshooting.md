@@ -67,11 +67,15 @@ Many PATCH operations in [!DNL Experience Platform] APIs use [JSON Pointer](http
 Depending on whether you are using the UI or API, the following system requirements apply:
 
 **For UI based operations:**
+
 - A modern, standard web browser. While the latest version of [!DNL Chrome] is recommended, current and previous major releases of [!DNL Firefox], [!DNL Internet Explorer], and Safari are also supported.
-    - Each time a new major version is released, [!DNL Experience Platform] starts supporting the most recent version while support for the third most recent version is dropped.
+
+   - Each time a new major version is released, [!DNL Experience Platform] starts supporting the most recent version while support for the third most recent version is dropped.
+
 - All browsers must have cookies and JavaScript enabled.
 
 **For API and developer interactions:**
+
 - A development environment to develop for REST, streaming, and Webhook integrations.
 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
@@ -195,6 +199,7 @@ This error message displays when a POST, PUT or PATCH request has an invalid or 
 ```
 
 This error message displays in either of the two cases below:
+
 - When an incorrect or malformed organization ID header (`x-gw-ims-org-id`) is passed in an API request. Ensure that the correct ID of your organization is included before trying again.
 - When your account (as represented by the provided authentication credentials) is not associated with a product profile for Experience Platform. Follow the steps on [generating access credentials](./api-authentication.md#authentication-for-each-session) in the Experience Platform API authentication tutorial to add Experience Platform to your account and update your authentication credentials accordingly.
 

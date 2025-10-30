@@ -187,4 +187,4 @@ A successful response returns the details of the newly created flow run, includi
 
 ## Monitor your flow runs
 
-Once your flow run has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. To monitor your flow runs using the API, see the tutorial on [monitoring dataflows in the API ](./monitor.md). To monitor your flow runs using Experience Platform UI, see the guide on [monitoring sources dataflows using the monitoring dashboard](../../../dataflows/ui/monitor-sources.md).
+Once your flow run has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. To monitor your flow runs using the API, see the tutorial on [monitoring dataflows in the API](./monitor.md). To monitor your flow runs using Experience Platform UI, see the guide on [monitoring sources dataflows using the monitoring dashboard](../../../dataflows/ui/monitor-sources.md).
