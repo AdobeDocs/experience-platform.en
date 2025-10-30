@@ -33,7 +33,7 @@ Note the following prerequisites for the Marketo Measure destination:
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Dataset export]** | You are exporting raw datasets, which are not grouped or structured by audience interests or qualifications. Read more about [dataset exports](/help/destinations/destination-types.md#dataset-export-destinations).|
 | Export frequency | **[!UICONTROL Batch]** | This batch destination exports files to the Marketo Measure platform every two hours. Read more about [scheduling dataset exports](/help/destinations/ui/export-datasets.md#scheduling).|
 

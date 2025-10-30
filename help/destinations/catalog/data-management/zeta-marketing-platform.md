@@ -45,7 +45,7 @@ An advertiser aims to target users within specific audiences through the Zeta De
 > The Zeta Marketing Platform destination requires you to map a source identity namespace to the ZMP `uid` target identity. This helps the Zeta Marketing Platform uniquely differentiate each profile. 
 
 |Target Identity|Description|Considerations|Notes|
----------|----------|----------|----------|
+|---------|----------|----------|----------|
 |uid|Unique ID that ZMP uses to differentiate customer profiles|Mandatory|Choose the `Email` standard identity namespace if you want to identify unique profiles using their email addresses. Alternatively, you can opt to map your custom namespace to `uid` if customer profiles do not have an email.|
 |email_md5_id|Email MD5 that represents each customer profile|Optional|Choose this target identity when you aim to uniquely identify customer profiles using email MD5 values. It is essential that email addresses are already in MD5 format within the Experience Platform, as the Experience Platform does not convert plain text to MD5. In this scenario, set `uid` (mandatory) to either the same email MD5 values or another appropriate identity namespace.|
 
@@ -70,7 +70,7 @@ This section describes which type of audiences you can export to this destinatio
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
@@ -95,10 +95,11 @@ To authenticate to the destination, fill in the required fields and select **[!U
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
 ![Image showing ZMP configuration](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL ZMP Account Site Id]**: Your ZMP **Site Id** where you want to send your audiences to. You can view your Site Id by navigating to **Settings** > **Integrations** > **Keys & Apps** section. More information can be found [here](https://knowledgebase.zetaglobal.com/kb/integrations).
-*  **[!UICONTROL ZMP Segment]**: The customer list segment in your ZMP Site Id account that you want to be updated with the Experience Platform audience.
+
+* **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+* **[!UICONTROL ZMP Account Site Id]**: Your ZMP **Site Id** where you want to send your audiences to. You can view your Site Id by navigating to **Settings** > **Integrations** > **Keys & Apps** section. More information can be found [here](https://knowledgebase.zetaglobal.com/kb/integrations).
+* **[!UICONTROL ZMP Segment]**: The customer list segment in your ZMP Site Id account that you want to be updated with the Experience Platform audience.
 
 ### Enable alerts {#enable-alerts}
 
@@ -120,10 +121,12 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 Below is an example of correct identity mapping when exporting profiles to [!DNL Zeta Marketing Platform].
 
 Selecting source fields:
+
 * Select a source identity namespace (custom or standard, such as `Email`) that uniquely identifies a profile in Adobe Experience Platform and [!DNL Zeta Marketing Platform].
 * Select any XDM source profile attributes that need to be exported to and updated in the [!DNL Zeta Marketing Platform].
 
 Selecting target fields:
+
 * (Mandatory) Select `uid` as the target identity to which you map a source identity namespace. 
 * (Optional) Select `email_md5_id` as the target identity to which you mapped the source identity namespace that represents email md5 values. It is essential that email addresses are already in MD5 format within the Experience Platform, as the Experience Platform does not convert plain text to MD5
 * Select any additional target mappings if needed.

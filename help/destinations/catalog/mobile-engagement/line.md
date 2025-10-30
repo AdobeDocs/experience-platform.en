@@ -60,7 +60,7 @@ Refer to the [[!DNL LINE] documentation](https://developers.line.biz/en/docs/mes
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL LINE] destination. |
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
 
@@ -82,6 +82,7 @@ To authenticate to the destination, select **[!UICONTROL Connect to destination]
 ![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 Fill in the required fields below.
+
 * **[!UICONTROL Bearer token]**: Your [!DNL LINE Channel access token (long-lived)] from the [!DNL LINE] developer console. Refer to the [gather credentials](#gather-credentials) section.
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.

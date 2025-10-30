@@ -108,7 +108,7 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId`| The connection ID of your database source. |
 | `params.tableName`| The path of the source file. |
-| `params.cdcEnabled` | A boolean value that indicates whether change history capture is enabled. When used with model-based schemas, change data capture tracks inserts, updates, and deletes to keep the target dataset synchronized with the source. This property is supported by the following database sources: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> For an overview of this capability, see the [Data Mirror overview](../../../../xdm/data-mirror/overview.md). For implementation details, see [change data capture in sources guide](../change-data-capture.md) and [model-based schemas technical reference](../../../../xdm/schema/model-based.md). |
+| `params.cdcEnabled` | A boolean value that indicates whether change history capture is enabled. When used with relational schemas, change data capture tracks inserts, updates, and deletes to keep the target dataset synchronized with the source. This property is supported by the following database sources: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> For an overview of this capability, see the [Data Mirror overview](../../../../xdm/data-mirror/overview.md). For implementation details, see [change data capture in sources guide](../change-data-capture.md) and [relational schemas technical reference](../../../../xdm/schema/relational.md). |
 | `connectionSpec.id`| The connection specification ID of your database source. See the [Appendix](#appendix) for a list of database spec IDs. |
 
 **Response**
@@ -679,7 +679,7 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 
 ## Monitor your dataflow
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For more information on how to monitor dataflows, see the tutorial on [monitoring dataflows in the API ](../monitor.md)
+Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For more information on how to monitor dataflows, see the tutorial on [monitoring dataflows in the API](../monitor.md)
 
 ## Next steps
 

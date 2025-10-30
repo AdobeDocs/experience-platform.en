@@ -345,7 +345,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Module**: In the context of tags, a module is a snippet of executable JavaScript provided by an extension, which performs actions in a client environment without needing to create a rule.
 
-**MODPA**: The [!DNL Maryland Online Data Privacy Act] (MODPA) of 2024 grants Maryland residents rights including access, correction, deletion, and data portability. Residents may opt out of targeted advertising, personal data sales, and profiling. Controllers must provide the privacy notices and conduct data protection assessments for high-risk processing. MODPA stands out by prohibiting geofencing around mental or reproductive health facilities. The law applies to entities that process data from more than 35,000 consumers, or to those that process data from more than 10,000 consumers and derive over 20% of their revenue from selling that data. It is enforced by the Maryland Attorney General.
+**MODPA**: The [!DNL Maryland Online Data Privacy Act] (MODPA) of 2024 grants Maryland residents rights including access, correction, deletion, and data portability. Residents may opt out of targeted advertising, personal data sales, and profiling. Controllers must provide privacy notices and conduct data protection assessments for high-risk processing. MODPA stands out by prohibiting geofencing around mental or reproductive health facilities. The law applies to entities that process data from more than 35,000 consumers, or to those that process data from more than 10,000 consumers and derive over 20% of their revenue from selling that data. It is enforced by the Maryland Attorney General.
 
 ## N
 
