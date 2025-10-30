@@ -208,7 +208,7 @@ Prevent duplicate conversion events to ensure accurate campaign measurement and 
 
 The Nextdoor Conversion API Extension provides a powerful way to track conversions and measure the effectiveness of your Nextdoor advertising campaigns. By following this guide and implementing the best practices, you can ensure accurate conversion tracking and optimize your advertising performance.
 
-For the most up-to-date information and additional resources, visit [[!Nextdoor Ads Manager]](https://ads.nextdoor.com).
+For the most up-to-date information and additional resources, visit [[!DNL Nextdoor Ads Manager]](https://ads.nextdoor.com).
 
 ## Next steps {#next-steps}
 
