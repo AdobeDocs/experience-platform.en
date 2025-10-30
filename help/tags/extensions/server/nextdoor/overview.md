@@ -145,9 +145,9 @@ The following event types are supported for different conversion scenarios:
 
 All fields support Adobe event forwarding data elements. Select the data element icon ![data elements](../../../images/extensions/server/nextdoor/data-element-icon.png) next to any field to:
 
-1. **Select Existing Data Elements**: Select from data elements that have already been created.
-2. **Add New Data Elements**: Create and define new data elements as needed.
-3. **Apply Dynamic Values**: Populate fields with dynamic content sourced from your website.
+- **Select Existing Data Elements**: Select from data elements that have already been created.
+- **Add New Data Elements**: Create and define new data elements as needed.
+- **Apply Dynamic Values**: Populate fields with dynamic content sourced from your website.
 
 ## Best practices {#best-practices}
 
