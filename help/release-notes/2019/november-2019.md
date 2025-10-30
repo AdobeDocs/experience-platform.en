@@ -11,11 +11,13 @@ exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
 **Release date: November 18, 2019**
 
 New features in Adobe Experience Platform:  
+
 * [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Sources]](#sources)
 
 Updates to existing features:
+
 * [[!DNL Data Science Workspace]](#dsw)
 * [[!DNL Experience Data Model (XDM) System]](#xdm)
 * [[!DNL Real-Time Customer Profile]](#profile) 
@@ -42,7 +44,7 @@ For more information, see the [Real-Time Customer Data Platform documentation](.
 
 |Feature|Description|
 |---|---|
-|Destinations|Pre-built integrations with destination platforms supported by Adobe’s [!DNL Real-Time Customer Data Platform] that activate data to those partners in a seamless way. See [Destinations](#destinations) below for more information.|
+|Destinations|Pre-built integrations with destination platforms supported by Adobe's [!DNL Real-Time Customer Data Platform] that activate data to those partners in a seamless way. See [Destinations](#destinations) below for more information.|
 |Home page metrics dashboard|The Real-Time Customer Data Platform (Real-Time CDP) home page includes a metrics dashboard that shows information about profiles and segments. The home page also contains links to learning materials. See the section on [Real-Time Customer Data Platform metrics](#real-time-customer-data-platform-metrics) below.|
 |Sources|You can ingest data from a variety of sources such as Adobe Solutions, cloud-based storage, third party software, and your CRM. See the [Sources](#sources) section below to learn more.|
 
@@ -58,7 +60,7 @@ To learn more, see the [Real-Time Customer Data Platform metrics overview](../..
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] are pre-built integrations with destination platforms supported by Adobe’s Real-Time Customer Data Platform that activate data to those partners in a seamless way. For more information, read the [Destinations overview](../../destinations/home.md) article.
+[!DNL Destinations] are pre-built integrations with destination platforms supported by Adobe's Real-Time Customer Data Platform that activate data to those partners in a seamless way. For more information, read the [Destinations overview](../../destinations/home.md) article.
 
 **Available destinations**
 

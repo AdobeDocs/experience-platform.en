@@ -44,6 +44,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 ### Validation coverage
 
 [!DNL Streaming Validation Service] covers validation in the following areas:
+
 -  Range
 -  Presence
 -  Enum

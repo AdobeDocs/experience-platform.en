@@ -37,7 +37,7 @@ Before you can bring your [!DNL Oracle NetSuite] data to Experience Platform, yo
   * Contact [[!DNL Oracle NetSuite]](https://www.NetSuite.com/portal/company/contactus.shtml) if you do not already have a valid account.
 * An **active subscription** to any [!DNL Oracle NetSuite] product.
 * An **account ID**.
-  * The [!DNL Oracle NetSuite] source uses OAuth 2.0 to communicate with the [!DNL Oracle NetSuite] APIs. If you do not have your account ID, visit the [!DNL Oracle] documentation on [ how to retrieve your account ID](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1498754928.html#Finding-Your-NetSuite-Account-ID).
+  * The [!DNL Oracle NetSuite] source uses OAuth 2.0 to communicate with the [!DNL Oracle NetSuite] APIs. If you do not have your account ID, visit the [!DNL Oracle] documentation on [how to retrieve your account ID](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1498754928.html#Finding-Your-NetSuite-Account-ID).
 * A **client ID** and **client secret** combination.
   * The client ID and client secret are required to access [!DNL Oracle NetSuite] APIs. During this step, you must also ensure that your administrator has:
     * Enabled the OAuth 2.0 feature and setup the appropriate OAuth 2.0 roles.

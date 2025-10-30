@@ -43,7 +43,7 @@ Before you can send your Adobe Experience Platform data to [!DNL Moengage], note
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes                                                                                                                                                                                                                                                                                                                              |
----------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|---------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment (audience) with the identifiers (user_id, anonymous_id) along with custom attributes defined by you exported to [!DNL Moengage].                                                                                                                                                        |
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
 
@@ -67,14 +67,15 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 ![Moengage Destination Authentication](../../assets/catalog/mobile-engagement/moengage/settings.png)
-*  **[!UICONTROL USERNAME]**: DATA APP ID of  settings page of [!DNL Moengage] dashboard.
-*  **[!UICONTROL PASSWORD]**: DATA APP KEY from settings page of [!DNL Moengage] dashboard.
+
+* **[!UICONTROL USERNAME]**: DATA APP ID of  settings page of [!DNL Moengage] dashboard.
+* **[!UICONTROL PASSWORD]**: DATA APP KEY from settings page of [!DNL Moengage] dashboard.
 
 ![Moengage Destination Authentication](../../assets/catalog/mobile-engagement/moengage/destination_details.png)
 
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Region]**: Your app *data center*.
+* **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+* **[!UICONTROL Region]**: Your app *data center*.
 
 ### Enable alerts {#enable-alerts}
 
@@ -111,6 +112,7 @@ In the [!UICONTROL Source Field] section, select the arrow button next to the em
 ![Moengage Destination Source Mapping](../../assets/catalog/mobile-engagement/moengage/mapping-source.png)
 
 In the [!UICONTROL Select source field] window, you can choose between two categories of XDM fields:
+
 * [!UICONTROL Select attributes]: use this option to map a specific field from your XDM schema to [!DNL Moengage] attribute.
 
 ![Moengage Destination Mapping Source Attribute](../../assets/catalog/mobile-engagement/moengage/mapping-attributes.png)
@@ -122,6 +124,7 @@ In the [!UICONTROL Target Field] section, select the mapping icon to the right o
 ![Moengage Destination Target Mapping](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
 
 In the [!UICONTROL Select target field] window, you can choose between two categories of target fields:
+
 * [!UICONTROL Select identity namespace]: Use this option to map [!DNL Experience Platform] identity namespaces to [!DNL Moengage] identity namespaces.
 * [!UICONTROL Select custom attributes]: Use this option to map XDM attributes to custom [!DNL Moengage] attributes that you defined in your [!DNL Moengage] account. <br> You can also use this option to rename existing XDM attributes into [!DNL Moengage]. For instance, mapping a `lastName` XDM attribute to a custom `Last_Name` attribute in [!DNL Moengage], will create the `Last_Name` attribute in [!DNL Moengage], if it doesn't already exist, and map the `lastName` XDM attribute to it.
   

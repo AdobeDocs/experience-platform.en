@@ -155,7 +155,7 @@ The new [!DNL Experience Platform] SDK supports the following operations:
 | Less than (`<`) | `lt()` |
 | Less than or equal to (`<=`) | `le()` |
 | And (`&`) | `And()` |
-| Or (`|`) | `Or()` |
+| Or ( &vert; ) | `Or()` |
 
 ## Filter by selected columns {#filter-by-selected-columns}
 

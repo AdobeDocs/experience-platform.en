@@ -83,7 +83,7 @@ If a match is found using one of these identifiers, the existing Account Engagem
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of an audience, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li>This destination supports batch export of profile data using the Salesforce Import API v5.</li></ul>|
 | Export frequency | **[!UICONTROL Batch]** | <ul><li>**Initial Export**: Full export immediately after mapping</li><li>**Subsequent Exports**: Incremental exports every 3 hours</li><li>This schedule is fixed and cannot be customized in Alpha</li></ul>|
 

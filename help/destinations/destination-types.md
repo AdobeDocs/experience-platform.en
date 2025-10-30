@@ -29,7 +29,7 @@ Finally, connections can also be distinguished between public destinations avail
 Profile export destinations receive raw data, often with email address as the primary key. Experience Platform currently supports two types of profile export destinations:
 
 * [Batch (file-based) destinations](#file-based)
-* [Advanced enterprise destinations (streaming profile export destinations) ](#advanced-enterprise-destinations)
+* [Advanced enterprise destinations (streaming profile export destinations)](#advanced-enterprise-destinations)
 
 ### Advanced enterprise destinations (streaming profile export destinations) {#advanced-enterprise-destinations}
 

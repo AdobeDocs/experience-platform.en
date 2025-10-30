@@ -43,7 +43,7 @@ The releaser requires you to input only a few pieces of information. The `client
 The releaser will read the `name` and `platform` fields from your extension manifest and query the API for a matching extension package in Development availability.
 The releaser will then ask you to confirm that it found the correct extension package that you would like to release to private availability.
 
-If you'd like to release your extension with private availability using the API directly, see the example call for [privately releasing an extension package](../../api/endpoints/extension-packages.md/#private-release) in the API docs for more detail.
+If you'd like to release your extension with private availability using the API directly, see the example call for [privately releasing an extension package](/help/tags/api/endpoints/extension-packages.md#private-release) in the API docs for more detail.
 
 ## Public release
 

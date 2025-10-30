@@ -94,7 +94,7 @@ For descriptions of the terms that you will be encountering in this API tutorial
 Before starting the workflow to export profiles, identify the connection spec and flow spec IDs of the destination to which you are intending to export audiences to. Use the table below for reference.
 
 |Destination | Connection spec | Flow spec|
----------|----------|---------|
+|---------|----------|---------|
 | Amazon S3 | `4fce964d-3f37-408f-9778-e597338a21ee` | `1a0514a6-33d4-4c7f-aff8-594799c47549` |
 | Azure Blob Storage | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
 | Azure Data Lake Gen 2(ADLS Gen2) | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |

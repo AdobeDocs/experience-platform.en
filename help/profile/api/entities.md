@@ -14,15 +14,22 @@ Adobe Experience Platform enables you to access [!DNL Real-Time Customer Profile
 
 The API endpoint used in this guide is part of the [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
->[!BEGINSHADEBOX]
-
 ## Entity resolution
 
 As part of the architecture upgrade, Adobe is introducing entity resolution for Accounts and Opportunities, using deterministic ID matching based on the latest data. Entity resolution job runs daily during batch segmentation, prior to evaluating multi-entity audiences with B2B attributes.
 
 This enhancement enables Experience Platform to identify and unify multiple records that represent the same entity, improving data consistency and enabling more accurate audience segmentation.
 
-Previously, Accounts and Opportunities relied on identity graph-based resolution that connected identities, including all historical ingestions. In the new entity-resolution approach, identities are linked based on the latest data only
+Previously, Accounts and Opportunities relied on identity graph-based resolution that connected identities, including all historical ingestions. In the new entity-resolution approach, identities are linked based on the latest data only.
+
+- Account and Opportunity are entity resolved with a time-precedence based merging:
+  - Account: identities using the `b2b_account` namespace.
+  - Opportunity: identities using the `b2b_opportunity` namespace.
+- All other entities are simply unified and only primary identity overlaps are merged with time-precedence based merging.
+
+>[!NOTE]
+>
+>Entity resolution only supports `b2b_account` and `b2b_opportunity`. Identities from other namespaces are not used in entity resolution. If you are using custom namespaces, then you will not be able to find accounts and opportunities. 
 
 ### How does entity resolution work?
 
@@ -30,8 +37,6 @@ Previously, Accounts and Opportunities relied on identity graph-based resolution
 - **After**: If the DUNS number was used as an additional identity and the account's DUNS number was updated in a source system like a CRM, the account ID is only linked to the new DUNS number, thereby reflecting the current state of account more accurately.
 
 As a result of this update, the [!DNL Profile Access] API now reflects the latest merge profile view after an entity resolution job cycle completes. Additionally, the consistent data provides use cases such as segmentation, activation, and analytics with improved data accuracy and consistency.
-
->[!ENDSHADEBOX]
 
 ## Retrieve an entity {#retrieve-entity}
 

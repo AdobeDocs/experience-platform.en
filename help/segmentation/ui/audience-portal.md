@@ -124,7 +124,7 @@ After you select the fields you want to display, you can also re-size the width 
 
 To improve your work efficiency, you can search for existing audiences, add user-defined tags to audiences, put audiences in folders, and filter the displayed audiences.
 
-#### Search {#search}
+#### Search {#searching}
 
 You can search your existing audiences in up to 9 different languages with [!DNL Unified Search]. 
 

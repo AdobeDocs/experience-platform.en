@@ -121,7 +121,7 @@ A successful response contains a list of available destinations and their unique
 For your reference, the table below contains the connection spec IDs for commonly used batch destinations:
 
 | Destination | Connection spec ID |
----------|----------|
+|---------|----------|
 | [!DNL Adobe Campaign] | `0b23e41a-cb4a-4321-a78f-3b654f5d7d97` |
 | [!DNL Oracle Eloqua] | `c1e44b6b-e7c8-404b-9031-58f0ef760604` |
 | [!DNL Oracle Responsys] | `a5e28ddf-e265-426e-83a1-9d03a3a6822b` |
@@ -936,7 +936,7 @@ curl -X POST \
 For your reference, the table below contains the flow spec IDs for commonly used batch destinations:
 
 | Destination | Flow spec ID |
----------|----------|
+|---------|----------|
 | All cloud storage destinations ([!DNL Amazon S3], SFTP, [!DNL Azure Blob]) and [!DNL Oracle Eloqua] | `71471eba-b620-49e4-90fd-23f1fa0174d8` |
 | [!DNL Oracle Responsys] | `51d675ce-e270-408d-91fc-22717bdf2148` |
 | [!DNL Salesforce Marketing Cloud] | `493b2bd6-26e4-4167-ab3b-5e910bba44f0` |
