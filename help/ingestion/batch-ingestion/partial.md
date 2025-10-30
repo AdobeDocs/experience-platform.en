@@ -115,6 +115,74 @@ The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTRO
 
 **[!UICONTROL Error threshold]** allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
+### Enable Partial Ingestion and Error Diagnostics for an Existing Dataflow
+
+If a dataflow in Adobe Experience Platform was created without enabling **Partial Ingestion** or **Error Diagnostics**, you can still enable these features without recreating the flow. This guide walks you through updating an existing dataflow using the [!DNL Flow Service] API to enable these functionalities.
+
+By default, dataflows may not have Partial Ingestion or Error Diagnostics enabled. These features are helpful for identifying and isolating issues during data ingestion. Using the [!DNL Flow Service] API, you can retrieve your current dataflow configuration and apply the necessary changes using a PATCH request.
+
+Follow the steps below to enable Partial Ingestion and Error Diagnostics for an existing dataflow.
+
+#### Step 1: Retrieve Flow Details
+
+You can fetch your current dataflow configuration by making a `GET /flows/{FLOW_ID}` request. For more information on retrieving dataflow details, refer to the [Update dataflows using the [!DNL Flow Service] API](../../sources/tutorials/api/update-dataflows.md) guide.
+
+Make sure to save the value of the `etag` field returned in the response. This is necessary for the update request to ensure version consistency.
+
+#### Step 2: Update Flow Configuration
+
+Next, send a `PATCH` request to the [!DNL Flow Service] API to enable Partial Ingestion and Error Diagnostics for your dataflow.
+
+>[!IMPORTANT]
+>
+>- Include the previously saved `etag` value in the request header using the key If-Match.
+>- You can modify the `partialIngestionPercent` value to suit your specific needs.
+
+**API format**
+
+```http
+PATCH /flows/{FLOW_ID}
+```
+
+**Request**
+
+```shell
+curl -X PATCH \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
+    -d '[
+        {
+            "op": "add",
+            "path": "/options",
+            "value": {
+                "partialIngestionPercent": "10"
+            }
+        },
+        {
+            "op": "add",
+            "path": "/options/errorDiagnosticsEnabled",
+            "value": true
+        }
+    ]'
+```
+
+#### Step 3: Verify the Update
+
+After the PATCH request is completed successfully, run the `GET /flows/{FLOW_ID}` request once more to retrieve the updated dataflow details. Verify that the response now includes the updated `options` object as shown below:
+
+```json
+"options": {
+    "partialIngestionPercent": 10,
+    "errorDiagnosticsEnabled": true
+}
+```
+
+Enabling Partial Ingestion and Error Diagnostics can significantly improve the reliability and debuggability of your data ingestion workflows.
+
 ## Next steps {#next-steps}
 
 This tutorial covered how to create or modify a dataset to enable partial batch ingestion. For more information on batch ingestion, please read the [batch ingestion developer guide](./api-overview.md).
