@@ -117,9 +117,9 @@ You must include these parameters when `Action Source = 'APP'`:
 
 | Parameter                         | Description                                   | Data Type | Required                    | Format                                    | Example           |
 | --------------------------------- | --------------------------------------------- | --------- | --------------------------- | ----------------------------------------- | ----------------- |
-| [!UICONTROL App ID*]              | Mobile application identifier.                | String    | **REQUIRED for APP events** | Bundle ID (iOS) or Package Name (Android) | `com.company.app` |
+| [!UICONTROL App ID*]              | Mobile application identifier.                | String    | **REQUIRED for APP events** | <ul><li>Bundle ID (iOS)</li><li>Package Name (Android)</li></ul> | `com.company.app` |
 | [!UICONTROL App Tracking Enabled] | iOS App Tracking Transparency consent status. | String    | **REQUIRED for APP events** | Boolean string                            | `true`            |
-| [!UICONTROL Platform]             | Mobile operating system.                      | String    | **REQUIRED for APP events** | <ul><li>`iOS`</li><ul>`Android`           | `Android`         |
+| [!UICONTROL Platform]             | Mobile operating system.                      | String    | **REQUIRED for APP events** | <ul><li>`iOS`</li><li>`Android`</li></ul> | `Android`         |
 | [!UICONTROL App Version]          | Version of the mobile application.            | String    | **REQUIRED for APP events** | Version string as defined by your app     | `2.0.0-beta`      |
 
 ## Event types {#event-types}
@@ -128,17 +128,17 @@ The following event types are supported for different conversion scenarios:
 
 | Event Name               | Event Type | Description                            | Use Case                                | Required Fields                        | Notes                                 |
 | ------------------------ | ---------- | -------------------------------------- | --------------------------------------- | -------------------------------------- | ------------------------------------- |
-| [!UICONTROL Purchase]             | Standard   | Completed purchase transaction.        | E-commerce conversions                  | Event Name, Order Value, Customer Info | Most important for ROAS optimization  |
-| [!UICONTROL Lead]                 | Standard   | Lead generation or inquiry.            | Form submissions, contact requests      | Event Name, Customer Info              | High-value conversion for B2B         |
-| [!UICONTROL Sign Up]              | Standard   | User registration or account creation. | Newsletter signup, account registration | Event Name, Customer Info              | Top-funnel conversion tracking        |
-| [!UICONTROL Add to Cart]          | Standard   | Product added to shopping cart.        | E-commerce funnel tracking              | Event Name, Customer Info              | Mid-funnel engagement signal          |
-| [!UICONTROL Initiate Checkout]    | Standard   | Checkout process started.              | Purchase intent tracking                | Event Name, Customer Info              | Strong purchase intent indicator      |
-| [!UICONTROL Page View]            | Standard   | Important page visited.                | Content engagement, landing pages       | Event Name, Customer Info              | Use for high-value pages only         |
-| [!UICONTROL Search]               | Standard   | Search performed on site.              | Product/content discovery               | Event Name, Customer Info              | Indicates active user engagement      |
-| [!UICONTROL View Content]         | Standard   | Content or product viewed.             | Product page views, content engagement  | Event Name, Customer Info              | Useful for remarketing audiences      |
-| [!UICONTROL Add to Wishlist]      | Standard   | Product added to wishlist.             | Future purchase intent                  | Event Name, Customer Info              | Indicates strong product interest     |
-| [!UICONTROL Subscribe]            | Standard   | Subscription to service/newsletter.    | Recurring revenue, engagement           | Event Name, Customer Info              | High lifetime value indicator         |
-| [!UICONTROL Custom Conversion 1 - 10] | Custom | Business-specific conversion event.    | Define your own conversion type         | Event Name, Customer Info              | Customize for unique business actions |
+| [!UICONTROL Purchase]             | Standard   | Completed purchase transaction.        | E-commerce conversions                  | <ul><li>Event Name</li><li>Order Value</li><li>Customer Info</li></ul> | Most important for ROAS optimization  |
+| [!UICONTROL Lead]                 | Standard   | Lead generation or inquiry.            | Form submissions, contact requests      | <ul><li>Event Name</li><li>Customer Info</li></ul>             | High-value conversion for B2B         |
+| [!UICONTROL Sign Up]              | Standard   | User registration or account creation. | Newsletter signup, account registration | <ul><li>Event Name</li><li>Customer Info</li></ul>             | Top-funnel conversion tracking        |
+| [!UICONTROL Add to Cart]          | Standard   | Product added to shopping cart.        | E-commerce funnel tracking              | <ul><li>Event Name</li><li>Customer Info</li></ul>             | Mid-funnel engagement signal          |
+| [!UICONTROL Initiate Checkout]    | Standard   | Checkout process started.              | Purchase intent tracking                | <ul><li>Event Name</li><li>Customer Info</li></ul>             | Strong purchase intent indicator      |
+| [!UICONTROL Page View]            | Standard   | Important page visited.                | Content engagement, landing pages       | <ul><li>Event Name</li><li>Customer Info</li></ul>             | Use for high-value pages only         |
+| [!UICONTROL Search]               | Standard   | Search performed on site.              | Product/content discovery               | <ul><li>Event Name</li><li>Customer Info</li></ul>             | Indicates active user engagement      |
+| [!UICONTROL View Content]         | Standard   | Content or product viewed.             | Product page views, content engagement  | <ul><li>Event Name</li><li>Customer Info</li></ul>             | Useful for remarketing audiences      |
+| [!UICONTROL Add to Wishlist]      | Standard   | Product added to wishlist.             | Future purchase intent                  | <ul><li>Event Name</li><li>Customer Info</li></ul>             | Indicates strong product interest     |
+| [!UICONTROL Subscribe]            | Standard   | Subscription to service/newsletter.    | Recurring revenue, engagement           | <ul><li>Event Name</li><li>Customer Info</li></ul>             | High lifetime value indicator         |
+| [!UICONTROL Custom Conversion 1 - 10] | Custom | Business-specific conversion event.    | Define your own conversion type         | <ul><li>Event Name</li><li>Customer Info</li></ul>             | Customize for unique business actions |
 
 
 ## Data elements integration {#data-element}
