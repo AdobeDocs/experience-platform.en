@@ -104,7 +104,7 @@ A successful response returns HTTP status 200 with a list of schedules for the s
 | `children.type` | The type of job as a string. The two supported types are "batch_segmentation" and "export". |
 | `children.properties` | An object containing additional properties related to the schedule. |
 | `children.properties.segments` | Using `["*"]` ensures all segments are included. |
-| `children.schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "0 0 1 * *" means that this schedule will run at 1AM every day. |
+| `children.schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day. |
 | `children.state` | A string containing the schedule state. The two supported states are "active" and "inactive". By default, the state is set to "inactive". |
 
 +++
@@ -150,7 +150,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `type` | **Required.** The type of job as a string. The two supported types are "batch_segmentation" and "export". |
 | `properties` | **Required.** An object containing additional properties related to the schedule. |
 | `properties.segments` | **Required when `type` equals "batch_segmentation".** Using `["*"]` ensures all segments are included. |
-| `schedule` | *Optional.* A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "0 0 1 * *" means that this schedule will run at 1AM every day. <br><br>If this string is not supplied, a system-generated schedule will be automatically generated. |
+| `schedule` | *Optional.* A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day. <br><br>If this string is not supplied, a system-generated schedule will be automatically generated. |
 | `state` | *Optional.* A string containing the schedule state. The two supported states are "active" and "inactive". By default, the state is set to "inactive". |
 
 +++
@@ -251,7 +251,7 @@ A successful response returns HTTP status 200 with detailed information about th
 | `type` | The type of job as a string. The two supported types are `batch_segmentation` and `export`. |
 | `properties` | An object containing additional properties related to the schedule. |
 | `properties.segments` | Using `["*"]` ensures all segments are included. |
-| `schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "0 0 1 * *" means that this schedule will run at 1AM every day.|
+| `schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day.|
 | `state` | A string containing the schedule state. The two supported states are `active` and `inactive`. By default, the state is set to `inactive`. |
 
 +++

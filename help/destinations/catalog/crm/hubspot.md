@@ -83,7 +83,7 @@ This destination also supports the activation of the audiences described in the 
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of an audience, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Additionally, a new property is created in [!DNL HubSpot] using the audience name and its value is with the corresponding audience status from Experience Platform, for each of the selected audiences.</li></ul> |
 | Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
@@ -102,6 +102,7 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL
 ### Authenticate to destination {#authenticate}
 
 Fill in the required fields below. Refer to the [Gather the [!DNL HubSpot] private app access token](#gather-credentials) section for any guidance.
+
 * **[!UICONTROL Bearer token]**: The access token for your [!DNL HubSpot] private app.
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
@@ -140,6 +141,7 @@ To correctly map your XDM fields to the [!DNL HubSpot] destination fields, follo
 #### Mapping the `Email` identity
 
 The `Email` identity is a mandatory mapping for this destination. Follow the steps below to map it:
+
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
 ![Experience Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity.
@@ -157,6 +159,7 @@ An example with the identity mapping is shown below:
 #### Mapping **optional** attributes
 
 To add any other attributes you want to update between your XDM profile schema and your [!DNL HubSpot] account repeat the steps below:
+
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
 ![Experience Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute.
@@ -196,6 +199,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ## Additional resources {#additional-resources}
 
 Additional useful information from the [!DNL HubSpot] documentation is below:
+
 * [Authentication methods on HubSpot](https://developers.hubspot.com/docs/api/intro-to-auth)
 * [!DNL HubSpot] API references for the [Contacts](https://developers.hubspot.com/docs/api/crm/contacts) and [Properties](https://developers.hubspot.com/docs/api/crm/properties) APIs.
 

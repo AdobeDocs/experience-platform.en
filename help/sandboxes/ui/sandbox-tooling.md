@@ -174,7 +174,7 @@ The options to create new or use existing are displayed. Select **[!UICONTROL Us
 
 The **[!UICONTROL Field group]** dialog shows a list of field groups available for the object. Select the field groups required, then select **[!UICONTROL Save]**.
 
-![A list of fields shown on the [!UICONTROL Field group] dialog, highlighting the [!UICONTROL Save] selection. ](../images/ui/sandbox-tooling/field-group-list.png)
+![A list of fields shown on the [!UICONTROL Field group] dialog, highlighting the [!UICONTROL Save] selection.](../images/ui/sandbox-tooling/field-group-list.png)
 
 You are returned to the [!UICONTROL Package object and dependencies] page. From here, select **[!UICONTROL Finish]** to complete the package import.
 

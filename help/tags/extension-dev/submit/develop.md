@@ -39,7 +39,6 @@ There are also a number of npm tools to help you with your extension package dev
 There are example extensions on GitHub you can review or use as starter projects:
 
 * [Hello World example extension](https://github.com/adobe/reactor-helloworld-extension)
-* [Facebook example extension](https://github.com/Adobe-Marketing-Cloud-Activation/extension-facebookpixel)
 * [Typekit example extension](https://github.com/jeffchasin/extension-typekit)
 * [Pinterest example extension](https://github.com/jeffchasin/extension-pinterest)
 

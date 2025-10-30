@@ -47,7 +47,7 @@ After the data is uploaded, you can use the [!UICONTROL Preview sample data] sec
 
 Next, use the *[!UICONTROL Dataflow details]* interface to provide a **name** and an **optional description** for your dataflow. Additionally, select the **[!UICONTROL Target dataset]** that you want to use. You can either create a new dataset or use an existing dataset.
 
-![The dataflow details interface. ](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
+![The dataflow details interface.](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
 
 ### Mapping
 

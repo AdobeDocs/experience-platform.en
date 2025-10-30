@@ -99,4 +99,4 @@ alloy("configure", {
 
 ## Next steps {#next-steps}
 
-After configuring push notifications, use the [`sendPushSubscription`](../sendPushSubscription.md) command to register push subscriptions with Adobe Experience Platform.
+After configuring push notifications, use the [sendPushSubscription](../sendpushsubscription.md) command to register push subscriptions with Adobe Experience Platform.

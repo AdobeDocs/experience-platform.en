@@ -53,6 +53,10 @@ Select **[!UICONTROL Schedule]** and allow a few moments for your on-demand data
 
 Select your dataflow name to view your dataflow activity. Here you will see a list of your dataflow runs that have been processed. You can re-run individual iterations of your dataflow runs regardless of whether they have failed or succeeded. For run iterations that have failed, you can use **[!UICONTROL Retry]** to initiate the run again after diagnosing and addressing any errors that may have been encountered during the creation process.
 
+>[!TIP]
+>
+>Retrying a flow run will only process files with timestamps that fall within the range of the original run.
+
 ![A list of processed flow runs for a selected dataflow.](../../images/tutorials/on-demand/processed.png)
 
 Select **[!UICONTROL Scheduled]** to see a list of dataflow runs that are scheduled for future ingestion.

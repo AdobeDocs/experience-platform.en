@@ -76,7 +76,7 @@ Your extension package will then be uploaded and the uploader will give you the 
 >
 >If you plan to run the uploader often, putting all this information in each time can be a burden. You can also pass these in as arguments from the command line. Check out the [Command Line Arguments section](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) of the NPM docs for more info.
 
-If you'd like to manage uploading your extension using the API directly, see the example calls for [creating](../../api/endpoints/extension-packages.md/#create) or [updating](../../api/endpoints/extension-packages.md#update) an extension package in the API docs for more detail.
+If you'd like to manage uploading your extension using the API directly, see the example calls for [creating](../../api/endpoints/extension-packages.md#create) or [updating](../../api/endpoints/extension-packages.md#update) an extension package in the API docs for more detail.
 
 ## Create a development property {#property}
 

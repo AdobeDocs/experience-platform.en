@@ -140,8 +140,6 @@ role: Admin,User
         * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
         * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
-        * [(Beta) Snowflake Streaming connection](./catalog/cloud-storage/snowflake.md)
-        * [(Beta) Snowflake Batch connection](./catalog/cloud-storage/snowflake-batch.md)
         * [IP address allowlist for file-based cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
     * Customer Relationship Management (CRM) destinations {#crm}
         * [Hubspot connection](./catalog/crm/hubspot.md)
@@ -231,6 +229,9 @@ role: Admin,User
         * [Medallia connection](./catalog/voice/medallia-connector.md)
         * [Medallia extension](./catalog/voice/medallia.md)
         * [Talk URL Inbox extension](./catalog/voice/talkurl.md)
+    * Warehouse destinations {#warehouse}
+        * [Snowflake Batch connection](./catalog/warehouses/snowflake-batch.md)
+        * [Snowflake Streaming connection](./catalog/warehouses/snowflake.md)
 * Destination SDK {#destination-sdk}
     * [Overview](./destination-sdk/overview.md)
     * [Integration prerequisites](./destination-sdk/integration-prerequisites.md)
@@ -299,7 +300,7 @@ role: Admin,User
         * Streaming destination testing API {#streaming-destinations}
             * [Streaming destination testing API overview](./destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)
             * [Generate sample profiles based on a source schema](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
-            * [Generate a sample message transformation template ](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
+            * [Generate a sample message transformation template](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
             * [Validate exported profile structure](./destination-sdk/testing-api/streaming-destinations/render-template-api.md)
             * [Test your streaming destination with sample profiles](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
             * [Create and test a message transformation template](./destination-sdk/testing-api/streaming-destinations/create-template.md)
