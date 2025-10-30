@@ -4,7 +4,7 @@ description: Learn how to use the Nextdoor Conversion API extension to send conv
 last-substantial-update: 2025-10-17
 ---
 
-# Nextdoor Conversion API Extension - User Guide
+# [!DNL Nextdoor] Conversion API Extension
 
 ## Overview
  
@@ -159,7 +159,7 @@ Proper data handling is essential for maximizing conversion attribution accuracy
 
 * **Use consistent data formatting**: Format emails, phone numbers, and other data consistently:
 
-  * **Email normalization**: Convert emails to lowercase, trim whitespace, and remove dots from Gmail addresses.
+  * **Email normalization**: Convert emails to lowercase, trim whitespace, and remove dots from [!DNL Gmail] addresses.
   * **Phone number standardization**: Use E.164 format (+1234567890) for international compatibility.
   * **Address normalization**: Standardize street abbreviations (St., Ave., Rd.), and remove any extra spaces.
   * **Name formatting**: Convert names to lowercase, remove extra spaces, and handle special characters consistently.
@@ -169,7 +169,7 @@ Proper data handling is essential for maximizing conversion attribution accuracy
   * Use SHA-256 hashing for phone numbers, addresses, and other PII.
   * The extension automatically hashes plain text emails - you can send either format.
   * Hash data consistently across all your tracking implementations.
-    * **Example**: Normalize "John@Example.COM" → "john@example.com" before hashing.
+    * **Example**: Normalize "John<span>@Example.COM" → "john<span>@example.com" before hashing.
 
 * **Provide complete information**: Include as much customer information as possible for better matching:
 
@@ -206,7 +206,7 @@ Prevent duplicate conversion events to ensure accurate campaign measurement and 
 
 ## Conclusion {#conclusion}
 
-The Nextdoor Conversion API Extension provides a powerful way to track conversions and measure the effectiveness of your Nextdoor advertising campaigns. By following this guide and implementing the best practices, you can ensure accurate conversion tracking and optimize your advertising performance.
+The [!DNL Nextdoor] Conversion API Extension provides a powerful way to track conversions and measure the effectiveness of your [!DNL Nextdoor] advertising campaigns. By following this guide and implementing the best practices, you can ensure accurate conversion tracking and optimize your advertising performance.
 
 For the most up-to-date information and additional resources, visit [[!DNL Nextdoor Ads Manager]](https://ads.nextdoor.com).
 
