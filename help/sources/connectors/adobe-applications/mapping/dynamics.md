@@ -216,7 +216,7 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListMemberKey.sourceType` ||
 | `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
-| `iif(entityid != null && entityid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", entityid, "sourceKey", concat(entityid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
+| `iif(entityid != null && entityid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", entityid, "sourceKey", concat(entityid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` ||
 | `listmemberid` | `marketingListMemberKey.sourceID` ||
 | `concat(listmemberid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListMemberKey.sourceKey` | Primary identity. The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
 | `iif(listid != null && listid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", listid, "sourceKey", concat(listid,"@${CRM_ORG_ID}.Dynamics")), null)` | `marketingListKey` ||

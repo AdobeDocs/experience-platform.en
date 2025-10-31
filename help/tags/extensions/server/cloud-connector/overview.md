@@ -39,13 +39,13 @@ Use each of these tabs (Query Params, Headers, and Body Data Elements) to contro
 
 #### Query Params
 
-Define a key and value for each key-value pair you want to send as a query string parameter. To manually enter a data element, use the curly brace data element tokenization for event forwarding. To reference the value of a data element named “siteSection” as a key or value, enter `{{siteSection}}`. Or, select the previously-created data element by selecting it in the dropdown menu. 
+Define a key and value for each key-value pair you want to send as a query string parameter. To manually enter a data element, use the curly brace data element tokenization for event forwarding. To reference the value of a data element named "siteSection" as a key or value, enter `{{siteSection}}`. Or, select the previously-created data element by selecting it in the dropdown menu. 
 
 To add more query parameters, select **[!UICONTROL Add Another]**.
 
 #### Headers
 
-Define a key and value for each key-value pair you want to send as a header. To manually enter a data element, use the curly brace data element tokenization for event forwarding. To reference the value of a data element named “pageName” as a key or value, enter `{{pageName}}`. Or, select the previously created data element by selecting it in the dropdown menu.  
+Define a key and value for each key-value pair you want to send as a header. To manually enter a data element, use the curly brace data element tokenization for event forwarding. To reference the value of a data element named "pageName" as a key or value, enter `{{pageName}}`. Or, select the previously created data element by selecting it in the dropdown menu.  
 
 To add more headers, select **[!UICONTROL Add Another]**. 
 
@@ -84,12 +84,12 @@ The following table lists the predefined headers. You are not limited to these h
 |[If-Unmodified-Since](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since)| |
 |[Max-Forwards](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since)| |
 |[Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin)| |
-|[Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma)|Implementation-specific header that may have various effects anywhere along the request-response chain. Used for backwards compatibility with HTTP/1.0 caches where the Cache-Control header is not yet present.| |
-|[Proxy-Authorization](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization) |
-|[Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range)|Indicates the part of a document that the server should return.| |
-|[Referer](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer)|The address of the previous web page from which a link to the currently requested page was followed. | |
+|[Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma)|Implementation-specific header that may have various effects anywhere along the request-response chain. Used for backwards compatibility with HTTP/1.0 caches where the Cache-Control header is not yet present.| 
+|[Proxy-Authorization](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization) ||
+|[Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range)|Indicates the part of a document that the server should return.| 
+|[Referer](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer)|The address of the previous web page from which a link to the currently requested page was followed. | 
 |TE|Specifies the transfer encodings the user agent is willing to accept. (You could informally call it `Accept-Transfer-Encoding`, which would be more intuitive). |
-|Upgrade|The relevant RFC document for the [`Upgrade` header field is RFC 7230, section 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to HTTP 2.0, assuming the server decides to acknowledge and implement the `Upgrade` header field. Neither party is required to accept the terms specified in the `Upgrade` header field. It can be used in both client and server headers. If the `Upgrade` header field is specified, then the sender MUST also send the `Connection` header field with the `upgrade` option specified.| |
+|Upgrade|The relevant RFC document for the [`Upgrade` header field is RFC 7230, section 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to HTTP 2.0, assuming the server decides to acknowledge and implement the `Upgrade` header field. Neither party is required to accept the terms specified in the `Upgrade` header field. It can be used in both client and server headers. If the `Upgrade` header field is specified, then the sender MUST also send the `Connection` header field with the `upgrade` option specified.| 
 |[User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)|Contains a characteristic string that allows the network protocol peers to identify the application type, operating system, software vendor or software version of the requesting software user agent. |
 |[Via](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Via) | Added by proxies, both forward and reverse proxies, and can appear in the request headers and the response headers. |
 |[Warning](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning)|General warning information about possible problems. |
@@ -98,17 +98,17 @@ The following table lists the predefined headers. You are not limited to these h
 
 #### Body as JSON
 
-Define a key and value for each key-value pair you want to send in the body of the request. To manually enter a data element, use the curly brace data element tokenization for event forwarding. To reference the value of a data element named “appSection” as a key or value, enter `{{appSection}}`. Or, select the previously-created data element by selecting it in the dropdown menu.  
+Define a key and value for each key-value pair you want to send in the body of the request. To manually enter a data element, use the curly brace data element tokenization for event forwarding. To reference the value of a data element named "appSection" as a key or value, enter `{{appSection}}`. Or, select the previously-created data element by selecting it in the dropdown menu.  
 
 To add additional key-value pairs, select **[!UICONTROL Add Another]**. 
 
 #### Body as Raw 
 
-Define a key and value for each key-value pair you want to send in the body of the request. To manually enter a data element, use the curly brace data element tokenization for event forwarding. To reference the value of a data element named “appSection” as a key or value, enter `{{appSection}}`. Or, select the previously created data element by selecting it in the dropdown menu. You can add one or more data elements.
+Define a key and value for each key-value pair you want to send in the body of the request. To manually enter a data element, use the curly brace data element tokenization for event forwarding. To reference the value of a data element named "appSection" as a key or value, enter `{{appSection}}`. Or, select the previously created data element by selecting it in the dropdown menu. You can add one or more data elements.
 
 ### Advanced 
 
-Actions within rules in event forwarding execute sequentially. There could be situations where you want to retrieve data from an external source that is not present on the incoming event from the client and then take this response and either transform or send this data to a final destination in a subsequent action within a single rule. The “Save the request response” in the advanced section enables this.  
+Actions within rules in event forwarding execute sequentially. There could be situations where you want to retrieve data from an external source that is not present on the incoming event from the client and then take this response and either transform or send this data to a final destination in a subsequent action within a single rule. The "Save the request response" in the advanced section enables this.  
 
 To save the response body from an endpoint check the **[!UICONTROL Save the request response]** box and define a response key in the text field.  
 

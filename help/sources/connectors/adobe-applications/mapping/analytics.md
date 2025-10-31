@@ -236,7 +236,7 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 | `m_page_type` | `web.webPageDetails.isErrorPage` | boolean | A variable that is used to populate the Pages Not Found dimension. This variable should either be empty, or contain "ErrorPage". |
 | `m_pagename_no_url` | `web.webPageDetails.name` | number | The name of the page (if set). If no page is specified, this value is left empty. |
 | `m_paid_search` | `search.isPaid` | boolean | A flag that is set if the hit matches paid search detection. |
-| `m_product_list` | `productListItems[].items` | array | The product list, as passed in through the products variable. | {SKU (string), quantity (integer), priceTotal (number)} |
+| `m_product_list` | `productListItems[].items` | array | The product list, as passed in through the products variable. `{SKU (string), quantity (integer), priceTotal (number)}` |
 | `m_ref_type` | `web.webReferrer.type` | string | A numeric ID representing the type of referral for the hit.<br/>`1`: Inside your site<br/>`2`: Other websites<br/>`3`: Search engines<br/>`4`: Hard drive<br/>`5`: USENET<br/>`6`: Typed/Bookmarked (no referrer)<br/>`7`: email<br/>`8`: No JavaScript<br/>`9`: Social Networks |
 | `m_search_engine` | `search.searchEngine` | string | The numeric ID representing the search engine that referred the visitor to your site. |
 | `post_currency` | `commerce.order.currencyCode` | string | The currency code that was used during the transaction. |
