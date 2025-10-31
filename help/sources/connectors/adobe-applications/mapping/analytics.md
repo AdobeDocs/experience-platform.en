@@ -19,8 +19,8 @@ Read the following table for information on streaming media parameters.
 | `videoaudioauthor` | `mediaReporting.sessionDetails.author` | string | The name of the media author. |
 | `videoaudioartist` | `mediaReporting.sessionDetails.artist` | string | The name of the album artist or group performing the music recording or video. |
 | `videoaudioalbum` | `mediaReporting.sessionDetails.album` | string | The name of the album that the music recording or video belongs to. |
-| `videolength` | `mediaReporting.sessionDetails.length ` | integer | The length or runtime of the video. |
-| `videoshowtype` | `mediaReporting.sessionDetails.showType` | string |
+| `videolength` | `mediaReporting.sessionDetails.length` | integer | The length or runtime of the video. |
+| `videoshowtype` | `mediaReporting.sessionDetails.showType` | string ||
 | `video` | `mediaReporting.sessionDetails.name` | string | The ID of the video. |
 | `videoshow` | `mediaReporting.sessionDetails.show` | string | The name of the program or series. The program/series name is only required if the show is part of a series. |
 | `videostreamtype` | mediaReporting.sessionDetails.streamType | string | The type of streaming media such as "video" or "audio". |
@@ -28,12 +28,12 @@ Read the following table for information on streaming media parameters.
 | `videoepisode` | `mediaReporting.sessionDetails.episode` | string | The number of the episode. |
 | `videogenre` | `mediaReporting.sessionDetails.genreList[]` | string[] | The genre of the video. |
 | `videosessionid` | `mediaReporting.sessionDetails.ID` | string | An identifier for an instance of a content stream unique to an individual playback. |
-| `videoplayername` | `mediaReporting.sessionDetails.playerName ` | string | The name of the video player. |
+| `videoplayername` | `mediaReporting.sessionDetails.playerName` | string | The name of the video player. |
 | `videochannel` | `mediaReporting.sessionDetails.channel` | string | The distribution channel from where the content was played. |
 | `videocontenttype` | `mediaReporting.sessionDetails.contentType` | string | The type of stream delivery used for the content. This is automatically set to "Video" for all video views. Recommended values include: VOD, Live, Linear, UGC, DVOD, Radio, Podcast, Audiobook, and Song. |
 | `videonetwork` | `mediaReporting.sessionDetails.network` | string | The network or channel name. |
 | `videofeedtype` | `mediaReporting.sessionDetails.feed` | string | The type of feed. This can either represent actual feed-related data such as "East HD" or "SD", or the source of the feed, such as a URL. |
-| `videosegment` | `mediaReporting.sessionDetails.segment` | string |
+| `videosegment` | `mediaReporting.sessionDetails.segment` | string ||
 | `videostart` | `mediaReporting.sessionDetails.isViewed` | boolean | A boolean value that indicates whether the video has been started or not. This occurs once the user selects the play button and will count even if there are pre-roll ads, buffering, errors, and so on. |
 | `videoplay` | `mediaReporting.sessionDetails.isPlayed` | boolean | A boolean value that indicates if the first frame of the media has started. If the user drops during any ads or buffering time, then the "content start" would not qualify. |
 | `videotime` | `mediaReporting.sessionDetails.timePlayed` | integer | The duration (in seconds) for all events of `type=PLAY` on the main content. |
@@ -51,7 +51,7 @@ Read the following table for information on streaming media parameters.
 | `videopausetime` | `mediaReporting.sessionDetails.pauseTime` | integer | The total duration (in seconds) in which playback was paused by a user. |
 | `videomvpd` | `mediaReporting.sessionDetails.mvpd` | string | An MVPD identifier provided via Adobe authentication. |
 | `videoauthorized` | `mediaReporting.sessionDetails.authorized` | string |  Defines that the user has been authorized via Adobe authentication. |
-| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | Defines the time of the day when the content was broadcast or played. |
+| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | Defines the time of the day when the content was broadcast or played. ||
 | `videoresume` | `mediaReporting.sessionDetails.hasResume` | boolean | A boolean value that marks each playback that was resumed after more than 30 minutes of buffer, pause, or a stall period. |
 | `videosegmentviews` | `mediaReporting.sessionDetails.hasSegmentView` | boolean | A boolean value that indicates that at least one frame has been viewed. This frame does not have to be the first frame. |
 | `videoaudiolabel` | `mediaReporting.sessionDetails.label` | string | The name of the record label. |
@@ -127,7 +127,7 @@ Read the following table for information on quality parameters.
 | --- | --- | --- | --- |
 | `videoqoebitrateaverage` | `mediaReporting.qoeDataDetails.bitrateAverage` | number | The average bitrate (in kbps, integer). This metric is computed as a weighted average of all bitrate values related to the play duration that occurred during a playback session. |
 | `videoqoebitratechange` | `mediaReporting.qoeDataDetails.hasBitrateChangeImpactedStreams` | boolean | A boolean value that indicates the number of streams in which bitrate changes occurred. This metric is set to true only if at least one bitrate change event occurred during a playback session. |
-| `videoqoebitratechangecountevar` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | integer |
+| `videoqoebitratechangecountevar` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | integer ||
 | `videoqoebitrateaverageevar` | `mediaReporting.qoeDataDetails.bitrateAverageBucket` | string | The number of bitrate changes. This value is computed as a sum of all bitrate change events that occurred during a playback session. |
 | `videoqoetimetostartevar`| `mediaReporting.qoeDataDetails.timeToStart` | integer | The duration, measured in seconds, that passed between video load and video start. |
 | `videoqoedroppedframes` | `mediaReporting.qoeDataDetails.hasDroppedFrameImpactedStreams` | boolean | A boolean value that indicates the number of streams in which frames were dropped. This metric is set to true only if at least one frame was dropped during a playback session. |
@@ -176,7 +176,7 @@ Read this section for information on deprecated Analytics mapping fields.
 | `m_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | string | A variable used to populate the Zip Code dimension. |
 | `accept_language` | `environment.browserDetails.acceptLanguage` | string | Lists all the accepted languages, as indicated in the Accept-Language HTTP header. |
 | `homepage` | `web.webPageDetails.isHomePage` | boolean | No longer used. Indicated if the current URL is the browser's homepage. |
-| `ipv6` | `environment.ipV6` | string |
+| `ipv6` | `environment.ipV6` | string ||
 | `j_jscript` | `environment.browserDetails.javaScriptVersion` | string | The version of JavaScript supported by the browser. |
 | `user_agent` | `environment.browserDetails.userAgent` | string | The user agent string sent in the HTTP header. |
 | `mobileappid` | `application.name` | string | The mobile app ID, stored in the following format: `[AppName][BundleVersion]`. |
@@ -190,21 +190,21 @@ Read this section for information on deprecated Analytics mapping fields.
 | `mobilebeaconmajor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMajor` | number | Mobile Services beacon major. |
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | number | Mobile Services beacon minor. |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | string | Mobile Services beacon UUID. |
-| `mobileinstalls` | `application.firstLaunches` | Object  | This is triggered at the first run after installation or reinstallation | {id (string), value (number)} |
-| `mobileupgrades` | `application.upgrades` | Object | Reports the number of app upgrades. Triggers at the first run after upgrade or any time the version number changes. | {id (string), value (number)} |
-| `mobilelaunches` | `application.launches` | Object | The number of times the app has been launched. | {id (string), value (number)} |
-| `mobilecrashes` | `application.crashes` | Object |  | {id (string), value (number)} |
-| `mobilemessageclicks` | `directMarketing.clicks` | Object |  | {id (string), value (number)} |
-| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | Object | | {id (string), value (number)} |
-| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | Object | | {id (string), value (number)} |
-| `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | Object | The video quality time to start. | {id (string), value (number)} |
-| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | Object | | {id (string), value (number)} |
-| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | Object | Video quality buffer count | {id (string), value (number)} |
-| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | Object | Video quality buffer time | {id (string), value (number)} |
-| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | Object | Video quality change count | {id (string), value (number)} |
-| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | Object | Video quality average bit rate | {id (string), value (number)} |
-| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | Object | Video quality error count | {id (string), value (number)} |
-| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | Object | | {id (string), value (number)} |
+| `mobileinstalls` | `application.firstLaunches` | Object  | This is triggered at the first run after installation or reinstallation `{id (string), value (number)}` |
+| `mobileupgrades` | `application.upgrades` | Object | Reports the number of app upgrades. Triggers at the first run after upgrade or any time the version number changes. | `{id (string), value (number)}` |
+| `mobilelaunches` | `application.launches` | Object | The number of times the app has been launched.  `{id (string), value (number)}` |
+| `mobilecrashes` | `application.crashes` | Object |  `{id (string), value (number)}` |
+| `mobilemessageclicks` | `directMarketing.clicks` | Object |  `{id (string), value (number)}` |
+| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | Object | `{id (string), value (number)}` |
+| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | Object | `{id (string), value (number)}` |
+| `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | Object | The video quality time to start. `{id (string), value (number)}` |
+| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | Object | `{id (string), value (number)}` |
+| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | Object | Video quality buffer count `{id (string), value (number)}` |
+| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | Object | Video quality buffer time `{id (string), value (number)}` |
+| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | Object | Video quality change count `{id (string), value (number)}` |
+| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | Object | Video quality average bit rate `{id (string), value (number)}` |
+| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | Object | Video quality error count `{id (string), value (number)}` |
+| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | Object | `{id (string), value (number)}` |
 
 {style="table-layout:auto"}
 

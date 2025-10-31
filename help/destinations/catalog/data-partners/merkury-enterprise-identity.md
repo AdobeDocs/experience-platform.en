@@ -60,8 +60,8 @@ The [!DNL Merkury Enterprise Identity] destination provides the ability to secur
 
 This section describes which type of audiences you can export to this destination.
 
-|**Audience**|**Supported**|**Description**|**origin**|                      
-|---|---|---|---|
+|**Audience**|**Supported**|**Description**|                      
+|---|---|---|
 |Segmentation Service|✓|Audiences generated through the Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
 |Custom uploads|x|Audiences [[imported]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) into Experience Platform from CSV files.|
 

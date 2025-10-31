@@ -34,7 +34,7 @@ The table below lists [!DNL Adobe Real-Time Customer Data Platform] objects that
 
 | Platform | Object | Details |
 | --- | --- | --- |
-| Customer Data Platform | Sources | <ul><li>The source account credentials are not replicated in the target sandbox for security reasons and will be required to be updated manually.</li><li>The source dataflow is copied in a draft status by default.</li></ul> |
+| Customer Data Platform | Sources | <ul><li>The source account credentials are not replicated in the target sandbox for security reasons and will be required to be updated manually.</li><li>The source dataflow is copied in a draft status by default.</li></ul> **NOTE:** Currently, sandbox tooling supports only batch-based source dataflows. Streaming-based source dataflows are not supported. |
 | Customer Data Platform | Audiences | <ul><li>Only the **[!UICONTROL Customer Audience]** type **[!UICONTROL Segmentation service]** is supported.</li><li>Existing labels for consent and governance will be copied over in the same import job.</li><li> System will auto select default Merge Policy in target sandbox with same XDM class when checking merge policy dependencies.</li><li>If an existing object with the same name is detected when importing Audiences, Sandbox tooling will always reuse the existing object, to avoid object proliferation.</li></ul> |
 | Customer Data Platform | Identities | <ul><li>The system will auto-deduplicate Adobe standard identity namespaces when creating in the target sandbox.</li><li>Audiences can only be copied when all attributes in audience rules are enabled in the union schema. The necessary schemas must be moved and enabled for unified profile first.</li></ul> |
 | Customer Data Platform | Schemas/ Field Groups/ Data Types | <ul><li>Existing labels for consent and governance will be copied over in the same import job.</li><li>You have the flexibility to import schemas without the Unified Profile option enabled. The schema relationships edge case are not included in the package.</li><li>If an existing object with the same name is detected when importing Schemas/Field Groups, Sandbox tooling will always reuse the existing object, to avoid object proliferation.</li></ul> |
@@ -174,7 +174,7 @@ The options to create new or use existing are displayed. Select **[!UICONTROL Us
 
 The **[!UICONTROL Field group]** dialog shows a list of field groups available for the object. Select the field groups required, then select **[!UICONTROL Save]**.
 
-![A list of fields shown on the [!UICONTROL Field group] dialog, highlighting the [!UICONTROL Save] selection. ](../images/ui/sandbox-tooling/field-group-list.png)
+![A list of fields shown on the [!UICONTROL Field group] dialog, highlighting the [!UICONTROL Save] selection.](../images/ui/sandbox-tooling/field-group-list.png)
 
 You are returned to the [!UICONTROL Package object and dependencies] page. From here, select **[!UICONTROL Finish]** to complete the package import.
 

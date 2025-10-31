@@ -161,6 +161,7 @@ For example, you can enforce the email address field to always be sent to the de
 >[!NOTE]
 >
 >The following combinations of required mappings are currently supported: 
+>
 >* You can configure a required source field and a required destination field. In this case, users cannot edit or select any of the two fields and can only view the selection.
 >* You can configure a required destination field only. In this case, users will be allowed to select a source field to map to the destination.
 >

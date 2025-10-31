@@ -17,6 +17,7 @@ This page lists and describes all the API operations that you can perform using 
 >[!IMPORTANT]
 >
 >Use this API endpoint to generate sample profiles for two separate use cases. You can either: 
+>
 >* generate profiles to use when [crafting and testing a message transformation template](create-template.md) - by using *destination ID* as a query parameter.
 >* generate profiles to use when making calls to [test if your destination is configured correctly](streaming-destination-testing-overview.md) - by using *destination instance ID* as a query parameter.
 
@@ -41,7 +42,8 @@ To get the ID of a destination instance, you must first create a connection in t
 >[!IMPORTANT]
 >
 >* In order to use this API, you must have an existing connection to your destination in the Experience Platform UI. Read [connect to destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) and [activate profiles and audiences to a destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) for more information.
-> * After establishing the connection to your destination, get the destination instance ID that you should use in API calls to this endpoint when [browsing a connection with your destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>* After establishing the connection to your destination, get the destination instance ID that you should use in API calls to this endpoint when [browsing a connection with your destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>
 >![UI image how to get destination instance ID](../../assets/testing-api/get-destination-instance-id.png)
 
 **API format**

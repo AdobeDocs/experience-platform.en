@@ -58,7 +58,7 @@ role: Developer
   * [setConsent](commands/setconsent.md)
   * [setDebug](commands/setdebug.md)
   * [sendMediaEvent](commands/sendmediaevent.md)
-  * [sendPushSubscription](commands/sendPushSubscription.md)
+  * [sendPushSubscription](commands/sendpushsubscription.md)
   * [subscribeRulesetItems](commands/subscriberulesetitems.md)
   * [Configure datastream overrides](commands/datastream-overrides.md)
   * [Command responses](commands/command-responses.md)

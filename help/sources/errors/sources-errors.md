@@ -150,7 +150,7 @@ This document provides a catalog of error messages, descriptions, and suggested 
 | `1392-400` | Bad Request | Failed to parse Transformations in flow request for flowId={flowId}. Please check the transformations in your request and try again. |
 | `1393-400` | Bad Request | The provided parameter {parameter} is null or empty. Please provide a valid {parameter} and try again. |
 | `1394-400` | Bad Request | The minimum value for a parameter {parameter} is one. Please provide a valid {parameter} and try again. |
-`1395-400` | Bad Request | The source connection found in the flow is either null or empty. Please provide a valid source connection in the flow and try again. |
+| `1395-400` | Bad Request | The source connection found in the flow is either null or empty. Please provide a valid source connection in the flow and try again. |
 | `1396-400` | Bad Request | A matching format could not be found. Please provide a matching format and try again. |
 | `1397-400` | Bad Request | The provided frequency : {frequency} is invalid. Please provide a valid frequency and try again. |
 | `1398-400` | Bad Request | The provided operation : {action} is unsupported. Please check the operation provided and try again. |

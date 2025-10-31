@@ -48,7 +48,7 @@ New legal and organizational regulations are giving users the right to access or
 |New API endpoints | Base path for the [!DNL Privacy Service] API has been updated from `/data/privacy/gdpr` to `/data/core/privacy/jobs`.|
 |New required `regulation` property | When creating new jobs in the [!DNL Privacy Service] API, a `regulation` property must be supplied in the request payload to indicate which regulation to track the job under. Accepted values are `gdpr` and `ccpa`.|
 |Support for [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] now accepts access/delete requests from Adobe [!DNL Primetime Authentication], using `primetimeAuthentication` as its product value.|
-|Privacy Service UI enhancements | Separate job tracking pages for GDPR and CCPA regulations. New **Regulation Type **dropdown to switch between tracking data for GDPR and CCPA.|
+|Privacy Service UI enhancements | Separate job tracking pages for GDPR and CCPA regulations. New **Regulation Type** dropdown to switch between tracking data for GDPR and CCPA.|
 
 **Known issues**
 

@@ -47,7 +47,7 @@ To start tracking a media session automatically, call the `createMediaSession` m
 |---------|----------|---------|---------|
 | `playerId` | String | Yes | The player ID, an unique identifier representing the media session.|
 | `getPlayerDetails` | Function | Yes | A function that returns the player details. This callback function will be called by the Web SDK before every media event for the `playerId` provided. |
-| `xdm.eventType ` | Object | No | The media event type. If not provided, this is automatically set to `media.sessionStart`. |
+| `xdm.eventType` | Object | No | The media event type. If not provided, this is automatically set to `media.sessionStart`. |
 | `xdm.mediaCollection.sessionDetails` | Object | Yes| The session details object. The `sessionDetails` object should contain the session details properties. See the [Media Collection schema](../../xdm/data-types/media-collection-details.md) documentation for more information.|
 
 

@@ -63,7 +63,7 @@ To send data to the [!DNL Snapchat] Conversions API extension, create [data elem
 
 For example, if you are creating a data element that references `snapClickId` in the schema shown below:
 
-![Image showing schema ](../../../images/extensions/server/snap/schema.png)
+![Image showing schema](../../../images/extensions/server/snap/schema.png)
 
 You must configure the data element because `snapClickId` is located under `_snap.inc.exchange` in the XDM schema.
 
