@@ -36,7 +36,7 @@ When exploring deployment options, you need to understand and consider the perso
 - Focus: Data accuracy and quality.
 - Goals: Ensuring data privacy and trust, designing schemas and data models, managing data sources.
 
-### 1. An enterprise operating With limited data isolation
+### An enterprise operating With limited data isolation
 
 A key architectural principle in Experience Platform is one where customer data is restricted to a specific production sandbox based on governance policies and requirements.
 
@@ -101,7 +101,7 @@ For additional details on sandbox tooling, see the [sandbox tooling documentatio
 | ![CDP-Create a Package](./images/whitepaper/create-package.png) | ![CDP-List Packages](./images/whitepaper/list-packages.png) |
 | --- | --- |
 
-### 2. Region or brand-specific data isolation
+### Region or brand-specific data isolation
 
 If you require complete isolation (e.g., regional or brand-based), you may operate under strict data access policies or legal requirements restricting your brand teams' access to data specific to their respective regions or brands. You define access patterns based on region or brand-specific data, ensuring compliance with internal, regulatory, and data governance protocols. This approach is crucial if you operate in highly regulated industries (e.g., handling PII data) or need to maintain distinct and segmented data for different geographic regions or brand identities.
 
@@ -225,7 +225,7 @@ This segment-sharing service allows two or more users to exchange segment data i
 
 For additional details on the Segment Match feature, see the [Segment Match documentation](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
 
-### 3. A blend of approaches for global operations, regional, and brand-specific
+### A blend of approaches for global operations, regional, and brand-specific
 
 Many multi-brand enterprises operate on a global scale and, as such, often seek a blend of both unified and isolated data management approaches. They seek to separate data for multiple regions or countries in this scenario. Brands within the organization can expect to operate exclusively on the data associated with their specific brand, all within the same data boundaries of a geography or country. This approach allows for centralized regional or country data management while still facilitating brand-specific marketing and data operations. It's a model that combines the advantages of unified data management with the necessity for brand and region-specific isolation.
 

@@ -115,6 +115,106 @@ The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTRO
 
 **[!UICONTROL Error threshold]** allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
+## Enable partial ingestion and error diagnostics for an existing dataflow
+
+If a dataflow in Experience Platform was created without enabling partial ingestion or error diagnostics, you can still enable these features without recreating the flow. By enabling partial ingestion and robust error diagnostics, you can greatly enhance the reliability and ease of troubleshooting in your data ingestion workflows. Read the sections below to learn how to enable partial ingestion and error diagnostics for an existing dataflow using the [!DNL Flow Service] API.
+
+By default, dataflows may not have partial ingestion or error diagnostics enabled. These features are helpful for identifying and isolating issues during data ingestion. Using the [!DNL Flow Service] API, you can retrieve your current dataflow configuration and apply the necessary changes using a PATCH request.
+
+Follow the steps below to enable partial ingestion and error diagnostics for an existing dataflow.
+
+### Retrieve flow details
+
+To retrieve your dataflow configurations, make a GET request to the `/flows/{FLOW_ID}` endpoint and provide the ID of your dataflow. For more information on retrieving dataflow details, refer to the [Update dataflows using the [!DNL Flow Service] API](../../sources/tutorials/api/update-dataflows.md) guide.
+
+Make sure to save the value of the `etag` field returned in the response. This is necessary for the update request to ensure version consistency.
+
+### Update flow configuration
+
+Next, make a PATCH request to the `/flows/` endpoint and provide the ID of the dataflow that you want to enable partial ingestion and error diagnostics for.
+
+>[!IMPORTANT]
+>
+>- Include the previously saved `etag` value in the request header using the If-Match key.
+>- You can modify the `partialIngestionPercent` value to suit your specific needs.
+
+**API format**
+
+```http
+PATCH /flows/{FLOW_ID}
+```
+
+**Request**
+
+```shell
+curl -X PATCH \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
+    -d '[
+        {
+            "op": "add",
+            "path": "/options",
+            "value": {
+                "partialIngestionPercent": "10"
+            }
+        },
+        {
+            "op": "add",
+            "path": "/options/errorDiagnosticsEnabled",
+            "value": true
+        }
+    ]'
+```
+
+**Response**
+
+A successful response returns your dataflow's `id` and an updated `etag`.
+
+```json
+{
+    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
+    "etag": "\"2c000802-0000-0200-0000-613976440000\""
+}
+```
+
+### Verify the update
+
+After the PATCH is complete, make a GET request and retrieve your dataflow to verify that the changes were successfully completed.
+
+**API format**
+
+```http
+GET /flows/{FLOW_ID}
+```
+
+**Request**
+
+The following request retrieves updated information regarding your flow ID.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response returns your dataflow details, confirming that partial ingestion and error diagnostics are now enabled in the `options` section.
+
+```json
+"options": {
+    "partialIngestionPercent": 10,
+    "errorDiagnosticsEnabled": true
+}
+```
+
 ## Next steps {#next-steps}
 
 This tutorial covered how to create or modify a dataset to enable partial batch ingestion. For more information on batch ingestion, please read the [batch ingestion developer guide](./api-overview.md).
