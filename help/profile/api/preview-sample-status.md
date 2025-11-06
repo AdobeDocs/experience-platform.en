@@ -54,6 +54,8 @@ GET /previewsamplestatus
 
 **Request**
 
++++ A sample request to view the last sample status.
+
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/core/ups/previewsamplestatus \
@@ -63,9 +65,13 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
++++
+
 **Response**
 
-The response includes the details for the last successful sample job that was run for the organization. 
+A successful response returns HTTP status ??? and includes the details for the last successful sample job that was run for the organization. 
+
++++ A sample response that contains the last sample status.
 
 >[!NOTE]
 >
@@ -91,20 +97,22 @@ The response includes the details for the last successful sample job that was ru
 }
 ```
 
-|Property|Description|
-|---|---|
-|`numRowsToRead`|The total number of merged profiles in the sample.|
-|`sampleJobRunning`| A boolean value that returns `true` when a sample job is in progress. Provides transparency into the latency that occurs from when a batch file is uploaded to when it is actually added to the Profile store.|
-|`docCount`|Total document count in database.|
-|`totalFragmentCount`|Total number of profile fragments in the Profile store.|
-|`lastSuccessfulBatchTimestamp`|Last successful batch ingestion timestamp.|
-|`streamingDriven`| *This field has been deprecated and contains no significance to the response.*|
-|`totalRows`|Total number of merged profiles in Experience Platform, also know as the 'profile count.'|
-|`lastBatchId`|Last batch ingestion ID.|
-|`status`|Status of last sample.|
-|`samplingRatio`|Ratio of merged profiles sampled (`numRowsToRead`) to total merged profiles (`totalRows`), expressed as a percentage in decimal format.|
-|`mergeStrategy`|Merge strategy used in the sample.|
-|`lastSampledTimestamp`|Last successful sample timestamp.|
+| Property | Description |
+| -------- | ----------- |
+| `numRowsToRead` | The total number of merged profiles in the sample. |
+| `sampleJobRunning` | A boolean value that returns `true` when a sample job is in progress. Provides transparency into the latency that occurs from when a batch file is uploaded to when it is actually added to the Profile store.|
+| `docCount` | Total document count in database. |
+| `totalFragmentCount` | Total number of profile fragments in the Profile store. |
+| `lastSuccessfulBatchTimestamp` | Last successful batch ingestion timestamp. |
+| `streamingDriven` | *This field has been deprecated and contains no significance to the response.* |
+| `totalRows` | Total number of merged profiles in Experience Platform, also know as the profile count. |
+| `lastBatchId` | Last batch ingestion ID. |
+| `status` | Status of last sample. |
+| `samplingRatio` | Ratio of merged profiles sampled (`numRowsToRead`) to total merged profiles (`totalRows`), expressed as a percentage in decimal format. |
+| `mergeStrategy` | Merge strategy used in the sample. |
+| `lastSampledTimestamp` | Last successful sample timestamp. |
+
++++
 
 ## List profile distribution by dataset
 
@@ -117,30 +125,39 @@ GET /previewsamplestatus/report/dataset
 GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 ```
 
-|Parameter|Description|
-|---|---|
-|`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date is returned. If a report does not exist for the specified date, a 404 (Not Found) error is returned. If no date is specified, the most recent report is returned. Format: YYYY-MM-DD. Example: `date=2024-12-31`|
+| Query parameter | Description | Example |
+| --------------- | ----------- | ------- |
+|`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date is returned. If a report does not exist for the specified date, a 404 (Not Found) error is returned. If no date is specified, the most recent report is returned. Format: YYYY-MM-DD. | `date=2024-12-31`|
 
 **Request**
 
 The following request uses the `date` parameter to return the most recent report for the date specified.
 
++++ A sample request to retrieve the profile distribution by dataset.
+
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset?date=2020-08-01 \
+curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset?date=2020-08-01 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**Response**
++++
 
-The response includes a `data` array, containing a list of dataset objects. The response shown has been truncated to show three datasets. 
+**Response**
 
 >[!NOTE]
 >
 >If multiple reports exist for the date, only the latest report is returned. If a dataset report does not exist for the date provided, HTTP Status 404 (Not Found) is returned.
+
+A successful response returns HTTP status ??? and includes a `data` array, containing a list of dataset objects.
+
++++ A sample response that contains the latest dataset objects.
+
+>[!NOTE]
+>
+>The following response shown has been truncated to show three datasets. 
 
 ```json
 {
@@ -186,18 +203,20 @@ The response includes a `data` array, containing a list of dataset objects. The 
 }
 ```
 
-|Property|Description|
-|---|---|
-|`sampleCount`|The total number of sampled merged profiles with this dataset ID.|
-|`samplePercentage`|The `sampleCount` as a percentage of the total number of sampled merged profiles (the `numRowsToRead` value as returned in the [last sample status](#view-last-sample-status)), expressed in decimal format.|
-|`fullIDsCount`|The total number of merged profiles with this dataset ID.|
-|`fullIDsPercentage`|The `fullIDsCount` as a percentage of the total number of merged profiles (the `totalRows` value as returned in the [last sample status](#view-last-sample-status)), expressed in decimal format.|
-|`name`|The name of the dataset, as provided during dataset creation.|
-|`description`|The description of the dataset, as provided during dataset creation.|
-|`value`|The ID of the dataset.|
-|`streamingIngestionEnabled`|Whether the dataset is enabled for streaming ingestion.|
-|`createdUser`|The user ID of the user who created the dataset.|
-|`reportTimestamp`|The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided. If no `date` parameter is provided, the most recent report is returned.|
+| Property | Description |
+| -------- | ----------- |
+| `sampleCount` | The total number of sampled merged profiles with this dataset ID. |
+| `samplePercentage` | The `sampleCount` as a percentage of the total number of sampled merged profiles (the `numRowsToRead` value as returned in the [last sample status](#view-last-sample-status)), expressed in decimal format. |
+| `fullIDsCount` | The total number of merged profiles with this dataset ID. |
+| `fullIDsPercentage` | The `fullIDsCount` as a percentage of the total number of merged profiles (the `totalRows` value as returned in the [last sample status](#view-last-sample-status)), expressed in decimal format. |
+| `name` | The name of the dataset, as provided during dataset creation. |
+| `description` | The description of the dataset, as provided during dataset creation. |
+| `value` | The ID of the dataset. |
+| `streamingIngestionEnabled` | Whether the dataset is enabled for streaming ingestion. |
+| `createdUser` | The user ID of the user who created the dataset. |
+| `reportTimestamp` | The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided. If no `date` parameter is provided, the most recent report is returned. |
+
++++
 
 ## List profile distribution by identity namespace
 
@@ -216,26 +235,31 @@ GET /previewsamplestatus/report/namespace
 GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 ```
 
-|Parameter|Description|
-|---|---|
-|`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date is returned. If a report does not exist for the specified date, a 404 (Not Found) error is returned. If no date is specified, the most recent report is be returned. Format: YYYY-MM-DD. Example: `date=2024-12-31`|
+| Query parameter | Description | Example |
+| -------------- | ----------- | ------- |
+| `date` | Specifies the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date is returned. If a report does not exist for the specified date, a 404 (Not Found) error is returned. If no date is specified, the most recent report is be returned. Format: YYYY-MM-DD. | `date=2025-6-20` |
 
 **Request**
 
 The following request does not specify a `date` parameter and will therefore return the most recent report.
 
++++ A sample request to return the most recent report for profile distribution by namespace. 
+
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
+curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
++++
+
 **Response**
 
-The response includes a `data` array, with individual objects containing the details for each namespace. The response shown has been truncated to show four namespaces.
+A successful response returns HTTP status ??? and includes a `data` array, with individual objects containing the details for each namespace. The response shown has been truncated to show four namespaces.
+
++++ A sample response contains information about the profile distribution by namespace.
 
 ```json
 {
@@ -285,16 +309,147 @@ The response includes a `data` array, with individual objects containing the det
 }
 ```
 
-|Property|Description|
-|---|---|
-|`sampleCount`|The total number of sampled merged profiles in the namespace.|
-|`samplePercentage`|The `sampleCount` as a percentage of sampled merged profiles (the `numRowsToRead` value as returned in the [last sample status](#view-last-sample-status)), expressed in decimal format.|
-|`reportTimestamp`|The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided. If no `date` parameter is provided, the most recent report is returned.|
-|`fullIDsFragmentCount`|The total number of profile fragments in the namespace.|
-|`fullIDsCount`|The total number of merged profiles in the namespace.|
-|`fullIDsPercentage`|The `fullIDsCount` as a percentage of total merged profiles (the `totalRows` value as returned in the [last sample status](#view-last-sample-status)), expressed in decimal format.|
-|`code`|The `code` for the namespace. This can be found when working with namespaces using the [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md) and is also referred to as the [!UICONTROL Identity symbol] in the Experience Platform UI. To learn more, visit the [identity namespace overview](../../identity-service/features/namespaces.md).|
-|`value`|The `id` value for the namespace. This can be found when working with namespaces using the [Identity Service API](../../identity-service/api/list-namespaces.md).|
+| Property | Description |
+| -------- | ----------- |
+| `sampleCount` | The total number of sampled merged profiles in the namespace. |
+| `samplePercentage` | The `sampleCount` as a percentage of sampled merged profiles (the `numRowsToRead` value as returned in the [last sample status](#view-last-sample-status)), expressed in decimal format. |
+| `reportTimestamp` | The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided. If no `date` parameter is provided, the most recent report is returned. |
+| `fullIDsFragmentCount` | The total number of profile fragments in the namespace. |
+| `fullIDsCount` | The total number of merged profiles in the namespace. |
+| `fullIDsPercentage` | The `fullIDsCount` as a percentage of total merged profiles (the `totalRows` value as returned in the [last sample status](#view-last-sample-status)), expressed in decimal format. |
+| `code` | The `code` for the namespace. This can be found when working with namespaces using the [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md) and is also referred to as the [!UICONTROL Identity symbol] in the Experience Platform UI. To learn more, visit the [identity namespace overview](../../identity-service/features/namespaces.md). |
+| `value` | The `id` value for the namespace. This can be found when working with namespaces using the [Identity Service API](../../identity-service/api/list-namespaces.md). |
+
++++
+
+## List the dataset statistics {#dataset-stats}
+
+You can generate a report that gives statistics about the dataset by making a GET request to the `/previewsamplestatus/report/dataset_stats` endpoint.
+
+**API format**
+
+```http
+GET /previewsamplestatus/report/dataset_stats
+```
+
+**Request**
+
+The following request generates the dataset statistics report.
+
+```shell
+curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset_stats \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
+**Response**
+
+A successful response returns HTTP status ??? with information about the dataset's statistics.
+
++++ A sample response that contains information about the dataset's statistics.
+
+>[!NOTE]
+>
+>The following response has been truncated to show three datasets. 
+
+```json
+{
+    "data": [
+        {
+            "120days": 4,
+            "14days": 4,
+            "30days": 4,
+            "365days": 4,
+            "60days": 4,
+            "7days": 4,
+            "90days": 4,
+            "datasetId": "{DATASET_ID}",
+            "datasetType": "ExperienceEvents",
+            "percentEvents": 0.0,
+            "percentProfiles": 0.0,
+            "profileFragments": 1,
+            "records": 4,
+            "totalProfiles": 1
+        },
+        {
+            "120days": 155435837,
+            "14days": 32888631,
+            "30days": 66496282,
+            "365days": 155435837,
+            "60days": 116433804,
+            "7days": 18202004,
+            "90days": 155435837,
+            "datasetId": "{DATASET_ID}",
+            "datasetType": "ExperienceEvents",
+            "percentEvents": 16.0,
+            "percentProfiles": 0.0,
+            "profileFragments": 5410745,
+            "records": 155435837,
+            "totalProfiles": 4524723
+        },
+        {
+            "120days": 0,
+            "14days": 0,
+            "30days": 0,
+            "365days": 0,
+            "60days": 0,
+            "7days": 0,
+            "90days": 0,
+            "datasetId": "{DATASET_ID}",
+            "datasetType": "Profiles",
+            "percentEvents": 0.0,
+            "percentProfiles": 0.0,
+            "profileFragments": 3589,
+            "records": 3589,
+            "totalProfiles": 3589
+        }
+    ],
+    "reportTimestamp": "2025-10-29T16:20:18.956"
+}
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `120days` | The number of records that will remain in the dataset after a data expiration of 120 days. |
+| `14days` | The number of records that will remain in the dataset after a data expiration of 14 days.  |
+| `30days` | The number of records that will remain in the dataset after a data expiration of 30 days.  |
+| `365days` | The number of records that will remain in the dataset after a data expiration of 365 days.  |
+| `60days` | The number of records that will remain in the dataset after a data expiration of 60 days.  |
+| `7days` | The number of records that will remain in the dataset after a data expiration of 7 days.  |
+| `90days` | The number of records that will remain in the dataset after a data expiration of 90 days.  | 
+| `datasetId` | The ID of the dataset. |
+| `datasetType` | The dataset type. This value can be either `Profiles` or `ExperienceEvents`. |
+| `percentEvents` | The percentage of ??? |
+| `percentProfiles` | The percentage of ??? |
+| `profileFragments` | The total number of profile fragments that exist in the dataset. |
+| `records` | The total number of profile records ingested into the dataset.  |
+| `totalProfiles` | The total number of profiles ingested into the dataset. |
+
++++
+
+## List the character count {#character-count}
+
+You can use this to ???
+
+**API format**
+
+```http
+GET /previewsamplestatus/report/character_count
+```
+
+**Request**
+
++++a
+
++++
+
+**Response**
+
++++a
+
++++
 
 ## Next steps
 
