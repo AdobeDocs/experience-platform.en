@@ -6,10 +6,6 @@ exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
 ---
 # Look-alike audiences guide
 
->[!AVAILABILITY]
->
->Look-alike insights and Look-alike audiences are only available in the **B2C edition**.
-
 >[!IMPORTANT]
 >
 >Look-alike insights and Look-alike audiences are automatically disabled for environments that show low usage. Low usage is defined as not viewing look-alike insights for the last three months or not creating a new look-alike audience for the last six months.
