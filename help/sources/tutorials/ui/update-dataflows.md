@@ -41,7 +41,7 @@ You are taken to the sources workflow where you can proceed to update aspects of
 
 >[!NOTE]
 >
->The edit mapping feature is currently not supported for the following sources: Adobe Analytics, Adobe Audience Manager, HTTP API, and [!DNL Marketo Engage].
+>The edit mapping feature is currently not supported for the following sources: Adobe Analytics, Adobe Audience Manager, and HTTP API.
 
 During this process, you can also update the mapping sets associated with your dataflow.  The mapping interface displays your dataflow's existing mapping and not a new recommended mapping set. Mapping updates are only applied to dataflow runs scheduled in the future. A dataflow that was scheduled for one-time ingestion cannot have its mapping sets updated.
 
