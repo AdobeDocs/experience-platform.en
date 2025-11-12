@@ -126,8 +126,11 @@ The guardrails outlined in this section refer to the number and nature of audien
 | Flexible audience evaluation runs | 50 per year (production sandbox)<br/>100 per year (development sandbox) | System-enforced guardrail | You have a maximum of 50 flexible audience evaluation runs per year per **production** sandbox. You have a maximum of 100 flexible audience evaluation runs per year per **development** sandbox. |
 | Flexible audience evaluation runs | 2 per day | System-enforced guardrail | You have a maximum of 2 runs per day per sandbox. |
 | Audiences per flexible audience evaluation run | 20 | System-enforced guardrail | You can have a maximum of 20 audiences per flexible audience evaluation run. |
+| Segment definitions per B2B sandbox | 400 | Performance Guardrail | An organization can have more than 400 segment definitions in total, as long as there are less than 400 segment definitions in each individual B2B sandbox. Attempting to create additional segment definitions may affect system performance. For more information, read the [default guardrails for Real-Time Customer Data Platform B2B Edition](../rtcdp/b2b-guardrails.md). |
 
 {style="table-layout:auto"}
+
+To learn more about B2B-specific guardrails, please refer to the [default guardrails for Real-Time Customer Data Platform B2B Edition](../rtcdp/b2b-guardrails.md) documentation.
 
 ## Expected availability
 
