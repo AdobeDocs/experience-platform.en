@@ -130,6 +130,8 @@ The guardrails outlined in this section refer to the number and nature of audien
 
 {style="table-layout:auto"}
 
+To learn more about B2B-specific guardrails, please refer to the [default guardrails for Real-Time Customer Data Platform B2B Edition](../rtcdp/b2b-guardrails.md) documentation.
+
 ## Expected availability
 
 The following section outlines the **expected** availability for audiences and merge policies in downstream services such as Real-Time CDP destinations:
