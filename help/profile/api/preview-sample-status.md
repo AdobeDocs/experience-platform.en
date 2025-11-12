@@ -346,7 +346,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/d
 
 **Response**
 
-A successful response returns HTTP status ??? with information about the dataset's statistics.
+A successful response returns HTTP status 200 with information about the dataset's statistics.
 
 +++ A sample response that contains information about the dataset's statistics.
 
@@ -429,9 +429,9 @@ A successful response returns HTTP status ??? with information about the dataset
 
 +++
 
-## List the character count {#character-count}
+## Get the dataset size {#character-count}
 
-You can use this to ???
+You can use this endpoint to get the size of the dataset in bytes after data expiration is applied on the dataset.
 
 **API format**
 
@@ -443,11 +443,90 @@ GET /previewsamplestatus/report/character_count
 
 +++a
 
+```shell
+curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/character_count \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
 +++
 
 **Response**
 
-+++a
+A successful response returns HTTP status 200 with information about the size of the dataset.
+
++++ A sample response that contains information about the dataset's size after data expirations.
+
+>[!NOTE]
+>
+>The following response has been truncated to show three datasets. 
+
+```json
+{
+    "data": [
+        {
+            "datasetIds": [
+                {
+                    "datasetId": "67aba91a453f7d298cd2a643",
+                    "recordType": "keyvalue",
+                    "weeks": [
+                        {
+                            "size": 107773533894,
+                            "week": "2025-10-26"
+                        }
+                    ]
+                },
+                {
+                    "datasetId": "67aa6c867c3110298b017f0e",
+                    "recordType": "timeseries",
+                    "weeks": [
+                        {
+                            "size": 242902062440,
+                            "week": "2025-10-05"
+                        },
+                        {
+                            "size": 223616687842,
+                            "week": "2025-02-16"
+                        },
+                        {
+                            "size": 225217108018,
+                            "week": "2025-03-09"
+                        },
+                        {
+                            "size": 175444285986,
+                            "week": "2025-07-13"
+                        },
+                        {
+                            "size": 201362180690,
+                            "week": "2025-03-02"
+                        }
+                    ]
+                },
+                {
+                    "datasetId": "680c043667c0d7298c9ea275",
+                    "recordType": "keyvalue",
+                    "weeks": [
+                        {
+                            "size": 18392459832,
+                            "week": "2025-10-26"
+                        }
+                    ]
+                }
+            ],
+            "modelName": "_xdm.context.profile",
+            "reportTimestamp": "2025-10-30T00:28:30.069Z"
+        }
+    ],
+    "reportTimestamp": "2025-10-30T00:28:30.069Z"
+}
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `datasetId` | The ID of the dataset. |
+| `recordType` | The type of data within the dataset. Supported values include `keyvalue` and `timeseries`. |
 
 +++
 
