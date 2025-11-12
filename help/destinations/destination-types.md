@@ -46,6 +46,12 @@ Advanced enterprise destinations include:
 * [HTTP API destination](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
 * [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md)
+* [Snowflake Streaming](catalog/warehouses/snowflake.md)
+* [Snowflake Batch](catalog/warehouses/snowflake-batch.md)
+
+>[!NOTE]
+>
+>The Snowflake destinations are currently available only to US customers. If you need access outside of the US, please reach out to your Adobe account team.
 
 ### Batch (file-based) destinations {#file-based}
 
