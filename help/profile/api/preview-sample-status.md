@@ -40,7 +40,7 @@ The profile count and profiles by namespace metrics are also available within th
 
 ## View last sample status {#view-last-sample-status}
 
-You can perform a GET request to the `/previewsamplestatus` endpoint to view the details for the last successful sample job that was run for your organization. This includes the total number of profiles in the sample, as well as the profile count metric, or total number of profiles your organization has within Experience Platform. 
+You can view the details for the last successful sample job that was run for your organization by making a GET request to the `/previewsamplestatus` endpoint. This report includes the total number of profiles in the sample, as well as the profile count metric, or total number of profiles your organization has within Experience Platform. 
 
 The profile count is generated after merging together profile fragments to form a single profile for each individual customer. In other words, when profile fragments are merged together they return a count of "1" profile because they are all related to the same individual.
 
@@ -69,7 +69,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns HTTP status ??? and includes the details for the last successful sample job that was run for the organization. 
+A successful response returns HTTP status 200 and includes the details for the last successful sample job that was run for the organization. 
 
 +++ A sample response that contains the last sample status.
 
@@ -116,7 +116,7 @@ A successful response returns HTTP status ??? and includes the details for the l
 
 ## List profile distribution by dataset
 
-To see the distribution of profiles by dataset, you can perform a GET request to the `/previewsamplestatus/report/dataset` endpoint.
+You can see the distribution of profiles by dataset by making a GET request to the `/previewsamplestatus/report/dataset` endpoint.
 
 **API format**
 
@@ -151,7 +151,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/d
 >
 >If multiple reports exist for the date, only the latest report is returned. If a dataset report does not exist for the date provided, HTTP Status 404 (Not Found) is returned.
 
-A successful response returns HTTP status ??? and includes a `data` array, containing a list of dataset objects.
+A successful response returns HTTP status 200 and includes a `data` array, containing a list of dataset objects.
 
 +++ A sample response that contains the latest dataset objects.
 
@@ -236,12 +236,12 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 ```
 
 | Query parameter | Description | Example |
-| -------------- | ----------- | ------- |
-| `date` | Specifies the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date is returned. If a report does not exist for the specified date, a 404 (Not Found) error is returned. If no date is specified, the most recent report is be returned. Format: YYYY-MM-DD. | `date=2025-6-20` |
+| --------------- | ----------- | ------- |
+| `date` | Specifies the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date is returned. If a report does not exist for the specified date, a 404 (Not Found) error is returned. If no date is specified, the most recent report is be returned. Format: `YYYY-MM-DD`. | `date=2025-6-20` |
 
 **Request**
 
-The following request does not specify a `date` parameter and will therefore return the most recent report.
+The following request does not specify a `date` parameter and will return the most recent report.
 
 +++ A sample request to return the most recent report for profile distribution by namespace. 
 
@@ -257,7 +257,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/n
 
 **Response**
 
-A successful response returns HTTP status ??? and includes a `data` array, with individual objects containing the details for each namespace. The response shown has been truncated to show four namespaces.
+A successful response returns HTTP status 200 and includes a `data` array, with individual objects containing the details for each namespace. The response shown has been truncated to show four namespaces.
 
 +++ A sample response contains information about the profile distribution by namespace.
 
@@ -334,7 +334,7 @@ GET /previewsamplestatus/report/dataset_stats
 
 **Request**
 
-The following request generates the dataset statistics report.
++++ A sample request to generate the dataset statistics report.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset_stats \
@@ -343,6 +343,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/d
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
+
++++
 
 **Response**
 
@@ -421,17 +423,17 @@ A successful response returns HTTP status 200 with information about the dataset
 | `90days` | The number of records that will remain in the dataset after a data expiration of 90 days.  | 
 | `datasetId` | The ID of the dataset. |
 | `datasetType` | The dataset type. This value can be either `Profiles` or `ExperienceEvents`. |
-| `percentEvents` | The percentage of ??? |
-| `percentProfiles` | The percentage of ??? |
+| `percentEvents` | The percentage of Experience Events records that are within the dataset. |
+| `percentProfiles` | The percentage of Profile records that are within the dataset. |
 | `profileFragments` | The total number of profile fragments that exist in the dataset. |
 | `records` | The total number of profile records ingested into the dataset.  |
-| `totalProfiles` | The total number of profiles ingested into the dataset. |
+| `totalProfiles` | The total number of Profiles ingested into the dataset. |
 
 +++
 
 ## Get the dataset size {#character-count}
 
-You can use this endpoint to get the size of the dataset in bytes after data expiration is applied on the dataset.
+You can use this endpoint to get the size of the dataset in bytes on a week-by-week basis.
 
 **API format**
 
@@ -441,7 +443,7 @@ GET /previewsamplestatus/report/character_count
 
 **Request**
 
-+++a
++++A sample request to generate the character count report.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/character_count \
@@ -455,7 +457,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/c
 
 **Response**
 
-A successful response returns HTTP status 200 with information about the size of the dataset.
+A successful response returns HTTP status 200 with information about the size of the dataset throughout the weeks.
 
 +++ A sample response that contains information about the dataset's size after data expirations.
 
@@ -484,23 +486,23 @@ A successful response returns HTTP status 200 with information about the size of
                     "weeks": [
                         {
                             "size": 242902062440,
+                            "week": "2025-10-26"
+                        },
+                        {
+                            "size": 837539413062,
+                            "week": "2025-10-19"
+                        },
+                        {
+                            "size": 479253986484,
+                            "week": "2025-10-12"
+                        },
+                        {
+                            "size": 358911988990,
                             "week": "2025-10-05"
                         },
                         {
-                            "size": 223616687842,
-                            "week": "2025-02-16"
-                        },
-                        {
-                            "size": 225217108018,
-                            "week": "2025-03-09"
-                        },
-                        {
-                            "size": 175444285986,
-                            "week": "2025-07-13"
-                        },
-                        {
-                            "size": 201362180690,
-                            "week": "2025-03-02"
+                            "size": 349701073042,
+                            "week": "2025-09-28"
                         }
                     ]
                 },
@@ -526,7 +528,10 @@ A successful response returns HTTP status 200 with information about the size of
 | Property | Description |
 | -------- | ----------- |
 | `datasetId` | The ID of the dataset. |
-| `recordType` | The type of data within the dataset. Supported values include `keyvalue` and `timeseries`. |
+| `recordType` | The type of data within the dataset. The record type affects the value of the `weeks` variable. Supported values include `keyvalue` and `timeseries`. |
+| `weeks` | An array that contains the size information about the dataset. For datasets of record type `keyvalue`, this contains the most recent week as well as the total size of the dataset in bytes. For datasets of record type `timeseries`, this contains every week from the dataset's ingestion to the most recent week and the total size of the dataset in bytes for each of those weeks. |
+| `modelName` | The name of the model for the dataset. Possible values include `_xdm.context.profile` and `_xdm.context.experienceevent`. |
+| `reportTimestamp` | The date and time the report was generated. |
 
 +++
 
