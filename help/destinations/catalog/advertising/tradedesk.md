@@ -24,7 +24,6 @@ exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 >* Review your audience data to confirm profiles have valid ECID values.
 >* Monitor your activation metrics to verify expected profile counts. Lower counts reflect accurate reporting, not a change in destination behavior.
 
-
 Use this destination connector to send profile data to [!DNL The Trade Desk]. This connector sends data to the [!DNL The Trade Desk] first-party endpoint. The integration between Adobe Experience Platform and [!DNL The Trade Desk] does not support exporting data to the [!DNL The Trade Desk] third-party endpoint.
 
 [!DNL The Trade Desk] is a self-service platform for ad buyers to execute retargeting and audience-targeted digital campaigns across display, video, and mobile inventory sources.
