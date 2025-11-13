@@ -13,9 +13,9 @@ exl-id: 1f156f7b-a19d-4dcf-a51d-ab6cb396d8f7
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure], allowing you to bring your data from these systems. Ingested data can be formatted as JSON, Parquet, or delimited. Support for cloud storage providers include [!DNL Apache] HDFS.
 
-## IP address allow list
+## IP address allowlist
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform](../../ip-address-allow-list.md) for more information.
 
 ## Naming constraints for files and directories
 

@@ -225,6 +225,7 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
 | --- | --- | --- |
 | `sourceSpec.attributes` | Contains information on the source specific to the UI or API. ||
 | `sourceSpec.attributes.uiAttributes` | Displays information on the source specific to the UI. ||
+| `sourceSpec.attributes.uiAttributes.isPreview` | A boolean attribute that indicates whether the source displays as a preview (not for production/general availability). | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.isBeta` | A boolean attribute that indicates whether the source requires more feedback from customers to add to its functionality. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | Defines the category of the source. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.icon` | Defines the icon used for the rendering of the source in the Experience Platform UI. | `mailchimp-icon.svg` |

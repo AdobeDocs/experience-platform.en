@@ -46,7 +46,7 @@ POST /audiences?createAudienceMetaOnly=true
 >You **must** include the `Accept: application/vnd.adobe.external.audiences+json; version=2` header as part of the API request.
 
 ```shell
-curl -X POST https://platform.adobe.io/core/ais/audiences?createAudienceMetaOnly=true \
+curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMetaOnly=true \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
