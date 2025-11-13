@@ -25,7 +25,7 @@ Keep in mind the following guardrails when using the Adobe Campaign Managed Clou
 
 * You can [activate](#activate) a maximum of 25 audiences to this destination. 
 
-  You can change this limit by updating the value of the **NmsCdp_Aep_Audience_List_Limit** option in the **[!UICONTROL Administration]** > **[!UICONTROL Platform]** > **[!UICONTROL Options]** folder of Campaign explorer. The guardrail configured in this option is applied on the sum of all Adobe Experience Platform segments/audiences across all destinations exporting to a given Campaign instance.
+  You can change this limit by updating the value of the **NmsCdp_Aep_Audience_List_Limit** option in the **[!UICONTROL Administration]** > **[!UICONTROL Platform]** > **[!UICONTROL Options]** folder of Campaign explorer. This guardrail limits the total number of Experience Platform audiences that can be exported to a single Campaign instance across all configured destinations.
 
 * For each audience, you can add up to 20 fields to [map](#map) to Adobe Campaign. 
 
