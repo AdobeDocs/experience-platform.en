@@ -43,7 +43,7 @@ For detailed information on the field mapping that occurs between [!DNL Analytic
 >
 >* Set up the Experience Event Dataset Retention Time-To-Live (TTL) in the beginning to optimize data lifecycle management and storage efficiency. For more details, see the guide on [managing Experience Event Dataset Retention in the data lake using TTL](../../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
 >
->* Start by configuring the connector to ingest data only into data lake. After confirming that the dataflow is working, you can enable profile ingestion for the dataset. This approach works best when row and column filters effectively reduce the data volume. Learn more in the [connecting Adobe Analytics to Experience Platform](../../tutorials/ui/create/adobe-applications/analytics.md) documentation.
+>* When you create an Analytics source dataflow, start by configuring the connector to ingest data only into the data lake. After confirming that the dataflow is working, you can enable profile ingestion for the dataset. This approach works best when row and column filters effectively reduce the data volume. Learn more in the [connecting Adobe Analytics to Experience Platform](../../tutorials/ui/create/adobe-applications/analytics.md) documentation.
 
 ## What is the expected latency for Analytics Data on Experience Platform?
 
