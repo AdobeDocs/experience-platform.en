@@ -96,7 +96,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `auth.params.host` |
+| `auth.params.host` ||
 | `auth.params.clientId` | The client ID associated with your [!DNL Salesforce Marketing Cloud] application. |
 | `auth.params.clientSecret` | The client secret associated with your [!DNL Salesforce Marketing Cloud] application. |
 | `connectionSpec.id` | The [!DNL Salesforce Marketing Cloud] connection specification ID: `ea1c2a08-b722-11eb-8529-0242ac130003`. |

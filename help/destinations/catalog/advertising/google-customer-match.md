@@ -80,7 +80,7 @@ This section describes which types of audiences you can export to this destinati
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, and others) used in the [!DNL Google Customer Match] destination.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
@@ -182,6 +182,12 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 >
 > * The **[!UICONTROL Combine with PII]** marketing action is selected by default for the [!DNL Google Customer Match] destination and cannot be removed.
 
+### Authentication and permissions {#authentication-permissions}
+
+When you connect your Google Ads account, Google prompts you to grant access to Adobe's application. You must approve the Google Ads API permission so Adobe can create and manage your customer lists. Use a Google Ads user with Standard or higher access at the customer account you intend to activate to. If you are using a Manager Account (MCC), sign in with a user on the customer account and provide the customer account ID (not the MCC ID).
+
+If the Google Ads permission is not granted during the OAuth flow, activations can fail later with errors from the Google Ads API. See the [troubleshooting section](#troubleshooting) for more information on how to resolve permission-related errors.
+
 ### Enable alerts {#enable-alerts}
 
 You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
@@ -212,7 +218,7 @@ Selecting source fields:
 * Select the `Email` namespace as source identity if the email addresses you are using are not hashed.
 * Select the `Email_LC_SHA256` namespace as source identity if you hashed customer email addresses on data ingestion into [!DNL Experience Platform], according to [!DNL Google Customer Match] [email hashing requirements](#hashing-requirements).
 * Select the `PHONE_E.164` namespace as source identity if your data consists of non-hashed phone numbers. [!DNL Experience Platform] will hash the phone numbers to comply with [!DNL Google Customer Match] requirements.
-* Select the `Phone_SHA256_E.164` namespace as source identity if you hashed phone numbers on data ingestion into [!DNL Experience Platform], according to [!DNL Facebook] [phone number hashing requirements](#phone-number-hashing-requirements).
+* Select the `Phone_SHA256_E.164` namespace as source identity if you hashed phone numbers on data ingestion into [!DNL Experience Platform], according to [!DNL Google Customer Match] [phone number hashing requirements](#phone-number-hashing-requirements).
 * Select the `IDFA` namespace as source identity if your data consists of [!DNL Apple] device IDs. 
 * Select the `GAID` namespace as source identity if your data consists of [!DNL Android] device IDs.
 * Select the `Custom` namespace as source identity if your data consists of other type of identifiers.
@@ -255,3 +261,26 @@ When configuring this destination, you may receive the following error:
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
 This error occurs when customer accounts do not comply with the [prerequisites](#google-account-prerequisites). To fix this issue, contact Google and make sure that your account is allow-listed and is configured for a [!DNL Standard] or higher permission level. See the [Google Ads documentation](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) for details.
+
+### 500 Internal Server Error - Insufficient authentication scopes {#insufficient-scopes}
+
+When activating audiences to this destination, you may receive the following error:
+
+`{"message":"com.google.api.gax.rpc.PermissionDeniedException: io.grpc.StatusRuntimeException: PERMISSION_DENIED: Request had insufficient authentication scopes.","code":"500 INTERNAL_SERVER_ERROR"}`
+
+This error occurs when the Google OAuth token used for this destination connection was created without the required Google Ads API scope, or when the signed-in user lacks sufficient permissions on the target customer account.
+
+To fix this issue, follow these steps:
+
+1. **Regenerate the Google authentication** for this destination account and ensure you accept the requested Google Ads permissions:
+   * In Experience Platform, go to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
+   * Locate your Google Customer Match account
+   * Select **[!UICONTROL More actions]** (⋯) > **[!UICONTROL Edit]** > **[!UICONTROL Renew]**
+   * Complete the Google sign-in and consent flow, approving all requested permissions
+2. If you manage ads via a Manager Account (MCC), confirm you are authenticating with a user that has [!DNL Standard] or higher access to the target customer account and that the **[!UICONTROL Account ID]** configured in the destination is the customer account ID (not the MCC ID).
+3. Re-run the activation.
+
+If the issue persists:
+
+* Verify that your Google Ads account is allowlisted for Customer Match and meets the [policy requirements](#google-account-prerequisites).
+* Ensure the user's access level is [!DNL Standard] or higher in the Google Ads customer account. See the [Google Ads documentation](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) for details.

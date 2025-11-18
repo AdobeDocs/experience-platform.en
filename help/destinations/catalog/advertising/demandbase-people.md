@@ -34,7 +34,7 @@ The [!DNL Demandbase People] connection supports the activation of identities de
 This section describes which type of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | Custom uploads | X | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
@@ -93,6 +93,21 @@ Now you're ready to activate your audiences within Demandbase People.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
+
+### Mandatory mappings {#mandatory-mappings}
+
+When activating audiences to the [!DNL Demandbase People] destination, you must configure the following mandatory field mappings in the mapping step:
+
+| Source field | Target field | Description |
+|--------------|--------------|-------------|
+| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | The unique identifier for the person |
+| `xdm: person.name.lastName` | `xdm: lastName` | The last name of the person |
+| `xdm: person.name.firstName` | `xdm: firstName` | The first name of the person |
+| `xdm: workEmail.address` | `Identity: email` | The work email address of the person |
+
+![Demandbase People mappings](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
+
+These mappings are required for the destination to function properly and must be configured before you can proceed with the activation workflow.
 
 ## Additional notes and important callouts {#additional-notes}
 

@@ -22,6 +22,7 @@ The AEM Asset reports in Analytics contain three AEM dimensions:
 * Asset Clicked 
 
 There are also two metrics:
+
 * Asset Impressions
 * Asset Clicks. 
 

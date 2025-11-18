@@ -18,23 +18,26 @@ Content is an essential component of these experiences. To better answer marketi
 | Content Type | Features | Overview of functionality |
 | --- | --- | --- |
 | Text | - Keyword tagging <br> | - Automatically extract keywords and tags from enterprise documents and webpages using an out-of-the-box AI service. <br> | 
-Images | - Color tagging <br> - Optical Character Recognition (OCR)|  - Accurately extract dominant colors (labels and hex values) and their weightage from a product image. <br> - Accurately extract any text present from a product image.  |
+| Images | - Color tagging <br> - Optical Character Recognition (OCR)|  - Accurately extract dominant colors (labels and hex values) and their weightage from a product image. <br> - Accurately extract any text present from a product image.  |
 
 ## Understanding Content Tagging 
 
 The overall vision of Content Tagging is broken down into three steps to realize optimal customer engagement and maximize customer-driven KPIs. 
 
 **Step 1: Understanding the content**
+
 - Extract intelligent features and metadata.
 - Organize content (tag, categorize, group, de-duplicate).
 - Associate content data with assets.
 
 **Step 2: Understanding the customer**
+
 - Associate customer's actions with content features.
 - Get customer's preferences and affinities from content and actions.
 - Add preferences to customer's profile.
 
 **Step 3: Enabling experience optimization**
+
 - Use customer's profile to deliver improved, personalized experiences, in session and for subsequent experiences.
 - Use content features to gain insights into customers' behaviors that drive KPI's.
 - Use content insights for improved content creation, authoring, and selection.

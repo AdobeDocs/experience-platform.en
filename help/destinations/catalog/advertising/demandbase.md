@@ -10,7 +10,7 @@ exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
 
 >[!AVAILABILITY]
 >
->>The functionality to activate account audiences to the Demandbase destination is available for companies purchasing the [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) and [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) editions of Real-Time Customer Data Platform.
+>The functionality to activate account audiences to the Demandbase destination is available for companies purchasing the [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) and [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) editions of Real-Time Customer Data Platform.
 
 Activate profiles for your Demandbase campaigns for audience targeting, personalization, and suppression, based on [account audiences](/help/segmentation/types/account-audiences.md) .
 
@@ -27,7 +27,7 @@ With this integration, you can also personalize the website experience using rea
 This section describes which type of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | Custom uploads | X | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
@@ -73,9 +73,9 @@ To configure details for the destination, fill in the required and optional fiel
 
 ![Add information about the destination connection](/help/destinations/assets/catalog/advertising/demandbase/name-and-description.png)
 
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Entity type]**: Select **[!UICONTROL Account]** as the entity type.
+* **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+* **[!UICONTROL Entity type]**: Select **[!UICONTROL Account]** as the entity type.
 
 Now you're ready to activate your audiences within Demandbase.
 
@@ -87,6 +87,20 @@ Now you're ready to activate your audiences within Demandbase.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 Read [Activate account audiences](/help/destinations/ui/activate-account-audiences.md) for instructions on activating account audiences to this destination.
+
+### Mandatory mappings {#mandatory-mappings}
+
+When activating audiences to the [!DNL Demandbase] destination, you must configure the following mandatory field mappings in the mapping step:
+
+| Source field | Target field | Description |
+|--------------|--------------|-------------|
+| `xdm: accountName` | `xdm: accountName` | The name of the account |
+| `xdm: accountOrganization.domain` | `xdm: accountEmailDomain` | The email domain of the account organization |
+| `xdm: accountKey.sourceKey` | `Identity: primaryId` | The primary identifier for the account |
+
+![Demandbase mappings](/help/destinations/assets/catalog/advertising/demandbase/demandbase-mapping.png)
+
+These mappings are required for the destination to function properly and must be configured before you can proceed with the activation workflow.
 
 ## Additional notes and important callouts {#additional-notes}
 

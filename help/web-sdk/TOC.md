@@ -37,6 +37,7 @@ role: Developer
     * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
     * [orgId](commands/configure/orgid.md)
     * [prehidingStyle](commands/configure/prehidingstyle.md)
+    * [pushNotifications](commands/configure/pushnotifications.md)
     * [targetMigrationEnabled](commands/configure/targetmigrationenabled.md)
     * [thirdPartyCookiesEnabled](commands/configure/thirdpartycookiesenabled.md)
   * sendEvent {#sendevent}
@@ -57,6 +58,7 @@ role: Developer
   * [setConsent](commands/setconsent.md)
   * [setDebug](commands/setdebug.md)
   * [sendMediaEvent](commands/sendmediaevent.md)
+  * [sendPushSubscription](commands/sendpushsubscription.md)
   * [subscribeRulesetItems](commands/subscriberulesetitems.md)
   * [Configure datastream overrides](commands/datastream-overrides.md)
   * [Command responses](commands/command-responses.md)

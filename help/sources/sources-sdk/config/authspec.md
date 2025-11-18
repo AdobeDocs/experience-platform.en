@@ -110,20 +110,20 @@ An OAuth 2 refresh code allows for secure access to an application by generating
 | --- | --- | --- |
 | `authSpec.name` | Displays the name of the supported authentication type. | `oAuth2-refresh-code` |
 | `authSpec.type` | Defines the type of authentication supported by the source. | `oAuth2-refresh-code` |
-| `authSpec.spec` | Contains information on the authentication's schema, data type, and properties. |
+| `authSpec.spec` | Contains information on the authentication's schema, data type, and properties. ||
 | `authSpec.spec.$schema` | Defines the schema used for the authentication. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Defines the data type of the schema. | `object` |
-| `authSpec.spec.properties` | Contains information on the credentials used for the authentication. |
-| `authSpec.spec.properties.description` | Displays a brief description on the credential. |
+| `authSpec.spec.properties` | Contains information on the credentials used for the authentication. ||
+| `authSpec.spec.properties.description` | Displays a brief description on the credential. ||
 | `authSpec.spec.properties.type` | Defines the data type of the credential. | `string` |
-| `authSpec.spec.properties.clientId` | The client ID associated with your application. The client ID is used in conjunction with your client secret to retrieve your access token. |
-| `authSpec.spec.properties.clientSecret` | The client secret associated with your application. The client secret is used in conjunction with your client ID to retrieve your access token. |
-| `authSpec.spec.properties.accessToken` | The access token authorizes your secure access to your application. |
-| `authSpec.spec.properties.refreshToken` | The refresh token is used to generate a new access token, when the access token expires. |
-| `authSpec.spec.properties.expirationDate` | Defines the expiration date of the access token. |
-| `authSpec.spec.properties.refreshTokenUrl` | The URL used to retrieve your refresh token. |
-| `authSpec.spec.properties.accessTokenUrl` | The URL used to retrieve your refresh token. |
-| `authSpec.spec.properties.requestParameterOverride` | Allows you to specify credential parameters to override when authenticating. |
+| `authSpec.spec.properties.clientId` | The client ID associated with your application. The client ID is used in conjunction with your client secret to retrieve your access token. ||
+| `authSpec.spec.properties.clientSecret` | The client secret associated with your application. The client secret is used in conjunction with your client ID to retrieve your access token. ||
+| `authSpec.spec.properties.accessToken` | The access token authorizes your secure access to your application. ||
+| `authSpec.spec.properties.refreshToken` | The refresh token is used to generate a new access token, when the access token expires. ||
+| `authSpec.spec.properties.expirationDate` | Defines the expiration date of the access token. ||
+| `authSpec.spec.properties.refreshTokenUrl` | The URL used to retrieve your refresh token. ||
+| `authSpec.spec.properties.accessTokenUrl` | The URL used to retrieve your refresh token. ||
+| `authSpec.spec.properties.requestParameterOverride` | Allows you to specify credential parameters to override when authenticating. ||
 | `authSpec.spec.required` | Displays the credentials required in order to authenticate. | `accessToken` |
 
 {style="table-layout:auto"}
@@ -167,13 +167,13 @@ Basic authentication is an authentication type that allows you to access your ap
 | --- | --- | --- |
 | `authSpec.name` | Displays the name of the supported authentication type. | `Basic Authentication` |
 | `authSpec.type` | Defines the type of authentication supported by the source. | `BasicAuthentication` |
-| `authSpec.spec` | Contains information on the authentication's schema, data type, and properties. |
+| `authSpec.spec` | Contains information on the authentication's schema, data type, and properties. ||
 | `authSpec.spec.$schema` | Defines the schema used for the authentication. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Defines the data type of the schema. | `object` |
-| `authSpec.spec.description` | Displays further information specific to your authentication type. |
-| `authSpec.spec.properties` | Contains information on the credentials used for the authentication. |
-| `authSpec.spec.properties.username` | The account username associated with your application. |
-| `authSpec.spec.properties.password` | The account password associated with your application. |
+| `authSpec.spec.description` | Displays further information specific to your authentication type. ||
+| `authSpec.spec.properties` | Contains information on the credentials used for the authentication. ||
+| `authSpec.spec.properties.username` | The account username associated with your application. ||
+| `authSpec.spec.properties.password` | The account password associated with your application. ||
 | `authSpec.spec.required` | Specifies the fields required as mandatory values to be inputted in Experience Platform. | `username` |
 
 {style="table-layout:auto"}

@@ -34,7 +34,7 @@ The table below shows the relationship between Web SDK modules and the commands 
 | Activity Collector | [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) | N/A | Medium |
 | Audiences | N/A | N/A | Small |
 | Context | [`context`](../commands/configure/context.md) | N/A | Small |
-| Rules Engine | `personalizationStorageEnabled` | |<ul><li>`evaluateRulesets`</li><li>[`subscribeRulesetItems`](../commands/subscriberulesetitems.md)</li></ul> | Medium |
+| Rules Engine | `personalizationStorageEnabled` | <ul><li>`evaluateRulesets`</li><li>[`subscribeRulesetItems`](../commands/subscriberulesetitems.md)</li></ul> | Medium |
 | Event Merge | N/A | `createEventMergeId` | Small |
 | Media Analytics Bridge | N/A | [`getMediaAnalyticsTracker`](../commands/getmediaanalyticstracker.md) | Large |
 | Personalization | <ul><li>[`prehidingStyle`](../commands/configure/prehidingstyle.md)</li><li>[`targetMigrationEnabled`](../commands/configure/targetmigrationenabled.md)</li><li>[`autoCollectPropositionInteractions`](../commands/configure/autocollectpropositioninteractions.md)</li></ul>  | N/A | Large |

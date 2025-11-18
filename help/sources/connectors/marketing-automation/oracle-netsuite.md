@@ -25,9 +25,9 @@ View the following table for more information on the two [!DNL Oracle NetSuite] 
 | [[!DNL Oracle NetSuite Entities]](#oracle-netsuite-entities) | Customer | Retrieve specific customer data, including details such as customer names, addresses, and key identifiers. |
 | [[!DNL Oracle NetSuite Entities]](#oracle-netsuite-entities) | Contact | Retrieve contact names, emails, phone numbers, and any custom contact-related fields associated with customers. |
 
-## IP address allow list {#ip-allow-list}
+## IP address allowlist {#ip-allow-list}
 
-A list of IP addresses may require to be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform](../../ip-address-allow-list.md) for more information.
 
 ## Prerequisites {#prerequisites}
 
@@ -37,7 +37,7 @@ Before you can bring your [!DNL Oracle NetSuite] data to Experience Platform, yo
   * Contact [[!DNL Oracle NetSuite]](https://www.NetSuite.com/portal/company/contactus.shtml) if you do not already have a valid account.
 * An **active subscription** to any [!DNL Oracle NetSuite] product.
 * An **account ID**.
-  * The [!DNL Oracle NetSuite] source uses OAuth 2.0 to communicate with the [!DNL Oracle NetSuite] APIs. If you do not have your account ID, visit the [!DNL Oracle] documentation on [ how to retrieve your account ID](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1498754928.html#Finding-Your-NetSuite-Account-ID).
+  * The [!DNL Oracle NetSuite] source uses OAuth 2.0 to communicate with the [!DNL Oracle NetSuite] APIs. If you do not have your account ID, visit the [!DNL Oracle] documentation on [how to retrieve your account ID](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1498754928.html#Finding-Your-NetSuite-Account-ID).
 * A **client ID** and **client secret** combination.
   * The client ID and client secret are required to access [!DNL Oracle NetSuite] APIs. During this step, you must also ensure that your administrator has:
     * Enabled the OAuth 2.0 feature and setup the appropriate OAuth 2.0 roles.

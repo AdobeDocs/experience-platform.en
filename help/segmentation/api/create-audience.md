@@ -7,7 +7,7 @@ exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
 ---
 # Create audience endpoint
 
-The POST `/audiences` endpoint can be used create the metadata for an external audience. You should use this endpoint if the audience ingestion will be managed in a separate service, such as batch ingestion.
+The POST `/audiences` endpoint can be used create the metadata for an external audience, which lets the audience be visible in Audience Portal. You should use this endpoint if the audience ingestion will be managed in a separate service, such as batch ingestion.
 
 ## Getting started
 
@@ -46,7 +46,7 @@ POST /audiences?createAudienceMetaOnly=true
 >You **must** include the `Accept: application/vnd.adobe.external.audiences+json; version=2` header as part of the API request.
 
 ```shell
-curl -X POST https://platform.adobe.io/core/ais/audiences?createAudienceMetaOnly=true \
+curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMetaOnly=true \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
