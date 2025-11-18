@@ -12,9 +12,9 @@ exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
 >* By default, the [!DNL Snowflake] source interprets `null` as an empty string. Contact your Adobe representative to ensure that your `null` values are correctly written as `null` in Adobe Experience Platform.
 >* For Experience Platform to ingest data, timezones for all table-based batch sources must be configured to UTC. The only time stamp that is supported for the [!DNL Snowflake] source is TIMESTAMP_NTZ with UTC time.
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+[!DNL Snowflake] is a cloud-based data warehouse platform designed to enable organizations to store, process, and analyze large volumes of data efficiently. Built to leverage the scalability and flexibility of the cloud, [!DNL Snowflake] supports data integration, advanced analytics, and seamless sharing across teams. As a fully managed service, [!DNL Snowflake] eliminates maintenance complexities common to traditional databases, empowering you to focus on deriving insights and value from your data.
 
-Experience Platform provides support for ingesting data from a third-party database. Experience Platform can connect to different types of databases such as relational, NoSQL, or data warehouses. Support for database providers include [!DNL Snowflake].
+You can use the [!DNL Snowflake] source to connect and bring your data from [!DNL Snowflake] to Adobe Experience Platform. Read the documentation below to learn how to set up your [!DNL Snowflake] source and connect to Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
@@ -97,57 +97,61 @@ For more information about these values, refer the [[!DNL Snowflake] key-pair au
 
 ### Retrieve your account identifier {#retrieve-your-account-identifier}
 
-You must retrieve your account identifier from the [!DNL Snowflake] UI dashboard because you will be using the account identifier to authenticate your [!DNL Snowflake] instance on Experience Platform.
+You must retrieve your account identifier from the [!DNL Snowflake] UI dashboard as you will be using this to authenticate your [!DNL Snowflake] instance on Experience Platform.
 
 To retrieve your account identifier:
 
-* Navigate to your account on the [[!DNL Snowflake] application UI dashboard](https://app.snowflake.com/).
-* In the left navigation, select **[!DNL Accounts]**, followed by **[!DNL Active Accounts]** from the header.
+* Use the [[!DNL Snowflake] application UI dashboard](https://app.snowflake.com/) to access your account.
+* In the left navigation, select **[!DNL Accounts]** and then select **[!DNL Active Accounts]** from the header.
 * Next, select the information icon and then select and copy the domain name of the current URL.
 
 ![The Snowflake UI dashboard with the domain name selected.](../../images/tutorials/create/snowflake/snowflake-dashboard.png)
 
-### Retrieve your private key {#retrieve-your-private-key}
+### Generate your RSA key pair
 
-If you are using key-pair authentication for your [!DNL Snowflake] connection, then you must also generate your private key before connecting to Experience Platform.
+Use OpenSSL in the command line interface to generate a 2048-bit RSA key pair in PKCS#8 format. It's best practice to create an encrypted private key for security, which will require a passphrase.
 
 >[!BEGINTABS]
 
->[!TAB Create an encrypted private key]
+>[!TAB Generate an encrypted private key]
 
-To generate your encrypted [!DNL Snowflake] private key, run the following command on your terminal:
-
-```shell
-openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8
+```bash
+openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8# You will be prompted to enter a passphrase. Store this securely!
 ```
 
-If successful, you should receive your private key in PEM format.
-
-```shell
-|-----BEGIN ENCRYPTED PRIVATE KEY-----
-MIIE6T...
-|-----END ENCRYPTED PRIVATE KEY-----
-```
-
->[!TAB Create an unencrypted private key]
+>[!TAB Generate an unencrypted private key]
 
 To generate your unencrypted [!DNL Snowflake] private key, run the following command on your terminal:
 
-```shell
+```bash
 openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out rsa_key.p8 -nocrypt
-```
-
-If successful, you should receive your private key in PEM format.
-
-```shell
-|-----BEGIN PRIVATE KEY-----
-MIIE6T...
-|-----END PRIVATE KEY-----
 ```
 
 >[!ENDTABS]
 
-Next, take your private key and encode it in [!DNL Base64]. Ensure that you do not do any transformations or format conversions on your [!DNL Snowflake] private key. Additionally, you must ensure that there are no trailing newline characters at the end of your private key, before encoding it in [!DNL Base64].
+### Generate a public key from your private key
+
+Next, run the following command in your command line interface to create a public key based on your private key.
+
+```bash
+openssl rsa -in rsa_key.p8 -pubout -out rsa_key.pub# You will be prompted to enter the passphrase if the private key is encrypted.
+```
+
+### Assign the public key to the [!DNL Snowflake] user
+
+You need to use a [!DNL Snowflake] administrator role (like **SECURITYADMIN**) to associate the generated public key with the [!DNL Snowflake] service user that Experience Platform will use. To retrieve the public key content, open the `rsa_key.pub` file and copy the entire content, excluding the  `-----BEGIN PUBLIC KEY----- and -----END PUBLIC KEY-----` lines. Next, execute the following SQL in [!DNL Snowflake]:
+
+```sql
+ALTER USER {YOUR_SNOWFLAKE_USERNAME}>SET RSA_PUBLIC_KEY='{PUBLIC_KEY_CONTENT}';
+```
+
+### Encode the private key in [!DNL Base64]
+
+Experience Platform requires the private key to be [!DNL Base64]-encoded and provided as a string during the connection setup. Use a suitable tool or script to encode the contents of the `rsa_key.p8` file into a single [!DNL Base64] string.
+
+>[!TIP]
+>
+>Ensure there are no extra spaces or line breaks, including the header/footer lines `(-----BEGIN ENCRYPTED PRIVATE KEY----- and -----END ENCRYPTED PRIVATE KEY-----)`, before or after the encoding process, as this can cause authentication errors.
 
 ### Verify configurations
 
@@ -179,3 +183,39 @@ The documentation below provides information on how to connect [!DNL Snowflake] 
 
 * [Create a Snowflake source connection in the UI](../../tutorials/ui/create/databases/snowflake.md)
 * [Create a dataflow for a database source connection in the UI](../../tutorials/ui/dataflow/databases.md)
+
+<!--
+
+### Generate your RSA key pair
+
+Use OpenSSL in the command line interface to generate a 2048-bit RSA key pair in PKCS#8 format. It's best practice to create an encrypted private key for security, which will require a passphrase.
+
+**Generate your encrypted private key**
+
+```bash
+openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8# You will be prompted to enter a passphrase. Store this securely!
+```
+
+**Generate a public key from the private key**
+
+```bash
+openssl rsa -in rsa_key.p8 -pubout -out rsa_key.pub# You will be prompted to enter the passphrase if the private key is encrypted.
+```
+
+### Assign the public key to the [!DNL Snowflake] user
+
+You need to use a [!DNL Snowflake] administrator role (like **SECURITYADMIN**) to associate the generated public key with the [!DNL Snowflake] service user that Experience Platform will use. To retrieve the public key content, open the `rsa_key.pub` file and copy the entire content, excluding the  `-----BEGIN PUBLIC KEY----- and -----END PUBLIC KEY-----` lines. Next, execute the following SQL in [!DNL Snowflake]:
+
+```sql
+ALTER USER {YOUR_SNOWFLAKE_USERNAME}>SET RSA_PUBLIC_KEY='{PUBLIC_KEY_CONTENT}';
+```
+
+### Encode the private key in [!DNL Base64]
+
+Experience Platform requires the private key to be [!DNL Base64]-encoded and provided as a string during the connection setup. Use a suitable tool or script to encode the contents of the `rsa_key.p8` file into a single [!DNL Base64] string.
+
+>[!TIP]
+>
+>Ensure there are no extra spaces or line breaks, including the header/footer lines `(-----BEGIN ENCRYPTED PRIVATE KEY----- and -----END ENCRYPTED PRIVATE KEY-----)`, before or after the encoding process, as this can cause authentication errors.
+
+-->
