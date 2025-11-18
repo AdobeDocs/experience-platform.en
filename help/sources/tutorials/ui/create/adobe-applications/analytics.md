@@ -263,6 +263,14 @@ The [!UICONTROL Review] step appears, allowing you to review your new Analytics 
 
 ![The review interface of the ingestion workflow.](../../../../images/tutorials/create/analytics/review.png)
 
+>[!TIP]
+>
+>Follow these best practices to avoid exceeding your license entitlements and overwhelming your total storage and data richness metrics:
+>
+>* Set up the Experience Event Dataset Retention Time-To-Live (TTL) in the beginning to optimize data lifecycle management and storage efficiency. For more details, see the guide on [managing Experience Event Dataset Retention in the data lake using TTL](../../../../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+>
+>* When you create an Analytics source dataflow, start by configuring the connector to ingest data only into the data lake. After confirming that the dataflow is working, you can enable profile ingestion for the dataset. This approach works best when row and column filters effectively reduce the data volume.
+
 ## Monitor your dataflow {#monitor-your-dataflow}
 
 Once your dataflow is complete, you can use the *[!UICONTROL Dataflows]* interface to monitor the status of your Analytics dataflow.

@@ -37,6 +37,14 @@ When a source connection is established for bringing [!DNL Analytics] data into 
 
 For detailed information on the field mapping that occurs between [!DNL Analytics] and Experience Platform, see the [Adobe Analytics field mapping](./mapping/analytics.md) guide.
 
+>[!TIP]
+>
+>Follow these best practices to avoid exceeding your license entitlements and overwhelming your total storage and data richness metrics:
+>
+>* Set up the Experience Event Dataset Retention Time-To-Live (TTL) in the beginning to optimize data lifecycle management and storage efficiency. For more details, see the guide on [managing Experience Event Dataset Retention in the data lake using TTL](../../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+>
+>* When you create an Analytics source dataflow, start by configuring the connector to ingest data only into the data lake. After confirming that the dataflow is working, you can enable profile ingestion for the dataset. This approach works best when row and column filters effectively reduce the data volume. Learn more in the [connecting Adobe Analytics to Experience Platform](../../tutorials/ui/create/adobe-applications/analytics.md) documentation.
+
 ## What is the expected latency for Analytics Data on Experience Platform?
 
 The expected latency for Analytics Data on Experience Platform is outlined in the table below. Latency will vary depending on customer configuration, data volumes, and consumer applications. For example, if the Analytics implementation is configured with `A4T` the latency to Pipeline will increase to 5-10 minutes.
