@@ -1362,6 +1362,45 @@ The response is a filtered list of schemas, containing only those that satisfy b
 }
 ```
 
+## Validate your schema in the UI {#validate-in-ui}
+
+Use the Experience Platform UI to confirm that the schema you created through the [!DNL Schema Registry] API appears with the correct structure, properties, and identity configuration.
+
+### Locate your schema
+
+To begin, navigate to **[!UICONTROL Schemas]** > **[!UICONTROL Browse]** in the Experience Platform UI. Use the text input field to search for the schema by name (for example, `Loyalty Members`) and select it.
+
+![Schemas browse view showing a list of available schemas](../../images/tutorials/create-schema-api/schemas-browse.png)
+
+### Confirm the schema structure
+
+The schema canvas displays the full structure of your schema. Verify that:
+
+* All standard field groups you added appear as expected.  
+* Your custom field group is present and correctly expanded in the structure.
+
+![Schema canvas showing field groups and structure](../../images/tutorials/create-schema-api/schema-canvas.png)
+
+### Review schema properties
+
+Next, open the **[!UICONTROL Schema properties]** panel to confirm key metadata:
+
+* Schema `$id`  
+* Display name  
+* Assigned class (**[!UICONTROL XDM Individual Profile]**)  
+* Profile enablement status  
+
+The `$id` should match the value returned in your API response.
+
+### Validate identity fields
+
+Select the **[!UICONTROL Structure]** view and navigate to the fields where you added identity descriptors. Identity fields display an identity badge. Select each identity field to confirm:
+
+* The correct identity namespace  
+* Whether the field is marked as the primary identity  
+
+If the structure, properties, and identity configuration appear correctly, the schema has been successfully created and configured through the [!DNL Schema Registry] API.
+
 ## Next steps
 
 By following this tutorial, you have successfully composed a schema using both standard field groups and a field group that you defined. You can now use this schema to create a dataset and ingest record data into Adobe Experience Platform.
