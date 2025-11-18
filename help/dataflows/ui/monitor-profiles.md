@@ -87,6 +87,12 @@ A dashboard displaying all the dataflow runs appears. This dashboard contains me
 
 The following metrics are available for this dashboard view:
 
+>[!NOTE]
+>
+>When the dataflow run is in the **[!UICONTROL Processing]** state, you can see information about the readiness by seeing the checkpoint statuses in the ingestion process.
+>
+>![The profile ingestion readiness bubble is displayed.](../assets/ui/monitor-profiles/profile-ingestion-readiness.png){zoomable="yes" width="300"}
+
 | Metric | Description | 
 | ------ | ----------- |
 | **[!UICONTROL Dataflow run start]** | The time the dataflow run started in UTC. |
