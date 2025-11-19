@@ -7,7 +7,7 @@ exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
 # Data Prep UI Guide {#data-prep-ui-guide}
 
 >[!CONTEXTUALHELP]
->id="platform_data_prep_import_mapping
+>id="platform_data_prep_import_mapping"
 >title="Download Template"
 >abstract="Download the csv template to perform the mapping offline."
 

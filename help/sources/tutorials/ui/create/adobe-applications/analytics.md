@@ -108,7 +108,7 @@ Experience Platform automatically detects your mapping for any name conflicts. I
 ## Custom mappings {#custom-mappings}
 
 >[!CONTEXTUALHELP]
->id="platform_analytics_import_mapping
+>id="platform_analytics_import_mapping"
 >title="Download Template"
 >abstract="Download the csv template to perform the mapping offline."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="Import mapping"
