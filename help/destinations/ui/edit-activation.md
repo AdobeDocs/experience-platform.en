@@ -65,6 +65,7 @@ Select **[!UICONTROL Activate audiences]** in the right rail. This action takes 
 Select the **[!UICONTROL Scheduling]** step in the activation workflow to edit the activation schedule and export frequency for your dataflow. This step allows you to configure how often data is exported to the destination.
 
 In the **[!UICONTROL Scheduling]** step of the activation workflow, you can:
+
 * Adjust the export frequency.
 * Set or modify the start and end dates for the activation dataflow, and more.
 

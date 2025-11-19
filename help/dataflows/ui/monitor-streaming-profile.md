@@ -5,7 +5,7 @@ exl-id: da7bb08d-2684-45a1-b666-7580f2383748
 ---
 # Monitor streaming profile ingestion
 
-You can use the monitoring dashboard in the Adobe Experience Platform UI to conduct real-time monitoring of streaming profile ingestion within your organization. Use this feature to access greater transparency into throughput, latency, and data quality metrics related to your streaming data. Additionally, use this feature for proactive alerting and the retrieval of actionable insights to help identify potential capacity violations and data ingestion issues.
+You can use the monitoring dashboard in the Adobe Experience Platform UI to conduct real-time monitoring of streaming profile ingestion within your organization. Use this feature to access greater transparency into throughput and data quality metrics related to your streaming data. Additionally, use this feature for proactive alerting and the retrieval of actionable insights to help identify potential capacity violations and data ingestion issues.
 
 Read the following guide to learn how to use the monitoring dashboard to track rates and metrics for streaming profile ingestion jobs in your organization.
 
@@ -15,7 +15,7 @@ This guide requires a working understanding of the following components of Exper
 
 * [Dataflows](../home.md): Dataflows represent data jobs that transfer information across Experience Platform. They are configured across various services to facilitate the movement of data from source connectors to target datasets, as well as to Identity Service, Real-Time Customer Profile, and Destinations.
 * [Real-Time Customer Profile](../../profile/home.md): Real-Time Customer Profile combines data from multiple sources—online, offline, CRM, and third-party—into a single, actionable view of each customer, enabling consistent and personalized experiences across all touch points.
-* [Streaming ingestion](../../ingestion/streaming-ingestion/overview.md): Streaming ingestion for Experience Platform provides users a method to send data from client and server-side devices to Experience Platform in real-time.Experience Platform enables you to drive coordinated, consistent, and relevant experiences by generating a Real-Time Customer Profile for each of your individual customers. ​Streaming ingestion plays a key role in building these profiles with as little latency as possible.
+* [Streaming ingestion](../../ingestion/streaming-ingestion/overview.md): Streaming ingestion for Experience Platform provides users a method to send data from client and server-side devices to Experience Platform in real-time.Experience Platform enables you to drive coordinated, consistent, and relevant experiences by generating a Real-Time Customer Profile for each of your individual customers. .
 * [Capacities](../../landing/license-usage-and-guardrails/capacity.md): In Experience Platform, capacities let you know if your organization has exceeded any of your guardrails and gives you information on how to fix these issues.
 
 >[!NOTE]
@@ -27,7 +27,7 @@ This guide requires a working understanding of the following components of Exper
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile"
 >title="Monitor streaming profile ingestion"
->abstract="The monitoring dashboard for streaming profiles displays information on throughput, ingestion rates, and latency. Use this dashboard to view, understand, and analyze the data processing metrics. of your streaming profiles into Experience Platform."
+>abstract="The monitoring dashboard for streaming profiles displays information on throughput and ingestion rates. Use this dashboard to view, understand, and analyze the data processing metrics. of your streaming profiles into Experience Platform."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -84,8 +84,7 @@ Use the metrics table for information specific to your dataflows. Refer to the f
 | --- | --- | --- | --- |
 | Request throughput | This metric represents the number of events entering the ingestion system per second. |Sandbox/Dataflow | Real-time monitoring with a data refresh every 60 seconds. |
 | Processing throughput | This metric represents the number of events that are successfully ingested by the system each second. |Sandbox/Dataflow | Real-time monitoring with a data refresh every 60 seconds. |
-| P95 ingestion latency | This metric measures the 95th percentile latency from the moment an event arrives in Experience Platform to when it is successfully ingested into the Profile store. | Sandbox/Dataflow | Real-time monitoring with a data refresh every 60 seconds. |
-| Max throughput | This metric represents the maximum number of inbound requests per second entering streaming profile ingestion | <ul><li>Sandbox/Dataflow</li><li>Dataflow run</li></ul> |
+| Max throughput | This metric represents the maximum number of inbound requests per second entering streaming profile ingestion | <ul><li>Sandbox/Dataflow</li><li>Dataflow run</li></ul> ||
 | Records ingested | This metric represents the total number of records ingested to the Profile store within a configured time window. | <ul><li>Sandbox/Dataflow</li><li>Dataflow run</li></ul> | <ul><li>Sandbox/Dataflow: Real-time monitoring with a data refresh every 60 seconds.</li><li>Dataflow run: Grouped in 15 minutes.</li></ul>  |
 | Records failed | This metric represents the total number of records that failed ingestion into the Profile store, within a configured time window, due to errors. | <ul><li>Sandbox/Dataflow</li><li>Dataflow run</li></ul> |<ul><li>Sandbox/Dataflow: Real-time monitoring with a data refresh every 60 seconds.</li><li>Dataflow run: Grouped in 15 minutes.</li></ul>  |
 | Records skipped | This metric represents the total number of records that were dropped within a configured time window, due to configuration or capacity breaches. | <ul><li>Sandbox/Dataflow</li><li>Dataflow run</li></ul> | <ul><li>Sandbox/Dataflow: Real-time monitoring with a data refresh every 60 seconds.</li><li>Dataflow run: Grouped in 15 minutes.</li></ul>  |
@@ -99,7 +98,7 @@ To access the monitoring dashboard for streaming profile ingestion, go to the Ex
 
 ![The monitoring dashboard for streaming profile ingestion.](../assets/ui/streaming-profiles/monitoring-dashboard.png)
 
-Refer to the top-header of the dashboard for the *[!UICONTROL Profile]* metrics card. Use this display to view information on the records ingested, failed, and skipped, as well as information on the current status of request throughput and latency.
+Refer to the top-header of the dashboard for the *[!UICONTROL Profile]* metrics card. Use this display to view information on the records ingested, failed, and skipped, as well as information on the current status of request throughput.
 
 ![The profile card.](../assets/ui/streaming-profiles/profile-card.png)
 
@@ -113,7 +112,7 @@ Next, use the interface to view detailed information on your streaming profile i
 
 Alternatively, you can manually configure your own timeframe using the calendar.
 
-You can use three different metric categories in the monitoring dashboard for streaming profile ingestion: [!UICONTROL Throughput], [!UICONTROL Ingestion], and [!UICONTROL Latency].
+You can use two different metric categories in the monitoring dashboard for streaming profile ingestion: [!UICONTROL Throughput] and [!UICONTROL Ingestion].
 
 >[!BEGINTABS]
 
@@ -136,12 +135,6 @@ Select **[!UICONTROL Throughput]** to view information on the amount of data tha
 * **Records ingested**: The total amount of records created within a given time period. This metric represents successful data ingestion processes in your sandbox.
 * **Records skipped**: The total number of records that did not get ingested due to errors.
 * **Records skipped**: The total number of records that were dropped due to violation of capacity limits.
-
->[!TAB Latency]
-
-Select **[!UICONTROL Latency]** to view information on the amount of time it takes Experience Platform to respond to a request or complete an operation within a given time period.
-
-![The dashboard with the display set to "latency".](../assets/ui/streaming-profiles/latency.png)
 
 >[!ENDTABS]
 

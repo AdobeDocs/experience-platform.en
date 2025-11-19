@@ -527,6 +527,7 @@ Selecting identity namespaces for export, as shown in the image below, is curren
 ![Unsupported mapping showing identity exports.](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
 As a temporary workaround if you need to add identity namespaces to your exported files during the beta, you can either:
+
 * Use the legacy cloud storage destinations for the dataflows where you want to include identity namespaces in the exports
 * Upload identities as attributes into Experience Platform, to then export them to your cloud storage destinations.
 

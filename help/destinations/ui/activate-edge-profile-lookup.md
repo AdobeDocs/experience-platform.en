@@ -48,7 +48,7 @@ Follow the steps in the [datastream configuration](../../datastreams/configure.m
 >
 >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
-    ![Experience Platform UI image showing the datastream configuration screen.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
+![Experience Platform UI image showing the datastream configuration screen.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
 
 ## Step 2: Configure your audiences for edge evaluation {#audience-edge-evaluation}
@@ -107,19 +107,17 @@ After you have created a **[!UICONTROL Custom Personalization With Attributes]**
     * **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Experience Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/overview.md#import-audience).
     * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
 
-        ![Select audiences step of the activation workflow with several audiences highlighted.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
+      ![Select audiences step of the activation workflow with several audiences highlighted.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
 1. Select the profile attributes that you want to be made available for the edge profiles.
 
     * **Select source attributes**. To add source attributes, select the **[!UICONTROL Add new field]** control on the **[!UICONTROL Source field]** column and search or navigate to your desired XDM attribute field, as shown below.
     
-        ![Screen recording showing how to select a target attribute in the mapping step.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
+      ![Screen recording showing how to select a target attribute in the mapping step.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
     * **Select target attributes**. To add target attributes, select the **[!UICONTROL Add new field]** control on the **[!UICONTROL Target field]** column and type in the custom attribute name that you want to map the source attribute to.
     
-        ![Screen recording showing how to select an XDM attribute in the mapping step](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
-
-
+      ![Screen recording showing how to select an XDM attribute in the mapping step](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
 When you are finished mapping profile attributes, select **[!UICONTROL Next]**.
 
@@ -161,7 +159,8 @@ The next step is to configure your personalization solution to retrieve profile 
 >[!IMPORTANT]
 >
 >Profile attributes may contain sensitive data. To protect this data, you must retrieve the profile attributes through the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/). Furthermore, you must retrieve the profile attributes via the Edge Network API [interactive data collection endpoint](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/), in order for the API calls to be authenticated.
-><br>If you do not follow the requirements above, personalization will be based on audience membership only, and profile attributes will not be available to you.
+>
+>If you do not follow the requirements above, personalization will be based on audience membership only, and profile attributes will not be available to you.
 
 The datastream which you configured in [step 1](#create-datastream) is now ready to accept incoming event data and respond with edge profile information.
 

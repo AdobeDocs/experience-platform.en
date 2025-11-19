@@ -396,7 +396,7 @@ An successful response returns HTTP status 200 with details of the newly streame
 | -------- | ----------- |
 | `{CONNECTION_ID}` | The `inletId` of the previously created streaming connection. |
 | `xactionId` | A unique identifier generated server-side for the record you just sent. This ID helps Adobe trace this record's lifecycle through various systems and with debugging. |    
-| `receivedTimeMs`: A timestamp (epoch in milliseconds) that shows what time the request was received. |
+| `receivedTimeMs`: A timestamp (epoch in milliseconds) that shows what time the request was received. ||
 | `syncValidation.status` | Since the query parameter `syncValidation=true` was added, this value will appear. If the validation has succeeded, the status will be `pass`. |
 
 ## Retrieve the newly ingested time series data

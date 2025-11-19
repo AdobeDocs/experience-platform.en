@@ -83,9 +83,9 @@ After selection, additional controls appear to further configure the event. You 
 
 | Field name | Description | Example | Required |
 | --- | --- | --- | --- |
-| [!UICONTROL [!DNL Twitter] Click ID] | [!DNL Twitter] Click ID as parsed from the click-through URL. | 26l6412g5p4iyj65a2oic2ayg2 | Required if no other identifier is added. |
-| [!UICONTROL Email] | An email address hashed with SHA256. The text must be lowercase and any trailing or leading spaces must be removed before hashing. | eventforwarding@example.com | Required if no other identifier is added. |
-| [!UICONTROL Phone] | Phone serves as an identifier to match the conversion event. The phone number must be in E164 format [+][country code][area code][local phone number] before hashing. | +911234567875 | Required if no other identifier is added. |
+| [!UICONTROL [!DNL Twitter] Click ID] | [!DNL Twitter] Click ID as parsed from the click-through URL. | `26l6412g5p4iyj65a2oic2ayg2` | Required if no other identifier is added. |
+| [!UICONTROL Email] | An email address hashed with SHA256. The text must be lowercase and any trailing or leading spaces must be removed before hashing. | `eventforwarding@example.com` | Required if no other identifier is added. |
+| [!UICONTROL Phone] | Phone serves as an identifier to match the conversion event. The phone number must be in E164 format `[+][country code][area code][local phone number]` before hashing. | `+911234567875` | Required if no other identifier is added. |
 
 **[!UICONTROL Conversion Data]**
 

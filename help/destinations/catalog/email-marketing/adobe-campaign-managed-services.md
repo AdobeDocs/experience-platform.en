@@ -25,7 +25,7 @@ Keep in mind the following guardrails when using the Adobe Campaign Managed Clou
 
 * You can [activate](#activate) a maximum of 25 audiences to this destination. 
 
-  You can change this limit by updating the value of the **NmsCdp_Aep_Audience_List_Limit** option in the **[!UICONTROL Administration]** > **[!UICONTROL Platform]** > **[!UICONTROL Options]** folder of Campaign explorer.
+  You can change this limit by updating the value of the **NmsCdp_Aep_Audience_List_Limit** option in the **[!UICONTROL Administration]** > **[!UICONTROL Platform]** > **[!UICONTROL Options]** folder of Campaign explorer. This guardrail limits the total number of Experience Platform audiences that can be exported to a single Campaign instance across all configured destinations.
 
 * For each audience, you can add up to 20 fields to [map](#map) to Adobe Campaign. 
 
@@ -34,6 +34,7 @@ Keep in mind the following guardrails when using the Adobe Campaign Managed Clou
 * Data retention on Azure Blob storage Data Landing Zone (DLZ) : 7 day.
 * The activation frequency is 3 hours minimum.
 * The maximum file name length supported by this connection is 255 characters. When you [configure the exported file name](../../ui/activate-batch-profile-destinations.md#configure-file-names), make sure the file name does not exceed 255 characters. Exceeding the maximum file name length results in activation errors.
+* Segments/audiences that contain special characters (e.g: `&`) are not supported when exporting audiences to Adobe Campaign.
 
 ## Use cases {#use-cases}
 

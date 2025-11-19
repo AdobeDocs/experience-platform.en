@@ -9,7 +9,7 @@ This tutorial covers the steps for updating a dataflow, including its basic info
 
 >[!TIP]
 >
->Your source connection and your target connection should be mapped to a single dataflow. You should not update your source and target connections separately, as the changes will not be reflected in their corresponding dataflow. If your use case requires an update  of your source and target connections, then you must create a new pair of source and target connections, as well as a new dataflow.
+>Your source connection and your target connection should be mapped to a single dataflow. You should not update your source and target connections separately, as the changes will not be reflected in their corresponding dataflow. If your use case requires an update of your source and target connections, then you must create a new pair of source and target connections, as well as a new dataflow.
 
 ## Getting started
 
@@ -171,7 +171,9 @@ To update your dataflow's run schedule, name, and description, perform a PATCH r
 
 >[!IMPORTANT]
 >
->The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the connection you want to update. The etag value updates with every successful update of a dataflow.
+>* The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the connection you want to update. The etag value updates with every successful update of a dataflow.
+>
+>* You cannot updated the `startTime` of a dataflow if the initially scheduled `startTime` has already occurred. This limitation applies to both enabled and disabled dataflows.
 
 **API format**
 
@@ -185,29 +187,29 @@ The following request updates your flow run schedule, as well as your dataflow's
 
 ```shell
 curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
-    -d '[
-            {
-                "op": "replace",
-                "path": "/scheduleParams/frequency",
-                "value": "day"
-            },
-            {
-                "op": "replace",
-                "path": "/name",
-                "value": "Database Dataflow Feb2021"
-            },
-            {
-                "op": "replace",
-                "path": "/description",
-                "value": "Database dataflow for testing update API"
-            }
-        ]'
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
+  -d '[
+          {
+              "op": "replace",
+              "path": "/scheduleParams/frequency",
+              "value": "day"
+          },
+          {
+              "op": "replace",
+              "path": "/name",
+              "value": "Database Dataflow Feb2021"
+          },
+          {
+              "op": "replace",
+              "path": "/description",
+              "value": "Database dataflow for testing update API"
+          }
+      ]'
 ```
 
 | Property | Description |
@@ -243,25 +245,25 @@ The following request updates your dataflow's mapping set.
 
 ```shell
 curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "50014cc8-0000-0200-0000-6036eb720000"' \
-    -d '[
-        {
-            "op": "replace",
-            "path": "/transformations/0",
-            "value": {
-                "name": "Mapping",
-                "params": {
-                    "mappingId": "c5f22f04e09f44498e528901546a83b1",
-                    "mappingVersion": 2
-                }
-            }
-        }
-    ]'
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'If-Match: "50014cc8-0000-0200-0000-6036eb720000"' \
+  -d '[
+      {
+          "op": "replace",
+          "path": "/transformations/0",
+          "value": {
+              "name": "Mapping",
+              "params": {
+                  "mappingId": "c5f22f04e09f44498e528901546a83b1",
+                  "mappingVersion": 2
+              }
+          }
+      }
+  ]'
 ```
 
 | Property | Description |
