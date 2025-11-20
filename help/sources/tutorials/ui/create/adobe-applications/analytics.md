@@ -107,6 +107,12 @@ Experience Platform automatically detects your mapping for any name conflicts. I
 
 ## Custom mappings {#custom-mappings}
 
+>[!CONTEXTUALHELP]
+>id="platform_analytics_import_mapping"
+>title="Download Template"
+>abstract="Download the csv template to perform the mapping offline."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="Import mapping"
+
 You can use Data Prep functions to add new custom mappings or calculated fields for custom attributes. To add custom mappings, select **[!UICONTROL Custom]**.
 
 ![The custom mapping tab in the Analytics source workflow.](../../../../images/tutorials/create/analytics/custom.png)
