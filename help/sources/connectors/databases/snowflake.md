@@ -174,11 +174,11 @@ With your setup complete, you can now proceed to connect your [!DNL Snowflake] a
 
 ### Connect [!DNL Snowflake] to Experience Platform using APIs
 
-* [Create an Snowflake base connection using the Flow Service API](../../tutorials/api/create/databases/snowflake.md)
+* [Connect [!DNL Snowflake] to Experience Platform using the API](../../tutorials/api/create/databases/snowflake.md)
 * [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 * [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ### Connect [!DNL Snowflake] to Experience Platform using the UI
 
-* [Create a Snowflake source connection in the UI](../../tutorials/ui/create/databases/snowflake.md)
+* [Connect [!DNL Snowflake] to Experience Platform using the UI](../../tutorials/ui/create/databases/snowflake.md)
 * [Create a dataflow for a database source connection in the UI](../../tutorials/ui/dataflow/databases.md)
