@@ -36,7 +36,7 @@ Provide values for the following credentials to connect [!DNL Snowflake] to Expe
 
 | Credential | Description |
 | ---------- | ----------- |
-| `account` | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `orgname-account_name`. Read the section on [retrieving your [!DNL Snowflake] account identifier](#retrieve-your-account-identifier) for additional guidance. For more information, refer to the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization).|
+| `account` | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `myorg-myaccount.snowflakecomputing.com`. Read the section on [retrieving your [!DNL Snowflake] account identifier](#retrieve-your-account-identifier) for additional guidance. For more information, refer to the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization).|
 | `warehouse` | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Experience Platform. |
 | `database` | The [!DNL Snowflake] database contains the data you want to bring the Experience Platform. |
 | `username` | The username for the [!DNL Snowflake] account. |
@@ -50,7 +50,7 @@ To use key-pair authentication, first generate a 2048-bit RSA key pair. Next, pr
 
 | Credential | Description |
 | --- | --- |
-| `account` | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `orgname-account_name`. Read the section on [retrieving your [!DNL Snowflake] account identifier](#retrieve-your-account-identifier) for additional guidance. For more information, refer to the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `account` | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `myorg-myaccount.snowflakecomputing.com`. Read the section on [retrieving your [!DNL Snowflake] account identifier](#retrieve-your-account-identifier) for additional guidance. For more information, refer to the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `username` | The username of your [!DNL Snowflake] account. |
 | `privateKey` | The [!DNL Base64-]encoded private key of your [!DNL Snowflake] account. You can generate either encrypted or unencrypted private keys. If you are using an encrypted private key, then you must also provide a private key passphrase when authenticating against Experience Platform. Read the section on [retrieving your private key](#retrieve-your-private-key) for more information.  |
 | `privateKeyPassphrase` | The private key passphrase is an additional layer of security that you must use when authenticating with an encrypted private key. You are not required to provide the passphrase if you are using an unencrypted private key. |
@@ -84,7 +84,7 @@ To use key-pair authentication, first generate a 2048-bit RSA key pair. Next, pr
 
 | Credential | Description |
 | --- | --- |
-| `account` | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `orgname-account_name`. Read the guide on [retrieving your [!DNL Snowflake] account identifier](#etrieve-your-account-identifier) for additional guidance. For more information, refer to the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `account` | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `http://myorg-myaccount.snowflakecomputing.com/`. Read the guide on [retrieving your [!DNL Snowflake] account identifier](#etrieve-your-account-identifier) for additional guidance. For more information, refer to the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `username` | The username of your [!DNL Snowflake] account. |
 | `privateKey` | The private key for your [!DNL Snowflake] user, base64-encoded as a single line with no headers or line breaks. To prepare it, copy the contents of your PEM file, remove the `BEGIN`/`END` lines and all line breaks, then base64-encode the result. Read the section on [retrieving your private key](#retrieve-your-private-key) for more information. **Note:** Encrypted private keys are not currently supported for an AWS connection. |
 | `port` | The port number that is used by [!DNL Snowflake] when connecting to a server over the internet. |
@@ -114,6 +114,8 @@ Use OpenSSL in the command line interface to generate a 2048-bit RSA key pair in
 >[!BEGINTABS]
 
 >[!TAB Generate an encrypted private key]
+
+To generate your encrypted [!DNL Snowflake] private key, run the following command on your terminal:
 
 ```bash
 openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8# You will be prompted to enter a passphrase. Store this securely!
@@ -155,12 +157,9 @@ Experience Platform requires the private key to be [!DNL Base64]-encoded and pro
 
 ### Verify configurations
 
-Before you can create a source connection for your [!DNL Snowflake] data, you must also ensure that the following configurations are met:
+Before creating the [!DNL Snowflake] source connection in Experience Platform, you must ensure that the user's **[!DNL Default Role]e** and **[!DNL Default Warehouse]** match the values that your provide in Experience Platform. You can verify these settings in the [!DNL Snowflake] UI using the `DESCRIBE USER {USERNAME}` SQL command.
 
-* The default warehouse assigned to a given user must be the same as the warehouse that you input when authenticating to Experience Platform.
-* The default role assigned to a given user must have access to the same database that you input when authenticating to Experience Platform.
-
-To verify your role and warehouse:
+Alternatively, you can follow the steps below to verify your settings:
 
 * Select **[!DNL Admin]** on the left navigation and then select **[!DNL Users & Roles]**.
 * Select the appropriate user and then select the ellipses (`...`) on the top-right corner.
@@ -169,53 +168,17 @@ To verify your role and warehouse:
 
 ![The Snowflake UI where you can verify your role and warehouse.](../../images/tutorials/create/snowflake/snowflake-configs.png)
 
-Once successfully encoded, you may then used that [!DNL Base64]-encoded private key on Experience Platform to authenticate your [!DNL Snowflake] account.
+## Next steps
 
-The documentation below provides information on how to connect [!DNL Snowflake] to Experience Platform using APIs or the user interface:
+With your setup complete, you can now proceed to connect your [!DNL Snowflake] account to Experience Platform. Read the following documentation for more information:
 
-## Connect [!DNL Snowflake] to Experience Platform using APIs
+### Connect [!DNL Snowflake] to Experience Platform using APIs
 
 * [Create an Snowflake base connection using the Flow Service API](../../tutorials/api/create/databases/snowflake.md)
 * [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 * [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
-## Connect [!DNL Snowflake] to Experience Platform using the UI
+### Connect [!DNL Snowflake] to Experience Platform using the UI
 
 * [Create a Snowflake source connection in the UI](../../tutorials/ui/create/databases/snowflake.md)
 * [Create a dataflow for a database source connection in the UI](../../tutorials/ui/dataflow/databases.md)
-
-<!--
-
-### Generate your RSA key pair
-
-Use OpenSSL in the command line interface to generate a 2048-bit RSA key pair in PKCS#8 format. It's best practice to create an encrypted private key for security, which will require a passphrase.
-
-**Generate your encrypted private key**
-
-```bash
-openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8# You will be prompted to enter a passphrase. Store this securely!
-```
-
-**Generate a public key from the private key**
-
-```bash
-openssl rsa -in rsa_key.p8 -pubout -out rsa_key.pub# You will be prompted to enter the passphrase if the private key is encrypted.
-```
-
-### Assign the public key to the [!DNL Snowflake] user
-
-You need to use a [!DNL Snowflake] administrator role (like **SECURITYADMIN**) to associate the generated public key with the [!DNL Snowflake] service user that Experience Platform will use. To retrieve the public key content, open the `rsa_key.pub` file and copy the entire content, excluding the  `-----BEGIN PUBLIC KEY----- and -----END PUBLIC KEY-----` lines. Next, execute the following SQL in [!DNL Snowflake]:
-
-```sql
-ALTER USER {YOUR_SNOWFLAKE_USERNAME}>SET RSA_PUBLIC_KEY='{PUBLIC_KEY_CONTENT}';
-```
-
-### Encode the private key in [!DNL Base64]
-
-Experience Platform requires the private key to be [!DNL Base64]-encoded and provided as a string during the connection setup. Use a suitable tool or script to encode the contents of the `rsa_key.p8` file into a single [!DNL Base64] string.
-
->[!TIP]
->
->Ensure there are no extra spaces or line breaks, including the header/footer lines `(-----BEGIN ENCRYPTED PRIVATE KEY----- and -----END ENCRYPTED PRIVATE KEY-----)`, before or after the encoding process, as this can cause authentication errors.
-
--->
