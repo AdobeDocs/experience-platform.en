@@ -44,10 +44,10 @@ All identities in the table below are mandatory mappings.
 
 |Target identity|Description|Considerations|
 |---|---|---|
-|GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|ECID|Experience Cloud ID|This identity is mandatory for the integration to work correctly but is not used for audience activation.|
-|The Trade Desk ID|Advertiser ID in the [!DNL The Trade Desk] platform|Use this identity when activating audiences based on The Trade Desk's proprietary ID.|
+|[!DNL GAID]|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
+|[!DNL IDFA]|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
+|[!DNL ECID]|Experience Cloud ID|This identity is mandatory for the integration to work correctly but is not used for audience activation.|
+| [!DNL Tradedesk] |[!DNL TDID] in the [!DNL The Trade Desk] platform|Use this identity when activating audiences based on The Trade Desk's proprietary ID.|
 
 {style="table-layout:auto"}
 
