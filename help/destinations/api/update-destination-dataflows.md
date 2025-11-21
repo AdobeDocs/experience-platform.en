@@ -752,6 +752,14 @@ The exported files contain the destination name, Experience Platform audience ID
 
 To add a profile attribute to the destination dataflow, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the profile attribute you want to add.
 
+>[!IMPORTANT]
+>
+>**Destination-specific mapping requirements**
+>
+>The `profileSelectors` method described in this section works for most streaming destinations. However, some streaming destinations, including **Adobe Target**, require the Data Prep mapping set workflow instead. 
+>
+>**If your profile attributes do not appear in the Experience Platform UI after a successful API response (202)**, you must use the mapping set method documented in [Activate audiences to batch destinations](../api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
+
 **API format**
 
 ```http
