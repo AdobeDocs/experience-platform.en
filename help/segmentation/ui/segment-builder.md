@@ -123,8 +123,10 @@ You can use the following operators for the respective data types:
 
 | Operator | Description | Example |
 | -------- | ----------- | ------- |
-| Today | The value occurred today | |
-| Yesterday | The value occurred yesterday | |
+| Today | The value occurred today. You can select the **Ignore year** checkbox to make the comparison ignore the year.| Birth date **is** Today |
+| Yesterday | The value occurred yesterday. | Cart purchase **is** Yesterday |
+| This month | The value occurred this calendar month. | Birth month **is** This month |
+| This year | The value occurred this calendar year. | Sign up date **is** This year |
 
 
 +++
