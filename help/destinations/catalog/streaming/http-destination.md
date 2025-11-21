@@ -53,6 +53,7 @@ To use the HTTP API destination to export data out of Experience Platform, you m
 * Your HTTP endpoint must support the Experience Platform profile schema. No transformation to a 3rd-party payload schema is supported in the HTTP API destination. Refer to the [exported data](#exported-data) section for an example of the Experience Platform output schema.
 * Your HTTP endpoint must support headers.
 * Your HTTP endpoint must respond within 2 seconds to ensure proper data processing and avoid timeout errors.
+* If you plan to use mTLS: Your data receiving endpoint must have TLS disabled and only mTLS enabled. If you also use OAuth 2 authentication, you must maintain a separate standard HTTPS endpoint for token retrieval. See the [mTLS considerations](#mtls-considerations) section for details.
 
 >[!TIP]
 >
@@ -62,9 +63,27 @@ To use the HTTP API destination to export data out of Experience Platform, you m
 
 You can use [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) to ensure enhanced security in outbound connections to your HTTP API destination connections.
 
-[!DNL mTLS] is an end-to-end security method for mutual authentication that ensures that both parties sharing information are who they claim to be before data is shared. [!DNL mTLS] includes an additional step compared to [!DNL TLS], in which the server also asks for the client's certificate and verifies it at their end.
+[!DNL mTLS] is a mutual authentication protocol that ensures that both parties sharing information are who they claim to be before data is shared. [!DNL mTLS] includes an additional step compared to standard [!DNL TLS], in which the server also requests and verifies the client's certificate, while the client verifies the server's certificate.
 
-If you want to use [!DNL mTLS] with [!DNL HTTP API] destinations, the server address you put in the [destination details](#destination-details) page must have [!DNL TLS] protocols disabled and only [!DNL mTLS] enabled. If the [!DNL TLS] 1.2 protocol is still enabled on the endpoint, no certificate is sent for the client authentication. This means that to use [!DNL mTLS] with your [!DNL HTTP API] destination, your "receiving" server endpoint must be an [!DNL mTLS]-only enabled connection endpoint.
+### mTLS considerations {#mtls-considerations}
+
+mTLS support for HTTP API destinations applies **only to the data receiving endpoint** where profile exports are sent (the **[!UICONTROL HTTP Endpoint]** field in [destination details](#destination-details)). 
+
+**mTLS is not supported for OAuth 2 authentication endpoints:**
+
+* The **[!UICONTROL Access Token URL]** used in OAuth 2 Client Credentials or OAuth 2 Password authentication does not support mTLS
+* Token retrieval and refresh requests are sent over standard HTTPS without client certificate authentication
+
+**Required Architecture:** If you need mTLS for your data receiving endpoint and use OAuth 2 authentication, you must maintain two separate endpoints:
+
+* **Authentication endpoint:** Standard HTTPS (without mTLS) for token management
+* **Data receiving endpoint:** HTTPS with mTLS-only enabled for profile exports
+
+This architecture is a current platform limitation. Support for mTLS on authentication endpoints is being evaluated for future releases.
+
+### Configuring mTLS for data export {#configuring-mtls}
+
+To use [!DNL mTLS] with [!DNL HTTP API] destinations, the **[!UICONTROL HTTP Endpoint]** (data receiving endpoint) you configure in the [destination details](#destination-details) page must have [!DNL TLS] protocols disabled and only [!DNL mTLS] enabled. If the [!DNL TLS] 1.2 protocol is still enabled on the endpoint, no certificate is sent for the client authentication. This means that to use [!DNL mTLS] with your [!DNL HTTP API] destination, your data receiving server endpoint must be an [!DNL mTLS]-only enabled connection endpoint.
 
 ### Retrieve and inspect certificate details {#certificate}
 
@@ -140,7 +159,11 @@ If you select the **[!UICONTROL OAuth 2 Password]** authentication type to conne
 
 ![Image of the UI screen where you can connect to the HTTP API destination, using OAuth 2 with Password authentication.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
-* **[!UICONTROL Access Token URL]**: The URL on your side which issues access tokens and, optionally, refresh tokens.
+>[!NOTE]
+>
+>**mTLS limitation:** The [!UICONTROL Access Token URL] does not support mTLS. If you plan to use mTLS for your data receiving endpoint, your authentication endpoint must use standard HTTPS. See the [mTLS considerations](#mtls-considerations) section for more details on the required architecture.
+
+* **[!UICONTROL Access Token URL]**: The URL on your side which issues access tokens and, optionally, refresh tokens. This endpoint must use standard HTTPS and does not support mTLS.
 * **[!UICONTROL Client ID]**: The [!DNL client ID] that your system assigns to Adobe Experience Platform.
 * **[!UICONTROL Client Secret]**: The [!DNL client secret] that your system assigns to Adobe Experience Platform.
 * **[!UICONTROL Username]**: The username to access your HTTP endpoint.
@@ -156,7 +179,11 @@ If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication typ
 > 
 >When using [!UICONTROL OAuth 2 Client Credentials] authentication, the [!UICONTROL Access Token URL] can have a maximum of one query parameter. Adding an [!UICONTROL Access Token URL] with more query parameters can lead to issues when connecting to your endpoint.
 
-* **[!UICONTROL Access Token URL]**: The URL on your side which issues access tokens and, optionally, refresh tokens.
+>[!NOTE]
+>
+>**mTLS limitation:** The [!UICONTROL Access Token URL] does not support mTLS. If you plan to use mTLS for your data receiving endpoint, your authentication endpoint must use standard HTTPS. See the [mTLS considerations](#mtls-considerations) section for more details on the required architecture.
+
+* **[!UICONTROL Access Token URL]**: The URL on your side which issues access tokens and, optionally, refresh tokens. This endpoint must use standard HTTPS and does not support mTLS.
 * **[!UICONTROL Client ID]**: The [!DNL client ID] that your system assigns to Adobe Experience Platform.
 * **[!UICONTROL Client Secret]**: The [!DNL client secret] that your system assigns to Adobe Experience Platform.
 * **[!UICONTROL Client Credentials Type]**: Select the type of OAuth2 Client Credentials grant supported by your endpoint:
@@ -173,7 +200,7 @@ If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication typ
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
 >title="HTTP Endpoint"
->abstract="The URL of the HTTP endpoint where you want to send the profile data to."
+>abstract="The URL of the HTTP endpoint where you want to send the profile data to. This is your data receiving endpoint and supports mTLS if configured. This is separate from the OAuth 2 Access Token URL, which does not support mTLS."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
@@ -197,7 +224,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Name]**: Enter a name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: Enter a description that will help you identify this destination in the future.
 * **[!UICONTROL Headers]**: Enter any custom headers that you want to be included in the destination calls, following this format: `header1:value1,header2:value2,...headerN:valueN`.
-* **[!UICONTROL HTTP Endpoint]**: The URL of the HTTP endpoint where you want to send the profile data to.
+* **[!UICONTROL HTTP Endpoint]**: The URL of the HTTP endpoint where you want to send the profile data to. This is your data receiving endpoint. If using mTLS, this endpoint must have TLS disabled and only mTLS enabled. Note that this is different from the OAuth 2 Access Token URL configured during authentication.
 * **[!UICONTROL Query parameters]**: Optionally, you can add query parameters to the HTTP endpoint URL. Format the query parameters you use like this: `parameter1=value&parameter2=value`.
 * **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the audiences you are exporting. **Note**: Segment names are only included for segments that are mapped to the destination. Unmapped segments that appear in the export will not include the `name` field. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
 * **[!UICONTROL Include Segment Timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
