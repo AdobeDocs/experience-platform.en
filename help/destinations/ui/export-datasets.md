@@ -225,7 +225,7 @@ You can use several available macros to customize a desired folder name. Double-
 
 ![Macros selection highlighted in custom folder modal window.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
 
-After selecting the desired macros, you can see a preview of the folder structure that will be created in your storage location. The first level in the folder structure represents the **[!UICONTROL Folder path]** that you indicated when you [connected to the destination](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) to export datasets. 
+After selecting the desired macros, you can see a preview of the folder structure that will be created in your storage location. The first level in the folder structure represents the **[!UICONTROL Folder path]** that you indicated when you [connected to the destination](/help/destinations/ui/connect-destination.md#set-up-connection-parameters) to export datasets. 
 
 ![Preview of folder path highlighted in custom folder modal window.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
 
