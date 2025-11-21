@@ -29,7 +29,13 @@ This bot scoring helps the solutions receiving the request correctly identify bo
 >
 >Adobe solutions may handle bot scoring in different ways. For example, Adobe Analytics uses its own [bot filtering service](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) and does not use the score set by the Edge Network. The two services use the same [IAB bot list](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), so the bot scoring is identical.
 
-Bot detection rules can take up to 15 minutes to propagate across the Edge Network after being created.
+## Technical considerations {#technical-considerations}
+
+Before enabling bot detection on your datastreams, here are a few key points to keep in mind to ensure accurate results and a smooth implementation:
+
+* Bot detection applies only to unauthenticated requests sent to `edge.adobedc.net`.
+* Authenticated requests sent to `server.adobedc.net` are not evaluated for bot traffic, as authenticated traffic is considered trustworthy.
+* Bot detection rules can take up to 15 minutes to propagate across the Edge Network after being created.
 
 ## Prerequisites {#prerequisites}
 
