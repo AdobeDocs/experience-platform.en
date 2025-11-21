@@ -53,7 +53,7 @@ To use the HTTP API destination to export data out of Experience Platform, you m
 * Your HTTP endpoint must support the Experience Platform profile schema. No transformation to a 3rd-party payload schema is supported in the HTTP API destination. Refer to the [exported data](#exported-data) section for an example of the Experience Platform output schema.
 * Your HTTP endpoint must support headers.
 * Your HTTP endpoint must respond within 2 seconds to ensure proper data processing and avoid timeout errors.
-* If you plan to use mTLS: Your data receiving endpoint must have TLS disabled and only mTLS enabled. If you also use OAuth 2 authentication, you must maintain a separate standard HTTPS endpoint for token retrieval. See the [mTLS scope and limitations](#mtls-limitations) section for details.
+* If you plan to use mTLS: Your data receiving endpoint must have TLS disabled and only mTLS enabled. If you also use OAuth 2 authentication, you must maintain a separate standard HTTPS endpoint for token retrieval. See the [mTLS considerations](#mtls-considerations) section for details.
 
 >[!TIP]
 >
@@ -65,7 +65,7 @@ You can use [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) to ensure enhan
 
 [!DNL mTLS] is a mutual authentication protocol that ensures that both parties sharing information are who they claim to be before data is shared. [!DNL mTLS] includes an additional step compared to standard [!DNL TLS], in which the server also requests and verifies the client's certificate, while the client verifies the server's certificate.
 
-### mTLS scope and limitations {#mtls-limitations}
+### mTLS considerations {#mtls-considerations}
 
 mTLS support for HTTP API destinations applies **only to the data receiving endpoint** where profile exports are sent (the **[!UICONTROL HTTP Endpoint]** field in [destination details](#destination-details)). 
 
@@ -161,7 +161,7 @@ If you select the **[!UICONTROL OAuth 2 Password]** authentication type to conne
 
 >[!NOTE]
 >
->**mTLS limitation:** The [!UICONTROL Access Token URL] does not support mTLS. If you plan to use mTLS for your data receiving endpoint, your authentication endpoint must use standard HTTPS. See the [mTLS scope and limitations](#mtls-limitations) section for more details on the required architecture.
+>**mTLS limitation:** The [!UICONTROL Access Token URL] does not support mTLS. If you plan to use mTLS for your data receiving endpoint, your authentication endpoint must use standard HTTPS. See the [mTLS considerations](#mtls-considerations) section for more details on the required architecture.
 
 * **[!UICONTROL Access Token URL]**: The URL on your side which issues access tokens and, optionally, refresh tokens. This endpoint must use standard HTTPS and does not support mTLS.
 * **[!UICONTROL Client ID]**: The [!DNL client ID] that your system assigns to Adobe Experience Platform.
@@ -181,7 +181,7 @@ If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication typ
 
 >[!NOTE]
 >
->**mTLS limitation:** The [!UICONTROL Access Token URL] does not support mTLS. If you plan to use mTLS for your data receiving endpoint, your authentication endpoint must use standard HTTPS. See the [mTLS scope and limitations](#mtls-limitations) section for more details on the required architecture.
+>**mTLS limitation:** The [!UICONTROL Access Token URL] does not support mTLS. If you plan to use mTLS for your data receiving endpoint, your authentication endpoint must use standard HTTPS. See the [mTLS considerations](#mtls-considerations) section for more details on the required architecture.
 
 * **[!UICONTROL Access Token URL]**: The URL on your side which issues access tokens and, optionally, refresh tokens. This endpoint must use standard HTTPS and does not support mTLS.
 * **[!UICONTROL Client ID]**: The [!DNL client ID] that your system assigns to Adobe Experience Platform.
