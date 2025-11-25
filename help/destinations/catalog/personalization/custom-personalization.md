@@ -37,6 +37,12 @@ This destination requires the use of one of the following data collection method
 
 >[!IMPORTANT]
 >
+>**Attribute-based personalization requirements:** If you want to personalize based on profile attributes (not just audience membership), you **must** use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) with authenticated server-side integration, regardless of whether you are also using Web SDK or Mobile SDK for data collection.
+>
+>Web SDK and Mobile SDK alone only support personalization based on audience membership. The Edge Network API is **required** to securely retrieve profile attributes for personalization.
+
+>[!IMPORTANT]
+>
 >Before creating a custom personalization connection, read the guide on how to [activate audience data to edge personalization destinations](../../ui/activate-edge-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components.
 
 ## Supported audiences {#supported-audiences}
