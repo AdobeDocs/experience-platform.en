@@ -16,7 +16,7 @@ Experience provides several core data usage labels which cover a wide variety of
 
 ## Explore labels {#explore-labels}
 
-To view all available labels, navigate to **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/). Select **[!UICONTROL Labels]** from the left panel. 
+To view all available labels, navigate to **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Select **[!UICONTROL Labels]** from the left panel. 
 
 ![The labels workspace within Permissions with Labels highlighted in the left panel.](../../images/ui/labels/labels-home.png){zoomable="yes"}
 
@@ -58,27 +58,27 @@ To view an individual label, select the label's name from the list. The label's 
 
 To create a new label, select **[!UICONTROL Labels]** from left panel of the **[!UICONTROL Permissions]** workspace and then select **[!UICONTROL Create label]**. 
 
-![The labels workspace with the Create label option highlighted.](../../images/ui/labels/create-label.png)
+![The labels workspace with the Create label option highlighted.](../../images/ui/labels/create-label.png){zoomable="yes"}
 
 The **[!UICONTROL Create new label]** dialog appears, prompting you to enter a **[!UICONTROL Name]**, a **[!UICONTROL Friendly name]**, and **[!UICONTROL Description]**. 
 
 >[!IMPORTANT]
 >
 > The label's [!UICONTROL Name] cannot be changed after the label has been created and label deletion is not currently supported.
-> 
+
 Select **[!UICONTROL Confirm]** to finish creating your label.
 
-![The Create new label dialog with the Name, Friendly name, and Description filled in and the Confirm option highlighted.](../../images/ui/labels/create-new-label.png)
+![The Create new label dialog with the Name, Friendly name, and Description filled in and the Confirm option highlighted.](../../images/ui/labels/create-new-label.png){zoomable="yes"}
 
 ## Edit a custom label {#edit-custom-label}
 
 While you cannot edit a custom label's **[!UICONTROL Name]**, you can edit the **[!UICONTROL Friendly name]** and **[!UICONTROL Description]**. To edit a custom label, select the label from the list within the **[!UICONTROL Labels]** workspace. 
 
-![The Labels workspace with the label highlighted.](../../images/ui/labels/select-label.png)
+![The Labels workspace with the label highlighted.](../../images/ui/labels/select-label.png){zoomable="yes"}
 
 Edit either field and then click anywhere outside of the textbox to save your changes. A confirmation message will appear on the screen and the **[!UICONTROL Modified by]** name and **[!UICONTROL Modified]** date will change.
 
-![The label's detail page with an "updated successfully" message displayed.](../../images/ui/labels/edit-label.png)
+![The label's detail page with an "updated successfully" message displayed.](../../images/ui/labels/edit-label.png){zoomable="yes"}
 
 ## Next steps
 
