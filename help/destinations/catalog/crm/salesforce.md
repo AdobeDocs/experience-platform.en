@@ -279,7 +279,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Monitor the audience summary and ensure that the count of profiles corresponds to the count created within the segment.
 ![Experience Platform UI screenshot example showing Segment.](../../assets/catalog/crm/salesforce/segment.png)
 
-1. Finally, log in to the Salesforce website and validate if the profiles from the audience have been added or updated.
+1. Finally, log in to the Salesforce website and validate if the profiles from the audience have been updated.
 
     **Working with Contacts**
 
