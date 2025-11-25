@@ -176,6 +176,29 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
 4. Select **[!UICONTROL Create]** to save the schedule.
 
+### Understanding scheduled export behavior {#export-behavior}
+
+Scheduled exports include audience snapshot data plus any incremental profile or identity changes that occur between snapshot creation and export time. This differs from [on-demand exports](export-file-now.md), which use snapshot data only.
+
+The following table highlights how scheduled exports differ from on-demand exports, particularly in terms of data freshness and intended use:
+
+|  | Scheduled exports | Export file now |
+|--------|-------------------|-----------------|
+| **Data source** | Snapshot + incremental changes | Snapshot only |
+| **Profile attributes** | Current values at export time | Values at snapshot time |
+
+If profiles get updated after audience evaluation, scheduled exports will include the updated attribute values even though audience membership was determined at evaluation time.
+
+**Example**: An audience for "profiles where retailID is null" may export profiles with retailID populated if that field was updated *after* evaluation but *before* the scheduled export.
+
+**Recommendations**
+
+* Configure a [deduplication key](#deduplication-keys) to prevent duplicate records
+* Use on-demand exports for exact snapshot-based data
+* Align batch ingestion with evaluation schedules to minimize discrepancies
+
+For on-demand exports, see the documentation on [exporting files on-demand](/help/destinations/ui/export-file-now.md#scheduled-vs-ondemand).
+
 ### Export incremental files
 
 >[!CONTEXTUALHELP]
@@ -329,7 +352,11 @@ It is recommended that one of the attributes is a [unique identifier](../../dest
 >title="About deduplication keys"
 >abstract="Eliminate multiple records of the same profile in the export files by selecting a deduplication key. Select a single namespace or up to two XDM schema attributes as a deduplication key. Not selecting a deduplication key may lead to duplicate profile entries in the export files."
 
-A deduplication key is a user-defined primary key which determines the identity by which users want their profiles to be deduplicated.​
+>[!IMPORTANT]
+>
+>Always configure a deduplication key for scheduled exports. Without deduplication, you may see duplicate rows or conflicting segment membership for the same profile, because scheduled exports process both snapshot and incremental data.
+
+A deduplication key is a user-defined primary key that determines how profiles are deduplicated. When multiple records exist for the same individual, deduplication ensures only the latest record is exported.
 
 Deduplication keys eliminate the possibility of having multiple records of the same profile in one export file.
 
