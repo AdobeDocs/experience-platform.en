@@ -299,7 +299,7 @@ The following table describes the properties in the response.
 
 To create a record delete work order from CSV, TSV, or TXT files containing identifiers, you can use conversion scripts to produce the required JSON payloads for the `/workorder` endpoint. This approach is especially helpful when working with existing data files. For ready-to-use scripts and comprehensive instructions, visit the [csv-to-data-hygiene GitHub repository](https://github.com/perlmonger42/csv-to-data-hygiene).
 
-**Generate JSON payloads**
+### Generate JSON payloads
 
 The following bash script examples demonstrate how to run the conversion scripts in Python or Ruby:
 
@@ -352,13 +352,13 @@ The table below describes the parameters in the bash scripts.
 | `verbose`     | Enable verbose output. |
 | `column`      | The index (1-based) or header name of the column containing the identity values to delete. Defaults to the first column if not specified. |
 | `namespace`   | An object with a `code` property specifying the identity namespace (for example, "email"). |
-| `dataset-id`  | The unique identifier for the dataset associated with the work order. If the request applies to all datasets, this field will be set to ALL. |
+| `dataset-id`  | The unique identifier for the dataset associated with the work order. If the request applies to all datasets, this field will be set to `ALL`. |
 | `description` | A description of the record delete work order. |
 | `output-dir`  | The directory to write the output JSON payload. |
 
 {style="table-layout:auto"}
 
-A successful JSON payload converted from CSV, TSV, or TXT files contains the records associated with the specified namespace, for example email address.
+The example below shows a successful JSON payload converted from a CSV, TSV, or TXT file. It contains records associated with the specified namespace and is used to delete records identified by email addresses.
 
 ```json
 {
@@ -395,9 +395,9 @@ The following table describes the properties in the JSON payload.
 
 {style="table-layout:auto"}
 
-**Submit the generated JSON data to the `/workorder` endpoint**
+### Submit the generated JSON data to the `/workorder` endpoint
 
-For submission, please follow the guideline in the [create a record delete work order](#create) section. Make sure to use the converted JSON payload as the `-d` value when sending your `curl` POST request to the `/workorder` API endpoint.
+To submit a request, follow the instructions in the [create a record delete work order](#create) section. Make sure to use the converted JSON payload as the request body (`-d`) when sending your `curl` POST request to the `/workorder` API endpoint.
 
 ## Retrieve details for a specific record delete work order {#lookup}
 
