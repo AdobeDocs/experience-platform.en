@@ -1819,10 +1819,10 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
         "version": "1.0",
         "authSpec": [],
         "encryption": [],
-            "targetSpec": { // describes the target connection parameters
-                "name": "User based target",
-                "type": "UserNamespace",
-                "spec": {
+        "targetSpec": { // describes the target connection parameters
+            "name": "User based target",
+            "type": "UserNamespace",
+            "spec": {
                     "$schema": "http://json-schema.org/draft-07/schema#",
                     "type": "object",
                     "properties": {
