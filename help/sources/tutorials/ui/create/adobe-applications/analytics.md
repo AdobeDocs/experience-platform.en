@@ -49,7 +49,7 @@ You can ingest report suites from any region (United States, United Kingdom, or 
 
 Multiple in-bound connections can be made to bring multiple report suites into the same sandbox. If the report suites have differing schemas for variables (such as eVars or events), they should be mapped to specific fields in the custom field groups and avoid data conflicts using [Data Prep](../../../../../data-prep/ui/mapping.md). Report suites can only be added to a single sandbox.
 
-Select **[!UICONTROL Report suite]** and then use the *[!UICONTROL Analytics source add data]* interface to navigate through the list and identify the Analytics report suite that you want to ingest to Experience Platform. You can also search for a specific report suite. Select **[!UICONTROL Next]** to proceed.
+Select **[!UICONTROL Report suite]** and then use the *[!UICONTROL Analytics source add data]* interface to navigate through the list and identify the Analytics report suite that you want to ingest to Experience Platform. Alternatively, you can search for a specific report suite. Select **[!UICONTROL Next]** to proceed.
 
 ![An analytics report suite is selected for ingestion and the "Next" button is highlighted](../../../../images/tutorials/create/analytics/add-data.png)
 
