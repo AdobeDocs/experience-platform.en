@@ -1362,28 +1362,28 @@ The response is a filtered list of schemas, containing only those that satisfy b
 }
 ```
 
-## Validate your schema in the UI {#validate-in-ui}
+## Use the UI to validate your schema {#validate-in-ui}
 
-Use the Experience Platform UI to confirm that the schema you created through the [!DNL Schema Registry] API appears with the correct structure, properties, and identity configuration.
+Use the Experience Platform UI to validate that the schema you created through the [!DNL Schema Registry] API has the correct structure, properties, and identity configuration. Follow these steps:
 
 ### Locate your schema
 
-To begin, navigate to **[!UICONTROL Schemas]** > **[!UICONTROL Browse]** in the Experience Platform UI. Use the text input field to search for the schema by name (for example, `Campaign Member`) and select the schema name from the table.
+To begin, navigate to **[!UICONTROL Schemas]** > **[!UICONTROL Browse]**. Use the text input field to search for the schema name (for example,`Campaign Member`) and select the schema name from the table.
 
-![Schemas browse view showing a list of available schemas with the text input field highlighted.](../images/tutorials/create-schema/schemas-browse.png)
+![Schemas browse view with the text input field highlighted to search for and select your schema.](../images/tutorials/create-schema/schemas-browse.png)
 
 ### Confirm the schema structure
 
 The schema canvas displays the full structure of your schema. Verify that:
 
-* All standard field groups you added appear as expected.  
-* Your custom field group is present and correctly expanded in the structure.
+* All standard field groups that you added appear in the canvas.
+* Your custom field group appears in the structure and is expanded to show its fields.
 
-![Schema canvas showing field groups and structure.](../images/tutorials/create-schema/schema-canvas.png)
+![The schema canvas displaying the full schema structure with standard and custom field groups expanded.](../images/tutorials/create-schema/schema-canvas.png)
 
 ### Review schema properties
 
-Next, select the schema root node to open the **[!UICONTROL Schema properties]** panel to confirm key metadata:
+Next, select the schema root node to open the **[!UICONTROL Schema properties]** panel and confirm the key metadata:
 
 * Schema `$id`  
 * Display name  
@@ -1395,18 +1395,18 @@ The `$id` should match the value returned in your API response.
 >
 >The assigned class (**[!UICONTROL XDM Business Campaign Members]** in this example) is displayed in the left **[!UICONTROL Composition]** panel.
 
-![Schema editor view for the B2B Campaign Member schema with the class selector, schema tree, and schema properties description panel highlighted.](../images/tutorials/create-schema/review-schema-properties.png)
+![The Schema Editor view with the schema root selected and the Schema properties panel open to review key metadata.](../images/tutorials/create-schema/review-schema-properties.png)
 
 ### Validate identity fields
 
-Each identity field added to the schema is listed in the **[!UICONTROL Identities]** section of the **[!UICONTROL Composition]** panel. Select an identity field to display it's properties in the sidebar. For each identity field, confirm:
+Each identity field added to the schema is listed in the **[!UICONTROL Identities]** section of the **[!UICONTROL Composition]** panel. Select an identity field to display its properties in the right panel. For each identity field, confirm:
 
-* The correct identity namespace  
-* Whether the field is marked as the primary identity  
+* The identity namespace is correct.
+* The field is marked as the primary identity when applicable.
 
-![The Composition panel identities section and field properties identities info highlighted.](../../images/tutorials/create-schema-api/identitiy-confirmation.png)
+![Composition panel Identities section with an identity field selected and its identity properties shown in the right panel.](../../images/tutorials/create-schema-api/identitiy-confirmation.png)
 
-If the structure, properties, and identity configuration appear correctly, the schema has been successfully created and configured through the [!DNL Schema Registry] API.
+If the structure, properties, and identity configuration match your API configuration, you have successfully created and configured the schema through the [!DNL Schema Registry] API.
 
 ## Next steps
 
