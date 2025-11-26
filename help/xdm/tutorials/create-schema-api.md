@@ -1404,7 +1404,7 @@ Each identity field added to the schema is listed in the **[!UICONTROL Identitie
 * The identity namespace is correct.
 * The field is marked as the primary identity when applicable.
 
-![Composition panel Identities section with an identity field selected and its identity properties shown in the right panel.](../../images/tutorials/create-schema-api/identitiy-confirmation.png)
+![Composition panel Identities section with an identity field selected and its identity properties shown in the right panel.](../images/tutorials/create-schema/identitiy-confirmation.png)
 
 If the structure, properties, and identity configuration match your API configuration, you have successfully created and configured the schema through the [!DNL Schema Registry] API.
 
