@@ -87,7 +87,7 @@ The key's randomart image is:
 Next, run the following command while providing the file path of the private key, to encode your private key in [!DNL Base64]:
 
 ```shell
-C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\id_rsa" -Encoding byte)) > C:\Users\lucy\.ssh\id_rsa_base64
+C:\Users\lucy> [convert]::ToBase64String((Get-Content "C:\Users\lucy\.ssh\id_rsa" -AsByteStream)) > "C:\Users\lucy\.ssh\id_rsa_base64"
 ```
 
 The above command saves the [!DNL Base64]-encoded private key in the file path you designated. You can then use that private key to authenticate to [!DNL SFTP] and connect to Experience Platform.
