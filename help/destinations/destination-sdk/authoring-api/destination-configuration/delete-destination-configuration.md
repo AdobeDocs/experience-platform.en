@@ -17,7 +17,7 @@ Before continuing, please review the [getting started guide](../../getting-start
 
 ## Delete a destination configuration {#delete}
 
-You can delete an [existing](create-destination-configuration.md) destination server configuration by making a `DELETE` request to the `/authoring/destinations` endpoint with the `{INSTANCE_ID}`of the destination configuration that you want to delete.
+You can delete an [existing](create-destination-configuration.md) destination configuration by making a `DELETE` request to the `/authoring/destinations` endpoint with the `{INSTANCE_ID}`of the destination configuration that you want to delete.
 
 >[!TIP]
 >
