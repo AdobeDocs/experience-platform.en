@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;ABAC
 title: Manage Access Control Policies
-description: This document provides information on managing access control policies through the Permissions interface in Adobe Experience Cloud.
+description: Manage access control policies through the Permissions interface in Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
 ---
 # Manage access control policies

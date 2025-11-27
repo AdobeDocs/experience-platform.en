@@ -8,7 +8,7 @@ exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 
 You can use labels to categorize datasets and fields according to data usage and access control policies. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into Adobe Experience Platform, or as soon as data becomes available for use.
 
-Experience provides several core data usage labels which cover a wide variety of common restrictions applicable to data governance. For more information on these labels and the governance policies they represent, see the guide on [core data usage labels](../../../data-governance/labels/reference.md){target="_blank"}.
+Experience Platform provides several core data usage labels which cover a wide variety of common restrictions applicable to data governance. For more information on these labels and the governance policies they represent, see the guide on [core data usage labels](../../../data-governance/labels/reference.md){target="_blank"}.
 
 >[!NOTE]
 >
