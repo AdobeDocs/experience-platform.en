@@ -157,7 +157,7 @@ Experience Platform requires the private key to be [!DNL Base64]-encoded and pro
 
 ### Verify configurations
 
-Before creating the [!DNL Snowflake] source connection in Experience Platform, you must ensure that the user's **[!DNL Default Role]e** and **[!DNL Default Warehouse]** match the values that your provide in Experience Platform. You can verify these settings in the [!DNL Snowflake] UI using the `DESCRIBE USER {USERNAME}` SQL command.
+Before creating the [!DNL Snowflake] source connection in Experience Platform, you must ensure that the user's **[!DNL Default Role]** and **[!DNL Default Warehouse]** match the values that your provide in Experience Platform. You can verify these settings in the [!DNL Snowflake] UI using the `DESCRIBE USER {USERNAME}` SQL command.
 
 Alternatively, you can follow the steps below to verify your settings:
 
