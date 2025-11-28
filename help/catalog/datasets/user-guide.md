@@ -57,7 +57,7 @@ This user guide requires a working understanding of the following components of 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_enableforlookup_toggle"
 >title="Enable for lookup"
->abstract="Enabling a dataset for lookup allows you to leverage its data within Journey Optimizer personalization, Decisioning and journey orchestration capabilities."
+>abstract="Enable this dataset for lookup to use its data in Journey Optimizer for personalization, Decisioning, and journey orchestration."
 >additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Use Adobe Experience Platform data in Journey Optimizer"
 
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and the status of the most recent ingestion run.
