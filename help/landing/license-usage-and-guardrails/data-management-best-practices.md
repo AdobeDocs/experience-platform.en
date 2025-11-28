@@ -95,6 +95,28 @@ Data can be ingested into one or multiple systems in Experience Platform, namely
 >
 >Your access to the [!DNL data lake] can depend on the product SKU that you purchased. For more information on product SKUs, please speak with your Adobe representative.
 
+<!-- 
+### Profile enablement for lookup datasets
+
+When configuring datasets for lookup purposes, it is important to understand the distinction between lookup-enabled datasets and Profile-enabled datasets, as they serve different functions within Experience Platform:
+
+* **Lookup-enabled datasets**: Allow applications to retrieve reference data, for example for personalization and decisioning in [!DNL Journey Optimizer].
+* **Profile-enabled datasets**: Contribute attributes and events to unified customer profiles in Real-Time Customer Profile.
+
+**Recommendation:** Lookup datasets should typically not also be enabled for Profile. Enabling Profile on lookup datasets increases your profile richness without providing additional value for lookup operations, as these functions operate independently.
+
+**When to enable Profile:**
+
+* The dataset contains customer attributes that should be unified into customer profiles (for example, loyalty tier, preferences, account information).
+* The dataset contains experience events that contribute to customer behavior analysis and segmentation.
+
+**When NOT to enable Profile:**
+
+* The dataset contains reference data such as product catalogs, SKU details, store locations, or other non-customer data.
+* The dataset contains enrichment data used in lookups but not part of the customer identity.
+
+ -->
+
 ### What data to keep?
 
 You can apply both data ingestion filters and expiration rules to remove data that has become obsolete for your use cases. Typically, behavioral data (such as Analytics data) consumes significantly more storage than record data (such as CRM data). For example, many Experience Platform users have upwards of up to 90% of profiles being populated by behavioral data alone, in comparison to that of record data. Therefore, managing your behavioral data is critical in ensuring compliance within your license entitlements.
