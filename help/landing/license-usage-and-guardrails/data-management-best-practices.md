@@ -103,19 +103,20 @@ A lookup dataset is a dataset that you enable for lookup in Adobe Experience Pla
 When configuring datasets for lookup purposes, it is important to understand the distinction between lookup-enabled datasets and Profile-enabled datasets, as they serve different functions within Experience Platform:
 
 * **Lookup-enabled datasets**: Allow applications to retrieve reference data, for example for personalization and decisioning in [!DNL Journey Optimizer].
-* **Profile-enabled datasets**: Contribute attributes and events to unified customer profiles in Real-Time Customer Profile.
+* **Profile-enabled datasets**: Contribute attributes and events to unified customer profiles in Real-Time Customer Profile and make those fields available for segmentation and activation use cases.
 
-**Recommendation:** Lookup datasets should typically not also be enabled for Profile. Enabling Profile on lookup datasets increases your profile richness without providing additional value for lookup operations, as these functions operate independently.
+**Recommendation:** By default, lookup datasets should not also be enabled for Profile. Enabling Profile on lookup datasets increases your addressable audience and profile data volume, and is only necessary when you must use fields from that dataset in Real-Time Customer Profile (for example, for segmentation, activation, or multi-entity segmentation).
 
 **When to enable Profile:**
 
 * The dataset contains customer attributes that should be unified into customer profiles (for example, loyalty tier, preferences, account information).
 * The dataset contains experience events that contribute to customer behavior analysis and segmentation.
+* The dataset contains reference or enrichment attributes (for example, product, store, or account attributes) that you must use in audience definitions, multi-entity segmentation, or downstream activation.
 
 **When NOT to enable Profile:**
 
-* The dataset contains reference data such as product catalogs, SKU details, store locations, or other non-customer data.
-* The dataset contains enrichment data used in lookups but not part of the customer identity.
+* The dataset contains reference data such as product catalogs, SKU details, store locations, or other non-customer data, and you do not need these attributes in Real-Time Customer Profile for segmentation or activation (including multi-entity segmentation).
+* The dataset contains enrichment data used in lookups at run time but not required as part of the customer identity or in audience definitions.
 
  -->
 
