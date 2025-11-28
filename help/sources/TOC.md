@@ -392,7 +392,7 @@ role: Developer
   - [Error messages in sources](./errors/sources-errors.md)
   - [Error messages in Flow Service](./errors/flow-service-errors.md)
 - [Flow run notifications](notifications.md)
-- [IP address allow list](ip-address-allow-list.md)
+- [IP address allowlist](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

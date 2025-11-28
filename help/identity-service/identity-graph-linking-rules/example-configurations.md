@@ -401,6 +401,7 @@ Read this section for advanced implementations of [!DNL Identity Graph Linking R
 >[!NOTE]
 >
 >To complete the implementations below, you must create custom namespaces with the identity symbols (case sensitive) of:
+>
 >* `CRMID`
 >* `loginID`
 

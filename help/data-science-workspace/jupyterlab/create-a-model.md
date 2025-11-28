@@ -87,7 +87,7 @@ For the Luma propensity model notebook, the requirements do not need to be updat
 
 The configuration files, `training.conf` and `scoring.conf`, are used to specify the datasets you wish to use for training and scoring as well as adding hyperparameters. There are separate configurations for training and scoring. 
 
-In order for a model to run training, you must provide the `trainingDataSetId`, `ACP_DSW_TRAINING_XDM_SCHEMA`, and `tenantId`. Additionally for scoring, you must provide the `scoringDataSetId`, `tenantId`, and `scoringResultsDataSetId `.
+In order for a model to run training, you must provide the `trainingDataSetId`, `ACP_DSW_TRAINING_XDM_SCHEMA`, and `tenantId`. Additionally for scoring, you must provide the `scoringDataSetId`, `tenantId`, and `scoringResultsDataSetId`.
 
 To find the dataset and schema IDs, go to the data tab ![Data tab](../images/jupyterlab/create-recipe/dataset-tab.png) within notebooks on the left navigation bar (under the folder icon). Three different dataset ID's need to be provided. The `scoringResultsDataSetId` is used to store the model scoring results and should be an empty dataset. These datasets were made previously in the [Required assets](#assets) step.
 
