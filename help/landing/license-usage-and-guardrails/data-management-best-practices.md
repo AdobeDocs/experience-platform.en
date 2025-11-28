@@ -98,6 +98,8 @@ Data can be ingested into one or multiple systems in Experience Platform, namely
 <!-- 
 ### Profile enablement for lookup datasets
 
+A lookup dataset is a dataset that you enable for lookup in Adobe Experience Platform so that applications can use it as reference data at run time. Instead of primarily contributing profile attributes or events, lookup datasets store relatively static, keyed information such as product details, store metadata, or offer configurations. Experience Platform applications, such as [!DNL Journey Optimizer] and decisioning services, use these datasets to retrieve additional fields based on a key (for example, product ID or store ID) and enrich personalization, decisioning, and orchestration workflows.
+
 When configuring datasets for lookup purposes, it is important to understand the distinction between lookup-enabled datasets and Profile-enabled datasets, as they serve different functions within Experience Platform:
 
 * **Lookup-enabled datasets**: Allow applications to retrieve reference data, for example for personalization and decisioning in [!DNL Journey Optimizer].
