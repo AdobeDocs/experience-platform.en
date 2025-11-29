@@ -110,11 +110,11 @@ When you configure datasets for lookup purposes, you must understand the distinc
 
 >[!IMPORTANT]
 >
->Do not enable lookup datasets for Real-Time Customer Profile by default. Enabling Real-Time Customer Profile on a lookup dataset increases your addressable audience and profile data volume. Only enable Real-Time Customer Profile when you must use fields from that dataset in Real-Time Customer Profile (for example, for audience definitions, activation, or multi-entity segmentation). For more information, see the tutorial on [multi-entity segmentation](../../segmentation/tutorials/multi-entity-segmentation.md).
+>Do not enable lookup datasets for Real-Time Customer Profile by default. Enabling a lookup dataset for Real-Time Customer Profile increases your addressable audience and profile data volume. Only enable a lookup dataset for Real-Time Customer Profile when you must use fields from that dataset in Real-Time Customer Profile (for example, for audience definitions, activation, or multi-entity segmentation). For more information, see the tutorial on [multi-entity segmentation](../../segmentation/tutorials/multi-entity-segmentation.md).
 
 **When to enable datasets for Real-Time Customer Profile:**
 
-Enable Real-Time Customer Profile in the following cases:
+Enable a dataset for Real-Time Customer Profile in the following cases:
 
 * The dataset contains customer attributes that you need to unify into customer profiles (for example, loyalty tier, preferences, account information).
 * The dataset contains experience events that contribute to customer behavior analysis and segmentation.
@@ -122,7 +122,7 @@ Enable Real-Time Customer Profile in the following cases:
 
 **When NOT to enable datasets for Real-Time Customer Profile:**
 
-Avoid enabling Real-Time Customer Profile in the following cases:
+Avoid enabling a dataset for Real-Time Customer Profile in the following cases:
 
 * The dataset contains reference data such as product catalogs, SKU details, store locations, or other non-customer data, and you do not need these attributes in Real-Time Customer Profile for segmentation or activation, including multi-entity segmentation.
 * The dataset contains enrichment data that is only used in lookups at run time and is not required as part of the customer identity or in audience definitions.
