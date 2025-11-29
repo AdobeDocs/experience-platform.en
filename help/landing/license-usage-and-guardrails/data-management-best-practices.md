@@ -95,13 +95,13 @@ Data can be ingested into one or multiple systems in Experience Platform, namely
 >
 >Your access to the [!DNL data lake] can depend on the product SKU that you purchased. For more information on product SKUs, please speak with your Adobe representative.
 
-<!-- ... -->
-
 You must also decide when to enable datasets for [!DNL Real-Time Customer Profile] versus using them only as lookup datasets. The following guidance helps you make that decision without exceeding your license entitlements.
 
 #### Profile enablement for lookup datasets {#profile-enablement-lookup-datasets}
 
-A lookup dataset is a dataset that you enable for lookup in Experience Platform so that applications can use it as reference data at run time. You use lookup datasets to store relatively static, keyed information such as product details, store metadata, or offer configurations instead of primarily contributing profile attributes or events. Experience Platform applications such as [!DNL Journey Optimizer] and other decisioning applications use these datasets to retrieve additional fields based on a key (for example, product ID or store ID) and to enrich personalization, decisioning, and orchestration workflows. The way that you enable lookup datasets for Profile affects your addressable audience and profile data volume, so use the following guidance to stay within your licensing entitlements.
+A lookup dataset is a dataset that you enable for lookup in Experience Platform so that applications can use it as reference data at run time. You use lookup datasets to store relatively static, keyed information such as product details, store metadata, or offer configurations instead of primarily contributing profile attributes or events.
+
+Experience Platform applications such as [!DNL Journey Optimizer] and other decisioning applications use these datasets to retrieve additional fields based on a key (for example, product ID or store ID) and to enrich personalization, decisioning, and orchestration workflows. The way that you enable lookup datasets for Profile affects your addressable audience and profile data volume, so use the following guidance to stay within your licensing entitlements.
 
 When you configure datasets for lookup purposes, you must understand the distinction between lookup datasets and Profile-enabled datasets, as they serve different functions within Experience Platform:
 
@@ -120,8 +120,6 @@ When you configure datasets for lookup purposes, you must understand the distinc
 
 * Do not enable Profile when the dataset contains reference data such as product catalogs, SKU details, store locations, or other non-customer data, and you do not need these attributes in [!DNL Real-Time Customer Profile] for segmentation or activation, including multi-entity segmentation.
 * Do not enable Profile when the dataset contains enrichment data that is only used in lookups at run time and is not required as part of the customer identity or in audience definitions.
-
-<!-- ... -->
 
 ### What data to keep?
 
