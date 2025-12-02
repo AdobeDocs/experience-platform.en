@@ -14,7 +14,7 @@ Access control policies are statements that bring attributes together to establi
 
 ## Configure sandboxes for a policy {#configure-policy}
 
-Policies are applied at the sandbox level to control which sandboxes enforce label-based access control. By default, the **[!UICONTROL Auto-include]** feature is turned on, which means all current and future sandboxes are automatically added to the policy. When Auto-include is turned off, only the sandboxes you manually add will be subject to the policy's access control rules.
+Policies are applied at the sandbox level to control which sandboxes enforce label-based access control. By default, the **[!UICONTROL Auto-include]** feature is turned on, which means all current and future sandboxes are automatically added to the policy. When **[!UICONTROL Auto-include]** is turned off, only the sandboxes you manually add will be subject to the policy's access control rules.
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ To begin configuring a policy's sandboxes, navigate to **[!UICONTROL Permissions
 
 ![The policies workspace showing a list of existing policies.](../../images/ui/policies/policies-home.png){zoomable="yes"}
 
-The policy's details workspace will appear. Select the **[!UICONTROL Sandboxes]** tab to view the list of sandboxes associated with the policy and access the sandbox configuration options.
+The policy's details workspace appears. Select the **[!UICONTROL Sandboxes]** tab to view the list of sandboxes associated with the policy and access the sandbox configuration options.
 
 ![The policy's sandbox workspace showing a list of associated sandboxes.](../../images/ui/policies/policy-sandbox.png){zoomable="yes"}
 
@@ -34,11 +34,11 @@ The policy's details workspace will appear. Select the **[!UICONTROL Sandboxes]*
 >
 >By default, **[!UICONTROL Auto-include]** is turned on, which means all current and future sandboxes are automatically added to the policy.
 
-To control which sandboxes are included in a policy, you can toggle the **[!UICONTROL Auto-include]** feature on or off. When you toggle off Auto-include, future sandboxes will not be automatically added to the policy. However, toggling off the feature **will not** remove any sandboxes that are already included in the policy.
+To control which sandboxes are included in a policy, you can toggle the **[!UICONTROL Auto-include]** feature on or off. When you toggle off **[!UICONTROL Auto-include]**, future sandboxes will not be automatically added to the policy. However, toggling off the feature **will not** remove any sandboxes that are already included in the policy.
 
 ![The policy's sandbox tab with the Auto-include toggle highlighted and in the "off" state.](../../images/ui/policies/policy-auto-include.png){zoomable="yes"}
 
-To re-enable Auto-include, use the toggle to turn it back on. The **[!UICONTROL Enable Auto-include]** dialog appears prompting you to confirm your selection. Select **[!UICONTROL Enable]** to complete the configuration setting.
+To re-enable **[!UICONTROL Auto-include]**, use the toggle to turn it back on. The **[!UICONTROL Enable Auto-include]** dialog appears prompting you to confirm your selection. Select **[!UICONTROL Enable]** to complete the configuration setting.
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ To re-enable Auto-include, use the toggle to turn it back on. The **[!UICONTROL 
 
 ### Manually manage sandboxes {#manually-manage-sandboxes}
 
-When Auto-include is turned off, you can manually add or remove specific sandboxes from the policy. This gives you precise control over which sandboxes enforce the policy's access control rules.
+When **[!UICONTROL Auto-include]**is turned off, you can manually add or remove specific sandboxes from the policy. This gives you precise control over which sandboxes enforce the policy's access control rules.
 
 >[!NOTE]
 >
