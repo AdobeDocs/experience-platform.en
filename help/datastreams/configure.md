@@ -99,6 +99,10 @@ To reveal advanced configration options, select **[!UICONTROL Advanced Options]*
 
 From here, if you are configuring your datastream for Experience Platform, follow the tutorial on [Data Prep for Data Collection](./data-prep.md) to map your data to an Experience Platform event schema before returning to this guide. Otherwise, select **[!UICONTROL Save]** and continue to the next section.
 
+>[!NOTE]
+>
+>After saving changes to a datastream configuration, allow up to 35 minutes for changes to propagate across the Edge Network. During this propagation window, requests may still be served with the previous configuration.
+
 ## View datastream details {#view-details}
 
 After configuring a new datastream or selecting an existing one to view, the details page for that datastream appears. Here you can find further information about the datastream, including its ID.

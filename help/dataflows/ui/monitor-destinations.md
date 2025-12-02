@@ -76,6 +76,10 @@ A list of individual runs and their particular metrics is displayed, along with 
 - **[!UICONTROL Identities excluded]**:  The total number of profile identities that are skipped for activation based on missing attributes and consent violation.
 - **[!UICONTROL Identities failed]**: The total number of profile identities that are not activated to the destination due to errors.
 
+>[!NOTE]
+>
+>The totals for identities activated, excluded, and failed represent a sum of all individual dataflow run counts. Since dataflow runs have a time-to-live (TTL) of 90 days, these totals typically cover approximately the last 3 months. As older dataflow runs expire and are removed from the system, you may observe a decrease in the total counts displayed.
+
 ![Dataflow runs details for streaming destinations.](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
 
 Each individual dataflow run shows the following details:

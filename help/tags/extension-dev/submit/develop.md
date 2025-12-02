@@ -36,11 +36,7 @@ There are also a number of npm tools to help you with your extension package dev
 
 ## Example extensions
 
-There are example extensions on GitHub you can review or use as starter projects:
-
-* [Hello World example extension](https://github.com/adobe/reactor-helloworld-extension)
-* [Typekit example extension](https://github.com/jeffchasin/extension-typekit)
-* [Pinterest example extension](https://github.com/jeffchasin/extension-pinterest)
+You can review or use example extensions from GitHub, such as the [Hello World example extension](https://github.com/adobe/reactor-helloworld-extension), as starter projects.
 
 ## Slack workspace
 

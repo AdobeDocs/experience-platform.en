@@ -76,7 +76,7 @@ The output in all cases includes an access token, which is used by Experience Pl
 The system that Adobe has designed for OAuth 2 authorization:
 
 * Supports all three OAuth 2 grants while accounting for any variations in them, such as additional data fields, non-standard API calls, and more.
-* Supports access tokens with varying lifetime values, be it 90 days, 30 minutes, or any other lifetime value that you specify.
+* Supports access tokens with varying lifetime values. Adobe recommends that you set your token lifetime value to a minimum of 24 hours.
 * Supports OAuth 2 authorization flows with or without refresh tokens.
 
 ## OAuth 2 with Authorization Code {#authorization-code}
