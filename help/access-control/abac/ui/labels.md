@@ -6,9 +6,9 @@ exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 ---
 # Manage labels
 
-You can use labels to categorize datasets and fields according to data usage and access control policies. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into Adobe Experience Platform, or as soon as data becomes available for use.
+You can use labels to categorize datasets and fields according to data usage and attribute-based access control policies. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into Adobe Experience Platform, or as soon as data becomes available for use. Read this document to learn how you can manage labels in the Permissions UI.
 
-Experience Platform provides several core data usage labels which cover a wide variety of common restrictions applicable to data governance. For more information on these labels and the governance policies they represent, see the guide on [core data usage labels](../../../data-governance/labels/reference.md){target="_blank"}.
+For a comprehensive list of labels and their corresponding governance policies, read the guide on [core data usage labels](../../../data-governance/labels/reference.md){target="_blank"}.
 
 >[!NOTE]
 >
@@ -25,8 +25,8 @@ Labels are categorized by type and belong to one of the following categories:
 | Type | Description |
 | --- | --- |
 | [Contract](../../../data-governance/labels/reference.md#contract){target="_blank"} | This category is used to categorize data that has contractual obligations or is related to your organization's data governance policies. |
-| [Identity](../../../data-governance/labels/reference.md#identity){target="_blank"} | This category is used to categorize data that can identify or contact a specific person. |
-| [Sensitive](../../../data-governance/labels/reference.md#sensitive){target="_blank"} | This category is used to categorize data that you, and your organization, consider sensitive. |
+| [Identity](../../../data-governance/labels/reference.md#identity){target="_blank"} | This category is used to categorize data that can directly or indirectly identify a person. |
+| [Sensitive](../../../data-governance/labels/reference.md#sensitive){target="_blank"} | This category is used to categorize data that your organization considers sensitive. |
 | [Partner Ecosystem](../../../data-governance/labels/reference.md#partner){target="_blank"} | This category is used to categorize data obtained from sources external to your organization. |
 | Responsible Engagement | This category contains a single label, **[!UICONTROL Potential for Bias]**, which reflects data that has the potential to introduce bias. |
 | Custom | This category includes labels that are created by your organization. |
