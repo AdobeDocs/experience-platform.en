@@ -101,7 +101,7 @@ From here, if you are configuring your datastream for Experience Platform, follo
 
 >[!NOTE]
 >
->After saving changes to a datastream configuration, allow up to 5 minutes for changes to propagate across the Edge Network. During this propagation window, requests may still be served with the previous configuration.
+>After saving changes to a datastream configuration, allow up to 35 minutes for changes to propagate across the Edge Network. During this propagation window, requests may still be served with the previous configuration.
 
 ## View datastream details {#view-details}
 
