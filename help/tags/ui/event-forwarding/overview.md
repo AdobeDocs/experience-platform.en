@@ -18,13 +18,13 @@ Event forwarding in Adobe Experience Platform allows you to send collected event
 
 This document provides a high-level overview of event forwarding in Experience Platform.
 
-![Event forwarding in the data collection ecosystem.](../../../collection/images/home/event-forwarding.png)
+![Event forwarding in the data collection ecosystem.](/help/collection/assets/event-forwarding.png)
 
 >[!NOTE]
 >
->For information on how event forwarding fits within the data collection ecosystem in Experience Platform, see the [data collection overview](../../../collection/home.md).
+>For information on how event forwarding fits within the data collection ecosystem in Experience Platform, see the [data collection overview](/help/collection/home.md).
 
-Event forwarding combined with the Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) and [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) provides the following benefits:
+Event forwarding combined with the Adobe Experience Platform [Web SDK](/help/collection/js/js-overview.md) and [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) provides the following benefits:
 
 **Performance**:
 
@@ -83,7 +83,7 @@ You can view additional resources available to learn more about this feature by 
 
 ### Rules {#rules}
 
-Creating rules in event forwarding properties works in a similar way to tags, with the key difference being that you cannot select events as rule components. Instead, an event forwarding rule processes all events it receives from the [datastream](../../../datastreams/overview.md) and forwards those events to destinations if certain conditions are satisfied.
+Creating rules in event forwarding properties works in a similar way to tags, with the key difference being that you cannot select events as rule components. Instead, an event forwarding rule processes all events it receives from the [datastream](/help/datastreams/overview.md) and forwards those events to destinations if certain conditions are satisfied.
 
 In addition, there is a 30-second timeout that applies to a single event as it is processed across all rules (and hence all actions) within an event forwarding property. This means all rules and all actions for a single event must be completed in this time frame.
 
