@@ -10,6 +10,7 @@ The instructions on this page show you how to use a text editor to work in your 
 >[!TIP]
 >
 >Refer also to the supporting documentation in Adobe's contributor guide:
+>
 >* [Install Git and Markdown Authoring tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
 >* [Set up Git repository locally for documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
 >* [GitHub contribution workflow for major changes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
@@ -59,6 +60,7 @@ The instructions on this page show you how to use a text editor to work in your 
    ![Create pull request](../assets/docs-framework/ssd-create-pull-request-1.gif)
 
 1. Make sure that the base and compare branches are correct. Add a note to the PR, describing your update, and select **Create pull request**. This opens a PR to merge the working branch of your fork into the master branch of the Adobe repository.
+
    >[!TIP]
    >
    >Leave the **Allow edits by maintainers** checkbox selected so that the Adobe documentation team can make edits to the PR. 

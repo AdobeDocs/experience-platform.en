@@ -5,7 +5,12 @@ title: Intelligent Services Overview
 description: Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in Adobe Experience Cloud, Adobe Experience Platform, and 3rd party applications.
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
 ---
-# Intelligent Services overview
+# Intelligent Services overview {#intelligent-services-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_intelligentservices_home"
+>title="Intelligent Services Overview"
+>abstract=""
 
 Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform], and 3rd party applications.
 
@@ -41,7 +46,7 @@ The marketing analyst configures the desired predictions by specifying business 
 
 ### Predict
 
-After the models have finished training and scoring, the scores are written back into Platform.
+After the models have finished training and scoring, the scores are written back into Experience Platform.
 
 ### Take action 
 

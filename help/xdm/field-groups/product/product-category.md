@@ -1,6 +1,6 @@
 ---
 title: Product Category Schema Field Group
-description: This document provides an overview of the Product Category schema field group.
+description: Learn about the Product Category schema field group.
 exl-id: 80825bcf-e646-426b-a3d6-f6759f6cd5cf
 ---
 # [!UICONTROL Product Category] schema field group

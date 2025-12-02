@@ -5,7 +5,7 @@ title: Create and Edit Schemas in the UI
 description: Learn the basics of how to create and edit schemas in the Experience Platform user interface.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 ---
-# Create and edit schemas in the UI
+# Create and edit schemas in the UI {#create-edit-schemas-in-ui}
 
 This guide provides an overview of how to create, edit, and manage Experience Data Model (XDM) schemas for your organization in the Adobe Experience Platform UI.
 
@@ -15,23 +15,139 @@ This guide provides an overview of how to create, edit, and manage Experience Da
 >
 >For a full tour of the schema creation process, follow along with the [schema creation tutorial](../../tutorials/create-schema-ui.md) to create a complete example schema and familiarize yourself with the many capabilities of the [!DNL Schema Editor].
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) for an overview of how schemas are constructed.
 
 ## Create a new schema {#create}
 
+In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner. The 'Select schema type' dropdown menu appears with options for [!UICONTROL Standard] or [!UICONTROL Relational] schemas.
+
+![The Schemas workspace with [!UICONTROL Create Schema] highlighted and the 'Select schema type' dropdown displayed](../../images/ui/resources/schemas/create-schema.png).
+
+## Create a relational schema {#create-relational-schema}
+
+>[!AVAILABILITY]
+>
+>Data Mirror and relational schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
+
 >[!NOTE]
 >
->This section covers how to manually create a new schema in the UI. If you are ingesting CSV data into Platform, you can opt to [map that data to an XDM schema created by AI-generated recommendations](../../../ingestion/tutorials/map-csv/recommendations.md) (currently in beta) without having to manually create the schema yourself.
+>Relational schemas were previously referred to as model-based schemas in earlier versions of Adobe Experience Platform documentation.
 
-In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner.
+Select **[!UICONTROL Relational]** to define structured, relational-style schemas with fine-grained control over records. Relational schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture, and support multiple data models used in Campaign Orchestration, Data Distiller, and B2B implementations.
 
-![The Schemas workspace with [!UICONTROL Create Schema] highlighted.](../../images/ui/resources/schemas/create-schema.png)
+To learn more, see the [Data Mirror](../../data-mirror/overview.md) or [Relational schema](../../schema/relational.md) overview.
 
-The [!UICONTROL Create schema] workflow appears. You can choose a base class for the schema by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice. See the [XDM individual profile](../../classes/individual-profile.md) and [XDM ExperienceEvent](../../classes/experienceevent.md) documentation for more information on these classes.
+### Create manually {#create-manually}
+
+>[!AVAILABILITY]
+>
+>DDL file upload is only available for Adobe Journey Optimizer Orchestrated campaign license holders. Your UI may appear differently.
+
+The **[!UICONTROL Create a relational schema]** dialog appears. You can choose either **[!UICONTROL Create manually]** or [**[!UICONTROL Upload DDL file]**](#upload-ddl-file) to define the schema structure.
+
+In the **[!UICONTROL Create a relational schema]** dialog, select **[!UICONTROL Create manually]**, then select **[!UICONTROL Next]**.
+   
+![The Create a relational schema dialog with Create manually selected and Next highlighted.](../../images/ui/resources/schemas/relational-dialog.png)
+
+The **[!UICONTROL Relational schema details]** page appears. Enter a schema display name and an optional description, then select **[!UICONTROL Finish]** to create the schema.
+   
+![The relational schema details view with [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/relational-details.png)
+
+The Schema Editor opens with an empty canvas for defining the schema structure. You can add fields as usual.
+
+#### Add a version identifier field {#add-version-identifier}
+
+To enable version tracking and support change data capture, you must designate a version identifier field in your schema. In the Schema Editor, select the plus (![A plus icon.](/help/images/icons/plus.png)) icon next to the schema name to add a new field.
+
+Enter a field name such as `updateSequence`, and choose a data type of **[!UICONTROL DateTime]** or **[!UICONTROL Number]**.
+
+In the right rail, enable the **[!UICONTROL Version Identifier]** checkbox, then select **[!UICONTROL Apply]** to confirm the field.
+
+![The Schema Editor with a DateTime field named `updateSequence` added and the Version Identifier checkbox selected.](../../images/ui/resources/schemas/add-version-identifier.png)
+
+>[!IMPORTANT]
+>
+>A relational schema must include a version identifier field to support record-level updates and change data capture ingestion.
+
+To define relationships, select **[!UICONTROL Add Relationship]** in the Schema Editor to create schema-level primary/foreign key relationships. See the tutorial on [adding schema-level relationships](../../tutorials/relationship-ui.md#relationship-field) for more information.
+
+Next, proceed to [define primary keys](../fields/identity.md#define-a-identity-field), and [add additional fields](#add-field-groups) as needed. For guidance on how to enable change data capture in Experience Platform Sources, see the [change data capture ingestion guide](../../../sources/tutorials/api/change-data-capture.md).
+
+>[!NOTE]
+>
+>Once saved, the [!UICONTROL Type] field in the [!UICONTROL  Schema properties] sidebar indicates this is a [!UICONTROL Relational] schema. This is also indicated in the details sidebar in the schema inventory view.
+>![The Schema Editor canvas showing an empty relational schema structure with relational type highlighted.](../../images/ui/resources/schemas/relational-empty-canvas.png)
+
+### Upload a DDL file {#upload-ddl-file}
+
+>[!AVAILABILITY]
+>
+>DDL file upload is only available for Adobe Journey Optimizer Orchestrated campaign license holders.
+
+Use this workflow to define the schema by uploading a DDL file. In the **[!UICONTROL Create a relational schema]** dialog, select **[!UICONTROL Upload DDL file]**, then either drag a local DDL file from your system or select **[!UICONTROL Choose files]**. Experience Platform validates the schema and displays a green checkmark if the file upload is successful. Select **[!UICONTROL Next]** to confirm the upload.
+
+![The Create a relational schema dialog with [!UICONTROL Upload DDL file] selected and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/upload-ddl-file.png)
+
+The [!UICONTROL Select entities and fields to import] dialog appears, allowing you to preview the schema. Review the schema structure, and use the radio buttons and checkboxes to ensure that each entity has a primary key and version identifier specified.
+
+>[!IMPORTANT]
+>
+>The table structure must contain a **primary key** and a **version identifier**, such as a `updateSequence` field of type datetime or number.
+>
+>For change data capture ingestion, a special column named `_change_request_type` of type String is also required to enable incremental processing. This field indicates the type of data change (for example,  `u` (upsert) or `d` (delete)).
+
+Although required during ingestion, control columns like `_change_request_type` are not stored in the schema and do not appear in the final schema structure. If everything looks correct, select **[!UICONTROL Done]** to create the schema.
+
+>[!NOTE]
+>
+>The maximum supported file size for a DDL upload is 10MB.
+
+![The Relational schema review view with imported fields shown and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/entities-and-files-to-inport.png)
+
+
+The schema opens in the Schema Editor, where you can adjust the structure before saving.
+
+Next, proceed to [add additional fields](#add-field-groups), and [add additional schema-level relationships](../../tutorials/relationship-ui.md#relationship-field) as needed.
+
+For guidance on how to enable change data capture in Experience Platform Sources, see the [change data capture ingestion guide](../../../sources/tutorials/api/change-data-capture.md).
+
+## Standard schema creation {#standard-based-creation}
+
+If you select 'Standard schema type from the 'Select schema type' dropdown menu, the [!UICONTROL Create a schema] dialog appears. In this dialog, you can choose to either manually create a schema by adding fields and field groups, or you can upload a CSV file and use ML algorithms to generate a schema. Select a schema creation workflow from the dialog.
+
+![The Create a schema dialog with the workflow options and select highlighted.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
+
+### [!BADGE Beta]{type=Informative} Manual or ML-assisted schema creation {#manual-or-assisted}
+
+To learn how you can use a ML algorithm to recommend a schema structure based on a csv file, see the [machine learning-assisted schema creation guide](../ml-assisted-schema-creation.md). This UI guide focusses on the manual creation workflow. 
+
+### Manual schema creation {#manual-creation}
+
+The [!UICONTROL Create schema] workflow appears. You can choose a base class for the schema by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice. See the [[!UICONTROL XDM individual profile]](../../classes/individual-profile.md) and [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) documentation for more information on these classes.
 
 ![The [!UICONTROL Create schema] workflow with the three class options and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/schema-class-options.png)
+
+When choosing **[!UICONTROL Other]**, a list of available classes appears. From here you can browse and filter pre-existing classes.
+
+![The [!UICONTROL Create schema] workflow with [!UICONTROL Other] highlighted in the [!UICONTROL Schema details] section.](../../images/ui/resources/schemas/other-schema-details.png)
+
+Select a radio button to filter the classes based on whether they are custom or standard classes. You can also filter the available results based on their industry, or search for a specific class using the search field.
+
+![The [!UICONTROL Create schema] workflow with the search bar, [!UICONTROL Custom], and [!UICONTROL Industries] highlighted.](../../images/ui/resources/schemas/filter-and-search.png)
+
+To help you decide on the appropriate class, there are info and preview icons for each class. The info icon (![An info icon.](/help/images/icons/info.png)) opens a dialog that provides a description of the class and the industry that it is associated with. 
+
+![The info icon and tooltip of the selected class highlighted.](../../images/ui/resources/schemas/class-info.png)
+
+The preview icon (![An preview icon.](/help/images/icons/preview.png)) opens a preview dialog for the class that contains a schema diagram and its properties.
+
+![A preview of the selected class with the schema diagram and class properties.](../../images/ui/resources/schemas/class-preview.png)
+
+Select any row to choose a class, then select **[!UICONTROL Next]** to confirm your choice.
+
+![The [!UICONTROL Create schema] workflow with a class selected from the table of available classes and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/select-class.png)
 
 After you have selected a class, the [!UICONTROL Name and review] section appears. In this section, you provide a name and description to identify your schema. ​The schema's base structure (provided by the class) is shown in the canvas for you to review and verify your selected class and schema structure.
 
@@ -39,9 +155,9 @@ Enter a human-friendly [!UICONTROL Schema display name] in the text field. Next,
 
 ![The [!UICONTROL Name and review] section of the [!UICONTROL Create schema] workflow with the [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/name-and-review.png)
 
-The [!UICONTROL Schema] [!UICONTROL Browse] tab appears. Your recently created schema is now listed in the Schema Library and available to edit in the the [!DNL Schema Editor].
+The Schema Editor appears, with the schema's structure shown in the canvas. If desired, you can now start [adding fields to the class](../../ui/resources/classes.md#add-fields).
 
-![The Schemas workspace Browse tab displaying your recently created schema.](../../images/ui/resources/schemas/example-schema.png)
+![The Schema Editor with the schema's structure shown in the canvas.](../../images/ui/resources/schemas/edit.png)
 
 ## Edit an existing schema {#edit}
 
@@ -111,7 +227,7 @@ Select the checkbox next to the name of the field group that you wish to add to 
 
 >[!TIP]
 >
->For any listed field group, you can hover or focus on the information icon (![](../../images/ui/resources/schemas/info-icon.png)) to view a brief description of the kind of data the field group captures. You can also select the preview icon (![](../../images/ui/resources/schemas/preview-icon.png)) to view the structure of the fields that the field group provides before you decide to add it to the schema.
+>For any listed field group, you can hover or focus on the information icon (![info icon](/help/images/icons/info.png)) to view a brief description of the kind of data the field group captures. You can also select the preview icon (![preview icon](/help/images/icons/preview.png)) to view the structure of the fields that the field group provides before you decide to add it to the schema.
 
 Once you have chosen your field groups, select **[!UICONTROL Add field groups]** to add them to the schema.
 
@@ -121,31 +237,53 @@ The [!DNL Schema Editor] reappears with the field-group-provided fields represen
 
 ![The [!DNL Schema Editor] with an example schema displayed.](../../images/ui/resources/schemas/field-groups-added.png)
 
+>[!NOTE] 
+>
+>Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon ![A padlock icon.](/help/images/icons/lock-closed.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
+>
+>![The Schema Editor with the padlock icon highlighted](../../images/ui/explore/schema-editor-padlock-icon.png)
+
 After adding a field group to a schema, you can optionally [remove existing fields](#remove-fields) or [add new custom fields](#add-fields) to those groups, depending on your needs.
 
 ### Remove fields added from field groups {#remove-fields}
 
-After you have added a field group to a schema, you can remove any fields that you do not need. 
+Once you've added a field group to a schema, you can either remove fields globally from the field group or hide them locally from the current schema. Understanding the difference between these actions is critical to avoid unintended schema changes.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Removing fields from a field group only affects the schema being worked on and does not affect the field group itself. If you remove fields in one schema, those fields are still available in all other schemas that employ the same field group.
+>Selecting **[!UICONTROL Remove]** deletes the field from the field group itself, affecting *all* schemas that use that field group.
+>Do not use this option unless you want to **remove the field from every schema that includes the field group**.
 
-In the following example, the standard field group **[!UICONTROL Demographic Details]** has been added to a schema. To remove a single field such as `taxId`, select the field in the canvas and then select **[!UICONTROL Remove]** in the right rail.
+To delete a field from the field group, select it in the canvas and select **[!UICONTROL Remove]** in the right rail. This example shows the `taxId` field from the **[!UICONTROL Demographic Details]** group.
 
 ![The [!DNL Schema Editor] with [!UICONTROL Remove] highlighted. This action removes a single field.](../../images/ui/resources/schemas/remove-single-field.png)
 
-If there are multiple fields you wish to remove, you can manage the field group as a whole. Select a field belonging to the group in the canvas, then select **[!UICONTROL Manage related fields]** in the right rail.
+To hide multiple fields from a schema without removing them from the field group itself, use the **[!UICONTROL Manage related fields]** option. Select any field from the group in the canvas, then select **[!UICONTROL Manage related fields]** in the right rail.
 
 ![The [!DNL Schema Editor] with [!UICONTROL Manage related fields] highlighted.](../../images/ui/resources/schemas/manage-related-fields.png)
 
-A dialog appears showing the structure of the field group in question. From here you can use the provided checkboxes to select or deselect the fields that you require. When you are satisfied, select **[!UICONTROL Confirm]**.
+A dialog appears showing the structure of the field group. Use the checkboxes to select or deselect the fields you want to include. 
 
 ![The [!UICONTROL Manage related fields] dialog with selected fields and [!UICONTROL Confirm] highlighted.](../../images/ui/resources/schemas/select-fields.png)
 
-The canvas reappears with only the selected fields present in the schema structure.
+Select **[!UICONTROL Confirm]** to update the canvas and reflect your selected fields.
+
 
 ![Fields added](../../images/ui/resources/schemas/fields-added.png)
+
+### Field behavior when removing or deprecating fields {#field-removal-deprecation-behavior}
+
+Use the table below to understand the scope of each action.
+
+| Action                   | Applies to current schema only | Modifies field group | Affects other schemas | Description |
+|--------------------------|--------------------------------|----------------------|-----------------------|-------------|
+| **Remove field**         | No                             | Yes                  | Yes                    | Deletes the field from the field group. This removes it from all schemas using that group. |
+| **Manage related fields**| Yes                            | No                   | No                     | Hides fields from the current schema only. The field group remains unchanged. |
+| **Deprecate field**      | No                             | Yes                  | Yes                    | Marks the field as deprecated in the field group. It is no longer available for use in any schema. |
+
+>[!NOTE]
+>
+>This behavior is consistent across both record-based and event-based schemas.
 
 ### Add custom fields to field groups {#add-fields}
 
@@ -177,7 +315,7 @@ Under **[!UICONTROL Field name]**, start typing the name of the field you wish t
 
 While some standard fields share the same name, their structure may vary depending on the field group they come from. If a standard field is nested within a parent object in the field group structure, the parent field will also be included in the schema if the child field is added.
 
-Select the preview icon (![Preview icon](../../images/ui/resources/schemas/preview-icon.png)) next to a standard field to view the structure of its field group and better understand how it might be nested. To add the standard field to the schema, select the plus icon (![Plus icon](../../images/ui/resources/schemas/add-icon.png)).
+Select the preview icon (![Preview icon](/help/images/icons/preview.png)) next to a standard field to view the structure of its field group and better understand how it might be nested. To add the standard field to the schema, select the plus icon (![Plus icon](/help/images/icons/add-circle.png)).
 
 ![Add standard field](../../images/ui/resources/schemas/add-standard-field.png)
 
@@ -300,7 +438,7 @@ To finish the process, select **[!UICONTROL Save]** to save the schema.
 
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
-The schema is now enabled for use in Real-Time Customer Profile. When Platform ingests data into datasets based on this schema, that data will be incorporated into your amalgamated Profile data.
+The schema is now enabled for use in Real-Time Customer Profile. When Experience Platform ingests data into datasets based on this schema, that data will be incorporated into your amalgamated Profile data.
 
 ## Edit display names for schema fields {#display-names}
 
@@ -312,7 +450,7 @@ Once you have assigned a class and added field groups to a schema, you can edit 
 >
 >Once you make changes the display names for a schema's fields, those changes are immediately reflected in any existing datasets based on that schema.
 
-To edit the display name of a schema field, select the field in the canvas. In the right rail, provide the new name under **[!UICONTROL Display name]**.
+Change the field names to the display names by toggling on **[!UICONTROL Show display names for fields]**. To edit the display name of a schema field, select the field in the canvas. In the right rail, provide the new name under **[!UICONTROL Display name]**.
 
 ![](../../images/ui/resources/schemas/display-name.png)
 
@@ -344,9 +482,9 @@ A new dialog opens, asking you to confirm that you wish to assign a new class. S
 
 After confirming the class change, the canvas will be reset and all composition progress will be lost.
 
-## Next steps
+## Next steps {#next-steps}
 
-This document covered the basics of creating and editing schemas in the Platform UI. It is strongly recommended that you review the [schema creation tutorial](../../tutorials/create-schema-ui.md) for a comprehensive workflow for building a complete schema in the UI, including creating custom field groups and data types for unique use cases.
+This document covered the basics of creating and editing schemas in the Experience Platform UI. It is strongly recommended that you review the [schema creation tutorial](../../tutorials/create-schema-ui.md) for a comprehensive workflow for building a complete schema in the UI, including creating custom field groups and data types for unique use cases.
 
 For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
 

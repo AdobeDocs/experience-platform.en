@@ -8,7 +8,7 @@ exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
 
 ## Overview {#overview}
 
-This document provides answers to frequently asked questions about Adobe Experience Platform destinations. For questions and troubleshooting related to other [!DNL Platform] services, including those encountered across all [!DNL Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about Adobe Experience Platform destinations. For questions and troubleshooting related to other [!DNL Experience Platform] services, including those encountered across all [!DNL Experience Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
 ## General destinations questions {#general}
 
@@ -43,6 +43,15 @@ You re-activate the updated audience to the same destination, but since there is
 To ensure all the profiles are sent to your destination, you must create a new audience with the new configuration, and then activate it to your destination.
 
 +++
+
+### When an audience is removed from a destination, is there any signal that is sent to the destination indicating that the audience is removed?
+
++++Answer
+
+No, there is no dependency between the Experience Platform destination and the customer instance of the target system. On the receiving side, the only indication that the target system would see is that it stopped receiving that audience data.
+
++++
+
 <!--
 ## [!DNL Experience Cloud Audiences] {#eca-faq}
 
@@ -95,7 +104,7 @@ No. As this is not a pixel-based integration, there is no need to add any pixels
 ### How long does Facebook take to process information from Adobe Experience Platform?
 
 +++Answer
-As of March 2021, [!DNL Facebook Custom Audiences] needs up to an hour to process information received from [!DNL Platform].
+As of March 2021, [!DNL Facebook Custom Audiences] needs up to an hour to process information received from [!DNL Experience Platform].
 +++
 
 ### Can I use [!DNL Facebook Custom Audiences] for audience targeting in other [!DNL Facebook] apps, like [!DNL Instagram]?
@@ -107,9 +116,9 @@ You can use the [!DNL Facebook Custom Audiences] destination for audience target
 ### What is the difference between the [!DNL Facebook Custom Audiences] connection and [!DNL Facebook Pixel] extension?
 
 +++Answer
-The [!DNL Facebook Custom Audiences] connection uses [!DNL Platform] identities when sending audiences to [!DNL Facebook], while the [[!DNL Facebook Pixel] connection](../destinations/catalog/advertising/facebook-pixel.md) uses the [!DNL Facebook] pixel integrated in a website.
+The [!DNL Facebook Custom Audiences] connection uses [!DNL Experience Platform] identities when sending audiences to [!DNL Facebook], while the [[!DNL Facebook Pixel] connection](../destinations/catalog/advertising/facebook-pixel.md) uses the [!DNL Facebook] pixel integrated in a website.
 
-These two integrations are complementary; you can use both to ensure better audience coverage. As an example, you can use the [!DNL Facebook Pixel] extension for prospecting website visitors who have not created an account, whereas [!DNL Facebook Custom Audiences] can help you target existing customers, based on [!DNL Platform] identities.
+These two integrations are complementary; you can use both to ensure better audience coverage. As an example, you can use the [!DNL Facebook Pixel] extension for prospecting website visitors who have not created an account, whereas [!DNL Facebook Custom Audiences] can help you target existing customers, based on [!DNL Experience Platform] identities.
 +++
 
 ### Does the Adobe Experience Platform integration with [!DNL Facebook Custom Audiences] support disqualifying users from an audience when they no longer qualify for it?**
@@ -132,10 +141,10 @@ For detailed explanations on the ID matching requirements, see [ID matching requ
 [!DNL Facebook Custom Audiences] supports the activation of the following identities: hashed emails, hashed phone numbers, [!DNL GAID], [!DNL IDFA], and custom external IDs.
 +++
 
-### Can I create multiple Facebook destinations in the Platform UI for separate Facebook accounts?
+### Can I create multiple Facebook destinations in the Experience Platform UI for separate Facebook accounts?
 
 +++Answer
-Yes. A Facebook destination in Experience Platform is 1:1 to an ad account in Facebook. You can create a separate Facebook destination for each Facebook ad account in your company. Follow the [destination connection tutorial](/help/destinations/ui/connect-destination.md) and connect to a separate Facebook account for each new Facebook destination in the Platform UI. There is no limit on the number of Facebook ad accounts that you can connect to.
+Yes. A Facebook destination in Experience Platform is 1:1 to an ad account in Facebook. You can create a separate Facebook destination for each Facebook ad account in your company. Follow the [destination connection tutorial](/help/destinations/ui/connect-destination.md) and connect to a separate Facebook account for each new Facebook destination in the Experience Platform UI. There is no limit on the number of Facebook ad accounts that you can connect to.
 +++
 
 ## Google Customer Match {#google-customer-match}
@@ -182,11 +191,11 @@ For detailed explanations on the ID matching requirements, see [ID matching requ
 ### Do I need to use the Experience Platform Web SDK to send audiences and attributes to Adobe Target?
 
 +++Answer
-No, [Web SDK](../edge/home.md) is not required to activate audiences to [Adobe Target](catalog/personalization/adobe-target-connection.md).
+No, the Web SDK is not required to activate audiences to [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
 However, if [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) is used instead of Web SDK, only next-session personalization is supported.
 
-For [same-page and next-page personalization](ui/activate-edge-personalization-destinations.md) use cases, you must use either [Web SDK](../edge/home.md) or the [Edge Network Server API](../server-api/overview.md). See the documentation on [activating audiences to edge destinations](ui/activate-edge-personalization-destinations.md) for more implementation details.
+For [same-page and next-page personalization](ui/activate-edge-personalization-destinations.md) use cases, you must use either Web SDK or the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/). See the documentation on [activating audiences to edge destinations](ui/activate-edge-personalization-destinations.md) for more implementation details.
 +++
 
 ### Is there a limit on the number of attributes that I can send from Real-time Customer Data Platform to Adobe Target or a Custom Personalization destination?
@@ -208,7 +217,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### After I create an audience in Experience Platform, how long will it take for that audience to be available for edge segmentation use cases?
 
 +++Answer
-Audience definitions are propagated to the [Edge Network](../edge/home.md) in up to one hour. However, if an audience is activated within this first hour, some visitors who would have qualified for the audience could be missed. 
+Audience definitions are propagated to the Edge Network in up to one hour. However, if an audience is activated within this first hour, some visitors who would have qualified for the audience could be missed. 
 +++
 
 ### Where can I see the activated attributes in Adobe Target?
@@ -229,10 +238,10 @@ This is currently not supported through the Destinations UI. If you need assista
 When you delete a destination, all audiences and attributes mapped under the destination are deleted from Adobe Target and they are also removed from the Edge Network.
 +++
 
-### Does the integration work using the Edge Network Server API?
+### Does the integration work using the Edge Network API?
 
 +++Answer
-Yes, the Edge Network Server API works with the Custom Personalization destination. Since profile attributes may contain sensitive data, in order to protect this data, the Custom Personalization destination requires you to use the Edge Network Server API for data collection. Furthermore, all API calls must be made in an [authenticated context](../server-api/authentication.md).
+Yes, the Edge Network API works with the Custom Personalization destination. Since profile attributes may contain sensitive data, in order to protect this data, the Custom Personalization destination requires you to use the Edge Network API for data collection. Furthermore, all API calls must be made in an [authenticated context](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/).
 +++
 
 ### I can only have one merge policy that is active-on-edge. Can I build audiences that use a different merge policy and still send them to Adobe Target as streaming audiences?

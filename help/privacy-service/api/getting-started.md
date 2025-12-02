@@ -1,6 +1,7 @@
 ---
 title: Authenticate and access the Privacy Service API
 description: Learn how to authenticate to the Privacy Service API and how to interpret example API calls in the documentation.
+role: Developer
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 ---
 # Authenticate and access the Privacy Service API
@@ -93,7 +94,7 @@ You can also use a Postman environment and collection to generate access tokens.
 
 ## Reading sample API calls {#read-sample-api-calls}
 
-Each endpoint guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/api-guide.md#sample-api) in the getting started guide for Platform APIs.
+Each endpoint guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/api-guide.md#sample-api) in the getting started guide for Experience Platform APIs.
 
 ## Next steps {#next-steps}
 

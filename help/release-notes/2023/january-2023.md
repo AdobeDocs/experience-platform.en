@@ -133,7 +133,7 @@ XDM is an open-source specification that provides common structures and definiti
 | --- | --- | --- |
 | Class | [[!UICONTROL Conversion]](https://github.com/adobe/xdm/blob/master/components/classes/conversion.schema.json) | A class for tracking conversion data like currency conversions. |
 | Field group | [[!UICONTROL Currency Conversion Rate Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/conversion/currency-conversion-details.schema.json) | A field group for the [!UICONTROL Conversion] class, capturing additional details related to currency conversion. |
-| Field group | [[!UICONTROL Consent policies evaluation results map with metadata]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.jsonn) | Captures details for the evaluation result of multiple consent policies, including metadata information about consent policy entrances and exists. |
+| Field group | [[!UICONTROL Consent policies evaluation results map with metadata]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.json) | Captures details for the evaluation result of multiple consent policies, including metadata information about consent policy entrances and exists. |
 
 **Updated XDM components**
 
@@ -143,7 +143,7 @@ XDM is an open-source specification that provides common structures and definiti
 | Data type | [[!UICONTROL Decision Proposition Details]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-detail.schema.json) | Added a `selectionStrategy` field which captures the details of a selection strategy. |
 | Field group | [[!UICONTROL Experience Event - Proposition Interactions]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/experienceevent-proposition-interaction.schema.json) | The field group is now compatible with the [!UICONTROL Journey Step Event] class. |
 | Data type | [[!UICONTROL Error details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | The `ID` field has been renamed to `name`. |
-| Data type | [[!UICONTROL Media information]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Reverted a change in pattern to the video segment property. |
+| Data type | [[!UICONTROL Media information]](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/media.schema.json) | Reverted a change in pattern to the video segment property. |
 | Data type | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Removed the `droppedFrameCount` field. |
 | Data type | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Renamed the `isAuthorized` field to `authorized`, and updated its `type` to a string when it was previously a Boolean. |
 | Data type | [[!UICONTROL Shipping]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Added several new fields: `shipDate`, `trackingNumber`, and `trackingURL`. |
@@ -157,7 +157,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 {style="table-layout:auto"}
 
-For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
+For more information on XDM in Experience Platform, see the [XDM System overview](../../xdm/home.md).
 
 ## Real-Time Customer Profile {#profile}
 
@@ -169,7 +169,7 @@ In order to remove redundancy in the segment membership lifecycle, the `Existing
 
 Post deprecation, profiles qualified in a segment will be represented as `Realized` and profiles disqualified will continue to be represented as `Exited`. This will bring parity with file-based destinations with `Active` and `Expired` segment statuses. 
 
-This change could impact you if you're using [enterprise destinations](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API) and have automated downstream processes in place, based on the `Existing` status. Please review your downstream integrations if this is the case for you. If you are interested in identifying newly qualified profiles beyond a certain time, please consider using a combination of the `Realized` status and the `lastQualificationTime` in your segment membership map. For more information, please reach out to your Adobe representative.
+This change could impact you if you're using [enterprise destinations](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Azure Event Hubs, HTTP API) and have automated downstream processes in place, based on the `Existing` status. Please review your downstream integrations if this is the case for you. If you are interested in identifying newly qualified profiles beyond a certain time, please consider using a combination of the `Realized` status and the `lastQualificationTime` in your segment membership map. For more information, please reach out to your Adobe representative.
 
 To learn more about Real-Time Customer Profile, including tutorials and best practices for working with profile data, please begin by reading the [Real-Time Customer Profile overview](../../profile/home.md).
 
@@ -183,7 +183,7 @@ To learn more about Real-Time Customer Profile, including tutorials and best pra
 | ------- | ----------- |
 | Bulk value import in Segment Builder | Segment Builder now supports importing multiple values, either by uploading a CSV or TSV file or by manually inserting comma separated values. More information can be found within the [Segment Builder guide](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 | External audience membership expiration | By default, external audience memberships are retained for 30 days. To retain them for longer, use the `validUntil` field during the ingestion of audience data. |
-| Platform-generated segment membership expiration | Any segment membership that is in the `Exited` state for more than 30 days, based on the `lastQualificationTime` field will be subject to deletion. |
+| Experience Platform-generated segment membership expiration | Any segment membership that is in the `Exited` state for more than 30 days, based on the `lastQualificationTime` field will be subject to deletion. |
 
 {style="table-layout:auto"}
 
@@ -191,7 +191,7 @@ For more information on [!DNL Segmentation Service], please see the [Segmentatio
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources and allows you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources and allows you to structure, label, and enhance that data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 

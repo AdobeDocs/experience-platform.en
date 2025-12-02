@@ -15,14 +15,14 @@ This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/experience
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes experience data.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
 
 Additionally, creating a streaming connection requires you to have a target XDM schema and a dataset. To learn how to create these, please read the tutorial on [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md) or the tutorial on [streaming time-series data](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
 ## Create a base connection
 
@@ -30,7 +30,7 @@ A base connection specifies the source and contains the information required to 
 
 ### Non-authenticated connection
 
-Non-authenticated connections are the standard streaming connection you can create when you want to stream data into Platform.
+Non-authenticated connections are the standard streaming connection you can create when you want to stream data into Experience Platform.
 
 To create a non-authenticated base connection, make a POST request to the `/connections` endpoint while providing a name for your connection, the data type, and the HTTP API connection specification ID. This ID is `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
@@ -124,7 +124,7 @@ A successful response returns HTTP status 201 with details of the newly created 
 
 ### Authenticated connection
 
-Authenticated connections should be used when you need to differentiate between records coming from trusted and un-trusted sources. Users who want to send information with Personally Identifiable Information (PII) should create an authenticated connection when streaming information to Platform.
+Authenticated connections should be used when you need to differentiate between records coming from trusted and un-trusted sources. Users who want to send information with Personally Identifiable Information (PII) should create an authenticated connection when streaming information to Experience Platform.
 
 To create an authenticated base connection, you must include the `authenticationRequired` parameter in your request and specify its value as `true`. During this step, you can also provide a source ID for your authenticated base connection. This parameter is optional and will use the same value as the `name` attribute, if it is not provided. 
 
@@ -326,7 +326,7 @@ A successful response returns HTTP status 201 with detailed of the newly created
 
 ## Create a target XDM schema {#target-schema}
 
-In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
+In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -334,7 +334,7 @@ For detailed steps on how to create a target XDM schema, see the tutorial on [cr
 
 ### Create a target dataset {#target-dataset}
 
-A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
+A target dataset can be created by performing a POST request to the [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/), providing the ID of the target schema within the payload.
 
 For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](../../../../../catalog/api/create-dataset.md).
 
@@ -392,7 +392,7 @@ A successful response returns HTTP status 201 with details of the newly created 
 
 In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to.
 
-To create a mapping set, make a POST request to the `mappingSets` endpoint of the [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) while providing your target XDM schema `$id` and the details of the mapping sets you want to create.
+To create a mapping set, make a POST request to the `mappingSets` endpoint of the [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/) while providing your target XDM schema `$id` and the details of the mapping sets you want to create.
 
 **API format**
 
@@ -450,10 +450,11 @@ A successful response returns details of the newly created mapping including its
 }
 ```
 
-| Property | Description |
-| --- | --- |
-
 ## Create a dataflow
+
+>[!NOTE]
+>
+>After you create or update a streaming dataflow, a brief 5-minute pause in data ingestion is required to prevent any potential instances of data loss or data drops.
 
 With your source and target connections created, you can now create a dataflow. The dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request to the `/flows` endpoint. 
 
@@ -467,9 +468,9 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB Without transformations]
+>[!TAB XDM]
 
-The following request creates a streaming dataflow for HTTP API without data transformations.
+The following request creates a streaming dataflow for XDM data.
 
 ```shell
 curl -X POST \
@@ -495,9 +496,9 @@ curl -X POST \
     }'
 ```
 
->[!TAB With transformations]
+>[!TAB RAW]
 
-The following requests creates a streaming dataflow for HTTP API with mapping transformations applied to your data.
+The following requests creates a streaming dataflow for raw data.
 
 When creating a dataflow with transformations, the `name` parameter cannot be changed. This value must always be set to `Mapping`.
 
@@ -556,7 +557,11 @@ A successful response returns HTTP status 201 with details of your newly created
 }
 ```
 
-## Post data to be ingested to Platform {#ingest-data}
+## Post data to be ingested to Experience Platform {#ingest-data}
+
+>[!NOTE]
+>
+>You must add a delay of at least ~5 minutes between creation of dataflow and ingesting any streaming data. This allows the dataflow to be fully enabled, before any data is ingested.
 
 Now that you've created your flow, you can send your JSON message to the streaming endpoint you previously created.
 
@@ -569,16 +574,16 @@ POST /collection/{INLET_URL}
 | Parameter | Description |
 | --------- | ----------- |
 | `{INLET_URL}` | Your streaming endpoint URL. You can retrieve this URL by making a GET request to the `/connections` endpoint while providing your base connection ID. |
-| `{FLOW_ID}` | The ID of your HTTP API streaming dataflow. |
+| `{FLOW_ID}` | The ID of your HTTP API streaming dataflow. This ID is required for both XDM and RAW data. |
 
 **Request**
 
 >[!BEGINTABS]
 
->[!TAB XDM]
+>[!TAB Send XDM data]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
   -H 'Content-Type: application/json' \
   -d '{
         "header": {
@@ -615,10 +620,36 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
       }'
 ```
 
->[!TAB Raw data]
+>[!TAB Send Raw data with flow ID as an HTTP header]
+
+When sending raw data, you can specify your flow ID as either a query parameter or as part of your HTTP header. The following example specifies flow ID as an HTTP header.
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+  -H 'Content-Type: application/json' 
+  -H 'x-adobe-flow-id=f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!TAB Send Raw data with flow ID as a query parameter]
+
+When sending raw data, you can specify your flow ID as either a query parameter or as an HTTP header. The following example specifies flow ID as a query parameter.
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2 \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "Johnson Smith",
@@ -659,9 +690,9 @@ A successful response returns HTTP status 200 with details of the newly ingested
 
 ## Next steps
 
-By following this tutorial, you have created a streaming HTTP connection, enabling you to use the streaming endpoint to ingest data into Platform. For instructions to create a streaming connection in the UI, please read the [creating a streaming connection tutorial](../../../ui/create/streaming/http.md).
+By following this tutorial, you have created a streaming HTTP connection, enabling you to use the streaming endpoint to ingest data into Experience Platform. For instructions to create a streaming connection in the UI, please read the [creating a streaming connection tutorial](../../../ui/create/streaming/http.md).
 
-To learn how to stream data to Platform, please read either the tutorial on [streaming time series data](../../../../../ingestion/tutorials/streaming-time-series-data.md) or the tutorial on [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md).
+To learn how to stream data to Experience Platform, please read either the tutorial on [streaming time series data](../../../../../ingestion/tutorials/streaming-time-series-data.md) or the tutorial on [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md).
 
 ## Appendix
 
@@ -685,3 +716,4 @@ If the `Authorization` header is not present, or an invalid/expired access token
     }
 }
 ```
+

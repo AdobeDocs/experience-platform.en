@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Platform Release Notes
+title: Adobe Experience Platform Release Notes September 2023
 description: The September 2023 release notes for Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
 ---
@@ -31,7 +31,7 @@ Computed attributes enable capability to easily summarize event data into profil
 
 ## Alerts {#alerts}
 
-Experience Platform allows you to subscribe to event-based alerts for various Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
+Experience Platform allows you to subscribe to event-based alerts for various Experience Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Experience Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
 
 **New or updated features**
 
@@ -92,12 +92,12 @@ Experience Platform provides a suite of data hygiene capabilities that allow you
 
 | Feature | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} Record Delete (limited release) | Manage your data lifecycle across all data stores to meet customer commitments and license agreements with advanced data lifecycle management features in Adobe Experience Platform: Automated Dataset Expiration & Record Delete.<br>With automated dataset expiration, you can delete entire datasets and set a date and time for the dataset to be deleted.<br>Record Delete allows you to delete individual consumer profiles by targeting their primary identities. You can provide the primary identities individually through the UI or via CSV/JSON file upload. See the [Record Delete documentation](../../hygiene/ui/record-delete.md) for more information  |
+| [!BADGE Beta]{type=Informative} Record Delete (limited release) | Manage your data lifecycle across all data stores to meet customer commitments and license agreements with Advanced Data Lifecycle Management features in Adobe Experience Platform: Automated Dataset Expiration & Record Delete.<br>With automated dataset expiration, you can delete entire datasets and set a date and time for the dataset to be deleted.<br>Record Delete allows you to delete individual consumer profiles by targeting their primary identities. You can provide the primary identities individually through the UI or via CSV/JSON file upload. See the [Record Delete documentation](../../hygiene/ui/record-delete.md) for more information  |
 | Dataset expirations | Minimize your data and stay in control of your license agreements with Automated Dataset Expiration. Reduce data volumes by deleting entire datasets and set a date and time for the dataset to be deleted. See the [dataset expirations documentation](../../hygiene/ui/dataset-expiration.md) for more information. |
 
 {style="table-layout:auto"}
 
-For more information on Platform's data hygiene capabilities, refer to the [data hygiene overview](../../hygiene/home.md).
+For more information on Experience Platform's data hygiene capabilities, refer to the [data hygiene overview](../../hygiene/home.md).
 
 ## Destinations {#destinations}
 
@@ -128,7 +128,7 @@ Add these to release notes as they go out
 | Functionality | Description |
 | ----------- | ----------- |
 | Data exports in Real-Time CDP | The [dataset export](../../destinations/ui/export-datasets.md) functionality is now generally available. See [which datasets you can export based on the Experience Platform app](../../destinations/ui/export-datasets.md#datasets-to-export) you purchased, and check the [guardrails for exporting datasets](/help/destinations/guardrails.md#dataset-exports). |
-| (Beta) Support for exporting array-type objects | Export arrays of primitive values (string, int, or boolean values) as flat schema files to cloud storage destinations. Read more about the functionality in the [documentation](../../destinations/ui/export-arrays-calculated-fields.md).|
+| (Beta) Support for exporting array-type objects | Export arrays of primitive values (string, int, or boolean values) as flat schema files to cloud storage destinations. Read more about the functionality in the [documentation](../../destinations/ui/export-arrays-maps-objects.md).|
 | Dynamic dropdown selectors in Destination SDK | When creating a destination through Destination SDK, you can now use [dynamic dropdown selectors](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) to populate the fields of a dropdown selector with values retrieved from an API. |
 
 **Fixes and enhancements** {#destinations-fixes-and-enhancements}
@@ -174,7 +174,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 {style="table-layout:auto"}
 
-For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md)
+For more information on XDM in Experience Platform, see the [XDM System overview](../../xdm/home.md)
 
 ## Identity Service {#identity-service}
 
@@ -184,7 +184,7 @@ Adobe Experience Platform Identity Service provides you with a comprehensive vie
 
 | Feature | Description |
 | --- | --- |
-| Identity Service UI enhancements | Use the improved custom namespace creation tool in the Experience Platform UI to better manage your custom namespaces and their corresponding identity types. The enhanced Identity Service UI provides you with: <ul><li>Contextual Experience: Visual cues, clarity, and context to what an identity namespace is and identity types are.</li><li>Accuracy: Better error handling, with no more duplicate identity names.</li><li>Discoverability: Access to documentation from within an in-product dialog.</li></ul> For more information, read the guide on [creating custom namespaces](../../identity-service/namespaces.md#create-namespaces). |
+| Identity Service UI enhancements | Use the improved custom namespace creation tool in the Experience Platform UI to better manage your custom namespaces and their corresponding identity types. The enhanced Identity Service UI provides you with: <ul><li>Contextual Experience: Visual cues, clarity, and context to what an identity namespace is and identity types are.</li><li>Accuracy: Better error handling, with no more duplicate identity names.</li><li>Discoverability: Access to documentation from within an in-product dialog.</li></ul> For more information, read the guide on [creating custom namespaces](../../identity-service/features/namespaces.md#create-namespaces). |
 | Changes to identity graph limits | The identity graph limit has changed from 150 identities to 50 identities. When a new identity is ingested into a full graph, the oldest identity based on the ingestion timestamp and identity type are deleted. Cookie identity types are prioritized for deletion. Please contact your Adobe Account Team to request a change in identity type if your production sandbox contains: <ul><li>a custom namespace where the person identifiers (such as CRM IDs) are configured as cookie/device identity type.</li><li>a custom namespace where cookie/device identifiers are configured as cross-device identity type.</li></ul> Adobe engineering will manually process these requests. For more information, read the [guardrails for Identity Service data](../../identity-service/guardrails.md) and guide on [data management license entitlement best practices](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
 
 {style="table-layout:auto"}
@@ -208,13 +208,13 @@ For more information on Query Services, refer to the [Query Service overview](..
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] allows you to segment data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into audiences. You can create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. 
+[!DNL Segmentation Service] allows you to segment data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into audiences. You can create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Experience Platform], and are readily accessible by any Adobe solution. 
 
 **New or updated features**
 
 | Feature | Description |
 | ------- | ----------- |
-| Customizable columns | You can now customize the layout of Audience Portal with re-sizable columns. For more information on this feature, please read the [segmentation UI guide](../../segmentation/ui/overview.md#customize). |
+| Customizable columns | You can now customize the layout of Audience Portal with re-sizable columns. For more information on this feature, please read the [Audience Portal overview](../../segmentation/ui/audience-portal.md#customize). |
 | Update frequency breakdown | You can now view a breakdown of the update frequencies of the audiences in your organization. For more information on this feature, please read the [segmentation UI guide](../../segmentation/ui/overview.md#browse). |
 
 To learn more about Segmentation Service, please read the [Segmentation Service overview](../../segmentation/home.md).

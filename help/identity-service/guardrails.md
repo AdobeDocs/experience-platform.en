@@ -8,11 +8,15 @@ exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
 
 This document provides information on use and rate limits for [!DNL Identity Service] data to help you optimize your use of the identity graph. When reviewing the following guardrails, it is assumed that you have modeled the data correctly. If you have questions on how to model your data, please contact your customer service representative.
 
+>[!IMPORTANT]
+>
+>Check your license entitlements in your Sales Order and corresponding [Product Description](https://helpx.adobe.com/legal/product-descriptions.html) on actual usage limits in addition to this guardrails page.
+
 ## Get started
 
 The following Experience Platform services are involved with modeling Identity data: 
 
-* [Identities](home.md): Bridge identities from disparate data sources as they are ingested into Platform.
+* [Identities](home.md): Bridge identities from disparate data sources as they are ingested into Experience Platform.
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): Create unified consumer profiles using data from multiple sources.
 
 ## Data model limits
@@ -25,11 +29,13 @@ The following table outlines static limits applied to identity data.
 
 | Guardrail | Limit | Notes |
 | --- | --- | --- |
-| Number of identities in a graph | 50 | When a graph with 50 linked identities is updated, Identity Service will apply a "first-in, first-out" mechanism and deletes the oldest identity to make space for the newest identity. Deletion is based on identity type and timestamp. The limit is applied at the sandbox level. For more information, read the section on [understanding the deletion logic](#deletion-logic). |
+| Number of identities in a graph | 50 | When a graph with 50 linked identities is updated, Identity Service will apply a "first-in, first-out" mechanism and deletes the oldest identity to make space for the newest identity for this graph (**Note**: Real-Time Customer Profile is unaffected). Deletion is based on identity type and timestamp. The limit is applied at the sandbox level. For more information, read the section on [understanding the deletion logic](#deletion-logic). |
 | Number of links to an identity for a single batch ingestion | 50 | A single batch could contain anomalous identities that cause unwanted graph merges. To prevent this, Identity Service will not ingest identities that are already linked to 50 or more identities. |
 | Number of identities in an XDM record | 20 | The minimum number of XDM records required is two. |
 | Number of custom namespaces | None | There are no limits to the number of custom namespaces you can create. |
 | Number of characters for a namespace display name or identity symbol | None | There are no limits to the number of characters of a namespace display name or identity symbol. |
+
+{style="table-layout:auto"}
 
 ### Identity value validation
 
@@ -37,12 +43,18 @@ The following table outlines existing rules you must follow to ensure a successf
 
 | Namespace | Validation rule | System behavior when rule is violated |
 | --- | --- | --- |
-| ECID | <ul><li>The identity value of an ECID must be exactly 38 characters.</li><li>The identity value of an ECID must consist of numbers only.</li><li>Identity values cannot be "null", "anonymous", "invalid", or be an empty string (for example: " ", "", "  ").</li></ul> | <ul><li>If the identity value of ECID is not exactly 38 characters, then the record is skipped.</li><li>If the identity value of ECID contains non-numerical characters, then the record is skipped.</li><li>The identity will be blocked from ingestion.</li></ul> |
-| Non-ECID | The identity value cannot exceed 1024 characters. | If the identity value exceeds 1024 characters, then the record is skipped. |
+| ECID | <ul><li>The identity value of an ECID must be exactly 38 characters.</li><li>The identity value of an ECID must consist of numbers only.</li></ul> | <ul><li>If the identity value of ECID is not exactly 38 characters, then the record is skipped.</li><li>If the identity value of ECID contains non-numerical characters, then the record is skipped.</li></ul> |
+| Non-ECID | <ul><li>The identity value cannot exceed 1024 characters.</li><li>Identity values cannot be "null", "anonymous", "invalid", or be an empty string (for example: " ", "", "  ").</li></ul> | <ul><li>If the identity value exceeds 1024 characters, then the record is skipped.</li><li>The identity will be blocked from ingestion.</li></ul> |
+
+{style="table-layout:auto"}
 
 ### Identity namespace ingestion
 
 Starting March 31, 2023, Identity Service will block the ingestion of Adobe Analytics ID (AAID) for new customers. This identity is typically ingested through the [Adobe Analytics source](../sources/connectors/adobe-applications/analytics.md) and the [Adobe Audience Manager source](../sources//connectors/adobe-applications/audience-manager.md) and is redundant because the ECID represents the same web browser. If you would like to change this default configuration, please contact your Adobe account team.
+
+## Performance guardrails {#performance-guardrails}
+
+Identity Service continuously monitors incoming data to ensure high performance and reliability at scale. However, an influx of experience event data in a short period may lead to performance degradation and latency. Adobe is not responsible for such performance degradation.
 
 ## Understanding the deletion logic when an identity graph at capacity is updated {#deletion-logic}
 
@@ -74,7 +86,7 @@ The following sections outline the implications that the deletion logic has to I
 
 Please contact your Adobe account team to request a change in identity type if your production sandbox contains:
 
-* A custom namespace where the person identifiers (such as CRM IDs) are configured as cookie/device identity type.
+* A custom namespace where the person identifiers (such as CRMIDs) are configured as cookie/device identity type.
 * A custom namespace where cookie/device identifiers are configured as cross-device identity type.
 
 Once this feature is available, graphs that exceed the limit of 50 identities will be reduced down to up to 50 identities. For Real-Time CDP B2C Edition, this could result in a minimal increase in the number of profiles qualifying for an audience, as these profiles were previously ignored from Segmentation and Activation.
@@ -88,10 +100,10 @@ Deletion only happens to data in the Identity Service and not Real-Time Customer
 
 #### Real-Time Customer Profile and WebSDK: Primary identity deletion
 
-If you would like to preserve your authenticated events against the CRM ID, then it is recommended that you change your primary IDs from ECID to CRM ID. Read the following documents for steps on how to implement this change:
+If you would like to preserve your authenticated events against the CRMID, then it is recommended that you change your primary IDs from ECID to CRMID. Read the following documents for steps on how to implement this change:
 
 * [Configure identity map for Experience Platform tags](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Identity data in the Experience Platform Web SDK](../edge/identity/overview.md#using-identitymap)
+* [Identity data in the Experience Platform Web SDK](/help/collection/use-cases/identity/id-overview.md)
 
 ### Example scenarios
 
@@ -125,13 +137,13 @@ In this example, ECID:32110 is ingested and linked to a large graph at `timestam
 
 >[!TAB Deletion process]
 
-As a result, Identity Service deletes the oldest identity based on timestamp and identity type. In this case, ECID:35577 gets deleted.
+As a result, Identity Service deletes the oldest identity based on timestamp and identity type. In this case, ECID:35577 gets deleted only from the identity graph.
 
 ![](./images/guardrails/during-split.png)
 
 >[!TAB Graph output]
 
-As a result of deleting ECID:35577, the edges that linked CRM ID:60013 and CRM ID:25212 with the now deleted ECID:35577 also get deleted. This deletion process leads to the graph being split into two smaller graphs.
+As a result of deleting ECID:35577, the edges that linked CRMID:60013 and CRMID:25212 with the now deleted ECID:35577 also get deleted. This deletion process leads to the graph being split into two smaller graphs.
 
 ![](./images/guardrails/after-split.png)
 
@@ -156,9 +168,9 @@ In the example below, ECID:21011 is ingested and linked to the graph at `timesta
 
 >[!TAB Deletion process]
 
-As a result, Identity Service deletes the oldest identity, which in this case is ECID:35577. The deletion of ECID:35577 also results in the deletion of the following:
+As a result, Identity Service deletes the oldest identity only from the identity graph, which in this case is ECID:35577. The deletion of ECID:35577 also results in the deletion of the following:
 
-* The link between CRM ID: 60013 and the now-deleted ECID:35577, thus resulting in a graph split scenario.
+* The link between CRMID: 60013 and the now-deleted ECID:35577, thus resulting in a graph split scenario.
 * IDFA: 32110, IDFA: 02383, and the remaining identities represented by `(...)`. These identities get deleted because individually, they are not linked to any other identities and therefore, cannot be represented in a graph.
 
 ![](./images/guardrails/hub-and-spoke-process.png)
@@ -176,7 +188,7 @@ Finally, the deletion process yields two smaller graphs.
 See the following documentation for more information on [!DNL Identity Service]:
 
 * [[!DNL Identity Service] overview](home.md)
-* [Identity graph viewer](ui/identity-graph-viewer.md)
+* [Identity graph viewer](features/identity-graph-viewer.md)
 
 See the following documentation for more information on other Experience Platform services guardrails, on end-to-end latency information, and licensing information from Real-Time CDP Product Description documents:
 

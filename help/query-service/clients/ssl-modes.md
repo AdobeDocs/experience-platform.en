@@ -10,11 +10,11 @@ For increased security, Adobe Experience Platform [!DNL Query Service] provides 
 
 ## Prerequisites
 
-This document assumes that you have already downloaded a third-party desktop client application for use with your Platform data. Specific instructions on how to incorporate SSL security when connecting with a third-party client are found in their respective connection guide documentation. For a list of all [!DNL Query Service] supported clients, see the [client connections overview](./overview.md).
+This document assumes that you have already downloaded a third-party desktop client application for use with your Experience Platform data. Specific instructions on how to incorporate SSL security when connecting with a third-party client are found in their respective connection guide documentation. For a list of all [!DNL Query Service] supported clients, see the [client connections overview](./overview.md).
 
 ## Available SSL options {#available-ssl-options}
 
-Platform supports various SSL options to suit your data security needs and balance the processing overhead of encryption and key exchange. 
+Experience Platform supports various SSL options to suit your data security needs and balance the processing overhead of encryption and key exchange. 
 
 The different `sslmode` parameter values provide different levels of protection. By encrypting your data in motion with SSL certificates, it helps to prevent "man-in-the-middle" (MITM) attacks, eavesdropping, and impersonation. The table below provides a breakdown of the different SSL modes available and the level of protection they provide.
 
@@ -24,8 +24,8 @@ The different `sslmode` parameter values provide different levels of protection.
 
 |  sslmode |  Eavesdropping protection | MITM protection  | Description  |
 |---|---|---|---|
-| `allow`  | Partial  | No  | Security is not a priority, speed and a low processing overhead are more important. This mode only opts for encryption if the server insists on it.  |
-| `prefer`  | Partial  | No  | Encryption is not required but the communication will be encrypted if the server supports it.  |
+| `allow`  | Yes  | No  | Encryption is required on all communications. The network is trusted to connect to the correct server. |
+| `prefer`  | Yes  | No  | Encryption is required on all communications. The network is trusted to connect to the correct server. |
 | `require`  | Yes  | No  | Encryption is required on all communications. The network is trusted to connect to the correct server. Server SSL certificate validation is not required. |
 | `verify-ca`  | Yes  | Depends on CA-policy  | Encryption is required on all communications. Server validation is required before data is shared. This requires you to set up a root certificate in your [!DNL PostgreSQL] home directory. [Details are provided below](#instructions) |
 | `verify-full`  | Yes  | Yes  | Encryption is required on all communications. Server validation is required before data is shared. This requires you to set up a root certificate in your [!DNL PostgreSQL] home directory. [Details are provided below](#instructions).  |
@@ -34,9 +34,13 @@ The different `sslmode` parameter values provide different levels of protection.
 >
 >The difference between `verify-ca` and `verify-full` depends on the policy of the root certificate authority (CA). If you have created your own local CA to issue private certificates for your applications, using `verify-ca` often provides enough protection. If using a public CA, `verify-ca` allows connections to a server that somebody else may have registered with the CA. `verify-full` should always be used with a public root CA.
 
-When establishing a third-party connection to a Platform database, you are recommended to use `sslmode=require` at a minimum to ensure a secure connection for your data in motion. The `verify-full` SSL mode is recommended for use in most security-sensitive environments.
+When establishing a third-party connection to an Experience Platform database, you are recommended to use `sslmode=require` at a minimum to ensure a secure connection for your data in motion. The `verify-full` SSL mode is recommended for use in most security-sensitive environments.
 
 ## Set up a root certificate for sever verification {#root-certificate}
+
+>[!IMPORTANT]
+>
+>The TLS/SSL certificates on Production environments for the Query Service Interactive Postgres API were refreshed on Wednesday 24th January 2024.<br>Although this is an annual requirement, on this occasion the root certificate in the chain has also changed as Adobe's TLS/SSL certificate provider have updated their certificate hierarchy. This can impact certain Postgres clients if their list of Certificate Authorities are missing the root cert. For example, a PSQL CLI client may need to have the root certs added to an explicit file `~/postgresql/root.crt`, otherwise this can result in an error. For example, `psql: error: SSL error: certificate verify failed`. See the [official PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) for more information on this issue.<br>The root certificate to add can be downloaded from [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
 
 To ensure a secure connection, SSL usage must be configured on both the client and the server before the connection is made. If the SSL is only configured on the server, the client might send sensitive information such as passwords before it is established that the server requires high security.
 
@@ -55,7 +59,7 @@ If you need stricter security control than `sslmode=require`, you can follow the
 >There are many options available to attain an SSL certificate. Due to a growing trend in rogue certificates, DigiCert is used in this guide as they are a trusted global provider of high-assurance TLS/SSL, PKI, IoT, and signing solutions. 
 
 1. Navigate to [the list of available DigiCert root certificates](https://www.digicert.com/kb/digicert-root-certificates.htm)
-1. Search for "[!DNL DigiCert Global Root CA]" from the list of available certificates.
+1. Search for "[!DNL DigiCert Global Root G2]" from the list of available certificates.
 1. Select [!DNL **Download PEM**] to download the file to your local machine.
 ![The list of available DigiCert root certificates with Download PEM highlighted.](../images/clients/ssl-modes/digicert.png)
 1. Rename the security certificate file to `root.crt`.
@@ -67,7 +71,7 @@ If you need stricter security control than `sslmode=require`, you can follow the
 >
 >To find your `%appdata%` file location on a Windows operating system, press ⊞ **Win + R** and input `%appdata%` into the search field.
 
-After the [!DNL DigiCert Global Root CA] CRT file is available in your [!DNL PostgreSQL] folder, you can connect to [!DNL Query Service] using the `sslmode=verify-full` or `sslmode=verify-ca` option.
+After the [!DNL DigiCert Global Root G2] CRT file is available in your [!DNL PostgreSQL] folder, you can connect to [!DNL Query Service] using the `sslmode=verify-full` or `sslmode=verify-ca` option.
 
 ## Next steps
 

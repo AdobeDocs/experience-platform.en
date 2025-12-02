@@ -32,7 +32,7 @@ Adobe Experience Platform [!DNL Identity Service] bridges customer identity data
 
 [!DNL Identity Service] maintains a store of globally defined (standard) and user-defined (custom) identity namespaces. Standard namespaces are available for all organizations (for example, "Email" and "ECID"), while your organization can also create custom namespaces to suit its particular needs.
 
-For more information about identity namespaces in [!DNL Experience Platform], see the [identity namespace overview](../identity-service/namespaces.md).
+For more information about identity namespaces in [!DNL Experience Platform], see the [identity namespace overview](../identity-service/features/namespaces.md).
 
 ## Adding identity data to datasets
 
@@ -194,11 +194,11 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Platform processes privacy requests across all [sandboxes](../sandboxes/home.md) belonging to your organization. As a result, any `x-sandbox-name` header included in the request is ignored by the system.
+>Experience Platform processes privacy requests across all [sandboxes](../sandboxes/home.md) belonging to your organization. As a result, any `x-sandbox-name` header included in the request is ignored by the system.
 
 ## Delete request processing
 
-When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed from the data lake within seven days. During that seven-day window, the data is soft-deleted and is therefore not accessible by any [!DNL Platform] service.
+When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Experience Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed from the data lake within seven days. During that seven-day window, the data is soft-deleted and is therefore not accessible by any [!DNL Experience Platform] service.
 
 If you also included `ProfileService` or `identity` in the privacy request, their associated data is handled separately. See the section on [delete request processing for Profile](../profile/privacy.md#delete) for more information.
 

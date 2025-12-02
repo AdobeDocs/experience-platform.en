@@ -28,6 +28,7 @@ A retailer is looking to better understand customer preferences for order fulfil
 ## Prerequisites {#prerequisites}
 
 The following information is required to establish the Medallia connection:
+
 * **OAuth Token Endpoint URL**
 * **Client ID**
 * **Client Secret**
@@ -38,7 +39,7 @@ Work with your Medallia delivery team to obtain these details.
 
 ## Supported identities {#supported-identities}
 
-Medallia supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+Medallia supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
@@ -52,7 +53,7 @@ Medallia supports the activation of identities described in the table below. Lea
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all newly qualified members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
@@ -62,7 +63,7 @@ Refer to the table below for information about the destination export type and f
 
 >[!IMPORTANT]
 > 
->To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
@@ -80,10 +81,10 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL API Gateway URL]**: Obtain from your Medallia delivery team. Typically takes the form of https://instance-tenant.apis.medallia.com.
-*  **[!UICONTROL Import API Name]**: Obtain from your Medallia delivery team. Name of the Medallia Import API (also known as Web Feed) to be used in this connection. You can activate different audiences to different Import APIs to trigger different survey programs.
+* **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+* **[!UICONTROL API Gateway URL]**: Obtain from your Medallia delivery team. Typically takes the form of https://instance-tenant.apis.medallia.com.
+* **[!UICONTROL Import API Name]**: Obtain from your Medallia delivery team. Name of the Medallia Import API (also known as Web Feed) to be used in this connection. You can activate different audiences to different Import APIs to trigger different survey programs.
 
 ![Image showing the destination details screen for this destination.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
 
@@ -97,7 +98,7 @@ When you are finished providing details for your destination connection, select 
 
 >[!IMPORTANT]
 > 
->* To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
@@ -105,14 +106,17 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 ### Map attributes and identities {#map}
 
 The following target identity namespace(s) must be mapped depending on the use case:
+
 * For email-based surveys, **email** must be mapped as a target field using **Target field** > **Select identity namespace** > **email**
 * For SMS-based surveys, **phone** must be mapped as a target field using **Target field** > **Select identity namespace** > **phone**. Phone numbers must be in E.164 format, which includes a plus sign (+), an international country calling code, a local area code, and a phone number
 
 It is strongly recommended that you also map additional target custom attributes to create personalized surveys and append additional information about the customer to the survey record:
 
 * Personalized surveys typically address the customer by name
-    *  Map the customer's first name to **Target field** > **Select custom attributes** > **Attribute name** > **firstname**
-    *  Map the customer's last name to **Target field** > **Select custom attributes** > **Attribute name** > **lastname**
+
+    * Map the customer's first name to **Target field** > **Select custom attributes** > **Attribute name** > **firstname**
+    * Map the customer's last name to **Target field** > **Select custom attributes** > **Attribute name** > **lastname**
+
 * Add mappings for any other target custom attributes as desired
 
 ![Image showing a sample mapping for identities and attributes.](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)

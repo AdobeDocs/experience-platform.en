@@ -1,19 +1,19 @@
 ---
-title: Power BI Report Templates for Platform Dashboards
+title: Power BI Report Templates for Experience Platform Dashboards
 description: Use report templates to explore Experience Platform data using Power BI.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
 ---
 # Power BI report templates for dashboards
 
-The Power BI report template feature allows you to create compelling reports populated with data from Adobe Experience Platform. The streamlined installation process automatically installs standard widgets for Real-Time Customer Profile, segmentation, and destinations. The installation also connects Power BI to your data models so you can easily customize and extend your report templates. These reports can be shared across your entire organization without the recipients needing credentials for your organization on Platform.
+The Power BI report template feature allows you to create compelling reports populated with data from Adobe Experience Platform. The streamlined installation process automatically installs standard widgets for Real-Time Customer Profile, segmentation, and destinations. The installation also connects Power BI to your data models so you can easily customize and extend your report templates. These reports can be shared across your entire organization without the recipients needing credentials for your organization on Experience Platform.
 
-This document provides instructions on how to connect Adobe Experience Platform with the Power BI application and use report templates to share key Platform data insights with external users.
+This document provides instructions on how to connect Adobe Experience Platform with the Power BI application and use report templates to share key Experience Platform data insights with external users.
 
 ## Getting started
 
 Before continuing with this tutorial it is recommended to have a good understanding of [schema composition](../../xdm/schema/composition.md) in Experience Platform, and how attributes are included in Real-Time Customer Profile through the [union schema](../../xdm/schema/composition.md#union).
 
-To install the Power BI application integration, users must first have acquired the following Platform permissions:
+To install the Power BI application integration, users must first have acquired the following Experience Platform permissions:
 
 - Manage Queries
 - Manage Sandboxes
@@ -26,11 +26,11 @@ You must also have a Power BI account to follow this tutorial. To create an acco
 
 >[!NOTE]
 >
->In order for the Dashboards tab to appear in the left navigation of the Platform UI, and the Dashboard Inventory view to be visible, you must have access to any one of the Profile, Segmentaiton or Destination dashboards as part of your Platform license. 
+>In order for the Dashboards tab to appear in the left navigation of the Experience Platform UI, and the Dashboard Inventory view to be visible, you must have access to any one of the Profile, Segmentaiton or Destination dashboards as part of your Experience Platform license. 
 
 ## Install the Power BI application integration
 
-Within the Platform UI, select **[!UICONTROL Dashboards]** in the left navigation to open the [!UICONTROL Dashboards] workspace. The [!UICONTROL Browse] tab displays a list of currently available dashboard views. To learn more about viewing available dashboards, see the [inventory documentation](../inventory.md). 
+Within the Experience Platform UI, select **[!UICONTROL Dashboards]** in the left navigation to open the [!UICONTROL Dashboards] workspace. The [!UICONTROL Browse] tab displays a list of currently available dashboard views. To learn more about viewing available dashboards, see the [inventory documentation](../inventory.md). 
 
 Next, select the **[!UICONTROL Integrations]** tab. The Power BI application integration page appears. From here, select **[!UICONTROL Install]** to begin the installation.
 
@@ -70,7 +70,7 @@ Select **[!UICONTROL Upload credential file]**, then select the appropriate JSON
 
 ![Power BI credentials screen with Upload credential file button highlighted.](../images/power-bi/upload-credential-file.png)
 
-After you provide the non-expiring credentials, they are automatically validated by Platform. A confirmation message appears once validation is successful. Select **[!UICONTROL Next]** to review the consent agreement for the Power BI application.
+After you provide the non-expiring credentials, they are automatically validated by Experience Platform. A confirmation message appears once validation is successful. Select **[!UICONTROL Next]** to review the consent agreement for the Power BI application.
 
 ![Non-expiring credentials successfully validated screen with the Next button highlighted.](../images/power-bi/successfully-uploaded-credential-file.png)
 
@@ -80,7 +80,7 @@ The consent display appears. Select **[!UICONTROL Review consent]** to open a ne
 
 ![The provide consent display with the Review consent button highlighted.](../images/power-bi/provide-consent-display.png)
 
-Select **[!UICONTROL Accept]** to grant Power BI permission to access and use your Platform data.
+Select **[!UICONTROL Accept]** to grant Power BI permission to access and use your Experience Platform data.
 
 ![Permissions request for Power BI application.](../images/power-bi/permissions.png)
 
@@ -88,7 +88,7 @@ Select **[!UICONTROL Accept]** to grant Power BI permission to access and use yo
 >
 >If you exit the installation process at any point before providing consent, the Power BI application integration will not be installed to the dashboards inventory.
 
-After providing consent, the report template is automatically installed in the Power BI environment as part of the installation process. Power BI then uses the non-expiring credentials to access Platform, sequentially execute all the SQL queries, and populate the report template with the returned data.
+After providing consent, the report template is automatically installed in the Power BI environment as part of the installation process. Power BI then uses the non-expiring credentials to access Experience Platform, sequentially execute all the SQL queries, and populate the report template with the returned data.
 
 Select **[!UICONTROL Finish]** to return to the dashboard inventory.
 
@@ -112,7 +112,7 @@ The standard widgets from profiles, segments, and destinations are available wit
 >
 >You must have edit permissions enabled for a given dashboard to allow that dashboard to be installed in the Power BI environment.
 
-![Power BI Profile template report using standard Platform Profile widgets.](../images/power-bi/profile-report-template.png)
+![Power BI Profile template report using standard Experience Platform Profile widgets.](../images/power-bi/profile-report-template.png)
 
 After a dashboard is installed in Power BI, report templates are displayed to all users by default. If you want to restrict access to any report templates, make sure that you disable access for the users in question from within the Power BI environment.
 
@@ -130,7 +130,7 @@ Custom widgets are created through the Widget Library. See the [Widget Library o
 
 >[!IMPORTANT]
 >
->Newly created custom widgets are **not** automatically synchronized between Adobe Experience Platform dashboards and the Power BI report templates. Any custom widgets created in the Platform UI have to be manually re-created inside the Power BI environment.
+>Newly created custom widgets are **not** automatically synchronized between Adobe Experience Platform dashboards and the Power BI report templates. Any custom widgets created in the Experience Platform UI have to be manually re-created inside the Power BI environment.
 
 ### Recreate your custom widget in the Power BI environment
 
@@ -138,11 +138,11 @@ Once your dashboard has the appropriate metrics and attributes contained within 
 
 ## Delete the Power BI application integration
 
-To delete the dashboard, navigate to the dashboard inventory and select the delete icon (![](../images/power-bi/delete-icon.png)) next to the dashboard name. 
+To delete the dashboard, navigate to the dashboard inventory and select the delete icon (![delete icon](/help/images/icons/delete.png)) next to the dashboard name. 
 
 >[!NOTE]
 >
->Only the user who installed the Power BI dashboard can delete the integration from the Platform UI. 
+>Only the user who installed the Power BI dashboard can delete the integration from the Experience Platform UI. 
 
 ![Dashboards inventory screen browse tab displayed with Browse button and delete icon highlighted.](../images/power-bi/delete-power-bi-dashboard.png)
 
@@ -150,8 +150,8 @@ A confirmation popover appears. Select **[!UICONTROL Delete]** to confirm the pr
 
 >[!IMPORTANT]
 >
->Deleting the Power BI dashboard from the Platform UI does **not** delete the report templates available in your Power BI environment. If you want to completely delete the information held in the Power BI report templates, you need to log into your Power BI account and delete the report templates from that environment. Once deleted, a user can reinstall the Power BI dashboard by following the same installation instructions as outlined above.
+>Deleting the Power BI dashboard from the Experience Platform UI does **not** delete the report templates available in your Power BI environment. If you want to completely delete the information held in the Power BI report templates, you need to log into your Power BI account and delete the report templates from that environment. Once deleted, a user can reinstall the Power BI dashboard by following the same installation instructions as outlined above.
 
 ## Next steps
 
-By reading this document, you have a better understanding of how Power BI report templates can be integrated into Platform to share compelling data insights from your profiles, segments, or destinations dashboards. See the [dashboard customization overview](../customize/overview.md) to learn more about customizing your dashboards.
+By reading this document, you have a better understanding of how Power BI report templates can be integrated into Experience Platform to share compelling data insights from your profiles, segments, or destinations dashboards. See the [dashboard customization overview](../customize/overview.md) to learn more about customizing your dashboards.

@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;run scheduled qu
 solution: Experience Platform
 title: Scheduled Query Runs API Endpoint
 description: The following sections walks through the various API calls you can make for running scheduled queries with the Query Service API.
+role: Developer
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
 ---
 # Scheduled query runs endpoint

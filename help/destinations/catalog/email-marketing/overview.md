@@ -18,6 +18,7 @@ Adobe Experience Platform supports the following email marketing destinations:
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
 * [Mailchimp Interest Categories](mailchimp-interest-categories.md)
+* [Mailchimp Tags](mailchimp-tags.md)
 * [(API) Oracle Eloqua](oracle-eloqua-api.md)
 * [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)  
 * [(Files) Oracle Eloqua](oracle-eloqua.md)
@@ -28,7 +29,7 @@ Adobe Experience Platform supports the following email marketing destinations:
 
 ## Connect to a new email marketing destination {#connect-destination}
 
-To send audiences to email marketing destinations for your campaigns, Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.
+To send audiences to email marketing destinations for your campaigns, Experience Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.
 
 ## Best practices when activating audiences to email marketing destinations {#best-practices}
 

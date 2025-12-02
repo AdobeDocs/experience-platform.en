@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
-title: Profiles Dashboard Guide
+title: Profiles Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's Real-Time Customer Profile data.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
@@ -13,7 +13,7 @@ Refer to the [Real-Time Customer Profile UI guide](../../profile/ui/user-guide.m
 
 ## Profile dashboard data
 
-The Profiles dashboard displays a snapshot of the attribute (record) data that your organization has within the Profile Store in Experience Platform. The snapshot does not include any event (time series) data. 
+The Profiles dashboard displays a snapshot of the attribute (record) data that your organization has within the Profile store in Experience Platform. The snapshot does not include any event (time series) data. 
 
 The attribute data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the Profile dashboard is not updating in real-time.
 
@@ -21,17 +21,17 @@ The attribute data in the snapshot shows the data exactly as it appears at the s
 >
 >Any changes or updates made to the data since the snapshot was taken will not be reflected in the dashboard until the next snapshot is taken.
 
-## Exploring the Profiles dashboard
+## Explore the Profiles dashboard {#explore-dashboard}
 
-To navigate to the Profiles dashboard within the Platform UI, select **[!UICONTROL Profiles]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
+To navigate to the Profiles dashboard within the Experience Platform UI, select **[!UICONTROL Profiles]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
 
 >[!NOTE]
 >
->If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the Profiles dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with Real-Time Customer Profile.
+>If your organization is new to Experience Platform and does not yet have active Profile datasets or merge policies created, the Profiles dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with Real-Time Customer Profile.
 
 ![The Experience Platform Profiles dashboard with Profiles and Overview highlighted.](../images/profiles/dashboard-overview.png)
 
-### Modifying the Profiles dashboard
+### Modify the Profiles dashboard {#modify-dashboard}
 
 You can modify the appearance of the Profiles dashboard by selecting **[!UICONTROL Modify dashboard]**. You can move, add, resize, and remove widgets from the dashboard, as well as to access the **[!UICONTROL Widget library]** to explore available widgets, and create custom widgets for your organization. 
 
@@ -44,6 +44,10 @@ Select **[!UICONTROL Add widget]** to navigate to the widget library and see a l
 ![The Profiles dashboard overview with add widget highlighted.](../images/profiles/profiles-overview-add-widget.png)
 
 From the widget library you can browse the selection of standard and custom audience widgets. For information on how to add widgets, please see the widget library documentation on how to [add a widget](../customize/widget-library.md#add-widgets).
+
+### View SQL {#view-sql}
+
+You can view the SQL that generates the insights visualized on your dashboard with a toggle on the [!UICONTROL Overview] workspace. You can take inspiration from the SQL of your existing insights to create new queries that derive unique insights from Experience Platform data based on your business needs. To learn more about this feature, see the [View SQL UI guide](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -109,7 +113,7 @@ Customer consent and contact preferences are complex topics. To learn how consen
 
 * To learn about the schema field groups required to [collect consent data according to the Adobe standard](../../landing/governance-privacy-security/consent/adobe/overview.md), see the documentation on these Profile-enabled schema field groups.
     * [[!UICONTROL Consent and Preference Details]](../../xdm/field-groups/profile/consents.md)
-    * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (required if using the Platform Web or Mobile SDK to send consent signals)
+    * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (required if using the Experience Platform Web or Mobile SDK to send consent signals)
 * To learn how to process customer consent and preference data using the Adobe standard, see the overview on [consent processing in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
 * A combined data governance and consent policy can be used to filter profiles for segmentation based on their consent preferences and your established organizational rules. To learn how to create and use these combined policies, see the user guide on [managing data usage policies](../../data-governance/policies/user-guide.md#combine-policies). 
 
@@ -159,7 +163,7 @@ The [!UICONTROL Union Schema] dashboard displays the union schema for a specific
 
 Union schemas are composed of multiple schemas that share the same class and have been enabled for Profile. They enable you to see in a single view, an amalgamation of every field contained within each schema that shares the same class.
 
-To learn more about [viewing union schemas within the Platform UI](../../profile/ui/union-schema.md#view-union-schemas), refer to the union schema UI guide.
+To learn more about [viewing union schemas within the Experience Platform UI](../../profile/ui/union-schema.md#view-union-schemas), refer to the union schema UI guide.
 
 ## Widgets and metrics
 
@@ -271,9 +275,9 @@ To learn more about each of the available standard widgets, select the name of a
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilecount"
 >title="Profile count"
->abstract="This widget displays the total number of merged profiles within the Profile Store at the time the snapshot was taken. The number depends on the selected merge policy being applied to your Profile data."
+>abstract="This widget displays the total number of merged profiles within the Profile store at the time the snapshot was taken. The number depends on the selected merge policy being applied to your Profile data."
 
-The **[!UICONTROL Profile count]** widget displays the total number of merged profiles within the Profile Store at the time the snapshot was taken. This number is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. 
+The **[!UICONTROL Profile count]** widget displays the total number of merged profiles within the Profile store at the time the snapshot was taken. This number is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. 
 
 See the [section on merge policies earlier in this document](#merge-policies) to learn more.
 
@@ -296,24 +300,24 @@ The [!UICONTROL Profile count trend] widget uses a line graph to illustrate the 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescountchange"
 >title="Profile count change"
->abstract="This widget displays the total number of merged profiles **added** to the Profile Store at the time of the last snapshot. The number depends on the selected merge policy being applied to your Profile data."
+>abstract="This widget displays the total number of merged profiles **added** to the Profile store at the time of the last snapshot. The number depends on the selected merge policy being applied to your Profile data."
 
-The **[!UICONTROL Profile count change]** widget displays the number of merged profiles added to the Profile Store since the previous snapshot. This number is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. You can use the dropdown selector to view the number of profiles added over the last 30 days, 90 days, or 12 months.
+The **[!UICONTROL Profile count change]** widget displays the number of merged profiles added to the Profile store since the previous snapshot. This number is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. You can use the dropdown selector to view the number of profiles added over the last 30 days, 90 days, or 12 months.
 
 >[!NOTE]
 >
->The [!UICONTROL Profile count change] widget reflects the number of profiles added **after** the initial profile ingestion and Profile Store set-up. In other words, if your organization set up the Profile Store and ingested 4,000,000 on Day 1, within 24 hours the dashboard would be available, however the [!UICONTROL Profile count change] widget would be set to 0. This counting method is done to avoid a spike associated with the initial ingestion of profiles into the system. Over the next 30 days, your organization ingests an additional 1,000,000 profiles into the Profile Store. After the next snapshot is taken, the [!UICONTROL Profile count change] widget would show a total of 1,000,000 profiles added, while the [!UICONTROL Profile count] widget would display 5,000,000 total profiles.
+>The [!UICONTROL Profile count change] widget reflects the number of profiles added **after** the initial profile ingestion and Profile store set-up. In other words, if your organization set up the Profile store and ingested 4,000,000 on Day 1, within 24 hours the dashboard would be available, however the [!UICONTROL Profile count change] widget would be set to 0. This counting method is done to avoid a spike associated with the initial ingestion of profiles into the system. Over the next 30 days, your organization ingests an additional 1,000,000 profiles into the Profile store. After the next snapshot is taken, the [!UICONTROL Profile count change] widget would show a total of 1,000,000 profiles added, while the [!UICONTROL Profile count] widget would display 5,000,000 total profiles.
 
-![The Platform UI Profiles dashboard with the Profile count change widget highlighted.](../images/profiles/profile-count-change.png)
+![The Experience Platform UI Profiles dashboard with the Profile count change widget highlighted.](../images/profiles/profile-count-change.png)
 
 ### [!UICONTROL Profiles count change trend] {#profiles-count-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
 >title="Profiles count change trend"
->abstract="This widget displays the number of merged profiles that have been added to the Profile Store daily over the last 30 days, 90 days, or 12 months. The number also depends on the selected merge policy being applied to your Profile data."
+>abstract="This widget displays the number of merged profiles that have been added to the Profile store daily over the last 30 days, 90 days, or 12 months. The number also depends on the selected merge policy being applied to your Profile data."
 
-The **[!UICONTROL Profiles count change trend]** widget displays the total number of merged profiles that have been added to the Profile Store daily over the last 30 days, 90 days, or 12 months. This number is updated each day when the snapshot is taken, therefore if you were to ingest profiles into Platform, the number of profiles would not be reflected until the next snapshot is taken. The count of profiles added is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. 
+The **[!UICONTROL Profiles count change trend]** widget displays the total number of merged profiles that have been added to the Profile store daily over the last 30 days, 90 days, or 12 months. This number is updated each day when the snapshot is taken, therefore if you were to ingest profiles into Experience Platform, the number of profiles would not be reflected until the next snapshot is taken. The count of profiles added is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. 
 
 To learn more, refer to the [section on merge policies earlier in this document](#merge-policies).
 
@@ -340,9 +344,9 @@ This widget helps you to manage your destination activation needs by demonstrati
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesbyidentity"
 >title="Profiles by identity"
->abstract="This widget displays the breakdown of all the merged profiles in your Profile Store by identities."
+>abstract="This widget displays the breakdown of all the merged profiles in your Profile store by identities."
 
-The **[!UICONTROL Profiles by identity]** widget displays the breakdown of identities across all of the merged profiles in your Profile Store. The total number of profiles by identity (in other words, adding together the values shown for each namespace) may be higher than the total number of merged profiles because one profile could have multiple namespaces associated with it. For example, if a customer interacts with your brand on more than one channel, multiple namespaces would be associated with that individual customer.
+The **[!UICONTROL Profiles by identity]** widget displays the breakdown of identities across all of the merged profiles in your Profile store. The total number of profiles by identity (in other words, adding together the values shown for each namespace) may be higher than the total number of merged profiles because one profile could have multiple namespaces associated with it. For example, if a customer interacts with your brand on more than one channel, multiple namespaces would be associated with that individual customer.
 
 To learn more, refer to the [section on merge policies earlier in this document](#merge-policies).
 
@@ -361,9 +365,9 @@ To learn more about identities, refer to the [Adobe Experience Platform Identity
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_identityoverlap"
 >title="Identity overlap"
->abstract="This widget uses a Venn diagram to display the overlap of profiles in your Profile Store that contain the two selected identities."
+>abstract="This widget uses a Venn diagram to display the overlap of profiles in your Profile store that contain the two selected identities."
 
-The **[!UICONTROL Identity overlap]** widget uses a Venn diagram, or set diagram, to display the overlap of profiles in your Profile Store that contain the two selected identities.
+The **[!UICONTROL Identity overlap]** widget uses a Venn diagram, or set diagram, to display the overlap of profiles in your Profile store that contain the two selected identities.
 
 Use the widget dropdown menus to select the identities that you wish to compare. Circles display the relative total count of profiles that contain each identity. The number of profiles containing both identities is represented by the size of the overlap between the circles. If a customer interacts with your brand on more than one channel, multiple identities would be associated with that individual customer. In this situation it is likely that your organization has multiple profiles containing fragments from more than one identity.
 
@@ -460,7 +464,7 @@ Select **[!UICONTROL View more]** to open a full-screen dialog that contains mor
 
 ![The Audience overlap report widget with View more highlighted .](../images/profiles/profiles-audience-overlap-report.png)
 
-The [!UICONTROL Audience overlap report] dialog appears. This dialog can contain up to 50 rows of audience overlap analyses broken down into six columns. To remove or add columns from the table, select the settings icon (![The settings icon.](../images/profiles/settings-icon.png)).
+The [!UICONTROL Audience overlap report] dialog appears. This dialog can contain up to 50 rows of audience overlap analyses broken down into six columns. To remove or add columns from the table, select the settings icon (![The settings icon.](/help/images/icons/settings.png)).
 
 ![The Audience overlap report dialog.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
@@ -496,7 +500,7 @@ To see comprehensive information on an audience, select an audience name from th
 
 ![The Audiences size widget with an audience name and the View all audiences text highlighted.](../images/profiles/audiences-size-view-all-audiences.png)
 
-See the documentation for more information on the [[!UICONTROL Audiences] [!UICONTROL  Browse] tab](../../segmentation/ui/overview.md#browse).
+More information about audience details can be found in the [Audience Portal documentation](../../segmentation/ui/audience-portal.md).
 
 ### [!UICONTROL Audience overlap by merge policy] {#audience-overlap-by-merge-policy}
 
@@ -504,7 +508,7 @@ This widget uses a Venn diagram to display the overlap of two selected audiences
 
 As the widget displays the visual crossover of segment definitions, you can optimize your segmentation strategy by studying similarities between your segment definitions.
 
-![The Platform UI Profiles dashboard with the merge policy dropdown and the widget audience dropdowns highlighted.](../images/profiles/audience-overlap-by-merge-policy.png)
+![The Experience Platform UI Profiles dashboard with the merge policy dropdown and the widget audience dropdowns highlighted.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}

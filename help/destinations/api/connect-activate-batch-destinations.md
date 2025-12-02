@@ -10,9 +10,9 @@ exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 
 >[!IMPORTANT]
 > 
->* To connect to a destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). 
+>* To connect to a destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). 
 >
->* To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 >
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 >
@@ -28,7 +28,7 @@ This tutorial uses the [!DNL Adobe Campaign] destination in all examples, but th
 
 ![Overview - the steps to create a destination and activate audiences](../assets/api/email-marketing/overview.png)
 
-If you prefer to use the Platform user interface to connect to a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate audience data to batch profile export destinations](../ui/activate-batch-profile-destinations.md) tutorials.
+If you prefer to use the Experience Platform user interface to connect to a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate audience data to batch profile export destinations](../ui/activate-batch-profile-destinations.md) tutorials.
 
 ## Getting started {#get-started}
 
@@ -36,9 +36,9 @@ This guide requires a working understanding of the following components of Adobe
 
 *   [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 *   [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] allows you to build audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-Time Customer Profile] data.
-*   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+*   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you need to know in order to activate data to batch destinations in Platform.
+The following sections provide additional information that you need to know in order to activate data to batch destinations in Experience Platform.
 
 ### Gather required credentials {#gather-required-credentials}
 
@@ -59,13 +59,13 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values-headers}
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Resources in [!DNL Experience Platform] can be isolated to specific virtual sandboxes. In requests to [!DNL Platform] APIs, you can specify the name and ID of the sandbox that the operation will take place in. These are optional parameters.
+Resources in [!DNL Experience Platform] can be isolated to specific virtual sandboxes. In requests to [!DNL Experience Platform] APIs, you can specify the name and ID of the sandbox that the operation will take place in. These are optional parameters.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -121,7 +121,7 @@ A successful response contains a list of available destinations and their unique
 For your reference, the table below contains the connection spec IDs for commonly used batch destinations:
 
 | Destination | Connection spec ID |
----------|----------|
+|---------|----------|
 | [!DNL Adobe Campaign] | `0b23e41a-cb4a-4321-a78f-3b654f5d7d97` |
 | [!DNL Oracle Eloqua] | `c1e44b6b-e7c8-404b-9031-58f0ef760604` |
 | [!DNL Oracle Responsys] | `a5e28ddf-e265-426e-83a1-9d03a3a6822b` |
@@ -167,9 +167,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Property | Description |
 | --------- | ----------- |
-|`name`| Provide a name for the base connection to the Experience Platform [!DNL Profile Store]. |
+|`name`| Provide a name for the base connection to the Experience Platform [!DNL Profile store]. |
 |`description` | Optionally, you can provide a description for the base connection. |
-| `connectionSpec.id`| Use the connection spec ID for the [Experience Platform Profile Store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.|
+| `connectionSpec.id`| Use the connection spec ID for the [Experience Platform Profile store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.|
 
 {style="table-layout:auto"}
 
@@ -201,7 +201,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Profile Store",
+            "name": "Connecting to Profile store",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -218,9 +218,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Property | Description |
 | --------- | ----------- |
-|`name`| Provide a name for the source connection to the Experience Platform [!DNL Profile Store]. |
+|`name`| Provide a name for the source connection to the Experience Platform [!DNL Profile store]. |
 |`description` | Optionally, you can provide a description for the source connection. |
-| `connectionSpec.id`| Use the connection spec ID for the [Experience Platform Profile Store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.|
+| `connectionSpec.id`| Use the connection spec ID for the [Experience Platform Profile store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.|
 | `baseConnectionId`| Use the base connection ID you have obtained in the previous step.|
 | `data.format`| `CSV` is currently the only supported file export format.|
 
@@ -228,7 +228,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Response**
 
-A successful response returns the unique identifier (`id`) for the newly created source connection to [!DNL Profile Store]. This confirms that you have successfully connected to your [!DNL Experience Platform] data. Store this value as it is required in a later step.
+A successful response returns the unique identifier (`id`) for the newly created source connection to [!DNL Profile store]. This confirms that you have successfully connected to your [!DNL Experience Platform] data. Store this value as it is required in a later step.
 
 ```json
 {
@@ -585,18 +585,21 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "AZURE_BLOB",
         "container": "{CONTAINER}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -632,7 +635,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
 }'
 ```
@@ -668,7 +672,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "AZURE_BLOB",
         "container": "{CONTAINER}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
 }'
 ```
@@ -704,12 +709,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -745,12 +752,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -786,12 +795,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -826,6 +837,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
 }'
 ```
@@ -844,6 +856,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `params.bucketName`| For S3 connections, provide the name of the bucket where files will be exported. |
 | `params.path`| For S3 connections, provide the file path in your storage location where files will be exported. |
 | `params.format`| `CSV` is currently the only supported file export type. |
+| `params.includeFileManifest`| *Optional*. Set to `true` to enable manifest file generation for your destination. When enabled, a manifest file is created alongside your exported data files, providing metadata about the exported files. View a [sample manifest file](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). |
 
 {style="table-layout:auto"}
 
@@ -923,7 +936,7 @@ curl -X POST \
 For your reference, the table below contains the flow spec IDs for commonly used batch destinations:
 
 | Destination | Flow spec ID |
----------|----------|
+|---------|----------|
 | All cloud storage destinations ([!DNL Amazon S3], SFTP, [!DNL Azure Blob]) and [!DNL Oracle Eloqua] | `71471eba-b620-49e4-90fd-23f1fa0174d8` |
 | [!DNL Oracle Responsys] | `51d675ce-e270-408d-91fc-22717bdf2148` |
 | [!DNL Salesforce Marketing Cloud] | `493b2bd6-26e4-4167-ab3b-5e910bba44f0` |
@@ -1034,8 +1047,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `filenameTemplate` | This field determines the file name format of the files that are exported to your destination. <br> The following options are available: <br> <ul><li>`%DESTINATION_NAME%`: Mandatory. The exported files contain the destination name.</li><li>`%SEGMENT_ID%`: Mandatory. The exported files contain the ID of the exported audience.</li><li>`%SEGMENT_NAME%`: Optional. The exported files contain the name of the exported audience.</li><li>`DATETIME(YYYYMMdd_HHmmss)` or `%TIMESTAMP%`: Optional. Select one of these two options for your files to include the time when they are generated by Experience Platform.</li><li>`custom-text`: Optional. Replace this placeholder with any custom text that you would like to append at the end of your file names.</li></ul> <br> For more information about configuring file names, refer to the [configure file names](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) section in the batch destinations activation tutorial.  |
 | `exportMode` | Mandatory. Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, refer to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. |
 | `startDate` | Select the date when the audience should start exporting profiles to your destination. |
-| `frequency` | Mandatory. <br> <ul><li>For the `"DAILY_FULL_EXPORT"` export mode, you can select `ONCE` or `DAILY`.</li><li>For the `"FIRST_FULL_THEN_INCREMENTAL"` export mode, you can select `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul>   |
-| `triggerType` | For *batch destinations* only. This field is required only when selecting the `"DAILY_FULL_EXPORT"` mode in the `frequency` selector. <br> Mandatory. <br> <ul><li>Select `"AFTER_SEGMENT_EVAL"` to have the activation job run immediately after the daily Platform batch segmentation job completes. This ensures that when the activation job runs, the most up-to-date profiles are exported to your destination.</li><li>Select `"SCHEDULED"` to have the activation job run at a fixed time. This ensures that Experience Platform profile data is exported at the same time each day, but the profiles you export may not be the most up-to-date, depending on whether the batch segmentation job has completed before the activation job starts. When selecting this option, you must also add a `startTime` to indicate at which time in UTC the daily exports should occur.</li></ul> |
+| `frequency` | Mandatory. <br> <ul><li>For the `"DAILY_FULL_EXPORT"` export mode, you can select `ONCE`, `DAILY`, `WEEKLY`, or `MONTHLY`.</li><li>For the `"FIRST_FULL_THEN_INCREMENTAL"` export mode, you can select `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul>   |
+| `triggerType` | For *batch destinations* only. This field is required only when selecting the `"DAILY_FULL_EXPORT"` mode in the `frequency` selector. <br> Mandatory. <br> <ul><li>Select `"AFTER_SEGMENT_EVAL"` to have the activation job run immediately after the daily Experience Platform batch segmentation job completes. This ensures that when the activation job runs, the most up-to-date profiles are exported to your destination.</li><li>Select `"SCHEDULED"` to have the activation job run at a fixed time. This ensures that Experience Platform profile data is exported at the same time each day, but the profiles you export may not be the most up-to-date, depending on whether the batch segmentation job has completed before the activation job starts. When selecting this option, you must also add a `startTime` to indicate at which time in UTC the daily exports should occur.</li></ul> |
 | `endDate` | For *batch destinations* only. This field is required only when adding an audience to a dataflow in batch file export destinations like Amazon S3, SFTP, or Azure Blob. <br> Not applicable when selecting `"exportMode":"DAILY_FULL_EXPORT"` and `"frequency":"ONCE"`. <br> Sets the date when audience members stop being exported to the destination. |
 | `startTime` | For *batch destinations* only. This field is required only when adding an audience to a dataflow in batch file export destinations like Amazon S3, SFTP, or Azure Blob. <br> Mandatory. Select the time when files containing members of the audience should be generated and exported to your destination. |
 
@@ -1235,11 +1248,11 @@ The returned response should include in the `transformations` parameter the audi
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide for more information on interpreting error responses.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully connected Platform to one of your preferred file-based email marketing destinations and set up a dataflow to the respective destination to export data files. Outgoing data can now be used in the destination for email campaigns, targeted advertising, and many other use cases. See the following pages for more details, such as how to edit existing dataflows using the Flow Service API:
+By following this tutorial, you have successfully connected Experience Platform to one of your preferred file-based email marketing destinations and set up a dataflow to the respective destination to export data files. Outgoing data can now be used in the destination for email campaigns, targeted advertising, and many other use cases. See the following pages for more details, such as how to edit existing dataflows using the Flow Service API:
 
 * [Destinations overview](../home.md)
 * [Destinations Catalog overview](../catalog/overview.md)

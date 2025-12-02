@@ -2,18 +2,16 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
 solution: Experience Platform
 title: XDM Individual Profile Class
-description: This document provides an overview of the XDM Individual Profile class.
+description: Learn about the XDM Individual Profile class.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 ---
 # [!DNL XDM Individual Profile] class
 
 [!DNL XDM Individual Profile] is a standard Experience Data Model (XDM) class which forms a singular representation (or "profile") of an individual person. Specifically, the class (and its compatible field groups) captures the attributes and interests of both identified and partially identified individuals that interact with your brand.
 
-Profiles can range from anonymous behavioral signals (such as browser cookies), to highly identified profiles containing detailed information such as name, date of birth, location, and email address. As a profile grows, it becomes a robust repository of personal information, identities, contact details, and communication preferences for an individual. For more high-level information on the use of this class in the Platform ecosystem, refer to the [XDM overview](../home.md#data-behaviors).
+Profiles can range from anonymous behavioral signals (such as browser cookies), to highly identified profiles containing detailed information such as name, date of birth, location, and email address. As a profile grows, it becomes a robust repository of personal information, identities, contact details, and communication preferences for an individual. For more high-level information on the use of this class in the Experience Platform ecosystem, refer to the [XDM overview](../home.md#data-behaviors).
 
-The [!DNL XDM Individual Profile] class itself provides several system-generated values that are automatically populated when data is ingested, whereas all other fields must be added through the use of [compatible schema field groups](#field-groups):
-
-![](../images/classes/individual-profile.png)
+![A schema diagram of the XDM Individual Profile class.](../images/classes/individual-profile.png)
 
 | Property | Description |
 | --- | --- |

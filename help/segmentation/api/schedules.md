@@ -2,6 +2,7 @@
 solution: Experience Platform
 title: Schedules API Endpoint
 description: Schedules are a tool that can be used to automatically run batch segmentation jobs once a day.
+role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
 ---
 # Schedules endpoint
@@ -22,18 +23,25 @@ The `/config/schedules` endpoint supports several query parameters to help filte
 
 ```http
 GET /config/schedules
-GET /config/schedules?start={START}
-GET /config/schedules?limit={LIMIT}
+GET /config/schedules?{QUERY_PARAMETERS}
 ```
 
-| Parameter | Description |
-| --------- | ----------- |
-| `{START}` | Specifies which page the offset will start from. By default, this value will be 0. |
-| `{LIMIT}` | Specifies the number of schedules returned. By default, this value will be 100. |
+**Query parameters**
+
++++ A list of available query parameters.
+
+| Parameter | Description | Example |
+| --------- | ----------- | ------- |
+| `start` | Specifies which page the offset will start from. By default, this value will be 0. | `start=5` |
+| `limit` | Specifies the number of schedules returned. By default, this value will be 100. | `limit=20` |
+
++++
 
 **Request**
 
 The following request will retrieve the last ten schedules posted within your organization.
+
++++ A sample request to retrieve a list of schedules.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
@@ -43,6 +51,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Response**
 
 A successful response returns HTTP status 200 with a list of schedules for the specified organization as JSON. 
@@ -50,6 +60,8 @@ A successful response returns HTTP status 200 with a list of schedules for the s
 >[!NOTE]
 >
 >The following response has been truncated for space, and shows only the first schedule returned.
+
++++ A sample response when retrieving a list of schedules.
 
 ```json
 {
@@ -92,8 +104,10 @@ A successful response returns HTTP status 200 with a list of schedules for the s
 | `children.type` | The type of job as a string. The two supported types are "batch_segmentation" and "export". |
 | `children.properties` | An object containing additional properties related to the schedule. |
 | `children.properties.segments` | Using `["*"]` ensures all segments are included. |
-| `children.schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "0 0 1 * *" means that this schedule will run at 1AM every day. |
+| `children.schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day. |
 | `children.state` | A string containing the schedule state. The two supported states are "active" and "inactive". By default, the state is set to "inactive". |
+
++++
 
 ## Create a new schedule {#create}
 
@@ -106,6 +120,8 @@ POST /config/schedules
 ```
 
 **Request**
+
++++ A sample request to create a schedule. 
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
@@ -134,12 +150,16 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `type` | **Required.** The type of job as a string. The two supported types are "batch_segmentation" and "export". |
 | `properties` | **Required.** An object containing additional properties related to the schedule. |
 | `properties.segments` | **Required when `type` equals "batch_segmentation".** Using `["*"]` ensures all segments are included. |
-| `schedule` | *Optional.* A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "0 0 1 * *" means that this schedule will run at 1AM every day. <br><br>If this string is not supplied, a system-generated schedule will be automatically generated. |
+| `schedule` | *Optional.* A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day. <br><br>If this string is not supplied, a system-generated schedule will be automatically generated. |
 | `state` | *Optional.* A string containing the schedule state. The two supported states are "active" and "inactive". By default, the state is set to "inactive". |
+
++++
 
 **Response**
 
 A successful response returns HTTP status 200 with details of your newly created schedule.
+
++++ A sample response when creating a schedule.
 
 ```json
 {
@@ -165,6 +185,8 @@ A successful response returns HTTP status 200 with details of your newly created
 }
 ```
 
++++
+
 ## Retrieve a specific schedule {#get}
 
 You can retrieve detailed information about a specific schedule by making a GET request to the `/config/schedules` endpoint and providing the ID of the schedule you wish to retrieve in the request path.
@@ -181,6 +203,8 @@ GET /config/schedules/{SCHEDULE_ID}
 
 **Request**
 
++++ A sample request to retrieve a schedule. 
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -189,9 +213,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Response**
 
 A successful response returns HTTP status 200 with detailed information about the specified schedule.
+
++++ A sample response when retrieving a schedule.
 
 ```json
 {
@@ -223,18 +251,16 @@ A successful response returns HTTP status 200 with detailed information about th
 | `type` | The type of job as a string. The two supported types are `batch_segmentation` and `export`. |
 | `properties` | An object containing additional properties related to the schedule. |
 | `properties.segments` | Using `["*"]` ensures all segments are included. |
-| `schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "0 0 1 * *" means that this schedule will run at 1AM every day.|
+| `schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day.|
 | `state` | A string containing the schedule state. The two supported states are `active` and `inactive`. By default, the state is set to `inactive`. |
+
++++
 
 ## Update details for a specific schedule {#update}
 
 You can update a specific schedule by making a PATCH request to the `/config/schedules` endpoint and providing the ID of the schedule you are trying to update in the request path.
 
 The PATCH request allows you to update either the [state](#update-state) or the [cron schedule](#update-schedule) for an individual schedule.
-
-### Update schedule state {#update-state}
-
-You can use a JSON Patch operation to update the state of the schedule. To update the state, you declare the `path` property as `/state` and set the `value` to either `active` or `inactive`. For more information about JSON Patch, please read the [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) documentation.
 
 **API format**
 
@@ -246,7 +272,15 @@ PATCH /config/schedules/{SCHEDULE_ID}
 | --------- | ----------- |
 | `{SCHEDULE_ID}` | The `id` value of the schedule you want to update. |
 
+>[!BEGINTABS]
+
+>[!TAB Update schedule state]
+
+You can use a JSON Patch operation to update the state of the schedule. To update the state, you declare the `path` property as `/state` and set the `value` to either `active` or `inactive`. For more information about JSON Patch, please read the [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) documentation.
+
 **Request**
+
++++ A sample request to update the schedule state.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -264,6 +298,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 ]'
 ```
 
++++
+
 | Property | Description |
 | -------- | ----------- |
 | `path` | The path of the value you want to patch. In this case, since you are updating the schedule's state, you need to set the value of `path` to "/state". |
@@ -273,21 +309,15 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 A successful response returns HTTP status 204 (No Content).
 
-### Update cron schedule {#update-schedule}
+>[!TAB Update cron schedule]
 
 You can use a JSON Patch operation to update the cron schedule. To update the schedule, you declare the `path` property as `/schedule` and set the `value` to a valid cron schedule. For more information about JSON Patch, please read the [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) documentation. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix).
 
-**API format**
-
-```http
-PATCH /config/schedules/{SCHEDULE_ID}
-```
-
-| Parameter | Description |
-| --------- | ----------- |
-| `{SCHEDULE_ID}` | The `id` value of the schedule you want to update. |
+>[!ENDTABS]
 
 **Request**
+
++++ A sample request to update the schedule.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -310,6 +340,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | `path` | The path of the value you want to updated. In this case, since you are updating the cron schedule, you need to set the value of `path` to `/schedule`. |
 | `value` | The updated value of the cron schedule. This value needs to be in the form of a cron schedule. In this example, the schedule will run on the second of every month. |
 
++++
+
 **Response**
 
 A successful response returns HTTP status 204 (No Content).
@@ -330,6 +362,8 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 **Request**
 
++++ A sample request to delete a schedule.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -337,6 +371,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **Response**
 

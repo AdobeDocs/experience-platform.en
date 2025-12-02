@@ -89,7 +89,7 @@ Considering the message format, the corresponding transformations are as follows
 
 |Attribute in partner XDM schema on the Adobe side| Transformation | Attribute in HTTP message on your side|
 |---------|----------|---------|
-|`_your_custom_schema.firstName` |` attributes.first_name` | `first_name` |
+|`_your_custom_schema.firstName` | `attributes.first_name` | `first_name` |
 |`_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 |`personalEmail.address` | `attributes.external_id` | `external_id` |
 
@@ -375,7 +375,7 @@ Profile 2:
 
 ### Identities {#identities}
 
-For information about identities in Experience Platform, see the [Identity namespace overview](../../../../identity-service/namespaces.md).
+For information about identities in Experience Platform, see the [Identity namespace overview](../../../../identity-service/features/namespaces.md).
 
 **Input**
 
@@ -1201,7 +1201,7 @@ The table below provides descriptions for the functions in the examples above.
 
 |Function | Description | Example |
 |---------|----------|----------|
-| `input.profile` | The profile, represented as a [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Follows the partner XDM schema mentioned further above on this page.|
+| `input.profile` | The profile, represented as a [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Follows the partner XDM schema mentioned further above on this page.||
 |`hasSegments`| This function takes a map of namespace audience IDs as parameter. The function returns `true` if there is at least one audience in the map (regardless of its status), and `false` otherwise. You can use this function to decide whether to iterate over a map of audiences or not.|`hasSegments(input.profile.segmentMembership)`|
 |`destination.namespaceSegmentAliases`| Map from audience IDs in a specific Adobe Experience Platform namespace to audience aliases in the partner's system.|`destination.namespaceSegmentAliases["ups"]["seg-id-1"]`|
 |`destination.namespaceSegmentNames`| Map from audience names in specific Adobe Experience Platform namespaces to audience names in the partner's system.|`destination.namespaceSegmentNames["ups"]["seg-name-1"]`|

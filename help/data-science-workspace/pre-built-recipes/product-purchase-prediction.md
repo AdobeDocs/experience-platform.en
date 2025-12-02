@@ -7,11 +7,18 @@ exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
 ---
 # Product purchase prediction recipe
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 The Product Purchase Prediction recipe enables you to predict the likelihood of a certain type of customer purchase event - a product purchase, for instance.
 
 ![](../images/pre-built-recipes/ppp_bigpicture.png)
 
 The following document will answer questions such as:
+
 * Who is this recipe built for?
 * What does this recipe do?
 

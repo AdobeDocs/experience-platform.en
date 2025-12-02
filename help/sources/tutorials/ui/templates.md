@@ -8,7 +8,7 @@ exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Templates for sources in Platform UI"
+>title="Templates for sources in Experience Platform UI"
 >abstract="Templates include auto-generated assets such as schemas, datasets, identities, mapping rules, identity namespaces, and dataflows that you can use when bringing in data from a source to Experience Platform. You can update auto-generated assets for customization to suit your use cases."
 
 >[!IMPORTANT]
@@ -29,25 +29,25 @@ With templates, you can:
 * Minimize errors that can occur during the manual data ingestion process.
 * Update auto-generated assets at any point to suit your use cases.
 
-The following tutorial provides steps on how to use templates in the Platform UI.
+The following tutorial provides steps on how to use templates in the Experience Platform UI.
 
 ## Getting Started
 
 This tutorial requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
 * [[!DNL Experience Data Model (XDM)] System](../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-## Use templates in the Platform UI {#use-templates-in-the-platform-ui}
+## Use templates in the Experience Platform UI {#use-templates-in-the-platform-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"
 >title="Select business type"
 >abstract="Select the appropriate business type for your use case. Your access may vary depending on your Real-Time Customer Data Platform subscription account."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html" text="Real-Time CDP overview"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP overview"
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace and see a catalog of sources available in Experience Platform.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace and see a catalog of sources available in Experience Platform.
 
 Use the *[!UICONTROL Categories]* menu to filter sources by category. Alternatively, enter a source name in the search bar to find a specific source from the catalog.
 
@@ -59,6 +59,12 @@ A pop-up window appears presenting you with the option to browse templates or us
 
 * **Browse templates**: Sources templates auto-creates schemas, identities, datasets, and dataflows with mapping rules for you. You can customize these assets as needed.
 * **Use my existing assets**: Ingest your data using existing datasets and schemas that you created. You can also create new datasets and schemas if needed.
+
+>[!NOTE]
+>
+>Templates can auto-generate relational schemas when working with sources that require change data capture workflows or support multiple data models. These schemas enable Data Mirror capabilities for real-time data synchronization.  
+>When using templates with relational schemas, the auto-generated assets will include the required primary key, version identifier, and timestamp identifier fields.  
+>For more information, see the [Data Mirror overview](../../../xdm/data-mirror/overview.md) and [relational schemas technical reference](../../../xdm/schema/relational.md).
 
 To use auto-generated assets, select **[!UICONTROL Browse templates]** and then select **[!UICONTROL Select]**.
 
@@ -168,7 +174,7 @@ The following table outlines the B2C templates available for the [!DNL Microsoft
 
 +++
 
-Depending on the business type that you selected, a list of templates appears. Select the preview icon ![preview icon](../../images/tutorials/templates/preview-icon.png) beside a template name to preview sample data from the template.
+Depending on the business type that you selected, a list of templates appears. Select the preview icon ![preview icon](/help/images/icons/preview.png) beside a template name to preview sample data from the template.
 
 ![A list of templates with the preview icon highlighted.](../../images/tutorials/templates/templates.png)
 
@@ -261,8 +267,8 @@ By following this tutorial, you have now created dataflows, as well as assets li
 
 Templates are supported by Adobe Experience Platform Alerts and you can use the notifications panel to receive updates on the status of your assets and also to navigate back to the review page. 
 
-Select the notification icon the top header of Platform UI and then select the status alert to see the assets that you want to review.
+Select the notification icon the top header of Experience Platform UI and then select the status alert to see the assets that you want to review.
 
-![The notifications panel in Platform UI with a notification alerting a failed dataflow highlighted.](../../images/tutorials/templates/notifications.png)
+![The notifications panel in Experience Platform UI with a notification alerting a failed dataflow highlighted.](../../images/tutorials/templates/notifications.png)
 
-You can update the alert settings of your templates to receive both email and in-Platform notifications on the status of your dataflows. For more information on configuring alerts, read the guide on [how to subscribe to alerts for sources dataflows](../ui/alerts.md).
+You can update the alert settings of your templates to receive both email and in-Experience Platform notifications on the status of your dataflows. For more information on configuring alerts, read the guide on [how to subscribe to alerts for sources dataflows](../ui/alerts.md).

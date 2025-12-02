@@ -30,7 +30,7 @@ To make use of this endpoint, you must first create a CSV file with appropriate 
 | 9 | `isRequired` | Optional | Indicates whether the field is required for data ingestion. |
 | 10 | `isArray` | Optional | Indicates whether the field is an array of its indicated `dataType`. |
 | 11 | `isIdentity` | Optional | Indicates whether the field is an identity field. |
-| 12 | `identityNamespace` | Required if `isIdentity` is true | The [identity namespace](../../identity-service/namespaces.md) for the identity field. |
+| 12 | `identityNamespace` | Required if `isIdentity` is true | The [identity namespace](../../identity-service/features/namespaces.md) for the identity field. |
 | 13 | `isPrimaryIdentity` | Optional | Indicates whether the field is the primary identity for the schema. |
 | 14 | `minimum` | Optional | (For numeric fields only) The minimum value for the field. |
 | 15 | `maximum` | Optional | (For numeric fields only) The maximum value for the field. |

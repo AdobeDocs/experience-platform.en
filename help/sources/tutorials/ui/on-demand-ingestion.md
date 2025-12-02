@@ -19,11 +19,15 @@ Flow runs represent an instance of dataflow execution. For example, if a dataflo
 
 ## Getting started
 
+>[!NOTE]
+>
+>In order to create a flow run, you must first have the flow ID of a dataflow that is scheduled for one-time ingestion.
+
 This document requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Dataflows](../../../dataflows/home.md): A dataflow is a representation of data jobs that move data across Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to Identity Service and Real-Time Customer Profile, and to Destinations.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Dataflows](../../../dataflows/home.md): A dataflow is a representation of data jobs that move data across Experience Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to Identity Service and Real-Time Customer Profile, and to Destinations.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Create a dataflow on demand {#create-a-dataflow-on-demand}
 
@@ -47,7 +51,11 @@ Select **[!UICONTROL Schedule]** and allow a few moments for your on-demand data
 
 ![The scheduling configuration window for on-demand ingestion.](../../images/tutorials/on-demand/configure-schedule.png)
 
-Select your dataflow name to view your dataflow activity. Here you will see a list of your dataflow runs that have been processed. Select a dataflow run, then select **[!UICONTROL Retry]** from the right rail to retry ingestion for a selected dataflow run iteration.
+Select your dataflow name to view your dataflow activity. Here you will see a list of your dataflow runs that have been processed. You can re-run individual iterations of your dataflow runs regardless of whether they have failed or succeeded. For run iterations that have failed, you can use **[!UICONTROL Retry]** to initiate the run again after diagnosing and addressing any errors that may have been encountered during the creation process.
+
+>[!TIP]
+>
+>Retrying a flow run will only process files with timestamps that fall within the range of the original run.
 
 ![A list of processed flow runs for a selected dataflow.](../../images/tutorials/on-demand/processed.png)
 

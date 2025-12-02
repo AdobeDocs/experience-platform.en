@@ -1,6 +1,6 @@
 ---
 title: Payer Class
-description: This document provides an overview of the Payer class in Experience Data Model (XDM).
+description: Learn about the Payer class in Experience Data Model (XDM).
 exl-id: 8d3e0a6d-41eb-4ffe-81dd-c7b7d532a531
 ---
 # [!UICONTROL Payer] class

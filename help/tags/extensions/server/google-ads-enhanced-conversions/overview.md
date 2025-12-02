@@ -68,6 +68,7 @@ Additional controls appear that allow you to configure the [!DNL gtag] event. At
 1. **[!UICONTROL Event Name (Action)]**: Enter `conversion` as the value.
 1. Add a new field where the key is `transaction_id` and the value is a [data element](../../../ui/managing-resources/data-elements.md) that contains the [transaction ID](https://support.google.com/google-ads/answer/6386790) value.
 1. **[!UICONTROL Conversion Label]**: Enter the appropriate conversion label from your [!DNL Google Ads] account. To find this value, log into Google Ads and navigate to **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Use Google Tag Manager]**. The conversion label can be found under [!DNL Instructions]. 
+
     >[!IMPORTANT]
     >
     >While you are in the tag setup area of your [!DNL Google Ads] account, make sure that enhanced conversions is enabled. To do this, review and accept the Terms of Service, then select **[!DNL Turn on enhanced conversions]** and **[!DNL API]** as the implementation method. 
@@ -97,7 +98,7 @@ Find the [!UICONTROL Google Ads Enhanced Conversions] extension in the event for
 To configure the extension, you must populate the two required fields:
 
 1. **[!UICONTROL Customer ID]**: The ID that uniquely identifies your [!DNL Google Ads] account. To find this value, log into [!DNL Google Ads] and navigate to **[!DNL Help]** > **[!DNL Customer ID]**.
-1. **[!UICONTROL Access Token Data Element]**: Select the data element icon (![Data element icon](../../../images/extensions/server/google-ads-enhanced-conversions/data-element-icon.png)) and choose the Google OAuth 2 secret data element that you [configured in the previous step](#create-secret-data-element) from the menu.
+2. **[!UICONTROL Access Token Data Element]**: Select the data element icon (![Data element icon](/help/images/icons/database.png)) and choose the Google OAuth 2 secret data element that you [configured in the previous step](#create-secret-data-element) from the menu.
 
 When finished, select **[!UICONTROL Save]** to install the extension.
 

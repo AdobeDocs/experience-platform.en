@@ -14,7 +14,7 @@ A mapping set is a set of mappings that transforms data from one schema to anoth
 This overview requires a working understanding of the following components of Adobe Experience Platform:
 
 - [Data Prep](./home.md): Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
-- [Dataflows](../dataflows/home.md): Dataflows are a representation of data jobs that move data across Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
+- [Dataflows](../dataflows/home.md): Dataflows are a representation of data jobs that move data across Experience Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
 - [[!DNL Adobe Experience Platform Data Ingestion]](../ingestion/home.md): The methods by which data can be sent to [!DNL Experience Platform].
 - [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 
@@ -68,14 +68,18 @@ The following JSON is an example of a typical mapping set:
 | `outputSchema` | The XDM schema that the input data has will be transformed to conform to. |
 | `mappings` | An array of field-to-field mappings from the source schema to the destination schema. |
 | `sourceType` | For each listed mapping, its `sourceType` attribute indicates the type of source that is to be mapped. Can be one of `ATTRIBUTE`, `STATIC`, or `EXPRESSION`: <ul><li> `ATTRIBUTE` is used for any value found in the source path. </li><li>`STATIC` is used for values injected into the destination path. This value remains constant and is not affected by the source schema.</li><li> `EXPRESSION` is used for an expression, which will be resolved during runtime. A list of available expressions can be found in the [mapping functions guide](./functions.md).</li> </ul> |
-| `source` | For each listed mapping, the `source` attribute indicates the field that you want to map. More information about how to configure your source can be found in the [sources section](#sources). |
-| `destination` | For each listed mapping, the `destination` attribute indicates the field, or the path to the field, where the value extracted from the `source` field will be placed. More information on how to configure your destinations can be found in the [destination section](#destination). |
+| `source` | For each listed mapping, the `source` attribute indicates the field that you want to map. More information about how to configure your source can be found in the [sources overview](../sources/home.md). |
+| `destination` | For each listed mapping, the `destination` attribute indicates the field, or the path to the field, where the value extracted from the `source` field will be placed. More information on how to configure your destinations can be found in the [destination overview](../destinations/home.md). |
 | `mappings.name` | (*Optional*) A name for the mapping. |
 | `mappings.description` | (*Optional*) A description of the mapping. |
 
 ## Configuring mapping sources
 
 In a mapping, the `source` can be a field, expression, or a static value. Based on the source type given, the value can be extracted in various ways.
+
+>[!TIP]
+>
+>Wait up to 10 minutes after saving your mappings before starting data ingestion to ensure they are fully saved.
 
 ### Field in columnar data
 

@@ -15,7 +15,7 @@ Experience Platform destinations fully supported by Real-Time CDP B2B Edition in
 
 To understand how destinations fit into your B2B workflow, please see the [end-to-end tutorial](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination).
 
-Adobe Real-Time Customer Data Platform B2B Edition allows you to export your B2B data through the Marketo Engage destination connector. By using the Marketo Engage destination, you can push segments created in Adobe Experience Platform to Marketo, where they will appear as static lists.
+Adobe Real-Time Customer Data Platform B2B Edition allows you to export your B2B data through the Marketo Engage destination connector. By using the Marketo Engage destination, you can push audiences created in Adobe Experience Platform to Marketo, where they will appear as static lists.
 
 The following documents provide more information on on using the Marketo Engage destination to export data: 
 

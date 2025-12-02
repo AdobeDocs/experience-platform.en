@@ -45,13 +45,13 @@ This guide requires a working understanding of the following components of Adobe
 
 *   [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 *   [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] allows you to build audiences and generate audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-Time Customer Profile] data.
-*   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+*   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you need to know in order to activate data to file-based destinations in Platform.
+The following sections provide additional information that you need to know in order to activate data to file-based destinations in Experience Platform.
 
 ### Required permissions {#permissions}
 
-To export profiles, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL View Destinations]**, and **[!UICONTROL Activate Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+To export profiles, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -61,13 +61,13 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values-headers}
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Resources in [!DNL Experience Platform] can be isolated to specific virtual sandboxes. In requests to [!DNL Platform] APIs, you can specify the name and ID of the sandbox that the operation will take place in. These are optional parameters.
+Resources in [!DNL Experience Platform] can be isolated to specific virtual sandboxes. In requests to [!DNL Experience Platform] APIs, you can specify the name and ID of the sandbox that the operation will take place in. These are optional parameters.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -75,7 +75,7 @@ Resources in [!DNL Experience Platform] can be isolated to specific virtual sand
 >
 >For more information on sandboxes in [!DNL Experience Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
+All requests that contain a payload (`POST`, `PUT`, `PATCH`) require an additional media type header:
 
 * Content-Type: `application/json`
 
@@ -94,7 +94,7 @@ For descriptions of the terms that you will be encountering in this API tutorial
 Before starting the workflow to export profiles, identify the connection spec and flow spec IDs of the destination to which you are intending to export audiences to. Use the table below for reference.
 
 |Destination | Connection spec | Flow spec|
----------|----------|---------|
+|---------|----------|---------|
 | Amazon S3 | `4fce964d-3f37-408f-9778-e597338a21ee` | `1a0514a6-33d4-4c7f-aff8-594799c47549` |
 | Azure Blob Storage | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
 | Azure Data Lake Gen 2(ADLS Gen2) | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
@@ -320,7 +320,7 @@ Follow the steps below to set up an audience export dataflow to a cloud storage 
 
 ![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step2.png)
 
-After deciding which destination you are exporting audiences to, you need to create a source connection. The [source connection](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) represents the connection to the internal [Experience Platform Profile Store](/help/profile/home.md#profile-data-store). 
+After deciding which destination you are exporting audiences to, you need to create a source connection. The [source connection](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) represents the connection to the internal [Experience Platform Profile store](/help/profile/home.md#profile-data-store). 
 
 >[!BEGINSHADEBOX]
 
@@ -338,7 +338,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-   "name":"Connect to Profile Store",
+   "name":"Connect to Profile store",
    "description":"Optional",
    "connectionSpec":{
       "id":"8a9c3494-9708-43d7-ae3f-cda01e5030e1", // this connection spec ID is always the same for Source Connections
@@ -384,38 +384,58 @@ Note the highlighted line with inline comments in the [!DNL connection spec] exa
 {
     "items": [
         {
-            "id": "4fce964d-3f37-408f-9778-e597338a21ee",
-            "name": "Amazon S3",
-            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
-            "version": "1.0",
-            "authSpec": [ // describes the authentication parameters
-                {
-                    "name": "Access Key",
-                    "type": "KeyBased",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "description": "Defines auth params required for connecting to amazon-s3",
-                        "type": "object",
-                        "properties": {
-                            "s3AccessKey": {
-                                "description": "Access key id",
-                                "type": "string",
-                                "pattern": "^[A-Z2-7]{20}$"
-                            },
-                            "s3SecretKey": {
-                                "description": "Secret access key for the user account",
-                                "type": "string",
-                                "format": "password",
-                                "pattern": "^[A-Za-z0-9\/\\+]{40}$"
-                            }
-                        },
-                        "required": [
-                            "s3SecretKey",
-                            "s3AccessKey"
-                        ]
-                    }
+        "id": "4fce964d-3f37-408f-9778-e597338a21ee",
+        "name": "amazon-s3",
+        "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+        "version": "1.0",
+        "authSpec": [
+            {
+            "name": "Access Key",
+            "type": "KeyBased",
+            "spec": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "description": "Defines auth params required for connecting to amazon-s3",
+                "type": "object",
+                "properties": {
+                "s3AccessKey": {
+                    "description": "Access key id",
+                    "type": "string",
+                    "pattern": "^[A-Z2-7]{20}$"
+                },
+                "s3SecretKey": {
+                    "description": "Secret access key for the user account",
+                    "type": "string",
+                    "format": "password",
+                    "pattern": "^[A-Za-z0-9\\/\\+]{40}$"
                 }
-            ],
+                },
+                "required": [
+                "s3SecretKey",
+                "s3AccessKey"
+                ]
+            }
+            },
+            {
+            "name": "Assumed Role",
+            "type": "S3RoleBased",
+            "spec": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "description": "Defines role based auth params required for connecting to amazon-s3",
+                "type": "object",
+                "properties": {
+                "s3Role": {
+                    "title": "Role",
+                    "description": "S3 role",
+                    "type": "string",
+                    "format": "password"
+                }
+                },
+                "required": [
+                "s3Role"
+                ]
+            }
+            }
+        ],
 //...
 ```
 
@@ -685,7 +705,7 @@ Using the properties specified in the authentication spec (i.e. `authSpec` from 
 
 **Request** 
 
-+++[!DNL Amazon S3] - Base connection request
++++[!DNL Amazon S3] - Base connection request with access key and secret key authentication
 
 >[!TIP]
 >
@@ -708,6 +728,39 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "s3SecretKey": "<Add secret key>",
       "s3AccessKey": "<Add access key>"
+    }
+  },
+  "connectionSpec": {
+    "id": "4fce964d-3f37-408f-9778-e597338a21ee", // Amazon S3 connection spec
+    "version": "1.0"
+  }
+}'
+```
+
++++
+
++++[!DNL Amazon S3] - Base connection request with assumed role authentication
+
+>[!TIP]
+>
+>For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) section of the Amazon S3 destination documentation page.
+
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="17"}
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'accept: application/json' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "name": "Amazon S3 Base Connection",
+  "auth": {
+    "specName": "Assumed Role",
+    "params": {
+      "s3Role": "<Add s3 role>"
     }
   },
   "connectionSpec": {
@@ -1037,7 +1090,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ### Add encryption to exported files
 
-Optionally, you can add encryption to your exported files. To do this, you need to add items from the `encryptionSpecs`. See the request example below with the mandatory parameters highlighted:
+Optionally, you can add encryption to your exported files. To do this, you need to add items from the `encryption` object. See the request example below with the mandatory parameters highlighted:
 
 
 >[!BEGINSHADEBOX]
@@ -1046,7 +1099,7 @@ Optionally, you can add encryption to your exported files. To do this, you need 
 
 ```json {line-numbers="true" start-line="1" highlight="26-27"}
 
-           "encryptionSpecs": [
+           "encryption": [
                 {
                     "name": "File PGP/GPG Encryption",
                     "type": "FileAsymmetric",
@@ -1106,12 +1159,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "sshKey": "<Add SSH key>"
       }
     },
-  "encryptionSpecs":{
-     "specName": "Encryption spec",
-     "params": {
-         "encryptionAlgo":"PGPGPG",
-         "publicKey":"<Add public key>"
-      }            
+  "encryption": {
+    "specName": "File Encryption",
+        "params": {
+            "encryptionAlgo": "PGP/GPG",
+            "publicKey": "<Add public key>"
+        }
     },
   "connectionSpec": {
     "id": "36965a81-b1c6-401b-99f8-22508f1e6a26", // SFTP connection spec
@@ -1164,7 +1217,7 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { //describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -1375,7 +1428,7 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -1575,7 +1628,7 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -1765,11 +1818,11 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
         "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
         "version": "1.0",
         "authSpec": [],
-        "encryptionSpecs": [],
-            "targetSpec": { // describes the target connection parameters
-                "name": "User based target",
-                "type": "UserNamespace",
-                "spec": {
+        "encryption": [],
+        "targetSpec": { // describes the target connection parameters
+            "name": "User based target",
+            "type": "UserNamespace",
+            "spec": {
                     "$schema": "http://json-schema.org/draft-07/schema#",
                     "type": "object",
                     "properties": {
@@ -1956,7 +2009,7 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -2155,7 +2208,7 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -2365,7 +2418,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "bucketName": "your-bucket-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "4fce964d-3f37-408f-9778-e597338a21ee", // Amazon S3 connection spec id
@@ -2399,6 +2453,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2457,7 +2512,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "container": "your-container-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "6d6b59bf-fb58-4107-9064-4d246c0e5bb2", // Azure Blob Storage connection spec id
@@ -2491,6 +2547,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2548,7 +2605,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "be2c3209-53bc-47e7-ab25-145db8b873e1", // Azure Data Lake Gen 2(ADLS Gen2) connection spec id
@@ -2582,6 +2640,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2639,7 +2698,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "10440537-2a7b-4583-ac39-ed38d4b848e8", // Data Landing Zone connection spec id
@@ -2673,6 +2733,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2731,7 +2792,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "bucketName": "your-bucket-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "c5d93acb-ea8b-4b14-8f53-02138444ae99", // Google Cloud Storage connection spec id
@@ -2765,6 +2827,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2822,7 +2885,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "remotePath": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "36965a81-b1c6-401b-99f8-22508f1e6a26", // SFTP connection spec id
@@ -2856,6 +2920,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -3427,7 +3492,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ View available identities to use in the input schema
 
-The response returns the identities that you can use when creating the input schema. Note that this response returns both [standard](/help/identity-service/namespaces.md#standard) and [custom](/help/identity-service/namespaces.md#manage-namespaces) identity namespaces that you set up in Experience Platform. 
+The response returns the identities that you can use when creating the input schema. Note that this response returns both [standard](/help/identity-service/features/namespaces.md#standard) and [custom](/help/identity-service/features/namespaces.md#manage-namespaces) identity namespaces that you set up in Experience Platform. 
 
 ```json
 
@@ -4423,7 +4488,7 @@ See [retrieve a destination dataflow's details](https://developer.adobe.com/expe
 
 >[!ENDSHADEBOX]
 
-Finally, you need to PATCH the dataflow with the mapping set information that you just created.
+Finally, you need to `PATCH` the dataflow with the mapping set information that you just created.
 
 >[!BEGINSHADEBOX]
 
@@ -4477,11 +4542,88 @@ The response from the Flow Service API returns the ID of the updated dataflow.
 
 ![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
-To make any updates to your dataflow, use the `PATCH` operation.For example, you can update your dataflows to select fields as mandatory keys or deduplication keys. 
+To make any updates to your dataflow, use the `PATCH` operation. For example, you can add a marketing action to your dataflows, update your dataflows to select fields as mandatory keys or deduplication keys, or add file manifest generation to existing destinations.
+
+### Add a marketing action {#add-marketing-action}
+
+To add a [marketing action](/help/data-governance/api/marketing-actions.md), see the request and response examples below.
+
+>[!IMPORTANT]
+>
+>The `If-Match` header is required when making a `PATCH` request. The value for this header is the unique version of the dataflow you want to update. The etag value updates with every successful update of a flow entity such as dataflow, target connection, and others.
+>
+> To get the latest version of the etag value, perform a GET request to the `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` endpoint, where `{ID}` is the dataflow ID that you are looking to update.
+>
+> Make sure to wrap the value of the `If-Match` header in double quotes like in the examples below when making `PATCH` requests.
+
+>[!BEGINSHADEBOX]
+
+**Request** 
+
+>[!TIP]
+>
+>Before adding a marketing action to a dataflow, you can look up your existing core and custom marketing actions. View [how to retrieve a list of existing marketing actions](/help/data-governance/api/marketing-actions.md#list).  
+
++++Add a marketing action to a destination dataflow - Request
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
+--data-raw '[
+   {
+      "op":"add",
+      "path":"/policy",
+      "value":{
+         "enforcementRefs":[
+            
+         ]
+      }
+   },
+   {
+      "op":"add",
+      "path":"/policy/enforcementRefs/-",
+      "value":"/dulepolicy/marketingActions/custom/6b935bc8-bb9e-451b-a327-0ffddfb91e66/constraints"
+   }
+]'
+```
+
++++
+
+
+**Response**
+
++++Add a marketing action - Response
+
+A successful response returns response code `200` along with the ID of the updated dataflow and the updated eTag. 
+
+```json
+{
+    "id": "eb54b3b3-3949-4f12-89c8-64eafaba858f",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
++++
+
+>[!ENDSHADEBOX]
 
 ### Add a mandatory key {#add-mandatory-key}
 
-To add a [mandatory key](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes), see the request and response examples below
+To add a [mandatory key](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes), see the request and response examples below.
+
+>[!IMPORTANT]
+>
+>The `If-Match` header is required when making a `PATCH` request. The value for this header is the unique version of the dataflow you want to update. The etag value updates with every successful update of a flow entity such as dataflow, target connection, and others.
+>
+> To get the latest version of the etag value, perform a GET request to the `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` endpoint, where `{ID}` is the dataflow ID that you are looking to update.
+>
+> Make sure to wrap the value of the `If-Match` header in double quotes like in the examples below when making `PATCH` requests.
 
 >[!BEGINSHADEBOX]
 
@@ -4490,12 +4632,13 @@ To add a [mandatory key](/help/destinations/ui/activate-batch-profile-destinatio
 +++Add an identity as mandatory field - Request
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4513,12 +4656,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 +++Add an XDM attribute as mandatory field - Request
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4552,6 +4696,14 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 To add a [deduplication key](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys), see the request and response examples below
 
+>[!IMPORTANT]
+>
+>The `If-Match` header is required when making a `PATCH` request. The value for this header is the unique version of the dataflow you want to update. The etag value updates with every successful update of a flow entity such as dataflow, target connection, and others.
+>
+> To get the latest version of the etag value, perform a GET request to the `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` endpoint, where `{ID}` is the dataflow ID that you are looking to update.
+>
+> Make sure to wrap the value of the `If-Match` header in double quotes like in the examples below when making `PATCH` requests.
+
 >[!BEGINSHADEBOX]
 
 **Request** 
@@ -4559,12 +4711,13 @@ To add a [deduplication key](/help/destinations/ui/activate-batch-profile-destin
 +++Add an identity as deduplication key - Request
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4585,12 +4738,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 +++Add an XDM attribute as deduplication key - Request
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4620,6 +4774,52 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ```
 
 +++
+
+>[!ENDSHADEBOX]
+
+### Add file manifest generation to existing destination {#add-file-manifest}
+
+Manifest JSON files contain information about the export location, export size, and more. The manifest is named using the format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. View a [sample manifest file](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). The manifest file includes the following fields:
+
+  * `flowRunId`: The [dataflow run](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) which generated the exported file. 
+  * `scheduledTime`: The time in UTC when the file was exported. 
+  * `exportResults.sinkPath`: The path in your storage location where the exported file is deposited. 
+  * `exportResults.name`: The name of the exported file.
+  * `size`: The size of the exported file, in bytes.
+
+To add file manifest generation to an existing destination, you need to update the target connection parameters using the `PATCH` operation. This enables manifest file generation for your destination, which provides metadata about the exported files.
+
+>[!IMPORTANT]
+>
+>The `If-Match` header is required when making a `PATCH` request. The value for this header is the unique version of the target connection you want to update. The etag value updates with every successful update of a flow entity such as dataflow, target connection, and others.
+>
+> To get the latest version of the etag value, perform a GET request to the `https://platform.adobe.io/data/foundation/flowservice/targetConnections/{ID}` endpoint, where `{ID}` is the target connection ID that you are looking to update.
+>
+> Make sure to wrap the value of the `If-Match` header in double quotes like in the examples below when making `PATCH` requests.
+
+>[!BEGINSHADEBOX]
+
+**Request** 
+
++++Add file manifest to existing target connection - Request
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/targetConnections/{TARGET_CONNECTION_ID}' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
+--data-raw '[
+  {
+    "op": "add",
+    "path": "/params/includeFileManifest",
+    "value": true
+  }
+]'
+```
 
 >[!ENDSHADEBOX]
 
@@ -4701,11 +4901,11 @@ You can find information about the [various parameters returned by the Dataflow 
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide for more information on interpreting error responses.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully connected Platform to one of your preferred cloud storage destinations and set up a dataflow to the respective destination to export audiences. See the following pages for more details, such as how to edit existing dataflows using the Flow Service API:
+By following this tutorial, you have successfully connected Experience Platform to one of your preferred cloud storage destinations and set up a dataflow to the respective destination to export audiences. See the following pages for more details, such as how to edit existing dataflows using the Flow Service API:
 
 * [Destinations overview](../home.md)
 * [Destinations Catalog overview](../catalog/overview.md)

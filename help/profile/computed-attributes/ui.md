@@ -26,7 +26,7 @@ In the Experience Platform UI, select **[!UICONTROL Profiles]** in the left navi
 
 ![The [!UICONTROL Profile] section and the [!UICONTROL Computed attributes] tabs are highlighted, showing users how to access the computed attributes browse page.](./images/ui/browse.png)
 
-To select which fields are visible, you can select ![the configure columns icon](./images/ui/configure-icon.png) to add or remove which fields you want to be displayed.
+To select which fields are visible, you can select ![the configure columns icon](/help/images/icons/column-settings.png) to add or remove which fields you want to be displayed.
 
 | Field | Description |
 | ----- | ----------- |
@@ -41,7 +41,7 @@ To select which fields are visible, you can select ![the configure columns icon]
 | [!UICONTROL Created] | A timestamp showing the date and time the computed attribute was created. |
 | [!UICONTROL Last modified ]| A timestamp showing the date and time the computed attribute was last modified. |
 
-You can also filter the displayed computed attributes based on the lifecycle status. Select the ![funnel](./images/ui/filter-icon.png) icon.
+You can also filter the displayed computed attributes based on the lifecycle status. Select the ![funnel](/help/images/icons/filter.png) icon.
 
 ![The filter icon is highlighted.](./images/ui/select-filter.png)
 
@@ -149,6 +149,10 @@ When selecting a draft computed attribute, the **[!UICONTROL Edit computed attri
 >For example, if you're creating a segment definition that is looking for "All profiles that have a valid email address" where the email address field is populated by a computed attribute with the most recent function, you **must** include both the email address' value exists **and** the email address' timestamp exists.
 
 After creating a computed attribute, you can use **published** computed attributes in other downstream services. Since computed attributes are profile attribute fields created on your profile union schema, you can look up computed attribute values for a Real-Time Customer Profile, use them in an audience, activate them to a destination, or use them for personalization in journeys in Adobe Journey Optimizer.
+
+>[!NOTE]
+>
+>Computed attributes **cannot** be used in audience **compositions**.
 
 ![The Segment Builder is displayed, showing a computed attribute as part of the segment definition composition.](./images/ui/use-ca.png)
 

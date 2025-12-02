@@ -49,7 +49,7 @@ An extension is an integration built by Adobe or an Adobe partner that adds new 
 
 All new properties come with the [Core extension](../extensions/client/core/overview.md) installed. Mobile properties come with additional extensions. The Core extension is built by Adobe to provide a robust default set of data element types for your data layer and event types for your rules. Most actions you will want to perform (get an ECID, send [!DNL Adobe Analytics] beacons, load the [!DNL Target] global mbox, etc) will come from extensions that you install from the catalog.
 
-What makes tags in Platform truly unique is that these extensions can be built by anyone. Do you need to drop a Facebook remarketing pixel on your site? Check out the extension that Facebook built. Do you want the same for Twitter or Linked In? Use those extensions. Do you need to run a survey? Look at Question Pro or Foresee. Do you need to manage privacy and consent from your end-users to help out with [!DNL GDPR]? Take a good look at Evidon and Trust Arc. Would you like to see granular insight into the behavior of individual users on your site? Maybe take a look at Clicktale. For more information, For more information, see the section on [adding a new extension](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
+What makes tags in Experience Platform truly unique is that these extensions can be built by anyone. Do you need to drop a Facebook remarketing pixel on your site? Check out the extension that Facebook built. Do you want the same for Twitter or Linked In? Use those extensions. Do you need to run a survey? Look at Question Pro or Foresee. Do you need to manage privacy and consent from your end-users to help out with [!DNL GDPR]? Take a good look at Evidon and Trust Arc. Would you like to see granular insight into the behavior of individual users on your site? Maybe take a look at Clicktale. For more information, For more information, see the section on [adding a new extension](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
 ## 5. Create data elements and rules
 
@@ -128,6 +128,6 @@ For more information about the different states and options available during the
 
 To learn more about tags, refer to these resources:
 
-* **[Data Collection Community](https://forums.adobe.com/community/experience-cloud/platform/launch)**: Ask and answer questions, submit ideas, vote on the ideas of others. Log in with your Adobe ID.
+* **[Data Collection Community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**: Ask and answer questions, submit ideas, vote on the ideas of others. Log in with your Adobe ID.
 * **[Developer Docs](../api/overview.md)**: Get involved with the tags developer community to build extensions or use the tags APIs
 * **[Tutorials Overview](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**: These documents introduce you to tags concepts including event forwarding and Mobile SDK in Android Apps.

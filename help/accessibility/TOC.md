@@ -8,7 +8,7 @@ user-guide-description: Learn about the Experience Platform commitment to provid
 
 * [Accessibility overview](home.md)
 * [Accessibility features](features.md)
-* [Custom accessibility for Platform](custom.md)
-* [Platform documentation](https://experienceleague.adobe.com/docs/experience-platform.html)
-* [Platform overview](https://www.adobe.com/go/platform-overview-en)
-* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Custom accessibility for Experience Platform](custom.md)
+* [Experience Platform documentation](https://experienceleague.adobe.com/docs/experience-platform.html)
+* [Experience Platform overview](https://www.adobe.com/go/platform-overview-en)
+* [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -206,11 +206,11 @@ When a batch is in "Loading", it means that the CompleteBatch API has not been c
 
 ### Is there a way to know if a batch has been successfully ingested?
 
-Once the batch status is "Active", the batch has been successfully ingested. To find out the status of the batch, follow the steps detailed [earlier](#how-is-batch-ingestion-monitored).
+Yes, once the batch status is "Active", the batch has been successfully ingested. To find out the status of the batch, follow the steps detailed [earlier](#how-is-batch-ingestion-monitored).
 
-### What happens after a batch fails?
+### What happens after a batch fails? {#what-if-a-batch-fails}
 
-When a batch fails, the reason it fails can be identified in the `errors` section of the payload. Examples of errors can be seen below:
+When a batch fails, the process stops and returns a `Failure` status. The reason it fails can be identified in the `errors` section of the payload. Examples of errors can be seen below:
 
 ```json
     "errors":[
@@ -266,4 +266,4 @@ There are two reasons that metrics may not be available on your batch:
 | 200 | The batch has been accepted for processing, and will transition to a final state, such as Active or Failure. Once submitted, the batch can be monitored using the `GetBatch` endpoint. |
 | 400 | Bad Request. Returned if there are either missing or overlapping chunks in a batch. |
 
-[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files
+`[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files`

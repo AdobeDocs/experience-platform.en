@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;DULE;dule
 solution: Experience Platform
 title: Getting Started with the Policy Service API
 description: The Policy Service API allows you to create and manage various resources related to Adobe Experience Platform Data Governance. This document provides an introduction to the core concepts you need to know before attempting to make calls to the Policy Service API.
+role: Developer
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
 ---
 # Getting started with the [!DNL Policy Service] API
@@ -16,7 +17,7 @@ Using the developer guide requires a working understanding of the various [!DNL 
 * [Data Governance](../home.md): The framework by which [!DNL Experience Platform] enforces data usage compliance.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Reading sample API calls
 
@@ -24,19 +25,19 @@ The [!DNL Policy Service] API documentation provides example API calls to demons
 
 ## Required headers
 
-The API documentation also requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to [!DNL Platform] endpoints. Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
+The API documentation also requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to [!DNL Experience Platform] endpoints. Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-All resources in [!DNL Experience Platform], including those belonging to Data Governance, are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform], including those belonging to Data Governance, are isolated to specific virtual sandboxes. All requests to [!DNL Experience Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
+>For more information on sandboxes in [!DNL Experience Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 

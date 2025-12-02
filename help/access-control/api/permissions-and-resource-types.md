@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;access control permissions;acc
 solution: Experience Platform
 title: Reference API Endpoint
 description: The reference endpoint in the Access Control API allows you view the names of available permissions and resource types, which can then be used to view effective access control policies for the current user.
+role: Developer
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
 ---
 # Reference endpoint
@@ -13,7 +14,7 @@ exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
 
 You can list the names of all permissions and resource types by making a GET request to the `/acl/reference` endpoint. These names can then be used in API calls to [view effective access control policies](./effective-policies.md) for the current user.
 
-A permission is a policy that is managed through the Adobe Admin Console, and maps to zero or more resource-type policies. A resource type is a policy that enables read, write, and/or delete capabilities for a specific type of [!DNL Platform] resource (such as datasets or schemas).
+A permission is a policy that is managed through the Adobe Admin Console, and maps to zero or more resource-type policies. A resource type is a policy that enables read, write, and/or delete capabilities for a specific type of [!DNL Experience Platform] resource (such as datasets or schemas).
 
 **API format**
 

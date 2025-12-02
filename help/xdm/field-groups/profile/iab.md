@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;field group;field group;iab;tcf;consent;
 solution: Experience Platform
 title: IAB TCF 2.0 Consent Field Group for Profile Schemas
-description: This document provides an overview of the IAB TCF 2.0 Consent schema field group for the XDM Individual Profile class.
+description: Learn about the IAB TCF 2.0 Consent schema field group for the XDM Individual Profile class.
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
 ---
 # [!UICONTROL IAB TCF 2.0 Consent] field group for profile schemas
@@ -52,7 +52,7 @@ As the example shows, each root-level key of `xdm:identityPrivacyInfo` correspon
 
 For each identity value, an `identityIABConsent` property must provided, which provides the TCF consent value for the identity. The value for this property must conform to the [[!UICONTROL Consent String] data type](../../data-types/consent-string.md).
 
-See the guide on [IAB TCF 2.0 support in Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) for more information on the use case of this field group. For more details on the field group itself, refer to the public XDM repository:
+See the guide on [IAB TCF 2.0 support in Experience Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) for more information on the use case of this field group. For more details on the field group itself, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

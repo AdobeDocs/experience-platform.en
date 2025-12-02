@@ -1,5 +1,4 @@
 ---
-keywords: connect destination;destination connect;how to connect destination
 title: Create a new destination connection
 type: Tutorial
 description: Learn how to connect to a destination in Adobe Experience Platform, enable alerts, and set up marketing actions for your connected destination.
@@ -9,8 +8,8 @@ exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 
 >[!IMPORTANT]
 > 
->* To connect to a destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
->* To connect to a destination that supports dataset exports, you need the **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To connect to a destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To connect to a destination that supports dataset exports,  you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 ## Overview {#overview}
 
@@ -46,13 +45,27 @@ Before you can send audience data to a destination, you must set up a connection
 
 ## Authenticate to destination {#authenticate}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_account_name"
+>title="Account name"
+>abstract="Enter a name that will help you easily identify this destination account in the future. This is especially useful if you have multiple connections to the same destination."
+
 The first step in connecting to a destination is to authenticate to the destination platform. 
 
-Depending on the destination that you are connecting to, you might be taken to the destination partner's page to authenticate, or you might be asked to input authentication credentials directly in the Platform workflow. Below is an example of required input to authenticate to an [!DNL Amazon S3] destination. Detailed instructions about the required input is provided in each destination documentation page (see, for example, the authentication section for [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) and for [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
+Depending on the destination that you are connecting to, you might be taken to the destination partner's page to authenticate, or you might be asked to input authentication credentials directly in the Experience Platform workflow.
+
+When setting up a new destination connection, you must provide an **[!UICONTROL Account name]** and, optionally, a **[!UICONTROL Description]**. These fields are available for all destinations.
+
+* **[!UICONTROL Account name]**: Enter a name that will help you easily identify this destination account in the future. This is especially useful if you have multiple connections to the same destination.
+* **[!UICONTROL Description]** (optional): Add any additional details that will help you or your team distinguish between accounts, such as the purpose of the connection or relevant business context.
+
+Providing clear and descriptive information in these fields makes it easier for you to manage and select the correct destination account when activating audiences.
+
+Below is an example of required input to authenticate to an [!DNL Amazon S3] destination. Detailed instructions about the required input is provided in each destination documentation page (see, for example, the authentication section for [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) and for [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
 
 **[!DNL Amazon S3] required and optional authentication parameters**
 
-![Image showing the required and optional input parameters when authenticating to an Amazon S3 destination.](../assets/ui/connect-destinations/authenticate-amazon-s3-example.png)
+![Image showing the required and optional input parameters when authenticating to an Amazon S3 destination.](../assets/ui/connect-destinations/s3-new-acc.png)
 
 ## Set up connection parameters {#set-up-connection-parameters}
 

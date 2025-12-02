@@ -4,6 +4,7 @@ user-guide-title: Adobe Experience Platform Data Ingestion Help
 breadcrumb-title: Data Ingestion Guide
 user-guide-description: Bring your data into Experience Platform through batch or streaming ingestion.
 feature: Data Ingestion
+role: Developer
 ---
 
 # Adobe Experience Platform Data Ingestion {#ingestion}
@@ -13,6 +14,7 @@ feature: Data Ingestion
   - [Overview](streaming-ingestion/overview.md)
   - [Kafka connector](streaming-ingestion/kafka.md)
   - [Troubleshooting](streaming-ingestion/troubleshooting.md)
+  - [IP Address Allowlisting](streaming-ingestion/allowlisting.md)
 - Batch ingestion{#batch}
   - [Getting started with batch ingestion APIs](batch-ingestion/getting-started.md)
   - [API Overview](batch-ingestion/overview.md)
@@ -37,9 +39,8 @@ feature: Data Ingestion
   - [Retrieve error diagnostics](quality/error-diagnostics.md)
   - [Retrieve failed batches](quality/retrieve-failed-batches.md)
   - [Streaming ingestion validation](quality/streaming-validation.md)
-  - [Data ingestion notifications](quality/subscribe-events.md)
 - [Guardrails for data ingestion](guardrails.md)
 - [Source connectors](source-connectors.md)
 - [Batch Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [Streaming Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+- [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

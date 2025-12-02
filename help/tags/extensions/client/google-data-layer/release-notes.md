@@ -20,8 +20,8 @@ A significant enhancement and bug fix release resulting from beta testing feedba
 
 * Fixes an issue in which an empty Google Data Layer Extension data element used in a non-data layer rule (e.g. Library Loaded), returned the data layer object, not the computed state.
 * Fixes an issue in which the data layer computed state was not passed from the helper in events at the time of the event firing, but rather at the time of rule execution.
-* Adds a toggle to the data element dialog that allows a user to choose if only values from events should be returned.  
-* Fixes an issue in which the event history was not correctly caught by rule event listeners.  
+* Adds a toggle to the data element dialog that allows a user to choose if only values from events should be returned.
+* Fixes an issue in which the event history was not correctly caught by rule event listeners.
 * Minor code clarity improvements.
 
 ## Version 1.2.0
@@ -31,3 +31,7 @@ A significant enhancement and bug fix release resulting from beta testing feedba
 * Fixes a bug that caused an error when saving a data element in some circumstances.
 * Adds documentation to the event dialog explaining the use of the Tags event object.
 * Adds a warning about infinite loops to event dialog.
+
+## Version 1.2.2
+
+* Adds support for Google Analytics gtag() events.

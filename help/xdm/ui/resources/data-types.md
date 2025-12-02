@@ -17,9 +17,13 @@ In Experience Data Model (XDM), data types are reusable fields that contain mult
 
 Adobe Experience Platform provides many standard data types that can be used to cover a wide variety of common experience management use cases. However, you can also define your own custom data types in order to serve your unique business needs.
 
-This tutorial covers the steps for creating and editing custom data types in the Platform user interface.
+>[!NOTE]
+>
+>If a field is defined as a specific data type, you cannot create the same field with a different datatype in another schema. This constraint applies across your organization's tenant.
 
-## Prerequisites
+This tutorial covers the steps for creating and editing custom data types in the Experience Platform user interface.
+
+## Prerequisites {#prerequisites}
 
 This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) for how data types contribute to XDM schemas.
 
@@ -27,7 +31,7 @@ While not required for this guide, it is recommended that you also follow the tu
 
 ## Open the [!DNL Schema Editor] for a data type {#data-type}
 
-In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace, then select the **[!UICONTROL Data types]** tab. A list of available data types is displayed. The list of data types is automatically filtered based on how they were created. The default setting displays the data types defined by Adobe. You can also filter the list to show those created by your organization. 
+In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace, then select the **[!UICONTROL Data types]** tab. A list of available data types is displayed. The list of data types is automatically filtered based on how they were created. The default setting displays the data types defined by Adobe. You can also filter the list to show those created by your organization. 
 
 ![The [!UICONTROL Schemas] workspace with [!UICONTROL Schemas] in the left navigation and [!UICONTROL Data types] highlighted.](../../images/ui/resources/data-types/data-types-tab.png)
 
@@ -95,7 +99,7 @@ This demonstrates how flexible data types can be in terms of describing your dat
 
 Once you have finished adding fields to the data type, select **[!UICONTROL Save]** to save your changes and add the data type to the [!DNL Schema Library].
 
-## Add the data type to a schema
+## Add the data type to a schema {#add-data-type}
 
 Once you have created a data type, you can start using it in your schemas. Since XDM schemas are composed of a class and zero or more field groups, fields provided by a data type cannot be added to a schema directly. Instead, they must be included in a class or a field group.
 
@@ -113,8 +117,8 @@ The canvas updates the data type of the field from "[!UICONTROL Object]" to the 
 
 ![](../../images/ui/resources/data-types/converted.png)
 
-## Next steps
+## Next steps {#next-steps}
 
-This guide covered how to create and edit data types using the Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
+This guide covered how to create and edit data types using the Experience Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
 
 To learn how to manage data types using the [!DNL Schema Registry] API, see the [data types endpoint guide](../../api/data-types.md).

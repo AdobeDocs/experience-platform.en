@@ -19,19 +19,19 @@ The table below describes each available column.
 
 >[!NOTE]
 >
->The alert subscriptions icon is contained in each row in an untitled column. See the [alert subscriptions](#alert-subscription) section for more information.
+>The alert subscriptions icon (![An alert subscriptions icon.](/help/images/icons/alert-add.png)) is contained in each row in an untitled column. See the [alert subscriptions](#alert-subscription) section for more information.
 
 | Column | Description  |
 |---|---|
 | **[!UICONTROL Name]** | The name field is either the template name or the first few characters of your SQL query. Any query created through the UI with the Query Editor is named at inception. If the query was created through the API, then its name becomes a snippet of the initial SQL used to create the query. To see a list of all runs associated with the query, select an item from the [!UICONTROL Name] column. For more information, see the [query runs schedule details](#query-runs) section. |
 | **[!UICONTROL Template]** | The template name of the query. Select a template name to navigate to the Query Editor. The query template is displayed in the Query Editor for convenience. If there is no template name, the row is marked with a hyphen and there is no ability to redirect to the Query Editor to view the query. |
 | **[!UICONTROL SQL]** | A snippet of the SQL query.  |
-| **[!UICONTROL Run frequency]** | The cadence at which your query is set to run. The available values are `Run once` and `Scheduled`. Queries can be filtered according to their run frequency. |
+| **[!UICONTROL Run frequency]** | The cadence at which your query is set to run. The available values are `Run once` and `Scheduled`. |
 | **[!UICONTROL Created by]** | The name of the user who created the query. |
 | **[!UICONTROL Created]** | The timestamp when the query was created, in UTC format.  |
 | **[!UICONTROL Last run timestamp]** | The most recent timestamp when the query was run. This column highlights whether a query has been executed according to its current schedule.  |
 | **[!UICONTROL Last run status]** | The status of the most recent query execution. The status values are: `Success`, `Failed`, `In progress`, and `No runs`. |
-| **[!UICONTROL Schedule Status]** | The current status of the scheduled query. There are five potential values, [!UICONTROL Registering], [!UICONTROL Active], [!UICONTROL Inactive], [!UICONTROL Deleted], and a hyphen. <ul><li>The hyphen indicates the scheduled query is a one-time, non-recurring query.</li><li>The [!UICONTROL Registering] status indicates that the system is still processing the creation of the new schedule for the query. Note, you cannot disable or delete a scheduled query while it is registering.</li><li>The [!UICONTROL Active] status indicates that the scheduled query has **not yet passed** its completion date and time.</li><li>The [!UICONTROL Inactive] status indicates that the scheduled query has **passed** its completion date and time.</li><li>The [!UICONTROL Deleted] status indicates that the query schedule has been deleted.</li></ul> |
+| **[!UICONTROL Schedule Status]** | The current status of the scheduled query. There are six potential values, [!UICONTROL Registering], [!UICONTROL Active], [!UICONTROL Inactive], [!UICONTROL Deleted], a hyphen, and [!UICONTROL Quarantined].<ul><li>The **[!UICONTROL Registering]** status indicates that the system is still processing the creation of the new schedule for the query. Note, you cannot disable or delete a scheduled query while it is registering.</li><li>The **[!UICONTROL Active]** status indicates that the scheduled query has **not yet passed** its completion date and time.</li><li>The **[!UICONTROL Inactive]** status indicates that the scheduled query has **passed** its completion date and time or has been marked by a user to be in a inactive state.</li><li>The **[!UICONTROL Deleted]** status indicates that the query schedule has been deleted.</li><li>The hyphen indicates the scheduled query is a one-time, non-recurring query.</li><li>The **[!UICONTROL Quarantined]** status indicates that the query has failed ten consecutive runs and requires your intervention before any further executions can take place.</li></ul> |
 
 >[!TIP]
 >
@@ -39,7 +39,7 @@ The table below describes each available column.
 
 ## Customize table settings for scheduled queries {#customize-table}
 
-You can adjust the columns on the [!UICONTROL Scheduled Queries] tab to your needs. To open the [!UICONTROL Customize table] settings dialog and edit available columns, select the settings icon (![A settings icon.](../images/ui/monitor-queries/settings-icon.png)) from the top right of the screen.
+You can adjust the columns on the [!UICONTROL Scheduled Queries] tab to your needs. To open the [!UICONTROL Customize table] settings dialog and edit available columns, select the settings icon (![A settings icon.](/help/images/icons/column-settings.png)) from the top right of the screen.
 
 >[!NOTE]
 >
@@ -57,45 +57,95 @@ Toggle the relevant checkboxes to remove or add a table column. Next, select **[
 
 ## Manage scheduled queries with inline actions {#inline-actions}
 
-The [!UICONTROL Scheduled Queries] view offers various inline actions to manage all of your scheduled queries from one location. Inline actions are indicated in each row with ellipsis. Select the ellipsis of a scheduled query that you want to manage to see the available options in a pop-up menu. The available options include [[!UICONTROL Disable schedule]](#disable) or [!UICONTROL Enable schedule], [[!UICONTROL Delete schedule]](#delete), and [[!UICONTROL Subscribe]](#alert-subscription) to query alerts.
+The [!UICONTROL Scheduled Queries] view offers various inline actions to manage all of your scheduled queries from one location. Inline actions are indicated in each row with ellipsis. Select the ellipsis of a scheduled query that you want to manage to see the available options in a pop-up menu. The available options include [[!UICONTROL Disable schedule]](#disable) or [!UICONTROL Enable schedule], [[!UICONTROL Delete schedule]](#delete), [[!UICONTROL Subscribe]](#alert-subscription) to query alerts, and [Enable or [!UICONTROL Disable quarantine]](#quarantined-queries).
 
-![The Scheduled Queries tab with the inline action ellipses and popup menu highlighted.](../images/ui/monitor-queries/disable-inline.png)
+![The Scheduled Queries tab with the inline action ellipses and popup menu highlighted.](../images/ui/monitor-queries/inline-actions.png)
 
 ### Disable or enable a scheduled query {#disable}
 
-To disable a scheduled query, select the ellipsis of a scheduled query you want to manage, then select **[!UICONTROL Disable schedule]** from the options in the pop-up menu. A dialog appears to confirm your action. Select **[!UICONTROL Disable]** to confirm your setting.
+To disable a scheduled query, select the ellipsis for the scheduled query you want to manage, then select **[!UICONTROL Disable schedule]** from the options in the pop-up menu. A dialog appears to confirm your action. Select **[!UICONTROL Disable]** to confirm your setting.
 
 Once a scheduled query is disabled, you can enable the schedule through the same process. Select the ellipsis, then select **[!UICONTROL Enable schedule]** from the available options.
 
+>[!NOTE]
+>
+>If a query has been Quarantined, you should review the template's SQL before you enable its schedule. This prevents a waste of compute hours if the template query still has issues.
+
 ### Delete a scheduled query {#delete}
 
-To delete a scheduled query, select the ellipsis of a scheduled query you want to manage, then select **[!UICONTROL Delete schedule]** from the options in the pop-up menu. A dialog appears to confirm your action. Select **[!UICONTROL Delete]** to confirm your setting.
+To delete a scheduled query, select the ellipsis for the scheduled query you want to manage, then select **[!UICONTROL Delete schedule]** from the options in the pop-up menu. A dialog appears to confirm your action. Select **[!UICONTROL Delete]** to confirm your setting.
 
-Once a scheduled query is deleted, it is **not** removed from the list of scheduled queries. The inline actions provided by the ellipses are removed and replaced by the grayed out add alert icon. You cannot subscribe to alerts for the deleted schedule. The row remains in the UI to provide information on runs conducted as part of the scheduled query. 
+Once a scheduled query is deleted, it is **not** removed from the list of scheduled queries. The inline actions provided by the ellipses are removed and replaced by the grayed out add alert subscription icon. You cannot subscribe to alerts for the deleted schedule. The row remains in the UI to provide information on runs conducted as part of the scheduled query. 
 
-![The Scheduled Queries tab with a deleted scheduled query and greyed out alert icon highlighted.](../images/ui/monitor-queries/post-delete.png)
+![The Scheduled Queries tab with a deleted scheduled query and greyed out alert subscription icon highlighted.](../images/ui/monitor-queries/post-delete.png)
 
 If you want to schedule runs for that query template, select the template name from the appropriate row to navigate to the Query Editor, then follow the [instructions to add a schedule to a query](./query-schedules.md#create-schedule) as described in the documentation. 
 
 ### Subscribe to alerts {#alert-subscription}
 
-To subscribe to alerts for scheduled query runs, select the ellipsis of a scheduled query you want to manage, then select **[!UICONTROL Subscribe]** from the options in the pop-up menu.
+To subscribe to alerts for scheduled query runs, select either the `...` (ellipsis) or alert subscription icon (![An alert subscription icon.](/help/images/icons/alert-add.png)) for the scheduled query you want to manage. The inline actions dropdown menu appears. Next, select **[!UICONTROL Subscribe]** from the available options.
 
-The [!UICONTROL Alerts] dialog opens. The [!UICONTROL Alerts] dialog subscribes you to both UI notifications and email alerts. Alerts are based on the status of the query. There are three options available: `start`, `success`, and `failure`. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe. You can subscribe to alerts as long as they don't have a [!UICONTROL Last Run Timestamp] value.
+![The scheduled queries workspace with an ellipses, alert subscription icon, and the inline actions dropdown menu highlighted.](../images/ui/monitor-queries/subscribe.png)
+
+The [!UICONTROL Alerts] dialog opens. The [!UICONTROL Alerts] dialog subscribes you to both UI notifications and email alerts. There are several alert subscription options available: `start`, `success`, `failure`, `quarantine`, and `delay`. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe.
 
 ![The alert subscriptions dialog.](../images/ui/monitor-queries/alert-subscription-dialog.png)
+
+The table below explains the supported query alert types: 
+
+| Alert type | Description |
+|---|---|
+| `start` | This alert notifies you when a scheduled query run is initiated or starts to process. |
+| `success` | This alert informs you when a scheduled query run completes successfully, indicating that the query executed without any errors. |
+| `failed` | This alert triggers when a scheduled query run encounters an error or fails to execute successfully. It helps you identify and address issues promptly. |
+| `quarantine` | This alert is activated when a scheduled query run is put into a quarantined state. When queries are enrolled in the [quarantine feature](#quarantined-queries), any scheduled query that fails ten consecutive runs is automatically put into a [!UICONTROL Quarantined] state. They then require your intervention before any further executions can take place. |
+| `delay` | This alert notifies you if there is a [delay in the outcome of a query execution](#query-run-delay) beyond a specified threshold. You can set a custom time that trigger the alert when the query runs for that duration without either completing or failing. |
+
+>[!NOTE]
+>
+>To be notified of query runs becoming quarantined, you must first enroll the scheduled query runs in the [quarantine feature](#quarantined-queries).
 
 See the [alert subscriptions API documentation](../api/alert-subscriptions.md) for more information.
 
 ### View the query details {#query-details}
 
-Select the information icon (![An information icon.](../images/ui/monitor-queries/information-icon.png)) to see the details panel for the query. The details panel contains all the relevant information on the query beyond the facts included in the scheduled queries table. The additional information includes the query ID, the last modified date, the SQL of the query, the schedule ID, and the current set schedule.
+Select the information icon (![An information icon.](/help/images/icons/info.png)) to see the details panel for the query. The details panel contains all the relevant information on the query beyond the facts included in the scheduled queries table. The additional information includes the query ID, the last modified date, the SQL of the query, the schedule ID, and the current set schedule.
 
 ![The Scheduled Queries tab with the information icon and the details panel highlighted.](../images/ui/monitor-queries/details-panel.png)
 
+## Quarantined queries {#quarantined-queries}
+
+>[!NOTE]
+>
+>The quarantine alert is not available for 'run-once' ad hoc queries. The quarantine alert is only applicable for scheduled batch (CTAS and ITAS) queries. 
+
+When enrolled in the quarantine feature, any scheduled query that fails ten consecutive runs is automatically put into a [!UICONTROL Quarantined] status. A query with this status becomes inactive and does not execute at its scheduled cadence. It then requires your intervention before any further executions can take place. This safeguards system resources as you must review and correct the issues with your SQL before further executions occur.
+
+To enable a scheduled query for the quarantine feature, select the ellipses (`...`) followed by [!UICONTROL Enable quarantine] from the dropdown menu that appears.
+
+![The scheduled queries tab with the ellipses and Enable quarantine highlighted from the inline actions dropdown menu.](../images/ui/monitor-queries/inline-enable.png)
+
+Queries can also be enrolled in the quarantine feature during the schedule creation process. See the [query schedules documentation](./query-schedules.md#quarantine) for more information.
+
+## Query run delay {#query-run-delay}
+
+Stay in control of your compute hours by setting alerts for query delays. You can monitor query performance and receive notifications if a query's status remains unchanged after a specific period. Use the '[!UICONTROL Query Run Delay]' alert to be notified if a query continues to process after a specific period of time without completing.
+
+When you [subscribe to alerts](#alert-subscription) for scheduled query runs, one of the available alerts is the [!UICONTROL Query Run Delay]. This alert requires you to set a threshold for the time spent executing, at which point you are notified of the delay in processing.
+
+To choose a threshold duration that triggers the notification, either enter a number in the text input field or use the up and down arrows to increase in increments of one minute. Since the threshold is set in minutes, the maximum duration for observing a query run delay is 1440 minutes (24 hours). The default time period for a run delay is 150 minutes.  
+
+>[!NOTE]
+>
+>A query run can only have one run delay time. If you change the delay threshold, it is changed for user subscribed to the alert and for your entire organization.
+
+![The Alerts dialog on the scheduled queries tab with the query run delay input field highlighted.](../images/ui/monitor-queries/query-run-delay-input.png)
+
+See the subscribe to alerts section to learn how to [subscribe to [!UICONTROL Query Run Delay] alerts](#alert-subscription).
+
 ## Filter queries {#filter}
 
-You can filter queries based on run frequency. From the [!UICONTROL Scheduled Queries] tab, select the filter icon (![A filter icon](../images/ui/monitor-queries/filter-icon.png)) to open the filter sidebar. 
+You can filter queries based on run frequency. From the [!UICONTROL Scheduled Queries] tab, select the filter icon (![A filter icon](/help/images/icons/filter.png)) to open the filter sidebar. 
 
 ![The scheduled queries tab with the filter icon highlighted.](../images/ui/monitor-queries/filter-queries.png)
 
@@ -122,7 +172,7 @@ This information is provided in a five-column table. Each row denotes a query ex
 | **[!UICONTROL Query run ID]**  | The query run ID for the daily execution. Select the **[!UICONTROL Query run ID]** to navigate to the [!UICONTROL Query run overview]. |
 | **[!UICONTROL Query run start]** | The timestamp when the query was executed. The timestamp is in UTC format. |
 | **[!UICONTROL Query run complete]** | The timestamp when the query was completed. The timestamp is in UTC format. |
-| **[!UICONTROL Status]** | The status of the most recent query execution. The three status values are: `successful` `failed` or `in progress`. |
+| **[!UICONTROL Status]** | The status of the most recent query execution. The status values are: `Success`, `Failed`, `In progress`, or `Quarantined`. |
 | **[!UICONTROL Dataset]** | The dataset involved in the execution. |
 
 Details of the query being scheduled can be seen in the [!UICONTROL Properties] panel. This panel includes the initial query ID, client type, template name, query SQL, and cadence of the schedule.
@@ -155,7 +205,7 @@ Queries that use anonymous blocks to comprise their SQL statements are separated
 >
 >The run details of an anonymous block that uses the DROP command will **not** be reported as a separate subquery. Separate run details are available for CTAS queries, ITAS queries, and COPY statements used as anonymous block subqueries. Run details for the DROP command are currently not supported.  
 
-Anonymous blocks are denoted through the use of a `$$` prefix before the query. To find out more about anonymous blocks in query service, see the [anonymous block document](../essential-concepts/anonymous-block.md).
+Anonymous blocks are denoted through the use of a `$$` prefix before the query. To find out more about anonymous blocks in query service, see the [anonymous block document](../key-concepts/anonymous-block.md).
 
 Anonymous block subqueries have tabs to the left of the run status. Select a tab to display the run details.
 
@@ -168,9 +218,3 @@ In the event an anonymous block query fails, you can find the error code for tha
 Select **[!UICONTROL Query]** to return to the schedule details screen, or **[!UICONTROL Scheduled Queries]** to return to the [!UICONTROL Scheduled Queries] tab.
 
 ![The run details screen with Query highlighted.](../images/ui/monitor-queries/return-navigation.png)
-
-<!-- Details required to complete this section below:
-### Run details for queries with parameterized queries {#parameterized-queries}
-
-Queries that use parameterized values to make up the SQL statement are ... 
--->

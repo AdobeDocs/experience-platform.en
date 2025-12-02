@@ -1,108 +1,241 @@
 ---
-title: Identity graph linking rules overview
+title: Identity Graph Linking Rules
 description: Learn about Identity Graph Linking Rules in Identity Service.
-hide: true
-hidefromtoc: true
-badge: Alpha
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 ---
-# Identity graph linking rules overview
+# [!DNL Identity Graph Linking Rules] overview {#identity-graph-linking-rules-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_linkingrules_overview"
+>title="Identity graph linking rules"
+>abstract="To prevent these unwanted merges, you can use configurations provided through Identity Graph Linking Rules and allow for accurate personalization for your users."
 
 >[!IMPORTANT]
 >
->Identity graph linking rules are currently in Alpha. The feature and documentation are subject to change.
+>[!DNL Identity Graph Linking Rules] is now generally available. Contact your Adobe Account Team or Adobe Support if you have an existing sandbox that requires collapsed graphs to be un-collapsed ("fixed") after you enable identity settings.
 
-## Table of contents
+With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly and that all merged profiles represent a single individual person through a person identifier, such as a CRMID. However, there are possible scenarios where certain data could try to merge multiple disparate profiles into a single profile ("graph collapse"). To prevent these unwanted merges, you can use configurations provided through [!DNL Identity Graph Linking Rules] and allow for accurate personalization for your users.
 
-* [Overview](./overview.md)
-* [Identity optimization algorithm](./identity-optimization-algorithm.md)
-* [Example scenarios](./example-scenarios.md)
-* [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
-* [Identity linking logic](./identity-linking-logic.md)
+## Get started
 
-With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly and that all merged profiles represent a single individual person through a person identifier, such as a CRM ID. However, there are possible scenarios where certain data could try to merge multiple disparate profiles into a single profile ("profile collapse"). To prevent these unwanted merges, you can use configurations provided through identity graph linking rules and allow for accurate personalization for your users.
+The following documents are essential in understanding [!DNL Identity Graph Linking Rules].
 
-## Example scenarios where profile collapse could happen
+* [Identity Optimization Algorithm](./identity-optimization-algorithm.md)
+* [Implementation guide](./implementation-guide.md)
+* [Examples of graph configurations](./example-configurations.md)
+* [Troubleshooting and FAQ](./troubleshooting.md)
+* [Namespace priority](./namespace-priority.md)
+* [Graph simulation UI](./graph-simulation.md)
+* [Identity settings UI](./identity-settings-ui.md)
 
-* **Shared device**: Shared device refers to devices that are used by more than one individual. Examples of a shared device include tablets, library computers, and kiosks.
-* **Bad email and phone numbers**: Bad email and phone numbers refer to end-users registering invalid contact information, such as "test<span>@test.com" for email, and "+1-111-111-1111" for phone number.
-* **Erroneous or bad identity values**: Erroneous or bad identity values refer to non-unique identity values that could merge CRM IDs. For example, while IDFA's are required to have 36 characters (32 alphanumeric characters and four hyphens), there are scenarios where an IDFA with an identity value of "user_null" can get ingested. Similarly, phone numbers only support numerical characters, but a phone namespace with an identity value of "not-specified" may get ingested.
+## Video library
 
-For more information on use case scenarios for identity graph linking rules, read the document on [example scenarios](./example-scenarios.md).
+Watch the following videos to learn about some of the fundamental aspects of Identity Graph Linking Rules.
 
-## Identity graph linking rules objectives
+<!-- CARDS
+{target = _blank}
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
 
-With Identity graph linking rules you can:
+    {description = Learn how to use the graph simulator to test out identity graph linking rules.}
 
-* Create a single identity graph / merged profile for each user by configuring unique namespaces (limits), which will prevent two disparate person identifiers from merging into one identity graph.
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+    {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
+-->
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity graph linking rules overview">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="Identity graph linking rules overview" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="Identity graph linking rules overview"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" target="_blank" rel="referrer" title="Identity graph linking rules overview">Identity graph linking rules overview</a>
+                    </p>
+                    <p class="is-size-6">Get an overview of how identity graph linking rules help data architects maintain accurate customer profiles and prevent graph collapse.</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity graph linking rules - Graph Simulation">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="Identity graph linking rules - Graph Simulation" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="Identity graph linking rules - Graph Simulation"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" title="Identity graph linking rules - Graph Simulation">Identity graph linking rules - Graph Simulation</a>
+                    </p>
+                    <p class="is-size-6">Learn how to use the graph simulator to test out identity graph linking rules.</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity graph linking rules - Identity settings">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Identity graph linking rules - Identity settings" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="Identity graph linking rules - Identity settings"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="Identity graph linking rules - Identity settings">Identity graph linking rules - Identity settings</a>
+                    </p>
+                    <p class="is-size-6">Learn how to enable and configure identity graph linking rules to build accurate customer profiles</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+
+
+## Graph collapse scenarios {#graph-collapse-scenarios}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphcollapsescenarios"
+>title="Graph Collapse Scenarios"
+>abstract="There are multiple reasons why graphs could "collapse", or represent multiple person entities."
+
+This section outlines example scenarios that you may consider when configuring [!DNL Identity Graph Linking Rules].
+
+### Shared device
+
+There are instances where multiple logins can occur on a single device:
+
+| Shared device | Description |
+| --- | --- |
+| Family computers and tablets | Husband and wife both login to their respective bank accounts. |
+| Public kiosk | Travelers at an airport logging on using their loyalty ID to check in bags and print boarding passes. |
+| Call center | Call center personnel log in on a single device on behalf of customers calling customer support to resolve issues. |
+
+![A diagram of some common shared devices.](../images/identity-settings/shared-devices.png "A diagram of some common shared devices."){zoomable="yes"}
+
+In these cases, from a graph standpoint, with no limits enabled, a single ECID will be linked to multiple CRMIDs. 
+
+With [!DNL Identity Graph Linking Rules], you can:
+
+* Configure the ID used for login as unique identifier. For example, you can limit a graph to store just one identity with a CRMID namespace, and thus define that CRMID as the unique identifier of a shared device.
+  * By doing this, you can ensure that CRMIDs do not get merged by the ECID.
+
+### Invalid email/phone scenarios
+
+There are also instances of users who provide fake values as phone numbers and/or email addresses when registering. In these cases, if limits are not enabled, then phone/email related identities will end up being linked to multiple different CRMIDs.
+
+![A diagram that represents invalid email or phone scenarios.](../images/identity-settings/invalid-email-phone.png "A diagram that represents invalid email or phone scenarios."){zoomable="yes"}
+
+With [!DNL Identity Graph Linking Rules], you can:
+
+* Configure either the CRMID, phone number, or email address as the unique identifier and thus limit one person to just one CRMID, phone number, and/or email address associated with their account.
+
+### Erroneous or bad identity values
+
+There are cases where non-unique, erroneous identity values are ingested in the system, irrespective of namespace. Examples include:
+
+* IDFA namespace with the identity value of "user_null".
+  * IDFA identity values should have 36 characters: 32 alphanumeric characters and four hyphens.
+* Phone number namespace with the identity value of "not-specified".
+  * Phone numbers should not have any alphabet characters.
+
+These identities could result in the following graphs, where multiple CRMIDs are merged together with the 'bad' identity:
+
+![A graph example of identity data with erroneous or bad identity values.](../images/identity-settings/bad-data.png "A graph example of identity data with erroneous or bad identity values."){zoomable="yes"}
+
+With [!DNL Identity Graph Linking Rules] you can configure the CRMID as the unique identifier to prevent unwanted profile collapsing due to this type of data.
+
+## [!DNL Identity Graph Linking Rules] {#identity-graph-linking-rules}
+
+With [!DNL Identity Graph Linking Rules] you can:
+
+* Create a single identity graph / merged profile for each user by configuring unique namespaces, which will prevent two disparate person identifiers from merging into one identity graph.
 * Associate online, authenticated events to the person by configuring priorities
 
-### Limits
+### Terminology {#terminology}
 
-A unique namespace is an identifier that represents an individual, such as CRM ID, login ID, and hashed email. If a namespace is designated as unique, then a graph can only have one identity with that namespace (`limit=1`). This will prevent the merging of two disparate person identifiers within the same graph. 
+| Terminology | Description |
+| --- | --- |
+| Unique namespace | A unique namespace is an identity namespace that has been set up to be distinct within the context of an identity graph. You can configure a namespace to be unique using the UI. Once a namespace is defined as unique, a graph can only have one identity that contains that namespace. |
+| Namespace priority | Namespace priority refers to the relative importance of namespaces compared to one another. Namespace priority is configurable through the UI. You can rank namespaces in a given identity graph. Once enabled, names priority will be used in various scenarios, such as input for Identity Optimization Algorithm and determining primary identity for experience event fragments. |
+| Identity Optimization Algorithm | The Identity Optimization Algorithm ensures that guidelines created by configuring a unique namespace and namespace priorities are enforced in a given identity graph. |
 
-* If a limit is not configured, this could result in unwanted graph merges, such as two identities with a CRM ID namespace in a graph.
-* If a limit is not configured, the graph can add as many namespaces as needed as long as the graph is within the guardrails (50 identities/graph).
-* If a limit is configured, then the identity optimization algorithm will ensure that the limit is enforced.
+### Unique namespace {#unique-namespace}
 
-### Identity optimization algorithm
+You can configure a namespace to be unique using the identity settings UI workspace. Doing so, informs the Identity Optimization Algorithm that a given graph may only have one identity that contains that unique namespace. This prevents the merging of two disparate person identifiers within the same graph.
 
-The identity optimization algorithm is a rule that ensures that the limits are enforced. The algorithm honors the most recent links and removes the oldest links to make sure that a given graph stays within the limits that you have defined.
+Consider the following scenario:
 
-The following is a list of implications of the algorithm on associating anonymous events to known identifiers:
+* Scott uses a tablet and opens his Google Chrome browser to go to acme<span>.com, where he signs in and browses for new basketball shoes.
+  * Behind the scenes, this scenario logs the following identities:
+    * An ECID namespace and value to represent the use of the browser
+    * A CRMID namespace and value to represent the authenticated user (Scott signed in with his username and password combination).
+* His son Peter then uses the same tablet and also uses Google Chrome to go to acme<span>.com, where he signs in with his own account to browse for football equipment.
+  * Behind the scenes, this scenario logs the following identities:
+    * The same ECID namespace and value to represent the browser.
+    * A new CRMID namespace and value to represent the authenticated user.
 
-* The ECID will be associated to the last authenticated user if the following conditions are met:
-  * If CRM IDs are merged by ECID (shared device).
-  * If limits are configured to just one CRM ID. 
+If CRMID was configured as a unique namespace, then the identity optimization algorithm splits the CRMIDs apart into two separate identity graphs, instead of merging them together.
 
-For more information, read the document on [identity optimization algorithm](./identity-optimization-algorithm.md).
+If you do not configure a unique namespace, you may end up with unwanted graph merges, such as two identities with the same CRMID namespace, but different identity values (scenarios like these often represent two different person entities in the same graph).
 
-### Priority
+You must configure a unique namespace to inform the Identity Optimization Algorithm to enforce limitations on the identity data that are ingested into a given identity graph.
 
->[!IMPORTANT]
->
->Namespace priorities are currently not available for alpha.
+### Namespace priority {#namespace-priority}
 
-You can use namespace priority to define which namespaces are more important than others. The hierarchy that you set for your namespaces are then used to define primary identities and store profile fragments. If priority settings are configured, then the primary identity setting on Web SDK will no longer be used to determine which profile fragments are stored.
+Namespace priority refers to the relative importance of namespaces compared to one another. Namespace priority is configurable through the UI and you can rank namespaces in a given identity graph. 
 
-* Limits and priority are independent configurations and do **not** affect each other:
-  * Limits is an identity graph configuration in Identity Service.
-  * Priority is a profile fragment configuration on Real-Time Customer Profile.
-  * Priority does **not** affect identity graph system guardrails.
+One way in which namespace priority is used is in determining the primary identity of experience event fragments (user behavior) in Real-Time Customer Profile. If priority settings are configured, then the primary identity setting on Web SDK will no longer be used to determine which profile fragments are stored.
 
->[!BEGINSHADEBOX]
+Unique namespaces and namespace priorities are both configurable in the identity settings UI workspace. However, the effects of their configurations are different:
 
-**Namespace priority example**
+| | Identity Service | Real-Time Customer Profile |
+| --- | --- | --- |
+| Unique namespace | In Identity Service, the Identity Optimization Algorithm refers to unique namespaces to determine the identity data that is ingested to a given identity graph.| Unique namespaces do not affect Real-Time Customer Profile. |
+| Namespace priority | In Identity Service, for graphs that have multiple layers, namespace priority will determine that the appropriate links are removed. | When an experience event is ingested in Profile, the namespace with the highest priority becomes the primary identity of the profile fragment. |
 
-Suppose that you have configured the following priority for your namespaces:
+* Namespace priority does not affect graph behavior when the limit of 50 identities per graph is reached.
+* **Namespace priority is a numerical value** assigned to a namespace indicating its relative importance. This is a property of a namespace.
+* **Primary identity is the identity in which a profile fragment is stored against**. A profile fragment is a record of data that stores information about a certain user: attributes (usually ingested via CRM records) or events (usually ingested from experience events, or online data).
+* Namespace priority determines the primary identity for experience event fragments.
+  * For profile records, you can use the schemas workspace in the Experience Platform UI to define identity fields, including the primary identity. Read the guide on [defining identity fields in the UI](../../xdm/ui/fields/identity.md) for more information.
+* If an experience event has two or more identities of the highest namespace priority in the identityMap, it will be rejected from ingestion because it will be deemed as "bad data". For example, if the identityMap contains `{ECID: 111, CRMID: John, CRMID: Jane}`, the entire event will be rejected as bad data because it implies that the event is associated to both `CRMID: John` and `CRMID: Jane` simultaneously.
 
-1. CRM ID: Represents a user.
-2. IDFA: Represents an Apple hardware device, such as an iPhone and iPad.
-3. GAID: Represents a Google hardware device, such as Google Pixel.
-4. ECID: Represents a web browser, such as Firefox, Safari and Chrome.
-5. AAID: Represents a web browser.
-If ECID and AAID are sent simultaneously, both identities represent the same web browser (duplicate).
-
-If the following experience events are ingested into Experience Platform, the profile fragments are then stored against the namespace with the higher priority.
-
-**Authenticated events:**
-
-* If the identity map contains an ECID, a GAID, and a CRM ID, the event information will be stored against the CRM ID (primary identity).
-  * GAID represents a Google hardware device (e.g. Google Pixel), ECID represents a web browser (e.g. Google Chrome), and CRM ID represents an authenticated user.
-  * If the identity map contains a CRM ID, an ECID, and an AAID, the event information will be stored against the CRM ID (primary identity).
-
-**Unauthenticated events:**
-
-* If the identity map contains an ECID, IDFA, and AAID, then the event information will be stored against the IDFA (primary identity).
-  * IDFA represents an Apple hardware device (e.g. iPhone), ECID and AAID both represent a web browser (Safari).
-
->[!ENDSHADEBOX]
+For more information, read the guide on [namespace priority](./namespace-priority.md).
 
 ## Next steps
 
-For more information on identity graph linking rules, read the following documentation:
+For more information on [!DNL Identity Graph Linking Rules], read the following documentation:
 
-* [Identity optimization algorithm](./identity-optimization-algorithm.md)
-* [Example scenarios for configuring identity graph linking rules](./example-scenarios.md)
-* [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
-* [Identity linking logic](./identity-linking-logic.md)
+* [Identity Optimization Algorithm](./identity-optimization-algorithm.md)
+* [Implementation guide](./implementation-guide.md)
+* [Examples of graph configurations](./example-configurations.md)
+* [Troubleshooting and FAQ](./troubleshooting.md)
+* [Namespace priority](./namespace-priority.md)
+* [Graph Simulation UI](./graph-simulation.md)
+* [Identity settings UI](./identity-settings-ui.md)

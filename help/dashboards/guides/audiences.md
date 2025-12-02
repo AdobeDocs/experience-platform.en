@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;profile;audience;audiences;segmentation;user interface;UI;customization;audience dashboard;dashboard
-title: Audiences Dashboard Guide
+title: Audiences Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about audiences your organization has created. 
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
@@ -9,7 +9,7 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your audiences, as captured during a daily snapshot. This guide outlines how to access and work with the [!UICONTROL Audiences] dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.  
 
-For an overview of all of the Adobe Experience Platform Segmentation Service features within the Platform user interface, please visit the [Segmentation Service UI guide](../../segmentation/ui/overview.md).
+For an overview of all of the Adobe Experience Platform Segmentation Service features within the Experience Platform user interface, please visit the [Segmentation Service UI guide](../../segmentation/ui/overview.md).
 
 ## [!UICONTROL Audiences] dashboard data
 
@@ -23,11 +23,11 @@ The attribute data in the snapshot shows the data exactly as it appears at the s
 
 ## Explore the [!UICONTROL Audiences] dashboard {#explore}
 
-To navigate to the [!UICONTROL Audiences] dashboard within the Platform UI, select **[!UICONTROL Audiences]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
+To navigate to the [!UICONTROL Audiences] dashboard within the Experience Platform UI, select **[!UICONTROL Audiences]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
 
 >[!NOTE]
 >
->If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the [!UICONTROL Audiences] dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with segmentation.
+>If your organization is new to Experience Platform and does not yet have active Profile datasets or merge policies created, the [!UICONTROL Audiences] dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with segmentation.
 
 ![The [!UICONTROL Audiences] dashboard [!UICONTROL Overview] tab with [!UICONTROL Audiences] and [!UICONTROL Overview] highlighted.](../images/audiences/dashboard-overview.png)
 
@@ -44,6 +44,10 @@ Select **[!UICONTROL Add widget]** to navigate to the widget library and see a l
 ![The [!UICONTROL Audiences] dashboard overview with [!UICONTROL Add widget] highlighted.](../images/audiences/audiences-overview-add-widget.png)
 
 From the widget library, you can browse the selection of standard and custom audience widgets. For information on how to add widgets, please see the widget library documentation on how to [add a widget](../customize/widget-library.md#add-widgets). 
+
+### View SQL {#view-sql}
+
+You can view the SQL that generates the insights visualized on your dashboard with a toggle on the [!UICONTROL Overview] workspace. You can take inspiration from the SQL of your existing insights to create new queries that derive unique insights from Experience Platform data based on your business needs. To learn more about this feature, see the [View SQL UI guide](../view-sql.md).
 
 ## Select a audience {#select-audience}
 
@@ -225,7 +229,7 @@ Select **[!UICONTROL View more]** to open a full-screen dialog that contains mor
 
 ![The Audience overlap report widget with View more highlighted .](../images/audiences/audience-overlap-report.png)
 
-The [!UICONTROL Audience overlap report] dialog appears. This dialog can contain up to 50 rows of audience overlap analyses broken down into six columns. Select the settings icon (![The settings icon.](../images/audiences/settings-icon.png)) to remove or add columns from the table.
+The [!UICONTROL Audience overlap report] dialog appears. This dialog can contain up to 50 rows of audience overlap analyses broken down into six columns. Select the settings icon (![The settings icon.](/help/images/icons/settings.png)) to remove or add columns from the table.
 
 ![The Audience overlap report dialog.](../images/audiences/audience-overlap-report-dialog.png)
 

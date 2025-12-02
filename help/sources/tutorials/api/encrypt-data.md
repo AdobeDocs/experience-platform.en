@@ -5,11 +5,11 @@ exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
 ---
 # Encrypted data ingestion
 
-Adobe Experience Platform allows you to ingest encrypted files through cloud storage batch sources. With encrypted data ingestion, you can leverage asymmetric encryption mechanisms to securely transfer batch data into Experience Platform. Currently, the supported asymmetric encryption mechanisms are PGP and GPG.
+You can ingest encrypted data files to Adobe Experience Platform using cloud storage batch sources. With encrypted data ingestion, you can leverage asymmetric encryption mechanisms to securely transfer batch data into Experience Platform. Currently, the supported asymmetric encryption mechanisms are PGP and GPG.
 
 The encrypted data ingestion process is as follows:
 
-1. [Create an encryption key pair using Experience Platform APIs](#create-encryption-key-pair). The encryption key pair consists of a private key and a public key. Once created, you can copy or download the public key, alongside its corresponding public key ID and Expiry Time. During this process, the private key will be stored by Experience Platform in a secure vault. **NOTE:** The public key in the response is Base64-encoded and must be decrypted prior to using.
+1. [Create an encryption key pair using Experience Platform APIs](#create-encryption-key-pair). The encryption key pair consists of a private key and a public key. Once created, you can copy or download the public key, alongside its corresponding public key ID and Expiry Time. During this process, the private key will be stored by Experience Platform in a secure vault. **NOTE:** The public key in the response is Base64-encoded and must be decoded prior to using.
 2. Use the public key to encrypt the data file that you want to ingest.
 3. Place your encrypted file in your cloud storage.
 4. Once the encrypted file is ready, [create a source connection and a dataflow for your cloud storage source](#create-a-dataflow-for-encrypted-data). During the flow creation step, you must provide an `encryption` parameter and include your public key ID. 
@@ -21,21 +21,21 @@ The encrypted data ingestion process is as follows:
 
 This document provides steps on how to generate a encryption key pair to encrypt your data, and ingest that encrypted data to Experience Platform using cloud storage sources.
 
-## Getting started
+## Get started {#get-started}
 
 This tutorial requires you to have a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
   * [Cloud storage sources](../api/collect/cloud-storage.md): Create a dataflow to bring batch data from your cloud storage source to Experience Platform.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../landing/api-guide.md).
 
-### Supported file extensions for encrypted files
+### Supported file extensions for encrypted files {#supported-file-extensions-for-encrypted-files}
 
-The list of supported file extensions for encrypted files are as follows:
+The list of supported file extensions for encrypted files are:
 
 * .csv
 * .tsv
@@ -58,6 +58,10 @@ The list of supported file extensions for encrypted files are as follows:
 
 ## Create encryption key pair {#create-encryption-key-pair}
 
+>[!IMPORTANT]
+>
+>Encryption keys are specific to a given sandbox. Therefore, you must create new encryption keys if you want to ingest encrypted data in a different sandbox, within your organization.
+
 The first step in ingesting encrypted data to Experience Platform is to create your encryption key pair by making a POST request to the `/encryption/keys` endpoint of the [!DNL Connectors] API.
 
 **API format**
@@ -67,6 +71,8 @@ POST /data/foundation/connectors/encryption/keys
 ```
 
 **Request**
+
++++View example request
 
 The following request generates an encryption key pair using the PGP encryption algorithm.
 
@@ -79,6 +85,7 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-encryption",
       "encryptionAlgorithm": "PGP",
       "params": {
           "passPhrase": "{{PASSPHRASE}}"
@@ -88,10 +95,15 @@ curl -X POST \
 
 | Parameter | Description |
 | --- | --- |
+| `name` | The name of your encryption key pair. |
 | `encryptionAlgorithm` | The type of encryption algorithm that you are using. The supported encryption types are `PGP` and `GPG`. |
 | `params.passPhrase` | The passphrase provides an additional layer of protection for your encryption keys. Upon creation, Experience Platform stores the passphrase in a different secure vault from the public key. You must provide a non-empty string as a passphrase. |
 
++++
+
 **Response**
+
++++View example response
 
 A successful response returns your Base64-encoded public key, public key ID, and the expiry time of your keys. The expiry time automatically sets to 180 days after the date of key generation. Expiry time is currently not configurable.
 
@@ -109,13 +121,101 @@ A successful response returns your Base64-encoded public key, public key ID, and
 | `publicKeyId` | The public key ID is used to create a dataflow and ingest your encrypted cloud storage data to Experience Platform. |
 | `expiryTime` | The expiry time defines the expiration date of your encryption key pair. This date is automatically set to 180 days after the date of key generation and is displayed in unix timestamp format. |
 
-+++(Optional) Create sign verification key pair for signed data
++++
 
-### Create customer managed key pair
+### Retrieve encryption keys {#retrieve-encryption-keys}
+
+To retrieve all encryption keys in your organization, make a GET Request to the `/encryption/keys` endpoit=nt.
+
+**API format**
+
+```http
+GET /data/foundation/connectors/encryption/keys
+```
+
+**Request**
+
++++View example request
+
+The following request retrieves all encryption keys in your organization.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Response**
+
++++View example response
+
+A successful response returns your encryption algorithm, name, public key, public key ID, key type, and the corresponding expiry time of your keys.
+
+```json
+{
+    "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
+    "expiryTime": "{EXPIRY_TIME}"
+}
+```
+
++++
+
+### Retrieve encryption keys by ID {#retrieve-encryption-keys-by-id}
+
+To retrieve a specific set of encryption keys, make a GET request to the `/encryption/keys` endpoint and provide your public key ID as a header parameter.
+
+**API format**
+
+```http
+GET /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
+```
+
+**Request**
+
++++View example request
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Response**
+
++++View example response
+
+A successful response returns your encryption algorithm, name, public key, public key ID, key type, and the corresponding expiry time of your keys.
+
+```json
+{
+    "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
+    "expiryTime": "{EXPIRY_TIME}"
+}
+```
+
++++
+
+### Create customer managed key pair {#create-customer-managed-key-pair}
 
 You can optionally create a sign verification key pair to sign and ingest your encrypted data.
 
-During this stage, you must generate your own private key and public key combination and then use your private key to sign your encrypted data. Next, you must encode your public key in Base64 and then share it to Experience Platform in order for Platform to verify your signature.
+During this stage, you must generate your own private key and public key combination and then use your private key to sign your encrypted data. Next, you must encode your public key in Base64 and then share it to Experience Platform in order for Experience Platform to verify your signature.
 
 ### Share your public key to Experience Platform
 
@@ -129,6 +229,8 @@ POST /data/foundation/connectors/encryption/customer-keys
 
 **Request**
 
++++View example request
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
@@ -138,8 +240,12 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-sign-verification-keys"
       "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
-      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}},
+      "params": {
+          "passPhrase": {{PASS_PHRASE}}
+      }
     }'
 ```
 
@@ -148,7 +254,11 @@ curl -X POST \
 | `encryptionAlgorithm` | The type of encryption algorithm that you are using. The supported encryption types are `PGP` and `GPG`. |
 | `publicKey` | The public key that corresponds to your customer managed keys used for signing your encrypted. This key must be Base64-encoded.|
 
++++
+
 **Response**
+
++++View example response
 
 ```json
 {    
@@ -162,11 +272,53 @@ curl -X POST \
 
 +++
 
+### Retrieve customer managed key pair
+
+To retrieve your customer managed keys, make a GET request to the `/customer-keys` endpoint.
+
+**API format**
+
+```http
+GET /data/foundation/connectors/encryption/customer-keys
+```
+
+**Request**
+
++++View example request
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Response**
+
++++View example response
+
+```json
+[
+    {
+        "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+        "name": "{NAME}",
+        "publicKeyId": "{PUBLIC_KEY_ID}",
+        "publicKey": "{PUBLIC_KEY}",
+        "keyType": "{KEY_TYPE}",
+    }
+]
+```
+
++++
+
 ## Connect your cloud storage source to Experience Platform using the [!DNL Flow Service] API
 
-Once you have retrieved your encryption key pair, you can now proceed and create a source connection for your cloud storage source and bring your encrypted data to Platform. 
+Once you have retrieved your encryption key pair, you can now proceed and create a source connection for your cloud storage source and bring your encrypted data to Experience Platform. 
 
-First, you must create a base connection to authenticate your source against Platform. To create a base connection and authenticate your source, select the source you would like to use from the list below:
+First, you must create a base connection to authenticate your source against Experience Platform. To create a base connection and authenticate your source, select the source you would like to use from the list below:
 
 * [Amazon S3](../api/create/cloud-storage/s3.md)
 * [[!DNL Apache HDFS]](../api/create/cloud-storage/hdfs.md)
@@ -200,11 +352,13 @@ To create a dataflow, make a POST request to the `/flows` endpoint of the [!DNL 
 POST /flows
 ```
 
-**Request**
-
 >[!BEGINTABS]
 
 >[!TAB Create a dataflow for encrypted data ingestion]
+
+**Request**
+
++++View example request
 
 The following request creates a dataflow to ingest encrypted data for a cloud storage source.
 
@@ -253,8 +407,8 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `flowSpec.id` | The flow spec ID that corresponds with cloud storage sources. |
-| `sourceConnectionIds` | The source connection ID. This ID represents the transfer of data from source to Platform. |
-| `targetConnectionIds` | The target connection ID. This ID represents where the data lands once it is brought over to Platform. |
+| `sourceConnectionIds` | The source connection ID. This ID represents the transfer of data from source to Experience Platform. |
+| `targetConnectionIds` | The target connection ID. This ID represents where the data lands once it is brought over to Experience Platform. |
 | `transformations[x].params.mappingId` | The mapping ID.|
 | `transformations.name` | When ingesting encrypted files, you must provide `Encryption` as an additional transformations parameter for your dataflow. |
 | `transformations[x].params.publicKeyId` | The public key ID that you created. This ID is one half of the encryption key pair used to encrypt your cloud storage data. |
@@ -262,8 +416,28 @@ curl -X POST \
 | `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
 | `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
 
++++
+
+**Response**
+
++++View example response
+
+A successful response returns the ID (`id`) of the newly created dataflow for your encrypted data.
+
+```json
+{
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
+}
+```
+
++++
 
 >[!TAB Create a dataflow to ingest encrypted and signed data]
+
+**Request**
+
++++View example request
 
 ```shell
 curl -X POST \
@@ -312,9 +486,11 @@ curl -X POST \
 | --- | --- |
 | `params.signVerificationKeyId` | The sign verification key ID is the same as the public key ID that was retrieved after sharing your Base64-encoded public key with Experience Platform. |
 
->[!ENDTABS]
++++
 
 **Response**
+
++++View example response
 
 A successful response returns the ID (`id`) of the newly created dataflow for your encrypted data.
 
@@ -325,10 +501,93 @@ A successful response returns the ID (`id`) of the newly created dataflow for yo
 }
 ```
 
++++
 
->[!BEGINSHADEBOX]
+>[!ENDTABS]
 
-**Restrictions on recurring ingestion**
+### Delete encryption keys {#delete-encryption-keys}
+
+To delete your encryption keys, make a DELETE request to the `/encryption/keys` endpoint and provide your public key ID as a header parameter.
+
+**API format**
+
+```http
+DELETE /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
+```
+
+**Request**
+
++++View example request
+
+```shell
+curl -X DELETE \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Response**
+
+A successful response returns HTTP status 204 (No Content) and a blank body.
+
+### Validate encryption keys {#validate-encryption-keys}
+
+To validate your encryption keys, make a GET request to the `/encryption/keys/validate/` endpoint and provide the public key ID that you want to validate as a header parameter.
+
+```http
+GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
+```
+
+**Request**
+
++++View example request
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/validate/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Response**
+
+A successful response returns either a confirmation that your IDs are valid, or invalid. 
+
+>[!BEGINTABS]
+
+>[!TAB Valid]
+
+A valid public key ID returns a status of `Active` along with your public key ID.
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Active"
+}
+```
+
+>[!TAB Invalid]
+
+An invalid public key ID returns a status of `Expired` along with your public key ID.
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Expired"
+}
+
+```
+
+>[!ENDTABS]
+
+
+## Restrictions on recurring ingestion {#restrictions-on-recurring-ingestion}
 
 Encrypted data ingestion does not support ingestion of recurring or multi-level folders in sources. All encrypted files must be contained in a single folder. Wildcards with multiple folders in a single source path are also not supported.
 
@@ -357,7 +616,6 @@ In this scenario, the flow run will fail and return an error message indicating 
 * ACME-loyalty
   * File6.csv.gpg
 
->[!ENDSHADEBOX]
 
 ## Next steps
 

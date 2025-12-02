@@ -36,7 +36,7 @@ df
 
 ## Create a sampled version of large datasets {#create-dataset-sample}
 
-If the dataset you wish to query is very large, or if exact results from exploratory queries are not necessary, use the [sampling functionality](../../essential-concepts/dataset-samples.md) available for Data Distiller queries. This is a two-step process:
+If the dataset you wish to query is very large, or if exact results from exploratory queries are not necessary, use the [sampling functionality](../../key-concepts/dataset-samples.md) available for Data Distiller queries. This is a two-step process:
 
 - First, **analyze** the dataset to create a sampled version with a specified sampling ratio
 - Next, query the sampled version of the dataset. Depending on the functions you apply to the sampled dataset, you may wish to scale the output to the numbers to the full dataset

@@ -16,11 +16,17 @@ The [[!UICONTROL Data Lifecycle] workspace](./overview.md) in the Adobe Experien
 >
 >If a dataset is set to expire, you must manually change any dataflows that may be ingesting data into that dataset so that your downstream workflows are not negatively affected.
 
-This document covers how to schedule and automate dataset expirations in the Platform UI.
+This document covers how to schedule and automate dataset expirations in the Experience Platform UI.
 
 >[!NOTE]
 >
 >Dataset Expiration does not currently delete data from the Adobe Experience Platform Edge Network. However, there is no possibility that data stays inside the Edge Network after the dataset is set to expire. This is because the 15-day service license agreement for Dataset Expiration overlaps with the 14-day period where data exists inside the Edge Network before being discarded.
+
+Advanced Data Lifecycle Management supports dataset deletions through the [dataset expiration endpoint](../api/dataset-expiration.md) and ID deletions (row-level data) using primary identities via the [workorder endpoint](../api/workorder.md). You can also manage dataset expirations and [record deletions](./record-delete.md) through the Experience Platform UI. See the linked documentation for more information. 
+
+>[!NOTE]
+>
+>Data Lifecycle does not support batch deletion.
 
 ## Schedule a dataset expiration {#schedule-dataset-expiration}
 
@@ -43,11 +49,11 @@ The request creation workflow appears. Under the [!UICONTROL Requested Action] s
 
 ### Select a date and a dataset {#select-date-and-dataset}
 
-Under the **[!UICONTROL Requested Action]** section, select a date that you want the dataset to be deleted by. You can enter the date manually (in the format `mm/dd/yyyy`) or select the calendar icon (![A calendar icon.](../images/ui/ttl/calendar-icon.png)) to select the date from a dialog.
+Under the **[!UICONTROL Requested Action]** section, select a date that you want the dataset to be deleted by. You can enter the date manually (in the format `mm/dd/yyyy`) or select the calendar icon (![A calendar icon.](/help/images/icons/calendar.png)) to select the date from a dialog.
 
 ![A calendar dialog with an expiration date selected and highlighted for the dataset.](../images/ui/ttl/select-date.png)
 
-Next, under **[!UICONTROL Dataset Details]**, select the database icon (![The database icon.](../images/ui/ttl/database-icon.png)) to open a dataset selection dialog. Choose a dataset from the list to apply the expiration to, then select **[!UICONTROL Done]**.
+Next, under **[!UICONTROL Dataset Details]**, select the database icon (![The database icon.](/help/images/icons/database.png)) to open a dataset selection dialog. Choose a dataset from the list to apply the expiration to, then select **[!UICONTROL Done]**.
 
 ![The [!UICONTROL Select dataset] dialog with a dataset selected and [!UICONTROL Done] highlighted.](../images/ui/ttl/select-dataset.png)
 

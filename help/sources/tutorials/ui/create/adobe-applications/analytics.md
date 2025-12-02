@@ -1,30 +1,29 @@
 ---
-title: Create an Adobe Analytics Source Connection in the UI
-description: Learn how to create an Adobe Analytics source connection in the UI to bring consumer data into Adobe Experience Platform.
+title: Connect Adobe Analytics To Experience Platform
+description: Learn how to bring your Adobe Analytics report suite data to Experience Platform
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 ---
-# Create an Adobe Analytics source connection in the UI
+# Connect Adobe Analytics to Experience Platform
 
-This tutorial provides steps for creating an Adobe Analytics source connection in the UI to bring Adobe Analytics report suite data into Adobe Experience Platform.
+Read this guide to learn how to use the Adobe Analytics source to ingest your Analytics report suite data into Adobe Experience Platform.
 
-## Getting started
+## Get started
 
 This tutorial requires a working understanding of the following components of Experience Platform:
 
 * [Experience Data Model (XDM) System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
 * [Real-Time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Key terminology
 
 It is important to understand the following key terms used throughout this document:
 
-* **Standard attribute**: Standard attributes are any attribute that is pre-defined by Adobe. They contain the same meaning for all customers and are available in the [!DNL Analytics] source data and [!DNL Analytics] schema field groups.
-* **Custom attribute**: Custom attributes are any attribute in the custom variable hierarchy in [!DNL Analytics]. Custom attributes are used within an Adobe Analytics implementation to capture specific information into a report suite, and they can differ in their use from report suite to report suite. Custom attributes include eVars, props, and lists. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) for more information on eVars.
+* **Standard attribute**: Standard attributes are any attribute that is pre-defined by Adobe. They contain the same meaning for all customers and are available in the Analytics source data and Analytics schema field groups.
+* **Custom attribute**: Custom attributes are any attribute in the custom variable hierarchy in Analytics. Custom attributes are used within an Adobe Analytics implementation to capture specific information into a report suite, and they can differ in their use from report suite to report suite. Custom attributes include eVars, props, and lists. See the following [Analytics documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) for more information on eVars.
 * **Any attribute in Custom field groups**: Attributes that originate from field groups created by customers are all user-defined and are considered to be neither standard nor custom attributes.
-* **Friendly names**: Friendly names are human-provided labels for custom variables in an [!DNL Analytics] implementation. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) for more information on friendly names.
 
-## Create a source connection with Adobe Analytics
+## Navigate the sources catalog
 
 >[!NOTE]
 >
@@ -33,99 +32,98 @@ It is important to understand the following key terms used throughout this docum
 >* A dataflow that does a 13-month backfill of historical report suite data into data lake. This dataflow ends when the backfill is complete.
 >* A dataflow flow which sends live data to data lake and to [!DNL Real-Time Customer Profile]. This dataflow runs continuously.
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the the [!UICONTROL Sources] workspace. In the *[!UICONTROL Adobe applications]* category, select the Adobe Analytics card and then select **[!UICONTROL Add data]**.
 
-You can select the appropriate category from the catalog on the left-hand side of your screen. You can also use the search bar to narrow down the displayed sources.
+![The sources catalog with the Adobe Analytics source card selected.](../../../../images/tutorials/create/analytics/catalog.png)
 
-Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Adobe Analytics]** and then select **[!UICONTROL Add data]**.
-
-![catalog](../../../../images/tutorials/create/analytics/catalog.png)
-
-### Select data
+## Select data
 
 >[!IMPORTANT]
 >
->The report suites listed on the screen may come from various regions. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform cross regions. Please ensure this is permitted by your company.
+>* The report suites listed on the screen may come from various regions. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform cross regions. Please ensure this is permitted by your company.
+>* Data from multiple report suites can be enabled for Real-Time Customer Profile only if there are no data conflicts, such as two custom properties (eVars, lists and props) that have different meaning.
 
-The **[!UICONTROL Analytics source add data]** step provides you with a list of [!DNL Analytics] report suite data to create a source connection with. 
+A report suite is a container of data that forms the basis of Analytics reporting. An organization can have many report suites, each containing different datasets. 
 
-A report suite is a container of data that forms the basis of [!DNL Analytics] reporting. An organization can have many report suites, each containing different datasets. 
-
-You can ingest report suites from any region (United States, United Kingdom, or Singapore) as long as they are mapped to the same organization as the Experience Platform sandbox instance in which the source connection is being created in. A report suite can be ingested using only a single active dataflow. A report suite that is not selectable has already been ingested, either in the sandbox that you are using or in a different sandbox.
+You can ingest report suites from any region (United States, United Kingdom, or Singapore) as long as they are mapped to the same organization as the Experience Platform sandbox instance in which the source connection is being created in. A report suite can be ingested using only a single active dataflow. If a report suite is grey and cannot be selected, then it has already been ingested, either in the sandbox that you are using or in a different sandbox.
 
 Multiple in-bound connections can be made to bring multiple report suites into the same sandbox. If the report suites have differing schemas for variables (such as eVars or events), they should be mapped to specific fields in the custom field groups and avoid data conflicts using [Data Prep](../../../../../data-prep/ui/mapping.md). Report suites can only be added to a single sandbox.
 
-![](../../../../images/tutorials/create/analytics/report-suite.png)
+Select **[!UICONTROL Report suite]** and then use the *[!UICONTROL Analytics source add data]* interface to navigate through the list and identify the Analytics report suite that you want to ingest to Experience Platform. Select **[!UICONTROL Next]** to proceed.
 
->[!NOTE]
->
->Data from multiple report suites can be enabled for Real-Time Customer Profile only if there are no data conflicts, such as two custom properties (eVars, lists and props) that have different meaning.
-
-To create an [!DNL Analytics] source connection, select a report suite and then select **[!UICONTROL Next]** to proceed.
-
-![](../../../../images/tutorials/create/analytics/add-data.png)
+![An analytics report suite is selected for ingestion and the "Next" button is highlighted](../../../../images/tutorials/create/analytics/add-data.png)
 
 <!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
-### Mapping
+## Mapping {#mapping}
 
 >[!IMPORTANT]
 >
 >Data Prep transformations may add latency to the overall dataflow. The additional latency added varies based on the complexity of the transformation logic. 
 
-Before you can map your [!DNL Analytics] data to target XDM schema, you must first select whether you are using a default schema or a custom schema.
+Before you can map your Analytics data to target XDM schema, you must first determine whether you are using a default schema or a custom schema.
 
-A default schema creates a new schema on your behalf, containing the [!DNL Adobe Analytics ExperienceEvent Template] field group. To use a default schema, select **[!UICONTROL Default schema]**.
+>[!BEGINTABS]
 
-![default-schema](../../../../images/tutorials/create/analytics/default-schema.png)
+>[!TAB Default schema]
 
-With a custom schema, you can choose any available schema for your [!DNL Analytics] data, as long as that schema has the [!DNL Adobe Analytics ExperienceEvent Template] field group. To use a custom schema, select **[!UICONTROL Custom schema]**.
+A default schema creates a new schema on your behalf. This newly created schema contains the [!DNL Adobe Analytics ExperienceEvent Template] field group. To use a default schema, select **[!UICONTROL Default schema]**.
 
-![custom-schema](../../../../images/tutorials/create/analytics/custom-schema.png)
+![The schema selection step of the Analytics source workflow, with "Default schema" selected.](../../../../images/tutorials/create/analytics/default-schema.png)
 
-The [!UICONTROL Mapping] page provides an interface to map source fields to their appropriate target schema fields. From here, you can map custom variables to new schema field groups and apply calculations as supported by Data Prep. Select a target schema to start the mapping process.
+>[!TAB Custom schema]
+
+With a custom schema, you can choose any available schema for your Analytics data, as long as that schema has the [!DNL Adobe Analytics ExperienceEvent Template] field group. To use a custom schema, select **[!UICONTROL Custom schema]**.
+
+![The schema selection step of the Analytics source workflow, with "Custom schema" selected.](../../../../images/tutorials/create/analytics/custom-schema.png)
+
+>[!ENDTABS]
+
+Use the *[!UICONTROL Mapping]* interface to map source fields to their appropriate target schema fields. You can map custom variables to new schema field groups and apply calculations as supported by Data Prep. Select a target schema to start the mapping process.
 
 >[!TIP]
 >
->Only schemas that have the [!DNL Adobe Analytics ExperienceEvent Template] field group are displayed in the schema selection menu. Other schemas are omitted. If there are no appropriate schemas available for your Report Suite data, then you must create a new schema. For detailed steps on creating schemas, see the guide on [creating and editing schemas in the UI](../../../../../xdm/ui/resources/schemas.md).
+>Only schemas that have the [!DNL Adobe Analytics ExperienceEvent Template] field group are displayed in the schema selection menu. Other schemas are omitted. If there are no appropriate schemas available for your report suite data, then you must create a new schema. For detailed steps on creating schemas, see the guide on [creating and editing schemas in the UI](../../../../../xdm/ui/resources/schemas.md).
 
-![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
+![The target schema selection panel of the Mapping interface.](../../../../images/tutorials/create/analytics/select-schema.png)
 
-The [!UICONTROL Map standard fields] section displays panels for [!UICONTROL Standard mappings applied], [!UICONTROL Non matching standard mappings] and [!UICONTROL Custom mappings]. See the following table for specific information regarding each category:
+You can refer to the [!UICONTROL Map standard fields] panel for metrics on your [!UICONTROL Standard mappings applied]. [!UICONTROL Standard mappings with descriptor name conflicts], and [!DNL Custom mappings].
 
 | Map standard fields | Description |
 | --- | --- |
-| [!UICONTROL Standard mappings applied] | The [!UICONTROL Standard mappings applied] panel displays the total number of mapped attributes. Standard mappings refer to mapping sets between all attributes in the source [!DNL Analytics] data and corresponding attributes in [!DNL Analytics] field group. These are pre-mapped and cannot be edited. |
-| [!UICONTROL Non matching standard mappings] | The [!UICONTROL Non matching standard mappings] panel refers to the number of mapped attributes that contain friendly name conflicts. These conflicts appear when you are re-using a schema that already has a populated set of field descriptors from a different Report Suite. You can proceed with your [!DNL Analytics] dataflow even with friendly name conflicts. |
-| [!UICONTROL Custom mappings] | The [!UICONTROL Custom mappings] panel displays the number of mapped custom attributes, including eVars, props, and lists. Custom mappings refer to mapping sets between custom attributes in the source [!DNL Analytics] data and attributes in custom field groups included in the selected schema. |
+| [!UICONTROL Standard mappings applied] | The [!UICONTROL Standard mappings applied] panel displays the total number of mapped attributes. Standard mappings refer to mappings between all attributes in the source Analytics data and corresponding attributes in Analytics field group. These are pre-mapped and cannot be edited. |
+| [!UICONTROL Standard mappings with descriptor name conflicts] | The [!UICONTROL Standard mappings with descriptor name conflicts] panel refers to the number of mapped attributes that contain name conflicts. These conflicts appear when you are re-using a schema that already has a populated set of field descriptors from a different report suite. You can proceed with your Analytics dataflow even with name conflicts. |
+| [!UICONTROL Custom mappings] | The [!UICONTROL Custom mappings] panel displays the number of mapped custom attributes, including eVars, props, and lists. Custom mappings refer to mapping between custom attributes in the source Analytics data and attributes in custom field groups included in the selected schema. |
 
-![map-standard-fields](../../../../images/tutorials/create/analytics/map-standard-fields.png)
+### Standard mappings {#standard-mappings}
 
-To preview the [!DNL Analytics] ExperienceEvent template schema field group, select **[!UICONTROL View]** in the [!UICONTROL Standard mappings applied] panel.
+Experience Platform automatically detects your mapping for any name conflicts. If there are no conflicts with your mappings, select **[!UICONTROL Next]** to proceed.
 
-![view](../../../../images/tutorials/create/analytics/view.png)
-
-The [!UICONTROL Adobe Analytics ExperienceEvent Template Schema Field Group] page provides you with an interface to use for inspecting the structure of your schema. When finished, select **[!UICONTROL Close]**.
-
-![field-group-preview](../../../../images/tutorials/create/analytics/field-group-preview.png)
-
-Platform automatically detects your mapping sets for any friendly name conflicts. If there are no conflicts with your mapping sets, select **[!UICONTROL Next]** to proceed.
-
-![mapping](../../../../images/tutorials/create/analytics/mapping.png)
+![The standard mappings header displaying no name conflicts](../../../../images/tutorials/create/analytics/standard.png)
 
 >[!TIP]
 >
->If there are friendly name conflicts between your source Report Suite and your selected schema, you can still continue with your [!DNL Analytics] dataflow, acknowledging that the field descriptors will not be changed. Alternatively, you can opt to create a new schema with a blank set of descriptors.
+>If there are name conflicts between your source report suite and your selected schema, you can still continue with your Analytics dataflow, acknowledging that the field descriptors will not be changed. Alternatively, you can opt to create a new schema with a blank set of descriptors.
 
-#### Custom mappings
+## Custom mappings {#custom-mappings}
 
-You can use Data Prep functions to add new custom mapping or calculated fields for custom attributes. To add custom mappings, select **[!UICONTROL Custom]**.
+>[!CONTEXTUALHELP]
+>id="platform_analytics_import_mapping"
+>title="Download Template"
+>abstract="Download the csv template to perform the mapping offline."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="Import mapping"
 
-![custom](../../../../images/tutorials/create/analytics/custom.png)
+You can use Data Prep functions to add new custom mappings or calculated fields for custom attributes. To add custom mappings, select **[!UICONTROL Custom]**.
 
-Depending on your needs, you can select either **[!UICONTROL Add new mapping]** or **[!UICONTROL Add calculated field]** and proceed to create custom mappings for your custom attributes. For comprehensive steps on how to use Data Prep functions, please read the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
+![The custom mapping tab in the Analytics source workflow.](../../../../images/tutorials/create/analytics/custom.png)
 
-The following documentation provides further resources on understanding Data Prep, calculated fields, and mapping functions:
+* **[!UICONTROL Filter fields]**: Use the [!UICONTROL Filter fields] text input to filter for specific mapping fields in your mappings.
+* **[!UICONTROL Add new mapping]**: To add a new source field and target field mapping, select **[!UICONTROL Add new mapping]**.
+* **[!UICONTROL Add calculated field]**: If needed, you can select **[!UICONTROL Add calculated field]** to create a new calculated field for your mappings.
+* **[!UICONTROL Import mapping]**: You can reduce the manual configuration time of your data ingestion process and limit mistakes by using the import mapping functionality of Data Prep. Select **[!UICONTROL Import mapping]** to import mappings from an existing flow or from an exported file. For more information, read [the guide on importing and exporting mappings](../../../../../data-prep/ui/mapping.md#import-mapping).
+* **[!UICONTROL Download template]**: You can also download a CSV copy of your mappings and configure your mappings in your local device. Select **[!UICONTROL Download template]** to download a CSV copy of your mappings. You must ensure that you are using only the fields that are provided in your source file and target schema. 
+
+Refer to the following documentation for more information on Data Prep.
 
 * [Data Prep overview](../../../../../data-prep/home.md)
 * [Data Prep mapping functions](../../../../../data-prep/functions.md)
@@ -162,34 +160,49 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
-### Filtering for Real-Time Customer Profile {#filtering-for-profile}
+## Filtering for Real-Time Customer Profile {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
 >title="Create filter rules"
 >abstract="Define row and column-level filtering rules when sending data to Real-Time Customer Profile. Use row-level filtering to apply conditions and dictate which data to **include for Profile ingestion**. Use column-level filtering to select the columns of data that you want to **exclude for Profile ingestion**. Filtering rules do not apply to data sent to data lake."
 
-Once you have completed mappings for your [!DNL Analytics] report suite data, you can apply filtering rules and conditions to selectively include or exclude data from ingestion to the Real-Time Customer Profile. Support for filtering is only available for [!DNL Analytics] data and data is only filtered prior to entering [!DNL Profile.] All data are ingested into the data lake.
+Once you have completed mappings for your Analytics report suite data, you can apply filtering rules and conditions to selectively include or exclude data from ingestion to the Real-Time Customer Profile. Support for filtering is only available for Analytics data and data is only filtered prior to entering [!DNL Profile.] All data are ingested into the data lake.
 
-#### Row-level filtering
+>[!BEGINSHADEBOX]
+
+**Additional information on Data Prep and filtering Analytics data for Real-Time Customer Profile**
+
+* You can use the filtering functionality for data that is going to Profile, but not for data going to data lake.
+* You can use filtering for live data, but you cannot filter backfill data.
+  * The Analytics source does not backfill data into Profile.
+* If you utilize Data Prep configurations during the initial setup of an Analytics flow, those changes are applied to the automatic 13-month backfill as well. 
+  * However, this is not the case for filtering because filtering is reserved only for live data.
+* Data Prep is applied to both streaming and batch ingestion paths. If you modify an existing Data Prep configuration, those changes are then applied to new incoming data across both streaming and batch ingestion pathways. 
+  * However, any Data Prep configurations do not apply to data that has already been ingested into Experience Platform, regardless of whether it is streaming or batch data.
+* Standard attributes from Analytics are always mapped automatically. Therefore, you cannot apply transformations to standard attributes.
+  * However, you can filter out standard attributes as long as they are not required in Identity Service or Profile.
+* You cannot use column-level filtering to filter required fields and identity fields.
+* While you can filter out secondary identities, specifically AAID and AACustomID, you cannot filter out ECID.
+* When a transformation error occurs, the corresponding column results in NULL.
+
+>[!ENDSHADEBOX]
+
+### Row-level filtering
 
 >[!IMPORTANT]
 >
 >Use row-level filtering to apply conditions and dictate which data to **include for Profile ingestion**. Use column-level filtering to select the columns of data that you want to **exclude for Profile ingestion**.
 
-You can filter data for [!DNL Profile] ingestion at the row-level and the column-level. Row-level filtering allows you to define criteria such as string contains, equals to, begins, or ends with. You can also use row-level filtering to join conditions using `AND` as well as `OR`, and negate conditions using `NOT`. 
+You can filter data for Profile ingestion at the row-level and the column-level. Use row-level filtering to define criteria such as string contains, equals to, begins, or ends with. You can also use row-level filtering to join conditions using `AND` as well as `OR`, and negate conditions using `NOT`. 
 
-To filter your [!DNL Analytics] data at the row-level, select **[!UICONTROL Row filter]**.
+To filter your Analytics data at the row-level, select **[!UICONTROL Row filter]** and use the left rail to navigate through the schema hierarchy and identify the schema attribute that you want to select.
 
-![row-filter](../../../../images/tutorials/create/analytics/row-filter.png)
-
-Use the left rail to navigate through the schema hierarchy and select the schema attribute of your choice to further drill down a particular schema. 
-
-![left-rail](../../../../images/tutorials/create/analytics/left-rail.png)
+![The row filter interface for Analytics data.](../../../../images/tutorials/create/analytics/row-filter.png)
 
 Once you have identified the attribute that you want to configure, select and drag the attribute from the left rail to the filtering panel.
 
-![filtering-panel](../../../../images/tutorials/create/analytics/filtering-panel.png)
+![The "Manufacturer" attribute selected for filtering.](../../../../images/tutorials/create/analytics/filtering-panel.png)
 
 To configure different conditions, select **[!UICONTROL equals]** and then select a condition from the dropdown window that appears.
 
@@ -205,49 +218,47 @@ The list of configurable conditions include:
 * [!UICONTROL exists] 
 * [!UICONTROL does not exist] 
 
-![conditions](../../../../images/tutorials/create/analytics/conditions.png)
+![The conditions dropdown with a list of condition operators.](../../../../images/tutorials/create/analytics/conditions.png)
 
 Next, enter the values that you want to include based on the attribute that you selected. In the example below, [!DNL Apple] and [!DNL Google] are selected for ingestion as part of the **[!UICONTROL Manufacturer]** attribute.
 
-![include-manufacturer](../../../../images/tutorials/create/analytics/include-manufacturer.png)
+![The filtering panel with the selected attributes and values included.](../../../../images/tutorials/create/analytics/include.png)
 
-To further specify your filtering conditions, add another attribute from the schema and then add values based on that attribute. In the example below, the **[!UICONTROL Model]** attribute is added and models such as the [!DNL iPhone 13] and [!DNL Google Pixel 6] are filtered for ingestion.
+To further specify your filtering conditions, add another attribute from the schema and then add values based on that attribute. In the example below, the **[!UICONTROL Model]** attribute is added and models such as the [!DNL iPhone 16] and [!DNL Google Pixel 9] are filtered for ingestion.
 
-![include-model](../../../../images/tutorials/create/analytics/include-model.png)
+![Additional attributes and values included in the container.](../../../../images/tutorials/create/analytics/include-model.png)
 
 To add a new container, select the ellipses (`...`) on the top right of the filtering interface and then select **[!UICONTROL Add container]**.
 
-![add-container](../../../../images/tutorials/create/analytics/add-container.png)
+![The "Add container" dropdown menu selected.](../../../../images/tutorials/create/analytics/add-container.png)
 
-Once a new container is added, select **[!UICONTROL Include]** and then select **[!UICONTROL Exclude]** from the dropdown window that appears.
+Once a new container is added, select **[!UICONTROL Include]** and then select **[!UICONTROL Exclude]** from the dropdown menu. Add the attributes and values that you want to exclude, and then when finished, select **[!UICONTROL Next]**.
 
-![exclude](../../../../images/tutorials/create/analytics/exclude.png)
+![The attributes and values filtered for exclusion.](../../../../images/tutorials/create/analytics/exclude.png)
 
-Next, complete the same process by dragging schema attributes and adding their corresponding values that you want to exclude from filtering. In the example below, the [!DNL iPhone 12], [!DNL iPhone 12 mini], and [!DNL Google Pixel 5] are all filtered from exclusion from the **[!UICONTROL Model]** attribute, landscape is excluded from the **[!UICONTROL Screen orientation]**, and model number [!DNL A1633] is excluded from **[!UICONTROL Model number]**.
-
-When finished, select **[!UICONTROL Next]**.
-
-![exclude-examples](../../../../images/tutorials/create/analytics/exclude-examples.png)
-
-#### Column-level filtering
+### Column-level filtering
 
 Select **[!UICONTROL Column filter]** from the header to apply column-level filtering. 
 
-![column-filter](../../../../images/tutorials/create/analytics/column-filter.png)
+The page updates into an interactive schema tree, displaying your schema attributes at the column-level. From here, you can select the columns of data that you would like to exclude from Profile ingestion. Alternatively, you can expand a column and select specific attributes for exclusion.
 
-The page updates into an interactive schema tree, displaying your schema attributes at the column-level. From here, you can select the columns of data that you would like to exclude from [!DNL Profile] ingestion. Alternatively, you can expand a column and select specific attributes for exclusion.
+By default, all Analytics go to Profile and this process allows for branches of XDM data to be excluded from Profile ingestion.
 
-By default, all [!DNL Analytics] go to [!DNL Profile] and this process allows for branches of XDM data to be excluded from [!DNL Profile] ingestion.
+![The column filter interface with the schema tree.](../../../../images/tutorials/create/analytics/column-filter.png)
 
-When finished, select **[!UICONTROL Next]**.
+### Filter secondary identities
 
-![columns-selected](../../../../images/tutorials/create/analytics/columns-selected.png)
+Use a column filter to exclude secondary identities from Profile ingestion. To filter secondary identities, select **[!UICONTROL Column filter]** and then select **[!UICONTROL _identities]**.
+
+The filter only applies when an identity is marked as secondary. If identities are selected, but an event arrives with one of the identities marked as primary, then those do not get filtered out.
+
+![The secondary identities in the schema tree for column filtering.](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
 ### Provide dataflow details
 
 The **[!UICONTROL Dataflow detail]** step appears, where you must provide a name and an optional description for the dataflow. Select **[!UICONTROL Next]** when finished.
 
-![dataflow-detail](../../../../images/tutorials/create/analytics/dataflow-detail.png)
+![The dataflow detail interface. of the ingestion workflow.](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
 ### Review
 
@@ -256,19 +267,21 @@ The [!UICONTROL Review] step appears, allowing you to review your new Analytics 
 * [!UICONTROL Connection]: Displays the source platform of the connection.
 * [!UICONTROL Data type]: Displays the selected Report Suite and its corresponding Report Suite ID.
 
-![review](../../../../images/tutorials/create/analytics/review.png)
+![The review interface of the ingestion workflow.](../../../../images/tutorials/create/analytics/review.png)
+
+>[!TIP]
+>
+>Follow these best practices to avoid exceeding your license entitlements and overwhelming your total storage and data richness metrics:
+>
+>* Set up the Experience Event Dataset Retention Time-To-Live (TTL) in the beginning to optimize data lifecycle management and storage efficiency. For more details, see the guide on [managing Experience Event Dataset Retention in the data lake using TTL](../../../../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+>
+>* When you create an Analytics source dataflow, start by configuring the connector to ingest data only into the data lake. After confirming that the dataflow is working, you can enable profile ingestion for the dataset. This approach works best when row and column filters effectively reduce the data volume.
 
 ## Monitor your dataflow {#monitor-your-dataflow}
 
-Once your dataflow is complete, select **[!UICONTROL Dataflows]** in the sources catalog to monitor the activity and status of your data.
+Once your dataflow is complete, you can use the *[!UICONTROL Dataflows]* interface to monitor the status of your Analytics dataflow.
 
-![The sources catalog with the dataflows tab selected.](../../../../images/tutorials/create/analytics/select-dataflows.png)
-
-A list of existing Analytics dataflows in your organization appears. From here, select a target dataset to view its respective ingestion activity.
-
-![A list of existing Adobe Analytics dataflows in your organization.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
-
-The [!UICONTROL Dataset activity] page provides information on the progress of data that is being sent from Analytics to Experience Platform. The interface displays metrics such as the number of ingested records, number of ingested batches, and number of failed batches.
+Use the [!UICONTROL Dataset activity] interface for information on the progress of data that is being sent from Analytics to Experience Platform. The interface displays metrics such as the total of records in the previous month, the total of ingested records in the last seven days, and the size of data in the previous month.
 
 The source instantiates two dataset flows. One flow represents backfill data and the other is for live data. Backfill data is not configured for ingestion into Real-Time Customer Profile but is sent to the data lake for analytical and data-science use-cases.
 
@@ -276,39 +289,24 @@ For more information on backfill, live data, and their respective latencies, rea
 
 ![The dataset activity page for a given target dataset for Adobe Analytics data.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-+++View individual batches using the legacy monitoring interface
+>[!NOTE]
+>
+>The dataset activity page does not display information about batches since the Analytics source connector is entirely managed by Adobe. You can monitor that data is flowing by looking at the metrics around ingested records.
 
-The dataset activity page does not display a list of individual batches. To view a list of individual batches, select a chart in the dataset activity interface.
+## Delete your dataflow {#delete-dataflow}
 
-![The dataset activity page with a chart selected.](../../../../images/tutorials/create/analytics/select-chart.png)
+>[!NOTE]
+>
+>You cannot disable an Analytics dataflow. To stop the flow of Analytics data, you must **delete** the dataflow entirely.
 
-You are taken to the Monitoring dashboard. Next, select **[!UICONTROL ONLY INGEST FAILURES: YES]** to clear the filter and view a list of individual batches.
+To delete your Analytics dataflow, select **[!UICONTROL Dataflows]** from the top header of the sources workspace. Use the dataflows page to locate the Analytics dataflow that you want to delete and then select the ellipses (`...`) beside it. Next, use the dropdown menu and select **[!UICONTROL Delete]**.
 
-![The monitoring dashboard with the failure filter selected.](../../../../images/tutorials/create/analytics/clear-filter.png)
-
-The interface updates to a list of individual batches, including information on their respective metrics. 
-
-![The legacy monitoring page for batch data.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
-
-| Metrics | Description |
-| --- | --- |
-| Batch ID | The ID of a given batch. This value is generated internally. |
-| Dataset name | The name of a given dataset used for Analytics data. |
-| Source | The source of the ingested data. |
-| Updated | The date of the most recent flow run iteration. |
-| Records in dataset | The total count of records in the dataset. **Note**: This parameter will occasionally display a status of `in-progress`. This status indicates that the record ingestion process is not yet complete. |
-| New profile fragments | The total count of new profile fragments that were ingested. |
-| Existing profile fragments | The total count of existing profile fragments. |
-| Identity records stitched | The total count of identity records that were stitched together after ingestion. |
-| Records in Profile | The total count of records that were ingested to Real-Time Customer Profile. |
-
-{style="table-layout:auto"}
-
-+++
+* Deleting the live Analytics dataflow will also delete its underlying dataset.
+* Deleting the backfill Analytics dataflow does not delete the underlying dataset, but will stop the backfill process for its corresponding report suite. If you delete the backfill dataflow, ingested data may still be viewed through the dataset.
 
 ## Next steps and additional resources
 
-Once the connection is created, the dataflow is automatically created to contain the incoming data and populate a dataset with your selected schema. Furthermore, data back-filling occurs and ingests up to 13 months of historical data. When the initial ingestion completes, [!DNL Analytics] data and be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and Segmentation Service. See the following documents for more details:
+Once the connection is created, the dataflow is automatically created to contain the incoming data and populate a dataset with your selected schema. Furthermore, data back-filling occurs and ingests up to 13 months of historical data. When the initial ingestion completes, Analytics data and be used by downstream Experience Platform services such as [!DNL Real-Time Customer Profile] and Segmentation Service. See the following documents for more details:
 
 * [[!DNL Real-Time Customer Profile] overview](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] overview](../../../../../segmentation/home.md)
@@ -319,6 +317,7 @@ The following video is intended to support your understanding of ingesting data 
 
 >[!WARNING]
 >
-> The [!DNL Platform] UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
+> The [!DNL Experience Platform] UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+

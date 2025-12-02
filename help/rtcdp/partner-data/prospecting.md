@@ -59,13 +59,13 @@ Read through the sections below which include links to further documentation, to
 
 As you complete the steps to implement the use case, you will make use of the following Real-Time CDP functionality and UI elements (listed in the order in which you will use them). Make sure that you have the necessary attribute-based access control permissions for all these areas or ask your system administrator to grant you the necessary permissions. 
 
-* [Identities](/help/identity-service/namespaces.md)
+* [Identities](/help/identity-service/features/namespaces.md)
 * [Schemas](/help/xdm/home.md)
 * [Data usage labels](/help/data-governance/labels/overview.md)
 * [Datasets](/help/catalog/datasets/overview.md)
 * [Sources](/help/sources/home.md)
 * [Prospect profiles](/help/profile/ui/prospect-profile.md)
-* [Prospect audiences](/help/segmentation/ui/prospect-audience.md)
+* [Prospect audiences](/help/segmentation/types/prospect-audiences.md)
 * [Destinations](/help/destinations/home.md)
 
 ### License third-party profile details from the partner {#license-profiles-from-partner}
@@ -89,7 +89,7 @@ Begin by creating a new identity type for the profiles that you will be receivin
 
 ![Create a new Partner ID identity namespace.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
-* Read more about Partner ID namespaces in the [identity types section](/help/identity-service/namespaces.md).
+* Read more about Partner ID namespaces in the [identity types section](/help/identity-service/features/namespaces.md).
 * Read about [how to define identity fields](/help/xdm/ui/fields/identity.md) in the Experience Platform user interface.
 
 #### Create a new schema with the **[!UICONTROL XDM Individual Prospect Profile]** class
@@ -104,7 +104,7 @@ The **[!UICONTROL XDM Individual Prospect Profile]** class comes pre-configured 
 
 ![Preconfigured fields for the XDM Individual Prospect Profile class.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
-Next, you must select the partnerID identity that you created earlier as the primary identity for the schema. Profile records must carry a primary identifier. This step is required to make sure that prospect data can be loaded into the profile store and made available for segmentation and activation.
+Next, you must select the partnerID identity that you created earlier as the primary identity for the schema. Profile records must carry a primary identifier. This step is required to make sure that prospect data can be loaded into the Profile store and made available for segmentation and activation.
 
 >[!AVAILABILITY]
 >
@@ -207,7 +207,7 @@ Note that the audience building experience for prospect profiles differs from th
 * Batch profile evaluation only. 
 * Does not support building audiences based on time-series events. 
 
-Read more about [prospect audiences](/help/segmentation/ui/prospect-audience.md).
+Read more about [prospect audiences](/help/segmentation/types/prospect-audiences.md).
 
 ### Activate prospect profiles to destinations {#activate-to-destinations}
 

@@ -1,6 +1,6 @@
 ---
 title: Upgrade Details Schema Field Group
-description: This document provides an overview of the Upgrade Details schema field group.
+description: Learn about the Upgrade Details schema field group.
 exl-id: cd3f4cd9-ee0e-4bdf-a630-dd2c3c3cc8c7
 ---
 # [!UICONTROL Upgrade Details] schema field group

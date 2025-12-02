@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;cloud storage data
 solution: Experience Platform
 title: Create a Dataflow for Cloud Storage Sources Using the Flow Service API
 type: Tutorial
-description: This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform using source connectors and APIs.
+description: This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Experience Platform using source connectors and APIs.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 ---
 # Create a dataflow for cloud storage sources using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving data from a cloud storage source and bringing them to Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for retrieving data from a cloud storage source and bringing them to Experience Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -23,11 +23,11 @@ This tutorial requires you to have a working understanding of the following comp
   - [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
 - [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within Experience Platform.
 - [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into Experience Platform as batch files.
-- [Sandboxes](../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+- [Sandboxes](../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../landing/api-guide.md).
 
 ## Create a source connection {#source}
 
@@ -75,7 +75,8 @@ curl -X POST \
       },
       "params": {
           "path": "/acme/summerCampaign/account.csv",
-          "type": "file"
+          "type": "file",
+          "cdcEnabled": true
       },
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
@@ -87,13 +88,14 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `baseConnectionId` | The base connection ID of your cloud storage source. |
-| `data.format` | The format of the data you want to bring to Platform. Supported values are: `delimited`, `JSON`, and `parquet`. |
+| `data.format` | The format of the data you want to bring to Experience Platform. Supported values are: `delimited`, `JSON`, and `parquet`. |
 | `data.properties` | (Optional) A set of properties that you can apply to your data while creating a source connection. |
 | `data.properties.columnDelimiter` | (Optional) A single character column delimiter that you can specify when collecting flat files. Any single character value is a permissible column delimiter. If not provided, a comma (`,`) is used as the default value. **Note**: The `columnDelimiter` property can only be used when ingesting delimited files. |
-| `data.properties.encoding` | (Optional) A property that defines the encoding type to be used when ingesting your data to Platform. The supported encoding types are: `UTF-8` and `ISO-8859-1`. **Note**: The `encoding` parameter is only available when ingesting delimited CSV files. Other file types will be ingested with the default encoding, `UTF-8`. |
+| `data.properties.encoding` | (Optional) A property that defines the encoding type to be used when ingesting your data to Experience Platform. The supported encoding types are: `UTF-8` and `ISO-8859-1`. **Note**: The `encoding` parameter is only available when ingesting delimited CSV files. Other file types will be ingested with the default encoding, `UTF-8`. |
 | `data.properties.compressionType` | (Optional) A property that defines the compressed file type for ingestion. The supported compressed file types are: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, and `tar`. **Note**: The `compressionType` property can only be used when ingesting delimited or JSON files. |
 | `params.path` | The path of the source file you are accessing. This parameter points to an individual file or an entire folder.  **Note**: You can use an asterisk in place of the file name to specify the ingestion of an entire folder. For example: `/acme/summerCampaign/*.csv` will ingest the entire `/acme/summerCampaign/` folder.  |
 | `params.type` | The file type of the source data file you are ingesting. Use type `file` to ingest an individual file and use type `folder` to ingest an entire folder. |
+| `params.cdcEnabled` | A boolean value that indicates whether change history capture is enabled. When used with relational schemas, change data capture relies on the `_change_request_type` control column (`u` — upsert, `d` — delete), which is evaluated during ingestion but not stored in the target schema. This property is supported by the following cloud storage sources: <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul>For an overview of this capability, see the [Data Mirror overview](../../../../xdm/data-mirror/overview.md). For implementation details, read the guide on using [change data capture in sources](../change-data-capture.md) and the [relational schemas technical reference](../../../../xdm/schema/relational.md). |
 | `connectionSpec.id` | The connection specification ID associated with your specific cloud storage source. See the [appendix](#appendix) for a list of connection spec IDs. |
 
 **Response**
@@ -109,7 +111,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ### Use regular expressions to select a specific set of files for ingestion {#regex}
 
-You can use regular expressions to ingest a particular set of files from your source to Platform when creating a source connection.
+You can use regular expressions to ingest a particular set of files from your source to Experience Platform when creating a source connection.
 
 **API format**
 
@@ -190,7 +192,7 @@ curl -X POST \
 
 ## Create a target XDM schema {#target-schema}
 
-In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
+In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -198,7 +200,7 @@ For detailed steps on how to create a target XDM schema, see the tutorial on [cr
 
 ## Create a target dataset {#target-dataset}
 
-A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
+A target dataset can be created by performing a POST request to the [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/), providing the ID of the target schema within the payload.
 
 For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](../../../../catalog/api/create-dataset.md).
 
@@ -265,7 +267,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to.
 
-To create a mapping set, make a POST request to the `mappingSets` endpoint of the [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) while providing your target XDM schema `$id` and the details of the mapping sets you want to create.
+To create a mapping set, make a POST request to the `mappingSets` endpoint of the [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/) while providing your target XDM schema `$id` and the details of the mapping sets you want to create.
 
 >[!TIP]
 >
@@ -342,7 +344,7 @@ A successful response returns details of the newly created mapping including its
 
 ## Retrieve dataflow specifications {#specs}
 
-A dataflow is responsible for collecting data from sources, and bringing them into Platform. In order to create a dataflow, you must first obtain the dataflow specifications that are responsible for collecting cloud storage data.
+A dataflow is responsible for collecting data from sources, and bringing them into Experience Platform. In order to create a dataflow, you must first obtain the dataflow specifications that are responsible for collecting cloud storage data.
 
 **API format**
 
@@ -368,7 +370,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the dataflow specification responsible for bringing data from your source into Platform. The response includes the unique flow spec `id` required to create a new dataflow.
+A successful response returns the details of the dataflow specification responsible for bringing data from your source into Experience Platform. The response includes the unique flow spec `id` required to create a new dataflow.
 
 ```json
 {
@@ -618,8 +620,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud Storage flow to Platform",
-        "description": "Cloud Storage flow to Platform",
+        "name": "Cloud Storage flow to Experience Platform",
+        "description": "Cloud Storage flow to Experience Platform",
         "flowSpec": {
             "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
             "version": "1.0"
@@ -655,7 +657,7 @@ curl -X POST \
 | `transformations.params.mappingId` | The [mapping ID](#mapping) retrieved in an earlier step.|
 | `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
 | `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
-| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
+| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. The minimum accepted interval value for each frequency is as follows:<ul><li>**Once**: n/a</li><li>**Minute**: 15</li><li>**Hour**: 1</li><li>**Day**: 1</li><li>**Week**: 1</li></ul>  |
 
 **Response**
 
@@ -674,7 +676,7 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect data from your cloud storage on a scheduled basis. Incoming data can now be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect data from your cloud storage on a scheduled basis. Incoming data can now be used by downstream Experience Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 - [Real-Time Customer Profile overview](../../../../profile/home.md)
 - [Data Science Workspace overview](../../../../data-science-workspace/home.md)

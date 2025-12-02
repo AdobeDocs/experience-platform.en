@@ -10,7 +10,7 @@ exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
 >
 >The [!DNL Azure Event Hubs] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
-This tutorial provides steps to create an [!DNL Azure Event Hubs] account using the Adobe Experience Platform user interface.
+Read this tutorial to learn how to create an [!DNL Azure Event Hubs] account using the Adobe Experience Platform user interface.
 
 ## Getting started
 
@@ -35,26 +35,47 @@ In order to authenticate your [!DNL Event Hubs] source connector, you must provi
 | --- | --- |
 | SAS key name | The name of the authorization rule, which is also known as the SAS key name. |
 | SAS key | The primary key of the [!DNL Event Hubs] namespace. The `sasPolicy` that the `sasKey` corresponds to must have `manage` rights configured in order for the [!DNL Event Hubs] list to be populated. |
-| Namespace | The namespace of the [!DNL Event Hubs] you are accessing. An [!DNL Event Hubs] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
+| Namespace | The namespace of the [!DNL Event Hub] you are accessing. An [!DNL Event Hub] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
 
 >[!TAB SAS authentication]
 
 | Credential | Description |
 | --- | --- |
 | SAS key name | The name of the authorization rule, which is also known as the SAS key name. |
-| SAS key | The primary key of the [!DNL Event Hubs] namespace. The `sasPolicy` that the `sasKey` corresponds to must have `manage` rights configured in order for the [!DNL Event Hubs] list to be populated. |
-| Namespace | The namespace of the [!DNL Event Hubs] you are accessing. An [!DNL Event Hubs] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
-| Event Hub name | The name for your [!DNL Event Hubs] source. |
+| SAS key | The primary key of the [!DNL Event Hub] namespace. The `sasPolicy` that the `sasKey` corresponds to must have `manage` rights configured in order for the [!DNL Event Hubs] list to be populated. |
+| Namespace | The namespace of the [!DNL Event Hub] you are accessing. An [!DNL Event Hub] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
+| Event Hub name | Fill in your [!DNL Azure Event Hub] name. Read the [Microsoft documentation](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) for more information on [!DNL Event Hub] names. |
+
+>[!TAB Event Hub Azure Active Directory Auth]
+
+| Credential | Description |
+| --- | --- |
+| Tenant ID | The tenant ID that you want to request permission from. Your tenant ID can be formatted as a GUID or as a friendly name. **Note**: The tenant ID is referred to as the "Directory ID" in the [!DNL Microsoft Azure] interface. |
+| Client ID | The application ID assigned to your app. You can retrieve this ID from the [!DNL Microsoft Entra ID] portal where you registered your [!DNL Azure Active Directory]. |
+| Client Secret Value | The client secret that is used alongside the client ID to authenticate your app. You can retrieve your client secret from the [!DNL Microsoft Entra ID] portal where you registered your [!DNL Azure Active Directory]. |
+| Namespace | The namespace of the [!DNL Event Hub] you are accessing. An [!DNL Event Hub] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
+
+For more information on [!DNL Azure Active Directory], read the [Azure guide on using Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+
+>[!TAB Event Hub Scoped Azure Active Directory Auth]
+
+| Credential | Description |
+| --- | --- |
+| Tenant ID | The tenant ID that you want to request permission from. Your tenant ID can be formatted as a GUID or as a friendly name. **Note**: The tenant ID is referred to as the "Directory ID" in the [!DNL Microsoft Azure] interface. |
+| Client ID | The application ID assigned to your app. You can retrieve this ID from the [!DNL Microsoft Entra ID] portal where you registered your [!DNL Azure Active Directory]. |
+| Client Secret Value | The client secret that is used alongside the client ID to authenticate your app. You can retrieve your client secret from the [!DNL Microsoft Entra ID] portal where you registered your [!DNL Azure Active Directory]. |
+| Namespace | The namespace of the [!DNL Event Hub] you are accessing. An [!DNL Event Hub] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
+| Event Hub name  | Fill in your [!DNL Azure Event Hub] name. Read the [Microsoft documentation](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) for more information on [!DNL Event Hub] names. |
+
+For more information on [!DNL Azure Active Directory], read the [Azure guide on using Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
 
 >[!ENDTABS]
-
-For more information about these values, refer to [this Event Hubs document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
 Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Event Hubs] account to Experience Platform.
 
 ## Connect your [!DNL Event Hubs] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources you can create an account with.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -84,7 +105,7 @@ To create a new account, select **[!UICONTROL New account]**, and then provide a
 
 >[!TAB Standard authentication]
 
-To create an [!DNL Event Hubs] account with standard authentication, select **[!UICONTROL Standard authentication]** and then provide values for your [!UICONTROL SAS key name], [!UICONTROL SAS key], and [!UICONTROL Namespace].
+To create an [!DNL Event Hubs] account with standard authentication, use the [!UICONTROL Account authentication] dropdown menu and then select **[!UICONTROL Standard authentication]**. Next, provide values for your [!UICONTROL SAS key name], [!UICONTROL SAS key], and [!UICONTROL Namespace].
 
 Once you have inputted your authentication credentials, select **[!UICONTROL Connect to source]**.
 
@@ -92,11 +113,23 @@ Once you have inputted your authentication credentials, select **[!UICONTROL Con
 
 >[!TAB SAS authentication]
 
-To create an [!DNL Event Hubs] account with SAS authentication, select **[!UICONTROL SAS authentication]** and then provide values for your [!UICONTROL SAS key name], [!UICONTROL SAS key], [!UICONTROL Namespace], and [!UICONTROL Event Hubs name].
+To create an [!DNL Event Hubs] account with SAS authentication, use the [!UICONTROL Account authentication] dropdown menu and then select **[!UICONTROL SAS authentication]**. Next, provide values for your [!UICONTROL SAS key name], [!UICONTROL SAS key], [!UICONTROL Namespace], and [!UICONTROL Event Hubs name].
 
 Once you have inputted your authentication credentials, select **[!UICONTROL Connect to source]**.
 
 ![The SAS authentication interface for Azure Event Hubs.](../../../../images/tutorials/create/eventhub/sas.png)
+
+>[!TAB Event Hub Azure Active Directory Auth]
+
+To create an [!DNL Event Hubs] account with Event Hub Azure Active Directory authentication, use the [!UICONTROL Account authentication] dropdown menu and then select **[!UICONTROL Event Hub Azure Active Directory]**. Next, provide values for your [!UICONTROL Tenant ID], [!UICONTROL Client ID], [!UICONTROL Client Secret Value], and [!UICONTROL Namespace].
+
+![Azure Event Hub Azure Active Directory Authentication](../../../../images/tutorials/create/eventhub/active-directory.png)
+
+>[!TAB Event Hub Scoped Azure Active Directory Auth]
+
+To create an [!DNL Event Hubs] account with Event Hub Scoped Azure Active Directory authentication, use the [!UICONTROL Account authentication] dropdown menu and then select **[!UICONTROL Event Hub Scoped Azure Active Directory]**. Next, provide values for your [!UICONTROL Tenant ID], [!UICONTROL Client ID], [!UICONTROL Client Secret Value], [!UICONTROL Namespace], and [!UICONTROL Event Hub Name].
+
+![Azure Event Hub Scoped Azure Activity Directory Authentication](../../../../images/tutorials/create/eventhub/scoped.png)
 
 >[!ENDTABS]
 

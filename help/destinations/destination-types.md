@@ -10,11 +10,15 @@ Read this page to understand the different types and categories of Adobe Experie
 
 ## Destination types {#destination-types}
 
-In Adobe Experience Platform, we distinguish between different destination types - connections, dataset exports, and extensions. There are several types of connection destinations, allowing you to export data to API-based destinations, .
+In Adobe Experience Platform, we distinguish between different destination types - connections, dataset exports, and extensions. There are several types of connection destinations, allowing you to export data to API-based destinations, social destinations, CRM platforms, and many more.
 
 Finally, connections can also be distinguished between public destinations available across all organizations in the destinations catalog, and private destinations which Real-Time CDP Ultimate customers can create to satisfy their specific export use cases.
 
-![Types of destinations diagram.](./assets/destination-types/types-of-destinations-no-highlight.png)
+>[!BEGINSHADEBOX]
+
+![Types of destinations diagram.](./assets/destination-types/types-of-destinations-no-highlight.png "Types of destinations diagram."){zoomable="yes"}
+
+>[!ENDSHADEBOX]
 
 ## Connections {#connections}
 
@@ -24,24 +28,30 @@ Finally, connections can also be distinguished between public destinations avail
 
 Profile export destinations receive raw data, often with email address as the primary key. Experience Platform currently supports two types of profile export destinations:
 
-* [Streaming profile export destinations (enterprise destinations)](#streaming-profile-export)
 * [Batch (file-based) destinations](#file-based)
+* [Advanced enterprise destinations (streaming profile export destinations)](#advanced-enterprise-destinations)
 
-### Streaming profile export destinations (enterprise destinations) {#streaming-profile-export}
+### Advanced enterprise destinations (streaming profile export destinations) {#advanced-enterprise-destinations}
 
 >[!IMPORTANT]
 >
->Enterprise destinations, or streaming profile export destinations, are available to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers only.
+>Advanced enterprise destinations, or streaming profile export destinations, are available to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers only.
 
-Use enterprise destination data connectors to deliver Adobe Real-Time Customer Data Platform profiles in near real-time to internal systems or to other third-party systems for data synchronization, analysis, and further profile enrichment use cases.
+Use the advanced enterprise destination data connectors to deliver Adobe Real-Time Customer Data Platform profiles in near real-time to internal systems or to other third-party systems for data synchronization, analysis, and further profile enrichment use cases.
 
 These destinations receive audience and profile data as Experience Platform data streams.
 
-Enterprise destinations include:
+Advanced enterprise destinations include:
 
 * [HTTP API destination](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
 * [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md)
+* [Snowflake Streaming](catalog/warehouses/snowflake.md)
+* [Snowflake Batch](catalog/warehouses/snowflake-batch.md)
+
+>[!NOTE]
+>
+>The Snowflake destinations are currently available only to US customers. If you need access outside of the US, please reach out to your Adobe account team.
 
 ### Batch (file-based) destinations {#file-based}
 
@@ -63,6 +73,21 @@ The video below runs you through the particularities of the two types of destina
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
+## Types of exported audiences {#exported-audiences-types}
+
+You can export three types of audiences from Experience Platform to various destinations:
+
+* People audiences
+* Account audiences
+* Prospect audiences
+
+Learn more about the [various audience types](/help/segmentation/types/account-audiences.md#terminology).
+
+A symbol on the destination card shows which types of audiences you can export to each destination. 
+
+![Example destination card with symbols showing which audience types can be exported.](/help/destinations/assets/destination-types/types-of-audiences.png "Example destination card with symbols showing which audience types can be exported."){zoomable="yes"}
+
+
 ## Dataset export destinations {#dataset-export-destinations}
 
 Some cloud storage destinations in the destinations catalog support dataset exports. Use these destinations to export raw datasets to cloud storage locations. 
@@ -71,7 +96,7 @@ Read more about how to [export datasets](/help/destinations/ui/export-datasets.m
 
 ## Extensions {#extensions}
 
-Platform leverages the power and flexibility of tag management, allowing you to configure tag extensions in the UI. 
+Experience Platform leverages the power and flexibility of tag management, allowing you to configure tag extensions in the UI. 
 
 >[!TIP]
 >
@@ -93,4 +118,4 @@ Extensions are helpful when event data is used to trigger an action, or to condu
 
 The connections and extensions in the [destinations catalog](https://platform.adobe.com/destination/catalog) are grouped by destination category (**Advertising**, **Cloud storage**, **Survey platforms**, **Email marketing**, etc.), depending on the marketing action that they help you achieve. For more information on each of the categories, as well as the destinations included in each category, see the [Destinations catalog documentation](./catalog/overview.md).
 
-![Destination categories highlighted in the catalog page.](./assets/destination-types/destination-categories-menu.png)
+![Destination categories highlighted in the catalog page.](./assets/destination-types/destination-categories-menu.png "Destination categories highlighted in the catalog page."){zoomable="yes"}

@@ -2,6 +2,7 @@
 keywords: streaming; HTTP destination
 title: HTTP API connection
 description: Use the HTTP API destination in Adobe Experience Platform to send profile data to third-party HTTP endpoint to run your own analytics or perform any other operations you may need on profile data exported out of Experience Platform.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 ---
 # HTTP API connection
@@ -24,12 +25,12 @@ HTTP endpoints can be either customers' own systems or third-party solutions.
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -38,7 +39,7 @@ This section describes which type of audiences you can export to this destinatio
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+| ---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the mapping screen of the [destination activation workflow](../../ui/activate-segment-streaming-destinations.md#mapping).|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
@@ -51,14 +52,38 @@ To use the HTTP API destination to export data out of Experience Platform, you m
 * You must have an HTTP endpoint that supports REST API.
 * Your HTTP endpoint must support the Experience Platform profile schema. No transformation to a 3rd-party payload schema is supported in the HTTP API destination. Refer to the [exported data](#exported-data) section for an example of the Experience Platform output schema.
 * Your HTTP endpoint must support headers.
+* Your HTTP endpoint must respond within 2 seconds to ensure proper data processing and avoid timeout errors.
+* If you plan to use mTLS: Your data receiving endpoint must have TLS disabled and only mTLS enabled. mTLS is not supported if your endpoint requires OAuth 2 Password or Client Credentials authentication.
 
 >[!TIP]
 >
-> You can also use [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) to set up an integration and send Experience Platform profile data to an HTTP endpoint.
+> You can also use [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) to set up an integration and send Experience Platform profile data to an HTTP endpoint. 
+
+## mTLS protocol support and certificate {#mtls-protocol-support}
+
+You can use [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) to ensure enhanced security in outbound connections to your HTTP API destination connections.
+
+[!DNL mTLS] is a mutual authentication protocol that ensures that both parties sharing information are who they claim to be before data is shared. [!DNL mTLS] includes an additional step compared to standard [!DNL TLS], in which the server also requests and verifies the client's certificate, while the client verifies the server's certificate.
+
+### mTLS considerations {#mtls-considerations}
+
+mTLS support for HTTP API destinations applies **only to the data receiving endpoint** where profile exports are sent (the **[!UICONTROL HTTP Endpoint]** field in [destination details](#destination-details)). 
+
+mTLS is **not supported** if your endpoint requires OAuth 2 Password or Client Credentials authentication.
+
+### Configuring mTLS for data export {#configuring-mtls}
+
+To use [!DNL mTLS] with [!DNL HTTP API] destinations, the **[!UICONTROL HTTP Endpoint]** (data receiving endpoint) you configure in the [destination details](#destination-details) page must have [!DNL TLS] protocols disabled and only [!DNL mTLS] enabled. If the [!DNL TLS] 1.2 protocol is still enabled on the endpoint, no certificate is sent for the client authentication. This means that to use [!DNL mTLS] with your [!DNL HTTP API] destination, your data receiving server endpoint must be an [!DNL mTLS]-only enabled connection endpoint.
+
+### Retrieve and inspect certificate details {#certificate}
+
+If you want to inspect certificate details such as the [!DNL Common Name] (CN) and [!DNL Subject Alternative Names] (SAN) for additional third-party validation, use the API to retrieve the certificate and extract those fields from the response.
+
+See the [public certificate endpoint documentation](../../../data-governance/mtls-api/public-certificate-endpoint.md) for more information. 
 
 ## IP address allowlist {#ip-address-allowlist}
 
-To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the HTTP API destination. Refer to [IP address allow list for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
+To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the HTTP API destination. Refer to [IP address allowlist for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
 
 ## Supported authentication types {#supported-authentication-types}
 
@@ -66,7 +91,7 @@ The HTTP API destination supports several authentication types to your HTTP endp
 
 * HTTP endpoint with no authentication;
 * Bearer token authentication;
-* [OAuth 2.0 client credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) authentication with the body form, with [!DNL client ID], [!DNL client secret] and [!DNL grant type] in the body of the HTTP request, as shown in the example below.
+* [OAuth 2.0 client credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) authentication with the body form, with [!DNL client ID], [!DNL client secret], and [!DNL grant type] in the body of the HTTP request, as shown in the example below.
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -91,7 +116,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!IMPORTANT]
 > 
->To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). When connecting to this destination, you must provide the following information:
 
@@ -106,7 +131,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 If you select the **[!UICONTROL Bearer token]** authentication type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
 
-![Image of the UI screen where you can connect to the HTTP API destination, using bearer token authentication](../../assets/catalog/http/http-api-authentication-bearer.png)
+![Image of the UI screen where you can connect to the HTTP API destination, using bearer token authentication.](../../assets/catalog/http/http-api-authentication-bearer.png)
 
 * **[!UICONTROL Bearer token]**: insert the bearer token to authenticate to your HTTP location.
 
@@ -114,7 +139,7 @@ If you select the **[!UICONTROL Bearer token]** authentication type to connect t
 
 If you select the **[!UICONTROL None]** authentication type to connect to your HTTP endpoint:
 
-![Image of the UI screen where you can connect to the HTTP API destination, using no authentication](../../assets/catalog/http/http-api-authentication-none.png)
+![Image of the UI screen where you can connect to the HTTP API destination, using no authentication.](../../assets/catalog/http/http-api-authentication-none.png)
 
 When you select this authentication open, you only need to select **[!UICONTROL Connect to destination]** and the connection to your endpoint is established.
 
@@ -122,7 +147,11 @@ When you select this authentication open, you only need to select **[!UICONTROL 
 
 If you select the **[!UICONTROL OAuth 2 Password]** authentication type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
 
-![Image of the UI screen where you can connect to the HTTP API destination, using OAuth 2 with Password authentication](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+![Image of the UI screen where you can connect to the HTTP API destination, using OAuth 2 with Password authentication.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+
+>[!NOTE]
+>
+>**mTLS limitation:** mTLS is not supported with OAuth 2 Password authentication. See the [mTLS considerations](#mtls-considerations) section for details.
 
 * **[!UICONTROL Access Token URL]**: The URL on your side which issues access tokens and, optionally, refresh tokens.
 * **[!UICONTROL Client ID]**: The [!DNL client ID] that your system assigns to Adobe Experience Platform.
@@ -134,7 +163,15 @@ If you select the **[!UICONTROL OAuth 2 Password]** authentication type to conne
 
 If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
 
-![Image of the UI screen where you can connect to the HTTP API destination, using OAuth 2 with Client Credentials authentication](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+![Image of the UI screen where you can connect to the HTTP API destination, using OAuth 2 with Client Credentials authentication.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+
+>[!WARNING]
+> 
+>When using [!UICONTROL OAuth 2 Client Credentials] authentication, the [!UICONTROL Access Token URL] can have a maximum of one query parameter. Adding an [!UICONTROL Access Token URL] with more query parameters can lead to issues when connecting to your endpoint.
+
+>[!NOTE]
+>
+>**mTLS limitation:** mTLS is not supported with OAuth 2 Client Credentials authentication. See the [mTLS considerations](#mtls-considerations) section for details.
 
 * **[!UICONTROL Access Token URL]**: The URL on your side which issues access tokens and, optionally, refresh tokens.
 * **[!UICONTROL Client ID]**: The [!DNL client ID] that your system assigns to Adobe Experience Platform.
@@ -153,7 +190,7 @@ If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication typ
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
 >title="HTTP Endpoint"
->abstract="The URL of the HTTP endpoint where you want to send the profile data to."
+>abstract="The URL of the HTTP endpoint where you want to send the profile data to. This is your data receiving endpoint and supports mTLS if configured (not available with OAuth 2 Password or Client Credentials authentication)."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
@@ -172,14 +209,14 @@ If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication typ
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Image of the UI screen showing completed fields for the HTTP destination details](../../assets/catalog/http/http-api-destination-details.png)
+![Image of the UI screen showing completed fields for the HTTP destination details.](../../assets/catalog/http/http-api-destination-details.png)
 
 * **[!UICONTROL Name]**: Enter a name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: Enter a description that will help you identify this destination in the future.
 * **[!UICONTROL Headers]**: Enter any custom headers that you want to be included in the destination calls, following this format: `header1:value1,header2:value2,...headerN:valueN`.
-* **[!UICONTROL HTTP Endpoint]**: The URL of the HTTP endpoint where you want to send the profile data to.
+* **[!UICONTROL HTTP Endpoint]**: The URL of the HTTP endpoint where you want to send the profile data to. This is your data receiving endpoint. If you are using mTLS, this endpoint must have TLS disabled and only mTLS enabled.
 * **[!UICONTROL Query parameters]**: Optionally, you can add query parameters to the HTTP endpoint URL. Format the query parameters you use like this: `parameter1=value&parameter2=value`.
-* **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the audiences you are exporting. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
+* **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the audiences you are exporting. **Note**: Segment names are only included for segments that are mapped to the destination. Unmapped segments that appear in the export will not include the `name` field. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
 * **[!UICONTROL Include Segment Timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
 
 ### Enable alerts {#enable-alerts}
@@ -192,7 +229,8 @@ When you are finished providing details for your destination connection, select 
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* [Consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) is currently not supported in exports to the HTTP API destination. [Read more](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 See [Activate audience data to streaming profile export destinations](../../ui/activate-streaming-profile-destinations.md) for instructions on activating audiences to this destination.
 
@@ -210,7 +248,7 @@ Experience Platform optimizes the profile export behavior to your HTTP API desti
 
 In all the cases described above, only the profiles where relevant updates have occurred are exported to your destination. For example, if an audience mapped to the destination flow has a hundred members, and five new profiles qualify for the segment, the export to your destination is incremental and only includes the five new profiles.
 
-Note that the all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
+Note that all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
 
 ### What determines a data export and what is included in the export {#what-determines-export-what-is-included}
 
@@ -218,13 +256,13 @@ Regarding the data that is exported for a given profile, it is important to unde
 
 |What determines a destination export | What is included in the destination export |
 |---------|----------|
-|<ul><li>Mapped attributes and audiences serve as the cue for a destination export. This means that if any mapped audiences change states (from `null` to `realized` or from `realized` to `exiting`) or any mapped attributes are updated, a destination export would be kicked off.</li><li>Since identities cannot currently be mapped to HTTP API destinations, changes in any identity on a given profile also determine destination exports.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li></ul> | <ul><li>The `segmentMembership` object includes the audience mapped in the activation dataflow, for which the status of the profile has changed following a qualification or audience exit event. Note that other unmapped audiences for which the profile qualified for can be part of the destination export, if these audiences belong to the same [merge policy](/help/profile/merge-policies/overview.md) as the audience mapped in the activation dataflow. </li><li>All identities in the `identityMap` object are included as well (Experience Platform currently does not support identity mapping in the HTTP API destination).</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
+|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if the `segmentMembership` status of a profile changes  to `realized` or `exiting` or any mapped attributes are updated, a destination export would be kicked off.</li><li>Since identities cannot currently be mapped to HTTP API destinations, changes in any identity on a given profile also determine destination exports.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li></ul> | <ul><li>The `segmentMembership` object includes the segment mapped in the activation dataflow, for which the status of the profile has changed following a qualification or segment exit event. Note that other unmapped segments for which the profile qualified for can be part of the destination export, if these segments belong to the same [merge policy](/help/profile/merge-policies/overview.md) as the segment mapped in the activation dataflow. <br> **Important**: When the **[!UICONTROL Include Segment Names]** option is enabled, segment names are only included for segments that are mapped to the destination. Unmapped segments that appear in the export will not include the `name` field, even if the option is enabled. </li><li>All identities in the `identityMap` object are included as well (Experience Platform currently does not support identity mapping in the HTTP API destination).</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
 
 {style="table-layout:fixed"}
 
 For example, consider this dataflow to an HTTP destination where three audiences are selected in the dataflow, and four attributes are mapped to the destination.  
 
-![HTTP API destination dataflow](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![An example of a HTTP API destination dataflow.](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
 A profile export to the destination can be determined by a profile qualifying for or exiting one of the *three mapped segments*. However, in the data export, in the `segmentMembership` object (see [Exported Data](#exported-data) section below), other unmapped audiences might appear, if that particular profile is a member of them and if these share the same merge policy as the audience that triggered the export. If a profile qualifies for the **Customer with DeLorean Cars** segment but is also a member of the **Watched "Back to the Future"** movie and **Science fiction fans** segments, then these other two audiences will also be present in the `segmentMembership` object of the data export, even though these are not mapped in the dataflow, if these share the same merge policy with the **Customer with DeLorean Cars** segment.
 
@@ -307,10 +345,16 @@ Below are further examples of exported data, depending on the UI settings you se
             "mappingCreatedAt": 1649856570000,
             "mappingUpdatedAt": 1649856570000,
             "name": "First name equals John"
+          },
+          "354e086f-2e11-49a2-9e39-e5d9a76be683": {
+            "lastQualificationTime": "2020-04-15T02:41:50+0000",
+            "status": "realized"
           }
         }
       }
 ```
+
+**Note**: In this example, the first segment (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) is mapped to the destination and includes the `name` field. The second segment (`354e086f-2e11-49a2-9e39-e5d9a76be683`) is not mapped to the destination and does not include the `name` field, even though the **[!UICONTROL Include Segment Names]** option is enabled.
 
 +++
 
@@ -338,3 +382,7 @@ Below are further examples of exported data, depending on the UI settings you se
 In 95 percent of the time, Experience Platform attempts to offer a throughput latency of less than 10 minutes for successfully sent messages with a rate of less than 10 thousand requests per second for each dataflow to an HTTP destination.
 
 In case of failed requests to your HTTP API destination, Experience Platform stores the failed requests and retries twice to send the requests to your endpoint.
+
+## Troubleshooting {#troubleshooting}
+
+To ensure reliable data delivery and avoid timeout issues make sure that your HTTP endpoint responds within 2 seconds to Experience Platform requests, as specified in the [prerequisites](#prerequisites) section. Responses which take longer will result in timeout errors.

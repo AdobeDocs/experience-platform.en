@@ -4,11 +4,12 @@ user-guide-title: Adobe Experience Platform Debugger Help
 breadcrumb-title: Adobe Experience Platform Debugger Guide
 user-guide-description: Examine your web pages for problems with your Experience Platform implementations using the Adobe Experience Platform Debugger for Chrome and Firefox.
 feature: Debugger
+role: Developer,User
 ---
 
 # Adobe Experience Platform Debugger {#debugger}
 
-* [Platform Debugger overview](./home.md)
+* [Experience Platform Debugger overview](./home.md)
 * [Install the extension](./install-debugger.md)
 * [Configure the extension](./configure-debugger.md)
 * [Summary tab](./summary.md)

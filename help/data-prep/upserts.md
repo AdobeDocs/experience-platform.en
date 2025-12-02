@@ -6,9 +6,23 @@ exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
 ---
 # Send partial row updates to [!DNL Real-Time Customer Profile] using [!DNL Data Prep]
 
-Streaming upserts in [!DNL Data Prep] allows you to send partial row updates to [!DNL Real-Time Customer Profile] data while also creating and establishing new identity links with a single API request.
+>[!IMPORTANT]
+>
+>* Ingestion of Experience Data Model (XDM) Entity Update messages (with JSON PATCH operations) for Profile updates via the DCS inlet has been deprecated. Follow the steps outlined in this guide as an alternative.
+>
+>* You can also use the HTTP API source to [ingest raw data into the DCS inlet](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) and specify the necessary data mappings to transform your data into XDM-compliant messages for Profile updates. 
+>
+>* When using arrays in streaming upserts, you must explicitly use `upsert_array_append` or `upsert_array_replace` to define clear intent of the operation. You may receive errors if these functions are missing.
+
+Use streaming upserts in [!DNL Data Prep] to send partial row updates to [!DNL Real-Time Customer Profile] data while also creating and establishing new identity links with a single API request.
 
 By streaming upserts, you can retain the format of your data while translating that data to [!DNL Real-Time Customer Profile] PATCH requests during ingestion. Based on the inputs you provide, [!DNL Data Prep] allows you to send a single API payload and translate the data to both [!DNL Real-Time Customer Profile] PATCH and [!DNL Identity Service] CREATE requests. 
+
+[!DNL Data Prep] uses header parameters to distinguish between inserts and upserts. All rows that use upserts must have a header. You can use upserts with or without identity descriptors. If you are using upserts with identities, you must follow the configuration steps outlined in the section on [configuring the identity dataset](#configure-the-identity-dataset). If you are using upserts without identities, then you do not need to provide identity configurations in your request. Read the section on [streaming upserts without identities](#payload-without-identity-configuration) for more information.
+
+>[!NOTE]
+>
+>To leverage upsert functionality, it is recommended that you turn off XDM-compatible configurations during data ingestion and re-map the incoming payload using [Data Prep Mapper](./ui/mapping.md).
 
 This document provides information on how to stream upserts in [!DNL Data Prep].
 
@@ -19,7 +33,7 @@ This overview requires a working understanding of the following components of Ad
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 * [[!DNL Identity Service]](../identity-service/home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
 * [Real-Time Customer Profile](../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
-* [Sources](../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sources](../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
 
 ## Use streaming upserts in [!DNL Data Prep] {#streaming-upserts-in-data-prep}
 
@@ -38,7 +52,7 @@ Streaming upserts in [!DNL Data Prep] works as follows:
     * The data operation that is needed to be performed with [!DNL Profile]: `create`, `merge`, and `delete`.
     * The optional identity operation to be performed with [!DNL Identity Service]: `create`.
 
-### Configure the identity dataset
+### Configure the identity dataset {#configure-the-identity-dataset}
 
 If new identities must be linked, then you must create and pass an additional dataset in the incoming payload. When creating an identity dataset, you must ensure that the following requirements are met:
 
@@ -116,7 +130,7 @@ The following operations are supported by [!DNL Real-Time Customer Profile]:
 | --- | --- | 
 | `create` | The default operation. This generates an XDM entity create method for [!DNL Real-Time Customer Profile]. |
 | `merge` | This generates an XDM entity update method for [!DNL Real-Time Customer Profile]. |
-| `delete` | This generates an XDM entity delete method for [!DNL Real-Time Customer Profile] and permanently removes the data from the [!DNL Profile Store]. |
+| `delete` | This generates an XDM entity delete method for [!DNL Real-Time Customer Profile] and permanently removes the data from the [!DNL Profile store]. |
 
 The following operations are supported by [!DNL Identity Service]:
 
@@ -124,7 +138,7 @@ The following operations are supported by [!DNL Identity Service]:
 | --- | --- |
 | `create` | The only permitted operation for this parameter. If `create` is passed as a value for `operations.identity`, then [!DNL Data Prep] generates an XDM entity create request for [!DNL Identity Service]. If the identity already exists, then the identity is ignored. **Note:** If `operations.identity` is set to `create`, then the `identityDatasetId` must also be specified. The XDM entity create message generated internally by [!DNL Data Prep] component will be generated for this dataset id. |
 
-### Payload without identity configuration
+### Payload without identity configuration {#payload-without-identity-configuration}
 
 If new identities do not need to be linked, then you can omit the `identity` and `identityDatasetId` parameters in the operations. Doing so sends data only to [!DNL Real-Time Customer Profile] and skips the [!DNL Identity Service]. See the payload below for an example:
 
@@ -252,7 +266,7 @@ The following outlines a list of known limitations to consider when streaming up
 
 * The streaming upserts method should only be used when sending partial row updates to [!DNL Real-Time Customer Profile]. Partial row updates are **not** consumed by data lake.
 * The streaming upserts method does not support updating, replacing, and removing identities. New identities are created if they do not exist. Hence the `identity` operation must always be set to create. If an identity already exists, the operation is a no-op.
-* The streaming upserts method currently does not support [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html) and [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* The streaming upserts method currently does not support the [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) or the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 ## Next steps
 

@@ -19,13 +19,13 @@ This guide covers how to view and manage existing work orders in the Adobe Exper
 
 When you first access the **[!UICONTROL Data Lifecycle]** workspace in the UI, a list of existing work orders is shown along with their basic details.
 
-![Image showing the [!UICONTROL Data Lifecycle] workspace in the Platform UI](../images/ui/browse/work-order-list.png)
+![Image showing the [!UICONTROL Data Lifecycle] workspace in the Experience Platform UI](../images/ui/browse/work-order-list.png)
 
 The list only shows work orders for one category at a time. Select **[!UICONTROL Consumer]** to view a list of record delete tasks, and **[!UICONTROL Dataset]** to view a list of scheduled dataset expirations.
 
 ![Image showing the [!UICONTROL Dataset] tab](../images/ui/browse/dataset-tab.png)
 
-Select the funnel icon (![Image of the funnel icon](../images/ui/browse/funnel-icon.png)) to view a list of filters for the displayed work orders.
+Select the funnel icon (![Image of the funnel icon](/help/images/icons/filter.png)) to view a list of filters for the displayed work orders.
 
 ![Image of the work order filters displayed](../images/ui/browse/filters.png)
 
@@ -91,7 +91,7 @@ The details page for a dataset expiration provides information on its basic attr
 
 ## Next steps
 
-This guide covered how to view and manage existing data lifecycle work orders in the Platform UI. For information on creating your own work orders, refer to the following documentation:
+This guide covered how to view and manage existing data lifecycle work orders in the Experience Platform UI. For information on creating your own work orders, refer to the following documentation:
 
 * [Manage dataset expirations](./dataset-expiration.md)
 * [Manage record deletes](./record-delete.md)

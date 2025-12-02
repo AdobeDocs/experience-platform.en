@@ -12,7 +12,7 @@ exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 >title="Data Subject Requests"
 >abstract="This widget shows the number of submitted and completed data subject requests processed by Privacy Service for a given day. For more information on your Privacy Service processes, select **Requests** in the left navigation."
 
-The Privacy Service UI [!DNL Privacy Service] allows you to coordinate privacy and compliance requests across various Adobe Experience Cloud applications.
+The Privacy Service UI allows you to coordinate privacy and compliance requests across various Adobe Experience Cloud applications.
 
 >[!NOTE]
 >
@@ -24,9 +24,9 @@ The Privacy Service UI [!DNL Privacy Service] allows you to coordinate privacy a
 >
 >You must have an Adobe ID in order to authenticate to the [!DNL Privacy Service] UI. 
 
-To access the UI, log in to [Adobe Experience Cloud](https://experience.adobe.com/) and select **[!UICONTROL Privacy UI]** under the quick access menu.
+To access the UI, log in to [Adobe Experience Cloud](https://experience.adobe.com/) and select **[!UICONTROL Privacy Service]** under the quick access menu.
 
-![The Experience Cloud dashboard with Privacy UI highlighted.](../images/ui-overview/quick-access.png)
+![The Experience Cloud dashboard with Privacy Service highlighted.](../images/ui-overview/quick-access.png)
 
 
 ### Logging in from [!DNL Experience Platform]

@@ -16,19 +16,19 @@ To create datasets from the Adobe Experience Platform user interface (UI), follo
 
 1. Create a query using a connected client and validate the output. To learn how to write queries using [!DNL Query Editor], read the [!DNL Query Editor] UI guide [on writing queries](./user-guide.md#writing-queries).
 
-2. In the Platform UI, navigate to **[!UICONTROL Queries]** followed by the **[!UICONTROL Templates]** tab and select the query you have created. For more details on how to view queries that were created and saved for your organization within the Platform UI, read the [[!DNL Query Service] overview](./overview.md#browse).
+2. In the Experience Platform UI, navigate to **[!UICONTROL Queries]** followed by the **[!UICONTROL Templates]** tab and select the query you have created. For more details on how to view queries that were created and saved for your organization within the Experience Platform UI, read the [[!DNL Query Service] overview](./overview.md#browse).
 
-3. In the Query details panel, select **[!UICONTROL Output dataset]**.
+3. In the Query details panel, select **[!UICONTROL Run as CTAS]**.
 
-    ![The Queries workspace Templates tab with Select Output dataset highlighted.](../images/ui/create-datasets/output-dataset.png)
+    ![The Queries workspace [!UICONTROL Templates] tab with Select [!UICONTROL Run as CTAS] highlighted.](../images/ui/create-datasets/run-as-ctas.png)
 
 4. In the dialog that appears, enter a dataset name prepended with your LDAP ID. The dataset name does not have to be unique or SQL-safe. Note that the table name for your dataset will be generated based on the dataset name you create here.
 
-5. Next, enter a description for your dataset in the [!UICONTROL Description] field and select **[!UICONTROL Run query]**.
+5. Next, enter a description for your dataset in the [!UICONTROL Description] field and select **[!UICONTROL Run as CTAS]**.
 
-    ![The Output dataset dialog with the dataset details and run query highlighted](../images/ui/create-datasets/run-query.png)
+    ![The Output dataset dialog with the dataset details and [!UICONTROL Run as CTAS] highlighted](../images/ui/create-datasets/run-query.png)
 
-6. Once the query run is complete, navigate to **[!UICONTROL Datasets]** to view the dataset you have created. To learn more about how to perform common actions when working with datasets within the Platform UI, see the [Datasets UI guide](../../catalog/datasets/user-guide.md).
+6. Once the query run is complete, navigate to **[!UICONTROL Datasets]** to view the dataset you have created. To learn more about how to perform common actions when working with datasets within the Experience Platform UI, see the [Datasets UI guide](../../catalog/datasets/user-guide.md).
 
 After a dataset is created, it can be accessed like any other dataset in the [!DNL Data Lake] and used for a variety of use cases. 
 
@@ -46,4 +46,4 @@ Datasets created through this functionality are generated with an ad hoc schema 
 
 ## Next steps
 
-After reading this document, you should now understand how to use [!DNL Query Service] to generate datasets from the Platform UI. For more information on how to access, write, and execute queries within the Platform UI, see the [[!DNL Query Service] UI overview](./overview.md).
+After reading this document, you should now understand how to use [!DNL Query Service] to generate datasets from the Experience Platform UI. For more information on how to access, write, and execute queries within the Experience Platform UI, see the [[!DNL Query Service] UI overview](./overview.md).

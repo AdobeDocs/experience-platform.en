@@ -3,9 +3,16 @@ keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;po
 solution: Experience Platform
 title: Sensei Machine Learning API Guide Appendix
 description: The following sections provide reference information for various features of the Sensei Machine Learning API.
+role: Developer
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
 ---
 # [!DNL Sensei Machine Learning] API guide appendix
+
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
 The following sections provide reference information for various features of the [!DNL Sensei Machine Learning] API.
 

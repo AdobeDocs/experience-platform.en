@@ -1,0 +1,355 @@
+---
+title: Monitoring hooks for Adobe Experience Platform Web SDK
+description: Learn how to use the monitoring hooks provided by the Adobe Experience Platform Web SDK to debug your implementation and capture Web SDK logs.
+exl-id: 56633311-2f89-4024-8524-57d45c7d38f7
+---
+# Monitoring hooks for Web SDK
+
+The Adobe Experience Platform Web SDK includes monitoring hooks which you can use to monitor various system events. These tools are useful for developing your own debugging tools and to capture Web SDK logs.
+
+The Web SDK triggers the monitoring functions regardless of whether you have enabled [debugging](commands/configure/debugenabled.md).
+
+## `onInstanceCreated` {#onInstanceCreated}
+
+This callback function is triggered when you have successfully created a new Web SDK instance. See the sample below for details about the function parameters.
+
+```js
+onInstanceCreated(data) {
+    // data.instanceName
+    // data.instance
+}
+```
+
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | String | The name of the global variable where the Web SDK instance is stored. | 
+| `data.instance` | Function | The instance function used to call Web SDK commands. |
+
+## `onInstanceConfigured` {#onInstanceConfigured}
+
+This callback function is triggered by the Web SDK when the [`configure`](commands/configure/overview.md) command is successfully resolved. See the sample below for details about the function parameters.
+
+```js
+ onInstanceConfigured(data) {
+     // data.instanceName
+     // data.config
+ }
+```
+
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | String | The name of the global variable where the Web SDK instance is stored. | 
+| `data.config` | Object | An object containing the configuration you used for your Web SDK instance. These are the options passed to the [`configure`](commands/configure/overview.md) command with all the default values added. | 
+
+## `onBeforeCommand` {#onBeforeCommand}
+
+This callback function is triggered by Web SDK before any other command is executed. You can use this function to retrieve the configuration options of a specific command. See the sample below for details about the function parameters.
+
+```js
+onBeforeCommand(data) {
+    // data.instanceName
+    // data.commandName
+    // data.options
+}
+```
+
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | String | The name of the global variable where the Web SDK instance is stored. |
+| `data.commandName` | String | The name of the Web SDK command before which this function is executed. |
+| `data.options` | Object | An object containing the options passed to the Web SDK command. |
+
+## `onCommandResolved` {#onCommandResolved}
+
+This callback function is triggered when resolving command promises. You can use this function to see the command options and result. See the sample below for details about the function parameters.
+
+```js
+onCommandResolved(data) {
+    // data.instanceName
+    // data.commandName
+    // data.options
+    // data.result
+},
+```
+
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | String | The name of the global variable where the Web SDK instance is stored. |
+| `data.commandName` | String | The name of the executed Web SDK command. |
+| `data.options` | Object | An object containing the options passed to the Web SDK command. |
+| `data.result` | Object | An object containing the result of the Web SDK command. |
+
+## `onCommandRejected` {#onCommandRejected}
+
+This callback function is triggered before a command promise is rejected and it contains information about the reason why the command was rejected. See the sample below for details about the function parameters.
+
+```js
+onCommandRejected(data) {
+    // data.instanceName
+    // data.commandName
+    // data.options
+    // data.error
+}
+```
+
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | String | The name of the global variable where the Web SDK instance is stored. |
+| `data.commandName` | String | The name of the executed Web SDK command. |
+| `data.options` | Object | An object containing the options passed to the Web SDK command. |
+| `data.error`  | Object | An object containing the error message returned from the browser's network call (`fetch` in most cases), along with the reason why the command was rejected. |
+
+## `onBeforeNetworkRequest` {#onBeforeNetworkRequest}
+
+This callback function is triggered before a network request is executed. See the sample below for details about the function parameters.
+
+```js
+onBeforeNetworkRequest(data) {
+    // data.instanceName
+    // data.requestId
+    // data.url
+    // data.payload
+}
+```
+
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | String | The name of the global variable where the Web SDK instance is stored. |
+| `data.requestId`  | String | The `requestId` generated by Web SDK to enable debugging. |
+| `data.url` | String | The requested URL. |
+| `data.payload` | Object | The network request payload object that will be converted to JSON format and sent in the body of the request, through a `POST` method. |
+
+## `onNetworkResponse` {#onNetworkResponse}
+
+This callback function is triggered when the browser receives a response. See the sample below for details about the function parameters.
+
+```js
+onNetworkResponse(data) {
+    // data.instanceName
+    // data.requestId
+    // data.url
+    // data.payload
+    // data.body
+    // data.parsedBody
+    // data.status
+    // data.retriesAttempted
+}
+```
+
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | String | The name of the global variable where the Web SDK instance is stored. |
+| `data.requestId`  | String | The `requestId` generated by Web SDK to enable debugging. |
+| `data.url` | String | The requested URL. |
+| `data.payload` | Object | The payload object that will be converted to JSON format and sent in the body of the request, through a `POST` method. |
+| `data.body`  | String | The response body in string format. |
+| `data.parsedBody` | Object | An object containing the parsed response body. If an error occurs while parsing the response body, this parameter is undefined. |
+| `data.status` | String | The response code in integer format. |
+| `data.retriesAttempted` | Integer | The number of retries attempted when sending the request. Zero means the request was successful on the first try. |
+
+## `onNetworkError` {#onNetworkError}
+
+This callback function is triggered when the network request failed. See the sample below for details about the function parameters.
+
+```js
+onNetworkError(data) {
+    // data.instanceName
+    // data.requestId
+    // data.url
+    // data.payload
+    // data.error
+},
+```
+
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | String | The name of the global variable where the Web SDK instance is stored. |
+| `data.requestId`  | String | The `requestId` generated by Web SDK to enable debugging. |
+| `data.url` | String | The requested URL. |
+| `data.payload` | Object | The payload object that will be converted to JSON format and sent in the body of the request, through a `POST` method. |
+| `data.error`  | Object | An object containing the error message returned from the browser's network call (`fetch` in most cases), along with the reason why the command was rejected. |
+
+## `onBeforeLog` {#onBeforeLog}
+
+This callback function is triggered before the Web SDK logs anything to the console. See the sample below for details about the function parameters.
+
+```js
+onBeforeLog(data) {
+    // data.instanceName
+    // data.componentName
+    // data.level
+    // data.arguments
+}
+```
+
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | String | The name of the global variable where the Web SDK instance is stored. |
+| `data.componentName` | String | The name of the component that generated the log message. |
+| `data.level` | String | The logging level. Supported levels: `log`, `info`, `warn`, `error`. |
+| `data.arguments` | String array | The arguments of the log message. |
+
+
+## `onContentRendering` {#onContentRendering}
+
+This callback function is triggered by the `personalization` component at various stages of rendering. The payload can differ, depending on the `status` parameter. See the sample below for details about the function parameters.
+
+```js
+ onContentRendering(data) {
+     // data.instanceName
+     // data.componentName
+     // data.payload
+     // data.status
+}
+```
+
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | String |The name of the global variable where the Web SDK instance is stored. | 
+| `data.componentName` | String | The name of the component that generated the log message. |
+| `data.payload` | Object | The payload object that will be converted to JSON format and sent in the body of the request, through a `POST` method. |
+| `data.status` | String | The `personalization` component notifies the Web SDK of the status of rendering.  Supported values: <ul><li>`rendering-started`: Indicates that the Web SDK is about to render propositions. Before the Web SDK starts to render a decision scope or a view, in the `data` object you can see the propositions that are about to be rendered by the `personalization` component and the scope name.</li><li>`no-offers`: Indicates that no payload was received for the requested parameters.</li> <li>`rendering-failed`: Indicates that Web SDK failed to render a proposition.</li><li>`rendering-succeeded`: Indicates that rendering has completed for a decision scope.</li> <li>`rendering-redirect`: Indicates that Web SDK will render a redirect proposition.</li></ul> |
+
+## `onContentHiding` {#onContentHiding}
+
+This callback function is triggered when a prehiding style is applied or removed.
+
+```js
+onContentHiding(data) {
+    // data.instanceName
+    // data.componentName
+    // data.status
+}
+```
+
+|Parameter | Type |Description | 
+|---------|----------|----------|
+| `data.instanceName` | String | The name of the global variable where the Web SDK instance is stored. | 
+| `data.componentName` | String | The name of the component that generated the log message. |
+| `data.status` | String | The `personalization` component notifies the Web SDK of the status of rendering. Supported values: <ul><li>`hide-containers`</li><li>`show-containers`</ul> |
+
+## How to specify monitoring hooks when using the NPM package {#specify-monitoring-npm}
+
+If you are using the Web SDK through the [NPM package](install/npm.md), you can specify monitoring hooks in the `createInstance` function, as shown below.
+
+```js
+var monitor = {
+  onBeforeCommand(data) {
+    console.log(data);
+  },
+  ...
+};
+var alloyLibrary = require("@adobe/alloy");
+var alloy = alloyLibrary.createInstance({ name: "alloy", monitors: [monitor] });
+alloy("config", { ... });
+alloy("sendEvent", { ... });
+```
+
+## Example {#example}
+
+The Web SDK looks for an array of objects in a global variable called `__alloyMonitors`.
+
+To capture all Web SDK events, you must define your monitoring hooks before the Web SDK code is loaded on your page. Each monitoring method captures a Web SDK event.
+
+You may define monitoring hooks *after* Web SDK code loads on your page, but any hooks that have triggered before page load will *not* be captured.
+
+When you define your monitoring hook object, you only need to define the methods that you would like to define special logic for.
+For example, if you only care about `onContentRendering`, you can just define that method. You do not need to use all monitoring hooks at once.
+
+You can define multiple monitoring hook objects. All the objects with the given method will be called when the corresponding event is triggered.
+
+>[!TIP]
+>
+>See below an example page with all the monitoring hooks implemented.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    window.__alloyMonitors = window.__alloyMonitors || [];
+    window.__alloyMonitors.push({
+      onInstanceCreated(data) {
+        // data.instanceName
+        // data.instance
+      },
+      onInstanceConfigured(data) {
+        // data.instanceName
+        // data.config
+      },
+      onBeforeCommand(data) {
+        // data.instanceName
+        // data.commandName
+        // data.options
+      },
+      // Added in version 2.4.0
+      onCommandResolved(data) {
+        // data.instanceName
+        // data.commandName
+        // data.options
+        // data.result
+      },
+      // Added in version 2.4.0
+      onCommandRejected(data) {
+        // data.instanceName
+        // data.commandName
+        // data.options
+        // data.error
+      },
+      onBeforeNetworkRequest(data) {
+        // data.instanceName
+        // data.requestId
+        // data.url
+        // data.payload
+      },
+      onNetworkResponse(data) {
+        // data.instanceName
+        // data.requestId
+        // data.url
+        // data.payload
+        // data.body
+        // data.parsedBody
+        // data.status
+        // data.retriesAttempted
+      },
+      onNetworkError(data) {
+        // data.instanceName
+        // data.requestId
+        // data.url
+        // data.payload
+        // data.error
+      },
+      onBeforeLog(data) {
+        // data.instanceName
+        // data.componentName
+        // data.level
+        // data.arguments
+      }
+      onContentRendering(data) {
+        // data.instanceName
+        // data.componentName
+        // data.payload
+        // data.status
+      },
+      onContentHiding(data) {
+        // data.instanceName
+        // data.componentName
+        // data.status
+      }
+    });
+  </script>
+  <script>
+      !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
+      []).push(o),n[o]=function(){var u=arguments;return new Promise(
+      function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
+      (window,["alloy"]);
+    </script>
+    <script src="alloy.js" async></script>
+</head>
+<body>
+  <h1>Monitor Test</h1>
+</body>
+</html>
+```

@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;api guide;querie
 solution: Experience Platform
 title: Queries API Endpoint
 description: The following sections walk through calls you can make using the /queries endpoint in the Query Service API.
+role: Developer
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
 ---
 # Queries endpoint
@@ -322,7 +323,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Property | Description |
 | -------- | ----------- |
-| `op` | The type of operation to perform on the resource. Accepted values are `cancel` and `soft_delete`. To cancel the query, you must set the op parameter with the value `cancel `. Note that the soft delete operation stops the query from being returned on GET requests but does not delete it from the system. |
+| `op` | The type of operation to perform on the resource. Accepted values are `cancel` and `soft_delete`. To cancel the query, you must set the op parameter with the value `cancel`. Note that the soft delete operation stops the query from being returned on GET requests but does not delete it from the system. |
 
 **Response**
 

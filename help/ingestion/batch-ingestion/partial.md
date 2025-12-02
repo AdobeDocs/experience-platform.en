@@ -15,10 +15,10 @@ This document provides a tutorial for managing partial batch ingestion.
 
 This tutorial requires a working knowledge of the various Adobe Experience Platform services involved with partial batch ingestion. Before beginning this tutorial, please review the documentation for the following services:
 
-- [Batch ingestion](./overview.md): The method which [!DNL Platform] ingests and stores data from data files, such as CSV and Parquet.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+- [Batch ingestion](./overview.md): The method which [!DNL Experience Platform] ingests and stores data from data files, such as CSV and Parquet.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 
-The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
+The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Experience Platform] APIs.
 
 ### Reading sample API calls
 
@@ -26,19 +26,19 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Experience Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
+>For more information on sandboxes in [!DNL Experience Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 ## Enable a batch for partial batch ingestion in the API {#enable-api}
 
@@ -59,7 +59,7 @@ To create a new batch, follow the steps in the [batch ingestion developer guide]
 
 | Property | Description |
 | -------- | ----------- |
-| `enableErrorDiagnostics` | A flag that allows [!DNL Platform] to generate detailed error messages about your batch. |
+| `enableErrorDiagnostics` | A flag that allows [!DNL Experience Platform] to generate detailed error messages about your batch. |
 | `partialIngestionPercent` | The percentage of acceptable errors before the entire batch will fail. So, in this example, a maximum of 5% of the batch can be errors, before it will fail. |
 
 
@@ -69,7 +69,7 @@ To create a new batch, follow the steps in the [batch ingestion developer guide]
 >
 >This section describes enabling a batch for partial batch ingestion using the UI. If you have already enabled a batch for partial batch ingestion using the API, you can skip ahead to the next section.
 
-To enable a batch for partial ingestion through the [!DNL Platform] UI, you can create a new batch through source connections, create a new batch in an existing dataset, or create a new batch through the "[!UICONTROL Map CSV to XDM flow]". 
+To enable a batch for partial ingestion through the [!DNL Experience Platform] UI, you can create a new batch through source connections, create a new batch in an existing dataset, or create a new batch through the "[!UICONTROL Map CSV to XDM flow]". 
 
 ### Create a new source connection {#new-source}
 
@@ -79,7 +79,7 @@ To create a new source connection, follow the listed steps in the [Sources overv
 
 The **[!UICONTROL Partial ingestion]** toggle allows you to enable or disable the use of partial batch ingestion.
 
-The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTROL Partial ingestion]** toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the **[!UICONTROL Partial ingestion]** toggle is turned on, enhanced error diagnostics are automatically enforced.
+The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTROL Partial ingestion]** toggle is off. This feature allows [!DNL Experience Platform] to generate detailed error messages about your ingested batches. If the **[!UICONTROL Partial ingestion]** toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
@@ -93,7 +93,7 @@ To use an existing dataset, start by selecting a dataset. The sidebar on the rig
 
 The **[!UICONTROL Partial ingestion]** toggle allows you to enable or disable the use of partial batch ingestion.
 
-The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTROL Partial ingestion]** toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the **[!UICONTROL Partial ingestion]** toggle is turned on, enhanced error diagnostics are automatically enforced.
+The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTROL Partial ingestion]** toggle is off. This feature allows [!DNL Experience Platform] to generate detailed error messages about your ingested batches. If the **[!UICONTROL Partial ingestion]** toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
@@ -109,11 +109,111 @@ To use the "[!UICONTROL Map CSV to XDM schema]" flow, follow the listed steps in
 
 The **[!UICONTROL Partial ingestion]** toggle allows you to enable or disable the use of partial batch ingestion.
 
-The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTROL Partial ingestion]** toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the **[!UICONTROL Partial ingestion]** toggle is turned on, enhanced error diagnostics are automatically enforced.
+The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTROL Partial ingestion]** toggle is off. This feature allows [!DNL Experience Platform] to generate detailed error messages about your ingested batches. If the **[!UICONTROL Partial ingestion]** toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
 **[!UICONTROL Error threshold]** allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
+
+## Enable partial ingestion and error diagnostics for an existing dataflow
+
+If a dataflow in Experience Platform was created without enabling partial ingestion or error diagnostics, you can still enable these features without recreating the flow. By enabling partial ingestion and robust error diagnostics, you can greatly enhance the reliability and ease of troubleshooting in your data ingestion workflows. Read the sections below to learn how to enable partial ingestion and error diagnostics for an existing dataflow using the [!DNL Flow Service] API.
+
+By default, dataflows may not have partial ingestion or error diagnostics enabled. These features are helpful for identifying and isolating issues during data ingestion. Using the [!DNL Flow Service] API, you can retrieve your current dataflow configuration and apply the necessary changes using a PATCH request.
+
+Follow the steps below to enable partial ingestion and error diagnostics for an existing dataflow.
+
+### Retrieve flow details
+
+To retrieve your dataflow configurations, make a GET request to the `/flows/{FLOW_ID}` endpoint and provide the ID of your dataflow. For more information on retrieving dataflow details, refer to the [Update dataflows using the [!DNL Flow Service] API](../../sources/tutorials/api/update-dataflows.md) guide.
+
+Make sure to save the value of the `etag` field returned in the response. This is necessary for the update request to ensure version consistency.
+
+### Update flow configuration
+
+Next, make a PATCH request to the `/flows/` endpoint and provide the ID of the dataflow that you want to enable partial ingestion and error diagnostics for.
+
+>[!IMPORTANT]
+>
+>- Include the previously saved `etag` value in the request header using the If-Match key.
+>- You can modify the `partialIngestionPercent` value to suit your specific needs.
+
+**API format**
+
+```http
+PATCH /flows/{FLOW_ID}
+```
+
+**Request**
+
+```shell
+curl -X PATCH \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
+    -d '[
+        {
+            "op": "add",
+            "path": "/options",
+            "value": {
+                "partialIngestionPercent": "10"
+            }
+        },
+        {
+            "op": "add",
+            "path": "/options/errorDiagnosticsEnabled",
+            "value": true
+        }
+    ]'
+```
+
+**Response**
+
+A successful response returns your dataflow's `id` and an updated `etag`.
+
+```json
+{
+    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
+    "etag": "\"2c000802-0000-0200-0000-613976440000\""
+}
+```
+
+### Verify the update
+
+After the PATCH is complete, make a GET request and retrieve your dataflow to verify that the changes were successfully completed.
+
+**API format**
+
+```http
+GET /flows/{FLOW_ID}
+```
+
+**Request**
+
+The following request retrieves updated information regarding your flow ID.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response returns your dataflow details, confirming that partial ingestion and error diagnostics are now enabled in the `options` section.
+
+```json
+"options": {
+    "partialIngestionPercent": 10,
+    "errorDiagnosticsEnabled": true
+}
+```
 
 ## Next steps {#next-steps}
 

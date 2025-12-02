@@ -17,7 +17,7 @@ Each destination in the [catalog](/help/destinations/catalog/overview.md) is sli
 
 For [file-based destinations](/help/destinations/destination-types.md#file-based) (for example [!DNL Amazon S3], SFTP, most email marketing destinations such as [!DNL Adobe Campaign], [!DNL Oracle Eloqua], [!DNL Salesforce Marketing Cloud]), the identity setup in most of these destinations is open, meaning that you are not required to select any identity in the [Select attributes](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) step of the batch activation workflow.
 
-If you choose to add identities to your file exports, note that only a single identity from the [identity namespace](/help/identity-service/ui/identity-graph-viewer.md#access-identity-graph-viewer) can be selected in an export. When you select an identity for export, it is automatically selected as a [mandatory attribute](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) and [deduplication key](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
+If you choose to add identities to your file exports, note that only a single identity from the [identity namespace](/help/identity-service/features/identity-graph-viewer.md#access-identity-graph-viewer) can be selected in an export. When you select an identity for export, it is automatically selected as a [mandatory attribute](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) and [deduplication key](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
 
 ![An identity selected as mandatory attribute and deduplication key.](/help/destinations/assets/how-destinations-work/selected-identity.png)
 
@@ -86,7 +86,7 @@ When configuring a datastream as described in the documentation linked above, yo
 
 ## Enterprise destinations {#enterprise-destinations}
 
-[Enterprise destinations](/help/destinations/destination-types.md#streaming-profile-export) ([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], HTTP API) do not require specific IDs in the data export, as these are designed for enterprise integration use cases. However, you can export identities as XDM attributes or from the identity map, if you wish. View an [example of exported data to the HTTP destination](/help/destinations/catalog/streaming/http-destination.md#exported-data), which includes both the `personalEmail.address` XDM attribute, and the identities `ECID` and `email_lc_sha256` (hashed email address) from the identity map.
+[Enterprise destinations](/help/destinations/destination-types.md#advanced-enterprise-destinations) ([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], HTTP API) do not require specific IDs in the data export, as these are designed for enterprise integration use cases. However, you can export identities as XDM attributes or from the identity map, if you wish. View an [example of exported data to the HTTP destination](/help/destinations/catalog/streaming/http-destination.md#exported-data), which includes both the `personalEmail.address` XDM attribute, and the identities `ECID` and `email_lc_sha256` (hashed email address) from the identity map.
 
 ## Personalization destinations {#personalization-destinations}
 

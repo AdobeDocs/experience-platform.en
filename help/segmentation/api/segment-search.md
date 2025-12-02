@@ -1,6 +1,7 @@
 ---
 title: Segment Search API Endpoint
 description: In the Adobe Experience Platform Segmentation Service API, Segment Search is used to search fields contained across various data sources and return them in near real-time. This guide provides information to help you better understand Segment Search and includes sample API calls for performing basic actions using the API.
+role: Developer
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
 ---
 # Segment Search endpoint
@@ -218,7 +219,9 @@ After reading this guide you now have a better understanding of how Segment Sear
 
 The following sections provide additional information about how search terms work. Search queries are written in the following manner: `s={FieldName}:{SearchExpression}`. So, for example, to search for a segment definition named AAM or [!DNL Platform], you would use the following search query: `s=segmentName:AAM%20OR%20Platform`.
 
-> ![NOTE] For best practices, the search expression should be HTML encoded, like the example shown above.
+>[!NOTE]
+>
+>For best practices, the search expression should be HTML encoded, like the example shown above.
 
 ### Search fields {#search-fields}
 
@@ -237,7 +240,9 @@ The following table lists the fields which can be searched within the search que
 
 The following table lists the specifics of how search queries works when using the Segment Search API. 
 
-> ![NOTE] The following examples are shown in a non-HTML encoded format for better clarity. For best practices, HTML encode your search expression. 
+>[!NOTE]
+>
+>The following examples are shown in a non-HTML encoded format for better clarity. For best practices, HTML encode your search expression. 
 
 | Example search expression | Description |
 | ------------------------- | ----------- |

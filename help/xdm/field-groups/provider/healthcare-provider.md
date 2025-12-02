@@ -1,6 +1,6 @@
 ---
 title: Healthcare Provider Schema Field Group
-description: This document provides an overview of the Healthcare Provider schema field group.
+description: Learn about the Healthcare Provider schema field group.
 exl-id: e39b4082-4b66-47b3-a8e2-951d8a96f742
 ---
 # [!UICONTROL Healthcare Provider] schema field group

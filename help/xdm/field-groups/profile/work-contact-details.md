@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixins;work details;profile work;
 solution: Experience Platform
 title: Work Contact Details Schema Field Group
-description: This document provides an overview of the Work Contact Details schema field group.
+description: Learn about the Work Contact Details schema field group.
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
 ---
 

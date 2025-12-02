@@ -1,69 +1,136 @@
 ---
-title: Create a Snowflake  Source Connection in the UI
+title: Connect Snowflake To Experience Platform Using The UI
 type: Tutorial
 description: Learn how to create a Snowflake source connection using the Adobe Experience Platform UI.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
 ---
-# Create a [!DNL Snowflake] source connection in the UI
+# Connect [!DNL Snowflake] to Experience Platform using the UI
 
 >[!IMPORTANT]
 >
 >The [!DNL Snowflake] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
-This tutorial provides steps for creating a [!DNL Snowflake] source connector using the Adobe Experience Platform user interface.
+Read this guide to learn how to connect your [!DNL Snowflake] account to Adobe Experience Platform using the user interface.
 
 ## Getting started
 
-This tutorial requires a working understanding of the following components of Platform:
+>[!WARNING]
+>
+>Basic authentication (or account key authentication) for the [!DNL Snowflake] source will be deprecated on November 2025. You must move to key-pair based authentication in order to continue using the source and ingesting data from your database to Experience Platform. For more information on the deprecation, read the [[!DNL Snowflake] best practices guide on mitigating the risks of credential compromise](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+This tutorial requires a working understanding of the following components of Experience Platform:
 
-### Gather required credentials
-
-In order to access your Snowflake account on [!DNL Platform], you must provide the following authentication value:
-
-| Credential | Description |
-| ---------- | ----------- |
-| Account | The full account name associated with your [!DNL Snowflake] account. A fully qualified [!DNL Snowflake] account name includes your account name, region, and cloud platform. For example, `cj12345.east-us-2.azure`. For more information on account names, refer to this [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html). |
-| Warehouse | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Platform. |
-| Database | The [!DNL Snowflake] database contains the data you want to bring the Platform. |
-| Username | The username for the [!DNL Snowflake] account. |
-| Password | The password for the [!DNL Snowflake] user account. |
-| Role | The default access control role to use in the [!DNL Snowflake] session. The role should be an existing one that has already been assigned to the specified user. The default role is `PUBLIC`. |
-| Connection string | The connection string used to connect to your [!DNL Snowflake] instance. The connection string pattern for [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
-
-For more information about these values, refer to [this Snowflake document](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 >[!NOTE]
 >
 >You must set the `PREVENT_UNLOAD_TO_INLINE_URL` flag to `FALSE` to allow data unloading from your [!DNL Snowflake] database to Experience Platform.
 
-## Connect your  Snowflake account
+## Navigate the sources catalog {#navigate}
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
+Select **[!DNL Snowflake]** under the *[!UICONTROL Databases]* category, and then select **[!UICONTROL Set up]**.
 
-Under the [!UICONTROL Databases] category, select **[!UICONTROL Snowflake]** and then select **[!UICONTROL Add data]**.
+>[!TIP]
+>
+>Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account exists, this option changes to **[!UICONTROL Add data]**.
 
-![](../../../../images/tutorials/create/snowflake/catalog.png)
+![The sources catalog with the Snowflake card selected..](../../../../images/tutorials/create/snowflake/catalog.png)
 
-The **[!UICONTROL Connect to Snowflake]** page appears. On this page, you can either use new credentials or existing credentials.
+## Use an existing account {#existing}
 
-### Existing account
+Next, you are taken to the authentication step of the sources workflow. Here, you can either use an existing account or create a new account.
 
-To connect an existing account, select the Snowflake account you want to connect with, then select **[!UICONTROL Next]** to proceed.
+To use an existing account, select the [!DNL Snowflake] account you want to connect with and then select **[!UICONTROL Next]** to proceed.
 
-![](../../../../images/tutorials/create/snowflake/existing.png)
+![The existing account interface in the sources workflow.](../../../../images/tutorials/create/snowflake/existing.png)
 
-### New account
+## Create a new account {#create}
 
-If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your Snowflake credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new connection to establish.
+If you do not have an existing account, then you must create a new account by providing the necessary authentication credentials that correspond with your source. 
 
-![](../../../../images/tutorials/create/snowflake/new.png)
+To create a new account, select **[!UICONTROL New account]** and then provide a name and optionally add a description for your account.
+
+### Connect to Experience Platform on Azure {#azure}
+
+You can connect your [!DNL Snowflake] account to Experience Platform on Azure using either account key authentication or key-pair authentication. 
+
+>[!BEGINTABS]
+
+>[!TAB Account key authentication]
+
+To use account key authentication, select **[!UICONTROL Account key authentication]**, provide your connection string in the input form and then select **[!UICONTROL Connect to source]**.
+
+![The account key authentication interface.](../../../../images/tutorials/create/snowflake/account-key-auth.png)
+
+| Credential | Description |
+| --- | --- |
+| Account | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `orgname-account_name`. Read the guide on [retrieving your [!DNL Snowflake] account identifier](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) for additional guidance. For more information, refer to the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization).|
+| Warehouse | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Experience Platform. |
+| Database | The [!DNL Snowflake] database contains the data you want to bring the Experience Platform. |
+| Username | The username for the [!DNL Snowflake] account. |
+| Password | The password for the [!DNL Snowflake] user account. |
+| Role | The default access control role to use in the [!DNL Snowflake] session. The role should be an existing one that has already been assigned to the specified user. The default role is `PUBLIC`. |
+| Connection string | The connection string used to connect to your [!DNL Snowflake] instance. The connection string pattern for [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
+
+>[!TAB Key-pair authentication]
+
+To use key-pair authentication, select **[!UICONTROL KeyPair authentication]**, provide values for your account, username, private key, private key passphrase, database, and warehouse, then select **[!UICONTROL Connect to source]**. 
+
+![The account key-pair authentication interface.](../../../../images/tutorials/create/snowflake/key-pair-auth.png)
+
+With key-pair authentication, you must generate a 2048-bit RSA key pair and then provide the following values when creating an account for your [!DNL Snowflake] source.
+
+| Credential | Description |
+| --- | --- |
+| Account | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `orgname-account_name`. Read the guide on [retrieving your [!DNL Snowflake] account identifier](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) for additional guidance. For more information, refer to the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization).|
+| Username | The username of your [!DNL Snowflake] account. |
+| Private key | The [!DNL Base64-]encoded private key of your [!DNL Snowflake] account. You can generate either encrypted or unencrypted private keys. If you are using an encrypted private key, then you must also provide a private key passphrase when authenticating against Experience Platform. Read the guide on [retrieving your [!DNL Snowflake] private key](../../../../connectors/databases/snowflake.md) for more information. |
+| Private key passphrase | The private key passphrase is an additional layer of security that you must use when authenticating with an encrypted private key. You are not required to provide the passphrase if you are using an unencrypted private key. |
+| Database | The [!DNL Snowflake] database that contains the data you want to ingest to Experience Platform. |
+| Warehouse | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Experience Platform. |
+
+For more information about these values, refer to [this Snowflake document](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!ENDTABS]
+
+### Connect to Experience Platform on AWS {#aws}
+
+>[!AVAILABILITY]
+>
+>This section applies to implementations of Experience Platform running on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../../../landing/multi-cloud.md).
+
+To create a new [!DNL Snowflake] account and connect to Experience Platform on AWS, ensure that you are in a VA6 sandbox and then provide the necessary credentials for authentication.
+
+>[!BEGINTABS]
+
+>[!TAB Key-pair authentication]
+
+To connect using key-pairs, select **[!UICONTROL KeyPair Authentication]**, provide your authentication credentials and then select **[!UICONTROL Connect to source]**. For more information on these credentials, read the [[!DNL Snowflake] batch overview](../../../../connectors/databases/snowflake.md#gather-required-credentials).
+
+![The new account creation step for key pair authentication.](../../../../images/tutorials/create/snowflake/key-pair-aws.png)
+
+>[!TAB Basic authentication]
+
+>[!WARNING]
+>
+>Basic authentication (or account key authentication) for the [!DNL Snowflake] source will be deprecated on November 2025. You must move to key-pair based authentication in order to continue using the source and ingesting data from your database to Experience Platform. For more information on the deprecation, read the [[!DNL Snowflake] best practices guide on mitigating the risks of credential compromise](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+
+To connect using a username and password combination, select **[!UICONTROL Basic authentication]**, provide your authentication credentials and then select **[!UICONTROL Connect to source]**. For more information on these credentials, read the [[!DNL Snowflake] batch overview](../../../../connectors/databases/snowflake.md#gather-required-credentials).
+
+![The new account step in the sources workflow where you can connect Snowflake to Experience Platform on AWS.](../../../../images/tutorials/create/snowflake/aws-auth.png)
+
+>[!ENDTABS]
+
+### Skip preview of sample data {#skip-preview-of-sample-data}
+
+During the data selection step, you may encounter a timeout when ingesting large tables or files of data. You can skip data preview to circumvent the timeout and still view your schema, albeit without sample data. To skip data preview, enable the **[!UICONTROL Skip previewing sample data]** toggle.
+
+The rest of the workflow will remain the same. The only caveat is that skipping data preview may prevent calculated and required fields from being auto-validated during the mapping step, and you will then have to manually validate those fields during mapping.
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your Snowflake account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your Snowflake account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Experience Platform]](../../dataflow/databases.md).

@@ -1,6 +1,6 @@
 ---
 title: Create a Google PubSub Source Connection in the UI
-description: Learn how to create a Google PubSub source connector using the Platform user interface.
+description: Learn how to create a Google PubSub source connector using the Experience Platform user interface.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
 ---
@@ -10,20 +10,21 @@ exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
 >
 >The [!DNL Google PubSub] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
-This tutorial provides steps for creating a [!DNL Google PubSub] (hereinafter referred to as "[!DNL PubSub]") using the Platform user interface.
+This tutorial provides steps for creating a [!DNL Google PubSub] (hereinafter referred to as "[!DNL PubSub]") using the Experience Platform user interface.
 
-## Getting started
+## Get started
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 If you already have a valid [!DNL PubSub] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/batch/cloud-storage.md).
 
 ### Gather required credentials
 
-In order to connect [!DNL PubSub] to Platform, you must provide a valid value for the following credentials:
+You must provide values for the connection properties outlined below in order to connect your [!DNL PubSub] account to Experience Platform. For more information on authentication and prerequisite setup, read the [[!DNL PubSub source] overview](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+
 
 >[!BEGINTABS]
 
@@ -50,11 +51,11 @@ For more information about these values, see the following [PubSub authenticatio
 >
 >If you are using service account-based authentication, ensure that you have granted sufficient user access to your service account and that there are no extra white spaces in the JSON, when copying and pasting your credentials.
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL PubSub] account to Platform.
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL PubSub] account to Experience Platform.
 
 ## Connect your [!DNL PubSub] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources you can create an account with.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -129,4 +130,4 @@ If you have authenticated with a topic and subscription-based access, the [!UICO
 
 ## Next steps
 
-By following this tutorial, you have created a connection between your [!DNL PubSub] account and Platform. You can now continue on to the next tutorial and [configure a dataflow to bring streaming data from your cloud storage into Platform](../../dataflow/streaming/cloud-storage-streaming.md).
+By following this tutorial, you have created a connection between your [!DNL PubSub] account and Experience Platform. You can now continue on to the next tutorial and [configure a dataflow to bring streaming data from your cloud storage into Experience Platform](../../dataflow/streaming/cloud-storage-streaming.md).

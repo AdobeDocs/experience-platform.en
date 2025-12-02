@@ -1,11 +1,14 @@
 ---
 title: Create a new connection specification for Streaming SDK using the Flow Service API
 description: The following document provides steps on how to create a connection specification using the Flow Service API and integrate a new source through Self-Serve Sources.
-hide: true
-hidefromtoc: true
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
+badge: Beta
 ---
 # Create a new connection specification using the [!DNL Flow Service] API
+
+>[!NOTE]
+>
+>Self-Serve Sources Streaming SDK is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 A connection specification represents the structure of a source. It contains information on a source's authentication requirements, defines how source data can be explored and inspected, and provides information on the attributes of a given source. The `/connectionSpecs` endpoint in the [!DNL Flow Service] API allows you to programmatically manage the connection specifications within your organization.
 
@@ -35,7 +38,7 @@ Once provided, you must structure your private Git repository like so:
 | {your_source} | The name of your source. This folder should contain all artifacts related to your source, within your private Git repository. | `medallia`|
 | {your_source}-category.txt | The category to which your source belongs, formatted as a text file. **Note**: If you believe that your source does not fit in any of the above categories, please contact your Adobe representative to discuss. | `medallia-category.txt` Inside the file, please specify the category of your source, like: `streaming`. |
 | {your_source}-description.txt | A brief description of your source. | [!DNL Medallia] is marketing automation source that you can use to bring [!DNL Medallia] data to Experience Platform. |
-| {your_source}-icon.svg | The image to be used to represent your source in the Experience Platform sources catalog. This icon must be an SVG file. |
+| {your_source}-icon.svg | The image to be used to represent your source in the Experience Platform sources catalog. This icon must be an SVG file. ||
 | {your_source}-label.txt | The name of your source as it should appear in the Experience Platform sources catalog. | Medallia | 
 | {your_source}-connectionSpec.json | A JSON file that contains the connection specification of your source. This file is not initially required as you will be populating your connection specification as you complete this guide. | `medallia-connectionSpec.json` |
 

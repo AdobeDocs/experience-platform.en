@@ -10,7 +10,7 @@ exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
 >
 >This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Contact your Adobe representative for more information. 
 
-This article explains the workflow required to export [prospect audiences](/help/segmentation/ui/prospect-audience.md) from Adobe Experience Platform to your preferred destination. 
+This article explains the workflow required to export [prospect audiences](/help/segmentation/types/prospect-audiences.md) from Adobe Experience Platform to your preferred destination. 
 
 ## Supported destinations {#supported-destinations}
 
@@ -20,12 +20,12 @@ Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select t
 
 ## Prerequisites {#prerequisites}
 
-* You must first ingest [prospect profiles](/help/profile/ui/prospect-profile.md) and create [prospect audiences](/help/segmentation/ui/prospect-audience.md) before you can activate them to downstream destinations.
+* You must first ingest [prospect profiles](/help/profile/ui/prospect-profile.md) and create [prospect audiences](/help/segmentation/types/prospect-audiences.md) before you can activate them to downstream destinations.
 * To activate prospect audiences to destinations, you must have successfully connected to a destination. If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use. Read the UI tutorial on [connecting to destinations](./connect-destination.md) for more information.
 
 ### Required permissions {#permissions}
 
-To activate prospect audiences, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+To activate prospect audiences, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Activate Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To ensure that you have the necessary permissions to activate prospect audiences, browse the destinations catalog. If a destination has an **[!UICONTROL Activate]** control, then you have the appropriate permissions.
 
@@ -57,7 +57,7 @@ Follow the instructions to select a destination where you can export your datase
 
 ## Select your prospect audiences {#select-prospect-audiences}
 
-Use the check boxes to the left of the prospect audiences names to select the audiences that you want to export to the destination, then select **[!UICONTROL Next]**. Note that only the prospect audiences are shown in this view, and no other audiences are displayed. 
+Use the checkboxes to the left of the prospect audiences names to select the audiences that you want to export to the destination, then select **[!UICONTROL Next]**. Note that only the prospect audiences are shown in this view, and no other audiences are displayed. 
 
 ![Dataset export workflow showing the Select audiences step where you can select which prospect audiences to export.](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
 

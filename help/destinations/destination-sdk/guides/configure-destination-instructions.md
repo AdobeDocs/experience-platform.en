@@ -111,12 +111,14 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
          "acceptsCustomNamespaces":true
       }
    },
-   "audienceMetadataConfig":{
+   "segmentMappingConfig":{
       "mapExperiencePlatformSegmentName":false,
       "mapExperiencePlatformSegmentId":false,
-      "mapUserInput":false,
+      "mapUserInput":false
+   },
+   "audienceMetadataConfig":{
       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
-   },   
+   },  
    "aggregation":{
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
@@ -223,10 +225,12 @@ If you use an audience metadata configuration, you must connect it to the destin
          "acceptsCustomNamespaces":true
       }
    },
-   "audienceMetadataConfig":{
+   "segmentMappingConfig":{
       "mapExperiencePlatformSegmentName":false,
       "mapExperiencePlatformSegmentId":false,
-      "mapUserInput":false,
+      "mapUserInput":false
+   },
+   "audienceMetadataConfig":{
       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
    },   
    "aggregation":{
@@ -259,9 +263,13 @@ If you use an audience metadata configuration, you must connect it to the destin
 
 Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION"` or `"authenticationRule": "PLATFORM_AUTHENTICATION"` in the destination configuration above, you can set up authentication for your destination by using the `/destination` or the `/credentials` endpoint.
 
+>[!NOTE]
+>
+>`CUSTOMER_AUTHENTICATION` is the more common of the two authentication rules and is the one to use if you require users to provide some form of authentication to your destination before they can set up a connection and export data.
+
 If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration and your destination supports the OAuth 2 authentication method, read [OAuth 2 authentication](../functionality/destination-configuration/oauth2-authorization.md).
 
-If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, you must create a [credentials configuration](../credentials-api/create-credential-configuration.md).
+If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, you must create a [credentials configuration](../credentials-api/create-credential-configuration.md) and pass the credential object's ID in the `authenticationId` parameter in the [destination delivery](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) configuration.
 
 ## Step 6: Test your destination {#test-destination}
 
@@ -269,7 +277,7 @@ After setting up your destination using the configuration endpoints in the previ
 
 As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create audiences in Experience Platform:
 
-* [Create an audience documentation page](/help/segmentation/ui/overview.md#create-segment)
+* [Create an audience documentation page](/help/segmentation/ui/audience-portal.md#create-audience)
 * [Create an audience video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Step 7: Publish your destination {#publish-destination}

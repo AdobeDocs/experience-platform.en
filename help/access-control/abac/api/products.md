@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;api;Attribute-Based Access Con
 solution: Experience Platform
 title: Products API Endpoint
 description: The /products endpoint in the Attribute-Based Access Control API allows you to  programmatically manage products in Adobe Experience Platform.
+role: Developer
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
 ---
 # Products endpoint
@@ -233,6 +234,6 @@ A successful response returns the permission sets associated with the product ID
 | `id` | The corresponding ID of the queried permission set. |
 | `name` | The corresponding name of the queried permission set. |
 | `category` | The available permission category. |
-| `permissions` | Permissions include the ability to view and/or use Platform features, such as creating sandboxes, defining schemas, and managing datasets. |
+| `permissions` | Permissions include the ability to view and/or use Experience Platform features, such as creating sandboxes, defining schemas, and managing datasets. |
 | `permissions.resource` | The asset or object that a subject can or cannot access. Resources can be files, applications, servers, or even APIs. |
 | `permissions.actions` | The action that a subject is permitted to do against a queried resource. Possible values include: `view`, `read`, `create`, `edit`, and `delete` |

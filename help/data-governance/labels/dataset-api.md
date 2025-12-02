@@ -17,7 +17,7 @@ This document covers how to manage labels for datasets and fields using the [!DN
 
 ## Getting started
 
-Before you read this guide, follow the steps outlined in the [getting started section](../../catalog/api/getting-started.md) in the Catalog developer guide to gather the required credentials to make calls to [!DNL Platform] APIs.
+Before you read this guide, follow the steps outlined in the [getting started section](../../catalog/api/getting-started.md) in the Catalog developer guide to gather the required credentials to make calls to [!DNL Experience Platform] APIs.
 
 In order to make calls to the endpoints outlined in this document, you must have the unique `id` value for a specific dataset. If you do not have this value, see the guide on [listing Catalog objects](../../catalog/api/list-objects.md) to find the IDs of your existing datasets.
 
@@ -159,7 +159,11 @@ A successful response returns the updated set of labels for the dataset.
 
 ## Remove labels from a dataset {#remove}
 
-You can remove any previously applied field labels by either updating the existing `optionalLabels` value(s) with a subset of the existing field labels, or an empty list to remove them entirely. Make a PUT request to the [!DNL Dataset Service] API to update or remove previously applied labels. 
+You can remove any previously applied field labels by either updating the existing `optionalLabels` value(s) with a subset of the existing field labels, or an empty list to remove them entirely. Make a PUT request to the [!DNL Dataset Service] API to update or remove previously applied labels.
+
+>[!NOTE]
+>
+>You can entirely remove a dataset's labels by providing an empty list for the `labels` parameter. It is not mandatory for a dataset to retain any labels.
 
 **API format**
 

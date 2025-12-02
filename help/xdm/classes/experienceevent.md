@@ -2,27 +2,27 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;event modeling;event modelling;best practices;event;events;
 solution: Experience Platform
 title: XDM ExperienceEvent Class
-description: This document provides an overview of the XDM ExperienceEvent class, and best practices for event data modeling.
+description: Learn about the XDM ExperienceEvent class, and best practices for event data modeling.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 ---
 # [!DNL XDM ExperienceEvent] class
 
-[!DNL XDM ExperienceEvent] is a standard Experience Data Model (XDM) class which allows you to create a timestamped snapshot of the system when a specific event occurs or a certain set of conditions have been reached.
+[!DNL XDM ExperienceEvent] is a standard Experience Data Model (XDM) class. Use this class to create a timestamped snapshot of the system when a specific event occurs or a certain set of conditions have been reached.
 
-An Experience Event is a fact record of what occurred, including the point in time and identity of the individual involved. Events can be either explicit (directly observable human actions) or implicit (raised without a direct human action) and are recorded without aggregation or interpretation. For more high-level information on the use of this class in the Platform ecosystem, refer to the [XDM overview](../home.md#data-behaviors).
+An Experience Event is a fact record of what occurred, including the point in time and identity of the individual involved. Events can be either explicit (directly observable human actions) or implicit (raised without a direct human action) and are recorded without aggregation or interpretation. For more high-level information on the use of this class in the Experience Platform ecosystem, refer to the [XDM overview](../home.md#data-behaviors).
 
-The [!DNL XDM ExperienceEvent] class itself provides several time-series-related fields to a schema. Two of these fields (`_id` and `timestamp`) are **required** for all schemas based on the class, while the rest are optional. The values of some of the fields are automatically populated when data is ingested.
+The [!DNL XDM ExperienceEvent] class itself provides several time-series-related fields to a schema. Two of these fields (`_id` and `timestamp`) are **required** for all schemas based on this class, while the rest are optional. The values of some of the fields are automatically populated when data is ingested.
 
-![The structure of XDM ExperienceEvent as it appears in the Platform UI](../images/classes/experienceevent/structure.png)
+![The structure of XDM ExperienceEvent as it appears in the Experience Platform UI.](../images/classes/experienceevent/structure.png)
 
 | Property | Description |
 | --- | --- |
-| `_id`<br>**(Required)** | The Experience Event Class `_id` field uniquely identifies individual events that are ingested into Adobe Experience Platform. This field is used to track the uniqueness of an individual event, prevent duplication of data, and look up that event in downstream services.<br><br>Where duplicate events are detected, Platform applications and services may handle the duplication differently. For example, duplicate events in Profile Service are dropped if the event with the same `_id` already exists in the Profile Store.<br><br>In some cases, `_id` can be a [Universally Unique Identifier (UUID)](https://datatracker.ietf.org/doc/html/rfc4122) or [Globally Unique Identifier (GUID)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>If you are streaming data from a source connection or ingesting directly from a Parquet file, you should generate this value by concatenating a certain combination of fields that make the event unique. Examples of events that could be concatenated include primary ID, timestamp, event type, and so on. The concatenated value must be a `uri-reference` formatted string, meaning any colon characters must be removed. Afterwards, the concatenated value should be hashed using SHA-256 or another algorithm of your choice.<br><br>It is important to distinguish that **this field does not represent an identity related to an individual person**, but rather the record of data itself. Identity data relating to a person should be relegated to [identity fields](../schema/composition.md#identity) provided by compatible field groups instead. |
-| `eventMergeId` | If using the [Adobe Experience Platform Web SDK](../../edge/home.md) to ingest data, this represents the ID of the ingested batch that caused the record to be created. This field is automatically populated by the system upon data ingestion. The use of this field outside of the context of a Web SDK implementation is not supported. |
+| `_id`<br>**(Required)** | The Experience Event Class `_id` field uniquely identifies individual events that are ingested into Adobe Experience Platform. This field is used to track the uniqueness of an individual event, prevent duplication of data, and look up that event in downstream services.<br><br>Where duplicate events are detected, Experience Platform applications and services may handle the duplication differently. For example, duplicate events in Profile Service are dropped if the event with the same `_id` already exists in the Profile store. However, these events are still recorded in the data lake.<br><br>In some cases, `_id` can be a [Universally Unique Identifier (UUID)](https://datatracker.ietf.org/doc/html/rfc4122) or [Globally Unique Identifier (GUID)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>If you are streaming data from a source connection or ingesting directly from a Parquet file, you should generate this value by concatenating a certain combination of fields that make the event unique. Examples of events that could be concatenated include primary ID, timestamp, event type, and so on. The concatenated value must be a `uri-reference` formatted string, meaning any colon characters must be removed. Afterwards, the concatenated value should be hashed using SHA-256 or another algorithm of your choice.<br><br>It is important to distinguish that **this field does not represent an identity related to an individual person**, but rather the record of data itself. Identity data relating to a person should be relegated to [identity fields](../schema/composition.md#identity) provided by compatible field groups instead. |
+| `eventMergeId` | If using the [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) to ingest data, this represents the ID of the ingested batch that caused the record to be created. This field is automatically populated by the system upon data ingestion. The use of this field outside of the context of a Web SDK implementation is not supported. |
 | `eventType` | A string that indicates the type or category for the event. This field can be used if you want to distinguish different event types within the same schema and dataset, such as distinguishing a product view event from an add-to-shopping-cart event for a retail company.<br><br>Standard values for this property are provided in the [appendix section](#eventType), including descriptions of their intended use case. This field is an extensible enum, meaning that you can also use your own event type strings to categorize the events you are tracking.<br><br>`eventType` limits you to using only a single event per hit on your application, and therefore you must use calculated fields to let the system know which event is most important. For more information, see the section on [best practices for calculated fields](#calculated). |
 | `producedBy` | A string value that describes the producer or origin of the event. This field can be used to filter out certain event producers if needed for segmentation purposes.<br><br>Some suggested values for this property are provided in the [appendix section](#producedBy). This field is an extensible enum, meaning that you can also use your own strings to represent different event producers. |
-| `identityMap` | A map field that contains a set of namespaced identities for the individual that the event applies to. This field is automatically updated by the system as identity data is ingested. In order to properly utilize this field for [Real-Time Customer Profile](../../profile/home.md), do not attempt to manually update the field's contents in your data operations.<br /><br />See the section on identity maps in the [basics of schema composition](../schema/composition.md#identityMap) for more information on their use case. |
-| `timestamp`<br>**(Required)** | An ISO 8601 timestamp of when the event occurred, formatted as per [RFC 3339 Section 5.6](https://datatracker.ietf.org/doc/html/rfc3339). This timestamp must occur in the past. See the section below on [timestamps](#timestamps) for best practices on the use of this field. |
+| `identityMap` | A map field that contains a set of namespaced identities for the individual that the event applies to. This field is automatically updated by the system as identity data is ingested. To properly utilize this field for [Real-Time Customer Profile](../../profile/home.md), do not attempt to manually update the field's contents in your data operations.<br /><br />See the section on identity maps in the [basics of schema composition](../schema/composition.md#identityMap) for more information on their use case. |
+| `timestamp`<br>**(Required)** | An ISO 8601 timestamp of when the event occurred, formatted as per [RFC 3339 Section 5.6](https://datatracker.ietf.org/doc/html/rfc3339). This timestamp **must** occur in the past, but **must** take place from 1970 onwards. See the section below on [timestamps](#timestamps) for best practices on the use of this field. |
 
 {style="table-layout:auto"}
 
@@ -32,7 +32,7 @@ The following sections cover best practices for designing your event-based Exper
 
 ### Timestamps {#timestamps}
 
-The root `timestamp` field of an event schema can **only** represent the observation of the event itself, and must occur in the past. If your segmentation use cases require the use of timestamps that may occur in the future, these values must be constrained elsewhere in your Experience Event schema.
+The root `timestamp` field of an event schema can **only** represent the observation of the event itself, and must occur in the past. However, the event **must** take place from 1970 onwards. If your segmentation use cases require the use of timestamps that may occur in the future, these values must be constrained elsewhere in your Experience Event schema.
 
 For example, if a business in the travel and hospitality industry is modeling a flight reservation event, the class-level `timestamp` field represents the time when the reservation event was observed. Other timestamps that are related to the event, such as the start date of the travel reservation, should be captured in separate fields provided by standard or custom field groups.
 
@@ -44,11 +44,11 @@ By keeping the class-level timestamp separate from other related datetime values
 
 Certain interactions in your experience applications can result in multiple related events that technically share the same event timestamp, and can therefore be represented as a single event record. For example, if a customer views a product on your website, this can result in an event record that has two potential `eventType` values: a "product view" event (`commerce.productViews`) or a generic "page view" event (`web.webpagedetails.pageViews`). In these cases, you can use calculated fields to capture the most important attributes when multiple events are captured in a single hit.
 
-[Adobe Experience Platform Data Prep](../../data-prep/home.md) allows you to map, transform, and validate data to and from XDM. Using the available [mapping functions](../../data-prep/functions.md) provided by the service you can invoke logical operators to prioritize, transform, and/or consolidate data from multi-event records when being ingested into Experience Platform. In the example above, you could designate `eventType` as a calculated field that would prioritize a "product view" over a "page view" whenever they both occur.
+Use [Adobe Experience Platform Data Prep](../../data-prep/home.md) to map, transform, and validate data to and from XDM. Using the available [mapping functions](../../data-prep/functions.md) provided by the service you can invoke logical operators to prioritize, transform, and/or consolidate data from multi-event records when being ingested into Experience Platform. In the example above, you could designate `eventType` as a calculated field that would prioritize a "product view" over a "page view" whenever they both occur.
 
-If you are manually ingesting data into Platform via the UI, see the guide on [calculated fields](../../data-prep/ui/mapping.md#calculated-fields) for specific steps on how to create calculated fields.
+If you are manually ingesting data into Experience Platform via the UI, see the guide on [calculated fields](../../data-prep/ui/mapping.md#calculated-fields) for specific steps on how to create calculated fields.
 
-If you are streaming data to Platform using a source connection, you can configure the source to utilize calculated fields instead. Refer to the [documentation for your particular source](../../sources/home.md) for instructions on how to implement calculated fields when configuring the connection.
+If you are streaming data to Experience Platform using a source connection, you can configure the source to utilize calculated fields instead. Refer to the [documentation for your particular source](../../sources/home.md) for instructions on how to implement calculated fields when configuring the connection.
 
 ## Compatible schema field groups {#field-groups}
 
@@ -59,6 +59,7 @@ If you are streaming data to Platform using a source connection, you can configu
 Adobe provides several standard field groups for use with the [!DNL XDM ExperienceEvent] class. The following is a list of some commonly used field groups for the class:
 
 * [[!UICONTROL Adobe Analytics ExperienceEvent Full Extension]](../field-groups/event/analytics-full-extension.md)
+* [[!UICONTROL Adobe Advertising Cloud ExperienceEvent Full Extension]](../field-groups/event/advertising-full-extension.md)
 * [[!UICONTROL Balance Transfers]](../field-groups/event/balance-transfers.md)
 * [[!UICONTROL Campaign Marketing Details]](../field-groups/event/campaign-marketing-details.md)
 * [[!UICONTROL Card Actions]](../field-groups/event/card-actions.md)
@@ -72,6 +73,7 @@ Adobe provides several standard field groups for use with the [!DNL XDM Experien
 * [[!UICONTROL Flight Reservation]](../field-groups/event/flight-reservation.md)
 * [[!UICONTROL IAB TCF 2.0 Consent]](../field-groups/event/iab.md)
 * [[!UICONTROL Lodging Reservation]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL MediaAnalytics Interaction Details]](../field-groups/event/mediaanalytics-interaction.md)
 * [[!UICONTROL Quote Request Details]](../field-groups/event/quote-request-details.md)
 * [[!UICONTROL Reservation Details]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL Web Details]](../field-groups/event/web-details.md)
@@ -98,6 +100,7 @@ The following table outlines the accepted values for `eventType`, along with the
 |`advertising.timePlayed` | This event tracks the amount of time spent by a user on a specific timed media asset. |
 |`application.close` | This event tracks when an application was closed or sent into the background. |
 |`application.launch` | This event tracks when an application was launched or brought into the foreground. |
+| `click` | **Deprecated** Instead use `decisioning.propositionInteract`. |
 |`commerce.backofficeCreditMemoIssued` | This event tracks when a notice of credit has been issued to a customer. |
 |`commerce.backofficeOrderCancelled` | This event tracks when a previously initiated purchase process has been terminated before completion. |
 |`commerce.backofficeOrderItemsShipped` | This event tracks when the purchased items have been physically shipped to the customer. |
@@ -112,11 +115,12 @@ The following table outlines the accepted values for `eventType`, along with the
 |`commerce.productViews` | This event tracks when a product has received one or more views. |
 |`commerce.purchases` | This event tracks when an order has been accepted. This is the only required action in a commerce conversion. A purchase event must have a product list referenced. |
 |`commerce.saveForLaters` | This event tracks when a product list has been saved for future use, such a product wishlist. |
-|`decisioning.propositionDisplay` | This event tracks when a decisioning proposition was displayed to a person. |
-|`decisioning.propositionDismiss` | This event tracks when a decision has been made not to engage with the presented offer. |
-|`decisioning.propositionInteract` | This event tracks when a person interacted with a decisioning proposition. |
+|`decisioning.propositionDisplay` | This event is used when the Web SDK automatically sends information about what's being displayed on a page. However, you don't need this event type if you're already including display information in other ways, like with top and bottom of page hits. For bottom of page hits, you can choose any event type you like.|
+|`decisioning.propositionDismiss` | This event type is used when an Adobe Journey Optimizer in-application message or content card is dismissed. |
+|`decisioning.propositionFetch` | Used to indicate that an event is primarily to fetch decisioning. Adobe Analytics will drop this event automatically. |
+|`decisioning.propositionInteract` | This event type is used to track interactions, such as clicks, on personalized content. |
 |`decisioning.propositionSend` | This event tracks when it has been decided to send to a prospective customer a recommendation or offer for consideration. |
-|`decisioning.propositionTrigger` | This event tracks the activation of a proposition process. A certain condition or action has occurred to prompt the presentation of an offer. |
+|`decisioning.propositionTrigger` | Events of this type are stored in local storage by the Web SDK but are not sent to the Edge Network. Each time a ruleset is satisfied, an event is generated and stored in local storage (if that setting is enabled). |
 |`delivery.feedback` | This event tracks feedback events for a delivery, such as an email delivery. |
 |`directMarketing.emailBounced` | This event tracks when an email to a person bounced. |
 |`directMarketing.emailBouncedSoft` | This event tracks when an email to a person soft-bounced. |
@@ -125,6 +129,7 @@ The following table outlines the accepted values for `eventType`, along with the
 |`directMarketing.emailOpened` | This event tracks when a person opened a marketing email. |
 |`directMarketing.emailSent` | This event tracks when a marketing email has been sent to a person. |
 |`directMarketing.emailUnsubscribed` | This event tracks when a person unsubscribed from a marketing email. |
+| `display` | **Deprecated** Instead use `decisioning.propositionDisplay`. |
 |`inappmessageTracking.dismiss` | This event tracks when an in-app message was dismissed. |
 |`inappmessageTracking.display` | This event tracks when an in-app message was displayed. |
 |`inappmessageTracking.interact` | This event tracks when an in-app message was interacted with. |
@@ -133,39 +138,40 @@ The following table outlines the accepted values for `eventType`, along with the
 |`leadOperation.changeEngagementCampaignCadence` | This event tracks when there has been a change in how often a lead is engaged with as part of a campaign. |
 |`leadOperation.convertLead` | This event tracks when a lead was converted. |
 |`leadOperation.interestingMoment` | This event tracks when an interesting moment was recorded for a person. |
-|`leadOperation.mergeLeads` | This event tracks when information from multiple leads, that refer to the same entity, were consolidated. |
+|`leadOperation.mergeLeads` | This event tracks when information from multiple leads that refer to the same entity were consolidated. |
 |`leadOperation.newLead` | This event tracks when a lead was created. |
 |`leadOperation.scoreChanged` | This event tracks when the value of the lead's score attribute was changed. |
 |`leadOperation.statusInCampaignProgressionChanged` | This event tracks when a lead's status in a campaign has changed. |
 |`listOperation.addToList` | This event tracks when a person was added to a marketing list. |
 |`listOperation.removeFromList` | This event tracks when a person was removed from a marketing list. |
-|`media.adBreakComplete` | This event tracks when an `adBreakComplete` event has occurred. This event is triggered at the start of an ad break. |
-|`media.adBreakStart` | This event tracks when an `adBreakStart` event has occurred. This event is triggered at the end of an ad break. |
-|`media.adComplete` | This event tracks when an `adComplete` event has occurred. This event is triggered when an advert has been completed.|
-|`media.adSkip` | This event tracks when an `adSkip` event has occurred. This event is triggered when an advert has been skipped. |
-|`media.adStart` | This event tracks when an `adStart` event has occurred. This event is triggered when an advert has begun.|
-|`media.bitrateChange` | This event tracks when a `bitrateChange` event has occurred. This event is triggered when there is a change in the bit rate. |
-|`media.bufferStart` |This event tracks when a `bufferStart` event has occurred. This event is triggered when media has begun to buffer. |
-|`media.chapterComplete` |This event tracks when a `chapterComplete` event has occurred. This event is triggered at the completion of a chapter in the media. |
-|`media.chapterSkip` | This event tracks when a `chapterSkip` event has occurred. This event is triggered when a user skips forward or backward to another section or chapter within the media content. |
-|`media.chapterStart` | This event tracks when a `chapterStart` event has occurred. This event is triggered at the start of a specific section or chapter within the media content. |
+|`media.adBreakComplete` | This event signals the completion of an ad break. |
+|`media.adBreakStart` | This event signals the start of an ad break. |
+|`media.adComplete` | This event signals the completion of an advert.|
+|`media.adSkip` | This event signals when an advert has been skipped. |
+|`media.adStart` | This event signals the start of an advert.|
+|`media.bitrateChange` | This event signals when there is a change in the bit rate. |
+|`media.bufferStart` | The `media.bufferStart` event type is sent when buffering begins. There is no specific `bufferResume` event type; buffering is considered to have resumed when a `play` event is sent following a `bufferStart` event. |
+|`media.chapterComplete` | This event signals the completion of a chapter. |
+|`media.chapterSkip` | This event is triggered when a user skips forward or backward to another section or chapter. |
+|`media.chapterStart` | This event signals the start of a chapter. |
 |`media.downloaded` | This event tracks when media downloaded content has occurred. |
-|`media.error` | This event tracks when an `error` event has occurred. This event is triggered when an error or issue occurs during media playback. |
-|`media.pauseStart` | This event tracks when a `pauseStart` event has occurred. This event is triggered when a user initiates a pause in the media playback. |
-|`media.ping` |This event tracks when an `ping` event has occurred. This verifies the availability of a media resource. |
-|`media.play` | This event tracks when a `play` event has occurred. This event is triggered when the media content is playing, indicating active consumption by the user. |
-|`media.sessionComplete` |This event tracks when a `sessionComplete` event has occurred. This event marks the end of a media playback session. |
-|`media.sessionEnd` | This event tracks when a `sessionEnd` event has occurred. This event indicates the conclusion of a media session. This conclusion could involve closing the media player or stopping playback. |
-|`media.sessionStart` | This event tracks when a `sessionStart` event has occurred. This event marks the beginning of a media playback session. It is triggered when a user starts playing a media file. |
-|`media.statesUpdate` | This event tracks when a `statesUpdate` event has occurred. The player state tracking capabilities can be attached to an audio or video stream. The standard states are: fullscreen, mute, closedCaptioning, pictureInPicture, and inFocus. |
+|`media.error` | This event signals when an error has occurred during media playback. |
+|`media.pauseStart` | This event tracks when a `pauseStart` event has occurred. This event is triggered when a user initiates a pause in the media playback. There is no resume event type. A resume is inferred when you send a play event after a `pauseStart`. |
+|`media.ping` | The `media.ping` event type is used to indicate ongoing playback status. For main content, this event must be sent every 10 seconds during playback, starting 10 seconds after playback begins. For ad content, it must be sent every second during ad tracking. Ping events should not include the params map in the request body. |
+|`media.play` | The `media.play` event type is sent when the player transitions to the `playing` state from another state, such as `buffering,` `paused` (when resumed by the user), or `error` (when recovered), including scenarios like autoplay. This event is triggered by the player's `on('Playing')` callback. |
+|`media.sessionComplete` | This event is sent when the end of the main content is reached. |
+|`media.sessionEnd` | The `media.sessionEnd` event type notifies the Media Analytics backend to immediately close a session when a user abandons their viewing and is unlikely to return. If this event is not sent, the session will time out after 10 minutes of inactivity or 30 minutes without playhead movement. Any subsequent media calls with that Session ID will be ignored. |
+|`media.sessionStart` | The `media.sessionStart` event type is sent with the session initiation call. Upon receiving a response, the Session ID is extracted from the Location header and used for all subsequent event calls to the Collection server. |
+|`media.statesUpdate` | This event tracks when a `statesUpdate` event has occurred. The player state tracking capabilities can be attached to an audio or video stream. The standard states are: `fullscreen`, `mute`, `closedCaptioning`, `pictureInPicture`, and `inFocus`. |
 |`opportunityEvent.addToOpportunity` | This event tracks when a person was added to an opportunity. |
 |`opportunityEvent.opportunityUpdated` | This event tracks when an opportunity was updated. |
 |`opportunityEvent.removeFromOpportunity` | This event tracks when a person was removed from an opportunity. |
+| `personalization.request` | **Deprecated** Instead use `decisioning.propositionFetch`. |
 |`pushTracking.applicationOpened` | This event tracks when a person opened an application from a push notification. |
 |`pushTracking.customAction` | This event tracks when a person selected a custom action in a push notification. |
 |`web.formFilledOut` | This event tracks when a person filled out a form on a web page. |
-|`web.webinteraction.linkClicks` | This event tracks when a link has been selected one or more times. |
-|`web.webpagedetails.pageViews` | This event tracks when a webpage has received one or more views. |
+|`web.webinteraction.linkClicks` | The event signals that a link click has been automatically recorded by the Web SDK. |
+|`web.webpagedetails.pageViews` | This event type is the standard method for marking the hit as a page view. |
 |`location.entry` | This event tracks the entry of a person or device at a specific location. |
 |`location.exit` | This event tracks the exit of a person or device from a specific location. |
 

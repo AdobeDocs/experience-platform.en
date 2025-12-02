@@ -7,7 +7,7 @@ exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
 
 The license usage dashboard provides granular reports about your organization's Query Service license usage and usage metrics for each purchased product. To learn more about the available metrics displayed in the dashboard, visit the [license usage dashboard guide](../../dashboards/guides/license-usage.md#available-metrics). 
 
-The dashboard provides usage metrics for each purchased product, the consolidated usage of metrics in all production or development sandboxes, and the usage metrics from a specific sandbox. Information displayed here is captured during a daily snapshot of your Platform instance. 
+The dashboard provides usage metrics for each purchased product, the consolidated usage of metrics in all production or development sandboxes, and the usage metrics from a specific sandbox. Information displayed here is captured during a daily snapshot of your Experience Platform instance. 
 
 >[!NOTE]
 >
@@ -16,10 +16,6 @@ The dashboard provides usage metrics for each purchased product, the consolidate
 ## Compute hours {#compute-hours}
 
 The [!UICONTROL Compute hours] metric is only applicable to customers with the Data Distiller license for batch queries. [!UICONTROL Compute hours] are the measure of time taken by the Query Service engines to read, process, and write data back into the data lake when a batch query is executed.
-
->[!NOTE]
->
->**The [!UICONTROL Compute hours] data is available with limitations**: The data begins from Oct 1 2023 with no trends.<br>The **backfill** of data from your contract start date is a work-in-progress. It is expected to be available by the end of the calendar year.
 
 ![The license usage dashboard with the compute hours metric highlighted.](../images/data-distiller/compute-hours.png)
 

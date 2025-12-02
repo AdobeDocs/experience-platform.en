@@ -8,13 +8,13 @@ exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
 
 In Adobe Experience Platform, you can view and interact with your organization's data using multiple dashboards. You can also update certain dashboards by adding new widgets to your dashboard view. In addition to the standard widgets provided by Adobe, you can also create custom widgets and share them throughout your organization. 
 
-This guide provides step-by-step instructions for creating and adding custom widgets to the [!UICONTROL Profiles], [!UICONTROL Segments], and [!UICONTROL Destinations] dashboards in the Platform UI.
-
-To learn more about standard widgets, please refer to the guide for [adding standard widgets to your dashboards](standard-widgets.md).
+This guide provides step-by-step instructions for creating and adding custom widgets to the [!UICONTROL Profiles], [!UICONTROL Segments], and [!UICONTROL Destinations] dashboards in the Experience Platform UI.
 
 >[!NOTE]
 >
->The widgets shown in the [!UICONTROL License usage] dashboard cannot be customized. To learn more about this unique dashboard, read the [license usage dashboard documentation](../guides/license-usage.md).
+>Any updates made to the dashboards are per organization and by sandbox.
+
+To learn more about standard widgets, please refer to the guide for [adding standard widgets to your dashboards](standard-widgets.md).
 
 ## Widget library {#widget-library}
 
@@ -88,7 +88,7 @@ To view widgets that have been hidden, select **[!UICONTROL Show hidden widgets]
 
 >[!WARNING]
 >
->Hiding a widget in the library does not remove the widget from the dashboards of individual users. If a widget should no longer be used in your organization, please ensure that you communicate this directly to all Platform users as they will need to remove the widget from their dashboards.
+>Hiding a widget in the library does not remove the widget from the dashboards of individual users. If a widget should no longer be used in your organization, please ensure that you communicate this directly to all Experience Platform users as they will need to remove the widget from their dashboards.
 
 ![The Custom tab of the widget library workspace with the widget dropdown menu options and Show hidden widgets highlighted.](../images/customization/hide-widget.png)
 
@@ -102,7 +102,7 @@ On the **[!UICONTROL Edit widget]** dialog, you can edit the title and descripti
 
 >[!WARNING]
 >
->Editing a widget in the library does not update the widget for individual users. If a widget has been updated, please ensure that you communicate this directly to all Platform users as they will need to remove the outdated widget from their dashboards and then select and add the updated widget from the widget library.
+>Editing a widget in the library does not update the widget for individual users. If a widget has been updated, please ensure that you communicate this directly to all Experience Platform users as they will need to remove the outdated widget from their dashboards and then select and add the updated widget from the widget library.
 
 ![The Edit widget dialog.](../images/customization/edit-widget.png)
 

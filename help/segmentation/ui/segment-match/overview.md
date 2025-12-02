@@ -2,12 +2,19 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segment Match;segment match
 solution: Experience Platform
 title: Segment Match Overview
-description: Segment Match is a segment-sharing service in Adobe Experience Platform that allows for two or more Platform users to exchange segment data in a secure, governed, and privacy-friendly manner.
+description: Segment Match is a segment-sharing service in Adobe Experience Platform that allows for two or more Experience Platform users to exchange segment data in a secure, governed, and privacy-friendly manner.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
 ---
 # [!DNL Segment Match] overview
 
-Adobe Experience Platform Segment Match is a segment-sharing service that allows for two or more Platform users to exchange segment data in a secure, governed, and privacy-friendly manner. [!DNL Segment Match] uses Platform privacy standards and personal identifiers such as hashed emails, hashed phone numbers, and device identifiers like IDFAs and GAIDs.
+>[!IMPORTANT]
+>
+>Adobe introduced [!DNL Segment Match] in 2021 for customers to collaborate and exchange audiences. In early 2025, Adobe introduced [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), which is the longer-term approach to meet this use-case.
+>
+>* For customers in the United States, Canada, Australia, and New Zealand: Adobe recommends Real-Time CDP Prime and Ultimate customers transition data collaboration use cases from [!DNL Segment Match] to Real-Time CDP Collaboration. View the [documentation](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) and [quick-start guide](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide) for Real-Time CDP Collaboration and contact your Adobe account team to learn more.
+>* For customers in all other geographies: [!DNL Segment Match] is the recommended option until Real-Time CDP Collaboration is released in those geographies in 2026.
+
+Adobe Experience Platform Segment Match is a segment-sharing service that allows for two or more Experience Platform users to exchange segment data in a secure, governed, and privacy-friendly manner. [!DNL Segment Match] uses Experience Platform privacy standards and personal identifiers such as hashed emails, hashed phone numbers, and device identifiers like IDFAs and GAIDs.
 
 With [!DNL Segment Match] you can:
 
@@ -38,9 +45,9 @@ The list of supported namespaces are as follows:
 
 | Namespace | Description |
 | --------- | ----------- |
-| Emails (SHA256, lowercased) | A namespace for pre-hashed email address. Values provided in this namespace are converted to lowercase before hashing with SHA256. Leading and trailing spaces need to be trimmed before an email address is normalized. This setting cannot be changed retroactively. Platform offers two methods of supporting hashing upon data collection, through [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) and through [data prep](../../../data-prep/functions.md#hashing). |
+| Emails (SHA256, lowercased) | A namespace for pre-hashed email address. Values provided in this namespace are converted to lowercase before hashing with SHA256. Leading and trailing spaces need to be trimmed before an email address is normalized. This setting cannot be changed retroactively. Experience Platform offers two methods of supporting hashing upon data collection, through [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) and through [data prep](../../../data-prep/functions.md#hashing). |
 | Phone (SHA256_E.164)| A namespace that represents raw phone numbers that need to be hashed using both SHA256 and E.164 format. |
-| ECID | A namespace that represents an Experience Cloud ID (ECID) value. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the [ECID overview](../../../identity-service/ecid.md) for more information. |
+| ECID | A namespace that represents an Experience Cloud ID (ECID) value. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the [ECID overview](../../../identity-service/features/ecid.md) for more information. |
 | Apple IDFA (ID for Advertisers) | A namespace that represents Apple ID for Advertisers. See the following document on [interest-based ads](https://support.apple.com/en-us/HT202074) for more information. |
 | Google Ad ID | A namespace that represents a Google Advertising ID. See the following document on [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) for more information. |
 
@@ -58,7 +65,7 @@ For more information on the `share` attribute used to set data-sharing consent v
 
 The last prerequisite you must establish is to configure a new data usage label to prevent data sharing. Through data usage labels, you can manage what data is allowed to be shared through [!DNL Segment Match].
 
-Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into Experience Platform, or as soon as data becomes available for use in Platform.
+Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into Experience Platform, or as soon as data becomes available for use in Experience Platform.
 
 [!DNL Segment Match] uses the C11 label, a contract label specific to [!DNL Segment Match] that you can manually add to any datasets or attributes to ensure that they are excluded from the [!DNL Segment Match] partner-sharing process. The C11 label denotes data that should not be used in [!DNL Segment Match] processes. After you have determined which datasets and/or fields you want to exclude from [!DNL Segment Match] and added the C11 label accordingly, the label is automatically enforced by the [!DNL Segment Match] workflow. [!DNL Segment Match] automatically enables the [!UICONTROL Restrict data sharing] core policy. For specific instructions on how to apply data usage labels to datasets, see the tutorial on [managing data usage labels in the UI](../../../data-governance/labels/user-guide.md).
 
@@ -81,7 +88,7 @@ Once you have set up your identity data and namespaces, consent configuration, a
 
 ### Manage partner
 
-In the Platform UI, select **[!UICONTROL Segments]** from the left-navigation and then select **[!UICONTROL Feeds]** from the top header.
+In the Experience Platform UI, select **[!UICONTROL Segments]** from the left-navigation and then select **[!UICONTROL Feeds]** from the top header.
 
 ![segments-feed.png](./images/segments-feed.png)
 
@@ -89,7 +96,7 @@ The [!UICONTROL Feeds] page contains a list of feeds received from partners as w
 
 ![manage-partners.png](./images/manage-partners.png)
 
-A connection between two partners is a "two-way handshake" that acts as a self-service method for users to connect their Platform organizations together at a sandbox level. The connection is required to inform Platform that an agreement has been established and that Platform can facilitate share services between you and your partner(s).
+A connection between two partners is a "two-way handshake" that acts as a self-service method for users to connect their Experience Platform organizations together at a sandbox level. The connection is required to inform Experience Platform that an agreement has been established and that Experience Platform can facilitate share services between you and your partner(s).
 
 >[!NOTE]
 >
@@ -115,7 +122,7 @@ To connect a partner using their [!UICONTROL connect ID], enter their unique ID 
 >abstract="Restricted marketing use cases help provide guidance to your partners to ensure shared segments are properly used per your data governance restrictions."
 >text="Learn more in documentation"
 
-A **feed** is a grouping of data (segments), the rules for how that data can be exposed or used, and the configurations that determine how your data is matched against your partners' data. A feed can be managed independently and exchanged with other Platform users through [!DNL Segment Match].
+A **feed** is a grouping of data (segments), the rules for how that data can be exposed or used, and the configurations that determine how your data is matched against your partners' data. A feed can be managed independently and exchanged with other Experience Platform users through [!DNL Segment Match].
 
 To create a new feed, select **[!UICONTROL Create feed]** from the [!UICONTROL Feeds] dashboard.
 

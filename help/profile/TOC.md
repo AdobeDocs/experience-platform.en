@@ -3,6 +3,7 @@ audience: user
 user-guide-title: Real-Time Customer Profile Guide
 user-guide-description: Merge customer data to create a unified view of customer interactions across channels.
 feature: Profiles
+role: User
 ---
 
 # [!DNL Real-Time Customer Profile] {#profile}
@@ -14,10 +15,10 @@ feature: Profiles
 * [Edge profiles](edge-profiles.md)
 * [Experience Event expirations](event-expirations.md)
 * [Pseudonymous Profile expirations](pseudonymous-profiles.md)
+* [Customer timestamp ordering](customer-timestamp-ordering.md)
 * [!DNL Profile] API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
-  * [Edge projections](api/edge-projections.md)
   * [Entities ([!DNL Profile] access)](api/entities.md)
   * [Export jobs ([!DNL Profile] export)](api/export-jobs.md)
   * [Preview sample status ([!DNL Profile] preview)](api/preview-sample-status.md)
@@ -47,4 +48,4 @@ feature: Profiles
 * [Privacy request processing](privacy.md)
 * [[!DNL Profile] troubleshooting guide](troubleshooting.md)
 * [Profile API reference](https://www.adobe.com/go/profile-apis-en)
-* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

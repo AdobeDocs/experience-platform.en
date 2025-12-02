@@ -20,11 +20,9 @@ The ad-hoc activation API allows marketers to programmatically activate audience
 
 Use the ad-hoc activation API to export full files to your desired file reception system. Ad-hoc audience activation is only supported by [batch file-based destinations](../destination-types.md#file-based).
 
-The diagram below illustrates the end-to-end workflow for activating audiences via the ad-hoc activation API, including the segmentation jobs that take place in Platform every 24 hours.
+The diagram below illustrates the end-to-end workflow for activating audiences via the ad-hoc activation API, including the segmentation jobs that take place in Experience Platform every 24 hours.
 
 ![ad-hoc-activation](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
-
-
 
 ## Use cases {#use-cases}
 
@@ -46,7 +44,7 @@ Keep in mind the following guardrails when using the ad-hoc activation API.
 
 * Currently, each ad-hoc activation job can activate up to 80 audiences. Attempting to activate more than 80 audiences per job will cause the job to fail. This behavior is subject to change in future releases.
 * Ad-hoc activation jobs cannot run in parallel with scheduled [audiences export jobs](../../segmentation/api/export-jobs.md). Before running an ad-hoc activation job, make sure the scheduled audience export job has finished. See [destination dataflow monitoring](../../dataflows/ui/monitor-destinations.md) for information on how to monitor the status of activation flows. For example, if your activation dataflow shows a **[!UICONTROL Processing]** status, wait for it to finish before running the ad-hoc activation job.
-* Do not run more than one concurrrent ad-hoc activation job per audience.
+* Do not run more than one concurrent ad-hoc activation job per audience.
 
 ## Segmentation considerations {#segmentation-considerations}
 
@@ -62,13 +60,13 @@ Before you can make calls to the Adobe Experience Platform APIs, make sure you m
 
 ## Step 2: Gather credentials {#credentials}
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
 *   x-gw-ims-org-id: `{ORG_ID}`
 
-Resources in Experience Platform can be isolated to specific virtual sandboxes. In requests to Platform APIs, you can specify the name and ID of the sandbox that the operation will take place in. These are optional parameters.
+Resources in Experience Platform can be isolated to specific virtual sandboxes. In requests to Experience Platform APIs, you can specify the name and ID of the sandbox that the operation will take place in. These are optional parameters.
 
 *   x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -80,13 +78,13 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 *   Content-Type: `application/json`
 
-## Step 3: Create activation flow in the Platform UI {#activation-flow}
+## Step 3: Create activation flow in the Experience Platform UI {#activation-flow}
 
-Before you can activate audiences through the ad-hoc activation API, you must first have an activation flow configured in the Platform UI, for the chosen destination.
+Before you can activate audiences through the ad-hoc activation API, you must first have an activation flow configured in the Experience Platform UI, for the chosen destination.
 
 This includes going into the activation workflow, selecting your audiences, configuring a schedule, and activating them. You can use the UI or API to create an activation flow:
 
-* [Use the Platform UI to create an activation flow to batch profile export destinations](../ui/activate-batch-profile-destinations.md)
+* [Use the Experience Platform UI to create an activation flow to batch profile export destinations](../ui/activate-batch-profile-destinations.md)
 * [Use the Flow Service API to connect to batch profile export destinations and activate data](../api/connect-activate-batch-destinations.md)
 
 ## Step 4: Obtain the latest audience export job ID (Not required in v2) {#segment-export-id}
@@ -120,7 +118,7 @@ Adobe Experience Platform runs scheduled segmentation jobs once every 24 hours. 
 
 >[!IMPORTANT]
 >
->Note the following one-time constraint: Before running an ad-hoc activation job, make sure that at least 20 minutes have passed from the moment that the audience was first activated according to the schedule you set in [Step 3 - Create activation flow in the Platform UI](#activation-flow). 
+>Note the following one-time constraint: Before running an ad-hoc activation job, make sure that at least one hour has passed from the moment that the audience was first activated according to the schedule you set in [Step 3 - Create activation flow in the Experience Platform UI](#activation-flow). 
 
 Before running an ad-hoc activation job, make sure the scheduled audience export job for your audiences has finished. See [destination dataflow monitoring](../../dataflows/ui/monitor-destinations.md) for information on how to monitor the status of activation flows. For example, if your activation dataflow shows a **[!UICONTROL Processing]** status, wait for it to finish before running the ad-hoc activation job to export a full file.
 
@@ -162,16 +160,20 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 | Property | Description |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | The IDs of the destination instances to which you want to activate audiences. You can get these IDs from the Platform UI, by navigating to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** tab, and clicking on the desired destination row to bring up the destination ID in the right rail. For more information, read the [destinations workspace documentation](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul>  | The IDs of the audiences that you want to activate to the selected destination. |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | The IDs of the destination instances to which you want to activate audiences. You can get these IDs from the Experience Platform UI, by navigating to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** tab, and clicking on the desired destination row to bring up the destination ID in the right rail. For more information, read the [destinations workspace documentation](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul>  | The IDs of the audiences that you want to activate to the selected destination. You can use the ad-hoc API to export Experience Platform-generated audiences as well as external (custom upload) audiences. When activating external audiences, use the system-generated ID instead of the audience ID. You can find the system-generated ID in the audience summary view in the audiences UI. <br> ![View of the audience ID that should not be selected.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "View of the audience ID that should not be selected."){width="100" zoomable="yes"} <br> ![View of the system-generated audience ID that should be used.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "View of the system-generated audience ID that should be used."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
-### Request with export IDs (to be deprecated) {#request-deprecated}
+### Request with export IDs {#request-export-ids}
+
+<!--
 
 >[!IMPORTANT]
 >
 >**Deprecated request type**. This example type describes the request type for the API version 1. In the v2 of the ad-hoc activation API, you do not need to include the latest audience export job ID.
+
+-->
 
 ```shell
 
@@ -200,7 +202,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Property | Description |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | The IDs of the destination instances to which you want to activate audiences. You can get these IDs from the Platform UI, by navigating to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** tab, and clicking on the desired destination row to bring up the destination ID in the right rail. For more information, read the [destinations workspace documentation](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | The IDs of the destination instances to which you want to activate audiences. You can get these IDs from the Experience Platform UI, by navigating to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** tab, and clicking on the desired destination row to bring up the destination ID in the right rail. For more information, read the [destinations workspace documentation](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul>  | The IDs of the audiences that you want to activate to the selected destination. |
 | <ul><li>`exportId1`</li></ul> | The ID returned in the response of the [audience export](../../segmentation/api/export-jobs.md#retrieve-list) job. See [Step 4: Obtain the latest audience export job ID](#segment-export-id) for instructions on how to find this ID. |
 
@@ -232,7 +234,7 @@ A successful response returns HTTP status 200.
 
 ## API error handling {#api-error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ### API error codes and messages specific to the ad-hoc activation API {#specific-error-messages}
 

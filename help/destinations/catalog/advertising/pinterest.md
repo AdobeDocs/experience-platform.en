@@ -5,11 +5,6 @@ exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
 ---
 # [!DNL Pinterest Customer List] connection
 
->[!IMPORTANT]
->
->* Starting November 16, 2023, you can see two Pinterest cards side-by-side in the destinations catalog. This is due to an upgrade to the Pinterest advertiser API used to export data to Pinterest. The existing Pinterest destination connector has been renamed to **[!UICONTROL (Deprecating) Pinterest]** and a new card **[!UICONTROL (New) Pinterest]** is now available to you. 
->* Use the **[!UICONTROL (New) Pinterest]** connection in the catalog for any campaigns to Pinterest. If you have any active dataflows to the **[!UICONTROL (Deprecating) Pinterest]** destination, read the [upgrade documentation](/help/destinations/catalog/advertising/pinterest-upgrade.md) to understand your action items to ensure no disruption to your campaigns.
-
 ## Overview {#overview}
 
 Create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest.
@@ -31,8 +26,8 @@ In the [mapping step](/help/destinations/ui/activate-segment-streaming-destinati
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|GAID|[!DNL Google Advertising ID]|Map the *GAID* source identity namespace to the target identity field *pinterest_audience*. Identities are distinguished and resolved upon data ingestion into Pinterest.|
-|IDFA|[!DNL Apple ID for Advertisers]|Map the *IDFA* source identity namespace to the target identity field *pinterest_audience*. Identities are distinguished and resolved upon data ingestion into Pinterest.|
+|GAID|[!DNL Google Advertising ID]|Map the *GAID* source identity namespace to the target identity field *pinterest_audience*.|
+|IDFA|[!DNL Apple ID for Advertisers]|Map the *IDFA* source identity namespace to the target identity field *pinterest_audience*.|
 |EMAIL|Email addresses (clear text or hashed with the SHA256 algorithm)|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. <br> Map the *Email* or *Email_LC_SHA256* source identity namespace to the target identity field *pinterest_audience*.|
 
 {style="table-layout:auto"}
@@ -42,7 +37,7 @@ In the [mapping step](/help/destinations/ui/activate-segment-streaming-destinati
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the Pinterest Customer List destination.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
@@ -60,17 +55,35 @@ Create audiences from your customer lists, people who've visited your site or pe
 
 >[!IMPORTANT]
 > 
->To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
 ### Connection parameters {#parameters}
 
-While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
+When [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Ad Account ID]**: Your Pinterest advertiser ID.
+
+### Refresh authentication credentials {#refresh-authentication-credentials}
+
+Pinterest tokens expire every 30 days. You can monitor your token expiration dates from the **[!UICONTROL Account expiration date]** column in either the **[[!UICONTROL Accounts]](../../ui/destinations-workspace.md#accounts)** or the **[[!UICONTROL Browse]](../../ui/destinations-workspace.md#browse)** tabs.
+
+Once the token is expired, data exports to the destination stop working. To prevent this situation, reauthenticate by performing the following steps:
+
+1. Navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
+2. (Optional) Use the available filters on the page to display Pinterest accounts only.
+    ![Filter to show Pinterest accounts only](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png)
+3. Select the account that you want to refresh, select the ellipsis and select **[!UICONTROL Edit details]**. 
+    ![Select Edit details control](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
+4. In the modal window, select **[!UICONTROL Reconnect OAuth]** and reauthenticate with your Pinterest credentials.
+    ![Modal window with Reconnect OAuth option](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>Your authentication credentials are refreshed and their expiration time is reset to 30 days.
 
 ### Enable alerts {#enable-alerts}
 
@@ -82,7 +95,7 @@ When you are finished providing details for your destination connection, select 
 
 >[!IMPORTANT]
 > 
->* To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.

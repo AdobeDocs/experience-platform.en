@@ -1,8 +1,8 @@
 ---
-keywords: activate profile destinations;activate destinations;activate data; activate email marketing destinations; activate cloud storage destinations
 title: Activate audiences to streaming profile export destinations
 type: Tutorial
 description: Learn how to activate the audience data you have in Adobe Experience Platform by sending audiences to streaming profile-based destinations.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
 ---
 
@@ -10,14 +10,20 @@ exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
 
 >[!IMPORTANT]
 > 
-> * To activate data and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
-> * To activate data without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+> * To activate data and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+> * To activate data without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 > 
 > Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 ## Overview {#overview}
 
-This article explains the workflow required to activate audience data in Adobe Experience Platform streaming profile-based destinations, such as Amazon Kinesis.
+This article explains the workflow required to activate audience data in Adobe Experience Platform to streaming profile-based destinations (also referred to as [enterprise destinations](/help/destinations/destination-types.md#advanced-enterprise-destinations)).
+
+This article applies to the following three destinations:
+
+* [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
+* [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [HTTP API destination](/help/destinations/catalog/streaming/http-destination.md).
 
 ## Prerequisites {#prerequisites}
 
@@ -41,12 +47,12 @@ To activate data to destinations, you must have successfully [connected to a des
 
 ## Select your audiences {#select-audiences}
 
-To select the audiences that you want to activate to the destination, use the check boxes to the left of the audience names, then select **[!UICONTROL Next]**.
+To select the audiences that you want to activate to the destination, use the checkboxes to the left of the audience names, then select **[!UICONTROL Next]**.
 
 You can select from multiple types of audiences, depending on their origin:
 
-* **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [segmentation documentation](../../segmentation/ui/overview.md) for more details.
-* **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [Audience Portal documentation](../../segmentation/ui/audience-portal.md) for more details.
+* **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Experience Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/audience-portal.md#import-audience).
 * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
 
 ![Image highlighting the checkboxes selection in the Select audiences step of the activation workflow.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
@@ -77,7 +83,15 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 ### Consent policy evaluation {#consent-policy-evaluation}
 
+[Consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) is currently not supported in exports to the three enterprise destinations - Amazon Kinesis, Azure Event Hubs, and HTTP API.
+
+This means that profiles which have not consented to being targeted *are included* in the exports to these three destinations.
+
+<!--
+
 If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**, select **[!UICONTROL View applicable consent policies]** to see which consent policies are applied and how many profiles are included in the activation as a result of them. Read about [consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) for more information.
+
+-->
 
 ### Data usage policy checks {#data-usage-policy-checks}
 
