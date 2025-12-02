@@ -8,7 +8,15 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 
 >[!AVAILABILITY]
 >
->* This functionality is available to customers who have purchased the Real-Time CDP Prime or Ultimate package, Adobe Journey Optimizer, or Customer Journey Analytics. Contact your Adobe representative for more information.
+>This functionality is available to customers who have purchased the Real-Time CDP Prime or Ultimate package, Adobe Journey Optimizer, or Customer Journey Analytics. Contact your Adobe representative for more information.
+
+>[!IMPORTANT]
+>
+>**Action item**: The [September 2024 release of Experience Platform](/help/release-notes/latest/latest.md#destinations) introduced the option to set an `endTime` date for export dataset dataflows. Adobe has also introduced a default end date of September 1st 2025 for all dataset export dataflows created *prior to November 1st, 2024*. 
+>
+>For any of those dataflows, you need to update the end date in the dataflow manually before the end date, otherwise your exports will stop on that date. Use the Experience Platform UI to view which dataflows will be set to stop on September 1st 2025. 
+>
+>Refer to the [scheduling section](#scheduling) for information on how to edit the end date of a dataset export dataflow.
 
 This article explains the workflow required to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage] by using the Experience Platform UI. 
 
@@ -90,7 +98,10 @@ This document contains all the information necessary to export datasets. If you 
 
 ## Prerequisites {#prerequisites}
 
-To export datasets to cloud storage destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
+Note the following prerequisites in order to export datasets:
+
+* To export datasets to cloud storage destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
+* Profile datasets need to be enabled for use in Real-Time Customer Profile. [Read more](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) about how to enable this option. 
 
 ### Required permissions {#permissions}
 
@@ -122,9 +133,13 @@ Follow the instructions to select a destination where you can export your datase
 
 ## Select your datasets {#select-datasets}
 
-Use the check boxes to the left of the dataset names to select the datasets that you want to export to the destination, then select **[!UICONTROL Next]**.
+Use the checkboxes to the left of the dataset names to select the datasets that you want to export to the destination, then select **[!UICONTROL Next]**.
 
 ![Dataset export workflow showing the Select datasets step where you can select which datasets to export.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
+
+>[!NOTE]
+>
+>All datasets selected here will share the same export schedule. If you need different export schedules (for example, incremental exports for some datasets and one-time full exports for others), create separate dataflows for each schedule type.
 
 ## Schedule dataset export {#scheduling}
 
@@ -141,7 +156,17 @@ Use the check boxes to the left of the dataset names to select the datasets that
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="Update the end date for this dataflow body"
->abstract="Because of recent updates to this destination, the dataflow now requires an end date. Adobe has set a default end date to May 1st 2025. Please update to your desired end date otherwise the data exports will stop on the default date."
+>abstract="Because of recent updates to this destination, the dataflow now requires an end date. Adobe has set a default end date to September 1st 2025. Please update to your desired end date, otherwise the data exports will stop on the default date."
+
+>[!IMPORTANT]
+>
+>**Schedule applies to all datasets in the dataflow**
+>
+>When you configure or modify the export schedule, it applies to **all datasets** currently being exported through the dataflow you are configuring. You cannot set different schedules for individual datasets within the same dataflow.
+>
+>If you need different export schedules for different datasets, you must create separate dataflows (separate destination connections) for each schedule type.
+>
+>**Example:** If you have Dataset A exporting incrementally and you add Dataset B with a one-time full export schedule, Dataset A will also be updated to the one-time full export schedule.
 
 Use the **[!UICONTROL Scheduling]** step to: 
 
@@ -150,6 +175,10 @@ Use the **[!UICONTROL Scheduling]** step to:
 * Customize the folder path in your storage location where datasets should be exported. Read more about how to [edit the export folder path](#edit-folder-path).
 
 Use the **[!UICONTROL Edit schedule]** control on the page to edit the export cadence of exports, as well as to select whether to export full or incremental files.
+
+>[!WARNING]
+>
+>Modifying the schedule here will update the export behavior for all datasets in this dataflow. If this dataflow contains multiple datasets, all of them will be affected by this change.
 
 ![Edit schedule control highlighted in the Scheduling step.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
 
@@ -196,9 +225,18 @@ You can use several available macros to customize a desired folder name. Double-
 
 ![Macros selection highlighted in custom folder modal window.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
 
-After selecting the desired macros, you can see a preview of the folder structure that will be created in your storage location. The first level in the folder structure represents the **[!UICONTROL Folder path]** that you indicated when you [connected to the destination](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) to export datasets. 
+After selecting the desired macros, you can see a preview of the folder structure that will be created in your storage location. The first level in the folder structure represents the **[!UICONTROL Folder path]** that you indicated when you [connected to the destination](/help/destinations/ui/connect-destination.md#set-up-connection-parameters) to export datasets. 
 
 ![Preview of folder path highlighted in custom folder modal window.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
+
+### Best practices for managing multiple datasets {#best-practices-multiple-datasets}
+
+When exporting multiple datasets, consider the following best practices:
+
+* **Same schedule requirements**: Group datasets that need the same export schedule (frequency, type) into a single dataflow for easier management.
+* **Different schedule requirements**: Create separate dataflows for datasets that require different export schedules or export types (incremental vs. full). This ensures each dataset exports according to its specific needs.
+* **Review before modifying**: Before changing the schedule on an existing dataflow, review which datasets are already being exported through that dataflow to avoid unintended changes to their export behavior.
+* **Document your setup**: Keep track of which datasets are in which dataflows, especially when managing multiple export schedules across different destinations.
 
 ## Review {#review}
 
@@ -277,7 +315,6 @@ Keep in mind the following limitations for the general availability release of d
 
 * Experience Platform may export multiple files even for small datasets. Dataset export is designed for system-to-system integration and optimized for performance, hence the number of exported files is not customizable.
 * Exported file names are currently not customizable.
-* Datasets created via API are currently not available for export. 
 * The UI does not currently block you from deleting a dataset that is being exported to a destination. Do not delete any datasets that are being exported to destinations. [Remove the dataset](#remove-dataset) from a destination dataflow before deleting it.
 * Monitoring metrics for dataset exports are currently mixed with numbers for profile exports so they do not reflect the true export numbers.
 * Data with a timestamp older than 365 days is excluded from dataset exports. For more information, view the [guardrails for scheduled dataset exports](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
@@ -336,4 +373,10 @@ No, it is not possible.
 
 +++Answer
 Retries are in place automatically for most types of system errors.
++++
+
+**Can I set different export schedules for different datasets in the same dataflow?**
+
++++Answer
+No, all datasets within a single dataflow share the same export schedule. If you need different export schedules for different datasets, you must create separate dataflows (destination connections) for each schedule type. For example, if you want Dataset A to export incrementally every day and Dataset B to export as a one-time full export, you need to create two separate dataflows.
 +++

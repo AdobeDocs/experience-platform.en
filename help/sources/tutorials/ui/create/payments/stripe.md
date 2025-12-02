@@ -6,10 +6,6 @@ exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
 ---
 # Ingest payments data from your [!DNL Stripe] account to Experience Platform using the user interface
 
->[!NOTE]
->
->The [!DNL Stripe] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
-
 Read the following tutorial to learn how to ingest payments data from your [!DNL Stripe] account to Adobe Experience Platform using the user interface.
 
 ## Get started
@@ -27,7 +23,7 @@ Read the [[!DNL Stripe] overview](../../../../connectors/payments/stripe.md) for
 
 ## Connect your [!DNL Stripe] account {#connect}
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
 Under the *Payments* category, select **[!DNL Stripe]**, and then select **[!UICONTROL Set up]**.
 

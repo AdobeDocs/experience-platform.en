@@ -11,18 +11,22 @@ Read this guide to learn how you can connect your [!DNL Salesforce] source accou
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
 ## Connect [!DNL Salesforce] to Experience Platform on [!DNL Azure] {#azure}
 
 Read the steps below for information on how to connect your [!DNL Salesforce] source to Experience PLatform on [!DNL Azure].
 
 ### Gather required credentials 
+
+>[!WARNING]
+>
+>Basic authentication for the [!DNL Salesforce] source will be deprecated in January 2026. You must move to OAuth 2 Client Credential authentication in order to continue using the source and ingesting data from your [!DNL Salesforce] account to Experience Platform.
 
 The [!DNL Salesforce] source supports basic authentication and OAuth2 Client Credential.
 
@@ -53,6 +57,7 @@ To connect your [!DNL Salesforce] account to [!DNL Flow Service] using OAuth 2 C
 | `clientId` | The client ID is used in tandem with the client secret as part of OAuth2 authentication. Together, the client ID and client secret enable your application to operate on behalf of your account by identifying your application to [!DNL Salesforce]. |
 | `clientSecret` | The client secret is used in tandem with the client ID as part of OAuth2 authentication. Together, the client ID and client secret enable your application to operate on behalf of your account by identifying your application to [!DNL Salesforce]. |
 | `apiVersion` | The REST API version of the [!DNL Salesforce] instance that you are using. The value for the API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0`. If this field is left blank, then Experience Platform will automatically use the latest available version. This value is mandatory for OAuth2 Client Credential authentication. |
+| `includeDeletedObjects` | A boolean value used to determine whether to include soft deleted records. If set to true, soft-deleted records can be included in your [!DNL Salesforce] query and ingested from your account into Experience Platform. If you do not specify your configuration, this value defaults to `false`. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce] is: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 For more information on using OAuth for [!DNL Salesforce], read the [[!DNL Salesforce] guide on OAuth Authorization Flows](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
@@ -61,7 +66,7 @@ For more information on using OAuth for [!DNL Salesforce], read the [[!DNL Sales
 
 ### Create a base connection for [!DNL Salesforce] in Experience Platform on [!DNL Azure]
 
-A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 To create a base connection and connect your [!DNL Salesforce] account to Experience Platform on [!DNL Azure], make a POST request to the `/connections` endpoint and provide your [!DNL Salesforce] authentication credentials in the request body.
 
@@ -152,7 +157,8 @@ curl -X POST \
             "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
             "clientId": "xxxx",
             "clientSecret": "xxxx",
-            "apiVersion": "60.0"
+            "apiVersion": "60.0",
+            "includeDeletedObjects": true
         }
       },
       "connectionSpec": {
@@ -168,6 +174,7 @@ curl -X POST \
 | `auth.params.clientId` | The client ID associated with your [!DNL Salesforce] account. |
 | `auth.params.clientSecret` | The client secret associated with your [!DNL Salesforce] account. |
 | `auth.params.apiVersion` | The REST API version of the [!DNL Salesforce] instance that you are using. |
+| `auth.params.includeDeletedObjects` | A boolean value used to determine whether or not to include soft deleted records. |
 | `connectionSpec.id` |  The [!DNL Salesforce] connection specification ID: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 +++
@@ -388,4 +395,4 @@ The following response displays information for base connection ID: `3e908d3f-c3
 By following this tutorial, you have created a [!DNL Salesforce] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
 
 * [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
-* [Create a dataflow to bring CRM data to Platform using the [!DNL Flow Service] API](../../collect/crm.md)
+* [Create a dataflow to bring CRM data to Experience Platform using the [!DNL Flow Service] API](../../collect/crm.md)

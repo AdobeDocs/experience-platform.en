@@ -21,7 +21,7 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 
 ## Connect to your [!DNL Amazon S3] storage through API or UI {#connect-api-or-ui}
 
-* To connect to your [!DNL Amazon S3] storage location using the Platform user interface, read the sections [Connect to the destination](#connect) and [Activate audiences to this destination](#activate) below.
+* To connect to your [!DNL Amazon S3] storage location using the Experience Platform user interface, read the sections [Connect to the destination](#connect) and [Activate audiences to this destination](#activate) below.
 * To connect to your [!DNL Amazon S3] storage location programmatically, read the guide on how to [activate audiences to file-based destinations by using the Flow Service API tutorial](../../api/activate-segments-file-based-destinations.md).
 
 ## Supported audiences {#supported-audiences}
@@ -40,7 +40,7 @@ This section describes which types of audiences you can export to this destinati
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).|
 | Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
@@ -52,14 +52,14 @@ Refer to the table below for information about the destination export type and f
 
 This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
 
-* How to [export datasets using the Platform user interface](/help/destinations/ui/export-datasets.md). 
+* How to [export datasets using the Experience Platform user interface](/help/destinations/ui/export-datasets.md). 
 * How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
 
 ## File format of the exported data {#file-format}
 
-When exporting *audience data*, Platform creates a `.csv`, `parquet`, or `.json` file in the storage location that you provided. For more information about the files, see the [supported file formats for export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) section in the audience activation tutorial.
+When exporting *audience data*, Experience Platform creates a `.csv`, `parquet`, or `.json` file in the storage location that you provided. For more information about the files, see the [supported file formats for export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) section in the audience activation tutorial.
 
-When exporting *datasets*, Platform creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
+When exporting *datasets*, Experience Platform creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
 
 ## Connect to the destination {#connect}
 
@@ -81,32 +81,115 @@ To authenticate to the destination, fill in the required fields and select **[!U
 * Access key and secret key authentication
 * Assumed role authentication
 
-#### Access key and secret key authentication
+#### Authentication with S3 access key and secret key
 
 Use this authentication method when you want to input your Amazon S3 access key and secret key to allow Experience Platform to export data to your Amazon S3 properties.
 
 ![Image of the required fields when selecting access key and secret key authentication.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
-* **[!DNL Amazon S3] access key** and **[!DNL Amazon S3] secret key**: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon S3] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon S3] access key** and **[!DNL Amazon S3] secret key**: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant Experience Platform access to your [!DNL Amazon S3] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
     ![Image showing an example of a correctly formatted PGP key in the UI.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### Assumed role {#assumed-role-authentication}
+#### Authentication with S3 assumed role {#assumed-role-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
 >title="Assumed role authentication"
 >abstract="Use this authentication type if you prefer not to share account keys and secret keys with Adobe. Instead, Experience Platform connects to your Amazon S3 location using role-based access. Paste the ARN of the role that you created in AWS for the Adobe user. The pattern is similar to `arn:aws:iam::800873819705:role/destinations-role-customer` "
 
-![Image of the required fields when selecting assumed role authentication.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
-
 Use this authentication type if you prefer not to share account keys and secret keys with Adobe. Instead, Experience Platform connects to your Amazon S3 location using role-based access. 
 
-To do this, you need to create in the AWS console an assumed user for Adobe with the [right required permissions](#minimum-permissions-iam-user) to write to your Amazon S3 buckets. Create a **[!UICONTROL Trusted entity]** in AWS with the Adobe account **[!UICONTROL 670664943635]**. For more information, refer to the [AWS documentation on creating roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html). 
+![Image of the required fields when selecting assumed role authentication.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-* **[!DNL Role]**: Paste the ARN of the role that you created in AWS for the Adobe user. The pattern is similar to `arn:aws:iam::800873819705:role/destinations-role-customer`.
+* **[!DNL Role]**: Paste the ARN of the role that you created in AWS for the Adobe user. The pattern is similar to `arn:aws:iam::800873819705:role/destinations-role-customer`. See the steps below for detailed guidance on how to configure S3 access correctly.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
+
+To do this, you need to create in the AWS console an assumed role for Adobe with the [right required permissions](#minimum-permissions-iam-user) to write to your Amazon S3 buckets.
+
+**Create a policy with the required permissions**
+
+1. Open the AWS Console and go to IAM > Policies > Create policy
+2. Select Policy Editor > JSON and add the permissions below.
+
+    ```json
+
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "VisualEditor0",
+                "Effect": "Allow",
+                "Action": [
+                    "s3:PutObject",
+                    "s3:GetObject",
+                    "s3:DeleteObject",
+                    "s3:GetBucketLocation",
+                    "s3:ListMultipartUploadParts"
+                ],
+                "Resource": "arn:aws:s3:::bucket/folder/*"
+            },
+            {
+                "Sid": "VisualEditor1",
+                "Effect": "Allow",
+                "Action": [
+                    "s3:ListBucket"
+                ],
+                "Resource": "arn:aws:s3:::bucket"
+            }
+        ]
+    }
+    ```
+
+3. On the next page, enter a name for your policy and save it for reference. You'll need this policy name when creating the role in the next step.
+
+**Create user role in your S3 customer account**
+
+1. Open the AWS Console and go to IAM > Roles > Create new role
+2. Select **Trusted entity type** > **AWS account**
+3. Select **An AWS account** > **Another AWS account** and enter the Adobe account ID: `670664943635`
+4. Add permissions using the policy created earlier
+5. Enter a role name (for example, `destinations-role-customer`). The role name should be treated as confidential, similar to a password. It can be up to 64 characters long and can contain alphanumeric characters and the following special characters: `+=,.@-_`. Then verify that:
+    * The Adobe account ID `670664943635` is present in the **[!UICONTROL Select trusted entities]** section
+    * The policy created earlier is present in **[!UICONTROL Permissions policy summary]**
+
+**Provide the role for Adobe to assume**
+
+After creating the role in AWS, you need to provide the role ARN to Adobe. The ARN follows this pattern: `arn:aws:iam::800873819705:role/destinations-role-customer`
+
+You can find the ARN on the main page after creating the role in the AWS console. You will use this ARN when creating the destination.
+
+**Verify role permissions and trust relationships**
+
+Ensure that your role has the following configuration:
+
+* **Permissions**: The role should have permissions to access S3 (either full access or the minimal permissions provided in the **Create a policy with the required permissions** step above)
+* **Trust relationships**: The role should have the root Adobe account (`670664943635`) in its trust relationships
+
+**Alternative: Restrict to specific Adobe user (Optional)**
+
+If you prefer not to allow the entire Adobe account, you can restrict access to only the specific Adobe user. To do this, edit the trust policy with the following configuration:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::670664943635:user/destinations-adobe-user"
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {}
+        }
+    ]
+}
+```
+
+For more information, refer to the [AWS documentation on creating roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html). 
+
+
 
 ### Fill in destination details {#destination-details}
 
@@ -148,7 +231,7 @@ When you are finished providing details for your destination connection, select 
 
 ### Required [!DNL Amazon S3] permissions {#required-s3-permission}
 
-To successfully connect and export data to your [!DNL Amazon S3] storage location, create an Identity and Access Management (IAM) user for [!DNL Platform] in [!DNL Amazon S3] and assign permissions for the following actions:
+To successfully connect and export data to your [!DNL Amazon S3] storage location, create an Identity and Access Management (IAM) user for [!DNL Experience Platform] in [!DNL Amazon S3] and assign permissions for the following actions:
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
@@ -197,7 +280,7 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 >[!IMPORTANT]
 >
->Platform needs `write` permissions on the bucket object where the export files will be delivered.
+>Experience Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
 

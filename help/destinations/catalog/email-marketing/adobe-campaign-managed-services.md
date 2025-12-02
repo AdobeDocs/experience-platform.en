@@ -25,7 +25,7 @@ Keep in mind the following guardrails when using the Adobe Campaign Managed Clou
 
 * You can [activate](#activate) a maximum of 25 audiences to this destination. 
 
-  You can change this limit by updating the value of the **NmsCdp_Aep_Audience_List_Limit** option in the **[!UICONTROL Administration]** > **[!UICONTROL Platform]** > **[!UICONTROL Options]** folder of Campaign explorer.
+  You can change this limit by updating the value of the **NmsCdp_Aep_Audience_List_Limit** option in the **[!UICONTROL Administration]** > **[!UICONTROL Platform]** > **[!UICONTROL Options]** folder of Campaign explorer. This guardrail limits the total number of Experience Platform audiences that can be exported to a single Campaign instance across all configured destinations.
 
 * For each audience, you can add up to 20 fields to [map](#map) to Adobe Campaign. 
 
@@ -34,6 +34,7 @@ Keep in mind the following guardrails when using the Adobe Campaign Managed Clou
 * Data retention on Azure Blob storage Data Landing Zone (DLZ) : 7 day.
 * The activation frequency is 3 hours minimum.
 * The maximum file name length supported by this connection is 255 characters. When you [configure the exported file name](../../ui/activate-batch-profile-destinations.md#configure-file-names), make sure the file name does not exceed 255 characters. Exceeding the maximum file name length results in activation errors.
+* Segments/audiences that contain special characters (e.g: `&`) are not supported when exporting audiences to Adobe Campaign.
 
 ## Use cases {#use-cases}
 
@@ -64,8 +65,8 @@ To help you better understand how and when you should use the Adobe Campaign Man
 |---|---|---|
 |external_id|Custom user IDs|Select this target identity when your source identity is a custom namespace. We recommend using this identity and mapping it to the ID in your Campaign instance that represents customer (loyalty_ID, account_ID, customer_ID...)|
 |ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
-|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
-|phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
+|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
+|phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
 |GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
 |IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
 
@@ -76,7 +77,7 @@ To help you better understand how and when you should use the Adobe Campaign Man
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all members of an audience, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
 | Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 

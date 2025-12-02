@@ -15,6 +15,10 @@ With account segmentation, Adobe Experience Platform allows you to bring the ful
 
 Account audiences can be used as an input for account-based destinations, allowing you to target the people within those accounts in downstream services. For example, you can use account-based audiences to retrieve records of all the accounts that do **not** have contact information for any people with the title Chief Operating Officer (COO) or Chief Marketing Officer (CMO).
 
+>[!NOTE]
+>
+>As part of the B2B architecture upgrade, audience size estimates for audiences with B2B entities are now calculated with exact precision. These estimates are available during preview and provide more accurate and reliable insights for audiences that involve complex B2B relationships. <br>For more information, read the [Real-Time CDP B2B Edition architecture upgrades overview](../../rtcdp/b2b-architecture-upgrade.md).
+
 ## Terminology {#terminology}
 
 Before getting started with account audiences, please review the differences between the different audience types:
@@ -47,7 +51,7 @@ To create an account audience, select **[!UICONTROL Create audience]** on the [!
 
 ![The [!UICONTROL Create audience] button is highlighted on the account audience browse page.](../images/types/account/select-create-audience.png)
 
-The Segment Builder appears. The account attributes and audiences are displayed on the left navigation bar. Under the [!UICONTROL Attributes] tab, you can add both Platform-created and custom attributes.
+The Segment Builder appears. The account attributes and audiences are displayed on the left navigation bar. Under the [!UICONTROL Attributes] tab, you can add both Experience-Platform-created and custom attributes.
 
 ![The Segment Builder is displayed. Note that only the attributes and audiences are displayed.](../images/types/account/segment-builder.png)
 
@@ -110,7 +114,7 @@ The [!UICONTROL Activate destination] page appears. For more information on the 
 
 ## Next steps {#next-steps}
 
-After reading this guide, you now have a better understanding of how to create and use your account audiences in Adobe Experience Platform. To learn how to use other types of audiences in Platform, please read the [audience type overview](./overview.md).
+After reading this guide, you now have a better understanding of how to create and use your account audiences in Adobe Experience Platform. To learn how to use other types of audiences in Experience Platform, please read the [audience type overview](./overview.md).
 
 ## Appendix {#appendix}
 
@@ -120,8 +124,8 @@ The following section provides additional information about account audiences.
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_eventLookbackWindow"
->title="Maximum lookback window error"
->abstract="The maximum lookback window for Experience Events is 30 days."
+>title="Lookback window"
+>abstract="Use the lookback window to view the full history of person-level events."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
@@ -190,18 +194,19 @@ The following section provides additional information about account audiences.
 
 When using account audiences, the audience **must** comply with the following constraints:
 
-- The maximum lookback window for Experience Events is **30 days**.
 - The maximum depth of nested containers is **5**.
   - This means that you **cannot** have more than five nested containers when creating your audience.
 - The maximum number of rules within a single container is **5**.
   - This means that your audience **cannot** have more than five rules that compose your audience.
 - The maximum number of cross entities that can be used is **5**.
   - A cross entity is when you change between different entities within your audience. For example, going from an Account to a Person to a Marketing List.
-- Custom entities **cannot** be used.
 - The maximum number of values that can be checked for a single field is **50**.
   - For example, if you have a field of "City Name", you can check that value against 50 city names.
-- Account audiences **cannot** use `inSegment` events.
 - Account audiences **cannot** use sequential events.
 - Account audiences **cannot** use maps.
 - The maximum depth of nested arrays is **5**.
 - The maximum number of nested objects is **10**.
+
+<!-- - The maximum lookback window for Experience Events is **30 days**. -->
+<!-- - Account audiences **cannot** use `inSegment` events. -->
+<!-- - Custom entities **cannot** be used. -->

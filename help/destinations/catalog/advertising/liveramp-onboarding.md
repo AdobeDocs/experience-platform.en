@@ -42,7 +42,7 @@ This section describes which types of audiences you can export to this destinati
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL LiveRamp - Onboarding] destination.|
 | Export frequency | **[!UICONTROL Daily batch]** | As profiles are updated in Experience Platform based on audience evaluation, the profiles (identities) are updated once a day downstream to the destination platform. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
@@ -98,7 +98,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Platform UI screenshot showing how to fill in details for your destination](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
+![Experience Platform UI screenshot showing how to fill in details for your destination](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -129,13 +129,13 @@ In the [!UICONTROL Scheduling] step, create an export schedule for each audience
 * **[!UICONTROL Frequency]**: [!UICONTROL Daily]
 * **[!UICONTROL Date]**: Select the export start and end times as you wish.
 
-![Platform UI screenshot showing the audience scheduling step.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
+![Experience Platform UI screenshot showing the audience scheduling step.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
 
 The exported file name is currently not user-configurable. All files exported to the [!DNL LiveRamp - Onboarding] destination are automatically named based on the following template:
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-![Platform UI screenshot showing the exported file name template.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
+![Experience Platform UI screenshot showing the exported file name template.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
 
 For example, the name of an exported file for an organization named [!DNL Luma] could look similar to this:
 
@@ -181,7 +181,7 @@ Your data is exported to the [!DNL LiveRamp - Onboarding] storage location that 
 
 Exported files have a maximum size of 10 million rows. Experience Platform generates multiple files per delivery if the selected audiences exceed 10 million rows. If you expect to exceed the single file limit, contact your [!DNL LiveRamp] representative and ask them to configure batch ingestion for you.
 
-When exporting files to the [!DNL LiveRamp - Onboarding] destination, Platform generates one CSV file for each [merge policy ID](../../../profile/merge-policies/overview.md).
+When exporting files to the [!DNL LiveRamp - Onboarding] destination, Experience Platform generates one CSV file for each [merge policy ID](../../../profile/merge-policies/overview.md).
 
 For example, let's consider the following audiences:
 
@@ -190,7 +190,7 @@ For example, let's consider the following audiences:
 * Audience C (Merge policy 1)
 * Audience D (Merge policy 1)
 
-Platform will export two CSV files to [!DNL LiveRamp - Onboarding]:
+Experience Platform will export two CSV files to [!DNL LiveRamp - Onboarding]:
 
 * One CSV file containing audiences A, C, and D;
 * One CSV file containing audience B.
@@ -217,9 +217,9 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-In the example above, the `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` and `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` sections describe audiences originating from the Segmentation Service, while `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` describes an audience imported into Platform as a [custom upload](../../../segmentation/ui/audience-portal.md#import-audience).
+In the example above, the `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` and `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` sections describe audiences originating from the Segmentation Service, while `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` describes an audience imported into Experience Platform as a [custom upload](../../../segmentation/ui/audience-portal.md#import-audience).
 
-Since Platform generates one CSV file for each [merge policy ID](../../../profile/merge-policies/overview.md), it also generates a separate dataflow run for each merge policy ID.
+Since Experience Platform generates one CSV file for each [merge policy ID](../../../profile/merge-policies/overview.md), it also generates a separate dataflow run for each merge policy ID.
 
 This means that the **[!UICONTROL Identities activated]** and **[!UICONTROL Profiles received]** metrics in the [dataflow runs](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) page are aggregated for each group of audiences that use the same merge policy, instead of being displayed for each audience.
 

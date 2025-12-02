@@ -27,7 +27,7 @@ Adobe Experience Platform supports data exports to the following cloud storage d
 
 ## Connect to a new cloud storage destination {#connect-destination}
 
-To send audiences to cloud storage destinations for your campaigns, Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.
+To send audiences to cloud storage destinations for your campaigns, Experience Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.
 
 
 ## Use macros to create a folder in your storage location {#use-macros}
@@ -67,6 +67,7 @@ Similar to the examples above, you can use further macros to create a custom fol
 ## Data export type {#export-type}
 
 Cloud storage destinations support the following export types: 
+
 * **Profile-based export**. This means that you are exporting details about the individuals in the audience. These details are needed for personalization and can include attributes, events, audience memberships, and more.
 * **Dataset export**. This functionality allows you to export entire datasets to cloud storage destinations. [Read more](/help/destinations/ui/export-datasets.md) about the functionality. 
 

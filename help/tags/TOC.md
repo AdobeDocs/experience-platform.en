@@ -44,7 +44,6 @@ role: Developer
 * Client-side information {#client-side}
   * [Overview](./ui/client-side/overview.md)
   * [Asynchronous deployment](./ui/client-side/asynchronous-deployment.md)
-  * [Satellite object reference](./ui/client-side/satellite-object.md)
   * [Deploy JavaScript tags to manage customer consent](./ui/client-side/consent.md)
   * [Content Security Policy (CSP) support](./ui/client-side/content-security-policy.md)
   * [Subresource Integrity (SRI) support](./ui/client-side/sri.md)
@@ -86,27 +85,53 @@ role: Developer
       * [Release notes](./extensions/client/client-data-layer/release-notes.md)
     * Adobe Content Analytics {#content-analytics}
       * [Overview](./extensions/client/content-analytics/overview.md)
+      * [Release notes](./extensions/client/content-analytics/release-notes.md)
     * Adobe ContextHub {#contexthub}
       * [Overview](./extensions/client/contexthub/overview.md)
     * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
     * Adobe Experience Cloud ID Service {#id-service}
       * [Overview](./extensions/client/id-service/overview.md)
       * [Release notes](./extensions/client/id-service/release-notes.md)
-    * Adobe Experience Platform Demo {#platform-demo}
-      * [Overview](./extensions/client/platform-demo/overview.md)
-    * Adobe Experience Platform Web SDK {#web-sdk}
-      * [Overview](./extensions/client/web-sdk/overview.md)
-      * [Configure the Web SDK tag extension](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
-      * [Event types](./extensions/client/web-sdk/event-types.md)
-      * [Action types](./extensions/client/web-sdk/action-types.md)
-      * [Data element types](./extensions/client/web-sdk/data-element-types.md)
-      * [Accessing the ECID](./extensions/client/web-sdk/accessing-the-ecid.md)
-      * [Web SDK plug-ins](./extensions/client/web-sdk/web-sdk-plugins.md)
-      * [Web SDK extension release notes](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
-      * [Web SDK plug-ins release notes](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
     * Adobe Experience Manager Asset Insights {#asset-insights}
       * [Overview](./extensions/client/asset-insights/overview.md)
       * [Release notes](./extensions/client/asset-insights/release-notes.md)
+    * Adobe Experience Platform Demo {#platform-demo}
+      * [Overview](./extensions/client/platform-demo/overview.md)
+    * Adobe Experience Platform Web SDK {#web-sdk}
+      * [Overview](extensions/client/web-sdk/overview.md)
+      * [Getting started](extensions/client/web-sdk/getting-started.md)
+      * Configure {#configure}
+        * [Overview](extensions/client/web-sdk/configure/config-overview.md)
+        * [Custom build components](extensions/client/web-sdk/configure/custom-build-components.md)
+        * [SDK instance](extensions/client/web-sdk/configure/general.md)
+        * [Datastreams](extensions/client/web-sdk/configure/datastreams.md)
+        * [Consent](extensions/client/web-sdk/configure/consent.md)
+        * [Identity](extensions/client/web-sdk/configure/identity.md)
+        * [Personalization](extensions/client/web-sdk/configure/personalization.md)
+        * [Data collection](extensions/client/web-sdk/configure/data-collection.md)
+        * [Streaming media](extensions/client/web-sdk/configure/streaming-media.md)
+        * [Push notifications](extensions/client/web-sdk/configure/push-notifications.md)
+        * [Advertising](extensions/client/web-sdk/configure/advertising.md)
+        * [Configuration overrides](extensions/client/web-sdk/configure/configuration-overrides.md)
+        * [Advanced settings](extensions/client/web-sdk/configure/advanced-settings.md)
+      * [Event types](extensions/client/web-sdk/event-types.md)
+      * Action types {#actions}
+        * [Overview](extensions/client/web-sdk/actions/actions-overview.md)
+        * [Apply propositions](extensions/client/web-sdk/actions/apply-propositions.md)
+        * [Apply response](extensions/client/web-sdk/actions/apply-response.md)
+        * [Evaluate rulesets](extensions/client/web-sdk/actions/evaluate-rulesets.md)
+        * [Get Media Analytics tracker](extensions/client/web-sdk/actions/get-media-analytics-tracker.md)
+        * [Redirect with identity](extensions/client/web-sdk/actions/redirect-with-identity.md)
+        * [Reset event merge ID](extensions/client/web-sdk/actions/reset-event-merge-id.md)
+        * [Send event](extensions/client/web-sdk/actions/send-event.md)
+        * [Send media event](extensions/client/web-sdk/actions/send-media-event.md)
+        * [Send push subscription](extensions/client/web-sdk/actions/send-push-subscription.md)
+        * [Set consent](extensions/client/web-sdk/actions/set-consent.md)
+        * [Update variable](extensions/client/web-sdk/actions/update-variable.md)
+      * [Data element types](extensions/client/web-sdk/data-element-types.md)
+      * [Accessing the ECID](extensions/client/web-sdk/accessing-the-ecid.md)
+      * [Web SDK extension release notes](extensions/client/web-sdk/web-sdk-ext-release-notes.md)
+    * [Adobe Experience Platform Web SDK Plug-ins](extensions/client/web-sdk-plugins/web-sdk-plugins.md)
     * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
     * Adobe Media Analytics for Audio and Video {#media-analytics}
       * [Overview](./extensions/client/media-analytics/overview.md)
@@ -127,6 +152,8 @@ role: Developer
     * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
     * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)
     * [Airbrake JS Notifier](https://exchange.adobe.com/apps/ec/103342)
+    * [!DNL Algolia] Insights {#algolia-insights}
+      * [Overview](./extensions/client/algolia/overview.md) 
     * [Amplitude](https://exchange.adobe.com/apps/ec/108010)
     * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)
     * [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)
@@ -193,6 +220,8 @@ role: Developer
     * [SDI Survey](https://exchange.adobe.com/apps/ec/102991)
     * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
     * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
+    * [!DNL Snap Pixel] {#snap-pixel}
+      * [Overview](./extensions/client/snap-pixel/overview.md)
     * [Storage Spanner](https://exchange.adobe.com/apps/ec/102990)
     * [TAGS by Loop Horizon](https://exchange.adobe.com/apps/ec/106092)
     * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)
@@ -211,7 +240,14 @@ role: Developer
     * [Overview](./extensions/server/overview.md)
     * Adobe Experience Platform Cloud Connector {#cloud-connector}
       * [Overview](./extensions/server/cloud-connector/overview.md)
+      * [mTLS Certificates](./extensions/server/cloud-connector/mtls.md)
       * [Release notes](./extensions/server/cloud-connector/release-notes.md)
+    * [!DNL Adform] {#adform}
+      * [Overview](./extensions/server/adform/overview.md)
+    * [!DNL Algolia] {#algolia}
+      * [Overview](./extensions/server/algolia/overview.md)
+    * [!DNL Amazon] {#amazon}
+      * [Overview](./extensions/server/amazon/overview.md)
     * [!DNL AWS] {#aws}
       * [Overview](./extensions/server/aws/overview.md)
     * [!DNL Braze] {#braze}
@@ -237,6 +273,8 @@ role: Developer
     * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
     * [!DNL Pinterest] {#pinterest}
       * [Overview](./extensions/server/pinterest/overview.md)
+    * [!DNL Reddit] {#reddit}
+      * [Overview](./extensions/server/reddit/overview.md)
     * [!DNL Snapchat] {#snap}
       * [Overview](./extensions/server/snap/overview.md)
     * [!DNL Snowflake] {#snowflake}
@@ -286,6 +324,7 @@ role: Developer
   * [Hosting third-party libraries](./extension-dev/third-party-libraries.md)
   * [Turbine free variable](./extension-dev/turbine.md)
   * [Backwards compatibility standard](./extension-dev/backwards-compatibility.md)
+  * [Shared private extensions](./extension-dev/shared-private-extensions.md)
 * Reactor API {#api}
   * [Overview](./api/overview.md)
   * [Authenticate and access the Reactor API](./api/getting-started.md)
@@ -323,5 +362,5 @@ role: Developer
 * [FAQ](./faq.md)
 * [Terminology updates](./term-updates.md)
 * [Deprecating support for Internet Explorer 10 and 11](./ie-deprecation.md)
-* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 

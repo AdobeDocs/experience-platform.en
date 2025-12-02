@@ -59,7 +59,7 @@ The following is a list of documentation for client-side tag extensions. For a l
 * [Cheetah Experiences](https://exchange.adobe.com/apps/ec/102759)*
 * [Clicktale](https://exchange.adobe.com/apps/ec/100082)*
 * [Common Analytics Plugins](./plugins/overview.md)
-* [Common Web SDK Plugins](./web-sdk/web-sdk-plugins.md)
+* [Common Web SDK Plugins](web-sdk-plugins/web-sdk-plugins.md)
 * [Concat](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
 * [Cookie Consent Management by Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/*107037)*

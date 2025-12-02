@@ -25,7 +25,7 @@ To use the create and delete approximate query processing capabilities detailed 
 
 >[!NOTE]
 >
->You must enable the session flag each time you log into Platform.
+>You must enable the session flag each time you log into Experience Platform.
 
 ![The Query Editor with the 'SET aqp=true;' command highlighted.](../images/key-concepts/set-session-flag.png)
 
@@ -77,7 +77,7 @@ The list of dataset samples is displayed in the format of the example below.
 
 ```shell
                   sample_table_name                  |    sample_dataset_id     |    parent_dataset_id     | sample_type | sampling_rate | sample_num_rows |       created      
------------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
+|-----------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
  x5e5cd8ea0a83c418a8ef0928_uniform_4_0_percent_ughk7 | 62ff19853d338f1c07b18965 | 5e5cd8ea0a83c418a8ef0928 | uniform     |           4.0 |             391 | 19/08/2022 05:03:01
 (1 row)
 ```

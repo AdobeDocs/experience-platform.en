@@ -1,14 +1,9 @@
 ---
 title: Ingest Encrypted Data in the Sources UI Workspace
 description: Learn how to ingest encrypted data in the sources UI workspace.
-badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
 ---
 # Ingest encrypted data in the sources UI
-
->[!AVAILABILITY]
->
->Support for encrypted data ingestion in the sources UI is in beta. The feature and documentation are subject to change.
 
 You can ingest encrypted data files and folders to Adobe Experience Platform using cloud storage batch sources. With encrypted data ingestion, you can leverage asymmetric encryption mechanisms to securely transfer batch data into Experience Platform. The supported asymmetric encryption mechanisms are PGP and GPG.
 
@@ -50,7 +45,7 @@ You can create your encryption key pair through the Experience Platform UI. When
 
 >[!ENDSHADEBOX]
 
-In the Platform UI, navigate to the sources workspace and then select [!UICONTROL Key Pairs] from the top header.
+In the Experience Platform UI, navigate to the sources workspace and then select [!UICONTROL Key Pairs] from the top header.
 
 ![The sources catalog with the "Key Pairs" header selected.](../../images/tutorials/edi/catalog.png)
 
@@ -132,7 +127,7 @@ Authenticate with the cloud storage source of your choice. During the data selec
 
 Next, select a sample file from your source data. Since your data is encrypted, Experience Platform will require a sample file in order to create an XDM schema that can be mapped to your source data.
 
-![The "Is this file encrypted?" toggle enabled and the "Select sample file" button selected. ](../../images/tutorials/edi/select_sample_file.png)
+![The "Is this file encrypted?" toggle enabled and the "Select sample file" button selected](../../images/tutorials/edi/select_sample_file.png).
 
 Once you have selected your sample file, configure settings of your data, such as its corresponding data format, delimiter, and compression type. Allow some time for the preview interface to fully render, and then select **[!UICONTROL Save]**.
 

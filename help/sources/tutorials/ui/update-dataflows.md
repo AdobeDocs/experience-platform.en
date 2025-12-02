@@ -11,8 +11,8 @@ Read this tutorial for steps on how to update an existing dataflow, including it
 
 This tutorial requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Update dataflows {#update-dataflows}
 
@@ -62,6 +62,15 @@ From the dataflows page, select the ellipses (`...`) beside the dataflow name an
 The **[!UICONTROL Edit schedule]** dialog box provides you with options to update your dataflow's ingestion frequency and interval rate. Once you set your updated frequency and interval values, select **[!UICONTROL Save]**.
 
 ![A pop-up window that you can use to edit your dataflow's ingestion schedule.](../../images/tutorials/update-dataflows/edit_schedule.png)
+
+Read the following section for details on how weekly ingestion schedules work.
+
+#### Understanding weekly ingestion schedule {#weekly}
+
+When you choose to set your dataflow to run on a weekly schedule, the dataflow will run based on one of these scenarios:
+
+* If your data source has been created but no data has been ingested yet, the first weekly dataflow will run 7 days after the source creation date. This 7-day interval always starts from when the source was created, regardless of when you set up the schedule. After the initial run, the dataflow will continue to execute on a weekly basis according to the configured schedule.
+* If data from your source has been previously ingested and you schedule it for weekly ingestion again, the next dataflow will run 7 days after the most recent successful ingestion.
 
 ### Disable dataflow
 

@@ -15,8 +15,10 @@ role: User
 - Segmentation API {#api}
     - [Overview](api/overview.md)
     - [Getting started](api/getting-started.md)
+    - [Create audience metadata](api/create-audience.md)
     - [Audiences](api/audiences.md)
     - [Export jobs](api/export-jobs.md)
+    - [External audiences](api/external-audiences.md)
     - [Previews and estimates](api/previews-and-estimates.md)
     - [Schedules](api/schedules.md)
     - [Segment definitions](api/segment-definitions.md)
@@ -27,6 +29,7 @@ role: User
     - [Audience dashboard](ui/audience-dashboard.md)
     - [Audience Portal](ui/audience-portal.md)
     - [Audience Composition](ui/audience-composition.md)
+    - [Audience Composition enhancements](ui/composition-enhancements.md)
     - [Segment Builder](ui/segment-builder.md)
     - [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
     - [Ignore year time constraint update](ui/ignore-year.md)
@@ -39,6 +42,7 @@ role: User
   - [Batch segmentation](methods/batch-segmentation.md)
   - [Streaming segmentation](methods/streaming-segmentation.md)
   - [Edge segmentation](methods/edge-segmentation.md)
+  - [Flexible audience evaluation](methods/flexible-audience-evaluation.md)
 - Audience types {#types}
   - [Overview](types/overview.md)
   - [People audiences](types/people-audiences.md)
@@ -53,7 +57,7 @@ role: User
   - [Multi-entity segmentation](tutorials/multi-entity-segmentation.md)
   - [Honoring consent](tutorials/consents.md)
   - [Evaluate a segment definition](tutorials/evaluate-a-segment.md)
-  - [Importing and using external audiences](tutorials/using-external-audiences.md)
+  - [Creating an external audience](tutorials/create-external-audience.md)
   - [Create a dataset to export data](tutorials/create-dataset-export-segment.md)
   - [Enforce data usage compliance for audiences](tutorials/governance.md)
 - Profile Query Language {#pql}

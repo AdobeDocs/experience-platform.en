@@ -80,17 +80,6 @@ In batch queries, updating a row inside the dataset is not supported.
 No. There is no limit on data size, but there is a query timeout limit of 10 minutes from an interactive session. If the query is executed as a batch CTAS then a 10-minute timeout is not applicable. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
 +++
 
-### How do I bypass the limit on the output number of rows from a SELECT query?
-
-+++Answer
-To bypass the output row limit, apply "LIMIT 0" in the query. For example:
-
-```sql
-SELECT * FROM customers LIMIT 0;
-```
-
-+++
-
 ### How do I stop my queries from timing out in 10 minutes?
 
 +++Answer
@@ -123,7 +112,7 @@ The following steps describe how to display a tabular view of a dataset through 
 - After logging into Experience Platform, select **[!UICONTROL Datasets]** in the left navigation of the UI to navigate to [!UICONTROL Datasets] dashboard.
 - The datasets [!UICONTROL Browse] tab opens. You can use the search bar to refine the available options. Select a dataset from the list displayed.
 
-![The Datasets dashboard in the Platform UI with the search bar and a dataset highlighted.](./images/troubleshooting/dataset-selection.png)
+![The Datasets dashboard in the Experience Platform UI with the search bar and a dataset highlighted.](./images/troubleshooting/dataset-selection.png)
 
 - The [!UICONTROL Datasets activity] screen appears. Select **[!UICONTROL Preview dataset]** to open a dialog of the XDM schema and tabular view of flattened data from the selected dataset. More details can be found in the [preview a dataset documentation](../catalog/datasets/user-guide.md#preview-a-dataset)
 
@@ -292,7 +281,7 @@ SELECT count(1) FROM myTableName
 ### Can I sample my data?
 
 +++Answer
-This feature is currently a work-in-progress. Details will be made available in [release notes](../release-notes/latest/latest.md) and through Platform UI dialogs once the feature is ready for release.
+This feature is currently a work-in-progress. Details will be made available in [release notes](../release-notes/latest/latest.md) and through Experience Platform UI dialogs once the feature is ready for release.
 +++
 
 ### What helper functions are supported by Query Service?
@@ -527,7 +516,7 @@ There is no query concurrency limit as batch queries run as back-end jobs. There
 There are monitoring and alerting capabilities to check on query activities and statuses. See the [Query Service audit log integration](./data-governance/audit-log-guide.md) and the [query logs](./ui/overview.md#log) documents for more information.
 +++
 
-### Is there any way to roll back updates? For example, if there is an error or some calculations need reconfiguring when writing data back to Platform, how should that scenario be handled?
+### Is there any way to roll back updates? For example, if there is an error or some calculations need reconfiguring when writing data back to Experience Platform, how should that scenario be handled?
 
 +++Answer
 Currently, we do not support rollbacks or updates in that manner. 
@@ -568,7 +557,7 @@ There are three approaches to restricting access. They are as follows:
 
 +++
     
-### Once the data is returned by Query Service, are there any checks that can be run by Platform to ensure that it hasn't returned any protected data?
+### Once the data is returned by Query Service, are there any checks that can be run by Experience Platform to ensure that it hasn't returned any protected data?
 
 - Query Service supports attribute-based access control. You can restrict access to data at the column/leaf level and/or the struct level. See the documentation to learn more about attribute-based access control. 
 
@@ -576,18 +565,6 @@ There are three approaches to restricting access. They are as follows:
 
 +++Answer
 Yes, SSL modes are supported. See the [SSL modes documentation](./clients/ssl-modes.md) for a breakdown of the different SSL modes available and the level of protection they provide.
-+++
-
-### Do we use TLS 1.2 for all connections from Power BI clients to query service?
-
-+++Answer
-Yes. Data-in-transit is always HTTPS compliant. The currently supported version is TLS1.2.
-+++
-
-### Does a connection made on port 80 still use https?
-
-+++Answer
-Yes, a connection made on port 80 still uses SSL. You can also use port 5432. 
 +++
 
 ### Can I control access to specific datasets and columns for a particular connection? How is this configured?
@@ -618,6 +595,44 @@ Yes, you can use `CREATE VIEW` command without Data Distiller access. This comma
 
 +++Answer
 Yes. Although, certain third-party clients, such as DbVisualizer, may require a separate identifier before and after an SQL block to indicate that a part of a script should be handled as a single statement. More details can be found in the [anonymous block documentation](./key-concepts/anonymous-block.md) or in [the official DbVisualizer documentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect). 
++++
+
+## TLS, Port Access, and Encryption {#tls-port-questions}
+
+### Does a connection made on port 80 still use HTTPS and TLS encryption?
+
++++Answer
+Yes. Connections on port 80 are protected using TLS encryption, and TLS enforcement is required by the service. Plain HTTP connections are not accepted. Port 80 support exists to accommodate certain customer network policies. If your organization blocks port 80, use port 5432 instead. Both ports require TLS and provide the same security posture.
++++
+
+### Does Adobe's Query Service expose data over unencrypted HTTP (port 80)?
+
++++Answer
+No. Connections on port 80 require TLS, and any plaintext HTTP requests are rejected server-side. Port 5432 is also supported and is TLS encrypted.
++++
+
+### Is the use of port 80 for Query Service and Data Distiller a legacy configuration?
+
++++Answer
+No. Port 80 with mandatory TLS is a supported configuration designed for customers with specific network requirements. It is not a legacy or insecure mode. If your environment restricts outbound connections on port 80, use port 5432 instead; both ports enforce TLS.
++++
+
+### Do we use TLS 1.2 for all connections from Power BI clients to Query Service?
+
++++Answer
+Yes. Data in transit is always protected using HTTPS, and the currently supported version is TLS 1.2. All Power BI connections to Query Service require encrypted transport.
++++
+
+### Is port 80 unencrypted when used with Data Distiller?
+
++++Answer
+No. Data Distiller enforces TLS on port 80 and rejects any plaintext HTTP requests. Port 5432 is also supported and is TLS encrypted.
++++
+
+### Are there any risks or limitations when using port 80 with Query Service or Data Distiller?
+
++++Answer
+Yes. TLS is enforced on port 80, and unencrypted connections are not supported. Some organizations block outbound traffic on port 80 due to policy restrictions. If this applies to your network, use port 5432 instead. Both ports provide the same level of security because TLS is required in all cases.
 +++
 
 ## Data Distiller {#data-distiller}
@@ -652,12 +667,20 @@ Compute hours for a query can fluctuate due to multiple factors. These include t
 Backend infrastructure is constantly improved to optimize Compute Hour utilization and processing time. As a result, you may notice changes over time as performance enhancements are implemented.
 +++
 
+### Does Data Distiller performance differ between development and production sandboxes?
+
++++Answer
+You can expect similar performance when you run queries in both development and production sandboxes. Both environments are designed to provide the same level of processing capability. However, differences in compute hours can occur, depending on the amount of data you process and overall system activity at the time you run your query.
+
+Track your compute hour usage in the [License Usage dashboard](../dashboards/guides/license-usage.md) in the Experience Platform UI.
++++
+
 ## Queries UI
 
 ### The "Create query" is stuck "Initializing connection..." when trying to connect to Query Service. How do I fix the issue?
 
 +++Answer
-If the "Create query" is stuck on "Initializing connection...", this is likely to be a connection or session issue. Refresh the browser if you are using the Platform UI and try again.
+If the "Create query" is stuck on "Initializing connection...", this is likely to be a connection or session issue. Refresh the browser if you are using the Experience Platform UI and try again.
 +++
 
 ## Dataset Samples
@@ -722,12 +745,18 @@ and timestamp < to_timestamp('2022-07-23');
 The MERGE INTO SQL construct is not supported by Data Distiller or Query Service.
 +++
 
-## ITAS Queries
+## ITAS Queries {#itas-queries}
 
 ### What are ITAS queries?
 
 +++Answer
 INSERT INTO queries are called ITAS queries. Note that CREATE TABLE queries are referred to as CTAS queries.
++++
+
+### Does Query Service support update and delete operations?
+
++++Answer
+No, Query Service does not support update or delete operations. It only supports append-only operations using ITAS.
 +++
 
 ## Third-party tools {#third-party-tools}
@@ -751,6 +780,12 @@ Yes, third-party desktop clients can be connected to Query Service through a one
 +++Answer
 The value for non-expiring credentials are the concatenated arguments from the `technicalAccountID` and the `credential` taken from the configuration JSON file. The password value takes the form: `{{technicalAccountId}:{credential}}`.
 See the documentation for more information on how to [connect to external clients with credentials](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
++++
+
+### Are there any restrictions on special characters for non-expiring credentials passwords?
+
++++Answer
+Yes. When you set a password for non-expiring credentials, you must include at least one number, one lowercase letter, one uppercase letter, and one special character. The dollar sign ($) is not supported. Use special characters such as !, @, #, ^, or & instead.
 +++
 
 ### What kind of third-party SQL editors can I connect to Query Service Editor?

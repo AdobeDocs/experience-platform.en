@@ -100,7 +100,7 @@ If the element is an anchor tag (`<a>`) to linked content, you can also specify 
 >
 >This option should be used with extreme caution due to the potential negative consequences it poses to the user experience if used incorrectly.
 
-When you use link delay, Platform actually prevents the browser from navigating off the page. It then performs a JavaScript redirect to the original destination after the specified timeout. This is especially dangerous when when your page markup has `<a>` tags where the intended functionality does not actually navigate the user away from the page. If you cannot solve your problem in any other way, you should be extremely precise with your selector definition so that this event will trigger exactly where you need it and nowhere else.
+When you use link delay, Experience Platform actually prevents the browser from navigating off the page. It then performs a JavaScript redirect to the original destination after the specified timeout. This is especially dangerous when when your page markup has `<a>` tags where the intended functionality does not actually navigate the user away from the page. If you cannot solve your problem in any other way, you should be extremely precise with your selector definition so that this event will trigger exactly where you need it and nowhere else.
 
 The default link delay value is 100 milliseconds. Please note that tags will always wait for the amount of time specified and is not connected to the execution of the rule's actions in any way. It is possible that the delay will force the user to wait longer than is necessary, and also possible that the delay will not be long enough for all the rule's actions to successfully complete. Longer delays provide more time for rule execution but also worsen the user experience.
 
@@ -630,7 +630,7 @@ This action triggers all rules that use a specific [direct call event](#direct-c
 
 ![Screenshot of a Trigger Direct Call action in the Data Collection UI](../../../images/extensions/client/core/direct-call-action.png)
 
-The action maps directly to the [`track` method](../../../ui/client-side/satellite-object.md#track) in the `satellite` object, which can be accessed by client-side code.
+This action maps directly to [`_satellite.track()`](/help/collection/tags/track.md).
 
 ## Core extension data element types
 
@@ -832,7 +832,7 @@ Session storage is similar to local storage, except the data is discarded after 
 
 ### Visitor behavior
 
-Similar to Page Info, this data element uses common behavior types to enrich logic within rules and other Platform solutions.
+Similar to Page Info, this data element uses common behavior types to enrich logic within rules and other Experience Platform solutions.
 
 Select one of the following visitor behavior attributes:
 

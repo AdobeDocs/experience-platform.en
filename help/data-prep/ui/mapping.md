@@ -4,20 +4,25 @@ title: Data Prep UI Guide
 description: Learn how to use data prep functions in the Experience Platform UI to map CSV files to an XDM schema.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
 ---
-# Data Prep UI Guide
+# Data Prep UI Guide {#data-prep-ui-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_data_prep_import_mapping"
+>title="Download Template"
+>abstract="Download the csv template to perform the mapping offline."
 
 Read this guide to learn how to use [data prep](../home.md) mapping functions in the Adobe Experience Platform user interface to map CSV files to an [Experience Data Model (XDM) schema](../../xdm/home.md).
 
 ## Get Started
 
-This tutorial requires a working understanding of the following Platform components:
+This tutorial requires a working understanding of the following Experience Platform components:
 
-* [[!DNL Experience Data Model (XDM)] System](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+* [[!DNL Experience Data Model (XDM)] System](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [Identity Service](../../identity-service/home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Sources](../../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sources](../../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
 
 ## Access the mapping interface in the UI
 
@@ -145,6 +150,10 @@ When finished, select **[!UICONTROL Upload file]** and select the updated csv fi
 >[!ENDTABS]
 
 With your mappings complete, you can now select **[!UICONTROL Finish]** and proceed to the next step to complete your dataflow.
+
+>[!TIP]
+>
+>After you finish creating your mappings, wait up to 10 minutes before starting data ingestion. This waiting period ensures that your new mappings are fully saved and available in the system.
 
 ![The mapping interface with a complete set of mappings.](../images/ui/mapping/completed_mappings.png)
 

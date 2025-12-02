@@ -13,7 +13,7 @@ Roles define the access that an administrator, a specialist, or an end-user has 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Create new role"
->abstract="Create new roles to better categorize users interacting with your Platform instance. For example, you can create a role for an internal marketing team and apply the Regulated Health Data (RHD) label to that role, allowing your internal marketing team to access Protected Health Information (PHI). Alternatively, you can also create a role for an external agency and deny that role access to PHI data by not applying the RHD label to that role."
+>abstract="Create new roles to better categorize users interacting with your Experience Platform instance. For example, you can create a role for an internal marketing team and apply the Regulated Health Data (RHD) label to that role, allowing your internal marketing team to access Protected Health Information (PHI). Alternatively, you can also create a role for an external agency and deny that role access to PHI data by not applying the RHD label to that role."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Manage a role"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Apply labels to a role"
 

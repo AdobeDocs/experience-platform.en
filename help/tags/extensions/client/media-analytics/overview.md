@@ -172,7 +172,7 @@ The MA extension exposes the `get-instance` and `media-heartbeat` shared modules
 
 >[!NOTE]
 >
->**Testing:** For this release, to test your extension you must upload it to [Platform](../../../extension-dev/submit/upload-and-test.md), where you have access to all dependent extensions.
+>**Testing:** For this release, to test your extension you must upload it to [Experience Platform](../../../extension-dev/submit/upload-and-test.md), where you have access to all dependent extensions.
 
 
 <!--

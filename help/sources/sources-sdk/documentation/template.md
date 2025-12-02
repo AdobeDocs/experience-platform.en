@@ -22,7 +22,7 @@ exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
 
 *Add information in this section about anything that customers need to be aware of before starting to set up the source in the Adobe Experience Platform user interface. This can be about:*
 
-* *needing to be added to an allow list*
+* *needing to be added to an allowlist*
 * *requirements for email hashing*
 * *any account specifics on your side*
 * *how to obtain an API key to connect to your platform*
@@ -39,13 +39,13 @@ In order to connect *YOURSOURCE* to Experience Platform, you must provide values
 
 For more information on these credentials, see the *YOURSOURCE* authentication documentation. *Please add link to your platform's authentication documentation here*.
 
-## Connect *YOURSOURCE* to Platform using the [!DNL Flow Service] API
+## Connect *YOURSOURCE* to Experience Platform using the [!DNL Flow Service] API
 
-The following tutorial walks you through the steps to create a *YOURSOURCE* source connection and create a dataflow to bring *YOURSOURCE* data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a *YOURSOURCE* source connection and create a dataflow to bring *YOURSOURCE* data to Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Create a base connection {#base-connection}
 
-A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your *YOURSOURCE* authentication credentials as part of the request body.
 
@@ -69,7 +69,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "{YOURSOURCE} base connection",
-        "description": "{YOURSOURCE} base connection to authenticate to Platform",
+        "description": "{YOURSOURCE} base connection to authenticate to Experience Platform",
         "connectionSpec": {
             "id": "6360f136-5980-4111-8bdf-15d29eab3b5a",
             "version": "1.0"
@@ -90,7 +90,7 @@ curl -X POST \
 | `name` | The name of your base connection. Ensure that the name of your base connection is descriptive as you can use this to look up information on your base connection. |
 | `description` | An optional value that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
-| `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
+| `auth.specName` | The authentication type that you are using to authenticate your source to Experience Platform. |
 | `auth.params.` | Contains the credentials required to authenticate your source. |
 
 **Response**
@@ -107,7 +107,7 @@ A successful response returns the newly created base connection, including its u
 ### Explore your source {#explore}
 
 Using the base connection ID you generated in the previous step, you can explore files and directories by performing GET requests.
-Use the following calls to find the path of the file you wish to bring into [!DNL Platform]:
+Use the following calls to find the path of the file you wish to bring into [!DNL Experience Platform]:
 
 **API format**
 
@@ -123,9 +123,9 @@ When performing GET requests to explore your source's file structure and content
 | `{BASE_CONNECTION_ID}` | The base connection ID generated in the previous step. |
 | `objectType=rest` | The type of object that you wish to explore. Currently, this value is always set to `rest`. |
 | `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. |
-| `fileType=json` | The file type of the file you want to bring to Platform. Currently, `json` is the only supported file type. |
+| `fileType=json` | The file type of the file you want to bring to Experience Platform. Currently, `json` is the only supported file type. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
-| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `list_id` string in base64. In the example below, `"list_id": "10c097ca71"` encoded in base64 equates to `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`. |
+| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Experience Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `list_id` string in base64. In the example below, `"list_id": "10c097ca71"` encoded in base64 equates to `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`. |
 
 
 **Request**
@@ -289,7 +289,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ### Create a target XDM schema {#target-schema}
 
-In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
+In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
@@ -346,7 +346,7 @@ curl -X POST \
 | `name` | The name of your target connection. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
 | `description` | An optional value that you can include to provide more information on your target connection. |
 | `connectionSpec.id` | The connection specification ID that corresponds to [!DNL Data Lake]. This fixed ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | The format of the *YOURSOURCE* data that you want to bring to Platform. |
+| `data.format` | The format of the *YOURSOURCE* data that you want to bring to Experience Platform. |
 | `params.dataSetId` | The target dataset ID retrieved in a previous step. |
 
 
@@ -439,7 +439,7 @@ A successful response returns details of the newly created mapping including its
 
 ### Create a flow {#flow}
 
-The last step towards bringing data from *YOURSOURCE* to Platform is to create a dataflow. By now, you have the following required values prepared:
+The last step towards bringing data from *YOURSOURCE* to Experience Platform is to create a dataflow. By now, you have the following required values prepared:
 
 * [Source connection ID](#source-connection)
 * [Target connection ID](#target-connection)
@@ -503,7 +503,7 @@ curl -X POST \
 | `flowSpec.version` | The corresponding version of the flow specification ID. This value defaults to `1.0`. |
 | `sourceConnectionIds` | The [source connection ID](#source-connection) generated in an earlier step. |
 | `targetConnectionIds` | The [target connection ID](#target-connection) generated in an earlier step. |
-| `transformations` | This property contains the various transformations that are needed to be applied to your data. This property is required when bringing non-XDM-compliant data to Platform. |
+| `transformations` | This property contains the various transformations that are needed to be applied to your data. This property is required when bringing non-XDM-compliant data to Experience Platform. |
 | `transformations.name` | The name assigned to the transformation. |
 | `transformations.params.mappingId` | The [mapping ID](#mapping) generated in an earlier step. |
 | `transformations.params.mappingVersion` | The corresponding version of the mapping ID. This value defaults to `0`. |

@@ -15,11 +15,16 @@ role: Admin,User,Developer,Leader
 * [AI Assistant UI guide](ui-guide.md)
 * [Privacy, Security, and Governance](privacy.md)
 * [FAQ](faq.md)
+* [Legal disclaimer](legal-disclaimer.md)
 * New features {#new-features}
   * [AI Assistant capabilities in Alpha and Beta](./new-features/alpha-beta.md)
-  * [AI Assistant for Customer Support](./new-features/customer-support.md)
   * [Monitor significant changes and forecast audiences](./new-features/audience-forecasting.md)
   * [Natural language estimation](./new-features/natural-language.md)
+  * [Product Support Agent](./new-features/customer-support.md)
   * [XDM field discovery for audience creation](./new-features/xdm-field-discovery.md)
-* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* Model details {#model-details}
+  * [Model details overview](./model-details/overview.md)
+  * [AI Assistant Natural Operational Insights Language to SQL](./model-details/natural-language-to-sql.md)
+  * [Send-Time Optimization](./model-details/send-time-optimization.md)
+* [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 

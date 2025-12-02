@@ -1,7 +1,7 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform Identity Service
-breadcrumb-title: Platform Identity Service Guide
+breadcrumb-title: Experience Platform Identity Service Guide
 user-guide-description: Bridge customer identities across devices and systems to deliver personalized digital experiences.
 feature: Identities
 role: Admin,Developer
@@ -16,12 +16,12 @@ role: Admin,Developer
   - [Identity linking logic](./features/identity-linking-logic.md)
   - [Identity graph viewer](./features/identity-graph-viewer.md)
   - [Deletions in Identity Service](./features/deletion.md)
-  - Identity graph linking rules {#identity-graph-linking-rules}
+  - Identity Graph Linking Rules {#identity-graph-linking-rules}
     - [Feature overview](./identity-graph-linking-rules/overview.md)
-    - [Identity optimization algorithm](./identity-graph-linking-rules/identity-optimization-algorithm.md)
-    - [Implementation guide for identity graph linking rules](./identity-graph-linking-rules/implementation-guide.md)
-    - [Example graph configurations](./identity-graph-linking-rules/example-configurations.md)
-    - [Troubleshooting for identity graph linking rules](./identity-graph-linking-rules/troubleshooting.md)
+    - [Identity Optimization Algorithm](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+    - [Implementation guide for Identity Graph Linking Rules](./identity-graph-linking-rules/implementation-guide.md)
+    - [Configurations guide](./identity-graph-linking-rules/example-configurations.md)
+    - [Troubleshooting for Identity Graph Linking Rules](./identity-graph-linking-rules/troubleshooting.md)
     - [Namespace priority](./identity-graph-linking-rules/namespace-priority.md)
     - [Graph Simulation UI](./identity-graph-linking-rules/graph-simulation.md)
     - [Identity settings UI](./identity-graph-linking-rules/identity-settings-ui.md)
@@ -41,4 +41,4 @@ role: Admin,Developer
 - [Define identity fields in the UI](label-identities.md)
 - [Privacy request processing](privacy.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
-- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -29,7 +29,7 @@ Finally, connections can also be distinguished between public destinations avail
 Profile export destinations receive raw data, often with email address as the primary key. Experience Platform currently supports two types of profile export destinations:
 
 * [Batch (file-based) destinations](#file-based)
-* [Advanced enterprise destinations (streaming profile export destinations) ](#advanced-enterprise-destinations)
+* [Advanced enterprise destinations (streaming profile export destinations)](#advanced-enterprise-destinations)
 
 ### Advanced enterprise destinations (streaming profile export destinations) {#advanced-enterprise-destinations}
 
@@ -46,6 +46,12 @@ Advanced enterprise destinations include:
 * [HTTP API destination](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
 * [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md)
+* [Snowflake Streaming](catalog/warehouses/snowflake.md)
+* [Snowflake Batch](catalog/warehouses/snowflake-batch.md)
+
+>[!NOTE]
+>
+>The Snowflake destinations are currently available only to US customers. If you need access outside of the US, please reach out to your Adobe account team.
 
 ### Batch (file-based) destinations {#file-based}
 
@@ -90,7 +96,7 @@ Read more about how to [export datasets](/help/destinations/ui/export-datasets.m
 
 ## Extensions {#extensions}
 
-Platform leverages the power and flexibility of tag management, allowing you to configure tag extensions in the UI. 
+Experience Platform leverages the power and flexibility of tag management, allowing you to configure tag extensions in the UI. 
 
 >[!TIP]
 >

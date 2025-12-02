@@ -1,151 +1,114 @@
 ---
-title: Adobe Experience Platform Release Notes February 2025
-description: The February 2025 release notes for Adobe Experience Platform.
+title: Adobe Experience Platform Release Notes October 2025
+description: The October 2025 release notes for Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
-# Adobe Experience Platform release notes 
+# Adobe Experience Platform release notes
 
-**Release date: February 18, 2025**
+>[!TIP]
+>
+>Refer to the following documentation for release notes of other Adobe Experience Platform applications:
+>
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-Updates to existing features and documentation in Adobe Experience Platform:
+**Release date: October 22, 2025**
 
-- [AI Assistant](#ai-assistant)
-- [Catalog Service](#catalog-service)
-- [Data Prep](#data-prep)
+New features and updates to existing features in Adobe Experience Platform:
+
+- [Agent Orchestrator](#agent-orchestrator)
+- [Alerts](#alerts)
 - [Destinations](#destinations)
-- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes){target="_blank"}
+- [Real-Time CDP B2B Edition](#b2b)
 - [Sources](#sources)
-- [Segmentation Service](#segmentation)
-- [Documentation updates](#documentation-updates)
-  - [Edge network and hub comparison](#edge)
-  - [Expanded Flow Service API for sources](#flow-service)
-  - [Back up object configurations using sandbox tooling](#back-up-object-configurations)
-  - [Enable a center of excellence using sandbox tooling](#center-of-excellence)
-  - [Experience Event Dataset Retention in the data lake](#experience-event-dataset-retention)
 
-## AI Assistant {#ai-assistant}
+## Agent Orchestrator {#agent-orchestrator}
 
-AI Assistant in Adobe Experience Platform is a conversational experience that you can use to accelerate your workflows in Adobe applications. You can use AI Assistant to better understand product knowledge, troubleshoot problems, or search through information and find operational insights. AI Assistant supports Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics.
+Adobe Experience Platform Agent Orchestrator is the new agentic layer in Adobe Experience Platform.
 
-**New features**
-
-| Feature | Description |
-| --- | --- |
-| General availability of operational insights | Operational insights in AI Assistant are now in GA. Operational insights refer to answers AI Assistant generates about your metadata objects (attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources), including counts, lookups, and lineage impact. Operational insights does not look at any data within the sandbox. For more information, read the [AI Assistant UI guide](../../ai-assistant/ui-guide.md). |
-| Support for question autocomplete | When inputting a question to AI Assistant, you can now select from a list of recommended questions that AI Assistant provides. Use this feature to further accelerate your workflows with AI Assistant. For more information, read the guide on [using question autocomplete with AI Assistant](../../ai-assistant/ui-guide.md#use-question-autocomplete). |
-| Support for dataset observability | You can now use AI Assistant to answer questions about specific dataset metrics such as storage sizes and row counts. Data observability questions support qualifiers that you can use to filter your queries by a certain time period. For more information, read the [AI Assistant questions guide](../../ai-assistant/questions.md). |
-
-{style="table-layout:auto"}
-
-For more information, read the [AI Assistant overview](../../ai-assistant/home.md).
-
-## Catalog Service {#catalog-service}
-
-Catalog Service is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the data lake as files and directories, Catalog holds the metadata and description of those files and directories for lookup and monitoring purposes.
-
-| Feature | Description |
-| --- | --- |
-| New API endpoint | Manage your Adobe Experience Platform dataset metadata more efficiently with the new [Catalog Service API /v2/dataSets/{DATASET_ID} endpoint](../../catalog/api/update-object.md#patch-v2-notation). Easily update complex, deeply nested dataset attributes as the system automatically creates missing path levels to save you time, reduce manual steps, and minimize errors. |
-
-{style="table-layout:auto"}
-
-For more information on Catalog Service, read the [Catalog Service overview](../../catalog/home.md).
-
-## Data Prep {#data-prep}
-
-Use data prep to map, transform, and validate data to and from Experience Data Model (XDM).
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| Enhanced support for importing and exporting mappings | You can now export mappings to a CSV file and configure them locally on a spreadsheet. You can then import your updated mappings to Experience Platform using the mapping interface in the UI. You can use this capability to configure large numbers of mappings without having to manually build them in the UI. Additionally, when creating a new dataflow, you can upload a copy of your mappings directly to Experience Platform to accelerate your workflow. For more information, read the guide on [importing and exporting mappings](../../data-prep/ui/mapping.md#import-mapping). |
-
-{style="table-layout:auto"}
-
-For more information, read the [Data Prep overview](../../data-prep/home.md).
-
-## Destinations (updated February 20) {#destinations}
-
-[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
-
-**New or updated destinations** {#new-updated-destinations}
-
-| Destination | Description |
-| --- | --- |
-| [(Beta) Marketo Engage Person Sync](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Use the [!DNL Marketo Engage Person Sync] connector to stream updates from person audiences to the corresponding records in your [!DNL Marketo Engage] instance. This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative. |
-| [The Trade Desk CRM connection](/help/destinations/catalog/advertising/tradedesk-emails.md) general availability | [!DNL The Trade Desk CRM] connection is now generally available. Use [!DNL The Trade Desk] CRM destination to activate profiles to your [!DNL Trade Desk] account for audience targeting and suppression based on CRM data. |
-| [RainFocus Attendee Profiles connection](/help/destinations/catalog/marketing-automation/rainfocus.md) | Use the [!DNL RainFocus Attendee Profiles] destination to stream customer profiles from Adobe Experience Platform into the [!DNL RainFocus] platform in order to create and update attendee profiles. |
-| [Criteo connection](/help/destinations/catalog/advertising/criteo.md) general availability | The [!DNL Criteo ] connection is now generally available. Criteo powers trusted and impactful advertising to bring richer experiences to every consumer across the open internet. With the world's largest commerce data set and best-in-class AI, Criteo ensures each touchpoint across the shopping journey is personalized to reach customers with the right ad, at the right time.|
-| [[!DNL Amazon Ads] connection](../../destinations/catalog/advertising/amazon-ads.md) | The [!DNL Amazon Ads] connector, previously in beta, is now generally available. The connector has also been updated to send a consent granted signal for all profiles who have consented to have their personal data used for advertising. Read more about the new [Amazon Ads Consent Signal](../../destinations/catalog/advertising/amazon-ads.md#destination-details) control.  |
-
-{style="table-layout:auto"}
-
-**New or updated functionality** {#destinations-new-updated-functionality}
-
-| Feature | Description |
-| --- | --- |
-| Use access labels to manage user access to destination dataflows | As part of the [[!UICONTROL attribute-based access control]](/help/access-control/abac/overview.md) functionality in Real-Time CDP, you can now apply access labels to [destination dataflows](/help/dataflows/ui/monitor-destinations.md). This way, you can ensure that only a subset of users in your organization get access to specific destination dataflows. <br> **Important**: When searching for destination dataflows using the search box at the top of the Experience Platform user interface, the results may include destination dataflows which your user access labels restrict you from seeing. This behavior will be corrected in a future update. |
-| [Audience-level reporting](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) for the [Marketo Engage connection](/help/destinations/catalog/adobe/marketo-engage.md) | You can now [view information](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) about the activated, excluded, or failed identities broken down on an audience level, for each audience that is part of the dataflows for this destination.|
-| External audiences support for the [TikTok](/help/destinations/catalog/social/tiktok.md) and [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) connections | You can activate external audiences to these destinations from [custom uploads](../../segmentation/ui/audience-portal.md#import-audience) and [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
-| Export arrays, maps, and objects to cloud storage destinations | By using the new **[!UICONTROL Export arrays, maps, objects]** toggle when connecting to a cloud storage destination, you can new export complex objects to select destinations. [Read more](/help/destinations/ui/export-arrays-maps-objects.md) about the functionality. |
-
-{style="table-layout:auto"}
-
-**Fixes and enhancements** {#destinations-fixes-and-enhancements}
-
-- An issue in the Destination SDK testing tools has been fixed. Some customers or partners were encountering issues with the [sample profile generation tool](/help/destinations/destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md) due to an unsupported format when the schema used for generating profiles included data types with a `No format` selector.
-- An issue when updating the `targetConnection` spec of destinations, using the Flow Service API, has been fixed. In some cases, the PATCH operation would behave similarly to a POST operation, corrupting existing dataflows. This issue is now fixed and all customers can use the Flow Service API to update their `targetConnection` spec. [Read more](/help/destinations/api/edit-destination.md#patch-target-connection).
-- When exporting profiles to file-based destinations, deduplication ensures that only one profile is exported when multiple profiles share the same deduplication key and the same reference timestamp. This release includes an update to the deduplication process, ensuring that successive runs with the same coordinates will always produce the same results, improving consistency. [Read more](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp). 
-
-For more information, read the [destinations overview](../../destinations/home.md).
-
-## Segmentation Service {#segmentation-service}
-
-[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
-
-**New or updated features**
+**Updated features**
 
 | Feature | Description |
 | ------- | ----------- |
-| Persistent split | Audience Composition now supports persistent splits. You can have your split audiences remain constant when splitting by profile by adding an identity namespace to your Split block. More information about this feature can be found in the [Audience Composition documentation](../../segmentation/ui/audience-composition.md). |
+| Audience Agent | The Audience Agent now supports account-based audiences for conversational audience exploration and detecting duplicate audiences. For more information, read the [Audience Agent documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). | 
 
-For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
+For more information on agents, read the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home).
+
+## Alerts {#alerts}
+
+Experience Platform allows you to subscribe to event-based alerts for various Experience Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Experience Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Activation failure rate alert | A new alert has been added for destinations: **Activation failure rate exceeds threshold**. This alert notifies you when the number of failed records during data activation has exceeded the allowed threshold, enabling you to respond quickly to activation issues. Read the documentation on [standard alerts rules](../../observability/alerts/rules.md) for more information. |
+
+{style="table-layout:auto"}
+
+For more information about alerts, read the [[!DNL Observability Insights] overview](../../observability/home.md).
+
+## Destinations {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated destinations**
+
+| Destination | Description |
+| --- | --- |
+| [!DNL Adform] | Use this destination to send Adobe Real-Time CDP audiences to [!DNL Adform] for activation based on the Experience Cloud ID (ECID) and [!DNL Adform]'s ID Fusion. [!DNL Adform]'s ID Fusion is an ID resolution service that enables you to activate your first party audiences based on the Experience Cloud ID (ECID). Read the [[!DNL Adform] documentation](../../destinations/catalog/advertising/adform.md) for more information |
+| [!DNL Amazon Ads] | Additional personal identifier support has been added. This includes fields such as `firstName`, `lastName`, `street`, `city`, `state`, `zip`, and `country`. Mapping these fields as target identities can improve audience match rates. Read the [[!DNL Amazon Ads] documentation](../../destinations/catalog/advertising/amazon-ads.md) for more information. |
+| [!DNL Snowflake Batch] (Limited availability) | Create a live [!DNL Snowflake] data share to receive daily audience updates directly as shared tables into your account. This integration is currently available for customer organizations provisioned in the VA7 region. Read the [[!DNL Snowflake Batch] documentation](../../destinations/catalog/warehouses/snowflake-batch.md) for more information. |
+| [!DNL Snowflake Streaming] (Limited availability) | Create a live [!DNL Snowflake] data share to receive streaming audience updates directly as shared tables into your account. This integration is currently available for customer organizations provisioned in the VA7 region. Read the [[!DNL Snowflake Streaming] documentation](../../destinations/catalog/warehouses/snowflake.md) for more information. |
+
+{style="table-layout:auto"}
+
+**New or updated functionality**
+
+| Feature | Description |
+| --- | --- |
+| [Several new destinations that support audience-level monitoring](../../dataflows/ui/monitor-destinations.md#audience-level-view) | The following destinations now support audience-level monitoring: <ul><li>[!DNL Airship Tags]</li><li>(API) [!DNL Salesforce Marketing Cloud]</li><li>[!DNL Marketo Engage]</li><li>[!DNL Microsoft Bing]</li><li>(V1) [!DNL Pega CDH Realtime Audience]</li><li>(V2) [!DNL Pega CDH Realtime Audience]</li><li>[!DNL Salesforce Marketing Cloud] Account Engagement</li><li>[!DNL The Trade Desk]</li></ul> |
+| Dataset export guardrails fix | A fix has been implemented to the dataset export guardrails. Previously, some datasets that included a timestamp column but were _not_ based on the XDM Experience Events schema were incorrectly treated as Experience Events datasets, limiting exports to a 365-day lookback window. The documented 365-day lookback guardrail now applies exclusively to Experience Events datasets. Datasets using any schema other than the XDM Experience Events schema are now governed by the 10 billion records guardrail. Some customers may see increased export numbers for datasets which erroneously fell under the 365-day lookback window. This enables you to export datasets for predictive workflows that have a long lookback window. For more information, read the [dataset export guardrails](../../destinations/guardrails.md#dataset-exports). |
+| Enhanced audience-level reporting for enterprise destinations | After this release, customers will see more accurate audience reporting numbers that include only audiences relevant for the selected destination. This monitoring adjustment ensures reporting includes only audiences mapped on the dataflow, providing clearer insights into actual data activation. This does not affect the amount of data being activated—it is purely a monitoring enhancement to improve reporting accuracy. |
+| UI greyed-out dataflows due to access labels | To address the issue where some users were seeing blank pages because destination dataflows they did not have access to were being completely hidden, the UI now displays those restricted dataflows in a greyed-out state instead of omitting them entirely. For more details, read the documentation on [using access labels to manage user access to destination dataflows](../../access-control/abac/apply-access-labels-destinations.md#important-callouts-and-items-to-know). |
+
+{style="table-layout:auto"}
+
+For more information, read the [Destinations overview](../../destinations/home.md).
+
+## Real-Time CDP B2B Edition {#b2b}
+
+Real-Time CDP B2B Edition provides comprehensive B2B customer data management capabilities, enabling organizations to build unified customer profiles, create sophisticated B2B audiences, and activate data across various marketing channels.
+
+**New or updated functionality**
+
+| Feature | Description |
+| --- | --- |
+| Deprecation of B2B support for non-standard relationships between B2B entities | Starting January 2026, Real-Time CDP B2B Edition will no longer support **non-standard** relationships between B2B entities. Therefore, you are encouraged to update your B2B entities to use the standard relationships outlined in the [B2B namespaces and schemas guide](../../rtcdp/schemas/b2b.md).  |
+
+{style="table-layout:auto"}
 
 ## Sources {#sources}
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-Use sources in Experience Platform to ingest data from an Adobe application or a third-party data source.
-
-**Updated feature**
+**New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| Support for Views in [!DNL Microsoft Dynamics] | You can now ingest `"entityType": "view"` when using the [!DNL Microsoft Dynamics] source. For more information, read the guide on [connecting a [!DNL Microsoft Dynamics] source to Experience Platform](../../sources/tutorials/api/create/crm/ms-dynamics.md). |
+| Dataset creation change for Adobe Analytics source | As part of the dataflow creation process between Adobe Analytics and Experience Platform, a dataset is created via Catalog Service. This dataset serves as a container for the data to land in. Currently, this process involves a DataSource ID that is pulled from the Analytics report suite, sent to Catalog Service, and then is associated with the newly created dataset. After the change, the option to provide the DataSource ID will no longer be available during dataset creation. Therefore, new datasets created by the Analytics source will no longer have a DataSource ID associated with it in Catalog Service. This change applies only to the metadata and does not change the storage of data in the dataset in any way. However, it is important to know that the DataSource ID provided by Catalog Service will no longer be available in newly created datasets for Adobe Analytics. Read the [Adobe Analytics source documentation](../../sources/connectors/adobe-applications/analytics.md) for more information on the Adobe Analytics source connector. |
+| General Availability of [!DNL Google Ads] source (API-only) | The [API version of the [!DNL Google Ads]](../../sources/tutorials/api/create/advertising/ads.md) source is now in General Availability. The API documentation has been updated to reflect that the latest version is now `v21`, and Experience Platform supports all versions v19 and above. [The UI version](../../sources/tutorials/ui/create/advertising/ads.md) remains in beta and only supports one-time ingestion. To use incremental data ingestion, use the API route. |
+| [!DNL Azure Event Hubs] virtual network support | Adobe now explicitly supports virtual network connections to [[!DNL Azure Event Hubs]](../../sources/connectors/cloud-storage/eventhub.md), enabling data transfer over private networks rather than public networks. Customers can allowlist the Experience Platform VNet to route Event Hubs traffic privately through the Azure private backbone, providing enhanced security and compliance for data ingestion workflows. |
 
 {style="table-layout:auto"}
 
 For more information, read the [sources overview](../../sources/home.md).
 
-## Documentation updates {#documentation-updates}
-
-### Edge Network and hub comparison {#edge}
-
-The [Edge Network and hub comparison](../../landing/edge-and-hub-comparison.md) provides an overview detailing the differences between the two server types for Adobe Experience Platform (hub and Edge Network), including what services are available on each server type, locations of the servers, as well as recommended scenarios for using each server type. 
-
-### Expanded Flow Service API reference for sources {#flow-service}
-
-The [[!DNL Flow Service] API reference](https://developer.adobe.com/experience-platform-apis/references/flow-service/#tag/Source-connections) for sources has been updated with new API request and response examples. Use the expanded API reference to create and update connection specs when integrating your own source to Experience Platform. You can also use the expanded API reference to perform state transitions on your sources entities, update existing source and target connections, and retrieve flows and flow specs given a specific filtering criteria.
-
-### Back up object configurations using sandbox tooling {#back-up-object-configurations}
-
-Read the [back up object configuration guide](../../sandboxes/use-cases/backup-object-configuration.md) for step-by-step instructions on creating a backup package using sandbox tooling to ensure your object configurations are stored and secured.
-
-### Enable a center of excellence using sandbox tooling {#center-of-excellence}
-
-Read the [center of excellence guide](../../sandboxes/use-cases/center-of-excellence.md) for step-by-step instructions on creating a "golden sandbox" package that acts as a center of excellence to efficiently share key configurations.
-
-### Experience Event Dataset Retention in the data lake {#experience-event-dataset-retention}
-
-Take control of Experience Event Dataset Retention in Adobe Experience Platform using Time-To-Live (TTL). [This guide](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) walks you through evaluating, configuring, and managing TTL settings to automatically remove outdated records, optimize storage, and keep your data relevant. Discover best practices, real-world use cases, and key considerations to enhance your data lifecycle management.
+<!--
+| Source | Description |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} [!DNL Talon.one] sources for loyalty data | Use the [[!DNL Talon.One] sources](../../sources/connectors/loyalty/talon-one.md) to ingest batch and streaming loyalty data into Experience Platform. The connector supports streaming of profile data, transaction data, and loyalty data including points earned, points redeemed, points expired, and tier data. For more information, read the [!DNL Talon.One] [batch](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md) and [streaming](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md) documentation. |
+-->

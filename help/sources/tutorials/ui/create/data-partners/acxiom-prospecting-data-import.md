@@ -1,15 +1,9 @@
 ---
 title: Acxiom Prospecting Data Import
 description: Learn how to connect Acxiom Prospecting Data to Adobe Experience Platform and Adobe Real-Time Customer Data Platform using the UI.
-last-substantial-update: 2024-02-21
-badge: Beta
 exl-id: cde0bfe9-0604-41d3-8422-114f58a74d04
 ---
 # Create an [!DNL Acxiom Prospecting Data Import] source connection and dataflow in the UI
-
->[!NOTE]
->
->The [!DNL Acxiom Prospecting Data Import] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 [!DNL Acxiom]'s Prospecting Data Import for Adobe Real-Time Customer Data Platform is a process for delivering the most productive prospect audiences possible. [!DNL Acxiom] takes Real-Time CDP first-party data via a secure export and runs that data through an award-winning hygiene and identity resolution system. This produces a data file to be used as a suppression list. This data file is then matched against the Acxiom Global database, which enables the prospect lists to be tailored for import.
 
@@ -44,7 +38,7 @@ In order to access your bucket on Experience Platform, you need to provide valid
 
 ## Connect your [!DNL Acxiom] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 

@@ -28,7 +28,7 @@ This section describes which types of audiences you can export to this destinati
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).|
 | Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
@@ -68,8 +68,8 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 * Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Your public key must be written as a [!DNL Base64] encoded string.
 * **[!UICONTROL Name]**: Pick a relevant name for your destination.
 * **[!UICONTROL Description]**: Enter a description for your destination.
-* **[!UICONTROL Bucket Name]**: *For S3 connections*. Enter the location of your S3 bucket where [!DNL Platform] will deposit your export data as CSV files. 
-* **[!UICONTROL Folder Path]**: Provide the path in your storage location where [!DNL Platform] will deposit your export data as CSV files.
+* **[!UICONTROL Bucket Name]**: *For S3 connections*. Enter the location of your S3 bucket where [!DNL Experience Platform] will deposit your export data as CSV files. 
+* **[!UICONTROL Folder Path]**: Provide the path in your storage location where [!DNL Experience Platform] will deposit your export data as CSV files.
 * **[!UICONTROL Container]**: *For Blob connections*. The container that holds the Blob your folder path is in.
 * **[!UICONTROL File Format]**: Select **CSV** to export CSV files to your storage location. 
 
@@ -95,7 +95,7 @@ When activating audiences to this destination, Adobe recommends that you select 
 
 ## Exported data {#exported-data}
 
-For [!DNL Adobe Campaign] destinations, [!DNL Platform] creates a `.csv` file in the storage location that you provided. For more information about the files, see the [verify audience activation](../../ui/activate-batch-profile-destinations.md#verify) section in the audience activation tutorial.
+For [!DNL Adobe Campaign] destinations, [!DNL Experience Platform] creates a `.csv` file in the storage location that you provided. For more information about the files, see the [verify audience activation](../../ui/activate-batch-profile-destinations.md#verify) section in the audience activation tutorial.
 
 ## Set up data import into Adobe Campaign {#import-data-into-campaign}
 
@@ -105,6 +105,7 @@ For [!DNL Adobe Campaign] destinations, [!DNL Platform] creates a `.csv` file in
 >* You need to schedule, import, and map your exported segments in Adobe Campaign using [!DNL Campaign] workflows. Refer to [Setting up a recurring import](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) in Adobe Campaign Classic documentation and [About data management activities](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) in Adobe Campaign Standard documentation.
 >* The preferred method to send data to Adobe Campaign is through [!DNL Amazon S3] or [!DNL Azure Blob].
 
-After connecting [!DNL Platform] to your [!DNL Amazon S3] or [!DNL Azure Blob] storage, you must set up the data import from your storage location into Adobe Campaign. To learn how to accomplish this, refer to the following Adobe Campaign documentation pages:
+After connecting [!DNL Experience Platform] to your [!DNL Amazon S3] or [!DNL Azure Blob] storage, you must set up the data import from your storage location into Adobe Campaign. To learn how to accomplish this, refer to the following Adobe Campaign documentation pages:
+
 * [Get started with data import and export](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html) and [Data loading (file)](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html) in the Adobe Campaign Classic documentation.
 * [Get started with processes and data management](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html) and [Load file](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html) in the Adobe Campaign Standard documentation.

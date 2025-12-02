@@ -7,7 +7,7 @@ exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 
 Adobe Experience Platform provides a robust set of tools to manage large, complicated data operations in order to orchestrate consumer experiences. As data is ingested into the system over time, it becomes increasingly important to manage your data stores so that data is used as expected, is updated when incorrect data needs correcting, and is deleted when organizational policies deem it necessary.
 
-<!-- Platform's data lifecycle capabilities allow you to manage your stored data through the following:
+<!-- Experience Platform's data lifecycle capabilities allow you to manage your stored data through the following:
 
 * Scheduling automated dataset expirations
 * Deleting individual records from one or all datasets
@@ -20,11 +20,11 @@ These activities can be performed using the [[!UICONTROL Data Lifecycle] UI work
 
 >[!NOTE]
 >
->Advanced Data Lifecycle Management supports dataset deletions through the [dataset expiration endpoint](./api/dataset-expiration.md) and ID deletions (row-level data) using primary identities via the [workorder endpoint](./api/workorder.md). You can also manage [dataset expirations](./ui/dataset-expiration.md) and [record deletions](./ui/record-delete.md) through the Platform UI. See the linked documentation for more information. Note that Data Lifecycle does not support batch deletion.
+>Advanced Data Lifecycle Management supports dataset deletions through the [dataset expiration endpoint](./api/dataset-expiration.md) and ID deletions (row-level data) using primary identities via the [workorder endpoint](./api/workorder.md). You can also manage [dataset expirations](./ui/dataset-expiration.md) and [record deletions](./ui/record-delete.md) through the Experience Platform UI. See the linked documentation for more information. Note that Data Lifecycle does not support batch deletion.
 
 ## [!UICONTROL Data Lifecycle] UI workspace {#ui}
 
-The [!UICONTROL Data Lifecycle] workspace in the Platform UI allows you to configure and schedule data lifecycle operations, helping to ensure that your records are being maintained as expected.
+The [!UICONTROL Data Lifecycle] workspace in the Experience Platform UI allows you to configure and schedule data lifecycle operations, helping to ensure that your records are being maintained as expected.
 
 For detailed steps on managing data lifecycle tasks in the UI, see the [data lifecycle UI guide](./ui/overview.md).
 
@@ -35,6 +35,11 @@ The [!UICONTROL Data Lifecycle] UI is built on top of the Data Hygiene API, whos
 ## Timelines and transparency {#timelines-and-transparency}
 
 [Record delete](./ui/record-delete.md) and dataset expiration requests each have their own processing timelines and provide transparency updates at key points in their respective workflows. 
+
+>[!TIP]
+>
+>To monitor your current usage against quota limits, see the [Quota reference guide](./api/quota.md).  
+>For entitlement rules, monthly caps, SLA timelines, and exception handling policies, see the [Record delete (UI)](./ui/record-delete.md#quotas) and [Workorder (API)](./api/workorder.md#quotas) documentation.
 
 The following takes place when a [dataset expiration request](./ui/dataset-expiration.md) is created:
 
@@ -52,7 +57,7 @@ The following takes place when a [dataset expiration request](./ui/dataset-expir
 
 >[!IMPORTANT]
 >
->Dataset deletions in Amazon Web Services (AWS) are subject to a latency of around three hours before changes are fully applied. This includes up to two hours for the dataset to be flagged for deletion, followed by an additional hour before it is fully dropped from the system. In contrast, deletion requests for Platform instances that use Azure Data Lake result in immediate changes across business functions. 
+>Dataset deletions in Amazon Web Services (AWS) are subject to a latency of around three hours before changes are fully applied. This includes up to two hours for the dataset to be flagged for deletion, followed by an additional hour before it is fully dropped from the system. In contrast, deletion requests for Experience Platform instances that use Azure Data Lake result in immediate changes across business functions. 
 >
 >For AWS users, this delay may impact batch segmentation, streaming segmentation, previews, estimates, exports, and data access. This latency only affects customers using AWS, as Azure Data Lake users experience immediate updates. For AWS users, it may take up to three hours for deletion requests to fully propagate through all impacted systems. Adjust your expectations accordingly.
 
@@ -74,4 +79,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## Next steps
 
-This document provided an overview of Platform's Data Lifecycle capabilities. To get started making data hygiene requests in the UI, refer to the [UI guide](./ui/overview.md). To learn how to create Data Lifecycle jobs programmatically, refer to the [Data Hygiene API guide](./api/overview.md)
+This document provided an overview of Experience Platform's Data Lifecycle capabilities. To get started making data hygiene requests in the UI, refer to the [UI guide](./ui/overview.md). To learn how to create Data Lifecycle jobs programmatically, refer to the [Data Hygiene API guide](./api/overview.md)

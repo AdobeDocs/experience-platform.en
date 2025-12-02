@@ -1,20 +1,20 @@
 ---
 title: Google Customer Match + Display & Video 360 connection
 description: With the Google Customer Match + Display & Video 360 destination connector, you can use your online and offline data from Experience Platform to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, Gmail, and YouTube.
-badgeBeta: label="Beta" type="Informative"
+badge: Limited Availability
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
 ---
 # [!DNL Google Customer Match + Display & Video 360] connection
+
+>[!NOTE]
+>
+>**Limited availability of the Google Customer Match + Display & Video 360 connector**<br>As we're going through the full lifecycle of maturity on this integration with Google, we're seeing data that points to weaknesses in implementation that need to be corrected before wider adoption can happen. Given these concerns, Adobe has reduced the visibility of this destination to a limited number of customers. We are in active conversations with Google to improve the product experience. We understand this may be disappointing news, but we believe it's the responsible approach to ensure a high-quality, reliable experience for our customers.</br>
 
 Use this destination to activate your first-party PII-based [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) lists directly to [!DNL Google Display & Video 360] properties such as [!DNL Search], [!DNL YouTube], [!DNL Gmail], and the [!DNL Google Display Network].
 
 Certain Google-integrated third parties, such as Adobe Real-Time CDP, can use the [!DNL Google Audience Partner API] to create [!DNL Customer Match] audiences directly in customers' [!DNL Display & Video 360] account.
 
 With the newly introduced capability of being able to utilize [!DNL Customer Matched] audiences across [!DNL Display & Video 360], you are now able to target audiences across an expanded roster of inventory sources. 
-
->[!IMPORTANT]
->
->This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative.
 
 ![Google Customer Match + DV360 destination in the Adobe Experience Platform UI.](/help/destinations/assets/catalog/advertising/gcm-dv360/catalog.png)
 
@@ -58,18 +58,12 @@ To promote the release, they upload email addresses from their CRM database into
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|phone_sha256_e.164|Phone numbers in E164 format, hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
-|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
+|GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
+|IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
+|phone_sha256_e.164|Phone numbers in E164 format, hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
+|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
 
 {style="table-layout:auto"}
-
-<!-- not supported in beta
-
-|GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select this target identity when your source identity is an IDFA namespace.|
-|user_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.| 
-
--->
 
 ## Supported audiences {#supported-audiences}
 
@@ -87,7 +81,7 @@ This section describes which types of audiences you can export to this destinati
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, and others) used in the [!DNL Google Customer Match] destination.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
@@ -98,6 +92,32 @@ Refer to the table below for information about the destination export type and f
 Before setting up a [!DNL Google Customer Match] destination in Experience Platform, make sure you read and adhere to Google's policy for using [!DNL Customer Match], outlined in the [Google support documentation](https://support.google.com/google-ads/answer/6299717).
 
 Next, make sure that your [!DNL Google] account is configured for a [!DNL Standard] or higher permission level. See the [Google Ads documentation](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) for details.
+
+### Account linking requirements {#linking}
+
+Before configuring this destination connector, you must link your Google account ID to Adobe's Google account ID: `4641108541`. 
+
+Data exports will fail if your Google account is not properly linked to Adobe's account ID.
+
+>[!NOTE]
+>
+>For customers who were part of the beta program for this connector: Adobe has updated the Google Partner Account ID from `6219889373` to `4641108541`. 
+>
+>**If you were part of the beta program for the Google Customer Match + Display & Video 360 connector and if your Google account is currently linked to the old Adobe Partner Account ID (`6219889373`) follow the steps below:**
+>
+>1. Unlink your Google account from the old Adobe Partner Account ID (`6219889373`)
+>2. Link your Google account to the new Adobe Partner Account ID (`4641108541`)
+>3. Remove all audiences from your existing dataflows
+>4. Create new dataflows and map your audiences
+>
+>If your Google account is already linked to the new Adobe Partner Account ID (`4641108541`), no action is required from you to use this connector.
+
+**For organizations with manager accounts:**
+
+If your organization uses a [manager [!DNL Google] account](https://support.google.com/google-ads/answer/6139186) to manage multiple client accounts, follow these specific linking requirements:
+
+* **To export to a specific client account:** Link that individual client account (not the manager account) to Adobe's Google account ID: `4641108541`
+* **Manager account linking alone is not sufficient** and will cause data export failures
 
 ### Allow list {#allowlist}
 
@@ -115,8 +135,8 @@ Depending on the type of IDs that you ingest into Adobe Experience Platform, you
 
 There are two methods to activate phone numbers in [!DNL Google Customer Match]:
 
-* **Ingesting raw phone numbers**: you can ingest raw phone numbers in the [!DNL E.164] format into [!DNL Platform], and they are automatically hashed upon activation. If you choose this option, make sure to always ingest your raw phone numbers into the `Phone_E.164` namespace.
-* **Ingesting hashed phone numbers**: you can pre-hash your phone numbers before ingestion into [!DNL Platform]. If you choose this option, make sure to always ingest your hashed phone numbers into the `PHONE_SHA256_E.164` namespace.
+* **Ingesting raw phone numbers**: you can ingest raw phone numbers in the [!DNL E.164] format into [!DNL Experience Platform], and they are automatically hashed upon activation. If you choose this option, make sure to always ingest your raw phone numbers into the `Phone_E.164` namespace.
+* **Ingesting hashed phone numbers**: you can pre-hash your phone numbers before ingestion into [!DNL Experience Platform]. If you choose this option, make sure to always ingest your hashed phone numbers into the `PHONE_SHA256_E.164` namespace.
 
 >[!NOTE]
 >
@@ -124,7 +144,7 @@ There are two methods to activate phone numbers in [!DNL Google Customer Match]:
 
 ### Email hashing requirements {#hashing-requirements}
 
-You can hash email addresses before ingesting them into Adobe Experience Platform, or use email addresses in clear in Experience Platform, and have [!DNL Platform] hash them on activation.
+You can hash email addresses before ingesting them into Adobe Experience Platform, or use email addresses in clear in Experience Platform, and have [!DNL Experience Platform] hash them on activation.
 
 For more information about Google's hashing requirements and other restrictions on activation, see the following sections in Google's documentation:
 
@@ -132,7 +152,6 @@ For more information about Google's hashing requirements and other restrictions 
 * [[!DNL Customer Match] considerations](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_considerations)
 * [[!DNL Customer Match] with phone number](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_phone_number)
 * [[!DNL Customer Match] with mobile device IDs](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
-
 
 To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](../../../ingestion/batch-ingestion/overview.md) and the [streaming ingestion overview](../../../ingestion/streaming-ingestion/overview.md).
 
@@ -142,9 +161,9 @@ If you select to hash the email addresses yourself, make sure to comply with Goo
 
 Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. Refer to the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information. -->
 
-<!-- Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+<!-- Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
-Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
 
 <!-- ## Configure destination - video walkthrough {#video}
@@ -154,6 +173,11 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## Connect to the destination {#connect}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_gcm_dv360_accountID"
+>title="Link Google and Adobe accounts"
+>abstract="Make sure the Google Account ID that you enter here is already linked to your Adobe account. If you have a manager Google account with multiple client accounts and you intend to export data from Experience Platform to a specific client account, you must link that client account with your Adobe account and enter the Account ID here."
 
 >[!IMPORTANT]
 > 
@@ -200,9 +224,9 @@ This is an example of correct identity mapping when activating audience data in 
 Selecting source fields:
 
 * Select the `Email` namespace as source identity if the email addresses you are using are not hashed.
-* Select the `Email_LC_SHA256` namespace as source identity if you hashed customer email addresses on data ingestion into [!DNL Platform], according to [!DNL Google Customer Match] [email hashing requirements](#hashing-requirements).
-* Select the `PHONE_E.164` namespace as source identity if your data consists of non-hashed phone numbers. [!DNL Platform] will hash the phone numbers to comply with [!DNL Google Customer Match] requirements.
-* Select the `Phone_SHA256_E.164` namespace as source identity if you hashed phone numbers on data ingestion into [!DNL Platform], according to [!DNL Facebook] [phone number hashing requirements](#phone-number-hashing-requirements).
+* Select the `Email_LC_SHA256` namespace as source identity if you hashed customer email addresses on data ingestion into [!DNL Experience Platform], according to [!DNL Google Customer Match] [email hashing requirements](#hashing-requirements).
+* Select the `PHONE_E.164` namespace as source identity if your data consists of non-hashed phone numbers. [!DNL Experience Platform] will hash the phone numbers to comply with [!DNL Google Customer Match] requirements.
+* Select the `Phone_SHA256_E.164` namespace as source identity if you hashed phone numbers on data ingestion into [!DNL Experience Platform], according to [!DNL Facebook] [phone number hashing requirements](#phone-number-hashing-requirements).
 
 Selecting target fields:
 
@@ -211,9 +235,9 @@ Selecting target fields:
 
 ![Identity mapping between source and target fields shown in the Mapping step of the activation workflow.](../../assets/catalog/advertising/google-customer-match-dv360/identity-mapping-gcm-dv360.png)
 
-Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
-Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
 
 ![Apply transformation control highlighted in the Mapping step of the activation workflow.](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png)
 

@@ -11,9 +11,24 @@ You can automate query runs by creating query schedules. Scheduled queries run o
 >
 >You can only add a schedule to a query that has already been created, and saved.
 
-Any scheduled queries are added to the list in the [!UICONTROL Scheduled queries] tab. From that workspace you can monitor the status of all scheduled query jobs through the UI. On the [!UICONTROL Scheduled queries] tab you can find important information about your query runs and subscribe to alerts. The available information includes the status, schedule details, and error messages/codes should a run fail. See the [Monitor scheduled queries document](./monitor-queries.md) for more information.
+## Account requirements for scheduled queries {#technical-account-user-requirements}
 
-This workflow covers the scheduling process in the Query Service UI. To learn how to add schedules using the API, please read the [scheduled queries endpoint guide](../api/scheduled-queries.md). 
+To help scheduled queries run reliably, Adobe recommends that administrators provision a technical account (using OAuth Server-to-Server credentials) for creating scheduled queries. Scheduled queries can also be created with a personal user account, but queries created this way will stop running if that user's access is removed or disabled.
+
+For details on setting up technical accounts and assigning the required permissions, see the [Credentials guide prerequisites](./credentials.md#prerequisites) and [API authentication](../../landing/api-authentication.md).
+
+For additional guidance on creating and configuring a technical account, refer to:
+
+- [Developer Console setup](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): Step-by-step instructions for configuring the Adobe Developer Console and obtaining OAuth credentials.
+- [End-to-end technical account setup](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup): A comprehensive walkthrough for creating and configuring a technical account in Adobe Experience Platform.
+
+If you only use the Query Service UI, ensure you have the necessary permissions or coordinate with an administrator who manages technical accounts. Any scheduled queries are added to the list in the [!UICONTROL Scheduled queries] tab, where you can monitor the status, schedule details, and error messages for all scheduled query jobs, as well as subscribe to alerts. For more information on monitoring and managing your queries, see the [monitor scheduled queries document](./monitor-queries.md).
+
+This workflow covers the scheduling process in the Query Service UI. To learn how to add schedules using the API, refer to the [scheduled queries endpoint guide](../api/scheduled-queries.md).
+
+>[!NOTE]
+>
+>Use a technical account to ensure scheduled queries continue to run even if users leave the organization or their roles change. Choose a technical account whenever possible for uninterrupted query automation.
 
 ## Create a query schedule {#create-schedule}
 
@@ -91,7 +106,7 @@ You can also enroll a scheduled query into the quarantine feature from the inlin
 
 ### Set alerts for a scheduled query status {#alerts-for-query-status}
 
-You can also subscribe to query alerts as part of your scheduled query settings. You can configure your settings to receive notifications for a variety of situations. Alerts can be set for a quarantined state, delays in query processing, or a change in status of your query. The available query-state alert options include start, success, and failure. Alerts can be received either as pop-up notifications or emails. Select the check box to subscribe to alerts for that status of scheduled query. 
+You can also subscribe to query alerts as part of your scheduled query settings. You can configure your settings to receive notifications for a variety of situations. Alerts can be set for a quarantined state, delays in query processing, or a change in status of your query. The available query-state alert options include start, success, and failure. Alerts can be received either as pop-up notifications or emails. Select the checkbox to subscribe to alerts for that status of scheduled query. 
 
 ![The Schedule details panel with the Alert options highlighted.](../images/ui/query-editor/alerts.png)
 
@@ -107,7 +122,7 @@ The table below explains the supported query alert types:
 
 >[!NOTE]
 >
->If you choose to set a [!UICONTROL Query Run Delay] alert, you must set your desired delay time in minutes in the Platform UI. Enter the duration in minutes. The maximum delay is 24 hours (1440 minutes).
+>If you choose to set a [!UICONTROL Query Run Delay] alert, you must set your desired delay time in minutes in the Experience Platform UI. Enter the duration in minutes. The maximum delay is 24 hours (1440 minutes).
 
 For an overview of alerts in Adobe Experience Platform, including the structure of how alert rules are defined, see the [alerts overview](../../observability/alerts/overview.md). For guidance on managing alerts and alert rules within the Adobe Experience Platform UI, see the [Alerts UI guide](../../observability/alerts/ui.md).
 
@@ -157,7 +172,6 @@ The following table provides descriptions of each column available in the detail
 >[!NOTE]
 >
 >Compute Hours data is available from 08/15/2024. Data before this date appears as 'Not Available'.
-
 
 See the [monitor scheduled queried guide](./monitor-queries.md#inline-actions) for complete information on how to monitor the status of all query jobs through the UI. 
 

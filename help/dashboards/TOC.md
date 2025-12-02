@@ -28,7 +28,7 @@ role: Developer,User
   * [Drill through](sql-insights-query-pro-mode/drill-through.md)
   * [View more](sql-insights-query-pro-mode/view-more.md)
   * [View SQL](sql-insights-query-pro-mode/view-sql.md)
-  * [Download as CSV](sql-insights-query-pro-mode/download-csv.md)
+  * [Export as CSV](sql-insights-query-pro-mode/download-csv.md)
   * [Export as PDF](sql-insights-query-pro-mode/export-pdf.md)
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)
@@ -57,4 +57,4 @@ role: Developer,User
   * [Power BI](integrations/power-bi.md)
 * [Query dashboard datasets](query.md)
 * [View insight SQL](view-sql.md)
-* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

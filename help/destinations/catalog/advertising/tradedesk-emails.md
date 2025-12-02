@@ -9,6 +9,7 @@ exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 >[!IMPORTANT]
 >
 >With the release of EUID (European Unified ID), you are now seeing two [!DNL The Trade Desk - CRM] destinations in the [destinations catalog](/help/destinations/catalog/overview.md).
+>
 >* If you source data in the EU, please use the **[!DNL The Trade Desk - CRM (EU)]** destination. 
 >* If you source data in the APAC or NAMER regions, please use the **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destination. 
 >
@@ -68,7 +69,7 @@ If you select to hash the email addresses yourself, make sure to comply with the
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (email or hashed email) used in the Trade Desk destination. |
 | Export frequency | **[!UICONTROL Daily Batch]** | As a profile is updated in Experience Platform based on audience evaluation, the profile (identities) are updated once a day downstream to the destination platform. Read more about [batch exports](/help/destinations/destination-types.md#file-based).|
 
@@ -89,7 +90,7 @@ Before you can send, or activate, audience data to a destination, you must set u
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Advertiser ID]**: your [!DNL Trade Desk Advertiser ID], which can either be shared by your [!DNL Trade Desk] Account Manager or be found under [!DNL Advertiser Preferences] in the [!DNL Trade Desk] UI. 
 
-![Platform UI screenshot showing how to fill in destination details.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
+![Experience Platform UI screenshot showing how to fill in destination details.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
 When connecting to the destination, setting a data governance policy is completely optional. Please review the Experience Platform [data governance overview](/help/data-governance/policies/overview.md) for more details.  
 
@@ -104,17 +105,17 @@ Read [activate audience data to batch profile export destinations](/help/destina
 
 In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each audience you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional. 
 
-![Platform UI screenshot to schedule audience activation.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![Experience Platform UI screenshot to schedule audience activation.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE] 
 >
 >All audiences activated to [!DNL The Trade Desk] CRM Destination are automatically set to a daily frequency and full file export.
 
-![Platform UI screenshot to schedule audience activation.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![Experience Platform UI screenshot to schedule audience activation.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
 In the **[!UICONTROL Mapping]** page, you must select attributes or identity namespaces from the source column and map to the target column.  
 
-![Platform UI screenshot to map audience activation.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![Experience Platform UI screenshot to map audience activation.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
 Below is an example of correct identity mapping when activating audiences to [!DNL The Trade Desk] CRM destination. 
 
@@ -125,7 +126,7 @@ Below is an example of correct identity mapping when activating audiences to [!D
 Selecting source fields:
 
 *  Select the `Email` namespace or attribute as source identity if using the raw email address on data ingestion. 
-*  Select the `Email_LC_SHA256` namespace or attribute as source identity if you hashed customer email addresses on data ingestion into Platform.  
+*  Select the `Email_LC_SHA256` namespace or attribute as source identity if you hashed customer email addresses on data ingestion into Experience Platform.  
 
 Selecting target fields:
 

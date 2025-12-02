@@ -13,7 +13,7 @@ A people audience is an audience that is created using **customer** profile data
 
 For more detailed information about people audiences, please read the [people audience overview](./people-audiences.md).
 
-## [!BADGE B2C Edition] Look-alike audience
+## Look-alike audience
 
 A look-alike audience is an audience that is created by analyzing a high-value audience with a look-alike machine learning model. The look-alike model can create an audience that matches the similarity threshold of the analyzed high-value audience.
 
@@ -33,4 +33,4 @@ For more detailed information about prospect audiences, please read the [prospec
 
 ## Next steps
 
-After reading this overview, you now have a better understanding of the different types of audiences available on Platform. To learn about the different evaluation methods, please read the [evaluation method overview](../methods/overview.md).
+After reading this overview, you now have a better understanding of the different types of audiences available on Experience Platform. To learn about the different evaluation methods, please read the [evaluation method overview](../methods/overview.md).

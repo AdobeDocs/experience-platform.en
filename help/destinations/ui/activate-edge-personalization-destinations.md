@@ -19,8 +19,8 @@ Examples of edge destinations are the [Adobe Target](../../destinations/catalog/
 
 >[!IMPORTANT]
 > 
-> * To activate data and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
-> * To activate data without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+>* To activate data and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+>* To activate data without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 > 
 > Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
@@ -79,7 +79,7 @@ When configuring the datastream, under **[!UICONTROL Adobe Experience Platform]*
 
 ![Datastream configuration with Edge Segmentation and Personalization Destinations highlighted!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-For more details on how to set up a datastream, follow the instructions described in the [Platform Web SDK documentation](../../datastreams/configure.md#aep).
+For more details on how to set up a datastream, follow the instructions described in the [Experience Platform Web SDK documentation](../../datastreams/configure.md#aep).
 
 ### Create an [!DNL Active-On-Edge] merge policy {#create-merge-policy}
 
@@ -91,9 +91,9 @@ After you have created your destination connection, you must create an [!DNL Act
 
 Follow the instructions on [creating a merge policy](../../profile/merge-policies/ui-guide.md#create-a-merge-policy), and make sure to enable the **[!UICONTROL Active-On-Edge Merge Policy]** toggle.
 
-### Create a new audience in Platform {#create-audience}
+### Create a new audience in Experience Platform {#create-audience}
 
-After you have created the [!DNL Active-On-Edge] merge policy, you must create a new audience in Platform.
+After you have created the [!DNL Active-On-Edge] merge policy, you must create a new audience in Experience Platform.
 
 Follow the [audience builder](../../segmentation/ui/segment-builder.md) guide to create your new audience, and make sure to [assign it](../../segmentation/ui/segment-builder.md#merge-policies) the [!DNL Active-On-Edge] merge policy that you created in the previous step.
 
@@ -128,14 +128,14 @@ After you completed the prerequisites, you can now select the edge personalizati
 
 ## Select your audiences {#select-audiences}
 
-Use the check boxes to the left of the audience names to select the audiences that you want to activate to the destination, then select **[!UICONTROL Next]**.
+Use the checkboxes to the left of the audience names to select the audiences that you want to activate to the destination, then select **[!UICONTROL Next]**.
 
-To select the audiences that you want to activate to the destination, use the check boxes to the left of the audience names, then select **[!UICONTROL Next]**.
+To select the audiences that you want to activate to the destination, use the checkboxes to the left of the audience names, then select **[!UICONTROL Next]**.
 
 You can select from multiple types of audiences, depending on their origin:
 
 * **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [segmentation documentation](../../segmentation/ui/overview.md) for more details.
-* **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Experience Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/audience-portal.md#import-audience).
 * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
 
 ![Select audiences step of the activation workflow with several audiences highlighted.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -144,9 +144,9 @@ You can select from multiple types of audiences, depending on their origin:
 
 >[!IMPORTANT]
 >
->Profile attributes may contain sensitive data. To protect this data, the **[!UICONTROL Custom Personalization]** destination requires you to use the [Edge Network Server API](../../server-api/overview.md) when configuring the destination for attribute-based personalization. All the Server API calls must be made in an [authenticated context](../../server-api/authentication.md).
+>Profile attributes may contain sensitive data. To protect this data, the **[!UICONTROL Custom Personalization]** destination requires you to use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) when configuring the destination for attribute-based personalization. All the Edge Network API calls must be made in an [authenticated context](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/).
 >
-><br>If you are already using Web SDK or Mobile SDK for your integration, you can retrieve attributes via the Server API by adding a server-side integration.
+><br>If you are already using Web SDK or Mobile SDK for your integration, you can retrieve attributes via the Edge Network API by adding a server-side integration.
 >
 ><br>If you do not follow the requirements above, personalization will be based on audience membership only.
 

@@ -21,6 +21,16 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 >title="Fields"
 >abstract="The three field types that make up a segment definition are attributes, events, and audiences. Attributes let you use Profile attributes that belong to the XDM Individual Profile class, events let you create an audience based on actions or events that take place using XDM ExperienceEvent data elements, and audiences let you use imported audiences from external sources."
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_showfullxdmschema"
+>title="Show full XDM schema"
+>abstract="By default, only fields that contain data are displayed. Enable this option to show all the fields in the XDM schema."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_showdeprecatedfields"
+>title="Show deprecated fields"
+>abstract="By default, deprecated XDM fields are not dispalyed. Enable this option to show deprecated XDM fields."
+
 The basic building blocks of segment definitions are attributes and events. In addition, the attributes and events contained in existing audiences can be used as components for new definitions. 
 
 >[!CONTEXTUALHELP]
@@ -70,11 +80,11 @@ By default, only populated schema fields from your data store are shown. This in
 
 You can use data from either a single or multiple Adobe Analytics report suites as events within segmentation. 
 
-When using data from a single Analytics report suite, Platform will automatically add descriptors and friendly names to eVars, making it easier to find those fields within [!DNL Segment Builder].
+When using data from a single Analytics report suite, Experience Platform will automatically add descriptors and friendly names to eVars, making it easier to find those fields within [!DNL Segment Builder].
 
 ![An image showing how generic variables (eVars) are mapped with a user friendly name.](../images/ui/segment-builder/single-report-suite.png)
 
-When using data from multiple Analytics report suites, Platform **cannot** automatically add descriptors or friendly names to eVars. As a result, before using the data from Analytics report suites, you must map to XDM fields. More information about mapping Analytics variables to XDM can be found in the [Adobe Analytics source connection guide](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
+When using data from multiple Analytics report suites, Experience Platform **cannot** automatically add descriptors or friendly names to eVars. As a result, before using the data from Analytics report suites, you must map to XDM fields. More information about mapping Analytics variables to XDM can be found in the [Adobe Analytics source connection guide](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
 
 For example, consider a situation where you had two report suites with the following variables:
 
@@ -111,9 +121,15 @@ Once the report suites have been mapped, you can use these newly mapped fields w
 >title="Complex evaluation"
 >abstract="The following expression is too complicated to be expressed as a single audience. In order to use both B2B-rules and people-based-events in the same segment definition, please follow the steps below.<ol><li>Create a segment definition that only refers to the people-based-events, and save it as its own segment definition.</li><li>In a new segment definition, import the previously created segment definition while referring to the B2B-rules.</li></ol>"
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_externalaudiences"
+>title="External audiences"
+>abstract="Audiences imported through the Audiences tab are now automatically surfaced through Audience Portal. This includes audiences ingested from Audience Manager, Customer Journey Analytics, Segment Match, and other custom integrations.<br/><br/>By the end of September 2025, audiences will be retrieved exclusively through Unified Search, and the previous workflow will no longer supported. Segment Match remains available only for a small number of designated customers while we transition the service. Access for new Segment Match customers can still be enabled on request before the service is fully retired.<br/><br/>For ongoing data collaboration use cases, Adobe recommends moving to Collaboration, which is the long-term supported solution."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
+
 >[!NOTE]
 >
->For audiences created within Platform, only audiences that have the **same** merge policy will be displayed.
+>For audiences created within Experience Platform, only audiences that have the **same** merge policy will be displayed.
 
 The **[!UICONTROL Audiences]** tab lists all audiences imported from external sources, such as Adobe Audience Manager or Customer Journey Analytics, as well as audiences created within [!DNL Experience Platform].
 
@@ -176,7 +192,7 @@ Please note that there is a maximum of 250 values allowed. If you exceed this am
 
 You can drag and drop an audience from the **[!UICONTROL Audience]** tab onto the rule builder canvas to reference audience membership in the new segment definition. This allows you to include or exclude audience membership as an attribute in the new segment definition rules.
 
-For [!DNL Platform] audiences created using [!DNL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. This conversion makes a copy of the rule logic, that can then be modified without affecting the original segment definition. Make sure that you have saved any recent changes to your segment definition before converting it to rule logic.
+For [!DNL Experience Platform] audiences created using [!DNL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. This conversion makes a copy of the rule logic, that can then be modified without affecting the original segment definition. Make sure that you have saved any recent changes to your segment definition before converting it to rule logic.
 
 >[!NOTE]
 >
@@ -194,7 +210,7 @@ Alternatively, you can view a code-based version of a rule created in the [!DNL 
 
 Code view provides a button that allows you to copy the value of the segment definition to use in API calls. To get the latest version of the segment definition, make sure you have saved your latest changes to the segment definition.
 
-![The copy code button is highlighted, which allows you to ](../images/ui/segment-builder/copy-code.png)
+![The copy code button is highlighted, which allows you to](../images/ui/segment-builder/copy-code.png)
 
 ### Aggregation functions
 
@@ -316,7 +332,7 @@ The list of available time constraints for this operation differs from the main 
 
 +++
 
-## Containers
+## Containers {#containers}
 
 Segment rules are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.
 
@@ -343,22 +359,22 @@ Once you select **[!UICONTROL Unwrap container]** the child container is removed
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Merge policies"
->abstract="A merge policy enables the merging of different datasets to form your profile. Platform has provided a default merge policy, or you can create a new default merge policy in Profiles. Choose a merge policy that matches your marketing purpose for this audience."
+>abstract="A merge policy enables the merging of different datasets to form your profile. Experience Platform has provided a default merge policy, or you can create a new default merge policy in Profiles. Choose a merge policy that matches your marketing purpose for this audience."
 
-[!DNL Experience Platform] enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create a profile. 
+[!DNL Experience Platform] enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Experience Platform] uses to determine how data will be prioritized and what data will be combined to create a profile. 
 
-You can select a merge policy that matches your marketing purpose for this audience or use the default merge policy provided by [!DNL Platform]. You can create multiple merge policies unique to your organization, including creating your own default merge policy. For step-by-step instructions on creating merge policies for your organization, please begin by reading the [merge policies overview](../../profile/merge-policies/overview.md). 
+You can select a merge policy that matches your marketing purpose for this audience or use the default merge policy provided by [!DNL Experience Platform]. You can create multiple merge policies unique to your organization, including creating your own default merge policy. For step-by-step instructions on creating merge policies for your organization, please begin by reading the [merge policies overview](../../profile/merge-policies/overview.md). 
 
 To select a merge policy for your segment definition, select the gear icon on the **[!UICONTROL Fields]** tab, then use the **[!UICONTROL Merge Policy]** dropdown menu to select the merge policy that you wish to use.
 
 ![The merge policy selector is highlighted. This lets you choose which merge policy to select for your segment definition.](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Segment definition properties {#segment-properties}
+## Audience properties {#audience-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="Segment definition properties"
->abstract="The segment definition properties section displays an estimate of the size of the resulting segment definition, displaying the number of qualified profiles in comparison to the total number of profiles. This allows you to adjust your segment definition as necessary before building the audience itself."
+>title="Audience properties"
+>abstract="The audience properties section displays an estimate of the size of the resulting audience, displaying the number of qualified profiles in comparison to the total number of profiles. This allows you to adjust your audience as necessary before building the audience itself."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
@@ -366,21 +382,35 @@ To select a merge policy for your segment definition, select the gear icon on th
 >abstract="You can refresh the estimates of your segment definition to immediately see a preview of how many profiles would qualify for the proposed segment definition. Audience estimates are generated by using a sample size of that day's sample data."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="Estimate and preview an audience"
 
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
+>title="Qualified profiles"
+>abstract="Qualified profiles indicates the actual number of profiles that match the audience's rules. This number updates every 24 hours, after the segment evaluation job has ran."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
+>title="Estimated profiles"
+>abstract="Estimated profiles indicates an approximate number of profiles, based off of the sample job, that would qualify for the audience's rules."
+
 When building a segment definition, the **[!UICONTROL Audience properties]** section on the right-hand side of the workspace displays an estimate of the size of the resulting segment definition, allowing you to adjust your segment definition as needed before building the audience itself.
 
 **[!UICONTROL Qualified Profiles]** indicates the **actual** number of profiles that match the segment definition's rules. This number updates every 24 hours, after the segment evaluation job has ran.
 
 The timestamp for qualified profiles indicates the most recent **batch** segment evaluation job and is **not** displayed for segment definitions evaluated using streaming or edge segmentation. If you edit the segment definition, the number of qualified profiles will remain the same until the next segment evaluation job is run. 
 
-**[!UICONTROL Estimated Profiles]** indicates an **approximate** number of profiles based off of the **sample job**. You can see an updated version of this value after adding the new rules or conditions and selecting **[!UICONTROL Refresh estimate]**. Selecting the information bubble gives the error threshold and most recent sample job time.
+**[!UICONTROL Estimated Profiles]** indicates an **approximate range** of profiles, based off of the **sample job**. This means the sample data is projected on the larger profile set, resulting in an estimated number that may differ from the actual number of qualified profiles. The estimated profile sample has a 95% confidence interval.
+
+When you make changes to the audience's rules, you can select the **[!UICONTROL Refresh estimate]** button to see an updated count of estimated profiles. However, this number is still based off of the previous sample job. The sample job is updated when there is a greater than 3% change in customer data or the last sample job is older than three days.
+
+Selecting the information bubble gives the date and time the last sample job was run.
 
 ![Qualified Profiles and Estimated Profiles are highlighted within the Audience properties section.](../images/ui/segment-builder/audience-estimates.png)
 
-The **[!UICONTROL Audience properties]** section is also where you can specify important information about your segment definition, including its name, description, and evaluation type. Segment definition names are used to identify your segment definition among those defined by your organization and should therefore be descriptive, concise, and unique. 
+The **[!UICONTROL Audience properties]** section is also where you can specify important information about your audience, including its name, description, and evaluation type. Names are used to identify your segment definition among those defined by your organization and should therefore be descriptive, concise, and unique. 
 
-As you continue to build your segment definition, you can view a paginated preview of the audience by selecting **[!UICONTROL View Profiles]**.
+As you continue to build your audience, you can view a paginated preview of the audience by selecting **[!UICONTROL View Profiles]**.
 
-![The segment definition properties section is highlighted. The segment definition properties include, but are not limited to, the segment definition name, description, and evaluation method.](../images/ui/segment-builder/segment-properties.png)
+![The audience properties section is highlighted. The audience properties include, but are not limited to, the name, description, and evaluation method.](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
@@ -414,4 +444,4 @@ Segment Builder provides a rich workflow allowing you to isolate marketable audi
 - Enable all segment definitions for scheduled segmentation.
 - Enable specified segment definitions for streaming segmentation.
   
-To learn more about [!DNL Segmentation Service], please continue reading the documentation and supplement your learning by watching the related videos. To learn more about the other parts of the [!DNL Segmentation Service] UI, please read the [[!DNL Segmentation Service] user guide](./overview.md)
+To learn more about [!DNL Segmentation Service], please continue reading the documentation and supplement your learning by watching the related videos. To learn more about the other parts of the [!DNL Segmentation Service] UI, please read the [[!DNL Segmentation Service] user guide](./overview.md).

@@ -6,7 +6,7 @@ exl-id: 70d2a352-75bd-4bbc-98e6-aeea16306f63
 ---
 # Frequently asked questions {#faq}
 
-This document provides answers to frequently asked questions about Adobe Experience Platform Catalog Service and datasets. For questions and troubleshooting related to other Platform services, including issues encountered across all Platform APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about Adobe Experience Platform Catalog Service and datasets. For questions and troubleshooting related to other Experience Platform services, including issues encountered across all Experience Platform APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
 ## Retention policies and rules {#retention-policies-and-rules}
 
@@ -22,6 +22,10 @@ You can set up retention policies on datasets created using the ExperienceEvent 
 
 +++Answer
 
+>[!NOTE]
+>
+>The retention period for Profile Service can only be updated once every 30 days.
+
 Yes, you can apply different retention policies for the data lake and Profile Service.
 
 +++
@@ -32,7 +36,7 @@ Yes, you can apply different retention policies for the data lake and Profile Se
 
 +++Answer
 
-Dataset expirations are evaluated and processed weekly, deleting all records that have expired. An event is considered expired if it has been ingested into Platform for more than 30 days (ingestion date > 30 days) and its event date exceeds the defined retention period.
+Dataset expirations are evaluated and processed weekly, deleting all records that have expired. An event is considered expired if it has been ingested into Experience Platform for more than 30 days (ingestion date > 30 days) and its event date exceeds the defined retention period.
 
 +++
 
@@ -40,7 +44,7 @@ Dataset expirations are evaluated and processed weekly, deleting all records tha
 
 +++Answer
 
-Once a retention policy is set, existing events are immediately deleted from Platform if their event timestamp exceeds the retention period. New events are deleted once their timestamp surpasses the retention period.
+Once a retention policy is set, existing events are immediately deleted from Experience Platform if their event timestamp exceeds the retention period. New events are deleted once their timestamp surpasses the retention period.
 
 For example, if you apply a 30-day expiration policy on May 15th, the following occurs:
 

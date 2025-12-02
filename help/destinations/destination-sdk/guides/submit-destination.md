@@ -1,9 +1,9 @@
 ---
-description: This page provides all the information you need to submit for review a productized destination authored using Destination SDK.
-title: Submit for review a productized destination authored in Destination SDK
+description: This page provides all the information you need to submit a productized destination for review when authored using Destination SDK.
+title: Submit a productized destination for review
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
 ---
-# Submit for review a productized destination authored in Destination SDK
+# Submit a productized destination for review
 
 ## Overview {#overview}
 
@@ -261,6 +261,7 @@ If you are an Independent Software Vendor (ISV) or System Integrator (SI) creati
 The destinations catalog includes a logo for each destination card. In your submission email, include an image with the logo for your destination.
 
 The image requirements are:
+
 * **Format**: `SVG`
 * **Size**: less than 2MB
 

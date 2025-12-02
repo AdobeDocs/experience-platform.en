@@ -9,7 +9,7 @@ exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
-To test tag extensions in Adobe Experience Platform, use the tags API and/or command-line tools to upload your extension packages. Next, use the Platform UI or Data Collection UI to install your extension package to a property and exercise its capabilities inside a tag library and build.
+To test tag extensions in Adobe Experience Platform, use the tags API and/or command-line tools to upload your extension packages. Next, use the Experience Platform UI or Data Collection UI to install your extension package to a property and exercise its capabilities inside a tag library and build.
 
 This document covers how to implement end-to-end testing for your extension. 
 
@@ -76,7 +76,7 @@ Your extension package will then be uploaded and the uploader will give you the 
 >
 >If you plan to run the uploader often, putting all this information in each time can be a burden. You can also pass these in as arguments from the command line. Check out the [Command Line Arguments section](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) of the NPM docs for more info.
 
-If you'd like to manage uploading your extension using the API directly, see the example calls for [creating](../../api/endpoints/extension-packages.md/#create) or [updating](../../api/endpoints/extension-packages.md#update) an extension package in the API docs for more detail.
+If you'd like to manage uploading your extension using the API directly, see the example calls for [creating](../../api/endpoints/extension-packages.md#create) or [updating](../../api/endpoints/extension-packages.md#update) an extension package in the API docs for more detail.
 
 ## Create a development property {#property}
 
@@ -108,7 +108,7 @@ To add your extension, select the **Catalog** tab.
 
 ![](../images/getting-started/catalog.png)
 
-The catalog displays card icons for each available extension. If your extension is not displayed in the catalog, ensure that you have completed the steps above in the Adobe Administration Console Set Up and Creating Your Extension Package sections. Your extension package may also appear as Pending if Platform has not completed the initial processing.
+The catalog displays card icons for each available extension. If your extension is not displayed in the catalog, ensure that you have completed the steps above in the Adobe Administration Console Set Up and Creating Your Extension Package sections. Your extension package may also appear as Pending if Experience Platform has not completed the initial processing.
 
 If you have followed the previous steps and still do not see a Pending or Failed extension package in the catalog, you should check the status of your extension package directly using the API. For information on how to make the appropriate API call, read [Fetch an ExtensionPackage](../../api/endpoints/extension-packages.md#lookup) in the API documentation.
 

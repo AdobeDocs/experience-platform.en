@@ -12,37 +12,39 @@ exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
 >
 >* You can now use the [!DNL Azure Event Hubs] source when running Adobe Experience Platform on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
 
-Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into Platform.
+Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into Experience Platform.
 
-Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. Platform allows you to bring in data from [!DNL Event Hubs] in real time.
+Cloud storage sources can bring your own data into Experience Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. Experience Platform allows you to bring in data from [!DNL Event Hubs] in real time.
 
 ## Scaling with [!DNL Event Hubs]
 
-The scale factor of your [!DNL Event Hubs] instance must be increased if you need to ingress high volume data, increase parallelism, or raise the speed of the ingestion Platform.
+The scale factor of your [!DNL Event Hubs] instance must be increased if you need to ingress high volume data, increase parallelism, or raise the speed of the ingestion on Experience Platform.
 
 ### Ingress higher volume data
 
-Currently, the maximum volume of data that you can bring from your [!DNL Event Hubs] account to Platform is 2000 records per second. To scale up and ingest higher volume data, please contact your Adobe representative.
+Currently, the maximum volume of data that you can bring from your [!DNL Event Hubs] account to Experience Platform is 2000 records per second. To scale up and ingest higher volume data, please contact your Adobe representative.
 
-### Increase parallelism on [!DNL Event Hubs] and Platform
+### Increase parallelism on [!DNL Event Hubs] and Experience Platform
 
 Parallelism refers to the simultaneous execution of the same tasks on multiple processing units in order to increase speed and performance. You can increase parallelism on the [!DNL Event Hubs] side by increasing partition or by acquiring more processing units for your [!DNL Event Hubs] account. See this [[!DNL Event Hubs] document on scaling](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) for more information.
 
-To increase the rate of speed of ingestion on the Platform side, Platform must increase the number of tasks in the source connector to read from your [!DNL Event Hubs] partitions. Once you have increased parallelism on the [!DNL Event Hubs] side, please contact your Adobe representative to scale Platform tasks based on your new partition. Currently, this process is not automated.
+To increase the rate of speed of ingestion on the Experience Platform side, Experience Platform must increase the number of tasks in the source connector to read from your [!DNL Event Hubs] partitions. Once you have increased parallelism on the [!DNL Event Hubs] side, please contact your Adobe representative to scale Experience Platform tasks based on your new partition. Currently, this process is not automated.
 
-## Use a virtual network to connect to [!DNL Event Hubs] to Platform
+## Use a virtual network to connect to [!DNL Event Hubs] to Experience Platform
 
-You can set up a virtual network to connect [!DNL Event Hubs] to Platform while having your firewall measures enabled. To set up a virtual network, head to this [[!DNL Event Hubs] network rule set document](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) and follow the steps listed below:
+Experience Platform supports connecting to [!DNL Event Hubs] via a virtual network. This lets you transfer data over a secure, private connection instead of the public internet. You can allowlist the Experience Platform VNet to securely route [!DNL Event Hubs] traffic through the [!DNL Azure] private backbone while maintaining your existing firewall protections.
+
+To set up a virtual network, head to this [[!DNL Event Hubs] network rule set document](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) and follow the steps listed below:
 
 * Select **Try It** from the REST API panel; 
 * Authenticate your [!DNL Azure] account using your credentials in the same browser;
-* Select the [!DNL Event Hubs] namespace, resource group, and subscription that you want to bring to Platform and then select **RUN**;
-* In the JSON body that appears, add the following Platform subnet under `virtualNetworkRules` inside `properties`:
+* Select the [!DNL Event Hubs] namespace, resource group, and subscription that you want to bring to Experience Platform and then select **RUN**;
+* In the JSON body that appears, add the following Experience Platform subnet under `virtualNetworkRules` inside `properties`:
 
 
 >[!IMPORTANT]
 >
->You must make a backup of the JSON body that you receive, prior to updating `virtualNetworkRules` with the Platform subnet as it contains your existing IP filtering rules. Otherwise, the rules will be deleted after the call.
+>You must make a backup of the JSON body that you receive, prior to updating `virtualNetworkRules` with the Experience Platform subnet as it contains your existing IP filtering rules. Otherwise, the rules will be deleted after the call.
 
 
 ```json
@@ -54,7 +56,7 @@ You can set up a virtual network to connect [!DNL Event Hubs] to Platform while 
 }
 ```
 
-See the list below for different regions of Platform subnets:
+See the list below for different regions of Experience Platform subnets:
 
 ### VA7: North America
 
@@ -115,9 +117,13 @@ See the list below for different regions of Platform subnets:
 
 See the following [[!DNL Event Hubs] document](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) for more information on network rule sets.
 
-## Connect [!DNL Event Hubs] to Platform
+## Connect [!DNL Event Hubs] to Experience Platform
 
-The documentation below provides information on how to connect [!DNL Event Hubs] to Platform using APIs or the user interface:
+>[!NOTE]
+>
+>After you create or update a streaming dataflow, a brief 5-minute pause in data ingestion is required to prevent any potential instances of data loss or data drops.
+
+The documentation below provides information on how to connect [!DNL Event Hubs] to Experience Platform using APIs or the user interface:
 
 ### Using APIs
 

@@ -13,11 +13,11 @@ The Real-Time CDP data model from Adobe Experience Platform provides insights on
 
 ## Prerequisites
 
-This tutorial uses user-defined dashboards to visualize data from your custom data model within the Platform UI. Please see the [user-defined dashboards documentation](../../../dashboards/standard-dashboards.md) to learn more about this feature.
+This tutorial uses user-defined dashboards to visualize data from your custom data model within the Experience Platform UI. Please see the [user-defined dashboards documentation](../../../dashboards/standard-dashboards.md) to learn more about this feature.
 
 ## Getting started
 
-The Data Distiller SKU is required to build a custom data model for your reporting insights and to extend the Real-Time CDP data models that hold enriched Platform data. Please see the [packaging](../../packaging.md), [guardrails](../../guardrails.md#query-accelerated-store), and  [licensing](../../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. If you do not have the Data Distiller SKU please contact your Adobe customer service representative for more information.
+The Data Distiller SKU is required to build a custom data model for your reporting insights and to extend the Real-Time CDP data models that hold enriched Experience Platform data. Please see the [packaging](../../packaging.md), [guardrails](../../guardrails.md#query-accelerated-store), and  [licensing](../../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. If you do not have the Data Distiller SKU please contact your Adobe customer service representative for more information.
 
 ## Build a reporting insights data model
 
@@ -27,7 +27,7 @@ At the outset, you have an initial data model from your sources (potentially fro
 
 ![An entity relational diagram (ERD) of the audience insight user model.](../../images/data-distiller/sql-insights/audience-insight-user-model.png)
 
-In this example, the `externalaudiencereach` table/dataset is based on an ID and tracks the lower and upper bounds for match count. The `externalaudiencemapping` dimension table/dataset maps the external ID to a destination and audience on Platform. 
+In this example, the `externalaudiencereach` table/dataset is based on an ID and tracks the lower and upper bounds for match count. The `externalaudiencemapping` dimension table/dataset maps the external ID to a destination and audience on Experience Platform. 
 
 ## Create a model for reporting insights with Data Distiller
 
@@ -82,7 +82,7 @@ Once the statements have run, use the `SHOW datagroups;` command to return a lis
 
 ```console
     Database     |    Schema     | GroupType |      ChildType       |        ChildName        | PhysicalParent |               ChildId               
------------------+---------------+-----------+----------------------+-------------------------+----------------+--------------------------------------
+|-----------------+---------------+-----------+----------------------+-------------------------+----------------+--------------------------------------
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencemapping | true           | 9155d3b4-889d-41da-9014-5b174f6fa572
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencereach   | true           | 1b941a6d-6214-4810-815c-81c497a0b636
 ```
@@ -107,7 +107,7 @@ The tabulated results include a count and an ID.
 
 ```console
 ext_custom_audience_id | approximate_count_upper_bound
-------------------------+-------------------------------
+|------------------------+-------------------------------
  23850912218170554      |                          1000
  23850808585120554      |                       1012000
  23850808585220554      |                        100000
@@ -152,7 +152,7 @@ Use the `SHOW datagroups;` command to confirm the creation of the additional `ex
 
 ```console
     Database     |     Schema     | GroupType |      ChildType       |                ChildName  | PhysicalParent |               ChildId               
------------------+----------------+-----------+----------------------+----------------------------------------------------+----------------+--------------------------------------
+|-----------------+----------------+-----------+----------------------+----------------------------------------------------+----------------+--------------------------------------
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | external_seg_dest_map      | true           | 4b4b86b7-2db7-48ee-a67e-4b28cb900810
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencemapping    | true           | b0302c05-28c3-488b-a048-1c635d88dca9
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencereach      | true           | 4485c610-7424-4ed6-8317-eed0991b9727
@@ -180,7 +180,7 @@ The query returns all the datasets on the query accelerated store:
 
 ```console
 ext_custom_audience_id | destination_name |       audience_name        | destination_status | destination_id | audience_id 
-------------------------+------------------+---------------------------+--------------------+----------------+-------------
+|------------------------+------------------+---------------------------+--------------------+----------------+-------------
  23850808595110554      | FCA_Test2        | United States             | enabled            |     -605911558 | -1357046572
  23850799115800554      | FCA_Test2        | Born in 1980s             | enabled            |     -605911558 | -1224554872
  23850799115790554      | FCA_Test2        | Born in 1970s             | enabled            |     -605911558 |  1899603869

@@ -17,10 +17,10 @@ This tutorial walks you through the steps on how to create a [!DNL Data Landing 
 
 This guide requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-This tutorial also requires you to read the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md) to learn how to authenticate to Platform APIs and interpret the example calls provided in the documentation.
+This tutorial also requires you to read the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md) to learn how to authenticate to Experience Platform APIs and interpret the example calls provided in the documentation.
 
 The following sections provide additional information that you will need to know in order to successfully create a [!DNL Data Landing Zone] source connection using the [!DNL Flow Service] API.
 
@@ -389,7 +389,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 
 | Parameter | Description | Example |
 | --- | --- | --- |
-| `{CONNECTION_SPEC_ID}` | The connection specification ID that corresponds to [!DNL Data Landing Zone]. This fixed ID is: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
+| `{CONNECTION_SPEC_ID}` | The connection specification ID that corresponds to [!DNL Data Landing Zone]. This fixed ID is: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. ||
 | `{OBJECT_TYPE}` | The type of the object you want to access. | `file` |
 | `{OBJECT}` | The path and name of the object you want to access. | `dlz-user-container/data8.csv` |
 | `{FILE_TYPE}` | The type of the file. | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
@@ -650,8 +650,8 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `name` | The name of your [!DNL Data Landing Zone] source connection. |
-| `data.format` | The format of the data you want to bring to Platform. |
-| `params.path` | The path to the file that you want to bring to Platform. |
+| `data.format` | The format of the data you want to bring to Experience Platform. |
+| `params.path` | The path to the file that you want to bring to Experience Platform. |
 | `connectionSpec.id` | The connection specification ID that corresponds to [!DNL Data Landing Zone]. This fixed ID is: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
 
 **Response**
@@ -667,4 +667,4 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ## Next steps
 
-By following this tutorial, you have retrieved your [!DNL Data Landing Zone] credentials, explored its file structure to find the file you wish to bring to Platform, and created a source connection to begin bringing your data to Platform. You can now proceed to the next tutorial, where you will learn how to [create a dataflow to bring cloud storage data to Platform using the [!DNL Flow Service] API](../../collect/cloud-storage.md).
+By following this tutorial, you have retrieved your [!DNL Data Landing Zone] credentials, explored its file structure to find the file you wish to bring to Experience Platform, and created a source connection to begin bringing your data to Experience Platform. You can now proceed to the next tutorial, where you will learn how to [create a dataflow to bring cloud storage data to Experience Platform using the [!DNL Flow Service] API](../../collect/cloud-storage.md).

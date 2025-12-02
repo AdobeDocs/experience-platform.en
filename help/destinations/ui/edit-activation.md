@@ -9,12 +9,14 @@ exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 
 In Adobe Experience Platform, you can configure various components of existing activation dataflows to destinations, such as:
 
-* [Enable or disable](#enable-disable-dataflows) activation dataflows;
-* [Add additional audiences and profile attributes](#add-audiences) to activation dataflows;
-* [Add additional datasets](#add-datasets) to activation workflows;
-* [Edit names and descriptions](#edit-names-descriptions) for your activation dataflows;
-
-<!-- * [Apply access labels](#apply-access-labels) to exported data; -->
+* [Enable or disable](#enable-disable-dataflows) activation dataflows
+* [Add additional audiences](#add-audiences) to activation dataflows
+* [Edit mapped attributes and identities](#edit-mapped-attributes)
+* [Edit the activation schedule and export frequency](#edit-schedule-frequency)
+* [Add additional datasets](#add-datasets) to activation workflow
+* [Edit marketing actions](#edit-marketing-actions) for your activation dataflows
+* [Apply access labels](#apply-access-labels) to exported data
+* [Edit names and descriptions](#edit-names-descriptions) for your activation dataflows
 
 ## Browse activation dataflows {#browse-activation-dataflows}
 
@@ -42,11 +44,52 @@ Use the **[!UICONTROL Enabled]/[!UICONTROL Disabled]** toggle to start or pause 
    
 ## Add audiences to an activation dataflow {#add-audiences}
 
-Select **[!UICONTROL Activate audiences]** in the right rail to change which audiences or profile attributes to send to the destination. This action takes you to the activation workflow, which differs depending on destination type.
+Select **[!UICONTROL Activate audiences]** in the right rail to change which audiences to send to the destination. This action takes you to the activation workflow.
 
 ![Experience Platform UI image showing the Activate audiences dataflow run option.](../assets/ui/edit-activation/activate-audiences.png)
 
-For more information on the activation workflows for each destination type, see the following guides: 
+In the **[!UICONTROL Select audiences]** step of the activation workflow, you can remove existing audiences or add new audiences to the activation workflow.
+
+The activation workflow differs slightly depending on destination type. For more information on the activation workflows for each destination type, read the following guides: 
+
+* [Activate audiences to streaming destinations](./activate-segment-streaming-destinations.md) (for example, Facebook or Twitter);
+* [Activate audiences to batch profile export destinations](./activate-batch-profile-destinations.md) (for example, Amazon S3 or Oracle Eloqua);
+* [Activate audiences to streaming profile export destinations](./activate-streaming-profile-destinations.md) (for example, HTTP API or Amazon Kinesis).
+
+## Edit the activation schedule and export frequency {#edit-schedule-frequency}
+
+Select **[!UICONTROL Activate audiences]** in the right rail. This action takes you to the activation workflow.
+
+![Experience Platform UI image showing the Activate audiences dataflow run option.](../assets/ui/edit-activation/activate-audiences.png)
+
+Select the **[!UICONTROL Scheduling]** step in the activation workflow to edit the activation schedule and export frequency for your dataflow. This step allows you to configure how often data is exported to the destination.
+
+In the **[!UICONTROL Scheduling]** step of the activation workflow, you can:
+
+* Adjust the export frequency.
+* Set or modify the start and end dates for the activation dataflow, and more.
+
+The scheduling operations that you can perform vary slightly depending on destination type. For more information on the activation workflows for each destination type, read the following guides: 
+
+* [Activate audiences to streaming destinations](./activate-segment-streaming-destinations.md) (for example, Facebook or Twitter);
+* [Activate audiences to batch profile export destinations](./activate-batch-profile-destinations.md) (for example, Amazon S3 or Oracle Eloqua);
+* [Activate audiences to streaming profile export destinations](./activate-streaming-profile-destinations.md) (for example, HTTP API or Amazon Kinesis).
+
+## Edit mapped attributes and identities {#edit-mapped-attributes}
+
+Select **[!UICONTROL Activate audiences]** in the right rail. This action takes you to the activation workflow.
+
+![Experience Platform UI image showing the Activate audiences dataflow run option.](../assets/ui/edit-activation/activate-audiences.png)
+
+Select the **[!UICONTROL Mapping]** step in the activation workflow to edit the mapped attributes and identities for your activation dataflow. This allows you to adjust which profile attributes and identities should be exported to the destination.
+
+In the **[!UICONTROL Mapping]** step of the activation workflow, you can:
+
+* Add new attributes or identities to the mapping.
+* Remove existing attributes or identities from the mapping.
+* Adjust the order of mappings to define the column order in exported files.
+
+The activation workflow differs slightly depending on destination type. For more information on the activation workflows for each destination type, read the following guides: 
 
 * [Activate audiences to streaming destinations](./activate-segment-streaming-destinations.md) (for example, Facebook or Twitter);
 * [Activate audiences to batch profile export destinations](./activate-batch-profile-destinations.md) (for example, Amazon S3 or Oracle Eloqua);
@@ -62,11 +105,28 @@ Select **[!UICONTROL Export datasets]** in the right rail to select additional d
 
 ![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/export-datasets.png)
 
-<!-- ## Apply access labels {#apply-access-labels}
+## [!BADGE Beta]{type=Informative} Edit marketing actions {#edit-marketing-actions}
+
+>[!NOTE]
+>
+>This feature is currently in **beta**. To request access to it, contact your Adobe representative.
+
+You can add or remove marketing actions that you set up when initially connecting to the destination.
+
+Select **[!UICONTROL Edit marketing actions]** in the right rail to open the marketing actions selection screen.
+
+![Experience Platform UI image showing the edit marketing actions option.](../assets/ui/edit-activation/edit-marketing-actions.png)
+
+Select the applicable marketing actions and then select **[!UICONTROL Save]** to apply the changes.
+
+![Experience Platform UI image showing the edit marketing actions screen.](../assets/ui/edit-activation/edit-marketing-actions-screen.png)
+
+
+## Apply access labels {#apply-access-labels}
 
 Select **[!UICONTROL Apply access labels]** to edit the data usage labels for the exported data. See the [data usage labels documentation](../../data-governance/labels/overview.md) to learn more.
 
-![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/apply-access-labels.png) -->
+![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/apply-access-labels.png)
 
 ## Edit activation dataflow names and descriptions {#edit-names-descriptions}
 

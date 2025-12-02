@@ -18,7 +18,7 @@ The use cases covered in this guide are consent trending and consent overlap.
 
 ## Create consented audiences {#create-consent-audiences}
 
-To build a consent dashboard, you must first create an audience of all the profiles that have consented to contact. To navigate to the Real-Time Customer Data Platform Segment Builder, select **[!UICONTROL Audiences]** in the left navigation of the Platform UI. From the the [!UICONTROL Customer] tab of the [!UICONTROL Audiences] dashboard, select **[!UICONTROL Create audience]** in the top right of the view, then **[!UICONTROL Build rules]**.
+To build a consent dashboard, you must first create an audience of all the profiles that have consented to contact. To navigate to the Real-Time Customer Data Platform Segment Builder, select **[!UICONTROL Audiences]** in the left navigation of the Experience Platform UI. From the the [!UICONTROL Customer] tab of the [!UICONTROL Audiences] dashboard, select **[!UICONTROL Create audience]** in the top right of the view, then **[!UICONTROL Build rules]**.
 
 ![The [!UICONTROL Audiences] dashboard with [!UICONTROL Customer], [!UICONTROL Audiences], and [!UICONTROL Create segment] highlighted.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
@@ -124,7 +124,7 @@ After the widget composer is populated with data from your chosen table, perform
 ![The widget composer with the add-icon and dropdown menu highlighted.](../images/standard-dashboards/attributes-dropdown.png)
 - Search [!UICONTROL Attributes] for `[!UICONTROL count_of_profiles]`, then use the + icon to add the `[!UICONTROL count_of_profiles]` attribute to the Y-axis from the dropdown menu.
 - Select the `...` (ellipses) icon in the [!UICONTROL Y-axis] field, then select the [!UICONTROL SUM] aggregate function from the dropdown menu.
-![The widget composer Consent trends widget with the data model, table, and the Y-axis dropdown menu and SUM feature highlighted. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
+![The widget composer Consent trends widget with the data model, table, and the Y-axis dropdown menu and SUM feature highlighted.](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
 - Select the [!UICONTROL Marks] dropdown menu, and change the chart type to [!UICONTROL Line]. 
 - Search [!UICONTROL Attributes] for the `[!UICONTROL segment_name]`, then use the + icon to add the `segment_name` as a [!UICONTROL Filter] from the dropdown menu. The [!UICONTROL Filter: Segment_name] dialog appears. Select the audiences created earlier that relate to consent. For this example, select **[!UICONTROL Users Consented to Calls]**, **[!UICONTROL Users Consented to SMS]**, and **[!UICONTROL Users Consented to Email]**, followed by **[!UICONTROL Apply]**.
 - Search [!UICONTROL Attributes] for `[!UICONTROL segment_name]`, then select the + icon to add `segment_name` as a [!UICONTROL Color] from the dropdown menu. 

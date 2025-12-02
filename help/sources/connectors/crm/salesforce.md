@@ -9,7 +9,11 @@ exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
 >
 >You can now use the [!DNL Salesforce] source when running Adobe Experience Platform on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+>[!WARNING]
+>
+>Basic authentication for the [!DNL Salesforce] source will be deprecated in January 2026. You must move to OAuth 2 Client Credential authentication in order to continue using the source and ingesting data from your [!DNL Salesforce] account to Experience Platform.
+
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from a third-party CRM system. Support for CRM providers include [!DNL Salesforce].
 
@@ -17,15 +21,191 @@ Experience Platform provides support for ingesting data from a third-party CRM s
 
 Follow the steps below to learn how you can set up your [!DNL Salesforce] account for Experience Platform on Azure.
 
-### IP address allow list
+### IP address allowlist for connection to Azure
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform on Azure. Failing to add your region-specific IP addresses to your allowlist may lead to errors or non-performance when using sources. Read the [IP address allowlist](../../ip-address-allow-list.md) page for more information.
+
+>[!BEGINTABS]
+
+>[!TAB VA7]
+
+- `40.70.226.96/28`
+- `40.70.226.32/28`
+- `52.232.229.255`
+- `52.232.229.253`
+- `40.70.226.144/28`
+- `40.70.226.64/28`
+- `40.70.225.240/28`
+- `40.70.225.224/28`
+- `40.70.224.64/29`
+- `40.70.226.80/28`
+- `40.70.226.176/28`
+- `52.232.229.230`
+- `40.70.226.128/28`
+- `40.70.226.0/28`
+- `40.70.226.16/28`
+- `52.138.119.167`
+- `40.70.226.160/28`
+- `40.70.226.192/28`
+- `40.70.226.48/28`
+- `20.96.243.176`
+- `40.70.226.112/28`
+- `40.70.226.208/28`
+
+>[!TAB NLD2]
+
+- `40.74.4.144/28`
+- `40.74.3.176/28`
+- `40.74.5.128/28`
+- `40.74.4.176/28`
+- `40.74.6.112/28`
+- `40.74.7.128/28`
+- `40.74.6.144/28`
+- `51.105.144.81`
+- `52.142.236.87`
+- `40.74.6.80/28`
+- `20.101.246.9`
+- `40.74.7.208/28`
+- `40.74.6.128/28`
+- `40.74.7.176/28`
+- `51.124.70.4`
+- `40.74.7.144/28`
+- `108.141.12.47`
+- `20.50.23.153`
+- `51.144.184.248/29`
+- `40.74.7.160/28`
+- `40.74.7.192/28`
+- `51.105.144.1`
+- `40.74.4.160/28`
+- `40.74.6.96/28`
+
+>[!TAB AUS5]
+
+- `20.43.111.32/28`
+- `20.43.110.144/28`
+- `20.53.111.113`
+- `20.227.32.175`
+- `20.43.110.96/28`
+- `20.43.110.64/28`
+- `20.193.56.144/28`
+- `20.43.110.192/28`
+- `20.43.97.95`
+- `20.43.111.16/28`
+- `20.43.110.128/28`
+- `20.40.185.111`
+- `20.193.56.160/28`
+- `20.43.110.112/28`
+- `40.82.220.111`
+- `20.43.111.0/28`
+- `20.193.38.208/28`
+- `20.43.110.80/28`
+- `20.43.110.176/28`
+- `20.43.110.48/28`
+- `20.193.36.37`
+- `20.43.110.208/28`
+- `20.43.110.224/28`
+- `20.43.110.160/28`
+- `20.40.185.225`
+- `20.43.110.240/28`
+- `20.193.56.128/28`
+- `20.40.185.185`
+
+>[!TAB CAN2]
+
+- `20.116.159.48/28`
+- `20.116.159.144/28`
+- `20.116.159.96/28`
+- `20.220.243.238`
+- `20.116.159.80/28`
+- `20.116.159.32/28`
+- `20.151.241.138`
+- `4.172.28.20`
+- `20.151.241.124`
+- `20.116.248.0/28`
+- `20.116.155.128/28`
+- `20.116.159.64/28`
+- `20.116.159.192/28`
+- `20.116.159.176/28`
+- `20.116.175.240/28`
+- `20.116.248.16/28`
+- `20.116.158.240/28`
+- `20.116.159.112/28`
+- `20.151.240.247`
+- `20.151.241.173`
+- `20.116.159.128/28`
+- `20.116.159.160/28`
+- `20.116.159.0/28`
+- `20.104.5.248`
+- `20.116.175.224/28`
+- `20.116.159.208/28`
+- `20.116.159.224/28`
+
+>[!TAB GBR9]
+
+- `20.162.155.16/28`
+- `20.162.154.96/28`
+- `20.26.64.0/28`
+- `20.26.64.96/28`
+- `20.162.154.64/28`
+- `20.108.200.27`
+- `20.162.154.80/28`
+- `20.162.153.192/28`
+- `20.108.200.61`
+- `20.162.154.48/28`
+- `20.162.154.192/28`
+- `20.162.154.0/28`
+- `20.26.64.16/28`
+- `20.162.154.112/28`
+- `20.162.153.32/28`
+- `20.254.80.141`
+- `20.162.153.208/28`
+- `20.108.203.20`
+- `20.26.64.48/28`
+- `20.162.154.240/28`
+- `20.162.154.208/28`
+- `20.162.154.160/28`
+- `20.108.205.182`
+- `20.108.202.198`
+- `20.162.154.32/28`
+- `20.162.153.16/28`
+
+>[!TAB IND2]
+
+- `4.188.92.84`
+- `4.224.5.224/28`
+- `4.224.7.32/28`
+- `4.188.92.87`
+- `4.188.89.92`
+- `4.224.5.112/28`
+- `4.224.6.80/28`
+- `4.224.144.224/28`
+- `4.224.144.240/28`
+- `4.224.6.96/28`
+- `4.188.89.255`
+- `4.188.94.32/28`
+- `4.224.5.96/28`
+- `4.224.6.64/28`
+- `4.224.7.48/28`
+- `4.224.5.208/28`
+- `4.188.90.65`
+- `4.224.6.16/28`
+- `4.224.6.0/28`
+- `4.224.5.192/28`
+- `4.224.7.16/28`
+- `4.188.90.67`
+- `4.188.90.17`
+- `4.188.94.48/28`
+- `4.224.6.112/28`
+- `4.224.5.240/28`
+- `4.224.7.0/28`
+
+>[!ENDTABS]
 
 ### Field mapping from [!DNL Salesforce] to XDM
 
-To establish a source connection between [!DNL Salesforce] and Platform, the [!DNL Salesforce] source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Platform.
+To establish a source connection between [!DNL Salesforce] and Experience Platform, the [!DNL Salesforce] source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Experience Platform.
 
-See the following for detailed information on the field mapping rules between [!DNL Salesforce] datasets and Platform:
+See the following for detailed information on the field mapping rules between [!DNL Salesforce] datasets and Experience Platform:
 
 - [Contacts](../adobe-applications/mapping/salesforce.md#contact)
 - [Leads](../adobe-applications/mapping/salesforce.md#lead)
@@ -41,11 +221,11 @@ See the following for detailed information on the field mapping rules between [!
 To use the [!DNL Salesforce] source as part of [!DNL B2B-CDP], you must first set up a [!DNL Postman] utility to auto-generate your [!DNL Salesforce] namespaces and schemas. The following documentation provides additional information on setting up the [!DNL Postman] utility:
 
 - You can download the namespace and schema auto-generation utility collection and environment from this [GitHub repository](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility).
-- For information on using Platform APIs including details on how to gather values for required headers and read sample API calls, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
-- For information on how to generate your credentials for Platform APIs, see the tutorial on [authenticating and accessing Experience Platform APIs](../../../landing/api-authentication.md).
-- For information on how to set up [!DNL Postman] for Platform APIs, see the tutorial on [setting up developer console and [!DNL Postman]](../../../landing/postman.md).
+- For information on using Experience Platform APIs including details on how to gather values for required headers and read sample API calls, see the guide on [getting started with Experience Platform APIs](../../../landing/api-guide.md).
+- For information on how to generate your credentials for Experience Platform APIs, see the tutorial on [authenticating and accessing Experience Platform APIs](../../../landing/api-authentication.md).
+- For information on how to set up [!DNL Postman] for Experience Platform APIs, see the tutorial on [setting up developer console and [!DNL Postman]](../../../landing/postman.md).
 
-With a Platform developer console and [!DNL Postman] set up, you can now start applying the appropriate environment values to your [!DNL Postman] environment.
+With an Experience Platform developer console and [!DNL Postman] set up, you can now start applying the appropriate environment values to your [!DNL Postman] environment.
 
 +++View the variable table guide
 
@@ -105,11 +285,9 @@ To connect your [!DNL Salesforce] account to Experience Platform in an AWS regio
 - A [!DNL Salesforce Connected App] that you can then use to enable JWT_BEARER OAuth flow.
 - The necessary permissions in [!DNL Salesforce] to access data.
 
-You must also add the following IP addresses to your allowlist, in order to connect your [!DNL Salesforce] account to Experience Platform on Amazon Web Services (AWS):
+### IP address allowlist for connection on AWS
 
-- `34.193.63.59`
-- `44.217.93.240`
-- `44.194.79.229`
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform on AWS. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform on AWS](../../ip-address-allow-list.md) for more information.
 
 ### Create a [!DNL Salesforce Connected App]
 
@@ -265,15 +443,15 @@ public class Main {
 
 Once you have completed prerequisite set up for your [!DNL Salesforce] account, you can proceed to connect your [!DNL Salesforce] account to Experience Platform and ingest your CRM data. Read the documentation below for more information:
 
-### Connect [!DNL Salesforce] to Platform using APIs
+### Connect [!DNL Salesforce] to Experience Platform using APIs
 
-The documentation below provides information on how to connect [!DNL Salesforce] to Platform using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL Salesforce] to Experience Platform using APIs or the user interface:
 
 - [Connect Salesforce to Experience Platform using the Flow Service API](../../tutorials/api/create/crm/salesforce.md)
 - [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a CRM source using the Flow Service API](../../tutorials/api/collect/crm.md)
 
-### Connect [!DNL Salesforce] to Platform using the UI
+### Connect [!DNL Salesforce] to Experience Platform using the UI
 
 - [Create a Salesforce source connection in the UI](../../tutorials/ui/create/crm/salesforce.md)
 - [Create a dataflow for a CRM connection in the UI](../../tutorials/ui/dataflow/crm.md)

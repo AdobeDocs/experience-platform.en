@@ -20,6 +20,7 @@ role: User,Developer,Admin
   * [Overview](policies/overview.md)
   * [Manage policies in the UI](policies/user-guide.md)
   * [Create a policy in the API](policies/create.md)
+  * [Consent policy rule building reference](policies/consent-policy-rule-building-reference.md)
 * Policy enforcement {#enforcement}
   * [Overview](enforcement/overview.md)
   * [Automatic enforcement](enforcement/auto-enforcement.md)
@@ -36,4 +37,4 @@ role: User,Developer,Admin
   * [Marketing actions](api/marketing-actions.md)
   * [Evaluation](api/evaluation.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

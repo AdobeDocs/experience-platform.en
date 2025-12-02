@@ -23,7 +23,7 @@ Before you can use the `/testing/destinationInstance` endpoint, make sure you me
 
 * You have an existing file-based destination created through the Destination SDK and you can see it in your [destinations catalog](../../../ui/destinations-workspace.md).
 * You have created at least one activation flow for your destination in the Experience Platform UI.
-* To successfully make the API request, you need the destination instance ID corresponding to the destination instance that you will be testing. Get the destination instance ID that you should use in the API call, from the URL, when browsing a connection with your destination in the Platform UI.
+* To successfully make the API request, you need the destination instance ID corresponding to the destination instance that you will be testing. Get the destination instance ID that you should use in the API call, from the URL, when browsing a connection with your destination in the Experience Platform UI.
 
    ![UI image showing how to get destination instance ID from the URL.](../../assets/testing-api/get-destination-instance-id.png)
 * *Optional*: If you want to test your destination configuration with a sample profile added to the API call, use the [/sample-profiles](file-based-sample-profile-generation-api.md) endpoint to generate a sample profile based on your existing source schema. If you do not provide a sample profile, the API will generate one and return it in the response.
@@ -232,7 +232,7 @@ A successful response returns HTTP status 200 along with the response payload.
 
 ## API error handling {#api-error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps
 

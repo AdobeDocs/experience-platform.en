@@ -35,13 +35,13 @@ There are improvements to a variety of Adobe Experience Platform capabilities th
 
 ### New B2B and B2P editions {#editions}
 
-New B2B and B2P editions that bring B2B data and functionality to both Real-Time CDP and Platform Activation products are available for purchase.
+New B2B and B2P editions that bring B2B data and functionality to both Real-Time CDP and Experience Platform Activation products are available for purchase.
 
 To learn more about Real-Time CDP B2B Edition see the [overview](../../rtcdp/overview.md).
 
 ### New Marketo data source and destination connectors {#marketo}
 
-New Marketo data source and destination connectors stream Marketo data into Platform and Platform audiences back to Marketo. Available for all Platform users.
+New Marketo data source and destination connectors stream Marketo data into Experience Platform and Experience Platform audiences back to Marketo. Available for all Experience Platform users.
 
 | Feature  | Description |
 |----------|-------------|
@@ -50,7 +50,7 @@ New Marketo data source and destination connectors stream Marketo data into Plat
 
 ### Standard B2B XDM {#XDM}
 
-Standard B2B XDM classes, field groups, and data types are available for all Platform users.
+Standard B2B XDM classes, field groups, and data types are available for all Experience Platform users.
 
 | Feature   | Description  |
 |-----------|--------------|

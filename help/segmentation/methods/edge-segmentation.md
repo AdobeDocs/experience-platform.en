@@ -1,6 +1,6 @@
 ---
 title: Edge Segmentation Guide
-description: Learn how to use edge segmentation to evaluate audiences in Platform instantaneously on the edge, enabling same page and next page personalization use cases.
+description: Learn how to use edge segmentation to evaluate audiences in Experience Platform instantaneously on the edge, enabling same page and next page personalization use cases.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 ---
 # Edge segmentation guide
@@ -11,7 +11,9 @@ Edge segmentation is the ability to evaluate segment definitions in Adobe Experi
 >
 > The edge data will be stored in an edge server location closest to where it was collected. This data may also be stored in a location other than the one designated as the hub (or principal) Adobe Experience Platform data center.
 >
-> Additionally, the edge segmentation engine will only honor requests on the edge where there is **one** primary marked identity, which is consistent with non-edge-based primary identities.
+> The edge segmentation engine will only honor requests on the edge where there is **one** primary marked identity, which is consistent with non-edge-based primary identities.
+>
+> Additionally, since edge segmentation is designed to process requests at scale, edge servers dynamically load the metadata required. As a result, the very first calls may experience "cold-start" latency regardless of the sandbox type. During this window, the first few evaluation calls may result in a  timeout. A brief pre-warm burst or realistic load helps eliminate false-positive test failures.
 
 ## Edge segmentation query types {#query-types}
 
@@ -20,14 +22,15 @@ A query can be evaluated with edge segmentation if it meets any of the criteria 
 >[!NOTE]
 >
 >If the query matches any of the query types in the following table, it will automatically be evaluated using edge segmentation. The system determines this ability automatically based on the query expression.
+>
+>Additionally, if the audience **only** contains profile attributes, it will be evaluated daily. If you want your audience to be evaluated in real-time, you'll need to add event data to your audience.
 
 | Query type | Details | Query | Example |
 | ---------- | ------- | ----- | ------- |
-| Single event within a time window of less than 24 hours | Any segment definition that refers to a single incoming event within a time window of less than 24 hours. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of a single event within a relative time window is shown.](../images/methods/edge/single-event.png) |
-| Profile only | Any segment definition that refers to only a profile attribute. | `homeAddress.country.equals("US", false)` | ![An example of a profile attribute shown.](../images/methods/edge/profile-attribute.png) |
-| Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of a single event with a profile attribute within a relative time window is shown.](../images/methods/edge/single-event-with-profile-attribute.png) |
-| Segment of segments | Any segment definition that contains one or more batch or edge segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![An example of a segment of segments is shown.](../images/methods/edge/segment-of-segments.png) |
-| Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of multiple events with a profile attribute is shown.](../images/methods/edge/multiple-events-with-profile-attribute.png) |
+| Single event within a time window of less than 24 hours | Any segment definition that refers to a single incoming event within a time window of less than 24 hours. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of a single event within a relative time window is shown.](../images/methods/edge/single-event.png){zoomable="yes"} |
+| Profile only | Any segment definition that refers to only a profile attribute. | `homeAddress.country.equals("US", false)` | ![An example of a profile attribute shown.](../images/methods/edge/profile-attribute.png){zoomable="yes"} |
+| Single event with a profile attribute within a relative time window of less than 24 hours | Any segment definition that refers to a single incoming event, with one or more profile attributes, and occurs within a relative time window of less than 24 hours. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![An example of a single event with a profile attribute within a relative time window is shown.](../images/methods/edge/single-event-with-profile-attribute.png){zoomable="yes"} |
+| Segment of segments | Any segment definition that contains one or more batch or edge segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![An example of a segment of segments is shown.](../images/methods/edge/segment-of-segments.png){zoomable="yes"} |
 
 Additionally, the segment definition **must** be tied to a merge policy that is active on edge. For more information about merge policies, please read the [merge policies guide](../../profile/api/merge-policies.md).
 
@@ -146,15 +149,15 @@ More information about using this endpoint can be found in the [segment definiti
 
 In Audience Portal, select **[!UICONTROL Create audience]**.
 
-![The Create audience button is highlighted in Audience Portal.](../images/methods/edge/select-create-audience.png)
+![The Create audience button is highlighted in Audience Portal.](../images/methods/edge/select-create-audience.png){zoomable="yes"}
 
 A popover appears. Select **[!UICONTROL Build rules]** to enter Segment Builder.
 
-![The Build rules button is highlighted in the create audience popover.](../images/methods/edge/select-build-rules.png)
+![The Build rules button is highlighted in the create audience popover.](../images/methods/edge/select-build-rules.png){zoomable="yes"}
 
 Within Segment Builder, create a segment definition that matches one of the [eligible query types](#eligible-query-types). If the segment definition qualifies for edge segmentation, you'll be able to select **[!UICONTROL Edge]** as the **[!UICONTROL Evaluation method]**.
 
-![The segment definition is displayed. The evaluation type is highlighted, showing the segment definition can be evaluated using edge segmentation.](../images/methods/edge/edge-evaluation-method.png)
+![The segment definition is displayed. The evaluation type is highlighted, showing the segment definition can be evaluated using edge segmentation.](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
 
 To learn more about creating segment definitions, please read the [Segment Builder guide](../ui/segment-builder.md)
 
@@ -290,13 +293,13 @@ More detailed information about the segment definition returned can be found in 
 
 You can retrieve all the audiences that are enabled for edge segmentation within your organization by using filters in Audience Portal. Select the ![filter icon](../../images/icons/filter.png) icon to display the list of filters.
 
-![The filter icon is highlighted in Audience Portal.](../images/methods/filter-audiences.png)
+![The filter icon is highlighted in Audience Portal.](../images/methods/filter-audiences.png){zoomable="yes"}
 
 Within the available filters, go to **Update frequency** and select "Edge". Using this filter displays all audiences in your organization that are evaluated using edge segmentation.
 
-![The Edge update frequency is selected, displaying all audiences in the organization that are evaluated using edge segmentation.](../images/methods/edge/filter-edge.png)
+![The Edge update frequency is selected, displaying all audiences in the organization that are evaluated using edge segmentation.](../images/methods/edge/filter-edge.png){zoomable="yes"}
 
-To learn more about viewing audiences in Platform, please read the [Audience Portal guide](../ui/audience-portal.md).
+To learn more about viewing audiences in Experience Platform, please read the [Audience Portal guide](../ui/audience-portal.md).
 
 >[!ENDTABS]
 
@@ -314,7 +317,7 @@ The **[!UICONTROL Total qualified]** metric represents the total number of quali
 
 The **[!UICONTROL New audience updated]** metric is represented by a line graph that shows the change in audience size through edge segmentation. You can adjust the dropdown to show the last 24 hours, last week, or last 30 days.
 
-![The Profiles over time card is highlighted.](../images/methods/edge/profiles-over-time.png)
+![The Profiles over time card is highlighted.](../images/methods/edge/profiles-over-time.png){zoomable="yes"}
 
 For more details on audience details, please read the [Audience Portal overview](../ui/audience-portal.md#audience-details).
 

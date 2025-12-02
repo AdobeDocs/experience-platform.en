@@ -32,13 +32,13 @@ A preference is an option that allows the customer to specify how different aspe
 * **Personalization preferences**: Preferences regarding how the brand should personalize experiences delivered to a customer.
 * **Marketing preferences**: Preferences regarding whether a brand is allowed to contact a customer through various channels.
 
-The following screenshot shows how the structure of the data type is represented in the Platform UI:
+The following screenshot shows how the structure of the data type is represented in the Experience Platform UI:
 
 ![](../images/data-types/consents.png)
 
 >[!TIP]
 >
->See the guide on [exploring XDM resources](../ui/explore.md) to for steps on how to look up any XDM resource and inspect its structure in the Platform UI.
+>See the guide on [exploring XDM resources](../ui/explore.md) to for steps on how to look up any XDM resource and inspect its structure in the Experience Platform UI.
 
 The following JSON shows an example of the type of data that the [!UICONTROL Consents and Preferences] data type can process. Information on the specific use of each of these fields is provided in the sections that follow.
 
@@ -261,7 +261,7 @@ See the tutorial on [creating a schema in the UI](https://www.adobe.com/go/xdm-s
 
 ## Handling consent and preference changes
 
-When a customer changes their consents or preferences on your website, these changes should be collected and immediately enforced using the [Adobe Experience Platform Web SDK](../../web-sdk/commands/setconsent.md). If a customer opts out of data collection, all data collection must immediately cease. If a customer opts out of personalization, then there should be no personalization present on the next page they visit. 
+When a customer changes their consents or preferences on your website, these changes should be collected and immediately enforced by setting consent in the data collection library used. If a customer opts out of data collection, all data collection must immediately cease. If a customer opts out of personalization, then there should be no personalization present on the next page they visit. See [`setConsent`](/help/collection/js/commands/setconsent.md) using the JavaScript library, or the [[!UICONTROL Set consent]](/help/tags/extensions/client/web-sdk/actions/set-consent.md) action using the tag extension.
 
 ## Appendix {#appendix}
 

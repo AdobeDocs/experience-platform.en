@@ -10,27 +10,29 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Top Actions"
->abstract="This widget shows the top kinds of actions that have been taken in Experience Platform within the selected timeframe. To see the full list of recorded actions in Platform, select **Audits** in the left navigation."
+>abstract="This widget shows the top kinds of actions that have been taken in Experience Platform within the selected timeframe. To see the full list of recorded actions in Experience Platform, select **Audits** in the left navigation."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="Top Users"
->abstract="This widget shows the users that have executed the most actions in Experience Platform within the selected timeframe. To see the full list of recorded actions in Platform, select **Audits** in the left navigation."
+>abstract="This widget shows the users that have executed the most actions in Experience Platform within the selected timeframe. To see the full list of recorded actions in Experience Platform, select **Audits** in the left navigation."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="Monitor user activities in Platform"
->abstract="<h2>Description</h2><p>You can monitor user activity for various Platform services and capabilities in the form of audit logs. These logs form an audit trail that records <b>who</b> performed <b>what</b> action and <b>when</b>. Audit logs can help with troubleshooting issues on Platform and help your business effectively comply with corporate data stewardship policies and regulatory requirements.</p>"
+>title="Monitor user activities in Experience Platform"
+>abstract="<h2>Description</h2><p>You can monitor user activity for various Experience Platform services and capabilities in the form of audit logs. These logs form an audit trail that records <b>who</b> performed <b>what</b> action and <b>when</b>. Audit logs can help with troubleshooting issues on Experience Platform and help your business effectively comply with corporate data stewardship policies and regulatory requirements.</p>"
 
-In order to increase the transparency and visibility of activities performed in the system, Adobe Experience Platform allows you to audit user activity for various services and capabilities in the form of "audit logs". These logs form an audit trail that can help with troubleshooting issues on Platform, and help your business effectively comply with corporate data stewardship policies and regulatory requirements.
+In order to increase the transparency and visibility of activities performed in the system, Adobe Experience Platform allows you to audit user activity for various services and capabilities in the form of "audit logs". These logs form an audit trail that can help with troubleshooting issues on Experience Platform, and help your business effectively comply with corporate data stewardship policies and regulatory requirements.
 
 In a basic sense, an audit log tells **who** performed **what** action, and **when**. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type.
+
+When a user performs an action, two types of audit events are recorded. A core event captures the authorization result of the action, [!UICONTROL allow] or [!UICONTROL deny], while an enhanced event captures the execution result, [!UICONTROL success] or [!UICONTROL failure]. Multiple enhanced events can be linked to the same core event. For example, when activating a destination, the core event records the authorization of the [!UICONTROL Destination Update] action, while the enhanced events record multiple [!UICONTROL Segment Activate] actions.
 
 >[!NOTE]
 >
 > The metadata for the actions **Add user** and **Remove user** within the **Role** resource will not contain the email ID of the user who performed the action. Instead, the logs will display the system generated email ID (system@adobe.com).
 
-This document covers audit logs in Platform, including how to view and manage them in UI or API.
+This document covers audit logs in Experience Platform, including how to view and manage them in UI or API.
 
 ## Event types captured by audit logs {#category}
 
@@ -68,7 +70,7 @@ The following table outlines which actions on which resources are recorded by au
 
 When the feature is enabled for your organization, audit logs are automatically collected as activity occurs. You do not need to manually enable log collection.
 
-In order to view and export audit logs, you must have the **[!UICONTROL View User Activity Log]** access control permission granted (found under the [!UICONTROL Data Governance] category). To learn how to manage individual permissions for Platform features, please refer to the [access control documentation](../../../access-control/home.md).
+In order to view and export audit logs, you must have the **[!UICONTROL View User Activity Log]** access control permission granted (found under the [!UICONTROL Data Governance] category). To learn how to manage individual permissions for Experience Platform features, please refer to the [access control documentation](../../../access-control/home.md).
 
 ## Managing audit logs in the UI {#managing-audit-logs-in-the-ui}
 
@@ -77,13 +79,13 @@ In order to view and export audit logs, you must have the **[!UICONTROL View Use
 >title="Instructions"
 >abstract="<ul><li>Select <b>Audits</b> in the left navigation. The Audits workspace shows a list of recorded logs, by default sorted from most recent to least recent.</li>&nbsp;&nbsp;&nbsp;<li> NOTE: Audit logs are retained for 365 days after which they will be deleted from the system. Therefore, you can only go back for a maximum period of 365 days. If you need to look back on data older than 365 days, you should export logs at a regular cadence to meet your internal policy requirements. </li><li>Select an event from the list to view its details in the right rail. </li><li>Select the funnel icon to display a List of filter controls to help narrow the results. Only the last 1000 records are displayed, regardless of the filters selected. </li><li>To export the current list of audit logs, select **Download log**.</li><li>For more help with this feature, see the <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html">audit logs overview</a> on Experience League.</li></ul>"
 
-You can view audit logs for different Experience Platform features within the **[!UICONTROL Audits]** workspace in the Platform UI. The workspace shows a list of recorded logs, by default sorted from most recent to least recent.
+You can view audit logs for different Experience Platform features within the **[!UICONTROL Audits]** workspace in the Experience Platform UI. The workspace shows a list of recorded logs, by default sorted from most recent to least recent.
 
 ![The Audits dashboard highlighting Audits in the left menu.](../../images/audit-logs/audits.png)
 
 Audit logs are retained for 365 days after which they will be deleted from the system. If you require data of more than 365 days, you should export logs at a regular cadence to meet your internal policy requirements.
 
-Your method of requesting audit logs changes the allowable time period and the number of records you will have access to. [Exporting logs](#export-audit-logs) allows you to go back 365 days (in 90 day intervals) to a maximum of 1000 records, where as the [activity log UI](#filter-audit-logs) in Experience Platform displays the past 90 days to a maximum of 1000 records. 
+Your method of requesting audit logs changes the allowable time period and the number of records you will have access to. [Exporting logs](#export-audit-logs) allows you to go back 365 days (in 90 day intervals) to a maximum of 10,000 audit logs (either core or enhanced), where as the [activity log UI](#filter-audit-logs) in Experience Platform displays the past 90 days to a maximum of 1000 core events, each of them with the corresponding enhanced events.
 
 Select an event from the list to view its details in the right rail.
 
@@ -95,7 +97,7 @@ Select the funnel icon (![Filter icon](/help/images/icons/filter.png)) to displa
 
 >[!NOTE]
 >
->The Experience Platform UI only displays the past 90 days up a maximum of 1000 records, regardless of the applied filters. If you need logs past that (to a maximum of 365 days), you'll need to [export your audit logs](#export-audit-logs).
+>The Experience Platform UI only displays the past 90 days up a maximum of 1000 core events, each with the corresponding enhanced events, regardless of the applied filters. If you need logs past that (to a maximum of 365 days), you'll need to [export your audit logs](#export-audit-logs).
 
 ![The Audits dashboard with the filtered activity log highlighted.](../../images/audit-logs/filters.png)
 
@@ -106,7 +108,7 @@ The following filters are available for audit events in the UI:
 | [!UICONTROL Category] | Use the dropdown menu to filter displayed results by [category](#category). |
 | [!UICONTROL Action] | Filter by action. The actions available for each service can be seen in the resource table above. |
 | [!UICONTROL User] | Enter the complete user ID (for example, `johndoe@acme.com`) to filter by user. |
-| [!UICONTROL Status] | Filter by whether the action was allowed (completed) or denied due to lack of [access control](../../../access-control/home.md) permissions. |
+| [!UICONTROL Status] | Filter audit events by outcome: successful, failed, allowed, or denied due to lack of [access control](../../../access-control/home.md) permissions. For an executed action, core events show [!UICONTROL Allow] or [!UICONTROL Deny]. When the core event is [!UICONTROL Allow], it may have attached one or more enhanced events showing **[!UICONTROL Success]** or **[!UICONTROL Failure]**. For example, a successful action shows [!UICONTROL Allow] on the core event and [!UICONTROL Success] on the attached enhanced event. |
 | [!UICONTROL Date] | Select a start date and/or an end date to define a date range to filter results by. Data can be exported with a 90-day lookback period (for example, 2021-12-15 to 2022-03-15). This can differ by event type. |
 
 To remove a filter, select the "X" on the pill icon for the filter in question, or select **[!UICONTROL Clear all]** to remove all filters.
@@ -131,7 +133,7 @@ To export the current list of audit logs, select **[!UICONTROL Download log]**.
 
 >[!NOTE]
 >
->Logs can be requested in 90 day intervals up to 365 days in the past. However, the maximum amount of logs that can be returned during a single export is 10,000.
+>Logs can be requested in 90 day intervals up to 365 days in the past. However, the maximum amount of logs that can be returned during a single export is 10,000 audit events (either core or enhanced).
 
 ![The Audits dashboard with the [!UICONTROL Download log] highlighted.](../../images/audit-logs/download.png)
 
@@ -165,7 +167,7 @@ To learn how to manage audit logs for activities in Adobe Admin Console, refer t
 
 ## Next steps and additional resources
 
-This guide covered how to manage audit logs in Experience Platform. For more information on how to monitor Platform activities, see the documentation on [Observability Insights](../../../observability/home.md) and [monitoring data ingestion](../../../ingestion/quality/monitor-data-ingestion.md).
+This guide covered how to manage audit logs in Experience Platform. For more information on how to monitor Experience Platform activities, see the documentation on [Observability Insights](../../../observability/home.md) and [monitoring data ingestion](../../../ingestion/quality/monitor-data-ingestion.md).
 
 To reinforce your understanding of audit logs in Experience Platform, watch the following video:
 

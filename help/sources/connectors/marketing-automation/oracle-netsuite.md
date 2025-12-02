@@ -2,16 +2,11 @@
 title: Oracle NetSuite Source Overview
 description: Learn how to connect Oracle NetSuite to Adobe Experience Platform using APIs or the user interface.
 last-substantial-update: 2024-01-30
-badge: Beta
 exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
 ---
 # [!DNL Oracle NetSuite]
 
->[!NOTE]
->
->The [!DNL Oracle NetSuite] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
-
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data third-party marketing automation system. Support for marketing automation providers includes [!DNL Oracle NetSuite].
 
@@ -30,9 +25,9 @@ View the following table for more information on the two [!DNL Oracle NetSuite] 
 | [[!DNL Oracle NetSuite Entities]](#oracle-netsuite-entities) | Customer | Retrieve specific customer data, including details such as customer names, addresses, and key identifiers. |
 | [[!DNL Oracle NetSuite Entities]](#oracle-netsuite-entities) | Contact | Retrieve contact names, emails, phone numbers, and any custom contact-related fields associated with customers. |
 
-## IP address allow list {#ip-allow-list}
+## IP address allowlist {#ip-allow-list}
 
-A list of IP addresses may require to be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform](../../ip-address-allow-list.md) for more information.
 
 ## Prerequisites {#prerequisites}
 
@@ -42,7 +37,7 @@ Before you can bring your [!DNL Oracle NetSuite] data to Experience Platform, yo
   * Contact [[!DNL Oracle NetSuite]](https://www.NetSuite.com/portal/company/contactus.shtml) if you do not already have a valid account.
 * An **active subscription** to any [!DNL Oracle NetSuite] product.
 * An **account ID**.
-  * The [!DNL Oracle NetSuite] source uses OAuth 2.0 to communicate with the [!DNL Oracle NetSuite] APIs. If you do not have your account ID, visit the [!DNL Oracle] documentation on [ how to retrieve your account ID](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1498754928.html#Finding-Your-NetSuite-Account-ID).
+  * The [!DNL Oracle NetSuite] source uses OAuth 2.0 to communicate with the [!DNL Oracle NetSuite] APIs. If you do not have your account ID, visit the [!DNL Oracle] documentation on [how to retrieve your account ID](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1498754928.html#Finding-Your-NetSuite-Account-ID).
 * A **client ID** and **client secret** combination.
   * The client ID and client secret are required to access [!DNL Oracle NetSuite] APIs. During this step, you must also ensure that your administrator has:
     * Enabled the OAuth 2.0 feature and setup the appropriate OAuth 2.0 roles.
@@ -52,7 +47,7 @@ Before you can bring your [!DNL Oracle NetSuite] data to Experience Platform, yo
 
 ### Gather required credentials {#gather-credentials}
 
-In order to connect [!DNL Oracle NetSuite] to Platform, you must provide values for the following connection properties:
+In order to connect [!DNL Oracle NetSuite] to Experience Platform, you must provide values for the following connection properties:
 
 | Credential | Description | Example |
 | --- | --- | --- |
@@ -67,18 +62,18 @@ In order to connect [!DNL Oracle NetSuite] to Platform, you must provide values 
 >
 >After a refresh token expires, you must create a new account in Experience Platform with your updated updated tokens.
 
-## Connect [!DNL Oracle NetSuite Activities] to Platform {#oracle-netsuite-activities}
+## Connect [!DNL Oracle NetSuite Activities] to Experience Platform {#oracle-netsuite-activities}
 
-The documentation below provides information on how to connect [!DNL Oracle NetSuite Activities] to Platform using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL Oracle NetSuite Activities] to Experience Platform using APIs or the user interface:
 
-* [Create a source connection and dataflow to bring [!DNL Oracle NetSuite Activities] data to Platform using APIs](../../tutorials/api/create/marketing-automation/oracle-netsuite-activities.md).
+* [Create a source connection and dataflow to bring [!DNL Oracle NetSuite Activities] data to Experience Platform using APIs](../../tutorials/api/create/marketing-automation/oracle-netsuite-activities.md).
 * [Connect your [!DNL Oracle NetSuite Activities] account to Experience Platform using the UI](../../tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md).
 * [Create a dataflow for a source connection using the UI](../../tutorials/ui/dataflow/marketing-automation.md).
 
-## Connect [!DNL Oracle NetSuite Entities] to Platform {#oracle-netsuite-entities}
+## Connect [!DNL Oracle NetSuite Entities] to Experience Platform {#oracle-netsuite-entities}
 
-The documentation below provides information on how to connect [!DNL Oracle NetSuite Entities] to Platform using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL Oracle NetSuite Entities] to Experience Platform using APIs or the user interface:
 
-* [Create a source connection and dataflow to bring [!DNL Oracle NetSuite Entities] data to Platform using APIs](../../tutorials/api/create/marketing-automation/oracle-netsuite-entities.md).
+* [Create a source connection and dataflow to bring [!DNL Oracle NetSuite Entities] data to Experience Platform using APIs](../../tutorials/api/create/marketing-automation/oracle-netsuite-entities.md).
 * [Connect your [!DNL Oracle NetSuite Entities] account to Experience Platform using the UI](../../tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md).
 * [Create a dataflow for a source connection using the UI](../../tutorials/ui/dataflow/marketing-automation.md).

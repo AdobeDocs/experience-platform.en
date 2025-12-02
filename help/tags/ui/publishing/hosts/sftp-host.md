@@ -19,7 +19,7 @@ Experience Platform allows you to deliver tag library builds to a secured SFTP s
 
 ## Set up an access key for your server {#access-key}
 
-Platform connects to your SFTP site using an encrypted key. There are a few steps to set this up correctly:
+Experience Platform connects to your SFTP site using an encrypted key. There are a few steps to set this up correctly:
 
 ### Create a public/private key pair
 
@@ -29,13 +29,13 @@ You must have a public/private key pair installed on your SFTP server. You can g
 
 The private key is used to encrypt the public key. You will need to provide your private key during the SFTP host creation process. See the section on [encrypting values](../../../api/guides/encrypting-values.md) in the Reactor API guide for instructions on encrypting public keys. Use the Production Environment's GPG key unless you know you need a specific one. Finally, you can encrypt your private key from any machine, so you do not need to install GPG on your server to complete this step.
 
-### Allowlist Platform IP addresses
+### Allowlist Experience Platform IP addresses
 
-You may need to approve a set of IP addresses to be used within your company firewall to allow Platform to reach your SFTP server and connect to it. These IP Addresses are:
+You may need to approve a set of IP addresses to be used within your company firewall to allow Experience Platform to reach your SFTP server and connect to it. These IP Addresses are:
 
-* `184.72.239.68`
-* `23.20.85.113`
-* `54.226.193.184`
+* `34.227.138.75`
+* `44.194.43.191`
+* `3.215.163.18`
 
 >[!NOTE]
 >
@@ -72,7 +72,7 @@ Select **[!UICONTROL Save]** to create the host with the selected configuration.
 
 ![Image showing the SFTP host being saved](../../../images/ui/publishing/sftp-hosts/save-host.png)
 
-When you select **[!UICONTROL Save]**, the connection and ability to deliver the files to your SFTP server is tested. Platform creates a folder, writes a file within that folder, checks to make sure the file is there, and then cleans up after itself. If the user account on your SFTP server (the one attached to the secure certificate you provided to Platform) does not have the necessary permissions to perform this action, then the host goes into a "Failed" status.
+When you select **[!UICONTROL Save]**, the connection and ability to deliver the files to your SFTP server is tested. Experience Platform creates a folder, writes a file within that folder, checks to make sure the file is there, and then cleans up after itself. If the user account on your SFTP server (the one attached to the secure certificate you provided to Experience Platform) does not have the necessary permissions to perform this action, then the host goes into a "Failed" status.
 
 ## Next steps
 

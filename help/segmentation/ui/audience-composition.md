@@ -14,7 +14,7 @@ exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 >- Manage Profiles
 >- Manage Merge Policies
 >
->More information about permissions within Platform can be found in the [access control overview](../../access-control/home.md#permissions).
+>More information about permissions within Experience Platform can be found in the [access control overview](../../access-control/home.md#permissions).
 
 >[!NOTE]
 >
@@ -304,6 +304,10 @@ Additionally, you can limit the number of profiles returned by enabling the **[!
 >id="platform_segmentation_ao_split_otherprofiles_text"
 >title="Other profiles"
 >abstract="The Other profiles toggle lets you create an additional path with the remaining profiles that do not match any of the other paths' specified conditions."
+
+>[!NOTE]
+>
+>In order to use the **[!UICONTROL Split]** block, you **must** have at least 10 profiles in your audience.
 
 The **[!UICONTROL Split]** block type allows you to split your new audience into various sub-audiences. You can either split this audience based on percentage or by an attribute.
 

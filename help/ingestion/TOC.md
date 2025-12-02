@@ -14,6 +14,7 @@ role: Developer
   - [Overview](streaming-ingestion/overview.md)
   - [Kafka connector](streaming-ingestion/kafka.md)
   - [Troubleshooting](streaming-ingestion/troubleshooting.md)
+  - [IP Address Allowlisting](streaming-ingestion/allowlisting.md)
 - Batch ingestion{#batch}
   - [Getting started with batch ingestion APIs](batch-ingestion/getting-started.md)
   - [API Overview](batch-ingestion/overview.md)
@@ -42,4 +43,4 @@ role: Developer
 - [Source connectors](source-connectors.md)
 - [Batch Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [Streaming Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

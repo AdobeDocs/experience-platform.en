@@ -17,9 +17,9 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 
 >[!IMPORTANT]
 >
->Profile attributes may contain sensitive data. To protect this data,  you must use the [Edge Network Server API](/help/server-api/overview.md) when configuring the **[!UICONTROL Custom Personalization]** destination for attribute-based personalization. All the Server API calls must be made in an [authenticated context](../../../server-api/authentication.md).
+>Profile attributes may contain sensitive data. To protect this data,  you must use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) when configuring the **[!UICONTROL Custom Personalization]** destination for attribute-based personalization. All the Edge Network API calls must be made in an [authenticated context](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication).
 >
-><br>You can retrieve profile attributes via the [Edge Network Server API](/help/server-api/overview.md) by adding a server-side integration that utilizes the same datastream that you are already using for your Web or Mobile SDK implementation.
+><br>You can retrieve profile attributes via the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) by adding a server-side integration that utilizes the same datastream that you are already using for your Web or Mobile SDK implementation.
 >
 ><br>If you do not follow the requirements above, personalization will be based on audience membership only.
 
@@ -31,9 +31,15 @@ Set up this destination to allow external personalization platforms, content man
 
 This destination requires the use of one of the following data collection methods, depending on your implementation:
 
-* Use the [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) if you want to collect data from your website.
+* Use the [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) if you want to collect data from your website.
 * Use the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) if you want to collect data from your mobile application.
-* Use the [Edge Network Server API](../../../server-api/overview.md) if you are not using [Web SDK](/help/web-sdk/home.md) or [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/), or if you want to personalize the user experience based on profile attributes.
+* Use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) if you are not using the Web SDK or Mobile SDK, or if you want to personalize the user experience based on profile attributes.
+
+>[!IMPORTANT]
+>
+>**Attribute-based personalization requirements:** If you want to personalize based on profile attributes (not just audience membership), you **must** use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) with authenticated server-side integration, regardless of whether you are also using Web SDK or Mobile SDK for data collection.
+>
+>Web SDK and Mobile SDK alone only support personalization based on audience membership. The Edge Network API is **required** to securely retrieve profile attributes for personalization.
 
 >[!IMPORTANT]
 >
@@ -53,7 +59,7 @@ This section describes which types of audiences you can export to this destinati
 ## Export type and frequency {#export-type-frequency}
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!DNL Profile request]** | You are requesting all the audiences that are mapped in the custom personalization destination for a single profile. Different custom personalization destinations can be set up for different [Adobe Data Collection datastreams](../../../datastreams/overview.md).|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
@@ -61,7 +67,7 @@ This section describes which types of audiences you can export to this destinati
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
->title="About datastream IDs"
+>title="About datastreams"
 >abstract="This option determines in which data collection datastream the audiences will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. You must configure a datastream before you can configure your destination."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="Learn how to configure a datastream"
 
@@ -78,7 +84,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
 *  **[!UICONTROL Integration alias]**: This value is sent to the Experience Platform Web SDK as a JSON object name. 
-*  **[!UICONTROL Datastream ID]**: This determines in which Data Collection datastream the audiences will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../datastreams/overview.md) for more details.
+*  **[!UICONTROL Datastream]**: This determines in which Data Collection datastream the audiences will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../datastreams/overview.md) for more details.
 
 ### Enable alerts {#enable-alerts}
 
@@ -96,7 +102,7 @@ Read [Activate profiles and audiences edge personalization destinations](../../u
 
 ## Exported data {#exported-data}
 
-If you are using [Tags in Adobe Experience Platform](../../../tags/home.md) to deploy the Experience Platform Web SDK, use the [send event complete](../../../tags/extensions/client/web-sdk/event-types.md) functionality and your custom code action will have an `event.destinations` variable that you can use to see the exported data.
+If you are using [Tags in Adobe Experience Platform](/help/tags/home.md) to deploy the Experience Platform Web SDK, use the [send event complete](/help/tags/extensions/client/web-sdk/event-types.md) functionality and your custom code action will have an `event.destinations` variable that you can use to see the exported data.
 
 Here is a sample value for the `event.destinations` variable:
 
@@ -118,7 +124,7 @@ Here is a sample value for the `event.destinations` variable:
 ]
 ```
 
-If you are not using [Tags](/help/tags/home.md) to deploy the Experience Platform Web SDK, use [command responses](/help/web-sdk/commands/command-responses.md) to see the exported data.
+If you are not using [Tags](/help/tags/home.md) to deploy the Experience Platform Web SDK, use [command responses](/help/collection/js/commands/command-responses.md) to see the exported data.
 
 The JSON response from Adobe Experience Platform can be parsed to find the corresponding integration alias of the application you are integrating with Adobe Experience Platform. The audience IDs can be passed into the application's code as targeting parameters. Below is a sample of what this would look like specific to the destination response.
 

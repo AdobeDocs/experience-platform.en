@@ -39,7 +39,7 @@ Before diving into the details of Identity Service, please read the following ta
 
 ## What is Identity Service?
 
-![Identity stitching on Platform](./images/identity-service-stitching.png)
+![Identity stitching on Experience Platform](./images/identity-service-stitching.png)
 
 In a Business-To-Customer (B2C) context, customers interact with your business and establish a relationship with your brand. A typical customer may be active in any number of systems within your organization's data infrastructure. Any given customer may be active within your e-commerce, loyalty, and help-desk systems. That same customer may also engage both anonymously or through authenticated means on any number of different devices.
 
@@ -67,6 +67,10 @@ Identity Service provides the following operations to achieve its mission:
 * Delete identities to ensure regulatory compliance.
 
 ## How Identity Service links identities
+
+>[!IMPORTANT]
+>
+>Identity Service is case-sensitive. For example, **abc<span>@gmail.com** and **ABC<span>@GMAIL.COM** would be treated as two separate Email identities.
 
 A link between two identities is established when the identity namespace and the identity values match.
 
@@ -103,7 +107,7 @@ Identity Service plays a vital role within Experience Platform. Some of these ke
 
 * [Schemas](../xdm/home.md): Within a given schema, the schema fields that are marked as identity allow for identity graphs to be built.
 * [Datasets](../catalog/datasets/overview.md): When a dataset is enabled for ingestion into Real-Time Customer Profile, identity graphs are generated from the dataset, given that the dataset as at least two fields marked as identity.
-* [Web SDK](../web-sdk/home.md): Web SDK sends experience events to Adobe Experience Platform, and Identity Service generates a graph when two or more identities exist in the event.
+* [Data collection](/help/collection/home.md): Data collection libraries (such as the Web SDK) send experience events to Adobe Experience Platform. The Identity Service generates a graph when two or more identities exist in the event.
 * [Real-Time Customer Profile](../profile/home.md): Before attributes and events for a given profile are merged, Real-Time Customer Profile could reference the identity graph. For more information, read the guide on [understanding the relationship between Identity Service and Real-Time Customer Profile](./identity-and-profile.md).
 * [Destinations](../destinations/home.md): Destinations can send profile information to other systems based on an identity namespace, such as hashed email.
 * [Segment Match](../segmentation/ui/segment-match/overview.md): Segment Match matches two profiles across two different sandboxes that have the same identity namespace and identity value.
