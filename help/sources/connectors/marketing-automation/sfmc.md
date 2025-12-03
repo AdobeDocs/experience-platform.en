@@ -2,7 +2,7 @@
 title: Salesforce Marketing Cloud (V2) Source Overview 
 description: Learn how to connect Salesforce Marketing Cloud (V2) to Adobe Experience Platform using APIs or the user interface.
 ---
-# [!DNL Salesforce Marketing Cloud] source overview
+# [!DNL Salesforce Marketing Cloud] (V2) source overview
 
 [!DNL Salesforce Marketing Cloud] is a robust, comprehensive digital marketing automation and analytics platform designed to help businesses manage customer interactions across multiple channels. [!DNL Salesforce Marketing Cloud] empowers you to transition from siloed campaigns to intelligent, personalized customer journeys across all touch points, including email, mobile, social, and web. By unifying your customer data and leveraging built-in AI, you can automate highly specific messages and content, ensuring you deliver the right experience at the right moment. This capability allows you to build stronger relationships, increase conversion rates, and achieve measurable growth by keeping your customers at the center of your entire marketing strategy.
 
@@ -30,28 +30,28 @@ To create an installed package, use the [!DNL Salesforce Marketing Cloud] UI and
 
 Once the new package is created, select **[!DNL Add Component]**.
 
-![](../../images/tutorials/create/sfmc/add-component.png)
+![The Add Component interface of the Salesforce Marketing Cloud UI.](../../images/tutorials/create/sfmc/add-component.png)
 
-Select [!DNL API Integration] as your component type.
+Select **[!DNL API Integration]** as your component type.
 
-![](../../images/tutorials/create/sfmc/api-integration.png)
+![The component selection window with "API Integration" selected.](../../images/tutorials/create/sfmc/api-integration.png)
 
-Select [!DNL Server-to-Server] as your integration type.
+Select **[!DNL Server-to-Server]** as your integration type.
 
-![](../../images/tutorials/create/sfmc/server-to-server.png)
+![The integration type selection window](../../images/tutorials/create/sfmc/server-to-server.png)
 
-Finally, navigate to [!DNL Scope] > [!DNL Data]. Under [!DNL Data Extensions], select [!DNL Read].
+Finally, navigate to **[!DNL Scope]** > **[!DNL Data]**. Under **[!DNL Data Extensions]**, select **[!DNL Read]**.
 
-![](../../images/tutorials/create/sfmc/data-extensions.png)
+![The data extensions section of Scope in Salesforce Marketing](../../images/tutorials/create/sfmc/data-extensions.png)
 
-Select [!DNL Save] and then copy and save your **client secret**. When complete, select [!DNL Finish].
+Select **[!DNL Save]** and then copy and save your **client secret**. When complete, select **[!DNL Finish]**.
 
-![](../../images/tutorials/create/sfmc/generate-secret.png)
+![The Salesforce Marketing Cloud window for generating a client secret.](../../images/tutorials/create/sfmc/generate-secret.png)
 
 Before leaving the [!DNL Salesforce Marketing Cloud] UI, copy the **client ID** and **unique base URI prefix** as you will use both values to create a connection to Experience Platform. For the Authentication Base URI, please ensure you remove everything after `.auth.marketingcloudapis.com/`
 
-![](../../images/tutorials/create/sfmc/client-id-and-uri.png)
+![The Salesforce Marketing Cloud components interface where the client ID and unique base URI can be retrieved.](../../images/tutorials/create/sfmc/client-id-and-uri.png)
 
 For detailed steps on creating an installed package, read the [[!DNL Salesforce] documentation](https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-developer-basics/set-up-your-developer-environment).
 
-  
+### Gather required credentials
