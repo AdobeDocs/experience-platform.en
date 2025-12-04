@@ -242,7 +242,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
-      }, 
+      },
+      "hostName":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.hostName}}"
+      },
       "port": 22,
       "encryptionMode" : "PGP"
    },

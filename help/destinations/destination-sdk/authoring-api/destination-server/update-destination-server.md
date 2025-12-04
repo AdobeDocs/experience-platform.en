@@ -232,7 +232,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
-      }, 
+      },
+      "hostName":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.hostName}}"
+      },
       "port": 22,
       "encryptionMode" : "PGP"
    },
