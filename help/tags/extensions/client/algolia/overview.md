@@ -41,7 +41,7 @@ In the configuration view that appears, you must provide the following details:
 | [!UICONTROL Index Name ] | The [!UICONTROL Index Name] contains the Products or Content.  This Index will be used as a default. |
 | [!UICONTROL User Token Data Element ]  | The Data Element that will return the User Token. |
 | [!UICONTROL Authenticated User Token Data Element ]  | Set the Data Element that will return the Authenticated User Token. |
-| [!UICONTROL Currency Code ] | Specify the currency as ISO-4217 currency code, such as USD or EUR. This field supports data elements. |
+| [!UICONTROL Currency Code ] | Enter the currency code in ISO-4217 format, such as USD or EUR. This field supports data elements. |
 
 ![](../../../images/extensions/client/algolia/configure.png)
 
@@ -94,8 +94,8 @@ Add the **[!UICONTROL Converted]** action to your tag rule to send converted eve
 
 | Property | Description |
 | --- | --- |
-| [!UICONTROL Event Name ] | The Event Name that will be used to further refine this **convert** event. | 
-| [!UICONTROL Event Details Data Element ]| The Data Element returns event details, including: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optional)</li><li>`recordID` (optional)</li></ul> |
+| [!UICONTROL Event Name] | The Event Name that will be used to further refine this **convert** event. | 
+| [!UICONTROL Event Details Data Element]| The Data Element returns event details, including: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optional)</li><li>`recordID` (optional)</li></ul> |
 
 >[!NOTE]
 >
@@ -114,7 +114,7 @@ Add the **[!UICONTROL Added to Cart]** action to your tag rule to send added to 
 | Property | Description |
 | --- | --- |
 | [!UICONTROL Event Name ] | The Event Name that will be used to further refine this **add to cart** event. | 
-| [!UICONTROL Event Details Data Element ] | The Data Element returns event details in JSON format, including: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`price`</li><li>`quantity`</li><li>`discount` (optional)</li></ul></li><li>`queryID` (optional)</li><li>`currency` (optional)</li></ul>. |
+| [!UICONTROL Event Details Data Element ] | The Data Element returns event details in JSON format, including: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`</li><li>`price`</li><li>`quantity`</li><li>`discount` (optional)</li><li>`queryID` (optional)</li><li>`currency` (optional)</li></ul>. |
 
 >[!NOTE]
 >
@@ -135,7 +135,7 @@ Add the **[!UICONTROL Purchased]** action to your tag rule to send purchased eve
 | Property | Description |
 | --- | --- |
 | [!UICONTROL Event Name ] | The Event Name that will be used to further refine this **purchase** event. | 
-| [!UICONTROL Event Details Data Element ] | The Data Element returns event details in JSON format, including: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`price`</li><li>`quantity`</li><li>`discount` (optional)</li></ul></li><li>`queryID` (optional)</li><li>`currency` (optional)</li></ul>. |
+| [!UICONTROL Event Details Data Element ] | The Data Element returns event details in JSON format, including: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`</li><li>`price`</li><li>`quantity`</li><li>`discount` (optional)</li><li>`queryID` (optional)</li><li>`currency` (optional)</li></ul>. |
 
 >[!NOTE]
 >
@@ -184,10 +184,10 @@ The DataSet Data Element retrieves data associated with HTML elements, which is 
 
 | Property | Description |
 | --- | --- |
-| [!UICONTROL Price Data Element ] | Optional. Data Element that returns the price for the item. If provided, this will be included in the stored event data for commerce events. |
-| [!UICONTROL Quantity Data Element ] | Optional. Data Element that returns the quantity for the item. Defaults to 1 if not provided. |
-| [!UICONTROL Discount Data Element ] | Optional. Data Element that returns the discount decimal value for the item. |
-| [!UICONTROL Currency Code ] | Optional. Specify the currency as ISO-4217 currency code. If not specified, the default currency from the extension configuration will be used. |
+| [!UICONTROL Price Data Element ] | Data Element that returns the price for the item. If provided, this will be included in the stored event data for commerce events. |
+| [!UICONTROL Quantity Data Element ] | Data Element that returns the quantity for the item. Defaults to 1 if not provided. |
+| [!UICONTROL Discount Data Element ] | Data Element that returns the discount decimal value for the item. |
+| [!UICONTROL Currency Code ] | The currency code in ISO-4217 format. If no currency code is specified, the default currency from the extension configuration will be used. |
 
 **Overrides (Optional):**
 
@@ -265,7 +265,7 @@ An example of HTML that contains query parameters:
 
 ### Storage {#storage}
 
-The Storage Data Element retrieves data from browser session storage for use in [!DNL Algolia] actions. This data element can also be used to augment the stored data with additional commerce information.
+The Storage Data Element retrieves data from the browser session storage for use in [!DNL Algolia] actions. This data element can also be used to augment the stored data with additional commerce information.
 
 This Data Element retrieves event details that were previously stored in session storage (typically by the DataSet data element during click events). The data is automatically removed during conversion events unless the removal is explicitly disabled.
 
@@ -274,10 +274,10 @@ This Data Element retrieves event details that were previously stored in session
 | Property | Description |
 | --- | --- |
 | [!UICONTROL Record ID Data Element] | The Record ID is used as a key to look up the event data that is stored in browser storage. The page URL is the default Record ID. To override this behavior, use this property to provide a data element that returns the Record ID as a string. |
-| [!UICONTROL Price Data Element ] | Optional. Data Element that returns the price for the item. If provided, this will update the stored event data with price information. |
-| [!UICONTROL Quantity Data Element ] | Optional. Data Element that returns the quantity for the item. If provided, this will update the stored event data with quantity information. |
-| [!UICONTROL Discount Data Element ] | Optional. Data Element that returns the discount decimal value for the item. If provided, this will update the stored event data with discount information. |
-| [!UICONTROL Currency Code ] | Optional. Specify the currency as ISO-4217 currency code. If provided, this will update the stored event data with currency information. |
+| [!UICONTROL Price Data Element ] | Data Element that returns the price for the item. If provided, this will update the stored event data with price information. |
+| [!UICONTROL Quantity Data Element ] | Data Element that returns the quantity for the item. If provided, this will update the stored event data with quantity information. |
+| [!UICONTROL Discount Data Element ] | Data Element that returns the discount decimal value for the item. If provided, this will update the stored event data with discount information. |
+| [!UICONTROL Currency Code ] | Enter the currency code in ISO-4217 format. If provided, this will update the stored event data with currency information. |
 
 ![](../../../images/extensions/client/algolia/storage.png) 
 
