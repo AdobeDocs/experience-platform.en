@@ -202,7 +202,6 @@ These fields allow you to override the default behavior of retrieving data from 
 | [!UICONTROL Index Name Data Element ] | The Index Name is retrieved from the dataset on the HTML element. To override this behavior, use this property to provide a data element that will return the Index Name as a string. |
 
 ![](../../../images/extensions/client/algolia/dataset.png)
-![](../../../images/extensions/client/algolia/dataset.1.png) 
 
 This Data Element returns:
 
