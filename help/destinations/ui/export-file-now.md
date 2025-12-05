@@ -59,6 +59,7 @@ Keep in mind the following considerations when using the **[!UICONTROL Export fi
 * **[!UICONTROL Export file now]** works only for audiences whose schedule in the batch activation dataflow overlaps with the present date. This includes audiences with schedules that have no end date (export frequency of **[!UICONTROL Once]**), or where the end date has not yet passed.
 * When adding an audience to an existing dataflow, wait for at least **one hour** before using the **[!UICONTROL Export file now]** control.
 * If you change an audience's merge policy, or if you create an audience which uses a new merge policy, wait 24 hours until using the **[!UICONTROL Export file now]** control.
+* **[!UICONTROL Export file now]** uses data from scheduled snapshot exports only. It does not pick up data from API-triggered export jobs. To export the latest data after an API-triggered export job, wait for the next scheduled export to run.
 
 ## UI error messages {#ui-error-messages}
 

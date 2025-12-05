@@ -104,5 +104,7 @@ These mappings are required for the destination to function properly and must be
 
 ## Additional notes and important callouts {#additional-notes}
 
-* If an account audience with the same name was activated earlier to Demandbase, you cannot activate it again through a different dataflow to the Demandbase destination.
-* If you have exported audiences to Demandbase and the exports are successful in Experience Platform, yet not all of the data reaches Demandbase, you might have encountered API throttling on the Demandbase side. Reach out to them for clarification.
+* **Audience naming**: If an account audience with the same name was activated earlier to Demandbase, you cannot activate it again through a different dataflow to the Demandbase destination.
+* **Demandbase API guardrails**: If you have exported audiences to Demandbase and the exports are successful in Experience Platform, yet not all of the data reaches Demandbase, you might have encountered API throttling on the Demandbase side. Reach out to them for clarification.
+* **List deletion**: Account lists are unique, so you cannot re-create a new list with a name already in use. When you remove accounts from a list, they will no longer be available, but they will not be deleted.
+* **Activation time**: Data loading in Demandbase is subject to overnight processing.

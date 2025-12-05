@@ -76,12 +76,17 @@ A list of individual runs and their particular metrics is displayed, along with 
 - **[!UICONTROL Identities excluded]**:  The total number of profile identities that are skipped for activation based on missing attributes and consent violation.
 - **[!UICONTROL Identities failed]**: The total number of profile identities that are not activated to the destination due to errors.
 
+>[!NOTE]
+>
+>The totals for identities activated, excluded, and failed represent a sum of all individual dataflow run counts. Since dataflow runs have a time-to-live (TTL) of 90 days, these totals typically cover approximately the last 3 months. As older dataflow runs expire and are removed from the system, you may observe a decrease in the total counts displayed.
+
 ![Dataflow runs details for streaming destinations.](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
 
 Each individual dataflow run shows the following details:
 
 - **[!UICONTROL Dataflow run start]**: The time when the dataflow run started. For streaming dataflow runs, Experience Platform captures metrics based on the start of the dataflow run, in the form of hourly metrics. This means that for streaming dataflow runs, if a dataflow run started for example at 10:30PM, the metric shows the start time as 10:00 PM in the UI.
-- **[!UICONTROL Processing time]**: The amount of time that it took for the dataflow run to process.
+- **[!UICONTROL Audience]**: The number of audiences associated with each dataflow run.
+- **[!UICONTROL Processing duration]**: The amount of time that it took for the dataflow run to process.
   - For **[!UICONTROL completed]** runs, the processing time metric always shows one hour.
   - For dataflow runs which are still in a **[!UICONTROL processing]** state, the window to capture all the metrics stays open for more than an hour, to process all metrics that correspond to the dataflow run. For example, a dataflow run that started at 9:30 AM might stay in a processing state for one hour and thirty minutes to capture and process all the metrics. The length of the processing time is directly affected by the retries done as a result of the destination's failed response. Then, once the processing window closes and the status of the dataflow run updates to **completed**, the displayed processing time is changed to one hour.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow.
@@ -159,7 +164,7 @@ Each individual dataflow run shows the following details:
 
 - **[!UICONTROL Dataflow run start]**: The time when the dataflow run started.
 - **[!UICONTROL Audience]**: The name of the audience associated with each dataflow run.
-- **[!UICONTROL Processing time]**: The amount of time it took for the dataflow run to be processed.
+- **[!UICONTROL Processing duration]**: The amount of time it took for the dataflow run to be processed.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow. This value is updated every 60 minutes.
 - **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination as part of the dataflow run. This metric includes identities that are created, updated, and removed from exported audiences.
 - **[!UICONTROL Identities excluded]**: The total number of profile identities that are excluded from activation based on missing attributes and consent violation.
