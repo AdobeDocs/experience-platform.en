@@ -191,7 +191,7 @@ Read this section for information on deprecated Analytics mapping fields.
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | number | Mobile Services beacon minor. |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | string | Mobile Services beacon UUID. |
 | `mobileinstalls` | `application.firstLaunches` | Object  | This is triggered at the first run after installation or reinstallation `{id (string), value (number)}` |
-| `mobileupgrades` | `application.upgrades` | Object | Reports the number of app upgrades. Triggers at the first run after upgrade or any time the version number changes. | `{id (string), value (number)}` |
+| `mobileupgrades` | `application.upgrades` | Object | Reports the number of app upgrades. Triggers at the first run after upgrade or any time the version number changes. `{id (string), value (number)}` |
 | `mobilelaunches` | `application.launches` | Object | The number of times the app has been launched.  `{id (string), value (number)}` |
 | `mobilecrashes` | `application.crashes` | Object |  `{id (string), value (number)}` |
 | `mobilemessageclicks` | `directMarketing.clicks` | Object |  `{id (string), value (number)}` |
@@ -218,13 +218,13 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 
 | Data feed | XDM field | XDM type | Description |
 | --- | --- | --- | --- |
-| `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Object | Custom Analytics props, configured to be list props. It contains a delimited list of values. | {} |
-| `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Object | Used by hierarchy variables. It contains a delimited list of values. | {values (array), delimiter (string)} |
-| `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | Custom Analytics list variables. Contains a delimited list of values. | {value (string), key (string)} |
+| `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Object | Custom Analytics props, configured to be list props. It contains a delimited list of values. `{}` |
+| `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Object | Used by hierarchy variables. It contains a delimited list of values. `{values (array), delimiter (string)}` |
+| `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | Custom Analytics list variables. Contains a delimited list of values.  `{value (string), key (string)}` |
 | `m_color` | `device.colorDepth` | integer | The color depth ID, which is based off the value of the c_color column. | 
 | `m_cookies` | `environment.browserDetails.cookiesEnabled` | boolean | A variable used in the Cookie Support dimension. |
-| `m_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Object | Standard commerce events triggered on the hit.| {id (string), value (number)} |
-| `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Custom events triggered on the hit. | {id (Object), value (Object)} |
+| `m_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Object | Standard commerce events triggered on the hit. `{id (string), value (number)}` |
+| `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Custom events triggered on the hit. `{id (Object), value (Object)}` |
 | `m_geo_country` | `placeContext.geo.countryCode` | string | Abbreviation of the country where the hit came from, which is based off the IP. |
 | `m_geo_latitude` | `placeContext.geo._schema.latitude` | number | |
 | `m_geo_longitude` | `placeContext.geo._schema.longitude` | number | |
@@ -236,7 +236,7 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 | `m_page_type` | `web.webPageDetails.isErrorPage` | boolean | A variable that is used to populate the Pages Not Found dimension. This variable should either be empty, or contain "ErrorPage". |
 | `m_pagename_no_url` | `web.webPageDetails.name` | number | The name of the page (if set). If no page is specified, this value is left empty. |
 | `m_paid_search` | `search.isPaid` | boolean | A flag that is set if the hit matches paid search detection. |
-| `m_product_list` | `productListItems[].items` | array | The product list, as passed in through the products variable. | {SKU (string), quantity (integer), priceTotal (number)} |
+| `m_product_list` | `productListItems[].items` | array | The product list, as passed in through the products variable. `{SKU (string), quantity (integer), priceTotal (number)}` |
 | `m_ref_type` | `web.webReferrer.type` | string | A numeric ID representing the type of referral for the hit.<br/>`1`: Inside your site<br/>`2`: Other websites<br/>`3`: Search engines<br/>`4`: Hard drive<br/>`5`: USENET<br/>`6`: Typed/Bookmarked (no referrer)<br/>`7`: email<br/>`8`: No JavaScript<br/>`9`: Social Networks |
 | `m_search_engine` | `search.searchEngine` | string | The numeric ID representing the search engine that referred the visitor to your site. |
 | `post_currency` | `commerce.order.currencyCode` | string | The currency code that was used during the transaction. |

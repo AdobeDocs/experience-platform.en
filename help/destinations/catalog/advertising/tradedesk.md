@@ -11,19 +11,18 @@ exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 
 >[!IMPORTANT]
 >
-> Following the [internal upgrade](../../../release-notes/2025/july-2025.md#destinations) to the destinations service from July 2025, you may experience a **drop in the number of activated profiles** in your dataflows to [!DNL The Trade Desk].
-> This drop is caused by the introduction of the **ECID mapping requirement** for all activations to this destination platform. See the [mandatory mapping](#mandatory-mappings) section in this page for detailed information.
+> Following the [internal upgrade](../../../release-notes/2025/july-2025.md#destinations) to the destinations service from July 2025, you may notice a **drop in the number of activated profiles** in your dataflows to [!DNL The Trade Desk].
+> This drop is caused by improved monitoring visibility. Profiles without ECID are now correctly counted as dropped in the activation metrics. See the [mandatory mapping](#mandatory-mappings) section in this page for detailed information.
 >
 >**What changed:**
 >
->* ECID (Experience Cloud ID) mapping is now **mandatory** for all profile activations.
->* Profiles without ECID mapping will be **dropped** from existing activation dataflows.
+>* The destinations service now correctly reports when profiles without ECID are dropped from activation.
+>* **Important:** Profiles without ECID never made it to [!DNL The Trade Desk] even before this upgrade. The integration has always required ECID. This upgrade fixes a bug that previously prevented these drops from being visible in your metrics.
 >
 >**What you need to do:**
 >
 >* Review your audience data to confirm profiles have valid ECID values.
->* Monitor your activation metrics to verify expected profile counts.
-
+>* Monitor your activation metrics to verify expected profile counts. Lower counts reflect accurate reporting, not a change in destination behavior.
 
 Use this destination connector to send profile data to [!DNL The Trade Desk]. This connector sends data to the [!DNL The Trade Desk] first-party endpoint. The integration between Adobe Experience Platform and [!DNL The Trade Desk] does not support exporting data to the [!DNL The Trade Desk] third-party endpoint.
 
@@ -45,10 +44,10 @@ All identities in the table below are mandatory mappings.
 
 |Target identity|Description|Considerations|
 |---|---|---|
-|GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|ECID|Experience Cloud ID|This identity is mandatory for the integration to work correctly but is not used for audience activation.|
-|The Trade Desk ID|Advertiser ID in the [!DNL The Trade Desk] platform|Use this identity when activating audiences based on The Trade Desk's proprietary ID.|
+|[!DNL GAID]|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
+|[!DNL IDFA]|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
+|[!DNL ECID]|Experience Cloud ID|This identity is mandatory for the integration to work correctly but is not used for audience activation.|
+| [!DNL Tradedesk] |[!DNL TDID] in the [!DNL The Trade Desk] platform|Use this identity when activating audiences based on The Trade Desk's proprietary ID.|
 
 {style="table-layout:auto"}
 
@@ -151,7 +150,7 @@ Examples:
 
 >[!NOTE]
 > 
->Following the [July 2025 upgrade](/help/release-notes/2025/july-2025.md#destinations) to the destinations service, [!DNL ECID] mapping is enforced. Profiles missing [!DNL ECID] are now dropped as expected, which may surface lower activation counts compared to legacy behavior.
+>Following the [July 2025 upgrade](/help/release-notes/2025/july-2025.md#destinations) to the destinations service, profiles missing [!DNL ECID] are now correctly reported as dropped in activation metrics. This has always been the behavior of the integration - profiles without [!DNL ECID] never reached [!DNL The Trade Desk] - but the drops are now properly visible in your dataflow monitoring. Lower activation counts reflect accurate reporting, not a change in destination functionality.
 
 ## Exported data {#exported-data}
 

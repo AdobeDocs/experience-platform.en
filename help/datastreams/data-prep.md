@@ -24,9 +24,9 @@ There are two uses cases where Data Prep for Data Collection is useful:
 
 ## Send an existing data layer to the Edge Network via WebSDK {#send-datalayer-via-websdk}
 
-The existing data layer must be sent using the [`data`](/help/web-sdk/commands/sendevent/data.md) object within the `sendEvent` command.
+The existing data layer must be sent using the [`data`](/help/collection/js/commands/sendevent/data.md) object within the `sendEvent` command.
 
-If you are using Tags, you must use the **[!UICONTROL Data]** field of the **[!UICONTROL Send Event]** action type, as described in the [Web SDK tag extension documentation](/help/tags/extensions/client/web-sdk/action-types.md).
+If you are using Tags, you must use the **[!UICONTROL Data]** field of the [**[!UICONTROL Send Event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md) action type.
 
 The rest of this guide will focus on how to map the data layer to XDM standards after it has been sent by the WebSDK. 
 
