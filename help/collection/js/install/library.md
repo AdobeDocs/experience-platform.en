@@ -1,11 +1,11 @@
 ---
-title: Install the Web SDK using the JavaScript library
+title: Install the Web SDK JavaScript library
 description: Reference the Web SDK library using a standalone CDN file.
 exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
 ---
-# Install the Web SDK using the JavaScript library
+# Install the Web SDK JavaScript library
 
-An alternative to installing the Web SDK without [using the tag extension](/help/tags/extensions/client/web-sdk/overview.md) is to reference the JavaScript library hosted on a CDN. You can reference the library directly, or download it and host it on your own infrastructure. It is available in minified and full formats.
+An alternative to installing the Web SDK without [using the tag extension](/help/tags/extensions/client/web-sdk/overview.md) is to reference the Web SDK JavaScript library hosted on a CDN. You can reference the library directly, or download it and host it on your own infrastructure. It is available in minified and full formats.
 
 The Web SDK library is available using the following URL structure:
 
