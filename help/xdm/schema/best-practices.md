@@ -251,21 +251,21 @@ The following suggestions help you maintain data integrity when you create a sch
 
 This section explains how to manage schemas that are already enabled for [!DNL Real-Time Customer Profile]. After a schema is enabled, you cannot disable or delete it. You must determine how to prevent further use and how to manage datasets that you cannot delete.
 
-Once a schema is enabled for Profile, the configuration cannot be reversed. If a schema should no longer be used, rename it to clarify its status and create a replacement schema with the correct structure and identity configuration. This prevents data ingestion into the deprecated schema.
+Once a schema is enabled for Profile, the configuration cannot be reversed. If a schema should no longer be used, rename it to clarify its status and create a replacement schema with the correct structure and identity configuration. This helps prevent accidental reuse of the deprecated schema when users create new datasets or configure ingestion workflows.
 
-System datasets sometimes appear alongside these schemas. You cannot delete system datasets, even when the associated schema is deprecated. To prevent unintended use, rename the schema and verify that no ingestion workflows reference the dataset.
+System datasets sometimes appear alongside Real-Time Customer Profile-enabled schemas. You cannot delete system datasets, even when the associated schema is deprecated. To prevent unintended use, rename the deprecated Profile-enabled schema and confirm that no ingestion workflows point to the system dataset that remains in place.
 
-Use the following best practices when you manage Profile-enabled schemas:
+Use the following best practices to prevent accidental reuse of deprecated Profile-enabled schemas:
 
 * Use a clear naming convention when you deprecate a schema. Include labels such as "Deprecated," "Do Not Use," or a version tag.
 * Stop ingesting data into any dataset based on the schema you want to retire.
 * Create a new schema with the correct structure, identity configuration, and naming pattern.
-* Review system datasets that cannot be deleted and verify that no processes reference them.
-* Document the change internally so other users understand why the schema was deprecated.
+* Review system datasets that cannot be deleted and verify that no ingestion workflows reference them.
+* Document the change internally so other users understand why the schema is deprecated.
 
 >[!TIP]
 >
->For help troubleshooting Profile-enabled schemas or datasets, see *PLACEHOLDER*.
+>See the [XDM troubleshooting guide](../troubleshooting-guide.md) for broader help and answers to frequently asked questions about XDM.
 
 ## Next steps
 
