@@ -239,13 +239,13 @@ To set constraints on a field, select the field in the Schema Editor to open the
 
 The following suggestions help you maintain data integrity when you create a schema.
 
-* **Consider primary identities**: For Adobe products such as web SDK, mobile SDK, Adobe Analytics, and Adobe Journey Optimizer, the `identityMap` field often serves as the primary identity. Avoid designating additional fields as primary identities for that schema.
+* **Consider primary identities**: For Adobe products like web SDK, mobile SDK, Adobe Analytics, and Adobe Journey Optimizer, the `identityMap` field often serves as the primary identity. Avoid designating additional fields as primary identities for that schema.
 * **Ensure `_id` is not used as an identity**: The `_id` field in Experience Event schemas cannot be used as an identity because it is meant for record uniqueness.
-* **Set length constraints**: Set minimum and maximum lengths on identity fields. A warning appears if a field does not meet these constraints when you assign a custom namespace.
-* **Apply patterns for consistent values**: If identity values follow a specific pattern, use the **[!UICONTROL Pattern]** setting to enforce it. Use regular expressions to define the pattern.
-* **Limit eVars in Analytics schemas**: Typically, an Analytics schema should have only one eVar designated as an identity. If you designate more than one, verify that the data structure supports it.
-* **Ensure uniqueness of a selected field**: Select identity fields that are unique. Do not use fields such as shared email addresses or generic phone numbers.
-* **Verify minimum string lengths**: All string fields should have a minimum length of one. Null values are acceptable for non-required fields.
+* **Set length constraints**: It is best practice to set minimum and maximum lengths on fields marked as identities. A warning triggers if you try to assign a custom namespace to an identity field without meeting the minimum and maximum length constraints. These limitations help maintain consistency and data quality.
+* **Apply patterns for consistent values**: If your identity values follow a specific pattern, use the **[!UICONTROL Pattern]** setting to enforce it. This setting can include rules like digits only, uppercase or lowercase, or specific character combinations. Use regular expressions to match patterns in your strings.
+* **Limit eVars in Analytics schemas**: Typically, an Analytics schema should have only one eVar designated as an identity. If you intend to use more than one eVar as an identity, you should double-check whether the data structure can be optimized.
+* **Ensure uniqueness of a selected field**: Your chosen field should be unique compared to the primary identity in the schema. If it is not, do not mark it as an identity. For instance, if multiple customers can provide the same email address, then that namespace is not a suitable identity. This principle also applies to other identity namespaces like phone numbers. Marking a non-unique field as an identity could cause unwanted profile collapse.
+* **Verify minimum string lengths**: All string fields should be at least one character in length, as string values should never be empty. Null values for non-required fields, however, are acceptable. New string fields are given a minimum length of one by default.
 
 ## Managing Profile-enabled schemas {#managing-profile-enabled-schemas}
 
