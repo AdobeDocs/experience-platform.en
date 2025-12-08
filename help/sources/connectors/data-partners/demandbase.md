@@ -52,6 +52,10 @@ For more information on these credentials, read the [[!DNL Google Cloud Storage]
 
 ## [!DNL Demandbase] schema
 
+>[!IMPORTANT]
+>
+>When creating a B2B Demandbase Account Intent schema in the Experience Platform UI, make sure to enable Profile ingestion for the schema. For more information, read the guide on [creating and editing schemas in the UI](../../../xdm/ui/resources/schemas.md).
+
 Read this section for information on the [!DNL Demandbase] schema and data structure. 
 
 The [!DNL Demandbase] schema is called **B2B Demandbase Account Intent**. It is the weekly intent information (anonymous B2B buyer research and content consumption) on specified account and keywords. The data is in parquet format.
