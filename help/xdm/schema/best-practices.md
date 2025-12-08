@@ -265,7 +265,7 @@ Use the following best practices to prevent accidental reuse of deprecated Profi
 
 >[!TIP]
 >
->See the [XDM troubleshooting guide](../troubleshooting-guide.md) for broader help and answers to frequently asked questions about XDM.
+>See the [XDM troubleshooting guide](../troubleshooting-guide.md#delete-profile-enabled) for additional guidance on Profile-enabled schemas and related limitations.
 
 ## Next steps
 
