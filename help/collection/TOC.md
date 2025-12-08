@@ -15,7 +15,7 @@ role: Developer
 + BrightScript {#brightscript}
   + [BrightScript overview](brightscript/brs-overview.md)
 + JavaScript {#js}
-  + [JavaScript overview](js/js-overview.md)
+  + [Web SDK JavaScript overview](js/js-overview.md)
   + [Release notes](js/release-notes.md)
   + Installation {#install}
     + [Install overview](js/install/overview.md)
@@ -69,7 +69,7 @@ role: Developer
     + [Command responses](js/commands/command-responses.md)
   + [Monitoring hooks](js/monitoring-hooks.md)
   + [FAQ](js/faq.md)
-+ Tags {#tags}
++ Tags client-side JavaScript {#tags}
   + [Overview](tags/overview.md)
   + [buildInfo](tags/buildinfo.md)
   + [company](tags/company.md)
