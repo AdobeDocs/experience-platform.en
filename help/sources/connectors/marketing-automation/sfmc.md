@@ -8,7 +8,7 @@ description: Learn how to connect Salesforce Marketing Cloud (V2) to Adobe Exper
 
 You can use the [!DNL Salesforce Marketing Cloud] source to connect your [!DNL Salesforce Marketing Cloud] account to Adobe Experience Platform. Read the documentation below to learn how to get started.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 Read the sections below for prerequisite set up that you must complete before you can connect your source to Experience Platform.
 
@@ -20,7 +20,7 @@ You must add region-specific IP addresses to your allowlist prior to connecting 
 >
 >If you do not add the necessary IP addresses to your allowlist, your [!DNL Salesforce Marketing Cloud] account will not connect to Experience Platform.
 
-### Set up the [!DNL Salesforce Marketing Cloud] app for authentication
+### Set up application for authentication {#set-up-application-for-authentication}
 
 When building an integration with [!DNL Salesforce Marketing Cloud], one of the first steps is to create an **Installed Package** within [!DNL Salesforce Marketing Cloud]. The installed package generates the client credentials required to authenticate API calls, defines the integration type and associated permission scopes. Additionally, the installed package provides the correct API endpoints for your tenant. It also serves as a managed container for administering, monitoring, and revoking access, ensuring that all integrations are secure, auditable, and aligned with Salesforce's recommended authentication model.
 
@@ -54,4 +54,14 @@ Before leaving the [!DNL Salesforce Marketing Cloud] UI, copy the **client ID** 
 
 For detailed steps on creating an installed package, read the [[!DNL Salesforce] documentation](https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-developer-basics/set-up-your-developer-environment).
 
-### Gather required credentials
+### Gather required credentials {#gather-required-credentials}
+
+You must provide values for the following credentials to connect [!DNL Salesforce Marketing Cloud] to Experience Platform.
+
+| Credential | Description |
+| --- | --- |
+| Client ID | The publicly exposed identifier used by [!DNL Salesforce Marketing Cloud] to identify your account when authorizing to Experience Platform. The client ID can be retrieved from the components panel of the [!DNL Salesforce Marketing Cloud] UI. |
+| Client secret | The confidential key known only to the client application and authorization server. You can generate your client secret by following the [application set up steps outlined above](#set-up-application-for-authentication). |
+| Base endpoint | The prefix of your authentication base URI for [!DNL Salesforce Marketing Cloud]. |
+
+## Connect [!DNL Salesforce Marketing Cloud] to Experience Platform
