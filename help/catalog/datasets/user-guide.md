@@ -52,6 +52,13 @@ This user guide requires a working understanding of the following components of 
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="Orchestrated campaigns"
 >abstract="Enable this toggle to allow the selected dataset to be used in Adobe Journey Optimizer Orchestrated campaigns. The dataset must use a relational schema and only one dataset can be created per schema."
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Enable Dataset for Orchestrated Campaigns"
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_enableforlookup_toggle"
+>title="Enable for lookup"
+>abstract="Enable this dataset for lookup to use its data in Journey Optimizer for personalization, Decisioning, and journey orchestration."
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Use Adobe Experience Platform data in Journey Optimizer"
 
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and the status of the most recent ingestion run.
 
@@ -351,7 +358,7 @@ By default, only datasets that you have ingested data into are shown. If you wan
 
 The datasets that have been enabled for Profile data are used to populate customer profiles after data has been ingested. See the section on [enabling datasets for Profile](#enable-profile) to learn more. 
 
-To filter your dataset based on whether they have been enabled for Profile, select the [!UICONTROL Yes] check box from the filter options.
+To filter your dataset based on whether they have been enabled for Profile, select the [!UICONTROL Yes] checkbox from the filter options.
 
 ![The filter options of the Datasets workspace with the [!UICONTROL Included in Profile] section highlighted.](../images/datasets/user-guide/included-in-profile.png)
 
