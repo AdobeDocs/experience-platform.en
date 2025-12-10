@@ -249,7 +249,7 @@ The following suggestions help you maintain data integrity when you create a sch
 
 ## Managing Profile-enabled schemas {#managing-profile-enabled-schemas}
 
-This section explains how to manage schemas that are already enabled for [!DNL Real-Time Customer Profile]. After a schema is enabled, you cannot disable or delete it. You must determine how to prevent further use and how to manage datasets that you cannot delete.
+This section explains how to manage schemas that are already enabled for Real-Time Customer Profile. After a schema is enabled, you cannot disable or delete it. You must determine how to prevent further use and how to manage datasets that you cannot delete.
 
 Once a schema is enabled for Profile, the configuration cannot be reversed. If a schema should no longer be used, rename it to clarify its status and create a replacement schema with the correct structure and identity configuration. This helps prevent accidental reuse of the deprecated schema when users create new datasets or configure ingestion workflows.
 
