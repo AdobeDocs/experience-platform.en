@@ -29,19 +29,19 @@ To connect to [!DNL Salesforce Marketing Cloud], go to the *[!UICONTROL Marketin
 >
 >Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account is created, this option changes to **[!UICONTROL Add data]**.
 
-![The sources catalog with the Salesforce Marketing Cloud source selected.]
+![The sources catalog with the Salesforce Marketing Cloud source selected.](../../../../images/tutorials/create/sfmc/catalog.png)
 
 ## Use an existing account {#existing}
 
 To use an existing account, select **[!UICONTROL Existing account]** and then select the [!DNL Salesforce Marketing Cloud] account that you want to use.
 
-![The existing account interface of the sources workflow]
+![The existing account interface of the sources workflow](../../../../images/tutorials/create/sfmc/existing.png)
 
 ## Create a new account {#new}
 
 To create a new account, select **[!UICONTROL New account]** and provide a name and description under your [!UICONTROL Source connection details]. Next, under [!UICONTROL Account authentication], provide values for your **Client ID**, **Client secret**, and **Base endpoint**. You can read the [authentication guide](../../../../connectors/marketing-automation/sfmc.md#gather-required-credentials) for more information on these credentials. When finished, select **[!UICONTROL Connect to source]** and allow for a few seconds for your connection to establish.
 
-![The new account interface of the sources workflow.]
+![The new account interface of the sources workflow.](../../../../images/tutorials/create/sfmc/new.png)
 
 ## Select data
 
@@ -49,20 +49,32 @@ The [!DNL Salesforce Marketing Cloud] source supports data ingestion only from [
 
 Use the [!UICONTROL Select data] interface to select the data extension that you want to ingest from your [!DNL Salesforce Marketing Cloud] instance. Once you select the data extension, you can use the preview panel to confirm that the dataset contains the expected fields before proceeding.
 
-![]
+![The select data step of the sources workflow](../../../../images/tutorials/create/sfmc/select-data.png)
 
 ## Dataset and dataflow details
 
 Next, you must provide information on your dataset and dataflow. During this step, you can either use an existing dataset or create a new dataset. Additionally, you can optionally enable your dataset for ingestion to Real-Time Customer Profile during this step.
 
-![]
+![The dataset and dataflow details step of the sources workflow.](../../../../images/tutorials/create/sfmc/dataset-details.png)
 
 ## Mapping
 
 In [!DNL Salesforce Marketing Cloud], data extensions are not considered as standard objects. Therefore, there are no predefined or fixed mapping fields to an Experience Platform schema. While Data Prep in Experience Platform performs a best-effort alignment between source fields from [!DNL Salesforce Marketing Cloud] and the target Experience Data Model (XDM) schema, there may still be some cases where a manual review or adjustment is required to resolve unmapped or erroneous fields.
 
-![]
+![The mapping step of the sources workflow.](../../../../images/tutorials/create/sfmc/mapping.png)
 
 ## Schedule a dataflow
 
+With your mapping complete, you can now configure an ingestion schedule for your dataflow. Set your [!UICONTROL Frequency] to `Once` to configure a one-time ingestion run. For incremental ingestion, you can set your [!UICONTROL Frequency] to `Hour`, `Day`, or `Week`. When using incremental ingestion, you must also configure the [!UICONTROL Interval] to define the amount of time that occurs between ingestion runs. For example, an ingestion frequency set to `Day` and  an interval set to `15` means that your dataflow is scheduled to ingest data every 15 days.
+
+>[!TIP]
+>
+> Per-minute ingestion frequency is not available for the [!DNL Salesforce Marketing Cloud] source. The most frequent schedule you can choose is hourly. Select a schedule that matches your data freshness needs. Keep in mind that selecting a more frequent schedule will increase compute costs.
+
+![The scheduling step of the sources workflow.](../../../../images/tutorials/create/sfmc/schedule.png)
+
 ## Review
+
+With the ingestion schedule configured, use the [!UICONTROL Review] interface to confirm the details of your dataflow. Select **[!UICONTROL Finish]** to complete the setup and allow for a few moments for your dataflow to initiate.
+
+![The review step of the sources workflow.](../../../../images/tutorials/create/sfmc/review.png)
