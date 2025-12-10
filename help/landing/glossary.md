@@ -21,7 +21,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Administrator**: One or more individuals in your organization who can configure and customize permissions for Experience Platform in Adobe Admin Console. 
 
-**Adobe Admin Console**: Adobe Admin Console provides a central location for managing Adobe product entitlements and access for your organization. Through the console, administrators can grant groups of users access permissions for various Platform capabilities, such as "Manage Datasets", "View Datasets", or "Manage Profiles".
+**Adobe Admin Console**: Adobe Admin Console provides a central location for managing Adobe product entitlements and access for your organization. Through the console, administrators can grant groups of users access permissions for various Experience Platform capabilities, such as "Manage Datasets", "View Datasets", or "Manage Profiles".
 
 **Adobe Experience Platform**: Adobe Experience Platform standardizes data and content across the enterprise, powering real-time consumer profiles, enabling data science, and accelerating content velocity to drive experience personalization across the customer journey.
 
@@ -31,7 +31,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Adobe Intelligent Services**: Intelligent Services such as Attribution AI and Customer AI are machine-learning, artificial-intelligence-based models that are purpose-built and require Experience Platform to run and operate.
 
-**Adobe I/O**: Adobe I/O is part of Experience Platform and provides access to everything developers need to integrate, extend, and customize Platform including APIs, events, developer console, and helpful tooling.
+**Adobe I/O**: Adobe I/O is part of Experience Platform and provides access to everything developers need to integrate, extend, and customize Experience Platform including APIs, events, developer console, and helpful tooling.
 
 **Adobe Sensei**: Adobe Sensei is the intelligence framework that powers Experience Platform. It also provides a set of AI services that empowers brands to enhance their ability to deliver real-time, personalized customer experiences.
 
@@ -49,7 +49,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Attributes**: Attributes are specified characteristics that represent a profile.
 
-**Attribute merge**: When defining a merge policy using the Real-Time Customer Profile API, the `attributeMerge` object indicates the manner by which the merge policy will prioritize profile attributes in the case of data conflicts. It is equivalent to selecting a [!UICONTROL Merge method] when defining a merge policy in the Platform UI.
+**Attribute merge**: When defining a merge policy using the Real-Time Customer Profile API, the `attributeMerge` object indicates the manner by which the merge policy will prioritize profile attributes in the case of data conflicts. It is equivalent to selecting a [!UICONTROL Merge method] when defining a merge policy in the Experience Platform UI.
 
 **Attribution AI**: [!DNL Attribution AI] is an Intelligent Service powered by Adobe Sensei that delivers algorithmic multi-channel attribution capabilities across the entire customer lifecycle.
 
@@ -149,7 +149,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Data element**: In the context of tags, a data element is a pointer used within rules and extensions to point to a specific piece of data that exists on the client device.
 
-**Data ingestion**: Data ingestion is the process of adding data from a source to Experience Platform. Data can be ingested into Platform in a number of ways including streaming, batches, or added via source connectors.
+**Data ingestion**: Data ingestion is the process of adding data from a source to Experience Platform. Data can be ingested into Experience Platform in a number of ways including streaming, batches, or added via source connectors.
 
 **Data layer**: In the context of tags, a data layer is a data structure that exists on the client device that contains metadata about the context in which a page or screen is viewed.
 
@@ -159,7 +159,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Dataset labels**: Data usage labels can be added to datasets. All fields within that dataset will inherit the dataset's labels.
 
-**Data Science Workspace**: [!DNL Data Science Workspace] within Experience Platform enables customers to create machine-learning models utilizing data across Platform and Adobe applications to create intelligent segments, generate insights, and provide predictions, allowing you to greatly enhance end-user digital experiences.
+**Data Science Workspace**: [!DNL Data Science Workspace] within Experience Platform enables customers to create machine-learning models utilizing data across Experience Platform and Adobe applications to create intelligent segments, generate insights, and provide predictions, allowing you to greatly enhance end-user digital experiences.
 
 **Data source**: A data source is a user designated origin of data. Examples of a data source are a mobile app, profile and/or experience events, website profile events, or a CRM.
 
@@ -171,7 +171,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Data usage labels**: Data usage labels allow you to categorize data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and corporate policies. Data usage labels added to a dataset are inherited down or applied to all fields within that dataset. Data usage labels can also be applied directly to fields.
 
-**Dataflow**: A dataflow is a virtual pipeline of data that flows into Platform from a source and out to destinations. 
+**Dataflow**: A dataflow is a virtual pipeline of data that flows into Experience Platform from a source and out to destinations. 
 
 **Dataflow run**: A dataflow run is a dataflow that lands in Experience Platform based on a user specified schedule.
 
@@ -299,7 +299,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Input feature**: An input feature is specified in feature mapping and is used by a machine-learning model to make predictions.
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] such as [!DNL Attribution AI] and [!DNL Customer AI] are machine-learning, artificial-intelligence-based models that require Experience Platform (or applications built on top of Platform such as Adobe Real-Time Customer Data Platform) to run and operate.
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] such as [!DNL Attribution AI] and [!DNL Customer AI] are machine-learning, artificial-intelligence-based models that require Experience Platform (or applications built on top of Experience Platform such as Adobe Real-Time Customer Data Platform) to run and operate.
 
 **Interest-based targeting or personalization**: Interest-based targeting, also known as personalization, occurs if the following three conditions are met: 
 
@@ -309,7 +309,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 ## J
 
-**[!DNL JupyterLab]**: An open-source, web-based interface for Project [!DNL Jupyter] that is integrated into the Platform UI.
+**[!DNL JupyterLab]**: An open-source, web-based interface for Project [!DNL Jupyter] that is integrated into the Experience Platform UI.
 
 **[!DNL Jupyter Notebook]**: Integrated with JupyterLab, Jupyter Notebooks enable you to perform data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and more on your Experience Platform data in a variety of languages such as Python, Scala, and PySpark.
 
@@ -335,13 +335,17 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Marketing action**: In the data governance framework, a marketing action (also known as a marketing use case) is an action that an Experience Platform data consumer takes, for which there is a need to check for violations of data usage policies.
 
-**Merge method**: When defining a merge policy using the Platform UI, the merge method specifies how data fragments should be prioritized when a conflict occurs. When using the Real-Time Customer Profile API to define a merge policy, the merge method is determined using the `attributeMerge` object.
+**Merge method**: When defining a merge policy using the Experience Platform UI, the merge method specifies how data fragments should be prioritized when a conflict occurs. When using the Real-Time Customer Profile API to define a merge policy, the merge method is determined using the `attributeMerge` object.
 
 **Merge policy**: Merge policies are rules that Experience Platform uses to determine how customer data fragments from multiple sources will be combined to create an individual profile. When a data conflict occurs, the merge policy determines which data should be prioritized for inclusion in the profile.
+
+**MHMDAa**: The [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) enhances privacy rights for consumers regarding their health data. It mandates disclosures, consumer consent, and deletion rights for health data, and prohibits the sale of health data without authorization. Additionally, the Act makes it unlawful to use geofencing around healthcare facilities.
 
 **Mixin**: See "Schema field group".
 
 **Module**: In the context of tags, a module is a snippet of executable JavaScript provided by an extension, which performs actions in a client environment without needing to create a rule.
+
+**MODPA**: The [!DNL Maryland Online Data Privacy Act] (MODPA) of 2024 grants Maryland residents rights including access, correction, deletion, and data portability. Residents may opt out of targeted advertising, personal data sales, and profiling. Controllers must provide privacy notices and conduct data protection assessments for high-risk processing. MODPA stands out by prohibiting geofencing around mental or reproductive health facilities. The law applies to entities that process data from more than 35,000 consumers, or to those that process data from more than 10,000 consumers and derive over 20% of their revenue from selling that data. It is enforced by the Maryland Attorney General.
 
 ## N
 
@@ -377,11 +381,13 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Personalized offers**: A personalized offer is a customizable marketing message based on eligibility rules and constraints.
 
+**PIPA** (South Korea): The [[!DNL Personal Information Protection Act] (PIPA)](https://elaw.klri.re.kr/eng_service/lawView.do?hseq=53044&lang=ENG) regulates the processing and protection of personal data for South Korean residents. PIPA grants rights to be informed, access, obtain copies, and request correction, deletion, or suspension of processing. Personal information controllers must specify collection purposes, process data lawfully to the minimum extent necessary, and ensure data accuracy. PIPA also established the Personal Information Protection Commission to investigate and enforce personal data protection regulations.
+
 **Placements**: A placement is the location and or context in which an offer appears for an end-user.
 
-**Policies workspace**: A workspace in the Platform UI that enables data stewards to view and manage data usage labels and policies for your organization. 
+**Policies workspace**: A workspace in the Experience Platform UI that enables data stewards to view and manage data usage labels and policies for your organization. 
 
-**Policy**: A data usage policy is a rule that specifies marketing actions that are restricted based on the application of usage labels applied to Platform data.
+**Policy**: A data usage policy is a rule that specifies marketing actions that are restricted based on the application of usage labels applied to Experience Platform data.
 
 **Policy enforcement**: Allows you to enforce data usage policies with applied marketing actions to prevent data operations that constitute policy violations within an organization.
 
@@ -449,7 +455,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Sample data**: Sample data is a preview of a data file, typically the first 100 rows, which provides a data scientist or engineer an idea of what schema or data is in the data file.
 
-**Sandbox**: A sandbox is a virtual construct that partitions a single Platform instance into a separate virtual environment, in order to help develop and evolve digital experience applications.
+**Sandbox**: A sandbox is a virtual construct that partitions a single Experience Platform instance into a separate virtual environment, in order to help develop and evolve digital experience applications.
 
 **Sandbox reset**: A sandbox reset deletes all data including data, profiles, and segments within a sandbox. Sandbox resets can affect data that is connected to internal or external destinations.
 
@@ -499,7 +505,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **S2 data usage label**: An `S2` data usage label is used to classify data that can be used to determine a broadly defined geofence area.
 
-**Source**: A source is a general term for any input connector in Platform. See also: Source connector
+**Source**: A source is a general term for any input connector in Experience Platform. See also: Source connector
 
 **Source attribute**: A source attribute is a field in source dataset. Source attributes are mapped to target schema fields.
 
@@ -532,6 +538,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 **Token**: A token is a type of two-factor authentication security that can be used to authorize the use of computer services with [!DNL Query Service].
 
 ## U
+
+**UCPA**: The [[!DNL Utah Consumer Privacy Act]](https://le.utah.gov/~2022/bills/static/SB0227.html) creates the right for a consumer to know what personal data a business collects, how the business uses their personal data, and whether the business sells their personal data. Consumers can require the business to delete or stop selling their personal data.
 
 **Union schema**: A union schema is a consolidation of schemas that share the same class and have been enabled for [!DNL Real-Time Customer Profile]. Multiple union schemas can exist for an organization, but there can only be one union schema per class.
 

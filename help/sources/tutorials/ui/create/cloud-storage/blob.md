@@ -1,81 +1,83 @@
 ---
-keywords: Experience Platform;home;popular topics;Azure Blob;azure blob;Azure blob connector
-solution: Experience Platform
-title: Create an Azure Blob  Source Connection in the UI
-type: Tutorial
-description: Learn how to create an Azure Blob source connector using the Platform user interface.
+title: Connect Azure Blob Storage to Experience Platform in the UI
+description: Learn how to connect your Azure Blob Storage account to Experience Platform using the sources workspace in the UI.
 exl-id: 0e54569b-7305-4065-981e-951623717648
 ---
-# Create an [!DNL Azure Blob] source connection in the UI
+# Connect [!DNL Azure Blob Storage] to Experience Platform using the UI
 
-This tutorial provides steps for creating an [!DNL Azure Blob] (hereinafter referred to as "[!DNL Blob]") using the Platform user interface.
+Read this guide to learn how to connect your[!DNL Azure Blob Storage] instance to Adobe Experience Platform using the sources workspace in the Experience Platform user interface.
 
 ## Getting started
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-  - [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-  - [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework for organizing customer experience data in Experience Platform.
+  * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+  * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-If you already have a valid [!DNL Blob] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/batch/cloud-storage.md).
+If you already have a valid [!DNL Azure Blob Storage] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/batch/cloud-storage.md).
 
 ### Supported file formats
 
-[!DNL Experience Platform] supports the following file formats to be ingested from external storages:
+Experience Platform supports the following file formats to be ingested from external storages:
 
-- Delimiter-separated values (DSV): Support for DSV formatted data files is currently limited to comma-separated values. The value of field headers within DSV formatted files must only consist of alphanumeric characters and underscores. Support for general DSV files will be provided in the future.
-- JavaScript Object Notation (JSON): JSON formatted data files must be XDM compliant.
-- Apache Parquet: Parquet formatted data files must be XDM compliant.
+* Delimiter-separated values (DSV): You can use any single column delimiter such as a tab, comma, pipe, semicolon, or hash to collect flat files in any format.
+* JavaScript Object Notation (JSON): JSON formatted data files must be XDM compliant.
+* Apache Parquet: Parquet formatted data files must be XDM compliant.
 
 ### Gather required credentials
 
-In order to access your [!DNL Blob] storage on Platform, you must provide a valid value for the following credential:
+Read the [[!DNL Azure Blob Storage] overview](../../../../connectors/cloud-storage/blob.md#authentication) for information on authentication.
 
-| Credential | Description |
-| ---------- | ----------- |
-| `connectionString` | A string that contains the authorization information necessary to authenticate [!DNL Blob] to Experience Platform. The [!DNL Blob] connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. For more information about connection strings, see this [!DNL Blob] document on [configuring connection strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
-| `sasUri` | The shared access signature URI that you can use as an alternative authentication type to connect your [!DNL Blob] account. The [!DNL Blob] SAS URI pattern is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` For more information, see this [!DNL Blob] document on [shared access signature URIs](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
+## Navigate the sources catalog
 
-## Connect your [!DNL Blob] account
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. Choose a category or use the search bar to find your source.
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Blob] account to Platform.
+To connect to [!DNL Azure Blob Storage], go to the *[!UICONTROL Cloud storage]* category, select the **[!UICONTROL Azure Blob Storage]** source card, and then select **[!UICONTROL Set up]**.
 
-In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
+>[!TIP]
+>
+>Sources show **[!UICONTROL Set up]** for new connections and **[!UICONTROL Add data]** if an account already exists.
 
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
+![The sources catalog with the Azure Blob Storage source selected.](../../../../images/tutorials/create/blob/catalog.png)
 
-Under the [!UICONTROL Cloud storage] category, select **[!UICONTROL Azure Blob Storage]**, and then select **[!UICONTROL Add data]**.
+## Use an existing account
 
-![catalog](../../../../images/tutorials/create/blob/catalog.png)
+To use an existing account, select **[!UICONTROL Existing account]** and then select the [!DNL Azure Blob Storage] account that you want to use.
 
-The **[!UICONTROL Connect to Azure Blob Storage]** page appears. On this page, you can either use new credentials or existing credentials.
+![The existing source interface for Azure Blob Storage.](../../../../images/tutorials/create/blob/existing.png)
 
-### Existing account
+## Create a new account
 
-To use an existing account, select the [!DNL Blob] account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
+To create a new account, select **[!UICONTROL New account]** and then provide a name and optionally add a description for your account. You can connect your [!DNL Azure Blob Storage] account to Experience Platform using the following authentication types:
 
-![existing](../../../../images/tutorials/create/blob/existing.png)
+* **Account key authentication**: Uses the storage account's access key to authenticate and connect to your [!DNL Azure Blob Storage] account.
+* **Shared access signature (SAS)**: Uses a SAS URI to provide delegated, time-limited access to resources in your [!DNL Azure Blob Storage] account.
+* **Service principal based authentication**: Uses an Azure Active Directory (AAD) service principal (client ID and secret) to securely authenticate to your Azure Blob Storage account.
 
-### New account
+>[!BEGINTABS]
 
-If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name and an option description for your new [!DNL Blob] account.
+>[!TAB Account key authentication]
 
-**Authenticate using a connection string**
+Select **[!UICONTROL Account key authentication]** and provide your `connectionString`, `container`, and `folderPath`. Next, select **[!UICONTROL Connect to source]** and allow for a few moments for the connection to establish.
 
-The [!DNL Blob] connector provides you with different authentication types for access. Under [!UICONTROL Account authentication] select **[!UICONTROL ConnectionString]** to use connection string-based credentials.
+![The account key authentication option in the new account creation step.](../../../../images/tutorials/create/blob/account-key.png)
 
-![connection string](../../../../images/tutorials/create/blob/connectionstring.png)
+>[!TAB Shared access signature]
 
-**Authenticate using a shared access signature URI**
+Select **[!UICONTROL Shared access signature]** and provide your `sasUri`, `container`, and `folderPath`. Next, select **[!UICONTROL Connect to source]** and allow for a few moments for the connection to establish.
 
-A shared access signature (SAS) URI allows for secure delegated authorization to your [!DNL Blob] account. You can use SAS to create authentication credentials with varying degrees of access, as a SAS-based authentication allows you to set permissions, start and expiry dates, as well as provisions to specific resources.
+![The shared access signature authentication option in the new account creation step.](../../../../images/tutorials/create/blob/sas.png)
 
-Select **[!UICONTROL SasURIAuthentication]** and then provide your [!DNL Blob] SAS URI. Select **[!UICONTROL Connect to source]** to proceed.
+>[!TAB Service principal based authentication]
 
-![sas-uri](../../../../images/tutorials/create/blob/sas-uri.png)
+Select **[!UICONTROL Service principal based authentication]** and provide your `serviceEndpoint`, `servicePrincipalId`, `servicePrincipalKey`, `accountKind`, `tenant`, `container`, and `folderPath`. Next, select **[!UICONTROL Connect to source]** and allow for a few moments for the connection to establish.
+
+![The service principal based authentication option in the new account creation step.](../../../../images/tutorials/create/blob/service-principal.png)
+
+>[!ENDTABS]
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Blob] account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Platform](../../dataflow/batch/cloud-storage.md).
+By following this tutorial, you have established a connection to your [!DNL Azure Blob Storage] account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Experience Platform](../../dataflow/batch/cloud-storage.md).

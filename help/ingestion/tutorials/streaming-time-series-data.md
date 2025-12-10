@@ -14,15 +14,15 @@ This tutorial will help you begin using streaming ingestion APIs, part of the Ad
 
 This tutorial requires a working knowledge of various Adobe Experience Platform services. Before beginning this tutorial, please review the documentation for the following services:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes experience data.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
 - [Schema Registry developer guide](../../xdm/api/getting-started.md): A comprehensive guide that covers each of the available endpoints of the [!DNL Schema Registry] API and how to make calls to them. This includes knowing your `{TENANT_ID}`, which appears in calls throughout this tutorial, as well as knowing how to create schemas, which is used in creating a dataset for ingestion.
 
 Additionally, this tutorial requires that you have already created a streaming connection. For more information on creating a streaming connection, please read the [create a streaming connection tutorial](./create-streaming-connection.md).
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../landing/api-guide.md).
 
 ## Compose a schema based off of the XDM ExperienceEvent class
 
@@ -149,7 +149,7 @@ A successful response returns HTTP status 201 with details of your newly created
 
 | Property | Description |
 | -------- | ----------- |
-| `{TENANT_ID}` | This ID is used to ensure that resources you create are namespaced properly and contained within your IMS Organization. For more information about the Tenant ID, please read the [schema registry guide](../../xdm/api/getting-started.md#know-your-tenant-id). |
+| `{TENANT_ID}` | This ID is used to ensure that resources you create are namespaced properly and contained within your organization. For more information about the Tenant ID, please read the [schema registry guide](../../xdm/api/getting-started.md#know-your-tenant-id). |
 
 Please take note of the `$id` as well as the `version` attributes, as both of these will be used when creating your dataset.
 
@@ -269,7 +269,7 @@ For more information on creating a streaming connection, please read the [create
 
 ## Ingest time series data to the streaming connection
 
-With the dataset, streaming connection, and dataflow created, you can ingest XDM-formatted JSON records to ingest time series data within [!DNL Platform].
+With the dataset, streaming connection, and dataflow created, you can ingest XDM-formatted JSON records to ingest time series data within [!DNL Experience Platform].
 
 **API format**
 
@@ -286,7 +286,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 Ingesting time series data to a streaming connection can be done either with or without the source name.
 
-The example request below ingests time series data with a missing source name to Platform. If the data is missing the source name, it will add the source ID from the streaming connection definition.
+The example request below ingests time series data with a missing source name to Experience Platform. If the data is missing the source name, it will add the source ID from the streaming connection definition.
 
 Both `xdmEntity._id` and `xdmEntity.timestamp` are required fields for time-series data. The `xdmEntity._id` attribute represents a unique identifier for the record itself, **not** a unique ID of the person or device whose record it is.
 
@@ -301,12 +301,9 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
   -H "Content-Type: application/json" \
   -d '{
     "header": {
-        "schemaRef": {
-            "id": "{SCHEMA_REF_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version=1"
-        },
-        "flowId": "{FLOW_ID}",
-        "datasetId": "{DATASET_ID}"
+    "datasetId": "{DATASET_ID}",
+    "flowId": "{FLOW_ID}",
+    "imsOrgID": "{ORG_ID}"
     },
     "body": {
         "xdmMeta": {
@@ -371,15 +368,12 @@ If you want to include a source name, the following example shows how you would 
 
 ```json
     "header": {
-        "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version=1"
-        },
-        "imsOrgId": "{ORG_ID}",
-        "datasetId": "{DATASET_ID}",
-        "source": {
-            "name": "Sample source name"
-        }
+    "datasetId": "{DATASET_ID}",
+    "flowId": "{FLOW_ID}",
+    "imsOrgID": "{ORG_ID}",
+      "source": {
+        "name": "ACME source"
+      }
     }
 ```
 
@@ -402,7 +396,7 @@ An successful response returns HTTP status 200 with details of the newly streame
 | -------- | ----------- |
 | `{CONNECTION_ID}` | The `inletId` of the previously created streaming connection. |
 | `xactionId` | A unique identifier generated server-side for the record you just sent. This ID helps Adobe trace this record's lifecycle through various systems and with debugging. |    
-| `receivedTimeMs`: A timestamp (epoch in milliseconds) that shows what time the request was received. |
+| `receivedTimeMs`: A timestamp (epoch in milliseconds) that shows what time the request was received. ||
 | `syncValidation.status` | Since the query parameter `syncValidation=true` was added, this value will appear. If the validation has succeeded, the status will be `pass`. |
 
 ## Retrieve the newly ingested time series data
@@ -510,6 +504,6 @@ A successful response returns HTTP status 200 with details of the entities reque
 
 ## Next steps
 
-By reading this document, you now understand how to ingest record data into [!DNL Platform] using streaming connections. You can try making more calls with different values and retrieving the updated values. Additionally, you can start monitoring your ingested data through [!DNL Platform] UI. For more information, please read the [monitoring data ingestion](../quality/monitor-data-ingestion.md) guide.
+By reading this document, you now understand how to ingest record data into [!DNL Experience Platform] using streaming connections. You can try making more calls with different values and retrieving the updated values. Additionally, you can start monitoring your ingested data through [!DNL Experience Platform] UI. For more information, please read the [monitoring data ingestion](../quality/monitor-data-ingestion.md) guide.
 
 For more information about streaming ingestion in general, please read the [streaming ingestion overview](../streaming-ingestion/overview.md).

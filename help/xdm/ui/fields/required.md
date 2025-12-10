@@ -10,7 +10,7 @@ In Experience Data Model (XDM), a required field indicates that it must be suppl
 
 >[!IMPORTANT]
 >
->Regardless of whether a schema field is required or not, Platform does not accept `null` or empty values for any ingested field. If there is no value for particular field in a record or event, the key for that field should be excluded from the ingestion payload.
+>Regardless of whether a schema field is required or not, Experience Platform does not accept `null` or empty values for any ingested field. If there is no value for particular field in a record or event, the key for that field should be excluded from the ingestion payload.
 
 When [defining a new field](./overview.md#define) in the Adobe Experience Platform user interface, you can set it as a required field by selecting the **[!UICONTROL Required]** checkbox in the right rail. Select **[!UICONTROL Apply]** to apply the change to the schema.
 
@@ -32,4 +32,4 @@ If you want a nested field to always be required in a schema, you must also set 
 
 ## Next steps
 
-This guide covered how to define a required field in the the UI. See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor].
+This guide covered how to define a required field in the UI. See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor].

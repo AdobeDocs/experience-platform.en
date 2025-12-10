@@ -7,13 +7,13 @@ exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 ---
 # Batch ingestion developer guide
 
-This document provides a comprehensive guide to using [batch ingestion API endpoints](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) in Adobe Experience Platform. For an overview of batch ingestion APIs, including prerequisites and best practices, please begin by reading the [batch ingestion API overview](overview.md).
+This document provides a comprehensive guide to using [batch ingestion API endpoints](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) in Adobe Experience Platform. For an overview of batch ingestion APIs, including prerequisites and best practices, please begin by reading the [batch ingestion API overview](overview.md).
 
 The appendix to this document provides information for [formatting data to be used for ingestion](#data-transformation-for-batch-ingestion), including sample CSV and JSON data files.
 
 ## Getting started
 
-The API endpoints used in this guide is part of the [Data Ingestion API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Data ingestion provides a RESTful API through which you can perform basic CRUD operations against the supported object types.
+The API endpoints used in this guide is part of the [Batch Ingestion API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Batch ingestion is provided through a RESTful API where you can perform basic CRUD operations against the supported object types.
 
 Before continuing, please review the [batch ingestion API overview](overview.md) and the [getting started guide](getting-started.md). 
 
@@ -21,7 +21,9 @@ Before continuing, please review the [batch ingestion API overview](overview.md)
 
 >[!NOTE]
 >
->The following steps are applicable for small files (256 MB or less). If you hit a gateway timeout or request body size errors, you need to switch to large file upload.
+>- The following steps are applicable for small files (256 MB or less). If you hit a gateway timeout or request body size errors, you need to switch to large file upload.
+>
+>- Use single-line JSON instead of multi-line JSON as input for batch ingestion. Single-line JSON allows for better performance as the system can divide one input file into multiple chunks and process them in parallel, whereas multi-line JSON cannot be split. This can significantly reduce data processing costs and improve batch processing latency.
 
 ### Create batch
 
@@ -545,7 +547,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{TENANT_ID}` | This ID is used to ensure that resources you create are namespaced properly and contained within your IMS Organization. | 
+| `{TENANT_ID}` | This ID is used to ensure that resources you create are namespaced properly and contained within your organization. | 
 | `{SCHEMA_ID}` | The ID of the schema you've created. |
 
 ### Create batch
@@ -746,7 +748,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Patch a batch
 
-Occasionally it may be necessary to update data in your organization's Profile Store. For example, you may need to correct records or change an attribute value. Adobe Experience Platform supports the update or patch of Profile Store data through an upsert action or "patching a batch".
+Occasionally it may be necessary to update data in your organization's Profile store. For example, you may need to correct records or change an attribute value. Adobe Experience Platform supports the update or patch of Profile store data through an upsert action or "patching a batch".
 
 >[!NOTE]
 >
@@ -755,7 +757,7 @@ Occasionally it may be necessary to update data in your organization's Profile S
 The following is required in order to patch a batch:
 
 - **A dataset enabled for Profile and attribute updates.** This is done through dataset tags and requires a specific `isUpsert:true` tag be added to the `unifiedProfile` array. For details steps showing how to create a dataset or configure an existing dataset for upsert, follow the tutorial for [enabling a dataset for Profile updates](../../catalog/datasets/enable-upsert.md).
-- **A Parquet file containing the fields to be patched and identity fields for the Profile.** The data format for patching a batch is similar to the regular batch ingestion process. The input required is a Parquet file, and in addition to the fields to be updated, the uploaded data must contain the identity fields in order to match the data in the Profile Store.
+- **A Parquet file containing the fields to be patched and identity fields for the Profile.** The data format for patching a batch is similar to the regular batch ingestion process. The input required is a Parquet file, and in addition to the fields to be updated, the uploaded data must contain the identity fields in order to match the data in the Profile store.
 
 Once you have a dataset enabled for Profile and upsert, and a Parquet file containing the fields you wish to patch as well the necessary identity fields, you can follow the steps for [ingesting Parquet files](#ingest-parquet-files) in order to complete the patch via batch ingestion.
 

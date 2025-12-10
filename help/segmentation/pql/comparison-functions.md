@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;comparison functions;comparison;
 solution: Experience Platform
 title: PQL Comparison Functions
 description: Comparison functions are used to compare between different expressions and values, returning "true" or "false" accordingly.
@@ -11,7 +10,7 @@ Comparison functions are used to compare between different expressions and value
 
 ## Equals
 
-The `=` (equals) function checks whether one value or expression is equal to another value or expression.
+The `=` (equals) function checks whether one value or expression is equal to another value or expression. 
 
 **Format**
 

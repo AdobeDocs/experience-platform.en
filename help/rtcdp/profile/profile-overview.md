@@ -2,6 +2,7 @@
 keywords: rtcdp profile;profiles rtcdp;rtcdp identities;rtcdp merge policies;real-time customer profile
 title: Understanding Real-Time Customer Profile in Real-Time CDP
 description: Learn how Adobe Real-Time Customer Data Platform enables you to drive coordinated, consistent, relevant experiences for your customers using Real-Time Customer Profile.
+feature: Get Started, Profiles
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
 ---
 # Real-Time Customer Profile overview
@@ -24,11 +25,11 @@ As customer data comes together it is merged into a single profile through the u
 
 ## Merge policies
 
-When bringing customer data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. For more information on merge policies, see the [merge policies overview](merge-policies.md).
+When bringing customer data together, merge policies are the rules that Experience Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. For more information on merge policies, see the [merge policies overview](merge-policies.md).
 
 ## Profile viewer
 
-Platform allows you to easily view customer profiles and search for specific profiles using various attributes. For details regarding how to view profiles within Platform, please see the [profile browse overview](profile-browse.md).
+Experience Platform allows you to easily view customer profiles and search for specific profiles using various attributes. For details regarding how to view profiles within Experience Platform, please see the [profile browse overview](profile-browse.md).
 
 ## Next steps
 

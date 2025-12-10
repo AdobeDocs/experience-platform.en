@@ -1,41 +1,72 @@
 ---
 keywords: advertising; bing; 
 title: Microsoft Bing connection
-description: With the Microsoft Bing connection destination, you can execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising.
+description: With the Microsoft Bing connection destination, you can execute retargeting and audience targeted digital campaigns across the entire Microsoft Advertising Network, including Display advertising, Search, and Native.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 ---
 # [!DNL Microsoft Bing] connection {#bing-destination}
 
 ## Overview {#overview}
 
-The [!DNL Microsoft Bing] destination helps you send profile data to [!DNL Microsoft Display Advertising].
+
+>[!IMPORTANT]
+>
+>Following an internal upgrade to the destinations service from August 2025, you may experience a **drop in the number of activated profiles** in your dataflows to [!DNL Microsoft Bing].
+>
+> This drop is caused by the introduction of the **ECID mapping requirement** for all activations to this destination platform. See the [mandatory mapping](#mandatory-mappings) section in this page for detailed information.
+>
+>**What changed:**
+>
+>* ECID (Experience Cloud ID) mapping is now **mandatory** for all profile activations.
+>* Profiles without ECID mapping will be **dropped** from existing activation dataflows.
+>
+>**What you need to do:**
+>
+>* Review your audience data to confirm profiles have valid ECID values.
+>* Monitor your activation metrics to verify expected profile counts.
+
+Use the [!DNL Microsoft Bing] destination to send profile data to the entire [!DNL Microsoft Advertising Network], including [!DNL Display Advertising], [!DNL Search], and [!DNL Native]. 
+
+The [!DNL Microsoft Bing] destination creates *[!DNL Custom Audiences]* in Microsoft. Those are available both in the [!DNL Microsoft Search Network] and [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]) as listed in the [Microsoft Advertising documentation](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
 To send profile data to [!DNL Microsoft Bing], you must first connect to the destination.
 
 ## Use cases {#use-cases}
 
-As a marketer, I want to be able to use segments built off of [!DNL Microsoft Advertising IDs] to target users via display advertising across [!DNL Microsoft Advertising] channels.
+As a marketer, I want to be able to use audiences built off of [!DNL Microsoft Advertising IDs] to target users via display or search advertising across [!DNL Microsoft Advertising] channels.
 
 ## Supported identities {#supported-identities}
 
-[!DNL Microsoft Bing] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Microsoft Bing] supports the activation of audiences based on the identities shown in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-|Target Identity|Description|
+|Identity|Description|
 |---|---|
 |MAID|Microsoft Advertising ID|
+|ECID|Experience Cloud ID. This identity is mandatory for the integration to work correctly but is not used for audience activation.|
+
+{style="table-layout:auto"}
+
+## Supported audiences {#supported-audiences}
+
+This section describes which types of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+|---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
 ## Export type and frequency {#export-type-frequency}
 
-**[!DNL Segment Export]** - you are exporting all members of a segment (audience) to the [!DNL Microsoft Bing] destination.
+**[!DNL Audience Export]** - you are exporting all members of an audience to the [!DNL Microsoft Bing] destination.
 
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) to the [!DNL Microsoft Bing] destination.|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+|---------|----------|---------|
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience to the [!DNL Microsoft Bing] destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
@@ -43,7 +74,7 @@ Refer to the table below for information about the destination export type and f
 
 >[!IMPORTANT]
 >
->If you are looking to create your first destination with [!DNL Microsoft Bing] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Microsoft Bing] integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
+>If you are looking to create your first destination with [!DNL Microsoft Bing] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Microsoft Bing] integrations in Audience Manager, the ID syncs you had set up carry over to Experience Platform.
 
 When configuring the destination, you must provide the following information:
 
@@ -53,11 +84,11 @@ When configuring the destination, you must provide the following information:
 
 >[!IMPORTANT]
 > 
->To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
-### Connection parameters {#parameters}
+### Fill in destination details {#parameters}
 
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
@@ -71,22 +102,31 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="Mapping ID"
->abstract="Enter the numeric Bing segment ID to which you want to map the selected segment. If the provided [!UICONTROL Mapping ID] does not correspond to a segment ID in the Bing destination, you will not see the expected audience data in your Bing account."
+>abstract="Enter the numeric Bing audience ID to which you want to map the selected segment. If the provided [!UICONTROL Mapping ID] does not correspond to an audience ID in the Bing destination, you will not see the expected audience data in your Bing account."
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
-In the [Segment schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map the segment name in the [!UICONTROL Mapping ID] field. This ensures that segment metadata is correctly passed through to [!DNL Bing]. 
+In the [Audience schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map the audience name in the [!UICONTROL Mapping ID] field. This ensures that audience metadata is correctly passed through to [!DNL Bing]. 
 
-![UI image showing the segment schedule screen with an example of how to map the segment name to the Bing Mapping ID.](../../assets/catalog/advertising/bing/mapping-id.png)
+![UI image showing the audience schedule screen with an example of how to map the audience name to the Bing Mapping ID.](../../assets/catalog/advertising/bing/mapping-id.png)
+
+### Mandatory mappings {#mandatory-mappings}
+
+All target identities described in the [supported identities](#supported-identities) section are mandatory and must be mapped during the audience activation process. This includes:
+
+* **MAID** (Microsoft Advertising ID)
+* **ECID** (Experience Cloud ID)
+
+Failure to map all required identities prevents you from completing the activation workflow. Each identity serves a specific purpose in the integration, and all are required for the destination to work correctly.
 
 ## Exported data {#exported-data}
 

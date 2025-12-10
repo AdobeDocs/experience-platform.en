@@ -1,6 +1,6 @@
 ---
 title: B2B Source Data Type
-description: This document provides an overview of the B2B Source Experience Data Model (XDM) data type.
+description: Learn about the B2B Source Experience Data Model (XDM) data type.
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
 ---
 # [!UICONTROL B2B Source] data type
@@ -9,7 +9,7 @@ exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
 
 When relying solely on string-based identifiers, there can be overlaps between IDs across multiple systems (for example, an opportunity could be given a string ID on one CRM system, but that same ID could refer to a completely different opportunity). This can result in data conflicts when merging data in [Real-Time Customer Profile](../../profile/home.md).
 
-The [!UICONTROL B2B Source] data type allows you to to use the original string ID of an entity and combine it with source-specific contextual information to ensure that it remains wholly unique in the Platform system regardless of the source it originated from.
+The [!UICONTROL B2B Source] data type allows you to to use the original string ID of an entity and combine it with source-specific contextual information to ensure that it remains wholly unique in the Experience Platform system regardless of the source it originated from.
 
 ![B2B Source Structure](../images/data-types/b2b-source.png)
 

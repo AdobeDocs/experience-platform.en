@@ -3,22 +3,24 @@ keywords: Experience Platform;home;popular topics;database connector
 solution: Experience Platform
 title: Create a Dataflow Using a Database Source in the UI
 type: Tutorial
-description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps on how to create a dataflow for a database source using Platform UI.
+description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Experience Platform dataset. This tutorial provides steps on how to create a dataflow for a database source using Experience Platform UI.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
 ---
 # Create a dataflow using a database source in the UI
 
-A dataflow is a scheduled task that retrieves and ingests data from a source to a dataset in Adobe Experience Platform. This tutorial provides steps on how to create a dataflow for a database source using the Platform UI.
+A dataflow is a scheduled task that retrieves and ingests data from a source to a dataset in Adobe Experience Platform. This tutorial provides steps on how to create a dataflow for a database source using the Experience Platform UI.
 
 >[!NOTE]
 >
->In order to create a dataflow, you must already have an authenticated account with a database source. A list of tutorials for creating different database source accounts in the UI can be found in the [sources overview](../../../home.md#database).
+>* In order to create a dataflow, you must already have an authenticated account with a database source. A list of tutorials for creating different database source accounts in the UI can be found in the [sources overview](../../../home.md#database).
+>
+>* For Experience Platform to ingest data, timezones for all table-based batch sources must be configured to UTC. The only time stamp that is supported for the [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) is TIMESTAMP_NTZ with UTC time.
 
 ## Getting started
 
-This tutorial requires a working understanding of the following components of Platform:
+This tutorial requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../home.md): Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [Sources](../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
 * [[!DNL Experience Data Model (XDM)] System](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
@@ -78,7 +80,17 @@ When you are finished providing details to your dataflow, select **[!UICONTROL N
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
-Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../data-prep/ui/mapping.md).
+Experience Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../data-prep/ui/mapping.md).
+
+>[!NOTE]
+>
+>When mapping to relational schemas, ensure your source data includes the required fields, such as a primary key and a version identifier, or a timestamp identifier for time-series schemas, .
+
+Control columns such as `_change_request_type`, used for change data capture, are read during ingestion but are not stored in the target schema.
+
+Relational schemas also support relationships between datasets using primary and foreign key mappings.
+
+For more information, see the [Data Mirror overview](../../../../xdm/data-mirror/overview.md) and the [relational schemas technical reference](../../../../xdm/schema/relational.md).
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
@@ -100,22 +112,29 @@ During this step, you can also enable **backfill** and define a column for the i
 
 See the table below for more information on scheduling configurations.
 
-| Field | Description |
+| Scheduling configuration | Description |
 | --- | --- |
-| Frequency | The frequency in which an ingestion happens. Selectable frequencies include `Once`, `Minute`, `Hour`, `Day`, and `Week`. |
-| Interval | An integer that sets the interval for the selected frequency. The interval's value should be a non-zero integer and should be set to greater than or equal to 15. |
-| Start time | A UTC timestamp indicating when the very first ingestion is set to occur. Start time must be greater than or equal to your current UTC time. |
-| Backfill | A boolean value that determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to start time will not be ingested. |
-| Load incremental data by | An option with a filtered set of source schema fields of type, date, or time. This field is used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
+| Frequency | Configure frequency to indicate how often the dataflow should run. You can set your frequency to: <ul><li>**Once**: Set your frequency to `once` to create a one-time ingestion. Configurations for interval and backfill are unavailable when creating a one-time ingestion dataflow. By default, the scheduling frequency is set to once.</li><li>**Minute**: Set your frequency to `minute` to schedule your dataflow to ingest data on a per-minute basis.</li><li>**Hour**: Set your frequency to `hour` to schedule your dataflow to ingest data on a per-hour basis.</li><li>**Day**: Set your frequency to `day` to schedule your dataflow to ingest data on a per-day basis.</li><li>**Week**: Set your frequency to `week` to schedule your dataflow to ingest data on a per-week basis. For more information, read the section on [understanding weekly ingestion schedule] (#weekly).</li></ul> |
+| Interval |  Once you select a frequency, you can then configure the interval setting to establish the time frame between every ingestion. For example, if you set your frequency to day and configure the interval to 15, then your dataflow will run every 15 days. You cannot set the interval to zero. The minimum accepted interval value for each frequency is as follows:<ul><li>**Once**: n/a</li><li>**Minute**: 15</li><li>**Hour**: 1</li><li>**Day**: 1</li><li>**Week**: 1</li></ul> |
+| Start Time | The timestamp for the projected run, presented in UTC time zone. |
+| Backfill | Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to the start time will not be ingested. |
+| Load incremental data by | An option with a filtered set of source schema fields of type, date, or time. The field that you select for **[!UICONTROL Load incremental data by]** must have its date-time values in UTC timezone in order to correctly load incremental data. All table-based batch sources pick incremental data by comparing a delta column time stamp value to the corresponding flow run window UTC time, and then copying the data from the source, if any new data is found within the UTC time window. |
 
 ![backfill](../../../images/tutorials/dataflow/table-based/backfill.png)
+
+### Understanding weekly ingestion schedule {#weekly}
+
+When you choose to set your dataflow to run on a weekly schedule, the dataflow will run based on one of these scenarios:
+
+* If your data source has been created but no data has been ingested yet, the first weekly dataflow will run 7 days after the source creation date. This 7-day interval always starts from when the source was created, regardless of when you set up the schedule. After the initial run, the dataflow will continue to execute on a weekly basis according to the configured schedule.
+* If data from your source has been previously ingested and you schedule it for weekly ingestion again, the next dataflow will run 7 days after the most recent successful ingestion.
 
 ## Review your dataflow
 
 The **[!UICONTROL Review]** step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
 
 * **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
-* **[!UICONTROL Assign dataset & map fields]**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
+* **[!UICONTROL Assign dataset & map fields]**: Displays the dataset that the source data will be ingested into, along with the associated schema. If you're using a relational schema, verify that required fields, such as the primary key and version identifier, are correctly mapped. Also, ensure that any change data capture control columns are properly configured. Datasets using relational schemas support multiple data models and enable [change data capture workflows](../../api/change-data-capture.md).
 * **[!UICONTROL Scheduling]**: Shows the active period, frequency, and interval of the ingestion schedule.
 
 Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
@@ -132,7 +151,7 @@ You can delete dataflows that are no longer necessary or were incorrectly create
 
 ## Next steps
 
-By following this tutorial, you have successfully created a dataflow to bring data from your database source to Platform. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have successfully created a dataflow to bring data from your database source to Experience Platform. Incoming data can now be used by downstream [!DNL Experience Platform] services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 * [[!DNL Real-Time Customer Profile] overview](../../../../profile/home.md)
 * [[!DNL Data Science Workspace] overview](../../../../data-science-workspace/home.md)

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;telecom;subscription;telecommunications;Schema design;field group;Field group;
 solution: Experience Platform
 title: Telecom Subscription Schema Field Group
-description: This document provides an overview of the Telecom Subscription schema field group.
+description: Learn about the Telecom Subscription schema field group.
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
 ---
 # [!UICONTROL Telecom Subscription] schema field group

@@ -1,21 +1,21 @@
 ---
 keywords: tag extensions;tag extension;launch destinations; platform tag extensions;platform tag extension;platform launch destinations
 title: Tag Extensions in Adobe Experience Platform
-description: Adobe Experience Platform provides the next generation of tag-management capabilities from Adobe. Platform gives you a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences.
+description: Adobe Experience Platform provides the next generation of tag-management capabilities from Adobe. Experience Platform gives you a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
 ---
 # Tag extensions in Adobe Experience Platform
 
-Adobe Experience Platform provides the next generation of tag management capabilities from Adobe. Platform gives you a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature.
+Adobe Experience Platform provides the next generation of tag management capabilities from Adobe. Experience Platform gives you a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature.
 
 For an introduction to tags, see the resources below:
 
 - [Tags overview](../../../tags/home.md)
 - [Quick start guide](../../../tags/quick-start/quick-start.md)
 
-## How to find tag extensions in the Platform interface {#how-to-find-extensions-in-interface}
+## How to find tag extensions in the Experience Platform interface {#how-to-find-extensions-in-interface}
 
-To find the extensions in the Platform interface, browse to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter. 
+To find the extensions in the Experience Platform interface, browse to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter. 
 
 ![Extensions filter in the interface](../../assets/catalog/launch-extensions/filter.png)
 
@@ -23,7 +23,7 @@ To find the extensions in the Platform interface, browse to **[!UICONTROL Destin
 
 A [tag extension](../../../tags/home.md#extensions) is a package of code that enhances the functionality of a website or mobile app. This could include sending raw event data to a destination like [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md) but they can also serve other functions.
 
-It is important to differentiate between tag and event forwarding extensions. The extensions surfaced in the Platform destinations user interface are *tag extensions*. Refer to the overview on event forwarding for more information on the [differences between tags and event forwarding](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
+It is important to differentiate between tag and event forwarding extensions. The extensions surfaced in the Experience Platform destinations user interface are *tag extensions*. Refer to the overview on event forwarding for more information on the [differences between tags and event forwarding](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
 
 
 
@@ -31,7 +31,7 @@ It is important to differentiate between tag and event forwarding extensions. Th
 
 Extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](../personalization/gainsight.md) or the [Confirmit Voice of the Customer extension](../voice/confirmit-digital-feedback.md).
 
-**Profile/Segment Export** destinations in Adobe Experience Platform capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](../cloud-storage/amazon-s3.md) or the [Google Display & Video 360 advertising destination](../advertising/google-dv360.md).
+**Profile/Segment Export** destinations in Adobe Experience Platform capture event data, combine it with other data sources, apply segmentation, and export audiences and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](../cloud-storage/amazon-s3.md) or the [Google Display & Video 360 advertising destination](../advertising/google-dv360.md).
 
 ![Tag extensions compared to other destinations](../../assets/common/launch-and-other-destinations.png)
 
@@ -39,9 +39,9 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 ## Benefits of using tag extensions {#extensions-benefits}
 
-Platform's tag capabilities are free for existing Experience Cloud customers. The system simplifies tag deployment on your website via easy-to-use extensions that you can install, configure, update, and delete. Tags leave a small footprint on your website and allow you to keep your pages loading quickly.
+Experience Platform's tag capabilities are free for existing Experience Cloud customers. The system simplifies tag deployment on your website via easy-to-use extensions that you can install, configure, update, and delete. Tags leave a small footprint on your website and allow you to keep your pages loading quickly.
 
-While you cannot activate segments to tag extensions, you can set up rules to only forward event data in certain situations. This powerful functionality enables you to forward event data only in certain situations as opposed to sending event data on every interaction. For more information, read about rules in the [tags documentation](../../../tags/ui/managing-resources/rules.md).
+While you cannot activate audiences to tag extensions, you can set up rules to only forward event data in certain situations. This powerful functionality enables you to forward event data only in certain situations as opposed to sending event data on every interaction. For more information, read about rules in the [tags documentation](../../../tags/ui/managing-resources/rules.md).
 
 ## Example use cases for extensions {#extensions-use-cases}
 
@@ -53,7 +53,7 @@ Extensions enable you to satisfy various customer use cases. Some example use ca
 
 ## Extension categories {#extension-categories}
 
-Extensions can fall under the following categories in Platform:
+Extensions can fall under the following categories in Experience Platform:
 
 - [Advertising](../advertising/overview.md)
 - [Analytics](../analytics/overview.md)

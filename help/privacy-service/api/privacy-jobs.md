@@ -3,9 +3,16 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy Jobs API Endpoint
 description: Learn how to manage privacy jobs for Experience Cloud applications using the Privacy Service API.
+role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 ---
 # Privacy jobs endpoint
+
+>[!IMPORTANT]
+>
+>To support the growing number of U.S. state privacy laws, Privacy Service is changing its `regulation_type` values. Use the new values that include state abbreviations (for example, `ucpa_ut_usa`) starting **12 June 2025**. The older values (for example, `ucpa_usa`) stop working after **28 July 2025**.
+>
+>Update your integrations before this deadline to avoid request failures.
 
 This document covers how to work with privacy jobs using API calls. Specifically, it covers the use of the `/job` endpoint in the [!DNL Privacy Service] API. Before reading this guide, refer to the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
@@ -13,32 +20,41 @@ This document covers how to work with privacy jobs using API calls. Specifically
 >
 >If you are trying to manage consent or opt-out requests from customers, refer to the [consent endpoint guide](./consent.md).
 
-## List all jobs {#list}
+## List all jobs {#list} 
 
 You can view a list of all available privacy jobs within your organization by making a GET request to the `/jobs` endpoint.
 
 **API format**
 
-This request format uses a `regulation` query parameter on the `/jobs` endpoint, therefore it begins with a question mark (`?`) as shown below. The response is paginated, allowing you to use other query parameters (`page` and `size`) to filter the response. You can separate multiple parameters using ampersands (`&`).
+This request format uses a `regulation` query parameter on the `/jobs` endpoint, therefore it begins with a question mark (`?`) as shown below. When listing resources, the Privacy Service API returns up to 1000 jobs and paginates the response. Use other query parameters (`page`, `size`, and date filters) to filter the response. You can separate multiple parameters using ampersands (`&`).
+
+>[!TIP]
+>
+>Use additional query parameters to further filter results for specific queries. For example, you can discover how many privacy jobs were submitted over a given period of time and what their status is using the `status`, `fromDate`, and `toDate` query parameters.
 
 ```http
 GET /jobs?regulation={REGULATION}
 GET /jobs?regulation={REGULATION}&page={PAGE}
 GET /jobs?regulation={REGULATION}&size={SIZE}
 GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
+GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={STATUS}
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `{REGULATION}` | The regulation type to query for. Accepted values include: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>See the overview on [supported regulations](../regulations/overview.md) for more information on the privacy regulations that the above values represent. |
+| `{REGULATION}` | The regulation type to query for. Accepted values include: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa_de_usa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25_qc_can`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br>See the overview on [supported regulations](../regulations/overview.md) for more information on the privacy regulations that the above values represent. |
 | `{PAGE}` | The page of data to be displayed, using 0-based numbering. The default is `0`. |
-| `{SIZE}` | The number of results to display on each page. The default is `1` and the maximum is `100`. Exceeding the maximum causes the API to return a 400-code error. |
+| `{SIZE}` | The number of results to display on each page. The default is `100` and the maximum is `1000`. Exceeding the maximum causes the API to return a 400-code error. |
+| `{status}` | The default behavior is to include all statuses. If you specify a status type, the request returns only privacy jobs that match that status type. The accepted values include: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
+| `{toDate}` | This parameter limits results to those processed before a specified date. From the date of the request, the system can can look back 45 days. However, the range cannot be more than 30 days.<br>It accepts the format YYYY-MM-DD. The date you provide is interpreted as the termination date expressed in Greenwich Mean Time (GMT).<br>If you do not provide this parameter (and a corresponding `fromDate`), the default behavior returns jobs that data back over the last seven days. If you use `toDate`, you must also use the `fromDate` query parameter. If you do not use both, the call returns a 400 error. |
+| `{fromDate}` | This parameter limits results to those processed after a specified date. From the date of the request, the system can can look back 45 days. However, the range cannot be more than 30 days.<br>It accepts the format YYYY-MM-DD. The date you provide is interpreted as the request's date of origin expressed in Greenwich Mean Time (GMT).<br>If you do not provide this parameter (and a corresponding `toDate`), the default behavior returns jobs that data back over the last seven days. If you use `fromDate`, you must also use the `toDate` query parameter. If you do not use both, the call returns a 400 error. |
+| `{filterDate}` |  This parameter limits results to those processed on a specified date. It accepts the format YYYY-MM-DD. The system can look back over last 45 days. |
 
 {style="table-layout:auto"}
 
 **Request**
 
-The following request retrieves a paginated list of all jobs within an IMS Organization, starting from the third page with a page size of 50.
+The following request retrieves a paginated list of all jobs within an organization, starting from the third page with a page size of 50.
 
 ```shell
 curl -X GET \
@@ -57,6 +73,12 @@ A successful response returns a list of jobs, with each job containing details s
 To fetch the next set of results in a paginated response, you must make another API call to the same endpoint while increasing the `page` query parameter by 1.
 
 ## Create a privacy job {#create-job}
+
+>[!IMPORTANT]
+>
+>Privacy Service is only meant for data subject and consumer rights requests. Any other usage of Privacy Service for data cleanup or maintenance is not supported or allowed. Adobe has a legal obligation to fulfill them in a timely manner. As such, load-testing on Privacy Service is not allowed as it is a production only environment and creates an unnecessary backlog of valid privacy requests.
+>
+>A hard daily upload limit is now in place to help prevent abuse of the service. Users found to abuse the system will have their access to the service disabled. A subsequent meeting will then be held with them to address their actions and discuss the acceptable use for Privacy Service.
 
 Before creating a new job request, you must first collect identifying information about the data subjects whose data you want to access, delete, or opt out of sale. Once you have the required data, it must be provided in the payload of a POST request to the `/jobs` endpoint.
 
@@ -139,7 +161,6 @@ curl -X POST \
     "include": ["Analytics", "AudienceManager","profileService"],
     "expandIds": false,
     "priority": "normal",
-    "analyticsDeleteMethod": "anonymize",
     "mergePolicyId": 124,
     "regulation": "ccpa"
 }'
@@ -147,13 +168,12 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `companyContexts` **(Required)** | An array containing authentication information for your organization. Each listed identifier includes the following attributes: <ul><li>`namespace`: The namespace of an identifier.</li><li>`value`: The value of the identifier.</li></ul>It is **required** that one of the identifiers uses `imsOrgId` as its `namespace`, with its `value` containing the unique ID for your IMS Organization. <br/><br/>Additional identifiers can be product-specific company qualifiers (for example, `Campaign`), which identify an integration with an Adobe application belonging to your organization. Potential values include account names, client codes, tenant IDs, or other application identifiers. |
-| `users` **(Required)** | An array containing a collection of at least one user whose information you would like to access or delete. A maximum of 1000 user IDs can be provided in a single request. Each user object contains the following information: <ul><li>`key`: An identifier for a user that is used to qualify the separate job IDs in the response data. It is best practice to choose a unique, easily identifiable string for this value so it can easily be referenced or looked up later.</li><li>`action`: An array that lists desired actions to take on the user's data. Depending on the actions you want to take, this array must include `access`, `delete`, or both.</li><li>`userIDs`: A collection of identities for the user. The number of identities a single user can have is limited to nine. Each identity consists of a `namespace`, a `value`, and a namespace qualifier (`type`). See the [appendix](appendix.md) for more details on these required properties.</li></ul> For a more detailed explanation of `users` and `userIDs`, see the [troubleshooting guide](../troubleshooting-guide.md#user-ids). |
+| `companyContexts` **(Required)** | An array containing authentication information for your organization. Each listed identifier includes the following attributes: <ul><li>`namespace`: The namespace of an identifier.</li><li>`value`: The value of the identifier.</li></ul>It is **required** that one of the identifiers uses `imsOrgId` as its `namespace`, with its `value` containing the unique ID for your organization. <br/><br/>Additional identifiers can be product-specific company qualifiers (for example, `Campaign`), which identify an integration with an Adobe application belonging to your organization. Potential values include account names, client codes, tenant IDs, or other application identifiers. |
+| `users` **(Required)** | An array containing a collection of at least one user whose information you would like to access or delete. A maximum of 1000 users can be provided in a single request. Each user object contains the following information: <ul><li>`key`: An identifier for a user that is used to qualify the separate job IDs in the response data. It is best practice to choose a unique, easily identifiable string for this value so it can easily be referenced or looked up later.</li><li>`action`: An array that lists desired actions to take on the user's data. Depending on the actions you want to take, this array must include `access`, `delete`, or both.</li><li>`userIDs`: A collection of identities for the user. The number of identities a single user can have is limited to nine. Each identity consists of a `namespace`, a `value`, and a namespace qualifier (`type`). See the [appendix](appendix.md) for more details on these required properties.</li></ul> For a more detailed explanation of `users` and `userIDs`, see the [troubleshooting guide](../troubleshooting-guide.md#user-ids). |
 | `include` **(Required)** | An array of Adobe products to include in your processing. If this value is missing or otherwise empty, the request will be rejected. Only include products that your organization has an integration with. See the section on [accepted product values](appendix.md) in the appendix for more information. |
 | `expandIDs` | An optional property that, when set to `true`, represents an optimization for processing the IDs in the applications (currently only supported by [!DNL Analytics]). If omitted, this value defaults to `false`. |
 | `priority` | An optional property used by Adobe Analytics that sets the priority for processing requests. Accepted values are `normal` and `low`. If `priority` is omitted, the default behavior is `normal`. |
-| `analyticsDeleteMethod` | An optional property that specifies how Adobe Analytics should handle the personal data. Two possible values are accepted for this attribute: <ul><li>`anonymize`: All data referenced by the given collection of user IDs is made anonymous. If `analyticsDeleteMethod` is omitted, this is the default behavior.</li><li>`purge`: All data is removed completely.</li></ul> |
-| `mergePolicyId` | When making privacy requests for Real-Time Customer Profile (`profileService`), you can optionally provide the ID of the specific [merge policy](../../profile/merge-policies/overview.md) that you want to use for ID stitching. By specifying a merge policy, privacy requests can include segment information when returning data on a customer. Only one merge policy can be specified per request. If no merge policy is provided, segmentation information is not included in the response. |
+| `mergePolicyId` | When making privacy requests for Real-Time Customer Profile (`profileService`), you can optionally provide the ID of the specific [merge policy](../../profile/merge-policies/overview.md) that you want to use for ID stitching. By specifying a merge policy, privacy requests can include audience information when returning data on a customer. Only one merge policy can be specified per request. If no merge policy is provided, segmentation information is not included in the response. |
 | `regulation` **(Required)** | The regulation for the privacy job. The following values are accepted: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>See the overview on [supported regulations](../regulations/overview.md) for more information on the privacy regulations that the above values represent. |
 
 {style="table-layout:auto"}

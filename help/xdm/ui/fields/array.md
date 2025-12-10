@@ -37,4 +37,4 @@ The canvas updates to reflect the changes made to the field. Note that the data 
 
 ## Next steps
 
-This guide covered how to define an array field in the the UI. See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor].
+This guide covered how to define an array field in the UI. See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor].

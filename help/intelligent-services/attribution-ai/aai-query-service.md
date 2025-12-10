@@ -19,7 +19,7 @@ Each row in the data represents a conversion, in which information for related t
 
 In the Adobe Experience Platform UI, select **[!UICONTROL Datasets]** in the left navigation. The **[!UICONTROL Datasets]** page appears. Next, select the **[!UICONTROL Browse]** tab and find the output dataset for your Attribution AI scores.
 
-![Accessing your instance](./images/aai-query/datasets_browse.png)
+![Accessing your model](./images/aai-query/datasets_browse.png)
 
 Select your output dataset. The dataset activity page appears.
 
@@ -39,7 +39,7 @@ Using the scoring schema, you can select or search for a value. Once selected, t
 
 ## Access Query Service
 
-To access Query Service from within the Platform UI, start by selecting **[!UICONTROL Queries]** in the left navigation, then select the **[!UICONTROL Browse]** tab. A list of your previously saved queries is loaded.
+To access Query Service from within the Experience Platform UI, start by selecting **[!UICONTROL Queries]** in the left navigation, then select the **[!UICONTROL Browse]** tab. A list of your previously saved queries is loaded.
 
 ![query service browse](./images/aai-query/query_tab.png)
 
@@ -299,7 +299,7 @@ This query flattens the struct column into multiple singular columns and explode
 
 >[!TIP]
 >
-> In this example, you need to replace `{COLUMN_NAME}` in addition to `_tenantId` and `your_score_output_dataset`. The `COLUMN_NAME` variable can take the values of optional pass through column names (reporting columns) that were added during the configuring of your Attribution AI instance. Please review your scoring output schema to find the `{COLUMN_NAME}` values needed to complete this query.
+> In this example, you need to replace `{COLUMN_NAME}` in addition to `_tenantId` and `your_score_output_dataset`. The `COLUMN_NAME` variable can take the values of optional pass through column names (reporting columns) that were added during the configuring of your Attribution AI model. Please review your scoring output schema to find the `{COLUMN_NAME}` values needed to complete this query.
 
 ```sql
 SELECT 

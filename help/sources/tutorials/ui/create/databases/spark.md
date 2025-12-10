@@ -10,9 +10,9 @@ exl-id: 30d0b740-cec4-486f-9c9b-1579fd04f28b
 
 >[!NOTE]
 >
-> The [!DNL Apache Spark] on [!DNL Azure HDInsights] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+> The [!DNL Apache Spark] on [!DNL Azure HDInsights] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Apache Spark] on [!DNL Azure HDInsights] source connector using the [!DNL Platform] user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Apache Spark] on [!DNL Azure HDInsights] source connector using the [!DNL Experience Platform] user interface.
 
 ## Getting started
 
@@ -27,7 +27,7 @@ If you already have a valid [!DNL Spark] connection, you may skip the remainder 
 
 ### Gather required credentials
 
-In order to access your [!DNL Spark] account on [!DNL Platform], you must provide the following values:
+In order to access your [!DNL Spark] account on [!DNL Experience Platform], you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -39,7 +39,7 @@ For more information about getting started, refer to [this Spark document](https
 
 ## Connect your [!DNL Spark] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Spark] account to connect to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Spark] account to connect to [!DNL Experience Platform].
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
 
@@ -65,4 +65,4 @@ To connect an existing account, select the [!DNL Spark] account you want to conn
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Spark] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your [!DNL Spark] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Experience Platform]](../../dataflow/databases.md).

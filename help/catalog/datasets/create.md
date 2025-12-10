@@ -15,9 +15,9 @@ This guide requires a working understanding of the following components of Adobe
 
 * [Batch ingestion](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] allows you to ingest data as batch files.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
+The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Experience Platform] APIs.
 
 ### Reading sample API calls
 
@@ -25,23 +25,21 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Experience Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
+>For more information on sandboxes in [!DNL Experience Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
-All requests that contain a payload (POST, PUT, PATCH) require an additional header:
-
-* Content-Type: application/json
+All requests that contain a payload (POST, PUT, PATCH) require an additional `Content-Type: application/json` header. For JSON+PATCH requests, the `Content-Type` should be `application/json-patch+json`.
 
 ## Tutorial
 
@@ -248,7 +246,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Response**
 
-A successful response returns HTTP Status 201 (Created) and a response object containing details of the newly created batch, including its `id`, a read-only, system generated string.
+A successful response returns HTTP Status 201 (Created) and a response object. The response object consists of an array containing the ID of the newly created batch in the format `"@/batches/{BATCH_ID}"`. The batch ID is a read-only, system-generated string that is used to reference the batch in API calls.
 
 ```JSON
 {
@@ -349,12 +347,12 @@ A successfully completed batch returns a blank response body and HTTP Status 200
 
 ## Monitor ingestion
 
-Depending on the size of the data, batches take varying lengths of time to ingest. You can monitor the status of a batch by appending a `batch` request parameter containing the batch's ID to a `GET /batches` request. The API polls the dataset for the status of the batch from ingestion until the `status` in the response indicates completion ("success" or "failure").
+Depending on the size of the data, batches take varying lengths of time to ingest. You can monitor the status of a batch by appending a batch's ID to a `GET /batches` request.
 
 **API format**
 
 ```HTTP
-GET /batches?batch={BATCH_ID}
+GET /batches/{BATCH_ID}
 ```
 
 | Parameter | Description |

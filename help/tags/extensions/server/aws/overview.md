@@ -2,6 +2,7 @@
 title: AWS Extension Overview
 description: Learn about the AWS extension for event forwarding in Adobe Experience Platform.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
+last-substantial-update: 2022-11-23
 ---
 # [!DNL AWS] extension overview
 
@@ -59,7 +60,7 @@ The right panel updates to show configuration options for how the data should be
 
 | Input | Description |
 | --- | --- |
-| [!UICONTROL Payload] | This field contains the data that will be forwarded to the [!DNL Kinesis] data stream, in JSON format.<br><br>Under the **[!UICONTROL Raw]** option, you can paste the JSON object directly into the provided text field, or you can select the data element icon (![Dataset icon](../../../images/extensions/server/aws/data-element-icon.png)) to select from a list of existing data elements to represent the payload.<br><br>You can also use the **[!UICONTROL JSON Key-Value Pairs Editor]** option to manually add each key-value pair through a UI editor. Each value can be represented by a raw input, or a data element can be selected instead. |
+| [!UICONTROL Payload] | This field contains the data that will be forwarded to the [!DNL Kinesis] data stream, in JSON format.<br><br>Under the **[!UICONTROL Raw]** option, you can paste the JSON object directly into the provided text field, or you can select the data element icon (![Dataset icon](/help/images/icons/database.png)) to select from a list of existing data elements to represent the payload.<br><br>You can also use the **[!UICONTROL JSON Key-Value Pairs Editor]** option to manually add each key-value pair through a UI editor. Each value can be represented by a raw input, or a data element can be selected instead. |
 
 {style="table-layout:auto"}
 

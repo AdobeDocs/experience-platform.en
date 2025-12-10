@@ -11,7 +11,7 @@ Mapping sets can be used to define how data in a source schema maps to that of a
 
 ## List mapping sets
 
-You can retrieve a list of all the mapping sets for your IMS Organization by making a GET request to the `/mappingSets` endpoint.
+You can retrieve a list of all the mapping sets for your organization by making a GET request to the `/mappingSets` endpoint.
 
 **API format**
 
@@ -34,7 +34,7 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 
 **Request**
 
-The following request will retrieve the last two mapping sets within your IMS Organization.
+The following request will retrieve the last two mapping sets within your organization.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \

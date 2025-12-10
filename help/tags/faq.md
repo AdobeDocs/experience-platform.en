@@ -39,6 +39,8 @@ Tags have opened its virtually self-service portal, which extension developers c
 
 We have many customers who also choose to build their own private extensions for use only within their own companies using the same extension development methods.
 
+To develop an extension, check out the [Extension Development Overview](./extension-dev/overview.md) page.
+
 ## Do tags meet my company's security standards?
 
 Tags are SOC-2 and Gramm-Leach-Bliley Act ready. Tags also offer the capability of being self-hosted. JavaScript libraries and mobile configurations can be served from your own servers or the CDN of your choice. For I.T. and security teams, this gives you the ability to run automated testing, to check the files into your own version control system, and to fully comply with any internal production migration processes, security-related or otherwise.
@@ -65,22 +67,7 @@ Tags are designed to deliver and run marketing and advertising technologies on y
 
 ## Which browsers do tags support?
 
-Browser support for tags:
-
-- [!DNL Chrome] (latest)
-- [!DNL Safari] (latest)
-- [!DNL Firefox] (latest)
-- [!DNL Microsoft Edge] (latest)
-- [!DNL Internet Explorer] (10 and above)
-- [!DNL iOS Safari] (latest)
-- [!DNL Android Chrome] (latest)
-
-Browser support for the tags application interface:
-
-- [!DNL Chrome] (latest)
-- [!DNL Safari] (latest)
-- [!DNL Firefox] (latest)
-- [!DNL Microsoft Edge] (latest)
+See the supported browsers [here](./extension-dev/browsers.md).
 
 Most Adobe clients leverage more modern web platform features in current browsers to create better user experiences, including single-page applications and interactive Ajax-heavy websites and pages. As most clients move to more modern approaches with their sites, they demand a solution like tags that enables those approaches.
 

@@ -7,7 +7,7 @@ exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
 ---
 # Identity Service troubleshooting guide
 
-This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Identity Service], as well as a troubleshooting guide for common errors. For questions and troubleshooting regarding [!DNL Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Identity Service], as well as a troubleshooting guide for common errors. For questions and troubleshooting regarding [!DNL Experience Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
 
 Data that identifies a single customer is often fragmented across the various devices and systems that they use to engage with your brand. [!DNL Identity Service] gathers these fragmented identities together, facilitating a complete understanding of customer behavior so you can deliver impactful digital experiences in real time. For more information, see the [Identity Service overview](./home.md).
 
@@ -25,7 +25,7 @@ Labeling certain data fields as identities in your record and time series data a
 
 ## What are known and anonymous identities?
 
-A known identity refers to an identity value that can be used on its own or with other information to identify, contact, or locate an individual person. Examples of known identities may include email addresses, phone numbers, and CRM IDs.
+A known identity refers to an identity value that can be used on its own or with other information to identify, contact, or locate an individual person. Examples of known identities may include email addresses, phone numbers, and CRMIDs.
 
 An anonymous identity refers to an identity value that cannot be used on its own or with other information to identify, contact, or locate an individual person (such as a cookie ID).
 
@@ -67,7 +67,7 @@ For step-by-step instructions for defining a namespace when creating an identity
 
 ## What are the standard identity namespaces provided by Experience Platform? {#standard-namespaces}
 
-Standard identity namespaces are namespaces available to all organizations. See the [Identity namespaces overview](./namespaces.md) for a full list of available standard namespaces.
+Standard identity namespaces are namespaces available to all organizations. See the [Identity namespaces overview](./features/namespaces.md) for a full list of available standard namespaces.
 
 ## Where can I find the list of identity namespaces available for my organization?
 
@@ -83,7 +83,7 @@ Identities are referenced in API calls either by their composite identity or XID
 
 ## How does Identity Service handle personally identifiable information (PII)?
 
-Identity Service has standard namespaces to support the ingestion of hashed identity values for phone numbers and emails. However, you are responsible for the hashing of values. To learn more about hashing data that is ingested into Platform, see the [[!DNL Data Prep] mapping functions guide](../data-prep/functions.md#hashing).
+Identity Service has standard namespaces to support the ingestion of hashed identity values for phone numbers and emails. However, you are responsible for the hashing of values. To learn more about hashing data that is ingested into Experience Platform, see the [[!DNL Data Prep] mapping functions guide](../data-prep/functions.md#hashing).
 
 ## Are there any considerations when hashing PII-based identities?
 
@@ -109,7 +109,7 @@ Internal solutions|Preferred|Common
 
 ## Why can't I access the identity graph page or APIs?
 
-Your Platform administrator must provision you with the `view-identity-graph` permission in order for you to view identity graph data. Without this permission, you will receive a permission denied message on the identity graph viewer page and when calling Platform APIs. See the [access control overvew](../access-control/home.md) for more information on permissions.
+Your Experience Platform administrator must provision you with the `view-identity-graph` permission in order for you to view identity graph data. Without this permission, you will receive a permission denied message on the identity graph viewer page and when calling Experience Platform APIs. See the [access control overvew](../access-control/home.md) for more information on permissions.
 
 ## Troubleshooting
 
@@ -198,7 +198,7 @@ This error message displays when a `graph-type` query parameter is given an inva
 }
 ```
 
-This error message displays when your IMS Organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
+This error message displays when your organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
 
 ### Gateway service token is not valid
 
@@ -210,7 +210,7 @@ This error message displays when your IMS Organization has not been provisioned 
 }
 ```
 
-In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. See the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) for instructions on generating new access tokens.
+In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Experience Platform] APIs. See the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) for instructions on generating new access tokens.
 
 ### Authorization service token is not valid
 
@@ -222,7 +222,7 @@ In the case of this error, your access token is invalid. Access tokens expire ev
 }
 ```
 
-In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. See the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) for instructions on generating new access tokens.
+In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Experience Platform] APIs. See the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) for instructions on generating new access tokens.
 
 ### User token does not have valid product context
 
@@ -258,7 +258,7 @@ When [!DNL Identity Service] persists an identity, the identity's ID and associa
 }
 ```
 
-This error message displays when your IMS Organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
+This error message displays when your organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
 
 ### Internal Server Error
 
@@ -270,13 +270,13 @@ This error message displays when your IMS Organization has not been provisioned 
 }
 ```
 
-This error displays when an unexpected exception occurs in the execution of a [!DNL Platform] service call. Best practice is to program your automated calls to retry their requests a few times at a timed interval when receiving this error. If the problem persists, contact your system administrator.
+This error displays when an unexpected exception occurs in the execution of an [!DNL Experience Platform] service call. Best practice is to program your automated calls to retry their requests a few times at a timed interval when receiving this error. If the problem persists, contact your system administrator.
 
 ## Batch Ingestion error codes
 
-[!DNL Identity Service] ingests identity data from record and time series data that is uploaded to [!DNL Platform] using Batch Ingestion. As batch ingestion is an asynchronous process, you must view the details for a batch to view errors. Errors will accumulate as the batch progresses until the batch is complete.
+[!DNL Identity Service] ingests identity data from record and time series data that is uploaded to [!DNL Experience Platform] using Batch Ingestion. As batch ingestion is an asynchronous process, you must view the details for a batch to view errors. Errors will accumulate as the batch progresses until the batch is complete.
 
-The following is a list of error messages related to [!DNL Identity Service] you may encounter when using the [Data Ingestion API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
+The following is a list of error messages related to [!DNL Identity Service] you may encounter when using the [Batch Ingestion API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
 
 ### Unknown XDM schema
 
@@ -324,7 +324,7 @@ This error displays when the first 100 rows of a batch presented no identities. 
 }
 ```
 
-This error displays when an ingested record presents an identity whose associated namespace does not exist or is inaccessible by your IMS Organization.
+This error displays when an ingested record presents an identity whose associated namespace does not exist or is inaccessible by your organization.
 
 ### Skipping batch ingestion as IMS Org is not provisioned for Private Identity Graph
 
@@ -336,7 +336,7 @@ This error displays when an ingested record presents an identity whose associate
 }
 ```
 
-When ingesting batch data, this error message displays when your IMS Organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
+When ingesting batch data, this error message displays when your organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
 
 ### Internal Error
 

@@ -7,7 +7,7 @@ exl-id: d0434098-f49a-45f3-9772-488bd3c134aa
 
 In the Reactor API, a profile represents an Adobe Experience Platform user. The Reactor API does not maintain its own database of users and permissions, and instead relies on Adobe IDs managed by [Adobe’s identity management system (IMS)](https://helpx.adobe.com/enterprise/using/identity.html).
 
-A profile contains all the information about the logged in user, including all the IMS Organizations to which they belong, the product profiles they belong to within each Org, and the rights they have from each product profile.
+A profile contains all the information about the logged in user, including all the organizations to which they belong, the product profiles they belong to within each Org, and the rights they have from each product profile.
 
 ## Getting started
 
@@ -45,14 +45,14 @@ A successful response returns the details of the profile.
     "id": "UR0bd696624e844d6ba5bfc248ba1eca11",
     "type": "users",
     "attributes": {
-      "active_org": "{IMS_ORG_1}",
+      "active_org": "{ORG_1}",
       "expires_in": 0,
       "display_name": "John Smith",
       "job_function": null,
       "email": "jsmith@example.com",
       "organizations": {
-        "{IMS_ORG_1}": {
-          "name": "Example IMS Org A",
+        "{ORG_1}": {
+          "name": "Example organization A",
           "admin": true,
           "active": true,
           "login_companies": [
@@ -67,8 +67,8 @@ A successful response returns the details of the profile.
           ],
           "tenant_id": "{TENANT_ID_1}"
         },
-        "{IMS_ORG_2}": {
-          "name": "Example IMS Org B",
+        "{ORG_2}": {
+          "name": "Example organization B",
           "admin": false,
           "active": false,
           "login_companies": [

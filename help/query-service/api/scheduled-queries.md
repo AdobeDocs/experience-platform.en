@@ -1,19 +1,34 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;scheduled queries;scheduled query;
 solution: Experience Platform
-title: Scheduled Queries API Endpoint
+title: Schedules Endpoint
 description: The following sections walks through the various API calls you can make for scheduled queries with the Query Service API.
+role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
 ---
-# Scheduled queries endpoint
+# Schedules endpoint
+
+Learn how to create, manage, and monitor scheduled queries programmatically using the Query Service schedules API with detailed information and examples.
+
+## Requirements and prerequisites
+
+You can create scheduled queries using either a technical account (authenticated via OAuth Server-to-Server credentials) or a personal user account (user token). However, Adobe strongly recommends using a technical account to ensure uninterrupted, secure execution of scheduled queries—especially for long-term or production workloads. 
+
+Queries created with a personal user account will fail if that user's access is revoked or their account is disabled. Technical accounts provide greater stability because they are not tied to an individual user's employment status or access rights.
+
+>[!IMPORTANT]
+>
+>Important considerations when managing scheduled queries:<ul><li>Scheduled queries will fail if the account (technical or user) used to create them loses access or permissions.</li><li>Scheduled queries must be disabled before deletion via the API or UI.</li><li>Scheduling indefinitely without an end date is not supported; an end date must always be specified.</li></ul>
+
+For detailed guidance on account requirements, permission setup, and managing scheduled queries, see the [Query schedules documentation](../ui/query-schedules.md#technical-account-user-requirements). For step-by-step instructions on creating and configuring a technical account, refer to [Developer Console setup](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) and [End-to-end technical account setup](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
 
 ## Sample API calls
 
-Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Each call includes the general API format, a sample request showing required headers, and a sample response.
+Once you have configured the necessary authentication headers (see the [API authentication guide](../../landing/api-authentication.md)), you can begin making calls to the [!DNL Query Service] API. The following sections demonstrate various API calls with general formats, example requests including required headers, and sample responses.
 
 ### Retrieve a list of scheduled queries
 
-You can retrieve a list of all scheduled queries for your IMS Organization by making a GET request to the `/schedules` endpoint. 
+You can retrieve a list of all scheduled queries for your organization by making a GET request to the `/schedules` endpoint. 
 
 **API format**
 
@@ -34,12 +49,12 @@ The following is a list of available query parameters for listing scheduled quer
 | --------- | ----------- |
 | `orderby` | Specifies the field by which to order results. The supported fields are `created` and `updated`. For example, `orderby=created` will sort results by created in ascending order. Adding a `-` before created (`orderby=-created`) will sort items by created in descending order. |
 | `limit` | Specifies the page size limit to control the number of results that are included in a page. (*Default value: 20*) |
-| `start` | Offsets the response list, using zero-based numbering. For example, `start=2` will return a list starting from the third listed query. (*Default value: 0*) |
+| `start` | Specify an ISO format timestamp to order the results. If no start date is specified, the API call will return the oldest created scheduled query first, then continue to list more recent results.<br> ISO timestamps allow for different levels of granularity in the date and time. The basic ISO timestamps take the format of: `2020-09-07` to express the date September 7, 2020. A more complex example would be written as `2022-11-05T08:15:30-05:00` and corresponds to November 5, 2022, 8:15:30 am, US Eastern Standard Time. A timezone can be provided with a UTC offset and is denoted by the suffix "Z" (`2020-01-01T01:01:01Z`). If no timezone is provided, it defaults to zero. |
 | `property` | Filter results based on fields. The filters **must** be HTML escaped. Commas are used to combine multiple sets of filters. The supported fields are `created`, `templateId`, and `userId`. The list of supported operators are `>` (greater than), `<` (less than), and `==` (equal to). For example, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` will return all scheduled queries where the user ID is as specified. |
 
 **Request**
 
-The following request retrieves the latest scheduled query created for your IMS organization.
+The following request retrieves the latest scheduled query created for your organization.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
@@ -51,7 +66,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **Response**
 
-A successful response returns HTTP status 200 with a list of scheduled queries for the specified IMS Organization. The following response returns the latest scheduled query created for your IMS organization.
+A successful response returns HTTP status 200 with a list of scheduled queries for the specified organization. The following response returns the latest scheduled query created for your organization.
 
 ```json
 {
@@ -151,10 +166,11 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 | Property | Description |
 | -------- | ----------- |
-| `query.dbName` | The name of the database you are creating a scheduled query for. |
-| `query.sql` | The SQL query you want to create. |
+| `query.dbName` | The name of the database where the scheduled query will run. |
+| `query.sql` | The SQL query to be executed on the defined schedule. |
 | `query.name` | The name of the scheduled query. |
-| `schedule.schedule` | The cron schedule for the query. For more information about cron schedules, please read the [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. In this example, "30 * * * *" means that the query will run every hour at the 30 minute mark.<br><br>Alternatively, you can use the following shorthand expressions:<ul><li>`@once`: The query only runs once.</li><li>`@hourly`: The query runs every hour at the beginning of the hour. This is equivalent to the cron expression `0 * * * *`.</li><li>`@daily`: The query runs once a day at midnight. This is equivalent to the cron expression `0 0 * * *`.</li><li>`@weekly`: The query runs once a week, on Sunday, at midnight. This is equivalent to the cron expression `0 0 * * 0`.</li><li>`@monthly`: The query runs once a month, on the first day of the month, at midnight. This is equivalent to the cron expression `0 0 1 * *`.</li><li>`@yearly`: The query runs once a year, on January 1st, at midnight. This is equivalent to the cron expression `1 0 0 1 1 *`. |
+| `query.description` | An optional description for the scheduled query. |
+| `schedule.schedule` | The cron schedule for the query. Refer to [Crontab.guru](https://crontab.guru/) for an interactive way to create, validate, and understand cron expressions. In this example, "`30 * * * *`" means that the query will run every hour at the 30 minute mark.<br><br>Alternatively, you can use the following shorthand expressions:<ul><li>`@once`: The query only runs once.</li><li>`@hourly`: The query runs every hour at the beginning of the hour. This is equivalent to the cron expression `0 * * * *`.</li><li>`@daily`: The query runs once a day at midnight. This is equivalent to the cron expression `0 0 * * *`.</li><li>`@weekly`: The query runs once a week, on Sunday, at midnight. This is equivalent to the cron expression `0 0 * * 0`.</li><li>`@monthly`: The query runs once a month, on the first day of the month, at midnight. This is equivalent to the cron expression `0 0 1 * *`.</li><li>`@yearly`: The query runs once a year, on January 1st, at midnight. This is equivalent to the cron expression `0 0 1 1 *`. |
 | `schedule.startDate` | The start date for your scheduled query, written as a UTC timestamp. |
 
 **Response**

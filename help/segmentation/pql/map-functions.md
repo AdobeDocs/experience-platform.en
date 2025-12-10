@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;map functions;map;
 solution: Experience Platform
 title: PQL Map Functions
 description: Profile Query Language (PQL) offers functions to make interaction with maps easier.
@@ -11,7 +10,7 @@ exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
 
 ## Get
 
-The `get` function is used to retrieve the value of a map for a given key.
+The `get` function is used to retrieve the value of a map for a given key as an object.
 
 **Format**
 
@@ -29,7 +28,7 @@ identityMap.get("example@example.com")
 
 ## Keys
 
-The `keys` function is used to retrieve all the keys for a given map.
+The `keys` function is used to retrieve all the keys for a given map as an array or list.
 
 **Format**
 
@@ -47,7 +46,7 @@ identityMap.keys()
 
 ## Values
 
-The `values` function is used to retrieve all the values of a given map.
+The `values` function is used to retrieve all the values of a given map as an array or list.
 
 **Format**
 

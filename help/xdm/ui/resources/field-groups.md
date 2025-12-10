@@ -5,15 +5,20 @@ title: Create and Edit Schema Field groups in the UI
 description: Learn how to create and edit schema field groups in the Experience Platform user interface.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
 ---
-# Create and edit schema field groups in the UI
+# Create and edit schema field groups in the UI {#ui-create-and-edit}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup_filter"
+>title="Standard or custom field group filter"
+>abstract="The list of available field groups is pre-filtered based on how they were created. Select the radio button to choose between the Standard and Custom options. The Standard option shows entities created by Adobe and the Custom option displays entities created within your organization. See the documentation to learn more about creating and editing field groups."
 
 In Experience Data Model (XDM), schema field groups are reusable components that define one or more fields that implement certain functions such as personal details, hotel preferences, or address. Field groups are intended to be included as part of a schema that implements a compatible class. 
 
 A field group defines which class(es) it is compatible with, based on the behavior of the data that the field group represents (record or time series). This means that not all field groups are available for use with all classes.
 
-Adobe Experience Platform provides many standard field groups that cover a wide range of marketing use cases. However, you can also create and edit your own custom field groups to define additional concepts related to your business within your XDM schemas. This guide provides an overview of how to create, edit, and manage custom field groups for your organization in the Platform UI.
+Adobe Experience Platform provides many standard field groups that cover a wide range of marketing use cases. However, you can also create and edit your own custom field groups to define additional concepts related to your business within your XDM schemas. This guide provides an overview of how to create, edit, and manage custom field groups for your organization in the Experience Platform UI.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) for how field groups contribute to XDM schemas.
 
@@ -35,11 +40,17 @@ The [!DNL Schema Editor] reappears, with the new field group listed in the left 
 
 ![](../../images/ui/resources/field-groups/field-group-added.png)
 
+## Filter field groups {#filter}
+
+The list of available field groups is pre-filtered based on how they were created. The default setting displays the field groups defined by Adobe. However, you can also filter the list to show those created by your organization. Select the radio button to choose between the [!UICONTROL Standard] and [!UICONTROL Custom] options. The [!UICONTROL Standard] option shows entities created by Adobe and the [!UICONTROL Custom] option displays entities created within your organization.
+
+![The [!UICONTROL Field groups] tab of the [!UICONTROL Schemas] workspace with [!UICONTROL Standard] and [!UICONTROL Custom] highlighted.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
+
 ## Edit an existing field group {#edit}
 
 >[!NOTE]
 >
->Only custom field groups defined by your organization can be fully edited and customized. For core field groups defined by Adobe, only the display names for their fields can be edited within the context of individual schemas. See the section on [editing display names for schema fields](./schemas.md#display-names) for details.
+>Only custom field groups defined by your organization can be fully edited and customized. For core field groups defined by Adobe, only the display names for their fields can be edited within the context of individual schemas. They are indicated in the Schema Editor by a padlock icon (![A padlock icon.](/help/images/icons/lock-closed.png)). See the section on [editing display names for schema fields](./schemas.md#display-names) for details.
 >
 >Once a custom field group has been saved and used in a schema for data ingestion, only additive changes can be made to the field group thereafter. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
 
@@ -57,7 +68,11 @@ To add fields to a custom field group, start by selecting the **plus (+)** icon 
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-A **[!UICONTROL New field]** appears in in the canvas, and the right rail updates to show controls to configure the field's properties. See the guide on [defining fields in the UI](../fields/overview.md#define) for specific steps on how to configure different field types.
+An **[!UICONTROL Untitled Field]** placeholder appears in in the canvas, and the right rail updates to show controls to configure the field's properties. See the guide on [defining fields in the UI](../fields/overview.md#define) for specific steps on how to configure different field types.
+
+Under **[!UICONTROL Assign to]**, select the **[!UICONTROL Field Group]** option, then use the dropdown to select the desired field group from the list. You can start typing in the name of the field group to narrow down results.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
 
 Under **[!UICONTROL Assign to]**, select the **[!UICONTROL Field Group]** option, then use the dropdown to select the desired field group from the list. You can start typing in the name of the field group to narrow down results.
 
@@ -69,8 +84,8 @@ Once the field is added to the schema, it is assigned to the selected field grou
 
 If the same field group is already employed in other schemas, the newly added fields will automatically appear in those schemas.
 
-## Next steps
+## Next steps {#next-steps}
 
-This guide covered how to create and edit field groups using the Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
+This guide covered how to create and edit field groups using the Experience Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
 
 To learn how to manage field groups using the [!DNL Schema Registry] API, see the [field groups endpoint guide](../../api/field-groups.md).

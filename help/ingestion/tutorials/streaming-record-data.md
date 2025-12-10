@@ -15,13 +15,13 @@ This tutorial will help you begin using streaming ingestion APIs, part of the Ad
 
 This tutorial requires a working knowledge of various Adobe Experience Platform services. Before beginning this tutorial, please review the documentation for the following services:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes experience data.
   - [Schema Registry developer guide](../../xdm/api/getting-started.md): A comprehensive guide that covers each of the available endpoints of the [!DNL Schema Registry] API and how to make calls to them. This includes knowing your `{TENANT_ID}`, which appears in calls throughout this tutorial, as well as knowing how to create schemas, which is used in creating a dataset for ingestion.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../landing/api-guide.md).
 
 ## Compose a schema based off of the [!DNL XDM Individual Profile] class
 
@@ -122,7 +122,7 @@ A successful response returns HTTP status 201 with details of your newly created
 
 | Property | Description |
 | -------- | ----------- |
-| `{TENANT_ID}` | This ID is used to ensure that resources you create are namespaced properly and contained within your IMS Organization. For more information about the Tenant ID, please read the [schema registry guide](../../xdm/api/getting-started.md#know-your-tenant-id). |
+| `{TENANT_ID}` | This ID is used to ensure that resources you create are namespaced properly and contained within your organization. For more information about the Tenant ID, please read the [schema registry guide](../../xdm/api/getting-started.md#know-your-tenant-id). |
 
 Please take note of the `$id` as well as the `version` attributes, as both of these will be used when creating your dataset.
 
@@ -241,7 +241,7 @@ For more information on creating a streaming connection, please read the [create
 
 ## Ingest record data to the streaming connection {#ingest-data}
 
-With the dataset and streaming connection in place, you can ingest XDM-formatted JSON records to ingest record data into [!DNL Platform].
+With the dataset and streaming connection in place, you can ingest XDM-formatted JSON records to ingest record data into [!DNL Experience Platform].
 
 **API format**
 
@@ -258,7 +258,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 Ingesting record data to a streaming connection can be done either with or without the source name.
 
-The example request below ingests a record with a missing source name to Platform. If a record is missing the source name, it will add the source ID from the streaming connection definition.
+The example request below ingests a record with a missing source name to Experience Platform. If a record is missing the source name, it will add the source ID from the streaming connection definition.
 
 >[!NOTE]
 >
@@ -429,6 +429,6 @@ A successful response returns HTTP status 200 with details of the entities reque
 
 ## Next steps
 
-By reading this document, you now understand how to ingest record data into [!DNL Platform] using streaming connections. You can try making more calls with different values and retrieving the updated values. Additionally, you can start monitoring your ingested data through [!DNL Platform] UI. For more information, please read the [monitoring data ingestion](../quality/monitor-data-ingestion.md) guide.
+By reading this document, you now understand how to ingest record data into [!DNL Experience Platform] using streaming connections. You can try making more calls with different values and retrieving the updated values. Additionally, you can start monitoring your ingested data through [!DNL Experience Platform] UI. For more information, please read the [monitoring data ingestion](../quality/monitor-data-ingestion.md) guide.
 
 For more information about streaming ingestion in general, please read the [streaming ingestion overview](../streaming-ingestion/overview.md).

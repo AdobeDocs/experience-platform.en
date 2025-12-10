@@ -76,7 +76,7 @@ CSP disallows inline scripts by default, and therefore must be manually configur
 
 >[!NOTE]
 >
->The CSP specification has details for a third option using hashes, but this approach is not feasible to use with tag-management systems like tags. For more information on the limitations of using hashes with tags in Platform, see the [Subresource Integrity (SRI) guide](./sri.md).
+>The CSP specification has details for a third option using hashes, but this approach is not feasible to use with tag-management systems like tags. For more information on the limitations of using hashes with tags in Experience Platform, see the [Subresource Integrity (SRI) guide](./sri.md).
 
 ### Allow by nonce {#nonce}
 
@@ -152,4 +152,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 By reading this document, you should now understand how to configure your CSP header to accept the tag library file and inline scripts.
 
-As an additional security measure, you may also opt to use Subresource Integrity (SRI) to validate fetched library builds. However, this feature has some major limitations when used with tag-management systems like tags. See the guide on [SRI compatibility in Platform](./sri.md) for more information.
+As an additional security measure, you may also opt to use Subresource Integrity (SRI) to validate fetched library builds. However, this feature has some major limitations when used with tag-management systems like tags. See the guide on [SRI compatibility in Experience Platform](./sri.md) for more information.

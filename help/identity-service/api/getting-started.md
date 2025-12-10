@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;identity service api;identity 
 solution: Experience Platform
 title: Identity Service API Guide
 description: The Identity Service API allows developers to manage the cross-device, cross-channel, and near real-time identification of your customers using identity graphs in Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
+role: Developer
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
 ---
 # [!DNL Identity Service] API guide
@@ -13,9 +14,9 @@ Adobe Experience Platform [!DNL Identity Service] manages the cross-device, cros
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-- [[!DNL Identity Service]](../home.md): Solves the fundamental challenge posed by the fragmentation of customer profile data. It does this by bridging identities across devices and systems where customers interact with you brand.
+- [[!DNL Identity Service]](../home.md): Solves the fundamental challenge posed by the fragmentation of customer profile data. It does this by bridging identities across devices and systems where customers interact with your brand.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources. 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 
 The following sections provide additional information that you will need to know or have on-hand in order to successfully make calls to the [!DNL Identity Service] API.
 
@@ -25,19 +26,19 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Experience Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>For more information on sandboxes in [!DNL Experience Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -45,7 +46,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ### Region-based routing
 
-The [!DNL Identity Service] API employs region-specific endpoints that require the inclusion of a `{REGION}` as part of the request path. During the provisioning of your IMS Organization, a region is determined and stored within your IMS Org profile. Using the correct region with each endpoint ensures that all requests made using the [!DNL Identity Service] API are routed to the appropriate region. 
+The [!DNL Identity Service] API employs region-specific endpoints that require the inclusion of a `{REGION}` as part of the request path. During the provisioning of your organization, a region is determined and stored within your organization profile. Using the correct region with each endpoint ensures that all requests made using the [!DNL Identity Service] API are routed to the appropriate region. 
 
 There are two regions currently supported by [!DNL Identity Service] APIs: VA7 and NLD2. 
 
@@ -60,7 +61,7 @@ The table below shows example paths using regions:
 >
 >Requests made without specifying a region may result in calls routing to the incorrect region or cause calls to fail unexpectedly.
 
-If you are unable to locate the region within your IMS Org profile, please contact your system administrator for support.
+If you are unable to locate the region within your organization profile, please contact your system administrator for support.
 
 ## Using the [!DNL Identity Service] API
 

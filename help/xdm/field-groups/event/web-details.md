@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;
 solution: Experience Platform
 title: Web Details Schema Field Group
-description: This document provides an overview of the Web Details schema field group.
+description: Learn about the Web Details schema field group.
 exl-id: eb42606b-ade4-4d72-b601-c560009c98e8
 ---
 # [!UICONTROL Web Details] schema field group

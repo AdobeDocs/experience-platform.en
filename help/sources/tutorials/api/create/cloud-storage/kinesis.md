@@ -1,12 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Kinesis;kinesis;Amazon Kinesis;amazon kinesis
-solution: Experience Platform
 title: Create an Amazon Kinesis Source Connection Using the Flow Service API
-type: Tutorial
 description: Learn how to connect Adobe Experience Platform to an Amazon Kinesis source using the Flow Service API.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 ---
 # Create an [!DNL Amazon Kinesis] source connection using the Flow Service API
+
+>[!IMPORTANT]
+>
+>The [!DNL Amazon Kinesis] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
 This tutorial walks you through the steps to connect [!DNL Amazon Kinesis] (hereinafter referred to as "[!DNL Kinesis]") to Experience Platform, using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -14,10 +16,10 @@ This tutorial walks you through the steps to connect [!DNL Amazon Kinesis] (here
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect [!DNL Kinesis] to Platform using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully connect [!DNL Kinesis] to Experience Platform using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 
@@ -25,16 +27,16 @@ In order for [!DNL Flow Service] to connect with your [!DNL Amazon Kinesis] acco
 
 | Credential | Description |
 | ---------- | ----------- |
-| `accessKeyId` | The access key ID is one half of the access key pair used to authenticate your [!DNL Kinesis] account to Platform. |
-| `secretKey` | The secret access key is the other half of the access key pair used to authenticate your [!DNL Kinesis] account to Platform. |
-| `region` | The region for your [!DNL Kinesis] account. See the guide on [adding IP addresses to your allow list](../../../../ip-address-allow-list.md) for more information on regions. |
+| `accessKeyId` | The access key ID is one half of the access key pair used to authenticate your [!DNL Kinesis] account to Experience Platform. |
+| `secretKey` | The secret access key is the other half of the access key pair used to authenticate your [!DNL Kinesis] account to Experience Platform. |
+| `region` | The region for your [!DNL Kinesis] account. See the guide on [adding IP addresses to your allowlist](../../../../ip-address-allow-list.md) for more information on regions. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The [!DNL Kinesis] connection specification ID is: `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
 For more information on [!DNL Kinesis] access keys and how to generate them, refer to this [[!DNL AWS] guide on managing access keys for IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
 ## Create a base connection
 
@@ -97,7 +99,7 @@ A successful response returns details of the newly created base connection, incl
 
 ## Create a source connection {#source}
 
-A source connection creates and manages the connection to the external source from where data is ingested. A source connection consists of information like data source, data format, and the source connection ID needed to create a dataflow. A source connection instance is specific to a tenant and IMS Organization.
+A source connection creates and manages the connection to the external source from where data is ingested. A source connection consists of information like data source, data format, and the source connection ID needed to create a dataflow. A source connection instance is specific to a tenant and organization.
 
 To create a source connection, make a POST request to the `/sourceConnections` endpoint of the [!DNL Flow Service] API.
 
@@ -157,6 +159,10 @@ A successful response returns the unique identifier (`id`) of the newly created 
     "etag": "\"66013508-0000-0200-0000-5f6e2ae70000\""
 }
 ```
+
+>[!NOTE]
+>
+>After you create or update a streaming dataflow, a brief 5-minute pause in data ingestion is required to prevent any potential instances of data loss or data drops.
 
 ## Next steps
 

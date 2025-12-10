@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;product profile;manage permissions
 solution: Experience Platform
 title: Manage Permissions For A Product Profile
-description: Access control in Adobe Experience Platform allows you to manage roles and permissions for various Platform capabilities by using the Adobe Admin Console. This document serves as a guide for how to manage permissions for a product profile for Platform.
+description: Access control in Adobe Experience Platform allows you to manage roles and permissions for various Experience Platform capabilities by using the Adobe Admin Console. This document serves as a guide for how to manage permissions for a product profile for Experience Platform.
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
 ---
 # Manage permissions for a product profile
@@ -11,7 +11,7 @@ Immediately after [creating a new product profile](#create-a-new-product-profile
 
 ![permissions](../images/permissions.png)
 
-Permissions are divided into categories and listed on this page. The list displays the category name, the number of permissions it contains (and how many are active), and its description.
+Permissions are divided into categories and listed on this page. The list displays the category name, the number of permissions it contains (and how many are active), and its description. Refer to the table in [Resource permissions](/help/access-control/home.md#permissions) for a breakdown of the permissions available for each role. 
 
 Select any category on the list to open the **[!UICONTROL Edit Permissions]** page.
 

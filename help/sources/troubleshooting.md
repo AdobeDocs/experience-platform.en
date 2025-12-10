@@ -7,7 +7,7 @@ exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 ---
 # Sources troubleshooting guide
 
-This document provides answers to frequently asked questions about sources on Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Platform] services, including those that are encountered across all [!DNL Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about sources on Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Experience Platform] services, including those that are encountered across all [!DNL Experience Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
 ## Frequently asked questions
 
@@ -41,7 +41,7 @@ The following is a list of constraints you must account for files in sources.
 - The following file names are not allowed: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, dot character (.), and two dot characters (..).
 - The maximum number of files per batch is 1500, with a maximum batch size being 100 GB.
 - The maximum number of properties or fields per row is 10,000.
-- The maximum number of batches that can be sent per user, per minute is 138.
+- The maximum number of batches that can be sent per user, per minute is 2000.
 
 ### What data types are supported?
 
@@ -61,7 +61,7 @@ All batch ingestion sources support partial ingestion. However, streaming ingest
 
 ### When should I use partial ingestion?
 
-Partial ingestion should be used if you do **not** have constraints, such as having the entire file being ingested into Platform. Alternatively, partial ingestion should be used if you do not mind ingesting data that may contain errors within it.
+Partial ingestion should be used if you do **not** have constraints, such as having the entire file being ingested into Experience Platform. Alternatively, partial ingestion should be used if you do not mind ingesting data that may contain errors within it.
 
 ### What is the typical partial ingestion error threshold?
 

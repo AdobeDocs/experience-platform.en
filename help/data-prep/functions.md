@@ -19,11 +19,13 @@ If a field name does not follow this convention, the field name must be wrapped 
 >
 >When interacting with hierarchies, if a child attribute has a period (`.`), you must use a backslash (`\`) to escape special characters. For more information, read the guide on [escaping special characters](home.md#escape-special-characters).
 
-Additionally, if a field name is **any** of the following reserved keywords, it must be wrapped with `${}`:
+If a field name is **any** of the following reserved keywords, it must be wrapped with `${}{}`:
 
 ```console
-new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors
+new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors, do, function, empty, size
 ```
+
+Additionally, reserved keywords also include any of the mapper functions listed on this page.
 
 Data within sub-fields can be accessed by using the dot notation. For example, if there was a `name` object, to access the `firstName` field, use `name.firstName`.
 
@@ -46,7 +48,7 @@ The following tables list all supported mapping functions, including sample expr
 | substr | Returns a substring of a given length. | <ul><li>INPUT: **Required** The input string.</li><li>START_INDEX: **Required** The index of the input string where the substring starts.</li><li>LENGTH: **Required** The length of the substring.</li></ul> | substr(INPUT, START_INDEX, LENGTH) | substr("This is a substring test", 7, 8) | " a subst" |
 | lower /<br>lcase | Converts a string to lowercase. | <ul><li>INPUT: **Required** The string that will be converted to lowercase.</li></ul> | lower(INPUT) | lower("HeLLo")<br>lcase("HeLLo") | "hello" |
 | upper /<br>ucase | Converts a string to uppercase. | <ul><li>INPUT: **Required** The string that will be converted to uppercase.</li></ul> | upper(INPUT) | upper("HeLLo")<br>ucase("HeLLo") | "HELLO" |
-| split | Splits an input string on a separator. The following separator **needs** to be escaped with `\`: `\`. If you include multiple delimiters, the string will split on **any** of the delimiters present in the string. | <ul><li>INPUT: **Required** The input string that is going to be split.</li><li>SEPARATOR: **Required** The string that is used to split the input.</li></ul> | split(INPUT, SEPARATOR) | split("Hello world", " ") | `["Hello", "world"]` |
+| split | Splits an input string on a separator. The following separator **needs** to be escaped with `\`: `\`. If you include multiple delimiters, the string will split on **any** of the delimiters present in the string. **Note:** This function only returns non-null indexes from the string, regardless of the presence of the separator. If all indexes, including nulls, are required in the resulting array, use the "explode" function instead. | <ul><li>INPUT: **Required** The input string that is going to be split.</li><li>SEPARATOR: **Required** The string that is used to split the input.</li></ul> | split(INPUT, SEPARATOR) | split("Hello world", " ") | `["Hello", "world"]` |
 | join | Joins a list of objects using the separator. | <ul><li>SEPARATOR: **Required** The string that will be used to join the objects.</li><li>OBJECTS: **Required** An array of strings that will be joined.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | "Hello world" |
 | lpad | Pads the left side of a string with the other given string. | <ul><li>INPUT: **Required** The string that is going to be padded out. This string can be null.</li><li>COUNT: **Required** The size of the string to be padded out.</li><li>PADDING: **Required** The string to pad the input with. If null or empty, it will be treated as a single space.</li></ul> | lpad(INPUT, COUNT, PADDING) | lpad("bat", 8, "yz") | "yzyzybat" |
 | rpad | Pads the right side of a string with the other given string. | <ul><li>INPUT: **Required** The string that is going to be padded out. This string can be null.</li><li>COUNT: **Required** The size of the string to be padded out.</li><li>PADDING: **Required** The string to pad the input with. If null or empty, it will be treated as a single space.</li></ul> | rpad(INPUT, COUNT, PADDING) | rpad("bat", 8, "yz") | "batyzyzy" |
@@ -98,6 +100,8 @@ The following tables list all supported mapping functions, including sample expr
 | get_url_port | Returns the port of the given URL. If the input is invalid, it returns null. | <ul><li>URL: **Required** The URL from which the port needs to be extracted.</li></ul> | get_url_port(URL) | get_url_port​("sftp://example.com//home/​joe/employee.csv") | 22 |
 | get_url_path | Returns the path of the given URL. By default, the full path is returned. | <ul><li>URL: **Required** The URL from which the path needs to be extracted.</li><li>FULL_PATH: *Optional* A boolean value that determines if the full path is returned. If set to false, only the end of the path is returned.</li></ul> | get_url_path​(URL, FULL_PATH) | get_url_path​("sftp://example.com//​home/joe/employee.csv") | "//home/joe/​employee.csv" |
 | get_url_query_str | Returns the query string of a given URL as a map of query string name and query string value. | <ul><li>URL: **Required** The URL that you are trying to get the query string from.</li><li>ANCHOR: **Required** Determines what will be done with the anchor in the query string. Can be one of three values: "retain", "remove", or "append".<br><br>If the value is "retain", the anchor will be attached to the returned value.<br>If the value is "remove", the anchor will be removed from the returned value.<br>If the value is "append", the anchor will be returned as a separate value.</li></ul> | get_url_query_str​(URL, ANCHOR) | get_url_query_str​("foo://example.com:8042​/over/there?name=​ferret#nose", "retain")<br>get_url_query_str​("foo://example.com:8042​/over/there?name=​ferret#nose", "remove")<br>get_url_query_str​("foo://example.com​:8042/over/there​?name=ferret#nose", "append") | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_encoded | This function takes a URL as input and replaces or encodes the special characters with ASCII characters. For more information on special characters, please read the [list of special characters](#special-characters) in the appendix of this document. | <ul><li>URL: **Required** The input URL with special characters that you want to replace or encode with ASCII characters.</li></ul> | get_url_encoded(URL) | get_url_encoded("https</span>://example.com/partneralliance_asia-pacific_2022") | https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022 |
+| get_url_decoded | This function takes a URL as input and decodes the ASCII characters into special characters.  For more information on special characters, please read the [list of special characters](#special-characters) in the appendix of this document. | <ul><li>URL: **Required** The input URL with ASCII characters that you want to decode into special characters.</li></ul> | get_url_decoded(URL) | get_url_decoded("https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022") | https</span>://example.com/partneralliance_asia-pacific_2022 |
 
 {style="table-layout:auto"}
 
@@ -111,16 +115,16 @@ The following tables list all supported mapping functions, including sample expr
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Retrieves the current time. | | now() | now() | `2021-10-26T10:10:24Z` |
 | timestamp | Retrieves the current Unix time. | | timestamp() | timestamp() | 1571850624571 |
-| format | Formats the input date according to a specified format. | <ul><li>DATE: **Required** The input date, as a ZonedDateTime object, that you want to format.</li><li>FORMAT: **Required** The format that you want the date to be changed to.</li></ul> | format(DATE, FORMAT)  | format(2019-10-23T11:24:00+00:00, "yyyy-MM-dd HH:mm:ss") | `2019-10-23 11:24:35` |
-| dformat | Converts a timestamp to a date string according to a specified format. | <ul><li>TIMESTAMP: **Required** The timestamp you want to format. This is written in milliseconds.</li><li>FORMAT: **Required** The format that you want the timestamp to become.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, "yyyy-MM-dd'T'HH:mm:ss.SSSX") | `2019-10-23T11:24:35.000Z` |
+| format | Formats the input date according to a specified format. | <ul><li>DATE: **Required** The input date, as a ZonedDateTime object, that you want to format.</li><li>FORMAT: **Required** The format that you want the date to be changed to.</li></ul> | format(DATE, FORMAT)  | format(2019-10-23T11:24:00+00:00, "`yyyy-MM-dd HH:mm:ss`") | `2019-10-23 11:24:35` |
+| dformat | Converts a timestamp to a date string according to a specified format. | <ul><li>TIMESTAMP: **Required** The timestamp you want to format. This is written in milliseconds.</li><li>FORMAT: **Required** The format that you want the timestamp to become.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, "`yyyy-MM-dd'T'HH:mm:ss.SSSX`") | `2019-10-23T11:24:35.000Z` |
 | date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li><li>FORMAT: **Required** The string representing the format of the source date.**Note:** This does **not** represent the format you want to convert the date string into. </li><li>DEFAULT_DATE: **Required** The default date returned, if the date provided is null.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date("2019-10-23 11:24", "yyyy-MM-dd HH:mm", now()) | `2019-10-23T11:24:00Z` |
 | date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li><li>FORMAT: **Required** The string representing the format of the source date.**Note:** This does **not** represent the format you want to convert the date string into. </li></ul> | date(DATE, FORMAT) | date("2019-10-23 11:24", "yyyy-MM-dd HH:mm") | `2019-10-23T11:24:00Z` |
 | date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li></ul> | date(DATE) | date("2019-10-23 11:24") | "2019-10-23T11:24:00Z" |
-| date_part | Retrieves the parts of the date. The following component values are supported: <br><br>"year"<br>"yyyy"<br>"yy"<br><br>"quarter"<br>"qq"<br>"q"<br><br>"month"<br>"mm"<br>"m"<br><br>"dayofyear"<br>"dy"<br>"y"<br><br>"day"<br>"dd"<br>"d"<br><br>"week"<br>"ww"<br>"w"<br><br>"weekday"<br>"dw"<br>"w"<br><br>"hour"<br>"hh"<br>"hh24"<br>"hh12"<br><br>"minute"<br>"mi"<br>"n"<br><br>"second"<br>"ss"<br>"s"<br><br>"millisecond"<br>"ms" | <ul><li>COMPONENT: **Required** A string representing the part of the date. </li><li>DATE: **Required** The date, in a standard format.</li></ul> | date_part​(COMPONENT, DATE) | date_part("MM", date("2019-10-17 11:55:12")) | 10 |
+| date_part | Retrieves the parts of the date. The following component values are supported: <br><br>"year"<br>"yyyy"<br>"yy"<br><br>"quarter"<br>"qq"<br>"q"<br><br>"month"<br>"mm"<br>"m"<br><br>"dayofyear"<br>"dy"<br>"y"<br><br>"day"<br>"dd"<br>"d"<br><br>"week"<br>"ww"<br>"w"<br><br>"weekday"<br>"dw"<br>"w"<br><br>"hour"<br>"hh"<br>"hh24"<br>"hh12"<br><br>"minute"<br>"mi"<br>"n"<br><br>"second"<br>"ss"<br>"s"<br><br>"millisecond"<br>"SSS" | <ul><li>COMPONENT: **Required** A string representing the part of the date. </li><li>DATE: **Required** The date, in a standard format.</li></ul> | date_part​(COMPONENT, DATE) | date_part("MM", date("2019-10-17 11:55:12")) | 10 |
 | set_date_part | Replaces a component in a given date. The following components are accepted: <br><br>"year"<br>"yyyy"<br>"yy"<br><br>"month"<br>"mm"<br>"m"<br><br>"day"<br>"dd"<br>"d"<br><br>"hour"<br>"hh"<br><br>"minute"<br>"mi"<br>"n"<br><br>"second"<br>"ss"<br>"s" | <ul><li>COMPONENT: **Required** A string representing the part of the date. </li><li>VALUE: **Required** The value to set for the component for a given date.</li><li>DATE: **Required** The date, in a standard format.</li></ul> | set_date_part​(COMPONENT, VALUE, DATE) | set_date_part("m", 4, date("2016-11-09T11:44:44.797") | "2016-04-09T11:44:44Z" |
 | make_date_time | Creates a date from parts. This function can also be induced using make_timestamp. | <ul><li>YEAR: **Required** The year, written in four digits.</li><li>MONTH: **Required** The month. The allowed values are 1 to 12.</li><li>DAY: **Required** The day. The allowed values are 1 to 31.</li><li>HOUR: **Required** The hour. The allowed values are 0 to 23.</li><li>MINUTE: **Required** The minute. The allowed values are 0 to 59.</li><li>NANOSECOND: **Required** The nanosecond values. The allowed values are 0 to 999999999.</li><li>TIMEZONE: **Required** The timezone for the date time.</li></ul> | make_date_time​(YEAR, MONTH, DAY, HOUR, MINUTE, SECOND, NANOSECOND, TIMEZONE) |make_date_time​(2019, 10, 17, 11, 55, 12, 999, "America/Los_Angeles") | `2019-10-17T11:55:12Z` |
 | zone_date_to_utc | Converts a date in any timezone to a date in UTC. | <ul><li>DATE: **Required** The date that you are trying to convert.</li></ul> | zone_date_to_utc​(DATE) | `zone_date_to_utc​(2019-10-17T11:55:​12 PST` | `2019-10-17T19:55:12Z` |
-| zone_date_to_zone | Converts a date from one timezone to another timezone. | <ul><li>DATE: **Required** The date that you are trying to convert.</li><li>ZONE: **Required** The timezone that you are trying to convert the date to.</li></ul> | zone_date_to_zone​(DATE, ZONE) | `zone_date_to_utc​(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
+| zone_date_to_zone | Converts a date from one timezone to another timezone. | <ul><li>DATE: **Required** The date that you are trying to convert.</li><li>ZONE: **Required** The timezone that you are trying to convert the date to.</li></ul> | zone_date_to_zone​(DATE, ZONE) | `zone_date_to_zone(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
 {style="table-layout:auto"}
 
@@ -132,14 +136,20 @@ The following tables list all supported mapping functions, including sample expr
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| is_empty | Checks whether or not an object is empty. | <ul><li>INPUT: **Required** The object that you're trying to check is empty.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
-| arrays_to_object | Creates a list of objects. | <ul><li>INPUT: **Required** A grouping of key and array pairs.</li></ul> | arrays_to_object(INPUT) | need sample | need sample |
+| is_empty | Checks whether or not an object is empty. | <ul><li>INPUT: **Required** The object that you're trying to check is empty.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
+| arrays_to_object | Creates a list of objects. | <ul><li>INPUT: **Required** A grouping of key and array pairs.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
 | to_object | Creates an object based on the flat key/value pairs given. | <ul><li>INPUT: **Required** A flat list of key/value pairs.</li></ul> | to_object(INPUT) | to_object​("firstName", "John", "lastName", "Doe") | `{"firstName": "John", "lastName": "Doe"}` |
-| str_to_object | Creates an object from the input string. | <ul><li>STRING: **Required** The string that is being parsed to create an object.</li><li>VALUE_DELIMITER: *Optional* The delimiter that separates a field from the value. The default delimiter is `:`.</li><li>FIELD_DELIMITER: *Optional* The delimiter that separates field value pairs. The default delimiter is `,`.</li></ul> | str_to_object​(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object("firstName=John,lastName=Doe,phone=123 456 7890", "=", ",") | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
+| str_to_object | Creates an object from the input string. | <ul><li>STRING: **Required** The string that is being parsed to create an object.</li><li>VALUE_DELIMITER: *Optional* The delimiter that separates a field from the value. The default delimiter is `:`.</li><li>FIELD_DELIMITER: *Optional* The delimiter that separates field value pairs. The default delimiter is `,`.</li></ul> | str_to_object​(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Note**: You can use the `get()` function along with `str_to_object()` to retrieve values for the keys in the string. | <ul><li>Example #1: str_to_object("firstName - John ; lastName - ; - 123 345 7890", "-", ";")</li><li>Example #2: str_to_object("firstName - John ; lastName - ; phone - 123 456 7890", "-", ";").get("firstName")</li></ul> | <ul><li>Example #1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Example #2: "John"</li></ul> |
 | contains_key | Checks if the object exists within the source data. **Note:** This function replaces the deprecated `is_set()` function. | <ul><li>INPUT: **Required** The path to be checked if it exists within the source data.</li></ul> | contains_key(INPUT) | contains_key("evars.evar.field1") | true |
 | nullify | Sets the value of the attribute to `null`. This should be used when you do not want to copy the field to the target schema. | | nullify() | nullify() | `null`  |
 | get_keys | Parses the key/value pairs and returns all the keys. | <ul><li>OBJECT: **Required** The object where the keys will be extracted from.</li></ul> | get_keys(OBJECT) | get_keys({"book1": "Pride and Prejudice", "book2": "1984"}) | `["book1", "book2"]` |
 | get_values | Parses the key/value pairs and returns the value of the string, based on the given key. | <ul><li>STRING: **Required** The string that you want to parse.</li><li>KEY: **Required** The key for which the value has to be extracted.</li><li>VALUE_DELIMITER: **Required** The delimiter that separates the field and the value. If either a `null` or an empty string are provided, this value is `:`.</li><li>FIELD_DELIMITER: *Optional* The delimiter that separates field and value pairs. If either a `null` or an empty string are provided, this value is `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\"firstName - John , lastName - Cena , phone - 555 420 8692\", \"firstName\", \"-\", \",\") | John |
+| map_get_values | Takes a map and a key input. If the input is a single key, then the function returns the value associated with that key. If the input is a string array, then the function returns all values corresponding to the keys provided. If the incoming map has duplicate keys, the return value must de-duplicate the keys and return unique values. | <ul><li>MAP: **Required** The input map data.</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | get_values(MAP, KEY) | Please see the [appendix](#map_get_values) for a code sample. | |
+| map_has_keys | If one or more input keys are provided, then the function returns true. If a string array is provided as input, then the function returns true on the first key that is found. | <ul><li>MAP:  **Required** The input map data</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | map_has_keys(MAP, KEY) | Please see the [appendix](#map_has_keys) for a code sample. | |
+| add_to_map | Accepts at least two inputs. Any number of maps can be provided as inputs. Data Prep returns a single map that has all key-value pairs from all the inputs. If one or more keys are repeated (in the same map or across maps), Data Prep de-duplicates the keys so that the first key-value pair persists in the order that they were passed in the input. | MAP: **Required** The input map data. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Please see the [appendix](#add_to_map) for a code sample. | |
+| object_to_map (Syntax 1) | Use this function to create Map data types. |<ul><li>KEY: **Required** Keys must be a string. If any other primitive values such as integers or dates are provided, then they are auto-converted to strings and are treated as strings.</li><li>ANY_TYPE: **Required** Refers to any supported XDM data type except Maps.</li></ul> | object_to_map(KEY, ANY_TYPE, KEY, ANY_TYPE, ... )| Please see the [appendix](#object_to_map) for a code sample. | | 
+| object_to_map (Syntax 2) | Use this function to create Map data types.| <ul><li>OBJECT: **Required** You can provide an incoming object or object array and point to an attribute inside the object as key.</li></ul> | object_to_map(OBJECT) | Please see the [appendix](#object_to_map) for a code sample. ||
+| object_to_map (Syntax 3) | Use this function to create Map data types.| <ul><li>OBJECT: **Required** You can provide an incoming object or object array and point to an attribute inside the object as key.</li></ul> | object_to_map(OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | Please see the [appendix](#object_to_map) for a code sample. ||
 
 {style="table-layout:auto"}
 
@@ -162,6 +172,24 @@ For information on the object copy feature, see the section [below](#object-copy
 | size_of | Returns the size of the input. | <ul><li>INPUT: **Required** The object that you're trying to find the size of.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | This function is used to append all elements in the entire input array to the end of the array in Profile. This function is **only** applicable during updates. If used in the context of inserts, this function returns the input as is. | <ul><li>ARRAY: **Required** The array to append the array in the Profile.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
 | upsert_array_replace | This function is used to replace elements in an array. This function is **only** applicable during updates. If used in the context of inserts, this function returns the input as is. | <ul><li>ARRAY: **Required** The array to replace the array in the Profile.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
+| [!BADGE Destinations only]{type=Informative} array_to_string | Joins the string representations of the elements in an array using the specified separator. If the array is multidimensional, it is flattened before being joined. **Note**: This function is used in destinations. Read the [documentation](../destinations/ui/export-arrays-maps-objects.md) for more information.  | <ul><li>SEPARATOR: **Required** The separator used to join the elements in the array.</li><li>ARRAY: **Required** The array that be joined (after flattening).</li></ul> | array_to_string(SEPARATOR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | "Hello;world" |
+| [!BADGE Destinations only]{type=Informative} filterArray* | Filters the given array based on a predicate. **Note**: This function is used in destinations. Read the [documentation](../destinations/ui/export-arrays-maps-objects.md) for more information. | <ul><li>ARRAY: **Required** The array to be filtered</li><li>PREDICATE: **Required** The predicate to be applied on each element of the given array. | filterArray(ARRAY, PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5, 7] |
+| [!BADGE Destinations only]{type=Informative} transformArray* | Transforms the given array based on a predicate. **Note**: This function is used in destinations. Read the [documentation](../destinations/ui/export-arrays-maps-objects.md) for more information. | <ul><li>ARRAY: **Required** The array to be transformed.</li><li>PREDICATE: **Required** The predicate to be applied on each element of the given array. | transformArray(ARRAY, PREDICATE) | `transformArray([5, 6, 7], x -> x + 1)` |  [6, 7, 8] |
+| [!BADGE Destinations only]{type=Informative} flattenArray* | Flattens the given (multidimensional) array to a unidimensional array. **Note**: This function is used in destinations. Read the [documentation](../destinations/ui/export-arrays-maps-objects.md) for more information. | <ul><li>ARRAY: **Required** The array to be flattened.</li></ul> | flattenArray(ARRAY) | flattenArray([[['a', 'b'], ['c', 'd']], [['e'], ['f']]]) | ['a', 'b', 'c', 'd', 'e', 'f'] |
+
+{style="table-layout:auto"}
+
+### Hierarchies - Map {#map}
+
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
+
+| Function | Description | Parameters | Syntax | Expression | Sample output |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| array_to_map | This function takes an object array and a key as input and returns a map of key's field with the value as key and the array element as value. | <ul><li>INPUT: **Required** The object array you want to find the first non-null object of.</li><li>KEY:  **Required** The key must be a field name in the object array and the object as value.</li></ul> |array_to_map(OBJECT[] INPUTS, KEY) | Read the [appendix](#object_to_map) for a code sample. ||
+| object_to_map | This function takes an object as an argument and returns a map of key-value pairs. | <ul><li>INPUT: **Required** The object array you want to find the first non-null object of.</li></ul>  | object_to_map(OBJECT_INPUT) | "object_to_map(address) where input is " + "address: {line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}" | Returns a map with given field name and value pairs or null if input is null. For example: `"{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"` |
+| to_map | This function takes a list of ke-value pairs and returns a map of key-value pairs. | | to_map(OBJECT_INPUT) | "to_map(\"firstName\", \"John\", \"lastName\", \"Doe\")" | Returns a map with given field name and value pairs or null if input is null. For example: `"{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"` |
 
 {style="table-layout:auto"}
 
@@ -214,7 +242,7 @@ For information on the object copy feature, see the section [below](#object-copy
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| json_to_object | Deserialize JSON content from the given string. | <ul><li>STRING: **Required** The JSON string to be deserialized.</li></ul> | json_to_object​(STRING) | json_to_object​({"info":{"firstName":"John","lastName": "Doe"}}) | An object representing the JSON. |
+| json_to_object | Deserialize JSON content from the given string. | <ul><li>STRING: **Required** The JSON string to be deserialized.</li></ul> | json_to_object​(STRING) | `json_to_object​({"info":{"firstName":"John","lastName": "Doe"}})` | An object representing the JSON. |
 
 {style="table-layout:auto"}
 
@@ -227,6 +255,7 @@ For information on the object copy feature, see the section [below](#object-copy
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Generates a pseudo-random ID. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
+| `fpid_to_ecid`| This function takes an FPID string and converts it into an ECID to be used in Adobe Experience Platform and Adobe Experience Cloud applications. | <ul><li>STRING: **Required** The FPID string to be converted into ECID.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
 
 {style="table-layout:auto"}
 
@@ -236,6 +265,8 @@ Any of the user agent functions contained in the table below can return either o
 
 * Phone - A mobile device with a small screen (commonly < 7")
 * Mobile - A mobile device that is yet to be identified. This mobile device can be an eReader, a tablet, a phone, a watch, etc.
+
+For more information on device field values, please read the [list of device field values](#device-field-values) in the appendix of this document.
 
 >[!NOTE]
 >
@@ -253,6 +284,28 @@ Any of the user agent functions contained in the table below can return either o
 | ua_device_class | Extracts the device class from the user agent string. | <ul><li>USER_AGENT: **Required** The user agent string.</li></ul> | ua_device_class​(USER_AGENT) | ua_device_class​("Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3") | Phone |
 
 {style="table-layout:auto"}
+
+### Analytics functions {#analytics}
+
+>[!NOTE]
+>
+>You may only use the following analytics functions for WebSDK and Adobe Analytics flows.
+
+| Function | Description | Parameters | Syntax | Expression | Sample output |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| aa_get_event_id | Extracts the event ID from an Analytics event string. | <ul><li>EVENT_STRING: **Required** The comma-separated Analytics event string.</li><li>EVENT_NAME: **Required** The event name to extract and ID from.</li></ul> | aa_get_event_id(EVENT_STRING, EVENT_NAME) | aa_get_event_id("event101=5:123456,scOpen", "event101") | 123456 |
+| aa_get_event_value | Extracts the event value from an Analytics event string. If the event value is not specified 1 is returned. | <ul><li>EVENT_STRING: **Required** The comma-separated Analytics event string.</li><li>EVENT_NAME: **Required** The event name to extract a value from.</li></ul> | aa_get_event_value(EVENT_STRING, EVENT_NAME) | aa_get_event_value("event101=5:123456,scOpen", "event101") | 5 |
+| aa_get_product_categories | Extracts the product category from an Analytics products string. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li></ul> | aa_get_product_categories(PRODUCTS_STRING) | aa_get_product_categories(";Example product 1;1;3.50,Example category 2;Example product 2;1;5.99") | [null,"Example category 2"] |
+| aa_get_product_names | Extracts the product name from an Analytics products string. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li></ul> | aa_get_product_names(PRODUCTS_STRING) | aa_get_product_names(";Example product 1;1;3.50,Example category 2;Example product 2;1;5.99") | ["Example product 1","Example product 2"] |
+| aa_get_product_quantities | Extracts the quantities from an Analytics products string. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li></ul> | aa_get_product_quantities(PRODUCTS_STRING) | aa_get_product_quantities(";Example product 1;1;3.50,Example category 2;Example product 2") | ["1", null] |
+| aa_get_product_prices | Extracts the price from an Analytics products string. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li></ul> | aa_get_product_prices(PRODUCTS_STRING) | aa_get_product_prices(";Example product 1;1;3.50,Example category 2;Example product 2") | ["3.50", null] |
+| aa_get_product_event_values | Extracts values for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_event_values(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_values(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event1") | ["2.3", "3"] |
+| aa_get_product_evars | Extracts the evar values for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVAR_NAME: **Required** The eVar name to extract.</li></ul> | aa_get_product_evars(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_evars(";Example product;1;6.69;;eVar1=Merchandising value", "eVar1") | ["Merchandising value"] |
+
+{style="table-layout:auto"}
+
+<!-- | aa_get_product_events | Extracts a named event from the products string as an array of objects. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_events(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_events(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | [`{"id": "1","value", "5"}`, `{"id": "2","value", "1"}`] |
+| aa_get_product_event_ids | Extracts the IDs for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_event_ids(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_ids(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | ["1", "2"] | -->
 
 ### Object copy {#object-copy}
 
@@ -296,3 +349,297 @@ To ensure that the automatic mapping works, the following prerequisites must be 
 * New attributes should have matching names in the source schema and the XDM schema.
 
 If any of the prerequisites are not met, then you must manually map the source schema to the XDM schema using data prep.
+
+## Appendix
+
+The following provides additional information on using Data Prep mapping functions
+
+### Special characters {#special-characters}
+
+The table below outlines a list of reserved characters and their corresponding encoded characters.
+
+| Reserved character | Encoded character |
+| --- | --- |
+| space | %20 |
+| ! | %21 |
+| " | %22 |
+| # | %23 |
+| $ | %24 |
+| % | %25 |
+| & | %26 |
+| ' | %27 |
+| ( | %28 |
+| ) | %29 |
+| * | %2A |
+| + | %2B |
+| , | %2C |
+| / | %2F |
+| : | %3A |
+| ; | %3B |
+| < | %3C |
+| = | %3D |
+| > | %3E |
+| ? | %3F |
+| @ | %40 |
+| &#91; | %5B |
+| &#124; | %5C |
+| &#93; | %5D |
+| ^ | %5E |
+| &#96; | %60 |
+| ~ | %7E |
+
+{style="table-layout:auto"}
+
+### Device field values {#device-field-values}
+
+The table below outlines a list of device field values and their corresponding descriptions.
+
+| Device | Description |
+| --- | --- |
+| Desktop | A Desktop or a Laptop type of device. |
+| Anonymized | An anonymous device. In some cases, these are `useragents` that have been altered by an anonymization software. |
+| Unknown | An unknown device. These are usually `useragents` that contain no information about the device. |
+| Mobile | A mobile device that is yet to be identified. This mobile device can be an eReader, a tablet, a phone, a watch, etc. |
+| Tablet | A mobile device with a large screen (commonly > 7"). |
+| Phone | A mobile device with a small screen (commonly < 7"). |
+| Watch | A mobile device with a tiny screen (commonly < 2"). These devices normally operate as an additional screen for a phone/tablet type of device. |
+| Augmented Reality | A mobile device with AR capabilities. |
+| Virtual Reality | A mobile device with VR capabilities. |
+| eReader | A device similar to a tablet, but usually with an [!DNL eInk] screen. |
+| Set-top box | A connected device that allows interaction through a TV-sized screen. |
+| TV | A device similar to the Set-top box, but is built into the TV. |
+| Home Appliance | A (usually large) home appliance, like a refrigerator. |
+| Game Console | A fixed gaming system like a [!DNL Playstation] or an [!DNL XBox]. |
+| Handheld Game Console | A mobile gaming system like a [!DNL Nintendo Switch]. |
+| Voice | A voice-driven device like an [!DNL Amazon Alexa] or a [!DNL Google Home]. |
+| Car | A vehicle-based browser. |
+| Robot | Robots that visit a website. |
+| Robot Mobile | Robots that visit a website but indicates that they want to be seen as a Mobile visitor. |
+| Robot Imitator | Robots that visit a website, pretending that are robots like [!DNL Google], but they are not. **Note**: In most cases, Robot Imitators are indeed robots. |
+| Cloud | A cloud-based application. These are neither robots nor hackers, but are applications that need to connect. This includes [!DNL Mastodon] servers. |
+| Hacker | This device value is used in case scripting is detected in the `useragent` string. |
+
+{style="table-layout:auto"}
+
+### Code samples {#code-samples}
+
+#### map_get_values {#map-get-values}
+
++++Select to view example
+
+```json
+ example = "map_get_values(book_details,\"author\") where input is : {\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "    }\n" +
+        "}",
+      result = "{\"author\": \"George R. R. Martin\"}"
+```
+
++++
+
+#### map_has_keys {#map_has_keys}
+
++++Select to view example
+
+```json
+ example = "map_has_keys(book_details,\"author\")where input is : {\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "    }\n" +
+        "}",
+      result = "true"
+```
+
++++
+
+#### add_to_map {#add_to_map}
+
++++Select to view example
+
+```json
+example = "add_to_map(book_details, book_details2) where input is {\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "    }\n" +
+        "}" +
+        "{\n" +
+        "    \"book_details2\":\n" +
+        "    {\n" +
+        "        \"author\": \"Neil Gaiman\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-0-380-97365-0\"\n" +
+        "        \"publisher\": \"William Morrow\"\n" +
+        "    }\n" +
+        "}",
+      result = "{\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "        \"publisher\": \"William Morrow\"\n" +
+        "    }\n" +
+        "}",
+      returns = "A new map with all elements from map and addends"
+```
+
++++
+
+#### object_to_map {#object_to_map}
+
+**Syntax 1**
+
++++Select to view example
+
+```json
+example = "object_to_map(\"firstName\", \"John\", \"lastName\", \"Doe\")",
+result = "{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"
+```
+
++++
+
+**Syntax 2**
+
++++Select to view example
+
+```json
+example = "object_to_map(address) where input is " +
+  "address: {line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}",
+result = "{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"
+
+```
+
++++
+
+**Syntax 3**
+
++++Select to view example
+
+```json
+example = "object_to_map(addresses,type)" +
+        "\n" +
+        "[\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City\": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"home\"\n" +
+        "    },\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"work\"\n" +
+        "    },\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"office\"\n" +
+        "    }\n" +
+        "]" ,
+result = "{\n" +
+        "    \"home\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City\": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"home\"\n" +
+        "    },\n" +
+        "    \"work\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"work\"\n" +
+        "    },\n" +
+        "    \"office\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"office\"\n" +
+        "    }\n" +
+        "}" 
+
+```
+
++++
+
+#### array_to_map {#array_to_map}
+
++++Select to view example
+
+```json
+example = "array_to_map(addresses, \"type\") where addresses is\n" +
+  "\n" +
+  "[\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City\": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"home\"\n" +
+  "    },\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"work\"\n" +
+  "    },\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"office\"\n" +
+  "    }\n" +
+  "]" ,
+result = "{\n" +
+  "    \"home\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City\": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"home\"\n" +
+  "    },\n" +
+  "    \"work\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"work\"\n" +
+  "    },\n" +
+  "    \"office\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"office\"\n" +
+  "    }\n" +
+  "}",
+returns = "Returns a map with given field name and value pairs or null if input is null"
+```
+
++++
+

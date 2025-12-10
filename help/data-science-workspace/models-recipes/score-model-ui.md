@@ -8,13 +8,19 @@ exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
 ---
 # Score a model in the Data Science Workspace UI
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 Scoring in Adobe Experience Platform [!DNL Data Science Workspace] can be achieved by feeding input data into an existing trained Model. Scoring results are then stored and viewable in a specified output dataset as a new batch. 
 
 This tutorial demonstrates the steps required to score a Model in the [!DNL Data Science Workspace] user interface.
 
 ## Getting started
 
-In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 
 This tutorial requires a trained Model. If you do not have a trained Model, follow the [train and evaluate a Model in the UI](./train-evaluate-model-ui.md) tutorial before continuing.
 
@@ -48,6 +54,7 @@ Review and confirm the scoring configurations and select **[!UICONTROL Finish]**
 ![scoring runs tab](../images/models-recipes/score/scoring_runs_tab.png)
 
 A scoring run can be displayed with one of the following statuses: 
+
 - Pending
 - Complete
 - Failed

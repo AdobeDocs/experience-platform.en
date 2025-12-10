@@ -17,7 +17,7 @@ Simply put, [!DNL Catalog] acts as a metadata store or "catalog" where you can f
 * How much data was successfully processed?
 * What errors occurred during processing?
 
-[!DNL Catalog] provides a RESTful API that allows you to programmatically manage [!DNL Platform] metadata using basic CRUD operations. See the [Catalog developer guide](api/getting-started.md) for more information.
+[!DNL Catalog] provides a RESTful API that allows you to programmatically manage [!DNL Experience Platform] metadata using basic CRUD operations. See the [Catalog developer guide](api/getting-started.md) for more information.
 
 ## [!DNL Catalog] and [!DNL Experience Platform] services
 
@@ -25,9 +25,9 @@ The resources that [!DNL Catalog Service] tracks are used by multiple [!DNL Expe
 
 ### [!DNL Experience Data Model] (XDM) System
 
-[!DNL Experience Data Model] (XDM) System is the standardized framework by which [!DNL Platform] organizes customer experience data. [!DNL Experience Platform] leverages XDM schemas to describe the structure of data in a consistent and reusable way.
+[!DNL Experience Data Model] (XDM) System is the standardized framework by which [!DNL Experience Platform] organizes customer experience data. [!DNL Experience Platform] leverages XDM schemas to describe the structure of data in a consistent and reusable way.
 
-When data is ingested into [!DNL Platform], the structure of that data is mapped to an XDM schema and stored within the [!DNL Data Lake] as part of a dataset. The metadata for each dataset is tracked by [!DNL Catalog Service], which includes a reference to the XDM schema that the dataset conforms to. 
+When data is ingested into [!DNL Experience Platform], the structure of that data is mapped to an XDM schema and stored within the [!DNL Data Lake] as part of a dataset. The metadata for each dataset is tracked by [!DNL Catalog Service], which includes a reference to the XDM schema that the dataset conforms to. 
 
 For more general information about XDM System, please see the [XDM System overview](../xdm/home.md).
 
@@ -41,18 +41,15 @@ See the [data ingestion overview](../ingestion/home.md) for more information.
 
 ## [!DNL Catalog] objects
 
-As outlined in the previous section, [!DNL Catalog] tracks metadata for several kinds of resources and operations that are used by other [!DNL Platform] services. [!DNL Catalog] maintains its own store of "objects" which encapsulate this metadata. [!DNL Catalog] objects are queryable representations of [!DNL Platform] data which allow you to search, monitor, and label your data without needing to access the data itself.
+As outlined in the previous section, [!DNL Catalog] tracks metadata for several kinds of resources and operations that are used by other [!DNL Experience Platform] services. [!DNL Catalog] maintains its own store of "objects" which encapsulate this metadata. [!DNL Catalog] objects are queryable representations of [!DNL Experience Platform] data which allow you to search, monitor, and label your data without needing to access the data itself.
 
 The following table outlines the different object types supported by [!DNL Catalog]:
 
 |Object|API endpoint|Definition|
 |---|---|---|
-|Account|`/accounts`|When creating source connections, authentication credentials must be provided. An account represents a collection of authentication credentials that were used to create a connection of a specific type. Each connection has a set of unique parameters that are persisted by [!DNL Catalog] and secured in an [!DNL Azure Key Vault].|
 |Batch|`/batches`|Batches are units of data that consist of one or more files to be ingested as a single unit. A batch object in [!DNL Catalog] outlines the batch's ingestion metrics (such as the number of records processed or size on disk) and may also include links to datasets, views, and other resources that were affected by the batch operation.|
-|Connection|`/connections`|A connection is a single instance of a source connector, unique to your organization and configured using the appropriate authentication credentials for the connector type.|
-|Connector|`/connectors`|Connectors define how source connections are to gather data from other Adobe applications (such as Adobe Analytics and Adobe Audience Manager), third-party cloud storage sources (such as [!DNL Azure Blob], [!DNL Amazon S3], FTP servers, and SFTP servers), and third-party CRM systems (such as [!DNL Microsoft Dynamics] and [!DNL Salesforce]).|
 |Dataset|`/dataSets`|A dataset is a storage and management construct used for the collection of data (typically a table) that contains a schema (columns) and fields (rows). See the [datasets overview](./datasets/overview.md) for more information.|
-|Dataset File|`/datasetFiles`|Dataset files represent blocks of data that has been saved on [!DNL Platform]. As records of literal files, these are where you can find the file's size, the number of records it contains, and a reference to the batch that ingested the file.|
+|Dataset File|`/datasetFiles`|Dataset files represent blocks of data that has been saved on [!DNL Experience Platform]. As records of literal files, these are where you can find the file's size, the number of records it contains, and a reference to the batch that ingested the file.|
 
 ## Next steps
 

@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;api guide;querie
 solution: Experience Platform
 title: Queries API Endpoint
 description: The following sections walk through calls you can make using the /queries endpoint in the Query Service API.
+role: Developer
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
 ---
 # Queries endpoint
@@ -13,7 +14,7 @@ The following sections walk through calls you can make using the `/queries` endp
 
 ### Retrieve a list of queries
 
-You can retrieve a list of all queries for your IMS Organization by making a GET request to the `/queries` endpoint. 
+You can retrieve a list of all queries for your organization by making a GET request to the `/queries` endpoint. 
 
 **API format**
 
@@ -32,7 +33,7 @@ The following is a list of available query parameters for listing queries. All o
 | --------- | ----------- |
 | `orderby` | Specifies the field by which to order results. The supported fields are `created` and `updated`. For example, `orderby=created` will sort results by created in ascending order. Adding a `-` before created (`orderby=-created`) will sort items by created in descending order. |
 | `limit` | Specifies the page size limit to control the number of results that are included in a page. (*Default value: 20*) |
-| `start` | Offsets the response list, using zero-based numbering. For example, `start=2` will return a list starting from the third listed query. (*Default value: 0*) |
+| `start` | Specify an ISO format timestamp to order the results. If no start date is specified, the API call will return the oldest created query first, then continue to list more recent results.<br> ISO timestamps allow for different levels of granularity in the date and time. The basic ISO timestamps take the format of: `2020-09-07` to express the date September 7, 2020. A more complex example would be written as `2022-11-05T08:15:30-05:00` and corresponds to November 5, 2022, 8:15:30 am, US Eastern Standard Time. A timezone can be provided with a UTC offset and is denoted by the suffix "Z" (`2020-01-01T01:01:01Z`). If no timezone is provided, it defaults to zero. |
 | `property` | Filter results based on fields. The filters **must** be HTML escaped. Commas are used to combine multiple sets of filters. The supported fields are `created`, `updated`, `state`, and `id`. The list of supported operators are `>` (greater than), `<` (less than), `>=` (greater than or equal to), `<=` (less than or equal to), `==` (equal to), `!=` (not equal to), and `~` (contains). For example, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` will return all queries with the specified ID. |
 | `excludeSoftDeleted` | Indicates whether a query which has been soft deleted should be included. For example, `excludeSoftDeleted=false` will **include** soft deleted queries. (*Boolean, default value: true*) |
 | `excludeHidden` | Indicates whether non-user driven queries should be displayed. Having this value set to false will **include** non-user driven queries, such as CURSOR definitions, FETCH, or metadata queries. (*Boolean, default value: true*) |
@@ -40,7 +41,7 @@ The following is a list of available query parameters for listing queries. All o
 
 **Request**
 
-The following request retrieves the latest query created for your IMS organization.
+The following request retrieves the latest query created for your organization.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
@@ -52,7 +53,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 **Response**
 
-A successful response returns HTTP status 200 with a list of queries for the specified IMS Organization as JSON. The following response returns the latest query created for your IMS organization.
+A successful response returns HTTP status 200 with a list of queries for the specified organization as JSON. The following response returns the latest query created for your organization.
 
 ```json
 {
@@ -322,7 +323,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Property | Description |
 | -------- | ----------- |
-| `op` | The type of operation to perform on the resource. Accepted values are `cancel` and `soft_delete`. To cancel the query, you must set the op parameter with the value `cancel `. Note that the soft delete operation stops the query from being returned on GET requests but does not delete it from the system. |
+| `op` | The type of operation to perform on the resource. Accepted values are `cancel` and `soft_delete`. To cancel the query, you must set the op parameter with the value `cancel`. Note that the soft delete operation stops the query from being returned on GET requests but does not delete it from the system. |
 
 **Response**
 

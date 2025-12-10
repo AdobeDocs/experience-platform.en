@@ -105,7 +105,7 @@ Select an option from the General section of the configuration page. The followi
 
 Enables or disables tracking based on the EU privacy cookie.
 
-When you check the EU Compliance check box, the [!UICONTROL Tracking Cookie Name] field appears. The Tracking Cookie overrides the default tracking cookie name. You can customize the name that tags uses to track your opt-out status for receiving other cookies.
+When you enable the EU Compliance checkbox, the [!UICONTROL Tracking Cookie Name] field appears. The Tracking Cookie overrides the default tracking cookie name. You can customize the name that tags uses to track your opt-out status for receiving other cookies.
 
 When a page is loaded, the system checks to see if a cookie called sat\_track is set (or the custom cookie name specified on the Edit Property page). Consider the following information:
 
@@ -273,7 +273,7 @@ For information about each setting, select the info icon, or refer to the [Adobe
 
 ## Analytics extension action types
 
-This section describes the action types available in the Analytics extension.
+This section describes the action types available in the Analytics extension. 
 
 The Analytics extension provides the following actions:
 
@@ -283,7 +283,19 @@ The Analytics extension provides the following actions:
 
 ### Set Variables {#set-variables}
 
-Important: Using a "set variables" action won't send the beacon. You must use the "send beacon" action.
+>[!IMPORTANT]
+>
+>You cannot send the beacon with the "set variables" action. To send the beacon, you must select the "send beacon" action.
+
+You can choose between two different views in **Set Variables**:
+
+>[!BEGINTABS]
+
+>[!TAB Provide individual attributes]
+
+In this view, you can specify different variables such as `eVars`, `Props`, `Events`.
+
+![The Adobe Analytics form view page, where additional attributes are listed.](../../../images/adobe_analytics_extension_form_view.png)
 
 #### eVars
 
@@ -313,6 +325,25 @@ Set one or more [events](https://experienceleague.adobe.com/docs/analytics/imple
 1. (Optional) Select or specify a data element used for [event serialization](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html).
 1. (Optional) Select **[!UICONTROL Add event]** to set more events.
 1. Select **[!UICONTROL Keep Changes]**.
+
+>[!TAB JSON View]
+
+In this view, you can view and edit a JSON version of the **Set Variables** action.
+
+![A view representing the current set variables configuration in JSON format in Adobe Analytics extension.](../../../images/adobe_analytics_extension_json_view.png)
+
+#### JSON
+
+In the **Set Variables** action, use the JSON view to upload, copy or download JSON data and store it on your device. 
+
+However, some limitations do exist:
+
+* **Custom code**: If you use custom code to populate variables, it won't show up in the JSON view. Instead, an alert appears when viewing, copying or downloading the JSON indicating that modifications made via custom code will not be included. 
+* **Copy from URL attribute**: Copying a value from a URL is not supported in the JSON view. An alert is displayed to indicate this limitation.
+* **Retired variables**: Retired or deprecated variables are shown in the JSON view and an alert is displayed informing that retired variables have been set.
+* **Data Elements**: Data elements are represented in the JSON view. If the JSON data is copied to another Tags property, the corresponding data elements might not be defined there and will not resolve correctly when they are run.
+
+>[!ENDTABS]
 
 #### Hierarchy
 

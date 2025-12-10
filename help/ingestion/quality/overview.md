@@ -43,12 +43,12 @@ The following validations are done for streaming ingestion:
 | Schema | Ensures that the schema is **not** empty and contains a reference to the union schema, as follows: `"meta:immutableTags": ["union"]` |
 | `identityField` | Ensures that all valid identity descriptors are defined. |
 | JSON | Ensures that the JSON is valid. |
-| IMS Organization | Ensures that the IMS Organization that is listed is a valid organization. |
+| Organization | Ensures that the organization that is listed is a valid organization. |
 | Source name | Ensures that the name of the data source is specified. |
 | Dataset | Ensures that the dataset is specified, enabled, and has not been removed. |
 | Header | Ensures that the header is specified and is valid. |
 
-More information about how [!DNL Platform] monitors and validates data can be found in the [monitoring data flows documentation](./monitor-data-ingestion.md).
+More information about how [!DNL Experience Platform] monitors and validates data can be found in the [monitoring data flows documentation](./monitor-data-ingestion.md).
 
 ## Identity value validation
 

@@ -1,40 +1,42 @@
 ---
-keywords: Experience Platform;home;popular topics;sources;connectors;oracle;oracle eloqua;eloqua
-solution: Experience Platform
-title: Create an Oracle Eloqua source connection using Platform UI
-description: Learn how to connect Adobe Experience Platform to Oracle Eloqua using Platform UI.
+title: Create an Oracle Eloqua source connection using Experience Platform UI
+description: Learn how to connect Adobe Experience Platform to Oracle Eloqua using Experience Platform UI.
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
 ---
-# Create an [!DNL Oracle Eloqua] source connection using Platform UI
+# Create an [!DNL Oracle Eloqua] source connection using Experience Platform UI
 
-This tutorial provides steps for creating an [!DNL Oracle Eloqua] source connector using the Adobe Experience Platform user interface.
+>[!WARNING]
+>
+>The [!DNL Oracle Eloqua] source will be deprecated in January 2026. A new source will be released later this year as an alternative. Once the new source is released, you must plan to migrate to the new source by creating new account connections and dataflows before the end of January 2026.
+
+This tutorial provides steps for creating an [!DNL Oracle Eloqua] source connection using the Adobe Experience Platform user interface.
 
 ## Getting started
 
-This guide requires a working understanding of the following components of Platform:
+This guide requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../../../sandboxes/home.md): Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-If you already have an authenticated [!DNL Oracle Eloqua] account on Platform, then you may skip the remainder of this document and proceed to the tutorial on [creating a dataflow to bring marketing automation data to Platform](../../dataflow/marketing-automation.md).
+If you already have an authenticated [!DNL Oracle Eloqua] account on Experience Platform, then you may skip the remainder of this document and proceed to the tutorial on [creating a dataflow to bring marketing automation data to Experience Platform](../../dataflow/marketing-automation.md).
 
 ### Gather required credentials
 
-In order to connect [!DNL Oracle Eloqua] to Platform, you must provide values for the following authentication properties:
+In order to connect [!DNL Oracle Eloqua] to Experience Platform, you must provide values for the following authentication properties:
 
 | Credential | Description |
 | --- | --- |
-| Endpoint | The endpoint of your [!DNL Oracle Eloqua]. |
-| Username | The username of your [!DNL Oracle Eloqua] account. The username must be formatted as `siteName + \\ + username`, where `siteName` is the company name you used to log in to [!DNL Oracle Eloqua] and `username` is your username. For example, your log in username can be: `adobe\\emily`. |
+| Endpoint | The endpoint of your [!DNL Oracle Eloqua] server. [!DNL Oracle Eloqua] supports multiple data centers. To find your endpoint, login to the [[!DNL Oracle Eloqua] interface](https://login.eloqua.com) with your credentials and then copy the base URL portion from the redirect URL. The format for your URL pattern is `xxx.xx.eloqua.com` and should be entered without `http` or `https`. |
+| Username | The username of your [!DNL Oracle Eloqua] server. The username must be formatted as `siteName + \\ + username`, where `siteName` is the company name you used to log in to [!DNL Oracle Eloqua] and `username` is your username. For example, your log in username can be: `Eloqua\Andy`. **Note**: You must use a single backslash (`\`)when using the UI because Experience Platform UI automatically adds an additional backslash (`\`) when entering a username. |
 | Password | The password corresponding to your [!DNL Oracle Eloqua] username. |
 
 For more information on authentication credentials for [!DNL Oracle Eloqua], see the [[!DNL Oracle Eloqua] guide on authentication](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Oracle Eloqua] account to Platform.
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Oracle Eloqua] account to Experience Platform.
 
 ## Connect your [!DNL Oracle Eloqua] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -58,4 +60,4 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 ## Next steps
 
-By following this tutorial, you have authenticated and created a source connection between your [!DNL Oracle Eloqua] account and Platform. You can now continue on to the next tutorial and [create a dataflow to bring marketing automation data to Platform](../../dataflow/marketing-automation.md).
+By following this tutorial, you have authenticated and created a source connection between your [!DNL Oracle Eloqua] account and Experience Platform. You can now continue on to the next tutorial and [create a dataflow to bring marketing automation data to Experience Platform](../../dataflow/marketing-automation.md).

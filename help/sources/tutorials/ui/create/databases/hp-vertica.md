@@ -10,9 +10,9 @@ exl-id: d7315ad4-9250-4e66-be33-016efabb512e
 
 >[!NOTE]
 >
-> The HP [!DNL Vertica] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+> The HP [!DNL Vertica] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an HP [!DNL Vertica] source connector using the [!DNL Platform] user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an HP [!DNL Vertica] source connector using the [!DNL Experience Platform] user interface.
 
 ## Getting started
 
@@ -37,7 +37,7 @@ For more information about getting started, refer to [this HP [!DNL Vertica] doc
 
 ## Connect your HP [!DNL Vertica] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your HP [!DNL Vertica] account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your HP [!DNL Vertica] account to [!DNL Experience Platform].
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
 
@@ -63,4 +63,4 @@ To connect an existing account, select the HP [!DNL Vertica] account you want to
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your HP [!DNL Vertica] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your HP [!DNL Vertica] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Experience Platform]](../../dataflow/databases.md).

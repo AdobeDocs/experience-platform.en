@@ -5,7 +5,12 @@ title: Manage Data Usage Policies in the UI
 description: Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions that you can perform in the Policies workspace in the Experience Platform user interface.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 ---
-# Manage data usage policies in the UI
+# Manage data usage policies in the UI {#user-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsagePolicies_description"
+>title="Integrate and enforce customer consent in your profile data"
+>abstract="<h2>Description</h2><p>Experience Platform allows you to integrate the consent data you have collected from your customers into their respective profiles. You can then set up consent policies to determine whether this data can be included in segments that are activated to certain destinations.</p>"
 
 This document covers how to use the **[!UICONTROL Policies]** workspace in the Adobe Experience Platform UI to create and manage data usage policies.
 
@@ -44,11 +49,21 @@ To create a new custom data usage policy, select **[!UICONTROL Create policy]** 
 
 ![](../images/policies/create-policy-button.png)
 
-Depending on whether you are part of the beta for consent policies, one of the following occurs:
+The [!UICONTROL Choose type of policy] dialog appears. Select either a [consent policy](#consent-policy) or a [data governance policy](#create-governance-policy).
 
-* If you are not part of the beta, you are immediately brought to the workflow for [creating a data governance policy](#create-governance-policy).
-* If you are part of the beta, a dialog provides an extra option to [create a consent policy](#consent-policy).
-  ![](../images/policies/choose-policy-type.png)
+![The choose type of policy dialog.](../images/policies/choose-policy-type.png)
+
+### Use data governance and consent policies together {#combine-policies}
+
+>[!NOTE]
+>
+>Consent policies are currently only available for organizations that have purchased Adobe Healthcare Shield or Adobe Privacy & Security Shield.
+
+Governance and consent policies can be used together to create robust rules for governing audiences mapped to a destination. Consent policies are inclusive in nature, meaning they dictate which profiles can be included in each marketing experience. Conversely, governance policies exclude the use of specific labelled attributes from being configured for activation.
+
+By using this behavior, you can set up a combination of policies and consent rules that include the correct profiles, but prevents you from including data that goes against your set organizational rules. An example scenario would be, where you want to exclude sensitive data from being included but are still able to target consented users for marketing via social media. The necessary steps for this scenario are outlined in the infographic below.
+
+![An infographic outlining the steps to use governance and consent policies together to create robust rules for governing audiences.](../images/policies/governance-and-consent-policies-infographic.png)
 
 ### Create a data governance policy {#create-governance-policy}
 
@@ -78,6 +93,11 @@ The **[!UICONTROL Browse]** tab reappears, which now lists the newly created pol
 
 ### Create a consent policy {#consent-policy}
 
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsagePolicies_instructions"
+>title="Instructions"
+>abstract="<ul><li>Ensure that you are ingesting preference data into your union schemas via the OneTrust source connector or the standard XDM schema for consent.</li><li>Select <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html">Policies</a> in the left navigation, then select <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Create Policy</a>.</li><li>Under the <b>If</b> section, describe the conditions or actions that will trigger the policy check.</li><li>Under the <b>Then</b> section, enter the consent attributes that must be present for a profile to be included in the action that triggered the policy.</li><li>Select <b>Save</b> to create the policy. To enable the policy, select the <b>Status</b> toggle in the right rail.</li><li>Experience Platform automatically enforces your enabled consent policies when you activate segments to destinations, and provides details on how each policy affects your audience size.</li><li>For more help with this feature, see the guide on <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy">creating consent policies</a> on Experience League.</li></ul>"
+
 >[!IMPORTANT]
 >
 >Consent policies are only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
@@ -93,12 +113,16 @@ Consent policies are comprised of two logical components:
 * **[!UICONTROL If]**: The condition that will trigger the policy check. This can be based on a certain marketing action being performed, the presence of certain data usage labels, or a combination of the two.
 * **[!UICONTROL Then]**: The consent attributes that must be present for a profile to be included in the action that triggered the policy.
 
+>[!NOTE]
+>
+>Consent policies support advanced rule building with various field types and operators. For a complete reference of supported field types, operators, and rule-building examples, see the [Consent policy rules reference](./consent-policy-rule-building-reference.md).
+
 #### Configure conditions {#consent-conditions}
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentif"
 >title="If condition"
->abstract="Start by defining the conditions which will trigger the policy check. Conditions can include certain marketing actions being taken, certain data governance labels being present, or a combination of both."
+>abstract="Start by defining the conditions which will trigger the policy check. Conditions can include certain marketing actions being taken, certain data governance labels being present, or a combination of both. Use AND/OR logic to create complex conditional relationships between multiple conditions."
 
 Under the **[!UICONTROL If]** section, select the marketing actions and/or data usage labels that should trigger this policy. Select **[!UICONTROL View all]** and **[!UICONTROL Select labels]** to view the full lists of available marketing actions and labels, respectively.
 
@@ -115,29 +139,89 @@ If you select more than one condition, you can use the icon that appears between
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
 >title="Then condition"
->abstract="Once your 'If' condition has been defined, use the 'Then' section to select at least one consent attribute from the union schema. This is the attribute that must be present in order for profiles to be included in the action governed by this policy."
+>abstract="Once your 'If' condition has been defined, use the 'Then' section to select at least one consent attribute from the union schema. You must navigate through container fields (Object, Map, Array) to reach primitive fields (String, Number, Boolean etc.) for rule building. This primitive field is the attribute that must be present in order for profiles to be included in the action governed by this policy."
 
-Under the **[!UICONTROL Then]** section, select at least one consent attribute from the union schema. This is the attribute that must be present in order for profiles to be included in the action governed by this policy. You can choose one of the provided options from the list, or select **[!UICONTROL View all]** to choose the attribute directly from the union schema.
+Under the **[!UICONTROL Then]** section, select at least one consent attribute from the union schema. This is the attribute that must be present in order for profiles to be included in the action governed by this policy. You can choose one of the suggested options, or select **[!UICONTROL View all]** to choose the attribute directly from the union schema.
 
-When selecting the consent attribute, choose the values for the attribute that you want this policy to check for. 
+>[!NOTE]
+>
+>Consent policies support primitive field types (String, Number, Boolean, Date) and container types (Object, Map, Array). You can navigate into containers to select specific attributes and apply AND/OR logic to combine rules. For a full reference of supported field types, operators, and rule-building examples, see the [consent policy rule building reference](./consent-policy-rule-building-reference.md).
 
-![](../images/policies/select-schema-field.png)
+![The consent policy builder UI showing the If and Then sections, with View all highlighted.](../images/policies/view-all.png)
 
-After you have selected at least one consent attribute, the **[!UICONTROL Policy properties]** panel updates to show the estimated number of profiles that would be allowed under this policy, including the percentage of the total profile store. This estimation automatically updates as you adjust the policy configuration.
+If you select **[!UICONTROL View all]**, the **[!UICONTROL Select consent attribute]** dialog appears. Select the consent attribute(s) that you want this policy to check for. Alternatively, from this dialog, you can select **[!UICONTROL Advanced Schema search]** to choose a nested primitive field to be assessed as part of the policy. Select **[!UICONTROL Done]** to confirm your settings.
 
-![](../images/policies/audience-preview.png)
+![The Select consent attribute dialog with an attribute and done highlighted.](../images/policies/select-consent-attribute.png)
 
-To add further consent attributes to the policy, select **[!UICONTROL Add result]**.
+### Advanced schema search {#advanced-schema-search}
 
-![](../images/policies/add-result.png)
+In the **[!UICONTROL Select consent attribute]** dialog, select **[!UICONTROL Advanced Schema search]** to open the **[!UICONTROL Select union schema field]** dialog. From this view, select root-level or nested attributes of primitive field types such as string, number, boolean, and date, as well as container types such as object, map, and array.
 
-You can continue adding and adjusting conditions and consent attributes to the policy as needed. When you are satisfied with the configuration, provide a name and optional description for the policy before selecting **[!UICONTROL Save]**.
+![The click path to navigate through the advanced schema search.](../images/policies/consent-advanced-schema-search.gif)
+
+#### Fixed-value fields for a policy condition {#fixed-value-fields}
+
+When you select a fixed-value field as a policy condition, the [!UICONTROL Selected attributes] panel displays the predefined values defined in your data schema.
+
+>[!NOTE]
+>
+>If a field is configured with a fixed set of values (for example, as an enum or other controlled vocabulary), the policy builder enforces that constraint to ensure conditions are evaluated only against valid, standardized data.
+
+To maintain data quality and consistency, the UI renders these values as selectable checkboxes rather than free-text fields. This approach reduces manual validation and helps your consent policy evaluate data reliably.
+
+To define the condition, select the checkboxes for the values you want the policy to evaluate.
+
+![The 'Select union schema field' dialog with a schema diagram field and the available fixed-value checkboxes highlighted.](../images/policies/select-schema-field.png)
+
+#### Map data type fields for a policy condition {#map-data-type-fields}
+
+When you select a primitive field contained in a Map data type, additional configuration options appear in the **[!UICONTROL Selected attributes]** panel. Use these options to configure consent checks across multiple keys without needing a separate policy for each key. This configuration method simplifies policy management by reducing the number of policies you need to create.
+
+![The Consent policies map section highlighted in the the attributes panel.](../images/policies/consent-policies-map.png)
+
+##### Configure Map data type attributes {#configure-map-attributes}
+
+To configure a Map-type attribute, follow the steps below:
+
+In the union schema diagram, select a primitive field (such as a string or number) contained within a Map data type. The **[!UICONTROL Selected attributes]** panel updates to display additional configuration options for that field.
+
+![Updated attribute options for a primitive field contained in a Map data type.](../images/policies/select-union-schema-field.png)
+
+In the **[!UICONTROL Selected attributes]** panel, configure how the policy evaluates map keys by selecting or clearing the **[!UICONTROL Find any matching item]** checkbox.
+
+| Option | Action | Policy Behavior |
+| --- | --- | --- |
+| **[!UICONTROL Find any matching item]** checkbox is **selected** | The **[!UICONTROL within]** text field is disabled. | The policy checks **every key** within the map. Any key where the nested field meets the value condition is considered a match for the policy. This is useful for enforcing global compliance across dynamically keyed attributes. |
+| **[!UICONTROL Find any matching item]** checkbox is **unselected** | You must enter a specific key name in the **[!UICONTROL within]** text field. | The policy checks only the map key specified in the **[!UICONTROL within]** field. Only profiles where the nested field for a specific key meets the defined value are matched. This is useful for policies targeting a specific program or frequency key (for example, `frequencyMap.m1`). |
+
+Enter the value for the selected primitive field that the policy should evaluate. For example, if the field type is `Integer`, enter a numeric value.
+
+![The Selected attributes sidebar with the map configuration options highlighted.](../images/policies/within-option.png)
+
+Select **[!UICONTROL Select]** to confirm your configuration and return to the policy builder.
+
+After you select at least one consent attribute, the **[!UICONTROL Policy properties]** panel updates to show the estimated number of profiles included under this policy, along with the percentage of affected profiles in the Profile store. The estimated profile count updates automatically as you change the policy configuration.
+
+![The policy builder UI showing a configured Then condition with the Policy properties right rail displaying the Estimated Qualified Profiles count.](../images/policies/audience-preview.png)
+
+To add additional consent attributes, select **[!UICONTROL Add result]**. This creates another rule for including profiles based on those attributes.
+
+![The consent policy builder UI with Add result highlighted.](../images/policies/add-result.png)
+
+>[!NOTE]
+>
+>To edit an existing attribute, select the attribute name and then select the pencil icon (![A pencil icon.](/help/images/icons/edit.png)). The **[!UICONTROL Select union schema field]** dialog opens for you to make changes.
+>
+>![The consent policy builder UI with the consent attribute and the edit icon highlighted.](../images/policies/edit-then-attributes.png)
+
+Continue adding or adjusting conditions and consent attributes until the policy matches your requirements. When finished, enter a name and (optional) description, then select **[!UICONTROL Save]** to create the policy.
 
 ![](../images/policies/name-and-save.png)
 
 The consent policy is now created, and its status is set to [!UICONTROL Disabled] by default. To enable the policy right away, select the **[!UICONTROL Status]** toggle in the right rail.
 
 ![](../images/policies/enable-consent-policy.png)
+
 
 #### Verify policy enforcement
 

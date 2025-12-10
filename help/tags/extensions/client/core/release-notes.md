@@ -9,6 +9,49 @@ exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
+## September 25, 2025
+
+v3.4.4
+
+* Add the `releaseNotesUrl` field to the extension.json with this page as the value.
+* Audit dependencies.
+* Remove Yarn and bring the build process in line with our other open-source repositories.
+
+
+## May 8, 2025
+
+v3.4.3
+
+* Fixes an issue where **Data Elements** > **Javascript Tools** > **Simple Replace** shows a checkbox to **Replace All** but causes an error when trying to save the Rule with the checkbox enabled.
+* Upgrades @adobe/react-spectrum to v3.41.0.
+* Upgrades @adobe/reactor-sandbox to v13.2.1.
+
+## October 23, 2024
+
+v3.4.2
+
+* Fix schema validation error for the Form -> Change event when "and having certain property values..." is active.
+
+## March 29, 2023
+
+v3.4.1
+
+* Adds new web native delegate events:
+  * Keydown
+  * KeyUp
+* Adds the ability to test against many values ("Add Another" options) against the following delegates:
+  * Events
+    * Change
+  * Conditions
+    * Cookie
+    * Landing Page
+    * Query String Parameter
+    * Traffic Source
+    * Variable
+* Changes the events/EntersViewport delegate to use the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) instead of manual detection of elements entering the viewport.
+* Removes code that was migrating DTM cookies to LocalStorage.
+* Logs a warning to the console when the LocalStorage and SessionStorage APIs are unavailable.
+
 ## January 4, 2022
 
 v3.3.0
@@ -91,13 +134,13 @@ v2.0.4
 
 * Added Data Element Support for various fields - Data Element support has been added to the following events: 'Time on Page', 'Enters Viewport', 'Hover' and 'Media Time Played'. As well as the following Conditions: 'Time on Site' and 'Value Comparison'
 * Adds support for default behavior for ctrl/cmd + click, and middle mouse click when using Link Delay
-* **Marked link delay on the click event as “no longer supported”.** - more information can be found on the [Data Collection Blog](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) for Adobe Experience Platform
+* **Marked link delay on the click event as "no longer supported".** - more information can be found on the [Data Collection Blog](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) for Adobe Experience Platform
 
 ## January 6, 2021
 
 v1.9.0
 
-* **New “Trigger Direct Call” Action** - The Core extension now includes a new action type called `Trigger Direct Call`.  This can be used when you want to trigger a direct call rule via an action from a different rule. It maps directly to the `_satellite.track()` method. Many thanks to [Jan Exner](https://twitter.com/jexner) for this contribution.
+* **New "Trigger Direct Call" Action** - The Core extension now includes a new action type called `Trigger Direct Call`.  This can be used when you want to trigger a direct call rule via an action from a different rule. It maps directly to the `_satellite.track()` method. Many thanks to Jan Exner for this contribution.
 
 ## December 8, 2020
 
@@ -137,25 +180,25 @@ Please refer to the [Core Extension reference](./overview.md) in the Conditions 
 
 v1.7.3
 
-* **Text field length increase** - Text input fields were changed to a flex layout in order to better utilize the user’s screen width, and give more space for longer text strings.
+* **Text field length increase** - Text input fields were changed to a flex layout in order to better utilize the user's screen width, and give more space for longer text strings.
 
 ## November 1st, 2019
 
 v1.7.0
 
-* **Access to `event` Variable Within Custom Code Data Element** - You can now reference the event from within a custom code data element when run within the context of a rule. The object will contain useful information about the event that triggered the rule. Many thanks to [Stewart Schilling](https://twitter.com/sdi_stewart) for this contribution.
+* **Access to `event` Variable Within Custom Code Data Element** - You can now reference the event from within a custom code data element when run within the context of a rule. The object will contain useful information about the event that triggered the rule. Many thanks to Stewart Schilling for this contribution.
 
 ## October 7th, 2019
 
 v1.6.2
 
-* **New “Constant” Data Element Type** - The Core extension now includes a new data element type called `Constant`.  This can be used when you need to store a constant value that will be referenced in various conditions, actions or custom code. Many thanks to [Jan Exner](https://twitter.com/jexner) for this contribution.
+* **New "Constant" Data Element Type** - The Core extension now includes a new data element type called `Constant`.  This can be used when you need to store a constant value that will be referenced in various conditions, actions or custom code. Many thanks to Jan Exner for this contribution.
 
 ## September 11, 2019
 
 v1.6.1
 
-* **Support for CSP Nonce** - The Core extension now has an optional configuration parameter. You can add a data element that references a nonce. If configured, all inline scripts that a tag adds to the page use the nonce that you’ve configured. This change supports the use of a Content Security Policy with a nonce so that tag scripts can still load in a CSP environment. You can read more about using tags with a CSP [here](../../../ui/client-side/content-security-policy.md).
+* **Support for CSP Nonce** - The Core extension now has an optional configuration parameter. You can add a data element that references a nonce. If configured, all inline scripts that a tag adds to the page use the nonce that you've configured. This change supports the use of a Content Security Policy with a nonce so that tag scripts can still load in a CSP environment. You can read more about using tags with a CSP [here](../../../ui/client-side/content-security-policy.md).
 
 ## June 18, 2019
 
@@ -169,7 +212,7 @@ v1.4.3
 
 * **Input Fields** - Input fields are much longer now!
 * **Custom Event** - Custom event type can now be used with events dispatched off of window.
-* **Bug Fix** - fixed a bug where the Value Comparison Condition wouldn’t hold a 0 value.
+* **Bug Fix** - fixed a bug where the Value Comparison Condition wouldn't hold a 0 value.
 * **Bug Fix** - exchange\_url field has been updated, so you can now see the Core Extension listing in Adobe Exchange.
 
 ## January 8, 2019
@@ -182,9 +225,9 @@ v1.4.2
 
 ## November 8, 2018
 
-* **Persist Cohort option** - The option to persist a cohort has been added to the Sampling condition. This has the effect of keeping a user in or out of the sample cohort across sessions. For example, if the “persist cohort” checkbox is checked and the condition returns true the first time it is run for a given visitor, it will return true on all subsequent runs of the condition for the same visitor. Similarly, if the “persist cohort” checkbox is checked and the condition returns false the first time it is run for a given visitor, it will return false on all subsequent runs of the condition for the same visitor.
+* **Persist Cohort option** - The option to persist a cohort has been added to the Sampling condition. This has the effect of keeping a user in or out of the sample cohort across sessions. For example, if the "persist cohort" checkbox is checked and the condition returns true the first time it is run for a given visitor, it will return true on all subsequent runs of the condition for the same visitor. Similarly, if the "persist cohort" checkbox is checked and the condition returns false the first time it is run for a given visitor, it will return false on all subsequent runs of the condition for the same visitor.
 * **Bug Fix** - Fixed an issue where a rule using a Page Bottom event and a Custom Code action on a page where tags were being loaded synchronously but improperly installed (no call to `_satellite.pageBottom()`) would clear website content.
-* **Bug Fix** - Fixed an issue where the Enters Viewport would not function if the tag library was loaded asynchronously and finished loading after the browser’s DOMContentLoaded event was fired.
+* **Bug Fix** - Fixed an issue where the Enters Viewport would not function if the tag library was loaded asynchronously and finished loading after the browser's DOMContentLoaded event was fired.
 
 ## May 24, 2018
 

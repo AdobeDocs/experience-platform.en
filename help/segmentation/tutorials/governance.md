@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform;home;popular topics;data usage compliance;enforce;enforce data usage compliance;Segmentation Service;segmentation;Segmentation;
 solution: Experience Platform
 title: Enforce Data Usage Compliance for an Audience Segment Using APIs
 type: Tutorial
-description: This tutorial covers the steps for enforcing data usage compliance for Real-Time Customer Profile audience segments using APIs.
+description: This tutorial covers the steps for enforcing data usage compliance segment definitions using APIs.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
 ---
-# Enforce data usage compliance for an audience segment using APIs
+# Enforce data usage compliance for a segment definition using APIs
 
-This tutorial covers the steps for enforcing data usage compliance for [!DNL Real-Time Customer Profile] audience segments using APIs.
+This tutorial covers the steps for enforcing data usage compliance for segment definitions using APIs.
 
 ## Getting started
 
 This tutorial requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] is a generic lookup entity store, and is used to manage [!DNL Experience Data Model (XDM)] data within [!DNL Platform]. Profile merges data across various enterprise data assets and provides access to that data in a unified presentation.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] is a generic lookup entity store, and is used to manage [!DNL Experience Data Model (XDM)] data within [!DNL Experience Platform]. Profile merges data across various enterprise data assets and provides access to that data in a unified presentation.
     - [Merge policies](../../profile/api/merge-policies.md): Rules used by [!DNL Real-Time Customer Profile] to determine what data can be merged into a unified view under certain conditions. Merge policies can be configured for Data Governance purposes.
-- [[!DNL Segmentation]](../home.md): How [!DNL Real-Time Customer Profile] divides a large group of individuals contained in the profile store into smaller groups that share similar traits and will respond similarly to marketing strategies.
+- [[!DNL Segmentation]](../home.md): How [!DNL Real-Time Customer Profile] divides a large group of individuals contained in the Profile store into smaller groups that share similar traits and will respond similarly to marketing strategies.
 - [Data Governance](../../data-governance/home.md): Data Governance provides the infrastructure for data usage labeling and enforcement, using the following components:
     - [Data usage labels](../../data-governance/labels/user-guide.md): Labels used to describe datasets and fields in terms of the level of sensitivity with which to handle their respective data.
     - [Data usage policies](../../data-governance/policies/overview.md): Configurations indicating which marketing actions are allowed on data categorized by particular data usage labels.
     - [Policy enforcement](../../data-governance/enforcement/overview.md): Allows you to enforce data usage policies and prevent data operations that constitute policy violations.
-- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
+The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Experience Platform] APIs.
 
 ### Reading sample API calls
 
@@ -31,19 +30,19 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Experience Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
+>For more information on sandboxes in [!DNL Experience Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -51,7 +50,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Look up a merge policy for a segment definition {#merge-policy}
 
-This workflow begins by accessing a known audience segment. Segments that are enabled for use in [!DNL Real-Time Customer Profile] contain a merge policy ID within their segment definition. This merge policy contains information about which datasets are to be included in the segment, which in turn contain any applicable data usage labels.
+This workflow begins by accessing a known segment definition. Segment definitions that are enabled for use in [!DNL Real-Time Customer Profile] contain a merge policy ID within their segment definition. This merge policy contains information about which datasets are to be included in the segment definition, which in turn contain any applicable data usage labels.
 
 Using the [!DNL Segmentation] API, you can look up a segment definition by its ID to find its associated merge policy.
 
@@ -86,7 +85,6 @@ A successful response returns the details of the segment definition.
     "schema": { 
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 90,
     "imsOrgId": "{ORG_ID}",
     "name": "Cart abandons in CA",
     "description": "",
@@ -361,20 +359,20 @@ Using the data returned in the API response, you can set up protocols within you
 
 ## Filter data fields
 
-If your audience segment does not pass evaluation, you can adjust the data included in the segment through one of the two methods outlined below.
+If your segment definition does not pass evaluation, you can adjust the data included in the segment definition through one of the two methods outlined below.
 
 ### Update the merge policy of the segment definition
 
 Updating the merge policy of a segment definition will adjust the datasets and fields that will be included when the segment job is run. See the section on [updating an existing merge policy](../../profile/api/merge-policies.md#update) in the API merge policy tutorial for more information. 
 
-### Restrict specific data fields when exporting the segment
+### Restrict specific data fields when exporting the segment definition
 
-When exporting a segment to a dataset using the [!DNL Segmentation] API, you can filter the data that is included in the export by using the `fields` parameter. Any data fields added to this parameter will be included in the export, while all other data fields will be excluded.
+When exporting a segment definition to a dataset using the [!DNL Segmentation] API, you can filter the data that is included in the export by using the `fields` parameter. Any data fields added to this parameter will be included in the export, while all other data fields will be excluded.
 
-Consider a segment that has data fields named "A", "B", and "C". If you wished to only export field "C", then the `fields` parameter would contain field "C" alone. By doing this, fields "A" and "B" would be excluded when exporting the segment.
+Consider a segment definition that has data fields named "A", "B", and "C". If you wished to only export field "C", then the `fields` parameter would contain field "C" alone. By doing this, fields "A" and "B" would be excluded when exporting the segment definition.
  
-See the section on [exporting a segment](./evaluate-a-segment.md#export) in the segmentation tutorial for more information.
+See the section on [exporting a segment definition](./evaluate-a-segment.md#export) in the segmentation tutorial for more information.
 
 ## Next steps
 
-By following this tutorial, you have looked up the data usage labels associated with an audience segment and tested them for policy violations against specific marketing actions. For more information on Data Governance in [!DNL Experience Platform], please read the overview for [Data Governance](../../data-governance/home.md).
+By following this tutorial, you have looked up the data usage labels associated with a segment definition and tested them for policy violations against specific marketing actions. For more information on Data Governance in [!DNL Experience Platform], please read the overview for [Data Governance](../../data-governance/home.md).

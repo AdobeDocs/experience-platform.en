@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;sandbox developer guide
 solution: Experience Platform
 title: Sandbox management API Endpoint
 description: The /sandboxes endpoint in the Sandbox API allows you to  programmatically manage sandboxes in Adobe Experience Platform.
+role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
 ---
 # Sandbox management endpoint
 
-Sandboxes in Adobe Experience Platform provide isolated development environments that allow you to test features, run experiments, and make custom configurations without impacting your production environment. The `/sandboxes` endpoint in the [!DNL Sandbox] API allows you to programmatically manage sandboxes in Platform.
+Sandboxes in Adobe Experience Platform provide isolated development environments that allow you to test features, run experiments, and make custom configurations without impacting your production environment. The `/sandboxes` endpoint in the [!DNL Sandbox] API allows you to programmatically manage sandboxes in Experience Platform.
 
 ## Getting started
 
@@ -15,7 +16,7 @@ The API endpoint used in this guide is part of the [[!DNL Sandbox] API](https://
 
 ## Retrieve a list of sandboxes {#list}
 
-You can list all sandboxes belonging to your IMS Organization (active or otherwise), by making a GET request to the `/sandboxes` endpoint.
+You can list all sandboxes belonging to your organization (active or otherwise), by making a GET request to the `/sandboxes` endpoint.
 
 **API format**
 
@@ -35,7 +36,6 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Response**
@@ -222,7 +222,7 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `name` | The identifier that will be used to access the sandbox in future requests. This value must be unique, and best practice is to make it as descriptive as possible. This value cannot contain any spaces or special characters. |
-| `title` | A human-readable name used for display purposes in the Platform user interface. |
+| `title` | A human-readable name used for display purposes in the Experience Platform user interface. |
 | `type` | The type of sandbox to be created. For a non-production sandbox, this value must be `development`. |
 
 **Response**
@@ -275,7 +275,7 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `name` | The identifier that will be used to access the sandbox in future requests. This value must be unique, and best practice is to make it as descriptive as possible. This value cannot contain any spaces or special characters. |
-| `title` | A human-readable name used for display purposes in the Platform user interface. |
+| `title` | A human-readable name used for display purposes in the Experience Platform user interface. |
 | `type` | The type of sandbox to be created. For a production sandbox, this value must be `production`. |
 
 **Response**

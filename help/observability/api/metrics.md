@@ -7,7 +7,7 @@ exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
 ---
 # Metrics endpoint
 
-Observability metrics provide insights into usage statistics, historical trends, and performance indicators for various features in Adobe Experience Platform. The `/metrics` endpoint in the [!DNL Observability Insights API] allows you to programmatically retrieve metric data for your organization's activity in [!DNL Platform].
+Observability metrics provide insights into usage statistics, historical trends, and performance indicators for various features in Adobe Experience Platform. The `/metrics` endpoint in the [!DNL Observability Insights API] allows you to programmatically retrieve metric data for your organization's activity in [!DNL Experience Platform].
 
 >[!NOTE]
 >
@@ -36,6 +36,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}'
   -d '{
         "start": "2020-07-14T00:00:00.000Z",
         "end": "2020-07-22T00:00:00.000Z",
@@ -50,8 +51,7 @@ curl -X POST \
                 "groupBy": true
               }
             ],
-            "aggregator": "sum",
-            "downsample": "sum"
+            "aggregator": "sum"
           },
           {
             "name": "timeseries.ingestion.dataset.dailysize",
@@ -63,7 +63,6 @@ curl -X POST \
               }
             ],
             "aggregator": "sum",
-            "downsample": "sum"
           }
         ]
       }'
@@ -73,12 +72,11 @@ curl -X POST \
 | --- | --- |
 | `start` | The earliest date/time from which to retrieve metric data. |
 | `end` | The latest date/time from which to retrieve metric data. |
-| `granularity` | An optional field that indicates the time interval to divide metric data by. For example, a value of `DAY` returns metrics for each day between the `start` and `end` date, whereas a value of `MONTH` would group metric results by month instead. When using this field, a corresponding `downsample` property must also be provided to indicate the aggregation function by which to group data. |
+| `granularity` | An optional field that indicates the time interval to divide metric data by. For example, a value of `DAY` returns metrics for each day between the `start` and `end` date, whereas a value of `MONTH` would group metric results by month instead. |
 | `metrics` | An array of objects, one for each metric you want to retrieve. |
 | `name` | The name of a metric recognized by Observability Insights. See the [appendix](#available-metrics) for a full list of accepted metric names. |
 | `filters` | An optional field that allows you to filter metrics by specific datasets. The field is an array of objects (one for each filter), with each object containing the following properties: <ul><li>`name`: The type of entity to filter metrics against. Currently, only `dataSets` is supported.</li><li>`value`: The ID of one or more datasets. Multiple dataset IDs can be provided as a single string, with each ID separated by vertical bar characters (`\|`).</li><li>`groupBy`: When set to true, indicates that the corresponding `value` represents multiple datasets whose metric results should be returned separately. If set to false, metric results for those datasets are grouped together.</li></ul> |
-| `aggregator` | Specifies the aggregation function that should be used to group multiple times-series records into single results. For detailed information on available aggregators, refer to the [OpenTSDB documentation](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
-| `downsample` | An optional field that allows you to specify an aggregation function to reduce the sampling rate of metric data by sorting fields into intervals (or "buckets"). The interval for the downsampling is determined by the `granularity` property. For detailed information on downsampling, refer to the [OpenTSDB documentation](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
+| `aggregator` | Specifies the aggregation function that should be used to group multiple times-series records into single results. The current supported aggregators are min, max, sum, and avg depending of metric's definition. |
 
 {style="table-layout:auto"}
 
@@ -171,7 +169,7 @@ A successful response returns the resulting datapoints for the metrics and filte
 | `metric` | The name of one of the metrics provided in the request. |
 | `filters` | The filter configuration for the specified metric. |
 | `datapoints` | An array whose objects represent the results of the specified metric and filters. The number of objects in the array depends on the filter options provided in the request. If no filters were provided, the array will only contain a single object that represents all datasets. |
-| `groupBy` | If multiple datasets were specified in the `filter` property for a metric, and the `groupBy` option was set to true in the request, this object will contain the ID of the dataset that the corresponding `dps` property applies to.<br><br>If this object appears empty in the response, the corresponding `dps` property applies to all datasets provided in the `filters` array (or all datasets in [!DNL Platform] if no filters were provided). |
+| `groupBy` | If multiple datasets were specified in the `filter` property for a metric, and the `groupBy` option was set to true in the request, this object will contain the ID of the dataset that the corresponding `dps` property applies to.<br><br>If this object appears empty in the response, the corresponding `dps` property applies to all datasets provided in the `filters` array (or all datasets in [!DNL Experience Platform] if no filters were provided). |
 | `dps` | The returned data for the given metric, filter, and time range. Each key in this object represents a timestamp with a corresponding value for the specified metric. The time period between each datapoint depends on the `granularity` value specified in the request. |
 
 {style="table-layout:auto"}
@@ -182,7 +180,7 @@ The following section contains additional information about working with the `/m
 
 ### Available metrics {#available-metrics}
 
-The following tables list all of the metrics that are exposed by [!DNL Observability Insights], broken down by [!DNL Platform] service. Each metric includes a description and accepted ID query parameter.
+The following tables list all of the metrics that are exposed by [!DNL Observability Insights], broken down by [!DNL Experience Platform] service. Each metric includes a description and accepted ID query parameter.
 
 >[!NOTE]
 >
@@ -215,11 +213,10 @@ The following table outlines metrics for Adobe Experience Platform [!DNL Identit
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Number of records written to their data source by [!DNL Identity Service], for one dataset or all datasets. | Dataset ID |
 | timeseries.identity.dataset.recordfailed.count | Number of records failed by [!DNL Identity Service], for one dataset or for all datasets. | Dataset ID |
-| timeseries.identity.dataset.namespacecode.recordfailed.count | Number of Identity records failed by a namespace. | Namespace ID (**Required**) |
-| timeseries.identity.dataset.namespacecode.recordskipped.count | Number of Identity records skipped by a namespace. | Namespace ID (**Required**) |
-| timeseries.identity.graph.imsorg.uniqueidentities.count | Number of unique identities stored in the identity graph for your IMS Organization. | N/A |
+| timeseries.identity.dataset.namespacecode.recordskipped.count | Number of Identity records skipped. | Organization ID |
+| timeseries.identity.graph.imsorg.uniqueidentities.count | Number of unique identities stored in the identity graph for your organization. | N/A |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Number of unique identities stored in the identity graph for a namespace. | Namespace ID (**Required**) |
-| timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Number of unique identities stored in the identity graph for your IMS Organization for a particular graph strength ("unknown", "weak", or "strong"). | Graph strength (**Required**) |
+| timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Number of unique identities stored in the identity graph for your organization for a particular graph strength ("unknown", "weak", or "strong"). | Graph strength (**Required**) |
 
 {style="table-layout:auto"}
 
@@ -266,7 +263,7 @@ Responses from the `/metrics` endpoint may return error messages under certain c
 | Property | Description |
 | --- | --- |
 | `title` | A string containing the error message and the potential reason why it may have occurred. |
-| `report` | Contains contextual information about the error, including the sandbox and IMS Org being used in the operation that triggered it. |
+| `report` | Contains contextual information about the error, including the sandbox and organization being used in the operation that triggered it. |
 
 {style="table-layout:auto"}
 
@@ -274,10 +271,10 @@ The following table lists the different error codes that can be returned by the 
 
 | Error code | Title | Description |
 | --- | --- | --- |
-| `INSGHT-1000-400` | Bad request payload | Something was wrong with the request payload. Ensure that you match the payload formatting exactly as shown [above](#v2). Any of the possible reasons can trigger this error:<ul><li>Missing required fields such as `aggregator`</li><li>Invalid metrics</li><li>The request contains an invalid aggregator</li><li>A start date takes place after an end date</li></ul> |
+| `INSGHT-1000-400` | Bad request payload | Something was wrong with the request payload. Ensure that you match the payload formatting exactly as shown [above](#v2). Any of the possible reasons can trigger this error:<ul><li>Missing required fields such as `aggregator`</li><li>Invalid metrics</li><li>The request contains an invalid aggregator</li><li>A start date takes place after an end date</li><li>The request has a time range (between start and end date) of more than 32 days</li></ul> |
 | `INSGHT-1001-400` | Metrics query failed | There was an error when attempting to query the metrics database, due to a bad request or the query itself being unparsable. Ensure that your request is properly formatted before trying again. |
 | `INSGHT-1001-500` | Metrics query failed | There was an error when attempting to query the metrics database, due to a server error. Try the request again, and if the problem persists, contact Adobe support. |
 | `INSGHT-1002-500` | Service error | The request could not be processed due to an internal error. Try the request again, and if the problem persists, contact Adobe support. |
-| `INSGHT-1003-401` | Sandbox validation error | The request could not be processed due to a sandbox validation error. Ensure that the sandbox name you provided in the `x-sandbox-name` header represents a valid, enabled sandbox for your IMS Organization before trying the request again. |
+| `INSGHT-1003-401` | Sandbox validation error | The request could not be processed due to a sandbox validation error. Ensure that the sandbox name you provided in the `x-sandbox-name` header represents a valid, enabled sandbox for your organization before trying the request again. |
 
 {style="table-layout:auto"}

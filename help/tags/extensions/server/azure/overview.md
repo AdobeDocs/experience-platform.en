@@ -2,6 +2,7 @@
 title: Microsoft Azure Extension Overview
 description: Learn about the Microsoft Azure extension for event forwarding in Adobe Experience Platform.
 exl-id: 2337d99d-861e-44e7-94ed-ba21ef28d815
+last-substantial-update: 2022-11-23
 ---
 # [!DNL Microsoft Azure] extension overview
 

@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;aggregation functions;aggregation;
 solution: Experience Platform
 title: PQL Aggregation Functions
 description: Aggregation functions are used to group together multiple values within Profile Query Language (PQL) arrays to form a single summary value.
@@ -11,7 +10,7 @@ Aggregation functions are used to group together multiple values within [!DNL Pr
 
 ## Count
 
-The `count` function returns the number of elements within the given array.
+The `count` function returns the number of elements within the given array as a number.
 
 **Format**
 
@@ -29,7 +28,7 @@ orders.count()
 
 ## Sum
 
-The `sum` function returns the sum of all the selected values within the array.
+The `sum` function returns the sum of all the selected values within the array as a number.
 
 **Format**
 
@@ -47,7 +46,7 @@ orders.sum(order.price)
 
 ## Average
 
-The `average` function returns the arithmetic mean of all the selected values within the array.
+The `average` function returns the arithmetic mean of all the selected values within the array as a number.
 
 **Format**
 
@@ -65,7 +64,7 @@ orders.average(order.price)
 
 ## Minimum
 
-The `min` function returns the smallest of all the selected values within the array.
+The `min` function returns the smallest of all the selected values within the array as a number.
 
 **Format**
 
@@ -83,7 +82,7 @@ orders.min(order.price)
 
 ## Maximum
 
-The `max` function returns the largest of all the selected values within the array.
+The `max` function returns the largest of all the selected values within the array as a number.
 
 **Format**
 

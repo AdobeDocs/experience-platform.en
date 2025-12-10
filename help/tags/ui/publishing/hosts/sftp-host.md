@@ -9,7 +9,7 @@ exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
-Adobe Experience Platform allows you to deliver tag library builds to a secured SFTP server that you host, giving you greater control over how your builds are stored and managed. This guide covers how to set up an SFTP host for a tag property in the Experience Platform UI or Data Collection UI.
+Experience Platform allows you to deliver tag library builds to a secured SFTP server that you host, giving you greater control over how your builds are stored and managed. This guide covers how to set up an SFTP host for a tag property in the Experience Platform UI or Data Collection UI.
 
 >[!NOTE]
 >
@@ -19,7 +19,7 @@ Adobe Experience Platform allows you to deliver tag library builds to a secured 
 
 ## Set up an access key for your server {#access-key}
 
-Platform connects to your SFTP site using an encrypted key. There are a few steps to set this up correctly:
+Experience Platform connects to your SFTP site using an encrypted key. There are a few steps to set this up correctly:
 
 ### Create a public/private key pair
 
@@ -29,13 +29,13 @@ You must have a public/private key pair installed on your SFTP server. You can g
 
 The private key is used to encrypt the public key. You will need to provide your private key during the SFTP host creation process. See the section on [encrypting values](../../../api/guides/encrypting-values.md) in the Reactor API guide for instructions on encrypting public keys. Use the Production Environment's GPG key unless you know you need a specific one. Finally, you can encrypt your private key from any machine, so you do not need to install GPG on your server to complete this step.
 
-### Allowlist Platform IP addresses
+### Allowlist Experience Platform IP addresses
 
-You may need to approve a set of IP addresses to be used within your company firewall to allow Platform to reach your SFTP server and connect to it. These IP Addresses are:
+You may need to approve a set of IP addresses to be used within your company firewall to allow Experience Platform to reach your SFTP server and connect to it. These IP Addresses are:
 
-* `184.72.239.68`
-* `23.20.85.113`
-* `54.226.193.184`
+* `34.227.138.75`
+* `44.194.43.191`
+* `3.215.163.18`
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ The dialog expands to include additional configuration options for the SFTP host
 | [!UICONTROL Don't Use Symlinks] | By default, all SFTP hosts use symbolic links (symlinks) to reference library [builds](../builds.md) that are saved to the server. However, not all servers support the use of symlinks. When this option is selected, the host uses a copy operation to update the build assets directly instead of using symlinks. |
 | [!UICONTROL SFTP Server URL] | The URL base path for your server. |
 | [!UICONTROL Path] | The path to append to the base server URL for this host. |
-| [!UICONTROL Port] | The port must be one of the following:<ul><li>`21`</li><li>`22`</li><li>`80`</li><li>`200-299`</li><li>`443`</li><li>`2000-2999`</li><li>`4343`</li><li>`8080`</li><li>`8888`</li></ul>As a security best practice, Adobe limits the number of ports that can be used for outgoing traffic. The selected ports are commonly allowed through corporate firewalls and include some ranges for flexibility. |
+| [!UICONTROL Port] | The port must be one of the following:<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>As a security best practice, Adobe limits the number of ports that can be used for outgoing traffic. The selected ports are commonly allowed through corporate firewalls and include some ranges for flexibility. |
 | [!UICONTROL Username] | The username to be used when accessing the server. |
 | [!UICONTROL Encrypted Private Key] | The encrypted private key that you created in a [previous step](#access-key). |
 
@@ -72,7 +72,7 @@ Select **[!UICONTROL Save]** to create the host with the selected configuration.
 
 ![Image showing the SFTP host being saved](../../../images/ui/publishing/sftp-hosts/save-host.png)
 
-When you select **[!UICONTROL Save]**, the connection and ability to deliver the files to your SFTP server is tested. Platform creates a folder, writes a file within that folder, checks to make sure the file is there, and then cleans up after itself. If the user account on your SFTP server (the one attached to the secure certificate you provided to Platform) does not have the necessary permissions to perform this action, then the host goes into a "Failed" status.
+When you select **[!UICONTROL Save]**, the connection and ability to deliver the files to your SFTP server is tested. Experience Platform creates a folder, writes a file within that folder, checks to make sure the file is there, and then cleans up after itself. If the user account on your SFTP server (the one attached to the secure certificate you provided to Experience Platform) does not have the necessary permissions to perform this action, then the host goes into a "Failed" status.
 
 ## Next steps
 

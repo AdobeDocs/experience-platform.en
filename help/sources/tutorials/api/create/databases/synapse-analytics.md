@@ -1,46 +1,49 @@
 ---
-keywords: Experience Platform;home;popular topics;Synapse;synapse;Azure Synapse Analytics
-solution: Experience Platform
-title: Create an Azure Synapse Analytics Base Connection Using the Flow Service API
-type: Tutorial
-description: Learn how to connect Azure Synapse Analytics to Adobe Experience Platform using the Flow Service API.
+title: Connect Azure Synapse Analytics To Experience Platform Using The Flow Service API
+description: Learn how to connect your Azure Synapse Analytics account to Experience Platform using APIs.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
 ---
-# Create an [!DNL Azure Synapse Analytics] base connection using the [!DNL Flow Service] API
+# Connect [!DNL Azure Synapse Analytics] to Experience Platform using the [!DNL Flow Service] API
 
-A base connection represents the authenticated connection between a source and Adobe Experience Platform.
+>[!IMPORTANT]
+>
+>The [!DNL Azure Synapse Analytics] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
-This tutorial walks you through the steps to create a base connection for [!DNL Azure Synapse Analytics] (hereinafter referred to as "[!DNL Synapse]") using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read this guide to learn how to connect your [!DNL Azure Synapse Analytics] account to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
-## Getting started
+## Get started
 
-This guide requires a working understanding of the following components of Adobe Experience Platform:
+This guide requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Synapse] using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Azure Synapse Analytics] using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 
-In order for [!DNL Flow Service] to connect with [!DNL Synapse], you must provide values for the following connection properties:
+Read the [[!DNL Azure Synapse Analytics] overview](../../../../connectors/databases/synapse-analytics.md#prerequisites) for information on authentication.
 
-| Credential | Description |
-| ---------- | ----------- |
-| `connectionString` | The connection string used to connect to [!DNL Synapse]. The [!DNL Synapse] connection string pattern is `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
-| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Synapse] is: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
+### Using Experience Platform APIs
 
-For more information about obtaining a connection string, refer to [this Synapse document](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&tabs=azure-powershell).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
-### Using Platform APIs
+## Connect [!DNL Azure Synapse Analytics] to Experience Platform
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+Read the following to learn how to create a base connection and connection your [!DNL Azure Synapse Analytics] account to Experience Platform.
 
-## Create a base connection
+### Create a base connection
 
-A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+A **base connection** stores key information that links your source system to Adobe Experience Platform. This includes:
 
-To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Synapse] authentication credentials as part of the request parameters.
+* Your source's authentication credentials
+* The current status of the connection
+* A unique **base connection ID**
+
+The **base connection ID** allows you to browse and explore files from your source, helping you identify which items to ingest, along with their data types and formats.
+
+To create a base connection ID, send a POST request to the `/connections` endpoint, including your [!DNL Azure Synapse Analytics] authentication credentials in the request parameters.
 
 **API format**
 
@@ -48,42 +51,52 @@ To create a base connection ID, make a POST request to the `/connections` endpoi
 POST /connections
 ```
 
+>[!BEGINTABS]
+
+>[!TAB Connection String Based Authentication]
+
 **Request**
 
-The following request creates a base connection for [!DNL Synapse]:
+The following request creates a base connection for [!DNL Azure Synapse Analytics] using connection string based authentication.
+
++++View example request
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Connection for Azure Synapse Analytics",
-        "description": "Connection for Azure Synapse Analytics",
-        "auth": {
-            "specName": "Connection String Based Authentication",
-            "params": {
-                "connectionString": "Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30"
-            }
-        },
-        "connectionSpec": {
-            "id": "a49bcc7d-8038-43af-b1e4-5a7a089a7d79",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Connection for Azure Synapse Analytics",
+      "description": "Connection for Azure Synapse Analytics",
+      "auth": {
+          "specName": "Connection String Based Authentication",
+          "params": {
+              "connectionString": "Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30"
+          }
+      },
+      "connectionSpec": {
+          "id": "a49bcc7d-8038-43af-b1e4-5a7a089a7d79",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Parameter | Description |
 | --------- | ----------- |
-| `auth.params.connectionString` | The connection string used to connect to [!DNL Synapse]. The [!DNL Synapse] connection string pattern is `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
-| `connectionSpec.id` | The [!DNL Synapse] connection specification ID is: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. |
+| `auth.params.connectionString` | The connection string used to connect to [!DNL Azure Synapse Analytics]. The [!DNL Azure Synapse Analytics] connection string pattern is `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
+| `connectionSpec.id` | The [!DNL Azure Synapse Analytics] connection specification ID is: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. |
+
++++
 
 **Response**
 
-A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your database in the next tutorial.
+A successful response returns details of the newly created base connection, including its unique identifier (`id`).
+
++++View example response
 
 ```json
 {
@@ -92,9 +105,76 @@ A successful response returns details of the newly created connection, including
 }
 ```
 
++++
+
+>[!TAB Service Principal Key Based Authentication]
+
+The following request creates a base connection for [!DNL Azure Synapse Analytics] using service principal key based authentication.
+
+**Request**
+
++++View example request
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Connection for Azure Synapse Analytics",
+    "description": "Connection for Azure Synapse Analytics",
+    "auth": {
+      "specName": "Service Principal Key Based Authentication",
+      "params": {
+        "server": "yourworkspace.sql.azuresynapse.net",
+        "database": "SalesDW",
+        "tenant": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+        "servicePrincipalId": "e7b8c1f2-1234-4c9a-9f3e-abcdef123456",
+        "servicePrincipalKey": "~XyZ1234abcDEF5678..."
+      }
+    },
+    "connectionSpec": {
+      "id": "a49bcc7d-8038-43af-b1e4-5a7a089a7d79",
+      "version": "1.0"
+    }
+  }'
+
+```
+
+| Credential | Description |
+| --- | --- |
+| `auth.params.server` | The fully qualified domain name of your [!DNL Azure Synapse Analytics] SQL endpoint. |
+| `auth.params.database` | The name of the specific database within your [!DNL Azure Synapse Analytics] workspace. |
+| `auth.params.tenant` | The [!DNL Azure Active Directory] tenant ID associated with your [!DNL Azure] subscription. |
+| `auth.params.servicePrincipalId` | The client ID of an [!DNL Azure Active Directory] application. |
+| `auth.params.servicePrincipalKey` | The client secret or password associated with the service principal. |
+| `connectSpec.id` | The connection spec ID of [!DNL Azure Synapse Analytics]. |
+
++++
+
+**Response**
+
+A successful response returns details of the newly created base connection, including its unique identifier (`id`).
+
++++View example response
+
+```json
+{
+    "id": "6bc13a3b-3546-455f-813a-3b3546a55fb1",
+    "etag": "\"3500866c-0000-0200-0000-5e83afa30000\""
+}
+```
+
++++
+
+>[!ENDTABS]
+
 ## Next steps
 
-By following this tutorial, you have created a [!DNL Synapse] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
+By following this tutorial, you have created a [!DNL Azure Synapse Analytics] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
 
 * [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
-* [Create a dataflow to bring database data to Platform using the [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Create a dataflow to bring database data to Experience Platform using the [!DNL Flow Service] API](../../collect/database-nosql.md)

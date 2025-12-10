@@ -5,7 +5,7 @@ exl-id: 56d9c77a-d7eb-498d-994f-b15d150dedb7
 ---
 # Adobe Experience Platform Data Lake migration to Gen2
 
-Adobe Experience Platform is migrating to Gen2 Data Lake. This is a new generation of data lake which provides Platform users benefits such as geo-region replication, finer role-based access controls (RBAC), and better scaling.
+Adobe Experience Platform is migrating to Gen2 Data Lake. This is a new generation of data lake which provides Experience Platform users benefits such as geo-region replication, finer role-based access controls (RBAC), and better scaling.
 
 ## User impact
 
@@ -18,6 +18,6 @@ While Adobe is migrating the Data Lake from Gen1 to Gen 2, users will be able to
 - **Segmentation Service**: Audiences derived from **batch** segmentation cannot be activated during the migration. Audiences derived from **streaming** segmentation will not be affected.
 - **Customer Journey Analytics**: Customer Journey Analytics reports data may be out of date and will not refresh during the migration, as batches are not being ingested into Data Lake.
 
-## Communication to Platform users
+## Communication to Experience Platform users
 
-Adobe will be contacting System Administrators to discuss the impact of the migration in detail and to confirm the migration dates and times for specific IMS Organizations.
+Adobe will be contacting System Administrators to discuss the impact of the migration in detail and to confirm the migration dates and times for specific organizations.

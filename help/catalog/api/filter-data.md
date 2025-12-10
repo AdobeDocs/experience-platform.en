@@ -2,24 +2,26 @@
 keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data;date range
 solution: Experience Platform
 title: Filter Catalog Data Using Query Parameters
-description: The Catalog Service API allows response data to be filtered through the use of request query parameters. Part of best practices for Catalog is to use filters in all API calls, as they reduce the load on the API and help to improve overall performance.
+description: Use query parameters to filter response data in the Catalog Service API and retrieve only the information you need. Apply filters to your API calls to reduce load and improves performance, ensuring faster and more efficient data retrieval.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
 ---
 # Filter [!DNL Catalog] data using query parameters
 
-The [!DNL Catalog Service] API allows response data to be filtered through the use of request query parameters. Part of best practices for [!DNL Catalog] is to use filters in all API calls, as they reduce the load on the API and help to improve overall performance.
+To improve performance and retrieve relevant results, use query parameters to filter [!DNL Catalog Service] API response data. 
 
-This document outlines the most common methods for filtering [!DNL Catalog] objects in the API. It is recommended that you reference this document while reading the [Catalog developer guide](getting-started.md) to learn more about how to interact with the [!DNL Catalog] API. For more general information on [!DNL Catalog Service], see the [[!DNL Catalog] overview](../home.md).
+Learn about common filtering methods for [!DNL Catalog] objects in the API. Use this document alongside the [Catalog Developer Guide](getting-started.md) for more details on API interactions. For general [!DNL Catalog Service] information, see the [[!DNL Catalog] overview](../home.md).
 
-## Limit returned objects
+## Limit returned objects {#limit-returned-objects}
 
-The `limit` query parameter constrains the number of objects returned in a response. [!DNL Catalog] responses are automatically metered according to configured limits:
+The `limit` query parameter restricts the number of objects returned in a response. [!DNL Catalog] responses follow predefined limits:
 
-* If a `limit` parameter is not specified, the maximum number of objects per response payload is 20.
+* If the `limit` parameter is not specified, the maximum number of objects per response is 20.
 * For dataset queries, if `observableSchema` is requested using the `properties` query parameter, the maximum number of datasets returned is 20.
-* The global limit for all other Catalog queries is 100 objects.
-* Invalid `limit` parameters (including `limit=0`) result in 400-level error responses that outline proper ranges.
-* Limits or offsets that are passed as query parameters take precedence over those that are passed as headers.
+* For user tokens, the maximum limit is 1.
+* For service tokens, the maximum limit is 20.
+* The global limit for other Catalog queries is 100 objects.
+* Invalid `limit` values (including `limit=0`) result in 400-level error responses specifying proper ranges.
+* Limits or offsets passed as query parameters take precedence over those in headers.
 
 **API format**
 
@@ -29,8 +31,8 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
-| `{LIMIT}` | An integer indicating the number of objects to return, ranging from 1 to 100. |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to retrieve. Valid objects: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul>|
+| `{LIMIT}` | An integer specifying the number of objects to return (range: 1-100). |
 
 **Request**
 
@@ -54,12 +56,12 @@ A successful response returns a list of datasets, limited to the number indicate
     "5ba9452f7de80400007fc52a": {
         "name": "Sample Dataset 1",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"
+        "files": "@/dataSetFiles?dataSetId=5ba9452f7de80400007fc52a"
     },
     "5bb276b03a14440000971552": {
         "name": "Sample Dataset 2",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5bb276b03a14440000971552/views/5bb276b01250b012f9acc75b/files"
+        "files": "@/dataSetFiles?dataSetId=5bb276b03a14440000971552"
     },
     "5bceaa4c26c115000039b24b": {
         "name": "Sample Dataset 3"
@@ -67,13 +69,13 @@ A successful response returns a list of datasets, limited to the number indicate
 }
 ```
 
-## Limit displayed properties
+## Limit displayed properties {#limit-displayed-properties}
 
 Even when filtering the number of objects returned using the `limit` parameter, the returned objects themselves can often contain more information than you actually need. To further reduce the load on the system, it is best practice to filter responses to include only the properties that you need.
 
 The `properties` parameter filters response objects to return only a set of specified properties. The parameter can be set to return one or multiple properties.
 
-The `properties` parameter only accepts top-level object properties, meaning that for the following sample object, you could apply filters for `name`, `description`, and `subItem`, but NOT for `sampleKey`.
+The `properties` parameter can accept any level object properties. `sampleKey` can be extracted using `?properties=subItem.sampleKey`.
 
 ```json
 {
@@ -97,7 +99,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul>|
 | `{PROPERTY}` | The name of an attribute to include in the response body. |
 | `{OBJECT_ID}` | The unique identifier of a specific [!DNL Catalog] object being retrieved. |
 
@@ -152,7 +154,7 @@ Based on the response above, the following can be inferred:
 >
 >In the `schemaRef` property for each dataset, the version number indicates the latest minor version of the schema. See the section on [schema versioning](../../xdm/api/getting-started.md#versioning) in the XDM API guide for more information.
 
-## Offset starting index of response list
+## Offset starting index of response list {#offset-starting-index}
 
 The `start` query parameter offsets the response list forward by a specified number, using zero-based numbering. For example, `start=2` would offset the response to start on the third listed object.
 
@@ -166,7 +168,7 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of Catalog object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of Catalog object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul>|
 | `{OFFSET}` | An integer indicating the number of objects to offset the response by. |
 
 **Request**
@@ -200,7 +202,7 @@ Some Catalog objects support the use of a `tags` attribute. Tags can attach info
 There are a few limitations to consider when using tags:
 
 * The only Catalog objects that currently support tags are datasets, batches, and connections.
-* Tag names are unique to your IMS Organization.
+* Tag names are unique to your organization.
 * Adobe processes may leverage tags for certain behaviors. The names of these tags are prefixed with "adobe" as a standard. Therefore, you should avoid this convention when declaring tag names.
 * The following tag names are reserved for use across [!DNL Experience Platform], and therefore cannot be declared as a tag name for your organization:
   * `unifiedProfile`: This tag name is reserved for datasets to be ingested by [[!DNL Real-Time Customer Profile]](../../profile/home.md).
@@ -222,17 +224,6 @@ Below is an example of a dataset that contains a `tags` property. The tags withi
         },
         "name": "Sample Dataset",
         "description": "Same dataset containing sample data.",
-        "dule": {
-            "identity": [
-                "I1"
-            ]
-        },
-        "statsCache": {},
-        "state": "DRAFT",
-        "lastBatchId": "ca12b29612bf4052872edad59573703c",
-        "lastBatchStatus": "success",
-        "lastSuccessfulBatch": "ca12b29612bf4052872edad59573703c",
-        "namespace": "{NAMESPACE}",
         "createdUser": "{CREATED_USER}",
         "createdClient": "{CREATED_CLIENT}",
         "updatedUser": "{UPDATED_USER}",
@@ -258,7 +249,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li></ul>|
 | `{TAG_NAME}` | The name of the tag to filter by. |
 | `{TAG_VALUE}` | The value of the tag to filter by. Supports wildcard characters (`*`). |
 
@@ -298,8 +289,6 @@ A successful response returns a list of datasets that contain `sampleTag` with a
                     "Example tag value"
                 ]
             },
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
@@ -321,8 +310,6 @@ A successful response returns a list of datasets that contain `sampleTag` with a
                     "2.0"
                 ]
             },
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -369,8 +356,6 @@ A successful response contains a list of [!DNL Catalog] objects that fall within
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
@@ -381,8 +366,6 @@ A successful response contains a list of [!DNL Catalog] objects that fall within
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -406,7 +389,7 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of Catalog object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of Catalog object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul>|
 | `{PROPERTY_NAME}` | The name of a property to sort the results by. |
 
 **Request**
@@ -437,8 +420,6 @@ A successful response contains a list of [!DNL Catalog] objects that are sorted 
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
@@ -449,8 +430,6 @@ A successful response contains a list of [!DNL Catalog] objects that are sorted 
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.2",
@@ -461,8 +440,6 @@ A successful response contains a list of [!DNL Catalog] objects that are sorted 
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -473,6 +450,10 @@ A successful response contains a list of [!DNL Catalog] objects that are sorted 
 
 * [Using simple filters](#using-simple-filters): Filter by whether a specific property matches a specific value.
 * [Using the property parameter](#using-the-property-parameter): Use conditional expressions to filter based whether a property exists, or if a property's value matches, approximates, or compares to another specified value or regular expression.
+
+>[!NOTE]
+>
+>Any attribute of a Catalog object can be used to filter results in the Catalog Service API.
 
 ### Using simple filters {#using-simple-filters}
 
@@ -493,7 +474,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul>|
 | `{PROPERTY_NAME}` | The name of the property whose value you want to filter by. |
 | `{VALUE}` | A property value that determines which results to include (or exclude, depending on the query). |
 
@@ -525,8 +506,6 @@ A successful response contains a list of datasets, excluding any datasets whose 
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
@@ -537,8 +516,6 @@ A successful response contains a list of datasets, excluding any datasets whose 
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -547,7 +524,23 @@ A successful response contains a list of datasets, excluding any datasets whose 
 
 The `property` query parameter provides more flexibility for property-based filtering than simple filters. In addition to filtering based on whether a property has a specific value, the `property` parameter can use other comparison operators (such as "more-than" (`>`) and "less-than" (`<`)) as well as regular expressions to filter by property values. It can also filter by whether or not a property exists, regardless of its value.
 
-The `property` parameter only accepts top-level object properties, meaning that for the following sample object, you could filter by property for `name`, `description`, and `subItem`, but NOT for `sampleKey`.
+Use an ampersand (`&`) to combine multiple filters and refine your query in a single request. When you filter by multiple fields, an `AND` relationship is applied by default.
+
+>[!NOTE]
+>
+>If you combine multiple `property` parameters in a single query, at least one must apply to the `id` or `created` field. The following query returns objects where `id` is `abc123` **AND** `name` is not `test`:
+>
+>```http
+>GET /datasets?property=id==abc123&property=name!=test
+>```
+
+If you use multiple `property` parameters on the same field, only the last specified parameter takes effect. 
+
+>[!IMPORTANT]
+>
+>You **cannot** use a single `property` parameter to filter multiple fields at once. Each field must have its own `property` parameter. The following example (`property=id>abc,name==myDataset`) is **not** allowed because it tries to apply conditions to `id` and `name` within a **single `property` parameter**.
+
+The `property` parameter can accept any level object properties. `sampleKey` can be used for filtering using `?properties=subItem.sampleKey`.
 
 ```json
 {
@@ -569,7 +562,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul>|
 | `{CONDITION}` | A conditional expression that indicates which property to query for, and how its value is to be evaluated. Examples are provided below. |
 
 The value of the `property` parameter supports several different kinds of conditional expressions. The following table outlines the basic syntax for supported expressions:
@@ -585,6 +578,8 @@ The value of the `property` parameter supports several different kinds of condit
 | <= | Returns only objects whose property values are less than (or equal to) a stated amount. | `property=version<=1.0.0` |
 | > | Returns only objects whose property values are greater than (but not equal to) a stated amount. | `property=version>1.0.0` |
 | >= | Returns only objects whose property values are greater than (or equal to) a stated amount. | `property=version>=1.0.0` |
+| * | A wildcard applies to any string property and matches any sequence of characters. Use `**` to escape a literal asterisk. |  `property=name==te*st` |
+| & | Combines multiple `property` parameters with an `AND` relationship between them. |   `property=id==abc&property=name!=test` |
 
 >[!NOTE]
 >
@@ -618,8 +613,6 @@ A successful response contains a list of datasets whose version numbers are grea
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.6",
@@ -630,8 +623,6 @@ A successful response contains a list of datasets whose version numbers are grea
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.4",
@@ -642,18 +633,42 @@ A successful response contains a list of datasets whose version numbers are grea
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
 
-## Combine multiple filters
+## Filter arrays with the property parameter {#filter-arrays}
 
-Using an ampersand (`&`), you can combine multiple filters in a single request. When additional conditions are added to a request, an AND relationship is assumed. 
+Use equality and inequality operators to include or exclude specific values when filtering results based on array properties.
+
+### Equality filters {#equality-filters}
+
+To filter an array field by multiple values, use separate property parameters for each value. Use equality filters to return only the entries in the array data that match the specified values.
+
+>[!NOTE]
+>
+>The requirement to include `id` or `created` when filtering multiple fields does **not** apply when filtering multiple values within an array field.
+
+The example query below only returns results from the array that includes both `val1` and `val2`.
 
 **API format**
 
 ```http
-GET /{OBJECT_TYPE}?{FILTER_1}={VALUE}&{FILTER_2}={VALUE}&{FILTER_3}={VALUE}
+GET /{OBJECT_TYPE}?property=arrayField=val1&property=arrayField=val2
 ```
+
+### Inequality filters {#inequality-filters}
+
+Use inequality operators (`!=`) on an array field to exclude any entries in the data where the array contains the specified values.
+
+**API format**
+
+```http
+GET /{OBJECT_TYPE}?property=arrayField!=val1&property=arrayField!=val2
+```
+
+This query returns documents where arrayField does not contain `val1` or `val2`.
+
+### Equality and inequality filter limitations {#equality-inequality-limitations}
+
+You cannot apply both equality (`=`) and inequality (`!=`) to the same field in a single query.

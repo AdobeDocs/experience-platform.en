@@ -11,9 +11,9 @@ exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
 
 In the Adobe Experience Platform user interface, you can delete existing connections to destinations.
 
-Deleting a destination removes any existing dataflows to that destination. All segments activated to the destinations that you delete are unmapped before the dataflow is deleted.
+Deleting a destination removes any existing dataflows to that destination. All audiences activated to the destinations that you delete are unmapped before the dataflow is deleted.
 
-There are two ways you can delete destinations from the [!DNL Platform] [!DNL UI]. You can:
+There are two ways you can delete destinations from the [!DNL Experience Platform] [!DNL UI]. You can:
 
 * [Delete destinations from the [!UICONTROL Browse] tab](#delete-browse-tab)
 * [Delete destinations from the destination details page](#delete-destination-details-page)
@@ -26,11 +26,11 @@ Follow the steps below to delete a destination from the [!UICONTROL Browse] tab.
 
     ![Browse destinations](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Select the filter icon ![Filter-icon](../assets/ui/delete-destinations/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
+2. Select the filter icon ![Filter-icon](/help/images/icons/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
 
     ![Filter destinations](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Select the ![More button](../assets/ui/delete-destinations/more-icon.png) button in the Name column and then select ![Delete button](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Delete]** to remove an existing destination connection.
+3. Select the ![More button](/help/images/icons/more.png) button in the Name column and then select ![Delete button](/help/images/icons/delete.png) **[!UICONTROL Delete]** to remove an existing destination connection.
     ![Delete destinations](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. Select **[!UICONTROL Delete]** to confirm the removal of the destination connection.
@@ -45,7 +45,7 @@ Follow the steps below to delete a destination from the destination details page
 
     ![Browse destinations](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Select the filter icon ![Filter-icon](../assets/ui/delete-destinations/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
+2. Select the filter icon ![Filter-icon](/help/images/icons/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
 
     ![Filter destinations](../assets/ui/delete-destinations/filter-destinations.png)
 
@@ -71,4 +71,4 @@ Follow the steps below to delete a destination from the destination details page
 
     >[!NOTE]
     >
-    >Depending on server load, it can take a few minutes for [!DNL Platform] to delete the destination.
+    >Depending on server load, it can take a few minutes for [!DNL Experience Platform] to delete the destination.

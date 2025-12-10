@@ -7,45 +7,49 @@ exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
 ---
 # [!DNL Marketo Engage] connector
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+>[!IMPORTANT]
+>
+>You can now use the [!DNL Marketo Engage] source when running Adobe Experience Platform on Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../../landing/multi-cloud.md).
 
-[[!DNL Marketo Engage]](https://www.marketo.com/software/) (hereinafter referred to as "[!DNL Marketo]") is a complete solution for lead management and B2B marketers looking to transform customer experiences by engaging across every stage of complex buying journeys.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-With the [!DNL Marketo] source connector, you can bring B2B data from [!DNL Marketo] to Platform and keep this data up to date using Platform-connected applications.
+[[!DNL Marketo Engage]](https://www.marketo.com/software/) is a complete solution for lead management and B2B marketers looking to transform customer experiences by engaging across every stage of complex buying journeys.
+
+With the [!DNL Marketo Engage] source connector, you can bring B2B data from [!DNL Marketo Engage] to Experience Platform and keep this data up to date using Experience Platform-connected applications.
 
 >[!IMPORTANT]
 >
 >You must have access to [Adobe Real-Time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) to use all Marketo datasets for segmentation with the [Real-Time Customer Profile](../../../../profile/home.md). Without Real-Time CDP B2B Edition, you can still use the Marketo source to bring data from the people and activities datasets to Real-Time Customer Profile for segmentation.
 
-This document provides an overview of the [!DNL Marketo] source connector, including information about how to authenticate the connector, how to map [!DNL Marketo] fields to Experience Data Model (XDM), and the connector's data latency.
-
-## Authenticate your [!DNL Marketo] connector
-
-In order to connect [!DNL Marketo] to Platform, you must first retrieve values for your `munchkinId`, `clientId`, and `clientSecret`.
-
-See the steps outlined in the [Authenticate your Marketo source connector](./marketo-auth.md) document to retrieve your credentials.
+This document provides an overview of the [!DNL Marketo Engage] source connector, including information about how to authenticate the connector, how to map [!DNL Marketo Engage] fields to Experience Data Model (XDM), and the connector's data latency.
 
 ## Set up Adobe Organization Mapping
 
-Before you can establish mapping sets for [!DNL Marketo], you must first set up Adobe Organization Mapping. For detailed steps on how to complete this, see the guide on [setting up Adobe Organization Mapping for [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+Before you can establish mapping sets for [!DNL Marketo Engage], you must first set up Adobe Organization Mapping. For detailed steps on how to complete this, see the guide on [setting up Adobe Organization Mapping for [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+
+## Authenticate your [!DNL Marketo Engage] connector
+
+In order to connect [!DNL Marketo Engage] to Experience Platform, you must first retrieve values for your `munchkinId`, `clientId`, and `clientSecret`.
+
+See the steps outlined in the [Authenticate your Marketo source connector](./marketo-auth.md) document to retrieve your credentials.
 
 ## Set up B2B namespaces and schema auto-generation utility
 
-Next, use the B2B namespace and schema auto-generation utility to set up your Platform developer console and Postman environment. This allows you to auto-populate your B2B namespaces and schemas. For detailed instructions, see the guide on [setting up your B2B namespaces and schema auto-generation utility](./marketo-namespaces.md)
+Next, use the B2B namespace and schema auto-generation utility to set up your Experience Platform developer console and Postman environment. This allows you to auto-populate your B2B namespaces and schemas. For detailed instructions, see the guide on [setting up your B2B namespaces and schema auto-generation utility](./marketo-namespaces.md)
 
 ## Experience Data Model (XDM)
 
-XDM is a publicly documented specification that provides common structures and definitions that allow you to ingest data from third-party sources for use in downstream Platform services.
+XDM is a publicly documented specification that provides common structures and definitions that allow you to ingest data from third-party sources for use in downstream Experience Platform services.
 
-Adhering to XDM standards allows data to be uniformly incorporated into the Platform ecosystem, making it easier to deliver data and gather information.
+Adhering to XDM standards allows data to be uniformly incorporated into the Experience Platform ecosystem, making it easier to deliver data and gather information.
 
-To learn more about XDM and its role in Platform, please see the [XDM System overview](../../../../xdm/home.md).
+To learn more about XDM and its role in Experience Platform, please see the [XDM System overview](../../../../xdm/home.md).
 
-## Field mapping from [!DNL Marketo] to XDM
+## Field mapping from [!DNL Marketo Engage] to XDM
 
-To establish a source connection between [!DNL Marketo] and Platform, the Marketo source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Platform.
+To establish a source connection between [!DNL Marketo Engage] and Experience Platform, the Marketo source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Experience Platform.
 
-See the following for detailed information on the field mapping rules between [!DNL Marketo] datasets and Platform:
+See the following for detailed information on the field mapping rules between [!DNL Marketo Engage] datasets and Experience Platform:
 
 * [Activities](../mapping/marketo.md#activities)
 * [Programs](../mapping/marketo.md#programs)
@@ -58,21 +62,27 @@ See the following for detailed information on the field mapping rules between [!
 * [Opportunity contact roles](../mapping/marketo.md#opportunity-contact-roles)
 * [Persons](../mapping/marketo.md#persons)
 
-## Expected latency of [!DNL Marketo] data on Platform
+## Expected latency of [!DNL Marketo Engage] data on Experience Platform
 
-The following table outlines the expected latency for bringing [!DNL Marketo] data into Platform, based on the nature of ingestion and the desired destination:
+The following table outlines the expected latency for bringing [!DNL Marketo Engage] data into Experience Platform, based on the nature of ingestion and the desired destination:
 
 | Destination | Expected Latency |
 | ----------- | ---------------- |
-| [!DNL Real-Time Customer Profile] | < 1 minute |
-| Data Lake | < 60 minutes |
+| [!DNL Real-Time Customer Profile] | < 10 minutes |
+| Data lake | < 60 minutes |
+
+>[!NOTE]
+>
+>The latency figures above represent expectations at a 95% confidence level. Actual latencies will vary and may extend beyond those figures by 50% in rare cases.
 
 ## Next steps and additional resources
 
-The following documentation provides further information on creating a [!DNL Marketo] source connection:
+The following documentation provides further information on creating a [!DNL Marketo Engage] source connection:
 
-* For information on how to connect your [!DNL Marketo] data to Platform, see the tutorial on [creating a Marketo source connector in the UI](../../../tutorials/ui/create/adobe-applications/marketo.md).
-* For information on the underlying setup for the B2B namespaces and schemas used with [!DNL Marketo], see the documentation for [B2B namespaces and schemas](./marketo-namespaces.md).
-* For information on finding your [!DNL Marketo] munchkin ID and generating your credentials, see the [[!DNL Marketo] authentication guide](./marketo-auth.md).
-* For information on the specific mapping rules that apply to [!DNL Marketo] datasets, see the documentation on [[!DNL Marketo] field mappings](../mapping/marketo.md).
-* For general information on [!DNL Real-Time Customer Data Platform B2B Edition] and its features, see the documentation on [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
+* For information on how to connect your [!DNL Marketo Engage] data to Experience Platform, read the tutorial on [creating a [!DNL Marketo Engage] source connection in the UI](../../../tutorials/ui/create/adobe-applications/marketo.md).
+  * For information on how to set up your schemas and ingest custom activity data, read the tutorial on [creating a source connection and dataflow for [!DNL Marketo Engage] custom activity data](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
+  * For information on how to migrate your ECID mapping from the [!DNL Person] dataset to the [!DNL Activity] dataset, read the [ECID mapping migration guide](./migration.md).
+* For information on the underlying setup for the B2B namespaces and schemas used with [!DNL Marketo Engage], read the documentation for [B2B namespaces and schemas](./marketo-namespaces.md).
+* For information on finding your [!DNL Marketo Engage] munchkin ID and generating your credentials, read the [[!DNL Marketo Engage] authentication guide](./marketo-auth.md).
+* For information on the specific mapping rules that apply to [!DNL Marketo Engage] datasets, read the documentation on [[!DNL Marketo Engage] field mappings](../mapping/marketo.md).
+* For general information on [!DNL Real-Time Customer Data Platform B2B Edition] and its features, read the documentation on [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).

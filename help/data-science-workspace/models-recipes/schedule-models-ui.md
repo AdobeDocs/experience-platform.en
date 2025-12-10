@@ -8,6 +8,12 @@ exl-id: 51f6f328-7c63-4de1-9184-2ba526bb82e2
 ---
 # Schedule a model in the Data Science Workspace UI
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 Adobe Experience Platform [!DNL Data Science Workspace] allows you to set up scheduled scoring and training runs on a machine learning service. Automating the training and scoring process can help maintain and improve a service's efficiency through time by keeping up with patterns within your data.
 
 This tutorial walks through the steps to configure training and scoring schedules on an existing service through the [!UICONTROL Service Gallery]. It is broken into the following main sections:
@@ -17,7 +23,7 @@ This tutorial walks through the steps to configure training and scoring schedule
 
 ## Getting started
 
-In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 
 This tutorial requires an existing service. If you do not have an accessible service to work with, you can create one by following the tutorial for [publishing a model as a service](./publish-model-service-ui.md).
 

@@ -10,9 +10,9 @@ exl-id: 69c99f94-9cb9-43ff-9315-ce166ab35a60
 
 >[!NOTE]
 >
-> The IBM DB2 connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+> The IBM DB2 connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an IBM DB2 (hereinafter referred to as "DB2") source connector using the [!DNL Platform] user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an IBM DB2 (hereinafter referred to as "DB2") source connector using the [!DNL Experience Platform] user interface.
 
 ## Getting started
 
@@ -40,7 +40,7 @@ For more information about getting started, refer to [this DB2 document](https:/
 
 ## Connect your IBM DB2 account
 
-Once you have gathered your required credentials, you can follow the steps below to link your DB2 account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your DB2 account to [!DNL Experience Platform].
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
 
@@ -66,4 +66,4 @@ To connect an existing account, select the DB2 account you want to connect with,
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your DB2 account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your DB2 account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Experience Platform]](../../dataflow/databases.md).

@@ -7,6 +7,101 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 ---
 # Adobe Experience Platform Debugger release notes
 
+## Version 1.6.4 - May 6, 2025
+
+### Fixes and improvements
+
+* Fixed an issue where sign-in was unavailable.
+
+## Version 1.6.3 - April 30, 2025
+
+### Fixes and improvements
+
+* Fixed an issue where the Debugger would prevent DTM and Tags functions from working.
+* Fixed an issue where Analytics Post-Processed Hits would not appear in logs.
+* Fixed an issue where data in non-ASCII languages like Japanese would not show correctly in logs.
+
+## Version 1.6.2 - October 1, 2024
+
+### Fixes and improvements
+
+* Fixed an issue where the Debugger was too sensitive to all CSP errors
+
+## Version 1.6.1 - July 25, 2024
+
+### Fixes and improvements
+
+* Fixed an issue that prevented users from adding new Tags embed codes to pages without them.
+
+## Version 1.6.0 - July 11, 2024
+
+### New features
+
+* Allow for users to opt-in/out of technical and personal data collection.
+
+### Fixes and improvements
+
+* Fix Firefox script injection and privacy policy link.
+* Capture missing Analytics requests.
+* Fix crashes on pages with lots of complex console messages.
+* Update the Adobe Experience Platform Debugger to a Manifest v3 extension.
+
+## Version 1.5.4 - December 19, 2023
+
+### Fixes and improvements
+
+* Fixed an issue where settings were not being retained.
+* Fixed an issue that caused the Debugger to crash while viewing Analytics Post-Processed hits.
+
+## Version 1.5.3 - December 6, 2023
+
+### New features
+
+* Added a "lock to the active tab when opening the Debugger" setting.
+
+### Fixes and improvements
+
+* Fixed an issue where Analytics requests were missing on private domains.
+* Fixed an issue where Activity Map data would be missing from Analytics requests table.
+* Fixed an issue where viewing the Target Trace would cause a crash.
+* Added a warning when the Debugger fails to set up on-page infrastructure in Firefox.
+
+## Version 1.5.2 - November 10, 2023
+
+(Firefox Only)
+
+### Fixes and improvements
+
+* Updated the organization of files.
+
+## Version 1.5.1 - November 2, 2023
+
+### Fixes and improvements
+
+* Fixed issues where Analytics events would be ignored or duplicated.
+* Fixed an issue where the maximum state storage size was exceeded.
+* Fixed an issue where the Edge Logs search would not filter events.
+
+## Version 1.5.0 - October 19, 2023
+
+### New features
+
+* Show links to property, environment, and rules in Tags summary and logs.
+
+### Fixes and improvements
+
+* Fixed an issue where Tags summary data was not sent.
+* Fixed issue where Assurance sessions would give a CORS error
+* Fixed an issue that prevented Target Trace from appearing.
+* Fixed the 'Send Feedback' button.
+* Fixed the missing "Datastream ID" in the Web SDK Summary for version ≥2.18.0.
+* Fixed an issue where Edge logs were not searchable.
+* Added a note about additional profiles for certain account types.
+
+## Version 1.4.1 - November 1, 2022
+
+* Improved performance on pages with many Adobe Experience Platform Assurance events.
+
 ## Version 1.4.0 - October 3, 2022
 
 * Added AEP Assurance debugging support for Web SDK hybrid implementations.
@@ -51,7 +146,7 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 ## Version 1.1.0 - October 5, 2021
 
 * Remote debugging visualization - Organize the remote debugging events into a visual flow chart in the Adobe Experience Platform Web SDK > Edge Transactions section.
-* Require the Adobe Experience Platform Web SDK IMS org used on the page match the logged in org when starting a new remote debugging session.
+* Require the Adobe Experience Platform Web SDK organization used on the page match the logged in org when starting a new remote debugging session.
 * Only show the edge transactions for the connected tab. Target trace logs are still available in the Logs > Edge section.
 * Allow separate data stream ID config override for each instance of the Adobe Experience Platform Web SDK on the page. Add debug enabled toggle.
 * Fixed an issue where the Adobe Target trace token was not always sent with remote debugging sessions for the Adobe Experience Platform Web SDK.

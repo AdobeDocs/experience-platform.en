@@ -1,6 +1,6 @@
 ---
 title: Medication Class
-description: This document provides an overview of the Medication class in Experience Data Model (XDM).
+description: Learn about the Medication class in Experience Data Model (XDM).
 exl-id: e5786241-dd6e-450f-98c8-2de46affb3e2
 ---
 # [!UICONTROL Medication] class

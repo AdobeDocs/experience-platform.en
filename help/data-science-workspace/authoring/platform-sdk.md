@@ -1,11 +1,17 @@
 ---
 keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Model Authoring Using the Adobe Experience Platform Platform SDK
+title: Model Authoring Using the Adobe Experience Platform SDK
 description: This tutorial provides you with information on converting data_access_sdk_python to the new Python platform_sdk in both Python and R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 ---
-# Model authoring using the Adobe Experience Platform [!DNL Platform] SDK
+# Model authoring using the Adobe [!DNL Experience Platform] SDK
+
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
 This tutorial provides you with information on converting `data_access_sdk_python` to the new Python `platform_sdk` in both Python and R. This tutorial provides information on the following operations:
 
@@ -15,7 +21,7 @@ This tutorial provides you with information on converting `data_access_sdk_pytho
 
 ## Build authentication {#build-authentication}
 
-Authentication is required to make calls to [!DNL Adobe Experience Platform], and is comprised of API Key, IMS Org ID, a user token, and a service token.
+Authentication is required to make calls to [!DNL Adobe Experience Platform], and is comprised of API Key, organization ID, a user token, and a service token.
 
 ### Python
 
@@ -25,7 +31,7 @@ If you are using Jupyter Notebook, please use the below code to build the `clien
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-If you are not using Jupyter Notebook or you need to change the IMS Org, please use the below code sample:
+If you are not using Jupyter Notebook or you need to change the organization, please use the below code sample:
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -48,7 +54,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-If you are not using Jupyter Notebook or you need to change the IMS Org, please use the below code sample:
+If you are not using Jupyter Notebook or you need to change organization, please use the below code sample:
 
 ```r
 library(reticulate)
@@ -62,7 +68,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Basic reading of data {#basic-reading-of-data}
 
-With the new [!DNL Platform] SDK, the maximum read size is 32 GB, with a maximum read time of 10 minutes. 
+With the new [!DNL Experience Platform] SDK, the maximum read size is 32 GB, with a maximum read time of 10 minutes. 
 
 If your read time is taking too long, you can try using one of the following filtering options:
 
@@ -73,7 +79,7 @@ If your read time is taking too long, you can try using one of the following fil
 
 >[!NOTE]
 >
->The IMS Org is set within the `client_context`. 
+>The organization is set within the `client_context`. 
 
 ### Python
 
@@ -139,7 +145,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-The new [!DNL Platform] SDK supports the following operations:
+The new [!DNL Experience Platform] SDK supports the following operations:
 
 | Operation | Function |
 | --------- | -------- |
@@ -149,7 +155,7 @@ The new [!DNL Platform] SDK supports the following operations:
 | Less than (`<`) | `lt()` |
 | Less than or equal to (`<=`) | `le()` |
 | And (`&`) | `And()` |
-| Or (`|`) | `Or()` |
+| Or ( &vert; ) | `Or()` |
 
 ## Filter by selected columns {#filter-by-selected-columns}
 
@@ -189,7 +195,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->The IMS Org is set within the `client_context`. 
+>The organization is set within the `client_context`. 
 
 To write data in Python and R, use one of the following examples below:
 

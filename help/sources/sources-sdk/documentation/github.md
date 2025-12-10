@@ -11,7 +11,7 @@ This document provides steps on how to use the GitHub web interface to author do
 
 >[!TIP]
 >
->The following documents from Adobe's contributing guide can be used to further support your documentation process: <ul><li>[Install Git and Markdown Authoring tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)</li><li>[Set up Git repository locally for documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)</li><li>[GitHub contribution workflow for major changes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en)</li></ul>
+>The following documents from Adobe's contributing guide can be used to further support your documentation process: <ul><li>[Install Git and Markdown Authoring tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Set up Git repository locally for documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[GitHub contribution workflow for major changes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Set up your GitHub environment
 
@@ -39,7 +39,7 @@ A folder of existing CRM sources appears. To add documentation for a new source,
 
 ![create-new-file](../assets/create-new-file.png)
 
-Name your source file `YOURSOURCE.md` where YOURSOURCE is the name of your source in Platform. For example, if your company is ACME CRM, then your file name should be `acme-crm.md`.
+Name your source file `YOURSOURCE.md` where YOURSOURCE is the name of your source in Experience Platform. For example, if your company is ACME CRM, then your file name should be `acme-crm.md`.
 
 ![git-interface](../assets/git-interface.png)
 

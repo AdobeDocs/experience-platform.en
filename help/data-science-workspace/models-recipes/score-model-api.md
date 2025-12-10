@@ -8,6 +8,12 @@ exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
 ---
 # Score a model using the [!DNL Sensei Machine Learning API]
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 This tutorial will show you how to leverage the APIs to create an Experiment and an Experiment Run. For a list of all the endpoints in the Sensei Machine Learning API, please refer to [this document](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Create a scheduled Experiment for scoring
@@ -28,7 +34,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your organization credentials found in your unique Adobe Experience Platform integration.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
 `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.  
 `{JSON_PAYLOAD}`: Experiment Run object to be sent. The example we use in our tutorial is shown here:
@@ -116,7 +122,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your organization credentials found in your unique Adobe Experience Platform integration.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
 `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.  
 `{EXPERIMENT_ID}`: The ID corresponding to the Experiment you want to target. This can be found in the response when creating your Experiment.  
@@ -181,7 +187,7 @@ curl -X GET \
 
 `{EXPERIMENT_ID}`:  The ID corresponding to the Experiment the Run is under.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
-`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your organization credentials found in your unique Adobe Experience Platform integration.  
 
 Since there are multiple Experiment Runs for a specific Experiment, the response returned will have an array of Run IDs.
 
@@ -224,7 +230,7 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`:  The ID corresponding to the Experiment.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
-`{ORG_ID}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
+`{ORG_ID}`: Your organization credentials found in your unique Adobe Experience Platform integration.  
 
 >[!NOTE]
 >

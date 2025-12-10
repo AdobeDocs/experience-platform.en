@@ -6,7 +6,11 @@ exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 ---
 # Manage labels
 
-Labels allow you to categorize datasets and fields according to usage and access policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into Platform, or as soon as data becomes available for use in Platform.
+>[!NOTE]
+>
+>To create or view computed attributes with fields containing a given label, you must have access to that label.
+
+Labels allow you to categorize datasets and fields according to usage and access policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into Experience Platform, or as soon as data becomes available for use in Experience Platform.
 
 ## Create a new label {#create-new-label}
 
@@ -15,9 +19,15 @@ Labels allow you to categorize datasets and fields according to usage and access
 >title="Label usage"
 >abstract="You can use custom labels to apply data governance and access control configurations to your data."
 
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about_create"
+>title="Create new label"
+>abstract="You can create your own custom labels to fit the needs of your organization. Custom labels can be used to apply both data governance and access control configurations to your data."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#manage-labels" text="Manage custom labels"
+
 >[!NOTE]
 >
->You must have administrative rights to create a custom label. Currently, deleting labels is not supported.
+>There is one single list of labels for a whole organization. To create a custom label, you will need **[!UICONTROL Manage Usage Labels]** permissions on the production sandbox. Label deletion is currently not supported.
 
 To create a new label, select the **[!UICONTROL Labels]** tab in the sidebar and select **[!UICONTROL Create Label]**.
 

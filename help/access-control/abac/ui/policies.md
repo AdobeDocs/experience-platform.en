@@ -6,13 +6,13 @@ exl-id: 66820711-2db0-4621-908d-01187771de14
 ---
 # Manage access control policies
 
-Access control policies are statements that bring attributes together to establish permissible and impermissible actions. Access policies can either be local or global, and can override other policies.
+Access control policies are statements that bring attributes together to establish permissible and impermissible actions. Access policies can either be local or global, and can override other policies. Adobe provides a default policy that can be activated immediately or whenever your organization is ready to start controlling access to specific objects based on labels. The default policy leverages labels applied to resources to deny access unless users are in a role with a matching label. 
 
 >[!IMPORTANT]
 >
 >Access policies are not to be confused with data usage policies, which control how data is used in Adobe Experience Platform instead of which users in your organization have access to it. See the guide on creating [data usage policies](../../../data-governance/policies/create.md) for more information.
 
-## Create a new policy
+<!-- ## Create a new policy
 
 To create a new policy, select the **[!UICONTROL Policies]** tab in the sidebar and select **[!UICONTROL Create Policy]**.
 
@@ -108,26 +108,101 @@ The **[!UICONTROL Delete user policy]** dialog appears, prompting you to confirm
 
 You are returned to the **[!UICONTROL policies]** tab and a confirmation of deletion pop over appears.
 
-![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png)
+![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png) -->
 
-## Activate a policy
+## Configure policy for a sandbox
 
-To activate an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to delete.
+>[!IMPORTANT]
+>
+>By default, the [!UICONTROL Auto-include] feature is turned on for all customers, which means all sandboxes are added to the policy.
 
-![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
+>[!NOTE]
+>
+>The **[!UICONTROL Default-Label-Based-Access-Control-Policy]** policy is currently the only one available for configuration.
+
+To view sandboxes associated to a policy, select the policy from the **[!UICONTROL Policies]** tab.
+
+![The policies page showing a list of existing policies available.](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
+
+Next, select the policy, then select **[!UICONTROL Sandboxes]** tab. A list of sandboxes associated with the policy are displayed.
+
+![The policies page showing a list of existing policies available.](../../images/flac-ui/abac-policies-sandboxes-tab.png)
+
+### Add policy to all sandboxes
+
+Use the **[!UICONTROL Auto-include]** toggle on the **[!UICONTROL Sandboxes]** tab to activate the policy for all sandboxes.
+
+![The [!UICONTROL Sandboxes] tab showing the [!UICONTROL Auto-include] toggle.](../../images/flac-ui/abac-policies-auto-include.png)
+
+The **[!UICONTROL Enable Auto-include]** dialog appears prompting you to confirm your selection. Select **[!UICONTROL Enable]** to complete the configuration setting.
+
+![The [!UICONTROL Enable Auto-include] dialog highlighting [!UICONTROL Enable].](../../images/flac-ui/abac-policies-auto-include-enable.png)
+
+>[!SUCCESS]
+>
+>The policy is activated for all existing sandboxes and will be automatically be added to any new sandboxes when they become available.
+
+### Add policy to select sandboxes
+
+>[!IMPORTANT]
+>
+>Future sandboxes will not be included in the policy by default if the [!UICONTROL Auto-include] toggle is switched off. You will need to manage and add sandboxes manually to the policy.
+
+Use the **[!UICONTROL Auto-include]** toggle on the **[!UICONTROL Sandboxes]** tab to disable the policy for all sandboxes.
+
+![The [!UICONTROL Sandboxes] tab showing the [!UICONTROL Auto-include] toggle.](../../images/flac-ui/abac-policies-auto-include.png)
+
+From the **[!UICONTROL Sandboxes]** tab, select **[!UICONTROL Add Sandboxes]** to select sandboxes that this policy will apply to.
+
+![The [!UICONTROL Sandboxes] tab showing a list of sandboxes added to the policy.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
+
+A list of sandboxes appears. Select the sandbox you would like to add from the list. Alternatively, use the search bar to search for the sandbox. Select **[!UICONTROL Save]**.
+
+![The [!UICONTROL Add Sandboxes] page showing a list of existing sandboxes available to add to the policy.](../../images/flac-ui/abac-policies-sandboxes-list.png)
+
+>[!SUCCESS]
+>
+>The selected sandboxes have been successfully added to the policy.
+
+### Remove sandboxes from a policy
+
+To remove a sandbox, select the **X** icon next to the sandbox name.
+
+![The [!UICONTROL Sandboxes] tab showing a list of sandboxes, highlighting the [!UICONTROL X] to delete.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+
+The **[!UICONTROL Remove]** dialog appears prompting you to confirm your selection. Select **[!UICONTROL Confirm]** to complete the removal.
+
+![The [!UICONTROL Remove] dialog highlighting [!UICONTROL Confirm].](../../images/flac-ui/abac-policies-remove-sandbox.png)
+
+>[!SUCCESS]
+>
+>The selected sandbox has been successfully removed from the policy.
+
+## Activate a policy {#activate-policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about"
+>title="What are policies?"
+>abstract="Policies are statements that bring attributes together to establish permissible and impermissible actions. Every organization comes with a default policy that you must activate to start controlling access to specific objects based on labels. Labels applied to resources deny access unless users are assigned to a role with a matching label. Default policies cannot be edited or deleted, but they can be activated or deactivated."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/labels" text="Manage labels"
+
+To activate an existing policy, select the policy from the **[!UICONTROL Policies]** tab. 
+
+![flac-policy-select](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
 Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, activate, delete, or duplicate the role. Select activate from the dropdown.
 
-![flac-policy-activate](../../images/flac-ui/flac-policy-delete.png)
+![flac-policy-activate](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-The **[!UICONTROL Activate user policy]** dialog appears, prompting you to confirm the activation. 
+The **[!UICONTROL Activate policy]** dialog appears, prompting you to confirm the activation. 
 
-![flac-policy-activate-confirm](../../images/flac-ui/flac-policy-activate-confirm.png)
+![flac-policy-activate-confirm](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
+
 
 You are returned to the **[!UICONTROL policies]** tab and a confirmation of activation pop over appears. The policy status shows as active.
 
-![flac-policy-activated](../../images/flac-ui/flac-policy-activated.png)
+![flac-policy-activated](../../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
 ## Next steps
 
-With a new policy created, you can proceed to the next step to [manage permissions for a role](permissions.md).
+With a policy activated, you can proceed to the next step to [manage permissions for a role](permissions.md).

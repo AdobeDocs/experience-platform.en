@@ -8,7 +8,7 @@ exl-id: 66c12f4d-8b0c-4bb2-910d-9e09fa364c94
 ---
 # Create a [!DNL ServiceNow] source connection in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL ServiceNow] source connector using the [!DNL Platform] user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL ServiceNow] source connector using the [!DNL Experience Platform] user interface.
 
 ## Getting started
 
@@ -23,7 +23,7 @@ If you already have a valid [!DNL ServiceNow] connection, you may skip the remai
 
 ### Gather required credentials
 
-In order to access your [!DNL ServiceNow] account on [!DNL Platform], you must provide the following values:
+In order to access your [!DNL ServiceNow] account on [!DNL Experience Platform], you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -35,7 +35,7 @@ For more information about getting started, refer to [this [!DNL ServiceNow] doc
 
 ## Connect your [!DNL ServiceNow] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL ServiceNow] account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL ServiceNow] account to [!DNL Experience Platform].
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
 
@@ -61,4 +61,4 @@ To connect an existing account, select the [!DNL ServiceNow] account you want to
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL ServiceNow] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/customer-success.md).
+By following this tutorial, you have established a connection to your [!DNL ServiceNow] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Experience Platform]](../../dataflow/customer-success.md).

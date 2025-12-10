@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;boolean functions;boolean;
 solution: Experience Platform
 title: PQL Boolean Functions
 description: Boolean functions are used to perform boolean logic on different elements in Profile Query Language (PQL).
@@ -11,7 +10,7 @@ Boolean functions are used to perform boolean logic on different elements in [!D
 
 ## And
 
-The `and` function is used to create a logical conjunction.
+The `and` function is used to create a logical conjunction as a boolean.
 
 **Format**
 
@@ -29,7 +28,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 ## Or
 
-The `or` function is used to create a logical disjunction.
+The `or` function is used to create a logical disjunction as a boolean.
 
 **Format**
 
@@ -66,7 +65,7 @@ not (homeAddress.countryISO = "CA")
 
 ## If
 
-The `if` function is used to resolve an expression depending on whether a specified condition is true.
+The `if` function is used to resolve an expression depending on whether a specified condition is true as a boolean.
 
 **Format**
 

@@ -13,7 +13,7 @@ This document contains additional information to help you work with the [!DNL Ca
 
 Some [!DNL Catalog] objects can be interrelated with other [!DNL Catalog] objects. Any fields that are prefixed by `@` in response payloads denote related objects. The values for these fields take the form of a URI, which can be used in a separate GET request to retrieve the related objects they represent.
 
-The example dataset returned in the document on [looking up a specific dataset](look-up-object.md) contains a `files` field with the following URI value: `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. The contents of the `files` field can be viewed by using this URI as the path for a new GET request.
+The example dataset returned in the document on [looking up a specific dataset](look-up-object.md) contains a `files` field with the following URI value: `"@/datasetFiles?datasetId={DATASET_ID}"`. The contents of the `files` field can be viewed by using this URI as the path for a new GET request.
 
 **API format**
 
@@ -31,7 +31,7 @@ The following request uses the URI provided the example dataset's `files` proper
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files' \
+  'https://platform.adobe.io/data/foundation/catalog/dataSets/datasetFiles?datasetId={DATASET_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -82,90 +82,6 @@ A successful response returns a list of related objects. In this example, a list
     }
 }
 ```
-
-## Make multiple requests in a single call
-
-The root endpoint of the [!DNL Catalog] API allows for multiple requests to be made within a single call. The request payload contains an array of objects representing what would normally be individual requests, which are then executed in order. 
-
-If these requests are modifications or additions to [!DNL Catalog] and any one of the changes fails, all changes will revert.
-
-**API format**
-
-```http
-POST /
-```
-
-**Request**
-
-The following request creates a new dataset, then creates related views for that dataset. This example demonstrates the use of template language to access values returned in previous calls for use in subsequent calls.
-
-For example, if you would like to reference a value that was returned from a previous sub-request, you can create a reference in the format: `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (where `{REQUEST_ID}` is the user-supplied ID for the sub-request, as demonstrated below). You can reference any attribute available in the body of a previous sub-request's response object by using these templates.
-
->[!NOTE]
->
->When an executed sub-request returns only the reference to an object (as is the default for most POST and PUT requests in the Catalog API), this reference is aliased to the value `id` and can be used as  `<<{OBJECT_ID}.id>>`. 
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/foundation/catalog \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '[
-    {
-      "id": "firstObjectId",
-      "resource": "/dataSets",
-      "method": "post",
-      "body": {
-        "type": "raw",
-        "name": "First Dataset"
-      }
-    }, 
-    {
-      "id": "secondObjectId",
-      "resource": "/datasetViews",
-      "method": "post",
-      "body": {
-        "status": "enabled",
-        "dataSetId": "<<firstObjectId.id>>"
-      }
-    }
-  ]'
-```
-
-| Property | Description |
-| --- | --- |
-| `id` | User-supplied ID that is attached to the response object so that you can match up requests to responses. [!DNL Catalog] does not store this value and simply returns it in the response for reference purposes. |
-| `resource` | The resource path relative to the root of the [!DNL Catalog] API. The protocol and domain should not be part of this value, and it should be prefixed with "/". <br/><br/> When using PATCH or DELETE as the sub-request's `method`, include the object ID in the resource path. Not to be confused with the user-supplied `id`, the resource path uses the ID of the [!DNL Catalog] object itself (for example, `resource: "/dataSets/1234567890"`). |
-| `method` | The name of the method (GET, PUT, POST, PATCH, or DELETE) related to the action taking place in the request. |
-| `body` | The JSON document that would normally be passed as the payload in a POST, PUT, or PATCH request. This property is not required for GET or DELETE requests. |
-
-**Response**
-
-A successful response returns an array of objects containing the `id` that you assigned to each request, the HTTP status code for the individual request, and the response `body`. Since the three sample requests were all to create new objects, the `body` of each object is an array containing only the ID of the newly created object, as is the standard with most successful POST responses in [!DNL Catalog].
-
-```json
-[
-    {
-        "id": "firstObjectId",
-        "code": 200,
-        "body": [
-            "@/dataSets/5be230aef5b02914cd52dbfa"
-        ]
-    },
-    {
-        "id": "secondObjectId",
-        "code": 200,
-        "body": [
-            "@/dataSetViews/5be230aef5b02914cd52dbfb"
-        ]
-    }
-]
-```
-
-Take care when inspecting the response to a multi-request, as you will need to verify the code of each individual sub-request and not rely solely on the HTTP status code for the parent POST request.  It is possible for a single sub-request to return a 404 (such as a GET request on an invalid resource) while the overall request returns 200.
 
 ## Additional request headers
 

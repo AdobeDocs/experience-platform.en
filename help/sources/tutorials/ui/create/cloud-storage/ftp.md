@@ -10,7 +10,7 @@ exl-id: 8e505ead-4bae-43fe-830b-75620e8fba28
 
 >[!NOTE]
 >
->The FTP connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The FTP connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 This tutorial provides steps for creating an FTP source connection using the Adobe Experience Platform UI.
 
@@ -37,7 +37,7 @@ In order to connect to FTP, you must provide values for the following connection
 
 ## Connect to your FTP server
 
-Once you have gathered your required credentials, you can follow the steps below to create a new FTP account to connect to Platform.
+Once you have gathered your required credentials, you can follow the steps below to create a new FTP account to connect to Experience Platform.
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an inbound account with.
 
@@ -63,4 +63,4 @@ To connect an existing account, select the FTP account you want to connect with,
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your FTP account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Platform](../../dataflow/batch/cloud-storage.md).
+By following this tutorial, you have established a connection to your FTP account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Experience Platform](../../dataflow/batch/cloud-storage.md).

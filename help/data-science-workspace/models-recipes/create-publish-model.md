@@ -9,13 +9,19 @@ exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
 
 # Create and publish a machine learning model
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 The following guide describes the steps required to create and publish a machine learning model. Each section contains a description of what you will do and a link to the UI and API documentation to preform the described step.
 
 ## Getting started
 
 Before starting this tutorial, you must have the following prerequisites:
 
--   Access to [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+-   Access to [!DNL Adobe Experience Platform]. If you do not have access to an organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 
 -  All Data Science Workspace tutorials use the Luma propensity model. In order to follow along, you must have created the [Luma propenstiy model schemas and datasets](./create-luma-data.md).
 
@@ -73,7 +79,7 @@ To learn how to score your model, visit the score a model [UI tutorial](./score-
 
 ## Publish a scored model as a service
 
-Data Science Workspace allows you to publish your trained model as a service. This enables users within your IMS Organization to score data without the need to create their own models.
+Data Science Workspace allows you to publish your trained model as a service. This enables users within your organization to score data without the need to create their own models.
 
 To learn how to publish a model as a service, visit the [UI tutorial](./publish-model-service-ui.md) or [API tutorial](./publish-model-service-api.md).
 

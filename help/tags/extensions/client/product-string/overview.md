@@ -83,7 +83,7 @@ If your implementation uses custom events or merchandising eVars, follow these s
 
 This action must be accompanied by an "Adobe Analytics - Set Variables" action that sets the corresponding success events, as well as an "Adobe Analytics - Send Beacon" action. The proper sequence of actions is illustrated below.
 
-![Standard fields](./images/screenshot-price-type.png)
+![Standard fields](./images/screenshot-action-type.png)
 
 ### Requirements
 
