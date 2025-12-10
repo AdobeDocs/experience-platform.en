@@ -16,7 +16,7 @@ The Web SDK supports following standards:
   1. The Experience Event schema contains the [IAB TCF 2.0 Consent field group](/help/xdm/field-groups/event/iab.md).
   1. You include the IAB consent information in the event [XDM object](sendevent/xdm.md). The Web SDK does not automatically include the consent information when sending event data.
 
-After using this command, the Web SDK writes the user's preferences to a cookie. The next time the user loads your website in the browser, the SDK retrieves these persisted preferences to determine if events can be sent to Adobe.
+When using this command, the Web SDK writes the user's preferences to the [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) cookie. This cookie is set regardless of the visitor's consent preferences because it stores that visitor's consent preferences. The next time the user loads your website in the browser, the SDK retrieves these persisted preferences to determine if events can be sent to Adobe.
 
 Adobe recommends that you store any consent dialog preferences separately from Web SDK consent. The Web SDK does not offer a way to retrieve consent. To make sure that the user preferences stay in sync with the SDK, you can call the `setConsent` command on every page load. The Web SDK only makes a server call when consent changes.
 
@@ -28,15 +28,13 @@ The `setConsent` command only uses the `ECID` from the identity map, as the comm
 
 The Web SDK offers two complementary consent configuration commands:
 
-* [`defaultConsent`](configure/defaultconsent.md): This command is meant to capture the consent preferences of Adobe customers using Web SDK.
-* [`setConsent`](setconsent.md): This command is meant to capture the consent preferences of your site visitors.
+* [`defaultConsent`](configure/defaultconsent.md): This command automatically sets the visitor's default consent preference before calling `setConsent`.
+* `setConsent` (current page): This command explicitly sets the visitor's consent preference.
 
-When used together, these settings can lead to different data collection and cookie setting results, depending on their configured values.
-
-See the table below to understand when data collection occurs and when cookies are set, based on consent settings.
+When used together, these settings can lead to different data collection and cookie setting results, depending on their configured values:
 
 | `defaultConsent` | `setConsent` | Data collection occurs | Web SDK sets browser cookies |
-|---------|----------|---------|---------|
+| --- | --- | --- | --- |
 | `in` | `in` | Yes |  Yes |
 | `in` | `out` | No | Yes |
 | `in` | Not set | Yes | Yes |
@@ -47,16 +45,9 @@ See the table below to understand when data collection occurs and when cookies a
 | `out` | `out` | No | Yes |
 | `out` | Not set | No | No |
 
-The following cookies are set when the consent configuration allows:
+See [Adobe Experience Platform Web SDK cookies](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) in the Core Services guide for a full list of cookies that can be set.
 
-| Name | Max age | Description |
-|---|---|---|
-| **`AMCV_###@AdobeOrg`** | 34128000 (395 days) | Present when [`idMigrationEnabled`](configure/idmigrationenabled.md) is enabled. It helps when transitioning to Web SDK while some parts of the site are still using `visitor.js`. |
-| **`Demdex cookie`** | 15552000 (180 days) | Present if ID synchronization is enabled. Audience Manager sets this cookie to assign a unique ID to a site visitor. The demdex cookie helps Audience Manger perform basic functions, such as visitor identification, ID synchronization, segmentation, modeling, reporting, and so on. |
-| **`kndctr_orgid_cluster`** | 1800 (30 minutes) | Stores the Edge Network region that serves the current user's requests. The region is used in the URL path so that the Edge Network can route the request to the correct region. If a user connects with a different IP address or in a different session, the request is again routed to the closest region. |
-| **`kndct_orgid_identity`** | 34128000 (395 days) | Stores the ECID, as well as other information related to the ECID. |
-| **`kndctr_orgid_consent`** | 15552000 (180 days) | Stores the users consent preference for the website. |
-| **`s_ecid`** | 63115200 (2 years) | Contains a copy of the Experience Cloud ID ([!DNL ECID]) or MID. The MID is stored in a key-value pair that follows this syntax, `s_ecid=MCMID\|<ECID>`.|
+## Using the `setConsent` command
 
 Run the `setConsent` command when calling your configured instance of the Web SDK. You can include the following objects in this command:
 
