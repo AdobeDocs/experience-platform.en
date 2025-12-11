@@ -11,7 +11,9 @@ Edge segmentation is the ability to evaluate segment definitions in Adobe Experi
 >
 > The edge data will be stored in an edge server location closest to where it was collected. This data may also be stored in a location other than the one designated as the hub (or principal) Adobe Experience Platform data center.
 >
-> Additionally, the edge segmentation engine will only honor requests on the edge where there is **one** primary marked identity, which is consistent with non-edge-based primary identities.
+> The edge segmentation engine will only honor requests on the edge where there is **one** primary marked identity, which is consistent with non-edge-based primary identities.
+>
+> Additionally, since edge segmentation is designed to process requests at scale, edge servers dynamically load the metadata required. As a result, the very first calls may experience "cold-start" latency regardless of the sandbox type. During this window, the first few evaluation calls may result in a  timeout. A brief pre-warm burst or realistic load helps eliminate false-positive test failures.
 
 ## Edge segmentation query types {#query-types}
 

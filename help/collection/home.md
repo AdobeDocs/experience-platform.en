@@ -1,65 +1,36 @@
 ---
-keywords: Experience Platform;home;popular topics;data collection;launch;web sdk
 solution: Experience Platform
-title: Data Collection Overview
-description: Learn about the various technologies involved with collect data on customer experiences in Adobe Experience Platform.
+title: Data collection overview
+description: Learn how to send data to Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 ---
 # Data collection overview
 
-Adobe Experience Platform provides a suite of technologies that allow you to collect customer experience data from client-side sources, and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations in seconds.
+Adobe Experience Platform provides a suite of technologies that allow you to collect customer experience data from various sources and send it to the Adobe Experience Platform Edge Network. That data can then be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
 
-Data collection is supported for the following client-side sources:
+Adobe supports the following code languages with dedicated libraries for data collection:
 
-* Web-based applications
-* Native mobile applications
-* Over-the-top (OTT) applications
+* **JavaScript**: For websites and web-based applications
+* **Kotlin**: For Android devices
+* **Swift**: For iOS devices
+* **Brightscript**: For Roku devices
+* **Flutter**: For Android + iOS applications using Flutter
+* **React Native**: For Android + iOS applications using React Native
 
-Data collection focuses on the discoverability and accessibility of ingested datasets, encompassing the following:
+The tags UI in Adobe Experience Platform Data Collection include a Web SDK and Mobile SDK extension.
 
-* [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
-* [Tags](../tags/home.md)
-* [Datastreams](../datastreams/overview.md)
-* [Event forwarding](../tags/ui/event-forwarding/overview.md)
-* [Adobe Experience Platform Web SDK](../web-sdk/home.md)
-* [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)
-* [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)
-* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
-* [Experience Platform Assurance](../assurance/home.md)
+If none of the above SDKs accommodate your project's needs, you can use the [Adobe Experience Platform Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) to send data directly to Adobe.
 
+## Data collection process
 
-This guide provides a high-level introduction to data collection and how it works to send data to Adobe Experience Cloud products and non-Adobe applications through the Experience Platform Edge Network.
+Instead of installing and implementing separate individual libraries for each Adobe product, you can implement one of the above SDKs or tag extensions to aggregate all desired data into a single payload. That payload is sent to a [datastream](/help/datastreams/overview.md) in the Adobe Experience Platform Edge Network.
 
-## Tags, Web SDK, and Mobile SDK
+![Data collection diagram](assets/tags-sdks.png)
 
-The Experience Platform Web SDK and Experience Platform Mobile SDK collapse and compress all Adobe product libraries into a single development kit for web and mobile platforms respectively. These can be implemented using raw code or using [tags](../tags/home.md) through the Data Collection UI or Adobe Experience Platform UI.
+The Adobe Experience Platform Edge Network is a globally distributed, fast, and reliable network of servers capable of receiving and processing data at a tremendous scale. When a datastream receives data, it distributes that data to each respective solution that you have configured. The data is passed along in a format that each individual product understands.
 
-Compressing these libraries speeds up data collection and consolidates operations into a single stream from client-side devices to the Experience Platform Edge Network.
+![Adobe solutions diagram](assets/adobe-solutions.png)
 
-![Tags, Web SDK, Mobile SDK](./images/home/tags-sdks.png)
+You can also use [event forwarding](/help/tags/ui/event-forwarding/overview.md) to transform, enrich, and send data to any non-Adobe destination with low latency and without any client-side implementation code.
 
-## Experience Platform Edge Network and datastreams {#edge}
-
-Experience Platform Edge Network is a globally distributed, fast, and reliable network of servers capable of receiving and processing data at tremendous scale. Using tags, you can set up [datastreams](../datastreams/overview.md) for products like Adobe Target, Adobe Audience Manager, and Adobe Analytics, which allow you to activate these products on the server side without changing client-side code.
-
-In addition, datastreams are integrated with several Experience Platform capabilities that help ensure that any sensitive data you are sending is handled appropriately with respect to organizational policies and legal regulations. See the section on [handling sensitive data](../datastreams/overview.md#sensitive) in the datastreams documentation for more information.
-
-![Datastreams and Adobe solutions](./images/home/adobe-solutions.png)
-
-## Event forwarding
-
-[Event forwarding](../tags/ui/event-forwarding/overview.md) can tap into any Experience Platform datastream, allowing you to transform, enrich, and send data to any non-Adobe destination with extreme low latency and without adding any third-party code to the client device.
-
-![Event forwarding](./images/home/event-forwarding.png)
-
->[!NOTE]
->
->Event forwarding is a paid feature that is included as part of the Adobe Real-Time Customer Data Platform Connections, Prime, or Ultimate offerings.
-
-## Next steps
-
-This document provided a high-level overview of how data collection works to automate the process of sending your collected customer experience data to Adobe products and third-party destinations.
-
-![Data collection framework](./images/home/collection.png)
-
-For more information on the general workflow involved in sending event data through the Edge Network, refer to the [end-to-end overview](./e2e.md).
+![Event forwarding diagram](assets/event-forwarding.png)
