@@ -5,10 +5,6 @@ exl-id: 325390f1-88c7-4b9e-a484-5442ca649bdf
 ---
 # Backwards compatibility standard
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
-
 Updates to a tag extension in Adobe Experience Platform must be backward compatible with previous versions of the extension. This means that:
 
 * Any modifications to the primary components of the extensions must be compatible with previous versions.  This includes extension configuration, event types, condition types, action types, data element types, and shared modules.
