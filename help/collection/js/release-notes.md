@@ -146,7 +146,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **New features**
 
 - Added support for automatic proposition interaction tracking.
-- Added a custom build script that provides an alloy.js file.
+- Added a custom build script that provides an `alloy.js` file.
 - Improved click collection with ActivityMap and event grouping support.
 
 ## Version 2.20.0 - May 21, 2024

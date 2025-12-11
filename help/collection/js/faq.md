@@ -61,9 +61,9 @@ Adobe Experience Platform Web SDK can also send data directly to Adobe Experienc
 
 **Time-to-value:** Adobe has worked hard (and will continue) to make it as easy as possible to deploy the Web SDK via tags and map client-side data to XDM. After that work is done, all other Adobe solutions and Adobe Experience Platform services can be turned on or off server-side. For example, if you are using this for Adobe Analytics and you want to turn on Target or Experience Platform, you can simply flip a toggle on the Datastream configuration and light up those use cases.
 
-## What is [!DNL alloy.js]?
+## What is `alloy.js`?
 
-[!DNL alloy.js] is the name of the Web SDK JavaScript library. It is referenced within the SDK source code and filename.
+`alloy.js` is the name of the Web SDK JavaScript library. It is referenced within the SDK source code and filename.
 
 ## Do customers need to buy Adobe Experience Platform to use the [!DNL Web SDK]?
 
@@ -138,25 +138,11 @@ If you use our SDKs and send XDM to the Edge Network, these new features event f
 
 ## What is a CNAME or First Party Domain and why does it matter?
 
-More information about a CNAME is available in the [Adobe documentation](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html)
+See the [Adobe-managed certificate program](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) in the Core Services guide.
 
 ## Does the Adobe Experience Platform Web SDK use cookies? If so, what cookies does it use?
 
-Yes, currently the Web SDK uses anywhere between one to seven cookies depending on your implementation. Below is a list of the cookies that you might see with the Web SDK and the way that they are used:
-
-|**Name**|**maxAge**|**Friendly age**|**Description**|
-|---|---|---|---|
-|**kndct_orgid_identity**|34128000|395 days|The identity cookie stores the ECID, as well as other information related to the ECID.|
-|**kndctr_orgid_consent_check**|7200|2 hours|This session-based cookie signals the server to look up the consent preferences server side.|
-|**kndctr_orgid_consent**|15552000|180 days|This cookie stores the user's consent preference for the website.|
-|**kndctr_orgid_cluster**|1800|30 minutes|This cookie stores the Edge Network region that is serving the current user's requests. The region is used in the URL path so that the Edge Network can route the request to the correct region. This cookie has a 30 minutes lifetime, so that if a user connects with a different IP address, the request can be routed to the closest region.|
-|**mbox**|63072000|2 years|This cookie appears when the Target migration setting is set to true. This will allow the Target [mbox cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) to be set by the Web SDK.|
-|**mboxEdgeCluster**|1800|30 minutes|This cookie appears when the Target migration setting is set to true. This cookie allows the Web SDK to communicate the correct edge cluster to at.js so that Target profiles can stay in sync as users navigate across a site.|
-|**AMCV_###@AdobeOrg**|34128000|395 days|This cookie only appears when ID migration on the Adobe Experience Platform Web SDK is enabled. This cookie helps when transitioning to Web SDK while some parts of the site are still using visitor.js. See [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md) for more information.|
-
-When using the Web SDK, the Edge Network sets one or more of the cookies above. The Edge Network sets all the cookies with the `secure` and `sameSite="none"` attributes.
-
-If you currently have both secure and non-secure sections on your website, this could interfere with user identification. When a user navigates from a secure section of the site to a non-secure section, the Edge Network generates a new `ECID` with the request.  
+See [Adobe Experience Platform Web SDK cookies](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) in the Core Services guide.
 
 ## Which browsers does the Adobe Experience Platform Web SDK support?
 
