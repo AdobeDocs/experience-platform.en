@@ -5,10 +5,6 @@ exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
 ---
 # Properties
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 ## Web properties
 
 A web property is a collection of rules, data elements, configured extensions, environments, and libraries.  Each web property has its own set of embed codes and can be deployed on any number of distinct websites (different domains).

@@ -5,10 +5,6 @@ exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
 ---
 # Copy resources
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Sometimes, it is convenient to make a new resource using the settings of an existing resource. In these cases, you can make a copy.
 
 Properties, Extensions, Rules, and Data Elements can all be copied.
