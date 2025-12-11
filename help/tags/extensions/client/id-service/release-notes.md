@@ -5,10 +5,6 @@ exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 ---
 # Adobe Experience Cloud Identity Service extension release notes
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 This document covers the release notes for the Adobe Experience Cloud Identity Service tag extension. For release notes on Experience Cloud Identity Service itself, please refer to the [Identity Service documentation](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html).
 
 ## Oct 17, 2022

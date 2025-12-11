@@ -5,10 +5,6 @@ exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
 ---
 # Builds
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 A build is the set of files containing all the code that runs on the client device.
 
 It is a composite of the changes you specified within your library, as well as everything that has been submitted, approved, or published before it.
