@@ -3,6 +3,7 @@ solution: Experience Platform
 title: Edit destination connections using the Flow Service API
 type: Tutorial
 description: Learn how to how to edit various components of a destination connection using the Flow Service API.
+exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
 ---
 # Edit destination connections using the Flow Service API
 
@@ -10,7 +11,7 @@ This tutorial covers the steps for editing various components of a destination c
 
 >[!NOTE]
 >
-> The edit operations described in this tutorial are currently only supported through the Flow Service API.
+> The edit operations described in this tutorial are also supported in the Experience Platform UI. Read the tutorial on how to [edit destinations in the UI](/help/destinations/ui/edit-destination.md) for more information.
 
 ## Getting started {#get-started}
 
@@ -23,7 +24,7 @@ This tutorial requires you to have a valid dataflow ID. If you do not have a val
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
 * [Destinations](../home.md): [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
-* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully update your dataflow using the [!DNL Flow Service] API.
 
@@ -33,13 +34,13 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers {#gather-values-for-required-headers}
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-All resources in Experience Platform, including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in Experience Platform, including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to Experience Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -47,7 +48,7 @@ All resources in Experience Platform, including those belonging to [!DNL Flow Se
 >
 >If the `x-sandbox-name` header is not specified, requests are resolved under the `prod` sandbox.
 
-All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
+All requests that contain a payload (`POST`, `PUT`, `PATCH`) require an additional media type header:
 
 * `Content-Type: application/json`
 
@@ -170,17 +171,19 @@ A successful response returns the current details of your dataflow including its
 
 The components of a target connection differ by destination. For example, for [!DNL Amazon S3] destinations, you can update the bucket and path where files are exported. For [!DNL Pinterest] destinations, you can update your [!DNL Pinterest Advertiser ID] and for [!DNL Google Customer Match] you can update your [!DNL Pinterest Account ID].
 
-To update components of a target connection, perform a PATCH request to the `/targetConnections/{TARGET_CONNECTION_ID}` endpoint while providing your target connection ID, version, and the new values you want to use. Remember, you got your target connection ID in the previous step, when you inspected an existing dataflow to your desired destination.
+To update components of a target connection, perform a `PATCH` request to the `/targetConnections/{TARGET_CONNECTION_ID}` endpoint while providing your target connection ID, version, and the new values you want to use. Remember, you got your target connection ID in the previous step, when you inspected an existing dataflow to your desired destination.
 
 >[!IMPORTANT]
 >
->The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the target connection you want to update. The etag value updates with every successful update of a flow entity such as dataflow, target connection, and others.
+>The `If-Match` header is required when making a `PATCH` request. The value for this header is the unique version of the target connection you want to update. The etag value updates with every successful update of a flow entity such as dataflow, target connection, and others.
 >
 > To get the latest version of the etag value, perform a GET request to the `/targetConnections/{TARGET_CONNECTION_ID}` endpoint, where `{TARGET_CONNECTION_ID}` is the target connection ID that you are looking to update.
+>
+> Make sure to wrap the value of the `If-Match` header in double quotes like in the examples below when making `PATCH` requests.
 
 Below are a few examples of updating parameters in the target connection spec for different types of destinations. But the general rule to update parameters for any destination is as follows: 
 
-Get the dataflow ID of the connection > obtain the target connection ID > PATCH the target connection with updated values for the desired parameters.
+Get the dataflow ID of the connection > obtain the target connection ID > `PATCH` the target connection with updated values for the desired parameters.
 
 >[!BEGINSHADEBOX]
 
@@ -325,19 +328,21 @@ A successful response returns your target connection ID and an updated etag. You
 
 Edit the base connection when you want to update a destination's credentials. The components of a base connection differ by destination. For example, for [!DNL Amazon S3] destinations, you can update the access key and secret key to your [!DNL Amazon S3] location. 
 
-To update components of a base connection, perform a PATCH request to the `/connections` endpoint while providing your base connection ID, version, and the new values you want to use.
+To update components of a base connection, perform a `PATCH` request to the `/connections` endpoint while providing your base connection ID, version, and the new values you want to use.
 
 Remember, you got your base connection ID in a [previous step](#look-up-dataflow-details), when you inspected an existing dataflow to your desired destination for the parameter `baseConnection`.
 
 >[!IMPORTANT]
 >
->The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the base connection you want to update. The etag value updates with every successful update of a flow entity such as dataflow, base connection, and others.
+>The `If-Match` header is required when making a `PATCH` request. The value for this header is the unique version of the base connection you want to update. The etag value updates with every successful update of a flow entity such as dataflow, base connection, and others.
 >
 > To get the latest version of the Etag value, perform a GET request to the `/connections/{BASE_CONNECTION_ID}` endpoint, where `{BASE_CONNECTION_ID}` is the base connection ID that you are looking to update.
+>
+> Make sure to wrap the value of the `If-Match` header in double quotes like in the examples below when making `PATCH` requests.
 
 Below are a few examples of updating parameters in the base connection spec for different types of destinations. But the general rule to update parameters for any destination is as follows: 
 
-Get the dataflow ID of the connection > obtain the base connection ID > PATCH the base connection with updated values for the desired parameters.
+Get the dataflow ID of the connection > obtain the base connection ID > `PATCH` the base connection with updated values for the desired parameters.
 
 >[!BEGINSHADEBOX]
 
@@ -440,7 +445,7 @@ A successful response returns your base connection ID and an updated etag. You c
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide for more information on interpreting error responses.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
 
 ## Next steps {#next-steps}
 

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;reservation;flight;
 title: Flight Reservation Schema Field Group
-description: This document provides an overview of the Flight Reservation schema field group.
+description: Learn about the Flight Reservation schema field group.
 exl-id: df4bb525-c2d3-4e1d-921f-903142a570ac
 ---
 # [!UICONTROL Flight Reservation] schema field group

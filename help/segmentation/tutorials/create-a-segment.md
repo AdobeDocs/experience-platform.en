@@ -9,7 +9,7 @@ exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
 
 This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md). 
 
-For information on how to build segment definitions using the user interface, please see the [Segment Builder guide](../ui/overview.md).
+For information on how to build segment definitions using the user interface, please see the [Segment Builder guide](../ui/segment-builder.md).
 
 ## Getting started
 
@@ -17,9 +17,9 @@ This tutorial requires a working understanding of the various [!DNL Adobe Experi
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Allows you to build audiences using segment definitions or other external sources from Real-Time Customer Profile data.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
 
-The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
+The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Experience Platform] APIs.
 
 ### Reading sample API calls
 
@@ -27,19 +27,19 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Experience Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
+>For more information on sandboxes in [!DNL Experience Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -66,11 +66,16 @@ There are two required steps to preview or get an estimate of your segment defin
   
 ### How estimates are generated
 
-Data samples are used to evaluate segment definitions and estimate the number of qualifying profiles. New data is loaded into memory each morning (between 12AM-2AM PT, which is 7-9AM UTC), and all segmentation queries are estimated using that day's sample data. Consequently, any new fields added or additional data collected will be reflected in estimates the following day.
+As data enabled for Real-Time Customer Profile is ingested into Experience Platform, it is stored within the Profile data store. When the ingestion of records into the Profile store increases or decreases the total profile count by more than 3%, a sampling job is triggered to update the count. If the profile count does not change by more than 3%, the sampling job will run automatically on a weekly basis. 
 
-The sample size depends on the overall number of entities in your profile store. These sample sizes are represented in the following table:
+The way in which the sample is triggered depends on the type of ingestion being used:
 
-| Entities in profile store | Sample size |
+- For streaming data workflows, a check is done on an hourly basis to determine if the 3% increase or decrease threshold has been met. If this threshold has been met, a sample job is automatically triggered to update the count.
+- For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile store, if the 3% increase or decrease threshold is met, a job is run to update the count. Using the Profile API you can preview the latest successful sample job, as well as list profile distribution by dataset and by identity namespace.
+
+The sample size depends on the overall number of entities in your Profile store. These sample sizes are represented in the following table:
+
+| Entities in Profile store | Sample size |
 | ------------------------- | ----------- |
 | Less than 1 million | Full data set |
 | 1 to 20 million | 1 million |

@@ -10,7 +10,7 @@ exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
 >
 >The [!DNL Amazon Kinesis] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for authenticating an [!DNL Amazon Kinesis] (hereinafter referred to as [!DNL "Kinesis"]) source connector using the [!DNL Platform] user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for authenticating an [!DNL Amazon Kinesis] (hereinafter referred to as [!DNL "Kinesis"]) source connector using the [!DNL Experience Platform] user interface.
 
 ## Getting started
 
@@ -37,7 +37,7 @@ For more information about these values, refer to [this [!DNL Kinesis] document]
 
 ## Connect your [!DNL Kinesis] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Kinesis] account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Kinesis] account to [!DNL Experience Platform].
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
 
@@ -63,4 +63,4 @@ To connect an existing account, select the [!DNL Kinesis] account you want to co
 
 ## Next steps
 
-By following this tutorial, you have connected to your [!DNL Kinesis] account to [!DNL Platform]. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md).
+By following this tutorial, you have connected to your [!DNL Kinesis] account to [!DNL Experience Platform]. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into [!DNL Experience Platform]](../../dataflow/streaming/cloud-storage-streaming.md).

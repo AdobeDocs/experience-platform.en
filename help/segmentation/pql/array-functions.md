@@ -10,7 +10,7 @@ exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
 
 ## In
 
-The `in` function is used to determine if an item is a member of an array or list.
+The `in` function is used to determine if an item is a member of an array or list as a boolean.
 
 **Format**
 
@@ -28,7 +28,7 @@ person.birthMonth in [3, 6, 9]
 
 ## Not in
 
-The `notIn` function is used to determine if an item is not a member of an array or list.
+The `notIn` function is used to determine if an item is not a member of an array or list as a boolean.
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ person.birthMonth notIn [3, 6, 9]
 
 ## Intersects
 
-The `intersects` function is used to determine if two arrays or lists have at least one common member.
+The `intersects` function is used to determine if two arrays or lists have at least one common member as a boolean.
 
 **Format**
 
@@ -68,7 +68,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 ## Intersection
 
-The `intersection` function is used to determine the common members of two arrays or lists.
+The `intersection` function is used to determine the common members of two arrays or lists as a list.
 
 **Format**
 
@@ -86,7 +86,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## Subset of
 
-The `subsetOf` function is used to determine if a specific array (array A) is a subset of another array (array B). In other words, that all elements in array A are elements of array B.
+The `subsetOf` function is used to determine if a specific array (array A) is a subset of another array (array B). In other words, that all elements in array A are elements of array B as a boolean.
 
 **Format**
 
@@ -104,7 +104,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 ## Superset of
 
-The `supersetOf` function is used to determine if a specific array (array A) is a superset of another array (array B). In other words, that array A contains all elements in array B.
+The `supersetOf` function is used to determine if a specific array (array A) is a superset of another array (array B). In other words, that array A contains all elements in array B as a boolean.
 
 **Format**
 
@@ -122,7 +122,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## Includes
 
-The `includes` function is used to determine if an array or list contains a given item.
+The `includes` function is used to determine if an array or list contains a given item as a boolean.
 
 **Format**
 
@@ -140,7 +140,7 @@ person.favoriteColors.includes("red")
 
 ## Distinct
 
-The `distinct` function is used to remove duplicate values from an array or list.
+The `distinct` function is used to remove duplicate values from an array or list as an array.
 
 **Format**
 
@@ -158,12 +158,12 @@ person.orders.storeId.distinct().count() > 1
 
 ## Group by
 
-The `groupBy` function is used to partition values of an array or list into a group based on the value of the expression.
+The `groupBy` function is used to partition values of an array or list into a group based on the value of the expression as a map from unique values of the grouping expression to arrays which are partitions of the value of the array expression.
 
 **Format**
 
 ```sql
-{ARRAY}.groupBy({EXPRESSION)
+{ARRAY}.groupBy({EXPRESSION})
 ```
 
 | Argument | Description |
@@ -176,12 +176,12 @@ The `groupBy` function is used to partition values of an array or list into a gr
 The following PQL query groups all the orders by which store the order was placed at.
 
 ```sql
-orders.groupBy(storeId)
+xEvent[type="order"].groupBy(storeId)
 ```
 
 ## Filter
 
-The `filter` function is used to filter an array or list based on an expression.
+The `filter` function is used to filter an array or list based on an expression as an array or list, depending on the input.
 
 **Format**
 
@@ -204,7 +204,7 @@ person.filter(age >= 21)
 
 ## Map
 
-The `map` function is used to create a new array by applying an expression to each item in a given array.
+The `map` function is used to create a new array by applying an expression to each item in a given array as an array.
 
 **Format**
 
@@ -222,7 +222,7 @@ numbers.map(square)
 
 ## First `n` in array {#first-n}
 
-The `topN` function is used to return the first `N` items in an array, when sorted in ascending order based on the given numerical expression.
+The `topN` function is used to return the first `N` items in an array, when sorted in ascending order based on the given numerical expression as an array.
 
 **Format**
 
@@ -246,7 +246,7 @@ orders.topN(price, 5)
 
 ## Last `n` in array
 
-The `bottomN` function is used to return the last `N` items in an array, when sorted in ascending order based on the given numerical expression.
+The `bottomN` function is used to return the last `N` items in an array, when sorted in ascending order based on the given numerical expression as an array.
 
 **Format**
 
@@ -270,7 +270,7 @@ orders.bottomN(price, 5)
 
 ## First item
 
-The `head` function is used to return the first item in the array or list.
+The `head` function is used to return the first item in the array or list as an object.
 
 **Format**
 

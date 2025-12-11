@@ -1,8 +1,8 @@
 ---
 description: Learn how to format an API call to submit a destination publishing request through Adobe Experience Platform Destination SDK.
 title: Create a destination publishing request
+exl-id: 913be9de-a699-4756-885d-b3761ec729cb
 ---
-
 # Create a destination publishing request
 
 >[!IMPORTANT]
@@ -63,13 +63,17 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 {style="table-layout:auto"}
 
++++
+
 +++Response
 
 A successful response returns HTTP status 201 with details of your destination publish request.
 
++++
+
 ## API error handling
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps
 

@@ -1,6 +1,6 @@
 ---
 title: XDM Business Person Components Schema Field Group
-description: This document provides an overview of the XDM Business Person Components schema field group.
+description: Learn about the XDM Business Person Components schema field group.
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
 ---
 # [!UICONTROL XDM Business Person Components] schema field group
@@ -15,7 +15,7 @@ The field group provides a root-level `personComponents` field, which is an arra
 >
 >You must follow the ingestion patterns as described in the [sources documentation](../../../rtcdp/sources/b2b.md). Other field mapping methods are not guaranteed to work.
 >
->For example, each object of the `personComponents` array is submitted individually during standard ingestion patterns and then added to the array by Platform. Manually adding an array of objects to the Business Person Component will return an error.
+>For example, each object of the `personComponents` array is submitted individually during standard ingestion patterns and then added to the array by Experience Platform. Manually adding an array of objects to the Business Person Component will return an error.
 >You should use the auto-generation utility when creating schemas for your B2B data. See the documentation for instructions on how to use the [B2B namespace and schema auto-generation utility](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). If you are not using the auto-generation utility and intend to manually map your data model, be sure to read the documentation on the [Adobe Real-Time Customer Data Platform B2B Edition XDM classes](../../../rtcdp/schemas/b2b.md) before mapping your data.
 >
 >See the [end-to-end tutorial](../../../rtcdp/b2b-tutorial.md) for information on recommended workflows for B2B data. 

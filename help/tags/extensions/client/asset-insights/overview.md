@@ -22,6 +22,7 @@ The AEM Asset reports in Analytics contain three AEM dimensions:
 * Asset Clicked 
 
 There are also two metrics:
+
 * Asset Impressions
 * Asset Clicks. 
 
@@ -47,7 +48,7 @@ This section describes how to configure AEM with tags in Adobe Experience Platfo
 
 ### Integrate AEM with tags
 
-The recommended integration of [Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html) with Adobe Experience Manager is done via Adobe I/O.
+The recommended integration of [Experience Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html) with Adobe Experience Manager is done via Adobe I/O.
 
 1. [Connect AEM with tags using Adobe I/O](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html).
 

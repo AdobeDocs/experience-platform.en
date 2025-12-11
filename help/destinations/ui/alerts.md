@@ -17,8 +17,8 @@ This document provides steps on how to subscribe receive alerts messages for you
 This document requires a working understanding of the following components of Adobe Experience Platform:
 
 * [Destinations](../home.md): Pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
-* [Observability](../../observability/home.md): [!DNL Observability Insights] allows you to monitor Platform activities through the use of statistical metrics and event notifications.
-  * [Alerts](../../observability/alerts/overview.md): When a certain set of conditions in your Platform operations is reached (such as a potential problem when the system breaches a threshold), Platform can deliver alert messages to any users in your organization who have subscribed to them.
+* [Observability](../../observability/home.md): [!DNL Observability Insights] allows you to monitor Experience Platform activities through the use of statistical metrics and event notifications.
+  * [Alerts](../../observability/alerts/overview.md): When a certain set of conditions in your Experience Platform operations is reached (such as a potential problem when the system breaches a threshold), Experience Platform can deliver alert messages to any users in your organization who have subscribed to them.
 
 ## Subscribe to alerts in the UI {#subscribe-destination-alerts}
 
@@ -30,7 +30,7 @@ This document requires a working understanding of the following components of Ad
 
 >[!IMPORTANT]
 >
->You must enable instant notifications of emails for your Platform account in order to receive email-based alert notifications for your dataflows.
+>You must enable instant notifications of emails for your Experience Platform account in order to receive email-based alert notifications for your dataflows.
 
 You can enable alerts for your dataflows during the [!UICONTROL Configure new destination] step of the [destination connection](connect-destination.md) workflow.
 
@@ -57,7 +57,7 @@ Once your destination dataflow runs, you can receive alerts through the UI or by
 
 ### Receiving alerts in the UI {#receiving-alerts-in-ui}
 
-Alerts are represented in the UI by a notification icon in the top header of the Platform UI. Select the notification icon to see specific alert messages regarding your dataflows.
+Alerts are represented in the UI by a notification icon in the top header of the Experience Platform UI. Select the notification icon to see specific alert messages regarding your dataflows.
 
 ![UI image showing the notification icon in Experience Platform](../assets/ui/alerts/notification.png)
 
@@ -77,7 +77,7 @@ The [!UICONTROL Dataflow run details] page appears. The upper half of the screen
 
 ![UI image showing the dataflow run details page.](../assets/ui/alerts/dataflow-overview.png)
 
-The lower half of the page displays any [!UICONTROL Dataflow run errors] that ocurred during the dataflow run stage. From here, you can preview error diagnostics or use the [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) to download error diagnostics or the file manifest that corresponds to your dataflow.
+The lower half of the page displays any [!UICONTROL Dataflow run errors] that occurred during the dataflow run stage. From here, you can preview error diagnostics or use the [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) to download error diagnostics or the file manifest that corresponds to your dataflow.
 
 ![UI image showing the dataflow run details page, with a highlight on the errors section.](../assets/ui/alerts/dataflow-run-error.png)
 

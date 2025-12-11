@@ -21,13 +21,13 @@ You can use [!DNL Query Service] to query raw datasets for profile, audience, an
 
 ![The Dataset Browse dashboard with the Datasets tab highlighted in the left navigation.](./images/query/browse-datasets.png)
 
-### System-generated datasets
+### System-generated datasets {#system-generated-datasets}
 
 >[!IMPORTANT]
 >
 >System-generated datasets are hidden by default. By default, the [!UICONTROL Browse] tab only shows datasets that you have ingested data into.
 
-To view system-generated datasets, select the filter icon (![A filter icon.](./images/query/filter.png)) located to the left of the search bar.
+To view system-generated datasets, select the filter icon (![A filter icon.](/help/images/icons/filter.png)) located to the left of the search bar.
 
 ![The Datasets Browse tab with the filter icon highlighted.](./images/query/filter-datasets.png)
 
@@ -35,7 +35,7 @@ A sidebar appears containing two toggles, [!UICONTROL Included in Profile] and [
 
 ![The Datasets Browse tab with the Show system datasets toggle highlighted.](./images/query/show-system-datasets.png)
 
-### Profile attribute datasets
+### Profile attribute datasets {#profile-attribute-datasets}
 
 Profile dashboard insights are tied to merge policies that have been defined by your organization. For every active merge policy, there is a profile attribute dataset available in the data lake. 
 
@@ -76,15 +76,11 @@ To understand the full schema of the DIM destination dataset, you can preview an
 
 ![A preview of the DIM_Destination dataset.](images/query/destinations-metadata.png)
 
-## (Beta) Customer Data Platform (CDP) insights reports
+## Customer Data Platform (CDP) insights reports
 
->[!IMPORTANT]
->
->The CDP Insights Data Models feature is in beta. Its features and documentation are subject to change.
- 
 The CDP Insights Data Models feature exposes the SQL that powers the insights for various profile, destination and segmentation widgets. You can customize these SQl query templates to create CDP reports for your marketing and KPI use cases.
 
-CDP reporting provides insights into your profile data and its relationship with audiences and destinations. See the CDP Insights Data Model documentation for detailed information on how to [apply the he CDP Insights Data Models to your particular KPI use cases](./cdp-insights-data-model.md). 
+CDP reporting provides insights into your profile data and its relationship with audiences and destinations. See the CDP Insights Data Model documentation for detailed information on how to [apply the he CDP Insights Data Models to your particular KPI use cases](./data-models/cdp-insights-data-model-b2c.md). 
 
 ## Example queries
 

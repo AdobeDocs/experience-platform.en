@@ -1,12 +1,12 @@
 ---
 title: Create A Shopify Streaming Connection And Dataflow In The UI
-description: Learn how to create a Shopify Streaming source connection and dataflow using the Platform user interface
+description: Learn how to create a Shopify Streaming source connection and dataflow using the Experience Platform user interface
 badge: Beta
-exl-id: 3368ecf6-0c61-49ce-bc9c-29ee50b3f037
+exl-id: d53f4ab5-8bdc-4647-83d5-ee898abda0f2
 ---
 # Create a source connection and dataflow for [!DNL Shopify Streaming] data using the UI
 
-This tutorial provides steps for creating a [!DNL Shopify Streaming] source connection and dataflow using the Platform user interface.
+This tutorial provides steps for creating a [!DNL Shopify Streaming] source connection and dataflow using the Experience Platform user interface.
 
 ## Getting started {#getting-started}
 
@@ -23,7 +23,7 @@ This tutorial requires a working understanding of the following components of Ex
 
 ## Connect your [!DNL Shopify Streaming] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -33,7 +33,7 @@ Under the **eCommerce** category, select [!DNL Shopify Streaming], and then sele
 
 ## Select data
 
-The **[!UICONTROL Select data]** step appears, providing an interface for you to select the data that you bring to Platform.
+The **[!UICONTROL Select data]** step appears, providing an interface for you to select the data that you bring to Experience Platform.
 
 * The left part of the interface is a browser that allows you to view the available data streams within your account;
 * The right part of the interface lets you preview up to 100 rows of data from a JSON file.
@@ -60,7 +60,7 @@ When finished, select **[!UICONTROL Next]**.
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
-Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you select. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+Experience Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you select. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 

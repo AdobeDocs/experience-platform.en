@@ -7,6 +7,12 @@ exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
 ---
 # Getting started with Real-time Machine Learning (Alpha)
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 >[!IMPORTANT]
 >
 >Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
@@ -19,12 +25,12 @@ The guides for Real-time Machine Learning require a working understanding of Pyt
 
 - **DSL:** Domain Specific Language.
 - **Edge:** Real-time Machine Learning scoring service can be run on Edge clusters closer to your activations and applications.
-- **Hub:** The current alpha is running the Real-time Machine Learning scoring service on the Adobe Experience Platform Hub while the Experience Edge Network is in development.
+- **Hub:** The current alpha is running the Real-time Machine Learning scoring service on the Adobe Experience Platform Hub while the Edge Network is in development.
 - **Node:** A Node is the fundamental unit of which graphs are formed. Each node performs a specific task and they can be chained together using links to form a graph that represents an ML pipeline. The task performed by a node represents an operation on input data such as a transformation of data or schema, or a machine learning inference. The node outputs the transformed or inferred value to the next node(s).
   
 ## Datasets in Adobe Experience Platform
 
-To start using Real-time Machine Learning, you must have access to a dataset. You have the option to use an external dataset and upload it to your [!DNL JupyterLab] environment or create a new dataset within Platform if you have not done so already.
+To start using Real-time Machine Learning, you must have access to a dataset. You have the option to use an external dataset and upload it to your [!DNL JupyterLab] environment or create a new dataset within Experience Platform if you have not done so already.
 
 >[!NOTE]
 >
@@ -36,7 +42,7 @@ To learn more about using an external dataset such as uploading data to your [!D
 
 ### Create a new dataset
 
-To create a new dataset for use in Real-time Machine Learning, you need a data-schema for your dataset. Next, you need to ingest data using the schema you created. Use the following tutorials to create and populate a dataset for [!DNL Platform]:
+To create a new dataset for use in Real-time Machine Learning, you need a data-schema for your dataset. Next, you need to ingest data using the schema you created. Use the following tutorials to create and populate a dataset for [!DNL Experience Platform]:
 
 - [Create and populate a dataset in the API](../../catalog/datasets/create.md)
 - [Create and populate a dataset in the UI](../../ingestion/tutorials/ingest-batch-data.md)

@@ -12,7 +12,7 @@ This document and accompanying video presentation provide a high-level end-to-en
 * Ways to build the query based on your existing data architecture.
 * Ensure data quality that meets your needs, and methods to mitigate any shortfalls.
 * The process to schedule a query to run at a set frequency for use downstream in segmentation and destinations for personalization.
-* The ease for marketers to include derived attributes in their audiences through the power of [!DNL Query Service].
+* The ease for marketers to include derived datasets in their audiences through the power of [!DNL Query Service].
 
 ## Objectives {#objectives}
 
@@ -63,7 +63,7 @@ The features provided by [!DNL Query Service] serves many purposes. You can use 
 
 Also, by including logic in your query that satisfies any recurring or static conditions, [!DNL Query Service] extracts the burden of elaborate segmentation.
 
-Adobe Experience Platform provides a data repository and the necessary tools to activate your data in an efficient and reliable way. By keeping data inside Platform, it allows you to derive attributes while running other processes and removes the need to export data to third-party tools for manipulation and processing. Such processing overheads can greatly impact a project timeline when dealing with hundreds of attributes or campaigns. This gives marketers a single location to access their data and build out campaigns as well as a very dynamic means of segmenting and personalizing their messages.
+Adobe Experience Platform provides a data repository and the necessary tools to activate your data in an efficient and reliable way. By keeping data inside Experience Platform, it allows you to derive attributes while running other processes and removes the need to export data to third-party tools for manipulation and processing. Such processing overheads can greatly impact a project timeline when dealing with hundreds of attributes or campaigns. This gives marketers a single location to access their data and build out campaigns as well as a very dynamic means of segmenting and personalizing their messages.
 
 ## Next steps
 

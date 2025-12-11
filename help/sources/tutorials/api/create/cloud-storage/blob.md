@@ -1,99 +1,58 @@
 ---
-title: Create an Azure Blob Base Connection Using the Flow Service API
+title: Connect Azure Blob Storage to Experience Platform Using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Azure Blob using the Flow Service API.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
 ---
-# Create an [!DNL Azure Blob] base connection using the [!DNL Flow Service] API
+# Connect [!DNL Azure Blob Storage] to Experience Platform using the API
 
-A base connection represents the authenticated connection between a source and Adobe Experience Platform.
-
-This tutorial walks you through the steps to create a base connection for [!DNL Azure Blob] (hereinafter referred to as "[!DNL Blob]") using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read this guide to learn how to connect your [!DNL Azure Blobg Storage] account to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully create a [!DNL Blob] source connection using the [!DNL Flow Service] API.
+### Using Experience Platform APIs
+
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
 ### Gather required credentials
 
-In order for [!DNL Flow Service] to connect with your [!DNL Blob] storage, you must provide values for the following connection property:
+Read the [[!DNL Azure Blob Storage] overview](../../../../connectors/cloud-storage/blob.md#authentication) for information on authentication.
 
-| Credential | Description |
-| ---------- | ----------- |
-| `connectionString` | A string that contains the authorization information necessary to authenticate [!DNL Blob] to Experience Platform. The [!DNL Blob] connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. For more information about connection strings, see this [!DNL Blob] document on [configuring connection strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
-| `sasUri` | The shared access signature URI that you can use as an alternative authentication type to connect your [!DNL Blob] account. The [!DNL Blob] SAS URI pattern is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` For more information, see this [!DNL Blob] document on [shared access signature URIs](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication).  |
-| `container` | The name of the container that you want to designate access to. When creating a new account with the [!DNL Blob] source, you can provide a container name to specify user access to the sub folder of your choice. |
-| `folderPath` | The path to the folder that you want to provide access to. |
-| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Blob] is: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+## Connect your [!DNL Azure Blob Storage] account to Experience Platform {#connect}
 
-### Using Platform APIs
+Read the steps below for information on how to connect your [!DNL Azure Blob Storage] account to Experience Platform.
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+### Create a base connection
 
-## Create a base connection
+>[!NOTE]
+>
+>Once created, you cannot change the authentication type of a [!DNL Azure Blob Storage] base connection. To change the authentication type, you must create a new base connection.
 
-A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+A base connection links your source to Experience Platform, storing authentication details, connection status, and a unique ID. Use this ID to browse source files and identify specific items to ingest, including their data types and formats.
 
-The [!DNL Blob] source supports both connection string and shared access signature (SAS) authentication. A shared access signature (SAS) URI allows for secure delegated authorization to your [!DNL Blob] account. You can use SAS to create authentication credentials with varying degrees of access, as a SAS-based authentication allows you to set permissions, start and expiry dates, as well as provisions to specific resources.
+You can connect your [!DNL Azure Blob Storage] account to Experience Platform using the following authentication types:
 
-During this step, you can also designate the sub folders that your account will have access to by defining the name of the container and the path to the sub folder.
-
-To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Blob] authentication credentials as part of the request parameters.
-
+* **Account key authentication**: Uses the storage account's access key to authenticate and connect to your [!DNL Azure Blob Storage] account.
+* **Shared access signature (SAS)**: Uses a SAS URI to provide delegated, time-limited access to resources in your [!DNL Azure Blob Storage] account.
+* **Service principal based authentication**: Uses an Azure Active Directory (AAD) service principal (client ID and secret) to securely authenticate to your Azure Blob Storage account.
+  
 **API format**
 
-```http
+```https
 POST /connections
 ```
 
-**Request**
+To create a base connection ID, make a POST request to the `/connections` endpoint and provide your authentication credentials as part of the request parameters.
 
 >[!BEGINTABS]
 
->[!TAB Connection String]
+>[!TAB Account key authentication]
 
-The following request creates a base connection for [!DNL Blob] using connection string-based authentication:
-
-```shell
-curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-      "name": "Azure Blob connection using connectionString",
-      "description": "Azure Blob connection using connectionString",
-      "auth": {
-          "specName": "ConnectionString",
-          "params": {
-              "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}",
-              "container": "acme-blob-container",
-              "folderPath": "/acme/customers/salesData"
-          }
-      },
-      "connectionSpec": {
-          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-          "version": "1.0"
-      }
-  }'
-```
-
-| Property | Description |
-| -------- | ----------- |
-|   `auth.params.connectionString` | The connection string required to access data in your Blob storage. The Blob connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-|   `connectionSpec.id` | The Blob storage connection specification ID is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
-
->[!TAB SAS URI Authentication]
-
-To create a [!DNL Blob] blob connection using shared access signature URI, make a POST request to the [!DNL Flow Service] API while providing values for your [!DNL Blob] `sasUri`.
-
-The following request creates a base connection for [!DNL Blob] using shared access signature URI:
+To use account key authentication, provide values for your `connectionString`, `container`, and `folderPath`.
 
 ```shell
 curl -X POST \
@@ -104,31 +63,113 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Azure Blob source connection using SAS URI",
-      "description": "Azure Blob source connection using SAS URI",
-      "auth": {
-          "specName": "SAS URI Authentication",
-          "params": {
-              "sasUri": "https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>",
-              "container": "acme-blob-container",
-              "folderPath": "/acme/customers/salesData"
-          }
-      },
-      "connectionSpec": {
-          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-          "version": "1.0"
+    "name": "Azure Blob Storage connection using connectingString",
+    "description": "Azure Blob Storage connection using connectionString",
+    "auth": {
+      "specName": "ConnectionString",
+      "params": {
+        "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}",
+        "container": "acme-blob-container",
+        "folderPath": "/acme/customers/salesData"
       }
+    },
+    "connectionSpec": {
+      "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+      "version": "1.0"
+    }
   }'
 ```
 
-| Property | Description |
-| -------- | ----------- |
-|   `auth.params.connectionString` | The SAS URI required to access data in your [!DNL Blob] storage. The [!DNL Blob] SAS URI pattern is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>`. |
-|   `connectionSpec.id` | The [!DNL Blob] storage connection specification ID is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| Parameter | Description |
+| --- | --- |
+| `connectionString` | The connection string for your [!DNL Azure Blob Storage] account. The connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY};EndpointSuffix=core.windows.net`. |
+| `container` | The name of the [!DNL Azure Blob Storage] container where your data files are stored. |
+| `folderPath` | The path within the specified container where your files are located. |
+| `connectionSpec.id` | The connection spec ID of the [!DNL Azure Blob Storage] source. This ID is fixed as: `4c10e202-c428-4796-9208-5f1f5732b1cf`. |
+
+>[!TAB Shared access signature]
+
+To use shared access signature, provide values for your `sasUri`, `container`, and `folderPath`.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Azure Blob Storage source connection using SAS URI",
+    "description": "Azure Blob Storage source connection using SAS URI",
+    "auth": {
+      "specName": "SAS URI Authentication",
+      "params": {
+        "sasUri": "https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>",
+        "container": "acme-blob-container",
+        "folderPath": "/acme/customers/salesData"
+      }
+    },
+    "connectionSpec": {
+      "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+      "version": "1.0"
+    }
+  }'
+```
+
+| Parameter | Description |
+| --- | --- |
+| `sasUri` | The shared access signature URI that you can use as an alternative authentication type to connect your account. The SAS URI pattern is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}`. |
+| `container` | The name of the [!DNL Azure Blob Storage] container where your data files are stored. |
+| `folderPath` | The path within the specified container where your files are located. |
+| `connectionSpec.id` | The connection spec ID of the [!DNL Azure Blob Storage] source. This ID is fixed as: `4c10e202-c428-4796-9208-5f1f5732b1cf`. |
+
+>[!TAB Service principal based authentication]
+
+To connect via service principal based authentication, provide values for your: `serviceEndpoint`, `servicePrincipalId`, `servicePrincipalKey`, `accountKind`, `tenant`, `container`, and `folderPath`.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Azure Blob Storage source connection using service principal based authentication",
+    "description": "Azure Blob Storage source connection using service principal based authentication",
+    "auth": {
+      "specName": "Service Principal Based Authentication",
+      "params": {
+        "serviceEndpoint": "{SERVICE_ENDPOINT}",
+        "servicePrincipalId": "{SERVICE_PRINCIPAL_ID}",
+        "servicePrincipalKey": "{SERVICE_PRINCIPAL_KEY}",
+        "accountKind": "{ACCOUNT_KIND}",
+        "tenant": "{TENANT}",
+        "container": "acme-blob-container",
+        "folderPath": "/acme/customers/salesData"
+      }
+    },
+    "connectionSpec": {
+      "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+      "version": "1.0"
+    }
+  }'
+```
+
+| Parameter | Description |
+| --- | --- |
+| `serviceEndpoint` | The endpoint URL of your [!DNL Azure Blob Storage] account. Typically in the format: `https://{ACCOUNT_NAME}.blob.core.windows.net`. |
+| `servicePrincipalId` | The client/application ID of the Azure Active Directory (AAD) service principal used for authentication. |
+| `servicePrincipalKey` | The client secret or password associated with the Azure service principal. |
+| `accountKind` | The type of your [!DNL Azure Blob Storage] account. Common values include `Storage` (general purpose V1), `StorageV2` (general purpose V2), `BlobStorage`, and `BlockBlobStorage`. |
+| `tenant` | The Azure Active Directory (AAD) tenant ID where the service principal is registered. |
+| `container` | The name of the [!DNL Azure Blob Storage] container where your data files are stored. |
+| `folderPath` | The path within the specified container where your files are located. |
+| `connectionSpec.id` | The connection spec ID of the [!DNL Azure Blob Storage] source. This ID is fixed as: `4c10e202-c428-4796-9208-5f1f5732b1cf`. |
 
 >[!ENDTABS]
-
-**Response**
 
 A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required in the next step to create a source connection.
 
@@ -138,6 +179,8 @@ A successful response returns details of the newly created base connection, incl
     "etag": "\"1700c57b-0000-0200-0000-5e3b3f440000\""
 }
 ```
+
+
 
 ## Next steps
 

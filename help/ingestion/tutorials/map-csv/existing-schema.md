@@ -12,14 +12,14 @@ exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
 >
 >This document covers how to map a CSV file to an existing XDM schema. For information on how to use the AI-generated schema recommendation tool (currently in beta), see the document on [mapping a CSV file using machine-learning recommendations](./recommendations.md).
 
-In order to ingest CSV data into [!DNL Adobe Experience Platform], the data must be mapped to an [!DNL Experience Data Model] (XDM) schema. This tutorial covers how to map a CSV file to an XDM schema using the [!DNL Platform] user interface.
+In order to ingest CSV data into [!DNL Adobe Experience Platform], the data must be mapped to an [!DNL Experience Data Model] (XDM) schema. This tutorial covers how to map a CSV file to an XDM schema using the [!DNL Experience Platform] user interface.
 
 ## Getting started
 
-This tutorial requires a working understanding of the following components of [!DNL Platform]:
+This tutorial requires a working understanding of the following components of [!DNL Experience Platform]:
 
-- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
-- [Batch ingestion](../../batch-ingestion/overview.md): The method by which [!DNL Platform] ingests data from user-supplied datafiles.
+- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+- [Batch ingestion](../../batch-ingestion/overview.md): The method by which [!DNL Experience Platform] ingests data from user-supplied datafiles.
 - [Adobe Experience Platform Data Prep](../../batch-ingestion/overview.md): A suite of capabilities that allow you to map and transform ingested data to conform to XDM schemas. The documentation on [Data Prep functions](../../../data-prep/functions.md) is particularly relevant for schema mapping.
 
 This tutorial also requires that you have already created a dataset to ingest your CSV data into. For steps on creating a dataset in the UI, see the [data ingest tutorial](../ingest-batch-data.md).
@@ -58,7 +58,7 @@ The **[!UICONTROL Sample data]** section appears once the file is uploaded, show
 
 The **[!UICONTROL Mapping]** step appears. The columns of the CSV file are listed under **[!UICONTROL Source Field]**, with their corresponding XDM schema fields listed under **[!UICONTROL Target Field]**. 
 
-[!DNL Platform] automatically provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
+[!DNL Experience Platform] automatically provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
 ![](../../images/tutorials/map-a-csv-file/mapping-with-suggestions.png)
 
@@ -114,4 +114,8 @@ Once your CSV file is mapped and created, you can monitor the data that is being
 
 ## Next steps
 
-By following this tutorial, you have successfully mapped a flat CSV file to an XDM schema and ingested it into [!DNL Platform]. This data can now be used by downstream [!DNL Platform] services such as [!DNL Real-Time Customer Profile]. See the overview for [[!DNL Real-Time Customer Profile]](../../../profile/home.md) for more information.
+By following this tutorial, you have successfully mapped a flat CSV file to an XDM schema and ingested it into [!DNL Experience Platform]. This data can now be used by downstream [!DNL Experience Platform] services such as [!DNL Real-Time Customer Profile]. See the overview for [[!DNL Real-Time Customer Profile]](../../../profile/home.md) for more information.
+
+>[!TIP]
+>
+>You can also use machine learning (ML) algorithms to **generate a schema from sample data** from the Schema workspace. This workflow automatically creates a new schema based on the structure and content of your file, ensuring that the schema matches your data's format. This saves you time and increases accuracy when defining the structure, fields, and data types for large complex datasets. See the [ML-Assisted schema creation guide](../../../xdm/ui/ml-assisted-schema-creation.md) for more information on this workflow.

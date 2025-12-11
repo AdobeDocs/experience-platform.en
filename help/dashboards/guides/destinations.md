@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
-title: Destinations Dashboard Guide
+title: Destinations Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's active destinations.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
@@ -21,7 +21,7 @@ The Destinations dashboard displays a snapshot of the destinations that your org
 
 ## Explore the [!UICONTROL Destinations] dashboard {#explore}
 
-To navigate to the destinations dashboard within the Platform UI, select **[!UICONTROL Destinations]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
+To navigate to the destinations dashboard within the Experience Platform UI, select **[!UICONTROL Destinations]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
 
 The date and time of the most recent snapshot is displayed at the top of the [!UICONTROL Overview] next to the destination dropdown. All widget data is accurate as of that date and time. The timestamp of the snapshot is provided in UTC; it is not in the timezone of the individual user or organization.
 
@@ -29,11 +29,11 @@ The date and time of the most recent snapshot is displayed at the top of the [!U
 >
 >If your organization is new to Experience Platform and does not yet have active destinations, the Destinations dashboard and [!UICONTROL Overview] tab are not visible. Instead, selecting [!UICONTROL Destinations] from the left navigation displays the [!UICONTROL Catalog] tab. To learn more about the [!UICONTROL Catalog] tab, refer to the [[!UICONTROL Destinations] workspace guide](../../destinations/ui/destinations-workspace.md).
 
-![The Platform UI Destinations Overview with the most recent snapshot highlighted.](../images/destinations/snapshot-timestamp.png)
+![The Experience Platform UI Destinations Overview with the most recent snapshot highlighted.](../images/destinations/snapshot-timestamp.png)
 
 ### Modify the [!UICONTROL Destinations] dashboard {#modify}
 
-Select **[!UICONTROL Modify dashboard]** to change the appearance of the destinations dashboard. This enables you to move, add, and remove widgets from the dashboard as well as to access the widget library. From the widget library, you can explore the available widgets and create custom widgets for your organization. 
+Select **[!UICONTROL Modify dashboard]** to change the appearance of the destinations dashboard. Changes to the dashboard are per user and not organization wide. You can move, add, resize, and remove widgets from the dashboard and access the widget library to customize your dashboard. From the widget library, you can explore the available widgets and create custom widgets for your organization. 
 
 Please refer to the [modifying dashboards](../customize/modify.md) and [widget library overview](../customize/widget-library.md) documentation to learn more.
 
@@ -44,6 +44,23 @@ Select **[!UICONTROL Add widget]** to navigate to the widget library and see a l
 ![The Destinations dashboard overview with Add widget highlighted.](../images/destinations/destinations-overview-add-widget.png)
 
 From the widget library, you can browse the selection of standard and custom audience widgets. For information on how to add widgets, please see the widget library documentation on how to [add a widget](../customize/widget-library.md#add-widgets).
+
+### View SQL {#view-sql}
+
+You can view the SQL that generates the insights visualized on your dashboard with a toggle on the [!UICONTROL Overview] workspace. You can take inspiration from the SQL of your existing insights to create new queries that derive unique insights from Experience Platform data based on your business needs. To learn more about this feature, see the [View SQL UI guide](../view-sql.md).
+
+## Default widgets {#default-widgets}
+
+A default widget load-out is provided for all new instances of Adobe Experience Platform that highlights the latest available insights from your data. The following widgets are pre-configured in your segments view from the outset. Full details on the purpose and function of the widgets can be found below.
+
+* [[!UICONTROL Most used destinations]](#most-used-destinations)
+* [[!UICONTROL Recently created destinations]](#recently-created-destinations)
+* [[!UICONTROL Recently activated segments]](#recently-activated-segments)
+
+>[!NOTE]
+>
+>As of July 26th 2023, [!UICONTROL Profiles], [!UICONTROL Audiences], and [!UICONTROL Destinations] Overview dashboards have been reset to a new default widget load-out for all users who did not modify their views in the previous six months. 
+>Refer to the documentation in the [Profiles](./profiles.md#default-widgets) and [Audiences](./audiences.md#default-widgets) default widget sections for details on which widgets are included as part of the default widget load-outs. You can continue to customize your dashboard widgets as before.
 
 ## Standard widgets {#standard-widgets}
 

@@ -19,15 +19,15 @@ The following is a list of answers to frequently asked questions about Real-Time
 
 Profile accepts both **record** and **time-series** data, as long as the data in question contains at least one identity value that associates the data with a unique individual person.
 
-Like all Platform services, Profile requires its data to be semantically structured under an Experience Data Model (XDM) schema. In turn, this schema must have a **primary identity** defined and be enabled for use in Profile.
+Like all Experience Platform services, Profile requires its data to be semantically structured under an Experience Data Model (XDM) schema. In turn, this schema must have a **primary identity** defined and be enabled for use in Profile.
 
 If you are unfamiliar with XDM, start with the [XDM overview](../xdm/home.md) to learn more. Next, see the XDM user guide for steps on how to [set identity fields](../xdm/tutorials/create-schema-ui.md#identity-field) and [enable a schema for Profile](../xdm/tutorials/create-schema-ui.md#profile).
 
 ### Where is Profile data stored?
 
-Real-Time Customer Profile maintains its own data store (referred to as the "Profile store"), separate from the Data Lake that contains other ingested Platform data. 
+Real-Time Customer Profile maintains its own data store (referred to as the "Profile store"), separate from the Data Lake that contains other ingested Experience Platform data. 
 
-### If I have already ingested data into Platform, can I make it available in the Profile store?
+### If I have already ingested data into Experience Platform, can I make it available in the Profile store?
 
 If data has been ingested into a non-Profile dataset, you must re-ingest that data into a Profile-enabled dataset in order to make it available in the Profile store. It is possible to enable an existing dataset for Profile, however any data that was ingested prior to that configuration will still not appear in the Profile store.
 
@@ -51,7 +51,7 @@ You can also view a list of your audiences under the **[!UICONTROL Browse]** tab
 
 ## Error codes
 
-The following is a list of error messages that you may encounter when working with the Real-Time Customer Profile API. If the error you are encountering is not listed here, you may find it in the general [Platform troubleshooting guide](../landing/troubleshooting.md) instead.
+The following is a list of error messages that you may encounter when working with the Real-Time Customer Profile API. If the error you are encountering is not listed here, you may find it in the general [Experience Platform troubleshooting guide](../landing/troubleshooting.md) instead.
 
 ### Could not lookup schema of the computed attribute for the provided path
 
@@ -116,18 +116,6 @@ This error occurs when an invalid payload is provided for a delete system job. E
 ```
 
 This error occurs when a valid batch could not be found when attempting to create a delete request for Profile data. Check that you have entered the correct ID for a Profile-enabled dataset before trying again.
-
-### The projection destination has not yet been created
-
-```json
-{
-  "status":404,
-  "title":"The projection destination has not yet been created.",
-  "type":"http://ns.adobe.com/adobecloud/problem/missing-entity"
-}
-```
-
-This error occurs when the `destinationId` provided in a `POST /config/projections` request is invalid. Double-check that you have provided a valid destination ID before trying again. To create a new destination, follow the steps outlined in the [Profile developer guide](./api/edge-projections.md#create-a-destination).
 
 ### Unsupported media type
 

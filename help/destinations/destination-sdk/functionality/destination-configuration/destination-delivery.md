@@ -1,8 +1,8 @@
 ---
 description: Learn how to configure the destination delivery settings for destinations built with Destination SDK, to indicate where the exported data goes and what authentication rule is used in the location where the data will land.
 title: Destination delivery
+exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
 ---
-
 # Destination delivery
 
 To offer more control over where the data exported to your destination lands, Destination SDK allows you to specify destination delivery settings.
@@ -42,7 +42,8 @@ When configuring your destination delivery settings, you can use the parameters 
 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`authenticationRule` | String | Indicates how [!DNL Platform] should connect to your destination. Supported values:<ul><li>`CUSTOMER_AUTHENTICATION`: Use this option if Platform customers log in to your system via any of the authentication methods described [here](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION`: Use this option if there is a global authentication system between Adobe and your destination and the [!DNL Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must create a credentials object using the [credentials API](../../credentials-api/create-credential-configuration.md) configuration. </li><li>`NONE`: Use this option if no authentication is required to send data to your destination platform. </li></ul> |
+|`authenticationRule` | String | Indicates how [!DNL Experience Platform] should connect to your destination. Supported values:<ul><li>`CUSTOMER_AUTHENTICATION`: Use this option if Experience Platform customers log in to your system via any of the authentication methods described [here](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION`: Use this option if there is a global authentication system between Adobe and your destination and the [!DNL Experience Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must create a credentials object using the [credentials API](../../credentials-api/create-credential-configuration.md) configuration and set the `authenticationId` parameter to the credential object ID value.</li><li>`NONE`: Use this option if no authentication is required to send data to your destination platform. </li></ul> |
+|`authenticationId` | String | The `instanceId` of the credential object's configuration ID to use for authentication. This parameter is only required when you need to specify a particular credentials configuration. |
 |`destinationServerId` | String | The `instanceId` of the [destination server](../../authoring-api/destination-server/create-destination-server.md) that you want to export data to. |
 |`deliveryMatchers.type`|String|<ul><li>When configuring destination delivery for file-based destinations, always set this to `SOURCE`.</li><li>When configuring destination delivery for a streaming destination, the `deliveryMatchers` section is not required.</li></ul>|
 |`deliveryMatchers.value`|String|<ul><li>When configuring destination delivery for file-based destinations, always set this to `batch`.</li><li>When configuring destination delivery for a streaming destination, the `deliveryMatchers` section is not required.</li></ul>|
@@ -95,6 +96,32 @@ The example below shows how the destination delivery settings should be configur
 
 >[!ENDSHADEBOX]
 
+## Platform authentication configuration {#platform-authentication}
+
+When using `PLATFORM_AUTHENTICATION`, you must specify the `authenticationId` parameter to link your destination configuration to the credentials configuration.
+
+1. Set `destinationDelivery.authenticationRule` to `"PLATFORM_AUTHENTICATION"` in your destination configuration
+2. [Create the credential object](/help/destinations/destination-sdk/credentials-api/create-credential-configuration.md).
+3. Set the `authenticationId` parameter to the credential object's `instanceId` value.
+
+**Example configuration with PLATFORM_AUTHENTICATION:**
+
+>[!BEGINSHADEBOX]
+
+```json
+{
+   "destinationDelivery":[
+      {
+         "authenticationRule":"PLATFORM_AUTHENTICATION",
+         "authenticationId":"<string-here>",
+         "destinationServerId":"<string-here>"
+      }
+   ]
+}
+```
+
+>[!ENDSHADEBOX]
+
 ## Next steps {#next-steps}
 
 After reading this article, you should have a better understanding of how you can configure the locations where your destination should export data, for both streaming and file-based destinations.
@@ -102,7 +129,7 @@ After reading this article, you should have a better understanding of how you ca
 To learn more about the other destination components, see the following articles:
 
 * [Customer authentication](customer-authentication.md)
-* [OAuth2 authentication](oauth2-authentication.md)
+* [OAuth2 authorization](oauth2-authorization.md)
 * [UI attributes](ui-attributes.md)
 * [Customer data fields](customer-data-fields.md)
 * [Schema configuration](schema-configuration.md)

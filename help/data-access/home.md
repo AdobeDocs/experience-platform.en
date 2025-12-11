@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api
 solution: Experience Platform
 title: Data Access Overview
-description: Data Access supports Adobe Experience Platform by providing users tools focused on the discoverability and accessibility of ingested Platform datasets.
+description: Data Access supports Adobe Experience Platform by providing users tools focused on the discoverability and accessibility of ingested Experience Platform datasets.
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
 ---
 # [!DNL Data Access] overview
@@ -13,7 +13,7 @@ exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
 
 ## [!DNL Data Access] API
 
-Detailed information on using the [!DNL Data Access] API to connect with [!DNL Platform] can be found in the [Data Access developer guide](api.md).
+Detailed information on using the [!DNL Data Access] API to connect with [!DNL Experience Platform] can be found in the [Data Access developer guide](api.md).
 
 ## Accessing data in Data Science Workspace
 
@@ -23,4 +23,4 @@ For more information about [!DNL Data Science Workspace], start by reading the [
 
 ## Subscribe to data ingestion events
 
-[!DNL Platform] makes specific high-value events available for subscription through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). For instance, you can subscribe to data ingestion events to be notified of potential delays and failures. See the tutorial on [subscribing to data ingestion notifications](../ingestion/quality/subscribe-events.md) for more information.
+[!DNL Experience Platform] makes specific high-value events available for subscription through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). For instance, you can subscribe to data ingestion events to be notified of potential delays and failures. See the tutorial on [subscribing to Adobe event notifications](../observability/alerts/subscribe.md) for more information.

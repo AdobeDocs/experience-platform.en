@@ -2,6 +2,7 @@
 title: Snowflake Overview
 description: Learn about Snowflake for event forwarding in Adobe Experience Platform.
 last-substantial-update: 2023-06-21
+exl-id: abddf0c4-3d4c-4f66-a6e0-c10b54ea3430
 ---
 # [!DNL Snowflake] overview
 

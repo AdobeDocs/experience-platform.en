@@ -11,6 +11,53 @@ The following is a list of release notes for the Adobe Analytics tag extension.
 >
 >The Analytics tag extension if often updated in response to updates to the [AppMeasurement JavaScript library](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html). Refer to the [AppMeasurement release notes](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) for details on the specific versions mentioned below.
 
+## October 28, 2024
+
+**Adobe Analytics Extension 1.9.6**
+
+**Features**:
+
+* Added a new feature to allow users to view and edit a JSON version of the [Set Variables Action](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables). The Adobe Web SDK Extension also includes an action to [populate an analytics variable](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) by providing JSON. By copying JSON data from the AA Extension to the Web SDK Extension, migrating customers can easily transfer several settings at once instead of adding each variable manually.
+
+## August 12, 2024
+
+**Adobe Analytics Extension 1.9.5**
+
+**Features**:
+
+* Upgraded to [AppMeasurement to v2.27.0](https://github.com/adobe/appmeasurement/releases/tag/v2.27.0).
+
+## March 4, 2024
+
+**Adobe Analytics Extension 1.9.4**
+
+**Features**:
+
+* Upgraded to [AppMeasurement to v2.26.0](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
+
+## September 15, 2023
+
+**Adobe Analytics Extension 1.9.3**
+
+**Features**:
+
+* Upgraded to [AppMeasurement to v2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
+
+
+## July 19, 2023
+
+**Adobe Analytics Extension 1.9.2**
+
+**Features**:
+
+* Upgraded to [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
+* Added an optional configuration (`decodeLinkParameters` default `false`) that decodes link URL's that includes double byte encoded characters.
+
+**Bug fixes**:
+
+* Added additional error handling for browsers with faulty high-entropy [User-Agent client hints](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) API's.
+* Changed [POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) Content-Type header to use `x-www-form-urlencoded` by default.
+
 ## September 23, 2022
 
 **Adobe Analytics Extension 1.9.1**
@@ -174,7 +221,7 @@ The following is a list of release notes for the Adobe Analytics tag extension.
 
 **Features**:
 
-* Updated the Adobe Analytics Extension to [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=en#version-2.14.0) which includes a fix to a known clearVars issue
+* Updated the Adobe Analytics Extension to [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.14.0) which includes a fix to a known clearVars issue
 * Added an Exchange link to the extension. The Exchange listing can be reached by selecting the dropdown and choosing "extension info"
 
 **Bug fixes**:

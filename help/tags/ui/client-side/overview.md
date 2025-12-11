@@ -11,10 +11,6 @@ exl-id: 54c66066-93f7-4311-a255-0825055d0dec
 
 This section contains information that is useful when managing client-side tag operations in Adobe Experience Platform.
 
-* [**The Tag `_satellite` Object Reference**](satellite-object.md)
-
-  This reference documents the `_satellite` object and the things you can do with it.
-
 * [**Asynchronous Deployment of Experience Cloud JavaScript**](asynchronous-deployment.md)
 
   Performance and non-blocking deployment of the JavaScript libraries required by our products is increasingly important to Adobe Experience Cloud users. Tools like [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) recommend that users change they way they deploy the [!DNL Adobe] libraries on their site. This article explains how to use the Adobe JavaScript libraries in an asynchronous fashion.

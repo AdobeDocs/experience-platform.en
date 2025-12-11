@@ -3,14 +3,14 @@ keywords: Experience Platform;home;popular topics;streaming;cloud storage connec
 solution: Experience Platform
 title: Create a streaming dataflow for a cloud storage source in the UI
 type: Tutorial
-description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your cloud storage base connector.
+description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Experience Platform dataset. This tutorial provides steps to configure a new dataflow using your cloud storage base connector.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
 ---
 # Create a streaming dataflow for a cloud storage source in the UI
 
 A dataflow is a scheduled task that retrieves and ingests data from a source to an Adobe Experience Platform dataset. This tutorial provides steps to create a streaming dataflow for a cloud storage source in the UI.
 
-Before attempting this tutorial, you must first establish a valid and authenticated connection between your cloud storage account and Platform. If you do not already have an authenticated connection, see one of the following tutorials for information on authenticating your streaming cloud storage accounts:
+Before attempting this tutorial, you must first establish a valid and authenticated connection between your cloud storage account and Experience Platform. If you do not already have an authenticated connection, see one of the following tutorials for information on authenticating your streaming cloud storage accounts:
 
 - [[!DNL Amazon Kinesis]](../../../ui/create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../../../ui/create/cloud-storage/eventhub.md)
@@ -20,7 +20,7 @@ Before attempting this tutorial, you must first establish a valid and authentica
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-- [Dataflows](../../../../../dataflows/home.md): Dataflows are a representation of data jobs that move data across Platform. Dataflows are configured across different services, from sources, to [!DNL Identity Service], to [!DNL Profile], and to [!DNL Destinations].
+- [Dataflows](../../../../../dataflows/home.md): Dataflows are a representation of data jobs that move data across Experience Platform. Dataflows are configured across different services, from sources, to [!DNL Identity Service], to [!DNL Profile], and to [!DNL Destinations].
 - [Data Prep](../../../../../data-prep/home.md): Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM). Data Prep appears as a "Map" step in the Data Ingestion processes, including CSV Ingestion workflow.
 - [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
   - [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
@@ -29,7 +29,11 @@ This tutorial requires a working understanding of the following components of Ad
 
 ## Add data
 
-After creating your authenticating your streaming cloud storage account, the **[!UICONTROL Select data]** step appears, providing an interface for you to select which data stream you will bring to Platform.
+>[!NOTE]
+>
+>You can only create one source dataflow per consumer group for a given Event Hub.
+
+After creating your authenticating your streaming cloud storage account, the **[!UICONTROL Select data]** step appears, providing an interface for you to select which data stream you will bring to Experience Platform.
 
 - The left part of the interface is a browser that allows you to view the available data streams within your account;
 - The right part of the interface lets you preview up to 100 rows of data from a JSON file.
@@ -52,7 +56,7 @@ When finished, select **[!UICONTROL Next]**.
 
 ## Mapping
 
-The **[!UICONTROL Mapping]** step appears, providing an interface to map the source data to a Platform dataset. 
+The **[!UICONTROL Mapping]** step appears, providing an interface to map the source data to an Experience Platform dataset. 
 
 Choose a dataset for inbound data to be ingested into. You can either use an existing dataset or create a new one.
 
@@ -96,7 +100,7 @@ With your dataset and schema established, the **[!UICONTROL Map standard fields]
 
 >[!TIP]
 >
->Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
+>Experience Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
 Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
@@ -129,7 +133,7 @@ Once your streaming cloud storage dataflow has been created, you can monitor the
 
 ## Next steps
 
-By following this tutorial, you have successfully created a dataflow to stream data from a cloud storage source. Incoming data can now be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have successfully created a dataflow to stream data from a cloud storage source. Incoming data can now be used by downstream Experience Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 - [[!DNL Real-Time Customer Profile] overview](../../../../../profile/home.md)
 - [[!DNL Data Science Workspace] overview](../../../../../data-science-workspace/home.md)

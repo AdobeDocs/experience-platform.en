@@ -7,7 +7,7 @@ exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
 
 This document provides guidance on best practices for organizing data assets including, datasets, views, and temporary tables for use with Adobe Experience Platform Query Service. It covers how to structure your data as well as information on how to access, update, and delete this information.
 
-It is important to logically organize your data assets within the Platform [!DNL Data Lake] as they grow. Query Service extends SQL constructs that enable you to logically group data assets within a sandbox. This method of organization allows for the sharing of data assets between schemas without the need to move them physically.
+It is important to logically organize your data assets within the Experience Platform [!DNL Data Lake] as they grow. Query Service extends SQL constructs that enable you to logically group data assets within a sandbox. This method of organization allows for the sharing of data assets between schemas without the need to move them physically.
 
 ## Getting started
 
@@ -60,7 +60,7 @@ Listing all databases under `dbname="all"` displays three available databases.
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
 databaseB
 databaseC
@@ -72,7 +72,7 @@ Listing all schema under `dbname="all"` displays the three schemas related to ev
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 databaseA      | schema2
 databaseB      | schema3
@@ -84,14 +84,14 @@ When you make a [!DNL PostgreSQL] connection using `dbname="databaseA"`, you can
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
  
 
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 databaseA      | schema2
 ```
@@ -102,20 +102,20 @@ Dot notation allows you to access every table associated with a specific schema 
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
 
 
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 
 
 SHOW tables;
 name       | type
-----------------------
+|----------------------
 dataset1| table
 dataset2| table
 dataset3| table
@@ -164,4 +164,4 @@ DROP SCHEMA databaseA.schema2;
 
 ## Next steps
 
-By reading this document, you now have a better understanding of the best practices regarding the organization and structure of your data assets for use with Adobe Experience Platform Query Service. It is recommended to continue learning about Query Service best practices by reading about [data deduplication documentation](../essential-concepts/deduplication.md).
+By reading this document, you now have a better understanding of the best practices regarding the organization and structure of your data assets for use with Adobe Experience Platform Query Service. It is recommended to continue learning about Query Service best practices by reading about [data deduplication documentation](../key-concepts/deduplication.md).

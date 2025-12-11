@@ -1,13 +1,13 @@
 ---
 description: Learn how to configure the partner schema for destinations built with Destination SDK.
 title: Partner schema configuration
+exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
 ---
-
 # Partner schema configuration
 
-Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. When data is ingested into Platform, it is structured according to an XDM schema. For more information on the schema composition model, including design principles and best practices, see the [basics of schema composition](../../../../xdm/schema/composition.md).
+Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. When data is ingested into Experience Platform, it is structured according to an XDM schema. For more information on the schema composition model, including design principles and best practices, see the [basics of schema composition](../../../../xdm/schema/composition.md).
 
-When building a destination with Destination SDK, you can define your own partner schema to be used by your destination platform. This gives users the ability to map profile attributes from Platform to specific fields that your destination platform recognizes, all within the Platform UI.
+When building a destination with Destination SDK, you can define your own partner schema to be used by your destination platform. This gives users the ability to map profile attributes from Experience Platform to specific fields that your destination platform recognizes, all within the Experience Platform UI.
 
 When configuring the partner schema for your destination, you can fine tune the field mapping supported by your destination platform, such as:
 
@@ -15,14 +15,14 @@ When configuring the partner schema for your destination, you can fine tune the 
 * Create dynamic partner schemas that Experience Platform can dynamically call to retrieve a list of all supported attributes within your destination.
 * Define mandatory field mappings that your destination platform requires.
 
-To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the the guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 You can configure your schema settings via the `/authoring/destinations` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
 
 * [Create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Update a destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-This article describes all the supported schema configuration options that you can use for your destination, and shows what customers will see in the Platform UI.
+This article describes all the supported schema configuration options that you can use for your destination, and shows what customers will see in the Experience Platform UI.
 
 >[!IMPORTANT]
 >
@@ -42,8 +42,8 @@ Refer to the table below for details on which types of integrations support the 
 Destination SDK supports multiple schema configurations:
 
 * Static schemas are defined through the `profileFields` array in the `schemaConfig` section. In a static schema, you define every target attribute that should be shown in the Experience Platform UI in the `profileFields` array. If you need to update your schema, you must [update the destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md).
-* Dynamic schemas use an additional destination server type, called a [dynamic schema server](../../authoring-api/destination-server/create-destination-server.md), to dynamically generate schemas based on your own API. Dynamic schemas do not use the `profileFields` array. If you need to update your schema, there is no need to [update the destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md). Instead, the dynamic schema server retrieves the updated schema from your API.
-* Within the schema configuration, you have the option of adding required (or predefined) mappings. These are mappings that users are able to view in the Platform UI, but they cannot modify them when setting up a connection to your destination. For example, you can enforce the email address field to always be sent to the destination.
+* Dynamic schemas use an additional destination server type, called a [dynamic schema server](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers), to dynamically retrieve the supported target attributes and generate schemas based on your own API. Dynamic schemas do not use the `profileFields` array. If you need to update your schema, there is no need to [update the destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md). Instead, the dynamic schema server retrieves the updated schema from your API.
+* Within the schema configuration, you have the option of adding required (or predefined) mappings. These are mappings that users are able to view in the Experience Platform UI, but they cannot modify them when setting up a connection to your destination. For example, you can enforce the email address field to always be sent to the destination.
 
 The `schemaConfig` section uses multiple configuration parameters, depending on the type of schema that you need, as shown in the sections below.
 
@@ -99,8 +99,8 @@ To create a static schema with profile attributes, define the target attributes 
 |`profileRequired` | Boolean | Optional | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination platform. |
 |`segmentRequired` | Boolean | Required | This parameter is required by Destination SDK and should always be set to `true`. |
 |`identityRequired` | Boolean | Required | Set to `true` if users should be able to map [identity types](identity-namespace-configuration.md) from Experience Platform to the attributes you defined in the `profileFields` array . |
-|`segmentNamespaceAllowList`| Array | Optional | Defines specific audience namespaces from which users can map audiences to the destination. Use this parameter to restrict Platform users to export audiences from only the audience namespaces that you define in the array. This parameter cannot be used together with `segmentNamespaceDenyList`.<br> <br> Example: `"segmentNamespaceAllowList": ["AudienceManager"]` will allow users to map only audiences from the `AudienceManager` namespace to this destination. <br> <br> To allow users to export any audience to your destination, you can ignore this parameter. <br> <br> If both `segmentNamespaceAllowList` and `segmentNamespaceDenyList` are missing from your configuration, users will only be able to export audiences originating from the [Segmentation Service](../../../../segmentation/home.md).|
-|`segmentNamespaceDenyList`| Array | Optional | Restricts users from mapping audiences to the destination, from the audience namespaces defined in the array. Cannot be used together with `segmentNamespaceAllowed`. <br> <br> Example: `"segmentNamespaceDenyList": ["AudienceManager"]` will block users from mapping audiences from the `AudienceManager` namespace to this destination. <br> <br> To allow users to export any audience to your destination, you can ignore this parameter. <br> <br> If both `segmentNamespaceAllowed` and `segmentNamespaceDenyList` are missing from your configuration, users will only be able to export audiences originating from the [Segmentation Service](../../../../segmentation/home.md). <br> <br> To allow the export of all audiences, regardless of the origin, set `"segmentNamespaceDenyList":[]`.|
+|`segmentNamespaceAllowList`| Array | Optional | Allows users to map only audiences from the audience namespaces defined in the array to the destination. <br><br> Use of this parameter is discouraged in most cases. Instead, use `"segmentNamespaceDenyList":[]` to allow all types of audiences to be exported to your destination. <br><br> If both `segmentNamespaceAllowList` and `segmentNamespaceDenyList` are missing from your configuration, users will only be able to export audiences originating from the [Segmentation Service](../../../../segmentation/home.md). <br><br>`segmentNamespaceAllowList` and `segmentNamespaceDenyList` are mutually exclusive.|
+|`segmentNamespaceDenyList`| Array | Optional | Restricts users from mapping audiences from the audience namespaces defined in the array to the destination. <br><br>Adobe recommends to allow the export of all audiences, regardless of the origin, by setting `"segmentNamespaceDenyList":[]`. <br><br>**Important:** If you don't specify `segmentNamespaceDenyList` in your `schemaConfig` and you don't use `segmentNamespaceAllowList`, the system automatically sets `segmentNamespaceDenyList` to `[]`. This prevents the loss of custom audiences in the future. For safety, Adobe recommends explicitly setting `"segmentNamespaceDenyList":[]` in your configuration. <br><br>`segmentNamespaceAllowList` and `segmentNamespaceDenyList` are mutually exclusive. |
 
 {style="table-layout:auto"}
 
@@ -120,7 +120,7 @@ Destination SDK supports the creation of dynamic partner schemas. As opposed to 
 
 >[!IMPORTANT]
 >
->Before you create a dynamic schema, you must [create a dynamic schema server](../../authoring-api/destination-server/create-destination-server.md).
+>Before you create a dynamic schema, you must [create a dynamic schema server](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers).
 
 In a dynamic schema configuration, the `profileFields` array is replaced by the `dynamicSchemaConfig` section, as shown below.
 
@@ -142,7 +142,7 @@ In a dynamic schema configuration, the `profileFields` array is replaced by the 
 
 |Parameter | Type | Required/Optional |Description|
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | String | Required | Indicates how [!DNL Platform] customers connect to your destination. Accepted values are `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` if Platform customers log into your system via any of the authentication methods described [here](customer-authentication.md). </li><li> Use `PLATFORM_AUTHENTICATION` if there is a global authentication system between Adobe and your destination and the [!DNL Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must [create a credentials object](../../credentials-api/create-credential-configuration.md) using the Credentials API. </li><li>Use `NONE` if no authentication is required to send data to your destination platform. </li></ul> |
+| `dynamicEnum.authenticationRule` | String | Required | Indicates how [!DNL Experience Platform] customers connect to your destination. Accepted values are `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` if Experience Platform customers log into your system via any of the authentication methods described [here](customer-authentication.md). </li><li> Use `PLATFORM_AUTHENTICATION` if there is a global authentication system between Adobe and your destination and the [!DNL Experience Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must [create a credentials object](../../credentials-api/create-credential-configuration.md) using the Credentials API and pass the credential object's ID in the `authenticationId` parameter in the [destination delivery](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) configuration. </li><li>Use `NONE` if no authentication is required to send data to your destination platform. </li></ul> |
 | `dynamicEnum.destinationServerId` | String | Required | The `instanceId` of your dynamic schema server. This destination server includes the API endpoint which Experience Platform will call to retrieve the dynamic schema. |
 | `dynamicEnum.value` |String| Required |The name of the dynamic schema, as defined in the dynamic schema server configuration.|
 | `dynamicEnum.responseFormat` | String | Required | Always set to `SCHEMA` when defining a dynamic schema.|
@@ -154,13 +154,14 @@ In a dynamic schema configuration, the `profileFields` array is replaced by the 
 
 ## Required mappings {#required-mappings}
 
-Within the schema configuration, in addition to your static or dynamic schema, you have the option of adding required (or predefined) mappings. These are mappings that users are able to view in the Platform UI, but they cannot modify them when setting up a connection to your destination.
+Within the schema configuration, in addition to your static or dynamic schema, you have the option of adding required (or predefined) mappings. These are mappings that users are able to view in the Experience Platform UI, but they cannot modify them when setting up a connection to your destination.
 
 For example, you can enforce the email address field to always be sent to the destination.
 
 >[!NOTE]
 >
 >The following combinations of required mappings are currently supported: 
+>
 >* You can configure a required source field and a required destination field. In this case, users cannot edit or select any of the two fields and can only view the selection.
 >* You can configure a required destination field only. In this case, users will be allowed to select a source field to map to the destination.
 >
@@ -197,7 +198,7 @@ The example below shows both required source and destination mappings. When both
 
 {style="table-layout:auto"}
 
-As a result, both the **[!UICONTROL Source field]** and **[!UICONTROL Target field]** sections in the Platform UI are greyed out.
+As a result, both the **[!UICONTROL Source field]** and **[!UICONTROL Target field]** sections in the Experience Platform UI are greyed out.
 
 ![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
@@ -227,11 +228,24 @@ The example below shows a required destination mapping. If only the destination 
 
 {style="table-layout:auto"}
 
-As a result, the **[!UICONTROL Target field]** section in the Platform UI is greyed out, while the **[!UICONTROL Source field]** section is active and users can interact with it. The **[!UICONTROL Mandatory key]** and **[!UICONTROL Deduplication key]** options are active, and users cannot change them.
+As a result, the **[!UICONTROL Target field]** section in the Experience Platform UI is greyed out, while the **[!UICONTROL Source field]** section is active and users can interact with it. The **[!UICONTROL Mandatory key]** and **[!UICONTROL Deduplication key]** options are active, and users cannot change them.
 
 ![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 
 >[!ENDTABS]
+
+## Configure support for external audiences {#external-audiences}
+
+To configure your destination to support the activation of [externally generated audiences](../../../../segmentation/ui/audience-portal.md#import-audience), include the snippet below in the `schemaConfig` section.
+
+```json
+"schemaConfig": {
+  "segmentNamespaceDenyList": [],
+  ...
+}
+```
+
+See the property descriptions in the [table](#attributes-schema) further above on this page to learn more about the `segmentNamespaceDenyList` functionality.
 
 ## Next steps {#next-steps}
 
@@ -240,7 +254,7 @@ After reading this article, you should have a better understanding of what schem
 To learn more about the other destination components, see the following articles:
 
 * [Customer authentication](customer-authentication.md)
-* [OAuth2 authentication](oauth2-authentication.md)
+* [OAuth2 authorization](oauth2-authorization.md)
 * [UI attributes](ui-attributes.md)
 * [Customer data fields](customer-data-fields.md)
 * [Identity namespace configuration](identity-namespace-configuration.md)

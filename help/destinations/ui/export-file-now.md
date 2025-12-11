@@ -1,19 +1,15 @@
 ---
-title: (Beta) Export files on-demand to batch destinations using the Experience Platform UI
+title: Export files on-demand to batch destinations using the Experience Platform UI
 type: Tutorial
 description: Learn how to export files on-demand to batch destinations using the Experience Platform UI.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 ---
-# (Beta) Export files on-demand to batch destinations using the Experience Platform UI
 
->[!IMPORTANT]
->
->The **[!UICONTROL Export file now]** option in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
->Contact your Adobe representative for access to this functionality.
+# Export files on-demand to batch destinations using the Experience Platform UI
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 ## **[!UICONTROL Export file now]** overview {#overview}
 
@@ -42,13 +38,9 @@ To export files on-demand to batch destinations, you must have successfully [con
 
     ![Image highlighting a filtered dataflow.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Select the **[!UICONTROL Activation data]** tab and select the audience for which you want to export a file on-demand and select the **[!UICONTROL Export file now]** control to trigger a one-time export which will deliver a file to your batch destination.
+3. Select the **[!UICONTROL Activation data]** tab and select the audiences for which you want to export files on-demand and select the **[!UICONTROL Export file now]** control to trigger a one-time export which will deliver a file for each selected audience to your batch destination.
 
-    >[!IMPORTANT]
-    >
-    >Selecting multiple audiences to export files on-demand in bulk is currently not supported in the UI. Use the [ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md) for that purpose.
-
-    ![Image highlighting the Export file now button.](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
+    ![Image highlighting the Export file now button.](../assets/ui/activate-on-demand/bulk-export-file-now.png)
 
 4. Select **[!UICONTROL Yes]** to confirm and trigger the file export.
 
@@ -65,8 +57,9 @@ To export files on-demand to batch destinations, you must have successfully [con
 Keep in mind the following considerations when using the **[!UICONTROL Export file now]** control:
 
 * **[!UICONTROL Export file now]** works only for audiences whose schedule in the batch activation dataflow overlaps with the present date. This includes audiences with schedules that have no end date (export frequency of **[!UICONTROL Once]**), or where the end date has not yet passed.
-* When adding an audience to an existing dataflow, wait for at least 15 minutes until using the **[!UICONTROL Export file now]** control.
+* When adding an audience to an existing dataflow, wait for at least **one hour** before using the **[!UICONTROL Export file now]** control.
 * If you change an audience's merge policy, or if you create an audience which uses a new merge policy, wait 24 hours until using the **[!UICONTROL Export file now]** control.
+* **[!UICONTROL Export file now]** uses data from scheduled snapshot exports only. It does not pick up data from API-triggered export jobs. To export the latest data after an API-triggered export job, wait for the next scheduled export to run.
 
 ## UI error messages {#ui-error-messages}
 

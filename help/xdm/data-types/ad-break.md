@@ -1,6 +1,6 @@
 ---
 title: Ad Break Data Type
-description: This document provides an overview of the Ad break Experience Data Model (XDM) data type.
+description: Learn about the Ad break Experience Data Model (XDM) data type.
 exl-id: dfe0c386-8459-440d-95b5-b2139fac0fc3
 ---
 # [!UICONTROL Ad break] data type

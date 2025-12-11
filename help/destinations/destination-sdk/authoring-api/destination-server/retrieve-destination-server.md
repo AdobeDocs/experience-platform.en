@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to retrieve a destination server configuration through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to retrieve a destination server configuration through Adobe Experience Platform Destination SDK.
 title: Retrieve a destination server configuration
+exl-id: 1b375343-e793-4c91-856f-af66fe71822e
 ---
-
 # Retrieve a destination server configuration
 
 This page exemplifies the API request and payload that you can use to retrieve information about an existing destination server configuration using the `/authoring/destination-servers` API endpoint.
@@ -215,7 +215,7 @@ A successful response returns HTTP status 200 with the configuration of the dest
 
 ## API error handling {#error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps {#next-steps}
 

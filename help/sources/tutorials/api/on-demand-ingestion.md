@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics;flow service;
-title: (Beta) Create a Flow Run for On-Demand Ingestion Using the Flow Service API
-description: This tutorial covers the steps to create a flow run for on-demand ingestion using the Flow Service API
+title: Create a Flow Run for On-Demand Ingestion Using the Flow Service API
+description: Learn how to create a flow run for on-demand ingestion using the Flow Service API
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
 ---
-# (Beta) Create a flow run for on-demand ingestion using the [!DNL Flow Service] API 
-
->[!IMPORTANT]
->
->On-demand ingestion is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
+# Create a flow run for on-demand ingestion using the [!DNL Flow Service] API 
 
 Flow runs represent an instance of flow execution. For example, if a flow is scheduled to run hourly at 9:00 AM, 10:00 AM, and 11:00 AM, then you would have three instances of a flow run. Flow runs are specific to your particular organization.
 
 On-demand ingestion provides you with the capability to create a flow run against a given dataflow. This allows your users to create a flow run, based on given parameters and create an ingestion cycle, without service tokens. Support for on-demand ingestion is available only for batch sources.
 
 This tutorial covers the steps on how to use on-demand ingestion and create a flow run using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!TIP]
+>
+>Retrying a flow run will only process files with timestamps that fall within the range of the original run.
 
 ## Getting started
 
@@ -24,12 +24,12 @@ This tutorial covers the steps on how to use on-demand ingestion and create a fl
 
 This tutorial requires you to have a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
+* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../landing/api-guide.md).
 
 ## Create a flow run for a table-based source
 
@@ -77,9 +77,9 @@ curl -X POST \
 | Parameter | Description |
 | --- | --- |
 | `flowId` | The ID of the flow in which your flow run will be created against.  |
-| `params.startTime` | An integer that defines the start time of the run. The value is represented in unix epoch time. |
-| `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
-| `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.startTime` | The scheduled time of when the on-demand flow run will begin. This value is represented in unix time. |
+| `params.windowStartTime` | The earliest date and time that data will be retrieved from. This value is represented in unix time. |
+| `params.windowEndTime` | The date and time that data will be retrieved up to. This value is represented in unix time. |
 | `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your firs flow run. |
 | `params.deltaColumn.name` | The name of the delta column. |
 
@@ -102,6 +102,7 @@ A successful response returns the details of the newly created flow run, includi
 | --- | --- |
 | `id` | The ID of the newly created flow run. See the guide on [retrieving flow specifications](../api/collect/database-nosql.md#specs) for more information on table-based run specifications. |
 | `etag` | The resource version of the flow run. |
+
 <!-- 
 | `createdAt` | The unix timestamp that designates when the flow run was created. |
 | `updatedAt` | The unix timestamp that designates when the flow run was last updated. |
@@ -159,9 +160,9 @@ curl -X POST \
 | Parameter | Description |
 | --- | --- |
 | `flowId` | The ID of the flow in which your flow run will be created against.  |
-| `params.startTime` | An integer that defines the start time of the run. The value is represented in unix epoch time. |
-| `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
-| `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.startTime` | The scheduled time of when the on-demand flow run will begin. This value is represented in unix time. |
+| `params.windowStartTime` | The earliest date and time that data will be retrieved from. This value is represented in unix time. |
+| `params.windowEndTime` | The date and time that data will be retrieved up to. This value is represented in unix time. |
 
 **Response**
 
@@ -186,4 +187,4 @@ A successful response returns the details of the newly created flow run, includi
 
 ## Monitor your flow runs
 
-Once your flow run has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. To monitor your flow runs using the API, see the tutorial on [monitoring dataflows in the API ](./monitor.md). To monitor your flow runs using Platform UI, see the guide on [monitoring sources dataflows using the monitoring dashboard](../../../dataflows/ui/monitor-sources.md).
+Once your flow run has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. To monitor your flow runs using the API, see the tutorial on [monitoring dataflows in the API](./monitor.md). To monitor your flow runs using Experience Platform UI, see the guide on [monitoring sources dataflows using the monitoring dashboard](../../../dataflows/ui/monitor-sources.md).

@@ -4,6 +4,7 @@ audience: user
 user-guide-title: Intelligent Services Help
 breadcrumb-title: Intelligent Services Guide
 user-guide-description: Use intelligent AI services to generate scores, discover insights, and create segments from your marketing events data.
+role: User
 ---
 
 # Adobe Intelligent Services {#intelligent-services}
@@ -36,6 +37,7 @@ user-guide-description: Use intelligent AI services to generate scores, discover
   - [Overview](customer-ai/overview.md)
   - [Getting started with Customer AI](customer-ai/getting-started.md)
   - [Data requirements](customer-ai/data-requirements.md)
+  - [Customer AI Propensity Scoring model details](customer-ai/model-detail.md)
   - UI guides{#user-guide}
     - [Configure an instance](customer-ai/user-guide/configure.md)
     - [Discover insights](customer-ai/user-guide/discover-insights.md)
@@ -48,4 +50,4 @@ user-guide-description: Use intelligent AI services to generate scores, discover
     - [Customer managed keys](customer-ai/cai-data-governance/customer-managed-keys.md)
     - [Data governance](customer-ai/cai-data-governance/data-governance.md)
     - [Governance policies](customer-ai/cai-data-governance/governance-policies.md)
-- [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+- [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

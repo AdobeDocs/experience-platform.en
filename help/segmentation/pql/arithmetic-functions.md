@@ -10,7 +10,7 @@ Arithmetic functions are used to perform basic calculations on values in [!DNL P
 
 ## Add
 
-The `+` (addition) function is used to find the sum of two argument expressions.
+The `+` (addition) function is used to find the sum of two argument expressions as a number.
 
 **Format**
 
@@ -28,7 +28,7 @@ product1.price + product2.price
 
 ## Multiply
 
-The `*` (multiplication) function is used to find the product of two argument expressions.
+The `*` (multiplication) function is used to find the product of two argument expressions as a number.
 
 **Format**
 
@@ -46,7 +46,7 @@ product.inventory * product.price
 
 ## Subtract
 
-The `-` (subtraction) function is used to find the difference of two argument expressions.
+The `-` (subtraction) function is used to find the difference of two argument expressions as a number.
 
 **Format**
 
@@ -64,7 +64,7 @@ product1.price - product2.price
 
 ## Divide
 
-The `/` (division) function is used to find the quotient of two argument expressions.
+The `/` (division) function is used to find the quotient of two argument expressions as a number.
 
 **Format**
 
@@ -82,7 +82,7 @@ totalProduct.price / totalProduct.sold
 
 ## Remainder
 
-The `%` (modulo/remainder) function is used to find the remainder after dividing the two argument expressions. 
+The `%` (modulo/remainder) function is used to find the remainder after dividing the two argument expressions as a number.
 
 **Format**
 

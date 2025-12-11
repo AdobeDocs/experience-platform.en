@@ -17,6 +17,7 @@ This page lists and describes all the API operations that you can perform using 
 >[!IMPORTANT]
 >
 >Use this API endpoint to generate sample profiles for two separate use cases. You can either: 
+>
 >* generate profiles to use when [crafting and testing a message transformation template](create-template.md) - by using *destination ID* as a query parameter.
 >* generate profiles to use when making calls to [test if your destination is configured correctly](streaming-destination-testing-overview.md) - by using *destination instance ID* as a query parameter.
 
@@ -40,8 +41,9 @@ To get the ID of a destination instance, you must first create a connection in t
 
 >[!IMPORTANT]
 >
->* In order to use this API, you must have an existing connection to your destination in the Experience Platform UI. Read [connect to destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) and [activate profiles and audiences to a destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) for more information.
-> * After establishing the connection to your destination, get the destination instance ID that you should use in API calls to this endpoint when [browsing a connection with your destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
+>* In order to use this API, you must have an existing connection to your destination in the Experience Platform UI. Read [connect to destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) and [activate profiles and audiences to a destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) for more information.
+>* After establishing the connection to your destination, get the destination instance ID that you should use in API calls to this endpoint when [browsing a connection with your destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>
 >![UI image how to get destination instance ID](../../assets/testing-api/get-destination-instance-id.png)
 
 **API format**
@@ -181,7 +183,7 @@ A successful response returns HTTP status 200 with the specified number of sampl
 | `segmentMembership` | A map object which describes the individual's audience memberships. For more information on `segmentMembership`, read [Audience Membership Details](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | A timestamp of the last time this profile qualified for the segment. |
 | `xdm:status` | A string field that indicates whether the audience membership has been realized as part of the current request. The following values are accepted: <ul><li>`realized`: The profile is part of the segment.</li><li>`exited`: The profile is exiting the audience as part of the current request.</li></ul> |
-| `identityMap` | A map-type field that describes the various identity values for an individual, along with their associated namespaces. For more information on `identityMap`, read [Basis of schema composition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
+| `identityMap` | A map-type field that describes the various identity values for an individual, along with their associated namespaces. For more information on `identityMap`, read [Basis of schema composition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap). |
 
 {style="table-layout:auto"}
 
@@ -375,7 +377,7 @@ A successful response returns HTTP status 200 with the specified number of sampl
 
 ## API error handling {#api-error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps
 

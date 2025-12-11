@@ -1,6 +1,6 @@
 ---
 title: XDM Business Campaign Details Schema Field Group
-description: This document provides an overview of the XDM Business Campaign Details schema field group.
+description: Learn about the XDM Business Campaign Details schema field group.
 exl-id: 3ef6c0b9-cba1-449e-8868-46446c00465f
 ---
 # [!UICONTROL XDM Business Campaign Details] schema field group

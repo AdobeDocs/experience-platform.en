@@ -6,7 +6,18 @@ type: Tutorial
 description: Adobe Experience Platform Data Science Workspace allows you to publish your trained and evaluated Model as a Service, enabling users within your organization to score data without the need for creating their own Models.
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
 ---
-# Publish a model as a service in the Data Science Workspace UI
+# Publish a model as a service in the Data Science Workspace UI {#publish-a-model-as-a-service}
+
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
+>[!CONTEXTUALHELP]
+>id="platform_intelligentservices_publishmodel"
+>title="Publish a Model as a Service"
+>abstract=""
 
 Adobe Experience Platform Data Science Workspace allows you to publish your trained and evaluated Model as a Service, enabling users within your organization to score data without the need for creating their own Models.
 

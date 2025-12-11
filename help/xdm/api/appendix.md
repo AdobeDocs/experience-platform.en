@@ -41,7 +41,6 @@ You can filter results by using the `property` parameter, which is used to apply
 | `>` | Filters by whether the property is greater than the provided value. | `property=version>5` |
 | `<=` | Filters by whether the property is less than or equal to the provided value. | `property=version<=5` |
 | `>=` | Filters by whether the property is greater than or equal to the provided value. | `property=version>=5` |
-| `~` | Filters by whether the property matches a provided regular expression. | `property=title~test$` |
 | (None) | Stating only the property name returns only entries where the property exists. | `property=title` |
 
 {style="table-layout:auto"}
@@ -54,7 +53,7 @@ You can filter results by using the `property` parameter, which is used to apply
 
 [!DNL Experience Data Model] (XDM) is a publicly documented specification, driven by Adobe to improve the interoperability, expressiveness, and power of digital experiences. Adobe maintains the source code and formal XDM definitions in an [open source project on GitHub](https://github.com/adobe/xdm/). These definitions are written in XDM Standard Notation, using JSON-LD (JavaScript Object Notation for Linked Data) and JSON Schema as the grammar for defining XDM schemas.
 
-When looking at formal XDM definitions in the public repository, you can see that standard XDM differs from what you see in Adobe Experience Platform. What you are seeing in [!DNL Experience Platform] is called Compatibility Mode, and it provides a simple mapping between standard XDM and the way it is used within [!DNL Platform].
+When looking at formal XDM definitions in the public repository, you can see that standard XDM differs from what you see in Adobe Experience Platform. What you are seeing in [!DNL Experience Platform] is called Compatibility Mode, and it provides a simple mapping between standard XDM and the way it is used within [!DNL Experience Platform].
 
 ### How Compatibility Mode works
 
@@ -127,6 +126,6 @@ Adobe Experience Platform is designed to work with multiple solutions and servic
 
 Most [!DNL Experience Platform] services including [!DNL Catalog], [!DNL Data Lake], and [!DNL Real-Time Customer Profile] use [!DNL Compatibility Mode] in lieu of standard XDM. The [!DNL Schema Registry] API also uses [!DNL Compatibility Mode], and the examples in this document are all shown using [!DNL Compatibility Mode].
 
-It is worthwhile to know that a mapping takes place between standard XDM and the way it is operationalized in [!DNL Experience Platform], but it should not affect your use of [!DNL Platform] services.
+It is worthwhile to know that a mapping takes place between standard XDM and the way it is operationalized in [!DNL Experience Platform], but it should not affect your use of [!DNL Experience Platform] services.
 
 The open source project is available to you, but when it comes to interacting with resources through the [!DNL Schema Registry], the API examples in this document provide the best practices you should know and follow.

@@ -41,7 +41,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 | Feature | Description |
 | --- | --- |
-| New quick start workflow for Meta Conversions API (Beta) | Access new quick start workflows under "Getting Started" from the Data Collection home screen! The [quick start workflow for Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start) enables customers to rapidly collect and forward event data, server-side to Meta for ad conversions in just a few simple steps. |
+| New quick start workflow for Meta Conversions API (Beta) | Access new quick start workflows under "Getting Started" from the Data Collection home screen! The [quick start workflow for Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start) enables customers to rapidly collect and forward event data, server-side to Meta for ad conversions in just a few simple steps. |
 | New quick start workflow for Mobile SDK (Beta) | Access new quick start workflows under "Getting Started" from the Data Collection home screen! The [quick start workflow for Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) enables you to rapidly implement the Mobile SDK and validate basic mobile events in just a few simple steps. |
 | [!DNL Braze] event forwarding extension | The [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) event forwarding extension allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL Braze] in the form of server-side events using the [!DNL Braze] User Track APIs. |
 | [!DNL Epsilon] event forwarding extension | The [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) extension allows you to leverage event forwarding to capture event information in the Adobe Experience Platform Edge Network and send it to [!DNL Epsilon] using the [!DNL Epsilon] Event API. |
@@ -90,7 +90,7 @@ For more information on Data Prep, please read the [Data Prep overview](../../da
 
 **Fixes and enhancements** {#destinations-fixes-and-enhancements}
 
-We are releasing a bug fix for PGP/GPG encryption in file-based destinations for Real-time CDP. With this change, existing file-based destinations currently using encryption will generate a filename with a different extension than before. 
+We are releasing a bug fix for PGP/GPG encryption in file-based destinations for Real-Time CDP. With this change, existing file-based destinations currently using encryption will generate a filename with a different extension than before. 
 
 - Current extension when using encryption: `filename.csv`
 - Future extension when using encryption: `filename.csv.gpg`
@@ -141,7 +141,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 {style="table-layout:auto"}
 
-For more information on XDM in Platform, read the [XDM System overview](../../xdm/home.md).
+For more information on XDM in Experience Platform, read the [XDM System overview](../../xdm/home.md).
 
 ## Query Service {#query-service}
 
@@ -187,7 +187,7 @@ For more information on [!DNL Segmentation Service], please see the [Segmentatio
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources and allows you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources and allows you to structure, label, and enhance that data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 

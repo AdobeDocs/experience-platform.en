@@ -1,35 +1,30 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows;sources
-description: This tutorial provides steps to monitor your dataflow, using both aggregated monitoring view and cross-service monitoring.
-solution: Experience Platform
-title: Monitor Dataflows for Sources in the UI
-type: Tutorial
+description: Learn how to use the monitoring dashboard to monitor data ingested into data lake.
+title: Monitor data lake ingestion
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 ---
-# Monitor dataflows for sources in the UI
+# Monitor data lake ingestion
 
 >[!IMPORTANT]
 >
 >Streaming sources, such as the [HTTP API source](../../sources/connectors/streaming/http.md) are not currently supported by the monitoring dashboard. At this moment, you can only use the dashboard to monitor batch sources.
 
-In Adobe Experience Platform, data is ingested from a wide variety of sources, analyzed within Experience Platform, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows.
+You can use the monitoring dashboard in the Adobe Experience Platform user interface to retrieve metrics around your data ingestion and data retention processes in data lake. Use the graphs in the interface to monitor ingestion and retention trends over time and summarize performance across all of your sources dataflows.
 
-The monitoring dashboard provides you with a visual representation of the journey of a dataflow. You can use an aggregated monitoring view and navigate vertically from the source level, to a dataflow, and to a dataflow run, allowing you to view the corresponding metrics that contribute to a dataflow's success or failure. You can also use the monitoring dashboard's cross-service monitoring capacity to monitor a dataflow's journey from a source, to [!DNL Identity Service], and to [!DNL Profile].
+Read this document to learn how you can use the monitoring dashboard to monitor all data processing in data lake, including both ingestion and retention.
 
-This tutorial provides steps to monitor your dataflow, using both aggregated monitoring view and cross-service monitoring.
-
-## Getting started {#getting-started}
+## Get started {#get-started}
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Dataflows](../home.md): Dataflows are a representation of data jobs that move data across Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
+* [Dataflows](../home.md): Dataflows are a representation of data jobs that move data across Experience Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
   * [Dataflow runs](../../sources/notifications.md): Dataflow runs are the recurring scheduled jobs based on the frequency configuration of selected dataflows.
-* [Sources](../../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sources](../../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
 * [Identity Service](../../identity-service/home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
 * [Real-Time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-## Aggregated monitoring view {#aggregated-monitoring-view}
+## Use the monitoring dashboard for data lake ingestion
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
@@ -43,89 +38,108 @@ This tutorial requires a working understanding of the following components of Ad
 >abstract="Sources processing contains information on data activity status and metrics in data lake service, including records ingested and records failed. Review the metric definition guide to learn more about metrics and graphs."
 >text="Learn more in documentation"
 
-In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
+Select **[!UICONTROL Data lake]** from the main header in the monitoring dashboard to view your data lake ingestion rate.
 
-At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed.
+![The monitoring dashboard with the sources card selected.](../assets/ui/monitor-sources/data-lake.png)
 
-![monitoring-dashboard](../assets/ui/monitor-sources/monitoring-dashboard.png)
+The [!UICONTROL Ingestion rate] graph displays your data ingestion rate based on your configured time frame. By default, the monitoring dashboard displays ingestion rates from the last 24 hours. For steps on how to configure your time frame, read the guide on [configuring monitoring time frame](monitor.md#configure-monitoring-time-frame).
 
-By default, the data displayed contains ingestion rates from the last 24 hours. Select **[!UICONTROL Last 24 hours]** to adjust the time frame of records displayed.
+The graph is enabled to display by default. To hide the graph, select **[!UICONTROL Metrics and graphs]** to disable the toggle and hide the graph.
 
-![change-date](../assets/ui/monitor-sources/change-date.png)
+![The ingestion rate metrics graph.](../assets/ui/monitor-sources/metrics-graph.png)
 
-A calendar pop-up window appears, providing you options for alternative ingestion time frames. Select **[!UICONTROL Last 30 days]** and then select **[!UICONTROL Apply]**
+The lower part of the dashboard displays a table that outlines the current metrics report for all existing sources dataflows.
 
-![adjust-time-frame](../assets/ui/monitor-sources/adjust-timeframe.png)
+![The monitoring dashboard metrics table.](../assets/ui/monitor-sources/metrics-table.png)
 
-The graphs are enabled by default and you can disable them to expand the list of sources below. Select the **[!UICONTROL Metrics and graphs]** toggle to disable the graphs.
+| Metrics | Description |
+| --- | --- |
+| Records received | The total number of records received from a given source. |
+| Records ingested | The total number of records ingested to data lake. |
+| Records deleted | The total number of records deleted due to data lake retention settings or change data capture operations. |
+| Records skipped | The total number of records skipped. A skipped record refers to fields that were skipped because they were not required for ingestion. For example, if you create a sources dataflow with partial ingestion enabled, you can configure an acceptable error rate threshold. During the ingestion process, ingestion will skip records of fields that are not required, such as identity fields, so long as they are within the error threshold. |
+| Records failed | The total number of records that could not be ingested due to errors. |
+| Ingested rate | The percentage of records that were ingested based on the total number of records received. |
+| Total failed dataflows | The total number of dataflows that failed. |
 
-![metrics-and-graphs](../assets/ui/monitor-sources/metrics-graphs.png)
+{style="table-layout:auto"}
 
-| Source ingestion | Description |
-| ---------------- | ----------- |
-| [!UICONTROL Records ingested ]| The total number of records ingested. |
-| [!UICONTROL Records failed] | The total number of records that were not ingested due to errors in the data. |
-| [!UICONTROL Total failed dataflows] | The total number of dataflows with a `failed` status. |
+You can further filter your data using the options provided above the metrics table:
 
-The source ingestion list displays all sources that contain at least one existing account. The list also includes information on each source's ingestion rate, number of failed records, and total number of failed dataflows based on the time frame that you applied.
+| Filtering options | Description |
+| --- | --- |
+| Search | Use the search bar to filter your view to a single source type. |
+| Sources | Select **[!UICONTROL Sources]** to filter your view and display metric data per source type. This is the default display that the monitoring dashboard uses. |
+| Dataflows | Select **[!UICONTROL Dataflows]** to filter your view and display metric data per dataflow. |
+| Show failures only | Select **[!UICONTROL Show failures only]** to filter your view and display only dataflows that reported ingestion failures. |
+| My sources | You can further filter your view by using the [!UICONTROL My sources] dropdown menu. Use the dropdown menu to filter your view by category. Alternatively, you can select **[!UICONTROL All sources]** to display metrics on all or sources, or select **[!UICONTROL My sources]** to display only the sources that you have a corresponding account with. |
 
-![source-ingestion](../assets/ui/monitor-sources/source-ingestion.png)
+{style="table-layout:auto"}
 
-To sort through the list of sources, select **[!UICONTROL My sources]** and then select your category of choice from the dropdown menu. For example, to focus on cloud storages, select  **[!UICONTROL Cloud storage]**
+To customize your column display, select the column settings icon ![column-icon](/help/images/icons/column-settings.png).
 
-![sort-by-category](../assets/ui/monitor-sources/sort-by-category.png)
+![The monitoring dashboard with the column settings icon selected.](../assets/ui/monitor-sources/edit-columns.png)
 
-To view all existing dataflows across all sources, select **[!UICONTROL Dataflows]**.
+Next, use the *[!UICONTROL Customize table]* window to select the columns that you want your dashboard to display. When finished, select **[!UICONTROL Apply]**.
 
-![view-all-dataflows](../assets/ui/monitor-sources/view-all-dataflows.png)
+![The customize column pop-up window in the monitoring dashboard.](../assets/ui/monitor-sources/customize-table.png)
 
-Alternatively, you can enter a source into the search bar to isolate a single source. Once you have your source identified, select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside it to see a list of its active dataflows.
+To monitor the data that is being ingested in a specific dataflow, select the filter icon ![filter](/help/images/icons/filter-add.png) beside a source.
 
-![search](../assets/ui/monitor-sources/search.png)
+>[!TIP]
+>
+>You can use the monitoring dashboard to monitor data deletion metrics for records deleted using data retention policies. For more information on data retention, read the guide on [setting data retention policies](../../catalog/datasets/user-guide.md#data-retention-policy).
 
-A list of dataflows appears. To narrow down the list and focus on dataflows with errors, select **[!UICONTROL Show failures only]**.
+![Monitor a specific dataflow by selecting the filter icon beside a given source.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
-![show-failures-only](../assets/ui/monitor-sources/show-failures-only.png)
+The metrics table updates to a table of active dataflows that correspond to the source that you selected. During this step, you can view additional information on your dataflows, including their corresponding dataset and data type, as well as a time stamp to indicate when they were last active. 
 
-Locate the dataflow that you want to monitor and then select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside it, to see more information on its run status.
+To further inspect a dataflow, select the filter icon ![filter](/help/images/icons/filter-add.png) beside a dataflow.
 
-![dataflow](../assets/ui/monitor-sources/dataflow.png)
+![The dataflows table in the monitoring dashboard.](../assets/ui/monitor-sources/select-dataflow.png)
 
-The dataflow run page displays information on your dataflow's run start date, size of data, status, as well as its processing time duration. Select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside the dataflow run start time to see its dataflow run details.
+Next, you are taken to an interface that lists all dataflow run iterations of the dataflow that you selected.
 
-![dataflow-run-start](../assets/ui/monitor-sources/dataflow-run-start.png)
+Dataflow runs represent an instance of dataflow execution. For example, if a dataflow is scheduled to run hourly at 9:00 AM, 10:00 AM, and 11:00 AM, then you would have three instances of a flow run. Flow runs are specific to your particular organization.
 
-The [!UICONTROL Dataflow run details] page displays information on the dataflow's metadata, partial ingestion status, and error summary. The error summary contains the specific top-level error that shows at which step the ingestion process encountered an error.
+To inspect metrics of a specific dataflow run iteration, select the filter icon ![filter](/help/images/icons/filter-add.png) beside your dataflow.
 
-Scroll down to see more specific information on the error that occurred.
+![The dataflow run metric page.](../assets/ui/monitor-sources/dataflow-page.png)
 
-![dataflow-run-details](../assets/ui/monitor-sources/dataflow-run-details.png)
+Use the dataflow run details page to view metrics and information of your selected run iteration.
 
-The [!UICONTROL Dataflow run errors] panel displays the specific error and error code that resulted in the dataflow's ingestion failure. In this scenario, a mapper transformation error occurred, resulting in the failure of 24 records.
+![The dataflow run details page.](../assets/ui/monitor-sources/dataflow-run-details.png)
 
-Select **[!UICONTROL Files]** for more information.
+| Dataflow run details | Description |
+| --- | --- |
+| Records ingested | The total number of records that were ingested from the dataflow run. |
+| Records failed | The total number of records that were not ingested due to errors in the dataflow run. |
+| Total files | The total number of files in the dataflow run. |
+| Size of data | The total size of data contained in the dataflow run. |
+| Dataflow run ID | The ID of the dataflow run iteration. |
+| Org ID | The ID of the organization in which the dataflow run was created in. |
+| Status | The status of the dataflow run. |
+| Dataflow run start | A timestamp that indicates when the dataflow run started. |
+| Dataflow run end | A timestamp that indicates when the dataflow run ended. |
+| Dataset | The dataset used to create the dataflow. |
+| Data type | The type of the data that was in the dataflow. |
+| Partial ingestion | Partial batch ingestion is the ability to ingest data containing errors, up to a certain configurable threshold. This feature allows you to successfully ingest all of your accurate data into Experience Platform, while all of your incorrect data is batched separately with information on why it is invalid. You can enable partial ingestion during the dataflow creation process. |
+| Error diagnostics | Error diagnostics instructs the source to produce error diagnostics that you can later reference when monitoring your dataset activity and dataflow status. You can enable error diagnostics during the dataflow creation process. |
+| Error summary | Given a failed dataflow run, error summary displays an error code and description to summarize why the run iteration failed. |
 
-![dataflow-run-errors](../assets/ui/monitor-sources/dataflow-run-errors.png)
+{style="table-layout:auto"}
 
-The [!UICONTROL Files] panel contains information on the file's name and path.
+If your dataflow run reports errors, you can scroll down to the bottom of the page use the [!UICONTROL Dataflow run errors] interface.
 
-For a more granular representation of the error, select **[!UICONTROL Preview error diagnostics]**.
+Use the [!UICONTROL Records failed] section to view metrics on records that were not ingested due to errors. To view a comprehensive error report, select **[!UICONTROL Preview error diagnostics]**. To download a copy of your error diagnostics and file manifest, select **[!UICONTROL Download]** and then copy the example API call to be used with the [!DNL Data Access] API.
 
-![files](../assets/ui/monitor-sources/files.png)
-
-The [!UICONTROL Error diagnostics preview] window appears, displaying a preview of up to 100 errors in the dataflow. You can select **[!UICONTROL Download]** to retrieve a curl command, which then allows you to download the error diagnostics.
-
-When you are finished, select **[!UICONTROL Close]**
-
-![error-diagnostics](../assets/ui/monitor-sources/error-diagnostics.png)
-
-You can use the breadcrumb system at the top header to navigate your way back to the [!UICONTROL Monitoring] dashboard. Select **[!UICONTROL Run start: 2/14/2021, 9:47 PM]** to return to the previous page, and then select **[!UICONTROL Dataflow: Loyalty Data Ingestion Demo - Failed]** to return to the dataflows page.
-
-![breadcrumbs](../assets/ui/monitor-sources/breadcrumbs.png)
+>[!NOTE]
+>
+>You may only use error diagnostics if the feature was enabled during the source connection creation process.
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully monitored the ingestion dataflow from the source-level using the **[!UICONTROL Monitoring]** dashboard. You have also successfully identified errors that contributed to the failure of dataflows during the ingestion process. See the following documents for more details:
+By following this tutorial, you learned how to monitor the data lake ingestion rate using the **[!UICONTROL Monitoring]** dashboard. You also learned to identify errors that cause dataflow failures during ingestion. See the following documents for more details:
 
-* [Monitoring identities in dataflows](./monitor-identities.md)
-* [Monitoring profiles in dataflows](./monitor-profiles.md)
+* [Monitoring identity data](./monitor-identities.md).
+* [Monitoring profile data](./monitor-profiles.md).

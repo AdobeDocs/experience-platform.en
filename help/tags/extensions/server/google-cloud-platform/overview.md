@@ -1,7 +1,8 @@
 ---
 title: Google Cloud Platform Event Forwarding Extension
-description: This Adobe Experience Platform event forwarding extension sends Adobe Experience Edge Network events to Google Cloud Platform.
+description: This Adobe Experience Platform event forwarding extension sends Edge Network events to Google Cloud Platform.
 last-substantial-update: 2023-06-21
+exl-id: c5da1889-f917-42aa-b3a4-9557c31d6ee8
 ---
 # [!DNL Google Cloud Platform] event forwarding extension
 
@@ -40,8 +41,8 @@ Once the extension is installed, create a new event forwarding [rule](../../../u
 | Input | Description |
 | --- | --- |
 | [!UICONTROL Topic] | The topic that will receive the events from Event forwarding. The value must have the format `projects/{projectName}/topics/{topicName}`. |
-| [!UICONTROL Data] | This field contains the data to be forwarded to the [!DNL Cloud Pub/Sub] topic in JSON format.<br><br>Under the **[!UICONTROL Raw]** option, you can paste the JSON object directly into the provided text field, or you can select the data element icon (![Dataset icon](../../../images/extensions/server/aws/data-element-icon.png)) to select from a list of existing data elements to represent the data.<br><br>You can also use the **[!UICONTROL JSON Key-Value Pairs Editor]** option to manually add each key-value pair through a UI editor. Each value can be represented by a raw input, or a data element can be selected instead. |
-| [!UICONTROL Attributes] | This field contains the JSON object with extra attributes to be sent along with the message.<br><br>Under the **[!UICONTROL Raw]** option, you can paste the JSON object directly into the provided text field, or you can select the data element icon (![Dataset icon](../../../images/extensions/server/aws/data-element-icon.png)) to select from a list of existing data elements to represent the data.<br><br>You can also use the **[!UICONTROL JSON Key-Value Pairs Editor]** option to manually add each key-value pair through a UI editor. Each value can be represented by a raw input, or a data element can be selected instead. |
+| [!UICONTROL Data] | This field contains the data to be forwarded to the [!DNL Cloud Pub/Sub] topic in JSON format.<br><br>Under the **[!UICONTROL Raw]** option, you can paste the JSON object directly into the provided text field, or you can select the data element icon (![Dataset icon](/help/images/icons/database.png)) to select from a list of existing data elements to represent the data.<br><br>You can also use the **[!UICONTROL JSON Key-Value Pairs Editor]** option to manually add each key-value pair through a UI editor. Each value can be represented by a raw input, or a data element can be selected instead. |
+| [!UICONTROL Attributes] | This field contains the JSON object with extra attributes to be sent along with the message.<br><br>Under the **[!UICONTROL Raw]** option, you can paste the JSON object directly into the provided text field, or you can select the data element icon (![Dataset icon](/help/images/icons/database.png)) to select from a list of existing data elements to represent the data.<br><br>You can also use the **[!UICONTROL JSON Key-Value Pairs Editor]** option to manually add each key-value pair through a UI editor. Each value can be represented by a raw input, or a data element can be selected instead. |
 
 {style="table-layout:auto"}
 

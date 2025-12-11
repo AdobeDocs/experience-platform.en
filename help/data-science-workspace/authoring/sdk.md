@@ -7,6 +7,12 @@ exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
 ---
 # Model Authoring SDK
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 The Model Authoring SDK enables you to develop custom machine learning Recipes and Feature Pipelines which can be used in [!DNL Adobe Experience Platform] Data Science Workspace, providing implementable templates in [!DNL PySpark] and [!DNL Spark (Scala)].
 
 This document provides information regarding the various classes found within the Model Authoring SDK.
@@ -30,7 +36,7 @@ The following table describes the abstract methods of a PySpark Data Loader clas
         <tr>
             <td>
                 <p><code>load(self, configProperties, spark)</code></p>
-                <p>Load and return Platform data as a Pandas DataFrame</p>
+                <p>Load and return Experience Platform data as a Pandas DataFrame</p>
             </td>
             <td>
                 <ul>
@@ -58,7 +64,7 @@ The following table describes the abstract methods of a [!DNL Spark] Data Loader
         <tr>
             <td>
                 <p><code>load(configProperties, sparkSession)</code></p>
-                <p>Load and return Platform data as a DataFrame</p>
+                <p>Load and return Experience Platform data as a DataFrame</p>
             </td>
             <td>
                 <ul>
@@ -70,9 +76,9 @@ The following table describes the abstract methods of a [!DNL Spark] Data Loader
     </tbody>
 </table>
 
-### Load data from a [!DNL Platform] dataset {#load-data-from-a-platform-dataset}
+### Load data from an [!DNL Experience Platform] dataset {#load-data-from-a-platform-dataset}
 
-The following example retrieves [!DNL Platform] data by ID and returns a DataFrame, where the dataset ID (`datasetId`) is a defined property in the configuration file.
+The following example retrieves [!DNL Experience Platform] data by ID and returns a DataFrame, where the dataset ID (`datasetId`) is a defined property in the configuration file.
 
 **PySpark**
 
@@ -204,7 +210,7 @@ The following table describes the abstract methods of a [!DNL PySpark] Data Save
         <tr>
             <td>
                 <p><code>save(self, configProperties, dataframe)</code></p>
-                <p>Receive output data as a DataFrame and stores it in a Platform dataset</p>
+                <p>Receive output data as a DataFrame and stores it in a Experience Platform dataset</p>
             </td>
             <td>
                 <ul>
@@ -232,7 +238,7 @@ The following table describes the abstract methods of a [!DNL Spark] Data Saver 
         <tr>
             <td>
                 <p><code>save(configProperties, dataFrame)</code></p>
-                <p>Receive output data as a DataFrame and stores it in a Platform dataset</p>
+                <p>Receive output data as a DataFrame and stores it in a Experience Platform dataset</p>
             </td>
             <td>
                 <ul>
@@ -244,14 +250,14 @@ The following table describes the abstract methods of a [!DNL Spark] Data Saver 
     </tbody>
 </table>
 
-### Save data to a [!DNL Platform] dataset {#save-data-to-a-platform-dataset}
+### Save data to an [!DNL Experience Platform] dataset {#save-data-to-a-platform-dataset}
 
-In order to store data onto a [!DNL Platform] dataset, the properties must be either provided or defined in the configuration file:
+In order to store data onto an [!DNL Experience Platform] dataset, the properties must be either provided or defined in the configuration file:
 
-- A valid [!DNL Platform] dataset ID to which data will be stored
+- A valid [!DNL Experience Platform] dataset ID to which data will be stored
 - The tenant ID belonging to your organization
 
-The following examples store data (`prediction`) onto a [!DNL Platform] dataset, where the dataset ID (`datasetId`) and tenant ID (`tenantId`) are defined properties within the configuration file.
+The following examples store data (`prediction`) onto an [!DNL Experience Platform] dataset, where the dataset ID (`datasetId`) and tenant ID (`tenantId`) are defined properties within the configuration file.
 
 
 **PySpark**
@@ -267,7 +273,7 @@ from .helper import *
 
 class MyDataSaver(DataSaver):
     """
-    Implementation of DataSaver which stores a DataFrame to a Platform dataset
+    Implementation of DataSaver which stores a DataFrame to an Experience Platform dataset
     """
 
     def save(self, config_properties, prediction):
@@ -335,7 +341,7 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types.TimestampType
 
 /**
- * Implementation of DataSaver which stores a DataFrame to a Platform dataset
+ * Implementation of DataSaver which stores a DataFrame to an Experience Platform dataset
  */
 
 class ScoringDataSaver extends DataSaver {

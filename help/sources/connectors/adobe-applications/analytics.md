@@ -1,11 +1,11 @@
 ---
-title: Adobe Analytics Source Connector for Report-Suite Data
+title: Adobe Analytics source connector for report suite data
 description: This document provides an overview of Analytics and describes the use-cases for Analytics data.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
 ---
-# Adobe Analytics source connector for report-suite data
+# Adobe Analytics source connector for report suite data
 
-Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics source connector. The [!DNL Analytics] source connector streams data collected by [!DNL Analytics] to Platform in real-time, converting SCDS-formatted [!DNL Analytics] data into [!DNL Experience Data Model] (XDM) fields for consumption by Platform.
+Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics source connector. The [!DNL Analytics] source connector streams data collected by [!DNL Analytics] to Experience Platform in real-time, converting SCDS-formatted [!DNL Analytics] data into [!DNL Experience Data Model] (XDM) fields for consumption by Experience Platform.
 
 This document provides an overview of [!DNL Analytics] and describes the use-cases for [!DNL Analytics] data.
 
@@ -15,7 +15,7 @@ This document provides an overview of [!DNL Analytics] and describes the use-cas
 
 ![A graphic illustrating the journey of data from different Adobe applications, including Adobe Analytics.](./images/analytics-data-experience-platform.png)
 
-At a high level, [!DNL Analytics] collects data from various digital channels and multiple data centers around the world. Once the data is collected, Visitor Identification, Segmentation and Transformation Architecture (VISTA) rules, and processing rules are applied to shape the incoming data. After raw data has gone through this lightweight processing, it is then considered ready for consumption by [!DNL Real-Time Customer Profile]. In a process parallel to the aforementioned, the same processed data is micro-batched and ingested into Platform datasets for consumption by [!DNL Data Science Workspace], [!DNL Query Service], and other data-discovery applications.
+At a high level, [!DNL Analytics] collects data from various digital channels and multiple data centers around the world. Once the data is collected, Visitor Identification, Segmentation and Transformation Architecture (VISTA) rules, and processing rules are applied to shape the incoming data. After raw data has gone through this lightweight processing, it is then considered ready for consumption by [!DNL Real-Time Customer Profile]. In a process parallel to the aforementioned, the same processed data is micro-batched and ingested into Experience Platform datasets for consumption by [!DNL Query Service], and other data-discovery applications.
 
 See the [processing rules overview](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) for more information on processing rules.
 
@@ -33,22 +33,36 @@ To learn more about XDM, please see the [XDM System overview](../../../xdm/home.
 >
 >Data Prep transformations may add latency to the overall dataflow. The additional latency added varies based on the complexity of the transformation logic. 
 
-When a source connection is established for bringing [!DNL Analytics] data into Experience Platform using the Platform user interface, data fields are automatically mapped and ingested into [!DNL Real-Time Customer Profile] within minutes. For instructions on creating a source connection with [!DNL Analytics] using the Platform UI, see the [Analytics source connector tutorial](../../tutorials/ui/create/adobe-applications/analytics.md).
+When a source connection is established for bringing [!DNL Analytics] data into Experience Platform using the Experience Platform user interface, data fields are automatically mapped and ingested into [!DNL Real-Time Customer Profile] within minutes. For instructions on creating a source connection with [!DNL Analytics] using the Experience Platform UI, see the [Analytics source connector tutorial](../../tutorials/ui/create/adobe-applications/analytics.md).
 
 For detailed information on the field mapping that occurs between [!DNL Analytics] and Experience Platform, see the [Adobe Analytics field mapping](./mapping/analytics.md) guide.
 
-## What is the expected latency for Analytics Data on Platform?
+>[!TIP]
+>
+>Follow these best practices to avoid exceeding your license entitlements and overwhelming your total storage and data richness metrics:
+>
+>* Set up the Experience Event Dataset Retention Time-To-Live (TTL) in the beginning to optimize data lifecycle management and storage efficiency. For more details, see the guide on [managing Experience Event Dataset Retention in the data lake using TTL](../../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+>
+>* When you create an Analytics source dataflow, start by configuring the connector to ingest data only into the data lake. After confirming that the dataflow is working, you can enable profile ingestion for the dataset. This approach works best when row and column filters effectively reduce the data volume. Learn more in the [connecting Adobe Analytics to Experience Platform](../../tutorials/ui/create/adobe-applications/analytics.md) documentation.
 
-The expected latency for Analytics Data on Platform is outlined in the table below. Latency will vary depending on customer configuration, data volumes, and consumer applications. For example, if the Analytics implementation is configured with `A4T` the latency to Pipeline will increase to 5-10 minutes.
+## What is the expected latency for Analytics Data on Experience Platform?
+
+The expected latency for Analytics Data on Experience Platform is outlined in the table below. Latency will vary depending on customer configuration, data volumes, and consumer applications. For example, if the Analytics implementation is configured with `A4T` the latency to Pipeline will increase to 5-10 minutes.
 
 | Analytics Data | Expected Latency |
 | -------------- | ---------------- |
 | New data to [!DNL Real-Time Customer Profile] (A4T **not** enabled) | < 2 minutes |
 | New data to [!DNL Real-Time Customer Profile] (A4T **is** enabled) | up to 30 minutes |
-| New data to Data Lake | < 90 minutes |
+| New data to Data Lake | < 2.25 hours |
+| New data to Customer Journey Analytics without [stitching](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en)| < 3.75 hours |
+| New data to Customer Journey Analytics with stitching| < 7 hours |
 | Backfill of less than 10 billion events | < 4 weeks |
 
+For more information about Customer Journey Analytics latencies, see: [Customer Journey Analytics Guardrails](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
+
 The Analytics backfill for production sandboxes defaults to 13 months. For Analytics data in non-production sandboxes, backfill is set to three months. The limit of 10 billion events mentioned in the table above is strictly with respect to expected latency. 
+
+For production sandboxes, if you have licensed the additional SKU that entitles you to import more than 13 months of historical backfill data, contact Adobe to request the extended backfill.
 
 When you create an Analytics source dataflow in a production sandbox, two dataflows are created:
 
@@ -68,7 +82,7 @@ The following table provides more information on identity fields in your [!DNL A
 | Identity field | Description |
 | --- | --- |
 | AAID | The AAID is the primary device identifier in Adobe Analytics and is guaranteed to exist on every event that is passed through the [!DNL Analytics] source. The AAID is sometimes referred to as the *Legacy Analytics ID* or as the `s_vi` cookie ID. Despite this, an AAID is created even if the `s_vi` cookie is not present. The  AAID is represented by the `post_visid_high` and `post_visid_low` columns in [[!DNL Analytics] data feeds](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). On any given event, the AAID field contains a single identity which may be one of the several different types described in the [order of operations for [!DNL Analytics] IDs](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). **Note**: Within an entire report suite, an AAID may contain a mix of types across events.|
-| ECID | The ECID (Experience Cloud ID) is a separate device identifier field, which is populated in Adobe Analytics when [!DNL Analytics] is implemented using the Experience Cloud Identity Service. The ECID is sometimes also referred to as MCID (Marketing Cloud ID). If an ECID exists on an event, the AAID may be based on ECID depending on whether the Analytics [grace period](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) is configured. The ECID is represented by the `mcvisid` in Analytics data feeds. For more information on ECID, see the [ECID overview](../../../identity-service/ecid.md). For information on how ECID works with [!DNL Analytics], see the document on [Analytics and Experience Cloud ID Requests](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html?lang=en). |
+| ECID | The ECID (Experience Cloud ID) is a separate device identifier field, which is populated in Adobe Analytics when [!DNL Analytics] is implemented using the Experience Cloud Identity Service. The ECID is sometimes also referred to as MCID (Marketing Cloud ID). If an ECID exists on an event, the AAID may be based on ECID depending on whether the Analytics [grace period](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) is configured. The ECID is represented by the `mcvisid` in Analytics data feeds. For more information on ECID, see the [ECID overview](../../../identity-service/features/ecid.md). For information on how ECID works with [!DNL Analytics], see the document on [Analytics and Experience Cloud ID Requests](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html). |
 | AACUSTOMID | The AACUSTOMID is a separate identifier field which is populated in Adobe Analytics based on  the use of the `s.VisitorID` variable in the [!DNL Analytics] implementation. The AACUSTOMID is represented by the `cust_visid` column in [[!DNL Analytics] data feeds](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). If the AACUSTOMID is present, then the AAID will be based on the AACUSTOMID because the AACUSTOMID trumps all other identifiers as defined by the [order of operations for [!DNL Analytics] IDs](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). |
 
 ### How the [!DNL Analytics] source treats identities
@@ -79,10 +93,20 @@ The [!DNL Analytics] source passes these identities to Experience Platform in XD
 * `endUserIDs._experience.mcid.id`
 * `endUserIDs._experience.aacustomid.id`
 
-These fields are not marked as identities. Instead, the same identities are copied into XDM's `identityMap` as key-value pairs:
+These fields are not marked as identities. Instead, the same identities (if present in the event) are copied into XDM's `identityMap` as key-value pairs:
 
 * `{ "key": "AAID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
 * `{ "key": "ECID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
 * `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
 
+When the identity or identities are copied into `identityMap`, `endUserIDs._experience.mcid.namespace.code` is also set on the same event:
+
+* If AAID is present, `endUserIDs._experience.aaid.namespace.code` is set to "AAID".
+* If ECID is present, `endUserIDs._experience.mcid.namespace.code` is set to "ECID".
+* If AACUSTOMID is present, `endUserIDs._experience.aacustomid.namespace.code` is set to "AACUSTOMID".
+
 In the identity map, if ECID is present, it is marked as the primary identity for the event. In this case, AAID may be based on ECID due to the [Identity Service grace period](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Otherwise, AAID is marked as the primary identity for the event. AACUSTOMID is never marked as the Primary ID for the event. However, if AACUSTOMID is present, then AAID is based on AACUSTOMID due to the Experience Cloud order of operations.
+
+>[!NOTE]
+>
+>You can use Data Prep to filter out secondary identities coming from Analytics, such as AAID and AACUSTOMID. If filtered out, these identities will not be ingested into Profile if they are available in the incoming Analytics data. Unfiltered data will continue to be loaded into the data lake.

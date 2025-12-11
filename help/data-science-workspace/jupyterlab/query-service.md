@@ -8,6 +8,12 @@ exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
 ---
 # Query Service in Jupyter Notebook
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 [!DNL Adobe Experience Platform] allows you to use Structured Query Language (SQL) in [!DNL Data Science Workspace] by integrating [!DNL Query Service] into [!DNL JupyterLab] as a standard feature. 
 
 This tutorial demonstrates sample SQL queries for common use cases to explore, transform, and analyze [!DNL Adobe Analytics] data.
@@ -92,7 +98,7 @@ Before starting this tutorial, you must have the following prerequisites:
 
 Enter the following SQL queries in individual notebook cells. Execute a query by selecting on its cell followed by selecting the **[!UICONTROL play]** button. Successful query results or error logs are displayed below the executed cell.
 
-When a notebook is inactive for an extended period of time, the connection between the notebook and [!DNL Query Service] may break. In such cases, restart [!DNL JupyterLab] by selecting the **Restart** button ![restart button](../images/jupyterlab/user-guide/restart_button.png) located in the top-right corner next to the power button. 
+When a notebook is inactive for an extended period of time, the connection between the notebook and [!DNL Query Service] may break. In such cases, restart [!DNL JupyterLab] by selecting the **Restart** button ![restart button](/help/images/icons/restart.png) located in the top-right corner next to the power button. 
 
 The notebook kernel resets but the cells will remain, re-run all the cells to continue where you had left off.
 

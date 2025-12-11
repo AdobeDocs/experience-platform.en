@@ -4,6 +4,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Source Connectors Guide
 user-guide-description: Ingest data from a variety of sources. Learn how to structure, label, and enhance already ingested data.
 feature: Sources
+role: Developer
 ---
 
 # Sources {#sources}
@@ -18,11 +19,9 @@ feature: Sources
     - [Adobe Commerce source](connectors/adobe-applications/commerce.md)
     - [Customer attributes source](connectors/adobe-applications/customer-attributes.md)
     - [Data Collection source](connectors/adobe-applications/data-collection.md)
-    - [Workfront source](connectors/adobe-applications/workfront.md)
     - Field mappings {#mapping}
       - [Analytics field mappings](connectors/adobe-applications/mapping/analytics.md)
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)
-      - [Target field mappings](connectors/adobe-applications/mapping/target.md)
       - [Marketo Engage field mappings](connectors/adobe-applications/mapping/marketo.md)
       - [Microsoft Dynamics field mappings](connectors/adobe-applications/mapping/dynamics.md)
       - [Salesforce field mappings](connectors/adobe-applications/mapping/salesforce.md)
@@ -30,6 +29,7 @@ feature: Sources
       - [Marketo Engage connector](connectors/adobe-applications/marketo/marketo.md)
       - [Marketo Engage authentication guide](connectors/adobe-applications/marketo/marketo-auth.md)
       - [B2B namespaces and schemas](connectors/adobe-applications/marketo/marketo-namespaces.md)
+      - [ECID mapping migration guide](connectors/adobe-applications/marketo/migration.md)
   - Advertising {#advertising}
     - [Google Ads connector](connectors/advertising/ads.md)
     - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
@@ -53,16 +53,14 @@ feature: Sources
     - [SFTP connector](connectors/cloud-storage/sftp.md)
     - [Amazon S3 and Azure Blob connector](connectors/cloud-storage/blob-s3.md)
   - Consent & Preferences {#consent}
+    - [Didomi](connectors/consent-and-preferences/didomi.md)
     - [OneTrust Integration](connectors/consent-and-preferences/onetrust.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
-    - [SAP Hybris connector](connectors/crm/sap-hybris.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
     - [SugarCRM connector](connectors/crm/sugarcrm.md)
     - [Veeva CRM connector](connectors/crm/veeva.md)
-    - [Zoho CRM connector](connectors/crm/zoho.md)
   - Customer success {#customer-success}
-    - [Oracle Service Cloud](connectors/customer-success/oracle-service-cloud.md)
     - [Salesforce Service Cloud connector](connectors/customer-success/salesforce-service-cloud.md)
     - [ServiceNow connector](connectors/customer-success/servicenow.md)
     - [Zendesk connector](connectors/customer-success/zendesk.md)
@@ -70,10 +68,10 @@ feature: Sources
     - [Amazon Redshift connector](connectors/databases/redshift.md)
     - [Apache Hive on Azure HDInsights connector](connectors/databases/hive.md)
     - [Apache Spark on Azure HDInsights connector](connectors/databases/spark.md)
+    - [Azure Databricks connector](connectors/databases/databricks.md)
     - [Azure Data Explorer connector](connectors/databases/data-explorer.md)
     - [Azure Synapse Analytics connector](connectors/databases/synapse-analytics.md)
     - [Azure Table Storage connector](connectors/databases/ats.md)
-    - [Couchbase connector](connectors/databases/couchbase.md)
     - [Google BigQuery connector](connectors/databases/bigquery.md)
     - [GreenPlum connector](connectors/databases/greenplum.md)
     - [HP Vertica connector](connectors/databases/hp-vertica.md)
@@ -82,27 +80,39 @@ feature: Sources
     - [Microsoft SQL Server connector](connectors/databases/sql-server.md)
     - [MySQL connector](connectors/databases/mysql.md)
     - [Oracle connector](connectors/databases/oracle.md)
-    - [Phoenix connector](connectors/databases/phoenix.md)
     - [PostgreSQL connector](connectors/databases/postgres.md)
     - [Snowflake Streaming connector](connectors/databases/snowflake-streaming.md)
     - [Snowflake connector](connectors/databases/snowflake.md)
     - [Teradata Vantage connector](connectors/databases/teradata-vantage.md)
+  - Data & identity partner {#data-partner}
+    - [Acxiom Data Ingestion](connectors/data-partners/acxiom-data-ingestion.md)
+    - [Acxiom Prospecting Data Import](connectors/data-partners/acxiom-prospecting-data-import.md)
+    - [Algolia User Profiles](connectors/data-partners/algolia-user-profiles.md)
+    - [Bombora Intent](connectors/data-partners/bombora.md)
+    - [Demandbase Intent](connectors/data-partners/demandbase.md)
+    - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
   - eCommerce {#ecommerce}
+    - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
     - [Shopify](connectors/ecommerce/shopify.md)
     - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
   - Local system {#local-system}
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
+  - Loyalty {#loyalty}
+    - [Capillary Streaming Events](connectors/loyalty/capillary.md)
+    - [Talon.One](connectors/loyalty/talon-one.md)
   - Marketing automation {#marketing-automation}
+    - [Braze Currents](connectors/marketing-automation/braze.md)
     - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
     - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
     - [Mailchimp connector](connectors/marketing-automation/mailchimp.md)
     - [Oracle Eloqua connector](connectors/marketing-automation/oracle-eloqua.md)
-    - [Oracle Responsys connector](connectors/marketing-automation/oracle-responsys.md)
+    - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
+    - [PathFactory](connectors/marketing-automation/pathfactory.md)
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
   - Payments {#payments}
-    - [PayPal connector](connectors/payments/paypal.md)
     - [Square connector](connectors/payments/square.md)
+    - [Stripe connector](connectors/payments/stripe.md)
   - Protocols {#protocols}
     - [Generic OData connector](connectors/protocols/odata.md)
     - [Generic REST API connector](connectors/protocols/generic-rest.md)
@@ -134,14 +144,11 @@ feature: Sources
       - [OneTrust Integration](tutorials/api/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
-      - [SAP Hybris](tutorials/api/create/crm/sap-hybris.md)
       - [Salesforce](tutorials/api/create/crm/salesforce.md)
       - [SugarCRM Accounts & Contacts](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
       - [SugarCRM Events](tutorials/api/create/crm/sugarcrm-events.md)
       - [Veeva CRM](tutorials/api/create/crm/veeva.md)
-      - [Zoho CRM](tutorials/api/create/crm/zoho.md)
     - Customer success {#customer-success}
-      - [Oracle Service Cloud](tutorials/api/create/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
@@ -149,10 +156,10 @@ feature: Sources
       - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
       - [Apache Hive on Azure HDInsights](tutorials/api/create/databases/hive.md)
       - [Apache Spark on Azure HDInsights](tutorials/api/create/databases/spark.md)
+      - [Azure Databricks](tutorials/api/create/databases/databricks.md)
       - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
       - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
       - [Azure Table Storage](tutorials/api/create/databases/ats.md)
-      - [Couchbase](tutorials/api/create/databases/couchbase.md)
       - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
       - [GreenPlum](tutorials/api/create/databases/greenplum.md)
       - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
@@ -160,13 +167,13 @@ feature: Sources
       - [MariaDB](tutorials/api/create/databases/mariadb.md)
       - [MySQL](tutorials/api/create/databases/mysql.md)
       - [Oracle](tutorials/api/create/databases/oracle.md)
-      - [Phoenix](tutorials/api/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/api/create/databases/postgres.md)
       - [Snowflake Streaming](tutorials/api/create/databases/snowflake-streaming.md)
       - [Snowflake](tutorials/api/create/databases/snowflake.md)
       - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
       - [SQL Server](tutorials/api/create/databases/sql-server.md)
     - eCommerce {#ecommerce}
+      - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
     - Marketing automation {#marketing-automation}
@@ -176,11 +183,13 @@ feature: Sources
       - [MailChimp Campaign](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
       - [MailChimp Members](tutorials/api/create/marketing-automation/mailchimp-members.md)
       - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
-      - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
+      - [Oracle NetSuite Activities](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
+      - [Oracle NetSuite Entities](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
+      - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
-      - [PayPal](tutorials/api/create/payments/paypal.md)
       - [Square](tutorials/api/create/payments/square.md)
+      - [Stripe](tutorials/api/create/payments/stripe.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/api/create/protocols/odata.md)
       - [Generic REST API](tutorials/api/create/protocols/generic-rest.md)
@@ -218,6 +227,9 @@ feature: Sources
   - [Delete dataflows](tutorials/api/delete-dataflows.md)
   - [Ingest encrypted data](tutorials/api/encrypt-data.md)
   - [Save a dataflow as a draft](tutorials/api/draft.md)
+  - [Apply access labels to a dataflow](tutorials/api/labels.md)
+  - [Use private endpoints](tutorials/api/private-link.md)
+  - [Enable change data capture](tutorials/api/change-data-capture.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
     - Adobe applications {#adobe-applications}
@@ -228,7 +240,6 @@ feature: Sources
       - [Customer attributes](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - [Marketo Custom Activities](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-      - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
     - Advertising {#advertising}
       - [Google Ads](tutorials/ui/create/advertising/ads.md)
       - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
@@ -252,17 +263,15 @@ feature: Sources
       - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
       - [Amazon S3 and Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
     - Consent & Preferences {#consent}
+      - [Didomi](tutorials/ui/create/consent-and-preferences/didomi.md)
       - [OneTrust Integration](tutorials/ui/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
-      - [SAP Hybris](tutorials/ui/create/crm/sap-hybris.md)
       - [Salesforce](tutorials/ui/create/crm/salesforce.md)
       - [SugarCRM Accounts & Contacts](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
       - [SugarCRM Events](tutorials/ui/create/crm/sugarcrm-events.md)
       - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
-      - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
     - Customer Success {#customer-success}
-      - [Oracle Service Cloud](tutorials/ui/create/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
       - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
@@ -270,10 +279,10 @@ feature: Sources
       - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
       - [Apache Hive on Azure HDInsights](tutorials/ui/create/databases/hive.md)
       - [Apache Spark on Azure HDInsights](tutorials/ui/create/databases/spark.md)
+      - [Azure Databricks](tutorials/ui/create/databases/databricks.md)
       - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
       - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
       - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
-      - [Couchbase](tutorials/ui/create/databases/couchbase.md)
       - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
       - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
       - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
@@ -282,27 +291,43 @@ feature: Sources
       - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
       - [MySQL](tutorials/ui/create/databases/mysql.md)
       - [Oracle](tutorials/ui/create/databases/oracle.md)
-      - [Phoenix](tutorials/ui/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - [Snowflake](tutorials/ui/create/databases/snowflake.md)
+      - [Snowflake Streaming](tutorials/ui/create/databases/snowflake-streaming.md)
       - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
+    - Data & identity partner {#data-partner}
+      - [Acxiom Data Ingestion](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
+      - [Acxiom Prospecting Data Import](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+      - [Algolia User Profiles](tutorials/ui/create/data-partners/algolia-user-profiles.md)
+      - [Bombora Intent](tutorials/ui/create/data-partners/bombora.md)
+      - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
+      - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
     - eCommerce {#ecommerce}
+      - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
     - Local system {#local-system}
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
+    - Loyalty {#loyalty}
+      - [Capillary Streaming Events](tutorials/ui/create/loyalty/capillary.md)
+      - [Talon.One Streaming Events](tutorials/ui/create/loyalty/talon-one-streaming.md)
+      - [Talon.One Batch Source Connector](tutorials/ui/create/loyalty/talon-one-batch.md)
     - Marketing automation {#marketing-automation}
+      - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
       - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
       - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
       - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
       - [Mailchimp Campaigns](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
       - [Mailchimp Members](tutorials/ui/create/marketing-automation/mailchimp-members.md)
       - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
-      - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
+      - [Oracle NetSuite Activities](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
+      - [Oracle NetSuite Entities](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
+      - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
+      - [Relay Connector](tutorials/ui/create/marketing-automation/relay-connector.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
-      - [PayPal](tutorials/ui/create/payments/paypal.md)
       - [Square](tutorials/ui/create/payments/square.md)
+      - [Stripe](tutorials/ui/create/payments/stripe.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/ui/create/protocols/odata.md)
     - Streaming {#streaming}
@@ -321,6 +346,9 @@ feature: Sources
     - [Payment connection dataflow](tutorials/ui/dataflow/payments.md)
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
   - [Create a sources dataflow using templates in the UI](tutorials/ui/templates.md)
+  - [Filter sources objects](tutorials/ui/filter.md)
+  - [Ingest encrypted data](tutorials/ui/encryped-ingestion.md)
+  - [On-demand ingestion](tutorials/ui/on-demand-ingestion.md)
   - [Monitor batch dataflows](tutorials/ui/monitor.md)
   - [Monitor streaming dataflows](tutorials/ui/monitor-streaming.md)
   - [Update accounts](tutorials/ui/update.md)
@@ -329,6 +357,8 @@ feature: Sources
   - [Delete dataflows](tutorials/ui/delete.md)
   - [Subscribe to sources alerts](tutorials/ui/alerts.md)
   - [Save a dataflow as a draft](tutorials/ui/draft.md)
+  - [Apply access labels to a dataflow](tutorials/ui/labels.md)
+  - [Create a private endpoint](tutorials/ui/private-link.md)
 - Self-Serve Sources (Batch SDK) {#sdk}
   - [Overview](sources-sdk/overview.md)
   - Configure your connection specification {#config}
@@ -362,7 +392,7 @@ feature: Sources
   - [Error messages in sources](./errors/sources-errors.md)
   - [Error messages in Flow Service](./errors/flow-service-errors.md)
 - [Flow run notifications](notifications.md)
-- [IP address allow list](ip-address-allow-list.md)
+- [IP address allowlist](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+- [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

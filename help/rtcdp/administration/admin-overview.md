@@ -2,6 +2,7 @@
 keywords: rtcdp administration overview;administration overview
 title: Real-Time Customer Data Platform Administration Overview
 description: This document provides an overview of the administration capabilities of Adobe Real-Time Customer Data Platform, powered by Adobe Experience Platform. 
+feature: Access Control, Get Started, Sandboxes
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
 ---
 # Real-Time Customer Data Platform administration overview
@@ -14,9 +15,9 @@ The following sections provide introductions to the central components of [!DNL 
 
 ## Access control
 
-Access control is administered through the [Adobe Admin Console](https://adminconsole.adobe.com). This functionality leverages product profiles in [!DNL Admin Console], allowing you to link users with permissions and sandboxes. Using this feature, administrators can grant or restrict access to specific Real-Time CDP capabilities for defined sets of users.
+Attribute-based access control is administered through the Permissions UI. This functionality leverages roles in the Permissions UI, allowing you to link users with permissions and sandboxes. Using this feature, administrators can grant or restrict access to specific Real-Time CDP capabilities for defined sets of users.
 
-To learn more about access control, see the [access control overview](../../access-control/home.md) in the [!DNL Experience Platform] documentation.
+To learn more about access control, see the [attribute-based access control overview](/help/access-control/abac/overview.md) in the [!DNL Experience Platform] documentation.
 
 >[!IMPORTANT]
 >
@@ -26,6 +27,6 @@ To learn more about access control, see the [access control overview](../../acce
 
 Adobe Experience Platform (and Real-Time CDP by extension) is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater to the development, testing, and deployment of these applications while ensuring operational compliance.
 
-To address this need, Adobe Experience Platform provides "sandboxes", enabling you to partition a single [!DNL Platform] instance into separate virtual environments that can be used to develop and evolve digital experience applications.
+To address this need, Adobe Experience Platform provides *sandboxes*, enabling you to partition a single [!DNL Experience Platform] instance into separate virtual environments that can be used to develop and evolve digital experience applications. You can use the sandbox tooling feature to improve configuration accuracy across sandboxes and seamlessly export and import sandbox configurations between sandboxes. Follow the steps provided in the [sandbox tooling UI guide](../../sandboxes/ui/sandbox-tooling.md).
 
 For more information on sandboxes, see the [sandboxes overview](../../sandboxes/home.md) in the [!DNL Experience Platform] documentation.

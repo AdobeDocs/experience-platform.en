@@ -100,4 +100,4 @@ Tags provide a toggle to turn on asynchronous loading when creating an embed cod
    <script type="text/javascript">_satellite.pageBottom();</script>
    ```
 
-   This code tells Platform that the browser parser has reached the bottom of the page. It is likely that tags will not have loaded and executed before this time, therefore calling `_satellite.pageBottom()` results in an error and the Page Bottom event type may not behave as expected.
+   This code tells Experience Platform that the browser parser has reached the bottom of the page. It is likely that tags will not have loaded and executed before this time, therefore calling `_satellite.pageBottom()` results in an error and the Page Bottom event type may not behave as expected.

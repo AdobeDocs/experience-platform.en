@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;iab;tcf;consent;
 solution: Experience Platform
 title: IAB TCF 2.0 Consent Field Group for Event Schemas
-description: This document provides an overview of the IAB TCF 2.0 Consent schema field group for the XDM ExperienceEvent class.
+description: Learn about the IAB TCF 2.0 Consent schema field group for the XDM ExperienceEvent class.
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
 ---
 # [!UICONTROL IAB TCF 2.0 Consent] field group for event schemas
@@ -25,7 +25,7 @@ exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
 
 {style="table-layout:auto"}
 
-See the guide on [IAB TCF 2.0 support in Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) for more information on the use case of this field group. For more details on the field group itself, refer to the public XDM repository:
+See the guide on [IAB TCF 2.0 support in Experience Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) for more information on the use case of this field group. For more details on the field group itself, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.schema.json)

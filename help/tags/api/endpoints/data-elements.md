@@ -1308,7 +1308,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the the specified data element's origin.
+A successful response returns the details of the specified data element's origin.
 
 ```json
 {

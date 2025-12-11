@@ -3,6 +3,7 @@ title: RainFocus source overview
 description: Learn how to bring event management and analytics data from your RainFocus account to Experience Platform
 last-substantial-update: 2023-06-21
 badge: Beta
+exl-id: 88e333e3-2b93-4d66-8412-efadea58ac46
 ---
 # [!DNL RainFocus]
 
@@ -16,7 +17,7 @@ Use the [!DNL RainFocus] source in Adobe Experience Platform and Real-Time Custo
 
 >[!IMPORTANT]
 >
->This documentation page was created by the [!DNL RainFocus] team. For any inquiries or update requests, please contact them directly at clientcare<span>@rainfocus.com or visit the [[!DNL RainFocus] Help Center](https://help.rainfocus.com/hc/en-us)
+>This source connector and documentation page are created and maintained by the [!DNL RainFocus] team. For any inquiries or update requests, please contact them directly at clientcare<span>@rainfocus.com or visit the [[!DNL RainFocus] Help Center](https://help.rainfocus.com/hc/en-us)
 
 ## Prerequisites
 

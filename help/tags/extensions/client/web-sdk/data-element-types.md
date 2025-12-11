@@ -1,30 +1,35 @@
 ---
-title: Data Element Types in the Adobe Experience Platform Web SDK Extension
+title: Data element types in the Adobe Experience Platform Web SDK Extension
 description: Learn about the different data element types provided by the Adobe Experience Platform Web SDK tag extension.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
 ---
-
 # Data element types
 
-After you set your [action types](action-types.md) in the [Adobe Experience Platform Web SDK tag extension](web-sdk-extension-configuration.md), you must configure your data element types. This page describes the available data element types.
+After you set your [action types](actions/actions-overview.md) in the tag extension, you must configure your data element types. This page describes the available data element types.
 
 ## Identity map {#identity-map}
 
-An identity map allows you to establish identities for the visitor of your web page. An identity map consists of namespaces, like _phone_ or _email_, with each namespace containing one or more identifiers. For example, if the individual on your website has provided two phone numbers, your phone namespace should contain two identifiers.
+An identity map allows you to establish identities for the visitor of your web page. An identity map consists of namespaces, like `CRMID`, `Phone` or `Email`, with each namespace containing one or more identifiers. For example, if the individual on your website has provided two phone numbers, your phone namespace should contain two identifiers.
 
 In the [!UICONTROL Identity map] data element, you will provide the following pieces of information for each identifier:
 
-* **[!UICONTROL ID]**: The value identifying the visitor. For example, if the identifier belongs to the _phone_ namespace, the [!UICONTROL ID] may be _555-555-5555_. This value typically is derived from a JavaScript variable or some other piece of data on your page, so it's best to create a data element that references the page data, then reference the data element in the [!UICONTROL ID] field within the [!UICONTROL Identity map] data element. If, when running on your page, the ID value is anything but a populated string, the identifier will be automatically removed from the identity map.
+* **[!UICONTROL ID]**: The value identifying the visitor. For example, if the identifier belongs to the _phone_ namespace, the [!UICONTROL ID] could be _555-555-5555_. This value typically is derived from a JavaScript variable or some other piece of data on your page, so it's best to create a data element that references the page data, then reference the data element in the [!UICONTROL ID] field within the [!UICONTROL Identity map] data element. If, when running on your page, the ID value is anything but a populated string, the identifier will be automatically removed from the identity map.
 * **[!UICONTROL Authenticated state]**: A selection indicating whether the visitor is authenticated.
 * **[!UICONTROL Primary]**: A selection indicating whether the identifier should be used as the primary identifier for the individual. If no identifier is marked as primary, the ECID will be used as the primary identifier.
 
 ![UI image showing the Edit Data Element screen.](assets/identity-map-data-element.png)
 
+>[!TIP]
+>
+>Adobe recommends sending identities which represent a person, such as `Luma CRM Id` as the primary identity.
+>
+>If the identity map contains the person identifier (e.g. `Luma CRM Id`), then the person identifier will become the primary identifier. Otherwise, `ECID` becomes the primary identity.
+
 You should not provide an [!DNL ECID] when building an identity map. When using the SDK, an [!DNL ECID] is automatically generated on the server and included in the identity map.
 
-The identity map data element is often used in tandem with the [[!UICONTROL XDM object] data element type](#xdm-object) and the [[!UICONTROL Set consent] action type](action-types.md#set-consent).
+The identity map data element is often used with the [[!UICONTROL Variable]](#variable) data element and the [[!UICONTROL Set consent]](actions/set-consent.md) action.
 
-Read more about [Adobe Experience Platform Identity Service](../../../../identity-service/home.md).
+Read more about the [Adobe Experience Platform Identity Service](/help/identity-service/home.md).
 
 ## XDM object {#xdm-object}
 
@@ -40,11 +45,20 @@ Notice that when you open certain fields of your schema, such as `web.webPageDet
 
 ## Variable {#variable}
 
-Another way to create XDM objects is using the **[!UICONTROL Variable]** data element. While the XDM object data element is created when it is referenced, such as inside a `sendEvent` command, the **[!UICONTROL Variable]** data element can be updated via [!UICONTROL Update variable] actions. To use the data element, select the correct Adobe Experience Platform sandbox and schema.
+You can create payload objects using the **[!UICONTROL Variable]** data element. Both [!UICONTROL XDM] and [!UICONTROL Data] objects are supported.
 
-![UI image showing the Create Data Element screen.](assets/variable-data-element.png)
+* When you select [!UICONTROL XDM], select the desired [!UICONTROL Sandbox] and [!UICONTROL Schema].
+* When you select [!UICONTROL Data], select the desired solutions. Available solutions include [!UICONTROL Adobe Analytics] and [!UICONTROL Adobe Target].
 
-Once you've created this data element you can use [Update variable](./action-types.md#update-variable) actions to modify the data element. Then within send event actions use use the variable data element for the XDM option.
+![Image of Tags UI showing the data element options.](assets/variable-data-element.png)
+
+After you create this data element, you can use the [Update variable](actions/update-variable.md) action to modify it. When ready, you can include this data element in the [Send event](actions/send-event.md) action to send data to a datastream.
+
+## Media: Quality of Experience {#quality-experience}
+
+A **[!UICONTROL Quality of Experience]** data element is helpful when sending streaming media events to Adobe Experience Platform. You can add this element when creating a media session and the following media events will contain updated Quality of Experience data.
+
+![UI image showing the Create Quality of Experience Data Element screen.](assets/qoe-data-element.png)
 
 ## Next steps {#next-steps}
 

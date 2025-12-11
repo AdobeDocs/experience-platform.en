@@ -2,6 +2,7 @@
 solution: Experience Platform
 title: Segment Export Jobs API Endpoint
 description: Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the /export/jobs endpoint in the Adobe Experience Platform Segmentation Service API, which allows you to programmatically retrieve, create, and cancel export jobs.
+role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
 ---
 # Segment export jobs endpoint
@@ -26,20 +27,26 @@ The `/export/jobs` endpoint supports several query parameters to help filter you
 
 ```http
 GET /export/jobs
-GET /export/jobs?limit={LIMIT}
-GET /export/jobs?offset={OFFSET}
-GET /export/jobs?status={STATUS}
+GET /export/jobs?{QUERY_PARAMETERS}
 ```
 
-| Parameter | Description |
-| --------- | ----------- |
-| `{LIMIT}` | Specifies the number of export jobs returned. |
-| `{OFFSET}` | Specifies the offset of the pages of results. | 
-| `{STATUS}` | Filters the results based on status. The supported values are "NEW", "SUCCEEDED", and "FAILED". |
+**Query parameters**
+
++++ A list of available query parameters.
+
+| Parameter | Description | Example |
+| --------- | ----------- | ------- |
+| `limit` | Specifies the number of export jobs returned. | `limit=10` |
+| `offset` | Specifies the offset of the pages of results. | `offset=1540974701302_96` |
+| `status` | Filters the results based on status. The supported values are "NEW", "SUCCEEDED", and "FAILED". | `status=NEW` |
+
++++
 
 **Request**
 
 The following request will retrieve the last two export jobs within your organization.
+
++++ A sample request to retrieve export jobs.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
@@ -49,9 +56,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Response**
 
 The following response returns HTTP status 200 with a list of successfully completed export jobs, based on the query parameter provided in the request path.
+
++++ A sample response when retrieving export jobs.
 
 ```json
 {
@@ -200,6 +211,8 @@ The following response returns HTTP status 200 with a list of successfully compl
 | `page` | Information about the pagination of the requested export jobs. | 
 | `link.next` | A link to the next page of export jobs. | 
 
++++
+
 ## Create a new export job {#create}
 
 You can create a new export job by making a POST request to the `/export/jobs` endpoint.
@@ -213,6 +226,8 @@ POST /export/jobs
 **Request**
 
 The following request creates a new export job, configured by the parameters provided in the payload.
+
++++ A sample request to create an export job.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
@@ -276,16 +291,20 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `filter.segmentQualificationTime` | Filter based on segment qualification time. The start time and/or end time can be provided. |
 | `filter.segmentQualificationTime.startTime` | Segment qualification start time for a segment ID for a given status. It not provided, there will be no filter on the start time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
 | `filter.segmentQualificationTime.endTime` | Segment qualification end time for a segment ID for a given status. It not provided, there will be no filter on the end time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
-| `filter.fromIngestTimestamp `| Limits exported profiles to only include those that have been updated after this timestamp. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. <ul><li>`fromIngestTimestamp` for **profiles**, if provided: Includes all the merged profiles where merged updated timestamp is greater than the given timestamp. Supports `greater_than` operand.</li><li>`fromIngestTimestamp` for **events**: All events ingested after this timestamp will be exported corresponding to resultant profile result. This is not the event time itself but the ingestion time for the events.</li> |
-| `filter.emptyProfiles` | A boolean value that indicates whether to filter for empty profiles. Profiles can contain profile records, ExperienceEvent records, or both. Profiles with no profile records and only ExperienceEvent records are referred to as "emptyProfiles". To export all profiles in the profile store, including the "emptyProfiles", set the value of `emptyProfiles` to `true`. If `emptyProfiles` is set to `false`, only profiles with profile records in the store are exported. By default, if `emptyProfiles` attribute is not included, only profiles containing profile records are exported. |
+| `filter.fromIngestTimestamp`| Limits exported profiles to only include those that have been updated after this timestamp. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. <ul><li>`fromIngestTimestamp` for **profiles**, if provided: Includes all the merged profiles where merged updated timestamp is greater than the given timestamp. Supports `greater_than` operand.</li><li>`fromIngestTimestamp` for **events**: All events ingested after this timestamp will be exported corresponding to resultant profile result. This is not the event time itself but the ingestion time for the events.</li> |
+| `filter.emptyProfiles` | A boolean value that indicates whether to filter for empty profiles. Profiles can contain profile records, ExperienceEvent records, or both. Profiles with no profile records and only ExperienceEvent records are referred to as "emptyProfiles". To export all profiles in the Profile store, including the "emptyProfiles", set the value of `emptyProfiles` to `true`. If `emptyProfiles` is set to `false`, only profiles with profile records in the store are exported. By default, if `emptyProfiles` attribute is not included, only profiles containing profile records are exported. |
 | `additionalFields.eventList` | Controls the time-series event fields exported for child or associated objects by providing one or more of the following settings:<ul><li>`fields`: Control the fields to export.</li><li>`filter`: Specifies criteria that limits the results included from associated objects. Expects a minimum value required for export, typically a date.</li><li>`filter.fromIngestTimestamp`: Filters time-series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events.</li><li>`filter.toIngestTimestamp`: Filters the timestamp to those that have been ingested before the provided timestamp. This is not the event time itself but the ingestion time for the events.</li></ul> |
 | `destination` | **(Required)** Information about the exported data:<ul><li>`datasetId`: **(Required)** The ID of the dataset where data is to be exported.</li><li>`segmentPerBatch`: *(Optional)* A Boolean value that, if not provided, defaults to "false". A value of "false" exports all segment IDs into a single batch ID. A value of "true" exports one segment ID into one batch ID. Note that setting the value to be "true" may affect batch export performance.</li></ul> |
 | `schema.name` | **(Required)** The name of the schema associated with the dataset where data is to be exported. |
 | `evaluationInfo.segmentation` | *(Optional)* A boolean value that, if not provided, defaults to `false`. A value of `true` indicates that segmentation needs to be done on the export job. |
 
++++
+
 **Response**
 
 A successful response returns HTTP status 200 with details of your newly created export job.
+
++++ A sample response when creating an export job.
 
 ```json
 {
@@ -373,6 +392,8 @@ Alternatively, if `destination.segmentPerBatch` had been set to `true`, the `des
     }
 ```
 
++++
+
 ## Retrieve a specific export job {#get}
 
 You can retrieve detailed information about a specific export job by making a GET request to the `/export/jobs` endpoint and providing the ID of the export job you wish to retrieve in the request path.
@@ -389,6 +410,8 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 **Request**
 
++++ A sample request to retrieve an export job.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -397,9 +420,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Response**
 
 A successful response returns HTTP status 200 with detailed information about the specified export job.
+
++++ A sample response when retrieving an export job.
 
 ```json
 {
@@ -469,6 +496,8 @@ A successful response returns HTTP status 200 with detailed information about th
 | `metrics.profileExportTime` | A field indicating the time it took for the profiles to export. |
 | `totalExportedProfileCounter` | The total number of profile exported across all batches. |
 
++++
+
 ## Cancel or delete a specific export job {#delete}
 
 You can request to delete the specified export job by making a DELETE request to the `/export/jobs` endpoint and providing the ID of the export job you wish to delete in the request path.
@@ -485,6 +514,8 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 **Request**
 
++++ A sample request to delete an export job.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -492,6 +523,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_I
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **Response**
 

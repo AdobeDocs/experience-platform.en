@@ -1,6 +1,6 @@
 ---
 title: Deposit Details Schema Field Group
-description: This document provides an overview of the Deposit Details schema field group.
+description: Learn about the Deposit Details schema field group.
 exl-id: a40d17b3-cb76-4b63-9328-735fc7c55672
 ---
 # [!UICONTROL Deposit Details] schema field group

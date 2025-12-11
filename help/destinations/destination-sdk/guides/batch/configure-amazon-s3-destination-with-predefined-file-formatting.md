@@ -44,7 +44,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
     "name": "Amazon S3 destination server with predefined default CSV options",
     "destinationServerType": "FILE_BASED_S3",
     "fileBasedS3Destination": {
-        "bucketName": {
+        "bucket": {
             "templatingStrategy": "PEBBLE_V1",
             "value": "{{customerData.bucketName}}"
         },

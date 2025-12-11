@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to delete an existing destination configuration through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to delete an existing destination configuration through Adobe Experience Platform Destination SDK.
 title: Delete a destination configuration
+exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
 ---
-
 # Delete a destination configuration
 
 This page exemplifies the API request and payload that you can use to delete an existing destination configuration, using the `/authoring/destinations` API endpoint.
@@ -17,7 +17,7 @@ Before continuing, please review the [getting started guide](../../getting-start
 
 ## Delete a destination configuration {#delete}
 
-You can delete an [existing](create-destination-configuration.md) destination server configuration by making a `DELETE` request to the `/authoring/destinations` endpoint with the `{INSTANCE_ID}`of the destination configuration that you want to delete.
+You can delete an [existing](create-destination-configuration.md) destination configuration by making a `DELETE` request to the `/authoring/destinations` endpoint with the `{INSTANCE_ID}`of the destination configuration that you want to delete.
 
 >[!TIP]
 >
@@ -52,7 +52,7 @@ A successful response returns HTTP status 200 along with an empty HTTP response.
 
 ## API error handling {#error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps
 
@@ -63,4 +63,3 @@ To learn more about what you can do with this endpoint, see the following articl
 * [Create a destination configuration](create-destination-configuration.md)
 * [Retrieve a destination configuration](retrieve-destination-configuration.md)
 * [Update a destination configuration](update-destination-configuration.md)
-

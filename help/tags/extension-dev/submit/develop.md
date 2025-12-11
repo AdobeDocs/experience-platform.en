@@ -18,8 +18,6 @@ With that knowledge, you can plan out what components should be provided in your
 With a plan in place, these guides can help you understand the extension development process:
 
 * The [getting started guide](../getting-started.md) and other documents under **Extension development** in the left navigation are great reference material for understanding extensions. They include details on what extensions can do, how user information is stored and passed between your extension and Adobe Experience Platform, how your code is bundled into libraries, and how your extension code is interpreted and used at runtime in the browser.
-* The [extension tutorial video](https://youtu.be/rxjtC9o4rl0) is a great place to start.
-* The [Introduction to Extensions](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m) YouTube playlist walks through the process of creating extension packages.
 * [Understanding JSON Schema](https://spacetelescope.github.io/understanding-json-schema/index.html#) article.
 * [JSON Lint/Validator](https://jsonlint.com/).
 * [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) Chrome extension to highlight & print JSON & JSONP.
@@ -38,12 +36,7 @@ There are also a number of npm tools to help you with your extension package dev
 
 ## Example extensions
 
-There are example extensions on GitHub you can review or use as starter projects:
-
-* [Hello World example extension](https://github.com/adobe/reactor-helloworld-extension)
-* [Facebook example extension](https://github.com/Adobe-Marketing-Cloud-Activation/extension-facebookpixel)
-* [Typekit example extension](https://github.com/jeffchasin/extension-typekit)
-* [Pinterest example extension](https://github.com/jeffchasin/extension-pinterest)
+You can review or use example extensions from GitHub, such as the [Hello World example extension](https://github.com/adobe/reactor-helloworld-extension), as starter projects.
 
 ## Slack workspace
 
