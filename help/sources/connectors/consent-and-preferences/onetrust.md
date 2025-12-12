@@ -1,28 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;OneTrust;onetrust;consent;consent and preferences;compliance
-solution: Experience Platform
 title: OneTrust Integration Source Connector Overview
 description: Learn how to connect OneTrust Integration to Adobe Experience Platform using APIs or the user interface.
-last-substantial-update: 2023-04-26
 exl-id: f2229d4d-8aa6-483a-9156-403309f80007
 ---
 # [!DNL OneTrust Integration] source
 
 >[!NOTE]
 >
->The [!DNL OneTrust Integration] source only supports ingestion of consent and preferences data and not cookies. For issues with the source connector, please contact OneTrust support at https://support.onetrust.com
+>The [!DNL OneTrust Integration] source only supports ingestion of consent and preferences data and not cookies. For issues with the source connector, contact [[!DNL OneTrust] support](https://support.onetrust.com).
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+[!DNL OneTrust] is a privacy, security, and trust management platform designed to help organizations manage data responsibly, comply with regulations, and build trust with customers and stakeholders. It provides a unified suite of tools for data governance, risk management, and compliance automation.
 
-Experience Platform provides support for ingesting data from a third-party consent and preferences management platform. Support for consent and preferences providers include [!DNL OneTrust Integration].
+Use the [!DNL OneTrust Integration] source to connect your account and ingest consent and preference data to Experience Platform.
 
-The documentation below provides information on how to connect [!DNL OneTrust Integration] to Platform using APIs or the user interface:
+>[!IMPORTANT]
+>
+>With the [!DNL OneTrust Integration] source, each run only ingests new data that was created after the previous run, even if the previous run did not complete successfully.
 
-## Connect [!DNL OneTrust Integration] to Platform using APIs
+## Connect [!DNL OneTrust Integration] to Experience Platform using APIs
 
 - [Create a [!DNL OneTrust Integration] source connection and dataflow using the Flow Service API](../../tutorials/api/create/consent-and-preferences/onetrust.md)
 
-## Connect [!DNL OneTrust Integration] to Platform using the UI
+## Connect [!DNL OneTrust Integration] to Experience Platform using the UI
 
 - [Create a [!DNL OneTrust Integration] source connection in the UI](../../tutorials/ui/create/consent-and-preferences/onetrust.md)
 - [Create a dataflow for a consent and preferences source connection in the UI](../../tutorials/ui/dataflow/consent-and-preferences.md)

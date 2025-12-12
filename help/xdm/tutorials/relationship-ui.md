@@ -99,23 +99,53 @@ The updated `preferredHotel` field appears in the canvas, located under a `_tena
 
 ## Define a relationship field for the source schema {#relationship-field}
 
-Once your source schema has a dedicated reference field defined, you can designate it as a relationship field.
+Once your source schema has a dedicated reference field defined, you can designate it as a relationship field. 
 
 >[!NOTE]
 >
->The steps below cover how to define a relationship field using the right-rail controls in the canvas. If you have access to Real-Time CDP B2B Edition, you can also define a one-to-one relationship using the [same dialog](./relationship-b2b.md#relationship-field) as when creating many-to-one relationships.
+>Relationships can only be supported on string or string array fields.
 
-Select the `preferredHotel` field in the canvas, then scroll down under **[!UICONTROL Field properties]** until the **[!UICONTROL Relationship]** checkbox appears. Select the checkbox to reveal the required parameters for configuring a relationship field.
+Select the `preferredHotel` field in the canvas, then select **[!UICONTROL Add relationship]** in the **[!UICONTROL Field properties]** sidebar. 
 
-![](../images/tutorials/relationship/relationship-checkbox.png)
+![The Schema Editor with Add relationship highlighted in the Field properties sidebar.](../images/tutorials/relationship/add-relationship.png)
 
-Select the dropdown for **[!UICONTROL Reference schema]** and select the reference schema for the relationship ("[!DNL Hotels]" in this example). Under **[!UICONTROL Reference identity namespace]**, select the namespace of the reference schema's identity field (in this case, "[!DNL Hotel ID]"). Select **[!UICONTROL Apply]** when finished.
+The [!UICONTROL Add relationship] dialog appears. From this dialog you can set required parameters for configuring a relationship field. For Real-Time CDP B2C users, you can **only** set a one-to-one relationship between the source and reference schema.
 
-![](../images/tutorials/relationship/reference-schema-id-namespace.png)
+>[!NOTE]
+>
+>If you have access to Real-Time CDP B2B Edition, you can use the canvas's right-rail controls to define a relationship field, as well as build a many-to-one relationship using the [same dialog](./relationship-b2b.md#relationship-field).
+
+![The Add relationship dialog.](../images/tutorials/relationship/add-relationship-dialog.png)
+
+Use the dropdown for **[!UICONTROL Reference schema]** and select the reference schema for the relationship ("[!DNL Hotels]" in this example). 
+
+>[!NOTE]
+>
+>Only schemas that contain a primary identity are included in the reference schema dropdown menu. This safeguard prevents you from accidentally creating a relationship with a schema that isn't properly configured yet.
+
+The reference schema's identity namespace (in this case, "[!DNL Hotel ID]") is automatically populated under **[!UICONTROL Reference identity namespace]**. Select **[!UICONTROL Apply]** when finished.
+
+![The Add relationship dialog with the relationship parameters configured and Apply highlighted.](../images/tutorials/relationship/apply-relationship.png)
 
 The `preferredHotel` field is now highlighted as a relationship in the canvas, displaying the name of the reference schema. Select **[!UICONTROL Save]** to save your changes and complete the workflow.
 
-![](../images/tutorials/relationship/relationship-save.png)
+![The Schema Editor with the relationship references and Save highlighted.](../images/tutorials/relationship/relationship-save.png)
+
+### Edit an existing relationship field {#edit-relationship}
+
+To change the reference schema, select a field with an existing relationship, then select **[!UICONTROL Edit relationship]** in the **[!UICONTROL Field properties]** sidebar. 
+
+![The Schema Editor with Edit relationship highlighted.](../images/tutorials/relationship/edit-relationship.png)
+
+The [!UICONTROL Edit relationship] dialog appears. From here, you can follow the process outlined in [defining a relationship field](#relationship-field) or delete the relationship. Select **[!UICONTROL Delete relationship]** to remove the relationship to the reference schema. 
+
+![The Edit relationship dialog.](../images/tutorials/relationship/edit-relationship-dialog.png)
+
+## Filter and search for relationships {#filter-and-search} 
+
+You can filter and search for specific relationships within your schemas from the [!UICONTROL Relationships] tab of the [!UICONTROL Schemas] workspace. You can use this view to quickly locate and manage your relationships. Read the document on [exploring schema resources](../ui/explore.md#lookup) for detailed instructions on the filtering options. 
+
+![The Relationships tab in the Schemas workspace.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## Next steps
 

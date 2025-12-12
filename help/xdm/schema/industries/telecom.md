@@ -10,18 +10,18 @@ The following entity relationship diagram (ERD) represents a standardized data m
 
 >[!NOTE]
 >
->The ERD as described is a recommendation for how you should model your data for this industry use case. To make use of this data model in Platform, you must construct the recommended schemas and their relationships yourself. See the guides on managing [schemas](../../ui/resources/schemas.md) and [relationships](../../tutorials/relationship-ui.md) in the UI for more information.
+>The ERD as described is a recommendation for how you should model your data for this industry use case. To make use of this data model in Experience Platform, you must construct the recommended schemas and their relationships yourself. See the guides on managing [schemas](../../ui/resources/schemas.md) and [relationships](../../tutorials/relationship-ui.md) in the UI for more information.
 
 Use the following legend to interpret this ERD:
 
 * Each entity shown in is based on an underlying [Experience Data Model (XDM) class](../composition.md#class).
-* For a given entity, each row marked in **bold** represents a field group or a data type, with the relevant fields it provides listed below in unbolded text.
+* Fields indented under a parent field represent a child field, or sub-field, that belongs to the parent's field group.
 * The most important fields for a given entity are highlighted in red.
 * All the properties that could be used to identify individual customers are marked as "identity", with one of these properties marked as a "primary identity".
 * Entity relationships are marked as non-dependent, since cookie-based events often cannot determine the person or individual who did the transaction.
 
 
-![](../../images/industries/telecom.png)
+![An example ERD for a telecom industry data model](../../images/industries/telecom.png)
 
 >[!NOTE]
 >

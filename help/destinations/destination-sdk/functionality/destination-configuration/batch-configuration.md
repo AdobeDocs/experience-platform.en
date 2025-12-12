@@ -7,12 +7,12 @@ exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
 
 Use the batch configuration options in Destination SDK to allow users to customize the exported file names and to configure the export schedule according to their preference.
 
-When you create file-based destinations through Destination SDK, you can configure default file naming and export schedules, or you can give users the option to configure these settings from the Platform UI. For instance, you can configure behaviors such as:
+When you create file-based destinations through Destination SDK, you can configure default file naming and export schedules, or you can give users the option to configure these settings from the Experience Platform UI. For instance, you can configure behaviors such as:
 
 * Including specific information in the file name, such as audience IDs, destination IDs, or custom information.
-* Allowing users to customize the file naming from the Platform UI.
+* Allowing users to customize the file naming from the Experience Platform UI.
 * Configure file exports to occur at set time intervals.
-* Define what file naming and export schedule customization options the users can see in the Platform UI.
+* Define what file naming and export schedule customization options the users can see in the Experience Platform UI.
 
 Batch configuration settings are part of the destination configuration for file-based destinations. 
 
@@ -23,7 +23,7 @@ You can configure the file naming and export schedule settings via the `/authori
 * [Create a destination configuration](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Update a destination configuration](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-This article describes all the supported batch configuration options that you can use for your destination, and shows what customers will see in the Platform UI.
+This article describes all the supported batch configuration options that you can use for your destination, and shows what customers will see in the Experience Platform UI.
 
 >[!IMPORTANT]
 >
@@ -57,7 +57,9 @@ The values that you set up here are surfaced in the [Schedule audience export](.
       "EVERY_6_HOURS",
       "EVERY_8_HOURS",
       "EVERY_12_HOURS",
-      "ONCE"
+      "ONCE",
+      "WEEKLY",
+      "MONTHLY"
    ],
    "defaultFrequency":"DAILY",
    "defaultStartTime":"00:00",
@@ -86,8 +88,8 @@ The values that you set up here are surfaced in the [Schedule audience export](.
 |`allowDedupeKeyFieldSelection`|Boolean|Set to `true` to allow customers to specify deduplication keys. Default value is `false`.  See [Deduplication keys](../../../ui/activate-batch-profile-destinations.md#deduplication-keys) for more information. |
 |`defaultExportMode`|Enum|Defines the default file export mode. Supported values:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> Default value is `DAILY_FULL_EXPORT`. See the [batch activation documentation](../../../ui/activate-batch-profile-destinations.md#scheduling) for details about file exports scheduling. |
 |`allowedExportModes`|List|Defines the file export modes available to customers. Supported values:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul>|
-|`allowedScheduleFrequency`|List|Defines the file export frequency available to customers. Supported values:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul>|
-|`defaultFrequency`|Enum|Defines the default file export frequency.Supported values:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> Default value is `DAILY`.|
+|`allowedScheduleFrequency`|List|Defines the file export frequency available to customers. Supported values:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul>|
+|`defaultFrequency`|Enum|Defines the default file export frequency.Supported values:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul> Default value is `DAILY`.|
 |`defaultStartTime`|String|Defines the default start time for the file export. Uses 24-hour file format. Default value is "00:00".|
 |`filenameConfig.allowedFilenameAppendOptions`|String|*Required*. List of available file name macros for users to choose from. This determines which items are appended to exported file names (audience ID, organization name, date and time of export, and others). When setting `defaultFilename`, make sure to avoid duplicating macros. <br><br>Supported values: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Regardless of the order in which you define the macros, the Experience Platform UI will always display them in the order presented here. <br><br> If `defaultFilename` is empty, the `allowedFilenameAppendOptions` list must contain at least one macro.|
 |`filenameConfig.defaultFilenameAppendOptions`|String|*Required*. Pre-selected default file name macros that users can uncheck.<br><br> The macros in this list are a subset of the ones defined in `allowedFilenameAppendOptions`. |
@@ -107,9 +109,9 @@ Use file name configuration macros to define what the exported file names should
 |Macro|UI label|Description|Example|
 |---|---|---|---|
 |`DESTINATION`|[!UICONTROL Destination]|Destination name in the UI.|Amazon S3|
-|`SEGMENT_ID`|[!UICONTROL Segment ID]|Unique, Platform-generated audience ID|ce5c5482-2813-4a80-99bc-57113f6acde2|
+|`SEGMENT_ID`|[!UICONTROL Segment ID]|Unique, Experience Platform-generated audience ID|ce5c5482-2813-4a80-99bc-57113f6acde2|
 |`SEGMENT_NAME`|[!UICONTROL Segment Name]|User-defined audience name|VIP subscriber|
-|`DESTINATION_INSTANCE_ID`|[!UICONTROL Destination ID]|Unique, Platform-generated ID of the destination instance|7b891e5f-025a-4f0d-9e73-1919e71da3b0|
+|`DESTINATION_INSTANCE_ID`|[!UICONTROL Destination ID]|Unique, Experience Platform-generated ID of the destination instance|7b891e5f-025a-4f0d-9e73-1919e71da3b0|
 |`DESTINATION_INSTANCE_NAME`|[!UICONTROL Destination Name]|User-defined name of the destination instance.|My 2022 Advertising Destination|
 |`ORGANIZATION_NAME`|[!UICONTROL Organization Name]|Name of the customer organization in Adobe Experience Platform.|My Organization Name|
 |`SANDBOX_NAME`|[!UICONTROL Sandbox Name]|Name of the sandbox used by the customer.|prod|

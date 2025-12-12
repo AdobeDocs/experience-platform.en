@@ -1,8 +1,6 @@
 ---
 title: The Trade Desk Real-Time Conversions API Extension Overview
 description: Learn about The Trade Desk Real-Time Conversions API extension for event forwarding in Adobe Experience Platform.
-hide: yes
-hidefromtoc: yes
 exl-id: 1ff32e2b-9ff8-4395-ae44-cba75a2da515
 ---
 # [!DNL The Trade Desk Real-Time Conversions API] extension overview
@@ -84,7 +82,7 @@ Refer to the [!DNL The Trade Desk] developer documentation for more information 
 
 **[!UICONTROL Object Request Parameters]**
 
-A JSON object containing more information. You have the option to use a reduced set of key-value inputs or to supply raw JSON. Additionally, you can retrieve dynamic data from a data element by selecting the disks (![Disk Icon](../../../images/extensions/server/tradedesk/disk-icon.png)) on the right.
+A JSON object containing more information. You have the option to use a reduced set of key-value inputs or to supply raw JSON. Additionally, you can retrieve dynamic data from a data element by selecting the disks (![Disk Icon](/help/images/icons/database.png)) on the right.
 
 
 ![The [!DNL Object Request Parameters] section showing available fields.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
@@ -110,6 +108,6 @@ When you are satisfied with the rule, select **[!UICONTROL Save to Library]**. F
 
 This guide covered how to send server-side event data to [!DNL The Trade Desk] using the [!DNL The Trade Desk] Real-Time Conversions API extension. From here, it is recommended to expand your integration by creating distinct rules that send specific conversion events as applicable per campaign. For more information on event forwarding capabilities in [!DNL Adobe Experience Platform], read the [event forwarding overview](../../../ui/event-forwarding/overview.md).
 
-See the [!DNL The Trade Desk] documentation on [best practices for the [!DNL The Trade Desk] Real-Time Conversions API](https://www.facebook.com/business/help/308855623839366?id=818859032317965) for more guidance on how to effectively implement your integration.
+See the [!DNL The Trade Desk] documentation on [best practices for the [!DNL The Trade Desk] Real-Time Conversions API](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) for more guidance on how to effectively implement your integration. 
 
 For details on how to debug your implementation using the Experience Platform Debugger and Event Forwarding Monitoring tool, read the [Adobe Experience Platform Debugger overview](../../../../debugger/home.md) and [Monitor activities in event forwarding](../../../ui/event-forwarding/monitoring.md).

@@ -41,7 +41,7 @@ SELECT
 
 To create your parameterized query in the UI, navigate to the Query Editor. See the section on [accessing the Query Editor](./user-guide.md#accessing-query-editor) for more instructions.
 
-Use the `'$'` preface to enter a query parameter into your query in the text editor. Next, select the **[!UICONTROL Query parameters]** tab next to the [!UICONTROL Console] add the missing value for the key. The query cannot be executed if you neglect to add a value to any of the required keys. An alert icon (![An alert icon.](../images/ui/parameterized-queries/alert-icon.png)) appears in the Query Parameters section next to any empty [!UICONTROL Value] input fields.
+Use the `'$'` preface to enter a query parameter into your query in the text editor. Next, select the **[!UICONTROL Query parameters]** tab next to the [!UICONTROL Console] add the missing value for the key. The query cannot be executed if you neglect to add a value to any of the required keys. An alert icon (![An alert icon.](/help/images/icons/alert.png)) appears in the Query Parameters section next to any empty [!UICONTROL Value] input fields.
 
 >[!NOTE]
 >
@@ -73,4 +73,4 @@ Parameter values are saved when you schedule a parameterized query. To schedule 
 
 By reading this document, you have learned how to parameterize queries in the Adobe Experience Platform UI and use them in scheduled query runs. The document also highlighted how to check the logs for the parameter values used in query executions.
 
-Next, you are recommended to read the guide on [monitoring scheduled queries](./monitor-queries.md) to gain a better understanding of the status of all query jobs through the Platform UI.
+Next, you are recommended to read the guide on [monitoring scheduled queries](./monitor-queries.md) to gain a better understanding of the status of all query jobs through the Experience Platform UI.

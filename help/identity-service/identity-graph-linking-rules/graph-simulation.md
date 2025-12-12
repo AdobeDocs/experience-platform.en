@@ -1,16 +1,20 @@
 ---
 title: Graph Simulation UI Guide
 description: Learn how to use the Graph Simulation in the Identity Service UI.
-badge: Beta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 ---
-# [!DNL Graph Simulation] UI guide
+# [!DNL Graph Simulation] UI guide {#graph-simulation}
 
->[!AVAILABILITY]
->
->This feature is not yet available; the beta program for identity graph linking rules is expected to start in July on development sandboxes. Contact your Adobe account team for information on the participation criteria.
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="Graph Simulation"
+>abstract="Simulate graphs to understand how Identity Service links identities, and how the Identity Optimization Algorithm works."
 
-[!DNL Graph Simulation] is a tool in the Identity Service UI that you can use to simulate how an identity graph behaves given a particular combination of identities and how you configure the [identity optimization algorithm](./identity-optimization-algorithm.md).
+[!DNL Graph Simulation] is a tool in the Identity Service UI that you can use to simulate how an identity graph behaves given a particular combination of identities and how you configure the [Identity Optimization Algorithm](./identity-optimization-algorithm.md).
+
+Watch the following video for additional information on using the [!DNL Graph Simulation] interface in the Identity Service UI workspace:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
 
 Read this document to learn how you can use [!DNL Graph Simulation] to better understand identity graph behavior and how the graph algorithm functions.
 
@@ -136,7 +140,7 @@ An empty configuration row appears. First, input the same namespace that you use
 
 Next, repeat the same steps and add your second namespace, which in this case is the ECID. Once all of your namespaces have been entered, you can begin configuring their priorities and uniqueness.
 
-* **Namespace priority**: The priority of a namespace determines its relative importance compared to the other namespaces in a given identity graph. For example, if your identity graph has four different namespaces: CRM ID, ECID, Email and Apple IDFA, you can configure priorities to determine an order of importance for the four namespace.
+* **Namespace priority**: The priority of a namespace determines its relative importance compared to the other namespaces in a given identity graph. For example, if your identity graph has four different namespaces: CRMID, ECID, Email and Apple IDFA, you can configure priorities to determine an order of importance for the four namespace.
 * **Unique namespace**: If a namespace is designated as unique, then Identity Service will generate graphs with the caveat that only one identity with a given unique namespace can exist. For example, if the Email namespace is designated as a unique namespace, then a graph can only have one identity with Email. If there is more than one identity with the Email namespace, then the oldest link will be removed.
 
 To configure namespace priority, select and drag the namespace rows to the priority ordering that you want, with the top row representing higher priority and the bottom row representing lower priority. To designate a namespace as unique, select the **[!UICONTROL Unique Per Graph]** checkbox.
@@ -166,6 +170,10 @@ In the example graph below, a dotted line exists between `{Email: tom@acme.com}`
 
 By reading this document, you now know how to use the [!DNL Graph Simulation] tool to better understand how your identity data is treated given a particular set of rules and configurations. For more information, read the following documents:
 
-* [Identity graph linking rules](overview.md)
-* [Identity optimization algorithm](identity-optimization-algorithm.md)
-* [Namespace priority](namespace-priority.md)
+* [[!DNL Identity Graph Linking Rules] overview](./overview.md)
+* [Identity Optimization Algorithm](./identity-optimization-algorithm.md)
+* [Implementation guide](./implementation-guide.md)
+* [Troubleshooting and FAQ](./troubleshooting.md)
+* [Examples of graph configurations](./example-configurations.md)
+* [Namespace priority](./namespace-priority.md)
+* [Identity settings UI](./identity-settings-ui.md)

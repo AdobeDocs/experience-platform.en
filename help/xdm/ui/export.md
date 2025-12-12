@@ -22,11 +22,11 @@ To address this need, the [!UICONTROL Schemas] workspace in the Adobe Experience
 
 ## Prerequisites
 
-While the Platform UI allows you export XDM resources, you must use the Schema Registry API to import those resources into other sandboxes or organizations to complete the workflow. Refer to guide on [getting started with the Schema Registry API](../api/getting-started.md) for important information regarding required authentication headers before following this guide.
+While the Experience Platform UI allows you export XDM resources, you must use the Schema Registry API to import those resources into other sandboxes or organizations to complete the workflow. Refer to guide on [getting started with the Schema Registry API](../api/getting-started.md) for important information regarding required authentication headers before following this guide.
 
 ## Generate an export payload {#generate-export-payload}
 
-Export payloads can be generated in the Platform UI from the details panel in the [!UICONTROL Browse] tab or directly from the canvas of the schema in the Schema Editor. 
+Export payloads can be generated in the Experience Platform UI from the details panel in the [!UICONTROL Browse] tab or directly from the canvas of the schema in the Schema Editor. 
 
 To generate an export payload, select **[!UICONTROL Schemas]** in the left navigation. Within the [!UICONTROL Schemas] workspace, select the row for the schema you want to export to display schema details in the right sidebar.
 
@@ -34,7 +34,7 @@ To generate an export payload, select **[!UICONTROL Schemas]** in the left navig
 >
 >See the guide on [exploring XDM resources](./explore.md) for details on how to find the XDM resource you are looking for.
 
-Next, select the **[!UICONTROL Copy JSON]** icon (![Copy Icon](../images/ui/export/icon.png)) from the available options.
+Next, select the **[!UICONTROL Copy JSON]** icon (![Copy Icon](/help/images/icons/copy.png)) from the available options.
 
 ![The Schemas workspace with a schema row and [!UICONTROL Copy to JSON] highlighted.](../images/ui/export/copy-json.png)
 

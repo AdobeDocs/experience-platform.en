@@ -7,6 +7,12 @@ exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
 ---
 # Create a feature pipeline using the Model Authoring SDK
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 >[!IMPORTANT]
 >
 > Feature Pipelines are currently only available via API. 
@@ -28,12 +34,13 @@ The following workflow takes place when a feature pipeline is run:
 ## Getting started
 
 To run a recipe in any organization, the following is required:
--  An input dataset.
--  The Schema of the dataset.
--  A transformed schema and an empty dataset based on that  schema. 
--  An output schema and an empty dataset based on that schema.
 
-All of the above datasets need to be uploaded to the [!DNL Platform] UI. To set this up, use the Adobe-provided [bootstrap script](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
+- An input dataset.
+- The Schema of the dataset.
+- A transformed schema and an empty dataset based on that  schema. 
+- An output schema and an empty dataset based on that schema.
+
+All of the above datasets need to be uploaded to the [!DNL Experience Platform] UI. To set this up, use the Adobe-provided [bootstrap script](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
 
 ## Feature pipeline classes
 
@@ -101,7 +108,7 @@ See the [pipeline.json](https://github.com/adobe/experience-platform-dsw-referen
 
 The DataLoader is responsible for the retrieval and filtering of input data. Your implementation of DataLoader must extend the abstract class `DataLoader` and override the abstract method `load`.
 
-The following example retrieves a [!DNL Platform] dataset by ID and returns it as a DataFrame, where the dataset ID (`dataset_id`) is a defined property in the configuration file.
+The following example retrieves an [!DNL Experience Platform] dataset by ID and returns it as a DataFrame, where the dataset ID (`dataset_id`) is a defined property in the configuration file.
 
 **PySpark example**
 
@@ -280,7 +287,7 @@ class MyFeaturePipelineFactory(FeaturePipelineFactory):
 
 The DataSaver is responsible for storing your resulting feature datasets into a storage location. Your implementation of DataSaver must extend the abstract class `DataSaver` and override the abstract method `save`.
 
-The following example extends the DataSaver class which stores data to a [!DNL Platform] dataset by ID, where the dataset ID (`featureDatasetId`) and tenant ID (`tenantId`) are defined properties in the configuration.
+The following example extends the DataSaver class which stores data to an [!DNL Experience Platform] dataset by ID, where the dataset ID (`featureDatasetId`) and tenant ID (`tenantId`) are defined properties in the configuration.
 
 **PySpark example**
 

@@ -16,7 +16,7 @@ This user guide requires a working understanding of the following components of 
 * [Datasets](overview.md): The storage and management construct for data persistence in [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     * [Basics of schema composition](../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    * [Schema Editor](../../xdm/tutorials/create-schema-ui.md): Learn how to build your own custom XDM schemas using the [!DNL Schema Editor] within the [!DNL Platform] user interface.
+    * [Schema Editor](../../xdm/tutorials/create-schema-ui.md): Learn how to build your own custom XDM schemas using the [!DNL Schema Editor] within the [!DNL Experience Platform] user interface.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Ensure compliancy with regulations, restrictions, and policies regarding the usage of customer data.
 
@@ -33,9 +33,36 @@ This user guide requires a working understanding of the following components of 
 >title="Dataset expiration"
 >abstract="This column indicates the number of days that the target dataset has left before it automatically expires."
 
-In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and status of the most recent ingestion run.
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_datalakeretention"
+>title="Datalake retention"
+>abstract="Shows the current retention policy for each dataset. This value can be modified in each dataset's retention settings. You can only set retention time for ExperienceEvent dataset."
 
-![The Platform UI with the Datasets item highlighted in the left navigation bar.](../images/datasets/user-guide/browse-datasets.png)
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_profileretention"
+>title="Profile retention"
+>abstract="Shows the current retention policy for each dataset. This value can be modified in each dataset's retention settings. You can only set retention time for an ExperienceEvent dataset."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_datalakesettings_datasetretention"
+>title="Dataset retention"
+>abstract="Datalake retention sets rules for how long data is stored and when it should be deleted in different services. This ensures compliance with regulations, managing storage costs, and maintaining data quality."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_orchestratedCampaigns_toggle"
+>title="Orchestrated campaigns"
+>abstract="Enable this toggle to allow the selected dataset to be used in Adobe Journey Optimizer Orchestrated campaigns. The dataset must use a relational schema and only one dataset can be created per schema."
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Enable Dataset for Orchestrated Campaigns"
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_enableforlookup_toggle"
+>title="Enable for lookup"
+>abstract="Enable this dataset for lookup to use its data in Journey Optimizer for personalization, Decisioning, and journey orchestration."
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Use Adobe Experience Platform data in Journey Optimizer"
+
+In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and the status of the most recent ingestion run.
+
+![The Experience Platform UI with the Datasets item highlighted in the left navigation bar.](../images/datasets/user-guide/browse-datasets.png)
 
 Select the name of a dataset from the [!UICONTROL Browse] tab to access its **[!UICONTROL Dataset activity]** screen and see details of the dataset you selected. The activity tab includes a graph visualizing the rate of messages being consumed as well as a list of successful and failed batches.
 
@@ -70,10 +97,11 @@ You can also delete a dataset or add a dataset for use with Real-Time Customer P
 
 The datasets UI now offers a collections of inline actions for each available dataset. Select the ellipsis (...) of a dataset that you want to manage to see the available options in a pop-up menu. The available actions include; 
 
-* [[!UICONTROL Preview dataset]](#preview), 
+* [[!UICONTROL Preview dataset]](#preview)
 * [[!UICONTROL Manage data and access labels]](#manage-and-enforce-data-governance)
 * [[!UICONTROL Enable unified profile]](#enable-profile)
 * [[!UICONTROL Manage tags]](#manage-tags)
+* [[!UICONTROL Set data retention policy]](#data-retention-policy)
 * [[!UICONTROL Move to folders]](#move-to-folders)
 * [[!UICONTROL Delete]](#delete). 
 
@@ -81,26 +109,62 @@ More information on these available actions can be found in their respective sec
 
 ### Preview a dataset {#preview}
 
-You can preview dataset sample data from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] tab, select the ellipses (...) next to the dataset name you wish to preview. A menu list of options appears. Next, select **[!UICONTROL Preview dataset]** from the list of available options. If the dataset is empty, the preview link will be deactivated and will instead say that the preview is not available.
+You can preview up to 100 rows of sample data for any dataset, either from the inline options in the [!UICONTROL Browse] tab or from the [!UICONTROL Dataset activity] view.
+
+From the [!UICONTROL Browse] tab, select the ellipsis (...) next to the dataset name and choose [!UICONTROL Preview dataset]. If the dataset is empty, the preview option is deactivated. Alternatively, from the **[!UICONTROL Dataset activity]** screen, select **[!UICONTROL Preview dataset]** near the top-right corner of your screen.
 
 ![The Browse tab of the Datasets workspace with the ellipsis and Preview dataset option highlighted for the chosen dataset.](../images/datasets/user-guide/preview-dataset-option.png)
 
-This opens the preview window, where the hierarchical view of the schema for the dataset is shown on the right.
+This opens the preview window, where the hierarchical schema view for the dataset appears on the left.
+
+>[!NOTE]
+>
+>The schema diagram on the left only displays fields that contain data. Fields without data are automatically hidden to streamline the UI and focus on relevant information.
 
 ![The dataset preview dialog with information about the structure, as well as sample values, for the dataset are shown.](../images/datasets/user-guide/preview-dataset.png)
 
-Alternatively, from the **[!UICONTROL Dataset activity]** screen, select **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data. 
+Alternatively, from the **[!UICONTROL Dataset activity]** screen, select **[!UICONTROL Preview dataset]** to open the preview window and review a sample of your dataset's structure and values.
 
 ![The Preview dataset button is highlighted.](../images/datasets/user-guide/select-preview.png)
 
-For more robust methods to access your data, [!DNL Experience Platform] provides downstream services such as [!DNL Query Service] and [!DNL JupyterLab] to explore and analyze data. See the following documents for more information:
+The dataset preview window provides a quick way to explore and validate your dataset's structure and data.
+
+
+#### Dataset preview window {#dataset-preview-window}
+
+The following animation shows the dataset preview window with its navigation and data exploration features:
+
+![Screen recording showing the dataset preview window. The recording highlights the object browser sidebar, data type indicators, SQL query display, and formatted data table.](../images/datasets/user-guide/dataset-preview-demo.gif)
+
+The dataset preview window includes:
+
+* An object browser sidebar on the left for navigating and filtering dataset fields.
+* Data type indicators next to each column name for insight into the structure of the dataset.
+* A SQL query display at the top of the window, showing the query used to generate the dataset.
+* A formatted table view of up to 100 rows for efficient data review.
+
+These features help you navigate, understand schema details, and validate sample data efficiently.
+
+#### Advanced Query Editor shortcut {#query-editor-shortcut}
+
+If your organization has a Data Distiller license, you can access the [!UICONTROL Advanced Query Editor] directly from the dataset preview window. Use this shortcut to move seamlessly from previewing sample data to running and refining queries in Query Service.
+
+>[!AVAILABILITY]
+>
+>Access to the [!UICONTROL Advanced Query Editor] is limited to organizations with a Data Distiller SKU license. If your organization does not have the required license, this option does not appear in the dataset preview window.
+
+Select [!UICONTROL Advanced Query Editor] in the upper right of the preview window to open Query Service with your current SQL query pre-loaded and executed. You can continue analyzing or modify the SQL without re-entering the query.
+
+![Dataset preview window showing the Advanced Query Editor button in the upper right.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
+
+For additional analysis, use downstream services such as [!DNL Query Service] and [!DNL JupyterLab]. See the following documents for more information:
 
 * [Query Service overview](../../query-service/home.md)
 * [JupyterLab user guide](../../data-science-workspace/jupyterlab/overview.md)
 
 ### Manage and enforce data governance on a dataset {#manage-and-enforce-data-governance}
 
-You can manage the data governance labels for a dataset by selecting the inline options of the [!UICONTROL Browse] tab. Select the ellipses (...) next to the dataset name you wish to manage, followed by **[!UICONTROL Manage data and access labels]** from the dropdown menu.
+You can manage the data governance labels for a dataset by selecting the inline options of the [!UICONTROL Browse] tab. Select the ellipses (...) next to the dataset name that you wish to manage, followed by **[!UICONTROL Manage data and access labels]** from the dropdown menu.
 
 Data usage labels, applied at the schema level, allow you to categorize datasets and fields according to usage policies that apply to that data. See the [Data Governance overview](../../data-governance/home.md) to learn more about labels, or refer to the [data usage labels user guide](../../data-governance/labels/overview.md) for instructions on how to apply labels to schemas for propagation to datasets.
 
@@ -137,11 +201,98 @@ The [!UICONTROL Manage tags] dialog appears. Enter a short description to create
 
 ![The Manage tags dialog with custom tags highlighted.](../images/datasets/user-guide/manage-tags-dialog.png)
 
-The [!UICONTROL Manage tags] dialog can also remove existing tags from a dataset. Simply select the 'x' next to the tag you wish to remove and select **[!UICONTROL Save]**. 
+The [!UICONTROL Manage tags] dialog can also remove existing tags from a dataset. Simply select the 'x' next to the tag that you wish to remove and select **[!UICONTROL Save]**. 
 
-Once a tag has been aded to a dataset, the datasets can be filtered based on the corresponding tag. See the section on how to [filter datasets by tags](#enable-profile) for more information.
+Once a tag has been added to a dataset, the datasets can be filtered based on the corresponding tag. See the section on how to [filter datasets by tags](#enable-profile) for more information.
 
-For more information on how to classify business objects for easier discovery and categorization, see the guide on [managing metadata taxonomies](../../administrative-tags/ui/managing-tags.md). This guide details how a user with appropriate permissions can create pre-defined tags, assigning categories to tags, and perform all related CRUD operations on tags and tag categories in the Platform UI.
+For more information on how to classify business objects for easier discovery and categorization, see the guide on [managing metadata taxonomies](../../administrative-tags/ui/managing-tags.md). This guide explains how users with the right permissions can create pre-defined tags, assign them to categories, and manage all related CRUD operations in the Experience Platform UI.
+
+### Set data retention policy {#data-retention-policy}
+
+Manage dataset expiration and retention settings using the inline action menu from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure how long data is retained in the data lake and Profile store. The expiration date is based on when data was ingested into Experience Platform and your configured retention period.
+
+>[!IMPORTANT]
+>
+>To apply or update retention rules for an ExperienceEvent dataset, your user role must include the **[!UICONTROL Manage datasets]** permission. This role-based access control ensures that only authorized users can modify dataset retention settings.
+>
+>See the [Access control overview](../../access-control/home.md#platform-permissions) for more information on assigning permissions in Adobe Experience Platform.
+
+>[!TIP]
+>
+>The data lake stores raw, unprocessed data, such as event logs, clickstream data, and bulk-ingested records, for analytics and processing. The Profile store contains customer-identifiable data, including identity-stitched events and attribute information, to support real-time personalization and activation.
+
+To configure your retention period, select the ellipsis next to the dataset followed by **[!UICONTROL Set data retention policy]** from the dropdown menu.
+
+![The Browse tab of the Datasets workspace with the ellipsis and Set data retention policy option highlighted.](../images/datasets/user-guide/set-data-retention-policy-dropdown.png)
+
+The [!UICONTROL Set dataset retention] dialog appears. The dialog displays sandbox-level license usage metrics, dataset-level details, and current data retention settings. These metrics show your usage compared to your entitlements and help you assess dataset-specific storage and retention configurations. The metrics include dataset name, type, Profile enablement status, and data lake and Profile store usage.
+
+>[!NOTE]
+>
+>Sandbox-level licensed data lake storage metrics are still in development and may not appear. A full breakdown of your license usage metrics can be found on the License Usage dashboard. See the documentation for descriptions of these metrics.
+<!-- replace this screenshot with a dataset that enabled unified profile so user can see the Profile TTL settings -->
+![The Set dataset retention dialog.](../images/datasets/user-guide/set-data-retention-dialog.png)
+
+Configure your preferred retention period in the data retention settings dialog. Enter a number and select a time unit (days, months, or years) from the dropdown menu. You can configure separate retention settings for the data lake and Profile Service.
+
+>[!NOTE] 
+> 
+>The minimum retention period for the data lake is 30 days. The minimum retention period for Profile Service is one day.
+>
+>Additionally, you can only update the retention period for Profile Service once every 30 days.
+
+To support transparency and monitoring, timestamps are provided for the **last** and **next** data retention job executions. The timestamps help you understand when the last data cleanup occurred and when the next one is scheduled.
+
+#### Storage impact insights {#storage-impact-insights}
+
+To open a visual forecast of the storage impact of different retention policies, select **[!UICONTROL View Experience Event Data distribution]**.
+
+The chart displays the distribution of experience events across various retention periods for the currently selected dataset. Hover over each bar to see the precise number of records that will be removed if the selected retention period is applied.
+
+You can use the visual forecast to evaluate the impact of different retention periods and make informed business decisions. For example, if you select a 30-day retention period and the chart shows that 60% of your data will be deleted, you may choose to extend retention to preserve more data for analysis.
+
+>[!NOTE]
+>
+>The Experience Event distribution chart is specific to the selected dataset and reflects only its data. It applies exclusively to data stored in the data lake.
+
+![The Set data retention dialog with the Experience Event distribution chart displayed.](../images/datasets/user-guide/visual-forecast.png)
+
+When you are satisfied with your configuration, select **[!UICONTROL Save]** to confirm your settings.
+
+>[!IMPORTANT]
+>
+>Once data retention rules are applied, any data older than the number of days defined by the expiration value is permanently deleted and cannot be recovered.
+
+After configuring your retention settings, use the Monitoring UI to confirm that your changes were executed by the system. The Monitoring UI provides a centralized view of data retention activity across all datasets. From there, you can track job execution, review how much data was deleted, and ensure that your retention policies are functioning as expected. 
+
+To explore how retention policies apply across different services, see the dedicated guides on [Experience Event Dataset Retention in Profile](../../profile/event-expirations.md) and [Experience Event Dataset Retention in the Data Lake](./experience-event-dataset-retention-ttl-guide.md). This visibility supports governance, compliance, and efficient data lifecycle management.
+
+To learn how to use the monitoring dashboard to track source dataflows in the Experience Platform UI, see the [Monitor dataflows for sources in the UI](../../dataflows/ui/monitor-sources.md) documentation.
+
+<!-- Improve the link above. I cannot link to a 100% appropriate document yet. -->
+
+For more information on the rules that define dataset expirations date ranges and best practices for configuring your data retention policy, see the [frequently asked questions page](../catalog-faq.md).
+
+#### Enhanced visibility of retention periods and storage metrics {#retention-and-storage-metrics}
+
+Four new columns provide greater visibility into your data management: **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]**, and **[!UICONTROL Profile Retention]**. These metrics show how much storage your data consumes and its retention period in both data lake and Profile Service.
+
+This increased visibility empowers you to make informed decisions and manage storage costs more effectively. Sort datasets by storage size to identify the largest ones in your current sandbox. These insights support data management best practices and help ensure compliance with your licensed entitlements.
+
+![The Browse tab of the Datasets workspace with the four new storage and retention columns highlighted.](../images/datasets/user-guide/storage-and-retention-columns.png)
+
+The following table provides an overview of the new retention and storage metrics. It details each column's purpose and how it supports managing data retention and storage.
+
+| Column title  | Description |
+|---|---|
+| [!UICONTROL Data Lake Retention] | The current retention period for each dataset in the data lake. This value is configurable and determines how long data is retained before deletion. |
+| [!UICONTROL Data Lake Storage] | The current storage usage for each dataset in the data lake. Use this metric to manage storage limits and optimize usage. |
+| [!UICONTROL Profile Storage] | The current storage usage for each dataset within the Profile Service. Helps monitor storage consumption and support data management decisions. |
+| [!UICONTROL Profile Retention] | The current retention period for Profile datasets. You can update this value to control how long Profile data is retained. |
+
+{style="table-layout:auto"}
+
+To act on the insights from storage and retention metrics, refer to the [data management license entitlement best practices guide](../../landing/license-usage-and-guardrails/data-management-best-practices.md). Use it to manage what data you ingest and retain, apply filters and expiration rules, and control data growth to stay within your licensed usage limits.
 
 ### Move to folders {#move-to-folders}
 
@@ -155,11 +306,11 @@ The [!UICONTROL Move] dataset to folder dialog appears. Select the folder you wa
 
 >[!TIP]
 >
->You can also create folders directly from the Move dataset dialog. To create a folder, select the create folder icon (![The create folder icon.](../images/datasets/user-guide/create-folder-icon.png)) in the top right of the dialog.
+>You can also create folders directly from the Move dataset dialog. To create a folder, select the create folder icon (![The create folder icon.](/help/images/icons/folder-add.png)) in the top right of the dialog.
 >
 >![The [!UICONTROL Move] dataset dialog with the create folder icon highlighted.](/help/catalog/images/datasets/user-guide/create-folder.png)
 
-Once the dataset is in a folder, you can choose to only display datasets that belong to a specific folder. To open your folder structure, select the show folders icon (![The show folders icon](../images/datasets/user-guide/show-folders-icon.png)). Next, select your chosen folder to see all associated datasets.
+Once the dataset is in a folder, you can choose to only display datasets that belong to a specific folder. To open your folder structure, select the show folders icon (![The show folders icon](/help/images/icons/rail-left.png)). Next, select your chosen folder to see all associated datasets.
 
 ![The [!UICONTROL Datasets] dashboards with the datasets folder structure displayed, the show folders icon, and a selected folder highlighted.](../images/datasets/user-guide/folder-structure.png)
 
@@ -191,7 +342,7 @@ You can delete profile data associated with a dataset from the [!DNL Profile] st
 
 ## Search and filter datasets {#search-and-filter}
 
-To search or filter the list of available datasets, select the filter icon (![The filter icon.](../images/datasets/user-guide/icon.png)) at the top left of the workspace. A set of filter options in the left rail appears. There are several methods to filter your available datasets. These include: [[!UICONTROL Show System Datasets]](#show-system-datasets), [[!UICONTROL Included in profile]](#filter-profile-enabled-datasets), [[!UICONTROL Tags]](#filter-by-tag), [[!UICONTROL Creation date]](#filter-by-creation-date), [[!UICONTROL Modified date], [!UICONTROL Created by]](#filter-by-creation-date), and [[!UICONTROL Schema]](#filter-by-schema).
+To search or filter the list of available datasets, select the filter icon (![The filter icon.](/help/images/icons/filter.png)) at the top left of the workspace. A set of filter options in the left rail appears. There are several methods to filter your available datasets. These include: [[!UICONTROL Show System Datasets]](#show-system-datasets), [[!UICONTROL Included in profile]](#filter-profile-enabled-datasets), [[!UICONTROL Tags]](#filter-by-tag), [[!UICONTROL Creation date]](#filter-by-creation-date), [[!UICONTROL Modified date], [!UICONTROL Created by]](#filter-by-creation-date), and [[!UICONTROL Schema]](#filter-by-schema).
 
 The list of applied filters is displayed above the filtered results.
 
@@ -207,7 +358,7 @@ By default, only datasets that you have ingested data into are shown. If you wan
 
 The datasets that have been enabled for Profile data are used to populate customer profiles after data has been ingested. See the section on [enabling datasets for Profile](#enable-profile) to learn more. 
 
-To filter your dataset based on whether they have been enabled for Profile, select the [!UICONTROL Yes] check box from the filter options.
+To filter your dataset based on whether they have been enabled for Profile, select the [!UICONTROL Yes] checkbox from the filter options.
 
 ![The filter options of the Datasets workspace with the [!UICONTROL Included in Profile] section highlighted.](../images/datasets/user-guide/included-in-profile.png)
 
@@ -313,8 +464,9 @@ If you wish to delete the batch, select **[!UICONTROL Delete batch]** near the t
 
 ## Next steps
 
-This user guide provided instructions for performing common actions when working with datasets in the [!DNL Experience Platform] user interface. For steps on performing common [!DNL Platform] workflows involving datasets, please refer to the following tutorials:
+This user guide provided instructions for performing common actions when working with datasets in the [!DNL Experience Platform] user interface. For steps on performing common [!DNL Experience Platform] workflows involving datasets, please refer to the following tutorials:
 
 * [Create a dataset using APIs](create.md)
 * [Query dataset data using the Data Access API](../../data-access/home.md)
 * [Configure a dataset for Real-Time Customer Profile and Identity Service using APIs](../../profile/tutorials/dataset-configuration.md)
+

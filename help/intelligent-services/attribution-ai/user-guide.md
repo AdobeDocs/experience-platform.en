@@ -27,7 +27,7 @@ Service models can be edited, cloned, and deleted by using the controls on the r
 
 - **[!UICONTROL Edit]**: Selecting **[!UICONTROL Edit]** allows you to modify an existing service model. You can edit the name, description, status, scoring frequency of the model, and additional score dataset columns.
 - **[!UICONTROL Clone]**: Selecting **[!UICONTROL Clone]** copies the selected service model. You can then modify the workflow to make minor tweaks and rename it as a new model.
-- **[!UICONTROL Delete]**: You can delete a service model including any historical runs. The corresponding output dataset will be deleted from Platform. However, scores that were synced to Real-Time Customer Profile are not deleted.
+- **[!UICONTROL Delete]**: You can delete a service model including any historical runs. The corresponding output dataset will be deleted from Experience Platform. However, scores that were synced to Real-Time Customer Profile are not deleted.
 - **[!UICONTROL Data source]**: A link to the dataset being used. If more than one dataset is being used by Attribution AI, "Multiple" followed by the number of datasets is displayed. Upon selecting the hyperlink, the datasets preview popover is shown.
 - **[!UICONTROL Last run details]**: This is only displayed when a run fails. Information on why the run failed such as error codes are displayed here.
 
@@ -57,7 +57,7 @@ After selecting the datasets you wish to use, select the **[!UICONTROL Add]** bu
 
 ![Select datasets](./images/user-guide/select-datasets.png)
 
-Selecting the info icon ![info icon](./images/user-guide/info-icon.png) next to a dataset opens the dataset preview popover.
+Selecting the info icon ![info icon](/help/images/icons/info.png) next to a dataset opens the dataset preview popover.
 
 ![Select and search for dataset](./images/user-guide/dataset-preview.png)
 

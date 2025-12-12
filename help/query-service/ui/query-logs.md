@@ -5,10 +5,6 @@ exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
 ---
 # Query logs
 
->[!IMPORTANT]
->
->Certain query logs features are currently in a limited release and not available to all customers. Your UI may appear slightly differently without an edit icon. Also, the process of selecting a query name may to navigate to the Query Editor instead of the [!UICONTROL Query log details] view.
-
 Adobe Experience Platform maintains a log of all query events that occur through both the API and the UI. This information is available in the Query Service UI from the [!UICONTROL Logs] tab.  
 
 The log files are generated automatically by any query event and contain information including the SQL used, the status of the query, how long it took, and last run time. You can use query log data as a powerful tool for troubleshooting inefficient or problem queries. More comprehensive log information is kept as part of the audit log feature and can be found in the [audit log documentation](../../landing/governance-privacy-security/audit-logs/overview.md).
@@ -21,11 +17,11 @@ To check the query logs, select [!UICONTROL Queries] to navigate to the Query Se
 >
 >Both system queries and dashboard queries are excluded by default. See the [filters](#filter-logs) section for information on how to refine the displayed logs based on your settings.
 
-![The Platform UI with Queries and Log highlighted.](../images/ui/query-log/logs.png)
+![The Experience Platform UI with Queries and Log highlighted.](../images/ui/query-log/logs.png)
 
 ## Customize and search {#customize-and-search}
 
-Query Service logs are presented in a customizable table format. To customize the table columns, select the settings icon (![A settings icon.](../images/ui/query-log/settings-icon.png)) to the right of the screen. A [!UICONTROL Customize Table] dialog appears where each column can be deselected.
+Query Service logs are presented in a customizable table format. To customize the table columns, select the settings icon (![A settings icon.](/help/images/icons/column-settings.png)) to the right of the screen. A [!UICONTROL Customize Table] dialog appears where each column can be deselected.
 
 You can also search for logs relating to specific query templates by typing the template name into the search field.
 
@@ -47,10 +43,6 @@ In the log details panel, you can perform a variety of actions. You can run the 
 
 ![The Queries Log workspace with a row selected, Run as CTAS, Delete query and the copy SQL icon highlighted.](../images/ui/query-log/edit-output-dataset.png)
 
->[!IMPORTANT]
->
->Certain query logs features are currently in a limited release and not available to all customers.
-
 You can also select a query template name from the [!UICONTROL Name] column to navigate directly to the [!UICONTROL Query log details] view.
 
 >[!NOTE]
@@ -61,13 +53,13 @@ You can also select a query template name from the [!UICONTROL Name] column to n
 
 ## Edit logs {#edit-logs}
 
-Next to each row's template name or SQL snippet is a pencil icon (![A pencil icon.](../images/ui/query-log/edit-icon.png)) that you can use to navigate to the Query Editor. The query is then pre-populated in the editor for editing.
+Next to each row's template name or SQL snippet is a pencil icon (![A pencil icon.](/help/images/icons/edit.png)) that you can use to navigate to the Query Editor. The query is then pre-populated in the editor for editing.
 
 ![The Queries Log workspace with a pencil icon highlighted.](../images/ui/query-log/edit-query.png)
 
 ## Filter logs {#filter-logs}
 
-You can filter the list of query logs based on a variety of settings. Select the filter icon (![The filter icon.](../images/ui/query-log/filter-icon.png)) at the top left of the workspace to open a set of filter options in the left rail. 
+You can filter the list of query logs based on a variety of settings. Select the filter icon (![The filter icon.](/help/images/icons/filter.png)) at the top left of the workspace to open a set of filter options in the left rail. 
 
 ![The Queries Log workspace with the filter icon highlighted.](../images/ui/query-log/log-filter.png)
 

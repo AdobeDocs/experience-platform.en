@@ -23,10 +23,12 @@ What you'll find in this documentation guide:
 
 ## Overview {#overview}
 
-[!UICONTROL Use Case Playbooks] can help you overcome the problem when getting started with Real-Time CDP or Adobe Journey Optimizer when you might not know exactly what to begin with or how to create the right assets in order to achieve your desired use cases. Use Case Playbooks can help you here by:
+[!UICONTROL Use Case Playbooks] can help you overcome the problem when getting started with Real-Time CDP or Adobe Journey Optimizer when you might not know exactly what to begin with or how to create the right assets in order to achieve your desired use cases. 
 
-* Showing you use cases for inspiration
-* Creating different assets for you to use, test, and promote to production when ready.
+Use Case Playbooks can help you here by:
+
+* [Introducing a catalog of available Playbooks to get started faster on use cases](../playbooks/playbooks-list.md)
+* [Creating different assets](../playbooks/create-share-reuse.md)
 
 ![View of all playbooks](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
 

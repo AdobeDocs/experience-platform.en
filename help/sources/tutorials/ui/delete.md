@@ -16,8 +16,8 @@ This tutorial provides steps for deleting dataflows using the [!UICONTROL Source
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-- [Sources](../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-- [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+- [Sources](../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
+- [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Delete dataflows
 
@@ -27,7 +27,7 @@ In the [Experience Platform UI](https://platform.adobe.com), select **[!UICONTRO
 
 The **[!UICONTROL Dataflows]** page appears. On this page is a list of viewable dataflows, including information about their target dataset, source, account name, and date of creation.
 
-Select the filter icon (![filter-icon](../../images/tutorials/delete/filter.png)) on the top left to launch the sort panel.
+Select the filter icon (![filter-icon](/help/images/icons/filter.png)) on the top left to launch the sort panel.
 
 ![dataflows](../../images/tutorials/delete/dataflows.png)
 

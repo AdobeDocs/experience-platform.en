@@ -8,6 +8,12 @@ exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
 ---
 # Experiments endpoint
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 Model development and training occurs at the Experiment level, where an Experiment consists of an MLInstance, training runs, and scoring runs.
 
 ## Create an Experiment {#create-an-experiment}

@@ -1,6 +1,7 @@
 ---
 title: External Source System Audit Details
 description: Learn about the External Source System Audit Details Experience Data Model (XDM) field group.
+exl-id: 6aa154f3-620f-4a2e-9e33-a0757d0491c1
 ---
 # [!UICONTROL External Source System Audit Details] field group
 

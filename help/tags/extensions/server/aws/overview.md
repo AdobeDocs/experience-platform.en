@@ -6,10 +6,6 @@ last-substantial-update: 2022-11-23
 ---
 # [!DNL AWS] extension overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 [[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) is a cloud computing platform that offers a wide variety of services such as distributed computing, database storage, content delivery, and software-as-a-service (SaaS) integration services for customer relationship management (CRM) and enterprise resource planning (ERP).
 
 The [!DNL AWS] [event forwarding](../../../ui/event-forwarding/overview.md) extension leverages [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) to send events from the Adobe Experience Platform Edge Network to [!DNL AWS] for further processing. This guide covers how to install the extension and employ its capabilities in an event forwarding rule.
@@ -60,7 +56,7 @@ The right panel updates to show configuration options for how the data should be
 
 | Input | Description |
 | --- | --- |
-| [!UICONTROL Payload] | This field contains the data that will be forwarded to the [!DNL Kinesis] data stream, in JSON format.<br><br>Under the **[!UICONTROL Raw]** option, you can paste the JSON object directly into the provided text field, or you can select the data element icon (![Dataset icon](../../../images/extensions/server/aws/data-element-icon.png)) to select from a list of existing data elements to represent the payload.<br><br>You can also use the **[!UICONTROL JSON Key-Value Pairs Editor]** option to manually add each key-value pair through a UI editor. Each value can be represented by a raw input, or a data element can be selected instead. |
+| [!UICONTROL Payload] | This field contains the data that will be forwarded to the [!DNL Kinesis] data stream, in JSON format.<br><br>Under the **[!UICONTROL Raw]** option, you can paste the JSON object directly into the provided text field, or you can select the data element icon (![Dataset icon](/help/images/icons/database.png)) to select from a list of existing data elements to represent the payload.<br><br>You can also use the **[!UICONTROL JSON Key-Value Pairs Editor]** option to manually add each key-value pair through a UI editor. Each value can be represented by a raw input, or a data element can be selected instead. |
 
 {style="table-layout:auto"}
 

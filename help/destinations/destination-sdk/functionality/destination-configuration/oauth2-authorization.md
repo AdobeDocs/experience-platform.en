@@ -43,6 +43,7 @@ As part of this configuration in your system, you need the Adobe Experience Plat
 >The step to register a redirect/callback URL for Adobe Experience Platform in your system is required only for the [OAuth 2 with Authorization Code](#authorization-code) grant type. For the other two supported grant types (password and client credentials), you can skip this step.
 
 At the end of this step, you should have:
+
 * A client ID;
 * A client secret;
 * Adobe's callback URL (for the authorization code grant).
@@ -73,8 +74,9 @@ The above table lists the fields that are used in standard OAuth 2 flows. In add
 The output in all cases includes an access token, which is used by Experience Platform to authenticate and maintain authorization to your destination.
 
 The system that Adobe has designed for OAuth 2 authorization:
+
 * Supports all three OAuth 2 grants while accounting for any variations in them, such as additional data fields, non-standard API calls, and more.
-* Supports access tokens with varying lifetime values, be it 90 days, 30 minutes, or any other lifetime value that you specify.
+* Supports access tokens with varying lifetime values. Adobe recommends that you set your token lifetime value to a minimum of 24 hours.
 * Supports OAuth 2 authorization flows with or without refresh tokens.
 
 ## OAuth 2 with Authorization Code {#authorization-code}
@@ -481,11 +483,11 @@ Depending on your authorization customization, you might need to access data fie
 
 |Prefix | Description | Example |
 |---------|----------|---------|
-| authData | Access any partner or customer data field's value. | ``{{ authData.accessToken }}`` |
-| response.body | HTTP response body | ``{{ response.body.access_token }}`` |
-| response.status | HTTP response status | ``{{ response.status }}`` |
-| response.headers | HTTP response headers | ``{{ response.headers.server[0] }}`` |
-| userContext | Access information about the current authorization attempt | <ul><li>`{{ userContext.sandboxName }} `</li><li>`{{ userContext.sandboxId }} `</li><li>`{{ userContext.imsOrgId }} `</li><li>`{{ userContext.client }} // the client executing the authorization attempt `</li></ul> |
+| authData | Access any partner or customer data field's value. | `{{ authData.accessToken }}` |
+| response.body | HTTP response body | `{{ response.body.access_token }}` |
+| response.status | HTTP response status | `{{ response.status }}` |
+| response.headers | HTTP response headers | `{{ response.headers.server[0] }}` |
+| userContext | Access information about the current authorization attempt | <ul><li>`{{ userContext.sandboxName }}`</li><li>`{{ userContext.sandboxId }}`</li><li>`{{ userContext.imsOrgId }}`</li><li>`{{ userContext.client }} // the client executing the authorization attempt`</li></ul> |
 
 {style="table-layout:auto"}
 

@@ -11,12 +11,13 @@ As many users do not need an exact answer for an aggregate operation over a data
 
 To help you manage your samples for approximate query processing, Query Service supports the following operations for dataset samples:
 
-- [Create a uniform random dataset sample.](#create-a-sample)
-- [Optionally specify a filter criteria](##optional-filter-criteria)
-- [View the list of samples for an ADLS table.](#view-list-of-samples)
-- [Query the sample datasets directly.](#query-sample-datasets)
-- [Delete a sample.](#delete-a-sample)
-- Delete associated samples when the original ADLS table is dropped. 
+- [Dataset samples](#dataset-samples)
+  - [Getting started {#get-started}](#getting-started-get-started)
+  - [Create a uniform random dataset sample {#create-a-sample}](#create-a-uniform-random-dataset-sample-create-a-sample)
+  - [Optionally specify a filter criteria {#optional-filter-criteria}](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+  - [View the list of samples {#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
+  - [Query the sample dataset {#query-sample-datasets}](#query-the-sample-dataset-query-sample-datasets)
+  - [Delete dataset samples {#delete-a-sample}](#delete-dataset-samples-delete-a-sample)
 
 ## Getting started {#get-started}
 
@@ -24,9 +25,9 @@ To use the create and delete approximate query processing capabilities detailed 
 
 >[!NOTE]
 >
->You must enable the session flag each time you log into Platform.
+>You must enable the session flag each time you log into Experience Platform.
 
-![The Query Editor with the 'SET aqp=true;' command highlighted.](../images/essential-concepts/set-session-flag.png)
+![The Query Editor with the 'SET aqp=true;' command highlighted.](../images/key-concepts/set-session-flag.png)
 
 ## Create a uniform random dataset sample {#create-a-sample}
 
@@ -76,7 +77,7 @@ The list of dataset samples is displayed in the format of the example below.
 
 ```shell
                   sample_table_name                  |    sample_dataset_id     |    parent_dataset_id     | sample_type | sampling_rate | sample_num_rows |       created      
------------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
+|-----------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
  x5e5cd8ea0a83c418a8ef0928_uniform_4_0_percent_ughk7 | 62ff19853d338f1c07b18965 | 5e5cd8ea0a83c418a8ef0928 | uniform     |           4.0 |             391 | 19/08/2022 05:03:01
 (1 row)
 ```
@@ -94,7 +95,7 @@ SELECT * FROM example_dataset_name WITHAPPROXIMATE;
 The delete operation allows you to create new samples once the maximum limit of five dataset samples has been reached.
 
 ```sql
-DROP TABLE SAMPLE x5e5cd8ea0a83c418a8ef0928_uniform_2_0_percent_bnhmc;
+DROP TABLESAMPLE x5e5cd8ea0a83c418a8ef0928_uniform_2_0_percent_bnhmc;
 ```
 
 >[!NOTE]

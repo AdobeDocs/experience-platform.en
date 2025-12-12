@@ -1,60 +1,71 @@
 ---
-keywords: Experience Platform;home;popular topics;Maria DB;maria db
-solution: Experience Platform
-title: Create a MariaDB  Source Connection in the UI
-type: Tutorial
-description: Learn how to create a Maria DB source connection using the Adobe Experience Platform UI.
+title: Connect MariaDB To Experience Platform Using The UI
+description: Learn how to connect your MariaDB account to Experience Platform using the sources workspace in the Experience Platform user interface.
 exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
 ---
-# Create a [!DNL MariaDB] source connection in the UI
+# Connect [!DNL MariaDB] to Experience Platform using the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a Maria DB source connector using the [!DNL Platform] user interface.
+Read this guide to learn how to connect your [!DNL MariaDB] account to Adobe Experience Platform using the sources workspace in the Experience Platform user interface.
 
-## Getting started
+## Get started
 
-This tutorial requires a working understanding of the following components of Adobe Experience Platform:
+This tutorial requires a working understanding of the following components of Experience Platform:
 
-*   [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-    *   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-*   [Real-Time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+    * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+    * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
+*  [Real-Time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 If you already have a [!DNL MariaDB] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/databases.md).
 
 ### Gather required credentials
 
-In order to access your [!DNL MariaDB] account on [!DNL Platform], you must provide the following value:
+Read the [[!DNL MariaDB] overview](../../../../connectors/databases/mariadb.md#prerequisites) for information on authentication.
 
-| Credential | Description |
-| ---------- | ----------- |
-| `connectionString` | The connection string associated with your MariaDB authentication. The [!DNL MariaDB] connection string pattern is: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+## Navigate the sources catalog
 
-For more information about getting started, refer to this [[!DNL MariaDB] document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. Select the appropriate category in the *[!UICONTROL Categories]* panel Alternatively, use the search bar to navigate to the specific source that you want to use.
 
-## Connect your [!DNL Maria DB] account
+To use [!DNL MariaDB], select the **[!UICONTROL MariaDB]** source card under *[!UICONTROL Databases]* and then select **[!UICONTROL Set up]**.
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Maria DB] account to [!DNL Platform].
+>[!TIP]
+>
+>Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account is created, this option changes to **[!UICONTROL Add data]**.
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
+![The sources catalog in the UI with the MariaDB card selected.](../../../../images/tutorials/create/maria-db/catalog.png)
 
-Under the **[!UICONTROL Databases]** category, select **[!UICONTROL Maria DB]**. If this is your first time using this connector, select **[!UICONTROL Configure]**. Otherwise, select **[!UICONTROL Add data]** to create a new [!DNL Maria DB] connector.
+## Use an existing account {#existing}
 
-![](../../../../images/tutorials/create/maria-db/catalog.png)
+To use an existing account, select **[!UICONTROL Existing account]** and then select the [!DNL MariaDB] account that you want to use.
 
-The **[!UICONTROL Connect to Maria DB]** page appears. On this page, you can either use new credentials or existing credentials.
+![The existing accounts interface in the sources workflow with "Existing account" selected.](../../../../images/tutorials/create/maria-db/existing.png)
 
-### New account
+## Create a new account {#create}
 
-If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide  a name, an optional description, and your [!DNL MariaDB] credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new connection to establish.
+If you do not have an existing account, then you must create a new account by providing the necessary authentication credentials that correspond with your source. 
 
-![](../../../../images/tutorials/create/maria-db/new.png)
+To create a new account, select **[!UICONTROL New account]** and then provide a name and optionally add a description for your account.
 
-### Existing account
+![The new account interface in the sources workflow with an account name and optional description provided.](../../../../images/tutorials/create/maria-db/new.png)
 
-To connect an existing account, select the [!DNL MariaDB] account you want to connect with, then select **[!UICONTROL Next]** to proceed.
+### Connect to Experience Platform
 
-![](../../../../images/tutorials/create/maria-db/existing.png)
+You can connect your [!DNL MariaDB] account to Experience Platform using either account key or basic authentication.
 
-## Next steps
+>[!BEGINTABS]
 
-By following this tutorial, you have established a connection to your [!DNL MariaDB] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
+>[!TAB Account key authentication]
+
+To use account key authentication, select **[!UICONTROL Account key authentication]**, provide your [connection string](../../../../connectors/databases/mariadb.md#azure), and then select **[!UICONTROL Connect to source]**.
+
+![The new account interface in the sources workflow with "Account key authentication" selected.](../../../../images/tutorials/create/maria-db/account-key.png)
+
+>[!TAB Basic authentication]
+
+To use basic authentication, select **[!UICONTROL Basic authentication]**, provide values for your [authentication credentials](../../../../connectors/databases/mariadb.md#azure), and then select **[!UICONTROL Connect to source]**.
+
+![The new account interface in the sources workflow with "Basic authentication" selected.](../../../../images/tutorials/create/maria-db/basic-auth.png)
+
+>[!ENDTABS]
+
+By following this tutorial, you have established a connection to your [!DNL MariaDB] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Experience Platform](../../dataflow/databases.md).

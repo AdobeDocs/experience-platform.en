@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;popular topics;ETL;etl;etl integrations;ETL integrations
 solution: Experience Platform
 title: Developing ETL Integrations for Adobe Experience Platform
-description: The ETL integration guide outlines general steps for creating high-performance, secure connectors for Experience Platform and ingesting data into Platform.
+description: The ETL integration guide outlines general steps for creating high-performance, secure connectors for Experience Platform and ingesting data into Experience Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
 ---
 # Developing ETL Integrations for Adobe Experience Platform
 
-The ETL integration guide outlines general steps for creating high-performance, secure connectors for [!DNL Experience Platform] and ingesting data into [!DNL Platform].
+The ETL integration guide outlines general steps for creating high-performance, secure connectors for [!DNL Experience Platform] and ingesting data into [!DNL Experience Platform].
 
 
 - [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
@@ -34,7 +34,7 @@ There are multiple Experience Platform components involved in ETL connector inte
 - **Adobe Identity Management System (IMS)** - Provides framework for authentication to Adobe services.
 - **IMS Organization** - A corporate entity that can own or license products and services and allow access to its members.
 - **IMS User** - Members of an IMS Organization. The Organization to User relationship is many to many.
-- **[!DNL Sandbox]** - A virtual partition a single [!DNL Platform] instance, to help develop and evolve digital experience applications.
+- **[!DNL Sandbox]** - A virtual partition a single [!DNL Experience Platform] instance, to help develop and evolve digital experience applications.
 - **Data Discovery** - Records the metadata of ingested and transformed data in [!DNL Experience Platform].
 - **[!DNL Data Access]** - Provides users with an interface to access their data in [!DNL Experience Platform].
 - **[!DNL Data Ingestion]** – Pushes data to [!DNL Experience Platform] with [!DNL Data Ingestion] APIs.
@@ -50,19 +50,19 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Experience Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../sandboxes/home.md). 
+>For more information on sandboxes in [!DNL Experience Platform], see the [sandbox overview documentation](../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -72,7 +72,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 To begin, an ETL user logs into the [!DNL Experience Platform] user interface (UI) and creates datasets for ingestion using a standard connector or push-service connector.
 
-In the UI, the user creates the output dataset by selecting a dataset schema. The choice of schema depends on the type of data (record or time series) being ingested into [!DNL Platform]. By clicking on the Schemas tab within the UI, the user will be able to view all available schemas, including the behavior type that the schema supports.
+In the UI, the user creates the output dataset by selecting a dataset schema. The choice of schema depends on the type of data (record or time series) being ingested into [!DNL Experience Platform]. By clicking on the Schemas tab within the UI, the user will be able to view all available schemas, including the behavior type that the schema supports.
 
 In the ETL tool, the user will start designing their mapping transforms after configuring the appropriate connection (using their credentials). The ETL tool is assumed to already have [!DNL Experience Platform] connectors installed (process not defined in this Integration Guide).
 
@@ -753,7 +753,7 @@ When snapshot profiles are used, the ETL tool will have to pick the last batch o
 
 Batch replay and data reprocessing may be required in cases where a client discovers that for the past 'n' days, data being ETL processed has not occurred as expected or source data itself may not have been correct. 
 
-To do this, the client's data administrators will use the [!DNL Platform] UI to remove the batches containing corrupt data. Then, the ETL will likely need to be re-run, thus repopulating with correct data. If the source itself had corrupt data, the data engineer/administrator will need to correct the source batches and re-ingest the data (either into Adobe Experience Platform or via ETL connectors).
+To do this, the client's data administrators will use the [!DNL Experience Platform] UI to remove the batches containing corrupt data. Then, the ETL will likely need to be re-run, thus repopulating with correct data. If the source itself had corrupt data, the data engineer/administrator will need to correct the source batches and re-ingest the data (either into Adobe Experience Platform or via ETL connectors).
 
 Based upon the type of data being generated, it will be the data engineer's choice to remove a single batch or all batches from certain datasets. Data will be removed/archived as per [!DNL Experience Platform] guidelines.
 
@@ -775,7 +775,7 @@ For source batches, it will again be dependent upon client preference and consum
 
 Deferral is a process in which input data is not yet complete enough to be sent out to downstream processes, but may be usable in the future. Clients will determine their individual tolerance for data windowing for future matching versus the cost of processing to inform their decision to put aside data and reprocess it in the next transformation execution, hoping it can be enriched and reconciled/stitched at some future time inside the retention window. This cycle is ongoing until the row is processed sufficiently or it is deemed too stale to continue investing in. Every iteration will generate deferred data which is a superset of all deferred data in previous iterations.
 
-Adobe Experience Platform does not identify deferred data currently, so client implementations must rely on the ETL and Dataset manual configurations to create another dataset in [!DNL Platform] mirroring the source dataset which can be used to keep deferred data. In this case, deferred data will be similar to snapshot data. In every execution of the ETL transform, the source data will be united with deferred data and sent for processing.
+Adobe Experience Platform does not identify deferred data currently, so client implementations must rely on the ETL and Dataset manual configurations to create another dataset in [!DNL Experience Platform] mirroring the source dataset which can be used to keep deferred data. In this case, deferred data will be similar to snapshot data. In every execution of the ETL transform, the source data will be united with deferred data and sent for processing.
 
 ## Changelog
 
@@ -783,5 +783,5 @@ Adobe Experience Platform does not identify deferred data currently, so client i
 | ---- | ------ | ----------- |
 | 2019-01-19 | Removed "fields" property from datasets | Datasets previously included a "fields" property that contained a copy of the schema. This capability should no longer be used. If the "fields" property is found, it should be ignored and the "observedSchema" or "schemaRef" used instead. |
 | 2019-03-15 | "schemaRef" property added to datasets | The "schemaRef" property of a dataset contains a URI referencing the XDM schema upon which the dataset is based and represents all potential fields that could be used by the dataset. |
-| 2019-03-15 | All end-user identifiers map to "identityMap" property | The "identityMap" is an encapsulation of all unique identifiers of a subject, such as CRM ID, ECID, or loyalty program ID. This map is used by [[!DNL Identity Service]](../identity-service/home.md) to resolve all known and anonymous identities of a subject, forming a single identity graph for each end-user.|
+| 2019-03-15 | All end-user identifiers map to "identityMap" property | The "identityMap" is an encapsulation of all unique identifiers of a subject, such as CRMID, ECID, or loyalty program ID. This map is used by [[!DNL Identity Service]](../identity-service/home.md) to resolve all known and anonymous identities of a subject, forming a single identity graph for each end-user.|
 | 2019-05-30 | EOL and Remove "schema" property from datasets | The dataset "schema" property provided a reference link to the schema using the deprecated `/xdms` endpoint in the [!DNL Catalog] API. This has been replaced by a "schemaRef" that provides the "id", "version", and "contentType" of the schema as referenced in the new [!DNL Schema Registry] API. |

@@ -8,7 +8,14 @@ exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 
 Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. In a role-based access control environment, user access provisioning is group through common responsibilities and needs. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need.
 
-## Create a new role
+## Create a new role {#create-new-role}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about_create"
+>title="Create new role"
+>abstract="Create new roles to better categorize users interacting with your Experience Platform instance. For example, you can create a role for an internal marketing team and apply the Regulated Health Data (RHD) label to that role, allowing your internal marketing team to access Protected Health Information (PHI). Alternatively, you can also create a role for an external agency and deny that role access to PHI data by not applying the RHD label to that role."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Manage a role"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Apply labels to a role"
 
 To create a new role, select the **[!UICONTROL Roles]** tab in the sidebar and select **[!UICONTROL Create Role]**.
 

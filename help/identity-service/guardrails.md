@@ -16,7 +16,7 @@ This document provides information on use and rate limits for [!DNL Identity Ser
 
 The following Experience Platform services are involved with modeling Identity data: 
 
-* [Identities](home.md): Bridge identities from disparate data sources as they are ingested into Platform.
+* [Identities](home.md): Bridge identities from disparate data sources as they are ingested into Experience Platform.
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): Create unified consumer profiles using data from multiple sources.
 
 ## Data model limits
@@ -52,6 +52,10 @@ The following table outlines existing rules you must follow to ensure a successf
 
 Starting March 31, 2023, Identity Service will block the ingestion of Adobe Analytics ID (AAID) for new customers. This identity is typically ingested through the [Adobe Analytics source](../sources/connectors/adobe-applications/analytics.md) and the [Adobe Audience Manager source](../sources//connectors/adobe-applications/audience-manager.md) and is redundant because the ECID represents the same web browser. If you would like to change this default configuration, please contact your Adobe account team.
 
+## Performance guardrails {#performance-guardrails}
+
+Identity Service continuously monitors incoming data to ensure high performance and reliability at scale. However, an influx of experience event data in a short period may lead to performance degradation and latency. Adobe is not responsible for such performance degradation.
+
 ## Understanding the deletion logic when an identity graph at capacity is updated {#deletion-logic}
 
 When a full identity graph is updated, Identity Service deletes the oldest identity in the graph before adding the latest identity. This is to maintain accuracy and relevance of identity data. This process of deletion follows two primary rules:
@@ -82,7 +86,7 @@ The following sections outline the implications that the deletion logic has to I
 
 Please contact your Adobe account team to request a change in identity type if your production sandbox contains:
 
-* A custom namespace where the person identifiers (such as CRM IDs) are configured as cookie/device identity type.
+* A custom namespace where the person identifiers (such as CRMIDs) are configured as cookie/device identity type.
 * A custom namespace where cookie/device identifiers are configured as cross-device identity type.
 
 Once this feature is available, graphs that exceed the limit of 50 identities will be reduced down to up to 50 identities. For Real-Time CDP B2C Edition, this could result in a minimal increase in the number of profiles qualifying for an audience, as these profiles were previously ignored from Segmentation and Activation.
@@ -96,10 +100,10 @@ Deletion only happens to data in the Identity Service and not Real-Time Customer
 
 #### Real-Time Customer Profile and WebSDK: Primary identity deletion
 
-If you would like to preserve your authenticated events against the CRM ID, then it is recommended that you change your primary IDs from ECID to CRM ID. Read the following documents for steps on how to implement this change:
+If you would like to preserve your authenticated events against the CRMID, then it is recommended that you change your primary IDs from ECID to CRMID. Read the following documents for steps on how to implement this change:
 
 * [Configure identity map for Experience Platform tags](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Identity data in the Experience Platform Web SDK](../web-sdk/identity/overview.md#using-identitymap)
+* [Identity data in the Experience Platform Web SDK](/help/collection/use-cases/identity/id-overview.md)
 
 ### Example scenarios
 
@@ -139,7 +143,7 @@ As a result, Identity Service deletes the oldest identity based on timestamp and
 
 >[!TAB Graph output]
 
-As a result of deleting ECID:35577, the edges that linked CRM ID:60013 and CRM ID:25212 with the now deleted ECID:35577 also get deleted. This deletion process leads to the graph being split into two smaller graphs.
+As a result of deleting ECID:35577, the edges that linked CRMID:60013 and CRMID:25212 with the now deleted ECID:35577 also get deleted. This deletion process leads to the graph being split into two smaller graphs.
 
 ![](./images/guardrails/after-split.png)
 
@@ -166,7 +170,7 @@ In the example below, ECID:21011 is ingested and linked to the graph at `timesta
 
 As a result, Identity Service deletes the oldest identity only from the identity graph, which in this case is ECID:35577. The deletion of ECID:35577 also results in the deletion of the following:
 
-* The link between CRM ID: 60013 and the now-deleted ECID:35577, thus resulting in a graph split scenario.
+* The link between CRMID: 60013 and the now-deleted ECID:35577, thus resulting in a graph split scenario.
 * IDFA: 32110, IDFA: 02383, and the remaining identities represented by `(...)`. These identities get deleted because individually, they are not linked to any other identities and therefore, cannot be represented in a graph.
 
 ![](./images/guardrails/hub-and-spoke-process.png)

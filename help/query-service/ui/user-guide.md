@@ -7,13 +7,9 @@ exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 ---
 # Query Editor UI guide
 
->[!NOTE]
->
->The legacy editor was deprecated on 24th May 2024. It is no longer accessible for use. You can now use the [Enhanced Query Editor](#enhanced-editor-toggle) to write, validate, and run your queries
-
 Query Editor is an interactive tool provided by Adobe Experience Platform Query Service, which allows you to write, validate, and run queries for customer experience data within the [!DNL Experience Platform] user interface. Query Editor supports developing queries for analysis and data exploration, and allows you to run interactive queries for development purposes as well as non-interactive queries to populate datasets in [!DNL Experience Platform].
 
-For more information about the concepts and features of Query Service, see the [Query Service overview](../home.md). To learn more about how to navigate the Query Service user interface on [!DNL Platform], see the [Query Service UI overview](./overview.md).
+For more information about the concepts and features of Query Service, see the [Query Service overview](../home.md). To learn more about how to navigate the Query Service user interface on [!DNL Experience Platform], see the [Query Service UI overview](./overview.md).
 
 ## Getting started {#getting-started}
 
@@ -37,11 +33,13 @@ Queries executed from Query Editor run interactively which means that if you clo
 
 ## Query authoring using the Enhanced Query Editor {#query-authoring}
 
->[!NOTE]
->
->The legacy editor was deprecated on 24th May 2024. It is no longer accessible for use. You can now use the Enhanced Query Editor to write, validate, and run your queries.
-
 Using Query Editor, you can write, execute, and save queries for customer experience data. All queries executed, or saved in Query Editor are available to all users in your organization with access to Query Service.
+
+### Database selector {#database-selector}
+
+Select a database to query from the dropdown menu in the top right of the Query Editor. The selected database is shown in the dropdown.
+
+![The Query Editor with the database dropdown menu highlighted.](../images/ui/query-editor/database-dropdown.png)
 
 ### Settings {#settings}
 
@@ -51,7 +49,7 @@ A settings icon above the Query Editor input field includes an options to enable
 >
 >You can [!UICONTROL Disable syntax auto complete] while authoring a query without losing your progress.
 
-To enable dark or light themes, select the settings icon (![A settings icon.](../images/ui/query-editor/settings-icon.png)) followed by the option in the dropdown menu that appears.
+To enable dark or light themes, select the settings icon (![A settings icon.](/help/images/icons/settings.png)) followed by the option in the dropdown menu that appears.
 
 ![The Query Editor with the settings icon and Enable dark theme dropdown menu option highlighted.](../images/ui/query-editor/query-editor-settings.png)
 
@@ -60,9 +58,6 @@ To enable dark or light themes, select the settings icon (![A settings icon.](..
 The Query Editor automatically suggests potential SQL keywords along with table or column details for the query as you write it. The auto-complete feature is enabled by default and can be disabled or enabled at any point from the Query Editor settings.
 
 The auto-complete configuration setting is per user and remembered for the consecutive logins for that user. Disabling this feature stops several metadata commands from being processed and providing recommendations that typically benefit the speed of the author when editing queries.
-
-<!-- Currently editing the auto complete setting info. -->
-
 
 
 ### Execute multiple sequential queries {#execute-multiple-sequential-queries}
@@ -92,7 +87,11 @@ A confirmation dialog appears. Select **[!UICONTROL Confirm]** to cancel the que
 
 ### Result count {#result-count}
 
-The Query Editor has a maximum 50,000 row output. You can choose the number of rows are displayed at one time in the Query Editor console. To change the number of rows displayed in the console, select the **[!UICONTROL Result count]** dropdown and select from the 50, 100, 150, 300, and 500 options.
+The Query Editor has a maximum 50,000 row output. You can choose the number of rows are displayed at one time in the Query Editor console. To change the number of rows displayed in the console, select the **[!UICONTROL Result count]** dropdown and select from the 50, 100, 150, 300, 500, and 1000 options.
+
+>[!NOTE]
+>
+>As the Experience Platform UI can support up to 1000 rows, passing a LIMIT value over 1000 is ignored.
 
 ![The Query Editor with the Result count dropdown highlighted.](../images/ui/query-editor/result-count.png)
 
@@ -106,17 +105,7 @@ To minimize your development time, you are recommended to develop your queries w
 
 ## Writing tools in Query Editor {#writing-tools}
 
-- **Automatic syntax highlighting:** Makes reading and organizing SQL easier.
-
-![An SQL statement in the Query Editor demonstrating syntax colour highlighting.](../images/ui/query-editor/syntax-highlight.png)
-
-- **SQL keyword auto-complete:** Start typing your query then use the arrow keys to navigate to the desired term and press **Enter**.
-
-![A few characters of SQL with the auto complete dropdown menu providing options from the Query Editor.](../images/ui/query-editor/syntax-auto.png)
-
-- **Table and field auto-complete:** Start typing the table name you want to `SELECT` from, then use the arrow keys to navigate to the table you are looking for, and press **Enter**. Once a table is selected, autocomplete recognizes fields in that table. 
-
-![The Query Editor input displaying drop down table name suggestions.](../images/ui/query-editor/tables-auto.png)
+Use the Query Editor's writing tools to enhance your query authoring process. Features include options to format text, copy SQL, manage query details, and save or schedule your work as you progress.
 
 ### Format text {#format-text}
 
@@ -197,6 +186,34 @@ If a query was scheduled, then the [!UICONTROL Scheduled Queries] tab provides i
 >
 >Queries that are not executed are not saved by the Log. In order for the query to be available in Query Service, it must be run or saved in Query Editor.
 
+### Object browser {#object-browser}
+
+Use the object browser to easily search and filter datasets. The object browser reduces the time spent searching for tables and datasets in large environments with numerous datasets. With streamlined access to relevant data and metadata, you can focus more on query authoring and less on navigation.
+
+To navigate your database with the object browser, enter a table name into the search field, or select **[!UICONTROL Tables]** to expand the list of available datasets and tables. When using the search field, the list of available tables are dynamically filtered based on your input.
+
+Every dataset contained in [your selected database](#database-dropdown) is listed in a navigation rail to the left of the Query Editor. 
+
+![The Query Editor dataset navigation rail with the search input highlighted.](../images/ui/query-editor/search-tables.png)
+
+The schema displayed in the object browser is an observable schema. This means that you can use it to monitor changes and updates in real time as changes are immediately visible. The observable schemas help to ensure data synchronization and assists with debugging or analytics tasks.
+
+#### Current limitation {#current-limitation}
+
+The system processes queries sequentially, meaning only one query can run at a time. While a query is in progress, additional tables cannot be accessed in the left navigation.
+
+#### Access table metadata {#table-metadata}
+
+In addition to quick searches, you can now easily access metadata for any table by selecting the 'i' icon next to the table name. This provides you with detailed information about the selected table, that helps you to make informed decisions when writing queries.
+
+![The Query Editor dataset navigation rail with the search input highlighted.](../images/ui/query-editor/table-metadata.png)
+
+#### Explore child tables
+
+To explore child or linked tables, select the dropdown arrow next to a table name in the list. This expands the table to show any associated child tables, and gives a clear view of the data structure and allows for more complex query constructions. The icon next to the field name indicates the column's data type, to help you identify it during complex queries.
+
+![The Query Editor with the filtered table list displayed.](../images/ui/query-editor/child-table-list.png)
+
 ## Executing queries using Query Editor {#executing-queries}
 
 To run a query in Query Editor, you can enter SQL in the editor or load a previous query from the **[!UICONTROL Log]** or **[!UICONTROL Templates]** tab, and select **Play**. The status of query execution is displayed in the **[!UICONTROL Console]** tab below, and output data is shown in the **[!UICONTROL Results]** tab.
@@ -211,15 +228,73 @@ The console provides information on the status and operation of Query Service. T
 >
 >The console only shows errors that resulted from the execution of a query. It does not show the query validation errors that occur before a query is executed.
 
-### Query results {#query-results}
+## Query results {#query-results}
 
-After a query has been completed, the results are displayed in the **[!UICONTROL Results]** tab, next to the **[!UICONTROL Console]** tab. This view shows the tabular output of your query, displaying between 50 and 500 rows of results depending on your chosen [result count](#result-count). This view allows you to verify that your query produces the expected output. To generate a dataset with your query, remove limits on rows returned, and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. See the [generating datasets tutorial](./create-datasets.md) for instructions on how to generate a dataset from query results in Query Editor.
+After a query has been completed, the results are displayed in the **[!UICONTROL Results]** tab, next to the **[!UICONTROL Console]** tab. This view shows the tabular output of your query, displaying between 50 and 1000 rows of results depending on your chosen [result count](#result-count). This view allows you to verify that your query produces the expected output. To generate a dataset with your query, remove limits on rows returned, and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. See the [generating datasets tutorial](./create-datasets.md) for instructions on how to generate a dataset from query results in Query Editor.
 
 ![The Results tab of the Query Editor console displaying the results of a query run.](../images/ui/query-editor/query-results.png)
 
-## Use cases {#use-cases}
+### Download query results {#download-query-results}
 
-Query Service provides solutions to a variety of use cases across industries and business scenarios. These practical examples demonstrate the flexibility and impact of the service in addressing diverse needs. To [uncover how Query Service can bring value to your specific business needs](../use-cases/overview.md), explore the comprehensive collection of use case documents. Learn how to use Query Service to provide insights and solutions for enhanced operational efficiency and business success.
+>[!AVAILABILITY] 
+>
+>Download capabilities are available only to customers with the Data Distiller add-on. To learn more about Data Distiller, contact your Adobe representative.
+
+After running a successful query, download the results in CSV, XLSX, or JSON format to use in offline analysis, reporting, or spreadsheet workflows. This functionality streamlines workflows for marketing and analytics teams by enabling immediate access to query results for offline analysis, reporting, and Excel-based processes.
+
+To download your query results, select **[!UICONTROL Download]** in the upper-right corner of the Query Editor **[!UICONTROL Result]** tab. Then choose **[!UICONTROL CSV]**, **[!UICONTROL XLSX]**, or **[!UICONTROL JSON]** from the dropdown menu. The file is downloaded automatically to your local machine. Choose the format that fits your use case, CSV for lightweight exports, XLSX for formatted spreadsheets, or JSON for structured data handling.
+
+>[!NOTE]
+>
+>If the **[!UICONTROL Download]** button is missing, check your query results. The button appears only when records are returned. If no records are returned, the **[!UICONTROL Result]** tab shows a 'No results' message and the download option is disabled.
+
+![The results tab of the Query Editor with Download and the dropdown menu highlighted.](../images/ui/overview/download-results.png)
+
+>[!NOTE]
+>
+>When opening a CSV file in Excel, you may see the following warning:<br>"Possible Data Loss. Some features might be lost if you save this workbook in the comma-delimited (.csv) format. To preserve these features, save it in an Excel file format."<br>In addition, be aware that date and time formatting may vary by file type. CSV files retain the format shown in the query results, while XLSX files may apply localized formatting automatically in Excel. If this warning appears, you can safely continue. To preserve Excel-specific formatting, save the file as XLSX instead.
+
+### View results in full screen {#view-results}
+
+After executing a successful query, select **[!UICONTROL View results]** in the **[!UICONTROL Result]** tab to open a tabulated, full-screen view of your results.
+
+Use full-screen preview to easily scan wide tables and inspect row-level details without horizontal scrolling. The full-screen view displays the output in a resizable grid, making it easier to review large datasets and scan across columns.
+
+>[!NOTE]
+>
+>The preview is read-only and does not modify your query or dataset.
+
+![The full-screen preview dialog with View results selected.](../images/ui/overview/view-results-fullscreen.png)
+
+### Copy results {#copy-results}
+
+Use the enhanced copy feature in Query Editor to copy query results as comma-separated values (CSV) and paste them into spreadsheet tools like Excel for immediate validation or reporting. This functionality improves readability, preserves formatting, and streamlines workflows without relying on third-party tools.
+
+You can copy query results either from the [!UICONTROL Result] tab or from the full-screen results preview. From the **[!UICONTROL Result]** tab, select the copy icon (![A copy icon.](../../images/icons/copy.png)) to copy all query results to your clipboard. To enable the copy icon, first select a row. You can select individual rows or use the checkbox at the top to select all rows at once.
+
+![The results tab of the Query Editor with the copy icon highlighted.](../images/ui/overview/query-editor-copy-icon.png)
+
+Alternatively, select **[!UICONTROL View results]** to open the full-screen preview. From this dialog, select individual rows or use the checkbox in the upper-left corner to select all rows, then select the copy icon (![A copy icon.](../../images/icons/copy.png)) to copy the selected data.
+
+![The full-screen preview dialog with result rows selected and the copy icon highlighted.](../images/ui/overview/results-copy.png)
+
+### Legacy results table (limited availability) {#legacy-results-table}
+
+>[!AVAILABILITY]
+>
+>The legacy results table is only available to select users through a feature flag and may not appear in your current Query Editor experience. If your team relies on drag-to-select workflows, contact your Adobe representative to request access.
+
+The legacy version of the Query Editor is intended for users who rely on flexible, manual data workflows such as QA or spreadsheet-based review. 
+
+It supports native browser-based drag selection, so you can highlight and copy any portion of the output—including individual cells or blocks—using standard selection behavior. This contrasts with the enhanced table, which uses structured row selection and dedicated copy actions.
+
+Copied data is tab-delimited, so when you paste it into tools like Excel, the columns stay aligned and readable. Column headers are also included when drag-selecting across the header row.
+
+![The display of results in the legacy editor with simple drag-to-select results highlighted.](../images/ui/query-editor/legacy-results-table.png)
+
+## Examples {#examples}
+
+Query Service provides solutions to a variety of use cases across industries and business scenarios. These examples demonstrate the flexibility and impact of the service in addressing diverse needs. To [uncover how Query Service can bring value to your specific business needs](../use-cases/overview.md), explore the comprehensive collection of use case documents. Learn how to use Query Service to provide insights and solutions for enhanced operational efficiency and business success.
 
 <!-- This video is from 2019. The logic is sounds but the workflow is too outdated. -->
 
@@ -235,4 +310,4 @@ The following video shows how to run queries in the Adobe Experience Platform in
 
 ## Next steps
 
-Now that you know what features are available in Query Editor and how to navigate the application, you can start authoring your own queries directly in [!DNL Platform]. For more information about running SQL queries against datasets in [!DNL Data Lake], see the guide on [running queries](../best-practices/writing-queries.md). 
+Now that you know what features are available in Query Editor and how to navigate the application, you can start authoring your own queries directly in [!DNL Experience Platform]. For more information about running SQL queries against datasets in [!DNL Data Lake], see the guide on [running queries](../best-practices/writing-queries.md). 

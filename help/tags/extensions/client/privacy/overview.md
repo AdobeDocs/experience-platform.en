@@ -5,10 +5,6 @@ exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
 ---
 # Adobe Privacy extension overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 The Adobe Privacy tag extension allows you to collect and remove user IDs assigned to end users by Adobe solutions on client-side devices. Collected IDs can then be sent to [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) to access or delete the related individual's personal data in supported Adobe Experience Cloud applications.
 
 This guide covers how to install and configure the Adobe Privacy extension in the Experience Platform UI or Data Collection UI.
@@ -89,7 +85,7 @@ When configuring the action for the rule, select **[!UICONTROL Adobe Privacy]** 
 
 ![Select action type](../../../images/extensions/client/privacy/action-type.png)
 
-The right panel prompts you to select a data element that will serve as the action's callback. Select the database icon (![Database Icon](../../../images/extensions/client/privacy/database.png)) and choose the data element you created earlier from the list. Select **[!UICONTROL Keep Changes]** to continue.
+The right panel prompts you to select a data element that will serve as the action's callback. Select the database icon (![Database Icon](/help/images/icons/database.png)) and choose the data element you created earlier from the list. Select **[!UICONTROL Keep Changes]** to continue.
 
 ![Select data element](../../../images/extensions/client/privacy/add-data-element.png)
 

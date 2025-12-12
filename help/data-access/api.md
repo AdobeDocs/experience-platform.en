@@ -7,13 +7,17 @@ exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
 ---
 # Data Access API guide
 
+>[!IMPORTANT]
+>
+>The Data Access API is now **deprecated**. You are advised to use Destinations for exporting data from Adobe Experience Platform. For more information, please refer to the [dataset export destinations documentation](../destinations/destination-types.md#dataset-export-destinations).
+
 The Data Access API supports Adobe Experience Platform by providing users with a RESTful interface focused on the discoverability and accessibility of ingested datasets within [!DNL Experience Platform].
 
 ![An diagram of how Data Access facilitates the discoverability and accessibility of ingested datasets within Experience Platform.](images/Data_Access_Experience_Platform.png)
 
 ## API specification reference
 
-The Swagger API reference documentation can be found [here](https://developer.adobe.com/experience-platform-apis/references/data-access/).
+Refer to the [Data Access OpenAPI reference documentation](https://developer.adobe.com/experience-platform-apis/references/data-access/) to view a standardized, machine-readable format for easier integration, testing, and exploration.
 
 ## Terminology {#terminology}
 
@@ -144,7 +148,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | Property | Description |
 | -------- | ----------- |
-| `data.name` | The name of the file (for example, `profiles.csv`). |
+| `data.name` | The name of the file (for example, `profiles.parquet`). |
 | `data.length` | The size of the file (in bytes). |
 | `data._links.self.href` | The URL to download the file. |
 
@@ -191,7 +195,7 @@ When a directory is returned, it contains an array of all files within the direc
 
 | Property | Description |
 | -------- | ----------- |
-| `data.name` | The name of the file (for example, `profiles.csv`). |
+| `data.name` | The name of the file (for example, `profiles.parquet`). |
 | `data._links.self.href` | The URL to download the file. |
 
 ## Access the contents of a file {#access-file-contents}
@@ -221,7 +225,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 | Property | Description |
 | -------- | ----------- |
 | `{FILE_ID}` | The ID of the file within a dataset. |
-| `{FILE_NAME}` | The full name of the file (for example, `profiles.csv`). |
+| `{FILE_NAME}` | The full name of the file (for example, `profiles.parquet`). |
 
 **Response**
 
@@ -233,4 +237,4 @@ For additional samples, refer to the [data access tutorial](tutorials/dataset-da
 
 ## Subscribe to data ingestion events {#subscribe-to-data-ingestion-events}
 
-You can subscribe to specific high-value events through the [Adobe Developer Console](https://developer.adobe.com/console/). For instance, you can subscribe to data ingestion events to be notified of potential delays and failures. See the tutorial on [subscribing to data ingestion notifications](../ingestion/quality/subscribe-events.md) for more information.
+You can subscribe to specific high-value events through the [Adobe Developer Console](https://developer.adobe.com/console/). For instance, you can subscribe to data ingestion events to be notified of potential delays and failures. See the tutorial on [subscribing to Adobe event notifications](../observability/alerts/subscribe.md) for more information.

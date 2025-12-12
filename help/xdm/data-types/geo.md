@@ -9,7 +9,7 @@ exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 
 [!UICONTROL Geo] is a standard XDM data type that describes the geographic area where an event was observed.
 
-<img src='../images/data-types/geo.png' width=400 /><br />
+![](../images/data-types/geo.png){width=400}
 
 | Property | Data type | Description |
 | --- | --- | --- |

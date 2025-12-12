@@ -12,11 +12,11 @@ exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
 >
 >The functionality to activate account audiences to destinations is available for companies purchasing the [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) and [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) editions of Real-Time Customer Data Platform.
 
-This article explains the workflow required to export [account audiences](/help/segmentation/ui/account-audiences.md) from Adobe Experience Platform to your preferred destination. 
+This article explains the workflow required to export [account audiences](/help/segmentation/types/account-audiences.md) from Adobe Experience Platform to your preferred destination. 
 
 ## Supported destinations {#supported-destinations}
 
-Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select the **[!UICONTROL Catalog]** tab. Use the **[!UICONTROL Data types]** filter and select **[!UICONTROL Accounts]** to see the destinations which support the activation of account audiences. Currently, exporting account audiences is available only to certain cloud storage destinations ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), and [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) and the [(Companies) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin.md) destination.  
+Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select the **[!UICONTROL Catalog]** tab. Use the **[!UICONTROL Data types]** filter and select **[!UICONTROL Accounts]** to see the destinations which support the activation of account audiences. Currently, exporting account audiences is available only to certain cloud storage destinations ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), and [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) and the [Demandbase](/help/destinations/catalog/advertising/demandbase.md) and [(Companies) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md) streaming destination.  
 
 ![Destinations which support account audiences.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
@@ -28,7 +28,7 @@ View the video below for an overview of creating and activating account audience
 
 ## Prerequisites {#prerequisites}
 
-* You must first ingest [account profiles](/help/rtcdp/accounts/account-profile-overview.md) and create [account audiences](/help/segmentation/ui/account-audiences.md) before you can activate them to downstream destinations.
+* You must first ingest [account profiles](/help/rtcdp/accounts/account-profile-overview.md) and create [account audiences](/help/segmentation/types/account-audiences.md) before you can activate them to downstream destinations.
 * To activate account audiences to destinations, you must have successfully connected to a destination. If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use. Read the UI tutorial on [connecting to destinations](./connect-destination.md) for more information.
 
 ### Required permissions {#permissions}
@@ -51,7 +51,7 @@ Follow the instructions to select a destination where you can export your datase
   >
   >The destinations that can export account audiences are indicated with an icon in the upper right corner of the card, similar to the destination highlighted below, or you can use the data type filter to only display destinations that can export account audiences, as [shown higher on the page](#supported-destinations).
 
-  ![Amazon S3 destination page that can export profile audiences highlighted.](/help/destinations/assets/ui/activate-account-audiences/amazon-s3-icon-activate-account-audiences.png)
+  ![Demandbase destination page that can export profile audiences highlighted.](/help/destinations/assets/ui/activate-account-audiences/demandbase-icon-activate-account-audiences.png)
 
 1. Select **[!UICONTROL Data type Accounts]**, followed by the destination connection that you want to export datasets to, then select **[!UICONTROL Next]**.
 
@@ -65,7 +65,7 @@ Follow the instructions to select a destination where you can export your datase
 
 ## Select your account audiences {#select-account-audiences}
 
-Use the check boxes to the left of the account audiences names to select the audiences that you want to export to the destination, then select **[!UICONTROL Next]**. Note that only *account audiences* are shown in this view, and no other audience types are displayed. 
+Use the checkboxes to the left of the account audiences names to select the audiences that you want to export to the destination, then select **[!UICONTROL Next]**. Note that only *account audiences* are shown in this view, and no other audience types are displayed. 
 
 ![Dataset export workflow showing the Select audiences step where you can select which account audiences to export.](/help/destinations/assets/ui/activate-account-audiences/select-account-audiences.png)
 

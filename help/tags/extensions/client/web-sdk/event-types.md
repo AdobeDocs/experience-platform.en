@@ -6,11 +6,39 @@ exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
 ---
 # Event types
 
-This page describes the Adobe Experience Platform event types provided by the Adobe Experience Platform Web SDK tag extension. These are used to [build rules](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) and should not be confused with the `eventType` field in the [`xdm` object](/help/web-sdk/commands/sendevent/xdm.md).
+This page describes the Adobe Experience Platform event types provided by the Adobe Experience Platform Web SDK tag extension. These are used to [build rules](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) and should not be confused with the `eventType` field in the [`xdm` object](/help/collection/js/commands/sendevent/xdm.md).
+
+## Monitoring hook triggered {#monitoring-hook-triggered}
+
+The Adobe Experience Platform Web SDK includes monitoring hooks which you can use to monitor various system events. These tools are useful for developing your own debugging tools and to capture Web SDK logs.
+
+For complete details about what parameters each monitoring hook event contains, see the [Web SDK monitoring hooks documentation](/help/collection/js/monitoring-hooks.md).
+
+![Tags user interface image showing the monitoring hook event type](assets/monitoring-hook-triggered.png)
+
+The Web SDK tag extension supports the following monitoring hooks:
+
+* **[!UICONTROL onInstanceCreated]**: This monitoring hook event is triggered when you have successfully created a new Web SDK instance.
+* **[!UICONTROL onInstanceConfigured]**: This monitoring hook event is triggered by the Web SDK when the [`configure`](/help/collection/js/commands/configure/overview.md) command is successfully resolved
+* **[!UICONTROL onBeforeCommand]**: This monitoring hook event is triggered by Web SDK before any other command is executed. You can use this monitoring hook to retrieve the configuration options of a specific command.
+* **[!UICONTROL onCommandResolved]**: This monitoring hook event is triggered before resolving command promise. You can use this function to see the command options and result.
+* **[!UICONTROL onCommandRejected]**: This monitoring hook event is triggered when a command promise is rejected and it contains information about the cause of the error.
+* **[!UICONTROL onBeforeNetworkRequest]**: This monitoring hook event is triggered before a network request is executed.
+* **[!UICONTROL onNetworkResponse]**: This monitoring hook event is triggered when the browser receives a response.
+* **[!UICONTROL onNetworkError]**: This monitoring hook event is triggered when the network request failed.
+* **[!UICONTROL onBeforeLog]**: This monitoring hook event is triggered before the Web SDK logs anything to the console.
+* **[!UICONTROL onContentRendering]**: This monitoring hook event is triggered by the `personalization` component and it helps you debug the rendering of the personalization content. This event can have different statuses:
+  * `rendering-started`: Indicates that the Web SDK is about to render propositions. Before the Web SDK starts to render a decision scope or a view, in the `data` object you can see the propositions that are about to be rendered by the `personalization` component and the scope name.
+  * `no-offers`: Indicates that no payload was received for the requested parameters.
+  * `rendering-failed`: Indicates that Web SDK failed to render a proposition.
+  * `rendering-succeeded`: Indicates that rendering has completed for a decision scope.
+  * `rendering-redirect`: Indicates that Web SDK will execute a redirect proposition.
+* **[!UICONTROL onContentHiding]**: This monitoring hook event is triggered when a prehiding style is applied or removed.
+
 
 ## [!UICONTROL Send event complete]
 
-Typically, your property would have one or more rules using the [[!UICONTROL Send event] action](action-types.md#send-event) to send events to Adobe Experience Platform Edge Network. Each time an event is sent to Edge Network, a response is returned to the browser with useful data. Without the [!UICONTROL Send event complete] event type, you wouldn't have access to this returned data.
+Typically, your property would have one or more rules using the [[!UICONTROL Send event]](actions/send-event.md) action to send events to Adobe Experience Platform Edge Network. Each time an event is sent to Edge Network, a response is returned to the browser with useful data. Without the [!UICONTROL Send event complete] event type, you wouldn't have access to this returned data.
 
 To access the returned data, create a separate rule, then add a [!UICONTROL Send event complete] event to the rule. This rule is triggered each time a successful response is received from the server as a result of a [!UICONTROL Send event] action.
 
@@ -254,3 +282,14 @@ if (propositions) {
   // them in some other way.
 }
 ```
+
+## [!UICONTROL Subscribe ruleset items] {#subscribe-ruleset-items}
+
+The **[!UICONTROL Subscribe ruleset items]** event type allows you to subscribe to Adobe Journey Optimizer content cards for a surface. Any time the rulesets are evaluated, the callback provided to this command receives a result object with propositions that hold the content card data.
+
+![Image of the Experience Platform tags user interface showing the Subscribe ruleset items event type.](assets/subscribe-ruleset-items.png)
+
+This event type supports the following configurable properties:
+
+* **[!UICONTROL Schemas]**: An array of schemas for which you want to subscribe to content cards. You can enter the schemas manually or by providing a data element.
+* **[!UICONTROL Surfaces]**: An array of surfaces for which you want to subscribe to content cards. You can enter the surfaces manually or by providing a data element.

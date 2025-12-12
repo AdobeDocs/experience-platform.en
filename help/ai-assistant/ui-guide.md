@@ -7,10 +7,6 @@ exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
 
 Read this guide to learn how you can use AI Assistant in the Adobe Experience Platform UI.
 
-The following video is intended to support your understanding of AI Assistant.
-
->[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
-
 ## Access AI Assistant in the Experience Platform UI
 
 To launch AI Assistant, select the **[!UICONTROL AI Assistant icon]** from the top header of the Experience Platform UI.
@@ -73,10 +69,6 @@ AI Assistant updates the interface and provides you with links to documentation 
 
 ![A dropdown menu of the citations that AI Assistant provides for concept questions.](./images/citations.png)
 
-You can also use the suggestions that AI Assistant provides under **[!UICONTROL Related suggestions]** to further explore topics related to your original question.
-
-![A list of suggestions provided by AI Assistant.](./images/related-suggestions.png)
-
 +++
 
 ### Operational insights {#operational-insights}
@@ -89,7 +81,7 @@ In the example below, AI Assistant is asked the following query: **"Show me data
 
 ![A question about operational insights.](./images/op-insights-question.png)
 
-AI Assistant then responds with a table listing your dataflows and their corresponding IDs. To view the whole table of data, select the expand icon on the top right.
+AI Assistant then responds with a table listing your dataflows and their corresponding IDs. Select the download icon (![Download icon](/help/images/icons/download.png)) to download the table as a CSV file. To view the entire table, select the expand icon (![Expand icon](/help/images/icons/expand.png)).
 
 ![An operational insights answer](./images/op-insights-answer.png)
 
@@ -102,10 +94,6 @@ When prompted with an operational insights question, AI Assistant provides an ex
 ![AI Assistant providing an explanation on how it computed its answer.](./images/answer-explained.png)
 
 You can also provide filters and modifications to your questions, and you can instruct AI Assistant to render its findings based on the filters that you include. For example, you can ask AI Assistant to show you a trend of the count of segment definitions in the order of their created date, remove segment definitions with zero total profiles, and use month names instead of integers when displaying the data.
-
-**Note:** Operational insights answers are currently in beta. Select the tooltip icon in the AI Assistant user interface to view the Beta notice and for a link to the documentation.
-
-![AI Assistant tooltip icon selected.](./images/op-insights-beta-note.png)
 
 +++
 
@@ -125,9 +113,9 @@ When queried with an operational insights question, AI Assistant provides an SQL
 
 +++
 
-### Use auto-complete {#use-auto-complete}
+### Use entity auto-complete {#use-entity-auto-complete}
 
-You can use the autocomplete function to receive a list of data objects that exist in your sandbox. Autocomplete recommendations are available for the following domains: audiences, schemas, datasets, sources, and destinations.
+You can use the autocomplete function to receive a list of data objects that exist in your sandbox. Autocomplete recommendations are available for the following domains: audiences, schemas, datasets, journeys, sources, and destinations.
 
 +++Select to view an example of auto-complete
 
@@ -174,6 +162,44 @@ To view discoverability, select the lightbulb icon on the top header of the AI A
 Next, select a category and then select a prompt from the list provided. You can use this feature to get a better idea of the types of questions that AI Assistant can answer. You can also update the pre-existing prompts with specific details that pertain to your sandbox using free text or [autocomplete](#use-auto-complete).
 
 ![The AI Assistant prompts in discoverability.](./images/prompt.png)
+
++++
+
+### Use question autocomplete {#use-question-autocomplete}
+
+You can use AI Assistant's question autocomplete feature to select a question from a list of recommendations from AI Assistant. 
+
++++Select to view example of question autocomplete
+
+To view the panel of suggested questions, type at least seven (7) characters in the input box. Next, select the question that is relevant to you from the menu that appears.
+
+![The pop-up panel with suggested questions from AI Assistant.](./images/suggested_questions.png)
+
+You may need to update placeholders in some instances where a suggested question involves operational insights. For example, you may need to add the specific name of a dataset or an audience if the suggestion from AI Assistant includes placeholders.
+
+![A suggestion from AI Assistant that includes placeholders.](./images/placeholder.png)
+
+Placeholders are highlighted in blue. Select the placeholder to start updating its value. For best results on numerical placeholders, ensure that you use digits instead of text. You can also use the entity autocomplete feature to update the placeholder values. You cannot a send a question that has unfilled placeholders.
+
+**NOTE**: Suggestions are enabled by default. Select the **[!UICONTROL Suggest ideas]** toggle to disable the feature.
+
+![A suggestion from AI Assistant with updated placeholders.](./images/updated_placeholder.png)
+
++++
+
+### Use related suggestions {#use-related-suggestions}
+
+You can use the related suggestions section of every AI Assistant response to continue your conversation.
+
++++Select to view example of related suggestions
+
+Related suggestions are returned with every response from AI Assistant. To continue your conversation, select any of the suggestions in the related suggestions section.
+
+![A list of related suggestions from AI Assistant.](./images/related_suggestions.png)
+
+Similar to placeholders in question autocomplete, you will need to update placeholders that are included in related suggestions before you can submit the query.
+
+![A query from related suggestions with the placeholders updated.](./images/related_suggestions_placeholder.png)
 
 +++
 

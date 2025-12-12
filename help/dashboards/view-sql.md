@@ -5,7 +5,7 @@ exl-id: fd728926-c113-4593-92b1-916a02d09d41
 ---
 # View insight SQL
 
-Use the [!UICONTROL View SQL] feature to view the SQL behind your Profile, Audience, Destination, and customized insights and execute the query on demand through the Query Editor. Take inspiration from the SQL of over 40 existing insights to create new queries that derive unique insights from Platform data based on your business needs.
+Use the [!UICONTROL View SQL] feature to view the SQL behind your Profile, Audience, Destination, and customized insights and execute the query on demand through the Query Editor. Take inspiration from the SQL of over 40 existing insights to create new queries that derive unique insights from Experience Platform data based on your business needs.
 
 ## Navigate to the dashboard overview {#navigate-to-overview}
 
@@ -37,7 +37,7 @@ A dialog appears that contains the title of the insight and the SQL that generat
 
 >[!TIP]
 >
->You can copy the entire SQL statement to your clipboard by selecting the copy icon (![The copy icon.](./images/view-sql/copy-icon.png)) in the top right of the dialog.
+>You can copy the entire SQL statement to your clipboard by selecting the copy icon (![The copy icon.](/help/images/icons/copy.png)) in the top right of the dialog.
 
 ![An insight dialog with the SQL statement highlighted highlighted.](./images/view-sql/sql-dialog.png)
 

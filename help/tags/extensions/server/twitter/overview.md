@@ -39,7 +39,7 @@ In order to connect the Experience Platform to [!DNL Twitter], the following inp
 
 | Key Type | Description |
 | --- | --- |
-| Consumer Key |​ The app's API Key for accessing the [!DNL Twitter] API. Refer to the [!DNL Twitter] documentation on [api keys and secrets](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) for guidance. | |
+| Consumer Key |​ The app's API Key for accessing the [!DNL Twitter] API. Refer to the [!DNL Twitter] documentation on [api keys and secrets](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) for guidance. |
 | Consumer Secret | The API Secret allows your app to access the [!DNL Twitter] API. Refer to the [!DNL Twitter] documentation on [api keys and secrets](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) for guidance. |
 | Token Secret | The non-expiring token secret of your app, which is used for authenticating to the [!DNL Twitter] API via OAuth. Refer to the [!DNL Twitter] documentation on [obtaining use access tokens](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) for guidance. |
 | Access Token | The non-expiring access token of your app, which is used for authenticating to the [!DNL Twitter] API via OAuth. Refer to the [!DNL Twitter] documentation on [obtaining use access tokens](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) for guidance. |
@@ -83,9 +83,9 @@ After selection, additional controls appear to further configure the event. You 
 
 | Field name | Description | Example | Required |
 | --- | --- | --- | --- |
-| [!UICONTROL [!DNL Twitter] Click ID] | [!DNL Twitter] Click ID as parsed from the click-through URL. | 26l6412g5p4iyj65a2oic2ayg2 | Required if no other identifier is added. |
-| [!UICONTROL Email] | An email address hashed with SHA256. The text must be lowercase and any trailing or leading spaces must be removed before hashing. | eventforwarding@example.com | Required if no other identifier is added. |
-| [!UICONTROL Phone] | Phone serves as an identifier to match the conversion event. The phone number must be in E164 format [+][country code][area code][local phone number] before hashing. | +911234567875 | Required if no other identifier is added. |
+| [!UICONTROL [!DNL Twitter] Click ID] | [!DNL Twitter] Click ID as parsed from the click-through URL. | `26l6412g5p4iyj65a2oic2ayg2` | Required if no other identifier is added. |
+| [!UICONTROL Email] | An email address hashed with SHA256. The text must be lowercase and any trailing or leading spaces must be removed before hashing. | `eventforwarding@example.com` | Required if no other identifier is added. |
+| [!UICONTROL Phone] | Phone serves as an identifier to match the conversion event. The phone number must be in E164 format `[+][country code][area code][local phone number]` before hashing. | `+911234567875` | Required if no other identifier is added. |
 
 **[!UICONTROL Conversion Data]**
 

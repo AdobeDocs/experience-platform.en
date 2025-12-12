@@ -29,7 +29,7 @@ Identity namespaces requires an understanding of various Adobe Experience Platfo
 >abstract="An identity value is an identifier that represents a unique individual, organization, or asset. The context or type of identity that the value represents is defined by a corresponding identity namespace. When matching record data across profile fragments, the namespace and identity value must match. When matching record data across profile fragments the namespace and identity value must match."
 >text="Learn more in documentation"
 
-A fully qualified identity includes two components: an **identity value** and an **identity namespace**. For example, if the value of an identity is `scott@acme.com`, then a namespace provides context to this value by distinguishing it as an email address. Similarly, a namespace can distinguish `555-123-456` as a phone number, and `3126ABC` as a CRM ID. Essentially, **a namespace provides context to a given identity**. When matching record data across profile fragments, as when [!DNL Real-Time Customer Profile] merges profile data, both the identity value and the namespace must match.
+A fully qualified identity includes two components: an **identity value** and an **identity namespace**. For example, if the value of an identity is `scott@acme.com`, then a namespace provides context to this value by distinguishing it as an email address. Similarly, a namespace can distinguish `555-123-456` as a phone number, and `3126ABC` as a CRMID. Essentially, **a namespace provides context to a given identity**. When matching record data across profile fragments, as when [!DNL Real-Time Customer Profile] merges profile data, both the identity value and the namespace must match.
 
 For example, two profile fragments may contain different primary IDs but they share the same value for the "Email" namespace, therefore Experience Platform is able to see that these fragments are actually the same individual and brings the data together in the identity graph for the individual.
 
@@ -41,8 +41,8 @@ Another way to better understand the concept of namespace is to consider real wo
 
 Applying the same logic to Identity Service:
 
-* At a glance, the identity value of: `1-234-567-8900` can look like a phone number. However, from a system perspective, this value could have been configured as a CRM ID. Identity Service would have no way of applying the necessary context to this identity value without a corresponding namespace.
-* Another example is the identity value of: `john@gmail.com`. While this identity value can be easily assumed to be an Email, it is entirely possible that it's configured as a custom namespace CRM ID. With namespace, you can distinguish `Email:john@gmail.com` from `CRM ID:john@gmail.com`.
+* At a glance, the identity value of: `1-234-567-8900` can look like a phone number. However, from a system perspective, this value could have been configured as a CRMID. Identity Service would have no way of applying the necessary context to this identity value without a corresponding namespace.
+* Another example is the identity value of: `john@gmail.com`. While this identity value can be easily assumed to be an Email, it is entirely possible that it's configured as a custom namespace CRMID. With namespace, you can distinguish `Email:john@gmail.com` from `CRMID:john@gmail.com`.
 
 >[!ENDSHADEBOX]
 
@@ -75,7 +75,7 @@ The following identity types are available within Experience Platform:
 | Identity type | Description |
 | --- | --- |
 | Cookie ID | Cookie IDs identify web browsers. These identities are critical for expansion and constitute the majority of the identity graph. However, by nature they decay fast and lose their value over time. |
-| Cross-Device ID | Cross-device IDs identify an individual and usually tie other IDs together. Examples include a login ID, CRM ID, and loyalty ID. This is an indication to [!DNL Identity Service] to handle the value sensitively. |
+| Cross-Device ID | Cross-device IDs identify an individual and usually tie other IDs together. Examples include a login ID, CRMID, and loyalty ID. This is an indication to [!DNL Identity Service] to handle the value sensitively. |
 | Device ID | Device IDs identify hardware devices, such as IDFA (iPhone and iPad), GAID (Android), and RIDA (Roku), and can be shared by multiple people in households.|
 | Email address | Email addresses are often associated with a single person and therefore can be used to identify that person across different channels. Identities of this type include personally identifiable information (PII). This is an indication to [!DNL Identity Service] to handle the value sensitively.|
 | Non-people identifier | Non-people IDs are used for storing identifiers that require namespaces but are not connected to a person cluster. For example, a product SKU, data related to products, organizations, or stores. |
@@ -86,9 +86,9 @@ The following identity types are available within Experience Platform:
 
 ### Standard namespaces {#standard}
 
-Experience Platform provides several identity namespaces that are available to all organizations. These are known as standard namespaces and are visible using the [!DNL Identity Service] API or through the Platform UI.
+Experience Platform provides several identity namespaces that are available to all organizations. These are known as standard namespaces and are visible using the [!DNL Identity Service] API or through the Experience Platform UI.
 
-The following standard namespaces are provided for use by all organizations within  Platform:
+The following standard namespaces are provided for use by all organizations within  Experience Platform:
 
 | Display name | Description |
 | ------------ | ----------- |

@@ -27,6 +27,7 @@ All queries are scoped to the your current company and accessible properties.
 >[!IMPORTANT]
 >
 >The search functionality has the following caveats and exceptions:
+>
 >* meta is not searchable and not returned in search results.
 >* Schema fields for extension package delegates (actions, conditions, etc.) are searchable as text, not as a nested data structure.
 >* Range queries presently only support integers.

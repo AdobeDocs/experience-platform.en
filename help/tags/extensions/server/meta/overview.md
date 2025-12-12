@@ -118,6 +118,7 @@ When sending shared events, make sure that you are including an event ID and nam
 >[!NOTE]
 >
 >Any existing client can use the quick start workflows to create a reference implementation that can be used for the following:
+>
 >* Use it as the start of a brand new implementation. 
 >* Take advantage of it as a reference implementation that you can examine to see how it has been configured and then replicate in your current production implementations.
 
@@ -154,7 +155,7 @@ Allow a few minutes for the initial setup process to complete, then select **[!U
 
 ![Initial setup complete confirmation screen](../../../images/extensions/server/meta/setup-complete.png)
 
-From the **[!UICONTROL Add Code on Your Site]** dialog copy the code provided using the copy ![Copy](../../../images/extensions/server/meta/copy-icon.png) function and paste this into the `<head>` of your source website. Once implemented, select **[!UICONTROL Start Validation]**
+From the **[!UICONTROL Add Code on Your Site]** dialog copy the code provided using the copy ![Copy](/help/images/icons/copy.png) function and paste this into the `<head>` of your source website. Once implemented, select **[!UICONTROL Start Validation]**
 
 ![Add code on your site dialog](../../../images/extensions/server/meta/add-code-on-your-site.png)
 

@@ -1,7 +1,7 @@
 ---
 keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising cloud; audience manager; adobe target destination; target; audience manager destination;
 title: Adobe destinations overview
-description: Manage your customer experience by connecting your data in Platform to other Adobe Experience Cloud solutions for ad targeting, personalization, marketing automation and more
+description: Manage your customer experience by connecting your data in Experience Platform to other Adobe Experience Cloud solutions for ad targeting, personalization, marketing automation and more
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
 ---
 # Adobe destinations overview {#adobe-destinations}
@@ -12,7 +12,7 @@ Manage your customer experience by connecting your data in Adobe Experience Plat
 
 ## Supported Adobe destinations {#supported-destinations}
 
-Currently, Platform supports the Adobe destinations listed below.
+Currently, Experience Platform supports the Adobe destinations listed below.
 
 To understand the difference between connections and extensions, see [Connections](../../destination-types.md#connections) in the Destination Types and Categories page.
 
@@ -24,6 +24,7 @@ To understand the difference between connections and extensions, see [Connection
 * [(Beta) Experience Cloud audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Marketo Engage connection](/help/destinations/catalog/adobe/marketo-engage.md)
 * [Marketo Measure Ultimate connection](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
+* [Federated Audience Composition connection](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"}
 
 ### Extensions
 

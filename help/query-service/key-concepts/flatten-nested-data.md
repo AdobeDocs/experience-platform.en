@@ -20,7 +20,7 @@ Using the `FLATTEN` setting requires a working understanding of the following co
   
   * [Create an ad hoc schema](../../xdm/tutorials/ad-hoc.md): An XDM schema with fields that are namespaced for usage only by a single dataset, is referred to as an ad hoc schema. Ad hoc schemas are used in various data ingestion workflows for Experience Platform and creating certain kinds of source connections.
 
-* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 * [Nested data structures](./nested-data-structures.md): This document provides examples of how to create, process, or transform datasets with complex data types including nested data structures.
 
@@ -50,7 +50,7 @@ prod:all?FLATTEN
 
 The example schema used in this guide employs the standard field group [!UICONTROL Commerce Details], which utilizes the `commerce` object structure and the `productListItems` array. See the XDM documentation for [more information on the [!UICONTROL Commerce Details] field group](../../xdm/field-groups/event/commerce-details.md). A representation of the schema structure can be seen in the image below.
 
-![A schema diagram of the Commerce Details field group including the `commerce` and `productListItems` structures.](../images/essential-concepts/commerce-details.png)
+![A schema diagram of the Commerce Details field group including the `commerce` and `productListItems` structures.](../images/key-concepts/commerce-details.png)
 
 If your BI tool does not support nested data structures, it can be difficult to reference nested fields should they contain serialized values (such as `commerce` and `productListItems` in the example schema). These values may appear as parts of a single encoded `commerce` string field and are not realistically unusable. 
 

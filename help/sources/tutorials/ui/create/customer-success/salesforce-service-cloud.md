@@ -20,6 +20,10 @@ If you already have a valid [!DNL Salesforce Service Cloud] connection, you may 
 
 ### Gather required credentials
 
+>[!WARNING]
+>
+>Basic authentication for the [!DNL Salesforce Service Cloud] source will be deprecated in January 2026. You must move to OAuth 2 Client Credential authentication in order to continue using the source and ingesting data from your [!DNL Salesforce Service Cloud] account to Experience Platform.
+
 The [!DNL Salesforce Service Cloud] source supports basic authentication and OAuth2 Client Credential.
 
 >[!BEGINTABS]
@@ -57,7 +61,7 @@ Once you have gathered your required credentials, you can follow the steps below
 
 ## Connect your [!DNL Salesforce Service Cloud] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
 Select **[!DNL Salesforce Service Cloud]** under the *[!UICONTROL Customer success]* category, and then select **[!UICONTROL Add data]**.
 

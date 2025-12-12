@@ -12,19 +12,24 @@ role: Developer,User
 * [Dashboards overview](home.md)
 * [Dashboard access permissions](permissions.md)
 * [Dashboards inventory](inventory.md)
-* [Dashboards](user-defined-dashboards.md)
+* [Standard dashboards](standard-dashboards.md)
 * [Download dashboards to PDF](download.md)
-* Data Distiller {#data-distiller}
-  * [Overview](data-distiller/overview.md)
-  * Customizable Insights for extended app reporting {#customizable-insights}
-    * [Overview](data-distiller/customizable-insights/overview.md)
-    * [Query pro mode (SQL chart creation)](data-distiller/customizable-insights/query-pro-mode.md)
-    * Filters {#filters}
-      * [Date filter](data-distiller/customizable-insights/filters/date-filter.md)
-      * [Global filter](data-distiller/customizable-insights/filters/global-filter.md) 
-    * [View more](data-distiller/customizable-insights/view-more.md)
-    * [View SQL](data-distiller/customizable-insights/view-sql.md)
-    * [Download as CSV](data-distiller/customizable-insights/download-csv.md)
+* SQL insights: query pro mode {#sql-insights-query-pro-mode}
+  * [Overview](sql-insights-query-pro-mode/overview.md)
+  * Data Distiller Templates {#templates}
+    * [Overview](sql-insights-query-pro-mode/templates/overview.md)
+    * [Advanced audience overlaps](sql-insights-query-pro-mode/templates/overlaps.md)
+    * [Audience comparison](sql-insights-query-pro-mode/templates/comparison.md)
+    * [Audience trends](sql-insights-query-pro-mode/templates/trends.md)
+    * [Audience identity overlaps](sql-insights-query-pro-mode/templates/identity-overlaps.md)
+  * Filters {#filters}
+    * [Date filter](sql-insights-query-pro-mode/filters/date-filter.md)
+    * [Global filter](sql-insights-query-pro-mode/filters/global-filter.md) 
+  * [Drill through](sql-insights-query-pro-mode/drill-through.md)
+  * [View more](sql-insights-query-pro-mode/view-more.md)
+  * [View SQL](sql-insights-query-pro-mode/view-sql.md)
+  * [Export as CSV](sql-insights-query-pro-mode/download-csv.md)
+  * [Export as PDF](sql-insights-query-pro-mode/export-pdf.md)
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)
   * [Account Profiles](guides/account-profiles.md)
@@ -52,4 +57,4 @@ role: Developer,User
   * [Power BI](integrations/power-bi.md)
 * [Query dashboard datasets](query.md)
 * [View insight SQL](view-sql.md)
-* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

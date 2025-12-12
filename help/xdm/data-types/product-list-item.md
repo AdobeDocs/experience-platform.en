@@ -22,7 +22,7 @@ The values captured in this data type may differ from the product record. For ex
 | `discountAmount` | [!UICONTROL Double] | If the product is discounted, this represents the difference between the regular price and the special price for the product. |
 | `name` | [!UICONTROL String] | The display name for the product as presented to the user for this product view. |
 | `priceTotal` | [!UICONTROL Double] | The total price for the product line item. |
-| `product` | [!UICONTROL String] (URI) | The URI `$id` of the XDM schema that captures the product itself. |
+| `product` | [!UICONTROL String] (URI) | The XDM identifier of the product itself. |
 | `productAddMethod` | [!UICONTROL String] | The method that was used to add a product item to the list by the visitor. |
 | `productImageUrl` | [!UICONTROL String] | A URL for the main image of the product. |
 | `quantity` | [!UICONTROL Integer] | The number of units the customer has indicated they require of the product. |

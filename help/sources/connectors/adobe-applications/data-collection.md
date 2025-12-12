@@ -12,7 +12,7 @@ The sources integration of Adobe Experience Platform Data Collection allows you 
 
 ## Use the sources workspace to access Data Collection
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -26,8 +26,8 @@ A datastream is a configuration that tells the Edge Network where you want your 
 
 ![datastreams](./images/data-collection/datastreams.png)
 
-For comprehensive steps on how to configure data collection in the UI, see the [data collection end-to-end overview](../../../collection/e2e.md).
+For comprehensive steps on how to configure data collection in the UI, see [Getting started with the Web SDK tag extension](/help/tags/extensions/client/web-sdk/getting-started.md).
 
 ## Next steps
 
-By reading this document, you have learned how to access the Data Collection UI using the sources workspace. For more information on Data Collection, see the [Data Collection overview](../../../collection/e2e.md).
+By reading this document, you have learned how to access the Data Collection UI using the sources workspace. For more information on Data Collection, see the [Data Collection overview](/help/collection/home.md).

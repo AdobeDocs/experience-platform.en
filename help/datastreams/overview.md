@@ -5,7 +5,9 @@ exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 ---
 # Datastreams overview
 
-A datastream represents the server-side configuration when implementing the Adobe Experience Platform Web and Mobile SDKs. While the [`configure`](/help/web-sdk/commands/configure/overview.md) command in the SDK controls things that must be handled on the client (such as the `edgeDomain`), datastreams handle all other configurations for the SDK. When a request is sent to the Adobe Experience Platform Edge Network, the `edgeConfigId` is used to reference the datastream. This allows you to update the server-side configuration without having to make code changes on your website. 
+A datastream represents the server-side configuration for the Adobe Experience Platform Web and Mobile SDKs. While the [`configure`](/help/collection/js/commands/configure/overview.md) command in the SDK handles client-side settings (such as the `edgeDomain`), datastreams manage all other configurations. 
+
+When you send a request to the Edge Network, the `datastreamId` references the datastream where the data is sent. This allows you to update the server-side configuration without changing your website's code.
 
 You can create and manage datastreams by selecting **[!UICONTROL Datastreams]** in the left navigation within the Adobe Experience Platform UI or Data Collection UI.
 
@@ -21,7 +23,7 @@ For more information on how to configure a datastream in the UI, see the [config
 
 Corporate data stewardship policies and regulatory requirements are increasing restrictions on how sensitive customer data can be collected, processed, and used. This includes the collection, processing, and usage of Protected Health Data (PHI) which is subject to to regulations like the Health Insurance Portability and Accountability Act (HIPAA).
 
-Datastreams provides three methods to assist you with securely handling your sensitive data:
+Datastreams provide three methods to assist you with securely handling your sensitive data:
 
 * [Enhanced encryption](#encryption)
 * [Data governance](#governance)

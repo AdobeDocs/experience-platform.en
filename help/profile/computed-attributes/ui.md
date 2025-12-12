@@ -26,7 +26,7 @@ In the Experience Platform UI, select **[!UICONTROL Profiles]** in the left navi
 
 ![The [!UICONTROL Profile] section and the [!UICONTROL Computed attributes] tabs are highlighted, showing users how to access the computed attributes browse page.](./images/ui/browse.png)
 
-To select which fields are visible, you can select ![the configure columns icon](./images/ui/configure-icon.png) to add or remove which fields you want to be displayed.
+To select which fields are visible, you can select ![the configure columns icon](/help/images/icons/column-settings.png) to add or remove which fields you want to be displayed.
 
 | Field | Description |
 | ----- | ----------- |
@@ -41,7 +41,7 @@ To select which fields are visible, you can select ![the configure columns icon]
 | [!UICONTROL Created] | A timestamp showing the date and time the computed attribute was created. |
 | [!UICONTROL Last modified ]| A timestamp showing the date and time the computed attribute was last modified. |
 
-You can also filter the displayed computed attributes based on the lifecycle status. Select the ![funnel](./images/ui/filter-icon.png) icon.
+You can also filter the displayed computed attributes based on the lifecycle status. Select the ![funnel](/help/images/icons/filter.png) icon.
 
 ![The filter icon is highlighted.](./images/ui/select-filter.png)
 

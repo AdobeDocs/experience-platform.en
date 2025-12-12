@@ -8,8 +8,13 @@ exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 ---
 # Train and evaluate a model using the [!DNL Sensei Machine Learning] API
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
-This tutorial will show you how to create, train, and evaluate a Model using API calls. Refer to [this document](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) for a detailed list of API documentation.
+This tutorial will show you how to create, train, and evaluate a Model using API calls. Refer to [this document](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) for a detailed list of API documentation.
 
 ## Prerequisites
 
@@ -430,6 +435,7 @@ The GET call will provide the status in the `state` parameter as shown below:
 `{EXPERIMENT_ID}`: The ID that represents the Experiment which the Experiment Run is under.  
 
 In addition to the `DONE` state, other states include:
+
 - `PENDING`
 - `RUNNING`
 - `FAILED`

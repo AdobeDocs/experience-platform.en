@@ -7,11 +7,11 @@ exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 ---
 # Define identity fields in the UI
 
-In Experience Data Model (XDM), an identity field represents a field that that can be used to identify an individual person related to a record or time-series event. This document covers how to define an identity field in the Adobe Experience Platform UI.
+In Experience Data Model (XDM), an identity field represents a field that can be used to identify an individual person related to a record or time-series event. This document covers how to define an identity field in the Adobe Experience Platform UI.
 
 ## Prerequisites
 
-Identity fields are a crucial component in how customer identity graphs are constructed in Platform, which ultimately affects how Real-Time Customer Profile merges disparate data fragments together to gain a complete view of the customer. Before defining identity fields in your schemas, please refer to the following documentation to learn about the key services and concepts related to identity fields:
+Identity fields are a crucial component in how customer identity graphs are constructed in Experience Platform, which ultimately affects how Real-Time Customer Profile merges disparate data fragments together to gain a complete view of the customer. Before defining identity fields in your schemas, refer to the following documentation to learn about the key services and concepts related to identity fields:
 
 * [Adobe Experience Platform Identity Service](../../../identity-service/home.md): Bridges identities across devices and systems, linking datasets together based on the identity fields defined by the XDM schemas they conform to.
   * [Identity namespaces](../../../identity-service/features/namespaces.md): Identity namespaces define the different types of identity information that can relate to a single person, and are a required component for each identity field.
@@ -22,9 +22,9 @@ Identity fields are a crucial component in how customer identity graphs are cons
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identityField_primaryIdentityRestriction"
 >title="Restrictions to primary identity"
->abstract="This schema uses a field group intended for use in a specific source connection. The connection requires identityMap to be used as primary identity and has set it automatically." 
+>abstract="This schema uses a field group intended for use in a specific source connection. The connection requires identityMap to be used as primary identity and has set it automatically."
 
-When [defining a new field](./overview.md#define) in the UI, you can set it as an identity field by selecting the **[!UICONTROL Identity]** checkbox in the right rail. 
+When [defining a new field](./overview.md#define) in the UI, you can set it as an identity field by selecting the **[!UICONTROL Identity]** checkbox in the right rail.
 
 ![](../../images/ui/fields/special/identity.png)
 
@@ -38,9 +38,13 @@ Under **[!UICONTROL Identity namespace]**, use the dropdown menu to select the a
 
 When finished, select **[!UICONTROL Apply]** to apply the change to the schema.
 
+>[!IMPORTANT]
+>
+>Once a schema is enabled for use in Real-Time Customer Profile and data has been ingested, **you cannot change the primary identity field**. Attempting to do so will result in a validation error. If you need to use a different primary identity, you must create a new schema and a new dataset with the updated identity configuration.
+
 ![](../../images/ui/fields/special/identity-config.png)
 
-The canvas updates to reflect the changes, with the selected field gaining a fingerprint symbol (![](../../images/ui/fields/special/identity-symbol.png)) to designate it as an identity. In the left rail, the identity field is now listed under the name of the class or schema field group that provides the field to the schema.
+The canvas updates to reflect the changes, with the selected field gaining a fingerprint symbol (![](/help/images/icons/identity-service.png)) to designate it as an identity. In the left rail, the identity field is now listed under the name of the class or schema field group that provides the field to the schema.
 
 If the field was also set as the primary identity, it will also be listed under **[!UICONTROL Required fields]** in the left rail. If the identity field is nested within the schema structure, all parent fields will also be listed as required.
 

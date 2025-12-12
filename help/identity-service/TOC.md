@@ -1,7 +1,7 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform Identity Service
-breadcrumb-title: Platform Identity Service Guide
+breadcrumb-title: Experience Platform Identity Service Guide
 user-guide-description: Bridge customer identities across devices and systems to deliver personalized digital experiences.
 feature: Identities
 role: Admin,Developer
@@ -16,14 +16,15 @@ role: Admin,Developer
   - [Identity linking logic](./features/identity-linking-logic.md)
   - [Identity graph viewer](./features/identity-graph-viewer.md)
   - [Deletions in Identity Service](./features/deletion.md)
-  - Identity graph linking rules {#identity-graph-linking-rules}
+  - Identity Graph Linking Rules {#identity-graph-linking-rules}
     - [Feature overview](./identity-graph-linking-rules/overview.md)
-    - [Identity optimization algorithm](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+    - [Identity Optimization Algorithm](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+    - [Implementation guide for Identity Graph Linking Rules](./identity-graph-linking-rules/implementation-guide.md)
+    - [Configurations guide](./identity-graph-linking-rules/example-configurations.md)
+    - [Troubleshooting for Identity Graph Linking Rules](./identity-graph-linking-rules/troubleshooting.md)
     - [Namespace priority](./identity-graph-linking-rules/namespace-priority.md)
-    - [Example scenarios](./identity-graph-linking-rules/example-scenarios.md)
     - [Graph Simulation UI](./identity-graph-linking-rules/graph-simulation.md)
-    - [Identity graph linking rules configuration guide](./identity-graph-linking-rules/configuration.md)
-    - [Identity settings](./identity-graph-linking-rules/identity-settings-ui.md)
+    - [Identity settings UI](./identity-graph-linking-rules/identity-settings-ui.md)
   - [ECID overview](./features/ecid.md)
 - [Implementation guide](implementation.md)
 - [Guardrails for Identity data](guardrails.md)
@@ -37,8 +38,7 @@ role: Admin,Developer
   - [Create a custom namespace](api/create-custom-namespace.md)
   - [List the native ID for an identity](api/list-native-id.md)
   - [API reference](https://www.adobe.io/experience-platform-apis/references/identity-service)
-- [Shared device detection](shared-device-detection.md)
 - [Define identity fields in the UI](label-identities.md)
 - [Privacy request processing](privacy.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
-- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

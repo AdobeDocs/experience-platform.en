@@ -17,7 +17,7 @@ Depending on your API configuration, you may or may not need to use the audience
 
 ## Use cases supported by audience metadata management {#use-cases}
 
-With audience metadata support in Destination SDK, when you configure your Experience Platform destination, you can give Platform users one of several options when they map and activate audiences to your destination. You can control the options available to the user via the parameters in the [Audience metadata configuration](../functionality/destination-configuration/audience-metadata-configuration.md) section of the destination configuration.
+With audience metadata support in Destination SDK, when you configure your Experience Platform destination, you can give Experience Platform users one of several options when they map and activate audiences to your destination. You can control the options available to the user via the parameters in the [Audience metadata configuration](../functionality/destination-configuration/audience-metadata-configuration.md) section of the destination configuration.
 
 ### Use case 1 - You have a 3rd party API and users don't need to input mapping IDs
 
@@ -47,11 +47,10 @@ You can use the generic template to [create a new audience template](../metadata
 
 The Adobe engineering team can work with you to expand the generic template with custom fields if your use cases requires it.
 
-## Configuration examples {#configuration-examples}
 
-This section includes three examples of generic audience metadata configurations, for your reference, along with descriptions of the main sections of the configuration. Notice how the url, headers, request and response body differ between the three example configurations. This is due to the different specifications of the three sample platforms' marketing API.
+## Supported template events {#supported-events}
 
-Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{segment.name}}` are used in the URL, and in other examples these are used in the headers or request body. It really depends on your marketing API specifications.
+The table below describes the events supported by audience metadata templates.
 
 |Template section | Description |
 |--- |--- |
@@ -60,10 +59,21 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
 |`delete` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically delete segments/audiences in your platform. |
 |`validate` | Runs validations for any fields in the template configuration before making a call to the partner API. For example, you could validate that the user's account ID is input correctly. |
 |`notify`| Applies only to file-based destinations. Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to notify you of successful file exports.|
+|`createDestination` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically create a dataflow in your platform and sync the information back to Adobe Experience Platform. |
+|`updateDestination` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically update a dataflow in your platform and sync the information back to Adobe Experience Platform. |
+|`deleteDestination` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically delete a dataflow from your platform. |
 
 {style="table-layout:auto"}
 
-### Streaming example 1 {#example-1}
+## Configuration examples {#configuration-examples}
+
+This section includes examples of generic audience metadata configurations, for your reference.
+
+Notice how the URL, headers, and request bodies differ between the three example configurations. This is due to the different specifications of the three sample platforms' marketing API.
+
+Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{segment.name}}` are used in the URL, and in other examples these are used in the headers or request body. Their usage depends on your marketing API specifications.
+
++++Streaming example 1
 
 ```json
 {
@@ -172,7 +182,9 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
 }
 ```
 
-### Streaming example 2 {#example-2}
++++
+
++++Streaming example 2
 
 ```json
 
@@ -268,7 +280,9 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
 
 ```
 
-### Streaming example 3 {#example-3}
++++
+
++++Streaming example 3
 
 ```json
 {
@@ -370,8 +384,9 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
 }
 ```
 
++++
 
-### File-based example {#example-file-based}
++++File-based example
 
 ```json
 {
@@ -517,6 +532,8 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
 }
 ```
 
++++
+
 Find descriptions of all parameters in the template in the [Create an audience template](../metadata-api/create-audience-template.md) API reference.
 
 ## Macros used in audience metadata templates {#macros}
@@ -533,5 +550,12 @@ To pass information such as audience IDs, access tokens, error messages, and mor
 |`{{authData.accessToken}}` | Allows you to pass the access token to your API endpoint. Use `{{authData.accessToken}}` if Experience Platform should use non-expiring tokens to connect to your destination, otherwise use `{{oauth2ServiceAccessToken}}` to generate an access token. |
 |`{{body.segments[0].segment.id}}` | Returns the unique identifier of the created audience, as the value of the key `externalAudienceId`. |
 |`{{error.message}}` | Returns an error message that will be surfaced to users in the Experience Platform UI. |
+|`{{{segmentEnrichmentAttributes}}}`| Allows you to access all enrichment attributes for a specific audience.  This macro is supported by the `create`, `update`, and `delete` events. Enrichment attributes are available only for [custom upload audiences](destination-configuration/schema-configuration.md#external-audiences). See the [batch audience activation guide](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) to see how enrichment attribute selection works. |
+|`{{destination.name}}`| Returns the name of your destination. |
+|`{{destination.sandboxName}}`| Returns the name of the Experience Platform sandbox where your destination is configured.|
+|`{{destination.id}}`| Returns the ID of your destination configuration. |
+|`{{destination.imsOrgId}}`| Returns the IMS Org ID where your destination is configured.|
+|`{{destination.enrichmentAttributes}}`| Allows you to access all enrichment attributes for all audiences mapped to a destination. This macro is supported by the `createDestination`, `updateDestination`, and `deleteDestination` events. Enrichment attributes are available only for [custom upload audiences](destination-configuration/schema-configuration.md#external-audiences). See the [batch audience activation guide](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) to see how enrichment attribute selection works. |
+|`{{destination.enrichmentAttributes.<namespace>.<segmentId>}}`|Allows you to access enrichment attributes for specific external audiences mapped to a destination. Enrichment attributes are available only for [custom upload audiences](destination-configuration/schema-configuration.md#external-audiences). See the [batch audience activation guide](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) to see how enrichment attribute selection works.|
 
 {style="table-layout:auto"}

@@ -38,9 +38,6 @@ A dataset expiration is a time-delayed "delete a dataset" action. By creating a 
 
 >[!IMPORTANT]
 >
->Record delete requests are only available for organizations that have purchased **Adobe Healthcare Shield**.
->
->
 >Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
 
 The Data Hygiene API allows you delete all records associated with a identity across one or all datasets. All data lifecycle tasks that delete identities are repesented by a construct called a work order. See the [work order endpoint guide](./workorder.md) for details on working with record deletes in the API.
@@ -51,4 +48,4 @@ Your organization is limited to a predetermined monthly job quota for each type 
 
 ## Next steps
 
-This guide covered how to manage data lifecycle requests using API calls. For information on how to perform these actions in the Platform UI, see the [data lifecycle UI guide](../ui/overview.md).
+This guide covered how to manage data lifecycle requests using API calls. For information on how to perform these actions in the Experience Platform UI, see the [data lifecycle UI guide](../ui/overview.md).

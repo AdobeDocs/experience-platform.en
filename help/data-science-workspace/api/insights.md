@@ -8,6 +8,12 @@ exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
 ---
 # Insights endpoint
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 Insights contain metrics which are used to empower a data scientist to evaluate and choose optimal ML models by displaying relevant evaluation metrics.
 
 ## Retrieve a list of Insights

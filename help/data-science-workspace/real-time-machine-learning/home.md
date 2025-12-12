@@ -7,6 +7,12 @@ exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 ---
 # Real-time Machine Learning overview (Alpha)
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 >[!IMPORTANT]
 >
 >Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
@@ -54,6 +60,7 @@ Real-time Machine Learning is currently in alpha. The functionality outlined bel
 >[!NOTE]
 >
 > Alpha limitations:
+>
 > - Currently, only ONNX based models are supported.
 > - Functions used in nodes cannot be serialized. For example, a lambda function used in a Pandas node.
 > - There is a 20 second sleep after [!DNL Edge] deployment is done manually.

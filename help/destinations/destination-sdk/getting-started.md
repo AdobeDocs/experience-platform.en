@@ -11,7 +11,7 @@ This page describes how to authenticate and start using Adobe Experience Platfor
 
 ## Terminology {#terminology}
 
-This guide uses Platform-specific concepts, such as organization and sandboxes. Consult the [Experience Platform glossary](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) for definitions of these and other terms.
+This guide uses Experience Platform-specific concepts, such as organization and sandboxes. Consult the [Experience Platform glossary](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) for definitions of these terms. Consult the [Destination SDK glossary](/help/destinations/destination-sdk/glossary.md) for terms related directly to this functionality.
 
 ## Obtain required authentication credentials {#obtain-authentication-credentials}
 

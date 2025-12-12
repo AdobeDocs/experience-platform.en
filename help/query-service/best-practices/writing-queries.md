@@ -80,7 +80,7 @@ Both of the example queries above return a flattened object, rather than a singl
 
 ```console
               endUserIds._experience.mcid   
---------------------------------------------------------
+|--------------------------------------------------------
  (48168239533518554367684086979667672499,"(ECID)",true)
 (1 row)
 ```
@@ -103,7 +103,7 @@ LIMIT 1
 
 ```console 
      endUserIds._experience.mcid.id 
-----------------------------------------
+|----------------------------------------
  48168239533518554367684086979667672499
 (1 row)
 ```
@@ -195,7 +195,7 @@ Back quotes are **not** needed if you are using bracket-notation.
 
 ## Viewing table information
 
-After connecting to Query Service, you can see all your available tables on Platform by using either the `\d` or `SHOW TABLES` commands.
+After connecting to Query Service, you can see all your available tables on Experience Platform by using either the `\d` or `SHOW TABLES` commands.
 
 ### Standard table view
 
@@ -204,7 +204,7 @@ The `\d` command shows the standard [!DNL PostgreSQL] view for listing tables. A
 ```sql
              List of relations
  Schema |       Name      | Type  |  Owner   
---------+-----------------+-------+----------
+|--------+-----------------+-------+----------
  public | luma_midvalues  | table | postgres
  public | luma_postvalues | table | postgres
 (2 rows)
@@ -216,7 +216,7 @@ The `\d` command shows the standard [!DNL PostgreSQL] view for listing tables. A
 
 ```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
------------------+--------------------------+----------------+-------------+----------
+|-----------------+--------------------------+----------------+-------------+----------
  luma_midvalues  | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
  luma_postvalues | 5c86b896b3c162151785b43c | Luma midValues |             | false
 (2 rows)
@@ -231,7 +231,7 @@ The following example shows the schema information for the `luma_midvalues` tabl
 ```sql
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
--------------------+-----------------------------+-----------+----------+---------
+|-------------------+-----------------------------+-----------+----------+---------
  timestamp         | timestamp                   |           |          | 
  _id               | text                        |           |          | 
  productlistitems  | anyarray                    |           |          | 
@@ -256,7 +256,7 @@ The following example shows additional information for the `web` column, and wou
 ```sql
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
-----------------+-----------------------------------+-----------+----------+---------
+|----------------+-----------------------------------+-----------+----------+---------
  webpagedetails | luma_midvalues_web_webpagedetails |           |          | 
  webreferrer    | web_webreferrer                   |           |          | 
 ```

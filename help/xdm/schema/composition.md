@@ -7,7 +7,7 @@ exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 ---
 # Basics of schema composition
 
-Learn about Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas in Adobe Experience Platform. For general information on XDM and how it is used within [!DNL Platform], see the [XDM System overview](../home.md).
+Learn about Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas in Adobe Experience Platform. For general information on XDM and how it is used within [!DNL Experience Platform], see the [XDM System overview](../home.md).
 
 ## Understanding schemas {#understanding-schemas}
 
@@ -21,7 +21,7 @@ XDM schemas are ideal for storing vast amounts of complex data in a self-contain
 
 ### Schema-based workflows in Experience Platform {#schema-based-workflows}
 
-Standardization is a key concept behind Experience Platform. XDM, driven by Adobe, is an effort to standardize customer experience data and define standard schemas for customer experience management. 
+Standardization is a key concept behind Experience Platform. XDM, driven by Adobe, is an effort to standardize customer experience data and define standard schemas for customer experience management.
 
 The infrastructure on which Experience Platform is built, known as [!DNL XDM System], facilitates schema-based workflows and includes the [!DNL Schema Registry], [!DNL Schema Editor], schema metadata, and service consumption patterns. See the [XDM System overview](../home.md) for more information.
 
@@ -49,24 +49,24 @@ Both record and time series schemas contain a map of identities (`xdm:identityMa
 >title="Identities in schemas"
 >abstract="Identities are key fields within a schema that can be used to identify a subject, such as an email address or a marketing ID. These fields are used to construct the identity graph for each individual and build customer profiles. See the documentation for more information on identities in schemas."
 
-Schemas are used for ingesting data into Experience Platform. This data can be used across multiple services to create a single, unified view of an individual entity. Therefore, it is important when designing schemas for customer identities to consider which fields can be used to identify a subject, regardless of where the data may be coming from.
+Schemas define the structure of data ingested into Experience Platform. That data powers multiple services within the Platform, and help to create a single, unified view of each individual. So when designing schemas, think carefully about which fields to mark as identities—these control how profiles are stitched across datasets.
 
 To help with this process, key fields within your schemas can be marked as identities. Upon data ingestion, the data in those fields is inserted into the "[!UICONTROL Identity Graph]" for that individual. The graph data can then be accessed by [[!DNL Real-Time Customer Profile]](../../profile/home.md) and other Experience Platform services to provide a stitched-together view of each individual customer.
 
 Fields that are commonly marked as "[!UICONTROL Identity]" include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID, or other unique ID fields. Consider any unique identifiers specific to your organization, as they may be good "[!UICONTROL Identity]" fields as well.
 
-It is important to think about customer identities during the schema planning phase to help ensure that data is being brought together to build the most robust profile possible. To learn more about how identity information can help you deliver digital experiences to your customers, see the [Identity Service overview](../../identity-service/home.md). See the data modelling best practices document for [tips on the use of identities when creating a schema](./best-practices.md#data-validation-fields). 
+To learn more about how identity information can help you deliver digital experiences to your customers, see the [Identity Service overview](../../identity-service/home.md). See the data modeling best practices document for [tips on the use of identities when creating a schema](./best-practices.md#data-validation-fields). 
 
-There are two ways to send identity data to Platform:
+There are two ways to send identity data to Experience Platform:
 
 1. Adding identity descriptors to individual fields, either through the [Schema Editor UI](../ui/fields/identity.md) or using the [Schema Registry API](../api/descriptors.md#create)
-1. Using an [`identityMap` field](#identityMap)
+2. Using an [`identityMap` field](#identityMap)
 
 #### `identityMap` {#identityMap}
 
 `identityMap` is a map-type field that describes the various identity values for an individual, along with their associated namespaces. This field can be used to provide identity information for your schemas, instead of defining identity values within the structure of the schema itself.
 
-The main drawback of using `identityMap` is that identities become embedded in the data and become less visible as a result. If you are ingesting raw data, you should define individual identity fields within the actual schema structure instead.
+The main drawback of using `identityMap` is that identity values are nested and may be harder to work with in tools that expect top-level identity fields, such as the Segment Builder or some third-party integrations.
 
 >[!NOTE]
 >
@@ -103,7 +103,7 @@ An example of a simple identity map would look like the following:
 }
 ```
 
-As the example above shows, each key in the `identityMap` object represents an identity namespace. The value for each key is an array of objects, representing the identity values (`id`) for the respective namespace. Refer to the [!DNL Identity Service] documentation for a [list of standard identity namespaces](../../identity-service/troubleshooting-guide.md#standard-namespaces) recognized by Adobe applications. 
+As the example above shows, each key in the `identityMap` object represents an identity namespace. The value for each key is an array of objects, representing the identity values (`id`) for the respective namespace. Refer to the [!DNL Identity Service] documentation for a [list of standard identity namespaces](../../identity-service/troubleshooting-guide.md#standard-namespaces) recognized by Adobe applications.
 
 >[!NOTE]
 >
@@ -117,23 +117,23 @@ Since maintaining backwards compatibility is crucial for schema evolution, Exper
 
 >[!NOTE]
 >
->You can only introduce a breaking change to a schema if it has not yet been used to ingest data into Experience Platform and hasn't been enabled for use in Real-Time Customer Profile. However, once the schema has been used in [!DNL Platform], it must adhere to the additive versioning policy.
+>You can only introduce a breaking change to a schema if it has not yet been used to ingest data into Experience Platform and hasn't been enabled for use in Real-Time Customer Profile. However, once the schema has been used in [!DNL Experience Platform], it must adhere to the additive versioning policy.
 
 The following table breaks down which changes are supported when editing schemas, field groups, and data types:
 
 | Supported changes | Breaking changes (Not supported) |
 | --- | --- |
-| <ul><li>Adding new fields to the resource</li><li>Making a required field optional</li><li>Introducing new required fields*</li><li>Changing the resource's display name and description</li><li>Enabling the schema to participate in Profile</li></ul> | <ul><li>Removing previously defined fields</li><li>Renaming or redefining existing fields</li><li>Removing or restricting previously supported field values</li><li>Moving existing fields to a different location in the tree</li><li>Deleting the schema</li><li>Disabling the schema from participating in Profile</li></ul> |
+| <ul><li>Adding new fields to the resource</li><li>Making a required field optional</li><li>Introducing new required fields*</li><li>Changing the resource's display name and description</li><li>Enabling the schema to participate in Profile</li></ul> | <ul><li>Removing previously defined fields</li><li>Renaming or redefining existing fields</li><li>Removing or restricting previously supported field values</li><li>Moving existing fields to a different location in the tree</li><li>Deleting the schema</li><li>Disabling the schema from participating in Profile</li><li>Changing the primary identity field on a schema that is enabled for Profile and has ingested data</li></ul> |
 
 \**Refer to the section below for important considerations regarding [setting new required fields](#post-ingestion-required-fields).*
 
 ### Required fields
 
-Individual schema fields can be [marked as required](../ui/fields/required.md), which means that any ingested records must contain data in those fields to pass validation. For example, setting a schema's primary identity field as required can help ensure that all ingested records will participate in Real-Time Customer Profile. Equally, setting a timestamp field as required ensures that all time-series events are chronologically preserved.
+Individual schema fields can be [marked as required](../ui/fields/required.md), which means that any ingested records must contain data in those fields to pass validation. For example, setting a schema's primary identity field as required can help ensure that all ingested records will participate in Real-Time Customer Profile. Similarly, setting a timestamp field as required ensures that all time-series events are chronologically preserved.
 
 >[!IMPORTANT]
 >
->Regardless of whether a schema field is required or not, Platform does not accept `null` or empty values for any ingested field. If there is no value for particular field in a record or event, the key for that field should be excluded from the ingestion payload.
+>Regardless of whether a schema field is required or not, Experience Platform does not accept `null` or empty values for any ingested field. If there is no value for a particular field in a record or event, the key for that field should be excluded from the ingestion payload.
 
 #### Setting fields as required after ingestion {#post-ingestion-required-fields}
 
@@ -143,7 +143,7 @@ When setting a previously optional field as required, keep the following in mind
 
 1. If you query historical data and write the results into a new dataset, some rows will fail because they contain null values for the required field.
 1. If the field participates in [Real-Time Customer Profile](../../profile/home.md) and you export data before setting it as required, it may be null for some profiles.
-1. You can use the Schema Registry API to view a timestamped changelog for all XDM resources in Platform, including new required fields. See the guide on the [audit log endpoint](../api/audit-log.md) for more information.
+1. You can use the Schema Registry API to view a timestamped changelog for all XDM resources in Experience Platform, including new required fields. See the guide on the [audit log endpoint](../api/audit-log.md) for more information.
 
 ### Schemas and data ingestion
 
@@ -151,7 +151,7 @@ In order to ingest data into Experience Platform, a dataset must first be create
 
 ## Building blocks of a schema {#schema-building-blocks}
 
-Experience Platform uses a composition approach in which standard building blocks are combined to create schemas. This approach promotes the reusability of existing components and drives standardization across the industry to support vendor schemas and components in [!DNL Platform].
+Experience Platform uses a composition approach in which standard building blocks are combined to create schemas. This approach promotes the reusability of existing components and drives standardization across the industry to support vendor schemas and components in [!DNL Experience Platform].
 
 Schemas are composed using the following formula:
 
@@ -175,9 +175,9 @@ Composing a schema begins by assigning a class. Classes define the behavioral as
 
 A schema's class determines which field groups are eligible for use in that schema. This is discussed in more detail in the [next section](#field-group). 
 
-Adobe provides several standard ("core") XDM classes. Two of these classes, [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent], are required for nearly all downstream Platform processes. In addition these core classes, you can also create your own custom classes to describe more specific use cases for your organization. Custom classes are defined by an organization when there are no Adobe-defined core classes available to describe a unique use case.
+Adobe provides several standard ("core") XDM classes. Two of these classes, [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent], are required for nearly all downstream Experience Platform processes. In addition these core classes, you can also create your own custom classes to describe more specific use cases for your organization. Custom classes are defined by an organization when there are no Adobe-defined core classes available to describe a unique use case.
 
-The following screenshot demonstrates how classes are represented in the Platform UI. Since the example schema shown does not contain any field groups, all of the displayed fields are provided by the schema's class ([!UICONTROL XDM Individual Profile]).
+The following screenshot demonstrates how classes are represented in the Experience Platform UI. Since the example schema shown does not contain any field groups, all of the displayed fields are provided by the schema's class ([!UICONTROL XDM Individual Profile]).
 
 ![The [!UICONTROL XDM Individual Profile] within the Schema Editor.](../images/schema-composition/class.png)
 
@@ -205,17 +205,21 @@ For example, to capture details such as "[!UICONTROL First Name]" and "[!UICONTR
 
 >[!NOTE]
 >
->You are strongly recommended to use standard field groups whenever possible in your schemas, since these fields are implicitly understood by Experience Platform services and provide greater consistency when used across [!DNL Platform] components.
+>You are strongly recommended to use standard field groups whenever possible in your schemas, since these fields are implicitly understood by Experience Platform services and provide greater consistency when used across [!DNL Experience Platform] components.
 >
->Fields provided by standard components (such as "First Name" and "Email Address") contain added connotations beyond basic scalar field types. They tell [!DNL Platform] that any fields sharing the same data type will behave in the same way. This behavior can be trusted to be consistent regardless of where the data is coming from, or in which [!DNL Platform] service the data is being used.
+>Fields provided by standard components (such as "First Name" and "Email Address") contain added connotations beyond basic scalar field types. They tell [!DNL Experience Platform] that any fields sharing the same data type will behave in the same way. This behavior can be trusted to be consistent regardless of where the data is coming from, or in which [!DNL Experience Platform] service the data is being used.
 
 Remember that schemas are composed of "zero or more" field groups, so this means that you could compose a valid schema without using any field groups at all.
 
-The following screenshot demonstrates how field groups are represented in the Platform UI. A single field group ([!UICONTROL Demographic Details]) is added to a schema in this example, which provides a grouping of fields to the schema's structure.
+The following screenshot demonstrates how field groups are represented in the Experience Platform UI. A single field group ([!UICONTROL Demographic Details]) is added to a schema in this example, which provides a grouping of fields to the schema's structure.
 
 ![The Schema Editor with the [!UICONTROL Demographic Details] field group highlighted in an example schema.](../images/schema-composition/field-group.png)
 
 For the most up-to-date list of available standard XDM field groups, refer to the [official XDM repository](https://github.com/adobe/xdm/tree/master/components/fieldgroups). Alternatively, you can refer to the guide on [exploring XDM components](../ui/explore.md) if you prefer to view resources in the UI.
+
+>[!NOTE]
+>
+> Standard XDM field groups are always evolving and some field groups have been deprecated. For the most update-to-date list of deprecated field groups, refer to the [deprecated field groups section](https://github.com/adobe/xdm/tree/master/components/fieldgroups/deprecated) in the official XDM respository.
 
 ### Data type {#data-type}
 
@@ -227,11 +231,15 @@ Data types are used as reference field types in classes or schemas in the same w
 
 Experience Platform provides a number of common data types as part of the [!DNL Schema Registry] to support the use of standard patterns for describing common data structures. This is explained in more detail in the [Schema Registry tutorials](../tutorials/create-schema-api.md) and will become clearer as you walk through the steps to define data types.
 
-The following screenshot demonstrates how data types are represented in the Platform UI. One of the fields provided by the [!UICONTROL Demographic Details] field group uses the "[!UICONTROL Object]" data type, as indicated by the text following the pipe character (`|`) next to the field's name. This particular data type provides several subfields that relate to the name of an individual person, a construct that can be reused for other fields where a person's name needs to be captured.
+The following screenshot demonstrates how data types are represented in the Experience Platform UI. One of the fields provided by the [!UICONTROL Demographic Details] field group uses the "[!UICONTROL Object]" data type, as indicated by the text following the pipe character (`|`) next to the field's name. This particular data type provides several subfields that relate to the name of an individual person, a construct that can be reused for other fields where a person's name needs to be captured.
 
 ![A diagram in the Schema Editor for an individual person with the Full name object and attributes highlighted.](../images/schema-composition/data-type.png)
 
 For the most up-to-date list of available standard XDM data types, refer to the [official XDM repository](https://github.com/adobe/xdm/tree/master/components/datatypes). Alternatively, you can refer to the guide on [exploring XDM components](../ui/explore.md) if you prefer to view resources in the UI.
+
+>[!NOTE]
+>
+> Standard XDM data types are always evolving and some data types have been deprecated. For the most update-to-date list of deprecated data types, refer to the [deprecated data types section](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated) in the official XDM respository.
 
 ### Field {#field}
 
@@ -264,7 +272,7 @@ The valid ranges of these scalar types can be further constrained to certain pat
 
 ## Composition example {#composition-example}
 
-Schemas are built using a composition model and represent the format and structure of data to be ingested into [!DNL Platform]. As previously mentioned, these schemas are composed of a class and zero or more field groups that are compatible with that class.
+Schemas are built using a composition model and represent the format and structure of data to be ingested into [!DNL Experience Platform]. As previously mentioned, these schemas are composed of a class and zero or more field groups that are compatible with that class.
 
 For example, a schema describing purchases made at a retail store might be called "[!UICONTROL Store Transactions]". The schema implements the [!DNL XDM ExperienceEvent] class combined with the standard [!UICONTROL Commerce] field group and a user-defined [!UICONTROL Product Info] field group. 
 
@@ -280,7 +288,7 @@ While Experience Platform allows you to compose schemas for particular use cases
 
 ![A union schema flow diagram that portrays the fields that compose them.](../images/schema-composition/union.png)
 
-By enabling a schema for use with [!DNL Real-Time Customer Profile], it is included in the union for that class type. [!DNL Profile] delivers robust, centralized profiles of customer attributes and a timestamped account of every event that customer has had across any system integrated with [!DNL Platform]. [!DNL Profile] uses the union view to represent this data and provide a holistic view of each individual customer.
+By enabling a schema for use with [!DNL Real-Time Customer Profile], it is included in the union for that class type. [!DNL Profile] delivers robust, centralized profiles of customer attributes and a timestamped account of every event that customer has had across any system integrated with [!DNL Experience Platform]. [!DNL Profile] uses the union view to represent this data and provide a holistic view of each individual customer.
 
 For more information on working with [!DNL Profile], see the [Real-Time Customer Profile overview](../../profile/home.md).
 
@@ -290,7 +298,7 @@ All datafiles that are ingested into Experience Platform must conform to the str
 
 ## Schemas for external audiences
 
-If you are bringing audiences from external systems into Platform, you must use the following components to capture them in your schemas:
+If you are bringing audiences from external systems into Experience Platform, you must use the following components to capture them in your schemas:
 
 * [[!UICONTROL Segment definition] class](../classes/segment-definition.md): Use this standard class to capture key attributes of an external segment definition.
 * [[!UICONTROL Segment Membership Details] field group](../field-groups/profile/segmentation.md): Add this field group to your [!UICONTROL XDM Individual Profile] schema to associate customer profiles with specific audiences.

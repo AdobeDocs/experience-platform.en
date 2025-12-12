@@ -10,7 +10,9 @@ exl-id: 401c393f-aeda-4ecd-89f4-458833190ced
 ![A diagram of the Advertising Pod Details Information Collection data type.](../images/data-types/advertising-pod-details-collection.png)
 
 | Display name                            | Property        | Data type | Required | Description                                             |
-|-----------------------------------------|-----------------|-----------|--------------------------------------------------------------------|
+|-----------------------------------------|-----------------|-----------|----------|---------------------------------------------------------|
 | [!UICONTROL Ad In Pod Position]         | `index`         | integer   |  Yes   | The index of the ad inside the parent ad break start.      |
 | [!UICONTROL Pod Friendly Name]          | `friendlyName`  | string    |  No    | The easily understandable name of the ad break.           |
 | [!UICONTROL Pod Offset]                 | `offset`        | integer   |  Yes   | The offset of the ad break inside the content, in seconds. |
+
+{style="table-layout:auto"}

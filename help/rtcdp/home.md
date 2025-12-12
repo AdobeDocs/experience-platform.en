@@ -15,6 +15,12 @@ Get a glimpse of the newest enhancements in Real-Time CDP product and documentat
 
 >[!BEGINTABS]
 
+>[!TAB Federated Audience Composition]
+
+Federated Audience Composition allows enterprises to compose data for better application across various use cases. With this new approach, as an Adobe Real-Time Customer Data Platform and/or Adobe Journey Optimizer user, you can federate datasets directly from your existing data warehouse to create and enrich Adobe Experience Platform audiences and attributes all in one system.
+
+[![image](assets/do-not-localize/learn-more-button.svg)](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
+
 >[!TAB Use Case Playbooks]
 
 The [!UICONTROL Use Case Playbooks] functionality is now generally available for all Real-Time CDP and Adobe Journey Optimizer customers. [!UICONTROL Use Case Playbooks] are designed to assist users in overcoming challenges when starting with Real-Time Customer Data Platform or Adobe Journey Optimizer. When you're unsure of where to begin or how to create the right assets for your desired use cases, Use Case Playbooks provide inspiration and create different assets for you to test and import to production environments when ready.
@@ -124,7 +130,7 @@ Explore the product documentation links below to understand how the four core pi
     </td>
     <td>
       <img src="assets/do-not-localize/icon-cloud.svg" width="35px"><br/>
-      <strong>Cloud and AI/ML capabilities</strong><br/>AI and ML capabilities assist you at every step of the way in multiple dashboards. Some highlights include the areas below. <br/> <a href="/help/segmentation/ui/lookalike-audiences.md">Lookalike audiences</a> - <a href="/help/rtcdp/segmentation/customer-ai.md">Customer AI</a> - <a href="/help/rtcdp/b2b-ai-ml-services/related-accounts.md">Related accounts</a> - <a href="/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md">Predictive lead and account scoring</a> - <a href="/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md">Lead-to-account matching</a>
+      <strong>Cloud and AI/ML capabilities</strong><br/>AI and ML capabilities assist you at every step of the way in multiple dashboards. Some highlights include the areas below. <br/> <a href="/help/segmentation/types/account-audiences.md">Lookalike audiences</a> - <a href="/help/rtcdp/segmentation/customer-ai.md">Customer AI</a> - <a href="/help/rtcdp/b2b-ai-ml-services/related-accounts.md">Related accounts</a> - <a href="/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md">Predictive lead and account scoring</a> - <a href="/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md">Lead-to-account matching</a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon-learn.svg" width="35px"><br/>

@@ -10,7 +10,7 @@ Filter functions are used to filter data within arrays in [!DNL Profile Query La
 
 ## Filter 
 
-The `[]` (filter) function allows filters to be applied to an array and return a subset of the array which match the specified condition. 
+The `[]` (filter) function allows filters to be applied to an array and return a subset of the array which match the specified condition. As a result, this function returns an array.
 
 **Format**
 

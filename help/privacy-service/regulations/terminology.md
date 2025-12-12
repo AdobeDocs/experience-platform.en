@@ -5,7 +5,7 @@ title: Privacy Regulations Terminology
 description: This document provides definitions for key terms related to privacy regulations supported by Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
 ---
-# Privacy regulations terminology
+# Privacy regulations terminology 
 
 This document provides definitions for key terms related to privacy regulations supported by Adobe Experience Cloud.
 
@@ -47,6 +47,8 @@ This document provides definitions for key terms related to privacy regulations 
 
 **Data subject**: A natural person whose personal data is processed by a controller or processor.
 
+**[!DNL Delaware Personal Data Privacy Act]**: The [!DNL Delaware Personal Data Privacy Act] provides Delaware residents rights to access, correct, delete, and opt out of personal data sales and targeted advertising. The Act applies to businesses processing data for at least 35,000 consumers or earning over 20% of revenue from data sales impacting 10,000+ consumers. Enforced by the Department of Justice, it includes mandatory data protection practices and a 60-day period to address violations.
+
 **Delegated acts**: Non-legislative acts enacted to supplement the existing legislation and provide criteria or clarity.
 
 **Derogation**: An exemption from a law.
@@ -64,6 +66,8 @@ This document provides definitions for key terms related to privacy regulations 
 ## F
 
 **Filing system**: Any specific set of personal data that is accessible according to specific criteria, or able to be queried.
+
+**FDBR**: The [!DNL Florida Digital Bill of Rights] (FDBR) is legislation that provides Florida residents with the rights to access, correct, delete, and copy their personal data. It mandates transparency in data practices, allows opt-outs for data sales or targeted advertising, and prohibits unauthorized surveillance. The Florida Department of Legal Affairs enforces these rights, requiring data controllers to respond to requests within 45 days.
 
 ## G
 
@@ -83,6 +87,8 @@ This document provides definitions for key terms related to privacy regulations 
 
 **IMS Org ID**: Refers to an Adobe authorization token for service-to-service authentication, which does not require user login. It is issued to an IMS client, and has no associated user. An IMS client needs a service token to authorize back-channel requests between services. (The term "system token" is occasionally used to mean service token.)
 
+**[!DNL Iowa Consumer Data Protection Act]**: A state privacy law that grants Iowa residents the right to access, delete, and opt out of the sale of their personal data. The ICDPA applies to businesses processing data for more than 100,000 Iowa residents or deriving over 50% of revenue from data sales. Notable exemptions include nonprofits and educational institutions. The law provides a 90-day cure period for businesses to correct violations before penalties are imposed.
+
 ## J
 
 ## K
@@ -97,21 +103,34 @@ This document provides definitions for key terms related to privacy regulations 
 
 **MHMDAa**: The [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) enhances privacy rights for consumers regarding their health data. It mandates disclosures, consumer consent, and deletion rights for health data, and prohibits the sale of health data without authorization. Additionally, the Act makes it unlawful to use geofencing around healthcare facilities.
 
+**[!DNL Minnesota Consumer Data Privacy Act]** (MCDPA): Effective July 31, 2025, the MCDPA gives Minnesota residents rights to access, correct, delete, and obtain their personal data, as well as opt out of data sales, targeted advertising, and certain profiling. It applies to businesses operating in or targeting Minnesota that process data of 100,000+ consumers annually (excluding payment-only data), or 25,000+ consumers if over 25% of revenue comes from data sales. Covered entities must implement reasonable data security measures and conduct risk assessments.The Minnesota Attorney General enforces the law and may issue fines of up to $7,500 per violation. However, businesses have until January 31, 2026, to fix any violations before penalties are applied.
+
+**MODPA**: The [!DNL Maryland Online Data Privacy Act] grants residents rights including access, correction, deletion, and data portability. Residents may opt out of data processing for targeted advertising, personal data sales, and profiling. The Act prohibits geofencing around mental health or reproductive health facilities. The law applies to entities that process data from more than 35,000 consumers, or to those that process data from more than 10,000 consumers and derive over 20% of their revenue from selling that data. Enforcement is handled by the Maryland Attorney General, with fines and penalties applicable for violations.
+
+**[!DNL Montana Consumer Data Privacy Act]**: This law gives Montana residents rights to access, correct, delete, and request copies of their personal data. The MCDPA applies to businesses that process data for over 50,000 Montana consumers and emphasizes the protection of sensitive personal data, such as biometric and genetic information. It enforces transparency around data collection, sharing, and selling practices.
+
 ## N
 
+**[!DNL Nebraska Data Protection Act]**: A privacy law that provides Nebraskans the right to access, correct, delete, and opt out of the sale of their personal data. It applies to businesses that meet specific data processing and revenue thresholds. The NDPA also requires businesses to implement reasonable data security measures and offers a 30-day cure period to resolve violations before penalties are applied.
+
+**[!DNL New Hampshire Privacy Act]**: This regulation protects the personal data of New Hampshire residents by granting them rights to access, delete, and transfer their data. It mandates businesses to disclose their data collection and sharing practices and allows consumers to opt out of data sales. The NHDPA applies to companies that meet specified data processing thresholds.
+
+**[!DNL New Jersey Data Protection Act]**: A comprehensive state privacy law that provides New Jersey residents with rights to access, correct, and delete personal data. It includes opt-out mechanisms for data sales and targeted advertising. The NJDPA applies to businesses processing large volumes of consumer data and requires transparency in how businesses handle personal information.
+
+
 ## O
+
+**OCPA**: The Oregon Consumer Privacy Act (OCPA) legislation grants Oregon residents key rights over their personal data, including the rights to know, correct, delete, and obtain a copy of their data. It imposes strict obligations on businesses, requiring them to provide detailed privacy notices, gain consent for certain data uses, and implement heightened protections for sensitive information. The legislation aims to balance consumer privacy with business interests.
 
 ## P
 
 **PDPA**: The [!DNL Personal Data Protection Act] of Thailand (PDPA) was introduced to safeguard Thai data owners from the illegal collection, use, or disclosure of their personal data. Inspired by the European Union's GDPR, the regulation grants Thai citizens the right to request access to, or the deletion of, their stored personal data.
 
-<!-- Not yet released:
-**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
--->
-
 **Personal data**: Any information related to a natural person or 'Data Subject', that can be used to directly or indirectly identify the person.
 
 **Personal data breach**: A breach of security leading to the accidental or unlawful access to, destruction, misuse, and so on, of personal data.
+
+**PIPA** (South Korea): The [!DNL Personal Information Protection Act] regulates the processing and protection of personal data for South Korean residents. PIPA grants residents rights including to be informed, access, obtain copies, and request correction, deletion, or suspension of processing. Controllers must specify collection purposes, process data lawfully to the minimum extent necessary, and ensure data accuracy. The Act also established the Personal Information Protection Commission for enforcement, which can issue fines and administrative penalties for non-compliance.
 
 **Privacy by design**: A principle that calls for the inclusion of data protection from the onset of the designing of systems, rather than an addition.
 
@@ -124,6 +143,8 @@ This document provides definitions for key terms related to privacy regulations 
 **Pseudonymization**: The processing of personal data such that it can no longer be attributed to a single data subject without the use of additional data, so long as that additional data stays separate to ensure non-attribution.
 
 ## Q
+
+**[!DNL Quebec Law 25]**: [!DNL Quebec Law 25] enhances privacy rights for residents, mandating explicit consent, data minimization, and rights to access, correct, delete, and transfer personal data. Organizations must appoint a privacy officer, conduct privacy impact assessments, and report breaches. Compliance deadlines and significant penalties apply for violations.
 
 ## R
 
@@ -146,6 +167,10 @@ This document provides definitions for key terms related to privacy regulations 
 **Supervisory authority**: A public authority which is established by a member state in accordance with article 46.
 
 ## T
+
+**TDPSA**: The Texas Data Privacy and Security Act (TDPSA) is a comprehensive legislation that protects Texas residents' personal data rights. It grants individuals the right to access, correct, delete, and obtain copies of their data and to opt out of data sales and targeted advertising. Businesses violating this legislation can face financial penalties.
+
+**[!DNL Tennessee Information Protection Act (TIPA)]**: Effective July 1, 2025, TIPA gives residents the right to access, correct, delete, and obtain their personal data. It also allows them to opt out of data sales, targeted advertising, and profiling used to make decisions that produce legal or similarly significant effects. It applies to businesses with over $25 million in annual revenue that process data of 175,000 or more consumers, or 25,000 if over half of revenue comes from selling personal data. Covered businesses must adopt reasonable security measures and conduct data protection assessments for certain high-risk processing activities. The Tennessee Attorney General enforces the law, with fines up to $7,500 per violation. Businesses have 60 days to fix violations before facing penalties, but intentional or knowing violations may result in triple damages.
 
 **Trilogues**: Trilogues are informal negotiations between the European Commission, the European Parliament, and the Council of the European Union. These negotiations are usually held following the first readings of proposed legislation to more quickly agree to a compromise text to be adopted.
 agree on the adoption of a compromise text more quickly.

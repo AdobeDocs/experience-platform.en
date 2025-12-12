@@ -7,7 +7,7 @@ exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 ---
 # Choose from a selection of playbooks
 
-To use a playbook, navigate to **[!UICONTROL Use Case Playbooks] > [!UICONTROL Playbooks]**. Browse and use the various searching and filtering options on the page to select and get started with a specific playbook.
+To use a playbook, select **[!UICONTROL Playbooks]** from the left navigation. Browse and use the various searching and filtering options on the page to select and get started with a specific playbook.
 
 ## Search and filter {#search-and-filter}
 
@@ -49,7 +49,7 @@ The mindmap starts with a definition of who is reached in the user journey and d
 Inspect the summary section to understand which assets are generated once you create instances from the playbook. The assets that get generated for each playbook are tailored to the use case that the playbook enables. Get more information below about all the items in the summary section.
 
 | Item | Description |
----------|----------|
+|---------|----------|
 | **[!UICONTROL Target audience]** | Describes the personas that you are looking to reach through this use case playbook. |
 | **[!UICONTROL Marketing Channels]** | Describes the channels used to reach the personas targeted in the playbook. |
 | **[!UICONTROL Technical assets]** | A list of the technical assets that are generated after you create instances of the playbook. The generated assets differ by playbook, depending on the use case. Some playbooks might generate schemas, segments, and journeys. Others may generate destinations. Refer to the [Understand the generated assets](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) section further in the guide on creating and reusing instances for more information about how you can use and reuse the generated assets.  |

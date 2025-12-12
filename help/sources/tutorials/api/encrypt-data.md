@@ -9,7 +9,7 @@ You can ingest encrypted data files to Adobe Experience Platform using cloud sto
 
 The encrypted data ingestion process is as follows:
 
-1. [Create an encryption key pair using Experience Platform APIs](#create-encryption-key-pair). The encryption key pair consists of a private key and a public key. Once created, you can copy or download the public key, alongside its corresponding public key ID and Expiry Time. During this process, the private key will be stored by Experience Platform in a secure vault. **NOTE:** The public key in the response is Base64-encoded and must be decrypted prior to using.
+1. [Create an encryption key pair using Experience Platform APIs](#create-encryption-key-pair). The encryption key pair consists of a private key and a public key. Once created, you can copy or download the public key, alongside its corresponding public key ID and Expiry Time. During this process, the private key will be stored by Experience Platform in a secure vault. **NOTE:** The public key in the response is Base64-encoded and must be decoded prior to using.
 2. Use the public key to encrypt the data file that you want to ingest.
 3. Place your encrypted file in your cloud storage.
 4. Once the encrypted file is ready, [create a source connection and a dataflow for your cloud storage source](#create-a-dataflow-for-encrypted-data). During the flow creation step, you must provide an `encryption` parameter and include your public key ID. 
@@ -25,13 +25,13 @@ This document provides steps on how to generate a encryption key pair to encrypt
 
 This tutorial requires you to have a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
   * [Cloud storage sources](../api/collect/cloud-storage.md): Create a dataflow to bring batch data from your cloud storage source to Experience Platform.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../landing/api-guide.md).
 
 ### Supported file extensions for encrypted files {#supported-file-extensions-for-encrypted-files}
 
@@ -58,6 +58,10 @@ The list of supported file extensions for encrypted files are:
 
 ## Create encryption key pair {#create-encryption-key-pair}
 
+>[!IMPORTANT]
+>
+>Encryption keys are specific to a given sandbox. Therefore, you must create new encryption keys if you want to ingest encrypted data in a different sandbox, within your organization.
+
 The first step in ingesting encrypted data to Experience Platform is to create your encryption key pair by making a POST request to the `/encryption/keys` endpoint of the [!DNL Connectors] API.
 
 **API format**
@@ -81,6 +85,7 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-encryption",
       "encryptionAlgorithm": "PGP",
       "params": {
           "passPhrase": "{{PASSPHRASE}}"
@@ -90,6 +95,7 @@ curl -X POST \
 
 | Parameter | Description |
 | --- | --- |
+| `name` | The name of your encryption key pair. |
 | `encryptionAlgorithm` | The type of encryption algorithm that you are using. The supported encryption types are `PGP` and `GPG`. |
 | `params.passPhrase` | The passphrase provides an additional layer of protection for your encryption keys. Upon creation, Experience Platform stores the passphrase in a different secure vault from the public key. You must provide a non-empty string as a passphrase. |
 
@@ -147,13 +153,15 @@ curl -X GET \
 
 +++View example response
 
-A successful response returns your encryption algorithm, public key, public key ID, and the corresponding expiry time of your keys.
+A successful response returns your encryption algorithm, name, public key, public key ID, key type, and the corresponding expiry time of your keys.
 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -188,13 +196,15 @@ curl -X GET \
 
 +++View example response
 
-A successful response returns your encryption algorithm, public key, public key ID, and the corresponding expiry time of your keys.
+A successful response returns your encryption algorithm, name, public key, public key ID, key type, and the corresponding expiry time of your keys.
 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -205,7 +215,7 @@ A successful response returns your encryption algorithm, public key, public key 
 
 You can optionally create a sign verification key pair to sign and ingest your encrypted data.
 
-During this stage, you must generate your own private key and public key combination and then use your private key to sign your encrypted data. Next, you must encode your public key in Base64 and then share it to Experience Platform in order for Platform to verify your signature.
+During this stage, you must generate your own private key and public key combination and then use your private key to sign your encrypted data. Next, you must encode your public key in Base64 and then share it to Experience Platform in order for Experience Platform to verify your signature.
 
 ### Share your public key to Experience Platform
 
@@ -230,8 +240,12 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-sign-verification-keys"
       "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
-      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}},
+      "params": {
+          "passPhrase": {{PASS_PHRASE}}
+      }
     }'
 ```
 
@@ -258,11 +272,53 @@ curl -X POST \
 
 +++
 
+### Retrieve customer managed key pair
+
+To retrieve your customer managed keys, make a GET request to the `/customer-keys` endpoint.
+
+**API format**
+
+```http
+GET /data/foundation/connectors/encryption/customer-keys
+```
+
+**Request**
+
++++View example request
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Response**
+
++++View example response
+
+```json
+[
+    {
+        "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+        "name": "{NAME}",
+        "publicKeyId": "{PUBLIC_KEY_ID}",
+        "publicKey": "{PUBLIC_KEY}",
+        "keyType": "{KEY_TYPE}",
+    }
+]
+```
+
++++
+
 ## Connect your cloud storage source to Experience Platform using the [!DNL Flow Service] API
 
-Once you have retrieved your encryption key pair, you can now proceed and create a source connection for your cloud storage source and bring your encrypted data to Platform. 
+Once you have retrieved your encryption key pair, you can now proceed and create a source connection for your cloud storage source and bring your encrypted data to Experience Platform. 
 
-First, you must create a base connection to authenticate your source against Platform. To create a base connection and authenticate your source, select the source you would like to use from the list below:
+First, you must create a base connection to authenticate your source against Experience Platform. To create a base connection and authenticate your source, select the source you would like to use from the list below:
 
 * [Amazon S3](../api/create/cloud-storage/s3.md)
 * [[!DNL Apache HDFS]](../api/create/cloud-storage/hdfs.md)
@@ -351,8 +407,8 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `flowSpec.id` | The flow spec ID that corresponds with cloud storage sources. |
-| `sourceConnectionIds` | The source connection ID. This ID represents the transfer of data from source to Platform. |
-| `targetConnectionIds` | The target connection ID. This ID represents where the data lands once it is brought over to Platform. |
+| `sourceConnectionIds` | The source connection ID. This ID represents the transfer of data from source to Experience Platform. |
+| `targetConnectionIds` | The target connection ID. This ID represents where the data lands once it is brought over to Experience Platform. |
 | `transformations[x].params.mappingId` | The mapping ID.|
 | `transformations.name` | When ingesting encrypted files, you must provide `Encryption` as an additional transformations parameter for your dataflow. |
 | `transformations[x].params.publicKeyId` | The public key ID that you created. This ID is one half of the encryption key pair used to encrypt your cloud storage data. |

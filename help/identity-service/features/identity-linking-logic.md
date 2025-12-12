@@ -3,7 +3,12 @@ title: Identity Service Linking Logic
 description: Learn about how Identity Service links disparate identities to create a comprehensive view of a customer.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
 ---
-# Identity Service linking logic
+# Identity Service linking logic {#identity-service-linking-logic}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_simulatedgraph"
+>title="Simulated Graph"
+>abstract="Identities are linked when the identity namespace and identity value match."
 
 A link between two identities are established when the identity namespace and the identity values match.
 
@@ -18,17 +23,18 @@ An identity represents a real-world entity. If there is a link established betwe
 
 | Action | Links established | Meaning |
 | --- | --- | --- |
-| An end user logs in using a computer. | CRM ID and ECID are linked together. | A person (CRM ID) owns a device with a browser (ECID). |
+| An end user logs in using a computer. | CRMID and ECID are linked together. | A person (CRMID) owns a device with a browser (ECID). |
 | An end user browses anonymously using an iPhone .| IDFA is linked with ECID. | The Apple hardware device (IDFA), such as an iPhone, is associated with the browser (ECID). |
-| An end user logs in using Google Chrome, and then Firefox. | CRM ID is linked with two different ECIDs. | A person (CRM ID) is associated to 2 web browsers (**Note**: Each browser will have its own ECID). |
-| A data engineer ingests a CRM record that includes two fields marked as an identity: CRM ID and Email.| CRM ID and Email are linked. | A person (CRM ID) is associated to the email address. |
+| An end user logs in using Google Chrome, and then Firefox. | CRMID is linked with two different ECIDs. | A person (CRMID) is associated to 2 web browsers (**Note**: Each browser will have its own ECID). |
+| A data engineer ingests a CRM record that includes two fields marked as an identity: CRMID and Email.| CRMID and Email are linked. | A person (CRMID) is associated to the email address. |
 
 ## Understanding the Identity Service linking logic
 
 An identity consists of an identity namespace and an identity value.
 
-* An identity namespace is the context of a given identity value to. Common examples of identity namespaces include CRM ID, Email, and Phone.
+* An identity namespace is the context of a given identity value to. Common examples of identity namespaces include CRMID, Email, and Phone.
 * An identity value is the string that represents a real-world entity. For example: "julien<span>@acme.com" can be an identity value for an Email namespace and 555-555-1234 can be a corresponding identity value for a Phone namespace.
+* Identity Service is case-sensitive. For example, **julien<span>@gmail.com** and **JULIEN<span>@GMAIL.COM** would be treated as two separate Email identities.
 
 >[!TIP]
 >
@@ -44,7 +50,7 @@ Suppose that you have an existing identity graph with three linked identities:
 
 * PHONE:(555)-555-1234
 * EMAIL:julien<span>@acme.com
-* CRM ID:60013ABC
+* CRMID:60013ABC
 
 ![existing graph](../images/identity-settings/existing-graph.png)
 
@@ -52,14 +58,14 @@ Suppose that you have an existing identity graph with three linked identities:
 
 A pair of identities are ingested into your graph and this pair contains:
 
-* CRM ID:60013ABC
+* CRMID:60013ABC
 * ECID:100066526
 
 ![incoming data](../images/identity-settings/incoming-data.png)
 
 >[!TAB Updated graph]
 
-Identity Service recognizes that CRM ID:60013ABC already exists within your graph, and so only links the new ECID
+Identity Service recognizes that CRMID:60013ABC already exists within your graph, and so only links the new ECID
 
 ![updated graph](../images/identity-settings/updated-graph.png)
 
@@ -69,7 +75,7 @@ Identity Service recognizes that CRM ID:60013ABC already exists within your grap
 
 You are a data engineer and you ingest the following CRM dataset (Profile record) to Experience Platform.
 
-| CRM ID** | Phone* | Email* | First name | Last name |
+| CRMID** | Phone* | Email* | First name | Last name |
 | --- | --- | --- | --- | --- |
 | 60013ABC | 555-555-1234 | julien<span>@acme.com | Julien| Smith |
 | 31260XYZ | 777-777-6890 | evan<span>@acme.com | Evan | Smith |
@@ -86,25 +92,25 @@ You have also implemented WebSDK and ingested a WebSDK dataset (Experience Event
 | Timestamp | Identities in the event* | Event |
 | --- | --- | --- |
 | `t=1` | ECID:38652 | View home page |
-| `t=2` | ECID:38652, CRM ID:31260XYZ | Search for shoes |
+| `t=2` | ECID:38652, CRMID:31260XYZ | Search for shoes |
 | `t=3` | ECID:44675 | View home page |
-| `t=4` | ECID:44675, CRM ID: 31260XYZ | View purchase history |
+| `t=4` | ECID:44675, CRMID: 31260XYZ | View purchase history |
 
-The primary identity for each event will be determined based on [how you configure data element types](../../tags/extensions/client/web-sdk/data-element-types.md).
+The primary identity for each event will be determined based on [how you configure data element types](/help/tags/extensions/client/web-sdk/data-element-types.md).
 
 >[!NOTE]
 >
->* If you select the CRM ID as the primary, then authenticated events (events with identity map containing the CRM ID and ECID) will have a primary identity of CRM ID. For unauthenticated events (events with the identity map only containing ECID) will have a primary identity of ECID. Adobe recommends this option.
+>* If you select the CRMID as the primary, then authenticated events (events with identity map containing the CRMID and ECID) will have a primary identity of CRMID. For unauthenticated events (events with the identity map only containing ECID) will have a primary identity of ECID. Adobe recommends this option.
 >
 >* If you select the ECID as the primary, irrespective of the authentication state, the ECID becomes the primary identity. 
 
 In this example:
 
 * `t=1`, used a desktop computer (ECID:38652) and to view the home page browse anonymously.
-* `t=2`, used the same desktop computer, logged in (CRM ID:31260XYZ) and then searched for shoes.
-  * Once a user is logged in, the event sends both ECID and CRM ID to Identity Service.
+* `t=2`, used the same desktop computer, logged in (CRMID:31260XYZ) and then searched for shoes.
+  * Once a user is logged in, the event sends both ECID and CRMID to Identity Service.
 * `t=3`, used a laptop computer (ECID:44675) and browsed anonymously.
-* `t=4`, used the same laptop computer, logged in (CRM ID: 31260XYZ) and then viewed the purchase history.
+* `t=4`, used the same laptop computer, logged in (CRMID: 31260XYZ) and then viewed the purchase history.
 
 
 >[!BEGINTABS]
@@ -113,7 +119,7 @@ In this example:
 
 At `timestamp=0`, you have two identity graphs for two different customers. Both of whom are each represented by three linked identities.
 
-| | CRM ID | Email | Phone |
+| | CRMID | Email | Phone |
 | --- | --- | --- | --- |
 | Customer one | 60013ABC | julien<span>@acme.com | 555-555-1234 |
 | Customer two | 31260XYZ | evan<span>@acme.com | 777-777-6890 |
@@ -128,7 +134,7 @@ At `timestamp=1`, a customer uses a laptop to visit your e-commerce website, vie
 
 >[!TAB timestamp=2]
 
-At `timestamp=2`, a customer uses the same laptop to visit your e-commerce website. They log in with their username and password combination and they browse for shoes. Identity Service identifies the customer's account when they log in because it corresponds to their CRM ID: 31260XYZ. Additionally, Identity Service relates ECID:38562 to CRM ID:31260XYZ since they are both using the same browser on the same device.
+At `timestamp=2`, a customer uses the same laptop to visit your e-commerce website. They log in with their username and password combination and they browse for shoes. Identity Service identifies the customer's account when they log in because it corresponds to their CRMID: 31260XYZ. Additionally, Identity Service relates ECID:38562 to CRMID:31260XYZ since they are both using the same browser on the same device.
 
 ![timestamp-two](../images/identity-settings/timestamp-two.png)
 
@@ -140,7 +146,7 @@ At `timestamp=3` a customer uses a tablet to visit your e-commerce website and b
 
 >[!TAB timestamp=4]
 
-At `timestamp=4`, a customer uses the same tablet, logs in to their account (CRM ID:31260XYZ) and views their purchase history. This event links their CRM ID:31260XYZ to the cookie identifier assigned to anonymous browsing activity, ECID:44675, and links ECID:44675 to customer two's identity graph.
+At `timestamp=4`, a customer uses the same tablet, logs in to their account (CRMID:31260XYZ) and views their purchase history. This event links their CRMID:31260XYZ to the cookie identifier assigned to anonymous browsing activity, ECID:44675, and links ECID:44675 to customer two's identity graph.
 
 ![timestamp-four](../images/identity-settings/timestamp-four.png)
 

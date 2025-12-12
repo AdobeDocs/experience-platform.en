@@ -9,7 +9,7 @@ exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 
 In order to deliver relevant digital experiences, you need a comprehensive and accurate representation of the real-world entities that make up your customer base.
 
-Organizations and businesses today face a large volume of disparate datasets: your individual customers are represented by a variety of different identifiers. Your customer can be linked to different web browsers (Safari, Google Chrome), hardware devices (Phones, Laptops), and other person identifiers (CRM IDs, Email accounts). This creates a disjointed view of your customer.
+Organizations and businesses today face a large volume of disparate datasets: your individual customers are represented by a variety of different identifiers. Your customer can be linked to different web browsers (Safari, Google Chrome), hardware devices (Phones, Laptops), and other person identifiers (CRMIDs, Email accounts). This creates a disjointed view of your customer.
 
 You can solve these challenges with Adobe Experience Platform Identity Service and its capabilities to:
 
@@ -39,7 +39,7 @@ Before diving into the details of Identity Service, please read the following ta
 
 ## What is Identity Service?
 
-![Identity stitching on Platform](./images/identity-service-stitching.png)
+![Identity stitching on Experience Platform](./images/identity-service-stitching.png)
 
 In a Business-To-Customer (B2C) context, customers interact with your business and establish a relationship with your brand. A typical customer may be active in any number of systems within your organization's data infrastructure. Any given customer may be active within your e-commerce, loyalty, and help-desk systems. That same customer may also engage both anonymously or through authenticated means on any number of different devices.
 
@@ -68,24 +68,28 @@ Identity Service provides the following operations to achieve its mission:
 
 ## How Identity Service links identities
 
+>[!IMPORTANT]
+>
+>Identity Service is case-sensitive. For example, **abc<span>@gmail.com** and **ABC<span>@GMAIL.COM** would be treated as two separate Email identities.
+
 A link between two identities is established when the identity namespace and the identity values match.
 
 A typical login event **sends two identities** into Experience Platform:
 
-* The person identifier (such as a CRM ID) that represents an authenticated user.
+* The person identifier (such as a CRMID) that represents an authenticated user.
 * The browser identifier (such as an ECID) that represents the web browser.
 
 Consider the following example:
 
-* You log in with your username and password combination to an e-commerce website using your laptop. This event qualifies you as an authenticated user, thus Identity Service recognizes your CRM ID.
+* You log in with your username and password combination to an e-commerce website using your laptop. This event qualifies you as an authenticated user, thus Identity Service recognizes your CRMID.
 * Your use of a browser to access the e-commerce website is also recognized by Identity Service as an event. This event is represented in Identity Service through an ECID.
 * Behind the scenes, Identity Service processes the two events as: `CRM_ID:ABC, ECID:123`.
-  * CRM ID: ABC is the namespace and value that represents you, as an authenticated user.
+  * CRMID: ABC is the namespace and value that represents you, as an authenticated user.
   * ECID: 123 is the namespace and value that represents your web browser usage on your laptop.
 * Next, if you log in with the same credentials to the same e-commerce website, but use the web browser on your phone instead of the web browser on your laptop, then a new ECID is registered in Identity Service.
 * Behind the scenes, Identity Service processes this new event as `{CRM_ID:ABC, ECID:456}`, where CRM_ID: ABC represents your authenticated customer ID and ECID:456 represents the web browser on your mobile device.
 
-Considering the scenarios above, Identity Service establishes a link between `{CRM_ID:ABC, ECID:123}`, as well as `{CRM_ID:ABC, ECID:456}`. This results in an identity graph where you "own" three identities: one for person identifier (CRM ID) and two for cookie identifiers (ECIDs).
+Considering the scenarios above, Identity Service establishes a link between `{CRM_ID:ABC, ECID:123}`, as well as `{CRM_ID:ABC, ECID:456}`. This results in an identity graph where you "own" three identities: one for person identifier (CRMID) and two for cookie identifiers (ECIDs).
 
 For more information, read the the guide on [how Identity Service links identities](./features/identity-linking-logic.md).
 
@@ -103,7 +107,7 @@ Identity Service plays a vital role within Experience Platform. Some of these ke
 
 * [Schemas](../xdm/home.md): Within a given schema, the schema fields that are marked as identity allow for identity graphs to be built.
 * [Datasets](../catalog/datasets/overview.md): When a dataset is enabled for ingestion into Real-Time Customer Profile, identity graphs are generated from the dataset, given that the dataset as at least two fields marked as identity.
-* [Web SDK](../web-sdk/home.md): Web SDK sends experience events to Adobe Experience Platform, and Identity Service generates a graph when two or more identities exist in the event.
+* [Data collection](/help/collection/home.md): Data collection libraries (such as the Web SDK) send experience events to Adobe Experience Platform. The Identity Service generates a graph when two or more identities exist in the event.
 * [Real-Time Customer Profile](../profile/home.md): Before attributes and events for a given profile are merged, Real-Time Customer Profile could reference the identity graph. For more information, read the guide on [understanding the relationship between Identity Service and Real-Time Customer Profile](./identity-and-profile.md).
 * [Destinations](../destinations/home.md): Destinations can send profile information to other systems based on an identity namespace, such as hashed email.
 * [Segment Match](../segmentation/ui/segment-match/overview.md): Segment Match matches two profiles across two different sandboxes that have the same identity namespace and identity value.

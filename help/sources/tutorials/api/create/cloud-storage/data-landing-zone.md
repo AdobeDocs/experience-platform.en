@@ -1,8 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;
-solution: Experience Platform
 title: Connect Data Landing Zone to Adobe Experience Platform using the Flow Service API
-type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Data Landing Zone using the Flow Service API.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
 ---
@@ -20,14 +17,18 @@ This tutorial walks you through the steps on how to create a [!DNL Data Landing 
 
 This guide requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+
+This tutorial also requires you to read the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md) to learn how to authenticate to Experience Platform APIs and interpret the example calls provided in the documentation.
 
 The following sections provide additional information that you will need to know in order to successfully create a [!DNL Data Landing Zone] source connection using the [!DNL Flow Service] API.
 
-This tutorial also requires you to read the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md) to learn how to authenticate to Platform APIs and interpret the example calls provided in the documentation.
-
 ## Retrieve a usable landing zone
+
+>[!IMPORTANT]
+>
+>You must have the **[!UICONTROL Manage Sources]** access control permission in order to use the [!DNL Data Landing Zone] APIs and retrieve `type=user_drop_zone`. For more information, read the [access control overview](../../../../../access-control/home.md) or contact your product administrator to obtain the required permissions.
 
 The first step in using APIs to access [!DNL Data Landing Zone] is to make a GET request to the `/landingzone` endpoint of the [!DNL Connectors] API while providing `type=user_drop_zone` as part of your request header.
 
@@ -57,7 +58,11 @@ curl -X GET \
 
 **Response**
 
-The following response returns information on a landing zone, including its corresponding `containerName` and `containerTTL`.
+Depending on your provider, a successful request returns the following:
+
+>[!BEGINTABS]
+
+>[!TAB Response on Azure]
 
 ```json
 {
@@ -70,6 +75,26 @@ The following response returns information on a landing zone, including its corr
 | --- | --- |
 | `containerName` | The name of the landing zone you retrieved. |
 | `containerTTL` | The expiration time (in days) applied to your data within the landing zone. Any within a given landing zone is deleted after seven days. |
+
+
+>[!TAB Response on AWS]
+
+```json
+{
+  "dlzPath": {
+    "bucketName": "dlz-prod-sandboxName",
+    "dlzFolder": "dlz-adf-connectors"
+  },
+  "dataTTL": {
+    "timeUnit": "days",
+    "timeQuantity": 7
+  },
+  "dlzProvider": "Amazon S3"
+}
+```
+
+>[!ENDTABS]
+
 
 ## Retrieve [!DNL Data Landing Zone] credentials
 
@@ -97,7 +122,11 @@ curl -X GET \
 
 **Response**
 
-The following response returns the credential information for your data landing zone, including your current `SASToken`, `SASUri`, `storageAccountName`, and expiry date.
+Depending on your provider, a successful request returns the following:
+
+>[!BEGINTABS]
+
+>[!TAB Response on Azure]
 
 ```json
 {
@@ -111,10 +140,143 @@ The following response returns the credential information for your data landing 
 
 | Property | Description |
 | --- | --- |
-| `containerName` | The name of your landing zone. |
-| `SASToken` | The shared access signature token for your landing zone. This string contains all of the information necessary to authorize a request. |
-| `SASUri` | The shared access signature URI for your landing zone. This string is a combination of the URI to the landing zone for which you are being authenticated to and its corresponding SAS token, |
-| `expiryDate` | The date when your SAS token will expire. You must refresh your token before the expiry date in order to continue using it in your application for uploading data to the Data Landing Zone. If you do not manually refresh your token before the stated expiry date, then it will automatically refresh and provide a new token when the GET credentials call is performed. |
+| `containerName` | The name of your [!DNL Data Landing Zone]. |
+| `SASToken` | The shared access signature token for your [!DNL Data Landing Zone]. This string contains all of the information necessary to authorize a request. |
+| `storageAccountName` | The name of your storage account. |
+| `SASUri` | The shared access signature URI for your [!DNL Data Landing Zone]. This string is a combination of the URI to the [!DNL Data Landing Zone] for which you are being authenticated to and its corresponding SAS token. |
+| `expiryDate` | The date when your SAS token will expire. You must refresh your token before the expiry date in order to continue using it in your application for uploading data to the [!DNL Data Landing Zone]. If you do not manually refresh your token before the stated expiry date, then it will automatically refresh and provide a new token when the GET credentials call is performed. |
+
+>[!TAB Response on AWS]
+
+```json
+{
+  "credentials": {
+    "clientId": "example-client-id",
+    "awsAccessKeyId": "example-access-key-id",
+    "awsSecretAccessKey": "example-secret-access-key",
+    "awsSessionToken": "example-session-token"
+  },
+  "dlzPath": {
+    "bucketName": "dlz-prod-sandboxName",
+    "dlzFolder": "user_drop_zone"
+  },
+  "dlzProvider": "Amazon S3",
+  "expiryTime": 1735689599
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `credentials.clientId` | The client ID of your [!DNL Data Landing Zone] in AWS. |
+| `credentials.awsAccessKeyId` | The access key ID of your [!DNL Data Landing Zone] in AWS. |
+| `credentials.awsSecretAccessKey` | The secret access key of your [!DNL Data Landing Zone] in AWS. |
+| `credentials.awsSessionToken` | Your AWS session token. |
+| `dlzPath.bucketName` | The name of your AWS bucket. |
+| `dlzPath.dlzFolder` | The [!DNL Data Landing Zone] folder that you are accessing. |
+| `dlzProvider` | The [!DNL Data Landing Zone] provider that you are using. For Amazon, this will be [!DNL Amazon S3]. |
+| `expiryTime` |  The expiry time in unix time. |
+
+>[!ENDTABS]
+
+### Retrieve the required fields using APIs
+
+After you generate your token, you can retrieve the required fields programmatically by using the request examples below:
+
+>[!BEGINTABS]
+
+>[!TAB Python]
+
+```py
+import requests
+ 
+# API endpoint
+url = "https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone"
+ 
+headers = {
+    "Authorization": "{TOKEN}",
+    "Content-Type": "application/json",
+    "x-gw-ims-org-id": "{ORG_ID}",
+    "x-api-key": "{API_KEY}"
+}
+ 
+# Send GET request to the API
+response = requests.get(url, headers=headers)
+ 
+# Check if the request was successful
+if response.status_code == 200:
+    # Parse the response as JSON (if applicable)
+    data = response.json()
+ 
+    # Print or work with the fetched data 
+    print(" Sas Token:", data['SASToken'])
+    print(" Container Name:",  data['containerName'])
+    print("\n")
+ 
+else:
+    # Print an error message if the request failed
+    print(f"Failed to fetch data. Status code: {response.status_code}")
+    print(f"Response: {response.text}")
+```
+
+>[!TAB Java]
+
+
+```java
+package org.example;
+ 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+ 
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+ 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+ 
+public class Main {
+    public static void main(String[] args) {
+ 
+        ObjectMapper objectMapper = new ObjectMapper();
+ 
+        try {
+ 
+            DefaultHttpClient httpClient = new DefaultHttpClient();
+            HttpGet getRequest = new HttpGet(
+                "https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone");
+            getRequest.addHeader("accept", "application/json");
+            getRequest.addHeader("Authorization","<TOKEN>");
+            getRequest.addHeader("Content-Type", "application/json");
+            getRequest.addHeader("x-gw-ims-org-id", "<ORG_ID>");
+            getRequest.addHeader("x-api-key", "<API_KEY>");
+ 
+            HttpResponse response = httpClient.execute(getRequest);
+ 
+            if (response.getStatusLine().getStatusCode() != 200) {
+                throw new RuntimeException("Failed : HTTP error code : "
+                    + response.getStatusLine().getStatusCode());
+            }
+ 
+            final JsonNode jsonResponse = objectMapper.readTree(response.getEntity().getContent());
+ 
+            System.out.println("\nOutput from API Response .... \n");
+            System.out.printf("ContainerName: %s%n", jsonResponse.at("/containerName").textValue());
+            System.out.printf("SASToken: %s%n", jsonResponse.at("/SASToken").textValue());
+ 
+            httpClient.getConnectionManager().shutdown();
+ 
+        } catch (ClientProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+>[!ENDTABS]
 
 
 ## Update [!DNL Data Landing Zone] credentials
@@ -227,7 +389,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 
 | Parameter | Description | Example |
 | --- | --- | --- |
-| `{CONNECTION_SPEC_ID}` | The connection specification ID that corresponds to [!DNL Data Landing Zone]. This fixed ID is: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
+| `{CONNECTION_SPEC_ID}` | The connection specification ID that corresponds to [!DNL Data Landing Zone]. This fixed ID is: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. ||
 | `{OBJECT_TYPE}` | The type of the object you want to access. | `file` |
 | `{OBJECT}` | The path and name of the object you want to access. | `dlz-user-container/data8.csv` |
 | `{FILE_TYPE}` | The type of the file. | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
@@ -488,8 +650,8 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `name` | The name of your [!DNL Data Landing Zone] source connection. |
-| `data.format` | The format of the data you want to bring to Platform. |
-| `params.path` | The path to the file that you want to bring to Platform. |
+| `data.format` | The format of the data you want to bring to Experience Platform. |
+| `params.path` | The path to the file that you want to bring to Experience Platform. |
 | `connectionSpec.id` | The connection specification ID that corresponds to [!DNL Data Landing Zone]. This fixed ID is: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
 
 **Response**
@@ -505,4 +667,4 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ## Next steps
 
-By following this tutorial, you have retrieved your [!DNL Data Landing Zone] credentials, explored its file structure to find the file you wish to bring to Platform, and created a source connection to begin bringing your data to Platform. You can now proceed to the next tutorial, where you will learn how to [create a dataflow to bring cloud storage data to Platform using the [!DNL Flow Service] API](../../collect/cloud-storage.md).
+By following this tutorial, you have retrieved your [!DNL Data Landing Zone] credentials, explored its file structure to find the file you wish to bring to Experience Platform, and created a source connection to begin bringing your data to Experience Platform. You can now proceed to the next tutorial, where you will learn how to [create a dataflow to bring cloud storage data to Experience Platform using the [!DNL Flow Service] API](../../collect/cloud-storage.md).

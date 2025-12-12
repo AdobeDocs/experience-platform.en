@@ -20,10 +20,10 @@ This document provides steps on how to use the [!DNL Policy Service] API to chec
 
 This tutorial requires a working understanding of the following key concepts involved in enforcing data usage policies:
 
-* [Data Governance](../home.md): The framework by which [!DNL Platform] enforces data usage compliance.
+* [Data Governance](../home.md): The framework by which [!DNL Experience Platform] enforces data usage compliance.
     * [Data usage labels](../labels/overview.md): Data usage labels are applied to datasets (and/or individual fields within those datasets), specifying restrictions for how that data can be used.
     * [Data usage policies](../policies/overview.md): Data usage policies are rules that describe the kinds of marketing actions that are allowed or restricted for certain sets of data usage labels.
-* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Policy Service] API, including required headers and how to read example API calls.
 
@@ -370,4 +370,4 @@ A successful response returns the URL for the marketing action, the usage labels
 
 By reading this document, you have successfully checked for policy violations when performing a marketing action on a dataset or a set of data usage labels. Using the data returned in API responses, you can set up protocols within your experience application to appropriately enforce policy violations when they occur.
 
-For information on how Platform automatically provides policy enforcement for activated segments, see the guide on [automatic enforcement](./auto-enforcement.md).
+For information on how Experience Platform automatically provides policy enforcement for activated segments, see the guide on [automatic enforcement](./auto-enforcement.md).

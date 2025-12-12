@@ -22,11 +22,15 @@ A software company organizes a conference and wants to keep in touch with partic
 
 [!DNL LinkedIn Matched Audiences] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
+>[!IMPORTANT]
+>
+>Starting with September 2025, you can no longer map [!DNL IDFA] as a target identity, since [!DNL IDFA] is no longer supported by the [!DNL LinkedIn Matched Audiences] destination. See the [!DNL LinkedIn Matched Audiences] integration [documentation](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) for more details. This change is due to LinkedIn's requirements, and is not related to any Experience Platform destination service upgrades.
+
+
 |Target Identity|Description|Considerations|
 |---|---|---|
 |GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select this target identity when your source identity is an IDFA namespace.|
-|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed emails, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
+|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed emails, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
 
 {style="table-layout:auto"}
 
@@ -46,7 +50,7 @@ This section describes which types of audiences you can export to this destinati
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, and others) used in the [!DNL LinkedIn Matched Audiences] destination.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
@@ -66,7 +70,7 @@ Depending on the type of IDs that you ingest into Adobe Experience Platform, you
 
 ## Email hashing requirements {#email-hashing-requirements}
 
-You can hash email addresses before ingesting them into Adobe Experience Platform, or use email addresses in clear in Experience Platform, and have [!DNL Platform] hash them on activation.
+You can hash email addresses before ingesting them into Adobe Experience Platform, or use email addresses in clear in Experience Platform, and have [!DNL Experience Platform] hash them on activation.
 
 To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md) and the [streaming ingestion overview](/help/ingestion/streaming-ingestion/overview.md).
 
@@ -81,10 +85,10 @@ If you select to hash the email addresses yourself, make sure to comply with the
 
 >[!NOTE]
 >
->Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+>Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 > Attribute source data is not automatically hashed.
 > 
-> During the [Identity Mapping](../../ui/activate-segment-streaming-destinations.md#mapping) step, when your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+> During the [Identity Mapping](../../ui/activate-segment-streaming-destinations.md#mapping) step, when your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
 > 
 > The **[!UICONTROL Apply transformation]** option is only displayed when you select attributes as source fields. It is not displayed when you choose namespaces.
 
@@ -112,6 +116,24 @@ The video below also demonstrates the steps to configure a [!DNL LinkedIn Matche
 2. Select **[!UICONTROL Connect to destination]**. 
   ![Authenticate to LinkedIn](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
 3. Enter your LinkedIn credentials and select **Log In**.
+
+### Refresh authentication credentials {#refresh-authentication-credentials}
+
+LinkedIn tokens expire every 60 days. You can monitor your token expiration dates from the **[!UICONTROL Account expiration date]** column in either the **[[!UICONTROL Accounts]](../../ui/destinations-workspace.md#accounts)** or the **[[!UICONTROL Browse]](../../ui/destinations-workspace.md#browse)** tabs.
+
+Once the token is expired, data exports to the destination stop working. To prevent this situation, reauthenticate by performing the following steps:
+
+1. Navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
+2. (Optional) Use the available filters on the page to display LinkedIn accounts only.
+    ![Filter to show LinkedIn accounts only](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
+3. Select the account that you want to refresh, select the ellipsis and select **[!UICONTROL Edit details]**. 
+    ![Select Edit details control](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
+4. In the modal window, select **[!UICONTROL Reconnect OAuth]** and reauthenticate with your LinkedIn credentials.
+    ![Modal window with Reconnect OAuth option](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>Your authentication credentials are refreshed and their expiration time is reset to 60 days.
 
 ### Fill in destination details {#destination-details}
 
@@ -143,7 +165,7 @@ See [Activate audience data to streaming audience export destinations](../../ui/
 
 ## Exported data {#exported-data}
 
-A successful activation means that a [!DNL LinkedIn] custom audience would be created programmatically in [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). Audience membership would be added and removed as users are qualified or disqualified for the activated audiences.
+A successful activation means that a [!DNL LinkedIn] custom audience is created programmatically in [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). Audience membership is adjusted as users are qualified or disqualified for the activated audiences.
 
 >[!TIP]
 >

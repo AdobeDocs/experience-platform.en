@@ -26,11 +26,11 @@ You can use expiring credentials to quickly set up a connection to an external c
 
 The **[!UICONTROL Expiring credentials]** section provides the following information:
 
-- **[!UICONTROL Host]**: The name of the host to connect your client to. This incorporates the name of your organization as seen in the top ribbon of the Platform UI.
+- **[!UICONTROL Host]**: The name of the host to connect your client to. This incorporates the name of your organization as seen in the top ribbon of the Experience Platform UI.
 - **[!UICONTROL Port]**: The port number of the host to connect to.
 - **[!UICONTROL Database]**: The name of the database to connect a client to.
 - **[!UICONTROL Username]**: The username used to connect to Query Service.
-- **[!UICONTROL Password]**: The password used to connect to Query Service. Passwords in the UI have been hashed for security. Select the copy icon (![The copy icon.](../images/ui/credentials/copy-icon.png)) to copy your complete, un-hashed credentials to the clipboard.
+- **[!UICONTROL Password]**: The password used to connect to Query Service. Passwords in the UI have been hashed for security. Select the copy icon (![The copy icon.](/help/images/icons/copy.png)) to copy your complete, un-hashed credentials to the clipboard.
 - **[!UICONTROL PSQL command]**: A command that automatically has inserted all the relevant information for you to connect to Query Service using PSQL on the command line.
 - **[!UICONTROL Expires]**: The expiry date and time for the expiring credentials. The default validity duration of the token is 24 hours but it can be changed in the advanced settings of the Admin Console.
 
@@ -66,30 +66,43 @@ See the [BI extension guide](https://experienceleague.adobe.com/en/docs/analytic
 
 ## Non-expiring credentials {#non-expiring-credentials}
 
+>[!CONTEXTUALHELP]
+>id="platform_queryservice_credentials_migratenonexpiringcredentials"
+>title="Migrate to OAuth Server-to-Server Credential"
+>abstract="This migration is required as JWT credentials will stop working after June 30, 2025. It takes about 30–40 seconds and can't be canceled once started. All existing jobs and integrations will continue to work with OAuth after migration. You can leave this screen and return any time to check the status."
+
 You can use non-expiring credentials to set up a more permanent connection to an external client.
+
+>[!IMPORTANT]
+>
+>The first time you create or migrate a non-expiring credential to OAuth Server-to-Server, you must use a System Admin account. Only a System Admin can perform this action for your organization. If a non-System Admin attempts this step, the process will fail with an authorization error. After the initial setup, subsequent non-expiring credentials can be created or migrated by users with the required permissions.
 
 >[!NOTE]
 >
->Non-expiring credentials have the following limitations:<br><ul><li>Users must log in with their username and password comprised of `{technicalAccountId}:{credential}`. More information can be found in the [Generate credentials](#generate-credentials) section.</li><li>Upon the creation of expiring credentials, a new role with a set of basic permissions is created that allows users to view schemas and datasets. The 'manage queries' permission is also assigned to this role for use with Query Service.</li><li>Third-party clients may perform differently than expected when listing out query objects. For example, some third-party clients such as [!DNL DB Visualizer] will not display the view name in the left panel. However, the view name is accessible if called within a SELECT query. Similarly, [!DNL PowerUI] might not list the temporary views created through the SQL to be selected for dashboard creation.</li></ul>
+>Non-expiring credentials have the following limitations:
+>
+>- Users must log in with their username and password in the format of `{technicalAccountId}:{credential}`. More information can be found in the [Generate credentials](#generate-credentials) section.
+>- By default, non-expiring credentials are granted permissions to execute only `SELECT` queries. To run `CTAS` or `ITAS` queries, manually add the "Manage Dataset" and "Manage Schemas" permissions to the role associated with the non-expiring credential. The "Manage Schemas" permission can be found under the "Data Modeling" section, and the "Manage Datasets" permission is located under the "Data Management" section of the [Adobe Developer Console](https://developer.adobe.com/console/).
+>- Third-party clients may perform differently than expected when listing out query objects. For example, some third-party clients such as [!DNL DB Visualizer] will not display the view name in the left panel. However, the view name is accessible if called within a `SELECT` query. Similarly, [!DNL PowerUI] might not list the temporary views created through SQL for selection in dashboard creation.
 
 ### Prerequisites
 
 Before you can generate non-expiring credentials, you must complete the following steps in Adobe Admin Console:
 
-1. Log into [Adobe Admin Console](https://adminconsole.adobe.com/) and select the relevant Org from the top navigation bar.
+1. Log into [Adobe Admin Console](https://adminconsole.adobe.com/) and select the relevant organization from the top navigation bar.
 2. [Select a product profile.](../../access-control/ui/browse.md)
 3. [Configure both the **Sandboxes** and **Manage Query Service Integration** permissions](../../access-control/ui/permissions.md) for the product profile.
 4. [Add a new user to a product profile](../../access-control/ui/users.md) so they are granted its configured permissions.
 5. [Add the user as a product profile admin](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) to allow an account creation for any active product profile.
 6. [Add the user as a product profile developer](https://helpx.adobe.com/enterprise/using/manage-developers.html) in order to create an integration.
 
-To learn more about how to assign permissions, please read the documentation on [access control](../../access-control/home.md).
+After these steps, the required permissions are configured in [Adobe Developer Console](https://developer.adobe.com/console/) for you to generate OAuth Server-to-Server credentials and use the expiring or non-expiring credentials features.
 
-All the required permissions are now configured in Adobe Developer Console for the user to use the expiring credentials feature.
+For detailed information on assigning permissions, see the [access control documentation](../../access-control/home.md).
 
 ### Generate credentials {#generate-credentials}
 
-To create a set of non-expiring credentials, return to the Platform UI and select **[!UICONTROL Queries]** from the left navigation to access the [!UICONTROL Queries] workspace. Next, select the **[!UICONTROL Credentials]** tab followed by **[!UICONTROL Generate credentials]**.
+To create a set of non-expiring credentials, return to the Experience Platform UI and select **[!UICONTROL Queries]** from the left navigation to access the [!UICONTROL Queries] workspace. Next, select the **[!UICONTROL Credentials]** tab followed by **[!UICONTROL Generate credentials]**.
 
 ![The Queries dashboard with the Credentials tab and Generate credentials highlighted.](../images/ui/credentials/generate-credentials.png)
 
@@ -120,7 +133,7 @@ After you have saved your generated credentials, select **[!UICONTROL Close]**. 
 
 ![The Queries dashboard Credentials tab with the Non-expiring Credentials section highlighted.](../images/ui/credentials/list-credentials.png)
 
-You can either edit or delete your non-expiring credentials. To edit a non-expiring credential, select the pencil icon (![A pencil icon.](../images/ui/credentials/edit-icon.png)). To delete a non-expiring credential, select the delete icon (![A trash can icon.](../images/ui/credentials/delete-icon.png)).
+You can either edit or delete your non-expiring credentials. To edit a non-expiring credential, select the pencil icon (![A pencil icon.](/help/images/icons/edit.png)). To delete a non-expiring credential, select the delete icon (![A trash can icon.](/help/images/icons/delete.png)).
 
 When editing a non-expiring credential, a modal appears. You can provide the following details to update:
 
@@ -131,6 +144,18 @@ When editing a non-expiring credential, a modal appears. You can provide the fol
 ![The Update account dialog.](../images/ui/credentials/update-credentials.png)
 
 Once you have provided all the required details, select **[!UICONTROL Update account]** to complete the update to your credentials.
+
+### Migrate credentials to OAuth {#migrate-credentials}
+
+If you are using non-expiring JWT credentials, you must migrate each one to OAuth Server-to-Server before June 30, 2025 to avoid service disruption.
+
+>[!IMPORTANT]
+>
+>JWT credentials will stop working after June 30, 2025. You must manually complete this migration to maintain authorization.
+
+To learn how to identify affected credentials and complete the migration, see the [migrate from JWT to OAuth Server-to-Server credentials guide](./migrate-jwt-to-oauth.md).
+
+For common questions, refer to the [migration FAQ](./migrate-jwt-to-oauth.md#faq).
 
 ## Use credentials to connect to external clients {#use-credential-to-connect}
 

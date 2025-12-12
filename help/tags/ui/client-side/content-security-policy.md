@@ -5,10 +5,6 @@ exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
 ---
 # Content Security Policy (CSP) support
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 A Content Security Policy (CSP) is a security feature that helps prevent cross-site scripting attacks (XSS). This happens when the browser is tricked into running malicious content that appears to come from a trusted source but is really coming from somewhere else. CSPs allow the browser (on behalf of the user) to verify that the script is actually coming from a trusted source.
 
 CSPs are implemented by adding a `Content-Security-Policy` HTTP header to your server responses, or by adding a configured `<meta>` element in the `<head>` section of your HTML files.
@@ -76,7 +72,7 @@ CSP disallows inline scripts by default, and therefore must be manually configur
 
 >[!NOTE]
 >
->The CSP specification has details for a third option using hashes, but this approach is not feasible to use with tag-management systems like tags. For more information on the limitations of using hashes with tags in Platform, see the [Subresource Integrity (SRI) guide](./sri.md).
+>The CSP specification has details for a third option using hashes, but this approach is not feasible to use with tag-management systems like tags. For more information on the limitations of using hashes with tags in Experience Platform, see the [Subresource Integrity (SRI) guide](./sri.md).
 
 ### Allow by nonce {#nonce}
 
@@ -152,4 +148,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 By reading this document, you should now understand how to configure your CSP header to accept the tag library file and inline scripts.
 
-As an additional security measure, you may also opt to use Subresource Integrity (SRI) to validate fetched library builds. However, this feature has some major limitations when used with tag-management systems like tags. See the guide on [SRI compatibility in Platform](./sri.md) for more information.
+As an additional security measure, you may also opt to use Subresource Integrity (SRI) to validate fetched library builds. However, this feature has some major limitations when used with tag-management systems like tags. See the guide on [SRI compatibility in Experience Platform](./sri.md) for more information.

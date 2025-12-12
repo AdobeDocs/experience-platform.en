@@ -20,14 +20,21 @@ To understand the difference between connections and extensions, see [Connection
 
 ### Connections
 
+* [(Beta) Acxiom Audience Distribution](acxiom-audience-connection.md)
+* [(Beta) Acxiom Real ID Audience Connection](acxiom-real-id-audience-connection.md)
 * [Adobe Advertising Cloud connection](adobe-advertising-cloud-connection.md)
-* [(Beta) Amazon Ads connection](amazon-ads.md)
-* [(Beta) Criteo connection](criteo.md)
+* [Amazon Ads connection](amazon-ads.md)
+* [Bombora connection](bombora.md)
+* [Criteo connection](criteo.md)
+* [Demandbase connection](demandbase.md)
+* [Demandbase People connection](demandbase-people.md)
 * [Google Display & Video 360 connection](google-dv360.md)
 * [Google Ads connection](google-ads-destination.md)
 * [Google Ad Manager connection](google-ad-manager.md)
 * [(Beta) Google Ad Manager 360 connection](google-ad-manager-360-connection.md)
 * [Google Customer Match connection](google-customer-match.md)
+* [Magnite Batch connection](magnite-batch.md)
+* [Magnite Streaming Real-time connection](magnite-streaming.md)
 * [Microsoft Bing connection](bing.md)
 * [Pinterest Customer List connection](pinterest.md)
 * [PubMatic Connect destination](pubmatic.md)
@@ -46,7 +53,6 @@ To understand the difference between connections and extensions, see [Connection
 * [DoubleClick Floodlight extension](doubleclick-floodlight.md)
 * [Facebook Pixel extension](facebook-pixel.md)
 * [Flashtalking OneTag extension](flashtalking.md)
-* [Google Ads extension](google-ads-extension.md)
 * [Google gtag extension](gtag-advertising.md)
 * [LinkedIn Insight Tag extension](linkedin.md)
 * [Pinterest Conversion Tracking extension](pinterest-extension.md)
@@ -54,4 +60,4 @@ To understand the difference between connections and extensions, see [Connection
 
 ## Connect to a new advertising destination {#connect-destination}
 
-To send audiences to advertising destinations for your campaigns, Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.
+To send audiences to advertising destinations for your campaigns, Experience Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.

@@ -1,15 +1,11 @@
 ---
-title: (Beta) Export files on-demand to batch destinations using the Experience Platform UI
+title: Export files on-demand to batch destinations using the Experience Platform UI
 type: Tutorial
 description: Learn how to export files on-demand to batch destinations using the Experience Platform UI.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 ---
-# (Beta) Export files on-demand to batch destinations using the Experience Platform UI
 
->[!IMPORTANT]
->
->The **[!UICONTROL Export file now]** option in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
->Contact your Adobe representative for access to this functionality.
+# Export files on-demand to batch destinations using the Experience Platform UI
 
 >[!IMPORTANT]
 > 
@@ -61,8 +57,9 @@ To export files on-demand to batch destinations, you must have successfully [con
 Keep in mind the following considerations when using the **[!UICONTROL Export file now]** control:
 
 * **[!UICONTROL Export file now]** works only for audiences whose schedule in the batch activation dataflow overlaps with the present date. This includes audiences with schedules that have no end date (export frequency of **[!UICONTROL Once]**), or where the end date has not yet passed.
-* When adding an audience to an existing dataflow, wait for at least 15 minutes until using the **[!UICONTROL Export file now]** control.
+* When adding an audience to an existing dataflow, wait for at least **one hour** before using the **[!UICONTROL Export file now]** control.
 * If you change an audience's merge policy, or if you create an audience which uses a new merge policy, wait 24 hours until using the **[!UICONTROL Export file now]** control.
+* **[!UICONTROL Export file now]** uses data from scheduled snapshot exports only. It does not pick up data from API-triggered export jobs. To export the latest data after an API-triggered export job, wait for the next scheduled export to run.
 
 ## UI error messages {#ui-error-messages}
 

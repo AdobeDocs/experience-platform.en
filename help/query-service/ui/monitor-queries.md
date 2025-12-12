@@ -19,7 +19,7 @@ The table below describes each available column.
 
 >[!NOTE]
 >
->The alert subscriptions icon (![An alert subscriptions icon.](../images/ui/monitor-queries/alert-subscription-icon.png)) is contained in each row in an untitled column. See the [alert subscriptions](#alert-subscription) section for more information.
+>The alert subscriptions icon (![An alert subscriptions icon.](/help/images/icons/alert-add.png)) is contained in each row in an untitled column. See the [alert subscriptions](#alert-subscription) section for more information.
 
 | Column | Description  |
 |---|---|
@@ -39,7 +39,7 @@ The table below describes each available column.
 
 ## Customize table settings for scheduled queries {#customize-table}
 
-You can adjust the columns on the [!UICONTROL Scheduled Queries] tab to your needs. To open the [!UICONTROL Customize table] settings dialog and edit available columns, select the settings icon (![A settings icon.](../images/ui/monitor-queries/settings-icon.png)) from the top right of the screen.
+You can adjust the columns on the [!UICONTROL Scheduled Queries] tab to your needs. To open the [!UICONTROL Customize table] settings dialog and edit available columns, select the settings icon (![A settings icon.](/help/images/icons/column-settings.png)) from the top right of the screen.
 
 >[!NOTE]
 >
@@ -77,13 +77,13 @@ To delete a scheduled query, select the ellipsis for the scheduled query you wan
 
 Once a scheduled query is deleted, it is **not** removed from the list of scheduled queries. The inline actions provided by the ellipses are removed and replaced by the grayed out add alert subscription icon. You cannot subscribe to alerts for the deleted schedule. The row remains in the UI to provide information on runs conducted as part of the scheduled query. 
 
-![The Scheduled Queries tab with a deleted scheduled query and greyed out alert  subscription icon highlighted.](../images/ui/monitor-queries/post-delete.png)
+![The Scheduled Queries tab with a deleted scheduled query and greyed out alert subscription icon highlighted.](../images/ui/monitor-queries/post-delete.png)
 
 If you want to schedule runs for that query template, select the template name from the appropriate row to navigate to the Query Editor, then follow the [instructions to add a schedule to a query](./query-schedules.md#create-schedule) as described in the documentation. 
 
 ### Subscribe to alerts {#alert-subscription}
 
-To subscribe to alerts for scheduled query runs, select either the `...` (ellipsis) or alert subscription icon (![An alert subscription icon.](../images/ui/monitor-queries/alert-subscription-icon.png)) for the scheduled query you want to manage. The inline actions dropdown menu appears. Next, select **[!UICONTROL Subscribe]** from the available options.
+To subscribe to alerts for scheduled query runs, select either the `...` (ellipsis) or alert subscription icon (![An alert subscription icon.](/help/images/icons/alert-add.png)) for the scheduled query you want to manage. The inline actions dropdown menu appears. Next, select **[!UICONTROL Subscribe]** from the available options.
 
 ![The scheduled queries workspace with an ellipses, alert subscription icon, and the inline actions dropdown menu highlighted.](../images/ui/monitor-queries/subscribe.png)
 
@@ -109,7 +109,7 @@ See the [alert subscriptions API documentation](../api/alert-subscriptions.md) f
 
 ### View the query details {#query-details}
 
-Select the information icon (![An information icon.](../images/ui/monitor-queries/information-icon.png)) to see the details panel for the query. The details panel contains all the relevant information on the query beyond the facts included in the scheduled queries table. The additional information includes the query ID, the last modified date, the SQL of the query, the schedule ID, and the current set schedule.
+Select the information icon (![An information icon.](/help/images/icons/info.png)) to see the details panel for the query. The details panel contains all the relevant information on the query beyond the facts included in the scheduled queries table. The additional information includes the query ID, the last modified date, the SQL of the query, the schedule ID, and the current set schedule.
 
 ![The Scheduled Queries tab with the information icon and the details panel highlighted.](../images/ui/monitor-queries/details-panel.png)
 
@@ -145,7 +145,7 @@ See the subscribe to alerts section to learn how to [subscribe to [!UICONTROL Qu
 
 ## Filter queries {#filter}
 
-You can filter queries based on run frequency. From the [!UICONTROL Scheduled Queries] tab, select the filter icon (![A filter icon](../images/ui/monitor-queries/filter-icon.png)) to open the filter sidebar. 
+You can filter queries based on run frequency. From the [!UICONTROL Scheduled Queries] tab, select the filter icon (![A filter icon](/help/images/icons/filter.png)) to open the filter sidebar. 
 
 ![The scheduled queries tab with the filter icon highlighted.](../images/ui/monitor-queries/filter-queries.png)
 

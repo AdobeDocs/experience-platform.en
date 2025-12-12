@@ -2,6 +2,7 @@
 solution: Experience Platform
 title: Refactored Segmentation Time Constraints UI Guide
 description: Segment Builder provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties.
+hidefromtoc: true
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
 ---
 # Time constraints refactorization {#refactorization}
@@ -17,7 +18,7 @@ Prior to the January 2024 release, all rule-level, group-level, and canvas-level
 
 Previously, an individual event could have multiple time constraint rules attached to it. With this recent update, attempting to add a time constraint to a rule will now result in an **error**.
 
-![The rule-level time constraint is highlighted. The error that subsequently happens is also highlighted. ](../images/ui/segment-refactoring/rule-time-constraint.png)
+![The rule-level time constraint is highlighted. The error that subsequently happens is also highlighted.](../images/ui/segment-refactoring/rule-time-constraint.png)
 
 Time constraints can now only be applied at the canvas-level or the card level. 
 

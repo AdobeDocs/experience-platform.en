@@ -28,6 +28,8 @@ The following example questions are grouped by objectives that you can accomplis
 
 The following questions are grouped by data objects and are classified as either [operational insights](./home.md#operational-insights) or [product knowledge](./home.md#product-knowledge).
 
+![](./images/prompt.png)
+
 * **Audiences - Operational insights**
   * Which audiences use other audiences?
   * What is the distribution of the number of profiles across audiences?
@@ -72,7 +74,6 @@ The following questions are grouped by data objects and are classified as either
   * How are User Groups related to Roles?
   * When should I use a data type vs a field group?
   * What is the difference between an identity and a primary or foreign key?
-  * How is Profile richness calculated?
 * **Troubleshooting - Product knowledge (Real-Time CDP and Journey Optimizer)**
   * What can AI Assistant help with?
   * Can I delete a profile enabled schema after data is ingested?
@@ -108,6 +109,75 @@ The following tables outline best practices you can follow when using AI Assista
 | Omit criteria or parameters. | Show me datasets. |
 
 {style="table-layout:auto"}
+
+## Dataset Observability {#dataset-observability}
+
+AI Assistant can now answer questions about specific dataset metrics such as storage size and row count.
+
+* What are my biggest datasets by size?
+* What are my biggest dataset by rows?
+* How many datasets are empty?
+* Which datasets are empty?
+
+Additionally, you can convey similar intent through a number of different variations to the four aforementioned questions.
+
++++Select to view accepted variations of dataset observability questions
+
+* What are the top five datasets by size?
+* Which dataset has the largest number of rows?
+* How many datasets have no data in them?
+* List the datasets with size >10 MB?
+* List the datasets with rows less than 10.
+* Can you show me the datasets that are completely empty?
+* Which dataset is the largest by storage size?
+* What's the smallest dataset in terms of row count?
+* How many of my datasets have data and how many are empty?
+* What's the row count for the dataset named {DATASET_NAME}?
+* How does the size of {DATASET_NAME} compare to my other datasets?
+* What is the size of {DATASET_NAME}?
+* How many rows does {DATASET_NAME} has?
+* What is the size and row count of {DATASET_NAME}?
+* Can you list the largest and smallest datasets by storage size?
+
++++
+
+You can also refine your data observability questions with a qualifier to filter your query by a certain time period:
+
+* Datasets receiving batches in last (x) days
+* Datasets not receiving batches in last (x) days
+* Datasets with the most data ingested in last (x) days
+* Record count for a specific dataset in the last (x) days
+
++++Select to view accepted variations of dataset observability questions
+
+* How many datasets received batches in the last (x) days?
+* Which datasets have received batches in the past (x) days?
+* Can you list the datasets that had data ingested in the last (x) days?
+* How many datasets received new batches in the previous (x) days?
+* What are the datasets that were updated with new data in the last (x) days?
+* List datasets that had batch activity within the last (x) days.
+* How many datasets did not receive batches in the last (x) days?
+* Which datasets have not received any batches in the past (x) days?
+* Can you identify datasets with no data ingestion in the last (x) days?
+* How many datasets did not receive updates in the last (x) days?
+* What datasets have been inactive for the past (x) days?
+* List datasets that did not get new batches in the last (x) days.
+* When was last time when data was ingested on dataset (x)?
+* What are Top 10 datasets in which the most data was ingested  in last (x) days?
+* What are the top 10 datasets by data volume ingested in the last (x) days?
+* Which 10 datasets had the largest data ingestion in the last (x) days?
+* Show the top 10 datasets with the highest data ingestion in the previous (x) days.
+* What are the top datasets by data received in the last (x) days?
+* List the top 10 datasets that ingested the most data in the past (x) days.
+* How many records were received in dataset (x), in the last (y) days?
+* How many records did dataset (x) receive in the last (y) days?
+* What is the record count ingested for dataset (x) in the past (y) days?
+* Can you provide the number of records added to dataset (x) over the last (y) days?
+* How much data was received by dataset (x) in the last (y) days?
+* What is the volume of records ingested for dataset (x) in the previous (y) days?
+
++++
+
 
 ## Examples of unsupported questions {#unsupported-questions}
 

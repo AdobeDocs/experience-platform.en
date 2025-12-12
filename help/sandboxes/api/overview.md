@@ -22,7 +22,7 @@ A sandbox is a virtual partition within a single instance of Adobe Experience Pl
 
 ## Sandbox types
 
-Currently, the supported sandbox types on Experience Platform are production and development sandboxes. A default Platform license grants you a total of five sandboxes, which you can classify as production or development. You can license additional packs of 10 sandboxes up to a maximum of 75 sandboxes in total. See the [sandbox types endpoint guide](./types.md) to learn how to view supported sandbox types for your organization in the API.
+Currently, the supported sandbox types on Experience Platform are production and development sandboxes. A default Experience Platform license grants you a total of five sandboxes, which you can classify as production or development. You can license additional packs of 10 sandboxes up to a maximum of 75 sandboxes in total. See the [sandbox types endpoint guide](./types.md) to learn how to view supported sandbox types for your organization in the API.
 
 ## Next steps
 

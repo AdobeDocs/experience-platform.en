@@ -8,6 +8,12 @@ exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
 ---
 # Create a model using JupyterLab Notebooks
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 This tutorial walks you through the required steps to create a model using the JupyterLab notebooks recipe builder template.
 
 ## Concepts introduced:
@@ -81,7 +87,7 @@ For the Luma propensity model notebook, the requirements do not need to be updat
 
 The configuration files, `training.conf` and `scoring.conf`, are used to specify the datasets you wish to use for training and scoring as well as adding hyperparameters. There are separate configurations for training and scoring. 
 
-In order for a model to run training, you must provide the `trainingDataSetId`, `ACP_DSW_TRAINING_XDM_SCHEMA`, and `tenantId`. Additionally for scoring, you must provide the `scoringDataSetId`, `tenantId`, and `scoringResultsDataSetId `.
+In order for a model to run training, you must provide the `trainingDataSetId`, `ACP_DSW_TRAINING_XDM_SCHEMA`, and `tenantId`. Additionally for scoring, you must provide the `scoringDataSetId`, `tenantId`, and `scoringResultsDataSetId`.
 
 To find the dataset and schema IDs, go to the data tab ![Data tab](../images/jupyterlab/create-recipe/dataset-tab.png) within notebooks on the left navigation bar (under the folder icon). Three different dataset ID's need to be provided. The `scoringResultsDataSetId` is used to store the model scoring results and should be an empty dataset. These datasets were made previously in the [Required assets](#assets) step.
 
@@ -104,29 +110,30 @@ By default, the following configuration parameters are set for you when you trai
 
 The purpose of the Training Data Loader is to instantiate data used for creating the machine learning model. Typically, there are two tasks that the training data loader accomplishes:
 
-- Loading data from [!DNL Platform]
+- Loading data from [!DNL Experience Platform]
 - Data preparation and feature engineering
 
 The following two sections will go over loading data and data preparation. 
 
 ### Loading data {#loading-data}
 
-This step uses the [pandas dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Data can be loaded from files in [!DNL Adobe Experience Platform] using either the [!DNL Platform] SDK (`platform_sdk`), or from external sources using pandas' `read_csv()` or `read_json()` functions.
+This step uses the [pandas dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Data can be loaded from files in [!DNL Adobe Experience Platform] using either the [!DNL Experience Platform] SDK (`platform_sdk`), or from external sources using pandas' `read_csv()` or `read_json()` functions.
 
-- [[!DNL Platform SDK]](#platform-sdk)
+- [[!DNL Experience Platform SDK]](#platform-sdk)
 - [External sources](#external-sources)
 
 >[!NOTE]
 >
 >In the Recipe Builder notebook, data is loaded via the `platform_sdk` data loader.
 
-### [!DNL Platform] SDK {#platform-sdk}
+### [!DNL Experience Platform] SDK {#platform-sdk}
 
-For an in-depth tutorial on using the `platform_sdk` data loader, please visit the [Platform SDK guide](../authoring/platform-sdk.md). This tutorial provides information on build authentication, basic reading of data, and basic writing of data.
+For an in-depth tutorial on using the `platform_sdk` data loader, please visit the [Experience Platform SDK guide](../authoring/platform-sdk.md). This tutorial provides information on build authentication, basic reading of data, and basic writing of data.
 
 ### External sources {#external-sources}
 
 This section shows you how to import a JSON or CSV file to a pandas object. Official documentation from the pandas library can be found here:
+
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
 - [read_json](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_json.html)
 
@@ -146,7 +153,7 @@ Now your data is in the dataframe object and can be analyzed and manipulated in 
 
 ## Training Data Loader File
 
-In this example, data is loaded using the Platform SDK. The library can be imported at the top of the page by including the line:
+In this example, data is loaded using the Experience Platform SDK. The library can be imported at the top of the page by including the line:
 
 `from platform_sdk.dataset_reader import DatasetReader`
 
@@ -166,6 +173,7 @@ def load(config_properties):
 >[!NOTE]
 >
 >As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from Experience Platform using `client_context = get_client_context(config_properties)`:
+>
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID` 
 > - `ML_FRAMEWORK_IMS_TOKEN` 
 > - `ML_FRAMEWORK_IMS_ML_TOKEN` 
@@ -257,7 +265,7 @@ When you are done editing the recipe and satisfied with the training/scoring out
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-After selecting **[!UICONTROL Create Recipe]**, you are prompted to enter a recipe name. This name represents the actual recipe created on [!DNL Platform].
+After selecting **[!UICONTROL Create Recipe]**, you are prompted to enter a recipe name. This name represents the actual recipe created on [!DNL Experience Platform].
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 

@@ -27,14 +27,14 @@ Adobe Experience Platform supports data exports to the following cloud storage d
 
 ## Connect to a new cloud storage destination {#connect-destination}
 
-To send audiences to cloud storage destinations for your campaigns, Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.
+To send audiences to cloud storage destinations for your campaigns, Experience Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.
 
 
 ## Use macros to create a folder in your storage location {#use-macros}
 
 >[!NOTE]
 >
-> The functionality described in this section is currently available for [Amazon S3](amazon-s3.md) destinations only.
+> The functionality described in this section is available for all cloud storage destinations. However, the [Amazon S3](amazon-s3.md) destination currently only supports the `%SEGMENT_ID%` and `%SEGMENT_NAME%` macros.
 
 To create a custom folder per audience file in your storage location, you can use macros in the folder path input field. Insert the macros at the end of the input field, as shown below.
 
@@ -57,9 +57,17 @@ Folder path in your storage location: `acme/campaigns/2021/25768be6-ebd5-45cc-89
 Input: `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
 Folder path in your storage location: `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
 
+**Further macros**
+
+Similar to the examples above, you can use further macros to create a custom folder structure in your folder location:
+
+* `%DATETIME%` or `%TIMESTAMP%` to add a custom folder name based on the export time of the files. The format for the first macro is `MMDDYYYY_HHMMSS` and a UNIX 10-digit format for the second macro.
+* `%DESTINATION_NAME%` to add a custom folder based on the name of the destination dataflow.  
+
 ## Data export type {#export-type}
 
 Cloud storage destinations support the following export types: 
+
 * **Profile-based export**. This means that you are exporting details about the individuals in the audience. These details are needed for personalization and can include attributes, events, audience memberships, and more.
 * **Dataset export**. This functionality allows you to export entire datasets to cloud storage destinations. [Read more](/help/destinations/ui/export-datasets.md) about the functionality. 
 

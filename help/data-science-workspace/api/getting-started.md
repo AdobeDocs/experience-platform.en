@@ -8,9 +8,15 @@ exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
 ---
 # [!DNL Sensei Machine Learning] API guide
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 The [!DNL Sensei Machine Learning] API provides a mechanism for data scientists to organize and manage machine learning services, from algorithm onboarding through experimentation and to service deployment.
 
-This developer guide provides steps to help you start using the [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml), and demonstrates API calls for performing CRUD operations on various Data Science Workspace resources.
+This developer guide provides steps to help you start using the [Sensei Machine Learning API](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/), and demonstrates API calls for performing CRUD operations on various Data Science Workspace resources.
 
 ## Getting started
 
@@ -20,11 +26,11 @@ You are required to have completed the [authentication](https://www.adobe.com/go
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Experience Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
+For more information on sandboxes in [!DNL Experience Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 

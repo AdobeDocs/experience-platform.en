@@ -19,6 +19,8 @@ Read this page to get an overview of all the available playbooks that you can di
 | Playbook name |  Description |
 | ------------- |  ----------- |
 | Abandoned Browsing: Merchandise | Nudge fans to re-engage after they leave your website or app after browsing a product. |
+| Abandoned Browsing: Product | Nudge shoppers to re-engage after they leave your website or app after browsing a product. |
+| Abandoned Browsing: Reservation | Nudge guests to re-engage after they leave your website or app after browsing a potential reservation. |
 | Abandoned Cart: Merchandise | Nudge fans to re-engage after they leave your website or app after adding merchandise to the cart. |
 | Abandoned Cart: Product | Nudge shoppers to re-engage after they leave your website or app after adding products to the cart. |
 | Abandoned Cart: Reservation | Nudge guests to re-engage after they leave your website or app after adding a new Reservation to the cart. |
@@ -38,6 +40,9 @@ Read this page to get an overview of all the available playbooks that you can di
 | Purchase Confirmation: Merchandise | Confirm a new merchandise purchase Fan. |
 | Purchase Confirmation: Product | Confirm a new product purchase shopper. |
 | Purchase Confirmation: Reservation | Confirm a new Reservation guest. |
+| Re-engage fans | Intelligently and responsibly re-engage fans who have abandoned a conversion before completing it. Act with intelligence and empathy to create experiences for your fans, and not mere reminders. |
+| Re-engage guests | Intelligently and responsibly re-engage guests who have abandoned a reservation before completing it. Act with intelligence and empathy to create experiences for your guests, and not mere reminders. |
+| Re-engage shoppers | Intelligently and responsibly re-engage customers who have abandoned a purchase before completing it. Act with intelligence and empathy to create experiences for your customers, and not mere reminders. |
 | Send A Birthday Message To Fans | Greet fans on their birthday with an exclusive offer. |
 | Send A Birthday Message to Guests | Greet guests on their birthday with an exclusive offer. |
 | Send A Birthday Message to Shoppers  | Greet shoppers on their birthday with an exclusive offer. |
@@ -54,7 +59,10 @@ Read this page to get an overview of all the available playbooks that you can di
 
 | Playbook name | Description |
 | ------------- | ----------- |
-| Abandoned Cart: Merchandise&mdash;For Activation | Retarget fans after they leave your website or app after adding the merchandise to the cart. |
+| Abandoned Browsing: Merchandise&mdash;For Activation | Retarget fans after they leave your website or app after browsing merchandise. |
+| Abandoned Browsing: Product&mdash;For Activation | Retarget shoppers after they leave your website or app after browsing a product. |
+| Abandoned Browsing: Reservation&mdash;For Activation | Retarget guests after they leave your website or app after browsing a potential reservation. |
+| Abandoned Cart: Merchandise&mdash;For Activation | Retarget fans after they leave your website or app after adding the sports merchandise to the cart. |
 | Abandoned Cart: Product&mdash;For Activation | Retarget shoppers after they leave your website or app after adding products to the cart. |
 | Abandoned Cart: Reservation&mdash;For Activation | Retarget guests after they leave your website or app after adding a new reservation to the cart. |
 | Destination Promotion&mdash;For Activation | Target guests to make a Reservation during an ongoing travel destination promotion. |

@@ -14,7 +14,7 @@ Use this step-by-step tutorial to learn how to locate, access, and download data
 
 This tutorial requires a working understanding on how to create and populate a dataset. See the [dataset creation tutorial](../../catalog/datasets/create.md) for more information.
 
-The following sections provide additional information that you need to know to successfully make calls to the Platform APIs.
+The following sections provide additional information that you need to know to successfully make calls to the Experience Platform APIs.
 
 ### Reading sample API calls {#reading-sample-api-calls}
 
@@ -22,19 +22,19 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-To make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+To make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](../../landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation takes place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Experience Platform] APIs require a header that specifies the name of the sandbox the operation takes place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
+>For more information on sandboxes in [!DNL Experience Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -422,7 +422,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 
 | Property | Description |
 | -------- | ----------- |
-| `{FILE_ID} `| The file's identifier. |
+| `{FILE_ID}`| The file's identifier. |
 | `{FILE_NAME}` | The file name (for example, profiles.parquet) |
 
 **Request**

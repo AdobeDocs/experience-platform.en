@@ -6,7 +6,7 @@ exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
 ---
 # [!DNL TikTok] web events API extension overview
 
-The [!DNL TikTok] events API is a secure [Edge Network Server API](/help/server-api/overview.md) interface that allows you to share information with [!DNL TikTok] directly about user actions on your websites. You can leverage the event forwarding rules to send data from the [!DNL Adobe Experience Platform Edge Network] to [!DNL TikTok] by using the [!DNL TikTok] Web Events API extension.
+The [!DNL TikTok] events API is a secure [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) interface that allows you to share information with [!DNL TikTok] directly about user actions on your websites. You can leverage the event forwarding rules to send data from the [!DNL Adobe Experience Platform Edge Network] to [!DNL TikTok] by using the [!DNL TikTok] Web Events API extension.
 
 ## [!DNL TikTok] prerequisites {#prerequisites}
 
@@ -75,7 +75,7 @@ User context parameters contain customer information that is used to match web v
 | IP Address | Non-hashed public IP address of the browser. Support is provided for IPv4 and IPv6 addresses. Both the full and compressed forms of IPv6 addresses are recognized. |
 | User Agent | The non-hashed user agent from the user's device. |
 | Email | Email address of the contact associated with the conversion event. |
-| Phone | The phone number must be in E164 format [+][country code][area code][local phone number] before hashing. |
+| Phone | The phone number must be in E164 format `[+][country code][area code][local phone number]` before hashing. |
 | Cookie ID | If you are using Pixel SDK will automatically save a unique identifier in the `_ttp` cookie, if cookies are enabled. The `_ttp` value can  extracted and used for this field. |
 | External ID | Any unique identifier such as user IDs, external cookie IDs and so on and must be hashed with SHA256. |
 | TikTok Click ID | The `ttclid` which is added to the URL of the landing page each time an advertisement is selected on [!DNL TikTok]. |

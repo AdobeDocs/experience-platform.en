@@ -11,9 +11,24 @@ You can automate query runs by creating query schedules. Scheduled queries run o
 >
 >You can only add a schedule to a query that has already been created, and saved.
 
-Any scheduled queries are added to the list in the [!UICONTROL Scheduled queries] tab. From that workspace you can monitor the status of all scheduled query jobs through the UI. On the [!UICONTROL Scheduled queries] tab you can find important information about your query runs and subscribe to alerts. The available information includes the status, schedule details, and error messages/codes should a run fail. See the [Monitor scheduled queries document](./monitor-queries.md) for more information.
+## Account requirements for scheduled queries {#technical-account-user-requirements}
 
-This workflow covers the scheduling process in the Query Service UI. To learn how to add schedules using the API, please read the [scheduled queries endpoint guide](../api/scheduled-queries.md). 
+To help scheduled queries run reliably, Adobe recommends that administrators provision a technical account (using OAuth Server-to-Server credentials) for creating scheduled queries. Scheduled queries can also be created with a personal user account, but queries created this way will stop running if that user's access is removed or disabled.
+
+For details on setting up technical accounts and assigning the required permissions, see the [Credentials guide prerequisites](./credentials.md#prerequisites) and [API authentication](../../landing/api-authentication.md).
+
+For additional guidance on creating and configuring a technical account, refer to:
+
+- [Developer Console setup](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): Step-by-step instructions for configuring the Adobe Developer Console and obtaining OAuth credentials.
+- [End-to-end technical account setup](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup): A comprehensive walkthrough for creating and configuring a technical account in Adobe Experience Platform.
+
+If you only use the Query Service UI, ensure you have the necessary permissions or coordinate with an administrator who manages technical accounts. Any scheduled queries are added to the list in the [!UICONTROL Scheduled queries] tab, where you can monitor the status, schedule details, and error messages for all scheduled query jobs, as well as subscribe to alerts. For more information on monitoring and managing your queries, see the [monitor scheduled queries document](./monitor-queries.md).
+
+This workflow covers the scheduling process in the Query Service UI. To learn how to add schedules using the API, refer to the [scheduled queries endpoint guide](../api/scheduled-queries.md).
+
+>[!NOTE]
+>
+>Use a technical account to ensure scheduled queries continue to run even if users leave the organization or their roles change. Choose a technical account whenever possible for uninterrupted query automation.
 
 ## Create a query schedule {#create-schedule}
 
@@ -41,6 +56,10 @@ The schedules workspace appears. The UI displays a list of any scheduled runs th
 
 The schedule details page appears. On this page, you can edit a variety of details for the scheduled query. Details include the [frequency and weekday of the scheduled query](#scheduled-query-frequency) run, the start and end date, the dataset to export the results to, and [query status alerts](#alerts-for-query-status).
 
+>[!IMPORTANT]
+>
+>The queries scheduler UI does not support indefinite or perpetual scheduling. An end date must be specified. There is no upper limit for the end date.
+
 ![The Schedule details panel highlighted.](../images/ui/query-schedules/schedule-details.png)
 
 #### Scheduled query frequency {#scheduled-query-frequency}
@@ -65,7 +84,7 @@ Select **[!UICONTROL Create and append into new dataset]** to create a data set 
 
 ![The Schedule details panel with Dataset details and the [!UICONTROL Create and append into new dataset] options highlighted.](../images/ui/query-schedules/dataset-details-create-and-append.png)
 
-Alternatively, select **[!UICONTROL Append into existing dataset]** followed by the dataset icon (![The dataset icon.](../images/ui/query-schedules/dataset-icon.png)).
+Alternatively, select **[!UICONTROL Append into existing dataset]** followed by the dataset icon (![The dataset icon.](/help/images/icons/database.png)).
 
 ![The Schedule details panel with Dataset details and Append into existing dataset highlighted.](../images/ui/query-schedules/dataset-details-existing.png)
 
@@ -87,7 +106,7 @@ You can also enroll a scheduled query into the quarantine feature from the inlin
 
 ### Set alerts for a scheduled query status {#alerts-for-query-status}
 
-You can also subscribe to query alerts as part of your scheduled query settings. You can configure your settings to receive notifications for a variety of situations. Alerts can be set for a quarantined state, delays in query processing, or a change in status of your query. The available query-state alert options include start, success, and failure. Alerts can be received either as pop-up notifications or emails. Select the check box to subscribe to alerts for that status of scheduled query. 
+You can also subscribe to query alerts as part of your scheduled query settings. You can configure your settings to receive notifications for a variety of situations. Alerts can be set for a quarantined state, delays in query processing, or a change in status of your query. The available query-state alert options include start, success, and failure. Alerts can be received either as pop-up notifications or emails. Select the checkbox to subscribe to alerts for that status of scheduled query. 
 
 ![The Schedule details panel with the Alert options highlighted.](../images/ui/query-editor/alerts.png)
 
@@ -103,15 +122,11 @@ The table below explains the supported query alert types:
 
 >[!NOTE]
 >
->If you choose to set a [!UICONTROL Query Run Delay] alert, you must set your desired delay time in minutes in the Platform UI. Enter the duration in minutes. The maximum delay is 24 hours (1440 minutes).
+>If you choose to set a [!UICONTROL Query Run Delay] alert, you must set your desired delay time in minutes in the Experience Platform UI. Enter the duration in minutes. The maximum delay is 24 hours (1440 minutes).
 
 For an overview of alerts in Adobe Experience Platform, including the structure of how alert rules are defined, see the [alerts overview](../../observability/alerts/overview.md). For guidance on managing alerts and alert rules within the Adobe Experience Platform UI, see the [Alerts UI guide](../../observability/alerts/ui.md).
 
 ### Set parameters for a scheduled parameterized query {#set-parameters}
-
->[!IMPORTANT]
->
->The parameterized query UI feature is currently available in a **limited release only** and is not available to all customers. If you do not have access to parameterized queries, continue on to the [delete or disable a schedule](#delete-schedule) section.
 
 If you are creating a scheduled query for a parameterized query, you must now set the parameter values for these query runs.
 
@@ -131,7 +146,32 @@ Alternatively, to view a list of a query template's scheduled runs, navigate to 
 
 The list of query runs for that scheduled query appears. 
 
+### Compute hours at job level {#compute-hours}
+
+Track compute hours consumed at the query execution level for your CTAS/ITAS batch queries. This feature offers insights into compute usage, helping you optimize resource allocation and improve query performance.
+
+>[!AVAILABILITY]
+>
+>The Compute Hours functionality is exclusive to users who have purchased the [Data Distiller SKU](../data-distiller/overview.md). Contact your Adobe representative for more information.
+
 ![The details section of the Scheduled Queries workspace with a list of query runs highlighted for a scheduled query.](../images/ui/query-schedules/list-of-scheduled-runs.png)
+
+The following table provides descriptions of each column available in the details section that lists scheduled query runs.
+
+| Column Title        | Description  |
+|---------------------|----------------------------------|
+| [!UICONTROL Query Run ID]        | Displays a unique identifier for each query run, allowing you to track and reference individual executions of your scheduled queries.            |
+| [!UICONTROL Query Run Start]     | Indicates the start date and time of the query run, to help you monitor when each execution began. |
+| [!UICONTROL Query Run Complete]  | Shows the completion date and time of the query run, to provide insight into execution duration and status.  |
+| [!UICONTROL Status]              | Displays the current status of the query run, such as `Completed,` `Running,` or `Failed,` to assess the outcome quickly. |
+| [!UICONTROL Datasets]            | Lists datasets used in the query run, to show which data sources were involved in the execution. |
+| [!UICONTROL Compute Hours]       | Shows the compute time used for each query run, measured in hours. This helps to track resource usage and optimize query performance. |
+
+{style="table-layout:auto"}
+
+>[!NOTE]
+>
+>Compute Hours data is available from 08/15/2024. Data before this date appears as 'Not Available'.
 
 See the [monitor scheduled queried guide](./monitor-queries.md#inline-actions) for complete information on how to monitor the status of all query jobs through the UI. 
 

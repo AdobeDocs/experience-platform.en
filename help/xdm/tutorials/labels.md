@@ -5,27 +5,23 @@ exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 ---
 # Manage data usage labels for a schema
 
->[!IMPORTANT]
->
->Schema-based labeling is part of [attribute-based access control](../../access-control/abac/overview.md), which is currently available in a limited release for US-based healthcare customers. This capability will be available to all Adobe Real-Time Customer Data Platform customers once it is fully released.
-
-All data that is brought into Adobe Experience Platform is constrained by Experience Data Model (XDM) schemas. This data may be subject to usage restrictions defined by your organization or by legal regulations. To account for this, the Platform allows you to restrict the usage of certain datasets and fields through the use of [data usage labels](../../data-governance/labels/overview.md).
+All data that is brought into Adobe Experience Platform is constrained by Experience Data Model (XDM) schemas. This data may be subject to usage restrictions defined by your organization or by legal regulations. To account for this, the Experience Platform allows you to restrict the usage of certain datasets and fields through the use of [data usage labels](../../data-governance/labels/overview.md).
 
 A label applied to a schema field indicates the usage policies that apply to the data contained in that specific field. 
 
-Labels can be applied to applied to individual schemas, and fields within those schemas. When labels are applied directly to a schema, those labels are propagated to all existing and future datasets that are based on that schema.
+Labels can be applied to individual schemas, and fields within those schemas. When labels are applied directly to a schema, those labels are propagated to all existing and future datasets that are based on that schema.
 
 In addition, any field label that you add in one schema propagates to all other schemas that employ the same field from a shared class or field group. This helps to ensure that usage rules for similar fields are consistent across your entire data model.
 
-This tutorial covers the steps for adding labels to a schema using the Schema Editor in the Platform UI.
+This tutorial covers the steps for adding labels to a schema using the Schema Editor in the Experience Platform UI.
 
 ## Getting started
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-  * [Schema Editor](../ui/overview.md): Learn how to create and manage schemas and other resources in the Platform UI.
-* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Provides the infrastructure for enforcing data usage restrictions on Platform operations, using policies that define which marketing actions can (or cannot) be performed on labeled data.
+  * [Schema Editor](../ui/overview.md): Learn how to create and manage schemas and other resources in the Experience Platform UI.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Provides the infrastructure for enforcing data usage restrictions on Experience Platform operations, using policies that define which marketing actions can (or cannot) be performed on labeled data.
 
 ## Select a schema or field to add labels to {#select-schema-field}
 

@@ -5,10 +5,6 @@ exl-id: b72df3df-f206-488d-a690-0f086973c5b6
 ---
 # Extension development overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
-
 One of the primary goals of tags in Adobe Experience Platform is to create an open ecosystem where engineers outside of Adobe can expose additional functionalities on their websites and mobile applications. This is accomplished through tag extensions. Once an extension has been installed on a tag property, that extension's functionality then becomes available for use by all users of the property.
 
 This document outlines the primary components of an extension, and provides links to further documentation to help guide you on the extension development process.
@@ -31,13 +27,13 @@ You can put library module files in anywhere you like within the extension direc
 
 ### Views
 
-A view is an HTML file capable of being loaded into an [`iframe` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) within the tags application, specifically through the Platform UI and Data Collection UI. The view must include a script provided by the extension and conform to a small API in order to communicate with the application.
+A view is an HTML file capable of being loaded into an [`iframe` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) within the tags application, specifically through the Experience Platform UI and Data Collection UI. The view must include a script provided by the extension and conform to a small API in order to communicate with the application.
 
 The most important view file for any extension is its configuration. See the section on [extension configurations](#configuration) for more information.
 
 There are no restrictions as to what libraries are used within your views. In other words, you may use jQuery, Underscore, React, Angular, Bootstrap, or others. However, it is still recommended to make your extension have a similar look and feel to the UI.
 
-It is recommended that you put all view-related files (HTML, CSS, JavaScript) within a single subdirectory that is isolated from the library module files. In `extension.json`, you can describe where this view subdirectory is located. Platform will then serve this subdirectory (and only this subdirectory) from its web servers.
+It is recommended that you put all view-related files (HTML, CSS, JavaScript) within a single subdirectory that is isolated from the library module files. In `extension.json`, you can describe where this view subdirectory is located. Experience Platform will then serve this subdirectory (and only this subdirectory) from its web servers.
 
 ## Library components {#components}
 
@@ -87,4 +83,4 @@ To learn more, see the guide on [extension configurations](./configuration.md).
 
 ## Submitting extensions
 
-Once you have finished building your extension, you can submit it to be listed in the extension catalog in Platform. See the [extension submission process overview](./submit/overview.md) for more information.
+Once you have finished building your extension, you can submit it to be listed in the extension catalog in Experience Platform. See the [extension submission process overview](./submit/overview.md) for more information.

@@ -20,7 +20,7 @@ In order to utilize insights for Customer AI, you need to have a service instanc
 
 In the [!DNL Adobe Experience Platform] UI, select **[!UICONTROL Services]** in the left navigation. The *Services* browser appears and displays available Intelligent Services. In the container for Customer AI, select **[!UICONTROL Open]**.
 
-![Accessing your instance](../images/insights/navigate-to-service.png)
+![Navigate to the Customer AI service instance in the Adobe Experience Platform UI.](../images/insights/navigate-to-service.png)
 
 The Customer AI service page appears. This page lists service instances of Customer AI and displays information about them, including the name of the instance, propensity type, how often the instance is run, and the status of the last update.
 
@@ -28,17 +28,17 @@ The Customer AI service page appears. This page lists service instances of Custo
 >
 >Only service instances that have completed successful scoring runs have insights.
 
-![Create instance](../images/insights/dashboard.png)
+![Customer AI dashboard showing a list of service instances with their details.](../images/insights/dashboard.png)
 
 Select a service instance name to begin.
 
-![Create instance](../images/insights/click-the-name.png)
+![Screenshot showing the process to select a service instance name in the Customer AI dashboard.](../images/insights/click-the-name.png)
 
 Next, the insights page for that service instance appears with the option to select **[!UICONTROL Latest scores]** or **[!UICONTROL Performance summary]**. The default tab **[!UICONTROL Latest scores]** provides visualizations of your data. The visualizations and what you can do with the data are explained in more detail throughout this guide.
 
  The **[!UICONTROL Performance summary]** tab shows the actual churn or conversion rates for each propensity bucket. To learn more, see the section on [performance summary metrics](#performance-metrics).
 
-![setup page](../images/insights/landing_page_insights.png)
+![Customer AI insights landing page showing various visualizations and options for exploring insights.](../images/insights/landing_page_insights.png)
 
 ## Service instance details
 
@@ -55,39 +55,39 @@ To view an overview of the service instance details within the dashboard, select
 - **[!UICONTROL Run Frequency]**: How often a scoring run takes place and when.
 - **[!UICONTROL Score definition]**: A quick overview of the goal you configured for this instance.
 
-![](../images/user-guide/service-instance-panel.png)
+![Service instance panel showing details such as name, description, scoring frequency, and other configuration options.](../images/user-guide/service-instance-panel.png)
 
 >[!NOTE]
 >
 >In the event that a scoring run fails, an error message is provided. The error message is listed under **Last run details** in the right rail which is only visible to failed runs.
 
-![failed run message](../images/insights/failed-run.png)
+![Error message displayed for a failed scoring run in Customer AI.](../images/insights/failed-run.png)
 
 ### Show more insights dropdown
 
 The second way to view additional details for a service instance is located within the insights page. Select **[!UICONTROL Show more]** in the top-right to populate a drop down. Details are listed such as the score definition, when it was created, the propensity type, and the datasets used. For more information on any of the properties listed, please visit [Configuring a Customer AI instance](./configure.md).
 
-![show more](../images/insights/landing-show-more.png)
+![Customer AI dataset preview popover showing multiple datasets with a color-coded key for easy identification.](../images/insights/landing-show-more.png)
 
 ### Customer AI dataset preview popover
 
 If more than one dataset is used by Customer AI, a hyperlink labeled **[!UICONTROL Multiple ]** followed by the number of datasets in brackets `()` is provided.
 
-![multiple datasets](../images/insights/insights-multi-datasets.png)
+![Multiple datasets preview showing a color-coded key for easy identification of datasets used in Customer AI.](../images/insights/insights-multi-datasets.png)
 
 Selecting the multiple datasets link opens the Customer AI dataset preview popover. Each color in the preview represents a dataset as shown by the color key to the left of the dataset columns. In this example, you can see that only **Dataset 1** contains the `PROP1` column.
 
-![show more](../images/insights/dataset-preview.png)
+![Dataset preview popover showing additional details for the selected instance.](../images/insights/dataset-preview.png)
 
 ### Edit an instance
 
 To edit an instance, select **[!UICONTROL Edit]** in the top-right navigation.
 
-![click the edit button](../images/insights/edit-button.png)
+![Edit button in the Customer AI interface.](../images/insights/edit-button.png)
 
 The edit dialog box appears, allowing you to edit the name, description, status, and scoring frequency of the instance. To confirm your changes and close the dialog, select **[!UICONTROL Save]** in the bottom-right corner.
 
-![edit popover](../images/insights/edit-instance.png)
+![Edit instance popover showing options to modify the name, description, status, and scoring frequency of a Customer AI instance.](../images/insights/edit-instance.png)
 
 ### More actions
 
@@ -98,7 +98,7 @@ The **[!UICONTROL More actions]** button is located in the top-right navigation 
 - **[!UICONTROL Access scores]**: Selecting **[!UICONTROL Access scores]** opens a dialog providing a link to the [downloading scores for Customer AI](./download-scores.md) tutorial, the dialog also provides the dataset id required for making API calls.
 - **[!UICONTROL View run history]**: A dialog containing a list of all the scoring runs associated with the service instance appears.
 
-![more actions](../images/insights/more-actions.png)
+![More actions dropdown showing options such as Clone, Delete, Access scores, and View run history.](../images/insights/more-actions.png)
 
 ## Scoring summary {#scoring-summary}
 
@@ -108,33 +108,33 @@ Scoring summary displays the total number of profiles scored and categorizes the
 >
 >If it is a conversion propensity score, the high scores show in green and the low scores in red. If you are predicting churn propensity this is flipped, the high scores are in red and the low scores are green. The medium bucket remains yellow regardless of what propensity type you choose.
 
-![scoring summary](../images/insights/scoring-summary.png)
+![Visualization of profiles scored, categorized into high, medium, and low propensity buckets, each represented by a distinct color.](../images/insights/scoring-summary.png)
 
 You can hover over any color on the ring to view additional information, such as a percentage and total number of profiles belonging to a bucket.
 
-![](../images/insights/scoring-ring.png)
+![Visualization of scoring ring showing the distribution of profiles across high, medium, and low propensity buckets.](../images/insights/scoring-ring.png)
 
 ## Distribution of Scores
 
 The **[!UICONTROL Distribution of Scores]** card gives you a visual summary of the population based on the score. The colors that you see in the [!UICONTROL Distribution of Scores] card represent the type of propensity score generated. Hovering over any of the scoring distributions provides the exact count belonging to that distribution.
 
-![distribution of scores](../images/insights/distribution-of-scores.png)
+![Visualization showing the distribution of scores across different propensity buckets in Customer AI.](../images/insights/distribution-of-scores.png)
 
 ## Influential factors
 
 For each score bucket, a card is generated that shows the top 10 influential factors for that bucket. The influential factors give you additional details on why your customers belong to various score buckets.
 
-![Influential factors](../images/insights/influential-factors.png)
+![Visualization of influential factors for each propensity bucket, highlighting the top 10 factors that influence customer behavior.](../images/insights/influential-factors.png)
 
 ### Influential factor drilldowns
 
 Hovering over any of the top influential factors further breaks down the data. You are provided an overview as to why certain profiles belong to a propensity bucket. Depending on the factor, you may be given number, categorical, or boolean values. The example below displays categorical values by region.
 
-![drilldown screenshot](../images/insights/drilldown.png)
+![Drilldown visualization showing a detailed breakdown of influential factors for a selected propensity bucket.](../images/insights/drilldown.png)
 
 Additionally, using drilldowns, you are able to compare a distribution factor if it occurs in two or more propensity buckets and create more specific segments with these values. The following example illustrates the first use case:
 
-![](../images/insights/drilldown-compare.png)
+![Comparison of distribution factors across propensity buckets, highlighting differences in influential factors.](../images/insights/drilldown-compare.png)
 
 You can see that profiles with low propensity to convert are less likely to have made a recent visit to the adobe.com webpages. The "Days since last webVisit" factor has only 8% coverage compared to 26% in medium propensity profiles. Using these numbers, you can compare the distribution within each bucket for the factor. This information can be used to infer that the recency in webvisit is not as influential in the low propensity bucket, as it is in medium propensity bucket.
 
@@ -146,9 +146,9 @@ Selecting the **[!UICONTROL Create Segment]** button in any of the buckets for l
 >
 >The **[!UICONTROL Create Segment]** button is only available if Real-Time Customer Profile is enabled for the dataset. For more information on how to enable Real-Time Customer Profile, visit the [Real-Time Customer Profile overview](../../../rtcdp/overview.md).
 
-![Click create segment](../images/insights/influential-factors-create-segment.png)
+![Button to create a segment from influential factors in Customer AI insights.](../images/insights/influential-factors-create-segment.png)
 
-![Create a segment](../images/insights/create-segment.png)
+![Button to create a segment from influential factors in Customer AI insights.](../images/insights/create-segment.png)
 
 The segment builder is used to define a segment. When selecting **[!UICONTROL Create Segment]** from the Insights page, Customer AI automatically adds the selected buckets information to the segment. To finish creating your segment, simply fill in the **Name** and **Description** containers located in the right rail of the segment builder user interface. After you have given the segment a name and description, select **[!UICONTROL Save]** in the top-right.
 
@@ -156,27 +156,27 @@ The segment builder is used to define a segment. When selecting **[!UICONTROL Cr
 >
 >Since the propensity scores are written to the individual profile, they are available in the Segment builder like any other profile attributes. When you navigate to the segment builder to create new segments you can see all the various propensity scores under your namespace Customer AI.
 
-![Segment fill in](../images/insights/segment-saving.png)
+![Segment saving interface showing fields to input segment name and description before saving.](../images/insights/segment-saving.png)
 
- To view your new segment in the Platform UI, select **[!UICONTROL Segments]** in the left navigation. The **[!UICONTROL Browse]** page appears and displays all available segments. 
+To view your new segment in the Experience Platform UI, select **[!UICONTROL Segments]** in the left navigation. The **[!UICONTROL Browse]** page appears and displays all available segments.
 
- ![All your Segments](../images/insights/Segments-dashboard.png)
+![Segments dashboard displaying a list of all available segments in the Experience Platform UI.](../images/insights/Segments-dashboard.png)
 
 ## Historical performance {#historical-performance}
 
 The **[!UICONTROL Performance summary]** tab shows the actual churn or conversion rates, separated into each of the propensity buckets scored by Customer AI.
 
-![Performance summary tab](../images/insights/summary_tab.png)
+![Performance summary tab showing churn or conversion rates across propensity buckets, with options to filter by date range and view individual scoring run results.](../images/insights/summary_tab.png)
 
 Initially only expected rates (dotted lines) are displayed. Expected rates are displayed when a scoring run has not occurred and data is not yet available. However, once an outcome window has passed, the expected rate is replaced with an actual rate (solid line).
 
 Hovering over the lines displays the date and actual/expected rate for that day in that bucket.
 
-![Bucket example](../images/insights/churn_tab.png)
+![Visualization of churn propensity buckets showing the distribution of profiles across high, medium, and low propensity categories.](../images/insights/churn_tab.png)
 
-You can filter the timeframe for the expected and actual rates being displayed. Select the **calendar icon** ![icon](../images/insights/calendar_icon.png)then select a new date range. The results in each of the buckets are updated to display within the new date range.
+You can filter the timeframe for the expected and actual rates being displayed. Select the **calendar icon** ![icon](/help/images/icons/calendar.png)then select a new date range. The results in each of the buckets are updated to display within the new date range.
 
-![Date selector](../images/insights/date_selector.png)
+![Date selector showing options to filter results by a specific date range.](../images/insights/date_selector.png)
 
 ### Individual scoring run rates
 
@@ -184,7 +184,7 @@ The bottom half of the **[!UICONTROL Performance summary]** tab displays the res
 
 Depending on if you are predicting churn or conversion, the [!UICONTROL Distribution of Scores] graph displays the distribution of profiles churned/converted and not churned/not converted in each increment.
 
-![individual scoring](../images/insights/scoring_tab.png)
+![Visualization of individual scoring run results showing the distribution of profiles across churned/converted and not churned/not converted categories.](../images/insights/scoring_tab.png)
 
 ## Model evaluation {#model-evaluation}
 
@@ -192,7 +192,7 @@ In addition to tracking the predicted and actual outcomes over time on the Histo
 
 ### Lift chart
 
-![lift chart](../images/user-guide/lift-chart.png)
+![Lift chart showing predictive model improvement over random targeting. High early decile lift values indicate a strong model.](../images/user-guide/lift-chart.png)
 
 The lift chart measures the improvement of using a predictive model instead of random targeting.
 
@@ -203,7 +203,7 @@ High quality model indicators include:
 
 ### Gains chart
 
-![gains chart](../images/user-guide/gains-chart.png)
+![Gains chart illustrating the cumulative percentage of positive outcomes achieved by targeting high-propensity users versus random targeting.](../images/user-guide/gains-chart.png)
 
 The cumulative gains chart measures the percentage of positive outcomes captured by targeting scores above a certain threshold. After sorting the customers by propensity score from high to low, the population is split into deciles - 10 equally sized groups. A perfect model would capture all of the positive outcomes in the highest score deciles. A baseline random targeting method captures positive outcomes proportionally to the size of the group - targeting 30% of the users would capture 30% of the outcomes.
 
