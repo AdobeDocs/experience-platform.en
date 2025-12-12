@@ -18,7 +18,9 @@ The following options are available:
 
 ## [!UICONTROL Migrate Target from at.js to the Web SDK]**
 
-Use this option to allow the Web SDK to read and write the legacy `mbox` and `mboxEdgeCluster` cookies that are used by the `at.js` 1.x or 2.x libraries. This setting helps keep visitor profiles intact while moving between pages using the Web SDK or `at.js` on the same website. If you do not have `at.js` implemented anywhere on your site, you do not need to enable this checkbox. When this option is enabled, make sure that you also enable [`overrideMboxEdgeServer`](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) in `targetGlobalSettings()`. The JavaScript library equivalent to this checkbox is [`targetMigrationEnabled`](/help/collection/js/commands/configure/targetmigrationenabled.md).
+Use this option to allow the Web SDK to read and write the legacy `mbox` and `mboxEdgeCluster` cookies that are used by the `at.js` 1.x or 2.x libraries. This setting helps keep visitor profiles intact while moving between pages using the Web SDK or `at.js` on the same website. If you do not have `at.js` implemented anywhere on your site, you do not need to enable this checkbox. The JavaScript library equivalent to this checkbox is [`targetMigrationEnabled`](/help/collection/js/commands/configure/targetmigrationenabled.md).
+
+When enabling this option, make sure that you also enable [`overrideMboxEdgeServer`](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) in `targetGlobalSettings()`.
 
 ## [!UICONTROL Prehiding style] {#prehiding-style}
 
