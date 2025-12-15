@@ -95,22 +95,22 @@ Data can be ingested into one or multiple systems in Experience Platform, namely
 >
 >Your access to the [!DNL data lake] can depend on the product SKU that you purchased. For more information on product SKUs, please speak with your Adobe representative.
 
-You must also decide whether to enable datasets for Real-Time Customer Profile or use them only as lookup datasets. Use the following guidance to make that decision without exceeding your license entitlements.
+You must also decide whether to enable lookup datasets for Real-Time Customer Profile, in addition to using them for general lookup purposes. Follow the guidance below to avoid exceeding your license limits.
 
 #### Profile enablement for lookup datasets {#profile-enablement-lookup-datasets}
 
-A lookup dataset is a dataset that you enable in Experience Platform as a lookup source so applications can use it as reference data at run time. Use lookup datasets to store relatively static, keyed information such as product details, store metadata, or offer configurations, rather than primarily contributing profile attributes or events.
+A lookup dataset is a dataset that you enable in Experience Platform as a lookup source so applications can use it as reference data at run time. Use lookup datasets to store relatively static, keyed information such as product details, store metadata, or offer configurations, rather than datasets whose primary purpose is to contribute profile attributes (for example, name, email, or loyalty tier) or experience events (for example, page views or purchases).
 
-Experience Platform applications such as [!DNL Journey Optimizer] and other decisioning applications use these datasets to retrieve additional fields based on a key (for example, product ID or store ID) and to enrich personalization, decisioning, and orchestration workflows. How you enable lookup datasets for Real-Time Customer Profile affects your addressable audience and profile data volume, so use the following guidance to stay within your licensing entitlements.
+Experience Platform applications such as [!DNL Journey Optimizer] and other decisioning applications use these datasets to retrieve additional fields based on a key (for example, product ID or store ID) and to enrich personalization, decisioning, and orchestration workflows. Enabling lookup datasets for Real-Time Customer Profile affects your profile data volume, so use the following guidance to stay within your licensing entitlements.
 
-When you configure datasets for lookup purposes, you must understand the distinction between lookup datasets and Profile-enabled datasets, as they serve different functions within Experience Platform:
+When you configure datasets for lookup purposes, consider the two roles that a dataset can play in Experience Platform:
 
 * **Lookup datasets**: Allow applications to retrieve reference data, for example for personalization and decisioning in [!DNL Journey Optimizer].
 * **Profile-enabled datasets**: Contribute attributes and events to unified customer profiles in Real-Time Customer Profile. These datasets make their fields available for segmentation and activation use cases.
 
 >[!IMPORTANT]
 >
->Do not enable lookup datasets for Real-Time Customer Profile by default. Enabling a lookup dataset for Real-Time Customer Profile increases your addressable audience and profile data volume. Only enable a lookup dataset for Real-Time Customer Profile when you must use fields from that dataset in Real-Time Customer Profile (for example, for audience definitions, activation, or multi-entity segmentation). For more information, see the tutorial on [multi-entity segmentation](../../segmentation/tutorials/multi-entity-segmentation.md).
+>Only enable a lookup dataset for Real-Time Customer Profile when you must use fields from that dataset in Real-Time Customer Profile (for example, for audience definitions, activation, or multi-entity segmentation). Enabling a lookup dataset for Real-Time Customer Profile increases your profile data volume. For more information, see the tutorial on [multi-entity segmentation](../../segmentation/tutorials/multi-entity-segmentation.md).
 
 **When to enable datasets for Real-Time Customer Profile:**
 
