@@ -15,11 +15,11 @@ This tutorial requires a working understanding of the following components of Ex
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-### Gather required credentials
+### Gather required credentials {#credentials}
 
 Read the [[!DNL Oracle Eloqua] overview](../../../../connectors/marketing-automation/eloqua.md) for information on authentication.
 
-## Navigate the sources catalog
+## Navigate the sources catalog {#catalog}
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. Choose a category or use the search bar to find your source.
 
@@ -31,7 +31,7 @@ To connect to [!DNL Oracle Eloqua], go to the *[!UICONTROL Marketing Automation]
 
 ![]
 
-## Use an existing account
+## Use an existing account {#existing}
 
 To use an existing account, select **[!UICONTROL Existing account]** and then select the [!DNL Oracle Eloqua] account that you want to use.
 
@@ -40,6 +40,57 @@ To use an existing account, select **[!UICONTROL Existing account]** and then se
 ## Create a new account {#new}
 
 To create a new account, select **[!UICONTROL New account]** and provide a name and description under your [!UICONTROL Source connection details]. Next, under [!UICONTROL Account authentication], provide values for your **Client ID**, **Client secret**, **Username**, **Password**, and **Base endpoint**. You can read the [authentication guide](../../../../connectors/marketing-automation/eloqua.md) for more information on these credentials. When finished, select **[!UICONTROL Connect to source]** and allow for a few seconds for your connection to establish.
+
+![]
+
+## Select data
+
+>[!BEGINTABS]
+
+>[!TAB Account]
+
+>[!TAB Activities]
+
+>[!TAB Campaign]
+
+>[!TAB Contact]
+
+>[!TAB Custom Data Objects]
+
+>[!ENDTABS]
+
+
+## Dataset and dataflow details {#details}
+
+Next, you must provide information on your dataset and dataflow. During this step, you can either use an existing dataset or create a new dataset. Additionally, you can optionally enable your dataset for ingestion to Real-Time Customer Profile during this step.
+
+![]
+
+## Mapping {#mapping}
+
+Mappings for [!DNL Oracle Eloqua] are organized into four main entity types:
+
+* **Accounts** - Company/organization records from [!DNL Oracle Eloqua].
+* **Activities** - Marketing activity and engagement events from [!DNL Oracle Eloqua].
+* **Campaigns** - Marketing campaign records from [!DNL Oracle Eloqua].
+* **Contacts** - Individual person records from [!DNL Oracle Eloqua].
+
+![]
+
+## Scheduling
+
+
+With your mapping complete, you can now configure an ingestion schedule for your dataflow. Set your [!UICONTROL Frequency] to `Once` to configure a one-time ingestion run. For incremental ingestion, you can set your [!UICONTROL Frequency] to `Hour`, `Day`, or `Week`. When using incremental ingestion, you must also configure the [!UICONTROL Interval] to define the amount of time that occurs between ingestion runs. For example, an ingestion frequency set to `Day` and  an interval set to `15` means that your dataflow is scheduled to ingest data every 15 days.
+
+>[!TIP]
+>
+> Per-minute ingestion frequency is not available for the [!DNL Oracle Eloqua] source. The most frequent schedule you can choose is hourly. Select a schedule that matches your data freshness needs. Keep in mind that selecting a more frequent schedule will increase compute costs.
+
+![]
+
+## Review
+
+With the ingestion schedule configured, use the [!UICONTROL Review] interface to confirm the details of your dataflow. Select **[!UICONTROL Finish]** to complete the setup and allow for a few moments for your dataflow to initiate.
 
 ![]
 
