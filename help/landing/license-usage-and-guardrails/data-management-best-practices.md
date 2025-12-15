@@ -105,7 +105,7 @@ Experience Platform applications such as [!DNL Journey Optimizer] and other deci
 
 When you configure datasets for lookup purposes, consider the two roles that a dataset can play in Experience Platform:
 
-* **Lookup datasets**: Allow applications to retrieve reference data, for example for personalization and decisioning in [!DNL Journey Optimizer].
+* **Lookup datasets**: Allow applications to retrieve reference data, for services like personalization and decisioning in [!DNL Journey Optimizer].
 * **Profile-enabled datasets**: Contribute attributes and events to unified customer profiles in Real-Time Customer Profile. These datasets make their fields available for segmentation and activation use cases.
 
 >[!IMPORTANT]
