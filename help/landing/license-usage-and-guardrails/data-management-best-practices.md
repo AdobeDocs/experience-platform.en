@@ -99,7 +99,7 @@ You must also decide whether to enable lookup datasets for Real-Time Customer Pr
 
 #### Profile enablement for lookup datasets {#profile-enablement-lookup-datasets}
 
-A lookup dataset is a dataset that you enable in Experience Platform as a lookup source so applications can use it as reference data at run time. Use lookup datasets to store relatively static, keyed information such as product details, store metadata, or offer configurations, rather than datasets whose primary purpose is to contribute profile attributes (for example, name, email, or loyalty tier) or experience events (for example, page views or purchases).
+A lookup dataset is a dataset you enable in Experience Platform so applications can reference it at runtime. Use lookup datasets to store relatively static, keyed information such as product details, store metadata, or offer configurations, rather than datasets whose primary purpose is to contribute profile attributes (for example, name, email, or loyalty tier) or experience events (for example, page views or purchases).
 
 Experience Platform applications such as [!DNL Journey Optimizer] and other decisioning applications use these datasets to retrieve additional fields based on a key (for example, product ID or store ID) and to enrich personalization, decisioning, and orchestration workflows. Enabling lookup datasets for Real-Time Customer Profile affects your profile data volume, so use the following guidance to stay within your licensing entitlements.
 
