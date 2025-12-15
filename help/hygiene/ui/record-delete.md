@@ -203,10 +203,6 @@ After the request is submitted, a work order is created and appears on the [!UIC
 
 If the dataset you are deleting from is based on a relational schema, review the following considerations to ensure records are removed correctly and not re-ingested due to mismatches between Experience Platform and your source system.
 
->[!NOTE]
->
->Relational schemas were previously referred to as model-based schemas in earlier versions of Adobe Experience Platform documentation. The functionality and deletion behavior remain the same.
-
 ### Record deletion behavior
 
 The following table outlines how record deletions behave across Experience Platform and source systems, depending on the ingestion method and change data capture configuration.

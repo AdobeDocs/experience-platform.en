@@ -10,10 +10,6 @@ exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
 ---
 # Mailchimp event forwarding extension overview
 
->[!NOTE]
->  
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) for a consolidated reference of the terminology changes.
-
 The Mailchimp [event forwarding](../../../ui/event-forwarding/overview.md) extension sends events to the Mailchimp Marketing API that can trigger emails for Mailchimp marketing campaigns, journeys, or transactions.
 
 This document covers how to set up the extension and configure rules using the Add Event action.
@@ -99,7 +95,7 @@ The extension is now installed and configured for use in your property.
 
 When using this extension in a [rule](../../../ui/managing-resources/rules.md), there are several data values that the extension sends to Mailchimp with each event. For a typical implementation, you can configure the [Adobe Experience Platform Web SDK extension](../../client/web-sdk/overview.md) to send that data to [!DNL Experience Platform Edge Network] for use by the extension in the event forwarding property.
 
-The data required by this extension can be sent from Web SDK as either XDM data (using the [`xdm`](/help/web-sdk/commands/sendevent/xdm.md) object) or non-XDM data (using the [`data`](/help/web-sdk/commands/sendevent/data.md) object).
+The data required by this extension can be sent from Web SDK as either XDM data (using the [`xdm`](/help/collection/js/commands/sendevent/xdm.md) object) or non-XDM data (using the [`data`](/help/collection/js/commands/sendevent/data.md) object).
 
 For example, if a customer makes a purchase or registers for an event on your site, you could send a confirmation email through Mailchimp with this extension. Once you send the required information from Web SDK to the Edge Network, the extension triggers the email with Mailchimp.
 

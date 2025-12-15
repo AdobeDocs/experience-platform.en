@@ -5,10 +5,6 @@ exl-id: c7235e50-13b3-4487-b171-873063875621
 ---
 # Grant user access
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Before you get started with your `extension_package`, you need to set up your team members with user accounts and permissions.  This is accomplished in the [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 ## Configure user permissions for Experience Platform and Data Collection

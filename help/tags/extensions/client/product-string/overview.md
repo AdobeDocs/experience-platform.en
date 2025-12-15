@@ -5,10 +5,6 @@ exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
 ---
 # Adobe Analytics Product String extension overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 The `products` variable tracks how users interact with products on your site. For example, the `products` variable can track how many times a product is viewed, added to the shopping cart, checked out, and purchased. It can also track the relative effectiveness of merchandising categories on your site.
 
 The `products` variable should always be set in conjunction with a success event.

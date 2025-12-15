@@ -5,10 +5,6 @@ exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
 ---
 # Environments
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Tag environments define several key aspects of the library builds you deploy on your website or app:
 
 * The filename of the build.
