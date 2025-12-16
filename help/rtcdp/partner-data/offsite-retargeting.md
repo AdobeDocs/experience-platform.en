@@ -30,10 +30,10 @@ When planning on retargeting unauthenticated visitors, please consider the follo
 
 Additionally, in order to implement the use case, you will make use of the following Real-Time CDP functionality and UI elements. Ensure that you have the necessary attribute-based access control permissions for all these areas or ask your system administrator to grant you the necessary permissions.
 
-- [Audiences](../../segmentation/home.md)
-- [Computed attributes](../../profile/computed-attributes/overview.md)
-- [Destinations](../../destinations/home.md)
-- [Web SDK](../../web-sdk/home.md)
+- [Audiences](/help/segmentation/home.md)
+- [Computed attributes](/help/profile/computed-attributes/overview.md)
+- [Destinations](/help/destinations/home.md)
+- [Data collection](/help/collection/home.md)
 
 ## Get partner data into Real-Time CDP {#get-data-in}
 
@@ -45,7 +45,7 @@ To learn how to best import data into Real-Time CDP using Web SDK, please read t
 
 After importing the partner provided IDs into an event dataset, you'll need to get this data into the profile records. You can do this by utilizing computed attributes.
 
-Computed attributes let you quickly convert profile behavioral data into aggregated values at the profile level. As a result, you can use these expressions, such as "lifetime purchase total" to the profile, allowing you to easily use the computed attribute within your audiences. More information about computed attributes can be found in the [computed attributes overview](../../profile/computed-attributes/overview.md).
+Computed attributes let you quickly convert profile behavioral data into aggregated values at the profile level. As a result, you can use these expressions, such as "lifetime purchase total" to the profile, allowing you to easily use the computed attribute within your audiences. More information about computed attributes can be found in the [computed attributes overview](/help/profile/computed-attributes/overview.md).
 
 To access computed attributes, select **[!UICONTROL Profiles]** followed by **[!UICONTROL Computed attributes]** and **[!UICONTROL Create computed attribute]**.
 
@@ -57,7 +57,7 @@ The **[!UICONTROL Create computed attribute]** page appears. On this page, you c
 
 >[!NOTE]
 >
->For more detailed information on creating computed attributes, please read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
+>For more detailed information on creating computed attributes, please read the [computed attributes UI guide](/help/profile/computed-attributes/ui.md).
 
 For this use case, you can create a computed attribute that, if the partner ID exists, gets the most recent value of the partner ID within the last 24 hours.
 
@@ -91,7 +91,7 @@ The Segment Builder page appears. On this page, you can use the components to bu
 
 >[!NOTE]
 >
->For more detailed information about using the Segment Builder, please read the [Segment Builder UI guide](../../segmentation/ui/segment-builder.md).
+>For more detailed information about using the Segment Builder, please read the [Segment Builder UI guide](/help/segmentation/ui/segment-builder.md).
 
 To achieve the goal of finding these visitors, you'll first need to add a **[!UICONTROL Page View]** event to your audience. Select the **[!UICONTROL Events]** tab under **[!UICONTROL Fields]**, then drag and drop the **[!UICONTROL Page View]** event and add it to the events section canvas.
 
@@ -103,7 +103,7 @@ Select the newly added **[!UICONTROL Page View]** event. Change the lookback per
 
 After adding your event, you'll need to add an attribute. Since you're working with unauthenticated visitors, you can add the computed attribute you just created. This newly created computed attribute lets you link partner IDs to an audience.
 
-To add the computed attribute, under **[!UICONTROL Attributes]**, select **[!UICONTROL XDM Individual Profile]**, followed by **[your organization's tenant ID](../../xdm/api/getting-started.md#know-your-tenant-id).**, **[!UICONTROL SystemComputedAttributes]**, and **[!UICONTROL PartnerID]**. Now, add the **[!UICONTROL Value]** of the computed attribute to the attributes section of the canvas.
+To add the computed attribute, under **[!UICONTROL Attributes]**, select **[!UICONTROL XDM Individual Profile]**, followed by **[your organization's tenant ID](/help/xdm/api/getting-started.md#know-your-tenant-id).**, **[!UICONTROL SystemComputedAttributes]**, and **[!UICONTROL PartnerID]**. Now, add the **[!UICONTROL Value]** of the computed attribute to the attributes section of the canvas.
 
 ![The folder pathing to access the computed attribute is displayed.](../assets/offsite-retargeting/access-computed-attribute.png)
 
@@ -129,7 +129,7 @@ After successfully creating your audience, you can now activate this audience to
 >
 >All destination types, including file-based destinations, support audience activation with partner IDs.
 >
->For more information on activating audiences to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md).
+>For more information on activating audiences to a destination, please read the [activation overview](/help/destinations/ui/activation-overview.md).
 
 The **[!UICONTROL Activate destination]** page appears. On this page, you can select which destination you want to activate your destination to. After selecting the destination of choice, select **[!UICONTROL Next]**.
 

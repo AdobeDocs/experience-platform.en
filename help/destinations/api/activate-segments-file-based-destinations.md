@@ -1090,7 +1090,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ### Add encryption to exported files
 
-Optionally, you can add encryption to your exported files. To do this, you need to add items from the `encryptionSpecs`. See the request example below with the mandatory parameters highlighted:
+Optionally, you can add encryption to your exported files. To do this, you need to add items from the `encryption` object. See the request example below with the mandatory parameters highlighted:
 
 
 >[!BEGINSHADEBOX]
@@ -1099,7 +1099,7 @@ Optionally, you can add encryption to your exported files. To do this, you need 
 
 ```json {line-numbers="true" start-line="1" highlight="26-27"}
 
-           "encryptionSpecs": [
+           "encryption": [
                 {
                     "name": "File PGP/GPG Encryption",
                     "type": "FileAsymmetric",
@@ -1159,12 +1159,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "sshKey": "<Add SSH key>"
       }
     },
-  "encryptionSpecs":{
-     "specName": "Encryption spec",
-     "params": {
-         "encryptionAlgo":"PGPGPG",
-         "publicKey":"<Add public key>"
-      }            
+  "encryption": {
+    "specName": "File Encryption",
+        "params": {
+            "encryptionAlgo": "PGP/GPG",
+            "publicKey": "<Add public key>"
+        }
     },
   "connectionSpec": {
     "id": "36965a81-b1c6-401b-99f8-22508f1e6a26", // SFTP connection spec
@@ -1217,7 +1217,7 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { //describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -1428,7 +1428,7 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -1628,7 +1628,7 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -1818,11 +1818,11 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
         "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
         "version": "1.0",
         "authSpec": [],
-        "encryptionSpecs": [],
-            "targetSpec": { // describes the target connection parameters
-                "name": "User based target",
-                "type": "UserNamespace",
-                "spec": {
+        "encryption": [],
+        "targetSpec": { // describes the target connection parameters
+            "name": "User based target",
+            "type": "UserNamespace",
+            "spec": {
                     "$schema": "http://json-schema.org/draft-07/schema#",
                     "type": "object",
                     "properties": {
@@ -2009,7 +2009,7 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -2208,7 +2208,7 @@ Note the highlighted lines with inline comments in the [!DNL connection spec] ex
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -4781,11 +4781,11 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 Manifest JSON files contain information about the export location, export size, and more. The manifest is named using the format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. View a [sample manifest file](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). The manifest file includes the following fields:
 
-  * `flowRunId`: The [dataflow run](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) which generated the exported file. 
-  * `scheduledTime`: The time in UTC when the file was exported. 
-  * `exportResults.sinkPath`: The path in your storage location where the exported file is deposited. 
-  * `exportResults.name`: The name of the exported file.
-  * `size`: The size of the exported file, in bytes.
+* `flowRunId`: The [dataflow run](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) which generated the exported file. 
+* `scheduledTime`: The time in UTC when the file was exported. 
+* `exportResults.sinkPath`: The path in your storage location where the exported file is deposited. 
+* `exportResults.name`: The name of the exported file.
+* `size`: The size of the exported file, in bytes.
 
 To add file manifest generation to an existing destination, you need to update the target connection parameters using the `PATCH` operation. This enables manifest file generation for your destination, which provides metadata about the exported files.
 
