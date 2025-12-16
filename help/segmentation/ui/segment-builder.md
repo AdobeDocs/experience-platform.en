@@ -137,6 +137,8 @@ You can use the following operators for the respective data types:
 | Rolling range | The value occurred between the two relative dates. | Last purchase date is in rolling range of seven days ago to three days ago. |
 | In next | The value occurred within the next period of time selected. | Cart abandon is in next 2 days |
 
+For more detailed information on the time and date functions, read the [time constraints section](#time-constraints).
+
 +++
 
 ### Events
