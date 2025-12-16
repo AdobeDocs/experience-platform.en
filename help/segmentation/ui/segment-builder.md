@@ -127,7 +127,15 @@ You can use the following operators for the respective data types:
 | Yesterday | The value occurred yesterday. | Cart purchase **is** Yesterday |
 | This month | The value occurred this calendar month. | Birth month **is** This month |
 | This year | The value occurred this calendar year. | Sign up date **is** This year |
-
+| Custom date | The value occurred on the given date. | Purchase date **is on** Custom date |
+| In last | The value occurred within the last period of time chosen. Birthday **is** In last month |
+| From (to) | The value occurred within the two calendar dates chosen. This period of time is **inclusive** of both dates. | Account creation date **is** From April 20th to July 13th |
+| During | The value occurred within the selected month or year. | Sale **is** During March |
+| Within (+/-) | The value occurred within days, weeks, months, or years of the selected date. This period of time is **inclusive** of both dates. | Cart abandon is **Within** 3 days |
+| Before | The value occurred before the selected date. | Membership join date is **before** January 3rd, 2025 |
+| After | The value occurred after the selected date. | Purchase date is **after** March 14th, 2024 |
+| Rolling range | The value occurred between the two relative dates. | Last purchase date is in rolling range of seven days ago to three days ago. |
+| In next | The value occurred within the next period of time selected. | Cart abandon is in next 2 days |
 
 +++
 
