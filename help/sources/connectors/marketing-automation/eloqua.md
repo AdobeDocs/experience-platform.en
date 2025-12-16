@@ -129,3 +129,16 @@ You must add region-specific IP addresses to your allowlist prior to connecting 
 | Static (SFDC/Dynamics external key logic) | extSourceSystemAudit.externalKey | text/x.aep-xl | Conditional object based on `${CRM_INSTANCE_ID}` and CRM IDs | No | Secondary identity for CRM |
 | Id | personID | schema-path | Direct mapping | Yes | Primary person identifier in XDM |
 | Id, C_EmailAddress | identityMap | text/x.aep-xl | Builds ECID/email identities as needed (implementation-specific expression) | No | Identity stitching |
+
+### Activity type mapping reference
+
+| Eloqua ActivityType | XDM eventType |
+|--------------------|---------------|
+| EmailSend | directMarketing.emailSent |
+| EmailOpen | directMarketing.emailOpened |
+| EmailClickthrough | directMarketing.emailClicked |
+| Unsubscribe | directMarketing.emailUnsubscribed |
+| Bounceback | directMarketing.emailBounced |
+| FormSubmit | web.formFilledOut |
+| PageView | web.webpagedetails.pageViews |
+| Other | pass through as-is |
