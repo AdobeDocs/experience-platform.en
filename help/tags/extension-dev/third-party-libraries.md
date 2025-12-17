@@ -5,10 +5,6 @@ exl-id: d8eaf814-cce8-499d-9f02-b2ed3c5ee4d0
 ---
 # Implementing third-party libraries
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
-
 One of the main purposes of tag extensions in Adobe Experience Platform is to enable you to easily implement existing marketing technologies (libraries) into your website. By using extensions, you can implement libraries provided by third-party content delivery networks (CDNs) without having to manually edit your website's HTML.
 
 There are several methods to host third-party (vendor) libraries within your extensions. This document provides an overview of these different implementation methods, including the pros and cons of each.

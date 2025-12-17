@@ -10,10 +10,6 @@ exl-id: f82bfac9-dc2d-44de-a308-651300f107df
 >
 >Event forwarding is a paid feature that is included as part of the Adobe Real-Time Customer Data Platform Connections, Prime, or Ultimate offerings.
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 To use event forwarding in Adobe Experience Platform, data must be sent to Adobe Experience Platform Edge Network using one or more of the following three options:
 
 * [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
