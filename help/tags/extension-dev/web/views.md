@@ -5,10 +5,6 @@ exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
 ---
 # Views in web extensions
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Each event, condition, action, or data element type may provide a view allowing a user to supply settings. The extension may also have a top-level [extension configuration view](../configuration.md) which allows users to supply global settings for the entire extension. The process of building a view is identical across all types of views.
 
 ## Including a document type
