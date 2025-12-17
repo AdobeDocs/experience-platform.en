@@ -18,6 +18,8 @@ You must add region-specific IP addresses to your allowlist prior to connecting 
 
 ## [!DNL Oracle Eloqua] mapping guide
 
+The following tables provide detailed mappings between [!DNL Oracle Eloqua] source fields and their corresponding Experience Data Model (XDM) destination fields in Experience Platform. Each row outlines the transformation logic, whether the field is immutable, and provides additional notes to help you understand how your [!DNL Oracle Eloqua] data will be ingested and structured in Experience Platform.
+
 ### Accounts
 
 | Eloqua Source Field | XDM Destination Field | Source Type | Transformation Logic | Immutable | Notes |
@@ -43,6 +45,8 @@ You must add region-specific IP addresses to your allowlist prior to connecting 
 | M_DateModified | extSourceSystemAudit.lastUpdatedDate | schema-path | Direct mapping | No | Last modified timestamp |
 | M_DateCreated | extSourceSystemAudit.createdDate | schema-path | Direct mapping | No | Creation timestamp |
 
+{style="table-layout:auto"}
+
 ### Activities
 
 | Eloqua Source Field | XDM Destination Field | Source Type | Transformation Logic / Logic Summary | Immutable | Notes |
@@ -65,6 +69,8 @@ You must add region-specific IP addresses to your allowlist prior to connecting 
 | AssetName | web.webPageDetails.name | schema-path | Conditional on `ActivityType == "PageView"` | No | Page name |
 | AssetId | web.webPageDetails.webPageKey | text/x.aep-xl | Conditional on `ActivityType == "PageView"` | No | Page key object |
 | Url | web.webPageDetails.URL | schema-path | Conditional on `ActivityType == "PageView"` | No | Page URL |
+
+{style="table-layout:auto"}
 
 ### Campaigns
 
@@ -90,6 +96,8 @@ You must add region-specific IP addresses to your allowlist prior to connecting 
 | M_Industry1 | accountOrganization.industry | schema-path | Direct mapping | No | Industry classification |
 | M_DateModified | extSourceSystemAudit.lastUpdatedDate | schema-path | Direct mapping | No | Last modified timestamp |
 | M_DateCreated | extSourceSystemAudit.createdDate | schema-path | Direct mapping | No | Creation timestamp |
+
+{style="table-layout:auto"}
 
 ### Contacts
 
@@ -130,6 +138,8 @@ You must add region-specific IP addresses to your allowlist prior to connecting 
 | Id | personID | schema-path | Direct mapping | Yes | Primary person identifier in XDM |
 | Id, C_EmailAddress | identityMap | text/x.aep-xl | Builds ECID/email identities as needed (implementation-specific expression) | No | Identity stitching |
 
+{style="table-layout:auto"}
+
 ### Activity type mapping reference
 
 | Eloqua ActivityType | XDM eventType |
@@ -142,3 +152,19 @@ You must add region-specific IP addresses to your allowlist prior to connecting 
 | FormSubmit | web.formFilledOut |
 | PageView | web.webpagedetails.pageViews |
 | Other | pass through as-is |
+
+{style="table-layout:auto"}
+
+### Variable placeholders
+
+The mapping templates use the following variable placeholders that are replaced once a dataflow runs:
+
+| Placeholder | Description | Usage |
+| ----------- | ----------- | ----- |
+| `${SOURCE_INSTANCE_ID}`| Unique ID for Eloqua source instance    | Used in source keys  |
+| `${CRM_INSTANCE_ID}`   | Unique ID for CRM system (Salesforce/Dynamics) | Used in external keys|
+
+## Next steps
+
+Proceed to configure your [!DNL Oracle Eloqua] source connection within Experience Platform. For a step-by-step guide on setting up the connection through the UI, refer to the [tutorial here](../../tutorials/ui/create/marketing-automation/eloqua.md). Read this tutorial to learn about connecting your [!DNL Oracle Eloqua] account, selecting data, mapping fields, scheduling ingestions, and monitoring your dataflows.
+

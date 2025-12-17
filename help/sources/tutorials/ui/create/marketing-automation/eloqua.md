@@ -29,42 +29,31 @@ To connect to [!DNL Oracle Eloqua], go to the *[!UICONTROL Marketing Automation]
 >
 >Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account is created, this option changes to **[!UICONTROL Add data]**.
 
-![]
+![The Oracle Eloqua source card in the sources catalog with the Set up button highlighted.](../../../../images/tutorials/create/eloqua/catalog.png)
 
 ## Use an existing account {#existing}
 
 To use an existing account, select **[!UICONTROL Existing account]** and then select the [!DNL Oracle Eloqua] account that you want to use.
 
-![]
+![The Existing account option selected in the account creation interface.](../../../../images/tutorials/create/eloqua/existing.png)
 
 ## Create a new account {#new}
 
 To create a new account, select **[!UICONTROL New account]** and provide a name and description under your [!UICONTROL Source connection details]. Next, under [!UICONTROL Account authentication], provide values for your **Client ID**, **Client secret**, **Username**, **Password**, and **Base endpoint**. You can read the [authentication guide](../../../../connectors/marketing-automation/eloqua.md) for more information on these credentials. When finished, select **[!UICONTROL Connect to source]** and allow for a few seconds for your connection to establish.
 
-![]
+![The New account interface with fields for source connection details and authentication credentials.](../../../../images/tutorials/create/eloqua/new.png)
 
 ## Select data
 
->[!BEGINTABS]
+Use the select data interface to select the [!DNL Oracle Eloqua] entity that you want to ingest to Experience Platform.
 
->[!TAB Account]
-
->[!TAB Activities]
-
->[!TAB Campaign]
-
->[!TAB Contact]
-
->[!TAB Custom Data Objects]
-
->[!ENDTABS]
-
+![The data selection interface showing available Oracle Eloqua data entities.](../../../../images/tutorials/create/eloqua/select-data.png)
 
 ## Dataset and dataflow details {#details}
 
 Next, you must provide information on your dataset and dataflow. During this step, you can either use an existing dataset or create a new dataset. Additionally, you can optionally enable your dataset for ingestion to Real-Time Customer Profile during this step.
 
-![]
+![The dataset and dataflow details interface with options to configure dataset properties.](../../../../images/tutorials/create/eloqua/details.png)
 
 ## Mapping {#mapping}
 
@@ -75,10 +64,9 @@ Mappings for [!DNL Oracle Eloqua] are organized into four main entity types:
 * **Campaigns** - Marketing campaign records from [!DNL Oracle Eloqua].
 * **Contacts** - Individual person records from [!DNL Oracle Eloqua].
 
-![]
+![The mapping interface showing field mappings for Oracle Eloqua data entities.](../../../../images/tutorials/create/eloqua/mapping.png)
 
 ## Scheduling
-
 
 With your mapping complete, you can now configure an ingestion schedule for your dataflow. Set your [!UICONTROL Frequency] to `Once` to configure a one-time ingestion run. For incremental ingestion, you can set your [!UICONTROL Frequency] to `Hour`, `Day`, or `Week`. When using incremental ingestion, you must also configure the [!UICONTROL Interval] to define the amount of time that occurs between ingestion runs. For example, an ingestion frequency set to `Day` and  an interval set to `15` means that your dataflow is scheduled to ingest data every 15 days.
 
@@ -86,11 +74,14 @@ With your mapping complete, you can now configure an ingestion schedule for your
 >
 > Per-minute ingestion frequency is not available for the [!DNL Oracle Eloqua] source. The most frequent schedule you can choose is hourly. Select a schedule that matches your data freshness needs. Keep in mind that selecting a more frequent schedule will increase compute costs.
 
-![]
+![The scheduling interface with options to configure ingestion frequency and interval.](../../../../images/tutorials/create/eloqua/scheduling.png)
 
 ## Review
 
 With the ingestion schedule configured, use the [!UICONTROL Review] interface to confirm the details of your dataflow. Select **[!UICONTROL Finish]** to complete the setup and allow for a few moments for your dataflow to initiate.
 
-![]
+![The review interface displaying a summary of the dataflow configuration before completion.](../../../../images/tutorials/create/eloqua/review.png)
 
+## Monitor
+
+Once the dataflow is selected it will do a one-time backfill of data and subsequent incremental sync on the schedule specified. The status of sync can be monitored by navigating to the dataflow. For more information, read the guide on [monitoring sources dataflows in the UI](../../../../../dataflows/ui/monitor-sources.md).
