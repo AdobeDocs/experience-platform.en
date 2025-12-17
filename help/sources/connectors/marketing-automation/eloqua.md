@@ -16,6 +16,18 @@ Read the sections below for prerequisite set up that you must complete before yo
 
 You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform](../../ip-address-allow-list.md) for more information.
 
+### Gather required credentials
+
+You must provide values for the following credentials to connect [!DNL Oracle Eloqua] to Experience Platform.
+
+| Credential | Description |
+| --- | --- |
+| Client ID |  The publicly exposed identifier used by [!DNL Oracle Eloqua] to identify your account when authorizing to Experience Platform. |
+| Client secret | The confidential key known only to the client application and authorization server. This key is required alongside the client ID in order to authenticate your account. |
+| Username | The username associated with your [!DNL Oracle Eloqua] account. |
+| Password | The password associated with your [!DNL Oracle Eloqua] account. |
+| Base endpoint | The prefix of your authentication base URI for [!DNL Oracle Eloqua]. |
+
 ## [!DNL Oracle Eloqua] mapping guide
 
 The following tables provide detailed mappings between [!DNL Oracle Eloqua] source fields and their corresponding Experience Data Model (XDM) destination fields in Experience Platform. Each row outlines the transformation logic, whether the field is immutable, and provides additional notes to help you understand how your [!DNL Oracle Eloqua] data will be ingested and structured in Experience Platform.
