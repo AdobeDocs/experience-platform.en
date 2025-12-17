@@ -141,6 +141,12 @@ For more detailed information on the time and date functions, read the [time con
 
 +++
 
+#### Computed attributes {#computed-attributes}
+
+Computed attributes are fields that are calculated from other attributes using aggregations or formulas. You can use computed attributes if you need aggregated data such as sums, counts, or averages across multiple events or if you are building frequently-used audiences that require complex calculations. 
+
+For more information on computed attributes, including how to create them, what functions you can use within them, and how to manage them, read the [computed attributes overview](/help/profile/computed-attributes/overview.md).
+
 ### Events
 
 The **[!UICONTROL Events]** tab allows you to create an audience based on events or actions that took place using [!DNL XDM ExperienceEvent] data elements. You can also find Event Types on the **[!UICONTROL Events]** tab, which are a collection of commonly used events to enable you to create your segment definitions more quickly.
@@ -447,7 +453,7 @@ You can use your containers within Segment Builder in three different ways: to g
 
 The following example mixes **both** AND and OR logic within a single expression. Without using containers, you cannot mix both AND with OR logic in a single level.
 
-IMAGE
+![An image showing how to use containers to mix boolean logic and use include/exclude logic.](/help/segmentation/images/ui/segment-builder/mixed-boolean-container.png)
 
 +++
 
@@ -455,7 +461,7 @@ IMAGE
 
 The following example uses containers to build the sequence of events.
 
-IMAGE
+![An image showing how to sequence events using containers.](/help/segmentation/images/ui/segment-builder/event-sequence-container.png)
 
 +++
 
