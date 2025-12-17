@@ -419,7 +419,7 @@ The list of available time constraints for this operation differs from the main 
 
 ## Containers {#containers}
 
-Segment rules are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.
+Audiences are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.
 
 Once you have added at least one tile to the rule builder canvas, you can begin to add containers. To create a new container, select the ellipses (...) in the top-right corner of the tile, then select **[!UICONTROL Add container]**. 
 
@@ -438,6 +438,36 @@ Once you select **[!UICONTROL Unwrap container]** the child container is removed
 >When unwrapping containers, be careful that the logic continues to meet the desired segment definition.
 
 ![The container is shown after being unwrapped.](../images/ui/segment-builder/unwrapped-container.png)
+
+### Examples {#container-examples}
+
+You can use your containers within Segment Builder in three different ways: to group your rules with boolean logic, to control whether to include or exclude profiles matching the container's criteria, and to define event sequences with time constraints.
+
++++ Mixed boolean logic
+
+The following example mixes **both** AND and OR logic within a single expression. Without using containers, you cannot mix both AND with OR logic in a single level.
+
+IMAGE
+
++++
+
++++ Event sequence
+
+The following example uses containers to build the sequence of events.
+
+IMAGE
+
++++
+
+### Best practices {#container-best-practices}
+
+When you add containers to your audience, keep the following guidelines in mind:
+
+- Build your containers incrementally, testing the logic with each step you add
+  - This is especially important if you use "Exclude" logic, as this can significantly change your results
+- Clearly name your containers to understand what they're meant to do
+- Avoid having too many nested levels of containers as it reduces performance
+- Ensure your order of containers is accurate, since event order greatly affects sequence containers
 
 ## Merge policies
 
@@ -524,7 +554,7 @@ More information about the different segment definition evaluation methods can b
 Segment Builder provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-Time Customer Profile] data. After reading this guide you should now be able to:
 
 - Create segment definitions using a combination of attributes, events, and existing audiences as building blocks.  
-- Use the rule builder canvas and containers to control the order in which segment rules are executed.
+- Use the rule builder canvas and containers to control the order in which audience queries are executed.
 - View estimates of your prospective audience, allowing you to adjust your segment definitions as required.
 - Enable all segment definitions for scheduled segmentation.
 - Enable specified segment definitions for streaming segmentation.
