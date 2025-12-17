@@ -78,3 +78,7 @@ With your mapping complete, you can now configure an ingestion schedule for your
 With the ingestion schedule configured, use the [!UICONTROL Review] interface to confirm the details of your dataflow. Select **[!UICONTROL Finish]** to complete the setup and allow for a few moments for your dataflow to initiate.
 
 ![The review step of the sources workflow.](../../../../images/tutorials/create/sfmc/review.png)
+
+## Monitor
+
+Once the dataflow is selected it will do a one-time backfill of data and subsequent incremental sync on the schedule specified. The status of sync can be monitored by navigating to the dataflow. For more information, read the guide on [monitoring sources dataflows in the UI](../../../../../dataflows/ui/monitor-sources.md).

@@ -65,3 +65,7 @@ You must provide values for the following credentials to connect [!DNL Salesforc
 | Base endpoint | The prefix of your authentication base URI for [!DNL Salesforce Marketing Cloud]. |
 
 ## Connect [!DNL Salesforce Marketing Cloud] to Experience Platform
+
+## Next steps
+
+Proceed to configure your [!DNL Salesforce Marketing Cloud] source connection within Experience Platform. For a step-by-step guide on setting up the connection through the UI, refer to the [tutorial here](../../tutorials/ui/create/marketing-automation/sfmc.md). Read this tutorial to learn about connecting your [!DNL Salesforce Marketing Cloud] account, selecting data, mapping fields, scheduling ingestions, and monitoring your dataflows.
