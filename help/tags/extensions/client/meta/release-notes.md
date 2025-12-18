@@ -4,10 +4,6 @@ description: The latest release notes for the Meta Pixel extension in Adobe Expe
 ---
 # Meta Pixel Extension release notes
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 ## February 13, 2023
 
 v1.3.1

@@ -360,7 +360,5 @@ role: Developer
     * [Searching resources](./api/guides/search.md)
     * [Secrets](./api/guides/secrets.md)
 * [FAQ](./faq.md)
-* [Terminology updates](./term-updates.md)
-* [Deprecating support for Internet Explorer 10 and 11](./ie-deprecation.md)
 * [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 
