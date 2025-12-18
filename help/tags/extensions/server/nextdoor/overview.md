@@ -1,7 +1,7 @@
 ---
 title: Nextdoor Conversion API Extension
 description: Learn how to use the Nextdoor Conversion API extension to send conversion events to track the performance of your advertising campaigns.
-last-substantial-update: 2025-10-17
+last-substantial-update: 2025-12-18
 ---
 
 # [!DNL Nextdoor] Conversion API Extension - User Guide
