@@ -4,7 +4,7 @@ description: Learn how to use the Nextdoor Conversion API extension to send conv
 last-substantial-update: 2025-10-17
 ---
 
-# [!DNL Nextdoor] Conversion API Extension
+# [!DNL Nextdoor] Conversion API Extension - User Guide
 
 ## Overview
  
@@ -24,7 +24,7 @@ To connect Experience Platform to [!DNL Nextdoor], you'll need the following inf
 
 | Credential | Description | Security Notes |
 | --- | --- | --- |
-| Data Source ID | Your unique data source identifier from [!DNL Nextdoor], which you can find in your [!DNL Nextdoor Ads Manager] account under the Conversion API settings. | It is safe to share this within your organization. |
+| Data Source ID | Your unique data source identifier from [!DNL Nextdoor], which you can find in your [!DNL Nextdoor Ads Manager] account by accessing the Assets > Pixels page and generating a Nextdoor Pixel. | It is safe to share this within your organization. |
 | Access Token | Your API authentication access token for secure communication. You can generate this token by logging into your [!DNL Nextdoor Ads Manager] account and accessing the API settings. | Keep this token secure, as it provides access to your account. |
 
 ## Install and configure the [!DNL Nextdoor] extension {#install}
@@ -58,7 +58,7 @@ These core parameters define your conversion event:
 
 | Parameter                            | Description    | Data Type      | Required       | Options/Format | Example        |
 | ------------------------------------ | -------------- | -------------- | -------------- | -------------- | -------------- |
-| [!UICONTROL Event Name]              | Specifies the type of conversion event being tracked. | String (dropdown) | Required | <ul><li>Purchase</li><li>Lead</li><li>Sign Up</li><li>Add to Cart</li><li>Initiate Checkout</li><li>Page View</li><li>Search</li><li>View Content</li><li>Add to Wishlist</li><li>Subscribe</li><li>Custom</li></ul> Conversion 1-10 | `Purchase` |
+| [!UICONTROL Event Name]              | Specifies the type of conversion event being tracked. | String (dropdown) | Required | <ul><li>Purchase</li><li>Lead</li><li>Sign Up</li><li>Add to Cart</li><li>Initiate Checkout</li><li>Page View</li><li>Search</li><li>View Content</li><li>Add to Wishlist</li><li>Subscribe</li><li>Custom</li></li>Conversion 1-10</li></ul> | `Purchase` |
 | [!UICONTROL Event ID]                | Unique identifier to prevent duplicate event reporting. This will be auto-generated if blank. | String | Optional | Unique string identifier | `order_12345` |
 | [!UICONTROL Event Time (Unix Epoch)] | Timestamp when the conversion event occurred. Defaults to current time if left blank. | Integer | Optional | Unix timestamp in seconds | `1703980800` (Dec 30, 2023) |
 | [!UICONTROL Action Source]           | Channel or platform where the conversion occurred. | String (dropdown) | Required | <ul><li>website</li><li>email</li><li>app</li><li>phone_call</li><li>chat</li><li>physical_store</li><li>system_generated</li><li>other</li></ul> | `website` |
@@ -109,7 +109,7 @@ These parameters provide additional context about your conversion event:
 | [!UICONTROL Order Value]       | Total value of the purchase transaction.       | String              | **REQUIRED for Purchase events** | ISO 4217 Currency + Amount (no spaces)  | `USD123.45`             |
 | [!UICONTROL Order ID]          | Unique transaction or order identifier.        | String              | Optional                         | Any unique string                       | `order_12345`           |
 | [!UICONTROL Delivery Category] | Method of product/service delivery.            | String              | Optional                         | <ul><li>`in_store`</li><li>`curbside`</li><li>`home_delivery`</li></ul> | `home_delivery`         |
-| [!UICONTROL Product Context]   | Detailed information about purchased products. | String (JSON array) | Optional                         | JSON array of product objects           | `[{"id":"SKU123","name":"Widget"}]` |
+| [!UICONTROL Product Context]   | Detailed information about purchased products. | String (JSON array) | Optional                         | JSON array of product objects           | `[{"id":"SKU123","content_name":"Widget","item_price":29.99,"quantity":1}]` |
 
 **Mobile app parameters**
 
@@ -140,7 +140,6 @@ The following event types are supported for different conversion scenarios:
 | [!UICONTROL Subscribe]            | Standard   | Subscription to service/newsletter.    | Recurring revenue, engagement           | <ul><li>Event Name</li><li>Customer Info</li></ul>             | High lifetime value indicator         |
 | [!UICONTROL Custom Conversion 1 - 10] | Custom | Business-specific conversion event.    | Define your own conversion type         | <ul><li>Event Name</li><li>Customer Info</li></ul>             | Customize for unique business actions |
 
-
 ## Data elements integration {#data-element}
 
 All fields support Adobe event forwarding data elements. Select the data element icon ![data elements](../../../images/extensions/server/nextdoor/data-element-icon.png) next to any field to:
@@ -169,7 +168,7 @@ Proper data handling is essential for maximizing conversion attribution accuracy
   * Use SHA-256 hashing for phone numbers, addresses, and other PII.
   * The extension automatically hashes plain text emails - you can send either format.
   * Hash data consistently across all your tracking implementations.
-    * **Example**: Normalize "John<span>@Example.COM" → "john<span>@example.com" before hashing.
+    * **Example**: Normalize "John@Example.COM" → "john@example.com" before hashing.
 
 * **Provide complete information**: Include as much customer information as possible for better matching:
 
@@ -203,6 +202,10 @@ Prevent duplicate conversion events to ensure accurate campaign measurement and 
 
 * **Provide unique event IDs**: Always use unique event IDs to prevent duplicate conversions.
 * **Use consistent naming**: Apply consistent event naming across your implementation.
+
+### Rate Limiting
+
+The [!DNL Nextdoor] Conversion API is subject to rate limiting. The current rate limit is **100 requests/minute** per advertiser. If you surpass the rate limit, the API will return an `HTTP 429 Too Many Requests` error code.
 
 ## Conclusion {#conclusion}
 
