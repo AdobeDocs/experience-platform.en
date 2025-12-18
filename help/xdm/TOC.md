@@ -249,6 +249,7 @@ role: Developer
   * [Machine learning-assisted schema creation](./ui/ml-assisted-schema-creation.md)
   * [Generate sample XDM data](./ui/sample.md)
   * [Export XDM schemas](./ui/export.md)
+  * [Planning for Real-Time Customer Profile Enablement](./ui/profile-enablement-planning.md)
 * Schema Registry API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
