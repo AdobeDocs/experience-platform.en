@@ -72,7 +72,7 @@ In the example below, a partner creates a Data Landing Zone destination server w
          "templatingStrategy":"NONE",
          "value":"Your/hardcoded/path/here"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    }
 }
 ```
@@ -301,7 +301,7 @@ The sample below shows an example of a destination server configuration for a [!
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.path}}"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    }
 }
 ```
@@ -312,6 +312,7 @@ The sample below shows an example of a destination server configuration for a [!
 |`destinationServerType`|String|Set this value according to your destination platform. For [!DNL Data Landing Zone] destinations, set this to `FILE_BASED_DLZ`.|
 |`fileBasedDlzDestination.path.templatingStrategy`|String|*Required*. Set this value according to the type of value used in the `path.value` field.<ul><li>If you want your users to input their own [!DNL Data Landing Zone] account in the Experience Platform UI, set this value to `PEBBLE_V1`. In this case, you must templatize the `path.value` field to read a value from the [customer data fields](../destination-configuration/customer-data-fields.md) filled in by the user. This use case is shown in the example above.</li><li>If you are using a hard-coded path for your integration, such as `"path.value": "https://myaccount.blob.core.windows.net/"`, then set this value to `NONE`.|
 |`fileBasedDlzDestination.path.value`|String|The path to the destination folder that will host the exported files.|
+|`fileBasedDlzDestination.useCase`|String|*Required*. Set this to `"dlz_destination"`. This property identifies the destination as a [!DNL Data Landing Zone] destination. This property is only used when creating a [!DNL Data Landing Zone] destination.|
 
 {style="table-layout:auto"}
 

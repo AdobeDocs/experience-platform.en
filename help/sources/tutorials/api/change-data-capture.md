@@ -26,10 +26,6 @@ Both approaches require Data Mirror with relational schemas to preserve relation
 
 >[!NOTE]
 >
->Relational schemas were previously referred to as model-based schemas in earlier versions of Adobe Experience Platform documentation. The functionality and change data capture capabilities remain the same.
-
->[!NOTE]
->
 >**Orchestrated campaigns users**: Use the Data Mirror capabilities described in this document to work with customer data that maintains referential integrity. Even if your source does not use change data capture formatting, Data Mirror supports relational features such as primary key enforcement, record-level upserts, and schema relationships. These features ensure consistent and reliable data modeling across connected datasets.
 
 Data Mirror uses relational schemas to extend change data capture and enable advanced database synchronization capabilities. For an overview of Data Mirror, see [Data Mirror overview](../../../xdm/data-mirror/overview.md).

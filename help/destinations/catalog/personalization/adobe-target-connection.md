@@ -31,7 +31,7 @@ For a brief overview on how to configure the Adobe Target connection in Experien
 
 ## Supported use cases based on implementation type {#supported-use-cases}
 
-The table below displays the supported use cases for the Adobe Target destination, based on your implementation type, with or without [Web SDK](/help/web-sdk/home.md) and with or without [edge segmentation](/help/segmentation/home.md#edge) enabled. 
+The table below displays the supported use cases for the Adobe Target destination, based on your implementation type, with or without the Web SDK and with or without [edge segmentation](/help/segmentation/home.md#edge) enabled. 
 
 |Adobe Target implementation *without* Web SDK| Adobe Target implementation *with* Web SDK | Adobe Target implementation *with* Web SDK *and* edge segmentation off |
 |---|---|---|
@@ -42,7 +42,7 @@ The table below displays the supported use cases for the Adobe Target destinatio
 
 ### Datastream {#datastream}
 
-When configuring the Adobe Target connection to [use a datastream](#parameters), you must have the [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) implemented.
+When configuring the Adobe Target connection to [use a datastream](#parameters), you must have [Adobe Experience Platform Data Collection](/help/collection/home.md) implemented.
 
 Configuring the Adobe Target connection without using a datastream does not require you to implement the Web SDK.
 
@@ -126,7 +126,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
     >* You can use the same datastream ID for different destination connections as long as the connections are on different sandboxes
     >* This rule applies to all datastream selections, including when you select **[!UICONTROL None]**
 
-    * **[!UICONTROL None]**: Select this option if you need to configure Adobe Target personalization but you cannot implement the [Experience Platform Web SDK](/help/web-sdk/home.md). When using this option, audiences exported from Experience Platform to Target only support next-session personalization, and edge segmentation is disabled. Reference the table in the [supported use cases](#supported-use-cases) section for a comparison of available use cases per implementation type.
+    * **[!UICONTROL None]**: Select this option if you need to configure Adobe Target personalization but you cannot implement the Adobe Experience Platform Web SDK. When using this option, audiences exported from Experience Platform to Target only support next-session personalization, and edge segmentation is disabled. Reference the table in the [supported use cases](#supported-use-cases) section for a comparison of available use cases per implementation type.
 
     |Adobe Target implementation *without* Web SDK| Adobe Target implementation *with* Web SDK | Adobe Target implementation *with* Web SDK *and* edge segmentation off |
     |---|---|---|

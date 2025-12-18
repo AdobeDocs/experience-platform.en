@@ -76,7 +76,7 @@ To ensure compatibility with Experience Platform, your webhook must meet the fol
 | Field | Description | Example |
 | --- | --- | --- | 
 | Client secret | The secret key associated with your Adobe API credentials. | `d8f3b2e1-4c9a-4a7f-9b2e-8f1c3d2a1b6e` |
-| API key | The public API key used to authenticate requests to Adobe services. |
+| API key | The public API key used to authenticate requests to Adobe services. ||
 | Grant type | The method by which an application obtains an access token from the authorization server. Set this value to `client_credentials`. | `client_credentials` |
 | Scope | The authorization scopes define the specific permissions or access levels that an application is requesting from the API provider. | `openid,AdobeID,read_organizations,additional_info.projectedProductContext,session` |
 | Authentication header | The additional headers required for the Adobe token request.  | `{"Content-type": "application/x-www-form-urlencoded"}` |
