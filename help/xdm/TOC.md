@@ -13,6 +13,7 @@ role: Developer
 * Schemas {#schema}
   * [Basics of schema composition](schema/composition.md)
   * [Best practices for data modeling](schema/best-practices.md)
+  * [Planning for Profile Enablement](./schema/profile-enablement-planning.md)
   * [Sensitive and personal data](./schema/sensitive-and-personal-data.md)
   * [XDM field type constraints](schema/field-constraints.md)
   * [Relational schema](./schema/relational.md)
@@ -249,7 +250,6 @@ role: Developer
   * [Machine learning-assisted schema creation](./ui/ml-assisted-schema-creation.md)
   * [Generate sample XDM data](./ui/sample.md)
   * [Export XDM schemas](./ui/export.md)
-  * [Planning for Real-Time Customer Profile Enablement](./ui/profile-enablement-planning.md)
 * Schema Registry API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
