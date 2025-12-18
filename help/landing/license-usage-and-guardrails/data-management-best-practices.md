@@ -95,6 +95,38 @@ Data can be ingested into one or multiple systems in Experience Platform, namely
 >
 >Your access to the [!DNL data lake] can depend on the product SKU that you purchased. For more information on product SKUs, please speak with your Adobe representative.
 
+You must also decide whether to enable lookup datasets for Real-Time Customer Profile, in addition to using them for general lookup purposes. Follow the guidance below to avoid exceeding your license limits.
+
+#### Profile enablement for lookup datasets {#profile-enablement-lookup-datasets}
+
+A lookup dataset is a dataset you enable in Experience Platform so applications can reference it at runtime. Use lookup datasets to store relatively static, keyed information such as product details, store metadata, or offer configurations, rather than datasets whose primary purpose is to contribute profile attributes (for example, name, email, or loyalty tier) or experience events (for example, page views or purchases).
+
+Experience Platform applications such as [!DNL Journey Optimizer] and other decisioning applications use these datasets to retrieve additional fields based on a key (for example, product ID or store ID) and to enrich personalization, decisioning, and orchestration workflows. Enabling lookup datasets for Real-Time Customer Profile affects your profile data volume, so use the following guidance to stay within your licensing entitlements.
+
+When you configure datasets for lookup purposes, consider the two roles that a dataset can play in Experience Platform:
+
+* **Lookup datasets**: Allow applications to retrieve reference data, for services like personalization and decisioning in [!DNL Journey Optimizer].
+* **Profile-enabled datasets**: Contribute attributes and events to unified customer profiles in Real-Time Customer Profile. These datasets make their fields available for segmentation and activation use cases.
+
+>[!IMPORTANT]
+>
+>Only enable a lookup dataset for Real-Time Customer Profile when you must use fields from that dataset in Real-Time Customer Profile (for example, for audience definitions, activation, or multi-entity segmentation). Enabling a lookup dataset for Real-Time Customer Profile increases your profile data volume. For more information, see the tutorial on [multi-entity segmentation](../../segmentation/tutorials/multi-entity-segmentation.md).
+
+**When to enable datasets for Real-Time Customer Profile:**
+
+Enable a dataset for Real-Time Customer Profile in the following cases:
+
+* The dataset contains customer attributes that you need to unify into customer profiles (for example, loyalty tier, preferences, account information).
+* The dataset contains experience events that contribute to customer behavior analysis and segmentation.
+* The dataset contains reference or enrichment attributes (for example, product, store, or account attributes) that you must use in audience definitions, including multi-entity segmentation, or downstream activation.
+
+**When NOT to enable datasets for Real-Time Customer Profile:**
+
+Avoid enabling a dataset for Real-Time Customer Profile in the following cases:
+
+* The dataset contains reference data such as product catalogs, SKU details, store locations, or other non-customer data, and you do not need these attributes in Real-Time Customer Profile for segmentation or activation, including multi-entity segmentation.
+* The dataset contains enrichment data that is only used in lookups at run time and is not required as part of the customer identity or in audience definitions.
+
 ### What data to keep?
 
 You can apply both data ingestion filters and expiration rules to remove data that has become obsolete for your use cases. Typically, behavioral data (such as Analytics data) consumes significantly more storage than record data (such as CRM data). For example, many Experience Platform users have upwards of up to 90% of profiles being populated by behavioral data alone, in comparison to that of record data. Therefore, managing your behavioral data is critical in ensuring compliance within your license entitlements.

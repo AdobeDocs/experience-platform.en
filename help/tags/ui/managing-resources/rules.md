@@ -5,10 +5,6 @@ exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
 ---
 # Rules
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Tags in Adobe Experience Platform follow a rule-based system. They look for user interaction  and associated data. When the criteria outlined in your rules are met, the rule triggers the extension, script, or client-side code you identified.
 
 Build rules to integrate the data and functionality of marketing and ad tech that unifies disparate products into a single solution.
