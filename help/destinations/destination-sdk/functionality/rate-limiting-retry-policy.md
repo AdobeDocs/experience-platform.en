@@ -11,13 +11,12 @@ When configuring a destination using Destination SDK, you can select between two
 
 ## Best effort aggregation {#best-effort-aggregation}
 
-For any HTTP calls made to your destination that fail, Experience Platform retries the call up to three times at the following intervals:
+For any HTTP calls made to your destination that fail, Experience Platform retries the call two times at the following intervals:
 
 * 1st retry attempt: after 15 seconds
-* 2nd retry attempt: after 30 seconds  
-* 3rd retry attempt: after 60 seconds
+* 2nd retry attempt: after 30 seconds
 
-If the call still fails after all three retry attempts, Experience Platform drops the activation and does not reattempt it. 
+If the call still fails after both attempts, Experience Platform drops the activation and does not retry it. 
 
 You can request a different retry policy for specific dataflows by contacting Customer Support.
 
