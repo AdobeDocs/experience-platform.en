@@ -46,7 +46,26 @@ The example configuration below shows a best effort aggregation configuration. F
    "aggregationType":"BEST_EFFORT",
    "bestEffortAggregation":{
       "maxUsersPerRequest":10,
-      "splitUserById":false
+      "splitUserById":false,
+      "aggregationKey":{
+         "includeSegmentId":true,
+         "includeSegmentStatus":true,
+         "includeIdentity":true,
+         "oneIdentityPerGroup":true,
+         "groups":[
+            {
+               "namespaces":[
+                  "IDFA",
+                  "GAID"
+               ]
+            },
+            {
+               "namespaces":[
+                  "EMAIL"
+               ]
+            }
+         ]
+      }
    }
 }
 ```
@@ -56,6 +75,12 @@ The example configuration below shows a best effort aggregation configuration. F
 |`aggregationType` | String | Indicates the type of aggregation policy that your destination should use. Supported aggregation types: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul>  |
 |`bestEffortAggregation.maxUsersPerRequest` | Integer | Experience Platform can aggregate multiple exported profiles in a single HTTP call. <br><br>This value indicates the maximum number of profiles that your endpoint should receive in a single HTTP call. Note that this is a best effort aggregation. For example, if you specify the value 100, Experience Platform might send any number of profiles smaller than 100 on a call. <br><br> If your server does not accept multiple users per request, set this value to `1`.|
 |`bestEffortAggregation.splitUserById` | Boolean | Use this flag if the call to the destination should be split by identity. Set this flag to `true` if your server only accepts one identity per call, for a given identity namespace. |
+|`bestEffortAggregation.aggregationKey` | - | Allows you to aggregate the exported profiles mapped to the destination based on the parameters described below. |
+|`bestEffortAggregation.aggregationKey.includeSegmentId` | Boolean | Set this parameter to `true` if you want to group profiles exported to your destination by audience ID. |
+|`bestEffortAggregation.aggregationKey.includeSegmentStatus` | Boolean | Set both this parameter and `includeSegmentId` to `true`, if you want to group profiles exported to your destination by audience ID and audience status. |
+|`bestEffortAggregation.aggregationKey.includeIdentity` | Boolean | Set this parameter to `true` if you want to group profiles exported to your destination by identity namespace. |
+|`bestEffortAggregation.aggregationKey.oneIdentityPerGroup` | Boolean | Set this paramter to `true` if you want the exported profiles to be aggregated into groups based on a single identity (GAID, IDFA, phone numbers, email, etc.). |
+|`bestEffortAggregation.aggregationKey.groups` | Array | Create lists of identity groups if you want to group profiles exported to your destination by groups of identity namespaces. For example, you could combine profiles that contain the IDFA and GAID mobile identifiers into one call to your destination and emails into another by using the configuration shown in the example above. |
 
 {style="table-layout:auto"}
 
