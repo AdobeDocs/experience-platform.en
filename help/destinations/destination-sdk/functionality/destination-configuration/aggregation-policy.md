@@ -79,8 +79,8 @@ The example configuration below shows a best effort aggregation configuration. F
 |`bestEffortAggregation.aggregationKey.includeSegmentId` | Boolean | Set this parameter to `true` if you want to group profiles exported to your destination by audience ID. |
 |`bestEffortAggregation.aggregationKey.includeSegmentStatus` | Boolean | Set both this parameter and `includeSegmentId` to `true`, if you want to group profiles exported to your destination by audience ID and audience status. |
 |`bestEffortAggregation.aggregationKey.includeIdentity` | Boolean | Set this parameter to `true` if you want to group profiles exported to your destination by identity namespace. |
-|`bestEffortAggregation.aggregationKey.oneIdentityPerGroup` | Boolean | Set this paramter to `true` if you want the exported profiles to be aggregated into groups based on a single identity (GAID, IDFA, phone numbers, email, etc.). |
-|`bestEffortAggregation.aggregationKey.groups` | Array | Create lists of identity groups if you want to group profiles exported to your destination by groups of identity namespaces. For example, you could combine profiles that contain the IDFA and GAID mobile identifiers into one call to your destination and emails into another by using the configuration shown in the example above. |
+|`bestEffortAggregation.aggregationKey.oneIdentityPerGroup` | Boolean | Set this parameter to `true` if you want the exported profiles to be aggregated into groups based on a single identity (GAID, IDFA, phone numbers, email, etc.). Set to `false` if you want to use the `groups` parameter to define custom identity namespace groupings. |
+|`bestEffortAggregation.aggregationKey.groups` | Array | Use this parameter when `oneIdentityPerGroup` is set to `false`. Create lists of identity groups if you want to group profiles exported to your destination by groups of identity namespaces. For example, you could combine profiles that contain the IDFA and GAID mobile identifiers into one call to your destination and emails into another by using the configuration shown in the example above. |
 
 {style="table-layout:auto"}
 
@@ -134,8 +134,8 @@ The example configuration below shows a configurable aggregation configuration. 
 |`configurableAggregation.aggregationKey.includeSegmentId` | Boolean | Set this parameter to `true` if you want to group profiles exported to your destination by audience ID. |
 |`configurableAggregation.aggregationKey.includeSegmentStatus` | Boolean | Set both this parameter and `includeSegmentId` to `true`, if you want to group profiles exported to your destination by audience ID and audience status. |
 |`configurableAggregation.aggregationKey.includeIdentity` | Boolean | Set this parameter to `true` if you want to group profiles exported to your destination by identity namespace. |
-|`configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolean | Set this paramter to `true` if you want the exported profiles to be aggregated into groups based on a single identity (GAID, IDFA, phone numbers, email, etc.). |
-|`configurableAggregation.aggregationKey.groups` | Array | Create lists of identity groups if you want to group profiles exported to your destination by groups of identity namespaces. For example, you could combine profiles that contain the IDFA and GAID mobile identifiers into one call to your destination and emails into another by using the configuration shown in the example above. |
+|`configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolean | Set this parameter to `true` if you want the exported profiles to be aggregated into groups based on a single identity (GAID, IDFA, phone numbers, email, etc.). Set to `false` if you want to use the `groups` parameter to define custom identity namespace groupings. |
+|`configurableAggregation.aggregationKey.groups` | Array | Use this parameter when `oneIdentityPerGroup` is set to `false`. Create lists of identity groups if you want to group profiles exported to your destination by groups of identity namespaces. For example, you could combine profiles that contain the IDFA and GAID mobile identifiers into one call to your destination and emails into another by using the configuration shown in the example above. |
 
 {style="table-layout:auto"}
 
