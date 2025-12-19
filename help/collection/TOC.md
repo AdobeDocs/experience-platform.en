@@ -98,7 +98,9 @@ role: Developer
   + [Multiple SDK instances](use-cases/multiple-instances.md)
   + Personalization {#personalization}
     + [Overview](use-cases/personalization/pers-overview.md)
-    + [Display events](use-cases/personalization/display-events.md)
+    + [Render DOM actions automatically](use-cases/personalization/render-auto-pers-content.md)
+    + [Render HTML offers](use-cases/personalization/render-html-offers.md)
+    + [Render propositions manually](use-cases/personalization/render-manual-propositions.md)
     + [Manage flicker](use-cases/personalization/manage-flicker.md)
-    + [Rendering personalized content](use-cases/personalization/rendering-personalization-content.md)
+    + [Display events](use-cases/personalization/display-events.md)
     + [Top and bottom page events](use-cases/personalization/top-bottom-page-events.md)
