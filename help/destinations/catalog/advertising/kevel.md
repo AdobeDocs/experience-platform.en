@@ -1,15 +1,15 @@
 ---
 title: Kevel connection
-description: Activate Adobe Experience Platform audiences to Kevel for real-time onsite and offsite ad targeting.
+description: Activate Adobe Experience Platform audiences to Kevel for real-time ad targeting.
 ---
 
 # Kevel connection {#kevel}
 
 ## Overview {#overview}
 
-[Kevel](https://www.kevel.com/) provides infrastructure APIs that enable retailers, marketplaces, and apps to power fully custom ad platforms. With Kevel’s APIs, brands can build high-performance retail media offerings, onsite sponsored listings, and personalized ad experiences without relying on monolithic third-party ad servers.
+[Kevel](https://www.kevel.com/) provides the AI-enabled technology and expert guidance that help innovative commerce leaders launch, scale, and succeed in retail media. Kevel’s Retail Media Cloud® powers targeted, attributable, customizable ad formats for on-site and off-site advertising.
 
-The Kevel destination for Adobe Experience Platform enables customers to activate Adobe audiences directly into Kevel’s **UserDB** and **Segment Management** APIs to support real-time targeting at ad decision time.
+The Kevel streaming destination for Adobe Experience Platform enables customers to activate Adobe audiences directly into Kevel’s UserDB and Segment Management APIs to support real-time targeting at ad decision time.
 
 > [!IMPORTANT]
 > The Kevel destination and this documentation page are maintained by the Kevel team.  
@@ -17,13 +17,7 @@ The Kevel destination for Adobe Experience Platform enables customers to activat
 
 ## Use cases {#use-cases}
 
-### Use case #1 — Power onsite retail media
-
-A retailer wants to deliver more relevant sponsored products in search and browse pages. They build Adobe audiences such as *“high-value beauty shoppers”* or *“recently viewed electronics”* and automatically sync them to Kevel's UserDB. Kevel then makes these segments available for real-time ad decisioning on their site or app.
-
-### Use case #2 — Improve campaign targeting and measurement
-
-A marketplace wants to enrich advertiser campaigns with Adobe first-party behavioral signals. As users qualify for Adobe audiences, those segment memberships are streamed to Kevel in real time. Advertisers can immediately target users based on these signals, improving campaign ROAS.
+Retailers and marketplaces want to activate rich first-party behavioral audiences across their onsite retail media experiences to improve both ad relevance and performance. They build high-value and intent-based audiences in Adobe Experience Platform—such as frequent category shoppers or users with recent product interest—and automatically sync those audience memberships to Kevel in real time. Kevel makes these segments immediately available for ad decisioning, enabling sponsored products and other ad formats to be more precisely targeted across search, browse, and app experiences. Advertisers can act on these signals as soon as users qualify, driving more relevant impressions, stronger targeting, and improved campaign measurement and ROAS.
 
 ## Prerequisites {#prerequisites}
 
@@ -45,8 +39,6 @@ Kevel supports the following Adobe Experience Platform identity namespaces:
 | **ECID**           | Adobe Experience Cloud ID                  | Used for onsite personalization and cross-Adobe identification. |
 | **GAID**           | Google Advertising ID                      | Used for Android app/device traffic. |
 | **IDFA**           | Apple Advertising ID                       | Used for iOS app/device traffic (subject to ATT consent). |
-| **AAID**           | Amazon Advertising ID                      | Used for Fire OS devices and some CTV environments. |
-| **CORE**           | First-party customer identifier            | Common internal user/account IDs. |
 | **external_id**    | Custom external identifier                 | Passes proprietary or backend-generated IDs. |
 
 {style="table-layout:auto"}
@@ -57,14 +49,14 @@ The Kevel destination **also accepts custom namespaces**, as defined in your Ado
 
 This means:
 
-- You can map **customer-specific identity namespaces** (for example: `loyalty_id`, `internal_device_id`, or any custom identity you’ve defined in Identity Service).
+- You can map **customer-specific identity namespaces** (for example: `loyalty_id`, `gigya_id`, or any custom identity you’ve defined in Identity Service).
 - These namespaces can be assigned to `kevel_user_key1`, `kevel_user_key2`, or `kevel_user_key3` the same way as global namespaces.
-- Kevel will generate **one UserDB record per mapped identity**, allowing real-time matching at ad-decision time for each identifier your systems send.
+- Kevel will generate **one UserDB record per instance of each mapped identity**, allowing real-time matching at ad-decision time for each identifier your systems send.
 
 ### Identity mapping behavior
 
 - You may map **up to three** Adobe identity namespaces to Kevel’s three identity slots.
-- For each activated profile, Kevel receives **1 UserDB record per mapped identity**.
+- For each activated profile, Kevel receives **1 UserDB record per instance of each mapped identity**.
 - Customers should only map identities they actually send in ad requests to Kevel to avoid unnecessary UserDB storage.
 
 ![Mapping example for Kevel Destination](/help/destinations/assets/catalog/advertising/kevel-destination-mappings.png)
@@ -112,15 +104,20 @@ After authentication, configure:
 
 ![Destination details for Kevel Destination](/help/destinations/assets/catalog/advertising/kevel-destination-details.png)
 
-### Enable alerts {#enable-alerts}
-
-You may subscribe to dataflow alerts to monitor activation success and errors.  
-See [subscribe to destinations alerts](../../ui/alerts.md).
-
 ## Activate segments to this destination {#activate}
 
 To send audiences to Kevel, follow the workflow in  
 [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md).
+
+### Deactivating audiences {#deactivate}
+
+When an audience is deactivated or removed from the Kevel destination in Adobe Experience Platform, Adobe stops sending further profile qualification updates for that audience. Any existing segment created in Kevel remains available and is not automatically deleted.
+
+If the Kevel segment is currently being used in an active campaign, Kevel prevents deletion to avoid disrupting live delivery. In this case, deactivation in Adobe results in the following:
+- The Adobe dataflow stops
+- The Kevel segment continues to exist and may remain attached to campaigns until manually removed or the campaign is updated
+
+To fully stop targeting in Kevel, ensure the segment is removed from any active campaigns in Kevel’s campaign management system.
 
 ### Map attributes and identities {#map}
 
@@ -171,6 +168,9 @@ Below is an example of an exported profile showing:
     "kevel_user_key1": [
       {
         "id": "ECID-fN1zo"
+      },
+      {
+        "id": "ECID-9Xr2p"
       }
     ],
     "kevel_user_key2": [
@@ -188,13 +188,13 @@ Below is an example of an exported profile showing:
 ```
 #### How Kevel interprets this profile
 
-With the Kevel destination configuration:
-	•	Each mapped identity generates a distinct UserDB update, meaning Kevel receives:
-	•	One update for `ECID-fN1zo`
-	•	One update for `GAID-4oic4`
-	•	One update for `IDFA-nB5fU`
+With the Kevel destination configuration, each mapped identity generates a distinct UserDB record, meaning Kevel receives:
+- One update for `ECID-fN1zo`
+- One update for `ECID-9Xr2p`
+- One update for `GAID-4oic4`
+- One update for `IDFA-nB5fU`
 
-Each identity is independently targetable at ad-decision time.
+This allows the same person to be recognized at ad decision time using any of their available identities, with each identity carrying an identical set of segment memberships.
 
 ## Data usage and governance {#data-usage-governance}
 
