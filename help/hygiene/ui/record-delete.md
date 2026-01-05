@@ -13,7 +13,7 @@ Use the [[!UICONTROL Data Lifecycle] workspace](./overview.md) to delete records
 
 ## Prerequisites {#prerequisites}
 
-Deleting records requires a working understanding of how identity fields function in Experience Platform. Specifically, you must know the identity namespace values of the entities whose records you want to delete, depending on the dataset (or datasets) you are deleting them from.
+Deleting records requires a working understanding of how identity fields function in Experience Platform. Specifically, you must know the primary identity namespace and values for the entities whose records you want to delete, depending on the dataset (or datasets) you are deleting them from.
 
 Refer to the following documentation for more information on identities in Experience Platform:
 
@@ -55,13 +55,13 @@ To delete from a specific dataset, select **[!UICONTROL Select dataset]**, then 
 
 ![The [!UICONTROL Select dataset] dialog with a dataset selected and [!UICONTROL Done] highlighted.](../images/ui/record-delete/select-dataset.png)
 
-To delete from all datasets, select **[!UICONTROL All datasets]**. This option increases the scope of the operation and requires you to provide all relevant identity types.
+To delete from all datasets, select **[!UICONTROL All datasets]**. This option increases the scope of the operation and requires you to provide the primary identity type for each dataset you want to target.
 
 ![The [!UICONTROL Select dataset] dialog with the [!UICONTROL All datasets] option selected.](../images/ui/record-delete/all-datasets.png)
 
 >[!WARNING]
 >
->Selecting **[!UICONTROL All datasets]** expands the operation to all datasets in your organization. Each dataset may use a different primary identity type. You must provide **all required identity types** to ensure accurate matching.
+>Selecting **[!UICONTROL All datasets]** expands the operation to all datasets in your organization. Each dataset may use a different primary identity type. You must provide **the primary identity type for each dataset** to ensure accurate matching.
 >
 >If any identity type is missing, some records may be skipped during deletion. This can slow processing and lead to **partial results**.
 
@@ -74,8 +74,8 @@ Each dataset in Experience Platform supports only one primary identity type.
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="Identity namespace"
->abstract="A identity namespace is an attribute that ties a record to a consumer's profile in Experience Platform. The identity namespace field for a dataset is defined by the schema that the dataset is based on. In this column, you must provide the type (or namespace) for the record's identity namespace, such as `email` for email addresses and `ecid` for Experience Cloud IDs. To learn more, see the Data lifecycle UI guide."
+>title="Primary identity namespace"
+>abstract="The primary identity namespace is the attribute that uniquely ties a record to a consumer's profile in Experience Platform. The primary identity field for a dataset is defined by the schema that the dataset is based on. In this column, you must provide the primary identity namespace (such as `email` for email addresses or `ecid` for Experience Cloud IDs) that matches the dataset's schema. To learn more, see the Data lifecycle UI guide."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
@@ -88,7 +88,7 @@ When deleting records, you must provide identity information so the system can d
 >
 >Although the UI allows you to select an identity namespace, only the **primary identity** configured in the dataset's schema is used at execution time. Ensure the identity values you provide correspond to the dataset's primary identity field.
 
-Like all identity fields in Experience Platform, an identity namespace is composed of two things: a **type** (sometimes referred to as an identity namespace) and a **value**. The identity type provides context as to how the field identifies a record (such as an email address). The value represents a record's specific identity for that type (for example, `jdoe@example.com` for the `email` identity type). Common fields used as identities include account information, device IDs, and cookie IDs.
+Like all identity fields in Experience Platform, a primary identity is composed of two things: a **type** (the identity namespace) and a **value**. The identity type provides context as to how the field identifies a record (such as an email address). The value represents a record's specific identity for that type (for example, `jdoe@example.com` for the `email` identity type). Common fields used as primary identities include account information, device IDs, and cookie IDs.
 
 >[!TIP]
 >
@@ -107,7 +107,7 @@ To upload a JSON file, you can drag and drop the file into the provided area, or
 
 ![The request creation workflow with the choose files and drag and drop interface for uploading JSON files highlighted.](../images/ui/record-delete/upload-json.png)
 
-The JSON file must be formatted as an array of objects, each object representing an identity.
+The JSON file must be formatted as an array of objects, each object representing a primary identity value for the target dataset.
 
 ```json
 [
@@ -124,7 +124,7 @@ The JSON file must be formatted as an array of objects, each object representing
 
 | Property | Description |
 | --- | --- |
-| `namespaceCode` | The identity type. |
+| `namespaceCode` | The primary identity namespace for the target dataset. |
 | `value` | The primary identity value as denoted by the type. |
 
 Once the file is uploaded, you can continue to [submit the request](#submit).
