@@ -7,7 +7,7 @@ exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
  
 Use the [[!UICONTROL Data Lifecycle] workspace](./overview.md) to delete records in Adobe Experience Platform based on their primary identities. These records can be tied to individual consumers or any other entity that is included in the identity graph.
  
->[!IMPORTANT] 
+>[!IMPORTANT]
 >
 >Record deletions are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
 
@@ -22,6 +22,14 @@ Refer to the following documentation for more information on identities in Exper
 * [Real-Time Customer Profile](../../profile/home.md): Uses identity graphs to provide unified consumer profiles based on aggregated data from multiple sources, updated in near-real-time.
 * [Experience Data Model (XDM)](../../xdm/home.md): Provides standard definitions and structures for Experience Platform data through the use of schemas. All Experience Platform datasets conform to a specific XDM schema, and the schema defines which fields are identities.
 * [Identity fields](../../xdm/ui/fields/identity.md): Learn how an identity field is defined in an XDM schema.
+
+>[!IMPORTANT]
+>
+>Record deletions act exclusively on the **primary identity** field defined in the dataset's schema. The following limitations apply:
+>
+>- **Secondary identities are not scanned.** If a dataset contains multiple identity fields, only the primary identity is used for matching. Records cannot be targeted or deleted based on non-primary identities.
+>- **Records without a populated primary identity are skipped.** If a record does not have primary identity metadata populated, it is not eligible for deletion.
+>- **Data ingested before identity configuration is not eligible.** If the primary identity field was added to a schema after data ingestion, previously ingested records cannot be deleted through this workflow.
 
 ## Create a request {#create-request}
 
@@ -74,7 +82,11 @@ Each dataset in Experience Platform supports only one primary identity type.
 >title="Primary identity value"
 >abstract="In this column, you must provide the value for the record's identity namespace, which must correspond with the identity type provided in the left column. If the identity namespace type is `email`, the value should be the record's email address. To learn more, see the data lifecycle UI guide."
 
-When deleting records, you must provide identity information so the system can determine which records are to be deleted. For any dataset in Experience Platform, records are deleted based on the **identity namespace** field that is defined by the dataset's schema.
+When deleting records, you must provide identity information so the system can determine which records are to be deleted. For any dataset in Experience Platform, records are deleted based on the **primary identity** field that is defined by the dataset's schema.
+
+>[!NOTE]
+>
+>Although the UI allows you to select an identity namespace, only the **primary identity** configured in the dataset's schema is used at execution time. Ensure the identity values you provide correspond to the dataset's primary identity field.
 
 Like all identity fields in Experience Platform, an identity namespace is composed of two things: a **type** (sometimes referred to as an identity namespace) and a **value**. The identity type provides context as to how the field identifies a record (such as an email address). The value represents a record's specific identity for that type (for example, `jdoe@example.com` for the `email` identity type). Common fields used as identities include account information, device IDs, and cookie IDs.
 
