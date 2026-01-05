@@ -6,15 +6,15 @@ description: Temporary enforcement contract defining valid RTCDP edition and pac
 
 **Status:** Temporary (MVP)  
 **Authority:** Adobe Legal Product Descriptions
-**Applies to:** Documentation metadata only  
+**Applies to:** Documentation metadata only
 **Enforcement mode:** Detection + reporting; additive suggestions only  
-**Owner:** Documentation (single owner)  
+**Owner:** Documentation (single owner)
 **Sunset:** Replaced by formal taxonomy redesign (target 2026)
-**Contract version**: v0.1
+**Contract version:** v0.2
 
 >[!NOTE]
 >
->Changes require approval from documentation owner - ens32110.
+>Changes require approval from documentation owner – ens32110.
 
 ## 1. Purpose
 
@@ -32,7 +32,7 @@ This document is intentionally restrictive.
 
 All rules in this contract are derived **exclusively** from Adobe legal product descriptions:
 
-- Real-Time Customer Data Platform **B2B Edition**
+- Real-Time Customer Data Platform **B2B Edition — Prime & Ultimate Packages**
 - Real-Time Customer Data Platform **B2C Edition — Prime & Ultimate Packages**
 - Real-Time Customer Data Platform **B2P Edition — Prime & Ultimate Packages**
 
@@ -73,16 +73,15 @@ Package features are **mutually exclusive**.
 
 | Edition | Prime | Ultimate | Contract Rationale |
 |-------|------|----------|--------------------|
-| `B2B` | No | No | B2B Edition is licensed as a standalone edition with no Prime/Ultimate packages |
+| `B2B` | Yes | Yes | Prime and Ultimate packages are explicitly defined for RTCDP B2B Edition |
 | `B2C` | Yes | Yes | Prime and Ultimate packages are explicitly defined |
 | `B2P` | Yes | Yes | Prime and Ultimate packages are explicitly defined |
 
 ### Hard Rules
 
-- `Prime` and `Ultimate` MUST NOT coexist
-- `Prime` or `Ultimate` MUST NOT appear without `B2C` or `B2P`
-- `B2B + Prime` is invalid
-- `B2B + Ultimate` is invalid
+- `Prime` and `Ultimate` MUST NOT coexist  
+- `Prime` or `Ultimate` MUST NOT appear without **exactly one** edition (`B2B`, `B2C`, or `B2P`)  
+- Edition features (`B2B`, `B2C`, `B2P`) are mutually exclusive  
 
 These rules reflect **current legal packaging only**.
 
@@ -127,15 +126,14 @@ Account Profiles and Businessperson Profiles are explicitly defined and licensed
 title: Destination SDK overview
 solution: Real-Time Customer Data Platform
 features:
-  - B2B
   - Ultimate
 ---
 ```
 
 **Why invalid:**
 
-- `Ultimate` packages do not exist for RTCDP B2B Edition
-- The combination violates Section 5 of this contract
+- Package features (`Prime`, `Ultimate`) MUST NOT appear without an edition feature
+- The metadata violates Section 5 of this contract
 
 No automatic correction is permitted.
 
@@ -165,5 +163,4 @@ Any modification to this contract:
 - Requires re-baselining of gold-set data
 - Must be versioned explicitly
 
-This document is the authoritative enforcement baseline for the MVP.
-
+This document is the **authoritative enforcement baseline** for the MVP.
