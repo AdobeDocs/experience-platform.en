@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;ABAC
 title: Attribute-based Access Control Manage Role Permissions
-description: This document provides information on configuring permissions for a role through the Permissions interface in Adobe Experience Cloud
+description: Learn how to configure  roles through the Permissions interface in Adobe Experience Cloud.
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 ---
 # Manage permissions for a role {#manage-role-permissions}
