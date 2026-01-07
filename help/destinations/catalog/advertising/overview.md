@@ -24,6 +24,7 @@ To understand the difference between connections and extensions, see [Connection
 * [(Beta) Acxiom Real ID Audience Connection](acxiom-real-id-audience-connection.md)
 * [Adobe Advertising Cloud connection](adobe-advertising-cloud-connection.md)
 * [Amazon Ads connection](amazon-ads.md)
+* [Amazon Ads v2 connection](amazon-ads-new.md)
 * [Bombora connection](bombora.md)
 * [Criteo connection](criteo.md)
 * [Demandbase connection](demandbase.md)
