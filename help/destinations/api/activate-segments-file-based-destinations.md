@@ -4781,11 +4781,11 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 Manifest JSON files contain information about the export location, export size, and more. The manifest is named using the format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. View a [sample manifest file](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). The manifest file includes the following fields:
 
-  * `flowRunId`: The [dataflow run](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) which generated the exported file. 
-  * `scheduledTime`: The time in UTC when the file was exported. 
-  * `exportResults.sinkPath`: The path in your storage location where the exported file is deposited. 
-  * `exportResults.name`: The name of the exported file.
-  * `size`: The size of the exported file, in bytes.
+* `flowRunId`: The [dataflow run](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) which generated the exported file. 
+* `scheduledTime`: The time in UTC when the file was exported. 
+* `exportResults.sinkPath`: The path in your storage location where the exported file is deposited. 
+* `exportResults.name`: The name of the exported file.
+* `size`: The size of the exported file, in bytes.
 
 To add file manifest generation to an existing destination, you need to update the target connection parameters using the `PATCH` operation. This enables manifest file generation for your destination, which provides metadata about the exported files.
 
