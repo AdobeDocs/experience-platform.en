@@ -85,3 +85,12 @@ With the ingestion schedule configured, use the [!UICONTROL Review] interface to
 ## Monitor
 
 Once the dataflow is selected it will do a one-time backfill of data and subsequent incremental sync on the schedule specified. The status of sync can be monitored by navigating to the dataflow. For more information, read the guide on [monitoring sources dataflows in the UI](../../../../../dataflows/ui/monitor-sources.md).
+
+## Next steps
+
+You've now completed the setup and configuration of your [!DNL Oracle Eloqua] source in Experience Platform. With your dataflow established, your Eloqua data will be ingested according to your chosen schedule and mapped to standard Experience Data Model (XDM) schemas. Continue monitoring your dataflows and explore your ingested data within Platform to drive insights and activate your marketing use cases. For more advanced configurations and troubleshooting, consult the related documentation or reach out to Adobe support resources.
+
+For additional information, read the following documentation:
+
+* [Sources overview](../../../../home.md)
+* [Real-Time CDP B2B Edition](../../../../../rtcdp/b2b-overview.md)
