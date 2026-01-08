@@ -6,29 +6,28 @@ exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
 ---
 # Getting started with Adobe Experience Platform [!DNL Query Service] {#getting-started}
 
-Adobe Experience Platform [!DNL Query Service] lets you analyze your customer data using standard SQL. You can query datasets in the data lake, join data from multiple sources, and create new datasets from your query results for use in reporting, machine learning, or Real-Time Customer Profile. Experience Platform [!DNL Query Service] supports querying through a user interface or the RESTful API.
+Adobe Experience Platform [!DNL Query Service] enables you to analyze customer data using standard SQL. With Query Service, you can query datasets in the data lake, join data from multiple sources, and create new datasets from your query results for use in reporting, machine learning, or Real-Time Customer Profile. You can interact with Query Service through either the user interface or the RESTful API.
 
 ## Prerequisites checklist
 
 Before you can start querying data, ensure you have:
 
-- **Platform access**: Your organization is provisioned for Experience Platform
-- **[!DNL Query Service] access**: Your administrator has granted you access to [!DNL Query Service]
-- **Data ingestion**: You have data ingested into Experience Platform
+- **Required permissions**: Your organization is provisioned for Experience Platform and your user account has access to [!DNL Query Service]. If you do not see [!DNL Query Service] in the Experience Platform UI, review the [permissions documentation](../../access-control/home.md#permissions) and contact your system administrator to request access .
+- **Data ingestion**: You have data ingested into Experience Platform.
 
 This [data ingestion tutorial video](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) provides an overview on creating a dataset, mapping a dataset to a schema, adding data to the dataset, and confirming its ingestion. The [ingestion overview documentation](../../ingestion/home.md) supplements this and provides more in depth information and links to other learning resources.
 
 ## Quick start paths
 
-After you have ingested your data into Experience Platform, you can begin working with [!DNL Query Service] using either the [!DNL Query Editor] in Experience Platform or the [!DNL Query Service] API. Both interfaces support writing, running and sheduling queries for automated execution.
+After you have ingested your data into Experience Platform, you can begin working with [!DNL Query Service] using either the [!DNL Query Editor] in Experience Platform or the [!DNL Query Service] API. Both interfaces allow you to write, run, and schedule queries for automated execution.
 
 ### [!DNL Query Editor]
 
-The [!DNL Query Service] UI is best used for analysis, data exploration, and collaborative query development. For an overview of the UI functionality, see the [[!DNL Query Service] UI documentation](../ui/overview.md). To learn about how to navigate the [!DNL Query Editor], read the [[!DNL Query Editor user guide]](../ui/user-guide.md).
+You can use the [!DNL Query Service] UI for analysis, data exploration, and collaborative query development. For an overview of the UI functionality, see the [[!DNL Query Service] UI documentation](../ui/overview.md). To learn about how to navigate the [!DNL Query Editor], read the [[!DNL Query Editor user guide]](../ui/user-guide.md).
 
 ### [!DNL Query Service] API
 
-The [!DNL Query Service] API is best used for automated workflows, query templates management, and programmatic integrations. Refer to the [[!DNL Query Service] developer guide](../api/getting-started.md) for detailed instructions on using the [!DNL Query Service] API.
+You can use the [!DNL Query Service] API for automated workflows, query templates management, and programmatic integrations. Refer to the [[!DNL Query Service] developer guide](../api/getting-started.md) for detailed instructions on using the [!DNL Query Service] API.
 
 ## Next Steps
 
