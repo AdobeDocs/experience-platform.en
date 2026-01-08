@@ -270,6 +270,8 @@ role: Developer
       * [Overview](./extensions/server/azure/overview.md)
     * [!DNL Mixpanel] {#mixpanel}
       * [Overview](./extensions/server/mixpanel/overview.md)
+    * [!DNL Nextdoor] {#nextdoor}
+      * [Overview](./extensions/server/nextdoor/overview.md)
     * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
     * [!DNL Pinterest] {#pinterest}
       * [Overview](./extensions/server/pinterest/overview.md)
