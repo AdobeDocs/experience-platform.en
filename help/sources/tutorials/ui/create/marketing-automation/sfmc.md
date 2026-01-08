@@ -82,3 +82,13 @@ With the ingestion schedule configured, use the [!UICONTROL Review] interface to
 ## Monitor
 
 Once the dataflow is selected it will do a one-time backfill of data and subsequent incremental sync on the schedule specified. The status of sync can be monitored by navigating to the dataflow. For more information, read the guide on [monitoring sources dataflows in the UI](../../../../../dataflows/ui/monitor-sources.md).
+
+## Next steps
+
+This tutorial guided you through connecting your [!DNL Salesforce Marketing Cloud] (V2) account to Experience Platform using the user interface. You learned how to select or create a source account, provide the required credentials, choose data extensions to ingest, specify dataset and dataflow details, map your data, set up a schedule for data ingestion, and monitor your dataflows. By following these steps, you successfully integrated your [!DNL Salesforce Marketing Cloud] data with Experience Platform for activation and analysis.
+
+For additional information, read the following documentation:
+
+* [Sources overview](../../../../home.md)
+* [Real-Time CDP B2B Edition](../../../../../rtcdp/b2b-overview.md)
+
