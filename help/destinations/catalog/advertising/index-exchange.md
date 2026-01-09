@@ -1,21 +1,21 @@
 ---
 title: Index Exchange
-description: Connect to Index Exchange and activate your data for use as audience segments for targeting deals created in Index Publisher Accounts or Index Marketplaces.
+description: Connect to Index Exchange (Index) and activate your data so your audience segments can be targeted by deals created in the Index UI.
 ---
 
 # Index Exchange {#index-exchange}
 
 ## Overview {#overview}
 
-Index Exchange is a global advertising supply-side platform enabling media owners to maximize the value of their content on any screen. We’re a proud industry pioneer with over 20 years of experience connecting leading experience makers with the world’s largest brands to ensure a quality experience for consumers.
+Index is a global advertising supply-side platform that helps media owners maximize the value of their content across every screen. With over 20 years of industry leadership, we connect the world’s largest brands with premium experience makers to deliver high-quality consumer experiences.
 
-This destination connector provides a means to export audience segments from Adobe Experience Platform to Index Exchange's programmatic advertising platform.
+This destination connector enables you to export audience segments from Adobe Experience Platform directly to Index Exchange’s programmatic advertising platform.
 
-Audience segments exported to Index Exchange can be used for targeting in deals created in Index Publisher Accounts, Marketplaces curator accounts, or made available to publishers and curators via Data Vendor accounts.
+Once exported, these audience segments can be used to target deals by media owners, Marketplace Partners, or shared with publishers and curators by Marketplace Vendors.
 
 >[!IMPORTANT]
 >
-> The destination connector and documentation page are created and maintained by the Index Exchange team. For any inquiries or update requests, contact them directly at `technical_am_marketplace@indexexchange.com`
+> The destination connector and documentation page are created and maintained by the Index team. For questions or update requests, contact them directly at `technical_am_marketplace@indexexchange.com`
 
 ## Use cases {#use-cases}
 
@@ -23,33 +23,36 @@ To help you better understand how and when you should use the Index Exchange des
 
 ### Targeting users on mobile, web, and CTV platforms {#targeting-users}
 
-Publishers, curators, or data vendors who want to send audiences from Adobe Experience Platform to Index Exchange to target users on mobile, web, and CTV platforms, using a large range of identifiers.
+Media owners, Marketplace Partners, or Marketplace Vendors who want to send audiences from Adobe Experience Platform to Index to target users on mobile, web, and CTV platforms, using a large range of identifiers.
 
 ### Targeting specific content on mobile, web, and CTV platforms {#targeting-content}
 
-Publishers, curators, or data vendors who want to send audiences from Adobe Experience Platform to Index Exchange to target users looking at specific content across mobile, web, and CTV platforms using specific URLs, App Bundles or Content IDs.
+Media owners, Marketplace Partners, or Marketplace Vendors who want to send audiences from Adobe Experience Platform to Index to target users looking at specific content across mobile, web, and CTV platforms using specific URLs, App Bundles or Content IDs.
+
 ## Prerequisites {#prerequisites}
 
-Audience segments must be registered with Index Exchange using an additional process when using this destination before they will appear in your account. Reach out to your Index Exchange account representative for assistance with this process.
+Audience segments must be registered with Index using an additional process when using this destination before they will appear in your account. Reach out to your Index Exchange account representative for assistance with this process.
 
 ## Supported identities {#supported-identities}
 
-Index Exchange supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
+Index supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-Please note that Index Exchange destinations only allow for a single identity type at a time to be uploaded, indicated by adding the appropriate identifier type to the details when configuring the destination (see the ["Fill in destination details"](#destination-details)) section below. To upload multiple identity types, you must create multiple instances of the Index Exchange destination.
+Note that Index Exchange destinations support only one identity type per upload. You must specify the appropriate identifier type when configuring the destination details (see the ["Fill in destination details"](#destination-details) section below).
+
+To upload multiple identity types, create separate instances of the Index Exchange destination for each identity type.
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|Windows AID|Windows Advertising ID|Select the Windows AID target identity when your source identity is a Windows AID namespace.|
-|extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
+|GAID|Google Advertising ID| If the source identity is a GAID namespace, select GAID as the target identity.|
+|IDFA|Apple ID for Advertisers| If your source identity is an IDFA namespace, select the IDFA target identity.|
+|Windows AID|Windows Advertising ID| If your source identity is a Windows AID namespace, select the Windows AID target identity.
+|extern_id|Custom user IDs| If your source identity is a custom namespace, select this target identity.|
 
 {style="table-layout:auto"}
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section explains which audience types you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
@@ -63,9 +66,9 @@ This section describes which type of audiences you can export to this destinatio
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (IDFA, GAID, or others) used in the Index Exchange destination.|
-| Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
+|---------|----------|---------|
+| Export type | **[!UICONTROL Segment export]** | Exports all members of a segment (audience) with the identifiers (IDFA, GAID, or others) used in the Index Exchange destination. |
+| Export frequency | **[!UICONTROL Batch]** | Exports files to downstream platforms at intervals of 3, 6, 8, 12, or 24 hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -79,14 +82,14 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Fill in destination details {#destination-details}
 
-To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
+To configure details for the destination, fill in the fields below. An asterisk next to a field in the UI indicates that the field is required.
 
 ![Destination details](../../assets/catalog/advertising/index-exchange/destination-details.png)
 
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Identifier Type]**: The Index Exchange provided "Identifier Type" that corresponds to the type of identifier you will be sending to Index Exchange. See the table of supported identifier types below. Reach out to your Index Exchange account representative if you are unsure which Identifier Type to use. If you wish to send multiple identifier types, you must create multiple instances of this destination.
-*  **[!UICONTROL Account ID]**: Your Index Exchange Account ID. Please note this is not the same as your Publisher ID. If in doubt, please reach out to your Index Exchange account representative.
+* [!UICONTROL Name]: Enter a name to help you recognize this destination later.
+* [!UICONTROL Description]: Enter a description to help you identify this destination later.
+* [!UICONTROL Identifier Type]: Select the Index–provided identifier type that matches the identifier you are sending to Index. See the table of supported identifier types below. If you are unsure which identifier type to use, contact your Index Representative. To send multiple identifier types, create separate instances of this destination.
+* [!UICONTROL Account ID]: Enter your Index account ID. This is not the same as your publisher ID. If you are unsure about which ID to use, contact your Index Representative.
 
 #### Supported Identifier Types
 
@@ -100,10 +103,11 @@ To configure details for the destination, fill in the required and optional fiel
 | [!DNL url]       | Site URL |
 | [!DNL ppid_xxx]  | For PPID identifiers, reach out to your Index Exchange account representative for assistance. |
 
+{style="table-layout:auto"}
+
 ### Enable alerts {#enable-alerts}
 
-You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
-
+You can enable alerts to receive notifications about the status of your dataflow to this destination. Select one or more alerts from the list to subscribe to status notifications for your dataflow. For more information, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
 ## Activate segments to this destination {#activate}
@@ -127,14 +131,14 @@ Selecting target fields:
 
 ![Map attributes and identities](../../assets/catalog/advertising/index-exchange/identity-mapping.png)
 
-### Register segments with Index Exchange {#register-segments}
+### Register segments with Index {#register-segments}
 
-Either before or after activating data to the destination, you must reach out to your account representative at Index Exchange to register the segments that you plan to activate. Your representative will provide you with instructions on how to register the additional segments details such as names, IDs, descriptions and pricing if applicable.
+Before or after activating data to the destination, contact your Index Representative to register the segments you plan to activate. Your representative will provide instructions on how to register additional segment details, including names, IDs, descriptions, and pricing, if applicable.
 
 ## Exported data / Validate data export {#exported-data}
 
-Once registration is complete, the segments will appear available for targeting in your Index Exchange account. To confirm that the data is being received correctly, you can reach out to your Index Exchange account representative who can provide details on the volume of segment data received.
+Once registration is complete, the segments will be available for targeting in your Index account. To confirm that data is being received correctly, contact your Index Representative, who can provide details on the volume of segment data received.
 
 ## Data usage and governance {#data-usage-governance}
 
-All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
+All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md). 
