@@ -1,12 +1,16 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;ABAC
 title: Attribute-based Access Control Create a Role
-description: This document provides information on managing roles through the Permissions interface in Adobe Experience Cloud
+description: Manage roles through the Permissions interface in Adobe Experience Cloud.
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 ---
 # Manage roles
 
-Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. In a role-based access control environment, user access provisioning is group through common responsibilities and needs. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need.
+<!-- UPDATE ROLES WITH A MORE COMPREHENSIVE EXPLANATION -->
+
+To begin managing roles, navigate to **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"} and select **[!UICONTROL Roles]** in the left panel.
+
+![The Roles workspace within Permissions.](../../images/ui/roles/roles-overview.png)
 
 ## Create a new role {#create-new-role}
 
@@ -17,41 +21,38 @@ Roles define the access that an administrator, a specialist, or an end-user has 
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Manage a role"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Apply labels to a role"
 
-To create a new role, select the **[!UICONTROL Roles]** tab in the sidebar and select **[!UICONTROL Create Role]**.
+To create a new role, select **[!UICONTROL Create role]**.
 
-![flac-new-role](../../images/flac-ui/flac-new-role.png)
+![The Role's workspace with the Create role option highlighted.](../../images/ui/roles/roles-create-role.png)
 
-The **[!UICONTROL Create a new role]** dialog appears, prompting you to enter a name, and an optional description. 
+The **[!UICONTROL Create new role]** dialog appears. Enter a **[!UICONTROL Name]** for the role, and optionally, a **[!UICONTROL Description]**, and then select **[!UICONTROL Confirm]**.
 
-When finished, select **[!UICONTROL Confirm]**.
+![The Create new roles dialog with the Name and Description filled in and the Confirm option highlighted.](../../images/ui/roles/roles-create-new-role.png)
 
-![flac-create-new-role](../../images/flac-ui/flac-create-new-role.png)
+The **[!UICONTROL Resources]** workspace appears. Locate the resource you need by scrolling, or by entering the resource's name into the search bar in the left panel. Add resources by selecting the ![Plus icon](/help/images/icons/plus.png) beside the resource's name. 
 
-Next, select the resource permissions that you would like to include in the role using the dropdown menu. 
+![The Resources workspace with an individual resource's Add option highlighted.](../../images/ui/roles/roles-resources.png)
 
-![flac-add-role-permission](../../images/flac-ui/flac-add-role-permission.png)
+<!-- ADD IN NOTE ABOUT THE DEFAULT SANDBOX - THIS SHOULD BE MENTIONED IN THE HIGHER LEVEL DOCS, WE MAY BE ABLE TO LINK TO IT -->
 
-To add additional resources, select **[!UICONTROL Adobe Experience Platform]** from the left navigation panel, which displays a list of resources. Alternatively, enter the resource name into the search bar in the left navigation panel.
+The resource gets added to the main workspace. Select the dropdown beside the resource's name, and select the permissions you wish to add to the role. You can choose them individually, select **[!UICONTROL Add all]**, or locate specific permissions by entering the permission name in the search bar.
 
-![flac-add-additional-resources](../../images/flac-ui/flac-add-additional-resources.png)
+![The Resources workspace with an individual resource's dropdown menu expanded and highlighted.](../../images/ui/roles/roles-resources-permissions.png)
 
-Click and drag the relevant resource and drop into the main panel. 
+Continue selecting all the resources and the permissions you wish to add to the role. When you're finished, select **[!UICONTROL Save]**.
 
-![flac-additional-resources-added](../../images/flac-ui/flac-additional-resources-added.png)
+![The Resources workspace with the Save option highlighted.](../../images/ui/roles/roles-resources-permissions-save.png)
 
-Select the resource permissions that you would like to include in the role using the dropdown menu. Repeat this for all resources you would like to include for the role. When finished, select **[!UICONTROL Save and exit]**.
+You will receive an alert showing that the role has been saved successfully. Select **[!UICONTROL Close]** to return to the **[!UICONTROL Roles]** workspace.
 
-![flac-save-resources](../../images/flac-ui/flac-save-resources.png)
+![The Resources workspace with the success alert and the Close option highlighted.](../../images/ui/roles/roles-resources-permissions-close.png)
 
 The new role is successfully created, and you are redirected to the **[!UICONTROL Roles]** page, where you will see the newly created role appear in the list. 
 
-![flac-role-saved](../../images/flac-ui/flac-role-saved.png)
-
-See the sections on [managing permissions for a role](#manage-permissions-for-a-role) for more details on how to manage role permissions once they are created.
-
+<!--
 The following video is intended to support your understanding of creating a new role and managing users for that role.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on) -->
 
 ## Duplicate a role
 
