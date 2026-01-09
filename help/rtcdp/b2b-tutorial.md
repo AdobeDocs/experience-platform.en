@@ -11,7 +11,7 @@ exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
 
 This document provides a high-level end-to-end workflow for getting started with Real-Time Customer Data Platform (CDP) B2B Edition, using an example use case to illustrate key concepts.
 
-The technology company Bodea wants to combine person and account data from different siloed data sources in order to effectively target customers with an email and a LinkedIn advertisement campaign for its new product. Bodea uses Marketo Engage as its marketing automation platform and needs to segment a B2B-specific audience from multiple CRMs containing customer data.
+The technology company Bodea wants to combine person and account data from different siloed data sources in order to effectively target customers with an email and a LinkedIn advertisement campaign for its new product. Bodea uses a marketing automation platform and needs to segment a B2B-specific audience from multiple CRMs containing customer data.
 
 ## Getting started
 
@@ -32,7 +32,7 @@ As part of the initial setup, Bodea's IT department needs to create an XDM schem
 
 Adobe Experience Platform allows you to automatically generate the schemas and namespaces required for B2B data sources. This tool ensures that the schemas created describe the data in a structured reusable way. Follow the [B2B namespaces and schema auto-generation utility documentation](../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) for a complete reference to the setup process.
 
-Within the Adobe Experience Platform UI, the Bodea marketer selects **[!UICONTROL Schemas]** in the left rail, followed by the **[!UICONTROL Browse]** tab. Since they used the Marketo Engage auto-generation utility, the new empty schemas appear in the list and all have a prefix of "B2B".
+Within the Adobe Experience Platform UI, the Bodea marketer selects **[!UICONTROL Schemas]** in the left rail, followed by the **[!UICONTROL Browse]** tab. Since they used the auto-generation utility, the new empty schemas appear in the list and all have a prefix of "B2B".
 
 ![Schema workspace browse tab](./assets/b2b-tutorial/empty-b2b-schemas.png)
 
@@ -52,23 +52,23 @@ Real-Time Customer Profile merges data from disparate sources to create consolid
 
 ## Ingest your data into Experience Platform
 
-Next, the Bodea marketer uses the [Marketo Engage connector](../sources/connectors/adobe-applications/marketo/marketo.md) to ingest data into Experience Platform for use in downstream services. You can also ingest data by using one of the approved sources for Real-Time CDP B2B Edition.
+Next, the Bodea marketer uses a [source connector](../sources/home.md) to ingest data into Experience Platform for use in downstream services. You can also ingest data by using one of the approved sources for Real-Time CDP B2B Edition.
 
 >[!NOTE]
 > 
 >To learn which source connectors are available to your organization, you can view the sources catalog in the Experience Platform UI. To access the catalog, select **Sources** in the left navigation, then select **Catalog**.
 
-In order to create a connection between a Marketo account and Experience Platform, you must acquire authentication credentials. See the [guide on attaining Marketo source connector authentication credentials](../sources/connectors/adobe-applications/marketo/marketo-auth.md) for detailed instructions. 
+In order to create a connection between a source account and Experience Platform, you must acquire authentication credentials. For detailed instructions on attaining authentication credentials for each type of source, refer to the [sources overview](../sources/home.md).
 
-After acquiring authentication credentials, the Bodea marketer creates a connection between the Marketo Account and their Experience Platform organization. See the documentation for instructions on [how to connect a Marketo Account using the Experience Platform UI](../sources/tutorials/ui/create/adobe-applications/marketo.md).
+After acquiring authentication credentials, the Bodea marketer creates a connection between the source account and their Experience Platform organization. See the [sources documentation](../sources/home.md) for more information on setting up a source connection.
 
-The Marketo Engage source connector provides an auto-mapping feature to make the process of mapping all of your data fields to those of the newly created schemas much easier. 
+The source connector provides an auto-mapping feature to make the process of mapping all of your data fields to those of the newly created schemas much easier. 
 
 >[!NOTE]
 > 
 >If you have made custom field groups in your XDM schemas you may have unconnected fields at this stage of the process. Make sure to check all the values that are populating your custom field groups.
 
-The Bodea marketer checks that all field groups are appropriately mapped and continues the sources setup process by initializing a dataflow. By creating a dataflow to bring in Marketo data, incoming data can be used by downstream Experience Platform services. During the initial ingestion process, data is brought into Experience Platform as a batch. After this, subsequent ingested data is then streamed into Profile with near-real-time updates.
+The Bodea marketer checks that all field groups are appropriately mapped and continues the sources setup process by initializing a dataflow. By creating a dataflow to bring in source data, incoming data can be used by downstream Experience Platform services. During the initial ingestion process, data is brought into Experience Platform as a batch. After this, subsequent ingested data is then streamed into Profile with near-real-time updates.
 
 ## Create an audience to evaluate your data
 
@@ -96,7 +96,7 @@ Within the [!UICONTROL Segments] workspace of the Experience Platform UI, the Bo
 > 
 >See the tutorial on [activating an audience to a destination](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) for comprehensive steps on how to accomplish this.
 
-The Bodea marketer activates the audience to the Marketo destination, which allows them to push audience data from Experience Platform to Marketo Engage in the form of a static list. See the guide on the [Marketo destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) for more information.
+The Bodea marketer activates the audience to a destination, which allows them to push audience data from Experience Platform to their marketing automation platform. Read the [destinations catalog](../destinations/catalog/overview.md) for more information on available destinations.
 
 ## Next steps
 
