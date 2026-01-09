@@ -48,16 +48,6 @@ If **[!UICONTROL Auto-include]** is not active in a policy, you can use the togg
 
 To manually add or remove sandboxes to a policy, the **[!UICONTROL Auto-include]** toggle **must** be off.
 
-#### Remove sandboxes
-
-To remove sandboxes from a policy, find the sandbox you wish to remove from the list and then select the **X** icon.
-
-![The policy's sandbox list with an "x" highlighted to remove a sandbox.](../../images/ui/policies/policy-remove-sandbox.png){zoomable="yes"}
-
-A confirmation dialog will appear. Select **[!UICONTROL Confirm]** to finish removing the sandbox from the policy.
-
-![A sandbox's confirmation dialog with the Confirm option highlighted.](../../images/ui/policies/policy-remove-sandbox-confirmation.png){zoomable="yes"}
-
 #### Add sandboxes
 
 To add sandboxes to a policy, select **[!UICONTROL Add Sandboxes]**.
@@ -71,6 +61,16 @@ The **[!UICONTROL Add Sandboxes]** dialog appears. Select the sandbox(es) you wi
 >[!NOTE]
 >
 >If all available sandboxes are already added to the policy, you will see a "You have nothing in your library" message within the dialog.
+
+#### Remove sandboxes
+
+To remove sandboxes from a policy, find the sandbox you wish to remove from the list and then select the **X** icon.
+
+![The policy's sandbox list with an "x" highlighted to remove a sandbox.](../../images/ui/policies/policy-remove-sandbox.png){zoomable="yes"}
+
+A confirmation dialog will appear. Select **[!UICONTROL Confirm]** to finish removing the sandbox from the policy.
+
+![A sandbox's confirmation dialog with the Confirm option highlighted.](../../images/ui/policies/policy-remove-sandbox-confirmation.png){zoomable="yes"}
 
 ## Activate a policy {#activate-policy}
 
