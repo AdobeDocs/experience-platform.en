@@ -1,6 +1,6 @@
 ---
-title: Kevel connection
-description: Activate Adobe Experience Platform audiences to Kevel for real-time ad targeting.
+title: Kevel Connection
+description: Use the Kevel streaming destination to activate audiences directly into Kevel’s UserDB and Segment Management APIs and support real-time targeting at decision time.
 ---
 
 # Kevel connection {#kevel}
@@ -17,7 +17,7 @@ The Kevel streaming destination for Adobe Experience Platform enables customers 
 
 ## Use cases {#use-cases}
 
-Retailers and marketplaces want to activate rich first-party behavioral audiences across their onsite retail media experiences to improve both ad relevance and performance. They build high-value and intent-based audiences in Adobe Experience Platform—such as frequent category shoppers or users with recent product interest—and automatically sync those audience memberships to Kevel in real time. Kevel makes these segments immediately available for ad decisioning, enabling sponsored products and other ad formats to be more precisely targeted across search, browse, and app experiences. Advertisers can act on these signals as soon as users qualify, driving more relevant impressions, stronger targeting, and improved campaign measurement and ROAS.
+You can activate rich first-party behavioral audiences across your retail media experiences to deliver more relevant ads and stronger performance. In Adobe Experience Platform, you build high-value, intent-based audiences, such as frequent category shoppers or users with recent product interest, and sync those memberships to Kevel in real time. Kevel immediately makes these segments available for ad decisioning, enabling precise targeting for sponsored products and other formats across search, browse, and app experiences. As soon as users qualify, you can act on these signals to drive more relevant impressions, better targeting, and improved measurement and ROAS.
 
 ## Prerequisites {#prerequisites}
 
@@ -25,14 +25,14 @@ Before you set up the Kevel destination:
 
 - You must have an active **Kevel network** and API access.  
 - You need a **Kevel API key** with permissions to create segments and update UserDB records.
-- You must configure identity namespaces in Adobe Experience Platform that map to the identities your site/app sends during Kevel ad requests (for example, ECID, GAID, IDFA, loyalty ID, etc.).
+- You must configure identity namespaces in Experience Platform that map to the identities your site/app sends during Kevel ad requests (for example, ECID, GAID, IDFA, loyalty ID, etc.).
 - Adobe customers should only map identities that are used during real-time ad requests, as each identity will result in a UserDB record.
 
 ## Supported identities {#supported-identities}
 
 The Kevel destination supports activation for any identity that your application may use when sending ad requests to Kevel. You may map up to three identity namespaces to generate corresponding UserDB records.
 
-Kevel supports the following Adobe Experience Platform identity namespaces:
+Kevel supports the following Experience Platform identity namespaces:
 
 | Identity namespace | Description                                | Typical usage |
 |--------------------|--------------------------------------------|---------------|
@@ -45,7 +45,7 @@ Kevel supports the following Adobe Experience Platform identity namespaces:
 
 ### Support for custom identity namespaces
 
-The Kevel destination **also accepts custom namespaces**, as defined in your Adobe Experience Platform implementation.
+The Kevel destination **also accepts custom namespaces**, as defined in your Experience Platform implementation.
 
 This means:
 
@@ -55,8 +55,8 @@ This means:
 
 ### Identity mapping behavior
 
-- You may map **up to three** Adobe identity namespaces to Kevel’s three identity slots.
-- For each activated profile, Kevel receives **1 UserDB record per instance of each mapped identity**.
+- You may map **up to three** Experience Platform identity namespaces to Kevel’s three identity slots.
+- For each activated profile, Kevel receives **one UserDB record per instance of each mapped identity**.
 - Customers should only map identities they actually send in ad requests to Kevel to avoid unnecessary UserDB storage.
 
 ![Mapping example for Kevel Destination](/help/destinations/assets/catalog/advertising/kevel-destination-mappings.png)
@@ -81,7 +81,7 @@ This means:
 
 ## Connect to the destination {#connect}
 
-Follow the standard Adobe Experience Platform [connect a destination](../../ui/connect-destination.md) workflow.
+Follow the standard Experience Platform [connect a destination](../../ui/connect-destination.md) workflow.
 
 > [!IMPORTANT]
 > You must have **View Destinations** and **Manage Destinations** permissions.
@@ -111,10 +111,10 @@ To send audiences to Kevel, follow the workflow in
 
 ### Deactivating audiences {#deactivate}
 
-When an audience is deactivated or removed from the Kevel destination in Adobe Experience Platform, Adobe stops sending further profile qualification updates for that audience. Any existing segment created in Kevel remains available and is not automatically deleted.
+When an audience is deactivated or removed from the Kevel destination in Experience Platform, Experience Platform stops sending further profile qualification updates for that audience. Any existing segment created in Kevel remains available and is not automatically deleted.
 
-If the Kevel segment is currently being used in an active campaign, Kevel prevents deletion to avoid disrupting live delivery. In this case, deactivation in Adobe results in the following:
-- The Adobe dataflow stops
+If the Kevel segment is currently being used in an active campaign, Kevel prevents deletion to avoid disrupting live delivery. In this case, deactivation in Experience Platform results in the following:
+- The Experience Platform dataflow stops
 - The Kevel segment continues to exist and may remain attached to campaigns until manually removed or the campaign is updated
 
 To fully stop targeting in Kevel, ensure the segment is removed from any active campaigns in Kevel’s campaign management system.
@@ -124,13 +124,13 @@ To fully stop targeting in Kevel, ensure the segment is removed from any active 
 Kevel requires:
 
 - **Identity namespaces** — Up to three identity namespaces mapped to Kevel identity slots.
-- **Segment membership** — No manual mapping required; Adobe automatically passes segment membership identifiers and aliases.
+- **Segment membership** — No manual mapping required; Experience Platform automatically passes segment membership identifiers and aliases.
 
 During activation, select the identity namespaces you have configured for Kevel. Each identity will generate its own UserDB update call.
 
 ## Exported data / Validate data export {#exported-data}
 
-When a profile qualifies for or exits an audience, Adobe sends a streaming update to Kevel.
+When a profile qualifies for or exits an audience, Experience Platform sends a streaming update to Kevel.
 
 ### Sample payload received by Kevel UserDB
 
@@ -140,18 +140,21 @@ PUT /udb/{networkId}/segments?userKey=ECID-12345
   "segments": [1723, 3344, 9988]
 }
 ```
-Where:
-- `userKey` is derived from the mapped Adobe identity.
-- `segments` is the set of Kevel segment IDs corresponding to the Adobe audiences for which the profile is currently realized.
 
-### Sample Adobe profile used during export {#sample-profile}
+| Parameter | Description |
+|-----------|-------------|
+| **userKey** | Derived from the mapped Adobe identity. |
+| **segments** | The set of Kevel segment IDs corresponding to the Adobe audiences for which the profile is currently realized. |
 
-When activating audiences to the Kevel destination, Adobe Experience Platform sends profile fragments that contain both **segment qualifications** and the **identities mapped by the customer** to Kevel’s identity slots.
+{style="table-layout:auto"}
+
+### Sample Experience Platform profile used during export {#sample-profile}
+
+When activating audiences to the Kevel destination, Experience Platform sends profile fragments that contain both **segment qualifications** and the **identities mapped by the customer** to Kevel’s identity slots.
 
 Below is an example of an exported profile showing:
 
-- Multiple identity namespaces mapped to  
-  `kevel_user_key1`, `kevel_user_key2`, and `kevel_user_key3`
+- Multiple identity namespaces mapped to `kevel_user_key1`, `kevel_user_key2`, and `kevel_user_key3`
 - A single activated segment in the `ups` namespace
 
 ```json
@@ -186,6 +189,7 @@ Below is an example of an exported profile showing:
   }
 }
 ```
+
 #### How Kevel interprets this profile
 
 With the Kevel destination configuration, each mapped identity generates a distinct UserDB record, meaning Kevel receives:
