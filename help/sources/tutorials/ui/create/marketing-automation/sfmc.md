@@ -71,6 +71,8 @@ With your mapping complete, you can now configure an ingestion schedule for your
 >
 > Per-minute ingestion frequency is not available for the [!DNL Salesforce Marketing Cloud] source. The most frequent schedule you can choose is hourly. Select a schedule that matches your data freshness needs. Keep in mind that selecting a more frequent schedule will increase compute costs.
 
+You must select a delta (date/time) field in your dataset to enable incremental synchronization. If your dataset does not contain a suitable delta field, you will not be able to create the dataflow.
+
 ![The scheduling step of the sources workflow.](../../../../images/tutorials/create/sfmc/schedule.png)
 
 ## Review
