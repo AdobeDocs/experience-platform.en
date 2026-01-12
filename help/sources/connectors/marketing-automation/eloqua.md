@@ -27,6 +27,14 @@ You can use the [!DNL Oracle Eloqua] source to connect your [!DNL Oracle Eloqua]
 
 Read the sections below for prerequisite set up that you must complete before you can connect your source to Experience Platform.
 
+### Set up application for authentication
+
+1. Login as Admin - To get started, login to you [!DNL Oracle Eloqua] instance as an admin (or as a user who has access to create users, security groups, and apps).
+2. Create App - Navigate to **Settings** > **Platform Extensions** > **App Cloud Developer** > **Create App**. Provide details for your app, including its name, description, icon, and the OAuth Callback URL. Select **Save** when finished and retrieve the  **Client ID** and **Client secret** from the newly created app.
+3. Create Security Group - Security groups allow administrators to control what levels of access users have to assets, features, interfaces, and so on. To create a security group, navigate to **Settings** > **Users**. Then, select the **Group** tab on the left panel and then select **Create new Security Group**.
+4. Create User (Optional)
+5. Add User to Security Group
+
 ### Gather required credentials
 
 You must provide values for the following credentials to connect [!DNL Oracle Eloqua] to Experience Platform.
