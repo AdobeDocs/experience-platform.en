@@ -4,21 +4,39 @@ description: Learn how to connect Salesforce Marketing Cloud (V2) to Adobe Exper
 ---
 # [!DNL Salesforce Marketing Cloud] (V2) source overview
 
-[!DNL Salesforce Marketing Cloud] is a robust, comprehensive digital marketing automation and analytics platform designed to help businesses manage customer interactions across multiple channels. [!DNL Salesforce Marketing Cloud] empowers you to transition from siloed campaigns to intelligent, personalized customer journeys across all touch points, including email, mobile, social, and web. By unifying your customer data and leveraging built-in AI, you can automate highly specific messages and content, ensuring you deliver the right experience at the right moment. This capability allows you to build stronger relationships, increase conversion rates, and achieve measurable growth by keeping your customers at the center of your entire marketing strategy.
+>[!IMPORTANT]
+>
+>The original [[!DNL Salesforce Marketing Cloud] (V1)](salesforce-marketing-cloud.md) source has been deprecated as of January 2026. There are no migrations available for this deprecated source and you must re-implement your data using the new [!DNL Salesforce Marketing Cloud] (V2) source.
 
-You can use the [!DNL Salesforce Marketing Cloud] source to connect your [!DNL Salesforce Marketing Cloud] account to Adobe Experience Platform. Read the documentation below to learn how to get started.
+The integration between Adobe [Real-Time CDP](../../../rtcdp/overview.md) and [!DNL Salesforce Marketing Cloud] is designed to leverage Data Extensions because of the flexibility and control they provide. Unlike Standard System Tables (Data Views and Built-in Objects), which are limited to predefined fields and primarily serve system-level tracking, you can use Data Extensions to define custom fields, organize a wide variety of business-specific data, and tailor your data structures to meet unique requirements.
+
+Because of this level of customization and scalability, the integration between Real-Time CDP and [!DNL Salesforce Marketing Cloud] relies on Data Extensions rather than Standard System Tables. This approach offers a more flexible, scalable, and integrated foundation for managing data, ensuring that it aligns with your business goals
+
+You can use the [!DNL Salesforce Marketing Cloud] source to connect your [!DNL Salesforce Marketing Cloud] account to Real-Time CDP and Adobe Experience Platform. Read the documentation below to learn how to get started.
+
+## Use case examples {#use-case-examples}
+
+### Personalizing Email Campaigns with Contact Data
+
+A retail brand wants to personalize email campaigns based on customer lifecycle stages (e.g., new customer, repeat buyer, loyal customer). To do this, they create a Contact Data Extension to store key customer information, including name, email, lifecycle stage, and purchase behavior. This data is then ingested into Experience Platform for deeper segmentation and targeting.
+
+By ingesting the data from the Contact Data Extension into Experience Platform, the brand can segment customers based on their lifecycle stage and purchase behavior. For example, they can send a welcome offer to new customers, a loyalty reward to repeat buyers, or even re-engage inactive customers with targeted offers. This approach ensures personalized communication and enables more relevant and effective customer engagement.
+
+### Ingesting Campaign Data for Personalized Segmentation
+
+A marketing team wants to optimize their email campaigns by targeting customers based on their engagement with previous campaigns. To do this, they create a Campaign Data Extension in [!DNL Salesforce Marketing Cloud] to store customer engagement data, such as email opens, clicks, and campaign responses. This data is then ingested into Experience Platform for further segmentation and personalization.
+
+By ingesting this data from the Campaign Data Extension into Experience Platform, the marketing team can segment customers based on past engagement, such as those who clicked on product offers or responded positively. Customers who engaged can receive targeted promotions in future emails, while those who responded negatively can be sent customer service follow-ups. This integration with Experience Platform ensures that the marketing team can deliver more personalized and relevant content based on customer behavior.
+
+### Targeting Customers Based on Activities Data
+
+A marketing team wants to target customers based on their activities, such as website visits, form submissions, or interactions with previous email campaigns. To achieve this, they create an Activities Data Extension to store information about each customer's engagement activities. This data is then ingested into Experience Platform for further segmentation and personalized campaign targeting.
+
+By ingesting the data from the Activities Data Extension into Experience Platform, the marketing team can segment customers based on their engagement history. For example, customers who recently visited the website but didn't complete a purchase can be sent reminder emails with special offers. Similarly, customers who filled out a form can receive personalized follow-up communications. This approach ensures that each customer receives relevant content based on their most recent activities, improving engagement and conversion rates.
 
 ## Prerequisites {#prerequisites}
 
 Read the sections below for prerequisite set up that you must complete before you can connect your source to Experience Platform.
-
-### IP address allowlist
-
-You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform](../../ip-address-allow-list.md) for more information.
-
->[!WARNING]
->
->If you do not add the necessary IP addresses to your allowlist, your [!DNL Salesforce Marketing Cloud] account will not connect to Experience Platform.
 
 ### Set up application for authentication {#set-up-application-for-authentication}
 
@@ -64,8 +82,8 @@ You must provide values for the following credentials to connect [!DNL Salesforc
 | Client secret | The confidential key known only to the client application and authorization server. You can generate your client secret by following the [application set up steps outlined above](#set-up-application-for-authentication). |
 | Base endpoint | The prefix of your authentication base URI for [!DNL Salesforce Marketing Cloud]. |
 
-## Connect [!DNL Salesforce Marketing Cloud] to Experience Platform
+{style="table-layout:auto"}
 
-## Next steps
+## Connect [!DNL Salesforce Marketing Cloud] to Experience Platform
 
 Proceed to configure your [!DNL Salesforce Marketing Cloud] source connection within Experience Platform. For a step-by-step guide on setting up the connection through the UI, refer to the [tutorial here](../../tutorials/ui/create/marketing-automation/sfmc.md). Read this tutorial to learn about connecting your [!DNL Salesforce Marketing Cloud] account, selecting data, mapping fields, scheduling ingestions, and monitoring your dataflows.
