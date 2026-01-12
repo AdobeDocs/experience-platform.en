@@ -55,7 +55,7 @@ This section describes which types of audiences you can export to this destinati
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name) and/or identities, according to your field mapping.[!DNL Adobe Experience Platform] audiences are exported to [!DNL Braze] under the `AdobeExperiencePlatformSegments` attribute.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
@@ -81,7 +81,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 * **[!UICONTROL Name]**: enter a name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: enter a description that will help you identify this destination in the future.
-* **[!UICONTROL Endpoint Instance]**: ask your [!DNL Braze] representative which endpoint instance you should use.
+* **[!UICONTROL Endpoint Instance]**: all [region-specific endpoints](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) supported by [!DNL Braze] are available for selection. Ask your [!DNL Braze] representative which endpoint instance you should use.
 
 ### Enable alerts {#enable-alerts}
 
@@ -115,6 +115,7 @@ In the [!UICONTROL Source Field] section, click the arrow button next to the emp
 ![Braze Destination Source Mapping](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
 In the [!UICONTROL Select source field] window, you can choose between two categories of XDM fields:
+
 * [!UICONTROL Select attributes]: use this option to map a specific field from your XDM schema to a [!DNL Braze] attribute.
 
 ![Braze Destination Mapping Source Attribute](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
@@ -130,6 +131,7 @@ In the [!UICONTROL Target Field] section, click the mapping icon to the right of
 ![Braze Destination Target Mapping](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
 In the [!UICONTROL Select target field] window, you can choose between two categories of target fields:
+
 * [!UICONTROL Select identity namespace]: Use this option to map [!DNL Experience Platform] identity namespaces to [!DNL Braze] identity namespaces.
 * [!UICONTROL Select custom attributes]: Use this option to map XDM attributes to custom [!DNL Braze] attributes that you defined in your [!DNL Braze] account. <br> You can also use this option to rename existing XDM attributes into [!DNL Braze]. For instance, mapping a `lastName` XDM attribute to a custom `Last_Name` attribute in [!DNL Braze], will create the `Last_Name` attribute in [!DNL Braze], if it doesn't already exist, and map the `lastName` XDM attribute to it.
   

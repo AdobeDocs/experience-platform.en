@@ -11,32 +11,32 @@ Experience Platform currently supports **incremental data copy**, which periodic
 
 In contrast, change data capture captures and applies inserts, updates, and deletes in near real-time. This comprehensive change tracking ensures that datasets stay fully aligned with the source system and provides a complete change history, beyond what incremental copy supports. However, delete operations require special consideration as they affect all applications using the target datasets.
 
-Change data capture in Experience Platform requires **[Data Mirror](../../../xdm/data-mirror/overview.md)** with [model-based schemas](../../../xdm/schema/model-based.md) (also called relational schemas). You can provide change data to Data Mirror in two ways:
+Change data capture in Experience Platform requires **[Data Mirror](../../../xdm/data-mirror/overview.md)** with [relational schemas](../../../xdm/schema/relational.md). You can provide change data to Data Mirror in two ways:
 
 * **[Manual change tracking](#file-based-sources)**: Include a `_change_request_type` column in your dataset for sources that don't natively generate change data capture records
 * **[Native change data capture exports](#database-sources)**: Use change data capture records exported directly from your source system
 
-Both approaches require Data Mirror with model-based schemas to preserve relationships and enforce uniqueness.
+Both approaches require Data Mirror with relational schemas to preserve relationships and enforce uniqueness.
 
-## Data Mirror with model-based schemas
+## Data Mirror with relational schemas
 
 >[!AVAILABILITY]
 >
->Data Mirror and model-based schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
+>Data Mirror and relational schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
 
 >[!NOTE]
 >
 >**Orchestrated campaigns users**: Use the Data Mirror capabilities described in this document to work with customer data that maintains referential integrity. Even if your source does not use change data capture formatting, Data Mirror supports relational features such as primary key enforcement, record-level upserts, and schema relationships. These features ensure consistent and reliable data modeling across connected datasets.
 
-Data Mirror uses model-based schemas to extend change data capture and enable advanced database synchronization capabilities. For an overview of Data Mirror, see [Data Mirror overview](../../../xdm/data-mirror/overview.md).
+Data Mirror uses relational schemas to extend change data capture and enable advanced database synchronization capabilities. For an overview of Data Mirror, see [Data Mirror overview](../../../xdm/data-mirror/overview.md).
 
-Model-based schemas extend Experience Platform to enforce primary key uniqueness, track row-level changes, and define schema-level relationships. With change data capture, they apply inserts, updates, and deletes directly in the data lake, reducing the need for Extract, Transform, Load (ETL) or manual reconciliation.
+Relational schemas extend Experience Platform to enforce primary key uniqueness, track row-level changes, and define schema-level relationships. With change data capture, they apply inserts, updates, and deletes directly in the data lake, reducing the need for Extract, Transform, Load (ETL) or manual reconciliation.
 
-See [Model-based schemas overview](../../../xdm/schema/model-based.md) for more information.
+See [Relational schemas overview](../../../xdm/schema/relational.md) for more information.
 
-### Model-based schema requirements for change data capture
+### Relational schema requirements for change data capture
 
-Before you use a model-based schema with change data capture, configure the following identifiers:
+Before you use a relational schema with change data capture, configure the following identifiers:
 
 * Uniquely identify each record with a primary key.  
 * Apply updates in sequence using a version identifier.  
@@ -53,9 +53,9 @@ This column is evaluated only during ingestion and is not stored or mapped to XD
 
 ### Workflow {#workflow}
 
-To enable change data capture with a model-based schema:
+To enable change data capture with a relational schema:
 
-1. Create a model-based schema.
+1. Create a relational schema.
 2. Add the required descriptors:
    * [Primary key descriptor](../../../xdm/api/descriptors.md#primary-key-descriptor)
    * [Version descriptor](../../../xdm/api/descriptors.md#version-descriptor)
@@ -70,13 +70,13 @@ To enable change data capture with a model-based schema:
 
 >[!IMPORTANT]
 >
->**Data deletion planning is required**. All applications that use model-based schemas must understand deletion implications before implementing change data capture. Plan for how deletions will affect related datasets, compliance requirements, and downstream processes. See [data hygiene considerations](../../../hygiene/ui/record-delete.md#model-based-record-delete) for guidance.
+>**Data deletion planning is required**. All applications that use relational schemas must understand deletion implications before implementing change data capture. Plan for how deletions will affect related datasets, compliance requirements, and downstream processes. See [data hygiene considerations](../../../hygiene/ui/record-delete.md#relational-record-delete) for guidance.
 
 ## Providing change data for file-based sources {#file-based-sources}
 
 >[!IMPORTANT]
 >
->File-based change data capture requires Data Mirror with model-based schemas. Before following the file formatting steps below, ensure you have completed the [Data Mirror setup workflow](#workflow) described earlier in this document. The steps below describe how to format your data files to include change tracking information that will be processed by Data Mirror.
+>File-based change data capture requires Data Mirror with relational schemas. Before following the file formatting steps below, ensure you have completed the [Data Mirror setup workflow](#workflow) described earlier in this document. The steps below describe how to format your data files to include change tracking information that will be processed by Data Mirror.
 
 For file-based sources ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage], and [!DNL SFTP]), include a `_change_request_type` column in your files.
 
@@ -109,7 +109,7 @@ All cloud storage sources use the same `_change_request_type` column format desc
 
 ### [!DNL Azure Databricks]
 
-To use change data capture with [!DNL Azure Databricks], you must both enable **change data feed** in your source tables and configure Data Mirror with model-based schemas in Experience Platform.
+To use change data capture with [!DNL Azure Databricks], you must both enable **change data feed** in your source tables and configure Data Mirror with relational schemas in Experience Platform.
 
 Use the following commands to enable change data feed on your tables:
 
@@ -146,7 +146,7 @@ Read the following documentation for steps on how to enable change data capture 
 
 ### [!DNL Data Landing Zone]
 
-To use change data capture with [!DNL Data Landing Zone], you must both enable **change data feed** in your source tables and configure Data Mirror with model-based schemas in Experience Platform.
+To use change data capture with [!DNL Data Landing Zone], you must both enable **change data feed** in your source tables and configure Data Mirror with relational schemas in Experience Platform.
 
 Read the following documentation for steps on how to enable change data capture for your [!DNL Data Landing Zone] source connection:
 
@@ -155,7 +155,7 @@ Read the following documentation for steps on how to enable change data capture 
 
 ### [!DNL Google BigQuery]
 
-To use change data capture with [!DNL Google BigQuery], you must both enable change history in your source tables and configure Data Mirror with model-based schemas in Experience Platform.
+To use change data capture with [!DNL Google BigQuery], you must both enable change history in your source tables and configure Data Mirror with relational schemas in Experience Platform.
 
 To enable change history in your [!DNL Google BigQuery] source connection, navigate to your [!DNL Google BigQuery] page in the [!DNL Google Cloud] console and set `enable_change_history` to `TRUE`. This property enables change history for your data table.
 
@@ -168,7 +168,7 @@ Read the following documentation for steps on how to enable change data capture 
 
 ### [!DNL Snowflake]
 
-To use change data capture with [!DNL Snowflake], you must both enable **change tracking** in your source tables and configure Data Mirror with model-based schemas in Experience Platform.
+To use change data capture with [!DNL Snowflake], you must both enable **change tracking** in your source tables and configure Data Mirror with relational schemas in Experience Platform.
 
 In [!DNL Snowflake], enable change tracking by using the `ALTER TABLE` and setting `CHANGE_TRACKING` to `TRUE`.
 

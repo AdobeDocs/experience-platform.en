@@ -131,7 +131,7 @@ The customer attributes schema is represented by an [!UICONTROL XDM Individual P
 
 #### Customer digital transactions schema {#customer-digital-transactions-schema}
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website or on other associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via [Web SDK](/help/web-sdk/home.md) and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, and enhanced segmentation capabilities.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website or on other associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via [Web SDK](/help/collection/js/js-overview.md) and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, and enhanced segmentation capabilities.
 
 ![Customer digital transactions schema with field groups highlighted](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-digital-transactions-schema.png)
 

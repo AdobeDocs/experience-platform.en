@@ -133,9 +133,13 @@ Follow the instructions to select a destination where you can export your datase
 
 ## Select your datasets {#select-datasets}
 
-Use the check boxes to the left of the dataset names to select the datasets that you want to export to the destination, then select **[!UICONTROL Next]**.
+Use the checkboxes to the left of the dataset names to select the datasets that you want to export to the destination, then select **[!UICONTROL Next]**.
 
 ![Dataset export workflow showing the Select datasets step where you can select which datasets to export.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
+
+>[!NOTE]
+>
+>All datasets selected here will share the same export schedule. If you need different export schedules (for example, incremental exports for some datasets and one-time full exports for others), create separate dataflows for each schedule type.
 
 ## Schedule dataset export {#scheduling}
 
@@ -154,6 +158,16 @@ Use the check boxes to the left of the dataset names to select the datasets that
 >title="Update the end date for this dataflow body"
 >abstract="Because of recent updates to this destination, the dataflow now requires an end date. Adobe has set a default end date to September 1st 2025. Please update to your desired end date, otherwise the data exports will stop on the default date."
 
+>[!IMPORTANT]
+>
+>**Schedule applies to all datasets in the dataflow**
+>
+>When you configure or modify the export schedule, it applies to **all datasets** currently being exported through the dataflow you are configuring. You cannot set different schedules for individual datasets within the same dataflow.
+>
+>If you need different export schedules for different datasets, you must create separate dataflows (separate destination connections) for each schedule type.
+>
+>**Example:** If you have Dataset A exporting incrementally and you add Dataset B with a one-time full export schedule, Dataset A will also be updated to the one-time full export schedule.
+
 Use the **[!UICONTROL Scheduling]** step to: 
 
 * Set a start date and an end date, as well as an export cadence for your dataset exports.
@@ -161,6 +175,10 @@ Use the **[!UICONTROL Scheduling]** step to:
 * Customize the folder path in your storage location where datasets should be exported. Read more about how to [edit the export folder path](#edit-folder-path).
 
 Use the **[!UICONTROL Edit schedule]** control on the page to edit the export cadence of exports, as well as to select whether to export full or incremental files.
+
+>[!WARNING]
+>
+>Modifying the schedule here will update the export behavior for all datasets in this dataflow. If this dataflow contains multiple datasets, all of them will be affected by this change.
 
 ![Edit schedule control highlighted in the Scheduling step.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
 
@@ -207,9 +225,18 @@ You can use several available macros to customize a desired folder name. Double-
 
 ![Macros selection highlighted in custom folder modal window.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
 
-After selecting the desired macros, you can see a preview of the folder structure that will be created in your storage location. The first level in the folder structure represents the **[!UICONTROL Folder path]** that you indicated when you [connected to the destination](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) to export datasets. 
+After selecting the desired macros, you can see a preview of the folder structure that will be created in your storage location. The first level in the folder structure represents the **[!UICONTROL Folder path]** that you indicated when you [connected to the destination](/help/destinations/ui/connect-destination.md#set-up-connection-parameters) to export datasets. 
 
 ![Preview of folder path highlighted in custom folder modal window.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
+
+### Best practices for managing multiple datasets {#best-practices-multiple-datasets}
+
+When exporting multiple datasets, consider the following best practices:
+
+* **Same schedule requirements**: Group datasets that need the same export schedule (frequency, type) into a single dataflow for easier management.
+* **Different schedule requirements**: Create separate dataflows for datasets that require different export schedules or export types (incremental vs. full). This ensures each dataset exports according to its specific needs.
+* **Review before modifying**: Before changing the schedule on an existing dataflow, review which datasets are already being exported through that dataflow to avoid unintended changes to their export behavior.
+* **Document your setup**: Keep track of which datasets are in which dataflows, especially when managing multiple export schedules across different destinations.
 
 ## Review {#review}
 
@@ -346,4 +373,10 @@ No, it is not possible.
 
 +++Answer
 Retries are in place automatically for most types of system errors.
++++
+
+**Can I set different export schedules for different datasets in the same dataflow?**
+
++++Answer
+No, all datasets within a single dataflow share the same export schedule. If you need different export schedules for different datasets, you must create separate dataflows (destination connections) for each schedule type. For example, if you want Dataset A to export incrementally every day and Dataset B to export as a one-time full export, you need to create two separate dataflows.
 +++

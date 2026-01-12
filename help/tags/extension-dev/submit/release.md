@@ -5,10 +5,6 @@ exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
 ---
 # Release an extension
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Once testing and documenting are complete, the extension is ready for release. There are currently two types of releases that you can perform:
 
 - **Private release**: The completed extension is available to all properties within your company, but is not available to any other companies in Adobe Experience Platform.
@@ -43,7 +39,7 @@ The releaser requires you to input only a few pieces of information. The `client
 The releaser will read the `name` and `platform` fields from your extension manifest and query the API for a matching extension package in Development availability.
 The releaser will then ask you to confirm that it found the correct extension package that you would like to release to private availability.
 
-If you'd like to release your extension with private availability using the API directly, see the example call for [privately releasing an extension package](../../api/endpoints/extension-packages.md/#private-release) in the API docs for more detail.
+If you'd like to release your extension with private availability using the API directly, see the example call for [privately releasing an extension package](/help/tags/api/endpoints/extension-packages.md#private-release) in the API docs for more detail.
 
 ## Public release
 

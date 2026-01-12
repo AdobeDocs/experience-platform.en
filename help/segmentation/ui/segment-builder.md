@@ -210,7 +210,7 @@ Alternatively, you can view a code-based version of a rule created in the [!DNL 
 
 Code view provides a button that allows you to copy the value of the segment definition to use in API calls. To get the latest version of the segment definition, make sure you have saved your latest changes to the segment definition.
 
-![The copy code button is highlighted, which allows you to ](../images/ui/segment-builder/copy-code.png)
+![The copy code button is highlighted, which allows you to](../images/ui/segment-builder/copy-code.png)
 
 ### Aggregation functions
 

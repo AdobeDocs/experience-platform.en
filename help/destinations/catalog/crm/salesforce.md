@@ -163,11 +163,13 @@ If the details provided are valid, the UI displays a **[!UICONTROL Connected]** 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Salesforce ID Type]**: 
-    * Select **[!UICONTROL Contact]** if the identities you are looking to export or update are of type *Contact*.
-    * Select **[!UICONTROL Lead]** if the identities you are looking to export or update are of type *Lead*.
+
+* **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+* **[!UICONTROL Salesforce ID Type]**: 
+
+   * Select **[!UICONTROL Contact]** if the identities you are looking to export or update are of type *Contact*.
+   * Select **[!UICONTROL Lead]** if the identities you are looking to export or update are of type *Lead*.
 
 ![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/crm/salesforce/destination-details.png)
 
@@ -277,7 +279,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Monitor the audience summary and ensure that the count of profiles corresponds to the count created within the segment.
 ![Experience Platform UI screenshot example showing Segment.](../../assets/catalog/crm/salesforce/segment.png)
 
-1. Finally, log in to the Salesforce website and validate if the profiles from the audience have been added or updated.
+1. Finally, log in to the Salesforce website and validate if the profiles from the audience have been updated.
 
     **Working with Contacts**
 
@@ -314,6 +316,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ## Additional resources {#additional-resources}
 
 Additional useful information from the [Salesforce developer portal](https://developer.salesforce.com/) is below:
+
 * [Quick Start](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart.htm)
 * [Create a Record](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_sobject_create.htm)
 * [Custom Recommendation Audiences](https://developer.salesforce.com/docs/atlas.en-us.236.0.chatterapi.meta/chatterapi/connect_resources_recommendation_audiences_list.htm)

@@ -92,7 +92,7 @@ The guardrails below apply to activation through [edge personalization destinati
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
 |Maximum number of [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations | 10 | Performance guardrail | You can set up dataflows to 10 Custom personalization destinations per sandbox.|
-|Maximum number of attributes mapped to a personalization destination per sandbox | 30 | System-enforced guardrail | A maximum of 30 attributes can be mapped in a dataflow to a personalization destination, per sandbox.|
+|Maximum number of attributes mapped to a personalization destination per sandbox | 30 | Performance guardrail | A maximum of 30 attributes can be mapped in a dataflow to a personalization destination, per sandbox.|
 |Maximum number of audiences mapped to a single [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destination | 50 | Performance guardrail | You can activate a maximum of 50 audiences in an activation flow to a single Adobe Target destination.|
 
 {style="table-layout:auto"}
@@ -115,11 +115,9 @@ Dataset exports are currently supported in a **[!UICONTROL First Full and then I
 
 The dataset export guardrails apply to two types of datasets exported from Experience Platform, as described below:
 
-**Datasets based on the XDM Experience Events schema**
-In the case of datasets based on the XDM Experience Events schema, the dataset schema includes a top level *timestamp* column. Data is ingested in an append-only fashion.
+**Datasets based on the XDM Experience Events schema and datasets based on any other schema**
 
-**Datasets based on the XDM Individual Profile schema**
-In the case of datasets based on the XDM Individual Profile schema, the dataset schema does not include a top level *timestamp* column. Data is ingested in an upsert fashion.
+In the case of datasets based on the XDM Experience Events schema, the dataset schema includes a top level timestamp column. Data is ingested in an append-only fashion. In the case of datasets based on any other schema, the dataset schema may include a timestamp column and data is ingested in an upsert fashion.
 
 The soft guardrail below applies to all datasets exported out of Experience Platform. Review also the hard guardrails further below, specific to different dataset and compression types.
 
@@ -138,9 +136,9 @@ For scheduled, or recurring dataset exports, the guardrails below are identical 
 >Exports to JSON files are supported in a compressed mode only.
 
 |Dataset type | Guardrail | Guardrail type | Description |
----------|----------|---------|-------|
+|---------|----------|---------|-------|
 | Datasets based on the **XDM Experience Events schema** | Last 365 days of data | System-enforced guardrail | The data from the last calendar year is exported. |
-| Datasets based on the **XDM Individual Profile schema** | Ten billion records across all exported files in a dataflow | System-enforced guardrail | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
+| Datasets based on **any schema apart from the XDM Experience Events schema** | Ten billion records across all exported files in a dataflow | System-enforced guardrail | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
 
 {style="table-layout:auto"}
 
@@ -173,7 +171,8 @@ Read more about [exporting datasets](/help/destinations/ui/export-datasets.md).
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
 | Maximum number of [private custom destinations](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5  | Performance guardrail| You can create a maximum of 5 private custom streaming or batch destinations using Destination SDK. Reach out to a custom care representative if you need to create more than 5 such destinations. |
-| Profile export policy for Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimum 1,800 and maximum 3,600)</li><li>`maxNumEventsInBatch` (minimum 1,000 and maximum 10,000)</li></ul> | System-enforced guardrail | When using the [configurable aggregation](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) option for your destination, be mindful of the minimum and maximum values that determine how often HTTP messages are sent to your API-based destination and how many profiles the messages should include.|
+| Profile export policy for Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimum 301 and maximum 3,600)</li><li>`maxNumEventsInBatch` (minimum 1,000 and maximum 10,000)</li></ul> | System-enforced guardrail | When using the [configurable aggregation](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) option for your destination, be mindful of the minimum and maximum values that determine how often HTTP messages are sent to your API-based destination and how many profiles the messages should include.|
+| OAuth 2 token lifetime for Destination SDK | Minimum 24 hours recommended | Performance guardrail | For destinations using [OAuth 2 authorization](/help/destinations/destination-sdk/functionality/destination-configuration/oauth2-authorization.md), Adobe recommends setting access token lifetime values to a minimum of 24 hours. Connections with tokens that have a lifetime of under 1 hour will result in profiles being dropped during activation. |
 
 {style="table-layout:auto"}
 

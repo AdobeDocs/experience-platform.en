@@ -105,9 +105,9 @@ See the Data Governance in Experience Platform documentation for more informatio
 
 For more information about selecting marketing actions in the create destination workflow, see the following pages for the different destination types in Experience Platform:
 
-* [Advertising destinations - Google Ad Manager ](./catalog/advertising/google-ad-manager.md)
+* [Advertising destinations - Google Ad Manager](./catalog/advertising/google-ad-manager.md)
 * [Advertising destinations - Google Ads](./catalog/advertising/google-ads-destination.md)
-* [Advertising destinations - Google Display & Video 360 ](./catalog/advertising/google-dv360.md)
+* [Advertising destinations - Google Display & Video 360](./catalog/advertising/google-dv360.md)
 * [Cloud storage destinations](./catalog/cloud-storage/overview.md)
 * [Email marketing destinations](./catalog/email-marketing/overview.md)
 * [Social destinations](./catalog/social/overview.md)

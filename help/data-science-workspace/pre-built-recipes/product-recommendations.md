@@ -53,6 +53,7 @@ This recipe uses custom [XDM schemas](../../xdm/schema/field-dictionary.md) to m
 ## Algorithm
 
 The Product Recommendations recipe utilizes collaborative filtering to generate a personalized list of product recommendations for your customers. Collaborative filtering, unlike a content based approach, does not require information about a specific product but rather utilizes a customer's historical preferences on a set of products. This powerful recommendation technique uses two simple assumptions:
+
 * There are customers with similar interests, and they can be grouped by comparing their purchasing and browsing behaviors.
 * A customer is more likely to be interested in a recommendation based off of similar customers in terms of their purchasing and browsing behavior.
 

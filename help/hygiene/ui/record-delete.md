@@ -7,13 +7,13 @@ exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
  
 Use the [[!UICONTROL Data Lifecycle] workspace](./overview.md) to delete records in Adobe Experience Platform based on their primary identities. These records can be tied to individual consumers or any other entity that is included in the identity graph.
  
->[!IMPORTANT] 
+>[!IMPORTANT]
 >
 >Record deletions are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
 
 ## Prerequisites {#prerequisites}
 
-Deleting records requires a working understanding of how identity fields function in Experience Platform. Specifically, you must know the identity namespace values of the entities whose records you want to delete, depending on the dataset (or datasets) you are deleting them from.
+Deleting records requires a working understanding of how identity fields function in Experience Platform. Specifically, you must know the primary identity namespace and values for the entities whose records you want to delete, depending on the dataset (or datasets) you are deleting them from.
 
 Refer to the following documentation for more information on identities in Experience Platform:
 
@@ -22,6 +22,14 @@ Refer to the following documentation for more information on identities in Exper
 * [Real-Time Customer Profile](../../profile/home.md): Uses identity graphs to provide unified consumer profiles based on aggregated data from multiple sources, updated in near-real-time.
 * [Experience Data Model (XDM)](../../xdm/home.md): Provides standard definitions and structures for Experience Platform data through the use of schemas. All Experience Platform datasets conform to a specific XDM schema, and the schema defines which fields are identities.
 * [Identity fields](../../xdm/ui/fields/identity.md): Learn how an identity field is defined in an XDM schema.
+
+>[!IMPORTANT]
+>
+>Record deletions act exclusively on the **primary identity** field defined in the dataset's schema. The following limitations apply:
+>
+>* **Secondary identities are not scanned.** If a dataset contains multiple identity fields, only the primary identity is used for matching. Records cannot be targeted or deleted based on non-primary identities.
+>* **Records without a populated primary identity are skipped.** If a record does not have primary identity metadata populated, it is not eligible for deletion.
+>* **Data ingested before identity configuration is not eligible.** If the primary identity field was added to a schema after data ingestion, previously ingested records cannot be deleted through this workflow.
 
 ## Create a request {#create-request}
 
@@ -47,13 +55,13 @@ To delete from a specific dataset, select **[!UICONTROL Select dataset]**, then 
 
 ![The [!UICONTROL Select dataset] dialog with a dataset selected and [!UICONTROL Done] highlighted.](../images/ui/record-delete/select-dataset.png)
 
-To delete from all datasets, select **[!UICONTROL All datasets]**. This option increases the scope of the operation and requires you to provide all relevant identity types.
+To delete from all datasets, select **[!UICONTROL All datasets]**. This option increases the scope of the operation and requires you to provide the primary identity type for each dataset you want to target.
 
 ![The [!UICONTROL Select dataset] dialog with the [!UICONTROL All datasets] option selected.](../images/ui/record-delete/all-datasets.png)
 
 >[!WARNING]
 >
->Selecting **[!UICONTROL All datasets]** expands the operation to all datasets in your organization. Each dataset may use a different primary identity type. You must provide **all required identity types** to ensure accurate matching.
+>Selecting **[!UICONTROL All datasets]** expands the operation to all datasets in your organization. Each dataset may use a different primary identity type. You must provide **the primary identity type for each dataset** to ensure accurate matching.
 >
 >If any identity type is missing, some records may be skipped during deletion. This can slow processing and lead to **partial results**.
 
@@ -66,17 +74,21 @@ Each dataset in Experience Platform supports only one primary identity type.
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="Identity namespace"
->abstract="A identity namespace is an attribute that ties a record to a consumer's profile in Experience Platform. The identity namespace field for a dataset is defined by the schema that the dataset is based on. In this column, you must provide the type (or namespace) for the record's identity namespace, such as `email` for email addresses and `ecid` for Experience Cloud IDs. To learn more, see the Data lifecycle UI guide."
+>title="Primary identity namespace"
+>abstract="The primary identity namespace is the attribute that uniquely ties a record to a consumer's profile in Experience Platform. The primary identity field for a dataset is defined by the schema that the dataset is based on. In this column, you must provide the primary identity namespace (such as `email` for email addresses or `ecid` for Experience Cloud IDs) that matches the dataset's schema. To learn more, see the Data lifecycle UI guide."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Primary identity value"
 >abstract="In this column, you must provide the value for the record's identity namespace, which must correspond with the identity type provided in the left column. If the identity namespace type is `email`, the value should be the record's email address. To learn more, see the data lifecycle UI guide."
 
-When deleting records, you must provide identity information so the system can determine which records are to be deleted. For any dataset in Experience Platform, records are deleted based on the **identity namespace** field that is defined by the dataset's schema.
+When deleting records, you must provide identity information so the system can determine which records are to be deleted. For any dataset in Experience Platform, records are deleted based on the **primary identity** field that is defined by the dataset's schema.
 
-Like all identity fields in Experience Platform, an identity namespace is composed of two things: a **type** (sometimes referred to as an identity namespace) and a **value**. The identity type provides context as to how the field identifies a record (such as an email address). The value represents a record's specific identity for that type (for example, `jdoe@example.com` for the `email` identity type). Common fields used as identities include account information, device IDs, and cookie IDs.
+>[!NOTE]
+>
+>Although the UI allows you to select an identity namespace, only the **primary identity** configured in the dataset's schema is used at execution time. Ensure the identity values you provide correspond to the dataset's primary identity field.
+
+Like all identity fields in Experience Platform, a primary identity is composed of two things: a **type** (the identity namespace) and a **value**. The identity type provides context as to how the field identifies a record (such as an email address). The value represents a record's specific identity for that type (for example, `jdoe@example.com` for the `email` identity type). Common fields used as primary identities include account information, device IDs, and cookie IDs.
 
 >[!TIP]
 >
@@ -95,7 +107,7 @@ To upload a JSON file, you can drag and drop the file into the provided area, or
 
 ![The request creation workflow with the choose files and drag and drop interface for uploading JSON files highlighted.](../images/ui/record-delete/upload-json.png)
 
-The JSON file must be formatted as an array of objects, each object representing an identity.
+The JSON file must be formatted as an array of objects, each object representing a primary identity value for the target dataset.
 
 ```json
 [
@@ -112,7 +124,7 @@ The JSON file must be formatted as an array of objects, each object representing
 
 | Property | Description |
 | --- | --- |
-| `namespaceCode` | The identity type. |
+| `namespaceCode` | The primary identity namespace for the target dataset. |
 | `value` | The primary identity value as denoted by the type. |
 
 Once the file is uploaded, you can continue to [submit the request](#submit).
@@ -199,9 +211,9 @@ After the request is submitted, a work order is created and appears on the [!UIC
 
 ![The [!UICONTROL Record] tab of the [!UICONTROL Data Lifecycle] workspace with the new request highlighted.](../images/ui/record-delete/request-log.png)
 
-## Deleting records from model-based datasets {#model-based-record-delete}
+## Deleting records from datasets based on relational schemas {#relational-record-delete}
 
-If the dataset you are deleting from is a model-based schema, review the following considerations to ensure records are removed correctly and not re-ingested due to mismatches between Experience Platform and your source system.
+If the dataset you are deleting from is based on a relational schema, review the following considerations to ensure records are removed correctly and not re-ingested due to mismatches between Experience Platform and your source system.
 
 ### Record deletion behavior
 
@@ -218,22 +230,22 @@ To prevent re-ingestion, apply the same deletion approach in both your source sy
 
 ### Change data capture and control columns
 
-Model-based schemas that use Sources with change data capture can use the `_change_request_type` control column when distinguishing deletes from upserts. During ingestion, records flagged with `d` are deleted from the dataset, while those flagged with `u` or without the column are treated as upserts. The `_change_request_type` column is read at ingestion time only and is not stored in the target schema or mapped to XDM fields.
+Relational schemas that use Sources with change data capture can use the `_change_request_type` control column when distinguishing deletes from upserts. During ingestion, records flagged with `d` are deleted from the dataset, while those flagged with `u` or without the column are treated as upserts. The `_change_request_type` column is read at ingestion time only and is not stored in the target schema or mapped to XDM fields.
 
 >[!NOTE]
 >
 >Deleting records through the Data Lifecycle UI does not affect the source system. To remove data from both locations, delete it in both Experience Platform and the source.
 
-### Additional deletion methods for model-based schemas
+### Additional deletion methods for relational schemas
 
-Beyond the standard record deletion workflow, model-based schemas support additional methods for specific use cases:
+Beyond the standard record deletion workflow, relational schemas support additional methods for specific use cases:
 
 * **Safe-copy dataset approach**: Duplicate the production dataset and apply deletes to the copy for controlled testing or reconciliation before applying changes to production data.
 * **Deletes-only batch upload**: Upload a file containing only delete operations for targeted hygiene when you need to remove specific records without affecting other data.
 
 ### Descriptor support for hygiene operations {#descriptor-support}
 
-Model-based schema descriptors provide essential metadata for precise hygiene operations:
+Relational schema descriptors provide essential metadata for precise hygiene operations:
 
 * **Primary key descriptor**: Identifies records uniquely for targeted updates or deletes, ensuring the correct records are affected.
 * **Version descriptor**: Ensures deletes and updates apply in the correct chronological order, preventing out-of-sequence operations.
@@ -243,7 +255,7 @@ Model-based schema descriptors provide essential metadata for precise hygiene op
 >
 >Hygiene processes operate at the dataset level. For profile-enabled datasets, additional profile workflows may be required to maintain consistency across Real-Time Customer Profile.
 
-### Scheduled retention for model-based schemas
+### Scheduled retention for relational schemas
 
 For automated hygiene based on data age rather than specific identities, see [Manage Experience Event dataset retention (TTL)](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) for scheduled row-level retention in the data lake. 
 
@@ -251,7 +263,7 @@ For automated hygiene based on data age rather than specific identities, see [Ma
 >
 >Row-level expiration is only supported for datasets that use time-series behavior.
 
-### Best practices for model-based record deletion
+### Best practices for relational record deletion
 
 To avoid unintentional re-ingestion and maintain data consistency across systems, follow these best practices:
 
@@ -259,8 +271,9 @@ To avoid unintentional re-ingestion and maintain data consistency across systems
 * **Monitor change data capture flows**: After deleting records in Platform, monitor dataflows and confirm that the source system either removes the same records or includes them with `_change_request_type = 'd'`.
 * **Clean up the source**: For sources using full refresh ingestion or those that do not support deletes through change data capture, delete records directly from the source system to avoid re-ingestion.
 
-For more details on schema requirements, see [model-based schema descriptor requirements](../../xdm/schema/model-based.md#model-based-schemas).  
-To learn how change data capture works with sources, see [Enable change data capture in sources](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-model-based-schemas).
+For more details on schema requirements, see [relational schema descriptor requirements](../../xdm/schema/relational.md#relational-schemas).  
+
+To learn how change data capture works with sources, see [Enable change data capture in sources](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-relational-schemas).
 
 ## Next steps
 

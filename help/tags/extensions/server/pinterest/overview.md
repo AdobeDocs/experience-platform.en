@@ -76,8 +76,8 @@ The following event data will be required to create the new rule:
 
 | Field name | Description | Example | 
 | --- | --- | --- | 
-| [!UICONTROL Event Name] | The type of the user event. This can be any event type however, to leverage [!DNL Pinterest Analytics] it is recommended to use [[!DNL Pinterest] event codes](https://help.pinterest.com/en/business/article/add-event-codes) | * checkout <br> * add_to_cart <br> * page_visit <br> * signup <br> * [User-defined event] | 
-| [!UICONTROL Action Source] | The source indicating where the conversion event occurred. | * app_android <br> * app_ios <br> * web <br> * offline | 
+| [!UICONTROL Event Name] | The type of the user event. This can be any event type however, to leverage [!DNL Pinterest Analytics] it is recommended to use [[!DNL Pinterest] event codes](https://help.pinterest.com/en/business/article/add-event-codes) | &ast; checkout <br> &ast; add_to_cart <br> &ast; page_visit <br> &ast; signup <br> &ast; [User-defined event] | 
+| [!UICONTROL Action Source] | The source indicating where the conversion event occurred. | &ast; app_android <br> &ast; app_ios <br> &ast; web <br> &ast; offline | 
 | [!UICONTROL Event Time] | This refers to the event time. The default time format used is UNIX, in the format `<seconds>.<miliseconds>` depending on your local timezone. For more information, refer to the [[!DNL Pinterest] API](https://developers.pinterest.com/docs/api/v5/#operation/events/create). | 1433188255.500 indicates 1433188255 seconds and 500 milliseconds after epoch, or Monday, June 1, 2015, at 7:50:55 PM GMT. |
 | [!UICONTROL Event ID] | A unique id string that identifies this event and can be used for deduping between events ingested via both the conversion API and Pinterest tracking. Without this, the event's data is likely to be double counted and will report metric inflation. | ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad | 
 | [!UICONTROL Event Properties] |  A JSON object containing custom properties of the event. Select from providing raw JSON or using a simplified set of key-value inputs. | { "event_source_url": "http://site.com" } | 

@@ -34,7 +34,7 @@ The table below lists [!DNL Adobe Real-Time Customer Data Platform] objects that
 
 | Platform | Object | Details |
 | --- | --- | --- |
-| Customer Data Platform | Sources | <ul><li>The source account credentials are not replicated in the target sandbox for security reasons and will be required to be updated manually.</li><li>The source dataflow is copied in a draft status by default.</li></ul> |
+| Customer Data Platform | Sources | <ul><li>The source account credentials are not replicated in the target sandbox for security reasons and will be required to be updated manually.</li><li>The source dataflow is copied in a draft status by default.</li></ul> **NOTE:** Currently, sandbox tooling supports only batch-based source dataflows. Streaming-based source dataflows are not supported. |
 | Customer Data Platform | Audiences | <ul><li>Only the **[!UICONTROL Customer Audience]** type **[!UICONTROL Segmentation service]** is supported.</li><li>Existing labels for consent and governance will be copied over in the same import job.</li><li> System will auto select default Merge Policy in target sandbox with same XDM class when checking merge policy dependencies.</li><li>If an existing object with the same name is detected when importing Audiences, Sandbox tooling will always reuse the existing object, to avoid object proliferation.</li></ul> |
 | Customer Data Platform | Identities | <ul><li>The system will auto-deduplicate Adobe standard identity namespaces when creating in the target sandbox.</li><li>Audiences can only be copied when all attributes in audience rules are enabled in the union schema. The necessary schemas must be moved and enabled for unified profile first.</li></ul> |
 | Customer Data Platform | Schemas/ Field Groups/ Data Types | <ul><li>Existing labels for consent and governance will be copied over in the same import job.</li><li>You have the flexibility to import schemas without the Unified Profile option enabled. The schema relationships edge case are not included in the package.</li><li>If an existing object with the same name is detected when importing Schemas/Field Groups, Sandbox tooling will always reuse the existing object, to avoid object proliferation.</li></ul> |
@@ -52,7 +52,7 @@ The following objects are imported but are in a draft or disabled status:
 
 ### Adobe Journey Optimizer objects {#abobe-journey-optimizer-objects}
 
-The table below lists [!DNL Adobe Journey Optimizer] objects that are currently supported for sandbox tooling and limitations:
+The table below lists [!DNL Adobe Journey Optimizer] objects that are currently supported for sandbox tooling and limitations. For a complete list of best practices, refer to the [Journey Optimizer general best practices](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global) guide.
 
 | Platform | Object | Supported Dependent Objects | Details |
 | --- | --- | --- | --- |
@@ -65,15 +65,7 @@ The table below lists [!DNL Adobe Journey Optimizer] objects that are currently 
 | [!DNL Adobe Journey Optimizer] | Content template | | A content template can be copied as a dependent object of the journey object. Standalone templates allow you to easily reuse custom content across Journey Optimizer campaigns and journeys. |
 | [!DNL Adobe Journey Optimizer] | Fragment | All nested fragments. | A fragment can be copied as a dependent object of the journey object. Fragments are reusable components that can be referenced in one or more emails across Journey Optimizer campaigns and journeys.  |
 | [!DNL Adobe Journey Optimizer] | Campaigns | The following objects used in the campaign are copied as dependent objects: <ul><li>Campaigns</li><li>Audiences</li><li>Schemas</li><li>Content templates</li><li>Fragments</li><li>Message/Content</li><li>Channel configuration</li><li>Unified decision objects</li><li>Experiment settings/variants</li></ul>| <ul><li>Campaigns can be copied along with all items related to the profile, audience, schema, inline messages, and dependent objects. Some items are not copied, such as data usage labels and language settings. For a complete list of objects that cannot be copied, refer to the [exporting objects to another sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) guide.</li><li>The system will automatically detect and resuse an existing channel configuration object in the target sandbox if an identical configuration exists. If no matching configuration is found, the channel configuration is skipped during import, and users must manually update the channel settings in the target sandbox for this journey.</li><li>Users may reuse existing experiments and audiences in the target sandbox as dependent objects of selected campaigns.</li></ul> |
-| [!DNL Adobe Journey Optimizer] | Decisioning | The following objects must be present in the destination sandbox before copying Decisioning objects: <ul><li>Profile Attributes used across Decisioning objects</li><li>The field group of custom Offer Attributes</li><li>The schemas of Datastreams used for Context Attributes across Rules, Ranking or Capping.</li></ul> | <ul><li>Copying ranking formulas that use AI models is not currently supported.</li><li>Decision items (offer items) are not included automatically. To ensure they’re transferred, add them manually using the **Add to Package** option.</li><li>Policies that use a selection strategy require associated decision items to be added manually during the copy process. Policies that use manual or fallback decision items will have those items automatically included as direct dependencies.</li><li>Decision items must be copied first, before any other related objects.</li></ul> |
-
-Profile Attributes used across Decisioning objects,
-The field group of custom Offer Attributes,
-The schemas of Datastreams used for Context Attributes across Rules, Ranking or Capping.
-
-Surfaces (for example, presets) are not copied over. The system automatically selects the closest possible match on the destination sandbox based on the message type and surface name. If there are no surfaces found on the target sandbox, then the surface copy will fail, causing the message copy to fail because a message requires a surface to be available for setup. In this case, at least one surface needs to be created for the right channel of the message in order for the copy to work.
-
-Custom identity types are not supported as dependent objects when exporting a journey.
+| [!DNL Adobe Journey Optimizer] | Decisioning | The following objects must be present in the destination sandbox before copying Decisioning objects: <ul><li>Profile Attributes used across Decisioning objects</li><li>The field group of custom Offer Attributes</li><li>The schemas of Datastreams used for Context Attributes across Rules, Ranking or Capping.</li></ul> | <ul><li>Copying ranking formulas that use AI models is not currently supported.</li><li>Decision items (offer items) are not included automatically. To ensure they’re transferred, add them manually using the **Add to Package** option.</li><li>Policies that use a selection strategy require associated decision items to be added manually during the copy process. Policies that use manual or fallback decision items will have those items automatically included as direct dependencies.</li><li>Decision items must be copied first, before any other related objects.</li><li>For a complete list of supported objects, refer to the [exporting objects to another sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) guide.</li></ul> |
 
 ## Export objects into a package {#export-objects}
 
@@ -174,7 +166,7 @@ The options to create new or use existing are displayed. Select **[!UICONTROL Us
 
 The **[!UICONTROL Field group]** dialog shows a list of field groups available for the object. Select the field groups required, then select **[!UICONTROL Save]**.
 
-![A list of fields shown on the [!UICONTROL Field group] dialog, highlighting the [!UICONTROL Save] selection. ](../images/ui/sandbox-tooling/field-group-list.png)
+![A list of fields shown on the [!UICONTROL Field group] dialog, highlighting the [!UICONTROL Save] selection.](../images/ui/sandbox-tooling/field-group-list.png)
 
 You are returned to the [!UICONTROL Package object and dependencies] page. From here, select **[!UICONTROL Finish]** to complete the package import.
 

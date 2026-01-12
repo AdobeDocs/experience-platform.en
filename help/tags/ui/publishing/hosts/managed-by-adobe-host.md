@@ -5,10 +5,6 @@ exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
 ---
 # Adobe-managed hosts overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Adobe-managed hosts are the default host setting for deploying your tag library builds in Adobe Experience Platform. When you create a new property through the Data Collection user interface, a default Adobe-managed host is created for you. 
 
 With Adobe-managed hosts, library builds are delivered to a third-party content delivery network (CDN) that Adobe has contracted with. These CDNs operate independently from Adobe, so even when Experience Platform is undergoing maintenance or is otherwise down, your deployed code will continue to function as normal on your sites and applications. The embed code for an Adobe-managed host references the main library file on the CDN so a client device can retrieve the files at runtime.

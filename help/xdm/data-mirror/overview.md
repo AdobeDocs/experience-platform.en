@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;data mirror;model-based schema;relational schema;change data capture;database sync;primary key;relationships
+keywords: Experience Platform;data mirror;relational schema;change data capture;database sync;primary key;relationships
 solution: Experience Platform
 title: Data Mirror overview
-description: Learn how Data Mirror enables row-level change ingestion from external databases into Adobe Experience Platform using model-based schemas with enforced uniqueness, relationships, and versioning.
+description: Learn how Data Mirror enables row-level change ingestion from external databases into Adobe Experience Platform using relational schemas with enforced uniqueness, relationships, and versioning.
 badge: Limited Availability
 exl-id: bb92c77a-6c7a-47df-885a-794cf55811dd
 ---
@@ -10,9 +10,9 @@ exl-id: bb92c77a-6c7a-47df-885a-794cf55811dd
 
 >[!AVAILABILITY]
 >
->Data Mirror and model-based schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
+>Data Mirror and relational schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
 
-Data Mirror is an Adobe Experience Platform capability that enables row-level change ingestion from external databases into the data lake using model-based schemas. It preserves data relationships, enforces uniqueness, and supports versioning without requiring upstream extract, transform, load (ETL) processes.
+Data Mirror is an Adobe Experience Platform capability that enables row-level change ingestion from external databases into the data lake using relational schemas. It preserves data relationships, enforces uniqueness, and supports versioning without requiring upstream extract, transform, load (ETL) processes.
 
 Use Data Mirror to synchronize inserts, updates, and deletes (mutable data) from external systems such as [!DNL Snowflake], [!DNL Databricks], or [!DNL BigQuery] directly into Experience Platform. This helps you preserve your existing database model structure and data integrity as you bring data into Platform.
 
@@ -28,7 +28,7 @@ Data Mirror provides the following essential capabilities for database synchroni
 
 Use Data Mirror to ingest changes directly from your source systems, enforce schema integrity, and make the data available for analytics, journey orchestration, and compliance workflows. Data Mirror eliminates complex upstream ETL processes and accelerates implementation by enabling direct mirroring of existing database models.
 
-Plan for deletion and data hygiene requirements when implementing model-based schemas with Data Mirror. All applications must consider how deletions affect related datasets, compliance workflows, and downstream processes before deployment.
+Plan for deletion and data hygiene requirements when implementing relational schemas with Data Mirror. All applications must consider how deletions affect related datasets, compliance workflows, and downstream processes before deployment.
 
 ## Prerequisites {#prerequisites}
 
@@ -37,12 +37,12 @@ Before getting started, you should understand the following components of Experi
 * [Create schemas in Experience Platform UI](../ui/resources/schemas.md) or [API](../api/schemas.md)
 * [Configure cloud source connections](../../sources/home.md#cloud-storage)
 * [Apply change data capture concepts](../../sources/tutorials/api/change-data-capture.md) (upserts, deletes)
-* Distinguish between [standard](../schema/composition.md) and [model-based schemas](../schema/model-based.md)
+* Distinguish between [standard](../schema/composition.md) and [relational schemas](../schema/relational.md)
 * [Define structural relationships with descriptors](../api/descriptors.md)
 
 ### Implementation requirements
 
-Your Platform instance and source data must meet specific requirements for Data Mirror to function properly. Data Mirror requires **model-based schemas**, which are flexible data structures with enforced constraints. Currently, Data Mirror works primarily with model-based schemas, though integration with standard XDM schemas will be supported through upcoming B2B Custom Objects capabilities (planned for October 2025). 
+Your Platform instance and source data must meet specific requirements for Data Mirror to function properly. Data Mirror requires **relational schemas**, which are flexible data structures with enforced constraints. 
 
 Include a **primary key and version descriptor** in all schemas. If you're working with a time-series schema, a **timestamp descriptor** is also required.
 
@@ -56,17 +56,17 @@ Unlike standard ingestion approaches, Data Mirror preserves your database model 
 
 ### Define your schema structure
 
-Create [model-based schemas](../schema/model-based.md) with required descriptors (metadata that define schema behavior and constraints). Choose a method that fits your team's workflow, either through the UI or directly through the API.
+Create [relational schemas](../schema/relational.md) with required descriptors (metadata that define schema behavior and constraints). Choose a method that fits your team's workflow, either through the UI or directly through the API.
 
-* **UI approach**: [Create model-based schemas in the Schema Editor](../ui/resources/schemas.md#create-model-based-schema)
-* **API approach**: [Create schemas via Schema Registry API](../api/schemas.md#create-model-based-schema)
+* **UI approach**: [Create relational schemas in the Schema Editor](../ui/resources/schemas.md#create-relational-schema)
+* **API approach**: [Create schemas via Schema Registry API](../api/schemas.md#create-relational-schema)
   
 ### Map relationships and define data management
 
 Define connections between datasets using relationship descriptors. Manage relationships and maintain data quality across datasets. These tasks ensure consistent joins and support compliance with data hygiene requirements.
 
 * **Schema relationships**: [Define relationships between datasets using descriptors](../api/descriptors.md)
-* **Record hygiene**: [Manage precision record deletes](../../hygiene/ui/record-delete.md#model-based-record-delete)
+* **Record hygiene**: [Manage precision record deletes for datasets based on relational schemas](../../hygiene/ui/record-delete.md#relational-record-delete)
 
 ### Configure your source connection
 
@@ -88,7 +88,7 @@ Review the common use cases listed below where Data Mirror supports precise data
 
 ### Relational data modeling 
 
-Use [model-based schemas](../schema/model-based.md) (also called relational schemas) in Data Mirror to represent entities, process inserts, updates, and deletes at the row level, and maintain the primary and foreign key relationships that exist in your data sources. This approach brings relational data modeling principles to Experience Platform and ensures structural consistency across datasets.
+Use [relational schemas](../schema/relational.md) in Data Mirror to represent entities, process inserts, updates, and deletes at the row level, and maintain the primary and foreign key relationships that exist in your data sources. This approach brings relational data modeling principles to Experience Platform and ensures structural consistency across datasets.
 
 ### Warehouse-to-lake synchronization
 
@@ -116,11 +116,11 @@ Review these key considerations to ensure your implementation aligns with suppor
 
 ### Data deletion and hygiene requirements
 
-All applications using model-based schemas and Data Mirror must understand data deletion implications. Model-based schemas enable precise record-level deletions that can impact related data across connected datasets. These deletion capabilities affect data integrity, compliance, and downstream application behavior regardless of your specific use case. Review [data hygiene requirements](../../hygiene/ui/record-delete.md#model-based-record-delete) and plan for deletion scenarios before implementation.
+All applications using relational schemas and Data Mirror must understand data deletion implications. Relational schemas enable precise record-level deletions that can impact related data across connected datasets. These deletion capabilities affect data integrity, compliance, and downstream application behavior regardless of your specific use case. Review [data hygiene requirements for datasets based on relational schemas](../../hygiene/ui/record-delete.md#relational-record-delete) and plan for deletion scenarios before implementation.
 
 ### Schema behavior selection
 
-Model-based schemas default to **record behavior**, which captures entity state (customers, accounts, etc.). If you need **time-series behavior** for event tracking, you must configure it explicitly.
+Relational schemas default to **record behavior**, which captures entity state (customers, accounts, etc.). If you need **time-series behavior** for event tracking, you must configure it explicitly.
 
 ### Ingestion method comparison
 
@@ -141,8 +141,8 @@ Data Mirror supports **one-to-one** and **many-to-one** relationships using desc
 After reviewing this overview, you should be able to determine if Data Mirror fits your use case and understand the requirements for implementation. To get started:
 
 1. **Data architects** should assess your data model to ensure it supports primary keys, versioning, and change tracking capabilities.
-2. **Business stakeholders** should confirm your license includes model-based schema support and required Experience Platform editions.
+2. **Business stakeholders** should confirm your license includes relational schema support and required Experience Platform editions.
 3. **Schema designers** should plan your schema structure to identify required descriptors, field relationships, and data governance needs.
 4. **Implementation teams** should choose an ingestion method based on your source systems, real-time requirements, and operational workflows.
 
-For implementation details, see the [model-based schemas documentation](../schema/model-based.md).
+For implementation details, see the [relational schemas documentation](../schema/relational.md).
