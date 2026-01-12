@@ -307,7 +307,6 @@ Once the dataset is in a folder, you can choose to only display datasets that be
 
 ![The [!UICONTROL Datasets] dashboards with the datasets folder structure displayed, the show folders icon, and a selected folder highlighted.](../images/datasets/user-guide/folder-structure.png)
 
-<!-- ...247143 examine the above guide -->
 
 ### Delete a dataset {#delete}
 
