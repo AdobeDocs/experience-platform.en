@@ -6,7 +6,7 @@ description: Learn how to explore existing schemas, classes, schema field groups
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 ---
-# Explore schema resources in the UI 
+# Explore schema resources in the UI
 
 In Adobe Experience Platform, all Experience Data Model (XDM) schema resources are stored in the [!DNL Schema Library], including standard resources provided by Adobe and custom resources defined by your organization. In the Experience Platform UI, you can view the structure and fields of any existing schema, class, field group, or data type in the [!DNL Schema Library]. This is especially useful when planning and preparing for data ingestion, as the UI provides information on the expected data types and use cases of each field provided by these XDM resources.
 
@@ -18,115 +18,32 @@ In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left navig
 
 ![The Schemas workspace with several tabs highlighted.](../images/ui/explore/tabs.png)
 
-## Filter and search schemas {#filter-search}
+The filter icon (![Filter Icon Image](/help/images/icons/filter.png)) reveals controls in the left rail to narrow down listed results. Resource filters are available for schemas and relationships on the **[!UICONTROL Browse]** and **[!UICONTROL Relationships]** tabs respectively.
 
-Use the filter panel to locate schemas efficiently based on multiple criteria. Select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to access filtering options that help you discover schemas that meet specific requirements for your data modeling and governance workflows.
+On the [!UICONTROL Browse] tab of the [!UICONTROL Schemas] workspace, you can filter your schema inventory. Use the **[!UICONTROL Included in Profile]** toggle to only show schemas that have been enabled for use in [Real-Time Customer Profile](../../profile/home.md). Use the **[!UICONTROL Show adhoc schemas]** toggle to filter the list of schemas created with fields namespaced for use only by a single dataset.
 
-![The [!UICONTROL Schemas] workspace [!UICONTROL Browse] tab with the comprehensive filters panel highlighted.](../images/ui/explore/filters.png)
+![The [!UICONTROL Schemas] workspace [!UICONTROL Browse] tab with the filters panel highlighted.](../images/ui/explore/filters.png)
 
-### Schema metadata filters
+On the [!UICONTROL Relationship] tab of the [!UICONTROL Schemas] workspace, you can filter the list of relationships based on four criteria. The filters include [!UICONTROL Source schema], [!UICONTROL Destination schema], [!UICONTROL Source class], and the [!UICONTROL Destination class]. The table below provides a description of the filters.
 
-Filter schemas by their fundamental characteristics and organizational attributes.
-
-| Filter | Control Type | Description |
-|--------|-------------|-------------|
-| [!UICONTROL Show profiles] | Radio buttons | Display [!UICONTROL All schemas], [!UICONTROL Profile-enabled schemas] only, or [!UICONTROL Profile-disabled schemas] only. Profile-enabled schemas participate in [Real-Time Customer Profile](../../profile/home.md) and support unified customer views across your organization. |
-| [!UICONTROL Schema type] | Checkboxes | Filter by schema origin: [!UICONTROL Standard schemas] (provided by Adobe), [!UICONTROL Model-based schemas] (structured, relational data modeling capabilities), or [!UICONTROL Adhoc schemas] (fields namespaced for use by a single dataset). |
-| [!UICONTROL Class] | Dropdown | Show only schemas built on specific class foundations such as XDM Individual Profile, XDM ExperienceEvent, or custom classes defined by your organization. |
-| [!UICONTROL Has any tag] | Dropdown | Filter schemas by user-applied, user-defined tags. Use tags to locate schemas organized by project, team, business domain, or custom taxonomies that support your organizational schema management practices. |
+| Filter                            |Description |
+|-----------------------------------|------------|
+| [!UICONTROL Source schema]        | To see all relationships where the selected schema is the starting point or "source", select a schema from the [!UICONTROL Source schema] dropdown menu. |
+| [!UICONTROL Destination schema]   | To view all relationships where the selected schema is the target or "destination", select a schema from the [!UICONTROL Destination schema] dropdown menu. |
+| [!UICONTROL Source class]         | To filter relationships based on the class of the initiating schema, select a class from the [!UICONTROL Source class] dropdown menu. |
+| [!UICONTROL Destination class]    | To display relationships that end with schemas of a specific class, select a class from the [!UICONTROL Destination class] dropdown menu. |
 
 {style="table-layout:auto"}
 
-### Schema attribute filters
+![The Relationships tab with the filters section highlighted.](../images/ui/explore/relationships-filter.png)
 
-Narrow results based on schema structure and identity configuration.
-
-| Filter | Control Type | Description |
-|--------|-------------|-------------|
-| [!UICONTROL Has relationship] | Yes/No checkboxes | Show only schemas that contain relationship fields connecting to other schemas. Relationship fields enable data connections across different schemas and support complex data modeling scenarios. |
-| [!UICONTROL Has primary identity] | Yes/No checkboxes | Filter for schemas with designated primary identity fields. Primary identity fields are required for Profile enablement and serve as the foundation for customer data unification. |
-| [!UICONTROL Primary identity namespace] | Dropdown | Find schemas using particular identity types such as Email, ECID, Phone, or custom namespaces as their primary identifier. |
-
-{style="table-layout:auto"}
-
-### Temporal and creator filters
-
-Filter schemas based on creation patterns and ownership.
-
-| Filter | Control Type | Description |
-|--------|-------------|-------------|
-| [!UICONTROL Creation date] | Start and end date pickers | Filter schemas by creation date ranges. Locate recently created schemas or find schemas built during specific project phases or time periods. |
-| [!UICONTROL Modified date] | Start and end date pickers | Filter schemas by modification date ranges. Identify schemas with recent updates or changes to support maintenance and governance workflows. |
-| [!UICONTROL Created by] | Dropdown | Filter schemas by their original creator. Locate schemas built by specific team members, systems, or service accounts to support ownership tracking and collaboration. |
-
-{style="table-layout:auto"}
-
-### Relationship tab filters
-
-When viewing schema relationships on the [!UICONTROL Relationships] tab, use additional filters to explore schema connections:
-
-| Filter | Control Type | Description |
-|--------|-------------|-------------|
-| [!UICONTROL Source schema] | Dropdown | Display relationships where the selected schema is the starting point or "source" |
-| [!UICONTROL Destination schema] | Dropdown | Show relationships where the selected schema is the target or "destination" |
-| [!UICONTROL Source class] | Dropdown | Filter relationships based on the class of the initiating schema |
-| [!UICONTROL Destination class] | Dropdown | Display relationships that end with schemas of a specific class |
-
-{style="table-layout:auto"}
-
-![The Relationship tab of the Schemas workspace with the filter fields highlighted.](../images/ui/explore/relationships-filter.png)
-
-### Combine multiple filters
-
-Apply multiple filters simultaneously to create precise schema discovery queries. For example, find [!UICONTROL Standard schemas] with custom tags that are [!UICONTROL Profile-enabled] and created within the last month, or locate Adhoc schemas with an email primary identity that contain relationship fields.
-
-![The enhanced filter panel in the Schemas workspace showing multiple filter types applied simultaneously.](../images/ui/explore/enhanced-filters.png)
-
-Use the search bar to narrow down results further.
+You can also use the search bar to narrow down results further.
 
 ![The Browse tab of the Schemas workspace with the search field highlighted.](../images/ui/explore/search.png)
 
 The resources displayed in search results are ordered first by title matches, then by description matches. In turn, the more word matches in either of these categories, the higher the resource appears in the list.
 
 When you have found the resource you want to explore, select its name from the list to view its structure in the canvas.
-
-## Enhanced schema browsing and organization
-
-Use the [!UICONTROL Schemas] workspace filtering capabilities and organizational tools to find, organize, and act on schemas more efficiently. The inline actions improve discoverability, reduce navigation steps, and accelerate schema operations.
-
-### Browse and filter metadata
-
-The schema inventory columns provide immediate visibility into schema characteristics and usage. View tags, schema type, Profile enablement status, created date, last modified, class, identities, relationships, behavior, and other metadata directly in the table view without opening individual schemas.
-
-![The Schemas workspace schema inventory showing the tags, schema type, Profile enablement, created date, last modified, class, identities, relationships, and behavior columns.](../images/ui/explore/schema-inventory-columns.png) 
-
-### Take inline actions on schemas
-
-Each schema row provides access to contextual actions through an ellipsis menu, eliminating the need to navigate into individual schema details for common tasks.
-
-![The ellipsis menu for a schema row showing inline actions such as Edit, Delete, Apply labels, and Manage tags.](../images/ui/explore/schema-inline-actions.png)
-
-Edit schema properties, apply data governance labels, delete schemas, and manage organizational metadata directly from the browse view. Additional actions include moving schemas to folders, adding them to deployment packages, copying JSON structures for development workflows, and downloading sample files for testing.
-
->[!NOTE]
->
->Sample files are for testing schema structure and should not contain production data.
-
-These inline actions accelerate schema-related workflows by reducing navigation steps and enabling batch operations on multiple schemas when needed. For detailed guidance on each inline action, see the [schema actions guide](./resources/schemas.md#more).
-
-### Navigate schemas using tags and folders
-
-The workspace supports both [tag-based]() and [folder-based organization]() systems to help you discover and navigate schemas efficiently. Use the tag filtering system to locate schemas categorized by project, team, data domain, or any custom taxonomy applied by your organization. Alternatively, browse folder hierarchies in the left navigation panel for structured schema discovery and access.
-
-To filter schemas using tags, select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to open the filter panel. Then, use the **[!UICONTROL Has any tag]** dropdown to choose from your available tags.
-
-![Filter schemas by user-defined tags in the schema inventory to locate specific schemas.](../images/ui/explore/user-defined-tags.png)
-
-To open your folder structure, select the show folders icon (![The show folders icon](/help/images/icons/rail-left.png)). Next, select your chosen folder to see all associated schemas.
-
-![Navigate folder hierarchies in the left navigation panel to browse and locate schemas.](../images/ui/explore/move-to-folder.png)
-
-Both organizational approaches integrate with the filtering system, allowing you to quickly locate schemas based on their assigned tags or folder placement. For detailed guidance on creating and managing tags across Experience Platform, see the [managing unified tags guide](../../../administrative-tags/ui/managing-tags.md).
 
 ## Explore an XDM resource in the canvas {#explore}
 
@@ -197,10 +114,6 @@ To view the identity namespace of the reference schema's primary identity, selec
 ![The Edit relationship dialog with the relationship parameters displayed.](../images/ui/explore/edit-relationship-dialog.png)
 
 See the tutorial on [creating a relationship in the UI](../tutorials/relationship-ui.md) for more information on the use of relationships in XDM schemas.
-
-## Related documentation
-
-The schema exploration capabilities detailed in this guide work seamlessly with other Experience Platform organizational and governance features. For comprehensive information on organizing your business objects with user-defined tags and categories, see the [managing unified tags guide](../../../administrative-tags/ui/managing-tags.md). To understand consistent UI patterns for advanced search, filtering, and inline actions that are applied across Experience Platform workspaces, refer to the [datasets user guide](../../../catalog/datasets/user-guide.md). When working with data governance labels and policies on your schemas, consult the [data usage labels user guide](../../../data-governance/labels/user-guide.md) for instructions on applying and managing labels to support compliance requirements.
 
 ## Next steps
 
