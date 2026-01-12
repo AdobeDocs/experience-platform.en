@@ -5,10 +5,6 @@ exl-id: 79d92f42-795f-4685-926f-ebe6f4125539
 ---
 # Adobe Media Analytics for Audio and Video release notes
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 ## October 25, 2019
 
 ### Adobe Media Analytics for Audio and Video Extension 1.2.1

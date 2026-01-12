@@ -61,3 +61,7 @@ _satellite.getVar('title'); // Blinding Light
 _satellite.getVar('category'); // Game
 _satellite.getVar('genre'); // Tower defense
 ```
+
+>[!NOTE]
+>
+>Avoid using periods (`.`) when setting variable names using this method. The `getVar()` method does not recognize variables that contain periods set using `setVar()`. However, `getVar()` _does_ recognize data elements that use periods when they are defined in the tags UI.

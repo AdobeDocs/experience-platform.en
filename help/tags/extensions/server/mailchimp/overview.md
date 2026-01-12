@@ -10,10 +10,6 @@ exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
 ---
 # Mailchimp event forwarding extension overview
 
->[!NOTE]
->  
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) for a consolidated reference of the terminology changes.
-
 The Mailchimp [event forwarding](../../../ui/event-forwarding/overview.md) extension sends events to the Mailchimp Marketing API that can trigger emails for Mailchimp marketing campaigns, journeys, or transactions.
 
 This document covers how to set up the extension and configure rules using the Add Event action.

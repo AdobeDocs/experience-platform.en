@@ -1,9 +1,9 @@
 ---
-title: Satellite Object Reference
+title: Tags client-side JavaScript overview (_satellite)
 description: Learn about the client-side _satellite object and the various functions you can perform with it in tags.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
 ---
-# `_satellite` object reference
+# Tags client-side JavaScript overview (`_satellite`)
 
 _These pages outline how to use the `_satellite` object, which allow you to manage and customize your tag logic using JavaScript. See [Adobe Experience Platform Web SDK tag extension](/help/tags/extensions/client/web-sdk/overview.md) for details on how to set up your implementation in the Data Collection UI._
 
