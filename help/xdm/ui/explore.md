@@ -112,11 +112,13 @@ Edit schema properties, apply data governance labels, delete schemas, and manage
 >
 >Sample files are for testing schema structure and should not contain production data.
 
-These inline actions accelerate schema-related workflows by reducing navigation steps and enabling batch operations on multiple schemas when needed. For detailed guidance on each inline action, see the [schema actions guide](./resources/schemas.md#more).
+These inline actions enable batch operations on multiple schemas when needed. For detailed guidance on each inline action, see the [schema actions guide](./resources/schemas.md#more).
 
 ### Navigate schemas using tags and folders
 
-The workspace supports both [tag-based]() and [folder-based organization]() systems to help you discover and navigate schemas efficiently. Use the tag filtering system to locate schemas categorized by project, team, data domain, or any custom taxonomy applied by your organization. Alternatively, browse folder hierarchies in the left navigation panel for structured schema discovery and access.
+<!-- [tag-based]() and [folder-based organization]() -->
+
+The workspace supports both tag-based and folder-based organization systems to help you discover and navigate schemas efficiently. Use the tag filtering system to locate schemas categorized by project, team, data domain, or any custom taxonomy applied by your organization. Alternatively, browse folder hierarchies in the left navigation panel for structured schema discovery and access.
 
 To filter schemas using tags, select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to open the filter panel. Then, use the **[!UICONTROL Has any tag]** dropdown to choose from your available tags.
 

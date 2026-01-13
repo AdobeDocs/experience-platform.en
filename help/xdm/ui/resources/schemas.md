@@ -445,9 +445,9 @@ Schema management tasks are available from two main locations in the Experience 
 
 ### Manage schemas from the Browse view {#manage-from-browse}
 
-This section documents the schema actions available from the [!UICONTROL Browse] tab; for information on schema discovery, filtering, and organization, see [exploring XDM resources](../explore.md).
+This section documents the schema actions available from the **[!UICONTROL Browse]** tab; for information on schema discovery, filtering, and organization, see [exploring XDM resources](../explore.md).
 
-The following sections describe the schema management actions available from the [!UICONTROL Browse] tab. These actions are accessible through the ellipsis (…) menu next to each schema row.
+The following sections describe the schema management actions available from the **[!UICONTROL Browse]** tab. These actions are accessible through the ellipsis (…) menu next to each schema row.
 
 | Action | Description |
 |--------|-------------|
