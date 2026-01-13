@@ -445,19 +445,21 @@ Schema management tasks are available from two main locations in the Experience 
 
 ### Manage schemas from the Browse view {#manage-from-browse}
 
-The following sections provide detailed instructions for performing various schema management actions available from the [!UICONTROL Browse] tab. You can also access these actions quickly using the ellipsis (…) menu next to each schema for streamlined workflow management.
+This section documents the schema actions available from the [!UICONTROL Browse] tab; for information on schema discovery, filtering, and organization, see [exploring XDM resources](../explore.md).
+
+The following sections describe the schema management actions available from the [!UICONTROL Browse] tab. These actions are accessible through the ellipsis (…) menu next to each schema row.
 
 | Action | Description |
 |--------|-------------|
-| [!UICONTROL Edit schema properties] | Modify basic schema information including display name, description, and tags. Use this to update schema metadata without opening the full Schema Editor. For detailed instructions, see [Edit schema properties](#edit-schema-properties). |
-| [!UICONTROL Delete schema] | Remove schemas that are no longer needed from your organization. Delete is only available for schemas that have not been enabled for Real-Time Customer Profile and have no associated datasets. For detailed instructions, see [Delete schema](#delete-schema). |
-| [!UICONTROL Apply data governance labels] | Assign data usage labels to categorize schemas according to privacy policies and compliance requirements. Labels applied at the schema level propagate to all datasets created from that schema. For detailed instructions, see [Apply data governance labels](#apply-data-governance-labels). |
-| [!UICONTROL Create dataset]  | Create a new dataset directly  |
-| [!UICONTROL Manage tags] | Add or remove user-defined tags to organize schemas by project, team, business domain, or custom taxonomies. Tags improve schema discoverability through filtering and search. For detailed instructions, see [Manage tags](#manage-tags). |
-| [!UICONTROL Move to folder] | Organize schemas into folder hierarchies for structured browsing and access control. Moving schemas to folders helps maintain organization-wide schema governance and supports team-based access patterns. For detailed instructions, see [Move to folder](#move-to-folder). |
-| [!UICONTROL Add to package] | Include the schema in a deployment package for promotion across environments or sandboxes. Use this action to manage the schema lifecycle through controlled deployment of changes. For detailed instructions, see [Add to package](#add-to-package). |
-| [!UICONTROL Copy JSON structure] | Copy the complete JSON representation of the schema to your clipboard. Use this for API integrations, documentation, or sharing schema structures with developers. For detailed instructions, see [Copy JSON structure](#copy-json-structure). |
-| [!UICONTROL Download sample file] | Generate and download sample data files that match the schema structure. These files support testing and development workflows by providing correctly formatted example data. For detailed instructions, see [Download sample file](#download-sample-file). |
+| [!UICONTROL Edit schema properties] | Modifies basic schema information including display name, description, and tags without opening the Schema Editor. For detailed instructions, see [Edit schema properties](#edit-schema-properties). |
+| [!UICONTROL Delete schema] | Removes the schema from your organization. Available only for schemas not enabled for Real-Time Customer Profile and without associated datasets. For detailed instructions, see [Delete schema](#delete-schema). |
+| [!UICONTROL Apply data governance labels] | Assigns data usage labels to categorize schemas according to privacy policies and compliance requirements. Labels applied at the schema level propagate to all datasets created from that schema. For detailed instructions, see [Apply data governance labels](#apply-data-governance-labels). |
+| [!UICONTROL Create dataset] | Creates a new dataset from the selected schema. For detailed instructions, see [Create dataset](#create-dataset). |
+| [!UICONTROL Manage tags] | Adds or removes user-defined tags for schema organization. For detailed instructions, see [Manage tags](#manage-tags). |
+| [!UICONTROL Move to folder] | Moves schemas into folder hierarchies. For detailed instructions, see [Move to folder](#move-to-folder). |
+| [!UICONTROL Add to package] | Includes the schema in a sandbox tooling package for deployment across environments. For detailed instructions, see [Add to package](#add-to-package). |
+| [!UICONTROL Copy JSON structure] | Copies the complete JSON representation of the schema to the clipboard. For detailed instructions, see [Copy JSON structure](#copy-json-structure). |
+| [!UICONTROL Download sample file] | Generates and downloads a sample data file that conforms to the schema structure. For detailed instructions, see [Download sample file](#download-sample-file). |
 
 {style="table-layout:auto"}
 
@@ -471,7 +473,7 @@ Takes you straight to the Schema Editor with your schema prepopulated.
 
 #### Delete schema {#delete-schema}
 
-PLACEHOLDER TEXT
+Removes the schema from your organization. Deletion is available only for schemas that have not been enabled for Real-Time Customer Profile and have no associated datasets. Once deleted, the schema cannot be recovered.
 
 #### Apply data governance labels {#apply-data-governance-labels}
 
@@ -481,35 +483,29 @@ Takes you straight to the Schemas workspace [!UICONTROL Label] tab. For full ins
 
 >[!AVAILABILITY]
 >
->This is only available for 'standard' (non-model-based) schemas. 
+>This action is available only for standard (non-relational) schemas.
 
-PLACEHOLDER TEXT
+Creates a dataset directly from the selected schema. This action opens the dataset creation workflow with the schema pre-selected as the dataset's underlying structure.
 
 #### Manage tags {#manage-tags}
 
-The [!UICONTROL Add or remove tags] dialog appears. Choose an existing tag from the dorpdown selector or enter a name in the input field to create a new tag.
-
-![The Add or remove tags dialog with a new tag being created.](../../images/ui/resources/schemas/add-remove-tags.png)
-
-If a tag is assigned to the schema, it is displayed under the text input field. Select the 'X' to remove the tag from the schema.
+Opens the [!UICONTROL Add or remove tags] dialog, where you can assign or remove user-defined tags from the schema. Tags assigned to a schema appear in the schema inventory and can be used for filtering. For more information on tag-based organization, see [exploring XDM resources](../explore.md).
 
 #### Move to folder {#move-to-folder}
 
-The Move dialog appears that displays a typical folder tree structure diagram. Selecvt a folder from the diagram followed by **[!UICONTROL Move]**, or selct the create folder icon (![The create folder icon.]()) to create and name a new folder.
-
-![The Move dialog with the folder heirarchy and Move highlighted.](../../images/ui/resources/schemas/move-to-folder)
+Opens the [!UICONTROL Move] dialog, where you can select a destination folder or create a new folder. Schemas organized into folders appear in the folder hierarchy in the left navigation panel. For more information on folder-based organization, see [exploring XDM resources](../explore.md).
 
 #### Add to package {#add-to-package}
 
-PLACEHOLDER TEXT
+Includes the schema in a sandbox tooling package for deployment across environments. The schema must meet package eligibility requirements. Packages containing schemas can be exported and imported between sandboxes.
 
 #### Copy JSON structure {#copy-json-structure}
 
-PLACEHOLDER TEXT
+Copies the complete JSON representation of the schema to the clipboard. The output matches the schema structure as stored in the Schema Registry and can be used for API operations or schema sharing.
 
 #### Download sample file {#download-sample-file}
 
-PLACEHOLDER TEXT
+Generates and downloads a sample data file that conforms to the schema structure. The file contains example values for each field defined in the schema. Sample files are intended for testing schema structure only and should not contain production data.
 
 ### Manage schemas from the Schema Editor {#manage-from-editor}
 

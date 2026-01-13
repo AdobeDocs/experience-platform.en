@@ -375,7 +375,7 @@ Within the Schema Editor you can also conduct quick actions to copy the JSON str
 >title="Cannot delete schema"
 >abstract="The schema cannot be deleted because it has associated datasets."
 
-A schema can be deleted within the UI from the Schema Editor using [!UICONTROL More] actions and also from the schema details in the [!UICONTROL Browse] tab. There are certain conditions that prevent a schema from being deleted. A schema cannot be deleted if:
+A schema can be deleted within the UI from the Schema Editor using **[!UICONTROL More]** actions and also from the schema details in the **[!UICONTROL Browse]** tab. There are certain conditions that prevent a schema from being deleted. A schema cannot be deleted if:
 
 * The schema is enabled for Profile.
 * The schema is enabled for Profile and has associated datasets.
