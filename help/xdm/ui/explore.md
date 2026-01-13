@@ -92,7 +92,7 @@ When you have found the resource you want to explore, select its name from the l
 
 ## Enhanced schema browsing and organization
 
-Use the [!UICONTROL Schemas] workspace filtering capabilities and organizational tools to find, organize, and act on schemas more efficiently. The inline actions improve discoverability, reduce navigation steps, and accelerate schema operations.
+Use the [!UICONTROL Schemas] workspace filtering capabilities and organizational tools to find, organize, and act on schemas. The inline actions reduce navigation steps for common schema operations.
 
 ### Browse and filter metadata
 
@@ -116,9 +116,7 @@ These inline actions enable batch operations on multiple schemas when needed. Fo
 
 ### Navigate schemas using tags and folders
 
-<!-- [tag-based]() and [folder-based organization]() -->
-
-The workspace supports both tag-based and folder-based organization systems to help you discover and navigate schemas efficiently. Use the tag filtering system to locate schemas categorized by project, team, data domain, or any custom taxonomy applied by your organization. Alternatively, browse folder hierarchies in the left navigation panel for structured schema discovery and access.
+The workspace supports both [tag-based](./resources/schemas.md#manage-tags) and [folder-based organization](./resources/schemas.md#move-to-folder) systems to help you discover and navigate schemas efficiently. Use the tag filtering system to locate schemas categorized by project, team, data domain, or any custom taxonomy applied by your organization. Alternatively, browse folder hierarchies in the left navigation panel for structured schema discovery and access.
 
 To filter schemas using tags, select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to open the filter panel. Then, use the **[!UICONTROL Has any tag]** dropdown to choose from your available tags.
 

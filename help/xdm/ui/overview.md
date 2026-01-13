@@ -15,7 +15,7 @@ To access to the workspace in the Experience Platform UI, select **[!UICONTROL S
 
 ## Enterprise schema management at scale
 
-The [!UICONTROL Schemas] workspace enables enterprise-grade data modeling with advanced discovery tools, automated schema generation, and integrated governance workflows. Organizations can reduce time-to-insight by efficiently organizing schemas across teams, ensuring compliance through built-in labeling, and accelerating development with machine learning-assisted creation. The workspace supports large schema inventories while maintaining performance and governance standards required for enterprise environments.
+The [!UICONTROL Schemas] workspace enables enterprise-grade data modeling with advanced discovery tools, automated schema generation, and integrated governance workflows. Organizations can organize schemas across teams, ensure compliance through built-in labeling, and use machine learning-assisted creation for schema development. The workspace supports large schema inventories while maintaining performance and governance standards required for enterprise environments.
 
 ## Key capabilities by user role
 
@@ -49,7 +49,7 @@ Learn more about [data governance labels](../../../data-governance/labels/user-g
 
 ## Streamlined schema operations
 
-Accelerate schema management through inline actions and automated workflows. Edit properties, manage tags, move schemas between folders, or export JSON structures directly from the browse table without navigating to individual schema details. Use ML-assisted schema creation to generate schemas from sample data, reducing manual effort and improving accuracy.
+Perform schema management tasks through inline actions and automated workflows. Edit properties, manage tags, move schemas between folders, or export JSON structures directly from the browse table without navigating to individual schema details. Use ML-assisted schema creation to generate schemas from sample data, reducing manual effort and improving accuracy.
 
 These operational enhancements reduce development time and minimize context switching for teams managing large schema inventories.
 
