@@ -77,9 +77,9 @@ You must provide values for the following credentials to connect [!DNL Oracle El
 | --- | --- |
 | Client ID |  The publicly exposed identifier used by [!DNL Oracle Eloqua] to identify your account when authorizing to Experience Platform. |
 | Client secret | The confidential key known only to the client application and authorization server. This key is required alongside the client ID in order to authenticate your account. |
-| Username | The username associated with your [!DNL Oracle Eloqua] account. |
+| Username | The username associated with your [!DNL Oracle Eloqua] account. The username follows the format of `CompanyName\Username`.|
 | Password | The password associated with your [!DNL Oracle Eloqua] account. |
-| Base endpoint | The prefix of your authentication base URI for [!DNL Oracle Eloqua]. |
+| Base endpoint | The prefix of your authentication base URI for [!DNL Oracle Eloqua]. The base endpoint should not include `http://` or `https://` when authenticating. |
 
 ## [!DNL Oracle Eloqua] mapping guide
 
