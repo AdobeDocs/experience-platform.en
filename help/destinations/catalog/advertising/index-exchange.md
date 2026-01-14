@@ -7,9 +7,9 @@ description: Connect to Index Exchange (Index) and activate your data so your au
 
 ## Overview {#overview}
 
-Index is a global advertising supply-side platform that helps media owners maximize the value of their content across every screen. With over 20 years of industry leadership, we connect the world’s largest brands with premium experience makers to deliver high-quality consumer experiences.
+Index is a global advertising supply-side platform that helps media owners maximize the value of their content across every screen. With over 20 years of industry leadership, Index connects the world’s largest brands with premium experience makers to deliver high-quality consumer experiences.
 
-This destination connector enables you to export audience segments from Adobe Experience Platform directly to Index Exchange’s programmatic advertising platform.
+Use this destination connector to export audience segments from Adobe Experience Platform directly to Index Exchange’s programmatic advertising platform.
 
 Once exported, these audience segments can be used to target deals by media owners, Marketplace Partners, or shared with publishers and curators by Marketplace Vendors.
 
@@ -19,7 +19,7 @@ Once exported, these audience segments can be used to target deals by media owne
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Index Exchange destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the Index Exchange destination, here are sample use cases that Experience Platform customers can solve by using this destination.
 
 ### Targeting users on mobile, web, and CTV platforms {#targeting-users}
 
@@ -55,7 +55,7 @@ To upload multiple identity types, create separate instances of the Index Exchan
 This section explains which audience types you can export to this destination.
 
 | Audience origin | Supported | Description | 
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
@@ -141,4 +141,4 @@ Once registration is complete, the segments will be available for targeting in y
 
 ## Data usage and governance {#data-usage-governance}
 
-All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md). 
+All Experience Platform destinations are compliant with data usage policies when handling your data. For detailed information on how Experience Platform enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
