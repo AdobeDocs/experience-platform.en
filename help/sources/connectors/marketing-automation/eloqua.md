@@ -29,11 +29,45 @@ Read the sections below for prerequisite set up that you must complete before yo
 
 ### Set up application for authentication
 
-1. Login as Admin - To get started, login to you [!DNL Oracle Eloqua] instance as an admin (or as a user who has access to create users, security groups, and apps).
-2. Create App - Navigate to **Settings** > **Platform Extensions** > **App Cloud Developer** > **Create App**. Provide details for your app, including its name, description, icon, and the OAuth Callback URL. Select **Save** when finished and retrieve the  **Client ID** and **Client secret** from the newly created app.
-3. Create Security Group - Security groups allow administrators to control what levels of access users have to assets, features, interfaces, and so on. To create a security group, navigate to **Settings** > **Users**. Then, select the **Group** tab on the left panel and then select **Create new Security Group**.
-4. Create User (Optional)
-5. Add User to Security Group
+Follow the steps below to learn how to set up your [!DNL Oracle Eloqua] account and connect to Experience Platform using basic authentication.
+
+To get started, log in to your [!DNL Oracle Eloqua] instance as an admin (or as a user who has access to create users, security groups, and apps).
+
+![The My Eloqua Dashboard.](../../images/tutorials/create/eloqua/admin.png)
+
+
+Navigate to **Settings** > **Platform Extensions** > **App Cloud Developer** > **Create App**. Provide details for your app, including its name, description, icon, and the OAuth Callback URL. Select **Save** when finished. 
+
+![The App Developer panel and the Create App button in the Eloqua dashboard.](../../images/tutorials/create/eloqua/create-app.png)
+
+| Property | Description |
+| --- | --- |
+| Name | The name of your app. |
+| Description | A brief description for your app. |
+| Icon | The URL for the icon. |
+| OAuth Callback URL | The URL that users should be redirected to after installing the app and authenticating with [!DNL Oracle Eloqua]. |
+
+! [The create app window in Eloqua.](../../images/tutorials/create/eloqua/new-app.png)
+
+With your app created, navigate to [!DNL Authentication to Eloqua] and retrieve the  **Client ID** and **Client secret** from the newly created app. These values will be used later when connecting to Experience Platform.
+
+![The client ID and client secret in Eloqua.](../../images/tutorials/create/eloqua/credentials.png)
+
+Security groups allow administrators to control what levels of access users have to assets, features, interfaces, and so on. To create a security group, navigate to **Settings** > **Users**. Then, select the **Group** tab on the left panel and then select **Create new Security Group**.
+
+![The user management dashboard in Eloqua.](../../images/tutorials/create/eloqua/user-management.png)
+
+Use the **[!DNL Security Group Overview]** window to provide a name and an acronym for your security group. Once created, navigate to [!DNL Action Permissions] and add the [!DNL Consume] API permission from the list and select **Save**.
+
+![The security group overview window in Eloqua.](../../images/tutorials/create/eloqua/security-group-overview.png)
+
+![The selection window for consume API](../../images/tutorials/create/eloqua/consume-api.png)
+
+>[!NOTE]
+>
+>[!DNL Consume] API is a required permission, but you can add more permissions depending on your usage of the app.
+
+You can optionally create additional an additional user and add that user to a security group. For detailed steps, read the [!DNL Oracle Eloqua] documentation on [creating a user](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm) and [assigning a user to a security group](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm).
 
 ### Gather required credentials
 
@@ -80,7 +114,6 @@ The following tables provide detailed mappings between [!DNL Oracle Eloqua] sour
 {style="table-layout:auto"}
 
 ### Activities
-
 
 | Eloqua Source Column | XDM Destination Path | Notes |
 | --- | --- | --- |
@@ -148,18 +181,18 @@ The following tables provide detailed mappings between [!DNL Oracle Eloqua] sour
 | C_DateModified | extSourceSystemAudit.lastUpdatedDate |  |
 | iif(C_SFDCAccountID != null && C_SFDCAccountID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCAccountID, "sourceKey", concat(C_SFDCAccountID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_MSCRMAccountID != null && C_MSCRMAccountID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMAccountID, "sourceKey", concat(C_MSCRMAccountID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null)) | b2b.accountKey | Connector doesn't have a way to determine the CRM_INSTANCE_ID, so please replace ${CRM_INSTNANCE)ID} with your synced CRM instance id, either salesforce instance id or dynamics instance id. The same mappings goes to b2b.accountKey and personComponents.sourceAccountKey. So keep both |
 | iif(C_SFDCAccountID != null && C_SFDCAccountID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCAccountID, "sourceKey", concat(C_SFDCAccountID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_MSCRMAccountID != null && C_MSCRMAccountID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMAccountID, "sourceKey", concat(C_MSCRMAccountID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null)) | personComponents.sourceAccountKey | Connector doesn't have a way to determine the CRM_INSTANCE_ID, so please replace ${CRM_INSTNANCE)ID} with your synced CRM instance id, either salesforce instance id or dynamics instance id. The same mappings goes to b2b.accountKey and personComponents.sourceAccountKey. So keep both |
-| C_Lead_Source___Original1 | b2b.personSource |  |
-| C_Lead_Source___Original1 | personComponents.personSource |  |
-| C_Lead_Status1 | b2b.personStatus |  |
-| C_Lead_Status1 | personComponents.personStatus |  |
-| C_FirstName | person.name.firstName |  |
-| C_LastName | person.name.lastName |  |
-| C_Middle_Name1 | person.name.middleName |  |
-| C_Salutation | person.name.courtesyTitle |  |
-| C_City | workAddress.city |  |
-| C_Country | workAddress.country |  |
-| C_Zip_Postal | workAddress.postalCode |  |
-| C_State_Prov | workAddress.state |  |
+| C_Lead_Source___Original1 | b2b.personSource | |
+| C_Lead_Source___Original1 | personComponents.personSource | |
+| C_Lead_Status1 | b2b.personStatus | |
+| C_Lead_Status1 | personComponents.personStatus | |
+| C_FirstName | person.name.firstName | |
+| C_LastName | person.name.lastName | |
+| C_Middle_Name1 | person.name.middleName | |
+| C_Salutation | person.name.courtesyTitle | |
+| C_City | workAddress.city | |
+| C_Country | workAddress.country | |
+| C_Zip_Postal | workAddress.postalCode | |
+| C_State_Prov | workAddress.state | |
 
 {style="table-layout:auto"}
 
