@@ -35,7 +35,6 @@ To get started, log in to your [!DNL Oracle Eloqua] instance as an admin (or as 
 
 ![The My Eloqua Dashboard.](../../images/tutorials/create/eloqua/admin.png)
 
-
 Navigate to **Settings** > **Platform Extensions** > **App Cloud Developer** > **Create App**. Provide details for your app, including its name, description, icon, and the OAuth Callback URL. Select **Save** when finished. 
 
 ![The App Developer panel and the Create App button in the Eloqua dashboard.](../../images/tutorials/create/eloqua/create-app.png)
@@ -47,7 +46,7 @@ Navigate to **Settings** > **Platform Extensions** > **App Cloud Developer** > *
 | Icon | The URL for the icon. |
 | OAuth Callback URL | The URL that users should be redirected to after installing the app and authenticating with [!DNL Oracle Eloqua]. |
 
-! [The create app window in Eloqua.](../../images/tutorials/create/eloqua/new-app.png)
+![The create app window in Eloqua.](../../images/tutorials/create/eloqua/new-app.png)
 
 With your app created, navigate to [!DNL Authentication to Eloqua] and retrieve the  **Client ID** and **Client secret** from the newly created app. These values will be used later when connecting to Experience Platform.
 
@@ -99,27 +98,27 @@ The following tables provide detailed mappings between [!DNL Oracle Eloqua] sour
 
 | Eloqua Source Column | XDM Destination Path | Notes |
 | --- | --- | --- |
-| "Eloqua" | accountKey.sourceType | Fixed value "Eloqua" |
-| "${SOURCE_INSTANCE_ID}" | accountKey.sourceInstanceID | SOURCE_INSTANCE_ID will be automatically replaced by the connector |
-| Id | accountKey.sourceID | |
-| concat(Id, "\\@${SOURCE_INSTANCE_ID}.Eloqua") | accountKey.sourceKey | SOURCE_INSTANCE_ID will be automatically replaced by the connector |
-| M_CompanyName | accountName | |
-| M_Country | accountPhysicalAddress.country | |
-| M_Address1 | accountPhysicalAddress.street1 | |
-| M_City | accountPhysicalAddress.city | |
-| M_State_Prov | accountPhysicalAddress.stateProvince | |
-| M_Zip_Postal | accountPhysicalAddress.postalCode | |
-| M_BusPhone | accountPhone.number | |
-| M_Fax1 | accountFax.number | |
-| M_Account_Engagement_Score | accountScore | |
-| M_Account_Type1 | accountType | |
-| M_Wesbsite1 | accountOrganization.website | |
-| M_Employees1 | accountOrganization.numberOfEmployees | |
-| to_decimal(M_Annual_Revenue1) | accountOrganization.annualRevenue.amount | |
-| M_DateModified | extSourceSystemAudit.lastUpdatedDate | |
-| M_DateCreated | extSourceSystemAudit.createdDate | |
-| M_Industry1 | accountOrganization.industry | |
-| iif(M_SFDCAccountID != null && M_SFDCAccountID != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", M_SFDCAccountID, "sourceKey", concat(M_SFDCAccountID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(M_MSCRMAccountID != null && M_MSCRMAccountID != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", M_MSCRMAccountID, "sourceKey", concat(M_MSCRMAccountID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null)) | extSourceSystemAudit.externalKey | Connector doesn't have a way to determine the CRM_INSTANCE_ID, so please replace ${CRM_INSTNANCE)ID} with your synced CRM instance id, either salesforce instance id or dynamics instance id. During ingestion, connector will get SFDCAccountID and concatenate the \\@CRM_INSTANCE_ID.Salesforce, or if that is null, it will get MSCRMAccountID, and concatenate the \\@CRM_INSTANCE_ID.Dynamics or else this will be null. |
+| `"Eloqua"` | accountKey.sourceType | This field is always set to the fixed value "Eloqua." |
+| `"${SOURCE_INSTANCE_ID}"` | accountKey.sourceInstanceID | The `SOURCE_INSTANCE_ID` will be automatically replaced by the connector. |
+| `Id` | accountKey.sourceID | |
+| `concat(Id, "\\@${SOURCE_INSTANCE_ID}.Eloqua")` | accountKey.sourceKey | The `SOURCE_INSTANCE_ID` will be automatically replaced by the connector. |
+| `M_CompanyName` | accountName | |
+| `M_Country` | accountPhysicalAddress.country | |
+| `M_Address1` | accountPhysicalAddress.street1 | |
+| `M_City` | accountPhysicalAddress.city | |
+| `M_State_Prov` | accountPhysicalAddress.stateProvince | |
+| `M_Zip_Postal` | accountPhysicalAddress.postalCode | |
+| `M_BusPhone` | accountPhone.number | |
+| `M_Fax1` | accountFax.number | |
+| `M_Account_Engagement_Score` | accountScore | |
+| `M_Account_Type1` | accountType | |
+| `M_Wesbsite1` | accountOrganization.website | |
+| `M_Employees1` | accountOrganization.numberOfEmployees | |
+| `to_decimal(M_Annual_Revenue1)` | accountOrganization.annualRevenue.amount | |
+| `M_DateModified` | extSourceSystemAudit.lastUpdatedDate | |
+| `M_DateCreated` | extSourceSystemAudit.createdDate | |
+| `M_Industry1` | accountOrganization.industry | |
+| `iif(M_SFDCAccountID != null && M_SFDCAccountID != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", M_SFDCAccountID, "sourceKey", concat(M_SFDCAccountID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(M_MSCRMAccountID != null && M_MSCRMAccountID != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", M_MSCRMAccountID, "sourceKey", concat(M_MSCRMAccountID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null))` | extSourceSystemAudit.externalKey | The connector cannot detect your CRM instance ID automatically. You must manually replace `${CRM_INSTANCE_ID}` with your actual CRM instance ID, either your Salesforce or Dynamics instance ID. During ingestion, if `M_SFDCAccountID` is present, the connector will generate the external key using that value and append `\@CRM_INSTANCE_ID.Salesforce`. If that field is empty, the connector will use `M_MSCRMAccountID` and append `\@CRM_INSTANCE_ID.Dynamics` instead. If both fields are empty, this field will be set to null. |
 
 {style="table-layout:auto"}
 
@@ -127,46 +126,45 @@ The following tables provide detailed mappings between [!DNL Oracle Eloqua] sour
 
 | Eloqua Source Column | XDM Destination Path | Notes |
 | --- | --- | --- |
-| "Eloqua" | personKey.sourceType | Fixed value "Eloqua" |
-| "${SOURCE_INSTANCE_ID}" | personKey.sourceInstanceID | SOURCE_INSTANCE_ID will be automatically replaced by the connector |
-| ContactId | personKey.sourceID |  |
-| concat(ContactId, "\\@${SOURCE_INSTANCE_ID}.Eloqua") | personKey.sourceKey | SOURCE_INSTANCE_ID will be automatically replaced by the connector |
-| ExternalId | _id |  |
-| iif(ActivityType!=null && ActivityType!="", iif(ActivityType=="EmailSend", "directMarketing.emailSent", iif(ActivityType=="EmailOpen", "directMarketing.emailOpened", iif(ActivityType=="EmailClickthrough", "directMarketing.emailClicked", iif(ActivityType=="Unsubscribe", "directMarketing.emailUnsubscribed", iif(ActivityType=="Bounceback", "directMarketing.emailBounced", iif(ActivityType=="FormSubmit", "web.formFilledOut", iif(ActivityType=="PageView", "web.webpagedetails.pageViews", ActivityType))))))), null) | eventType | Based on the ActivityType, the corresponding Experience Platform eventType value will get populated. For ExternalActivities there is no eventType in Experience Platform. You can modify this mapping to handle more types. |
-| ActivityDate | timestamp |  |
-| iif(AssetType == "Email", AssetName, null) | directMarketing.mailingName | |
-| iif(AssetType == "Email", to_object("sourceType", "Eloqua", "sourceInstanceID", "${SOURCE_INSTANCE_ID}","sourceID",${AssetId}, "sourceKey", concat(${AssetId},"\\@${SOURCE_INSTANCE_ID}.Eloqua")), null) | directMarketing.mailingKey | SOURCE_INSTANCE_ID will be automatically replaced by the connector |
-| iif(AssetType == "Email", EmailAddress, null) | directMarketing.email | |
-| iif(ActivityType == "Bounceback", SmtpStatusCode, null) | directMarketing.emailBouncedCode | |
-| iif(AssetType == "Email", SmtpMessage, null) | directMarketing.emailBouncedDetails | |
-| iif(AssetType == "Email", EmailWebLink, null) | directMarketing.linkURL | |
-| iif(ActivityType == "FormSubmit", AssetName, null) | web.fillOutForm.webFormName | |
-| iif(ActivityType == "FormSubmit", to_object("sourceType", "Eloqua", "sourceInstanceID", "${SOURCE_INSTANCE_ID}","sourceID",${AssetId}, "sourceKey", concat(${AssetId},"\\@${SOURCE_INSTANCE_ID}.Eloqua")), null) | web.fillOutForm.webFormKey | SOURCE_INSTANCE_ID will be automatically replaced by the connector |
-| iif(ActivityType == "PageView", AssetName, null) | web.webPageDetails.name | |
-| iif(ActivityType == "PageView", to_object("sourceType", "Eloqua", "sourceInstanceID", "${SOURCE_INSTANCE_ID}","sourceID",${AssetId}, "sourceKey", concat(${AssetId},"\\@${SOURCE_INSTANCE_ID}.Eloqua")), null) | web.webPageDetails.webPageKey | SOURCE_INSTANCE_ID will be automatically replaced by the connector |
-| iif(ActivityType == "PageView", Url, null) | web.webPageDetails.URL | |
+| `"Eloqua"` | personKey.sourceType | This field is always set to the fixed value "Eloqua." |
+| `"${SOURCE_INSTANCE_ID}"` | personKey.sourceInstanceID | The `SOURCE_INSTANCE_ID` will be automatically replaced by the connector. |
+| `ContactId` | personKey.sourceID |  |
+| `concat(ContactId, "\\@${SOURCE_INSTANCE_ID}.Eloqua")` | personKey.sourceKey | The `SOURCE_INSTANCE_ID` will be automatically replaced by the connector. |
+| `ExternalId` | _id |  |
+| `iif(ActivityType!=null && ActivityType!="", iif(ActivityType=="EmailSend", "directMarketing.emailSent", iif(ActivityType=="EmailOpen", "directMarketing.emailOpened", iif(ActivityType=="EmailClickthrough", "directMarketing.emailClicked", iif(ActivityType=="Unsubscribe", "directMarketing.emailUnsubscribed", iif(ActivityType=="Bounceback", "directMarketing.emailBounced", iif(ActivityType=="FormSubmit", "web.formFilledOut", iif(ActivityType=="PageView", "web.webpagedetails.pageViews", ActivityType))))))), null)` | eventType | Based on the ActivityType, the corresponding Experience Platform eventType value will be populated. For ExternalActivities, there is no eventType in Experience Platform. You can modify this mapping to handle more types. |
+| `ActivityDate` | timestamp | |
+| `iif(AssetType == "Email", AssetName, null)` | directMarketing.mailingName | |
+| `iif(AssetType == "Email", to_object("sourceType", "Eloqua", "sourceInstanceID", "${SOURCE_INSTANCE_ID}","sourceID",${AssetId}, "sourceKey", concat(${AssetId},"\\@${SOURCE_INSTANCE_ID}.Eloqua")), null)` | directMarketing.mailingKey | The `SOURCE_INSTANCE_ID` will be automatically replaced by the connector. |
+| `iif(AssetType == "Email", EmailAddress, null)` | directMarketing.email | |
+| `iif(ActivityType == "Bounceback", SmtpStatusCode, null)` | directMarketing.emailBouncedCode | |
+| `iif(AssetType == "Email", SmtpMessage, null)` | directMarketing.emailBouncedDetails | |
+| `iif(AssetType == "Email", EmailWebLink, null)` | directMarketing.linkURL | |
+| `iif(ActivityType == "FormSubmit", AssetName, null)` | web.fillOutForm.webFormName | |
+| `iif(ActivityType == "FormSubmit", to_object("sourceType", "Eloqua", "sourceInstanceID", "${SOURCE_INSTANCE_ID}","sourceID",${AssetId}, "sourceKey", concat(${AssetId},"\\@${SOURCE_INSTANCE_ID}.Eloqua")), null)` | web.fillOutForm.webFormKey | The `SOURCE_INSTANCE_ID` will be automatically replaced by the connector. |
+| `iif(ActivityType == "PageView", AssetName, null)` | web.webPageDetails.name | |
+| `iif(ActivityType == "PageView", to_object("sourceType", "Eloqua", "sourceInstanceID", "${SOURCE_INSTANCE_ID}","sourceID",${AssetId}, "sourceKey", concat(${AssetId},"\\@${SOURCE_INSTANCE_ID}.Eloqua")), null)` | web.webPageDetails.webPageKey | The `SOURCE_INSTANCE_ID` will be automatically replaced by the connector. |
+| `iif(ActivityType == "PageView", Url, null)` | web.webPageDetails.URL | |
 
 {style="table-layout:auto"}
 
 ### Campaigns
 
-
 | Eloqua Source Column | XDM Destination Path | Notes |
 | --- | --- | --- |
-| "Eloqua" | campaignKey.sourceType | Fixed value "Eloqua" |
-| "${SOURCE_INSTANCE_ID}" | campaignKey.sourceInstanceID | SOURCE_INSTANCE_ID will be automatically replaced by the connector |
-| id | campaignKey.sourceID | |
-| concat(id, "\\@${SOURCE_INSTANCE_ID}.Eloqua") | campaignKey.sourceKey | SOURCE_INSTANCE_ID will be automatically replaced by the connector |
-| name | campaignName | |
-| endAt | campaignEndDate | |
-| startAt | campaignStartDate | |
-| actualCost | actualCost.amount | |
-| budgetedCost | budgetedCost.amount | |
-| description | campaignDescription | |
-| currentStatus | campaignStatus | |
-| campaignType | campaignType | |
-| createdAt | extSourceSystemAudit.createdDate | |
-| updatedAt | extSourceSystemAudit.lastUpdatedDate | |
+| `"Eloqua"` | campaignKey.sourceType | This field is always set to the fixed value "Eloqua." |
+| `"${SOURCE_INSTANCE_ID}"` | campaignKey.sourceInstanceID | The `SOURCE_INSTANCE_ID` will be automatically replaced by the connector. |
+| `id` | campaignKey.sourceID | |
+| `concat(id, "\\@${SOURCE_INSTANCE_ID}.Eloqua")` | campaignKey.sourceKey | The `SOURCE_INSTANCE_ID` will be automatically replaced by the connector. |
+| `name` | campaignName | |
+| `endAt` | campaignEndDate | |
+| `startAt` | campaignStartDate | |
+| `actualCost` | actualCost.amount | |
+| `budgetedCost` | budgetedCost.amount | |
+| `description` | campaignDescription | |
+| `currentStatus` | campaignStatus | |
+| `campaignType` | campaignType | |
+| `createdAt` | extSourceSystemAudit.createdDate | |
+| `updatedAt` | extSourceSystemAudit.lastUpdatedDate | |
 
 {style="table-layout:auto"}
 
@@ -174,50 +172,50 @@ The following tables provide detailed mappings between [!DNL Oracle Eloqua] sour
 
 | Eloqua Source Column | XDM Destination Path | Notes |
 | --- | --- | --- |
-| "Eloqua" | b2b.personKey.sourceType | Fixed value "Eloqua" |
-| "${SOURCE_INSTANCE_ID}" | b2b.personKey.sourceInstanceID | SOURCE_INSTANCE_ID will be automatically replaced by the connector |
-| Id | b2b.personKey.sourceID |  |
-| concat(Id, "\\@${SOURCE_INSTANCE_ID}.Eloqua" | b2b.personKey.sourceKey | SOURCE_INSTANCE_ID will be automatically replaced by the connector |
-| C_Company | b2b.companyName |  |
-| C_Website1 | b2b.companyWebsite |  |
-| C_Job_Title1 | extendedWorkDetails.jobTitle |  |
-| C_Fax | faxPhone.number |  |
-| C_MobilePhone | mobilePhone.number |  |
-| iif(C_SFDCLeadID != null && C_SFDCLeadID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCLeadID, "sourceKey", concat(C_SFDCLeadID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_SFDCContactID != null && C_SFDCContactID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCContactID, "sourceKey", concat(C_SFDCContactID, "\\@${CRM_INSTANCE_ID}.Salesforce")), null)) | personComponents.sourceExternalKey | If Eloqua instance is synced with Salesforce, then keep this. Else remove. Connector doesn't have a way to determine the CRM_INSTANCE_ID, so please replace ${CRM_INSTNANCE)ID} with your synced salesforce instance id. The same mappings goes to personComponents and extSourceSystemAudit. So keep both |
-| iif(C_MSCRMLeadID != null && C_MSCRMLeadID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMLeadID, "sourceKey", concat(C_MSCRMLeadID, "\\@${CRM_INSTANCE_ID}.Dynamics")), iif(C_MSCRMContactID != null && C_MSCRMContactID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMContactID, "sourceKey", concat(C_MSCRMContactID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null))" | personComponents.sourceExternalKey | If Eloqua instance is synced with Dynamics, then keep this. Else remove. Connector doesn't have a way to determine the CRM_INSTANCE_ID, so please replace ${CRM_INSTNANCE)ID} with your synced Dynamics instance id. The same mappings goes to personComponents and extSourceSystemAudit. So keep both |
-| iif(C_SFDCLeadID != null && C_SFDCLeadID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCLeadID, "sourceKey", concat(C_SFDCLeadID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_SFDCContactID != null && C_SFDCContactID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCContactID, "sourceKey", concat(C_SFDCContactID, "\\@${CRM_INSTANCE_ID}.Salesforce")), null))" | extSourceSystemAudit.externalKey | If Eloqua instance is synced with Salesforce, then keep this. Else remove. Connector doesn't have a way to determine the CRM_INSTANCE_ID, so please replace ${CRM_INSTNANCE)ID} with your synced salesforce instance id. The same mappings goes to personComponents and extSourceSystemAudit. So keep both |
-| iif(C_MSCRMLeadID != null && C_MSCRMLeadID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMLeadID, "sourceKey", concat(C_MSCRMLeadID, "\\@${CRM_INSTANCE_ID}.Dynamics")), iif(C_MSCRMContactID != null && C_MSCRMContactID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMContactID, "sourceKey", concat(C_MSCRMContactID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null)) | extSourceSystemAudit.externalKey | If Eloqua instance is synced with Dynamics, then keep this. Else remove. Connector doesn't have a way to determine the CRM_INSTANCE_ID, so please replace ${CRM_INSTNANCE)ID} with your synced Dynamics instance id. The same mappings goes to personComponents and extSourceSystemAudit. So keep both |
-| C_DateCreated | extSourceSystemAudit.createdDate |  |
-| C_DateModified | extSourceSystemAudit.lastUpdatedDate |  |
-| iif(C_SFDCAccountID != null && C_SFDCAccountID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCAccountID, "sourceKey", concat(C_SFDCAccountID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_MSCRMAccountID != null && C_MSCRMAccountID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMAccountID, "sourceKey", concat(C_MSCRMAccountID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null)) | b2b.accountKey | Connector doesn't have a way to determine the CRM_INSTANCE_ID, so please replace ${CRM_INSTNANCE)ID} with your synced CRM instance id, either salesforce instance id or dynamics instance id. The same mappings goes to b2b.accountKey and personComponents.sourceAccountKey. So keep both |
-| iif(C_SFDCAccountID != null && C_SFDCAccountID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCAccountID, "sourceKey", concat(C_SFDCAccountID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_MSCRMAccountID != null && C_MSCRMAccountID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMAccountID, "sourceKey", concat(C_MSCRMAccountID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null)) | personComponents.sourceAccountKey | Connector doesn't have a way to determine the CRM_INSTANCE_ID, so please replace ${CRM_INSTNANCE)ID} with your synced CRM instance id, either salesforce instance id or dynamics instance id. The same mappings goes to b2b.accountKey and personComponents.sourceAccountKey. So keep both |
-| C_Lead_Source___Original1 | b2b.personSource | |
-| C_Lead_Source___Original1 | personComponents.personSource | |
-| C_Lead_Status1 | b2b.personStatus | |
-| C_Lead_Status1 | personComponents.personStatus | |
-| C_FirstName | person.name.firstName | |
-| C_LastName | person.name.lastName | |
-| C_Middle_Name1 | person.name.middleName | |
-| C_Salutation | person.name.courtesyTitle | |
-| C_City | workAddress.city | |
-| C_Country | workAddress.country | |
-| C_Zip_Postal | workAddress.postalCode | |
-| C_State_Prov | workAddress.state | |
+| `"Eloqua"` | b2b.personKey.sourceType | This field is always set to the fixed value "Eloqua." |
+| `"${SOURCE_INSTANCE_ID}"` | b2b.personKey.sourceInstanceID | The `SOURCE_INSTANCE_ID` will be automatically replaced by the connector. |
+| `Id` | b2b.personKey.sourceID |  |
+| `concat(Id, "\\@${SOURCE_INSTANCE_ID}.Eloqua"` | b2b.personKey.sourceKey | The `SOURCE_INSTANCE_ID` will be automatically replaced by the connector. |
+| `C_Company` | b2b.companyName |  |
+| `C_Website1` | b2b.companyWebsite |  |
+| `C_Job_Title1` | extendedWorkDetails.jobTitle |  |
+| `C_Fax` | faxPhone.number |  |
+| `C_MobilePhone` | mobilePhone.number |  |
+| `iif(C_SFDCLeadID != null && C_SFDCLeadID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCLeadID, "sourceKey", concat(C_SFDCLeadID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_SFDCContactID != null && C_SFDCContactID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCContactID, "sourceKey", concat(C_SFDCContactID, "\\@${CRM_INSTANCE_ID}.Salesforce")), null))` | personComponents.sourceExternalKey | If the [!DNL Oracle Eloqua] instance is synced with Salesforce, then keep this mapping. Otherwise, remove it. The connector does not have a way to determine the CRM_INSTANCE_ID, so you must replace ${CRM_INSTANCE_ID} with your synced Salesforce instance ID. This same mapping applies to personComponents and extSourceSystemAudit, so keep both. |
+| `iif(C_MSCRMLeadID != null && C_MSCRMLeadID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMLeadID, "sourceKey", concat(C_MSCRMLeadID, "\\@${CRM_INSTANCE_ID}.Dynamics")), iif(C_MSCRMContactID != null && C_MSCRMContactID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMContactID, "sourceKey", concat(C_MSCRMContactID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null))"` | personComponents.sourceExternalKey | If the [!DNL Oracle Eloqua] instance is synced with Dynamics, then keep this mapping. Otherwise, remove it. The connector does not have a way to determine the CRM_INSTANCE_ID, so you must replace ${CRM_INSTANCE_ID} with your synced Dynamics instance ID. This same mapping applies to personComponents and extSourceSystemAudit, so keep both. |
+| `iif(C_SFDCLeadID != null && C_SFDCLeadID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCLeadID, "sourceKey", concat(C_SFDCLeadID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_SFDCContactID != null && C_SFDCContactID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCContactID, "sourceKey", concat(C_SFDCContactID, "\\@${CRM_INSTANCE_ID}.Salesforce")), null))"` | extSourceSystemAudit.externalKey | If the [!DNL Oracle Eloqua] instance is synced with Salesforce, then keep this mapping. Otherwise, remove it. The connector does not have a way to determine the CRM_INSTANCE_ID, so you must replace ${CRM_INSTANCE_ID} with your synced Salesforce instance ID. This same mapping applies to personComponents and extSourceSystemAudit, so keep both. |
+| `iif(C_MSCRMLeadID != null && C_MSCRMLeadID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMLeadID, "sourceKey", concat(C_MSCRMLeadID, "\\@${CRM_INSTANCE_ID}.Dynamics")), iif(C_MSCRMContactID != null && C_MSCRMContactID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMContactID, "sourceKey", concat(C_MSCRMContactID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null))` | extSourceSystemAudit.externalKey | If the [!DNL Oracle Eloqua] instance is synced with Dynamics, then keep this mapping. Otherwise, remove it. The connector does not have a way to determine the CRM_INSTANCE_ID, so you must replace ${CRM_INSTANCE_ID} with your synced Dynamics instance ID. This same mapping applies to personComponents and extSourceSystemAudit, so keep both. |
+| `C_DateCreated` | extSourceSystemAudit.createdDate |  |
+| `C_DateModified` | extSourceSystemAudit.lastUpdatedDate |  |
+| `iif(C_SFDCAccountID != null && C_SFDCAccountID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCAccountID, "sourceKey", concat(C_SFDCAccountID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_MSCRMAccountID != null && C_MSCRMAccountID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMAccountID, "sourceKey", concat(C_MSCRMAccountID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null))` | b2b.accountKey | The connector does not have a way to determine the CRM_INSTANCE_ID, so you must replace ${CRM_INSTANCE_ID} with your synced CRM instance ID, either the Salesforce instance ID or the Dynamics instance ID. This same mapping applies to both b2b.accountKey and personComponents.sourceAccountKey, so keep both. |
+| `iif(C_SFDCAccountID != null && C_SFDCAccountID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCAccountID, "sourceKey", concat(C_SFDCAccountID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_MSCRMAccountID != null && C_MSCRMAccountID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMAccountID, "sourceKey", concat(C_MSCRMAccountID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null))` | personComponents.sourceAccountKey | The connector does not have a way to determine the CRM_INSTANCE_ID, so you must replace ${CRM_INSTANCE_ID} with your synced CRM instance ID, either the Salesforce instance ID or the Dynamics instance ID. This same mapping applies to both b2b.accountKey and personComponents.sourceAccountKey, so keep both. |
+| `C_Lead_Source___Original1` | b2b.personSource | |
+| `C_Lead_Source___Original1` | personComponents.personSource | |
+| `C_Lead_Status1` | b2b.personStatus | |
+| `C_Lead_Status1` | personComponents.personStatus | |
+| `C_FirstName` | person.name.firstName | |
+| `C_LastName` | person.name.lastName | |
+| `C_Middle_Name1` | person.name.middleName | |
+| `C_Salutation` | person.name.courtesyTitle | |
+| `C_City` | workAddress.city | |
+| `C_Country` | workAddress.country | |
+| `C_Zip_Postal` | workAddress.postalCode | |
+| `C_State_Prov` | workAddress.state | |
 
 {style="table-layout:auto"}
 
 ### Activity type mapping reference
 
 | Eloqua ActivityType | XDM eventType |
-|--------------------|---------------|
-| EmailSend | directMarketing.emailSent |
-| EmailOpen | directMarketing.emailOpened |
-| EmailClickthrough | directMarketing.emailClicked |
-| Unsubscribe | directMarketing.emailUnsubscribed |
-| Bounceback | directMarketing.emailBounced |
-| FormSubmit | web.formFilledOut |
-| PageView | web.webpagedetails.pageViews |
-| Other | pass through as-is |
+| -------------------- | --------------- |
+| `EmailSend` | directMarketing.emailSent |
+| `EmailOpen` | directMarketing.emailOpened |
+| `EmailClickthrough` | directMarketing.emailClicked |
+| `Unsubscribe` | directMarketing.emailUnsubscribed |
+| `Bounceback` | directMarketing.emailBounced |
+| `FormSubmit` | web.formFilledOut |
+| `PageView` | web.webpagedetails.pageViews |
+| `Other` | pass through as-is |
 
 {style="table-layout:auto"}
 
