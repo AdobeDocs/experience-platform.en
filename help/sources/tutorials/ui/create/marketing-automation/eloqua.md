@@ -64,15 +64,45 @@ Mappings for [!DNL Oracle Eloqua] are organized into four main entity types:
 * **Campaigns** - Marketing campaign records from [!DNL Oracle Eloqua].
 * **Contacts** - Individual person records from [!DNL Oracle Eloqua].
 
+To ensure your external CRM information is accurately reflected, simply use the calculated field function in Data Prep to update the `{CRM_INSTANCE_ID}` placeholder with your specific CRM instance ID in the source data field. This gives you the flexibility to tailor the integration to your organization's unique setup.
+
+To use the calculated field editor, select the source field that you want to update.
+
+![The Eloqua source field with calculated fields.](../../../../images/tutorials/create/eloqua/select-calculated-field.png)
+
+>[!BEGINTABS]
+
+>[!TAB Salesforce]
+
+For [!DNL Salesforce] users, use the calculated field editor and update the `{CRM_INSTANCE_ID}` with the appropriate instance ID.
+
+![The calculated field for Salesforce.](../../../../images/tutorials/create/eloqua/sf-field.png)
+
+>[!TAB Microsoft Dynamics]
+
+For [!DNL Microsoft] users, use the calculated field editor and update the `{CRM_INSTANCE_ID}` with the appropriate instance ID.
+
+![The calculated field for Dynamics.](../../../../images/tutorials/create/eloqua/dynamics-field.png)
+
+>[!ENDTABS]
+
 ![The mapping interface showing field mappings for Oracle Eloqua data entities.](../../../../images/tutorials/create/eloqua/mapping.png)
 
 ## Scheduling
 
+>[!NOTE]
+>
+>The following are the delta fields used internally for incremental data loading:
+>
+>- **Contacts:** `C_DateModified`
+>- **Accounts:** `M_DateModified`
+>- **Activity:** `CreatedAt`
+>- **Custom Objects:** `UpdatedAt`
+>- **Campaign:** `updatedAt`
+
 With your mapping complete, you can now configure an ingestion schedule for your dataflow. Set your [!UICONTROL Frequency] to `Once` to configure a one-time ingestion run. For incremental ingestion, you can set your [!UICONTROL Frequency] to `Hour`, `Day`, or `Week`. When using incremental ingestion, you must also configure the [!UICONTROL Interval] to define the amount of time that occurs between ingestion runs. For example, an ingestion frequency set to `Day` and  an interval set to `15` means that your dataflow is scheduled to ingest data every 15 days.
 
->[!TIP]
->
-> Per-minute ingestion frequency is not available for the [!DNL Oracle Eloqua] source. The most frequent schedule you can choose is hourly. Select a schedule that matches your data freshness needs. Keep in mind that selecting a more frequent schedule will increase compute costs.
+Per-minute ingestion frequency is not available for the [!DNL Oracle Eloqua] source. The most frequent schedule you can choose is hourly. Select a schedule that matches your data freshness needs. Keep in mind that selecting a more frequent schedule will increase compute costs.
 
 ![The scheduling interface with options to configure ingestion frequency and interval.](../../../../images/tutorials/create/eloqua/scheduling.png)
 

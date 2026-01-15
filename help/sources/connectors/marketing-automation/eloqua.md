@@ -83,6 +83,16 @@ You must provide values for the following credentials to connect [!DNL Oracle El
 
 ## [!DNL Oracle Eloqua] mapping guide
 
+>[!NOTE]
+>
+>The following are the delta fields used internally for incremental data loading:
+>
+>- **Contacts:** `C_DateModified`
+>- **Accounts:** `M_DateModified`
+>- **Activity:** `CreatedAt`
+>- **Custom Objects:** `UpdatedAt`
+>- **Campaign:** `updatedAt`
+
 The following tables provide detailed mappings between [!DNL Oracle Eloqua] source fields and their corresponding Experience Data Model (XDM) destination fields in Experience Platform. Each row outlines the transformation logic, whether the field is immutable, and provides additional notes to help you understand how your [!DNL Oracle Eloqua] data will be ingested and structured in Experience Platform.
 
 ### Accounts
@@ -122,7 +132,7 @@ The following tables provide detailed mappings between [!DNL Oracle Eloqua] sour
 | ContactId | personKey.sourceID |  |
 | concat(ContactId, "\\@${SOURCE_INSTANCE_ID}.Eloqua") | personKey.sourceKey | SOURCE_INSTANCE_ID will be automatically replaced by the connector |
 | ExternalId | _id |  |
-| iif(ActivityType!=null && ActivityType!="", iif(ActivityType=="EmailSend", "directMarketing.emailSent", iif(ActivityType=="EmailOpen", "directMarketing.emailOpened", iif(ActivityType=="EmailClickthrough", "directMarketing.emailClicked", iif(ActivityType=="Unsubscribe", "directMarketing.emailUnsubscribed", iif(ActivityType=="Bounceback", "directMarketing.emailBounced", iif(ActivityType=="FormSubmit", "web.formFilledOut", iif(ActivityType=="PageView", "web.webpagedetails.pageViews", ActivityType))))))), null) | eventType | Based on the ActivityType, the corresponding AEP evetType value will get populated. For ExternalActivities there is no eventType in AEP. You can modify this mapping to handle more types. |
+| iif(ActivityType!=null && ActivityType!="", iif(ActivityType=="EmailSend", "directMarketing.emailSent", iif(ActivityType=="EmailOpen", "directMarketing.emailOpened", iif(ActivityType=="EmailClickthrough", "directMarketing.emailClicked", iif(ActivityType=="Unsubscribe", "directMarketing.emailUnsubscribed", iif(ActivityType=="Bounceback", "directMarketing.emailBounced", iif(ActivityType=="FormSubmit", "web.formFilledOut", iif(ActivityType=="PageView", "web.webpagedetails.pageViews", ActivityType))))))), null) | eventType | Based on the ActivityType, the corresponding Experience Platform eventType value will get populated. For ExternalActivities there is no eventType in Experience Platform. You can modify this mapping to handle more types. |
 | ActivityDate | timestamp |  |
 | iif(AssetType == "Email", AssetName, null) | directMarketing.mailingName | |
 | iif(AssetType == "Email", to_object("sourceType", "Eloqua", "sourceInstanceID", "${SOURCE_INSTANCE_ID}","sourceID",${AssetId}, "sourceKey", concat(${AssetId},"\\@${SOURCE_INSTANCE_ID}.Eloqua")), null) | directMarketing.mailingKey | SOURCE_INSTANCE_ID will be automatically replaced by the connector |
