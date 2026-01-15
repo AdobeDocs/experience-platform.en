@@ -8,18 +8,20 @@ description: Learn how to connect Oracle Eloqua to Adobe Experience Platform.
 >
 >The original [[!DNL Oracle Eloqua] (V1)](oracle-eloqua.md) source has been deprecated as of January 2026. There are no migrations available for this deprecated source and you must re-implement your data using the new [!DNL Oracle Eloqua] (V2) source.
 
-[!DNL Oracle Eloqua] is a powerful, enterprise-grade marketing automation platform designed to help organizations, primarily in the B2B space, automate and personalize the complex process of managing leads and orchestrating buyer journeys. It serves as a central hub where marketing teams can define, deploy, and measure sophisticated campaigns across multiple digital channels, ensuring prospects receive the right content at the precise moment they are most engaged. The supported objects for ingestion through [!DNL Oracle Eloqua] are **Contacts**, **Accounts**, **Campaigns**, and **Activities**. Once the initial ingestion is completed, any changed data is imported using a scheduled incremental process.
+[!DNL Oracle Eloqua] is a powerful, enterprise-grade marketing automation platform designed to help organizations, primarily in the B2B space, automate and personalize the complex process of managing leads and orchestrating buyer journeys. It serves as a central hub where marketing teams can define, deploy, and measure sophisticated campaigns across multiple digital channels, ensuring prospects receive the right content at the precise moment they are most engaged. The supported objects for ingestion through [!DNL Eloqua] are **Contacts**, **Accounts**, **Campaigns**, and **Activities**. Once the initial ingestion is completed, any changed data is imported using a scheduled incremental process.
 
-You can use the [!DNL Oracle Eloqua] source to connect your [!DNL Oracle Eloqua] account to Adobe Experience Platform. Read the documentation below to learn how to get started.
+You can use the [!DNL Eloqua] source to connect your [!DNL Eloqua] account to Adobe Experience Platform. Read the documentation below to learn how to get started.
 
 ## Use case examples {#use-case-examples}
 
+Below is a table outlining the marketing objects supported by the [!DNL Eloqua] (V2) integration with Adobe Experience Platform. For each object, you'll find a description along with sample use cases to illustrate how integrating [!DNL Eloqua] data with Real-Time CDP can boost marketing effectiveness and campaign outcomes.
+
 | Object | Description | Use case examples |
 | --- | --- | --- |
-| Contacts | Ingest contact data (such as name, email, phone number, job title) into Real-Time CDP to create detailed, unified customer profiles that consolidate all the interactions and engagements with each individual contact. | **Campaign Optimization:** By integrating contact data from [!DNL Oracle Eloqua], your marketing team can identify high-priority prospects based on recent activities like email opens, form submissions, and event registrations. Real-Time CDP provides a 360° view of each contact's behavior across email, website, and other marketing touchpoints, allowing marketing teams to tailor campaigns and optimize messaging for better engagement and conversion. |
-| Accounts | Ingest account-level data (such as company name, industry, company size, revenue, location) to build account-based marketing (ABM) strategies in Real-Time CDP, and enable your team to target and engage the right organizations with relevant messaging. | **ABM Campaigns:** Integrating account data from [!DNL Oracle Eloqua] helps build targeted ABM campaigns. For example, a software company could use the account data to segment and send customized email campaigns to decision-makers at companies in the finance sector, promoting new solutions tailored to their industry. |
-| Campaigns | Ingest campaign data (such as campaign names, types, goals, performance metrics like open rates, CTRs) into the Real-Time CDP to track and optimize campaign performance across multiple channels. Use this data to measure ROI and refine your strategies. | **Cross‑Channel Attribution:** If [!DNL Oracle Eloqua] sends campaign data to Real-Time CDP, marketing teams can view the performance of campaigns across various channels (email, social media, ads, etc.), attributing conversions to the right touch points and refining future strategies based on that insight. |
-| Activities | Ingest activity data (such as email opens, clicks, website visits, form submissions, webinar attendance) to track the real-time behavior of leads and contacts across different channels, creating opportunities for real‑time personalized engagement. | **Real-Time Lead Nurturing:** By integrating activity data from [!DNL Oracle Eloqua], Real-Time CDP can trigger personalized emails or notifications to sales teams when a lead engages with content (such as downloading a whitepaper or clicking on an email link), allowing for timely follow-up and better conversion opportunities. |
+| Contacts | Ingest contact data (such as name, email, phone number, job title) into Real-Time CDP to create detailed, unified customer profiles that consolidate all the interactions and engagements with each individual contact. | **Campaign Optimization:** By integrating contact data from [!DNL Eloqua], your marketing team can identify high-priority prospects based on recent activities like email opens, form submissions, and event registrations. Real-Time CDP provides a 360° view of each contact's behavior across email, website, and other marketing touchpoints, allowing marketing teams to tailor campaigns and optimize messaging for better engagement and conversion. |
+| Accounts | Ingest account-level data (such as company name, industry, company size, revenue, location) to build account-based marketing (ABM) strategies in Real-Time CDP, and enable your team to target and engage the right organizations with relevant messaging. | **ABM Campaigns:** Integrating account data from [!DNL Eloqua] helps build targeted ABM campaigns. For example, a software company could use the account data to segment and send customized email campaigns to decision-makers at companies in the finance sector, promoting new solutions tailored to their industry. |
+| Campaigns | Ingest campaign data (such as campaign names, types, goals, performance metrics like open rates, CTRs) into the Real-Time CDP to track and optimize campaign performance across multiple channels. Use this data to measure ROI and refine your strategies. | **Cross‑Channel Attribution:** If [!DNL Eloqua] sends campaign data to Real-Time CDP, marketing teams can view the performance of campaigns across various channels (email, social media, ads, etc.), attributing conversions to the right touch points and refining future strategies based on that insight. |
+| Activities | Ingest activity data (such as email opens, clicks, website visits, form submissions, webinar attendance) to track the real-time behavior of leads and contacts across different channels, creating opportunities for real‑time personalized engagement. | **Real-Time Lead Nurturing:** By integrating activity data from [!DNL Eloqua], Real-Time CDP can trigger personalized emails or notifications to sales teams when a lead engages with content (such as downloading a whitepaper or clicking on an email link), allowing for timely follow-up and better conversion opportunities. |
 
 {style="table-layout:auto"}
 
@@ -29,9 +31,9 @@ Read the sections below for prerequisite set up that you must complete before yo
 
 ### Set up application for authentication
 
-Follow the steps below to learn how to set up your [!DNL Oracle Eloqua] account and connect to Experience Platform using basic authentication.
+Follow the steps below to learn how to set up your [!DNL Eloqua] account and connect to Experience Platform using basic authentication.
 
-To get started, log in to your [!DNL Oracle Eloqua] instance as an admin (or as a user who has access to create users, security groups, and apps).
+To get started, log in to your [!DNL Eloqua] instance as an admin (or as a user who has access to create users, security groups, and apps).
 
 ![The My Eloqua Dashboard.](../../images/tutorials/create/eloqua/admin.png)
 
@@ -44,7 +46,7 @@ Navigate to **Settings** > **Platform Extensions** > **App Cloud Developer** > *
 | Name | The name of your app. |
 | Description | A brief description for your app. |
 | Icon | The URL for the icon. |
-| OAuth Callback URL | The URL that users should be redirected to after installing the app and authenticating with [!DNL Oracle Eloqua]. |
+| OAuth Callback URL | The URL that users should be redirected to after installing the app and authenticating with [!DNL Eloqua]. |
 
 ![The create app window in Eloqua.](../../images/tutorials/create/eloqua/new-app.png)
 
@@ -66,21 +68,21 @@ Use the **[!DNL Security Group Overview]** window to provide a name and an acron
 >
 >[!DNL Consume] API is a required permission, but you can add more permissions depending on your usage of the app.
 
-You can optionally create additional an additional user and add that user to a security group. For detailed steps, read the [!DNL Oracle Eloqua] documentation on [creating a user](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm) and [assigning a user to a security group](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm).
+You can optionally create additional an additional user and add that user to a security group. For detailed steps, read the [!DNL Eloqua] documentation on [creating a user](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm) and [assigning a user to a security group](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm).
 
 ### Gather required credentials
 
-You must provide values for the following credentials to connect [!DNL Oracle Eloqua] to Experience Platform.
+You must provide values for the following credentials to connect [!DNL Eloqua] to Experience Platform.
 
 | Credential | Description |
 | --- | --- |
-| Client ID |  The publicly exposed identifier used by [!DNL Oracle Eloqua] to identify your account when authorizing to Experience Platform. |
+| Client ID |  The publicly exposed identifier used by [!DNL Eloqua] to identify your account when authorizing to Experience Platform. |
 | Client secret | The confidential key known only to the client application and authorization server. This key is required alongside the client ID in order to authenticate your account. |
-| Username | The username associated with your [!DNL Oracle Eloqua] account. The username follows the format of `CompanyName\Username`.|
-| Password | The password associated with your [!DNL Oracle Eloqua] account. |
-| Base endpoint | The prefix of your authentication base URI for [!DNL Oracle Eloqua]. The base endpoint should not include `http://` or `https://` when authenticating. |
+| Username | The username associated with your [!DNL Eloqua] account. This is used to verify and authorize your access. The username follows the format of `CompanyName\Username`. |
+| Password | The password associated with your [!DNL Eloqua] account. Along with your username, it grants access to your Eloqua environment. |
+| Base endpoint | The prefix of your authentication base URI for [!DNL Eloqua]. The base endpoint should not include `http://` or `https://` when authenticating. |
 
-## [!DNL Oracle Eloqua] mapping guide
+## [!DNL Eloqua] mapping guide
 
 >[!NOTE]
 >
@@ -92,7 +94,7 @@ You must provide values for the following credentials to connect [!DNL Oracle El
 >- **Custom Objects:** `UpdatedAt`
 >- **Campaign:** `updatedAt`
 
-The following tables provide detailed mappings between [!DNL Oracle Eloqua] source fields and their corresponding Experience Data Model (XDM) destination fields in Experience Platform. Each row outlines the transformation logic, whether the field is immutable, and provides additional notes to help you understand how your [!DNL Oracle Eloqua] data will be ingested and structured in Experience Platform.
+The following tables provide detailed mappings between [!DNL Eloqua] source fields and their corresponding Experience Data Model (XDM) destination fields in Experience Platform. Each row outlines the transformation logic, whether the field is immutable, and provides additional notes to help you understand how your [!DNL Eloqua] data will be ingested and structured in Experience Platform.
 
 ### Accounts
 
@@ -181,10 +183,10 @@ The following tables provide detailed mappings between [!DNL Oracle Eloqua] sour
 | `C_Job_Title1` | extendedWorkDetails.jobTitle |  |
 | `C_Fax` | faxPhone.number |  |
 | `C_MobilePhone` | mobilePhone.number |  |
-| `iif(C_SFDCLeadID != null && C_SFDCLeadID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCLeadID, "sourceKey", concat(C_SFDCLeadID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_SFDCContactID != null && C_SFDCContactID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCContactID, "sourceKey", concat(C_SFDCContactID, "\\@${CRM_INSTANCE_ID}.Salesforce")), null))` | personComponents.sourceExternalKey | If the [!DNL Oracle Eloqua] instance is synced with Salesforce, then keep this mapping. Otherwise, remove it. The connector does not have a way to determine the CRM_INSTANCE_ID, so you must replace ${CRM_INSTANCE_ID} with your synced Salesforce instance ID. This same mapping applies to personComponents and extSourceSystemAudit, so keep both. |
-| `iif(C_MSCRMLeadID != null && C_MSCRMLeadID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMLeadID, "sourceKey", concat(C_MSCRMLeadID, "\\@${CRM_INSTANCE_ID}.Dynamics")), iif(C_MSCRMContactID != null && C_MSCRMContactID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMContactID, "sourceKey", concat(C_MSCRMContactID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null))"` | personComponents.sourceExternalKey | If the [!DNL Oracle Eloqua] instance is synced with Dynamics, then keep this mapping. Otherwise, remove it. The connector does not have a way to determine the CRM_INSTANCE_ID, so you must replace ${CRM_INSTANCE_ID} with your synced Dynamics instance ID. This same mapping applies to personComponents and extSourceSystemAudit, so keep both. |
-| `iif(C_SFDCLeadID != null && C_SFDCLeadID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCLeadID, "sourceKey", concat(C_SFDCLeadID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_SFDCContactID != null && C_SFDCContactID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCContactID, "sourceKey", concat(C_SFDCContactID, "\\@${CRM_INSTANCE_ID}.Salesforce")), null))"` | extSourceSystemAudit.externalKey | If the [!DNL Oracle Eloqua] instance is synced with Salesforce, then keep this mapping. Otherwise, remove it. The connector does not have a way to determine the CRM_INSTANCE_ID, so you must replace ${CRM_INSTANCE_ID} with your synced Salesforce instance ID. This same mapping applies to personComponents and extSourceSystemAudit, so keep both. |
-| `iif(C_MSCRMLeadID != null && C_MSCRMLeadID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMLeadID, "sourceKey", concat(C_MSCRMLeadID, "\\@${CRM_INSTANCE_ID}.Dynamics")), iif(C_MSCRMContactID != null && C_MSCRMContactID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMContactID, "sourceKey", concat(C_MSCRMContactID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null))` | extSourceSystemAudit.externalKey | If the [!DNL Oracle Eloqua] instance is synced with Dynamics, then keep this mapping. Otherwise, remove it. The connector does not have a way to determine the CRM_INSTANCE_ID, so you must replace ${CRM_INSTANCE_ID} with your synced Dynamics instance ID. This same mapping applies to personComponents and extSourceSystemAudit, so keep both. |
+| `iif(C_SFDCLeadID != null && C_SFDCLeadID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCLeadID, "sourceKey", concat(C_SFDCLeadID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_SFDCContactID != null && C_SFDCContactID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCContactID, "sourceKey", concat(C_SFDCContactID, "\\@${CRM_INSTANCE_ID}.Salesforce")), null))` | personComponents.sourceExternalKey | If the [!DNL Eloqua] instance is synced with Salesforce, then keep this mapping. Otherwise, remove it. The connector does not have a way to determine the CRM_INSTANCE_ID, so you must replace ${CRM_INSTANCE_ID} with your synced Salesforce instance ID. This same mapping applies to personComponents and extSourceSystemAudit, so keep both. |
+| `iif(C_MSCRMLeadID != null && C_MSCRMLeadID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMLeadID, "sourceKey", concat(C_MSCRMLeadID, "\\@${CRM_INSTANCE_ID}.Dynamics")), iif(C_MSCRMContactID != null && C_MSCRMContactID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMContactID, "sourceKey", concat(C_MSCRMContactID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null))"` | personComponents.sourceExternalKey | If the [!DNL Eloqua] instance is synced with Dynamics, then keep this mapping. Otherwise, remove it. The connector does not have a way to determine the CRM_INSTANCE_ID, so you must replace ${CRM_INSTANCE_ID} with your synced Dynamics instance ID. This same mapping applies to personComponents and extSourceSystemAudit, so keep both. |
+| `iif(C_SFDCLeadID != null && C_SFDCLeadID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCLeadID, "sourceKey", concat(C_SFDCLeadID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_SFDCContactID != null && C_SFDCContactID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCContactID, "sourceKey", concat(C_SFDCContactID, "\\@${CRM_INSTANCE_ID}.Salesforce")), null))"` | extSourceSystemAudit.externalKey | If the [!DNL Eloqua] instance is synced with Salesforce, then keep this mapping. Otherwise, remove it. The connector does not have a way to determine the CRM_INSTANCE_ID, so you must replace ${CRM_INSTANCE_ID} with your synced Salesforce instance ID. This same mapping applies to personComponents and extSourceSystemAudit, so keep both. |
+| `iif(C_MSCRMLeadID != null && C_MSCRMLeadID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMLeadID, "sourceKey", concat(C_MSCRMLeadID, "\\@${CRM_INSTANCE_ID}.Dynamics")), iif(C_MSCRMContactID != null && C_MSCRMContactID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMContactID, "sourceKey", concat(C_MSCRMContactID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null))` | extSourceSystemAudit.externalKey | If the [!DNL Eloqua] instance is synced with Dynamics, then keep this mapping. Otherwise, remove it. The connector does not have a way to determine the CRM_INSTANCE_ID, so you must replace ${CRM_INSTANCE_ID} with your synced Dynamics instance ID. This same mapping applies to personComponents and extSourceSystemAudit, so keep both. |
 | `C_DateCreated` | extSourceSystemAudit.createdDate |  |
 | `C_DateModified` | extSourceSystemAudit.lastUpdatedDate |  |
 | `iif(C_SFDCAccountID != null && C_SFDCAccountID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCAccountID, "sourceKey", concat(C_SFDCAccountID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_MSCRMAccountID != null && C_MSCRMAccountID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMAccountID, "sourceKey", concat(C_MSCRMAccountID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null))` | b2b.accountKey | The connector does not have a way to determine the CRM_INSTANCE_ID, so you must replace ${CRM_INSTANCE_ID} with your synced CRM instance ID, either the Salesforce instance ID or the Dynamics instance ID. This same mapping applies to both b2b.accountKey and personComponents.sourceAccountKey, so keep both. |
@@ -228,7 +230,7 @@ The mapping templates use the following variable placeholders that are replaced 
 | `${SOURCE_INSTANCE_ID}`| Unique ID for Eloqua source instance    | Used in source keys  |
 | `${CRM_INSTANCE_ID}`   | Unique ID for CRM system (Salesforce/Dynamics) | Used in external keys|
 
-## Connect [!DNL Oracle Eloqua] to Experience Platform
+## Connect [!DNL Eloqua] to Experience Platform
 
-Proceed to configure your [!DNL Oracle Eloqua] source connection within Experience Platform. For a step-by-step guide on setting up the connection through the UI, refer to the [tutorial here](../../tutorials/ui/create/marketing-automation/eloqua.md). Read this tutorial to learn about connecting your [!DNL Oracle Eloqua] account, selecting data, mapping fields, scheduling ingestions, and monitoring your dataflows.
+Proceed to configure your [!DNL Eloqua] source connection within Experience Platform. For a step-by-step guide on setting up the connection through the UI, refer to the [tutorial here](../../tutorials/ui/create/marketing-automation/eloqua.md). Read this tutorial to learn about connecting your [!DNL Eloqua] account, selecting data, mapping fields, scheduling ingestions, and monitoring your dataflows.
 
