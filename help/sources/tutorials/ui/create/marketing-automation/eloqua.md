@@ -47,6 +47,10 @@ To create a new account, select **[!UICONTROL New account]** and provide a name 
 
 Use the select data interface to select the [!DNL Oracle Eloqua] entity that you want to ingest to Experience Platform.
 
+>[!TIP]
+>
+>When selecting data, you will notice that, except for campaigns, the other entities display representative sample data. This approach ensures you can preview available fields and structure, as [!DNL Oracle Eloqua] public APIs currently retrieve real data for campaigns only. For the remaining entities, sample data is provided to support your configuration workflow.
+
 ![The data selection interface showing available Oracle Eloqua data entities.](../../../../images/tutorials/create/eloqua/select-data.png)
 
 ## Dataset and dataflow details {#details}
