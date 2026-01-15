@@ -112,7 +112,7 @@ When you are finished providing details for your destination connection, select 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_bing"
 >title="Preconfigured mapping sets"
->abstract="We have preconfigured these four mapping sets for you. You do not need to have profiles with all four identities on the profiles, as this destination will work with any of the target identities shown here."
+>abstract="We have preconfigured these two mapping sets for you. As you activate data to Microsoft Bing, the profiles qualified for the activated audiences must have at least an ECID identity associated with their profile, in order to be successfully exported to the destination."
 
 >[!IMPORTANT]
 > 
