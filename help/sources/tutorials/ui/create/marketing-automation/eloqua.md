@@ -94,11 +94,11 @@ For [!DNL Microsoft] users, use the calculated field editor and update the `{CRM
 >
 >The following are the delta fields used internally for incremental data loading:
 >
->- **Contacts:** `C_DateModified`
->- **Accounts:** `M_DateModified`
->- **Activity:** `CreatedAt`
->- **Custom Objects:** `UpdatedAt`
->- **Campaign:** `updatedAt`
+>* **Contacts:** `C_DateModified`
+>* **Accounts:** `M_DateModified`
+>* **Activity:** `CreatedAt`
+>* **Custom Objects:** `UpdatedAt`
+>* **Campaign:** `updatedAt`
 
 With your mapping complete, you can now configure an ingestion schedule for your dataflow. Set your [!UICONTROL Frequency] to `Once` to configure a one-time ingestion run. For incremental ingestion, you can set your [!UICONTROL Frequency] to `Hour`, `Day`, or `Week`. When using incremental ingestion, you must also configure the [!UICONTROL Interval] to define the amount of time that occurs between ingestion runs. For example, an ingestion frequency set to `Day` and  an interval set to `15` means that your dataflow is scheduled to ingest data every 15 days.
 
