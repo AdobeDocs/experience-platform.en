@@ -32,13 +32,13 @@ Error codes are grouped by functional domain to help you diagnose issues more qu
 
 The domains used in this document include:
 
-* **Request validation**: The request is malformed or contains invalid values. <!-- See [privacy jobs endpoint guide](./privacy-jobs.md) -->
-* **Authorization and provisioning**: Your organization or user lacks required access. <!-- See [manage permissions](../permissions.md) -->
-* **Identity and applicability**: Identifiers or namespaces are not applicable to the request. <!-- See [identity data for privacy requests](../identity-data.md) -->
-* **Rate limiting**: Submission volume exceeds platform limits. <!-- See [troubleshooting guide](../troubleshooting-guide.md#common-error-messages) -->
-* **Data access and processing**: The system cannot access or process requested data. <!-- See [troubleshooting guide](../troubleshooting-guide.md) -->
-* **Encryption and key management**: Required encryption keys are unavailable. <!-- See [Customer Managed Keys](../../landing/governance-privacy-security/customer-managed-keys/overview.md) -->
-* **Job execution state**: The job completed fully, partially, or with failures. <!-- See [privacy jobs endpoint guide](./privacy-jobs.md#status-categories) -->
+* **Request validation**: The request is malformed or contains invalid values. See the [privacy jobs endpoint guide](./privacy-jobs.md) for request structure and validation requirements.
+* **Authorization and provisioning**: Your organization or user lacks the required access. See [manage permissions](../permissions.md) to review role-based permission requirements.
+* **Identity and applicability**: Identifiers or namespaces are not applicable to the request. See [identity data for privacy requests](../identity-data.md) for supported identity types and namespace requirements.
+* **Rate limiting**: Submission volume exceeds platform limits. When this error occurs, reduce the submission rate and try again.
+* **Data access and processing**: The system cannot access or process the requested data. See the [troubleshooting guide](../troubleshooting-guide.md) for common causes and remediation steps.
+* **Encryption and key management**: Required encryption keys are unavailable. See [Customer Managed Keys](../../landing/governance-privacy-security/customer-managed-keys/overview.md) for key access, configuration, and recovery guidance.
+* **Job execution state**: The job completed fully, partially, or with failures. See the [privacy jobs endpoint guide](./privacy-jobs.md#status-categories) for descriptions of job status categories and their meanings.
 
 >[!NOTE]
 >
