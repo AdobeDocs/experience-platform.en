@@ -15,7 +15,7 @@ Once exported, these audience segments can be used to target deals by media owne
 
 >[!IMPORTANT]
 >
-> The destination connector and documentation page are created and maintained by the [!DNL Index] team. For questions or update requests, contact them directly at [technical_am_marketplace@indexexchange.com](mailto:technical_am_marketplace@indexexchange.com).
+>The destination connector and documentation page are created and maintained by the [!DNL Index] team. For questions or update requests, contact them directly at [technical_am_marketplace@indexexchange.com](mailto:technical_am_marketplace@indexexchange.com).
 
 ## Use cases {#use-cases}
 
@@ -23,19 +23,19 @@ To help you better understand how and when you should use the [!DNL Index Exchan
 
 ### Targeting users on mobile, web, and CTV platforms {#targeting-users}
 
-Media owners, marketplace partners, or marketplace vendors who want to send audiences from Adobe Experience Platform to Index to target users on mobile, web, and CTV platforms, using a large range of identifiers.
+Media owners, marketplace partners, or marketplace vendors who want to send audiences from Experience Platform to [!DNL Index] to target users on mobile, web, and CTV platforms, using a large range of identifiers.
 
 ### Targeting specific content on mobile, web, and CTV platforms {#targeting-content}
 
-Media owners, marketplace partners, or marketplace vendors who want to send audiences from Adobe Experience Platform to Index to target users looking at specific content across mobile, web, and CTV platforms using specific URLs, App Bundles or Content IDs.
+Media owners, marketplace partners, or marketplace vendors who want to send audiences from Experience Platform to [!DNL Index] to target users looking at specific content across mobile, web, and CTV platforms using specific URLs, App Bundles or content IDs.
 
 ## Prerequisites {#prerequisites}
 
-Audience segments must be registered with Index using an additional process when using this destination before they will appear in your account. Reach out to your [!DNL Index Exchange] account representative for assistance with this process.
+Audience segments must be registered with [!DNL Index] using an additional process when using this destination before they will appear in your account. Reach out to your [!DNL Index Exchange] account representative for assistance with this process.
 
 ## Supported identities {#supported-identities}
 
-Index supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
+[!DNL Index] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 Note that [!DNL Index Exchange] destinations support only one identity type per upload. You must specify the appropriate identifier type when configuring the destination details (see the ["Fill in destination details"](#destination-details) section below).
 
@@ -88,8 +88,8 @@ To configure details for the destination, fill in the fields below. An asterisk 
 
 * [!UICONTROL Name]: Enter a name to help you recognize this destination later.
 * [!UICONTROL Description]: Enter a description to help you identify this destination later.
-* [!UICONTROL Identifier Type]: Select the Index–provided identifier type that matches the identifier you are sending to Index. See the table of supported identifier types below. If you are unsure which identifier type to use, contact your Index Representative. To send multiple identifier types, create separate instances of this destination.
-* [!UICONTROL Account ID]: Enter your Index account ID. This is not the same as your publisher ID. If you are unsure about which ID to use, contact your Index Representative.
+* [!UICONTROL Identifier Type]: Select the Index–provided identifier type that matches the identifier you are sending to [!DNL Index]. See the table of supported identifier types below. If you are unsure which identifier type to use, contact your [!DNL Index] Representative. To send multiple identifier types, create separate instances of this destination.
+* [!UICONTROL Account ID]: Enter your [!DNL Index] account ID. This is not the same as your publisher ID. If you are unsure about which ID to use, contact your [!DNL Index] Representative.
 
 #### Supported Identifier Types
 
@@ -131,13 +131,13 @@ Selecting target fields:
 
 ![Map attributes and identities](../../assets/catalog/advertising/index-exchange/identity-mapping.png)
 
-### Register segments with Index {#register-segments}
+### Register segments with [!DNL Index] {#register-segments}
 
-Before or after activating data to the destination, contact your Index Representative to register the segments you plan to activate. Your representative will provide instructions on how to register additional segment details, including names, IDs, descriptions, and pricing, if applicable.
+Before or after activating data to the destination, contact your [!DNL Index] Representative to register the segments you plan to activate. Your representative will provide instructions on how to register additional segment details, including names, IDs, descriptions, and pricing, if applicable.
 
 ## Exported data / Validate data export {#exported-data}
 
-Once registration is complete, the segments will be available for targeting in your Index account. To confirm that data is being received correctly, contact your Index Representative, who can provide details on the volume of segment data received.
+Once registration is complete, the segments will be available for targeting in your [!DNL Index] account. To confirm that data is being received correctly, contact your [!DNL Index] Representative, who can provide details on the volume of segment data received.
 
 ## Data usage and governance {#data-usage-governance}
 
