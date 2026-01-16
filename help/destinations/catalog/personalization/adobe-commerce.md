@@ -17,7 +17,7 @@ To use this destination connection, make sure that you have access to:
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
 - [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). With access to the developer console, you can view service account and credential information that is needed to [complete the configuration](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) of the extension in Adobe Commerce. 
-- [Adobe Commerce Cloud version 2.4.4 or higher](https://business.adobe.com/products/magento/magento-commerce.html)
+- [Adobe Commerce version 2.4.4 or higher](https://business.adobe.com/products/commerce.html)
 
 In Experience Platform, create the following:
 
@@ -44,10 +44,10 @@ To connect to the [!DNL Adobe Commerce] destination:
 
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
--  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
--  **[!UICONTROL Description]**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
--  **[!UICONTROL Integration alias]**: This value is sent to the Experience Platform Web SDK as a JSON object name. 
--  **[!UICONTROL Datastream ID]**: This determines which Data Collection datastream contains the audiences that are included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../datastreams/overview.md) for more details.
+- **[!UICONTROL Name]**: Fill in the preferred name for this destination.
+- **[!UICONTROL Description]**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
+- **[!UICONTROL Integration alias]**: This value is sent to the Experience Platform Web SDK as a JSON object name. 
+- **[!UICONTROL Datastream ID]**: This determines which Data Collection datastream contains the audiences that are included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../datastreams/overview.md) for more details.
 
 ### Enable alerts {#enable-alerts}
 
