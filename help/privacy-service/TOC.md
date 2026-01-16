@@ -20,6 +20,7 @@ role: User,Admin
   * [Privacy jobs](./api/privacy-jobs.md)
   * [Consent](./api/consent.md)
   * [Content](./api/content.md)
+  * [Error codes](./api/error-codes.md)
   * [Appendix](./api/appendix.md)
 * Privacy Service UI {#ui}  
   * [Overview](./ui/overview.md)
