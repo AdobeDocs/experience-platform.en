@@ -1,18 +1,18 @@
 ---
-title: Amazon Ads Data Manager
-description: Amazon Ads Data Manager allows advertisers to easily ingest and manage audience data from Adobe Experience Platform for use across Amazon Ads products. Using this destination, users can define and send audience segments directly into Amazon Ads via the data manager console.
+title: Amazon Ads v2
+description: Amazon Ads v2 offers a range of options to help you achieve your advertising goals to registered sellers, vendors, book vendors, Kindle Direct Publishing (KDP) authors, app developers, and/or agencies. The Amazon Ads v2 integration with Adobe Experience Platform provides turn-key integration to Amazon Ads products.
 last-substantial-update: 2025-10-30
 exl-id: 8a31a44d-52d8-4a4a-9b9a-9c1a3cbf4acb
 ---
-# Amazon Ads Data Manager connection {#amazon-ads-data-manager}
+# Amazon Ads v2 connection {#amazon-ads-v2}
 
 ## Overview {#overview}
 
-[!DNL Amazon Ads Data Manager] enables advertisers to efficiently ingest, manage, and activate audience data across Amazon Ads products.  
+[!DNL Amazon Ads v2] enables advertisers to efficiently ingest, manage, activate and re-use audience data across Amazon Ads products.  
 
-The [!DNL Amazon Ads Data Manager] integration with Adobe Experience Platform provides a direct connector for ingesting audience members into Amazon Ads. Once audiences are available in Ads Data Manager, you can use them within the console to share data with the **Amazon Ads**.
+The [!DNL Amazon Ads v2] integration with Adobe Experience Platform provides a direct connection for ingesting audience members into Amazon Ads. The uploaded audiences are available in [!DNL Ads Data Manager (ADM)]console within [!DNL Amazon Ads]. You can use [!DNL Ads Data Manager] console to share data across different **Amazon Ads** products.
 
-To learn more about the Ads Data Manager console, see:
+To learn more about Ads Data Manager, see:
 
 * [Ads Data Manager — Console Overview](https://advertising.amazon.com/API/docs/en-us/adm/1_ads-data-manager-console-overview)
 * [Using the Ads Data Manager Console](https://advertising.amazon.com/API/docs/en-us/adm/2_ads-data-manager-console)
@@ -24,33 +24,30 @@ To learn more about the Ads Data Manager console, see:
 
 ## Use cases {#use-cases}
 
-You can use *[!DNL Amazon Ads Data Manager]* destination, for below purposes.
+You can use *[!DNL Amazon Ads v2]* destination, for below purposes.
 
 ### Audience ingestion and activation {#activation-and-targeting}
 
-This integration allows advertisers to send first-party audience segments from Adobe Experience Platform into [!DNL Amazon Ads Data Manager].  
-Once ingested, audiences can be shared and activated across **Amazon Ads**.
+This integration allows advertisers to send first-party audience segments from Adobe Experience Platform into [!DNL Amazon Ads].  
+Once ingested, audiences can be shared across **Amazon Ads** products via [!DNL Ads Data Manager].
 
 ### Data management and monitoring {#analytics-and-measurement}
 
-After ingestion, you can monitor and manage uploaded data through the Ads Data Manager console — check audience ingestion status, view match rates, or delete outdated data.  
+After ingestion, you can monitor and manage uploaded data through the [!DNL Ads Data Manager] console — check audience ingestion status, view match rates, or delete outdated data.  
 
 For details, see:
-* [Data upload overview](https://advertising.amazon.com/API/docs/en-us/adm/3_adm-data-upload-overview)
-* [Console upload workflow](https://advertising.amazon.com/API/docs/en-us/adm/4_adm-console-upload)
 * [Manage data](https://advertising.amazon.com/API/docs/en-us/adm/6_adm-manage-data)
 
 ## Prerequisites {#prerequisites}
 
-To use the [!DNL Amazon Ads Data Manager] connection with Adobe Experience Platform, you must have access to **Amazon Ads Data Manager** using a [Manager Account](https://advertising.amazon.com/help/G69CDSR9MNSWJH95).  
+To use the [!DNL Amazon Ads v2] connection with Adobe Experience Platform, you must have access to **Amazon Ads Data Manager** using a [Manager Account](https://advertising.amazon.com/help/G69CDSR9MNSWJH95).  
 
 Refer to:
 * [Get started with Amazon Ads Data Manager](https://advertising.amazon.com/API/docs/en-us/adm/1_ads-data-manager-console-overview)
-* [Get started with Amazon Marketing Cloud](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
 
 ## Supported identities {#supported-identities}
 
-The *[!DNL Amazon Ads Data Manager]* destination supports the activation of the following identities:
+The *[!DNL Amazon Ads v2]* destination supports the activation of the following identities:
 
 |Target Identity|Description|Considerations|
 |---|---|---|
@@ -68,7 +65,7 @@ The *[!DNL Amazon Ads Data Manager]* destination supports the activation of the 
 
 ## Supported external identities {#external-identities}
 
-In addition to standard user identity fields, *[!DNL Amazon Ads Data Manager]* supports **external identity namespaces** to allow advertisers to send third-party or partner-matched identifiers.
+In addition to standard user identity fields, *[!DNL Amazon Ads v2]* supports **external identity namespaces** to allow advertisers to send third-party or partner-matched identifiers.
 
 |External Identity|Description|Considerations|
 |---|---|---|
@@ -83,15 +80,11 @@ In addition to standard user identity fields, *[!DNL Amazon Ads Data Manager]* s
 
 {style="table-layout:auto"}
 
->[!NOTE]
->
->All external identity fields are optional and transmitted securely to *[!DNL Amazon Ads Data Manager]* using the same encryption and hashing standards as other identity fields.
-
 ## Export type and frequency {#export-type-frequency}
 
 | Item | Type | Notes |
 | ---------|----------|---------|
-| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with identifiers supported by *[!DNL Amazon Ads Data Manager]*.|
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with identifiers supported by *[!DNL Amazon Ads]*.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. Audience updates in Experience Platform are immediately sent to Ads Data Manager.|
 
 {style="table-layout:auto"}
@@ -108,7 +101,7 @@ In the configuration workflow, complete the steps below.
 ### Authenticate to destination {#authenticate}
 
 Select **[!UICONTROL Connect to destination]**.  
-You are redirected to the [!DNL Amazon Ads Data Manager] interface, Click 'Allow' to sign into Amazon Account via Adobe Experience Platform.  
+You are redirected to the [!DNL Amazon Ads v2] interface, Click 'Allow' to sign into your Amazon Account.  
 After authentication, you will return to Adobe Experience Platform with your new connection.
 
 ![Allow Amazon Ads](../../assets/catalog/advertising/amazon-ads/amazon-ads-new-allow.png)
@@ -124,7 +117,7 @@ Provide the following information:
 
 >[!NOTE]
 >
->Make sure to accept Amazon Ads Data Manager terms and coditions by visiting the Amazon Ads Data Manager in Amazon Ads console before clicking on **[!UICONTROL Next]**. The audience will not get created in Amazon Ads if the terms and conditions are not accepted.
+>Make sure to accept [!DNL Ads Data Manager] terms and coditions by visiting the [!DNL Ads Data Manager] console in [!DNL Amazon Ads] before clicking on **[!UICONTROL Next]**. The audience will not get created in [!DNL Amazon Ads] if the terms and conditions are not accepted.
 
 ![Configure new destination](../../assets/catalog/advertising/amazon-ads/amazon-ads-new-configure-destination.png)
 
@@ -158,7 +151,6 @@ This connector uses all mapped fields for matching, improving audience match rat
 
 Refer to:
 * [Normalization Guide](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C)
-* [Source connector details](https://advertising.amazon.com/API/docs/en-us/adm/5_adm-source-connector)
 
 ## Validate data export {#exported-data}
 
