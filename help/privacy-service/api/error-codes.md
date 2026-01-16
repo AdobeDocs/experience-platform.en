@@ -8,11 +8,7 @@ solution: Experience Platform
 
 Use this reference to identify Privacy Service job outcomes, diagnose failures, and determine appropriate next steps when submitting or monitoring privacy jobs in **Adobe Experience Platform**.
 
-The scope of this document is limited to **error code contracts**. It does not document internal processing logic, job execution steps, or backend service behavior.
-
-## Overview {#overview}
-
-Privacy Service error codes are a **stable public contract**. Each error code uniquely identifies a failure or completion state that you can rely on for programmatic handling and operational workflows.
+Privacy Service error codes are a stable public contract. Each error code uniquely identifies a failure or completion state that you can rely on for programmatic handling and operational workflows.
 
 The following guarantees apply, which you can rely on when building automation or monitoring workflows:
 
@@ -28,7 +24,7 @@ Privacy Service returns error information in job and request responses. The resp
 
 The error code conveys the authoritative outcome. The message provides additional context for troubleshooting.
 
-This document describes the **meaning and intent** of each error code. For field-level response schemas and request details, see the [Privacy Service API documentation](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
+This document describes the meaning and intent of each error code. For field-level response schemas and request details, see the [Privacy Service API documentation](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
 
 ## Error domains {#error-domains}
 
@@ -36,13 +32,13 @@ Error codes are grouped by functional domain to help you diagnose issues more qu
 
 The domains used in this document include:
 
-* **Request validation** — The request is malformed or contains invalid values.
-* **Authorization and provisioning** — Your organization or user lacks required access.
-* **Identity and applicability** — Identifiers or namespaces are not applicable to the request.
-* **Rate limiting** — Submission volume exceeds platform limits.
-* **Data access and processing** — The system cannot access or process requested data.
-* **Encryption and key management** — Required encryption keys are unavailable.
-* **Job execution state** — The job completed fully, partially, or with failures.
+* **Request validation**: The request is malformed or contains invalid values.
+* **Authorization and provisioning**: Your organization or user lacks required access.
+* **Identity and applicability**: Identifiers or namespaces are not applicable to the request.
+* **Rate limiting**: Submission volume exceeds platform limits.
+* **Data access and processing**: The system cannot access or process requested data.
+* **Encryption and key management**: Required encryption keys are unavailable.
+* **Job execution state**: The job completed fully, partially, or with failures.
 
 >[!NOTE]
 >
@@ -52,7 +48,10 @@ The domains used in this document include:
 
 The following table lists all public Privacy Service error codes.
 
-Columns marked with an em dash (—) indicate information that is not yet available.
+<!-- I would like to add info on Probable cause, Resolution, and Retry behavior. Is it feasible to include this? I feel that it would be of use to users given that we are publicising the codes.
+ -->
+
+ Columns marked with an em dash (—) indicate information that is not yet available.
 
 | Error code | HTTP status | Title                         | Description                                                                                                                     | Probable cause | Resolution | Retry behavior |
 | ---------- | ----------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | -------------- | ---------- | -------------- |
@@ -72,3 +71,4 @@ Columns marked with an em dash (—) indicate information that is not yet availa
 | 6053-200   | 200         | Invalid namespace             | The provided identity namespace is not valid for this application. Use a namespace recognized by the system.                  | —              | —          | —              |
 | 6054-200   | 200         | Partially completed           | The job completed for applicable data, but some data was not applicable to the request. Review the job details for additional information. | —              | —          | —              |
 
+{style="table-layout:auto"}
