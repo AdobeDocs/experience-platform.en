@@ -10,7 +10,7 @@ Use this reference to identify Privacy Service job outcomes, diagnose failures, 
 
 Privacy Service error codes are a stable public contract. Each error code uniquely identifies a failure or completion state that you can rely on for programmatic handling and operational workflows.
 
-The following guarantees apply, which you can rely on when building automation or monitoring workflows:
+The following guarantees apply when building automation or monitoring workflows:
 
 * Error codes are stable once published.
 * Error messages may change to improve clarity, but the code value does not.
@@ -48,10 +48,7 @@ The domains used in this document include:
 
 The following table lists all public Privacy Service error codes.
 
-<!-- I would like to add info on Probable cause, Resolution, and Retry behavior. Is it feasible to include this? I feel that it would be of use to users given that we are publicising the codes.
- -->
-
- Columns marked with an em dash (—) indicate information that is not yet available.
+Columns marked with an em dash (—) indicate information that is not yet available.
 
 | Error code | HTTP status | Title                         | Description                                                                                                                     | Probable cause | Resolution | Retry behavior |
 | ---------- | ----------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | -------------- | ---------- | -------------- |
