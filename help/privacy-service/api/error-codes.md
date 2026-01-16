@@ -48,24 +48,22 @@ The domains used in this document include:
 
 The following table lists all public Privacy Service error codes.
 
-Columns marked with an em dash (—) indicate information that is not yet available.
-
-| Error code | HTTP status | Title                         | Description                                                                                                                     | Probable cause | Resolution | Retry behavior |
-| ---------- | ----------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | -------------- | ---------- | -------------- |
-| 1000-400   | 400         | Formatting error              | One or more data values for the specified application have formatting issues. Check the job details for additional information. | —              | —          | —              |
-| 1001-400   | 400         | Not authorized                | Your organization is not provisioned. Contact your administrator for additional information.                                   | —              | —          | —              |
-| 1010-400   | 400         | Missing permissions           | You do not have the required permissions to perform this action. Contact your administrator to request access.                 | —              | —          | —              |
-| 1020-400   | 400         | Upload and archive failure    | A problem occurred while uploading and archiving access data. Upload the access data and try again.                            | —              | —          | —              |
-| 1021-400   | 400         | Job failure                   | One or more privacy jobs created from the request failed. Review the details of the failed jobs for additional information.    | —              | —          | —              |
-| 1022-400   | 400         | Data access failure           | A problem occurred while accessing the specified data. Review the job details for additional information.                     | —              | —          | —              |
-| 1023-400   | 400         | Data access failure           | A problem occurred while accessing or locating the specified dataset IDs. Verify that the provided IDs are valid, then try again. | —              | —          | —              |
-| 1024-400   | 400         | Unexpected error              | An unexpected error occurred. Review the job details for additional information.                                               | —              | —          | —              |
-| 1030-400   | 400         | Document rate limit exceeded  | The workload exceeded the document rate limit. Reduce your submission rate, then try again.                                    | —              | —          | —              |
-| 1040-400   | 400         | Key encryption access failure | The data could not be processed because the datastore is encrypted and key access was revoked. Contact your key vault administrator to restore access to the customer key. | —              | —          | —              |
-| 6000-200   | 200         | Success                       | The job completed successfully. Review the job details to confirm processed records and outcomes.                             | —              | —          | —              |
-| 6051-200   | 200         | Not provisioned               | Your organization is not provisioned for the requested application. The request is not applicable.                            | —              | —          | —              |
-| 6052-200   | 200         | User IDs not found            | Some user IDs were not found, and unknown user IDs are not applicable for this product. Ensure that the user IDs are valid, then try again. | —              | —          | —              |
-| 6053-200   | 200         | Invalid namespace             | The provided identity namespace is not valid for this application. Use a namespace recognized by the system.                  | —              | —          | —              |
-| 6054-200   | 200         | Partially completed           | The job completed for applicable data, but some data was not applicable to the request. Review the job details for additional information. | —              | —          | —              |
+| Error code | HTTP status | Title                         | Description                                                                                                                                                                | 
+| ---------- | ----------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| 1000-400   | 400         | Formatting error              | One or more data values for the specified application have formatting issues. Check the job details for additional information.                                            | 
+| 1001-400   | 400         | Not authorized                | Your organization is not provisioned. Contact your administrator for additional information.                                                                               | 
+| 1010-400   | 400         | Missing permissions           | You do not have the required permissions to perform this action. Contact your administrator to request access.                                                             | 
+| 1020-400   | 400         | Upload and archive failure    | A problem occurred while uploading and archiving access data. Upload the access data and try again.                                                                        | 
+| 1021-400   | 400         | Job failure                   | One or more privacy jobs created from the request failed. Review the details of the failed jobs for additional information.                                                | 
+| 1022-400   | 400         | Data access failure           | A problem occurred while accessing the specified data. Review the job details for additional information.                                                                  | 
+| 1023-400   | 400         | Data access failure           | A problem occurred while accessing or locating the specified dataset IDs. Verify that the provided IDs are valid, then try again.                                          |
+| 1024-400   | 400         | Unexpected error              | An unexpected error occurred. Review the job details for additional information.                                                                                           | 
+| 1030-400   | 400         | Document rate limit exceeded  | The workload exceeded the document rate limit. Reduce your submission rate, then try again.                                                                                | 
+| 1040-400   | 400         | Key encryption access failure | The data could not be processed because the datastore is encrypted and key access was revoked. Contact your key vault administrator to restore access to the customer key. |
+| 6000-200   | 200         | Success                       | The job completed successfully. Review the job details to confirm processed records and outcomes.                                                                          | 
+| 6051-200   | 200         | Not provisioned               | Your organization is not provisioned for the requested application. The request is not applicable.                                                                         | 
+| 6052-200   | 200         | User IDs not found            | Some user IDs were not found, and unknown user IDs are not applicable for this product. Ensure that the user IDs are valid, then try again.                                | 
+| 6053-200   | 200         | Invalid namespace             | The provided identity namespace is not valid for this application. Use a namespace recognized by the system.                                                               | 
+| 6054-200   | 200         | Partially completed           | The job completed for applicable data, but some data was not applicable to the request. Review the job details for additional information.                                 |
 
 {style="table-layout:auto"}
