@@ -6,7 +6,7 @@ solution: Experience Platform
 ---
 # Privacy Service error codes {#privacy-service-error-codes}
 
-Use this reference to identify Privacy Service job outcomes, diagnose failures, and determine appropriate next steps when submitting or monitoring privacy jobs in **Adobe Experience Platform**.
+Use this reference to identify Privacy Service job outcomes, diagnose failures, and determine appropriate next steps when submitting or monitoring privacy jobs in **Adobe Experience Platform**. To learn how to create, submit, and monitor privacy jobs, see the [privacy jobs endpoint guide](./privacy-jobs.md) or the [Privacy Service UI user guide](../ui/user-guide.md).
 
 Privacy Service error codes are a stable public contract. Each error code uniquely identifies a failure or completion state that you can rely on for programmatic handling and operational workflows.
 
@@ -16,7 +16,7 @@ The following guarantees apply, which you can rely on when building automation o
 * Error messages may change to improve clarity, but the code value does not.
 * New error codes may be added over time; existing codes are not repurposed.
 
-Use error codes, not message text, to implement automation or decision logic.
+Use error codes, not message text, to implement automation or decision logic. For guidance on efficiently processing privacy jobs, monitoring job status, and handling errors without relying on polling or message strings, see [Privacy Service best practices](../best-practices.md).
 
 ## Error response format {#error-response-format}
 
@@ -32,13 +32,13 @@ Error codes are grouped by functional domain to help you diagnose issues more qu
 
 The domains used in this document include:
 
-* **Request validation**: The request is malformed or contains invalid values.
-* **Authorization and provisioning**: Your organization or user lacks required access.
-* **Identity and applicability**: Identifiers or namespaces are not applicable to the request.
-* **Rate limiting**: Submission volume exceeds platform limits.
-* **Data access and processing**: The system cannot access or process requested data.
-* **Encryption and key management**: Required encryption keys are unavailable.
-* **Job execution state**: The job completed fully, partially, or with failures.
+* **Request validation**: The request is malformed or contains invalid values. <!-- See [privacy jobs endpoint guide](./privacy-jobs.md) -->
+* **Authorization and provisioning**: Your organization or user lacks required access. <!-- See [manage permissions](../permissions.md) -->
+* **Identity and applicability**: Identifiers or namespaces are not applicable to the request. <!-- See [identity data for privacy requests](../identity-data.md) -->
+* **Rate limiting**: Submission volume exceeds platform limits. <!-- See [troubleshooting guide](../troubleshooting-guide.md#common-error-messages) -->
+* **Data access and processing**: The system cannot access or process requested data. <!-- See [troubleshooting guide](../troubleshooting-guide.md) -->
+* **Encryption and key management**: Required encryption keys are unavailable. <!-- See [Customer Managed Keys](../../landing/governance-privacy-security/customer-managed-keys/overview.md) -->
+* **Job execution state**: The job completed fully, partially, or with failures. <!-- See [privacy jobs endpoint guide](./privacy-jobs.md#status-categories) -->
 
 >[!NOTE]
 >
