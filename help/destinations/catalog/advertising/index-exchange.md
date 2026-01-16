@@ -3,50 +3,50 @@ title: Index Exchange
 description: Connect to Index Exchange (Index) and activate your data so your audience segments can be targeted by deals created in the Index UI.
 ---
 
-# Index Exchange {#index-exchange}
+# [!DNL Index Exchange] {#index-exchange}
 
 ## Overview {#overview}
 
-Index is a global advertising supply-side platform that helps media owners maximize the value of their content across every screen. With over 20 years of industry leadership, Index connects the world’s largest brands with premium experience makers to deliver high-quality consumer experiences.
+[!DNL Index] is a global advertising supply-side platform that helps media owners maximize the value of their content across every screen. With over 20 years of industry leadership, [!DNL Index] connects the world's largest brands with premium experience makers to deliver high-quality consumer experiences.
 
-Use this destination connector to export audience segments from Adobe Experience Platform directly to Index Exchange’s programmatic advertising platform.
+Use this destination connector to export audience segments from Adobe Experience Platform directly to [!DNL Index Exchange]'s programmatic advertising platform.
 
-Once exported, these audience segments can be used to target deals by media owners, Marketplace Partners, or shared with publishers and curators by Marketplace Vendors.
+Once exported, these audience segments can be used to target deals by media owners, marketplace partners, or shared with publishers and curators by marketplace vendors.
 
 >[!IMPORTANT]
 >
-> The destination connector and documentation page are created and maintained by the Index team. For questions or update requests, contact them directly at `technical_am_marketplace@indexexchange.com`
+> The destination connector and documentation page are created and maintained by the [!DNL Index] team. For questions or update requests, contact them directly at [technical_am_marketplace@indexexchange.com](mailto:technical_am_marketplace@indexexchange.com).
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Index Exchange destination, here are sample use cases that Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Index Exchange] destination, here are sample use cases that Experience Platform customers can solve by using this destination.
 
 ### Targeting users on mobile, web, and CTV platforms {#targeting-users}
 
-Media owners, Marketplace Partners, or Marketplace Vendors who want to send audiences from Adobe Experience Platform to Index to target users on mobile, web, and CTV platforms, using a large range of identifiers.
+Media owners, marketplace partners, or marketplace vendors who want to send audiences from Adobe Experience Platform to Index to target users on mobile, web, and CTV platforms, using a large range of identifiers.
 
 ### Targeting specific content on mobile, web, and CTV platforms {#targeting-content}
 
-Media owners, Marketplace Partners, or Marketplace Vendors who want to send audiences from Adobe Experience Platform to Index to target users looking at specific content across mobile, web, and CTV platforms using specific URLs, App Bundles or Content IDs.
+Media owners, marketplace partners, or marketplace vendors who want to send audiences from Adobe Experience Platform to Index to target users looking at specific content across mobile, web, and CTV platforms using specific URLs, App Bundles or Content IDs.
 
 ## Prerequisites {#prerequisites}
 
-Audience segments must be registered with Index using an additional process when using this destination before they will appear in your account. Reach out to your Index Exchange account representative for assistance with this process.
+Audience segments must be registered with Index using an additional process when using this destination before they will appear in your account. Reach out to your [!DNL Index Exchange] account representative for assistance with this process.
 
 ## Supported identities {#supported-identities}
 
 Index supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-Note that Index Exchange destinations support only one identity type per upload. You must specify the appropriate identifier type when configuring the destination details (see the ["Fill in destination details"](#destination-details) section below).
+Note that [!DNL Index Exchange] destinations support only one identity type per upload. You must specify the appropriate identifier type when configuring the destination details (see the ["Fill in destination details"](#destination-details) section below).
 
-To upload multiple identity types, create separate instances of the Index Exchange destination for each identity type.
+To upload multiple identity types, create separate instances of the [!DNL Index Exchange] destination for each identity type.
 
-|Target Identity|Description|Considerations|
-|---|---|---|
-|GAID|Google Advertising ID| If the source identity is a GAID namespace, select GAID as the target identity.|
-|IDFA|Apple ID for Advertisers| If your source identity is an IDFA namespace, select the IDFA target identity.|
-|Windows AID|Windows Advertising ID| If your source identity is a Windows AID namespace, select the Windows AID target identity.
-|extern_id|Custom user IDs| If your source identity is a custom namespace, select this target identity.|
+|Target Identity | Description | Considerations |
+| --- | --- | --- |
+| GAID | Google Advertising ID | If the source identity is a GAID namespace, select GAID as the target identity. |
+| IDFA | Apple ID for Advertisers | If your source identity is an IDFA namespace, select the IDFA target identity. |
+| Windows AID | Windows Advertising ID | If your source identity is a Windows AID namespace, select the Windows AID target identity. |
+| extern_id | Custom user IDs | If your source identity is a custom namespace, select this target identity. |
 
 {style="table-layout:auto"}
 
@@ -55,8 +55,8 @@ To upload multiple identity types, create separate instances of the Index Exchan
 This section explains which audience types you can export to this destination.
 
 | Audience origin | Supported | Description | 
-|---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| --------- | ---------- | ---------- |
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
@@ -66,8 +66,8 @@ This section explains which audience types you can export to this destination.
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
-|---------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | Exports all members of a segment (audience) with the identifiers (IDFA, GAID, or others) used in the Index Exchange destination. |
+| --------- | ---------- | --------- | 
+| Export type | **[!UICONTROL Segment export]** | Exports all members of a segment (audience) with the identifiers (IDFA, GAID, or others) used in the [!DNL Index Exchange] destination. |
 | Export frequency | **[!UICONTROL Batch]** | Exports files to downstream platforms at intervals of 3, 6, 8, 12, or 24 hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -93,15 +93,15 @@ To configure details for the destination, fill in the fields below. An asterisk 
 
 #### Supported Identifier Types
 
-| Identifier Type  | Description | 
-|------------------|-------------|
-| [!DNL appbundle] | Mobile App Bundle |
+| Identifier Type | Description | 
+|------------------ | ------------- |
+| [!DNL appbundle] | Mobile App Bundle | 
 | [!DNL contentid] | Content ID |
-| [!DNL deviceid]  | Device ID (eg. IDFA, GAID, WAID, etc) |
-| [!DNL ip]        | IP Address |
-| [!DNL postcode]    | ZIP / Postal Code |
-| [!DNL url]       | Site URL |
-| [!DNL ppid_xxx]  | For PPID identifiers, reach out to your Index Exchange account representative for assistance. |
+| [!DNL deviceid] | Device ID (eg. IDFA, GAID, WAID, etc) |
+| [!DNL ip] | IP Address |
+| [!DNL postcode] | ZIP / Postal Code |
+| [!DNL url] | Site URL |
+| [!DNL ppid_xxx] | For PPID identifiers, reach out to your [!DNL Index Exchange] account representative for assistance. |
 
 {style="table-layout:auto"}
 
@@ -123,11 +123,11 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 Selecting source fields:
 
-- Select an identifier (usually namespaces like IDFA or a custom ID namespace). This must correspond to the Identifier Type selected when configuring the destination. For example when using IDFA identifier as a source field, the destination must have been set up with the "deviceid" Identifier Type.
+* Select an identifier (usually namespaces like IDFA or a custom ID namespace). This must correspond to the Identifier Type selected when configuring the destination. For example when using IDFA identifier as a source field, the destination must have been set up with the "deviceid" Identifier Type.
 
 Selecting target fields:
 
-- Names of target fields are ignored and are not important. The destination only cares about the type of identifier being sent, which is determined by the Identifier Type selected when configuring the destination.
+* Names of target fields are ignored and are not important. The destination only cares about the type of identifier being sent, which is determined by the Identifier Type selected when configuring the destination.
 
 ![Map attributes and identities](../../assets/catalog/advertising/index-exchange/identity-mapping.png)
 
