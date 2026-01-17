@@ -25,6 +25,10 @@ You can create, view, edit, and delete computed attributes using the `ca/attribu
 
 ## Entities ([!DNL Profile] access) {#entities}
 
+>[!NOTE]
+>
+>You can only use these endpoints if you have Real-Time CDP Ultimate.
+
 Through Adobe Experience Platform you can access [!DNL Real-Time Customer Profile] data using RESTful APIs or the user interface. To learn how to access entities, more commonly known as "profiles", using the API, follow the steps outlined in the [entities endpoint guide](entities.md). To access profiles using the [!DNL Experience Platform] UI, refer to the [Profile user guide](../ui/user-guide.md).
 
 ## Export jobs ([!DNL Profile] export) {#profile-export}
