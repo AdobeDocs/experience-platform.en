@@ -68,6 +68,10 @@ Use the **[!DNL Security Group Overview]** window to provide a name and an acron
 >
 >[!DNL Consume] API is a required permission, but you can add more permissions depending on your usage of the app.
 
+To ingest campaign data, navigate to the **Edit User** interface and add [!DNL Guided Campaigns] to your selected security group.
+
+![The security group with guided campaigns added.](../../images/tutorials/create/eloqua/add-guided-campaigns.png)
+
 You can optionally create additional an additional user and add that user to a security group. For detailed steps, read the [!DNL Eloqua] documentation on [creating a user](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm) and [assigning a user to a security group](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm).
 
 ### Gather required credentials
@@ -76,7 +80,7 @@ You must provide values for the following credentials to connect [!DNL Eloqua] t
 
 | Credential | Description |
 | --- | --- |
-| Client ID |  The publicly exposed identifier used by [!DNL Eloqua] to identify your account when authorizing to Experience Platform. |
+| Client ID | The publicly exposed identifier used by [!DNL Eloqua] to identify your account when authorizing to Experience Platform. |
 | Client secret | The confidential key known only to the client application and authorization server. This key is required alongside the client ID in order to authenticate your account. |
 | Username | The username associated with your [!DNL Eloqua] account. This is used to verify and authorize your access. The username follows the format of `CompanyName\Username`. |
 | Password | The password associated with your [!DNL Eloqua] account. Along with your username, it grants access to your Eloqua environment. |
