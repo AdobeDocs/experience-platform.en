@@ -76,7 +76,7 @@ For relatively complex graph structures, namespace priority plays an important r
   * Any fields marked as primary identity on an XDM Experience Event Class schema.
   * Default primary identity settings in the Adobe Analytics source connector (ECID or AAID).
 * On the other hand, **namespace priority does not determine primary identity for profile records**.
-  * For profile records, you should continue to define your identity fields in the schema, including the primary identity. Read the guide on [defining identity fields in the UI](../../xdm/ui/fields/identity.md) for more information.
+  * For profile records, you should continue to define your identity fields in the schema, including the primary identity. Read the guide on [defining identity fields in the UI](/help/xdm/ui/fields/identity.md) for more information.
 
 >[!TIP]
 >
@@ -142,23 +142,23 @@ Data hygiene record delete requests functions in the following manner, for a giv
 * Real-Time Customer Profile: Deletes any profile fragment with specified identity as primary identity. **The primary identity on Profile will now be determined based on namespace priority.**
 * Data lake: Deletes any record with the specified identity as primary identity. Unlike Real-Time Customer Profile, primary identity in data lake is based on primary identity specified on WebSDK (`primary=true`), or a field marked as primary identity
 
-For more information, read the [advanced lifecycle management overview](../../hygiene/home.md).
+For more information, read the [advanced lifecycle management overview](/help/hygiene/home.md).
 
 ### Computed attributes
 
-If identity settings is enabled, then computed attributes will use namespace priority to store the computed attribute value. For a given event, the identity with the highest namespace priority will have the value of the computed attribute written against it. For more information, read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
+If identity settings is enabled, then computed attributes will use namespace priority to store the computed attribute value. For a given event, the identity with the highest namespace priority will have the value of the computed attribute written against it. For more information, read the [computed attributes UI guide](/help/profile/computed-attributes/ui.md).
 
 ### Data lake
 
-Data ingestion to data lake will continue to honor the primary identity settings configured on [Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) and schemas. 
+Data ingestion to data lake will continue to honor the primary identity settings configured on [Web SDK](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map) and schemas. 
 
 Data lake will not determine primary identity based on namespace priority. For example, Adobe Customer Journey Analytics will continue to use values in the identity map even after namespace priority is enabled (such as, adding a dataset to a new connection), because Customer Journey Analytics consumes their data from data lake.
 
 ### Experience Data Model (XDM) Schemas
 
-Any schema that is not an XDM Experience Event, such as XDM Individual Profiles, will continue to honor any [fields that you mark as an identity](../../xdm/ui/fields/identity.md).
+Any schema that is not an XDM Experience Event, such as XDM Individual Profiles, will continue to honor any [fields that you mark as an identity](/help/xdm/ui/fields/identity.md).
 
-For more information on XDM schemas, read the [schemas overview](../../xdm/home.md).
+For more information on XDM schemas, read the [schemas overview](/help/xdm/home.md).
 
 ### Intelligent services
 
@@ -169,7 +169,7 @@ When selecting your data, you will need to specify a namespace, which will be us
 
 This configuration results in computing scores only using authenticated events.
 
-For more information, read the documents on [Attribution AI](../../intelligent-services/attribution-ai/overview.md) and [Customer AI](../../intelligent-services/customer-ai/overview.md).
+For more information, read the documents on [Attribution AI](/help/intelligent-services/attribution-ai/overview.md) and [Customer AI](/help/intelligent-services/customer-ai/overview.md).
 
 ### Partner-built destinations
 
@@ -178,7 +178,7 @@ Updated audience disqualification results for profiles associated to a shared de
 * Audience qualification is based only on anonymous activity.
 * Logins across multiple profiles occur in a short period of time.
 
-For more information on partner-built destinations, read the [destinations overview](../../destinations/home.md#adobe-built-and-partner-built-destinations).
+For more information on partner-built destinations, read the [destinations overview](/help/destinations/home.md#adobe-built-and-partner-built-destinations).
 
 ### Privacy Service
 
@@ -187,7 +187,7 @@ For more information on partner-built destinations, read the [destinations overv
 * Real-Time Customer Profile: Deletes any profile fragment with specified identity value as primary identity. **The primary identity on Profile will now be determined based on namespace priority.**
 * Data lake: Deletes any record with the specified identity as primary or secondary identity.
 
-For more information, read the [Privacy service overview](../../privacy-service/home.md).
+For more information, read the [Privacy service overview](/help/privacy-service/home.md).
 
 ### Edge segmentation and Edge Network applications
 
@@ -198,11 +198,11 @@ In the context of [!DNL Identity Graph Linking Rules], there are two main behavi
 
 #### Edge segmentation
 
-In a given event, ensure that all of your namespaces that represent a person entity are included in the `identityMap` because [identities sent as XDM fields](../../xdm/ui/fields/identity.md) are ignored and are not used for segment membership metadata storage.
+In a given event, ensure that all of your namespaces that represent a person entity are included in the `identityMap` because [identities sent as XDM fields](/help/xdm/ui/fields/identity.md) are ignored and are not used for segment membership metadata storage.
 
-* **Event applicability**: This behavior applies only to events sent directly to the Edge Network (such as WebSDK and Mobile SDK). Events ingested from [Experience Platform hub](../../landing/edge-and-hub-comparison.md), such as those ingested with the HTTP API source, other streaming sources, and batch sources, are not subject to this limitation.
-* **Edge segmentation specificity**: This behavior is specific to edge segmentation. Batch and streaming segmentation are separate services evaluated on the hub and do not follow the same process. Read the [edge segmentation guide](../../segmentation/methods/edge-segmentation.md) for more information.
-* Read the [Adobe Experience Platform and applications architecture diagrams](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) and [Edge Network and hub comparison](../../landing/edge-and-hub-comparison.md) pages for more information.
+* **Event applicability**: This behavior applies only to events sent directly to the Edge Network (such as WebSDK and Mobile SDK). Events ingested from [Experience Platform hub](/help/landing/edge-and-hub-comparison.md), such as those ingested with the HTTP API source, other streaming sources, and batch sources, are not subject to this limitation.
+* **Edge segmentation specificity**: This behavior is specific to edge segmentation. Batch and streaming segmentation are separate services evaluated on the hub and do not follow the same process. Read the [edge segmentation guide](/help/segmentation/methods/edge-segmentation.md) for more information.
+* Read the [Adobe Experience Platform and applications architecture diagrams](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) and [Edge Network and hub comparison](/help/landing/edge-and-hub-comparison.md) pages for more information.
 
 #### Edge Network applications
 
@@ -210,5 +210,5 @@ To ensure applications on the Edge Network have access to the Edge Profile witho
 
 * Applications on Edge Network such as Adobe Target, Offer Decisioning, and Custom Personalization Destinations will continue to depend on the primary identity in events to access profiles from Edge Profile.
 * Read the [Experience Platform Web SDK & Edge Network architecture diagram](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) for more information on Edge Network behavior.
-* Read the documentation on [Data element types](../../tags/extensions/client/web-sdk/data-element-types.md) and [Identity data in Web SDK](../../web-sdk/identity/overview.md) for more information on how to configure primary identity on Web SDK.
+* Read the documentation on [Data element types](/help/tags/extensions/client/web-sdk/data-element-types.md) and [Identity data in Web SDK](/help/collection/use-cases/identity/id-overview.md) for more information on how to configure primary identity on Web SDK.
 * Ensure the ECID is included in the experience event. If the ECID is missing, then it will be added to the event payload with `primary=true`, which may lead to unexpected results.

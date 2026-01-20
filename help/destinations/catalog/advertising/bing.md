@@ -109,6 +109,11 @@ When you are finished providing details for your destination connection, select 
 >title="Mapping ID"
 >abstract="Enter the numeric Bing audience ID to which you want to map the selected segment. If the provided [!UICONTROL Mapping ID] does not correspond to an audience ID in the Bing destination, you will not see the expected audience data in your Bing account."
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_required_mappings_bing"
+>title="Preconfigured mapping sets"
+>abstract="We have preconfigured these two mapping sets for you. As you activate data to Microsoft Bing, the profiles qualified for the activated audiences must have at least an ECID identity associated with their profile, in order to be successfully exported to the destination."
+
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.

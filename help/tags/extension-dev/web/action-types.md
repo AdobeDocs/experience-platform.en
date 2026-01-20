@@ -5,10 +5,6 @@ exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
 ---
 # Action types for web extensions
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 In the context of data collection tags, an action is something that is performed after a rule event has occurred and all conditions have passed evaluation.
 
 As an example, an extension could provide a "show support chat" action type which could display a support chat dialog to help users who may be struggling while checking out.

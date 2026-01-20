@@ -10,21 +10,17 @@ exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 >
 >Event forwarding is a paid feature that is included as part of the Adobe Real-Time Customer Data Platform Connections, Prime, or Ultimate offerings.
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
-Event forwarding in Adobe Experience Platform allows you to send collected event data to a destination for server-side processing. Event forwarding decreases web page and app weight by using Adobe Experience Platform Edge Network to execute tasks normally done on the client. Implemented in a similar manner to tags, event forwarding rules can transform and send data to new destinations, but instead of sending this data from a client application like a web browser, it is sent from Adobe's servers.
+Event forwarding in Adobe Experience Platform (formerly known as Adobe Experience Platform Launch server-side) allows you to send collected event data to a destination for server-side processing. Event forwarding decreases web page and app weight by using Adobe Experience Platform Edge Network to execute tasks normally done on the client. Implemented in a similar manner to tags, event forwarding rules can transform and send data to new destinations, but instead of sending this data from a client application like a web browser, it is sent from Adobe's servers.
 
 This document provides a high-level overview of event forwarding in Experience Platform.
 
-![Event forwarding in the data collection ecosystem.](../../../collection/images/home/event-forwarding.png)
+![Event forwarding in the data collection ecosystem.](/help/collection/assets/event-forwarding.png)
 
 >[!NOTE]
 >
->For information on how event forwarding fits within the data collection ecosystem in Experience Platform, see the [data collection overview](../../../collection/home.md).
+>For information on how event forwarding fits within the data collection ecosystem in Experience Platform, see the [data collection overview](/help/collection/home.md).
 
-Event forwarding combined with the Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) and [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) provides the following benefits:
+Event forwarding combined with the Adobe Experience Platform [Web SDK](/help/collection/js/js-overview.md) and [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) provides the following benefits:
 
 **Performance**:
 
@@ -83,7 +79,7 @@ You can view additional resources available to learn more about this feature by 
 
 ### Rules {#rules}
 
-Creating rules in event forwarding properties works in a similar way to tags, with the key difference being that you cannot select events as rule components. Instead, an event forwarding rule processes all events it receives from the [datastream](../../../datastreams/overview.md) and forwards those events to destinations if certain conditions are satisfied.
+Creating rules in event forwarding properties works in a similar way to tags, with the key difference being that you cannot select events as rule components. Instead, an event forwarding rule processes all events it receives from the [datastream](/help/datastreams/overview.md) and forwards those events to destinations if certain conditions are satisfied.
 
 In addition, there is a 30-second timeout that applies to a single event as it is processed across all rules (and hence all actions) within an event forwarding property. This means all rules and all actions for a single event must be completed in this time frame.
 

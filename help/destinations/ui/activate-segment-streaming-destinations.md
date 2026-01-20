@@ -41,7 +41,7 @@ To activate audiences to destinations, you must have successfully [connected to 
 
 ## Select your audiences {#select-audiences}
 
-To select the audiences that you want to activate to the destination, use the check boxes to the left of the audience names, then select **[!UICONTROL Next]**.
+To select the audiences that you want to activate to the destination, use the checkboxes to the left of the audience names, then select **[!UICONTROL Next]**.
 
 You can select from multiple types of audiences, depending on their origin:
 

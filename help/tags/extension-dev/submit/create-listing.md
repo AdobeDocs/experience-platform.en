@@ -5,10 +5,6 @@ exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
 ---
 # Create an exchange listing for an extension
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Adobe Experience Platform has a single unified catalog where users can view tag extensions that are available for installation. This catalog is available within the product and contains extensions of three types:
 
 1. **Public extensions**: These are completed extensions designed for production use by any user.

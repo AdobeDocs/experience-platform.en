@@ -5,10 +5,6 @@ exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
 ---
 # Release an extension
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Once testing and documenting are complete, the extension is ready for release. There are currently two types of releases that you can perform:
 
 - **Private release**: The completed extension is available to all properties within your company, but is not available to any other companies in Adobe Experience Platform.

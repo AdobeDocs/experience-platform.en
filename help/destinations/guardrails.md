@@ -92,7 +92,7 @@ The guardrails below apply to activation through [edge personalization destinati
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
 |Maximum number of [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations | 10 | Performance guardrail | You can set up dataflows to 10 Custom personalization destinations per sandbox.|
-|Maximum number of attributes mapped to a personalization destination per sandbox | 30 | System-enforced guardrail | A maximum of 30 attributes can be mapped in a dataflow to a personalization destination, per sandbox.|
+|Maximum number of attributes mapped to a personalization destination per sandbox | 30 | Performance guardrail | A maximum of 30 attributes can be mapped in a dataflow to a personalization destination, per sandbox.|
 |Maximum number of audiences mapped to a single [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destination | 50 | Performance guardrail | You can activate a maximum of 50 audiences in an activation flow to a single Adobe Target destination.|
 
 {style="table-layout:auto"}
@@ -171,7 +171,8 @@ Read more about [exporting datasets](/help/destinations/ui/export-datasets.md).
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
 | Maximum number of [private custom destinations](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5  | Performance guardrail| You can create a maximum of 5 private custom streaming or batch destinations using Destination SDK. Reach out to a custom care representative if you need to create more than 5 such destinations. |
-| Profile export policy for Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimum 1,800 and maximum 3,600)</li><li>`maxNumEventsInBatch` (minimum 1,000 and maximum 10,000)</li></ul> | System-enforced guardrail | When using the [configurable aggregation](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) option for your destination, be mindful of the minimum and maximum values that determine how often HTTP messages are sent to your API-based destination and how many profiles the messages should include.|
+| Profile export policy for Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimum 301 and maximum 3,600)</li><li>`maxNumEventsInBatch` (minimum 1,000 and maximum 10,000)</li></ul> | System-enforced guardrail | When using the [configurable aggregation](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) option for your destination, be mindful of the minimum and maximum values that determine how often HTTP messages are sent to your API-based destination and how many profiles the messages should include.|
+| OAuth 2 token lifetime for Destination SDK | Minimum 24 hours recommended | Performance guardrail | For destinations using [OAuth 2 authorization](/help/destinations/destination-sdk/functionality/destination-configuration/oauth2-authorization.md), Adobe recommends setting access token lifetime values to a minimum of 24 hours. Connections with tokens that have a lifetime of under 1 hour will result in profiles being dropped during activation. |
 
 {style="table-layout:auto"}
 

@@ -80,7 +80,7 @@ The following table outlines how each XDM type is represented in JSON Schema, al
         <pre class="JSON language-JSON hljs">
 {
   "type": "integer",
-  "maximum": 32768,
+  "maximum": 32767,
   "minimum": -32768
 }</pre>
       </td>

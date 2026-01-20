@@ -14,14 +14,14 @@ Datastream configuration override is a two-step process:
 1. First, you must define your datastream configuration override in the [datastream configuration page](configure.md).
 2. Then, you must send the overrides to the Edge Network in one of the following ways:
     * Through the `sendEvent` or `configure` [Web SDK](#send-overrides) commands.
-    * Through the Web SDK [tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+    * Through the Web SDK [tag extension](../tags/extensions/client/web-sdk/configure/configuration-overrides.md).
     * Through the Mobile SDK [sendEvent](#send-overrides) API or by using [Rules](#send-overrides).
 
 This article explains the end-to-end datastream configuration override process for every type of supported override.
 
 >[!IMPORTANT]
 >
->Datastream overrides are only supported for [Web SDK](../web-sdk/home.md) and [Mobile SDK](https://developer.adobe.com/client-sdks/home/) integrations. [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) integrations do not currently support datastream overrides.
+>[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) integrations do not currently support datastream overrides.
 ><br>
 >Datastream overrides should be used when you need different data sent to different datastreams. Do not use datastream overrides for personalization use cases or consent data.
 
@@ -112,7 +112,7 @@ You should now have the ID sync container overrides configured. Now you can [sen
 
 After configuring datastream overrides in the Data Collection UI, you can send the overrides to the Edge Network through the Web SDK or Mobile SDK.
 
-* **Web SDK**: See [datastream configuration overrides](../web-sdk/commands/datastream-overrides.md#library) for tag extension instructions and JavaScript library code examples.
+* **Web SDK**: See [datastream configuration overrides](/help/collection/js/commands/configure/edgeconfigoverrides.md) for JavaScript library code examples.
 * **Mobile SDK**: You can send datastream ID overrides either using the [sendEvent API](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) or by using [Rules](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/).
 
 ## Payload example {#payload-example}

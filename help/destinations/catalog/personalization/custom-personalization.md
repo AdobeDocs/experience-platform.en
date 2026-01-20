@@ -31,9 +31,15 @@ Set up this destination to allow external personalization platforms, content man
 
 This destination requires the use of one of the following data collection methods, depending on your implementation:
 
-* Use the [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) if you want to collect data from your website.
+* Use the [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) if you want to collect data from your website.
 * Use the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) if you want to collect data from your mobile application.
-* Use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) if you are not using [Web SDK](/help/web-sdk/home.md) or [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/), or if you want to personalize the user experience based on profile attributes.
+* Use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) if you are not using the Web SDK or Mobile SDK, or if you want to personalize the user experience based on profile attributes.
+
+>[!IMPORTANT]
+>
+>**Attribute-based personalization requirements:** If you want to personalize based on profile attributes (not just audience membership), you **must** use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) with authenticated server-side integration, regardless of whether you are also using Web SDK or Mobile SDK for data collection.
+>
+>Web SDK and Mobile SDK alone only support personalization based on audience membership. The Edge Network API is **required** to securely retrieve profile attributes for personalization.
 
 >[!IMPORTANT]
 >
@@ -96,7 +102,7 @@ Read [Activate profiles and audiences edge personalization destinations](../../u
 
 ## Exported data {#exported-data}
 
-If you are using [Tags in Adobe Experience Platform](../../../tags/home.md) to deploy the Experience Platform Web SDK, use the [send event complete](../../../tags/extensions/client/web-sdk/event-types.md) functionality and your custom code action will have an `event.destinations` variable that you can use to see the exported data.
+If you are using [Tags in Adobe Experience Platform](/help/tags/home.md) to deploy the Experience Platform Web SDK, use the [send event complete](/help/tags/extensions/client/web-sdk/event-types.md) functionality and your custom code action will have an `event.destinations` variable that you can use to see the exported data.
 
 Here is a sample value for the `event.destinations` variable:
 
@@ -118,7 +124,7 @@ Here is a sample value for the `event.destinations` variable:
 ]
 ```
 
-If you are not using [Tags](/help/tags/home.md) to deploy the Experience Platform Web SDK, use [command responses](/help/web-sdk/commands/command-responses.md) to see the exported data.
+If you are not using [Tags](/help/tags/home.md) to deploy the Experience Platform Web SDK, use [command responses](/help/collection/js/commands/command-responses.md) to see the exported data.
 
 The JSON response from Adobe Experience Platform can be parsed to find the corresponding integration alias of the application you are integrating with Adobe Experience Platform. The audience IDs can be passed into the application's code as targeting parameters. Below is a sample of what this would look like specific to the destination response.
 

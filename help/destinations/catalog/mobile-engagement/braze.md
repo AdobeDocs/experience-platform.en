@@ -81,7 +81,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 * **[!UICONTROL Name]**: enter a name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: enter a description that will help you identify this destination in the future.
-* **[!UICONTROL Endpoint Instance]**: ask your [!DNL Braze] representative which endpoint instance you should use.
+* **[!UICONTROL Endpoint Instance]**: all [region-specific endpoints](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) supported by [!DNL Braze] are available for selection. Ask your [!DNL Braze] representative which endpoint instance you should use.
 
 ### Enable alerts {#enable-alerts}
 

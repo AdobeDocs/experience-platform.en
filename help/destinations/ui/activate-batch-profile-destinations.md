@@ -53,7 +53,7 @@ Select your desired file format for export when [creating a connection to the fi
 
 ## Select your audiences {#select-audiences}
 
-To select the audiences that you want to activate to the destination, use the check boxes to the left of the audience names, then select **[!UICONTROL Next]**.
+To select the audiences that you want to activate to the destination, use the checkboxes to the left of the audience names, then select **[!UICONTROL Next]**.
 
 You can select from multiple types of audiences, depending on their origin:
 
@@ -94,7 +94,7 @@ Experience Platform automatically sets a default schedule for each file export. 
 
 ![Edit schedule control highlighted in the Scheduling step.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
-To edit multiple schedules at the same time, select the audiences by using the check boxes on the left side of the screen, then select **[!UICONTROL Edit schedule]**. The schedule you configure will then be applied to all the exported files for the selected audiences.
+To edit multiple schedules at the same time, select the audiences by using the checkboxes on the left side of the screen, then select **[!UICONTROL Edit schedule]**. The schedule you configure will then be applied to all the exported files for the selected audiences.
 
 ![Image of the Experience Platform user interface showing the edit schedule option for multiple selected audiences.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
 
@@ -164,9 +164,9 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
     ![Image highlighting the Scheduled option in the activation flow for batch destinations and showing the time selector.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-      >[!IMPORTANT]
-      >
-      >When mapping an audience which was created within the last 24 hours and evaluated through [batch segmentation](../../segmentation/methods/batch-segmentation.md), set your daily export schedule to start the following day at the earliest. This assures that the daily batch evaluation job runs first and you are exporting complete audience data.
+     When mapping an audience which was created within the last 24 hours and evaluated through [batch segmentation](../../segmentation/methods/batch-segmentation.md), set your daily export schedule to start the following day at the earliest. This assures that the daily batch evaluation job runs first and you are exporting complete audience data.
+
+     When configuring export schedules, set the start time at least **1 hour** after completing the activation flow. Audience activations can take up to 1 hour to propagate through the system. If you schedule an export to run sooner than 1 hour after activation, the scheduled export may be missed.
 
 3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place. For daily exports, best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
 
@@ -242,7 +242,7 @@ The destination name and audience ID cannot be removed from file names. In addit
 
 {style="table-layout:auto"}
 
-To edit multiple file names at the same time, select the audiences by using the check boxes on the left side of the screen, then select **[!UICONTROL Edit file name]**. The file name options you configure will then be applied to all the exported files for the selected audiences.
+To edit multiple file names at the same time, select the audiences by using the checkboxes on the left side of the screen, then select **[!UICONTROL Edit file name]**. The file name options you configure will then be applied to all the exported files for the selected audiences.
 
 ![Image of the Experience Platform user interface showing the edit file name option for multiple selected audiences.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 

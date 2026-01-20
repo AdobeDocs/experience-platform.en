@@ -5,10 +5,6 @@ exl-id: 7968fc64-2022-4503-a45a-82942c6dd9d3
 ---
 # Hosts overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Extensions, rules, and data elements are building blocks. When you want to make your application do something, these building blocks are added to libraries and then a library is "built" into a build. Those builds are delivered to a hosted location.
 
 Hosts define available destinations where the builds can be delivered. They come in two types:

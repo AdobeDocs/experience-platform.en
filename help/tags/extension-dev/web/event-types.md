@@ -5,10 +5,6 @@ exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
 ---
 # Event types for web extensions
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 In a tag rule, an event is an activity that must occur in order for a rule to fire. As an example, a web extension could provide a "gesture" event type that watches for a certain mouse or touch gesture to occur. Once the gesture occurs, the event logic would fire the rule.
 
 An event type library module is designed to detect when an activity happens and then call a function to fire an associated rule. The event being detected is customizable. For example, could detect when a user makes a certain gesture, scrolls rapidly, or interacts with something.

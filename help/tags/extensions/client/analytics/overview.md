@@ -5,10 +5,6 @@ exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
 ---
 # Adobe Analytics extension overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Use this reference for information about configuring the Adobe Analytics extension, and the options available when using this extension to build a rule.
 
 ## Configure the Adobe Analytics extension
@@ -105,7 +101,7 @@ Select an option from the General section of the configuration page. The followi
 
 Enables or disables tracking based on the EU privacy cookie.
 
-When you check the EU Compliance check box, the [!UICONTROL Tracking Cookie Name] field appears. The Tracking Cookie overrides the default tracking cookie name. You can customize the name that tags uses to track your opt-out status for receiving other cookies.
+When you enable the EU Compliance checkbox, the [!UICONTROL Tracking Cookie Name] field appears. The Tracking Cookie overrides the default tracking cookie name. You can customize the name that tags uses to track your opt-out status for receiving other cookies.
 
 When a page is loaded, the system checks to see if a cookie called sat\_track is set (or the custom cookie name specified on the Edit Property page). Consider the following information:
 

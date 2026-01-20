@@ -1362,6 +1362,52 @@ The response is a filtered list of schemas, containing only those that satisfy b
 }
 ```
 
+## Use the UI to validate your schema {#validate-in-ui}
+
+Use the Experience Platform UI to validate that the schema you created through the [!DNL Schema Registry] API has the correct structure, properties, and identity configuration. Follow these steps:
+
+### Locate your schema
+
+To begin, navigate to **[!UICONTROL Schemas]** > **[!UICONTROL Browse]**. Use the text input field to search for the schema name (for example,`Campaign Member`) and select the schema name from the table.
+
+![Schemas browse view with the text input field highlighted to search for and select your schema.](../images/tutorials/create-schema/schemas-browse.png)
+
+### Confirm the schema structure
+
+The schema canvas displays the full structure of your schema. Verify that:
+
+* All standard field groups that you added appear in the canvas.
+* Your custom field group appears in the structure and is expanded to show its fields.
+
+![The schema canvas displaying the full schema structure with standard and custom field groups expanded.](../images/tutorials/create-schema/schema-canvas.png)
+
+### Review schema properties
+
+Next, select the schema root node to open the **[!UICONTROL Schema properties]** panel and confirm the key metadata:
+
+* Schema `$id`  
+* Display name  
+* Profile enablement status  
+
+The `$id` should match the value returned in your API response.
+
+>[!NOTE]
+>
+>The assigned class (**[!UICONTROL XDM Business Campaign Members]** in this example) is displayed in the left **[!UICONTROL Composition]** panel.
+
+![The Schema Editor view with the schema root selected and the Schema properties panel open to review key metadata.](../images/tutorials/create-schema/review-schema-properties.png)
+
+### Validate identity fields
+
+Each identity field added to the schema is listed in the **[!UICONTROL Identities]** section of the **[!UICONTROL Composition]** panel. Select an identity field to display its properties in the right panel. For each identity field, confirm:
+
+* The identity namespace is correct.
+* The field is marked as the primary identity when applicable.
+
+![Composition panel Identities section with an identity field selected and its identity properties shown in the right panel.](../images/tutorials/create-schema/identitiy-confirmation.png)
+
+If the structure, properties, and identity configuration match your API configuration, you have successfully created and configured the schema through the [!DNL Schema Registry] API.
+
 ## Next steps
 
 By following this tutorial, you have successfully composed a schema using both standard field groups and a field group that you defined. You can now use this schema to create a dataset and ingest record data into Adobe Experience Platform.

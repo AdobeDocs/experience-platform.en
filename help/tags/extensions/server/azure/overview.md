@@ -6,10 +6,6 @@ last-substantial-update: 2022-11-23
 ---
 # [!DNL Microsoft Azure] extension overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 In [!DNL Microsoft Azure], [[!DNL Event Hubs]](https://azure.microsoft.com/en-us/products/event-hubs/#overview) is a highly scalable, real-time data ingress service that allows you to process and analyze the massive amounts of data produced by your connected devices and applications. Once data is collected into an event hub, it can be transformed and stored using any real-time analytics provider or batching/storage adapters.
 
 The [!DNL Microsoft Azure] [event forwarding](../../../ui/event-forwarding/overview.md) extension leverages [!DNL Event Hubs] to send events from the Adobe Experience Platform Edge Network to [!DNL Azure] for further processing. This guide covers how to install the extension and employ its capabilities in an event forwarding rule.

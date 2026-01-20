@@ -36,8 +36,8 @@ This guide also requires a working understanding of the following Experience Pla
 * [Experience Data Model (XDM)](/help/xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
 * [Adobe Experience Platform Identity Service](/help/identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
 * [Real-Time Customer Profile](/help/profile/home.md): Uses [!DNL Identity Service] to create detailed customer profiles from your datasets in real time. [!DNL Real-Time Customer Profile] pulls data from the Data Lake and persists customer profiles in its own separate data store.
-* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): A client-side JavaScript library that allows you to integrate various Experience Platform services into your customer-facing website.
-    * [SDK consent commands](../../../../web-sdk/commands/setconsent.md): A use-case overview of the consent-related SDK commands shown in this guide.
+* [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md): A client-side JavaScript library that allows you to integrate various Experience Platform services into your customer-facing website.
+    * [SDK consent commands](/help/collection/js/commands/setconsent.md): A use-case overview of the consent-related SDK commands shown in this guide.
 * [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md): Allows you to divide [!DNL Real-Time Customer Profile] data into groups of individuals that share similar traits and responds similarly to marketing strategies.
 
 In addition to the Experience Platform services listed above, you should also be familiar with [destinations](/help/data-governance/home.md) and their role in the Experience Platform ecosystem.
@@ -135,7 +135,7 @@ Once you have created the datastream described in the previous section, you can 
 
 #### Using CMP consent-change hooks {#setConsent}
 
-Many CMPs provide out-of-the-box hooks that listen to consent-change events. When these events occur, you can use the [`setConsent`](/help/web-sdk/commands/setconsent.md) command to update that customer's consent data.
+Many CMPs provide out-of-the-box hooks that listen to consent-change events. When these events occur, you can use the [`setConsent`](/help/collection/js/commands/setconsent.md) command to update that customer's consent data.
 
 The `setConsent` command expects two arguments: 
 
@@ -218,7 +218,7 @@ alloy("sendEvent", {
 
 ### Handling SDK responses
 
-Many Web SDK commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See [Command responses](/help/web-sdk/commands/command-responses.md) for more information.
+Many Web SDK commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See [Command responses](/help/collection/js/commands/command-responses.md) for more information.
 
 ## Export segments {#export}
 

@@ -197,6 +197,14 @@ POST /workorder
 >
 >You can only delete records from datasets whose associated XDM schema defines a primary identity or identity map.
 
+>[!IMPORTANT]
+>
+>Record delete work orders act exclusively on the **primary identity** field. The following limitations apply:
+>
+>- **Secondary identities are not scanned.** If a dataset contains multiple identity fields, only the primary identity is used for matching. Records cannot be targeted or deleted based on non-primary identities.
+>- **Records without a populated primary identity are skipped.** If a record does not have primary identity metadata populated, it is not eligible for deletion.
+>- **Data ingested before identity configuration is not eligible.** If the primary identity field was added to a schema after data ingestion, previously ingested records cannot be deleted through record delete work orders.
+
 >[!NOTE]
 >
 >If you try to create a record delete work order for a dataset that already has an active expiration, the request returns HTTP 400 (Bad Request).An active expiration is any scheduled delete that has not yet completed.
@@ -294,6 +302,110 @@ The following table describes the properties in the response.
 >[!NOTE]
 >
 >The action property for record delete work orders is currently `identity-delete` in API responses. If the API changes to use a different value (such as `delete_identity`), this documentation will be updated accordingly.
+
+## Convert ID lists to JSON for record delete requests
+
+To create a record delete work order from CSV, TSV, or TXT files containing identifiers, you can use conversion scripts to produce the required JSON payloads for the `/workorder` endpoint. This approach is especially helpful when working with existing data files. For ready-to-use scripts and comprehensive instructions, visit the [csv-to-data-hygiene GitHub repository](https://github.com/perlmonger42/csv-to-data-hygiene).
+
+### Generate JSON payloads
+
+The following bash script examples demonstrate how to run the conversion scripts in Python or Ruby:
+
+>[!BEGINTABS]
+
+>[!TAB Example to run Python script]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.py sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!TAB Example to run Ruby script]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.rb sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!ENDTABS]
+
+The table below describes the parameters in the bash scripts.
+
+| Parameter     | Description |
+| ---           | ---     |
+| `verbose`     | Enable verbose output. |
+| `column`      | The index (1-based) or header name of the column containing the identity values to delete. Defaults to the first column if not specified. |
+| `namespace`   | An object with a `code` property specifying the identity namespace (for example, "email"). |
+| `dataset-id`  | The unique identifier for the dataset associated with the work order. If the request applies to all datasets, this field will be set to `ALL`. |
+| `description` | A description of the record delete work order. |
+| `output-dir`  | The directory to write the output JSON payload. |
+
+{style="table-layout:auto"}
+
+The example below shows a successful JSON payload converted from a CSV, TSV, or TXT file. It contains records associated with the specified namespace and is used to delete records identified by email addresses.
+
+```json
+{
+  "action": "delete_identity",
+  "datasetId": "66f4161cc19b0f2aef3edf10",
+  "displayName": "output/sample-big-001.json",
+  "description": "a simple sample",
+  "identities": [
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "1"
+    },
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "2"
+    }
+  ]
+}
+```
+
+The following table describes the properties in the JSON payload.
+
+| Property     | Description |
+| ---          | ---     |
+| `action`     | The action requested for the record delete work order. Automatically set to `delete_identity` by the conversion script. |
+| `datasetId`  | The unique identifier for the dataset. |
+| `displayName`| A human-readable label for this record delete work order. |
+| `description`| A description of the record delete work order. |
+| `identities` | An array of objects, each containing:<br><ul><li> `namespace`: An object with a `code` property specifying the identity namespace (for example, "email").</li><li> `id`: The identity value to delete for this namespace.</li></ul> |
+
+{style="table-layout:auto"}
+
+### Submit the generated JSON data to the `/workorder` endpoint
+
+To submit a request, follow the instructions in the [create a record delete work order](#create) section. Make sure to use the converted JSON payload as the request body (`-d`) when sending your `curl` POST request to the `/workorder` API endpoint.
 
 ## Retrieve details for a specific record delete work order {#lookup}
 

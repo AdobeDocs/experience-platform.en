@@ -5,10 +5,6 @@ exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
 ---
 # Data element types in edge extensions
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 In tags, data elements are aliases for pieces of data on a web or mobile page, regardless of where that data is found inside the event received by the server. A data element can be referenced by rules and acts as an abstraction for accessing these pieces of data. When the location of the data changes in the future (such as changing the event key that contains the value), a single data element can be reconfigured while all the rules referencing that data element can remain unchanged.
 
 Data element types are provided by extensions, and the extension author determines how this piece of data is retrieved. For example, you can use a data element type to allow Adobe Experience Platform users to retrieve a piece of data from the XDM layer or their custom data layer.

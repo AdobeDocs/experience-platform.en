@@ -44,10 +44,10 @@ All identities in the table below are mandatory mappings.
 
 |Target identity|Description|Considerations|
 |---|---|---|
-|GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|ECID|Experience Cloud ID|This identity is mandatory for the integration to work correctly but is not used for audience activation.|
-|The Trade Desk ID|Advertiser ID in the [!DNL The Trade Desk] platform|Use this identity when activating audiences based on The Trade Desk's proprietary ID.|
+|[!DNL GAID]|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
+|[!DNL IDFA]|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
+|[!DNL ECID]|Experience Cloud ID|This identity is mandatory for the integration to work correctly but is not used for audience activation.|
+| [!DNL Tradedesk] |[!DNL TDID] in the [!DNL The Trade Desk] platform|Use this identity when activating audiences based on The Trade Desk's proprietary ID.|
 
 {style="table-layout:auto"}
 
@@ -123,6 +123,11 @@ In the [Audience schedule](../../ui/activate-segment-streaming-destinations.md#s
 When mapping audiences, Adobe recommends that you use the Experience Platform audience name or a shorter form of it, for ease of use. However, the audience ID or name in your destination does not need to match the one in your Experience Platform account. Any value you insert in the mapping field will be reflected by the destination.
 
 ### Mandatory mappings {#mandatory-mappings}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_required_mappings_ttd"
+>title="Preconfigured mapping sets"
+>abstract="We have preconfigured these four mapping sets for you. As you activate data to Trade Desk, the profiles qualified for the activated audiences do not necessarily need to have all four identities present on the profiles, as this destination will work with any of the target identities shown here."
 
 All target identities described in the [supported identities](#supported-identities) section must be mapped in the mapping step of the audience activation workflow. This includes:
 

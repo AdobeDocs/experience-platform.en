@@ -5,10 +5,6 @@ exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
 ---
 # YouTube Video Tracking extension overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 **Prerequisites**
 
 Each tag property in Adobe Experience Platform requires that the following extensions are installed and configured from the Extensions screen:

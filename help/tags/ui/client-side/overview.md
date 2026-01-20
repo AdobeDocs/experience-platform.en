@@ -5,15 +5,7 @@ exl-id: 54c66066-93f7-4311-a255-0825055d0dec
 ---
 # Client-side information
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 This section contains information that is useful when managing client-side tag operations in Adobe Experience Platform.
-
-* [**The Tag `_satellite` Object Reference**](satellite-object.md)
-
-  This reference documents the `_satellite` object and the things you can do with it.
 
 * [**Asynchronous Deployment of Experience Cloud JavaScript**](asynchronous-deployment.md)
 

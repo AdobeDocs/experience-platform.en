@@ -49,7 +49,7 @@ The Express Profile Service (XPS) retrieves the profiles on the different edges.
 
 ## Next steps
 
-After reading this guide, you should have a basic understanding of edge profiles, including information on the available regions and services for edge profiles. For more information on Adobe Experience Edge, please read the [Edge Network overview](../web-sdk/home.md#edge-network).
+After reading this guide, you should have a basic understanding of edge profiles, including information on the available regions and services for edge profiles. For more information on Adobe Experience Edge, see [Data collection overview](/help/collection/home.md).
 
 ## Appendix
 

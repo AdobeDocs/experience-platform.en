@@ -96,14 +96,29 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Mandatory mappings {#mandatory-mappings}
 
-When activating audiences to the [!DNL Demandbase People] destination, you must configure the following mandatory field mappings in the mapping step:
+When activating audiences to the [!DNL Demandbase People] destination, you must configure the following mandatory field mapping in the mapping step:
+
+| Source field | Target field | Description |
+|--------------|--------------|-------------|
+| `xdm: workEmail.address` | `Identity: email` | The work email address of the person |
+
+### Recommended mappings {#recommended-mappings}
+
+For optimal matching accuracy, include the following optional mappings in your activation flow, in addition to the [mandatory mapping](#mandatory-mappings) above.
 
 | Source field | Target field | Description |
 |--------------|--------------|-------------|
 | `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | The unique identifier for the person |
 | `xdm: person.name.lastName` | `xdm: lastName` | The last name of the person |
 | `xdm: person.name.firstName` | `xdm: firstName` | The first name of the person |
-| `xdm: workEmail.address` | `Identity: email` | The work email address of the person |
+
+### Mapping best practices {#mapping-best-practices}
+
+When mapping fields to [!DNL Demandbase People], consider the following matching behavior:
+
+* **Primary matching**: If `externalPersonId` is present, Demandbase uses it as the primary identifier for person matching.
+* **Fallback matching**: If `externalPersonId` is not available, Demandbase uses the `email` field for identification.
+* **Required vs. recommended**: While only `email` is required by Demandbase, Adobe recommends mapping all available fields from the recommended mappings table above, to improve matching accuracy and campaign performance.
 
 ![Demandbase People mappings](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
 
@@ -114,4 +129,4 @@ These mappings are required for the destination to function properly and must be
 * **Demandbase API guardrails**: If you have exported audiences to Demandbase and the exports are successful in Experience Platform, yet not all of the data reaches Demandbase, you might have encountered API throttling on the Demandbase side. Reach out to them for clarification.
 * **List deletion**: People lists are unique, so you cannot re-create a new list with a name already in use. When you remove people from a list, they will no longer be available, but they will not be deleted.
 * **Activation time**: Data loading in Demandbase is subject to overnight processing.
-* **Audience naming**: If an account audience with the same name was activated earlier to Demandbase, you cannot activate it again through a different dataflow to the Demandbase destination.
+* **Audience naming**: If a people audience with the same name was activated earlier to Demandbase, you cannot activate it again through a different dataflow to the Demandbase destination.

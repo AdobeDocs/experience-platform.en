@@ -5,10 +5,6 @@ exl-id: f1d7cb2b-0058-46f9-983c-079079e06057
 ---
 # Shared modules for the Adobe Analytics extension
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 The [Adobe Analytics extension](./overview.md) provides two different [shared modules](../../../extension-dev/web/shared.md) that you can integrate into your experience application. These modules are covered in the sections below.
 
 ## [!DNL get-tracker]

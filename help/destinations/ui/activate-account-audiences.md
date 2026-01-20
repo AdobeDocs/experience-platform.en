@@ -65,7 +65,7 @@ Follow the instructions to select a destination where you can export your datase
 
 ## Select your account audiences {#select-account-audiences}
 
-Use the check boxes to the left of the account audiences names to select the audiences that you want to export to the destination, then select **[!UICONTROL Next]**. Note that only *account audiences* are shown in this view, and no other audience types are displayed. 
+Use the checkboxes to the left of the account audiences names to select the audiences that you want to export to the destination, then select **[!UICONTROL Next]**. Note that only *account audiences* are shown in this view, and no other audience types are displayed. 
 
 ![Dataset export workflow showing the Select audiences step where you can select which account audiences to export.](/help/destinations/assets/ui/activate-account-audiences/select-account-audiences.png)
 

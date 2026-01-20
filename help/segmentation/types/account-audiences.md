@@ -55,10 +55,6 @@ The Segment Builder appears. The account attributes and audiences are displayed 
 
 ![The Segment Builder is displayed. Note that only the attributes and audiences are displayed.](../images/types/account/segment-builder.png)
 
-When creating account audiences, please note that events are listed under **[!UICONTROL People]**, rather than being their own tab, since these attributes are associated with people.
-
-![The location to find events, which is within the [!UICONTROL People] folder, is highlighted.](../images/types/account/attributes.png)
-
 Under the [!UICONTROL Audiences] tab, you can add previously created people-based audiences to build off of when creating your own account audience.
 
 ![The Audiences tab within the Segment Builder is highlighted.](../images/types/account/audiences.png)
@@ -202,8 +198,8 @@ When using account audiences, the audience **must** comply with the following co
   - A cross entity is when you change between different entities within your audience. For example, going from an Account to a Person to a Marketing List.
 - The maximum number of values that can be checked for a single field is **50**.
   - For example, if you have a field of "City Name", you can check that value against 50 city names.
-- Account audiences **cannot** use sequential events.
 - Account audiences **cannot** use maps.
+- Account audiences **cannot** use events.
 - The maximum depth of nested arrays is **5**.
 - The maximum number of nested objects is **10**.
 
