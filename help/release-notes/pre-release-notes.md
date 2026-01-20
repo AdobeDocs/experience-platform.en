@@ -68,6 +68,7 @@ Real-Time Customer Profile enables you to see a holistic view of each individual
 | --- | --- |
 | Streaming capacity enforcement | Experience Platform now enforces streaming throughput capacities for Real-Time Customer Profile and Identity Service. When customers exceed their contracted streaming capacity, data will be queued and processed in a first-in-first-out manner. This ensures predictable system performance and prevents capacity violations from impacting data ingestion quality. Important notes: Streaming upserts will not be available on the data lake when capacity is exceeded, this enforcement does not apply to customers with Adobe Journey Optimizer licenses, and queued data will be processed sequentially once capacity becomes available. |
 | API access deprecation for Real-Time CDP Prime | API access for experience events is now deprecated for all Real-Time CDP Prime customers. This change affects the ability to query experience events directly via API. Real-Time CDP Ultimate customers can request an exception through a formal exception process to enable experience events API access if needed for their use cases. This deprecation helps optimize system performance and aligns with best practices for data access patterns. |
+| Monitor dataflow run | You can now monitor the progress and readiness of dataflow runs in Profile. |
 
 {style="table-layout:auto"}
 
