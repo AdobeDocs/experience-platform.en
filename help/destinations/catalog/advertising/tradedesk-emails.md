@@ -96,11 +96,6 @@ When connecting to the destination, setting a data governance policy is complete
 
 ## Activate audiences to this destination {#activate}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_required_mappings_ttdg"
->title="Preconfigured mapping sets"
->abstract="We have preconfigured these four mapping sets for you. As you activate data to Trade Desk, the profiles qualified for the activated audiences do not necessarily need to have all four identities present on the profiles, as this destination will work with any of the target identities shown here."
-
 >[!IMPORTANT]
 > 
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
