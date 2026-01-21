@@ -104,8 +104,8 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Total profile fragments]** | The total number of records written into [!DNL Profile], including all existing [!DNL Profile] fragments updated and new [!DNL Profile] fragments created. |
 | **[!UICONTROL Processing time]** | The amount of time it took for the dataflow run to process. |
 | **[!UICONTROL Status]** | The status of the dataflow run. Possible values include [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued], and [!UICONTROL Processing]. |
-| **[!UICONTROL Ready for customer segmentation]** | A status showing if the dataflow is ready to be used in customer segmentation. Possible values include [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued], and [!UICONTROL Processing]. |
-| **[!UICONTROL Ready for lookup]** | A status showing if the dataflow is ready to used in profile lookup.  Possible values include [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued], and [!UICONTROL Processing]. |
+| **[!UICONTROL Ready for customer segmentation]** | A status showing if the ingested records are ready to be used in customer segmentation. Possible values include [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued], and [!UICONTROL Processing]. Even if the **Status** of the dataflow is processing, if the value of this field is Yes, you can use the profiles in customer segmentation. |
+| **[!UICONTROL Ready for lookup]** | A status showing if the ingested records are ready to used in Adobe Journey Optimizer lookup.  Possible values include [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued], and [!UICONTROL Processing]. Even if the **Status** of the dataflow is processing, if the value of this field is Yes, you can use the profiles in Journey Optimizer lookup. |
 
 The [!UICONTROL Dataflow run details] page displays more information on your [!DNL Profile] dataflow run, including its organization ID and dataflow run ID. This page also displays the corresponding error code and error message provided by [!DNL Profile], should any errors occur in the ingestion process.
 
