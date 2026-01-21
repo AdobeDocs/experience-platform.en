@@ -57,6 +57,7 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 | Regional endpoints support for Braze connections | All [region-specific endpoints](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) supported by [!DNL Braze] are now available for selection during the destination configuration flow. Ask your [!DNL Braze] representative which endpoint instance you should use. |
 | Weekly and monthly scheduling support for Liveramp Onboarding | You can now configure weekly and monthly export schedules for the Liveramp Onboarding destination. |
 |AES256 encryption support for Amazon S3 destinations | You can now configure AES256 encryption for your Amazon S3 exports. |
+| Enhanced activation experience for The Trade Desk and Microsoft Bing destinations | The Trade Desk and Microsoft Bing destinations now include predefined mandatory mappings for an optimized activation experience. |
 
 **New or updated functionality**
 
