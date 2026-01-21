@@ -66,8 +66,6 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 | [Edit destinations](/help/destinations/ui/edit-destination.md) and [edit marketing actions](help/destinations/ui/edit-activation.md#edit-marketing-actions) general availability | The option to edit destinations and marketing actions is now available to all users. |
 | Toggle field display names in the Mapping step | When mapping schema fields to a destination, you can now toggle between displaying the full XDM field name and showing only the display name. |
 
-
-
 {style="table-layout:auto"}
 
 For more information, read the [Destinations overview](../destinations/home.md).
