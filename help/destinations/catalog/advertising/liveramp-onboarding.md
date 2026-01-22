@@ -126,7 +126,7 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 In the [!UICONTROL Scheduling] step, create an export schedule for each audience, with the settings shown below.
 
 * **[!UICONTROL File export options]**: [!UICONTROL Export full files]. [Incremental file exports](../../ui/activate-batch-profile-destinations.md#export-incremental-files) are currently not supported for the [!DNL LiveRamp] destination.
-* **[!UICONTROL Frequency]**: [!UICONTROL Daily, Weekly, Monthly]
+* **[!UICONTROL Frequency]**: [!UICONTROL Daily], [!UICONTROL Weekly], or [!UICONTROL Monthly]
 * **[!UICONTROL Date]**: Select the export start and end times as you wish.
 
 ![Experience Platform UI screenshot showing the audience scheduling step.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
