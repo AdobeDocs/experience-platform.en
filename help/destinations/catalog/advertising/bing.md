@@ -116,8 +116,6 @@ The following target identities are required for the [!DNL Microsoft Bing] desti
 
 These mappings are **preconfigured and automatically populated** during the audience activation workflow. The mapping fields are grayed out and read-only. You do not need to configure anything in this step. Select **[!UICONTROL Next]** to continue.
 
-While the mappings are automatically configured, profiles must still have a valid ECID identity associated with them to be successfully exported to the destination.
-
 ## Exported data {#exported-data}
 
 To verify if data has been exported successfully to the [!DNL Microsoft Bing] destination, check your [!DNL Microsoft Bing Ads] account. If activation was successful, audiences are populated in your account.
