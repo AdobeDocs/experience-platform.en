@@ -49,46 +49,49 @@ You will receive an alert showing that the role has been saved successfully. Sel
 
 The new role is successfully created, and you are redirected to the **[!UICONTROL Roles]** page, where you will see the newly created role appear in the list. 
 
-<!--
-The following video is intended to support your understanding of creating a new role and managing users for that role.
+<!-- The following video is intended to support your understanding of creating a new role and managing users for that role.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on) -->
 
 ## Duplicate a role
 
-To duplicate an existing role, select the role from the **[!UICONTROL Roles]** tab. Alternatively, use the filter option to filter the results to find the role you want to duplicate.
+Duplicating a role will copy over the details, permissions, labels, and sandboxes. Users, user groups, and API credentials **are not** copied over and will need to be manually added to the role.
 
-![flac-duplicate-role](../../images/flac-ui/flac-duplicate-role.png)
+To duplicate an existing role, find the role you wish to duplicate within the **[!UICONTROL Roles]** tab. Select the ![More icon](/help/images/icons/more.png) beside the role's name, and then select **[!UICONTROL Duplicate]** from the dropdown menu.
 
-Next, select **[!UICONTROL Duplicate]** from the top right of the screen. 
+![The Roles workspace with a role's dropdown menu expanded and the Duplicate option highlighted.](../../images/ui/roles/role-duplicate.png)
 
-![flac-duplicate](../../images/flac-ui/flac-duplicate.png)
+The duplicate confirmation dialog will appear. Select **[!UICONTROL Confirm]** to finish duplicating the role. The new role will be saved under the same name with `_Copy` added as a suffix.
 
-The **[!UICONTROL Duplicate role]** dialog appears, prompting you to confirm the duplication. 
+![The duplicate confirmation dialog with the Confirm option highlighted.](../../images/ui/roles/role-duplicate-confirm.png)
 
-![flac-duplicate-confirm](../../images/flac-ui/flac-duplicate-confirm.png)
+Alternatively, you can duplicate a role from within an individual role's workspace. Select the role you wish to duplicate from the **[!UICONTROL Roles]** workspace and then select **[!UICONTROL Duplicate]**.
 
-Next, you will be taken to the role's detail page where you can change the name and permissions for the role. The Details, Labels, and Sandboxes are duplicated from the previous role. Users will need to be added via the users tab. You can view the [manage permissions for a role](permissions.md) document to learn more about adding Details, Labels, Sandboxes, and Users to a role.
+![An individual role's workspace with the Duplicate option highlighted.](../../images/ui/roles/role-duplicate-alt.png)
 
-Click on the left arrow to return to the **[!UICONTROL Roles]** tab.
+The duplicate confirmation dialog will appear. Select **[!UICONTROL Confirm]** to finish duplicating the role. You will be redirected to the new role. 
 
-![flac-return-to-roles](../../images/flac-ui/flac-return-to-roles.png)
-
-The new role will appear in the list on the **[!UICONTROL Roles]** page.
-
-![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
+![The duplicate confirmation dialog with the Confirm option highlighted.](../../images/ui/roles/role-duplicate-alt-confirm.png)
 
 ## Delete a role
 
-Select the ellipsis (`…`) next to a role's name, and a dropdown displays controls to edit, delete, or duplicate the role. Select delete from the dropdown.
+To delete a role, find the role you wish to delete within the **[!UICONTROL Roles]** tab. Select the ![More icon](/help/images/icons/more.png) beside the role's name, and then select **[!UICONTROL Delete]** from the dropdown menu.
 
-![flac-role-delete](../../images/flac-ui/flac-role-delete.png)
+![The Roles workspace with a role's dropdown menu expanded and the Duplicate option highlighted.](../../images/ui/roles/role-delete.png)
 
-The **[!UICONTROL Delete user role]** dialog appears, prompting you to confirm the deletion. 
+The delete confirmation dialog will appear. Select **[!UICONTROL Confirm]** to finish deleting the role. 
 
-![flac-confirm-role-delete](../../images/flac-ui/flac-confirm-role-delete.png)
+![The duplicate confirmation dialog with the Confirm option highlighted.](../../images/ui/roles/role-duplicate-confirm.png)
 
-You will be returned to the **[!UICONTROL Roles]** tab.
+Alternatively, you can delete a role from within an individual role's workspace. Select the role you wish to delete from the **[!UICONTROL Roles]** workspace and then select **[!UICONTROL Delete]**.
+
+![An individual role's workspace with the Delete option highlighted.](../../images/ui/roles/role-delete-alt.png)
+
+The delete confirmation dialog will appear. Select **[!UICONTROL Confirm]** to finish deleting the role.
+
+![The delete confirmation dialog with the Confirm option highlighted.](../../images/ui/roles/role-delete-alt-confirm.png)
+
+<!-- ADD PERMISSIONS TO THIS PAGE -->
 
 ## Next steps
 
