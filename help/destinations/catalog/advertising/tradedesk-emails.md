@@ -1,5 +1,5 @@
 ---
-title: The Trade Desk - First-Party Data Connector
+title: The Trade Desk - CRM Connection
 description: Activate profiles to your Trade Desk account for audience targeting and suppression based on CRM data.
 last-substantial-update: 2025-01-16
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
@@ -8,7 +8,7 @@ exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 
 >[!IMPORTANT]
 >
->There are two The Trade Desk - First-Party Data destinations in the [destinations catalog](/help/destinations/catalog/overview.md).
+>There are two The Trade Desk - CRM destinations in the [destinations catalog](/help/destinations/catalog/overview.md).
 >
 >* If you source data in the EU, please use the **[!DNL The Trade Desk - CRM (EU)]** destination. 
 >* If you source data in the APAC or NAMER regions, please use the **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destination. 
