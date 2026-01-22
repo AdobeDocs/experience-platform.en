@@ -11,18 +11,7 @@ exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 
 >[!IMPORTANT]
 >
-> Following the [internal upgrade](../../../release-notes/2025/july-2025.md#destinations) to the destinations service from July 2025, you may notice a **drop in the number of activated profiles** in your dataflows to [!DNL The Trade Desk].
-> This drop is caused by improved monitoring visibility. Profiles without ECID are now correctly counted as dropped in the activation metrics. See the [mandatory mapping](#mandatory-mappings) section in this page for detailed information.
->
->**What changed:**
->
->* The destinations service now correctly reports when profiles without ECID are dropped from activation.
->* **Important:** Profiles without ECID never made it to [!DNL The Trade Desk] even before this upgrade. The integration has always required ECID. This upgrade fixes a bug that previously prevented these drops from being visible in your metrics.
->
->**What you need to do:**
->
->* Review your audience data to confirm profiles have valid ECID values.
->* Monitor your activation metrics to verify expected profile counts. Lower counts reflect accurate reporting, not a change in destination behavior.
+> Identity mappings for this destination are **preconfigured and automatically populated**. See the [mandatory mapping](#mandatory-mappings) section for details on which identities can be used for activation.
 
 Use this destination connector to send profile data to [!DNL The Trade Desk]. This connector sends data to the [!DNL The Trade Desk] first-party endpoint. The integration between Adobe Experience Platform and [!DNL The Trade Desk] does not support exporting data to the [!DNL The Trade Desk] third-party endpoint.
 
@@ -47,7 +36,7 @@ All identities in the table below are mandatory mappings.
 |[!DNL GAID]|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
 |[!DNL IDFA]|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
 |[!DNL ECID]|Experience Cloud ID|This identity is mandatory for the integration to work correctly but is not used for audience activation.|
-| [!DNL Tradedesk] |[!DNL TDID] in the [!DNL The Trade Desk] platform|Use this identity when activating audiences based on The Trade Desk's proprietary ID.|
+| [!DNL Tradedesk] |[!DNL TDID] in the [!DNL The Trade Desk] platform|To use this identity, your profile must have an ECID, and an ECID-to-Trade Desk ID mapping must be sent to Adobe and processed before activation.|
 
 {style="table-layout:auto"}
 
@@ -129,7 +118,7 @@ When mapping audiences, Adobe recommends that you use the Experience Platform au
 >title="Preconfigured mapping sets"
 >abstract="We have preconfigured these four mapping sets for you. As you activate data to Trade Desk, the profiles qualified for the activated audiences do not necessarily need to have all four identities present on the profiles, as this destination will work with any of the target identities shown here."
 
-All target identities described in the [supported identities](#supported-identities) section must be mapped in the mapping step of the audience activation workflow. This includes:
+The following identity mappings are **preconfigured and automatically populated** during the audience activation workflow:
 
 * [!DNL GAID] (Google Advertising ID)
 * [!DNL IDFA] (Apple ID for Advertisers)
@@ -138,24 +127,12 @@ All target identities described in the [supported identities](#supported-identit
 
 ![Screenshot showing the mandatory mappings](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
 
-Mapping all target identities ensures the activation can correctly split and deliver profiles using any identity present. This does not mean that all identities must be present on each profile.
+These mappings are grayed out and read-only. You do not need to configure anything in this step. Select **[!UICONTROL Next]** to continue.
 
-For export to The Trade Desk to succeed, a profile must contain:
+The mappings cover all ID types that can be used by this destination. Profiles will be activated based on the identities present in the profile:
 
-* [!DNL ECID], and
-* at least one of: [!DNL GAID], [!DNL IDFA], or [!DNL The Trade Desk ID]
-
-Examples:
-
-* [!DNL ECID] only: not exported
-* [!DNL ECID] + [!DNL The Trade Desk ID]: exported
-* [!DNL ECID] + [!DNL IDFA]: exported
-* [!DNL ECID] + [!DNL GAID]: exported
-* [!DNL IDFA] + [!DNL The Trade Desk ID] (no [!DNL ECID]): not exported
-
->[!NOTE]
-> 
->Following the [July 2025 upgrade](/help/release-notes/2025/july-2025.md#destinations) to the destinations service, profiles missing [!DNL ECID] are now correctly reported as dropped in activation metrics. This has always been the behavior of the integration - profiles without [!DNL ECID] never reached [!DNL The Trade Desk] - but the drops are now properly visible in your dataflow monitoring. Lower activation counts reflect accurate reporting, not a change in destination functionality.
+* Profiles with [!DNL GAID] or [!DNL IDFA] will be activated using those identities
+* Profiles with [!DNL ECID] and a [!DNL Trade Desk ID] mapping in Experience Platform will be activated using the Trade Desk ID
 
 ## Exported data {#exported-data}
 

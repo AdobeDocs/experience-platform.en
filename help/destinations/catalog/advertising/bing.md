@@ -8,23 +8,6 @@ exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 
 ## Overview {#overview}
 
-
->[!IMPORTANT]
->
->Following an internal upgrade to the destinations service from August 2025, you may experience a **drop in the number of activated profiles** in your dataflows to [!DNL Microsoft Bing].
->
-> This drop is caused by the introduction of the **ECID mapping requirement** for all activations to this destination platform. See the [mandatory mapping](#mandatory-mappings) section in this page for detailed information.
->
->**What changed:**
->
->* ECID (Experience Cloud ID) mapping is now **mandatory** for all profile activations.
->* Profiles without ECID mapping will be **dropped** from existing activation dataflows.
->
->**What you need to do:**
->
->* Review your audience data to confirm profiles have valid ECID values.
->* Monitor your activation metrics to verify expected profile counts.
-
 Use the [!DNL Microsoft Bing] destination to send profile data to the entire [!DNL Microsoft Advertising Network], including [!DNL Display Advertising], [!DNL Search], and [!DNL Native]. 
 
 The [!DNL Microsoft Bing] destination creates *[!DNL Custom Audiences]* in Microsoft. Those are available both in the [!DNL Microsoft Search Network] and [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]) as listed in the [Microsoft Advertising documentation](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
@@ -126,12 +109,14 @@ In the [Audience schedule](../../ui/activate-segment-streaming-destinations.md#s
 
 ### Mandatory mappings {#mandatory-mappings}
 
-All target identities described in the [supported identities](#supported-identities) section are mandatory and must be mapped during the audience activation process. This includes:
+The following target identities are required for the [!DNL Microsoft Bing] destination to work correctly:
 
 * **MAID** (Microsoft Advertising ID)
 * **ECID** (Experience Cloud ID)
 
-Failure to map all required identities prevents you from completing the activation workflow. Each identity serves a specific purpose in the integration, and all are required for the destination to work correctly.
+These mappings are **preconfigured and automatically populated** during the audience activation workflow. The mapping fields are grayed out and read-only. You do not need to configure anything in this step. Select **[!UICONTROL Next]** to continue.
+
+While the mappings are automatically configured, profiles must still have a valid ECID identity associated with them to be successfully exported to the destination.
 
 ## Exported data {#exported-data}
 
