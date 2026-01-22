@@ -31,7 +31,7 @@ All identities in the table below are mandatory mappings.
 |[!DNL GAID]|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
 |[!DNL IDFA]|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
 |[!DNL ECID]|Experience Cloud ID|This identity is mandatory for the integration to work correctly but is not used for audience activation.|
-| [!DNL Tradedesk] |[!DNL TDID] in the [!DNL The Trade Desk] platform|To use this identity, your profile must have an ECID, and an ECID-to-Trade Desk ID mapping must be sent to Adobe and processed before activation.|
+| [!DNL Tradedesk] |[!DNL TDID] in the [!DNL The Trade Desk] platform|To use this identity, your profile must have an ECID, and an ECID-to-Trade Desk ID mapping must exist in Experience Platform before activation.|
 
 {style="table-layout:auto"}
 
