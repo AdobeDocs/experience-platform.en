@@ -103,7 +103,10 @@ To set up this authorization method for your destination, add the following line
       "refreshTokenUrl": "https://api.moviestar.com/OAuth/refresh_token",
       "clientId": "Experience-Platform-client-id",
       "clientSecret": "Experience-Platform-client-secret",
-      "scope": ["read", "write"]
+      "scope": ["read", "write"],
+      "options": {
+          "useBasicAuth": true 
+      }
     }
   ]
 //...
@@ -121,6 +124,7 @@ To set up this authorization method for your destination, add the following line
 |`clientId` | String | The client ID that your system assigns to Adobe Experience Platform. |
 |`clientSecret` | String | The client secret that your system assigns to Adobe Experience Platform. |
 |`scope` | List of Strings | *Optional*. Set the scope of what the access token allows Experience Platform to perform on your resources. Example: "read, write". |
+|`options.useBasicAuth`| Boolean| *Optional*. A boolean value that controls how the client credentials (client ID and client secret) are sent to the OAuth provider's token endpoint when exchanging an authorization code for an access token. <ul><li>If set to `false` or undefined, the credentials are sent as `client_id` and `client_secret` parameters in the POST request body (default behavior).</li><li>If this parameter is set to `true`, then the credentials are sent in the HTTP `Authorization` header using Basic Authentication format: `Authorization: Basic base64(clientID:clientSecret)`.</li></ul> Set `useBasicAuth` to `true` when your OAuth provider requires client credentials to be sent in the `Authorization` header rather than the request body. |
 
 {style="table-layout:auto"}
 
