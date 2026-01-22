@@ -12,6 +12,12 @@ Learn how to edit various components of an existing destination connection, incl
 >
 > The edit operations described in this tutorial are also supported via API operations. Read the tutorial on how to [edit destinations in the API](/help/destinations/api/edit-destination.md) for more information.
 
+## Prerequisites {#prerequisites}
+
+To edit destination connections you need the **[!UICONTROL Manage Destinations]**, [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
+## Edit destination connections {#edit}
+
 To edit various components of an existing destination connection: 
 
 1. Navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
