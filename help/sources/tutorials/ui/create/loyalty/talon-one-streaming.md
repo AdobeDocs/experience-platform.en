@@ -112,4 +112,8 @@ With the connection created, the sources detail page appears. This page shows de
 
 ## Monitor your dataflow
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on ingestion rates, success, and errors. For more information on how to monitor dataflow, see the tutorial on [monitoring accounts and dataflows in the UI](../../monitor-streaming.md)
+Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on ingestion rates, success, and errors. For more information on how to monitor dataflow, see the tutorial on [monitoring accounts and dataflows in the UI](../../monitor-streaming.md).
+
+## Known limitations
+
+To ensure accurate data ingestion, you should send data from [!DNL Talon.One]'s loyalty points changed, tier upgrade, and tier downgrade notifications to the connector. Because the loyalty points changed notification does not include tier information, you must send these notifications to a separate profile dataset. If you combine points changed data with tier upgrade or downgrade notifications in the same dataset, tier information will be lost or overwritten with null values. Tier upgrade and downgrade notifications can use the same dataset, as both include tier details. After ingestion, Profile merge rules will automatically update the merged profile to reflect the most recent points and tier information.
