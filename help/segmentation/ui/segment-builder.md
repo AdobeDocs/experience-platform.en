@@ -17,6 +17,31 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 ## Segment definition building blocks {#building-blocks}
 
 >[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
+>title="Logic complexity"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_chaincountcheck"
+>title="Event sequence limit"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_rewritescheck"
+>title="Query efficiency alert"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_countaggregationcheck"
+>title="Count filter warning"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_arraydepthcheck"
+>title="Nested data warning"
+>abstract=""
+
+>[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Fields"
 >abstract="The three field types that make up a segment definition are attributes, events, and audiences. Attributes let you use Profile attributes that belong to the XDM Individual Profile class, events let you create an audience based on actions or events that take place using XDM ExperienceEvent data elements, and audiences let you use imported audiences from external sources."
