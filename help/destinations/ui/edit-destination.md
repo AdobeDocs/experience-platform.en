@@ -14,7 +14,7 @@ Learn how to edit various components of an existing destination connection, incl
 
 ## Prerequisites {#prerequisites}
 
-To edit destination connections you need the **[!UICONTROL Manage Destinations]**, [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+To edit destination connections you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 ## Edit destination connections {#edit}
 

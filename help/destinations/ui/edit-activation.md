@@ -107,6 +107,10 @@ Select **[!UICONTROL Export datasets]** in the right rail to select additional d
 
 ## Edit marketing actions {#edit-marketing-actions}
 
+>[!IMPORTANT]
+>
+>To edit marketing actions you need the **[!UICONTROL Activate Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
 You can add or remove marketing actions that you set up when initially connecting to the destination.
 
 Select **[!UICONTROL Edit marketing actions]** in the right rail to open the marketing actions selection screen.
