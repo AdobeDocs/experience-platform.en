@@ -8,11 +8,6 @@ exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 
 ## Overview {#overview}
 
-
->[!IMPORTANT]
->
-> Identity mappings for this destination are **preconfigured and automatically populated**. See the [mandatory mapping](#mandatory-mappings) section for details on which identities can be used for activation.
-
 Use this destination connector to send profile data to [!DNL The Trade Desk]. This connector sends data to the [!DNL The Trade Desk] first-party endpoint. The integration between Adobe Experience Platform and [!DNL The Trade Desk] does not support exporting data to the [!DNL The Trade Desk] third-party endpoint.
 
 [!DNL The Trade Desk] is a self-service platform for ad buyers to execute retargeting and audience-targeted digital campaigns across display, video, and mobile inventory sources.
