@@ -12,7 +12,7 @@ There are certain cases where you might want to interact with two different prop
 * Data-sharing relationships between multiple companies
 * Customers who are testing new Adobe Solutions and don't want to disrupt their existing implementation
 
-The SDK allows you to create a separate instance for each property by adding another name to the array in the base code. The following example provides two names, `titanium` and `copper`.
+The SDK allows you to create a separate instance for each property by adding another name to the array in the [base code](../js/install/base-code.md). The following example provides two names, `titanium` and `copper`.
 
 ```html
 <script>
