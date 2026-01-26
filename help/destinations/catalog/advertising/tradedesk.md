@@ -70,8 +70,6 @@ Prerequisites depend on which identity types you plan to use for audience activa
 
 2. **Instrument your web pages**: Implement code on your web pages to create mappings between [!DNL The Trade Desk ID] and Adobe ECID. This allows Experience Platform to associate Trade Desk IDs with your customer profiles.
 
-3. **Verify ECID on profiles**: Confirm that ECID is present on the profiles you want to activate. [!DNL Trade Desk ID] activation requires profiles to have an ECID with a corresponding Trade Desk ID mapping.
-
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
@@ -144,12 +142,12 @@ Experience Platform automatically checks each profile that belongs to audiences 
 * ECID present on the profile
 * An ID sync mapping between the [!DNL Trade Desk ID] and ECID (configured as described in the [prerequisites](#prerequisites) section)
 
-**Multiple IDs behavior:** If a profile contains multiple supported identities, the profile will be split and each identity will be activated separately to [!DNL The Trade Desk]. This ensures maximum reach and flexibility in your audience activation.
+**Multiple IDs behavior:** If a profile contains multiple supported identities, each identity will be activated separately to [!DNL The Trade Desk]. This ensures maximum reach and flexibility in your audience activation.
 
 ### Activation examples
 
-* **Mobile ID profiles:** Profiles with GAID and/or IDFA are activated using their respective advertising IDs. If a profile contains both GAID and IDFA, it will be split into two separate activations
-* **Cookie-based profile:** A profile with ECID and a corresponding [!DNL Trade Desk ID] mapping will be activated using the Trade Desk ID for cookie-based targeting
+* **Mobile ID profiles:** Profiles with GAID and/or IDFA are activated using their respective advertising IDs. If a profile contains both GAID and IDFA, each ID will be activated separately.
+* **Cookie-based profile:** A profile with ECID and a corresponding [!DNL Trade Desk ID] mapping will be activated using the Trade Desk ID for cookie-based targeting.
 * **ECID-only profile:** A profile with only ECID and no [!DNL Trade Desk ID] mapping will **not be exported**. ECID alone is insufficient for activation.
 
 ## Exported data {#exported-data}

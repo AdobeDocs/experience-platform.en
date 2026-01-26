@@ -64,8 +64,6 @@ The [!DNL Microsoft Bing] destination requires the following setup to function c
 
 2. **Ensure ECID on profiles**: All profiles must have an ECID present to be successfully exported. ECID is **mandatory** for this destination.
 
-3. **Verify ID sync mapping**: Confirm that an ID sync mapping exists between ECID and Microsoft Advertising ID (MAID) for the profiles you want to activate.
-
 When configuring the destination, you must provide the following information:
 
 * [!UICONTROL Account ID]: this is your [!DNL Bing Ads CID], in integer format.
