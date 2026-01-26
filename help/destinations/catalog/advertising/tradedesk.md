@@ -66,7 +66,7 @@ Prerequisites depend on which identity types you plan to use for audience activa
 **For cookie-based targeting on [!DNL The Trade Desk]**, make sure that a mapping between ECID and [!DNL Trade Desk ID] is established. Complete the steps below to do so:
 
 1. **Enable ID sync functionality**: If this is your first time setting up [!DNL The Trade Desk ID] activation and you have not enabled the [ID sync functionality](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), contact Adobe Consulting or Customer Care to enable ID syncs. 
-   * If you previously set up [!DNL The Trade Desk] integrations in Audience Manager, your existing ID syncs automatically carry over to Experience Platform.
+   * If you have previously set up [!DNL The Trade Desk] integrations in Audience Manager, your existing ID syncs automatically carry over to Experience Platform.
 
 2. **Instrument your web pages**: Implement code on your web pages to create mappings between [!DNL The Trade Desk ID] and Adobe ECID. This allows Experience Platform to associate Trade Desk IDs with your customer profiles.
 
