@@ -22,10 +22,16 @@ As a marketer, I want to be able to use audiences built off of [!DNL Microsoft A
 
 [!DNL Microsoft Bing] supports the activation of audiences based on the identities shown in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-|Identity|Description|
-|---|---|
-|MAID|Microsoft Advertising ID|
-|ECID|Experience Cloud ID. This identity is mandatory for the integration to work correctly but is not used for audience activation.|
+All identities in the table below are preconfigured and automatically mapped during activation. You do not need to manually configure these mappings.
+
+>[!IMPORTANT]
+>
+>[!DNL Microsoft Bing] does **not** support mobile advertising IDs ([!DNL GAID] or [!DNL IDFA]). [!DNL ECID] is **mandatory** for all profile exports to this destination.
+
+|Identity|Description|Considerations|
+|---|---|---|
+|MAID|Microsoft Advertising ID|Activated when a Microsoft Advertising ID is present on the profile.|
+|ECID|Experience Cloud ID|**Required.** All profiles must have an [!DNL ECID] with a corresponding Microsoft Advertising ID mapping to be exported.|
 
 {style="table-layout:auto"}
 
@@ -55,9 +61,14 @@ Refer to the table below for information about the destination export type and f
 
 ## Prerequisites {#prerequisites}
 
->[!IMPORTANT]
->
->If you are looking to create your first destination with [!DNL Microsoft Bing] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Microsoft Bing] integrations in Audience Manager, the ID syncs you had set up carry over to Experience Platform.
+The [!DNL Microsoft Bing] destination requires the following setup to function correctly:
+
+1. **Enable ID sync functionality**: If this is your first time setting up [!DNL Microsoft Bing] activation and you have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), contact Adobe Consulting or Customer Care to enable ID syncs.
+   * If you previously set up [!DNL Microsoft Bing] integrations in Audience Manager, your existing ID syncs automatically carry over to Experience Platform.
+
+2. **Ensure [!DNL ECID] on profiles**: All profiles must have an [!DNL ECID] present to be successfully exported. [!DNL ECID] is **mandatory** for this destination.
+
+3. **Verify ID sync mapping**: Confirm that an ID sync mapping exists between [!DNL ECID] and Microsoft Advertising ID (MAID) for the profiles you want to activate.
 
 When configuring the destination, you must provide the following information:
 
@@ -109,14 +120,22 @@ In the [Audience schedule](../../ui/activate-segment-streaming-destinations.md#s
 
 ### Mandatory mappings {#mandatory-mappings}
 
-The following target identities are required for the [!DNL Microsoft Bing] destination to work correctly:
+The following identity mappings are **preconfigured and automatically populated** during the audience activation workflow:
 
 * **MAID** (Microsoft Advertising ID)
 * **ECID** (Experience Cloud ID)
 
-These mappings are **preconfigured and automatically populated** during the audience activation workflow. The mapping fields are grayed out and read-only. You do not need to configure anything in this step. Select **[!UICONTROL Next]** to continue.
+These mappings are grayed out and read-only. You do not need to configure anything in this step. Select **[!UICONTROL Next]** to continue.
 
-While the mappings are automatically configured, profiles must still have a valid ECID identity associated with them to be successfully exported to the destination.
+>[!IMPORTANT]
+>
+>**[!DNL ECID] is required for export to succeed.** Profiles without [!DNL ECID] or without an ID sync mapping between [!DNL ECID] and Microsoft Advertising ID will not be exported.
+
+### Activation examples
+
+* **Profile with [!DNL ECID] and Microsoft Advertising ID mapping:** Profile is successfully exported and activated
+* **Profile with [!DNL ECID] only (no Microsoft Advertising ID mapping):** Profile is **not exported**. The ID sync mapping between [!DNL ECID] and MAID is required.
+* **Profile without [!DNL ECID]:** Profile is **not exported**. [!DNL ECID] is mandatory for this destination.
 
 ## Exported data {#exported-data}
 

@@ -24,14 +24,14 @@ As a marketer, I want to be able to use audiences built off of [!DNL Trade Desk 
 
 Below are the identities supported by [!DNL The Trade Desk] destination. These identities can be used to activate audiences to [!DNL The Trade Desk].
 
-All identities in the table below are mandatory mappings.
+All identities in the table below are preconfigured and automatically mapped during activation. You do not need to manually configure these mappings.
 
 |Target identity|Description|Considerations|
 |---|---|---|
-|[!DNL GAID]|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
-|[!DNL IDFA]|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
+|[!DNL GAID]|Google Advertising ID|Activated when a GAID is present on the profile.|
+|[!DNL IDFA]|Apple ID for Advertisers|Activated when an IDFA is present on the profile.|
 |[!DNL ECID]|Experience Cloud ID|This identity is mandatory for the integration to work correctly but is not used for audience activation.|
-| [!DNL Tradedesk] |[!DNL TDID] in the [!DNL The Trade Desk] platform|To use this identity, your profile must have an ECID, and an ECID-to-Trade Desk ID mapping must exist in Experience Platform before activation.|
+| [!DNL Tradedesk] |[!DNL TDID] in the [!DNL The Trade Desk] platform|Activated when a profile has an ECID and an ECID-to-Trade Desk ID mapping exists in Experience Platform.|
 
 {style="table-layout:auto"}
 
@@ -59,9 +59,18 @@ Refer to the table below for information about the destination export type and f
 
 ## Prerequisites {#prerequisites}
 
->[!IMPORTANT]
->
->If you are looking to create your first destination with [!DNL The Trade Desk] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL The Trade Desk] integrations in Audience Manager, the ID syncs you had set up carry over to Experience Platform.
+Prerequisites depend on which identity types you plan to use for audience activation:
+
+**For mobile ID activation only ([!DNL GAID] and/or [!DNL IDFA])**, no prerequisites are required. You can start activating audiences immediately using mobile advertising IDs.
+
+**For [!DNL Trade Desk ID] activation (cookie-based targeting)**, complete the following setup steps:
+
+1. **Enable ID sync functionality**: If this is your first time setting up [!DNL The Trade Desk ID] activation and you have not enabled the [ID sync functionality](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), contact Adobe Consulting or Customer Care to enable ID syncs. 
+   * If you previously set up [!DNL The Trade Desk] integrations in Audience Manager, your existing ID syncs automatically carry over to Experience Platform.
+
+2. **Instrument your web pages**: Implement code on your web pages to create mappings between [!DNL The Trade Desk ID] and Adobe [!DNL ECID]. This allows Experience Platform to associate Trade Desk IDs with your customer profiles.
+
+3. **Verify [!DNL ECID] on profiles**: Confirm that [!DNL ECID] is present on the profiles you want to activate. [!DNL Trade Desk ID] activation requires profiles to have an [!DNL ECID] with a corresponding Trade Desk ID mapping.
 
 ## Connect to the destination {#connect}
 
@@ -124,10 +133,26 @@ The following identity mappings are **preconfigured and automatically populated*
 
 These mappings are grayed out and read-only. You do not need to configure anything in this step. Select **[!UICONTROL Next]** to continue.
 
-The mappings cover all ID types that can be used by this destination. Profiles will be activated based on the identities present in the profile:
+Experience Platform automatically checks each profile for all supported identity types and activates the profile using any identities that are present.
 
-* Profiles with [!DNL GAID] or [!DNL IDFA] will be activated using those identities
-* Profiles with [!DNL ECID] and a [!DNL Trade Desk ID] mapping in Experience Platform will be activated using the Trade Desk ID
+### Identity requirements by activation type
+
+**Mobile ID activation ([!DNL GAID]/[!DNL IDFA]):** Profiles with just [!DNL GAID] or [!DNL IDFA] are sufficient for activation. No additional identities or prerequisites are required.
+
+**Cookie-based targeting ([!DNL Trade Desk ID]):** Requires both:
+
+* [!DNL ECID] present on the profile
+* An ID sync mapping between the [!DNL Trade Desk ID] and [!DNL ECID] (configured as described in the [prerequisites](#prerequisites) section)
+
+**Multiple IDs behavior:** If a profile contains multiple supported identities, the profile will be split and each identity will be activated separately to [!DNL The Trade Desk]. This ensures maximum reach and flexibility in your audience activation.
+
+### Activation examples
+
+* **Mobile-only profile:** A profile with only [!DNL GAID] will be activated using the Google Advertising ID
+* **Multiple mobile IDs:** A profile with [!DNL GAID] and [!DNL IDFA] will be split into two activations: one using the Google Advertising ID and one using the Apple ID for Advertisers
+* **Cookie-based profile:** A profile with [!DNL ECID] and a corresponding [!DNL Trade Desk ID] mapping will be activated using the Trade Desk ID for cookie-based targeting
+* **ECID-only profile:** A profile with only [!DNL ECID] and no [!DNL Trade Desk ID] mapping will **not be exported**. [!DNL ECID] alone is insufficient for activation.
+* **Mixed activation:** A profile with [!DNL GAID], [!DNL IDFA], and [!DNL Trade Desk ID] will result in three separate activations, covering both mobile and cookie-based targeting
 
 ## Exported data {#exported-data}
 
