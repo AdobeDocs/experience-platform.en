@@ -24,14 +24,10 @@ As a marketer, I want to be able to use audiences built off of [!DNL Microsoft A
 
 All identities in the table below are preconfigured and automatically mapped during activation. You do not need to manually configure these mappings.
 
->[!IMPORTANT]
->
->[!DNL Microsoft Bing] does **not** support mobile advertising IDs ([!DNL GAID] or [!DNL IDFA]). [!DNL ECID] is **mandatory** for all profile exports to this destination.
-
 |Identity|Description|Considerations|
 |---|---|---|
 |MAID|Microsoft Advertising ID|Activated when a Microsoft Advertising ID is present on the profile.|
-|ECID|Experience Cloud ID|**Required.** All profiles must have an [!DNL ECID] with a corresponding Microsoft Advertising ID mapping to be exported.|
+|ECID|Experience Cloud ID|**Required.** All profiles must have an ECID with a corresponding Microsoft Advertising ID mapping to be exported.|
 
 {style="table-layout:auto"}
 
@@ -66,9 +62,9 @@ The [!DNL Microsoft Bing] destination requires the following setup to function c
 1. **Enable ID sync functionality**: If this is your first time setting up [!DNL Microsoft Bing] activation and you have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), contact Adobe Consulting or Customer Care to enable ID syncs.
    * If you previously set up [!DNL Microsoft Bing] integrations in Audience Manager, your existing ID syncs automatically carry over to Experience Platform.
 
-2. **Ensure [!DNL ECID] on profiles**: All profiles must have an [!DNL ECID] present to be successfully exported. [!DNL ECID] is **mandatory** for this destination.
+2. **Ensure ECID on profiles**: All profiles must have an ECID present to be successfully exported. ECID is **mandatory** for this destination.
 
-3. **Verify ID sync mapping**: Confirm that an ID sync mapping exists between [!DNL ECID] and Microsoft Advertising ID (MAID) for the profiles you want to activate.
+3. **Verify ID sync mapping**: Confirm that an ID sync mapping exists between ECID and Microsoft Advertising ID (MAID) for the profiles you want to activate.
 
 When configuring the destination, you must provide the following information:
 
@@ -118,7 +114,7 @@ In the [Audience schedule](../../ui/activate-segment-streaming-destinations.md#s
 
 ![UI image showing the audience schedule screen with an example of how to map the audience name to the Bing Mapping ID.](../../assets/catalog/advertising/bing/mapping-id.png)
 
-### Mandatory mappings {#mandatory-mappings}
+### Preconfigured mappings {#preconfigured-mappings}
 
 The following identity mappings are **preconfigured and automatically populated** during the audience activation workflow:
 
@@ -129,13 +125,13 @@ These mappings are grayed out and read-only. You do not need to configure anythi
 
 >[!IMPORTANT]
 >
->**[!DNL ECID] is required for export to succeed.** Profiles without [!DNL ECID] or without an ID sync mapping between [!DNL ECID] and Microsoft Advertising ID will not be exported.
+>**ECID is required for export to succeed.** Profiles without ECID or without an ID sync mapping between ECID and Microsoft Advertising ID will not be exported.
 
 ### Activation examples
 
-* **Profile with [!DNL ECID] and Microsoft Advertising ID mapping:** Profile is successfully exported and activated
-* **Profile with [!DNL ECID] only (no Microsoft Advertising ID mapping):** Profile is **not exported**. The ID sync mapping between [!DNL ECID] and MAID is required.
-* **Profile without [!DNL ECID]:** Profile is **not exported**. [!DNL ECID] is mandatory for this destination.
+* **Profile with ECID and Microsoft Advertising ID mapping:** Profile is successfully exported and activated
+* **Profile with ECID only (no Microsoft Advertising ID mapping):** Profile is **not exported**. The ID sync mapping between ECID and MAID is required.
+* **Profile without ECID:** Profile is **not exported**. ECID is mandatory for this destination.
 
 ## Exported data {#exported-data}
 
