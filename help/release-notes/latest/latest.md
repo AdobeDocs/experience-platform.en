@@ -65,7 +65,7 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 
 {style="table-layout:auto"}
 
-For more information, read the [Destinations overview](../destinations/home.md).
+For more information, read the [Destinations overview](../../destinations/home.md).
 
 ## Real-Time Customer Profile {#real-time-customer-profile}
 
@@ -81,7 +81,7 @@ Real-Time Customer Profile enables you to see a holistic view of each individual
 
 {style="table-layout:auto"}
 
-For more information, read the [[!DNL Real-Time Customer Profile] overview](../profile/home.md).
+For more information, read the [[!DNL Real-Time Customer Profile] overview](../../profile/home.md).
 
 ## Segmentation Service {#segmentation-service}
 
@@ -93,7 +93,7 @@ For more information, read the [[!DNL Real-Time Customer Profile] overview](../p
 | ------- | ----------- |
 | External audience TTL refresh | External audiences (such as CSV uploads) now support a force refresh capability for Time-to-Live (TTL) settings. This feature allows users to manually refresh the TTL expiration for external audiences, providing greater control over audience lifecycle management. This is particularly useful for audiences that need to persist beyond their initial TTL period or require reactivation without re-uploading the data. |
 
-For more information, read the [[!DNL Segmentation Service] overview](../segmentation/home.md).
+For more information, read the [[!DNL Segmentation Service] overview](../../segmentation/home.md).
 
 ## Sources {#sources}
 
@@ -106,5 +106,5 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | [[!DNL Oracle Eloqua]](/help/sources/connectors/marketing-automation/eloqua.md) V2 source | A new [!DNL Oracle Eloqua] source connector is now available, replacing the [deprecated connector](/help/sources/connectors/marketing-automation/oracle-eloqua.md). This updated connector provides enhanced functionality and improved reliability for ingesting data from [!DNL Oracle Eloqua] into Experience Platform. Customers using the existing connector should migrate to the new implementation, as existing connections will no longer function. The new connector supports all setup and configuration steps needed to connect to [!DNL Oracle Eloqua] and ingest marketing automation data. |
 | [[!DNL Salesforce Marketing Cloud]](/help/sources/connectors/marketing-automation/sfmc.md) V2 source | A new [!DNL Salesforce Marketing Cloud] source connector is now available, replacing the [deprecated connector](/help/sources/connectors/marketing-automation/salesforce-marketing-cloud.md). This updated connector provides improved performance and additional capabilities for ingesting data from [!DNL Salesforce Marketing Cloud] into Experience Platform. Customers using the existing connector should transition to the new implementation. The new connector includes comprehensive setup instructions for connecting to [!DNL Salesforce Marketing Cloud] and ingesting marketing automation data. |
 
-For more information, read the [sources overview](../sources/home.md).
+For more information, read the [sources overview](../../sources/home.md).
 
