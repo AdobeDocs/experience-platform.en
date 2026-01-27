@@ -48,11 +48,24 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
+**New or updated destinations**
+
+| Destination | Description |
+| --- | --- |
+| Kevel destination connector now available | [[!DNL Kevel]](https://www.kevel.com/) provides the AI-enabled technology and expert guidance that help innovative commerce leaders launch, scale, and succeed in retail media. [!DNL Kevel]'s Retail Media Cloud powers targeted, attributable, customizable ad formats for on-site and off-site advertising. |
+| Index Exchange destination connector now available | [!DNL Index] is a global advertising supply-side platform that helps media owners maximize the value of their content across every screen. With over 20 years of industry leadership, [!DNL Index] connects the world's largest brands with premium experience makers to deliver high-quality consumer experiences. |
+| Regional endpoints support for Braze connections | All [region-specific endpoints](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) supported by [!DNL Braze] are now available for selection during the destination configuration flow. Ask your [!DNL Braze] representative which endpoint instance you should use. |
+| Weekly and monthly scheduling support for Liveramp Onboarding | You can now configure weekly and monthly export schedules for the Liveramp Onboarding destination. |
+|AES256 encryption support for Amazon S3 destinations | You can now configure AES256 encryption for your Amazon S3 exports. |
+| Enhanced activation experience for The Trade Desk and Microsoft Bing destinations | The Trade Desk and Microsoft Bing destinations now include predefined mandatory mappings for an optimized activation experience. |
+
 **New or updated functionality**
 
 | Feature | Description |
 | --- | --- |
-| Updated guardrail limits for Adobe Target destination | The maximum number of audiences that can be mapped to a single Adobe Target destination has been increased from 50 to 250. This aligns Adobe Target with the standard audience limit for other destinations, providing greater flexibility for audience activation workflows. Customers can now activate more audiences to Adobe Target destinations without needing to create multiple dataflows. |
+| Updated guardrail limits for Adobe Target destination | The maximum number of audiences that can be mapped to a single Adobe Target destination has been increased from 50 to 250. This aligns Adobe Target with the standard audience limit for other destinations, providing greater flexibility for audience activation workflows. You can now activate more audiences to Adobe Target destinations without needing to create multiple dataflows. |
+| [Edit destinations](/help/destinations/ui/edit-destination.md) and [edit marketing actions](/help/destinations/ui/edit-activation.md#edit-marketing-actions) general availability | The option to edit destinations and marketing actions is now available to all users. |
+| Toggle field display names in the Mapping step | When mapping schema fields to a destination, you can now toggle between displaying the full XDM field name and showing only the display name. |
 
 {style="table-layout:auto"}
 
@@ -67,7 +80,7 @@ Real-Time Customer Profile enables you to see a holistic view of each individual
 | Feature | Description |
 | --- | --- |
 | Streaming capacity enforcement | Experience Platform now enforces streaming throughput capacities for Real-Time Customer Profile and Identity Service. When customers exceed their contracted streaming capacity, data will be queued and processed in a first-in-first-out manner. This ensures predictable system performance and prevents capacity violations from impacting data ingestion quality. Important notes: Streaming upserts will not be available on the data lake when capacity is exceeded, this enforcement does not apply to customers with Adobe Journey Optimizer licenses, and queued data will be processed sequentially once capacity becomes available. |
-| API access deprecation for Real-Time CDP Prime | API access for experience events is now deprecated for all Real-Time CDP Prime customers. This change affects the ability to query experience events directly via API. Real-Time CDP Ultimate customers can request an exception through a formal exception process to enable experience events API access if needed for their use cases. This deprecation helps optimize system performance and aligns with best practices for data access patterns. |
+| API access deprecation for Real-Time CDP Prime | API access for experience events is now deprecated for all Real-Time CDP Prime customers. This change affects the ability to query experience events directly via API. Real-Time CDP Ultimate customers can request an exception through a formal exception process to enable experience events API access if needed for their use cases. This deprecation helps align Real-Time CDP with licensing functionality. |
 | Monitor dataflow run | You can now monitor the progress and readiness of dataflow runs in Profile. |
 
 {style="table-layout:auto"}
