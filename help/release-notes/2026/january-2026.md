@@ -15,7 +15,7 @@ description: The January 2026 release notes for Adobe Experience Platform.
 >- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**Release date: January 2026**
+**Release date: January 27, 2026**
 
 New features and updates to existing features in Adobe Experience Platform:
 
@@ -78,9 +78,9 @@ Real-Time Customer Profile enables you to see a holistic view of each individual
 
 | Feature | Description |
 | --- | --- |
-| [Streaming capacity](/help/landing/license-usage-and-guardrails/capacity.md) enforcement | Experience Platform now enforces streaming throughput capacities for Real-Time Customer Profile and Identity Service. When customers exceed their contracted streaming capacity, data will be queued and processed in a first-in-first-out manner. This ensures predictable system performance and prevents capacity violations from impacting data ingestion quality. Important notes: Streaming upserts will not be available on the data lake when capacity is exceeded, this enforcement does not apply to customers with Adobe Journey Optimizer licenses, and queued data will be processed sequentially once capacity becomes available. For more information, read the [capacity overview](/help/landing/license-usage-and-guardrails/capacity.md). |
-| Entity lookup deprecation | Using the entity lookup API for experience events is now deprecated for all Real-Time CDP Prime customers. This deprecation helps align Real-Time CDP with licensing functionality. Real-Time CDP Ultimate customers who currently do not use this functionality can contact Adobe Customer Care to re-enable this feature.  For more information, read the [entities API guide](/help/profile/api/entities.md). |
-| Monitor profile ingestion job status | You can now monitor the job-level progress percentage for batch Profile ingestion dataflow runs. This feature provides real-time visibility into the current progress of batch ingestion jobs, including critical checkpoints that indicate whether the ingestion is ready for customer segmentation and Adobe Journey Optimizer lookups. For large ingestions that may take several hours to process, this progress transparency helps you understand whether the job is progressing normally or encountering issues, reducing uncertainty during data processing. For more information, read the [monitor profiles guide](/help/dataflows/ui/monitor-profiles.md). |
+| [Streaming capacity](/help/landing/license-usage-and-guardrails/capacity.md) enforcement | Experience Platform now enforces streaming throughput capacities for Real-Time Customer Profile and Identity Service. When customers exceed their contracted streaming capacity, data will be queued and processed in a first-in-first-out manner. This ensures predictable system performance and prevents capacity violations from impacting data ingestion quality. Important notes: <ul><li>Streaming upserts will not be available on the data lake when capacity is exceeded</li><li>This enforcement does not apply to customers with Adobe Journey Optimizer licenses</li><li>Queued data will be processed sequentially once capacity becomes available.</li></ul> For more information, read the [capacity overview](/help/landing/license-usage-and-guardrails/capacity.md). |
+| Entity lookup deprecation | Using the entity lookup API for experience events is now deprecated for all Real-Time CDP Prime customers. This deprecation helps align Real-Time CDP with licensing functionality. Real-Time CDP Ultimate customers who intend to use this functionality can contact Adobe Customer Care to re-enable this feature.  For more information, read the [entities API guide](/help/profile/api/entities.md). |
+| Monitor profile ingestion job status | You can now monitor the job-level progress percentage for batch Profile ingestion dataflow runs. This feature provides real-time visibility into the current progress of batch ingestion jobs, including critical checkpoints that indicate whether the ingestion is ready for customer segmentation and Adobe Journey Optimizer lookups. For large ingestions that may take several hours to process, this progress transparency helps you understand whether the job is progressing normally or encountering issues, reducing uncertainty during data processing.For more information, read the [monitor profiles guide](/help/dataflows/ui/monitor-profiles.md). |
 
 {style="table-layout:auto"}
 
@@ -94,7 +94,7 @@ For more information, read the [[!DNL Real-Time Customer Profile] overview](../p
 
 | Feature | Description |
 | ------- | ----------- |
-| External audience data expiration refresh | External audiences (such as CSV uploads) now support a force refresh capability for data expiration settings. This feature lets users to manually refresh the data expiration for external audiences, providing greater control over audience lifecycle management. This is particularly useful for audiences that need to persist beyond their initial data expiration period or require reactivation without re-uploading the data. For more information about this feature, read the [Audience Portal overview](/help/segmentation/ui/audience-portal#audience-summary) |
+| External audience data expiration refresh | External audiences (such as CSV uploads) now support a force refresh capability for data expiration settings. This feature lets users manually refresh the data expiration for external audiences, providing greater control over audience lifecycle management. This is particularly useful for audiences that need to persist beyond their initial data expiration period or require reactivation without re-uploading the data. For more information about this feature, read the [Audience Portal overview](/help/segmentation/ui/audience-portal#audience-summary). |
 
 For more information, read the [[!DNL Segmentation Service] overview](../segmentation/home.md).
 
