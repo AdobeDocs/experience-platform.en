@@ -93,7 +93,7 @@ For more information, read the [[!DNL Real-Time Customer Profile] overview](../.
 
 | Feature | Description |
 | ------- | ----------- |
-| External audience TTL refresh | External audiences (such as CSV uploads) now support a force refresh capability for Time-to-Live (TTL) settings. This feature allows users to manually refresh the TTL expiration for external audiences, providing greater control over audience lifecycle management. This is particularly useful for audiences that need to persist beyond their initial TTL period or require reactivation without re-uploading the data. |
+| [External audience TTL refresh](/help/segmentation/ui/audience-portal.md#audience-summary) | External audiences (such as CSV uploads) now support a force refresh capability for Time-to-Live (TTL) settings. This feature allows users to manually refresh the TTL expiration for external audiences, providing greater control over audience lifecycle management. This is particularly useful for audiences that need to persist beyond their initial TTL period or require reactivation without re-uploading the data. |
 
 For more information, read the [[!DNL Segmentation Service] overview](../../segmentation/home.md).
 
