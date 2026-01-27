@@ -17,31 +17,6 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 ## Segment definition building blocks {#building-blocks}
 
 >[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
->title="Logic complexity"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_chaincountcheck"
->title="Event sequence limit"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_rewritescheck"
->title="Query efficiency alert"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_countaggregationcheck"
->title="Count filter warning"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_arraydepthcheck"
->title="Nested data warning"
->abstract=""
-
->[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Fields"
 >abstract="The three field types that make up a segment definition are attributes, events, and audiences. Attributes let you use Profile attributes that belong to the XDM Individual Profile class, events let you create an audience based on actions or events that take place using XDM ExperienceEvent data elements, and audiences let you use imported audiences from external sources."
@@ -207,6 +182,45 @@ Alternatively, you can manually add comma separated values.
 Please note that there is a maximum of 250 values allowed. If you exceed this amount, you will need to remove some values before adding more.
 
 ![A warning that shows that you have reached the maximum number of values is displayed.](../images/ui/segment-builder/maximum-values.png)
+
+### Query validation {#query-validation}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
+>title="Logic complexity"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_chaincountcheck"
+>title="Event sequence limit"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_rewritescheck"
+>title="Query efficiency alert"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_countaggregationcheck"
+>title="Count filter warning"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_arraydepthcheck"
+>title="Nested data warning"
+>abstract=""
+
+When adding your building blocks to your rule builder canvas, keep the following query best practices in mind:
+
+- The audience can have a maximum of 50 building blocks
+- The audience can have a maximum of 6 event sequences
+- The audience can have a maximum of 3 aggregation functions
+- The maximum array depth is 2 levels deep
+- The audience's query can touch a maximum of 30% of the profile store
+
+If these best practices are not followed, Segment Builder will automatically flag these issues to avoid performance issues with the audience.
+
+Additionally, Segment Builder automatically analyzes your query to ensure it's written in a way that will execute efficiently. If the query is written in an inefficient matter, Segment Builder will automatically notify you to re-write your audience query.
 
 ### Adding audiences
 
