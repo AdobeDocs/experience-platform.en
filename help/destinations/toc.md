@@ -94,6 +94,7 @@ role: Admin,User
         * [Google Display & Video 360 connection](./catalog/advertising/google-dv360.md)
         * [Google gtag extension](./catalog/advertising/gtag-advertising.md)
         * [Index Exchange connection](./catalog/advertising/index-exchange.md)
+        * [Kevel connection](./catalog/advertising/kevel.md)
         * [LinkedIn Insight Tag extension](./catalog/advertising/linkedin.md)
         * [LiveRamp - Onboarding connection](./catalog/advertising/liveramp-onboarding.md)
         * [LiveRamp - Distribution connection](./catalog/advertising/liveramp-distribution.md)
