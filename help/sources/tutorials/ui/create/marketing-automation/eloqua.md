@@ -4,6 +4,12 @@ description: Learn how to connect your Oracle Eloqua account to Experience Platf
 ---
 # Connect [!DNL Oracle Eloqua] (V2) to Experience Platform in the UI
 
+The [!DNL Oracle Eloqua (V2)] source connector empowers you to connect your Oracle Eloqua account with Adobe Experience Platform, enabling automated and scalable ingestion of key B2B marketing data, including contacts, accounts, campaigns, and engagement activities.
+
+Use this source connector to configure secure authentication, select the exact Eloqua data entities you need, and map them to standardized Experience Data Model (XDM) schemas. Flexible scheduling options allow you to set up both initial data loads and recurring, incremental syncs, ensuring your marketing data remains current and actionable.
+
+Built on Adobe's enterprise ingestion framework, the [!DNL Oracle Eloqua (V2)] source connector provides a reliable, extensible foundation for campaign optimization, performance measurement, and cross-channel personalization.
+
 Read this guide to learn how to connect your [!DNL Oracle Eloqua] account to Adobe Experience Platform using the sources workspace in the Experience Platform user interface.
 
 ## Get started
