@@ -124,6 +124,11 @@ When mapping audiences, Adobe recommends that you use the Experience Platform au
 
 ### Mandatory mappings {#mandatory-mappings}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_required_mappings_ttd"
+>title="Preconfigured mapping sets"
+>abstract="We have preconfigured these four mapping sets for you. When you activate data to The Trade Desk, the profiles qualified for the activated audiences do not necessarily need to have all four identities present on the profiles, as this destination will work with any of the target identities shown here. Read more about the <a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings">preconfigured mappings</a>"
+
 All target identities described in the [supported identities](#supported-identities) section must be mapped in the mapping step of the audience activation workflow. This includes:
 
 * [!DNL GAID] (Google Advertising ID)
