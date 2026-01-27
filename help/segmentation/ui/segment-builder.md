@@ -210,17 +210,17 @@ Please note that there is a maximum of 250 values allowed. If you exceed this am
 >title="Nested data warning"
 >abstract=""
 
-When adding your building blocks to your rule builder canvas, keep the following query best practices in mind:
+Segment Builder automatically analyzes and validates your audience queries to ensure you adhere to query best practices. These best practices can be set into two categories: critical validation and performance optimization.
 
-- The audience can have a maximum of 50 building blocks
-- The audience can have a maximum of 6 event sequences
-- The audience can have a maximum of 3 aggregation functions
-- The maximum array depth is 2 levels deep
-- The audience's query can touch a maximum of 30% of the profile store
+If a query breaks a critical validation best practice, you will **not** be able to save your changes in order to keep your sandbox stable. If a query breaks a performance optimization best practice, you will be able to save your changes, but it is *highly recommended* to update your query to avoid performance issues.
 
-If these best practices are not followed, Segment Builder will automatically flag these issues to avoid performance issues with the audience.
-
-Additionally, Segment Builder automatically analyzes your query to ensure it's written in a way that will execute efficiently. If the query is written in an inefficient matter, Segment Builder will automatically notify you to re-write your audience query.
+| Validation check | Type | Threshold |
+| ---------------- | ---- | --------- |
+| Logical complexity | Critical validation | The audience query is too complicated. |
+| Sequential events | Critical validation | There are more than 6 sequential events within an audience. |
+| Aggregated count | Performance optimization | There are more than 3 aggregation functions within an audience. |
+| Nested data | Performance optimization | There are more than 2 levels of array depth within an audience. |
+| Audience size | Performance optimization | The audience's size results in more than 30% of the profile store. |
 
 ### Adding audiences
 
