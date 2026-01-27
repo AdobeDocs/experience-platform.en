@@ -19,14 +19,15 @@ description: The January 2026 release notes for Adobe Experience Platform.
 
 New features and updates to existing features in Adobe Experience Platform:
 
-- [Agent Orchestrator](#agent-orchestrator)
+<!-- - [Agent Orchestrator](#agent-orchestrator) -->
+
 - [Destinations](#destinations)
 - [Real-Time Customer Profile](#real-time-customer-profile)
 - [Schemas](#schemas)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
-## Agent Orchestrator {#agent-orchestrator}
+<!-- ## Agent Orchestrator {#agent-orchestrator}
 
 Agent Orchestrator enables you to build and deploy AI-powered agents that can automate workflows and interact with customers across multiple channels.
 
@@ -38,7 +39,7 @@ Agent Orchestrator enables you to build and deploy AI-powered agents that can au
 
 {style="table-layout:auto"}
 
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
 
 ## Destinations {#destinations}
 
