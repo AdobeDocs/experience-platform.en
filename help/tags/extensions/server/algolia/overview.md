@@ -6,10 +6,6 @@ exl-id: 397c8761-9bff-4b85-9f3f-4cbbd782c139
 ---
 # [!DNL Algolia] event forwarding extension overview {#overview}
 
->[!NOTE]
->
->Adobe Experience Platform Launch is now part of Adobe Experience Platform's data collection technologies. As a result, terminology updates have been made across the product documentation. For a comprehensive list of these changes, refer to the [terminology updates guide](../../../../tags/term-updates.md).
-
 Use [!DNL Algolia] to deliver fast, relevant, and personalized search experiences. With AI-powered optimization, you can enhance search results and recommendations to help users quickly find the products, content, or information they need.
 
 Use the [!DNL Algolia] event forwarding extension to send user behavior events to [!DNL Algolia] through the [!DNL Insights API]. This behavioral data enables AI-powered recommendations, personalized experiences, and intelligent search capabilities.

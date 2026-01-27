@@ -33,7 +33,7 @@ Under the *Adobe applications* category, select **[!UICONTROL Adobe Analytics]**
 
 ![The sources catalog in the Experience Platform UI with the Adobe Analytics source selected.](../../../../images/tutorials/create/classifications/catalog.png)
 
-Next select [!UICONTROL Classifications] and then select the classifications datasets that you want to ingest to Experience Platform.
+Next, select [!UICONTROL Classifications] and then select the classifications datasets that you want to ingest to Experience Platform. Alternatively, you can use search to filter and select for specific classifications.
 
 You can select up to 30 different classifications datasets to bring into Experience Platform. Any datasets that you select will appear in the right rail. When you are finished, select [!UICONTROL Next] to proceed.
 

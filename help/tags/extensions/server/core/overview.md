@@ -6,10 +6,6 @@ exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
 ---
 # Core event forwarding extension overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 The Core event-forwarding extension provides the default events, conditions, and data types for event forwarding in Adobe Experience Platform.
 
 Use this reference for information about the options available when using this extension to build a rule.
@@ -135,11 +131,11 @@ The following value comparison operators are available:
 
 **Is True:** The condition returns true if the value is a boolean with the value of true. The value you provide is not converted to a boolean if it is any other type. Any value other than a boolean with the value of true results in the condition returning false.
 
-**Is Truthy:** The condition returns true if the value is true after being converted to a boolean. See [MDN’s Truthy documentation](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) for examples of truthy values.
+**Is Truthy:** The condition returns true if the value is true after being converted to a boolean. See [MDN's Truthy documentation](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) for examples of truthy values.
 
 **Is False:** The condition returns true if the value is a boolean with the value of false. The value you provide is not converted to a boolean if it is any other type. Any value other than a boolean with the value of false results in the condition returning false.
 
-**Is Falsy:** The condition returns true if the value is false after being converted to a boolean. See [MDN’s Falsy documentation](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) for examples of falsy values.
+**Is Falsy:** The condition returns true if the value is false after being converted to a boolean. See [MDN's Falsy documentation](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) for examples of falsy values.
 
 
 
@@ -179,7 +175,7 @@ The following sections describe the types of data elements available in the Core
 
 Custom JavaScript can be entered into the UI by selecting  **[!UICONTROL Open Editor]** and inserting code into the editor window.
 
-A return statement is necessary in the editor window to indicate what value should be used as the data element value. If a return statement is not included or the value `null` or `undefined` is returned, the data element’s default value reflects `null` or `undefined`.  
+A return statement is necessary in the editor window to indicate what value should be used as the data element value. If a return statement is not included or the value `null` or `undefined` is returned, the data element's default value reflects `null` or `undefined`.  
 
 To access the value of a data element in custom code, use the `getDataElementValue` method. For example, to retrieve the value of a data element named `productName`, write the following: 
 

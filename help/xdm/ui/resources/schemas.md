@@ -31,10 +31,6 @@ In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in 
 >
 >Data Mirror and relational schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
 
->[!NOTE]
->
->Relational schemas were previously referred to as model-based schemas in earlier versions of Adobe Experience Platform documentation.
-
 Select **[!UICONTROL Relational]** to define structured, relational-style schemas with fine-grained control over records. Relational schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture, and support multiple data models used in Campaign Orchestration, Data Distiller, and B2B implementations.
 
 To learn more, see the [Data Mirror](../../data-mirror/overview.md) or [Relational schema](../../schema/relational.md) overview.

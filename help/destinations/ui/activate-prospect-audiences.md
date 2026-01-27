@@ -57,7 +57,7 @@ Follow the instructions to select a destination where you can export your datase
 
 ## Select your prospect audiences {#select-prospect-audiences}
 
-Use the check boxes to the left of the prospect audiences names to select the audiences that you want to export to the destination, then select **[!UICONTROL Next]**. Note that only the prospect audiences are shown in this view, and no other audiences are displayed. 
+Use the checkboxes to the left of the prospect audiences names to select the audiences that you want to export to the destination, then select **[!UICONTROL Next]**. Note that only the prospect audiences are shown in this view, and no other audiences are displayed. 
 
 ![Dataset export workflow showing the Select audiences step where you can select which prospect audiences to export.](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
 

@@ -24,11 +24,11 @@ Experience Platform allows you to subscribe to event-based alerts for various Ex
 
 | Feature | Description |
 | --- | --- |
-| Alerts history tab | As an Experience Platform administrator, you can use the the manage alert subscribers feature to assign an alert to an Adobe user ID, external email address, or an email group list. For more information, see the [alerts UI documentation](../../observability/alerts/ui.md) for more information about the history tab. |
+| Alerts history tab | As an Experience Platform administrator, you can use the the manage alert subscribers feature to assign an alert to an Adobe user ID, external email address, or an email group list. For more information, see the [alerts UI documentation](/help/observability/alerts/ui.md) for more information about the history tab. |
 
 {style="table-layout:auto"}
 
-To learn more about alerts, read the [[!DNL Observability Insights] overview](../../observability/home.md).
+To learn more about alerts, read the [[!DNL Observability Insights] overview](/help/observability/home.md).
 
 ## Data collection {#data-collection}
 
@@ -38,11 +38,11 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 | Feature | Description |
 | --- | --- |
-| [Web In-App Messaging support in Web SDK](../../web-sdk/personalization/web-in-app-messaging.md) | The Adobe Experience Platform Web SDK now supports Web In-App Messaging configuration for Adobe Journey Optimizer campaigns. |
+| Web In-App Messaging support in Web SDK | The Adobe Experience Platform Web SDK now supports Web In-App Messaging configuration for Adobe Journey Optimizer campaigns. |
 
 {style="table-layout:auto"}
 
-To learn more about data collections, read the [data collections overview](../../tags/home.md).
+To learn more about data collections, read the [data collections overview](/help/tags/home.md).
 
 <!-- ## Data Prep {#data-prep}
 
@@ -52,11 +52,11 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 | Feature | Description |
 | --- | --- |
-| New mapper functions for Adobe Analytics | You can now use the following functions to extract event data from Adobe Analytics: <ul><li>`aa_get_event_id`</li><li>`aa_get_event_value`</li><li>`aa_get_product_categories`</li><li>`aa_get_product_names`</li><li>`aa_get_product_quantities`</li><li>`aa_get_product_prices`</li><li>`aa_get_product_event_values`</li><li>`aa_get_product_evars`</li></ul> For more information on these functions, read the [Data Prep functions guide](../../data-prep/functions.md) |
+| New mapper functions for Adobe Analytics | You can now use the following functions to extract event data from Adobe Analytics: <ul><li>`aa_get_event_id`</li><li>`aa_get_event_value`</li><li>`aa_get_product_categories`</li><li>`aa_get_product_names`</li><li>`aa_get_product_quantities`</li><li>`aa_get_product_prices`</li><li>`aa_get_product_event_values`</li><li>`aa_get_product_evars`</li></ul> For more information on these functions, read the [Data Prep functions guide](/help/data-prep/functions.md) |
 
 {style="table-layout:auto"}
 
-For more information on Data Prep, read the [Data Prep overview](../../data-prep/home.md). -->
+For more information on Data Prep, read the [Data Prep overview](/help/data-prep/home.md). -->
 
 ## Destinations {#destinations}
 
@@ -66,9 +66,9 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 | Destination | Description |
 | ----------- | ----------- |
-| [Gainsight PX connection](../../destinations/catalog/analytics/gainsight-px.md) | Gainsight PX is a product experience platform that enables product teams to understand how users use their products, collect feedback, and create in-app engagements like product walkthroughs to drive user onboarding and product adoption. |
-| [Mailchimp Tags connection](../../destinations/catalog/email-marketing/mailchimp-tags.md) | Mailchimp is a popular marketing automation platform and email marketing service. You can use the Mailchimp Tags connector to structure, label, or categorize your contacts. |
-| [SAP Commerce connection](../../destinations/catalog/ecommerce/sap-commerce.md) | SAP Commerce is a cloud-based e-commerce platform solution for B2B and B2C enterprises and available as part of the SAP Customer Experience portfolio. You can use this destination to update your customer details within SAP Commerce from an existing Experience Platform audience. |
+| [Gainsight PX connection](/help/destinations/catalog/analytics/gainsight-px.md) | Gainsight PX is a product experience platform that enables product teams to understand how users use their products, collect feedback, and create in-app engagements like product walkthroughs to drive user onboarding and product adoption. |
+| [Mailchimp Tags connection](/help/destinations/catalog/email-marketing/mailchimp-tags.md) | Mailchimp is a popular marketing automation platform and email marketing service. You can use the Mailchimp Tags connector to structure, label, or categorize your contacts. |
+| [SAP Commerce connection](/help/destinations/catalog/ecommerce/sap-commerce.md) | SAP Commerce is a cloud-based e-commerce platform solution for B2B and B2C enterprises and available as part of the SAP Customer Experience portfolio. You can use this destination to update your customer details within SAP Commerce from an existing Experience Platform audience. |
 
 {style="table-layout:auto"}
 
@@ -77,15 +77,15 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 | Functionality | Description |
 | ----------- | ----------- |
 | Activate account audiences generally available | The functionality to activate account audiences to certain destinations is now generally available for companies purchasing the [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) and [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) editions of Real-Time Customer Data Platform. Read the tutorial on [activating account audiences](/help/destinations/ui/activate-account-audiences.md) to get complete information, including supported destinations. |
-|Digital Markets Act Consent Enforcement tools for Google destinations | Google is releasing changes to the [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html),  and the [Display & Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) in order to support the compliance and consent-related requirements defined under the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in the European Union ([EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/)). Enforcement of these changes to consent requirements is expected to go into effect starting March 6, 2024. <br/><br/> To adhere to the EU user consent policy and continue creating audience lists for users in the European Economic Area (EEA), advertisers and partners must ensure they are passing end-user consent when uploading audience data. As a Google Partner, Adobe provides you with the necessary tools to comply with these consent requirements under the DMA in the European Union.<br/><br/>Customers who have purchased Adobe Privacy & Security Shield and have configured a [consent policy](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) to filter out non-consented profiles do not need to take any action.<br/><br/>Customers who have not purchased Adobe Privacy & Security Shield must use the [segment definition](../../segmentation/home.md#segment-definitions) capabilities within [Segment Builder](../../segmentation/ui/segment-builder.md) to filter out non-consented profiles, in order to continue using the existing Real-Time CDP Google destinations without interruption. |
-|[!BADGE Beta]{type=Informative} Reorder mapping fields for batch destinations | You can now change the order of the columns in your CSV exports by dragging and dropping the mapping fields in the [mapping](../../destinations/ui/activate-batch-profile-destinations.md#mapping) step. The order of the mapped fields in the UI reflects in the order of the columns in the exported CSV file, from top to bottom, with the top row being the leftmost column in the CSV file. <br/><br/> This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative.|
-|[!BADGE Beta]{type=Informative} Preselected default export schedules for batch destinations| Experience Platform now automatically sets a default schedule for each file export. See the documentation on [scheduling audience exports](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) to learn how to modify the default schedule. <br/><br/> This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative.|
-|[!BADGE Beta]{type=Informative} Bulk edit audience activation schedules for batch destinations| You can now edit the activation schedule for multiple audiences in bulk, from the [Activation data](../../destinations/ui/destination-details-page.md#bulk-edit-schedule) page. <br/><br/> This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative. |
-|[!BADGE Beta]{type=Informative} Bulk export files on-demand to batch destinations| You can now export audiences in bulk to batch destinations, through the [export files on-demand](../../destinations/ui/export-file-now.md) functionality. <br/><br/> This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative. |
+|Digital Markets Act Consent Enforcement tools for Google destinations | Google is releasing changes to the [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html),  and the [Display & Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) in order to support the compliance and consent-related requirements defined under the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in the European Union ([EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/)). Enforcement of these changes to consent requirements is expected to go into effect starting March 6, 2024. <br/><br/> To adhere to the EU user consent policy and continue creating audience lists for users in the European Economic Area (EEA), advertisers and partners must ensure they are passing end-user consent when uploading audience data. As a Google Partner, Adobe provides you with the necessary tools to comply with these consent requirements under the DMA in the European Union.<br/><br/>Customers who have purchased Adobe Privacy & Security Shield and have configured a [consent policy](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) to filter out non-consented profiles do not need to take any action.<br/><br/>Customers who have not purchased Adobe Privacy & Security Shield must use the [segment definition](/help/segmentation/home.md#segment-definitions) capabilities within [Segment Builder](/help/segmentation/ui/segment-builder.md) to filter out non-consented profiles, in order to continue using the existing Real-Time CDP Google destinations without interruption. |
+|[!BADGE Beta]{type=Informative} Reorder mapping fields for batch destinations | You can now change the order of the columns in your CSV exports by dragging and dropping the mapping fields in the [mapping](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) step. The order of the mapped fields in the UI reflects in the order of the columns in the exported CSV file, from top to bottom, with the top row being the leftmost column in the CSV file. <br/><br/> This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative.|
+|[!BADGE Beta]{type=Informative} Preselected default export schedules for batch destinations| Experience Platform now automatically sets a default schedule for each file export. See the documentation on [scheduling audience exports](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) to learn how to modify the default schedule. <br/><br/> This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative.|
+|[!BADGE Beta]{type=Informative} Bulk edit audience activation schedules for batch destinations| You can now edit the activation schedule for multiple audiences in bulk, from the [Activation data](/help/destinations/ui/destination-details-page.md#bulk-edit-schedule) page. <br/><br/> This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative. |
+|[!BADGE Beta]{type=Informative} Bulk export files on-demand to batch destinations| You can now export audiences in bulk to batch destinations, through the [export files on-demand](/help/destinations/ui/export-file-now.md) functionality. <br/><br/> This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative. |
 
 {style="table-layout:auto"}
 
-For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+For more general information on destinations, refer to the [destinations overview](/help/destinations/home.md).
 
 ## Sandboxes {#sandboxes}
 
@@ -95,11 +95,11 @@ Adobe Experience Platform is built to enrich digital experience applications on 
 
 | Feature | Description |
 | --- | --- |
-| Sandbox tooling | In addition to now supporting object types for consent and governance rules, use sandbox tooling to import schemas without unified profiles enabled, check for missing attributes in the target sandbox when importing a segment, and default to using the existing merge policy. For more information on these features, see the [sandbox tooling UI guide](../../sandboxes/ui/sandbox-tooling.md). |
+| Sandbox tooling | In addition to now supporting object types for consent and governance rules, use sandbox tooling to import schemas without unified profiles enabled, check for missing attributes in the target sandbox when importing a segment, and default to using the existing merge policy. For more information on these features, see the [sandbox tooling UI guide](/help/sandboxes/ui/sandbox-tooling.md). |
 
 {style="table-layout:auto"}
 
-For more information on sandboxes, read the [sandboxes overview](../../sandboxes/home.md).
+For more information on sandboxes, read the [sandboxes overview](/help/sandboxes/home.md).
 
 ## Segmentation Service {#segmentation}
 
@@ -109,7 +109,7 @@ For more information on sandboxes, read the [sandboxes overview](../../sandboxes
 
 | Feature | Description |
 | ------- | ----------- |
-| Account audiences | Account audiences are now generally available! You can now use account segmentation to bring the full ease and sophistication of the marketing segmentation experience from people-based audiences to account-based audiences in both the B2B and B2P Editions of Real-Time Customer Experience Platform. This release lets you use people-based audiences as a predicate to account-based audiences, adds search capabilities, supports the usage of custom entities, and is compliant with Data Governance. For more information about this feature, please read the [account audiences overview](../../segmentation/types/account-audiences.md). |
+| Account audiences | Account audiences are now generally available! You can now use account segmentation to bring the full ease and sophistication of the marketing segmentation experience from people-based audiences to account-based audiences in both the B2B and B2P Editions of Real-Time Customer Experience Platform. This release lets you use people-based audiences as a predicate to account-based audiences, adds search capabilities, supports the usage of custom entities, and is compliant with Data Governance. For more information about this feature, please read the [account audiences overview](/help/segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 
@@ -121,8 +121,8 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Acxiom] source | Use the [[!DNL Acxiom Prospecting Data Import] source](../../sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) to retrieve and map data from [!DNL Acxiom] prospect service to Experience Platform. |
+| [!BADGE Beta]{type=Informative} [!DNL Acxiom] source | Use the [[!DNL Acxiom Prospecting Data Import] source](/help/sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) to retrieve and map data from [!DNL Acxiom] prospect service to Experience Platform. |
 
 {style="table-layout:auto"}
 
-For more information on sources, read the [sources overview](../../sources/home.md).
+For more information on sources, read the [sources overview](/help/sources/home.md).

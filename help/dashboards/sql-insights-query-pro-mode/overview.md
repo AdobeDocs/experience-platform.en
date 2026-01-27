@@ -105,7 +105,7 @@ Select the ellipsis (`...`) in the table chart where you want to add column sort
 
 To enable sorting for any column, check the **[!UICONTROL Sortable]** boxes.
 
-![Table edit page with sortable check boxes highlighted.](../images/sql-insights-query-pro-mode/advanced-table-sortable.png)
+![Table edit page with sortable checkboxes highlighted.](../images/sql-insights-query-pro-mode/advanced-table-sortable.png)
 
 Select the properties icon (![The properties icon.](/help/images/icons/properties.png)) in the right rail to open the [!UICONTROL Properties] panel. In the **[!UICONTROL Properties]** panel, use the drop down to select the **[!UICONTROL Default sort]** column, then use the drop down to select the **[!UICONTROL Sort direction]**. Finally, select **[!UICONTROL Save and close]**.
 

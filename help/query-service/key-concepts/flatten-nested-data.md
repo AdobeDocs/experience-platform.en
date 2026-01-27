@@ -36,13 +36,13 @@ When connecting to Query Service with your chosen third-party client, append the
 
 The input should take the following format:
 
-```terminal
+```bash
 {sandbox_name}:{all/ID/database_name}?FLATTEN
 ```
 
 An example connection string might look as below:
 
-```terminal
+```bash
 prod:all?FLATTEN
 ```
 
@@ -56,13 +56,13 @@ If your BI tool does not support nested data structures, it can be difficult to 
 
 The following values represent `commerce.order.priceTotal` (3018.0), `commerce.order.purchaseID` (c9b5aff9-25de-450b-98f4-4484a2170180), and `commerce.purchases.value`(1.0) in poorly formatted nested fields. 
 
-```terminal
+```bash
 ("(3018.0,c9b5aff9-25de-450b-98f4-4484a2170180)","(1.0)")
 ```
 
 By using the `FLATTEN` setting, you can access separate fields within your schema or whole sections of the nested data structure by using dot notation and their original pathname. An example of this format using the `commerce` field group is given below. 
 
-```terminal
+```bash
 commerce.order.priceTotal
 commerce.order.purchaseID
 commerce.purchases.value

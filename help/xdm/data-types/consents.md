@@ -261,7 +261,7 @@ See the tutorial on [creating a schema in the UI](https://www.adobe.com/go/xdm-s
 
 ## Handling consent and preference changes
 
-When a customer changes their consents or preferences on your website, these changes should be collected and immediately enforced using the [Adobe Experience Platform Web SDK](../../web-sdk/commands/setconsent.md). If a customer opts out of data collection, all data collection must immediately cease. If a customer opts out of personalization, then there should be no personalization present on the next page they visit. 
+When a customer changes their consents or preferences on your website, these changes should be collected and immediately enforced by setting consent in the data collection library used. If a customer opts out of data collection, all data collection must immediately cease. If a customer opts out of personalization, then there should be no personalization present on the next page they visit. See [`setConsent`](/help/collection/js/commands/setconsent.md) using the JavaScript library, or the [[!UICONTROL Set consent]](/help/tags/extensions/client/web-sdk/actions/set-consent.md) action using the tag extension.
 
 ## Appendix {#appendix}
 

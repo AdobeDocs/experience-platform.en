@@ -41,7 +41,7 @@ In the configuration view that appears, you must provide the following details:
 | [!UICONTROL Index Name ] | The [!UICONTROL Index Name] contains the Products or Content.  This Index will be used as a default. |
 | [!UICONTROL User Token Data Element ]  | The Data Element that will return the User Token. |
 | [!UICONTROL Authenticated User Token Data Element ]  | Set the Data Element that will return the Authenticated User Token. |
-| [!UICONTROL Currency ] | Select a currency type. The default value is set to `USD`. |
+| [!UICONTROL Currency Code ] | Enter the currency code in ISO-4217 format, such as USD or EUR. This field supports data elements. |
 
 ![](../../../images/extensions/client/algolia/configure.png)
 
@@ -61,9 +61,9 @@ Create a new tag rule or open an existing one. Define the conditions according t
 
 | Property | Description |
 | --- | --- |
-| [!UICONTROL Insight Library Version] | The [!DNL Algolia] Insights version. The default is `2.13.0`. |
+| [!UICONTROL Insight Library Version] | The [!DNL Algolia] Insights version. The default is `2.17.3`. |
 | [!UICONTROL User Opt Out Data Element] | The Data Element that captures the user's tracking preference. |
-| [!UICONTROL Use User Token Cookie] | Check this box to allow [!DNL Algolia] to generate a User Token cookie. By default, this option is set to `false`. |
+| [!UICONTROL Use User Token Cookie] | Check this box to allow [!DNL Algolia] to generate a User Token cookie. By default, this option is set to `true`. |
 
 ![](../../../images/extensions/client/algolia/load-insights.png)
 
@@ -74,12 +74,12 @@ Add the **[!UICONTROL Click]** action to your tag rule to send clicked events to
 | Property | Description |
 | --- | --- |
 | [!UICONTROL Event Name ] | The Event Name that can be used to further refine this click event. |
-| [!UICONTROL Event Details Data Element ] | The Data Element returns event details, including: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optional)</li><li>`position` (optional)</li></ul> |
-| [!UICONTROL Record ID Data Element ] | The Record ID is used as a key for the event data stored in the browser's storage during a `click` event. By default, the page URL serves as the Record ID. To override this behavior, use this property to provide a data element that returns the Record ID as a string. |
+| [!UICONTROL Event Details Data Element ] | The Data Element returns event details in JSON format, including: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optional)</li><li>`positions` (optional)</li><li>`price` (optional)</li><li>`quantity` (optional)</li><li>`discount` (optional)</li><li>`objectData` (optional)</li><li>`currency` (optional)</li></ul> |
+
 
 >[!NOTE]
 >
->If both `queryID` and `position` are included, the event is classed as **Clicked object IDs after Search**. Otherwise, it's classed as a **Clicked object IDs** event.
+>If both `queryID` and `positions` are included, the event is classed as **Clicked object IDs after Search**. Otherwise, it's classed as a **Clicked object IDs** event.
 ><br>
 >If the Data Element does not provide an `indexName`, the **Default Index Name** will be used when the event is sent.
 
@@ -94,10 +94,8 @@ Add the **[!UICONTROL Converted]** action to your tag rule to send converted eve
 
 | Property | Description |
 | --- | --- |
-| [!UICONTROL Event Name ] | The Event Name that will be used to further refine this **convert** event. | 
-| [!UICONTROL Event Details Data Element ]| The Data Element returns event details, including: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optional)</li></ul> |
-| [!UICONTROL Disable Removal of Event Data ] | On a conversion event, the event data is removed from storage. If this data is needed for subsequent conversion events, disable the removal process to ensure the event data remains available. | 
-| [!UICONTROL Record ID Data Element ] | The Record ID is used as a key to look up the event data that is stored in browser storage. The page URL is the default Record ID. To override this behavior, use this property to provide a data element that returns the Record ID as a string. |
+| [!UICONTROL Event Name] | The Event Name that will be used to further refine this **convert** event. | 
+| [!UICONTROL Event Details Data Element]| The Data Element returns event details, including: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optional)</li><li>`recordID` (optional)</li></ul> |
 
 >[!NOTE]
 >
@@ -115,9 +113,8 @@ Add the **[!UICONTROL Added to Cart]** action to your tag rule to send added to 
 
 | Property | Description |
 | --- | --- |
-| [!UICONTROL Event Name ] | The Event Name that will be used to further refine this **convert** event. | 
-| [!UICONTROL Event Details Data Element ] | The Data Element returns event details, including: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (optional)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (optional)</li></ul>. |
-| [!UICONTROL Currency ] | Select a currency type. The default value is set to `USD`. |
+| [!UICONTROL Event Name ] | The Event Name that will be used to further refine this **add to cart** event. | 
+| [!UICONTROL Event Details Data Element ] | The Data Element returns event details in JSON format, including: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`</li><li>`price`</li><li>`quantity`</li><li>`discount` (optional)</li><li>`queryID` (optional)</li><li>`currency` (optional)</li></ul>. |
 
 >[!NOTE]
 >
@@ -138,16 +135,13 @@ Add the **[!UICONTROL Purchased]** action to your tag rule to send purchased eve
 | Property | Description |
 | --- | --- |
 | [!UICONTROL Event Name ] | The Event Name that will be used to further refine this **purchase** event. | 
-| [!UICONTROL Event Details Data Element ] | The Data Element returns event details, including: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (optional)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (optional)</li></ul>. |
-| [!UICONTROL Currency ] | Select a currency type. The default value is set to `USD`. |
+| [!UICONTROL Event Details Data Element ] | The Data Element returns event details in JSON format, including: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`</li><li>`price`</li><li>`quantity`</li><li>`discount` (optional)</li><li>`queryID` (optional)</li><li>`currency` (optional)</li></ul>. |
 
 >[!NOTE]
 >
->If the Data Element contains `queryId`, the event will be classed as **Purchased object IDs after Search**. Otherwise it will be classed as a **Purchased object IDs** event. 
+>The Purchased action retrieves event data from browser storage based on the purchased item IDs. If any of the purchased items contain a `queryID` in their stored data, the event will be classed as **Purchased object IDs after Search**. Otherwise, it will be classed as a **Purchased object IDs** event. 
 ><br>
->If the Data Element does not provide an `indexName`, the **Default Index Name** will be used when the event is sent. 
-><br>
->If the default Data Elements do not meet your requirements, a custom one Data Element can be created to return the desired event details.
+>This approach allows the purchase event to automatically include all relevant context (query ID, index name, price, quantity, discount) from the user's earlier interactions with the items.
 
 ![](../../../images/extensions/client/algolia/purchased.png) 
 
@@ -161,7 +155,7 @@ Add the **[!UICONTROL Viewed]** action to your tag rule to send purchased events
 | Property | Description |
 | --- | --- |
 | [!UICONTROL Event Name ] | The Event Name that will be used to further refine this **view** event. | 
-| [!UICONTROL Event Details Data Element ] | The Data Element returns event details, including: <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
+| [!UICONTROL Event Details Data Element ] | The Data Element returns event details in JSON format, including: <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
 
 >[!NOTE]
 >
@@ -177,16 +171,35 @@ For more information on the view event, see the [Viewed object IDs](https://www.
 
 ### DataSet {#dataset}
 
-The DataSet Data Element retrieves data associated with HTML elements, which is then used in [!DNL Algolia] actions.
+The DataSet Data Element retrieves data associated with HTML elements, which is then used in [!DNL Algolia] actions. This data element automatically stores the retrieved event data in browser storage for later use (such as in conversion or purchase events).
+
+**General Configuration:**
 
 | Property | Description |
 | --- | --- |
-| [!UICONTROL Hit Element Div/Class Name] | The HTML Element Name and/or CSS Class Name containing the dataset attributes including `data-insights-object-id` and optionally`data-insights-query-id` and `data-insights-position` on the HTML Element. |
+| [!UICONTROL Hit Element Div/Class Name] | The HTML Element Name and/or CSS Class Name containing the dataset attributes including `data-insights-object-id` and optionally `data-insights-query-id` and `data-insights-position` on the HTML Element. |
 | [!UICONTROL Index Name Element Div/Class Name ] | The HTML Element Name and/or CSS Class Name that has the dataset attributes (`data-indexname`) on the HTML Element. |
+
+**Commerce Configuration (Optional):**
+
+| Property | Description |
+| --- | --- |
+| [!UICONTROL Price Data Element ] | Data Element that returns the price for the item. If provided, this will be included in the stored event data for commerce events. |
+| [!UICONTROL Quantity Data Element ] | Data Element that returns the quantity for the item. Defaults to 1 if not provided. |
+| [!UICONTROL Discount Data Element ] | Data Element that returns the discount decimal value for the item. |
+| [!UICONTROL Currency Code ] | The currency code in ISO-4217 format. If no currency code is specified, the default currency from the extension configuration will be used. |
+
+**Overrides (Optional):**
+
+These fields allow you to override the default behavior of retrieving data from HTML dataset attributes.
+
+| Property | Description |
+| --- | --- |
+| [!UICONTROL Record ID Data Element ] | Override default approach to use page URL as the record ID. The record ID is used to store and look up data to send to [!DNL Algolia] for this product/page. |
 | [!UICONTROL Query ID Data Element ] | The Query ID is retrieved from the dataset on the HTML element. To override this behavior, use this property to provide a data element that returns the Query ID as a string. |
 | [!UICONTROL Object IDs Data Element ] | The Object IDs are retrieved from the dataset on the HTML element. To override this behavior, use this property to provide a data element that returns the Object IDs as an array. |
-| [!UICONTROL Positions Data Element ] | The Positions are retreived from the dataset on the HTML element. To override this behaviour, use this property to provide a data element that will return the Positions as an array. |
-| [!UICONTROL Index Name Data Element ] | The Index Name is retreived from the dataset on the HTML element. To override this behaviour, use this property to provide a data element that will return the Index Name as a string. |
+| [!UICONTROL Positions Data Element ] | The Positions are retrieved from the dataset on the HTML element. To override this behavior, use this property to provide a data element that will return the Positions as an array. |
+| [!UICONTROL Index Name Data Element ] | The Index Name is retrieved from the dataset on the HTML element. To override this behavior, use this property to provide a data element that will return the Index Name as a string. |
 
 ![](../../../images/extensions/client/algolia/dataset.png)
 
@@ -198,7 +211,10 @@ This Data Element returns:
   queryID,
   indexName,
   objectIDs,
-  positions
+  positions,
+  objectData,  // Optional: commerce data if price is provided
+  currency,    // Optional: if provided
+  recordID
 }
 ```
 
@@ -235,42 +251,53 @@ This Data Element returns:
   timestamp,
   queryID,
   indexName,
-  objectIDs
+  objectIDs,
+  positions
 }
 ```
 
-An example of HTML that contains query parameters.
+An example of HTML that contains query parameters:
 
-```
+```html
 <a href="product.html?objectID=${hit.objectID}&queryID=${hit.__queryID}&indexName=${indexName}&position=${hit.position}">Read More</a>
 ```
 
 ### Storage {#storage}
 
-The Storage Data Element retrieves data from Session Storage for use in [!DNL Algolia] actions.
+The Storage Data Element retrieves data from the browser session storage for use in [!DNL Algolia] actions. This data element can also be used to augment the stored data with additional commerce information.
 
-This Data Element retrieves event details from Session Storage. No configuration is required. The data is automatically added during the *click* event action and removed during the *convert* event action.
+This Data Element retrieves event details that were previously stored in session storage (typically by the DataSet data element during click events). The data is automatically removed during conversion events unless the removal is explicitly disabled.
+
+**Overrides (Optional):**
 
 | Property | Description |
 | --- | --- |
 | [!UICONTROL Record ID Data Element] | The Record ID is used as a key to look up the event data that is stored in browser storage. The page URL is the default Record ID. To override this behavior, use this property to provide a data element that returns the Record ID as a string. |
+| [!UICONTROL Price Data Element ] | Data Element that returns the price for the item. If provided, this will update the stored event data with price information. |
+| [!UICONTROL Quantity Data Element ] | Data Element that returns the quantity for the item. If provided, this will update the stored event data with quantity information. |
+| [!UICONTROL Discount Data Element ] | Data Element that returns the discount decimal value for the item. If provided, this will update the stored event data with discount information. |
+| [!UICONTROL Currency Code ] | Enter the currency code in ISO-4217 format. If provided, this will update the stored event data with currency information. |
 
 ![](../../../images/extensions/client/algolia/storage.png) 
 
-This Data Element returns what is stored in the Session Storage.
+This Data Element returns what is stored in the Session Storage, including any augmented commerce data:
 
 ```javascript
 {
   timestamp,
   queryID,
   indexName,
-  objectIDs
+  objectIDs,
+  positions,      // If available from original event
+  objectData,     // Optional: commerce data if price is provided
+  currency,       // Optional: if provided
+  recordID
 }
 ```
 
 ## Clicked or Converted after Search {#clicked-converted-after-search}
 
-The *Clicked after Search* or *Converted after Search* events require a `queryId`, and `position` is also required for *Clicked after Search*. These properties are available when the `insights` flag is enabled in InstantSearch and/or Autocomplete query parameters. Refer to the following resources to learn how to configure Insights for your site:
+The *Clicked after Search* or *Converted after Search* events require a `queryID`, and `positions` is also required for *Clicked after Search*. These properties are available when the `insights` flag is enabled in InstantSearch and/or Autocomplete query parameters. Refer to the following resources to learn how to configure Insights for your site:
 
 * [Setting up Insights on Autocomplete](https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/autocomplete/#param-insights)
 * [Setting up Insights on InstantSearch.js](https://www.algolia.com/doc/guides/building-search-ui/events/js/#set-the-insights-option-to-true)

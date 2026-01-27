@@ -5,10 +5,6 @@ exl-id: cee35b44-2249-47c6-80d6-8b4eaa9802df
 ---
 # AEM Asset Insights release notes
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 ## September 9, 2020
 
 **AEM Asset Insights Extension 1.0.3**

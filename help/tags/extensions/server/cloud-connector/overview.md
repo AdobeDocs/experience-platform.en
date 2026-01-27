@@ -5,10 +5,6 @@ exl-id: f3713652-ac32-4171-8dda-127c8c235849
 ---
 # Cloud Connector extension overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 The Cloud Connector event forwarding extension allows you to create custom HTTP requests to send data to a destination or retrieve data from a destination. The Cloud Connector extension is like having Postman on Adobe Experience Platform Edge Network and can be used to send data to an endpoint that does not have a dedicated extension yet. 
 
 Use this reference for information about the options available when using this extension to build a rule. 

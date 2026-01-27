@@ -99,7 +99,7 @@ After you have created a **[!UICONTROL Custom Personalization With Attributes]**
 
     ![Select destination step in the activation workflow.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
-1. Select your audiences. Use the check boxes to the left of the audience names to select the audiences that you want to activate to the destination, then select **[!UICONTROL Next]**.
+1. Select your audiences. Use the checkboxes to the left of the audience names to select the audiences that you want to activate to the destination, then select **[!UICONTROL Next]**.
 
     You can select from multiple types of audiences, depending on their origin:
     

@@ -1,9 +1,9 @@
 ---
-title: Adobe Analytics Source Connector for Report-Suite Data
+title: Adobe Analytics source connector for report suite data
 description: This document provides an overview of Analytics and describes the use-cases for Analytics data.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
 ---
-# Adobe Analytics source connector for report-suite data
+# Adobe Analytics source connector for report suite data
 
 Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics source connector. The [!DNL Analytics] source connector streams data collected by [!DNL Analytics] to Experience Platform in real-time, converting SCDS-formatted [!DNL Analytics] data into [!DNL Experience Data Model] (XDM) fields for consumption by Experience Platform.
 

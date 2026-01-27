@@ -5,10 +5,6 @@ exl-id: 95b22641-9f6f-4aac-a727-d99098f040a4
 ---
 # Compare resource revisions
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Compare resource revisions to see the history of an individual resource.  You can compare the current state of the resource to older versions, or compare the currently published version of a resource to the most recent set of changes that have been saved.
 
 ## Initiate a comparison
