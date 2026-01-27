@@ -19,8 +19,7 @@ description: The January 2026 release notes for Adobe Experience Platform.
 
 New features and updates to existing features in Adobe Experience Platform:
 
-<!-- 
-- [Agent Orchestrator](#agent-orchestrator) -->
+<!-- - [Agent Orchestrator](#agent-orchestrator) -->
 
 - [Destinations](#destinations)
 - [Real-Time Customer Profile](#real-time-customer-profile)
@@ -50,8 +49,8 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 
 | Destination | Description |
 | --- | --- |
-| Kevel destination connector now available | [[!DNL Kevel]](https://www.kevel.com/) provides the AI-enabled technology and expert guidance that help innovative commerce leaders launch, scale, and succeed in retail media. [!DNL Kevel]'s Retail Media Cloud powers targeted, attributable, customizable ad formats for on-site and off-site advertising. |
-| Index Exchange destination connector now available | [!DNL Index] is a global advertising supply-side platform that helps media owners maximize the value of their content across every screen. With over 20 years of industry leadership, [!DNL Index] connects the world's largest brands with premium experience makers to deliver high-quality consumer experiences. |
+| Kevel destination connector now available | The [!DNL Kevel] streaming destination for Adobe Experience Platform enables customers to activate Adobe audiences directly into [!DNL Kevel]'s UserDB and Segment Management APIs to support real-time targeting at ad decision time. [[!DNL Kevel]](https://www.kevel.com/) provides the AI-enabled technology and expert guidance that help innovative commerce leaders launch, scale, and succeed in retail media. [!DNL Kevel]'s Retail Media Cloud powers targeted, attributable, customizable ad formats for on-site and off-site advertising. |
+| Index Exchange destination connector now available | Use this destination connector to export audience segments from Adobe Experience Platform directly to [!DNL Index Exchange]'s programmatic advertising platform. [!DNL Index] is a global advertising supply-side platform that helps media owners maximize the value of their content across every screen. With over 20 years of industry leadership, [!DNL Index] connects the world's largest brands with premium experience makers to deliver high-quality consumer experiences. |
 | Regional endpoints support for Braze connections | All [region-specific endpoints](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) supported by [!DNL Braze] are now available for selection during the destination configuration flow. Ask your [!DNL Braze] representative which endpoint instance you should use. |
 | Weekly and monthly scheduling support for [Liveramp Onboarding](../../destinations/catalog/advertising/liveramp-onboarding.md#scheduling) | You can now configure weekly and monthly export schedules for the Liveramp Onboarding destination. <br> This release is being rolled out gradually and will be complete by January 30th. |
 | Enhanced activation experience for [The Trade Desk](../../destinations/catalog/advertising/tradedesk.md) and [Microsoft Bing](../../destinations/catalog/advertising/bing.md) destinations | The Trade Desk and Microsoft Bing destinations now include predefined mandatory mappings for an optimized activation experience.  <br> This release is being rolled out gradually and will be complete by January 30th. |
@@ -69,7 +68,7 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 
 {style="table-layout:auto"}
 
-For more information, read the [Destinations overview](../../destinations/home.md).
+For more information, read the [Destinations overview](../destinations/home.md).
 
 ## Real-Time Customer Profile {#real-time-customer-profile}
 
@@ -79,13 +78,13 @@ Real-Time Customer Profile enables you to see a holistic view of each individual
 
 | Feature | Description |
 | --- | --- |
-| [Streaming capacity](/help/landing/license-usage-and-guardrails/capacity.md) enforcement | Experience Platform now enforces streaming throughput capacities for Real-Time Customer Profile and Identity Service. When customers exceed their contracted streaming capacity, data will be queued and processed in a first-in-first-out manner. This ensures predictable system performance and prevents capacity violations from impacting data ingestion quality. Important notes: Streaming upserts will not be available on the data lake when capacity is exceeded, this enforcement does not apply to customers with Adobe Journey Optimizer licenses, and queued data will be processed sequentially once capacity becomes available. |
-| [API access deprecation](/help/profile/api/overview.md) for Real-Time CDP Prime | API access for experience events is now deprecated for all Real-Time CDP Prime customers. This change affects the ability to query experience events directly via API. Real-Time CDP Ultimate customers can request an exception through a formal exception process to enable experience events API access if needed for their use cases. This deprecation helps align Real-Time CDP with licensing functionality. |
-| [Monitor dataflow runs](/help/dataflows/ui/monitor-profiles.md) for profiles | You can now monitor the job-level progress percentage for batch Profile ingestion dataflow runs. This feature provides real-time visibility into the current progress of batch ingestion jobs, including critical checkpoints that indicate whether the ingestion is ready for customer segmentation and Adobe Journey Optimizer lookups. For large ingestions that may take several hours to process, this progress transparency helps you understand whether the job is progressing normally or encountering issues, reducing uncertainty during data processing. |
+| [Streaming capacity](/help/landing/license-usage-and-guardrails/capacity.md) enforcement | Experience Platform now enforces streaming throughput capacities for Real-Time Customer Profile and Identity Service. When customers exceed their contracted streaming capacity, data will be queued and processed in a first-in-first-out manner. This ensures predictable system performance and prevents capacity violations from impacting data ingestion quality. Important notes: Streaming upserts will not be available on the data lake when capacity is exceeded, this enforcement does not apply to customers with Adobe Journey Optimizer licenses, and queued data will be processed sequentially once capacity becomes available. For more information, read the [capacity overview](/help/landing/license-usage-and-guardrails/capacity.md). |
+| Entity lookup deprecation | Using the entity lookup API for experience events is now deprecated for all Real-Time CDP Prime customers. This deprecation helps align Real-Time CDP with licensing functionality. Real-Time CDP Ultimate customers who currently do not use this functionality can contact Adobe Customer Care to re-enable this feature.  For more information, read the [entities API guide](/help/profile/api/entities.md). |
+| Monitor profile ingestion job status | You can now monitor the job-level progress percentage for batch Profile ingestion dataflow runs. This feature provides real-time visibility into the current progress of batch ingestion jobs, including critical checkpoints that indicate whether the ingestion is ready for customer segmentation and Adobe Journey Optimizer lookups. For large ingestions that may take several hours to process, this progress transparency helps you understand whether the job is progressing normally or encountering issues, reducing uncertainty during data processing. For more information, read the [monitor profiles guide](/help/dataflows/ui/monitor-profiles.md). |
 
 {style="table-layout:auto"}
 
-For more information, read the [[!DNL Real-Time Customer Profile] overview](../../profile/home.md).
+For more information, read the [[!DNL Real-Time Customer Profile] overview](../profile/home.md).
 
 ## Segmentation Service {#segmentation-service}
 
@@ -95,9 +94,9 @@ For more information, read the [[!DNL Real-Time Customer Profile] overview](../.
 
 | Feature | Description |
 | ------- | ----------- |
-| [External audience TTL refresh](/help/segmentation/ui/audience-portal.md#audience-summary) | External audiences (such as CSV uploads) now support a force refresh capability for Time-to-Live (TTL) settings. This feature allows users to manually refresh the TTL expiration for external audiences, providing greater control over audience lifecycle management. This is particularly useful for audiences that need to persist beyond their initial TTL period or require reactivation without re-uploading the data. |
+| External audience data expiration refresh | External audiences (such as CSV uploads) now support a force refresh capability for data expiration settings. This feature lets users to manually refresh the data expiration for external audiences, providing greater control over audience lifecycle management. This is particularly useful for audiences that need to persist beyond their initial data expiration period or require reactivation without re-uploading the data. For more information about this feature, read the [Audience Portal overview](/help/segmentation/ui/audience-portal#audience-summary) |
 
-For more information, read the [[!DNL Segmentation Service] overview](../../segmentation/home.md).
+For more information, read the [[!DNL Segmentation Service] overview](../segmentation/home.md).
 
 ## Sources {#sources}
 
@@ -110,5 +109,4 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | [[!DNL Oracle Eloqua]](/help/sources/connectors/marketing-automation/eloqua.md) V2 source | A new [!DNL Oracle Eloqua] source connector is now available, replacing the [deprecated connector](/help/sources/connectors/marketing-automation/oracle-eloqua.md). This updated connector provides enhanced functionality and improved reliability for ingesting data from [!DNL Oracle Eloqua] into Experience Platform. Customers using the existing connector should migrate to the new implementation, as existing connections will no longer function. The new connector supports all setup and configuration steps needed to connect to [!DNL Oracle Eloqua] and ingest marketing automation data. |
 | [[!DNL Salesforce Marketing Cloud]](/help/sources/connectors/marketing-automation/sfmc.md) V2 source | A new [!DNL Salesforce Marketing Cloud] source connector is now available, replacing the [deprecated connector](/help/sources/connectors/marketing-automation/salesforce-marketing-cloud.md). This updated connector provides improved performance and additional capabilities for ingesting data from [!DNL Salesforce Marketing Cloud] into Experience Platform. Customers using the existing connector should transition to the new implementation. The new connector includes comprehensive setup instructions for connecting to [!DNL Salesforce Marketing Cloud] and ingesting marketing automation data. |
 
-For more information, read the [sources overview](../../sources/home.md).
-
+For more information, read the [sources overview](../sources/home.md).
