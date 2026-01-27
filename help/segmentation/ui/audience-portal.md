@@ -259,6 +259,19 @@ Selecting **[!UICONTROL Open composition]** lets you view your audience in Audie
 
 Selecting **[!UICONTROL Update audience]** lets you re-upload an externally generated audience. For more information on importing an externally generated audience, please read the section on [importing an audience](#import-audience).
 
+If your audience is within seven days of expiring, you can select **[!UICONTROL Refresh data expiration]** to re-ingest the last successful batch for the audience. 
+
+![The [!UICONTROL Refresh data expiration] button is highlighted within the audience details page.](../images/ui/audience-portal/refresh-data-expiration.png)
+
+This extends the data expiration by 30 days and uses the same audience metadata. Once the button has been pressed, you cannot select it for another 20 minutes.
+
+This button will **not** be selectable in the following situations:
+
+- There are no successful batches for the audience
+- The initial refresh failed
+- The data expiration is greater than seven days
+- The audience has no data
+
 >[!TAB Segmentation Service]
 
 ![The audience details page is shown, with the [!UICONTROL Edit audience] button highlighted.](../images/ui/audience-portal/audience-details-edit-audience.png)
