@@ -47,36 +47,27 @@ Refer to:
 
 ## Supported identities {#supported-identities}
 
-The *[!DNL Amazon Ads v2]* destination supports the activation of the following identities:
+The *[!DNL Amazon Ads v2]* destination supports the activation of the following identities.
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|`phone_sha256`|Phone numbers hashed with SHA256|Supports plain text and SHA256 hashed. Check **[!UICONTROL Apply transformation]** to hash automatically.|
-|`email_lc_sha256`|Email addresses hashed with SHA256|Supports plain text and SHA256 hashed. Check **[!UICONTROL Apply transformation]** to hash automatically.|
-|`firstName`|First name of the user|Supports plain text or SHA256.|
-|`lastName`|Last name of the user|Supports plain text or SHA256.|
-|`street`|Street address|SHA256 hashed input only.|
-|`city`|City of the user|Supports plain text or SHA256.|
-|`state`|State or province|Supports plain text or SHA256.|
-|`zip`|ZIP or postal code|Supports plain text or SHA256.|
-|`country`|Country (2-character ISO code)|Supports plain text or SHA256.|
-
-{style="table-layout:auto"}
-
-## Supported external identities {#external-identities}
-
-In addition to standard user identity fields, *[!DNL Amazon Ads v2]* supports **external identity namespaces** to allow advertisers to send third-party or partner-matched identifiers.
-
-|External Identity|Description|Considerations|
-|---|---|---|
-|`experianId`|Identifier assigned by Experian for audience matching.|Optional field; transmitted securely to Ads Data Manager.|
-|`kantarId`|Identifier assigned by Kantar for audience matching.|Optional field; transmitted securely to Ads Data Manager.|
-|`liveRampId`|Identifier assigned by LiveRamp for audience matching.|Optional field; transmitted securely to Ads Data Manager.|
-|`maId`|Identifier assigned by mobile application for audience matching.|Optional field; transmitted securely to Ads Data Manager.|
-|`merkleId`|Identifier assigned by Merkle for audience matching.|Optional field; transmitted securely to Ads Data Manager.|
-|`neustarId`|Identifier assigned by Neustar for audience matching.|Optional field; transmitted securely to Ads Data Manager.|
-|`realId`|Identifier assigned by Real ID graph for audience matching.|Optional field; transmitted securely to Ads Data Manager.|
-|`sambaTvId`|Identifier assigned by Samba TV for audience matching.|Optional field; transmitted securely to Ads Data Manager.|
+|`phone_sha256`|Phone number of the user|Supports plain text or SHA256 hashed input. Select **[!UICONTROL Apply transformation]** to hash automatically.|
+|`email_lc_sha256`|Email address of the user (lowercased)|Supports plain text or SHA256 hashed input. Select **[!UICONTROL Apply transformation]** to hash automatically.|
+|`firstName`|First name of the user|Supports plain text or SHA256 hashed input.|
+|`lastName`|Last name of the user|Supports plain text or SHA256 hashed input.|
+|`street`|Street address of the user|Requires SHA256 hashed input.|
+|`city`|City of the user|Supports plain text or SHA256 hashed input.|
+|`state`|State or province of the user|Supports plain text or SHA256 hashed input.|
+|`zip`|ZIP or postal code of the user|Supports plain text or SHA256 hashed input.|
+|`country`|Country of the user (2-character ISO code)|Supports plain text or SHA256 hashed input.|
+|`experianId`|Identifier assigned by Experian|Supports plain text input.|
+|`kantarId`|Identifier assigned by Kantar|Supports plain text input.|
+|`liveRampId`|Identifier assigned by LiveRamp|Supports plain text input.|
+|`maId`|Identifier assigned by a mobile application |Supports plain text input.|
+|`merkleId`|Identifier assigned by Merkle|Supports plain text input.|
+|`neustarId`|Identifier assigned by Neustar|Supports plain text input.|
+|`realId`|Identifier assigned by the Real ID identity graph|Supports plain text input.|
+|`sambaTvId`|Identifier assigned by Samba TV|Supports plain text input.|
 
 {style="table-layout:auto"}
 
@@ -89,29 +80,33 @@ In addition to standard user identity fields, *[!DNL Amazon Ads v2]* supports **
 
 {style="table-layout:auto"}
 
+
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
 >
->To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [permissions](/help/access-control/home.md#permissions).
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Follow the [destination configuration tutorial](../../ui/connect-destination.md).  
-In the configuration workflow, complete the steps below.
+To connect to this destination, follow the steps described in the [destination configuration tutorial](/help/destinations/ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
 ### Authenticate to destination {#authenticate}
 
-Select **[!UICONTROL Connect to destination]**.  
-You are redirected to the [!DNL Amazon Ads v2] interface, Click 'Allow' to sign into your Amazon Account.  
+To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
+* **[!UICONTROL Name]**: Name for your connection.  
+* **[!UICONTROL Description]**: Description to help identify it.
+
+![Connect to Amazon Ads Destination Amazon Ads](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-connect-to-destination.png)
+
+You will be redirected to the [!DNL Amazon Ads v2] interface, Click 'Allow' to sign into your Amazon Account.  
 After authentication, you will return to Adobe Experience Platform with your new connection.
 
-![Allow Amazon Ads](../../assets/catalog/advertising/amazon-ads/amazon-ads-new-allow.png)
+![Allow Amazon Ads](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-allow.png)
 
 ### Fill in destination details {#destination-details}
 
 Provide the following information:
 
-* **[!UICONTROL Name]**: Name for your connection.  
-* **[!UICONTROL Description]**: Description to help identify it.  
+
 * **[!UICONTROL Amazon Ads Data Manager Connection]**: Select the target manager account ID.  
 * **[!UICONTROL Amazon Ads Consent Signal]**: Specify consent for data usage (`GRANTED` or `DENIED`).
 
@@ -119,7 +114,7 @@ Provide the following information:
 >
 >Make sure to accept [!DNL Ads Data Manager] terms and coditions by visiting the [!DNL Ads Data Manager] console in [!DNL Amazon Ads] before clicking on **[!UICONTROL Next]**. The audience will not get created in [!DNL Amazon Ads] if the terms and conditions are not accepted.
 
-![Configure new destination](../../assets/catalog/advertising/amazon-ads/amazon-ads-new-configure-destination.png)
+![Configure new destination](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-configure-destination.png)
 
 ### Enable alerts {#enable-alerts}
 
@@ -141,13 +136,33 @@ Follow [Activate profiles and audiences to streaming destinations](/help/destina
 Map identity fields (email, phone, address, and external IDs) as shown below.  
 This connector uses all mapped fields for matching, improving audience match rates.
 
-![Adobe to Amazon Ads mapping](../../assets/catalog/advertising/amazon-ads/amazon-ads-new-mapping.png)
+![Adobe to Amazon Ads mapping](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-mapping.png)
 
-* Use `Email_LC_SHA256` for hashed emails.  
-* Use `Phone_SHA256` for hashed phones.  
-* For unhashed data, enable **[!UICONTROL Apply transformation]**.  
-* Include `countryCode` for better match rates (2-character ISO).  
-* Map optional `externalIdentities` for partner identity matching.
+### Mapping best practices {#mapping-best-practices}
+
+This section describes recommended mapping scenarios and examples to help improve audience match rates when activating data to [!DNL Amazon Ads v2].
+
+For best results, Include countryCode for better match rates (2-character ISO).
+
+Also, you can combine first-party identifiers (such as email or phone) with partner-provided identifiers when both are available. This allows Amazon Ads to use multiple identity signals during audience matching.
+
+Use these identifiers only when they already exist in your source data.
+
+Examples
+
+* Use kantarId when activating audiences built or enriched using Kantar identity data.
+
+* Use merkleId when your audience data originates from Merkle-managed identity solutions.
+
+* Use neustarId when your data is linked through Neustar identity resolution.
+
+* Use experianId for audiences enriched using Experian identity data.
+
+* Use liveRampId when activating audiences that rely on LiveRamp identity resolution.
+
+* Use sambaTvId when working with Samba TV–provided audience data.
+
+These identifiers are typically provided by the respective partners as plain text identifiers and do not require hashing.
 
 Refer to:
 * [Normalization Guide](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C)
@@ -166,23 +181,12 @@ For more on validation, see:
 
 ## Data usage and governance {#data-usage-governance}
 
-All [!DNL Adobe Experience Platform] destinations comply with data usage policies.  
-See the [Data Governance overview](/help/data-governance/home.md).
+All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. For detailed information on how Adobe Experience Platform enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
 
 ## Additional resources {#additional-resources}
 
 For additional help, visit:
 
 * [Amazon Ads Data Manager Overview](https://advertising.amazon.com/API/docs/en-us/adm/1_ads-data-manager-console-overview)
-
-## Changelog {#changelog}
-
-+++ View changelog
-
-|Release month|Update type|Description|
-|---|---|---|
-|January 2025|Documentation update|Added **external identity namespace support** (`experianId`, `kantarId`, `liveRampId`, `maId`, `merkleId`, `neustarId`, `realId`, `sambaTvId`).|
-
-{style="table-layout:auto"}
 
 +++
