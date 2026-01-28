@@ -7,7 +7,7 @@ exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
 
 >[!AVAILABILITY]
 >
->You can now use change data capture for sources when running Adobe Experience Platform on Amazon Web Services (AWS) while connected to a VA6 data center. Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
+>You can now use change data capture for the [!DNL Amazon S3] and [!DNL Data Landing Zone] sources when running Adobe Experience Platform on Amazon Web Services (AWS) while connected to a VA6 data center. Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
 
 Use change data capture in Adobe Experience Platform sources to keep your source and destination systems synchronized in near real-time.
 
