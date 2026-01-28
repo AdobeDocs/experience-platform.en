@@ -69,6 +69,29 @@ See the comments within this code example to understand the timing of how comman
 </head>
 ```
 
+## Rename SDK instance
+
+You can rename the global function that you call by modifying the last line of the base code. Change:
+
+```js
+(window,["alloy"]);
+```
+
+To:
+
+```js
+(window,["example"]);
+```
+
+This change allows you to call commands using `example` instead of `alloy`:
+
+```js
+example("configure", {
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg"
+});
+```
+
 ## Multiple SDK instances
 
 You can optionally use the base code to configure more than one SDK instance on a page. See [Use multiple Web SDK instances](../../use-cases/multiple-instances.md) for more information.
