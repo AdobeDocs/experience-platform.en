@@ -183,6 +183,45 @@ Please note that there is a maximum of 250 values allowed. If you exceed this am
 
 ![A warning that shows that you have reached the maximum number of values is displayed.](../images/ui/segment-builder/maximum-values.png)
 
+### Query validation {#query-validation}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
+>title="Logic complexity"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_chaincountcheck"
+>title="Event sequence limit"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_rewritescheck"
+>title="Query efficiency alert"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_countaggregationcheck"
+>title="Count filter warning"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_arraydepthcheck"
+>title="Nested data warning"
+>abstract=""
+
+Segment Builder automatically analyzes and validates your audience queries to ensure you adhere to audience definition best practices. These best practices can be set into two categories: critical validation and performance optimization.
+
+If an audience definition breaks a critical validation best practice, you will **not** be able to save your changes in order to keep your sandbox stable. If an audience definition breaks a performance optimization best practice, you will be able to save your changes, but it is *highly recommended* to update your audience definition to avoid performance issues.
+
+| Validation check | Type | Threshold |
+| ---------------- | ---- | --------- |
+| Logical complexity | Critical validation | The audience definition is too complicated. |
+| Sequential events | Critical validation | There are more than 6 sequential events within an audience definition. |
+| Aggregated count | Performance optimization | There are more than 3 aggregation functions within an audience definition. |
+| Nested data | Performance optimization | There are more than 2 levels of nested data (array or map data types) depth within an audience definition. |
+| Audience size | Performance optimization | The audience qualification size is greater than 30% of the total number of profiles in the sandbox. |
+
 ### Adding audiences
 
 >[!CONTEXTUALHELP]
