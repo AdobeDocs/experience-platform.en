@@ -92,7 +92,7 @@ To connect to this destination, follow the steps described in the [destination c
 ### Authenticate to destination {#authenticate}
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
-* **[!UICONTROL Name]**: Name for your connection.  
+* **[!UICONTROL Account name]**: Name for your account.  
 * **[!UICONTROL Description]**: Description to help identify it.
 
 ![Connect to Amazon Ads Destination Amazon Ads](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-connect-to-destination.png)
@@ -102,25 +102,24 @@ After authentication, you will return to Adobe Experience Platform with your new
 
 ![Allow Amazon Ads](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-allow.png)
 
-### Fill in destination details {#destination-details}
-
-Provide the following information:
-
-
-* **[!UICONTROL Amazon Ads Data Manager Connection]**: Select the target manager account ID.  
-* **[!UICONTROL Amazon Ads Consent Signal]**: Specify consent for data usage (`GRANTED` or `DENIED`).
-
 >[!NOTE]
 >
 >Make sure to accept [!DNL Ads Data Manager] terms and coditions by visiting the [!DNL Ads Data Manager] console in [!DNL Amazon Ads] before clicking on **[!UICONTROL Next]**. The audience will not get created in [!DNL Amazon Ads] if the terms and conditions are not accepted.
 
+### Fill in destination details {#destination-details}
+
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
+
 ![Configure new destination](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-configure-destination.png)
+
+* **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+* **[!UICONTROL Manager Account]**: The target manager account ID from the dropdown.  
+* **[!UICONTROL Amazon Ads Consent Signal]**: Specify consent for data usage (`GRANTED` or `DENIED`).
 
 ### Enable alerts {#enable-alerts}
 
-Enable alerts to monitor your dataflow status. See [Subscribing to destination alerts](../../ui/alerts.md).
-
-When finished, select **[!UICONTROL Next]**.
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, read the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
 
 ## Activate audiences to this destination {#activate}
 
@@ -128,25 +127,24 @@ When finished, select **[!UICONTROL Next]**.
 >
 >* You need **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** permissions.  
 >* To export identities, you also need **[!UICONTROL View Identity Graph]** permission.
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#resource-permissions-permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export identities, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#resource-permissions-permissions).
 
-Follow [Activate profiles and audiences to streaming destinations](/help/destinations/ui/activate-segment-streaming-destinations.md).
+Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ### Map attributes and identities {#map}
 
-Map identity fields (email, phone, address, and external IDs) as shown below.  
-This connector uses all mapped fields for matching, improving audience match rates.
+Map identity fields (email, phone, address, and external IDs) as shown below.
 
 ![Adobe to Amazon Ads mapping](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-mapping.png)
 
 ### Mapping best practices {#mapping-best-practices}
 
-This section describes recommended mapping scenarios and examples to help improve audience match rates when activating data to [!DNL Amazon Ads v2].
+For best results, Include countryCode (2-character ISO). Example (US, IN, DE etc.)
 
-For best results, Include countryCode for better match rates (2-character ISO).
+You can combine first-party identifiers (such as email or phone) with partner-provided identifiers when both are available. This allows Amazon Ads to use multiple identity signals during audience matching.
 
-Also, you can combine first-party identifiers (such as email or phone) with partner-provided identifiers when both are available. This allows Amazon Ads to use multiple identity signals during audience matching.
-
-Use these identifiers only when they already exist in your source data.
+Use the partner-provided identifiers only when they already exist in your source data.
 
 Examples
 
