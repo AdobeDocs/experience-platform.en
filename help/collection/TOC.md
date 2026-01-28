@@ -19,6 +19,7 @@ role: Developer
   + [Release notes](js/release-notes.md)
   + Installation {#install}
     + [Install overview](js/install/overview.md)
+    + [Base code](js/install/base-code.md)
     + [Library](js/install/library.md)
     + [NPM](js/install/npm.md)
     + [Custom build](js/install/create-custom-build.md)
