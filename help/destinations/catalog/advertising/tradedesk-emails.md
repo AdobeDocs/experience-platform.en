@@ -104,7 +104,7 @@ Make sure that the normalized phone number is UTF-8, not another encoding system
 A phone number hash is a Base64-encoded SHA-256 hash of a normalized phone number. The phone number is first normalized, then hashed using the SHA-256 hashing algorithm, and then the resulting bytes of the hash value are encoded using Base64 encoding. Note that the Base64 encoding is applied to the bytes of the hash value, not the hex-encoded string representation.
 The following table shows an example of a simple input phone number, and the result as each step is applied to arrive at a secure, opaque value. 
 
-|Type|Example|Comments and Usage|
+|Type|Example|Comments and usage|
 |---|---|---|
 |Raw phone number|1 (234) 567-8901|This is the starting point.|
 |Normalized phone number|+12345678901|Normalization is always the first step.|
@@ -136,10 +136,10 @@ Refer to the table below for information about the destination export type and f
 
 Before you can send, or activate, audience data to a destination, you must set up a connection to your own destination platform. While [setting up](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) this destination, you must provide the following information:
 
-*  **[!UICONTROL Account Type]**: Please choose the **[!UICONTROL Existing Account]** option. 
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future. 
-*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Advertiser ID]**: your [!DNL Trade Desk Advertiser ID], which can either be shared by your [!DNL Trade Desk] Account Manager or be found under [!DNL Advertiser Preferences] in the [!DNL Trade Desk] UI. 
+* **[!UICONTROL Account Type]**: Please choose the **[!UICONTROL Existing Account]** option. 
+* **[!UICONTROL Name]**: A name by which you will recognize this destination in the future. 
+* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+* **[!UICONTROL Advertiser ID]**: your [!DNL Trade Desk Advertiser ID], which can either be shared by your [!DNL Trade Desk] Account Manager or be found under [!DNL Advertiser Preferences] in the [!DNL Trade Desk] UI. 
 
 ![Experience Platform UI screenshot showing how to fill in destination details.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
