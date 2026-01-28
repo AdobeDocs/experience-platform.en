@@ -21,12 +21,12 @@ Place the base code as high as possible in the `<head>` tag, before any scripts 
 </script>
 ```
 
-After adding the base code, load the Web SDK using your chosen method ([JavaScript library loader](library.md) or [Tags embed code](/help/tags/extensions/client/web-sdk/getting-started.md)). For Tags-based implementations, the base code is supported in the Web SDK tag extension 2.34.0 and later.
+After adding the base code, load the Web SDK using your chosen method ([JavaScript library loader](library.md) or [Tags embed code](/help/tags/extensions/client/web-sdk/getting-started.md)). For tag-based implementations, the base code is supported in the Web SDK tag extension 2.34.0 and later.
 
-This base code is not required in the following scenarios:
+This base code is **not** required in the following scenarios:
 
-* Loading the JavaScript library synchronously. Synchronous loading blocks parsing while the library is fetched and executed. Most implementations load the library asynchronously; if doing so, Adobe strongly recommends including the base code to avoid errors calling commands while the library loads.
-* Using the tag extension, all calls to the Web SDK are made within tag rules or actions. You only need to include the base code if your implementation references the Web SDK outside of your tags library. Most tag implementations typically do not call the Web SDK outside of the tags library, so most tag implementations do not require the base code.
+* If you load the JavaScript library synchronously. Synchronous loading blocks parsing while the library is fetched and executed.
+* If using the tag extension, all calls to the Web SDK are made within tag rules or actions. You only need to include the base code if your implementation references the Web SDK outside of your tags library. Most tag implementations typically do not call the Web SDK outside of the tags library, so most tag implementations do not require the base code.
 
 ## Examples
 
@@ -55,9 +55,9 @@ See the comments within this code example to understand the timing of how comman
     }).catch(console.error);
   </script>
 
-  <!-- Load the Web SDK using the JavaScript loader... -->
+  <!-- Load the Web SDK using the JavaScript loader -->
   <script src="https://cdn1.adoberesources.net/alloy/<VERSION>/alloy.min.js" async></script>
-  <!-- ...or the tag extension -->
+  <!-- or the tag extension -->
   <!-- <script src=".../launch-<ENV>.min.js" async></script> -->
 
   <!-- Another call (queued if the library is still loading; immediate if it is ready) -->
@@ -68,3 +68,7 @@ See the comments within this code example to understand the timing of how comman
   </script>
 </head>
 ```
+
+## Multiple SDK instances
+
+You can optionally use the base code to configure more than one SDK instance on a page. See [Use multiple Web SDK instances](../../use-cases/multiple-instances.md) for more information.
