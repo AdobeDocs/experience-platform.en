@@ -115,3 +115,13 @@ chain(xEvent, timestamp, [ A: WHAT(eventType = "productView"), B: WHAT(eventType
 ### [!BADGE Performance optimization]{type=Caution} Aggregated count {#aggregated-count}
 
 The aggregated count validation check
+
+### [!BADGE Performance optimization]{type=Caution} Nested data complexity {#nested-data-complexity}
+
+### [!BADGE Performance optimization]{type=Caution} Audience size {#audience-size}
+
+## Next steps
+
+## Appendix
+
+### Frequently asked questions {#faq}
