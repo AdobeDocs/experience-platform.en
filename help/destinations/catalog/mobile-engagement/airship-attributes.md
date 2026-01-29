@@ -129,7 +129,7 @@ For identifiers that should be mapped to a channel, i.e., a device, map to the a
 
 >[!NOTE]
 >
->Use the user-friendly name that appears in the [!DNL Airship] dashboard when selecting the target field for your attribute mapping.
+>Use the `attribute_id` that corresponds with the attribute in the [!DNL Airship] dashboard when selecting the target field for your attribute mapping.
    
 **Map identity**
 
