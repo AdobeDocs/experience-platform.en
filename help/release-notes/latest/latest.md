@@ -19,15 +19,14 @@ description: The January 2026 release notes for Adobe Experience Platform.
 
 New features and updates to existing features in Adobe Experience Platform:
 
-<!-- - [Agent Orchestrator](#agent-orchestrator) -->
-
+- [Agent Orchestrator](#agent-orchestrator)
 - [Destinations](#destinations)
 - [Real-Time Customer Profile](#real-time-customer-profile)
 - [Schemas](#schemas)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
-<!-- ## Agent Orchestrator {#agent-orchestrator}
+## Agent Orchestrator {#agent-orchestrator}
 
 Agent Orchestrator enables you to build and deploy AI-powered agents that can automate workflows and interact with customers across multiple channels.
 
@@ -35,11 +34,11 @@ Agent Orchestrator enables you to build and deploy AI-powered agents that can au
 
 | Feature | Description |
 | --- | --- |
-| Trial motion for Adobe Experience Platform Agents | **Select customers now have access to Adobe Experience Platform Agents for a complimentary trial**, enabling them to explore and interact with these Agents through the AI Assistant interface powered by Adobe Experience Platform Agent Orchestrator. The trial offers hands-on experience with AI Agents that operate within the context of customers' existing Experience Cloud products and environments, allowing teams to evaluate value before committing to a full purchase. Adobe Experience Platform Agents are guided by user input and oversight and respect existing product-level access controls, ensuring users can only perform actions or view data for which they are authorized within the underlying Experience Cloud applications.|
+| Adobe Experience Platform Agents usage-bound trial | **Select customers now have a complimentary trial access to Adobe Experience Platform Agents**. You can use the trial to explore and interact with Agents through the AI Assistant interface powered by Adobe Experience Platform Agent Orchestrator. The trial offers hands-on experience with AI Agents that operate within the context of customers' existing Experience Cloud products and environments, allowing teams to evaluate value before committing to a full purchase. Adobe Experience Platform Agents are guided by user input and oversight and respect existing product-level access controls, ensuring users can only perform actions or view data for which they are authorized within the underlying Experience Cloud applications. Read the [Experience Platform Agents usage-bound trial overview](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) for information on how to get started. |
 
 {style="table-layout:auto"}
 
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
+For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 ## Destinations {#destinations}
 
@@ -53,8 +52,9 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 | [Index Exchange destination](/help/destinations/catalog/advertising/index-exchange.md) connector now available | Use this destination connector to export audience segments from Adobe Experience Platform directly to [!DNL Index Exchange]'s programmatic advertising platform. [!DNL Index] is a global advertising supply-side platform that helps media owners maximize the value of their content across every screen. With over 20 years of industry leadership, [!DNL Index] connects the world's largest brands with premium experience makers to deliver high-quality consumer experiences. |
 | Regional endpoints support for Braze connections | All [region-specific endpoints](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) supported by [!DNL Braze] are now available for selection during the destination configuration flow. Ask your [!DNL Braze] representative which endpoint instance you should use. |
 | Weekly and monthly scheduling support for [Liveramp Onboarding](../../destinations/catalog/advertising/liveramp-onboarding.md#scheduling) | You can now configure weekly and monthly export schedules for the Liveramp Onboarding destination. <br> This release is being rolled out gradually and will be complete by January 30th. |
-| Enhanced activation experience for [The Trade Desk](../../destinations/catalog/advertising/tradedesk.md) and [Microsoft Bing](../../destinations/catalog/advertising/bing.md) destinations | The Trade Desk and Microsoft Bing destinations now include predefined mandatory mappings for an optimized activation experience.  <br> This release is being rolled out gradually and will be complete by January 30th. |
-|AES256 encryption support for [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destinations | You can now configure AES256 encryption for your Amazon S3 exports. Two options are available: <ul><li>**[!UICONTROL Default]**: If you don't have any custom policies applied on your buckets, data will be encrypted at rest when it lands in S3 with the AES256 algorithm. However, if you have custom policies applied, Experience Platform will respect those policies and Amazon S3 will continue to apply whichever custom encryption policies you have configured.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform adds the `s3:x-amz-server-side-encryption": "AES256` header in the export and data will be encrypted at rest when it lands in S3 with the AES256 algorithm.</li></ul>  <br> This release is being rolled out gradually and will be complete by January 30th.|
+| Enhanced activation experience for [The Trade Desk](../../destinations/catalog/advertising/tradedesk.md) and [Microsoft Bing](../../destinations/catalog/advertising/bing.md) destinations | The Trade Desk and Microsoft Bing destinations now include predefined mandatory mappings for an optimized activation experience.  <br> This release is being rolled out gradually and will be complete by January 30th. ![Image showing predefined mappings for The Trade Desk](../2026/assets/january/mandatory-mappings-ttd.png) {width="150" align="center" zoomable="yes"} <br> ![Image showing predefined mappings for Microsoft Bing](../2026/assets/january/mandatory-mappings-bing.png) {width="150" align="center" zoomable="yes"} |
+|AES256 encryption support for [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destinations | You can now configure AES256 encryption for your Amazon S3 exports. Two options are available: <ul><li>**[!UICONTROL Default]**: Data will be encrypted at rest with the default encryption algorithm set on your bucket.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform adds the `s3:x-amz-server-side-encryption": "AES256` header in the export and data will be encrypted at rest with the AES256 algorithm when it lands in S3. **This option takes precedence over any default encryption algorithm configured on your S3 bucket**.</li></ul> This release is being rolled out gradually and will be complete by January 30th.|
+| Phone number activation support for [The Trade Desk - CRM](../../destinations/catalog/advertising/tradedesk-emails.md#phone-hashing) connection | The Trade Desk - CRM destination now supports phone number activation in addition to email addresses. You can activate both unhashed phone numbers in E.164 format and hashed phone numbers (SHA256_E.164 format) to your Trade Desk account for audience targeting and suppression based on CRM data. Phone numbers must be normalized to E.164 format before activation.|
 
 **New or updated functionality**
 
