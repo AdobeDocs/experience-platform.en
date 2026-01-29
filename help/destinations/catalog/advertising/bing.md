@@ -92,9 +92,9 @@ To connect to this destination, follow the steps described in the [destination c
 
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Account ID]**: Your [!DNL Bing Ads Customer ID] (CID). Your CID is an integer, found in the URL when you log into [!DNL Microsoft Advertising]. 
+* **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+* **[!UICONTROL Account ID]**: Your [!DNL Bing Ads Customer ID] (CID). Your CID is an integer, found in the URL when you log into [!DNL Microsoft Advertising]. 
 
 ### Enable alerts {#enable-alerts}
 
@@ -112,7 +112,8 @@ When you are finished providing details for your destination connection, select 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_bing"
 >title="Preconfigured mapping sets"
->abstract="We have preconfigured these two mapping sets for you. As you activate data to Microsoft Bing, the profiles qualified for the activated audiences must have at least an ECID identity associated with their profile, in order to be successfully exported to the destination."
+>abstract="We have preconfigured these two mapping sets for you. When you activate data to Microsoft Bing, the profiles qualified for the activated audiences must have at least an ECID identity associated with their profile, in order to be successfully exported to the destination."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="Read more about the preconfigured mappings"
 
 >[!IMPORTANT]
 > 
