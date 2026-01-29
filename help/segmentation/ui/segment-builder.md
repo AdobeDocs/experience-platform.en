@@ -197,6 +197,8 @@ If an audience definition breaks a critical validation best practice, you will *
 | Nested data | Performance optimization | There are more than 2 levels of nested data (array or map data types) depth within an audience definition. |
 | Audience size | Performance optimization | The audience qualification size is greater than 30% of the total number of profiles in the sandbox. |
 
+For more information on how audience validation works, read the [audience validation guide](/help/segmentation/validation.md).
+
 ### Adding audiences
 
 >[!CONTEXTUALHELP]
