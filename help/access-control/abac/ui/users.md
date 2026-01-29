@@ -12,7 +12,7 @@ exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
 >abstract="Users are the individuals that have access to Experience Platform. An individual user's access to an organization's resources is managed through roles."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Manage roles"
 
-Users are the individuals that have access to Adobe Experience Platform. An individual user's access to an organization's resources is managed through [roles](./roles.md){target="_blank"}. An organization can also create [user groups](#user-groups) to give seamless access to multiple user's at the same time. 
+Users are the individuals that have access to Adobe Experience Platform. An individual user's access to an organization's resources is managed through [roles](./roles.md){target="_blank"}. An organization can also create [user groups](#user-groups) to give seamless access to multiple user's at the same time. Users are managed in the Admin Console and users that are associated with the Adobe Experience Platform product card appear as part of the users list in Experience Platform. 
 
 ## Manage users
 

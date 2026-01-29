@@ -23,6 +23,10 @@ To begin managing roles, navigate to **[!UICONTROL Permissions]** in [Adobe Expe
 
 To create a new role, select **[!UICONTROL Create role]**.
 
+>[!TIP]
+>
+>Read-only roles are available out-of-the-box. A read-only role is a role that grants a user the ability to view data, configuration, and UI features without any ability to change system state. Admins cannot edit these roles, but can associate users to the roles.
+
 ![The Role's workspace with the Create role option highlighted.](../../images/ui/roles/roles-create-role.png)
 
 The **[!UICONTROL Create new role]** dialog appears. Enter a **[!UICONTROL Name]** for the role, and optionally, a **[!UICONTROL Description]**, and then select **[!UICONTROL Confirm]**.
