@@ -143,7 +143,8 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Snowflake Account ID]**: Your Snowflake account ID. Use the following Account ID format depending on whether your account is linked to an organization:
     * If your account is linked to an organization:`OrganizationName.AccountName`.
     * If your account is not linked to an organization:`AccountName`.
-* **[!UICONTROL Account acknowledgment]**: Toggle on the Snowflake Account ID acknowledgment to confirm that your Account ID is correct and it belongs to you.
+* **[!UICONTROL Select Snowflake Region]**: Select the region where your Snowflake instance is provisioned. See the Snowflake [documentation](https://docs.snowflake.com/en/user-guide/intro-regions) for detailed information on supported cloud regions.
+* **[!UICONTROL Account acknowledgment]**: After entering your **[!UICONTROL Snowflake Account ID]**, select **[!UICONTROL Yes]** in this dropdown to confirm that your **[!UICONTROL Snowflake Account ID]** is correct and it belongs to you.
 
 >[!IMPORTANT]
 >
@@ -189,10 +190,6 @@ The dynamic table contains the following columns:
 ![Screenshot showing the Snowflake interface with dynamic table data](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png)
 
 ## Known limitations {#known-limitations}
-
-### Default merge policy restriction {#default-merge-policy-restriction}
-
-Currently, only audiences mapped to the default merge policy can be exported.
 
 ### Regional availability {#regional-availability}
 
