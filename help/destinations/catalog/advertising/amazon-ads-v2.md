@@ -102,9 +102,7 @@ After authentication, you will return to Adobe Experience Platform with your new
 
 ![Allow Amazon Ads](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-allow.png)
 
->[!NOTE]
->
->Make sure to accept [!DNL Ads Data Manager] terms and coditions by visiting the [!DNL Ads Data Manager] console in [!DNL Amazon Ads] before clicking on **[!UICONTROL Next]**. The audience will not get created in [!DNL Amazon Ads] if the terms and conditions are not accepted.
+Make sure to accept [!DNL Ads Data Manager] terms and coditions by visiting the [!DNL Ads Data Manager] console in [!DNL Amazon Ads] before clicking on **[!UICONTROL Next]**. The audience will not get created in [!DNL Amazon Ads] if the terms and conditions are not accepted.
 
 ### Fill in destination details {#destination-details}
 
@@ -115,18 +113,19 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 * **[!UICONTROL Manager Account]**: The target manager account ID from the dropdown.  
-* **[!UICONTROL Amazon Ads Consent Signal]**: Specify consent for data usage (`GRANTED` or `DENIED`).
+* **[!UICONTROL All audience members sent to Amazon are consented for use for Advertising]**: Specify consent for data usage (`GRANTED` or `DENIED`).
+* **[!UICONTROLAds data manager Terms & Conditions]**: Please accept Amazon Ads Data Manager Terms and conditions by visiting Amazon Ads Data manager console before configuring this page.
 
 ### Enable alerts {#enable-alerts}
 
 You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, read the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
 
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
+
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 >
->* You need **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** permissions.  
->* To export identities, you also need **[!UICONTROL View Identity Graph]** permission.
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#resource-permissions-permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export identities, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#resource-permissions-permissions).
 
@@ -161,9 +160,6 @@ Examples
 * Use sambaTvId when working with Samba TV–provided audience data.
 
 These identifiers are typically provided by the respective partners as plain text identifiers and do not require hashing.
-
-Refer to:
-* [Normalization Guide](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C)
 
 ## Validate data export {#exported-data}
 
