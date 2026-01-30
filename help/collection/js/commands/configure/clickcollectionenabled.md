@@ -23,7 +23,19 @@ The Web SDK tracks all clicks on `<a>` and `<area>` HTML elements if it doesn't 
 1. If the link target domain differs from the current `window.location.hostname`, `xdm.web.webInteraction.type` is set to `"exit"` (if `clickCollection.exitLinkEnabled` is enabled).
 1. If the link doesn't qualify for either `"download"` or `"exit"`, `xdm.web.webInteraction.type` is set to `"other"`.
 
-In all cases, `xdm.web.webInteraction.name` is set to the link text label and `xdm.web.webInteraction.URL` is set to the link destination URL. If you want to set the link name to the URL as well, you can override this XDM field using the `filterClickDetails` callback in the `clickCollection` object.
+In all cases, `xdm.web.webInteraction.name` checks the clicked element and its descendants for the first non-empty value in the following order:
+
+1. `innerText` (falls back to `textContent`)
+1. Concatenated `nodeValue` from supported descendant text nodes
+1. `alt` attribute
+1. `title` attribute
+1. `<input value="...">` attribute
+1. `<img src="...">` attribute
+1. `aria-label` attribute
+1. `name` attribute
+1. Empty string
+
+The `xdm.web.webInteraction.URL` field is set to the link destination URL. If you want to set the link name to the URL as well, you can override this XDM field using the `filterClickDetails` callback in the `clickCollection` object.
 
 Set the `clickCollectionEnabled` boolean when running the `configure` command. If you omit this property when configuring the Web SDK, it defaults to `true`. Set this value to `false` if you prefer to set `xdm.web.webInteraction.type` and `xdm.web.webInteraction.value` manually.
 
