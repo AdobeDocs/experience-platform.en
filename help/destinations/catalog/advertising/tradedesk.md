@@ -127,7 +127,7 @@ When mapping audiences, Adobe recommends that you use the Experience Platform au
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_ttd"
 >title="Preconfigured mapping sets"
->abstract="We have preconfigured these four mapping sets for you. When you activate data to The Trade Desk, the profiles qualified for the activated audiences do not necessarily need to have all four identities present on the profiles, as this destination will work with any of the target identities shown here."
+>abstract="We have preconfigured these four mapping sets for you. When you activate data to The Trade Desk, the profiles qualified for the activated audiences do not necessarily need to have all four identities present on the profiles, as this destination will work with any of the target identities shown here. <br> For cookie-based targeting based on The Trade Desk ID, you need ECID present on the profile and an ID sync mapping between The Trade Desk ID and ECID."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="Read more about the preconfigured mappings"
 
 All target identities described in the [supported identities](#supported-identities) section must be mapped in the mapping step of the audience activation workflow. This includes:
