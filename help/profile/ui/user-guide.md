@@ -36,7 +36,7 @@ To learn more, visit the [profile dashboard guide](../../dashboards/guides/profi
 
 On the **[!UICONTROL Browse]** tab you can view your profiles either in a **card** view or a **graph** view by selecting the toggle.
 
-![The card and graph view toggle is highlighted.](../images/user-guide/card-graph-view.png)
+![The card and graph view toggle is highlighted.](../images/user-guide/change-browse-view.png)
 
 Additionally, you can browse your profiles using a merge policy or look up specific profiles using an identity namespace and value.
 
