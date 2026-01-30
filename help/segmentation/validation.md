@@ -22,9 +22,6 @@ If a critical validation construct is violated, the system will prevent you from
 >title="Query efficiency alert"
 >abstract=""
 
-
-
-
 Currently, the following validations are supported:
 
 | Validation check | Type | Threshold |
@@ -50,7 +47,7 @@ To avoid triggering this validation, ensure you keep your audience definition si
 
 **Example**
 
-Let's say you have a company and you want to find customers who live in certain states. You _could_ write this inefficiently by checking to see if the profile has the value for a state that matches one of the listed 45 values, as follows:
+Let's say you want to find customers who live in certain states. You _could_ write this inefficiently by checking to see if the profile has the value for a state that matches one of the listed 45 values, as follows:
 
 +++ Inefficient audience definition
 
@@ -66,6 +63,36 @@ However, by using a not check, you only need to check if the profile does not ha
 
 ```
 not(State.equals("VT", "VA", "WA", "WV", "WI", "WY" ))
+```
+
++++
+
+Alternatively, let's say you want to find customers who are Canadians on your trial plan. You _could_ write this inefficiently by checking if the profile is not in every plan you want to exclude.
+
++++ Inefficient audience definition
+
+```
+NOT(
+    plan.equals("basic") OR
+    plan.equals("standard") OR
+    plan.equals("premium") OR
+    plan.equals("enterprise")
+) AND NOT (
+    region.equals("us-east") OR
+    region.equals("us-west") OR
+    region.equals("eu-central") OR
+    region.equals("apac")
+)
+```
+
++++
+
+Instead, you should be direct and target the specific plan you want to include.
+
++++ Efficient audience definition
+
+```
+plan.equals("trial") AND region.equals("canada")
 ```
 
 +++
