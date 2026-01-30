@@ -144,7 +144,7 @@ To configure details for the destination, fill in the required and optional fiel
     * If your account is linked to an organization:`OrganizationName.AccountName`.
     * If your account is not linked to an organization:`AccountName`.
 * **[!UICONTROL Select Snowflake Region]**: Select the region where your Snowflake instance is provisioned. See the Snowflake [documentation](https://docs.snowflake.com/en/user-guide/intro-regions) for detailed information on supported cloud regions.
-* **[!UICONTROL Account acknowledgment]**: Toggle on the Snowflake Account ID acknowledgment to confirm that your Account ID is correct and it belongs to you.
+* **[!UICONTROL Account acknowledgment]**: After entering your **[!UICONTROL Snowflake Account ID]**, select **[!UICONTROL Yes]** in this dropdown to confirm that your **[!UICONTROL Snowflake Account ID]** is correct and it belongs to you.
 
 >[!IMPORTANT]
 >
