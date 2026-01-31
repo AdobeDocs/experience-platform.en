@@ -37,6 +37,8 @@ In all cases, `xdm.web.webInteraction.name` checks the clicked element and its d
 
 The `xdm.web.webInteraction.URL` field is set to the link destination URL. If you want to set the link name to the URL as well, you can override this XDM field using the `filterClickDetails` callback in the `clickCollection` object.
 
+## Implementation
+
 Set the `clickCollectionEnabled` boolean when running the `configure` command. If you omit this property when configuring the Web SDK, it defaults to `true`. Set this value to `false` if you prefer to set `xdm.web.webInteraction.type` and `xdm.web.webInteraction.value` manually.
 
 ```js

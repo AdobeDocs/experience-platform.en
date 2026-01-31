@@ -89,6 +89,8 @@ If you use device lookups when [configuring your datastream](/help/datastreams/c
 
 See [User agent client hints](/help/collection/use-cases/client-hints.md) for more information.
 
+## Implementation
+
 Set the `context` array of strings when running the `configure` command. If you omit this property when configuring the SDK, all context information except `"highEntropyUserAgentHints"` is collected by default. Set this property if you want to collect high entropy client hints, or if you want to omit other context information from data collection. Strings can be included in any order.
 
 >[!NOTE]
