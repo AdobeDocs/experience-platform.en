@@ -118,6 +118,8 @@ Delete requests for the following B2B entities using the [!DNL Profile Access] A
 
 Read the [[!DNL Profile Access] API](../profile/api/entities.md) for more information.
 
+### 
+
 ### Account and opportunity profile lookups
 
 You can now retrieve account and opportunity schemas as lookup dimension entities only after they have completed the daily entity resolution process. Newly ingested records will not be available for profile enrichment or segment definitions until the next entity resolution cycle completes (typically every 24 hours).

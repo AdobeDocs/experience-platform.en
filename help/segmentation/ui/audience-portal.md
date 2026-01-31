@@ -263,14 +263,14 @@ If your audience is within seven days of expiring, you can select **[!UICONTROL 
 
 ![The [!UICONTROL Refresh data expiration] button is highlighted within the audience details page.](../images/ui/audience-portal/refresh-data-expiration.png)
 
-This extends the data expiration by 30 days and uses the same audience metadata. Once the button has been pressed, you cannot select it for another 20 minutes.
+This extends the data expiration by the number of days defined on the initial upload and uses the same audience metadata. If no data expiration was previously defined, the data expiration is extended by 30 days.  Once the button has been pressed, you cannot select it for another 20 minutes.
 
 This button will **not** be selectable in the following situations:
 
 - There are no successful batches for the audience
 - The initial refresh failed
 - The data expiration is greater than seven days
-- The audience has no data
+- The audience has already expired
 
 >[!TAB Segmentation Service]
 
