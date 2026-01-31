@@ -118,7 +118,9 @@ Delete requests for the following B2B entities using the [!DNL Profile Access] A
 
 Read the [[!DNL Profile Access] API](../profile/api/entities.md) for more information.
 
-### 
+### Deprecation of Segment Job API
+
+Under the new architecture, the "create a segment job" endpoint and flexible audience evaluation are *not supported.
 
 ### Account and opportunity profile lookups
 
