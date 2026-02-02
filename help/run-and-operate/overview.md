@@ -40,23 +40,26 @@ To access the Run and Operate tools from the Experience Platform UI:
     >
     >Currently, the only available capability is [Job Schedules](job-schedules.md).
 
-
-
+![Experience Platform UI showing the Run and operate left nav.](assets/overview/run-and-operate-left-nav.png)
 
 ## Available tools {#available-tools}
 
+The following tools help you monitor and optimize your data operations.
+
 ### Job Schedules {#job-schedules}
 
-[Job Schedules](job-schedules.md) provide comprehensive monitoring for scheduled batch activations. It gives you visibility into all scheduled batch activations across your organization, allowing you to monitor job execution status, performance metrics, and execution history to identify patterns and trends over time.
+[Job Schedules](job-schedules.md) monitors all scheduled batch activations across your organization. You can view job execution status, performance metrics, and execution history to identify patterns and diagnose configuration issues that affect activation reliability.
 
-Job Schedules helps you diagnose configuration issues that affect batch activation reliability and understand dependencies between data processing stages and batch exports. This insight is particularly valuable for data teams, IT administrators, and marketing operations professionals who need to ensure reliable data delivery to downstream systems.
+![Experience Platform UI showing the Job Schedules screen.](assets/overview/job-schedules.png)
 
-
+Use [!UICONTROL Job Schedules] to understand dependencies between data processing stages and batch exports, ensuring reliable data delivery to downstream systems.
 
 ## Next steps {#next-steps}
 
 Now that you understand the purpose and capabilities of [!UICONTROL Run and Operate] tools, explore the following resources to deepen your knowledge:
 
-* Learn how to [monitor job schedules](job-schedules.md) for your batch activations
+* Learn about [batch ingestion](../ingestion/batch-ingestion/overview.md) to understand how data is ingested into Experience Platform
+* Learn how to [monitor job schedules](job-schedules.md) for your batch ingestion and activations
 * Understand how to [configure scheduled activations](../destinations/ui/activate-batch-profile-destinations.md) for batch destinations
-* Explore [dataflow monitoring](../dataflows/ui/monitor-destinations.md) for real-time destination activations
+* Explore [dataflow monitoring](../dataflows/ui/monitor-destinations.md) for destinations
+
