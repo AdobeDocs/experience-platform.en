@@ -26,7 +26,6 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Agent Orchestrator](#agent-orchestrator)
 - [Destinations](#destinations)
 - [Real-Time Customer Profile](#real-time-customer-profile)
-- [Schemas](#schemas)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
@@ -86,18 +85,6 @@ Real-Time Customer Profile enables you to see a holistic view of each individual
 {style="table-layout:auto"}
 
 For more information, read the [[!DNL Real-Time Customer Profile] overview](../profile/home.md).
-
-## Schemas {#schemas}
-
-Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data. Schemas are composed of a base class and zero or more schema field groups.
-
-**New or updated features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Schema inventory modernization with search, filter, tags, and folders | The schema browse page has been modernized to provide enhanced organizational and discovery capabilities. New features include advanced search and filtering options, support for user-generated tags and folders to organize schemas, and inline actions to streamline workflows. Key improvements include: updated columns (Name, Class, Datasets, Identities, Relationships, Enable for Profile, Behavior, Schema type, Tags, Created date, Last modified), advanced filters (Show profiles, Schema type, Class, Has any tag, Created by, Creation Date, Modified Date, Has primary Identity, Has relationship, Primary identity namespace), inline actions (Edit, Delete, Apply labels, Create dataset for non-relational schemas, Manage tags, Move to folder, Add to package, Copy JSON structure, Download sample file), and the ability to organize schemas using tags and folders. These enhancements provide comprehensive visibility into schema resources and enable more efficient schema management at the sandbox level. |
-
-For more information, read the [[!DNL Schemas] overview](../xdm/home.md).
 
 ## Segmentation Service {#segmentation-service}
 
