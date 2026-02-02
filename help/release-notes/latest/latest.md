@@ -22,7 +22,6 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Agent Orchestrator](#agent-orchestrator)
 - [Destinations](#destinations)
 - [Real-Time Customer Profile](#real-time-customer-profile)
-- [Schemas](#schemas)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
