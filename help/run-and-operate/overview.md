@@ -9,11 +9,13 @@ description: Monitor, troubleshoot, and optimize your Adobe Experience Platform 
 >
 >Run and Operate features are currently available as a limited release.
 
-[!UICONTROL Run and Operate] tools in Adobe Experience Platform provide advanced monitoring and diagnostic capabilities to help you maintain reliable, high-performing data operations. These self-service tools offer:
+When batch jobs fail or deliver incomplete data, you need to quickly understand what caused the issue. The root cause could be data availability issues, incorrect timing, configuration problems, or system capacity constraints. Without clear visibility, you may spend hours investigating multiple systems before finding the answer.
 
-* **Comprehensive visibility**: Monitor the health of your scheduled data operations and get a complete view of execution status across all your workflows.
-* **Faster troubleshooting**: Access detailed diagnostic information and execution history to quickly identify root causes when issues arise.
-* **Proactive optimization**: Analyze job execution patterns, detect configuration anti-patterns, and prevent potential problems before they affect data delivery.
+With [!UICONTROL Run and Operate] tools, you can:
+
+* **Monitor your data operations**: Get a complete view of job execution status and health across all your workflows.
+* **Troubleshoot faster**: Access detailed diagnostic information and execution history to quickly identify root causes and reduce your mean time to resolution.
+* **Prevent issues proactively**: Analyze job patterns, detect configuration problems before they cause failures, and optimize your data operations.
 
 ## Target audiences {#target-audiences}
 
@@ -48,11 +50,11 @@ The following tools help you monitor and optimize your data operations.
 
 ### Job Schedules {#job-schedules}
 
-[Job Schedules](job-schedules.md) monitors all scheduled batch activations across your organization. You can view job execution status, performance metrics, and execution history to identify patterns and diagnose configuration issues that affect activation reliability.
+With [Job Schedules](job-schedules.md), you can monitor all scheduled batch operations across your organization, including data lake ingestion, profile ingestion, segmentation, and destination activation. View job execution status, performance metrics, and execution history to identify patterns and diagnose configuration issues that affect reliability.
 
 ![Experience Platform UI showing the Job Schedules screen.](assets/overview/job-schedules.png)
 
-Use [!UICONTROL Job Schedules] to understand dependencies between data processing stages and batch exports, ensuring reliable data delivery to downstream systems.
+You can also understand dependencies between data processing stages, helping you ensure reliable data flow throughout your Experience Platform workflows.
 
 ## Next steps {#next-steps}
 
