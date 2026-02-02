@@ -365,7 +365,7 @@ The dataflow run details page, in addition to the details shown on the dataflow 
 - **[!UICONTROL IMS org ID]**: The organization the dataflow belongs to.
 - **[!UICONTROL Last updated]**: The time the dataflow run was last updated.
 
-The details page also has a toggle to switch between dataflow run errors and audiences. This option is only available for dataflow runs in batch destinations and for the [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) streaming destination. 
+The details page also has a toggle to switch between dataflow run errors and audiences. This option is available for the destinations listed in the [audience-level view](#segment-level-view) section. 
 
 The dataflow run errors view displays a list of records that failed and records that were skipped. Information for both the failed and skipped records is displayed, including the error code, identity count, and description. By default, the list displays the failed records. To show skipped records, select the **[!UICONTROL Records skipped]** toggle.
 
