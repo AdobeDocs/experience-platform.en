@@ -1,6 +1,7 @@
 ---
 title: Oracle Eloqua (V2) Source Overview
 description: Learn how to connect Oracle Eloqua to Adobe Experience Platform.
+last-substantial-update: 2025-02-02
 ---
 # [!DNL Oracle Eloqua] (V2) source overview
 
