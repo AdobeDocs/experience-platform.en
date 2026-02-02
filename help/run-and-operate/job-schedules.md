@@ -79,8 +79,28 @@ The main view shows you when your batch jobs are scheduled to run throughout the
   * **Activation** (dark gray): Destination activation jobs
   * **In progress** (striped): Jobs currently running
 
-This timeline view helps you identify scheduling conflicts, understand dependencies between jobs, and optimize your batch processing schedules. 
+This timeline view helps you identify scheduling conflicts, understand dependencies between jobs, and optimize your batch processing schedules.
 
+## Identifying configuration anti-patterns {#identifying-anti-patterns}
+
+The Job Schedules timeline view helps you identify common configuration issues that can negatively impact your data pipeline performance and reliability. These anti-patterns often lead to job failures, data inconsistencies, or degraded system performance. By spotting these patterns early, you can reconfigure your jobs to avoid problems before they affect your business operations.
+
+### Schedule overlap {#schedule-overlap-pattern}
+
+**What to look for**: Multiple jobs scheduled to run at the same time or in close succession, particularly when resource-intensive jobs overlap.
+
+![Timeline showing batch ingestion overlapping with scheduled segmentation](assets/job-schedules/anti-pattern-overlap.png)
+
+In this example, you can see batch ingestion jobs running at the same time as a scheduled segmentation job. This creates resource contention because both operations require significant processing power and memory.
+
+**Why this is problematic**:
+
+* **Resource contention**: When multiple resource-intensive jobs run simultaneously, they compete for system resources (CPU, memory, I/O), causing all jobs to run slower.
+* **Unpredictable performance**: Job duration becomes inconsistent, making it difficult to plan reliable schedules.
+* **Cascading delays**: If jobs take longer than expected, they can delay downstream dependent jobs, creating a ripple effect throughout your pipeline.
+* **Increased failure risk**: Resource exhaustion can cause jobs to timeout or fail completely.
+
+**How to fix it**: Stagger your job schedules so that resource-intensive operations run sequentially rather than concurrently. Leave adequate buffer time between jobs to account for processing variations.
 
 ## Next steps {#next-steps}
 
