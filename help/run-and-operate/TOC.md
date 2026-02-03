@@ -1,6 +1,6 @@
 ---
 product: adobe experience platform
-solution: Run and Operate Guide
+solution: Experience Platform
 audience: user
 user-guide-title: Run and Operate Guide
 user-guide-description: 
