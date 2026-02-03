@@ -17,16 +17,11 @@ If a critical validation construct is violated, the system will prevent you from
 
 ## Validation checks {#validation-checks}
 
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_rewritescheck"
->title="Query efficiency alert"
->abstract=""
-
 Currently, the following validations are supported:
 
 | Validation check | Type | Threshold |
 | ---------------- | ---- | --------- |
-| Logical complexity | Critical validation | The audience definition is too complicated. |
+| Logical complexity | Critical validation | The audience definition contains too many queries, resulting in unnecessary logical complexity. |
 | Sequential events | Critical validation | There are more than 6 sequential events within an audience definition. |
 | Aggregated count | Performance optimization | There are more than 3 aggregation functions within an audience definition. |
 | Nested data | Performance optimization | There are more than 2 levels of nested data (array or map data types) depth within an audience definition. |
@@ -35,9 +30,14 @@ Currently, the following validations are supported:
 ### [!BADGE Critical validation]{type=Negative} Logical complexity {#logical-complexity}
 
 >[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_rewritescheck"
+>title="Query efficiency alert"
+>abstract="Your audience contains too many queries, which results in unnecessary logical complexity. Please simplify your audience definition before continuing."
+
+>[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
 >title="Logic complexity"
->abstract=""
+>abstract="Your audience contains too many queries, which results in unnecessary logical complexity. Please simplify your audience definition before continuing."
 
 The logical complexity validation analyzes the structure of your logical statements (AND, OR, NOT) within your audience definition. Specifically, it looks for audience definitions that will force the system to perform an excessive number of comparisons per profile.
 
@@ -102,7 +102,7 @@ plan.equals("trial") AND region.equals("canada")
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_chaincountcheck"
 >title="Event sequence limit"
->abstract=""
+>abstract="Your audience contains too many sequential events. You can only have a maximum of 6 sequential events within your audience definition. Please remove some sequential events from your audience definition before continuing."
 
 The sequential event complexity validation limits the number of sequential events in a sequence to 6 events.
 
@@ -137,7 +137,7 @@ chain(xEvent, timestamp, [ A: WHAT(eventType = "productView"), B: WHAT(eventType
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_countaggregationcheck"
 >title="Count filter warning"
->abstract=""
+>abstract="Your audience has too many aggregation events. You should use a maximum of 3 aggregation events within your audience. To avoid performance issues, you should remove some aggregation events from your audience definition."
 
 The aggregated count check limits the number of aggregation events used within your audience to 3 conditions.
 
@@ -150,7 +150,7 @@ To avoid triggering this validation, only use specific counts when it's strictly
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_arraydepthcheck"
 >title="Nested data warning"
->abstract=""
+>abstract="Your audience has too many nested data layers. You should use a maximum of 2 layers of data within your audience. To avoid performance issues, you should flatten your audience definition."
 
 The nested data complexity validation limits the number of nested data within an audience definition to 2 layers. 
 
@@ -163,7 +163,7 @@ If you frequently perform segmentation on a deeply nested attribute, you may nee
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_profilestorecheck"
 >title="Audience size warning"
->abstract=""
+>abstract="Your audience is written too broadly. You should avoid writing an audience definition that qualifies more than 30% of the total profiles in your sandbox. To avoid performance issues, you should tighten your audience definition."
 
 The audience size validation checks if your audience definition is so broad that more than 30% of the total profiles in your sandbox qualify for the audience.
 
