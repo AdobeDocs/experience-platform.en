@@ -7,19 +7,19 @@ type: Tutorial
 
 # Monitor job schedules
 
-When scheduled batch jobs fail or run longer than expected, you need to quickly understand what went wrong. The issue could be in data lake ingestion, profile processing, segmentation, or destination activation. Without visibility into job execution and dependencies, troubleshooting these failures across multiple processing stages can take hours.
+[!UICONTROL Job Schedules] provides a unified view of all scheduled batch processing jobs across your data pipeline—from ingestion through activation. Monitor execution status, identify scheduling conflicts, and diagnose configuration issues before they impact your business operations.
 
-With [!UICONTROL Job Schedules], you can monitor all your scheduled batch processing jobs in one place. You can view execution status, identify patterns, diagnose configuration issues, and understand dependencies across your entire data pipeline—from ingestion through activation.
+Use Job Schedules to investigate failures, optimize job timing, and understand dependencies between data lake ingestion, profile processing, segmentation, and destination activation. For guidance on resolving common configuration problems, see the documentation on [identifying job schedule anti-patterns](job-schedules-anti-patterns.md).
 
 ## Prerequisites {#prerequisites}
 
-To gain access to Run and Operate capabilities, you need the **[!UICONTROL View Job Schedules]** [access control permissions](/help/access-control/home.md#permissions).
+To access [!UICONTROL Job Schedules], you need the **[!UICONTROL View Job Schedules]** [access control permission](/help/access-control/home.md#permissions).
 
-Contact your system administrator to ensure you have the appropriate permissions to view and use these tools.
+Contact your system administrator to ensure you have the appropriate permissions.
 
 ## Getting started {#getting-started}
 
-Before using [!UICONTROL Job Schedules], you should understand these Adobe Experience Platform concepts:
+Before using [!UICONTROL Job Schedules], you should be familiar with the following Experience Platform concepts:
 
 * **[Batch ingestion](../ingestion/batch-ingestion/overview.md)**: How data is loaded into the data lake and profile store on scheduled intervals.
 * **[Segmentation](../segmentation/home.md)**: How audiences are evaluated and updated based on profile data and segment definitions.
@@ -37,7 +37,7 @@ To access [!UICONTROL Job Schedules]:
 
 ![Run and Operate left navigation](assets/job-schedules/run-and-operate-left-nav.png)
 
-The [!UICONTROL Job Schedules] interface provides a comprehensive view of all your scheduled batch processing jobs.
+The [!UICONTROL Job Schedules] page provides an overview of all your scheduled batch processing jobs.
 
 ![Job Schedules interface showing summary cards and timeline view](assets/job-schedules/job-schedules-interface.png)
 
@@ -56,7 +56,7 @@ These cards help you quickly understand the activity and upcoming schedules acro
 
 ### Time period selector {#time-period}
 
-Use the time period selecors to choose how far back to look at scheduled jobs.
+Use the time period selectors to choose how far back to look at scheduled jobs.
 
 ![Animated example of the time period selector UI in Job Schedules](assets/job-schedules/time-selector.gif)
 
@@ -81,31 +81,26 @@ The main view shows you when your batch jobs are scheduled to run throughout the
 
 This timeline view helps you identify scheduling conflicts, understand dependencies between jobs, and optimize your batch processing schedules.
 
-## Identifying configuration anti-patterns {#identifying-anti-patterns}
+## Identifying configuration issues {#identifying-issues}
 
-The Job Schedules timeline view helps you identify common configuration issues that can negatively impact your data pipeline performance and reliability. These anti-patterns often lead to job failures, data inconsistencies, or degraded system performance. By spotting these patterns early, you can reconfigure your jobs to avoid problems before they affect your business operations.
+As you review your job schedules, you may notice patterns that indicate configuration problems. Common issues include:
 
-### Schedule overlap {#schedule-overlap-pattern}
+* Jobs scheduled too close together, causing resource contention
+* Too many batches running within the same time window
+* Individual datasets with excessive daily batch jobs
+* Ingestion jobs scheduled immediately before segmentation runs
 
-**What to look for**: Multiple jobs scheduled to run at the same time or in close succession, particularly when resource-intensive jobs overlap.
+These patterns can lead to job failures, incomplete data processing, and poor system performance. To learn how to identify and resolve these issues, see the documentation on [identifying job schedule anti-patterns](job-schedules-anti-patterns.md).
 
-![Timeline showing batch ingestion overlapping with scheduled segmentation](assets/job-schedules/anti-pattern-overlap.png)
+When you need to investigate specific datasets or job runs, you can drill down into detailed views to see execution history, error messages, performance metrics, and dependencies. For information on viewing this detailed data, see the documentation on [viewing job details](job-schedules-details.md).
 
-In this example, you can see batch ingestion jobs running at the same time as a scheduled segmentation job. This creates resource contention because both operations require significant processing power and memory.
-
-**Why this is problematic**:
-
-* **Resource contention**: When multiple resource-intensive jobs run simultaneously, they compete for system resources (CPU, memory, I/O), causing all jobs to run slower.
-* **Unpredictable performance**: Job duration becomes inconsistent, making it difficult to plan reliable schedules.
-* **Cascading delays**: If jobs take longer than expected, they can delay downstream dependent jobs, creating a ripple effect throughout your pipeline.
-* **Increased failure risk**: Resource exhaustion can cause jobs to timeout or fail completely.
-
-**How to fix it**: Stagger your job schedules so that resource-intensive operations run sequentially rather than concurrently. Leave adequate buffer time between jobs to account for processing variations.
 
 ## Next steps {#next-steps}
 
-After learning about [!UICONTROL Job Schedules], you may want to explore these related topics:
+After learning about job schedules, you may want to explore these related topics:
 
+* [View job details](job-schedules-details.md): Learn how to drill down into individual datasets and job runs for detailed investigation.
+* [Identify job schedule anti-patterns](job-schedules-anti-patterns.md): Learn how to spot and resolve common configuration issues that impact pipeline performance.
 * [Batch ingestion](../ingestion/batch-ingestion/overview.md): Learn how to ingest data into Experience Platform using batch processing.
 * [Segmentation](../segmentation/home.md): Understand how audiences are evaluated and updated on scheduled intervals.
 * [Monitor dataflows for destinations](../dataflows/ui/monitor-destinations.md): Learn how to monitor destination activation dataflows.

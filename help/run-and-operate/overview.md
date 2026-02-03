@@ -27,9 +27,9 @@ With [!UICONTROL Run and Operate] tools, you can:
 
 ## Prerequisites {#prerequisites}
 
-To gain access to Run and Operate capabilities, you need the **[!UICONTROL View Job Schedules]** [access control permissions](/help/access-control/home.md#permissions).
+To access Run and Operate tools, you need the **[!UICONTROL View Job Schedules]** [access control permission](/help/access-control/home.md#permissions).
 
-Contact your system administrator to ensure you have the appropriate permissions to view and use these tools.
+Contact your system administrator to ensure you have the appropriate permissions.
 
 ## Getting started {#getting-started}
 
@@ -53,6 +53,12 @@ The following tools help you monitor and optimize your data operations.
 With [Job Schedules](job-schedules.md), you can monitor all scheduled batch operations across your organization, including data lake ingestion, profile ingestion, segmentation, and destination activation. View job execution status, performance metrics, and execution history to identify patterns and diagnose configuration issues that affect reliability.
 
 ![Experience Platform UI showing the Job Schedules screen.](assets/overview/job-schedules.png)
+
+Job Schedules provides three levels of investigation:
+
+* **[Monitor job schedules](job-schedules.md)**: View all datasets and their scheduled jobs in a timeline to identify patterns and scheduling conflicts across your entire pipeline.
+* **[Identify anti-patterns](job-schedules-anti-patterns.md)**: Learn to spot and resolve common configuration issues like schedule overlap, dense batch stacking, and excessive batching that impact performance.
+* **[View job details](job-schedules-details.md)**: Drill down into specific datasets and individual job runs to investigate failures, check timing, and verify records processed.
 
 You can also understand dependencies between data processing stages, helping you ensure reliable data flow throughout your Experience Platform workflows.
 
