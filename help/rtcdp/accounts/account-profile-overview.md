@@ -20,6 +20,10 @@ By stitching together account data from different sources, you can begin to see 
 
 With Real-Time CDP, B2B Edition, you can use the Experience Platform user interface to view account profiles and search for specific accounts using an account id from a connected enterprise source or by entering source details directly. For more information regarding how to view account profiles within the Experience Platform UI, please see the [account profile UI guide](account-profile-ui-guide.md).
 
+>[!IMPORTANT]
+>
+>Account profiles require daily batch segmentation evaluation enabled to show data. Ensure that batch segmentation is configured and scheduled to maintain accurate account profile information. See the [batch segmentation guide](../../segmentation/methods/batch-segmentation.md) for more details.
+
 ## Create and activate account audiences
 
 You can create audiences consisting of account profiles and then activate them to several destinations available in the Real-Time CDP destinations catalog. Read more below:
