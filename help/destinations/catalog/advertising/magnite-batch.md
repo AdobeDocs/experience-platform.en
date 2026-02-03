@@ -143,7 +143,11 @@ The next step is mapping Source Field identifiers to the [!DNL Magnite] Device T
 
 The current list of [!DNL Magnite] supported device types will be available via a 'Select target field' popout window, by clicking the Target Field's target attribute button.
 
-In order to support a dynamic list of device types, the 'Select target field' popout window will provide a list of integers (from 0-50), each of which represents a specific device type in [!DNL Magnite]'s system. To understand which device type id in the list of integers corresponds to which [!DNL Magnite] device type, reach out to your [!DNL Magnite] account representative.
+In order to support a dynamic list of device types, the 'Select target field' popout window will provide a list of integers (from 00-50), each of which represents a specific device type in [!DNL Magnite]'s system. To understand which device type id in the list of integers corresponds to which [!DNL Magnite] device type, reach out to your [!DNL Magnite] account representative.
+
+>[!NOTE]
+>
+>At the end of the list of integers, in the 'Select target field' popout window, there are also 3 magnite_deviceId_ (String) radio buttons. These 3 string options are deprecated, only exist for backwards compatibility, and should NOT be selected.
 
 ![Choose desired device type integer attribute from 'Select target field' popout window](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png)
 

@@ -126,6 +126,10 @@ The current list of [!DNL Magnite] supported device types will be available via 
 
 In order to support a dynamic list of device types, the popout window will provide a list of integers (from 0-50), each of which represents a specific device type in [!DNL Magnite]'s system. To understand which device type id in the list of integers corresponds to which [!DNL Magnite] device type, reach out to your [!DNL Magnite] account representative. If you are still unsure, you should select 0 (zero).
 
+>[!NOTE]
+>
+>At the end of the list of integers, in the 'Select target field' popout window, there are also 3 magnite_deviceId_ options. These 3 options are deprecated, only exist for backwards compatibility, and should NOT be selected.
+
 ![Choose desired device type integer from 'Select target field' popout window](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-target-popout.png)
 
 This example using the Real-Time destination shows a row that contains a generic deviceId source identifier mapped to the [!DNL Magnite] device type with integer id: "1". When you are satisfied with the mappings, select [!UICONTROL Next].
