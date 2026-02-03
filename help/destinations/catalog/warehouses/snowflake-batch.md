@@ -130,7 +130,7 @@ To authenticate to the destination, select **[!UICONTROL Connect to destination]
 ### Fill in destination details {#destination-details}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_snowflake_batch_accountID"
+>id="platform_destinations_snowflake_batch_accountid"
 >title="Enter your Snowflake Account ID"
 >abstract="If your account is linked to an organization use this format: `OrganizationName.AccountName`<br><br> If your account is not linked to an organization use this format:`AccountName`"
 
