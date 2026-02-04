@@ -46,6 +46,7 @@ role: Developer
       + [orgId](js/commands/configure/orgid.md)
       + [prehidingStyle](js/commands/configure/prehidingstyle.md)
       + [pushNotifications](js/commands/configure/pushnotifications.md)
+      + [stickyConversationSession](js/commands/configure/stickyconversationsession.md)
       + [streamingMedia](js/commands/configure/streamingmedia.md)
       + [targetMigrationEnabled](js/commands/configure/targetmigrationenabled.md)
       + [thirdPartyCookiesEnabled](js/commands/configure/thirdpartycookiesenabled.md)
