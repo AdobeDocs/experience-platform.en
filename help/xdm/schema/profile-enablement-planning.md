@@ -80,9 +80,9 @@ Enable a dataset for Profile only when it contributes directly to profile attrib
 
 **Example**: 
 
-Enable a "Customer Purchase Events" dataset that contains transaction data with customer IDs. Profile Service uses these events to build customer timelines and enable segmentation based on purchase behavior. 
+You enable a "Customer Purchase Events" dataset that contains transaction data with customer IDs. Profile Service uses these events to build customer timelines and enable segmentation based on purchase behavior. 
 
-Do NOT enable a "Product Catalog" dataset that only contains SKU reference data without customer identifiers. Enabling this type of dataset creates unnecessary storage overhead without contributing to unified customer profiles.
+You do NOT enable a "Product Catalog" dataset that only contains SKU reference data without customer identifiers. Enabling this type of dataset creates unnecessary storage overhead without contributing to unified customer profiles.
 
 ## Pre-enablement checklist {#pre-enablement-checklist}
 
