@@ -1,4 +1,6 @@
 ---
+keywords: Experience Platform;profile;real-time customer profile;schema;dataset;planning;enablement
+solution: Experience Platform
 title: Planning for Real-Time Customer Profile enablement
 description: Review the key considerations you must evaluate before enabling schemas and datasets for Real-Time Customer Profile.
 ---
@@ -6,7 +8,7 @@ description: Review the key considerations you must evaluate before enabling sch
 
 Use this page to confirm that your schema and dataset are ready before you enable them for Real-Time Customer Profile. Complete this planning review after you design your schema and before you enable Profile in the Schema Editor or Dataset interface. Profile enablement applies permanent behavioral changes to your data model. You cannot reverse schema enablement, and enabling a dataset affects how its records are processed within Real-Time Customer Profile. Review this guidance to avoid unintended enablement, data quality issues, or long-term constraints in your schema design.
 
-Enabling Profile determines how your data is stitched, merged, and activated across Experience Platform. Planning ensures that your schema structure, identity configuration, and dataset purpose are correct before you make the change. After you complete this planning review, you can proceed to enable Profile using the instructions in the schema enablement guide.
+Enabling Profile determines how your data is stitched, merged, and activated across Experience Platform. Planning ensures that your schema structure, identity configuration, and dataset purpose are correct before you make the change. After you complete this planning review, you can proceed to enable data for Profile in the **[!UICONTROL Schema Editor]** or **[!UICONTROL Dataset]** UI.
 
 ## Why planning matters {#why-planning-matters}
 
@@ -75,7 +77,7 @@ Enabling Profile in these scenarios may create unnecessary profiles, increase li
 
 ## Next steps {#next-steps}
 
-By reading this planning guide, you will have reviewed the permanent effects of Profile enablement, confirmed that your schema and datasets are ready, and validated that your identity configuration supports your use cases. Use the following resources to explore schema structure, check identity configuration, and understand Profile behavior.
+By now, you have reviewed the permanent effects of Profile enablement, confirmed that your schema and datasets are ready, and validated that your identity configuration supports your use cases. Next, use the following resources to explore schema structure, check identity configuration, and understand Profile behavior.
 
 * [Basics of schema composition](../schema/composition.md)  
 * [XDM troubleshooting guide](../troubleshooting-guide.md)  
