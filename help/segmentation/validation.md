@@ -7,7 +7,9 @@ description: Learn how Experience Platform validates your audiences to ensure th
 
 When you write an audience definition in Adobe Experience Platform, audience validation provides built-in validations and guardrails to ensure your audiences are not only accurate, but also stable and scalable.
 
-By adhering to audience definition best practices, you ensure your audiences can evaluate faster, ensure your logic remains efficient even when your audience size grows, and reduce the risk of evaluation failures during high-traffic periods.
+By adhering to audience definition best practices, you ensure your audiences can evaluate faster, ensure your logic remains efficient even when your audience size grows, and reduce the risk of evaluation failures during high-traffic periods. Optimized audiences also improve activation speed to destinations, reduce real-time personalization latency, and maintain overall sandbox stability.
+
+Experience Platform runs these validations in real-time as you build your audience in Segment Builder. When you add events or attributes that exceed validation thresholds, you receive immediate feedback within the Segment Builder interface.
 
 ## Validation types {#validation-types}
 
@@ -41,9 +43,9 @@ Currently, the following validations are supported:
 
 The logical complexity validation analyzes the structure of your logical statements (AND, OR, NOT) within your audience definition. Specifically, it looks for audience definitions that will force the system to perform an excessive number of comparisons per profile.
 
-If your audience definition has an excessive number of comparisons per profile, this increased complexity leads to slower evaluation on a per profile basis. As a result, this will eventually increase the overall time taken for audience evaluation.
+If your audience definition has an excessive number of comparisons per profile, this increased complexity leads to slower evaluation on a per profile basis. As a result, this increases the overall time taken for audience evaluation.
 
-To avoid triggering this validation, ensure you keep your audience definition simple. If you can't understand your own audience definition, you can assume that it's too complicated and Experience Platform may take longer to evaluate the audience.
+To avoid triggering this validation, keep your audience definition simple. If you can't understand your own audience definition, it's too complicated and Experience Platform may take longer to evaluate the audience.
 
 **Example**
 
@@ -67,7 +69,7 @@ not(State.equals("VT", "VA", "WA", "WV", "WI", "WY" ))
 
 +++
 
-Alternatively, let's say you want to find customers who are Canadians on your trial plan. You _could_ write this inefficiently by checking if the profile is not in every plan you want to exclude.
+Alternatively, let's say you want to find customers who are Canadians on your trial plan. A less efficient approach would be to look for Canadians on your trial plan by manually excluding every other plan, one by one, and checking that the profile isn't in any of them.
 
 +++ Inefficient audience definition
 
@@ -112,7 +114,7 @@ To avoid triggering this validation, focus on the basics of your sequential chai
 
 **Example**
 
-Let's say you want to target users who have viewed a product, added it to the cart, and purchased it. You _could_ write this inefficiently by checking every individual state of the user's path. For example, the following query goes through this sequence of events: Logs into website -> Searches for product -> Views a product page -> Adds to cart -> Navigates to checkout -> Purchase event 
+Let's say you want to target users who have viewed a product, added it to the cart, and purchased it. A less efficient approach would check every individual state of the user's path. For example, the following query goes through this sequence of events: Logs into website -> Searches for product -> Views a product page -> Adds to cart -> Navigates to checkout -> Purchase event 
 
 +++ Inefficient audience definition
 
@@ -173,7 +175,7 @@ If you need to create an audience that qualifies more than 30% of your profile s
 
 ## Next steps
 
-After reading this guide, you have a better understanding of how Experience Platform runs automatic validations to improve evaluation, stability, and scalability. For more information on creating audiences, read the [Segment Builder documentation](./ui/segment-builder.md).
+After reading this guide, you have a better understanding of how Experience Platform runs automatic validations to improve evaluation, stability, and scalability. For more information on creating audiences using the UI, read the [Segment Builder documentation](./ui/segment-builder.md).
 
 ## Appendix
 
@@ -219,6 +221,6 @@ Avoiding the "Nested data" warning is best solved at the data modeling layer. So
 
 +++ Answer
 
-Yes, these checks will apply to *all* audiences evaluated in Experience Platform.
+Yes, these checks apply to *all* audiences evaluated in Experience Platform.
 
 +++
