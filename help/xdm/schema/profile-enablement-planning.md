@@ -2,15 +2,15 @@
 title: Planning for Real-Time Customer Profile enablement
 description: Review the key considerations you must evaluate before enabling schemas and datasets for Real-Time Customer Profile.
 ---
-# Planning for Real-Time Customer Profile enablement
+# Planning for Real-Time Customer Profile enablement {#overview}
 
-Use this page to confirm that your schema and dataset are ready before you enable them for Real-Time Customer Profile. Profile enablement applies permanent behavioral changes to your data model. You cannot reverse schema enablement, and enabling a dataset affects how its records are processed within Real-Time Customer Profile. Review this guidance to avoid unintended enablement, data quality issues, or long-term constraints in your schema design.
+Use this page to confirm that your schema and dataset are ready before you enable them for Real-Time Customer Profile. Complete this planning review after you design your schema and before you enable Profile in the Schema Editor or Dataset interface. Profile enablement applies permanent behavioral changes to your data model. You cannot reverse schema enablement, and enabling a dataset affects how its records are processed within Real-Time Customer Profile. Review this guidance to avoid unintended enablement, data quality issues, or long-term constraints in your schema design.
 
-Enabling Profile determines how your data is stitched, merged, and activated across Experience Platform. Planning ensures that your schema structure, identity configuration, and dataset purpose are correct before you make the change.
+Enabling Profile determines how your data is stitched, merged, and activated across Experience Platform. Planning ensures that your schema structure, identity configuration, and dataset purpose are correct before you make the change. After you complete this planning review, you can proceed to enable Profile using the instructions in the schema enablement guide.
 
 ## Why planning matters {#why-planning-matters}
 
-Profile enablement permanently changes how Experience Platform treats your data:
+Profile enablement permanently changes how Experience Platform treats your data. The following permanent changes apply to schemas and datasets.
 
 * **Schemas**: When you enable a schema for Profile, you cannot disable or delete it. You also cannot remove fields from the schema after data is ingested.  
 * **Datasets**: When you enable a dataset for Profile, Profile Service uses its records to build and update profiles. Review the dataset enablement behavior in the [dataset user guide](PLACEHOLDER.md). You can disable or delete the dataset later, but doing so removes associated profile records and may affect segmentation or activation workflows.
@@ -19,11 +19,11 @@ Because these changes affect downstream processes, verify that a schema and its 
 
 ## Key considerations before enabling Profile {#key-considerations}
 
-Review the considerations in this section to ensure that your schema and dataset support Profile use cases and long-term data governance.
+Review the considerations in this section to ensure that your schema and dataset support Profile use cases and long-term data governance. Before enabling Profile, verify your schema structure, identity configuration, and dataset purpose.
 
 ### Schema readiness
 
-Review the schema structure to confirm that it supports Profile requirements:
+Review the schema structure to confirm that it supports Profile requirements. Verify the following conditions before enabling Profile:
 
 * The schema contains the fields required for segmentation and activation.
 * The schema excludes fields that are experimental or not needed long-term.
@@ -31,7 +31,7 @@ Review the schema structure to confirm that it supports Profile requirements:
 
 ### Identity configuration
 
-Identity configuration determines how Profile stitches records across datasets. Review the identity field requirements in the [identity configuration documentation](PLACEHOLDER.md) before enabling Profile. Confirm the following:
+Identity configuration determines how Profile stitches records across datasets. Review the identity field requirements in the [identity configuration documentation](PLACEHOLDER.md) before enabling Profile. Confirm the following conditions:
 
 * A valid primary identity is selected.
 * The identity field is stable, unique, and consistently populated.
@@ -50,20 +50,20 @@ If a dataset does not contribute to the unified profile, do not enable it for Pr
 
 ## Pre-enablement checklist {#pre-enablement-checklist}
 
-Use this checklist to confirm readiness before enabling a schema or dataset for Profile:
+Use this checklist to confirm readiness before enabling a schema or dataset for Profile. Complete each item before you enable Profile:
 
 * Confirm that the schema design is complete and stable. For guidance, see the [schema design best practices](PLACEHOLDER.md).  
 * Confirm that the primary identity is correct and unique.  
-* Verify that the dataset contains profile-relevant data.  
-* Review whether the dataset should contribute to identity stitching or segmentation. To understand stitching rules, see the [merge policy documentation](PLACEHOLDER.md).  
-* Ensure that enabling Profile does not introduce unwanted profiles or inflate audience counts.  
-* Validate that you do not need to rename or reorganize the schema to avoid long-term ambiguity.
+* Confirm that the dataset contains profile-relevant data.  
+* Confirm whether the dataset should contribute to identity stitching or segmentation. To understand stitching rules, see the [merge policy documentation](PLACEHOLDER.md).  
+* Confirm that enabling Profile does not introduce unwanted profiles or inflate audience counts.  
+* Confirm that you do not need to rename or reorganize the schema to avoid long-term ambiguity.
 
 Completing this checklist helps prevent issues that cannot be reversed after enablement.
 
 ## When to enable a schema or dataset for Profile {#when-to-enable}
 
-Enable Profile in the following situations:
+Enable Profile in the following situations.
 
 * The data contributes to a unified customer profile.  
 * The data is required for segmentation or activation workflows.  
@@ -72,7 +72,7 @@ Enable Profile in the following situations:
 
 ## When not to enable a schema or dataset for Profile {#when-not-to-enable}
 
-Avoid enabling Profile in the following cases:
+Avoid enabling Profile in the following cases.
 
 * The schema represents lookup or reference-only data.  
 * The dataset contains test, temporary, or non-production data.  
@@ -83,7 +83,7 @@ Enabling Profile in these scenarios may create unnecessary profiles, increase li
 
 ## Next steps {#next-steps}
 
-Use the following resources to review schema structure, identity configuration, and Profile behavior:
+Use the following resources to review schema structure, identity configuration, and Profile behavior.
 
 * [Basics of schema composition](../schema/composition.md)  
 * [XDM troubleshooting guide](../troubleshooting-guide.md)  
