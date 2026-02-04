@@ -126,6 +126,10 @@ A successful response returns the URL for the marketing action, the usage labels
 
 ## Evaluate using datasets
 
+>[!WARNING]
+>
+>The `/constraints` endpoint for dataset-based evaluation is deprecated. To evaluate policy violation or perform multiple evaluation jobs, use the [bulk evaluation API (`/bulk-eval`)](../api/evaluation.md#evaluate-policies-in-bulk) instead.
+
 You can evaluate a data usage policy by testing a marketing action against one or more datasets from which labels can be collected. This is done by making a POST request to `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` and providing dataset IDs within the request body, as shown in the example below.
 
 **API format**
