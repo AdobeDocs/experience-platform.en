@@ -1,5 +1,5 @@
 ---
-title: Audience validation
+title: Audience Validation
 description: Learn how Experience Platform validates your audiences to ensure they perform well further downstream.
 ---
 
