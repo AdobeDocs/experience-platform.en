@@ -19,7 +19,7 @@ Before using this planning guide, ensure you have:
 * Basic understanding of [Real-Time Customer Profile](../../profile/home.md) and how it uses schemas to build unified customer views.
 * Appropriate permissions to enable schemas and datasets for Profile. Contact your system administrator if you do not have access to Profile enablement options.
 
-If you have not completed these prerequisites, start with the schema creation tutorial before proceeding with this planning guide.
+If you have not completed these prerequisites, start with the [schema creation tutorial](../tutorials/create-schema-ui.md) before proceeding with this planning guide.
 
 ## Why planning matters {#why-planning-matters}
 
@@ -72,7 +72,7 @@ Review the schema structure to confirm that it supports Profile requirements. Th
 
 ### Identity configuration
 
-Identity configuration determines how Profile stitches records across datasets. Start by confirming that a valid primary identity is selected—this field must be stable, unique, and consistently populated across all records. Verify that identity namespaces are assigned correctly to prevent stitching errors. If you use secondary identities, confirm that they support your use cases without causing profile collisions, which can occur when different individuals share the same identity value.
+Identity configuration determines how Profile stitches records across datasets. Start by confirming that a valid primary identity is selected—this field must be stable, unique, and consistently populated across all records. Verify that identity namespaces are assigned correctly to prevent stitching errors. If you use secondary identities, confirm that they support your use cases without causing profile collisions, which can occur when different individuals share the same identity value. Profile Service resolves collisions by applying merge policies that determine which data takes precedence when conflicting records are stitched together.
 
 ### Dataset purpose
 
