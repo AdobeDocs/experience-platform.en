@@ -76,13 +76,7 @@ Identity configuration determines how Profile stitches records across datasets. 
 
 ### Dataset purpose
 
-Enable a dataset for Profile only when it contributes directly to profile attributes or Experience Events used in downstream workflows. Avoid enabling datasets that contain:
-
-* Lookup or reference data not used in segmentation  
-* Test or sample data  
-* Operational or system-generated records not intended for activation  
-
-If a dataset does not contribute to the unified profile, do not enable it for Profile.
+Enable a dataset for Profile only when it contributes directly to profile attributes or Experience Events used in downstream workflows. Avoid enabling datasets that contain lookup or reference data not used in segmentation, test or sample data, or operational system-generated records not intended for activation. These data types do not contribute to unified customer profiles and create unnecessary storage overhead. If a dataset does not contain identity fields or customer behavior data that supports segmentation and activation, do not enable it for Profile.
 
 **Example**: 
 
@@ -96,43 +90,19 @@ Use this checklist to confirm readiness before enabling a schema or dataset for 
 
 ### Schema-level checks
 
-Complete these validations for your schema:
+Begin by validating that your schema design is complete and stable. Review your schema to confirm that all required fields for your use case are present and that no experimental or temporary fields are included. Consult the [schema design best practices](./best-practices.md) to ensure your schema follows recommended patterns. Obtain approval from your team on the final field list, as you cannot remove fields once data is ingested.
 
-* **Confirm that the schema design is complete and stable** by reviewing:
-  * All required fields for your use case are present
-  * No experimental or temporary fields are included
-  * You have reviewed the [schema design best practices](./best-practices.md)
-  * Your team has approved the final field list
+Next, verify that your primary identity configuration is correct. Open your schema in the **[!UICONTROL Schema Editor]** and locate the field marked with the identity icon. Confirm that this field is consistently populated in your source data and that the identity namespace is appropriate for your use case. The primary identity must be stable, unique, and reliably present across all records to ensure proper profile stitching.
 
-* **Confirm that the primary identity is correct and unique** by:
-  * Opening your schema in the **[!UICONTROL Schema Editor]**
-  * Verifying the field marked with the identity icon
-  * Checking that this field is consistently populated in your source data
-  * Confirming the identity namespace is appropriate for your use case
-
-* **Confirm that you do not need to rename or reorganize the schema** because:
-  * You cannot rename fields after data is ingested
-  * Schema structure changes are limited to additive updates only
-  * Long-term ambiguity in naming cannot be corrected later
+Finally, confirm that you do not need to rename or reorganize the schema structure. Remember that you cannot rename fields after data is ingested, and schema structure changes are limited to additive updates only. Any long-term ambiguity in naming or organization cannot be corrected later, so resolve these issues before enablement.
 
 ### Dataset-level checks
 
-Complete these validations for each dataset:
+For each dataset you plan to enable, start by confirming that it contains profile-relevant data. Review sample records to verify they contain customer or event data rather than purely operational or reference information. Ensure that records include identity values that link to customer profiles. Datasets without identity fields or customer behavior data should not be enabled for Profile.
 
-* **Confirm that the dataset contains profile-relevant data** by:
-  * Reviewing sample records to verify they contain customer or event data
-  * Ensuring records include identity values that link to customer profiles
-  * Checking that the data is not purely operational or reference data
+Determine whether the dataset should contribute to identity stitching or segmentation by understanding how its identity values relate to other datasets in your Profile-enabled environment. Consider whether records in this dataset should merge with existing profiles or create new profile fragments. Review the [merge policy documentation](../../profile/merge-policies/overview.md) to understand how Profile Service stitches records across datasets and how this dataset fits into your overall identity strategy.
 
-* **Confirm whether the dataset should contribute to identity stitching or segmentation** by:
-  * Determining if records should merge with existing profiles
-  * Understanding how identity values relate to other datasets
-  * Reviewing the [merge policy documentation](../../profile/merge-policies/overview.md) to understand stitching rules
-
-* **Confirm that enabling Profile does not introduce unwanted profiles** by:
-  * Estimating the number of unique identity values in the dataset
-  * Verifying that identity values represent actual customers, not test or system accounts
-  * Checking that enabling this dataset aligns with your license entitlements
+Before enabling the dataset, estimate the number of unique identity values it contains and verify that these identity values represent actual customers rather than test accounts or system identifiers. Confirm that enabling this dataset aligns with your license entitlements, as each unique identity contributes to your addressable audience count. Profile enablement increases storage and processing costs, so ensure the dataset provides value that justifies this investment.
 
 Completing this checklist helps prevent issues that cannot be reversed after enablement.
 
@@ -173,11 +143,4 @@ After you enable both the schema and datasets, Profile Service begins processing
 
 ## Next steps {#next-steps}
 
-By now, you have reviewed the permanent effects of Profile enablement, confirmed that your schema and datasets are ready, and validated that your identity configuration supports your use cases. Next, use the following resources to explore schema structure, check identity configuration, and understand Profile behavior.
-
-* [Basics of schema composition](../schema/composition.md)  
-* [XDM troubleshooting guide](../troubleshooting-guide.md)  
-* [Enable a dataset for Profile](../../catalog/datasets/user-guide.md#enable-profile)  
-* [Identity namespaces overview](../../identity-service/features/namespaces.md)  
-
-These pages provide additional detail about schema evolution rules, identity fields, and Profile enablement logic.
+You have reviewed the permanent effects of Profile enablement, confirmed that your schema and datasets are ready, and validated that your identity configuration supports your use cases. To deepen your understanding of schema structure and field relationships, review the [Basics of schema composition](../schema/composition.md), which explains schema evolution rules and how fields interact within the data model. If you encounter issues during or after enablement, consult the [XDM troubleshooting guide](../troubleshooting-guide.md) for common problems and solutions. For alternative enablement methods and detailed UI instructions, see [Enable a dataset for Profile](../../catalog/datasets/user-guide.md#enable-profile) in the dataset user guide. To learn more about how identity namespaces affect profile stitching and resolution, review the [Identity namespaces overview](../../identity-service/features/namespaces.md).
