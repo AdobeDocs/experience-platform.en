@@ -1,6 +1,7 @@
 ---
 title: _monitors
 description: Add event listeners to debug your tag implementation.
+exl-id: 046094c1-afeb-48e6-8649-590e5116421b
 ---
 # `_monitors`
 
