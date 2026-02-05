@@ -6,11 +6,28 @@ exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
 ---
 # Getting started with Adobe Experience Platform [!DNL Query Service] {#getting-started}
 
-Once your organization is provisioned for Adobe Experience Platform, your administrator can grant you access to [!DNL Query Service]. Before you can make use of all features offered by [!DNL Query Service], however, you must first ingest data into Adobe Experience Platform. 
+Use Adobe Experience Platform Query Service to run SQL queries against ingested datasets, join data from multiple sources, and generate derived datasets for analytics, machine learning workflows, or Real-Time Customer Profile. After ingesting data, access Query Service through the UI for interactive analysis and collaboration, or through the API for automated and programmatic query execution.
 
-This [data ingestion tutorial video](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) provides an overview on creating a dataset, mapping a dataset to a schema, adding data to the dataset, and confirming its ingestion. The [ingestion overview documentation](../../ingestion/home.md) supplements this and provides more in depth information and links to other learning resources.
+## Prerequisites {#prerequisites}
 
-After you have ingested your data into Adobe Experience Platform, you can begin working with [!DNL Query Service] using either the [[!DNL Query Editor] in the Experience Platform UI](../ui/user-guide.md) or the [[!DNL Query Service] API](../api/getting-started.md). Full documentation on how to use each of these tools can be found within their respective sections. 
+Before you can start querying data, ensure you have:
+
+- **Required permissions**: Your user account has access to Query Service in Experience Platform. If the service is not available in the UI, review the [permissions documentation](../../access-control/home.md#permissions) and contact your system administrator.
+- **Data ingestion**: You have data ingested into Experience Platform.
+
+If you need to ingest data, review the [data ingestion tutorial video](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) for an overview of dataset creation, schema mapping, ingestion, and validation. Read the [ingestion overview documentation](../../ingestion/home.md) for more in depth information and links to other learning resources.
+
+## Quick start paths
+
+After you have ingested your data into Experience Platform, you can begin working with Query Service using either the [!DNL Query Editor] in Experience Platform or the Query Service API.
+
+### [!DNL Query Editor]
+
+Use the [!DNL Query Editor] for analysis, data exploration, and collaborative query development. For an overview of the UI functionality, see the [Query Service UI documentation](../ui/overview.md). To learn about how to write and run queries in the UI, read the [[!DNL Query Editor user guide]](../ui/user-guide.md).
+
+### Query Service API
+
+Use the Query Service API for automated workflows, query templates management, and programmatic integrations. Refer to the [Query Service developer guide](../api/getting-started.md) for detailed instructions on using the Query Service API.
 
 ## Next Steps
 

@@ -7,7 +7,9 @@ exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 
 >[!AVAILABILITY]
 >
->You must have access to [Adobe Real-Time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) for your B2B schemas to qualify in [Real-Time Customer Profile](../../../../profile/home.md).
+>- You must have access to [Adobe Real-Time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) for your B2B schemas to qualify in [Real-Time Customer Profile](../../../../profile/home.md).
+>
+>- Starting January 2026, Real-Time CDP B2B Edition will no longer support **non-standard** relationships between B2B entities. Therefore, you are encouraged to update your B2B entities to use the standard relationships outlined in the [B2B namespaces and schemas guide](../../../../rtcdp/schemas/b2b.md).
 
 >[!NOTE]
 >
