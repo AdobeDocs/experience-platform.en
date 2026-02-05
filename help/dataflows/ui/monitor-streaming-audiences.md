@@ -3,8 +3,8 @@ title: Monitor streaming audiences
 description: Learn how to use the monitoring dashboard to monitor audiences that are evaluated using streaming segmentation
 hide: true
 hidefromtoc: true
+exl-id: b47325fb-7768-4bc0-92d2-5541729e636d
 ---
-
 # Monitor streaming audiences
 
 intro blurb

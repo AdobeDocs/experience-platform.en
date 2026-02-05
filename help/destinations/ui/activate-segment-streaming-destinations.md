@@ -77,6 +77,10 @@ Some audience streaming destinations require you to select source attributes or 
 
     ![Select source field page showing several available source fields.](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png)
 
+    Use the **[!UICONTROL Show display names for fields]** toggle to display the friendly names for fields, instead of the schema field names.
+
+    ![Select source field page showing the toggle for display names.](../assets/ui/activate-segment-streaming-destinations/show-display-names.gif)
+
 1. Select the button to the right of the **[!UICONTROL Target field]** entry.
 
     ![Select target field highlighted.](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)

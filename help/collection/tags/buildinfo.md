@@ -1,6 +1,7 @@
 ---
 title: buildInfo
 description: Obtain information around the tag build implemented on your site.
+exl-id: 1bf9918c-aeb2-4c40-a166-25d209458aec
 ---
 # `buildInfo`
 
