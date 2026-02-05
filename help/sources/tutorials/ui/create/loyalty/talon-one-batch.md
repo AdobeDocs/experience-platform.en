@@ -4,6 +4,7 @@ description: Learn how to ingest batch data from Talon.One into Adobe Experience
 badge: Beta
 hide: true
 hidefromtoc: true
+exl-id: 65a8ae42-0c0f-4bc5-b99e-52b02ab2130a
 ---
 # Ingest batch data from [!DNL Talon.One] into Experience Platform using the UI
 

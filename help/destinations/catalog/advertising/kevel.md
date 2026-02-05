@@ -2,8 +2,8 @@
 title: Kevel Connection
 description: Use the Kevel streaming destination to activate audiences directly into Kevel's UserDB and Segment Management APIs and support real-time targeting at decision time.
 last-substantial-update: 2026-01-27
+exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
 ---
-
 # [!DNL Kevel] connection {#kevel}
 
 ## Overview {#overview}

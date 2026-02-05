@@ -1,6 +1,7 @@
 ---
 title: track()
 description: Trigger a direct call rule.
+exl-id: 738cecb0-3dd4-4326-ad64-403ce584fda5
 ---
 # `track()`
 

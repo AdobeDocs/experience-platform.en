@@ -1,7 +1,8 @@
 ---
-title: Salesforce Marketing Cloud (V2) Source Overview 
+title: Salesforce Marketing Cloud (V2) Source Overview
 description: Learn how to connect Salesforce Marketing Cloud (V2) to Adobe Experience Platform using APIs or the user interface.
 last-substantial-update: 2025-02-02
+exl-id: 116d9e72-c0f8-4442-bca9-61d6cac0b7b6
 ---
 # [!DNL Salesforce Marketing Cloud] (V2) source overview
 

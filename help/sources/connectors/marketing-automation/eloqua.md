@@ -2,6 +2,7 @@
 title: Oracle Eloqua (V2) Source Overview
 description: Learn how to connect Oracle Eloqua to Adobe Experience Platform.
 last-substantial-update: 2025-02-02
+exl-id: f63beebd-920c-41dd-a924-61511135a234
 ---
 # [!DNL Oracle Eloqua] (V2) source overview
 
@@ -238,4 +239,3 @@ The mapping templates use the following variable placeholders that are replaced 
 ## Connect [!DNL Eloqua] to Experience Platform
 
 Proceed to configure your [!DNL Eloqua] source connection within Experience Platform. For a step-by-step guide on setting up the connection through the UI, refer to the [tutorial here](../../tutorials/ui/create/marketing-automation/eloqua.md). Read this tutorial to learn about connecting your [!DNL Eloqua] account, selecting data, mapping fields, scheduling ingestions, and monitoring your dataflows.
-

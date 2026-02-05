@@ -3,6 +3,7 @@ title: Privacy Service Error Codes in Adobe Experience Platform
 description: Understand Privacy Service error codes so you can diagnose failures, handle job outcomes programmatically, and determine next steps when submitting or monitoring privacy jobs.
 keywords: privacy service, error codes, privacy jobs, api errors
 solution: Experience Platform
+exl-id: 49b79093-4d4c-4b92-bd38-86879452dbfb
 ---
 # Privacy Service error codes {#privacy-service-error-codes}
 

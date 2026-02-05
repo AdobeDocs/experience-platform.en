@@ -1,6 +1,7 @@
 ---
 title: Redirect with identity
 description: Allows sharing a visitor identifier across your organization's domains.
+exl-id: 81ef1361-20eb-48d7-83c4-e77f459eeade
 ---
 # Redirect with identity
 
