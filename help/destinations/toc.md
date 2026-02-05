@@ -48,7 +48,7 @@ role: Admin,User
         * [Export arrays, maps, and objects](/help/destinations/ui/export-arrays-maps-objects.md)
         * [Perform transformations on data exported to cloud storage destinations](/help/destinations/ui/data-transformations-calculated-fields.md)
     * [View destination details](./ui/destination-details-page.md)
-    * [(Beta) Edit destinations](./ui/edit-destination.md)
+    * [Edit destinations](./ui/edit-destination.md)
     * [Update destination accounts](./ui/update-accounts.md)
     * [Delete destination accounts](./ui/delete-destination-account.md)
     * [Edit activation dataflows](./ui/edit-activation.md)
