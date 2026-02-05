@@ -2,8 +2,8 @@
 title: Index Exchange
 description: Connect to Index Exchange (Index) and activate your data so your audience segments can be targeted by deals created in the Index UI.
 last-substantial-update: 2026-01-27
+exl-id: 6d2a8553-5e8c-4eeb-ac25-5e4c2bdc5758
 ---
-
 # [!DNL Index Exchange] {#index-exchange}
 
 ## Overview {#overview}

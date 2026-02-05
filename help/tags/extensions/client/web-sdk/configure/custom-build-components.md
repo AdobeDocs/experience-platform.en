@@ -1,6 +1,7 @@
 ---
 title: Custom build components
 description: Create a custom Web SDK build that disables features to lower build size.
+exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
 ---
 # Custom build components
 

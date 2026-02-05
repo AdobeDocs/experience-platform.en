@@ -1,8 +1,8 @@
 ---
 title: Adobe Experience Platform Release Notes January 2026
 description: The January 2026 release notes for Adobe Experience Platform.
+exl-id: becc62ba-b21b-4bbb-9f20-8281a3a6e009
 ---
-
 # Adobe Experience Platform release notes
 
 >[!TIP]
@@ -11,8 +11,8 @@ description: The January 2026 release notes for Adobe Experience Platform.
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
->- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
+>- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Release date: January 27, 2026**
@@ -97,6 +97,7 @@ For more information, read the [[!DNL Real-Time Customer Profile] overview](../.
 | Feature | Description |
 | ------- | ----------- |
 | External audience data expiration refresh | External audiences (such as CSV uploads) now support a force refresh capability for data expiration settings. This feature lets users manually refresh the data expiration for external audiences, providing greater control over audience lifecycle management. This is particularly useful for audiences that need to persist beyond their initial data expiration period or require reactivation without re-uploading the data. For more information about this feature, read the [Audience Portal overview](../../segmentation/ui/audience-portal.md#audience-summary). |
+| Audience validation | Experience Platform now provides built-in validations to ensure your audiences are accurate, stable, and scalable. These checks are automatically run in real-time while you're creating your audience definitions. For more information, read the [audience validation overview](/help/segmentation/validation.md). |
 
 For more information, read the [[!DNL Segmentation Service] overview](../../segmentation/home.md).
 
@@ -112,4 +113,3 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | [[!DNL Salesforce Marketing Cloud]](/help/sources/connectors/marketing-automation/sfmc.md) V2 source | A new [!DNL Salesforce Marketing Cloud] source connector is now available, replacing the [deprecated connector](/help/sources/connectors/marketing-automation/salesforce-marketing-cloud.md). This updated connector provides improved performance and additional capabilities for ingesting data from [!DNL Salesforce Marketing Cloud] into Experience Platform. Customers using the existing connector should transition to the new implementation. The new connector includes comprehensive setup instructions for connecting to [!DNL Salesforce Marketing Cloud] and ingesting marketing automation data. |
 
 For more information, read the [sources overview](../../sources/home.md).
-
