@@ -59,7 +59,7 @@ The **[!UICONTROL Attributes]** tab allows you to browse [!DNL Profile] attribut
 The attributes you add can be one of the following data types:
 
 | Data type | Common use cases | 
-| ---------  ---------------- |
+| --------- | ---------------- |
 | String | Names, email addresses, product categories |
 | Numeric | Age, revenue, product quantities, loyalty scores |
 | Boolean | Preferences, status indicators, user flags |
@@ -576,7 +576,7 @@ More information about the different segment definition evaluation methods can b
 Segment Builder provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-Time Customer Profile] data. After reading this guide you should now be able to:
 
 - Create segment definitions using a combination of attributes, events, and existing audiences as building blocks.  
-- Use the rule builder canvas and containers to control the order in which audience queries are executed.
+- Use the rule builder canvas and containers to control the order in which audience rules are executed.
 - View estimates of your prospective audience, allowing you to adjust your segment definitions as required.
 - Enable all segment definitions for scheduled segmentation.
 - Enable specified segment definitions for streaming segmentation.
