@@ -1,8 +1,8 @@
 ---
 title: Audience Validation
 description: Learn how Experience Platform validates your audiences to ensure they perform well further downstream.
+exl-id: 55877ad5-757f-4928-853c-3b211ece0a45
 ---
-
 # Audience validation
 
 When you write an audience definition in Adobe Experience Platform, audience validation provides built-in validations and guardrails to ensure your audiences are not only accurate, but also stable and scalable.

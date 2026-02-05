@@ -1,6 +1,7 @@
 ---
 title: Connect Your Salesforce Marketing Cloud (V2) Account To Experience Platform Through the UI
 description: Learn how to connect your Salesforce Marketing Cloud (V2) account to Experience Platform through the UI.
+exl-id: a42a37c2-f75d-4237-8e09-442b38a41052
 ---
 # Connect [!DNL Salesforce Marketing Cloud] to Experience Platform
 
@@ -93,4 +94,3 @@ For additional information, read the following documentation:
 
 * [Sources overview](../../../../home.md)
 * [Real-Time CDP B2B Edition](../../../../../rtcdp/b2b-overview.md)
-

@@ -1,6 +1,7 @@
 ---
 title: Connect Oracle Eloqua (V2) to Experience Platform in the UI
 description: Learn how to connect your Oracle Eloqua account to Experience Platform in the UI.
+exl-id: 87b6d2e2-fd0b-4ca7-860c-01957712ec2a
 ---
 # Connect [!DNL Oracle Eloqua] (V2) to Experience Platform in the UI
 

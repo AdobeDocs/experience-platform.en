@@ -1,8 +1,8 @@
 ---
 title: Adobe Experience Platform Release Notes January 2026
 description: The January 2026 release notes for Adobe Experience Platform.
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
-
 # Adobe Experience Platform release notes
 
 >[!TIP]
@@ -111,4 +111,3 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | [[!DNL Salesforce Marketing Cloud]](/help/sources/connectors/marketing-automation/sfmc.md) V2 source | A new [!DNL Salesforce Marketing Cloud] source connector is now available, replacing the [deprecated connector](/help/sources/connectors/marketing-automation/salesforce-marketing-cloud.md). This updated connector provides improved performance and additional capabilities for ingesting data from [!DNL Salesforce Marketing Cloud] into Experience Platform. Customers using the existing connector should transition to the new implementation. The new connector includes comprehensive setup instructions for connecting to [!DNL Salesforce Marketing Cloud] and ingesting marketing automation data. |
 
 For more information, read the [sources overview](../../sources/home.md).
-
