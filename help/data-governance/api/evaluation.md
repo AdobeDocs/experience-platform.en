@@ -119,7 +119,7 @@ A successful response includes a `violatedPolicies` array, which contains the de
 
 >[!WARNING]
 >
->The `/constraints` endpoint for dataset-based evaluation is deprecated. To evaluate policy violation or perform multiple evaluation jobs, use the [bulk evaluation API (`/bulk-eval`)](#evaluate-policies-in-bulk) instead.
+>The `/constraints` endpoint for dataset-based evaluation is deprecated. To evaluate policy violation or perform multiple evaluation jobs, use the [bulk evaluation API (`/bulk-eval`)](#bulk) instead.
 
 You can evaluate for policy violations based on a set of one or more datasets from which data usage labels can be collected. This is done by performing a POST request to the `/constraints` endpoint for a specific marketing action and providing a list of dataset IDs within the request body.
 
