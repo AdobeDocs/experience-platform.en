@@ -3,7 +3,6 @@ keywords: rtcdp segments;segment builder rtcdp;rtcdp segment
 title: Segment Builder in Real-Time Customer Data Platform
 description: Learn how to use the Segment Builder in Real-Time CDP to define audiences.
 feature: Get Started, Audiences, Segments
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: a9a14ec4-d8e2-48b2-882f-5afd0cb06b71
 ---
 # Segment Builder in Real-Time Customer Data Platform
