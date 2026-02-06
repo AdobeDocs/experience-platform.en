@@ -1,8 +1,11 @@
 ---
 title: Account Profile Insights
 description: Discover the SQL that powers your Account Profile insights and use these queries to generate custom insights that further explore your customers and their consumer experiences.
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B:
+  label="B2B Edition"
+  type="Informative"
+  url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions"
+  newtab=true
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
 ---
 # Account Profile insights
