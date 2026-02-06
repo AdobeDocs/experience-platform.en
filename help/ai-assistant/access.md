@@ -36,7 +36,7 @@ If your organization is legally eligible to use AI Assistant and you still canno
 
 >[!ENDTABS]
 
-## Get access to AI Assistant
+## Get access to AI Assistant {#get-access-to-ai-assistant}
 
 Access to AI Assistant is governed by the following parameters:
 
