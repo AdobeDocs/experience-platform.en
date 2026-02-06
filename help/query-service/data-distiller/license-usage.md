@@ -9,9 +9,11 @@ The license usage dashboard provides granular reports about your organization's 
 
 The dashboard provides usage metrics for each purchased product, the consolidated usage of metrics in all production or development sandboxes, and the usage metrics from a specific sandbox. Information displayed here is captured during a daily snapshot of your Experience Platform instance. 
 
+Annual Data Distiller compute hours reset on the anniversary date of your Data Distiller contract. This date corresponds to when your Data Distiller license was purchased or renewed, as listed on your sales order.
+
 >[!NOTE]
 >
->The license usage dashboard is not enabled by default. Users must be granted "View License Usage Dashboard" permission to be able to view the dashboard. For steps on granting access permissions for viewing the license usage dashboard, refer to the [dashboard permissions guide](../../dashboards/permissions.md).
+>The license usage dashboard is not enabled by default. Users must be granted "[!UICONTROL View License Usage Dashboard]" permission to be able to view the dashboard. For steps on granting access permissions for viewing the license usage dashboard, refer to the [dashboard permissions guide](../../dashboards/permissions.md).
 
 ## Compute hours {#compute-hours}
 
