@@ -1,6 +1,7 @@
 ---
 title: Datastream configuration override settings
 description: Modify configuration settings when certain conditions are met.
+exl-id: 68227148-3d74-4807-836c-14acd8a9c1dc
 ---
 # Datastream configuration override settings
 

@@ -1,6 +1,7 @@
 ---
 title: Shared Private Extension Packages
 description: Learn how you can share private extension packages in Adobe Experience Platform Tags.
+exl-id: 3dfd801a-febc-4461-bd99-5f97682518ce
 ---
 # Shared private extension packages
 

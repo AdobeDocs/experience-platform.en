@@ -1,6 +1,7 @@
 ---
 title: Update variable
 description: Modifies the contents of a variable data element.
+exl-id: 6c558d1e-85b4-45f9-ba4d-5fed1ec6e308
 ---
 # Update variable
 
