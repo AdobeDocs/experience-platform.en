@@ -1,6 +1,7 @@
 ---
 title: Define a Relationship Between Two Schemas in Real-Time Customer Data Platform B2B Edition
 description: Learn how to define a many-to-one relationship between two schemas in Adobe Real-Time Customer Data Platform B2B Edition.
+badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 ---
 # Define a many-to-one relationship between two schemas in Real-Time Customer Data Platform B2B Edition {#relationship-b2b}
