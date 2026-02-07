@@ -1,6 +1,7 @@
 ---
 title: Get Media Analytics tracker
 description: Exports the Legacy Media API to a window object.
+exl-id: 45124032-efbf-4b38-8c96-59abc30af5bc
 ---
 # Get Media Analytics Tracker
 

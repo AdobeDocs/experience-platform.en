@@ -1,6 +1,7 @@
 ---
 title: _container
 description: See the entire tag container in a single object.
+exl-id: aa3561e4-b39a-4a00-a770-c192b5bc1282
 ---
 # `_container`
 

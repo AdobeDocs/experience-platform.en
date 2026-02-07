@@ -1,6 +1,7 @@
 ---
 title: Send media event
 description: Send media data to the Adobe Experience Platform Edge Network.
+exl-id: 1fa6bbd7-f4d1-4dc6-b5b5-3d8f9a8c16f5
 ---
 # Send media event
 

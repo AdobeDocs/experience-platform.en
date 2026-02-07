@@ -1,6 +1,7 @@
 ---
 title: setDebug()
 description: Enable debugging on your site through the browser console.
+exl-id: c042d521-46b4-441b-a91f-685e0428e4dd
 ---
 # `setDebug()`
 

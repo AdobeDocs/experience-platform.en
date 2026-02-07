@@ -1,8 +1,8 @@
 ---
 title: Adobe Experience Platform for multi-region, multi-brand enterprises
 description: Learn how to empower your implementation teams with the tools and insights needed to navigate the intricacies of Adobe Experience Platform effectively.
+exl-id: e714cbd8-8915-4f77-b1ba-a7fcf50de8d6
 ---
-
 # Adobe Experience Platform for multi-region, multi-brand enterprises
 
 ## Introduction

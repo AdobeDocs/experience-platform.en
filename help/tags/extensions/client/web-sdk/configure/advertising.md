@@ -1,6 +1,7 @@
 ---
 title: Adobe Advertising configuration settings
 description: Enable or disable Demand-side Platform functionality.
+exl-id: 594fd75d-bb13-4146-9105-1398e24c4c16
 ---
 # Adobe Advertising configuration settings
 
