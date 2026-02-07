@@ -1,11 +1,7 @@
 ---
 title: XDM Business Person Details Schema Field Group
 description: Learn about the XDM Business Person Details schema field group.
-badgeB2B:
- label="B2B Edition"
- type="Informative"
- url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions"
- newtab=true
+badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
 ---
 # [!UICONTROL XDM Business Person Details] schema field group

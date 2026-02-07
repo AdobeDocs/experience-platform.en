@@ -1,11 +1,7 @@
 ---
 title: XDM Business Person Components Schema Field Group
 description: Learn about the XDM Business Person Components schema field group.
-badgeB2B:
- label="B2B Edition"
- type="Informative"
- url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions"
- newtab=true
+badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
 ---
 # [!UICONTROL XDM Business Person Components] schema field group
