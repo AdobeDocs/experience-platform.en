@@ -308,6 +308,12 @@ The following video shows how to run queries in the Adobe Experience Platform in
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
+## Monitor and manage concurrent sessions {#monitor-manage-sessions}
+
+Use session management to view active Query Editor sessions across sandboxes, identify idle sessions, and end them to free shared capacity. You cannot interrupt sessions that are actively running queries. This capability is intended for administrators only and requires the **[!UICONTROL Manage Query Session]** permission.
+
+To access session management, select the **[!UICONTROL Admin]** tab in the Query Service workspace. For step-by-step instructions to view session details, interpret session status, and end idle sessions, see [Manage Query Service sessions](ui-session-management.md).
+
 ## Next steps
 
 Now that you know what features are available in Query Editor and how to navigate the application, you can start authoring your own queries directly in [!DNL Experience Platform]. For more information about running SQL queries against datasets in [!DNL Data Lake], see the guide on [running queries](../best-practices/writing-queries.md). 

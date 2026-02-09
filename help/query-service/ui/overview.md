@@ -182,6 +182,12 @@ The **[!UICONTROL Credentials]** tab displays both your expiring and non-expirin
 
 ![The Queries dashboard with the Credentials tab highlighted.](../images/ui/overview/credentials.png)
 
+## Administration {#admin}
+
+Use the **[!UICONTROL Admin]** tab to monitor and manage concurrent Query Editor sessions across your organization. This capability is intended for administrators and is not required for writing or running queries.
+
+From the **[!UICONTROL Admin]** tab, administrators can view active sessions across sandboxes and end idle sessions to free shared capacity. This action does not interrupt queries that are actively running. See the [Manage Query Service sessions](ui-session-management.md) for detailed instructions and permission requirements.
+
 ## Next steps
 
 Now that you are familiar with the Query Service user interface on [!DNL Experience Platform], you can access Query Editor to start creating your own query projects to share with other users in your organization. For more information on authoring and running queries in Query Editor, see the [Query Editor user guide](./user-guide.md).

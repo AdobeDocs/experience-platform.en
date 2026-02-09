@@ -129,7 +129,9 @@ Queries can also be enrolled in the quarantine feature during the schedule creat
 
 ## Query run delay {#query-run-delay}
 
-Stay in control of your compute hours by setting alerts for query delays. You can monitor query performance and receive notifications if a query's status remains unchanged after a specific period. Use the '[!UICONTROL Query Run Delay]' alert to be notified if a query continues to process after a specific period of time without completing.
+Stay in control of your compute hours by setting alerts for query delays. You can monitor query performance and receive notifications if a query's status remains unchanged after a specific period. Use the '[!UICONTROL Query Run Delay]' alert to be notified if a query continues to process after a specific period of time without completing. 
+
+If compute hours are constrained due to idle sessions, administrators can free capacity using session management. See [Manage Query Service sessions](./ui-session-management.md) for instructions.
 
 When you [subscribe to alerts](#alert-subscription) for scheduled query runs, one of the available alerts is the [!UICONTROL Query Run Delay]. This alert requires you to set a threshold for the time spent executing, at which point you are notified of the delay in processing.
 

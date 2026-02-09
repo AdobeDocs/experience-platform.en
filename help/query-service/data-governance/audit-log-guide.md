@@ -7,7 +7,11 @@ exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
 
 The Adobe Experience Platform [!DNL Query Service] audit log integration provides records of query-related user actions. Audit logs are an essential tool for troubleshooting and adhering to corporate data stewardship policies and regulatory requirements. The capability allows you to return an action log for many event types and filter and export the records. The logs can be accessed either through the Experience Platform UI or the [Audit Query API](https://www.adobe.io/experience-platform-apis/references/audit-query/) and downloaded in either CSV or JSON file formats.
 
-To learn more about the audit logs user interface, refer to the [audit logs overview document](../../landing/governance-privacy-security/audit-logs/overview.md). To learn more about making calls to Experience Platform APIs, refer to the [audit logs API guide](../../landing/api-guide.md). 
+To learn more about the audit logs user interface, refer to the [audit logs overview document](../../landing/governance-privacy-security/audit-logs/overview.md). To learn more about making calls to Experience Platform APIs, refer to the [audit logs API guide](../../landing/api-guide.md).
+
+>[!NOTE]
+>
+>Session eviction actions are logged. For UI workflows, see [Manage Query Service sessions](../ui/ui-session-management.md).
 
 ## Prerequisites
 
