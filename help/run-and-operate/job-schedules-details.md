@@ -7,6 +7,15 @@ type: Tutorial
 
 # View job schedule details
 
+>[!IMPORTANT]
+>
+>[!UICONTROL Job schedules] are currently available only for the following Real-Time CDP jobs:
+>
+> * Batch data lake ingestion
+> * Batch profile ingestion
+> * Batch sgmentation
+> * Batch destination activation.
+
 When troubleshooting job failures or investigating performance issues, you need detailed information about specific datasets and their job runs. The [Job Schedules](job-schedules.md) interface allows you to drill down from the timeline view into individual datasets and jobs to understand execution history, timing, and status.
 
 Use this detailed view to:
@@ -21,7 +30,7 @@ Use this detailed view to:
 
 Before viewing job details, you should:
 
-* Have access to [!UICONTROL Job Schedules] with the **[!UICONTROL View Job Schedules]** [access control permission](/help/access-control/home.md#permissions).
+* Have access to [!UICONTROL Job Schedules] with the **[!UICONTROL View Job Schedules]** and **[!UICONTROL View Profile Management]** [access control permissions](/help/access-control/home.md#permissions).
 * Be familiar with the [Job Schedules interface](job-schedules.md#understanding-interface) and timeline view.
 * Understand the different [job types](job-schedules.md#job-schedules-details) (lake ingestion, profile ingestion, segmentation, activation).
 
@@ -36,6 +45,18 @@ Job schedules provide three levels of detail, allowing you to move from broad pa
 | **Job run details** | Specific execution information for an individual job run | Investigating why a particular job failed, checking exact timing, and verifying records processed |
 
 **Navigation flow**: Start with the timeline view to identify issues → Select a dataset to see its details → Select a specific job run to investigate details.
+
+### Understanding the timeline view {#timeline-visualization}
+
+The timeline view uses a horizontal and vertical layout to help you understand job schedules and critical processing times:
+
+* **Horizontal axis (time progression)**: Datasets and their job runs are displayed across the timeline from left to right, showing when jobs execute over the selected time period (today, yesterday, or last 7 days). Each colored bar represents a job run, positioned horizontally according to its start and end time.
+
+* **Vertical axis (scheduled start times)**: Critical scheduled start times are displayed as vertical lines that span across all datasets, making it easy to see the timing relationship between upstream jobs and downstream processing:
+  * **Blue vertical line**: Represents when segmentation is scheduled to begin
+  * **Black vertical line**: Represents when destination activation is scheduled to begin
+
+This layout allows you to quickly identify timing relationships between your data pipeline jobs and downstream processing. Ideally, upstream jobs (like data lake and profile ingestion) should complete to the left of these vertical markers, ensuring data is ready before segmentation and activation begin. Jobs that extend past these markers indicate potential timing issues where downstream processes may start before data is fully prepared.
 
 ### Which view should I use? {#which-view}
 

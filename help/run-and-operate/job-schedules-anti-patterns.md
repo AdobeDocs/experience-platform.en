@@ -7,6 +7,15 @@ type: Tutorial
 
 # Identify job schedule anti-patterns
 
+>[!IMPORTANT]
+>
+>[!UICONTROL Job schedules] are currently available only for the following Real-Time CDP jobs:
+>
+> * Batch data lake ingestion
+> * Batch profile ingestion
+> * Batch sgmentation
+> * Batch destination activation.
+
 The [Job Schedules](job-schedules.md) timeline view helps you identify common configuration issues that can negatively impact your data pipeline performance and reliability. These anti-patterns often lead to job failures, data inconsistencies, or degraded system performance. By spotting these patterns early, you can reconfigure your jobs to avoid problems before they affect your business operations.
 
 ## Prerequisites {#prerequisites}
@@ -87,7 +96,7 @@ In this pattern, you'll see one dataset row with many individual batch ingestion
 * **Increased failure surface**: More jobs mean more opportunities for failure. Each batch that fails requires investigation and potential reprocessing.
 * **Unnecessary system load**: Frequent small batches keep the system constantly busy with overhead tasks rather than actual data processing, reducing overall throughput.
 * **Delayed data availability**: Paradoxically, running many small batches can delay when data becomes available for downstream processes compared to consolidated batches.
-* **Difficult monitoring**: Tracking the success and performance of dozens of individual batch jobs per dataset becomes operationally complex and time-consuming.
+* **Difficult inspection**: Tracking the success and performance of dozens of individual batch jobs per dataset becomes operationally complex and time-consuming.
 * **Profile processing lag**: Each profile ingestion batch triggers profile processing. Frequent small batches can cause profile processing to run almost continuously, preventing efficient batch optimization.
 
 **How to fix it**:
@@ -102,7 +111,7 @@ In this pattern, you'll see one dataset row with many individual batch ingestion
 After identifying anti-patterns in your job schedules:
 
 * View [job details](job-schedules-details.md) to investigate specific datasets and job runs that may be causing issues.
-* Review the [Job Schedules overview](job-schedules.md) to understand the interface and monitoring capabilities.
+* Review the [Job Schedules overview](job-schedules.md) to understand the interface and inspection capabilities.
 * Learn about [batch ingestion](../ingestion/batch-ingestion/overview.md) to optimize your data loading schedules.
 * Understand [segmentation schedules](../segmentation/home.md) to ensure proper timing of audience evaluations.
 * Explore [monitoring destination dataflows](../dataflows/ui/monitor-destinations.md) for end-to-end pipeline visibility.

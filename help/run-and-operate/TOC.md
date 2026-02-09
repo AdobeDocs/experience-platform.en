@@ -11,6 +11,6 @@ role: Admin
 
 * [Overview](overview.md)
 * Job Schedules {#job-schedules}
-  * [Monitor job schedules](job-schedules.md)
+  * [Inspect job schedules](job-schedules.md)
   * [Identify anti-patterns](job-schedules-anti-patterns.md)
   * [View job details](job-schedules-details.md)

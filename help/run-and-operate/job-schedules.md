@@ -1,19 +1,28 @@
 ---
-description: Learn how to monitor and troubleshoot scheduled batch processing jobs using the Job Schedules tool in Adobe Experience Platform.
+description: Learn how to inspect and troubleshoot scheduled batch processing jobs using the Job Schedules tool in Adobe Experience Platform.
 solution: Experience Platform
-title: Monitor Job Schedules
+title: Inspect Job Schedules
 type: Tutorial
 ---
 
-# Monitor job schedules
+# Inspect job schedules
 
-[!UICONTROL Job Schedules] provides a unified view of all scheduled batch processing jobs across your data pipeline—from ingestion through activation. Monitor execution status, identify scheduling conflicts, and diagnose configuration issues before they impact your business operations.
+>[!IMPORTANT]
+>
+>[!UICONTROL Job schedules] are currently available only for the following Real-Time CDP jobs:
+>
+> * Batch data lake ingestion
+> * Batch profile ingestion
+> * Batch sgmentation
+> * Batch destination activation.
+
+[!UICONTROL Job Schedules] provides a unified view of all scheduled batch processing jobs across your data pipeline—from ingestion through destination activation. Inspect execution status, identify scheduling conflicts, and diagnose configuration issues before they impact your business operations.
 
 Use Job Schedules to investigate failures, optimize job timing, and understand dependencies between data lake ingestion, profile processing, segmentation, and destination activation. For guidance on resolving common configuration problems, see the documentation on [identifying job schedule anti-patterns](job-schedules-anti-patterns.md).
 
 ## Prerequisites {#prerequisites}
 
-To access [!UICONTROL Job Schedules], you need the **[!UICONTROL View Job Schedules]** [access control permission](/help/access-control/home.md#permissions).
+To access [!UICONTROL Job Schedules], you need the **[!UICONTROL View Job Schedules]** and **[!UICONTROL View Profile Management]** [access control permissions](/help/access-control/home.md#permissions).
 
 Contact your system administrator to ensure you have the appropriate permissions.
 
