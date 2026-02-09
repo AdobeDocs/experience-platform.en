@@ -1,7 +1,7 @@
 ---
 title: Architecture Upgrades to Real-Time CDP B2B Edition
 description: Read this document to learn about the comprehensive architecture upgrades to Real-Time CDP B2B Edition.
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
 ---
 # Architecture upgrades to Real-Time CDP B2B Edition
