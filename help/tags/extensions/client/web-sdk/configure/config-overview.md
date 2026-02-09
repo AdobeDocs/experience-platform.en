@@ -1,6 +1,7 @@
 ---
 title: Configuration settings overview
 description: Learn about available options when configuring the Web SDK tag extension.
+exl-id: 03f7bc0a-05c9-48ae-ae57-478db6d18f52
 ---
 # Configuration settings overview
 

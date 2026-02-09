@@ -1,6 +1,7 @@
 ---
 title: Consent Policy Rule Building Reference
 description: Learn how to use XDM data types, supported operators, and advanced logic for creating granular consent policy rules in the Adobe Experience Platform UI.
+exl-id: 541a0283-68cc-4510-a1a3-a862667b375a
 ---
 # Consent policy rule building reference
 

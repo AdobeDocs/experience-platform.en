@@ -1,6 +1,7 @@
 ---
 title: SDK instance configuration settings
 description: Configure general settings for the Web SDK instance.
+exl-id: cc22b8b3-88c6-4030-91b4-60e14a3b0f42
 ---
 # SDK instance configuration settings
 

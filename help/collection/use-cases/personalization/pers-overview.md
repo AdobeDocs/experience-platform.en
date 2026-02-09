@@ -1,6 +1,7 @@
 ---
 title: Personalization use cases overview
 description: Learn how you can implement data collection for personalization use cases.
+exl-id: 6beccbfd-fddb-4e19-8a56-caba276e1643
 ---
 # Personalization use cases overview
 
