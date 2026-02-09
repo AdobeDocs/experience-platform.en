@@ -8,7 +8,7 @@ last-substantial-update: 2025-05-17
 
 >[!WARNING]
 >
->The [!DNL Oracle Salesforce Marketing Cloud] source is now deprecated and is no longer be available. Use the new [[!DNL Salesforce Marketing Cloud] (V2) source](sfmc.md) as a new connector for your [!DNL Salesforce Marketing Cloud] data.
+>The [!DNL Oracle Salesforce Marketing Cloud] source is now deprecated and is no longer available. Use the new [[!DNL Salesforce Marketing Cloud] (V2) source](sfmc.md) as a new connector for your [!DNL Salesforce Marketing Cloud] data.
 
 [!DNL Salesforce Marketing Cloud] empowers you to manage and automate customer engagement across email, mobile, social media, and advertising—all from one platform. With tools like Email Studio, Journey Builder, and Audience Builder, you can create personalized campaigns and customer journeys tailored to your audience.
 

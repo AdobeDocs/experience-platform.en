@@ -1,6 +1,7 @@
 ---
 title: Reset merge ID
 description: Deprecated action that lets you separate events called on the same page.
+exl-id: a11a9b7c-2751-46f9-86cf-2869b56ff481
 ---
 # Reset merge ID
 

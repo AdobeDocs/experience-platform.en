@@ -1,6 +1,7 @@
 ---
 title: setVar()
 description: Sets a value that you can retrieve later using getVar().
+exl-id: b73e1f1e-4675-4086-ac9c-96be549a8588
 ---
 # `setVar()`
 

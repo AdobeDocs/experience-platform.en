@@ -1,8 +1,8 @@
 ---
 title: Adobe Experience Platform Release Notes January 2026
 description: The January 2026 release notes for Adobe Experience Platform.
+exl-id: becc62ba-b21b-4bbb-9f20-8281a3a6e009
 ---
-
 # Adobe Experience Platform release notes
 
 >[!TIP]
@@ -11,8 +11,8 @@ description: The January 2026 release notes for Adobe Experience Platform.
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
->- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
+>- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Release date: January 27, 2026**
@@ -53,10 +53,11 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 | Regional endpoints support for Braze connections | All [region-specific endpoints](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) supported by [!DNL Braze] are now available for selection during the destination configuration flow. Ask your [!DNL Braze] representative which endpoint instance you should use. |
 | Weekly and monthly scheduling support for [Liveramp Onboarding](../../destinations/catalog/advertising/liveramp-onboarding.md#scheduling) | You can now configure weekly and monthly export schedules for the Liveramp Onboarding destination. <br> This release is being rolled out gradually and will be complete by January 30th. |
 | Enhanced activation experience for [The Trade Desk](../../destinations/catalog/advertising/tradedesk.md) and [Microsoft Bing](../../destinations/catalog/advertising/bing.md) destinations | The Trade Desk and Microsoft Bing destinations now include predefined mandatory mappings for an optimized activation experience.  <br> This release is being rolled out gradually and will be complete by January 30th. ![Image showing predefined mappings for The Trade Desk](assets/january/mandatory-mappings-ttd.png) {width="150" align="center" zoomable="yes"} <br> ![Image showing predefined mappings for Microsoft Bing](assets/january/mandatory-mappings-bing.png) {width="150" align="center" zoomable="yes"} |
-|AES256 encryption support for [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destinations | You can now configure AES256 encryption for your Amazon S3 exports. Two options are available: <ul><li>**[!UICONTROL Default]**: Data will be encrypted at rest with the default encryption algorithm set on your bucket.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform adds the `s3:x-amz-server-side-encryption": "AES256` header in the export and data will be encrypted at rest with the AES256 algorithm when it lands in S3. **This option takes precedence over any default encryption algorithm configured on your S3 bucket**.</li></ul> This release is being rolled out gradually and will be complete by January 30th.|
 | Phone number activation support for [The Trade Desk - CRM](../../destinations/catalog/advertising/tradedesk-emails.md#phone-hashing) connection | The Trade Desk - CRM destination now supports phone number activation in addition to email addresses. You can activate both unhashed phone numbers in E.164 format and hashed phone numbers (SHA256_E.164 format) to your Trade Desk account for audience targeting and suppression based on CRM data. Phone numbers must be normalized to E.164 format before activation.|
 | [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md) destination updates | The Snowflake Batch destination now includes region selection capability during destination configuration. You can now select the specific Snowflake region where your instance is provisioned, ensuring optimal data transfer and compliance with regional requirements. Additionally, the default merge policy restriction has been removed, allowing you to export audiences mapped to any merge policy. <br> The [!DNL Snowflake] batch destination is currently only available to Real-Time CDP customers provisioned in the Experience Platform VA7 region.|
 
+
+<!-- |AES256 encryption support for [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destinations | You can now configure AES256 encryption for your Amazon S3 exports. Two options are available: <ul><li>**[!UICONTROL Default]**: Data will be encrypted at rest with the default encryption algorithm set on your bucket.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform adds the `s3:x-amz-server-side-encryption": "AES256` header in the export and data will be encrypted at rest with the AES256 algorithm when it lands in S3. **This option takes precedence over any default encryption algorithm configured on your S3 bucket**.</li></ul> This release is being rolled out gradually and will be complete by January 30th.| -->
 
 **New or updated functionality**
 
@@ -96,6 +97,7 @@ For more information, read the [[!DNL Real-Time Customer Profile] overview](../.
 | Feature | Description |
 | ------- | ----------- |
 | External audience data expiration refresh | External audiences (such as CSV uploads) now support a force refresh capability for data expiration settings. This feature lets users manually refresh the data expiration for external audiences, providing greater control over audience lifecycle management. This is particularly useful for audiences that need to persist beyond their initial data expiration period or require reactivation without re-uploading the data. For more information about this feature, read the [Audience Portal overview](../../segmentation/ui/audience-portal.md#audience-summary). |
+| Audience validation | Experience Platform now provides built-in validations to ensure your audiences are accurate, stable, and scalable. These checks are automatically run in real-time while you're creating your audience definitions. For more information, read the [audience validation overview](/help/segmentation/validation.md). |
 
 For more information, read the [[!DNL Segmentation Service] overview](../../segmentation/home.md).
 
@@ -111,4 +113,3 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | [[!DNL Salesforce Marketing Cloud]](/help/sources/connectors/marketing-automation/sfmc.md) V2 source | A new [!DNL Salesforce Marketing Cloud] source connector is now available, replacing the [deprecated connector](/help/sources/connectors/marketing-automation/salesforce-marketing-cloud.md). This updated connector provides improved performance and additional capabilities for ingesting data from [!DNL Salesforce Marketing Cloud] into Experience Platform. Customers using the existing connector should transition to the new implementation. The new connector includes comprehensive setup instructions for connecting to [!DNL Salesforce Marketing Cloud] and ingesting marketing automation data. |
 
 For more information, read the [sources overview](../../sources/home.md).
-
