@@ -2,7 +2,6 @@
 title: Manage Query Service sessions in Adobe Experience Platform
 description: Learn how administrators can view, monitor, and end active Query Service sessions to free idle capacity and maintain reliable Data Distiller workflows.
 ---
-
 # Manage Query Service sessions
 
 Use this guide to manage active Query Service sessions from the Adobe Experience Platform user interface. Session management helps administrators identify idle sessions, free shared capacity, and maintain reliable Data Distiller usage across sandboxes without disrupting active queries.
@@ -16,10 +15,11 @@ To view and end sessions, you must:
 - Belong to an IMS organization with Data Distiller access
 - Have the **Manage Query Session** permission assigned
 
-Users without the required permission can access Query Service but cannot view or manage active sessions.
+Users without the required permissions can access Query Service but cannot view or manage active sessions.
 
-[!IMPORTANT]
-This feature is intended for administrators. End users running queries cannot manage sessions.
+>[!IMPORTANT]
+>
+>This feature is intended for administrators. End users running queries cannot manage sessions.
 
 ## View active sessions {#view-active-sessions}
 
@@ -58,7 +58,7 @@ When a session becomes active, the **End session** control is unavailable until 
 
 Idle time shows how long a session has been open without user interaction.
 
-Remaining session time indicates how long the session can stay open before it is automatically closed by the system. Sessions automatically expire after the maximum allowed duration to free capacity for other users.
+Remaining session time indicates how long the session can stay open before it is automatically closed by the system. Sessions automatically expire after the maximum allowed duration (two hours of inactivity) to free capacity for other users.
 
 ## End idle sessions {#end-idle-sessions}
 
@@ -76,8 +76,9 @@ After the session ends:
 - Capacity becomes available immediately
 - The action is recorded for auditing
 
-[!NOTE]
-You cannot end sessions that are actively running queries. This safeguard prevents interruption of in-progress workloads and avoids duplicate compute usage.
+>[!NOTE]
+>
+>You cannot end sessions that are actively running queries. This safeguard prevents interruption of in-progress workloads and avoids duplicate compute usage.
 
 ## Session behavior after termination {#session-behavior-after-termination}
 
@@ -106,11 +107,11 @@ Audit logs record:
 
 Use audit logs to review session termination history and investigate unexpected disconnections.
 
-For more information about viewing audit logs, see the audit log documentation.
+For more information about viewing audit logs, see the [audit log documentation](PLACEHOLDER.md).
 
 ## Next steps {#next-steps}
 
-- Review Query Service capacity and usage trends in the Data Distiller license usage documentation
-- Learn how users create and run queries in the Query Editor user guide
-- Monitor scheduled workloads using the scheduled queries monitoring documentation
+- [Review Query Service capacity and usage trends in the Data Distiller license usage documentation](PLACEHOLDER.md)
+- [Learn how users create and run queries in the Query Editor user guide](PLACEHOLDER.md)
+- [Monitor scheduled workloads using the scheduled queries monitoring documentation](PLACEHOLDER.md)
 
