@@ -1,6 +1,7 @@
 ---
 title: Evaluate rulesets
 description: Manually trigger a ruleset evaluation.
+exl-id: 63751b47-b635-446f-af10-8144c9d3aa58
 ---
 # Evaluate rulesets
 
