@@ -1,6 +1,8 @@
 ---
 title: Manage Query Service sessions in Adobe Experience Platform
 description: Learn how administrators can view, monitor, and end active Query Service sessions to free idle capacity and maintain reliable Data Distiller workflows.
+keywords: Experience Platform;Query Service;sessions;session management;Data Distiller;admin
+solution: Experience Platform
 ---
 # Manage Query Service sessions
 
@@ -24,7 +26,7 @@ Users without the required permissions can access Query Service but cannot view 
 
 Administrators can view all active Query Service sessions across sandboxes in the IMS organization.
 
-Navigate to the Query Service workspace and select the **Admin** tab to open session management.
+Navigate to the Query Service workspace and select the **[!UICONTROL Admin]** tab to open session management.
 
 ![Admin tab showing Session Management table in Query Service workspace](../images/query-service/session-management-admin-tab.png)
 
@@ -38,9 +40,9 @@ The session table provides information to help you decide whether a session can 
 
 ### Session status
 
-**Inactive** indicates the user is not actively running a query; these sessions can be ended. **Active** indicates a query is currently running; ending the session is disabled while the query is in progress.
+**[!UICONTROL Inactive]** indicates the user is not actively running a query; these sessions can be ended. **[!UICONTROL Active]** indicates a query is currently running; ending the session is disabled while the query is in progress.
 
-When a session becomes active, the **End session** control is unavailable until query execution completes.
+When a session becomes active, the **[!UICONTROL End session]** control is unavailable until query execution completes.
 
 ### Idle time and remaining session time
 
@@ -52,7 +54,7 @@ Remaining session time indicates how long the session can stay open before it is
 
 You can end idle sessions to free capacity for other users.
 
-From the session management table, select **End session** for an inactive session.
+From the session management table, select **[!UICONTROL End session]** for an inactive session.
 
 ![End session button selected for an inactive session in the Session Management table](../images/query-service/end-session-confirmation.png)
 
@@ -64,7 +66,7 @@ A confirmation dialog appears to prevent accidental termination. Confirm the act
 
 ## Session behavior after termination {#session-behavior-after-termination}
 
-When a session is ended by an administrator, the affected user is not disconnected immediately. If the user attempts to run a query after termination, the system detects the ended session, re-establishes the connection automatically, and keeps query editor content intact.
+When an administrator ends a session, the affected user remains connected until they run a query. If the user attempts to run a query after termination, the system detects the ended session, re-establishes the connection automatically, and keeps Query Editor content intact.
 
 ![Query Editor showing reconnection message after session termination](../images/query-service/query-editor-reconnect-message.png)
 
@@ -72,7 +74,7 @@ This behavior ensures users do not lose work written in the editor and can conti
 
 ## Audit logs for session management {#audit-logs}
 
-Session management actions are logged to provide visibility and accountability. Audit logs record the session ID, the user whose session was ended, the administrator who performed the action, and the time of the action.
+The system logs session management actions to provide visibility and accountability. Audit logs record the session ID, the user whose session was ended, the administrator who performed the action, and the time of the action.
 
 Use audit logs to review session termination history and investigate unexpected disconnections.
 
