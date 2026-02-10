@@ -62,7 +62,7 @@ A confirmation dialog appears to prevent accidental termination. Confirm the act
 
 >[!NOTE]
 >
->You cannot end sessions that are actively running queries. This safeguard prevents interruption of in-progress workloads and avoids duplicate compute usage.
+>Sessions with status **[!UICONTROL Active]** cannot be ended. This safeguard prevents interruption of in-progress workloads and avoids duplicate compute usage.
 
 ## Session behavior after termination {#session-behavior-after-termination}
 
