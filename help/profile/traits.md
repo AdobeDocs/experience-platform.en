@@ -19,7 +19,7 @@ Currently, you can store the entire "raw event" in Profile through Experience Ev
 
 With traits, you can add "precomputed" data that is based on rules you defined. Traits are based on the conditional logic you specify, and are more storage-efficient than the raw Experience Event.
 
-Traits provide 
+Traits provide a more lightweight and efficient approach to storing profile activity. As a result, this can help maintain compliance with your profile license entitlements while preserving rich profile data activation. 
 
 ## Prerequisites {#prerequisites}
 
