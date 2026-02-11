@@ -114,3 +114,4 @@ Automatically collect visitor information, which populates specific XDM fields f
 * **[!UICONTROL Environment]**: Collects information about the user's browser.
 * **[!UICONTROL Place context]**: Collects information about the user's location.
 * **[!UICONTROL High entropy user-agent hints]**: Collects more detailed information about the user's device.
+* **[!UICONTROL Send referrer to Adobe Analytics only once per page view]**: Prevent duplicate referrer data from being sent to Adobe Analytics.
