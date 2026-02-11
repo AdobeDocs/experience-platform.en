@@ -1,6 +1,7 @@
 ---
 title: conversation
 description: Configure Brand Concierge chat settings.
+exl-id: 0f64c7f1-2c28-4c67-af05-dc9ee688fdc0
 ---
 # `conversation`
 

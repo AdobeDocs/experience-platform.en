@@ -1,6 +1,7 @@
 ---
 title: Base code
 description: Queue commands (bootstrap) while the data collection library loads asynchronously.
+exl-id: 10265747-f6d2-4ae7-bf22-9904c5a96f8e
 ---
 # Base code
 

@@ -1,6 +1,7 @@
 ---
 title: Brand Concierge configuration settings
 description: Configure session persistence and stream timeouts for Brand Concierge chat.
+exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
 ---
 # Brand Concierge configuration settings
 
