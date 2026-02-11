@@ -16,11 +16,11 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 - Added the availability of `"oneTimeAnalyticsReferrer"` to the [`context`](commands/configure/context.md) array of strings.
 - Added the Brand Concierge component.
+- Added `meta.queueTimeMillis` to network request to record time between event creation and time sent.
 - Ability to persist the identity map so it can be populated with subsequent calls.
 
 **Fixes and improvements**
 
-- Added `meta.queueTimeMillis` to network request to record time between event creation and time sent.
 - The `aria-label` and `name` attributes are now considered in [automatic link collection](commands/configure/clickcollectionenabled.md).
 - Fixed a possible race condition with identity map integrations.
 - Fixed an issue where timestamp was not included in `streamingMedia`.

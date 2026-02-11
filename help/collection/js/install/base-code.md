@@ -80,13 +80,13 @@ You can rename the global function that you call by modifying the last line of t
 To:
 
 ```js
-(window,["example"]);
+(window,["ingot"]);
 ```
 
-This change allows you to call commands using `example` instead of `alloy`:
+This change allows you to call commands using `ingot` instead of `alloy`:
 
 ```js
-example("configure", {
+ingot("configure", {
   datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
