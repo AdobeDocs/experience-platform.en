@@ -101,7 +101,7 @@ XDM is an open-source specification that provides common structures and definiti
 | ------- | ----------- |
 | Schema Inventory Organization and Search | The schema browse page now includes enhanced search and filtering, inline actions, and support for user-defined tags and folders. These updates make it easier to find, organize, and manage schemas across sandboxes while reducing manual navigation and maintenance effort. |
 
-For more information, read the [[!DNL Schemas] overview] (../xdm/home.md).
+For more information, read the [[!DNL XDM] overview](../xdm/home.md).
 
 ## Query Service {#query-service}
 
