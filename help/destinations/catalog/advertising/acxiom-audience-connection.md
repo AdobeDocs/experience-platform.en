@@ -34,12 +34,14 @@ For example, the Marketing Operations department at a global financial services 
 [!DNL Acxiom’s Audience Connection] destination currently supports audience activation to the following platforms.<br> 
 	
 - [!DNL Altice]
+- [[!DNL Amazon]](#amazon)
 - [!DNL Ampersand]
 - [!DNL Comcast]
 - [!DNL Cox]
 - [[!DNL LG Ads]](#lg-ads)
 - [!DNL Spectrum]
 - [!DNL Viant]
+- [!DNL Vizio]
 
 
 ## Connect to the destination {#connect}
@@ -48,6 +50,13 @@ Authentication to [!DNL Acxiom's Audience Distribution] destination is automatic
 
 ## Destination-specific settings {#destination-settings}
 Some [!DNL Acxiom Audience Connection] destinations require additional information. The sections below provide detailed guidance on how to configure these options.
+
+### [!DNL Amazon] {#amazon}
+To configure details for the destination, fill in the fields below.
+- **Price**: Enter your price up to 3 digits before and exactly 2 digits after the decimal point.
+- **Publisher Account ID**: Enter the publisher account ID associated with this destination.
+	
+![Amazon destination details](../../assets/catalog/advertising/acxiom-audience-distribution/amazon_destination_details.png)
 
 ### [!DNL LG Ads] {#lg-ads}
 To configure details for the destination, fill in the fields below.
@@ -127,5 +136,6 @@ By following this tutorial, you have successfully activated an audience to the s
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
+
 
 
