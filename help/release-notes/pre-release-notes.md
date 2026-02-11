@@ -83,7 +83,6 @@ For more information, read the [Data Collection documentation](https://experienc
 
 | Destination | Description |
 | --- | --- |
-| [!DNL ZoomInfo] Account Destination | B2B CDP users can now activate account-level data to [!DNL ZoomInfo] through the new [!DNL ZoomInfo] Account destination connector. Set up the connector to begin sending your account audiences to [!DNL ZoomInfo]. |
 | [!DNL Snowflake] Batch generally available | The [!DNL Snowflake] Batch destination has moved to general availability. You can now view the merge policy ID column in your exported data alongside existing columns such as timestamp, mapping attributes, and audience membership. |
 | AES256 encryption support for [Amazon S3](../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destinations | You can now configure AES256 encryption for your Amazon S3 exports. Choose from two options: <ul><li>**[!UICONTROL Default]**: Experience Platform encrypts data at rest with the default encryption algorithm set on your bucket.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform adds the `s3:x-amz-server-side-encryption": "AES256` header to the export and encrypts data at rest with the AES256 algorithm when it lands in S3. **This option takes precedence over any default encryption algorithm you configure on your S3 bucket**.</li></ul> |
 
