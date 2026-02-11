@@ -1,7 +1,7 @@
 ---
 title: Experience Platform Pre-Release Notes
 description: A preview of the latest release notes for Adobe Experience Platform.
-exl-id: a1b52e9f-1c4d-4a2b-9d3e-5f6a7b8c9d0e
+exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 ---
 # Adobe Experience Platform pre-release notes
 
