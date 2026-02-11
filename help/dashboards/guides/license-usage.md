@@ -152,7 +152,7 @@ To navigate to the license usage dashboard within the Experience Platform UI, se
 
 >[!NOTE]
 >
->The license usage dashboard is not enabled by default. You must be granted the **"View License Usage Dashboard"** permission to access it.
+>The license usage dashboard is not enabled by default. You must be granted the **"[!UICONTROL View License Usage Dashboard]"** permission to access it.
 >
 >If your organization licenses Adobe Experience Platform, grant this permission in the applicable product profile and sandbox.
 >
