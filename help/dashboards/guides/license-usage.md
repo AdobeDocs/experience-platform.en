@@ -140,7 +140,7 @@ The [!UICONTROL License usage] dashboard displays a list of all the Experience P
 
 The data in this dashboard is displayed exactly as it appeared at the specific point in time when the snapshot was taken. It is not an approximation or sample, but the dashboard is not updated in real time.
 
-The license usage dashboard is available to eligible Experience Cloud organizations, including those that do not license Adobe Experience Platform. For organizations without an Adobe Experience Platform SKU, the dashboard displays AI credit usage metrics only.
+For organizations without an Adobe Experience Platform SKU, the dashboard displays AI credit usage metrics only.
 
 >[!NOTE]
 >
@@ -154,9 +154,9 @@ To navigate to the license usage dashboard within the Experience Platform UI, se
 >
 >The license usage dashboard is not enabled by default. You must be granted the **"View License Usage Dashboard"** permission to access it.
 >
->For organizations with Adobe Experience Platform, grant this permission in the applicable product profile and sandbox.
+>If your organization licenses Adobe Experience Platform, grant this permission in the applicable product profile and sandbox.
 >
->For organizations without an Adobe Experience Platform SKU (for example, AEM-only or Workflow-only organizations), this permission is available in the Adobe Admin Console under the Adobe Experience Platform product card. An administrator must add the permission to a product profile before users can view the dashboard.
+>For organizations without an Adobe Experience Platform SKU (for example, AEM-only or Workflow-only organizations), this permission is available in the Adobe Admin Console under the Adobe Experience Platform product card (if provisioned for your organization). An administrator must add the permission to a product profile before users can view the dashboard.
 
 ## [!UICONTROL Metrics] tab {#metrics-tab}
 
@@ -289,7 +289,7 @@ The predicted usage feature supports the following metrics:
 >
 >Starting August 20th, customers with entitlements for '[!UICONTROL Average Profile Richness]' and '[!UICONTROL Total Storage]' instead saw '[!UICONTROL Total Data Volume]' in the License Usage Dashboard. There was no change to customer entitlements, only a simplification of tracking metrics. [!UICONTROL Total Data Volume] represents the data available in Real-Time Customer Profile for engagement and personalization workflows. This simplified metric improved the management and measurement of Real-Time Customer Profile use. Customers were are encouraged to contact their Adobe representative for further clarification on this change.
 
-The metrics that appear in your dashboard depend on the products and entitlements associated with your organization. If your organization participates in the [Adobe Experience Platform Agents usage-bound trial](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) or licenses Adobe Experience Platform Agents, the dashboard includes the [!UICONTROL AI credits] metric. Organizations without an Adobe Experience Platform SKU see AI credit usage as their primary metric.
+The metrics that appear in your dashboard depend on the products and entitlements associated with your organization. If your organization participates in the [Adobe Experience Platform Agents usage-bound trial](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) or licenses Adobe Experience Platform Agents, the dashboard includes the [!UICONTROL AI credits] metric. If your organization does not license Adobe Experience Platform, AI credit usage appears as the primary metric.
 
 | Metric | Description |
 |---|---|
