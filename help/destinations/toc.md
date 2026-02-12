@@ -72,7 +72,7 @@ role: Admin,User
         * [(Beta) Acxiom RealID Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
         * [Advertising destinations overview](./catalog/advertising/overview.md)
         * [Adobe Advertising Cloud connection](./catalog/advertising/adobe-advertising-cloud-connection.md)
-        * [Legacy Adobe Advertising Cloud connection](adobe-advertising-cloud-connection-legacy.md)
+        * [Legacy Adobe Advertising Cloud connection](./catalog/advertising/adobe-advertising-cloud-connection-legacy.md)
         * [Adobe Advertising Cloud extension](./catalog/advertising/adobe-advertising-cloud.md)
         * [Adform connection](./catalog/advertising/adform.md)
         * [Amazon Ads connection](./catalog/advertising/amazon-ads.md)
