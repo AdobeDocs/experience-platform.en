@@ -73,7 +73,6 @@ Some [!DNL Acxiom Real ID Audience Connection] destinations require additional i
 
 ### [!DNL Amazon] {#amazon}
 To configure details for the destination, fill in the fields below.
-- **Price**: Enter your price up to 3 digits before and exactly 2 digits after the decimal point.
 - **Publisher Account ID**: Enter the publisher account ID associated with this destination.
 	
 ![Amazon destination details](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_amazon_destination_details.png)
@@ -145,6 +144,7 @@ You will need to provide the following information to your [!DNL Adobe] represen
 ## Next steps {#next-steps}
 
 By following this tutorial, you have successfully activated an audience to the selected destination platform. Next, contact your destination platform representative to begin setting up your campaign.
+
 
 
 
