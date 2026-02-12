@@ -1,0 +1,38 @@
+name: Mirror GitHub issues to Jira PLAT
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  create-jira-issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install axios
+
+      - name: Create Jira issue in PLAT
+        env:
+          JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
+          JIRA_PAT: ${{ secrets.JIRA_PAT }}
+          JIRA_PROJECT_KEY: ${{ secrets.JIRA_PROJECT_KEY }}
+          JIRA_DEFAULT_ASSIGNEE: ${{ secrets.JIRA_DEFAULT_ASSIGNEE }}
+
+          GITHUB_REPO: ${{ github.repository }}
+          GITHUB_ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GITHUB_ISSUE_TITLE: ${{ github.event.issue.title }}
+          GITHUB_ISSUE_BODY: ${{ github.event.issue.body }}
+          GITHUB_ISSUE_URL: ${{ github.event.issue.html_url }}
+          GITHUB_ISSUE_USER: ${{ github.event.issue.user.login }}
+          GITHUB_ISSUE_LABELS: ${{ toJson(github.event.issue.labels) }}
+        run: |
+          node .github/scripts/create-jira-issue.js
