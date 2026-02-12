@@ -453,7 +453,7 @@ The following sections describe the schema management actions available from the
 |--------|-------------|
 | [!UICONTROL Edit schema properties] | Modifies basic schema information including display name, description, and tags without opening the Schema Editor. For detailed instructions, see [Edit schema properties](#edit-schema-properties). |
 | [!UICONTROL Delete schema] | Removes the schema from your organization. Available only for schemas not enabled for Real-Time Customer Profile and without associated datasets. For detailed instructions, see [Delete schema](#delete-schema). |
-| [!UICONTROL Apply data governance labels] | Assigns data usage labels to categorize schemas according to privacy policies and compliance requirements. Labels applied at the schema level propagate to all datasets created from that schema. For detailed instructions, see [Apply data governance labels](#apply-data-governance-labels). |
+| [!UICONTROL Apply labels] (data governance) | Assigns data usage labels to categorize schemas according to privacy policies and compliance requirements. Labels applied at the schema level propagate to all datasets created from that schema. For detailed instructions, see [Apply data governance labels](#apply-data-governance-labels). |
 | [!UICONTROL Create dataset] | Creates a new dataset from the selected schema. For detailed instructions, see [Create dataset](#create-dataset). |
 | [!UICONTROL Manage tags] | Adds or removes user-defined tags for schema organization. For detailed instructions, see [Manage tags](#manage-tags). |
 | [!UICONTROL Move to folder] | Moves schemas into folder hierarchies. For detailed instructions, see [Move to folder](#move-to-folder). |
