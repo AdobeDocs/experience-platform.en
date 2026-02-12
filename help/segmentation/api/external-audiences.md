@@ -108,7 +108,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `originName` | String | **Required** The origin of the audience. This states where the audience comes from. For external audiences, you should use `CUSTOM_UPLOAD`. |
 | `namespace` | String | The namespace for the audience. By default, this value is set to `CustomerAudienceUpload`. |
 | `labels` | Array of strings | The access control labels that apply to the external audience. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). |
-| `tags` | Array of strings | The tags you want to apply to the external audience. More information about tags can be found in the [managing tags guide](/help/administrative-tags/ui/managing-tags.md). |
+| `tags` | Array of strings | The tags you want to apply to the external audience. When you add the array of tags, you **must** use the `tagId`. More information about tags can be found in the [managing tags guide](/help/administrative-tags/ui/managing-tags.md). |
 
 +++
 
