@@ -1,6 +1,8 @@
 ---
 title: Run and Operate overview
 description: Inspect, troubleshoot, and optimize your Adobe Experience Platform implementations with the Run and Operate tools. Gain visibility into scheduled batch activations, identify configuration issues, and improve system reliability.
+hide: yes
+hidefromtoc: yes 
 ---
 
 # Run and Operate overview
@@ -23,12 +25,12 @@ With [!UICONTROL Run and Operate] tools, you can:
 
 * **Data and IT teams**: System administrators and data engineers who maintain reliable data pipelines and troubleshoot technical issues.
 * **Marketing operations**: Marketing technologists who inspect data delivery to marketing platforms and resolve activation issues.
-* **Business stakeholders**: Leaders who need visibility into data operation health and overall system performance.
+* **Implementers**: Practitioners who validate implementation efficiency, reliability, and troubleshoot technical issues.
 
 ## Prerequisites {#prerequisites}
 
 To access Run and Operate tools, you need the **[!UICONTROL View Job Schedules]** and **[!UICONTROL View Profile Management]** [access control permissions](/help/access-control/home.md#permissions).
-
+The [!UICONTROL Job Schedules] page provides an overview of all your scheduled batch processing jobs.
 Contact your system administrator to ensure you have the appropriate permissions.
 
 ## Getting started {#getting-started}
@@ -42,7 +44,7 @@ To access the Run and Operate tools from the Experience Platform UI:
     >
     >Currently, the only available capability is [Job Schedules](job-schedules.md).
 
-![Experience Platform UI showing the Run and operate left nav.](assets/overview/run-and-operate-left-nav.png)
+![Experience Platform UI showing the Run and operate left nav.](assets/overview/run-and-operate.png)
 
 ## Available tools {#available-tools}
 
@@ -59,9 +61,9 @@ The following tools help you inspect and optimize your data operations.
 > * Batch sgmentation
 > * Batch destination activation.
 
-With [Job Schedules](job-schedules.md), you can inspect all scheduled batch operations across your organization, including data lake ingestion, profile ingestion, segmentation, and destination activation. View job execution status, performance metrics, and execution history to identify patterns and diagnose configuration issues that affect reliability.
+With [Job Schedules](job-schedules.md), you can inspect all scheduled batch operations across your organization, per sandbox, including data lake ingestion, profile ingestion, segmentation, and destination activation. View job execution status, performance metrics, and execution history to identify patterns and diagnose configuration issues that affect reliability.
 
-![Experience Platform UI showing the Job Schedules screen.](assets/overview/job-schedules.png)
+![Experience Platform UI showing the Job Schedules screen.](assets/overview/job-schedules-interface.png)
 
 Job Schedules provides three levels of investigation:
 

@@ -3,13 +3,15 @@ description: Learn how to inspect and troubleshoot scheduled batch processing jo
 solution: Experience Platform
 title: Inspect Job Schedules
 type: Tutorial
+hide: yes
+hidefromtoc: yes 
 ---
 
 # Inspect job schedules
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->[!UICONTROL Job schedules] are currently available only for the following Real-Time CDP jobs:
+>[!UICONTROL Job schedules] are currently available as a limited release and only for the following Real-Time CDP jobs:
 >
 > * Batch data lake ingestion
 > * Batch profile ingestion
@@ -44,11 +46,9 @@ To access [!UICONTROL Job Schedules]:
 1. In the Experience Platform UI, select **[!UICONTROL Run and Operate]** from the left navigation.
 2. Select **[!UICONTROL Job Schedules]**.
 
-![Run and Operate left navigation](assets/job-schedules/run-and-operate-left-nav.png)
-
 The [!UICONTROL Job Schedules] page provides an overview of all your scheduled batch processing jobs.
 
-![Job Schedules interface showing summary cards and timeline view](assets/job-schedules/job-schedules-interface.png)
+![Run and Operate left navigation](assets/job-schedules/run-and-operate-left-nav.png)
 
 ### Summary cards {#summary-cards}
 
@@ -61,7 +61,7 @@ At the top of the page, you can see summary cards that provide quick insights in
 * **Next segmentation**: When the next scheduled segmentation job will run.
 * **Next destination activation**: When the next scheduled destination activation job will run.
 
-These cards help you quickly understand the activity and upcoming schedules across your data pipeline.
+These cards help you understand the activity and upcoming schedules across your data pipeline. The values for **Lake ingestion runs** and **Profile ingestion runs** change based on the selected time interval (Today, Yesterday, or Last 7 days); the next-run cards (**Next segmentation** and **Next destination activation**) are not affected by the time selector.
 
 ### Time period selector {#time-period}
 
@@ -86,7 +86,7 @@ The main view shows you when your batch jobs are scheduled to run throughout the
   * **Segmentation** (light blue): Audience evaluation jobs
   * **Profile export** (blue): Export of profile data
   * **Activation** (dark gray): Destination activation jobs
-  * **In progress** (striped): Jobs currently running
+  * **In progress** (striped): Jobs currently running or queued
 
 This timeline view helps you identify scheduling conflicts, understand dependencies between jobs, and optimize your batch processing schedules.
 

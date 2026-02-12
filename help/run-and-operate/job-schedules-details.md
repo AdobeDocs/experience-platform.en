@@ -3,13 +3,15 @@ description: Learn how to view detailed information about datasets and individua
 solution: Experience Platform
 title: View Job Schedule Details
 type: Tutorial
+hide: yes
+hidefromtoc: yes 
 ---
 
 # View job schedule details
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->[!UICONTROL Job schedules] are currently available only for the following Real-Time CDP jobs:
+>[!UICONTROL Job schedules] are currently available as a limited release and only for the following Real-Time CDP jobs:
 >
 > * Batch data lake ingestion
 > * Batch profile ingestion
@@ -62,7 +64,7 @@ This layout allows you to quickly identify timing relationships between your dat
 
 | I need to... | Use this view |
 |--------------|---------------|
-| See all my datasets and their schedules at once | [Timeline view](job-schedules.md) |
+| See all my profile-enabled datasets and their schedules at once | [Timeline view](job-schedules.md) |
 | Identify scheduling conflicts or anti-patterns | [Timeline view](job-schedules.md) |
 | Track overall performance of one dataset | [Dataset details](#view-dataset-details) |
 | See how many total records a dataset has processed | [Dataset details](#view-dataset-details) |
@@ -127,7 +129,7 @@ To filter the datasets displayed in the timeline:
 
 1. Look for the dataset counter in the upper left of the timeline view (for example, "2 Datasets").
 2. Select the filter icon next to the dataset counter.
-3. A dataset selection panel opens, showing all available datasets with scheduled jobs.
+3. A dataset selection panel opens, showing all available profile-enabled datasets with scheduled jobs.
 4. Select or deselect datasets to show or hide them in the timeline view.
 5. The timeline updates immediately to show only the selected datasets.
 
@@ -164,7 +166,7 @@ The dataflow run details panel displays information about the specific job run, 
 | Field | Description |
 |-------|-------------|
 | **[!UICONTROL Dataflow run ID]** | The unique identifier for this specific lake ingestion job run. Select the ID to view complete dataflow monitoring details. |
-| **[!UICONTROL Run status]** | The outcome of the job (Success, Failed, In Progress). A green indicator shows successful completion. |
+| **[!UICONTROL Run status]** | The outcome of the job (Success, Failed, In Progress, Queued). A green indicator shows successful completion. |
 | **[!UICONTROL Started at]** | The date and time when the lake ingestion job began execution. |
 | **[!UICONTROL Completed at]** | The date and time when the lake ingestion job finished execution. |
 | **[!UICONTROL Records added]** | The number of new records added to the data lake during this job run. |
@@ -175,7 +177,7 @@ The dataflow run details panel displays information about the specific job run, 
 | Field | Description |
 |-------|-------------|
 | **[!UICONTROL Dataflow run ID]** | The unique identifier for this specific profile ingestion job run. Select the ID to view complete dataflow monitoring details. |
-| **[!UICONTROL Run status]** | The outcome of the job (Success, Failed, In Progress). A green indicator shows successful completion. |
+| **[!UICONTROL Run status]** | The outcome of the job (Success, Failed, In Progress, Queued). A green indicator shows successful completion. |
 | **[!UICONTROL Started at]** | The date and time when the profile ingestion job began execution. |
 | **[!UICONTROL Completed at]** | The date and time when the profile ingestion job finished execution. |
 | **[!UICONTROL Records added]** | The number of new profiles created during this job run. |

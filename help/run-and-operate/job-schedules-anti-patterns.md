@@ -3,13 +3,15 @@ description: Learn how to identify and resolve common job schedule configuration
 solution: Experience Platform
 title: Identify Job Schedule Anti-Patterns
 type: Tutorial
+hide: yes
+hidefromtoc: yes 
 ---
 
 # Identify job schedule anti-patterns
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->[!UICONTROL Job schedules] are currently available only for the following Real-Time CDP jobs:
+>[!UICONTROL Job schedules] are currently available as a limited release and only for the following Real-Time CDP jobs:
 >
 > * Batch data lake ingestion
 > * Batch profile ingestion
@@ -101,7 +103,7 @@ In this pattern, you'll see one dataset row with many individual batch ingestion
 
 **How to fix it**:
 
-* **Reduce batch frequency**: Consolidate to 1-4 batches per day per dataset for most use cases.
+* **Reduce batch frequency**: Consolidate to fewer batches per day per dataset for most use cases.
 * **Increase batch size**: Accumulate more data before triggering ingestion rather than ingesting immediately.
 * **Align with business needs**: Verify whether hourly updates are truly required, or if daily/twice-daily updates suffice.
 * **Use streaming for real-time**: Switch to streaming ingestion for genuine real-time requirements instead of simulating it with frequent batches.
