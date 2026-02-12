@@ -53,7 +53,6 @@ Some [!DNL Acxiom Audience Connection] destinations require additional informati
 
 ### [!DNL Amazon] {#amazon}
 To configure details for the destination, fill in the fields below.
-- **Price**: Enter your price up to 3 digits before and exactly 2 digits after the decimal point.
 - **Publisher Account ID**: Enter the publisher account ID associated with this destination.
 	
 ![Amazon destination details](../../assets/catalog/advertising/acxiom-audience-distribution/amazon_destination_details.png)
@@ -136,6 +135,7 @@ By following this tutorial, you have successfully activated an audience to the s
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
+
 
 
 
