@@ -3,7 +3,12 @@ title: Personalization configuration settings
 description: Configure personalization settings in the Web SDK tag extension.
 exl-id: 24009a40-92ad-49d6-b768-49d64dccf4e0
 ---
-# Personalization configuration settings
+# Personalization configuration settings {#personalization}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_personalization"
+>title="Personalization"
+>abstract="Determines how the tag extension treats personalized content."
 
 This configuration section allows you to determine how you want to hide certain parts of the page while personalized content is loaded. When configured correctly, these settings ensure that your visitors see the right personalized content.
 
