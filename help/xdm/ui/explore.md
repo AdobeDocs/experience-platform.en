@@ -14,7 +14,7 @@ This tutorial covers the steps for exploring existing schemas, classes, field gr
 
 ## Look up a schema resource {#lookup}
 
-In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left navigation. The [!UICONTROL Schemas] workspace provides a **[!UICONTROL Browse]** tab to explore all schemas in your organization, along with additional dedicated tabs for exploring **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, **[!UICONTROL Data types]**, and **[!UICONTROL Relationships]** respectively.
+In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left rail. The [!UICONTROL Schemas] workspace provides a **[!UICONTROL Browse]** tab to explore all schemas in your organization, along with additional dedicated tabs for exploring **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, **[!UICONTROL Data types]**, and **[!UICONTROL Relationships]** respectively.
 
 ![The Schemas workspace with several tabs highlighted.](../images/ui/explore/tabs.png)
 
@@ -67,8 +67,8 @@ When viewing schema relationships on the [!UICONTROL Relationships] tab, use add
 
 | Filter | Control Type | Description |
 |--------|-------------|-------------|
-| [!UICONTROL Source schema] | Dropdown | Display relationships where the selected schema is the starting point or "source" |
-| [!UICONTROL Destination schema] | Dropdown | Show relationships where the selected schema is the target or "destination" |
+| [!UICONTROL Source schema] | Dropdown | Display relationships where the selected schema is the starting point or "source". |
+| [!UICONTROL Destination schema] | Dropdown | Show relationships where the selected schema is the target or "destination". |
 | [!UICONTROL Source class] | Dropdown | Filter relationships based on the class of the initiating schema |
 | [!UICONTROL Destination class] | Dropdown | Display relationships that end with schemas of a specific class |
 
@@ -86,7 +86,7 @@ Use the search bar to narrow down results further.
 
 ![The Browse tab of the Schemas workspace with the search field highlighted.](../images/ui/explore/search.png)
 
-The resources displayed in search results are ordered first by title matches, then by description matches. In turn, the more word matches in either of these categories, the higher the resource appears in the list.
+The resources displayed in search results are ordered first by title matches, then by description matches. Accordingly, the more word matches in either of these categories, the higher the resource appears in the list.
 
 When you have found the resource you want to explore, select its name from the list to view its structure in the canvas.
 
@@ -116,7 +116,7 @@ These inline actions enable batch operations on multiple schemas when needed. Fo
 
 ### Navigate schemas using tags and folders
 
-The workspace supports both [tag-based](./resources/schemas.md#manage-tags) and [folder-based organization](./resources/schemas.md#move-to-folder) systems to help you discover and navigate schemas efficiently. Use the tag filtering system to locate schemas categorized by project, team, data domain, or any custom taxonomy applied by your organization. Alternatively, browse folder hierarchies in the left navigation panel for structured schema discovery and access.
+The workspace supports both [tag-based](./resources/schemas.md#manage-tags) and [folder-based organization](./resources/schemas.md#move-to-folder) systems to help you discover and navigate schemas efficiently. Use the tag filtering system to locate schemas categorized by project, team, data domain, or any custom taxonomy applied by your organization. Alternatively, browse folder hierarchies in the left rail for structured schema discovery and access.
 
 To filter schemas using tags, select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to open the filter panel. Then, use the **[!UICONTROL Has any tag]** dropdown to choose from your available tags.
 
@@ -124,7 +124,7 @@ To filter schemas using tags, select the filter icon (![Filter Icon Image](/help
 
 To open your folder structure, select the show folders icon (![The show folders icon](/help/images/icons/rail-left.png)). Next, select your chosen folder to see all associated schemas.
 
-![Navigate folder hierarchies in the left navigation panel to browse and locate schemas.](../images/ui/explore/move-to-folder.png)
+![Navigate folder hierarchies in the left rail to browse and locate schemas.](../images/ui/explore/move-to-folder.png)
 
 Both organizational approaches integrate with the filtering system, allowing you to quickly locate schemas based on their assigned tags or folder placement. For detailed guidance on creating and managing tags across Experience Platform, see the [managing unified tags guide](../../../administrative-tags/ui/managing-tags.md).
 
@@ -140,11 +140,11 @@ All object-type fields containing sub-properties are collapsed by default when t
 
 ### Standard class and field group indicator {#standard-class-and-field-group-indicator}
 
-Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](/help/images/icons/lock-closed.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
+Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](/help/images/icons/lock-closed.png)). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
 
 ![The Schema Editor with the padlock icon highlighted](../images/ui/explore/schema-editor-padlock-icon.png)
 
-See the [Add custom fields to standard field groups](./resources/schemas.md) documentation for guidance. You cannot edit a standard class.
+See the [Add custom fields to standard field groups](./resources/schemas.md#custom-fields-for-standard-groups) documentation for guidance. You cannot edit a standard class.
 
 ### System-generated fields {#system-fields}
 
@@ -204,4 +204,4 @@ The schema exploration capabilities detailed in this guide work seamlessly with 
 
 ## Next steps
 
-This document covered how to explore existing XDM resources in the Experience Platform UI. For more information on the different features of the [!UICONTROL Schemas] workspace and [!DNL Schema Editor], see the [[!UICONTROL Schemas] workspace overview](./overview.md).
+This document covers how to explore existing XDM resources in the Experience Platform UI. For more information on the different features of the [!UICONTROL Schemas] workspace and [!DNL Schema Editor], see the [[!UICONTROL Schemas] workspace overview](./overview.md).
