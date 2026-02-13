@@ -2,6 +2,7 @@
 title: Render HTML offers without selectors
 description: Render HTML proposition items that do not include selectors by providing metadata to applyPropositions, then record display events.
 keywords: personalization;applyPropositions;metadata;actionType;decisionScopes;display events;
+exl-id: 8e155ec2-6d24-4cc9-9621-1931ebf18538
 ---
 # Render HTML offers without selectors
 
