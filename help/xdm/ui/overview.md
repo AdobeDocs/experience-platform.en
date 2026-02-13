@@ -33,13 +33,9 @@ It is also recommended that you follow the [schema creation tutorial](../tutoria
 
 ## Discovering and organizing schemas
 
-Locate and organize schemas efficiently using advanced discovery tools. Filter schemas by type, Profile enablement, tags, identity configuration, relationships, creation dates, and creators. The schema inventory table displays comprehensive metadata including tags, schema type, class, identities, relationships, behavior, and creation details directly in the table view.
-
-Organize schemas using user-defined tags for project-based categorization or folder hierarchies for structured browsing and access control. Both organizational approaches integrate with the filtering system to support team-based workflows and governance requirements.
+Locate and organize schemas efficiently using the workspace's discovery tools, metadata inventory, and organizational options. For detailed guidance on schema discovery and filtering capabilities, see the [exploring schemas guide](./explore.md).
 
 ![The Schemas browse tab showing comprehensive metadata columns including tags, schema type, identities, and relationships with the filter sidebar highlighted.](../images/ui/explore/schemas-filter-sidebar.png)
-
-For detailed guidance on schema discovery and filtering capabilities, see the [exploring schemas guide](./explore.md).
 
 ## Schema governance and compliance
 
@@ -49,9 +45,7 @@ Learn more about [data governance labels](../../../data-governance/labels/user-g
 
 ## Streamlined schema operations
 
-Perform schema management tasks through inline actions and automated workflows. Edit properties, manage tags, move schemas between folders, or export JSON structures directly from the browse table without navigating to individual schema details. Use ML-assisted schema creation to generate schemas from sample data, reducing manual effort and improving accuracy.
-
-These operational enhancements reduce development time and minimize context switching for teams managing large schema inventories.
+Perform schema management tasks through inline actions and automated workflows directly from the browse view, reducing the need to open individual schema details. These operational enhancements reduce development time and minimize context switching for teams managing large schema inventories. For details on available actions and the schema inventory, see the [exploring schemas guide](./explore.md).
 
 ## Creating and managing XDM resources
 

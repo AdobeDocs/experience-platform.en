@@ -31,9 +31,9 @@ Filter schemas by their fundamental characteristics and organizational attribute
 | Filter | Control Type | Description |
 |--------|-------------|-------------|
 | [!UICONTROL Show profiles] | Radio buttons | Display [!UICONTROL All schemas], [!UICONTROL Profile-enabled schemas] only, or [!UICONTROL Profile-disabled schemas] only. Profile-enabled schemas participate in [Real-Time Customer Profile](../../profile/home.md) and support unified customer views across your organization. |
-| [!UICONTROL Schema type] | Checkboxes | Filter by schema origin: [!UICONTROL Standard schemas] (provided by Adobe), [!UICONTROL Model-based schemas] (structured, relational data modeling capabilities), or [!UICONTROL Adhoc schemas] (fields namespaced for use by a single dataset). |
+| [!UICONTROL Schema type] | Checkboxes | Filter by schema origin: [!UICONTROL Standard] schemas (provided by Adobe), [!UICONTROL Relational] schemas (structured, relational data modeling capabilities), or [!UICONTROL Adhoc] schemas (fields namespaced for use by a single dataset). |
 | [!UICONTROL Class] | Dropdown | Show only schemas built on specific class foundations such as XDM Individual Profile, XDM ExperienceEvent, or custom classes defined by your organization. |
-| [!UICONTROL Has any tag] | Dropdown | Filter schemas by user-applied, user-defined tags. Use tags to locate schemas organized by project, team, business domain, or custom taxonomies that support your organizational schema management practices. |
+| [!UICONTROL Tags] | Dropdown | Filter schemas by user-applied, user-defined tags. Options include [!UICONTROL Has any tag] and [!UICONTROL Has all tags]. Use tags to locate schemas organized by project, team, business domain, or custom taxonomies that support your organizational schema management practices. |
 
 {style="table-layout:auto"}
 
