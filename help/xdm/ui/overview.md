@@ -9,9 +9,9 @@ exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
 
 The [!UICONTROL Schemas] workspace in the Adobe Experience Platform user interface allows you to manage Experience Data Model (XDM) resources, including schemas, classes, schema field groups, and data types. You can view and explore core resources provided by Adobe, and create custom resources and schemas for your organization.
 
-To access to the workspace in the Experience Platform UI, select **[!UICONTROL Schemas]** in the left rail.
+To access the workspace in the Experience Platform UI, select **[!UICONTROL Schemas]** in the left rail.
 
-![The Schemas workspace with Schemas highlighted in the Experience Platform UI left navigation.](../images/ui/overview/schemas-tab.png)
+![The Schemas workspace with Schemas highlighted in the Experience Platform UI left rail.](../images/ui/overview/schemas-tab.png)
 
 ## Enterprise schema management at scale
 
@@ -19,7 +19,7 @@ The [!UICONTROL Schemas] workspace enables enterprise-grade data modeling with a
 
 ## Key capabilities by user role
 
-Different roles across the organization benefit from distinct schema capabilities, such as compliance tagging, machine-assisted schema development, and advanced metadata filtering.
+Different roles across the organization benefit from distinct schema capabilities, such as compliance tagging, machine learning-assisted schema development, and advanced metadata filtering.
 
 The following image illustrates how key roles interact with the Schemas workspace:
 
@@ -33,9 +33,9 @@ It is also recommended that you follow the [schema creation tutorial](../tutoria
 
 ## Discovering and organizing schemas
 
-Locate and organize schemas efficiently using the workspace's discovery tools, metadata inventory, and organizational options. For detailed guidance on schema discovery and filtering capabilities, see the [exploring schemas guide](./explore.md).
-
 ![The Schemas browse tab showing comprehensive metadata columns including tags, schema type, identities, and relationships with the filter sidebar highlighted.](../images/ui/explore/schemas-filter-sidebar.png)
+
+Locate and organize schemas efficiently using the workspace's discovery tools, metadata inventory, and organizational options. For filters, inventory columns, tags, and folders, see the [exploring schemas guide](./explore.md).
 
 ## Schema governance and compliance
 
@@ -45,7 +45,7 @@ Learn more about [data governance labels](../../../data-governance/labels/user-g
 
 ## Streamlined schema operations
 
-Perform schema management tasks through inline actions and automated workflows directly from the browse view, reducing the need to open individual schema details. These operational enhancements reduce development time and minimize context switching for teams managing large schema inventories. For details on available actions and the schema inventory, see the [exploring schemas guide](./explore.md).
+Perform schema management tasks through inline actions and automated workflows directly from the browse view, reducing the need to open individual schema details. These operational enhancements reduce development time and minimize context switching for teams managing large schema inventories. For inline actions from the browse view, see [exploring schemas](./explore.md).
 
 ## Creating and managing XDM resources
 
@@ -65,8 +65,8 @@ Schemas integrate seamlessly with Real-Time Customer Profile for customer data u
 
 ## Defining XDM fields
 
-Classes, field groups, and data types all contribute fields to a schema. You can choose from a list of standard field types when adding fields to these resources, and can also define specialized fields for certain use cases. Refer to the guide on [defining XDM fields in the UI](./fields/overview.md) for more information.
+In standard XDM schemas, classes, field groups, and data types all contribute fields to a schema. You can choose from a list of standard field types when adding fields to these resources, and can also define specialized fields for certain use cases. Refer to the guide on [defining XDM fields in the UI](./fields/overview.md) for more information.
 
 ## Next steps
 
-This document provided an introduction to the [!UICONTROL Schemas] workspace in the Experience Platform UI. Please refer to the documentation linked throughout this overview to learn more about how to manage your schemas and other XDM resources.
+This document introduces the [!UICONTROL Schemas] workspace in the Experience Platform UI. Refer to the documentation linked throughout this overview to learn more about how to manage your schemas and other XDM resources.
