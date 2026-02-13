@@ -447,6 +447,8 @@ Schema management tasks are available from two main locations in the Experience 
 
 This section documents the schema actions available from the **[!UICONTROL Browse]** tab; for information on schema discovery, filtering, and organization, see [exploring XDM resources](../explore.md).
 
+![The ellipsis menu for a schema row showing inline actions such as Edit, Delete, Apply labels, and Manage tags.](../images/ui/explore/schema-inline-actions.png)
+
 The following sections describe the schema management actions available from the **[!UICONTROL Browse]** tab. These actions are accessible through the ellipsis (…) menu next to each schema row.
 
 | Action | Description |

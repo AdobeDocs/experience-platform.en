@@ -22,7 +22,7 @@ In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left navig
 
 Use the filter panel to locate schemas efficiently based on multiple criteria. Select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to access filtering options that help you discover schemas that meet specific requirements for your data modeling and governance workflows.
 
-![The [!UICONTROL Schemas] workspace [!UICONTROL Browse] tab with the comprehensive filters panel highlighted.](../images/ui/explore/filters.png)
+![The [!UICONTROL Schemas] workspace [!UICONTROL Browse] tab with the comprehensive filters panel highlighted.](../images/ui/explore/schema-filters-sidebar.png)
 
 ### Schema metadata filters
 
