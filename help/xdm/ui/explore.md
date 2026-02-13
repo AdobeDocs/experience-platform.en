@@ -126,7 +126,7 @@ To open your folder structure, select the show folders icon (![The show folders 
 
 ![Navigate folder hierarchies in the left rail to browse and locate schemas.](../images/ui/explore/move-to-folder.png)
 
-Both organizational approaches integrate with the filtering system, allowing you to quickly locate schemas based on their assigned tags or folder placement. For detailed guidance on creating and managing tags across Experience Platform, see the [managing unified tags guide](PLACEHOLDER.md). <!-- PLAT-247143 -->
+Both organizational approaches integrate with the filtering system, allowing you to quickly locate schemas based on their assigned tags or folder placement. For detailed guidance on creating and managing tags across Experience Platform, see the [managing unified tags guide](../../../administrative-tags/ui/managing-tags.md). <!-- PLAT-247143 -->
 
 ## Explore an XDM resource in the canvas {#explore}
 
@@ -200,7 +200,7 @@ See the tutorial on [creating a relationship in the UI](../tutorials/relationshi
 
 ## Related documentation
 
-The schema exploration capabilities detailed in this guide work seamlessly with other Experience Platform organizational and governance features. For comprehensive information on organizing your business objects with user-defined tags and categories, see the [managing unified tags guide](PLACEHOLDER.md). <!-- PLAT-247143 --> To understand consistent UI patterns for advanced search, filtering, and inline actions that are applied across Experience Platform workspaces, refer to the [datasets user guide](PLACEHOLDER.md). <!-- PLAT-247143 --> When working with data governance labels and policies on your schemas, consult the [data usage labels user guide](PLACEHOLDER.md) for instructions on applying and managing labels to support compliance requirements. <!-- PLAT-247143 -->
+The schema exploration capabilities detailed in this guide work seamlessly with other Experience Platform organizational and governance features. For comprehensive information on organizing your business objects with user-defined tags and categories, see the [managing unified tags guide](../../../administrative-tags/ui/managing-tags.md). <!-- PLAT-247143 --> To understand consistent UI patterns for advanced search, filtering, and inline actions that are applied across Experience Platform workspaces, refer to the [datasets user guide](../../../catalog/datasets/user-guide.md). <!-- PLAT-247143 --> When working with data governance labels and policies on your schemas, consult the [data usage labels user guide](../../../data-governance/labels/user-guide.md) for instructions on applying and managing labels to support compliance requirements. <!-- PLAT-247143 -->
 
 ## Next steps
 
