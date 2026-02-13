@@ -79,10 +79,10 @@ Both public and private extension packages can be shared through [!UICONTROL Usa
 
 Organizations often develop specialized extensions tailored to their unique business requirements. These extensions may contain proprietary logic, custom integrations, or sensitive configurations that shouldn't be made publicly available. Usage authorizations solve this challenge by enabling:
 
-- **Selective sharing**: Share private extensions only with trusted partner organizations
-- **Maintained privacy**: Keep sensitive extension code out of the public catalog
-- **Collaborative development**: Enable trusted partners to benefit from your custom solutions
-- **Controlled access**: Maintain full control over who can access and use your private extensions
+* **Selective sharing**: Share private extensions only with trusted partner organizations
+* **Maintained privacy**: Keep sensitive extension code out of the public catalog
+* **Collaborative development**: Enable trusted partners to benefit from your custom solutions
+* **Controlled access**: Maintain full control over who can access and use your private extensions
 
 The sharing process involves two key participants:
 
@@ -97,8 +97,8 @@ To share an extension, navigate to the Data Collection UI and select **[!UICONT
 
 Here, you see a list of existing shared authorizations organized into two categories:
 
-- **Shared with this org**: Extensions that other organizations have shared with you.
-- **Shared with other orgs**: Extensions that you have shared with other organizations.
+* **Shared with this org**: Extensions that other organizations have shared with you.
+* **Shared with other orgs**: Extensions that you have shared with other organizations.
 
 Select **[!UICONTROL Add Authorization]**.
 
@@ -162,20 +162,20 @@ As the owning organization, you can delete an authorization at any point, regard
 
 **If your extension was never made public:**
 
-- Any private version the receiving organization already installed will continue to appear in their installed extensions list.
-- If the receiving organization never installed your extension, it will no longer appear anywhere in their interface.
+* Any private version the receiving organization already installed will continue to appear in their installed extensions list.
+* If the receiving organization never installed your extension, it will no longer appear anywhere in their interface.
 
 **If your extension was made public:**
 
-- Any private version the receiving organization installed will remain visible in their installed extensions list.
-- If they never installed your private version, they will still see the latest public version in their catalog and can install it.
-- They can also downgrade from your private version to the latest available public version if desired.
+* Any private version the receiving organization installed will remain visible in their installed extensions list.
+* If they never installed your private version, they will still see the latest public version in their catalog and can install it.
+* They can also downgrade from your private version to the latest available public version if desired.
 
 When you revoke an authorization, the receiving organization retains certain rights to protect their existing implementations:
 
-- **Continued use**: The receiving organization can keep using any private version they've already installed, even after you revoke access.
-- **Build protection**: If the receiving organization installed your private v1.0.0 and you later release a private v1.0.1, they won't see the newer version but can continue building with v1.0.0 without disruption.
-- **Future upgrades**: If you later make your extension public (for example, releasing v2.0.0 publicly), the receiving organization can upgrade from their private v1.0.0 directly to the new public v2.0.0.
+* **Continued use**: The receiving organization can keep using any private version they've already installed, even after you revoke access.
+* **Build protection**: If the receiving organization installed your private v1.0.0 and you later release a private v1.0.1, they won't see the newer version but can continue building with v1.0.0 without disruption.
+* **Future upgrades**: If you later make your extension public (for example, releasing v2.0.0 publicly), the receiving organization can upgrade from their private v1.0.0 directly to the new public v2.0.0.
 
 >[!IMPORTANT]
 >
