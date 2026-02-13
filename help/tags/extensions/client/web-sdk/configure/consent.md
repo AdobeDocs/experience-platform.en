@@ -5,6 +5,11 @@ exl-id: 93913a8b-0351-409d-b26a-8dc2ac0296c5
 ---
 # Consent configuration settings
 
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_consent"
+>title="Consent"
+>abstract="Selects the default level of consent that is assumed if no other explicit consent preference is provided."
+
 The **[!UICONTROL Consent]** section allows you to select the default level of consent that is assumed if no other explicit consent preference is provided. Default consent level is not saved to user profiles.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.

@@ -9,6 +9,11 @@ exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
 >
 >Brand Concierge for the Web SDK is currently in **beta**. The functionality and documentation are subject to change.
 
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_brandconcierge"
+>title="Brand Concierge"
+>abstract="Configuration settings when using Brand Concierge on your Property."
+
 The **[!UICONTROL Brand Concierge]** section lets you control how Brand Concierge chat sessions behave in the Web SDK tag extension.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.

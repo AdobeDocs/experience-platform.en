@@ -5,6 +5,11 @@ exl-id: 2d2504c6-b3f9-4e7b-aff4-a8d8d6c4e3dd
 ---
 # Datastream configuration settings
 
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_datastreams"
+>title="Datastreams"
+>abstract="Required. Sets the datastream within the Edge Network that you want to send data to."
+
 This configuration section allows you to determine which [datastream](/help/datastreams/overview.md) that you want to send data to. **A datastream ID is required for all data sent to the Edge Network.**
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.

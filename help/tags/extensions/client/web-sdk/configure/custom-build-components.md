@@ -1,9 +1,14 @@
 ---
-title: Custom build components
+title: Build options
 description: Create a custom Web SDK build that disables features to lower build size.
 exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
 ---
-# Custom build components
+# Build options
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_buildoptions"
+>title="Build options"
+>abstract="Selectively include or exclude modules from the JavaScript library, reducing library size and improving performance."
 
 The Web SDK library includes multiple modules for various features like personalization, identity, link tracking, and more. Depending on your use cases, you might only need specific features instead of the entire library. Disabling build components allows you to use only the modules you need, reducing the library size and improving performance.
 

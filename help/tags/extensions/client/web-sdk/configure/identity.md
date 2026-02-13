@@ -5,6 +5,11 @@ exl-id: 12e707f4-c37b-4c02-bfec-5ef7b98c2d3b
 ---
 # Identity configuration settings
 
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_identity"
+>title="Identity"
+>abstract="Define how the tag extension identifies visitors."
+
 This configuration section allows you to define the behavior of the Web SDK when it comes to handling user identification.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.

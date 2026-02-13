@@ -5,6 +5,11 @@ exl-id: cc22b8b3-88c6-4030-91b4-60e14a3b0f42
 ---
 # SDK instance configuration settings
 
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_sdkinstance"
+>title="SDK instances"
+>abstract="Sets the SDK instance name, the IMS org it belongs to, and the edge domain."
+
 This configuration section governs the Web SDK instance name, the IMS org it applies to, and the location that you want to send data to. By default, an instance is named `alloy`.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.

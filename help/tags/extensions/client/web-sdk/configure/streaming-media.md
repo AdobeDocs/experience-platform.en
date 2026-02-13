@@ -5,6 +5,11 @@ exl-id: f486d729-b7ad-4720-8399-71495cb9c57e
 ---
 # Streaming media configuration settings
 
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_streamingmedia"
+>title="Streaming media"
+>abstract="Determines how streaming media data is collected during media playback sessions."
+
 The media collection feature helps you collect data related to media sessions, such as media playbacks, pauses, completions, and other related events. Once collected, you can send this data to Adobe Experience Platform or Adobe Analytics to generate reports. This feature provides a comprehensive solution for tracking and understanding media consumption behavior on your website.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.

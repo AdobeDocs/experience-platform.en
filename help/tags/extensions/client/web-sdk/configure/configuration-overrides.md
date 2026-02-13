@@ -5,6 +5,11 @@ exl-id: 68227148-3d74-4807-836c-14acd8a9c1dc
 ---
 # Datastream configuration override settings
 
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_overrides"
+>title="Datastream configuration overrides"
+>abstract="Conditionally trigger different datastream behaviors without requiring a separate datastream. Setting any client-side datastream configuration overrides for an environment in this section overrides any server-side dynamic datastream configuration and rules for that environment."
+
 Datastream overrides allow you to define additional configurations for your datastreams, which get passed to the Edge Network via the Web SDK. This feature helps you conditionally trigger different datastream behaviors without creating a new datastream or modifying your existing settings.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.

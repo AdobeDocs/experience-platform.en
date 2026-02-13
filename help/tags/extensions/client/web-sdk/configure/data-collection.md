@@ -5,6 +5,11 @@ exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
 ---
 # Data collection configuration settings
 
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_datacollection"
+>title="Data collection"
+>abstract="Determine what data to collect and how that data is collected across the tag extension."
+
 This configuration section allows you to determine how data is collected across the extension.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
