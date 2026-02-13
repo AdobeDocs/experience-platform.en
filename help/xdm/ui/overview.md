@@ -41,7 +41,7 @@ Locate and organize schemas efficiently using the workspace's discovery tools, m
 
 Maintain data governance standards and regulatory compliance through integrated labeling and organizational tools. Apply data governance labels at the schema level to automatically propagate compliance classifications to all associated datasets. Use administrative tags and folder structures to support organizational governance policies and audit requirements.
 
-Learn more about [data governance labels](../../../data-governance/labels/user-guide.md) and [administrative tags](../../../administrative-tags/ui/managing-tags.md) for comprehensive governance workflows.
+Learn more about [data governance labels](PLACEHOLDER.md) and [administrative tags](PLACEHOLDER.md) for comprehensive governance workflows. <!-- PLAT-247143 -->
 
 ## Streamlined schema operations
 
@@ -54,7 +54,7 @@ The [!UICONTROL Schemas] workspace provides powerful tools for creating and cust
 * [Schemas](./resources/schemas.md)
 * [Schema actions and workflows](./resources/schemas.md#more)
 * [ML-assisted schema creation](./ml-assisted-schema-creation.md) - Generate schemas from sample data using machine learning algorithms
-* [Industry data models](../../schema/industries/overview.md) - Pre-built schemas for common industry use cases
+* [Industry data models](PLACEHOLDER.md) - Pre-built schemas for common industry use cases <!-- PLAT-247143 -->
 * [Classes](./resources/classes.md)
 * [Field groups](./resources/field-groups.md)
 * [Data types](./resources/data-types.md)
