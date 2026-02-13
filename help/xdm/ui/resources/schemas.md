@@ -73,7 +73,7 @@ Next, proceed to [define primary keys](../fields/identity.md#define-a-identity-f
 
 >[!NOTE]
 >
->Once saved, the [!UICONTROL Type] field in the [!UICONTROL  Schema properties] sidebar indicates this is a [!UICONTROL Relational] schema. This is also indicated in the details sidebar in the schema inventory view.
+>Once saved, the [!UICONTROL Type] field in the [!UICONTROL Schema properties] sidebar indicates this is a [!UICONTROL Relational] schema. This is also indicated in the details sidebar in the schema inventory view.
 >![The Schema Editor canvas showing an empty relational schema structure with relational type highlighted.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Upload a DDL file {#upload-ddl-file}
@@ -90,7 +90,7 @@ The [!UICONTROL Select entities and fields to import] dialog appears, allowing y
 
 >[!IMPORTANT]
 >
->The table structure must contain a **primary key** and a **version identifier**, such as a `updateSequence` field of type datetime or number.
+>The table structure must contain a **primary key** and a **version identifier**, such as an `updateSequence` field of type datetime or number.
 >
 >For change data capture ingestion, a special column named `_change_request_type` of type String is also required to enable incremental processing. This field indicates the type of data change (for example,  `u` (upsert) or `d` (delete)).
 
@@ -100,7 +100,7 @@ Although required during ingestion, control columns like `_change_request_type` 
 >
 >The maximum supported file size for a DDL upload is 10MB.
 
-![The Relational schema review view with imported fields shown and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/entities-and-files-to-inport.png)
+![The Relational schema review view with imported fields shown and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/entities-and-files-to-import.png)
 
 
 The schema opens in the Schema Editor, where you can adjust the structure before saving.
@@ -117,7 +117,7 @@ Select **[!UICONTROL Standard]** from the schema type dropdown menu. The [!UICON
 
 ### [!BADGE Beta]{type=Informative} Manual or ML-assisted schema creation {#manual-or-assisted}
 
-To learn how you can use a ML algorithm to recommend a schema structure based on a csv file, see the [machine learning-assisted schema creation guide](../ml-assisted-schema-creation.md). This UI guide focusses on the manual creation workflow. 
+To learn how you can use a ML algorithm to recommend a schema structure based on a csv file, see the [machine learning-assisted schema creation guide](../ml-assisted-schema-creation.md). This UI guide focuses on the manual creation workflow. 
 
 ### Manual schema creation {#manual-creation}
 
@@ -163,9 +163,7 @@ The Schema Editor appears, with the schema's structure shown in the canvas. If d
 
 To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then select the name of the schema you want to edit. You can also use the search bar to narrow the list of available options.
 
-<!-- Add in a cross link here to the explore.md page. Explain how you can search, categorize etc.. Possibly under the More actions heading. Decide which is best suited in the flow of the document -->
-
-![The Schema workspace with a schema highlighted.](../../images/ui/resources/schemas/edit-schema.png)
+![The Schemas workspace with a schema highlighted.](../../images/ui/resources/schemas/edit-schema.png)
 
 >[!TIP]
 >
@@ -293,7 +291,7 @@ After you have added a field group to a schema, you can define additional fields
 
 In addition, if a custom field is added to a standard field group, that field group will be converted to a custom field group and the original standard field group will no longer be available.
 
-If you want to add a custom field to a standard field group, refer to the [section below](#custom-fields-for-standard-groups) for specific instructions. If you are adding fields to a custom field group, refer to section on [editing custom field groups](./field-groups.md) in the field groups UI guide.
+If you want to add a custom field to a standard field group, refer to the [section below](#custom-fields-for-standard-groups) for specific instructions. If you are adding fields to a custom field group, refer to the section on [editing custom field groups](./field-groups.md) in the field groups UI guide.
 
 If you do not want to alter any existing field groups, you can [create a new custom field group](./field-groups.md#create) to define additional fields instead.
 
@@ -429,7 +427,7 @@ Once you have assigned a class and added field groups to a schema, you can edit 
 >
 >Keep in mind that the display names of fields that belong to standard classes or field groups can only be edited in the context of a specific schema. In other words, changing the display name of a standard field in one schema does not affect other schemas that employ the same associated class or field group.
 >
->Once you make changes the display names for a schema's fields, those changes are immediately reflected in any existing datasets based on that schema.
+>Once you make changes to the display names for a schema's fields, those changes are immediately reflected in any existing datasets based on that schema.
 
 Change the field names to the display names by toggling on **[!UICONTROL Show display names for fields]**. To edit the display name of a schema field, select the field in the canvas. In the right rail, provide the new name under **[!UICONTROL Display name]**.
 
@@ -495,7 +493,7 @@ Opens the [!UICONTROL Add or remove tags] dialog, where you can assign or remove
 
 #### Move to folder {#move-to-folder}
 
-Opens the [!UICONTROL Move] dialog, where you can select a destination folder or create a new folder. Schemas organized into folders appear in the folder hierarchy in the left navigation panel. For more information on folder-based organization, see [exploring XDM resources](../explore.md).
+Opens the [!UICONTROL Move] dialog, where you can select a destination folder or create a new folder. Schemas organized into folders appear in the folder hierarchy in the left rail. For more information on folder-based organization, see [exploring XDM resources](../explore.md).
 
 #### Add to package {#add-to-package}
 
@@ -511,13 +509,11 @@ Generates and downloads a sample data file that conforms to the schema structure
 
 ### Manage schemas from the Schema Editor {#manage-from-editor}
 
-Within the Schema Editor, you can perform quick actions to copy the JSON structure of the schema or delete the schema if it has not been enabled for Real-Time Customer Profile or has associated datasets. Select [!UICONTROL More] at the top of the view to display a dropdown with quick actions.
+Within the Schema Editor, you can perform quick actions to copy the JSON structure of the schema or delete the schema if it has not been enabled for Real-Time Customer Profile and has no associated datasets. Select [!UICONTROL More] at the top of the view to display a dropdown with quick actions.
 
 ![The Schema Editor with the More button highlighted and the drop down options displayed.](../../images/tutorials/create-schema/more-actions.png)
 
 The Copy JSON structure functionality allows you to see what a sample payload would look like while you are still building the schema and your data pipelines. It is especially helpful for situations where there are complex object map structures in the schema such as an identity map.
-
-<!-- MOVED: Add standard fields and Add custom fields sections moved to Add fields to a schema section above -->
 
 ## Finalize a schema {#finalize-schema}
 
@@ -582,7 +578,7 @@ After confirming the class change, the canvas will be reset and all composition 
 
 ## Next steps {#next-steps}
 
-This document covered the basics of creating and editing schemas in the Experience Platform UI. It is strongly recommended that you review the [schema creation tutorial](../../tutorials/create-schema-ui.md) for a comprehensive workflow for building a complete schema in the UI, including creating custom field groups and data types for unique use cases.
+This document covers the basics of creating and editing schemas in the Experience Platform UI. It is strongly recommended that you review the [schema creation tutorial](../../tutorials/create-schema-ui.md) for a comprehensive workflow for building a complete schema in the UI, including creating custom field groups and data types for unique use cases.
 
 For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
 
