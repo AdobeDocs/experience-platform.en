@@ -99,6 +99,7 @@ XDM is an open-source specification that provides common structures and definiti
 | Feature | Description |
 | ------- | ----------- |
 | Schema Inventory Organization and Search | The schema browse page now includes enhanced search and filtering, inline actions, and support for user-defined tags and folders. These updates make it easier to find, organize, and manage schemas across sandboxes while reducing manual navigation and maintenance effort. |
+| Restricted Editing for Schemas with Datasets | Editing operations that result in breaking changes are now restricted once a dataset exists for a schema. When a dataset is associated, you can no longer rename or delete fields, change field data types or formats, modify identity descriptors, manage related fields to remove existing fields, or change the assigned class; additive changes and field deprecation remain supported. |
 
 For more information, read the [[!DNL XDM] overview](../xdm/home.md).
 
