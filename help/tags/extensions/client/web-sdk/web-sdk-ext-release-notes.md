@@ -10,7 +10,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 ## Version 2.34.1 - February 11, 2026
 
-- Contains [version 2.31.1](/help/collection/js/release-notes.md#2-31-0) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.31.1](/help/collection/js/release-notes.md) of the Adobe Experience Platform Web SDK.
 - Fixed an issue where [Adobe Advertising configuration settings](configure/advertising.md) were unable to be edited in [Send Event](actions/send-event.md) actions.
 - Added a fallback to `edge.adobedc.net` for the [Edge domain](configure/general.md) configuration setting when a `tenant-id` is not available.
 
@@ -18,7 +18,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 **New features**
 
-- Contains [version 2.31.0](/help/collection/js/release-notes.md#2-31-0) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.31.0](/help/collection/js/release-notes.md) of the Adobe Experience Platform Web SDK.
 - Added [Base code support](/help/collection/js/install/base-code.md) for the tag extension.
 - Added **[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [context](configure/data-collection.md#context-settings) to the extension settings.
 - Added Brand Concierge component.
