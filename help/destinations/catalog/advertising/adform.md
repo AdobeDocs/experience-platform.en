@@ -2,8 +2,8 @@
 title: Adform
 description: Adform is a leading provider of programmatic media buying and selling solutions. By connecting Adform to the Adobe Experience Platform, you can activate your 1st party audiences through Adform based on the Experience Cloud ID (ECID).
 last-substantial-update: 2025-10-23
+exl-id: b87fe57f-10e3-4c10-9156-f102244fbbe7
 ---
-
 # Adform connection {#adform}
 
 ## Overview {#overview}

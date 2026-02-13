@@ -19,6 +19,7 @@ role: Developer
   + [Release notes](js/release-notes.md)
   + Installation {#install}
     + [Install overview](js/install/overview.md)
+    + [Base code](js/install/base-code.md)
     + [Library](js/install/library.md)
     + [NPM](js/install/npm.md)
     + [Custom build](js/install/create-custom-build.md)
@@ -32,6 +33,7 @@ role: Developer
       + [clickCollection](js/commands/configure/clickcollection.md)
       + [clickCollectionEnabled](js/commands/configure/clickcollectionenabled.md)
       + [context](js/commands/configure/context.md)
+      + [conversation](js/commands/configure/conversation.md)
       + [datastreamId](js/commands/configure/datastreamid.md)
       + [debugEnabled](js/commands/configure/debugenabled.md)
       + [defaultConsent](js/commands/configure/defaultconsent.md)

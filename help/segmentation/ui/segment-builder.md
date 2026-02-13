@@ -54,7 +54,98 @@ You can see these building blocks in the **[!UICONTROL Fields]** section on the 
 
 The **[!UICONTROL Attributes]** tab allows you to browse [!DNL Profile] attributes belonging to the [!DNL XDM Individual Profile] class. Each folder can be expanded to reveal additional attributes, where each attribute is a tile that can be dragged onto the rule builder canvas in the center of the workspace. The [rule builder canvas](#rule-builder-canvas) is discussed in more detail later in this guide.
 
-![The attributes section of the Segment Builder fields is highlighted.](../images/ui/segment-builder/attributes.png)  
+![The attributes section of the Segment Builder fields is highlighted.](../images/ui/segment-builder/attributes.png)
+
+The attributes you add can be one of the following data types:
+
+| Data type | Common use cases | 
+| --------- | ---------------- |
+| String | Names, email addresses, product categories |
+| Numeric | Age, revenue, product quantities, loyalty scores |
+| Boolean | Preferences, status indicators, user flags |
+| Enum | Predefined lists such as gender or status |
+| Date/Time | Purchase dates, visit times, birthday |
+
+You can use the following operators for the respective data types:
+
++++ String operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Equals | Find an exact match to the specified value | Email **equals** "sample@example.com" |
+| Not equals | Excludes the specified value | Status **does not equal** "Cancelled" |
+| Contains | The text includes the specified value | Product name **contains** "iPhone" |
+| Does not contain | The text does not include the specified value | Description **does not contain** "discontinued" |
+| Starts with | The text begins with the specified value | Customer ID **starts with** "PREM" |
+| Ends with | The text finishes with the specified value | Email **ends with** "@company.com" |
+| Exists | The value exists | Middle name **exists** |
+| Does not exist | The value does not exist | Loyalty status **does not exist** |
+
++++
+
++++ Numeric operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Equals | Find an exact match to the specified value | Age **equals** 25 |
+| Not equals | Excludes the specified value | Order count **does not equal** 0 |
+| Greater than | The number is **larger** than the specified value. This value is **exclusive** of the specified number. | Annual revenue **greater than** 50000 |
+| Greater than or equal | The number is **larger** than the specified value. This value is **inclusive** of the specified number.| Age **greater than or equal** 21 |
+| Less than | The number is **smaller** than the specified value. This value is **exclusive** of the specified number. | Days since purchase **less than** 30 |
+| Less than or equal | The number is **smaller** than the specified value. This value is **inclusive** of the specified number.| Cart value **less than or equal** 100 |
+| Between | The number is **between** the specified values. These values are **inclusive** of the specified numbers. | Age **between** 25 and 45 |
+| Exists | The value exists | Credit score **exists** |
+| Does not exist | The value does not exist | Credit score **does not exist** |
+
++++
+
++++ Boolean operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Equals | The boolean value is set to the specified value (True or False) | Email opt-in **equals True** |
+| Not equals | The boolean value is **not** set to the specified value (True or False) | Mobile app installed **not equals True** |
+
++++
+
++++ Enum operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Equals | The value equals the specified enum values | Gender **equals** Female |
+| Not equals | The value does not equal the specified enum value | Order status **does not equal** Cancelled |
+| Exists | The enum value has been set | Preferred language **exists** |
+| Does not exist | The enum value has not been set | Preferred language **does not exist** |
+
++++
+
++++ Date/Time operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Today | The value occurred today. You can select the **Ignore year** checkbox to make the comparison ignore the year.| Birth date **is** Today |
+| Yesterday | The value occurred yesterday. | Cart purchase **is** Yesterday |
+| This month | The value occurred this calendar month. | Birth month **is** This month |
+| This year | The value occurred this calendar year. | Sign up date **is** This year |
+| Custom date | The value occurred on the given date. | Purchase date **is on** Custom date |
+| In last | The value occurred within the last period of time chosen. Birthday **is** In last month |
+| From (to) | The value occurred within the two calendar dates chosen. This period of time is **inclusive** of both dates. | Account creation date **is** From April 20th to July 13th |
+| During | The value occurred within the selected month or year. | Sale **is** During March |
+| Within (+/-) | The value occurred within days, weeks, months, or years of the selected date. This period of time is **inclusive** of both dates. | Cart abandon is **Within** 3 days |
+| Before | The value occurred before the selected date. | Membership join date is **before** January 3rd, 2025 |
+| After | The value occurred after the selected date. | Purchase date is **after** March 14th, 2024 |
+| Rolling range | The value occurred between the two relative dates. | Last purchase date is in rolling range of seven days ago to three days ago. |
+| In next | The value occurred within the next period of time selected. | Cart abandon is in next 2 days |
+
+For more detailed information on the time and date functions, read the [time constraints section](#time-constraints).
+
++++
+
+#### Computed attributes {#computed-attributes}
+
+Computed attributes are fields that are calculated from other attributes using aggregations or formulas. You can use computed attributes if you need aggregated data such as sums, counts, or averages across multiple events or if you are building frequently-used audiences that require complex calculations. 
+
+For more information on computed attributes, including how to create them, what functions you can use within them, and how to manage them, read the [computed attributes overview](/help/profile/computed-attributes/overview.md).
 
 ### Events
 
@@ -182,6 +273,22 @@ Alternatively, you can manually add comma separated values.
 Please note that there is a maximum of 250 values allowed. If you exceed this amount, you will need to remove some values before adding more.
 
 ![A warning that shows that you have reached the maximum number of values is displayed.](../images/ui/segment-builder/maximum-values.png)
+
+### Audience validation {#audience-validation}
+
+Segment Builder automatically analyzes and validates your audience definition to ensure you adhere to audience definition best practices. These best practices can be set into two categories: critical validation and performance optimization.
+
+If an audience definition breaks a critical validation best practice, you will **not** be able to save your changes in order to keep your sandbox stable. If an audience definition breaks a performance optimization best practice, you will be able to save your changes, but it is *highly recommended* to update your audience definition to avoid performance issues.
+
+| Validation check | Type | Threshold |
+| ---------------- | ---- | --------- |
+| Logical complexity | Critical validation | The audience definition is too complicated. |
+| Sequential events | Critical validation | There are more than 6 sequential events within an audience definition. |
+| Aggregated count | Performance optimization | There are more than 3 aggregation functions within an audience definition. |
+| Nested data | Performance optimization | There are more than 2 levels of nested data (array or map data types) depth within an audience definition. |
+| Audience size | Performance optimization | The audience qualification size is greater than 30% of the total number of profiles in the sandbox. |
+
+For more information on how audience validation works, read the [audience validation guide](/help/segmentation/validation.md).
 
 ### Adding audiences
 
@@ -334,7 +441,7 @@ The list of available time constraints for this operation differs from the main 
 
 ## Containers {#containers}
 
-Segment rules are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.
+Audiences are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.
 
 Once you have added at least one tile to the rule builder canvas, you can begin to add containers. To create a new container, select the ellipses (...) in the top-right corner of the tile, then select **[!UICONTROL Add container]**. 
 
@@ -353,6 +460,36 @@ Once you select **[!UICONTROL Unwrap container]** the child container is removed
 >When unwrapping containers, be careful that the logic continues to meet the desired segment definition.
 
 ![The container is shown after being unwrapped.](../images/ui/segment-builder/unwrapped-container.png)
+
+### Examples {#container-examples}
+
+You can use your containers within Segment Builder in three different ways: to group your rules with boolean logic, to control whether to include or exclude profiles matching the container's criteria, and to define event sequences with time constraints.
+
++++ Mixed boolean logic
+
+The following example mixes **both** AND and OR logic within a single expression. Without using containers, you cannot mix both AND with OR logic in a single level.
+
+![An image showing how to use containers to mix boolean logic and use include/exclude logic.](/help/segmentation/images/ui/segment-builder/mixed-boolean-container.png)
+
++++
+
++++ Event sequence
+
+The following example uses containers to build the sequence of events.
+
+![An image showing how to sequence events using containers.](/help/segmentation/images/ui/segment-builder/event-sequence-container.png)
+
++++
+
+### Best practices {#container-best-practices}
+
+When you add containers to your audience, keep the following guidelines in mind:
+
+- Build your containers incrementally, testing the logic with each step you add
+  - This is especially important if you use "Exclude" logic, as this can significantly change your results
+- Clearly name your containers to understand what they're meant to do
+- Avoid having too many nested levels of containers as it reduces performance
+- Ensure your order of containers is accurate, since event order greatly affects sequence containers
 
 ## Merge policies
 
@@ -439,7 +576,7 @@ More information about the different segment definition evaluation methods can b
 Segment Builder provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-Time Customer Profile] data. After reading this guide you should now be able to:
 
 - Create segment definitions using a combination of attributes, events, and existing audiences as building blocks.  
-- Use the rule builder canvas and containers to control the order in which segment rules are executed.
+- Use the rule builder canvas and containers to control the order in which audience rules are executed.
 - View estimates of your prospective audience, allowing you to adjust your segment definitions as required.
 - Enable all segment definitions for scheduled segmentation.
 - Enable specified segment definitions for streaming segmentation.

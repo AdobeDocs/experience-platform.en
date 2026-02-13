@@ -402,7 +402,7 @@ The following section lists questions related to streaming segmentation.
 
 ### Does streaming segmentation "unqualification" also happen in real time?
 
-For most instances, streaming segmentation unqualification happens in real-time. However, streaming segments that use segments of segments do **not** unqualify in real-time, instead unqualifying after 24 hours.
+Streaming segmentation disqualification occurs depending on the composition of the audience. For event-based audiences, disqualification occurs in real-time as the lookback window expires. For profile-based audiences or audiences that use profile attributes, disqualification occurs when profile attribute values are changed via a streaming source or during the daily batch evaluation job. 
 
 ### What data does streaming segmentation work on?
 

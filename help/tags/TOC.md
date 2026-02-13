@@ -111,6 +111,7 @@ role: Developer
         * [Data collection](extensions/client/web-sdk/configure/data-collection.md)
         * [Streaming media](extensions/client/web-sdk/configure/streaming-media.md)
         * [Push notifications](extensions/client/web-sdk/configure/push-notifications.md)
+        * [Brand Concierge](extensions/client/web-sdk/configure/brand-concierge.md)
         * [Advertising](extensions/client/web-sdk/configure/advertising.md)
         * [Configuration overrides](extensions/client/web-sdk/configure/configuration-overrides.md)
         * [Advanced settings](extensions/client/web-sdk/configure/advanced-settings.md)

@@ -1,6 +1,7 @@
 ---
 title: Apply propositions
 description: Render propositions in single-page applications without incrementing metrics.
+exl-id: cac9c65b-259b-4776-bd32-fab070a145fb
 ---
 # Apply propositions
 

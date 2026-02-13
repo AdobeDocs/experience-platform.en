@@ -1,6 +1,7 @@
 ---
 title: Send push subscription
 description: Register, send, and collect data for browser push subscriptions.
+exl-id: 5a19dab9-cd47-4920-9864-6094b89ab1a1
 ---
 # Send push subscription
 

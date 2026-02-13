@@ -2,6 +2,7 @@
 title: Personalization use cases overview
 description: Learn how to implement personalization use cases using the Adobe Experience Platform Web SDK, including patterns for rendering content and tracking display.
 keywords: personalization;sendEvent;renderDecisions;applyPropositions;decisionScopes;display events;flicker;
+exl-id: 6beccbfd-fddb-4e19-8a56-caba276e1643
 ---
 # Personalization use cases overview
 
