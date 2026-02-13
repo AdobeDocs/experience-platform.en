@@ -37,7 +37,7 @@ Locate and organize schemas efficiently using advanced discovery tools. Filter s
 
 Organize schemas using user-defined tags for project-based categorization or folder hierarchies for structured browsing and access control. Both organizational approaches integrate with the filtering system to support team-based workflows and governance requirements.
 
-![The Schemas browse tab showing comprehensive metadata columns including tags, schema type, identities, and relationships with the filter sidebar highlighted.](../images/ui/overview/schemas-filter-sidebar.png)
+![The Schemas browse tab showing comprehensive metadata columns including tags, schema type, identities, and relationships with the filter sidebar highlighted.](../images/ui/explore/schemas-filter-sidebar.png)
 
 For detailed guidance on schema discovery and filtering capabilities, see the [exploring schemas guide](./explore.md).
 

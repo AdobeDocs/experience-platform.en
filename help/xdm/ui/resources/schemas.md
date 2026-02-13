@@ -7,7 +7,7 @@ exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 ---
 # Create and edit schemas in the UI {#create-edit-schemas-in-ui}
 
-This guide provides an overview of how to create, edit, and manage Experience Data Model (XDM) schemas for your organization in the Adobe Experience Platform UI. You'll learn how to create both model-based and standard schemas, customize schema structures, manage schemas from the Browse view, and finalize schemas for production use.
+This guide provides an overview of how to create, edit, and manage Experience Data Model (XDM) schemas for your organization in the Adobe Experience Platform UI. You'll learn how to create both relational and standard schemas, customize schema structures, manage schemas from the Browse view, and finalize schemas for production use.
 
 >[!IMPORTANT]
 >
