@@ -3,7 +3,12 @@ title: Data collection configuration settings
 description: Configure data collection settings in the Web SDK tag extension.
 exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
 ---
-# Data collection configuration settings
+# Data collection configuration settings {#data-collection}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_datacollection"
+>title="Data collection"
+>abstract="Determine what data to collect and how that data is collected across the tag extension."
 
 This configuration section allows you to determine how data is collected across the extension.
 

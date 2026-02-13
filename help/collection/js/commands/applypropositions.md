@@ -16,6 +16,10 @@ This command supports the following fields:
   * Selector
   * Action type
 
+>[!NOTE]
+>
+>The `applyPropositions` command does not automatically send display events. If recording displays is desired, use the `sendEvent` command as described in [Manage display events](/help/collection/use-cases/personalization/display-events.md).
+
 Run the `applyPropositions` command when calling your configured instance of the Web SDK. The object containing configuration options supports the following fields:
 
 * **`propositions`**: An array of proposition objects that you want to re-render. This object typically isn't used, as the `propositionScopes` field usually determines which scopes or surfaces that you want to re-render.
