@@ -10,6 +10,12 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.31.1 - February 11, 2026
+
+- Fixed an issue where the Web SDK would crash when there are multiple advertising-related `s_kwcid` or `ef_id` parameters in the URL.
+- Fixed an issue where Advertising data was sent and cookies were created before consent was given.
+- Fixed an issue in Safari where Brand Concierge streams were not parsed correctly.
+
 ## Version 2.31.0 - February 9, 2026
 
 **New features**

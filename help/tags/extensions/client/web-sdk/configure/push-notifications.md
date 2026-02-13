@@ -3,7 +3,12 @@ title: Push notification settings
 description: Configure push notification settings for the Web SDK tag extension.
 exl-id: 96ab7ea8-7180-46bb-9c15-eecba2009c52
 ---
-# Push notification settings
+# Push notification settings {#push-notifications}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_pushnotifications"
+>title="Push notifications"
+>abstract="Sets a VAPID public key for push notification authentication."
 
 >[!AVAILABILITY]
 >
