@@ -3,7 +3,7 @@ title: Build options
 description: Create a custom Web SDK build that disables features to lower build size.
 exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
 ---
-# Build options
+# Build options {#build-options}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_buildoptions"

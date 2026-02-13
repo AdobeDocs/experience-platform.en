@@ -3,7 +3,7 @@ title: Consent configuration settings
 description: Configure default consent and privacy settings for the tag extension.
 exl-id: 93913a8b-0351-409d-b26a-8dc2ac0296c5
 ---
-# Consent configuration settings
+# Consent configuration settings {#consent}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_consent"

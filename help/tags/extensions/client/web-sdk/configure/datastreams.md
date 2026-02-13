@@ -3,7 +3,7 @@ title: Datastream configuration settings
 description: Configure the datastream to send data to using the Web SDK tag extension.
 exl-id: 2d2504c6-b3f9-4e7b-aff4-a8d8d6c4e3dd
 ---
-# Datastream configuration settings
+# Datastream configuration settings {#datastreams}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_datastreams"

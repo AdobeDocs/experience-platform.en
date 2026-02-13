@@ -3,7 +3,7 @@ title: Streaming media configuration settings
 description: Customize how the Web SDK tag extension collects streaming media data.
 exl-id: f486d729-b7ad-4720-8399-71495cb9c57e
 ---
-# Streaming media configuration settings
+# Streaming media configuration settings {#streaming-media}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_streamingmedia"
