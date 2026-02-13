@@ -1,6 +1,7 @@
 ---
 title: Identity configuration settings
 description: Define how the tag extension identifies visitors.
+exl-id: 12e707f4-c37b-4c02-bfec-5ef7b98c2d3b
 ---
 # Identity configuration settings
 

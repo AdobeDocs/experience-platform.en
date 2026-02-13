@@ -1,6 +1,7 @@
 ---
 title: Brightscript overview
 description: Send data to Adobe Experience Platform from Roku devices.
+exl-id: eb7a954d-e888-49ec-b140-e709210a4fd6
 ---
 # Brightscript overview
 

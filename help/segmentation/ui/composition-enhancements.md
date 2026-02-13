@@ -3,8 +3,8 @@ title: Audience Composition Enhancements
 description: Learn about the enhancements made to Audience Composition with audience enrichment and faster activation.
 hide: yes
 hidefromtoc: yes
+exl-id: 068a178e-ef50-45f1-bcce-c207ebcd5ef1
 ---
-
 # Audience Composition enhancements
 
 You now have access to **two** enhancements for Audience Composition:

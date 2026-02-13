@@ -1,8 +1,6 @@
 ---
 title: Connect Demandbase Intent To Experience Platform Using The UI
 description: Learn how to connect Demandbase Intent to Experience Platform
-badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 7dc87067-cdf6-4dde-b077-19666dcb12e2
 ---
 # Connect [!DNL Demandbase Intent] to Experience Platform using the UI

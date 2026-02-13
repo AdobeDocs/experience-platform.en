@@ -1,6 +1,7 @@
 ---
 title: Apply response
 description: Perform an action based on a response from the Edge Network.
+exl-id: 64ea7d48-ce20-4694-a3f1-415fc5a97ac5
 ---
 # Apply response
 

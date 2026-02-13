@@ -1,6 +1,7 @@
 ---
 title: getVisitorId
 description: Retrieve the Experience Cloud Visitor ID service tag extension instance.
+exl-id: ecfd4325-1881-47a9-bc3c-abfc780ce52f
 ---
 # `getVisitorId()`
 

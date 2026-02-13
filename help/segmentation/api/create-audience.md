@@ -55,7 +55,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
  -H 'Accept: application/vnd.adobe.external.audiences+json; version=2'
  -d '{
     "name": "Sample audience name",
-    "description" "A sample description for the audience.",
+    "description": "A sample description for the audience.",
+    "audienceId": "4a815904-f2f9-4237-82fb-55605bcc2ad7",
     "namespace": "agora",
     "originName": "Agora_Collaboration"
  }'
@@ -65,6 +66,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
 | -------- | ---- | ----------- |
 | `name` | String | The name for the audience. |
 | `description` | String | An optional description for the audience. |
+| `audienceId` | String | An externally generated ID for the audience. |
 | `namespace` | String | The namespace for the audience. |
 | `originName` | String | The name of the audience's origin. |
 
@@ -74,6 +76,7 @@ A successful response returns HTTP status 200 with information about the newly c
 
 ```json
 {
+    "id": "6bb1ee15-8f64-49fd-bce3-d5c2f22f1f14",
     "name": "Sample audience name",
     "audienceId": "4a815904-f2f9-4237-82fb-55605bcc2ad7"
 }
@@ -81,5 +84,6 @@ A successful response returns HTTP status 200 with information about the newly c
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
+| `id` | String | The system generated ID for the audience. |
 | `name` | String | The name of the audience you created. |
-| `audienceId` | String | The ID of the audience you created. |
+| `audienceId` | String | The externally provided ID of the audience you created. |

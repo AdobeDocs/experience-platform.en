@@ -1,8 +1,8 @@
 ---
 title: sendPushSubscription
 description: Register push notification subscriptions with Adobe Experience Platform.
+exl-id: 7cb13834-46f4-481c-bd9d-600083eb6cfb
 ---
-
 # `sendPushSubscription` {#send-push-subscription}
 
 >[!AVAILABILITY]

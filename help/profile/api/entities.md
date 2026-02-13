@@ -8,6 +8,14 @@ exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
 ---
 # Entities endpoint (Profile access)
 
+>[!IMPORTANT]
+>
+>You can **only** use these endpoints if you have Real-Time CDP Ultimate. 
+>
+>If you have Real-Time CDP Prime, you can continue to ingest and use experience events for personalization use cases as well as view events within the Experience Platform UI, but you will **not** be able to programatically look up experience events using the API.
+>
+>If you have Real-Time CDP Ultimate and do **not** currently programatically look up events, please contact Adobe Customer Care to enable this feature.
+
 Adobe Experience Platform enables you to access [!DNL Real-Time Customer Profile] data using RESTful APIs or the user interface. This guide outlines how to access entities, more commonly known as "profiles", using the API. For more information on accessing profiles using the [!DNL Experience Platform] UI, please refer to the [Profile user guide](../ui/user-guide.md). 
 
 ## Getting started

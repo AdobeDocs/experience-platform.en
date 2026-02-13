@@ -12,6 +12,7 @@ role: User
 - [Segmentation Service overview](home.md)
 - [Segmentation data types](data-types.md)
 - [Segmentation guardrails](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [Audience validation](./validation.md)
 - Segmentation API {#api}
     - [Overview](api/overview.md)
     - [Getting started](api/getting-started.md)
