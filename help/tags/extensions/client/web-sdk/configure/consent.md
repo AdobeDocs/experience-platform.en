@@ -3,7 +3,12 @@ title: Consent configuration settings
 description: Configure default consent and privacy settings for the tag extension.
 exl-id: 93913a8b-0351-409d-b26a-8dc2ac0296c5
 ---
-# Consent configuration settings
+# Consent configuration settings {#consent}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_consent"
+>title="Consent"
+>abstract="Selects the default level of consent that is assumed if no other explicit consent preference is provided."
 
 The **[!UICONTROL Consent]** section allows you to select the default level of consent that is assumed if no other explicit consent preference is provided. Default consent level is not saved to user profiles.
 
