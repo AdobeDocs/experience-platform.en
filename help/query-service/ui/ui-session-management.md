@@ -8,15 +8,13 @@ solution: Experience Platform
 
 Use this guide to manage active Query Service sessions from the Adobe Experience Platform user interface. Session management helps administrators identify idle sessions, free shared capacity, and maintain reliable Data Distiller usage across sandboxes without disrupting active queries.
 
-## Permissions required for session management {#permissions}
+## Permissions required for session management {#permissions} 
 
 >[!AVAILABILITY]
 >
 >Session management is available only to organizations with Data Distiller entitlements.
 
-To view and end sessions, you must belong to an organization with Data Distiller access and have the **[!UICONTROL Manage Query Session]** permission assigned.
-
-Users without the required permissions can access Query Service but cannot view or manage active sessions.
+To view and end sessions, you must belong to an organization with Data Distiller access and have the **[!UICONTROL Manage Query Session]** permission assigned. Users without the required permissions can access Query Service but cannot view or manage active sessions.
 
 >[!IMPORTANT]
 >
@@ -24,15 +22,11 @@ Users without the required permissions can access Query Service but cannot view 
 
 ## View active sessions {#view-active-sessions}
 
-Administrators can view all active Query Service sessions across sandboxes in the IMS organization.
+Administrators can view all active Query Service sessions across sandboxes in the organization. Navigate to the Query Service workspace and select the **[!UICONTROL Admin]** tab to open session management.
 
-Navigate to the Query Service workspace and select the **[!UICONTROL Admin]** tab to open session management.
+![Admin tab showing Session Management table in Query Service workspace](../images/ui/session-management/session-management-admin-tab.png)
 
-![Admin tab showing Session Management table in Query Service workspace](../images/query-service/session-management-admin-tab.png)
-
-The session management table updates in near real time and lists all sessions currently consuming Query Service capacity.
-
-Each row represents a single session opened in the Query Editor.
+The session management table updates in near real time and lists all sessions currently consuming Query Service capacity. Each row represents a single session opened in the Query Editor.
 
 ## Session status and idle time {#session-status}
 
@@ -42,13 +36,11 @@ The session table provides information to help you decide whether a session can 
 
 **[!UICONTROL Inactive]** indicates the user is not actively running a query; these sessions can be ended. **[!UICONTROL Active]** indicates a query is currently running; ending the session is disabled while the query is in progress.
 
-When a session becomes active, the **[!UICONTROL End session]** control is unavailable until query execution completes.
+When a session is active, the **[!UICONTROL End session]** control is unavailable until query execution completes.
 
 ### Idle time and remaining session time
 
-Idle time shows how long a session has been open without user interaction.
-
-Remaining session time indicates how long the session can stay open before it is automatically closed by the system. Sessions automatically expire after the maximum allowed duration (two hours of inactivity) to free capacity for other users.
+Idle time shows how long a session has been open without user interaction. Remaining session time indicates how long the session can stay open before it is automatically closed by the system. Sessions automatically expire after the maximum allowed duration (two hours of inactivity) to free capacity for other users.
 
 ## End idle sessions {#end-idle-sessions}
 

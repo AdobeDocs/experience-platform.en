@@ -103,7 +103,7 @@ role: User,Developer
     - [Query schedules](ui/query-schedules.md)
     - [Query logs](ui/query-logs.md)
     - [Monitor scheduled queries](ui/monitor-queries.md)
-    - [Manage Session](ui/ui-session-management.md)
+    - [Manage Sessions](ui/ui-session-management.md)
     - [Credentials guide](ui/credentials.md)
     - [Migrate JWT to OAuth credentials](ui/migrate-jwt-to-oauth.md)
     - [Generate output datasets from query results](ui/create-datasets.md)
