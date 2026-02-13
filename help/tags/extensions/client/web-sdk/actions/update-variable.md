@@ -1,6 +1,7 @@
 ---
 title: Update variable
 description: Modifies the contents of a variable data element.
+exl-id: 6c558d1e-85b4-45f9-ba4d-5fed1ec6e308
 ---
 # Update variable
 
@@ -14,6 +15,6 @@ The XDM schema used in the editor matches the schema selected within the variabl
 
 ![Screenshot of the action configuration interface showing an updated property](../assets/update-variable-set-property.png)
 
-If you select a variable data element that uses a data object instead of an XDM object, available fields depend on the products selected when configuring the data element. For example, if you create a data object that includes Adobe Analytics, fields, then selecing the variable data element in this UI would provide fields that you can fill out specific to Adobe Analytics.
+If you select a variable data element that uses a data object instead of an XDM object, available fields depend on the products selected when configuring the data element. For example, if you create a data object that includes Adobe Analytics, fields, then selecting the variable data element in this UI would provide fields that you can fill out specific to Adobe Analytics.
 
 ![Screenshot of the action configuration interface showing a variable data element based on a data object](../assets/variable-data-element-data.png)

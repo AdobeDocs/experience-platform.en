@@ -13,7 +13,7 @@ Data Distiller enables data scientists and engineers to enrich their machine lea
 
 >[!IMPORTANT]
 >
->This workflow requires Data Distiller and an Adobe Experience Platform Intelligence license. If you do not have either of these products, please speak to your Adobe Service representative.
+>This workflow requires Data Distiller license. If you do not have this product, please speak to your Adobe Service representative.
 
 ![An infographic detailing the AI-ML feature pipeline.](../../images/data-distiller/ai-ml-feature-pipeline.png)
 

@@ -24,7 +24,7 @@ alloy("configure", {
     },
     sessionStorageEnabled: true
   },
-  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"],
+  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints", "oneTimeAnalyticsReferrer"],
   debugEnabled: true,
   defaultConsent: "pending",
   downloadLinkQualifier: "\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$",
@@ -36,6 +36,9 @@ alloy("configure", {
     if(content.xdm.web?.webReferrer) delete content.xdm.web.webReferrer.URL;
   },
   prehidingStyle: "#container { opacity: 0 !important }",
+  conversation: {
+    stickyConversationSession: false
+  },
   targetMigrationEnabled: true,
   thirdPartyCookiesEnabled: false
 });

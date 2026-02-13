@@ -234,11 +234,11 @@ You can use the following sources to ingest marketing automation data to Experie
 | [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) | Streaming | Azure |
 | [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) | Batch | Azure |
 | [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) | Batch | Azure |
-| [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | Batch | Azure |
+| [[!DNL Oracle Eloqua] (V2)](connectors/marketing-automation/eloqua.md) | Batch | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | Batch | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | Batch | Azure |
 | [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Streaming | Azure |
-| [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | Batch | Azure, AWS |
+| [[!DNL Salesforce Marketing Cloud] (V2)](connectors/marketing-automation/sfmc.md) | Batch | Azure |
 
 {style="table-layout:auto"}
 

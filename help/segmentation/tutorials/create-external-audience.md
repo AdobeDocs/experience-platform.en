@@ -2,8 +2,8 @@
 title: Create and Activate an External Audience
 type: Tutorial
 description: Learn how to create an external audience in Adobe Experience Platform using the Experience Platform APIs.
+exl-id: 18271a29-1cda-4fdf-8c3d-0dc4c64428a5
 ---
-
 # Create and activate an external audience using the API
 
 This tutorial walks through the steps required to create an external audience using the Adobe Experience Platform APIs.
@@ -190,4 +190,3 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/{AUDIENCE_
 Once you've confirmed that the external audience has been successfully ingested, you can see it in Audience Portal and use it in downstream services such as destinations.
 
 For more information about Audience Portal, read the [Audience Portal UI guide](/help/segmentation/ui/audience-portal.md). For more information on destinations, read the [destinations overview](/help/destinations/home.md).
-

@@ -1,6 +1,7 @@
 ---
 title: edgeConfigOverrides
 description: Configure datastream overrides for your implementation.
+exl-id: 9c5dde06-ae73-4cad-b8b4-4cb5cd00988c
 ---
 # `edgeConfigOverrides` (`configure` command)
 

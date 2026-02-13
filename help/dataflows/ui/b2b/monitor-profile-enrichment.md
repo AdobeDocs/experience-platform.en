@@ -3,6 +3,7 @@ description: Use the [!UICONTROL Profile Enrichment] dashboard to understand if 
 solution: Experience Platform
 title: Monitor profile enrichment jobs
 type: Tutorial
+badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
 ---
 # Monitor profile enrichment jobs in the UI {#monitor-profile-enrichment}

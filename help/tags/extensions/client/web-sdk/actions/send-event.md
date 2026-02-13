@@ -1,6 +1,7 @@
 ---
 title: Send event
 description: Send data to the Adobe Experience Platform Edge Network.
+exl-id: 4ac7750e-48ab-4eb6-873d-bb2556dbf788
 ---
 # Send event
 

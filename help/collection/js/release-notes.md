@@ -10,6 +10,22 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.31.0 - February 9, 2026
+
+**New features**
+
+- Added the availability of `"oneTimeAnalyticsReferrer"` to the [`context`](commands/configure/context.md) array of strings.
+- Added the Brand Concierge component.
+- Added `meta.queueTimeMillis` to network request to record time between event creation and time sent.
+- Ability to persist the identity map so it can be populated with subsequent calls.
+
+**Fixes and improvements**
+
+- The `aria-label` and `name` attributes are now considered in [automatic link collection](commands/configure/clickcollectionenabled.md).
+- Fixed a possible race condition with identity map integrations.
+- Fixed an issue where timestamp was not included in `streamingMedia`.
+- Fixed an issue where custom code actions were only running once.
+
 ## Version 2.30.0 - September 24, 2025
 
 **New features**

@@ -89,17 +89,28 @@ If you use device lookups when [configuring your datastream](/help/datastreams/c
 
 See [User agent client hints](/help/collection/use-cases/client-hints.md) for more information.
 
-Set the `context` array of strings when running the `configure` command. If you omit this property when configuring the SDK, all context information except `"highEntropyUserAgentHints"` is collected by default. Set this property if you want to collect high entropy client hints, or if you want to omit other context information from data collection. Strings can be included in any order.
+### One-time Analytics referrer {#one-time-analytics-referrer}
 
->[!NOTE]
+The `"oneTimeAnalyticsReferrer"` keyword sends a referrer value to Adobe Analytics only on the first non-decisioning `sendEvent` call for a page. The primary use case for this context keyword is to prevent the [Referrer](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) dimension in Adobe Analytics from being inflated by hits primarily used in Analytics and Target integrations.
+
+If a given `sendEvent` command uses a decisioning event type (`decisioning.propositionFetch`, `decisioning.propositionDisplay`, `decisioning.propositionInteract`), then it is ignored when calculating the first `sendEvent` on a page. If the referrer value changes on the page and another `sendEvent` is triggered, the new referrer value is included in the payload. This condition allows the feature to be used with single-page applications.
+
+When a duplicate referrer value is detected, the library sets `data.__adobe.analytics.referrer` to an empty string (`""`). 
+Setting this data object field to an empty string effectively clears the value when a hit arrives to Adobe Analytics, since the data object overwrites any XDM object equivalent field. It does not impact the XDM object, allowing that data to continue to be sent to an Experience Platform dataset if you include multiple services in a datastream.
+
+## Implementation
+
+Set the `context` array of strings when running the `configure` command. If you omit this property when configuring the SDK, all context information except `"highEntropyUserAgentHints"` and `"oneTimeAnalyticsReferrer"` are collected by default. Set this property if you want to collect high entropy client hints, or if you want to omit other context information from data collection. Strings can be included in any order.
+
+>[!TIP]
 >
->If you want to collect all context information, including high entropy client hints, you must include every value in the `context` array string. The default `context` value omits `highEntropyUserAgentHints`, and if you set the `context` property, any omitted values do not collect data.
+>If you want to collect all context information, including high entropy client hints, you must include every value in the `context` array string. The default `context` value omits `"highEntropyUserAgentHints"` and `"oneTimeAnalyticsReferrer"`; if you set the `context` property, any omitted values do not collect data.
 
 ```js
 alloy("configure", {
   datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]
+  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints", "oneTimeAnalyticsReferrer"]
 });
 ```
 

@@ -6,29 +6,35 @@ exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
 ---
 # Use multiple Web SDK instances
 
-There are certain cases where you might want to interact with two different properties on the same page. These cases include:
+There are certain cases where you might want to interact with two different properties on the same page. Possible scenarios include:
 
 * Companies that have been acquired and are working on integrating their websites together
 * Data-sharing relationships between multiple companies
-* Customers who are testing new Adobe Solutions and don't want to disrupt their existing implementation
+* Customers who are testing new Adobe solutions and don't want to disrupt their existing implementation
 
-The SDK allows you to create a separate instance for each property by adding another name to the array in the base code. The following example provides two names, `titanium` and `copper`.
+The SDK allows you to create a separate instance for each property by adding another name to the array in the [base code](../js/install/base-code.md). The following example provides two names, `titanium` and `copper`.
 
 ```html
+<!-- Base code -->
 <script>
   !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
   []).push(o),n[o]=function(){var u=arguments;return new Promise(
-  function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
+  function(i,l){n.setTimeout(function(){n[o].q.push([i,l,u])})})},n[o].q=[])})}
   (window,["titanium", "copper"]);
 </script>
-<script src="alloy.js" async></script>
+
+<!-- Load the Web SDK (JavaScript library loader or Tags embed code) -->
+<!-- <script src=".../alloy.min.js" async></script> -->
+<!-- <script src=".../launch-<ENV>.min.js" async></script> -->
 ```
 
-As a result, the script creates two instances of the SDK. The global function for interacting with the first instance is named `titanium` and the global function for interacting with the second instance is named `copper`.
+As a result, the script creates two global functions (`titanium` and `copper` in the above example) that become two SDK instances when the library initializes. Each instance maintains its own configuration and state; any command that uses `titanium` is kept isolated from `copper`.
 
-By creating two separate instances, each can be configured for a different property. Any communication or data persistence that occurs due to interacting with `titanium` is kept isolated from `copper`.
+>[!TIP]
+>
+>If using the base code with tags, make sure that all instance names that you set match all [SDK instance names](/help/tags/extensions/client/web-sdk/configure/general.md) when configuring the tag extension.
 
-Following the above example, you can execute commands using each instance:
+Following the naming pattern example of `titanium` and `copper` as Web SDK instances, you can independently execute commands:
 
 ```javascript
 titanium("configure", {
@@ -54,7 +60,7 @@ copper("sendEvent", {
 });
 ```
 
-Be sure to execute the `configure` command for each instance before executing other commands on the same instance.
+Be sure to execute the [`configure`](../js/commands/configure/overview.md) command for each instance before executing other commands on the same instance.
 
 >[!IMPORTANT]
 >

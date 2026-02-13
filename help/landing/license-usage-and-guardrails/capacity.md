@@ -62,7 +62,17 @@ Experience Platform calculates the sandbox's throughput in 15 minute rolling int
 
 If your usage reaches 80% and 90% of your licensed capacity, Experience Platform will issue an alert, notifying that you are reaching the maximum of your specified capacity. You can modify the settings to customize the capacity percentage to receive the alert or remove the alert entirely.
 
-If your usage goes to above 100% of your licensed capacity, you will be considered in breach of your capacity. At this point, you will experience performance latency, and your service level targets (SLTs) will **not** be guaranteed.
+If your usage goes above 100% of your licensed capacity, you will be considered in breach of your capacity. If you're in breach of your capacity, the following limitations will be applied:
+
+>[!NOTE]
+>
+>If you have access to Adobe Journey Optimizer, the following limitations will **not** apply.
+
+- Event data **can** be removed from streaming personalization if the event processing queue exceeds 12 hours
+- Removed event data will **not** be ingested into Profile
+  - You will be able to see when events were removed
+  - Events will be available within the data lake, according to your entitlements
+  - You *can* use Query Service to directly re-ingest the data, if required
 
 ## Access {#access}
 

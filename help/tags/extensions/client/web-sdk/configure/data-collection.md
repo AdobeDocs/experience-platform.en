@@ -1,6 +1,7 @@
 ---
 title: Data collection configuration settings
 description: Configure data collection settings in the Web SDK tag extension.
+exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
 ---
 # Data collection configuration settings
 
@@ -113,3 +114,4 @@ Automatically collect visitor information, which populates specific XDM fields f
 * **[!UICONTROL Environment]**: Collects information about the user's browser.
 * **[!UICONTROL Place context]**: Collects information about the user's location.
 * **[!UICONTROL High entropy user-agent hints]**: Collects more detailed information about the user's device.
+* **[!UICONTROL Send referrer to Adobe Analytics only once per page view]**: Prevent duplicate referrer data from being sent to Adobe Analytics.
