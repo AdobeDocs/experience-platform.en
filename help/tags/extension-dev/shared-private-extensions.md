@@ -7,7 +7,7 @@ exl-id: 3dfd801a-febc-4461-bd99-5f97682518ce
 
 Adobe Experience Platform allows you to manage **[!UICONTROL Owned]** extensions. You can upload new extensions, deploy new versions, and release them to either private or public availability. 
 
-**[!UICONTROL Usage Authorizations]** is a powerful feature that enables you to securely share private extension packages with trusted partners without making them publicly available in the extension catalog. This feature creates a secure bridge between organizations, allowing you to leverage each other's custom extension code while maintaining privacy and control over your proprietary solutions.
+**[!UICONTROL Usage Authorizations]** is a powerful feature that you can use to securely share private extension packages with trusted partners without making them publicly available in the extension catalog. Use this feature to create a secure bridge between organizations, allowing you to leverage each other's custom extension code while maintaining privacy and control over your proprietary solutions.
 
 ## Manage an extension  {#manage-extension}
 
@@ -15,7 +15,7 @@ Extension developers can build extensions locally and use open source NPM-based 
 
 ### Upload an extension {#upload-extension}
 
-To uppload an extension, navigate to the Data Collection UI and select **[!UICONTROL Extension Management]** from the left navigation. From here, select the **[!UICONTROL Owned]** tab. This tab shows any extensions owned by you or your organization. They are separated by platform, and you can see what extensions you have on each platform (Web, Mobile, and Edge) using the dropdown. Select **[!UICONTROL Upload New Extension]**.
+To upload an extension, navigate to the Data Collection UI and select **[!UICONTROL Extension Management]** from the left navigation. From here, select the **[!UICONTROL Owned]** tab. This tab shows any extensions owned by you or your organization. They are separated by platform, and you can see what extensions you have on each platform (Web, Mobile, and Edge) using the dropdown. Select **[!UICONTROL Upload New Extension]**.
 
 ![The Owned tab showing a list of extensions shared with this org, highlighting drop down and upload new extension.](../images/shared-extensions/upload-extension.png)
 
@@ -41,7 +41,7 @@ You are returned to the [!UICONTROL Owned] tab where your updloaded extension is
 
 ### Release an extension {#release-extension}
 
-To release the extension to be privately available, select your extension to disaply the information panel on the right. Here you can see the following details of the extension:
+To release the extension to be privately available, select your extension to display the information panel on the right. Here you can see the following details of the extension:
 
 * **Version** - Shows the latest version and the state it is currently in. You can use the dropdown menu to view the version history of the extension.
 * **Actions** - Allows you to **[!UICONTROL Upload New Version]** of the extension and **[!UICONTROL Release To Private]**.
@@ -79,10 +79,10 @@ Both public and private extension packages can be shared through [!UICONTROL Usa
 
 Organizations often develop specialized extensions tailored to their unique business requirements. These extensions may contain proprietary logic, custom integrations, or sensitive configurations that shouldn't be made publicly available. Usage authorizations solve this challenge by enabling:
 
-* **Selective sharing**: Share private extensions only with trusted partner organizations
-* **Maintained privacy**: Keep sensitive extension code out of the public catalog
-* **Collaborative development**: Enable trusted partners to benefit from your custom solutions
-* **Controlled access**: Maintain full control over who can access and use your private extensions
+* **Selective sharing**: Share private extensions only with trusted partner organizations.
+* **Maintained privacy**: Keep sensitive extension code out of the public catalog.
+* **Collaborative development**: Enable trusted partners to benefit from your custom solutions.
+* **Controlled access**: Maintain full control over who can access and use your private extensions.
 
 The sharing process involves two key participants:
 
