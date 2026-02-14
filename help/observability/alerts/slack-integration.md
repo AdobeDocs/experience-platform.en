@@ -27,7 +27,7 @@ Select the **[!UICONTROL App Builder]** template, then enter a **[!UICONTROL Pro
 
 You receive confirmation that your project has been created and are taken to the **[!UICONTROL Project overview]** tab. From here you can add a **[!UICONTROL Project description]**.
 
-![The Project overview tab showing project details.](../images/alerts/slack-integration/admin-console-project.png)
+![The Project overview tab showing project details.](../images/alerts/slack-integration/developer-console-project.png)
 
 ## Initialize project {#initialize-project}
 
@@ -47,19 +47,19 @@ Once you have your templated project set up, initialize the project.
 
 1. Select your `Organization` using the arrow keys, then select the `Project` you created earlier in the Developer Console. Select `Only Templates Supported By My Org` for the templates to search, skip any samples, then press `Enter`.
 
-    ![The aio app init prompt showing Organization and Project selection and Only Templates Supported By My Org.](../images/alerts/slack-integration/aio-init-organization-project.png)
+    ![Terminal showing Organization and Project selection and Only Templates Supported By My Org.](../images/alerts/slack-integration/terminal-organization-project.png)
 
 1. Specify the Adobe I/O App features you want to enable for this project. Use the arrow keys to scroll and select `Actions: Deploy Runtime actions`.
 
-    ![The aio app init prompt showing App features with Actions: Deploy Runtime actions selected.](../images/alerts/slack-integration/aio-init-app-features.png)
+    ![Terminal showing App features with Actions: Deploy Runtime actions selected.](../images/alerts/slack-integration/terminal-app-features.png)
 
 1. Use the arrow keys to scroll and select `Adobe Experience Platform: Realtime Customer Profile` for the type of sample actions you want to create.
 
-    ![The aio app init prompt showing sample actions type with Adobe Experience Platform: Realtime Customer Profile selected.](../images/alerts/slack-integration/aio-init-sample-actions.png)
+    ![Terminal showing sample actions type with Adobe Experience Platform: Realtime Customer Profile selected.](../images/alerts/slack-integration/terminal-sample-actions.png)
 
-1. Scroll and select `Pure HTML/JS` for the UI you want to add to your template. Leave the sample actions as default by pressing `Enter`, then leave the name as the default and press `Enter` again.
+1. Scroll and select `Pure HTML/JS` for the UI you want to add to your template. Press `Enter` to leave the sample actions as default, then press `Enter` again to leave the name as the default.
 
-    ![The aio app init prompt showing UI selection with Pure HTML/JS selected.](../images/alerts/slack-integration/aio-init-ui-template.png)
+    ![Terminal showing UI selection with Pure HTML/JS selected.](../images/alerts/slack-integration/terminal-ui-template.png)
 
     You receive confirmation that the app initialization has finished.
 
@@ -77,15 +77,17 @@ Once you have your templated project set up, initialize the project.
 
 1. Select `Only Action Templates Supported By My Org`. A list of templates appears.
 
-    ![The aio app add action prompt showing the list of action templates.](../images/alerts/slack-integration/aio-add-action-templates.png)
+    ![Terminal showing the list of action templates.](../images/alerts/slack-integration/terminal-action-templates.png)
 
 1. Select the template by pressing the spacebar, then navigate to `@adobe/generator-add-publish-events` and press `Enter`.
+
+    ![Terminal showing the template.](../images/alerts/slack-integration/terminal-action-select-template.png)
 
     A confirmation that the `npm package @adobe/generator-add-publish-events` has been installed is displayed.
 
 1. Name the action `webhook-proxy`.
 
-    ![The aio app add action prompt showing the action named webhook-proxy.](../images/alerts/slack-integration/aio-add-action-name-webhook-proxy.png)
+    ![Terminal showing the action named webhook-proxy.](../images/alerts/slack-integration/terminal-add-action-name.png)
 
     A confirmation that the template has been installed is displayed.
 
@@ -276,15 +278,15 @@ In the Developer Console, open your App Builder project, then select your **[!UI
 
 On the Workspace overview page, select **[!UICONTROL Add service]** and **[!UICONTROL Event]**.
 
-![The Workspace overview page highlighting Add service and Event.](../images/alerts/slack-integration/workspace-add-service-event.png)
+![The Workspace overview page highlighting Add service and Event.](../images/alerts/slack-integration/workspace-service-event.png)
 
 On the Add events page, select **[!UICONTROL Experience Platform]** and **[!UICONTROL Platform notifications]**, then select **[!UICONTROL Next]**.
 
-![The Add events page showing Experience Platform and Platform notifications selected.](../images/alerts/slack-integration/add-events-platform-notifications.png)
+![The Add events page showing Experience Platform and Platform notifications selected.](../images/alerts/slack-integration/add-events.png)
 
 Select the events you want to receive notifications for, then select **[!UICONTROL Next]**.
 
-![The Add events page showing the list of events to subscribe to.](../images/alerts/slack-integration/add-events-select-events.png)
+![The Add events page showing the list of events to subscribe to.](../images/alerts/slack-integration/select-events.png)
 
 Select your server-to-server authentication credential, then select **[!UICONTROL Next]**.
 
@@ -292,12 +294,12 @@ Select your server-to-server authentication credential, then select **[!UICONTRO
 
 Enter an **[!UICONTROL Event registration name]** and a clear **[!UICONTROL Event registration description]** for the registration, then select **[!UICONTROL Next]**.
 
-![The Add events page showing Event registration name and Event registration description fields.](../images/alerts/slack-integration/add-events-registration-name-description.png)
+![The Add events page showing Event registration name and Event registration description fields.](../images/alerts/slack-integration/add-events-registration.png)
 
 Select **[!UICONTROL Runtime Action]** as the delivery method and the `slack-webhook-proxy/runtime-proxy` action you created, then select **[!UICONTROL Save configured events]**.
 
-![The Add events page showing Runtime Action delivery method and Save configured events.](../images/alerts/slack-integration/add-events-runtime-action-save.png)
+![The Add events page showing Runtime Action delivery method and Save configured events.](../images/alerts/slack-integration/add-events-runtime.png)
 
 Your webhook proxy is now configured. You are returned to the Webhook proxy page. You can test the entire flow end-to-end by selecting the **[!UICONTROL Send sample event]** icon next to any configured event.
 
-![The webhook proxy page showing configured events and the Send sample event icon.](../images/alerts/slack-integration/webhook-proxy-configured-send-sample.png)
+![The webhook proxy page showing configured events and the Send sample event icon.](../images/alerts/slack-integration/send-sample.png)
