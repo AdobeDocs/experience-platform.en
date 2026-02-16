@@ -61,6 +61,8 @@ This layout allows you to quickly identify timing relationships between your dat
 
 ### Which view should I use? {#which-view}
 
+Use the table below to choose the right view for your task. Match what you need to do with the recommended view to navigate efficiently.
+
 | I need to... | Use this view |
 |--------------|---------------|
 | See all my profile-enabled datasets and their schedules at once | [Timeline view](job-schedules.md) |

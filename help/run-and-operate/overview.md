@@ -43,13 +43,13 @@ To access the Run and Operate tools from the Experience Platform UI:
     >
     >Currently, the only available capability is [Job Schedules](job-schedules.md).
 
-![Experience Platform UI showing the Run and operate left nav.](assets/overview/run-and-operate.png)
+![Experience Platform UI showing the Run and Operate left nav.](assets/overview/run-and-operate.png)
 
 ## Available tools {#available-tools}
 
 The following tools help you inspect and optimize your data operations.
 
-### Job Schedules {#job-schedules}
+### Job schedules {#job-schedules}
 
 >[!IMPORTANT]
 >

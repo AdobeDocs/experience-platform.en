@@ -8,7 +8,7 @@ description: This document lists the table of contents for Adobe Experience Plat
 role: Admin, User
 ---
 
-# Run and Operate Guide Help {#run-and-operate}
+# Run and Operate guide help {#run-and-operate}
 
 * [Overview](overview.md)
 * Job Schedules {#job-schedules}

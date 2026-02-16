@@ -38,7 +38,7 @@ Before using [!UICONTROL Job Schedules], you should be familiar with the followi
 
 Understanding these components helps you interpret job execution patterns and diagnose issues when they occur.
 
-## Understanding the Job Schedules interface {#understanding-interface}
+## Understanding the job schedules interface {#understanding-interface}
 
 To access [!UICONTROL Job Schedules]:
 
@@ -72,7 +72,7 @@ Use the time period selectors to choose how far back to look at scheduled jobs.
 * **Yesterday**: View jobs that ran yesterday.
 * **Last 7 days**: View jobs from the past week.
 
-### Batch Job Schedules Details {#job-schedules-details}
+### Batch job schedules details {#job-schedules-details}
 
 The main view shows you when your batch jobs are scheduled to run throughout the day. You can:
 
