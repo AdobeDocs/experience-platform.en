@@ -2,8 +2,8 @@
 title: Run and Operate overview
 description: Inspect, troubleshoot, and optimize your Experience Platform implementations with the Run and Operate tools. Gain visibility into scheduled batch activations, identify configuration issues, and improve system reliability.
 hide: yes
+exl-id: 7f44cdf3-4db1-47f9-bcde-401f6dcfc551
 ---
-
 # Run and Operate overview
 
 >[!AVAILABILITY]
@@ -80,4 +80,3 @@ Now that you understand the purpose and capabilities of [!UICONTROL Run and Oper
 * Learn how to [inspect job schedules](job-schedules.md) for your batch ingestion and activations
 * Understand how to [configure scheduled activations](../destinations/ui/activate-batch-profile-destinations.md) for batch destinations
 * Explore [dataflow monitoring](../dataflows/ui/monitor-destinations.md) for destinations
-
