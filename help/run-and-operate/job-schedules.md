@@ -4,7 +4,6 @@ solution: Experience Platform
 title: Inspect Job Schedules
 type: Tutorial
 hide: yes
-hidefromtoc: yes 
 ---
 
 # Inspect job schedules

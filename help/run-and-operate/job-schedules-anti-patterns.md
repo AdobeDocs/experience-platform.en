@@ -4,7 +4,6 @@ solution: Experience Platform
 title: Identify Job Schedule Anti-Patterns
 type: Tutorial
 hide: yes
-hidefromtoc: yes 
 ---
 
 # Identify job schedule anti-patterns

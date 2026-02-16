@@ -2,7 +2,6 @@
 title: Run and Operate overview
 description: Inspect, troubleshoot, and optimize your Adobe Experience Platform implementations with the Run and Operate tools. Gain visibility into scheduled batch activations, identify configuration issues, and improve system reliability.
 hide: yes
-hidefromtoc: yes 
 ---
 
 # Run and Operate overview
