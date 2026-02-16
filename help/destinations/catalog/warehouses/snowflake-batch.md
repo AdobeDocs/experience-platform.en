@@ -7,10 +7,6 @@ exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
 ---
 # Snowflake Batch connection {#snowflake-destination}
 
->[!AVAILABILITY]
->
->This destination connector is in limited availability and only available to Real-Time CDP Ultimate customers provisioned in the [VA7 region](/help/landing/multi-cloud.md#azure-regions).
-
 ## Overview {#overview}
 
 Use this destination to send audience data into dynamic tables in your Snowflake account. Dynamic tables provide access to your data without requiring physical data copies.
@@ -184,16 +180,11 @@ The data is staged into your Snowflake account via a dynamic table. Check your S
 The dynamic table contains the following columns:
 
 * **TS**: A timestamp column that represents when each row was last updated
+* **Merge policy ID**: The ID of the merge policy used for the export
 * **Mapping attributes**: Every mapping attribute that you select during the activation workflow is represented as a column header in Snowflake
 * **Audience membership**: Membership to any audience mapped to the dataflow is indicated via an `active` entry in the corresponding cell
 
-![Screenshot showing the Snowflake interface with dynamic table data](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png)
-
-## Known limitations {#known-limitations}
-
-### Regional availability {#regional-availability}
-
-The [!DNL Snowflake] batch destination is currently only available to Real-Time CDP customers provisioned in the Experience Platform VA7 region.
+![Screenshot showing the Snowflake interface with dynamic table data](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 
