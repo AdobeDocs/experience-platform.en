@@ -4,8 +4,8 @@ solution: Experience Platform
 title: View Job Schedule Details
 type: Tutorial
 hide: yes
+exl-id: e568bfc3-f0e1-4305-94e7-070928459a87
 ---
-
 # View job schedule details
 
 >[!AVAILABILITY]
