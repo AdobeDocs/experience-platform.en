@@ -4,9 +4,8 @@ solution: Experience Platform
 title: View Job Schedule Details
 type: Tutorial
 hide: yes
-hidefromtoc: yes
-exl-id: e568bfc3-f0e1-4305-94e7-070928459a87
 ---
+
 # View job schedule details
 
 >[!AVAILABILITY]
@@ -61,6 +60,8 @@ The timeline view uses a horizontal and vertical layout to help you understand j
 This layout allows you to quickly identify timing relationships between your data pipeline jobs and downstream processing. Ideally, upstream jobs (like data lake and profile ingestion) should complete to the left of these vertical markers, ensuring data is ready before segmentation and activation begin. Jobs that extend past these markers indicate potential timing issues where downstream processes may start before data is fully prepared.
 
 ### Which view should I use? {#which-view}
+
+Use the table below to choose the right view for your task. Match what you need to do with the recommended view to navigate efficiently.
 
 | I need to... | Use this view |
 |--------------|---------------|
