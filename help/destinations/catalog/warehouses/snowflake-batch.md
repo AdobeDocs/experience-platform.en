@@ -76,6 +76,10 @@ Before configuring your Snowflake connection, make sure you meet the following p
 
 Read the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) for more information on the necessary permissions.
 
+>[!IMPORTANT]
+>
+>This destination does not support Snowflake accounts that are behind a firewall or that use [[!DNL Azure Private Link]](https://docs.snowflake.com/en/user-guide/privatelink-azure).
+
 ## Supported audiences {#supported-audiences}
 
 This section describes which types of audiences you can export to this destination. The two tables below indicate which audiences this connector supports, by _audience origin_ and _profile types included in the audience_:
