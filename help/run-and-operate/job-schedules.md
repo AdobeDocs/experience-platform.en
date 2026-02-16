@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Inspect Job Schedules
 type: Tutorial
 hide: yes
-hidefromtoc: yes 
+hidefromtoc: yes
+exl-id: ce855b19-66ab-4d3d-924e-fb9928676aa2
 ---
-
 # Inspect job schedules
 
 >[!AVAILABILITY]
