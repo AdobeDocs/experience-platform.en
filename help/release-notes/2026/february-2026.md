@@ -30,7 +30,7 @@ Experience Platform allows you to subscribe to event-based alerts for various Ex
 
 | Feature | Description |
 | --- | --- |
-| [!DNL Slack] integration for customer-facing alerts | You can now deliver customer-facing alerts to [!DNL Slack]. Follow the step-by-step tutorial to set up the [!DNL Slack] integration and receive alert notifications directly in your [!DNL Slack] workspace. |
+| [!DNL Slack] integration for customer-facing alerts | You can now deliver customer-facing alerts to [!DNL Slack]. Follow the [step-by-step tutorial](../../observability/alerts/slack-integration.md) to set up the [!DNL Slack] integration and receive alert notifications directly in your [!DNL Slack] workspace. |
 
 {style="table-layout:auto"}
 
