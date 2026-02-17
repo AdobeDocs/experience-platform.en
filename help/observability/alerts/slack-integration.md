@@ -25,7 +25,7 @@ Select the **[!UICONTROL App Builder]** template, then enter a **[!UICONTROL Pro
 
 ![The Developer Console highlighting Project Title, Add Workspace, and Save.](../images/alerts/slack-integration/developer-console-save.png)
 
-You receive confirmation that your project has been created and are taken to the **[!UICONTROL Project overview]** tab. From here you can add a **[!UICONTROL Project description]**.
+You'll receive confirmation that your project has been created and are taken to the **[!UICONTROL Project overview]** tab. From here you can add a **[!UICONTROL Project description]**.
 
 ![The Project overview tab showing project details.](../images/alerts/slack-integration/developer-console-project.png)
 
@@ -45,7 +45,7 @@ Once you have your templated project set up, initialize the project.
     aio app init slack-webhook-proxy
     ```
 
-1. Select your `Organization` using the arrow keys, then select the `Project` you created earlier in the Developer Console. Select `Only Templates Supported By My Org` for the templates to search. Next, press `Enter` to skip templates and install a standalone application.
+1. Select your `Organization` using the arrow keys, then select the `Project` you created earlier in the Developer Console. Select `Only Templates Supported By My Org` for the templates to search. Next, press **Enter** to skip templates and install a standalone application.
 
     ![Terminal showing Organization and Project selection and Only Templates Supported By My Org.](../images/alerts/slack-integration/terminal-organization-project.png)
 
@@ -57,7 +57,7 @@ Once you have your templated project set up, initialize the project.
 
     ![Terminal showing sample actions type with Adobe Experience Platform: Realtime Customer Profile selected.](../images/alerts/slack-integration/terminal-sample-actions.png)
 
-1. Scroll and select `Pure HTML/JS` for the UI you want to add to your template. Press `Enter` to leave the sample actions as default, then press `Enter` again to leave the name as the default.
+1. Scroll and select `Pure HTML/JS` for the UI you want to add to your template. Press **Enter** to leave the sample actions as default, then press **Enter** again to leave the name as the default.
 
     ![Terminal showing UI selection with Pure HTML/JS selected.](../images/alerts/slack-integration/terminal-ui-template.png)
 
@@ -79,7 +79,7 @@ Once you have your templated project set up, initialize the project.
 
     ![Terminal showing the list of action templates.](../images/alerts/slack-integration/terminal-action-templates.png)
 
-1. Select the template by pressing the spacebar, then navigate to `@adobe/generator-add-publish-events` using your `Up` and `Down` arrows. Finally, select the template by pressing the `Spacebar` and press `Enter`.
+1. Select the template by pressing the spacebar, then navigate to `@adobe/generator-add-publish-events` using your **Up** and **Down** arrows. Finally, select the template by pressing the **Spacebar** and press **Enter**.
 
     ![Terminal showing the template.](../images/alerts/slack-integration/terminal-action-select-template.png)
 
@@ -223,7 +223,7 @@ exports.main = main;
 
 ### Configure the action in app.config.yaml {#app-config}
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >The action configuration in `app.config.yaml` is critical. You must use `web: no` to create a non-web action that can be registered as a Runtime Action in the Developer Console.
 
