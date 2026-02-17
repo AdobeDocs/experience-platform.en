@@ -132,7 +132,7 @@ To authenticate to the destination, select **[!UICONTROL Connect to destination]
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_batch_accountid"
->title="Enter your Snowflake Account ID"
+>title="Enter your Snowflake Data Sharing Account Identifier"
 >abstract="If your account is linked to an organization use this format: `OrganizationName.AccountName`<br><br> If your account is not linked to an organization use this format:`AccountName`"
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
@@ -141,7 +141,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Snowflake Account ID]**: Your Snowflake account ID. Use the following Account ID format depending on whether your account is linked to an organization:
+* **[!UICONTROL Snowflake Account ID]**: Your [Snowflake Data Sharing Account Identifier](https://docs.snowflake.com/en/user-guide/admin-account-identifier#label-account-name-data-sharing). Use the following format depending on whether your account is linked to an organization:
     * If your account is linked to an organization: enter the organization name and account name separated by a **period** (`.`). For example, if your organization name is ACME and your account name is AsiaRegion, enter `ACME.AsiaRegion`.
     * If your account is not linked to an organization: `AccountName`.
 * **[!UICONTROL Snowflake Region]**: Select the region where your Snowflake instance is provisioned. See the Snowflake [documentation](https://docs.snowflake.com/en/user-guide/intro-regions) for detailed information on supported cloud regions.
@@ -184,7 +184,7 @@ The data is staged into your Snowflake account via a dynamic table. Check your S
 
 The dynamic table contains the following columns:
 
-* **TS**: A timestamp column that represents when each row was last updated
+* **TS**: A timestamp column that indicates when each row from the shared table was last updated
 * **Merge policy ID**: The ID of the [merge policy](../../../profile/merge-policies/overview.md) that the audience being activated belongs to
 * **Mapping attributes**: Every mapping attribute that you select during the activation workflow is represented as a column header in Snowflake
 * **Audience membership**: Membership to any audience mapped to the dataflow is indicated via an `active` entry in the corresponding cell
