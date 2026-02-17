@@ -41,7 +41,7 @@ When a dataflow runs for an audience for the first time, it performs a backfill 
 
 Experience Platform provides two types of Snowflake destinations: [Snowflake Streaming](snowflake.md) and [Snowflake Batch](snowflake-batch.md).
 
-While both destinations give you access to your data in Snowflake in a zero-copy manner, there are some recommended best practices in terms of use cases for each connector.
+While both destinations give you access to your data in Snowflake without physically copying it into your account, there are some recommended best practices in terms of use cases for each connector.
 
 The table below will help you decide which connector to use by outlining the scenarios where each data sharing method is most appropriate.
 
@@ -73,6 +73,7 @@ Before configuring your Snowflake connection, make sure you meet the following p
 
 * You have access to a [!DNL Snowflake] account.
 * Your Snowflake account is subscribed to private listings. You or someone in your company who has account administrator privileges on Snowflake can configure this.
+* You know your Snowflake account's cloud provider and region. You'll need to enter both when you connect to the destination.
 
 Read the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) for more information on the necessary permissions.
 
@@ -141,9 +142,9 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 * **[!UICONTROL Snowflake Account ID]**: Your Snowflake account ID. Use the following Account ID format depending on whether your account is linked to an organization:
-    * If your account is linked to an organization:`OrganizationName.AccountName`.
-    * If your account is not linked to an organization:`AccountName`.
-* **[!UICONTROL Select Snowflake Region]**: Select the region where your Snowflake instance is provisioned. See the Snowflake [documentation](https://docs.snowflake.com/en/user-guide/intro-regions) for detailed information on supported cloud regions.
+    * If your account is linked to an organization: enter the organization name and account name separated by a **period** (`.`). For example, if your organization name is ACME and your account name is AsiaRegion, enter `ACME.AsiaRegion`.
+    * If your account is not linked to an organization: `AccountName`.
+* **[!UICONTROL Snowflake Region]**: Select the region where your Snowflake instance is provisioned. See the Snowflake [documentation](https://docs.snowflake.com/en/user-guide/intro-regions) for detailed information on supported cloud regions.
 * **[!UICONTROL Account acknowledgment]**: After entering your **[!UICONTROL Snowflake Account ID]**, select **[!UICONTROL Yes]** in this dropdown to confirm that your **[!UICONTROL Snowflake Account ID]** is correct and it belongs to you.
 
 >[!IMPORTANT]
@@ -184,7 +185,7 @@ The data is staged into your Snowflake account via a dynamic table. Check your S
 The dynamic table contains the following columns:
 
 * **TS**: A timestamp column that represents when each row was last updated
-* **Merge policy ID**: The ID of the merge policy used for the export
+* **Merge policy ID**: The ID of the [merge policy](../../../profile/merge-policies/overview.md) that the audience being activated belongs to
 * **Mapping attributes**: Every mapping attribute that you select during the activation workflow is represented as a column header in Snowflake
 * **Audience membership**: Membership to any audience mapped to the dataflow is indicated via an `active` entry in the corresponding cell
 
