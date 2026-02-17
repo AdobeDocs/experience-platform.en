@@ -45,7 +45,7 @@ Once you have your templated project set up, initialize the project.
     aio app init slack-webhook-proxy
     ```
 
-1. Select your `Organization` using the arrow keys, then select the `Project` you created earlier in the Developer Console. Select `Only Templates Supported By My Org` for the templates to search, skip any samples, then press `Enter`.
+1. Select your `Organization` using the arrow keys, then select the `Project` you created earlier in the Developer Console. Select `Only Templates Supported By My Org` for the templates to search. Next, press `Enter` to skip templates and install a standalone application.
 
     ![Terminal showing Organization and Project selection and Only Templates Supported By My Org.](../images/alerts/slack-integration/terminal-organization-project.png)
 
@@ -79,7 +79,7 @@ Once you have your templated project set up, initialize the project.
 
     ![Terminal showing the list of action templates.](../images/alerts/slack-integration/terminal-action-templates.png)
 
-1. Select the template by pressing the spacebar, then navigate to `@adobe/generator-add-publish-events` and press `Enter`.
+1. Select the template by pressing the spacebar, then navigate to `@adobe/generator-add-publish-events` using your `Up` and `Down` arrows. Finally, select the template by pressing the `Spacebar` and press `Enter`.
 
     ![Terminal showing the template.](../images/alerts/slack-integration/terminal-action-select-template.png)
 
@@ -101,7 +101,7 @@ Add the proxy code, set environment variables, and then deploy. The action will 
 >
 >Signature verification and challenge handling are automatic when using Runtime Action registration.
 
-Navigate to the project folder and open the file `actions/runtime-proxy/index.js`. Delete the contents and replace with the following:
+Navigate to the project folder and open the file `actions/webhook-proxy/index.js`. Delete the contents and replace with the following:
 
 ```
 const fetch = require("node-fetch");
@@ -236,8 +236,8 @@ application:
       slack-webhook-proxy:
         license: Apache-2.0
         actions:
-          runtime-proxy:
-            function: actions/runtime-proxy/index.js
+          webhook-proxy:
+            function: actions/webhook-proxy/index.js
             web: no
             runtime: nodejs:22
             inputs:
@@ -249,6 +249,10 @@ application:
 ```
 
 ### Environment variables {#environment-variables}
+
+>[!IMPORTANT]
+>
+>The application will not run without a properly configured .env file.
 
 To manage credentials securely, use environment variables. Modify the `.env` file in the root of your project and add:
 
