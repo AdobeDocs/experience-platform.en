@@ -140,7 +140,7 @@ The [!UICONTROL License usage] dashboard displays a list of all the Experience P
 
 The data in this dashboard is displayed exactly as it appeared at the specific point in time when the snapshot was taken. It is not an approximation or sample, but the dashboard is not updated in real time.
 
-For organizations without an Adobe Experience Platform SKU, the dashboard displays AI credit usage metrics only.
+For organizations without an Adobe Experience Platform application (such as Real-time Customer Data Platform, Adobe Journey Optimizer, Customer Journey Analytics, and so on), the dashboard displays AI credit usage metrics only.
 
 >[!NOTE]
 >
@@ -154,9 +154,9 @@ To navigate to the license usage dashboard within the Experience Platform UI, se
 >
 >The license usage dashboard is not enabled by default. You must be granted the **"[!UICONTROL View License Usage Dashboard]"** permission to access it.
 >
->If your organization licenses Adobe Experience Platform, grant this permission in the applicable product profile and sandbox.
+>If your organization licenses Adobe Experience Platform applications, grant this permission in the applicable product profile and sandbox.
 >
->For organizations without an Adobe Experience Platform SKU (for example, AEM-only or Workflow-only organizations), this permission is available in the Adobe Admin Console under the Adobe Experience Platform product card (if provisioned for your organization). An administrator must add the permission to a product profile before users can view the dashboard.
+>For organizations without an Adobe Experience Platform application (for example, AEM-only or Workflow-only organizations), this permission is available in the Adobe Admin Console under the Adobe Experience Platform product card (if provisioned for your organization). An administrator must add the permission to a product profile before users can view the dashboard.
 
 ## [!UICONTROL Metrics] tab {#metrics-tab}
 
