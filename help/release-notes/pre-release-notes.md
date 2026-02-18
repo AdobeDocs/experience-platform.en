@@ -15,19 +15,20 @@ exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
->- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
+>- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**Release date: January 2026**
+**Release date: February 2026**
 
 New features and updates to existing features in Adobe Experience Platform:
 
 - [Agent Orchestrator](#agent-orchestrator)
+- [Alerts](#alerts)
+- [Data collection](#data-collection)
 - [Destinations](#destinations)
-- [Real-Time Customer Profile](#real-time-customer-profile)
-- [Schemas](#schemas)
-- [Segmentation Service](#segmentation-service)
+- [Experience Data Model (XDM)](#xdm)
+- [Query Service](#query-service)
 - [Sources](#sources)
 
 ## Agent Orchestrator {#agent-orchestrator}
@@ -38,11 +39,41 @@ Agent Orchestrator enables you to build and deploy AI-powered agents that can au
 
 | Feature | Description |
 | --- | --- |
-| Trial motion for Agent Orchestrator | Agent Orchestrator now offers a trial motion, allowing customers to explore and test the service before committing to a full purchase. This try-before-you-buy option enables organizations to evaluate Agent Orchestrator's capabilities, including skills and orchestration features, in their own environment. The trial provides hands-on experience with building AI-powered agents and understanding how they can be integrated into existing workflows. |
+| Data Onboarding Agent | Use the Data Onboarding Agent to configure source connections, validate data quality, apply semantic enrichment, review and validate schemas, and run data ingestion. Follow step-by-step workflows for both B2C and B2B flows, review expected outputs, and troubleshoot common issues. |
+| Data Distiller Agent | Use the Data Distiller Agent to create SQL jobs from natural language, optimize SQL performance, recover from SQL errors, schedule and manage SQL jobs, and monitor job status. Review guardrails, required permissions, and troubleshooting guidance to get started. |
+| Data Collection Agent | Use the Data Collection Agent to get in-context guidance for complex data collection configurations and to explore lineage, dependencies, and relationships across your data collection objects through conversational insights. |
 
 {style="table-layout:auto"}
 
 For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+
+## Alerts {#alerts}
+
+Experience Platform allows you to subscribe to event-based alerts for various Experience Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Experience Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| [!DNL Slack] integration for customer-facing alerts | You can now deliver customer-facing alerts to [!DNL Slack]. Follow the step-by-step tutorial to set up the [!DNL Slack] integration and receive alert notifications directly in your [!DNL Slack] workspace. |
+
+{style="table-layout:auto"}
+
+For more information, read the [[!DNL Observability Insights] overview](../observability/home.md).
+
+## Data collection {#data-collection}
+
+Adobe Experience Platform Data Collection provides a set of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network and other destinations.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Adobe Platform Tags Extension Management | Use the new Extension Management capability to upload, package, and release your organization's extensions to development, private, and public distribution. Find shared private extensions alongside your owned extensions in the top-level company view. This feature supports web, edge, and mobile extensions. |
+
+{style="table-layout:auto"}
+
+For more information, read the [Data Collection documentation](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Destinations {#destinations}
 
@@ -52,65 +83,40 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 
 | Destination | Description |
 | --- | --- |
-| Kevel destination connector now available | [[!DNL Kevel]](https://www.kevel.com/) provides the AI-enabled technology and expert guidance that help innovative commerce leaders launch, scale, and succeed in retail media. [!DNL Kevel]'s Retail Media Cloud powers targeted, attributable, customizable ad formats for on-site and off-site advertising. |
-| Index Exchange destination connector now available | [!DNL Index] is a global advertising supply-side platform that helps media owners maximize the value of their content across every screen. With over 20 years of industry leadership, [!DNL Index] connects the world's largest brands with premium experience makers to deliver high-quality consumer experiences. |
-| Regional endpoints support for Braze connections | All [region-specific endpoints](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) supported by [!DNL Braze] are now available for selection during the destination configuration flow. Ask your [!DNL Braze] representative which endpoint instance you should use. |
-| Weekly and monthly scheduling support for Liveramp Onboarding | You can now configure weekly and monthly export schedules for the Liveramp Onboarding destination. |
-|AES256 encryption support for Amazon S3 destinations | You can now configure AES256 encryption for your Amazon S3 exports. |
-| Enhanced activation experience for The Trade Desk and Microsoft Bing destinations | The Trade Desk and Microsoft Bing destinations now include predefined mandatory mappings for an optimized activation experience. |
-
-**New or updated functionality**
-
-| Feature | Description |
-| --- | --- |
-| Updated guardrail limits for Adobe Target destination | The maximum number of audiences that can be mapped to a single Adobe Target destination has been increased from 50 to 250. This aligns Adobe Target with the standard audience limit for other destinations, providing greater flexibility for audience activation workflows. You can now activate more audiences to Adobe Target destinations without needing to create multiple dataflows. |
-| [Edit destinations](/help/destinations/ui/edit-destination.md) and [edit marketing actions](/help/destinations/ui/edit-activation.md#edit-marketing-actions) general availability | The option to edit destinations and marketing actions is now available to all users. |
-| Toggle field display names in the Mapping step | When mapping schema fields to a destination, you can now toggle between displaying the full XDM field name and showing only the display name. |
+| [!DNL Snowflake] Batch generally available | The [!DNL Snowflake] Batch destination has moved to general availability. You can now view the merge policy ID column in your exported data alongside existing columns such as timestamp, mapping attributes, and audience membership. |
+| AES256 encryption support for [Amazon S3](../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destinations | You can now configure AES256 encryption for your Amazon S3 exports. Choose from two options: <ul><li>**[!UICONTROL Default]**: Experience Platform encrypts data at rest with the default encryption algorithm set on your bucket.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform adds the `s3:x-amz-server-side-encryption": "AES256` header to the export and encrypts data at rest with the AES256 algorithm when it lands in S3. **This option takes precedence over any default encryption algorithm you configure on your S3 bucket**.</li></ul> |
 
 {style="table-layout:auto"}
 
 For more information, read the [Destinations overview](../destinations/home.md).
 
-## Real-Time Customer Profile {#real-time-customer-profile}
+## Experience Data Model (XDM) {#xdm}
 
-Real-Time Customer Profile enables you to see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third-party data. Profile allows you to consolidate your customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Schema Inventory Organization and Search | The schema browse page now includes enhanced search and filtering, inline actions, and support for user-defined tags and folders. These updates make it easier to find, organize, and manage schemas across sandboxes while reducing manual navigation and maintenance effort. |
+| Restricted Editing for Schemas with Datasets | Editing operations that result in breaking changes are now restricted once a dataset exists for a schema. When a dataset is associated, you can no longer rename or delete fields, change field data types or formats, modify identity descriptors, manage related fields to remove existing fields, or change the assigned class; additive changes and field deprecation remain supported. |
+
+For more information, read the [[!DNL XDM] overview](../xdm/home.md).
+
+## Query Service {#query-service}
+
+Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-Time Customer Profile.
 
 **New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| Streaming capacity enforcement | Experience Platform now enforces streaming throughput capacities for Real-Time Customer Profile and Identity Service. When customers exceed their contracted streaming capacity, data will be queued and processed in a first-in-first-out manner. This ensures predictable system performance and prevents capacity violations from impacting data ingestion quality. Important notes: Streaming upserts will not be available on the data lake when capacity is exceeded, this enforcement does not apply to customers with Adobe Journey Optimizer licenses, and queued data will be processed sequentially once capacity becomes available. |
-| API access deprecation for Real-Time CDP Prime | API access for experience events is now deprecated for all Real-Time CDP Prime customers. This change affects the ability to query experience events directly via API. Real-Time CDP Ultimate customers can request an exception through a formal exception process to enable experience events API access if needed for their use cases. This deprecation helps align Real-Time CDP with licensing functionality. |
-| Monitor dataflow run | You can now monitor the progress and readiness of dataflow runs in Profile. |
+| Data Distiller annual compute reset date alignment (Limited Release) | Data Distiller annual compute hours now reset on the anniversary date of your Data Distiller contract, based on when the license was purchased or renewed. This aligns License Usage reporting with your contract terms and may result in a one-time adjustment to current usage values. |
+| Data Distiller session management (Limited Release) | As an authorized admin, you can view and manage active Query Service and Data Distiller sessions within your organization and sandbox through the UI. Use session management to identify idle sessions and terminate them to free up capacity. Built-in safeguards prevent you from terminating sessions with active queries. The feature logs all eviction actions for auditing and notifies affected users. You need the **Manage Query Sessions** permission to access this feature. |
 
 {style="table-layout:auto"}
 
-For more information, read the [[!DNL Real-Time Customer Profile] overview](../profile/home.md).
-
-## Schemas {#schemas}
-
-Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data. Schemas are composed of a base class and zero or more schema field groups.
-
-**New or updated features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Schema inventory modernization with search, filter, tags, and folders | The schema browse page has been modernized to provide enhanced organizational and discovery capabilities. New features include advanced search and filtering options, support for user-generated tags and folders to organize schemas, and inline actions to streamline workflows. Key improvements include: updated columns (Name, Class, Datasets, Identities, Relationships, Enable for Profile, Behavior, Schema type, Tags, Created date, Last modified), advanced filters (Show profiles, Schema type, Class, Has any tag, Created by, Creation Date, Modified Date, Has primary Identity, Has relationship, Primary identity namespace), inline actions (Edit, Delete, Apply labels, Create dataset for non-relational schemas, Manage tags, Move to folder, Add to package, Copy JSON structure, Download sample file), and the ability to organize schemas using tags and folders. These enhancements provide comprehensive visibility into schema resources and enable more efficient schema management at the sandbox level. |
-
-For more information, read the [[!DNL Schemas] overview](../xdm/home.md).
-
-## Segmentation Service {#segmentation-service}
-
-[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Audiences can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
-
-**New or updated features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Streaming segmentation monitoring | Real-time monitoring for streaming segmentation provides transparency into evaluation rate, latency, and data quality metrics at the sandbox, dataset, and audience levels. This supports proactive alerting and actionable insights to help data engineers identify capacity violations and ingestion issues. Monitoring metrics include evaluation rate, P95 ingestion latency, as well as records received, evaluated, failed, and skipped. View-by-dataset and view-by-audience capabilities provide comprehensive visibility into net new profiles qualified and disqualified. |
-| External audience TTL refresh | External audiences (such as CSV uploads) now support a force refresh capability for Time-to-Live (TTL) settings. This feature allows users to manually refresh the TTL expiration for external audiences, providing greater control over audience lifecycle management. This is particularly useful for audiences that need to persist beyond their initial TTL period or require reactivation without re-uploading the data. |
-
-For more information, read the [[!DNL Segmentation Service] overview](../segmentation/home.md).
+For more information, read the [Query Service overview](../query-service/home.md).
 
 ## Sources {#sources}
 
@@ -120,8 +126,8 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| [!DNL Oracle Eloqua] V2 source | A new [!DNL Oracle Eloqua] source connector is now available, replacing the deprecated connector. This updated connector provides enhanced functionality and improved reliability for ingesting data from [!DNL Oracle Eloqua] into Experience Platform. Customers using the existing connector should migrate to the new implementation, as existing connections will no longer function. The new connector supports all setup and configuration steps needed to connect to [!DNL Oracle Eloqua] and ingest marketing automation data. |
-| [!DNL Salesforce Marketing Cloud] V2 source | A new [!DNL Salesforce Marketing Cloud] source connector is now available, replacing the deprecated connector. This updated connector provides improved performance and additional capabilities for ingesting data from [!DNL Salesforce Marketing Cloud] into Experience Platform. Customers using the existing connector should transition to the new implementation. The new connector includes comprehensive setup instructions for connecting to [!DNL Salesforce Marketing Cloud] and ingesting marketing automation data. |
+| Unity Catalog support in [!DNL Databricks] source connector | The [!DNL Databricks] source connector now supports Unity Catalog. Read the updated [[!DNL Databricks]](../sources/connectors/databases/databricks.md) documentation to learn how to use Unity Catalog when you configure your source connection. |
+
+{style="table-layout:auto"}
 
 For more information, read the [sources overview](../sources/home.md).
-

@@ -1,15 +1,11 @@
 ---
 title: Snowflake Batch connection
 description: Create a live Snowflake data share to receive daily audience updates directly as shared tables into your account.
-last-substantial-update: 2025-10-23
+last-substantial-update: 2026-02-17
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
 ---
 # Snowflake Batch connection {#snowflake-destination}
-
->[!AVAILABILITY]
->
->This destination connector is in limited availability and only available to Real-Time CDP Ultimate customers provisioned in the [VA7 region](/help/landing/multi-cloud.md#azure-regions).
 
 ## Overview {#overview}
 
@@ -45,7 +41,7 @@ When a dataflow runs for an audience for the first time, it performs a backfill 
 
 Experience Platform provides two types of Snowflake destinations: [Snowflake Streaming](snowflake.md) and [Snowflake Batch](snowflake-batch.md).
 
-While both destinations give you access to your data in Snowflake in a zero-copy manner, there are some recommended best practices in terms of use cases for each connector.
+While both destinations give you access to your data in Snowflake without physically copying it into your account, there are some recommended best practices in terms of use cases for each connector.
 
 The table below will help you decide which connector to use by outlining the scenarios where each data sharing method is most appropriate.
 
@@ -77,8 +73,13 @@ Before configuring your Snowflake connection, make sure you meet the following p
 
 * You have access to a [!DNL Snowflake] account.
 * Your Snowflake account is subscribed to private listings. You or someone in your company who has account administrator privileges on Snowflake can configure this.
+* You know your Snowflake account's cloud provider and region. You'll need to enter both when you connect to the destination.
 
 Read the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) for more information on the necessary permissions.
+
+>[!IMPORTANT]
+>
+>This destination does not support Snowflake accounts that are behind a firewall or that use [[!DNL Azure Private Link]](https://docs.snowflake.com/en/user-guide/privatelink-azure).
 
 ## Supported audiences {#supported-audiences}
 
@@ -130,8 +131,8 @@ To authenticate to the destination, select **[!UICONTROL Connect to destination]
 ### Fill in destination details {#destination-details}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_snowflake_batch_accountID"
->title="Enter your Snowflake Account ID"
+>id="platform_destinations_snowflake_batch_accountid"
+>title="Enter your Snowflake Data Sharing Account Identifier"
 >abstract="If your account is linked to an organization use this format: `OrganizationName.AccountName`<br><br> If your account is not linked to an organization use this format:`AccountName`"
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
@@ -140,10 +141,11 @@ To configure details for the destination, fill in the required and optional fiel
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Snowflake Account ID]**: Your Snowflake account ID. Use the following Account ID format depending on whether your account is linked to an organization:
-    * If your account is linked to an organization:`OrganizationName.AccountName`.
-    * If your account is not linked to an organization:`AccountName`.
-* **[!UICONTROL Account acknowledgment]**: Toggle on the Snowflake Account ID acknowledgment to confirm that your Account ID is correct and it belongs to you.
+* **[!UICONTROL Snowflake Account ID]**: Your [Snowflake Data Sharing Account Identifier](https://docs.snowflake.com/en/user-guide/admin-account-identifier#label-account-name-data-sharing). Use the following format depending on whether your account is linked to an organization:
+    * If your account is linked to an organization: enter the organization name and account name separated by a **period** (`.`). For example, if your organization name is ACME and your account name is AsiaRegion, enter `ACME.AsiaRegion`.
+    * If your account is not linked to an organization: `AccountName`.
+* **[!UICONTROL Snowflake Region]**: Select the region where your Snowflake instance is provisioned. See the Snowflake [documentation](https://docs.snowflake.com/en/user-guide/intro-regions) for detailed information on supported cloud regions.
+* **[!UICONTROL Account acknowledgment]**: After entering your **[!UICONTROL Snowflake Account ID]**, select **[!UICONTROL Yes]** in this dropdown to confirm that your **[!UICONTROL Snowflake Account ID]** is correct and it belongs to you.
 
 >[!IMPORTANT]
 >
@@ -182,21 +184,12 @@ The data is staged into your Snowflake account via a dynamic table. Check your S
 
 The dynamic table contains the following columns:
 
-* **TS**: A timestamp column that represents when each row was last updated
+* **TS**: A timestamp column that indicates when each row from the shared table was last updated
+* **Merge policy ID**: The ID of the [merge policy](../../../profile/merge-policies/overview.md) that the audience being activated belongs to
 * **Mapping attributes**: Every mapping attribute that you select during the activation workflow is represented as a column header in Snowflake
 * **Audience membership**: Membership to any audience mapped to the dataflow is indicated via an `active` entry in the corresponding cell
 
-![Screenshot showing the Snowflake interface with dynamic table data](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png)
-
-## Known limitations {#known-limitations}
-
-### Default merge policy restriction {#default-merge-policy-restriction}
-
-Currently, only audiences mapped to the default merge policy can be exported.
-
-### Regional availability {#regional-availability}
-
-The [!DNL Snowflake] batch destination is currently only available to Real-Time CDP customers provisioned in the Experience Platform VA7 region.
+![Screenshot showing the Snowflake interface with dynamic table data](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 
