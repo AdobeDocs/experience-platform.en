@@ -52,7 +52,7 @@ The following objects are imported but are in a draft or disabled status:
 
 ### Adobe Journey Optimizer objects {#abobe-journey-optimizer-objects}
 
-The table below lists [!DNL Adobe Journey Optimizer] objects that are currently supported for sandbox tooling and limitations:
+The table below lists [!DNL Adobe Journey Optimizer] objects that are currently supported for sandbox tooling and limitations. For a complete list of best practices, refer to the [Journey Optimizer general best practices](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global) guide.
 
 | Platform | Object | Supported Dependent Objects | Details |
 | --- | --- | --- | --- |

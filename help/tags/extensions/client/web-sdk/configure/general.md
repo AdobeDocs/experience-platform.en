@@ -1,8 +1,14 @@
 ---
 title: SDK instance configuration settings
 description: Configure general settings for the Web SDK instance.
+exl-id: cc22b8b3-88c6-4030-91b4-60e14a3b0f42
 ---
-# SDK instance configuration settings
+# SDK instance configuration settings {#sdk-instance}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_sdkinstance"
+>title="SDK instances"
+>abstract="Sets the SDK instance name, the IMS org it belongs to, and the edge domain."
 
 This configuration section governs the Web SDK instance name, the IMS org it applies to, and the location that you want to send data to. By default, an instance is named `alloy`.
 
@@ -26,4 +32,6 @@ The ID of the organization that you would like the data sent to at Adobe. Most o
 
 ## [!UICONTROL Edge domain]
 
-The domain that the extension sends and receives data from. While the default value of `edge.adobedc.net` works, Adobe recommends using a first-party domain in most cases. See the [Adobe-managed certificate program](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) for instructions on how to set up a first-party domain suitable for data collection. See also [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) in the JavaScript library documentation for guidance setting this value.
+The domain that the extension sends and receives data from. By default, the field contains `<COMPANYID>.data.adobedc.net`. Older implementations might contain a default value of `edge.adobedc.net`, which is also valid.
+
+Adobe recommends using a first-party domain in most cases. See the [Adobe-managed certificate program](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) for instructions on how to set up a first-party domain suitable for data collection. See also [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) in the JavaScript library documentation for guidance setting this value.

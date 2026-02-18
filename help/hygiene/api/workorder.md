@@ -197,6 +197,14 @@ POST /workorder
 >
 >You can only delete records from datasets whose associated XDM schema defines a primary identity or identity map.
 
+>[!IMPORTANT]
+>
+>Record delete work orders act exclusively on the **primary identity** field. The following limitations apply:
+>
+>- **Secondary identities are not scanned.** If a dataset contains multiple identity fields, only the primary identity is used for matching. Records cannot be targeted or deleted based on non-primary identities.
+>- **Records without a populated primary identity are skipped.** If a record does not have primary identity metadata populated, it is not eligible for deletion.
+>- **Data ingested before identity configuration is not eligible.** If the primary identity field was added to a schema after data ingestion, previously ingested records cannot be deleted through record delete work orders.
+
 >[!NOTE]
 >
 >If you try to create a record delete work order for a dataset that already has an active expiration, the request returns HTTP 400 (Bad Request).An active expiration is any scheduled delete that has not yet completed.

@@ -4,6 +4,7 @@ description: Learn how to ingest batch data from Talon.One into Adobe Experience
 badge: Beta
 hide: true
 hidefromtoc: true
+exl-id: 65a8ae42-0c0f-4bc5-b99e-52b02ab2130a
 ---
 # Ingest batch data from [!DNL Talon.One] into Experience Platform using the UI
 
@@ -138,3 +139,7 @@ After confirming the details are correct, select **[!UICONTROL Finish]**.
 ## Monitor your dataflow
 
 Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on ingestion rates, success, and errors. For more information on how to monitor dataflow, see the tutorial on [monitoring accounts and dataflows in the UI](../../../../../dataflows/ui/monitor-sources.md).
+
+## Known limitations
+
+When mapping data from [!DNL Talon.One]'s schema to Adobe Experience Platform, it is currently not possible to capture multiple effects of the same type within a single transaction. For example, if a transaction includes multiple `setDiscount` effects (such as discounts from different campaigns), only one of those effects will be retained during mapping, and the others will be overwritten.

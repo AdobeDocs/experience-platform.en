@@ -102,7 +102,7 @@ role: Developer
       * [Getting started](extensions/client/web-sdk/getting-started.md)
       * Configure {#configure}
         * [Overview](extensions/client/web-sdk/configure/config-overview.md)
-        * [Custom build components](extensions/client/web-sdk/configure/custom-build-components.md)
+        * [Build options](extensions/client/web-sdk/configure/custom-build-components.md)
         * [SDK instance](extensions/client/web-sdk/configure/general.md)
         * [Datastreams](extensions/client/web-sdk/configure/datastreams.md)
         * [Consent](extensions/client/web-sdk/configure/consent.md)
@@ -111,6 +111,7 @@ role: Developer
         * [Data collection](extensions/client/web-sdk/configure/data-collection.md)
         * [Streaming media](extensions/client/web-sdk/configure/streaming-media.md)
         * [Push notifications](extensions/client/web-sdk/configure/push-notifications.md)
+        * [Brand Concierge](extensions/client/web-sdk/configure/brand-concierge.md)
         * [Advertising](extensions/client/web-sdk/configure/advertising.md)
         * [Configuration overrides](extensions/client/web-sdk/configure/configuration-overrides.md)
         * [Advanced settings](extensions/client/web-sdk/configure/advanced-settings.md)
@@ -270,6 +271,8 @@ role: Developer
       * [Overview](./extensions/server/azure/overview.md)
     * [!DNL Mixpanel] {#mixpanel}
       * [Overview](./extensions/server/mixpanel/overview.md)
+    * [!DNL Nextdoor] {#nextdoor}
+      * [Overview](./extensions/server/nextdoor/overview.md)
     * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
     * [!DNL Pinterest] {#pinterest}
       * [Overview](./extensions/server/pinterest/overview.md)

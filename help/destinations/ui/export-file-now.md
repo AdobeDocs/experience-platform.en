@@ -20,9 +20,26 @@ exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 
 This article explains how to use the Experience Platform UI to export files on-demand to batch destinations such as [cloud storage](/help/destinations/catalog/cloud-storage/overview.md) and [email marketing](/help/destinations/catalog/email-marketing/overview.md) destinations.
 
-The **[!UICONTROL Export file now]** control allows you to export a full file without interrupting the current export schedule of a previously scheduled audience. This export happens in addition to previously scheduled exports and does not change the export frequency of the audience. The file export is triggered immediately and it picks up the latest results from Experience Platform segmentation runs.
+The **[!UICONTROL Export file now]** control allows you to export a full file without interrupting the current export schedule of a previously scheduled audience. This export happens in addition to previously scheduled exports and does not change the export frequency of the audience. 
+
+The file export is triggered immediately and uses data from the most recent audience evaluation snapshot only. It does not include profile or identity changes that occur after snapshot creation. In contrast, scheduled exports include both snapshot data and incremental changes that occur between snapshot creation and export time.
 
 You can also use the Experience Platform APIs for this purpose. Read how to [activate audiences on-demand to batch destinations via the ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md).
+
+## Scheduled exports vs on-demand exports {#scheduled-vs-ondemand}
+
+On-demand exports and scheduled exports use different data sources, which can result in differences in exported data. Refer to the table below to understand what gets exported in each case.
+
+|  | Export file now | Scheduled exports |
+|--------|-----------------|-------------------|
+| **Data source** | Snapshot only | Snapshot + incremental changes |
+| **Profile attributes** | Values at snapshot time | Current values at export time |
+
+>[!NOTE]
+>
+>Scheduled exports may show different profile counts or attribute values than on-demand exports because they include profile updates that occur after the audience evaluation.
+
+For more information, see [Understanding scheduled export behavior](/help/destinations/ui/activate-batch-profile-destinations.md#export-behavior).
 
 ## Prerequisites {#prerequisites}
 

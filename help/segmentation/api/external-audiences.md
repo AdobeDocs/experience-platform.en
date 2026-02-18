@@ -7,6 +7,16 @@ exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
 
 External audiences let you upload profile data from your external sources into Adobe Experience Platform. You can use the `/external-audience` endpoint in the Segmentation Service API to ingest an external audience to Experience Platform, view details and update your external audiences, as well as delete your external audiences.
 
+## Guardrails
+
+Starting with the March release, the following guardrails will be enforced when using the external audiences endpoint:
+
+| Guardrail | Limit | Limit type | Description |
+| --------- | ----- | ---------- | ----------- |
+| Number of audience ingestion runs per day | 100 | System-enforced guardrail | The maximum number of audience ingestion runs allowed per day. This limit as at a per **sandbox** level. |
+| Number of ingestions per audience | 10 | System-enforced guardrail | The number of ingestions that can be performed on a specified audience. |
+| External audience size | 10 GB | Performance guardrail | The recommended total size of the external audience is 10GB. |
+
 ## Getting started
 
 >[!IMPORTANT]

@@ -1,6 +1,7 @@
 ---
 title: logger
 description: Output information to the browser console when debugging.
+exl-id: c79d0d15-47e2-4a77-9318-1ccbe6fe5dd1
 ---
 # `logger`
 
