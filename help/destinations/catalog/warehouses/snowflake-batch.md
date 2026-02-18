@@ -147,6 +147,10 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Snowflake Region]**: Select the region where your Snowflake instance is provisioned. See the Snowflake [documentation](https://docs.snowflake.com/en/user-guide/intro-regions) for detailed information on supported cloud regions.
 * **[!UICONTROL Account acknowledgment]**: After entering your **[!UICONTROL Snowflake Account ID]**, select **[!UICONTROL Yes]** in this dropdown to confirm that your **[!UICONTROL Snowflake Account ID]** is correct and it belongs to you.
 
+>[!NOTE]
+>
+> The **[!UICONTROL Snowflake Account ID]** and **[!UICONTROL Snowflake Region]** cannot be edited through the [edit destination](../../ui/edit-destination.md) workflow after you create the destination. To use different account or region values, [create a new destination connection](../../ui/connect-destination.md).
+
 >[!IMPORTANT]
 >
 > Special characters used in the destination name and Experience Platform sandbox name are automatically converted to underscores (`_`) in Snowflake. To avoid confusion, do not use any special characters in your destination and sandbox name.
