@@ -45,9 +45,13 @@ Once you have your templated project set up, initialize the project.
     aio app init slack-webhook-proxy
     ```
 
-1. Select your `Organization` using the arrow keys, then select the `Project` you created earlier in the Developer Console. Select `Only Templates Supported By My Org` for the templates to search. Next, press **Enter** to skip templates and install a standalone application.
+1. Select your `Organization` using the arrow keys, then select the `Project` you created earlier in the Developer Console. Select `Only Templates Supported By My Org` for the templates to search. 
 
     ![Terminal showing Organization and Project selection and Only Templates Supported By My Org.](../images/alerts/slack-integration/terminal-organization-project.png)
+
+1. Next, press **Enter** to skip templates and install a standalone application.
+
+    ![Terminal showing Organization and Project selection and Only Templates Supported By My Org.](../images/alerts/slack-integration/terminal-skip-templates.png)
 
 1. Specify the Adobe I/O App features you want to enable for this project. Use the arrow keys to scroll and select `Actions: Deploy Runtime actions`.
 
