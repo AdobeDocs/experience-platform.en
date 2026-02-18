@@ -38,12 +38,12 @@ For example, the Marketing Operations department at a global financial services 
 - [!DNL Ampersand]
 - [!DNL Comcast]
 - [!DNL Cox]
-- [!DNL Facebook](#facebook)
+- [[!DNL Facebook]](#facebook)
 - [[!DNL LG Ads]](#lg-ads)
-- [!DNL Pinterest](#pinterest)
+- [[!DNL Pinterest]](#pinterest)
 - [!DNL Spectrum]
 - [!DNL Viant]
-- [!DNL Vizio](#vizio)
+- [[!DNL Vizio]](#vizio)
 
 
 ## Connect to the destination {#connect}
@@ -154,6 +154,7 @@ By following this tutorial, you have successfully activated an audience to the s
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
+
 
 
 
