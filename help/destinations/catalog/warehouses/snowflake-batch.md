@@ -149,7 +149,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 >[!NOTE]
 >
-> The **[!UICONTROL Snowflake Account ID]** and **[!UICONTROL Snowflake Region]** fields are read-only after you create the destination. You cannot change these fields when [editing the destination](../../ui/edit-destination.md). To use different account or region values, [create a new destination connection](../../ui/connect-destination.md).
+> The **[!UICONTROL Snowflake Account ID]** and **[!UICONTROL Snowflake Region]** cannot be edited through the [edit destination](../../ui/edit-destination.md) workflow after you create the destination. To use different account or region values, [create a new destination connection](../../ui/connect-destination.md).
 
 >[!IMPORTANT]
 >
