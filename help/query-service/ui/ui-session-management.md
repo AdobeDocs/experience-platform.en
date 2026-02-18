@@ -6,7 +6,7 @@ solution: Experience Platform
 ---
 # Manage Query Service sessions
 
-Use this guide to manage active Query Service sessions from the Adobe Experience Platform user interface. Session management helps administrators identify idle sessions, free shared capacity, and maintain reliable Data Distiller usage across sandboxes without disrupting active queries.
+Use this guide to manage active Query Service sessions from the Adobe Experience Platform user interface. This guide explains where to access session management, how to interpret session status and idle time, and how to end idle sessions across sandboxes without disrupting active queries. Proactively managing idle sessions helps reduce unnecessary compute hour consumption and protects available capacity under your Data Distiller license. Idle sessions continue to consume compute hours, which count toward your Data Distiller license usage and can affect available capacity for other users.
 
 ## Permissions required for session management {#permissions} 
 
@@ -22,15 +22,24 @@ To view and end sessions, you must belong to an organization with Data Distiller
 
 ## View active sessions {#view-active-sessions}
 
-Administrators can view all active Query Service sessions across sandboxes in the organization. Navigate to the Query Service workspace and select the **[!UICONTROL Admin]** tab to open session management.
+Administrators can view all active Query Service sessions across sandboxes in your organization. Navigate to the Query Service workspace and select the **[!UICONTROL Admin]** tab to open session management.
 
 ![Admin tab showing Session Management table in Query Service workspace](../images/ui/session-management/session-management-admin-tab.png)
 
-The session management table updates in near real time and lists all sessions currently consuming Query Service capacity. Each row represents a single session opened in the Query Editor.
+The session management table updates automatically in real time and lists all sessions currently consuming Query Service capacity. Each row represents a single session opened in the Query Editor.
 
 ## Session status and idle time {#session-status}
 
-The session table provides information to help you decide whether a session can be safely ended. Session details include user identifier and username, sandbox name, session status, idle time, and remaining session time.
+The session table provides information to help you decide whether a session can be safely ended.
+
+| Column | Description |
+| --- | --- |
+| User identifier / username | Identifies the user who owns the session |
+| Sandbox | Indicates the sandbox where the session is running |
+| Session status | Shows whether the session is **[!UICONTROL Active]** or **[!UICONTROL Inactive]** |
+| Idle time | Displays how long the session has been open without interaction |
+| Remaining session time | Indicates how long the session can remain open before automatic expiration |
+
 
 ### Session status
 
@@ -40,17 +49,17 @@ When a session is active, the **[!UICONTROL End session]** control is unavailabl
 
 ### Idle time and remaining session time
 
-Idle time shows how long a session has been open without user interaction. Remaining session time indicates how long the session can stay open before it is automatically closed by the system. Sessions automatically expire after the maximum allowed duration (two hours of inactivity) to free capacity for other users.
+Idle time shows how long a session has been open without user interaction. Remaining session time indicates how long the session can stay open before it is automatically closed by the system. Sessions automatically expire after the maximum allowed duration (two hours of inactivity). This duration is system-defined and cannot be configured.
 
 ## End idle sessions {#end-idle-sessions}
 
-You can end idle sessions to free capacity for other users.
+You can end idle sessions to free capacity for other users and prevent unnecessary consumption of compute hours under your Data Distiller license. Consider ending sessions with high idle time during periods of capacity constraint or when users are no longer actively working.
 
 From the session management table, select **[!UICONTROL End session]** for an inactive session.
 
 ![End session button selected for an inactive session in the Session Management table](../images/query-service/end-session-confirmation.png)
 
-A confirmation dialog appears to prevent accidental termination. Confirm the action to end the session. After the session ends, the session is removed from the table, capacity becomes available immediately, and the action is recorded for auditing.
+A confirmation dialog appears to prevent accidental termination. Select **[!UICONTROL End session]** in the dialog to confirm the action. After the session ends, the session is removed from the table, capacity becomes available immediately, and the action is recorded for auditing.
 
 >[!NOTE]
 >
