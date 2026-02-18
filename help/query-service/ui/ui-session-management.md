@@ -26,7 +26,7 @@ To view and end sessions, you must belong to an organization with Data Distiller
 
 Administrators can view all active Query Service sessions across sandboxes in your organization. Navigate to the Query Service workspace and select the **[!UICONTROL Admin]** tab to open session management.
 
-![Admin tab showing Session Management table in Query Service workspace](../images/ui/session-management/session-management-admin-tab.png)
+![The Query Service workspace with the Admin tab selected. The Session Management table is displayed and lists active and inactive sessions across multiple sandboxes in your organization.](../images/ui/session-management/session-management-admin-tab.png)
 
 The session management table updates automatically in real time and lists all sessions currently consuming Query Service capacity. Each row represents a single session opened in the Query Editor.
 
@@ -59,9 +59,13 @@ You can end idle sessions to free capacity for other users and prevent unnecessa
 
 From the session management table, select **[!UICONTROL End session]** for an inactive session.
 
-![End session button selected for an inactive session in the Session Management table](../images/query-service/end-session-confirmation.png)
+![Session Management table showing an inactive session with End session highlighted.](../images/ui/session-management/end-session.png)
 
-A confirmation dialog appears to prevent accidental termination. Select **[!UICONTROL End session]** in the dialog to confirm the action. After the session ends, the session is removed from the table, capacity becomes available immediately, and the action is recorded for auditing.
+A confirmation dialog appears to prevent accidental termination. Select **[!UICONTROL End session]** in the dialog to confirm the action. 
+
+![The End session confirmation dialog displaying a warning message and End session highlighted.](../images/ui/session-management/end-session-confirmation-dialog.png)
+
+After the session ends, the session is removed from the table, capacity becomes available immediately, and the action is recorded for auditing.
 
 >[!NOTE]
 >
@@ -70,8 +74,6 @@ A confirmation dialog appears to prevent accidental termination. Select **[!UICO
 ## Session behavior after termination {#session-behavior-after-termination}
 
 When an administrator ends a session, the affected user remains connected until they run a query. If the user attempts to run a query after termination, the system detects the ended session, re-establishes the connection automatically, and keeps Query Editor content intact.
-
-![Query Editor showing reconnection message after session termination](../images/query-service/query-editor-reconnect-message.png)
 
 This behavior ensures users do not lose work written in the editor and can continue once a new session is established.
 
