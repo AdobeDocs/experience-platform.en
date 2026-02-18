@@ -27,7 +27,7 @@ Profile enablement permanently changes how Experience Platform treats your data.
 
 **Schemas**: When you enable a schema for Profile, you cannot disable or delete it. You also cannot remove or rename fields from the schema after data is ingested. This permanence means your schema design must be complete and stable before you enable Profile, as you cannot reverse the decision or simplify the structure later.
 
-**Datasets**: When you enable a dataset for Profile, Profile Service uses its records to build and update profiles. Review the dataset enablement behavior in the [dataset user guide](../../catalog/datasets/enable-for-profile.md). Unlike schemas, you can disable or delete the dataset later, but doing so removes associated profile records and may affect segmentation or activation workflows. Consider the downstream impact before you make changes to an enabled dataset.
+**Datasets**: When you enable a dataset for Profile, Real-Time Customer Profile uses its records to build and update profiles. Review the dataset enablement behavior in the [dataset user guide](../../catalog/datasets/enable-for-profile.md). Unlike schemas, you can disable or delete the dataset later, but doing so removes associated profile records and may affect segmentation or activation workflows. Consider the downstream impact before you make changes to an enabled dataset.
 
 Because these changes affect downstream processes, verify that a schema and its datasets are appropriate for Profile before you enable them.
 
@@ -38,7 +38,7 @@ You must enable both the schema AND the datasets that use that schema for Profil
 1. **Enable the schema for Profile**: First, enable Profile on the schema in the **[!UICONTROL Schema Editor]**. This allows any dataset using this schema to be enabled for Profile.
 2. **Enable individual datasets for Profile**: After the schema is enabled, enable Profile on each dataset that should contribute to unified customer profiles.
 
-You cannot enable a dataset for Profile if its schema is not already enabled. The schema acts as a prerequisite for dataset enablement. This two-step process ensures that your data model is validated before Profile Service begins processing records.
+You cannot enable a dataset for Profile if its schema is not already enabled. The schema acts as a prerequisite for dataset enablement. This two-step process ensures that your data model is validated before Real-Time Customer Profile begins processing records.
 
 ## When to enable a schema or dataset for Profile {#when-to-enable}
 
@@ -72,7 +72,7 @@ Review the schema structure to confirm that it supports Profile requirements. Th
 
 ### Identity configuration
 
-Identity configuration determines how Profile stitches records across datasets. Start by confirming that a valid primary identity is selected—this field must be stable, unique, and consistently populated across all records. Verify that identity namespaces are assigned correctly to prevent stitching errors. If you use secondary identities, confirm that they support your use cases without causing profile collisions, which can occur when different individuals share the same identity value. Profile Service resolves collisions by applying merge policies that determine which data takes precedence when conflicting records are stitched together.
+Identity configuration determines how Profile stitches records across datasets. Start by confirming that a valid primary identity is selected—this field must be stable, unique, and consistently populated across all records. Verify that identity namespaces are assigned correctly to prevent stitching errors. If you use secondary identities, confirm that they support your use cases without causing profile collisions, which can occur when different individuals share the same identity value. Real-Time Customer Profile resolves collisions by applying merge policies that determine which data takes precedence when conflicting records are stitched together.
 
 ### Dataset purpose
 
@@ -80,7 +80,7 @@ Enable a dataset for Profile only when it contributes directly to profile attrib
 
 **Example**: 
 
-You enable a "Customer Purchase Events" dataset that contains transaction data with customer IDs. Profile Service uses these events to build customer timelines and enable segmentation based on purchase behavior. 
+You enable a "Customer Purchase Events" dataset that contains transaction data with customer IDs. Real-Time Customer Profile uses these events to build customer timelines and enable segmentation based on purchase behavior. 
 
 You do NOT enable a "Product Catalog" dataset that only contains SKU reference data without customer identifiers. Enabling this type of dataset creates unnecessary storage overhead without contributing to unified customer profiles.
 
@@ -100,7 +100,7 @@ Finally, confirm that you do not need to rename or reorganize the schema structu
 
 For each dataset you plan to enable, start by confirming that it contains profile-relevant data. Review sample records to verify they contain customer or event data rather than purely operational or reference information. Ensure that records include identity values that link to customer profiles. Datasets without identity fields or customer behavior data should not be enabled for Profile.
 
-Determine whether the dataset should contribute to identity stitching or segmentation by understanding how its identity values relate to other datasets in your Profile-enabled environment. Consider whether records in this dataset should stitch with existing profiles or create new profile fragments. Review the [merge policy documentation](../../profile/merge-policies/overview.md) to understand how Profile Service stitches records across datasets and how this dataset fits into your overall identity strategy.
+Determine whether the dataset should contribute to identity stitching or segmentation by understanding how its identity values relate to other datasets in your Profile-enabled environment. Consider whether records in this dataset should stitch with existing profiles or create new profile fragments. Review the [merge policy documentation](../../profile/merge-policies/overview.md) to understand how Real-Time Customer Profile stitches records across datasets and how this dataset fits into your overall identity strategy.
 
 Before enabling the dataset, estimate the number of unique identity values it contains and verify that these identity values represent actual customers rather than test accounts or system identifiers. Confirm that enabling this dataset aligns with your license entitlements, as each unique identity contributes to your addressable audience count. Profile enablement increases storage and processing costs, so ensure the dataset provides value that justifies this investment.
 
@@ -133,9 +133,9 @@ Repeat this process for each dataset that should contribute to Real-Time Custome
 
 ### Why order matters
 
-As explained in [Understanding the enablement workflow](#why-planning-matters), you must enable the schema before enabling datasets. This ensures that Profile Service validates the schema structure supports profile operations before allowing dataset enablement, and that all datasets using the schema inherit the correct field definitions for segmentation and identity stitching.
+As explained in [Understanding the enablement workflow](#why-planning-matters), you must enable the schema before enabling datasets. This ensures that Real-Time Customer Profile validates the schema structure supports profile operations before allowing dataset enablement, and that all datasets using the schema inherit the correct field definitions for segmentation and identity stitching.
 
-After you enable both the schema and datasets, Profile Service begins processing records and building unified customer profiles. Records ingested before enablement are not included in profiles unless you reingest the data.
+After you enable both the schema and datasets, Real-Time Customer Profile begins processing records and building unified customer profiles. Records ingested before enablement are not included in profiles unless you reingest the data.
 
 ## Next steps {#next-steps}
 
