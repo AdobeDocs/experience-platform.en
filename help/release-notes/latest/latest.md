@@ -22,6 +22,7 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Alerts](#alerts)
 - [Destinations](#destinations)
 - [Sources](#sources)
+- [Experience Data Model (XDM)](#xdm)
   
 ## Alerts {#alerts}
 
@@ -73,3 +74,14 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 {style="table-layout:auto"}
 
 For more information, read the [sources overview](../../sources/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+| Feature | Description |
+| --- | --- |
+| Restricted Editing for Schemas with Datasets | Editing operations that result in breaking changes are now restricted once a dataset exists for a schema. When a dataset is associated, you can no longer rename or delete fields, change field data types or formats, modify identity descriptors, manage related fields to remove existing fields, or change the assigned class; additive changes and field deprecation remain supported. |
+
+For more information, read the [XDM overview](../../xdm/home.md).
+
