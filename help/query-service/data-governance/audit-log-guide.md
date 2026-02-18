@@ -11,7 +11,7 @@ To learn more about the audit logs user interface, refer to the [audit logs over
 
 >[!NOTE]
 >
->Session eviction actions are logged. For UI workflows, see [Manage Query Service sessions](../ui/ui-session-management.md).
+>Session eviction actions are logged. For UI workflows, see [Manage Query Service sessions](../ui/session-management.md).
 
 ## Prerequisites
 

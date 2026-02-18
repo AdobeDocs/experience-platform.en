@@ -6,9 +6,7 @@ solution: Experience Platform
 ---
 # Manage Query Service sessions
 
-Use this guide to manage active Query Service sessions from the Adobe Experience Platform user interface. This guide explains where to access session management, how to interpret session status and idle time, and how to end idle sessions across sandboxes without disrupting active queries.
-
-Idle sessions continue to consume compute hours that count toward your Data Distiller license and reduce available capacity for other users.
+Use this guide to manage active Query Service sessions from the Adobe Experience Platform user interface. Session management helps administrators monitor concurrent Query Editor sessions across sandboxes and free capacity when users leave sessions open.
 
 ## Permissions required for session management {#permissions} 
 
@@ -24,7 +22,7 @@ To view and end sessions, you must belong to an organization with Data Distiller
 
 ## View active sessions {#view-active-sessions}
 
-Administrators can view all active Query Service sessions across sandboxes in your organization. Navigate to the Query Service workspace and select the **[!UICONTROL Admin]** tab to open session management.
+Administrators can view all active Query Service sessions across sandboxes in your organization. In Experience Platform, select **[!UICONTROL Queries]** in the left navigation to open the Query Service workspace, then select the **[!UICONTROL Admin]** tab to access session management.
 
 ![The Query Service workspace with the Admin tab selected. The Session Management table is displayed and lists active and inactive sessions across multiple sandboxes in your organization.](../images/ui/session-management/session-management-admin-tab.png)
 
@@ -45,9 +43,7 @@ The session table provides information to help you decide whether a session can 
 
 ### Session status
 
-**[!UICONTROL Inactive]** indicates the user is not actively running a query; these sessions can be ended. **[!UICONTROL Active]** indicates a query is currently running; ending the session is disabled while the query is in progress.
-
-When a session is active, the **[!UICONTROL End session]** control is unavailable until query execution completes.
+**[!UICONTROL Inactive]** indicates the user is not actively running a query; these sessions can be ended. **[!UICONTROL Active]** indicates a query is currently running; the **[!UICONTROL End session]** control is unavailable until query execution completes.
 
 ### Idle time and remaining session time
 
@@ -55,9 +51,9 @@ Idle time shows how long a session has been open without user interaction. Remai
 
 ## End idle sessions {#end-idle-sessions}
 
-You can end idle sessions to free capacity for other users and prevent unnecessary consumption of compute hours under your Data Distiller license. Consider ending sessions with high idle time during periods of capacity constraint or when users are no longer actively working.
+You can end idle sessions to free concurrent session capacity for other users. Consider ending sessions with high idle time when users are no longer actively working.
 
-From the session management table, select **[!UICONTROL End session]** for an inactive session.
+From the session management table, select **[!UICONTROL End session]** for an inactive session you want to end.
 
 ![Session Management table showing an inactive session with End session highlighted.](../images/ui/session-management/end-session.png)
 
@@ -69,7 +65,7 @@ After the session ends, the session is removed from the table, capacity becomes 
 
 >[!NOTE]
 >
->Sessions with status **[!UICONTROL Active]** cannot be ended. This safeguard prevents interruption of in-progress workloads and avoids duplicate compute usage.
+>Sessions with status **[!UICONTROL Active]** cannot be ended. This safeguard prevents interruption of in-progress workloads.
 
 ## Session behavior after termination {#session-behavior-after-termination}
 
@@ -89,7 +85,6 @@ For more information about viewing audit logs, see the [Query Service audit log 
 
 Consider the following resources to extend your use of Query Service and Data Distiller:
 
-* [Review Query Service capacity and usage trends in the Data Distiller license usage documentation](../data-distiller/license-usage.md)
 * [Learn how users create and run queries in the Query Editor user guide](user-guide.md)
 * [Monitor scheduled workloads using the scheduled queries monitoring documentation](monitor-queries.md)
 
