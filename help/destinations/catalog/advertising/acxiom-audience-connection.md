@@ -1,7 +1,7 @@
 ---
 title: Acxiom Audience Connection
 description: Use the [!DNL Acxiom Audience Connection] destination to enhance audiences with [!DNL Acxiom's Real ID] technology and activate audiences to multiple platforms, such as [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], and more.
-badge: Beta
+badge: 
 ---
 # [!DNL Acxiom Audience Connection] destination 
 
@@ -38,10 +38,12 @@ For example, the Marketing Operations department at a global financial services 
 - [!DNL Ampersand]
 - [!DNL Comcast]
 - [!DNL Cox]
+- [!DNL Facebook](#facebook)
 - [[!DNL LG Ads]](#lg-ads)
+- [!DNL Pinterest](#pinterest)
 - [!DNL Spectrum]
 - [!DNL Viant]
-- [!DNL Vizio]
+- [!DNL Vizio](#vizio)
 
 
 ## Connect to the destination {#connect}
@@ -57,12 +59,29 @@ To configure details for the destination, fill in the fields below.
 	
 ![Amazon destination details](../../assets/catalog/advertising/acxiom-audience-distribution/amazon_destination_details.png)
 
+### [!DNL Facebook] {#facebook}
+To configure details for the destination, fill in the fields below.
+- **Destination Account ID**: Enter the destination account ID for this destination.
+	
+![Facebook destination details](../../assets/catalog/advertising/acxiom-audience-distribution/facebook_destination_details.png)
+
 ### [!DNL LG Ads] {#lg-ads}
 To configure details for the destination, fill in the fields below.
 - **Segment Category**: The target category or vertical that your segment falls into. Example: financial services, automotive, health, etc.
 	
 ![LG Ads destination details](../../assets/catalog/advertising/acxiom-audience-distribution/lg_ads_destination_details.png)
 
+### [!DNL Pinterest] {#pinterest}
+To configure details for the destination, fill in the fields below.
+- **Destination Account ID**: Enter the destination account ID for this destination.
+	
+![Pinterest destination details](../../assets/catalog/advertising/acxiom-audience-distribution/pinterest_destination_details.png)
+
+### [!DNL Vizio] {#vizio}
+To configure details for the destination, fill in the fields below.
+- **Advertiser Name**: Enter the name of the advertiser for this destination.
+	
+![Vizio destination details](../../assets/catalog/advertising/acxiom-audience-distribution/vizio_destination_details.png)
 
 ## Activate audiences to this destination {#activate} 
 >[!IMPORTANT]
@@ -135,6 +154,7 @@ By following this tutorial, you have successfully activated an audience to the s
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
+
 
 
 
