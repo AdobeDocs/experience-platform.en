@@ -13,6 +13,7 @@ role: Developer
 * Schemas {#schema}
   * [Basics of schema composition](schema/composition.md)
   * [Best practices for data modeling](schema/best-practices.md)
+  * [Planning for Profile Enablement](./schema/profile-enablement-planning.md)
   * [Sensitive and personal data](./schema/sensitive-and-personal-data.md)
   * [XDM field type constraints](schema/field-constraints.md)
   * [Relational schema](./schema/relational.md)
