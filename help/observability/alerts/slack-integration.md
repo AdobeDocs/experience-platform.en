@@ -1,6 +1,7 @@
 ---
 title: Slack Integration for Customer Facing Alerts
 description: Learn how to connect Adobe I/O Events to Slack using Adobe App Builder.
+exl-id: 09ce5391-3932-4f51-b330-42d7a7acbe10
 ---
 # Slack integration for customer facing alerts
 
