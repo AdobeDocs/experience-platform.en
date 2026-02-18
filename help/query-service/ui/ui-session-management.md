@@ -6,7 +6,9 @@ solution: Experience Platform
 ---
 # Manage Query Service sessions
 
-Use this guide to manage active Query Service sessions from the Adobe Experience Platform user interface. This guide explains where to access session management, how to interpret session status and idle time, and how to end idle sessions across sandboxes without disrupting active queries. Proactively managing idle sessions helps reduce unnecessary compute hour consumption and protects available capacity under your Data Distiller license. Idle sessions continue to consume compute hours, which count toward your Data Distiller license usage and can affect available capacity for other users.
+Use this guide to manage active Query Service sessions from the Adobe Experience Platform user interface. This guide explains where to access session management, how to interpret session status and idle time, and how to end idle sessions across sandboxes without disrupting active queries.
+
+Idle sessions continue to consume compute hours that count toward your Data Distiller license and reduce available capacity for other users.
 
 ## Permissions required for session management {#permissions} 
 
