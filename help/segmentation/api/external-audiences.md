@@ -627,7 +627,9 @@ A successful response returns HTTP status 200 with a list of ingestion runs for 
 >
 >To use the following endpoint, you need to have the `audienceId` of your external audience. You can get your `audienceId` from a successful call to the `GET /external-audiences/operations/{OPERATION_ID}` endpoint.
 
-You can extend the data expiration of an external audience by making a POST request to the following endpoint while providing the audience ID. The data expiration is extended by the initial data expiration when the audience was ingested, or by 30 days if this value wasn't set.
+You can extend the data expiration of an external audience by making a POST request to the following endpoint while providing the audience ID. 
+
+The data expiration is extended by the original duration set during ingestion. If no duration was specified, a default extension of 30 days is applied. When you extend the data expiration, the audience will be re-ingested with the data from the last successful ingestion.
 
 **API format**
 
