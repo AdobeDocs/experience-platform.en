@@ -3,7 +3,7 @@ title: Configuration settings overview
 description: Learn about available options when configuring the Web SDK tag extension.
 exl-id: 03f7bc0a-05c9-48ae-ae57-478db6d18f52
 ---
-# Configuration settings overview
+# Configuration settings overview {#config-overview}
 
 The Adobe Experience Platform Web SDK tag extension provides several options that you can customize. These configuration settings are the tag equivalent of using the [`configure`](/help/collection/js/commands/configure/overview.md) command in the JavaScript library.
 
