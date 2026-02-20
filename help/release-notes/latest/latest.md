@@ -21,6 +21,7 @@ New features and updates to existing features in Adobe Experience Platform:
 
 - [Alerts](#alerts)
 - [Destinations](#destinations)
+- [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 - [Experience Data Model (XDM)](#xdm)
   
@@ -60,6 +61,19 @@ For more information, read the [[!DNL Observability Insights] overview](../../ob
 {style="table-layout:auto"}
 
 For more information, read the [Destinations overview](../../destinations/home.md).
+
+## Segmentation Service {#segmentation-service}
+
+[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Audiences can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Editable API audiences | You can now edit audiences created using either the Segmentation Service API or the Audience Agent in Segment Builder. **Note:** Audiences that contain time-series data **cannot** be edited using Segment Builder at this time. |
+| External audience data expiration refresh | You can use the Segmentation Service API to extend the data expiration of your external audiences. For more information, read the [external audiences API guide](/help/segmentation/api/external-audiences.md#extend-data-expiration). |
+
+For more information, read the [[!DNL Segmentation Service] overview](../../segmentation/home.md).
 
 ## Sources {#sources}
 
