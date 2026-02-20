@@ -102,7 +102,7 @@ role: Developer
       * [Getting started](extensions/client/web-sdk/getting-started.md)
       * Configure {#configure}
         * [Overview](extensions/client/web-sdk/configure/config-overview.md)
-        * [Custom build components](extensions/client/web-sdk/configure/custom-build-components.md)
+        * [Build options](extensions/client/web-sdk/configure/custom-build-components.md)
         * [SDK instance](extensions/client/web-sdk/configure/general.md)
         * [Datastreams](extensions/client/web-sdk/configure/datastreams.md)
         * [Consent](extensions/client/web-sdk/configure/consent.md)
