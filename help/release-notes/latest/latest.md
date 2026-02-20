@@ -70,7 +70,7 @@ For more information, read the [Destinations overview](../../destinations/home.m
 
 | Feature | Description |
 | ------- | ----------- |
-| Editable API audiences | You can now edit audiences created using the Segmentation Service API in Segment Builder. **Note:** Audiences that contain time-series data **cannot** be edited using Segment Builder at this time. |
+| Editable API audiences | You can now edit audiences created using either the Segmentation Service API or the Audience Agent in Segment Builder. **Note:** Audiences that contain time-series data **cannot** be edited using Segment Builder at this time. |
 | External audience data expiration refresh | You can use the Segmentation Service API to extend the data expiration of your external audiences. For more information, read the [external audiences API guide](/help/segmentation/api/external-audiences.md#extend-data-expiration). |
 
 For more information, read the [[!DNL Segmentation Service] overview](../../segmentation/home.md).
