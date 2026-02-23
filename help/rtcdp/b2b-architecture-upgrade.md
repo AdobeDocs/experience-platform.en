@@ -16,7 +16,13 @@ Use the enhanced architecture for the following benefits:
 
 * **Scalability of data ingestion**: Improved support for high-cardinality B2B relationships, such as accounts connected to thousands of people. 
 * **Performant and reliable audience evaluation**: Faster and more resilient segmentation for complex B2B audiences.  
-* **entity resolution**: Enhanced identity resolution for B2B entities, improved data quality, and reduced duplication to enable more accurate segmentation and aggregation.  
+* **entity resolution**: Enhanced identity resolution for B2B entities, improved data quality, and reduced duplication to enable more accurate segmentation and aggregation. 
+
+>[!TIP]
+>
+>Depending on segment volume and complexity, you may experience minor changes in the time required for segment evaluation and audience activation.
+>
+>You are encouraged to monitor segmentation run times, particularly if your business processes rely on the timely completion of segmentation and activation. This helps ensure your workflows continue to run smoothly and allow you to proactively address any unexpected changes.
 
 ## New features
 
