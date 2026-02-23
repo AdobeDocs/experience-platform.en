@@ -16,7 +16,7 @@ Use the enhanced architecture for the following benefits:
 
 * **Scalability of data ingestion**: Improved support for high-cardinality B2B relationships, such as accounts connected to thousands of people. 
 * **Performant and reliable audience evaluation**: Faster and more resilient segmentation for complex B2B audiences.  
-* **entity resolution**: Enhanced identity resolution for B2B entities, improved data quality, and reduced duplication to enable more accurate segmentation and aggregation.
+* **Entity resolution**: Enhanced identity resolution for B2B entities, improved data quality, and reduced duplication to enable more accurate segmentation and aggregation.
 
 >[!TIP]
 >
