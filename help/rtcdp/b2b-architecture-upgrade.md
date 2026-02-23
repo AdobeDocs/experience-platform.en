@@ -20,7 +20,7 @@ Use the enhanced architecture for the following benefits:
 
 >[!TIP]
 >
->Depending on segment volume and complexity, you may experience minor changes in the time required for segment evaluation and audience activation.
+>Depending on audience size and complexity, you may experience minor changes in the time required for audience evaluation and audience activation.
 >
 >You are encouraged to monitor segmentation run times, particularly if your business processes rely on the timely completion of segmentation and activation. This helps ensure your workflows continue to run smoothly and allow you to proactively address any unexpected changes.
 
