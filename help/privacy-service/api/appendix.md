@@ -36,7 +36,7 @@ The following table outlines several commonly used, pre-defined identity types m
 
 You can retrieve a list of identity namespaces in use by your organization by making a GET request to the `idnamespace/identities` endpoint in the [!DNL Identity Service] API. See the [Identity Service developer guide](../../identity-service/api/getting-started.md) for more information.
 
-## Namespace qualifiers
+## Namespace qualifiers {#namespace-qualifiers}
 
 When specifying a `namespace` value in the [!DNL Privacy Service] API, a **namespace qualifier** must be included in a corresponding `type` parameter. The following table outlines the different accepted namespace qualifiers.
 
@@ -52,17 +52,18 @@ When specifying a `namespace` value in the [!DNL Privacy Service] API, a **names
 
 {style="table-layout:auto"}
 
-## Accepted product values
+## Accepted product values {#accepted-product-values}
 
-When creating a Privacy Service job, you can specify one or more Adobe products in the `include` attribute. Each product must be provided using its supported product identifier value.
+This section lists the product identifier values accepted in the `include` attribute when creating Privacy Service jobs (API or UI). Use these values in the `include` array of your job request.
 
-The following table lists the supported products, their UI display names, and their corresponding JSON code values.
+The following table lists the supported products, their UI display names, and their corresponding code values.
 
 >[!NOTE]
 >
->Product values are case-insensitive. Camel case is recommended for consistency.
+>- Product values are case-insensitive; camel case is recommended for consistency.
+>- Only the products listed above are supported in the UI and API. If a product is not provisioned for your organization, it may be ignored or cause a validation error—refer to your Adobe contract or provisioning documentation to confirm entitlement.
 
-| Branded product name                                   | UI display name            | Value for use in the `include` attribute |
+| Branded product name                                   | UI display name            | `include` value |
 | ------------------------------------------------------ | -------------------------- | ---------------------------------------- |
 | Adobe Analytics                                        | [!UICONTROL Analytics]                 | `analytics`                              |
 | Adobe Audience Manager                                 | [!UICONTROL Audience Manager]          | `audienceManager`                        |
@@ -79,7 +80,3 @@ The following table lists the supported products, their UI display names, and th
 | Adobe Commerce (Personalization)                       | [!UICONTROL Commerce (Personalization)]| `commerceMarketingData`                  |
 
 {style="table-layout:auto"}
-
->[!NOTE]
->
->Only the products listed above are supported in both the UI and the API. Some products may not be provisioned for your organization. If a specified product is not enabled, it may be ignored or result in a validation error depending on configuration. Refer to your Adobe contract or provisioning documentation to confirm entitlement.
