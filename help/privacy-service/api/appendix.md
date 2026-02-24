@@ -68,15 +68,15 @@ The following table lists the supported products, their UI display names, and th
 | Adobe Analytics                                        | [!UICONTROL Analytics]                 | `analytics`                              |
 | Adobe Audience Manager                                 | [!UICONTROL Audience Manager]          | `audienceManager`                        |
 | Adobe Advertising                                      | [!UICONTROL Ad Cloud]                  | `adCloud`                                |
-| Adobe Experience Platform (Real-Time Customer Profile) | [!UICONTROL Profile]                   | `profileService`                         |
-| Adobe Experience Platform (Data Lake)                  | [!UICONTROL AEP Data Lake]             | `AdobeCloudPlatform`                     |
+| Adobe Experience Platform (Profile store)              | [!UICONTROL Profile]                   | `profileService`                         |
+| Adobe Experience Platform (data lake)                  | [!UICONTROL AEP Data Lake]             | `AdobeCloudPlatform`                     |
 | Adobe Campaign                                         | [!UICONTROL Campaign]                  | `campaign`                               |
 | Adobe Target                                           | [!UICONTROL Target]                    | `target`                                 |
 | Customer Attributes                                    | [!UICONTROL Customer Attributes (CRS)] | `CRS`                                    |
 | Adobe Journey Optimizer                                | [!UICONTROL Adobe Journey Optimizer]   | `cjm`                                    |
-| Marketo Engage (including AJO B2B)                     | [!UICONTROL Marketo Engage / AJO B2B]  | `marketo`                                |
+| Marketo Engage                                         | [!UICONTROL Marketo Engage / AJO B2B]  | `marketo`                                |
 | Identity Service                                       | [!UICONTROL Identity]                  | `identity`                               |
 | Marketo Measure                                        | [!UICONTROL Marketo Measure]           | `marketomeasure`                         |
-| Adobe Commerce (Personalization)                       | [!UICONTROL Commerce (Personalization)]| `commerceMarketingData`                  |
+| Adobe Commerce                                         | [!UICONTROL Commerce (Personalization)]| `commerceMarketingData`                  |
 
 {style="table-layout:auto"}
