@@ -51,7 +51,7 @@ The sections below outline how to make privacy requests for [!DNL Real-Time Cust
 
 ### Using the API
 
-When creating job requests in the API, any IDs provided within `userIDs` must use a specific `namespace` and `type`. A valid [identity namespace](#namespaces) recognized by [!DNL Identity Service] must be provided for the `namespace` value, while the `type` must be either `standard` or `unregistered` (for standard and custom namespaces, respectively).
+When creating job requests in the API, any IDs provided within `userIDs` must use a specific `namespace` and `type`. A valid [identity namespace](#namespaces) recognized by Identity Service must be provided for the namespace value. Use `standard` for standard namespaces, and use `custom` for custom namespaces.
 
 >[!NOTE]
 >
