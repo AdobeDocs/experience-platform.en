@@ -109,7 +109,7 @@ The **[!UICONTROL Details]** tab provides more detailed information about the se
 
 ![The profile details page is displayed.](../images/user-guide/profile-details.png)
 
-Additionally, you can toggle whether the AI-generated insights are displayed and show the details for hub compared to edge.
+Additionally, you can toggle whether the AI-generated insights are displayed, show the details for hub compared to edge, as well as choosing between card or graph views.
 
 ![The toggles listed above (AI-generated insights, Hub or Edge data, and Card or Graph view) are highlighted.](../images/user-guide/profile-toggles.png)
 
