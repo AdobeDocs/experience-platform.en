@@ -34,9 +34,9 @@ To learn more, visit the [profile dashboard guide](../../dashboards/guides/profi
 
 ## [!UICONTROL Browse] tab 
 
-On the **[!UICONTROL Browse]** tab you can view your profiles either in a **card** view or a **graph** view by selecting the toggle.
+On the **[!UICONTROL Browse]** tab you can view your profiles either in a **card** view or a **table** view by selecting the toggle.
 
-![The card and graph view toggle is highlighted.](../images/user-guide/change-browse-view.png)
+![The card and table view toggle is highlighted.](../images/user-guide/change-browse-view.png)
 
 Additionally, you can browse your profiles using a merge policy or look up specific profiles using an identity namespace and value.
 
@@ -105,11 +105,11 @@ Additionally, you can view other details about profiles such as its [attributes]
 
 ### Details tab {#profile-detail}
 
-The **[!UICONTROL Details]** tab provides more detailed information about the selected profile, and is separated into four sections:  Customer profile insights, AI insight widgets, customizable widgets, and auto-classified widgets.
+The **[!UICONTROL Details]** tab provides more detailed information about the selected profile. The details tab is separated into various sections, depending if you're in card or graph view. For card view, the customer profile insights, AI insight widgets, customizable widgets, and auto-classified widgets are displayed while for graph view, the profile attributes and experience events sections are displayed.
 
 ![The profile details page is displayed.](../images/user-guide/profile-details.png)
 
-Additionally, you can toggle whether the AI-generated insights are displayed, show the details for hub compared to edge, as well as view the details in graph view.
+Additionally, you can toggle whether the AI-generated insights are displayed and show the details for hub compared to edge.
 
 ![The toggles listed above (AI-generated insights, Hub or Edge data, and Card or Graph view) are highlighted.](../images/user-guide/profile-toggles.png)
 
@@ -152,6 +152,18 @@ These widgets combine both event data (with the Experience events widget) and at
 >If there are multiple source field groups, the widgets will only use **one** of the available options.
 
 ![The auto-classified widgets section is displayed.](../images/user-guide/auto-classified-widgets.png)
+
+#### Profile attributes {#profile-attributes}
+
+The **[!UICONTROL Profile attributes]** section displays a hierarchical graph representation of the profile data. In this view, the central node represents the profile itself, secondary nodes represent the field groups, and the remaining nodes represent properties within each field group.
+
+IMAGE
+
+#### Experience events {#experience-events}
+
+The **[!UICONTROL Experience events]** section displays a timeline of experience events that contain the profile.
+
+IMAGE
 
 ### Attributes tab {#attributes}
 
