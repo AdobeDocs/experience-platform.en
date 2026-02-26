@@ -11,4 +11,16 @@ Multi-entity segmentation lets you refer to B2B entities within your audience de
 
 To create a multi-entity audience, you'll need to create three different audiences: one that contains the streaming segmentation logic, one that contains the B2B entity, and one that combines the two audiences together.
 
-For this scenario, 
+An example of a multi-entity streaming audience would be an audience that is looking for all account-persons in the Americas to have completed an offer in the last six hours. 
+
+The streaming audience would look as follows:
+
+IMAGE
+
+The audience that contains the B2B entity would look as follows:
+
+IMAGE
+
+After you create the two component audiences, you'll need to create an audience that **includes** both of the constituent audiences.
+
+IMAGE
