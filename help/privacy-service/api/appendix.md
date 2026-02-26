@@ -69,7 +69,7 @@ The following table lists the supported products, their UI display names, and th
 | Adobe Audience Manager                                 | [!UICONTROL Audience Manager]          | `audienceManager`                        |
 | Adobe Advertising                                      | [!UICONTROL Ad Cloud]                  | `adCloud`                                |
 | Adobe Experience Platform (Profile store)              | [!UICONTROL Profile]                   | `profileService`                         |
-| Adobe Experience Platform (data lake)                  | [!UICONTROL AEP Data Lake]             | `AdobeCloudPlatform`                     |
+| Adobe Experience Platform (data lake)                  | [!UICONTROL AEP Data Lake]             | `aepDataLake`                            |
 | Adobe Campaign                                         | [!UICONTROL Campaign]                  | `campaign`                               |
 | Adobe Target                                           | [!UICONTROL Target]                    | `target`                                 |
 | Customer Attributes                                    | [!UICONTROL Customer Attributes (CRS)] | `CRS`                                    |
