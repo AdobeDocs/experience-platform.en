@@ -58,8 +58,6 @@ Supported audiences by audience data type:
 
 ## Export type and frequency {#export-type-frequency}
 
-**[!DNL Audience Export]** - you are exporting all members of an audience to the [!DNL Microsoft Ads Customer Match] destination.
-
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
@@ -75,8 +73,8 @@ To send audience data to [!DNL Microsoft Ads], you need to have an active [!DNL 
 
 When configuring the destination, you must provide the following information:
 
-* [!UICONTROL Customer ID]: your [!DNL Microsoft Ads] Customer ID (CID), in integer format.
-* [!UICONTROL Customer Account ID]: your [!DNL Microsoft Ads] Customer Account ID.
+* [!UICONTROL Customer ID]: your [!DNL Microsoft Ads] Customer ID (CID), in integer format. See the [Microsoft Advertising documentation](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) for instructions on how to find your Customer ID.
+* [!UICONTROL Customer Account ID]: your [!DNL Microsoft Ads] Customer Account ID. See the [Microsoft Advertising documentation](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) for instructions on how to find your  Customer Account ID.
 
 ## Connect to the destination {#connect}
 
@@ -88,14 +86,37 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Fill in destination details {#parameters}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_microsoft_ads_cm_customer_id"
+>title="Customer ID"
+>abstract="Your Microsoft Advertising Customer ID, also known as the Manager account ID. This is the top-level identifier in Microsoft Advertising that can have multiple advertiser accounts (Customer Account IDs) under it."
+>additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="Find your Customer ID"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_microsoft_ads_cm_customer_account_id"
+>title="Customer Account ID"
+>abstract="Your Microsoft Advertising Customer Account ID, also known as the Advertiser account ID. This identifies a specific advertiser account under your Customer ID."
+>additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="Find your Customer Account ID"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_microsoft_ads_cm_membership_duration"
+>title="Membership Duration"
+>abstract="The number of days a user remains in the customer match list. Accepted values are between 1 and 390 days."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_microsoft_ads_cm_list_availability"
+>title="Customer Match List Availability"
+>abstract="Select whether the customer match list is available to a single advertiser account or to all accounts under the manager account. Select Customer ID to make the list available across all advertiser accounts under your Customer ID. Select Customer Account ID to restrict the list to the specific Customer Account ID."
+>additional-url="https://help.ads.microsoft.com/apex/index/3/en/56727" text="Learn more about audience list sharing in Microsoft Advertising"
+
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Customer ID]**: Your [!DNL Microsoft Ads] Customer ID (CID). Your CID is an integer, found in the URL when you log into [!DNL Microsoft Advertising].
-* **[!UICONTROL Customer Account ID]**: Your [!DNL Microsoft Ads] Customer Account ID. You can find this in the account settings of your [!DNL Microsoft Advertising] account.
-* **[!UICONTROL Membership Duration]**: The number of days a user remains in the customer match list. The default value is 30 days.
-* **[!UICONTROL Scope]**: Select **[!UICONTROL Account]** to apply the customer match list at the account level.
+* **[!UICONTROL Customer ID]**: Your [!DNL Microsoft Ads] Customer ID (CID). See the [Microsoft Advertising documentation](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) for instructions on how to find your Customer ID.
+* **[!UICONTROL Customer Account ID]**: Your [!DNL Microsoft Ads] Customer Account ID. See the [Microsoft Advertising documentation](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) for instructions on how to find your  Customer Account ID.
+* **[!UICONTROL Membership Duration]**: The number of days a user remains in the customer match list. Accepted values are between 1 and 390 days.
+* **[!UICONTROL Customer Match List Availability]**: Select the availability of the customer match list. In [!DNL Microsoft Advertising], a Customer ID can have multiple Customer Account IDs (advertiser accounts) under it. Select **[!UICONTROL Customer ID (all advertising accounts)]** to make the list available across all advertiser accounts under your Customer ID, or **[!UICONTROL Customer Account ID (single advertising account)]** to restrict the list to the specific Customer Account ID you provided above. See the [Microsoft Advertising documentation](https://help.ads.microsoft.com/apex/index/3/en/56727) for more details.
 
 ![Platform UI image showing the destination details fields for the Microsoft Ads Customer Match destination.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
 
@@ -114,15 +135,22 @@ When you are finished providing details for your destination connection, select 
 
 See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
-### Mapping example {#mapping-example}
+### Mapping {#mapping}
 
-This is an example of correct identity mapping when activating audience data in [!DNL Microsoft Ads Customer Match].
+In the **[!UICONTROL Mapping]** step, you must map the email identity from your source profiles to the target identity in [!DNL Microsoft Ads Customer Match].
 
-Select the `Email` namespace as source identity and map it to the `Email` target identity. This destination only supports plain text email addresses — hashed emails are not supported.
+* **Source field**: Select `IdentityMap: Email` as the source field to map email identities from your profiles. Alternatively, you can select an XDM attribute such as `personalEmail.address` as the source field.
+* **Target field**: Select `Identity: email` as the target field.
+
+>[!IMPORTANT]
+>
+>You must use unhashed (plain text) source fields. Do not use pre-hashed source identities such as `Emails (SHA256, lowercased)`. Experience Platform automatically hashes the email addresses on export to match Microsoft's requirements.
+
+![UI image showing the mapping step with IdentityMap Email mapped to Identity email.](../../assets/catalog/advertising/microsoft-ads-customer-match/mapping.png)
 
 ## Exported data {#exported-data}
 
-To verify if data has been exported successfully to the [!DNL Microsoft Ads Customer Match] destination, check your [!DNL Microsoft Advertising] account. If activation was successful, audiences are populated in your account as customer match lists. Depending on your audience size, some audiences may not populate unless there are over 300 active users to serve.
+To verify if data has been exported successfully to the [!DNL Microsoft Ads Customer Match] destination, check your [!DNL Microsoft Advertising] account. If activation was successful, audiences are populated in your account as customer match lists.
 
 ## Additional resources {#additional-resources}
 
