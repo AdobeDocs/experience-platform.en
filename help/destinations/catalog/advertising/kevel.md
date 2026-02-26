@@ -1,7 +1,7 @@
 ---
 title: Kevel Connection
 description: Use the Kevel streaming destination to activate audiences directly into Kevel's UserDB and Segment Management APIs and support real-time targeting at decision time.
-last-substantial-update: 2026-01-27
+last-substantial-update: 2026-02-25
 exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
 ---
 # [!DNL Kevel] connection {#kevel}
@@ -10,7 +10,7 @@ exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
 
 [[!DNL Kevel]](https://www.kevel.com/) provides the AI-enabled technology and expert guidance that help innovative commerce leaders launch, scale, and succeed in retail media. [!DNL Kevel]'s Retail Media Cloud powers targeted, attributable, customizable ad formats for on-site and off-site advertising.
 
-The [!DNL Kevel] streaming destination for Adobe Experience Platform enables customers to activate Adobe audiences directly into [!DNL Kevel]'s UserDB and Segment Management APIs to support real-time targeting at ad decision time.
+The [!DNL Kevel] streaming destination for Adobe Experience Platform enables customers to activate Adobe audiences directly into [!DNL Kevel]'s UserDB and Segment Management APIs to support real-time targeting at ad decision time. The destination also supports syncing profile attributes such as incrementality testing group assignments.
 
 >[!IMPORTANT]
 > 
@@ -19,6 +19,8 @@ The [!DNL Kevel] streaming destination for Adobe Experience Platform enables cus
 ## Use cases {#use-cases}
 
 You can activate rich first-party behavioral audiences across your retail media experiences to deliver more relevant ads and stronger performance. In Experience Platform, you build high-value, intent-based audiences, such as frequent category shoppers or users with recent product interest, and sync those memberships to [!DNL Kevel] in real time. [!DNL Kevel] immediately makes these segments available for ad decisioning, enabling precise targeting for sponsored products and other formats across search, browse, and app experiences. As soon as users qualify, you can act on these signals to drive more relevant impressions, better targeting, and improved measurement and ROAS.
+
+Additionally, you can sync profile attributes to [!DNL Kevel] to support features like **incrementality testing**. By mapping a user's group assignment attribute to the `kevelGroup` target field, [!DNL Kevel] can use this value to split users into test and control cohorts for measuring the causal impact of advertising.
 
 ## Prerequisites {#prerequisites}
 
@@ -145,6 +147,25 @@ To fully stop targeting in [!DNL Kevel], ensure the segment is removed from any 
 
 During activation, select the identity namespaces you have configured for [!DNL Kevel]. Each identity will generate its own UserDB update call.
 
+#### Profile attributes (optional) {#profile-attributes}
+
+You can optionally map XDM profile attributes to [!DNL Kevel]. The following target attribute name is recognized by the destination:
+
+| Target field name | Description | Value type |
+|-------------------|-------------|------------|
+| **`kevelGroup`** | The user's incrementality testing group assignment. Used by [!DNL Kevel] to split users into test and control cohorts for measuring causal ad impact. | Integer (1-100) |
+
+{style="table-layout:auto"}
+
+To map a group attribute, add a new mapping row in the **Mapping** step and configure:
+
+1. **Source field**: Select the XDM attribute or computed attribute that contains the user's group number (for example, `_yourSchema.incrementalityGroup`).
+2. **Target field**: Type `kevelGroup` exactly as shown (case-sensitive).
+
+>[!IMPORTANT]
+>
+>The target field name must be exactly `kevelGroup`. The [!DNL Kevel] destination template references this attribute by name. If a different target name is used, the group value will not be sent to [!DNL Kevel].
+
 ## Exported data / Validate data export {#exported-data}
 
 When a profile qualifies for or exits an audience, Experience Platform sends a streaming update to [!DNL Kevel].
@@ -154,7 +175,8 @@ When a profile qualifies for or exits an audience, Experience Platform sends a s
 ```json
 PUT /udb/{networkId}/segments?userKey=ECID-12345
 {
-  "segments": [1723, 3344, 9988]
+  "segments": [1723, 3344, 9988],
+  "group": 42
 }
 ```
 
@@ -162,6 +184,7 @@ PUT /udb/{networkId}/segments?userKey=ECID-12345
 |-----------|-------------|
 | **userKey** | Derived from the mapped Adobe identity. |
 | **segments** | The set of [!DNL Kevel] segment IDs corresponding to the Adobe audiences for which the profile is currently realized. |
+| **group** | *(Optional)* The user's incrementality testing group (1-100). Only included if a profile attribute is mapped to the `kevelGroup` target field. |
 
 {style="table-layout:auto"}
 
@@ -173,9 +196,15 @@ Below is an example of an exported profile showing:
 
 - Multiple identity namespaces mapped to `kevel_user_key1`, `kevel_user_key2`, and `kevel_user_key3`
 - A single activated segment in the `ups` namespace
+- A profile attribute mapped to `kevelGroup` for incrementality testing
 
 ```json
 {
+  "attributes": {
+    "kevelGroup": {
+      "value": 42
+    }
+  },
   "segmentMembership": {
     "ups": {
       "9d161bbb-c785-474a-965b-7d7bc2adf879": {
@@ -217,6 +246,8 @@ With the [!DNL Kevel] destination configuration, each mapped identity generates 
 - One update for `IDFA-nB5fU`
 
 This allows the same person to be recognized at ad decision time using any of their available identities, with each identity carrying an identical set of segment memberships.
+
+When a `kevelGroup` attribute is mapped, each UserDB update also includes the user's group assignment, enabling [!DNL Kevel]'s incrementality testing feature to determine test and control cohort membership at ad decision time.
 
 ## Data usage and governance {#data-usage-governance}
 
