@@ -1,8 +1,7 @@
 ---
 keywords: advertising; microsoft ads; customer match;
 title: Microsoft Ads Customer Match connection
-description: With the Microsoft Ads Customer Match connection, you can use your own data to find customers using the email addresses your customers have shared with you to reengage with them across the Microsoft Advertising Network through both search and Audience ads.
-exl-id: TO_BE_GENERATED
+description: Use the Microsoft Ads Customer Match destination to match customers by email address and reengage with them across the Microsoft Advertising Network, including search and Audience ads.
 hide: yes
 hidefromtoc: yes
 ---
