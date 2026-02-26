@@ -37,7 +37,7 @@ role: User, Developer
 * Model Authoring {#authoring}
   * [Model Authoring SDK](authoring/sdk.md)
   * [Create a Feature Pipeline](authoring/feature-pipeline.md)
-  * [Model authoring using the Platform SDK (Python)](authoring/platform-sdk.md)
+  * [Model authoring using the Experience Platform SDK (Python)](authoring/platform-sdk.md)
   * [Python data access](authoring/python.md)
   * [Spark data access](authoring/spark.md)
 * Model and recipe tutorials {#models-recipes}
@@ -58,5 +58,5 @@ role: User, Developer
   * [Publish a model as a service (API)](models-recipes/publish-model-service-api.md)
   * [Schedule automated training and scoring on a service (UI)](models-recipes/schedule-models-ui.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
-* [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [API reference](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
+* [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

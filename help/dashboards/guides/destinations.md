@@ -21,7 +21,7 @@ The Destinations dashboard displays a snapshot of the destinations that your org
 
 ## Explore the [!UICONTROL Destinations] dashboard {#explore}
 
-To navigate to the destinations dashboard within the Platform UI, select **[!UICONTROL Destinations]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
+To navigate to the destinations dashboard within the Experience Platform UI, select **[!UICONTROL Destinations]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
 
 The date and time of the most recent snapshot is displayed at the top of the [!UICONTROL Overview] next to the destination dropdown. All widget data is accurate as of that date and time. The timestamp of the snapshot is provided in UTC; it is not in the timezone of the individual user or organization.
 
@@ -29,7 +29,7 @@ The date and time of the most recent snapshot is displayed at the top of the [!U
 >
 >If your organization is new to Experience Platform and does not yet have active destinations, the Destinations dashboard and [!UICONTROL Overview] tab are not visible. Instead, selecting [!UICONTROL Destinations] from the left navigation displays the [!UICONTROL Catalog] tab. To learn more about the [!UICONTROL Catalog] tab, refer to the [[!UICONTROL Destinations] workspace guide](../../destinations/ui/destinations-workspace.md).
 
-![The Platform UI Destinations Overview with the most recent snapshot highlighted.](../images/destinations/snapshot-timestamp.png)
+![The Experience Platform UI Destinations Overview with the most recent snapshot highlighted.](../images/destinations/snapshot-timestamp.png)
 
 ### Modify the [!UICONTROL Destinations] dashboard {#modify}
 
@@ -47,7 +47,7 @@ From the widget library, you can browse the selection of standard and custom aud
 
 ### View SQL {#view-sql}
 
-You can view the SQL that generates the insights visualized on your dashboard with a toggle on the [!UICONTROL Overview] workspace. You can take inspiration from the SQL of your existing insights to create new queries that derive unique insights from Platform data based on your business needs. To learn more about this feature, see the [View SQL UI guide](../view-sql.md).
+You can view the SQL that generates the insights visualized on your dashboard with a toggle on the [!UICONTROL Overview] workspace. You can take inspiration from the SQL of your existing insights to create new queries that derive unique insights from Experience Platform data based on your business needs. To learn more about this feature, see the [View SQL UI guide](../view-sql.md).
 
 ## Default widgets {#default-widgets}
 

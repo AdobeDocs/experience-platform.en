@@ -36,7 +36,7 @@ When executing the query, Query Service replaces the template name starting from
 
 You can use templates to store one or multiple conditions. They do not need to be a complete query by themselves. If your template contains a valid query, you can execute the query simply by calling the template name preceded with a hash symbol. For example, if you stored `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` as a template  named `JUNE_2023_LOYALTY_MEMBERS`, the command  `#JUNE_2023_LOYALTY_MEMBERS;` would execute the valid query contained inside the template. 
 
->![NOTE]
+>[!NOTE]
 >
 >Within the Adobe Experience Platform UI, inline templates in the form of parameterized queries are only supported at the parent level. This means that parameterized queries only work when used in the original template. The child template must be a static template and cannot have dynamic parameters. See the [parameterized queries documentation](../ui/parameterized-queries.md) to learn more.
 

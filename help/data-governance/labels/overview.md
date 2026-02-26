@@ -18,11 +18,11 @@ This document provides an overview of data usage labels in [!DNL Experience Plat
 
 ## Understanding data usage labels
 
-Data usage labels allow you to categorize datasets and fields according to governance policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available for use in [!DNL Platform].
+Data usage labels allow you to categorize datasets and fields according to governance policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available for use in [!DNL Experience Platform].
 
 Data usage labels that are applied at the dataset level are propagated to all fields within the dataset. Labels can also be applied directly to individual fields (column headers) in a dataset, without propagation.
 
-[!DNL Platform] provides several "core" data usage labels out-of-the-box, which cover a wide variety of common restrictions applicable to data governance. For more information on these labels and the governance policies they represent, see the guide on [core data usage labels](reference.md).
+[!DNL Experience Platform] provides several "core" data usage labels out-of-the-box, which cover a wide variety of common restrictions applicable to data governance. For more information on these labels and the governance policies they represent, see the guide on [core data usage labels](reference.md).
 
 In addition to the labels provided by Adobe, you can also define your own custom labels for your organization. See the section on [managing labels](#manage-labels) for more information.
 
@@ -32,13 +32,13 @@ All audience segments created by [Adobe Experience Platform Segmentation Service
 
 In addition to inheriting dataset-level labels, segments inherit all field-level labels from their associated datasets by default. Therefore, you can more easily identify which attributes should be excluded from your segments and prevent them from inheriting labels from excluded fields.
 
-For more information on how automatic enforcement works in Platform, see the overview on [automatic policy enforcement](../enforcement/auto-enforcement.md).
+For more information on how automatic enforcement works in Experience Platform, see the overview on [automatic policy enforcement](../enforcement/auto-enforcement.md).
 
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
 [!DNL Experience Platform] has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent labels and marketing actions recognized by [!DNL Experience Platform] Data Governance.
 
-For a reference on how specific Data Export Controls map to data usage labels in [!DNL Platform], please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+For a reference on how specific Data Export Controls map to data usage labels in [!DNL Experience Platform], please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## Managing data usage labels in [!DNL Experience Platform] {#manage-labels}
 
@@ -51,11 +51,11 @@ You can manage data usage labels using [!DNL Experience Platform] APIs or the us
 
 ### Using the UI
 
-The **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI allows you to view and manage core and custom labels for your organization. You can use the **[!UICONTROL Schemas]** workspace to [apply labels to your Experience Data Model (XDM) schemas](../../xdm/tutorials/labels.md), or learn how to [create and manage custom labels in the **[!UICONTROL Policies] UI](./user-guide.md) by reading the data usage labels user guide instead.
+The **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI allows you to view and manage core and custom labels for your organization. You can use the **[!UICONTROL Schemas]** workspace to [apply labels to your Experience Data Model (XDM) schemas](../../xdm/tutorials/labels.md), or learn how to [create and manage custom labels in the **[!UICONTROL Policies]** UI](./user-guide.md) by reading the data usage labels user guide instead.
 
 >[!IMPORTANT]
 >
->Labels can no longer be applied to fields at the dataset level. This workflow has been deprecated in favour of applying labels at the schema level. Any labels previously applied at the dataset object level will still be supported through the Platform UI until 31st May 2024. To ensure that your labels are consistent across all schemas, any labels previously attached to fields at the dataset level must be migrated to the schema level by you over the coming year. See the section on [migrating previously applied labels](../e2e.md#migrate-labels) for instructions on how to do this.
+>Labels can no longer be applied to fields at the dataset level. This workflow has been deprecated in favour of applying labels at the schema level. Any labels previously applied at the dataset object level will still be supported through the Experience Platform UI until 31st May 2024. To ensure that your labels are consistent across all schemas, any labels previously attached to fields at the dataset level must be migrated to the schema level by you over the coming year. See the section on [migrating previously applied labels](../e2e.md#migrate-labels) for instructions on how to do this.
 
 ### Using APIs
 

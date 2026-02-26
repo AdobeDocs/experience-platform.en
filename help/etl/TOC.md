@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform ETL Guide
 breadcrumb-title: ETL Guide
-user-guide-description: Learn the general steps for creating secure, high-performance connectors for ingesting data into Platform.
+user-guide-description: Learn the general steps for creating secure, high-performance connectors for ingesting data into Experience Platform.
 role: Developer
 ---
 
@@ -11,4 +11,4 @@ role: Developer
 - [Developing ETL integrations](home.md)
 - [ETL transformation](transformations.md)
 - [ETL workflow](workflow.md)
-- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

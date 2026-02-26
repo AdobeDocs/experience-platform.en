@@ -46,7 +46,7 @@ To learn more about mapping sets, including how to use the fields within a mappi
 
 ## Data format handling
 
-Data Prep can robustly handle different formats of data ingested into Platform. To learn more about how Data Prep handles different data types, please read the [data format handling overview](./data-handling.md).
+Data Prep can robustly handle different formats of data ingested into Experience Platform. To learn more about how Data Prep handles different data types, please read the [data format handling overview](./data-handling.md).
 
 ## Send partial row updates using [!DNL Data Prep]
 

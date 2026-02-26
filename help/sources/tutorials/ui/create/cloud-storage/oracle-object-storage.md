@@ -14,8 +14,8 @@ This tutorial provides steps for creating an [!DNL Oracle Object Storage] source
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Gather required credentials
 
@@ -31,11 +31,11 @@ In to connect to [!DNL Oracle Object Storage], you must provide values for the f
 
 For more information on how to obtain these values, refer to the [Oracle Object Storage authentication guide](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
-Once you have gathered your required credentials, you can follow the steps below to create a new Oracle Object Storage account to connect to Platform.
+Once you have gathered your required credentials, you can follow the steps below to create a new Oracle Object Storage account to connect to Experience Platform.
 
 ## Connect to Oracle Object Storage
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
 
@@ -57,4 +57,4 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Oracle Object Storage] account. You can now proceed to the next tutorial on [configuring a dataflow to bring data from your cloud storage into Platform](../../dataflow/batch/cloud-storage.md).
+By following this tutorial, you have established a connection to your [!DNL Oracle Object Storage] account. You can now proceed to the next tutorial on [configuring a dataflow to bring data from your cloud storage into Experience Platform](../../dataflow/batch/cloud-storage.md).

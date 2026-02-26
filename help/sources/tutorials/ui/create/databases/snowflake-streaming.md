@@ -1,13 +1,11 @@
 ---
 title: Stream data from your Snowflake database to Experience Platform using the UI
-type: Tutorial
 description: Learn how to stream data from your Snwoflake database to Experience Platform
-badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
 ---
 # Stream data from your [!DNL Snowflake] database to Experience Platform using the UI
 
-Learn how to use the user interface to stream data from your [!DNL Snowflake] database to Adobe Experience Platform by following this guide.
+Read this guide to learn how to stream data from your [!DNL Snowflake] database to Experience Platform using the sources workspace in the UI.
 
 ## Get started
 
@@ -24,9 +22,9 @@ Read the guide on [prerequisite setup for [!DNL Snowflake] streaming data](../..
 
 ## Use the [!DNL Snowflake Streaming] source to stream [!DNL Snowflake] data to Experience Platform
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *Databases* category, select **[!DNL Snowflake Streaming]**, and then select **[!UICONTROL Add data]**.
+Under the *Databases* category, select **[!DNL Snowflake Streaming]**, and then select **[!UICONTROL Set up]**.
 
 >[!TIP]
 >
@@ -36,51 +34,47 @@ Under the *Databases* category, select **[!DNL Snowflake Streaming]**, and then 
 
 The **[!UICONTROL Connect Snowflake Streaming account]** page appears. On this page, you can either use new or existing credentials.
 
->[!BEGINTABS]
+### Create a new account
 
->[!TAB Create a new account]
-
-To create a new account, select **[!UICONTROL New account]** and provide a name, an optional description, and your credentials. 
-
-When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
+To create a new account, select **[!UICONTROL New account]** and provide a name and an optional description for your account.
 
 ![The new account creation interface of the sources workflow.](../../../../images/tutorials/create/snowflake-streaming/new.png)
 
-| Credential | Description |
-| --- | --- |
-| Account | The name of your [!DNL Snowflake] account. |
-| Warehouse | The name of your [!DNL Snowflake] warehouse. Warehouses manage the execution of queries in [!DNL Snowflake]. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually to bring data to Experience Platform. |
-| Database | The name of your [!DNL Snowflake] database. The database contains the data that you want to bring to Experience Platform. |
-| Schema | (Optional) The database schema associated with your [!DNL Snowflake] account. |
-| Username | The username of your [!DNL Snowflake] account. |
-| Password | The password to your [!DNL Snowflake] account. |
-| Role | (Optional) A custom-defined role that can be provided to a user, for a given connection. If unprovided, this value defaults to `public`. |
+>[!BEGINTABS]
 
-For more information on account creation, read the section on [configuring role settings](../../../../connectors/databases/snowflake-streaming.md#configure-role-settings) in the [!DNL Snowflake Streaming] overview.
+>[!TAB Basic authentication]
 
->[!TAB Use an existing account]
+To use [!UICONTROL Basic authentication], select **[!UICONTROL Basic Authentication for Snowflake]** and provide credentials for your [!DNL Snowflake] account. When finished, select **[!UICONTROL Connect to source]** and allow for a few moments for the connection to establish.
 
-To use an existing account, select **[!UICONTROL Existing account]** and then select the desired account from the existing account catalog.
+Read the [!DNL Snowflake Streaming] overview for more information on [gathering required credentials](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
 
-Select **[!UICONTROL Next]** to proceed.
+![The new account interface in the sources workflow, with basic authentication selected.](../../../../images/tutorials/create/snowflake-streaming/basic-auth.png)
 
-![The existing account selection page of the sources catalog.](../../../../images/tutorials/create/snowflake-streaming/existing.png)
+>[!TAB KeyPair authentication]
+
+To use [!UICONTROL KeyPair authentication], select **[!UICONTROL KeyPair Authentication for Snowflake]** and provide credentials for your [!DNL Snowflake] account. When finished, select **[!UICONTROL Connect to source]** and allow for a few moments for the connection to establish.
+
+Read the [!DNL Snowflake Streaming] overview for more information on [gathering required credentials](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
+
+![The new account interface in the sources workflow, key-pair authentication selected](../../../../images/tutorials/create/snowflake-streaming/key-pair.png)
 
 >[!ENDTABS]
+
+To use an existing account, choose **[!UICONTROL Existing account]**, select your account from the list, and select **[!UICONTROL Next]**.
 
 ## Select data {#select-data}
 
 >[!IMPORTANT]
 >
->A timestamp column must exist in your source table in order for a streaming dataflow to be created. The timestamp is required for Experience Platform to know when data will be ingested and when incremental data will be streamed. You can retroactively add a timestamp column for an existing connection and create a new dataflow.
+>* A timestamp column must exist in your source table in order for a streaming dataflow to be created. The timestamp is required for Experience Platform to know when data will be ingested and when incremental data will be streamed. You can retroactively add a timestamp column for an existing connection and create a new dataflow.
+>
+>* Ensure that the case of the data fields in your sample source data file is in accordance with [!DNL Snowflake]'s guidance on case resolution for identifiers. Read the [[!DNL Snowflake] document on identifier casing](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing) for more information.
 
 The [!UICONTROL Select data] step appears. In this step, you must select the data you want to import into Experience Platform, configure timestamps and timezones, and provide a sample source data file for the ingestion of raw data.
 
 Use the database directory on the left of your screen and select the table that you want to import to Experience Platform.
 
-![The select data interface with a database table selected.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
-
-Next, select the timestamp column type of your table. You can select between two types of timestamp columns: `TIMESTAMP_NTZ` or  `TIMESTAMP_LTZ`. If you select a column type of `TIMESTAMP_NTZ`, then you must also provide a timezone. Your columns should have a not null constraint. For more information, read the section on [limitations and frequently asked questions]
+Next, select the timestamp column type of your table. You can select between two types of timestamp columns: `TIMESTAMP_NTZ` or  `TIMESTAMP_LTZ`. If you select a column type of `TIMESTAMP_NTZ`, then you must also provide a timezone. Your columns should have a not null constraint. For more information, read the section on [limitations and frequently asked questions](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions).
 
 You can also configure backfill settings during this step. Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If not, then only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to the start time will not be ingested. 
 
@@ -102,13 +96,11 @@ Next, you must provide information on your dataset and your dataflow.
 
 A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Data that is successfully ingested into Experience Platform is persisted within the data lake as datasets. During this step, you can create a new dataset or use an existing dataset.
 
->[!BEGINTABS]
+If you have an existing dataset, select **[!UICONTROL Existing dataset]** and then use the **[!UICONTROL Advanced search]** option to view a window of all datasets in your organization, including their respective details, such as whether they are enabled for ingestion into Real-Time Customer Profile.
 
->[!TAB Use a new dataset]
+![The existing dataset selection interface.](../../../../images/tutorials/create/snowflake-streaming/dataset.png)
 
 To use a new dataset, select **[!UICONTROL New dataset]**, then provide a name, and an optional description for your dataset. You must also select an Experience Data Model (XDM) schema that your dataset adheres to.
-
-![The new dataset selection interface.](../../../../images/tutorials/create/snowflake-streaming/new-dataset.png)
 
 | New dataset details | Description |
 | --- | --- |
@@ -116,28 +108,11 @@ To use a new dataset, select **[!UICONTROL New dataset]**, then provide a name, 
 | Description | (Optional) A brief overview of the new dataset. |
 | Schema | A dropdown list of schemas that exist in your organization. You can also create your own schema prior to the source configuration process. For more information, read the guide on [creating an XDM schema in the UI](../../../../../xdm/tutorials/create-schema-ui.md). |
 
->[!TAB Use an existing dataset]
-
-If you already have an existing dataset, select **[!UICONTROL Existing dataset]** and then use the **[!UICONTROL Advanced search]** option to view a window of all datasets in your organization, including their respective details, such as whether they are enabled for ingestion into Real-Time Customer Profile.
-
-![The existing dataset selection interface.](../../../../images/tutorials/create/snowflake-streaming/existing-dataset.png)
-
->[!ENDTABS]
-
-+++Select for steps to enable Profile ingestion, error diagnostics, and partial ingestion.
-
-If your dataset is enabled for Real-Time Customer Profile, then during this step, you can toggle **[!UICONTROL Profile dataset]** to enable your data for Profile-ingestion. You can also use this step to enable **[!UICONTROL Error diagnostics]** and **[!UICONTROL Partial ingestion]**.
-
-* **[!UICONTROL Error diagnostics]**: Select **[!UICONTROL Error diagnostics]** to instruct the source to produce error diagnostics that you can later reference when monitoring your dataset activity and dataflow status.
-* **[!UICONTROL Partial ingestion]**: Partial batch ingestion is the ability to ingest data containing errors, up to a certain configurable threshold. This feature allows you to successfully ingest all of your accurate data into Experience Platform, while all of your incorrect data is batched separately with information on why it is invalid.
-
-+++
-
 ### Dataflow details {#dataflow-details}
 
 Once your dataset is configured, you must then provide details on your dataflow, including a name, an optional description, and alert configurations.
 
-![The dataflow details configuration step.](../../../../images/tutorials/create/snowflake-streaming/dataflow-details.png)
+![The dataflow details configuration step.](../../../../images/tutorials/create/snowflake-streaming/dataflow-detail.png)
 
 | Dataflow configurations | Description |
 | --- | --- |

@@ -11,7 +11,7 @@ This document provides the information required to create query templates in Que
 
 ## Prerequisites
 
-You must have the [!UICONTROL Manage queries] permission enabled to access the Query Editor and view the queries dashboard within the Platform UI. The permission is enabled through the Adobe [Admin Console](https://adminconsole.adobe.com/). Please contact your organization's administrator if you do not have administrator privileges to enable this permission. See the access control documentation for [full instructions on adding permissions through Admin Console](../../access-control/home.md).
+You must have the [!UICONTROL Manage queries] permission enabled to access the Query Editor and view the queries dashboard within the Experience Platform UI. The permission is enabled through the Adobe [Admin Console](https://adminconsole.adobe.com/). Please contact your organization's administrator if you do not have administrator privileges to enable this permission. See the access control documentation for [full instructions on adding permissions through Admin Console](../../access-control/home.md).
 
 ## Create a query template
 
@@ -27,7 +27,7 @@ See the documentation for instructions on how to use the Query Editor to [write]
 
 ## Browse query templates {#browse}
 
-From the Queries workspace of the Platform UI, select **[!UICONTROL Templates]** to display the list of available saved queries.
+From the Queries workspace of the Experience Platform UI, select **[!UICONTROL Templates]** to display the list of available saved queries.
 
 ![The queries workspace with the Templates tab highlighted.](../images/ui/query-templates/query-templates.png)
 
@@ -49,7 +49,7 @@ See the documentation for instructions on [how to make a query template](../api/
 
 >[!NOTE]
 >
->Templates created using the API are also visible in the Platform UI Query Service Templates tab.
+>Templates created using the API are also visible in the Experience Platform UI Query Service Templates tab.
 
 ## Next steps
 

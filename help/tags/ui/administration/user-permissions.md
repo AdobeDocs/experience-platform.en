@@ -5,10 +5,6 @@ exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
 ---
 # User permissions for tags
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 User permissions for tags in Adobe Experience Platform are assigned to users through Adobe Admin Console. Rather than being assigned to individual users, different sets of permissions are configured separately as product profiles. Users are then assigned to these product profiles in order to be granted the permissions they've been configured for.
 
 This guide provides an overview of the different types of permissions available for tags, the functionalities they grant access to, and some basic implementation strategies for different business use cases.

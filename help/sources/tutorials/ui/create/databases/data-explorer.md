@@ -8,7 +8,7 @@ exl-id: 561bf948-fc92-4401-8631-e2a408667507
 ---
 # Create an [!DNL Azure Data Explorer] source connection in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Azure Data Explorer] (hereinafter referred to as "[!DNL Data Explorer]") source connector using the [!DNL Platform] user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Azure Data Explorer] (hereinafter referred to as "[!DNL Data Explorer]") source connector using the [!DNL Experience Platform] user interface.
 
 ## Getting started
 
@@ -23,7 +23,7 @@ If you already have a valid [!DNL Data Explorer] connection, you may skip the re
 
 ### Gather required credentials
 
-In order to access your [!DNL Data Explorer] account on [!DNL Platform], you must provide the following values:
+In order to access your [!DNL Data Explorer] account on [!DNL Experience Platform], you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -37,7 +37,7 @@ For more information about getting started, refer to [this [!DNL Data Explorer] 
 
 ## Connect your [!DNL Azure Data Explorer] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Data Explorer] account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Data Explorer] account to [!DNL Experience Platform].
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account.
 
@@ -63,4 +63,4 @@ To connect an existing account, select the [!DNL Data Explorer] account you want
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Data Explorer] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your [!DNL Data Explorer] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Experience Platform]](../../dataflow/databases.md).

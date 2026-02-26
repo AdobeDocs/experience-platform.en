@@ -12,7 +12,7 @@ exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
 >
 >The [!DNL OneTrust Integration] source only supports ingestion of consent and preferences data and not cookies.
 
-This tutorial provides steps for creating a [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) source connection to ingest both historic and scheduled consent data into Adobe Experience Platform using the Platform user interface.
+This tutorial provides steps for creating a [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) source connection to ingest both historic and scheduled consent data into Adobe Experience Platform using the Experience Platform user interface.
 
 ## Prerequisites
 
@@ -20,13 +20,13 @@ This tutorial provides steps for creating a [[!DNL OneTrust Integration]](https:
 >
 >The [!DNL OneTrust Integration] source connector and documentation were created by the [!DNL OneTrust Integration] team. For any inquiries or update requests, please contact the [[!DNL OneTrust] team](https://my.onetrust.com/s/contactsupport?language=en_US) directly.
 
-Before you can connect [!DNL OneTrust Integration] to Platform, you must first retrieve your access token. For detailed instructions on finding your access token, see the [[!DNL OneTrust Integration] OAuth 2 guide](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
+Before you can connect [!DNL OneTrust Integration] to Experience Platform, you must first retrieve your access token. For detailed instructions on finding your access token, see the [[!DNL OneTrust Integration] OAuth 2 guide](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
 
 The access token does not refresh automatically after it expires because system-to-system refresh tokens are not supported by [!DNL OneTrust]. Therefore, it is necessary to make sure that your access token is updated in the connection before it expires. The maximum configurable lifespan for an access token is one year. To learn more about updating your access token, see the [[!DNL OneTrust] document on managing your OAuth 2.0 client credentials](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials).
 
 ### Gather required credentials
 
-In order to connect [!DNL OneTrust Integration] to Platform, you must provide values for the following authentication credentials:
+In order to connect [!DNL OneTrust Integration] to Experience Platform, you must provide values for the following authentication credentials:
 
 | Credential | Description | Example |
 | --- | --- | --- |
@@ -42,7 +42,7 @@ For more information on these credentials, see the [[!DNL OneTrust Integration] 
 >
 >The [!DNL OneTrust Integration] API specifications are being shared with Adobe for data ingestion.
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace for a catalog of sources available in Experience Platform.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace for a catalog of sources available in Experience Platform.
 
 Use the *[!UICONTROL Categories]* menu to filter sources by category. Alternatively, enter a source name in the search bar to find a specific source from the catalog.
 
@@ -66,4 +66,4 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL OneTrust Integration] account. You can now continue on to the next tutorial and [configure a dataflow to bring consent data into Platform](../../dataflow/consent-and-preferences.md).
+By following this tutorial, you have established a connection to your [!DNL OneTrust Integration] account. You can now continue on to the next tutorial and [configure a dataflow to bring consent data into Experience Platform](../../dataflow/consent-and-preferences.md).

@@ -22,9 +22,12 @@ As a marketer, I want to be able to use audiences built off of [!DNL Microsoft A
 
 [!DNL Microsoft Bing] supports the activation of audiences based on the identities shown in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-|Identity|Description|
-|---|---|
-|MAID|Microsoft Advertising ID|
+All identities in the table below are preconfigured and automatically mapped during activation. You do not need to manually configure these mappings.
+
+|Identity|Description|Considerations|
+|---|---|---|
+|MAID|Microsoft Advertising ID|Activated when a Microsoft Advertising ID is present on the profile.|
+|ECID|Experience Cloud ID|**Required.** All profiles must have an ECID with a corresponding Microsoft Advertising ID mapping to be exported.|
 
 {style="table-layout:auto"}
 
@@ -34,10 +37,24 @@ This section describes which types of audiences you can export to this destinati
 
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -46,7 +63,7 @@ This section describes which types of audiences you can export to this destinati
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience to the [!DNL Microsoft Bing] destination.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
@@ -54,9 +71,12 @@ Refer to the table below for information about the destination export type and f
 
 ## Prerequisites {#prerequisites}
 
->[!IMPORTANT]
->
->If you are looking to create your first destination with [!DNL Microsoft Bing] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Microsoft Bing] integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
+The [!DNL Microsoft Bing] destination requires the following setup to function correctly:
+
+1. **Enable ID sync functionality**: If this is your first time setting up [!DNL Microsoft Bing] activation and you have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), contact Adobe Consulting or Customer Care to enable ID syncs.
+   * If you previously set up [!DNL Microsoft Bing] integrations in Audience Manager, your existing ID syncs automatically carry over to Experience Platform.
+
+2. **Ensure ECID on profiles**: All profiles must have an ECID present to be successfully exported. ECID is **mandatory** for this destination.
 
 When configuring the destination, you must provide the following information:
 
@@ -74,9 +94,9 @@ To connect to this destination, follow the steps described in the [destination c
 
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Account ID]**: Your [!DNL Bing Ads Customer ID] (CID). Your CID is an integer, found in the URL when you log into [!DNL Microsoft Advertising]. 
+* **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+* **[!UICONTROL Account ID]**: Your [!DNL Bing Ads Customer ID] (CID). Your CID is an integer, found in the URL when you log into [!DNL Microsoft Advertising]. 
 
 ### Enable alerts {#enable-alerts}
 
@@ -91,6 +111,12 @@ When you are finished providing details for your destination connection, select 
 >title="Mapping ID"
 >abstract="Enter the numeric Bing audience ID to which you want to map the selected segment. If the provided [!UICONTROL Mapping ID] does not correspond to an audience ID in the Bing destination, you will not see the expected audience data in your Bing account."
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_required_mappings_bing"
+>title="Preconfigured mapping sets"
+>abstract="We have preconfigured these two mapping sets for you. When you activate data to Microsoft Bing, the profiles qualified for the activated audiences must have at least an ECID identity associated with their profile, in order to be successfully exported to the destination."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="Read more about the preconfigured mappings"
+
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
@@ -100,6 +126,25 @@ See [Activate audience data to streaming audience export destinations](../../ui/
 In the [Audience schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map the audience name in the [!UICONTROL Mapping ID] field. This ensures that audience metadata is correctly passed through to [!DNL Bing]. 
 
 ![UI image showing the audience schedule screen with an example of how to map the audience name to the Bing Mapping ID.](../../assets/catalog/advertising/bing/mapping-id.png)
+
+### Preconfigured mappings {#preconfigured-mappings}
+
+The following identity mappings are **preconfigured and automatically populated** during the audience activation workflow:
+
+* **MAID** (Microsoft Advertising ID)
+* **ECID** (Experience Cloud ID)
+
+These mappings are grayed out and read-only. You do not need to configure anything in this step. Select **[!UICONTROL Next]** to continue.
+
+>[!IMPORTANT]
+>
+>**ECID is required for export to succeed.** Profiles without ECID or without an ID sync mapping between ECID and Microsoft Advertising ID will not be exported.
+
+### Activation examples
+
+* **Profile with ECID and Microsoft Advertising ID mapping:** Profile is successfully exported and activated
+* **Profile with ECID only (no Microsoft Advertising ID mapping):** Profile is **not exported**. The ID sync mapping between ECID and MAID is required.
+* **Profile without ECID:** Profile is **not exported**. ECID is mandatory for this destination.
 
 ## Exported data {#exported-data}
 

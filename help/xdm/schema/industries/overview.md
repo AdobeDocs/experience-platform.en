@@ -20,7 +20,7 @@ In order to help guide your data modeling strategy based on your particular indu
 
 To read the ERDs referenced in this guide, you must have a working understanding of how XDM components interact to form schemas and how XDM schemas operate in Experience Platform as a whole. Ensure that you have read the following overview documentation before continuing:
 
-* [XDM System overview](../../home.md): Learn how XDM operates in the Platform ecosystem.
+* [XDM System overview](../../home.md): Learn how XDM operates in the Experience Platform ecosystem.
 * [Basics of schema composition](../../schema/composition.md): Learn how XDM components (such as schema field groups, classes, and data types) contribute to the structure of a schema, as well as the role of identity fields.
 
 It is also recommended that you review the [data modeling best practices guide](../../schema/best-practices.md) for general guidelines on how to map your data to XDM.

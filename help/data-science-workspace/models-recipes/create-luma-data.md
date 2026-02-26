@@ -30,7 +30,7 @@ This tutorial provides you with the prerequisites and assets required for all ot
 
 ## Download the assets {#assets}
 
-The following tutorial uses a custom Luma purchase propensity model. Before proceeding, [download the required assets](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) zip folder. This folder contains:
+The following tutorial uses a custom Luma purchase propensity model. Before proceeding, [download the required assets](../assets/DSW-course-sample-assets.7z) zip folder. This folder contains:
 
 - The purchase propensity model notebook
 - A notebook used to ingest data to a training and scoring dataset (a subset of the Luma web data)
@@ -43,7 +43,7 @@ The following tutorial uses a custom Luma purchase propensity model. Before proc
 
 ### Create the Luma web data schema and ingest the data
 
-In order to create a model, you must have a dataset in Platform which is used to train and score your model. The following video tutorial from the [Data Science Workspace course](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) walks you through creating the Luma schema and ingesting the data used by the purchase propensity model.
+In order to create a model, you must have a dataset in Experience Platform which is used to train and score your model. The following video tutorial from the [Data Science Workspace course](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) walks you through creating the Luma schema and ingesting the data used by the purchase propensity model.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 

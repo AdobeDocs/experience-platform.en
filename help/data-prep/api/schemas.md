@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;popular topics;data prep;api guide;schemas;
 solution: Experience Platform
 title: Schemas API Endpoint
-description: You can use the `/schemas` endpoint in the Adobe Experience Platform API to programmatically retrieve, create, and update schemas for use with Mapper in Platform. 
+description: You can use the `/schemas` endpoint in the Adobe Experience Platform API to programmatically retrieve, create, and update schemas for use with Mapper in Experience Platform. 
 ---
 
 
 # Schemas endpoint
 
-Schemas can be used with Mapper to ensure the data you've ingested into Adobe Experience Platform matches what you want to ingest. You can use the `/schemas` endpoint to programmatically create, list, and get custom schemas for use with Mapper in Platform. 
+Schemas can be used with Mapper to ensure the data you've ingested into Adobe Experience Platform matches what you want to ingest. You can use the `/schemas` endpoint to programmatically create, list, and get custom schemas for use with Mapper in Experience Platform. 
 
 >[!NOTE]
 >
->Schemas created using this endpoint are used exclusively with Mapper and mapping sets. To create schemas accessible by other Platform services, please read the [Schema Registry developer guide](../../xdm/api/schemas.md).
+>Schemas created using this endpoint are used exclusively with Mapper and mapping sets. To create schemas accessible by other Experience Platform services, please read the [Schema Registry developer guide](../../xdm/api/schemas.md).
 
 ## Get all schemas
 

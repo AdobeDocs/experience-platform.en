@@ -10,7 +10,7 @@ Comparison functions are used to compare between different expressions and value
 
 ## Equals
 
-The `=` (equals) function checks whether one value or expression is equal to another value or expression.
+The `=` (equals) function checks whether one value or expression is equal to another value or expression. 
 
 **Format**
 

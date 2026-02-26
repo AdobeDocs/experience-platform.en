@@ -5,10 +5,6 @@ exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
 ---
 # Context in edge extension modules
 
->[!NOTE]
->
-> Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 All library modules in edge extensions are provided a `context` object when they are executed. This document covers the properties provided by the `context` object and the role they play in library modules.
 
 ## Adobe Request Context (arc)

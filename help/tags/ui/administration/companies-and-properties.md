@@ -5,10 +5,6 @@ exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
 ---
 # Properties
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 ## Web properties
 
 A web property is a collection of rules, data elements, configured extensions, environments, and libraries.  Each web property has its own set of embed codes and can be deployed on any number of distinct websites (different domains).
@@ -61,7 +57,7 @@ For example, If you are deploying [!DNL Adobe Analytics], [!DNL Target], and the
 
 For the individuals, teams, and organizations that are working in Adobe Experience Platform, will they need access to all of your websites and applications, some of them, or just one?
 
-The User Management features allow you to assign different roles to different people for all of your properties, or on a per-property basis. If someone has sufficient rights, that person can perform administrative actions across all the properties in that Platform organization. All the other roles can be assigned on a per-property basis. You can even hide a property from certain users (non-admins) by not giving them any role in that property.
+The User Management features allow you to assign different roles to different people for all of your properties, or on a per-property basis. If someone has sufficient rights, that person can perform administrative actions across all the properties in that Experience Platform organization. All the other roles can be assigned on a per-property basis. You can even hide a property from certain users (non-admins) by not giving them any role in that property.
 
 ## Properties page
 
@@ -106,8 +102,8 @@ Follow the instructions to create a web property.
    **Domains:** The base URL of any sites you plan to deploy this property to
 
 1. (Advanced) **[!UICONTROL Run rule components in sequence]** Select this checkbox to make conditions and actions wait for the previous one to complete before they run
-1. (Advanced) **[!UICONTROL Return an empty string for missing data elements:]** If you reference a data element that does not exist within a library, that would normally return `undefined`.  Select this check box if you want that scenario to return an empty string instead.
-1. (Advanced) **[!UICONTROL Configure for extension development:]** Select this check box if you plan to install development extensions that are being actively developed by your company
+1. (Advanced) **[!UICONTROL Return an empty string for missing data elements:]** If you reference a data element that does not exist within a library, that would normally return `undefined`. Enable this checkbox if you want that scenario to return an empty string instead.
+1. (Advanced) **[!UICONTROL Configure for extension development:]** Enable this checkbox if you plan to install development extensions that are being actively developed by your company
 1. Select **[!UICONTROL Save]**.
 
 ### For Mobile
@@ -127,7 +123,7 @@ Follow the instructions to create a mobile property.
 
 1. Select **[!UICONTROL Save]**.
 
-After your property is created, Platform automatically adds a default host, a set of environments (Development, Staging, and Production), and the default extensions.
+After your property is created, Experience Platform automatically adds a default host, a set of environments (Development, Staging, and Production), and the default extensions.
 
 ## Delete a property
 

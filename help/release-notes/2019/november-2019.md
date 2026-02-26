@@ -11,11 +11,13 @@ exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
 **Release date: November 18, 2019**
 
 New features in Adobe Experience Platform:  
+
 * [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Sources]](#sources)
 
 Updates to existing features:
+
 * [[!DNL Data Science Workspace]](#dsw)
 * [[!DNL Experience Data Model (XDM) System]](#xdm)
 * [[!DNL Real-Time Customer Profile]](#profile) 
@@ -42,7 +44,7 @@ For more information, see the [Real-Time Customer Data Platform documentation](.
 
 |Feature|Description|
 |---|---|
-|Destinations|Pre-built integrations with destination platforms supported by Adobe’s [!DNL Real-Time Customer Data Platform] that activate data to those partners in a seamless way. See [Destinations](#destinations) below for more information.|
+|Destinations|Pre-built integrations with destination platforms supported by Adobe's [!DNL Real-Time Customer Data Platform] that activate data to those partners in a seamless way. See [Destinations](#destinations) below for more information.|
 |Home page metrics dashboard|The Real-Time Customer Data Platform (Real-Time CDP) home page includes a metrics dashboard that shows information about profiles and segments. The home page also contains links to learning materials. See the section on [Real-Time Customer Data Platform metrics](#real-time-customer-data-platform-metrics) below.|
 |Sources|You can ingest data from a variety of sources such as Adobe Solutions, cloud-based storage, third party software, and your CRM. See the [Sources](#sources) section below to learn more.|
 
@@ -58,7 +60,7 @@ To learn more, see the [Real-Time Customer Data Platform metrics overview](../..
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] are pre-built integrations with destination platforms supported by Adobe’s Real-Time Customer Data Platform that activate data to those partners in a seamless way. For more information, read the [Destinations overview](../../destinations/home.md) article.
+[!DNL Destinations] are pre-built integrations with destination platforms supported by Adobe's Real-Time Customer Data Platform that activate data to those partners in a seamless way. For more information, read the [Destinations overview](../../destinations/home.md) article.
 
 **Available destinations**
 
@@ -78,7 +80,7 @@ See the [destination catalog](../../destinations/catalog/overview.md) for inform
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe Solutions, cloud-based storage, third party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Experience Platform] services. You can ingest data from a variety of sources such as Adobe Solutions, cloud-based storage, third party software, and your CRM system.
 
 [!DNL Experience Platform] provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to you authenticate to your storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
@@ -98,13 +100,13 @@ For more information about sources, see [Sources overview](../../sources/home.md
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] enables data scientists to seamlessly generate insights from data and content across Adobe applications and third-party systems by building and operationalizing Machine Learning Models. [!DNL Data Science Workspace] is tightly integrated with [!DNL Platform] and powers the end-to-end data science lifecycle, including exploration and preparation of XDM data, followed by the development and operationalization of Models to automatically enrich [!DNL Real-Time Customer Profile] with Machine Learning Insights.
+Adobe Experience Platform [!DNL Data Science Workspace] enables data scientists to seamlessly generate insights from data and content across Adobe applications and third-party systems by building and operationalizing Machine Learning Models. [!DNL Data Science Workspace] is tightly integrated with [!DNL Experience Platform] and powers the end-to-end data science lifecycle, including exploration and preparation of XDM data, followed by the development and operationalization of Models to automatically enrich [!DNL Real-Time Customer Profile] with Machine Learning Insights.
 
 **New features**
 
 | Feature    | Description  |
 | -----------| ---------- |
-| Data access using [!DNL Platform] SDK | Pre-built Recipes and launcher notebooks in [!DNL Python] now use [!DNL Platform] SDK for accessing data. |
+| Data access using [!DNL Experience Platform] SDK | Pre-built Recipes and launcher notebooks in [!DNL Python] now use [!DNL Experience Platform] SDK for accessing data. |
 | Support for sandboxes | Support for upcoming sandbox functionality (currently in beta), including the ability to isolate notebooks and Recipes into development or production sandboxes. See the [sandboxes overview](../../sandboxes/home.md) for more information. |
 
 For more information, see the [Data Science Workspace overview](../../data-science-workspace/home.md).
@@ -156,18 +158,18 @@ For more information on [!DNL Real-Time Customer Profile], including tutorials a
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-Time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
+Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-Time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Experience Platform], making them readily accessible by any Adobe application.
 
 [!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
 
 | Feature    | Description  |
 | -----------| ---------- |
 | Scheduled segmentation | Users can now enable scheduled segment evaluation for all segments via the UI and API. Once enabled, all segments will be evaluated once per day. This does not affect on-demand segmentation capabilities which continue to work as they did previously.<br/><br/>Note: The scheduled segmentation feature cannot be used in sandboxes with more than five merge policies for [!DNL XDM Individual Profile].|
-| Streaming segmentation | Support for continuous evaluation of segments (streaming segmentation) allows most segment rules to be evaluated as the data is passing into [!DNL Platform]. This feature means that segment membership will be up to date without the need to run scheduled segmentation jobs. Some exceptions apply, such as segments using multi-entity relationships or with enriched payloads.|
+| Streaming segmentation | Support for continuous evaluation of segments (streaming segmentation) allows most segment rules to be evaluated as the data is passing into [!DNL Experience Platform]. This feature means that segment membership will be up to date without the need to run scheduled segmentation jobs. Some exceptions apply, such as segments using multi-entity relationships or with enriched payloads.|
 | Segments as building blocks | When creating segments using the Segment Builder UI, users can now use previously-defined segments as building blocks for additional segments. <ul><li>Reference current audience membership: updates as people move in and out of audiences.</li><li>Copy logic: take the selected segment definition and duplicate it in the new segment.</li></ul>|
 |View segment membership by ID namespace|Segment membership can now be viewed by ID namespace (email, ECID, and total count).|
 |RBAC support|Segment Builder now provides support for basic role-based access controls and permissions.|
-|Enhanced support for external audience sharing between [!DNL Platform] and Adobe solutions |Users can now bring in external (non-[!DNL Experience Platform]) audience metadata in scenarios where the number of audiences is large or not known a priori. This release includes access to [!DNL Audience Manager] metadata for customers who have provisioned the solution connector. This audience metadata can be used within Segment Builder to create new [!DNL Experience Platform] segments. <br/><br/> Additionally, segments created in [!DNL Experience Platform] will now be available for use in integrated Adobe solutions, including [!DNL Audience Manager], [!DNL Target], and [!DNL Ad Cloud].|
+|Enhanced support for external audience sharing between [!DNL Experience Platform] and Adobe solutions |Users can now bring in external (non-[!DNL Experience Platform]) audience metadata in scenarios where the number of audiences is large or not known a priori. This release includes access to [!DNL Audience Manager] metadata for customers who have provisioned the solution connector. This audience metadata can be used within Segment Builder to create new [!DNL Experience Platform] segments. <br/><br/> Additionally, segments created in [!DNL Experience Platform] will now be available for use in integrated Adobe solutions, including [!DNL Audience Manager], [!DNL Target], and [!DNL Ad Cloud].|
 
 **Bug fixes**
 

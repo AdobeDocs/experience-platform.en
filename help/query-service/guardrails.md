@@ -29,8 +29,6 @@ Before continuing with this document, you should have a good understanding of th
 
 * **Reporting API**: An API for making data fetch calls (internally or externally). Extended reporting data models are derived from the native reporting data models in Adobe Experience Platform such as the Real-Time CDP dashboards data model.
 
-The illustration below summarizes how Query Service capabilities are currently packaged and licensed:
-
 ## Guardrail types
 
 There are two types of default limits within this document:

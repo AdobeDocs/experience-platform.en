@@ -15,22 +15,22 @@ This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/experience
 
 >[!IMPORTANT]
 >
->This tutorial requires you to have the unique base connection ID for your advertising source. If you do not have this ID, see the tutorial on [connecting an advertising source to Platform](../../api/create/advertising/ads.md) tutorial.
+>This tutorial requires you to have the unique base connection ID for your advertising source. If you do not have this ID, see the tutorial on [connecting an advertising source to Experience Platform](../../api/create/advertising/ads.md) tutorial.
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
+* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to an advertising system using the [!DNL Flow Service] API.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../landing/api-guide.md).
 
 ## Explore your data tables
 
-Using the base connection for your advertising system, you can explore your data tables by performing GET requests. Use the following call to find the path of the table you wish to inspect or ingest into [!DNL Platform].
+Using the base connection for your advertising system, you can explore your data tables by performing GET requests. Use the following call to find the path of the table you wish to inspect or ingest into [!DNL Experience Platform].
 
 **API format**
 
@@ -55,7 +55,7 @@ curl -X GET \
 
 **Response**
 
-A successful response is an array of tables from to your advertising system. Find the table you wish to bring into [!DNL Platform] and take note of its `path` property, as you are required to provide it in the next step to inspect its structure.
+A successful response is an array of tables from to your advertising system. Find the table you wish to bring into [!DNL Experience Platform] and take note of its `path` property, as you are required to provide it in the next step to inspect its structure.
 
 ```json
 [
@@ -164,4 +164,4 @@ A successful response returns the structure of a table. Details regarding each o
 
 ## Next steps
 
-By following this tutorial, you have explored your advertising system, found the path of the table you wish to bring in to [!DNL Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your advertising system and bring it into Platform](../collect/advertising.md).
+By following this tutorial, you have explored your advertising system, found the path of the table you wish to bring in to [!DNL Experience Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your advertising system and bring it into Experience Platform](../collect/advertising.md).

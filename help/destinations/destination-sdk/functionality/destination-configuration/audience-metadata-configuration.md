@@ -11,7 +11,7 @@ Destination SDK offers tools that you can use to programmatically create, update
 
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the guide on how to [use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
-You can configure the audience metadata template via the `/authoring/audience-templates` endpoint. After creating your audience metadata configuration, you can use the `/authoring/destinations` endpoint to configure the `audienceMetadataConfig` section. This section tells your destination what audience metadata it should map to your audience template.
+You can configure the audience metadata template via the `/authoring/audience-templates` endpoint. After creating your audience metadata configuration, you can use the `/authoring/destinations` endpoint to configure the `segmentMappingConfig` and `audienceMetadataConfig` sections. This section tells your destination what audience metadata it should map to your audience template.
 
 See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
 
@@ -38,10 +38,12 @@ Refer to the table below for details on which types of integrations support the 
 When creating your audience metadata configuration, you can use the parameters described in the table below to configure the audience mapping settings.
 
 ```json
-  "audienceMetadataConfig":{
+"segmentMappingConfig": {
    "mapExperiencePlatformSegmentName":false,
    "mapExperiencePlatformSegmentId":false,
    "mapUserInput":false,
+ },
+"audienceMetadataConfig":{
    "audienceTemplateId":"YOUR_AUDIENCE_TEMPLATE_ID"
 }
 ```

@@ -5,10 +5,6 @@ exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
 ---
 # Builds
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 A build is the set of files containing all the code that runs on the client device.
 
 It is a composite of the changes you specified within your library, as well as everything that has been submitted, approved, or published before it.
@@ -50,15 +46,15 @@ To complete a build, select a library and select the Build option that is availa
 
 Minification lowers bandwidth costs and improves speed by stripping data that isn't required for execution from a file.
 
-To increase performance, Platform minifies everything, including:
+To increase performance, Experience Platform minifies everything, including:
 
 * The main tag library
 * Module code provided by extension developers as part of an extension
-* Custom code provided by Platform users
+* Custom code provided by Experience Platform users
 
 >[!NOTE]
 >
->If your module code and custom code are already minified, Platform minifies it again. This second minification doesn't provide additional benefits, but it doesn't cause any harm and it makes Platform less complex and easier to maintain.
+>If your module code and custom code are already minified, Experience Platform minifies it again. This second minification doesn't provide additional benefits, but it doesn't cause any harm and it makes Experience Platform less complex and easier to maintain.
 
 Any client-side code provided points to the minified version of code. This is seen in the file names which follow the standard naming convention for minified files:
 
@@ -68,7 +64,7 @@ If you want to see the un-minified code, remove .min from the file name:
 
 `launch-%environment_id%.js`
 
-If an extension developer provides minified code with their extension, Platform does not provide un-minified code in the un-minified build. Similarly, if a Platform user puts minified code into a custom code box, that code is still minified in un-minified builds. Platform does not un-minify anything.
+If an extension developer provides minified code with their extension, Experience Platform does not provide un-minified code in the un-minified build. Similarly, if an Experience Platform user puts minified code into a custom code box, that code is still minified in un-minified builds. Experience Platform does not un-minify anything.
 
 For more information about minification, see [this stackpath article](https://blog.stackpath.com/glossary/minification/).
 

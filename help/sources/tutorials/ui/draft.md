@@ -13,11 +13,11 @@ This document provides steps on how to save your dataflows when using the source
 
 This document requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
 
 ## Save a dataflow as a draft
 
-You can pause your dataflow creation progress at any time after you select the data that you'll be bringing into Platform.
+You can pause your dataflow creation progress at any time after you select the data that you'll be bringing into Experience Platform.
 
 For example, if you want to save your progress during the dataflow detail step, select **[!UICONTROL Save as draft]**.
 

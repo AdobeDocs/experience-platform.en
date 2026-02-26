@@ -45,12 +45,12 @@ If you select this option, your event listener listens to any change made to the
 
 The following example push events would be tracked by the listener:
 
-* ` adobeDataLayer.push({"data":"something"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"data":"something"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 The following example push event would not be tracked by the listener:
 
-* ` adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent"})`
 
 ### Listen to all events
 
@@ -58,8 +58,8 @@ If you select this option, your event listener listens to any event pushed to th
 
 The following example push events would be tracked by the listener:
 
-* ` adobeDataLayer.push({"event":"myevent"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 The following example push event would not be tracked by the listener:
 

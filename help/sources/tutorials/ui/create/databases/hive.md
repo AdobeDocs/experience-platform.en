@@ -12,7 +12,7 @@ exl-id: 3eb3cb02-9867-451a-b847-ab895310eedf
 >
 > The [!DNL Apache Hive] on [!DNL Azure HDInsights] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Apache Hive] on [!DNL Azure HDInsights] source connector using the [!DNL Platform] user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Apache Hive] on [!DNL Azure HDInsights] source connector using the [!DNL Experience Platform] user interface.
 
 ## Getting started
 
@@ -27,7 +27,7 @@ If you already have a valid [!DNL Hive] connection, you may skip the remainder o
 
 ### Gather required credentials
 
-In order to access your [!DNL Hive] account on [!DNL Platform], you must provide the following values:
+In order to access your [!DNL Hive] account on [!DNL Experience Platform], you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -39,7 +39,7 @@ For more information about getting started, refer to [this [!DNL Hive] document]
 
 ## Connect your [!DNL Hive] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Hive] account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Hive] account to [!DNL Experience Platform].
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
 
@@ -65,4 +65,4 @@ To connect an existing account, select the [!DNL Hive] account you want to conne
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Hive] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your [!DNL Hive] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Experience Platform]](../../dataflow/databases.md).

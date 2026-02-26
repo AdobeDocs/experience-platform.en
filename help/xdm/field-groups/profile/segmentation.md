@@ -17,7 +17,7 @@ exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
 >
 >While the `segmentMembership` field must be manually added to your profile schema using this field group, you should not attempt to manually populate or update this field. The system automatically updates the `segmentMembership` map for each profile as segmentation jobs are performed.
 
-<img src='../../images/data-types/profile-segmentation.png' width=400 /><br />
+![profile segmentation](../../images/data-types/profile-segmentation.png){width=400}
 
 | Property | Data type | Description |
 | --- | --- | --- |

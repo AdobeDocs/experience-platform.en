@@ -12,9 +12,9 @@ Any data governance-related settings in Customer AI are inherited from Adobe Exp
 
 ## Data Governance {#governance}
 
-The integration between Customer AI and Adobe Experience Platform Data Governance gives you the ability to control and comprehend your data throughout its journey through Platform. This involves maintaining data quality, data lineage, data cataloging, and more.
+The integration between Customer AI and Adobe Experience Platform Data Governance gives you the ability to control and comprehend your data throughout its journey through Experience Platform. This involves maintaining data quality, data lineage, data cataloging, and more.
 
-Data usage labels and policies that were created on datasets consumed by Platform can be surfaced in the Customer AI configuration workflow. These labels stop or warn users who use labeled fields. 
+Data usage labels and policies that were created on datasets consumed by Experience Platform can be surfaced in the Customer AI configuration workflow. These labels stop or warn users who use labeled fields. 
 
 This integration allows you to manage compliance more efficiently. Data stewards in your organization can set policies to restrict usage. As a result, you can use data that complies with policies defined by data stewards. Read the documentation on [Labels and Policies](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html) to learn more.
 

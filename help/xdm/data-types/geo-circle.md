@@ -9,7 +9,7 @@ exl-id: fa041f4f-9955-44e9-b235-a643e07d402c
 
 [!UICONTROL Geo Circle] is a standard XDM data type that describes circular geographic region, given a particular radius centered on a specific set of coordinates. This data type is based on the public specification documented on [schema.org](https://schema.org/GeoCircle).
 
-<img src='../images/data-types/geo-circle.png' width=400 /><br />
+![](../images/data-types/geo-circle.png){width=400}
 
 | Property | Data type | Description |
 | --- | --- | --- |

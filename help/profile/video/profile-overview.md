@@ -1,6 +1,6 @@
 ---
 title: Real-Time Customer Profile Video Overview
-description: This video provides a basic understanding of Real-Time Customer Profile within Adobe Experience Platform and outlines how to browse profiles within the Platform UI.
+description: This video provides a basic understanding of Real-Time Customer Profile within Adobe Experience Platform and outlines how to browse profiles within the Experience Platform UI.
 product: experience platform
 type: Documentation
 solution: Experience Platform

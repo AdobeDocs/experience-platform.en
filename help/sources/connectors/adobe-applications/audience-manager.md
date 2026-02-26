@@ -14,18 +14,18 @@ exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
 >- [Create a custom namespace in Identity Service](../../../identity-service/features/namespaces.md#create-custom-namespaces) with the specified identity symbol (`VALUE`) .
 >- Re-ingest your data.
 
-The Adobe Audience Manager source streams first-party data collected in Adobe Audience Manager for activation in Adobe Experience Platform. The Audience Manager source ingests two types of data to Platform:
+The Adobe Audience Manager source streams first-party data collected in Adobe Audience Manager for activation in Adobe Experience Platform. The Audience Manager source ingests two types of data to Experience Platform:
 
-- **Real-time data:** Data captured in real time on Audience Manager's data collection server. This data is used in Audience Manager to populate rule-based traits and will surface in Platform in the shortest latency time.
+- **Real-time data:** Data captured in real time on Audience Manager's data collection server. This data is used in Audience Manager to populate rule-based traits and will surface in Experience Platform in the shortest latency time.
 - **Profile data:** Audience Manager uses real-time and onboarded data to derive customer profiles. These profiles are used to populate identity graphs and traits on segment realizations.
 
-The Audience Manager source maps these data types to an Experience Data Model (XDM) schema and then sends them to Platform. Real-time data is sent as XDM ExperienceEvent data, while Profile data are sent as XDM Individual Profile data.
+The Audience Manager source maps these data types to an Experience Data Model (XDM) schema and then sends them to Experience Platform. Real-time data is sent as XDM ExperienceEvent data, while Profile data are sent as XDM Individual Profile data.
 
 For more information, read the guide on [creating an Audience Manager source connection in the UI](../../tutorials/ui/create/adobe-applications/audience-manager.md).
 
 ## What is Experience Data Model (XDM)?
 
-XDM is a publicly documented specification that provides a standardized framework by which Platform organizes customer experience data.
+XDM is a publicly documented specification that provides a standardized framework by which Experience Platform organizes customer experience data.
 
 Adhering to XDM standards allows customer experience data to be uniformly incorporated, making it easier to deliver data and gather information.
 
@@ -33,7 +33,7 @@ For more information about how XDM is used in Experience Platform, read the [XDM
 
 ## XDM schemas examples
 
-Below are examples of the Audience Manager structure mapped to XDM ExperienceEvent and XDM Individual Profile in Platform.
+Below are examples of the Audience Manager structure mapped to XDM ExperienceEvent and XDM Individual Profile in Experience Platform.
 
 ### ExperienceEvent - for real-time data and onboarded data
 
@@ -45,7 +45,7 @@ Below are examples of the Audience Manager structure mapped to XDM ExperienceEve
 
 For information on how fields are mapped from Audience Manager to XDM, read the documentation on [Audience Manager mapping fields](./mapping/audience-manager.md).
 
-## Data management on Platform
+## Data management on Experience Platform
 
 ### Datasets
 
@@ -74,11 +74,11 @@ Adobe Audience Manager creates one connection in Catalog: Audience Manager Conne
 
 ### Segment population to Profile impact
 
-Segment population sizes have a direct impact on Profile numbers when you first send an Audience Manager segment to Platform. This means that selecting all segments can potentially cause Profile overages that exceeds your license usage entitlement. Platform also distinguishes new data from historical data for Profile ingestion. A segment with 100 first-party based identities will create 100 profiles. However, if the population of that same segment was raised to 150 and was ingested to Platform, the number of profiles will only increase by 50, as there are only 50 new profiles.
+Segment population sizes have a direct impact on Profile numbers when you first send an Audience Manager segment to Experience Platform. This means that selecting all segments can potentially cause Profile overages that exceeds your license usage entitlement. Experience Platform also distinguishes new data from historical data for Profile ingestion. A segment with 100 first-party based identities will create 100 profiles. However, if the population of that same segment was raised to 150 and was ingested to Experience Platform, the number of profiles will only increase by 50, as there are only 50 new profiles.
 
 You can also check the profile usage your account has available through the [License Usage Dashboard](../../../dashboards/guides/license-usage.md).
 
-## What is the expected latency for Audience Manager Data on Platform?
+## What is the expected latency for Audience Manager Data on Experience Platform?
 
 | Audience Manager Data | Type | Latency | Notes |
 | --- | --- | --- | --- |

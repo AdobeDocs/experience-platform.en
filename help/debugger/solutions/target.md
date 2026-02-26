@@ -5,25 +5,25 @@ exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
 ---
 # Test an Adobe Target implementation with Adobe Experience Platform Debugger
 
-Adobe Experience Platform Debugger provides a suite of useful tools for testing and debugging a website that has been tooled with an Adobe Target implementation. This guide covers some common workflows and best practices for using Platform Debugger on a Target-enabled website.
+Adobe Experience Platform Debugger provides a suite of useful tools for testing and debugging a website that has been tooled with an Adobe Target implementation. This guide covers some common workflows and best practices for using Experience Platform Debugger on a Target-enabled website.
 
 ## Prerequisites
 
-To use Platform Debugger for Target, the website must be using the [at.js library](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/) version 1.x or higher. Previous versions are not supported.
+To use Experience Platform Debugger for Target, the website must be using the [at.js library](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/) version 1.x or higher. Previous versions are not supported.
 
-## Initializing Platform Debugger
+## Initializing Experience Platform Debugger
 
-Open the website you want to test in a browser, and then open the Platform Debugger extension.
+Open the website you want to test in a browser, and then open the Experience Platform Debugger extension.
 
-Select **[!DNL Target]** in the left navigation. If Platform Debugger detects that a compatible version of at.js is running on the site, Adobe Target implementation details are shown.
+Select **[!DNL Target]** in the left navigation. If Experience Platform Debugger detects that a compatible version of at.js is running on the site, Adobe Target implementation details are shown.
 
-![The Target view selected in Platform Debugger, indicating that Adobe Target is active on the currently viewed browser page](../images/solutions/target/target-initialized.png)
+![The Target view selected in Experience Platform Debugger, indicating that Adobe Target is active on the currently viewed browser page](../images/solutions/target/target-initialized.png)
 
 ## Global configuration information
 
-Information about the implementation's global configuration is displayed at the top of the Target view in Platform Debugger.
+Information about the implementation's global configuration is displayed at the top of the Target view in Experience Platform Debugger.
 
-![Global configuration information for Target highlighted within Platform Debugger](../images/solutions/target/global-config.png)
+![Global configuration information for Target highlighted within Experience Platform Debugger](../images/solutions/target/global-config.png)
 
 | Name | Description |
 | --- | --- |
@@ -38,11 +38,11 @@ Information about the implementation's global configuration is displayed at the 
 
 Select **[!DNL Network Requests]** to view summary information on each network request made on the page.
 
-![The [!DNL Network Requests] section for Target selected within Platform Debugger](../images/solutions/target/network-requests.png)
+![The [!DNL Network Requests] section for Target selected within Experience Platform Debugger](../images/solutions/target/network-requests.png)
 
 As you perform actions on the page (including reloading the page), new columns are automatically added to the table, allowing you to view the sequence of actions and how values are altered between each request.
 
-![The [!DNL Network Requests] section for Target selected within Platform Debugger](../images/solutions/target/new-request.png)
+![The [!DNL Network Requests] section for Target selected within Experience Platform Debugger](../images/solutions/target/new-request.png)
 
 The following values are captured:
 
@@ -92,13 +92,13 @@ The following values are captured:
 
 To view the details for a parameter on a particular network event, select the table cell in question. A popover appears providing further information on the parameter, including a description and its value. If the value is a JSON object, the dialog includes a fully navigable view of the object's structure.
 
-![The [!DNL Network Requests] section for Target selected within Platform Debugger](../images/solutions/target/request-param-details.png)
+![The [!DNL Network Requests] section for Target selected within Experience Platform Debugger](../images/solutions/target/request-param-details.png)
 
 ## [!DNL Configuration]
 
 Select **[!DNL Configuration]** to enable or disable a selection of additional debugging tools for Target.
 
-![The [!DNL Configuration Requests] section for Target selected within Platform Debugger](../images/solutions/target/configuration.png)
+![The [!DNL Configuration Requests] section for Target selected within Experience Platform Debugger](../images/solutions/target/configuration.png)
 
 | Debugging tool | Description |
 | --- | --- |

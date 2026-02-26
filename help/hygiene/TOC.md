@@ -13,12 +13,12 @@ role: User, Developer, Admin
 * Data Lifecycle UI {#ui}
   * [Overview](./ui/overview.md)
   * [Automated dataset expirations](./ui/dataset-expiration.md)
-  * [(Beta) Delete records](./ui/record-delete.md)
+  * [Record delete requests](./ui/record-delete.md)
   * [Browse data lifecycle work orders](./ui/browse.md)
 * Data Hygiene API {#api}
   * [Overview](./api/overview.md)
-  * [Dataset expirations](./api/dataset-expiration.md)
+  * [Dataset expirations (ttl endpoint)](./api/dataset-expiration.md)
   * [Record deletes](./api/jobs.md)
-  * [(Beta) Record deletes](./api/workorder.md)
+  * [Record delete requests (Workorder endpoint)](./api/workorder.md)
   * [Quota](./api/quota.md)
 * [Best practices](./best-practices.md)

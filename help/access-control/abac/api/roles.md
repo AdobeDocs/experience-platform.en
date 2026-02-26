@@ -102,7 +102,7 @@ A successful response returns a list of roles in your organization, including in
 | `roleType` | The designated type of the role. The possible values for role type are: `user-defined` and `system-defined`. |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
 | `sandboxes` | This property displays the sandboxes within your organization that is provisioned for a particular role. |
-| `subjectAttributes` | The attributes that indicate the correlation between a subject and the Platform resources that they have access to. |
+| `subjectAttributes` | The attributes that indicate the correlation between a subject and the Experience Platform resources that they have access to. |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
 ## Look up a role {#lookup}
@@ -169,7 +169,7 @@ A successful response returns details for the queried role ID, including informa
 | `roleType` | The designated type of the role. The possible values for role type are: `user-defined` and `system-defined`. |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
 | `sandboxes` | This property displays the sandboxes within your organization that is provisioned for a particular role. |
-| `subjectAttributes` | The attributes that indicate the correlation between a subject and the Platform resources that they have access to. |
+| `subjectAttributes` | The attributes that indicate the correlation between a subject and the Experience Platform resources that they have access to. |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
 ## Look up subjects by role ID
@@ -317,7 +317,7 @@ A successful response returns your newly created role, with its corresponding ro
 | `roleType` | The designated type of the role. The possible values for role type are: `user-defined` and `system-defined`. |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
 | `sandboxes` | This property displays the sandboxes within your organization that is provisioned for a particular role. |
-| `subjectAttributes` | The attributes that indicate the correlation between a subject and the Platform resources that they have access to. |
+| `subjectAttributes` | The attributes that indicate the correlation between a subject and the Experience Platform resources that they have access to. |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
 ## Update a role {#patch}
@@ -397,7 +397,7 @@ A successful response returns the updated role, including new values for the pro
 | `roleType` | The designated type of the role. The possible values for role type are: `user-defined` and `system-defined`. |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
 | `sandboxes` | This property displays the sandboxes within your organization that is provisioned for a particular role. |
-| `subjectAttributes` | The attributes that indicate the correlation between a subject and the Platform resources that they have access to. |
+| `subjectAttributes` | The attributes that indicate the correlation between a subject and the Experience Platform resources that they have access to. |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
 ## Update a role by role ID {#put}
@@ -471,7 +471,7 @@ A successful response returns your updated role, including new values for its na
 | `roleType` | The designated type of the role. The possible values for role type are: `user-defined` and `system-defined`. |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
 | `sandboxes` | This property displays the sandboxes within your organization that is provisioned for a particular role. |
-| `subjectAttributes` | The attributes that indicate the correlation between a subject and the Platform resources that they have access to. |
+| `subjectAttributes` | The attributes that indicate the correlation between a subject and the Experience Platform resources that they have access to. |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
 ## Update subject by role ID

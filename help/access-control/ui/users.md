@@ -27,4 +27,4 @@ The following video is intended to support your understanding of managing admins
 
 ## Next steps
 
- Now that you have learned how to control access to Platform features through the [!DNL Admin Console], see the appendix section in the [access control overview](../home.md) to learn more about each individual permission and the Platform functionalities they grant access to.
+ Now that you have learned how to control access to Experience Platform features through the [!DNL Admin Console], see the appendix section in the [access control overview](../home.md) to learn more about each individual permission and the Experience Platform functionalities they grant access to.

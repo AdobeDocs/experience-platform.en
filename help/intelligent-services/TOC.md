@@ -37,6 +37,7 @@ role: User
   - [Overview](customer-ai/overview.md)
   - [Getting started with Customer AI](customer-ai/getting-started.md)
   - [Data requirements](customer-ai/data-requirements.md)
+  - [Customer AI Propensity Scoring model details](customer-ai/model-detail.md)
   - UI guides{#user-guide}
     - [Configure an instance](customer-ai/user-guide/configure.md)
     - [Discover insights](customer-ai/user-guide/discover-insights.md)
@@ -49,4 +50,4 @@ role: User
     - [Customer managed keys](customer-ai/cai-data-governance/customer-managed-keys.md)
     - [Data governance](customer-ai/cai-data-governance/data-governance.md)
     - [Governance policies](customer-ai/cai-data-governance/governance-policies.md)
-- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

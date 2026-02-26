@@ -17,7 +17,7 @@ When finished, select **[!UICONTROL Next]**.
 
 ![create-new-product-profile](../images/create-new-product-profile.png)
 
-The next screen prompts you to choose which Platform services to include in the profile. Select the toggle button next to a service to disable it. If a service is disabled, all functions associated with that service will not be available to users assigned to this product profile. When finished, select **[!UICONTROL Save]**.
+The next screen prompts you to choose which Experience Platform services to include in the profile. Select the toggle button next to a service to disable it. If a service is disabled, all functions associated with that service will not be available to users assigned to this product profile. When finished, select **[!UICONTROL Save]**.
 
 ![enable-services](../images/enable-services.png)
 

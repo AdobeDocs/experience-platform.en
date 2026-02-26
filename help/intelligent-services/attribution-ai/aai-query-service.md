@@ -39,7 +39,7 @@ Using the scoring schema, you can select or search for a value. Once selected, t
 
 ## Access Query Service
 
-To access Query Service from within the Platform UI, start by selecting **[!UICONTROL Queries]** in the left navigation, then select the **[!UICONTROL Browse]** tab. A list of your previously saved queries is loaded.
+To access Query Service from within the Experience Platform UI, start by selecting **[!UICONTROL Queries]** in the left navigation, then select the **[!UICONTROL Browse]** tab. A list of your previously saved queries is loaded.
 
 ![query service browse](./images/aai-query/query_tab.png)
 

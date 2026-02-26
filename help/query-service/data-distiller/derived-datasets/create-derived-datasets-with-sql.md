@@ -7,7 +7,7 @@ exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
 
 Learn how to use SQL queries to manipulate and transform data from existing datasets to create a derived dataset that is enabled for Profile. This workflow provides an efficient, alternative method to create derived datasets for your Real-Time Customer Profile business use cases.
 
-This document outlines various convenient SQL extensions that generate a derived dataset for use with Real-Time Customer Profile. The workflow simplifies the process that you would otherwise have to complete through various API calls or Platform UI interactions.
+This document outlines various convenient SQL extensions that generate a derived dataset for use with Real-Time Customer Profile. The workflow simplifies the process that you would otherwise have to complete through various API calls or Experience Platform UI interactions.
 
 Typically, generating and publishing a derived dataset for Real-Time Customer Profile would involve the following steps:
 
@@ -45,7 +45,7 @@ MAP <data_type, data_type>
 ARRAY <data_type>
 ```
 
-Alternatively, datasets can also be enabled for profile through the Platform UI. For more information on marking a dataset as enabled for profile, see the [enable a dataset for Real-Time Customer Profile documentation](../../../catalog/datasets/user-guide.md#enable-profile).
+Alternatively, datasets can also be enabled for profile through the Experience Platform UI. For more information on marking a dataset as enabled for profile, see the [enable a dataset for Real-Time Customer Profile documentation](../../../catalog/datasets/user-guide.md#enable-profile).
 
 In the example query below, the `decile_table` dataset is created with `id` as the primary identity column and has the namespace `IDFA`. It also has a field named `decile1Month` of the map data type. The table created (`decile_table`) is enabled for profile.
 
@@ -161,7 +161,7 @@ An example of this command's output can be seen below:
 
 ```sql
        name          |        dataSetId         |     dataSet    | description | labels 
----------------------+--------------------------+----------------+-------------+----------
+|---------------------+--------------------------+----------------+-------------+----------
  luma_midvalues      | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
  luma_postvalues     | 5c86b896b3c162151785b43c | Luma midValues |             | false
  table_with_a_decile | 5c86b896b3c162151785b43c | Luma midValues |             | 'UPSERT', 'PROFILE'
@@ -172,7 +172,7 @@ You can see from the example that `table_with_a_decile` has been enabled for pro
 
 ### Create a field group with SQL
 
-Field groups can now be created through the use of SQL. This provides an alternative to using the Schema Editor within the Platform UI or making an API call to the schema registry. 
+Field groups can now be created through the use of SQL. This provides an alternative to using the Schema Editor within the Experience Platform UI or making an API call to the schema registry. 
 
 An example statement to create a field group can be seen below.
 
@@ -221,7 +221,7 @@ An example of this command's output can be seen below:
 
 ```sql
        name                      |        fieldgroupId                             |     owner      |
----------------------------------+-------------------------------------------------+-----------------
+|---------------------------------+-------------------------------------------------+-----------------
  AEP Mobile Lifecycle Details    | _experience.aep-mobile-lifecycle-details        | Luma midValues |
  AEP Web SDK ExperienceEvent     | _experience.aep-web-sdk-experienceevent         | Luma midValues |
  AJO Classification Fields       | _experience.journeyOrchestration.classification | Luma midValues |

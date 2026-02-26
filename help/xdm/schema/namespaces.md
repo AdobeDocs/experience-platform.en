@@ -83,7 +83,7 @@ The following is an example schema for a product in standard XDM syntax. With th
 
 ### Compatibility Mode {#compatibility}
 
-In Adobe Experience Platform, XDM schemas are represented in [Compatibility Mode](../api/appendix.md#compatibility) syntax, which does not use the JSON-LD syntax to represent namespaces. Instead, Platform converts the namespace to a parent field (starting with an underscore) and nests the fields under it.
+In Adobe Experience Platform, XDM schemas are represented in [Compatibility Mode](../api/appendix.md#compatibility) syntax, which does not use the JSON-LD syntax to represent namespaces. Instead, Experience Platform converts the namespace to a parent field (starting with an underscore) and nests the fields under it.
 
 For example, the standard XDM `repo:createdDate` is converted to `_repo.createdDate` and would appear under the following structure in Compatibility Mode:
 

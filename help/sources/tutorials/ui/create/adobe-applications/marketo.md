@@ -16,12 +16,12 @@ This tutorial provides steps for creating a [!DNL Marketo Engage] (hereinafter r
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
 * [B2B namespaces and schema auto-generation utility](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): The B2B namespaces and schema auto-generation utility allows you to use [!DNL Postman] to auto-generate values for your B2B namespaces and schemas. You must complete your B2B namespaces and schemas first, before creating a [!DNL Marketo] source connection and dataflow.
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
 * [Experience Data Model (XDM)](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Create and edit schemas in the UI](../../../../../xdm/ui/resources/schemas.md): Learn how to create and edit schemas in the UI.
 * [Identity namespaces](../../../../../identity-service/features/namespaces.md): Identity namespaces are a component of [!DNL Identity Service] that serve as indicators of the context to which an identity relates. A fully qualified identity includes an ID value and a namespace.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Gather required credentials
 
@@ -39,7 +39,7 @@ Once you have gathered your required credentials, you can follow the steps in th
 
 ## Connect your [!DNL Marketo] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
 Under the *Adobe applications* category, select **[!UICONTROL Marketo Engage]**, and then select **[!UICONTROL Add data]**.
 
@@ -197,11 +197,11 @@ The following sections provide additional guidelines that you may follow when us
 
 ### Error messages in the UI {#error-messages}
 
-The following error messages are displayed in the UI when Platform detects issues with your setup:
+The following error messages are displayed in the UI when Experience Platform detects issues with your setup:
 
 #### [!DNL Munchkin ID] is not mapped to the appropriate organization
 
-Authentication will be denied if your [!DNL Munchkin ID] is not mapped to the Platform organization that you are using. Configure the mapping between your [!DNL Munchkin ID] and your organization using the [[!DNL Marketo] interface](https://app-sjint.marketo.com/#MM0A1).
+Authentication will be denied if your [!DNL Munchkin ID] is not mapped to the Experience Platform organization that you are using. Configure the mapping between your [!DNL Munchkin ID] and your organization using the [[!DNL Marketo] interface](https://app-sjint.marketo.com/#MM0A1).
 
 ![An error message displaying that the Marketo instance is not correctly mapped to the Adobe organization.](../../../../images/tutorials/create/marketo/munchkin-not-mapped.png)
 

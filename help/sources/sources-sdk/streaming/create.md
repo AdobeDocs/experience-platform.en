@@ -38,7 +38,7 @@ Once provided, you must structure your private Git repository like so:
 | {your_source} | The name of your source. This folder should contain all artifacts related to your source, within your private Git repository. | `medallia`|
 | {your_source}-category.txt | The category to which your source belongs, formatted as a text file. **Note**: If you believe that your source does not fit in any of the above categories, please contact your Adobe representative to discuss. | `medallia-category.txt` Inside the file, please specify the category of your source, like: `streaming`. |
 | {your_source}-description.txt | A brief description of your source. | [!DNL Medallia] is marketing automation source that you can use to bring [!DNL Medallia] data to Experience Platform. |
-| {your_source}-icon.svg | The image to be used to represent your source in the Experience Platform sources catalog. This icon must be an SVG file. |
+| {your_source}-icon.svg | The image to be used to represent your source in the Experience Platform sources catalog. This icon must be an SVG file. ||
 | {your_source}-label.txt | The name of your source as it should appear in the Experience Platform sources catalog. | Medallia | 
 | {your_source}-connectionSpec.json | A JSON file that contains the connection specification of your source. This file is not initially required as you will be populating your connection specification as you complete this guide. | `medallia-connectionSpec.json` |
 

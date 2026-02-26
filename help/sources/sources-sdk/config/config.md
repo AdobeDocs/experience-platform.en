@@ -14,7 +14,7 @@ Connection specifications return a source's connector properties. They include a
 
 | Specs | Description |
 | --- | --- |
-| `authSpec` | The `authSpec` array contains information on the authentication parameters required to connect a source to Platform. Any given source can support multiple different types of authentication. |
+| `authSpec` | The `authSpec` array contains information on the authentication parameters required to connect a source to Experience Platform. Any given source can support multiple different types of authentication. |
 | `sourceSpec` | The `sourceSpec` array contains general information pertaining to a source, including information on attributes required to present the source in the UI, documentation link, and parameters regarding pagination, header, body, and scheduling. Furthermore, `sourceSpec` describes the schema of the parameters required to create a source connection from a base connection, and is necessary in order to create a source connection. |
 | `exploreSpec` | The `exploreSpec` array defines the parameters required for exploring and inspecting objects contained in your source. The `exploreSpec` also defines the response format returned when objects are explored and inspected. |
 

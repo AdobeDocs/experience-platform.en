@@ -61,8 +61,8 @@ Also configure channels for playbooks that contain transactional messages like o
 
 ### Push channel surface
 
-Confirm that the app surfaces are configured either from the Experience Platform or Data Collections interface. This is how app surfaces look like in the Data Collections environment. 
+Confirm that the channel configurations are configured either from the Experience Platform or Data Collections interface. This is how channel configurations look like in the Data Collections environment. 
 
 ## Next steps {#next-steps}
 
-Now that you've read this document, you should know how to setup an inspirational sandbox and be familiar with different ways of accessing use case playbooks within Platform. As a next step, read about how to [choose](/help/use-case-playbooks/playbooks/choose.md) the right playbook.
+Now that you've read this document, you should know how to setup an inspirational sandbox and be familiar with different ways of accessing use case playbooks within Experience Platform. As a next step, read about how to [choose](/help/use-case-playbooks/playbooks/choose.md) the right playbook.

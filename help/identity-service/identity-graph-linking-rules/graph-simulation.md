@@ -1,16 +1,20 @@
 ---
 title: Graph Simulation UI Guide
 description: Learn how to use the Graph Simulation in the Identity Service UI.
-badge: Beta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 ---
-# [!DNL Graph Simulation] UI guide
+# [!DNL Graph Simulation] UI guide {#graph-simulation}
 
->[!AVAILABILITY]
->
->Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="Graph Simulation"
+>abstract="Simulate graphs to understand how Identity Service links identities, and how the Identity Optimization Algorithm works."
 
-[!DNL Graph Simulation] is a tool in the Identity Service UI that you can use to simulate how an identity graph behaves given a particular combination of identities and how you configure the [identity optimization algorithm](./identity-optimization-algorithm.md).
+[!DNL Graph Simulation] is a tool in the Identity Service UI that you can use to simulate how an identity graph behaves given a particular combination of identities and how you configure the [Identity Optimization Algorithm](./identity-optimization-algorithm.md).
+
+Watch the following video for additional information on using the [!DNL Graph Simulation] interface in the Identity Service UI workspace:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
 
 Read this document to learn how you can use [!DNL Graph Simulation] to better understand identity graph behavior and how the graph algorithm functions.
 
@@ -166,8 +170,10 @@ In the example graph below, a dotted line exists between `{Email: tom@acme.com}`
 
 By reading this document, you now know how to use the [!DNL Graph Simulation] tool to better understand how your identity data is treated given a particular set of rules and configurations. For more information, read the following documents:
 
-* [Identity graph linking rules](./overview.md)
-* [Configuration guide](./configuration.md)
-* [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [[!DNL Identity Graph Linking Rules] overview](./overview.md)
+* [Identity Optimization Algorithm](./identity-optimization-algorithm.md)
+* [Implementation guide](./implementation-guide.md)
+* [Troubleshooting and FAQ](./troubleshooting.md)
+* [Examples of graph configurations](./example-configurations.md)
 * [Namespace priority](./namespace-priority.md)
-* [Example graph configurations](./example-configurations.md)
+* [Identity settings UI](./identity-settings-ui.md)

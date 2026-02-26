@@ -41,7 +41,7 @@ The first step in establishing your CLV is to create a derived dataset from the 
 
 ## Extend the insights data model and schedule updates {#extend-data-model-and-set-refresh-schedule}
 
-Next, you must build a custom data model or extend an existing Adobe Real-Time CDP data model to engage with your CLV reporting insights. See the documentation to learn how to [build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). The tutorial covers the following steps:
+Next, you must build a custom data model or extend an existing Adobe Real-Time CDP data model to engage with your CLV reporting insights. See the documentation to learn how to [build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../data-distiller/sql-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). The tutorial covers the following steps:
 
 * Create a model for reporting insights with Data Distiller.
 * Create tables, relationships, and populate data.
@@ -56,7 +56,7 @@ Make sure to set a schedule to refresh your custom data model on a regular caden
 
 ## Build a dashboard to capture insights {#build-a-custom-dashboard}
 
-Now that you have created your custom data model, you are ready to visualize your data with custom queries and user-defined dashboards. See the user-defined dashboards overview for full guidance on how to [build a custom dashboard](../../dashboards/user-defined-dashboards.md). The UI guide includes details on:
+Now that you have created your custom data model, you are ready to visualize your data with custom queries and user-defined dashboards. See the user-defined dashboards overview for full guidance on how to [build a custom dashboard](../../dashboards/standard-dashboards.md). The UI guide includes details on:
 
 * How to create a widget.
 * How to use the widget composer.
@@ -67,7 +67,7 @@ Examples of custom CLV widgets that use decile buckets can be seen below.
 
 ## Create and activate high-performance audiences {#create-and-activate-audiences}
 
-The next step is to build a segment definition and generate audiences from your Real-Time Customer Profile data. See the Segment Builder UI guide to learn how to [create and activate audiences in Platform](../../segmentation/ui/segment-builder.md). The guide provides sections on how to:
+The next step is to build a segment definition and generate audiences from your Real-Time Customer Profile data. See the Segment Builder UI guide to learn how to [create and activate audiences in Experience Platform](../../segmentation/ui/segment-builder.md). The guide provides sections on how to:
 
 * Create segment definitions using a combination of attributes, events, and existing audiences as building blocks.
 * Use the rule builder canvas and containers to control the order in which the segmentation rules are executed.
@@ -79,7 +79,7 @@ Alternatively, there is also a [segment builder video tutorial](https://experien
 
 ## Activate your audience for an email campaign {#activate-audience-for-campaign}
 
-Once you have built your audience, you are ready to activate it to a destination. Platform supports a variety of Email Service Providers (ESPs) that enable you to manage your email marketing activities, such as sending promotional email campaigns. 
+Once you have built your audience, you are ready to activate it to a destination. Experience Platform supports a variety of Email Service Providers (ESPs) that enable you to manage your email marketing activities, such as sending promotional email campaigns. 
 
 Check the [email marketing destinations overview](../../destinations/catalog/email-marketing/overview.md#connect-destination) for a list of the supported destinations that you want to export data to (for example the [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) page).
 
@@ -105,7 +105,7 @@ By reading this document you should have a better understanding of how you can u
 
 * [An end-to-end example of an abandoned browse use case that demonstrates the versatility and benefits of Query Service.](./abandoned-browse.md)
 * [How to use Query Service and machine learning to determine and filter bot activity from genuine online website visitor traffic](./bot-filtering.md)
-* [How to perform a match on your Platform data that combines results from multiple datasets by approximately matching a string of your choice.](./fuzzy-match.md)
+* [How to perform a match on your Experience Platform data that combines results from multiple datasets by approximately matching a string of your choice.](./fuzzy-match.md)
 
 <!-- "Data signals are actions taken by consumers while online that offer clues about intent that can be acted upon. This includes anything from visiting a website to filling out a change of address or clicking an ad."  -->
 

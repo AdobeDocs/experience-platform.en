@@ -9,7 +9,7 @@ exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
 
 Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance.
 
-In order to address this need, Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+In order to address this need, Experience Platform provides sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 This document provides a high-level overview of sandboxes in Experience Platform.
 
@@ -17,17 +17,17 @@ This document provides a high-level overview of sandboxes in Experience Platform
 
 Sandboxes are virtual partitions within a single instance of Experience Platform, which allow for seamless integration with the development process of your digital experience applications. All content and actions taken within a sandbox are confined to only that sandbox and do not affect any other sandboxes. There are two kinds of sandboxes supported on Experience Platform:
 
-* **Production sandbox**: A production sandbox is meant to be used with profiles in your production environment. Platform allows you to create multiple production sandboxes in order to provide the right functionality for data while still maintaining operational isolation. This feature allows you to dedicate specific production sandboxes to distinct lines of business, brands, projects, or regions. Production sandboxes support a volume of production profiles up to your licensed [!DNL Profile] commitment (measured cumulatively across all of your authorized production sandboxes). You are entitled to use licensed average profile per authorized [!DNL Profile] (measured cumulatively across all of your authorized production sandboxes).
+* **Production sandbox**: A production sandbox is meant to be used with profiles in your production environment. Experience Platform allows you to create multiple production sandboxes in order to provide the right functionality for data while still maintaining operational isolation. This feature allows you to dedicate specific production sandboxes to distinct lines of business, brands, projects, or regions. Production sandboxes support a volume of production profiles up to your licensed [!DNL Profile] commitment (measured cumulatively across all of your authorized production sandboxes). You are entitled to use your entire licensed Total Data Volume (measured cumulatively across all of your authorized production sandboxes).
+
 * **Development sandbox**: A development sandbox is a sandbox that can be used exclusively for development and testing with non-production profiles. Development sandboxes support a volume of non-production profiles up to 10% of your licensed [!DNL Profile] commitment (measured cumulatively across all of your authorized development sandboxes). You are entitled to up to:
-  * An average non-production profile richness of 75 kilobytes per authorized non-production Profile (measured cumulatively across all of your authorized development sandboxes);
   * One batch segmentation job per day, per development sandbox;
   * An average of 120 [!DNL Profile] API calls, per [!DNL Profile], per year (measured cumulatively across all of your authorized development sandboxes.
 
-An Experience Platform instance supports multiple production and development sandboxes, with each sandbox maintaining its own independent library of Platform resources (including schemas, datasets, profiles, and so on). In addition, both production and development sandboxes have a reset feature that removes all customer-created resources from the sandbox. Development sandboxes cannot be converted to production sandboxes.
+An Experience Platform instance supports multiple production and development sandboxes, with each sandbox maintaining its own independent library of Experience Platform resources (including schemas, datasets, profiles, and so on). In addition, both production and development sandboxes have a reset feature that removes all customer-created resources from the sandbox. Development sandboxes cannot be converted to production sandboxes.
 
 A default Experience Platform license grants you a total of five sandboxes, which you can classify as production or development. You can license additional packs of 10 sandboxes up to a maximum of 75 sandboxes in total. These additional sandboxes can be used to create both production and development sandboxes. Please contact your organization administrator or your Adobe sales representative for more details.
 
-Finally, the default production sandbox is the first production sandbox that is created when an organization is first created. The default production sandbox allows you to ingest or consume data from Platform, as well as accept requests that do not include values for a sandbox name or a sandbox ID.
+Finally, the default production sandbox is the first production sandbox that is created when an organization is first created. The default production sandbox allows you to ingest or consume data from Experience Platform, as well as accept requests that do not include values for a sandbox name or a sandbox ID.
 
 >[!NOTE]
 >
@@ -74,4 +74,4 @@ The Sandbox API allows you to manage sandboxes by using RESTful API operations. 
 
 By reading this document, you have been introduced to the essential concepts about sandboxes in Experience Platform. For detailed steps on how to manage sandboxes, see the [user guide](ui/overview.md) for the UI or the [developer guide](./api/getting-started.md) for the API.
 
-While sandboxes serve as a valuable tool for isolating Platform environments for your development team, you can also manage more granular access control by using the Adobe Admin Console. See the [access control overview](../access-control/home.md) for more information.
+While sandboxes serve as a valuable tool for isolating Experience Platform environments for your development team, you can also manage more granular access control by using the Adobe Admin Console. See the [access control overview](../access-control/home.md) for more information.

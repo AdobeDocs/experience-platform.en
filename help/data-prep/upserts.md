@@ -33,7 +33,7 @@ This overview requires a working understanding of the following components of Ad
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 * [[!DNL Identity Service]](../identity-service/home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
 * [Real-Time Customer Profile](../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
-* [Sources](../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sources](../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
 
 ## Use streaming upserts in [!DNL Data Prep] {#streaming-upserts-in-data-prep}
 
@@ -266,7 +266,7 @@ The following outlines a list of known limitations to consider when streaming up
 
 * The streaming upserts method should only be used when sending partial row updates to [!DNL Real-Time Customer Profile]. Partial row updates are **not** consumed by data lake.
 * The streaming upserts method does not support updating, replacing, and removing identities. New identities are created if they do not exist. Hence the `identity` operation must always be set to create. If an identity already exists, the operation is a no-op.
-* The streaming upserts method currently does not support [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) and [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* The streaming upserts method currently does not support the [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) or the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 ## Next steps
 

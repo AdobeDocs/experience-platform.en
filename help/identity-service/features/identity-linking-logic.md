@@ -3,7 +3,12 @@ title: Identity Service Linking Logic
 description: Learn about how Identity Service links disparate identities to create a comprehensive view of a customer.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
 ---
-# Identity Service linking logic
+# Identity Service linking logic {#identity-service-linking-logic}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_simulatedgraph"
+>title="Simulated Graph"
+>abstract="Identities are linked when the identity namespace and identity value match."
 
 A link between two identities are established when the identity namespace and the identity values match.
 
@@ -29,6 +34,7 @@ An identity consists of an identity namespace and an identity value.
 
 * An identity namespace is the context of a given identity value to. Common examples of identity namespaces include CRMID, Email, and Phone.
 * An identity value is the string that represents a real-world entity. For example: "julien<span>@acme.com" can be an identity value for an Email namespace and 555-555-1234 can be a corresponding identity value for a Phone namespace.
+* Identity Service is case-sensitive. For example, **julien<span>@gmail.com** and **JULIEN<span>@GMAIL.COM** would be treated as two separate Email identities.
 
 >[!TIP]
 >
@@ -90,7 +96,7 @@ You have also implemented WebSDK and ingested a WebSDK dataset (Experience Event
 | `t=3` | ECID:44675 | View home page |
 | `t=4` | ECID:44675, CRMID: 31260XYZ | View purchase history |
 
-The primary identity for each event will be determined based on [how you configure data element types](../../tags/extensions/client/web-sdk/data-element-types.md).
+The primary identity for each event will be determined based on [how you configure data element types](/help/tags/extensions/client/web-sdk/data-element-types.md).
 
 >[!NOTE]
 >

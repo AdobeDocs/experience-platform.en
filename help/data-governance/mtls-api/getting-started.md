@@ -2,6 +2,7 @@
 title: Getting Started with the MTLS Service API
 description: This document provides additional information that you need to know in order to successfully work with the MTLS API.
 role: Developer
+exl-id: db5978cf-fe47-4b76-86ba-c8ea1ee6b12f
 ---
 # Getting started with the MTLS Service API {#getting-started}
 
@@ -15,7 +16,7 @@ The MTLS Service API documentation provides an example API call to demonstrate h
 
 ## Required headers
 
-The API documentation also requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to Platform endpoints. Completing the authentication tutorial provides the values for each of the required headers in Experience Platform API calls, as shown below:
+The API documentation also requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to Experience Platform endpoints. Completing the authentication tutorial provides the values for each of the required headers in Experience Platform API calls, as shown below:
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

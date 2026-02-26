@@ -157,7 +157,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 {style="table-layout:auto"}
 
-For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
+For more information on XDM in Experience Platform, see the [XDM System overview](../../xdm/home.md).
 
 ## Real-Time Customer Profile {#profile}
 
@@ -183,7 +183,7 @@ To learn more about Real-Time Customer Profile, including tutorials and best pra
 | ------- | ----------- |
 | Bulk value import in Segment Builder | Segment Builder now supports importing multiple values, either by uploading a CSV or TSV file or by manually inserting comma separated values. More information can be found within the [Segment Builder guide](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 | External audience membership expiration | By default, external audience memberships are retained for 30 days. To retain them for longer, use the `validUntil` field during the ingestion of audience data. |
-| Platform-generated segment membership expiration | Any segment membership that is in the `Exited` state for more than 30 days, based on the `lastQualificationTime` field will be subject to deletion. |
+| Experience Platform-generated segment membership expiration | Any segment membership that is in the `Exited` state for more than 30 days, based on the `lastQualificationTime` field will be subject to deletion. |
 
 {style="table-layout:auto"}
 
@@ -191,7 +191,7 @@ For more information on [!DNL Segmentation Service], please see the [Segmentatio
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources and allows you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources and allows you to structure, label, and enhance that data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 

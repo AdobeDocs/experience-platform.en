@@ -1,14 +1,9 @@
 ---
 title: Acxiom Prospecting Data Import
 description: Learn how to connect Acxiom Prospecting Data to Adobe Experience Platform and Adobe Real-Time Customer Data Platform using the UI.
-badge: Beta
 exl-id: 6df674d9-c14b-42ea-a287-5377484e567d
 ---
 # [!DNL Acxiom Prospecting Data Import]
-
->[!NOTE]
->
->The [!DNL Acxiom Prospecting Data Import] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Adobe Experience Platform provides support for ingesting data from a data partner application. Support for data and identity partners includes [!DNL Acxiom Prospecting Data Import].
 
@@ -31,9 +26,9 @@ In order to access your bucket on Experience Platform, you need to provide valid
 | [!DNL Amazon S3] secret key | The secret key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team. |
 | Bucket name | This is your bucket where files will be shared. You can retrieve this value from the [!DNL Acxiom] team. |
 
-## IP address allow list
+## IP address allowlist
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+Before you can use source connectors, you must add the required IP addresses for your region to your allowlist. If you do not add these IP addresses, the source connectors may not work correctly or may produce errors. For detailed instructions and the list of IP addresses to allow, read the [IP address allowlist](../../ip-address-allow-list.md) page.
 
 ### Configure permissions on Experience Platform
 

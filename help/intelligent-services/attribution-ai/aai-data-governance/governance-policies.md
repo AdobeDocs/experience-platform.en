@@ -7,7 +7,7 @@ exl-id: 448b10c8-8eac-41cb-9b77-66aa283c0a9d
 ---
 # Governance policies in Attribution AI
 
-Once you go through the workflow to create a model and submit the model’s configuration, the [policy enforcement](../../../data-governance/enforcement/auto-enforcement.md) checks to see if there are any violations. If a policy violation occurs, a popover appears indicating that one or more policies have been violated. This is to ensure that your data operations and marketing actions within Platform are compliant with data usage policies.
+Once you go through the workflow to create a model and submit the model’s configuration, the [policy enforcement](../../../data-governance/enforcement/auto-enforcement.md) checks to see if there are any violations. If a policy violation occurs, a popover appears indicating that one or more policies have been violated. This is to ensure that your data operations and marketing actions within Experience Platform are compliant with data usage policies.
 
 ## Policy violation popover
 

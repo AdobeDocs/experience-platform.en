@@ -45,7 +45,7 @@ New destinations are available where you can activate your Adobe Experience Plat
 
 |Feature | Description|
 |------- | -----------|
-|Custom file name editor | Update to the data activation workflow for email marketing destinations and cloud storage destinations that allows you to edit the name of the exported files. For more information, refer to the [ Configure step](../../destinations/ui/activate-batch-profile-destinations.md) in the activation workflow.|
+|Custom file name editor | Update to the data activation workflow for email marketing destinations and cloud storage destinations that allows you to edit the name of the exported files. For more information, refer to the [Configure step](../../destinations/ui/activate-batch-profile-destinations.md) in the activation workflow.|
 |Recommended attributes | Update to the data activation workflow for email marketing destinations and cloud storage destinations that displays recommended attributes for you to add to the exported files. For more information, refer to the [Select attributes step](../../destinations/ui/activate-batch-profile-destinations.md) in the activation workflow.|
 
 ## [!DNL Real-Time Customer Data Platform] {#rtcdp}
@@ -62,7 +62,7 @@ For more information on [!DNL Real-Time CDP], see the [[!DNL Real-Time CDP] over
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Experience Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
 
 [!DNL Experience Platform] provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 

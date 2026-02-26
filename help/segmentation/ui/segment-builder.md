@@ -21,7 +21,30 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 >title="Fields"
 >abstract="The three field types that make up a segment definition are attributes, events, and audiences. Attributes let you use Profile attributes that belong to the XDM Individual Profile class, events let you create an audience based on actions or events that take place using XDM ExperienceEvent data elements, and audiences let you use imported audiences from external sources."
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_showfullxdmschema"
+>title="Show full XDM schema"
+>abstract="By default, only fields that contain data are displayed. Enable this option to show all the fields in the XDM schema."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_showdeprecatedfields"
+>title="Show deprecated fields"
+>abstract="By default, deprecated XDM fields are not dispalyed. Enable this option to show deprecated XDM fields."
+
 The basic building blocks of segment definitions are attributes and events. In addition, the attributes and events contained in existing audiences can be used as components for new definitions. 
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_summarydata"
+>title="Summary data"
+>abstract="Summary data only appears for profile attributes and does <b>not</b> appear for either event or audience attributes.<br/><br/>Summary data for profile attributes may not appear under the following circumstances: <ol><li>Some of the values of the attribute are more than 100 characters long.</li><li>There are more than 3000 unique values for the attribute.</li></ol>"
+
+>[!NOTE]
+>
+>If you select the information bubble of an attribute, you can view the distribution of values, also known as the summary data, of the field. These are **only** available in the attributes tab, and are not available for use in the events or audiences tab.
+>
+>Summary data will appear if the attribute meets the following criteria: All the values of the attribute are 100 characters or fewer and there are 3000 or fewer unique values for the attribute.
+>
+>However, an attribute will **not** have summary data if it is multi-entity data linked to the profile through a relationship. For example, if you have a custom schema called `Vehicle`, the **properties** within the `Vehicle` schema will **not** have summary data.
 
 You can see these building blocks in the **[!UICONTROL Fields]** section on the left side of the [!DNL Segment Builder] workspace. **[!UICONTROL Fields]** contains a tab for each of the main building blocks: "[!UICONTROL Attributes]", "[!UICONTROL Events]", and "[!UICONTROL Audiences]".
 
@@ -31,7 +54,98 @@ You can see these building blocks in the **[!UICONTROL Fields]** section on the 
 
 The **[!UICONTROL Attributes]** tab allows you to browse [!DNL Profile] attributes belonging to the [!DNL XDM Individual Profile] class. Each folder can be expanded to reveal additional attributes, where each attribute is a tile that can be dragged onto the rule builder canvas in the center of the workspace. The [rule builder canvas](#rule-builder-canvas) is discussed in more detail later in this guide.
 
-![The attributes section of the Segment Builder fields is highlighted.](../images/ui/segment-builder/attributes.png)  
+![The attributes section of the Segment Builder fields is highlighted.](../images/ui/segment-builder/attributes.png)
+
+The attributes you add can be one of the following data types:
+
+| Data type | Common use cases | 
+| --------- | ---------------- |
+| String | Names, email addresses, product categories |
+| Numeric | Age, revenue, product quantities, loyalty scores |
+| Boolean | Preferences, status indicators, user flags |
+| Enum | Predefined lists such as gender or status |
+| Date/Time | Purchase dates, visit times, birthday |
+
+You can use the following operators for the respective data types:
+
++++ String operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Equals | Find an exact match to the specified value | Email **equals** "sample@example.com" |
+| Not equals | Excludes the specified value | Status **does not equal** "Cancelled" |
+| Contains | The text includes the specified value | Product name **contains** "iPhone" |
+| Does not contain | The text does not include the specified value | Description **does not contain** "discontinued" |
+| Starts with | The text begins with the specified value | Customer ID **starts with** "PREM" |
+| Ends with | The text finishes with the specified value | Email **ends with** "@company.com" |
+| Exists | The value exists | Middle name **exists** |
+| Does not exist | The value does not exist | Loyalty status **does not exist** |
+
++++
+
++++ Numeric operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Equals | Find an exact match to the specified value | Age **equals** 25 |
+| Not equals | Excludes the specified value | Order count **does not equal** 0 |
+| Greater than | The number is **larger** than the specified value. This value is **exclusive** of the specified number. | Annual revenue **greater than** 50000 |
+| Greater than or equal | The number is **larger** than the specified value. This value is **inclusive** of the specified number.| Age **greater than or equal** 21 |
+| Less than | The number is **smaller** than the specified value. This value is **exclusive** of the specified number. | Days since purchase **less than** 30 |
+| Less than or equal | The number is **smaller** than the specified value. This value is **inclusive** of the specified number.| Cart value **less than or equal** 100 |
+| Between | The number is **between** the specified values. These values are **inclusive** of the specified numbers. | Age **between** 25 and 45 |
+| Exists | The value exists | Credit score **exists** |
+| Does not exist | The value does not exist | Credit score **does not exist** |
+
++++
+
++++ Boolean operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Equals | The boolean value is set to the specified value (True or False) | Email opt-in **equals True** |
+| Not equals | The boolean value is **not** set to the specified value (True or False) | Mobile app installed **not equals True** |
+
++++
+
++++ Enum operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Equals | The value equals the specified enum values | Gender **equals** Female |
+| Not equals | The value does not equal the specified enum value | Order status **does not equal** Cancelled |
+| Exists | The enum value has been set | Preferred language **exists** |
+| Does not exist | The enum value has not been set | Preferred language **does not exist** |
+
++++
+
++++ Date/Time operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Today | The value occurred today. You can select the **Ignore year** checkbox to make the comparison ignore the year.| Birth date **is** Today |
+| Yesterday | The value occurred yesterday. | Cart purchase **is** Yesterday |
+| This month | The value occurred this calendar month. | Birth month **is** This month |
+| This year | The value occurred this calendar year. | Sign up date **is** This year |
+| Custom date | The value occurred on the given date. | Purchase date **is on** Custom date |
+| In last | The value occurred within the last period of time chosen. Birthday **is** In last month |
+| From (to) | The value occurred within the two calendar dates chosen. This period of time is **inclusive** of both dates. | Account creation date **is** From April 20th to July 13th |
+| During | The value occurred within the selected month or year. | Sale **is** During March |
+| Within (+/-) | The value occurred within days, weeks, months, or years of the selected date. This period of time is **inclusive** of both dates. | Cart abandon is **Within** 3 days |
+| Before | The value occurred before the selected date. | Membership join date is **before** January 3rd, 2025 |
+| After | The value occurred after the selected date. | Purchase date is **after** March 14th, 2024 |
+| Rolling range | The value occurred between the two relative dates. | Last purchase date is in rolling range of seven days ago to three days ago. |
+| In next | The value occurred within the next period of time selected. | Cart abandon is in next 2 days |
+
+For more detailed information on the time and date functions, read the [time constraints section](#time-constraints).
+
++++
+
+#### Computed attributes {#computed-attributes}
+
+Computed attributes are fields that are calculated from other attributes using aggregations or formulas. You can use computed attributes if you need aggregated data such as sums, counts, or averages across multiple events or if you are building frequently-used audiences that require complex calculations. 
+
+For more information on computed attributes, including how to create them, what functions you can use within them, and how to manage them, read the [computed attributes overview](/help/profile/computed-attributes/overview.md).
 
 ### Events
 
@@ -57,11 +171,11 @@ By default, only populated schema fields from your data store are shown. This in
 
 You can use data from either a single or multiple Adobe Analytics report suites as events within segmentation. 
 
-When using data from a single Analytics report suite, Platform will automatically add descriptors and friendly names to eVars, making it easier to find those fields within [!DNL Segment Builder].
+When using data from a single Analytics report suite, Experience Platform will automatically add descriptors and friendly names to eVars, making it easier to find those fields within [!DNL Segment Builder].
 
 ![An image showing how generic variables (eVars) are mapped with a user friendly name.](../images/ui/segment-builder/single-report-suite.png)
 
-When using data from multiple Analytics report suites, Platform **cannot** automatically add descriptors or friendly names to eVars. As a result, before using the data from Analytics report suites, you must map to XDM fields. More information about mapping Analytics variables to XDM can be found in the [Adobe Analytics source connection guide](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
+When using data from multiple Analytics report suites, Experience Platform **cannot** automatically add descriptors or friendly names to eVars. As a result, before using the data from Analytics report suites, you must map to XDM fields. More information about mapping Analytics variables to XDM can be found in the [Adobe Analytics source connection guide](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
 
 For example, consider a situation where you had two report suites with the following variables:
 
@@ -93,9 +207,20 @@ Once the report suites have been mapped, you can use these newly mapped fields w
  
 ### Audiences
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentBuilder_b2b_decomposition"
+>title="Complex evaluation"
+>abstract="The following expression is too complicated to be expressed as a single audience. In order to use both B2B-rules and people-based-events in the same segment definition, please follow the steps below.<ol><li>Create a segment definition that only refers to the people-based-events, and save it as its own segment definition.</li><li>In a new segment definition, import the previously created segment definition while referring to the B2B-rules.</li></ol>"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_externalaudiences"
+>title="External audiences"
+>abstract="Audiences imported through the Audiences tab are now automatically surfaced through Audience Portal. This includes audiences ingested from Audience Manager, Customer Journey Analytics, Segment Match, and other custom integrations.<br/><br/>By the end of September 2025, audiences will be retrieved exclusively through Unified Search, and the previous workflow will no longer supported. Segment Match remains available only for a small number of designated customers while we transition the service. Access for new Segment Match customers can still be enabled on request before the service is fully retired.<br/><br/>For ongoing data collaboration use cases, Adobe recommends moving to Collaboration, which is the long-term supported solution."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
+
 >[!NOTE]
 >
->For audiences created within Platform, only audiences that have the **same** merge policy will be displayed.
+>For audiences created within Experience Platform, only audiences that have the **same** merge policy will be displayed.
 
 The **[!UICONTROL Audiences]** tab lists all audiences imported from external sources, such as Adobe Audience Manager or Customer Journey Analytics, as well as audiences created within [!DNL Experience Platform].
 
@@ -104,8 +229,6 @@ On the **[!UICONTROL Audiences]** tab, you can see all of the available sources 
 You can hover over the &#9432; next to an audience to view information about the audience including its ID, description, and the folder hierarchy to locate the audience.
 
 ![An image demonstrating how the folder hierarchy works for audiences.](../images/ui/segment-builder/audience-folder-structure.png)
-
-You can also search for audiences using the search bar, which utilizes [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). On the **[!UICONTROL Audiences]** tab, selecting a top-level folder causes the search bar to appear, allowing you to search within that folder. Search results only begin to populate once entire words are entered. For example, to find an audience named `Online Shoppers`, start typing "Online" in the search bar. Once the word "Online" has been typed in full, search results containing the word "Online" appear.
 
 ## Rule builder canvas {#rule-builder-canvas}
 
@@ -151,11 +274,32 @@ Please note that there is a maximum of 250 values allowed. If you exceed this am
 
 ![A warning that shows that you have reached the maximum number of values is displayed.](../images/ui/segment-builder/maximum-values.png)
 
+### Audience validation {#audience-validation}
+
+Segment Builder automatically analyzes and validates your audience definition to ensure you adhere to audience definition best practices. These best practices can be set into two categories: critical validation and performance optimization.
+
+If an audience definition breaks a critical validation best practice, you will **not** be able to save your changes in order to keep your sandbox stable. If an audience definition breaks a performance optimization best practice, you will be able to save your changes, but it is *highly recommended* to update your audience definition to avoid performance issues.
+
+| Validation check | Type | Threshold |
+| ---------------- | ---- | --------- |
+| Logical complexity | Critical validation | The audience definition is too complicated. |
+| Sequential events | Critical validation | There are more than 6 sequential events within an audience definition. |
+| Aggregated count | Performance optimization | There are more than 3 aggregation functions within an audience definition. |
+| Nested data | Performance optimization | There are more than 2 levels of nested data (array or map data types) depth within an audience definition. |
+| Audience size | Performance optimization | The audience qualification size is greater than 30% of the total number of profiles in the sandbox. |
+
+For more information on how audience validation works, read the [audience validation guide](/help/segmentation/validation.md).
+
 ### Adding audiences
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_addaudiences"
+>title="Search updates"
+>abstract="The existing search system has been updated to use Unified Search. Unified Search allows you to more easily and robustly search your audiences for segment membership."
 
 You can drag and drop an audience from the **[!UICONTROL Audience]** tab onto the rule builder canvas to reference audience membership in the new segment definition. This allows you to include or exclude audience membership as an attribute in the new segment definition rules.
 
-For [!DNL Platform] audiences created using [!DNL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. This conversion makes a copy of the rule logic, that can then be modified without affecting the original segment definition. Make sure that you have saved any recent changes to your segment definition before converting it to rule logic.
+For [!DNL Experience Platform] audiences created using [!DNL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. This conversion makes a copy of the rule logic, that can then be modified without affecting the original segment definition. Make sure that you have saved any recent changes to your segment definition before converting it to rule logic.
 
 >[!NOTE]
 >
@@ -173,7 +317,7 @@ Alternatively, you can view a code-based version of a rule created in the [!DNL 
 
 Code view provides a button that allows you to copy the value of the segment definition to use in API calls. To get the latest version of the segment definition, make sure you have saved your latest changes to the segment definition.
 
-![The copy code button is highlighted, which allows you to ](../images/ui/segment-builder/copy-code.png)
+![The copy code button is highlighted, which allows you to](../images/ui/segment-builder/copy-code.png)
 
 ### Aggregation functions
 
@@ -207,9 +351,97 @@ The count function is now added. You can now select the count function and the v
 
 ![A list of the count functions is displayed and highlighted.](../images/ui/segment-builder/select-count.png)
 
-## Containers
+### Time constraints {#time-constraints}
 
-Segment rules are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.
+Time constraints let you apply time restrictions on time-based attributes, events, and the sequence between the events.
+
+>[!IMPORTANT]
+>
+>If you created a segment definition with the "This month" or "This year" time constraints prior to June 2024, you will need to re-save your segment definitions. Prior to June 2024, "This month" was based off of 30 days and "This year" was based off of 365 days.
+
+>[!NOTE]
+>
+>Both the [ignore year time constraint](./ignore-year.md) and [rule-level time constraints](./segment-refactoring.md) were previously refactored, with more information available in the linked overviews.
+
+The list of available time constraints are as follows:
+
++++ Available time constraints
+
+>[!NOTE]
+>
+>All time constraints are based off of UTC.
+>
+>Additionally, if the [!UICONTROL Ignore year] checkbox is enabled, the year will **not** be compared as part of the segment definition evaluation.
+
+| Time constraint | Description | Can enable ignore year | Example |
+| --------------- | ----------- | ------------------- | ------- |
+| Today | The attribute or event being compared **must** occur today. | Yes | ![An example of the "Today" time constraint being used.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Yesterday | The attribute or event being compared **must** occur yesterday. | Yes | ![An example of the "Yesterday" time constraint being used.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
+| This month | The attribute or event being compared **must** occur this calendar month. | Yes | ![An example of the "This month" time constraint being used.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
+| This year | The attribute or event being compared **must** occur this calendar year. | No | ![An example of the "This year" time constraint being used.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
+| Custom date | The attribute or event being compared **must** occur on the date given. | Yes | ![An example of the "Custom date" time constraint being used.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
+| In last | The attribute or event being compared **must** occur within the last period of time chosen. This period of time is **inclusive** until the evaluation time. | No | ![An example of the "In last" time constraint being used.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
+| From (to) | The attribute or event being compared **must** occur within the two calendar dates chosen. This period of time is **inclusive** of both dates. | Yes, if custom date | ![An example of the "From to" being used.](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
+| During | The attribute or event being compared **must** occur within the selected month or year. If a month is selected, you need to choose both the month and a year that the attribute or event took place in.  If a year is selected, you need to just choose the year that the attribute or event took place in. If you select a month, you can also enable the [!UICONTROL Ignore year] checkbox. | Yes | ![An example of the "During" time constraint being used.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| Within (+/-) | The attribute or event being compared **must** occur within days, weeks, months, or years of the selected date. This period of time is **inclusive** of both dates. The selected date can be today, yesterday, or another custom date of your choosing. | Yes | ![An example of the "Within" time constraint being used.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
+| Before | The attribute or event being compared **must** occur before the selected date. The selected date can be a custom date of your choosing, or a selection between days, weeks, months, or years ago. | Yes | ![An example of the "Before" time constraint being used.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
+| After | The attribute or event being compared **must** occur after the selected date. The selected date can be a custom date of your choosing, or a selection between days, weeks, months, or years ago. | Yes | ![An example of the "After" time constraint being used.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| Rolling range | The attribute or event being compared must occur between the two relative dates. The dates can be represented in seconds, minutes, hours, days, weeks, months, or years. | No | ![An example of the "Rolling range" time constraint being used.](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
+| In next | The attribute or event being compared must occur within the next period of time selected. The selected periods of time include minutes, hours, days, weeks, months, and years. | No | ![An example of the "In next" time constraint being used.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
+| Exists | The attribute exists. | No | ![An example of the "Exists" time constraint being used.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| Does not exist | The attribute does not exist. | No | ![An example of the "Does not exist" time constraint being used.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+
++++
+
+When you're applying a time constraint on an event, you can either apply it on the canvas-level, the card-level, or between events.
+
+#### Canvas-level constraint
+
+To apply a canvas-level time constraint, select the clock icon that appears above the timeline of events.
+
+![The canvas-level time constraint selector is highlighted.](../images/ui/segment-builder/time-constraints/canvas-level.png)
+
+When you apply a time constraint on the canvas-level, this applies the time constraint to **all** events in the audience.
+
+#### Card-level constraint
+
+To apply a card-level constraint, select the card you want to apply the time constraint on, followed by the ellipses icon, and **[!UICONTROL Apply time rule]**. This lets you select a time constraint within the **[!UICONTROL Event Rules]** container.
+
+![The card-level time constraint selector is highlighted.](../images/ui/segment-builder/time-constraints/card-level.png)
+
+When you apply a time constraint on the card-level, this applies the time constraint on the **specified** event in the audience.
+
+#### Between events constraint
+
+To apply a time constraint between events, select the clock icon between the two events you want to apply the time constraint on.
+
+![The between events time constraint selector is highlighted.](../images/ui/segment-builder/time-constraints/between-event.png)
+
+When you apply a time constraint between the event, this applies the time constraint to the time **between** the events. 
+
+The list of available time constraints for this operation differs from the main list of time constraints, and are as follows:
+
++++ Available time constraints
+
+| Time constraint | Description |
+| --------------- | ----------- |
+| After | The latter event **must at least** take place after the prior event. |
+| Within | The two events **must** take place during the time period listed within the time constraint. | 
+
+>[!NOTE]
+>
+>When using the "After" time constraint, the latter event can take place more than the amount of time listed within the time constraint. >
+>For example, if you have a Page View event and a Checkout event, and you put the "After 1 hour" time constraint between these two events, a segment definition with a Checkout event 2 hours after the Page View event would qualify.
+>
+>Additionally, these two time constraints can be used in coordination with each other.
+>
+>For example, if you have a Page View event and a Checkout event, and you put both the "After 1 hour" and "Within 24 hours" time constraints, a segment definition with a Checkout event 12 hours after the Page View event would qualify, but a segment definition with a Checkout event 36 hours after the Page View event would not qualify.
+
++++
+
+## Containers {#containers}
+
+Audiences are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.
 
 Once you have added at least one tile to the rule builder canvas, you can begin to add containers. To create a new container, select the ellipses (...) in the top-right corner of the tile, then select **[!UICONTROL Add container]**. 
 
@@ -229,27 +461,57 @@ Once you select **[!UICONTROL Unwrap container]** the child container is removed
 
 ![The container is shown after being unwrapped.](../images/ui/segment-builder/unwrapped-container.png)
 
+### Examples {#container-examples}
+
+You can use your containers within Segment Builder in three different ways: to group your rules with boolean logic, to control whether to include or exclude profiles matching the container's criteria, and to define event sequences with time constraints.
+
++++ Mixed boolean logic
+
+The following example mixes **both** AND and OR logic within a single expression. Without using containers, you cannot mix both AND with OR logic in a single level.
+
+![An image showing how to use containers to mix boolean logic and use include/exclude logic.](/help/segmentation/images/ui/segment-builder/mixed-boolean-container.png)
+
++++
+
++++ Event sequence
+
+The following example uses containers to build the sequence of events.
+
+![An image showing how to sequence events using containers.](/help/segmentation/images/ui/segment-builder/event-sequence-container.png)
+
++++
+
+### Best practices {#container-best-practices}
+
+When you add containers to your audience, keep the following guidelines in mind:
+
+- Build your containers incrementally, testing the logic with each step you add
+  - This is especially important if you use "Exclude" logic, as this can significantly change your results
+- Clearly name your containers to understand what they're meant to do
+- Avoid having too many nested levels of containers as it reduces performance
+- Ensure your order of containers is accurate, since event order greatly affects sequence containers
+
 ## Merge policies
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Merge policies"
->abstract="A merge policy enables the merging of different datasets to form your profile. Platform has provided a default merge policy, or you can create a new default merge policy in Profiles. Choose a merge policy that matches your marketing purpose for this audience."
+>abstract="A merge policy enables the merging of different datasets to form your profile. Experience Platform has provided a default merge policy, or you can create a new default merge policy in Profiles. Choose a merge policy that matches your marketing purpose for this audience."
 
-[!DNL Experience Platform] enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create a profile. 
+[!DNL Experience Platform] enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Experience Platform] uses to determine how data will be prioritized and what data will be combined to create a profile. 
 
-You can select a merge policy that matches your marketing purpose for this audience or use the default merge policy provided by [!DNL Platform]. You can create multiple merge policies unique to your organization, including creating your own default merge policy. For step-by-step instructions on creating merge policies for your organization, please begin by reading the [merge policies overview](../../profile/merge-policies/overview.md). 
+You can select a merge policy that matches your marketing purpose for this audience or use the default merge policy provided by [!DNL Experience Platform]. You can create multiple merge policies unique to your organization, including creating your own default merge policy. For step-by-step instructions on creating merge policies for your organization, please begin by reading the [merge policies overview](../../profile/merge-policies/overview.md). 
 
 To select a merge policy for your segment definition, select the gear icon on the **[!UICONTROL Fields]** tab, then use the **[!UICONTROL Merge Policy]** dropdown menu to select the merge policy that you wish to use.
 
-![The merge policy selector is highlighted. This lets you choose which  merge policy to select for your segment definition.](../images/ui/segment-builder/merge-policy-selector.png)
+![The merge policy selector is highlighted. This lets you choose which merge policy to select for your segment definition.](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Segment definition properties {#segment-properties}
+## Audience properties {#audience-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="Segment definition properties"
->abstract="The segment definition properties section displays an estimate of the size of the resulting segment definition, displaying the number of qualified profiles in comparison to the total number of profiles. This allows you to adjust your segment definition as necessary before building the audience itself."
+>title="Audience properties"
+>abstract="The audience properties section displays an estimate of the size of the resulting audience, displaying the number of qualified profiles in comparison to the total number of profiles. This allows you to adjust your audience as necessary before building the audience itself."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
@@ -257,21 +519,35 @@ To select a merge policy for your segment definition, select the gear icon on th
 >abstract="You can refresh the estimates of your segment definition to immediately see a preview of how many profiles would qualify for the proposed segment definition. Audience estimates are generated by using a sample size of that day's sample data."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="Estimate and preview an audience"
 
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
+>title="Qualified profiles"
+>abstract="Qualified profiles indicates the actual number of profiles that match the audience's rules. This number updates every 24 hours, after the segment evaluation job has ran."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
+>title="Estimated profiles"
+>abstract="Estimated profiles indicates an approximate number of profiles, based off of the sample job, that would qualify for the audience's rules."
+
 When building a segment definition, the **[!UICONTROL Audience properties]** section on the right-hand side of the workspace displays an estimate of the size of the resulting segment definition, allowing you to adjust your segment definition as needed before building the audience itself.
 
 **[!UICONTROL Qualified Profiles]** indicates the **actual** number of profiles that match the segment definition's rules. This number updates every 24 hours, after the segment evaluation job has ran.
 
 The timestamp for qualified profiles indicates the most recent **batch** segment evaluation job and is **not** displayed for segment definitions evaluated using streaming or edge segmentation. If you edit the segment definition, the number of qualified profiles will remain the same until the next segment evaluation job is run. 
 
-**[!UICONTROL Estimated Profiles]** indicates an **approximate** number of profiles based off of the **sample job**. You can see an updated version of this value after adding the new rules or conditions and selecting **[!UICONTROL Refresh estimate]**. Selecting the information bubble gives the error threshold and most recent sample job time.
+**[!UICONTROL Estimated Profiles]** indicates an **approximate range** of profiles, based off of the **sample job**. This means the sample data is projected on the larger profile set, resulting in an estimated number that may differ from the actual number of qualified profiles. The estimated profile sample has a 95% confidence interval.
+
+When you make changes to the audience's rules, you can select the **[!UICONTROL Refresh estimate]** button to see an updated count of estimated profiles. However, this number is still based off of the previous sample job. The sample job is updated when there is a greater than 3% change in customer data or the last sample job is older than three days.
+
+Selecting the information bubble gives the date and time the last sample job was run.
 
 ![Qualified Profiles and Estimated Profiles are highlighted within the Audience properties section.](../images/ui/segment-builder/audience-estimates.png)
 
-The **[!UICONTROL Audience properties]** section is also where you can specify important information about your segment definition, including its name, description, and evaluation type. Segment definition names are used to identify your segment definition among those defined by your organization and should therefore be descriptive, concise, and unique. 
+The **[!UICONTROL Audience properties]** section is also where you can specify important information about your audience, including its name, description, and evaluation type. Names are used to identify your segment definition among those defined by your organization and should therefore be descriptive, concise, and unique. 
 
-As you continue to build your segment definition, you can view a paginated preview of the audience by selecting **[!UICONTROL View Profiles]**.
+As you continue to build your audience, you can view a paginated preview of the audience by selecting **[!UICONTROL View Profiles]**.
 
-![The segment definition properties section is highlighted. The segment definition properties include, but are not limited to, the segment definition name, description, and evaluation method.](../images/ui/segment-builder/segment-properties.png)
+![The audience properties section is highlighted. The audience properties include, but are not limited to, the name, description, and evaluation method.](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
@@ -283,7 +559,7 @@ As you continue to build your segment definition, you can view a paginated previ
 
 You can also select your evaluation method. If you know what evaluation method you want to use, you can select the desired evaluation method either using the dropdown list. If you want to know what evaluation types this segment definition qualifies for, you can select the browse icon ![folder icon with a magnifying glass](/help/images/icons/folder-search.png) to see a list of the available segment definition evaluation methods.
 
-The [!UICONTROL Evaluation method eligibility] popover appears. This popover displays the available evaluation methods, which are batch, streaming, and edge. The popover shows which evaluation methods are eligible and ineligible. Depending on the parameters you used in your segment definition, it may not qualify for certain evaluation methods. For more information on the requirements for each evaluation method, please read the [streaming segmentation](./streaming-segmentation.md#query-types) or the [edge segmentation](./edge-segmentation.md#query-types) overviews.
+The [!UICONTROL Evaluation method eligibility] popover appears. This popover displays the available evaluation methods, which are batch, streaming, and edge. The popover shows which evaluation methods are eligible and ineligible. Depending on the parameters you used in your segment definition, it may not qualify for certain evaluation methods. For more information on the requirements for each evaluation method, please read the [streaming segmentation](../methods/streaming-segmentation.md#query-types) or the [edge segmentation](../methods/edge-segmentation.md#query-types) overviews.
 
 You can also change the evaluation method of the segment definition after you've finished creating it. If you change the evaluation method from Edge or Streaming to Batch, you will **not** be able to change it back to Edge or Streaming. The change to the evaluation method will **only** take effect once you select **[!UICONTROL Save]** in the popover. Cancelling the dialog will **maintain** the original evaluation method.
 
@@ -300,9 +576,9 @@ More information about the different segment definition evaluation methods can b
 Segment Builder provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-Time Customer Profile] data. After reading this guide you should now be able to:
 
 - Create segment definitions using a combination of attributes, events, and existing audiences as building blocks.  
-- Use the rule builder canvas and containers to control the order in which segment rules are executed.
+- Use the rule builder canvas and containers to control the order in which audience rules are executed.
 - View estimates of your prospective audience, allowing you to adjust your segment definitions as required.
 - Enable all segment definitions for scheduled segmentation.
 - Enable specified segment definitions for streaming segmentation.
   
-To learn more about [!DNL Segmentation Service], please continue reading the documentation and supplement your learning by watching the related videos. To learn more about the other parts of the [!DNL Segmentation Service] UI, please read the [[!DNL Segmentation Service] user guide](./overview.md)
+To learn more about [!DNL Segmentation Service], please continue reading the documentation and supplement your learning by watching the related videos. To learn more about the other parts of the [!DNL Segmentation Service] UI, please read the [[!DNL Segmentation Service] user guide](./overview.md).

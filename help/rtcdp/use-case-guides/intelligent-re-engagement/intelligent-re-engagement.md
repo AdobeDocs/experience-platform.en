@@ -141,7 +141,7 @@ This field group allows you to test your journey before it is published, using t
 
 #### Customer digital transactions schema
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website or associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via [Web SDK](/help/web-sdk/home.md) and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, enhanced audience capabilities, and personalized messaging.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website or associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via [Web SDK](/help/collection/js/js-overview.md) and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, enhanced audience capabilities, and personalized messaging.
 
 The customer digital transactions schema is represented by an [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class. 
 
@@ -199,7 +199,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 #### Customer offline transactions schema
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on platforms outside of your website. This data is typically ingested into [!DNL Adobe Experience Platform] from a POS (or similar system) and most often streamed into Platform via an API connection. Its purpose is to reference the various offline conversion events that are used for triggering journeys, deep online and offline customer analysis, enhanced audience capabilities and personalized messaging.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on platforms outside of your website. This data is typically ingested into [!DNL Adobe Experience Platform] from a POS (or similar system) and most often streamed into Experience Platform via an API connection. Its purpose is to reference the various offline conversion events that are used for triggering journeys, deep online and offline customer analysis, enhanced audience capabilities and personalized messaging.
 
 The customer offline transactions schema is represented by an [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class.
 
@@ -257,7 +257,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 >
 >This is an optional implementation if you are using the [[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md).
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website or associated digital platforms. This schema is similar to the Customer Digital Transactions schema but differs in that it is intended to be used when [Web SDK](/help/web-sdk/home.md) is not an option for data collection; thus, this schema is needed when you are utilizing the [!DNL Adobe Analytics Source Connector] to send your online data into [!DNL Adobe Experience Platform] either as a primary or secondary datastream.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website or associated digital platforms. This schema is similar to the Customer Digital Transactions schema but differs in that it is intended to be used when [Web SDK](/help/collection/js/js-overview.md) is not an option for data collection; thus, this schema is needed when you are utilizing the [!DNL Adobe Analytics Source Connector] to send your online data into [!DNL Adobe Experience Platform] either as a primary or secondary datastream.
 
 The [!DNL Adobe] web connector schema is represented by an [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class.
 
@@ -344,7 +344,7 @@ For more information on how to create an audience, read the [audience service UI
 
 For more information on how to directly compose [Audiences](/help/segmentation/home.md), read the [Audience Composition UI guide](/help/segmentation/ui/audience-composition.md).
 
-For more information on how to build audiences through Platform-derived audience definitions, read the [Audience Builder UI guide](/help/segmentation/ui/segment-builder.md).
+For more information on how to build audiences through Experience Platform-derived audience definitions, read the [Audience Builder UI guide](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
@@ -408,7 +408,7 @@ The following events are used for the abandoned cart scenario where users added 
 The following fields and conditions are required when setting up this audience:
 
 * `eventType: commerce.productListAdds`
-    * `Timestamp: >= 1 days before now AND <= 4 days before now `
+    * `Timestamp: >= 1 days before now AND <= 4 days before now`
 * `eventType: commerce.purchases`
     * `Timestamp: <= 4 days before now` 
 * `eventType: commerce.productListRemovals`

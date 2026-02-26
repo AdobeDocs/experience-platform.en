@@ -12,7 +12,7 @@ exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
 
 Compared to [!DNL Mailchimp Interest Categories] which you would use to sort your contacts based on their interests and preferences, [!DNL Mailchimp Tags] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Interest Categories], you can check it out on the [[!DNL Mailchimp Interest Categories]](/help/destinations/catalog/email-marketing/mailchimp-interest-categories.md) page.*
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) endpoint. You can **add new contacts** or **update tags of existing [!DNL Mailchimp] contacts** within an existing [!DNL Mailchimp] audience after activating them within a new audience. [!DNL Mailchimp Tags] uses the selected audience names from Platform as the tag names within [!DNL Mailchimp].
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) endpoint. You can **add new contacts** or **update tags of existing [!DNL Mailchimp] contacts** within an existing [!DNL Mailchimp] audience after activating them within a new audience. [!DNL Mailchimp Tags] uses the selected audience names from Experience Platform as the tag names within [!DNL Mailchimp].
 
 ## Use cases {#use-cases}
 
@@ -32,7 +32,7 @@ Before activating data to the [!DNL Mailchimp Tags] destination, you must have a
 
 ### Prerequisites for the [!DNL Mailchimp Tags] destination {#prerequisites-destination}
 
-Note the following prerequisites in order to export data from Platform to your [!DNL Mailchimp Tags] account:
+Note the following prerequisites in order to export data from Experience Platform to your [!DNL Mailchimp Tags] account:
 
 #### You need to have a [!DNL Mailchimp] account {#prerequisites-account}
 
@@ -82,18 +82,32 @@ This section describes which type of audiences you can export to this destinatio
 
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
 
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of an audience, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> For each audience selected in Platform, the corresponding [!DNL Mailchimp Tags] segment status gets updated with the audience status from Platform.</li></ul>|
+|---------|----------|---------|
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of an audience, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> For each audience selected in Experience Platform, the corresponding [!DNL Mailchimp Tags] segment status gets updated with the audience status from Experience Platform.</li></ul>|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
@@ -119,7 +133,7 @@ To authenticate to the destination, fill in the required fields below and select
 
 {style="table-layout:auto"}
 
-![Platform UI screenshot showing how to authenticate.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
+![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.
 
@@ -127,14 +141,14 @@ If the details provided are valid, the UI displays a **[!UICONTROL Connected]** 
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)
+![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)
 
 | Field | Description |
 | --- | --- |
 | **[!UICONTROL Name]** | A name by which you will recognize this destination in the future. |
 | **[!UICONTROL Description]** | A description that will help you identify this destination in the future. |
 | **[!UICONTROL Data center]** | Your [!DNL Mailchimp] account `data center`. Refer to the [Identify [!DNL Mailchimp] data center](#identify-data-center) section for any guidance. |
-| **[!UICONTROL Audience Name (Please enter Data center first)]** | After you enter your **[!UICONTROL Data center]**, this dropdown is automatically populated with the audience names from your [!DNL Mailchimp] account. Select the audience that you want to update with data from Platform. |
+| **[!UICONTROL Audience Name (Please enter Data center first)]** | After you enter your **[!UICONTROL Data center]**, this dropdown is automatically populated with the audience names from your [!DNL Mailchimp] account. Select the audience that you want to update with data from Experience Platform. |
 
 {style="table-layout:auto"}
 
@@ -155,18 +169,18 @@ Read [Activate audiences to streaming destinations](/help/destinations/ui/activa
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL Mailchimp Tags] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. 
+To correctly send your audience data from Adobe Experience Platform to the [!DNL Mailchimp Tags] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination. 
 
 To correctly map your XDM fields to the [!DNL Mailchimp Tags] destination fields, follow the steps below:
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose **[!UICONTROL Select identity namespace]** and select the `Email` identity namespace.
 
-    ![Platform UI screenshot with Source field as Email from the identity namespace.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
+    ![Experience Platform UI screenshot with Source field as Email from the identity namespace.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
 
 1. In the **[!UICONTROL Select target field]** window, choose **[!UICONTROL Select identity namespace]** and select the `Email` identity namespace.
 
-    ![Platform UI screenshot with Target field as Email from the identity namespace.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
+    ![Experience Platform UI screenshot with Target field as Email from the identity namespace.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
     The mappings between your XDM profile schema and [!DNL Mailchimp Tags] will be as below:
     
@@ -175,7 +189,7 @@ To correctly map your XDM fields to the [!DNL Mailchimp Tags] destination fields
     |`IdentityMap: Email`|`Identity: Email`| Yes |
 
     An example with the completed mappings is shown below:
-    ![Platform UI screenshot example showing field mappings.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
+    ![Experience Platform UI screenshot example showing field mappings.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
 
 When you have finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
@@ -197,6 +211,7 @@ Refer to the [[!DNL Mailchimp] errors page](https://mailchimp.com/developer/mark
 ## Additional resources {#additional-resources}
 
 Additional useful information from the [!DNL Mailchimp] documentation is below:
+
 * [Getting started with [!DNL Mailchimp]](https://mailchimp.com/help/getting-started-with-mailchimp/)
 * [Getting started with Audiences](https://mailchimp.com/help/getting-started-audience/)
 * [Create an Audience](https://mailchimp.com/help/create-audience/)

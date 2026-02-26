@@ -10,7 +10,7 @@ exl-id: de2db0cb-3ce4-46d1-96c4-00f779f81670
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. 
 
-Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from [!DNL Azure Blob] and [!DNL Amazon S3] through batches.
+Cloud storage sources can bring your own data into [!DNL Experience Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Experience Platform] allows you to bring in data from [!DNL Azure Blob] and [!DNL Amazon S3] through batches.
 
 For detailed instructions on using the [!DNL Azure Blob] source connector, please read the [[!DNL Azure Blob] source connector guide](./blob.md).
 

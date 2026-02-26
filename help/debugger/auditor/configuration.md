@@ -9,9 +9,9 @@ This reference provides more information about how the auditor feature in Adobe 
 
 >[!NOTE]
 >
->For more information on auditor tests in Platform Debugger, see the [auditor feature overview](./overview.md).
+>For more information on auditor tests in Experience Platform Debugger, see the [auditor feature overview](./overview.md).
 
-Configuration tests scan for specific settings, values, or potential conflicts in your implementation. Platform Auditor evaluates the tags against other rules and recommended best practices.
+Configuration tests scan for specific settings, values, or potential conflicts in your implementation. Experience Platform Auditor evaluates the tags against other rules and recommended best practices.
 
 | Test | Weight |  Criteria | Recommendation |
 | --- | --- | --- | --- |

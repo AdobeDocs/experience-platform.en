@@ -36,12 +36,12 @@ When planning to use partner-provided attributes to deliver personalized experie
 * To what extent are you comfortable delivering personalization in different channels and for different use cases based on probabilistically derived datasets, versus deterministically confirmed attributes?
 * How should the experience for a pre-authenticated but recognized visitor change when they authenticate?
 
-### UI functionality, Platform components, and Experience Cloud products that you will use {#ui-functionality-and-elements}
+### UI functionality, Experience Platform components, and Experience Cloud products that you will use {#ui-functionality-and-elements}
 
 To successfully implement this use case, you must use multiple areas of Real-Time Customer Data Platform and other Experience Cloud solutions. Make sure that you have the necessary [attribute-based access control permissions](/help/access-control/abac/overview.md) for all these areas, or ask your system administrator to grant you the necessary permissions. 
 
 * Data Collection
-  * [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)
+  * [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md)
   * [Tags](/help/tags/home.md)
   * [Datastreams](/help/datastreams/overview.md)
 * Data Management in Real-Time CDP
@@ -50,7 +50,7 @@ To successfully implement this use case, you must use multiple areas of Real-Tim
   * [Data usage labels](/help/data-governance/labels/overview.md)
   * [Datasets](/help/catalog/datasets/overview.md)
 * Web property personalization
-  * [Edge segmentation](/help/segmentation/ui/edge-segmentation.md)
+  * [Edge segmentation](/help/segmentation/methods/edge-segmentation.md)
   * [Edge Personalization destinations](/help/destinations/destination-types.md#edge-personalization-destinations)
   * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (or a personalization platform of your choice. This use case tutorial highlights Adobe Target as personalization engine)
 
@@ -125,7 +125,7 @@ First, use the application switcher in the upper right corner of the screen to n
 
 The **[!UICONTROL Data Collection]** section of the UI looks similar to the image below.
 
-![Data collection section of the Platform UI.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
+![Data collection section of the Experience Platform UI.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
 
 #### Create datastream
 
@@ -253,11 +253,11 @@ You are now ready to create and activate audiences for personalization.
 
 #### Create audience and set up edge segmentation
 
-In the Platform UI, navigate to **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** and create an audience to capture your website visitors. 
+In the Experience Platform UI, navigate to **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** and create an audience to capture your website visitors. 
 
 ![View of how to navigate to audiences.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-You must set up your audience with [edge segmentation](/help/segmentation/ui/edge-segmentation.md) so the audience membership of your visitors is evaluated in real-time, as they visit your web property.  
+You must set up your audience with [edge segmentation](/help/segmentation/methods/edge-segmentation.md) so the audience membership of your visitors is evaluated in real-time, as they visit your web property.  
 
 Make sure to also set up an [active-on-edge merge policy](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) for the edge audiences.
 

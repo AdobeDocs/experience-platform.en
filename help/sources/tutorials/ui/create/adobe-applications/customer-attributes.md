@@ -20,7 +20,7 @@ This tutorial provides steps for creating a source connection in the UI to bring
 >
 >If you've already established a source connection for Customer Attributes profile data, the option to connect with the source is disabled.
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create a connection with.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create a connection with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
 
@@ -36,7 +36,7 @@ The [!UICONTROL Add data] screen lists all available data sources for Customer A
 >
 >Field groups, schemas, and datasets are created out-of-box as a part of flow provisioning. They will remain as-is and you will have to manually delete them, if needed.
 
-Schema evolution is not supported by the customer attributes source. If the schema input of a customer attributes data source is changed, then it would become incompatible with Platform. As a workaround, you can delete an existing customer attributes dataflow, along with its associated dataset, schema, and field group, and then create a new one with the updated schema and data source.
+Schema evolution is not supported by the customer attributes source. If the schema input of a customer attributes data source is changed, then it would become incompatible with Experience Platform. As a workaround, you can delete an existing customer attributes dataflow, along with its associated dataset, schema, and field group, and then create a new one with the updated schema and data source.
 
 >[!IMPORTANT]
 >
@@ -69,7 +69,7 @@ The [!UICONTROL Review] step appears, allowing you to review your new dataflow b
 
 ## Next steps
 
-Once the connection is created, a target schema and dataset is automatically created to contain the incoming data. When the initial ingestion completes, customer attributes profile data can be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Segmentation Service]. See the following documents for more details:
+Once the connection is created, a target schema and dataset is automatically created to contain the incoming data. When the initial ingestion completes, customer attributes profile data can be used by downstream Experience Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Segmentation Service]. See the following documents for more details:
 
 * [[!DNL Real-Time Customer Profile] overview](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] overview](../../../../../segmentation/home.md)

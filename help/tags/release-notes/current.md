@@ -7,7 +7,7 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 
 >[!IMPORTANT]
 >
->Moving forward the tags and event forwarding release notes will no longer be provided on this page. Please refer to the latest [Adobe Experience Platform release notes](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html#data-collection) for detailed tags and event forwarding updates.
+>Moving forward the tags and event forwarding release notes will no longer be provided on this page. Please refer to the latest [Adobe Experience Platform release notes](/help/release-notes/latest/latest.md) for detailed tags and event forwarding updates.
 
 ## April 26, 2023
 
@@ -22,6 +22,7 @@ The following new extension has been released:
 **Quick Stark Workflows (Beta)**
 
 Access new quick start workflows under "Getting Started" from the Data Collection home screen! The following workflows are now available to customers as a public Beta.
+
 * **[Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start)**: Event Forwarding customers can rapidly collect and forward event data, server-side to Meta for ad conversions in just a few simple steps.
 * **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: Customers can rapidly implement the Mobile SDK and validate basic mobile events in just a few simple steps.
 
@@ -48,20 +49,20 @@ New extensions have been released:
 
 ## October 26, 2022
 
-* **Sensitive data handling for datastreams**: Datastreams now leverage several Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../datastreams/overview.md#sensitive) for more information.
+* **Sensitive data handling for datastreams**: Datastreams now leverage several Experience Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../datastreams/overview.md#sensitive) for more information.
 * **[!DNL Splunk] extension for event forwarding**: You can now send data to [!DNL Splunk] using an [event forwarding](../ui/event-forwarding/overview.md) extension. See the [[!DNL Splunk] extension overview](../extensions/server/splunk/overview.md) for more information.
 * **[!DNL Zendesk] extension for event forwarding**: You can now send data to [!DNL Zendesk] using an [event forwarding](../ui/event-forwarding/overview.md) extension. See the [[!DNL Zendesk] extension overview](../extensions/server/zendesk/overview.md) for more information.
 
 ## September 28, 2022
 
-* **Adobe Experience Platform left nav integration**: All capabilities that were previously exclusive to the Data Collection UI (including tags and event forwarding) are now also available through the left navigation in the Experience Platform UI, under the category **[!UICONTROL Data Collection]**. This eliminates the need to switch between UIs when working with data collection capabilities in Platform.
+* **Adobe Experience Platform left nav integration**: All capabilities that were previously exclusive to the Data Collection UI (including tags and event forwarding) are now also available through the left navigation in the Experience Platform UI, under the category **[!UICONTROL Data Collection]**. This eliminates the need to switch between UIs when working with data collection capabilities in Experience Platform.
 * **User attribution in tags and event forwarding**: When listing available properties in tags and event forwarding, each listed property now shows when it was last updated and by whom.
 * **[[!DNL Snap Conversions API] extension](https://exchange.adobe.com/apps/ec/108550) for event forwarding**: You can now send data to the [!DNL Snapchat Conversions API] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. For more information on how to authenticate and use the API, refer to the [[!DNL Snapchat Marketing API] documentation](https://marketingapi.snapchat.com/docs/conversion.html).
 
 ## July 27, 2022
 
 * Access to tags and event forwarding capabilities is now managed through Adobe Admin Console under the card for Adobe Experience Platform Data Collection. See the guide on [data collection permissions](../../collection/permissions.md) for more information.
-* Support for Internet Explorer 10 and 11 has been [deprecated](../ie-deprecation.md).
+* Support for Internet Explorer 10 and 11 has been deprecated.
 
 ## June 22, 2022
 

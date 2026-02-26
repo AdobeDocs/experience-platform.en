@@ -28,6 +28,7 @@ A retailer is looking to better understand customer preferences for order fulfil
 ## Prerequisites {#prerequisites}
 
 The following information is required to establish the Medallia connection:
+
 * **OAuth Token Endpoint URL**
 * **Client ID**
 * **Client Secret**
@@ -47,12 +48,37 @@ Medallia supports the activation of identities described in the table below. Lea
 
 {style="table-layout:auto"}
 
+## Supported audiences {#supported-audiences}
+
+This section describes which types of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all newly qualified members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
@@ -80,10 +106,10 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL API Gateway URL]**: Obtain from your Medallia delivery team. Typically takes the form of https://instance-tenant.apis.medallia.com.
-*  **[!UICONTROL Import API Name]**: Obtain from your Medallia delivery team. Name of the Medallia Import API (also known as Web Feed) to be used in this connection. You can activate different audiences to different Import APIs to trigger different survey programs.
+* **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+* **[!UICONTROL API Gateway URL]**: Obtain from your Medallia delivery team. Typically takes the form of https://instance-tenant.apis.medallia.com.
+* **[!UICONTROL Import API Name]**: Obtain from your Medallia delivery team. Name of the Medallia Import API (also known as Web Feed) to be used in this connection. You can activate different audiences to different Import APIs to trigger different survey programs.
 
 ![Image showing the destination details screen for this destination.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
 
@@ -105,14 +131,17 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 ### Map attributes and identities {#map}
 
 The following target identity namespace(s) must be mapped depending on the use case:
+
 * For email-based surveys, **email** must be mapped as a target field using **Target field** > **Select identity namespace** > **email**
 * For SMS-based surveys, **phone** must be mapped as a target field using **Target field** > **Select identity namespace** > **phone**. Phone numbers must be in E.164 format, which includes a plus sign (+), an international country calling code, a local area code, and a phone number
 
 It is strongly recommended that you also map additional target custom attributes to create personalized surveys and append additional information about the customer to the survey record:
 
 * Personalized surveys typically address the customer by name
-    *  Map the customer's first name to **Target field** > **Select custom attributes** > **Attribute name** > **firstname**
-    *  Map the customer's last name to **Target field** > **Select custom attributes** > **Attribute name** > **lastname**
+
+    * Map the customer's first name to **Target field** > **Select custom attributes** > **Attribute name** > **firstname**
+    * Map the customer's last name to **Target field** > **Select custom attributes** > **Attribute name** > **lastname**
+
 * Add mappings for any other target custom attributes as desired
 
 ![Image showing a sample mapping for identities and attributes.](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)

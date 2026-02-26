@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes August 2024
 description: The August 2024 release notes for Adobe Experience Platform.
+exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
 ---
 # Adobe Experience Platform release notes 
 
@@ -22,9 +23,9 @@ Updates to existing features and documentation in Experience Platform:
 
 ## Attribute-based access control {#abac}
 
-Attribute-based access control is a capability of Adobe Experience Platform that gives privacy-conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
+Attribute-based access control is a capability of Adobe Experience Platform that gives privacy-conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Experience Platform users in your organization.
 
-Through attribute-based access control, administrators of your organization can control users' access to sensitive personal data (SPD), personally identifiable information (PII), and other customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
+Through attribute-based access control, administrators of your organization can control users' access to sensitive personal data (SPD), personally identifiable information (PII), and other customized type of data across all Experience Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
 **New feature**
 
@@ -89,7 +90,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 {style="table-layout:auto"}
 
-For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
+For more information on XDM in Experience Platform, see the [XDM System overview](../../xdm/home.md).
 
 ## Identity Service {#identity-service}
 
@@ -107,7 +108,7 @@ For more information on Identity Service, read the [Identity Service overview](.
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] allows you to segment data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into audiences. You can create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. 
+[!DNL Segmentation Service] allows you to segment data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into audiences. You can create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Experience Platform], and are readily accessible by any Adobe solution. 
 
 **Updated features**
 
@@ -124,6 +125,12 @@ For more information on [!DNL Segmentation Service], please see the [Segmentatio
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
 Use sources in Experience Platform to ingest data from an Adobe application or a third-party data source.
+
+**Updated feature**
+
+| Feature | Description |
+| --- | --- |
+| Updates to the Adobe Analytics source connector | The dataset activity page does not display information about batches since the Analytics Source Connector is entirely managed by Adobe. You can monitor that data is flowing by looking at the metrics around ingested records. Read the guide on creating a [source connection for Analytics data](../../sources/tutorials/ui/create/adobe-applications/analytics.md) for more information. | 
 
 **Updated documentation**
 

@@ -29,7 +29,7 @@ Adobe Experience Platform supports the following email marketing destinations:
 
 ## Connect to a new email marketing destination {#connect-destination}
 
-To send audiences to email marketing destinations for your campaigns, Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.
+To send audiences to email marketing destinations for your campaigns, Experience Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.
 
 ## Best practices when activating audiences to email marketing destinations {#best-practices}
 

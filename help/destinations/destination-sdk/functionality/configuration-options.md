@@ -21,7 +21,7 @@ The diagram below shows a high-level overview of the components that you can con
 
 The destination server configuration ties together information about your server specs and the templating used by Adobe to deliver payloads to your destination.
 
-For example, this is where you specify the API endpoints on your side that Experience Platform needs to connect to as well as the headers and the format of the API calls that Platform will make.
+For example, this is where you specify the API endpoints on your side that Experience Platform needs to connect to as well as the headers and the format of the API calls that Experience Platform will make.
 
 For file-based destinations, this configuration also includes the supported file formatting and compression formats for your destination. You can configure the functionalities described below via the [destination-servers endpoint](../authoring-api/destination-server/create-destination-server.md).
 

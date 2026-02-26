@@ -26,7 +26,7 @@ From here, enter the details for the connection settings listed below. See the o
 - **[!DNL Username and Password]:** The login credentials that will be used. The username will be in the form of `ORG_ID@AdobeOrg`.
 - **SSL**: Enable SSL to ensure a secure connection across the network. 
 
-To find the credentials necessary to connect Looker with Query Service, log in to the Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For more information on finding your **host**, **port**, **database**, **username**, and **password** credentials, please read the [credentials guide](../ui/credentials.md). 
+To find the credentials necessary to connect Looker with Query Service, log in to the Experience Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For more information on finding your **host**, **port**, **database**, **username**, and **password** credentials, please read the [credentials guide](../ui/credentials.md). 
 
 ![The Credentials page of the Experience Platform Queries workspace with Credentials and the Expiring Credentials highlighted.](../images/clients/looker/query-service-credentials-page.png)
 

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segment Match;segment match
 solution: Experience Platform
 title: Segment Match FAQ
-description: Segment Match is a segment-sharing service in Adobe Experience Platform that allows for two or more Platform users to exchange segment data in a secure, governed, and privacy-friendly manner.
+description: Segment Match is a segment-sharing service in Adobe Experience Platform that allows for two or more Experience Platform users to exchange segment data in a secure, governed, and privacy-friendly manner.
 exl-id: cfa9db16-0bc3-4d25-914d-0d923eccb5a3
 ---
 # [!DNL Segment Match] frequently asked questions
@@ -17,7 +17,7 @@ No customer or segment data is moved across sandboxes to obtain these overlap es
 
 This is a one-way process, meaning the original pre-hashed identifiers are not exposed and cannot be reverse-engineered. 
 
-These data structures have unique properties that allow engineering to perform union and intersection operations between them, even if the information encoded is severely compressed or hashed. These operations allow [!DNL Segment Match] to get the estimated intersection of two data structures composed of IDs from two different sandboxes without having to compare the actual values. Since [!DNL Segment Match] only uses the data structures, the IDs never leave their respective organizations' Profile storages for estimation purposes. This allows Adobe to meet customers’ privacy and security requirements while offering highly accurate estimate tools to guide data collaboration agreements.  
+These data structures have unique properties that allow engineering to perform union and intersection operations between them, even if the information encoded is severely compressed or hashed. These operations allow [!DNL Segment Match] to get the estimated intersection of two data structures composed of IDs from two different sandboxes without having to compare the actual values. Since [!DNL Segment Match] only uses the data structures, the IDs never leave their respective organizations' Profile storages for estimation purposes. This allows Adobe to meet customers' privacy and security requirements while offering highly accurate estimate tools to guide data collaboration agreements.  
 
 ## What is the process behind designating which identities receive the shared segment IDs?
 

@@ -9,7 +9,7 @@ exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 
 [!UICONTROL Browser details] is a standard XDM data type that describes details relating to a browser or application.
 
-<img src='../images/data-types/browser-details.png' width=450 /><br />
+![](../images/data-types/browser-details.png){width=450}
 
 | Property | Data type | Description |
 | --- | --- | --- |

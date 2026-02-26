@@ -3,15 +3,17 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Experience Platform API fundamentals
 description: This document provides a brief overview of some the underlying technologies and syntaxes involved with Experience Platform APIs.
+role: Developer
+feature: API
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 ---
 # Experience Platform API fundamentals
 
-Adobe Experience Platform APIs employ several underlying technologies and syntaxes that are important to understand in order to effectively manage JSON-based [!DNL Platform] resources. This document provides a brief overview of these technologies, as well as links to external documentation for more information.
+Adobe Experience Platform APIs employ several underlying technologies and syntaxes that are important to understand in order to effectively manage JSON-based [!DNL Experience Platform] resources. This document provides a brief overview of these technologies, as well as links to external documentation for more information.
 
 ## JSON Pointer {#json-pointer}
 
-JSON Pointer is a standardized string syntax ([RFC 6901](https://tools.ietf.org/html/rfc6901)) for identifying specific values within JSON documents. A JSON Pointer is a string of tokens separated by `/` characters, which specify either object keys or array indexes, and the tokens can be a string or a number. JSON Pointer strings are used in many PATCH operations for [!DNL Platform] APIs, as described later in this document. For more information on JSON Pointer, please refer to the [JSON Pointer overview documentation](https://rapidjson.org/md_doc_pointer.html). 
+JSON Pointer is a standardized string syntax ([RFC 6901](https://tools.ietf.org/html/rfc6901)) for identifying specific values within JSON documents. A JSON Pointer is a string of tokens separated by `/` characters, which specify either object keys or array indexes, and the tokens can be a string or a number. JSON Pointer strings are used in many PATCH operations for [!DNL Experience Platform] APIs, as described later in this document. For more information on JSON Pointer, please refer to the [JSON Pointer overview documentation](https://rapidjson.org/md_doc_pointer.html). 
 
 ### Example JSON schema object
 
@@ -90,7 +92,7 @@ The following JSON represents a simplified XDM schema whose fields can be refere
 
 ## JSON Patch {#json-patch}
 
-There are many PATCH operations for [!DNL Platform] APIs that accept JSON Patch objects for their request payloads. JSON Patch is a standardized format ([RFC 6902](https://tools.ietf.org/html/rfc6902)) for describing changes to a JSON document. It allows you to define partial updates to JSON without needing to send the entire document in a request body.
+There are many PATCH operations for [!DNL Experience Platform] APIs that accept JSON Patch objects for their request payloads. JSON Patch is a standardized format ([RFC 6902](https://tools.ietf.org/html/rfc6902)) for describing changes to a JSON document. It allows you to define partial updates to JSON without needing to send the entire document in a request body.
 
 ### Example JSON Patch object
 
@@ -101,7 +103,7 @@ There are many PATCH operations for [!DNL Platform] APIs that accept JSON Patch 
 }
 ```
 
-* `op`: The type of patch operation. While JSON Patch supports several different operation types, not all PATCH operations in [!DNL Platform] APIs are compatible with every operation type. Available operation types are:
+* `op`: The type of patch operation. While JSON Patch supports several different operation types, not all PATCH operations in [!DNL Experience Platform] APIs are compatible with every operation type. Available operation types are:
     * `add`
     * `remove`
     * `replace`
@@ -118,4 +120,4 @@ JSON Schema is a format used to describe and validate the structure of JSON data
 
 ## Next steps
 
-This document introduced some of the technologies and syntaxes involved with managing JSON-based resources for [!DNL Experience Platform]. Refer to the [getting started guide](api-guide.md) for more information on working with Platform APIs, including best practices. For answers to frequently asked questions, refer to the [Platform troubleshooting guide](troubleshooting.md).
+This document introduced some of the technologies and syntaxes involved with managing JSON-based resources for [!DNL Experience Platform]. Refer to the [getting started guide](api-guide.md) for more information on working with Experience Platform APIs, including best practices. For answers to frequently asked questions, refer to the [Experience Platform troubleshooting guide](troubleshooting.md).

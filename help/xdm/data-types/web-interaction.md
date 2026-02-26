@@ -9,7 +9,7 @@ exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 
 [!UICONTROL Web interaction] is a standard Experience Data Model (XDM) data type that describes information about interactions that happened on a web page after the initial page load was completed. It is intended for recording interactions in rich web applications that do not trigger a new page load such as single-page web apps (SPAs).
 
-<img src='../images/data-types/web-interaction.PNG' width=500 /><br />
+![web interaction image](../images/data-types/web-interaction.PNG){width=500}
 
 | Property | Data type | Description |
 | --- | --- | --- |

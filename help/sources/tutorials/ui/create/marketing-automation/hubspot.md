@@ -8,7 +8,7 @@ exl-id: 452b7290-b9e8-4728-8b58-0e0c76bd9449
 ---
 # Create a [!DNL HubSpot] source connection in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL HubSpot] source connector using the [!DNL Platform] user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL HubSpot] source connector using the [!DNL Experience Platform] user interface.
 
 ## Getting started
 
@@ -23,7 +23,7 @@ If you already have a [!DNL HubSpot] connection, you may skip the remainder of t
 
 ### Gather required credentials
 
-In order to access your [!DNL HubSpot] account on [!DNL Platform], you must provide the following values:
+In order to access your [!DNL HubSpot] account on [!DNL Experience Platform], you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -36,7 +36,7 @@ For more information about getting started, refer to this [[!DNL HubSpot] docume
 
 ## Connect your [!DNL HubSpot] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL HubSpot] account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL HubSpot] account to [!DNL Experience Platform].
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
 
@@ -62,4 +62,4 @@ To connect an existing account, select the [!DNL HubSpot] account you want to co
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL HubSpot] account. You can now continue on to the next tutorial and [configure a dataflow to bring marketing automation system data into [!DNL Platform]](../../dataflow/marketing-automation.md).
+By following this tutorial, you have established a connection to your [!DNL HubSpot] account. You can now continue on to the next tutorial and [configure a dataflow to bring marketing automation system data into [!DNL Experience Platform]](../../dataflow/marketing-automation.md).

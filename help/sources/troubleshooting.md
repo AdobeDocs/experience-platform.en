@@ -7,7 +7,7 @@ exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 ---
 # Sources troubleshooting guide
 
-This document provides answers to frequently asked questions about sources on Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Platform] services, including those that are encountered across all [!DNL Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about sources on Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Experience Platform] services, including those that are encountered across all [!DNL Experience Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
 ## Frequently asked questions
 
@@ -61,7 +61,7 @@ All batch ingestion sources support partial ingestion. However, streaming ingest
 
 ### When should I use partial ingestion?
 
-Partial ingestion should be used if you do **not** have constraints, such as having the entire file being ingested into Platform. Alternatively, partial ingestion should be used if you do not mind ingesting data that may contain errors within it.
+Partial ingestion should be used if you do **not** have constraints, such as having the entire file being ingested into Experience Platform. Alternatively, partial ingestion should be used if you do not mind ingesting data that may contain errors within it.
 
 ### What is the typical partial ingestion error threshold?
 

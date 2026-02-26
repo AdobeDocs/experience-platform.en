@@ -5,7 +5,7 @@ exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
 ---
 # Data Distiller overview
 
-Data Distiller is a package offering that includes a subset of the functionalities from Adobe Experience Platform. With Data Distiller you can perform post-ingestion data preparation (such as cleaning, shaping, and manipulation) for real-time customer profile or analytical use cases by executing batch queries in Query Service. Your use of Data Distiller is dependent on your entitlement for Platform-based applications.
+Data Distiller is a package offering that includes a subset of the functionalities from Adobe Experience Platform. With Data Distiller you can perform post-ingestion data preparation (such as cleaning, shaping, and manipulation) for real-time customer profile or analytical use cases by executing batch queries in Query Service. Your use of Data Distiller is dependent on your entitlement for Experience Platform-based applications.
 
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}

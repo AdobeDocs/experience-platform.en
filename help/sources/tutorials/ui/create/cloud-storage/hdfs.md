@@ -12,11 +12,11 @@ exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
 >
 >The [!DNL Apache] HDFS connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
-Source connectors in [!DNL Adobe Experience Platform] provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for authenticating an [!DNL Apache Hadoop Distributed File System] (hereinafter referred to as "HDFS") source connector using the [!DNL Platform] user interface.
+Source connectors in [!DNL Adobe Experience Platform] provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for authenticating an [!DNL Apache Hadoop Distributed File System] (hereinafter referred to as "HDFS") source connector using the [!DNL Experience Platform] user interface.
 
 ## Getting started
 
-This tutorial requires a working understanding of the following components of [!DNL Platform]:
+This tutorial requires a working understanding of the following components of [!DNL Experience Platform]:
 
 -   [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     -   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
@@ -35,7 +35,7 @@ In order to authenticate your HDFS source connector, you must provide values for
 
 ## Connect your HDFS account
 
-Once you have gathered your required credentials, you can follow the steps below to link your HDFS account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your HDFS account to [!DNL Experience Platform].
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
 
@@ -61,4 +61,4 @@ To connect an existing account, select the HDFS account you want to connect with
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your HDFS account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into [!DNL Platform]](../../dataflow/batch/cloud-storage.md).
+By following this tutorial, you have established a connection to your HDFS account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into [!DNL Experience Platform]](../../dataflow/batch/cloud-storage.md).

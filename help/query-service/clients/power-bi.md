@@ -17,17 +17,7 @@ This guide requires that you already have access to the [!DNL Power BI] desktop 
 >
 > The [!DNL Power BI] desktop application is **only** available on Windows devices.
 
-To acquire the necessary credentials for connecting [!DNL Power BI] to Experience Platform, you must have access to the Queries workspace in the Platform UI. Please contact your organization administrator if you do not currently have access to the queries workspace. 
-
-After installing [!DNL Power BI], you will need to install `Npgsql`, a .NET driver package for PostgreSQL. More information about Npgsql can be found in the [Npgsql documentation](https://www.npgsql.org/doc/index.html).
-
->[!IMPORTANT]
->
->You must download v4.0.10 or lower, as newer versions result in errors.
-
-Under "[!DNL Npgsql GAC Installation]" on the custom setup screen, select **[!DNL Will be installed on local hard drive]**. 
-
-To ensure that Npgsql has been properly installed, please restart your computer before proceeding to the next steps.
+To acquire the necessary credentials for connecting [!DNL Power BI] to Experience Platform, you must have access to the Queries workspace in the Experience Platform UI. Please contact your organization administrator if you do not currently have access to the queries workspace. 
 
 ## Connect [!DNL Power BI] to Query Service {#connect-power-bi}
 
@@ -35,7 +25,7 @@ To connect [!DNL Power BI] to Query Service, open [!DNL Power BI] and select **[
 
 The [!DNL PostgreSQL] database dialog appears, requesting values for your server and database. Additional instructions on how to [connect to a PostgreSQL database from Power Query Desktop](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop) can be found in the official [!DNL PowerBI] documentation.
 
-These required values are taken from your Adobe Experience Platform credentials. To find your credentials, log in to the Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). 
+These required values are taken from your Adobe Experience Platform credentials. To find your credentials, log in to the Experience Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). 
 
 >[!IMPORTANT]
 >
@@ -79,7 +69,7 @@ To import a table, enter the server and database details [as described above](#c
 
 ### Import tables using custom SQL
 
-[!DNL Power BI] and other third-party tools like [!DNL Tableau] do not currently allow users to import nested objects, such as XDM objects in Platform. To account for this, [!DNL Power BI] allows you to use custom SQL to access these nested fields and create a flattened view of the data. [!DNL Power BI] then loads this flattened view of the previously nested data as a normal table.
+[!DNL Power BI] and other third-party tools like [!DNL Tableau] do not currently allow users to import nested objects, such as XDM objects in Experience Platform. To account for this, [!DNL Power BI] allows you to use custom SQL to access these nested fields and create a flattened view of the data. [!DNL Power BI] then loads this flattened view of the previously nested data as a normal table.
 
 From the [!DNL PostgreSQL database] dialog, select **[!DNL Advanced options]** to enter a custom SQL query in the **[!DNL SQL statement]** section. This custom query should be used to flatten your JSON name-value pairs into a table format. The official documentation also provides information on how to [connect PowerBI using an SQL statement in the advanced options](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-using-advanced-options).
 

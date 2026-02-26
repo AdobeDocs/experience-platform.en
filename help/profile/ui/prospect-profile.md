@@ -50,10 +50,10 @@ The [!UICONTROL View JSON] dialog appears. The attributes of the prospect profil
 
 ## Suggested use cases {#use-cases}
 
-To learn how you can use the prospect profiles functionality in Experience Platform in combination with other Platform functionality, please read the following use case documentation:
+To learn how you can use the prospect profiles functionality in Experience Platform in combination with other Experience Platform functionality, please read the following use case documentation:
 
 - [Engage and acquire new customers through the prospecting functionality](../../rtcdp/partner-data/prospecting.md)
 
 ## Next steps
 
-After reading this guide, you now understand how prospect profiles can be used in Adobe Experience Platform. To learn how these prospect profiles can be used in audiences, please read the [prospect audiences guide](../../segmentation/ui/prospect-audience.md).
+After reading this guide, you now understand how prospect profiles can be used in Adobe Experience Platform. To learn how these prospect profiles can be used in audiences, please read the [prospect audiences guide](../../segmentation/types/prospect-audiences.md).

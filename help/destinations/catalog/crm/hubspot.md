@@ -30,11 +30,11 @@ Refer to Experience Platform documentation for [Audience Membership Details sche
 
 ### Prerequisites for the [!DNL HubSpot] destination {#prerequisites-destination}
 
-Note the following prerequisites in order to export data from Platform to your [!DNL HubSpot] account:
+Note the following prerequisites in order to export data from Experience Platform to your [!DNL HubSpot] account:
 
 #### You must have a [!DNL HubSpot] account {#prerequisites-account}
 
-In order to export data from Platform to your [!DNL Hubspot] account you need to have a [!DNL HubSpot] account. If you do not have one already, visit the [Set up your HubSpot account](https://knowledge.hubspot.com/get-started/set-up-your-account) page and follow the guidance to register and create your account.
+In order to export data from Experience Platform to your [!DNL Hubspot] account you need to have a [!DNL HubSpot] account. If you do not have one already, visit the [Set up your HubSpot account](https://knowledge.hubspot.com/get-started/set-up-your-account) page and follow the guidance to register and create your account.
 
 #### Gather the [!DNL HubSpot] private app access token {#gather-credentials}
 
@@ -72,19 +72,34 @@ This destination supports the activation of all audiences generated through the 
 
 This destination also supports the activation of the audiences described in the table below.
 
-| Audience type | Description | 
-|---------|----------|
-| Custom uploads | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
+| Audience origin | Supported | Description | 
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
 
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of an audience, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Additionally, a new property is created in [!DNL HubSpot] using the audience name and its value is with the corresponding audience status from Platform, for each of the selected audiences.</li></ul> |
+|---------|----------|---------|
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of an audience, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Additionally, a new property is created in [!DNL HubSpot] using the audience name and its value is with the corresponding audience status from Experience Platform, for each of the selected audiences.</li></ul> |
 | Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
 {style="table-layout:auto"}
@@ -102,17 +117,18 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL
 ### Authenticate to destination {#authenticate}
 
 Fill in the required fields below. Refer to the [Gather the [!DNL HubSpot] private app access token](#gather-credentials) section for any guidance.
+
 * **[!UICONTROL Bearer token]**: The access token for your [!DNL HubSpot] private app.
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
-![Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/hubspot/authenticate-destination.png)
+![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/hubspot/authenticate-destination.png)
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-![Platform UI screenshot showing the destination details.](../../assets/catalog/crm/hubspot/destination-details.png)
+![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/crm/hubspot/destination-details.png)
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -133,36 +149,38 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Map attributes and identities {#map}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL HubSpot] destination, you must go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination.
+To correctly send your audience data from Adobe Experience Platform to the [!DNL HubSpot] destination, you must go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination.
 
 To correctly map your XDM fields to the [!DNL HubSpot] destination fields, follow the steps below:
 
 #### Mapping the `Email` identity
 
 The `Email` identity is a mandatory mapping for this destination. Follow the steps below to map it:
+
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
-![Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+![Experience Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity.
-![Platform UI screenshot selecting email as a source attribute to map as identity.](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
+![Experience Platform UI screenshot selecting email as a source attribute to map as identity.](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
 1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select attributes]** and select `email`.
-![Platform UI screenshot selecting email as a target attribute to map as identity.](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
+![Experience Platform UI screenshot selecting email as a target attribute to map as identity.](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
 
 | Source Field | Target Field | Mandatory |
 | --- | --- | --- |
 | `IdentityMap: Email` | `Identity: email` | Yes |
 
 An example with the identity mapping is shown below:
-![Platform UI screenshot example with email identity mapping.](../../assets/catalog/crm/hubspot/mapping-identities.png)
+![Experience Platform UI screenshot example with email identity mapping.](../../assets/catalog/crm/hubspot/mapping-identities.png)
 
 #### Mapping **optional** attributes
 
 To add any other attributes you want to update between your XDM profile schema and your [!DNL HubSpot] account repeat the steps below:
+
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
-![Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+![Experience Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute.
-![Platform UI screenshot selecting First Name as a source attribute.](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
+![Experience Platform UI screenshot selecting First Name as a source attribute.](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
 1. In the **[!UICONTROL Select target field]** window, choose **[!UICONTROL Select attributes]** category and select from the list of attributes which are automatically populated from your [!DNL HubSpot] account. The destination uses the [[!DNL HubSpot] Properties](https://developers.hubspot.com/docs/api/crm/properties) API to retrieve this information. Both [!DNL HubSpot] [default properties](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties) and any custom properties are retrieved for selection as target fields.
-![Platform UI screenshot selecting First Name as a target attribute.](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
+![Experience Platform UI screenshot selecting First Name as a target attribute.](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
   
 A few available mappings between your XDM profile schema and [!DNL Hubspot] are shown below:
 
@@ -175,7 +193,7 @@ A few available mappings between your XDM profile schema and [!DNL Hubspot] are 
 | `xdm: workAddress.country` | `Attribute: country` |
 
 An example using these attributes mappings is shown below:
-![Platform UI screenshot example with attribute mappings.](../../assets/catalog/crm/hubspot/mapping-attributes.png)
+![Experience Platform UI screenshot example with attribute mappings.](../../assets/catalog/crm/hubspot/mapping-attributes.png)
 
 When you are finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
@@ -196,6 +214,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ## Additional resources {#additional-resources}
 
 Additional useful information from the [!DNL HubSpot] documentation is below:
+
 * [Authentication methods on HubSpot](https://developers.hubspot.com/docs/api/intro-to-auth)
 * [!DNL HubSpot] API references for the [Contacts](https://developers.hubspot.com/docs/api/crm/contacts) and [Properties](https://developers.hubspot.com/docs/api/crm/properties) APIs.
 

@@ -11,6 +11,7 @@ The following secret types are currently supported:
 
 | Secret type | Description |
 | --- | --- |
+| [!UICONTROL Amazon OAuth 2] | Enables secure authentication with [!DNL Amazon] services. The system securely stores the token and handles its renewal at specified intervals. |
 | [!UICONTROL Google OAuth 2] | Contains several attributes to support the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec for use in the [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) and [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 | [!UICONTROL HTTP] | Contains two string attributes for a username and password, respectively. |
 | [!UICONTROL [!DNL LinkedIn] OAuth 2] | The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
@@ -72,6 +73,7 @@ From here, the steps to create the secret differ depending on the type of secret
 * [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 * [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
+* [[!UICONTROL [!DNL Amazon] OAuth 2]](#amazon-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -180,7 +182,7 @@ To create a [!DNL LinkedIn] OAuth 2 secret, select **[!UICONTROL [!DNL LinkedIn]
 
 A popover appears informing you that the secret needs to be manually authorized through [!DNL LinkedIn]. Select **[!UICONTROL Create & Authorize secret with [!DNL LinkedIn]]** to continue.
 
-![[!DNL LinkedIn] authorization popover highlighting [!UICONTROL Create & Authorize secret with [!DNL LinkedIn]].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+![LinkedIn authorization popover highlighting the "Create & Authorize secret with LinkedIn" button.](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
 
 A dialog appears prompting you to enter your [!DNL LinkedIn] credentials. Follow the prompts to grant event forwarding access to your data. 
 
@@ -203,6 +205,22 @@ You are redirected to the [!UICONTROL Secrets] tab. The secrets listed on this p
 ![The [!UICONTROL Secret] tab highlighting [!UICONTROL Auth Needed]for the [!DNL LinkedIn] secret.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
 A dialog appears that prompts you to enter your [!DNL LinkedIn] credentials. Follow the prompts to reauthorize your secret.
+
+### [!UICONTROL [!DNL Amazon] OAuth 2] {#amazon-oauth2}
+
+To create an [!DNL Amazon] OAuth 2 secret, select **[!UICONTROL [!DNL Amazon] OAuth 2]** from the **[!UICONTROL Type]** dropdown. Next, select **[!UICONTROL Create Secret]**.
+
+![The [!UICONTROL Create Secret] tab with the [!UICONTROL Type] field highlighted.](../../images/ui/event-forwarding/secrets/amazon-oauth.png)
+
+A popover appears informing you that the secret needs to be manually authorized through [!DNL Amazon]. Select **[!UICONTROL Create & Authorize secret with [!DNL Amazon]]** to continue.
+
+![Amazon authorization popover highlighting the "Create & Authorize secret with Amazon" button.](../../images/ui/event-forwarding/secrets/amazon-authorization.png)
+
+A dialog appears prompting you to enter your [!DNL Amazon] credentials. Follow the prompts to grant event forwarding access to your data. 
+
+Once the authorization process is complete, you are returned to the **[!UICONTROL Secrets]** tab, where you can see your newly created secret. Here you can see the status of the secret and the date of expiration.
+
+![The [!UICONTROL Secret] tab highlighting the newly created secret.](../../images/ui/event-forwarding/secrets/amazon-new-secret.png)
 
 ## Edit a secret
 

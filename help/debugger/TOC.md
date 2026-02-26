@@ -9,7 +9,7 @@ role: Developer,User
 
 # Adobe Experience Platform Debugger {#debugger}
 
-* [Platform Debugger overview](./home.md)
+* [Experience Platform Debugger overview](./home.md)
 * [Install the extension](./install-debugger.md)
 * [Configure the extension](./configure-debugger.md)
 * [Summary tab](./summary.md)

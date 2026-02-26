@@ -10,7 +10,7 @@ The Adobe Experience Platform user interface (UI) is designed to support multipl
 
 ## Browser Support
 
-The Platform UI is designed to work optimally in the **latest versions** of Google Chrome, Safari, Firefox, and Microsoft Edge. You might have trouble using certain features on older versions of browsers. 
+The Experience Platform UI is designed to work optimally in the **latest versions** of Google Chrome, Safari, Firefox, and Microsoft Edge. You might have trouble using certain features on older versions of browsers. 
 
 | Operating system | Supported browsers |
 |---|---|
@@ -26,7 +26,7 @@ The following operating systems and browsers are not supported:
 
 ## Language support
 
-The Platform UI is currently available in the following languages:
+The Experience Platform UI is currently available in the following languages:
 
 * English
 * French

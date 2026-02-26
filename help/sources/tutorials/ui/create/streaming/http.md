@@ -19,7 +19,7 @@ This tutorial requires a working understanding of the following components of Ad
 
 ## Create a streaming connection
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -60,7 +60,7 @@ With your data uploaded, you can use the right-side of the interface to preview 
 
 ## Map data fields to an XDM schema
 
-The [!UICONTROL Mapping] step appears, providing an interface to map the source data to a Platform dataset.
+The [!UICONTROL Mapping] step appears, providing an interface to map the source data to an Experience Platform dataset.
 
 The [!DNL HTTP API] source supports ingestion of JSON files. JSON files do not require manual configuration if they are marked as XDM-complaint. If not, then you must explicitly configure the mapping.
 
@@ -135,4 +135,4 @@ With the connection created, the sources detail page appears. This page shows de
 
 By following this tutorial, you have created a streaming HTTP connection, enabling you to use the streaming endpoint to access a variety of [!DNL Data Ingestion] APIs. For instructions to create a streaming connection in the API, please read the [creating a streaming connection tutorial](../../../api/create/streaming/http.md).
 
-To learn how to stream data to Platform, please read either the tutorial on [streaming time series data](../../../../../ingestion/tutorials/streaming-time-series-data.md) or the tutorial on [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md).
+To learn how to stream data to Experience Platform, please read either the tutorial on [streaming time series data](../../../../../ingestion/tutorials/streaming-time-series-data.md) or the tutorial on [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md).

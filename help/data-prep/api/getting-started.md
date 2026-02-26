@@ -14,7 +14,7 @@ Using the developer guide requires a working understanding of the various Adobe 
 - [[!DNL Adobe Experience Platform Data Ingestion]](../../ingestion/home.md): The methods by which data can be sent to [!DNL Experience Platform].
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 
-In order to successfully make calls to [!DNL Data Prep] API endpoints, please read the guide on [getting started with Platform APIs](../../landing/api-guide.md) to learn about required headers and how to read sample API calls.
+In order to successfully make calls to [!DNL Data Prep] API endpoints, please read the guide on [getting started with Experience Platform APIs](../../landing/api-guide.md) to learn about required headers and how to read sample API calls.
 
 ## Next steps
 

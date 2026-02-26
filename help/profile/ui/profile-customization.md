@@ -6,7 +6,7 @@ exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
 ---
 # [!DNL Real-Time Customer Profile] detail customization {#profile-detail-customization}
 
-Within the Adobe Experience Platform user interface, you can view and interact with [!DNL Real-Time Customer Profile] data in the form of customer profiles. The profile information displayed in the UI has been merged together from multiple profile fragments to form a single view of each individual customer. This includes details such as basic attributes, linked identities, and channel preferences. The default fields shown in profiles can also be changed at an organizational level to display preferred [!DNL Profile] attributes. This guide provides step-by-step instructions for customizing the way in which [!DNL Profile] data is displayed within the Platform UI.  
+Within the Adobe Experience Platform user interface, you can view and interact with [!DNL Real-Time Customer Profile] data in the form of customer profiles. The profile information displayed in the UI has been merged together from multiple profile fragments to form a single view of each individual customer. This includes details such as basic attributes, linked identities, and channel preferences. The default fields shown in profiles can also be changed at an organizational level to display preferred [!DNL Profile] attributes. This guide provides step-by-step instructions for customizing the way in which [!DNL Profile] data is displayed within the Experience Platform UI.  
 
 For a complete guide to the Profiles UI, please visit the [Profile UI guide](user-guide.md).
 
@@ -21,8 +21,6 @@ After choosing to modify the dashboard, you can reorder the cards by selecting t
 ![The resize button is highlighted within the Basic attributes card.](../images/profile-customization/resize.png)
 
 The selected card adjusts to the desired size and surrounding cards are repositioned dynamically. This may cause some cards to be moved to additional rows, requiring you to scroll down in order to see all cards. For example, when the "[!UICONTROL Basic attributes]" card is resized the "[!UICONTROL Linked identities]" card is no longer visible on the top row and now appears on a new second row within the profile (not shown). To return the "[!UICONTROL Linked identities]" card to the top row, you could drag and drop it into the current position of the "[!UICONTROL Channel preferences]" card.
-
-![A re-sized card is highlighted.](../images/profile-customization/resized.png)
 
 ## Edit and remove cards
 
@@ -64,8 +62,6 @@ When you return to the **[!UICONTROL Edit widget]** screen, the list of attribut
 
 After saving, you are returned to the **[!UICONTROL Detail]** tab where the updated card and attributes are visible.
 
-![The newly added attributes are displayed on the card within the Profile dashboard.](../images/profile-customization/added-attributes.png)
-
 ## Add a new card {#add-a-new-card}
 
 To further customize the look of profiles within Experience Platform, you can elect to add new cards to the dashboard and select the attributes that you would like to display on those cards. To begin, select **[!UICONTROL Modify dashboard]** on the **[!UICONTROL Detail]** tab.
@@ -93,8 +89,6 @@ In order to save your new card you must first provide a **[!UICONTROL Card title
 ![The new widget is previewed within the Edit widget screen.](../images/profile-customization/new-widget.png)
 
 After saving, you are returned to the **[!UICONTROL Detail]** tab where your new card and attributes are visible.
-
-![The new widget is added to the Profile dashboard.](../images/profile-customization/added-widget.png)
 
 ## Restore default cards
 

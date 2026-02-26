@@ -28,28 +28,28 @@ If you already have a valid [!DNL Google Cloud Storage] connection, you may skip
 
 ### Gather required credentials
 
-In order to access your [!DNL Google Cloud Storage] data on Platform, you must provide the following values:
+In order to access your [!DNL Google Cloud Storage] data on Experience Platform, you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |
-| Access key ID | A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Platform. |
-| Secret access key | A 40-character, base-64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Platform. |
+| Access key ID | A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Experience Platform. |
+| Secret access key | A 40-character, base-64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Experience Platform. |
 | Bucket name | The name of your [!DNL Google Cloud Storage] bucket. You must specify a bucket name if you want to provide access to a specific subfolder in your cloud storage. |
 | Folder path | The path to the folder that you want to provide access to. |
 
 For more information about these values, see the [Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guide. For steps on how to generate your own access key ID and secret access key, refer to the [[!DNL Google Cloud Storage] overview](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Google Cloud Storage] account to Platform.
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Google Cloud Storage] account to Experience Platform.
 
 ## Connect your [!DNL Google Cloud Storage] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
 Under the [!UICONTROL Cloud storage] category, select **[!UICONTROL Google Cloud Storage]** and then select **[!UICONTROL Add data]**.
 
-![The Platform UI screen displaying the sources catalog page.](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
+![The Experience Platform UI screen displaying the sources catalog page.](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
 
 The **[!UICONTROL Connect to Google Cloud Storage]** page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -57,7 +57,7 @@ The **[!UICONTROL Connect to Google Cloud Storage]** page appears. On this page,
 
 To connect an existing account, select the [!DNL Google Cloud Storage] account you want to connect with, then select **[!UICONTROL Next]** to proceed.
 
-![The Platform UI screen displaying the existing account page for a Google Cloud Storage source](../../../../images/tutorials/create/google-cloud-storage/existing.png)
+![The Experience Platform UI screen displaying the existing account page for a Google Cloud Storage source](../../../../images/tutorials/create/google-cloud-storage/existing.png)
 
 ### New account
 
@@ -65,9 +65,9 @@ If you are using new credentials, select **[!UICONTROL New account]**. On the in
 
 When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![The Platform UI screen displaying the new account page for a Google Cloud Storage source.](../../../../images/tutorials/create/google-cloud-storage/new.png)
+![The Experience Platform UI screen displaying the new account page for a Google Cloud Storage source.](../../../../images/tutorials/create/google-cloud-storage/new.png)
 
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Google Cloud Storage] account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Platform](../../dataflow/batch/cloud-storage.md).
+By following this tutorial, you have established a connection to your [!DNL Google Cloud Storage] account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Experience Platform](../../dataflow/batch/cloud-storage.md).

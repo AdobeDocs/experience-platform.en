@@ -23,7 +23,7 @@ Next, select **Fork**.
 
 ![fork](../assets/fork.png)
 
-Once the fork is complete, select **master** and enter a name for your new branch in the dropdown menu that appears. Ensure that you provide a descriptive name for your branch as this will be used to contain your work, and then select **create branch**.
+Once the fork is complete, select **main** and enter a name for your new branch in the dropdown menu that appears. Ensure that you provide a descriptive name for your branch as this will be used to contain your work, and then select **create branch**.
 
 ![create-branch](../assets/create-branch.png)
 
@@ -39,7 +39,7 @@ A folder of existing CRM sources appears. To add documentation for a new source,
 
 ![create-new-file](../assets/create-new-file.png)
 
-Name your source file `YOURSOURCE.md` where YOURSOURCE is the name of your source in Platform. For example, if your company is ACME CRM, then your file name should be `acme-crm.md`.
+Name your source file `YOURSOURCE.md` where YOURSOURCE is the name of your source in Experience Platform. For example, if your company is ACME CRM, then your file name should be `acme-crm.md`.
 
 ![git-interface](../assets/git-interface.png)
 
@@ -57,11 +57,11 @@ When complete, commit the file in your branch.
 
 ## Submit your documentation for review
 
-Once your file is committed, you can open a pull request (PR) to merge your working branch into the master branch of the Adobe documentation repository. Ensure that the branch you have been working on is selected, and then select **Compare & pull request**.
+Once your file is committed, you can open a pull request (PR) to merge your working branch into the main branch of the Adobe documentation repository. Ensure that the branch you have been working on is selected, and then select **Compare & pull request**.
 
 ![compare-pr](../assets/compare-pr.png)
 
-Ensure that the base and compare branches are correct. Add a note to the PR, describing your update, and then select **Create pull request**. This opens a PR to merge the working branch of your work into the master branch of the Adobe repository.
+Ensure that the base and compare branches are correct. Add a note to the PR, describing your update, and then select **Create pull request**. This opens a PR to merge the working branch of your work into the main branch of the Adobe repository.
 
 >[!TIP]
 >

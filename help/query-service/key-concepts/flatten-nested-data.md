@@ -20,7 +20,7 @@ Using the `FLATTEN` setting requires a working understanding of the following co
   
   * [Create an ad hoc schema](../../xdm/tutorials/ad-hoc.md): An XDM schema with fields that are namespaced for usage only by a single dataset, is referred to as an ad hoc schema. Ad hoc schemas are used in various data ingestion workflows for Experience Platform and creating certain kinds of source connections.
 
-* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 * [Nested data structures](./nested-data-structures.md): This document provides examples of how to create, process, or transform datasets with complex data types including nested data structures.
 
@@ -36,13 +36,13 @@ When connecting to Query Service with your chosen third-party client, append the
 
 The input should take the following format:
 
-```terminal
+```bash
 {sandbox_name}:{all/ID/database_name}?FLATTEN
 ```
 
 An example connection string might look as below:
 
-```terminal
+```bash
 prod:all?FLATTEN
 ```
 
@@ -50,19 +50,19 @@ prod:all?FLATTEN
 
 The example schema used in this guide employs the standard field group [!UICONTROL Commerce Details], which utilizes the `commerce` object structure and the `productListItems` array. See the XDM documentation for [more information on the [!UICONTROL Commerce Details] field group](../../xdm/field-groups/event/commerce-details.md). A representation of the schema structure can be seen in the image below.
 
-![A schema diagram of the Commerce Details field group including the `commerce` and `productListItems` structures.](../images/essential-concepts/commerce-details.png)
+![A schema diagram of the Commerce Details field group including the `commerce` and `productListItems` structures.](../images/key-concepts/commerce-details.png)
 
 If your BI tool does not support nested data structures, it can be difficult to reference nested fields should they contain serialized values (such as `commerce` and `productListItems` in the example schema). These values may appear as parts of a single encoded `commerce` string field and are not realistically unusable. 
 
 The following values represent `commerce.order.priceTotal` (3018.0), `commerce.order.purchaseID` (c9b5aff9-25de-450b-98f4-4484a2170180), and `commerce.purchases.value`(1.0) in poorly formatted nested fields. 
 
-```terminal
+```bash
 ("(3018.0,c9b5aff9-25de-450b-98f4-4484a2170180)","(1.0)")
 ```
 
 By using the `FLATTEN` setting, you can access separate fields within your schema or whole sections of the nested data structure by using dot notation and their original pathname. An example of this format using the `commerce` field group is given below. 
 
-```terminal
+```bash
 commerce.order.priceTotal
 commerce.order.purchaseID
 commerce.purchases.value

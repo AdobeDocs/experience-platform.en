@@ -48,7 +48,7 @@ New legal and organizational regulations are giving users the right to access or
 |New API endpoints | Base path for the [!DNL Privacy Service] API has been updated from `/data/privacy/gdpr` to `/data/core/privacy/jobs`.|
 |New required `regulation` property | When creating new jobs in the [!DNL Privacy Service] API, a `regulation` property must be supplied in the request payload to indicate which regulation to track the job under. Accepted values are `gdpr` and `ccpa`.|
 |Support for [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] now accepts access/delete requests from Adobe [!DNL Primetime Authentication], using `primetimeAuthentication` as its product value.|
-|Privacy Service UI enhancements | Separate job tracking pages for GDPR and CCPA regulations. New **Regulation Type **dropdown to switch between tracking data for GDPR and CCPA.|
+|Privacy Service UI enhancements | Separate job tracking pages for GDPR and CCPA regulations. New **Regulation Type** dropdown to switch between tracking data for GDPR and CCPA.|
 
 **Known issues**
 
@@ -58,7 +58,7 @@ For more information about [!DNL Privacy Service], please start by reading the [
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Experience Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
 
 [!DNL Experience Platform] provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 

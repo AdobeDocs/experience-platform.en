@@ -3,6 +3,8 @@ keywords: Experience Platform;home;IAB;IAB 2.0;consent;Consent
 solution: Experience Platform
 title: Create Datasets for Capturing IAB TCF 2.0 Consent Data
 description: This document provides steps for setting up the two required datasets to collect IAB TCF 2.0 consent data.
+role: Developer
+feature: Consent, Schemas, Datasets
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 ---
 # Create datasets for capturing IAB TCF 2.0 consent data
@@ -16,9 +18,9 @@ Specifically, two datasets are required for capturing TCF 2.0 consent data:
 
 >[!IMPORTANT]
 >
->Platform only enforces the TCF strings collected in the Individual Profile dataset. While an ExperienceEvent dataset is still required to create a datastream as part of this workflow, you only need to ingest data into the profile dataset. The ExperienceEvent dataset can still be used if you wish to track consent change events over time, but these values are not used in when enforcing on segment activation.
+>Experience Platform only enforces the TCF strings collected in the Individual Profile dataset. While an ExperienceEvent dataset is still required to create a datastream as part of this workflow, you only need to ingest data into the profile dataset. The ExperienceEvent dataset can still be used if you wish to track consent change events over time, but these values are not used in when enforcing on segment activation.
 
-This document provides steps for setting up these two datasets. For an overview of the full workflow to configure your Platform data operations for TCF 2.0, refer to the [IAB TCF 2.0 compliance overview](./overview.md).
+This document provides steps for setting up these two datasets. For an overview of the full workflow to configure your Experience Platform data operations for TCF 2.0, refer to the [IAB TCF 2.0 compliance overview](./overview.md).
 
 ## Prerequisites
 
@@ -54,9 +56,9 @@ See the [reference guide](../../../../xdm/field-groups/event/iab.md) for this fi
 
 In order to create datasets that capture consent data, you must first create XDM schemas to base those datasets on.
 
-As mentioned in the previous section, a schema that uses the [!UICONTROL XDM Individual Profile] class is required in order to enforce consent in downstream Platform workflows. You can also optionally create a separate schema based on [!UICONTROL XDM ExperienceEvent] if you wish to track consent changes over time. Both schemas must contain an `identityMap` field and an appropriate TCF 2.0 field group.
+As mentioned in the previous section, a schema that uses the [!UICONTROL XDM Individual Profile] class is required in order to enforce consent in downstream Experience Platform workflows. You can also optionally create a separate schema based on [!UICONTROL XDM ExperienceEvent] if you wish to track consent changes over time. Both schemas must contain an `identityMap` field and an appropriate TCF 2.0 field group.
 
-In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace. From here, follow the steps in the sections below to create each required schema.
+In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace. From here, follow the steps in the sections below to create each required schema.
 
 >[!NOTE]
 >
@@ -94,7 +96,7 @@ If you are editing an existing schema that has already been enabled for use in [
 
 #### Enable the schema for use in [!DNL Real-Time Customer Profile]
 
-In order for Platform to associate the consent data it receives to specific customer profiles, the consent schema must be enabled for use in [!DNL Real-Time Customer Profile].
+In order for Experience Platform to associate the consent data it receives to specific customer profiles, the consent schema must be enabled for use in [!DNL Real-Time Customer Profile].
 
 >[!NOTE]
 >
@@ -184,4 +186,4 @@ By following this tutorial, you have created at least one dataset that can now b
 * A record-based dataset that is enabled for use in Real-Time Customer Profile. **(Required)**
 * A time-series-based dataset that is not enabled for [!DNL Profile]. (Optional)
 
-You can now return to the [IAB TCF 2.0 overview](./overview.md#merge-policies) to continue the process of configuring Platform for TCF 2.0 compliance.
+You can now return to the [IAB TCF 2.0 overview](./overview.md#merge-policies) to continue the process of configuring Experience Platform for TCF 2.0 compliance.

@@ -9,7 +9,7 @@ exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
 
 [!UICONTROL Measure] is a standard Experience Data Model (XDM) data type that contains a concrete quantifiable data point of a particular metric. A measure is composed of a unique identifier and a value.
 
-<img src='../images/data-types/measure.PNG' width=500 /><br />
+![measure image](../images/data-types/measure.PNG){width=500}
 
 | Property | Data type | Description |
 | --- | --- | --- |

@@ -25,13 +25,13 @@ To make optimal use of Privacy Service, several key decisions must be made in te
 
 These decisions can be summarized through the following questions:
 
-1. **What information am I gathering from my customers?** 
+1. **What information am I gathering from my customers?**
     * To make the best use of Privacy Service, you must have a detailed understanding of the types of data you collect from your customers, and which of it is subject to privacy regulations. See the section on [determining privacy requirements](#requirements) for more information.
 1. **Have I correctly labeled my data?**
     * Data must be properly labeled for the service to determine which fields to access or delete during privacy jobs. See the section on [labeling data](#label) for more information.
-1. **Do I know which IDs to send to Privacy Service?** 
+1. **Do I know which IDs to send to Privacy Service?**
     * When sending privacy requests, individual customer IDs specific to particular Adobe applications must be provided. See the sections on [providing identity data](#identity)  and [making privacy requests](#requests) for more information.
-1. **How am I tracking my privacy jobs?** 
+1. **How am I tracking my privacy jobs?**
     * Once you have made privacy requests, there are several options for tracking their status and results. See the section on [monitoring privacy jobs](#monitor) for more information.
 
 The sections below provide general guidance on these important prerequisite steps, and also provide links to further Privacy Service documentation for more details.
@@ -62,9 +62,17 @@ Read the document on [identity data for privacy requests](./identity-data.md) fo
 
 Once you have determined your business' privacy needs, and decided which identity values to send to Privacy Service, you can start making privacy requests. Use Privacy Service to send privacy requests through either the API or the UI.
 
+#### Access request file details {#access-requests}
+
+In the response to a successful access request, there is a **download URL** that contains multiple files. One file is provided for each Adobe application where data was requested. Note that the file format for each application may differ based on the application's data structure.
+
+#### Delete Requests - No Download URL {#delete-requests}
+
+There is **no download URL** in the response for a **delete request**, as no customer data is being retrieved.
+
 >[!IMPORTANT]
 >
->The sections below provide links to documentation that cover how to make generic privacy requests in the API or UI. However, depending on the [!DNL Experience Cloud] applications you are using, the fields you must send in the request payload may be different from the examples shown in these guides. 
+>The sections below provide links to documentation that cover how to make generic privacy requests in the API or UI. However, depending on the [!DNL Experience Cloud] applications you are using, the fields you must send in the request payload may be different from the examples shown in these guides.
 >
 >As you follow along with the API or UI guides, refer to the document on [Privacy Service and Experience Cloud applications](./experience-cloud-apps.md) for further documentation on how to format privacy requests for your particular [!DNL Experience Cloud] applications.
 >
@@ -91,6 +99,10 @@ Once you have made privacy jobs, you have several options for monitoring their s
 | Privacy Service UI | You can view a visual representation of the status of all active requests with the Privacy Service UI monitoring dashboard. See the [Privacy Service user guide](ui/overview.md) for more information. |
 | Privacy Service API | You can programmatically monitor the status of Privacy jobs by using the lookup endpoints provided by the Privacy Service API. See the [Privacy Service API guide](./api/overview.md) for detailed steps on how to use the API. |
 | [!DNL Privacy Events] | [!DNL Privacy Events] use Adobe I/O Events that are sent to a configured webhook to facilitate efficient job request automation. They reduce or eliminate the need to poll the Privacy Service API to check if a job is complete or if a certain milestone within a workflow has been reached. See the tutorial on [subscribing to Privacy Events](./privacy-events.md) for more information. |
+
+#### Responses for non-existing users {#non-existing-users}
+
+When you submit an access or delete request, even if the user data is not found, the response will always return a `success` if the call was completed successfully. This means that even if the data doesn't exist, an access or deletion can complete successfully without any data being retrieved or deleted.
 
 ## Next steps
 

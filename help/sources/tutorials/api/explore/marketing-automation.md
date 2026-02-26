@@ -15,14 +15,14 @@ This tutorial uses the [!DNL Flow Service] API to explore marketing automation s
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [Sources](../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-*   [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+*   [Sources](../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
+*   [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to a marketing automation system using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 
-This tutorial requires you to have a valid connection with the third-party marketing automation application you wish to ingest data from. A valid connection involves your application's connection specification ID and connection ID. More information about creating an marketing automation connection and retrieving these values can be found in the [connect a marketing automation source to Platform](../../api/create/marketing-automation/hubspot.md) tutorial.
+This tutorial requires you to have a valid connection with the third-party marketing automation application you wish to ingest data from. A valid connection involves your application's connection specification ID and connection ID. More information about creating an marketing automation connection and retrieving these values can be found in the [connect a marketing automation source to Experience Platform](../../api/create/marketing-automation/hubspot.md) tutorial.
 
 ### Reading sample API calls
 
@@ -30,13 +30,13 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
 *   x-gw-ims-org-id: `{ORG_ID}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Experience Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 *   x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -46,7 +46,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ## Explore your data tables
 
-Using the base connection for your marketing automation system, you can explore your data tables by performing GET requests. Use the following call to find the path of the table you wish to inspect or ingest into [!DNL Platform].
+Using the base connection for your marketing automation system, you can explore your data tables by performing GET requests. Use the following call to find the path of the table you wish to inspect or ingest into [!DNL Experience Platform].
 
 **API format**
 
@@ -71,7 +71,7 @@ curl -X GET \
 
 **Response**
 
-A successful response is an array of tables from to your marketing automation system. Find the table you wish to bring into [!DNL Platform] and take note of its `path` property, as you are required to provide it in the next step to inspect its structure.
+A successful response is an array of tables from to your marketing automation system. Find the table you wish to bring into [!DNL Experience Platform] and take note of its `path` property, as you are required to provide it in the next step to inspect its structure.
 
 ```json
 [
@@ -178,4 +178,4 @@ A successful response returns the structure of a table. Details regarding each o
 
 ## Next steps
 
-By following this tutorial, you have explored your marketing automation system, found the path of the table you wish to bring in to [!DNL Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your marketing automation system and bring it into Platform](../collect/marketing-automation.md).
+By following this tutorial, you have explored your marketing automation system, found the path of the table you wish to bring in to [!DNL Experience Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your marketing automation system and bring it into Experience Platform](../collect/marketing-automation.md).

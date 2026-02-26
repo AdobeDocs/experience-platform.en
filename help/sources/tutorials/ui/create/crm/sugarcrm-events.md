@@ -20,7 +20,7 @@ If you already have a valid [!DNL SugarCRM] account, you may skip the remainder 
 
 ### Gather required credentials
 
-In order to connect [!DNL SugarCRM Events] to Platform, you must provide values for the following connection properties:
+In order to connect [!DNL SugarCRM Events] to Experience Platform, you must provide values for the following connection properties:
 
 | Credential | Description | Example |
 | --- | --- | --- |
@@ -28,25 +28,25 @@ In order to connect [!DNL SugarCRM Events] to Platform, you must provide values 
 | `Username` | Your SugarCRM developer account username. | `abc.def@example.com@sugarmarketdemo000.com` |
 | `Password` | Your SugarCRM developer account password. | `123456789` |
 
-### Create a Platform schema for [!DNL SugarCRM]
+### Create an Experience Platform schema for [!DNL SugarCRM]
 
-Before creating a [!DNL SugarCRM] source connection, you must also ensure that you first create a Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
+Before creating a [!DNL SugarCRM] source connection, you must also ensure that you first create an Experience Platform schema to use for your source. See the tutorial on [creating an Experience Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
-![Platform UI screenshot showing an example schema for SugarCRM Events](../../../../images/tutorials/create/sugarcrm-events/sugarcrm-schema-events.png)
+![Experience Platform UI screenshot showing an example schema for SugarCRM Events](../../../../images/tutorials/create/sugarcrm-events/sugarcrm-schema-events.png)
 
 >[!WARNING]
 >
->When mapping the schema ensure you also map the mandatory `event_id` and `timestamp` fields required by Platform.
+>When mapping the schema ensure you also map the mandatory `event_id` and `timestamp` fields required by Experience Platform.
 
 ## Connect your [!DNL SugarCRM Events] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
 Under the *CRM* category, select **[!UICONTROL SugarCRM Events]**, and then select **[!UICONTROL Add data]**.
 
-![Platform UI screenshot for catalog with SugarCRM Events card](../../../../images/tutorials/create/sugarcrm-events/catalog-sugarcrm-events.png)
+![Experience Platform UI screenshot for catalog with SugarCRM Events card](../../../../images/tutorials/create/sugarcrm-events/catalog-sugarcrm-events.png)
 
 The **[!UICONTROL Connect SugarCRM Events account]** page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -54,17 +54,17 @@ The **[!UICONTROL Connect SugarCRM Events account]** page appears. On this page,
 
 To use an existing account, select the [!DNL SugarCRM Events] account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
 
-![Platform UI screenshot for Connect SugarCRM Events account with an existing account](../../../../images/tutorials/create/sugarcrm-events/existing.png)
+![Experience Platform UI screenshot for Connect SugarCRM Events account with an existing account](../../../../images/tutorials/create/sugarcrm-events/existing.png)
 
 ### New account
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and your credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![Platform UI screenshot for Connect SugarCRM Events account with a new account](../../../../images/tutorials/create/sugarcrm-events/new.png)
+![Experience Platform UI screenshot for Connect SugarCRM Events account with a new account](../../../../images/tutorials/create/sugarcrm-events/new.png)
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL SugarCRM Events] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/crm.md).
+By following this tutorial, you have established a connection to your [!DNL SugarCRM Events] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Experience Platform](../../dataflow/crm.md).
 
 ## Additional resources
 
@@ -78,7 +78,7 @@ The [!DNL SugarCRM] API throttle rates are 90 calls per minute or 2000 calls per
 
 To validate that you have correctly set up the source and [!DNL SugarCRM Events] data is being ingested, follow the steps below:
 
-* In the Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL SugarCRM Events] card menu on the sources catalog. Next, select **[!UICONTROL Preview dataset]** to verify the data that was ingested.
+* In the Experience Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL SugarCRM Events] card menu on the sources catalog. Next, select **[!UICONTROL Preview dataset]** to verify the data that was ingested.
 
 * Depending on the object type you are working with, you can verify the aggregated data against the counts visible on the [!DNL SugarMarket] Events page below: 
 

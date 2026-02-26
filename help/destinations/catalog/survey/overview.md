@@ -12,7 +12,7 @@ Surveys platforms detect survey events, capture customer feedback in real time t
 
 ## Supported survey destinations {#supported-destinations}
 
-Currently, Platform supports the survey destinations listed below. For information on how to connect to these destinations, see the individual links:
+Currently, Experience Platform supports the survey destinations listed below. For information on how to connect to these destinations, see the individual links:
 
 **Destination connectors**
 

@@ -1,6 +1,6 @@
 ---
 title: Determine A Propensity Score Using A Machine Learning Generated Predictive Model
-description: Learn how to use Query Service to apply your predictive model to Platform data. This document demonstrates how to use Platform data to predict a customer's propensity to purchase on each visit.
+description: Learn how to use Query Service to apply your predictive model to Experience Platform data. This document demonstrates how to use Experience Platform data to predict a customer's propensity to purchase on each visit.
 exl-id: 29587541-50dd-405c-bc18-17947b8a5942
 ---
 # Determine a propensity score using a machine-learning-generated predictive model
@@ -29,9 +29,9 @@ numpy
 tqdm
 ```
 
-## Import analytics tables from Platform into [!DNL Jupyter Notebook] {#import-analytics-tables}
+## Import analytics tables from Experience Platform into [!DNL Jupyter Notebook] {#import-analytics-tables}
 
-To generate a propensity score model, a projection of the analytics data stored in Platform must be imported into [!DNL Jupyter Notebook]. From a [!DNL Python] 3 [!DNL Jupyter Notebook] connected to Query Service, the following commands imports a customer behavior dataset from Luma, a fictitious clothing store. As Platform data is stored using the Experience Data Model (XDM) format, a sample JSON object must be generated that conforms to the schema's structure. See the documentation for instructions on how to [generate the sample JSON object](../../xdm/ui/sample.md).
+To generate a propensity score model, a projection of the analytics data stored in Experience Platform must be imported into [!DNL Jupyter Notebook]. From a [!DNL Python] 3 [!DNL Jupyter Notebook] connected to Query Service, the following commands imports a customer behavior dataset from Luma, a fictitious clothing store. As Experience Platform data is stored using the Experience Data Model (XDM) format, a sample JSON object must be generated that conforms to the schema's structure. See the documentation for instructions on how to [generate the sample JSON object](../../xdm/ui/sample.md).
 
 ![The [!DNL Jupyter Notebook] dashboard with several commands highlighted.](../images/use-cases/jupyter-commands.png)
 

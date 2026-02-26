@@ -10,7 +10,7 @@ exl-id: e65257d8-5bc8-46c8-8487-33bc7ce4059b
 
 ## Is null
 
-The `isNull` function determines if an object reference does not exist.
+The `isNull` function determines if an object reference does not exist as a boolean.
 
 **Format**
 
@@ -28,7 +28,7 @@ person.homeAddress.isNull()
 
 ## Is not null
 
-The `isNotNull` function determines if an object reference exists.
+The `isNotNull` function determines if an object reference exists as a boolean.
 
 **Format**
 

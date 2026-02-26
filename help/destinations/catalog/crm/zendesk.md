@@ -26,7 +26,7 @@ Refer to Experience Platform documentation for [Audience Membership Details sche
 
 ### [!DNL Zendesk] prerequisites {#prerequisites-destination}
 
-In order to export data from Platform to your [!DNL Zendesk] account you need to have a [!DNL Zendesk] account.
+In order to export data from Experience Platform to your [!DNL Zendesk] account you need to have a [!DNL Zendesk] account.
 
 #### Gather [!DNL Zendesk] credentials {#gather-credentials}
 
@@ -48,13 +48,38 @@ The [Pricing and Rate Limits](https://developer.zendesk.com/api-reference/sales-
 |---|---|---|---|
 | `email` | `test@test.com` | Email address of the contact.| Yes |
 
+## Supported audiences {#supported-audiences}
+
+This section describes which types of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each segment status in [!DNL Zendesk] gets updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-segment-export-example) step.</li></ul> |
+|---------|----------|---------|
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each segment status in [!DNL Zendesk] gets updated with the corresponding audience status from Experience Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-segment-export-example) step.</li></ul> |
 | Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
 {style="table-layout:auto"}
@@ -72,17 +97,18 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL
 ### Authenticate to destination {#authenticate}
 
 Fill in the required fields below. Refer to the [Gather [!DNL Zendesk] credentials](#gather-credentials) section for any guidance.
+
 * **[!UICONTROL Bearer Token]**: The Access Token you have generated in your [!DNL Zendesk] account.
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
-![Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/zendesk/authenticate-destination.png)
+![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/zendesk/authenticate-destination.png)
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-![Platform UI screenshot showing the destination details.](../../assets/catalog/crm/zendesk/destination-details.png)
+![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/crm/zendesk/destination-details.png)
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -104,7 +130,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL Zendesk] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination.
+To correctly send your audience data from Adobe Experience Platform to the [!DNL Zendesk] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination.
 
 Attributes specified in the **[!UICONTROL Target field]** should be named exactly as described in the attribute mappings table as these attributes will form the request body.
 
@@ -125,7 +151,7 @@ To correctly map your XDM fields to the [!DNL Zendesk] destination fields, follo
       |`xdm: person.name.firstName`|`xdm: first_name`| |
 
     * An example using these mappings is shown below:
-    ![Platform UI screenshot example with attribute mappings.](../../assets/catalog/crm/zendesk/mappings.png)
+    ![Experience Platform UI screenshot example with attribute mappings.](../../assets/catalog/crm/zendesk/mappings.png)
 
 >[!IMPORTANT]
 >
@@ -135,12 +161,12 @@ When you are finished providing the mappings for your destination connection, se
 
 ### Schedule audience export and example {#schedule-segment-export-example}
 
-In the [[!UICONTROL Schedule audience export]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step of the activation workflow, you must manually map Platform audiences to the custom field attribute in [!DNL Zendesk].
+In the [[!UICONTROL Schedule audience export]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step of the activation workflow, you must manually map Experience Platform audiences to the custom field attribute in [!DNL Zendesk].
 
 To do this, select each segment, then enter the corresponding custom field attribute from [!DNL Zendesk] in the **[!UICONTROL Mapping ID]** field.
 
 An example is shown below:
-![Platform UI screenshot example showing Schedule audience export.](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
+![Experience Platform UI screenshot example showing Schedule audience export.](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
 
 ## Validate data export {#exported-data}
 
@@ -148,10 +174,10 @@ To validate that you have correctly set up the destination, follow the steps bel
 
 1. Select **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** and navigate to the list of destinations.
 1. Next, select the destination and switch to the **[!UICONTROL Activation data]** tab, then select an audience name.
-![Platform UI screenshot example showing Destinations Activation Data.](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
+![Experience Platform UI screenshot example showing Destinations Activation Data.](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
 
 1. Monitor the audience summary and ensure that the count of profiles corresponds to the count within the segment.
-![Platform UI screenshot example showing Segment.](../../assets/catalog/crm/zendesk/segment.png)
+![Experience Platform UI screenshot example showing Segment.](../../assets/catalog/crm/zendesk/segment.png)
 
 1. Log in to the [!DNL Zendesk] website, then navigate to the **[!UICONTROL Contacts]** page to check if the profiles from the audience have been added. This list can be configured to display columns for the additional fields created with the audience**[!UICONTROL Mapping ID]** and audience statuses.
 ![Zendesk UI screenshot showing the Contacts page with the additional fields created with the audience name.](../../assets/catalog/crm/zendesk/contacts.png)
@@ -166,6 +192,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ## Additional resources {#additional-resources}
 
 Additional useful information from the [!DNL Zendesk] documentation is below:
+
 * [Making your first call](https://developer.zendesk.com/documentation/sales-crm/first-call/)
 * [Custom Fields](https://developer.zendesk.com/api-reference/sales-crm/requests/#custom-fields)
 

@@ -1,14 +1,9 @@
 ---
 title: Stripe
 description: Learn how to ingest payments data from your Stripe account to Adobe Experience Platform
-badge: Beta
 exl-id: 191d217e-036d-491a-b7dd-abcad74625ba
 ---
 # [!DNL Stripe]
-
->[!NOTE]
->
->The [!DNL Stripe] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Thousands of businesses of all sizes utilize [!DNL Stripe] both online and in person to accept payments, generate new sources of revenue, and expand globally with the help of Adobe Experience Platform, Adobe Commerce, and [!DNL Magento Open Source].
 
@@ -465,9 +460,9 @@ In [!DNL Stripe], **prices** represent the unit cost, currency, and the optional
 >[!ENDTABS]
 
 
-### IP address allow list
+### IP address allowlist
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform](../../ip-address-allow-list.md) for more information.
 
 ### Configure permissions on Experience Platform
 

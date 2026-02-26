@@ -18,8 +18,8 @@ This document provides a catalog of error messages, descriptions, and suggested 
 | `1004-415` | Unsupported Media Type | The provided payload format is unsupported. Please check your provided request and try again. |
 | `1005-500`| Internal Error| An internal error has occurred. Please try again and contact customer support if the problem persists. |
 | `1006-408` | Request Timeout | An error occurred while processing the request. The request has been timed out. Please try again and contact customer support if the problem persists. |
-| `1007-400` | Invalid header parameter | An invalid header parameter: {headerName} has been received. Please check the header parameters and try again. |
-| `1008-401` | |Invalid authorization token | The authorization token does not have access to this organization or the organization does not exist. Please ensure that the organization exists or contact your administrator to gain access. |
+| `1007-400` | Invalid header parameter | An invalid header parameter: `{headerName}` has been received. Please check the header parameters and try again. |
+| `1008-401` | Invalid authorization token | The authorization token does not have access to this organization or the organization does not exist. Please ensure that the organization exists or contact your administrator to gain access. |
 | `1009-403` | IMS org id is missing or empty | The organization ID request header is either missing or empty. Please update the header value and try again. |
 | `1010-500` | Invalid detailed-message | The parameter in the detailed-message has not been properly provided. Please check the parameter in the detailed-message and try again. |
 | `1011-503` | Service Unavailable | The service is temporarily unavailable. Please try again and contact customer support if the problem persists. |
@@ -38,7 +38,7 @@ This document provides a catalog of error messages, descriptions, and suggested 
 | `1104-504` | Gateway Timeout | A gateway timeout has occurred. Please try again and contact customer support if the problem persists. |
 | `1105-401` | Unauthorized | The user is unauthorized. {detailedMessage} |
 | `1106-403` | Forbidden | The requested operation is forbidden. {detailedMessage} |
-| `1107-412` | Precondition Failed | The condition defined by the If-Unmodified-Since or If-None-Match headers is not fulfilled. {detailedMessage} |
+| `1107-412` | Precondition Failed | The condition defined by the If-Unmodified-Since or If-None-Match headers is not fulfilled. `{detailedMessage}` |
 
 ## Encryption errors
 
@@ -150,7 +150,7 @@ This document provides a catalog of error messages, descriptions, and suggested 
 | `1392-400` | Bad Request | Failed to parse Transformations in flow request for flowId={flowId}. Please check the transformations in your request and try again. |
 | `1393-400` | Bad Request | The provided parameter {parameter} is null or empty. Please provide a valid {parameter} and try again. |
 | `1394-400` | Bad Request | The minimum value for a parameter {parameter} is one. Please provide a valid {parameter} and try again. |
-`1395-400` | Bad Request | The source connection found in the flow is either null or empty. Please provide a valid source connection in the flow and try again. |
+| `1395-400` | Bad Request | The source connection found in the flow is either null or empty. Please provide a valid source connection in the flow and try again. |
 | `1396-400` | Bad Request | A matching format could not be found. Please provide a matching format and try again. |
 | `1397-400` | Bad Request | The provided frequency : {frequency} is invalid. Please provide a valid frequency and try again. |
 | `1398-400` | Bad Request | The provided operation : {action} is unsupported. Please check the operation provided and try again. |

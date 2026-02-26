@@ -70,6 +70,10 @@ When string fields from incoming data are mapped to date fields in schemas using
 
 ### Date/time format strings {#format}
 
+>[!TIP]
+>
+>Currently, the date function in batch ingestion removes milliseconds if the date values are in this format: `2024-05-05 20:39:00.005` PST. To preserve milliseconds, use this format: `2024-05-05 20:39:00.005-0800`
+
 The following table shows which pattern letters are defined for format strings. Please note that the letters are case sensitive.
 
 | Symbol | Meaning | Presentation | Example |

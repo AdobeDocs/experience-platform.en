@@ -12,7 +12,7 @@ Adobe Experience Platform provides multiple dashboards through which you can vie
 
 ## Introduction to dashboards
 
-Dashboards provide out-of-the-box reporting on your organization's data and are built directly into the marketer workflow within Platform. These dashboards are available without the need for additional IT support or the time and effort it would otherwise take to export and process data with additional data warehousing design and implementation.
+Dashboards provide out-of-the-box reporting on your organization's data and are built directly into the marketer workflow within Experience Platform. These dashboards are available without the need for additional IT support or the time and effort it would otherwise take to export and process data with additional data warehousing design and implementation.
 
 ## Getting started with dashboards
 

@@ -118,7 +118,7 @@ product.sale.getDayOfMonth() <= 15
 
 ## Occurs
 
-The `occurs` function compares the given timestamp function with a fixed period of time.
+The `occurs` function compares the given timestamp function with a fixed period of time as a boolean.
 
 **Format**
 

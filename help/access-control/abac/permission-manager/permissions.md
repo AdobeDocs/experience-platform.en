@@ -1,6 +1,7 @@
 ---
 title: Attribute-based Access Control Permission Manager
 description: Learn how to use Permissions Manager in Adobe Experience Platform for generating reports and validating acceess permissions.
+exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
 ---
 # Permission manager
 
@@ -34,7 +35,7 @@ For a more granular report, you can specify the resource with actions in a parti
 
 >[!INFO]
 >
->[!UICONTROL Resource], [!UICONTROL Actions], and [!UICONTROL Sandboxes] are not mandatory fields. Only one [!UICONTROL Resource] can be selected for each report. An action or sandbox can be removed once added by selecting the **'x'** beside the selection you would like to remove.
+>[!UICONTROL Resource], [!UICONTROL Actions], and [!UICONTROL Sandboxes] are not mandatory fields. An action or sandbox can be removed once added by selecting the **'x'** beside the selection you would like to remove.
 
 ![The Resource, Actions, Sandboxes drop downs, and Show Results highlighted](../../images/permission-manager/users-additional-attributes-select.png)
 

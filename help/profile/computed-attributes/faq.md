@@ -43,7 +43,7 @@ Since computed attributes are created using Experience Event fields and resides 
 
 ## Are there any limits to the number of computed attributes I can create?
 
-Yes, there is a limit on the number of computed attributes you can create. Please refer to the product description or contact the Adobe Account Team for more information.
+Yes, there is a limit on the number of computed attributes you can create. This limit only applies to **active** computed attributes. Please refer to the product description or contact the Adobe Account Team for more information.
 
 ## Are there any downstream implications for disabling a computed attribute?
 

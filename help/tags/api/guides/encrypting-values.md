@@ -59,7 +59,7 @@ The above command uses the public key for `Tags Data Encryption <launch@adobe.co
 The output of the command would resemble the following:
 
 ```shell
------BEGIN PGP MESSAGE-----
+|-----BEGIN PGP MESSAGE-----
 
 hQIMAxJHCI6fydT/ARAAwQ0Y0k7eSAbd0T9seoaWX75G70O2gxAF20KY5FWiZ9/m
 /RkgJwhJusZyEdazC/CmAdfXi9bsVxQT0i06ErUxXfQF0VtweRlcyRBsxzLz6Hr+
@@ -75,7 +75,7 @@ ekGD+p3PyyvxjfS5G/wf9HQZ085+mnjpKFa7fuFBQPbg4WpBadhWrhobthC+hN3S
 SAE9yWU11Y3xpoxqg4y7iYZ6rnX+qP2oUNYxC2/hdhsFbbZtUh4s51qaoLbe0iWB
 OUoIPf4KxTaboHZOEy32ZBng5heVrn4i9w==
 =jrfE
------END PGP MESSAGE-----
+|-----END PGP MESSAGE-----
 ```
 
 This output can only br decrypted by systems that have the private key that

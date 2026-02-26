@@ -11,12 +11,12 @@ Accessibility refers to a series of features that make a software product usable
 
 Adobe Experience Platform is committed to providing accessible and inclusive features to all individuals, including users working with assistive devices such as speech recognition software and screen readers. Experience Platform is continuously enhanced to meet the needs of all types of users and adheres to worldwide standards that include individuals with visual, auditory, mobility, or other impairments.
 
-Other accessibility features supported by Platform include keyboard navigation, semantic structure, sufficient contrast between foreground elements and background elements, assistive technology support, and clear element labels. 
+Other accessibility features supported by Experience Platform include keyboard navigation, semantic structure, sufficient contrast between foreground elements and background elements, assistive technology support, and clear element labels. 
 
 To learn more about the general accessibility features supported by Experience Platform, visit the [accessibility features guide](features.md). 
 
-For information regarding custom accessibility features in specific sections of the Platform user interface, please visit the [custom accessibility solutions for Experience Platform guide](custom.md).
+For information regarding custom accessibility features in specific sections of the Experience Platform user interface, please visit the [custom accessibility solutions for Experience Platform guide](custom.md).
 
-To help meet the goal of accessibility conformance, Experience Platform follows the internationally recognized best practices in the Web Content Accessibility Guidelines (WCAG) 2.1 Level A and Level AA. For more detailed information about recent accessibility improvements to Experience Platform, review the latest [Platform release notes](../release-notes/latest/latest.md).
+To help meet the goal of accessibility conformance, Experience Platform follows the internationally recognized best practices in the Web Content Accessibility Guidelines (WCAG) 2.1 Level A and Level AA. For more detailed information about recent accessibility improvements to Experience Platform, review the latest [Experience Platform release notes](../release-notes/latest/latest.md).
 
 To read detailed reports of how Adobe applications meet each level of compliance, refer to the [accessibility conformance report](https://www.adobe.com/accessibility/compliance.html) (ACR) documentation.

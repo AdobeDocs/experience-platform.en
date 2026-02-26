@@ -9,7 +9,7 @@ exl-id: 3c80eb44-852f-4a95-bd13-b6197ffe62da
 
 [!UICONTROL Geo Coordinates] is a standard XDM data type that describes the geographic coordinates of a place. This data type is based on the public specification documented on [schema.org](https://schema.org/GeoCoordinates).
 
-<img src='../images/data-types/geo-coordinates.png' width=400 /><br />
+![](../images/data-types/geo-coordinates.png){width=400}
 
 | Property | Data type | Description |
 | --- | --- | --- |

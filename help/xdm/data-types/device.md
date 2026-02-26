@@ -9,7 +9,7 @@ exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
 
 [!UICONTROL Device] is a standard XDM data type that describes an identified device. A device is an application or browser instance that is trackable across sessions, normally by cookies.
 
-<img src='../images/data-types/device.png' width=450 /><br />
+![](../images/data-types/device.png){width=450}
 
 | Property | Data type | Description |
 | --- | --- | --- |

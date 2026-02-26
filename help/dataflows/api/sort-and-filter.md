@@ -243,4 +243,4 @@ GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Fail
 
 ## Next steps
 
-This guide covered how to use the `orderby` and `property` query parameters to sort and filter responses in the Flow Service API. For step-by-step guides on how to use the API for common workflows in Platform, see the API tutorials contained in the [sources](../../sources/home.md) and [destinations](../../destinations/home.md) documentation.
+This guide covered how to use the `orderby` and `property` query parameters to sort and filter responses in the Flow Service API. For step-by-step guides on how to use the API for common workflows in Experience Platform, see the API tutorials contained in the [sources](../../sources/home.md) and [destinations](../../destinations/home.md) documentation.

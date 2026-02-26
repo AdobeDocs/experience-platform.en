@@ -5,10 +5,6 @@ exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
 ---
 # AEM Asset Insights extension overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 This extension is intended to be used together with [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html). More specifically, it replaces the "pageTracker" process and embed code. When configured, this extension sends Asset *Impression* and *Click* metrics to Adobe Analytics, after which they will be imported into the AEM Asset Insights reports. The Asset metrics can then be reported on by using either AEM Asset Insights or Adobe Analytics Project Workspaces.
 
 ## Extension prerequisites
@@ -22,6 +18,7 @@ The AEM Asset reports in Analytics contain three AEM dimensions:
 * Asset Clicked 
 
 There are also two metrics:
+
 * Asset Impressions
 * Asset Clicks. 
 
@@ -47,7 +44,7 @@ This section describes how to configure AEM with tags in Adobe Experience Platfo
 
 ### Integrate AEM with tags
 
-The recommended integration of [Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html) with Adobe Experience Manager is done via Adobe I/O.
+The recommended integration of [Experience Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html) with Adobe Experience Manager is done via Adobe I/O.
 
 1. [Connect AEM with tags using Adobe I/O](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html).
 

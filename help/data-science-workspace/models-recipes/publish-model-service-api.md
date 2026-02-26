@@ -14,7 +14,7 @@ exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 >
 >This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
-This tutorial covers the process of publishing a model as a service using the [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+This tutorial covers the process of publishing a model as a service using the [[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Getting started
 

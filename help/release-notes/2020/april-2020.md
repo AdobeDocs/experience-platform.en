@@ -12,9 +12,11 @@ exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
 **Release date: April 8, 2020**
 
 New features in Adobe Experience Platform:
+
 * [[!DNL Intelligent Services]](#intelligent)
 
 Updates to existing features:
+
 * [[!DNL Experience Data Model (XDM)]](#xdm)
 * [Data Governance](#governance)
 * [[!DNL Destinations]](#destinations)
@@ -30,7 +32,7 @@ Updates to existing features:
 |Feature|Description|
 |---|---|
 | [!DNL Customer AI] | [!DNL Customer AI] provides marketers with the power to generate customer predictions at the individual level with explanations. With the help of influential factors, [!DNL Customer AI] can tell you what a customer is likely to do and why. Additionally, marketers can benefit from [!DNL Customer AI] predictions and insights to personalize customer experiences by serving the most appropriate offers and messaging. |
-| [!DNL Attribution AI] | [!DNL Attribution AI] is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With [!DNL Attribution AI], marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers’ journeys.|
+| [!DNL Attribution AI] | [!DNL Attribution AI] is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With [!DNL Attribution AI], marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers' journeys.|
 
 **Known issues**
 
@@ -116,7 +118,7 @@ For more information about [!DNL Privacy Service], please start by reading the [
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Experience Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
 
 [!DNL Experience Platform] provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
@@ -124,8 +126,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Feature | Description |
 | ------- | ----------- |
-| API and UI support for databases | New source connectors for [!DNL Apache Spark] (on HDInsights), [!DNL Azure Synapse Analytics], [!DNL Azure Table Storage], [!DNL Hive] (on HDInsights), and [!DNL Phoenix]. |
-| API and UI support for payments-based applications| New source connectors for [!DNL PayPal]. |
+| API and UI support for databases | New source connectors for [!DNL Apache Spark] (on HDInsights), [!DNL Azure Synapse Analytics], [!DNL Azure Table Storage], and [!DNL Hive]. |
 | API and UI support for protocols-based applications | New source connectors for [!DNL Generic OData]. |
 
 **Known issues**

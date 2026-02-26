@@ -1,9 +1,9 @@
 ---
-title: Connect Data Landing Zone to Platform using the UI
-description: Learn how to create a Data Landing Zone source connector using the Platform user interface.
+title: Connect Data Landing Zone to Experience Platform using the UI
+description: Learn how to create a Data Landing Zone source connector using the Experience Platform user interface.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
 ---
-# Connect [!DNL Data Landing Zone] to Platform using the UI
+# Connect [!DNL Data Landing Zone] to Experience Platform using the UI
 
 >[!IMPORTANT]
 >
@@ -11,18 +11,22 @@ exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
 
 [!DNL Data Landing Zone] is a secure, cloud-based file storage facility to bring files into Adobe Experience Platform. Data is automatically deleted from the [!DNL Data Landing Zone] after seven days.
 
-This tutorial provides steps for creating a [!DNL Data Landing Zone] source connection using the Platform user interface.
+This tutorial provides steps for creating a [!DNL Data Landing Zone] source connection using the Experience Platform user interface.
 
 ## Getting started
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-## Bring your files from [!DNL Data Landing Zone] to Platform
+## Bring your files from [!DNL Data Landing Zone] to Experience Platform
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
+>[!IMPORTANT]
+>
+> To connect to the source, you need the **[!UICONTROL View Sources]** and **[!UICONTROL Manage Sources]** access control permissions. Read the [access control overview](../../../../../access-control/home.md) or contact your product administrator to obtain the required permissions.
+
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
 
@@ -30,9 +34,9 @@ Under the [!UICONTROL cloud storage] category, select [!DNL Data Landing Zone] a
 
 ![The sources catalog with Data Landing Zone selected.](../../../../images/tutorials/create/dlz/catalog.png)
 
-The [!UICONTROL Add data] step appears, providing you with an interface to select and preview the data you want to bring to Platform.
+The [!UICONTROL Add data] step appears, providing you with an interface to select and preview the data you want to bring to Experience Platform.
 
-* The left part of the interface is a folder browser, providing you with a list of files from your container that you can then bring to Platform.
+* The left part of the interface is a folder browser, providing you with a list of files from your container that you can then bring to Experience Platform.
 * The right part of the interface lets you preview up to 100 rows of data from a compatible file.
 
 Select the file that you want to bring to Experience Platform and allow for a few moments for the right interface to update into a preview screen.
@@ -41,7 +45,7 @@ Select the file that you want to bring to Experience Platform and allow for a fe
 
 >[!TIP]
 >
->Platform auto-detects property information of the file you selected, including information on the file's data format, designated column delimiter, and compression type.
+>Experience Platform auto-detects property information of the file you selected, including information on the file's data format, designated column delimiter, and compression type.
 
 The preview interface allows you to inspect the contents and structure of a file. By default, the preview interface displays the first file in the folder you selected.
 
@@ -51,7 +55,7 @@ When finished, select **[!UICONTROL Next]**.
 
 ![The data preview page of the sources workspace.](../../../../images/tutorials/create/dlz/file-detection.png)
 
-For a detailed, step-by-step guide on how to create a dataflow for a cloud storage source, see the tutorial on [creating a cloud storage dataflow to bring data to Platform](../../dataflow/batch/cloud-storage.md).
+For a detailed, step-by-step guide on how to create a dataflow for a cloud storage source, see the tutorial on [creating a cloud storage dataflow to bring data to Experience Platform](../../dataflow/batch/cloud-storage.md).
 
 ## Retrieve your [!DNL Data Landing Zone] credentials
 
@@ -91,4 +95,4 @@ To refresh your credentials using the right rail, select the **[!UICONTROL Data 
 
 ## Next steps
 
-By following this tutorial, you have accessed your [!DNL Data Landing Zone] container and learned to retrieve and refresh your credentials. You can now proceed to the next tutorial on [creating a dataflow to bring data from a cloud storage to Platform](../../dataflow/batch/cloud-storage.md).
+By following this tutorial, you have accessed your [!DNL Data Landing Zone] container and learned to retrieve and refresh your credentials. You can now proceed to the next tutorial on [creating a dataflow to bring data from a cloud storage to Experience Platform](../../dataflow/batch/cloud-storage.md).

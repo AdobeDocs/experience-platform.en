@@ -26,7 +26,7 @@ Recommended permissions for data science include:
 - Destinations: [!UICONTROL Manage and Activate Dataset Destinations]
 - Query Service: [!UICONTROL Manage Queries]
 
-By default, a role (and API credentials assigned to that role) is blocked from accessing any labeled data. Subject to the organization's data governance policies, a System Admin may grant the role access to certain labeled data that is deemed appropriate for data science usage. Platform customers are responsible to manage label access and policies appropriately in order to comply with relevant regulations and organizational policies.
+By default, a role (and API credentials assigned to that role) is blocked from accessing any labeled data. Subject to the organization's data governance policies, a System Admin may grant the role access to certain labeled data that is deemed appropriate for data science usage. Experience Platform customers are responsible to manage label access and policies appropriately in order to comply with relevant regulations and organizational policies.
 
 ### Store credentials in a separate configuration file {#store-credentials}
 

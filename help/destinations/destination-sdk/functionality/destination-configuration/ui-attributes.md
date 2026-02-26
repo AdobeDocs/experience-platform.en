@@ -15,7 +15,7 @@ To understand where this component fits into an integration created with Destina
 When [creating a destination](../../authoring-api/destination-configuration/create-destination-configuration.md) through Destination SDK, the `uiAttributes` section defines the following visual properties of your destination card:
 
 * The URL of your destination documentation page in the [destination catalog](../../../catalog/overview.md).
-* The category under which your destination will be visible in the Platform UI.
+* The category under which your destination will be visible in the Experience Platform UI.
 * The data export frequency for your destination.
 * The destination connection type, such as Amazon S3, Azure Blob, etc.
 * The URL where you hosted the icon to be displayed in the destinations catalog card.
@@ -110,7 +110,7 @@ To add a logo to your destination card, you need to share the desired image with
 
 ## Next steps {#next-steps}
 
-After reading this article, you should have a better understanding of which UI attributes you can configure for your destination and where the users will see them in the Platform UI.
+After reading this article, you should have a better understanding of which UI attributes you can configure for your destination and where the users will see them in the Experience Platform UI.
 
 To learn more about the other destination components, see the following articles:
 

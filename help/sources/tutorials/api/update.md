@@ -1,16 +1,17 @@
 ---
-keywords: Experience Platform;home;popular topics;flow service;update accounts
-solution: Experience Platform
 title: Update Accounts Using the Flow Service API
-type: Tutorial
 description: This tutorial covers the steps for updating the details and credentials of an account using the Flow Service API.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
 ---
 # Update accounts using the Flow Service API
 
-In some circumstances, it may be required to update the details of an existing source connection. [!DNL Flow Service] provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials.
+In some circumstances, it may be required to update the details of an existing base connection. [!DNL Flow Service] provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials.
 
 This tutorial covers the steps for updating the details and credentials of a connection using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!TIP]
+>
+>You do not need to create a new base connection when an update is required. Any changes you make to your base connection are reflected in the associated dataflow.
 
 ## Getting started
 
@@ -18,12 +19,12 @@ This tutorial requires you to have an existing connection and a valid connection
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-### Using Platform APIs
+### Using Experience Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
+For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../landing/api-guide.md).
 
 ## Look up connection details
 

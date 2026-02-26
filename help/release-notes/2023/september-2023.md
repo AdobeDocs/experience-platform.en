@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Platform Release Notes
+title: Adobe Experience Platform Release Notes September 2023
 description: The September 2023 release notes for Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
 ---
@@ -31,7 +31,7 @@ Computed attributes enable capability to easily summarize event data into profil
 
 ## Alerts {#alerts}
 
-Experience Platform allows you to subscribe to event-based alerts for various Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
+Experience Platform allows you to subscribe to event-based alerts for various Experience Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Experience Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
 
 **New or updated features**
 
@@ -97,7 +97,7 @@ Experience Platform provides a suite of data hygiene capabilities that allow you
 
 {style="table-layout:auto"}
 
-For more information on Platform's data hygiene capabilities, refer to the [data hygiene overview](../../hygiene/home.md).
+For more information on Experience Platform's data hygiene capabilities, refer to the [data hygiene overview](../../hygiene/home.md).
 
 ## Destinations {#destinations}
 
@@ -128,7 +128,7 @@ Add these to release notes as they go out
 | Functionality | Description |
 | ----------- | ----------- |
 | Data exports in Real-Time CDP | The [dataset export](../../destinations/ui/export-datasets.md) functionality is now generally available. See [which datasets you can export based on the Experience Platform app](../../destinations/ui/export-datasets.md#datasets-to-export) you purchased, and check the [guardrails for exporting datasets](/help/destinations/guardrails.md#dataset-exports). |
-| (Beta) Support for exporting array-type objects | Export arrays of primitive values (string, int, or boolean values) as flat schema files to cloud storage destinations. Read more about the functionality in the [documentation](../../destinations/ui/export-arrays-calculated-fields.md).|
+| (Beta) Support for exporting array-type objects | Export arrays of primitive values (string, int, or boolean values) as flat schema files to cloud storage destinations. Read more about the functionality in the [documentation](../../destinations/ui/export-arrays-maps-objects.md).|
 | Dynamic dropdown selectors in Destination SDK | When creating a destination through Destination SDK, you can now use [dynamic dropdown selectors](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) to populate the fields of a dropdown selector with values retrieved from an API. |
 
 **Fixes and enhancements** {#destinations-fixes-and-enhancements}
@@ -174,7 +174,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 {style="table-layout:auto"}
 
-For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md)
+For more information on XDM in Experience Platform, see the [XDM System overview](../../xdm/home.md)
 
 ## Identity Service {#identity-service}
 
@@ -208,7 +208,7 @@ For more information on Query Services, refer to the [Query Service overview](..
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] allows you to segment data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into audiences. You can create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. 
+[!DNL Segmentation Service] allows you to segment data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into audiences. You can create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Experience Platform], and are readily accessible by any Adobe solution. 
 
 **New or updated features**
 

@@ -24,20 +24,6 @@ Minor corrections or clarifications you submit for documentation and code exampl
 
 If you're part of the Adobe community and want to create an article or submit major changes, click the **Issues** tab in the GitHub repository to submit an issue. This submission starts a conversation with the documentation team. You will need to work with the writer (or other Adobe employee) to publish new content.
 
-<!--
-If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
--->
-
-### Major changes or new articles from Adobe Employees
-
-If you are a technical writer, program manager, or developer from the product team for an Adobe Experience Cloud solution, and it's your job to contribute to or author technical articles, you should use the private repository at `https://git.corp.adobe.com/AdobeDocs`. See the [Internal Collaboration Guide](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html) for more information.
-
-<!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
-
-## Contacting the Experience Platform documentation team
-
-As stated above, members of the Adobe community can submit an issue that will be assigned to the appropriate writer. If you are an Adobe employee, you can submit an issue or contact the Experience Platform documentation team directly. To find the lead writer for a specific Platform area, see the [Adobe Experience Platform Documentation wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
-
 ## Tools and setup
 
 ### GitHub UI

@@ -5,7 +5,7 @@ exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
 ---
 # Decile-based derived datasets use case
 
-Derived datasets facilitate complicated use cases for analyzing data from the data lake that can be used with other downstream Platform services or published into your Real-Time Customer Profile data.
+Derived datasets facilitate complicated use cases for analyzing data from the data lake that can be used with other downstream Experience Platform services or published into your Real-Time Customer Profile data.
 
 This example use case demonstrates how to create decile-based derived datasets for use with your Real-Time Customer Profile data. Using an airline loyalty scenario as an example, this guide informs you how to create a dataset that uses categorical deciles to segment and create audiences based on ranked attributes.
 

@@ -118,6 +118,7 @@ When sending shared events, make sure that you are including an event ID and nam
 >[!NOTE]
 >
 >Any existing client can use the quick start workflows to create a reference implementation that can be used for the following:
+>
 >* Use it as the start of a brand new implementation. 
 >* Take advantage of it as a reference implementation that you can examine to see how it has been configured and then replicate in your current production implementations.
 

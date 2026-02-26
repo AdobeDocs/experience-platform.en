@@ -18,6 +18,7 @@ The Product Purchase Prediction recipe enables you to predict the likelihood of 
 ![](../images/pre-built-recipes/ppp_bigpicture.png)
 
 The following document will answer questions such as:
+
 * Who is this recipe built for?
 * What does this recipe do?
 

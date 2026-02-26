@@ -48,7 +48,7 @@ For more information on getting started, refer to [this [!DNL Dynamics] document
 
 ## Connect your [!DNL Dynamics] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources you can create an account with.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -80,7 +80,7 @@ You can use either basic authentication or service-principal and key authenticat
 
 >[!TAB Basic authentication]
 
-To create a [!DNL Dynamics] account with basic authentication, select [!UICONTROL Basic authentication] and then provide values for your [!UICONTROL Service URI], [!UICONTROL Username], and [!UICONTROL Password]. **Note**: Basic authentication in [!DNL Dynamics] may be blocked by two-factor authentication, which is currently not supported by Platform. In this case, it is recommended to use key-based authentication to create a source connector using [!DNL Dynamics].
+To create a [!DNL Dynamics] account with basic authentication, select [!UICONTROL Basic authentication] and then provide values for your [!UICONTROL Service URI], [!UICONTROL Username], and [!UICONTROL Password]. **Note**: Basic authentication in [!DNL Dynamics] may be blocked by two-factor authentication, which is currently not supported by Experience Platform. In this case, it is recommended to use key-based authentication to create a source connector using [!DNL Dynamics].
 
 When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new account to establish.
 
@@ -98,4 +98,4 @@ When finished, select **[!UICONTROL Connect to source]** and then allow some tim
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Dynamics] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/crm.md).
+By following this tutorial, you have established a connection to your [!DNL Dynamics] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Experience Platform](../../dataflow/crm.md).

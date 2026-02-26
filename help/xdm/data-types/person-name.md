@@ -11,7 +11,7 @@ exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
 
 In addition, the data type provides a number of optional properties that can be used in situations that require using only a fragment of the full name, such as creating a formal or informal greeting.
 
-<img src='../images/data-types/person-name.png' width=500 /><br />
+![](../images/data-types/person-name.png){width=500}
 
 | Property | Description |
 | --- | --- |

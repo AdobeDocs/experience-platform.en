@@ -9,7 +9,7 @@ This reference provides more information about how the auditor feature in Adobe 
 
 >[!NOTE]
 >
->For more information on auditor tests in Platform Debugger, see the [auditor feature overview](./overview.md).
+>For more information on auditor tests in Experience Platform Debugger, see the [auditor feature overview](./overview.md).
 
 Tag consistency tests look for inconsistencies across all scanned pages. These are values or configurations that should be the same across all pages on the site to ensure accurate data collection.
 

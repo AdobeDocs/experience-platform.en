@@ -14,7 +14,7 @@ To view all available endpoints and CRUD operations, please refer to the [Segmen
 
 ## Audiences
 
-Audiences are a collection of people who share similar behaviors and/or characteristics. These can be generated either by using Platform or from external sources. You can use the `/audiences` endpoint to retrieve all audiences, create a new audience, retrieve details of a specific audience, update a specific audience, or delete a specific audience.
+Audiences are a collection of people who share similar behaviors and/or characteristics. These can be generated either by using Experience Platform or from external sources. You can use the `/audiences` endpoint to retrieve all audiences, create a new audience, retrieve details of a specific audience, update a specific audience, or delete a specific audience.
 
 For more information on using this endpoint, please read the [audiences endpoint guide](./audiences.md).
 
@@ -23,6 +23,12 @@ For more information on using this endpoint, please read the [audiences endpoint
 Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the `/export/jobs` endpoint to retrieve all export jobs, create a new export job, retrieve details of a specific export job, or cancel a specific export job.
 
 For more information on using this endpoint, please read the [export jobs endpoint guide](./export-jobs.md).
+
+## External audiences
+
+You can import external audiences into Experience Platform, retrieve an audience's creation status, update an external audience, start an audience ingestion run, retrieve an external audience ingestion status, list audience ingestion runs, and delete an external audience by using the `/core/ais/external-audiences` endpoint. 
+
+For more information on using this endpoint, please read the [external audiences endpoint guide](./external-audiences.md).
 
 ## Previews and estimates
 
@@ -56,4 +62,4 @@ Segment search is used to search fields contained across various data sources an
 
 ## Next steps
 
-To get started with the [!DNL Segmentation Service] API, review the different endpoint guides for detailed steps on how to make calls to the service's various endpoints. To learn more about working with segments using the [!DNL Platform] UI, see the [Segmentation user guide](../ui/overview.md).
+To get started with the [!DNL Segmentation Service] API, review the different endpoint guides for detailed steps on how to make calls to the service's various endpoints. To learn more about working with segments using the [!DNL Experience Platform] UI, see the [Segmentation user guide](../ui/overview.md).

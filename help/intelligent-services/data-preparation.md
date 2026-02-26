@@ -31,7 +31,7 @@ The preparation process varies depending on whether your data is stored in Adobe
 
 ### External data preparation
 
-If your data is stored outside of Experience Platform, you need to map your data to the required and relevant fields in a [Consumer ExperienceEvent schema](#cee-schema). This schema can be augmented with custom field groups to better capture your customer data. Once mapped, you can create a dataset using your Consumer ExperienceEvent schema and [ingest your data to Platform](../ingestion/home.md). The CEE dataset can then be selected when configuring an [!DNL Intelligent Service].
+If your data is stored outside of Experience Platform, you need to map your data to the required and relevant fields in a [Consumer ExperienceEvent schema](#cee-schema). This schema can be augmented with custom field groups to better capture your customer data. Once mapped, you can create a dataset using your Consumer ExperienceEvent schema and [ingest your data to Experience Platform](../ingestion/home.md). The CEE dataset can then be selected when configuring an [!DNL Intelligent Service].
 
 Depending on the [!DNL Intelligent Service] you wish to use, different fields may be required. Note that it is a best practice to add data to a field if you have the data available. To learn more about the required fields, visit the [Attribution AI](./attribution-ai/input-output.md) or [Customer AI](./customer-ai/data-requirements.md) data requirements guide.
 
@@ -73,7 +73,7 @@ Once the source connector is streaming your data into Experience Platform, you a
 
 ### [!DNL Experience Platform] data preparation
 
-If your data is already stored in [!DNL Platform] and not streaming through the Adobe Analytics or Adobe Audience Manager (Customer AI only) source connectors, follow the steps below. It is still recommended you understand the CEE schema.
+If your data is already stored in [!DNL Experience Platform] and not streaming through the Adobe Analytics or Adobe Audience Manager (Customer AI only) source connectors, follow the steps below. It is still recommended you understand the CEE schema.
 
 1. Review the structure of the [Consumer ExperienceEvent schema](#cee-schema) and determine whether your data can be mapped to its fields.
 2. Contact Adobe Consulting Services to help map your data to the schema and ingest it into [!DNL Intelligent Services], or [follow the steps in this guide](#mapping) if you want to map the data yourself.
@@ -86,7 +86,7 @@ The CEE schema, like all XDM ExperienceEvent schemas, captures the time-series-b
 
 [!DNL Intelligent Services] utilize several key fields within this schema to generate insights from your marketing events data, all of which can be found at the root level and expanded to show their required subfields.
 
-![](./images/data-preparation/schema-expansion.gif)
+![Demo of schema expansion in Adobe Experience Platform UI, showing navigation and subfield details.](./images/data-preparation/schema-expansion.gif)
 
 Like all XDM schemas, the CEE schema field group is extensible. In other words, additional fields can be added to the CEE field group, and different variations can be included in multiple schemas if necessary.
 
@@ -128,19 +128,19 @@ If you are unsure which field you should use as a primary identity, contact Adob
 
 To set a primary identity, navigate to your schema from the **[!UICONTROL Schemas]** tab and select the schema name hyperlink to open the **[!DNL Schema Editor]**.
 
-![Navigate to schema](./images/data-preparation/navigate_schema.png)
+![Navigation to the schema in the Adobe Experience Platform UI.](./images/data-preparation/navigate_schema.png)
 
 Next, navigate to the field you wish to as a primary identity and select it. The **[!UICONTROL Field properties]** menu opens for that field.
 
-![Select the field](./images/data-preparation/find_field.png)
+![The process of selecting the desired field in the Adobe Experience Platform UI.](./images/data-preparation/find_field.png)
 
 In the **[!UICONTROL Field properties]** menu, scroll down until you find the **[!UICONTROL Identity]** checkbox. After checking the box, the option to set the selected identity as the **[!UICONTROL Primary identity]** appears. Select this box as well.
 
-![Select checkbox](./images/data-preparation/set_primary_identity.png)
+![Checkbox to set primary identity in the Adobe Experience Platform UI.](./images/data-preparation/set_primary_identity.png)
 
 Next, you must provide an **[!UICONTROL Identity namespace]** from the list of pre-defined namespaces in the dropdown. In this example, the ECID namesapce is selected since an Adobe Audience Manager ID `mcid.id` is being used. Select **[!UICONTROL Apply]** to confirm the updates then select **[!UICONTROL Save]** in the top-right corner to save the changes to your schema.
 
-![Save the changes](./images/data-preparation/select_namespace.png)
+![Dropdown menu showing the selection of the ECID namespace in the Adobe Experience Platform UI.](./images/data-preparation/select_namespace.png)
 
 #### xdm:timestamp {#timestamp}
 
@@ -154,7 +154,7 @@ This field represents the datetime at which the event occurred. This value must 
 
 This field represents the marketing channel related to the ExperienceEvent. The field includes information about the channel type, media type, and location type.
 
-![](./images/data-preparation/channel.png)
+![Diagram showing the structure of the xdm:channel field, including subfields such as type, mediaType, and mediaAction.](./images/data-preparation/channel.png)
 
 **Example schema**
 
@@ -192,7 +192,7 @@ The remainder of the key fields are outlined in this section. While these fields
 
 This field is an array of items which represent products selected by a customer, including the product SKU, name, price, and quantity.
 
-![](./images/data-preparation/productListItems.png)
+![The xdm:productListItems field, including subfields such as SKU, name, currencyCode, quantity, and priceTotal.](./images/data-preparation/productListItems.png)
 
 **Example schema**
 
@@ -221,7 +221,7 @@ For complete information regarding each of the required sub-fields for `xdm:prod
 
 This field contains commerce-specific information about the ExperienceEvent, including the purchase order number and payment information.
 
-![](./images/data-preparation/commerce.png)
+![The structure of the xdm:commerce field, including subfields such as order, purchases, and payments.](./images/data-preparation/commerce.png)
 
 **Example schema**
 
@@ -259,7 +259,7 @@ For complete information regarding each of the required sub-fields for `xdm:comm
 
 This field represents web details relating to the ExperienceEvent, such as the interaction, page details, and referrer.
 
-![](./images/data-preparation/web.png)
+![The xdm:web field, including subfields such as webPageDetails and webReferrer.](./images/data-preparation/web.png)
 
 **Example schema**
 
@@ -289,7 +289,7 @@ For complete information regarding each of the required sub-fields for `xdm:prod
 
 This field contains information related to marketing activities that are active with the touchpoint.
 
-![](./images/data-preparation/marketing.png)
+![The structure of the xdm:marketing field, including subfields such as trackingCode, campaignGroup, and campaignName.](./images/data-preparation/marketing.png)
 
 **Example schema**
 
@@ -315,7 +315,7 @@ If you have an [!DNL Adobe Experience Platform] subscription and want to map and
 
 >[!NOTE]
 >
->The steps below require a subscription to Experience Platform. If you do not have access to Platform, skip ahead to the [next steps](#next-steps) section.
+>The steps below require a subscription to Experience Platform. If you do not have access to Experience Platform, skip ahead to the [next steps](#next-steps) section.
 
 This section outlines the workflow for mapping and ingesting data into Experience Platform for use in [!DNL Intelligent Services], including links to tutorials for detailed steps.
 
@@ -337,7 +337,7 @@ Once you have created and saved the schema, you can create a new dataset based o
 * [Create a dataset in the UI](../catalog/datasets/user-guide.md#create) (Follow the workflow for using an existing schema)
 * [Create a dataset in the API](../catalog/datasets/create.md)
 
-After the dataset is created, you can find it in the Platform UI within the **[!UICONTROL Datasets]** workspace.
+After the dataset is created, you can find it in the Experience Platform UI within the **[!UICONTROL Datasets]** workspace.
 
 ![](images/data-preparation/dataset-location.png)
 
@@ -349,11 +349,11 @@ If you are ingesting data from a local CSV file, you can skip ahead to the next 
 
 #### Map and ingest data {#ingest}
 
-After creating a CEE schema and dataset, you can start mapping your data tables to the schema and ingest that data into Platform. See the tutorial on [mapping a CSV file to an XDM schema](../ingestion/tutorials/map-csv/overview.md) for steps on how to perform this in the UI. You can use the following [sample JSON file](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) to test the ingestion process before using your own data.
+After creating a CEE schema and dataset, you can start mapping your data tables to the schema and ingest that data into Experience Platform. See the tutorial on [mapping a CSV file to an XDM schema](../ingestion/tutorials/map-csv/overview.md) for steps on how to perform this in the UI. You can use the following [sample JSON file](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) to test the ingestion process before using your own data.
 
 Once a dataset has been populated, the same dataset can be used to ingest additional data files.
 
-If your data is stored in a supported third-party application, you can also choose to create a [source connector](../sources/home.md) to ingest your marketing events data into [!DNL Platform] in real time.
+If your data is stored in a supported third-party application, you can also choose to create a [source connector](../sources/home.md) to ingest your marketing events data into [!DNL Experience Platform] in real time.
 
 ## Next steps {#next-steps}
 

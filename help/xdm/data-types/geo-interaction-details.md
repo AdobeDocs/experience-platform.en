@@ -9,7 +9,7 @@ exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
 
 [!UICONTROL Geo interaction details] is a standard XDM data type that describes the current state of inclusion in a geographically defined area.
 
-<img src='../images/data-types/geo-interaction-details.png' width=400 /><br />
+![](../images/data-types/geo-interaction-details.png){width=400}
 
 | Property | Data type | Description |
 | --- | --- | --- |

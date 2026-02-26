@@ -38,13 +38,13 @@ The settings that are available to users when connecting to a destination depend
 
 For example, for [streaming destinations](/help/destinations/destination-types.md#streaming-destinations), a destination developer may configure which identities their destination accepts and only those identities will be displayed to the user in [mapping step of the activation workflow](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), as shown below:
 
-![Screen recording of the identity selection for target field in the mapping step of the activation workflow. ](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
+![Screen recording of the identity selection for target field in the mapping step of the activation workflow.](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
 
 Similarly, for [file-based destinations](/help/destinations/destination-types.md#file-based), the destination developer may determine which [filename append options](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) they want to make available for their destination, or which [file formatting options](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md) they want to make available, and the user will be able to select from these options only, as shown below:
 
 ![Screen recording of the file formatting option when connecting to a file-based destination.](/help/destinations/assets/how-destinations-work/file-formatting-options.gif)
 
-![Screen recording of the filename append option in the scheduling step of the activation workflow. ](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
+![Screen recording of the filename append option in the scheduling step of the activation workflow.](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
 
 Read more about the different options and steps available in the activation workflow:
 

@@ -192,6 +192,8 @@ A successful response returns the details of the schema. The fields that are ret
 
 The schema composition process begins by assigning a class. The class defines key behavioral aspects of the data (record or time series), as well as the minimum fields that are required to describe the data that will be ingested.
 
+For instructions on creating a schema without classes or field groups, known as a relational schema, see the [Create a relational schema](#create-relational-schema) section.
+
 >[!NOTE]
 >
 >The example call below is only a baseline example of how to create a schema in the API, with the minimal composition requirements of a class and no field groups. For complete steps on how to create a schema in the API, including how to assign fields using field groups and data types, see the [schema creation tutorial](../tutorials/create-schema-api.md).
@@ -272,6 +274,188 @@ A successful response returns HTTP status 201 (Created) and a payload containing
 Performing a GET request to [list all schemas](#list) in the tenant container would now include the new schema. You can perform a [lookup (GET) request](#lookup) using the URL-encoded `$id` URI to view the new schema directly.
 
 To add additional fields to a schema, you can perform a [PATCH operation](#patch) to add field groups to the schema's `allOf` and `meta:extends` arrays.
+
+## Create a relational schema {#create-relational-schema}
+
+>[!AVAILABILITY]
+>
+>Data Mirror and relational schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
+
+Create a relational schema by making a POST request to the `/schemas` endpoint. Relational schemas store structured, relational-style data **without** classes or field groups. Define fields directly on the schema, and identify the schema as relational using a logical behavior tag.
+
+>[!IMPORTANT]
+>
+>To create a relational schema, set `meta:extends` to `"https://ns.adobe.com/xdm/data/adhoc-v2"`. This is a **logical behavior identifier** (not a physical behavior or class). Do **not** reference classes or field groups in `allOf`, and do **not** include classes or field groups in `meta:extends`.
+
+Create the schema first with `POST /tenant/schemas`. Then add the required descriptors with the [Descriptors API (`POST /tenant/descriptors`)](../api/descriptors.md):
+
+- [Primary key descriptor](../api/descriptors.md#primary-key-descriptor): A primary-key field must be at the **root-level** and **marked as required**. 
+- [Version descriptor](../api/descriptors.md#version-descriptor): **Required** when a primary key exists. 
+- [Relationship descriptor](../api/descriptors.md#relationship-descriptor): Optional, defines joins; cardinality not enforced at ingestion.
+- [Timestamp descriptor](../api/descriptors.md#timestamp-descriptor): For time-series schemas, the primary key must be a **composite** key that includes the timestamp field.
+
+>[!NOTE]
+>
+>In the UI Schema Editor, the version descriptor and timestamp descriptors appears as "[!UICONTROL Version identifier]" and "[!UICONTROL Timestamp identifier]" respectively.
+
+>[!CAUTION]
+>
+>Relational schemas are **not compatible with union schemas**. Do not apply the `union` tag to `meta:immutableTags` when working with relational schemas. This configuration is blocked in the UI but is not currently blocked by the API. See the [unions endpoint guide](./unions.md) for more information on union schema behavior.
+
+**API format**
+
+```http
+POST /tenant/schemas
+```
+
+**Request**
+
+```shell
+curl --request POST \
+  --url https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas \
+  -H 'Accept: application/vnd.adobe.xed+json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+  "title": "marketing.customers",
+  "type": "object",
+  "description": "Schema of the Marketing Customers table.",
+  "definitions": {
+    "customFields": {
+      "type": "object",
+      "properties": {
+        "customer_id": {
+          "title": "Customer ID",
+          "description": "Primary key of the customer table.",
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "title": "Name",
+          "description": "Name of the customer.",
+          "type": "string"
+        },
+        "email": {
+          "title": "Email",
+          "description": "Email of the customer.",
+          "type": "string",
+          "format": "email",
+          "minLength": 1
+        }
+      },
+      "required": ["customer_id"]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/customFields",
+      "meta:xdmType": "object"
+    }
+  ],
+  "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
+  "meta:behaviorType": "record"
+}
+'
+```
+
+### Request body properties
+
+| Property                        | Type   | Description                                               |
+| ------------------------------- | ------ | --------------------------------------------------------- |
+| `title`                         | String | Display name of the schema.                               |
+| `description`                   | String | Short explanation of the schema's purpose.                |
+| `type`                          | String | Must be `"object"` for relational schemas.               |
+| `definitions`                   | Object | Contains the root-level object(s) that define your schema fields. |
+| `definitions.<name>.properties` | Object | Field names and data types.                               |
+| `allOf`                         | Array  | References the root-level object definition (for example, `#/definitions/marketing_customers`). |
+| `meta:extends`                  | Array  | Must include `"https://ns.adobe.com/xdm/data/adhoc-v2"` to identify the schema as relational.  |
+| `meta:behaviorType`             | String | Set to `"record"`. Use `"time-series"` only when enabled and appropriate. |
+
+>[!IMPORTANT]
+>
+>Schema evolution for relational schemas follows the same additive rules as standard schemas. You can add new fields with a PATCH request. Changes like renaming or removing fields are only allowed if no data has been ingested into the dataset.
+
+**Response**
+
+A successful request returns **HTTP 201 (Created)** and the created schema.
+
+>[!NOTE]
+>
+>Relational schemas do not inherit pre-seeded fields (for example, id, timestamp, or eventType). Define all required fields explicitly in your schema.
+
+**Example response**
+
+```json
+{
+  "$id": "https://ns.adobe.com/<TENANT_ID>/schemas/<SCHEMA_UUID>",
+  "meta:altId": "_<SCHEMA_ALT_ID>",
+  "meta:resourceType": "schemas",
+  "version": "1.0",
+  "title": "marketing.customers",
+  "description": "Schema of the Marketing Customers table.",
+  "type": "object",
+  "definitions": {
+    "marketing_customers": {
+      "type": "object",
+      "properties": {
+        "customer_id": {
+          "title": "Customer ID",
+          "description": "Primary key of the customer table.",
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "title": "Name",
+          "description": "Name of the customer.",
+          "type": "string"
+        },
+        "email": {
+          "title": "Email",
+          "description": "Email of the customer.",
+          "type": "string",
+          "format": "email",
+          "minLength": 1
+        }
+      },
+      "required": ["customer_id"]
+    }
+  },
+  "allOf": [
+    { "$ref": "#/definitions/marketing_customers" }
+  ],
+  "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
+  "meta:behaviorType": "record",
+  "meta:containerId": "tenant"
+}
+```
+
+### Response body properties
+
+| Property            | Type   | Description                |
+| ------------------- | ------ | -------------------------- |
+| `$id`               | String | The unique URL of the created schema. Use in subsequent API calls. |
+| `meta:altId`        | String | An alternate identifier for the schema.                        |
+| `meta:resourceType` | String | The resource type (always `"schemas"`).                         |
+| `version`           | String | A schema version assigned at creation.                          |
+| `title`             | String | The display name of the schema.                                 |
+| `description`       | String | A short explanation of the schema's purpose.                  |
+| `type`              | String | The schema type.                                                |
+| `definitions`       | Object | Defines reusable objects or field groups used in the schema. This typically includes the main data structure and is referenced in the `allOf` array to define the schema root. |
+| `allOf`             | Array | Specifies the root object of the schema by referencing one or more definitions (for example, `#/definitions/marketing_customers`). |
+| `meta:extends`      | Array  | Identifies the schema as relational (`adhoc-v2`).          |
+| `meta:behaviorType` | String | Behavior type (`record` or `time-series`, when enabled).    |
+| `meta:containerId`  | String | Container in which the schema is stored (e.g., `tenant`).   |
+
+To add fields to a relational schema after it's been created, make a [PATCH request](#patch). Relational schemas do not inherit or auto-evolve. Structural changes like renaming or deleting fields are only allowed if no data has been ingested into the dataset. Once data exists, only **additive changes** (such as adding new fields) are supported.
+
+You can add new root-level fields (within the root definition or root `properties`), but you cannot remove, rename, or change the type of existing fields.
+
+>[!CAUTION]
+>
+>Schema evolution becomes restricted after a dataset is initialized using the schema. Plan field names and types carefully beforehand as once data has been ingested, fields cannot be deleted or modified.
 
 ## Update a schema {#put}
 

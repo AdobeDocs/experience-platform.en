@@ -59,9 +59,9 @@ Read this page to get an overview of all the available playbooks that you can di
 
 | Playbook name | Description |
 | ------------- | ----------- |
-| Abandoned Browsing: Merchandise&mdash;For Activation | Retarget fans after they leave your website or app after adding the merchandise to the cart. |
-| Abandoned Browsing: Product&mdash;For Activation | Retarget shoppers after they leave your website or app after adding the products to the cart. |
-| Abandoned Browsing: Reservation&mdash;For Activation | Retarget guests after they leave your website or app after adding a new reservation to the cart. |
+| Abandoned Browsing: Merchandise&mdash;For Activation | Retarget fans after they leave your website or app after browsing merchandise. |
+| Abandoned Browsing: Product&mdash;For Activation | Retarget shoppers after they leave your website or app after browsing a product. |
+| Abandoned Browsing: Reservation&mdash;For Activation | Retarget guests after they leave your website or app after browsing a potential reservation. |
 | Abandoned Cart: Merchandise&mdash;For Activation | Retarget fans after they leave your website or app after adding the sports merchandise to the cart. |
 | Abandoned Cart: Product&mdash;For Activation | Retarget shoppers after they leave your website or app after adding products to the cart. |
 | Abandoned Cart: Reservation&mdash;For Activation | Retarget guests after they leave your website or app after adding a new reservation to the cart. |

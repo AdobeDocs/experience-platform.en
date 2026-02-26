@@ -19,6 +19,7 @@ The Model Insights Framework provides the data scientist with tools in [!DNL Dat
 ## What are metrics?
 
 After implementing and training a model, the next step a data scientist would do is to find how well the model will perform. Various metrics are used to find how effective a model will do compared with others. Some examples of metrics used include:
+
 - Classification accuracy
 - Area under curve
 - Confusion matrix
@@ -27,6 +28,7 @@ After implementing and training a model, the next step a data scientist would do
 ## Configuring recipe code
 
 Currently, the Model Insights Framework supports the following runtimes:
+
 - [Scala](#scala)
 - [Python/Tensorflow](#pythontensorflow)
 - [R](#r)
@@ -148,6 +150,7 @@ As of now, there are no default evaluation metrics for R. Thus, to get the evalu
 The main purpose of the `applicationEvaluator` is to return a JSON object containing key-value pairs of metrics.
 
 This [applicationEvaluator.R](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/R/applicationEvaluator.R) can be used as an example. In this example, the `applicationEvaluator` is split into three familiar sections:
+
 - Load data
 - Data preparation/feature engineering
 - Retrieve saved model and evaluate

@@ -1,5 +1,5 @@
 ---
-title: Install Platform Debugger
+title: Install Experience Platform Debugger
 description: Learn how to install Adobe Experience Platform Debugger.
 keywords: debugger;experience Platform Debugger extension;chrome;extension;install
 seo-description: How to Install Experience Platform Debugger
@@ -7,7 +7,7 @@ seo-title: Install Experience Platform Debugger
 uuid: 16d77c6d-11e7-4dfd-a846-3dace9f4070f
 exl-id: add83773-dad7-4abe-9740-a69eb8fadbc3
 ---
-# Install Platform Debugger
+# Install Experience Platform Debugger
 
 Adobe Experience Platform Debugger can be installed in the Google Chrome browser. Follow the link below to install the extension on your browser:
 

@@ -1,9 +1,7 @@
 ---
 title: Magnite Batch Destination
 description: Use this destination to deliver Adobe CDP audiences to the Magnite Streaming platform in batch.
-badgeBeta: label="Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+last-substantial-update: 2024-11-18
 exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
 ---
 # Magnite: Batch connection {#magnite-streaming-batch}
@@ -25,8 +23,6 @@ Continue reading below for more information about the Magnite: Batch destination
 For more information about the Real-Time destination, See [this documentation page](magnite-streaming.md) instead.
 
 >[!IMPORTANT]
->
->This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative.
 >
 >The destination connector and documentation page are created and maintained by the [!DNL Magnite] team. For any inquiries or update requests, please contact them directly at `adobe-tech@magnite.com`.
 
@@ -70,10 +66,24 @@ The Magnite: Batch destination can receive *any* identity sources from the Adobe
 
 | Audience origin             | Supported | Description | 
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads              | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -110,7 +120,11 @@ To configure details for the destination, fill in the required and optional fiel
   future.
 *  **[!UICONTROL Description]**: A description that will help you identify this
   destination connection/instance in the future.
-*  **[!UICONTROL Name of your source partner]**: The name you would like to go by as a source in Magnite Streaming's platform
+*  **[!UICONTROL Your company name]**: Your customer/company name. Only supported [!DNL Magnite Streaming] clients are available for selection. 
+  
+>[!NOTE]
+>
+>The company name must be a string which matches the name of the Amazon S3 delivery bucket you have configured with Magnite and set up in the [authenticate to destination](#authenticate) step. The supported characters include 'a-z', 'A-Z', '0-9', '-'(dash), or '_'(underscore).
 
 ![destination configuration auth fields filled](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
 

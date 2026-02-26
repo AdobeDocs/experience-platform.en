@@ -31,3 +31,7 @@ No. AI Assistant does not have access to profile-level data and therefore, it is
 ## Will my personal information be utilized in AI Assistant's training data?
 
 AI Assistant does not use personal information for training purposes. Do not provide any personal information about yourself (including your name or contact information) or any other parties to AI Assistant.
+
+## Can I run the SQL query returned by AI Assistant when verifying an answer?
+
+No. This SQL query is read-only and cannot be run on AI Assistant or Query Service.

@@ -23,10 +23,10 @@ Identifying your online users requires instrumentizing your site or mobile app w
 
 ## Next steps and additional resources
 
-The following documentation provides further resources on understanding ECID across different Platform and Experience Cloud applications:
+The following documentation provides further resources on understanding ECID across different Experience Platform and Experience Cloud applications:
 
 * To use ECID with website implementation, see the documentation for [Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html).
 * To see how ECID is used with apps and mobile web content, see the documentation for [visitor tracking between an app and mobile web](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html#sdk-reference-ios).
 * Deploying these tools can be simple and easy to manage if you use [tags](../../tags/home.md).
 * See the [Privacy Service documentation](../../privacy-service/identity-data.md) for information on using ECID to facilitate compliance with privacy regulations like GDPR.
-* For more information on ECID with the context of Platform, see the [Identity Service overview](../home.md) and the [identity namespaces overview](./namespaces.md).
+* For more information on ECID with the context of Experience Platform, see the [Identity Service overview](../home.md) and the [identity namespaces overview](./namespaces.md).

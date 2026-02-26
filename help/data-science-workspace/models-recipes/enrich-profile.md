@@ -25,8 +25,8 @@ This document provides links to tutorials that enable you to enrich [!DNL Real-T
 In order to complete the tutorials below, you are required to have a working understanding of ingesting [!DNL Profile] data and creating audiences. Before beginning this tutorial, please review the documentation for the following services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a complete, unified representation of each individual customer based on aggregated data from multiple sources.
-- [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-Time Customer Profile] by bridging identities from disparate data sources being ingested into Platform.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+- [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-Time Customer Profile] by bridging identities from disparate data sources being ingested into Experience Platform.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
 
 In addition to the above-mentioned documents, it is highly recommended that you also review the following guides on schemas and the Schema Editor:
 

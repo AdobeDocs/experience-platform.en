@@ -21,7 +21,7 @@ The [Audience Manager source connector](../sources/connectors/adobe-applications
 
 Follow the guide on how to [create an Audience Manager source connection](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) to configure your source connector.
 
-![Platform UI image showing the Sources tab with the Audience Manager source connection.](assets/sources-tab.png)
+![Experience Platform UI image showing the Sources tab with the Audience Manager source connection.](assets/sources-tab.png)
 
 >[!TIP]
 >
@@ -35,7 +35,7 @@ The audiences that you bring into Expanded Activation from Audience Manager are 
 
 To view your audiences, go to **[!UICONTROL Customer]** -> **[!UICONTROL Audiences]** -> **[!UICONTROL Browse]**.
 
-![Platform UI image showing the Audiences page.](assets/audiences-browse.png)
+![Experience Platform UI image showing the Audiences page.](assets/audiences-browse.png)
 
 >[!IMPORTANT]
 >
@@ -52,7 +52,7 @@ In the left sidebar, go to **[!UICONTROL Connections]** -> **[!UICONTROL Destina
 
 The available destination categories for [!DNL Expanded Activation] are [advertising](../destinations/catalog/advertising/overview.md) and [social](../destinations/catalog/social/overview.md).
 
-![Platform UI image showing the destination catalog for Expanded Activation.](assets/destination-catalog.png)
+![Experience Platform UI image showing the destination catalog for Expanded Activation.](assets/destination-catalog.png)
 
 To create a new connection to a destination platform, follow the guide on [how to create a new destination connection](../destinations/ui/connect-destination.md). Then, move to [step 3](#activate-audiences).
 
@@ -60,7 +60,7 @@ To create a new connection to a destination platform, follow the guide on [how t
 
 After you have successfully [ingested Audience Manager audiences](#configure-source) and [created a new destination connection](#create-destination-connection), you can now activate your audiences to the destination platform of your choice.
 
-![Platform UI image showing the destination catalog for Expanded Activation.](assets/activate-audiences.png)
+![Experience Platform UI image showing the destination catalog for Expanded Activation.](assets/activate-audiences.png)
 
 To activate audiences to your destination, follow the guide on [how to activate audiences to streaming destinations](../destinations/ui/activate-segment-streaming-destinations.md).
 

@@ -15,7 +15,7 @@ This tutorial outlines the steps necessary to generate the dataset overlap repor
 
 ## Getting started
 
-In order to use Adobe Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) to gather the values that you need for the required headers. To learn more about Experience Platform APIs, please refer to the [getting started with Platform APIs documentation](../../landing/api-guide.md). 
+In order to use Adobe Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) to gather the values that you need for the required headers. To learn more about Experience Platform APIs, please refer to the [getting started with Experience Platform APIs documentation](../../landing/api-guide.md). 
 
 The required headers for all of the API calls in this tutorial are:
 

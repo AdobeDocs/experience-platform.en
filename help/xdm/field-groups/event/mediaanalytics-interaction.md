@@ -19,7 +19,7 @@ exl-id: 1096d28a-5796-49cc-bd45-b3f5188f699e
 
 >[!TIP]
 >
->You can hide fields that are not used by the Media Edge API. Hiding these fields makes the schema easier to read and understand, but it is not required. These fields refer only to those in the [!UICONTROL MediaAnalytics Interaction Details] fieldgroup. To improve readability in the Platform UI, follow the instructions in the [Media Analytics documentation on how to hide unused fields](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform).
+>You can hide fields that are not used by the Media Edge API. Hiding these fields makes the schema easier to read and understand, but it is not required. These fields refer only to those in the [!UICONTROL MediaAnalytics Interaction Details] fieldgroup. To improve readability in the Experience Platform UI, follow the instructions in the [Media Analytics documentation on how to hide unused fields](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform).
 
 <!-- 
 >[!NOTE]

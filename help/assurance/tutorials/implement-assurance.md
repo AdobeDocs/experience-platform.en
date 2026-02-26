@@ -5,7 +5,7 @@ exl-id: b7bd1bb1-1606-4d00-97e0-c329c86d8ca4
 ---
 # Implementing the Adobe Experience Platform Assurance extension
 
-This tutorial explains how to install and implement the Platform Assurance extension in the Mobile SDK. For instructions on adding the Assurance extension to your application, please read the [Adobe Experience Platform Assurance extension overview](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
+This tutorial explains how to install and implement the Experience Platform Assurance extension in the Mobile SDK. For instructions on adding the Assurance extension to your application, please read the [Adobe Experience Platform Assurance extension overview](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
 
 ## Getting started
 

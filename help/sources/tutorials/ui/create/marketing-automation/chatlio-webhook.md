@@ -42,25 +42,25 @@ Before creating a [!DNL Chatlio] source connection, you will require a source sc
 }
 ```
 
-### Create a Platform schema for [!DNL Chatlio] {#create-platform-schema}
+### Create an Experience Platform schema for [!DNL Chatlio] {#create-platform-schema}
 
-You must also ensure that you create a Platform schema to use for your source. Read the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
+You must also ensure that you create an Experience Platform schema to use for your source. Read the tutorial on [creating an Experience Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
 
-![The Platform UI showing an example schema for Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
+![The Experience Platform UI showing an example schema for Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
 
 ## Connect your [!DNL Chatlio] account {#connect-account}
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace and see a catalog of sources available in Experience Platform.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace and see a catalog of sources available in Experience Platform.
 
 Use the *[!UICONTROL Categories]* menu to filter sources by category. Alternatively, enter a source name in the search bar to find a specific source from the catalog.
 
 Go to the [!UICONTROL Marketing automation] category to see the [!DNL Chatlio] source card. To begin, select **[!UICONTROL Add data]**.
 
-![The Platform UI catalog with Chatlio card](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/catalog.png)
+![The Experience Platform UI catalog with Chatlio card](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/catalog.png)
 
 ## Select data {#select-data}
 
-The **[!UICONTROL Select data]** step appears, providing an interface for you to select the data that you want to bring to Platform.
+The **[!UICONTROL Select data]** step appears, providing an interface for you to select the data that you want to bring to Experience Platform.
 
 * The left part of the interface is a browser that allows you to view the available data streams within your account;
 * The right part of the interface lets you preview up to 100 rows of data from a JSON file.
@@ -87,7 +87,7 @@ When finished, select **[!UICONTROL Next]**.
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
-Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
+Experience Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
 The mappings listed below are mandatory and should be setup before proceeding to the [!UICONTROL Review] stage.
 
@@ -145,7 +145,7 @@ Next, select the **[!DNL Behavior]** tab and add your webhook URL to the *[!DNL 
 
 ## Next steps {#next-steps}
 
-By following this tutorial you have successfully configured a streaming dataflow to bring your [!DNL Chatlio] data to Experience Platform. To monitor the data that is being ingested, refer to the guide on [monitoring streaming dataflows using Platform UI](../../monitor-streaming.md).
+By following this tutorial you have successfully configured a streaming dataflow to bring your [!DNL Chatlio] data to Experience Platform. To monitor the data that is being ingested, refer to the guide on [monitoring streaming dataflows using Experience Platform UI](../../monitor-streaming.md).
 
 ## Additional resources {#additional-resources}
 
@@ -159,8 +159,8 @@ To validate that you have correctly set up the source and [!DNL Chatlio] message
 
 ![Chatlio UI screenshot showing chat history](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/chatlio-chat-history.png)
 
-* In the Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL Chatlio] card menu on the sources catalog. Next, select **[!UICONTROL Preview dataset]** to verify the data that was ingested for the webhooks that you have configured within [!DNL Chatlio].
+* In the Experience Platform UI, select **[!UICONTROL View Dataflows]** beside the [!DNL Chatlio] card menu on the sources catalog. Next, select **[!UICONTROL Preview dataset]** to verify the data that was ingested for the webhooks that you have configured within [!DNL Chatlio].
 
-![Platform UI screenshot showing ingested events](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png)
+![Experience Platform UI screenshot showing ingested events](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png)
 
 For additional information on [!DNL Chatlio], visit the [[!DNL Chatlio] documentation](https://chatlio.com/docs/) and [FAQ](https://chatlio.com/pricing/#FAQ).

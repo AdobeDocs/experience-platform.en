@@ -9,7 +9,7 @@ exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
 
 [!UICONTROL Postal address] is a standard XDM data type that describes the details of a mailing address.
 
-<img src='../images/data-types/postal-address.png' width=450 /><br />
+![](../images/data-types/postal-address.png){width=450}
 
 | Property | Description |
 | --- | --- |

@@ -62,7 +62,7 @@ In order to use Data Science Workspace, the "Manage Data Science Workspace" perm
 
 ## Sandbox support
 
-Sandboxes are virtual partitions within a single instance of Experience Platform. Each Platform instance supports multiple production and non-production sandboxes, each maintaining its own library of Platform resources. Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandboxes. For more information on sandboxes, see the [sandboxes overview](../sandboxes/home.md).
+Sandboxes are virtual partitions within a single instance of Experience Platform. Each Experience Platform instance supports multiple production and non-production sandboxes, each maintaining its own library of Experience Platform resources. Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandboxes. For more information on sandboxes, see the [sandboxes overview](../sandboxes/home.md).
 
 Currently, Data Science Workspace has the following sandbox limitation:
 

@@ -46,7 +46,7 @@ The marketing analyst configures the desired predictions by specifying business 
 
 ### Predict
 
-After the models have finished training and scoring, the scores are written back into Platform.
+After the models have finished training and scoring, the scores are written back into Experience Platform.
 
 ### Take action 
 

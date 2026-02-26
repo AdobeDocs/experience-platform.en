@@ -21,7 +21,7 @@ Type: Realtime data
 | `requestIds[]` | `ExperienceEvent.endUserIds` - *Only for namespaces present in endUserIds and only first value.* |
 | `primaryDeviceId` | `ExperienceEvent.identityMap["CORE"]` |
 | `primaryDeviceId` | ExperienceEvent.endUserIds - *Only for namespaces present in endUserIds and only first value.* |
-| `trait[] `| `ExperienceEvent.segmentMemberships["AAMTraits"]` |
+| `trait[]` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
 | `segments[]` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `mergeRules[]` |`ExperienceEvent.profileStitch[]` |
 | `timestamps` | `ExperienceEvent.timeStamp` |

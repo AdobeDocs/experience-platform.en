@@ -13,7 +13,7 @@ exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 >
 >All values should be aligned with the [DeviceAtlas](https://deviceatlas.com) database, licensed by Adobe.
 
-<img src='../images/data-types/environment.png' width=400 /><br />
+![](../images/data-types/environment.png){width=400}
 
 | Property | Data type | Description |
 | --- | --- | --- |

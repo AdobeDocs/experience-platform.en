@@ -9,7 +9,7 @@ exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
 
 The [!DNL Schema Registry] is used to access the Schema Library within Adobe Experience Platform, providing a user interface and RESTful API from which all available library resources are accessible.
 
-The Schema Registry API provides several endpoints that allow you to programmatically manage all schemas and related Experience Data Model (XDM) resources available to you within Platform. This includes those defined by Adobe, [!DNL Experience Platform] partners, and vendors whose applications you use.
+The Schema Registry API provides several endpoints that allow you to programmatically manage all schemas and related Experience Data Model (XDM) resources available to you within Experience Platform. This includes those defined by Adobe, [!DNL Experience Platform] partners, and vendors whose applications you use.
 
 These endpoints are outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
 
@@ -21,7 +21,7 @@ To view all available endpoints and CRUD operations, visit the [Schema Registry 
 
 ## Schemas
 
-XDM schemas represent and validate the structure and format of data ingested into Platform. A schema is composed of a class and zero or more schema field groups. You can create, view, edit, and delete schemas using the `/schemas` endpoint. To learn how to use this endpoint, see the [schemas endpoint guide](./schemas.md).
+XDM schemas represent and validate the structure and format of data ingested into Experience Platform. A schema is composed of a class and zero or more schema field groups. You can create, view, edit, and delete schemas using the `/schemas` endpoint. To learn how to use this endpoint, see the [schemas endpoint guide](./schemas.md).
 
 For a step-by-step guide on how to manually create a complete schema in the Schema Registry API, including creating and adding field groups and data types, see the [API schema creation tutorial](../tutorials/create-schema-api.md).
 
@@ -53,7 +53,7 @@ Descriptors are sets of metadata that are assigned to specific fields within a s
 
 ## Unions
 
-While Platform allows you to compose schemas for particular use cases, it also allows you to compose a "union" of schemas belonging to a specific class. A union schema aggregates the fields of all schemas that share the same class into a single representation. By enabling a schema for use with [Real-Time Customer Profile](../../profile/home.md), that schema becomes included in the union for its particular class. As such, union schemas cannot be edited directly, and can only be affected by including or excluding schemas for use in Profile.
+While Experience Platform allows you to compose schemas for particular use cases, it also allows you to compose a "union" of schemas belonging to a specific class. A union schema aggregates the fields of all schemas that share the same class into a single representation. By enabling a schema for use with [Real-Time Customer Profile](../../profile/home.md), that schema becomes included in the union for its particular class. As such, union schemas cannot be edited directly, and can only be affected by including or excluding schemas for use in Profile.
 
 To learn how to view unions in the Schema Registry API, see the [unions endpoint guide](./unions.md).
 

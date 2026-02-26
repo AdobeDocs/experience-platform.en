@@ -1,21 +1,21 @@
 ---
-title: Manage Platform Data Using Python and SQLAlchemy
-description: Learn how to use SQLAlchemy to manage your Platform data using Python instead of SQL.
+title: Manage Experience Platform Data Using Python and SQLAlchemy
+description: Learn how to use SQLAlchemy to manage your Experience Platform data using Python instead of SQL.
 exl-id: 9fba942e-9b3d-4efe-ae94-aed685025dea
 ---
-# Manage Platform data using [!DNL Python] and [!DNL SQLAlchemy] 
+# Manage Experience Platform data using [!DNL Python] and [!DNL SQLAlchemy] 
 
 Learn how to use SQLAlchemy for greater flexibility in the management of your Adobe Experience Platform data. For those who are not as familiar with SQL, SQLAlchemy can greatly improve development time when working with relational databases. This document provides instructions and examples to connect [!DNL SQLAlchemy] to Query Service and begin using Python to interact with your databases.
 
-[!DNL SQLAlchemy] is an Object Relational Mapper (ORM) and a [!DNL Python] code library that can transfer data stored in a SQL database into [!DNL Python] objects. You can then perform CRUD operations on data held within the Platform data lake using [!DNL Python] code. This removes the need to manage data using only PSQL.
+[!DNL SQLAlchemy] is an Object Relational Mapper (ORM) and a [!DNL Python] code library that can transfer data stored in a SQL database into [!DNL Python] objects. You can then perform CRUD operations on data held within the Experience Platform data lake using [!DNL Python] code. This removes the need to manage data using only PSQL.
 
 ## Getting started
 
-To acquire the necessary credentials for connecting [!DNL SQLAlchemy] to Experience Platform, you must have access to the Queries workspace in the Platform UI. Please contact your organization administrator if you do not currently have access to the Queries workspace. 
+To acquire the necessary credentials for connecting [!DNL SQLAlchemy] to Experience Platform, you must have access to the Queries workspace in the Experience Platform UI. Please contact your organization administrator if you do not currently have access to the Queries workspace. 
 
 ## [!DNL Query Service] credentials {#credentials}
 
-To find your credentials, log in to the Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For complete directions on how to find your login credentials, please read the [credentials guide](../ui/credentials.md).
+To find your credentials, log in to the Experience Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For complete directions on how to find your login credentials, please read the [credentials guide](../ui/credentials.md).
 
 ![The Credential tab with expiring credentials for Query Service highlighted.](../images/use-cases/credentials.png)
 
@@ -63,7 +63,7 @@ After the variables have been created, import the `create_engine` function and c
 >
 >`create_engine`returns an instance of an engine. However, it does not open the connection to Query Service until a query is called that requires a connection.
 
-SSL must be enabled when accessing Platform using third-party clients. As part of your engine, use the `connect_args` to enter additional keyword arguments. You are recommended to set your SSL mode to `require`. See the [SSL modes documentation](../clients/ssl-modes.md) for more information on accepted values. 
+SSL must be enabled when accessing Experience Platform using third-party clients. As part of your engine, use the `connect_args` to enter additional keyword arguments. You are recommended to set your SSL mode to `require`. See the [SSL modes documentation](../clients/ssl-modes.md) for more information on accepted values. 
 
 The example below displays the [!DNL Python] code necessary to initialize an engine and connection string.
 
@@ -85,7 +85,7 @@ engine = create_engine(db_string, connect_args={'sslmode':'require'})
 >
 >The password you provide to connect [!DNL SQLAlchemy] to Experience Platform will expire if you use expiring credentials. See the [credentials section](#credentials) for more information.
 
-You are now ready to query Platform data using [!DNL Python]. The example shown below returns an array of Query Service table names.
+You are now ready to query Experience Platform data using [!DNL Python]. The example shown below returns an array of Query Service table names.
 
 ```python
 from sqlalchemy import inspect

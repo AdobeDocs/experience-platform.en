@@ -7,9 +7,9 @@ exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 ---
 # XDM System troubleshooting guide
 
-This document provides answers to frequently asked questions about [!DNL Experience Data Model] (XDM) and XDM System in Adobe Experience Platform, including a troubleshooting guide for common errors. For questions and troubleshooting related to other Platform services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about [!DNL Experience Data Model] (XDM) and XDM System in Adobe Experience Platform, including a troubleshooting guide for common errors. For questions and troubleshooting related to other Experience Platform services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model] (XDM)** is an open-source specification that defines standardized schemas for customer experience management. The methodology on which [!DNL Experience Platform] is built, **XDM System**, operationalizes [!DNL Experience Data Model] schemas for use by [!DNL Platform] services. The **[!DNL Schema Registry]** provides a user interface and a RESTful API to access the **[!DNL Schema Library]** within [!DNL Experience Platform]. See the [XDM documentation](home.md) for more information.
+**[!DNL Experience Data Model] (XDM)** is an open-source specification that defines standardized schemas for customer experience management. The methodology on which [!DNL Experience Platform] is built, **XDM System**, operationalizes [!DNL Experience Data Model] schemas for use by [!DNL Experience Platform] services. The **[!DNL Schema Registry]** provides a user interface and a RESTful API to access the **[!DNL Schema Library]** within [!DNL Experience Platform]. See the [XDM documentation](home.md) for more information.
 
 ## FAQ
 
@@ -57,11 +57,13 @@ For more information on field types, see the document on [XDM field type constra
 
 XDM places the following restrictions on the use of this data type:
 
-- Map types MUST be of type object.
+- Map types MUST be of type `object`.
 - Map types MUST NOT have properties defined (in other words, they define "empty" objects).
-- Map types MUST include an additionalProperties.type field that describes the values that may be placed within the map, either string or integer.
-- Multi-entity segmentation can only be defined based on the map keys and not the values.
+- Map types MUST include an `additionalProperties.type` field that describes the values that may be placed within the map, either `string` or `integer`.
+- Multi-entity segmentation can only be defined based on the map keys and not the values.     
 - Maps are not supported for account audiences.
+- Maps defined in custom XDM objects are limited to a single level. Nested maps cannot be created. This restriction does not apply to maps defined in standard XDM objects.
+- Arrays of maps are not supported.
 
 See the [usage restrictions for map objects](./ui/fields/map.md#restrictions) for more details.
 
@@ -132,17 +134,11 @@ For more information, see the section on [use in Real-Time Customer Profile](./t
 
 The schema is not automatically enabled for for Real-Time Customer Profile. You need to explicitly enable the dataset for Profile based on which schema is enabled for Profile. See the documentation to learn the [steps and requirements needed to enable a dataset for use in Real-Time Customer Profile](../catalog/datasets/user-guide.md#enable-profile).
 
-### Can I delete Profile-enabled schemas?
+### Can I delete Profile-enabled schemas? {#delete-profile-enabled}
 
 You cannot delete a schema after it has been enabled for Real-Time Customer Profile. Once a schema is enabled for Profile, it cannot be disabled or deleted, and fields cannot be removed from the schema. Therefore, it is crucial to carefully plan and verify the schema configuration before enabling it for Profile. You can however, delete a Profile-enabled dataset. Information is found here: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset> 
 
->[!IMPORTANT]
->
->To remove a Profile-enabled schema you would need the help of the XDM Platform Support Team and must follow these steps:
->
-> 1. Delete all the datasets associated with the schema (which is enabled for Profile)
-> 2. Delete the Profile export snapshot from the sandbox (this requires the help of XDM Platform Support Team)
-> 3. Force delete schema from the sandbox (this can only be done by the XDM Platform Support Team)
+If you no longer wish for a Profile-enabled schema to be used, it's recommended to rename the schema to include **Do Not Use** or **Inactive**.
 
 ## Schema Modification and Restrictions
 

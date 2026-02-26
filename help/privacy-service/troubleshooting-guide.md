@@ -57,7 +57,7 @@ The array contains two objects, representing individual users identified by thei
 For more information on providing user identity information, see the guide on [identity data for privacy requests](identity-data.md).
 
 
-## Can I use [!DNL Privacy Service] to clean up data that was accidentally sent to [!DNL Platform]?
+## Can I use [!DNL Privacy Service] to clean up data that was accidentally sent to [!DNL Experience Platform]?
 
 Adobe does not support using [!DNL Privacy Service] for clearing out data that was accidentally submitted to a product. [!DNL Privacy Service] is designed to assist you in meeting your obligations for data subject (or consumer) access or delete requests. Any other usage of Privacy Service for data cleanup or maintenance is not supported or allowed. 
 

@@ -13,7 +13,7 @@ This document covers the steps for connecting the [!DNL DbVisualizer] database t
 
 This guide requires that you already have access to the [!DNL DbVisualizer] desktop app and are familiar with how to navigate its interface. To download the [!DNL DbVisualizer] desktop app or for more information, see the [official [!DNL DbVisualizer] documentation](https://www.dbvis.com/download/).
 
-To acquire the necessary credentials for connecting [!DNL  DbVisualizer] to Experience Platform, you must have access to the Queries workspace in the Platform UI. Please contact your organization administrator if you do not currently have access to the Queries workspace. 
+To acquire the necessary credentials for connecting [!DNL  DbVisualizer] to Experience Platform, you must have access to the Queries workspace in the Experience Platform UI. Please contact your organization administrator if you do not currently have access to the Queries workspace. 
 
 ## Create a database connection {#connect-database}
 
@@ -38,7 +38,7 @@ Next, enter the driver properties described in the table below.
 | `sslmode` | This controls the level of SSL protection. You are recommended to use the `require` SSL mode when connecting third-party clients to Adobe Experience Platform. The `require` mode ensures that encryption is required on all communications and that the network is trusted to connect to the correct server. Server SSL certificate validation is not required. |
 | `user` | The username connected to the database is your organization ID. It is an alphanumeric string ending in `@Adobe.Org`. This value is your Experience Platform **[!UICONTROL Username] credential**. |
 
-Use the search bar to find each property then select the corresponding cell for the parameter's value. The cell will highlight in blue. Enter your Platform credential in the value field and select **[!DNL Apply]** to add the driver property.
+Use the search bar to find each property then select the corresponding cell for the parameter's value. The cell will highlight in blue. Enter your Experience Platform credential in the value field and select **[!DNL Apply]** to add the driver property.
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ The [!DNL Edited] column shows a checkmark to denote that the parameter value ha
 
 ### Input Query Service credentials {#query-service-credentials}
 
-To find the credentials necessary to connect BBVisualizer with Query Service, log in to the Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For more information on finding your **host**, **port**, **database**, **username**, and **password** credentials, please read the [credentials guide](../ui/credentials.md). 
+To find the credentials necessary to connect BBVisualizer with Query Service, log in to the Experience Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For more information on finding your **host**, **port**, **database**, **username**, and **password** credentials, please read the [credentials guide](../ui/credentials.md). 
 
 ![The Credentials page of the Experience Platform Queries workspace with Credentials and the Expiring Credentials highlighted.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
@@ -62,7 +62,7 @@ To require a user ID and password-based authentication each time a connection is
 
 In the Connection Authentication panel, check both the **[!DNL Require Userid]** and **[!DNL Require Password]** checkboxes then select **[!DNL Apply]**. More information on [setting authentication options](https://confluence.dbvis.com/display/UG140/Setting+Common+Authentication+Options) can be fond in the official documentation.
 
-## Connect to Platform
+## Connect to Experience Platform
 
 You can make a connection using expiring or non-expiring credentials. To make a connection, select the **[!DNL Connection]** tab from the [!DNL PostgreSQL] object view tab and enter your Experience Platform credentials for the following settings. Complementary instructions to [set up a manual connection](https://confluence.dbvis.com/display/UG100/Setting+Up+a+Connection+Manually) are available on the official DBVisualizer website. 
 
@@ -76,7 +76,7 @@ You can make a connection using expiring or non-expiring credentials. To make a 
 |**[!UICONTROL Database Server]**| This is your Experience Platform **[!UICONTROL Host]** credential. |
 |**[!UICONTROL Database Port]**| The port for [!DNL Query Service]. You must use port **80** or **5432** to connect with [!DNL Query Service].|
 |**[!UICONTROL Database]**| Use your Experience Platform **[!UICONTROL Database]** credential value: `prod:all`.|
-|**[!UICONTROL Database Userid]**| This is your Platform organization Id. Use your Experience Platform **[!UICONTROL Username]** credential value. The ID will be in the format of `ORG_ID@AdobeOrg`.| 
+|**[!UICONTROL Database Userid]**| This is your Experience Platform organization Id. Use your Experience Platform **[!UICONTROL Username]** credential value. The ID will be in the format of `ORG_ID@AdobeOrg`.| 
 |**[!UICONTROL Database Password]**| This alphanumeric string is your Experience Platform **[!UICONTROL Password]** credential. If you want to use non-expiring credentials, this value is the concatenated arguments from the `technicalAccountID` and the `credential` downloaded in the configuration JSON file. The password value takes the form: {technicalAccountId}:{credential}. The configuration JSON file for non-expiring credentials is a one-time download during their initialization that Adobe does not keep a copy of. |
 
 After you have input all relevant credentials, select **[!DNL Connect]**. 

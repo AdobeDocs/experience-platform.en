@@ -30,7 +30,7 @@ The guides for Real-time Machine Learning require a working understanding of Pyt
   
 ## Datasets in Adobe Experience Platform
 
-To start using Real-time Machine Learning, you must have access to a dataset. You have the option to use an external dataset and upload it to your [!DNL JupyterLab] environment or create a new dataset within Platform if you have not done so already.
+To start using Real-time Machine Learning, you must have access to a dataset. You have the option to use an external dataset and upload it to your [!DNL JupyterLab] environment or create a new dataset within Experience Platform if you have not done so already.
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ To learn more about using an external dataset such as uploading data to your [!D
 
 ### Create a new dataset
 
-To create a new dataset for use in Real-time Machine Learning, you need a data-schema for your dataset. Next, you need to ingest data using the schema you created. Use the following tutorials to create and populate a dataset for [!DNL Platform]:
+To create a new dataset for use in Real-time Machine Learning, you need a data-schema for your dataset. Next, you need to ingest data using the schema you created. Use the following tutorials to create and populate a dataset for [!DNL Experience Platform]:
 
 - [Create and populate a dataset in the API](../../catalog/datasets/create.md)
 - [Create and populate a dataset in the UI](../../ingestion/tutorials/ingest-batch-data.md)

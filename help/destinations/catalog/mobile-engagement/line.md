@@ -1,7 +1,7 @@
 ---
 keywords: mobile;mobile engagement destinations;LINE;LINE mobile engagement destination
 title: LINE connection
-description: The LINE destination allows you to add profiles to your Platform audience and deliver personalized experiences to connected users.
+description: The LINE destination allows you to add profiles to your Experience Platform audience and deliver personalized experiences to connected users.
 last-substantial-update: 2022-11-08
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
 ---
@@ -23,7 +23,7 @@ As a marketer, you can target users in a mobile engagement destination, with aud
 
 ### [!DNL LINE] prerequisites {#prerequisites-destination}
 
-Note the following prerequisites in [!DNL LINE], in order to export data from Platform to your [!DNL LINE] account:
+Note the following prerequisites in [!DNL LINE], in order to export data from Experience Platform to your [!DNL LINE] account:
 
 #### You need to have a [!DNL LINE] account {#prerequisites-account}
 
@@ -34,7 +34,7 @@ You need to register and create a [!DNL LINE] account, if you do not have one al
 
 #### Gather the [!DNL LINE channel access token (long-lived)] from the [!DNL LINE] developer console {#gather-credentials}
 
-To allow Platform to access [!DNL LINE] resources, you will need the *[!DNL Channel access token (long-lived)]* from the desired [!DNL LINE] *Messaging API* channel.
+To allow Experience Platform to access [!DNL LINE] resources, you will need the *[!DNL Channel access token (long-lived)]* from the desired [!DNL LINE] *Messaging API* channel.
 
 1. Log in with your [!DNL LINE] account to the [[!DNL LINE] Developer console](https://developers.line.biz/console).
 1. Next, access the *[!DNL Providers]* list, then select the *[!DNL Provider]* of interest and finally select the *Messaging API* channel to access its settings. If you are accessing the developer console for the first time follow the [[!DNL LINE] documentation](https://developers.line.biz/en/docs/messaging-api/getting-started/) to complete the steps required to create a provider.
@@ -55,12 +55,37 @@ Refer to the [[!DNL LINE] documentation](https://developers.line.biz/en/docs/mes
 |ID for Advertisers(IFAs)| Select the ID for Advertisers(IFAs) target identity when the source identities are IFA *(Apple ID for Advertisers)* or GAID *(Google Advertising ID) namespaces.|
 |LINE User IDs| Select the UserID target identity when the source identities are LINE User IDs. |
 
+## Supported audiences {#supported-audiences}
+
+This section describes which types of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL LINE] destination. |
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
 
@@ -79,9 +104,10 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL
 ### Authenticate to destination {#authenticate}
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
-![Platform UI screenshot showing how to authenticate.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
+![Experience Platform UI screenshot showing how to authenticate.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 Fill in the required fields below.
+
 * **[!UICONTROL Bearer token]**: Your [!DNL LINE Channel access token (long-lived)] from the [!DNL LINE] developer console. Refer to the [gather credentials](#gather-credentials) section.
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.
@@ -89,7 +115,7 @@ If the details provided are valid, the UI displays a **[!UICONTROL Connected]** 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-![Platform UI screenshot showing the destination details.](../../assets/catalog/mobile-engagement/line/destination-details.png)
+![Experience Platform UI screenshot showing the destination details.](../../assets/catalog/mobile-engagement/line/destination-details.png)
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -112,7 +138,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Map attributes and identities {#map}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL LINE] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL LINE] destination fields, follow these steps:
+To correctly send your audience data from Adobe Experience Platform to the [!DNL LINE] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL LINE] destination fields, follow these steps:
 
 Depending on your source identity the following target identity namespace(s) must be mapped:
 
@@ -122,10 +148,10 @@ Depending on your source identity the following target identity namespace(s) mus
 | LINE user IDs | `UserID` | `LineId` |
 
 If your target identities are *LINE user ID's* you will need the below:
-![Platform UI screenshot example showing the Target mapping when using LINE User IDs for target identities.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
+![Experience Platform UI screenshot example showing the Target mapping when using LINE User IDs for target identities.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
 
 If your target identity is *ID for Advertisers(IFAs)* you will need the below:
-![Platform UI screenshot example showing the Target mapping when using ID for Advertisers(IFAs) for target identities.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
+![Experience Platform UI screenshot example showing the Target mapping when using ID for Advertisers(IFAs) for target identities.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
 
 ## Validate data export {#exported-data}
 
