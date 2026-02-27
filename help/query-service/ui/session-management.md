@@ -26,7 +26,7 @@ Administrators can view all active Query Service sessions across sandboxes in yo
 
 ![The Query Service workspace with the Admin tab selected. The Session Management table is displayed and lists active and inactive sessions across multiple sandboxes in your organization.](../images/ui/session-management/session-management-admin-tab.png)
 
-The session management table updates automatically in real time and lists all sessions currently consuming Query Service capacity. Each row represents a single session opened in the Query Editor.
+The session management table updates automatically in real time and lists all sessions currently consuming Query Service concurrent session capacity assigned to your organization. Each row represents a single session opened in the Query Editor.
 
 ## Session status and idle time {#session-status}
 
@@ -69,7 +69,7 @@ After the session ends, the session is removed from the table, capacity becomes 
 
 ## Session behavior after termination {#session-behavior-after-termination}
 
-When an administrator ends a session, the affected user remains connected until they run a query. If the user attempts to run a query after termination, the system detects the ended session, re-establishes the connection automatically, and keeps Query Editor content intact.
+When an administrator ends a session, the affected user's code remains in the editor without losing work. If the user attempts to run a query after termination, the system detects the ended session, re-establishes the connection automatically, and keeps Query Editor content intact.
 
 This behavior ensures users do not lose work written in the editor and can continue once a new session is established.
 
