@@ -117,7 +117,7 @@ Since maintaining backwards compatibility is crucial for schema evolution, Exper
 
 >[!NOTE]
 >
->You can only introduce a breaking change to a schema if it has not yet been used to ingest data into Experience Platform and hasn't been enabled for use in Real-Time Customer Profile. However, once the schema has been used in Experience Platform, it must adhere to the additive versioning policy.
+>You can only introduce a breaking change to a schema if it has not yet been used to ingest data into Experience Platform and hasn't been enabled for use in Real-Time Customer Profile. However, once the schema has been used in Experience Platform, it must adhere to the additive versioning policy. Once a dataset is created for the schema, the rules of Schema Evolution become strictly enforced by the system for all the fields in the schema. The fields will become non-editable across all XDM schemas in which they are referenced.
 
 The following table breaks down which changes are supported when editing schemas, field groups, and data types:
 
