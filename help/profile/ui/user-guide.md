@@ -157,13 +157,17 @@ These widgets combine both event data (with the Experience events widget) and at
 
 The **[!UICONTROL Profile attributes]** section displays a hierarchical graph representation of the profile data. In this view, the central node represents the profile itself, secondary nodes represent the field groups, and the remaining nodes represent properties within each field group.
 
-IMAGE
+![The graph view for the profile is displayed, showing the various nodes that make up the profile.](/help/profile/images/user-guide/profile-attribute-graph.png)
 
 #### Experience events {#experience-events}
 
 The **[!UICONTROL Experience events]** section displays a timeline of experience events that contain the profile.
 
-IMAGE
+![The Experience events section is displayed, showing a timeline of experience events that contain the profile.](/help/profile/images/user-guide/experience-event-graph.png)
+
+If you select **[!UICONTROL View event]**, you can see the event attributes linked to the selected event. These details include the path, attribute, display name, and the value.
+
+![The Event attributes popover is displayed, showing further details related to the event.](/help/profile/images/user-guide/event-attributes-graph.png)
 
 ### Attributes tab {#attributes}
 
