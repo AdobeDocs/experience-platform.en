@@ -14,11 +14,11 @@ Use this guide to manage active Query Service sessions from the Adobe Experience
 >
 >Session management is available only to organizations with Data Distiller entitlements.
 
-To view and end sessions, you must belong to an organization with Data Distiller access and have the **[!UICONTROL Manage Query Session]** permission assigned. Users without the required permissions can access Query Service but cannot view or manage active sessions.
-
 >[!IMPORTANT]
 >
 >This feature is intended for administrators. End users running queries cannot manage sessions.
+
+To view and end sessions, you must belong to an organization with Data Distiller access and have the **[!UICONTROL Manage Query Session]** permission assigned. Users without the required permissions can access Query Service but cannot view or manage active sessions.
 
 ## View active sessions {#view-active-sessions}
 
@@ -34,12 +34,12 @@ The session table provides information to help you decide whether a session can 
 
 | Column | Description |
 | --- | --- |
-| User identifier / username | Identifies the user who owns the session |
+| User ID | The Adobe ID of the user who owns the session |
+| User name | The name associated with the Adobe ID |
 | Sandbox | Indicates the sandbox where the session is running |
 | Session status | Shows whether the session is **[!UICONTROL Active]** or **[!UICONTROL Inactive]** |
 | Idle time | Displays how long the session has been open without interaction |
 | Remaining session time | Indicates how long the session can remain open before automatic expiration |
-
 
 ### Session status
 
@@ -53,7 +53,7 @@ Idle time shows how long a session has been open without user interaction. Remai
 
 You can end idle sessions to free concurrent session capacity for other users. Consider ending sessions with high idle time when users are no longer actively working.
 
-From the session management table, select **[!UICONTROL End session]** for an inactive session you want to end.
+From the session management table, select **[!UICONTROL End session]** to choose the inactive session you want to end.
 
 ![Session Management table showing an inactive session with End session highlighted.](../images/ui/session-management/end-session.png)
 

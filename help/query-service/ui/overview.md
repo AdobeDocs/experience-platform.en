@@ -186,7 +186,7 @@ The **[!UICONTROL Credentials]** tab displays both your expiring and non-expirin
 
 Use the **[!UICONTROL Admin]** tab to monitor and manage concurrent Query Editor sessions across your organization. This capability is intended for administrators and is not required for writing or running queries.
 
-From the **[!UICONTROL Admin]** tab, administrators can view active sessions across sandboxes and end idle sessions to free shared capacity. This action does not interrupt queries that are actively running. See the [Manage Query Service sessions](session-management.md) for detailed instructions and permission requirements.
+From the **[!UICONTROL Admin]** tab, administrators can view active sessions across sandboxes and end idle sessions to free shared capacity. This action does not interrupt queries that are actively running. See the [Manage Query Service sessions guide](session-management.md) for detailed instructions and permission requirements.
 
 ## Next steps
 

@@ -310,7 +310,7 @@ The following video shows how to run queries in the Adobe Experience Platform in
 
 ## Monitor and manage concurrent sessions {#monitor-manage-sessions}
 
-Use session management to view active Query Editor sessions across sandboxes, identify idle sessions, and end them to free shared capacity. You cannot interrupt sessions that are actively running queries. This capability is intended for administrators only and requires the **[!UICONTROL Manage Query Session]** permission.
+Use session management to view active Query Editor sessions across sandboxes, identify idle sessions, and end them to free shared capacity. You cannot interrupt sessions that are actively running queries. This capability is only intended for administrators and requires the **[!UICONTROL Manage Query Session]** permission.
 
 To access session management, select the **[!UICONTROL Admin]** tab in the Query Service workspace. For step-by-step instructions to view session details, interpret session status, and end idle sessions, see [Manage Query Service sessions](session-management.md).
 
