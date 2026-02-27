@@ -1,15 +1,20 @@
 ---
 keywords: advertising; microsoft ads; customer match;
 title: Microsoft Ads Customer Match connection
-description: Use the Microsoft Ads Customer Match destination to match customers by email address and reengage with them across the Microsoft Advertising Network, including search and Audience ads.
+description: Use the Microsoft Ads Customer Match destination to match customers by email address and reengage with them across the Microsoft Advertising Network, including Search and Audience ads.
+badge: Beta
 hide: yes
 hidefromtoc: yes
 ---
 # [!DNL Microsoft Ads Customer Match] connection {#microsoft-ads-customer-match-destination}
 
+>[!AVAILABILITY]
+>
+>This destination connector is currently in limited availability. To gain access, contact your Adobe representative.</br>
+
 ## Overview {#overview}
 
-Use the [!DNL Microsoft Ads Customer Match] destination to match customers by email address and reengage with them across the [!DNL Microsoft Advertising Network], including search and Audience ads. Link your [!DNL Microsoft Advertising] account to Real-Time CDP to automate customer match list creation and management directly from Experience Platform.
+Use the [!DNL Microsoft Ads Customer Match] destination to match customers by email address and reengage with them across the [!DNL Microsoft Advertising Network], including Search and Audience ads. Link your [!DNL Microsoft Advertising] account to Real-Time CDP to automate customer match list creation and management directly from Experience Platform.
 
 ## Use cases {#use-cases}
 
@@ -69,6 +74,12 @@ Refer to the table below for information about the destination export type and f
 ## Prerequisites {#prerequisites}
 
 To send audience data to [!DNL Microsoft Ads], you need to have an active [!DNL Microsoft Advertising] account. For details on creating an account, visit the [Microsoft Advertising documentation](https://help.ads.microsoft.com/#apex/ads/en/53090/0).
+
+### Accept customer match terms and conditions {#accept-customer-match-terms}
+
+Before activating audiences through this destination, you must first manually create a customer match list in your [!DNL Microsoft Advertising] account. This initial manual creation is required to accept the customer match terms and conditions, which enables audiences sent from Experience Platform to be created automatically. Failure to complete this step may result in errors when activating audiences.
+
+### Account configuration {#account-configuration}
 
 When configuring the destination, you must provide the following information:
 
