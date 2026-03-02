@@ -6,7 +6,7 @@ feature: Destinations
 
 # Adobe Advertising DSP connection
 
-## Overview
+## Overview {#overview}
 
 The Adobe Advertising Cloud Demand-Side Platform (DSP) destination allows users to share both authenticated and unauthenticated first-party audiences with a DSP account or specific advertiser within an account.
 
@@ -26,15 +26,15 @@ This connection replaces the [Legacy Adobe Advertising Cloud DSP connection](ado
 
 >[!IMPORTANT]
 >
->This page was created by the [!DNL DSP] team. For any inquiries or update requests, contact Advertising Cloud support directly at `adcloud_support@adobe.com`.
+>This page was created by the Adobe Advertising [!DNL DSP] team. For any inquiries or update requests, contact Advertising Cloud support directly at `adcloud_support@adobe.com`.
 
-## Use cases
+## Use cases {#use-cases}
 
 This destination allows advertisers to reach their audience across browsers with cookies and without cookies.
 
 Advertisers have the choice to share segments either with authenticated first-party identifiers (such as [!DNL RampID] and [!DNL UID2.0]) or as unauthenticated IDs (such as cookies and MAIDs).
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 * For [!DNL RampID activation], [!DNL DSP] account-level and campaign-level settings to enable audience sharing with [!DNL LiveRamp RampID], which translates customer data to [!DNL RampIDs] to create targetable segments. Your Adobe Account Team will perform this configuration. [!DNL RampID] is available via a partnership between [!DNL DSP] and [!DNL LiveRamp], and you don't need your own [!DNL LiveRamp] membership to use it.
 
@@ -42,7 +42,7 @@ Advertisers have the choice to share segments either with authenticated first-pa
 
   * For [!DNL RampID] and [!DNL UID2.0], profiles must contain hashed email IDs.
 
-  * For cookies, set up a cookie sync process with either WebSDK Datastreams or the Experience Cloud ID Service. See "[Set up ID syncing to share cookies](#cookie-sync)."
+  * For cookies, set up a cookie sync process with either [!DNL Web SDK] datastreams or the [!DNL Experience Cloud ID Service]. See [Set up ID syncing to share cookies](#cookie-sync) below.
 
   * For profiles with MAIDs:
 
@@ -56,46 +56,42 @@ Advertisers have the choice to share segments either with authenticated first-pa
 
 * The source key for the [!DNL DSP] account or advertiser, which is generated when a [Real-Time CDP source is created in [!DNL DSP]](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Your [!DNL DSP] account team will share this key with you. You'll use it within Experience Platform to create a destination connection to the Advertising Cloud DSP destination, as explained below.
 
-## Supported identities
+### Set up ID syncing to share cookies {#cookie-sync}
+
+ID syncing is a prerequisite to share third-party cookies. Set up a cookie sync process with either [!DNL Web SDK] datastreams or the [!DNL Experience Cloud ID Service]. For more context about identity handling for third-party cookies, see [Advertising destinations relying on third-party cookie integrations](/help/destinations/how-destinations-work/identity-handling.md#third-party-cookie-destinations).
+
+**Enable third-party ID syncing with [!DNL Web SDK]**
+
+If you are using [!DNL Experience Platform Web SDK], enable third-party ID syncing on your datastream by configuring the [!UICONTROL Third Party ID Sync] option in the advanced settings. For instructions, see [Configure advanced options](/help/datastreams/configure.md#advanced-options) in the datastreams documentation.
+
+**Enable third-party ID syncing with the [!DNL Experience Cloud ID Service]**
+
+If you are using [!DNL Experience Platform] tags with the [!DNL Experience Cloud ID Service], configure the third-party ID sync using the [Experience Cloud ID Service extension](/help/tags/extensions/client/id-service/overview.md). This allows the matched Adobe Advertising cookie for the given ECID to be available when you activate the audience from Real-Time CDP.
+
+## Supported identities {#supported-identities}
 
 The Adobe Advertising Cloud DSP destination supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 | Target Identity | Description | Considerations |
 | --------------- | ----------- | -------------- |
-| `email_lc_sha256` | Email addresses hashed with the SHA256 algorithm | Experience Platform supports both plain text and SHA256-hashed email addresses. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** to have Experience Platform automatically hash the data on activation. |
+| `email_lc_sha256` | Email addresses hashed with the SHA256 algorithm | Experience Platform supports both plain text and SHA256-hashed email addresses. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option to have Experience Platform automatically hash the data on activation. |
 | `ECID` | First-party cookie for Experience Cloud | Required to create cookie-based segments. |
-| `Everesttech cookie` | Third-party cookie for Adobe Advertising | Required to create cookie-based segments |
-| `GAID` | [!DNL Android] Device ID | Required for targeting [!DNL Android] devices |
-| `IDFA` | [!DNL iOS] device ID | Required for targeting [!DNL iOS] devices |
+| `Everesttech cookie` | Third-party cookie for Adobe Advertising | Required to create cookie-based segments. |
+| `GAID` | [!DNL Android] device ID | Required for targeting [!DNL Android] devices. |
+| `IDFA` | [!DNL iOS] device ID | Required for targeting [!DNL iOS] devices. |
 
-## Set up ID syncing to share cookies {#cookie-sync}
+{style="table-layout:auto"}
 
-ID syncing is a prerequisite to share third-party cookies. Set up a cookie sync process with either WebSDK Datastreams or the Experience Cloud ID Service.
-
-For more context about identity handling for third-party cookies, see "[Advertising destinations relying on third-party cookie integrations](/help/destinations/catalog/advertising/overview.md)."
-
-### (Experience Platform [!DNL Web SDK] users) Enable third-party ID syncing
-
-* Configure a new or existing datastream to source the data to Experience Platform by configuring the advanced option [!UICONTROL Third Party ID Sync].
-
-For instructions, see the section "Configure advanced options" in "[Create and configure datastreams](/help/datastreams/configure.md)."
-
-### (Experience Platform tag users) Enable third-party ID syncing
-
-1. Use the Experience Cloud Destination Extension to configure the third-party ID sync.
-
-   This extension is powered by the Experience Cloud Identity Service, which allows the matched Adobe Advertising cookie for the given ECID to be available when you activate the audience from Real-Time CDP.
-
-2. Continue the data onboarding steps in Experience Platform to create user profiles. See "[Data Ingestion overview](/help/ingestion/home.md)."
-
-## Export type and frequency
+## Export type and frequency {#export-type-frequency}
 
 Refer to the following table for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 | ---- | ---- | ----- |
-| Export type | Audience export | You are exporting all members of an audience with the chosen identifiers. |
-| Export frequency | Streaming | Streaming destinations are "always on" API-based connections. When a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the chosen identifiers. |
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. When a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style="table-layout:auto"}
 
 ## Connect to the destination {#connect}
 
@@ -122,11 +118,11 @@ To configure details for the destination, fill in the required and optional fiel
 
 ![Destination detail fields](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
 
-## Choose identities
+## Choose identities {#choose-identities}
 
 You can choose the IDs to send to Adobe Advertising DSP. By default, the cookie identifiers are selected for the advertiser. You can also choose to add [!UICONTROL Hashed Email], [!UICONTROL IDFA], and [!UICONTROL GAID].
 
-For instructions, see "[Map attributes and identities](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations#mapping)."
+For instructions, see [Map attributes and identities](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations#mapping).
 
 ![Identity mapping fields](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/identity-mapping.png)
 
