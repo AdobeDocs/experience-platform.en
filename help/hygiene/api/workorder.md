@@ -125,7 +125,8 @@ A successful response returns a paginated list of record delete work orders.
       "targetServices": [
         "profile",
         "datalake",
-        "identity"
+        "identity",
+        "ajo"
       ],
       "status": "received",
       "createdBy": "a.stark@acme.com <a.stark@acme.com> BD8C3D631F41@acme.com",
@@ -165,7 +166,7 @@ The following table describes the properties in the response.
 | `targetServices` | List of target services for the work order. When not specified in the request, the response shows the full set of supported services (equivalent to `["datalake", "identity", "profile", "ajo"]`). |
 | `status`         | Current status of the work order. Possible values are: `received`,`validated`, `submitted`, `ingested`, `completed`, and `failed`.|
 | `createdBy`      | The email and identifier of the user who created the work order.                 |
-| `datasetId`      | The unique identifier for the dataset(s) associated with the work order. Use a single dataset ID, a comma-separated list of dataset IDs (for multi-dataset deletion), or the literal `ALL` to target all datasets. When using profile-only mode (`targetServices` set to identity, profile, and ajo), this field must be `ALL`. |
+| `datasetId`      | The dataset(s) targeted by the work order: a single dataset ID, a comma-separated list of dataset IDs (multi-dataset), or the literal `ALL`. When the request used profile-only mode, this value is `ALL`. |
 | `datasetName`    | The name of the dataset associated with the work order.                          |
 | `displayName`    | A human-readable label for the work order.                                       |
 | `description`    | A description of the work order's purpose.                                       |
@@ -211,7 +212,7 @@ POST /workorder
 
 >[!NOTE]
 >
->If you try to create a record delete work order for a dataset that already has an active expiration, the request returns HTTP 400 (Bad Request).An active expiration is any scheduled delete that has not yet completed.
+>If you try to create a record delete work order for a dataset that already has an active expiration, the request returns HTTP 400 (Bad Request). An active expiration is any scheduled delete that has not yet completed.
 
 **Request**
 
@@ -272,7 +273,8 @@ A successful response returns the details of the new record delete work order.
   "targetServices": [
     "profile",
     "datalake",
-    "identity"
+    "identity",
+    "ajo"
   ],
   "status": "received",
   "createdBy": "c.lannister@acme.com <c.lannister@acme.com> 7EAB61F3E5C34810A49A1AB3@acme.com",
@@ -304,7 +306,7 @@ The following table describes the properties in the response.
 
 {style="table-layout:auto"}
 
-When you omit `targetServices` in the request, the response still includes a full `targetServices` list (for example, datalake, identity, profile, ajo), reflecting the default of all supported services.
+The response `targetServices` value echoes your request or shows the full default set when omitted (see the response table above).
 
 ### Multi-dataset and profile-only (API) {#multi-dataset-profile-only}
 
@@ -365,7 +367,7 @@ Successful responses for multi-dataset or profile-only requests follow the same 
 
 ## Convert ID lists to JSON for record delete requests
 
-To create a record delete work order from CSV, TSV, or TXT files containing identifiers, you can use conversion scripts to produce the required JSON payloads for the `/workorder` endpoint. This approach is especially helpful when working with existing data files. For ready-to-use scripts and comprehensive instructions, visit the [csv-to-data-hygiene GitHub repository](https://github.com/perlmonger42/csv-to-data-hygiene).
+Use conversion scripts to produce the required JSON payloads for the `/workorder` endpoint when your identifiers are in CSV, TSV, or TXT files. This approach is especially helpful when working with existing data files. For ready-to-use scripts and instructions, see the [csv-to-data-hygiene GitHub repository](https://github.com/perlmonger42/csv-to-data-hygiene).
 
 ### Generate JSON payloads
 
@@ -419,7 +421,7 @@ The table below describes the parameters in the bash scripts.
 | ---           | ---     |
 | `verbose`     | Enable verbose output. |
 | `column`      | The index (1-based) or header name of the column containing the identity values to delete. Defaults to the first column if not specified. |
-| `namespace`   | An object with a `code` property specifying the identity namespace (for example, "email"). |
+| `namespace`   | The identity namespace code passed to the script (for example, `email`). The generated JSON uses this in each object's `namespace.code` property. |
 | `dataset-id`  | The unique identifier for the dataset(s): a single ID, comma-separated IDs for multi-dataset, or `ALL` for all datasets. |
 | `description` | A description of the record delete work order. |
 | `output-dir`  | The directory to write the output JSON payload. |
@@ -465,7 +467,7 @@ The following table describes the properties in the JSON payload.
 
 ### Submit the generated JSON data to the `/workorder` endpoint
 
-To submit a request, follow the instructions in the [create a record delete work order](#create) section. Make sure to use the converted JSON payload as the request body (`-d`) when sending your `curl` POST request to the `/workorder` API endpoint.
+To submit a request, follow the instructions in the [create a record delete work order](#create) section. Use the converted JSON payload as the request body (`-d`) when you send your `curl` POST request to the `/workorder` endpoint.
 
 ## Retrieve details for a specific record delete work order {#lookup}
 
@@ -541,7 +543,7 @@ The following table describes the properties in the response.
 |`displayName`  |  A human-readable label for the record delete work order.|
 |`description`  |  A description of the record delete work order.|
 
-## Update a record delete work order
+## Update a record delete work order {#update}
 
 Update the `name` and `description` for a record delete work order by making a PUT request to the `/workorder/{WORKORDER_ID}` endpoint.
 
