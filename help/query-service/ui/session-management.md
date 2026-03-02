@@ -3,6 +3,7 @@ title: Manage Query Service sessions in Adobe Experience Platform
 description: Learn how administrators can view, monitor, and end active Query Service sessions to free idle capacity and maintain reliable Data Distiller workflows.
 keywords: Experience Platform;Query Service;sessions;session management;Data Distiller;admin
 solution: Experience Platform
+exl-id: f986177a-9a46-4fc6-927e-98b6b7dc8cfe
 ---
 # Manage Query Service sessions
 
@@ -87,4 +88,3 @@ Consider the following resources to extend your use of Query Service and Data Di
 
 * [Learn how users create and run queries in the Query Editor user guide](user-guide.md)
 * [Monitor scheduled workloads using the scheduled queries monitoring documentation](monitor-queries.md)
-
