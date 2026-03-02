@@ -312,14 +312,14 @@ The response `targetServices` value echoes your request or shows the full defaul
 
 The following API-only options control which datasets and which services process the deletion. They enable submitting multiple datasets per work order and targeting a specific set of services (profile-only) so you know how to submit requests and what to expect.
 
-**Request body and behavior summary**
+The following table summarizes how the request body and behavior change for each option.
 
 | Option | Request body change | Behavior |
 |--------|---------------------|----------|
 | **Multi-dataset** | Use a comma-separated list in `datasetId` (e.g. `"id1,id2,id3"`). Single ID or `ALL` unchanged. | Identities are deleted from the listed datasets (or from one dataset, or from all datasets when `ALL`). |
 | **Profile-only (targeted services)** | Add `targetServices` with exactly `["identity", "profile", "ajo"]` (any order). Requires `datasetId`: `"ALL"`. | Only Identity, Profile, and Adobe Journey Optimizer process the deletion; the data lake is not modified. |
 
-**Multi-dataset requests**
+#### Multi-dataset requests
 
 The `datasetId` field is split on commas: use a single ID (same behavior as before), a comma-separated list of IDs, or the literal `ALL`. To delete identities from multiple specific datasets in one work order, provide a comma-separated list:
 
@@ -329,7 +329,7 @@ The `datasetId` field is split on commas: use a single ID (same behavior as befo
 
 Identities are then deleted from each of the listed datasets. Single-dataset requests work as they always did; use `ALL` to target every dataset. The value must be exactly one of: `ALL`, a single dataset ID, or two or more dataset IDs separated by commas (no combining `ALL` with specific IDs).
 
-**Profile-only (targeted services)**
+#### Profile-only (targeted services)
 
 To remove identity and profile-related data only and leave the data lake untouched, include `targetServices` with exactly these three values in any order: `identity`, `profile`, and `ajo`. Identity, Profile, and AJO are explicitly included; the data lake is excluded. In this mode, `datasetId` must be `ALL` (the use case is full profile deletion, not per-dataset fragments).
 
