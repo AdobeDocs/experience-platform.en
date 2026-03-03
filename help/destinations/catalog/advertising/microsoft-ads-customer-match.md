@@ -5,6 +5,7 @@ description: Use the Microsoft Ads Customer Match destination to match customers
 badge: Beta
 hide: yes
 hidefromtoc: yes
+exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
 ---
 # [!DNL Microsoft Ads Customer Match] connection {#microsoft-ads-customer-match-destination}
 
