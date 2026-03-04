@@ -3,6 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;schema;dataset;
 solution: Experience Platform
 title: Planning for Real-Time Customer Profile enablement
 description: Review the key considerations you must evaluate before enabling schemas and datasets for Real-Time Customer Profile.
+exl-id: 8d7c0e49-6138-42af-90ad-975adaa2aa99
 ---
 # Planning for Real-Time Customer Profile enablement
 

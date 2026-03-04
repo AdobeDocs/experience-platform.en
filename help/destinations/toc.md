@@ -100,6 +100,7 @@ role: Admin,User
         * [LiveRamp - Distribution connection](./catalog/advertising/liveramp-distribution.md)
         * [Magnite Batch](/help/destinations/catalog/advertising/magnite-batch.md)
         * [Magnite Streaming Real-time connection](/help/destinations/catalog/advertising/magnite-streaming.md)
+        * [Microsoft Ads Customer Match connection](./catalog/advertising/microsoft-ads-customer-match.md)
         * [Microsoft Bing connection](./catalog/advertising/bing.md)
         * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest-extension.md)
         * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)
