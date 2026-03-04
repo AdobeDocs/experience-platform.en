@@ -4,6 +4,7 @@ description: Use this destination to activate your account audiences for Account
 last-substantial-update: 2024-09-30
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
 ---
+
 # Demandbase connection {#demandbase}
 
 >[!AVAILABILITY]
@@ -31,8 +32,6 @@ This section describes which type of audiences you can export to this destinatio
 
 {style="table-layout:auto"}
 
-
-
 Supported audiences by audience data type:
 
 | Audience data type | Supported | Description | Use cases |
@@ -43,7 +42,6 @@ Supported audiences by audience data type:
 | [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
-
 
 ## Export type and frequency {#export-type-and-frequency} 
 
