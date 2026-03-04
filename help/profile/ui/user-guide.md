@@ -157,6 +157,8 @@ These widgets combine both event data (with the Experience events widget) and at
 
 The **[!UICONTROL Profile attributes]** section displays a hierarchical graph representation of the profile data. In this view, the central node represents the profile itself, secondary nodes represent the field groups, and the remaining nodes represent properties within each field group.
 
+Within the graph view, you can drag and drop the nodes to re-arrange the node order, collapse and expand the nodes to see more details about the attributes, search and filter by attribute, as well as zoom in and out to better view the attribute details.
+
 ![The graph view for the profile is displayed, showing the various nodes that make up the profile.](/help/profile/images/user-guide/profile-attribute-graph.png)
 
 #### Experience events {#experience-events}
