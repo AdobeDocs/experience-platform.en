@@ -95,11 +95,11 @@ Refer to the following table for information about the destination export type a
 
 ## Connect to the destination {#connect}
 
-To connect to the destination, follow the instructions to [create a destination connection](/help/destinations/ui/connect-destination.md) using the Experience Platform user interface. In the destination configuration workflow, fill in the fields listed in the subsections below.
-
 >[!IMPORTANT]
 > 
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions) for Experience Platform. Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
+To connect to the destination, follow the instructions to [create a destination connection](/help/destinations/ui/connect-destination.md) using the Experience Platform user interface. In the destination configuration workflow, fill in the fields listed in the subsections below.
 
 ### Authenticate to destination {#authenticate}
 
@@ -118,14 +118,6 @@ To configure details for the destination, fill in the required and optional fiel
 
 ![Destination detail fields](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
 
-## Choose identities {#choose-identities}
-
-You can choose the IDs to send to Adobe Advertising DSP. By default, the cookie identifiers are selected for the advertiser. You can also choose to add [!UICONTROL Hashed Email], [!UICONTROL IDFA], and [!UICONTROL GAID].
-
-For instructions, see [Map attributes and identities](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations#mapping).
-
-![Identity mapping fields](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/identity-mapping.png)
-
 ### Enable alerts {#enable-alerts}
 
 You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
@@ -134,12 +126,20 @@ When you are finished providing details for your destination connection, select 
 
 ## Activate audiences to this destination {#activate}
 
-Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
-
 >[!IMPORTANT]
 > 
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export identities, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
+
+Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
+
+### Map attributes and identities {#map}
+
+You can choose the IDs to send to Adobe Advertising DSP. By default, the cookie identifiers are selected for the advertiser. You can also choose to add [!UICONTROL Hashed Email], [!UICONTROL IDFA], and [!UICONTROL GAID].
+
+For instructions, see [Map attributes and identities](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations#mapping).
+
+![Identity mapping fields](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/identity-mapping.png)
 
 ## Validate data export {#exported-data}
 
