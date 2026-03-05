@@ -1,13 +1,13 @@
 ---
-title: ZoomInfo Account connection
+title: ZoomInfo Account Audiences connection
 description: Activate account audiences to ZoomInfo MarketingOS for account-based marketing workflows, including account enrichment, prioritization, and paid media activation.
 ---
 
-# ZoomInfo Account connection {#zoominfo-account}
+# ZoomInfo Account Audiences connection {#zoominfo-account-audiences}
 
 >[!AVAILABILITY]
 >
->The functionality to activate account audiences to the ZoomInfo Account destination is available for companies purchasing the [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) and [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) editions of Real-Time Customer Data Platform.
+>The functionality to activate account audiences to the ZoomInfo Account Audiences destination is available for companies purchasing the [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) edition of Real-Time Customer Data Platform.
 
 Activate profiles for your [!DNL ZoomInfo MarketingOS] campaigns for audience targeting, personalization, and suppression, based on [account audiences](/help/segmentation/types/account-audiences.md).
 
@@ -15,15 +15,13 @@ Activate profiles for your [!DNL ZoomInfo MarketingOS] campaigns for audience ta
 
 <!-- TODO: Confirm overview text with ZoomInfo / PM team -->
 
-[!DNL ZoomInfo] is a B2B data and intelligence platform that provides firmographic, technographic, and intent data for account-based marketing. This integration enables Adobe Real-Time CDP B2B Edition customers to activate account audiences to [!DNL ZoomInfo MarketingOS] for downstream account-based marketing workflows. [!DNL ZoomInfo] ingests account audiences from Experience Platform, resolves accounts using company domain and firmographic attributes, and enriches matched accounts with firmographic, technographic, and intent signals. The enriched accounts are made available in [!DNL ZoomInfo] for use cases such as account prioritization, audience segmentation, and paid media activation across supported advertising and marketing channels.
+[!DNL ZoomInfo] is a B2B data and intelligence platform that provides firmographic, technographic, and intent data for account-based marketing. This integration enables Adobe Real-Time CDP B2B Edition customers to activate account audiences to [!DNL ZoomInfo MarketingOS] for downstream account-based marketing workflows.
 
->[!IMPORTANT]
->
->This destination connector and documentation page are created and maintained by the *ZoomInfo* team. For any inquiries or update requests, please contact them at <!-- TODO: Add ZoomInfo support contact email -->.
+[!DNL ZoomInfo] ingests account audiences from Experience Platform, resolves accounts using company domain and firmographic attributes, and enriches matched accounts with firmographic, technographic, and intent signals. The enriched accounts are made available in [!DNL ZoomInfo] for use cases such as account prioritization, audience segmentation, and paid media activation across supported advertising and marketing channels.
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL ZoomInfo Account] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL ZoomInfo Account Audiences] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
 ### Account-based activation to paid media {#paid-media-activation}
 
@@ -66,11 +64,13 @@ Supported audiences by audience data type:
 
 ## Supported identities {#supported-identities}
 
-[!DNL ZoomInfo Account] supports the mapping of the target identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
+[!DNL ZoomInfo Account Audiences] supports the mapping of the target identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 | Target Identity | Description |
 |---|---|
-| `primaryId` | [!DNL ZoomInfo] requires the mapping of this target identity for the integration to work correctly. |
+| `accountName` | The name of the account. |
+| `accountSite` | The website of the account. |
+| `primaryId` | The primary identifier for the account. |
 
 {style="table-layout:auto"}
 
@@ -80,7 +80,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 |---------|----------|---------|
-| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL ZoomInfo Account] destination.|
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL ZoomInfo Account Audiences] destination.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
@@ -95,15 +95,24 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authenticate to destination {#authenticate}
 
-To authenticate to the destination, you are redirected to the [!DNL ZoomInfo] login page to log in with your [!DNL ZoomInfo] credentials. After successful authentication, [!DNL ZoomInfo] redirects you back to Experience Platform, and the connection is created automatically. You do not need to enter or manage credentials manually.
+To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-<!-- TODO: Add screenshot of authentication flow / OAuth redirect screen -->
+![Configure new destination screen showing Account type, Account name, and Description fields.](../../assets/catalog/advertising/zoominfo-account-audiences/configure-destination.png)
+
+* **[!UICONTROL Account name]**: Enter a name that will help you easily identify this destination account in the future. This is especially useful if you have multiple connections to the same destination.
+* **[!UICONTROL Description]** (optional): Add any additional details that will help you or your team distinguish between accounts, such as the purpose of the connection or relevant business context.
+
+After selecting **[!UICONTROL Connect to destination]**, you are redirected to the [!DNL ZoomInfo] login page. Log in with your [!DNL ZoomInfo] credentials.
+
+![ZoomInfo login page showing authentication options including username and password, SSO, Google, and Office 365.](../../assets/catalog/advertising/zoominfo-account-audiences/zoominfo-login.png)
+
+After successful authentication, [!DNL ZoomInfo] redirects you back to Experience Platform and the connection is created automatically. You do not need to enter or manage credentials manually, as the integration uses OAuth 2.0 with PKCE to securely handle authentication. Experience Platform automatically refreshes the access token when needed.
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-<!-- TODO: Add screenshot of destination details screen -->
+![Destination details screen showing Name and Description fields.](../../assets/catalog/advertising/zoominfo-account-audiences/destination-details.png)
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -121,18 +130,23 @@ Read [Activate account audiences](/help/destinations/ui/activate-account-audienc
 
 ### Mandatory mappings {#mandatory-mappings}
 
-When activating audiences to the [!DNL ZoomInfo Account] destination, you must configure the following mandatory field mappings in the mapping step:
+When activating audiences to the [!DNL ZoomInfo Account Audiences] destination, you must configure one of the following mandatory mapping pairs. Use either pair depending on which attribute has data in your account profiles. [!DNL ZoomInfo] uses the domain or website attribute to match accounts.
+
+**Option 1: Account name and email domain**
 
 | Source field | Target field | Description |
 |--------------|--------------|-------------|
 | `xdm: accountName` | `xdm: accountName` | The name of the account. |
-| `xdm: accountOrganization.domain` | `xdm: accountEmailDomain` | The email domain of the account organization. Use this **or** `accountWebsite`, depending on which attribute has data. [!DNL ZoomInfo] uses this attribute to match accounts. |
-| `xdm: accountOrganization.website` | `xdm: accountWebsite` | The website of the account organization. Use this **or** `accountEmailDomain`, depending on which attribute has data. [!DNL ZoomInfo] uses this attribute to match accounts. |
+| `xdm: accountOrganization.domain` | `xdm: accountEmailDomain` | The email domain of the account organization. |
+
+**Option 2: Account website and primary identifier**
+
+| Source field | Target field | Description |
+|--------------|--------------|-------------|
+| `xdm: accountOrganization.website` | `xdm: accountWebsite` | The website of the account organization. |
 | `xdm: accountKey.sourceKey` | `Identity: primaryId` | The primary identifier for the account. |
 
 <!-- TODO: Add screenshot of mapping step -->
-
-These mappings are required for the destination to function properly and must be configured before you can proceed with the activation workflow. You must map either `accountEmailDomain` or `accountWebsite` (or both), depending on which attribute contains data in your account profiles.
 
 ## Audience sync behavior {#sync-behavior}
 
