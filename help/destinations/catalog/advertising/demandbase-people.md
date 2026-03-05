@@ -110,19 +110,19 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Mandatory mappings {#mandatory-mappings}
 
-When activating audiences to the [!DNL Demandbase People] destination, you must configure the following mandatory field mapping in the mapping step:
+When activating audiences to the [!DNL Demandbase People] destination, you must configure the following mandatory field mappings in the mapping step:
 
 | Source field | Target field | Description |
 |--------------|--------------|-------------|
 | `xdm: workEmail.address` | `Identity: email` | The work email address of the person |
+| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | The unique identifier for the person |
 
 ### Recommended mappings {#recommended-mappings}
 
-For optimal matching accuracy, include the following optional mappings in your activation flow, in addition to the [mandatory mapping](#mandatory-mappings) above.
+For optimal matching accuracy, include the following optional mappings in your activation flow, in addition to the [mandatory mappings](#mandatory-mappings) above.
 
 | Source field | Target field | Description |
 |--------------|--------------|-------------|
-| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | The unique identifier for the person |
 | `xdm: person.name.lastName` | `xdm: lastName` | The last name of the person |
 | `xdm: person.name.firstName` | `xdm: firstName` | The first name of the person |
 
@@ -130,9 +130,9 @@ For optimal matching accuracy, include the following optional mappings in your a
 
 When mapping fields to [!DNL Demandbase People], consider the following matching behavior:
 
-* **Primary matching**: If `externalPersonId` is present, Demandbase uses it as the primary identifier for person matching.
+* **Primary matching**: Demandbase uses `externalPersonId` as the primary identifier for person matching.
 * **Fallback matching**: If `externalPersonId` is not available, Demandbase uses the `email` field for identification.
-* **Required vs. recommended**: While only `email` is required by Demandbase, Adobe recommends mapping all available fields from the recommended mappings table above, to improve matching accuracy and campaign performance.
+* **Recommended fields**: While only `email` and `externalPersonId` are required, Adobe recommends mapping all available fields from the recommended mappings table above, to improve matching accuracy and campaign performance.
 
 ![Demandbase People mappings](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
 
