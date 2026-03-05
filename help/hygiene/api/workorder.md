@@ -200,18 +200,18 @@ POST /workorder
 >
 >If you try to create a record delete work order for a dataset that already has an active expiration, the request returns HTTP 400 (Bad Request). An active expiration is any scheduled delete that has not yet completed.
 
-### Identity payload format (identities or namespacesIdentities)
+### Identity payload formats (`namespacesIdentities` or `identities`)
 
-The request body must include **exactly one** of the following; you cannot send both in the same request.
+The request body must include **exactly one** of the following.
 
 | Format | Property | Shape | When to use |
-|--------|----------|--------|--------------|
-| **Recommended** | `namespacesIdentities` | Array of objects. Each object has `namespace` (e.g. `{ "code": "email" }`) and `ids` (array of identity strings). | Use when building payloads manually, especially when many identities share the same namespace—this keeps the payload smaller. |
-| **Also accepted** | `identities` | Array of objects. Each object has `namespace` (e.g. `{ "code": "email" }`) and a single `id` (string). | Accepted for backward compatibility. This is the format produced by the [csv-to-data-hygiene conversion scripts](#convert-id-lists-to-json-for-record-delete-requests). The service normalizes this format internally; behavior is identical. |
+|--------|----------|-------|-------------|
+| **Recommended** | `namespacesIdentities` | Array of objects with `namespace` (for example, `{ "code": "email" }`) and `ids` (array of identity strings). | Use when building payloads manually, especially when many identities share the same namespace as this keeps payloads smaller. |
+| **Also accepted** | `identities` | Array of objects with `namespace` (for example, `{ "code": "email" }`) and a single `id` (string). | Accepted for backward compatibility. This is the format produced by the [csv-to-data-hygiene conversion scripts](#convert-id-lists-to-json-for-record-delete-requests). The service normalizes this format internally, so the resulting behavior is identical. |
 
-If you send both properties, or neither, or an empty array for the one you provide, the API returns HTTP 400 (Bad Request) with one of these messages:
+If you send **both properties**, **neither property**, or provide **an empty array** for the property you include, the API returns **HTTP 400 (Bad Request)** with one of these messages:
 
-- **Both provided:** `"Identities and NamespacesIdentities are not allowed at the same time"`
+- **Both properties provided:** `"Identities and NamespacesIdentities are not allowed at the same time"`
 - **Neither provided or empty list:** `"Identities are Empty for Delete Identity request."`
 
 **Request**
@@ -366,7 +366,7 @@ Successful responses for multi-dataset or profile-only requests follow the same 
 >
 >The action property for record delete work orders is currently `identity-delete` in API responses. If the API changes to use a different value (such as `delete_identity`), this documentation will be updated accordingly.
 
-## Convert ID lists to JSON for record delete requests
+## Convert ID lists to JSON for record delete requests (#convert-id-lists-to-json-for-record-delete-requests)
 
 Use conversion scripts to produce the required JSON payloads for the `/workorder` endpoint when your identifiers are in CSV, TSV, or TXT files. This approach is especially helpful when working with existing data files. For ready-to-use scripts and instructions, see the [csv-to-data-hygiene GitHub repository](https://github.com/perlmonger42/csv-to-data-hygiene).
 
