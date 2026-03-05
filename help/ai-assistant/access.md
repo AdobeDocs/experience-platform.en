@@ -5,9 +5,23 @@ exl-id: c4cdff25-512c-4b4c-be91-ad9360067a0a
 ---
 # Access AI Assistant in Experience Platform
 
+>[!IMPORTANT]
+>
+>This document applies to AI Assistant (Legacy). For information on AI Assistant (Next-Gen), read the [AI Assistant UI guide](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui) in the [AI in Experience Cloud](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home) documentation.
+
+Refer to the following table for a comparison of AI Assistant (Legacy) and AI Assistant (Next-Gen):
+
+| Feature Area | AI Assistant (Legacy) | AI Assistant (Next-Gen) |
+| --- | --- | --- |
+| User experience | Available in a right-rail panel only. | Available in both right-rail panel and immersive full-screen experience. |
+| Scope of capabilities | Provides product knowledge and operational insights. | Provides product knowledge and operational insights, plus advanced agentic skills and multi-step task execution. |
+| Platform architecture | Not built on the Agent Orchestrator stack. | Built on the Agent Orchestrator stack, enabling extensibility and advanced coordination across capabilities. |
+| Application coverage | Application-specific implementation. | Unified AI assistant experience across all Adobe Experience Cloud applications. |
+| Access and permission model | Application-scoped access model aligned to individual product boundaries. | Platform-orchestrated, role-aware access model governed through the Agent Orchestrator stack. |
+
 You can access AI Assistant across several applications in Adobe Experience Cloud.
 
->[!IMPORTANT]
+>[!NOTE]
 >
 >If you receive a pop up message in permissions UI that informs you that your organization must first agree to additional legal terms in order to gain access to AI Assistant, then contact your Adobe account team for guidance on these terms.
 
