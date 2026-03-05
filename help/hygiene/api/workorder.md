@@ -214,9 +214,23 @@ POST /workorder
 >
 >If you try to create a record delete work order for a dataset that already has an active expiration, the request returns HTTP 400 (Bad Request). An active expiration is any scheduled delete that has not yet completed.
 
+### Identity payload format (identities or namespacesIdentities)
+
+The request body must include **exactly one** of the following; you cannot send both in the same request.
+
+| Format | Property | Shape | When to use |
+|--------|----------|--------|--------------|
+| **Recommended** | `namespacesIdentities` | Array of objects. Each object has `namespace` (e.g. `{ "code": "email" }`) and `ids` (array of identity strings). | Use when building payloads manually, especially when many identities share the same namespace—this keeps the payload smaller. |
+| **Also accepted** | `identities` | Array of objects. Each object has `namespace` (e.g. `{ "code": "email" }`) and a single `id` (string). | Accepted for backward compatibility. This is the format produced by the [csv-to-data-hygiene conversion scripts](#convert-id-lists-to-json-for-record-delete-requests). The service normalizes this format internally; behavior is identical. |
+
+If you send both properties, or neither, or an empty array for the one you provide, the API returns HTTP 400 (Bad Request) with one of these messages:
+
+- **Both provided:** `"Identities and NamespacesIdentities are not allowed at the same time"`
+- **Neither provided or empty list:** `"Identities are Empty for Delete Identity request."`
+
 **Request**
 
-The following request deletes all records associated with specified email addresses from a particular dataset.
+The following request deletes all records associated with specified email addresses from a particular dataset. It uses the recommended `namespacesIdentities` format.
 
 ```shell
 curl -X POST \
@@ -236,7 +250,7 @@ curl -X POST \
             "namespace": {
               "code": "email"
             },
-            "IDs": [
+            "ids": [
               "alice.smith@acmecorp.com",
               "bob.jones@acmecorp.com",
               "charlie.brown@acmecorp.com"
@@ -255,7 +269,8 @@ The following table describes the properties for creating a record delete work o
 | `action`               | The action requested for the record delete work order. To delete records associated with a given identity, use `delete_identity`. |
 | `datasetId`            | The unique identifier for the dataset(s). The value must be exactly one of: the literal `ALL`, a single dataset ID, or a comma-separated list of two or more dataset IDs (e.g. `"id1,id2,id3"`). You cannot combine `ALL` with specific IDs. Single-dataset requests behave as before, multi-dataset requests delete the identities from each listed dataset, and `ALL` targets every dataset. Datasets must have a primary identity or identity map. If an identity map exists, it will be present as a top-level field named `identityMap`.<br>**Note**: A dataset row may have many identities in its identity map, but only one can be marked as primary. `"primary": true` must be included to force the `id` to match a primary identity.<br>When using `targetServices` for profile-only deletion, `datasetId` must be `ALL`. |
 | `targetServices`       | Optional. The set of services that should process the deletion. If omitted, all supported services run, which is equivalent to `["datalake", "identity", "profile", "ajo"]` (the list may grow as more products onboard). The response always includes the full list of target services. To limit deletion to profile-related data only (Identity, Profile, and Adobe Journey Optimizer) and leave the data lake untouched, set this to exactly these three values in any order: `["identity", "profile", "ajo"]`. In that profile-only mode, Identity, Profile, and AJO are explicitly included; the data lake is excluded. When using this profile-only option, `datasetId` must be `ALL`. |
-| `namespacesIdentities` | An array of objects, each containing:<br><ul><li> `namespace`: An object with a `code` property specifying the identity namespace (e.g., "email").</li><li> `IDs`: An array of identity values to delete for this namespace.</li></ul>Identity namespaces provide context to identity data. You can use standard namespaces provided by Experience Platform or create your own. To learn more, see the [identity namespace documentation](../../identity-service/features/namespaces.md) and the [Identity Service API specification](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `identities` | **Use exactly one of `identities` or `namespacesIdentities`.** Array of objects, each with `namespace` (object with `code`, e.g. `"email"`) and `id` (single identity string). Accepted for backward compatibility and produced by the conversion scripts. The service normalizes this format internally; behavior is identical. See [Identity payload format](#identity-payload-format-identities-or-namespacesidentities) above. |
+| `namespacesIdentities` | **Use exactly one of `identities` or `namespacesIdentities`.** Array of objects, each with `namespace` (object with `code`, e.g. `"email"`) and `ids` (array of identity strings). Recommended when building payloads manually; smaller when many identities share one namespace. See [Identity payload format](#identity-payload-format-identities-or-namespacesidentities) above. Identity namespaces: [identity namespace documentation](../../identity-service/features/namespaces.md), [Identity Service API](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 **Response**
 
@@ -353,7 +368,7 @@ curl -X POST \
     "namespacesIdentities": [
       {
         "namespace": { "code": "email" },
-        "IDs": ["user@example.com"]
+        "ids": ["user@example.com"]
       }
     ]
   }'
@@ -368,6 +383,8 @@ Successful responses for multi-dataset or profile-only requests follow the same 
 ## Convert ID lists to JSON for record delete requests
 
 Use conversion scripts to produce the required JSON payloads for the `/workorder` endpoint when your identifiers are in CSV, TSV, or TXT files. This approach is especially helpful when working with existing data files. For ready-to-use scripts and instructions, see the [csv-to-data-hygiene GitHub repository](https://github.com/perlmonger42/csv-to-data-hygiene).
+
+The scripts output the **`identities`** format—one `id` per object with a `namespace`. The API accepts this format as-is; you can send the generated JSON directly in the POST body to `/workorder` with no conversion. When building payloads manually, the recommended format is **`namespacesIdentities`**; see [Create a record delete work order](#create) and [Identity payload format](#identity-payload-format-identities-or-namespacesidentities).
 
 ### Generate JSON payloads
 
@@ -467,7 +484,7 @@ The following table describes the properties in the JSON payload.
 
 ### Submit the generated JSON data to the `/workorder` endpoint
 
-To submit a request, follow the instructions in the [create a record delete work order](#create) section. Use the converted JSON payload as the request body (`-d`) when you send your `curl` POST request to the `/workorder` endpoint.
+The script output uses the `identities` format, which the API accepts as-is. Use the converted JSON payload as the request body (`-d`) when you send your `curl` POST request to the `/workorder` endpoint. For full request options and validation rules, see [Create a record delete work order](#create).
 
 ## Retrieve details for a specific record delete work order {#lookup}
 
