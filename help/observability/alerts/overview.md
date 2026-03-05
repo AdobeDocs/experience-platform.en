@@ -89,7 +89,7 @@ In addition, the [!UICONTROL Alerts] tab in the UI allows individual users to su
 
 ### Slack integration {#slack-integration}
 
-Experience Platform allows you to use a webhook proxy on [Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) to receive [Adobe I/O Events](https://developer.adobe.com/events/docs/guides/) in [!DNL Slack]. The proxy handles Adobe’s verification handshake and turns event payloads into [!DNL Slack] messages, so you can receive customer-facing alerts directly to your workspace.
+You can use a webhook proxy on [Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) to receive [Adobe I/O Events](https://developer.adobe.com/events/docs/guides/) from Experience Platform to your [!DNL Slack]. The proxy handles Adobe’s verification handshake and turns event payloads into [!DNL Slack] messages, so you can receive customer-facing alerts directly to your workspace.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
 
