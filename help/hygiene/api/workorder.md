@@ -26,14 +26,14 @@ Record delete work orders are subject to daily and monthly identifier submission
 
 ### Monthly submission entitlement by product {#quota-limits}
 
-The following table shows identifier submission limits by product and entitlement level. For each product, the monthly cap is the lesser of two values: a fixed identifier ceiling or a percentage-based threshold tied to your licensed data volume. In practice, most organizations have lower monthly limits based on their actual addressable audience or CJA row entitlements.
+The following table shows identifier submission limits by product and entitlement level. For each product, the monthly cap is the lesser of two values: a fixed identifier ceiling or a percentage-based threshold tied to your licensed data volume. In practice, most organizations have lower monthly limits based on their actual addressable audience or Adobe Customer Journey Analytics row entitlements.
 
 | Product  | Entitlement Description | Monthly Cap (Whichever is Less) |
 |----------|-------------------------|---------------------------------|
 | Real-Time CDP or Adobe Journey Optimizer | Without Privacy and Security Shield or Healthcare Shield add-on          | 2,000,000 identifiers or 5% of addressable audience                    |
 | Real-Time CDP or Adobe Journey Optimizer | With Privacy and Security Shield or Healthcare Shield add-on             | 15,000,000 identifiers or 10% of addressable audience                  |
-| Customer Journey Analytics               | Without Privacy and Security Shield or Healthcare Shield add-on          | 2,000,000 identifiers or 100 identifiers per million CJA rows of entitlement |
-| Customer Journey Analytics               | With Privacy and Security Shield or Healthcare Shield add-on             | 15,000,000 identifiers or 200 identifiers per million CJA rows of entitlement |
+| Customer Journey Analytics               | Without Privacy and Security Shield or Healthcare Shield add-on          | 2,000,000 identifiers or 100 identifiers per million Customer Journey Analytics rows of entitlement |
+| Customer Journey Analytics               | With Privacy and Security Shield or Healthcare Shield add-on             | 15,000,000 identifiers or 200 identifiers per million Customer Journey Analytics rows of entitlement |
 
 >[!NOTE]
 >
