@@ -186,7 +186,7 @@ Work orders are processed asynchronously and appear in the work order list after
 
 >[!NOTE]
 >
->Multi-dataset and profile-only (targeted services) options are generally available for all customers as of the AEP 26.2 release, with no gating.
+>Multi-dataset and profile-only (targeted services) options are generally available for all customers as of the February 2026 release of Experience Platform.
 
 >[!TIP]
 >
@@ -253,8 +253,8 @@ The following table describes the properties for creating a record delete work o
 | `displayName`          | A human-readable label for this record delete work order. |
 | `description`          | A description of the record delete work order. |
 | `action`               | The action requested for the record delete work order. To delete records associated with a given identity, use `delete_identity`. |
-| `datasetId`            | The unique identifier for the dataset(s). The value must be exactly one of: the literal `ALL`; a single dataset ID; or a comma-separated list of two or more dataset IDs (e.g. `"id1,id2,id3"`). You cannot combine `ALL` with specific IDs. Single-dataset requests behave as before; multi-dataset requests delete the identities from each listed dataset; `ALL` targets every dataset. Datasets must have a primary identity or identity map. If an identity map exists, it will be present as a top-level field named `identityMap`.<br>Note that a dataset row may have many identities in its identity map, but only one can be marked as primary. `"primary": true` must be included to force the `id` to match a primary identity.<br>When using `targetServices` for profile-only deletion, `datasetId` must be `ALL`. |
-| `targetServices`       | Optional. The set of services that should process the deletion. If omitted, all supported services run—equivalent to `["datalake", "identity", "profile", "ajo"]` (the list may grow as more products onboard). The response always includes the full list of target services. To limit deletion to profile-related data only (Identity, Profile, and Adobe Journey Optimizer) and leave the data lake untouched, set this to exactly these three values in any order: `["identity", "profile", "ajo"]`. In that profile-only mode, Identity, Profile, and AJO are explicitly included; the data lake is excluded. When using this profile-only option, `datasetId` must be `ALL`. |
+| `datasetId`            | The unique identifier for the dataset(s). The value must be exactly one of: the literal `ALL`, a single dataset ID, or a comma-separated list of two or more dataset IDs (e.g. `"id1,id2,id3"`). You cannot combine `ALL` with specific IDs. Single-dataset requests behave as before, multi-dataset requests delete the identities from each listed dataset, and `ALL` targets every dataset. Datasets must have a primary identity or identity map. If an identity map exists, it will be present as a top-level field named `identityMap`.<br>**Note**: A dataset row may have many identities in its identity map, but only one can be marked as primary. `"primary": true` must be included to force the `id` to match a primary identity.<br>When using `targetServices` for profile-only deletion, `datasetId` must be `ALL`. |
+| `targetServices`       | Optional. The set of services that should process the deletion. If omitted, all supported services run, which is equivalent to `["datalake", "identity", "profile", "ajo"]` (the list may grow as more products onboard). The response always includes the full list of target services. To limit deletion to profile-related data only (Identity, Profile, and Adobe Journey Optimizer) and leave the data lake untouched, set this to exactly these three values in any order: `["identity", "profile", "ajo"]`. In that profile-only mode, Identity, Profile, and AJO are explicitly included; the data lake is excluded. When using this profile-only option, `datasetId` must be `ALL`. |
 | `namespacesIdentities` | An array of objects, each containing:<br><ul><li> `namespace`: An object with a `code` property specifying the identity namespace (e.g., "email").</li><li> `IDs`: An array of identity values to delete for this namespace.</li></ul>Identity namespaces provide context to identity data. You can use standard namespaces provided by Experience Platform or create your own. To learn more, see the [identity namespace documentation](../../identity-service/features/namespaces.md) and the [Identity Service API specification](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 **Response**
@@ -331,7 +331,7 @@ Identities are then deleted from each of the listed datasets. Single-dataset req
 
 #### Profile-only (targeted services)
 
-To remove identity and profile-related data only and leave the data lake untouched, include `targetServices` with exactly these three values in any order: `identity`, `profile`, and `ajo`. Identity, Profile, and AJO are explicitly included; the data lake is excluded. In this mode, `datasetId` must be `ALL` (the use case is full profile deletion, not per-dataset fragments).
+To only remove identity and profile-related data while leaving the data lake untouched, include `targetServices` with exactly these three values in any order: `identity`, `profile`, and `ajo`. Identity, Profile, and AJO are explicitly included; the data lake is excluded. In this mode, `datasetId` must be `ALL` (the use case is full profile deletion, not per-dataset fragments).
 
 The following example creates a profile-only record delete work order:
 
