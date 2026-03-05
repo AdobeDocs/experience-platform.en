@@ -175,7 +175,7 @@ The following table describes the properties in the response.
 
 To delete records associated with one or more identities from a single dataset, multiple datasets, or all datasets, make a POST request to the `/workorder` endpoint.
 
-Work orders are processed asynchronously and appear in the work order list after submission. Multi-dataset and profile-only (targeted services) options are generally available for all customers as of the February 2026 release of Experience Platform.
+Work orders are processed asynchronously and appear in the work order list after submission. Multi-dataset and profile-only (targeted services) options are generally available for all customers as of the February 2026 Experience Platform release.
 
 >[!TIP]
 >
@@ -189,10 +189,10 @@ POST /workorder
 
 >[!IMPORTANT]
 >
->Before submitting a record delete work order, note the following dataset and identity requirements:
+>Record delete work orders act exclusively on the **primary identity** field. The following limitations apply:
 >
 >- **The dataset schema must define a primary identity or identity map.** You can only delete records from datasets whose associated XDM schema defines a primary identity or identity map.
->- **Only the primary identity is used for matching.** If a dataset contains multiple identity fields, only the primary identity is used. Records cannot be targeted or deleted based on non-primary identities.
+>- **Secondary identities are not scanned.** If a dataset contains multiple identity fields, only the primary identity is used for matching. Records cannot be targeted or deleted based on non-primary identities.
 >- **Records without a populated primary identity are skipped.** If a record does not have primary identity metadata populated, it is not eligible for deletion.
 >- **Data ingested before identity configuration is not eligible.** If the primary identity field was added to a schema after data ingestion, previously ingested records cannot be deleted through record delete work orders.
 
