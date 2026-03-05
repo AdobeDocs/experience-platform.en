@@ -26,7 +26,7 @@ Record delete work orders are subject to daily and monthly identifier submission
 
 ### Monthly submission entitlement by product {#quota-limits}
 
-The following table shows identifier submission limits by product and entitlement level. For each product, the monthly cap is the lesser of two values: a fixed identifier ceiling or a percentage-based threshold tied to your licensed data volume.
+The following table shows identifier submission limits by product and entitlement level. For each product, the monthly cap is the lesser of two values: a fixed identifier ceiling or a percentage-based threshold tied to your licensed data volume. In practice, most organizations have lower monthly limits based on their actual addressable audience or CJA row entitlements.
 
 | Product  | Entitlement Description | Monthly Cap (Whichever is Less) |
 |----------|-------------------------|---------------------------------|
@@ -37,16 +37,9 @@ The following table shows identifier submission limits by product and entitlemen
 
 >[!NOTE]
 >
->Most organizations will have lower monthly limits based on their actual addressable audience or CJA row entitlements.
-
->[!NOTE]
->
->Quotas reset on the first day of each calendar month. Unused quota does **not** carry over.
-
->[!NOTE]
->
->Quota usage is based on your organization's licensed monthly entitlement for **submitted identifiers**. Quotas are not enforced by system guardrails but may be monitored and reviewed.  
->Record delete work order capacity is a **shared service**. Your monthly cap reflects the highest entitlement across Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, and any applicable Shield add-ons.
+>- Quotas reset on the first day of each calendar month. Unused quota does **not** carry over.
+>- Quota usage is based on your organization's licensed monthly entitlement for **submitted identifiers**. Quotas are not enforced by system guardrails but may be monitored and reviewed.
+>- Record delete work order capacity is a **shared service**. Your monthly cap reflects the highest entitlement across Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, and any applicable Shield add-ons.
 
 ### Processing timelines for identifier submissions {#sla-processing-timelines}
 
@@ -182,11 +175,7 @@ The following table describes the properties in the response.
 
 To delete records associated with one or more identities from a single dataset, multiple datasets, or all datasets, make a POST request to the `/workorder` endpoint.
 
-Work orders are processed asynchronously and appear in the work order list after submission.
-
->[!NOTE]
->
->Multi-dataset and profile-only (targeted services) options are generally available for all customers as of the February 2026 release of Experience Platform.
+Work orders are processed asynchronously and appear in the work order list after submission. Multi-dataset and profile-only (targeted services) options are generally available for all customers as of the February 2026 release of Experience Platform.
 
 >[!TIP]
 >
@@ -198,15 +187,12 @@ Work orders are processed asynchronously and appear in the work order list after
 POST /workorder
 ```
 
->[!NOTE]
->
->You can only delete records from datasets whose associated XDM schema defines a primary identity or identity map.
-
 >[!IMPORTANT]
 >
->Record delete work orders act exclusively on the **primary identity** field. The following limitations apply:
+>Before submitting a record delete work order, note the following dataset and identity requirements:
 >
->- **Secondary identities are not scanned.** If a dataset contains multiple identity fields, only the primary identity is used for matching. Records cannot be targeted or deleted based on non-primary identities.
+>- **The dataset schema must define a primary identity or identity map.** You can only delete records from datasets whose associated XDM schema defines a primary identity or identity map.
+>- **Only the primary identity is used for matching.** If a dataset contains multiple identity fields, only the primary identity is used. Records cannot be targeted or deleted based on non-primary identities.
 >- **Records without a populated primary identity are skipped.** If a record does not have primary identity metadata populated, it is not eligible for deletion.
 >- **Data ingested before identity configuration is not eligible.** If the primary identity field was added to a schema after data ingestion, previously ingested records cannot be deleted through record delete work orders.
 
@@ -325,7 +311,7 @@ The response `targetServices` value echoes your request or shows the full defaul
 
 ### Multi-dataset and profile-only (API) {#multi-dataset-profile-only}
 
-The following API-only options control which datasets and which services process the deletion. They enable submitting multiple datasets per work order and targeting a specific set of services (profile-only) so you know how to submit requests and what to expect.
+The following options are available through the API only and are not supported in the Data Hygiene UI. They control which datasets and which services process the deletion, enabling multi-dataset submissions and profile-only targeted service requests.
 
 The following table summarizes how the request body and behavior change for each option.
 
