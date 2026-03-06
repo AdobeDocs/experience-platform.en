@@ -4,6 +4,7 @@ description: Learn about the Talon.One sources on Adobe Experience Platform
 badge: Beta
 hide: true
 hidefromtoc: true
+exl-id: 92ed180a-6175-45e2-a831-0f40fd8606b0
 ---
 # [!DNL Talon.One]
 

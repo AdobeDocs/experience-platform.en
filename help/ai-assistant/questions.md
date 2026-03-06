@@ -190,12 +190,10 @@ The following is a list of examples of questions that are currently not supporte
 * How many profiles in this sandbox live in California? (**Note**: for similar questions, you must provide a specific criteria to give enough context for your request, in this case, the specific criteria is "live in California").
 * What are the segments this profile {PROFILE_INFO/ATTRIBUTE_VALUE} is in?
 * How many profiles in the dataset have an email?
-* Which dataset constitutes to maximum number of profiles in this sandbox ?
-* Which dataset has the highest number of records?
+* Which dataset constitutes to maximum number of profiles in this sandbox?
 * How many segments have been deleted in {RELATIVE_DATE}?
-* Which of my datasets has the largest size?
 * Give me a profile in the {AUDIENCE_NAME}. 
-* What is the total number of profiles in my sandbox
+* What is the total number of profiles in my sandbox?
 * How many identity namespaces are associated with the audience {AUDIENCE_NAME}?
 * Show me a report of all the audience segments that were evaluated today
 * How many segments have overlapping profiles?

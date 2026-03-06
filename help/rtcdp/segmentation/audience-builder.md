@@ -2,7 +2,7 @@
 title: Audience Builder in Real-Time Customer Data Platform
 description: Learn how to use the Audience Builder in Real-Time Customer Data Platform to create audiences.
 feature: Get Started, Audiences
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
 ---
 # Audience Builder in Real-Time Customer Data Platform

@@ -1,12 +1,18 @@
 ---
 title: Adobe Advertising configuration settings
 description: Enable or disable Demand-side Platform functionality.
+exl-id: 594fd75d-bb13-4146-9105-1398e24c4c16
 ---
-# Adobe Advertising configuration settings
+# Adobe Advertising configuration settings {#advertising}
 
 >[!AVAILABILITY]
 >
 >Adobe Advertising for the Web SDK is currently in **beta**. The functionality and documentation are subject to change.
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_advertising"
+>title="Adobe Advertising"
+>abstract="Configure settings for Adobe Advertising integrations. Note that no advertising configuration is necessary to enable click-through measurement. Search, Social, and Commerce clients have no further action required; however, Demand-side Platform (DSP) users need to configure advertisers in this section to measure view-through conversions."
 
 The **[!UICONTROL Adobe Advertising]** section lets you enable or disable Demand-side Platform (DSP) functionality if used in your implementation. You only need to set this field if your implementation uses a DSP.
 

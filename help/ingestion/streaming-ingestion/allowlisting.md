@@ -4,6 +4,7 @@ description: Learn how to secure access to the Streaming Ingestion API by allowi
 hide: true
 hidefromtoc: true
 badge: beta
+exl-id: 6df6745b-c166-4eb8-ae0b-5575a57dace1
 ---
 # IP address allowlisting for Streaming Ingestion API
 

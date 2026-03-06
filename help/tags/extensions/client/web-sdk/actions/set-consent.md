@@ -1,6 +1,7 @@
 ---
 title: Set consent
 description: Sets the desired consent for the visitor.
+exl-id: d279045a-7ed7-41f9-af2f-2e737794730e
 ---
 # Set consent
 

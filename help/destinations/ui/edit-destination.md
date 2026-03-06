@@ -2,20 +2,21 @@
 title: Edit destinations
 type: Tutorial
 description: Learn how to edit and update existing destinations accounts in the Adobe Experience Platform UI
-badgeBeta: label="Beta" type="Informative"
 exl-id: f3298836-668b-43fb-b4f3-85a650766f05
 ---
 # Edit destinations
 
 Learn how to edit various components of an existing destination connection, including how to update authentication credentials, export location, and more by using the Experience Platform UI.
 
->[!IMPORTANT]
->
->This functionality is in beta and only available to select customers. To request access, contact your Adobe representative.
-
 >[!NOTE]
 >
 > The edit operations described in this tutorial are also supported via API operations. Read the tutorial on how to [edit destinations in the API](/help/destinations/api/edit-destination.md) for more information.
+
+## Prerequisites {#prerequisites}
+
+To edit destination connections you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
+## Edit destination connections {#edit}
 
 To edit various components of an existing destination connection: 
 

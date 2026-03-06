@@ -1028,7 +1028,6 @@ If you use [configurable aggregation](../../functionality/destination-configurat
 Possible values are:
 
 * realized
-* existing
 * exited
 
 Add the line below to the template to add or remove profiles from segments, based on the values above:

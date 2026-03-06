@@ -33,7 +33,7 @@ In the above example, `EDGE-DOMAIN` should be replaced with the first-party doma
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-In addition the CSP nonce needs to be added as an attribute to the [!DNL Experience Platform Web SDK] [base code](../js/install/library.md) script tag. [!DNL Experience Platform Web SDK] will then use that nonce when adding inline script or style tags to the page:
+In addition the CSP nonce needs to be added as an attribute to the Web SDK [base code](../js/install/base-code.md). The Web SDK then uses that nonce when adding inline script or style tags to the page:
 
 ```html
 <script nonce="SERVER-GENERATED-NONCE">

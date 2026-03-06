@@ -7,6 +7,16 @@ exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
 
 External audiences let you upload profile data from your external sources into Adobe Experience Platform. You can use the `/external-audience` endpoint in the Segmentation Service API to ingest an external audience to Experience Platform, view details and update your external audiences, as well as delete your external audiences.
 
+## Guardrails
+
+Starting with the March release, the following guardrails will be enforced when using the external audiences endpoint:
+
+| Guardrail | Limit | Limit type | Description |
+| --------- | ----- | ---------- | ----------- |
+| Number of audience ingestion runs per day | 100 | System-enforced guardrail | The maximum number of audience ingestion runs allowed per day. This limit as at a per **sandbox** level. |
+| Number of ingestions per audience | 10 | System-enforced guardrail | The number of ingestions that can be performed on a specified audience. |
+| External audience size | 10 GB | Performance guardrail | The recommended total size of the external audience is 10GB. |
+
 ## Getting started
 
 >[!IMPORTANT]
@@ -91,14 +101,14 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `name` | String | The name for the external audience. |
 | `description` | String | An optional description for the external audience. |
 | `customAudienceId` | String | An optional identifier for your external audience. |
-| `fields` | Array of objects | The list of fields and their data types. When creating the list of fields, you can add the following items: <ul><li>`name`: **Required** The name of the field that is part of the external audience specification.</li><li>`type`: **Required** The type of data that goes into the field. Supported values include `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`), and `boolean`.</li><li>`identityNs`: **Required for identity field** The namespace that is used by the identity field. Supported values include all valid namespaces, such as `ECID` or `email`.</li><li>`labels`: *Optional* An array of access control labels for the field. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). </li></ul> |
+| `fields` | Array of objects | The list of fields and their data types. You must have a minimum of 1 field and a maximum of 41 fields in your array. One of the fields **must** be an identity field, and include the `identityNs`. When creating the list of fields, you can add the following items: <ul><li>`name`: **Required** The name of the field that is part of the external audience specification.</li><li>`type`: **Required** The type of data that goes into the field. Supported values include `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`), and `boolean`.</li><li>`identityNs`: **Required for identity field** The namespace that is used by the identity field. Supported values include all valid namespaces, such as `ECID` or `email`.</li><li>`labels`: *Optional* An array of access control labels for the field. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). </li></ul> |
 | `sourceSpec` | Object | An object that contains the information where the external audience is located. When using this object, you **must** include the following information: <ul><li>`path`: **Required**: The location of the external audience or the folder that contains the external audience within the source. The file path **cannot** contain any spaces. For example, if your path is `activation/sample-source/Example CSV File.csv`, set the path to `activation/sample-source/ExampleCSVFile.csv`. You can find the path to your source within the **Source data** column of the dataflows section.</li><li>`type`: **Required** The type of the object you're retrieving from the source. This value can either be `file` or `folder`.</li><li>`sourceType`: *Optional* The type of source you're retrieving from. Currently, the only supported value is `Cloud Storage`.</li><li>`cloudType`: **Required** The type of cloud storage, based off of the source type. Supported values include `S3`, `DLZ`, `GCS`, `Azure`, and `SFTP`.</li><li>`baseConnectionId`: The ID of the base connection, and is provided from your source provider. This value is **required** if using a `cloudType` value of `S3`, `GCS`, or `SFTP`. Otherwise, you do **not** need to include this parameter. For more information, please read the [source connectors overview](../../sources/home.md).</li></ul> |
 | `ttlInDays` | Integer | The data expiration for the external audience, in days. This value can be set from 1 to 90. By default, the data expiration is set to 30 days. |
 | `audienceType` | String | The audience type for the external audience. Currently, only `people` is supported. |
 | `originName` | String | **Required** The origin of the audience. This states where the audience comes from. For external audiences, you should use `CUSTOM_UPLOAD`. |
 | `namespace` | String | The namespace for the audience. By default, this value is set to `CustomerAudienceUpload`. |
 | `labels` | Array of strings | The access control labels that apply to the external audience. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). |
-| `tags` | Array of strings | The tags you want to apply to the external audience. More information about tags can be found in the [managing tags guide](/help/administrative-tags/ui/managing-tags.md). |
+| `tags` | Array of strings | The tags you want to apply to the external audience. When you add the array of tags, you **must** use the `tagId`. More information about tags can be found in the [managing tags guide](/help/administrative-tags/ui/managing-tags.md). |
 
 +++
 
@@ -608,6 +618,53 @@ A successful response returns HTTP status 200 with a list of ingestion runs for 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `runs` | Object | An object that contains the list of ingestion runs that belongs to the audience. More information about this object can be found in the [retrieve ingestion status section](#retrieve-ingestion-status). |
+
++++
+
+## Extend data expiration for an external audience {#extend-data-expiration}
+
+>[!NOTE]
+>
+>To use the following endpoint, you need to have the `audienceId` of your external audience. You can get your `audienceId` from a successful call to the `GET /external-audiences/operations/{OPERATION_ID}` endpoint.
+
+You can extend the data expiration of an external audience by making a POST request to the following endpoint while providing the audience ID. 
+
+The data expiration is extended by the original duration set during ingestion. If no duration was specified, a default extension of 30 days is applied. When you extend the data expiration, the audience will be re-ingested with the data from the last successful ingestion.
+
+**API format**
+
+```http
+/ais/external-audience/extend-ttl/{AUDIENCE_ID}
+```
+
+**Request**
+
+The following request extends the data expiration of the specified external audience.
+
++++ A sample request to extend the data expiration of an external audience.
+
+```shell
+curl -x POST https://platform.adobe.io/data/core/ais/external-audience/extend-ttl/60ccea95-1435-4180-97a5-58af4aa285ab \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**Response**
+
+A successful response returns HTTP status 200 with details of the audience.
+
++++ A sample response when extending the data expiration.
+
+```json
+{
+    "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
+    "name": "Sample external audience"
+}
+```
 
 +++
 

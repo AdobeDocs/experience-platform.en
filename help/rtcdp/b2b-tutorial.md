@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Getting Started with Real-Time Customer Data Platform B2B Edition
 description: Use this sample scenario as an example when setting up your implementation of Adobe Real-Time Customer Data Platform B2B Edition.
 feature: Get Started, B2B
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
 ---
 # Getting started with Real-Time Customer Data Platform B2B Edition

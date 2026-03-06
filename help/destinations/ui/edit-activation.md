@@ -105,11 +105,11 @@ Select **[!UICONTROL Export datasets]** in the right rail to select additional d
 
 ![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/export-datasets.png)
 
-## [!BADGE Beta]{type=Informative} Edit marketing actions {#edit-marketing-actions}
+## Edit marketing actions {#edit-marketing-actions}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->This feature is currently in **beta**. To request access to it, contact your Adobe representative.
+>To edit marketing actions you need the **[!UICONTROL Activate Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 You can add or remove marketing actions that you set up when initially connecting to the destination.
 
