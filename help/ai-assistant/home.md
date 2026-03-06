@@ -1,9 +1,9 @@
 ---
-title: AI Assistant in Adobe Experience Platform Overview
-description: Learn about AI Assistant, its nuances and use cases, and how you can use it to expedite your workflow with Adobe Experience Platform and Real-Time Customer Data Platform.
+title: AI Assistant (Legacy) in Adobe Experience Platform Overview
+description: Learn about AI Assistant (Legacy), its nuances and use cases, and how you can use it to expedite your workflow with Adobe Experience Platform and Real-Time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
 ---
-# AI Assistant in Adobe Experience Platform
+# AI Assistant (Legacy) in Adobe Experience Platform
 
 >[!IMPORTANT]
 >
@@ -23,15 +23,15 @@ The following video is intended to support your understanding of AI Assistant.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
-Read this document to learn about AI Assistant in Adobe Experience Platform.
+Read this document to learn about AI Assistant (Legacy) in Adobe Experience Platform.
 
-AI Assistant in Adobe Experience Platform is a conversational experience that you can use to accelerate your workflows in Adobe applications. You can use AI Assistant to better understand product knowledge, troubleshoot problems, or search through information and find operational insights. AI Assistant supports Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer and Customer Journey Analytics.
+AI Assistant (Legacy) in Adobe Experience Platform is a conversational experience that you can use to accelerate your workflows in Adobe applications. You can use AI Assistant (Legacy) to better understand product knowledge, troubleshoot problems, or search through information and find operational insights. AI Assistant (Legacy) supports Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer and Customer Journey Analytics.
 
 ![The AI Assistant interface with the first-time user experience triggered.](./images/ai-assistant-full.png)
 
 >[!IMPORTANT]
 >
->You must agree to a [user agreement](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) before you can use AI Assistant. The user agreement also contains the public beta agreement. This is so that you can use additional AI Assistant features as they roll out in a beta capacity.
+>You must agree to a [user agreement](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) before you can use AI Assistant (Legacy). The user agreement also contains the public beta agreement. This is so that you can use additional AI Assistant (Legacy) features as they roll out in a beta capacity.
 
 +++Select to view user agreement interface
 
@@ -43,7 +43,7 @@ AI Assistant in Adobe Experience Platform is a conversational experience that yo
 
 ## Understanding AI Assistant {#understanding-ai-assistant}
 
-AI Assistant responds to your submitted questions by querying a database and then translating data from the database into a human-readable answer.
+AI Assistant (Legacy) responds to your submitted questions by querying a database and then translating data from the database into a human-readable answer.
 
 This internal representation of underlying data is also known as the **[!DNL Knowledge Graph]** - a comprehensive web of concepts, data, and metadata for a given answer. 
 
@@ -53,7 +53,7 @@ The [!DNL Knowledge Graph] consists of sub-graphs that are referenced whenever q
 * Customer operational insights across various meta-stores.
 * Experience League documentation.
 
-There are two classes of questions to consider before querying AI Assistant:
+There are two classes of questions to consider before querying AI Assistant (Legacy):
 
 ### Product knowledge {#product-knowledge}
 
@@ -67,19 +67,19 @@ Product knowledge refers to concepts and topics grounded in Experience League do
 
 {style="table-layout:auto"}
 
-Watch the following video for additional information on AI Assistant product knowledge:
+Watch the following video for additional information on AI Assistant (Legacy) product knowledge:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### Operational insights {#operational-insights}
 
-Operational insights refer to answers AI Assistant generates about your meta data objects (attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources), including counts, lookups, and lineage impact. It does not look at any data within the sandbox. 
+Operational insights refer to answers AI Assistant (Legacy) generates about your meta data objects (attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources), including counts, lookups, and lineage impact. It does not look at any data within the sandbox. 
 
 * How many datasets do I have?
 * How many schema attributes have never been used?
 * Which audiences have been activated?
 
-You can ask AI Assistant questions about your operational insights in the following domains: 
+You can ask AI Assistant (Legacy) questions about your operational insights in the following domains: 
 
 | Domain | Supported metadata | Unsupported metadata |
 | --- | --- | --- |
@@ -96,23 +96,23 @@ You can ask AI Assistant questions about your operational insights in the follow
 
 For operational insights questions, answers may not reflect the current state of the UI. The data that backs these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You will need to log into a sandbox to inquire about specific data related to objects.
 
-Watch the following video for additional information on AI Assistant operational insights:
+Watch the following video for additional information on AI Assistant (Legacy) operational insights:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
 
 ### Feature scope {#feature-scope}
 
-Currently, the scope of AI Assistant is as follows:
+Currently, the scope of AI Assistant (Legacy) is as follows:
 
-* [Product knowledge](./home.md#product-knowledge): AI Assistant can answer product knowledge questions for Experience Platform, Real-Time Customer Data Platform and Adobe Journey Optimizer. You can also delve into product knowledge topics for Customer Journey Analytics, but only through the Customer Journey Analytics UI.
-* [Operational insights](./home.md#operational-insights): You can ask AI Assistant with questions on operational insights on the following data objects: attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources.
+* [Product knowledge](./home.md#product-knowledge): AI Assistant (Legacy) can answer product knowledge questions for Experience Platform, Real-Time Customer Data Platform and Adobe Journey Optimizer. You can also delve into product knowledge topics for Customer Journey Analytics, but only through the Customer Journey Analytics UI.
+* [Operational insights](./home.md#operational-insights): You can ask AI Assistant (Legacy) with questions on operational insights on the following data objects: attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources.
 
 ## Next steps
 
-Now that you have a general understanding of AI Assistant, you can now proceed and use AI Assistant during your workflows. Refer to the following documentation for more information:
+Now that you have a general understanding of AI Assistant (Legacy), you can now proceed and use AI Assistant (Legacy) during your workflows. Refer to the following documentation for more information:
 
-* [AI Assistant UI guide](./ui-guide.md)
+* [AI Assistant (Legacy) UI guide](./ui-guide.md)
 * [Feature access](./access.md)
 * [Question guide](./questions.md)
-* [Privacy, Security, and Governance in AI Assistant](./privacy.md)
+* [Privacy, Security, and Governance in AI Assistant (Legacy)](./privacy.md)
 * [FAQ](./faq.md)
