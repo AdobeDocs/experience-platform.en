@@ -35,7 +35,7 @@ To access health checks from the [!UICONTROL Experience Platform] UI:
 
 The health checks dashboard displays a summary of your most recent scan results.
 
-![Health checks dashboard showing objects evaluated, scan results, and identified issues](assets/health-checks/aep_health-checks_dashboard.png)
+![Health checks dashboard showing objects evaluated, scan results, and identified issues](assets/health-checks/dashboard.png)
 
 ## Understanding the dashboard {#understanding-dashboard}
 
@@ -81,7 +81,7 @@ When you select the **[!UICONTROL Identity Field Validation]** card, a detail pa
 * **[!UICONTROL Experience League Documentation]**: A link to best practices for data modeling for further information.
 * **[!UICONTROL Affected Schemas]**: A list of schemas that have issues, with options to expand or view more details for each.
 
-![Identity Field Validation detail panel showing description, impact, and affected schemas](assets/health-checks/aep_health-checks_identity-field-validation-detail.png)
+![Identity Field Validation detail panel showing description, impact, and affected schemas](assets/health-checks/identity-field-validation-detail.png)
 
 For more information, see the [data integrity tips](/help/xdm/schema/best-practices.md#data-integrity-tips) in the schema best practices documentation.
 
@@ -103,7 +103,7 @@ When you select the **[!UICONTROL Identity Graph Linking Rules]** card, a detail
 * **[!UICONTROL Experience League Documentation]**: A link to the Identity Graph Linking Rules overview for more information.
 * **[!UICONTROL Check status]**: Whether the check passed or failed.
 
-![Identity Graph Linking Rules detail panel showing description, impact, and check status](assets/health-checks/aep_health-checks_identity-graph-linking-detail.png)
+![Identity Graph Linking Rules detail panel showing description, impact, and check status](assets/health-checks/identity-graph-linking-detail.png)
 
 For more information, see the [identity graph linking rules overview](/help/identity-service/identity-graph-linking-rules/overview.md) and the [implementation guide](/help/identity-service/identity-graph-linking-rules/implementation-guide.md).
 
@@ -124,7 +124,7 @@ When you select the **[!UICONTROL People & Non-People Identity Config]** card, a
 * **[!UICONTROL General areas of impact]**: Incomplete identity graphs; inflated profile counts; lookup misuse.
 * **[!UICONTROL Affected Schemas]**: A list of schemas that have issues, with options to expand or view more details for each.
 
-![People & Non-People Identity Config detail panel showing description, impact, and affected schemas](assets/health-checks/aep_health-checks_people-non-people-identity-detail.png)
+![People & Non-People Identity Config detail panel showing description, impact, and affected schemas](assets/health-checks/people-non-people-identity-detail.png)
 
 For more information, see the [identity type documentation](/help/identity-service/features/namespaces.md#identity-type) and the [schema best practices](/help/xdm/schema/best-practices.md).
 
@@ -146,7 +146,7 @@ When you select the **[!UICONTROL Custom Identity Namespace Missing Description]
 * **[!UICONTROL Experience League Documentation]**: A link to Create Custom Namespaces for further information.
 * **[!UICONTROL Check status]**: Whether the check passed or failed (for example, "The check passed successfully.").
 
-![Custom Identity Namespace Missing Description detail panel showing description, impact, and check status](assets/health-checks/aep_health-checks_custom-namespace-missing-description-detail.png)
+![Custom Identity Namespace Missing Description detail panel showing description, impact, and check status](assets/health-checks/custom-namespace-description-detail.png)
 
 For more information, see the documentation on [creating custom namespaces](/help/identity-service/features/namespaces.md#create-namespaces).
 
@@ -168,7 +168,7 @@ When you select the **[!UICONTROL Deprecated Identity Namespace]** card, a detai
 * **[!UICONTROL Experience League Documentation]**: A link to Obsolete Identity Namespaces for further documentation.
 * **[!UICONTROL Check status]**: Whether the check passed or failed (for example, "The check passed successfully.").
 
-![Deprecated Identity Namespace detail panel showing description, impact, and check status](assets/health-checks/aep_health-checks_deprecated-namespace-detail.png)
+![Deprecated Identity Namespace detail panel showing description, impact, and check status](assets/health-checks/deprecated-namespace-detail.png)
 
 For more information, see the [Experience Cloud knowledge base article on obsolete namespaces](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155).
 
