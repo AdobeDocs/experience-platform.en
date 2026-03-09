@@ -11,6 +11,7 @@ role: Admin, User
 # Run and Operate guide help {#run-and-operate}
 
 * [Overview](overview.md)
+* [Health checks](health-checks.md)
 * Job Schedules {#job-schedules}
   * [Inspect job schedules](job-schedules.md)
   * [View job details](job-schedules-details.md)

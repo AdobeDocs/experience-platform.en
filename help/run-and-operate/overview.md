@@ -41,7 +41,7 @@ To access the Run and Operate tools from the Experience Platform UI:
     
     >[!NOTE]
     >
-    >Currently, the only available capability is [Job Schedules](job-schedules.md).
+    >Currently, the available capabilities are [Job Schedules](job-schedules.md) and [Health Checks](health-checks.md).
 
 ![Experience Platform UI showing the Run and Operate left nav.](assets/overview/run-and-operate.png)
 
@@ -72,11 +72,28 @@ Job Schedules provides three levels of investigation:
 
 You can also understand dependencies between data processing stages, helping you ensure reliable data flow throughout your Experience Platform workflows.
 
+### Health checks {#health-checks}
+
+>[!IMPORTANT]
+>
+>[!UICONTROL Health checks] are currently available as a limited release.
+
+With [Health Checks](health-checks.md), you can proactively detect schema and identity configuration issues before they impact your business operations. Health checks run daily static scans across your schemas and identity namespaces, surfacing missing best practices, misconfigurations, and patterns that lead to downstream failures.
+
+Health checks currently evaluate five foundational areas:
+
+* **[Identity field validation](health-checks.md#identity-field-validation)**: Verify that identity fields have proper length and pattern constraints.
+* **[Identity graph linking rules](health-checks.md#identity-graph-linking-rules)**: Confirm that linking rules are configured to prevent profile collapse.
+* **[People and non-people identity configuration](health-checks.md#people-non-people-identity)**: Validate correct identity type usage across schema classes.
+* **[Custom identity namespace descriptions](health-checks.md#namespace-missing-description)**: Ensure namespace metadata is complete.
+* **[Deprecated identity namespaces](health-checks.md#deprecated-namespace)**: Detect obsolete namespaces for cleanup.
+
 ## Next steps {#next-steps}
 
 Now that you understand the purpose and capabilities of [!UICONTROL Run and Operate] tools, explore the following resources to deepen your knowledge:
 
-* Learn about [batch ingestion](../ingestion/batch-ingestion/overview.md) to understand how data is ingested into Experience Platform
+* Learn how to use [health checks](health-checks.md) to detect schema and identity configuration issues
 * Learn how to [inspect job schedules](job-schedules.md) for your batch ingestion and activations
+* Learn about [batch ingestion](../ingestion/batch-ingestion/overview.md) to understand how data is ingested into Experience Platform
 * Understand how to [configure scheduled activations](../destinations/ui/activate-batch-profile-destinations.md) for batch destinations
 * Explore [dataflow monitoring](../dataflows/ui/monitor-destinations.md) for destinations
