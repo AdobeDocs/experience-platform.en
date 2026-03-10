@@ -34,6 +34,8 @@ The member profile lists key profile attributes LAVA stores on a member. By usin
 | `id`                               | c448e091-af0f-4eab-98ff-2c758c149051 | A unique ID for the the record.                 |
 | `timestamp`                        | 2025-10-22T12:51:04.317084Z          | When this the profile had these attributes set. |
 
+[Sample data file download](lava_profile_sample.json).
+
 ### Member Balances
 
 The member balance source lists balances of rewards your members have. `balances` is an array. When using these in audiences, content personalization, conditions and other such locations, you will often have to either select out one particular entry, repeat something for all entries, or aggregate across several entries.
@@ -51,6 +53,8 @@ The member balance source lists balances of rewards your members have. `balances
 | `type`                             | rewards                              | An indicator for what type of record this is.                                                                                                                                                                                                                                                          |
 | `id`                               | 8fefe232-0375-4d56-a24c-d009e9d351e8 | A unique ID for the the record.                                                                                                                                                                                                                                                                        |
 | `timestamp`                        | 2025-10-22T12:51:04.317084Z          | When this data was recorded.                                                                                                                                                                                                                                                                           |
+
+[Sample data file download](lava_balance_sample.json).
 
 ### Ticket Scan Events
 
@@ -72,6 +76,7 @@ The member balance source lists balances of rewards your members have. `balances
 | `id`                               | 1234567/GRE1234A/GA4/GA3/13/0        | A unique ID for the ticket scan event.                          |
 | `timestamp`                        | 2025-11-03T01:41:00Z                 | When the ticket scan occurred.                                  |
 
+[Sample data file download](lava_ticketscan_sample.json).
 
 ## Prerequisites
 
@@ -117,7 +122,7 @@ The **[!UICONTROL Select data]** step appears, providing an interface for you to
 * The left part of the interface is a browser that allows you to view the available data streams within your account;
 * The right part of the interface lets you preview up to 100 rows of data from a JSON file.
 
-Select **[!UICONTROL Upload files]** to upload a JSON file from your local system. Alternatively, you can drag and drop the JSON file you want to upload into the [!UICONTROL Drag and drop files] panel.
+Select **[!UICONTROL Upload files]** to upload a JSON file from your local system, upload the sample file from the Overview section corresponding to the data set you are setting up. Alternatively, you can drag and drop the JSON file you want to upload into the [!UICONTROL Drag and drop files] panel.
 
 ![The add data step of the sources workflow.](../../../../images/tutorials/create/lava/add-data.png)
 
