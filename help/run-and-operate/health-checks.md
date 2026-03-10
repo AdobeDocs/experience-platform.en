@@ -12,7 +12,7 @@ hide: yes
 >
 >Health checks are currently available as a limited release.
 
-Health checks scan your schemas and identities used in your sandbox and provide a summary of issues that you can use to explore and fix with [!UICONTROL AI Assistant]. In the future, more objects can be scanned for a more comprehensive report.
+Health checks scan your schemas and identities used in your sandbox and provide a summary of issues that you can use to explore and troubleshoot with [!UICONTROL AI Assistant]. In the future, more objects can be scanned for a more comprehensive report.
 
 Poor schema and identity configurations lead to significant downstream issues, including incorrect profile creation, failed segment qualification, and inaccurate activation. These issues are difficult to detect and often require specialized expertise to diagnose. Health checks shift your approach from reactive troubleshooting to proactive, preventative maintenance.
 
@@ -20,11 +20,11 @@ With health checks, you can:
 
 * **Detect configuration issues early**: Identify missing best practices, misconfigurations, and patterns that lead to inefficiencies in personalization, activation, and more.
 * **Receive guided remediation**: Get clear guidance on what each issue is and what to do about it.
-* **Monitor continuously**: Health checks run daily static scans so that you can catch problems before they become critical failures.
+* **Monitor continuously**: Currently, health checks run daily static scans so that you can catch problems before they become critical failures.
 
 ## Prerequisites {#prerequisites}
 
-To access health checks, you need the **[!UICONTROL View Job Schedules]** and **[!UICONTROL View Profile Management]** [access control permissions](/help/access-control/home.md#permissions). Contact your system administrator to ensure you have the appropriate permissions.
+To access health checks, you need the **[!UICONTROL View Health Checks]** [access control permissions](/help/access-control/home.md#permissions). Contact your system administrator to ensure you have the appropriate permissions.
 
 ## Access health checks {#access-health-checks}
 
