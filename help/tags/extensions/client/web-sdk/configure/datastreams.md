@@ -3,7 +3,12 @@ title: Datastream configuration settings
 description: Configure the datastream to send data to using the Web SDK tag extension.
 exl-id: 2d2504c6-b3f9-4e7b-aff4-a8d8d6c4e3dd
 ---
-# Datastream configuration settings
+# Datastream configuration settings {#datastreams}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_datastreams"
+>title="Datastreams"
+>abstract="Required. Sets the datastream within the Edge Network that you want to send data to."
 
 This configuration section allows you to determine which [datastream](/help/datastreams/overview.md) that you want to send data to. **A datastream ID is required for all data sent to the Edge Network.**
 

@@ -61,6 +61,7 @@ To create a new account, select **[!UICONTROL New account]** and provide a name 
 * Cluster ID
 * Access token
 * Database
+* Catalog
 
 ![The new account interface in the sources workflow with an account name and optional description provided.](../../../../images/tutorials/create/databricks/new.png)
 

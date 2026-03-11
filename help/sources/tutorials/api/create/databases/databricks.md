@@ -40,6 +40,7 @@ Provide values for the following credentials to connect [!DNL Databricks] to Exp
 | `clusterId` | The ID of your cluster in [!DNL Databricks]. This cluster must already be an existing cluster and should be an interactive cluster. |
 | `accessToken` | The access token that authenticates your [!DNL Databricks] account. You can generate your access token using the [!DNL Databricks] workspace. |
 | `database` | The name of your database in the delta lake. |
+| `catalog` | The name of your catalog in the delta lake. You do not need to specify a value for a default catalog. |
 | `connectionSpec.Id` | The connection spec ID returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection spec ID for [!DNL Databricks] is `e9d7ec6b-0873-4e57-ad21-b3a7c65e310b`. |
 
 For more information, read the [[!DNL Databricks] overview](../../../../connectors/databases/databricks.md).

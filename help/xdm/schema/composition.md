@@ -111,13 +111,18 @@ As the example above shows, each key in the `identityMap` object represents an i
 
 ### Schema evolution principles {#evolution}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_schema_editing_breaking_change_warning"
+>title="Edit a schema in use"
+>abstract="This schema is already used by datasets or ingestion workflows. Changes to existing fields or identities can cause ingestion failures if dataflows are running or scheduled. After ingestion begins, only additive schema changes are supported."
+
 As the nature of digital experiences continues to evolve, so must the schemas used to represent them. A well-designed schema is therefore able to adapt and evolve as needed, without causing destructive changes to previous versions of the schema.
 
 Since maintaining backwards compatibility is crucial for schema evolution, Experience Platform enforces a purely additive versioning principle. This principle ensures that any revisions to the schema only result in non-destructive updates and changes. In other words, **breaking changes are not supported.**
 
 >[!NOTE]
 >
->You can only introduce a breaking change to a schema if it has not yet been used to ingest data into Experience Platform and hasn't been enabled for use in Real-Time Customer Profile. However, once the schema has been used in Experience Platform, it must adhere to the additive versioning policy.
+>You can only introduce a breaking change to a schema if it has not yet been used to ingest data into Experience Platform and hasn't been enabled for use in Real-Time Customer Profile. However, once the schema has been used in Experience Platform, it must adhere to the additive versioning policy. Once a dataset is created for the schema, the rules of Schema Evolution become strictly enforced by the system for all the fields in the schema. The fields will become non-editable across all XDM schemas in which they are referenced.
 
 The following table breaks down which changes are supported when editing schemas, field groups, and data types:
 
