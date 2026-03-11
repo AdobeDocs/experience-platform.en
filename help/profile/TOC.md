@@ -16,6 +16,7 @@ role: User
 * [Experience Event expirations](event-expirations.md)
 * [Pseudonymous Profile expirations](pseudonymous-profiles.md)
 * [Customer timestamp ordering](customer-timestamp-ordering.md)
+* [Traits](traits.md)
 * [!DNL Profile] API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
