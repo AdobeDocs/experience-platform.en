@@ -156,7 +156,7 @@ The following table describes the properties in the response.
 | `createdAt`      | The timestamp when the work order was created.                                   |
 | `updatedAt`      | The timestamp when the work order was last updated.                              |
 | `operationCount` | The number of operations included in the work order.                             |
-| `targetServices` | List of target services for the work order. When not specified in the request, the response shows the full set of supported services (equivalent to `["datalake", "identity", "profile", "ajo"]`). |
+| `targetServices` | The set of target services that processed the deletion. The default value depends on your organization's entitlements. For organizations with Real-Time CDP or Adobe Journey Optimizer, the default is the full set of supported services (`["datalake", "identity", "profile", "ajo"]`). For Customer Journey Analytics-only organizations (without a Real-Time Customer Profile entitlement), the only valid value is ["datalake"]. |
 | `status`         | Current status of the work order. Possible values are: `received`,`validated`, `submitted`, `ingested`, `completed`, and `failed`.|
 | `createdBy`      | The email and identifier of the user who created the work order.                 |
 | `datasetId`      | The dataset(s) targeted by the work order: a single dataset ID, a comma-separated list of dataset IDs (multi-dataset), or the literal `ALL`. When the request used profile-only mode, this value is `ALL`. |
@@ -175,7 +175,7 @@ The following table describes the properties in the response.
 
 To delete records associated with one or more identities from a single dataset, multiple datasets, or all datasets, make a POST request to the `/workorder` endpoint.
 
-Work orders are processed asynchronously and appear in the work order list after submission. Multi-dataset and profile-only (targeted services) options are generally available for all customers as of the February 2026 Experience Platform release.
+Work orders are processed asynchronously and appear in the work order list after submission. Multi-dataset and profile-only (targeted services) options are generally available for all customers as of the March 2026 Experience Platform release.
 
 >[!TIP]
 >
@@ -206,7 +206,7 @@ The request body must include **exactly one** of the following.
 
 | Format | Property | Shape | When to use |
 |--------|----------|-------|-------------|
-| **Recommended** | `namespacesIdentities` | Array of objects with `namespace` (for example, `{ "code": "email" }`) and `ids` (array of identity strings). | Use when building payloads manually, especially when many identities share the same namespace as this keeps payloads smaller. |
+| **Recommended** | `namespacesIdentities` | Array of objects with `namespace` (for example, `{ "code": "email" }`) and `ids` (array of identity strings). | Use for all payloads, whether manually constructed or code-generated. This is especially efficient to reduce payload size when many identities share the same namespace. |
 | **Also accepted** | `identities` | Array of objects with `namespace` (for example, `{ "code": "email" }`) and a single `id` (string). | Accepted for backward compatibility. This is the format produced by the [csv-to-data-hygiene conversion scripts](#convert-id-lists-to-json-for-record-delete-requests). The service normalizes this format internally, so the resulting behavior is identical. |
 
 If you send **both properties**, **neither property**, or provide **an empty array** for the property you include, the API returns **HTTP 400 (Bad Request)** with one of these messages:
@@ -254,9 +254,9 @@ The following table describes the properties for creating a record delete work o
 | `description`          | A description of the record delete work order. |
 | `action`               | The action requested for the record delete work order. To delete records associated with a given identity, use `delete_identity`. |
 | `datasetId`            | The unique identifier for the dataset(s). The value must be exactly one of: the literal `ALL`, a single dataset ID, or a comma-separated list of two or more dataset IDs (e.g. `"id1,id2,id3"`). You cannot combine `ALL` with specific IDs. Single-dataset requests behave as before, multi-dataset requests delete the identities from each listed dataset, and `ALL` targets every dataset. Datasets must have a primary identity or identity map. If an identity map exists, it will be present as a top-level field named `identityMap`.<br>**Note**: A dataset row may have many identities in its identity map, but only one can be marked as primary. `"primary": true` must be included to force the `id` to match a primary identity.<br>When using `targetServices` for profile-only deletion, `datasetId` must be `ALL`. |
-| `targetServices`       | Optional. The set of services that should process the deletion. If omitted, all supported services run, which is equivalent to `["datalake", "identity", "profile", "ajo"]` (the list may grow as more products onboard). The response always includes the full list of target services. To limit deletion to profile-related data only (Identity, Profile, and Adobe Journey Optimizer) and leave the data lake untouched, set this to exactly these three values in any order: `["identity", "profile", "ajo"]`. In that profile-only mode, Identity, Profile, and AJO are explicitly included; the data lake is excluded. When using this profile-only option, `datasetId` must be `ALL`. |
+| `targetServices`       | Optional. Specifies which services should process the deletion. The default value depends on your organization's entitlements. Organizations with Real-Time CDP or Adobe Journey Optimizer receive the full set of supported services (`["datalake", "identity", "profile", "ajo"]`) by default. Organizations with Customer Journey Analytics but without a Real-Time Customer Profile entitlement can only use ["datalake"]. To limit deletion to profile-related data only and leave the data lake untouched, set this to `["identity", "profile", "ajo"]` (in any order). This profile-only mode requires a Real-Time CDP or Adobe Journey Optimizer entitlement and `datasetId` must be `ALL`.|
 | `identities` | **Use exactly one of `identities` or `namespacesIdentities`.** Array of objects, each with `namespace` (object with `code`, e.g. `"email"`) and `id` (single identity string). Accepted for backward compatibility and produced by the conversion scripts. The service normalizes this format internally; behavior is identical. See [Identity payload format](#identity-payload-format-identities-or-namespacesidentities) above. |
-| `namespacesIdentities` | **Use exactly one of `identities` or `namespacesIdentities`.** Array of objects, each with `namespace` (object with `code`, e.g. `"email"`) and `ids` (array of identity strings). Recommended when building payloads manually; smaller when many identities share one namespace. See [Identity payload format](#identity-payload-format-identities-or-namespacesidentities) above. Identity namespaces: [identity namespace documentation](../../identity-service/features/namespaces.md), [Identity Service API](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `namespacesIdentities` | **Use exactly one of `identities` or `namespacesIdentities`.** Array of objects, each with `namespace` (object with `code`, e.g. `"email"`) and `ids` (array of identity strings). Recommended for all payloads. The `namespacesIdentities` property is more compact when many identities share one namespace. See [Identity payload format](#identity-payload-format-identities-or-namespacesidentities) above. Identity namespaces: [identity namespace documentation](../../identity-service/features/namespaces.md), [Identity Service API](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 **Response**
 
@@ -370,7 +370,7 @@ Successful responses for multi-dataset or profile-only requests follow the same 
 
 Use conversion scripts to produce the required JSON payloads for the `/workorder` endpoint when your identifiers are in CSV, TSV, or TXT files. This approach is especially helpful when working with existing data files. For ready-to-use scripts and instructions, see the [csv-to-data-hygiene GitHub repository](https://github.com/perlmonger42/csv-to-data-hygiene).
 
-The scripts output the **`identities`** format—one `id` per object with a `namespace`. The API accepts this format as-is; you can send the generated JSON directly in the POST body to `/workorder` with no conversion. When building payloads manually, the recommended format is **`namespacesIdentities`**; see [Create a record delete work order](#create) and [Identity payload format](#identity-payload-format-identities-or-namespacesidentities).
+The scripts output the **`identities`** format—one `id` per object with a `namespace`. The API accepts this format as-is; you can send the generated JSON directly in the POST body to `/workorder` with no conversion. The recommended format is **`namespacesIdentities`**; see [Create a record delete work order](#create) and [Identity payload format](#identity-payload-format-identities-or-namespacesidentities).
 
 ### Generate JSON payloads
 
