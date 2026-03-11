@@ -56,27 +56,7 @@ To create a new account, select **[!UICONTROL New account]** and then provide a 
 
 ### Connect to Experience Platform on Azure {#azure}
 
-You can connect your [!DNL Snowflake] account to Experience Platform on Azure using either account key authentication or key-pair authentication. 
-
->[!BEGINTABS]
-
->[!TAB Account key authentication]
-
-To use account key authentication, select **[!UICONTROL Account key authentication]**, provide your connection string in the input form and then select **[!UICONTROL Connect to source]**.
-
-![The account key authentication interface.](../../../../images/tutorials/create/snowflake/account-key-auth.png)
-
-| Credential | Description |
-| --- | --- |
-| Account | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `orgname-account_name`. Read the guide on [retrieving your [!DNL Snowflake] account identifier](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) for additional guidance. For more information, refer to the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization).|
-| Warehouse | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Experience Platform. |
-| Database | The [!DNL Snowflake] database contains the data you want to bring the Experience Platform. |
-| Username | The username for the [!DNL Snowflake] account. |
-| Password | The password for the [!DNL Snowflake] user account. |
-| Role | The default access control role to use in the [!DNL Snowflake] session. The role should be an existing one that has already been assigned to the specified user. The default role is `PUBLIC`. |
-| Connection string | The connection string used to connect to your [!DNL Snowflake] instance. The connection string pattern for [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
-
->[!TAB Key-pair authentication]
+You can connect your [!DNL Snowflake] account to Experience Platform on Azure withkey-pair authentication. 
 
 To use key-pair authentication, select **[!UICONTROL KeyPair authentication]**, provide values for your account, username, private key, private key passphrase, database, and warehouse, then select **[!UICONTROL Connect to source]**. 
 
@@ -94,8 +74,6 @@ With key-pair authentication, you must generate a 2048-bit RSA key pair and then
 | Warehouse | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Experience Platform. |
 
 For more information about these values, refer to [this Snowflake document](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
-
->[!ENDTABS]
 
 ### Connect to Experience Platform on AWS {#aws}
 
