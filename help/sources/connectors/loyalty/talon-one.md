@@ -36,7 +36,7 @@ Provide values for the following credentials to authenticate and connect the [!D
 
 To help you map each effect object based on its unique `effectType` value, you can use the data prep `array_to_map` function. This allows you to easily convert an unordered array of effects into key-value pairs that match your requirements. See the example below for guidance.
 
-| Source  | Destination |
+| Source | Destination |
 | ---- | --- |
 | `array_to_map(data.effects, "effectType").addLoyaltyPoints.campaignId` | `_{TENANT_ID}.loyalty.pointsGained[0].promotionId` |
 | `array_to_map(data.effects, "effectType").addLoyaltyPoints.props.value`| `_{TENANT_ID}.loyalty.pointsGained[0].value` |
