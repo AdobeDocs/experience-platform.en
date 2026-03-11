@@ -1,8 +1,6 @@
 ---
 title: Amazon Ads v2
 description: Amazon Ads v2 offers a range of options to help you achieve your advertising goals to registered sellers, vendors, book vendors, Kindle Direct Publishing (KDP) authors, app developers, and/or agencies. The Amazon Ads v2 integration with Adobe Experience Platform provides turn-key integration to Amazon Ads products.
-last-substantial-update: 2025-10-30
-exl-id: 8a31a44d-52d8-4a4a-9b9a-9c1a3cbf4acb
 ---
 # Amazon Ads v2 connection {#amazon-ads-v2}
 
@@ -28,12 +26,9 @@ You can use *[!DNL Amazon Ads v2]* destination, for below purposes.
 
 ### Audience ingestion and activation {#activation-and-targeting}
 
-This integration allows advertisers to send first-party audience segments from Adobe Experience Platform into [!DNL Amazon Ads].  
-Once ingested, audiences can be shared across **Amazon Ads** products via [!DNL Ads Data Manager].
+For social network platforms:
 
-### Data management and monitoring {#analytics-and-measurement}
-
-After ingestion, you can monitor and manage uploaded data through the [!DNL Ads Data Manager] console — check audience ingestion status, view match rates, or delete outdated data.  
+An athletic apparel brand wants to reach its existing customers with relevant ads across *[!DNL Amazon Ads]*. The brand can ingest customer email addresses from its CRM into Adobe Experience Platform, build audiences using its first-party offline data, and activate these audiences to *[!DNL Amazon Ads]* through the *[!DNL Amazon Ads v2]* destination. Once activated, the audiences can be used to target ads to those customers across *[!DNL Amazon Ads]* inventory, helping the brand re-engage known customers and drive repeat purchases.
 
 For details, see:
 * [Manage data](https://advertising.amazon.com/API/docs/en-us/adm/6_adm-manage-data)
@@ -45,21 +40,25 @@ To use the [!DNL Amazon Ads v2] connection with Adobe Experience Platform, you m
 Refer to:
 * [Get started with Amazon Ads Data Manager](https://advertising.amazon.com/API/docs/en-us/adm/1_ads-data-manager-console-overview)
 
+### Accept Amazon Ads Data Manager terms and conditions {#accept-terms}
+
+Before configuring the [!DNL Amazon Ads v2] destination, you must log in to your [!DNL Amazon Ads] account and accept the [!DNL Ads Data Manager] terms and conditions. To do this, navigate to the [!DNL Ads Data Manager] console within [!DNL Amazon Ads] and accept the terms when prompted. If the terms and conditions are not accepted, audiences will not be created in [!DNL Amazon Ads].
+
 ## Supported identities {#supported-identities}
 
 The *[!DNL Amazon Ads v2]* destination supports the activation of the following identities.
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|`phone_sha256`|Phone number of the user|Supports plain text or SHA256 hashed input. Select **[!UICONTROL Apply transformation]** to hash automatically.|
-|`email_lc_sha256`|Email address of the user (lowercased)|Supports plain text or SHA256 hashed input. Select **[!UICONTROL Apply transformation]** to hash automatically.|
-|`firstName`|First name of the user|Supports plain text or SHA256 hashed input.|
-|`lastName`|Last name of the user|Supports plain text or SHA256 hashed input.|
-|`street`|Street address of the user|Requires SHA256 hashed input.|
-|`city`|City of the user|Supports plain text or SHA256 hashed input.|
-|`state`|State or province of the user|Supports plain text or SHA256 hashed input.|
-|`zip`|ZIP or postal code of the user|Supports plain text or SHA256 hashed input.|
-|`country`|Country of the user (2-character ISO code)|Supports plain text or SHA256 hashed input.|
+|`phone_sha256`|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
+|`email_lc_sha256`|Email addresses (lowercased) hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
+|`firstName`|First name of the user|Both plain text and SHA256 hashed first names are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
+|`lastName`|Last name of the user|Both plain text and SHA256 hashed last names are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
+|`street`|Street address of the user|Both plain text and SHA256 hashed streets are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
+|`city`|City of the user|Both plain text and SHA256 hashed cities are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
+|`state`|State or province of the user|Both plain text and SHA256 hashed states are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
+|`zip`|ZIP or postal code of the user|Both plain text and SHA256 hashed zips are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
+|`country`|Country of the user (2-character ISO code)|Supports plain text input.|
 |`experianId`|Identifier assigned by Experian|Supports plain text input.|
 |`kantarId`|Identifier assigned by Kantar|Supports plain text input.|
 |`liveRampId`|Identifier assigned by LiveRamp|Supports plain text input.|
@@ -68,6 +67,28 @@ The *[!DNL Amazon Ads v2]* destination supports the activation of the following 
 |`neustarId`|Identifier assigned by Neustar|Supports plain text input.|
 |`realId`|Identifier assigned by the Real ID identity graph|Supports plain text input.|
 |`sambaTvId`|Identifier assigned by Samba TV|Supports plain text input.|
+
+{style="table-layout:auto"}
+
+## Supported audiences {#supported-audiences}
+
+This section describes which types of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> <br>|
+
+{style="table-layout:auto"}
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | Yes | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | Yes | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | Yes | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -92,17 +113,16 @@ To connect to this destination, follow the steps described in the [destination c
 ### Authenticate to destination {#authenticate}
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
-* **[!UICONTROL Account name]**: Name for your account.  
-* **[!UICONTROL Description]**: Description to help identify it.
+* **[!UICONTROL Account name]**: Enter a name that will help you easily identify this destination account in the future. This is especially useful if you have multiple connections to the same destination. 
+* **[!UICONTROL Description]** (optional): Add any additional details that will help you or your team distinguish between accounts, such as the purpose of the connection or relevant business context.
 
 ![Connect to Amazon Ads Destination Amazon Ads](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-connect-to-destination.png)
 
-You will be redirected to the [!DNL Amazon Ads v2] interface, Click 'Allow' to sign into your Amazon Account.  
-After authentication, you will return to Adobe Experience Platform with your new connection.
+You are redirected to the [!DNL Amazon Ads v2] interface. Click **[!UICONTROL Allow]** to sign in to your Amazon Account. 
 
 ![Allow Amazon Ads](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-allow.png)
 
-Make sure to accept [!DNL Ads Data Manager] terms and coditions by visiting the [!DNL Ads Data Manager] console in [!DNL Amazon Ads] before clicking on **[!UICONTROL Next]**. The audience will not get created in [!DNL Amazon Ads] if the terms and conditions are not accepted.
+After authentication, you will return to Adobe Experience Platform with your new connection.
 
 ### Fill in destination details {#destination-details}
 
@@ -114,7 +134,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 * **[!UICONTROL Manager Account]**: The target manager account ID from the dropdown.  
 * **[!UICONTROL All audience members sent to Amazon are consented for use for Advertising]**: Specify consent for data usage (`GRANTED` or `DENIED`).
-* **[!UICONTROLAds data manager Terms & Conditions]**: Please accept Amazon Ads Data Manager Terms and conditions by visiting Amazon Ads Data manager console before configuring this page.
+* **[!UICONTROL Ads data manager Terms & Conditions]**: Please accept Amazon Ads Data Manager Terms and conditions. Check [accept terms](amazon-ads-v2.md#accept-amazon-ads-data-manager-terms-and-conditions-accept-terms) section in pre-requisites section for further details.
 
 ### Enable alerts {#enable-alerts}
 
