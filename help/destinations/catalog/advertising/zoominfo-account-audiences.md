@@ -13,8 +13,6 @@ Activate profiles for your [!DNL ZoomInfo MarketingOS] campaigns for audience ta
 
 ## Overview {#overview}
 
-<!-- TODO: Confirm overview text with ZoomInfo / PM team -->
-
 [!DNL ZoomInfo] is a B2B data and intelligence platform that provides firmographic, technographic, and intent data for account-based marketing. This integration enables Adobe Real-Time CDP B2B Edition customers to activate account audiences to [!DNL ZoomInfo MarketingOS] for downstream account-based marketing workflows.
 
 [!DNL ZoomInfo] ingests account audiences from Experience Platform, resolves accounts using company domain and firmographic attributes, and enriches matched accounts with firmographic, technographic, and intent signals. The enriched accounts are made available in [!DNL ZoomInfo] for use cases such as account prioritization, audience segmentation, and paid media activation across supported advertising and marketing channels.
@@ -37,14 +35,14 @@ As a B2B marketer, you can send account audiences to [!DNL ZoomInfo] for firmogr
 
 To export account audiences to [!DNL ZoomInfo], you need the following:
 
-1. A [!DNL ZoomInfo MarketingOS] account. <!-- TODO: Confirm if there's a specific sign-up link or request form -->
-2. A valid [!DNL ZoomInfo] account with OAuth 2.0 credentials configured for authentication with Adobe Experience Platform.
+1. A [!DNL ZoomInfo MarketingOS] account.
+1. A valid [!DNL ZoomInfo] account with OAuth 2.0 credentials configured for authentication with Adobe Experience Platform.
 
 ## Supported audiences {#supported-audiences}
 
 This section describes which type of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
@@ -74,7 +72,7 @@ Supported audiences by audience data type:
 
 {style="table-layout:auto"}
 
-## Export type and frequency {#export-type-and-frequency} 
+## Export type and frequency {#export-type-and-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
 
@@ -97,14 +95,14 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![Configure new destination screen showing Account type, Account name, and Description fields.](../../assets/catalog/advertising/zoominfo-account-audiences/configure-destination.png)
+![Configure new destination screen showing Account type, Account name, and Description fields.](../../assets/catalog/advertising/zoominfo-account-audiences/configure-destination.png "Configure new destination")
 
 * **[!UICONTROL Account name]**: Enter a name that will help you easily identify this destination account in the future. This is especially useful if you have multiple connections to the same destination.
 * **[!UICONTROL Description]** (optional): Add any additional details that will help you or your team distinguish between accounts, such as the purpose of the connection or relevant business context.
 
 After selecting **[!UICONTROL Connect to destination]**, you are redirected to the [!DNL ZoomInfo] login page. Log in with your [!DNL ZoomInfo] credentials.
 
-![ZoomInfo login page showing authentication options including username and password, SSO, Google, and Office 365.](../../assets/catalog/advertising/zoominfo-account-audiences/zoominfo-login.png)
+![ZoomInfo login page showing authentication options including username and password, SSO, Google, and Office 365.](../../assets/catalog/advertising/zoominfo-account-audiences/zoominfo-login.png "ZoomInfo login")
 
 After successful authentication, [!DNL ZoomInfo] redirects you back to Experience Platform and the connection is created automatically. You do not need to enter or manage credentials manually, as the integration uses OAuth 2.0 with PKCE to securely handle authentication. Experience Platform automatically refreshes the access token when needed.
 
@@ -112,7 +110,7 @@ After successful authentication, [!DNL ZoomInfo] redirects you back to Experienc
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Destination details screen showing Name and Description fields.](../../assets/catalog/advertising/zoominfo-account-audiences/destination-details.png)
+![Destination details screen showing Name and Description fields.](../../assets/catalog/advertising/zoominfo-account-audiences/destination-details.png "Destination details")
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -130,23 +128,17 @@ Read [Activate account audiences](/help/destinations/ui/activate-account-audienc
 
 ### Mandatory mappings {#mandatory-mappings}
 
-When activating audiences to the [!DNL ZoomInfo Account Audiences] destination, you must configure one of the following mandatory mapping pairs. Use either pair depending on which attribute has data in your account profiles. [!DNL ZoomInfo] uses the domain or website attribute to match accounts.
+When activating audiences to the [!DNL ZoomInfo Account Audiences] destination, you must configure all of the following mappings. Target fields are either XDM attributes or an identity as indicated.
 
-**Option 1: Account name and email domain**
+| Source field | Target field | Type | Description |
+|--------------|--------------|------|-------------|
+| `xdm:accountName` | `xdm:companyName` | XDM attribute | The name of the account (company). |
+| `xdm:accountOrganization.domain` or `xdm:accountOrganization.website` | `xdm:companyUrl` | XDM attribute | The company URL. Use whichever source field has data in your account profiles—either domain or website. [!DNL ZoomInfo] uses this attribute to match accounts. |
+| `xdm:accountKey.sourceKey` | `Identity: primaryId` | Identity | The primary identifier for the account. |
 
-| Source field | Target field | Description |
-|--------------|--------------|-------------|
-| `xdm: accountName` | `xdm: accountName` | The name of the account. |
-| `xdm: accountOrganization.domain` | `xdm: accountEmailDomain` | The email domain of the account organization. |
+{style="table-layout:auto"}
 
-**Option 2: Account website and primary identifier**
-
-| Source field | Target field | Description |
-|--------------|--------------|-------------|
-| `xdm: accountOrganization.website` | `xdm: accountWebsite` | The website of the account organization. |
-| `xdm: accountKey.sourceKey` | `Identity: primaryId` | The primary identifier for the account. |
-
-<!-- TODO: Add screenshot of mapping step -->
+![Mapping step showing the three mandatory mappings: accountKey.sourceKey to Identity primaryId, accountName to xdm companyName, and accountOrganization.domain to xdm companyUrl.](../../assets/catalog/advertising/zoominfo-account-audiences/mandatory-mappings.png "Mandatory mappings")
 
 ## Audience sync behavior {#sync-behavior}
 
@@ -164,6 +156,3 @@ When an account audience that has been activated to [!DNL ZoomInfo] is deleted i
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
 
-## Additional resources {#additional-resources}
-
-<!-- TODO: Add link to ZoomInfo MarketingOS documentation -->
