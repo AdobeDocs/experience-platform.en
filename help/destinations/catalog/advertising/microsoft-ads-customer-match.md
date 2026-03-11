@@ -11,7 +11,7 @@ exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
 
 >[!AVAILABILITY]
 >
->This destination connector is currently in limited availability. To gain access, contact your Adobe representative.<br>
+>This destination connector is currently in limited availability. To gain access, contact your Adobe representative.
 
 ## Overview {#overview}
 
