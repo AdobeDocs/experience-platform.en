@@ -128,7 +128,6 @@ role: Admin,User
         * [Nielsen BSDK extension](./catalog/analytics/nielsen-bsdk.md)
         * [Nielsen IMA Handler extension](./catalog/analytics/nielsen-ima.md)
         * [Nielsen VideoJS Player Handler extension](./catalog/analytics/nielsen-videojs.md)
-        * [Parse.ly Analytics extension](./catalog/analytics/parsely.md)
         * [Quantum Metric extension](./catalog/analytics/quantum-metric.md)
         * [SessionCam extension](./catalog/analytics/sessioncam.md)
         * [TMMData extension](./catalog/analytics/tmmdata.md)
