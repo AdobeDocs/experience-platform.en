@@ -35,13 +35,13 @@ To stream data from [!DNL Kobie], select the **[!UICONTROL Kobie Streaming Event
 >
 >Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account is created, this option changes to **[!UICONTROL Add data]**.
 
-![The sources catalog in the UI with the Kobie Streaming Events card selected.](../../../../images/tutorials/create/talon-one-streaming/catalog.png)
+![The sources catalog in the UI with the Kobie Streaming Events card selected.](../../../../images/tutorials/create/kobie/catalog.png)
 
 ## Select data
 
 Next, use the *[!UICONTROL Select data]* interface to upload a sample JSON file to define your source schema. During this step, you can use the preview interface to view the file structure of the payload. When finished, select **[!UICONTROL Next]**.
 
-![The select data step of the sources workflow](../../../../images/tutorials/create/talon-one-streaming/select-data.png)
+![The select data step of the sources workflow](../../../../images/tutorials/create/kobie/select-data.png)
 
 ## Dataflow details
 
@@ -70,7 +70,7 @@ If your dataset is enabled for Real-Time Customer Profile, then during this step
 
 Once your dataset is configured, you must then provide details on your dataflow, including a name, an optional description, and alert configurations.
 
-![The dataflow details interface](../../../../images/tutorials/create/talon-one-streaming/dataflow-details.png)
+![The dataflow details interface](../../../../images/tutorials/create/kobie/dataflow-details.png)
 
 | Dataflow configurations | Description |
 | --- | --- |
@@ -84,14 +84,6 @@ Once your dataset is configured, you must then provide details on your dataflow,
 
 Use the mapping interface to map your source data to the appropriate schema fields before ingesting data to Experience Platform. For more information, read the [mapping guide in the UI](../../../../../data-prep/ui/mapping.md).
 
-<!--
->[!TIP]
->
->You can download the [Events and Profile mappings](../../../../images/tutorials/create/capillary/mappings.zip) for [!DNL Capillary] and [import the files to Data Prep](../../../../../data-prep/ui/mapping.md#import-mapping) when you are ready to map your data.
--->
-
-![The mapping interface for Talon.One streaming.](../../../../images/tutorials/create/talon-one-streaming/mapping.png)
-
 ## Review
 
 The *[!UICONTROL Review]* step appears, allowing you to review the details of your dataflow before it is created. Details are grouped within the following categories:
@@ -101,13 +93,13 @@ The *[!UICONTROL Review]* step appears, allowing you to review the details of yo
 
 After confirming the details are correct, select **[!UICONTROL Finish]**.
 
-![The review step in the sources workflow.](../../../../images/tutorials/create/talon-one-streaming/review.png)
+![The review step in the sources workflow.](../../../../images/tutorials/create/kobie/review.png)
 
 ## Retrieve the streaming endpoint URL
 
 With the connection created, the sources detail page appears. This page shows details of your newly created connection, including previously run dataflows, ID, and streaming endpoint URL.
 
-![The streaming endpoint URL.](../../../../images/tutorials/create/talon-one-streaming/streaming-endpoint.png)
+![The streaming endpoint URL.](../../../../images/tutorials/create/kobie/streaming-endpoint.png)
 
 ## Monitor your dataflow
 
