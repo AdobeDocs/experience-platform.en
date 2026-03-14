@@ -1,6 +1,8 @@
 ---
 title: Deltashare
 description: Learn how to use the Deltashare source on Adobe Experience Platform.
+hide: true
+hidefromtoc: true
 ---
 # [!DNL Deltashare]
 
