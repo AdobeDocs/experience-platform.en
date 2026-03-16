@@ -4,13 +4,8 @@ description: Learn how to use health checks in Adobe Experience Platform to proa
 solution: Experience Platform
 type: Documentation
 role: Admin, User
-hide: yes
 ---
 # Health Checks
-
->[!AVAILABILITY]
->
->Health checks are currently available as a limited release.
 
 Health checks scan your schemas and identities used in your sandbox and provide a summary of issues that you can use to explore and troubleshoot with [!UICONTROL AI Assistant]. In the future, more objects can be scanned for a more comprehensive report.
 
