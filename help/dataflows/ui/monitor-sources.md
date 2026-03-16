@@ -13,10 +13,6 @@ You can use the monitoring dashboard in the Adobe Experience Platform user inter
 
 Read this document to learn how you can use the monitoring dashboard to monitor all data processing in data lake, including both ingestion and retention.
 
->[!NOTE]
->
->Source ingestion dataflows that fail continuously for 30 days will automatically be disabled. Use Monitoring to review your dataflow, identify why it failed (for example, credentials, permissions, or schema or mapping changes), apply the necessary updates, and re-enable the dataflow once resolved.
-
 ## Get started {#get-started}
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:

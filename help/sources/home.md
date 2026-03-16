@@ -9,7 +9,7 @@ exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 
 >[!NOTE]
 >
->Source ingestion dataflows that fail continuously for 30 days will automatically be disabled. Use Monitoring to review your dataflow, identify why it failed (for example, credentials, permissions, or schema or mapping changes), apply the necessary updates, and re-enable the dataflow once resolved.
+>Source ingestion dataflows that fail continuously for 30 days will automatically be disabled. Use [Monitoring](/help/dataflows/ui/monitor-sources.md) to review your dataflow, identify why it failed (for example, credentials, permissions, or schema or mapping changes), apply the necessary updates, and re-enable the dataflow once resolved.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storages, databases, and many others.
 
