@@ -3,6 +3,7 @@ title: Use The Deltashare Source Connector In The UI
 description: Learn how to use the Deltashare source connector in the Experience Platform user interface.
 hide: true
 hidefromtoc: true
+exl-id: 4e889401-08c1-4c81-85e7-49fe1328c65d
 ---
 # Use the [!DNL Deltashare] source connector in the UI {#use-deltashare-in-the-ui}
 
@@ -16,4 +17,3 @@ Read this guide to learn how to use the [!DNL Deltashare] source connector in th
 **Note:** Once you select **Next**, you will not be able to change the selected schema structure.
 
 If you have already selected **Next** and moved past the schema selection step, you can no longer update your selected schema if you return to a previous step. To modify your schema, you must restart the dataflow configuration process and begin from the initial step.
-
