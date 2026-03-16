@@ -4,7 +4,7 @@ description: Learn how to use the Deltashare source connector in the Experience 
 hide: true
 hidefromtoc: true
 ---
-# Use the [!DNL Deltashare] source connector in the UI
+# Use the [!DNL Deltashare] source connector in the UI {#use-deltashare-in-the-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_deltashare_schema"
