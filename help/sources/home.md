@@ -7,10 +7,6 @@ exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 ---
 # Source connectors overview
 
->[!NOTE]
->
->Source ingestion dataflows that fail continuously for 30 days will automatically be disabled. Use [Monitoring](/help/dataflows/ui/monitor-sources.md) to review your dataflow, identify why it failed (for example, credentials, permissions, or schema or mapping changes), apply the necessary updates, and re-enable the dataflow once resolved.
-
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storages, databases, and many others.
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Experience Platform. The service provides a user interface and RESTful API that lets you set-up source connections to various data providers with ease. These source connections enable you to authenticate your third-party systems, set times for ingestion runs, and manage data ingestion throughput.
@@ -35,6 +31,10 @@ For partner-authored and maintained connectors, this means that issues with the 
 >[!ENDSHADEBOX]
 
 ## Sources catalog
+
+>[!NOTE]
+>
+>Source ingestion dataflows that fail continuously for 30 days will automatically be disabled. Use [Monitoring](/help/dataflows/ui/monitor-sources.md) to review your dataflow, identify why it failed (for example, credentials, permissions, or schema or mapping changes), apply the necessary updates, and re-enable the dataflow once resolved.
 
 Read the following sections for a list of all sources available in the sources catalog.
 
