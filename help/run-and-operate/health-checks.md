@@ -6,7 +6,7 @@ type: Documentation
 role: Admin, User
 hide: yes
 ---
-# Health checks
+# Health Checks
 
 >[!AVAILABILITY]
 >
@@ -20,18 +20,18 @@ With health checks, you can:
 
 * **Detect configuration issues early**: Identify missing best practices, misconfigurations, and patterns that lead to inefficiencies in personalization, activation, and more.
 * **Receive guided remediation**: Get clear guidance on what each issue is and what to do about it.
-* **Monitor continuously**: Currently, health checks run daily static scans so that you can catch problems before they become critical failures.
+* **Monitor continuously**: At this moment, health checks run daily automatic scans so that you can catch problems before they become critical failures. The schedule may change in future releases.
 
 ## Prerequisites {#prerequisites}
 
-To access health checks, you need the **[!UICONTROL View Health Checks]** [access control permissions](/help/access-control/home.md#permissions). Contact your system administrator to ensure you have the appropriate permissions.
+To access health checks, you need the **[!UICONTROL View Health Checks]** [access control permission](/help/access-control/home.md#permissions). Contact your system administrator to ensure you have the appropriate permissions.
 
 ## Access health checks {#access-health-checks}
 
 To access health checks from the [!UICONTROL Experience Platform] UI:
 
 1. Select **[!UICONTROL Run and Operate]** from the left navigation.
-2. Select **[!UICONTROL Health Checks]**.
+1. Select **[!UICONTROL Health Checks]**.
 
 The health checks dashboard displays a summary of your most recent scan results.
 
@@ -47,7 +47,7 @@ The **[!UICONTROL Objects evaluated]** section shows the total number of schemas
 
 ### Scan results {#scan-results}
 
-The **[!UICONTROL Scan results]** section displays the number of failed checks. A failed check indicates that one or more of the health checks detected configuration issues that require attention. The timestamp below shows when the last health scan completed.
+The **[!UICONTROL Scan results]** section displays the number of failed checks. A failed check indicates that one or more of the health checks detected configuration issues that require attention. The **Last daily health scan completed on** timestamp shows when the most recent scan ran.
 
 ### Identified issues {#identified-issues}
 
@@ -75,11 +75,11 @@ Scans to ensure identity fields have minimum and maximum length constraints and 
 
 When you select the **[!UICONTROL Identity Field Validation]** card, a detail panel opens on the right. The panel shows:
 
-* **[!UICONTROL Description]**: Scans to ensure identity fields have minimum/maximum lengths and regex pattern rules for data integrity. Lists affected schemas and fields.
-* **[!UICONTROL Impact]**: If identity fields in schemas do not have minimum/maximum lengths and pattern validations set, it can lead to inconsistent data, which can compromise integrity and quality of data.
+* **[!UICONTROL Description]**: Scans to ensure identity fields have min/max lengths and regex pattern rules for data integrity. Lists affected schemas and fields.
+* **[!UICONTROL Impact]**: If identity fields in schemas do not have min/max lengths and pattern validations set, it can lead to inconsistent data, which can compromise integrity and quality of data.
 * **[!UICONTROL General areas of impact]**: Low-quality identifiers in [!UICONTROL Identity Service]; unreliable stitching.
-* **[!UICONTROL Experience League Documentation]**: A link to best practices for data modeling for further information.
-* **[!UICONTROL Affected Schemas]**: A list of schemas that have issues, with options to expand or view more details for each.
+* **[!UICONTROL Experience League Documentation]**: A link to best practices for data modeling.
+* **[!UICONTROL Affected Schemas]**: A list of affected schemas, each with an expander to view more details and a link to open the schema.
 
 ![Identity Field Validation detail panel showing description, impact, and affected schemas](assets/health-checks/identity-field-validation-detail.png)
 
@@ -101,9 +101,9 @@ When you select the **[!UICONTROL Identity Graph Linking Rules]** card, a detail
 * **[!UICONTROL Impact]**: If identity graph linking rules are not set, certain data could try to merge multiple disparate profiles into a single profile. To prevent unwanted merges, configurations provided through identity graph linking rules should be used.
 * **[!UICONTROL General areas of impact]**: Collapsed or merged profiles.
 * **[!UICONTROL Experience League Documentation]**: A link to the Identity Graph Linking Rules overview for more information.
-* **[!UICONTROL Check status]**: Whether the check passed or failed.
+* **[!UICONTROL Configure linking rules]**: When the check fails, a button appears so you can configure linking rules directly from the panel.
 
-![Identity Graph Linking Rules detail panel showing description, impact, and check status](assets/health-checks/identity-graph-linking-detail.png)
+![Identity Graph Linking Rules detail panel showing description, impact, and Configure linking rules button](assets/health-checks/identity-graph-linking-detail.png)
 
 For more information, see the [identity graph linking rules overview](/help/identity-service/identity-graph-linking-rules/overview.md) and the [implementation guide](/help/identity-service/identity-graph-linking-rules/implementation-guide.md).
 
@@ -122,13 +122,13 @@ When you select the **[!UICONTROL People & Non-People Identity Config]** card, a
 * **[!UICONTROL Description]**: Validates proper use of identity types across schema classes. Lists misconfigured schemas and highlights wrong assignments.
 * **[!UICONTROL Impact]**: If a non-person entity is given a person identity, this will inflate the profile count and make this data ineligible as a lookup. If a person entity is given a non-person identity, the data is not available for streaming or edge segmentation.
 * **[!UICONTROL General areas of impact]**: Incomplete identity graphs; inflated profile counts; lookup misuse.
-* **[!UICONTROL Affected Schemas]**: A list of schemas that have issues, with options to expand or view more details for each.
+* **[!UICONTROL Affected Schemas]**: A list of schemas with issues. Expand a schema row to see the path, identity name, and schema type for each misconfiguration. Use the link icon to open the schema.
 
-![People & Non-People Identity Config detail panel showing description, impact, and affected schemas](assets/health-checks/people-non-people-identity-detail.png)
+![People & Non-People Identity Config detail panel showing description, impact, and affected schemas with expandable rows](assets/health-checks/people-non-people-identity-detail.png)
 
 For more information, see the [identity type documentation](/help/identity-service/features/namespaces.md#identity-type) and the [schema best practices](/help/xdm/schema/best-practices.md).
 
-### Custom identity namespace missing description {#namespace-missing-description}
+### Custom identity namespace description {#namespace-missing-description}
 
 Scans to ensure that custom identity namespace metadata and descriptions are complete.
 
@@ -138,15 +138,15 @@ Scans to ensure that custom identity namespace metadata and descriptions are com
 | **Impact** | Missing descriptions can lead to confusion during usage and debugging. |
 | **Remediation** | Document each custom namespace by filling in the description field. Include validation criteria (minimum/maximum length, pattern) and lifecycle information that identifies which external source system creates these identities. |
 
-When you select the **[!UICONTROL Custom Identity Namespace Missing Description]** card, a detail panel opens on the right. The panel shows:
+When you select the **[!UICONTROL Custom Identity Namespace Description]** card, a detail panel opens on the right. The panel shows:
 
 * **[!UICONTROL Description]**: Scans to ensure namespace metadata and descriptions are complete. Displays namespaces and owners with empty description fields.
 * **[!UICONTROL Impact]**: Setting a description on a custom identity namespace enhances clarity by providing context of the purpose of each namespace. This helps team members and stakeholders quickly understand the function of each namespace without confusion.
 * **[!UICONTROL General areas of impact]**: Debug or usage confusion; unclear validation intent.
 * **[!UICONTROL Experience League Documentation]**: A link to Create Custom Namespaces for further information.
-* **[!UICONTROL Check status]**: Whether the check passed or failed (for example, "The check passed successfully.").
+* **[!UICONTROL Affected namespaces]**: A list of custom identity namespaces that are missing descriptions. Use the link icon next to each namespace to view or edit it.
 
-![Custom Identity Namespace Missing Description detail panel showing description, impact, and check status](assets/health-checks/custom-namespace-description-detail.png)
+![Custom Identity Namespace Description detail panel showing description, impact, and affected namespaces list](assets/health-checks/custom-namespace-description-detail.png)
 
 For more information, see the documentation on [creating custom namespaces](/help/identity-service/features/namespaces.md#create-namespaces).
 
@@ -156,21 +156,21 @@ Detects obsolete or unused identity namespaces that should be marked for cleanup
 
 | Detail | Description |
 | --- | --- |
-| **Issue** | Unused namespaces are still present in the sandbox. |
-| **Impact** | Obsolete namespaces create confusion about what is actively in use and increase the risk of mislabeling identity fields. |
+| **Issue** | Obsolete identity namespaces are not marked as deprecated. |
+| **Impact** | Unused or obsolete namespaces create confusion about what is actively in use and increase the risk of mislabeling identity fields. |
 | **Remediation** | Rename unused namespaces to include a "Do not use" prefix (for example, "Do not use - [original name]"). Adobe Experience Platform does not currently support namespace deletion, so renaming is the recommended approach. |
 
 When you select the **[!UICONTROL Deprecated Identity Namespace]** card, a detail panel opens on the right. The panel shows:
 
 * **[!UICONTROL Description]**: Detects obsolete or unused identity namespaces for cleanup. Lists unused namespaces with last usage timestamp or schema reference.
-* **[!UICONTROL Impact]**: Identity namespaces not used in any schema should be marked for removal by adding a "DEPRECATED" or "DO NOT USE" tag to their names.
+* **[!UICONTROL Impact]**: Identity namespaces not used in any schema should be marked for removal by adding a "DEPRECATED" or "DO NOT USE" tag to their names. Deletion of identity namespaces is not currently supported.
 * **[!UICONTROL General areas of impact]**: Confusion and mislabeling risk.
 * **[!UICONTROL Experience League Documentation]**: A link to Obsolete Identity Namespaces for further documentation.
-* **[!UICONTROL Check status]**: Whether the check passed or failed (for example, "The check passed successfully.").
+* **[!UICONTROL Affected namespaces]**: A list of obsolete or unused identity namespaces. Use the link icon next to each namespace to view or manage it.
 
-![Deprecated Identity Namespace detail panel showing description, impact, and check status](assets/health-checks/deprecated-namespace-detail.png)
+![Deprecated Identity Namespace detail panel showing description, impact, and affected namespaces list](assets/health-checks/deprecated-namespace-detail.png)
 
-For more information, see the [Experience Cloud knowledge base article on obsolete namespaces](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155).
+For more information, see the [Experience Cloud knowledge base article on obsolete namespaces](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
 
 ## Next steps {#next-steps}
 
@@ -179,4 +179,4 @@ After reviewing your health check results, explore the following resources to de
 * Learn about [schema best practices](/help/xdm/schema/best-practices.md) for designing reliable data models.
 * Understand [identity graph linking rules](/help/identity-service/identity-graph-linking-rules/overview.md) to prevent profile collapse.
 * Review [identity namespace documentation](/help/identity-service/features/namespaces.md) for namespace management best practices.
-* Explore other [Run and Operate tools](overview.md) including [[!UICONTROL Job Schedules]](job-schedules.md) for batch operation visibility.
+* Explore other [Run and Operate tools](/help/run-and-operate/overview.md) including [[!UICONTROL Job Schedules]](/help/run-and-operate/job-schedules.md) for batch operation visibility.

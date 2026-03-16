@@ -78,7 +78,7 @@ You can also understand dependencies between data processing stages, helping you
 >
 >[!UICONTROL Health checks] are currently available as a limited release.
 
-With [Health Checks](health-checks.md), you can proactively detect schema and identity configuration issues before they impact your business operations. Currently, health checks run daily static scans across your schemas and identity namespaces, surfacing missing best practices, misconfigurations, and patterns that lead to downstream failures.
+With [Health Checks](health-checks.md), you can proactively detect schema and identity configuration issues before they impact your business operations. At this moment, health checks run daily static scans across your schemas and identity namespaces, surfacing missing best practices, misconfigurations, and patterns that lead to downstream failures.
 
 Health checks currently evaluate five foundational areas:
 
