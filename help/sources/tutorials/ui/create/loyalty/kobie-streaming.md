@@ -5,10 +5,7 @@ badge: Beta
 hide: true
 hidefromtoc: true
 ---
-
->[!AVAILABILITY]
->
->The [!DNL Kobie] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
+# Stream data from [!DNL Kobie] to Experience Platform using the UI
 
 Read this guide to learn how to connect and stream your data from [!DNL Kobie] to Adobe Experience Platform using the sources workspace in the UI.
 
@@ -83,6 +80,8 @@ Once your dataset is configured, you must then provide details on your dataflow,
 ## Mapping
 
 Use the mapping interface to map your source data to the appropriate schema fields before ingesting data to Experience Platform. For more information, read the [mapping guide in the UI](../../../../../data-prep/ui/mapping.md).
+
+![The mapping step of the workflow](../../../../images/tutorials/create/kobie/mapping.png)
 
 ## Review
 
