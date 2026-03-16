@@ -34,7 +34,7 @@ For partner-authored and maintained connectors, this means that issues with the 
 
 >[!NOTE]
 >
->Source ingestion dataflows that fail continuously for 30 days will automatically be disabled. Use [Monitoring](/help/dataflows/ui/monitor-sources.md) to review your dataflow, identify why it failed (for example, credentials, permissions, or schema or mapping changes), apply the necessary updates, and re-enable the dataflow once resolved.
+>Source ingestion dataflows that fail continuously for 30 days will automatically be disabled. Use [Monitoring Dashboard](/help/dataflows/ui/monitor-sources.md) to review your dataflow, identify why it failed (for example, credentials, permissions, or schema or mapping changes), apply the necessary updates, and re-enable the dataflow once resolved.
 
 Read the following sections for a list of all sources available in the sources catalog.
 
