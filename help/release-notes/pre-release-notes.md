@@ -163,14 +163,14 @@ For more information, read the [Real-Time CDP Collaboration documentation](https
 
 ## Run and Operate {#run-and-operate}
 
-Run and Operate provides systematic tooling to help you monitor, diagnose, and manage your Experience Platform workflows. These capabilities shift attention from reactive to preventative action.
+Inspect, troubleshoot, and optimize your Experience Platform implementations with the Run and Operate tools. Gain visibility into scheduled batch activations, identify configuration issues, and improve system reliability.
 
 **New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| [Job Schedules](../run-and-operate/job-schedules.md) general availability | You can now view all your batch jobs in one timeline, spot scheduling conflicts, and troubleshoot delays using execution history and diagnostics. |
-| Health Checks general availability | You can now run always-on checks on schemas and identities to spot missing best practices, misconfigurations, and anomalies before they cause failures; more checks are planned. |
+| [Job Schedules](../run-and-operate/job-schedules.md) general availability | [!DNL Job Schedules] provides a unified view of all scheduled batch processing jobs across your data pipeline, from ingestion through destination activation. Inspect execution status, identify scheduling conflicts, and diagnose configuration issues before they impact your business operations. |
+| Health Checks general availability | Poor schema and identity configurations lead to significant downstream issues, including incorrect profile creation, failed segment qualification, and inaccurate activation. <br>Health checks shift your approach from reactive troubleshooting to proactive, preventative maintenance. Health checks are always-on scans of your schemas and identities used in your sandbox and provide a summary of issues that you can use to explore and troubleshoot.|
 
 {style="table-layout:auto"}
 
