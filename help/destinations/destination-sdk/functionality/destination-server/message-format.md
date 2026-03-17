@@ -171,9 +171,9 @@ Adobe uses [Pebble templates](https://pebbletemplates.io/), a templating languag
 
 This section provides several examples of how these transformations are made - from the input XDM schema, through the template, and outputting into payload formats accepted by your destination. The examples below are presented by increasing complexity, as follows:
 
-1. Simple transformation examples. Learn how templating works with simple transformations for [Profile attributes](#attributes), [Audience membership](#segment-membership), and [Identity](#identities) fields.
+1. Simple transformation examples. Learn how templating works with simple transformations for [Profile attributes](#attributes), [Audience membership](#audience-membership), and [Identity](#identities) fields.
 2. Increased complexity examples of templates that combine the fields above: [Create a template that sends audiences and identities](./message-format.md#segments-and-identities) and [Create a template that sends segments, identities, and profile attributes](#segments-identities-attributes).
-3. Templates that include the aggregation key. When you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in the destination configuration, Experience Platform groups the profiles exported to your destination based on criteria such as audience ID, audience status, or identity namespaces.
+3. Templates that include the aggregation key. When you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in the destination configuration, Experience Platform groups the profiles exported to your destination based on criteria such as audience ID, audience namespace, audience status, or identity namespaces.
 
 ### Profile Attributes {#attributes}
 
@@ -790,7 +790,8 @@ Profile 2:
                 {% endfor %}
                 ]
             }
-        }
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
     ]
 }
 ```
@@ -834,7 +835,7 @@ The `json` below represents the data exported out of Adobe Experience Platform.
         {
             "attributes": {
                 "firstName": "Harry",
-                "birthDate": "1980/07/21"
+                "birthDate": "1980/07/31"
             },
             "identities": [
                 {
@@ -855,21 +856,21 @@ The `json` below represents the data exported out of Adobe Experience Platform.
 
 ### Include aggregation key in your template to access exported profiles grouped by various criteria {#template-aggregation-key}
 
-When you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in the destination configuration, you can group the profiles exported to your destination based on criteria such as audience ID, audience alias, audience membership, or identity namespaces.
+When you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in the destination configuration, you can group the profiles exported to your destination based on criteria such as audience ID, audience namespace, audience alias, audience membership, or identity namespaces.
 
 In the message transformation template, you can access the aggregation keys mentioned above, as shown in the examples in the following sections. Use aggregation keys to structure the HTTP message exported out of Experience Platform to match the format and rate limits expected by your destination.
 
 #### Use audience ID aggregation key in the template {#aggregation-key-segment-id}
 
-If you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) and set `includeSegmentId` to true, the profiles in the HTTP messages exported to your destination are grouped by audience ID. See below how you can access the audience ID in the template.
+If you use [configurable aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) and set `includeSegmentId` to true, the profiles in the HTTP messages exported to your destination are grouped by audience ID. See below how you can access the audience ID and audience namespace in the template.
 
 **Input**
 
 Consider the four profiles below, where:
 
-* the first two are part of the audience with the audience ID `788d8874-8007-4253-92b7-ee6b6c20c6f3` 
-* the third profile is part of the audience with the audience ID `8f812592-3f06-416b-bd50-e7831848a31a`
-* the fourth profile is part of both audiences above.
+* the first two are part of the audience with the audience ID `788d8874-8007-4253-92b7-ee6b6c20c6f3` under the `ups` namespace
+* the third profile is part of the audience with the audience ID `8f812592-3f06-416b-bd50-e7831848a31a` under the `CustomerAudienceUpload` namespace
+* the fourth profile is part of both audiences above, each under their respective namespace.
 
 Profile 1:
 
@@ -921,7 +922,7 @@ Profile 3:
       }
    },
    "segmentMembership":{
-      "ups":{
+      "CustomerAudienceUpload":{
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"realized"
@@ -942,12 +943,14 @@ Profile 4:
    },
    "segmentMembership":{
       "ups":{
-         "8f812592-3f06-416b-bd50-e7831848a31a":{
-            "lastQualificationTime":"2021-02-20T12:00:00Z",
-            "status":"realized"
-         },
          "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
             "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"realized"
+         }
+      },
+      "CustomerAudienceUpload":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"realized"
          }
       }
@@ -961,11 +964,12 @@ Profile 4:
 >
 >For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the [template](../../functionality/destination-server/templating-specs.md) in the [destination server configuration](../../authoring-api/destination-server/create-destination-server.md). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Notice below how `audienceId` is used in the template to access audience IDs. This example assumes that you use `audienceId` for audience membership in your destination taxonomy. You can use any other field name instead, depending on your own taxonomy.
+Notice below how `audienceId` and `audienceNamespace` are used in the template to access the audience ID and namespace. This example assumes that you use `audienceId` for audience membership in your destination taxonomy. You can use any other field name instead, depending on your own taxonomy.
 
 ```python
 {
     "audienceId": "{{ input.aggregationKey.segmentId }}",
+    "audienceNamespace": "{{ input.aggregationKey.segmentNamespace }}",
     "profiles": [
         {% for profile in input.profiles %}
         {
@@ -978,11 +982,12 @@ Notice below how `audienceId` is used in the template to access audience IDs. Th
 
 **Result**
 
-When exported to your destination, the profiles are split into two groups, based on their audience ID.
+When exported to your destination, the profiles are split into two groups, based on their audience ID and namespace.
 
 ```json
 {
    "audienceId":"788d8874-8007-4253-92b7-ee6b6c20c6f3",
+   "audienceNamespace":"ups",
    "profiles":[
       {
          "firstName":"Hermione"
@@ -1000,6 +1005,7 @@ When exported to your destination, the profiles are split into two groups, based
 ```json
 {
    "audienceId":"8f812592-3f06-416b-bd50-e7831848a31a",
+   "audienceNamespace":"CustomerAudienceUpload",
    "profiles":[
       {
          "firstName":"Tom"

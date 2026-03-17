@@ -91,6 +91,8 @@ role: Developer
     - [Bombora Intent](connectors/data-partners/bombora.md)
     - [Demandbase Intent](connectors/data-partners/demandbase.md)
     - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
+  - Data sharing {#data-sharing}
+    - [Deltashare](connectors/data-sharing/deltashare.md)
   - eCommerce {#ecommerce}
     - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
     - [Shopify](connectors/ecommerce/shopify.md)
@@ -304,6 +306,8 @@ role: Developer
       - [Bombora Intent](tutorials/ui/create/data-partners/bombora.md)
       - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
       - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
+    - Data sharing {#data-sharing}
+      - [Deltashare](tutorials/ui/create/data-sharing/deltashare.md)
     - eCommerce {#ecommerce}
       - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)

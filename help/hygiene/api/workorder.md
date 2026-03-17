@@ -26,27 +26,20 @@ Record delete work orders are subject to daily and monthly identifier submission
 
 ### Monthly submission entitlement by product {#quota-limits}
 
-The following table shows identifier submission limits by product and entitlement level. For each product, the monthly cap is the lesser of two values: a fixed identifier ceiling or a percentage-based threshold tied to your licensed data volume.
+The following table shows identifier submission limits by product and entitlement level. For each product, the monthly cap is the lesser of two values: a fixed identifier ceiling or a percentage-based threshold tied to your licensed data volume. In practice, most organizations have lower monthly limits based on their actual addressable audience or Adobe Customer Journey Analytics row entitlements.
 
 | Product  | Entitlement Description | Monthly Cap (Whichever is Less) |
 |----------|-------------------------|---------------------------------|
 | Real-Time CDP or Adobe Journey Optimizer | Without Privacy and Security Shield or Healthcare Shield add-on          | 2,000,000 identifiers or 5% of addressable audience                    |
 | Real-Time CDP or Adobe Journey Optimizer | With Privacy and Security Shield or Healthcare Shield add-on             | 15,000,000 identifiers or 10% of addressable audience                  |
-| Customer Journey Analytics               | Without Privacy and Security Shield or Healthcare Shield add-on          | 2,000,000 identifiers or 100 identifiers per million CJA rows of entitlement |
-| Customer Journey Analytics               | With Privacy and Security Shield or Healthcare Shield add-on             | 15,000,000 identifiers or 200 identifiers per million CJA rows of entitlement |
+| Customer Journey Analytics               | Without Privacy and Security Shield or Healthcare Shield add-on          | 2,000,000 identifiers or 100 identifiers per million Customer Journey Analytics rows of entitlement |
+| Customer Journey Analytics               | With Privacy and Security Shield or Healthcare Shield add-on             | 15,000,000 identifiers or 200 identifiers per million Customer Journey Analytics rows of entitlement |
 
 >[!NOTE]
 >
->Most organizations will have lower monthly limits based on their actual addressable audience or CJA row entitlements.
-
->[!NOTE]
->
->Quotas reset on the first day of each calendar month. Unused quota does **not** carry over.
-
->[!NOTE]
->
->Quota usage is based on your organization's licensed monthly entitlement for **submitted identifiers**. Quotas are not enforced by system guardrails but may be monitored and reviewed.  
->Record delete work order capacity is a **shared service**. Your monthly cap reflects the highest entitlement across Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, and any applicable Shield add-ons.
+>- Quotas reset on the first day of each calendar month. Unused quota does **not** carry over.
+>- Quota usage is based on your organization's licensed monthly entitlement for **submitted identifiers**. Quotas are not enforced by system guardrails but may be monitored and reviewed.
+>- Record delete work order capacity is a **shared service**. Your monthly cap reflects the highest entitlement across Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, and any applicable Shield add-ons.
 
 ### Processing timelines for identifier submissions {#sla-processing-timelines}
 
@@ -125,7 +118,8 @@ A successful response returns a paginated list of record delete work orders.
       "targetServices": [
         "profile",
         "datalake",
-        "identity"
+        "identity",
+        "ajo"
       ],
       "status": "received",
       "createdBy": "a.stark@acme.com <a.stark@acme.com> BD8C3D631F41@acme.com",
@@ -162,10 +156,10 @@ The following table describes the properties in the response.
 | `createdAt`      | The timestamp when the work order was created.                                   |
 | `updatedAt`      | The timestamp when the work order was last updated.                              |
 | `operationCount` | The number of operations included in the work order.                             |
-| `targetServices` | List of target services for the work order.                                      |
+| `targetServices` | The set of target services that processed the deletion. The default value depends on your organization's entitlements. For organizations with Real-Time CDP or Adobe Journey Optimizer, the default is the full set of supported services (`["datalake", "identity", "profile", "ajo"]`). For Customer Journey Analytics-only organizations (without a Real-Time Customer Profile entitlement), the only valid value is ["datalake"]. |
 | `status`         | Current status of the work order. Possible values are: `received`,`validated`, `submitted`, `ingested`, `completed`, and `failed`.|
 | `createdBy`      | The email and identifier of the user who created the work order.                 |
-| `datasetId`      | The unique identifier for the dataset associated with the work order. If the request applies to all datasets, this field will be set to ALL. |
+| `datasetId`      | The dataset(s) targeted by the work order: a single dataset ID, a comma-separated list of dataset IDs (multi-dataset), or the literal `ALL`. When the request used profile-only mode, this value is `ALL`. |
 | `datasetName`    | The name of the dataset associated with the work order.                          |
 | `displayName`    | A human-readable label for the work order.                                       |
 | `description`    | A description of the work order's purpose.                                       |
@@ -179,9 +173,9 @@ The following table describes the properties in the response.
 
 ## Create a record delete work order {#create}
 
-To delete records associated with one or more identities from a single dataset or all datasets, make a POST request to the `/workorder` endpoint.
+To delete records associated with one or more identities from a single dataset, multiple datasets, or all datasets, make a POST request to the `/workorder` endpoint.
 
-Work orders are processed asynchronously and appear in the work order list after submission.
+Work orders are processed asynchronously and appear in the work order list after submission. Multi-dataset and profile-only (targeted services) options are generally available for all customers as of the March 2026 Experience Platform release.
 
 >[!TIP]
 >
@@ -193,25 +187,36 @@ Work orders are processed asynchronously and appear in the work order list after
 POST /workorder
 ```
 
->[!NOTE]
->
->You can only delete records from datasets whose associated XDM schema defines a primary identity or identity map.
-
 >[!IMPORTANT]
 >
 >Record delete work orders act exclusively on the **primary identity** field. The following limitations apply:
 >
+>- **The dataset schema must define a primary identity or identity map.** You can only delete records from datasets whose associated XDM schema defines a primary identity or identity map.
 >- **Secondary identities are not scanned.** If a dataset contains multiple identity fields, only the primary identity is used for matching. Records cannot be targeted or deleted based on non-primary identities.
 >- **Records without a populated primary identity are skipped.** If a record does not have primary identity metadata populated, it is not eligible for deletion.
 >- **Data ingested before identity configuration is not eligible.** If the primary identity field was added to a schema after data ingestion, previously ingested records cannot be deleted through record delete work orders.
 
 >[!NOTE]
 >
->If you try to create a record delete work order for a dataset that already has an active expiration, the request returns HTTP 400 (Bad Request).An active expiration is any scheduled delete that has not yet completed.
+>If you try to create a record delete work order for a dataset that already has an active expiration, the request returns HTTP 400 (Bad Request). An active expiration is any scheduled delete that has not yet completed.
+
+### Identity payload formats (`namespacesIdentities` or `identities`)
+
+The request body must include **exactly one** of the following.
+
+| Format | Property | Shape | When to use |
+|--------|----------|-------|-------------|
+| **Recommended** | `namespacesIdentities` | Array of objects with `namespace` (for example, `{ "code": "email" }`) and `ids` (array of identity strings). | Use for all payloads, whether manually constructed or code-generated. This is especially efficient to reduce payload size when many identities share the same namespace. |
+| **Also accepted** | `identities` | Array of objects with `namespace` (for example, `{ "code": "email" }`) and a single `id` (string). | Accepted for backward compatibility. This is the format produced by the [csv-to-data-hygiene conversion scripts](#convert-id-lists-to-json-for-record-delete-requests). The service normalizes this format internally, so the resulting behavior is identical. |
+
+If you send **both properties**, **neither property**, or provide **an empty array** for the property you include, the API returns **HTTP 400 (Bad Request)** with one of these messages:
+
+- **Both properties provided:** `"Identities and NamespacesIdentities are not allowed at the same time"`
+- **Neither provided or empty list:** `"Identities are Empty for Delete Identity request."`
 
 **Request**
 
-The following request deletes all records associated with specified email addresses from a particular dataset.
+The following request deletes all records associated with specified email addresses from a particular dataset. It uses the recommended `namespacesIdentities` format.
 
 ```shell
 curl -X POST \
@@ -231,7 +236,7 @@ curl -X POST \
             "namespace": {
               "code": "email"
             },
-            "IDs": [
+            "ids": [
               "alice.smith@acmecorp.com",
               "bob.jones@acmecorp.com",
               "charlie.brown@acmecorp.com"
@@ -248,8 +253,10 @@ The following table describes the properties for creating a record delete work o
 | `displayName`          | A human-readable label for this record delete work order. |
 | `description`          | A description of the record delete work order. |
 | `action`               | The action requested for the record delete work order. To delete records associated with a given identity, use `delete_identity`. |
-| `datasetId`            | The unique identifier for the dataset. Use the dataset ID for a specific dataset, or `ALL` to target all datasets. Datasets must have a primary identity or identity map. If an identity map exists, it will be present as a top-level field named `identityMap`.<br>Note that a dataset row may have many identities in its identity map, but only one can be marked as primary. `"primary": true` must be included to force the `id` to match a primary identity. |
-| `namespacesIdentities` | An array of objects, each containing:<br><ul><li> `namespace`: An object with a `code` property specifying the identity namespace (e.g., "email").</li><li> `IDs`: An array of identity values to delete for this namespace.</li></ul>Identity namespaces provide context to identity data. You can use standard namespaces provided by Experience Platform or create your own. To learn more, see the [identity namespace documentation](../../identity-service/features/namespaces.md) and the [Identity Service API specification](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `datasetId`            | The unique identifier for the dataset(s). The value must be exactly one of: the literal `ALL`, a single dataset ID, or a comma-separated list of two or more dataset IDs (e.g. `"id1,id2,id3"`). You cannot combine `ALL` with specific IDs. Single-dataset requests behave as before, multi-dataset requests delete the identities from each listed dataset, and `ALL` targets every dataset. Datasets must have a primary identity or identity map. If an identity map exists, it will be present as a top-level field named `identityMap`.<br>**Note**: A dataset row may have many identities in its identity map, but only one can be marked as primary. `"primary": true` must be included to force the `id` to match a primary identity.<br>When using `targetServices` for profile-only deletion, `datasetId` must be `ALL`. |
+| `targetServices`       | Optional. Specifies which services should process the deletion. The default value depends on your organization's entitlements. Organizations with Real-Time CDP or Adobe Journey Optimizer receive the full set of supported services (`["datalake", "identity", "profile", "ajo"]`) by default. Organizations with Customer Journey Analytics but without a Real-Time Customer Profile entitlement can only use ["datalake"]. To limit deletion to profile-related data only and leave the data lake untouched, set this to `["identity", "profile", "ajo"]` (in any order). This profile-only mode requires a Real-Time CDP or Adobe Journey Optimizer entitlement and `datasetId` must be `ALL`.|
+| `identities` | **Use exactly one of `identities` or `namespacesIdentities`.** Array of objects, each with `namespace` (object with `code`, e.g. `"email"`) and `id` (single identity string). Accepted for backward compatibility and produced by the conversion scripts. The service normalizes this format internally; behavior is identical. See [Identity payload format](#identity-payload-format-identities-or-namespacesidentities) above. |
+| `namespacesIdentities` | **Use exactly one of `identities` or `namespacesIdentities`.** Array of objects, each with `namespace` (object with `code`, e.g. `"email"`) and `ids` (array of identity strings). Recommended for all payloads. The `namespacesIdentities` property is more compact when many identities share one namespace. See [Identity payload format](#identity-payload-format-identities-or-namespacesidentities) above. Identity namespaces: [identity namespace documentation](../../identity-service/features/namespaces.md), [Identity Service API](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 **Response**
 
@@ -267,7 +274,8 @@ A successful response returns the details of the new record delete work order.
   "targetServices": [
     "profile",
     "datalake",
-    "identity"
+    "identity",
+    "ajo"
   ],
   "status": "received",
   "createdBy": "c.lannister@acme.com <c.lannister@acme.com> 7EAB61F3E5C34810A49A1AB3@acme.com",
@@ -292,20 +300,77 @@ The following table describes the properties in the response.
 | `targetServices` | A list of target services for the record delete work order.|
 | `status`         | Current status of the record delete work order.            |
 | `createdBy`      | The email and identifier of the user who created the record delete work order. |
-| `datasetId`      | The unique identifier for the dataset. If the request is for all datasets, the value will be set to `ALL`.|
+| `datasetId`      | The unique identifier for the dataset(s). If the request is for all datasets, the value will be set to `ALL`. For multi-dataset requests, the value reflects the comma-separated list or single ID submitted. |
 | `datasetName`    | The name of the dataset for this record delete work order. |
 | `displayName`    | A human-readable label for the record delete work order.   |
 | `description`    | A description of the record delete work order.             |
 
 {style="table-layout:auto"}
 
+The response `targetServices` value echoes your request or shows the full default set when omitted (see the response table above).
+
+### Multi-dataset and profile-only (API) {#multi-dataset-profile-only}
+
+The following options are available through the API only and are not supported in the Data Hygiene UI. They control which datasets and which services process the deletion, enabling multi-dataset submissions and profile-only targeted service requests.
+
+The following table summarizes how the request body and behavior change for each option.
+
+| Option | Request body change | Behavior |
+|--------|---------------------|----------|
+| **Multi-dataset** | Use a comma-separated list in `datasetId` (e.g. `"id1,id2,id3"`). Single ID or `ALL` unchanged. | Identities are deleted from the listed datasets (or from one dataset, or from all datasets when `ALL`). |
+| **Profile-only (targeted services)** | Add `targetServices` with exactly `["identity", "profile", "ajo"]` (any order). Requires `datasetId`: `"ALL"`. | Only Identity, Profile, and Adobe Journey Optimizer process the deletion; the data lake is not modified. |
+
+#### Multi-dataset requests
+
+The `datasetId` field is split on commas: use a single ID (same behavior as before), a comma-separated list of IDs, or the literal `ALL`. To delete identities from multiple specific datasets in one work order, provide a comma-separated list:
+
+```json
+"datasetId": "6707eb36eef4d42ab86d9fbe,6643f00c16ddf51767fcf780"
+```
+
+Identities are then deleted from each of the listed datasets. Single-dataset requests work as they always did; use `ALL` to target every dataset. The value must be exactly one of: `ALL`, a single dataset ID, or two or more dataset IDs separated by commas (no combining `ALL` with specific IDs).
+
+#### Profile-only (targeted services)
+
+To only remove identity and profile-related data while leaving the data lake untouched, include `targetServices` with exactly these three values in any order: `identity`, `profile`, and `ajo`. Identity, Profile, and AJO are explicitly included; the data lake is excluded. In this mode, `datasetId` must be `ALL` (the use case is full profile deletion, not per-dataset fragments).
+
+The following example creates a profile-only record delete work order:
+
+```shell
+curl -X POST \
+  "https://platform.adobe.io/data/core/hygiene/workorder" \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -d '{
+    "action": "delete_identity",
+    "datasetId": "ALL",
+    "displayName": "Profile-only delete for specified identity",
+    "description": "Delete identity, profile, and AJO data only; datalake unchanged.",
+    "targetServices": ["identity", "profile", "ajo"],
+    "namespacesIdentities": [
+      {
+        "namespace": { "code": "email" },
+        "ids": ["user@example.com"]
+      }
+    ]
+  }'
+```
+
+Successful responses for multi-dataset or profile-only requests follow the same shape as other work order responses. The returned `datasetId` and `targetServices` reflect the values in the request (or the full default list when `targetServices` is omitted), so you can confirm what was submitted.
+
 >[!NOTE]
 >
 >The action property for record delete work orders is currently `identity-delete` in API responses. If the API changes to use a different value (such as `delete_identity`), this documentation will be updated accordingly.
 
-## Convert ID lists to JSON for record delete requests
+## Convert ID lists to JSON for record delete requests (#convert-id-lists-to-json-for-record-delete-requests)
 
-To create a record delete work order from CSV, TSV, or TXT files containing identifiers, you can use conversion scripts to produce the required JSON payloads for the `/workorder` endpoint. This approach is especially helpful when working with existing data files. For ready-to-use scripts and comprehensive instructions, visit the [csv-to-data-hygiene GitHub repository](https://github.com/perlmonger42/csv-to-data-hygiene).
+Use conversion scripts to produce the required JSON payloads for the `/workorder` endpoint when your identifiers are in CSV, TSV, or TXT files. This approach is especially helpful when working with existing data files. For ready-to-use scripts and instructions, see the [csv-to-data-hygiene GitHub repository](https://github.com/perlmonger42/csv-to-data-hygiene).
+
+The scripts output the **`identities`** format—one `id` per object with a `namespace`. The API accepts this format as-is; you can send the generated JSON directly in the POST body to `/workorder` with no conversion. The recommended format is **`namespacesIdentities`**; see [Create a record delete work order](#create) and [Identity payload format](#identity-payload-format-identities-or-namespacesidentities).
 
 ### Generate JSON payloads
 
@@ -359,8 +424,8 @@ The table below describes the parameters in the bash scripts.
 | ---           | ---     |
 | `verbose`     | Enable verbose output. |
 | `column`      | The index (1-based) or header name of the column containing the identity values to delete. Defaults to the first column if not specified. |
-| `namespace`   | An object with a `code` property specifying the identity namespace (for example, "email"). |
-| `dataset-id`  | The unique identifier for the dataset associated with the work order. If the request applies to all datasets, this field will be set to `ALL`. |
+| `namespace`   | The identity namespace code passed to the script (for example, `email`). The generated JSON uses this in each object's `namespace.code` property. |
+| `dataset-id`  | The unique identifier for the dataset(s): a single ID, comma-separated IDs for multi-dataset, or `ALL` for all datasets. |
 | `description` | A description of the record delete work order. |
 | `output-dir`  | The directory to write the output JSON payload. |
 
@@ -396,7 +461,7 @@ The following table describes the properties in the JSON payload.
 | Property     | Description |
 | ---          | ---     |
 | `action`     | The action requested for the record delete work order. Automatically set to `delete_identity` by the conversion script. |
-| `datasetId`  | The unique identifier for the dataset. |
+| `datasetId`  | The unique identifier for the dataset(s): a single ID, comma-separated IDs, or `ALL`. |
 | `displayName`| A human-readable label for this record delete work order. |
 | `description`| A description of the record delete work order. |
 | `identities` | An array of objects, each containing:<br><ul><li> `namespace`: An object with a `code` property specifying the identity namespace (for example, "email").</li><li> `id`: The identity value to delete for this namespace.</li></ul> |
@@ -405,7 +470,7 @@ The following table describes the properties in the JSON payload.
 
 ### Submit the generated JSON data to the `/workorder` endpoint
 
-To submit a request, follow the instructions in the [create a record delete work order](#create) section. Make sure to use the converted JSON payload as the request body (`-d`) when sending your `curl` POST request to the `/workorder` API endpoint.
+The script output uses the `identities` format, which the API accepts as-is. Use the converted JSON payload as the request body (`-d`) when you send your `curl` POST request to the `/workorder` endpoint. For full request options and validation rules, see [Create a record delete work order](#create).
 
 ## Retrieve details for a specific record delete work order {#lookup}
 
@@ -476,12 +541,12 @@ The following table describes the properties in the response.
 |`targetServices`  |  A list of target services impacted by this record delete work order.|
 |`status`  |  The current status of the record delete work order.|
 |`createdBy`  |  The email and identifier of the user who created the record delete work order.|
-|`datasetId`  |  The unique identifier for the dataset associated with the work order.|
+|`datasetId`  |  The unique identifier for the dataset(s) associated with the work order (single ID, comma-separated IDs, or `ALL`).|
 |`datasetName`  |  The name of the dataset associated with the work order.|
 |`displayName`  |  A human-readable label for the record delete work order.|
 |`description`  |  A description of the record delete work order.|
 
-## Update a record delete work order
+## Update a record delete work order {#update}
 
 Update the `name` and `description` for a record delete work order by making a PUT request to the `/workorder/{WORKORDER_ID}` endpoint.
 
@@ -584,7 +649,7 @@ A successful response returns the updated work order request.
 | `targetServices`  |   A list of target services impacted by this record delete work order.|
 | `status`          |   The current status of the record delete work order. Possible values are: `received`,`validated`, `submitted`, `ingested`, `completed`, and `failed`.|
 | `createdBy`       |   The email and identifier of the user who created the record delete work order.|
-| `datasetId`       |   The unique identifier for the dataset associated with the record delete work order.|
+| `datasetId`       |   The unique identifier for the dataset(s) associated with the record delete work order (single ID, comma-separated IDs, or `ALL`).|
 | `datasetName`    |   The name of the dataset associated with the record delete work order.|
 | `displayName`    |   A human-readable label for the record delete work order.|
 | `description`    |   A description of the record delete work order.|
