@@ -74,11 +74,12 @@ For more information, read the [Audiences overview](../segmentation/home.md).
 
 | Destination | Description |
 | --- | --- |
-| [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) multiregion support | You can now choose your region from a searchable dropdown menu when configuring the Snowflake Streaming destination. The documentation now includes exported table structure details. |
+| [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) multiregion support | The Snowflake Streaming connector is now available to customers beyond the US VA7 region. Use the region dropdown selector to select which Snowflake region your account is in. The documentation has been updated with the expected data structure for Snowflake streaming tables. |
+| [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) and [Snowflake Batch](../destinations/catalog/warehouses/snowflake-batch.md) region selector | You can now find your region more easily with the new searchable dropdown, which combines search and dropdown into one control. |
 | Export audience metadata to [Snowflake Batch](../destinations/catalog/warehouses/snowflake-batch.md) destinations | The files exported to this destination now include audience metadata. The new table structure applies to all new destination connections set up moving forward. The old table structure will be kept for another three months before being deprecated. |
 | [!DNL Adobe Advertising Cloud DSP] connection | The new Adobe Advertising DSP connection offers the same functionality as the legacy connection plus support for additional identities. |
-| External audience support for [Criteo](../destinations/catalog/advertising/criteo.md) and [Pinterest](../destinations/catalog/advertising/pinterest.md) | You can now activate audiences beyond Segmentation Service segments to Criteo and Pinterest, including custom upload audiences (imported from CSV), look-alike audiences, federated audiences, and audiences created in other Experience Platform apps such as Adobe Journey Optimizer. See the [supported audiences](../destinations/catalog/advertising/criteo.md#supported-audiences) section on each destination's catalog page for details. |
-| Audience filtering in activation workflow | You can now find and filter audiences in the **[!UICONTROL Select audiences]** step  with the same search and filtering experience as the Browse page. |
+| External audience support for [The Trade Desk CRM](../destinations/catalog/advertising/tradedesk-emails.md), [Criteo](../destinations/catalog/advertising/criteo.md) and [Pinterest](../destinations/catalog/advertising/pinterest.md) | You can now activate audiences beyond Segmentation Service segments to The Trade Desk CRM, Criteo, and Pinterest, including custom upload audiences (imported from CSV), look-alike audiences, federated audiences, and audiences created in other Experience Platform apps such as Adobe Journey Optimizer. See the [supported audiences](../destinations/catalog/advertising/criteo.md#supported-audiences) section on each destination's catalog page for details. |
+| Audience filtering in activation workflow | You can now find and filter audiences in the **[!UICONTROL Select audiences]** step with the same experience as the Audiences page; for example, you can filter on audience origin to easily find the audience you are looking for. |
 | Increased custom upload audiences limit | You can now activate up to 20 custom upload audiences per destination instance. Previously, this limit was 10. |
 | [Export file now](../destinations/ui/export-file-now.md) and [ad-hoc activation API](../destinations/api/ad-hoc-activation-api.md) support for external audiences | You can now use Export file now (UI) and the ad-hoc activation API with external audiences (such as custom upload, look-alike, federated, and audiences from other Experience Platform apps) when activating to batch file-based destinations. |
 | HTTP API destinations with OAuth 2 and mTLS | You can now create and authenticate HTTP API destinations that use OAuth 2 when the authentication endpoint requires mutual TLS (mTLS); token retrieval during destination setup now supports mTLS. |
@@ -91,7 +92,7 @@ For more information, read the [Audiences overview](../segmentation/home.md).
 | Fix | Description |
 | --- | --- |
 | [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) account ID validation | A regular expression validator has been added to the Account ID step. When you enter your ID, it is now validated to ensure organization ID and account ID are in the correct format (separated by a dot). |
-| [TikTok](../destinations/catalog/social/tiktok.md) connector phone number hashing | Phone number hashing now uses `SHA256(lower(phone number))`, fixing profile exclusions when activating phone numbers to TikTok. |
+| [TikTok](../destinations/catalog/social/tiktok.md) connector phone number hashing | Fixed an issue where a misconfiguration in the destination card meant that identities keyed off of phone numbers were not being activated to TikTok. |
 
 {style="table-layout:auto"}
 
@@ -170,7 +171,7 @@ Inspect, troubleshoot, and optimize your Experience Platform implementations wit
 | Feature | Description |
 | --- | --- |
 | [Job Schedules](../run-and-operate/job-schedules.md) general availability | [!DNL Job Schedules] provides a unified view of all scheduled batch processing jobs across your data pipeline, from ingestion through destination activation. Inspect execution status, identify scheduling conflicts, and diagnose configuration issues before they impact your business operations. |
-| Health Checks general availability | Poor schema and identity configurations lead to significant downstream issues, including incorrect profile creation, failed segment qualification, and inaccurate activation. <br>Health checks shift your approach from reactive troubleshooting to proactive, preventative maintenance. Health checks are always-on scans of your schemas and identities used in your sandbox and provide a summary of issues that you can use to explore and troubleshoot.|
+| Health Checks general availability | Poor schema and identity configurations lead to significant downstream issues, including incorrect profile creation, failed segment qualification, and inaccurate activation. <br>Health checks shift your approach from reactive troubleshooting to proactive, preventative maintenance. Health checks are always-on scans of your schemas and identities used in your sandbox and provide a summary of issues that you can use to explore and troubleshoot. |
 
 {style="table-layout:auto"}
 
