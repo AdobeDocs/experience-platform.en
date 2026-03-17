@@ -172,7 +172,6 @@ Run and Operate provides systematic tooling to help you monitor, diagnose, and m
 | [Job Schedules](../run-and-operate/job-schedules.md) general availability | You can now view all your batch jobs in one timeline, spot scheduling conflicts, and troubleshoot delays using execution history and diagnostics. |
 | Health Checks general availability | You can now run always-on checks on schemas and identities to spot missing best practices, misconfigurations, and anomalies before they cause failures; more checks are planned. |
 
-
 {style="table-layout:auto"}
 
 For more information, read the [Run and Operate overview](../run-and-operate/overview.md), [Inspect job schedules](../run-and-operate/job-schedules.md), and the [Platform UI guide](../landing/ui-guide.md).
