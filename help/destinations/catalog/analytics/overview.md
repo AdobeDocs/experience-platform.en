@@ -29,7 +29,6 @@ Currently, Adobe Experience Platform supports the analytics destinations listed 
 * [Nielsen BSDK extension](nielsen-bsdk.md)
 * [Nielsen IMA Handler extension](nielsen-ima.md)
 * [Nielsen VideoJS Player Handler extension](nielsen-videojs.md)
-* [Parse.ly Analytics extension](parsely.md)
 * [Quantum Metric extension](quantum-metric.md)
 * [SessionCam extension](sessioncam.md)
 * [TMMData extension](tmmdata.md)

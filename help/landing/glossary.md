@@ -171,7 +171,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Data usage labels**: Data usage labels allow you to categorize data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and corporate policies. Data usage labels added to a dataset are inherited down or applied to all fields within that dataset. Data usage labels can also be applied directly to fields.
 
-**Dataflow**: A dataflow is a virtual pipeline of data that flows into Experience Platform from a source and out to destinations. 
+**Dataflow**: A dataflow is a virtual pipeline of data that flows into Experience Platform from a source and out to destinations. In the context of destinations, a dataflow is synonymous with a [destination instance](#destination-instance). {#dataflow}
 
 **Dataflow run**: A dataflow run is a dataflow that lands in Experience Platform based on a user specified schedule.
 
@@ -194,6 +194,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 **Destination category**: A destination category is a grouping of destinations that have similar characteristics.
 
 **Destination catalog**: A destination catalog is a list of available destinations in Experience Platform.
+
+**Destination instance**: A destination instance is an individual, configured connection to a specific destination in Experience Platform, created through the UI or API. It represents a single activation pipeline from Experience Platform to a destination endpoint. Also referred to as a [dataflow](#dataflow). {#destination-instance}
 
 **Direct call rules**: In the context of tags, a direct-call rule is a rule that executes when it is called directly from the page, bypassing event-detection and lookup systems.
 
