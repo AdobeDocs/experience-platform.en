@@ -29,7 +29,7 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Query Service](#query-service)
 - [Real-Time Customer Profile](#profile)
 - [Run and Operate](#run-and-operate)
-- [Segmentation Service]
+- [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
   
 ## Advanced data lifecycle management {#advanced-data-lifecycle-management}
