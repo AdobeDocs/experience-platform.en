@@ -14,3 +14,14 @@ You can use the [!DNL Kobie] sources in the Adobe Experience Platform sources ca
 - [[!DNL Kobie] streaming](../../tutorials/ui/create/loyalty/kobie-streaming.md)
 
 ## Prerequisites
+
+Provide values for the following credentials to authenticate and connect the [!DNL Kobie Batch Source Connector].
+
+| Credential | Description | Example |
+| --- | --- | --- |
+
+## Mapping {#mapping}
+
+<!-- Mapping info here -->
+
+## Next steps 
