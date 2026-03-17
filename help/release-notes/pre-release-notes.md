@@ -23,12 +23,28 @@ exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 
 New features and updates to existing features in Adobe Experience Platform:
 
+- [Advanced data lifecycle management](#advanced-data-lifecycle-management)
+- [Agent Orchestrator](#agent-orchestrator)
 - [Destinations](#destinations)
 - [Query Service](#query-service)
 - [Real-Time Customer Profile](#profile)
 - [Run and Operate](#run-and-operate)
 - [Segmentation Service]
 - [Sources](#sources)
+  
+## Advanced data lifecycle management {#advanced-data-lifecycle-management}
+
+Experience Platform provides a suite of data hygiene capabilities that allow you to manage your stored data through programmatic deletions of consumer records and datasets. Using either the Data Lifecycle workspace in the UI or through calls to the Data Hygiene API, you can effectively manage your data stores. Use these capabilities to ensure that information is used as expected, is updated when incorrect data needs fixing, and is deleted when organizational policies deem it necessary.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Multi-Dataset and Profile-Only Record Delete (API only) | You can submit a single dataset ID, a comma-separated list of dataset IDs, or the literal `ALL` in `datasetId` to delete identities across one, many, or all datasets. You can also limit deletion to profile services by setting `targetServices` to `["identity","profile","ajo"]`, which leaves the datalake unchanged. See the [Record Delete Work Orders guide](../hygiene/api/workorder.md) for more details. |
+
+{style="table-layout:auto"}
+
+For more information, read the [advanced data lifecycle management overview](../hygiene/home.md).
 
 ## Agent Orchestrator {#agent-orchestrator}
 
@@ -38,8 +54,7 @@ Agent Orchestrator enables you to build and deploy AI-powered agents that can au
 
 | Feature | Description |
 | --- | --- |
-| Adobe Marketing Agent for Microsoft 365 Copilot | The Adobe Marketing Agent for Microsoft 365 Copilot is your embedded assistant that brings Adobe's marketing intelligence directly into everyday tools like Outlook, Teams, and other Microsoft 365 apps. You can use this agent to pull in trusted content and insights from Adobe applications while you're writing emails, planning campaigns, or collaborating with colleagues, so you can generate on‑brand copy, answer customer questions, and make data-informed decisions without leaving your Microsoft 365 workflow. |
-| Field Discovery Agent | Learn what the Field Discovery Agent does, how to use it, recent improvements, and FAQs on retrieval and ranking. |
+| Adobe Marketing Agent for [!DNL Microsoft 365 Copilot] | The Adobe Marketing Agent for [!DNL Microsoft 365 Copilot] is your embedded agent that brings Adobe's marketing intelligence directly into everyday tools like [!DNL Teams], [!DNL Word], [!DNL PowerPoint] and other [!DNL Microsoft 365] apps. You can use this agent to pull in trusted campaign insights from Adobe applications while you're planning campaigns, reviewing audiences or collaborating with colleagues, answer customer questions, and make data-informed decisions without leaving your [!DNL Microsoft 365] workflow. |
 
 {style="table-layout:auto"}
 
