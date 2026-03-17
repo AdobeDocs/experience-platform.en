@@ -32,6 +32,10 @@ For partner-authored and maintained connectors, this means that issues with the 
 
 ## Sources catalog
 
+>[!NOTE]
+>
+>Source ingestion dataflows that fail continuously for 30 days will automatically be disabled. Use [Monitoring Dashboard](/help/dataflows/ui/monitor-sources.md) to review your dataflow, identify why it failed (for example, credentials, permissions, or schema or mapping changes), apply the necessary updates, and re-enable the dataflow once resolved.
+
 Read the following sections for a list of all sources available in the sources catalog.
 
 ### Adobe applications {#adobe-applications}
@@ -55,7 +59,7 @@ Experience Platform allows data to be ingested from other Adobe applications, in
 
 ### Advanced enterprise sources {#advanced-enterprise-sources}
 
-The following sources are available to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) customers only.
+The following sources are only available to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) or customers who have licensed the standalone Advanced Enterprise Source Connectors SKU.
 
 | Source | Category | Ingestion type | Cloud |
 | --- | --- | --- | --- |
