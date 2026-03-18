@@ -34,7 +34,7 @@ You can discover accelerators in two ways:
 - **[!UICONTROL Accelerators] tab:** Use this tab to browse the full catalog of accelerators. In Experience Platform, select **[!UICONTROL Queries]** in the left navigation to open the Queries workspace. Then select the **[!UICONTROL Accelerators]** tab to view a table of all available accelerators. The table shows each accelerator name, a SQL preview, and creation and modification dates. Select an accelerator name to open it in the Query Editor.
 - **[!UICONTROL Overview] tab:** Use this tab for a curated subset of common templates. The Recommended Data Distiller accelerators section on the **[!UICONTROL Overview]** tab displays a subset of accelerator cards. Some cards open the Query Editor; others open dashboard visualizations in the Dashboards workspace. If a card opens a dashboard instead of the Query Editor, see [Dashboard-linked accelerators](#dashboard-accelerators). Select a card to open the corresponding accelerator or dashboard.
 
-![The Queries workspace with the Accelerators tab selected showing the table of accelerators.](../images/ui/placeholder.png)
+![The Queries workspace with the Accelerators tab selected showing the table of accelerators.](../images/ui/accelerators/accelerators-tab-table.png)
 
 ## Open an accelerator in the Query Editor {#open-accelerator}
 
@@ -42,7 +42,7 @@ Select an accelerator name from the **[!UICONTROL Accelerators]** tab or from th
 
 The right-hand panel displays accelerator metadata: **[!UICONTROL Accelerator ID]**, **[!UICONTROL Name]**, **[!UICONTROL Last modified]**, **[!UICONTROL Modified by]**, and **[!UICONTROL Add schedule]**.
 
-![The Query Editor with an accelerator open, showing the SQL area, Query parameters tab, and right-hand panel.](../images/ui/placeholder.png)
+![The Query Editor with an accelerator open, showing the SQL area, Query parameters tab, and right-hand panel.](../images/ui/accelerators/accelerator-query-edit.png)
 
 ## Provide parameter inputs {#provide-parameters}
 
@@ -96,9 +96,6 @@ Some accelerators from the Recommended Data Distiller accelerators section on th
 ## Request a new accelerator {#request-accelerator}
 
 Customers cannot add accelerators through the UI. If you have a recurring use case that you want as an accelerator, [contact your Adobe support team](../../landing/ui-guide.md#help) to submit the request. Adobe evaluates requests and adds new accelerators based on industry applicability and common patterns.
-
-<!-- [UNVERIFIED] The following outcome is not confirmed with support. Verify with support/SME before publishing. -->
-After submitting a request, your support team confirms receipt and shares next steps.
 
 ## Next steps {#next-steps}
 
