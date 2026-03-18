@@ -13,7 +13,7 @@ This guide is for Data Engineers and Analysts who run SQL in Experience Platform
 
 >[!AVAILABILITY]
 >
->This feature is available only to organizations with a Data Distiller SKU. Query Service is the base offering included with Experience Platform; the Accelerators tab and related workflows require the Data Distiller add-on.
+>Data Distiller Accelerators are only available to organizations with a Data Distiller SKU. The Accelerators tab and related workflows require the Data Distiller add-on.
 
 ## Prerequisites {#prerequisites}
 
@@ -25,7 +25,7 @@ Accelerators are Adobe-authored, parameterized SQL templates. They are read-only
 
 ### When to use accelerators {#when-to-use}
 
-Use accelerators when you need pre-built SQL for common patterns such as funnel analysis, moving averages, audience overlap, or similar analytical workflows. Use them instead of writing queries from scratch to save time and reduce errors. If no accelerator fits your use case, write a custom query in the Query Editor or request a new accelerator (see [Request a new accelerator](#request-accelerator)).
+Use accelerators when you need pre-built SQL for common patterns such as funnel analysis, moving averages, audience overlap, or similar analytical workflows. Use them instead of writing queries from scratch to save time and reduce errors. If no accelerator fits your use case, [write a custom query in the Query Editor](./user-guide.md#query-authoring) or request a new accelerator (see [Request a new accelerator](#request-accelerator)).
 
 ### Accelerator discovery paths {#discovery-paths}
 
@@ -54,11 +54,13 @@ Accelerators use the `${PARAMETER_NAME}` syntax for parameters. Parameters appea
 
 When you open an accelerator, parameters are auto-populated from the SQL in the **[!UICONTROL Query parameters]** tab. You must enter values for each parameter; if any are missing or empty, the query fails when you run it. When all parameters are set, select the play icon in the toolbar above the Query Editor to run the query. Results appear in the **[!UICONTROL Results]** tab.
 
-For general parameter concepts and authoring your own parameterized queries, see [Parameterized queries in Query Editor](./parameterized-queries.md). For full details on running queries in the Query Editor, see the [Query Editor user guide](./user-guide.md#run-a-query).
+For general parameter concepts and authoring your own parameterized queries, see [Parameterized queries in Query Editor](./parameterized-queries.md).
+
+For full details on running queries, including result limits, cancel, and output dataset options, see the [Query Editor user guide](./user-guide.md#run-a-query).
 
 ## Execute an accelerator {#execute-accelerator}
 
-Running an accelerator is covered in [Provide parameter inputs](#provide-parameters): enter values for all parameters, then select the play icon. For additional Query Editor features such as result limits, cancel, and output dataset options, see the [Query Editor user guide](./user-guide.md#run-a-query).
+Running an accelerator is covered in [Provide parameter inputs](#provide-parameters): enter values for all parameters, then select the play icon. That section includes a link to the Query Editor user guide for more on running queries and related features.
 
 ## Schedule an accelerator {#schedule-accelerator}
 
@@ -70,7 +72,7 @@ For step-by-step scheduling instructions, see [Create a query schedule](./query-
 
 Create a custom template when you need to modify the SQL, run it under a different name, or apply org-specific changes. This clones the accelerator into a new query template that you own. The original accelerator is not modified.
 
-1. Open an accelerator in the Query Editor.
+1. [Open an accelerator in the Query Editor](#open-accelerator).
 2. Select **[!UICONTROL Create custom template]** in the editor toolbar.
 3. The editor switches to editable mode. Modify the SQL if needed, then select **[!UICONTROL Save]** or **[!UICONTROL Save and close]**.
 4. The cloned template appears in the **[!UICONTROL Templates]** tab. You can edit, schedule, or delete it like any other template.
@@ -93,7 +95,7 @@ Some accelerators from the Recommended Data Distiller accelerators section on th
 
 ## Request a new accelerator {#request-accelerator}
 
-Customers cannot add accelerators through the UI. If you have a recurring use case that you want as an accelerator, contact your Adobe support team to submit the request. Adobe evaluates requests and adds new accelerators based on industry applicability and common patterns.
+Customers cannot add accelerators through the UI. If you have a recurring use case that you want as an accelerator, [contact your Adobe support team](../../landing/ui-guide.md#help) to submit the request. Adobe evaluates requests and adds new accelerators based on industry applicability and common patterns.
 
 <!-- [UNVERIFIED] The following outcome is not confirmed with support. Verify with support/SME before publishing. -->
 After submitting a request, your support team confirms receipt and shares next steps.
