@@ -3,7 +3,6 @@ keywords: Experience Platform;Query Service;Data Distiller;accelerators;paramete
 solution: Experience Platform
 title: Data Distiller Accelerators
 description: Use Data Distiller Accelerators to run and schedule Adobe-approved parameterized SQL templates in the Query Service UI. Accelerators are read-only and Adobe-managed; use Create Custom Template to clone and edit them.
-exl-id: placeholder
 ---
 # Data Distiller Accelerators {#data-distiller-accelerators}
 
@@ -13,7 +12,7 @@ This guide is for Data Engineers and Analysts who run SQL in Experience Platform
 
 >[!AVAILABILITY]
 >
->Data Distiller Accelerators are only available to organizations with a Data Distiller SKU. The Accelerators tab and related workflows require the Data Distiller add-on.
+>Data Distiller Accelerators are only available to organizations with a Data Distiller SKU. The Accelerators tab and related workflows require the Data Distiller add-on. See the [Data Distiller overview](../data-distiller/overview.md) for more information.
 
 ## Prerequisites {#prerequisites}
 
@@ -25,7 +24,7 @@ Accelerators are Adobe-authored, parameterized SQL templates. They are read-only
 
 ### When to use accelerators {#when-to-use}
 
-Use accelerators when you need pre-built SQL for common patterns such as funnel analysis, moving averages, audience overlap, or similar analytical workflows. Use them instead of writing queries from scratch to save time and reduce errors. If no accelerator fits your use case, [write a custom query in the Query Editor](./user-guide.md#query-authoring) or request a new accelerator (see [Request a new accelerator](#request-accelerator)).
+Use accelerators when you need pre-built SQL for common patterns such as funnel analysis, moving averages, audience overlap, or similar analytical workflows. If no accelerator fits your use case, [write a custom query in the Query Editor](./user-guide.md#query-authoring) or request a new accelerator (see [Request a new accelerator](#request-accelerator)).
 
 ### Accelerator discovery paths {#discovery-paths}
 
@@ -38,11 +37,11 @@ You can discover accelerators in two ways:
 
 ## Open an accelerator in the Query Editor {#open-accelerator}
 
-Select an accelerator name from the **[!UICONTROL Accelerators]** tab or from the Recommended Data Distiller accelerators cards on the **[!UICONTROL Overview]** tab. The Query Editor opens with the accelerator's SQL pre-populated. The SQL is read-only: toolbar actions such as **[!UICONTROL Show results]**, **[!UICONTROL Undo text]**, **[!UICONTROL Format text]**, and **[!UICONTROL Save]** are disabled. The following actions remain available: run the query, cancel and exit, and create a custom template.
+Select an accelerator name from the **[!UICONTROL Accelerators]** tab or from the Recommended Data Distiller accelerators cards on the **[!UICONTROL Overview]** tab. The Query Editor opens with the accelerator's SQL pre-populated. When you open an accelerator, the SQL and parameters appear so you can review the syntax and purpose before running. The SQL is read-only: toolbar actions such as **[!UICONTROL Show results]**, **[!UICONTROL Undo text]**, **[!UICONTROL Format text]**, and **[!UICONTROL Save]** are disabled. The following actions remain available: run the query, cancel and exit (via **[!UICONTROL Cancel]**), and create a custom template.
 
 The right-hand panel displays accelerator metadata: **[!UICONTROL Accelerator ID]**, **[!UICONTROL Name]**, **[!UICONTROL Last modified]**, **[!UICONTROL Modified by]**, and **[!UICONTROL Add schedule]**.
 
-![The Query Editor with an accelerator open, showing the SQL area, Query parameters tab, and right-hand panel.](../images/ui/accelerators/accelerator-query-edit.png)
+![The Query Editor with an accelerator open, showing the SQL area, Query parameters tab, and right-hand panel.](../images/ui/accelerators/accelerator-query-editor.png)
 
 ## Provide parameter inputs {#provide-parameters}
 
@@ -99,7 +98,7 @@ Customers cannot add accelerators through the UI. If you have a recurring use ca
 
 ## Next steps {#next-steps}
 
-- [Manage your cloned templates](./query-templates.md) in the Templates tab.
+- [Create and browse query templates](./query-templates.md#browse), including those cloned from accelerators.
 - [Author your own parameterized queries](./parameterized-queries.md) using the `$` syntax.
 - [Schedule queries](./query-schedules.md) for automated runs.
 - [Learn general Query Service workflows](./user-guide.md).
