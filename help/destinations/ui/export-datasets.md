@@ -98,7 +98,7 @@ This document contains all the information necessary to export datasets. If you 
 
 ## Prerequisites {#prerequisites}
 
-Note the following prerequisites in order to export datasets:
+Note the following prerequisites to export datasets:
 
 * To export datasets to cloud storage destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 * Profile datasets need to be enabled for use in Real-Time Customer Profile. [Read more](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) about how to enable this option. 
@@ -201,8 +201,8 @@ The **[!UICONTROL Export incremental files]** option is selected by default. Thi
 
 4. Select **[!UICONTROL Save]** to save the schedule and proceed to the **[!UICONTROL Review]** step.
 
->[!NOTE] 
-> 
+>[!NOTE]
+>
 >For dataset exports, the file names have a preset, default format, which cannot be modified. See the section [Verify successful dataset export](#verify) for more information and examples of exported files.
 
 ## Edit folder path {#edit-folder-path}
@@ -250,9 +250,9 @@ When exporting datasets, Experience Platform creates one or multiple `.json` or 
 
 Experience Platform creates a folder structure in the storage location you specified, where it deposits the exported dataset files. The default folder export pattern is shown below, but you can [customize the folder structure with your preferred macros](#edit-folder-path).
 
->[!TIP] 
-> 
->The first level in this folder structure - `folder-name-you-provided` -  represents the **[!UICONTROL Folder path]** that you indicated when you [connected to the destination](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) to export datasets. 
+>[!TIP]
+>
+>The first level in this folder structure - `folder-name-you-provided` -  represents the **[!UICONTROL Folder path]** that you indicated when you [connected to the destination](/help/destinations/ui/connect-destination.md#set-up-connection-parameters) to export datasets. 
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -283,8 +283,8 @@ To remove datasets from an existing dataflow, follow the steps below:
 
     ![Destination browse view with a destination connection shown and the rest blurred out.](../assets/ui/export-datasets/browse-dataset-connections.png)
 
-    >[!TIP] 
-    > 
+    >[!TIP]
+    >
     >Select the filter icon ![Filter-icon](/help/images/icons/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
 
 2. From the **[!UICONTROL Activation data]** column, select the datasets control to view all datasets mapped to this export dataflow.
@@ -351,7 +351,7 @@ The manifest file is in .json format.
 No API is available for the manifest file, but it includes a list of files comprising the export.
 +++
 
-**Can we add additional details to the manifest file (i.e., record count)? If so, how?**
+**Can we add additional details to the manifest file (that is, record count)? If so, how?**
 
 +++Answer
 There is no possibility to add additional info to the manifest file. The record count is available via the `flowRun` entity (queryable via API). Read more in destinations monitoring.
