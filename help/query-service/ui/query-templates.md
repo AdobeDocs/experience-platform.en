@@ -21,6 +21,12 @@ You can create query templates through two methods, either by making a POST requ
 
 See the documentation for instructions on how to use the Query Editor to [write](./user-guide.md#query-authoring) and [save queries](./user-guide.md#saving-queries). Once you have named and saved your query, it is available to be reused as a query template from the [!UICONTROL Templates] tab.
 
+### Create a template from a Data Distiller accelerator {#create-from-accelerator}
+
+<!-- PLACEHOLDER: Explain that users can create an editable template by cloning a Data Distiller accelerator. Select Create custom template from the Query Editor when an accelerator is open; the cloned query appears in the Templates tab. Link to Data Distiller Accelerators guide for full workflow. -->
+
+You can also create a query template by cloning a Data Distiller accelerator. Open an accelerator in the Query Editor, select **[!UICONTROL Create custom template]**, then save the query. The cloned template appears in the [!UICONTROL Templates] tab and is fully editable. See the [Data Distiller Accelerators](./accelerators.md#create-custom-template) guide for step-by-step instructions.
+
 >[!TIP]
 >
 >When you save a query in the Query Editor, a confirmation message pops up to notify you of the successful action. This popup message contains a link that provides a convenient way to navigate to the queries scheduling workspace. See the [schedule queries documentation](./query-schedules.md) to learn how to run queries on a custom cadence.

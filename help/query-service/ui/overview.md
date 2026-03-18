@@ -36,9 +36,17 @@ The [!UICONTROL Data Distiller capabilities] section provides documentation link
 
 ![The Query Service workspace with the Data Distiller capabilities section highlighted.](../images/ui/overview/data-distiller-capabilities.png)
 
+### Accelerators {#accelerators}
+
+<!-- PLACEHOLDER: Describe the Accelerators tab. State that it displays a table of Adobe-approved parameterized SQL templates. Explain that selecting an accelerator opens it in the Query Editor. Link to the Data Distiller Accelerators guide for full documentation. Add screenshot when available. -->
+
+See the [Data Distiller Accelerators](./accelerators.md) guide to learn how to discover, run, and schedule accelerators, or create editable copies using Create Custom Template.
+
 ### Recommended Data Distiller accelerators {#recommended-accelerators}
 
-Select a quick link to navigate to the relevant Data Distiller dashboards [!UICONTROL Templates]. Each accelerator provides powerful tools and visualizations to help you analyze audience data, optimize segmentation, and enhance targeting strategies.
+<!-- PLACEHOLDER: Consider revising intro to clarify two accelerator types: (1) cards that link to dashboards, (2) cards that link to Query Editor/Accelerators tab. Add link to accelerators.md for users who want the full guide. -->
+
+Select a quick link to navigate to the relevant Data Distiller dashboards [!UICONTROL Templates]. Each accelerator provides powerful tools and visualizations to help you analyze audience data, optimize segmentation, and enhance targeting strategies. For the full list of accelerators and SQL-based templates, see the [Accelerators tab](./accelerators.md#discovery-paths) or the [Data Distiller Accelerators guide](./accelerators.md).
 
 - **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: From this dashboard you can analyze audience intersections between multiple audience segments to uncover valuable insights and optimize segmentation strategies. You can also export your insights for further offline analysis or reporting purposes.
 - **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: From this dashboard, you can compare and contrast key audience metrics side-by-side to analyze two audience groups in detail. These insights help you understand audience size, growth, and other key performance indicators, enabling you to refine segmentation and optimize targeting strategies with data-driven decisions.
