@@ -71,6 +71,7 @@ Before configuring your Snowflake connection, make sure you meet the following p
 
 * You have access to a [!DNL Snowflake] account.
 * Your Snowflake account is subscribed to private listings. You or someone in your company who has account administrator privileges on Snowflake can configure this.
+* You know your Snowflake account region, which you will select from a dropdown when connecting to the destination.
 
 Read the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) for more information on the necessary permissions.
 
@@ -140,7 +141,12 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Snowflake Account ID]**: Your Snowflake account ID. Use the following Account ID format depending on whether your account is linked to an organization:
     * If your account is linked to an organization:`OrganizationName.AccountName`.
     * If your account is not linked to an organization:`AccountName`.
+* **[!UICONTROL Snowflake Region]**: Select the region of your Snowflake account from the dropdown. See the Snowflake [documentation](https://docs.snowflake.com/en/user-guide/intro-regions) for detailed information on supported regions.
 * **[!UICONTROL Account acknowledgment]**: Toggle on the Snowflake Account ID acknowledgment to confirm that your Account ID is correct and it belongs to you.
+
+>[!NOTE]
+>
+> The **[!UICONTROL Snowflake Account ID]** and **[!UICONTROL Snowflake Region]** cannot be edited through the [edit destination](../../ui/edit-destination.md) workflow after you create the destination. To use different account or region values, [create a new destination connection](../../ui/connect-destination.md).
 
 >[!IMPORTANT]
 >
@@ -171,17 +177,16 @@ The target attributes are automatically created in Snowflake using the attribute
 
 ## Exported data / Validate data export {#exported-data}
 
-Check your Snowflake account to verify that the data was exported correctly.
+The data is shared into your Snowflake account via a shared table. Check your Snowflake account to verify that the data was exported correctly.
 
-## Known limitations {#known-limitations}
+### Data structure {#data-structure}
 
-### Default merge policy restriction {#default-merge-policy-restriction}
+The shared table contains the following columns:
 
-Currently, only audiences mapped to the default merge policy can be exported.
-
-### Regional availability {#regional-availability}
-
-The [!DNL Snowflake] streaming destination is currently only available to Real-Time CDP customers provisioned in the Experience Platform VA7 region.
+* **TS**: A timestamp column that indicates when each row from the shared table was last updated
+* **Merge policy ID**: The ID of the [merge policy](../../../profile/merge-policies/overview.md) that the audience being activated belongs to
+* **Mapping attributes**: Every mapping attribute that you select during the activation workflow is represented as a column header in Snowflake
+* **Audience membership**: Membership to any audience mapped to the dataflow is indicated via an `active` entry in the corresponding cell
 
 ## Data usage and governance {#data-usage-governance}
 
