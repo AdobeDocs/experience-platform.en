@@ -4,6 +4,7 @@ description: Learn how to use health checks in Adobe Experience Platform to proa
 solution: Experience Platform
 type: Documentation
 role: Admin, User
+hide: yes
 ---
 # Health Checks
 
