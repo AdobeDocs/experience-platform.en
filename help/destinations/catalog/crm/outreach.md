@@ -28,7 +28,7 @@ Refer to Adobe's documentation for [Audience Membership Details schema field gro
 
 ### Outreach prerequisites {#prerequisites-destination}
 
-Note the following prerequisites in [!DNL Outreach], in order to export data from Experience Platform to your [!DNL Outreach] account:
+Note the following prerequisites in [!DNL Outreach], to export data from Experience Platform to your [!DNL Outreach] account:
 
 #### You need to have an Outreach account {#prerequisites-account}
 
@@ -55,7 +55,7 @@ Note down the items below before you authenticate to the [!DNL Outreach] CRM des
 >
 > Label names are for ease of identification only. They are not used when updating prospects.
 
-## Guardrails
+## Guardrails {#guardrails}
 
 The [!DNL Outreach] API has a rate limit of 10,000 requests per hour per user. If you reach this limit you will receive a `429` response with the following message: `You have exceeded your permitted rate limit of 10,000; please try again at 2017-01-01T00:00:00.`.
 
@@ -110,7 +110,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 > To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -153,7 +153,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -163,7 +163,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 To correctly send your audience data from Adobe Experience Platform to the [!DNL Outreach] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Outreach] destination fields, follow these steps:
 
-1. In the [!UICONTROL Mapping] step, click **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
+1. In the [!UICONTROL Mapping] step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 ![Experience Platform UI screenshot showing how to Add new mapping](../../assets/catalog/crm/outreach/add-new-mapping.png)
 
 1. In the [!UICONTROL Select source field] window, choose the **[!UICONTROL Select identity namespace]** category and add the desired mappings.

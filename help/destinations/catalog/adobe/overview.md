@@ -16,7 +16,7 @@ Currently, Experience Platform supports the Adobe destinations listed below.
 
 To understand the difference between connections and extensions, see [Connections](../../destination-types.md#connections) in the Destination Types and Categories page.
 
-### Connections
+### Connections {#connections}
 
 * [Adobe Advertising Cloud DSP connection](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
 * [Adobe Campaign connection](../email-marketing/adobe-campaign.md)
@@ -26,7 +26,7 @@ To understand the difference between connections and extensions, see [Connection
 * [Marketo Measure Ultimate connection](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
 * [Federated Audience Composition connection](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"}
 
-### Extensions
+### Extensions {#extensions}
 
 * [Adobe Advertising Cloud extension](../advertising/adobe-advertising-cloud.md)
 * [Adobe Analytics extension](../analytics/adobe-analytics.md)
@@ -39,7 +39,7 @@ To understand the difference between connections and extensions, see [Connection
 * [Marketo Munchkin extension](../email/marketo-munchkin.md)
 * [Marketo Web Personalization extension](../personalization/marketo-web-personalization.md)
 
-## Experience Platform audience sharing
+## Experience Platform audience sharing {#audience-sharing}
 
 Use the Experience Platform audience sharing capability to share your Experience Platform audiences to additional Adobe destinations. Refer the page below for more information (opens in the Audience Manager documentation portal):
 

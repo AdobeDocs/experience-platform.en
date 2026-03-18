@@ -111,7 +111,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -120,7 +120,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/destination-details.png)
+![Adobe Campaign Managed Cloud Services destination details form showing fields for Name, Description, instance selection, target mapping, and sync type.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/destination-details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -146,7 +146,7 @@ For more information about marketing actions, see the [data usage policies overv
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -177,7 +177,7 @@ Select XDM fields to export with the profiles and map them to the corresponding 
       >
       >Make sure that the deduplication key attribute's name matches a column name of the selected target mapping.
 
-    ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
+    ![Attribute mapping screen showing XDM source fields mapped to Adobe Campaign target fields, with mandatory and deduplication key indicators.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
 1. Once mapping has been performed, you can review and complete the destination configuration to start sending data to **[!DNL Campaign]**.
 [Learn how to review and complete destination configuration](/help/destinations/destination-types.md#review).
@@ -190,13 +190,13 @@ Once a destination has been activated, you can access the corresponding job and 
 
 Navigate to the **[!UICONTROL Administration]** > **[!UICONTROL Audit]** > **[!UICONTROL Audience load jobs]** menu to monitor all export jobs activated from Adobe Experience Platform.
 
-![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
+![Adobe Campaign Audience load jobs screen showing export jobs activated from Adobe Experience Platform.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
 
 ### Access exported data {#data}
 
 For **[!UICONTROL Audience sync]**, you can check the exported audience by navigating to the **[!UICONTROL Profile and target]** > **[!UICONTROL List]** > **[!UICONTROL AEP audiences]** menu.
 
-![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
+![Adobe Campaign AEP audiences list view showing exported audiences from Experience Platform available under Profile and target.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 
 For **[!UICONTROL Profile sync (Update only)]**, data is automatically updated into the Campaign database for each profile targeted by the audience activated in the destination.
 
