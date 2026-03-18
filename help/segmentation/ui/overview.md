@@ -106,6 +106,34 @@ Edge segmentation is the ability to evaluate audiences in Experience Platform in
 
 More information about edge segmentation can be found in the [edge segmentation UI guide](../methods/edge-segmentation.md)
 
+## Evaluation {#evaluation}
+
+The **[!UICONTROL Evaluation]** tab displays a list of schedules available for segmentation in your organization. This page displays both the system-created schedule and user-created schedules for your organization.
+
+- **System-created schedule**: The daily schedule for batch segmentation that is created by the Experience Platform system. Every sandbox has only **one** system created schedule.
+- **User-created schedule**: A schedule for batch segmentation that you created. The user-crated lets you evaluate your specified audiences on a daily, weekly, or monthly cadence.
+
+IMAGE
+
+On the **[!UICONTROL Evaluation]** screen, you can see a list of schedules that are available to use in your organization, including details such as the schedule's title, state, type, scheduled run time, next run, and assigned audiences.
+
+IMAGE
+
+Aside from viewing the system-created schedules, you create your own user-created schedule. Select **Create schedule** to open the **Create schedule** module.
+
+IMAGE
+
+Within the **Create schedule** module, you can add details for your schedule.
+
+IMAGE
+
+| Field | Description |
+| ----- | ----------- |
+| Schedule name | The name for your schedule. |
+| Cadence | How often the schedule will run. This can be **Daily**, **Weekly**, **Monthly**, or **Advanced**. |
+| Repeat every day(s) | This field **only** shows up if your cadence is set to daily. This determines after how many days you want your schedule to repeat. |
+| Time | This field determines what time the schedule will run. |
+
 ## Policy violations
 
 >[!NOTE]
