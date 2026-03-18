@@ -198,7 +198,7 @@ The dynamic table contains the following columns:
 
 >[!NOTE]
 >
->The table structure described above applies to new destination connections. Existing connections continue to use the previous structure, where each audience is represented as a separate column (for example, `ups_<audience-id>` = `active`). The previous structure will be deprecated in 3 months.
+>The table structure described above applies to destination connections created after the March 2026 Experience Platform release. Existing connections continue to use the previous structure, where each audience is represented as a separate column (for example, `ups_<audience-id>` = `active`). The previous structure will be deprecated in 3 months.
 
 ![Screenshot showing the Snowflake interface with dynamic table data](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
 
