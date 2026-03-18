@@ -14,11 +14,11 @@ The [!DNL Amazon Ads] integration with Adobe Experience Platform provides turn-k
 
 Using the [!DNL Amazon Ads] destination in Adobe Experience Platform, users are able to define advertiser audiences for targeting and activation on the Amazon DSP.  Additionally, users may upload their data to [!DNL Amazon Marketing Cloud] to understand performance by audience, advertiser provided dimensions, membership in Amazon segments, or other signals available in AMC. After uploading advertiser audiences to AMC, users can use [!DNL Amazon Marketing Cloud] to modify, enhance, or append to audience members using Amazon signals from within [!DNL Amazon Marketing Cloud].
 
-AMC brings together unique signals from across Amazon owned and operated properties, spanning across media including display, video, streaming TV, audio, and sponsored ads. Users can easily send curated segments from Adobe Experience Platform to AMC to enhance learning such as audiences' in-market groups, lifestyle cohorts, and brand engagement patterns. Augmented segments can then be used to optimize media activations in Amazon DSP. 
+AMC brings together unique signals from across Amazon owned and operated properties, spanning across media including display, video, streaming TV, audio, and sponsored ads. Users can send curated segments from Adobe Experience Platform to AMC to enhance learning such as audiences' in-market groups, lifestyle cohorts, and brand engagement patterns. Augmented segments can then be used to optimize media activations in Amazon DSP. 
 
 >[!IMPORTANT]
 >
->This destination connector and documentation page are created and maintained by the *[!DNL Amazon Ads]* team. For any inquiries or update requests, please contact them directly at *`amc-support@amazon.com`.*
+>This destination connector and documentation page are created and maintained by the *[!DNL Amazon Ads]* team. For any inquiries or update requests, contact them directly at *`amc-support@amazon.com`.*
 
 ## Use cases {#use-cases}
 
@@ -32,7 +32,7 @@ This integration with Amazon DSP allows [!DNL Amazon Ads] advertisers to pass ad
 
 This integration with [!DNL Amazon Marketing Cloud] (AMC) allows [!DNL Amazon Ads] advertisers to pass CDP segments from Adobe Experience Platform form to AMC. Advertisers can then join the CDP inputs with [!DNL Amazon Ads] signals, and conduct custom analytics on topics such as media impact, audience segments, and customer journeys in privacy compliant format. For example, an advertiser may upload a list of their existing customers to understand the aggregate advertising campaign performance, or aggregated statistics of on-Amazon conversion events, such as viewing a product detail page, adding a product to a shopping cart, or purchase of a product.
 
-### Advertising optimization
+### Advertising optimization {#advertising-optimization}
 
 This integration with [!DNL Amazon Marketing Cloud] (AMC) allows advertisers to upload their own customer lists, and using [!DNL Amazon Marketing Cloud] SQL, perform overlap analysis, suppressions, additions, or optimizations to audiences in a recurring basis before creating an activation-ready audience in Amazon DSP for targeting.
 
@@ -97,7 +97,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -135,7 +135,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -150,7 +150,7 @@ The [!DNL Amazon Ads] connection supports hashed email address and hashed phone 
 * To map hashed email addresses, select the `Email_LC_SHA256` identity namespace as a source field.
 * To map hashed phone numbers, select the `Phone_SHA256` identity namespace as a source field.
 * To map unhashed email addresses or phone numbers, select the corresponding identity namespaces as source fields, and check the `Apply Transformation` option to have Experience Platform hash the identities on activation.
-* *NEW starting with the September 2024 release*: Amazon Ads requires you to map a field containing a `countryCode` value in the 2-character ISO format in order to facilitate the identity resolution process (for example: US, GB, MX, CA, and so on). Connections without `countryCode` mappings will result in negative impact to identity match rates.
+* *NEW starting with the September 2024 release*: Amazon Ads requires you to map a field containing a `countryCode` value in the 2-character ISO format to facilitate the identity resolution process (for example: US, GB, MX, CA, and so on). Connections without `countryCode` mappings will result in negative impact to identity match rates.
 
 >[!NOTE]
 >
