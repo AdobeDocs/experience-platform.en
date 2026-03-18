@@ -2,8 +2,8 @@
 title: Adobe Advertising DSP connection
 description: Learn how to share authenticated and unauthenticated first-party audiences with Adobe Advertising Cloud Demand-Side Platform (DSP) using multiple identity types.
 feature: Destinations
+exl-id: 0ff80d38-993f-4609-bf2a-01a3e6cfe10b
 ---
-
 # Adobe Advertising DSP connection
 
 ## Overview {#overview}
