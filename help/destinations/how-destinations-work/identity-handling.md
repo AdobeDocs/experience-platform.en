@@ -11,7 +11,7 @@ This page describes the particularities of how identities are exported to differ
 >
 > For extensive information about identities, identity namespaces, and definitions of identity-related terms, read the [identity service overview](/help/identity-service/home.md).
 
-Each destination in the [catalog](/help/destinations/catalog/overview.md) is slightly different, so there is no one-size-fits-all setup across all destinations. However, there are a few patterns that guide the setup of  destinations and their identity requirements, as described in the sections below.
+Each destination in the [catalog](/help/destinations/catalog/overview.md) is slightly different, so there is no one-size-fits-all setup across all destinations. However, there are a few patterns that guide the setup of destinations and their identity requirements, as described in the sections below.
 
 ## File-based destinations {#file-based}
 
@@ -37,6 +37,7 @@ For example, consider that from two different datasets, you have the following p
 |---------|----------|---------|--------|
 | email1, Loyalty ID1 | John | Doe | email 1|
 
+{style="table-layout:auto"}
 
 **Profile fragment two**
 
@@ -44,11 +45,15 @@ For example, consider that from two different datasets, you have the following p
 |---------|----------|---------|--------|
 | email2, Loyalty ID1 | John | Doe | email 2|
 
+{style="table-layout:auto"}
+
 The merged profile would look like below:
 
 |Identity map | First Name| Last Name| Email attribute|
 |---------|----------|---------|--------|
 | email 1, email2, Loyalty ID1 | John | Doe | email 2|
+
+{style="table-layout:auto"}
 
 The export behavior differs based on whether you select `IdentityMap: Email` or `xdm: personalEmail.address` for export. 
 

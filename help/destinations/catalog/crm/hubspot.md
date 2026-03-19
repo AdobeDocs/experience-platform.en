@@ -30,11 +30,11 @@ Refer to Experience Platform documentation for [Audience Membership Details sche
 
 ### Prerequisites for the [!DNL HubSpot] destination {#prerequisites-destination}
 
-Note the following prerequisites in order to export data from Experience Platform to your [!DNL HubSpot] account:
+Note the following prerequisites to export data from Experience Platform to your [!DNL HubSpot] account:
 
 #### You must have a [!DNL HubSpot] account {#prerequisites-account}
 
-In order to export data from Experience Platform to your [!DNL Hubspot] account you need to have a [!DNL HubSpot] account. If you do not have one already, visit the [Set up your HubSpot account](https://knowledge.hubspot.com/get-started/set-up-your-account) page and follow the guidance to register and create your account.
+To export data from Experience Platform to your [!DNL Hubspot] account you need to have a [!DNL HubSpot] account. If you do not have one already, visit the [Set up your HubSpot account](https://knowledge.hubspot.com/get-started/set-up-your-account) page and follow the guidance to register and create your account.
 
 #### Gather the [!DNL HubSpot] private app access token {#gather-credentials}
 
@@ -153,7 +153,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 
 To correctly map your XDM fields to the [!DNL HubSpot] destination fields, follow the steps below:
 
-#### Mapping the `Email` identity
+#### Mapping the `Email` identity {#map-email-identity}
 
 The `Email` identity is a mandatory mapping for this destination. Follow the steps below to map it:
 
@@ -171,7 +171,7 @@ The `Email` identity is a mandatory mapping for this destination. Follow the ste
 An example with the identity mapping is shown below:
 ![Experience Platform UI screenshot example with email identity mapping.](../../assets/catalog/crm/hubspot/mapping-identities.png)
 
-#### Mapping **optional** attributes
+#### Mapping **optional** attributes {#mapping-optional-attributes}
 
 To add any other attributes you want to update between your XDM profile schema and your [!DNL HubSpot] account repeat the steps below:
 
@@ -218,7 +218,7 @@ Additional useful information from the [!DNL HubSpot] documentation is below:
 * [Authentication methods on HubSpot](https://developers.hubspot.com/docs/api/intro-to-auth)
 * [!DNL HubSpot] API references for the [Contacts](https://developers.hubspot.com/docs/api/crm/contacts) and [Properties](https://developers.hubspot.com/docs/api/crm/properties) APIs.
 
-### Changelog
+### Changelog {#changelog}
 
 This section captures the functionality and significant documentation updates made to this destination connector.
 

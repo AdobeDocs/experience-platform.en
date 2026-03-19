@@ -42,6 +42,8 @@ Refer to the table below for details on which types of integrations support the 
 | Real-time (streaming) integrations | Yes |
 | File-based (batch) integrations | Yes |
 
+{style="table-layout:auto"}
+
 ## Supported parameters {#supported-parameters}
 
 ```json

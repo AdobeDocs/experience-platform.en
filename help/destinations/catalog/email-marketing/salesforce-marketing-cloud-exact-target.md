@@ -35,7 +35,7 @@ Before activating data to the [!DNL (API) Salesforce Marketing Cloud] destinatio
 
 ### Prerequisites in [!DNL (API) Salesforce Marketing Cloud] {#prerequisites-destination}
 
-Note the following prerequisites in order to export data from Experience Platform to your [!DNL Salesforce Marketing Cloud] account:
+Note the following prerequisites to export data from Experience Platform to your [!DNL Salesforce Marketing Cloud] account:
 
 #### You need to have a [!DNL Salesforce Marketing Cloud] account {#prerequisites-account}
 
@@ -125,6 +125,8 @@ Note down the items below before you authenticate to the [!DNL (API) Salesforce 
 |---|---|---|
 | contactKey |[!DNL Salesforce Marketing Cloud] Contact Key. Refer to the [!DNL Salesforce Marketing Cloud] [documentation](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&type=5) if you need additional guidance.|Mandatory|
 
+{style="table-layout:auto"}
+
 ## Supported audiences {#supported-audiences}
 
 This section describes which types of audiences you can export to this destination.
@@ -181,6 +183,8 @@ To authenticate to the destination, fill in the required fields below and select
 | **[!UICONTROL Client ID]** | Your [!DNL Salesforce Marketing Cloud] `Client ID`. |
 | **[!UICONTROL Client Secret]** | Your [!DNL Salesforce Marketing Cloud] `Client Secret`. |
 
+{style="table-layout:auto"}
+
 ![Experience Platform UI screenshot showing how to authenticate to Salesforce Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png)
 
 If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark, you can then proceed to the next step.
@@ -202,7 +206,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 > * To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 > * To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -263,6 +267,8 @@ A typical example based on the image shown above could be.
 | --- | --- | --- |
 | salesforce mc audience 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
 | salesforce mc audience 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
+
+{style="table-layout:auto"}
 
 ## Validate data export {#exported-data}
 

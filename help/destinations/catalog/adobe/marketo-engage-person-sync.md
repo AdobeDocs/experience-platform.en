@@ -26,7 +26,7 @@ exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
 Use the Marketo Engage Person Sync connector to stream updates from person audiences to the corresponding records in your Marketo Engage instance.
 
 >[!IMPORTANT]
-> 
+>
 >The [Marketo V2 Audience Sync Connector](/help/destinations/catalog/adobe/marketo-engage.md) should not be used in Create mode in conjunction with the Profile Update Sync Connector 
 
 ## Supported Identities and Attributes {#support-identities-and-attributes}
@@ -99,7 +99,7 @@ If your company has access to multiple organizations, make sure that you use the
 Once you have selected your instance, you will also need to select the Lead Partition which you want the configuration to integrate with. A [Lead Partition](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) is a concept in Marketo Engage used to separate lead records by business concern, such as a brand or a sales region. If your Marketo subscription does not have the Workspaces and Partitions feature, or if no additional partitions have been created in your subscription, then only the Default partition will be available. A single configuration can only update lead records which exist in its configured partition.
 
 >[!IMPORTANT]
-> 
+>
 >After an audience has been activated to the Marketo destination for the first time, backfilling profiles that already existed in the audience prior to Marketo destination activation can take *up to 24 hours*. Going forward, any time profiles are added to the audience, they'll be added to Marketo immediately.
 
 ### Deduplication Fields {#deduplication-fields}
@@ -117,10 +117,10 @@ If no matching lead record is found, a new record will be created.
 ## Activate Audiences {#activate-audiences}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate audiences to streaming destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 In the Activate Audiences step, you will be able to select from any person audiences which are visible to you.
 

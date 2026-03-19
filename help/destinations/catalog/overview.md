@@ -17,7 +17,7 @@ Browse the catalog to determine which destination platforms are best for your ad
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-## Destination categories
+## Destination categories {#destination-categories}
 
 You can activate your data to different destination categories in Adobe Experience Platform. The links below provide more information on each destination category:
 
