@@ -8,7 +8,7 @@ description: Learn how to activate audiences from Adobe Experience Platform to F
 
 [!DNL FreeWheel] is a global advertising technology platform that powers programmatic buying and selling across connected TV (CTV), video, and display inventory. [!DNL FreeWheel] provides a data-driven marketplace that connects advertisers with premium media owners worldwide.
 
-Use this destination to send audiences from Adobe Experience Platform to [!DNL FreeWheel]. Audiences are delivered as daily batch files via Amazon S3 and are made available for targeting in [!DNL FreeWheel] deals and campaigns.
+Use this destination to send audiences from Adobe Experience Platform to [!DNL FreeWheel]. Audiences are delivered as daily batch files via [!DNL Amazon S3] and are made available for targeting in [!DNL FreeWheel] deals and campaigns.
 
 ## Prerequisites {#prerequisites}
 
@@ -23,7 +23,7 @@ Before you can activate audiences to [!DNL FreeWheel], review the following requ
 | Target identity | Description | Considerations |
 |---|---|---|
 | `idfa` | Apple ID for Advertisers | Select this target identity when your source identity is an IDFA namespace. |
-| `aaid` | Google Advertising ID (Android) | Select this target identity when your source identity is a GAID namespace. |
+| `aaid` | Android Advertising ID | Select this target identity when your source identity is a GAID namespace. |
 | `ctv` | Connected TV device ID | Select this target identity when targeting CTV devices. |
 | `ip` | IPv4 address | Select this target identity to target users based on their IP address. Map a profile attribute containing a valid IPv4 address, or use a calculated field to derive the value. |
 | `ipv6` | IPv6 address | Select this target identity to target users based on their IPv6 address. Map a profile attribute containing a valid IPv6 address, or use a calculated field to derive the value. |
@@ -59,7 +59,7 @@ Refer to the table below for information about the destination export type and f
 | Item | Type | Notes |
 |---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all members of an audience, together with the desired identity fields as chosen in the mapping step of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Export frequency | **[!UICONTROL Batch]** | The first export is a full snapshot of all profiles qualified for the activated audiences. Subsequent exports are daily incremental updates that include new audience qualifications (adds) and audience exits (removes). A configurable full audience refresh interval (4, 8, or 12 weeks) is also available, triggering periodic full exports in addition to the daily incrementals. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based). |
+| Export frequency | **[!UICONTROL Batch]** | The first export is a full snapshot of all profiles qualified for the activated audiences. Subsequent exports are daily incremental updates that include new audience qualifications (adds) and audience exits (removes). A configurable full audience refresh interval (4, 8, or 12 weeks) is also available, triggering periodic full exports in addition to the daily incrementals. Full exports contain only currently qualified profiles. Audience exits are not included and are delivered exclusively through the daily incremental updates. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -75,7 +75,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 Authentication to the [!DNL FreeWheel] destination is handled automatically by Adobe. No credentials or API keys are required from you during authentication. Adobe manages the secure connection to [!DNL FreeWheel]'s ingestion bucket on your behalf.
 
-![Screenshot of the authentication step for the FreeWheel destination.](../../assets/catalog/advertising/freewheel/connect-destination.png)
+![Screenshot of the authentication step for the FreeWheel destination.](../../assets/catalog/advertising/freewheel/connect-destination.png){width="800" zoomable="yes"}
 
 Select **[!UICONTROL Connect to destination]** to proceed to the destination details step.
 
@@ -88,7 +88,7 @@ Select **[!UICONTROL Connect to destination]** to proceed to the destination det
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Sample screenshot showing how to fill in details for the FreeWheel destination.](../../assets/catalog/advertising/freewheel/destination-details.png)
+![Sample screenshot showing how to fill in details for the FreeWheel destination.](../../assets/catalog/advertising/freewheel/destination-details.png){width="800" zoomable="yes"}
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -101,7 +101,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 ### Enable alerts {#enable-alerts}
 
-You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, read the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
@@ -116,7 +116,7 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 ### Schedule audience exports {#schedule}
 
-![Screenshot of the Scheduling step in the FreeWheel activation workflow.](../../assets/catalog/advertising/freewheel/scheduling.png)
+![Screenshot of the Scheduling step in the FreeWheel activation workflow.](../../assets/catalog/advertising/freewheel/scheduling.png){width="800" zoomable="yes"}
 
 In the **[!UICONTROL Scheduling]** step, configure the export schedule for each audience. [!DNL FreeWheel] uses a hybrid export model: the first export for each activated audience is a full snapshot, followed by daily incremental updates.
 
@@ -126,6 +126,10 @@ Configure the following fields:
 * **[!UICONTROL Frequency]**: Set to **[!UICONTROL Daily]**. [!DNL FreeWheel] expects daily incremental file delivery.
 * **[!UICONTROL Scheduled start time]**: Enter the time in UTC at which the daily export should run. Exported files are delivered to [!DNL FreeWheel]'s ingestion bucket at the configured time.
 * **[!UICONTROL Date]**: Set the start and end date for the activation. The start date determines when the first full snapshot export is sent.
+
+>[!NOTE]
+>
+>Full exports (both the initial snapshot and periodic full refreshes) contain only currently qualified profiles. Audience exits are not included in full exports and are delivered exclusively through the daily incremental updates.
 
 ### Map attributes and identities {#map}
 
@@ -137,7 +141,7 @@ In the mapping step, select the source fields from your Experience Platform prof
 
 If your [!DNL FreeWheel] account supports identity types that are not listed in the [supported identities](#supported-identities) table, you can map to them by manually entering the identity name in the target field instead of selecting from the predefined list.
 
-![Screenshot showing a custom identity name typed directly into the target field in the mapping step.](../../assets/catalog/advertising/freewheel/custom-identity.png)
+![Screenshot showing a custom identity name typed directly into the target field in the mapping step.](../../assets/catalog/advertising/freewheel/custom-identity.png){width="800" zoomable="yes"}
 
 The following are example mappings. Your actual mappings will depend on your profile schema and the identity types your [!DNL FreeWheel] account supports.
 
@@ -157,7 +161,7 @@ The following are example mappings. Your actual mappings will depend on your pro
 
 [!DNL FreeWheel] receives two types of files per export:
 
-**Identity (data) files** contain the audience membership data. Each row maps a user identifier to one or more audience IDs. The files are delivered to [!DNL FreeWheel]'s Amazon S3 ingestion bucket in CSV format without column headers. Separate files are produced for each identity type present in the export (for example, one file for `aaid` and a separate file for `idfa`).
+**Identity (data) files** contain the audience membership data. Each row maps a user identifier to one or more audience IDs. The files are delivered to [!DNL FreeWheel]'s [!DNL Amazon S3] ingestion bucket in CSV format without column headers. Separate files are produced for each identity type present in the export (for example, one file for `aaid` and a separate file for `idfa`).
 
 Example data file format:
 
@@ -180,7 +184,7 @@ segment_3,my_third_segment,30
 
 ## Data usage and governance {#data-usage-governance}
 
-All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
+All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [Data Governance overview](/help/data-governance/home.md).
 
 ## Additional resources {#additional-resources}
 
