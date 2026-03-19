@@ -2,14 +2,14 @@
 title: Acxiom Data Enhancement
 description: Use this connector to activate first-party Adobe profiles in Real-Time CDP to Acxiom for data enrichment and use across marketing channels. You can then use the Acxiom source to import the profiles with enhanced data and work with them in Real-Time CDP.
 last-substantial-update: 2024-03-14
-badge: Beta
+badge: label="Beta" type="Informative"
 exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
 ---
 # [!DNL Acxiom Data Enhancement] destination connection
 
 >[!NOTE]
 >
->The [!DNL Acxiom Data Enhancement] destination is in beta.  This destination connector and documentation page are created and maintained by the Acxiom team. For any inquiries or update requests, please contact them directly at acxiom-adobe-help@acxiom.com.
+>The [!DNL Acxiom Data Enhancement] destination is in beta.  This destination connector and documentation page are created and maintained by the Acxiom team. For any inquiries or update requests, contact them directly at acxiom-adobe-help@acxiom.com.
 
 ## Overview {#overview}
 
@@ -93,7 +93,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-In order to access your bucket on Experience Platform, you need to provide valid values for the following credentials:
+To access your bucket on Experience Platform, you need to provide valid values for the following credentials:
 
 | Credential    | Description                                                                                              |
 |---------------|----------------------------------------------------------------------------------------------------------|
@@ -101,13 +101,13 @@ In order to access your bucket on Experience Platform, you need to provide valid
 | S3 Secret key | The secret key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team.              |
 | Bucket name   | This is your bucket where files will be shared. You can retrieve this value from the [!DNL Acxiom] team. |
 
-### New Account
+### New Account {#new-account}
 
 To define a new Acxiom Managed S3 location: 
 
 ![New Account](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
 
-### Existing Account
+### Existing Account {#existing-account}
 
 Accounts already defined using the [!DNL Acxiom Data Enhancement] destination appear in a list pop-up. When selected, you can see details on the account in the right rail. View the example from the UI, when you navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**;
 
@@ -146,7 +146,7 @@ When you are finished providing details for your destination connection, select 
 
 Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
-### Mapping suggestions
+### Mapping suggestions {#mapping-suggestions}
 
 The correct processing of files on the Acxiom side requires name and address elements. While not all elements are required, providing as much as possible will aid in successful matching.
 
@@ -171,7 +171,7 @@ Mapping suggestions are provided in the table below listing attributes on your d
 
 To verify if data has been exported successfully, check your [!DNL Amazon S3 Storage] bucket and make sure that the exported files contain the expected profile populations.
 
-## Next steps
+## Next steps {#next-steps}
 
 By following this tutorial, you have successfully created a dataflow to export profile data from Experience Platform to your [!DNL Acxiom] managed S3 location. Next, you need to contact your Acxiom representative with the name of the account, file names, and the bucket path so that processing can set up.
 
