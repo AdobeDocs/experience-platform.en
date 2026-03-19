@@ -35,8 +35,18 @@ To authenticate using a combination of OAuth 2.0 and basic authentication, provi
 | `project` |  The project is the base-level organizing entity for your [!DNL Google Cloud] resources, including [!DNL Google BigQuery]. |
 | `clientID` | The client ID is one half of your [!DNL Google BigQuery] OAuth 2.0 credentials. |
 | `clientSecret` | The client secret is the other half of your [!DNL Google BigQuery] OAuth 2.0 credentials. |
-| `refreshToken` | The refresh token allows you to obtain new access tokens for your API. Access tokens have limited lifetimes and can expire during the course of your project. You can use the refresh token to authenticate and request subsequent access tokens for your project when needed. |
-| `largeResultsDataSetId` | (Optional) The pre-created  [!DNL Google BigQuery] dataset ID that is required in order to enable support for large result sets.|
+| `refreshToken` | The refresh token allows you to obtain new access tokens for your API. Access tokens have limited lifetimes and can expire during the course of your project. You can use the refresh token to authenticate and request subsequent access tokens for your project when needed. Ensure that your refresh token include the following [!DNL Google] OAuth scopes: <ul><li>`https://www.googleapis.com/auth/bigquery`</li><li>`https://www.googleapis.com/auth/cloud-platform`</li></ul> These scopes allow Experience Platform to submit BigQuery jobs and read data from your configured project. |
+| `largeResultsDataSetId` | (Optional) The pre-created  [!DNL Google BigQuery] dataset ID that is required in order to enable support for large result sets.<ul><li>The `largeResultsDataSetId` must refer to a pre‑created BigQuery dataset used to store temporary tables for large result sets.</li><li>The value must contain only the dataset ID (for example, `marketing_temp_results`), not the project‑qualified name (do not use `my-project.marketing_temp_results`).</li><li>The location (region) of the dataset specified in `largeResultsDataSetId` must match the location of the tables being queried.</li><li>The account used by the connector must have permissions to read and write temporary results in this dataset. At minimum, assign the BigQuery Data Editor role on the dataset specified in `largeResultsDataSetId`.</li></ul> |
+
+#### Required IAM roles for the [!DNL Google] identity
+
+The [!DNL Google] identity used to generate the OAuth credentials (client ID, client secret, and refreshToken) must have the following IAM roles in the target [!DNL Google Cloud] project:
+
+- [!DNL BigQuery Job User]
+- [!DNL BigQuery Data Viewer]
+- [!DNL BigQuery Read Session User]
+
+These roles ensure that Experience Platform can create and run [!DNL BigQuery] jobs, read data from the configured tables, and use read sessions as required by the connector. Make sure these roles are granted in the same project that contains the [!DNL BigQuery] datasets you plan to use with the source.
 
 For detailed instructions on how to generate OAuth 2.0 credentials for [!DNL Google] APIs, see the following [[!DNL Google] OAuth 2.0 authentication guide](https://developers.google.com/identity/protocols/oauth2).
 
@@ -50,7 +60,7 @@ To authenticate using service authentication, provide the appropriate values for
 | --- | --- |
 | `projectId` | The ID of the [!DNL Google BigQuery] that you want to query against. |
 | `keyFileContent` | The key file that is used to authenticate the service account. You can retrieve this value from the [[!DNL Google Cloud service accounts] dashboard](https://console.cloud.google.com). The key file content is in JSON format. You must encode this in [!DNL Base64] when authenticating to Experience Platform. |
-| `largeResultsDataSetId` | (Optional) The pre-created  [!DNL Google BigQuery] dataset ID that is required in order to enable support for large result sets. |
+| `largeResultsDataSetId` | (Optional) The pre-created  [!DNL Google BigQuery] dataset ID that is required in order to enable support for large result sets.<ul><li>The `largeResultsDataSetId` must refer to a pre‑created BigQuery dataset used to store temporary tables for large result sets.</li><li>The value must contain only the dataset ID (for example, `marketing_temp_results`), not the project‑qualified name (do not use `my-project.marketing_temp_results`).</li><li>The location (region) of the dataset specified in `largeResultsDataSetId` must match the location of the tables being queried.</li><li>The account used by the connector must have permissions to read and write temporary results in this dataset. At minimum, assign the BigQuery Data Editor role on the dataset specified in `largeResultsDataSetId`.</li></ul> |
 
 For more information on using service accounts in [!DNL Google BigQuery], read the guide on [using service accounts in [!DNL Google BigQuery]](https://cloud.google.com/bigquery/docs/use-service-accounts).
 
