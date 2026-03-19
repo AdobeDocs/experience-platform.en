@@ -233,6 +233,6 @@ Note that the content of the `results.httpCalls` parameter is specific to your R
 
 For descriptions of the request and response parameters, refer to [Destination testing API operations](../../testing-api/streaming-destinations/destination-testing-api.md).
 
-## Next steps
+## Next steps {#next-steps}
 
 After testing your destination and confirming that it is configured correctly, use the [destination publishing API](../../publishing-api/create-publishing-request.md) to submit your configuration to Adobe for review.

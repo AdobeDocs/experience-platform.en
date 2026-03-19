@@ -13,7 +13,7 @@ exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 >* If you source data in the EU, use the **[!DNL The Trade Desk - CRM (EU)]** destination. 
 >* If you source data in the APAC or NAMER regions, use the **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destination. 
 >
->This destination connector and documentation page are created and maintained by the *[!DNL Trade Desk]* team. For any inquiries or update requests, please contact your [!DNL Trade Desk] representative. 
+>This destination connector and documentation page are created and maintained by the *[!DNL Trade Desk]* team. For any inquiries or update requests, contact your [!DNL Trade Desk] representative. 
 
 ## Overview {#overview}
 
@@ -173,7 +173,7 @@ When connecting to the destination, setting a data governance policy is complete
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -183,7 +183,7 @@ In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the 
 
 ![Experience Platform UI screenshot to schedule audience activation.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
->[!NOTE] 
+>[!NOTE]
 >
 >All audiences activated to [!DNL The Trade Desk] CRM Destination are automatically set to a daily frequency and full file export.
 
@@ -215,13 +215,14 @@ Selecting source and target fields:
 |netID|net_id|
 |FirstID|first_id|
 
+{style="table-layout:auto"}
 
 ## Validate Data Export {#validate}
 
 To validate that data is correctly exported out of Experience Platform and into [!DNL The Trade Desk], please find the audiences under the Adobe 1PD tab within [!DNL The Trade Desk] "Advertiser Data and identity" library. Here are the steps to finding the corresponding ID within the [!DNL Trade Desk] UI: 
 
 1. First, select the **[!UICONTROL Libraries]** tab, and review the **[!UICONTROL Advertiser data and identity]** section.
-2. Click on the **[!UICONTROL Adobe 1PD]**, and it will list out all audiences activated to [!DNL The Trade Desk]. 
+2. Select the **[!UICONTROL Adobe 1PD]**, and it will list out all audiences activated to [!DNL The Trade Desk].
 3. The Segment Name or Segment ID from Experience Platform will appear as the Segment Name in the [!DNL Trade Desk] UI. 
 
 ## Data usage and governance {#data-usage-governance}
