@@ -16,7 +16,7 @@ To learn more about [!DNL Airship], see the [Airship Docs](https://docs.airship.
 
 >[!TIP]
 >
->This destination connector and documentation page are created and maintained by the [!DNL Airship] team. For any inquiries or update requests, please contact them directly at [support.airship.com](https://support.airship.com/).
+>This destination connector and documentation page are created and maintained by the [!DNL Airship] team. For any inquiries or update requests, contact them directly at [support.airship.com](https://support.airship.com/).
 
 ## Prerequisites {#prerequisites}
 
@@ -77,7 +77,7 @@ Go to **[!UICONTROL Settings]** » **[!UICONTROL APIs & Integrations]** in the [
 
 Click **[!UICONTROL Create Token]**.
 
-Provide a user-friendly name for your token, e.g., "Adobe Attributes Destination", and select "All Access" for the role.
+Provide a user-friendly name for your token, for example "Adobe Attributes Destination", and select "All Access" for the role.
 
 Click **[!UICONTROL Create Token]** and save the details as confidential.
 
@@ -85,18 +85,18 @@ Click **[!UICONTROL Create Token]** and save the details as confidential.
 
 To help you better understand how and when you should use the [!DNL Airship Attributes] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Use case #1
+### Use case #1 {#use-case-1}
 
 Leverage profile data collected within Adobe Experience Platform for personalization of the message and rich content within any of [!DNL Airship]'s channels. For example, leverage [!DNL Experience Platform] profile data to set location attributes within [!DNL Airship]. This will enable a hotel brand to display an image for the nearest hotel location for each user.
 
-### Use case #2
+### Use case #2 {#use-case-2}
 
 Leverage Attributes from Adobe Experience Platform to further enrich [!DNL Airship] profiles and combine it with SDK or [!DNL Airship] predictive data. For example, a retailer can create an audience with loyalty status and location data (attributes from Experience Platform) and [!DNL Airship] predicted to churn data to send highly targeted messages to users in the gold loyalty status who live in Las Vegas, NV, and have a high probability of churning.
 
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -124,7 +124,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -132,18 +132,18 @@ See [Activate audience data to streaming audience export destinations](../../ui/
 
 ## Mapping considerations {#mapping-considerations}
 
-[!DNL Airship] attributes can be set either on a channel, which represents device instance, e.g., iPhone, or a named user, which maps all of a user's devices to a common identifier such as a customer ID. If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the [!DNL Airship] named user in the right column under **[!UICONTROL Target Identities]**, as shown below.
+[!DNL Airship] attributes can be set either on a channel, which represents device instance, for example iPhone, or a named user, which maps all of a user's devices to a common identifier such as a customer ID. If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the [!DNL Airship] named user in the right column under **[!UICONTROL Target Identities]**, as shown below.
 
 ![Named User Mapping](../../assets/catalog/mobile-engagement/airship/mapping.png)
 
-For identifiers that should be mapped to a channel, i.e., a device, map to the appropriate channel based on the source. The following images show how two mappings are created:
+For identifiers that should be mapped to a channel, that is, a device, map to the appropriate channel based on the source. The following images show how two mappings are created:
 
 * IDFA iOS Advertising ID to an [!DNL Airship] iOS channel
 * Adobe `fullName` attribute to [!DNL Airship] "Full Name" attribute
 
 >[!NOTE]
 >
->Use the user-friendly name that appears in the [!DNL Airship] dashboard when selecting the target field for your attribute mapping.
+>Use the `attribute_id` that corresponds with the attribute in the [!DNL Airship] dashboard when selecting the target field for your attribute mapping.
    
 **Map identity**
 

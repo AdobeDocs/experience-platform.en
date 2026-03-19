@@ -1,18 +1,18 @@
 ---
-title: AI Assistant in Adobe Experience Platform Product Documentation
-description: Get started with AI Assistant in Adobe Experience Platform.
+title: AI Assistant (Legacy) in Adobe Experience Platform Product Documentation
+description: Get started with AI Assistant (Legacy) in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
 ---
-# AI Assistant in Adobe Experience Platform product documentation
+# AI Assistant (Legacy) in Adobe Experience Platform product documentation 
 
-AI Assistant in Adobe Experience Platform is a conversational tool that you can use to accelerate your workflows with Experience Platform applications and services. Use AI Assistant to boost your overall productivity, amplify your understanding of product knowledge and operational insights, as well as gather recommendations relevant to your queries and business use cases.
+AI Assistant (Legacy) in Adobe Experience Platform is a conversational tool that you can use to accelerate your workflows with Experience Platform applications and services. Use AI Assistant (Legacy) to boost your overall productivity, amplify your understanding of product knowledge and operational insights, as well as gather recommendations relevant to your queries and business use cases.
 
-AI Assistant supports Experience Platform, Real-Time CDP, Adobe Journey Optimizer and Customer Journey Analytics.
+AI Assistant (Legacy) supports Experience Platform, Real-Time CDP, Adobe Journey Optimizer and Customer Journey Analytics.
 
 ## Get started
 
-Get started by reading the material in the links below to familiarize yourself with the concepts and capabilities of AI Assistant.
+Get started by reading the material in the links below to familiarize yourself with the concepts and capabilities of AI Assistant (Legacy).
 
 <table style="table-layout:fixed">
   <tr style="border: 0;">
@@ -36,20 +36,20 @@ Get started by reading the material in the links below to familiarize yourself w
     </tr>
 </table>
 
-### Hands-on guide to boost your productivity with AI Assistant
+### Hands-on guide to boost your productivity with AI Assistant (Legacy)
 
 >[!NOTE]
 >
 >This workbook was last updated on March 31, 2025. Since then, some capabilities may have evolved or expanded. Additionally, a few features referenced in this guide may still be in early access. If you encounter something that is not yet available in your environment and you are interested in exploring it, please reach out to your Adobe Account Team to request early access.
 
-Read the following for a hands-on guide on how to boost your productivity with AI Assistant.
+Read the following for a hands-on guide on how to boost your productivity with AI Assistant (Legacy).
 
 * [Supercharge your productivity with AI Assistant](./assets/landing/ai-assistant-lab-workbook.pdf)
 
 
 ## New features
 
-Get a glimpse of the newest enhancements in AI Assistant, including capabilities currently in the Alpha or Beta stages.
+Get a glimpse of the newest enhancements in AI Assistant (Legacy), including capabilities currently in the Alpha or Beta stages.
 
 >[!BEGINTABS]
 
@@ -57,7 +57,7 @@ Get a glimpse of the newest enhancements in AI Assistant, including capabilities
 
 ### Monitor significant changes and forecast audiences
 
-You can use AI Assistant to monitor significant changes and provide growth forecasts for your audience and dataset sizes. You can then use this information to ensure the integrity of your audience data and offer forward-looking projections to support data-informed decision-making.
+You can use AI Assistant (Legacy) to monitor significant changes and provide growth forecasts for your audience and dataset sizes. You can then use this information to ensure the integrity of your audience data and offer forward-looking projections to support data-informed decision-making.
 
 [![image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/audience-forecasting.md)
 
@@ -65,7 +65,7 @@ You can use AI Assistant to monitor significant changes and provide growth forec
 
 ### Estimate audience size and propensity
 
-You can use AI Assistant's natural language estimation capabilities to estimate audience sizes and predict audience propensities, giving you easier access to insights on your audiences.
+You can use AI Assistant (Legacy)'s natural language estimation capabilities to estimate audience sizes and predict audience propensities, giving you easier access to insights on your audiences.
 
 [![image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/natural-language.md)
 
@@ -73,7 +73,7 @@ You can use AI Assistant's natural language estimation capabilities to estimate 
 
 ### Discover XDM fields for audience creation
 
-You can use AI Assistant to help your discover of Experience Data Model (XDM) fields that you can then use to create target audiences within Experience Platform.
+You can use AI Assistant (Legacy) to help your discover of Experience Data Model (XDM) fields that you can then use to create target audiences within Experience Platform.
 
 [![image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/xdm-field-discovery.md)
 
@@ -81,7 +81,7 @@ You can use AI Assistant to help your discover of Experience Data Model (XDM) fi
 
 ### Product Support Agent
 
-You can use Product Support Agent in AI Assistant to seamlessly troubleshoot without leaving your workflows. When needed, support administrators can now use Product Support Agent to create customer support tickets, complete with context and session details from your interactions with AI Assistant.
+You can use Product Support Agent in AI Assistant (Legacy) to seamlessly troubleshoot without leaving your workflows. When needed, support administrators can now use Product Support Agent to create customer support tickets, complete with context and session details from your interactions with AI Assistant (Legacy).
 
 [![image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
 
@@ -427,7 +427,7 @@ Watch the following videos to learn about AI Assistant use cases.
 
 >[!TAB Blog content]
 
-Read the following for AI Assistant use case examples:
+Read the following for AI Assistant (Legacy) use case examples:
 
 * [Reduce onboarding time for new members of your team](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
 * [De-clutter your audiences and optimize your marketing operations](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
@@ -437,7 +437,7 @@ Read the following for AI Assistant use case examples:
 
 >[!TAB Additional video content]
 
-Watch the following videos for additional AI Assistant use case examples:
+Watch the following videos for additional AI Assistant (Legacy) use case examples:
 
 * [Unlock the power of AI Assistant](https://www.youtube.com/watch?v=J48CNmcV7wc)
 * [Get to know AI Assistant for Audiences](https://www.youtube.com/live/DYsyii7ldck)
@@ -447,7 +447,7 @@ Watch the following videos for additional AI Assistant use case examples:
 
 ## Next steps
 
-Browse the links below to further your understanding of AI Assistant use cases, capabilities, and much more.
+Browse the links below to further your understanding of AI Assistant (Legacy) use cases, capabilities, and much more.
 
 <table style="table-layout:fixed"><tr style="border: 0;">
 <td><strong>Real-Time CDP</strong><br/>

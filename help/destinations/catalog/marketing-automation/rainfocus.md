@@ -8,11 +8,11 @@ exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
 
 ## Overview {#overview}
 
-Use the [!DNL RainFocus Attendee Profiles] destination to stream customer profiles from Adobe Experience Platform into the [!DNL RainFocus] platform in order to create and update attendee profiles.
+Use the [!DNL RainFocus Attendee Profiles] destination to stream customer profiles from Adobe Experience Platform into the [!DNL RainFocus] platform to create and update attendee profiles.
 
 >[!IMPORTANT]
 >
->The destination connector and documentation page are created and maintained by the [!DNL RainFocus] team. For any inquiries or update requests, please contact them directly at `clientcare@rainfocus.com` or visit the RainFocus [Help Center](https://help.rainfocus.com/hc/en-us).
+>The destination connector and documentation page are created and maintained by the [!DNL RainFocus] team. For any inquiries or update requests, contact them directly at `clientcare@rainfocus.com` or visit the RainFocus [Help Center](https://help.rainfocus.com/hc/en-us).
 
 ## Use cases {#use-cases}
 
@@ -20,7 +20,7 @@ To help you better understand how and when you should use the RainFocus destinat
 
 ### Use case #1 {#use-case-1}
 
-A large enterprise technology company is due to open registration for its upcoming global expo and would like to push customer profiles to [!DNL RainFocus] in order to streamline the registration process.
+A large enterprise technology company is due to open registration for its upcoming global expo and would like to push customer profiles to [!DNL RainFocus] to streamline the registration process.
 
 ### Use case #2 {#use-case-2}
 
@@ -85,7 +85,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -117,13 +117,13 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate audiences to streaming destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ### Map attributes and identities {#map}
 

@@ -20,7 +20,7 @@ exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 
 >[!IMPORTANT]
 >
->This destination connector and documentation page are created and maintained by the *YourDestination* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates, for example `support@YourDestination.com`.*
+>This destination connector and documentation page are created and maintained by the *YourDestination* team. For any inquiries or update requests, contact them directly at *Insert link or email address where you can be reached for updates, for example `support@YourDestination.com`.*
 
 ## Use cases {#use-cases}
 
@@ -42,7 +42,7 @@ To help you better understand how and when you should use the *YourDestination* 
 
 *Add information in this section about anything that customers need to be aware of before starting to set up the destination in the Adobe Experience Platform user interface. This can be about:*
 
-* *needing to be added to an allow list*
+* *needing to be added to an allowlist*
 * *requirements for email hashing*
 * *any account specifics on your side*
 * *how to obtain an API key to connect to your platform*
@@ -109,7 +109,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -145,7 +145,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 

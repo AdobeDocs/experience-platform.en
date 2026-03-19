@@ -1,6 +1,6 @@
 ---
 title: Profile export behavior
-description: Learn how profile export behavior varies between the different integration patters supported in Experience Platform destinations.
+description: Learn how profile export behavior varies between the different integration patterns supported in Experience Platform destinations.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
 ---
 # Profile export behavior for different destination types
@@ -18,7 +18,7 @@ There are several destination types in Experience Platform, as shown in the diag
 
 ![Types of destinations diagram](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
-## Message aggregation in streaming destinations
+## Message aggregation in streaming destinations {#message-aggregation}
 
 Before diving into specific information per destination type, it is important to understand the concept of message aggregation for *streaming destinations*.
 
@@ -53,7 +53,9 @@ Experience Platform optimizes the profile export behavior to your enterprise des
 
 In all the cases described above, only the profiles where relevant updates have occurred are exported to your destination. For example, if an audience mapped to the destination flow has a hundred members, and five new profiles qualify for the segment, the export to your destination is incremental and only includes the five new profiles.
 
-Note that all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
+>[!NOTE]
+>
+>All the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
 
 ### What determines a data export and what is included in the export {#enterprise-behavior}
 
@@ -100,7 +102,9 @@ Experience Platform optimizes the profile export behavior to your streaming dest
 
 In all the cases described above, only the profiles where relevant updates have occurred are exported to your destination. For example, if an audience mapped to the destination flow has a hundred members, and five new profiles qualify for the segment, the export to your destination is incremental and only includes the five new profiles.
 
-Note that all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
+>[!NOTE]
+>
+>All the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
 
 ### What determines a data export and what is included in the export {#streaming-behavior}
 
@@ -165,7 +169,7 @@ For example, in the export setting illustrated below, where an audience is expor
 
 >[!ENDSHADEBOX]
 
-### What determines a data export and what is included in the export
+### What determines a data export and what is included in the export {#file-based-export-details}
 
 Based on the information in the section above, the profile export behavior to file-based destinations can be summarized as described below:
 

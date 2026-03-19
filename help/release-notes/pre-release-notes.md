@@ -19,17 +19,32 @@ exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 >- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**Release date: February 2026**
+**Release date: March 2026**
 
 New features and updates to existing features in Adobe Experience Platform:
 
+- [Advanced data lifecycle management](#advanced-data-lifecycle-management)
 - [Agent Orchestrator](#agent-orchestrator)
-- [Alerts](#alerts)
-- [Data collection](#data-collection)
 - [Destinations](#destinations)
-- [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
+- [Real-Time Customer Profile](#profile)
+- [Run and Operate](#run-and-operate)
+- [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
+  
+## Advanced data lifecycle management {#advanced-data-lifecycle-management}
+
+Experience Platform provides a suite of data hygiene capabilities that allow you to manage your stored data through programmatic deletions of consumer records and datasets. Using either the Data Lifecycle workspace in the UI or through calls to the Data Hygiene API, you can effectively manage your data stores. Use these capabilities to ensure that information is used as expected, is updated when incorrect data needs fixing, and is deleted when organizational policies deem it necessary.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Multi-Dataset and Profile-Only Record Delete (API only) | You can submit a single dataset ID, a comma-separated list of dataset IDs, or the literal `ALL` in `datasetId` to delete identities across one, many, or all datasets. You can also limit deletion to profile services by setting `targetServices` to `["identity","profile","ajo"]`, which leaves the datalake unchanged. See the [Record Delete Work Orders guide](../hygiene/api/workorder.md) for more details. |
+
+{style="table-layout:auto"}
+
+For more information, read the [advanced data lifecycle management overview](../hygiene/home.md).
 
 ## Agent Orchestrator {#agent-orchestrator}
 
@@ -39,41 +54,11 @@ Agent Orchestrator enables you to build and deploy AI-powered agents that can au
 
 | Feature | Description |
 | --- | --- |
-| Data Onboarding Agent | Use the Data Onboarding Agent to configure source connections, validate data quality, apply semantic enrichment, review and validate schemas, and run data ingestion. Follow step-by-step workflows for both B2C and B2B flows, review expected outputs, and troubleshoot common issues. |
-| Data Distiller Agent | Use the Data Distiller Agent to create SQL jobs from natural language, optimize SQL performance, recover from SQL errors, schedule and manage SQL jobs, and monitor job status. Review guardrails, required permissions, and troubleshooting guidance to get started. |
-| Data Collection Agent | Use the Data Collection Agent to get in-context guidance for complex data collection configurations and to explore lineage, dependencies, and relationships across your data collection objects through conversational insights. |
+| Adobe Marketing Agent for [!DNL Microsoft 365 Copilot] | The Adobe Marketing Agent for [!DNL Microsoft 365 Copilot] is your embedded agent that brings Adobe's marketing intelligence directly into everyday tools like [!DNL Teams], [!DNL Word], [!DNL PowerPoint] and other [!DNL Microsoft 365] apps. You can use this agent to pull in trusted campaign insights from Adobe applications while you're planning campaigns, reviewing audiences or collaborating with colleagues, answer customer questions, and make data-informed decisions without leaving your [!DNL Microsoft 365] workflow. |
 
 {style="table-layout:auto"}
 
 For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
-
-## Alerts {#alerts}
-
-Experience Platform allows you to subscribe to event-based alerts for various Experience Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Experience Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| [!DNL Slack] integration for customer-facing alerts | You can now deliver customer-facing alerts to [!DNL Slack]. Follow the step-by-step tutorial to set up the [!DNL Slack] integration and receive alert notifications directly in your [!DNL Slack] workspace. |
-
-{style="table-layout:auto"}
-
-For more information, read the [[!DNL Observability Insights] overview](../observability/home.md).
-
-## Data collection {#data-collection}
-
-Adobe Experience Platform Data Collection provides a set of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network and other destinations.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| Adobe Platform Tags Extension Management | Use the new Extension Management capability to upload, package, and release your organization's extensions to development, private, and public distribution. Find shared private extensions alongside your owned extensions in the top-level company view. This feature supports web, edge, and mobile extensions. |
-
-{style="table-layout:auto"}
-
-For more information, read the [Data Collection documentation](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Destinations {#destinations}
 
@@ -83,25 +68,43 @@ For more information, read the [Data Collection documentation](https://experienc
 
 | Destination | Description |
 | --- | --- |
-| [!DNL Snowflake] Batch generally available | The [!DNL Snowflake] Batch destination has moved to general availability. You can now view the merge policy ID column in your exported data alongside existing columns such as timestamp, mapping attributes, and audience membership. |
-| AES256 encryption support for [Amazon S3](../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destinations | You can now configure AES256 encryption for your Amazon S3 exports. Choose from two options: <ul><li>**[!UICONTROL Default]**: Experience Platform encrypts data at rest with the default encryption algorithm set on your bucket.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform adds the `s3:x-amz-server-side-encryption": "AES256` header to the export and encrypts data at rest with the AES256 algorithm when it lands in S3. **This option takes precedence over any default encryption algorithm you configure on your S3 bucket**.</li></ul> |
+| [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) multiregion support | The Snowflake Streaming connector is now available to customers beyond the US VA7 region. Use the region dropdown selector to select which Snowflake region your account is in. The documentation has been updated with the expected data structure for Snowflake streaming tables. |
+| [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) and [Snowflake Batch](../destinations/catalog/warehouses/snowflake-batch.md) region selector | You can now find your region more easily with the new searchable dropdown, which combines search and dropdown into one control. |
+| Export audience metadata to [Snowflake Batch](../destinations/catalog/warehouses/snowflake-batch.md) destinations | The files exported to this destination now include audience metadata. The new table structure applies to all new destination connections set up moving forward. The old table structure will be kept for another three months before being deprecated. |
+| [!DNL Adobe Advertising Cloud DSP] connection | The new Adobe Advertising DSP connection offers the same functionality as the legacy connection plus support for additional identities. |
+| External audience support for [The Trade Desk CRM](../destinations/catalog/advertising/tradedesk-emails.md), [Criteo](../destinations/catalog/advertising/criteo.md) and [Pinterest](../destinations/catalog/advertising/pinterest.md) | You can now activate audiences beyond Segmentation Service segments to The Trade Desk CRM, Criteo, and Pinterest, including custom upload audiences (imported from CSV), look-alike audiences, federated audiences, and audiences created in other Experience Platform apps such as Adobe Journey Optimizer. See the [supported audiences](../destinations/catalog/advertising/criteo.md#supported-audiences) section on each destination's catalog page for details. |
+| Audience filtering in activation workflow | You can now find and filter audiences in the **[!UICONTROL Select audiences]** step with the same experience as the Audiences page; for example, you can filter on audience origin to easily find the audience you are looking for. |
+| Increased custom upload audiences limit | You can now activate up to 20 custom upload audiences per destination instance. Previously, this limit was 10. |
+| [Export file now](../destinations/ui/export-file-now.md) and [ad-hoc activation API](../destinations/api/ad-hoc-activation-api.md) support for external audiences | You can now use Export file now (UI) and the ad-hoc activation API with external audiences (such as custom upload, look-alike, federated, and audiences from other Experience Platform apps) when activating to batch file-based destinations. |
+| HTTP API destinations with OAuth 2 and mTLS | You can now create and authenticate HTTP API destinations that use OAuth 2 when the authentication endpoint requires mutual TLS (mTLS); token retrieval during destination setup now supports mTLS. |
+| ZoomInfo Account Destination | You can now send account audiences to ZoomInfo from Real-Time Customer Data Platform (B2B). |
+
+{style="table-layout:auto"}
+
+**Fixes and improvements**
+
+| Fix | Description |
+| --- | --- |
+| [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) account ID validation | A regular expression validator has been added to the Account ID step. When you enter your ID, it is now validated to ensure organization ID and account ID are in the correct format (separated by a dot). |
+| [TikTok](../destinations/catalog/social/tiktok.md) connector phone number hashing | Fixed an issue where a misconfiguration in the destination card meant that identities keyed off of phone numbers were not being activated to TikTok. |
 
 {style="table-layout:auto"}
 
 For more information, read the [Destinations overview](../destinations/home.md).
 
-## Experience Data Model (XDM) {#xdm}
+## Real-Time Customer Profile {#profile}
 
-XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-Time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data.
 
 **New or updated features**
 
 | Feature | Description |
-| ------- | ----------- |
-| Schema Inventory Organization and Search | The schema browse page now includes enhanced search and filtering, inline actions, and support for user-defined tags and folders. These updates make it easier to find, organize, and manage schemas across sandboxes while reducing manual navigation and maintenance effort. |
-| Restricted Editing for Schemas with Datasets | Editing operations that result in breaking changes are now restricted once a dataset exists for a schema. When a dataset is associated, you can no longer rename or delete fields, change field data types or formats, modify identity descriptors, manage related fields to remove existing fields, or change the assigned class; additive changes and field deprecation remain supported. |
+| --- | --- |
+| Profile events time selector | You can now set a time window on the profile events tab to view and analyze events within that range. You can set the time window to up to 30 days. By default, it shows events in the last 48 hours. |
 
-For more information, read the [[!DNL XDM] overview](../xdm/home.md).
+{style="table-layout:auto"}
+
+For more information, read the [Real-Time Customer Profile overview](../profile/home.md).
 
 ## Query Service {#query-service}
 
@@ -111,12 +114,41 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 
 | Feature | Description |
 | --- | --- |
-| Data Distiller annual compute reset date alignment (Limited Release) | Data Distiller annual compute hours now reset on the anniversary date of your Data Distiller contract, based on when the license was purchased or renewed. This aligns License Usage reporting with your contract terms and may result in a one-time adjustment to current usage values. |
-| Data Distiller session management (Limited Release) | As an authorized admin, you can view and manage active Query Service and Data Distiller sessions within your organization and sandbox through the UI. Use session management to identify idle sessions and terminate them to free up capacity. Built-in safeguards prevent you from terminating sessions with active queries. The feature logs all eviction actions for auditing and notifies affected users. You need the **Manage Query Sessions** permission to access this feature. |
+| Data Distiller Accelerators | You can now pick an accelerator from the Accelerators tab, enter the required parameters, and run or schedule the generated SQL without writing it yourself; clone any accelerator into a custom template to edit. |
 
 {style="table-layout:auto"}
 
 For more information, read the [Query Service overview](../query-service/home.md).
+
+## Run and Operate {#run-and-operate}
+
+Inspect, troubleshoot, and optimize your Experience Platform implementations with the Run and Operate tools. Gain visibility into scheduled batch activations, identify configuration issues, and improve system reliability.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| [Job Schedules](../run-and-operate/job-schedules.md) general availability | [!DNL Job Schedules] provides a unified view of all scheduled batch processing jobs across your data pipeline, from ingestion through destination activation. Inspect execution status, identify scheduling conflicts, and diagnose configuration issues before they impact your business operations. |
+| Health Checks general availability | Poor schema and identity configurations lead to significant downstream issues, including incorrect profile creation, failed segment qualification, and inaccurate activation. <br>Health checks shift your approach from reactive troubleshooting to proactive, preventative maintenance. Health checks are always-on scans of your schemas and identities used in your sandbox and provide a summary of issues that you can use to explore and troubleshoot. |
+
+{style="table-layout:auto"}
+
+For more information, read the [Run and Operate overview](../run-and-operate/overview.md), [Inspect job schedules](../run-and-operate/job-schedules.md), and the [Platform UI guide](../landing/ui-guide.md).
+
+## Segmentation Service {#segmentation}
+
+Experience Platform allows you to create audience segments from your customer data, and allows for full lifecycle management of those audiences.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Ingestion source in Audience Builder | You can now see whether each attribute comes from a batch, streaming, or edge source within Audience Builder to avoid building invalid or inefficient streaming audiences. |
+| Show only fields with data in Account Audience Builder | You can now filter to show only attributes that contain data when creating account audiences. |
+
+{style="table-layout:auto"}
+
+For more information, read the [Audiences overview](../segmentation/home.md).
 
 ## Sources {#sources}
 
@@ -126,8 +158,22 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| Unity Catalog support in [!DNL Databricks] source connector | The [!DNL Databricks] source connector now supports Unity Catalog. Read the updated [[!DNL Databricks]](../sources/connectors/databases/databricks.md) documentation to learn how to use Unity Catalog when you configure your source connection. |
+| Enhanced support for Change Data Capture | You can now use Change Data Capture with the [!DNL Marketo Engage], [!DNL Microsoft Dynamics], and [!DNL Salesforce CRM] sources. |
 
 {style="table-layout:auto"}
 
 For more information, read the [sources overview](../sources/home.md).
+
+<!--
+
+| [!DNL Deltashare] | The new [!DNL Deltashare] source lets you securely bring live, shared datasets from your partners or internal lakehouse environments directly into Adobe's applications without copying or manually uploading files. You connect to a [!DNL Deltashare] endpoint, choose the tables you need, and you can then use that governed, up-to-date data alongside your existing profiles and insights, so you spend less time on data wrangling and more time activating and analyzing it in your marketing workflows. |
+| [!DNL Kobie] | The new [!DNL Kobie] source connector lets you directly ingest rich loyalty data from [!DNL Kobie] into Adobe's applications, so you can activate it alongside your existing customer profiles and insights. You connect your [!DNL Kobie] environment, configure the data objects you want to bring in (such as member status, transactions, and engagement), and then you can use that up-to-date loyalty information to build audiences, personalize experiences, and measure performance without juggling separate systems. |
+| [!DNL Talon.One] | The new Talon.One source lets you seamlessly bring promotion and incentive data from Talon.One into Adobe's applications, so you can use it alongside your existing customer profiles and behavioral data. You connect your Talon.One account, select the entities and events you want to ingest (such as campaigns, coupons, and redemptions), and then you can use that real-time promotion context to build smarter audiences, personalize offers, and better understand which incentives are driving performance—without managing separate, disconnected systems. |
+
+-->
+
+<!--
+
+| Data Engineering Agent | The following new and updated skills are available in the Data Engineering Agent:<br><br><ul><li><strong>Data onboarding:</strong> Follow step-by-step workflows and example prompts to connect sources, check data quality, enrich data semantically, and ingest data for B2C and B2B flows, with expected outputs and troubleshooting guidance in the docs.</li><li><strong>Data quality and validation:</strong> Validate data fields and datasets using two new skills (DataField and DataSet).</li><li><strong>Data collection:</strong> Get in-context guidance for complex Data Collection configurations and use conversational insights to explore lineage, dependencies, and relationships across your data collection objects.</li></ul> |
+
+-->
