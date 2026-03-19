@@ -8,7 +8,7 @@ description: Learn how to activate audiences from Adobe Experience Platform to F
 
 [!DNL FreeWheel] is a global advertising technology platform that powers programmatic buying and selling across connected TV (CTV), video, and display inventory. [!DNL FreeWheel] provides a data-driven marketplace that connects advertisers with premium media owners worldwide.
 
-Use this destination to send audiences from Adobe Experience Platform to [!DNL FreeWheel]. Audiences are delivered as daily batch files via [!DNL Amazon S3] and are made available for targeting in [!DNL FreeWheel] deals and campaigns.
+Use this destination to send audiences from Adobe Experience Platform to [!DNL FreeWheel]. Audiences are delivered as daily batch files and are made available for targeting in [!DNL FreeWheel] deals and campaigns.
 
 ## Prerequisites {#prerequisites}
 
@@ -18,7 +18,7 @@ Before you can activate audiences to [!DNL FreeWheel], review the following requ
 
 ## Supported identities {#supported-identities}
 
-[!DNL FreeWheel] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
+[!DNL FreeWheel] supports the activation of identities described in the table below. In addition to these identities, you can use any identity available in your [!DNL FreeWheel] account. See [Map attributes and identities](#map) for instructions on how to map an identity that is not in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 | Target identity | Description | Considerations |
 |---|---|---|
@@ -75,7 +75,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 Authentication to the [!DNL FreeWheel] destination is handled automatically by Adobe. No credentials or API keys are required from you during authentication. Adobe manages the secure connection to [!DNL FreeWheel]'s ingestion bucket on your behalf.
 
-![Screenshot of the authentication step for the FreeWheel destination.](../../assets/catalog/advertising/freewheel/connect-destination.png){width="800" zoomable="yes"}
+![Screenshot of the authentication step for the FreeWheel destination.](../../assets/catalog/advertising/freewheel/connect-destination.png)
 
 Select **[!UICONTROL Connect to destination]** to proceed to the destination details step.
 
@@ -84,11 +84,11 @@ Select **[!UICONTROL Connect to destination]** to proceed to the destination det
 >[!CONTEXTUALHELP]
 >id="platform_destinations_freewheel_backfill"
 >title="Full audience refresh interval"
->abstract="Select the interval at which a full audience export is sent to [!DNL FreeWheel] in addition to daily incremental updates. Available options are 4 weeks, 8 weeks, and 12 weeks."
+>abstract="Select the interval at which a full audience export is sent to [!DNL FreeWheel] in addition to daily incremental updates. A full audience export keeps your audience members from expiring in [!DNL FreeWheel], so you don't experience drops in targeted members while your campaigns are running. Available options are 4 weeks, 8 weeks, and 12 weeks."
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Sample screenshot showing how to fill in details for the FreeWheel destination.](../../assets/catalog/advertising/freewheel/destination-details.png){width="800" zoomable="yes"}
+![Sample screenshot showing how to fill in details for the FreeWheel destination.](../../assets/catalog/advertising/freewheel/destination-details.png)
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -97,7 +97,7 @@ To configure details for the destination, fill in the required and optional fiel
   * **[!UICONTROL Europe]**
   * **[!UICONTROL Asia Pacific]**
 * **[!UICONTROL FreeWheel network ID]**: Your [!DNL FreeWheel] network ID. This value is provided by [!DNL FreeWheel] and uniquely identifies your organization in the [!DNL FreeWheel] platform.
-* **[!UICONTROL Full audience refresh interval]**: The frequency at which a full audience export is sent to [!DNL FreeWheel] in addition to daily incremental updates. Select an interval from the dropdown.
+* **[!UICONTROL Full audience refresh interval]**: The frequency at which a full audience export is sent to [!DNL FreeWheel] in addition to daily incremental updates. A full audience export keeps your audience members from expiring in [!DNL FreeWheel], so you don't experience drops in targeted members while your campaigns are running. Select an interval from the dropdown.
 
 ### Enable alerts {#enable-alerts}
 
@@ -122,9 +122,9 @@ In the **[!UICONTROL Scheduling]** step, configure the export schedule for each 
 
 Configure the following fields:
 
-* **[!UICONTROL File export options]**: Select **[!UICONTROL Export incremental files]**. The first export automatically includes a full snapshot of all qualified profiles. Subsequent exports deliver only new audience qualifications and exits since the last export.
-* **[!UICONTROL Frequency]**: Set to **[!UICONTROL Daily]**. [!DNL FreeWheel] expects daily incremental file delivery.
-* **[!UICONTROL Scheduled start time]**: Enter the time in UTC at which the daily export should run. Exported files are delivered to [!DNL FreeWheel]'s ingestion bucket at the configured time.
+* **[!UICONTROL File export options]**: **[!UICONTROL Export incremental files]** is preselected and is the only supported option. The first export automatically includes a full snapshot of all qualified profiles. Subsequent exports deliver only new audience qualifications and exits since the last export.
+* **[!UICONTROL Frequency]**: Select **[!UICONTROL Daily]**. [!DNL FreeWheel] expects daily incremental file delivery.
+* **[!UICONTROL Scheduled start time]**: Enter the time in UTC at which the daily export should run.
 * **[!UICONTROL Date]**: Set the start and end date for the activation. The start date determines when the first full snapshot export is sent.
 
 >[!NOTE]
@@ -159,9 +159,9 @@ The following are example mappings. Your actual mappings will depend on your pro
 
 ## Exported data / Validate data export {#exported-data}
 
-[!DNL FreeWheel] receives two types of files per export:
+[!DNL FreeWheel] receives two types of files per export. Both file types are generated and delivered automatically. There is no action required on your part.
 
-**Identity (data) files** contain the audience membership data. Each row maps a user identifier to one or more audience IDs. The files are delivered to [!DNL FreeWheel]'s [!DNL Amazon S3] ingestion bucket in CSV format without column headers. Separate files are produced for each identity type present in the export (for example, one file for `aaid` and a separate file for `idfa`).
+**Identity (data) files** contain the audience membership data. Each row maps a user identifier to one or more audience IDs. The files are delivered to [!DNL FreeWheel] in CSV format without column headers. Separate files are produced for each identity type present in the export (for example, one file for `aaid` and a separate file for `idfa`).
 
 Example data file format:
 
