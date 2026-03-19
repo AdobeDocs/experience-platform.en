@@ -116,7 +116,7 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 ### Schedule audience exports {#schedule}
 
-![Screenshot of the Scheduling step in the FreeWheel activation workflow.](../../assets/catalog/advertising/freewheel/scheduling.png){width="800" zoomable="yes"}
+![Screenshot of the Scheduling step in the FreeWheel activation workflow.](../../assets/catalog/advertising/freewheel/scheduling.png)
 
 In the **[!UICONTROL Scheduling]** step, configure the export schedule for each audience. [!DNL FreeWheel] uses a hybrid export model: the first export for each activated audience is a full snapshot, followed by daily incremental updates.
 
@@ -141,7 +141,7 @@ In the mapping step, select the source fields from your Experience Platform prof
 
 If your [!DNL FreeWheel] account supports identity types that are not listed in the [supported identities](#supported-identities) table, you can map to them by manually entering the identity name in the target field instead of selecting from the predefined list.
 
-![Screenshot showing a custom identity name typed directly into the target field in the mapping step.](../../assets/catalog/advertising/freewheel/custom-identity.png){width="800" zoomable="yes"}
+![Screenshot showing a custom identity name typed directly into the target field in the mapping step.](../../assets/catalog/advertising/freewheel/custom-identity.png)
 
 The following are example mappings. Your actual mappings will depend on your profile schema and the identity types your [!DNL FreeWheel] account supports.
 
