@@ -4,6 +4,7 @@ description: Learn how to activate audiences from Adobe Experience Platform to F
 hide: yes
 hidefromtoc: yes
 badge: label="Beta" type="Informative"
+exl-id: 1f1d3e57-a8ef-4971-b3d1-43521bd158bb
 ---
 # [!DNL FreeWheel] connection {#freewheel}
 
