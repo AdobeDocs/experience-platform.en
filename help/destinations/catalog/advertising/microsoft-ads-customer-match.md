@@ -2,7 +2,7 @@
 keywords: advertising; microsoft ads; customer match;
 title: Microsoft Ads Customer Match connection
 description: Use the Microsoft Ads Customer Match destination to match customers by email address and reengage with them across the Microsoft Advertising Network, including Search and Audience ads.
-badge: Beta
+badge: label="Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
@@ -21,11 +21,11 @@ Use the [!DNL Microsoft Ads Customer Match] destination to match customers by em
 
 To help you better understand how and when to use the [!DNL Microsoft Ads Customer Match] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this feature.
 
-### Use case #1
+### Use case #1 {#use-case-1}
 
 An e-commerce brand wants to reach existing customers through [!DNL Microsoft Search] and [!DNL Microsoft Audience Network] to personalize offers based on their past purchases and browsing history. The brand can ingest email addresses from their own CRM into Experience Platform, build audiences from their own offline data, and send these audiences to [!DNL Microsoft Ads Customer Match] to be used across search and audience ads, optimizing their advertising spending.
 
-### Use case #2
+### Use case #2 {#use-case-2}
 
 A technology company launched a new product. To promote this new product, they are looking to drive awareness among customers who previously purchased related products. They upload email addresses from their CRM database into Experience Platform, using the email addresses as identifiers. Audiences are created based on customers who own related products. Those audiences get sent to [!DNL Microsoft Ads Customer Match], so the company can target current customers and similar customers across the [!DNL Microsoft Advertising Network].
 
@@ -90,7 +90,7 @@ When configuring the destination, you must provide the following information:
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
@@ -140,7 +140,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities* to destinations, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 

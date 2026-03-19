@@ -485,7 +485,7 @@ Below, you can see the resulting UI screen, based on the configuration above. Wh
 
 ![Screen recording showing the conditional file formatting option for CSV files.](../../assets/guides/batch/conditional-file-formatting.gif)
 
-### Complete API request which includes all options shown above
+### Complete API request which includes all options shown above {#complete-api-request}
 
 The API request below combines in one configuration all the options described in the sections above.
 

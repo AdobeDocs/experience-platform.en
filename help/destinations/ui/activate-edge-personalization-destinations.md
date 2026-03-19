@@ -18,7 +18,7 @@ Examples of edge destinations are the [Adobe Target](../../destinations/catalog/
 >When [configuring the Adobe Target connection](../catalog/personalization/adobe-target-connection.md) *without* using a datastream ID, the use cases described in this article are not supported. Only next-session personalization use cases are supported in the absence of a datastream.
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 >* To activate data without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
@@ -168,7 +168,7 @@ To add target attributes, select the **[!UICONTROL Add new field]** control on t
 
 >[!NOTE]
 >
->The selection of target attributes only applies to the [Custom Personalization](../catalog/personalization/custom-personalization.md) activation workflow, in order to support friendly-name field mapping in the destination platform.
+>The selection of target attributes only applies to the [Custom Personalization](../catalog/personalization/custom-personalization.md) activation workflow, to support friendly-name field mapping in the destination platform.
 
 ![Screen recording showing how to select an XDM attribute in the mapping step](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 

@@ -38,7 +38,9 @@ Audience segments must be registered with [!DNL Index] using an additional proce
 
 [!DNL Index] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-Note that [!DNL Index Exchange] destinations support only one identity type per upload. You must specify the appropriate identifier type when configuring the destination details (see the ["Fill in destination details"](#destination-details) section below).
+>[!NOTE]
+>
+>[!DNL Index Exchange] destinations support only one identity type per upload. You must specify the appropriate identifier type when configuring the destination details (see the ["Fill in destination details"](#destination-details) section below).
 
 To upload multiple identity types, create separate instances of the [!DNL Index Exchange] destination for each identity type.
 
@@ -90,7 +92,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -106,7 +108,7 @@ To configure details for the destination, fill in the fields below. An asterisk 
 * [!UICONTROL Identifier Type]: Select the Index–provided identifier type that matches the identifier you are sending to [!DNL Index]. See the table of supported identifier types below. If you are unsure which identifier type to use, contact your [!DNL Index] Representative. To send multiple identifier types, create separate instances of this destination.
 * [!UICONTROL Account ID]: Enter your [!DNL Index] account ID. This is not the same as your publisher ID. If you are unsure about which ID to use, contact your [!DNL Index] Representative.
 
-#### Supported Identifier Types
+#### Supported Identifier Types {#supported-identifier-types}
 
 | Identifier Type | Description | 
 |------------------ | ------------- |
@@ -125,10 +127,10 @@ To configure details for the destination, fill in the fields below. An asterisk 
 You can enable alerts to receive notifications about the status of your dataflow to this destination. Select one or more alerts from the list to subscribe to status notifications for your dataflow. For more information, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
