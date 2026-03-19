@@ -11,7 +11,7 @@ exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
 
 >[!IMPORTANT]
 >
->This destination connector and documentation page are created and maintained by [!DNL Verizon Media/Yahoo]'s [!DNL DataX] team. For any inquiries or update requests, please contact them directly at [dataoperations@yahooinc.com](mailto:dataoperations@yahooinc.com)
+>This destination connector and documentation page are created and maintained by [!DNL Verizon Media/Yahoo]'s [!DNL DataX] team. For any inquiries or update requests, contact them directly at [dataoperations@yahooinc.com](mailto:dataoperations@yahooinc.com)
 
 ## Prerequisites {#prerequisites}
 
@@ -114,7 +114,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 ![Yahoo DataX destination card in Experience Platform UI](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
@@ -138,7 +138,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 

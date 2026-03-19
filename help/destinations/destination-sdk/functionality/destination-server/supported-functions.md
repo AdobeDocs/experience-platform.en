@@ -21,7 +21,7 @@ The message transformation template is used in the [destination server configura
 
 ## Prerequisites {#prerequisites}
 
-To understand the concepts and functions in this reference page, read the [message format](message-format.md) document first. You need to understand the [structure of a profile](message-format.md#profile-structure) in Experience Platform before you can use [!DNL Pebble] templates to transform and the exported data.
+To understand the concepts and functions in this reference page, read the [message format](message-format.md) document first. You need to understand the [structure of a profile](message-format.md#profile-structure) in Experience Platform before you can use [!DNL Pebble] templates to transform the exported data.
 
 Before you advance to the functions documented below, review the templating examples in the section [Using a templating language for the identity, attributes, and audience membership transformations](message-format.md#using-templating). The examples in there start off very simple and increase in complexity.
 
@@ -49,13 +49,13 @@ From the [!DNL Pebble] functions section, Adobe does *not* support the [range](h
 
 To exemplify how [!DNL Pebble] functions are used in Destination SDK, see below how the date function ([link in Pebble documentation](https://pebbletemplates.io/wiki/filter/date/)) is used to transform the format of a timestamp.
 
-### Use case
+### Use case {#date-use-case}
 
 You want to change the `lastQualificationTime` timestamp from the default [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) value that Experience Platform exports to another value preferred by your destination.
 
-### Example
+### Example {#date-example}
 
-#### Input
+#### Input {#date-input}
 
 ```json
 {
@@ -63,13 +63,13 @@ You want to change the `lastQualificationTime` timestamp from the default [ISO 8
 }
 ```
 
-#### Format
+#### Format {#date-format}
 
 ```java
 {{ lastQualificationTime | date(existingFormat="yyyy-MM-dd'T'HH:mm:sss.SSSX", format="yyyy-MM-dd'T'HH:mm:ssX") }}
 ```
 
-#### Output
+#### Output {#date-output}
 
 ```json
 {
@@ -83,13 +83,13 @@ In addition to the out-of-the-box functions provided by [!DNL Pebble], see below
 
 ### `addedSegments` and `removedSegments` functions {#addedsegments-removedsegments-functions}
 
-#### Use case
+#### Use case {#segments-use-case}
 
 These functions can be used on order to obtain a list of audiences that were added to or removed from a profile.
 
-#### Example
+#### Example {#segments-example}
 
-##### Input
+##### Input {#segments-input}
 
 ```json
 {
@@ -122,13 +122,13 @@ These functions can be used on order to obtain a list of audiences that were add
 }
 ```
 
-##### Format
+##### Format {#segments-format}
 
 ```java
 added: {% for s in addedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %}; removed: {% for s in removedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %}
 ```
 
-##### Output
+##### Output {#segments-output}
 
 ```json
 added: <111111><333333>; removed: <222222>

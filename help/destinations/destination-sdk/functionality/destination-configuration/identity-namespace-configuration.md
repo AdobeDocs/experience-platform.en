@@ -86,11 +86,11 @@ For instance, customers could map an [!DNL Experience Platform] [!DNL IDFA] name
 
 Read more about identities in the [identity namespace overview](../../../../identity-service/features/namespaces.md).
 
-## Mapping considerations
+## Mapping considerations {#mapping-considerations}
 
 If customers select a source identity namespace and do not select a target mapping, Experience Platform automatically populates the target mapping with an attribute with the same name.
 
-## Configure optional source field hashing
+## Configure optional source field hashing {#configure-optional-hashing}
 
 Experience Platform customers can choose to ingest data into Experience Platform in hashed format or in plain text. If your destination platform accepts both hashed and unhashed data, you can give customers the option to choose whether Experience Platform should hash the source field values when they get exported to your destination.
 
@@ -116,7 +116,7 @@ Check this option when using unhashed source fields, to have Adobe Experience Pl
 
 When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have Adobe Experience Platform automatically hash the source attributes on activation.
 
-## Configure mandatory source field hashing
+## Configure mandatory source field hashing {#configure-mandatory-hashing}
 
 If your destination only accepts hashed data, you can configure the exported attributes to be automatically hashed by Experience Platform. The configuration below automatically checks the **Apply transformation** option when the `Email` and `Phone` identities are mapped.
 

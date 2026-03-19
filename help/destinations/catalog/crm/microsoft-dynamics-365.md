@@ -29,7 +29,7 @@ Refer to Adobe's documentation for [Audience Membership Details schema field gro
 
 ### [!DNL Microsoft Dynamics 365] prerequisites {#prerequisites-destination}
 
-Note the following prerequisites in [!DNL Dynamics 365], in order to export data from Experience Platform to your [!DNL Dynamics 365] account:
+Note the following prerequisites in [!DNL Dynamics 365], to export data from Experience Platform to your [!DNL Dynamics 365] account:
 
 #### You need to have a [!DNL Microsoft Dynamics 365] account {#prerequisites-account}
 
@@ -164,7 +164,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -263,7 +263,7 @@ Additional useful information from the [[!DNL Dynamics 365] documentation](https
 * [IOrganizationService.Update(Entity) Method](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update?view=dataverse-sdk-latest)
 * [Update and delete table rows using the Web API](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)
 
-### Changelog
+### Changelog {#changelog}
 
 This section captures the functionality and significant documentation updates made to this destination connector.
 

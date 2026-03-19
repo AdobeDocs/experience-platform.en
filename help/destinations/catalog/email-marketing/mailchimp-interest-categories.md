@@ -34,7 +34,7 @@ Before activating data to the [!DNL Mailchimp Interest Categories] destination, 
 
 ### Prerequisites for the [!DNL Mailchimp Interest Categories] destination {#prerequisites-destination}
 
-Note the following prerequisites in order to export data from Experience Platform to your [!DNL Mailchimp] account:
+Note the following prerequisites to export data from Experience Platform to your [!DNL Mailchimp] account:
 
 #### You must have a [!DNL Mailchimp] account {#prerequisites-account}
 
@@ -44,7 +44,7 @@ Before you can create a [!DNL Mailchimp Interest Categories] destination, you mu
 
 You need your [!DNL Mailchimp] **API key** to authenticate the [!DNL Mailchimp Interest Categories] destination against your [!DNL Mailchimp] account. The **API key** serves as the **Password** when you [authenticate the destination](#authenticate).
 
-If you do not have your **API key**, Sign in to your account and refer to the [[!DNL Mailchimp] Generate your API key](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) documentation to create one. 
+If you do not have your **API key**, sign in to your account and refer to the [[!DNL Mailchimp] Generate your API key](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) documentation to create one. 
 
 An example of an API key is `0123456789abcdef0123456789abcde-us14`. 
 
@@ -167,7 +167,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -246,7 +246,7 @@ To fix this error and proceed to the next step, you must provide the correct val
 
 When creating the destination, you might receive the following error messages: *`Cannot have more than 60 interests per list (Across all categories)`* or *`400 BAD_REQUEST`*. This happens when you exceed the 60 group names (or interest categories) in a single group or across several groups within the same audience limit, as described in the [guardrails](#guardrails) section. To fix this error, make sure you are not exceeding the group name limit in [!DNL Mailchimp].
 
-### [!DNL Mailchimp] Status and Error codes
+### [!DNL Mailchimp] Status and Error codes {#mailchimp-status-error-codes}
 
 Refer to the [[!DNL Mailchimp] errors page](https://mailchimp.com/developer/marketing/docs/errors/) for a comprehensive list of status and error codes with explanations.
 

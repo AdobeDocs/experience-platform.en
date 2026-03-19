@@ -42,7 +42,7 @@ Refer to the table below for details on which types of integrations support the 
 
 ## Supported parameters {#supported-parameters}
 
-You can modify several properties of the exported files to match the requirements of your destination's file reception system, in order to optimally read and interpret the files received from Experience Platform.
+You can modify several properties of the exported files to match the requirements of your destination's file reception system, to optimally read and interpret the files received from Experience Platform.
 
 >[!NOTE]
 >

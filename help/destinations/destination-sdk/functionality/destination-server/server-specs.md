@@ -51,7 +51,7 @@ Destination server parameters have two configurable fields. These options dictat
 
 {style="table-layout:auto"}
 
-### When to use hard-coded versus templatized fields
+### When to use hard-coded versus templatized fields {#when-to-use-hard-coded-vs-templatized}
 
 Both hard-coded and templatized fields have their own uses in Destination SDK, depending on what type of integration you are creating.
 

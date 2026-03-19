@@ -6,13 +6,13 @@ exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 ---
 # Subscribe to in-context destination alerts
 
-Adobe Experience Platform allows you to subscribe to event-based alerts regarding Adobe Experience Platform activities. Alerts reduce or eliminate the need to poll the [[!DNL Observability Insights] API](../../observability/api/overview.md) in order to check if a job has completed, if a certain milestone within a workflow has been reached, or if any errors have occurred.
+Adobe Experience Platform allows you to subscribe to event-based alerts regarding Adobe Experience Platform activities. Alerts reduce or eliminate the need to poll the [[!DNL Observability Insights] API](../../observability/api/overview.md) to check if a job has completed, if a certain milestone within a workflow has been reached, or if any errors have occurred.
 
 You can subscribe to alerts when creating a dataflow to receive alert messages regarding the status, success, or failure of your flow run.
 
 This document provides steps on how to subscribe receive alerts messages for your destination dataflows.
 
-## Getting started
+## Getting started {#getting-started}
 
 This document requires a working understanding of the following components of Adobe Experience Platform:
 
@@ -30,7 +30,7 @@ This document requires a working understanding of the following components of Ad
 
 >[!IMPORTANT]
 >
->You must enable instant notifications of emails for your Experience Platform account in order to receive email-based alert notifications for your dataflows.
+>You must enable instant notifications of emails for your Experience Platform account to receive email-based alert notifications for your dataflows.
 
 You can enable alerts for your dataflows during the [!UICONTROL Configure new destination] step of the [destination connection](connect-destination.md) workflow.
 
@@ -50,6 +50,8 @@ The alerts available to destination dataflows are described in the table below.
 | Destination Flow Run Success | This alert notifies you when an audience is successfully activated to a destination. |
 | Destination Flow Run Start | This alert notifies you when a destination flow run starts activating an audience. |
 | Activation Skipped Rate Exceeded| This alert notifies you when the activation skip rate has exceeded 1% of total activations. Identities are skipped during activation when they have missing attributes or consent violation.|
+
+{style="table-layout:auto"}
 
 ## Receiving alerts {#receiving-alerts}
 

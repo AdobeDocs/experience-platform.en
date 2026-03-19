@@ -12,7 +12,7 @@ Adform is a leading provider of programmatic media buying and selling solutions.
 
 >[!IMPORTANT]
 >
->The destination connector and documentation page are created and maintained by the Adform team. For any inquiries or update requests, please contact them directly at `support@adform.com`.
+>The destination connector and documentation page are created and maintained by the Adform team. For any inquiries or update requests, contact them directly at `support@adform.com`.
 
 ## Use cases {#use-cases}
 
@@ -28,9 +28,9 @@ A common case is re-targeting of your website visitors to your website or app ba
 
 * You need to be an existing Adform customer to use this destination.
 * You need to have your Adform Audience Base Data Connection credentials.
-    * If you don't have Adform Audience Base Data Connection credentials, please contact your Adform representative.
+    * If you don't have Adform Audience Base Data Connection credentials, contact your Adform representative.
 * For proper synchronization you need to either have an [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) or [client-side](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) connection from your entities to Adform Site Tracking.
-    * If you don't have an Event Streaming or client-side connection from your entities to Adform Site Tracking, please contact your Adform representative.
+    * If you don't have an Event Streaming or client-side connection from your entities to Adform Site Tracking, contact your Adform representative.
     * Adform provides Adobe Experience Cloud extensions for both [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) and [client-side](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform).
 
 
@@ -83,7 +83,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -117,7 +117,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 

@@ -128,7 +128,7 @@ To set up this authorization method for your destination, add the following line
 
 {style="table-layout:auto"}
 
-## OAuth 2 with Password Grant
+## OAuth 2 with Password Grant {#oauth2-password-grant}
 
 For the OAuth 2 Password grant (read the [RFC standards specs](https://tools.ietf.org/html/rfc6749#section-4.3)), Experience Platform requires the user's username and password. In the authorization flow, Experience Platform exchanges these credentials for an access token and, optionally, a refresh token.
 Adobe makes use of the standard inputs below to simplify destination configuration, with the ability to override values:
@@ -173,7 +173,7 @@ To set up this authorization method for your destination, add the following line
 
 {style="table-layout:auto"}
 
-## OAuth 2 with Client Credentials Grant
+## OAuth 2 with Client Credentials Grant {#oauth2-client-credentials-grant}
 
 You can configure an OAuth 2 Client Credentials (read the [RFC standards specs](https://tools.ietf.org/html/rfc6749#section-4.4)) destination, which supports the standard inputs and outputs listed below. You have the ability to customize the values. See [Customize your OAuth 2 configuration](#customize-configuration) for details.
 

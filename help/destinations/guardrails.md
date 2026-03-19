@@ -70,7 +70,7 @@ The guardrails below apply to activation through [batch (file-based) destination
 |Activation frequency | One daily full export or more frequent incremental exports every 3, 6, 8, or 12 hours. | System-enforced guardrail| Read the [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) documentation sections for more information about the frequency increments for batch exports.|
 |Maximum number of audiences that can pe exported at a given hour | 100 | Performance guardrail | The recommendation is to add a maximum of 100 audiences to batch destination instances. |
 |Maximum number of rows (records) per file to activate | 5 million | System-enforced guardrail| Adobe Experience Platform automatically splits the exported files at 5 million records (rows) per file. Each row represents one profile. Split file names are appended with a number that indicates the file is part of a larger export, as such: `filename.csv`, `filename_2.csv`, `filename_3.csv`. For more information, read the [scheduling section](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) of the activate batch destinations tutorial.|
-|Maximum number of external audiences (e.g. FAC, custom upload, Audience Composition) that can be activated in a destination instance | 10 | System-enforced guardrail| When activating external audiences (e.g. [Federated Audience Composition](/help/segmentation/ui/audience-portal.md#fac), [custom upload](/help/segmentation/ui/audience-portal.md#import-audience), [Audience Composition](/help/segmentation/ui/audience-portal.md#audience-composition)) to batch file-based destinations, there is a limit of 10 such audiences that you can activate in a destination instance. See [Audience types and customization](/help/segmentation/ui/audience-portal.md#customize) for more on these audience types. Read more about the workflow to [activate external audiences to batch file-based destinations](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences).|
+|Maximum number of external audiences (for example FAC, custom upload, Audience Composition) that can be activated in a destination instance | 10 | System-enforced guardrail| When activating external audiences (for example [Federated Audience Composition](/help/segmentation/ui/audience-portal.md#fac), [custom upload](/help/segmentation/ui/audience-portal.md#import-audience), [Audience Composition](/help/segmentation/ui/audience-portal.md#audience-composition)) to batch file-based destinations, there is a limit of 10 such audiences that you can activate in a destination instance. See [Audience types and customization](/help/segmentation/ui/audience-portal.md#customize) for more on these audience types. Read more about the workflow to [activate external audiences to batch file-based destinations](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences).|
 
 {style="table-layout:auto"}
 
@@ -126,7 +126,7 @@ The soft guardrail below applies to all datasets exported out of Experience Plat
 
 {style="table-layout:auto"}
 
-#### Guardrails for scheduled dataset exports
+#### Guardrails for scheduled dataset exports {#scheduled-dataset-exports}
 
 For scheduled, or recurring dataset exports, the guardrails below are identical for the two formats of the exported file (JSON or parquet), and are grouped by dataset type.
 
@@ -185,7 +185,7 @@ Details on throttling thresholds or limitations for given destinations. This sec
 
 {style="table-layout:auto"}
 
-## Next steps
+## Next steps {#next-steps}
 
 See the following documentation for more information on other Experience Platform services guardrails, on end-to-end latency information, and licensing information from Real-Time CDP Product Description documents:
 

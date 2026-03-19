@@ -78,7 +78,7 @@ When exporting *datasets*, Experience Platform creates a `.parquet` or `.json` f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the destination configuration workflow, fill in the fields listed in the two sections below.
@@ -95,7 +95,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 * Access key and secret key authentication
 * Assumed role authentication
 
-#### Authentication with S3 access key and secret key
+#### Authentication with S3 access key and secret key {#s3-access-key-secret-key-auth}
 
 Use this authentication method when you want to input your Amazon S3 access key and secret key to allow Experience Platform to export data to your Amazon S3 properties.
 
@@ -301,7 +301,7 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 

@@ -27,7 +27,7 @@ Refer to the Experience Platform documentation for [Audience Membership Details 
 
 ### [!DNL Oracle Eloqua] prerequisites {#prerequisites-destination}
 
-In order to export data from Experience Platform to your [!DNL Oracle Eloqua] account you need to have an [!DNL Oracle Eloqua] account.
+To export data from Experience Platform to your [!DNL Oracle Eloqua] account you need to have an [!DNL Oracle Eloqua] account.
 
 Additionally, you need, at a minimum, the *"Advanced Users - Marketing permissions"* for your [!DNL Oracle Eloqua] instance. Refer to the *"Security Groups"* section on the [Secured user access](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm) page for guidance. The access is required by the destination to programmatically [determine your base URL](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html) when invoking the [!DNL Oracle Eloqua] API.
 
@@ -41,6 +41,8 @@ Note down the items below before you authenticate to the [!DNL Oracle Eloqua] de
 | `Username` | The username of your [!DNL Oracle Eloqua] account. |
 | `Password` | The password of your [!DNL Oracle Eloqua] account. |
 | `Pod` | [!DNL Oracle Eloqua] supports multiple data centers, each with a unique domain name. [!DNL Oracle Eloqua] refers to these as "pods", there are currently seven in total - p01, p02, p03, p04, p06, p07, and p08. To obtain which POD you are on, login to [!DNL Oracle Eloqua] and note the URL in your browser after you have logged in successfully. For example, if your browser URL is `secure.p01.eloqua.com` your `pod` is `p01`. Refer to the [determining your POD](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua) page for additional guidance.|
+
+{style="table-layout:auto"}
 
 Refer to the [Signing in to [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/SigningInToEloqua.htm#Signing) for guidance.
 
@@ -64,6 +66,8 @@ Refer to the [Signing in to [!DNL Oracle Eloqua]](https://docs.oracle.com/en/clo
 | Target Identity | Description | Mandatory |
 |---|---|---|
 | `EloquaId` | Unique identifier of the contact.| Yes |
+
+{style="table-layout:auto"}
 
 ## Supported audiences {#supported-audiences}
 
@@ -150,7 +154,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -245,7 +249,7 @@ For additional details, see the [!DNL Oracle Eloqua] documentation:
 * [Oracle Eloqua Marketing Automation](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [REST API for Oracle Eloqua Marketing Cloud Service](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
 
-### Changelog
+### Changelog {#changelog}
 
 This section captures the functionality and significant documentation updates made to this destination connector.
 

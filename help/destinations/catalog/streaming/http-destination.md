@@ -129,7 +129,7 @@ curl --location --request POST 'https://some-api.com/token' \
 ## Connect to the destination {#connect-destination}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). When connecting to this destination, you must provide the following information:
@@ -180,7 +180,7 @@ If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication typ
 ![Image of the UI screen where you can connect to the HTTP API destination, using OAuth 2 with Client Credentials authentication.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 >[!WARNING]
-> 
+>
 >When using [!UICONTROL OAuth 2 Client Credentials] authentication, the [!UICONTROL Access Token URL] can have a maximum of one query parameter. Adding an [!UICONTROL Access Token URL] with more query parameters can lead to issues when connecting to your endpoint.
 
 >[!NOTE]
@@ -242,7 +242,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* [Consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) is currently not supported in exports to the HTTP API destination. [Read more](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
@@ -262,7 +262,9 @@ Experience Platform optimizes the profile export behavior to your HTTP API desti
 
 In all the cases described above, only the profiles where relevant updates have occurred are exported to your destination. For example, if an audience mapped to the destination flow has a hundred members, and five new profiles qualify for the segment, the export to your destination is incremental and only includes the five new profiles.
 
-Note that all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
+>[!NOTE]
+>
+>All the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
 
 ### What determines a data export and what is included in the export {#what-determines-export-what-is-included}
 
@@ -368,7 +370,9 @@ Below are further examples of exported data, depending on the UI settings you se
       }
 ```
 
-**Note**: In this example, the first segment (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) is mapped to the destination and includes the `name` field. The second segment (`354e086f-2e11-49a2-9e39-e5d9a76be683`) is not mapped to the destination and does not include the `name` field, even though the **[!UICONTROL Include Segment Names]** option is enabled.
+>[!NOTE]
+>
+>In this example, the first segment (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) is mapped to the destination and includes the `name` field. The second segment (`354e086f-2e11-49a2-9e39-e5d9a76be683`) is not mapped to the destination and does not include the `name` field, even though the **[!UICONTROL Include Segment Names]** option is enabled.
 
 +++
 

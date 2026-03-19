@@ -10,7 +10,7 @@ exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
 
 >[!IMPORTANT]
 >
->This destination connector and documentation page are created and maintained by Criteo. For any inquiries or update requests, please contact Criteo directly [here](mailto:criteoTechnicalPartnerships@criteo.com).
+>This destination connector and documentation page are created and maintained by Criteo. For any inquiries or update requests, contact Criteo directly [here](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo powers trusted and impactful advertising to bring richer experiences to every consumer across the open internet. With the world's largest commerce data set and best-in-class AI, Criteo ensures each touchpoint across the shopping journey is personalized to reach customers with the right ad, at the right time.
 
@@ -74,23 +74,23 @@ Refer to the table below for information about the destination export type and f
 
 To help you better understand how to use the [!DNL Criteo] destination, here are some goals that Adobe Experience Platform customers can achieve with [!DNL Criteo]:
 
-### Use case 1 : Get traffic
+### Use case 1 : Get traffic {#use-case-1}
 
 Showcase your business with relevant product offers and flexible creatives. With intelligent product recommendations, your ads will automatically feature the products most likely to trigger visits and engagement. Flexible targeting allows you to build audiences from Criteo's commerce data set or from your own prospect lists and Adobe CDP segments.
 
-### Use case 2 : Increase website conversions
+### Use case 2 : Increase website conversions {#use-case-2}
 
 When visitors leave your website, remind them what they're missing with retargeting ads that increase conversions by showing special deals and hyper-relevant offers, wherever they go next. Connect your Adobe CDP audience to re-engage existing customers or target consumers similar to your most loyal shoppers.
 
 ## Connect to Criteo {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
-### Authenticate to Criteo
+### Authenticate to Criteo {#authenticate}
 
 Steps to connect are as follows:
 
@@ -117,7 +117,7 @@ After authenticating to the destination, please fill in the following connection
 | --- | --- | --- |
 | Name | A name to help you recognize this destination in the future. The name you choose here will be the [!DNL Audience] name in Criteo Management Center and cannot be modified at later stage. | Yes |
 | Description | A description to help you identify this destination in the future. | No |
-| Advertiser ID | Criteo Advertiser ID of your organization. Please contact your Criteo account manager to obtain this information. | Yes |
+| Advertiser ID | Criteo Advertiser ID of your organization. Contact your Criteo account manager to obtain this information. | Yes |
 | Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] of your organization. Please reach out to your Criteo account team for the appropriate [!DNL GUM Caller ID] or to get more information on this [!DNL GUM] sync, if needed. | Yes, whenever [!DNL GUM ID] is provided as an identifier |
 
 ### Enable alerts {#enable-alerts}
@@ -129,7 +129,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate-segments}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -199,7 +199,7 @@ The request body of removing user profile  received by the [!DNL Criteo] connect
 
 All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. For detailed information on how Adobe Experience Platform enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
-## Additional resources
+## Additional resources {#additional-resources}
 
 * [Criteo Help Center](https://help.criteo.com/kb/en)
 * [Criteo Developer Portal](https://developers.criteo.com)

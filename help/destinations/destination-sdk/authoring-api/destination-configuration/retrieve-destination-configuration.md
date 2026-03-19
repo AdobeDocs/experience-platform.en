@@ -13,7 +13,7 @@ This page exemplifies the API request and payload that you can use to retrieve i
 
 ## Getting started with destination configuration API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Retrieve a destination configuration {#retrieve}
 
@@ -184,6 +184,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | -------- | ----------- |
 | `{INSTANCE_ID}` | The ID of the destination configuration you want to retrieve. |
 
+{style="table-layout:auto"}
+
 +++
 
 +++Response
@@ -302,7 +304,7 @@ A successful response returns HTTP status 200 with the details of the destinatio
 
 Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
-## Next steps
+## Next steps {#next-steps}
 
 After reading this document, you now know how to retrieve a destination configuration through the Destination SDK `/authoring/destinations` API endpoint.
 

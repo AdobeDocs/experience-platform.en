@@ -103,7 +103,7 @@ The values that you set up here are surfaced in the [Schedule audience export](.
 Use file name configuration macros to define what the exported file names should include. The macros in the table below describe elements found in the UI in the [file name configuration](../../../ui/activate-batch-profile-destinations.md#file-names) screen.
 
 >[!TIP]
-> 
+>
 >As a best practice, you should always include the `SEGMENT_ID` macro in your exported file names. Segment IDs are unique, so including them in the file name is the best way to ensure that file names are unique as well. 
 
 |Macro|UI label|Description|Example|
@@ -123,7 +123,7 @@ Use file name configuration macros to define what the exported file names should
 
 {style="table-layout:auto"}
 
-### File name configuration example
+### File name configuration example {#file-name-configuration-example}
 
 The configuration example below shows the correspondence between the configuration used in the API call and the options shown in the UI.
 

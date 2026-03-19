@@ -11,7 +11,7 @@ exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
 
 >[!IMPORTANT]
 >
->This destination connector and documentation page are created and maintained by the *Snap Inc* team. For any inquiries or update requests, please contact them directly at *dev-support@snap.com*
+>This destination connector and documentation page are created and maintained by the *Snap Inc* team. For any inquiries or update requests, contact them directly at *dev-support@snap.com*
 
 ## Use cases {#use-cases}
 
@@ -19,7 +19,7 @@ This destination allows marketers to import user audiences created in Experience
 
 ## Prerequisites {#prerequisites}
 
-To use this destination, you must have a Snapchat Ads account. Please refer to this documentation for information about how to create one:
+To use this destination, you must have a Snapchat Ads account. Refer to this documentation for information about how to create one:
 
 [Get Started with Snapchat Advertising](https://businesshelp.snapchat.com/s/article/overview?language=en_US)
 
@@ -36,12 +36,12 @@ The *Snap Inc* destination supports the activation of identities described in th
 All identifiers sent to the *Snap Inc* destination must be hashed in SHA-256 format. To hash plain text identifiers before sending them to the destination, check the **[!UICONTROL Apply transformation]** option when mapping target identifiers for the destination. 
 
 >[!WARNING]
-> 
+>
 > Unhashed identifiers will not be accepted by the Snap Inc destination and sending them could cause errors.
 
 
 >[!IMPORTANT]
-> 
+>
 > The Snap Inc destination does not support multiple identities. Please select only one identity.
 
 |Target Identity|Description|Considerations|
@@ -93,7 +93,7 @@ Refer to the table below for information about the destination export type and f
 ## Connecting to Snap Inc {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 ### Authenticate to destination {#authenticate}
@@ -118,10 +118,10 @@ To configure details for the destination, fill in the required fields and select
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Account ID]**: The Ad Account ID that is associated with the Ad Account that you will like to import your audiences to. For more information about how to find this, please refer to [this documentation on the Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+*  **[!UICONTROL Account ID]**: The Ad Account ID that is associated with the Ad Account that you will like to import your audiences to. For more information about how to find this, refer to [this documentation on the Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
-> 
+>
 >Entering an incorrect or invalid Snapchat Ad Account ID will cause audience activation to fail. Please double check that you have entered the proper Ad Account ID.
 
 ### Enable alerts {#enable-alerts}
@@ -133,7 +133,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -148,7 +148,7 @@ After activating audiences to the *Snap Inc* destination, you will be able to se
 
 ![Audiences](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Please note that when an Adobe audience is first activated to Snap Inc, you will initially see it as an empty audience. This is because Adobe Experience Platform does not export member data to Snap Inc until it evaluates the audience. For more information about how audiences are evaluated in Experience Platform, please refer to the [Segmentation Service overview](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
+Note that when an Adobe audience is first activated to Snap Inc, you will initially see it as an empty audience. This is because Adobe Experience Platform does not export member data to Snap Inc until it evaluates the audience. For more information about how audiences are evaluated in Experience Platform, refer to the [Segmentation Service overview](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
 
 ## Data usage and governance {#data-usage-governance}
 

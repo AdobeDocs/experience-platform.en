@@ -55,7 +55,7 @@ Supported audiences by audience data type:
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to the [!DNL Adobe Commerce] destination:
@@ -83,12 +83,12 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to the [!DNL Commerce] destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Read [Activate profiles and audiences to profile request destinations](../../ui/activate-edge-personalization-destinations.md) for instructions on activating audiences to the [!DNL Commerce] destination.
 
-## Next steps in [!DNL Adobe Commerce]
+## Next steps in [!DNL Adobe Commerce] {#next-steps-adobe-commerce}
 
 Now that you have configured the [!DNL Commerce] destination within Experience Platform, you need to install the [!DNL Audience Activation] extension in [!DNL Commerce] and configure the [!DNL Commerce Admin] to import the Real-Time CDP audiences you created. See the [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) to learn more.
 

@@ -16,7 +16,7 @@ This destination uses the [[!DNL Salesforce Import API v5]](https://developer.sa
 
 
 >[!IMPORTANT]
-> 
+>
 > This is the V2 version of the [Salesforce Marketing Cloud Account Engagement](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) destination. This version replaces the previous destination and is currently in Alpha release.
 > <br>
 > If you are currently using the previous version of the [Salesforce Marketing Cloud Account Engagement](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) destination, you must migrate to this V2 version before **January 2026**. After January 2026, Adobe will decommission the previous version and it will no longer be available.
@@ -48,7 +48,7 @@ Before activating data to the [!DNL (V2) Marketing Cloud Account Engagement] des
 
 ### [!DNL Salesforce Marketing Cloud Account Engagement] prerequisites {#prerequisites-destination}
 
-Note the following prerequisites in order to export data from Experience Platform to your [!DNL Marketing Cloud Account Engagement] account:
+Note the following prerequisites to export data from Experience Platform to your [!DNL Marketing Cloud Account Engagement] account:
 
 #### You need to have a [!DNL Marketing Cloud Account Engagement] account {#prerequisites-account}
 
@@ -157,7 +157,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -177,7 +177,7 @@ The Salesforce Marketing Cloud Account Engagement destination supports the targe
 |---------|----------|----------|
 | `salesforceId` | String | The Salesforce ID of the prospect |
 | `salesforceOwnerId` | Integer | The Salesforce user ID of the prospect owner |
-| `salutation` | String | The prospect's salutation (e.g., Mr., Ms., Dr.) |
+| `salutation` | String | The prospect's salutation (for example, Mr., Ms., Dr.) |
 | `score` | Integer | The prospect's score in Account Engagement |
 | `source` | String | The source of the prospect record |
 | `state` | String | The state/province of the prospect |

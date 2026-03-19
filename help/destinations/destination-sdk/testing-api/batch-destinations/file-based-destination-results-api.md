@@ -19,7 +19,7 @@ If you want to see more detailed information about your activation flow, you can
 
 ## Getting started {#getting-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Prerequisites {#prerequisites}
 
@@ -48,9 +48,13 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | The ID of the destination instance for which you are generating sample profiles. See the [prerequisites](#prerequisites) section for details on how to obtain this ID. |
 
+{style="table-layout:auto"}
+
 | Query string parameters | Description |
 | -------- | ----------- |
 | `flowRunIds` | The flow run IDs corresponding to the activated audiences. You can find the flow run IDs in the `results` property returned in the [response of the destination testing call](file-based-destination-testing-api.md).|
+
+{style="table-layout:auto"}
 
 **Request**
 
@@ -209,7 +213,7 @@ The response contains the complete details of the activation flow. You can obtai
 
 Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
-## Next steps
+## Next steps {#next-steps}
 
 After reading this document, you now know how to test your file-based destination configuration and see the full details of your activation results.
 

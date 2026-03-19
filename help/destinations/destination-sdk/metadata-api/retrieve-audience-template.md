@@ -19,7 +19,7 @@ For a detailed description of the capabilities that you can configure through th
 
 ## Getting started with audience template API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Retrieve an audience template {#retrieve}
 
@@ -192,6 +192,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 | Parameter | Description |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | The ID of the audience template you want to retrieve. |
+
+{style="table-layout:auto"}
 
 +++
 

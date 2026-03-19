@@ -12,7 +12,9 @@ exl-id: 65a8ae42-0c0f-4bc5-b99e-52b02ab2130a
 >
 >The [!DNL Talon.One] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
-Read this tutorial to learn how to ingest batch data from your [!DNL Talon.One] account into Adobe Experience Platform using the sources workspace in the UI.
+The [!DNL Talon.One] source for batch data receives events recorded for a [!DNL Talon.One] application. A common use-case is to filter for `talon_session_closed` to receive completed transactions, including loyalty points gained or redeemed, coupons redeemed, discounts granted, etc. Read the [[!DNL Talon.One] Management API reference](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount) for more information on the API.
+
+Follow this tutorial to learn how to ingest batch data from your [!DNL Talon.One] account into Adobe Experience Platform using the sources workspace in the UI.
 
 ## Getting started
 
@@ -41,6 +43,10 @@ To ingest data from [!DNL Talon.One], select the **[!UICONTROL Talon.One Batch S
 
 ### Create a new account
 
+>[!TIP]
+>
+>Before creating a new account, review the [prerequisites](../../../../connectors/loyalty/talon-one.md#prerequisites) in the [!DNL Talon.One] overview to learn which authentication credentials are required.
+
 To create a new account for your [!DNL Talon.One] source, select **[!UICONTROL New account]** and provide a name and an optional description for your account. Next, provide your [!DNL Talon.One] domain and your [!UICONTROL Talon.One Management API Key]. When finished, select **[!UICONTROL Connect to source]** and allow for a few moments for your connection to establish.
 
 ![The create new account step of the sources workflow.](../../../../images/tutorials/create/talon-one-batch/new.png)
@@ -52,6 +58,10 @@ To use an existing account, select **[!UICONTROL Existing account]** and select 
 ## Select data
 
 Once you have authenticated, provide values for your **applicationId** and **sessionType**. During this step, you can use the preview functionalities to inspect the structure of your data. When finished, select **[!UICONTROL Next]** to proceed.
+
+>[!TIP]
+>
+>To capture completed transactions—including loyalty points earned or redeemed, redeemed coupons, and granted discounts—select the `talon_session_closed` event type. For details on filtering events by type, refer to the ["type" query parameter in the [!DNL Talon.One] API documentation](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount).
 
 ![The select data and preview steps of the sources workflow.](../../../../images/tutorials/create/talon-one-batch/select-data.png)
 

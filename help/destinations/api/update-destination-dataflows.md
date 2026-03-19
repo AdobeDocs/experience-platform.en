@@ -23,7 +23,7 @@ This tutorial also requires you to have a working understanding of the following
 * [Destinations](../home.md): [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 * [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully update your dataflow using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know to successfully update your dataflow using the [!DNL Flow Service] API.
 
 ### Reading sample API calls {#reading-sample-api-calls}
 
@@ -31,7 +31,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers {#gather-values-for-required-headers}
 
-In order to make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+To make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -62,6 +62,8 @@ GET /flows/{FLOW_ID}
 | Parameter | Description |
 | --------- | ----------- |
 | `{FLOW_ID}` | The unique `id` value for the destination dataflow you want to retrieve. |
+
+{style="table-layout:auto"}
 
 **Request**
 
@@ -383,6 +385,8 @@ curl -X PATCH \
 | `path` | Defines the part of the flow that is to be updated. |
 | `value` | The new value you want to update your parameter with. |
 
+{style="table-layout:auto"}
+
 **Response**
 
 A successful response returns your flow ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your flow ID.
@@ -501,6 +505,8 @@ curl -X PATCH \
 | `endDate` | For *batch destinations* only. This field is required only when adding an audience to a dataflow in batch file export destinations like Amazon S3, SFTP, or Azure Blob. <br> Not applicable when selecting `"exportMode":"DAILY_FULL_EXPORT"` and `"frequency":"ONCE"`. <br> Sets the date when audience members stop being exported to the destination. |
 | `startTime` | For *batch destinations* only. This field is required only when adding an audience to a dataflow in batch file export destinations like Amazon S3, SFTP, or Azure Blob. <br> Mandatory. Select the time when files containing members of the audience should be generated and exported to your destination. |
 
+{style="table-layout:auto"}
+
 **Response**
 
 A successful response returns your flow ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your flow ID.
@@ -561,6 +567,7 @@ curl -X PATCH \
 | `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. To remove an audience from a dataflow, use the `remove` operation. |
 | `path` | Specifies which existing audience should be removed from the destination dataflow, based on the index of the audience selector. To retrieve the order of audiences in a dataflow, perform a GET call to the `/flows` endpoint and inspect the `transformations.segmentSelectors` property. To delete the first audience in the dataflow, use `"path":"/transformations/0/params/segmentSelectors/selectors/0"`.|
 
+{style="table-layout:auto"}
 
 **Response**
 
@@ -798,6 +805,8 @@ curl -X PATCH \
 | `path` | Defines the part of the flow that is to be updated. When adding a profile attribute to a dataflow, use the path specified in the example. |
 | `value.path` | The value of the profile attribute that you are adding to the dataflow. |
 
+{style="table-layout:auto"}
+
 **Response**
 
 A successful response returns your flow ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your flow ID.
@@ -851,6 +860,7 @@ curl -X PATCH \
 | `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. To remove an audience from a dataflow, use the `remove` operation. |
 | `path` | Specifies which existing profile attribute should be removed from the destination dataflow, based on the index of the audience selector. To retrieve the order of profile attributes in a dataflow, perform a GET call to the `/flows` endpoint and inspect the `transformations.profileSelectors` property. To delete the first audience in the dataflow, use `"path":"transformations/0/params/segmentSelectors/selectors/0/"`.|
 
+{style="table-layout:auto"}
 
 **Response**
 

@@ -90,7 +90,7 @@ Refer to the table below for information about the destination export type and f
 ## Set up destination and activate audiences {#set-up}
 
 >[!IMPORTANT]
-> 
+>
 >* To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions).
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
@@ -100,7 +100,7 @@ The video below also demonstrates the steps to configure a Marketo destination a
 
 >[!IMPORTANT]
 >
->The video does not entirely reflect current capability. For the most up-to-date information, please refer to the guide linked above. The following parts of the video are outdated:
+>The video does not entirely reflect current capability. For the most up-to-date information, refer to the guide linked above. The following parts of the video are outdated:
 > 
 >* The destination card that you should use in the Experience Platform UI is **[!UICONTROL Marketo V2]**.
 >* The video does not show the new **[!UICONTROL Person creation]** selector field in the connect to destination workflow. To use that field, you must map both first name and last name during the attribute mapping step.

@@ -9,7 +9,7 @@ exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 # Connect to file-based email marketing destinations and activate data using the Flow Service API
 
 >[!IMPORTANT]
-> 
+>
 >* To connect to a destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). 
 >
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
@@ -21,7 +21,7 @@ exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 This tutorial demonstrates how to use the Flow Service API to create a file-based [email marketing destination](../catalog/email-marketing/overview.md), create a dataflow to your newly created destination, and export data to your newly created destination via CSV files.
 
 >[!TIP]
-> 
+>
 >To learn how to activate data to cloud storage destinations using the Flow Service API, read the [dedicated API tutorial](/help/destinations/api/activate-segments-file-based-destinations.md).
 
 This tutorial uses the [!DNL Adobe Campaign] destination in all examples, but the steps are identical for file-based email marketing destinations.
@@ -38,7 +38,7 @@ This guide requires a working understanding of the following components of Adobe
 *   [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] allows you to build audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-Time Customer Profile] data.
 *   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you need to know in order to activate data to batch destinations in Experience Platform.
+The following sections provide additional information that you need to know to activate data to batch destinations in Experience Platform.
 
 ### Gather required credentials {#gather-required-credentials}
 
@@ -59,7 +59,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values-headers}
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+To make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -138,7 +138,7 @@ Next, you must connect to your [!DNL Experience Platform] data, so you can expor
 1. First, you must perform a call to authorize access to your data in [!DNL Experience Platform], by setting up a base connection.
 2. Then, using the base connection ID, perform another call in which you create a *source connection*, which establishes the connection to your [!DNL Experience Platform] data.
 
-### Authorize access to your data in [!DNL Experience Platform]
+### Authorize access to your data in [!DNL Experience Platform] {#authorize-access-experience-platform}
 
 **API format**
 
@@ -545,7 +545,7 @@ A successful response contains the base connection's unique identifier (`id`). S
 [!DNL Adobe Experience Platform] exports data for batch email marketing and cloud storage destinations in the form of [!DNL CSV] files. In this step, you can determine the path in your storage location where the files will be exported.
 
 >[!IMPORTANT]
-> 
+>
 >[!DNL Adobe Experience Platform] automatically splits the export files at 5 million records (rows) per file. Each row represents one profile.
 >
 >Split file names are appended with a number that indicates the file is part of a larger export, as such: `filename.csv`, `filename_2.csv`, `filename_3.csv`.

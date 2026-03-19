@@ -86,7 +86,7 @@ Supported audiences by audience data type:
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="Learn how to configure a datastream"
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
@@ -109,7 +109,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Read [Activate profiles and audiences edge personalization destinations](../../ui/activate-edge-personalization-destinations.md) for instructions on activating audiences to this destination.
@@ -174,7 +174,7 @@ alloy("sendEvent", {
   });
 ```
 
-### Example response for [!UICONTROL Custom Personalization With Attributes]
+### Example response for [!UICONTROL Custom Personalization With Attributes] {#example-response-custom-personalization-with-attributes}
 
 When using **[!UICONTROL Custom Personalization With Attributes]**, the API response will look similar to the example below.
 

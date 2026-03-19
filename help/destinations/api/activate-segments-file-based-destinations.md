@@ -47,7 +47,7 @@ This guide requires a working understanding of the following components of Adobe
 *   [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] allows you to build audiences and generate audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-Time Customer Profile] data.
 *   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you need to know in order to activate data to file-based destinations in Experience Platform.
+The following sections provide additional information that you need to know to activate data to file-based destinations in Experience Platform.
 
 ### Required permissions {#permissions}
 
@@ -61,7 +61,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values-headers}
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+To make calls to [!DNL Experience Platform] APIs, you must first complete the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -697,7 +697,7 @@ Note the highlighted line with inline comments in the [!DNL connection spec] exa
 
 >[!ENDTABS]
 
-Using the properties specified in the authentication spec (i.e. `authSpec` from the response) you can create a base connection with the required credentials, specific to each destination type, as shown in the examples below:
+Using the properties specified in the authentication spec (that is `authSpec` from the response) you can create a base connection with the required credentials, specific to each destination type, as shown in the examples below:
 
 >[!BEGINTABS]
 
@@ -1088,7 +1088,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-### Add encryption to exported files
+### Add encryption to exported files {#add-encryption}
 
 Optionally, you can add encryption to your exported files. To do this, you need to add items from the `encryption` object. See the request example below with the mandatory parameters highlighted:
 
@@ -3269,7 +3269,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Note the Dataflow ID from the response. This ID will be required in later steps.
 
-### Add audiences to the export
+### Add audiences to the export {#add-audiences}
 
 In this step, you can also select which audiences you want to export to the destination. For extensive information about this step and the request format to add an audience to the dataflow, view the examples in the [Update a destination dataflow](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) section of the API reference documentation.
 
@@ -3288,7 +3288,7 @@ For example, to obtain the following mapping shown in the UI, you would need to 
 
 ![Example of mapping step](/help/destinations/assets/api/file-based-segment-export/mapping-example.png)
 
-### Create an input schema
+### Create an input schema {#create-input-schema}
 
 To create an input schema, you first need to retrieve your [union schema](/help/profile/ui/union-schema.md) and the identities that can be exported to the destination. This is the schema of attributes and identities which you can select as your source mapping. 
 
@@ -3739,7 +3739,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 The ID in the response represents the unique identifier of the input schema that you have created. Copy the ID from the response as you will reuse this in a later step.
 
-### Create an output schema
+### Create an output schema {#create-output-schema}
 
 Next, you must set up the output schema for your export. First, you need to find and inspect your existing partner schema.  
 

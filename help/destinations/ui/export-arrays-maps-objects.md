@@ -28,7 +28,7 @@ Learn how to export arrays, maps, and objects from Real-Time CDP to [cloud stora
 
 Consider this page your go-to place for anything that you want to know about exporting arrays, maps, and other object types from Experience Platform.
 
-## Bottom line up front
+## Bottom line up front {#bottom-line}
 
 Get the most important information about the functionality in this section, and continue below to the other sections in the document for detailed information.
 

@@ -39,8 +39,8 @@ Follow the steps below to delete existing destination accounts.
 
 ![Confirm account deletion](../assets/ui/delete-accounts/confirm-account-deletion.png)
 
-## Next steps
+## Next steps {#next-steps}
 
 By following this tutorial, you have successfully used the destinations workspace to delete existing accounts.
 
-For steps on how to perform these operations programmatically using the [!DNL Flow Service] API, please refer to the tutorial on [deleting connections using the Flow Service API](../api/delete-destination-account.md)
+For steps on how to perform these operations programmatically using the [!DNL Flow Service] API, refer to the tutorial on [deleting connections using the Flow Service API](../api/delete-destination-account.md)

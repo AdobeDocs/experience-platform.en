@@ -120,7 +120,7 @@ alloy("getIdentity",{
 
 Using an XDM [`identityMap` field](/help/xdm/schema/composition.md#identityMap), you can identify a device/user using multiple identities, set their authentication state, and decide which identifier is considered the primary one. If no identifier has been set as `primary`, the primary defaults to be the `ECID`.
 
-`identityMap` fields are updated using the `sentEvent` command.
+`identityMap` fields are updated using the `sendEvent` command.
 
 ```javascript
 alloy("sendEvent", {

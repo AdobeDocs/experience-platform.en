@@ -60,7 +60,7 @@ Watch the video below for an end-to-end explanation of the workflow described in
 
 ### Step 1: Send your audiences from Experience Platform to LiveRamp, through the [!DNL LiveRamp - Onboarding] destination {#onboarding}
 
-The first thing that you must do in order to activate your audiences to curated destinations based on LiveRamp RampIDs is to **export your audiences from Experience Platform to [!DNL LiveRamp]**.
+The first thing that you must do to activate your audiences to curated destinations based on LiveRamp RampIDs is to **export your audiences from Experience Platform to [!DNL LiveRamp]**.
 
 You do this by using the **[!DNL LiveRamp - Onboarding]** destination.
 

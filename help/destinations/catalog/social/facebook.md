@@ -14,15 +14,15 @@ You can use this destination for audience targeting across [!DNL Facebook's] fam
 
 ![Facebook destination in the Adobe Experience Platform UI.](../../assets/catalog/social/facebook/catalog.png)
 
-## Use cases
+## Use cases {#use-cases}
 
 To help you better understand how and when to use the [!DNL Facebook] destination, here are two sample use cases that Adobe Experience Platform customers can solve by using this feature.
 
-### Use case #1
+### Use case #1 {#use-case-1}
 
 An online retailer wants to reach existing customers through social platforms and show them personalized offers based on their previous orders. The online retailer can ingest email addresses from their own CRM to Adobe Experience Platform, build audiences from their own offline data, and send these audiences to the [!DNL Facebook] social platform, optimizing their advertising spending.
 
-### Use case #2
+### Use case #2 {#use-case-2}
 
 An airline has different customer tiers (Bronze, Silver, and Gold), and wants to provide each of the tiers with personalized offers via social platforms. However, not all customers use the airline's mobile app, and some of them have not logged on to the company's website. The only identifiers that the company has about these customers are membership IDs and email addresses.
 
@@ -158,7 +158,7 @@ Before you can use the `Extern_ID` namespace to send data to [!DNL Facebook], ma
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -199,7 +199,7 @@ To prevent token expiration causing interruptions in your activation dataflows, 
     ![Modal window with Reconnect OAuth option](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
-> 
+>
 >Your authentication credentials are refreshed and their expiration time is reset to 60 days.
 
 ### Fill in destination details {#destination-details}
@@ -244,7 +244,7 @@ When you are finished providing details for your destination connection, select 
 >abstract="Advertisers collected data directly from their customers and partners."
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 

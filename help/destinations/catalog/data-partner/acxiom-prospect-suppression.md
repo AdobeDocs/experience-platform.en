@@ -2,14 +2,14 @@
 title: Acxiom Prospect-Suppression
 description: Export your first-party audiences to the Acxiom destination, to allow Acxiom to suppress known or converted customers. Then use the Acxiom source connector to ingest and activate prospect lists from Acxiom, with your known or converted customers removed.
 last-substantial-update: 2024-03-14
-badge: Beta
+badge: label="Beta" type="Informative"
 exl-id: d82e8cd3-970c-44af-99b0-ea154eb3655e
 ---
 # [!DNL Acxiom Prospect-Suppression] destination connection
 
 >[!NOTE]
 >
->The [!DNL Acxiom Prospect-Suppression] destination is in beta. This destination connector and documentation page are created and maintained by the Acxiom team. For any inquiries or update requests, please contact them directly at acxiom-adobe-help@acxiom.com.
+>The [!DNL Acxiom Prospect-Suppression] destination is in beta. This destination connector and documentation page are created and maintained by the Acxiom team. For any inquiries or update requests, contact them directly at acxiom-adobe-help@acxiom.com.
 
 ## Overview {#overview}
 
@@ -86,7 +86,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the destination configuration workflow, fill in the fields listed in the two sections below.
@@ -95,7 +95,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-In order to access your bucket on Experience Platform, you need to provide valid values for the following credentials:
+To access your bucket on Experience Platform, you need to provide valid values for the following credentials:
 
 | Credential    | Description                                                                                              |
 |---------------|----------------------------------------------------------------------------------------------------------|
@@ -103,13 +103,13 @@ In order to access your bucket on Experience Platform, you need to provide valid
 | S3 Secret key | The secret key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team.              |
 | Bucket name   | This is your bucket where files will be shared. You can retrieve this value from the [!DNL Acxiom] team. |
 
-### New Account
+### New Account {#new-account}
 
 To Define a new Acxiom Managed S3 location:
 
 ![New Account](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
 
-### Existing Account
+### Existing Account {#existing-account}
 
 Accounts already defined using the [!DNL Acxiom Prospect Suppression] destination appear in a list pop-up. When selected, you can see details on the account in the right rail. View the example from the UI, when you navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**:
 
@@ -148,7 +148,7 @@ When you are finished providing details for your destination connection, select 
 
 Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
-### Mapping suggestions
+### Mapping suggestions {#mapping-suggestions}
 
 Processing requires name and address elements, while not all elements are required providing as much as possible will aid in successful matching.  Mapping suggestions are provided in the table below listing attributes on your destination side that are used by Acxiom processing that customers can map profile attributes to.  This should be treated as suggestions as not all elements are required and the source values will depend on the needs of the account.
 
@@ -169,7 +169,7 @@ Processing requires name and address elements, while not all elements are requir
 >
 >Additional fields not listed above will be included in the export, but will be ignored by Acxiom processing. 
 
-## Review your dataflow
+## Review your dataflow {#review-dataflow}
 
 Use the review page for a summary of your dataflow prior to submission
 
@@ -179,7 +179,7 @@ Use the review page for a summary of your dataflow prior to submission
 
 To verify if data has been exported successfully, check your [!DNL Amazon S3 Storage] bucket and make sure that the exported files contain the expected profile populations.
 
-## Next steps
+## Next steps {#next-steps}
 
 By following this tutorial, you have successfully created a dataflow to export batch data from Experience Platform to your [!DNL Acxiom] managed S3 location. You would need to contact your Acxiom representative with the name of the account, filename, and the bucket path so that processing can set up.
 

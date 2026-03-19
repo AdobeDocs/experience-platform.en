@@ -80,6 +80,6 @@ The following streaming destinations support automatic audience removal when you
 * [Twitter Custom Audiences](../catalog/social/twitter.md)
 * [Yahoo DataX](../catalog/advertising/datax.md)
 
-### Destinations which do not support audience removal
+### Destinations which do not support audience removal {#no-removal-support}
 
 For destinations not listed above, when you unmap an audience from the destination, Experience Platform only removes the mapping. The audience in the destination platform remains active until you manually delete it in the partner platform.

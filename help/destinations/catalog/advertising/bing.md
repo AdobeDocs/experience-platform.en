@@ -85,7 +85,7 @@ When configuring the destination, you must provide the following information:
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
@@ -114,11 +114,11 @@ When you are finished providing details for your destination connection, select 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_bing"
 >title="Preconfigured mapping sets"
->abstract="We have preconfigured these two mapping sets for you. When you activate data to Microsoft Bing, the profiles qualified for the activated audiences must have at least an ECID identity associated with their profile, in order to be successfully exported to the destination."
+>abstract="We have preconfigured these two mapping sets for you. When you activate data to Microsoft Bing, the profiles qualified for the activated audiences must have at least an ECID identity associated with their profile, to be successfully exported to the destination."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="Read more about the preconfigured mappings"
 
 >[!IMPORTANT]
-> 
+>
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
@@ -140,7 +140,7 @@ These mappings are grayed out and read-only. You do not need to configure anythi
 >
 >**ECID is required for export to succeed.** Profiles without ECID or without an ID sync mapping between ECID and Microsoft Advertising ID will not be exported.
 
-### Activation examples
+### Activation examples {#activation-examples}
 
 * **Profile with ECID and Microsoft Advertising ID mapping:** Profile is successfully exported and activated
 * **Profile with ECID only (no Microsoft Advertising ID mapping):** Profile is **not exported**. The ID sync mapping between ECID and MAID is required.

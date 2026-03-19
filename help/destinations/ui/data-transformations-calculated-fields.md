@@ -25,7 +25,7 @@ To perform various transformations on data exported to cloud storage destination
 
 To use calculated fields for data transformations:
 
-1. [Connect](/help/destinations/ui/connect-destination.md) to a desired cloud storage destination. When connecting to the desired cloud destination, toggle the **[!UICONTROL Export arrays, maps, objects]** [option off](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
+1. [Connect](/help/destinations/ui/connect-destination.md) to a desired cloud storage destination. When connecting to the desired cloud destination, toggle the **[!UICONTROL Export arrays, maps, objects]** [option off](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
 2. Go through the [activation steps for cloud storage destinations](/help/destinations/ui/activate-batch-profile-destinations.md) and get to the [mapping](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) step. 
  
 ## How to work with calculated fields {#how-to-export-calculated-fields}

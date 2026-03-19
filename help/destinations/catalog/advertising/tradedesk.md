@@ -87,7 +87,7 @@ Prerequisites depend on which identity types you plan to use for audience activa
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
@@ -117,7 +117,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -148,7 +148,7 @@ These mappings are grayed out and read-only. You do not need to configure anythi
 
 Experience Platform automatically checks each profile that belongs to audiences mapped in the activation workflow for all supported identity types and then activates the profile using any identities that are present.
 
-### Identity requirements by activation type
+### Identity requirements by activation type {#identity-requirements-by-activation-type}
 
 **Mobile ID activation (GAID/IDFA):** Profiles with just GAID or IDFA are sufficient for activation. No additional identities or prerequisites are required.
 
@@ -159,7 +159,7 @@ Experience Platform automatically checks each profile that belongs to audiences 
 
 **Multiple IDs behavior:** If a profile contains multiple supported identities, each identity will be activated separately to [!DNL The Trade Desk]. This ensures maximum reach and flexibility in your audience activation.
 
-### Activation examples
+### Activation examples {#activation-examples}
 
 * **Mobile ID profiles:** Profiles with GAID and/or IDFA are activated using their respective advertising IDs. If a profile contains both GAID and IDFA, each ID will be activated separately.
 * **Cookie-based profile:** A profile with ECID and a corresponding [!DNL Trade Desk ID] mapping will be activated using the Trade Desk ID for cookie-based targeting.

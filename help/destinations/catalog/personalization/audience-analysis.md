@@ -14,7 +14,7 @@ The [!UICONTROL Audience Analysis] destination allows you to enrich Adobe Experi
 >
 >This destination is in a limited testing phase. If you are interested in using this destination, contact your Adobe Account Team.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 The following are required before using this destination:
 
@@ -22,7 +22,7 @@ The following are required before using this destination:
 * You must be provisioned to use Customer Journey Analytics.
 * You must have at least one audience created in Adobe Experience Platform.
 
-## Supported identities
+## Supported identities {#supported-identities}
 
 Audience Analysis supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md). Experience Cloud ID (ECID) is typically used.
 
@@ -37,7 +37,7 @@ Audience Analysis supports the activation of identities described in the table b
 
 {style="table-layout:auto"}
 
-## Supported audiences
+## Supported audiences {#supported-audiences}
 
 The following types of audiences are supported when using this destination:
 
@@ -62,7 +62,7 @@ Supported audiences by audience data type:
 {style="table-layout:auto"}
 
 
-## Export type and frequency
+## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
 
@@ -73,15 +73,15 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
-## Configure new destination
+## Configure new destination {#configure-destination}
 
 >[!IMPORTANT]
-> 
+>
 >To create destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To create this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
-### Destination details
+### Destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
@@ -90,7 +90,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Datastream ID]**: The datastream ID that you want to enrich with qualifying audiences. You can obtain this ID in the [Datastreams manager](/help/datastreams/overview.md).
 * **[!UICONTROL Integration alias]**: The integration alias.
 
-### Alerts
+### Alerts {#alerts}
 
 You can enable alerts to receive notifications on the status of the dataflow to your destination. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
 
@@ -98,7 +98,7 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-### Governance policy & enforcement actions
+### Governance policy & enforcement actions {#governance-policy}
 
 This optional section allows you to define your data governance policies and ensure that the data used is compliant when audiences are sent and active.
 
@@ -107,7 +107,7 @@ When you are finished selecting the desired marketing actions for the destinatio
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Once the destination is created, you can activate the desired audiences for the destination.

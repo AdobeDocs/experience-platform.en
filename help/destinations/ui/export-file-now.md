@@ -8,10 +8,10 @@ exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 # Export files on-demand to batch destinations using the Experience Platform UI
 
 >[!IMPORTANT]
-> 
+>
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-## **[!UICONTROL Export file now]** overview {#overview}
+## [!UICONTROL Export file now] overview {#overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"
