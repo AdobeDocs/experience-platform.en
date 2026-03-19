@@ -5,6 +5,7 @@ solution: Experience Platform
 type: Documentation
 role: Admin, User
 hide: yes
+exl-id: b35aef7c-54f4-4758-9b36-a981510ae21b
 ---
 # Health Checks
 
