@@ -73,7 +73,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authenticate to destination {#authenticate}
 
-Authentication to the [!DNL FreeWheel] destination is handled automatically by Adobe. No credentials or API keys are required from you during authentication. Adobe manages the secure connection to [!DNL FreeWheel]'s ingestion bucket on your behalf.
+Authentication to the [!DNL FreeWheel] destination is handled automatically by Adobe. No credentials or API keys are required from you during authentication. Adobe manages the secure connection to [!DNL FreeWheel] on your behalf.
 
 ![Screenshot of the authentication step for the FreeWheel destination.](../../assets/catalog/advertising/freewheel/connect-destination.png)
 
