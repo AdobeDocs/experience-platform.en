@@ -87,6 +87,7 @@ role: Admin,User
         * [DoubleClick Floodlight (Beta) extension](./catalog/advertising/doubleclick-floodlight.md)
         * [Facebook Pixel extension](./catalog/advertising/facebook-pixel.md)
         * [Flashtalking OneTag extension](./catalog/advertising/flashtalking.md)
+        * [(Beta) FreeWheel connection](./catalog/advertising/freewheel.md)
         * [Google Ads connection](./catalog/advertising/google-ads-destination.md)
         * [Google Ad Manager connection](./catalog/advertising/google-ad-manager.md)
         * [(Beta) Google Ad Manager 360 connection](./catalog/advertising/google-ad-manager-360-connection.md)
