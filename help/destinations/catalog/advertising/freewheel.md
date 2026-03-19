@@ -1,8 +1,15 @@
 ---
 title: FreeWheel connection
 description: Learn how to activate audiences from Adobe Experience Platform to FreeWheel for programmatic advertising across connected TV, display, and video inventory.
+hide: yes
+hidefromtoc: yes
+badge: label="Beta" type="Informative"
 ---
 # [!DNL FreeWheel] connection {#freewheel}
+
+>[!AVAILABILITY]
+>
+>The [!DNL FreeWheel] destination is currently in Beta and is only available to select customers. To request access, contact your Adobe representative.
 
 ## Overview {#overview}
 
