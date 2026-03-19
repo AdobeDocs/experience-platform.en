@@ -52,9 +52,17 @@ The [!UICONTROL Attributes] tab lets you browse Account attributes belonging to 
 
 ![The Attributes tab is displayed in the Audience Builder](../assets/segmentation/audience-builder/attributes.png)
 
-When selecting an attribute, you can see summary data by selecting the [information icon](../../images/icons/info.png). The summary data includes information such as top values, an explanation of what the field is, as well as the percentage of accounts that contain values for this attribute.
+When selecting an attribute, you can see summary data by selecting the [information icon](../../images/icons/info.png). The summary data includes information such as top values, an explanation of what the field is, the record count of the values, as well as the percentage of accounts that contain values for this attribute.
+
+The **[!UICONTROL Populated]** section shows the number of records where the attribute is populated compared to the total number of available records as well as the percentage of accounts that have a value for this field.
+
+The **[!UICONTROL Top values]** section displays the most frequently occurring values for this attributes, and includes details such as the value, the number of records that have the value, as well as the percentage of total records the value represents.
 
 ![A popover that displays a fully populated version of the summary data for an attribute.](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
+
+Alternatively, you can see the distribution of your data with the minimum, mean (average), and maximum values displayed.
+
+![A popover that displays the statistics for an attribute, including the minimum, mean, and maximum values.](../assets/segmentation/audience-builder/statistics.png)
 
 If an attribute is populated by less than 25% of accounts, the ![data notice icon](../../images/icons/data-notice.png) will be displayed instead. The same summary data will be displayed for the attribute, regardless.
 
@@ -66,7 +74,7 @@ If an attribute is populated by less than 25% of accounts, the ![data notice ico
 >
 >This summary data is updated on a **daily** basis.
 
-For a more detailed guide on the Audience Builder, read the [Audience Builder user guide](../../segmentation/ui/segment-builder.md){target="_blank"}.
+For a more detailed guide on attributes within Audience Builder, read the [Audience Builder user guide](../../segmentation/ui/segment-builder.md){target="_blank"}.
 
 ### Audiences {#audiences}
 
