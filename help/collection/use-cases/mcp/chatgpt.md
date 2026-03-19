@@ -200,7 +200,7 @@ alloy("configure", {
 });
 
 // The widget receives handles from the tool result.
-const handles = toolOutput.structuredContent._adobe.handles;
+const { identityMap, handles } = window.openai?.toolOutput.structuredContent._adobe ?? {};
 
 // applyResponse consumes the Edge response body. Commonly, you pass an object
 // with the "handle" array from the server-side interact call.
