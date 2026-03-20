@@ -162,37 +162,37 @@ The **[!UICONTROL Streaming audience count]** section displays the number of str
 
 ### Edge capacities {#edge-capacities}
 
-The Edge capacities section outlines information about your organization's edge capacities. Specifically, this section displays capacity information about edge throughput and edge audiences. You can change the lookback period for the organization's edge capacities.
+The **[!UICONTROL Edge capacities]** section outlines information about your organization's edge capacities. Specifically, this section displays capacity information about edge segmentation throughput and edge audiences. You can change the lookback period for the organization's edge capacities.
 
-IMAGE
+![The Edge capacities section is displayed. This outlines information including the edge segmentation throughput and the edge audience count.](/help/landing/images/capacity/edge-capacities.png)
 
-#### Edge throughput {#edge-throughput}
+#### Edge segmentation throughput {#edge-streaming-throughput}
 
-The **[!UICONTROL Edge throughput]** section displays information about the edge throughput within your organization and organization's sandboxes. The edge throughput value measures the combined peak inbound events per second for edge ingestion into Profile service.
+The **[!UICONTROL Edge segmentation throughput]** section displays information about the edge segmentation throughput within your organization and organization's sandboxes. The edge segmentation throughput value measures the combined peak inbound events per second for edge ingestion into Profile service.
 
-IMAGE
+![The Edge segmentation throughput section is displayed. This shows information about the edge segmentation throughput within your organization and its sandboxes.](/help/landing/images/capacity/edge-segmentation-throughput.png)
 
 | Column name | Description |
 | ----------- | ----------- |
 | Organization | The name of the organization. The available sandboxes for the organization are listed under the organization's name. |
 | Usage RPS (Peak) | The peak throughput of data in the sandbox within the selected lookback period. |
-| Capacity RPS | The maximum peak throughput for the sandbox. |
-| Violation | If a violation has occurred, the type of violation for edge throughput. |
+| Capacity RPS | The maximum peak throughput for the organization. |
+| Violation | If a violation has occurred, the type of violation for edge segmentation throughput. |
 | Recommended actions | A column that describes the recommended action to alleviate the violation. |
 
-You can select the organization to see a more detailed view of the organization's edge throughput.
+You can select the organization to see a more detailed view of the organization's edge segmentation throughput.
 
-IMAGE
+![The organization is highlighted.](/help/landing/images/capacity/select-organization.png)
 
-The Edge Segmentation Throughput page is displayed. You can see a graph that displays the request throughput compared to the capacity limit. Within this page, you can adjust the lookback period for the displayed graph.
+The **[!UICONTROL Edge Segmentation Throughput]** page is displayed. You can see a graph that displays the request throughput compared to the capacity limit. Within this page, you can adjust the lookback period for the displayed graph.
 
-IMAGE
+![The Edge Segmentation Throughput page is displayed. This shows a graph detailing the throughput compared to the capacity limit.](/help/landing/images/capacity/edge-segmentation-throughput-details.png)
 
 #### Edge audience count {#edge-audience-count}
 
 The **[!UICONTROL Edge audience count]** section displays the number of edge audiences within each sandbox as well as the maximum number of edge audiences allowed within the sandbox.
 
-IMAGE
+![The Edge audience count section is displayed. This shows information related to the edge audience count.](/help/landing/images/capacity/edge-audience-count.png)
 
 | Column name | Description |
 | ----------- | ----------- |
@@ -201,7 +201,7 @@ IMAGE
 | Usage | The number of audiences of the listed type that are in the sandbox. |
 | Capacity | The maximum number of audiences of the listed type that are allowed in the sandbox. |
 
-## Capacity best practices {#suggestions}
+## Streaming throughput best practices {#streaming-throughput-suggestions}
 
 You can resolve your throughput violations by adopting one of the following recommendations:
 
