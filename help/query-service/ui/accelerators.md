@@ -6,7 +6,7 @@ description: Use Data Distiller Accelerators to run and schedule Adobe-approved 
 ---
 # Data Distiller Accelerators {#data-distiller-accelerators}
 
-Data Distiller Accelerators are a library of Adobe-approved, parameterized SQL templates for common analytical scenarios. Accelerators reduce setup time and errors by providing pre-tested SQL for common workflows. You can discover accelerators, supply parameter values, and run or schedule the resulting queries without writing SQL from scratch. To customize an accelerator, use **[!UICONTROL Create custom template]** to clone it into an editable query template that you own.
+Data Distiller Accelerators are Adobe-authored, parameterized SQL templates designed for common analytical scenarios. They help reduce setup time and minimize errors by providing pre-tested queries that you can run or schedule without writing SQL from scratch. Accelerators are read-only and maintained by Adobe, ensuring consistency across your organization; however, you can save them as custom templates if you need to make edits.
 
 This guide is for Data Engineers and Analysts who run SQL in Experience Platform and want to use pre-built templates for common analyses. After reading this guide, you will be able to discover, run, schedule, and clone accelerators for your use cases.
 
@@ -18,15 +18,11 @@ This guide is for Data Engineers and Analysts who run SQL in Experience Platform
 
 To use accelerators, you must have access to the Queries workspace in Experience Platform. You should understand the Query Editor, how to run queries, and the concept of parameterized queries (placeholders in SQL that are replaced with values at runtime). See the [Query Editor user guide](./user-guide.md) and [Parameterized queries in Query Editor](./parameterized-queries.md) for background.
 
-## Overview {#overview}
-
-Accelerators are Adobe-authored, parameterized SQL templates. They are read-only; you cannot edit or delete them. You can save an accelerator as a custom template and edit that. Only Adobe can add, modify, or remove accelerators. Accelerators are shared across teams in your organization so everyone can use the same templates for consistent analysis. You cannot see who authored or modified accelerators; Adobe manages all changes.
-
-### When to use accelerators {#when-to-use}
+## When to use accelerators {#when-to-use}
 
 Use accelerators when you need pre-built SQL for common patterns such as funnel analysis, moving averages, audience overlap, or similar analytical workflows. If no accelerator fits your use case, [write a custom query in the Query Editor](./user-guide.md#query-authoring) or request a new accelerator (see [Request a new accelerator](#request-accelerator)).
 
-### Accelerator discovery paths {#discovery-paths}
+## Accelerator discovery paths {#discovery-paths}
 
 You can discover accelerators in two ways:
 
@@ -40,7 +36,7 @@ You can discover accelerators in two ways:
 
 ## Open an accelerator in the Query Editor {#open-accelerator}
 
-Select an accelerator name from the **[!UICONTROL Accelerators]** tab or from the **[!UICONTROL Recommended Data Distiller accelerators]** cards on the **[!UICONTROL Overview]** tab. The Query Editor opens with the accelerator's SQL pre-populated. When you open an accelerator, the SQL and parameters appear so you can review the syntax and purpose before running. The SQL is read-only: toolbar actions such as **[!UICONTROL Show results]**, **[!UICONTROL Undo text]**, **[!UICONTROL Format text]**, and **[!UICONTROL Save]** are disabled. The following actions remain available: run the query, cancel and exit (via **[!UICONTROL Cancel]**), and **[!UICONTROL Create custom template]**.
+When you open an accelerator, the Query Editor pre-populates the accelerator's SQL so you can review the syntax and purpose before running. The SQL is read-only: toolbar actions such as **[!UICONTROL Show results]**, **[!UICONTROL Undo text]**, **[!UICONTROL Format text]**, and **[!UICONTROL Save]** are disabled. The following actions remain available: run the query, cancel and exit (via **[!UICONTROL Cancel]**), and **[!UICONTROL Create custom template]**.
 
 The right-hand panel displays accelerator metadata: **[!UICONTROL Accelerator ID]**, **[!UICONTROL Name]**, **[!UICONTROL Last modified]**, **[!UICONTROL Modified by]**, and **[!UICONTROL Add schedule]**.
 
@@ -64,7 +60,7 @@ For full details on running queries, including result limits, cancel, and output
 
 You can schedule an accelerator directly without cloning it. Select **[!UICONTROL Add schedule]** in the right-hand panel when the accelerator is open in the Query Editor. The scheduling workflow is the same as for other query templates: set frequency, start and end dates, and the output dataset. For accelerators, you are prompted to enter parameter values in the schedule setup before saving. Parameter values are reused for each run.
 
-For step-by-step scheduling instructions, see [Create a query schedule](./query-schedules.md#create-schedule). For parameterized query scheduling details, see [Schedule a parameterized query](./parameterized-queries.md#schedule).
+For step-by-step scheduling instructions, see [Create a query schedule](./query-schedules.md#create-schedule). 
 
 ## Create a custom template from an accelerator {#create-custom-template}
 
@@ -89,7 +85,9 @@ The cloned template differs from the original accelerator in these ways:
 
 ## Dashboard-linked accelerators {#dashboard-accelerators}
 
-Some accelerators from the **[!UICONTROL Recommended Data Distiller accelerators]** section on the **[!UICONTROL Overview]** tab link to the Dashboards workspace instead of the Query Editor. Examples include Audience Identity Overlaps and Advanced audience overlaps. These open dashboard templates that provide visualizations for audience analysis. The full set of dashboard-linked accelerators is available in the product. See the [Query pro mode overview](../../dashboards/sql-insights-query-pro-mode/overview.md) for details on dashboard templates.
+Some accelerators from the **[!UICONTROL Recommended Data Distiller accelerators]** section on the **[!UICONTROL Overview]** tab link to the [!UICONTROL Dashboards] workspace instead of the Query Editor. Examples include [!UICONTROL Audience Identity Overlaps] and [!UICONTROL Advanced audience overlaps]. These open dashboard templates that provide visualizations for audience analysis. The full set of dashboard-linked accelerators is available in the product. 
+
+Explore how [dashboard templates](../../dashboards/sql-insights-query-pro-mode/templates/overview.md) support audience analysis, segment comparison, and identity insights for improved targeting.
 
 ## Request a new accelerator {#request-accelerator}
 
