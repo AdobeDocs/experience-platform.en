@@ -26,7 +26,7 @@ Before you begin, ensure you meet the following requirements:
 
 Use accelerators when you need pre-built SQL for common analytical patterns such as funnel analysis, moving averages, or audience overlap.  If no accelerator fits your use case, [write a custom query in the Query Editor](./user-guide.md#query-authoring) or request a new accelerator (see [Request a new accelerator](#request-accelerator)).
 
-To begin using accelerators, navigate to the Queries workspace and open the Accelerators tab.
+To begin using accelerators, navigate to the Queries workspace and open the **[!UICONTROL Accelerators]** tab or the **[!UICONTROL Overview tab]**. Some accelerators run SQL queries in the Query Editor, while others open dashboards with prebuilt visualizations, depending on the use case.
 
 ## Accelerator discovery paths {#discovery-paths}
 
@@ -54,7 +54,7 @@ If the card opens a dashboard instead of the Query Editor, see [Dashboard-linked
 
 After you select an accelerator from the **[!UICONTROL Accelerators]** tab or **[!UICONTROL Overview]** tab, the Query Editor opens with the accelerator SQL preloaded.
 
-The SQL is read-only, and toolbar actions such as [!UICONTROL Show results], [!UICONTROL Undo text], [!UICONTROL Format text], [!UICONTROL Save] are disabled.
+The SQL is read-only, and toolbar actions such as [!UICONTROL Show results], [!UICONTROL Undo text], [!UICONTROL Format text], and [!UICONTROL Save] are disabled. To execute the query, use the play icon in the toolbar. Running the query executes it with the provided parameters and displays results in the **[!UICONTROL Results]** tab.
 
 You can still perform the following actions:
 
@@ -70,14 +70,14 @@ The right-hand panel displays [!UICONTROL Accelerator ID], [!UICONTROL Name], [!
 
 After opening an accelerator, you must provide values for all parameters before running the query.
 
-Parameters use the `${PARAMETER_NAME}` syntax and appear in the **[!UICONTROL Query parameters]** tab below the editor.
+Parameters use the `${PARAMETER_NAME}` syntax and appear in the **[!UICONTROL Query parameters]** tab below the editor. For example, a parameter such as `${START_DATE}` might require a date value in `YYYY-MM-DD` format (for example, `2024-01-01`), while `${AUDIENCE_ID}` might require a specific audience identifier. The required format depends on how the parameter is defined in the accelerator SQL.
 
 To run an accelerator:
 
 1. Select **[!UICONTROL Query parameters]** and enter a value for each parameter.  
 2. Select the play icon (![The play icon.](../../images/icons/play.png)) in the toolbar to run the query.
 
-The query executes and, if successful, the results table populates in the **[!UICONTROL Results]** tab.
+The query executes and, if successful, the results table populates in the **[!UICONTROL Results]** tab for immediate inspection. These results are not automatically saved to a dataset unless you explicitly configure output settings or create a schedule.
 
 >[!IMPORTANT]
 >
@@ -85,12 +85,13 @@ The query executes and, if successful, the results table populates in the **[!UI
 
 For more information on parameterized queries, see [Parameterized queries in Query Editor](./parameterized-queries.md). For full query execution details, including limits and output options, see the [Query Editor user guide](./user-guide.md#run-a-query).
 
-
 ## Schedule an accelerator {#schedule-accelerator}
 
 After validating an accelerator in the Query Editor, you can schedule it to run automatically with fixed parameter values. Select **[!UICONTROL Add schedule]** in the right-hand panel to begin.
 
-The schedule configuration includes the frequency, start and end dates, output dataset, and parameter values that are reused for each run. For complete step-by-step instructions, see [Create a query schedule](./query-schedules.md#create-schedule).
+The schedule configuration includes the frequency, start and end dates, output dataset, and parameter values that are reused for each run. Each scheduled execution writes results to the specified dataset based on your configuration, enabling you to persist and reuse query output over time. 
+
+For complete step-by-step instructions, see [Create a query schedule](./query-schedules.md#create-schedule).
 
 ## Create a custom template from an accelerator {#create-custom-template}
 
