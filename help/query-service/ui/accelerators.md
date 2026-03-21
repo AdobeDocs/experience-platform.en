@@ -6,9 +6,9 @@ description: Use Data Distiller Accelerators to run and schedule Adobe-approved 
 ---
 # Data Distiller Accelerators {#data-distiller-accelerators}
 
-Data Distiller Accelerators are Adobe-authored, parameterized SQL templates designed for common analytical scenarios. They help reduce setup time and minimize errors by providing pre-tested queries that you can run or schedule without writing SQL from scratch. Accelerators are read-only and maintained by Adobe, ensuring consistency across your organization; however, you can save them as custom templates if you need to make edits.
+Data Distiller Accelerators are Adobe-authored, parameterized SQL templates designed for common analytical scenarios. You use accelerators to quickly run common analyses without writing SQL from scratch. Accelerators are read-only and maintained by Adobe, ensuring consistency across your organization. If you need to modify one, you can clone it as a custom template.
 
-This guide is for Data Engineers and Analysts who run SQL in Experience Platform and want to use pre-built templates for common analyses. After reading this guide, you will be able to discover, run, schedule, and clone accelerators for your use cases.
+After completing this guide, you can discover, run, schedule, and clone accelerators in the Queries workspace.
 
 >[!AVAILABILITY]
 >
@@ -16,88 +16,110 @@ This guide is for Data Engineers and Analysts who run SQL in Experience Platform
 
 ## Prerequisites {#prerequisites}
 
-To use accelerators, you must have access to the Queries workspace in Experience Platform. You should understand the Query Editor, how to run queries, and the concept of parameterized queries (placeholders in SQL that are replaced with values at runtime). See the [Query Editor user guide](./user-guide.md) and [Parameterized queries in Query Editor](./parameterized-queries.md) for background.
+Before you begin, ensure you meet the following requirements:
+
+- You have access to the Queries workspace in Experience Platform.
+- You understand [how to use the Query Editor and run queries](./user-guide.md).
+- You are familiar with [parameterized queries](./parameterized-queries.md) (placeholders in SQL replaced at runtime).
 
 ## When to use accelerators {#when-to-use}
 
-Use accelerators when you need pre-built SQL for common patterns such as funnel analysis, moving averages, audience overlap, or similar analytical workflows. If no accelerator fits your use case, [write a custom query in the Query Editor](./user-guide.md#query-authoring) or request a new accelerator (see [Request a new accelerator](#request-accelerator)).
+Use accelerators when you need pre-built SQL for common analytical patterns such as funnel analysis, moving averages, or audience overlap.  If no accelerator fits your use case, [write a custom query in the Query Editor](./user-guide.md#query-authoring) or request a new accelerator (see [Request a new accelerator](#request-accelerator)).
+
+To begin using accelerators, navigate to the Queries workspace and open the Accelerators tab.
 
 ## Accelerator discovery paths {#discovery-paths}
 
-You can discover accelerators in two ways:
+You can access accelerators from the Queries workspace in two ways, depending on whether you want the full catalog or recommended templates.
 
-- **[!UICONTROL Accelerators] tab:** Use this tab to browse the full catalog of accelerators. In Experience Platform, select **[!UICONTROL Queries]** in the left navigation to open the Queries workspace. Then select the **[!UICONTROL Accelerators]** tab to view a table of all available accelerators. The table shows each accelerator name, a SQL preview, and creation and modification dates. Select an accelerator name to open it in the Query Editor.
+### Use the Accelerators tab
+
+Use this path when you want to browse all available accelerators. To open the full accelerator catalog, select **[!UICONTROL Queries]** in the left navigation, then select the **[!UICONTROL Accelerators]** tab.
+
+The workspace displays a table of accelerators with names, SQL previews, and timestamps. Select an accelerator name to open it in the Query Editor.
 
 ![The Queries workspace with the Accelerators tab selected showing the table of accelerators.](../images/ui/accelerators/accelerators-tab-table.png)
 
-- **[!UICONTROL Overview] tab:** Use this tab for a curated subset of common templates. The **[!UICONTROL Recommended Data Distiller accelerators]** section on the **[!UICONTROL Overview]** tab displays a subset of accelerator cards. Some cards open the Query Editor; others open dashboard visualizations in the Dashboards workspace. If a card opens a dashboard instead of the Query Editor, see [Dashboard-linked accelerators](#dashboard-accelerators). Select a card to open the corresponding accelerator or dashboard.
+### Use the Overview tab
+
+Use this path when you want quick access to commonly used accelerators. Navigate to **[!UICONTROL Queries]**, then select the **[!UICONTROL Overview]** tab.
+
+In **[!UICONTROL Recommended Data Distiller accelerators]**, select a card. After selection, either the Query Editor with the accelerator loaded, or the [!UICONTROL Dashboards] workspace opens with a visualization
+
+If the card opens a dashboard instead of the Query Editor, see [Dashboard-linked accelerators](#dashboard-accelerators).
 
 ![The Queries workspace with the Overview tab selected showing a list of reccomened Data Distiller accelerators.](../images/ui/accelerators/queries-overview-accelerators.png)
 
 ## Open an accelerator in the Query Editor {#open-accelerator}
 
-When you open an accelerator, the Query Editor pre-populates the accelerator's SQL so you can review the syntax and purpose before running. The SQL is read-only: toolbar actions such as **[!UICONTROL Show results]**, **[!UICONTROL Undo text]**, **[!UICONTROL Format text]**, and **[!UICONTROL Save]** are disabled. The following actions remain available: run the query, cancel and exit (via **[!UICONTROL Cancel]**), and **[!UICONTROL Create custom template]**.
+After you select an accelerator from the **[!UICONTROL Accelerators]** tab or **[!UICONTROL Overview]** tab, the Query Editor opens with the accelerator SQL preloaded.
 
-The right-hand panel displays accelerator metadata: **[!UICONTROL Accelerator ID]**, **[!UICONTROL Name]**, **[!UICONTROL Last modified]**, **[!UICONTROL Modified by]**, and **[!UICONTROL Add schedule]**.
+The SQL is read-only, and toolbar actions such as [!UICONTROL Show results], [!UICONTROL Undo text], [!UICONTROL Format text], [!UICONTROL Save] are disabled.
+
+You can still perform the following actions:
+
+- Run the query  
+- Exit the editor using **[!UICONTROL Cancel]**  
+- Create a custom template using **[!UICONTROL Create custom template]**
+
+The right-hand panel displays [!UICONTROL Accelerator ID], [!UICONTROL Name], [!UICONTROL Last modified], [!UICONTROL Modified by], and [!UICONTROL Add schedule].
 
 ![The Query Editor with an accelerator open, showing the SQL area, Query parameters tab, and right-hand panel.](../images/ui/accelerators/accelerator-query-editor.png)
 
 ## Provide parameters and execute an accelerator {#provide-parameters-execute}
 
-Accelerators use the `${PARAMETER_NAME}` syntax for parameters. Parameters appear in the **[!UICONTROL Query parameters]** tab below the editor. Supply a value for each parameter before running the query.
+After opening an accelerator, you must provide values for all parameters before running the query.
+
+Parameters use the `${PARAMETER_NAME}` syntax and appear in the **[!UICONTROL Query parameters]** tab below the editor.
+
+To run an accelerator:
+
+1. Select **[!UICONTROL Query parameters]** and enter a value for each parameter.  
+2. Select the play icon in the toolbar to run the query.
+
+The query executes and the results table populates in the **[!UICONTROL Results]** tab.
 
 >[!IMPORTANT]
 >
 >You must supply values for all parameters before running an accelerator. Running the query with missing or empty parameter values causes the query to fail.
 
-When you open an accelerator, parameters are auto-populated from the SQL in the **[!UICONTROL Query parameters]** tab. When all parameters are set, select the play icon ![The play icon.](../../images/icons/play.png) in the toolbar above the Query Editor to run the query. Results appear in the **[!UICONTROL Results]** tab.
+For more information on parameterized queries, see [Parameterized queries in Query Editor](./parameterized-queries.md). For full query execution details, including limits and output options, see the [Query Editor user guide](./user-guide.md#run-a-query).
 
-For general parameter concepts and authoring your own parameterized queries, see [Parameterized queries in Query Editor](./parameterized-queries.md).
-
-For full details on running queries, including result limits, cancel, and output dataset options, see the [Query Editor user guide](./user-guide.md#run-a-query).
 
 ## Schedule an accelerator {#schedule-accelerator}
 
-You can schedule an accelerator directly without cloning it. Select **[!UICONTROL Add schedule]** in the right-hand panel when the accelerator is open in the Query Editor. The scheduling workflow is the same as for other query templates: set frequency, start and end dates, and the output dataset. For accelerators, you are prompted to enter parameter values in the schedule setup before saving. Parameter values are reused for each run.
+After validating an accelerator in the Query Editor, you can schedule it to run automatically with fixed parameter values. Select **[!UICONTROL Add schedule]** in the right-hand panel to begin.
 
-For step-by-step scheduling instructions, see [Create a query schedule](./query-schedules.md#create-schedule). 
+The schedule configuration includes the frequency, start and end dates, output dataset, and parameter values that are reused for each run. For complete step-by-step instructions, see [Create a query schedule](./query-schedules.md#create-schedule).
 
 ## Create a custom template from an accelerator {#create-custom-template}
 
-Create a custom template when you need to modify the SQL, run it under a different name, or apply org-specific changes. You can clone an accelerator to create a new template that you own. The original accelerator is not modified.
+Create a custom template when you need to modify the SQL or reuse the logic under your own configuration.
 
-1. [Open an accelerator in the Query Editor](#open-accelerator).
-2. Select **[!UICONTROL Create custom template]** in the editor toolbar.
-3. The editor switches to editable mode. Modify the SQL if needed, then select **[!UICONTROL Save]** or **[!UICONTROL Save and close]**.
-4. The cloned template appears in the **[!UICONTROL Templates]** tab. You can edit, schedule, or delete it like any other template.
+Open an accelerator in the Query Editor, then select **[!UICONTROL Create custom template]**. Modify the SQL as needed, and select **[!UICONTROL Save]** or **[!UICONTROL Save and close]** to store the template.
 
-See [Query templates](./query-templates.md) for managing templates.
+The template appears in the **[!UICONTROL Templates]** tab, where you can manage it like any other template. For more information, see [Query templates](./query-templates.md).
 
 ### What changes when you create a custom template {#custom-template-differences}
 
-The cloned template differs from the original accelerator in these ways:
+The cloned template differs from the original accelerator in that the SQL is editable and you can save changes, you can delete the template, and you can schedule the template. The **[!UICONTROL Modified by]** field shows your name.
 
-- The SQL is editable and you can save changes.
-- You can delete the template.
-- **[!UICONTROL Modified by]** shows your name (or the user who last modified it).
-- You can schedule the template.
-- The template appears in the **[!UICONTROL Templates]** tab, not in **[!UICONTROL Accelerators]**.
+The template appears in the **[!UICONTROL Templates]** tab instead of **[!UICONTROL Accelerators]**.
 
 ## Dashboard-linked accelerators {#dashboard-accelerators}
 
-Some accelerators from the **[!UICONTROL Recommended Data Distiller accelerators]** section on the **[!UICONTROL Overview]** tab link to the [!UICONTROL Dashboards] workspace instead of the Query Editor. Examples include [!UICONTROL Audience Identity Overlaps] and [!UICONTROL Advanced audience overlaps]. These open dashboard templates that provide visualizations for audience analysis. The full set of dashboard-linked accelerators is available in the product. 
+Some accelerators open dashboards instead of the Query Editor. These provide visualizations for audience analysis. Examples include **[!UICONTROL Audience Identity Overlaps]** and **[!UICONTROL Advanced audience overlaps]**.
 
-Explore how [dashboard templates](../../dashboards/sql-insights-query-pro-mode/templates/overview.md) support audience analysis, segment comparison, and identity insights for improved targeting.
+After opening a dashboard, use available controls and filters to explore and compare audience data. For more details, see [dashboard templates](../../dashboards/sql-insights-query-pro-mode/templates/overview.md).
 
 ## Request a new accelerator {#request-accelerator}
 
-Customers cannot add accelerators through the UI. If you have a recurring use case that you want as an accelerator, contact your Adobe support team to submit the request. Adobe evaluates requests and adds new accelerators based on industry applicability and common patterns.
+If you have a recurring use case that is not covered by existing accelerators, submit a request through your Adobe support channel.
+
+Adobe evaluates requests based on common usage patterns and industry applicability.
 
 ## Next steps {#next-steps}
 
-You can now discover, run, schedule, and clone Data Distiller Accelerators to perform common analyses with pre-tested SQL and fewer setup errors. To extend your workflows, consider these related tasks:
+You can now use accelerators to run and automate common analytical queries.
 
-- [Create and browse query templates](./query-templates.md#browse), including those cloned from accelerators.
-- [Author your own parameterized queries](./parameterized-queries.md) using the `$` syntax.
-- [Schedule queries](./query-schedules.md) for automated runs.
-- [Learn general Query Service workflows](./user-guide.md).
+To extend your workflows, create and browse [query templates](./query-templates.md#browse), author [parameterized queries](./parameterized-queries.md), schedule [queries](./query-schedules.md), or explore [Query Service workflows](./user-guide.md).
