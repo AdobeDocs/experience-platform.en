@@ -44,7 +44,7 @@ The workspace displays a table of accelerators with names, SQL previews, and tim
 
 Use this path when you want quick access to commonly used accelerators. Navigate to **[!UICONTROL Queries]**, then select the **[!UICONTROL Overview]** tab.
 
-In **[!UICONTROL Recommended Data Distiller accelerators]**, select a card. After selection, either the Query Editor with the accelerator loaded, or the [!UICONTROL Dashboards] workspace opens with a visualization
+In **[!UICONTROL Recommended Data Distiller accelerators]**, select a card. After selection, either the Query Editor with the accelerator loaded or the [!UICONTROL Dashboards] workspace opens with a visualization, depending on the accelerator.
 
 If the card opens a dashboard instead of the Query Editor, see [Dashboard-linked accelerators](#dashboard-accelerators).
 
@@ -75,9 +75,9 @@ Parameters use the `${PARAMETER_NAME}` syntax and appear in the **[!UICONTROL Qu
 To run an accelerator:
 
 1. Select **[!UICONTROL Query parameters]** and enter a value for each parameter.  
-2. Select the play icon in the toolbar to run the query.
+2. Select the play icon (![The play icon.](../../images/icons/play.png)) in the toolbar to run the query.
 
-The query executes and the results table populates in the **[!UICONTROL Results]** tab.
+The query executes and, if successful, the results table populates in the **[!UICONTROL Results]** tab.
 
 >[!IMPORTANT]
 >
