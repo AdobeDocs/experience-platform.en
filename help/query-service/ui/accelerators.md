@@ -64,7 +64,7 @@ For step-by-step scheduling instructions, see [Create a query schedule](./query-
 
 ## Create a custom template from an accelerator {#create-custom-template}
 
-Create a custom template when you need to modify the SQL, run it under a different name, or apply org-specific changes. This clones the accelerator into a new query template that you own. The original accelerator is not modified.
+Create a custom template when you need to modify the SQL, run it under a different name, or apply org-specific changes. You can clone an accelerator to create a new template that you own. The original accelerator is not modified.
 
 1. [Open an accelerator in the Query Editor](#open-accelerator).
 2. Select **[!UICONTROL Create custom template]** in the editor toolbar.
