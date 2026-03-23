@@ -47,16 +47,13 @@ The workspace displays a table of accelerators with names, SQL previews, and tim
 
 Use this path when you want quick access to commonly used accelerators. Navigate to **[!UICONTROL Queries]**, then select the **[!UICONTROL Overview]** tab.
 
-<!-- PM question: When a user selects a card in **[!UICONTROL Recommended Data Distiller accelerators]**, sometimes they open the **[!UICONTROL Dashboards]** workspace, and but there is no UI indicator to show the difference in outcomes before their selection. / If a card can open a dashboard instead of the Query Editor, what determines that behavior, and how would users recognize it? 
-
-Answer: this appears to be oversight on behalf of the engineering team. Currently they are simply the reccomenbed accelerators. The 4 pre-configured accelerators open in dhasboards. every other accelerator will open in the Query Editor. but you can go on to create your own custom dahsboard from SQL. Lets be slightly vague here. they are either reccomended or one of the 4.  -->
-
 In **[!UICONTROL Recommended Data Distiller accelerators]**, select a card.
 
-If the card opens a dashboard instead of the Query Editor, see [Dashboard-linked accelerators](#dashboard-accelerators).
+Recommended accelerators can open in different workspaces depending on their configuration. Some cards open the Query Editor with SQL preloaded, while others open a dashboard with prebuilt visualizations for audience analysis. If the card opens a dashboard instead of the Query Editor, see [Dashboard-linked accelerators](#dashboard-accelerators).
 
 ![The Queries workspace with the Overview tab selected showing a list of recommended Data Distiller accelerators.](../images/ui/accelerators/queries-overview-accelerators.png)
 
+<!--  -->
 ## Open an accelerator in the Query Editor {#open-accelerator}
 
 <!-- PM question: Is it accurate that accelerators selected from both the **[!UICONTROL Accelerators]** tab always open in the Query Editor? If not, which cases behave differently?
