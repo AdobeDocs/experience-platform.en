@@ -6,7 +6,7 @@ description: Use Data Distiller Accelerators to run and schedule Adobe-approved 
 ---
 # Data Distiller Accelerators {#data-distiller-accelerators}
 
-Data Distiller Accelerators are Adobe-authored, parameterized SQL templates designed for common analytical scenarios. You use accelerators to quickly run common analyses without writing SQL from scratch. Accelerators are read-only and maintained by Adobe, ensuring consistency across your organization. If you need to modify one, you can clone it as a custom template.
+Data Distiller Accelerators are Adobe-authored, parameterized SQL templates designed for common analytical scenarios. You use accelerators to run common analyses without writing SQL from scratch. Accelerators are read-only and maintained by Adobe, ensuring consistency across your organization. If you need to modify one, you can clone it as a custom template.
 
 After completing this guide, you can discover, run, schedule, and clone accelerators in the Queries workspace.
 
@@ -26,12 +26,11 @@ Before you begin, ensure you meet the following requirements:
 
 Use accelerators when you need pre-built SQL for common analytical patterns such as funnel analysis, moving averages, or audience overlap. If no accelerator fits your use case, [write a custom query in the Query Editor](./user-guide.md#query-authoring) or request a new accelerator (see [Request a new accelerator](#request-accelerator)).
 
-<!-- PM question: What are the supported accelerator types, and how does each type open in the product? Please confirm whether an accelerator opens in the Query Editor, opens a dashboard, or can do both depending on entry point. 
-
-Answer: there are currently 50 accelerotrs available in the Accelerator tab. They do not have 'types' they are sql written for differnet business use cases and reoccuring ongoing purposes. There are 4 different preconfigured accelerators - which are also known as Data Distiller Templates that open in dahsboards. Those special templates are designed to help you gain insights into your audience data. More details can be found on those below. You can even use your SQL to create a custom dahboard for reporting on your own insights. See SQL insights documentation to learn how to create your own cusotm dashabord (https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/overview) ] -->
+Accelerators include a broad set of Adobe-provided SQL templates for recurring analytical use cases. Some recommended accelerators provide direct access to preconfigured dashboards for audience analysis, while others open in the Query Editor for query execution and customization.
 
 To begin using accelerators, navigate to the **[!UICONTROL Queries]** workspace and open the **[!UICONTROL Accelerators]** tab or the **[!UICONTROL Overview]** tab.
 
+<!--  -->
 ## Accelerator discovery paths {#discovery-paths}
 
 You can access accelerators from the Queries workspace in two ways, depending on whether you want the full catalog or recommended templates.
