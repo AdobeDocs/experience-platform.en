@@ -14,7 +14,7 @@ This page lists and describes all the API operations that you can perform using 
 
 ## Getting started with sample template API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Get sample template {#generate-sample-template}
 
@@ -33,6 +33,8 @@ GET authoring/testing/template/sample/{DESTINATION_ID}
 | Parameter | Description |
 | -------- | ----------- |
 | `{DESTINATION_ID}` | The ID of the destination configuration for which you are generating a message transformation template. |
+
+{style="table-layout:auto"}
 
 **Request**
 

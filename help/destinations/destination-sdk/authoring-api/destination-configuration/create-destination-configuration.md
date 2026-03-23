@@ -28,7 +28,7 @@ For a detailed description of the capabilities that you can configure through th
 
 ## Getting started with destination configuration API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Create a destination configuration {#create}
 
@@ -215,7 +215,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`schemaConfig.profileFields` | Array | When you add predefined `profileFields` as shown in the configuration above, users will have the option of mapping Experience Platform attributes to the predefined attributes on your destination's side. |
 |`schemaConfig.profileRequired` | Boolean | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination's side, as shown in the example configuration above.|
 |`schemaConfig.segmentRequired` | Boolean | Always use `segmentRequired:true`. |
-|`schemaConfig.identityRequired` | Boolean | Use `true` if you users should be able to map identity namespaces from Experience Platform to your desired schema. |
+|`schemaConfig.identityRequired` | Boolean | Use `true` if users should be able to map identity namespaces from Experience Platform to your desired schema. |
 
 {style="table-layout:auto"}
 
@@ -227,11 +227,11 @@ A successful response returns HTTP status 200 with details of your newly created
 
 +++
 
-## API error handling
+## API error handling {#error-handling}
 
 Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
-## Next steps
+## Next steps {#next-steps}
 
 After reading this document, you now know how to create a new destination configuration through the Destination SDK `/authoring/destinations` API endpoint.
 

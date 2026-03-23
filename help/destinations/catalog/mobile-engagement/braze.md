@@ -78,7 +78,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -106,7 +106,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -120,7 +120,7 @@ Mapping consists of creating a link between your [!DNL Experience Data Model] (X
 
 To correctly map your XDM fields to the [!DNL Braze] destination fields, follow these steps:
 
-In the [!UICONTROL Mapping] step, click **[!UICONTROL Add new mapping]**.
+In the [!UICONTROL Mapping] step, select **[!UICONTROL Add new mapping]**.
    
 ![Braze Destination Add Mapping](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
@@ -138,7 +138,7 @@ In the [!UICONTROL Select source field] window, you can choose between two categ
 
 ![Braze Destination Mapping Source Namespace](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
-Choose your source field, then click **[!UICONTROL Select]**.
+Choose your source field, then select **[!UICONTROL Select]**.
 
 In the [!UICONTROL Target Field] section, click the mapping icon to the right of the field.
    
@@ -151,7 +151,7 @@ In the [!UICONTROL Select target field] window, you can choose between two categ
   
 ![Braze Destination Target Mapping Fields](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
-Choose your target field, then click **[!UICONTROL Select]**.
+Choose your target field, then select **[!UICONTROL Select]**.
 
 You should now see your field mapping in the list.
    

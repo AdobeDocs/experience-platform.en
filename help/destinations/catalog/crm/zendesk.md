@@ -26,7 +26,7 @@ Refer to Experience Platform documentation for [Audience Membership Details sche
 
 ### [!DNL Zendesk] prerequisites {#prerequisites-destination}
 
-In order to export data from Experience Platform to your [!DNL Zendesk] account you need to have a [!DNL Zendesk] account.
+To export data from Experience Platform to your [!DNL Zendesk] account you need to have a [!DNL Zendesk] account.
 
 #### Gather [!DNL Zendesk] credentials {#gather-credentials}
 
@@ -122,7 +122,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -196,7 +196,7 @@ Additional useful information from the [!DNL Zendesk] documentation is below:
 * [Making your first call](https://developer.zendesk.com/documentation/sales-crm/first-call/)
 * [Custom Fields](https://developer.zendesk.com/api-reference/sales-crm/requests/#custom-fields)
 
-### Changelog
+### Changelog {#changelog}
 
 This section captures the functionality and significant documentation updates made to this destination connector.
 
