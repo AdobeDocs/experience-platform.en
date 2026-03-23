@@ -16,7 +16,7 @@ hidefromtoc: true
 >- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**Release date: March 23, 2026**
+**Release date: March 24, 2026**
 
 New features and updates to existing features in Adobe Experience Platform:
 
