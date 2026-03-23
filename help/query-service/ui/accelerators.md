@@ -30,7 +30,6 @@ Accelerators include a broad set of Adobe-provided SQL templates for recurring a
 
 To begin using accelerators, navigate to the **[!UICONTROL Queries]** workspace and open the **[!UICONTROL Accelerators]** tab or the **[!UICONTROL Overview]** tab.
 
-<!--  -->
 ## Accelerator discovery paths {#discovery-paths}
 
 You can access accelerators from the Queries workspace in two ways, depending on whether you want the full catalog or recommended templates.
@@ -53,32 +52,29 @@ Recommended accelerators can open in different workspaces depending on their con
 
 ![The Queries workspace with the Overview tab selected showing a list of recommended Data Distiller accelerators.](../images/ui/accelerators/queries-overview-accelerators.png)
 
-<!--  -->
 ## Open an accelerator in the Query Editor {#open-accelerator}
 
-<!-- PM question: Is it accurate that accelerators selected from both the **[!UICONTROL Accelerators]** tab always open in the Query Editor? If not, which cases behave differently?
+This section describes how accelerators behave when they open in the Query Editor and what actions you can take before execution.
 
-Answer: All accelerators form the [!UICONTROL Accelerators] tab open in the Query Editor. The accelerators that open into dashboards are NOT available form the [!UICONTROL Accelerators] tab. -->
+All accelerators selected from the **[!UICONTROL Accelerators]** tab open in the Query Editor. Some recommended accelerators from the **[!UICONTROL Overview]** tab also open in the Query Editor, depending on the selected card.
 
-After you select an accelerator from the **[!UICONTROL Accelerators]** tab or **[!UICONTROL Overview]** tab, the Query Editor opens with the accelerator SQL preloaded.
+After you select an accelerator, the Query Editor opens with the accelerator SQL preloaded.
 
-<!-- PM question: Why is **[!UICONTROL Show results]** disabled for accelerators if users can still run the query and view results in the **[!UICONTROL Results]** tab? What is the functional difference?
-
-Answer: You cannot imediatley run an acelerator for the Query editor. First, you must select either [!UICONTROL Create custom template] to edit and cusomtize the SQL, or select [!UICONTROL Run as CTAS], depending on the accelerator. 
-If you run the SQL as a CTAS query then a new table will be created. The [!UICONTORL Enter output dataset details] dialog appears. Form here you must input a name for the output dataset that will be created. You can also add an optional description. Select Run as CTAS to confirm your configuration. 
-
-![The [!UICONTORL Enter output dataset details] dialog with a dataset name and description populated.](../images/ui/accelerators/output-dataset-details-dialog.png)
-
-The results can be seen in the datasets workspace or found through the [!UICONTROL Logs] tab.
--->
-
-The SQL is read-only, and toolbar actions such as [!UICONTROL Show results], [!UICONTROL Undo text], [!UICONTROL Format text], and [!UICONTROL Save] are disabled. To execute the query, use the play icon in the toolbar. Running the query executes it with the provided parameters and displays results in the **[!UICONTROL Results]** tab.
-
-The right-hand panel displays metadata such as [!UICONTROL Accelerator ID], [!UICONTROL Name], and modification details, and provides access to scheduling through **[!UICONTROL Add schedule]**.
-
-Next, select **[!UICONTROL Create custom template]** to create a custom template, or **[!UICONTROL Cancel]** to exit the editor.
+The SQL is read-only, and toolbar actions such as **[!UICONTROL Show results]**, **[!UICONTROL Undo text]**, **[!UICONTROL Format text]**, and **[!UICONTROL Save]** are disabled. The right-hand panel displays metadata such as **[!UICONTROL Accelerator ID]**, **[!UICONTROL Name]**, and modification details, and provides access to scheduling through **[!UICONTROL Add schedule]**.
 
 ![The Query Editor with an accelerator open, showing the SQL area, Query parameters tab, and right-hand panel.](../images/ui/accelerators/accelerator-query-editor.png)
+
+Before you can execute the query, you must select **[!UICONTROL Create custom template]** to make the SQL editable and run it as a standard query, or add query parameters and select [!UICONTROL Add schedule].
+
+>[!TIP]
+>
+>You can edit the [!UICONTROL Name] for your new template or keep it the same as the accelerator name.
+
+<!-- When you select **[!UICONTROL Run as CTAS]**, the **[!UICONTROL Enter output dataset details]** dialog appears. Enter a dataset name and optional description, then confirm to run the query.
+
+![The 'Enter output dataset details' dialog with a dataset name and description populated.](../images/ui/accelerators/output-dataset-details-dialog.png)
+
+The system creates a new dataset and writes the results to it. You can review results in the **[!UICONTROL Datasets]** workspace or the **[!UICONTROL Logs]** tab. -->
 
 ## Provide parameters and execute an accelerator {#provide-parameters-execute}
 
@@ -86,12 +82,16 @@ After opening an accelerator, you must provide values for all parameters before 
 
 Parameters use the `${PARAMETER_NAME}` syntax and appear in the **[!UICONTROL Query parameters]** tab below the editor. For example, a parameter such as `${START_DATE}` might require a date value in `YYYY-MM-DD` format (for example, `2024-01-01`), while `${AUDIENCE_ID}` might require a specific audience identifier. The required format depends on how the parameter is defined in the accelerator SQL.
 
+>[!TIP]
+>
+>The query parameter names for accelerators are pre-populated an only require values to be added.
+
 To run an accelerator:
 
 1. Select **[!UICONTROL Query parameters]** and enter a value for each parameter.  
 2. Select the play icon (![The play icon.](../../images/icons/play.png)) in the toolbar to run the query.
 
-The query executes and, if successful, the results table populates in the **[!UICONTROL Results]** tab for immediate inspection. These results are not automatically saved to a dataset unless you explicitly configure output settings or create a schedule.
+The query executes and writes results based on your selected execution method. If you run the query as CTAS, the system creates a dataset with your results. If you run a custom template, results appear in the **[!UICONTROL Results]** tab.
 
 >[!IMPORTANT]
 >
@@ -101,17 +101,18 @@ For more information on parameterized queries, see [Parameterized queries in Que
 
 ## Schedule an accelerator {#schedule-accelerator}
 
-After running an accelerator and confirming that the results are correct in the **[!UICONTROL Results]** tab, you can schedule it to run automatically with fixed parameter values. Select **[!UICONTROL Add schedule]** in the right-hand panel to begin.
+After you validate the syntax of an accelerator, schedule it to run automatically with fixed parameter values.
+
+Select **[!UICONTROL Add schedule]** in the right-hand panel to open the schedule configuration dialog.
 
 ![The schedule configuration dialog showing frequency, date range, output dataset, and parameter fields.](../images/ui/accelerators/schedule-details.png)
 
-<!-- PM question: How does a scheduled accelerator update the selected output dataset on each run? Are results appended, overwritten, or handled another way?
+The schedule configuration includes the frequency, start and end dates, output dataset, and parameter values that are reused for each run. In the **[!UICONTROL Dataset details]** section, choose how results are written:
 
-Answer:  The options to create and append, or update an existing dataset are the same for an accelerator and any schedueld query. IN the Schedule configuration dialog, in the [!UICONTROL Dataset details] section to choose between: [!UICONTROL Append into existing dataset] or [!UICONTROL Create and append into new dataset]
- -->
+- **[!UICONTROL Append into existing dataset]** to add new results to an existing dataset.
+- **[!UICONTROL Create and append into new dataset]** to create a dataset and append results over time.
 
-
-The schedule configuration includes the frequency, start and end dates, output dataset, and parameter values that are reused for each run. Each scheduled execution writes results to the specified dataset based on your configuration. This enables you to persist and reuse query output over time.
+Each scheduled execution writes results according to this configuration, enabling you to persist and reuse query output.
 
 For complete step-by-step instructions, see [Create a query schedule](./query-schedules.md#create-schedule).
 
@@ -129,60 +130,18 @@ The template appears in the **[!UICONTROL Templates]** tab instead of **[!UICONT
 
 ## Dashboard-linked accelerators {#dashboard-accelerators}
 
-<!-- 
-PM question: Which specific accelerators are dashboard-linked, and how do users access them? 
-and
-PM question: Do dashboard-linked accelerators ever require parameters or manual execution, or are they always precomputed visualizations? 
+Some accelerators open as dashboards instead of SQL queries. These accelerators provide prebuilt visualizations for analyzing audience data and do not require manual query execution or parameter input.
 
+The following accelerators open in the **[!UICONTROL Dashboards]** workspace:
 
-Answer: It is only these 4 that open as dashboards:
-Advanced Audience Overlaps
-Audience Comparison
-Audience Trends
-Audience Identity Overlaps
-
-This is because they are the pre-configured templates in query pro mode for analyzing specific aspects of audience behavior, segmentation, and identity management.
-
-Context:
-```
-Available templates
-The templates currently available in the Dashboards workspace are:
-
-Advanced Audience Overlaps
-Use the Advanced Audience Overlaps dashboard to quickly analyze audience intersections for specific audiences or view all overlaps to uncover valuable insights across your entire audience set. Use these insights to refine segmentation, reduce redundant messaging, and create more targeted campaigns for improved marketing efficiency.
-(https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/overlaps)
-
-Audience Comparison
-The Audience Comparison dashboard allows you to compare key metrics between two audience groups side-by-side. Use this dashboard to analyze important KPIs, such as audience size, identity breakdown, and changes in audience size over time. These insights help you make informed decisions about audience segmentation and improve targeting strategies.
-(https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/comparison)
-
-Audience Trends
-Use the Audience Trends dashboard to analyze audience metrics over time. Visualize trends for audience size, number of identities, and number of single identity profiles to monitor audience evolution, measure growth, and refine engagement strategies effectively.
-(https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/trends)
-
-Audience Identity Overlaps
-Use the Audience Identity Overlaps dashboard to analyze identity overlaps within selected audiences. View identity trends and breakdowns to understand how different identity types relate, enhancing identity stitching and improving customer segmentation accuracy.
-(https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/identity-overlaps)
-
-Next steps
-After reading this document, you have learned about the four Data Distiller Templates available in the Dashboards workspace and how they help you analyze audience data for better decision-making. These templates provide tools for understanding audience intersections, comparing metrics, tracking trends, and analyzing identity overlaps to refine segmentation, reduce redundancy, and enhance engagement.
-
-For more details on each template, refer to the respective guides for Advanced Audience Overlaps, Audience Comparison, Audience Trends, and Audience Identity Overlaps.
-```
-
--->
-
-These dashboards provide prebuilt visualizations for audience analysis rather than raw query results.
+- Advanced Audience Overlaps: Analyze intersections between selected audiences or across your full audience set to identify overlap patterns. Use these insights to refine segmentation and reduce redundant targeting.
+- Audience Comparison: Compare key metrics between two audiences side by side, including size, identity composition, and changes over time. Use this view to evaluate performance differences and inform targeting decisions.
+- Audience Trends: Track how audience metrics change over time, including audience size and identity counts. Use these trends to monitor growth and evaluate the impact of segmentation strategies.
+- Audience Identity Overlaps: Examine how identity types overlap within selected audiences to understand identity relationships. Use this analysis to improve identity stitching and segmentation accuracy.
 
 ![Dashboard view showing audience analysis visualizations with charts and filters.](../images/ui/accelerators/dashboard-accelerator-template-example.png)
 
-After the dashboard opens, use available controls and filters to explore and compare audience data. 
-
-<!-- 
-PM Question; to confirm "These accelerators do not require parameter input or manual query execution."  
-
-Answer: I believe it is accurate to say that "These accelerators do not require parameter input or manual query execution." because they are pre configured and run automatically on your data.
--->
+After the dashboard opens, use available controls and filters to explore and compare audience data. These dashboards are preconfigured and continuously reflect your underlying data.
 
 For more details, see [dashboard templates](../../dashboards/sql-insights-query-pro-mode/templates/overview.md).
 
