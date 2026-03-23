@@ -47,6 +47,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | --- | --- |
 | Enhanced support for Change Data Capture | You can now use Change Data Capture with the [!DNL Marketo Engage], [!DNL Microsoft Dynamics], and [!DNL Salesforce CRM] sources. |
 | [!DNL Talon.One] | You can now connect Experience Platform to [!DNL Talon.One] using the new [!DNL Talon.One] [batch](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md) and [streaming](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md) sources. Use the new sources to ingest loyalty profile data as well as transaction and loyalty activity events to Experience Platform. |
+| New IP addresses to allowlist | New IP addresses for GBR9: United Kingdom have been added to the list of addresses you must allowlist to ensure successful batch source connections to Experience Platform on Azure. View the list in the [IP address allowlist guide](../../sources/ip-address-allow-list.md#gbr9-united-kingdom) for more information. |
 
 {style="table-layout:auto"}
 
