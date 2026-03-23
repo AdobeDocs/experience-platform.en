@@ -46,8 +46,6 @@ Currently, Capacity supports the following services:
 - Streaming segmentation
 - Streaming ingestion
 - Edge segmentation
-- Edge ingestion
-- Edge data collection
 
 Within these services, the following guardrails are tracked:
 
@@ -56,6 +54,7 @@ Within these services, the following guardrails are tracked:
 - The initial combined throughput for streaming ingestion is 1500 records per second (rps)
   - This combined streaming throughput measures the combined peak inbound events per second for streaming ingestion into Real-Time Customer Profile across your production and development sandboxes.
   - You can purchase additional streaming segmentation support of up to 13,500 records per second. More information about purchasing additional entitlements can be found in the [Real-Time CDP product description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+- The combined throughput for edge segmentation is 1500 records per second (rps)
 
 The audience capacity is at a **sandbox** level. This means that, for every sandbox you have in your organization, you can have 500 streaming audiences, of which 150 of those can be edge audiences.
 
@@ -221,9 +220,9 @@ Additionally, you can look at your dataflows and see if you can optimize your da
 
 You can resolve your edge segmentation throughput violations by adopting one of the following recommendations:
 
-1. Increase the allocated capacity for the organization.
-2. Identify high throughput datastreams in the [monitoring dashboard](/help/dataflows/ui/monitor-edge.md) and apply throttling or filtering against these datastreams if needed.
-3. Optimize your ingestion by using batch ingestion for lower latency use cases.
+1. Identify high throughput datastreams in the [monitoring dashboard](/help/dataflows/ui/monitor-edge.md) and apply throttling or filtering against these datastreams if needed.
+2. Optimize your ingestion by using batch ingestion for lower latency use cases.
+3. Contact your Adobe Customer Care representative if issues still persist
 
 ## Video overview {#video}
 

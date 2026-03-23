@@ -11,7 +11,7 @@ You can use the monitoring dashboard in the Adobe Experience Platform UI to cond
 
 This guide requires a working understanding of the following components of Experience Platform:
 
-* [Dataflows](../home.md): Dataflows represent data jobs that transfer information across Experience Platform. They are configured across various services to facilitate the movement of data from source connectors to target datasets, as well as to Identity Service, Real-Time Customer Profile, and Destinations.
+* [Datastreams](../../datastreams/overview.md): Datastreams let you connect Experience Platform Edge Network to your dataset.
 * [Capacities](../../landing/license-usage-and-guardrails/capacity.md): In Experience Platform, capacities let you know if your organization has exceeded any of your guardrails and gives you information on how to fix these issues.
 * [Edge segmentation](../../segmentation/methods/edge-segmentation.md): Edge segmentation is the ability to evaluate segment definitions in Adobe Experience Platform instantaneously [on the edge](../../landing/edge-and-hub-comparison.md), enabling same page and next page personalization use cases. 
 
@@ -65,7 +65,7 @@ IMAGE
 | Field | Description |
 | ----- | ----------- |
 | Datastream name | The name of the datastream. |
-| Datasets | The ??? of datasets the datastream belongs to. | 
-| Service enabled | ??? Boolean? Or which services it's enabled for? |
+| Datasets | The name of datasets the datastream belongs to. | 
+| Service enabled | The names of the services the datastream is enabled for. |
 | Requests | The number of requests that passed through the datastream. |
 | Peak throughput | The highest rate of requests that passed through the datastream. |
