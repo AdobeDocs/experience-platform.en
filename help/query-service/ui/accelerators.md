@@ -26,7 +26,9 @@ Before you begin, ensure you meet the following requirements:
 
 Use accelerators when you need pre-built SQL for common analytical patterns such as funnel analysis, moving averages, or audience overlap. If no accelerator fits your use case, [write a custom query in the Query Editor](./user-guide.md#query-authoring) or request a new accelerator (see [Request a new accelerator](#request-accelerator)).
 
-<!-- PM question: What are the supported accelerator types, and how does each type open in the product? Please confirm whether an accelerator opens in the Query Editor, opens a dashboard, or can do both depending on entry point. -->
+<!-- PM question: What are the supported accelerator types, and how does each type open in the product? Please confirm whether an accelerator opens in the Query Editor, opens a dashboard, or can do both depending on entry point. 
+
+Answer: there are currently 50 accelerotrs available in the Accelerator tab. They do not have 'types' they are sql written for differnet business use cases and reoccuring ongoing purposes. There are 4 different preconfigured accelerators - which are also known as Data Distiller Templates that open in dahsboards. Those special templates are designed to help you gain insights into your audience data. More details can be found on those below. You can even use your SQL to create a custom dahboard for reporting on your own insights. See SQL insights documentation to learn how to create your own cusotm dashabord (https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/overview) ] -->
 
 To begin using accelerators, navigate to the **[!UICONTROL Queries]** workspace and open the **[!UICONTROL Accelerators]** tab or the **[!UICONTROL Overview]** tab.
 
@@ -46,11 +48,11 @@ The workspace displays a table of accelerators with names, SQL previews, and tim
 
 Use this path when you want quick access to commonly used accelerators. Navigate to **[!UICONTROL Queries]**, then select the **[!UICONTROL Overview]** tab.
 
-<!-- PM question: When a user selects a card in **[!UICONTROL Recommended Data Distiller accelerators]**, what exactly happens for each card type? Please confirm whether cards always open the Query Editor, sometimes open the **[!UICONTROL Dashboards]** workspace, and whether the UI distinguishes these outcomes before selection. -->
+<!-- PM question: When a user selects a card in **[!UICONTROL Recommended Data Distiller accelerators]**, sometimes they open the **[!UICONTROL Dashboards]** workspace, and but there is no UI indicator to show the difference in outcomes before their selection. / If a card can open a dashboard instead of the Query Editor, what determines that behavior, and how would users recognize it? 
+
+Answer: this appears to be oversight on behalf of the engineering team. Currently they are simply the reccomenbed accelerators. The 4 pre-configured accelerators open in dhasboards. every other accelerator will open in the Query Editor. but you can go on to create your own custom dahsboard from SQL. Lets be slightly vague here. they are either reccomended or one of the 4.  -->
 
 In **[!UICONTROL Recommended Data Distiller accelerators]**, select a card.
-
-<!-- PM question: If a card can open a dashboard instead of the Query Editor, what determines that behavior, and how should users recognize it? -->
 
 If the card opens a dashboard instead of the Query Editor, see [Dashboard-linked accelerators](#dashboard-accelerators).
 
@@ -58,11 +60,21 @@ If the card opens a dashboard instead of the Query Editor, see [Dashboard-linked
 
 ## Open an accelerator in the Query Editor {#open-accelerator}
 
-<!-- PM question: Is it accurate that accelerators selected from both the **[!UICONTROL Accelerators]** tab and the **[!UICONTROL Overview]** tab always open in the Query Editor? If not, which cases behave differently? -->
+<!-- PM question: Is it accurate that accelerators selected from both the **[!UICONTROL Accelerators]** tab always open in the Query Editor? If not, which cases behave differently?
+
+Answer: All accelerators form the [!UICONTROL Accelerators] tab open in the Query Editor. The accelerators that open into dashboards are NOT available form the [!UICONTROL Accelerators] tab. -->
 
 After you select an accelerator from the **[!UICONTROL Accelerators]** tab or **[!UICONTROL Overview]** tab, the Query Editor opens with the accelerator SQL preloaded.
 
-<!-- PM question: Why is **[!UICONTROL Show results]** disabled for accelerators if users can still run the query and view results in the **[!UICONTROL Results]** tab? What is the functional difference? -->
+<!-- PM question: Why is **[!UICONTROL Show results]** disabled for accelerators if users can still run the query and view results in the **[!UICONTROL Results]** tab? What is the functional difference?
+
+Answer: You cannot imediatley run an acelerator for the Query editor. First, you must select either [!UICONTROL Create custom template] to edit and cusomtize the SQL, or select [!UICONTROL Run as CTAS], depending on the accelerator. 
+If you run the SQL as a CTAS query then a new table will be created. The [!UICONTORL Enter output dataset details] dialog appears. Form here you must input a name for the output dataset that will be created. You can also add an optional description. Select Run as CTAS to confirm your configuration. 
+
+![The [!UICONTORL Enter output dataset details] dialog with a dataset name and description populated.](../images/ui/accelerators/output-dataset-details-dialog.png)
+
+The results can be seen in the datasets workspace or found through the [!UICONTROL Logs] tab.
+-->
 
 The SQL is read-only, and toolbar actions such as [!UICONTROL Show results], [!UICONTROL Undo text], [!UICONTROL Format text], and [!UICONTROL Save] are disabled. To execute the query, use the play icon in the toolbar. Running the query executes it with the provided parameters and displays results in the **[!UICONTROL Results]** tab.
 
@@ -95,11 +107,13 @@ For more information on parameterized queries, see [Parameterized queries in Que
 
 After running an accelerator and confirming that the results are correct in the **[!UICONTROL Results]** tab, you can schedule it to run automatically with fixed parameter values. Select **[!UICONTROL Add schedule]** in the right-hand panel to begin.
 
-<!-- IMAGE NOTE TAKEN YET ![The schedule configuration dialog showing frequency, date range, output dataset, and parameter fields.](../images/ui/accelerators/schedule-accelerator.png) -->
+![The schedule configuration dialog showing frequency, date range, output dataset, and parameter fields.](../images/ui/accelerators/schedule-details.png)
 
-<!-- PM question: How does a scheduled accelerator update the selected output dataset on each run? Are results appended, overwritten, or handled another way? -->
+<!-- PM question: How does a scheduled accelerator update the selected output dataset on each run? Are results appended, overwritten, or handled another way?
 
-<!-- PM question: Which schedule settings (if any) control how results are written to the dataset? -->
+Answer:  The options to create and append, or update an existing dataset are the same for an accelerator and any schedueld query. IN the Schedule configuration dialog, in the [!UICONTROL Dataset details] section to choose between: [!UICONTROL Append into existing dataset] or [!UICONTROL Create and append into new dataset]
+ -->
+
 
 The schedule configuration includes the frequency, start and end dates, output dataset, and parameter values that are reused for each run. Each scheduled execution writes results to the specified dataset based on your configuration. This enables you to persist and reuse query output over time.
 
@@ -119,17 +133,60 @@ The template appears in the **[!UICONTROL Templates]** tab instead of **[!UICONT
 
 ## Dashboard-linked accelerators {#dashboard-accelerators}
 
-<!-- PM question: Which specific accelerators are dashboard-linked, and how do users access them? -->
+<!-- 
+PM question: Which specific accelerators are dashboard-linked, and how do users access them? 
+and
+PM question: Do dashboard-linked accelerators ever require parameters or manual execution, or are they always precomputed visualizations? 
 
-<!-- PM question: Do dashboard-linked accelerators ever require parameters or manual execution, or are they always precomputed visualizations? -->
+
+Answer: It is only these 4 that open as dashboards:
+Advanced Audience Overlaps
+Audience Comparison
+Audience Trends
+Audience Identity Overlaps
+
+This is because they are the pre-configured templates in query pro mode for analyzing specific aspects of audience behavior, segmentation, and identity management.
+
+Context:
+```
+Available templates
+The templates currently available in the Dashboards workspace are:
+
+Advanced Audience Overlaps
+Use the Advanced Audience Overlaps dashboard to quickly analyze audience intersections for specific audiences or view all overlaps to uncover valuable insights across your entire audience set. Use these insights to refine segmentation, reduce redundant messaging, and create more targeted campaigns for improved marketing efficiency.
+(https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/overlaps)
+
+Audience Comparison
+The Audience Comparison dashboard allows you to compare key metrics between two audience groups side-by-side. Use this dashboard to analyze important KPIs, such as audience size, identity breakdown, and changes in audience size over time. These insights help you make informed decisions about audience segmentation and improve targeting strategies.
+(https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/comparison)
+
+Audience Trends
+Use the Audience Trends dashboard to analyze audience metrics over time. Visualize trends for audience size, number of identities, and number of single identity profiles to monitor audience evolution, measure growth, and refine engagement strategies effectively.
+(https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/trends)
+
+Audience Identity Overlaps
+Use the Audience Identity Overlaps dashboard to analyze identity overlaps within selected audiences. View identity trends and breakdowns to understand how different identity types relate, enhancing identity stitching and improving customer segmentation accuracy.
+(https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/identity-overlaps)
+
+Next steps
+After reading this document, you have learned about the four Data Distiller Templates available in the Dashboards workspace and how they help you analyze audience data for better decision-making. These templates provide tools for understanding audience intersections, comparing metrics, tracking trends, and analyzing identity overlaps to refine segmentation, reduce redundancy, and enhance engagement.
+
+For more details on each template, refer to the respective guides for Advanced Audience Overlaps, Audience Comparison, Audience Trends, and Audience Identity Overlaps.
+```
+
+-->
 
 These dashboards provide prebuilt visualizations for audience analysis rather than raw query results.
 
-<!-- IMAGE NOTE TAKEN YET ![Dashboard view showing audience analysis visualizations with charts and filters.](../images/ui/accelerators/dashboard-accelerator-example.png) -->
+![Dashboard view showing audience analysis visualizations with charts and filters.](../images/ui/accelerators/dashboard-accelerator-template-example.png)
 
 After the dashboard opens, use available controls and filters to explore and compare audience data. 
 
-<!-- PM Question; to confirm "These accelerators do not require parameter input or manual query execution." -->
+<!-- 
+PM Question; to confirm "These accelerators do not require parameter input or manual query execution."  
+
+Answer: I believe it is accurate to say that "These accelerators do not require parameter input or manual query execution." because they are pre configured and run automatically on your data.
+-->
 
 For more details, see [dashboard templates](../../dashboards/sql-insights-query-pro-mode/templates/overview.md).
 
