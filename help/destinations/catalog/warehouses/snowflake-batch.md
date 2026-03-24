@@ -196,11 +196,11 @@ The dynamic table contains the following columns:
 * **AUDIENCE_STATUS**: The membership status of the profile in the audience (for example, `active` or `realized`)
 * **Mapping attributes**: Every mapping attribute selected during the activation workflow is represented as a column
 
+![Screenshot showing the Snowflake interface with dynamic table data](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
+
 >[!NOTE]
 >
 >The table structure described above applies to destination connections created after the March 2026 Experience Platform release. Existing connections continue to use the previous structure, where each audience is represented as a separate column (for example, `ups_<audience-id>` = `active`). The previous structure will be deprecated in 3 months.
-
-![Screenshot showing the Snowflake interface with dynamic table data](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
 
 ## Data usage and governance {#data-usage-governance}
 
