@@ -8,7 +8,7 @@ exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
 
 ## Overview {#overview}
 
-The [!DNL Magnite: Real-Time] and the [Magnite: Batch](/help/destinations/catalog/advertising/magnite-batch.md) destinations in Adobe Experience Platform help you map and export audiences for targeting and activation on the Magnite Streaming platform.
+The [!DNL Magnite: Real-Time] and the [Magnite: Batch](/help/destinations/catalog/advertising/magnite-batch.md) destinations in [!DNL Adobe Experience Platform] help you map and export audiences for targeting and activation on the Magnite Streaming platform.
 
 Activating audiences to the [!DNL Magnite Streaming] platform is a two step process which requires you to use both the Magnite: Real-Time and the Magnite: Batch destinations.
 
@@ -27,24 +27,24 @@ To activate your audiences to [!DNL Magnite Streaming], you must:
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL Magnite: Real-Time] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Magnite: Real-Time] destination, here is a sample use case that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 ### Activation and targeting {#activation-and-targeting}
 
-This integration with Magnite allows customers to pass their CDP audiences from Adobe Experience Platform to Magnite for advertising targeting. Audiences may be selected within Magnite for positive targeting as well as negative targeting (suppression). 
+This integration with Magnite allows customers to pass their CDP audiences from [!DNL Adobe Experience Platform] to Magnite for advertising targeting. Audiences may be selected within Magnite for positive targeting as well as negative targeting (suppression). 
 
 ## Prerequisites {#prerequisites}
 
-To use the [!DNL Magnite] destinations in Adobe Experience Platform, you must first have a [!DNL Magnite Streaming] account. If you have a [!DNL Magnite Streaming] account, please reach out to your [!DNL Magnite] account manager to be provided credentials to access [!DNL Magnite's] destinations.
+To use the [!DNL Magnite] destinations in [!DNL Adobe Experience Platform], you must first have a [!DNL Magnite Streaming] account. If you have a [!DNL Magnite Streaming] account, please reach out to your [!DNL Magnite] account manager to be provided credentials to access [!DNL Magnite's] destinations.
 If you do not have a [!DNL Magnite Streaming] account, please reach out to adobe-tech@magnite.com
 
 ## Supported identities {#supported-identities}
 
 The [!DNL Magnite: Real-Time] destination supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-| Target Identity   | Description                                                                                      | Considerations                                                                       |
+| Target Identity | Description | Considerations |
 |-------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| device_id         | A unique identifier for a device or identity. We accept any device ID and first-party ID regardless of type.           | Identity types supported by Magnite include but are not limited to PPUID, GAID, IDFA, and TV Device IDs.     | 
+| device_id | A unique identifier for a device or identity. We accept any device ID and first-party ID regardless of type. | Identity types supported by Magnite include but are not limited to PPUID, GAID, IDFA, and TV Device IDs. | 
 
 {style="table-layout:auto"}
 
@@ -52,10 +52,10 @@ The [!DNL Magnite: Real-Time] destination supports the activation of identities 
 
 This section describes which type of audiences you can export to this destination.
 
-| Audience origin             | Supported | Description | 
+| Audience origin | Supported | Description | 
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -77,10 +77,10 @@ Supported audiences by audience data type:
 
 Refer to the table below for information about the destination export type and frequency.
 
-| Item             | Type                            | Notes                                                                                                                                                                                                                                                                                                                              |
+| Item | Type | Notes |
 |------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Export type      | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the [!DNL Magnite: Real-Time] destination.                                                                                                                                                            |
-| Export frequency | **[!UICONTROL Streaming]**      | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
+| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the [!DNL Magnite: Real-Time] destination. |
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -105,9 +105,9 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Your company name]**: Your customer/company name. Only supported [!DNL Magnite Streaming] clients are available for selection.
+* **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+* **[!UICONTROL Your company name]**: Your customer/company name. Only supported [!DNL Magnite Streaming] clients are available for selection.
 
 >[!NOTE]
 >
@@ -172,11 +172,11 @@ Once your audiences have been uploaded, you may validate your audiences have bee
 
 -->
 
-* Post-ingest, audiences are expected to appear in [!DNL Magnite Streaming] within a few minutes and can be applied to a deal. You can confirm this by looking up the segment ID that was shared during the activation steps in the Adobe Experience Platform.
+* Post-ingest, audiences are expected to appear in [!DNL Magnite Streaming] within a few minutes and can be applied to a deal. You can confirm this by looking up the segment ID that was shared during the activation steps in the [!DNL Adobe Experience Platform].
 
 ## Activate the same audiences through the [!DNL Magnite: Batch ]destination {#activate-magnite-batch}
 
-Audiences shared with [!DNL Magnite Streaming] using the  Real-Time destination will also need to be shared using the Magnite: Batch destination. When configured correctly, segment names in the [!DNL Magnite Streaming] UI are updated to reflect those used in the Adobe Experience Platform post-daily update.
+Audiences shared with [!DNL Magnite Streaming] using the Real-Time destination will also need to be shared using the Magnite: Batch destination. When configured correctly, segment names in the [!DNL Magnite Streaming] UI are updated to reflect those used in the [!DNL Adobe Experience Platform] post-daily update.
 
 Finally, if a Batch destination has not been configured for your integration, set it up now via the Magnite: Batch destination document.
 

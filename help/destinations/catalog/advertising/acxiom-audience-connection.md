@@ -12,7 +12,7 @@ exl-id: bac0f337-bfab-4779-acc8-f70239552666
 
 Use the [!DNL Acxiom Audience Connection] destination to enhance audiences with [!DNL Acxiom's] [Real ID&trade;](https://www.acxiom.com/real-id/real-id/) technology and activate audiences to multiple platforms, such as [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], and more.
 
-This tutorial provides instructions to create an [!DNL Acxiom Audience Connection] destination connector using the [!DNL Adobe Experience Platform] user interface. This connector is used to build and distribute audiences to selected destinations.
+This tutorial provides instructions to create an [!DNL Acxiom Audience Connection] destination connector using the [!DNL Adobe Experience Platform] user interface. This connector builds and distributes audiences to selected destinations.
 
 ## Use cases {#use-cases}
 
@@ -48,7 +48,7 @@ This section describes which types of audiences you can export to this destinati
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -61,7 +61,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -115,7 +115,7 @@ For the [!DNL Acxiom Audience Connection] destination to correctly receive the a
 |Email|Primary email By default, this field is used as a deduplication key to make the records unique|No|10|255|
 |Phone|Phone number of individual (area code + number)<br> By default, this field is used as a deduplication key to make the records unique.|No|11|10|
 
-In the **[!UICONTROL Source Field]** column, enter the name of each of the source attributes that you want to map to the corresponding target field, or select the arrow icon to open the **[!UICONTROL  Select source field]** screen.<br>
+In the **[!UICONTROL Source Field]** column, enter the name of each of the source attributes that you want to map to the corresponding target field, or select the arrow icon to open the **[!UICONTROL Select source field]** screen.<br>
 ![Mapping screen](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
 
 After you have mapped all the fields, select **[!UICONTROL Next]**.

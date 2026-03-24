@@ -39,7 +39,7 @@ From the [!DNL Pebble] tags section, Destination SDK only supports:
 >Using `for` is different when iterating through *array* or *map* elements in a template. When you iterate through an array, you can obtain the element directly. When you iterate through a map, you obtain each map entry, which has a key-value pair.
 >
 > * For an example of an array element, think about the identities in an [identityMap](message-format.md#identities) namespace, where you could iterate through elements such as `identityMap.gaid`, `identityMap.email`, or similar.
-> * For an example of a map element, think about [segmentMembership](message-format.md#segment-membership).
+> * For an example of a map element, think about [segmentMembership](message-format.md#audience-membership).
 
 From the [!DNL Pebble] filter section, Destination SDK supports all functions. An example further below shows how the `date` function can be used within Destination SDK.
 
@@ -47,7 +47,7 @@ From the [!DNL Pebble] functions section, Adobe does *not* support the [range](h
 
 ## Example of how the `date` function is used {#date-function}
 
-To exemplify how [!DNL Pebble] functions are used in Destination SDK, see below how the date function ([link in Pebble documentation](https://pebbletemplates.io/wiki/filter/date/)) is used to transform the format of a timestamp.
+To exemplify how [!DNL Pebble] functions are used in Destination SDK, see below how the date function ([link in Pebble documentation](https://pebbletemplates.io/wiki/filter/date/)) transforms the format of a timestamp.
 
 ### Use case {#date-use-case}
 

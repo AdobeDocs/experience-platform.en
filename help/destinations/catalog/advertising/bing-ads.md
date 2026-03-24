@@ -10,7 +10,7 @@ exl-id: f2fc4d1f-01b0-4813-902c-9a3c30a8fa78
 
 The [!DNL Bing Ads Universal Event Tracking] (UET) tag extension is a useful way to track what happens after someone has clicked on your search ad. By using a single UET tag to record what customers do on your website, you can leverage that data, allowing you to track conversions or target audiences using remarketing lists.
 
-[!DNL Bing Ads Universal Event Tracking] (UET) is an advertising extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100154.html).
+[!DNL Bing Ads Universal Event Tracking] (UET) is an advertising extension in [!DNL Adobe Experience Platform]. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100154.html).
 
 This destination is a tag extension. For more information about how tags extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
@@ -20,7 +20,7 @@ This destination is a tag extension. For more information about how tags extensi
 
 This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Experience Platform.
 
-To use this extension, you need access to tags in Adobe Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+To use this extension, you need access to tags in [!DNL Adobe Experience Platform]. Tags are offered to [!DNL Adobe Experience Cloud] customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 
