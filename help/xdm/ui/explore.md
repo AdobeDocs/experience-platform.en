@@ -44,7 +44,7 @@ You can also use the search bar to narrow down results further.
 The resources displayed in search results are ordered first by title matches, then by description matches. In turn, the more word matches in either of these categories, the higher the resource appears in the list.
 
 When you have found the resource you want to explore, select its name from the list to view its structure in the canvas.
-<!--  ... -->
+
 ## Manage schemas, classes, field groups, and data types: actions and deletion {#xdm-resource-actions}
 
 Use this section when you need to manage or delete XDM resources, or when an action (such as delete) is unavailable and you need to understand why.
@@ -68,10 +68,10 @@ These actions are consistent across both entry points for supported resource typ
 
 Depending on the resource type and your permissions, the following actions may be available:
 
-- **[!UICONTROL Delete]** — Permanently remove a custom resource from your organization.
-- **[!UICONTROL Download sample file]** — Generate a sample data file based on the resource structure.
-- **[!UICONTROL Copy JSON structure]** — Copy the resource definition in JSON format for reuse or inspection.
-- **[!UICONTROL Add to package]** — Include the resource in a package for export or sharing.
+- **[!UICONTROL Delete]** — Permanently remove a custom resource from your organization (when constraints allow). If delete is blocked, see [Constraints](#delete-constraints).
+- **[!UICONTROL Download sample file]** — Generate a sample data file based on the resource structure. Step-by-step: [Generate sample XDM data](./sample.md).
+- **[!UICONTROL Copy JSON structure]** — Copy the resource definition in JSON format for reuse, export, or inspection. Step-by-step: [Export XDM schemas](./export.md).
+- **[!UICONTROL Add to package]** — Include the resource in a sandbox package for export or import across sandboxes. Step-by-step: [Export objects into a package](../../sandboxes/ui/sandbox-tooling.md#export-objects).
 
 The following applies to different resource types:
 
@@ -101,12 +101,11 @@ If deletion is not available for a resource, the option appears disabled with a 
 
 If an action such as **[!UICONTROL Delete]** is unavailable or disabled, it is typically due to one of the following conditions:
 
-- **Permissions (RBAC)**: Users must have the appropriate permissions (such as **[!UICONTROL Manage Schema]**) to perform management actions.  
-  If permissions are missing, actions appear **disabled with tooltips** explaining the restriction. If you cannot perform an action, contact your administrator to request the required permissions.
+- **Permissions (RBAC)**: Users must have the appropriate permissions (such as **[!UICONTROL Manage Schemas]** under Data Modeling) to perform management actions. If permissions are missing, actions can appear disabled with tooltips. To understand how roles and permissions work in Experience Platform, see the [access control UI overview](../../access-control/ui/overview.md). Administrators can add or adjust permissions using [Manage permissions for a product profile](../../access-control/ui/permissions.md). If you cannot perform an action, contact your administrator and share those guides as the prerequisite for **[!UICONTROL Manage Schemas]** (or equivalent) **[VERIFY: exact permission names in your organization]**.
 
-- **Dataset association**: Resources that are currently used by one or more datasets cannot be deleted. Instead, they can be deprecated to prevent future use.
+- **Dataset association**: Resources that are currently used by one or more datasets cannot be deleted. In the **[!UICONTROL Datasets]** workspace, use [Filter by schema](../../catalog/datasets/user-guide.md#filter-by-schema) to list datasets that reference a schema. To remove a dataset dependency when policy allows, see [Delete a dataset](../../catalog/datasets/user-guide.md#delete) **[VERIFY: identifying datasets for field groups, classes, and data types vs schema-backed datasets]**. When deletion is not possible, reduce future use by [deprecating fields in the Schema Editor](../tutorials/field-deprecation-ui.md) and following [data modeling best practices](../schema/best-practices.md) for decommissioning **[VERIFY: resource-level deprecation or alternative workflows in the UI]**.
 
-- **Profile enablement**: Schemas enabled for [Real-Time Customer Profile](../../profile/home.md) cannot be deleted.
+- **Profile enablement**: Schemas enabled for Real-Time Customer Profile cannot be deleted; Profile enablement on a schema cannot be reversed after save. For what that means for your data model and long-term constraints, see [Planning for Real-Time Customer Profile enablement](../schema/profile-enablement-planning.md). For where Profile is toggled in the UI, see [Enable the schema for use in Real-Time Customer Profile](../tutorials/create-schema-ui.md#profile). For recommended handling when you must stop using a Profile-enabled schema, see [Can I delete Profile-enabled schemas?](../troubleshooting-guide.md#delete-profile-enabled) and [Real-Time Customer Profile](../../profile/home.md).
 
 - **Tenant vs global resources**:  
   - Tenant-defined (custom) resources are created by your organization and can be deleted (subject to constraints).  
@@ -114,10 +113,10 @@ If an action such as **[!UICONTROL Delete]** is unavailable or disabled, it is t
 
 These constraints are reflected directly in the UI. When an action is unavailable, it appears disabled and includes a tooltip explaining the specific limitation.
 
-If you cannot delete a resource, review the conditions above to determine whether you need to update permissions, remove dependencies, or use deprecation instead.
+If you cannot delete a resource, work through the pathways above—permissions, dataset dependencies, deprecation or decommissioning practices, and Profile rules—before assuming the object can be removed.
 
-For related workflows, see [Generate sample XDM data](./sample.md), [Export XDM schemas](./export.md), and [Create and edit schemas in the UI](./resources/schemas.md).
-<!-- ... -->
+For additional schema editing workflows in the canvas, see [Create and edit schemas in the UI](./resources/schemas.md).
+
 ## Explore an XDM resource in the canvas {#explore}
 
 Once you select a resource, its structure opens in the canvas.
