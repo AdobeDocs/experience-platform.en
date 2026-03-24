@@ -8,7 +8,7 @@ exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
 
 ## Overview {#overview}
 
-Manage your customer experience by connecting your data in Adobe Experience Platform to other Adobe Experience Cloud solutions for ad targeting, personalization, marketing automation and more.
+Manage your customer experience by connecting your data in [!DNL Adobe Experience Platform] to other [!DNL Adobe Experience Cloud] solutions for ad targeting, personalization, marketing automation and more.
 
 ## Supported Adobe destinations {#supported-destinations}
 

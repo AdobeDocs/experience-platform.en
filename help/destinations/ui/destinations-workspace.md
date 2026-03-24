@@ -6,7 +6,7 @@ exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 ---
 # Destinations workspace {#destinations-workspace}
 
-In Adobe Experience Platform, select **[!UICONTROL Destinations]** from the left navigation bar to access the [!UICONTROL Destinations] workspace.
+In [!DNL Adobe Experience Platform], select **[!UICONTROL Destinations]** from the left navigation bar to access the [!UICONTROL Destinations] workspace.
 
 The [!UICONTROL Destinations] workspace consists of five sections, [!UICONTROL Overview], [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts], and [!UICONTROL System View], described in the sections below.
 
@@ -175,7 +175,7 @@ Ensure that your destination dataflows remain organized, easy to find, and manag
 
 ## [!UICONTROL Accounts] {#accounts}
 
-The **[!UICONTROL Accounts]** tab shows you details about the connections that you have established with various destinations, and allows you to update or delete existing account details. See the table below for all the information you can get on each destination account.
+The **[!UICONTROL Accounts]** tab shows you details about the connections that you have established with various destinations, and lets you update or delete existing account details. See the table below for all the information you can get on each destination account.
 
 >[!TIP]
 >
@@ -230,7 +230,7 @@ There you can:
 
 ## [!UICONTROL System View] {#system-view}
 
-The **[!UICONTROL System View]** tab displays a graphic representation of the activation flows that you have set up in the Adobe Experience Platform.
+The **[!UICONTROL System View]** tab displays a graphic representation of the activation flows that you have set up in the [!DNL Adobe Experience Platform].
 
 ![Data-flows1](../assets/ui/workspace/system-view-dataflows.png)
 
