@@ -8,9 +8,9 @@ exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
 
 >[!AVAILABILITY]
 >
->The functionality to activate account audiences to destinations is available for companies purchasing the [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) and [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) editions of Real-Time Customer Data Platform.
+>The functionality to activate account audiences to destinations is available for companies purchasing the [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) and [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) editions of [!DNL Real-Time Customer Data Platform].
 
-This article explains the workflow required to export [account audiences](/help/segmentation/types/account-audiences.md) from Adobe Experience Platform to your preferred destination. 
+This article explains the workflow required to export [account audiences](/help/segmentation/types/account-audiences.md) from [!DNL Adobe Experience Platform] to your preferred destination. 
 
 ## Supported destinations {#supported-destinations}
 
@@ -77,7 +77,7 @@ For the rest of the activation workflow to export account audiences, read the tu
 
 >[!NOTE]
 >
->In the scheduling step when exporting account audiences to cloud storage destinations, the workflow to activate account audiences only allows you to export [full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _on a daily schedule_. Hourly exports are not supported. **[!UICONTROL After audience evaluation]** is the only supported evaluation type.
+>In the scheduling step when exporting account audiences to cloud storage destinations, the workflow to activate account audiences only lets you export [full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _on a daily schedule_. Hourly exports are not supported. **[!UICONTROL After audience evaluation]** is the only supported evaluation type.
 
 ## Important callouts and known limitations {#important-callouts-known-limitations}
 
@@ -102,4 +102,4 @@ Consent is enforced at the person or profile level for *customer and prospect au
 
 ![Review step of the activate account audiences workflow with the consent enforcement control grayed out.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 
-Other data governance mechanisms in Real-Time CDP such as [data usage policy checks](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) and [attribute-based access control](/help/destinations/home.md#attribute-based-access) are supported.
+Other data governance mechanisms in [!DNL Real-Time CDP] such as [data usage policy checks](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) and [attribute-based access control](/help/destinations/home.md#attribute-based-access) are supported.

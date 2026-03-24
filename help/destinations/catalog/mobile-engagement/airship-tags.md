@@ -10,7 +10,7 @@ exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 
 [!DNL Airship] is the leading Customer Engagement Platform, helping you deliver meaningful, personalized omnichannel messaging to your users at every stage of the customer lifecycle.
 
-This integration passes Adobe Experience Platform audience data into [!DNL Airship] as [Tags](https://docs.airship.com/guides/audience/tags/) for targeting or triggering.
+This integration passes [!DNL Adobe Experience Platform] audience data into [!DNL Airship] as [Tags](https://docs.airship.com/guides/audience/tags/) for targeting or triggering.
 
 To learn more about [!DNL Airship], see the [Airship Docs](https://docs.airship.com).
 
@@ -21,7 +21,7 @@ To learn more about [!DNL Airship], see the [Airship Docs](https://docs.airship.
 
 ## Prerequisites {#prerequisites}
 
-Before you can send your Adobe Experience Platform audiences to [!DNL Airship], you must:
+Before you can send your [!DNL Adobe Experience Platform] audiences to [!DNL Airship], you must:
 
 * Create a tag group in your [!DNL Airship] project.
 * Generate a bearer token for authentication.
@@ -37,7 +37,7 @@ This section describes which types of audiences you can export to this destinati
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -50,7 +50,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -90,7 +90,7 @@ Click **[!UICONTROL Create Token]** and save the details as confidential.
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL Airship Tags] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Airship Tags] destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 ### Use case #1 {#use-case-1}
 
@@ -98,7 +98,7 @@ Retailers or entertainment platforms can create user profiles on their loyalty c
 
 ### Use case #2 {#use-case-2}
 
-Trigger one-to-one messages in real time when users fall into or out of specific audiences within Adobe Experience Platform.
+Trigger one-to-one messages in real time when users fall into or out of specific audiences within [!DNL Adobe Experience Platform].
 
 For example, a retailer sets up a jeans brand-specific audience in Experience Platform. That retailer can now trigger a mobile message as soon as someone sets their jeans preference to a specific brand.
 

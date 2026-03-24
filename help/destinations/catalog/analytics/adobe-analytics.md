@@ -4,13 +4,13 @@ title: Adobe Analytics extension
 description: The Adobe Analytics extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
 ---
-# Adobe Analytics extension
+# [!DNL Adobe Analytics] extension
 
 ## Overview {#overview}
 
-Adobe Analytics is an industry-leading solution that empowers you to understand your customers as people and steer your business with customer intelligence. 
+[!DNL Adobe Analytics] is an industry-leading solution that empowers you to understand your customers as people and steer your business with customer intelligence. 
 
-Adobe Analytics is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the [Adobe Analytics extension overview](/help/tags/extensions/client/analytics/overview.md) in the Tags documentation.
+[!DNL Adobe Analytics] is an analytics extension in [!DNL Adobe Experience Platform]. For more information about the extension functionality, see the [Adobe Analytics extension overview](/help/tags/extensions/client/analytics/overview.md) in the Tags documentation.
 
 This destination is a tag extension. For more information about how tags extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
@@ -20,11 +20,11 @@ This destination is a tag extension. For more information about how tags extensi
 
 This extension is available in the Destinations catalog for all customers who have purchased Experience Platform.
 
-To use this extension, you need access to tags in Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to the Data Collection UI and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+To use this extension, you need access to tags in Experience Platform. Tags are offered to [!DNL Adobe Experience Cloud] customers as an included, value-add feature. Contact your organization administrator to get access to the Data Collection UI and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 
-To install the Adobe Analytics extension:
+To install the [!DNL Adobe Analytics] extension:
 
 In the [Experience Platform interface](https://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 

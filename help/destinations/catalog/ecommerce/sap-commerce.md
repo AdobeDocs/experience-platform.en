@@ -14,7 +14,7 @@ Instructions to authenticate to your [!DNL SAP Commerce] instance are further be
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL SAP Commerce] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL SAP Commerce] destination, here is a sample use case that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 [!DNL SAP Commerce] customers store information about individuals or organizational entities who interact with your business. Your team uses the customers existing in [!DNL SAP Commerce] to build the Experience Platform audiences. After sending these audiences to [!DNL SAP Commerce], their information is updated and each customer is assigned a property with its value as the audience name that indicates which audience the customer belongs to.
 
@@ -38,7 +38,7 @@ To export data from Experience Platform to your [!DNL SAP Commerce] account, you
 
 #### Generate a service key {#prerequisites-service-key}
 
-* The [!DNL SAP Commerce] service key allows you to access the [!DNL SAP Subscription Billing] API through Experience Platform. Refer to the [!DNL SAP Commerce] [create a Service Key with Client ID and Client Secret](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) to create a service key. [!DNL SAP Commerce] requires the following:
+* The [!DNL SAP Commerce] service key lets you access the [!DNL SAP Subscription Billing] API through Experience Platform. Refer to the [!DNL SAP Commerce] [create a Service Key with Client ID and Client Secret](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) to create a service key. [!DNL SAP Commerce] requires the following:
   * Client ID
   * Client secret
   * URL. The URL pattern is as follows: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. This value will be used later to obtain values for `Region` and `Endpoint`.
@@ -116,7 +116,7 @@ This destination also supports the activation of the audiences described in the 
 | Audience type | Supported | Description | 
 | ------------- | --------- | ----------- |
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -129,7 +129,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -197,7 +197,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Map attributes and identities {#map}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL SAP Commerce] destination, you must go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL SAP Commerce] destination fields, follow the steps below:
+To correctly send your audience data from [!DNL Adobe Experience Platform] to the [!DNL SAP Commerce] destination, you must go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL SAP Commerce] destination fields, follow the steps below:
 
 #### Map the `customerNumberSAP` identity {#map-customer-number-sap}
 
