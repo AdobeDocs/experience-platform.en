@@ -34,10 +34,6 @@ You can select the ![settings icon](../../images/icons/settings.png) to adjust t
 
 ![The settings icons is highlighted in Audience Builder.](../assets/segmentation/audience-builder/select-settings.png){zoomable="yes"}
 
->[!NOTE]
->
->The **[!UICONTROL Field options]** section is currently in beta, and is available only to select customers. Please contact Adobe Customer Care for more information.
-
 The [!UICONTROL Settings] section is displayed. In this section, you can update which fields are displayed as well as the relationship of the fields.
 
 For the **[!UICONTROL Field options]**, you can either show only the fields that contain data or the full XDM schema.
@@ -73,6 +69,10 @@ If an attribute is populated by less than 25% of accounts, the ![data notice ico
 >Summary data is only available if the attribute belongs to the Account, Person, or Opportunity schema. Additionally, the top values are only displayed if the field does **not** contain too many different values and if those field's values are commonly repeated.
 >
 >This summary data is updated on a **daily** basis.
+
+Additionally, the attribute has an **[!UICONTROL Ingestion Type]**. The ingestion type lets you know the origin of the data, and can be one of the following values: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]**, or **[!UICONTROL No Data Ingested]**. 
+
+![The ingestion type for the attribute is displayed.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png)
 
 For a more detailed guide on attributes within Audience Builder, read the [Audience Builder user guide](../../segmentation/ui/segment-builder.md){target="_blank"}.
 
