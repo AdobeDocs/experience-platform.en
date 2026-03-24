@@ -8,7 +8,7 @@ exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
 ---
 # Monitor dataflows
 
-[!UICONTROL Destinations] allow you to activate your data from Adobe Experience Platform to countless external partners. 
+[!UICONTROL Destinations] allow you to activate your data from [!DNL Adobe Experience Platform] to countless external partners. 
 
 Dataflows are a representation of data jobs that move data across [!DNL Experience Platform]. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by [!DNL Identity Service] and[!DNL Real-Time Customer Profile] before ultimately being activated to destinations.
 

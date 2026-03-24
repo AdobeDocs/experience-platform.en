@@ -28,7 +28,7 @@ In the [mapping step](/help/destinations/ui/activate-segment-streaming-destinati
 |---|---|---|
 |GAID|[!DNL Google Advertising ID]|Map the *GAID* source identity namespace to the target identity field *pinterest_audience*.|
 |IDFA|[!DNL Apple ID for Advertisers]|Map the *IDFA* source identity namespace to the target identity field *pinterest_audience*.|
-|EMAIL|Email addresses (clear text or hashed with the SHA256 algorithm)|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. <br> Map the *Email* or *Email_LC_SHA256* source identity namespace to the target identity field *pinterest_audience*.|
+|EMAIL|Email addresses (clear text or hashed with the SHA256 algorithm)|Both plain text and SHA256 hashed email addresses are supported by [!DNL Adobe Experience Platform]. <br> Map the *Email* or *Email_LC_SHA256* source identity namespace to the target identity field *pinterest_audience*.|
 
 {style="table-layout:auto"}
 
@@ -50,7 +50,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ Refer to the table below for information about the destination export type and f
 
 ## Use Cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL Pinterest Customer List] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Pinterest Customer List] destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 ### Use Case #1 {#use-case-1}
 
@@ -136,7 +136,7 @@ Refer to the [Pinterest Help Center page](https://help.pinterest.com/en/business
  
 |Release month|Update type|Description|
 |---|---|---|
-|November 2023|Functionality and documentation update|The Pinterest destination in Real-Time CDP now uses the v5 Advertiser API.|
+|November 2023|Functionality and documentation update|The Pinterest destination in [!DNL Real-Time CDP] now uses the v5 Advertiser API.|
 
 {style="table-layout:auto"}
 

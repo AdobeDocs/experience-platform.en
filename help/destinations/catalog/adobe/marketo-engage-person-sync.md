@@ -35,7 +35,7 @@ Use the Marketo Engage Person Sync connector to stream updates from person audie
 
 | Target Identity | Description                                                                                                                                                                              |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Email           | A namespace that represents an email address. This type of namespace is often associated to a single person and therefore can be used to identify that person across different channels. |
+| Email           | A namespace that represents an email address. This type of namespace is often associated to a single person and therefore identifies that person across different channels. |
 
 {style="table-layout:auto"}
 
@@ -50,7 +50,7 @@ This section describes which types of audiences you can export to this destinati
 | Audience origin      | Supported | Description                                                                                                                                                   |
 | -------------------- | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Segmentation Service | Yes | Audiences generated through the Experience Platform [Segmentation Service](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
-| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -61,7 +61,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -81,7 +81,7 @@ Refer to the table below for information about the destination export type and f
 >
 >* To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions).
 
-If your company has access to multiple organizations, make sure that you use the same organization in both Marketo Engage and Real-Time CDP, where you are setting up the destination connector to Marketo.  If you have already configured a destination, you may select an existing Marketo account to use with your new configuration.  If not, click the Connector to Destination prompt, which will allow you to set the name, description, and Marketo Munchkin ID of the desired destination.  Your Marketo Instance's Munchkin ID can be found in the Admin->Munchkin menu. 
+If your company has access to multiple organizations, make sure that you use the same organization in both Marketo Engage and [!DNL Real-Time CDP], where you are setting up the destination connector to Marketo.  If you have already configured a destination, you may select an existing Marketo account to use with your new configuration.  If not, click the Connector to Destination prompt, which will allow you to set the name, description, and Marketo Munchkin ID of the desired destination.  Your Marketo Instance's Munchkin ID can be found in the Admin->Munchkin menu. 
 
 >[!IMPORTANT]
 >
@@ -128,7 +128,7 @@ In the Activate Audiences step, you will be able to select from any person audie
 
 ## Field Mapping {#field-mapping}
 
-For changes to a particular person attribute to be sent to Marketo Engage, the field must be mapped from a Real-Time CDP field to Marketo Field.
+For changes to a particular person attribute to be sent to Marketo Engage, the field must be mapped from a [!DNL Real-Time CDP] field to Marketo Field.
 
 ![Field Mapping](../../assets/catalog/adobe/marketo-engage-person-sync/field-mapping.png)
 
@@ -152,7 +152,7 @@ Experience Platform datatypes and Marketo datatypes can be mapped in the followi
 
 {style="table-layout:auto"}
 
-In some cases it is desirable to allow integrations to set the value of a field if there is none, while preventing integrations from making updates to fields which already have a value.  If you need to prevent the destination connector from overwriting existing values in your Marketo Engage instance, you can configure fields to block updates in the Admin->Field Management section of your Marketo instance and toggling the Adobe Experience Platform source type.
+In some cases it is desirable to allow integrations to set the value of a field if there is none, while preventing integrations from making updates to fields which already have a value.  If you need to prevent the destination connector from overwriting existing values in your Marketo Engage instance, you can configure fields to block updates in the Admin->Field Management section of your Marketo instance and toggling the [!DNL Adobe Experience Platform] source type.
 
 ![Block Field Updates](../../assets/catalog/adobe/marketo-engage-person-sync/block-field-updates.png)
 
@@ -160,4 +160,4 @@ In some cases it is desirable to allow integrations to set the value of a field 
 
 ## Data Usage and Governance {#data-usage-and-governance}
 
-All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. For detailed information on how Adobe Experience Platform enforces data governance, see the [data governance overview](/help/data-governance/home.md).
+All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [data governance overview](/help/data-governance/home.md).

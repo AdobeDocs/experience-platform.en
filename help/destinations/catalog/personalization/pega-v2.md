@@ -7,9 +7,9 @@ exl-id: cbb998f9-c268-4d65-87d8-fab56c0844dc
 
 ## Overview {#overview}
 
-Use the (V2) [!DNL Pega CDH Realtime Audience] destination in Adobe Experience Platform to send profile attributes and audience membership data to [!DNL Pega Customer Decision Hub] for next-best-action decisioning. 
+Use the (V2) [!DNL Pega CDH Realtime Audience] destination in [!DNL Adobe Experience Platform] to send profile attributes and audience membership data to [!DNL Pega Customer Decision Hub] for next-best-action decisioning. 
 
-Profile audience membership from Adobe Experience Platform, when loaded into [!DNL Pega Customer Decision Hub], can be used as predictor in adaptive models and help deliver the right contextual and behavioral data for next-best-action decisioning purposes.
+Profile audience membership from [!DNL Adobe Experience Platform], when loaded into [!DNL Pega Customer Decision Hub], can be used as predictor in adaptive models and help deliver the right contextual and behavioral data for next-best-action decisioning purposes.
 
 >[!IMPORTANT]
 >
@@ -17,7 +17,7 @@ Profile audience membership from Adobe Experience Platform, when loaded into [!D
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL Customer Decision Hub] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Customer Decision Hub] destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 ### Telecommunications {#telecommunications}
 
@@ -25,15 +25,15 @@ A marketer wants to leverage insights from data science model-based next best ac
 
 ### Financial services {#financial-services}
 
-A marketer wants to optimize the offers for customers who subscribed or unsubscribed from Pension Plan or Retirement Plan newsletters. Financial services companies can ingest multiple Customer IDs from their own CRMs into Adobe Experience Platform, build audiences from their own offline data, and send profiles that are entering and exiting the audiences to [!DNL Pega Customer Decision Hub] for next-best-action (NBA) decisioning in outbound channels.
+A marketer wants to optimize the offers for customers who subscribed or unsubscribed from Pension Plan or Retirement Plan newsletters. Financial services companies can ingest multiple Customer IDs from their own CRMs into [!DNL Adobe Experience Platform], build audiences from their own offline data, and send profiles that are entering and exiting the audiences to [!DNL Pega Customer Decision Hub] for next-best-action (NBA) decisioning in outbound channels.
 
 ## Prerequisites {#prerequisites}
 
-Before you can use this destination to export data out of Adobe Experience Platform, make sure you complete the following prerequisites in [!DNL Pega Customer Decision Hub]:
+Before you can use this destination to export data out of [!DNL Adobe Experience Platform], make sure you complete the following prerequisites in [!DNL Pega Customer Decision Hub]:
 
 * Configure the [Adobe Experience Platform Profile and Audience Membership integration Component](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html) in your [!DNL Pega Customer Decision Hub] instance.
 * Configure OAuth 2.0 [Client Registration using Client Credentials](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html) grant type in your [!DNL Pega Customer Decision Hub] instance.
-* Configure [real-time run data flow](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html) for  Adobe Audience Membership data flow in your [!DNL Pega Customer Decision Hub] instance.
+* Configure [real-time run data flow](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html) for Adobe Audience Membership data flow in your [!DNL Pega Customer Decision Hub] instance.
 
 ## Supported identities {#supported-identities}
 
@@ -41,7 +41,7 @@ Before you can use this destination to export data out of Adobe Experience Platf
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|`CustomerID`|Customer ID|Common User Identifier that uniquely identifies a profile in [!DNL Pega Customer Decision Hub] and Adobe Experience Platform.|
+|`CustomerID`|Customer ID|Common User Identifier that uniquely identifies a profile in [!DNL Pega Customer Decision Hub] and [!DNL Adobe Experience Platform].|
 
 {style="table-layout:auto"}
 
@@ -52,7 +52,7 @@ This section describes which types of audiences you can export to this destinati
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -105,10 +105,10 @@ After establishing the authentication connection to the [!DNL Pega Customer Deci
 
 To configure details for the destination, fill in the required fields and select **[!UICONTROL Next]**.
 
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Pega CDH Host Name]**: The Pega Customer Decision Hub Host Name to which the profile gets exported as JSON data.
-*  **[!UICONTROL Application alias]**: The application alias that you configured for your Customer Decision Hub account. For more information, see [Adding an application URL alias](https://docs.pega.com/bundle/platform/page/platform/user-experience/adding-application-url-alias.html) in your [!DNL Pega Customer Decision Hub] instance.
+* **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+* **[!UICONTROL Pega CDH Host Name]**: The Pega Customer Decision Hub Host Name to which the profile gets exported as JSON data.
+* **[!UICONTROL Application alias]**: The application alias that you configured for your Customer Decision Hub account. For more information, see [Adding an application URL alias](https://docs.pega.com/bundle/platform/page/platform/user-experience/adding-application-url-alias.html) in your [!DNL Pega Customer Decision Hub] instance.
 
 ## Activate audiences to this destination {#activate}
 
@@ -127,7 +127,7 @@ In the [!UICONTROL Mapping] step, select a unique identifier from your union sch
 
 Below is an example of correct identity mapping when exporting profiles to [!DNL Pega Customer Decision Hub].
 
-* Select a source identity that uniquely identifies a profile in Adobe Experience Platform and [!DNL Pega Customer Decision Hub]. For example: `CustomerID`.
+* Select a source identity that uniquely identifies a profile in [!DNL Adobe Experience Platform] and [!DNL Pega Customer Decision Hub]. For example: `CustomerID`.
 * Select the destination profile attributes to which you want to map the selected source profile attributes.
 
 ![Identity mapping](../../assets/catalog/personalization/pega/pega-source-destination-mapping.png)

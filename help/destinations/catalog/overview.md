@@ -19,7 +19,7 @@ Browse the catalog to determine which destination platforms are best for your ad
 
 ## Destination categories {#destination-categories}
 
-You can activate your data to different destination categories in Adobe Experience Platform. The links below provide more information on each destination category:
+You can activate your data to different destination categories in [!DNL Adobe Experience Platform]. The links below provide more information on each destination category:
 
 - [Adobe [!UICONTROL destinations] overview](adobe/overview.md)
 - [[!UICONTROL Advertising] [!UICONTROL destinations] overview](advertising/overview.md)

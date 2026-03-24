@@ -33,7 +33,7 @@ Criteo supports the activation of identities described in the table below. Learn
 
 | Target Identity | Description | Considerations |
 | --- | --- | --- |
-| `email_sha256` | Email addresses hashed with the SHA-256 algorithm | Both plain text and SHA-256-hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the [!UICONTROL Apply transformation] option, to have Experience Platform automatically hash the data on activation. |
+| `email_sha256` | Email addresses hashed with the SHA-256 algorithm | Both plain text and SHA-256-hashed email addresses are supported by [!DNL Adobe Experience Platform]. When your source field contains unhashed attributes, check the [!UICONTROL Apply transformation] option, to have Experience Platform automatically hash the data on activation. |
 | `gum_id` | Criteo [!DNL GUM] cookie identifier | [!DNL GUM IDs] allow clients to maintain a correspondence between their user identification system and Criteo's user identification ([!DNL UID]). If the identifier type is `gum_id`, an additional parameter, the [!DNL GUM Caller ID], must also be included. Please reach out to your Criteo account team for the appropriate [!DNL GUM Caller ID] or to get more information on this [!DNL GUM ID] sync, if needed.|
 
 ## Supported audiences {#supported-audiences}
@@ -47,8 +47,6 @@ This section describes which types of audiences you can export to this destinati
 
 {style="table-layout:auto"}
 
-
-
 Supported audiences by audience data type:
 
 | Audience data type | Supported | Description | Use cases |
@@ -56,7 +54,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -72,11 +70,11 @@ Refer to the table below for information about the destination export type and f
 
 ## Use cases {#use-cases}
 
-To help you better understand how to use the [!DNL Criteo] destination, here are some goals that Adobe Experience Platform customers can achieve with [!DNL Criteo]:
+To help you better understand how to use the [!DNL Criteo] destination, here are some goals that [!DNL Adobe Experience Platform] customers can achieve with [!DNL Criteo]:
 
 ### Use case 1 : Get traffic {#use-case-1}
 
-Showcase your business with relevant product offers and flexible creatives. With intelligent product recommendations, your ads will automatically feature the products most likely to trigger visits and engagement. Flexible targeting allows you to build audiences from Criteo's commerce data set or from your own prospect lists and Adobe CDP segments.
+Showcase your business with relevant product offers and flexible creatives. With intelligent product recommendations, your ads will automatically feature the products most likely to trigger visits and engagement. Flexible targeting lets you build audiences from Criteo's commerce data set or from your own prospect lists and Adobe CDP segments.
 
 ### Use case 2 : Increase website conversions {#use-case-2}
 
@@ -94,7 +92,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 Steps to connect are as follows:
 
-1. Log in to Adobe Experience Platform and connect to the Criteo destination.
+1. Log in to [!DNL Adobe Experience Platform] and connect to the Criteo destination.
   
     ![Log in](../../assets/catalog/advertising/criteo/connect-destination.png)
 
@@ -167,7 +165,7 @@ The request body of adding a user profile received by the [!DNL Criteo] connecti
 }
 ```
 
-The request body of removing user profile  received by the [!DNL Criteo] connection looks similar to this:
+The request body of removing user profile received by the [!DNL Criteo] connection looks similar to this:
 
 ```json
 {
@@ -197,7 +195,7 @@ The request body of removing user profile  received by the [!DNL Criteo] connect
 
 ## Data usage and governance {#data-usage}
 
-All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. For detailed information on how Adobe Experience Platform enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 ## Additional resources {#additional-resources}
 
