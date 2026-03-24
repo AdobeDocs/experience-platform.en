@@ -1,8 +1,6 @@
 ---
 title: Adobe Experience Platform Release Notes March 2026
 description: The March 2026 release notes for Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 ---
 # Adobe Experience Platform release notes
 
@@ -20,9 +18,23 @@ hidefromtoc: true
 
 New features and updates to existing features in Adobe Experience Platform:
 
+- [Advanced data lifecycle management](#advanced-data-lifecycle-management)
 - [Agent Orchestrator](#agent-orchestrator)
 - [Destinations](#destinations)
+- [Experience Data Model (XDM)](#xdm)
 - [Sources](#sources)
+
+## Advanced data lifecycle management {#advanced-data-lifecycle-management}
+
+Experience Platform provides a suite of data hygiene capabilities that allow you to manage your stored data through programmatic deletions of consumer records and datasets. Using either the Data Lifecycle workspace in the UI or through calls to the Data Hygiene API, you can effectively manage your data stores. Use these capabilities to ensure that information is used as expected, is updated when incorrect data needs fixing, and is deleted when organizational policies deem it necessary.
+
+| Feature | Description |
+| --- | --- |
+| Multi-dataset and profile-only record delete (API only) | You can submit a single dataset ID, a comma-separated list of dataset IDs, or the literal `ALL` in `datasetId` to delete identities across one, many, or all datasets. You can also limit deletion to profile-related services by setting `targetServices` to `["identity","profile","ajo"]`, which leaves the datalake unchanged; this functionality is available via the Data Hygiene API only. See the [Record delete work orders guide](../../hygiene/api/workorder.md) for more details. |
+
+{style="table-layout:auto"}
+
+For more information, read the [advanced data lifecycle management overview](../../hygiene/home.md).
 
 ## Agent Orchestrator {#agent-orchestrator}
 
@@ -36,7 +48,7 @@ Agent Orchestrator enables you to build and deploy AI-powered agents that can au
 
 {style="table-layout:auto"}
 
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+For more information, read the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 ## Destinations {#destinations}
 
@@ -46,14 +58,11 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 
 | Destination | Description |
 | --- | --- |
-| [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md) region selector | You can now find your region more easily with the new searchable dropdown, which combines search and dropdown into one control. |
-| New table structure for [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md) destinations | Tables shared into your Snowflake account now have a new structure which includes separate audience name and audience origin columns. The new table structure applies to all new destination connections set up moving forward. For any new connections that you set up, an old format and new format table are created. The old table structure will be kept for another three months before being deprecated. Read more in the [Exported data](../../destinations/catalog/warehouses/snowflake-batch.md#exported-data) section of the Snowflake Batch documentation. |
 | [Adobe Advertising DSP](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md) connection | The new Adobe Advertising DSP connection offers the same functionality as the legacy connection plus support for additional identities. With the new connector, you can also export cookie-based identities to Adobe Advertising DSP. |
 | [FreeWheel](../../destinations/catalog/advertising/freewheel.md) connection | Send [!DNL Real-Time CDP] audiences to FreeWheel as daily batch files so you can target them in FreeWheel deals and campaigns across CTV, video, and display. Contact your Adobe account team for access. |
-| External audience support for [The Trade Desk CRM](../../destinations/catalog/advertising/tradedesk-emails.md), [Criteo](../../destinations/catalog/advertising/criteo.md) and [Pinterest](../../destinations/catalog/advertising/pinterest.md) | You can now activate audiences from origins beyond Segmentation Service to The Trade Desk CRM, Criteo, and Pinterest, including custom upload audiences (imported from CSV), look-alike audiences, federated audiences, and audiences created in other Experience Platform apps such as [!DNL Adobe Journey Optimizer]. This update is being rolled out through the end of March. See the [supported audiences](../../destinations/catalog/advertising/criteo.md#supported-audiences) section on each destination's catalog page for details. |
+| External audience support for [The Trade Desk CRM](../../destinations/catalog/advertising/tradedesk-emails.md) and [Pinterest](../../destinations/catalog/advertising/pinterest.md) | You can now activate audiences from origins beyond Segmentation Service to The Trade Desk CRM, Criteo, and Pinterest, including custom upload audiences (imported from CSV), look-alike audiences, federated audiences, and audiences created in other Experience Platform apps such as [!DNL Adobe Journey Optimizer]. This update is being rolled out through the end of March. See the [supported audiences](../../destinations/catalog/advertising/criteo.md#supported-audiences) section on each destination's catalog page for details. |
 | Increased custom upload audiences limit | You can now activate up to 20 custom upload audiences per destination instance. Previously, this limit was 10. See the [destinations guardrails](../../destinations/guardrails.md#batch-file-based-activation) for details. |
 | [Export file now](../../destinations/ui/export-file-now.md) and [ad-hoc activation API](../../destinations/api/ad-hoc-activation-api.md) support for external audiences | You can now use Export file now (UI) and the ad-hoc activation API with external audiences (such as custom upload, look-alike, federated, and audiences from other Experience Platform apps) when activating to batch file-based destinations. This update is being rolled out through the end of March. |
-| [HTTP API](../../destinations/catalog/streaming/http-destination.md) destinations with OAuth 2 and mTLS | You can now create and authenticate HTTP API destinations that use OAuth 2 when the authentication endpoint requires mutual TLS (mTLS); token retrieval during destination setup now supports mTLS. |
 
 {style="table-layout:auto"}
 
@@ -61,12 +70,37 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 
 | Fix | Description |
 | --- | --- |
-| [Snowflake Streaming](../../destinations/catalog/warehouses/snowflake.md) and [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md) account ID validation | A regular expression validator has been added to the Account ID step. When you enter your ID, it is now validated to ensure organization ID and account ID are in the correct format (separated by a dot). |
 | [TikTok](../../destinations/catalog/social/tiktok.md) connector phone number hashing | Fixed an issue where a misconfiguration in the destination card meant that identities keyed off of phone numbers were not being activated to TikTok. To benefit from this fix, set up a new activation flow, or remove the phone number mapping from your existing flow, save it, and add it back again. |
 
 {style="table-layout:auto"}
 
 For more information, read the [Destinations overview](../../destinations/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+| Feature | Description |
+| --- | --- |
+| XDM Entity Actions And Delete Support | Access actions for schemas, classes, field groups, and data types directly from inline table menus and detail page header menus. If you have the required permissions, you can also delete your organization's entities when they are not used by datasets and not enabled for Profile. See the [XDM UI guide](../../xdm/ui/explore.md) for more details. |
+
+For more information, read the [XDM overview](../../xdm/home.md).
+
+<!-- 
+## Run and Operate {#run-and-operate}
+
+Inspect, troubleshoot, and optimize your Experience Platform implementations with the Run and Operate tools. Gain visibility into scheduled batch activations, identify configuration issues, and improve system reliability.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| [Job Schedules](../../run-and-operate/job-schedules.md) general availability | [!DNL Job Schedules] provides a unified view of all scheduled batch processing jobs across your data pipeline, from ingestion through destination activation. Inspect execution status, identify scheduling conflicts, and diagnose configuration issues before they impact your business operations. |
+| [Health Checks](../../run-and-operate/health-checks.md) general availability | Poor schema and identity configurations lead to significant downstream issues, including incorrect profile creation, failed segment qualification, and inaccurate activation. <br>Health checks shift your approach from reactive troubleshooting to proactive, preventative maintenance. Health checks are always-on scans of your schemas and identities used in your sandbox and provide a summary of issues that you can use to explore and troubleshoot. |
+
+{style="table-layout:auto"}
+
+For more information, read the [Run and Operate overview](../run-and-operate/overview.md), [Inspect job schedules](../run-and-operate/job-schedules.md), and the [Platform UI guide](../landing/ui-guide.md). -->
 
 ## Sources
 
@@ -85,3 +119,18 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 For more information, read the [sources overview](../../sources/home.md).
 
+<!--
+
+NOTE FOR VLAD, CRITEO WAS REMOVED FROM EXTERNAL AUDIENCE SUPPORT
+
+| Destination | Description |
+| --- | --- |
+| [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md) region selector | You can now find your region more easily with the new searchable dropdown, which combines search and dropdown into one control. |
+| New table structure for [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md) destinations | Tables shared into your Snowflake account now have a new structure which includes separate audience name and audience origin columns. The new table structure applies to all new destination connections set up moving forward. For any new connections that you set up, an old format and new format table are created. The old table structure will be kept for another three months before being deprecated. Read more in the [Exported data](../../destinations/catalog/warehouses/snowflake-batch.md#exported-data) section of the Snowflake Batch documentation. |
+| [HTTP API](../../destinations/catalog/streaming/http-destination.md) destinations with OAuth 2 and mTLS | You can now create and authenticate HTTP API destinations that use OAuth 2 when the authentication endpoint requires mutual TLS (mTLS); token retrieval during destination setup now supports mTLS. |
+
+| Fix | Description |
+| --- | --- |
+| [Snowflake Streaming](../../destinations/catalog/warehouses/snowflake.md) and [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md) account ID validation | A regular expression validator has been added to the Account ID step. When you enter your ID, it is now validated to ensure organization ID and account ID are in the correct format (separated by a dot). |
+
+-->
