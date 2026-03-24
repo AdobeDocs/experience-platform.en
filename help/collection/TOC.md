@@ -97,6 +97,8 @@ role: Developer
     + [Overview](use-cases/identity/id-overview.md)
     + [First-party device IDs](use-cases/identity/first-party-device-ids.md)
     + [ID sharing](use-cases/identity/id-sharing.md)
+  + MCP {#mcp}
+    + [ChatGPT apps](use-cases/mcp/chatgpt.md)
   + [Multiple SDK instances](use-cases/multiple-instances.md)
   + Personalization {#personalization}
     + [Overview](use-cases/personalization/pers-overview.md)

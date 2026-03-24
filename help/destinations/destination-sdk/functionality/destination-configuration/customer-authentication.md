@@ -48,6 +48,8 @@ Refer to the table below for details on which types of integrations support the 
 | Real-time (streaming) integrations | Yes |
 | File-based (batch) integrations | Yes |
 
+{style="table-layout:auto"}
+
 ## Authentication rule configuration {#authentication-rule}
 
 When using any of the customer authentication configurations described in this page, always set the `authenticationRule` parameter in [destination delivery](destination-delivery.md) to `"CUSTOMER_AUTHENTICATION"`, as shown below.
@@ -167,7 +169,7 @@ To set up [!DNL Azure Data Lake Storage] (ADLS) authentication for your destinat
 ]
 ```
 
-## SFTP with password authentication
+## SFTP with password authentication {#sftp-password-auth}
 
 [!DNL SFTP] authentication with password is supported for file-based destinations in Experience Platform.
 
@@ -185,7 +187,7 @@ To set up SFTP authentication with password for your destination, configure the 
 ]
 ```
 
-## SFTP with SSH key authentication
+## SFTP with SSH key authentication {#sftp-ssh-key-auth}
 
 [!DNL SFTP] authentication with [!DNL SSH] key is supported for file-based destinations in Experience Platform.
 

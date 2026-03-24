@@ -55,7 +55,7 @@ Follow the steps below to update connection details to existing destinations.
 
 5. Select **[!UICONTROL Save]** to finish the account details update.
 
-## Next steps
+## Next steps {#next-steps}
 
 By following this tutorial, you have successfully used the **[!UICONTROL destinations]** workspace to update existing accounts.
 

@@ -111,6 +111,7 @@ The following table outlines the available resource categories for both Experien
 | [!DNL Prospects] | Configure manage and view permissions to prospects schemas, profiles, and audiences, including features such as seeing the prospect accordion. |
 | [!DNL Query Service] | Configure manage permissions to query service features such as non-expiring credential and structured SQL queries. |
 | [!DNL Reports] | Configure view permissions to channel reports. |
+| [!DNL Run and Operate] | Configure view permissions for Run and Operate features such as health checks and job schedules. |
 | [!DNL Sandbox Administration] | Configure manage, view, and reset permissions when administering sandboxes. |
 | [!DNL Traits Configuration] | Configure manage and view traits via the computed attributes UI. |
 | [!DNL Translation Services] | Configure manage and view permissions to translation services for projects, tasks, reviews, inhouse, settings, and providers. |
@@ -281,6 +282,8 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Query Service] | [!UICONTROL Manage Query Sessions] | Ability to evict existing sessions. |
 | [!DNL Query Service] | [!UICONTROL Manage Allow List] | Ability to manage IP restrictions for your organization. |
 | [!DNL Reports] | [!UICONTROL View Channel Reports] | The ability to view and modify channel reports. |
+| [!DNL Run and Operate] | [!UICONTROL View Health Checks] | Read-only access to health checks. |
+| [!DNL Run and Operate] | [!UICONTROL View Job Schedules] | Read-only access to job schedules. |
 | [!DNL Sandbox Administration] | [!UICONTROL Manage Sandboxes] | Access to read, create, edit, and delete sandboxes. |
 | [!DNL Sandbox Administration] | [!UICONTROL View Sandboxes] | Read-only access for sandboxes belonging to your organization. |
 | [!DNL Sandbox Administration] | [!UICONTROL Reset a Sandbox] | Ability to reset a sandbox. |

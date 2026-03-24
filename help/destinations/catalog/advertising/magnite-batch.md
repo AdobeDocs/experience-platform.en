@@ -24,7 +24,7 @@ For more information about the Real-Time destination, See [this documentation pa
 
 >[!IMPORTANT]
 >
->The destination connector and documentation page are created and maintained by the [!DNL Magnite] team. For any inquiries or update requests, please contact them directly at `adobe-tech@magnite.com`.
+>The destination connector and documentation page are created and maintained by the [!DNL Magnite] team. For any inquiries or update requests, contact them directly at `adobe-tech@magnite.com`.
 
 ## Use cases {#use-cases}
 
@@ -130,7 +130,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 >[!NOTE]
 >
->If you plan to send multiple ID types (GAID, IDFA, etc.) using the Batch destination, a new destination connection/instance is required for each. Please contact your Magnite Account representative for more information.
+>If you plan to send multiple ID types (GAID, IDFA, etc.) using the Batch destination, a new destination connection/instance is required for each. Contact your Magnite Account representative for more information.
 
 You can then proceed by selecting **[!UICONTROL Next]**
 
@@ -146,10 +146,10 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-### Activate segments to this destination {#activate}
+### Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -166,7 +166,7 @@ In this example, we've selected the **[!UICONTROL Target field]**: magnite_devic
 
 >[!NOTE]
 >
->If you plan to send/map multiple ID types (GAID, IDFA, etc.) using the Batch destination, a new destination connection/instance is required for each. Please contact your Magnite Account representative for more information.
+>If you plan to send/map multiple ID types (GAID, IDFA, etc.) using the Batch destination, a new destination connection/instance is required for each. Contact your Magnite Account representative for more information.
 
 
 On the "Configure a filename and export schedule for each audience" screen, you must now configure a Start date (mandatory), End date (optional), and a Mapping ID (mandatory) for each audience.

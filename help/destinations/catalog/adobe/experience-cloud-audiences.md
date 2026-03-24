@@ -72,7 +72,7 @@ However, Adobe strongly recommends using the following dedicated destination car
 > * You *do* need an Audience Manager license to share Real-Time CDP audiences with Adobe Analytics.
 > * You *do not need* an Audience Manager license to share Real-Time CDP audiences with Adobe Advertising Cloud, Adobe Target, Marketo, and other Experience Cloud solutions, mentioned in the [section above](#share-segments-with-other-solutions).
 
-### For customers who are using the legacy audience-sharing solution
+### For customers who are using the legacy audience-sharing solution {#legacy-audience-sharing}
 
 If you are already sharing audiences from Real-Time CDP to Audience Manager and other Experience Cloud solutions via the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), you must contact Customer Care to disable the legacy integration.
 
@@ -151,7 +151,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -174,7 +174,7 @@ To configure details for the destination, fill in the required and optional fiel
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination. No [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) is required and no [scheduling step](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) is available for this destination.
@@ -183,7 +183,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 To validate successful data export, you can check that your audiences have successfully made it through to your desired Experience Cloud solution.
 
-### Validate data in Audience Manager
+### Validate data in Audience Manager {#validate-audience-manager}
 
 Your Real-Time CDP audiences appear in Audience Manager as [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-signals), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-traits), and [segments](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-segments). You can verify in Audience Manager if the data has appeared as described in the documentation links above. 
 
@@ -202,7 +202,7 @@ Data usage labels transfer to applications but marketing actions do not. This me
 
 Audiences marked with the [!DNL HIPAA] marketing action are not sent from Real-Time CDP to Audience Manager.
 
-### Permissions management in Audience Manager
+### Permissions management in Audience Manager {#audience-manager-permissions}
 
 Audiences and traits in Audience Manager are subject to [Role-Based Access Controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) (RBAC). 
 
