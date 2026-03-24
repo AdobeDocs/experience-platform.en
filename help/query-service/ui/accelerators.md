@@ -8,7 +8,7 @@ description: Use Data Distiller accelerators to run and schedule Adobe-approved 
 
 Data Distiller accelerators are Adobe-authored, parameterized SQL templates designed for common analytical scenarios. Use accelerators to run common analyses without writing SQL from scratch. Accelerators are read-only and maintained by Adobe, ensuring consistency across your organization. If you need to modify one, you can clone it as a custom template.
 
-After completing this guide, you'll know how to run, schedule, and clone accelerators in the [!UICONTROL Queries] workspace.
+Read this guide to learn how to run, schedule, and clone accelerators in the [!UICONTROL Queries] workspace.
 
 >[!AVAILABILITY]
 >
@@ -18,7 +18,7 @@ After completing this guide, you'll know how to run, schedule, and clone acceler
 
 Before you begin, ensure you meet the following requirements:
 
-* You have access to the Queries workspace in Experience Platform.
+* You have access to the [!UICONTROL Queries] workspace in Experience Platform.
 * You understand [how to use the Query Editor and run queries](./user-guide.md).
 * You are familiar with [parameterized queries](./parameterized-queries.md) (placeholders in SQL replaced at runtime).
 
@@ -26,7 +26,7 @@ Before you begin, ensure you meet the following requirements:
 
 Use accelerators when you need pre-built SQL for common analytical patterns such as funnel analysis, moving averages, or audience overlap. If no accelerator fits your use case, [write a custom query in the Query Editor](./user-guide.md#query-authoring) or request a new accelerator (see [Request a new accelerator](#request-accelerator)).
 
-Some accelerators open as dashboards for immediate analysis, while others open in the Query Editor where you can run, schedule, or adapt the logic. See the [Dashboard-linked accelerators](#dashboard-accelerators) section to find out how these pre-configured visualisations provide insights on your audience data.
+A small set of accelerators open as dashboards for immediate analysis, while others open in the Query Editor where you can run, schedule, or adapt the logic. See the [Dashboard-linked accelerators](#dashboard-accelerators) section to find out how these pre-configured visualisations provide insights on your audience data.
 
 To begin using accelerators, navigate to the **[!UICONTROL Queries]** workspace and open the **[!UICONTROL Accelerators]** tab or the **[!UICONTROL Overview]** tab.
 
@@ -70,12 +70,12 @@ The right-hand panel displays metadata such as **[!UICONTROL Accelerator ID]**, 
 
 To run the accelerator, you must first provide values for all required parameters. Parameters use the `${PARAMETER_NAME}` syntax and appear in the **[!UICONTROL Query parameters]** tab below the editor. For example, `${START_DATE}` requires a date value in `YYYY-MM-DD` format (for example, `2024-01-01`), and `${AUDIENCE_ID}` requires a specific audience identifier.
 
-To run an accelerator
+To run an accelerator.
 
 1. Select **[!UICONTROL Query parameters]** and enter a value for each parameter.
 2. Select the play icon (![The play icon.](../../images/icons/play.png)) in the toolbar.
 
-The accelerator runs and displays results in the **[!UICONTROL Results]** tab. These results are not persisted to a dataset unless you explicitly use the [[!UICONTROL Run as CTAS]](#persist-results) or [scheduling workflow](#schedule-accelerator).
+The accelerator runs and displays results in the **[!UICONTROL Results]** tab. These results are not persisted to a dataset unless you explicitly use the [**[!UICONTROL Run as CTAS]**](#persist-results) or [scheduling workflow](#schedule-accelerator).
 
 For more information on parameterized queries, see [Parameterized queries in Query Editor](./parameterized-queries.md).
 
@@ -83,7 +83,7 @@ For more information on parameterized queries, see [Parameterized queries in Que
 
 After you run an accelerator and confirm the results, you can persist the output to a dataset.
 
-To create a dataset from the results, select **[!UICONTROL Save]** to save the accelerator asa template, then select **[!UICONTROL Run as CTAS]**. The **[!UICONTROL Enter output dataset details]** dialog appears. Enter a dataset name and optional description, then confirm to create the dataset. This action creates a new dataset and writes the results to it.
+To create a dataset from the results, select **[!UICONTROL Save]** to save the accelerator as a template, then select **[!UICONTROL Run as CTAS]**. The **[!UICONTROL Enter output dataset details]** dialog appears. Enter a dataset name and optional description, then confirm to create the dataset. This action creates a new dataset and writes the results to it.
 
 ![The [!UICONTROL Enter output dataset details] dialog with a dataset name and description populated.](../images/ui/accelerators/output-dataset-details-dialog.png)
 
@@ -99,11 +99,13 @@ The schedule configuration dialog appears.
 
 ![The schedule configuration dialog showing frequency, date range, output dataset, and parameter fields.](../images/ui/accelerators/schedule-details.png)
 
-In the schedule configuration dialog, you must provide a frequency, timeframe, output dataset and parameter values again. Parameter values entered in the Query Editor are not carried into the schedule configuration. In the **[!UICONTROL Dataset details]** section, you can choose to **[!UICONTROL Append into existing dataset]** or **[!UICONTROL Create and append into new dataset]**. For complete step-by-step instructions, see the [Create a query schedule](./query-schedules.md#create-schedule) guide.
+In the schedule configuration dialog, you must provide a frequency, timeframe, output dataset and parameter values again. Parameter values entered in the Query Editor are not carried into the schedule configuration. In the **[!UICONTROL Dataset details]** section, you can choose to **[!UICONTROL Append into existing dataset]** or **[!UICONTROL Create and append into new dataset]**. After you configure the schedule, the accelerator runs automatically based on your settings and writes results to the selected dataset.
+
+For complete step-by-step instructions, see the [Create a query schedule](./query-schedules.md#create-schedule) guide.
 
 ## Create a custom template from an accelerator {#create-custom-template}
 
-If you need to modify the SQL or reuse the logic under your own configuration, you can create a custom template from an accelerator. First, open an accelerator in the Query Editor, then select **[!UICONTROL Create custom template]**. Modify the SQL and details as needed, and select **[!UICONTROL Save]** and **[!UICONTROL Save and close]** to store the template.
+If you need to modify the SQL or reuse the logic under your own configuration, you can create a custom template from an accelerator. First, open an accelerator in the Query Editor, then select **[!UICONTROL Create custom template]**. Modify the SQL and details as needed, and select **[!UICONTROL Save]** or **[!UICONTROL Save and close]** to store the template.
 
 Once saved, the template is editable and can be run, scheduled, or used with CTAS. The template is saved to the **[!UICONTROL Templates]** tab, where you can manage it like any other template. For more information, see [Query templates](./query-templates.md).
 
@@ -113,7 +115,7 @@ The cloned template differs from the original accelerator because the SQL is edi
 
 ## Dashboard-linked accelerators {#dashboard-accelerators}
 
-Some accelerators on the [!UICONTROL Overview] tab open as dashboards instead of SQL queries. These accelerators provide prebuilt visualizations for analyzing audience data and do not require parameter input or manual execution.
+Some accelerators on the **[!UICONTROL Overview]** tab open as dashboards instead of SQL queries. These accelerators provide prebuilt visualizations for analyzing audience data and do not require parameter input or manual execution.
 
 The following accelerators open in the **[!UICONTROL Dashboards]** workspace:
 
