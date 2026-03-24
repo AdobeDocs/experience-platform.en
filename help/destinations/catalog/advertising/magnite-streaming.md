@@ -17,11 +17,13 @@ To activate your audiences to [!DNL Magnite Streaming], you must:
 * Activate the audiences on the [!DNL Magnite: Real-Time] destination, as shown in this page.
 * Activate the same audience on the Magnite: Batch destination. The [!DNL Magnite: Batch] destination is a mandatory component. Failing to activate the audience on the [!DNL Magnite Streaming] Batch destination will result in a failed integration, and your audiences will not be activated.
 
-Note: When using the Real-Time destination, [!DNL Magnite Streaming] will receive audiences in real-time, but Magnite can only store real-time audiences temporarily in their platform, and they will be removed from the system within a couple days. For this reason, if you want to use the Magnite: Real-Time destination, you will *also* need to use the Magnite: Batch destination - each audience that you activate to the Real-Time destination, you also need to activate to the Batch destination.
+>[!NOTE]
+>
+>When using the Real-Time destination, [!DNL Magnite Streaming] will receive audiences in real-time, but Magnite can only store real-time audiences temporarily in their platform, and they will be removed from the system within a couple days. For this reason, if you want to use the Magnite: Real-Time destination, you will *also* need to use the Magnite: Batch destination - each audience that you activate to the Real-Time destination, you also need to activate to the Batch destination.
 
 >[!IMPORTANT]
 >
->The destination connector and documentation page are created and maintained by the [!DNL Magnite] team. For any inquiries or update requests, please contact them directly at `adobe-tech@magnite.com`.
+>The destination connector and documentation page are created and maintained by the [!DNL Magnite] team. For any inquiries or update requests, contact them directly at `adobe-tech@magnite.com`.
 
 ## Use cases {#use-cases}
 
@@ -123,14 +125,14 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 >
 >* To activate data, you need the **[!UICONTROL View destinations]**, **[!UICONTROL Activate destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
-Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate audiences to streaming destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 Once the destination connection has been created, you can proceed to the audience activation flow. The following section walks through how to activate audiences using the Real-Time destination.
 
@@ -172,7 +174,7 @@ Once your audiences have been uploaded, you may validate your audiences have bee
 
 * Post-ingest, audiences are expected to appear in [!DNL Magnite Streaming] within a few minutes and can be applied to a deal. You can confirm this by looking up the segment ID that was shared during the activation steps in the Adobe Experience Platform.
 
-## Activate the same audiences through the [!DNL Magnite: Batch ]destination
+## Activate the same audiences through the [!DNL Magnite: Batch ]destination {#activate-magnite-batch}
 
 Audiences shared with [!DNL Magnite Streaming] using the  Real-Time destination will also need to be shared using the Magnite: Batch destination. When configured correctly, segment names in the [!DNL Magnite Streaming] UI are updated to reflect those used in the Adobe Experience Platform post-daily update.
 

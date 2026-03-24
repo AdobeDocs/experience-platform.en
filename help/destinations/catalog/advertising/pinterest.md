@@ -11,7 +11,7 @@ Create audiences from your customer lists, people who've visited your site or pe
 
 >[!IMPORTANT]
 >
->This destination was built by the Pinterest team. For any inquiries or update requests, please contact them directly at https://help.pinterest.com/en/contact.
+>This destination was built by the Pinterest team. For any inquiries or update requests, contact them directly at https://help.pinterest.com/en/contact.
 
 ## Prerequisites {#prerequisites}
 
@@ -70,14 +70,14 @@ Refer to the table below for information about the destination export type and f
 
 To help you better understand how and when you should use the [!DNL Pinterest Customer List] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Use Case #1
+### Use Case #1 {#use-case-1}
 
 Create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest.
 
 ## Connect to destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
@@ -105,7 +105,7 @@ Once the token is expired, data exports to the destination stop working. To prev
     ![Modal window with Reconnect OAuth option](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
 
 >[!SUCCESS]
-> 
+>
 >Your authentication credentials are refreshed and their expiration time is reset to 30 days.
 
 ### Enable alerts {#enable-alerts}
@@ -117,7 +117,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -129,7 +129,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-Please refer to the [Pinterest Help Center page](https://help.pinterest.com/en/business/article/audience-targeting) for additional information.
+Refer to the [Pinterest Help Center page](https://help.pinterest.com/en/business/article/audience-targeting) for additional information.
 
 +++ View changelog
 

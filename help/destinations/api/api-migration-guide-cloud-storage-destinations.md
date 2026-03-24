@@ -9,7 +9,7 @@ exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
 
 >[!IMPORTANT]
 >
->* The functionality described on this page is available to customers who have purchased the Real-Time CDP Prime and Ultimate packages. Please contact your Adobe representative for more information. 
+>* The functionality described on this page is available to customers who have purchased the Real-Time CDP Prime and Ultimate packages. Contact your Adobe representative for more information. 
 
 ## Migration context {#migration-context}
 
