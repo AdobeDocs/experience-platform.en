@@ -50,11 +50,11 @@ Advertisers have the choice to share segments either with authenticated first-pa
 
     * For each IDFA, include the value `IDFA` in an IdentityMap column.
 
-* The Experience Cloud organization ID for the Experience Platform account. You can find your ID on your Adobe Real-Time Customer Data Platform (Real-Time CDP) user profile page.
+* The Experience Cloud organization ID for the Experience Platform account. You can find your ID on your Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP]) user profile page.
 
-* A [Real-Time CDP source in DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) to receive audiences for campaign activation. Your Adobe Account Team will create the source using your Experience Cloud organization ID.
+* A [[!DNL Real-Time CDP] source in DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) to receive audiences for campaign activation. Your Adobe Account Team will create the source using your Experience Cloud organization ID.
 
-* The source key for the [!DNL DSP] account or advertiser, which is generated when a [Real-Time CDP source is created in [!DNL DSP]](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). Your [!DNL DSP] account team will share this key with you. You will use it within Experience Platform to create a destination connection to the Advertising DSP destination, as explained below.
+* The source key for the [!DNL DSP] account or advertiser, which is generated when a [[!DNL Real-Time CDP] source is created in [!DNL DSP]](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). Your [!DNL DSP] account team will share this key with you. You will use it within Experience Platform to create a destination connection to the Advertising DSP destination, as explained below.
 
 ### Set up ID syncing to share cookies {#cookie-sync}
 
@@ -66,7 +66,7 @@ If you are using [!DNL Experience Platform Web SDK], enable third-party ID synci
 
 **Enable third-party ID syncing with the [!DNL Experience Cloud ID Service]**
 
-If you are using [!DNL Experience Platform] tags with the [!DNL Experience Cloud ID Service], configure the third-party ID sync using the [Experience Cloud ID Service extension](/help/tags/extensions/client/id-service/overview.md). This allows the matched Adobe Advertising cookie for the given ECID to be available when you activate the audience from Real-Time CDP.
+If you are using [!DNL Experience Platform] tags with the [!DNL Experience Cloud ID Service], configure the third-party ID sync using the [Experience Cloud ID Service extension](/help/tags/extensions/client/id-service/overview.md). This allows the matched Adobe Advertising cookie for the given ECID to be available when you activate the audience from [!DNL Real-Time CDP].
 
 ## Supported identities {#supported-identities}
 
@@ -89,7 +89,7 @@ This section describes which types of audiences you can export to this destinati
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -100,7 +100,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -127,7 +127,7 @@ To connect to the destination, follow the instructions to [create a destination 
 
 To connect to the destination, provide the following parameter in the [!UICONTROL Connection type] section, and then select **[!UICONTROL Connect to destination]**:
 
-* **[!UICONTROL Account or Advertiser Key]**: This [!UICONTROL Source Key] is generated when a [Real-Time CDP source is created in the DSP user interface](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). Your Adobe Account Team will share this key with you after they create the source.
+* **[!UICONTROL Account or Advertiser Key]**: This [!UICONTROL Source Key] is generated when a [[!DNL Real-Time CDP] source is created in the DSP user interface](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). Your Adobe Account Team will share this key with you after they create the source.
 
 ![Screenshot of the Connection type section showing the Account or Advertiser Key field.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
@@ -196,7 +196,7 @@ To verify that the audience data was shared with Adobe Advertising, check the fo
 
 * In DSP, the audience is available when you create or edit an audience from **[!UICONTROL Audiences]** > **[!UICONTROL All Audiences]** or from within the **[!UICONTROL Audience Targeting]** section of placement settings. The audience should be visible in the [!UICONTROL Adobe Segments] tab under the [!UICONTROL Real-Time CDP] folder.
 
-![Screenshot of the DSP Audiences interface showing a Real-Time CDP folder with imported audience segments listed under the Adobe Segments tab.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
+![Screenshot of the DSP Audiences interface showing a [!DNL Real-Time CDP] folder with imported audience segments listed under the Adobe Segments tab.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
 
 ## Data usage and governance {#data-usage-governance}
 

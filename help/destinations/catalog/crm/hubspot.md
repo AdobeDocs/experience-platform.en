@@ -6,7 +6,7 @@ exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
 ---
 # [!DNL HubSpot] connection
 
-[[!DNL HubSpot]](https://www.hubspot.com) is a CRM platform with all the software, integrations, and resources you need to connect marketing, sales, content management, and customer service. It allows you to connect your data, teams, and customers on one CRM platform.
+[[!DNL HubSpot]](https://www.hubspot.com) is a CRM platform with all the software, integrations, and resources you need to connect marketing, sales, content management, and customer service. It lets you connect your data, teams, and customers on one CRM platform.
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL HubSpot] Contacts API](https://developers.hubspot.com/docs/api/crm/contacts), to update contacts within [!DNL HubSpot] from an existing Experience Platform audience after activation.
 
@@ -14,7 +14,7 @@ Instructions to authenticate to your [!DNL HubSpot] instance are further below, 
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL HubSpot] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL HubSpot] destination, here is a sample use case that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 [!DNL HubSpot] contacts store information about the individuals that interact with your business. Your team uses the contacts that exist in [!DNL HubSpot] to build the Experience Platform audiences. After sending these audiences to [!DNL HubSpot], their information is updated and each contact is assigned a property with its value as the audience name that indicates which audience the contact belongs to.
 
@@ -75,7 +75,7 @@ This destination also supports the activation of the audiences described in the 
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -88,7 +88,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -149,7 +149,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Map attributes and identities {#map}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL HubSpot] destination, you must go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination.
+To correctly send your audience data from [!DNL Adobe Experience Platform] to the [!DNL HubSpot] destination, you must go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination.
 
 To correctly map your XDM fields to the [!DNL HubSpot] destination fields, follow the steps below:
 

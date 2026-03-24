@@ -5,7 +5,7 @@ exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
 ---
 # UI attributes
 
-UI attributes define the visual elements that Adobe should display for your destination card in the Adobe Experience Platform user interface, such as a logo, a link to the documentation page, a destination description and its category and type.
+UI attributes define the visual elements that Adobe should display for your destination card in the [!DNL Adobe Experience Platform] user interface, such as a logo, a link to the documentation page, a destination description and its category and type.
 
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the following destination configuration overview pages:
 
@@ -58,7 +58,7 @@ Refer to the table below for details on which types of integrations support the 
 
 ### `documentationLink` {#documentation-link}
 
-`documentationLink` is a string parameter that refers to the documentation page in the [Destinations Catalog](../../../catalog/overview.md) for your destination. Every productized destination in Adobe Experience Platform must have a corresponding documentation page. [Learn how to create a destination documentation page](../../docs-framework/documentation-instructions.md) for your destination. Note that this is not required for private/custom destinations.
+`documentationLink` is a string parameter that refers to the documentation page in the [Destinations Catalog](../../../catalog/overview.md) for your destination. Every productized destination in [!DNL Adobe Experience Platform] must have a corresponding documentation page. [Learn how to create a destination documentation page](../../docs-framework/documentation-instructions.md) for your destination. Note that this is not required for private/custom destinations.
 
 Use the following format: `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `http://www.adobe.com/go/destinations-moviestar-en`.
 
@@ -72,7 +72,7 @@ Users can see and visit your documentation link from the destinations catalog pa
 
 ### `category` {#category}
 
-`category` is a string parameter that refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](../../../destination-types.md). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`.
+`category` is a string parameter that refers to the category assigned to your destination in [!DNL Adobe Experience Platform]. For more information, read [Destination Categories](../../../destination-types.md). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`.
 
 Users can see the list of destination categories on the left side of the screen in the destination catalog, as shown in the image below.
 

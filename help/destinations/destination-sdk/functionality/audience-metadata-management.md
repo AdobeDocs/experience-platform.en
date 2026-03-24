@@ -54,13 +54,13 @@ The table below describes the events supported by audience metadata templates.
 
 |Template section | Description |
 |--- |--- |
-|`create` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically create segments/audiences in your platform and sync the information back to Adobe Experience Platform. |
-|`update` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically update segments/audiences in your platform and sync the information back to Adobe Experience Platform. |
+|`create` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically create segments/audiences in your platform and sync the information back to [!DNL Adobe Experience Platform]. |
+|`update` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically update segments/audiences in your platform and sync the information back to [!DNL Adobe Experience Platform]. |
 |`delete` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically delete segments/audiences in your platform. |
 |`validate` | Runs validations for any fields in the template configuration before making a call to the partner API. For example, you could validate that the user's account ID is input correctly. |
 |`notify`| Applies only to file-based destinations. Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to notify you of successful file exports.|
-|`createDestination` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically create a dataflow in your platform and sync the information back to Adobe Experience Platform. |
-|`updateDestination` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically update a dataflow in your platform and sync the information back to Adobe Experience Platform. |
+|`createDestination` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically create a dataflow in your platform and sync the information back to [!DNL Adobe Experience Platform]. |
+|`updateDestination` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically update a dataflow in your platform and sync the information back to [!DNL Adobe Experience Platform]. |
 |`deleteDestination` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically delete a dataflow from your platform. |
 
 {style="table-layout:auto"}
