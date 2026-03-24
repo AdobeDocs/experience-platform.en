@@ -26,7 +26,7 @@ Before you begin, ensure you meet the following requirements:
 
 Use accelerators when you need pre-built SQL for common analytical patterns such as funnel analysis, moving averages, or audience overlap. If no accelerator fits your use case, [write a custom query in the Query Editor](./user-guide.md#query-authoring) or request a new accelerator (see [Request a new accelerator](#request-accelerator)).
 
-A small set of accelerators open as dashboards for immediate analysis, while others open in the Query Editor where you can run, schedule, or adapt the logic. See the [Dashboard-linked accelerators](#dashboard-accelerators) section to find out how these pre-configured visualisations provide insights on your audience data.
+A small set of accelerators open as dashboards for immediate analysis, while others open in the Query Editor where you can run, schedule, or adapt the logic. See the [Dashboard-linked accelerators](#dashboard-accelerators) section to find out how these pre-configured visualizations provide insights on your audience data.
 
 To begin using accelerators, navigate to the **[!UICONTROL Queries]** workspace and open the **[!UICONTROL Accelerators]** tab or the **[!UICONTROL Overview]** tab.
 
@@ -56,6 +56,8 @@ Most accelerators open in the Query Editor. A small set of accelerators open as 
 
 ## Open an accelerator in the Query Editor {#open-accelerator}
 
+This section explains what happens when you open an accelerator in the Query Editor and the actions you can take next, including running the accelerator, scheduling it, or creating a custom template.
+
 After opening an accelerator, you can **run** the accelerator to view results, **schedule** the accelerator to run automatically, or **create a custom template** to modify the SQL.
 
 >[!NOTE]
@@ -70,12 +72,12 @@ The right-hand panel displays metadata such as **[!UICONTROL Accelerator ID]**, 
 
 To run the accelerator, you must first provide values for all required parameters. Parameters use the `${PARAMETER_NAME}` syntax and appear in the **[!UICONTROL Query parameters]** tab below the editor. For example, `${START_DATE}` requires a date value in `YYYY-MM-DD` format (for example, `2024-01-01`), and `${AUDIENCE_ID}` requires a specific audience identifier.
 
-To run an accelerator.
+To run an accelerator:
 
 1. Select **[!UICONTROL Query parameters]** and enter a value for each parameter.
 2. Select the play icon (![The play icon.](../../images/icons/play.png)) in the toolbar.
 
-The accelerator runs and displays results in the **[!UICONTROL Results]** tab. These results are not persisted to a dataset unless you explicitly use the [**[!UICONTROL Run as CTAS]**](#persist-results) or [scheduling workflow](#schedule-accelerator).
+The accelerator runs and displays results in the **[!UICONTROL Results]** tab. These results are not persisted to a dataset unless you use **[!UICONTROL Run as CTAS]** or schedule the accelerator.
 
 For more information on parameterized queries, see [Parameterized queries in Query Editor](./parameterized-queries.md).
 
@@ -93,7 +95,7 @@ To schedule an accelerator to run automatically with fixed parameter values, sel
 
 >[!TIP]
 >
->Before scheduling, ensure you understand the required parameter values. You are recommended to run the accelerator first to validate the results. This is optional.
+>Before scheduling, ensure you understand the required parameter values. Run the accelerator first to validate the results.
 
 The schedule configuration dialog appears.
 
@@ -119,10 +121,13 @@ Some accelerators on the **[!UICONTROL Overview]** tab open as dashboards instea
 
 The following accelerators open in the **[!UICONTROL Dashboards]** workspace:
 
-* **[!UICONTROL Advanced Audience Overlaps]**: Analyze intersections between selected audiences or across your full audience set to identify overlap patterns. Use these insights to refine segmentation and reduce redundant targeting.
-* **[!UICONTROL Audience Comparison]**: Compare key metrics between two audiences side by side, including size, identity composition, and changes over time. Use this view to evaluate performance differences and inform targeting decisions.
-* **[!UICONTROL Audience Trends]**: Track how audience metrics change over time, including audience size and identity counts. Use these trends to monitor growth and evaluate the impact of segmentation strategies.
-* **[!UICONTROL Audience Identity Overlaps]**: Examine how identity types overlap within selected audiences to understand identity relationships. Use this analysis to improve identity stitching and segmentation accuracy.
+**[!UICONTROL Advanced Audience Overlaps]** analyzes intersections between selected audiences or across your full audience set to identify overlap patterns. Use these insights to refine segmentation and reduce redundant targeting.
+
+**[!UICONTROL Audience Comparison]** compares key metrics between two audiences side by side, including size, identity composition, and changes over time. Use this view to evaluate performance differences and inform targeting decisions.
+
+**[!UICONTROL Audience Trends]** tracks how audience metrics change over time, including audience size and identity counts. Use these trends to monitor growth and evaluate the impact of segmentation strategies.
+
+**[!UICONTROL Audience Identity Overlaps]** examines how identity types overlap within selected audiences to understand identity relationships. Use this analysis to improve identity stitching and segmentation accuracy.
 
 ![Dashboard view showing audience analysis visualizations with charts and filters.](../images/ui/accelerators/dashboard-accelerator-template-example.png)
 
