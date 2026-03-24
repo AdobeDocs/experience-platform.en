@@ -47,40 +47,51 @@ When you have found the resource you want to explore, select its name from the l
 <!--  ... -->
 ## Manage schemas, classes, field groups, and data types: actions and deletion {#xdm-resource-actions}
 
-This section explains how to manage and delete XDM resources in the [!UICONTROL Schemas] workspace, including where to find actions, what actions are available, and when actions are unavailable.
+Use this section when you need to manage or delete XDM resources, or when an action (such as delete) is unavailable and you need to understand why.
+
+This section explains where to find actions in the [!UICONTROL Schemas] workspace, what actions you can perform on schemas, classes, field groups, and data types, and how to resolve common issues that prevent actions from being used.
 
 ### Where to find actions (inline vs detail page) {#where-to-find-actions}
+
+To perform actions such as deleting, exporting, or copying a resource, use one of the following entry points:
 
 On the **[!UICONTROL Browse]**, **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, and **[!UICONTROL Data types]** tabs, management actions are available in two locations:
 
 - **Inline in the table**: Each resource row includes an actions menu (for example, **[!UICONTROL …]**) that provides direct access to available actions.
 - **Resource detail view**: Select a resource name to open its detail view, then use the **[!UICONTROL More]** menu in the page header to access the same actions.
 
-These actions are consistent across both entry points for supported resource types.
+These actions are consistent across both entry points for supported resource types (schemas, classes, field groups, and data types).
 
 ![Browse table showing inline actions menu for XDM resources](PLACEHOLDER.png)
 
 ### Available actions {#available-actions}
 
-The following actions are available for **custom (tenant-defined)** schemas, classes, field groups, and data types:
+Depending on the resource type and your permissions, the following actions may be available:
 
-- **[!UICONTROL Delete]**
-- **[!UICONTROL Download sample file]**
-- **[!UICONTROL Copy JSON structure]**
-- **[!UICONTROL Add to package]**
+- **[!UICONTROL Delete]** — Permanently remove a custom resource from your organization.
+- **[!UICONTROL Download sample file]** — Generate a sample data file based on the resource structure.
+- **[!UICONTROL Copy JSON structure]** — Copy the resource definition in JSON format for reuse or inspection.
+- **[!UICONTROL Add to package]** — Include the resource in a package for export or sharing.
 
-For **standard (Adobe-defined)** classes, field groups, and data types:
+The following applies to different resource types:
 
-- Only **[!UICONTROL Download sample file]** is available.
-- **Delete**, **Copy JSON structure**, and **Add to package** are not available.
-
-Not all actions apply to all resource types, and availability depends on permissions and resource type.
+- For **custom (tenant-defined)** schemas, classes, field groups, and data types, all actions above may be available.
+- For **standard (Adobe-defined)** classes, field groups, and data types:
+  - Only **[!UICONTROL Download sample file]** is available.
+  - **Delete**, **Copy JSON structure**, and **Add to package** are not available.
 
 ### Delete behavior {#delete-behavior}
 
-The **[!UICONTROL Delete]** action permanently removes the selected resource from your organization.
+Use the **[!UICONTROL Delete]** action when you want to remove a custom resource that is no longer needed.
 
-When you select **[!UICONTROL Delete]**, a confirmation dialog appears. You must confirm the action by selecting **[!UICONTROL Delete]** again before the resource is removed.
+To delete a resource:
+
+1. Locate the resource in the table or open its detail view.
+2. Select the actions menu (**[!UICONTROL …]** or **[!UICONTROL More]**).
+3. Select **[!UICONTROL Delete]**.
+4. Confirm the action in the dialog by selecting **[!UICONTROL Delete]** again.
+
+The resource is permanently removed from your organization after confirmation.
 
 If deletion is not available for a resource, the option appears disabled with a tooltip explaining why the action cannot be performed.
 
@@ -88,20 +99,22 @@ If deletion is not available for a resource, the option appears disabled with a 
 
 ### Constraints (dataset, Profile, RBAC, tenant vs global) {#delete-constraints}
 
-Actions, including **[!UICONTROL Delete]**, may be unavailable or disabled under the following conditions:
+If an action such as **[!UICONTROL Delete]** is unavailable or disabled, it is typically due to one of the following conditions:
+
+- **Permissions (RBAC)**: Users must have the appropriate permissions (such as **[!UICONTROL Manage Schema]**) to perform management actions.  
+  If permissions are missing, actions appear **disabled with tooltips** explaining the restriction. If you cannot perform an action, contact your administrator to request the required permissions.
 
 - **Dataset association**: Resources that are currently used by one or more datasets cannot be deleted. Instead, they can be deprecated to prevent future use.
 
 - **Profile enablement**: Schemas enabled for [Real-Time Customer Profile](../../profile/home.md) cannot be deleted.
 
-- **Permissions (RBAC)**: Users must have the appropriate permissions (such as **[!UICONTROL Manage Schema]**) to perform management actions.  
-  If permissions are missing, actions appear **disabled with tooltips** explaining the restriction.
-
 - **Tenant vs global resources**:  
   - Tenant-defined (custom) resources are created by your organization and can be deleted (subject to constraints).  
   - Standard (Adobe-provided) classes, field groups, and data types cannot be deleted.
 
-These constraints are reflected directly in the UI, where unavailable actions appear disabled with contextual tooltips explaining the limitation.
+These constraints are reflected directly in the UI. When an action is unavailable, it appears disabled and includes a tooltip explaining the specific limitation.
+
+If you cannot delete a resource, review the conditions above to determine whether you need to update permissions, remove dependencies, or use deprecation instead.
 
 For related workflows, see [Generate sample XDM data](./sample.md), [Export XDM schemas](./export.md), and [Create and edit schemas in the UI](./resources/schemas.md).
 <!-- ... -->
