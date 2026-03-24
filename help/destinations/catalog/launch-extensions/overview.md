@@ -4,9 +4,9 @@ title: Tag Extensions in Adobe Experience Platform
 description: Adobe Experience Platform provides the next generation of tag-management capabilities from Adobe. Experience Platform gives you a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
 ---
-# Tag extensions in Adobe Experience Platform
+# Tag extensions in [!DNL Adobe Experience Platform]
 
-Adobe Experience Platform provides the next generation of tag management capabilities from Adobe. Experience Platform gives you a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature.
+[!DNL Adobe Experience Platform] provides the next generation of tag management capabilities from Adobe. Experience Platform gives you a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences. Tags are offered to [!DNL Adobe Experience Cloud] customers as an included, value-add feature.
 
 For an introduction to tags, see the resources below:
 

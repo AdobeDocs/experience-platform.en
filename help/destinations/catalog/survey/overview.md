@@ -8,7 +8,7 @@ exl-id: 0358a73b-9f4a-4362-a7ed-e49ece6e5f02
 
 ## Overview {#overview}
 
-Surveys platforms detect survey events, capture customer feedback in real time through data elements, and share data with Adobe Experience Platform.
+Surveys platforms detect survey events, capture customer feedback in real time through data elements, and share data with [!DNL Adobe Experience Platform].
 
 ## Supported survey destinations {#supported-destinations}
 

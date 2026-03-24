@@ -4,13 +4,13 @@ title: Adobe Target extension
 description: The Adobe Target extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 exl-id: 62f8c641-7942-41d5-bd86-681c2c5efa6c
 ---
-# Adobe Target extension
+# [!DNL Adobe Target] extension
 
 ## Overview {#overview}
 
-Adobe Target is the Adobe Experience Cloud solution that provides everything you need to tailor and personalize your customers' experience to maximize revenue on your web and mobile sites, apps, social media, and other digital channels.
+[!DNL Adobe Target] is the [!DNL Adobe Experience Cloud] solution that provides everything you need to tailor and personalize your customers' experience to maximize revenue on your web and mobile sites, apps, social media, and other digital channels.
 
-Adobe Target is a personalization extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100162.html).
+[!DNL Adobe Target] is a personalization extension in [!DNL Adobe Experience Platform]. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100162.html).
 
 This destination is a tag extension. For more information about how tags extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
@@ -20,11 +20,11 @@ This destination is a tag extension. For more information about how tags extensi
 
 This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Experience Platform.
 
-To use this extension, you need access to tags in Adobe Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+To use this extension, you need access to tags in [!DNL Adobe Experience Platform]. Tags are offered to [!DNL Adobe Experience Cloud] customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 
-To install the Adobe Target extension:
+To install the [!DNL Adobe Target] extension:
 
 In the [Experience Platform interface](https://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 

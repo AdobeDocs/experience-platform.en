@@ -8,7 +8,7 @@ exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
 
 ## Overview {#overview}
 
-Use the [!DNL RainFocus Attendee Profiles] destination to stream customer profiles from Adobe Experience Platform into the [!DNL RainFocus] platform to create and update attendee profiles.
+Use the [!DNL RainFocus Attendee Profiles] destination to stream customer profiles from [!DNL Adobe Experience Platform] into the [!DNL RainFocus] platform to create and update attendee profiles.
 
 >[!IMPORTANT]
 >
@@ -16,7 +16,7 @@ Use the [!DNL RainFocus Attendee Profiles] destination to stream customer profil
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the RainFocus destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the RainFocus destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 ### Use case #1 {#use-case-1}
 
@@ -24,7 +24,7 @@ A large enterprise technology company is due to open registration for its upcomi
 
 ### Use case #2 {#use-case-2}
 
-A financial services brand is due to host a series of roadshows targeting new and existing customers. They have a series of audience segments with target customers in Adobe Experience Platform. Using the [!DNL RainFocus] Destination Connector, they are able to easily send those profiles to [!DNL RainFocus] for activation.
+A financial services brand is due to host a series of roadshows targeting new and existing customers. They have a series of audience segments with target customers in [!DNL Adobe Experience Platform]. Using the [!DNL RainFocus] Destination Connector, they are able to easily send those profiles to [!DNL RainFocus] for activation.
 
 ## Prerequisites {#prerequisites}
 
@@ -42,7 +42,7 @@ You must also have a RainFocus **event code** identifier, into which you would l
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
+|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by [!DNL Adobe Experience Platform]. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
 
 {style="table-layout:auto"}
 
@@ -53,7 +53,7 @@ This section describes which type of audiences you can export to this destinatio
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -66,7 +66,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 

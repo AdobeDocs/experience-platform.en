@@ -8,7 +8,7 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 
 >[!AVAILABILITY]
 >
->This functionality is available to customers who have purchased the Real-Time CDP Prime or Ultimate package, Adobe Journey Optimizer, or Customer Journey Analytics. Contact your Adobe representative for more information.
+>This functionality is available to customers who have purchased the [!DNL Real-Time CDP] Prime or Ultimate package, [!DNL Adobe Journey Optimizer], or Customer Journey Analytics. Contact your Adobe representative for more information.
 
 >[!IMPORTANT]
 >
@@ -18,13 +18,13 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 >
 >Refer to the [scheduling section](#scheduling) for information on how to edit the end date of a dataset export dataflow.
 
-This article explains the workflow required to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage] by using the Experience Platform UI. 
+This article explains the workflow required to export [datasets](/help/catalog/datasets/overview.md) from [!DNL Adobe Experience Platform] to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage] by using the Experience Platform UI. 
 
 You can also use the Experience Platform APIs to export datasets. Read the [export datasets API tutorial](/help/destinations/api/export-datasets.md) for more information.  
 
 ## Datasets available for exporting {#datasets-to-export}
 
-The datasets that you can export vary based on the Experience Platform application (Real-Time CDP, Adobe Journey Optimizer), the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller).
+The datasets that you can export vary based on the Experience Platform application ([!DNL Real-Time CDP], [!DNL Adobe Journey Optimizer]), the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller).
 
 Use the table below to understand which dataset types you can export depending on your application, product tier, and any add-ons purchased:
 
@@ -38,7 +38,7 @@ Use the table below to understand which dataset types you can export depending o
 </thead>
 <tbody>
   <tr>
-    <td rowspan="2">Real-Time CDP</td>
+    <td rowspan="2">[!DNL Real-Time CDP]</td>
     <td>Prime</td>
     <td>Profile and Experience Event datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.</td>
   </tr>
@@ -47,13 +47,13 @@ Use the table below to understand which dataset types you can export depending o
     <td><ul><li>Profile and Experience Event datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">System-generated Profile Snapshot dataset</a>.</li></td>
   </tr>
   <tr>
-    <td rowspan="2">Adobe Journey Optimizer</td>
+    <td rowspan="2">[!DNL Adobe Journey Optimizer]</td>
     <td>Prime</td>
-    <td>Refer to the <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> documentation.</td>
+    <td>Refer to the <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> [!DNL Adobe Journey Optimizer]</a> documentation.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Refer to the <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> documentation.</td>
+    <td>Refer to the <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> [!DNL Adobe Journey Optimizer]</a> documentation.</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -301,9 +301,9 @@ To remove datasets from an existing dataflow, follow the steps below:
 
 ## Dataset export entitlements {#licensing-entitlement}
 
-Refer to the product description documents to understand how much data you are entitled to export for each Experience Platform application, per year. For example, you can view the Real-Time CDP Product Description [here](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Refer to the product description documents to understand how much data you are entitled to export for each Experience Platform application, per year. For example, you can view the [!DNL Real-Time CDP] Product Description [here](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
-Note that the data export entitlements for different applications are not additive. For example, this means that if you purchase Real-Time CDP Ultimate and Adobe Journey Optimizer Ultimate, the profile export entitlement will be the larger of the two entitlements, as per the product descriptions. Your volume entitlements are calculated by taking your total number of licensed profiles and multiplying by 500 KB for Real-Time CDP Prime or 700 KB for Real-Time CDP Ultimate to determine how much volume of data you are entitled to.
+Note that the data export entitlements for different applications are not additive. For example, this means that if you purchase [!DNL Real-Time CDP] Ultimate and [!DNL Adobe Journey Optimizer] Ultimate, the profile export entitlement will be the larger of the two entitlements, as per the product descriptions. Your volume entitlements are calculated by taking your total number of licensed profiles and multiplying by 500 KB for [!DNL Real-Time CDP] Prime or 700 KB for [!DNL Real-Time CDP] Ultimate to determine how much volume of data you are entitled to.
 
 On the other hand, if you purchased add-ons such as Data Distiller, the data export limit that you are entitled to represents the sum of the product tier and the add-on. 
 
@@ -317,7 +317,7 @@ Keep in mind the following limitations for the general availability release of d
 * Exported file names are currently not customizable.
 * The UI does not currently block you from deleting a dataset that is being exported to a destination. Do not delete any datasets that are being exported to destinations. [Remove the dataset](#remove-dataset) from a destination dataflow before deleting it.
 * Monitoring metrics for dataset exports are currently mixed with numbers for profile exports so they do not reflect the true export numbers.
-* Data with a timestamp older than 365 days is excluded from dataset exports. For more information, view the [guardrails for scheduled dataset exports](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
+* Data with a timestamp older than 365 days is excluded from dataset exports. For more information, view the [guardrails for scheduled dataset exports](/help/destinations/guardrails.md#scheduled-dataset-exports)
 
 ## Frequently Asked Questions {#faq}
 

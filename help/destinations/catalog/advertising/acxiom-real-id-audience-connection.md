@@ -12,11 +12,11 @@ exl-id: 5f1f0f7f-ac46-42bd-8002-be50fab5a76b
 
 Use the [!DNL Acxiom Real ID Audience Connection] destination to enhance audiences with [!DNL Acxiom's] [Real ID](https://www.acxiom.com/real-id/real-id/) technology and activate audiences to multiple platforms, such as [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], and more.
 
-This tutorial provides instructions to create an [!DNL Acxiom Real ID Audience Connection] destination connector using the [!DNL Adobe Experience Platform] user interface. This connector is used to build and distribute audiences to selected destinations.
+This tutorial provides instructions to create an [!DNL Acxiom Real ID Audience Connection] destination connector using the [!DNL Adobe Experience Platform] user interface. This connector builds and distributes audiences to selected destinations.
 
 ## Use cases {#use-cases}
 
-This connector supports clients who have Acxiom Real Identity loaded into Real-Time CDP as an identifier. To help you better understand how and when you should use the [!DNL Acxiom Real ID Audience Connection] destination, here is a sample use case that [!DNL Adobe Experience Platform] customers can solve by using this connector.
+This connector supports clients who have Acxiom Real Identity loaded into [!DNL Real-Time CDP] as an identifier. To help you better understand how and when you should use the [!DNL Acxiom Real ID Audience Connection] destination, here is a sample use case that [!DNL Adobe Experience Platform] customers can solve by using this connector.
 
 ### Send audiences from Experience Platform to your Acxiom account {#send-audiences}
 
@@ -29,7 +29,7 @@ For example, the Marketing Operations department at a global financial services 
 
 * **Confirm Terms of Use:** Before you can configure a new [!DNL Acxiom Real ID Audience Connection] destination, you must read and sign [!DNL Acxiom's] Terms of Use Agreement. You will receive the link to the agreement once your executed sales order is complete.
 * **Know your Adobe organization ID:** Your [!DNL Adobe] organization ID is needed to complete your Terms of User Agreement. See [!DNL Adobe's] *Organizations in Experience Cloud* topic for details on how to [view your organization ID](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
-* **Obtain license for [!DNL Acxiom's Real ID] product:** Once a license is obtained, make Acxiom's Real ID available within Real-Time CDP. See [Acxiom Data Enhancement](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) for more information.
+* **Obtain license for [!DNL Acxiom's Real ID] product:** Once a license is obtained, make Acxiom's Real ID available within [!DNL Real-Time CDP]. See [Acxiom Data Enhancement](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) for more information.
 
 
 ## Supported identities {#supported-identities}
@@ -48,7 +48,7 @@ This section describes which types of audiences you can export to this destinati
 |Audience origin |Supported |Description |
 |---------------|----------------|----------------|
 |Segmentation Service| Yes |Audiences generated through the Experience Platform [Segmentation Service](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
-| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -59,7 +59,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -120,7 +120,7 @@ For the [!DNL Acxiom Real ID Audience Connection] destination to correctly recei
 
 {style="table-layout:auto"}
 
-In the **[!UICONTROL Source Field]** column, enter the name of the source attribute that you want to map to the corresponding target field, or select the arrow icon to open the **[!UICONTROL  Select source field]** screen. Then, select **[!UICONTROL Next]**.
+In the **[!UICONTROL Source Field]** column, enter the name of the source attribute that you want to map to the corresponding target field, or select the arrow icon to open the **[!UICONTROL Select source field]** screen. Then, select **[!UICONTROL Next]**.
 ![Mapping screen](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
 
 

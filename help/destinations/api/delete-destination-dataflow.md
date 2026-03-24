@@ -16,9 +16,9 @@ This tutorial covers the steps for deleting dataflows to both batch and streamin
 
 This tutorial requires you to have a valid flow ID. If you do not have a valid flow ID, select your destination of choice from the [destinations catalog](../catalog/overview.md) and follow the steps outlined to [connect to the destination](../ui/connect-destination.md) and [activate data](../ui/activation-overview.md) before attempting this tutorial.
 
-This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
+This tutorial also requires you to have a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
-* [Destinations](../home.md): [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+* [Destinations](../home.md): [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from [!DNL Adobe Experience Platform]. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 * [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know to successfully delete a dataflow using the [!DNL Flow Service] API.
