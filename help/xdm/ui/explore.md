@@ -44,12 +44,10 @@ You can also use the search bar to narrow down results further.
 The resources displayed in search results are ordered first by title matches, then by description matches. In turn, the more word matches in either of these categories, the higher the resource appears in the list.
 
 When you have found the resource you want to explore, select its name from the list to view its structure in the canvas.
-
+<!--  ... -->
 ## Manage schemas, classes, field groups, and data types: actions and deletion {#xdm-resource-actions}
 
 Use this section when you need to manage or delete XDM resources, or when an action (such as delete) is unavailable and you need to understand why.
-
-This section explains where to find actions in the [!UICONTROL Schemas] workspace, what actions you can perform on schemas, classes, field groups, and data types, and how to resolve common issues that prevent actions from being used.
 
 ### Where to find actions (inline vs detail page) {#where-to-find-actions}
 
@@ -84,6 +82,10 @@ The following applies to different resource types:
 
 Use the **[!UICONTROL Delete]** action when you want to remove a custom resource that is no longer needed.
 
+>[!IMPORTANT]
+>
+> Deleting a resource permanently removes it from your organization and cannot be undone. Some resources cannot be deleted due to usage, permissions, or system constraints.
+
 To delete a resource:
 
 1. Locate the resource in the table or open its detail view.
@@ -101,22 +103,20 @@ If deletion is not available for a resource, the option appears disabled with a 
 
 If an action such as **[!UICONTROL Delete]** is unavailable or disabled, it is typically due to one of the following conditions:
 
-- **Permissions (RBAC)**: Users must have the appropriate permissions (such as **[!UICONTROL Manage Schemas]** under Data Modeling) to perform management actions. If permissions are missing, actions can appear disabled with tooltips. To understand how roles and permissions work in Experience Platform, see the [access control UI overview](../../access-control/ui/overview.md). Administrators can add or adjust permissions using [Manage permissions for a product profile](../../access-control/ui/permissions.md). If you cannot perform an action, contact your administrator and share those guides as the prerequisite for **[!UICONTROL Manage Schemas]** (or equivalent) **[VERIFY: exact permission names in your organization]**.
+- **Permissions (RBAC)**: You must have the required permissions (such as **[!UICONTROL Manage Schemas]**) to perform management actions. If permissions are missing, actions appear disabled with tooltips. To learn how permissions are configured, see the [access control UI overview](../../access-control/ui/overview.md).
 
-- **Dataset association**: Resources that are currently used by one or more datasets cannot be deleted. In the **[!UICONTROL Datasets]** workspace, use [Filter by schema](../../catalog/datasets/user-guide.md#filter-by-schema) to list datasets that reference a schema. To remove a dataset dependency when policy allows, see [Delete a dataset](../../catalog/datasets/user-guide.md#delete) **[VERIFY: identifying datasets for field groups, classes, and data types vs schema-backed datasets]**. When deletion is not possible, reduce future use by [deprecating fields in the Schema Editor](../tutorials/field-deprecation-ui.md) and following [data modeling best practices](../schema/best-practices.md) for decommissioning **[VERIFY: resource-level deprecation or alternative workflows in the UI]**.
+- **Dataset association**: Resources that are used by one or more datasets cannot be deleted. To identify and remove dataset dependencies, see [Delete a dataset](../../catalog/datasets/user-guide.md#delete).
 
-- **Profile enablement**: Schemas enabled for Real-Time Customer Profile cannot be deleted; Profile enablement on a schema cannot be reversed after save. For what that means for your data model and long-term constraints, see [Planning for Real-Time Customer Profile enablement](../schema/profile-enablement-planning.md). For where Profile is toggled in the UI, see [Enable the schema for use in Real-Time Customer Profile](../tutorials/create-schema-ui.md#profile). For recommended handling when you must stop using a Profile-enabled schema, see [Can I delete Profile-enabled schemas?](../troubleshooting-guide.md#delete-profile-enabled) and [Real-Time Customer Profile](../../profile/home.md).
+- **Profile enablement**: Schemas enabled for Real-Time Customer Profile cannot be deleted. For guidance on how Profile enablement affects your schema, see [Planning for Real-Time Customer Profile enablement](../schema/profile-enablement-planning.md).
 
-- **Tenant vs global resources**:  
-  - Tenant-defined (custom) resources are created by your organization and can be deleted (subject to constraints).  
-  - Standard (Adobe-provided) classes, field groups, and data types cannot be deleted.
+- **Tenant vs global resources**: Tenant-defined (custom) resources can be deleted (subject to constraints), while standard (Adobe-provided) classes, field groups, and data types cannot be deleted.
 
 These constraints are reflected directly in the UI. When an action is unavailable, it appears disabled and includes a tooltip explaining the specific limitation.
 
-If you cannot delete a resource, work through the pathways above—permissions, dataset dependencies, deprecation or decommissioning practices, and Profile rules—before assuming the object can be removed.
+If you cannot delete a resource, review the conditions above to determine whether you need to update permissions, remove dependencies, or adjust your data model.
 
 For additional schema editing workflows in the canvas, see [Create and edit schemas in the UI](./resources/schemas.md).
-
+<!--  ... -->
 ## Explore an XDM resource in the canvas {#explore}
 
 Once you select a resource, its structure opens in the canvas.
