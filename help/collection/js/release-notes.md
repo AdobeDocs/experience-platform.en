@@ -10,6 +10,13 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.32.0 - March 23, 2026
+
+- Shared core utilities are now published as a standalone [@adobe/alloy-core](https://www.npmjs.com/package/@adobe/alloy-core) NPM package for use by extensions and integrations.
+- Now includes the IANA time zone in the XDM field `xdm.placeContext.ianaTimezone` when `placeContext` is included in the [`context`](/help/collection/js/commands/configure/context.md) configuration variable.
+- Brand concierge: Added `voiceEnabled` option to the `sendConversationEvent` command.
+- Brand concierge: Fixed a session ID issue when [`stickyConversationSession`](/help/collection/js/commands/configure/conversation.md) is disabled.
+
 ## Version 2.31.1 - February 11, 2026
 
 - Fixed an issue where the Web SDK would crash when there are multiple advertising-related `s_kwcid` or `ef_id` parameters in the URL.
@@ -28,8 +35,6 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **Fixes and improvements**
 
 - The `aria-label` and `name` attributes are now considered in [automatic link collection](commands/configure/clickcollectionenabled.md).
-- Fixed a possible race condition with identity map integrations.
-- Fixed an issue where timestamp was not included in `streamingMedia`.
 - Fixed an issue where custom code actions were only running once.
 
 ## Version 2.30.0 - September 24, 2025
