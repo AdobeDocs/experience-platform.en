@@ -60,7 +60,7 @@ On the **[!UICONTROL Browse]**, **[!UICONTROL Classes]**, **[!UICONTROL Field gr
 
 These actions are consistent across both entry points for supported resource types (schemas, classes, field groups, and data types).
 
-![Browse table showing inline actions menu for XDM resources](PLACEHOLDER.png)
+![The schema inventory showing inline actions available from the ellipsis menu for each resource.](../images/ui/explore/xdm-schema-inventory-inline-actions-menu.png)
 
 ### Available actions {#available-actions}
 
@@ -97,7 +97,7 @@ The resource is permanently removed from your organization after confirmation.
 
 If deletion is not available for a resource, the option appears disabled with a tooltip explaining why the action cannot be performed.
 
-![Disabled delete action with tooltip explaining restriction](PLACEHOLDER.png)
+![The schema inventory with a disabled delete inline action tooltip explaining the restriction.](../images/ui/explore/xdm-schema-inventory-disabled-delete-tooltip.png)
 
 ### Constraints (dataset, Profile, RBAC, tenant vs global) {#delete-constraints}
 
