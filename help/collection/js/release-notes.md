@@ -14,7 +14,6 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 - Shared core utilities are now published as a standalone [@adobe/alloy-core](https://www.npmjs.com/package/@adobe/alloy-core) NPM package for use by extensions and integrations.
 - Now includes the IANA time zone in the XDM field `xdm.placeContext.ianaTimezone` when `placeContext` is included in the [`context`](/help/collection/js/commands/configure/context.md) configuration variable.
-- Brand concierge: Added `voiceEnabled` option to the `sendConversationEvent` command.
 - Brand concierge: Fixed a session ID issue when [`stickyConversationSession`](/help/collection/js/commands/configure/conversation.md) is disabled.
 
 ## Version 2.31.1 - February 11, 2026
