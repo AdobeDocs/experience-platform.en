@@ -36,7 +36,7 @@ A hotel expects inclement weather over the following days, and the team wants to
 
 ### Integration testing {#integration-testing}
 
-IT managers can use the Experience Platform ad-hoc activation API to export audiences on-demand, so they can test their custom integration with Adobe Experience Platform, and ensure everything is working correctly.
+IT managers can use the Experience Platform ad-hoc activation API to export audiences on-demand, so they can test their custom integration with [!DNL Adobe Experience Platform], and ensure everything is working correctly.
 
 ## Guardrails {#guardrails}
 
@@ -48,14 +48,14 @@ Keep in mind the following guardrails when using the ad-hoc activation API.
 
 ## Segmentation considerations {#segmentation-considerations}
 
-Adobe Experience Platform runs scheduled segmentation jobs once every 24 hours. The ad-hoc activation API runs based on the latest segmentation results.
+[!DNL Adobe Experience Platform] runs scheduled segmentation jobs once every 24 hours. The ad-hoc activation API runs based on the latest segmentation results.
 
 ## Step 1: Prerequisites {#prerequisites}
 
-Before you can make calls to the Adobe Experience Platform APIs, make sure you meet the following prerequisites:
+Before you can make calls to the [!DNL Adobe Experience Platform] APIs, make sure you meet the following prerequisites:
 
-* You have an organization account with access to Adobe Experience Platform.
-* Your Experience Platform account has the `developer` and `user` roles enabled for the Adobe Experience Platform API product profile. Contact your [Admin Console](../../access-control/home.md) administrator to enable these roles for your account.
+* You have an organization account with access to [!DNL Adobe Experience Platform].
+* Your Experience Platform account has the `developer` and `user` roles enabled for the [!DNL Adobe Experience Platform] API product profile. Contact your [Admin Console](../../access-control/home.md) administrator to enable these roles for your account.
 * You have an Adobe ID. If you do not have an Adobe ID, go to the [Adobe Developer Console](https://developer.adobe.com/console) and create a new account.
 
 ## Step 2: Gather credentials {#credentials}
@@ -101,7 +101,7 @@ Follow the instructions described [here](../../segmentation/api/export-jobs.md#r
 
 In the response, look for the first record that includes the schema property below.
 
-```
+```json
 "schema":{
    "name":"_xdm.context.profile"
 }
@@ -114,7 +114,7 @@ The audience export job ID is in the `id` property, as shown below.
 
 ## Step 5: Run the ad-hoc activation job {#activation-job}
 
-Adobe Experience Platform runs scheduled segmentation jobs once every 24 hours. The ad-hoc activation API runs based on the latest segmentation results.
+[!DNL Adobe Experience Platform] runs scheduled segmentation jobs once every 24 hours. The ad-hoc activation API runs based on the latest segmentation results.
 
 >[!IMPORTANT]
 >

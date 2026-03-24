@@ -9,7 +9,7 @@ To use Destination SDK, make sure that you meet the technical and partnership pr
 
 ## Technical / API prerequisites for streaming destinations {#streaming-prerequisites}
 
-1. You have a REST API endpoint for Adobe Experience Platform to deliver the following types of data to:
+1. You have a REST API endpoint for [!DNL Adobe Experience Platform] to deliver the following types of data to:
    * Audience membership information;
    * Profile identity information;
    * (Optional) Additional attributes for profile enrichment.

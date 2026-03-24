@@ -9,7 +9,7 @@ exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
 
 Use the enhanced file export capabilities to access enhanced customization functionality when exporting files out of Experience Platform: 
 
-* Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
+* Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names).
 * Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * Ability to select the [file type](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) of the exported file.
 * [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -23,7 +23,7 @@ This functionality is supported by the six cloud storage cards listed below:
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) 
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-This article explains the workflow required to use the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) to export qualified profiles from Adobe Experience Platform to one of the cloud storage locations linked above.
+This article explains the workflow required to use the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) to export qualified profiles from [!DNL Adobe Experience Platform] to one of the cloud storage locations linked above.
 
 >[!TIP]
 >
@@ -41,10 +41,10 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
-This guide requires a working understanding of the following components of Adobe Experience Platform:
+This guide requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
 *   [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-*   [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] allows you to build audiences and generate audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-Time Customer Profile] data.
+*   [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] lets you build audiences and generate audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-Time Customer Profile] data.
 *   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you need to know to activate data to file-based destinations in Experience Platform.
@@ -3492,7 +3492,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ View available identities to use in the input schema
 
-The response returns the identities that you can use when creating the input schema. Note that this response returns both [standard](/help/identity-service/features/namespaces.md#standard) and [custom](/help/identity-service/features/namespaces.md#manage-namespaces) identity namespaces that you set up in Experience Platform. 
+The response returns the identities that you can use when creating the input schema. Note that this response returns both [standard](/help/identity-service/features/namespaces.md#standard) and [custom](/help/identity-service/features/namespaces.md#create-namespaces) identity namespaces that you set up in Experience Platform. 
 
 ```json
 

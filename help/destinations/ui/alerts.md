@@ -6,7 +6,7 @@ exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 ---
 # Subscribe to in-context destination alerts
 
-Adobe Experience Platform allows you to subscribe to event-based alerts regarding Adobe Experience Platform activities. Alerts reduce or eliminate the need to poll the [[!DNL Observability Insights] API](../../observability/api/overview.md) to check if a job has completed, if a certain milestone within a workflow has been reached, or if any errors have occurred.
+[!DNL Adobe Experience Platform] lets you subscribe to event-based alerts regarding [!DNL Adobe Experience Platform] activities. Alerts reduce or eliminate the need to poll the [[!DNL Observability Insights] API](../../observability/api/overview.md) to check if a job has completed, if a certain milestone within a workflow has been reached, or if any errors have occurred.
 
 You can subscribe to alerts when creating a dataflow to receive alert messages regarding the status, success, or failure of your flow run.
 
@@ -14,10 +14,10 @@ This document provides steps on how to subscribe receive alerts messages for you
 
 ## Getting started {#getting-started}
 
-This document requires a working understanding of the following components of Adobe Experience Platform:
+This document requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
-* [Destinations](../home.md): Pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
-* [Observability](../../observability/home.md): [!DNL Observability Insights] allows you to monitor Experience Platform activities through the use of statistical metrics and event notifications.
+* [Destinations](../home.md): Pre-built integrations with destination platforms that allow for the seamless activation of data from [!DNL Adobe Experience Platform]. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+* [Observability](../../observability/home.md): [!DNL Observability Insights] lets you monitor Experience Platform activities through the use of statistical metrics and event notifications.
   * [Alerts](../../observability/alerts/overview.md): When a certain set of conditions in your Experience Platform operations is reached (such as a potential problem when the system breaches a threshold), Experience Platform can deliver alert messages to any users in your organization who have subscribed to them.
 
 ## Subscribe to alerts in the UI {#subscribe-destination-alerts}

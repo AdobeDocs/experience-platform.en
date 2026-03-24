@@ -3,7 +3,7 @@ title: Legacy Adobe Advertising Cloud DSP connection
 description: Adobe Advertising Cloud DSP is an integrated destination for Adobe Real-Time Customer Data Platform, allowing you to share authenticated first-party audiences with approved advertisers and users for campaign activation.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
 ---
-# Legacy Adobe Advertising Cloud DSP connection
+# Legacy [!DNL Adobe Advertising Cloud] DSP connection
 
 >[!NOTE]
 >
@@ -11,7 +11,7 @@ exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
 
 ## Overview {#overview}
 
-The Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) destination allows you to share authenticated first-party audiences with approved advertisers and users for campaign activation with DSP. To learn more about the Real-Time CDP integration with DSP, see [About Activating Authenticated Audiences from Audience Sources](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
+The [!DNL Adobe Advertising Cloud] [!DNL Demand-Side Platform] (DSP) destination lets you share authenticated first-party audiences with approved advertisers and users for campaign activation with DSP. To learn more about the [!DNL Real-Time CDP] integration with DSP, see [About Activating Authenticated Audiences from Audience Sources](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
 
 >[!IMPORTANT]
 >
@@ -19,11 +19,11 @@ The Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) destination allows
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Advertising Cloud DSP destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the Advertising Cloud DSP destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 ### Brand advertising use case {#brand-advertising}
 
-An online retailer wants to retarget its high value customers through a display campaign without using cookies for targeting. The retailer shares an audience consisting of the hashed email IDs of its high value customers from its Adobe Real-Time Customer Data Platform (Real-Time CDP) account to its DSP account. DSP then converts the hashed email IDs to authenticated [!DNL RampIDs] through a partnership between DSP and LiveRamp. The resulting [!DNL RampIDs] can be used in a display campaign to target the audience.
+An online retailer wants to retarget its high value customers through a display campaign without using cookies for targeting. The retailer shares an audience consisting of the hashed email IDs of its high value customers from its Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP]) account to its DSP account. DSP then converts the hashed email IDs to authenticated [!DNL RampIDs] through a partnership between DSP and LiveRamp. The resulting [!DNL RampIDs] can be used in a display campaign to target the audience.
 
 ### Agency use case {#agency-use-case}
 
@@ -39,7 +39,7 @@ A media agency with a DSP account is running a retargeting campaign on behalf of
 
 ## Supported identities {#supported-identities}
 
-The Adobe Advertising Cloud DSP destination supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
+The [!DNL Adobe Advertising Cloud] DSP destination supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
