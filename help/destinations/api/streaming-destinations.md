@@ -16,7 +16,7 @@ exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
 >
 >Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create a connection to a streaming cloud storage destination ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) or [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)), create a dataflow to your new created destination, and activate data to your new created destination.
+This tutorial demonstrates how to use API calls to connect to your [!DNL Adobe Experience Platform] data, create a connection to a streaming cloud storage destination ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) or [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)), create a dataflow to your new created destination, and activate data to your new created destination.
 
 This tutorial uses the [!DNL Amazon Kinesis] destination in all examples, but the steps are identical for [!DNL Azure Event Hubs].
 
@@ -26,7 +26,7 @@ If you prefer to use the user interface in Experience Platform to connect to a d
 
 ## Get started {#get-started}
 
-This guide requires a working understanding of the following components of Adobe Experience Platform:
+This guide requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
 *   [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
 *   [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] is the system of record for data location and lineage within Experience Platform.

@@ -14,7 +14,7 @@ This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) 
 
 ## Use cases {#use-cases}
 
-The customer service department of a multichannel B2C platform wants to ensure a seamless personalized experience for its customers. The department can build audiences from their own offline data to create new user profiles or update existing profile information from different interactions (for example purchases, returns etc.) and send these audiences from Adobe Experience Platform to [!DNL Zendesk]. Having the updated information in [!DNL Zendesk] ensures the customer service agent has the recent information of the customer immediately available, enabling quicker responses and resolution.
+The customer service department of a multichannel B2C platform wants to ensure a seamless personalized experience for its customers. The department can build audiences from their own offline data to create new user profiles or update existing profile information from different interactions (for example purchases, returns etc.) and send these audiences from [!DNL Adobe Experience Platform] to [!DNL Zendesk]. Having the updated information in [!DNL Zendesk] ensures the customer service agent has the recent information of the customer immediately available, enabling quicker responses and resolution.
 
 ## Prerequisites {#prerequisites}
 
@@ -55,7 +55,7 @@ This section describes which types of audiences you can export to this destinati
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -130,7 +130,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL Zendesk] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination.
+To correctly send your audience data from [!DNL Adobe Experience Platform] to the [!DNL Zendesk] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination.
 
 Attributes specified in the **[!UICONTROL Target field]** should be named exactly as described in the attribute mappings table as these attributes will form the request body.
 

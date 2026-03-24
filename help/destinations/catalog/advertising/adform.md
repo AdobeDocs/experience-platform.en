@@ -8,7 +8,7 @@ exl-id: b87fe57f-10e3-4c10-9156-f102244fbbe7
 
 ## Overview {#overview}
 
-Adform is a leading provider of programmatic media buying and selling solutions. By connecting Adform to the Adobe Experience Platform, you can activate your first party audiences through Adform based on the Experience Cloud ID (ECID).
+Adform is a leading provider of programmatic media buying and selling solutions. By connecting Adform to the [!DNL Adobe Experience Platform], you can activate your first party audiences through Adform based on the Experience Cloud ID (ECID).
 
 >[!IMPORTANT]
 >
@@ -16,11 +16,11 @@ Adform is a leading provider of programmatic media buying and selling solutions.
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Adform destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the Adform destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
-### Adobe Real-Time CDP audience activation {#use-case-1}
+### Adobe [!DNL Real-Time CDP] audience activation {#use-case-1}
 
-Use this destination to send Adobe Real-Time CDP audiences to Adform for activation based on the Experience Cloud ID (ECID) and Adform's ID Fusion. Adform's ID Fusion is Adform's ID resolution service that allows you to activate your first party audiences based on the Experience Cloud ID (ECID).
+Use this destination to send Adobe [!DNL Real-Time CDP] audiences to Adform for activation based on the Experience Cloud ID (ECID) and Adform's ID Fusion. Adform's ID Fusion is Adform's ID resolution service that lets you activate your first party audiences based on the Experience Cloud ID (ECID).
 
 A common case is re-targeting of your website visitors to your website or app based on the Experience Cloud ID (ECID). All you need to do is to send the Experience Cloud ID (ECID) to Adform via the readily available [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) or [client-side](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) Adform extensions. After that you can share audiences with Adform via the Adform destination for activation - solely based on the Experience Cloud ID (ECID).
 
@@ -31,7 +31,7 @@ A common case is re-targeting of your website visitors to your website or app ba
     * If you don't have Adform Audience Base Data Connection credentials, contact your Adform representative.
 * For proper synchronization you need to either have an [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) or [client-side](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) connection from your entities to Adform Site Tracking.
     * If you don't have an Event Streaming or client-side connection from your entities to Adform Site Tracking, contact your Adform representative.
-    * Adform provides Adobe Experience Cloud extensions for both [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) and [client-side](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform).
+    * Adform provides [!DNL Adobe Experience Cloud] extensions for both [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) and [client-side](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform).
 
 
 ## Supported identities {#supported-identities}
@@ -40,7 +40,7 @@ Adform supports the activation of identities described in the table below. Learn
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
+|ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "[!DNL Adobe Experience Cloud] ID", "[!DNL Adobe Experience Platform] ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
 
 {style="table-layout:auto"}
 
@@ -51,7 +51,7 @@ This section describes which type of audiences you can export to this destinatio
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -64,7 +64,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 

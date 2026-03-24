@@ -191,7 +191,7 @@ A successful response returns HTTP status 200 with the specified number of sampl
 
 >[!IMPORTANT]
 >
->Use the sample profiles generated here when crafting your template, in the [render template step](render-template-api.md#multiple-profiles-with-body). 
+>Use the sample profiles generated here when crafting your template, in the [render template step](render-template-api.md#configurable-aggregation). 
 
 You can generate sample profiles based on the target schema making a GET request to the `authoring/sample-profiles/` endpoint and providing the destination ID of the destination configuration based on which you are creating your template.
 

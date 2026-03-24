@@ -7,11 +7,11 @@ exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
 
 ## Overview {#overview}
 
-The [!DNL Adobe Commerce] destination connector lets you select one or more Real-Time CDP audiences to activate to your [!DNL Adobe Commerce] account to deliver a dynamic personalized experience for your shoppers. Within [!DNL Adobe Commerce], you can then select those Real-Time CDP audiences to personalize unique offers in the cart such as 'buy 2 get 1 free,'. You can also display hero banners and modify product pricing through promotional offers, all customized to Adobe Real-Time CDP audiences.
+The [!DNL Adobe Commerce] destination connector lets you select one or more [!DNL Real-Time CDP] audiences to activate to your [!DNL Adobe Commerce] account to deliver a dynamic personalized experience for your shoppers. Within [!DNL Adobe Commerce], you can then select those [!DNL Real-Time CDP] audiences to personalize unique offers in the cart such as 'buy 2 get 1 free,'. You can also display hero banners and modify product pricing through promotional offers, all customized to Adobe [!DNL Real-Time CDP] audiences.
 
 ## Prerequisites {#prerequisites}
 
-This connector is available in the destinations catalog for customers who have purchased Real-Time CDP Prime or Ultimate and Adobe Commerce.
+This connector is available in the destinations catalog for customers who have purchased [!DNL Real-Time CDP] Prime or Ultimate and Adobe Commerce.
 
 To use this destination connection, make sure that you have access to:
 
@@ -23,7 +23,7 @@ In Experience Platform, create the following:
 
 - [Schema](../../../xdm/schema/composition.md). The schema you create represents the data you plan to ingest from Adobe Commerce. [Learn more](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html) about how to create a schema that contains Commerce-specific field groups.
 - [Dataset](../../../catalog/datasets/user-guide.md#create). A dataset is a storage and management construct for a collection of data. You create this dataset from the schema that you created above.
-- [Datastream](../../../datastreams/overview.md#create). ID that allows data to flow from Adobe Experience Platform to other Adobe DX products. This ID must be associated to a specific website within your specific Adobe Commerce instance. When you create this datastream, specify the XDM schema you created above.
+- [Datastream](../../../datastreams/configure.md#create). ID that allows data to flow from [!DNL Adobe Experience Platform] to other Adobe DX products. This ID must be associated to a specific website within your specific Adobe Commerce instance. When you create this datastream, specify the XDM schema you created above.
 
 After you complete the prerequisites, connect to the [!DNL Commerce] destination.
 
@@ -34,7 +34,7 @@ This section describes which types of audiences you can export to this destinati
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -47,7 +47,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -90,11 +90,11 @@ Read [Activate profiles and audiences to profile request destinations](../../ui/
 
 ## Next steps in [!DNL Adobe Commerce] {#next-steps-adobe-commerce}
 
-Now that you have configured the [!DNL Commerce] destination within Experience Platform, you need to install the [!DNL Audience Activation] extension in [!DNL Commerce] and configure the [!DNL Commerce Admin] to import the Real-Time CDP audiences you created. See the [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) to learn more.
+Now that you have configured the [!DNL Commerce] destination within Experience Platform, you need to install the [!DNL Audience Activation] extension in [!DNL Commerce] and configure the [!DNL Commerce Admin] to import the [!DNL Real-Time CDP] audiences you created. See the [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) to learn more.
 
 ## Validate audience activation in Commerce {#exported-data}
 
-After you activate Real-Time CDP audiences to your [!DNL Adobe Commerce] account, you will see those audiences available when you go to the _Admin_ sidebar, then go to **[!UICONTROL Customers]** > **[!UICONTROL Real-Time CDP Audience]**.
+After you activate [!DNL Real-Time CDP] audiences to your [!DNL Adobe Commerce] account, you will see those audiences available when you go to the _Admin_ sidebar, then go to **[!UICONTROL Customers]** > **[!UICONTROL Real-Time CDP Audience]**.
 
 ![Real-Time CDP Audiences Dashboard](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
 

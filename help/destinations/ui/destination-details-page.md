@@ -8,7 +8,7 @@ exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
 
 ## Overview {#overview}
 
-In the Adobe Experience Platform user interface, you can view and monitor the attributes and activities of your destinations. These details include the destination's name and ID, controls to activate or disable the destinations, and more. Details also include metrics for activated profile records, identities activated, failed, and excluded, and a history of dataflow runs.
+In the [!DNL Adobe Experience Platform] user interface, you can view and monitor the attributes and activities of your destinations. These details include the destination's name and ID, controls to activate or disable the destinations, and more. Details also include metrics for activated profile records, identities activated, failed, and excluded, and a history of dataflow runs.
 
 >[!NOTE]
 >
@@ -152,7 +152,7 @@ To edit the existing activation schedule of multiple audiences at the same time,
 
 >[!NOTE]
 >
->For details on exploring the details page of a audience, refer to the [Audience Portal overview](../../segmentation/ui/audience-portal.md#segment-details).
+>For details on exploring the details page of a audience, refer to the [Audience Portal overview](../../segmentation/ui/audience-portal.md#audience-details).
 
 ### Edit file names for multiple audiences exported to batch destinations {#bulk-edit-file-names}
 

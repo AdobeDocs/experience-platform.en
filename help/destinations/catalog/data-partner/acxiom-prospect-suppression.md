@@ -13,19 +13,19 @@ exl-id: d82e8cd3-970c-44af-99b0-ea154eb3655e
 
 ## Overview {#overview}
 
-Use [!DNL Acxiom Prospect-Suppression] to deliver the most productive prospect audiences possible. This connector securely exports first party data from Real-Time Customer Data Platform and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. This will be matched against the [!DNL Acxiom Global] database which enables the prospect lists to be tailored for import. Then, use the [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) source connector to prospect lists from Acxiom back into Real-Time CDP, with your known or converted customers removed. 
+Use [!DNL Acxiom Prospect-Suppression] to deliver the most productive prospect audiences possible. This connector securely exports first party data from [!DNL Real-Time Customer Data Platform] and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. This will be matched against the [!DNL Acxiom Global] database which enables the prospect lists to be tailored for import. Then, use the [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) source connector to prospect lists from Acxiom back into [!DNL Real-Time CDP], with your known or converted customers removed. 
 
 ![Marketing diagram to export first-party data to Acxiom, then import prospect data back into Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow.png)
 
 Acxiom offers the industry's best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
 
-This tutorial provides steps to create an [!DNL Acxiom Prospect-Suppression] destination connection and dataflow using the Adobe Experience Platform user interface. This connector is used to deliver data to the Acxiom prospect service using Amazon S3 as a drop point. Contact your Acxiom account representative once you start exporting files to the Amazon S3 drop point.
+This tutorial provides steps to create an [!DNL Acxiom Prospect-Suppression] destination connection and dataflow using the [!DNL Adobe Experience Platform] user interface. This connector delivers data to the Acxiom prospect service using Amazon S3 as a drop point. Contact your Acxiom account representative once you start exporting files to the Amazon S3 drop point.
 
 ![The destination catalog with the Acxiom destination selected.](../../assets/catalog/data-partner/acxiom/image-destination-catalog.png)
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL Acxiom Prospect-Suppression] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Acxiom Prospect-Suppression] destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 ### Create a suppression list for prospecting datasets {#create-suppression-list}
 
@@ -37,7 +37,7 @@ The use case is executed through a combination of both destination and source co
 
 You would initially start by exporting your existing customer profiles using this destination connector to be used as a suppression file. This ensures that no existing customer records are included.
 
-Acxiom's service would search for the file, retrieve it and use it alongside additional selection criteria and generate a prospect file. You would then use the corresponding [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) source connector to ingest the prospect profiles into Adobe Real-Time CDP.
+Acxiom's service would search for the file, retrieve it and use it alongside additional selection criteria and generate a prospect file. You would then use the corresponding [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) source connector to ingest the prospect profiles into Adobe [!DNL Real-Time CDP].
 
 ## Prerequisites {#prerequisites}
 
@@ -53,7 +53,7 @@ This section describes which type of audiences you can export to this destinatio
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -67,7 +67,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 

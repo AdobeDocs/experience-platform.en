@@ -7,7 +7,7 @@ exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
 
 ## Overview {#overview}
 
-Destination SDK allows you to extensively adjust the formatting and compression options of your exported files, to match any downstream requirements in your storage location. 
+Destination SDK lets you extensively adjust the formatting and compression options of your exported files, to match any downstream requirements in your storage location. 
 
 This page describes how to use Destination SDK to configure file formatting options for file-based destinations.
 
@@ -716,7 +716,7 @@ A successful response returns the destination configuration, including the uniqu
 A certain combination of file formatting options can lead to undesired file export results. 
 Adobe recommends against selecting the following combination of CSV options: 
 
-```
+```properties
 
 nullValue -> ""
 quote -> "

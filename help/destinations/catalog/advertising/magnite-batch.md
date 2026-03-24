@@ -10,16 +10,16 @@ exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
 
 This document describes the Magnite: Batch destination and provides sample use cases to help you better understand how to activate and export audiences to it.
 
-Adobe Real-Time CDP audiences can be delivered to the Magnite Streaming platform in two ways - they can be delivered once per day, or they can be delivered in real-time:
+Adobe [!DNL Real-Time CDP] audiences can be delivered to the Magnite Streaming platform in two ways - they can be delivered once per day, or they can be delivered in real-time:
 
 1. If you only want and/or need to deliver audiences once per day, you can use the Magnite: Batch destination, which delivers audiences to Magnite Streaming via a daily S3 batch file delivery. These Batch audiences are stored indefinitely in the Magnite platform, unlike real-time audiences, which are only stored for a couple days.
 
 2. However, if you want or need to deliver audiences more frequently, you will need to use the [Magnite Real-Time](/help/destinations/catalog/advertising/magnite-streaming.md) destination. When using the Real-Time destination, Magnite Streaming will receive audiences in real-time, but Magnite can only store real-time audiences temporarily in their platform, and they will be removed from the system within a couple days. For this reason, if you want to use the Magnite Real-Time destination, you will *also* need to use the Magnite: Batch destination - each audience that you activate to the Real-Time destination, you also need to activate to the Batch destination.
 
-To recap: If you only want to deliver Adobe Real-Time CDP audiences once per day, you will use the Magnite: Batch destination only, and audiences will be delivered once per day. If you want to deliver Adobe Real-Time CDP audiences in Real-Time, you will use *both* the Magnite: Batch destination, and the Magnite Real-Time destination. For more information, reach out to Magnite: Streaming.
+To recap: If you only want to deliver Adobe [!DNL Real-Time CDP] audiences once per day, you will use the Magnite: Batch destination only, and audiences will be delivered once per day. If you want to deliver Adobe [!DNL Real-Time CDP] audiences in Real-Time, you will use *both* the Magnite: Batch destination, and the Magnite Real-Time destination. For more information, reach out to Magnite: Streaming.
 
 
-Continue reading below for more information about the Magnite: Batch destination, how to connect to it, and how to activate Adobe Real-Time CDP audiences to it.
+Continue reading below for more information about the Magnite: Batch destination, how to connect to it, and how to activate Adobe [!DNL Real-Time CDP] audiences to it.
 For more information about the Real-Time destination, See [this documentation page](magnite-streaming.md) instead.
 
 >[!IMPORTANT]
@@ -28,7 +28,7 @@ For more information about the Real-Time destination, See [this documentation pa
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Magnite: Batch destination, here are sample use cases that Adobe Experience Platform customers can solve using this destination.
+To help you better understand how and when you should use the Magnite: Batch destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve using this destination.
 
 ### Use case #1 {#use-case-1}
 
@@ -44,7 +44,7 @@ Any audience(s) activated via the Magnite: Batch destination will be delivered i
 
 ## Prerequisites {#prerequisites}
 
-To use the [!DNL Magnite] destinations in Adobe Experience Platform, you must first have a Magnite Streaming account. If you have a [!DNL Magnite Streaming] account, please reach out to your [!DNL Magnite] account manager to be provided credentials to access [!DNL Magnite's] destinations. If you do not have a [!DNL Magnite Streaming] account, please reach out to adobe-tech@magnite.com
+To use the [!DNL Magnite] destinations in [!DNL Adobe Experience Platform], you must first have a Magnite Streaming account. If you have a [!DNL Magnite Streaming] account, please reach out to your [!DNL Magnite] account manager to be provided credentials to access [!DNL Magnite's] destinations. If you do not have a [!DNL Magnite Streaming] account, please reach out to adobe-tech@magnite.com
 
 ## Supported identities {#supported-identities}
 
@@ -67,7 +67,7 @@ The Magnite: Batch destination can receive *any* identity sources from the Adobe
 | Audience origin             | Supported | Description | 
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -80,7 +80,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -183,7 +183,7 @@ On the "Configure a filename and export schedule for each audience" screen, you 
 
 Once your audiences have been uploaded, you may validate your audiences have been created and uploaded correctly.
 
-* The Magnite: Batch destination delivers S3 files to Magnite Streaming at a daily cadence. After delivery and ingestion, audiences/segments are expected to appear in Magnite Streaming, and can be applied to a deal. You can confirm this by looking-up the segment ID or segment name that was shared during the activation steps in the Adobe Experience Platform.
+* The Magnite: Batch destination delivers S3 files to Magnite Streaming at a daily cadence. After delivery and ingestion, audiences/segments are expected to appear in Magnite Streaming, and can be applied to a deal. You can confirm this by looking-up the segment ID or segment name that was shared during the activation steps in the [!DNL Adobe Experience Platform].
 
 >[!NOTE]
 >
