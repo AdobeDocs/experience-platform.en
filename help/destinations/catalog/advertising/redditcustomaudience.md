@@ -77,7 +77,7 @@ Refer to the table below for information about the destination export type and f
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
 * In Experience Platform, open Destinations and find the Reddit destination: **Reddit Custom Audience** and click on **Activate audiences**.
-![alt text](/help/destinations/assets/catalog/advertising/destination_name.png)
+![alt text](../assets/catalog/advertising/destination_name.png)
 
 * Select **Configure new destination** if this is your first time connecting your Reddit account.
 **Note**: *destination here refers to your Adobe connection to your Reddit Ads account. So you might only have to do this step once if you only manage one Reddit ads account.*
