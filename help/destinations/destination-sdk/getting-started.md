@@ -7,7 +7,7 @@ exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
 
 ## Overview {#overview}
 
-This page describes how to authenticate and start using Adobe Experience Platform Destination SDK. It includes instructions on how to obtain Adobe I/O authentication credentials, a sandbox name, and the destination authoring access control permission.
+This page describes how to authenticate and start using [!DNL Adobe Experience Platform] Destination SDK. It includes instructions on how to obtain Adobe I/O authentication credentials, a sandbox name, and the destination authoring access control permission.
 
 ## Terminology {#terminology}
 

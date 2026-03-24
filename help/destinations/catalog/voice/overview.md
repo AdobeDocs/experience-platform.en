@@ -12,7 +12,7 @@ Voice platforms gather and collate data from various sources including voice mes
 
 ## Supported Voice of the Customer destinations {#supported-destinations}
 
-Currently, Adobe Experience Platform supports the Voice of the Customer destinations listed below. For information on how to connect to these destinations, see the individual links:
+Currently, [!DNL Adobe Experience Platform] supports the Voice of the Customer destinations listed below. For information on how to connect to these destinations, see the individual links:
 
 ### Connections {#connections}
 

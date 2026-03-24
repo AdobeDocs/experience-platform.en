@@ -9,7 +9,7 @@ exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 
 >[!AVAILABILITY]
 >
->This destination connector is in limited availability and only available to Adobe Real-Time CDP Ultimate customers provisioned in the [VA7 region](/help/landing/multi-cloud.md#azure-regions).
+>This destination connector is in limited availability and only available to [!DNL Real-Time CDP] Ultimate customers provisioned in the [VA7 region](/help/landing/multi-cloud.md#azure-regions).
 
 ## Overview {#overview}
 
