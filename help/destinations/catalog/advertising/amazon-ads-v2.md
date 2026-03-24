@@ -26,8 +26,6 @@ You can use *[!DNL Amazon Ads v2]* destination, for below purposes.
 
 ### Audience ingestion and activation {#activation-and-targeting}
 
-For social network platforms:
-
 An athletic apparel brand wants to reach its existing customers with relevant ads across *[!DNL Amazon Ads]*. The brand can ingest customer email addresses from its CRM into Adobe Experience Platform, build audiences using its first-party offline data, and activate these audiences to *[!DNL Amazon Ads]* through the *[!DNL Amazon Ads v2]* destination. Once activated, the audiences can be used to target ads to those customers across *[!DNL Amazon Ads]* inventory, helping the brand re-engage known customers and drive repeat purchases.
 
 For details, see:
@@ -50,15 +48,15 @@ The *[!DNL Amazon Ads v2]* destination supports the activation of the following 
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|`phone_sha256`|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
-|`email_lc_sha256`|Email addresses (lowercased) hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
-|`firstName`|First name of the user|Both plain text and SHA256 hashed first names are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
-|`lastName`|Last name of the user|Both plain text and SHA256 hashed last names are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
-|`street`|Street address of the user|Both plain text and SHA256 hashed streets are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
+|`phone`|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
+|`email`|Email addresses (lowercased) hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
+|`firstname`|First name of the user|Both plain text and SHA256 hashed first names are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
+|`lastname`|Last name of the user|Both plain text and SHA256 hashed last names are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
+|`address`|Street address of the user|Both plain text and SHA256 hashed streets are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
 |`city`|City of the user|Both plain text and SHA256 hashed cities are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
 |`state`|State or province of the user|Both plain text and SHA256 hashed states are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
 |`zip`|ZIP or postal code of the user|Both plain text and SHA256 hashed zips are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
-|`country`|Country of the user (2-character ISO code)|Supports plain text input.|
+|`countryCode`|Country of the user (2-character ISO code)|Supports plain text input.|
 |`experianId`|Identifier assigned by Experian|Supports plain text input.|
 |`kantarId`|Identifier assigned by Kantar|Supports plain text input.|
 |`liveRampId`|Identifier assigned by LiveRamp|Supports plain text input.|
@@ -85,10 +83,10 @@ Supported audiences by audience data type:
 
 | Audience data type | Supported | Description | Use cases |
 |--------------------|-----------|-------------|-----------|
-| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
-| [Account audiences](/help/segmentation/types/account-audiences.md) | Yes | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
-| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | Yes | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | Yes | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [People audiences](/help/segmentation/types/people-audiences.md) | No | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -163,7 +161,7 @@ For best results, Include countryCode (2-character ISO). Example (US, IN, DE etc
 
 You can combine first-party identifiers (such as email or phone) with partner-provided identifiers when both are available. This allows Amazon Ads to use multiple identity signals during audience matching.
 
-Use the partner-provided identifiers only when they already exist in your source data.
+Use partner-provided identifiers only when they are populated in your source data. If a mapped partner identifier field is empty or not present for a given profile, it will be ignored during audience matching and will not contribute to match rates.
 
 Examples
 
@@ -202,5 +200,3 @@ All Adobe Experience Platform destinations are compliant with data usage policie
 For additional help, visit:
 
 * [Amazon Ads Data Manager Overview](https://advertising.amazon.com/API/docs/en-us/adm/1_ads-data-manager-console-overview)
-
-+++
