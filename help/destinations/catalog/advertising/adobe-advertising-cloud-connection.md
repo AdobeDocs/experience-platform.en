@@ -8,7 +8,7 @@ exl-id: 0ff80d38-993f-4609-bf2a-01a3e6cfe10b
 
 ## Overview {#overview}
 
-The Adobe Advertising Cloud Demand-Side Platform (DSP) destination allows users to share both authenticated and unauthenticated first-party audiences with a DSP account or specific advertiser within an account.
+The Adobe Advertising Demand-Side Platform (DSP) destination allows users to share both authenticated and unauthenticated first-party audiences with a DSP account or specific advertiser within an account.
 
 This destination allows customers to share first-party audiences with any or all of these IDs:
 
@@ -26,7 +26,7 @@ This connection replaces the [Legacy Adobe Advertising Cloud DSP connection](ado
 
 >[!IMPORTANT]
 >
->This page was created by the Adobe Advertising [!DNL DSP] team. For any inquiries or update requests, contact Advertising Cloud support directly at `adcloud_support@adobe.com`.
+>This page was created by the Adobe Advertising [!DNL DSP] team. For any inquiries or update requests, contact Advertising support directly at `adcloud_support@adobe.com`.
 
 ## Use cases {#use-cases}
 
@@ -54,7 +54,7 @@ Advertisers have the choice to share segments either with authenticated first-pa
 
 * A [Real-Time CDP source in DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) to receive audiences for campaign activation. Your Adobe Account Team will create the source using your Experience Cloud organization ID.
 
-* The source key for the [!DNL DSP] account or advertiser, which is generated when a [Real-Time CDP source is created in [!DNL DSP]](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). Your [!DNL DSP] account team will share this key with you. You will use it within Experience Platform to create a destination connection to the Advertising Cloud DSP destination, as explained below.
+* The source key for the [!DNL DSP] account or advertiser, which is generated when a [Real-Time CDP source is created in [!DNL DSP]](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). Your [!DNL DSP] account team will share this key with you. You will use it within Experience Platform to create a destination connection to the Advertising DSP destination, as explained below.
 
 ### Set up ID syncing to share cookies {#cookie-sync}
 
@@ -190,7 +190,7 @@ For instructions, see [Map attributes and identities](/help/destinations/ui/acti
 
 ## Validate data export {#exported-data}
 
-To verify that the audience data was shared with Advertising Cloud, check the following:
+To verify that the audience data was shared with Adobe Advertising, check the following:
 
 * The data flow in your [!DNL Real-Time CDP] destination is successful.
 
