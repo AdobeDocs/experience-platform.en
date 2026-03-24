@@ -26,7 +26,7 @@ New features and updates to existing features in Adobe Experience Platform:
 
 ## Advanced data lifecycle management {#advanced-data-lifecycle-management}
 
-Experience Platform provides a suite of data hygiene capabilities that allow you to manage your stored data through programmatic deletions of consumer records and datasets. Using either the Data Lifecycle workspace in the UI or through calls to the Data Hygiene API, you can effectively manage your data stores. Use these capabilities to ensure that information is used as expected, is updated when incorrect data needs fixing, and is deleted when organizational policies deem it necessary.
+Experience Platform provides a suite of data hygiene capabilities that allow you to manage your stored data through programmatic deletions of consumer records and datasets. Using either the Data Lifecycle workspace in the UI or calls to the Data Hygiene API, you can effectively manage your data stores. Use these capabilities to ensure that information is used as expected, is updated when incorrect data needs fixing, and is deleted when organizational policies deem it necessary.
 
 | Feature | Description |
 | --- | --- |
@@ -44,7 +44,7 @@ Agent Orchestrator enables you to build and deploy AI-powered agents that can au
 
 | Feature | Description |
 | --- | --- |
-| [Adobe Marketing Agent for [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | The Adobe Marketing Agent for [!DNL Microsoft 365 Copilot] is your embedded agent that brings Adobe's marketing intelligence directly into everyday tools like [!DNL Teams], [!DNL Word], [!DNL PowerPoint] and other [!DNL Microsoft 365] apps. You can use this agent to pull in trusted campaign insights from Adobe applications while you're planning campaigns, reviewing audiences or collaborating with colleagues, answer customer questions, and make data-informed decisions without leaving your [!DNL Microsoft 365] workflow. |
+| [Adobe Marketing Agent for [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | The Adobe Marketing Agent for [!DNL Microsoft 365 Copilot] is your embedded agent that brings Adobe's marketing intelligence directly into everyday tools like [!DNL Teams], [!DNL Word], [!DNL PowerPoint] and other [!DNL Microsoft 365] apps. You can use this agent to pull in trusted campaign insights from Adobe applications while you're planning campaigns, reviewing audiences, collaborating with colleagues to answer customer questions, and to make data-informed decisions without leaving your [!DNL Microsoft 365] workflow. |
 
 {style="table-layout:auto"}
 
@@ -61,7 +61,7 @@ For more information, read the [Agent Orchestrator documentation](https://experi
 | [Adobe Advertising DSP](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md) connection | The new Adobe Advertising DSP connection offers the same functionality as the legacy connection plus support for additional identities. With the new connector, you can also export cookie-based identities to Adobe Advertising DSP. |
 | [FreeWheel](../../destinations/catalog/advertising/freewheel.md) connection | Send [!DNL Real-Time CDP] audiences to FreeWheel as daily batch files so you can target them in FreeWheel deals and campaigns across CTV, video, and display. Contact your Adobe account team for access. |
 | External audience support for [The Trade Desk CRM](../../destinations/catalog/advertising/tradedesk-emails.md) and [Pinterest](../../destinations/catalog/advertising/pinterest.md) | You can now activate audiences from origins beyond Segmentation Service to The Trade Desk CRM, Criteo, and Pinterest, including custom upload audiences (imported from CSV), look-alike audiences, federated audiences, and audiences created in other Experience Platform apps such as [!DNL Adobe Journey Optimizer]. This update is being rolled out through the end of March. See the [supported audiences](../../destinations/catalog/advertising/criteo.md#supported-audiences) section on each destination's catalog page for details. |
-| Increased custom upload audiences limit | You can now activate up to 20 custom upload audiences per destination instance. Previously, this limit was 10. See the [destinations guardrails](../../destinations/guardrails.md#batch-file-based-activation) for details. |
+| Increased limit for custom upload audiences | You can now activate up to 20 custom upload audiences per destination instance. Previously, this limit was 10. See the [destinations guardrails](../../destinations/guardrails.md#batch-file-based-activation) for details. |
 | [Export file now](../../destinations/ui/export-file-now.md) and [ad-hoc activation API](../../destinations/api/ad-hoc-activation-api.md) support for external audiences | You can now use Export file now (UI) and the ad-hoc activation API with external audiences (such as custom upload, look-alike, federated, and audiences from other Experience Platform apps) when activating to batch file-based destinations. This update is being rolled out through the end of March. |
 
 {style="table-layout:auto"}
@@ -82,7 +82,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 | Feature | Description |
 | --- | --- |
-| XDM Entity Actions And Delete Support | Access actions for schemas, classes, field groups, and data types directly from inline table menus and detail page header menus. If you have the required permissions, you can also delete your organization's entities when they are not used by datasets and not enabled for Profile. See the [XDM UI guide](../../xdm/ui/explore.md) for more details. |
+| XDM Entity Actions and Delete Support | Access actions for schemas, classes, field groups, and data types directly from inline table menus and detail page header menus. If you have the required permissions, you can also delete your organization's entities when they are not used by datasets and not enabled for Profile. See the [XDM UI guide](../../xdm/ui/explore.md) for more details. |
 
 For more information, read the [XDM overview](../../xdm/home.md).
 
