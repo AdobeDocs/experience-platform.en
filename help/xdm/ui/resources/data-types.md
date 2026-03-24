@@ -41,6 +41,10 @@ From here, you have the following options:
 - [Filter data types](#filter)
 - [Select an existing data type to edit](#edit)
 
+>[!NOTE]
+>
+>For where download, copy JSON, package, and delete actions appear for data types (table vs detail view) and tenant-only delete rules, see [Manage schemas, classes, field groups, and data types: actions and deletion](../explore.md#xdm-resource-actions).
+
 ### Create a new data type {#create}
 
 From the **[!UICONTROL Data types]** tab, select **[!UICONTROL Create data type]**.

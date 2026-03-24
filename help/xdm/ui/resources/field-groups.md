@@ -18,6 +18,10 @@ A field group defines which class(es) it is compatible with, based on the behavi
 
 Adobe Experience Platform provides many standard field groups that cover a wide range of marketing use cases. However, you can also create and edit your own custom field groups to define additional concepts related to your business within your XDM schemas. This guide provides an overview of how to create, edit, and manage custom field groups for your organization in the Experience Platform UI.
 
+>[!NOTE]
+>
+>For inventory actions (row menus, detail **[!UICONTROL More]**), delete, and constraints, see [Manage schemas, classes, field groups, and data types: actions and deletion](../explore.md#xdm-resource-actions).
+
 ## Prerequisites {#prerequisites}
 
 This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) for how field groups contribute to XDM schemas.

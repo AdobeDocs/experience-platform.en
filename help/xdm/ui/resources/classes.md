@@ -18,6 +18,10 @@ Adobe provides several standard ("core") Experience Data Model (XDM) classes, in
 
 This document provides an overview of how to create, edit, and manage custom classes in the Experience Platform UI.
 
+>[!NOTE]
+>
+>For table row and detail-page actions (including delete) and when deletion is blocked, see [Manage schemas, classes, field groups, and data types: actions and deletion](../explore.md#xdm-resource-actions).
+
 ## Prerequisites {#prerequisites}
 
 This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) to learn how classes contribute to XDM schemas.

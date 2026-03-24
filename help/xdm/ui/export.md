@@ -24,6 +24,10 @@ To address this need, the [!UICONTROL Schemas] workspace in the Adobe Experience
 
 While the Experience Platform UI allows you export XDM resources, you must use the Schema Registry API to import those resources into other sandboxes or organizations to complete the workflow. Refer to guide on [getting started with the Schema Registry API](../api/getting-started.md) for important information regarding required authentication headers before following this guide.
 
+>[!NOTE]
+>
+>For where **[!UICONTROL Copy JSON structure]** and related actions appear in the Browse inventory vs the Schema Editor, and for delete constraints, see [Manage schemas, classes, field groups, and data types: actions and deletion](./explore.md#xdm-resource-actions).
+
 ## Generate an export payload {#generate-export-payload}
 
 Export payloads can be generated in the Experience Platform UI from the details panel in the [!UICONTROL Browse] tab or directly from the canvas of the schema in the Schema Editor. 

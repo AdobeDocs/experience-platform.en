@@ -45,6 +45,43 @@ The resources displayed in search results are ordered first by title matches, th
 
 When you have found the resource you want to explore, select its name from the list to view its structure in the canvas.
 
+## Manage schemas, classes, field groups, and data types: actions and deletion {#xdm-resource-actions}
+
+This section is the single reference for where inventory actions appear in the [!UICONTROL Schemas] workspace, what you can run (including delete), and when actions are blocked.
+
+### Where to find actions (inline vs detail page) {#where-to-find-actions}
+
+On **[!UICONTROL Browse]**, **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, and **[!UICONTROL Data types]**, management actions are available in two places **[VERIFY: parity across tabs; Relationships tab exceptions]**:
+
+* **Inline in the table** — Use the row actions menu (for example **[!UICONTROL …]**) on a resource.
+* **Resource detail view** — Open the resource (typically by selecting its name), then use **[!UICONTROL More]** in the page header **[VERIFY: labels; actions only on detail vs also in the table]**.
+
+The [!DNL Schema Editor] may still expose a header **[!UICONTROL More]** for schemas **[VERIFY]**. See [More actions](./resources/schemas.md#more) in the schemas UI guide. Procedures that pointed to a list-adjacent details or actions panel **[REVIEW]** against the shipping UI.
+
+### Available actions {#available-actions}
+
+Depending on resource type and menu location, actions can include **[VERIFY: per-entity matrix (schemas, classes, field groups, data types)]**:
+
+* **[!UICONTROL Download sample file]**
+* **[!UICONTROL Copy JSON structure]** (or equivalent export copy)
+* **[!UICONTROL Add to package]**
+* **[!UICONTROL Delete]**
+
+### Delete behavior {#delete-behavior}
+
+**[!UICONTROL Delete]** removes the resource when enabled **[VERIFY: confirmations, dependents, hard vs soft delete]**. If delete is missing or unavailable, see [Constraints](#delete-constraints).
+
+### Constraints (dataset, Profile, RBAC, tenant vs global) {#delete-constraints}
+
+The UI blocks deletion (and may block related actions) when **[VERIFY: disabled vs hidden]**:
+
+* **Dataset association** — In use by one or more datasets **[VERIFY: schemas vs classes, field groups, data types]**.
+* **Profile enablement** — Schemas enabled for [Real-Time Customer Profile](../../profile/home.md) cannot be deleted **[VERIFY]**.
+* **Permissions (RBAC)** — Requires permission to manage schema resources (for example **[!UICONTROL Manage Schema]**) **[VERIFY: exact name and admin UI]**. Otherwise actions may be missing or disabled.
+* **Tenant vs global** — Standard Adobe classes, field groups, and data types are not tenant-deletable; custom resources may be **[VERIFY]**. Data type delete: tenant-defined only **[VERIFY]**.
+
+For workflows, see [Generate sample XDM data](./sample.md), [Export XDM schemas](./export.md), and [Create and edit schemas in the UI](./resources/schemas.md).
+
 ## Explore an XDM resource in the canvas {#explore}
 
 Once you select a resource, its structure opens in the canvas.
