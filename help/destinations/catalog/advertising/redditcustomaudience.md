@@ -1,8 +1,8 @@
 ---
 title: Reddit Custom Audience
-description: "**Reddit Ads** connect brands to people who are actively exploring their passions and problems in real time. By pairing *high-intent, community-driven* conversations with flexible *ad formats* and *robust targeting*, **Reddit Ads** help advertisers reach engaged audiences, drive performance outcomes, and learn directly from the communities that shape culture online."
+description: "**Reddit Ads** connect brands to people who are actively exploring their passions and problems in real time. By pairing *high-intent, community-driven* conversations with flexible *ad formats* and *robust targeting*, **Reddit Ads** help advertisers reach engaged audiences, drive performance outcomes, and learn directly from the communities that shape culture online.
 
-This guide is for **advertisers and media teams** using **Adobe Experience Platform** to send audiences to **Reddit Ads**. It covers what you need to connect your accounts, map identities, and activate segments. Navigate to [Reddit Ads](https://business.reddithelp.com/s/article/About-Reddit-Ads).
+This guide is for **advertisers and media teams** using **Adobe Experience Platform** to send audiences to **Reddit Ads**. It covers what you need to connect your accounts, map identities, and activate segments. Navigate to [Reddit Ads](https://business.reddithelp.com/s/article/About-Reddit-Ads)."
 ---
 
 # Reddit Custom Audience {#reddit custom audience}
