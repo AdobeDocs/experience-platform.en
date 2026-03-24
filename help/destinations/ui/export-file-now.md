@@ -20,7 +20,7 @@ exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 
 This article explains how to use the Experience Platform UI to export files on-demand to batch destinations such as [cloud storage](/help/destinations/catalog/cloud-storage/overview.md) and [email marketing](/help/destinations/catalog/email-marketing/overview.md) destinations.
 
-The **[!UICONTROL Export file now]** control allows you to export a full file without interrupting the current export schedule of a previously scheduled audience. This export happens in addition to previously scheduled exports and does not change the export frequency of the audience. 
+The **[!UICONTROL Export file now]** control lets you export a full file without interrupting the current export schedule of a previously scheduled audience. This export happens in addition to previously scheduled exports and does not change the export frequency of the audience. 
 
 The file export is triggered immediately and uses data from the most recent audience evaluation snapshot only. It does not include profile or identity changes that occur after snapshot creation. In contrast, scheduled exports include both snapshot data and incremental changes that occur between snapshot creation and export time.
 
