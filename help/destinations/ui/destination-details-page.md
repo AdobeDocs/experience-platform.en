@@ -50,8 +50,8 @@ The following table covers the controls and details provided by the right rail:
 | --- | --- |
 | [!UICONTROL Activate audiences] | Select this control to edit which audiences are mapped to the destination, update export schedules, or add and remove mapped attributes and identities. See the guides on [activating audience data to audience streaming destinations](./activate-segment-streaming-destinations.md), [activating audience data to batch profile-based destinations](./activate-batch-profile-destinations.md), and [activating audience data to streaming profile-based destinations](./activate-streaming-profile-destinations.md) for more information. |
 | [!UICONTROL Delete] | Allows you to delete this dataflow and unmaps the audiences that were previously activated, if any exist. |
-| [!UICONTROL Destination name] | This field can be edited in order to update the destination's name. |
-| [!UICONTROL Description] |  This field can be edited in order to update or add an optional description to the destination. |
+| [!UICONTROL Destination name] | This field can be edited to update the destination's name. |
+| [!UICONTROL Description] |  This field can be edited to update or add an optional description to the destination. |
 | [!UICONTROL Destination] | Represents the destination platform that audiences are sent to. See the [destinations catalog](../catalog/overview.md) for more information. |
 | [!UICONTROL Status] | Indicates whether the destination is enabled or disabled. |
 | [!UICONTROL Marketing actions] | Indicates the marketing actions (use cases) that apply for this destination for data-governance purposes. |

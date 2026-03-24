@@ -169,6 +169,6 @@ Refer to the API reference for examples of calls that you can make:
 
 Edit the template and make calls to the render template API endpoint until the exported profiles match your destination's expected data format.
 
-## Add your character-escaped template to the destination server configuration
+## Add your character-escaped template to the destination server configuration {#add-template-to-server-config}
 
 Once you are satisfied with your message transformation template, add it to your [destination server configuration](../../authoring-api/destination-server/create-destination-server.md), in `httpTemplate.requestBody.value`.

@@ -115,10 +115,10 @@ For the [!DNL Acxiom Real ID Audience Connection] destination to correctly recei
 [!DNL Acxiom Real ID Audience Connection] only allows mapping to the following target field.  
 
 | Field Name | Description|Required |
-|--------------------|------------|--------| 
+|--------------------|------------|--------|
 |Real ID|A Real ID is a unique 36 byte alpha-numeric identifier (ID) from Acxiom's proprietary identity resolution graph, similar to a primary key for a relational database. It's an identifier that represents a person, household or address. |Yes|
 
-
+{style="table-layout:auto"}
 
 In the **[!UICONTROL Source Field]** column, enter the name of the source attribute that you want to map to the corresponding target field, or select the arrow icon to open the **[!UICONTROL  Select source field]** screen. Then, select **[!UICONTROL Next]**.
 ![Mapping screen](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)

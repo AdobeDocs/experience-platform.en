@@ -125,7 +125,7 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 >
@@ -133,7 +133,7 @@ When you are finished providing details for your destination connection, select 
 >
 > - To export _identities_, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](../../assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
-Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate audiences to streaming destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ### Map attributes and identities {#map}
 
@@ -148,7 +148,7 @@ Selecting target fields:
 
 ![Map attributes and identities](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
 
-### Audience scheduling
+### Audience scheduling {#audience-scheduling}
 
 If you are using the PubMatic Connect (Custom Audience ID Mapping) destination, you have to provide a mapping ID for each audience that corresponds to the 'Source Audience ID' in the PubMatic platform.
 
