@@ -77,20 +77,20 @@ Refer to the table below for information about the destination export type and f
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
 * In Experience Platform, open Destinations and find the Reddit destination: **Reddit Custom Audience** and click on **Activate audiences**.
-![alt text](../../assets/catalog/advertising/destination_name.png)
+![alt text](../../assets/catalog/advertising/redditcustomaudience/destination_name.png)
 
 * Select **Configure new destination** if this is your first time connecting your Reddit account.
 **Note**: *destination here refers to your Adobe connection to your Reddit Ads account. So you might only have to do this step once if you only manage one Reddit ads account.*
-![alt text](../../assets/catalog/advertising/configure_new_destination.png)
+![alt text](../../assets/catalog/advertising/redditcustomaudience/configure_new_destination.png)
 
 * Give a name to this **new destination**, then click **Connect to destination**.
-![alt text](../../assets/catalog/advertising/configure_new_destination_fields.png)
+![alt text](../../assets/catalog/advertising/redditcustomaudience/configure_new_destination_fields.png)
 
 ### Authenticate to destination {#authenticate}
 
 * You will now be redirected to Sign in with **Reddit** (if logged out) and **allow** the requested permissions so the platform can create audiences and update membership. After reviewing the permissions, click **Allow**.
 
-![alt text](../../assets/catalog/advertising/reddit_oauth.png)
+![alt text](../../assets/catalog/advertising/redditcustomaudience/reddit_oauth.png)
 
 
 ### Fill in destination details {#destination-details}
@@ -99,7 +99,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 * To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![alt text](../../assets/catalog/advertising/reddit_account_details.png)
+![alt text](../../assets/catalog/advertising/redditcustomaudience/reddit_account_details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future. Can use the name of your Reddit Account.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -125,22 +125,22 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 The following target identity namespace(s) must be mapped depending on the use case:
 * **email_lc_sha256**: Select the field you would like mapped to email (your source field can be hashed or unhashed, even though Reddit only accepts hashed values. You can force hashing the email before it’s sent by checking the “Apply transformation”.
-![alt text](../../assets/catalog/advertising/select_email_source.png)
-![alt text](../../assets/catalog/advertising/select_email_source_from_map.png)
-![alt text](../../assets/catalog/advertising/navigate_to_email_output.png)
-![alt text](../../assets/catalog/advertising/select_lc_sha256.png)
+![alt text](../../assets/catalog/advertising/redditcustomaudience/select_email_source.png)
+![alt text](../../assets/catalog/advertising/redditcustomaudience/select_email_source_from_map.png)
+![alt text](../../assets/catalog/advertising/redditcustomaudience/navigate_to_email_output.png)
+![alt text](../../assets/catalog/advertising/redditcustomaudience/select_lc_sha256.png)
 
 * **maid** : Similarily, select the field you would like mapped to maid (your source field can be hashed or unhashed, even though Reddit only accepts hashed values. You can force hashing the maid before it’s sent by checking the “Apply transformation”
 
 * Check **“Apply transformation”** if needed.
-![alt text](../../assets/catalog/advertising/apply_transformation.png)
+![alt text](../../assets/catalog/advertising/redditcustomaudience/apply_transformation.png)
 
 ## Exported data / Validate data export {#exported-data}
 
 * Once you finish your Segment/Audience activation and see success, your Audience should now be created on **Reddit**. You can check by going into your Reddit Ads Manager & Navigating to Audience Manager.
 
 * Audiences newly created in Reddit will show up in a pending state. Once your dataflow runs and profiles are pushed out, Reddit will match the profile against Reddit users. Once data is processed you will see the audience status in Reddit change to Valid. *Audience size needs ≥ 1,000 matched users to be considered* **Valid**. You will see the audience status as **Invalid** if you don’t have the *required audience size*.
-![alt text](../../assets/catalog/advertising/see_audience_in_reddit.png)
+![alt text](../../assets/catalog/advertising/redditcustomaudience/see_audience_in_reddit.png)
 
 This is how the payload to Reddit looks like:
 Additional information can be found in our [API Docsite](https://ads-api.reddit.com/docs/v3/operations/Update%20Custom%20Audience%20Users)
