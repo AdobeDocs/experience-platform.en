@@ -22,6 +22,7 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Agent Orchestrator](#agent-orchestrator)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
+- [Real-Time Customer Profile](#real-time-customer-profile)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
@@ -86,6 +87,20 @@ XDM is an open-source specification that provides common structures and definiti
 | XDM Entity Actions and Delete Support | Access actions for schemas, classes, field groups, and data types directly from inline table menus and detail page header menus. If you have the required permissions, you can also delete your organization's entities when they are not used by datasets and not enabled for Profile. See the [XDM UI guide](../../xdm/ui/explore.md) for more details. |
 
 For more information, read the [XDM overview](../../xdm/home.md).
+
+## Real-Time Customer Profile {#real-time-customer-profile}
+
+Real-Time Customer Profile enables you to see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third-party data. Profile allows you to consolidate your customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Events | You can now set the lookback period of events when browsing your profiles. This lets you see the events that the profile is associated with for the specified time period. For more information, read the [Profile UI guide](/help/profile/ui/user-guide.md#events). |
+
+{style="table-layout:auto"}
+
+For more information, read the [[!DNL Real-Time Customer Profile] overview](../../profile/home.md).
 
 <!-- 
 ## Run and Operate {#run-and-operate}
