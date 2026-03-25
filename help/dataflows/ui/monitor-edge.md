@@ -19,11 +19,11 @@ This guide requires a working understanding of the following components of Exper
 
 To access the monitoring dashboard for edge segmentation throughput, select **[!UICONTROL Monitoring]** within the **[!UICONTROL Data management]** section, followed by **[!UICONTROL Edge]**.
 
-IMAGE
+![The method to access the monitor edge segmentation dashboard is highlighted.](/help/dataflows/assets/ui/monitor-edge/access.png)
 
 The monitoring dashboard appears. This shows monitoring metrics for edge streaming throughput, a graph displaying the rate of edge streaming throughput, and a datastream view. These metrics can be filtered by service, by edge, and by date.
 
-IMAGE
+![The filtering options within the monitoring dashboard are highlighted.](/help/dataflows/assets/ui/monitor-edge/filtering.png)
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ If you filter by service, you can choose which service you want to view the thro
 
 If you filter by edge, you can choose which edge you want to view information about. Supported edges include US East Coast, US West Coast, Europe, India, Singapore, Australia, Japan, and Switzerland. You can select multiple edges to view at a time.
 
-If you filter by date, you can choose the timescale to filter your events. This timescale can be set up to 30 days. Alternatively, you can use one of the following preconfigured time scales: Last 6 hours, Last 12 hours, Last 24 hours, Last 7 days, and Last 30 days.
+If you filter by date, you can choose the timescale to filter your events. This timescale can be set up to 30 days. Alternatively, you can use one of the following preconfigured time scales: [!UICONTROL Last 6 hours], [!UICONTROL Last 12 hours], [!UICONTROL Last 24 hours], [!UICONTROL Last 7 days], and [!UICONTROL Last 30 days].
 
 ## Monitoring metrics for edge throughput
 
@@ -50,7 +50,7 @@ The metrics table provides information specific to the selected service's edge t
 
 The monitoring graph shows the records per second received by the selected edges within the alloted timeframe, compared to the maximum capacity allowed.
 
-IMAGE
+![The edge segmentation throughput graph is displayed.](/help/dataflows/assets/ui/monitor-edge/edge-segmentation-throughput.png)
 
 ## Datastream view
 
@@ -60,7 +60,7 @@ IMAGE
 
 The datastream view section displays a list of the latest datastreams that passed through the sandbox's edges.
 
-IMAGE
+![The datastream view is displayed, showing information about the listed datastreams.](/help/dataflows/assets/ui/monitor-edge/datastream-view.png)
 
 | Field | Description |
 | ----- | ----------- |
