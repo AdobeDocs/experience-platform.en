@@ -1,8 +1,8 @@
 ---
-title: Monitor edge segmentation 
+title: Monitor edge segmentation
 description: Learn how to use the monitoring dashboard to observe edge segmentation throughput.
+exl-id: 7abba7e8-1f2d-4a21-a93f-8bda7aa4d849
 ---
-
 # Monitor edge segmentation
 
 You can use the monitoring dashboard in the Adobe Experience Platform UI to conduct real-time monitoring of edge segmentation within your organization. Use this feature to access greater transparency into the throughput of your edge data.
