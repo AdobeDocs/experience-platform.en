@@ -21,6 +21,7 @@ New features and updates to existing features in Adobe Experience Platform:
 
 - [Advanced data lifecycle management](#advanced-data-lifecycle-management)
 - [Agent Orchestrator](#agent-orchestrator)
+- [Datastreams](#datastreams)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Real-Time Customer Profile](#real-time-customer-profile)
@@ -52,6 +53,18 @@ Agent Orchestrator enables you to build and deploy AI-powered agents that can au
 {style="table-layout:auto"}
 
 For more information, read the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+
+## Datastreams {#datastreams}
+
+A datastream represents the server-side configuration when implementing the Adobe Experience Platform Web and Mobile SDKs and the Adobe Experience Platform Edge Network Server API. The datastream configuration command in the SDKs handles all the services that a client interacts with.
+
+| Feature | Description |
+| --- | --- |
+| Dynamic datastream configurations general availability | Dynamic datastream configurations are now generally available. Dynamic datastream configurations allow you to define user-configurable sets of rules for each service enabled for your datastream, which dictate what Experience Cloud solution should receive each type of data. See the [dynamic datastream configurations guide](../../datastreams/configure-dynamic-datastream.md) for more information. |
+
+{style="table-layout:auto"}
+
+For more information, read the [datastreams overview](../../datastreams/overview.md).
 
 ## Destinations {#destinations}
 
