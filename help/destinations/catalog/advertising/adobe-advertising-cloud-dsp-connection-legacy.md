@@ -7,7 +7,7 @@ exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
 
 >[!NOTE]
 >
->This connection was formerly called the Adobe Advertising DSP connection. The new [Adobe Advertising DSP connection](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md) contains the same functionality as the legacy connection and support for additional identity types. The best practice is to use the new Adobe Advertising DSP connection.
+>This connection was formerly called the Adobe Advertising DSP connection. The new [Adobe Advertising DSP connection](/help/destinations/catalog/advertising/adobe-advertising-dsp-connection.md) contains the same functionality as the legacy connection and support for additional identity types. The best practice is to use the new Adobe Advertising DSP connection.
 
 ## Overview {#overview}
 
