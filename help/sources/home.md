@@ -224,7 +224,6 @@ You can use the following sources to ingest data loyalty to Experience Platform.
 | Source | Ingestion type | Cloud |
 | --- | --- | --- |
 | [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Streaming | Azure |
-| [[!DNL Talon.One]](connectors/loyalty/talon-one.md) | Batch, Streaming | Azure |
 
 {style="table-layout:auto"}
 
