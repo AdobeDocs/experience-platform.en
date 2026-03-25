@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes March 2026
 description: The March 2026 release notes for Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+exl-id: 66b948fd-caa0-4e5e-83dd-3b15b77c09fa
 ---
 # Adobe Experience Platform release notes
 
