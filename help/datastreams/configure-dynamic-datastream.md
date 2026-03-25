@@ -1,16 +1,9 @@
 ---
 title: Create dynamic datastream configurations
 description: Learn how to create dynamic datastream configurations, to route your data to various Experience Cloud services, based on rules.
-hide: yes
-hidefromtoc: yes
-badge: label="Beta" type="Informative"
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
 ---
 # Create dynamic datastream configurations
-
->[!AVAILABILITY]
->
->* The option to define dynamic datastream configurations is currently in Beta and available to a limited number of customers. To receive access to this functionality, contact your Adobe representative. The documentation and the functionality are subject to change.
 
 By default, the Experience Platform Edge Network sends all the events that reach a datastream to all the Experience Cloud [services](configure.md#add-services) that you have enabled for your datastreams. This might not always be the ideal workflow for you, depending on your use cases.
 
