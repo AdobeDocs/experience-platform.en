@@ -11,7 +11,7 @@ Create audiences from your customer lists, people who've visited your site or pe
 
 >[!IMPORTANT]
 >
->This destination was built by the Pinterest team. For any inquiries or update requests, please contact them directly at https://help.pinterest.com/en/contact.
+>This destination was built by the Pinterest team. For any inquiries or update requests, contact them directly at https://help.pinterest.com/en/contact.
 
 ## Prerequisites {#prerequisites}
 
@@ -28,7 +28,7 @@ In the [mapping step](/help/destinations/ui/activate-segment-streaming-destinati
 |---|---|---|
 |GAID|[!DNL Google Advertising ID]|Map the *GAID* source identity namespace to the target identity field *pinterest_audience*.|
 |IDFA|[!DNL Apple ID for Advertisers]|Map the *IDFA* source identity namespace to the target identity field *pinterest_audience*.|
-|EMAIL|Email addresses (clear text or hashed with the SHA256 algorithm)|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. <br> Map the *Email* or *Email_LC_SHA256* source identity namespace to the target identity field *pinterest_audience*.|
+|EMAIL|Email addresses (clear text or hashed with the SHA256 algorithm)|Both plain text and SHA256 hashed email addresses are supported by [!DNL Adobe Experience Platform]. <br> Map the *Email* or *Email_LC_SHA256* source identity namespace to the target identity field *pinterest_audience*.|
 
 {style="table-layout:auto"}
 
@@ -39,7 +39,7 @@ This section describes which types of audiences you can export to this destinati
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -50,7 +50,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -68,16 +68,16 @@ Refer to the table below for information about the destination export type and f
 
 ## Use Cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL Pinterest Customer List] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Pinterest Customer List] destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
-### Use Case #1
+### Use Case #1 {#use-case-1}
 
 Create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest.
 
 ## Connect to destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
@@ -105,7 +105,7 @@ Once the token is expired, data exports to the destination stop working. To prev
     ![Modal window with Reconnect OAuth option](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
 
 >[!SUCCESS]
-> 
+>
 >Your authentication credentials are refreshed and their expiration time is reset to 30 days.
 
 ### Enable alerts {#enable-alerts}
@@ -117,7 +117,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -129,14 +129,14 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-Please refer to the [Pinterest Help Center page](https://help.pinterest.com/en/business/article/audience-targeting) for additional information.
+Refer to the [Pinterest Help Center page](https://help.pinterest.com/en/business/article/audience-targeting) for additional information.
 
 +++ View changelog
 
  
 |Release month|Update type|Description|
 |---|---|---|
-|November 2023|Functionality and documentation update|The Pinterest destination in Real-Time CDP now uses the v5 Advertiser API.|
+|November 2023|Functionality and documentation update|The Pinterest destination in [!DNL Real-Time CDP] now uses the v5 Advertiser API.|
 
 {style="table-layout:auto"}
 

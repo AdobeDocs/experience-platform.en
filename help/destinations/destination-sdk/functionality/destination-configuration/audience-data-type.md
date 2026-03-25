@@ -14,7 +14,7 @@ Review the audience data types below to learn about the differences between them
 | [People audiences](../../../../segmentation/types/people-audiences.md) | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](../../../../segmentation/types/account-audiences.md) | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](../../../../segmentation/types/prospect-audiences.md) | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](../../../../catalog/datasets/overview.md) | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](../../../../catalog/datasets/overview.md) | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 The supported audience data type depends on the type of destination that you create.
 Refer to the table below to understand which destination types support which audience data types.

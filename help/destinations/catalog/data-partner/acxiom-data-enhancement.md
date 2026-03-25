@@ -2,28 +2,28 @@
 title: Acxiom Data Enhancement
 description: Use this connector to activate first-party Adobe profiles in Real-Time CDP to Acxiom for data enrichment and use across marketing channels. You can then use the Acxiom source to import the profiles with enhanced data and work with them in Real-Time CDP.
 last-substantial-update: 2024-03-14
-badge: Beta
+badge: label="Beta" type="Informative"
 exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
 ---
 # [!DNL Acxiom Data Enhancement] destination connection
 
 >[!NOTE]
 >
->The [!DNL Acxiom Data Enhancement] destination is in beta.  This destination connector and documentation page are created and maintained by the Acxiom team. For any inquiries or update requests, please contact them directly at acxiom-adobe-help@acxiom.com.
+>The [!DNL Acxiom Data Enhancement] destination is in beta.  This destination connector and documentation page are created and maintained by the Acxiom team. For any inquiries or update requests, contact them directly at acxiom-adobe-help@acxiom.com.
 
 ## Overview {#overview}
 
-Use the [!DNL Acxiom Data Enhancement] connector to supply additional descriptive data to your customer profiles, for use in analytics, segmentation, and targeting applications. With hundreds of elements available, this allows you to better segment and model data, resulting in more accurate targeting and predictive modeling.
+Use the [!DNL Acxiom Data Enhancement] connector to supply additional descriptive data to your customer profiles, for use in analytics, segmentation, and targeting applications. With hundreds of elements available, this lets you better segment and model data, resulting in more accurate targeting and predictive modeling.
 
 ![Marketing diagram to export first-party data to Acxiom, then import enriched data back into Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow-data-enhancement.png)
 
-This tutorial provides steps to create an [!DNL Acxiom Data Enhancement] destination connection and dataflow using the Adobe Experience Platform user interface. This connector is used to deliver data to Acxiom enhancement service using Amazon S3 as a drop point.
+This tutorial provides steps to create an [!DNL Acxiom Data Enhancement] destination connection and dataflow using the [!DNL Adobe Experience Platform] user interface. This connector delivers data to the Acxiom enhancement service using Amazon S3 as a drop point.
 
 ![The destination catalog with the Acxiom destination selected.](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-catalog.png)
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL Acxiom Data Enhancement] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Acxiom Data Enhancement] destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 ### Enhance Customer data {#enhance-customer-data}
 
@@ -35,7 +35,7 @@ The use case is executed through a combination of both destination and source co
 
 You would start by exporting your existing customer records for enrichment using this destination connector. Acxiom's service would search for the file, retrieve it, enrich it with Acxiom's data and generate a file. 
 
-The customer would then use the corresponding [Acxiom Data Ingestion](/help/sources/connectors/data-partners/acxiom-data-ingestion.md) source card to ingest the hydrated customer profiles back into Adobe Real-Time CDP.
+The customer would then use the corresponding [Acxiom Data Ingestion](/help/sources/connectors/data-partners/acxiom-data-ingestion.md) source card to ingest the hydrated customer profiles back into Adobe [!DNL Real-Time CDP].
 
 ## Prerequisites {#prerequisites}
 
@@ -51,7 +51,7 @@ This section describes which type of audiences you can export to this destinatio
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -93,7 +93,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-In order to access your bucket on Experience Platform, you need to provide valid values for the following credentials:
+To access your bucket on Experience Platform, you need to provide valid values for the following credentials:
 
 | Credential    | Description                                                                                              |
 |---------------|----------------------------------------------------------------------------------------------------------|
@@ -101,13 +101,13 @@ In order to access your bucket on Experience Platform, you need to provide valid
 | S3 Secret key | The secret key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team.              |
 | Bucket name   | This is your bucket where files will be shared. You can retrieve this value from the [!DNL Acxiom] team. |
 
-### New Account
+### New Account {#new-account}
 
 To define a new Acxiom Managed S3 location: 
 
 ![New Account](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
 
-### Existing Account
+### Existing Account {#existing-account}
 
 Accounts already defined using the [!DNL Acxiom Data Enhancement] destination appear in a list pop-up. When selected, you can see details on the account in the right rail. View the example from the UI, when you navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**;
 
@@ -146,7 +146,7 @@ When you are finished providing details for your destination connection, select 
 
 Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
-### Mapping suggestions
+### Mapping suggestions {#mapping-suggestions}
 
 The correct processing of files on the Acxiom side requires name and address elements. While not all elements are required, providing as much as possible will aid in successful matching.
 
@@ -171,7 +171,7 @@ Mapping suggestions are provided in the table below listing attributes on your d
 
 To verify if data has been exported successfully, check your [!DNL Amazon S3 Storage] bucket and make sure that the exported files contain the expected profile populations.
 
-## Next steps
+## Next steps {#next-steps}
 
 By following this tutorial, you have successfully created a dataflow to export profile data from Experience Platform to your [!DNL Acxiom] managed S3 location. Next, you need to contact your Acxiom representative with the name of the account, file names, and the bucket path so that processing can set up.
 

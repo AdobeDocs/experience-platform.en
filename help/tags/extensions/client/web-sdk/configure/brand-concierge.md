@@ -31,3 +31,7 @@ A checkbox that persists Brand Concierge sessions across page loads using a sess
 ## [!UICONTROL Stream timeout (seconds)]
 
 The maximum amount of time, in seconds, to wait for conversation stream chunks before triggering a timeout error. The default value is `10` seconds.
+
+## [!UICONTROL Collect sources]
+
+A checkbox that collects sources if a user navigated to the page from a link within a Brand Concierge conversation. Unchecked by default. If enabled, the library checks for the query string parameter `adobe_brand_concierge_source` and populates its value into `xdm.channel.referringSource`.

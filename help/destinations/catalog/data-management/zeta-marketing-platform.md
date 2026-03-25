@@ -11,11 +11,11 @@ exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
 
 The Zeta Marketing Platform (ZMP) is a cloud-based system which helps you acquire, grow, and retain customers more efficiently, powered by intelligence (proprietary data and AI). For more details, refer to [Zeta Global](https://zetaglobal.com/). 
 
-With the Zeta Marketing Platform connector available in Adobe Experience Platform, you can seamlessly synchronize your audiences from Experience Platform to the ZMP.
+With the Zeta Marketing Platform connector available in [!DNL Adobe Experience Platform], you can seamlessly synchronize your audiences from Experience Platform to the ZMP.
 
 >[!IMPORTANT]
 >
->The destination connector and documentation page are created and maintained by the *Zeta Global* team. For any inquiries or update requests, please contact the team at [Contact Us](https://zetaglobal.com/about/contact-us/).
+>The destination connector and documentation page are created and maintained by the *Zeta Global* team. For any inquiries or update requests, contact the team at [Contact Us](https://zetaglobal.com/about/contact-us/).
 
 ## Use cases {#use-cases}
 
@@ -29,10 +29,10 @@ An advertiser aims to target users within specific audiences through the Zeta De
 
 ## Prerequisites {#prerequisites}
 
-### Zeta Marketing Platform prerequisites
+### Zeta Marketing Platform prerequisites {#zmp-prerequisites}
 
-* Before you set up a new connection to the Zeta Marketing Platform destination, you must create an empty customer list in your Zeta Marketing Platform account. You must choose one of these customer lists as the designated target to receive the Adobe Experience Platform audience that you plan to send. You can create an empty customer list in the ZMP by following the instructions [here](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList).
-* Although the Adobe Experience Platform permits the activation of multiple audiences to a particular ZMP destination instance, it is mandatory that each ZMP destination instance receives only one Experience Platform audience. To handle multiple audiences from the Experience Platform, create additional ZMP destination instances for each audience and select a different customer list from the dropdown. This approach ensures that the target ZMP audiences does not get overwritten. See [Fill in destination details](#destination-details) for more details.
+* Before you set up a new connection to the Zeta Marketing Platform destination, you must create an empty customer list in your Zeta Marketing Platform account. You must choose one of these customer lists as the designated target to receive the [!DNL Adobe Experience Platform] audience that you plan to send. You can create an empty customer list in the ZMP by following the instructions [here](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList).
+* Although the [!DNL Adobe Experience Platform] permits the activation of multiple audiences to a particular ZMP destination instance, it is mandatory that each ZMP destination instance receives only one Experience Platform audience. To handle multiple audiences from the Experience Platform, create additional ZMP destination instances for each audience and select a different customer list from the dropdown. This approach ensures that the target ZMP audiences does not get overwritten. See [Fill in destination details](#destination-details) for more details.
 * Use the following credentials to configure the destination:
     * Username: **api** 
     * Password: Your ZMP REST API Key. You can find your REST API Key by logging in to your ZMP account and navigating to **Settings** > **Integrations** > **Keys & Apps** section. See the [ZMP documentation](https://knowledgebase.zetaglobal.com/kb/integrations) for more details.
@@ -42,7 +42,8 @@ An advertiser aims to target users within specific audiences through the Zeta De
 [!DNL Zeta Marketing Platform] supports the activation of custom user IDs described in the table below. For more details, see [identities](/help/identity-service/features/namespaces.md).
 
 >[!IMPORTANT]
-> The Zeta Marketing Platform destination requires you to map a source identity namespace to the ZMP `uid` target identity. This helps the Zeta Marketing Platform uniquely differentiate each profile. 
+>
+> The Zeta Marketing Platform destination requires you to map a source identity namespace to the ZMP `uid` target identity. This helps the Zeta Marketing Platform uniquely differentiate each profile.
 
 |Target Identity|Description|Considerations|Notes|
 |---------|----------|----------|----------|
@@ -58,11 +59,12 @@ This section describes which type of audiences you can export to this destinatio
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
+>
 > As individual members are added or removed from the Experience Platform audience, updates will be sent to the ZMP to ensure that the destination customer list is synchronized accordingly.
 
 ## Export type and frequency {#export-type-frequency}
@@ -84,7 +86,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -92,7 +94,7 @@ Supported audiences by audience data type:
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -121,14 +123,14 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
-Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate audiences to streaming destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ### Map attributes and identities {#map}
 
@@ -136,7 +138,7 @@ Below is an example of correct identity mapping when exporting profiles to [!DNL
 
 Selecting source fields:
 
-* Select a source identity namespace (custom or standard, such as `Email`) that uniquely identifies a profile in Adobe Experience Platform and [!DNL Zeta Marketing Platform].
+* Select a source identity namespace (custom or standard, such as `Email`) that uniquely identifies a profile in [!DNL Adobe Experience Platform] and [!DNL Zeta Marketing Platform].
 * Select any XDM source profile attributes that need to be exported to and updated in the [!DNL Zeta Marketing Platform].
 
 Selecting target fields:
