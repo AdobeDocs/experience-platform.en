@@ -108,7 +108,7 @@ For more information, read the [XDM overview](../../xdm/home.md).
 
 ## Real-Time Customer Profile {#real-time-customer-profile}
 
-Real-Time Customer Profile gives you a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third-party data. Use Profile to consolidate your customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+Real-Time Customer Profile gives you a complete view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third-party data. Use Profile to consolidate your customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 
 **New or updated features**
 
