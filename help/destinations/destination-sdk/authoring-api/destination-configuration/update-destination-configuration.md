@@ -32,7 +32,7 @@ For a detailed description of the capabilities of a destination configuration, r
 
 ## Getting started with destination configuration API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Update a destination configuration {#update}
 
@@ -53,6 +53,8 @@ PUT /authoring/destinations/{INSTANCE_ID}
 | Parameter | Description |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | The ID of the destination configuration that you want to update. To obtain an existing destination configuration and its corresponding `{INSTANCE_ID}`, see [Retrieve a destination configuration](retrieve-destination-configuration.md).|
+
+{style="table-layout:auto"}
 
 +++Request
 
@@ -201,9 +203,9 @@ A successful response returns HTTP status 200 with the details of your updated d
 
 ## API error handling {#error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
-## Next steps
+## Next steps {#next-steps}
 
 After reading this document, you now know how to update a destination configuration through the Destination SDK `/authoring/destinations` API endpoint.
 

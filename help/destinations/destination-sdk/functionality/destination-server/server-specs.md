@@ -5,7 +5,7 @@ exl-id: 62202edb-a954-42ff-9772-863cea37a889
 ---
 # Server specs for destinations created with Destination SDK
 
-Destination server specs define the type of destination platform that will receive the data from Adobe Experience Platform, and the communication parameters between Experience Platform and your destination. For instance:
+Destination server specs define the type of destination platform that will receive the data from [!DNL Adobe Experience Platform], and the communication parameters between Experience Platform and your destination. For instance:
 
 * A [streaming](#streaming-example) destination server spec defines the HTTP server endpoint that will receive the HTTP messages from Experience Platform. To learn to configure how the HTTP calls to the endpoint are formatted, read the [templating specs](templating-specs.md) page.
 * An [Amazon S3](#s3-example) destination server spec defines the [!DNL S3] bucket name and path where Experience Platform will export the files.
@@ -13,7 +13,7 @@ Destination server specs define the type of destination platform that will recei
 
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the following destination configuration overview pages:
 
-* [Use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-server-template-configuratiom)
+* [Use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-server-template-configuration)
 * [Use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)
 
 You can configure the destination server specs via the `/authoring/destination-servers` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
@@ -40,7 +40,7 @@ When [creating](../../authoring-api/destination-server/create-destination-server
 
 ## Hard-coded versus templatized fields {#templatized-fields}
 
-When creating a destination server through Destination SDK, you can define configuration parameter values either by hard-coding them into the configuration, or by using templatized fields. Templatized fields allow you to read user-provided values from the Experience Platform UI.
+When creating a destination server through Destination SDK, you can define configuration parameter values either by hard-coding them into the configuration, or by using templatized fields. Templatized fields read user-provided values from the Experience Platform UI.
 
 Destination server parameters have two configurable fields. These options dictate whether you are using hard-coded or templatized values.
 
@@ -51,7 +51,7 @@ Destination server parameters have two configurable fields. These options dictat
 
 {style="table-layout:auto"}
 
-### When to use hard-coded versus templatized fields
+### When to use hard-coded versus templatized fields {#when-to-use-hard-coded-vs-templatized}
 
 Both hard-coded and templatized fields have their own uses in Destination SDK, depending on what type of integration you are creating.
 
@@ -59,7 +59,7 @@ Both hard-coded and templatized fields have their own uses in Destination SDK, d
 
 When users [connect to your destination](../../../ui/connect-destination.md) in the Experience Platform UI, you might want to handle the destination connection process without their input.
 
-To do this, you can hard-code the destination platform connection parameters in the server spec. When you use hard-coded parameter values in your destination server configuration, the connection between Adobe Experience Platform and your destination platform is handled without any input from the user.
+To do this, you can hard-code the destination platform connection parameters in the server spec. When you use hard-coded parameter values in your destination server configuration, the connection between [!DNL Adobe Experience Platform] and your destination platform is handled without any input from the user.
 
 In the example below, a partner creates a Data Landing Zone destination server with the `path.value` field being hardcoded.
 
@@ -124,7 +124,7 @@ As a result, when users go through the [destination connection tutorial](../../.
 
 ## Real-time (streaming) destination server {#streaming-example}
 
-This destination server type allows you export data from Adobe Experience Platform to your destination via HTTP requests. The server configuration contains information about the server receiving the messages (the server on your side).
+This destination server type allows you export data from [!DNL Adobe Experience Platform] to your destination via HTTP requests. The server configuration contains information about the server receiving the messages (the server on your side).
 
 This process delivers user data as a series of HTTP messages to your destination platform. The parameters below form the HTTP server specs template.
 
@@ -154,7 +154,7 @@ The sample below shows an example of a destination server configuration for a re
 
 ## [!DNL Amazon S3] destination server {#s3-example}
 
-This destination server allows you to export files containing Adobe Experience Platform data to your Amazon S3 storage.
+Use this destination server to export files containing [!DNL Adobe Experience Platform] data to your Amazon S3 storage.
 
 The sample below shows an example of a destination server configuration for an Amazon S3 destination.
 
@@ -188,7 +188,7 @@ The sample below shows an example of a destination server configuration for an A
 
 ## [!DNL SFTP] destination server {#sftp-example}
 
-This destination server allows you to export files containing Adobe Experience Platform data to your [!DNL SFTP] storage server.
+Use this destination server to export files containing [!DNL Adobe Experience Platform] data to your [!DNL SFTP] storage server.
 
 The sample below shows an example of a destination server configuration for an SFTP destination.
 
@@ -226,7 +226,7 @@ The sample below shows an example of a destination server configuration for an S
 
 ## [!DNL Azure Data Lake Storage] ([!DNL ADLS]) destination server {#adls-example}
 
-This destination server allows you to export files containing Adobe Experience Platform data to your [!DNL Azure Data Lake Storage] account.
+Use this destination server to export files containing [!DNL Adobe Experience Platform] data to your [!DNL Azure Data Lake Storage] account.
 
 The sample below shows an example of a destination server configuration for an [!DNL Azure Data Lake Storage] destination.
 
@@ -254,7 +254,7 @@ The sample below shows an example of a destination server configuration for an [
 
 ## [!DNL Azure Blob Storage] destination server {#blob-example}
 
-This destination server allows you to export files containing Adobe Experience Platform data to your [!DNL Azure Blob Storage] container.
+Use this destination server to export files containing [!DNL Adobe Experience Platform] data to your [!DNL Azure Blob Storage] container.
 
 The sample below shows an example of a destination server configuration for an [!DNL Azure Blob Storage] destination.
 
@@ -288,7 +288,7 @@ The sample below shows an example of a destination server configuration for an [
 
 ## [!DNL Data Landing Zone] ([!DNL DLZ]) destination server {#dlz-example}
 
-This destination server allows you to export files containing Experience Platform data to a [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md) storage.
+Use this destination server to export files containing Experience Platform data to a [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md) storage.
 
 The sample below shows an example of a destination server configuration for a [!DNL Data Landing Zone] ([!DNL DLZ]) destination.
 
@@ -318,7 +318,7 @@ The sample below shows an example of a destination server configuration for a [!
 
 ## [!DNL Google Cloud Storage] destination server {#gcs-example}
 
-This destination server allows you to export files containing Experience Platform data to your [!DNL Google Cloud Storage] account.
+Use this destination server to export files containing Experience Platform data to your [!DNL Google Cloud Storage] account.
 
 The sample below shows an example of a destination server configuration for a [!DNL Google Cloud Storage] destination.
 

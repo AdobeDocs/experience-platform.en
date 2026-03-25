@@ -6,13 +6,13 @@ exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
 ---
 # Destination types and categories
 
-Read this page to understand the different types and categories of Adobe Experience Platform destinations.
+Read this page to understand the different types and categories of [!DNL Adobe Experience Platform] destinations.
 
 ## Destination types {#destination-types}
 
-In Adobe Experience Platform, we distinguish between different destination types - connections, dataset exports, and extensions. There are several types of connection destinations, allowing you to export data to API-based destinations, social destinations, CRM platforms, and many more.
+In [!DNL Adobe Experience Platform], we distinguish between different destination types - connections, dataset exports, and extensions. There are several types of connection destinations, allowing you to export data to API-based destinations, social destinations, CRM platforms, and many more.
 
-Finally, connections can also be distinguished between public destinations available across all organizations in the destinations catalog, and private destinations which Real-Time CDP Ultimate customers can create to satisfy their specific export use cases.
+Finally, connections can also be distinguished between public destinations available across all organizations in the destinations catalog, and private destinations which [!DNL Real-Time CDP] Ultimate customers can create to satisfy their specific export use cases.
 
 >[!BEGINSHADEBOX]
 
@@ -22,7 +22,7 @@ Finally, connections can also be distinguished between public destinations avail
 
 ## Connections {#connections}
 
-**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]**, and **[!DNL Edge Personalization]** destinations in Adobe Experience Platform capture event data, combine it with other data sources to form the [Real-Time Customer Profile](../profile/home.md), apply segmentation, and export audiences and qualified profiles to destinations. 
+**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]**, and **[!DNL Edge Personalization]** destinations in [!DNL Adobe Experience Platform] capture event data, combine it with other data sources to form the [Real-Time Customer Profile](../profile/home.md), apply segmentation, and export audiences and qualified profiles to destinations. 
 
 ## Profile export destinations {#profile-export}
 
@@ -37,7 +37,7 @@ Profile export destinations receive raw data, often with email address as the pr
 >
 >Advanced enterprise destinations, or streaming profile export destinations, are available to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers only.
 
-Use the advanced enterprise destination data connectors to deliver Adobe Real-Time Customer Data Platform profiles in near real-time to internal systems or to other third-party systems for data synchronization, analysis, and further profile enrichment use cases.
+Use the advanced enterprise destination data connectors to deliver Adobe [!DNL Real-Time Customer Data Platform] profiles in near real-time to internal systems or to other third-party systems for data synchronization, analysis, and further profile enrichment use cases.
 
 These destinations receive audience and profile data as Experience Platform data streams.
 
@@ -112,7 +112,7 @@ As a marketer, you could use a combination of connections and extensions to addr
 
 Connections are useful when it's necessary to leverage a complete centralized customer profile or a customer audience for activation. For example, use connections if you are joining behavioral data from an analytics system with uploaded CRM data to qualify a user for a given audience before delivering a personalized message to that user.
 
-Extensions are helpful when event data is used to trigger an action, or to conduct segmentation in an external environment. For example, if behavioral data needs to be forwarded to an external system without being joined to other data sources on file for a given user.
+Extensions are helpful when event data triggers an action or conducts segmentation in an external environment. For example, if behavioral data needs to be forwarded to an external system without being joined to other data sources on file for a given user.
 
 ## Destination categories {#categories}
 

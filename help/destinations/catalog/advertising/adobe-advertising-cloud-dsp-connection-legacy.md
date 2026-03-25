@@ -3,15 +3,15 @@ title: Legacy Adobe Advertising Cloud DSP connection
 description: Adobe Advertising Cloud DSP is an integrated destination for Adobe Real-Time Customer Data Platform, allowing you to share authenticated first-party audiences with approved advertisers and users for campaign activation.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
 ---
-# Legacy Adobe Advertising Cloud DSP connection
+# Legacy [!DNL Adobe Advertising Cloud] DSP connection
 
 >[!NOTE]
 >
->This connection was formerly called the Adobe Advertising DSP connection. The new [Adobe Advertising DSP connection](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md) contains the same functionality as the legacy connection and support for additional identity types. The best practice is to use the new Adobe Advertising DSP connection.
+>This connection was formerly called the Adobe Advertising DSP connection. The new [Adobe Advertising DSP connection](/help/destinations/catalog/advertising/adobe-advertising-dsp-connection.md) contains the same functionality as the legacy connection and support for additional identity types. The best practice is to use the new Adobe Advertising DSP connection.
 
 ## Overview {#overview}
 
-The Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) destination allows you to share authenticated first-party audiences with approved advertisers and users for campaign activation with DSP. To learn more about the Real-Time CDP integration with DSP, see [About Activating Authenticated Audiences from Audience Sources](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
+The [!DNL Adobe Advertising Cloud] [!DNL Demand-Side Platform] (DSP) destination shares authenticated first-party audiences with approved advertisers and users for campaign activation with DSP. To learn more about the [!DNL Real-Time CDP] integration with DSP, see [About Activating Authenticated Audiences from Audience Sources](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
 
 >[!IMPORTANT]
 >
@@ -19,13 +19,13 @@ The Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) destination allows
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Advertising Cloud DSP destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the Advertising Cloud DSP destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
-### Brand advertising use case
+### Brand advertising use case {#brand-advertising}
 
-An online retailer wants to retarget its high value customers through a display campaign without using cookies for targeting. The retailer shares an audience consisting of the hashed email IDs of its high value customers from its Adobe Real-Time Customer Data Platform (Real-Time CDP) account to its DSP account. DSP then converts the hashed email IDs to authenticated [!DNL RampIDs] through a partnership between DSP and LiveRamp. The resulting [!DNL RampIDs] can be used in a display campaign to target the audience.
+An online retailer wants to retarget its high value customers through a display campaign without using cookies for targeting. The retailer shares an audience consisting of the hashed email IDs of its high value customers from its Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP]) account to its DSP account. DSP then converts the hashed email IDs to authenticated [!DNL RampIDs] through a partnership between DSP and LiveRamp. The resulting [!DNL RampIDs] can be used in a display campaign to target the audience.
 
-### Agency use case
+### Agency use case {#agency-use-case}
 
 A media agency with a DSP account is running a retargeting campaign on behalf of its customer, a top brand in the hospitality industry. The brand wants to retarget all of its guests in the last year with a new promotional offer. The brand hosts all guest information in [!DNL Real-Time CDP]. The brand can share an audience that consists of the hashed email IDs of its guests from its [!DNL Real-Time CDP] account to the media agency's DSP account to retarget the guests through a media campaign.
 
@@ -39,7 +39,7 @@ A media agency with a DSP account is running a retargeting campaign on behalf of
 
 ## Supported identities {#supported-identities}
 
-The Adobe Advertising Cloud DSP destination supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
+The [!DNL Adobe Advertising Cloud] DSP destination supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
@@ -61,7 +61,7 @@ Refer to the following table for information about the destination export type a
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions) for Experience Platform. Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to the destination, follow the instructions to [create a destination connection](/help/destinations/ui/connect-destination.md) using the Experience Platform user interface. In the destination configuration workflow, fill in the fields listed in the two sections below.
@@ -92,7 +92,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
