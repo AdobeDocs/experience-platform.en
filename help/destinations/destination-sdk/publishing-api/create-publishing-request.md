@@ -77,4 +77,4 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ## Next steps {#next-steps}
 
-After reading this document, you now know how to submit a publish request for your destination. The Adobe Experience Platform team will review your publish request and get back to you with five business days.
+After reading this document, you now know how to submit a publish request for your destination. The [!DNL Adobe Experience Platform] team will review your publish request and get back to you with five business days.

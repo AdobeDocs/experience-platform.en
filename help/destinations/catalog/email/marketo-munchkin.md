@@ -12,7 +12,7 @@ From lead management to account-based marketing, [!DNL Marketo Engagement Platfo
 
 [!DNL Marketo’s Munchkin] JavaScript allows for tracking of end-user page visits and clicks to your [!DNL Marketo] landing pages and external web pages.
 
-[!DNL Marketo Munchkin] is an email extension in Adobe Experience Platform. For more information about Marketo Munchkin, read [Lead Tracking](https://developers.marketo.com/javascript-api/lead-tracking/) in the Marketo documentation.
+[!DNL Marketo Munchkin] is an email extension in [!DNL Adobe Experience Platform]. For more information about Marketo Munchkin, read [Lead Tracking](https://developers.marketo.com/javascript-api/lead-tracking/) in the Marketo documentation.
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
@@ -22,7 +22,7 @@ This destination is a tag extension. For more information about how tag extensio
 
 This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Experience Platform.
 
-To use this extension, you need access to tags in Adobe Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+To use this extension, you need access to tags in [!DNL Adobe Experience Platform]. Tags are offered to [!DNL Adobe Experience Cloud] customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 

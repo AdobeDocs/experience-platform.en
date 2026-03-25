@@ -30,7 +30,7 @@ The instructions on this page show you how to use a text editor to work in your 
 
 ## Author the documentation page for your destination {#author-documentation}
 
-1. Your documentation page is based on the [self-service destination template](../docs-framework/self-service-template.md). Download the [destination template](../assets/docs-framework/yourdestination-template.zip). Unzip it and extract the file `yourdestination-template.md` to the directory mentioned in step 4 above.  Rename the file `YOURDESTINATION.md`, where YOURDESTINATION is the name of your destination in Adobe Experience Platform. For example, if your company is called Moviestar, you would name your file `moviestar.md`.
+1. Your documentation page is based on the [self-service destination template](../docs-framework/self-service-template.md). Download the [destination template](../assets/docs-framework/yourdestination-template.zip). Unzip it and extract the file `yourdestination-template.md` to the directory mentioned in step 4 above.  Rename the file `YOURDESTINATION.md`, where YOURDESTINATION is the name of your destination in [!DNL Adobe Experience Platform]. For example, if your company is called Moviestar, you would name your file `moviestar.md`.
 2. Open your new file in your [text editor of choice](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors). Adobe recommends that you use [Visual Studio Code](https://code.visualstudio.com/) and install the Adobe Markdown Authoring extension. To install the extension, open Visual Studio Code, select the **[!DNL Extensions]** tab on the left of the screen, and search for `adobe markdown authoring`. Select the extension and click **[!DNL Install]**.
    ![Install Adobe Markdown Authoring extension](../assets/docs-framework/install-adobe-markdown-extension.gif)
 3. Edit the template with relevant information for your destination. Follow the instructions in the template. 
@@ -41,7 +41,7 @@ The instructions on this page show you how to use a text editor to work in your 
 
 >[!TIP]
 >
->Note that there is nothing you can break here. By following the instructions in this section, you are simply suggesting a documentation update. Your suggested update will be approved or edited by the Adobe Experience Platform documentation team.
+>Note that there is nothing you can break here. By following the instructions in this section, you are simply suggesting a documentation update. Your suggested update will be approved or edited by the [!DNL Adobe Experience Platform] documentation team.
 
 1.  In GitHub Desktop, create a working branch for your updates and select **Publish branch** to publish the branch to GitHub.
    
@@ -55,11 +55,11 @@ The instructions on this page show you how to use a text editor to work in your 
 
    ![Push your commit](../assets/docs-framework/push-local-to-remote.png)
 
-1. In the GitHub web interface, open a pull request (PR) to merge your working branch into the master branch of the Adobe documentation repository. Make sure the branch you worked on is selected and select **Contribute > Open pull request**.
+1. In the GitHub web interface, open a pull request (PR) to merge your working branch into the main branch of the Adobe documentation repository. Make sure the branch you worked on is selected and select **Contribute > Open pull request**.
 
    ![Create pull request](../assets/docs-framework/ssd-create-pull-request-1.gif)
 
-1. Make sure that the base and compare branches are correct. Add a note to the PR, describing your update, and select **Create pull request**. This opens a PR to merge the working branch of your fork into the master branch of the Adobe repository.
+1. Make sure that the base and compare branches are correct. Add a note to the PR, describing your update, and select **Create pull request**. This opens a PR to merge the working branch of your fork into the main branch of the Adobe repository.
 
    >[!TIP]
    >

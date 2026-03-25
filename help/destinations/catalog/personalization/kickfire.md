@@ -8,9 +8,9 @@ exl-id: c2313474-05d5-4c06-8aa5-ed10e9e9226e
 
 ## Overview {#overview}
 
-[!DNL KickFire's] IP address intelligence & B2B firmographic data allows you to translate IP addresses to companies, identify anonymous web visitors, and integrate account data into your technology stack – all based on a company's IP address.
+[!DNL KickFire's] IP address intelligence & B2B firmographic data lets you translate IP addresses to companies, identify anonymous web visitors, and integrate account data into your technology stack – all based on a company's IP address.
 
-[!DNL KickFire] is a personalization extension in Adobe Experience Platform. For more information about the extension functionality, see [Kickfire website](https://www.kickfire.com/).
+[!DNL KickFire] is a personalization extension in [!DNL Adobe Experience Platform]. For more information about the extension functionality, see [Kickfire website](https://www.kickfire.com/).
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
@@ -20,7 +20,7 @@ This destination is a tag extension. For more information about how tag extensio
 
 This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Experience Platform.
 
-To use this extension, you need access to tags in Adobe Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+To use this extension, you need access to tags in [!DNL Adobe Experience Platform]. Tags are offered to [!DNL Adobe Experience Cloud] customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 
