@@ -61,7 +61,7 @@ The following streaming destinations support automatic audience removal when you
 * [(API) Oracle Eloqua](../catalog/email-marketing/oracle-eloqua-api.md)
 * [(Companies) LinkedIn Matched Audience](../catalog/social/linkedin-b2b.md)
 * [(Legacy) (V2) Marketo Engage](../catalog/adobe/marketo-engage.md)
-* [Adobe Advertising Cloud DSP](../catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP](../catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Bombora Account Audiences](../catalog/advertising/bombora.md)
 * [Criteo](../catalog/advertising/criteo.md)
 * [Experience Cloud Audiences](../catalog/adobe/experience-cloud-audiences.md)
