@@ -10,6 +10,32 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.32.0 - March 23, 2026
+
+- Shared core utilities are now published as a standalone npm package ([@adobe/alloy-core](https://www.npmjs.com/package/@adobe/alloy-core)) for use by extensions and integrations.
+- Now includes the IANA time zone in the XDM field `xdm.placeContext.ianaTimezone` when `placeContext` is included in the [`context`](/help/collection/js/commands/configure/context.md) configuration variable.
+- Brand concierge: Fixed a session ID issue when [`stickyConversationSession`](/help/collection/js/commands/configure/conversation.md) is disabled.
+
+## Version 2.31.1 - February 11, 2026
+
+- Fixed an issue where the Web SDK would crash when there are multiple advertising-related `s_kwcid` or `ef_id` parameters in the URL.
+- Fixed an issue where Advertising data was sent and cookies were created before consent was given.
+- Fixed an issue in Safari where Brand Concierge streams were not parsed correctly.
+
+## Version 2.31.0 - February 9, 2026
+
+**New features**
+
+- Added the availability of `"oneTimeAnalyticsReferrer"` to the [`context`](commands/configure/context.md) array of strings.
+- Added the Brand Concierge component.
+- Added `meta.queueTimeMillis` to network request to record time between event creation and time sent.
+- Ability to persist the identity map so it can be populated with subsequent calls.
+
+**Fixes and improvements**
+
+- The `aria-label` and `name` attributes are now considered in [automatic link collection](commands/configure/clickcollectionenabled.md).
+- Fixed an issue where custom code actions were only running once.
+
 ## Version 2.30.0 - September 24, 2025
 
 **New features**
@@ -265,7 +291,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **New features**
 
 - You can now deliver personalized experiences more accurately, by sharing visitor IDs between mobile apps and mobile web content, and across domains. See the [dedicated documentation](../use-cases/identity/id-sharing.md) to learn more.
-- You can now render or execute an array of propositions from [!DNL Adobe Target] into single-page applications, without incrementing the analytics metrics. This reduces reporting errors and increases analytics accuracy. See the [dedicated documentation](../use-cases/personalization/rendering-personalization-content.md) to learn more.
+- You can now render or execute an array of propositions from [!DNL Adobe Target] into single-page applications, without incrementing the analytics metrics. This reduces reporting errors and increases analytics accuracy.
 - Added additional information to the `getLibraryInfo` command including available commands and the final configuration for the instance.
 
 **Fixes and improvements**

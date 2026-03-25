@@ -1,6 +1,7 @@
 ---
 title: cookie
 description: Manually write, edit, or delete cookies for the tag property.
+exl-id: d9de504b-de5d-4b82-b72c-327cdf386cd8
 ---
 # `cookie`
 

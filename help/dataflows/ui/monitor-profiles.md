@@ -59,8 +59,6 @@ The following metrics are available for this dashboard view:
 
 You can select the filter icon ![Filter icon](/help/images/icons/filter.png) beside the source name to see Profile processing information for that selected source's dataflows.
 
-![The filter icon is highlighted. Selecting this icon allows you to view the selected source's dataflows.](../assets/ui/monitor-profiles/sources-filter.png)
-
 Alternatively, you can select **[!UICONTROL Dataflows]** on the toggle to see Profile processing details for your organization's dataflows for the last 24 hours.
 
 ![The Profiles dashboard. Information about the number of the Profile records received per dataflow is displayed.](../assets/ui/monitor-profiles/dataflows.png)
@@ -72,6 +70,7 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Dataflow]** | The name of the dataflow. |
 | **[!UICONTROL Dataset]** | The name of the dataset that the dataflow is inserting to. |
 | **[!UICONTROL Source name]** | The name of the source that the dataflow belongs to. |
+| **[!UICONTROL Data type]** | The type of data that is received from the dataset. |
 | **[!UICONTROL Records received**] |  The number of records received from data lake. |
 | **[!UICONTROL Records failed]** | The number of records that were ingested, but not into [!DNL Profile] due to errors. |
 | **[!UICONTROL Profile fragments created]** | The number of net new [!DNL Profile] fragments added. |
@@ -82,7 +81,31 @@ The following metrics are available for this dashboard view:
 
 Select the filter icon ![filter](/help/images/icons/filter.png) beside the dataflow run start time to see more information on your [!DNL Profile] dataflow run.
 
-![The filter icon is highlighted. Selecting this icon allows you to view details about the selected dataflow.](../assets/ui/monitor-profiles/dataflows-filter.png)
+A dashboard displaying all the dataflow runs appears. This dashboard contains metrics about the dataflow runs as well as graphs that show the success rate, profile fragments created, and profile fragments updated.
+
+![The dataflow runs dashboard. Information about the dataflow runs is displayed.](../assets/ui/monitor-profiles/dataflow-run.png)
+
+The following metrics are available for this dashboard view:
+
+>[!NOTE]
+>
+>When the dataflow run is in the **[!UICONTROL Processing]** state, you can see information about the readiness by seeing the checkpoint statuses in the ingestion process.
+>
+>![The profile ingestion readiness bubble is displayed.](../assets/ui/monitor-profiles/profile-ingestion-readiness.png){zoomable="yes" width="300"}
+
+| Metric | Description | 
+| ------ | ----------- |
+| **[!UICONTROL Dataflow run start]** | The time the dataflow run started in UTC. |
+| **[!UICONTROL Data type]** | The type of data received by the dataflow. |
+| **[!UICONTROL Records received]** | The number of records received from data lake. |
+| **[!UICONTROL Records failed]** | The number of records that were ingested, but not into [!DNL Profile] due to errors. |
+| **[!UICONTROL Profile fragments created]** | The number of net new [!DNL Profile] fragments added. |
+| **[!UICONTROL Profile fragments updated]** | The number of existing [!DNL Profile] fragments updated. |
+| **[!UICONTROL Total profile fragments]** | The total number of records written into [!DNL Profile], including all existing [!DNL Profile] fragments updated and new [!DNL Profile] fragments created. |
+| **[!UICONTROL Processing time]** | The amount of time it took for the dataflow run to process. |
+| **[!UICONTROL Status]** | The status of the dataflow run. Possible values include [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued], and [!UICONTROL Processing]. |
+| **[!UICONTROL Ready for customer segmentation]** | A status showing if the ingested records are ready to be used in customer segmentation. Possible values include [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued], and [!UICONTROL Processing]. Even if the **Status** of the dataflow is processing, if the value of this field is Yes, you can use the profiles in customer segmentation. |
+| **[!UICONTROL Ready for lookup]** | A status showing if the ingested records are ready to used in Adobe Journey Optimizer lookup.  Possible values include [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued], and [!UICONTROL Processing]. Even if the **Status** of the dataflow is processing, if the value of this field is Yes, you can use the profiles in Journey Optimizer lookup. |
 
 The [!UICONTROL Dataflow run details] page displays more information on your [!DNL Profile] dataflow run, including its organization ID and dataflow run ID. This page also displays the corresponding error code and error message provided by [!DNL Profile], should any errors occur in the ingestion process.
 

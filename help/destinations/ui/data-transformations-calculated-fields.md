@@ -25,7 +25,7 @@ To perform various transformations on data exported to cloud storage destination
 
 To use calculated fields for data transformations:
 
-1. [Connect](/help/destinations/ui/connect-destination.md) to a desired cloud storage destination. When connecting to the desired cloud destination, toggle the **[!UICONTROL Export arrays, maps, objects]** [option off](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
+1. [Connect](/help/destinations/ui/connect-destination.md) to a desired cloud storage destination. When connecting to the desired cloud destination, toggle the **[!UICONTROL Export arrays, maps, objects]** [option off](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
 2. Go through the [activation steps for cloud storage destinations](/help/destinations/ui/activate-batch-profile-destinations.md) and get to the [mapping](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) step. 
  
 ## How to work with calculated fields {#how-to-export-calculated-fields}
@@ -112,7 +112,7 @@ For example, you can combine the following XDM fields below as shown in the mapp
 
 In this case, your output file looks like below. Notice how the elements of the array are concatenated into a single string using the `_` character.
 
-```
+```csv
 First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
@@ -127,7 +127,7 @@ Continuing with the `organizations` array object from above, you can write a f
 
 In this case, your output file looks like below. Notice how the two elements of the array that meet the criterion are concatenated into a single string using the `_` character.
 
-```
+```csv
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
@@ -141,7 +141,7 @@ Continuing with the `organizations` array object from above, you can write a f
 
 In this case, your output file looks like below. Notice how the three elements of the array are transformed and concatenated into a single string using the `_` character.
 
-```
+```csv
 John,Doe,johndoe@acme.org,ACME INC_SUPERSTAR INC_ENERGY CORP
 ```
 
@@ -153,7 +153,7 @@ Use the `iif` function to export elements of an array under certain conditions. 
 
 In this case, your output file looks like below. In this case, the first element of the array is Marketing, so the person is a member of the marketing department. 
 
-```
+```csv
 `First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
 John,Doe, johndoe@acme.org, "isMarketing"
 ```
@@ -168,7 +168,7 @@ Continuing with the `organizations` array object from above, you can write a fun
 
 In this case, your output file looks like below. Notice how the three elements of the array are concatenated into a single string using the `_` character and 2023 is also appended at the end of the string.
 
-```
+```csv
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
@@ -196,7 +196,7 @@ For example, you can combine the following XDM fields below as shown in the mapp
 
 In this case, your output file looks like below. Notice how the first non-null `true` value in the array is exported in the file.
 
-```
+```csv
 First_Name,Last_Name,hasPromotion
 John,Doe,true
 ```
@@ -214,7 +214,7 @@ For example, you can combine the following XDM fields below as shown in the mapp
 
 In this case, your output file looks like below. Notice how the second column indicates the number of elements in the array, corresponding with the number of separate purchases made by the customer.
 
-```
+```csv
 `Personal_Email,Times_Purchased
 johndoe@acme.org,"5"
 ```
@@ -231,7 +231,7 @@ You can access an index of an array to export a single item from the array. For 
 
 In this case, your output file looks like below, exporting the first time that the customer has made a purchase:
 
-```
+```csv
 `Personal_Email,First_Purchase
 johndoe@acme.org,"1538097126"
 ```
@@ -244,7 +244,7 @@ Use the `first` and `last` functions to export the first or last element in an a
 
 In this case, your output file looks like below, exporting the first and the last time that the customer has made a purchase:
 
-```
+```csv
 `Personal_Email,First_Purchase, Last_Purchase
 johndoe@acme.org,"1538097126","1664327526"
 ```

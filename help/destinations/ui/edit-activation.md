@@ -7,7 +7,7 @@ exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 ---
 # Edit activation dataflows {#edit-activation-flows}
 
-In Adobe Experience Platform, you can configure various components of existing activation dataflows to destinations, such as:
+In [!DNL Adobe Experience Platform], you can configure various components of existing activation dataflows to destinations, such as:
 
 * [Enable or disable](#enable-disable-dataflows) activation dataflows
 * [Add additional audiences](#add-audiences) to activation dataflows
@@ -62,7 +62,7 @@ Select **[!UICONTROL Activate audiences]** in the right rail. This action takes 
 
 ![Experience Platform UI image showing the Activate audiences dataflow run option.](../assets/ui/edit-activation/activate-audiences.png)
 
-Select the **[!UICONTROL Scheduling]** step in the activation workflow to edit the activation schedule and export frequency for your dataflow. This step allows you to configure how often data is exported to the destination.
+Select the **[!UICONTROL Scheduling]** step in the activation workflow to edit the activation schedule and export frequency for your dataflow. This step lets you configure how often data is exported to the destination.
 
 In the **[!UICONTROL Scheduling]** step of the activation workflow, you can:
 
@@ -81,7 +81,7 @@ Select **[!UICONTROL Activate audiences]** in the right rail. This action takes 
 
 ![Experience Platform UI image showing the Activate audiences dataflow run option.](../assets/ui/edit-activation/activate-audiences.png)
 
-Select the **[!UICONTROL Mapping]** step in the activation workflow to edit the mapped attributes and identities for your activation dataflow. This allows you to adjust which profile attributes and identities should be exported to the destination.
+Select the **[!UICONTROL Mapping]** step in the activation workflow to edit the mapped attributes and identities for your activation dataflow. This lets you adjust which profile attributes and identities should be exported to the destination.
 
 In the **[!UICONTROL Mapping]** step of the activation workflow, you can:
 
@@ -105,11 +105,11 @@ Select **[!UICONTROL Export datasets]** in the right rail to select additional d
 
 ![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/export-datasets.png)
 
-## [!BADGE Beta]{type=Informative} Edit marketing actions {#edit-marketing-actions}
+## Edit marketing actions {#edit-marketing-actions}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->This feature is currently in **beta**. To request access to it, contact your Adobe representative.
+>To edit marketing actions you need the **[!UICONTROL Activate Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 You can add or remove marketing actions that you set up when initially connecting to the destination.
 

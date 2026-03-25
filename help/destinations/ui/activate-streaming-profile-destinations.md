@@ -9,7 +9,7 @@ exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
 # Activate audiences to streaming profile export destinations
 
 >[!IMPORTANT]
-> 
+>
 > * To activate data and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 > * To activate data without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 > 
@@ -17,7 +17,7 @@ exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
 
 ## Overview {#overview}
 
-This article explains the workflow required to activate audience data in Adobe Experience Platform to streaming profile-based destinations (also referred to as [enterprise destinations](/help/destinations/destination-types.md#advanced-enterprise-destinations)).
+This article explains the workflow required to activate audience data in [!DNL Adobe Experience Platform] to streaming profile-based destinations (also referred to as [enterprise destinations](/help/destinations/destination-types.md#advanced-enterprise-destinations)).
 
 This article applies to the following three destinations:
 
@@ -69,9 +69,15 @@ In the **[!UICONTROL Mapping]** step, select the profile attributes that you wan
 
     ![Image highlighting the how to select a source field in the mapping step.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
-1. In the **[!UICONTROL Select field]** page, select the XDM attributes that you want to send to the destination, then choose **[!UICONTROL Select]**.
+1. In the **[!UICONTROL Select source field]** page, select the XDM attributes that you want to send to the destination, then choose **[!UICONTROL Save]**.
 
-    ![Image showing a selection of XDM fields that you can select as source fields.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+    ![Image showing a selection of XDM fields that you can select as source fields.](../assets/ui/activate-streaming-profile-destinations/select-source-field-modal.png)
+
+    Use the **[!UICONTROL Show only fields with data]** toggle to only display schema fields populated with values. By default, only populated schema fields are shown.
+
+    Use the **[!UICONTROL Show display names for fields]** toggle to display the friendly names for fields, instead of the schema field names.
+
+    ![Select source field page showing the toggle for display names.](../assets/ui/activate-batch-profile-destinations/show-display-names.gif)
 
 1. To add more fields, repeat steps 1 to 3, then select **[!UICONTROL Next]**.
 

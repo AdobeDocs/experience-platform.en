@@ -5,6 +5,12 @@ exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
 ---
 # Enable change data capture for source connections in the API
 
+>[!AVAILABILITY]
+>
+>* Change data capture is supported for the following sources: [!DNL Amazon S3], [!DNL Data Landing Zone], [!DNL Marketo Engage], [!DNL Microsoft Dynamics], and [!DNL Salesforce].  
+>
+>* You can also enable change data capture for [!DNL Amazon S3] and [!DNL Data Landing Zone] sources when using Adobe Experience Platform on Amazon Web Services (AWS) in a VA6 data center. Note that Experience Platform on AWS is currently available to a limited audience. For more details about infrastructure support, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
+
 Use change data capture in Adobe Experience Platform sources to keep your source and destination systems synchronized in near real-time.
 
 Experience Platform currently supports **incremental data copy**, which periodically transfers newly created or updated records from the source system to the ingested datasets. This method relies on a **timestamp column** to track changes, but it does not detect deletions, which can lead to data inconsistencies over time.

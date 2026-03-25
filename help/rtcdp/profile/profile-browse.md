@@ -3,6 +3,7 @@ keywords: view profiles rtcdp;rtcdp profile view;rtcdp profiles
 title: Browse profiles in Real-Time Customer Data Platform
 description: Adobe Real-Time Customer Data Platform enables you to browse Real-Time Customer Profile data using the Adobe Experience Platform user interface.
 feature: Get Started, Profiles
+badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
 ---
 

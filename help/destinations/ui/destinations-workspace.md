@@ -6,7 +6,7 @@ exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 ---
 # Destinations workspace {#destinations-workspace}
 
-In Adobe Experience Platform, select **[!UICONTROL Destinations]** from the left navigation bar to access the [!UICONTROL Destinations] workspace.
+In [!DNL Adobe Experience Platform], select **[!UICONTROL Destinations]** from the left navigation bar to access the [!UICONTROL Destinations] workspace.
 
 The [!UICONTROL Destinations] workspace consists of five sections, [!UICONTROL Overview], [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts], and [!UICONTROL System View], described in the sections below.
 
@@ -62,7 +62,7 @@ For more information on destination categories and information on each destinati
 
 >[!NOTE]
 >
->Due to access label configurations, destination dataflows that a user does not have access to may appear in the UI in a greyed-out state. Read the documentation on [using access labels to manage user access to destination dataflows](../../access-control/abac/apply-access-labels-destinations.md#important-callouts-and-items-to-know) for more information.
+>Due to access label configurations, destination dataflows that a user does not have access to may appear in the UI in a grayed out state. Read the documentation on [using access labels to manage user access to destination dataflows](../../access-control/abac/apply-access-labels-destinations.md#important-callouts-and-items-to-know) for more information.
 
 The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection.
 
@@ -102,6 +102,8 @@ See the table below for all the information that is provided for each destinatio
 | [!UICONTROL Access labels] | Displays any access labels that were added to this destination dataflow. Read more about [applying access labels to destination dataflows](/help/access-control/abac/apply-access-labels-destinations.md).|
 | [!UICONTROL Tags] | Displays any tags that were added to this destination dataflow. Use tags to organize and categorize your dataflows for easier management.|
 
+{style="table-layout:auto"}
+
 Click on a destination row to bring up more information about the destination in the right rail, such as destination ID, description, the number of activated audiences, and more.
 
 ![Click destination row](../assets/ui/workspace/click-destination-row.png)
@@ -124,7 +126,7 @@ Use the filters in the left sidebar to narrow down your search.
 
 ![Destination filters in the Browse tab](../assets/ui/workspace/destination-filters.png)
 
-* **[!UICONTROL Destination platform]**: Filter dataflows by specific destination platforms (e.g., [!DNL Amazon S3], [!DNL Facebook Custom Audience], [!DNL LinkedIn Matched Audience], etc.). You can select multiple platforms simultaneously.
+* **[!UICONTROL Destination platform]**: Filter dataflows by specific destination platforms (for example, [!DNL Amazon S3], [!DNL Facebook Custom Audience], [!DNL LinkedIn Matched Audience], etc.). You can select multiple platforms simultaneously.
 * **[!UICONTROL Has any tag]**: Filter dataflows that have specific tags assigned to them. This helps you organize and find dataflows based on your custom tagging.
 * **[!UICONTROL Status]**: Filter dataflows by their operational status:
     * **[!UICONTROL Enabled]**: Shows only active dataflows
@@ -148,7 +150,7 @@ When you apply filters, they appear as tags below the search bar.
 There you can:
 
 * View all currently active filters
-* Remove individual filters by clicking the `X` icon on each filter tag
+* Remove individual filters by selecting the `X` icon on each filter tag
 * Clear all filters at once using the **[!UICONTROL Clear all]** option
 
 ### Manage destination tags {#manage-tags}
@@ -166,14 +168,14 @@ To remove a tag from a dataflow, select the ellipsis (`...`) in the **[!UICONTRO
 
 Ensure that your destination dataflows remain organized, easy to find, and manageable by following the tagging guidelines below.
 
-* **Use descriptive names**: Create tags that clearly indicate the purpose or category of the dataflow (e.g., "Marketing Campaigns", "Customer Retention", "Seasonal Promotions")
+* **Use descriptive names**: Create tags that clearly indicate the purpose or category of the dataflow (for example, "Marketing Campaigns", "Customer Retention", "Seasonal Promotions")
 * **Be consistent**: Use a consistent naming convention across your organization
 * **Keep it simple**: Avoid creating too many tags, as this can make filtering less effective
-* **Use hierarchical tags**: Consider using prefixes to group related tags (e.g., "Campaign-Q4", "Campaign-Q1")
+* **Use hierarchical tags**: Consider using prefixes to group related tags (for example, "Campaign-Q4", "Campaign-Q1")
 
 ## [!UICONTROL Accounts] {#accounts}
 
-The **[!UICONTROL Accounts]** tab shows you details about the connections that you have established with various destinations, and allows you to update or delete existing account details. See the table below for all the information you can get on each destination account.
+The **[!UICONTROL Accounts]** tab shows you details about the connections that you have established with various destinations, and lets you update or delete existing account details. See the table below for all the information you can get on each destination account.
 
 >[!TIP]
 >
@@ -191,7 +193,7 @@ The **[!UICONTROL Accounts]** tab shows you details about the connections that y
 |[!UICONTROL Username] | The username you selected in the [connect destination workflow](../catalog/email-marketing/overview.md#connect-destination).|
 |[!UICONTROL Connections] | Represents the number of unique successful destination dataflows connected with basic information created for a destination.|
 |[!UICONTROL Authorization date] | The date when the connection to this destination was authorized.|
-|[!UICONTROL Expiration date] | The date when the connection authorization to this destination will expire. <br> A warning icon ![Account expired warning icon.](/help/images/icons/alert-expiration.png) appears before the expiration date to alert you that the connection will expire and may require renewal. Dataflows to expired connections are stopped and you must reauthenticate to resume your activation workflows. <br>**Important**: This column is currently available only for the [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md), and [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md)  onnections. <br> ![](../assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"}|
+|[!UICONTROL Expiration date] | The date when the connection authorization to this destination will expire. <br> A warning icon ![Account expired warning icon.](/help/images/icons/alert-expiration.png) appears before the expiration date to alert you that the connection will expire and may require renewal. Dataflows to expired connections are stopped and you must reauthenticate to resume your activation workflows. <br>**Important**: This column is currently available only for the [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md), and [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md) connections. <br> ![Expired destination accounts highlighted in the destinations workspace.](../assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"}|
 
 {style="table-layout:auto"}
 
@@ -223,15 +225,15 @@ When you apply filters, they appear as tags below the search bar.
 There you can:
 
 * View all currently active filters
-* Remove individual filters by clicking the `X` icon on each filter tag
+* Remove individual filters by selecting the `X` icon on each filter tag
 * Clear all filters at once using the **[!UICONTROL Clear all]** option
 
 ## [!UICONTROL System View] {#system-view}
 
-The **[!UICONTROL System View]** tab displays a graphic representation of the activation flows that you have set up in the Adobe Experience Platform.
+The **[!UICONTROL System View]** tab displays a graphic representation of the activation flows that you have set up in the [!DNL Adobe Experience Platform].
 
 ![Data-flows1](../assets/ui/workspace/system-view-dataflows.png)
 
-Select any of the destinations displayed on the page and click **[!UICONTROL View dataflows]** to see information on all the connections you have set up for each destination.
+Select any of the destinations displayed on the page and select **[!UICONTROL View dataflows]** to see information on all the connections you have set up for each destination.
 
 ![Data-flows2](../assets/ui/workspace/system-view-dataflows-2.png)
