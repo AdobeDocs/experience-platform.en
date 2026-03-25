@@ -7,7 +7,7 @@ exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
 
 ## Overview {#overview}
 
-Target your existing followers and customers in Twitter and create relevant re-marketing campaigns by activating your audiences built within Adobe Experience Platform.
+Target your existing followers and customers in Twitter and create relevant re-marketing campaigns by activating your audiences built within [!DNL Adobe Experience Platform].
 
 ## Prerequisites {#prerequisites}
 
@@ -22,8 +22,8 @@ Before you configure your [!DNL Twitter Custom Audiences] destination, make sure
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|device_id|IDFA/AdID/Android ID|Google Advertising ID (GAID) and Apple ID for Advertisers (IDFA) are supported in Adobe Experience Platform. Please map these namespaces and/or attributes from your source schema accordingly in the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the destination activation workflow.|
-|email|Email address(es) for the user|Please map your plain text email addresses and your SHA256-hashed email addresses to this field. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation. If you hash your customer email addresses before uploading them to Adobe Experience Platform, note these identities must be hashed using SHA256, without a salt.|
+|device_id|IDFA/AdID/Android ID|Google Advertising ID (GAID) and Apple ID for Advertisers (IDFA) are supported in [!DNL Adobe Experience Platform]. Please map these namespaces and/or attributes from your source schema accordingly in the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the destination activation workflow.|
+|email|Email address(es) for the user|Please map your plain text email addresses and your SHA256-hashed email addresses to this field. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation. If you hash your customer email addresses before uploading them to [!DNL Adobe Experience Platform], note these identities must be hashed using SHA256, without a salt.|
 
 {style="table-layout:auto"}
 
@@ -34,7 +34,7 @@ This section describes which types of audiences you can export to this destinati
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -47,7 +47,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -65,11 +65,11 @@ Refer to the table below for information about the destination export type and f
 
 ## Use Cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL Twitter Custom Audiences] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Twitter Custom Audiences] destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 ### Use Case #1 {#use-case-1}
 
-Target your existing followers and customers in Twitter and create relevant re-marketing campaigns by activating your audiences built within Adobe Experience Platform as [!DNL List Custom Audiences] in Twitter.
+Target your existing followers and customers in Twitter and create relevant re-marketing campaigns by activating your audiences built within [!DNL Adobe Experience Platform] as [!DNL List Custom Audiences] in Twitter.
 
 ## Connect to destination {#connect}
 

@@ -14,9 +14,9 @@ Activate profiles for your [!DNL LinkedIn] campaigns for audience targeting, per
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when to use the [!DNL LinkedIn Matched Audiences] destination, here is a use case that Adobe Experience Platform customers can solve by using this feature.
+To help you better understand how and when to use the [!DNL LinkedIn Matched Audiences] destination, here is a use case that [!DNL Adobe Experience Platform] customers can solve by using this feature.
 
-A software company organizes a conference and wants to keep in touch with participants, and show them personalized offers based on their conference attendance status. The company can ingest email addresses or mobile device IDs from their own [!DNL CRM] into Adobe Experience Platform. Then, they can build audiences from their own offline data, and send these audiences to the [!DNL LinkedIn] social platform, optimizing their advertising spending.
+A software company organizes a conference and wants to keep in touch with participants, and show them personalized offers based on their conference attendance status. The company can ingest email addresses or mobile device IDs from their own [!DNL CRM] into [!DNL Adobe Experience Platform]. Then, they can build audiences from their own offline data, and send these audiences to the [!DNL LinkedIn] social platform, optimizing their advertising spending.
 
 ## Supported identities {#supported-identities}
 
@@ -30,7 +30,7 @@ A software company organizes a conference and wants to keep in touch with partic
 |Target Identity|Description|Considerations|
 |---|---|---|
 |GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
-|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed emails, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
+|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by [!DNL Adobe Experience Platform]. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed emails, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
 
 {style="table-layout:auto"}
 
@@ -41,7 +41,7 @@ This section describes which types of audiences you can export to this destinati
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -54,7 +54,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -80,11 +80,11 @@ To learn how to edit your [!DNL LinkedIn Campaign Manager] user permissions, see
 
 [!DNL LinkedIn Matched Audiences] requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to [!DNL LinkedIn Matched Audiences] can be keyed off *hashed* identifiers, such as email addresses or mobile device IDs.
 
-Depending on the type of IDs that you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements.
+Depending on the type of IDs that you ingest into [!DNL Adobe Experience Platform], you must adhere to their corresponding requirements.
 
 ## Email hashing requirements {#email-hashing-requirements}
 
-You can hash email addresses before ingesting them into Adobe Experience Platform, or use email addresses in clear in Experience Platform, and have [!DNL Experience Platform] hash them on activation.
+You can hash email addresses before ingesting them into [!DNL Adobe Experience Platform], or use email addresses in clear in Experience Platform, and have [!DNL Experience Platform] hash them on activation.
 
 To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md) and the [streaming ingestion overview](/help/ingestion/streaming-ingestion/overview.md).
 
@@ -183,4 +183,4 @@ A successful activation means that a [!DNL LinkedIn] custom audience is created 
 
 >[!TIP]
 >
->The integration between Adobe Experience Platform and [!DNL LinkedIn Matched Audiences] supports historical audience backfills. All historical audience qualifications get sent to [!DNL LinkedIn] when you activate the audiences to the destination.
+>The integration between [!DNL Adobe Experience Platform] and [!DNL LinkedIn Matched Audiences] supports historical audience backfills. All historical audience qualifications get sent to [!DNL LinkedIn] when you activate the audiences to the destination.

@@ -8,9 +8,9 @@ exl-id: 6a2c661f-1ad0-4d96-b1bb-bf8c158c8521
 
 ## Overview {#overview}
 
-The [!DNL Facebook Pixel] is an analytics tool that allows you to measure the effectiveness of your advertising by understanding the actions people take on your website.
+The [!DNL Facebook Pixel] is an analytics tool that lets you measure the effectiveness of your advertising by understanding the actions people take on your website.
 
-[!DNL Facebook Pixel] is an advertising extension in Adobe Experience Platform. For more information about the extension functionality, see the [Facebook Pixel website](https://developers.facebook.com/docs/facebook-pixel/).
+[!DNL Facebook Pixel] is an advertising extension in [!DNL Adobe Experience Platform]. For more information about the extension functionality, see the [Facebook Pixel website](https://developers.facebook.com/docs/facebook-pixel/).
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
@@ -20,7 +20,7 @@ This destination is a tag extension. For more information about how tag extensio
 
 This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Experience Platform.
 
-To use this extension, you need access to tags in Adobe Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+To use this extension, you need access to tags in [!DNL Adobe Experience Platform]. Tags are offered to [!DNL Adobe Experience Cloud] customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 

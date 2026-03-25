@@ -8,9 +8,9 @@ exl-id: 5bb639f5-42b5-48ae-a3e9-7585595ab925
 
 ## Overview {#overview}
 
-[!DNL Beemray] helps you accelerate your product with situational context. Enabling you to gain insights, build new experiences, drive interactions, and engage in moments that really matter. Beemray automates contextual intelligence using machine learning. Beemray connects to the Adobe Experience Cloud and the rest of your tech partners. Everything takes place in real time. This extension installs [!DNL Beemray] SDK on your site.
+[!DNL Beemray] helps you accelerate your product with situational context. Enabling you to gain insights, build new experiences, drive interactions, and engage in moments that really matter. Beemray automates contextual intelligence using machine learning. Beemray connects to the [!DNL Adobe Experience Cloud] and the rest of your tech partners. Everything takes place in real time. This extension installs [!DNL Beemray] SDK on your site.
 
-Beemray is a personalization extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
+Beemray is a personalization extension in [!DNL Adobe Experience Platform]. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 
 This destination is a tag extension. For more information about how tags extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
@@ -20,7 +20,7 @@ This destination is a tag extension. For more information about how tags extensi
 
 This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Experience Platform.
 
-To use this extension, you need access to tags in Adobe Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+To use this extension, you need access to tags in [!DNL Adobe Experience Platform]. Tags are offered to [!DNL Adobe Experience Cloud] customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 

@@ -336,7 +336,7 @@ Set the `destinationServerId` parameter to the ID of the destination server that
 
 ## Create nested customer data fields {#nested-fields}
 
-You can create nested customer data fields for complex integration patterns. This allows you to chain a series of selections for the customer. 
+You can create nested customer data fields for complex integration patterns. This lets you chain a series of selections for the customer. 
 
 For example, you can add nested customer data fields to require customers to select an integration type with your destination, followed immediately by another selection. The second selection is a nested field within the integration type.
 
