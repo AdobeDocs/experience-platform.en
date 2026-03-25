@@ -9,7 +9,7 @@ exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 
 >[!AVAILABILITY]
 >
->* This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package, Adobe Journey Optimizer, or Customer Journey Analytics. Contact your Adobe representative for more information.
+>* This functionality is available to customers who have purchased the [!DNL Real-Time CDP] Prime and Ultimate package, [!DNL Adobe Journey Optimizer], or Customer Journey Analytics. Contact your Adobe representative for more information.
 
 >[!IMPORTANT]
 >
@@ -26,7 +26,7 @@ exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 
 -->
 
-This article explains the workflow required to use the [!DNL Flow Service API] to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage].
+This article explains the workflow required to use the [!DNL Flow Service API] to export [datasets](/help/catalog/datasets/overview.md) from [!DNL Adobe Experience Platform] to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage].
 
 >[!TIP]
 >
@@ -34,7 +34,7 @@ This article explains the workflow required to use the [!DNL Flow Service API] t
 
 ## Datasets available for exporting {#datasets-to-export}
 
-The datasets that you can export depend on the Experience Platform application (Real-Time CDP, Adobe Journey Optimizer), the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller). 
+The datasets that you can export depend on the Experience Platform application ([!DNL Real-Time CDP], [!DNL Adobe Journey Optimizer]), the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller). 
 
 Refer to the [table on the UI tutorial page](/help/destinations/ui/export-datasets.md#datasets-to-export) to understand which datasets you can export.
 
@@ -53,7 +53,7 @@ Currently, you can export datasets to the cloud storage destinations highlighted
 
 ## Prerequisites {#prerequisites}
 
-Note the following prerequisites in order to export datasets:
+Note the following prerequisites to export datasets:
 
 * To export datasets to cloud storage destinations, you must have successfully [connected to a destination](/help/destinations/ui/connect-destination.md). If you haven't done so already, go to the [destinations catalog](/help/destinations/catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 * Profile datasets need to be enabled for use in Real-Time Customer Profile. [Read more](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) about how to enable this option. 
@@ -62,12 +62,12 @@ Note the following prerequisites in order to export datasets:
 
 ![Overview - the steps to create a destination and export datasets](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
-This guide requires a working understanding of the following components of Adobe Experience Platform:
+This guide requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
-* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): All data that is successfully ingested into Adobe Experience Platform is persisted within the [!DNL Data Lake] as datasets. A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Datasets also contain metadata that describes various aspects of the data they store. 
+* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): All data that is successfully ingested into [!DNL Adobe Experience Platform] is persisted within the [!DNL Data Lake] as datasets. A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Datasets also contain metadata that describes various aspects of the data they store. 
   * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you must know in order to export datasets to cloud storage destinations in Experience Platform.
+The following sections provide additional information that you must know to export datasets to cloud storage destinations in Experience Platform.
 
 ### Required permissions {#permissions}
 
@@ -81,7 +81,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values-headers}
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+To make calls to [!DNL Experience Platform] APIs, you must first complete the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -822,7 +822,7 @@ Note the highlighted line with inline comments in the [!DNL connection spec] exa
 
 >[!ENDTABS]
 
-Using the properties specified in the authentication spec (i.e. `authSpec` from the response) you can create a base connection with the required credentials, specific to each destination type, as shown in the examples below:
+Using the properties specified in the authentication spec (that is `authSpec` from the response) you can create a base connection with the required credentials, specific to each destination type, as shown in the examples below:
 
 >[!BEGINTABS]
 
@@ -1988,7 +1988,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-The table below provides descriptions of all parameters in the `scheduleParams` section, which allows you to customize export times, frequency, location, and more for your dataset exports.
+The table below provides descriptions of all parameters in the `scheduleParams` section, which lets you customize export times, frequency, location, and more for your dataset exports.
 
 | Parameter | Description |
 |---------|----------|
@@ -2057,7 +2057,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-The table below provides descriptions of all parameters in the `scheduleParams` section, which allows you to customize export times, frequency, location, and more for your dataset exports.
+The table below provides descriptions of all parameters in the `scheduleParams` section, which lets you customize export times, frequency, location, and more for your dataset exports.
 
 | Parameter | Description |
 |---------|----------|
@@ -2127,7 +2127,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-The table below provides descriptions of all parameters in the `scheduleParams` section, which allows you to customize export times, frequency, location, and more for your dataset exports.
+The table below provides descriptions of all parameters in the `scheduleParams` section, which lets you customize export times, frequency, location, and more for your dataset exports.
 
 | Parameter | Description |
 |---------|----------|
@@ -2197,7 +2197,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-The table below provides descriptions of all parameters in the `scheduleParams` section, which allows you to customize export times, frequency, location, and more for your dataset exports.
+The table below provides descriptions of all parameters in the `scheduleParams` section, which lets you customize export times, frequency, location, and more for your dataset exports.
 
 | Parameter | Description |
 |---------|----------|
@@ -2266,7 +2266,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-The table below provides descriptions of all parameters in the `scheduleParams` section, which allows you to customize export times, frequency, location, and more for your dataset exports.
+The table below provides descriptions of all parameters in the `scheduleParams` section, which lets you customize export times, frequency, location, and more for your dataset exports.
 
 | Parameter | Description |
 |---------|----------|
@@ -2336,7 +2336,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-The table below provides descriptions of all parameters in the `scheduleParams` section, which allows you to customize export times, frequency, location, and more for your dataset exports.
+The table below provides descriptions of all parameters in the `scheduleParams` section, which lets you customize export times, frequency, location, and more for your dataset exports.
 
 | Parameter | Description |
 |---------|----------|

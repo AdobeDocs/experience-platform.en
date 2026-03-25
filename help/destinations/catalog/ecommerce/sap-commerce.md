@@ -14,7 +14,7 @@ Instructions to authenticate to your [!DNL SAP Commerce] instance are further be
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL SAP Commerce] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL SAP Commerce] destination, here is a sample use case that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 [!DNL SAP Commerce] customers store information about individuals or organizational entities who interact with your business. Your team uses the customers existing in [!DNL SAP Commerce] to build the Experience Platform audiences. After sending these audiences to [!DNL SAP Commerce], their information is updated and each customer is assigned a property with its value as the audience name that indicates which audience the customer belongs to.
 
@@ -30,15 +30,15 @@ Refer to Experience Platform documentation for [Audience Membership Details sche
 
 ### Prerequisites for the [!DNL SAP Commerce] destination {#prerequisites-destination}
 
-Note the following prerequisites in order to export data from Experience Platform to your [!DNL SAP Commerce] account:
+Note the following prerequisites to export data from Experience Platform to your [!DNL SAP Commerce] account:
 
 #### You must have an [!DNL SAP Subscription Billing] account {#prerequisites-account}
 
-In order to export data from Experience Platform to your [!DNL SAP Commerce] account, you need to have an [!DNL SAP Subscription Billing] account. If you do not have a valid billing account, contact your [!DNL SAP] account manager. Refer to the [[!DNL SAP] Platform Configuration](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) document for additional details.
+To export data from Experience Platform to your [!DNL SAP Commerce] account, you need to have an [!DNL SAP Subscription Billing] account. If you do not have a valid billing account, contact your [!DNL SAP] account manager. Refer to the [[!DNL SAP] Platform Configuration](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) document for additional details.
 
 #### Generate a service key {#prerequisites-service-key}
 
-* The [!DNL SAP Commerce] service key allows you to access the [!DNL SAP Subscription Billing] API through Experience Platform. Refer to the [!DNL SAP Commerce] [create a Service Key with Client ID and Client Secret](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) to create a service key. [!DNL SAP Commerce] requires the following:
+* The [!DNL SAP Commerce] service key lets you access the [!DNL SAP Subscription Billing] API through Experience Platform. Refer to the [!DNL SAP Commerce] [create a Service Key with Client ID and Client Secret](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) to create a service key. [!DNL SAP Commerce] requires the following:
   * Client ID
   * Client secret
   * URL. The URL pattern is as follows: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. This value will be used later to obtain values for `Region` and `Endpoint`.
@@ -75,7 +75,7 @@ In order to export data from Experience Platform to your [!DNL SAP Commerce] acc
 
 To update the Experience Platform audience status in [!DNL SAP Subscription Billing], you need a custom reference field for each audience selected in Experience Platform.
 
-To create the custom references, Login to your [!DNL SAP Subscription Billing] account and navigate to the **[Master Data and Configuration]** > **[Custom References]** page. Next, select **[!UICONTROL Create]** to add a new reference for each audience selected in Experience Platform. You will require these reference field names in the subsequent [Schedule audience export and example](#schedule-segment-export-example) step.
+To create the custom references, log in to your [!DNL SAP Subscription Billing] account and navigate to the **[Master Data and Configuration]** > **[Custom References]** page. Next, select **[!UICONTROL Create]** to add a new reference for each audience selected in Experience Platform. You will require these reference field names in the subsequent [Schedule audience export and example](#schedule-segment-export-example) step.
 
 An example of how to create a custom **[!UICONTROL Reference Type]** within [!DNL SAP Subscription Billing] is shown below:
 ![Image showing where to create a custom reference in SAP Subscription Billing.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
@@ -115,10 +115,24 @@ This destination also supports the activation of the audiences described in the 
 
 | Audience type | Supported | Description | 
 | ------------- | --------- | ----------- |
-| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -175,7 +189,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -183,9 +197,9 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Map attributes and identities {#map}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL SAP Commerce] destination, you must go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL SAP Commerce] destination fields, follow the steps below:
+To correctly send your audience data from [!DNL Adobe Experience Platform] to the [!DNL SAP Commerce] destination, you must go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL SAP Commerce] destination fields, follow the steps below:
 
-#### Map the `customerNumberSAP` identity
+#### Map the `customerNumberSAP` identity {#map-customer-number-sap}
 
 The `customerNumberSAP` identity is a mandatory mapping for this destination. Follow the steps below to map it:
 
@@ -203,7 +217,7 @@ The `customerNumberSAP` identity is a mandatory mapping for this destination. Fo
 An example with the identity mapping is shown below:
 ![Image from Experience Platform UI showing an example of customerNumber identity mapping.](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
 
-#### Mapping attributes
+#### Mapping attributes {#mapping-attributes}
 
 To add any other attributes you want to update between your XDM profile schema and your [!DNL SAP Subscription Billing] account, repeat the steps below:
 
@@ -218,7 +232,7 @@ To add any other attributes you want to update between your XDM profile schema a
 >
 > Target field names are case sensitive and should match the [!DNL SAP Subscription Billing] attribute names. The only exception for this is `country` where you should use `countryCode` instead. [!DNL SAP Subscription Billing] supports alpha-2 (ISO 3166) country codes. The value is case sensitive and must be between 0-3 characters, hence ensure you provide exactly as defined else you would encounter errors: `The country code {} does not exist` or `size must be between 0 and 3`.
 
-#### Map `mandatory` attributes for the selected customer type
+#### Map `mandatory` attributes for the selected customer type {#map-mandatory-attributes}
 
 Mandatory attribute mappings depend on the **[!UICONTROL Type of Customer]** that you had selected. To map the mandatory attributes, select from the below:
 
@@ -231,6 +245,8 @@ Mandatory attribute mappings depend on the **[!UICONTROL Type of Customer]** tha
 | `xdm: person.lastName` | `Attribute: lastName` | Yes |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | Yes |
 
+{style="table-layout:auto"}
+
 >[!TAB Corporate customer]
 
 | Source Field | Target Field | Mandatory |
@@ -238,9 +254,11 @@ Mandatory attribute mappings depend on the **[!UICONTROL Type of Customer]** tha
 | `xdm: b2b.companyName` | `Attribute: company` | Yes |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | Yes |
 
+{style="table-layout:auto"}
+
 >[!ENDTABS]
 
-#### Mapping additional attributes
+#### Mapping additional attributes {#mapping-additional-attributes}
 
 You can then add any additional mappings between your XDM profile schema and the [!DNL SAP Subscription Billing] [schema](https://api.sap.com/api/BusinessPartner_APIs/schema) attributes for a customer as shown below:
 
@@ -254,6 +272,8 @@ You can then add any additional mappings between your XDM profile schema and the
 | `xdm: workAddress.street1` | `Attribute: street` | No |
 | `xdm: workAddress.city` | `Attribute: city` | No |
 
+{style="table-layout:auto"}
+
 An example with both mandatory and optional attribute mappings where the customer is an individual is shown below:
 ![Image from Experience Platform UI showing an example with both mandatory and optional attribute mappings where the customer is an individual.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
 
@@ -263,6 +283,8 @@ An example with both mandatory and optional attribute mappings where the custome
 | --- | --- | --- |
 | `xdm: workAddress.street1` | `Attribute: street` | No |
 | `xdm: workAddress.city` | `Attribute: city` | No |
+
+{style="table-layout:auto"}
 
 An example with both mandatory and optional attribute mappings where the customer is a corporate is shown below:
 ![Image from Experience Platform UI showing an example with both mandatory and optional attribute mappings where the customer is a corporate.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
@@ -325,7 +347,7 @@ Additional useful information from the [!DNL SAP] documentation is below:
 
 * [Onboard SAP Subscription Billing](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/e4b8badf7d124026991e4ab6b57d2a33.html)
 
-### Changelog
+### Changelog {#changelog}
 
 This section captures the functionality and significant documentation updates made to this destination connector.
 

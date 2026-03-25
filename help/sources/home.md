@@ -32,6 +32,10 @@ For partner-authored and maintained connectors, this means that issues with the 
 
 ## Sources catalog
 
+>[!NOTE]
+>
+>Source ingestion dataflows that fail continuously for 30 days will automatically be disabled. Use [Monitoring Dashboard](/help/dataflows/ui/monitor-sources.md) to review your dataflow, identify why it failed (for example, credentials, permissions, or schema or mapping changes), apply the necessary updates, and re-enable the dataflow once resolved.
+
 Read the following sections for a list of all sources available in the sources catalog.
 
 ### Adobe applications {#adobe-applications}
@@ -55,7 +59,7 @@ Experience Platform allows data to be ingested from other Adobe applications, in
 
 ### Advanced enterprise sources {#advanced-enterprise-sources}
 
-The following sources are available to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) customers only.
+The following sources are only available to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) or customers who have licensed the standalone Advanced Enterprise Source Connectors SKU.
 
 | Source | Category | Ingestion type | Cloud |
 | --- | --- | --- | --- |
@@ -220,6 +224,7 @@ You can use the following sources to ingest data loyalty to Experience Platform.
 | Source | Ingestion type | Cloud |
 | --- | --- | --- |
 | [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Streaming | Azure |
+| [[!DNL Talon.One]](connectors/loyalty/talon-one.md) | Batch, Streaming | Azure |
 
 {style="table-layout:auto"}
 
@@ -234,11 +239,11 @@ You can use the following sources to ingest marketing automation data to Experie
 | [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) | Streaming | Azure |
 | [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) | Batch | Azure |
 | [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) | Batch | Azure |
-| [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | Batch | Azure |
+| [[!DNL Oracle Eloqua] (V2)](connectors/marketing-automation/eloqua.md) | Batch | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | Batch | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | Batch | Azure |
 | [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Streaming | Azure |
-| [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | Batch | Azure, AWS |
+| [[!DNL Salesforce Marketing Cloud] (V2)](connectors/marketing-automation/sfmc.md) | Batch | Azure |
 
 {style="table-layout:auto"}
 

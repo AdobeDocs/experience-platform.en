@@ -5,7 +5,7 @@ exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
 ---
 # Configuration options in Destination SDK
 
-The destinations service in Adobe Experience Platform uses configuration endpoints for several components that build up the destinations functionality.
+The destinations service in [!DNL Adobe Experience Platform] uses configuration endpoints for several components that build up the destinations functionality.
 
 Combined, these components allow Experience Platform to connect to destination platforms, send custom messages, export custom files, and activate profile data across the digital ecosystem.
 
@@ -32,7 +32,7 @@ For file-based destinations, this configuration also includes the supported file
 
 ## Destination configuration {#destination-configuration}
 
-This configuration endpoint contains basic and advanced information about your destination. For example, this is where you specify the identity types that your destination can support, the desired format of exported files (for file-based destinations), and various UI attributes for your destination card in the Adobe Experience Platform user interface.
+This configuration endpoint contains basic and advanced information about your destination. For example, this is where you specify the identity types that your destination can support, the desired format of exported files (for file-based destinations), and various UI attributes for your destination card in the [!DNL Adobe Experience Platform] user interface.
 
 See the documentation below for details about each of the destination configuration components. You can configure the functionalities described below via the [destinations endpoint](../authoring-api/destination-configuration/create-destination-configuration.md).
 
@@ -50,7 +50,7 @@ See the documentation below for details about each of the destination configurat
 
 ## Audience metadata configuration {#audience-metadata-configuration}
 
-This component allows you to configure how audiences are programmatically created, updated, or deleted in your destination. For file-based destinations, it allows you to set up a notification whenever files are successfully delivered to your destination. You can configure this functionality via the [audience-templates endpoint](../metadata-api/create-audience-template.md).
+This component lets you configure how audiences are programmatically created, updated, or deleted in your destination. For file-based destinations, it lets you set up a notification whenever files are successfully delivered to your destination. You can configure this functionality via the [audience-templates endpoint](../metadata-api/create-audience-template.md).
 
 ## Next steps {#next-steps}
 

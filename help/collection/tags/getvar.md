@@ -1,6 +1,7 @@
 ---
 title: getVar()
 description: Returns a value of a data element or a value set using setVar().
+exl-id: 8a496964-284a-4719-ac68-10368568db4f
 ---
 # `getVar()`
 

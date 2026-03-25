@@ -91,6 +91,8 @@ role: Developer
     - [Bombora Intent](connectors/data-partners/bombora.md)
     - [Demandbase Intent](connectors/data-partners/demandbase.md)
     - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
+  - Data sharing {#data-sharing}
+    - [Deltashare](connectors/data-sharing/deltashare.md)
   - eCommerce {#ecommerce}
     - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
     - [Shopify](connectors/ecommerce/shopify.md)
@@ -104,12 +106,14 @@ role: Developer
     - [Braze Currents](connectors/marketing-automation/braze.md)
     - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
     - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
-    - [HubSpot connector](connectors/marketing-automation/hubspot.md)
-    - [Mailchimp connector](connectors/marketing-automation/mailchimp.md)
-    - [Oracle Eloqua connector](connectors/marketing-automation/oracle-eloqua.md)
+    - [HubSpot](connectors/marketing-automation/hubspot.md)
+    - [Mailchimp](connectors/marketing-automation/mailchimp.md)
+    - [Oracle Eloqua](connectors/marketing-automation/oracle-eloqua.md)
+    - [Oracle Eloqua (V2)](connectors/marketing-automation/eloqua.md)
     - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
     - [PathFactory](connectors/marketing-automation/pathfactory.md)
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
+    - [Salesforce Marketing Cloud (V2)](connectors/marketing-automation/sfmc.md)
   - Payments {#payments}
     - [Square connector](connectors/payments/square.md)
     - [Stripe connector](connectors/payments/stripe.md)
@@ -302,6 +306,8 @@ role: Developer
       - [Bombora Intent](tutorials/ui/create/data-partners/bombora.md)
       - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
       - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
+    - Data sharing {#data-sharing}
+      - [Deltashare](tutorials/ui/create/data-sharing/deltashare.md)
     - eCommerce {#ecommerce}
       - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -320,11 +326,13 @@ role: Developer
       - [Mailchimp Campaigns](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
       - [Mailchimp Members](tutorials/ui/create/marketing-automation/mailchimp-members.md)
       - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
+      - [Oracle Eloqua (V2)](tutorials/ui/create/marketing-automation/eloqua.md)
       - [Oracle NetSuite Activities](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
       - [Oracle NetSuite Entities](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
       - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
       - [Relay Connector](tutorials/ui/create/marketing-automation/relay-connector.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+      - [Salesforce Marketing Cloud (V2)](tutorials/ui/create/marketing-automation/sfmc.md)
     - Payments {#payments}
       - [Square](tutorials/ui/create/payments/square.md)
       - [Stripe](tutorials/ui/create/payments/stripe.md)

@@ -9,13 +9,13 @@ exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
 
 >[!IMPORTANT]
 >
->* The functionality described on this page is available to customers who have purchased the Real-Time CDP Prime and Ultimate packages. Please contact your Adobe representative for more information. 
+>* The functionality described on this page is available to customers who have purchased the [!DNL Real-Time CDP] Prime and Ultimate packages. Contact your Adobe representative for more information. 
 
 ## Migration context {#migration-context}
 
 Starting [October 2022](/help/release-notes/2022/october-2022.md#new-or-updated-destinations), you can use the new file export capabilities to access enhanced customization functionality when exporting files out of Experience Platform: 
 
-* Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
+* Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names).
 * Ability to set custom file headers in your exported files via the [new mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * Ability to select the [file type](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) of the exported file.
 * Ability to [customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -40,7 +40,7 @@ Note that currently in the Experience Platform UI, you can see two side-by-side 
 
 ![Image of the two Amazon S3 destination cards in a side-by-side view.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
-While these destinations with enhanced functionality were offered initially as a beta, *Adobe is now moving all Real-Time CDP customers to the new cloud storage destinations*. For customers who were already using [!DNL Amazon S3], [!DNL Azure Blob], or SFTP, this means that existing dataflows will be migrated to the new cards. Read on for more information about the specific changes as part of the migration.
+While these destinations with enhanced functionality were offered initially as a beta, *Adobe is now moving all [!DNL Real-Time CDP] customers to the new cloud storage destinations*. For customers who were already using [!DNL Amazon S3], [!DNL Azure Blob], or SFTP, this means that existing dataflows will be migrated to the new cards. Read on for more information about the specific changes as part of the migration.
 
 ## Who this page applies to {#who-this-applies-to}
 
@@ -54,13 +54,6 @@ For example, if you were using a script to filter destination dataflows to the [
 
 This section includes the relevant API tutorial and reference documentation for the enhanced functionality to export data to cloud storage destinations.
 
-<!--
-
-TBD if we keep this link but will likely remove it
-
-[Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore)
-
---> 
 * [API tutorial to export audiences to cloud storage destinations](/help/destinations/api/activate-segments-file-based-destinations.md)
 * [Destinations Flow Service API reference documentation](https://developer.adobe.com/experience-platform-apis/references/destinations/) 
 
@@ -662,7 +655,7 @@ View the complete legacy and new base connection and target connection examples 
 
 ### Backwards-incompatible changes common to [!DNL Amazon S3], [!DNL Azure Blob], and SFTP destinations {#changes-all-destinations}
 
-The profile selector step in all three destinations is replaced by a mapping step which allows you to rename the column headers in your exported files, if desired. See the side-by-side image below with the old attribute selector step on the left and the new mapping step on the right.
+The profile selector step in all three destinations is replaced by a mapping step which lets you rename the column headers in your exported files, if desired. See the side-by-side image below with the old attribute selector step on the left and the new mapping step on the right.
 
 ![Migration guide overview image](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 

@@ -1,8 +1,6 @@
 ---
 title: Connect Bombora Intent To Experience Platform Using The UI
 description: Learn how to connect Bombora Intent to Experience Platform
-badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 76a4fed5-b2d5-46d5-9245-b52792a7d323
 ---
 # Connect [!DNL Bombora Intent] to Experience Platform using the UI

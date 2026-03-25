@@ -4,9 +4,43 @@ description: Adobe Experience Platform Web SDK Tag Extension
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 ---
 
-# Web SDK extension release notes
+# Web SDK tag extension release notes
 
-This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Experience Platform Web SDK release notes](/help/collection/js/release-notes.md).
+This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Adobe Experience Platform Web SDK release notes](/help/collection/js/release-notes.md).
+
+## Version 2.34.2 - March 23, 2026
+
+- Contains [version 2.32.0](/help/collection/js/release-notes.md) of the Adobe Experience Platform Web SDK.
+- Fixed an issue specific to copying a Tags property where Update Variable actions could retain references to data elements from the original property. To repair existing copied properties, open and re-save each affected Update Variable action and its rule. Avoid renaming the copied data elements until after re-saving.
+
+## Version 2.34.1 - February 11, 2026
+
+- Contains [version 2.31.1](/help/collection/js/release-notes.md) of the Adobe Experience Platform Web SDK.
+- Fixed an issue where [Adobe Advertising configuration settings](configure/advertising.md) were unable to be edited in [Send Event](actions/send-event.md) actions.
+- Added a fallback to `edge.adobedc.net` for the [Edge domain](configure/general.md) configuration setting when a `tenant-id` is not available.
+
+## Version 2.34.0 - February 9, 2026
+
+**New features**
+
+- Contains [version 2.31.0](/help/collection/js/release-notes.md) of the Adobe Experience Platform Web SDK.
+- Added [Base code support](/help/collection/js/install/base-code.md) for the tag extension.
+- Added **[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [context](configure/data-collection.md#context-settings) to the extension settings.
+- Added Brand Concierge component.
+- Added an option to allow using a self-hosted alloy instance with Tags.
+
+**Fixes and improvements**
+
+- Updated [default edge domain](configure/general.md#edge-domain) to include company ID as a subdomain.
+- Added a **[!UICONTROL No overrides]** option to [Datastream configuration overrides](configure/configuration-overrides.md).
+- Added refresh button to repopulate items on some input fields.
+- Unique instance names are now automatically generated every time an instance is created.
+- Fixed an error where `combinedValidator` was throwing an error when the value was `undefined` or `null`.
+- Fixed an error that appeared when an instance was deleted.
+- Fixed an issue where an error while fetching schemas caused the XDM Object data element to be unusable.
+- Fixed saving settings in the [Send media event](actions/send-media-event.md) action.
+- Fixed an issue where streaming media fields in the configuration view were not restored correctly.
+- Fixed erroneous auto population alerts in the XDM object editor for nested values.
 
 ## Version 2.33.0 - September 24, 2025
 
