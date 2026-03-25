@@ -17,15 +17,11 @@ description: Learn how to set up event forwarding using the guided setup.
 
 The guided setup feature helps you get set up with ease and efficiency. This tool automates multiple steps that are performed in Adobe tags and event forwarding, significantly reducing the setup time.
 
-This setup auto-installs both the [!DNL Meta Conversions API] and the [!DNL Meta Pixel] extensions. This hybrid implementation is recommended by [!DNL Meta] to collect and forward event conversions server-side. The guided setup feature is designed to help you get started with an event forwarding implementation and is not intended to deliver an end to end, fully functional implementation that accommodates all use cases.
-
-The following video provides an introduction to the guided setup feature.
-
->[!VIDEO](https://video.tv.adobe.com/v/3416939?quality=12&learn=on)
+This setup can auto-install extensions. This hybrid implementation is recommended by [!DNL Meta] to collect and forward event conversions server-side. The guided setup feature is designed to help you get started with an event forwarding implementation and is not intended to deliver an end to end, fully functional implementation that accommodates all use cases.
 
 ## Get started with guided setup {#guided-setup}
 
-To get started with the feature, select **[!UICONTROL Get Started]** in the right navigation in the **[UICONTROL Event Forwarding]** Data Collections UI.
+To get started with the feature, select **[!UICONTROL Get Started]** in the right navigation in the **[!UICONTROL Event Forwarding]** Data Collections UI.
 
 ![Event Forwarding home page showing the Get Started card in the right panel](../images/extensions/guided-setup/get-started.png)
 
@@ -57,7 +53,7 @@ Your **[!UICONTROL Meta Pixel ID]**, **[!UICONTROL Meta System User Access Token
 
 #### Create resources for your new tags property {#create-resources}
 
-In the Create Resources section, select **[!UICONTROL Pre-check resources]** to create all the necessary resources for your implementation.
+In the Create Resources section, select **[!UICONTROL Pre-check resources]** to check you organization and properties for collisions or existing necessary resources for your implementation.
 
 ![Create resources showing pre-check resources](../images/extensions/guided-setup/pre-check-resources.png)
 
@@ -69,9 +65,9 @@ Allow a few minutes for the required rules, data elements, extensions, libraries
 
 #### Validate your implementation {#validate-implementation}
 
-You can now use the link provided in the Validate Implementation section and embed it on your website. Once embedded, select **[!UICONTROL Start Validation]** to test your implementation. 
+The Validate Implementation section provides the embed link you can use on your website. **[!UICONTROL Start Validation]** runs the test in your current browser session on this guided setup page. If validation succeeds here, the same implementation should work when you deploy the embed link on your site.
 
-Your data will flow from your site to the Adobe Experience Platform Edge Network. It will then be server-side forwarded to [!DNL Meta]. Select **[!UICONTROL Send PageView Event]** to test your implementation. Finally, select **[!UICONTROL Finished Validation]** to complete the setup.
+Select **[!UICONTROL Send PageView Event]** to send a test event through the Adobe Experience Platform Edge Network. It is then server-side forwarded to [!DNL Meta]. Select **[!UICONTROL Finished Validation]** to complete the setup.
 
 >[!NOTE]
 >
@@ -85,7 +81,7 @@ In the Configure Properties section, select **[!UICONTROL Existing]**, then sele
 
 ![Configure existing property showing existing tag property selected](../images/extensions/guided-setup/configure-properties-existing.png)
 
-If the selected tags property has no event forwarding property or datastreams selected, you can automatically create these.
+If the selected tags property is not connected to an event forwarding property or if datastreams are missing, they will be automatically created.
 
 ![Configure existing property showing existing tag property selected](../images/extensions/guided-setup/configure-properties-existing-no-event-fw.png)
 
@@ -103,9 +99,9 @@ Since you are using an existing tags property, the setup process differs slightl
 
 Allow a few minutes for the required rules, data elements, extensions, libraries, SDKs, and so on to finish installing. The Create Resources section provides links to the properties and resources created.
 
-You can now use the link provided in the Validate Implementation section and embed it on your website. Once embedded, select **[!UICONTROL Start Validation]** to test your implementation. 
+The Validate Implementation section provides the embed link you can use on your website. **[!UICONTROL Start Validation]** runs the test in your current browser session on this guided setup page. If validation succeeds here, the same implementation should work when you deploy the embed link on your site.
 
-Your data will flow from your site to the Adobe Experience Platform Edge Network. It will then be server-side forwarded to [!DNL Meta]. Select **[!UICONTROL Send PageView Event]** to test your implementation. Finally, select **[!UICONTROL Finished Validation]** to complete the setup.
+Select **[!UICONTROL Send PageView Event]** to send a test event through the Adobe Experience Platform Edge Network. It is then server-side forwarded to [!DNL Meta]. Select **[!UICONTROL Finished Validation]** to complete the setup.
 
 >[!NOTE]
 >
