@@ -192,7 +192,7 @@ The dynamic table contains the following columns:
 * **MERGE_POLICY_ID**: The ID of the [merge policy](../../../profile/merge-policies/overview.md) that the activated audience belongs to
 * **AUDIENCE_ID**: The ID of the audience
 * **AUDIENCE_NAME**: The name of the audience as configured in Experience Platform
-* **AUDIENCE_NAMESPACE**: The namespace of the audience (for example, `ups`)
+* **AUDIENCE_ORIGIN**: The [origin](../../../segmentation/ui/audience-portal.md) of the audience (for example, `Segmentation Service` or `Custom upload`)
 * **AUDIENCE_STATUS**: The membership status of the profile in the audience (for example, `active` or `realized`)
 * **Mapping attributes**: Every mapping attribute selected during the activation workflow is represented as a column
 
@@ -200,7 +200,7 @@ The dynamic table contains the following columns:
 
 >[!NOTE]
 >
->The table structure described above applies to destination connections created after the March 2026 Experience Platform release. Existing connections continue to use the previous structure, where each audience is represented as a separate column (for example, `ups_<audience-id>` = `active`). The previous structure will be deprecated in 3 months.
+>The table structure described above applies to destination connections created after the March 2026 Experience Platform release. During the transition period, new connectors use both table structures, with the new structure prefixed by `V2` (for example, `V2_<table-name>`). Existing connections continue to use the previous structure, where each audience is represented as a separate column (for example, `ups_<audience-id>` = `active`). The previous structure will be deprecated at the end of June 2026.
 
 ## Data usage and governance {#data-usage-governance}
 
