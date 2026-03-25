@@ -5,7 +5,7 @@ exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
 ---
 # Configure datastream overrides
 
-Datastream overrides allow you to define additional configurations for your datastreams, which get passed to the Edge Network via the Web SDK or Mobile SDK.
+Use datastream overrides to define additional configurations for your datastreams, which get passed to the Edge Network via the Web SDK or Mobile SDK.
 
 This helps you trigger different datastream behaviors than the default ones, without creating a  datastream or modifying your existing settings.
 
@@ -45,7 +45,7 @@ Instead of sending data to a default datastream, the company can use datastream 
 
 ## Configure datastream overrides in the Datastreams UI {#configure-overrides}
 
-Datastream configuration overrides allow you to modify the following datastream configurations:
+Datastream configuration overrides let you modify the following datastream configurations:
 
 * Experience Platform event datasets
 * Adobe Target property tokens
@@ -68,7 +68,7 @@ You should now have the Adobe Target datastream overrides configured. Now you ca
 
 To configure datastream overrides for an Adobe Analytics datastream, you must first have an [Adobe Analytics](configure.md#analytics) datastream created. Follow the instructions to [configure a datastream](configure.md) with the [Adobe Analytics](configure.md#analytics) service.
 
-Once you have created the datastream, edit the [Adobe Analytics](configure.md#target) service that you have added and use the **[!UICONTROL Report Suite Overrides]** section to add the desired datastream overrides, as shown in the image below.
+Once you have created the datastream, edit the [Adobe Analytics](configure.md#analytics) service that you have added and use the **[!UICONTROL Report Suite Overrides]** section to add the desired datastream overrides, as shown in the image below.
 
 Select **[!UICONTROL Show Batch Mode]** to enable batch editing of the report suite overrides. You can copy and paste a list of report suite overrides, entering one report suite per line.
 
