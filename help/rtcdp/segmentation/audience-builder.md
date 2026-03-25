@@ -58,7 +58,7 @@ The **[!UICONTROL Top values]** section displays the most frequently occurring v
 
 Alternatively, you can see the distribution of your data with the minimum, mean (average), and maximum values displayed.
 
-![A popover that displays the statistics for an attribute, including the minimum, mean, and maximum values.](../assets/segmentation/audience-builder/statistics.png)
+![A popover that displays the statistics for an attribute, including the minimum, mean, and maximum values.](../assets/segmentation/audience-builder/statistics.png){width="300"}
 
 If an attribute is populated by less than 25% of accounts, the ![data notice icon](../../images/icons/data-notice.png) will be displayed instead. The same summary data will be displayed for the attribute, regardless.
 
@@ -72,7 +72,7 @@ If an attribute is populated by less than 25% of accounts, the ![data notice ico
 
 Additionally, the attribute has an **[!UICONTROL Ingestion Type]**. The ingestion type lets you know the origin of the data, and can be one of the following values: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]**, or **[!UICONTROL No Data Ingested]**. 
 
-![The ingestion type for the attribute is displayed.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png)
+![The ingestion type for the attribute is displayed.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png){width="300"}
 
 For a more detailed guide on attributes within Audience Builder, read the [Audience Builder user guide](../../segmentation/ui/segment-builder.md){target="_blank"}.
 
