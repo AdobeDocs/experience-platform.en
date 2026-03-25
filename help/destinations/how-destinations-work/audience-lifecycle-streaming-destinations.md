@@ -22,7 +22,7 @@ The following streaming destinations support automatic audience name updates whe
 
 * [Acxiom Audience Connection](../catalog/advertising/acxiom-audience-connection.md)
 * [Adobe Campaign Managed Cloud](../catalog/email-marketing/adobe-campaign-managed-services.md)
-* [Advertising Cloud DSP](../catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Advertising Cloud DSP](../catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Bombora](../catalog/advertising/bombora.md)
 * [Criteo](../catalog/advertising/criteo.md)
 * [Demandbase](../catalog/advertising/demandbase.md)
