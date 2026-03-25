@@ -61,7 +61,7 @@ However, Adobe strongly recommends using the following dedicated destination car
 
 * [Adobe Campaign](../email-marketing/adobe-campaign.md)
 * [Adobe Target](../personalization/adobe-target-connection.md)
-* [Advertising Cloud](../advertising/adobe-advertising-dsp-connection.md)
+* [Adobe Advertising DSP](../advertising/adobe-advertising-dsp-connection.md)
 * [Marketo](../adobe/marketo-engage.md)
 
 ## Prerequisites {#prerequisites}
