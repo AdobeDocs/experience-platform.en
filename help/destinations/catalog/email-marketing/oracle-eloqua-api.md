@@ -1,6 +1,6 @@
 ---
 title: (API) Oracle Eloqua connection
-description: The (API) Oracle Eloqua destination allows you to export your account data and activate it within Oracle Eloqua for your business needs.
+description: Use the (API) Oracle Eloqua destination to export your account data and activate it within Oracle Eloqua for your business needs.
 last-substantial-update: 2023-03-14
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
 ---
@@ -9,7 +9,7 @@ exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) enables marketers to plan and execute campaigns while delivering a personalized customer experience for their prospects. With integrated lead management and easy campaign creation, it helps marketers engage the right audience at the right time in their buyer's journey and elegantly scales to reach audiences across channels including email, display search, video, and mobile. Sales teams can close more deals at a faster rate, increasing marketing ROI through real-time insight.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Update a contact](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) operation from the [!DNL Oracle Eloqua] REST API, which lets you **update identities** within an audience into [!DNL Oracle Eloqua].
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Update a contact](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) operation from the [!DNL Oracle Eloqua] REST API to **update identities** within an audience into [!DNL Oracle Eloqua].
 
 [!DNL Oracle Eloqua] uses [Basic Authentication](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) to communicate with the [!DNL Oracle Eloqua] REST API. Instructions to authenticate to your [!DNL Oracle Eloqua] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
@@ -23,7 +23,7 @@ The marketing department of an online platform wants to broadcast an email based
 
 Before activating data to the [!DNL Oracle Eloqua] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) created in [!DNL Experience Platform].
 
-Refer to the Experience Platform documentation for [Audience Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on audience statuses.
+See the Experience Platform documentation for [Audience Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on audience statuses.
 
 ### [!DNL Oracle Eloqua] prerequisites {#prerequisites-destination}
 
@@ -227,7 +227,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Monitor the audience summary and ensure that the count of profiles corresponds to the count within the segment.
 ![Experience Platform UI screenshot example showing Segment.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
 
-1. Log in to the [!DNL Oracle Eloqua] website, then navigate to the **[!UICONTROL Contacts Overview]** page to check if the profiles from the audience have been added. To see the audience status, drill down into a **[!UICONTROL Contact Detail]** page and check if the contact field with the selected audience name as its prefix has been created.
+1. Go to the [!DNL Oracle Eloqua] website, then navigate to the **[!UICONTROL Contacts Overview]** page to check if the profiles from the audience have been added. To see the audience status, drill down into a **[!UICONTROL Contact Detail]** page and check if the contact field with the selected audience name as its prefix has been created.
 
 ![Oracle Eloqua UI screenshot showing the Contact Details page with custom contact field created with the audience name.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
 

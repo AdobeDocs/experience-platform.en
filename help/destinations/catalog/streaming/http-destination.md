@@ -20,6 +20,7 @@ To send profile data to HTTP endpoints, you must first [connect to the destinati
 ## Use cases {#use-cases}
 
 Use the HTTP API destination to export XDM profile data and audiences to generic HTTP endpoints. There, you can run your own analytics or perform any other operations you may need on profile data exported out of Experience Platform.
+
 HTTP endpoints can be either customers' own systems or third-party solutions.
 
 ## Supported audiences {#supported-audiences}
@@ -92,7 +93,7 @@ See the [public certificate endpoint documentation](../../../data-governance/mtl
 
 ## IP address allowlist {#ip-address-allowlist}
 
-To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the HTTP API destination. Refer to [IP address allowlist for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
+To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the HTTP API destination. See [IP address allowlist for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
 
 ## Supported authentication types {#supported-authentication-types}
 

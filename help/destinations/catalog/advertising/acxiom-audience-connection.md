@@ -143,7 +143,7 @@ You will need to provide the following information to your [!DNL Adobe] represen
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully activated an audience to the selected destination platform. Next, contact your destination platform representative to begin setting up your campaign.
+You have successfully activated an audience to the selected destination platform. Next, contact your destination platform representative to begin setting up your campaign.
 
 ## Data usage and governance {#data-usage-governance}
 

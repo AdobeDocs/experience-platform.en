@@ -38,12 +38,12 @@ The [!DNL Experience Platform] user interface provides several search and filter
 
 The destination cards contain primary and secondary control options. The primary controls include [!UICONTROL Set up], [!UICONTROL Activate], [!UICONTROL Activate audiences], or [!UICONTROL Export datasets]. The secondary controls allow for viewing options. These controls are described below:
 
-| Control | Description | 
+| Control | Description |
 |---------|----------|
-|[!UICONTROL Set up] | Allows you to create a connection to the destination.|
-|[!UICONTROL Activate] | Once you have established a connection to the destination, you can activate audiences or export datasets to this destination.|
-|[!UICONTROL Activate audiences] | Once you have established a connection to the destination, you can activate audiences to this destination.|
-|[!UICONTROL Export datasets] | Once you have established a connection to the destination, you can export datasets to this destination.|    
+|[!UICONTROL Set up] | Create a connection to the destination.|
+|[!UICONTROL Activate] | After you establish a connection to the destination, activate audiences or export datasets to this destination.|
+|[!UICONTROL Activate audiences] | After you establish a connection to the destination, activate audiences to this destination.|
+|[!UICONTROL Export datasets] | After you establish a connection to the destination, export datasets to this destination.|
 |[!UICONTROL View account] | View the accounts you have connected for a destination.|
 |[!UICONTROL View dataflows] | View the data activation flows that exist for a destination.|
 |[!UICONTROL View documentation] | Opens a link to the documentation page for that specific destination, for more information and to help you set it up.|
@@ -104,11 +104,11 @@ See the table below for all the information that is provided for each destinatio
 
 {style="table-layout:auto"}
 
-Click on a destination row to bring up more information about the destination in the right rail, such as destination ID, description, the number of activated audiences, and more.
+Select a destination row to view more information about the destination in the right rail, such as destination ID, description, the number of activated audiences, and more.
 
 ![Click destination row](../assets/ui/workspace/click-destination-row.png)
 
-Select the destination name to see information about the audiences activated to this destination. Click **[!UICONTROL Edit destination]** to [modify the destination settings](/help/destinations/ui/edit-destination.md) or **[!UICONTROL Activate audiences]** to add new audiences to the dataflow.
+Select the destination name to see information about the audiences activated to this destination. Select **[!UICONTROL Edit destination]** to [modify the destination settings](/help/destinations/ui/edit-destination.md) or **[!UICONTROL Activate audiences]** to add new audiences to the dataflow.
  
 ### Filter dataflows in the Browse tab {#filter-browse}
 
@@ -175,7 +175,7 @@ Ensure that your destination dataflows remain organized, easy to find, and manag
 
 ## [!UICONTROL Accounts] {#accounts}
 
-The **[!UICONTROL Accounts]** tab shows you details about the connections that you have established with various destinations, and lets you update or delete existing account details. See the table below for all the information you can get on each destination account.
+The **[!UICONTROL Accounts]** tab shows details about the connections that you have established with various destinations. You can update or delete existing account details from this tab. See the table below for all the information available for each destination account.
 
 >[!TIP]
 >

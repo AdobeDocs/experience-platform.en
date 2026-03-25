@@ -15,7 +15,7 @@ Use this destination to activate audiences from [!DNL Real-Time CDP] to Audience
 
 To send audiences to [!DNL Adobe Analytics], you need an Audience Manager license. For more details, see the [Audience Analytics overview](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=en).
 
-To send audiences to other Adobe solutions, use the direct connections from [!DNL Real-Time CDP] to [Adobe Target](../personalization/adobe-target-connection.md), [Adobe Advertising](../advertising/adobe-advertising-cloud-connection.md), [Adobe Campaign](../email-marketing/adobe-campaign.md) and [Marketo Engage](../adobe/marketo-engage.md).
+To send audiences to other Adobe solutions, use the direct connections from [!DNL Real-Time CDP] to [Adobe Target](../personalization/adobe-target-connection.md), [Adobe Advertising](../advertising/adobe-advertising-dsp-connection.md), [Adobe Campaign](../email-marketing/adobe-campaign.md) and [Marketo Engage](../adobe/marketo-engage.md).
 
 >[!IMPORTANT]
 >
@@ -39,7 +39,7 @@ In Audience Manager, you can use [!DNL Real-Time CDP] audiences for Data Managem
 
 ### Granular control of exported audiences {#segments-control}
 
-To select which audiences to export to Audience Manager and beyond, use the new self-service audience-sharing integration via the Experience Cloud Audiences destination.  This lets you determine which audiences you want to share with other Experience Cloud solutions and which audiences you want to keep in [!DNL Real-Time CDP] exclusively.
+To select which audiences to export to Audience Manager and beyond, use the new self-service audience-sharing integration via the Experience Cloud Audiences destination.  Use this to determine which audiences you want to share with other Experience Cloud solutions and which audiences you want to keep in [!DNL Real-Time CDP] exclusively.
 
 The legacy audience-sharing integration did not allow for a granular control of which audiences should be exported to Audience Manager and beyond.
 
@@ -61,7 +61,7 @@ However, Adobe strongly recommends using the following dedicated destination car
 
 * [Adobe Campaign](../email-marketing/adobe-campaign.md)
 * [Adobe Target](../personalization/adobe-target-connection.md)
-* [Advertising Cloud](../advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP](../advertising/adobe-advertising-dsp-connection.md)
 * [Marketo](../adobe/marketo-engage.md)
 
 ## Prerequisites {#prerequisites}

@@ -1,7 +1,7 @@
 ---
 keywords: email;Email;e-mail;email destinations;sendgrid;sendgrid destination
 title: SendGrid connection
-description: The SendGrid destination allows you to export your first-party data and activate it within SendGrid for your business needs.
+description: Use the SendGrid destination to export your first-party data and activate it within SendGrid for your business needs.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
 ---
 # [!DNL SendGrid] connection
@@ -10,7 +10,7 @@ exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
 
 [SendGrid](https://www.sendgrid.com) is a popular customer communication platform for transactional and marketing emails.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts), which lets you export your first-party email profiles and activate them within a new SendGrid audience for your business needs.
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts) to export your first-party email profiles and activate them within a new SendGrid audience for your business needs.
 
 SendGrid uses API bearer tokens as an authentication mechanism to communicate with the SendGrid API.
 
@@ -21,10 +21,10 @@ The following items are required before you start configuring the destination.
 1. You need to have a SendGrid account.
     * Go to the SendGrid [signup](https://signup.sendgrid.com/) page to register and create a SendGrid account, if you do not have one already.
 1. After logging in to the SendGrid portal, you also need to generate an API token.
-1. Navigate to the SendGrid website and access the **[!DNL Settings]** > **[!DNL API Keys]** page. Alternatively, refer to the [SendGrid documentation](https://app.sendgrid.com/settings/api_keys) to access the appropriate section in the SendGrid app.
+1. Navigate to the SendGrid website and access the **[!DNL Settings]** > **[!DNL API Keys]** page. Alternatively, see the [SendGrid documentation](https://app.sendgrid.com/settings/api_keys) to access the appropriate section in the SendGrid app.
 1. Finally, select the **[!DNL Create API Key]** button.
     * Refer to the [SendGrid documentation](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key), if you need guidance on what actions to perform. 
-    * If you would like to programmatically generate your API Key, refer to the [SendGrid documentation](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys).
+    * If you would like to programmatically generate your API Key, see the [SendGrid documentation](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys).
 
 ![SendGrid API Keys settings page showing the Create API Key button.](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 

@@ -157,4 +157,4 @@ Refer to the following [!DNL Algolia] documentation for more information:
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully created a dataflow to export audiences from Experience Platform to your [!DNL Algolia] application. For more information about the [!DNL Algolia] platform, see the [Algolia documentation](https://www.algolia.com/doc/).
+You have successfully created a dataflow to export audiences from Experience Platform to your [!DNL Algolia] application. For more information about the [!DNL Algolia] platform, see the [Algolia documentation](https://www.algolia.com/doc/).

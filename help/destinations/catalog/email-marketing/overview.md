@@ -2,7 +2,7 @@
 keywords: email;Email;e-mail;email destinations
 title: Email marketing destinations overview
 type: Tutorial
-description: Email Service Providers (ESPs) allow you to manage your email marketing activities, such as for sending promotional email campaigns. Learn which ESPs are supported as Experience Platform destinations.
+description: Email Service Providers (ESPs) enable you to manage your email marketing activities, such as for sending promotional email campaigns. Learn which ESPs are supported as Experience Platform destinations.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
 ---
 # Email marketing destinations overview {#email-marketing-destinations}
@@ -35,7 +35,7 @@ To send audiences to email marketing destinations for your campaigns, Experience
 
 ### Identity selection {#identity}
 
-Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). This is the field that your user identities are keyed off of. Most commonly, this field is the email address, but it can also be a loyalty program ID or a phone number. Refer to the table below for the most common unique identifiers and their XDM field in the schema.
+Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). This is the field that your user identities are keyed off of. Most commonly, this field is the email address, but it can also be a loyalty program ID or a phone number. See the table below for the most common unique identifiers and their XDM field in the schema.
 
 |Unique Identifier | XDM field in Unified Schema|
 |----------------- | ---------------------------|

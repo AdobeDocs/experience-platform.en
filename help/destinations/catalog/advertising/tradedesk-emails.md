@@ -33,7 +33,7 @@ This connector sends data to [!DNL The Trade Desk] for First-Party Data activati
 
 ## ID Matching Requirements {#id-matching-requirements}
 
-Depending on the type of IDs that you ingest into [!DNL Adobe Experience Platform], you must adhere to their corresponding requirements. Please read the [Identity Namespace overview](/help/identity-service/features/namespaces.md) for more information.  
+Depending on the type of IDs that you ingest into [!DNL Adobe Experience Platform], you must adhere to their corresponding requirements. Read the [Identity Namespace overview](/help/identity-service/features/namespaces.md) for more information.  
 
 ## Supported identities {#supported-identities}
 

@@ -542,20 +542,20 @@ To pass information such as audience IDs, access tokens, error messages, and mor
 
 |Macro | Description |
 |--- |--- |
-|`{{segment.alias}}` | Allows you to access the audience alias in Experience Platform. |
-|`{{segment.name}}` | Allows you to access the audience name in Experience Platform. |
-|`{{segment.id}}` | Allows you to access the audience ID in Experience Platform. |
-|`{{customerData.accountId}}` | Allows you to access the account Id field that you set up in the destination configuration. |
-|`{{oauth2ServiceAccessToken}}` | Allows you to dynamically generate an access token based on your OAuth 2 configuration. |
-|`{{authData.accessToken}}` | Allows you to pass the access token to your API endpoint. Use `{{authData.accessToken}}` if Experience Platform should use non-expiring tokens to connect to your destination, otherwise use `{{oauth2ServiceAccessToken}}` to generate an access token. |
+|`{{segment.alias}}` | Accesses the audience alias in Experience Platform. |
+|`{{segment.name}}` | Accesses the audience name in Experience Platform. |
+|`{{segment.id}}` | Accesses the audience ID in Experience Platform. |
+|`{{customerData.accountId}}` | Accesses the account Id field that you set up in the destination configuration. |
+|`{{oauth2ServiceAccessToken}}` | Dynamically generates an access token based on your OAuth 2 configuration. |
+|`{{authData.accessToken}}` | Passes the access token to your API endpoint. Use `{{authData.accessToken}}` if Experience Platform should use non-expiring tokens to connect to your destination, otherwise use `{{oauth2ServiceAccessToken}}` to generate an access token. |
 |`{{body.segments[0].segment.id}}` | Returns the unique identifier of the created audience, as the value of the key `externalAudienceId`. |
 |`{{error.message}}` | Returns an error message that will be surfaced to users in the Experience Platform UI. |
-|`{{{segmentEnrichmentAttributes}}}`| Allows you to access all enrichment attributes for a specific audience.  This macro is supported by the `create`, `update`, and `delete` events. Enrichment attributes are available only for [custom upload audiences](destination-configuration/schema-configuration.md#external-audiences). See the [batch audience activation guide](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) to see how enrichment attribute selection works. |
+|`{{{segmentEnrichmentAttributes}}}`| Accesses all enrichment attributes for a specific audience.  This macro is supported by the `create`, `update`, and `delete` events. Enrichment attributes are available only for [custom upload audiences](destination-configuration/schema-configuration.md#external-audiences). See the [batch audience activation guide](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) to see how enrichment attribute selection works. |
 |`{{destination.name}}`| Returns the name of your destination. |
 |`{{destination.sandboxName}}`| Returns the name of the Experience Platform sandbox where your destination is configured.|
 |`{{destination.id}}`| Returns the ID of your destination configuration. |
 |`{{destination.imsOrgId}}`| Returns the IMS Org ID where your destination is configured.|
-|`{{destination.enrichmentAttributes}}`| Allows you to access all enrichment attributes for all audiences mapped to a destination. This macro is supported by the `createDestination`, `updateDestination`, and `deleteDestination` events. Enrichment attributes are available only for [custom upload audiences](destination-configuration/schema-configuration.md#external-audiences). See the [batch audience activation guide](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) to see how enrichment attribute selection works. |
-|`{{destination.enrichmentAttributes.<namespace>.<segmentId>}}`|Allows you to access enrichment attributes for specific external audiences mapped to a destination. Enrichment attributes are available only for [custom upload audiences](destination-configuration/schema-configuration.md#external-audiences). See the [batch audience activation guide](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) to see how enrichment attribute selection works.|
+|`{{destination.enrichmentAttributes}}`| Accesses all enrichment attributes for all audiences mapped to a destination. This macro is supported by the `createDestination`, `updateDestination`, and `deleteDestination` events. Enrichment attributes are available only for [custom upload audiences](destination-configuration/schema-configuration.md#external-audiences). See the [batch audience activation guide](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) to see how enrichment attribute selection works. |
+|`{{destination.enrichmentAttributes.<namespace>.<segmentId>}}`| Accesses enrichment attributes for specific external audiences mapped to a destination. Enrichment attributes are available only for [custom upload audiences](destination-configuration/schema-configuration.md#external-audiences). See the [batch audience activation guide](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) to see how enrichment attribute selection works.|
 
 {style="table-layout:auto"}

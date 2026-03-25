@@ -53,7 +53,7 @@ Supported audiences by audience data type:
 
 ## Export type and frequency {#export-type-frequency}
 
-Refer to the table below for information about the destination export type and frequency.
+See the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 |---------|----------|---------|
@@ -167,7 +167,7 @@ POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&ac
 | Query parameters | Description |
 | --- | --- |
 | `dlz_destination` |  The `dlz_destination` type allows the API to distinguish a landing zone destination container from the other types of containers that are available to you. |
-| `refresh` | The `refresh` action lets you reset your landing zone credentials and automatically generate a new `SASToken`. |
+| `refresh` | The `refresh` action resets your landing zone credentials and automatically generates a new `SASToken`. |
 
 {style="table-layout:auto"}
 

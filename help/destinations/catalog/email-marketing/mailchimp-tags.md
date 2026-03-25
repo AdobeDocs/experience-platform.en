@@ -1,6 +1,6 @@
 ---
 title: Mailchimp Tags
-description: The Mailchimp Tags destination allows you to export your account data and activate it within Mailchimp to engage with contacts.
+description: Use the Mailchimp Tags destination to export your account data and activate it within Mailchimp to engage with contacts.
 last-substantial-update: 2024-02-20
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
 ---
@@ -42,7 +42,7 @@ Before you can create a [!DNL Mailchimp Tags] destination, you must first ensure
 
 You need your [!DNL Mailchimp] **API key** to authenticate the [!DNL Mailchimp Interest Categories] destination against your [!DNL Mailchimp] account. The **API key** serves as the **Password** when you [authenticate the destination](#authenticate).
 
-If you do not have your **API key**, sign in to your [!DNL Mailchimp] account and refer to the [!DNL Mailchimp] documentation on [how to generate your API key](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
+If you do not have your **API key**, sign in to your [!DNL Mailchimp] account and see the [!DNL Mailchimp] documentation on [how to generate your API key](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
 
 An example of an API key is `0123456789abcdef0123456789abcde-us14`. 
 
@@ -60,11 +60,11 @@ The data center ID is also appended to your API key in the form *key-dc*; For ex
 
 Write down the data center value *(`us14` in this example)*. You will need this value when you [fill in the destination details](#destination-details).
 
-If you require further guidance, refer to the [[!DNL Mailchimp] Fundamentals documentation](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure).
+If you require further guidance, see the [[!DNL Mailchimp] Fundamentals documentation](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure).
 
 ### Guardrails {#guardrails}
 
-Refer to the [!DNL Mailchimp] [rate limits](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) for detailed information about the limits imposed by the [!DNL Mailchimp] API.
+See the [!DNL Mailchimp] [rate limits](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) for detailed information about the limits imposed by the [!DNL Mailchimp] API.
 
 ## Supported identities {#supported-identities}
 
@@ -197,7 +197,7 @@ When you have finished providing the mappings for your destination connection, s
 
 To validate that you have correctly set up the destination, follow the steps below:
 
-1. Log in to your [[!DNL Mailchimp]](https://login.mailchimp.com/) account. Then navigate to the **[!DNL Audience]** > **[!DNL All Contacts]** page and check if the contacts from the audience have been added and contacts within the audience have been updated with the audience name.
+1. Go to your [[!DNL Mailchimp]](https://login.mailchimp.com/) account. Then navigate to the **[!DNL Audience]** > **[!DNL All Contacts]** page and check if the contacts from the audience have been added and contacts within the audience have been updated with the audience name.
 ![Mailchimp UI screenshot showing the Audience page.](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png)
 
 ## Data usage and governance {#data-usage-governance}
