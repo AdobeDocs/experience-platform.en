@@ -147,7 +147,9 @@ When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data L
 
 ### Using the API
 
-When creating job requests in the API, any `userIDs` that are provided must use a specific `namespace` and `type` depending on the data store they apply to. IDs for the data lake must use `unregistered` for their `type` value, and a `namespace` value that matches one the [privacy labels](#privacy-labels) that have been added to applicable datasets.
+When creating job requests in the API, any `userIDs` that are provided must use a specific `namespace` and `type` depending on the data store they apply to. A valid identity namespace recognized by Identity Service must be provided for the namespace value. Use `standard` for standard namespaces, and use `custom` for custom namespaces. 
+
+IDs for the data lake must use `unregistered` for their `type` value, and a `namespace` value that matches one the [privacy labels](#privacy-labels) that have been added to applicable datasets.
 
 In addition, the `include` array of the request payload must include the product values for the different data stores the request is being made to. When making requests to the data lake, the array must include the value `aepDataLake`.
 
@@ -175,12 +177,12 @@ curl -X POST \
           {
             "namespace": "email_label",
             "value": "ajones@acme.com",
-            "type": "unregistered"
+            "type": "custom"
           },
           {
             "namespace": "email_label",
             "value": "jdoe@example.com",
-            "type": "unregistered"
+            "type": "custom"
           }
         ]
       }

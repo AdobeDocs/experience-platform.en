@@ -27,9 +27,9 @@ Refer to the table below for details on which types of integrations support the 
 
 ### Prerequisites in your system {#prerequisites}
 
-As a first step, you must create an app in your system for Adobe Experience Platform, or otherwise register Experience Platform in your system. The goal is to generate a client ID and client secret, which are needed to authenticate Experience Platform to your destination.
+As a first step, you must create an app in your system for [!DNL Adobe Experience Platform], or otherwise register Experience Platform in your system. The goal is to generate a client ID and client secret, which are needed to authenticate Experience Platform to your destination.
 
-As part of this configuration in your system, you need the Adobe Experience Platform OAuth 2 redirect/callback URLs, which you can get from the list below.
+As part of this configuration in your system, you need the [!DNL Adobe Experience Platform] OAuth 2 redirect/callback URLs, which you can get from the list below.
 
 * `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
@@ -40,7 +40,7 @@ As part of this configuration in your system, you need the Adobe Experience Plat
 
 >[!IMPORTANT]
 >
->The step to register a redirect/callback URL for Adobe Experience Platform in your system is required only for the [OAuth 2 with Authorization Code](#authorization-code) grant type. For the other two supported grant types (password and client credentials), you can skip this step.
+>The step to register a redirect/callback URL for [!DNL Adobe Experience Platform] in your system is required only for the [OAuth 2 with Authorization Code](#authorization-code) grant type. For the other two supported grant types (password and client credentials), you can skip this step.
 
 At the end of this step, you should have:
 
@@ -121,14 +121,14 @@ To set up this authorization method for your destination, add the following line
 |`accessTokenUrl` | String | The URL on your side, which issues access tokens and, optionally, refresh tokens.|
 |`authorizationUrl` | String | The URL of your authorization server, where you redirect the user to log in to your application. |
 |`refreshTokenUrl` | String | *Optional.* The URL on your side, which issues refresh tokens. Often, the `refreshTokenUrl` is the same as the `accessTokenUrl`. |
-|`clientId` | String | The client ID that your system assigns to Adobe Experience Platform. |
-|`clientSecret` | String | The client secret that your system assigns to Adobe Experience Platform. |
+|`clientId` | String | The client ID that your system assigns to [!DNL Adobe Experience Platform]. |
+|`clientSecret` | String | The client secret that your system assigns to [!DNL Adobe Experience Platform]. |
 |`scope` | List of Strings | *Optional*. Set the scope of what the access token allows Experience Platform to perform on your resources. Example: "read, write". |
 |`options.useBasicAuth`| Boolean| *Optional*. A boolean value that controls how the client credentials (client ID and client secret) are sent to the OAuth provider's token endpoint when exchanging an authorization code for an access token. <ul><li>If set to `false` or undefined, the credentials are sent as `client_id` and `client_secret` parameters in the POST request body (default behavior).</li><li>If this parameter is set to `true`, then the credentials are sent in the HTTP `Authorization` header using Basic Authentication format: `Authorization: Basic base64(clientID:clientSecret)`.</li></ul> Set `useBasicAuth` to `true` when your OAuth provider requires client credentials to be sent in the `Authorization` header rather than the request body. |
 
 {style="table-layout:auto"}
 
-## OAuth 2 with Password Grant
+## OAuth 2 with Password Grant {#oauth2-password-grant}
 
 For the OAuth 2 Password grant (read the [RFC standards specs](https://tools.ietf.org/html/rfc6749#section-4.3)), Experience Platform requires the user's username and password. In the authorization flow, Experience Platform exchanges these credentials for an access token and, optionally, a refresh token.
 Adobe makes use of the standard inputs below to simplify destination configuration, with the ability to override values:
@@ -167,13 +167,13 @@ To set up this authorization method for your destination, add the following line
 |`authType` | String | Use "OAUTH2". |
 |`grant` | String | Use "OAUTH2_PASSWORD". |
 |`accessTokenUrl` | String | The URL on your side, which issues access tokens and, optionally, refresh tokens.|
-|`clientId` | String | The client ID that your system assigns to Adobe Experience Platform.  |
-|`clientSecret` | String | The client secret that your system assigns to Adobe Experience Platform. |
+|`clientId` | String | The client ID that your system assigns to [!DNL Adobe Experience Platform].  |
+|`clientSecret` | String | The client secret that your system assigns to [!DNL Adobe Experience Platform]. |
 |`scope` | List of Strings | *Optional*. Set the scope of what the access token allows Experience Platform to perform on your resources. Example: "read, write". |
 
 {style="table-layout:auto"}
 
-## OAuth 2 with Client Credentials Grant
+## OAuth 2 with Client Credentials Grant {#oauth2-client-credentials-grant}
 
 You can configure an OAuth 2 Client Credentials (read the [RFC standards specs](https://tools.ietf.org/html/rfc6749#section-4.4)) destination, which supports the standard inputs and outputs listed below. You have the ability to customize the values. See [Customize your OAuth 2 configuration](#customize-configuration) for details.
 
@@ -211,8 +211,8 @@ To set up this authorization method for your destination, add the following line
 |`grant` | String | Use "OAUTH2_CLIENT_CREDENTIALS". |
 |`accessTokenUrl` | String | The URL of your authorization server, which issues an access token and an optional refresh token.|
 |`refreshTokenUrl` | String | *Optional.* The URL on your side, which issues refresh tokens. Often, the `refreshTokenUrl` is the same as the `accessTokenUrl`. |
-|`clientId` | String | The client ID that your system assigns to Adobe Experience Platform.  |
-|`clientSecret` | String | The client secret that your system assigns to Adobe Experience Platform. |
+|`clientId` | String | The client ID that your system assigns to [!DNL Adobe Experience Platform].  |
+|`clientSecret` | String | The client secret that your system assigns to [!DNL Adobe Experience Platform]. |
 |`scope` | List of Strings | *Optional*. Set the scope of what the access token allows Experience Platform to perform on your resources. Example: "read, write". |
 
 {style="table-layout:auto"}
@@ -497,4 +497,4 @@ Depending on your authorization customization, you might need to access data fie
 
 ## Next steps {#next-steps}
 
-By reading this article, you now have an understanding of the OAuth 2 authorization patterns supported by Adobe Experience Platform and know how to configure your destination with OAuth 2 authorization support. Next, you can set up your OAuth 2-supported destination using Destination SDK. Read [Use Destination SDK to configure your destination](../../guides/configure-destination-instructions.md) for next steps.
+By reading this article, you now have an understanding of the OAuth 2 authorization patterns supported by [!DNL Adobe Experience Platform] and know how to configure your destination with OAuth 2 authorization support. Next, you can set up your OAuth 2-supported destination using Destination SDK. Read [Use Destination SDK to configure your destination](../../guides/configure-destination-instructions.md) for next steps.

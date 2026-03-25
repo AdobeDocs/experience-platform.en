@@ -112,7 +112,7 @@ The **[!UICONTROL Attributes]** tab lists all of the record information related 
 
 In addition to being able to view the data in a list, you can use the search bar to search for specific attributes or view the record data as JSON.
 
-![Attributes tab](images/b2b-account-attributes.png)
+![Attributes tab](images/account-profile-attributes.png)
 
 ## People tab {#people-tab}
 

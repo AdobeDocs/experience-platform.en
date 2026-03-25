@@ -23,7 +23,7 @@ As a marketer, you can target users in a mobile engagement destination, with aud
 
 ### [!DNL LINE] prerequisites {#prerequisites-destination}
 
-Note the following prerequisites in [!DNL LINE], in order to export data from Experience Platform to your [!DNL LINE] account:
+Note the following prerequisites in [!DNL LINE], to export data from Experience Platform to your [!DNL LINE] account:
 
 #### You need to have a [!DNL LINE] account {#prerequisites-account}
 
@@ -54,6 +54,31 @@ Refer to the [[!DNL LINE] documentation](https://developers.line.biz/en/docs/mes
 |---|---|
 |ID for Advertisers(IFAs)| Select the ID for Advertisers(IFAs) target identity when the source identities are IFA *(Apple ID for Advertisers)* or GAID *(Google Advertising ID) namespaces.|
 |LINE User IDs| Select the UserID target identity when the source identities are LINE User IDs. |
+
+## Supported audiences {#supported-audiences}
+
+This section describes which types of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -105,7 +130,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -113,7 +138,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Map attributes and identities {#map}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL LINE] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL LINE] destination fields, follow these steps:
+To correctly send your audience data from [!DNL Adobe Experience Platform] to the [!DNL LINE] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL LINE] destination fields, follow these steps:
 
 Depending on your source identity the following target identity namespace(s) must be mapped:
 
@@ -121,6 +146,8 @@ Depending on your source identity the following target identity namespace(s) mus
 | --- | --- | --- |
 | ID for Advertisers(IFAs) | `IDFA` or `GAID` | `LineId` |
 | LINE user IDs | `UserID` | `LineId` |
+
+{style="table-layout:auto"}
 
 If your target identities are *LINE user ID's* you will need the below:
 ![Experience Platform UI screenshot example showing the Target mapping when using LINE User IDs for target identities.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)

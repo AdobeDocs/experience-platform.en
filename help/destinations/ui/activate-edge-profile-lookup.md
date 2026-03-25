@@ -6,7 +6,7 @@ exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
 ---
 # Look up profile attributes on the edge in real-time
 
-Adobe Experience Platform uses the [Real-Time Customer Profile](../../profile/home.md) as the single source of truth for all profile data. For quick, real-time data retrieval, it uses [edge profiles](../../profile/edge-profiles.md), which are lightweight profiles distributed throughout the [Edge Network](../../collection/home.md#edge). This allows for fast, real-time personalization use cases.
+[!DNL Adobe Experience Platform] uses the [Real-Time Customer Profile](../../profile/home.md) as the single source of truth for all profile data. For quick, real-time data retrieval, it uses [edge profiles](../../profile/edge-profiles.md), which are lightweight profiles distributed throughout the [Edge Network](../../collection/home.md). This allows for fast, real-time personalization use cases.
 
 ## Use Cases {#use-cases}
 
@@ -34,6 +34,8 @@ Edge profile lookup use cases are subject to the specific performance guardrails
 |---------|----------|---------|
 | [Custom personalization destination](../catalog/personalization/custom-personalization.md) via [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) | Yes | 1500 |
 | [Custom personalization destination](../catalog/personalization/custom-personalization.md) via [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) | No | 1500 |
+
+{style="table-layout:auto"}
 
 ## Step 1: Create and configure a datastream {#create-datastream}
 
@@ -65,7 +67,7 @@ Follow the instructions on [creating a merge policy](../../profile/merge-policie
 
 ## Step 3: Send profile attribute data to the Edge Network{#configure-custom-personalization-connection}
 
-In order to look up edge profiles, including attributes and audience membership data, in real-time, the data needs to be made available on the Edge Network. For this purpose, you must create a connection to a **[!UICONTROL Custom Personalization With Attributes]** destination and activate the audiences, including the attributes that you would like to look up on the edge profiles.
+To look up edge profiles, including attributes and audience membership data, in real-time, the data needs to be made available on the Edge Network. For this purpose, you must create a connection to a **[!UICONTROL Custom Personalization With Attributes]** destination and activate the audiences, including the attributes that you would like to look up on the edge profiles.
 
 +++ Configure a Custom Personalization With Attributes connection
 
@@ -82,7 +84,7 @@ When configuring the new destination, select the datastream which you created in
 After you have created a **[!UICONTROL Custom Personalization With Attributes]** connection, you are now ready to send profile data to the Edge Network.
 
 >[!IMPORTANT]
-> 
+>
 > * To activate data and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 > 
 > Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
@@ -91,7 +93,7 @@ After you have created a **[!UICONTROL Custom Personalization With Attributes]**
     
     ![Destination Catalog tab highlighted in the Experience Platform UI.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
-1. Find the **[!UICONTROL Custom Personalization With Attributes]**  destination card, then select **[!UICONTROL Activate audiences]**, as shown in the image below.
+1. Find the **[!UICONTROL Custom Personalization With Attributes]** destination card, then select **[!UICONTROL Activate audiences]**, as shown in the image below.
 
     ![Activate audience control highlighted on a destination card in the catalog.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
@@ -104,7 +106,7 @@ After you have created a **[!UICONTROL Custom Personalization With Attributes]**
     You can select from multiple types of audiences, depending on their origin:
     
     * **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [segmentation documentation](../../segmentation/ui/overview.md) for more details.
-    * **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Experience Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/overview.md#import-audience).
+    * **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Experience Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/audience-portal.md#import-audience).
     * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
 
       ![Select audiences step of the activation workflow with several audiences highlighted.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -198,6 +200,8 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Yes. | The datastream ID of the datastream that you created in [step 1](#create-datastream). |
 
+{style="table-layout:auto"}
+
 ### Response {#response}
 
 A successful response returns HTTP status `200 OK`, with a `Handle` object that includes information similar to the examples in the tabs below, depending on whether the profile is found on the edge or not.
@@ -277,6 +281,8 @@ The `handle` object provides the information described in the table below.
 | `type` | `handle` objects are grouped by type. For edge profile lookup use cases, the type of the `handle` object is always `activation:pull`.|
 | `eventIndex` | The Edge Network receives events frßom the client in the form of arrays. The order of the events in the array is preserved during their processing and reflected by this index. Event indexing starts with `0`. |
 
+{style="table-layout:auto"}
+
 >[!TAB Profile does not exist on the edge]
 
 If the profile does not exist on the edge, you can expect a response similar to the one below.
@@ -301,6 +307,8 @@ The `handle` object provides the information described in the table below.
 | `payload` | When the profile is not present on the edge, the `payload` object is empty. |
 | `type` | `payload` objects are grouped by type. For edge profile lookup use cases, the type of the `payload` object is always `activation:pull`.|
 | `eventIndex` | The Edge Network receives events from the client in the form of arrays. The order of the events in the array is preserved during their processing and reflected by this index. Event indexing starts with `0`. |
+
+{style="table-layout:auto"}
 
 >[!ENDTABS]
 

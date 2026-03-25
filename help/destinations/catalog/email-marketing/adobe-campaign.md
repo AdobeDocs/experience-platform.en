@@ -4,13 +4,13 @@ title: Adobe Campaign connection
 description: Adobe Campaign is a set of solutions that help you personalize and deliver campaigns across all your online and offline channels.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
 ---
-# Adobe Campaign connection
+# [!DNL Adobe Campaign] connection
 
 ## Overview {#overview}
 
-Adobe Campaign is a set of solutions that help you personalize and deliver campaigns across all your online and offline channels. See [Get Started with Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) for more information.
+[!DNL Adobe Campaign] is a set of solutions that help you personalize and deliver campaigns across all your online and offline channels. See [Get Started with Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) for more information.
 
-To send audience data to Adobe Campaign, you must first [connect the destination](#connect-destination) in Adobe Experience Platform, and then [set up a data import](#import-data-into-campaign) from your storage location into Adobe Campaign.
+To send audience data to [!DNL Adobe Campaign], you must first [connect the destination](#connect-destination) in [!DNL Adobe Experience Platform], and then [set up a data import](#import-data-into-campaign) from your storage location into [!DNL Adobe Campaign].
 
 ## Supported audiences {#supported-audiences}
 
@@ -18,10 +18,24 @@ This section describes which types of audiences you can export to this destinati
 
 | Audience origin | Supported | Description | 
 | ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -43,19 +57,19 @@ Refer to [IP address allowlist for SFTP destinations](../cloud-storage/ip-addres
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
-Adobe Campaign supports the following connection types:
+[!DNL Adobe Campaign] supports the following connection types:
 
 * **[!UICONTROL Amazon S3]**
 * **[!UICONTROL SFTP with Password]**
 * **[!UICONTROL SFTP with SSH Key]**
 * **[!UICONTROL Azure Blob]**
 
-The preferred method to send data to Adobe Campaign is through [!DNL Amazon S3] or [!DNL Azure Blob].
+The preferred method to send data to [!DNL Adobe Campaign] is through [!DNL Amazon S3] or [!DNL Azure Blob].
 
 ### Connection parameters {#parameters}
 
@@ -82,7 +96,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -97,15 +111,15 @@ When activating audiences to this destination, Adobe recommends that you select 
 
 For [!DNL Adobe Campaign] destinations, [!DNL Experience Platform] creates a `.csv` file in the storage location that you provided. For more information about the files, see the [verify audience activation](../../ui/activate-batch-profile-destinations.md#verify) section in the audience activation tutorial.
 
-## Set up data import into Adobe Campaign {#import-data-into-campaign}
+## Set up data import into [!DNL Adobe Campaign] {#import-data-into-campaign}
 
 >[!IMPORTANT]
 >
->* Keep in mind the [!DNL SFTP] storage limits, database storage limits, and active profile limits as per your Adobe Campaign contract while performing this integration.
->* You need to schedule, import, and map your exported segments in Adobe Campaign using [!DNL Campaign] workflows. Refer to [Setting up a recurring import](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) in Adobe Campaign Classic documentation and [About data management activities](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) in Adobe Campaign Standard documentation.
->* The preferred method to send data to Adobe Campaign is through [!DNL Amazon S3] or [!DNL Azure Blob].
+>* Keep in mind the [!DNL SFTP] storage limits, database storage limits, and active profile limits as per your [!DNL Adobe Campaign] contract while performing this integration.
+>* You need to schedule, import, and map your exported segments in [!DNL Adobe Campaign] using [!DNL Campaign] workflows. Refer to [Setting up a recurring import](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) in [!DNL Adobe Campaign Classic] documentation and [About data management activities](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) in [!DNL Adobe Campaign Standard] documentation.
+>* The preferred method to send data to [!DNL Adobe Campaign] is through [!DNL Amazon S3] or [!DNL Azure Blob].
 
-After connecting [!DNL Experience Platform] to your [!DNL Amazon S3] or [!DNL Azure Blob] storage, you must set up the data import from your storage location into Adobe Campaign. To learn how to accomplish this, refer to the following Adobe Campaign documentation pages:
+After connecting [!DNL Experience Platform] to your [!DNL Amazon S3] or [!DNL Azure Blob] storage, you must set up the data import from your storage location into [!DNL Adobe Campaign]. To learn how to accomplish this, refer to the following [!DNL Adobe Campaign] documentation pages:
 
-* [Get started with data import and export](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html) and [Data loading (file)](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html) in the Adobe Campaign Classic documentation.
-* [Get started with processes and data management](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html) and [Load file](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html) in the Adobe Campaign Standard documentation.
+* [Get started with data import and export](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html) and [Data loading (file)](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html) in the [!DNL Adobe Campaign Classic] documentation.
+* [Get started with processes and data management](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html) and [Load file](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html) in the [!DNL Adobe Campaign Standard] documentation.

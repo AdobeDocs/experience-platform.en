@@ -19,19 +19,19 @@ Depending on your API configuration, you may or may not need to use the audience
 
 With audience metadata support in Destination SDK, when you configure your Experience Platform destination, you can give Experience Platform users one of several options when they map and activate audiences to your destination. You can control the options available to the user via the parameters in the [Audience metadata configuration](../functionality/destination-configuration/audience-metadata-configuration.md) section of the destination configuration.
 
-### Use case 1 - You have a 3rd party API and users don't need to input mapping IDs
+### Use case 1 - You have a 3rd party API and users don't need to input mapping IDs {#use-case-1}
 
 If you have an API endpoint to create/update/delete audiences or audiences, you can use audience metadata templates to configure Destination SDK to match the specs of your audience create/update/delete endpoint. Experience Platform can programmatically create/update/delete audiences and synchronize metadata back to Experience Platform.
 
 When activating audiences to your destination in the Experience Platform user interface (UI), users don't need to manually fill in an audience mapping ID field in the activation workflow.
 
-### Use case 2 - Users need to create an audience in your destination first and are required to manually input mapping ID
+### Use case 2 - Users need to create an audience in your destination first and are required to manually input mapping ID {#use-case-2}
 
 If audiences and other metadata need to be created by partners or users manually in your destination, then users must manually fill in the audience mapping ID field in the activation workflow to sync the audiencemetadata between your destination and Experience Platform.
 
 ![Input mapping ID](../assets/functionality/input-mapping-id.png)
 
-### Use case 3 - Your destination accepts the Experience Platform audience ID, users don't need to manually input mapping ID  
+### Use case 3 - Your destination accepts the Experience Platform audience ID, users don't need to manually input mapping ID {#use-case-3}
 
 If your destination system accepts the Experience Platform audience ID, you can configure this in your audience metadata template. Users do not have to populate an audience mapping ID when activating a segment.
 
@@ -54,13 +54,13 @@ The table below describes the events supported by audience metadata templates.
 
 |Template section | Description |
 |--- |--- |
-|`create` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically create segments/audiences in your platform and sync the information back to Adobe Experience Platform. |
-|`update` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically update segments/audiences in your platform and sync the information back to Adobe Experience Platform. |
+|`create` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically create segments/audiences in your platform and sync the information back to [!DNL Adobe Experience Platform]. |
+|`update` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically update segments/audiences in your platform and sync the information back to [!DNL Adobe Experience Platform]. |
 |`delete` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically delete segments/audiences in your platform. |
 |`validate` | Runs validations for any fields in the template configuration before making a call to the partner API. For example, you could validate that the user's account ID is input correctly. |
 |`notify`| Applies only to file-based destinations. Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to notify you of successful file exports.|
-|`createDestination` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically create a dataflow in your platform and sync the information back to Adobe Experience Platform. |
-|`updateDestination` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically update a dataflow in your platform and sync the information back to Adobe Experience Platform. |
+|`createDestination` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically create a dataflow in your platform and sync the information back to [!DNL Adobe Experience Platform]. |
+|`updateDestination` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically update a dataflow in your platform and sync the information back to [!DNL Adobe Experience Platform]. |
 |`deleteDestination` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically delete a dataflow from your platform. |
 
 {style="table-layout:auto"}

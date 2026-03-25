@@ -18,5 +18,6 @@ role: Developer
   * [Standard alert rules](./alerts/rules.md)
   * [UI guide](./alerts/ui.md)
   * [Subscribe to I/O Event notifications](./alerts/subscribe.md)
+  * [Slack integration](./alerts/slack-integration.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
 * [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -7,13 +7,13 @@ exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 # Create a new destination connection
 
 >[!IMPORTANT]
-> 
+>
 >* To connect to a destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
->* To connect to a destination that supports dataset exports,  you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To connect to a destination that supports dataset exports, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 ## Overview {#overview}
 
-Before you can send audience data to a destination, you must set up a connection to your destination platform. This article shows you how to set up a new destination connection, to which you can then activate audiences or export datasets using the Adobe Experience Platform user interface.
+Before you can send audience data to a destination, you must set up a connection to your destination platform. This article shows you how to set up a new destination connection, to which you can then activate audiences or export datasets using the [!DNL Adobe Experience Platform] user interface.
 
 ## Find the desired destination in the catalog {#setup}
 
