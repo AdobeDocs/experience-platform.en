@@ -22,7 +22,7 @@ This destination allows customers to share first-party audiences with any or all
 
   * Identifiers for Advertisers (IDFAs) for [!DNL Apple iOS] devices
 
-This connection replaces the [Legacy Adobe Advertising Cloud DSP connection](adobe-advertising-cloud-connection-legacy.md), which supports only hashed email addresses.
+This connection replaces the [Legacy Adobe Advertising Cloud DSP connection](adobe-advertising-cloud-dsp-connection-legacy.md), which supports only hashed email addresses.
 
 >[!IMPORTANT]
 >
