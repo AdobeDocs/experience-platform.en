@@ -56,11 +56,14 @@ To perform actions such as deleting, exporting, or copying a resource, use one o
 On the **[!UICONTROL Browse]**, **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, and **[!UICONTROL Data types]** tabs, management actions are available in two locations:
 
 - **Inline in the table**: Each resource row includes an actions menu (for example, **[!UICONTROL …]**) that provides direct access to available actions.
-- **Resource detail view**: Select a resource name to open its detail view, then use the **[!UICONTROL More]** menu in the page header to access the same actions.
-
-These actions are consistent across both entry points for supported resource types (schemas, classes, field groups, and data types).
 
 ![The schema inventory showing inline actions available from the ellipsis menu for each resource.](../images/ui/explore/xdm-schema-inventory-inline-actions-menu.png)
+
+- **Resource detail view**: Select a **custom (tenant-defined)** resource from the inventory to open its detail view, then use the **[!UICONTROL More]** menu in the page header to access the same available actions.
+
+![The resource detail view header showing the More menu with available actions such as Delete, Copy JSON structure, and Download sample file.](../images/ui/explore/xdm-resource-detail-more-menu.png)
+
+These actions are consistent across both entry points for supported resource types (schemas, classes, field groups, and data types).
 
 ### Available actions {#available-actions}
 
@@ -105,7 +108,7 @@ If an action such as **[!UICONTROL Delete]** is unavailable or disabled, it is t
 
 - **Permissions (RBAC)**: You must have the required permissions (such as **[!UICONTROL Manage Schemas]**) to perform management actions. If permissions are missing, actions appear disabled with tooltips. To learn how permissions are configured, see the [access control UI overview](../../access-control/ui/overview.md).
 
-- **Dataset association**: Resources that are used by one or more datasets cannot be deleted. To identify and remove dataset dependencies, see [Delete a dataset](../../catalog/datasets/user-guide.md#delete).
+- **Dataset association**: Resources that are used by one or more datasets (such as schemas associated with datasets) cannot be deleted. To identify and remove dataset dependencies, see [Delete a dataset](../../catalog/datasets/user-guide.md#delete).
 
 - **Profile enablement**: Schemas enabled for Real-Time Customer Profile cannot be deleted. For guidance on how Profile enablement affects your schema, see [Planning for Real-Time Customer Profile enablement](../schema/profile-enablement-planning.md).
 
