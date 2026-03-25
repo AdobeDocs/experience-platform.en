@@ -20,7 +20,7 @@ This document provides an overview of how to create, edit, and manage custom cla
 
 >[!NOTE]
 >
->For table row and detail-page actions (including delete) and when deletion is blocked, see [Manage schemas, classes, field groups, and data types: actions and deletion](../explore.md#xdm-resource-actions).
+>XDM actions are available from the inventory table and the resource detail view (**[!UICONTROL More]**). Full actions apply only to custom (tenant-defined) resources; standard resources have limited options. See [Manage schemas, classes, field groups, and data types: actions and deletion](../explore.md#xdm-resource-actions).
 
 ## Prerequisites {#prerequisites}
 

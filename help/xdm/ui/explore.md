@@ -59,9 +59,9 @@ On the **[!UICONTROL Browse]**, **[!UICONTROL Classes]**, **[!UICONTROL Field gr
 
 ![The schema inventory showing inline actions available from the ellipsis menu for each resource.](../images/ui/explore/xdm-schema-inventory-inline-actions-menu.png)
 
-- **Resource detail view**: Select a **custom (tenant-defined)** resource from the inventory to open its detail view, then use the **[!UICONTROL More]** menu in the page header to access the same available actions.
+- **Resource detail view**: To access full actions in the detail view, you must select a **custom (tenant-defined)** resource. Standard (Adobe-provided) resources have limited actions and do not show options such as Delete, Copy JSON structure, or Add to package. Select a custom resource from the inventory to open its detail view, then use the **[!UICONTROL More]** menu in the page header to access the same available actions.
 
-![The resource detail view header showing the More menu with available actions such as Delete, Copy JSON structure, and Download sample file.](../images/ui/explore/xdm-resource-detail-more-menu.png)
+![The resource detail view header showing the More menu with available actions such as Delete, Copy JSON structure, and Download sample file.](../images/ui/explore/more-actions.png)
 
 These actions are consistent across both entry points for supported resource types (schemas, classes, field groups, and data types).
 

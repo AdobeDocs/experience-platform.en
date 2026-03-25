@@ -43,7 +43,7 @@ From here, you have the following options:
 
 >[!NOTE]
 >
->For where download, copy JSON, package, and delete actions appear for data types (table vs detail view) and tenant-only delete rules, see [Manage schemas, classes, field groups, and data types: actions and deletion](../explore.md#xdm-resource-actions).
+>XDM actions are available from the inventory table and the resource detail view (**[!UICONTROL More]**). Full actions apply only to custom (tenant-defined) resources; standard resources have limited options. See [Manage schemas, classes, field groups, and data types: actions and deletion](../explore.md#xdm-resource-actions).
 
 ### Create a new data type {#create}
 

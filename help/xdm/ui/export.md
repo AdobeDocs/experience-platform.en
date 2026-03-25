@@ -26,7 +26,7 @@ While the Experience Platform UI allows you export XDM resources, you must use t
 
 >[!NOTE]
 >
->For where **[!UICONTROL Copy JSON structure]** and related actions appear in the Browse inventory vs the Schema Editor, and for delete constraints, see [Manage schemas, classes, field groups, and data types: actions and deletion](./explore.md#xdm-resource-actions).
+>If you cannot find actions such as **Delete** or **Copy JSON structure**, ensure you are working with a custom (tenant-defined) resource and accessing it from the table row menu or the detail view (**[!UICONTROL More]**). Action availability also depends on permissions and usage constraints. See [Manage schemas, classes, field groups, and data types: actions and deletion](./explore.md#xdm-resource-actions).
 
 ## Generate an export payload {#generate-export-payload}
 

@@ -356,7 +356,7 @@ Select **[!UICONTROL Enable]** to confirm your choice. You can select the **[!UI
 
 >[!NOTE]
 >
->For the full model of inventory actions (Browse row menus, detail **[!UICONTROL More]**), delete across XDM entity types, RBAC, and tenant vs standard resources, see [Manage schemas, classes, field groups, and data types: actions and deletion](../ui/explore.md#xdm-resource-actions). The following focuses on this tutorial’s Schema Editor flow.
+>When working with XDM resources, actions are available from both the inventory table (row menu) and the resource detail view (**[!UICONTROL More]**). To access the full set of actions, including **Delete**, **Copy JSON structure**, and **Add to package**, you must select a custom (tenant-defined) resource. Standard (Adobe-provided) resources have limited actions. For a complete overview of actions, constraints, and permissions, see [Manage schemas, classes, field groups, and data types: actions and deletion](../ui/explore.md#xdm-resource-actions).
 
 Within the Schema Editor you can also conduct quick actions to copy the JSON structure of the schema or delete the schema. Select [!UICONTROL More] at the top of the view to display a drop down with quick actions. 
 

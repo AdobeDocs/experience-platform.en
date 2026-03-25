@@ -17,7 +17,7 @@ For any schema that you define in the Experience Platform UI, you can generate a
 
 >[!NOTE]
 >
->For current placement of **[!UICONTROL Download sample file]** and other inventory actions, see [Manage schemas, classes, field groups, and data types: actions and deletion](./explore.md#xdm-resource-actions).
+>If you cannot find actions such as **Delete** or **Copy JSON structure**, ensure you are working with a custom (tenant-defined) resource and accessing it from the table row menu or the detail view (**[!UICONTROL More]**). Action availability also depends on permissions and usage constraints. See [Manage schemas, classes, field groups, and data types: actions and deletion](./explore.md#xdm-resource-actions).
 
 In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left navigation. Under the **[!UICONTROL Browse]** tab, locate the schema that you want to generate sample data for. Select it from the list, and the right rail updates to show details about the schema. From here, select **[!UICONTROL Download sample file]**.
 

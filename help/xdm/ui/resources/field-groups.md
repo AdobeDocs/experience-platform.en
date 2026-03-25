@@ -20,7 +20,7 @@ Adobe Experience Platform provides many standard field groups that cover a wide 
 
 >[!NOTE]
 >
->For inventory actions (row menus, detail **[!UICONTROL More]**), delete, and constraints, see [Manage schemas, classes, field groups, and data types: actions and deletion](../explore.md#xdm-resource-actions).
+>XDM actions are available from the inventory table and the resource detail view (**[!UICONTROL More]**). Full actions apply only to custom (tenant-defined) resources; standard resources have limited options. See [Manage schemas, classes, field groups, and data types: actions and deletion](../explore.md#xdm-resource-actions).
 
 ## Prerequisites {#prerequisites}
 
