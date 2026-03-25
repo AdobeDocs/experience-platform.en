@@ -152,7 +152,7 @@ When you are finished providing details for your destination connection, select 
 >id="platform_destinations_required_mappings_adcloud_dsp"
 >title="Preconfigured mapping sets"
 >abstract="We have preconfigured these two mapping sets for you: ECID and [!DNL adcloud] cookie. When you activate data to Adobe Advertising DSP, the profiles qualified for the activated audiences must have at least an ECID identity associated with their profile, to be successfully exported to the destination."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-dsp-connection#preconfigured-mappings" text="Read more about the preconfigured mappings"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-cloud-connection#preconfigured-mappings" text="Read more about the preconfigured mappings"
 
 >[!IMPORTANT]
 >
