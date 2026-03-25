@@ -187,6 +187,10 @@ For more information on edge profiles, please read the [edge profiles documentat
 
 ### Events tab {#events}
 
+>[!NOTE]
+>
+>Display of the events can be delayed by up to 15 minutes.
+
 By default, **[!UICONTROL Events]** tab contains data from the past 48 hours with the 100 most recent ExperienceEvents associated with the customer. This data could include email opens, cart activities, and page views. You can also set the date range for up to 30 days. Selecting **[!UICONTROL View all]** for any individual event provides additional fields and values captures as part of the event.
 
 Events can also be viewed as a JSON object by selecting to **[!UICONTROL View JSON]**. This is helpful for understanding how events are captured in Experience Platform.
