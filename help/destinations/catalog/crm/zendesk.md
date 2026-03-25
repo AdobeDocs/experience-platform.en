@@ -1,6 +1,6 @@
 ---
 title: Zendesk connection
-description: The Zendesk destination allows you to export your account data and activate it within Zendesk for your business needs.
+description: Use the Zendesk destination to export your account data and activate it within Zendesk for your business needs.
 last-substantial-update: 2023-03-14
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
 ---
@@ -75,7 +75,7 @@ Supported audiences by audience data type:
 
 ## Export type and frequency {#export-type-frequency}
 
-Refer to the table below for information about the destination export type and frequency.
+See the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 |---------|----------|---------|
@@ -179,7 +179,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Monitor the audience summary and ensure that the count of profiles corresponds to the count within the segment.
 ![Experience Platform UI screenshot example showing Segment.](../../assets/catalog/crm/zendesk/segment.png)
 
-1. Log in to the [!DNL Zendesk] website, then navigate to the **[!UICONTROL Contacts]** page to check if the profiles from the audience have been added. This list can be configured to display columns for the additional fields created with the audience**[!UICONTROL Mapping ID]** and audience statuses.
+1. Go to the [!DNL Zendesk] website, then navigate to the **[!UICONTROL Contacts]** page to check if the profiles from the audience have been added. This list can be configured to display columns for the additional fields created with the audience**[!UICONTROL Mapping ID]** and audience statuses.
 ![Zendesk UI screenshot showing the Contacts page with the additional fields created with the audience name.](../../assets/catalog/crm/zendesk/contacts.png)
 
 1. You can alternatively drill down into an individual **[!UICONTROL Person]** page and check the **[!UICONTROL Additional fields]** section displaying the audience name and audience statuses.

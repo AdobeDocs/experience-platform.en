@@ -156,7 +156,7 @@ The [!DNL Amazon Ads] connection supports hashed email address and hashed phone 
 >
 >To use these fields:
 > 
->* All identity values should be normalized before ingestion. Refer to the [normalization Guide](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C).
+>* All identity values should be normalized before ingestion. See the [normalization Guide](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C).
 >* SHA256 hashing is required, either on the client side or by enabling Adobe's transformation setting.
 >* Adobe UI provides a checkbox to apply transformation per identity field during connector setup.
 

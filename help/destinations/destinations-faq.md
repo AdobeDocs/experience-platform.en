@@ -8,7 +8,7 @@ exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
 
 ## Overview {#overview}
 
-This document provides answers to frequently asked questions about [!DNL Adobe Experience Platform] destinations. For questions and troubleshooting related to other [!DNL Experience Platform] services, including those encountered across all [!DNL Experience Platform] APIs, refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about [!DNL Adobe Experience Platform] destinations. For questions and troubleshooting related to other [!DNL Experience Platform] services, including those encountered across all [!DNL Experience Platform] APIs, see the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
 ## General destinations questions {#general}
 

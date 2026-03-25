@@ -9,7 +9,7 @@ exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
 
 ## Overview {#overview}
 
-The Zeta Marketing Platform (ZMP) is a cloud-based system which helps you acquire, grow, and retain customers more efficiently, powered by intelligence (proprietary data and AI). For more details, refer to [Zeta Global](https://zetaglobal.com/). 
+The Zeta Marketing Platform (ZMP) is a cloud-based system which helps you acquire, grow, and retain customers more efficiently, powered by intelligence (proprietary data and AI). For more details, see [Zeta Global](https://zetaglobal.com/).
 
 With the Zeta Marketing Platform connector available in [!DNL Adobe Experience Platform], you can seamlessly synchronize your audiences from Experience Platform to the ZMP.
 
@@ -69,7 +69,7 @@ This section describes which type of audiences you can export to this destinatio
 
 ## Export type and frequency {#export-type-frequency}
 
-Refer to the table below for information about the destination export type and frequency.
+See the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 |---------|----------|---------|

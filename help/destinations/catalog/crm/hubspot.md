@@ -1,12 +1,12 @@
 ---
 title: HubSpot connection
-description: The HubSpot destination allows you to manage contact records in your HubSpot account.
+description: Use the HubSpot destination to manage contact records in your HubSpot account.
 last-substantial-update: 2023-09-28
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
 ---
 # [!DNL HubSpot] connection
 
-[[!DNL HubSpot]](https://www.hubspot.com) is a CRM platform with all the software, integrations, and resources you need to connect marketing, sales, content management, and customer service. It lets you connect your data, teams, and customers on one CRM platform.
+[[!DNL HubSpot]](https://www.hubspot.com) is a CRM platform with all the software, integrations, and resources you need to connect marketing, sales, content management, and customer service. Use it to connect your data, teams, and customers on one CRM platform.
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL HubSpot] Contacts API](https://developers.hubspot.com/docs/api/crm/contacts), to update contacts within [!DNL HubSpot] from an existing Experience Platform audience after activation.
 
@@ -20,7 +20,7 @@ To help you better understand how and when you should use the [!DNL HubSpot] des
 
 ## Prerequisites {#prerequisites}
 
-Refer to the sections below for any prerequisites that you need to set up in Experience Platform and [!DNL HubSpot] and for information that you must gather before working with the [!DNL HubSpot] destination.
+See the sections below for any prerequisites that you need to set up in Experience Platform and [!DNL HubSpot] and for information that you must gather before working with the [!DNL HubSpot] destination.
 
 ### Experience Platform prerequisites {#prerequisites-in-experience-platform}
 
@@ -54,7 +54,7 @@ If you do not have a private app, follow the documentation to [Create a private 
 
 ## Guardrails {#guardrails}
 
-[!DNL HubSpot] private apps are subject to [Rate Limits](https://developers.hubspot.com/docs/api/usage-details). The number of calls your private app can make is based on your [!DNL HubSpot] account subscription and whether you've purchased the API add-on. Additionally also refer to the [Other Limits](https://developers.hubspot.com/docs/api/usage-details#other-limits).
+[!DNL HubSpot] private apps are subject to [Rate Limits](https://developers.hubspot.com/docs/api/usage-details). The number of calls your private app can make is based on your [!DNL HubSpot] account subscription and whether you've purchased the API add-on. Additionally also see the [Other Limits](https://developers.hubspot.com/docs/api/usage-details#other-limits).
 
 ## Supported identities {#supported-identities}
 
@@ -95,7 +95,7 @@ Supported audiences by audience data type:
 
 ## Export type and frequency {#export-type-frequency}
 
-Refer to the table below for information about the destination export type and frequency.
+See the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 |---------|----------|---------|
@@ -116,7 +116,7 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL
 
 ### Authenticate to destination {#authenticate}
 
-Fill in the required fields below. Refer to the [Gather the [!DNL HubSpot] private app access token](#gather-credentials) section for any guidance.
+Fill in the required fields below. See the [Gather the [!DNL HubSpot] private app access token](#gather-credentials) section for any guidance.
 
 * **[!UICONTROL Bearer token]**: The access token for your [!DNL HubSpot] private app.
 
@@ -201,7 +201,7 @@ When you are finished providing the mappings for your destination connection, se
 
 To validate that you have correctly set up the destination, follow the steps below:
 
-1. Log in to the [!DNL HubSpot] website, then navigate to the **[!UICONTROL Contacts]** page to check the audience statuses. This list can be configured to display columns for the custom properties created with the audience name with their value being the audience statuses.
+1. Go to the [!DNL HubSpot] website, then navigate to the **[!UICONTROL Contacts]** page to check the audience statuses. This list can be configured to display columns for the custom properties created with the audience name with their value being the audience statuses.
 ![HubSpot UI screenshot showing the Contacts page with column headers showing the audience name and cells audience statuses](../../assets/catalog/crm/hubspot/contacts.png)
 
 1. You can alternatively drill down into an individual **[!UICONTROL Person]** page and navigate to the properties displaying the audience name and audience statuses.

@@ -169,7 +169,7 @@ The video below also demonstrates the steps to configure a [!DNL Facebook] desti
 
 >[!NOTE]
 >
->The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, refer to the [destination configuration tutorial](../../ui/connect-destination.md).
+>The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, see the [destination configuration tutorial](../../ui/connect-destination.md).
 
 ### Authenticate to destination {#authenticate}
 

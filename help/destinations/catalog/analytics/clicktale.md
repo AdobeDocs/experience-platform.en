@@ -8,7 +8,7 @@ exl-id: fb721f0a-6026-4d7b-ba42-2e540e9c5426
 
 ## Overview {#overview}
 
-The [!DNL Clicktale] tag extension lets you deploy code and map data elements using [!DNL Clicktale's] Visual Editor.
+Use the [!DNL Clicktale] tag extension to deploy code and map data elements using [!DNL Clicktale's] Visual Editor.
 
 [!DNL Clicktale] is an analytics extension in [!DNL Adobe Experience Platform]. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100082.html).
 

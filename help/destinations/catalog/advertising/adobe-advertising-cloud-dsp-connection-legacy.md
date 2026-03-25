@@ -7,11 +7,11 @@ exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
 
 >[!NOTE]
 >
->This connection was formerly called the Adobe Advertising DSP connection. The new [Adobe Advertising DSP connection](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md) contains the same functionality as the legacy connection and support for additional identity types. The best practice is to use the new Adobe Advertising DSP connection.
+>This connection was formerly called the Adobe Advertising DSP connection. The new [Adobe Advertising DSP connection](/help/destinations/catalog/advertising/adobe-advertising-dsp-connection.md) contains the same functionality as the legacy connection and support for additional identity types. The best practice is to use the new Adobe Advertising DSP connection.
 
 ## Overview {#overview}
 
-The [!DNL Adobe Advertising Cloud] [!DNL Demand-Side Platform] (DSP) destination lets you share authenticated first-party audiences with approved advertisers and users for campaign activation with DSP. To learn more about the [!DNL Real-Time CDP] integration with DSP, see [About Activating Authenticated Audiences from Audience Sources](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
+The [!DNL Adobe Advertising Cloud] [!DNL Demand-Side Platform] (DSP) destination shares authenticated first-party audiences with approved advertisers and users for campaign activation with DSP. To learn more about the [!DNL Real-Time CDP] integration with DSP, see [About Activating Authenticated Audiences from Audience Sources](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
 
 >[!IMPORTANT]
 >

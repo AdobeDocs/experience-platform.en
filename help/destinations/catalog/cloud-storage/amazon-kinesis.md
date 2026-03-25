@@ -13,7 +13,7 @@ exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
 >
 > This destination is available only to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 
-The [!DNL Kinesis Data Streams] service by [!DNL Amazon Web Services] lets you collect and process large streams of data records in real time.
+The [!DNL Kinesis Data Streams] service by [!DNL Amazon Web Services] collects and processes large streams of data records in real time.
 
 You can create a real-time outbound connection to your [!DNL Amazon Kinesis] storage to stream data from [!DNL Adobe Experience Platform]. 
 
@@ -56,7 +56,7 @@ Supported audiences by audience data type:
 
 ## Export type and frequency {#export-type-frequency}
 
-Refer to the table below for information about the destination export type and frequency.
+See the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 |---------|----------|---------|
@@ -67,7 +67,7 @@ Refer to the table below for information about the destination export type and f
 
 ## IP address allowlist {#ip-address-allowlist}
 
-To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the [!DNL Amazon Kinesis] destination. Refer to [IP address allowlist for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
+To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the [!DNL Amazon Kinesis] destination. See [IP address allowlist for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
 
 ## Required [!DNL Amazon Kinesis] permissions {#required-kinesis-permission}
 
@@ -146,8 +146,8 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Name]**: Provide a name for your connection to [!DNL Amazon Kinesis]
 * **[!UICONTROL Description]**: Provide a description for your connection to [!DNL Amazon Kinesis].
 * **[!UICONTROL Stream]**: Provide the name of an existing data stream in your [!DNL Amazon Kinesis] account. Experience Platform will export data to this stream.
-* **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the audiences you are exporting. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
-* **[!UICONTROL Include Segment Timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
+* **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the audiences you are exporting. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
+* **[!UICONTROL Include Segment Timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
 
 <!--
 

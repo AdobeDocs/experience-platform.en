@@ -22,7 +22,7 @@ There are two ways you can delete destinations from the [!DNL Experience Platfor
 
 Follow the steps below to delete a destination from the [!UICONTROL Browse] tab.
 
-1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. To view your existing destinations, select **[!UICONTROL Browse]** from the top header.
+1. Go to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destinations.
 
     ![Browse destinations](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -37,11 +37,11 @@ Follow the steps below to delete a destination from the [!UICONTROL Browse] tab.
 
     ![Confirm delete destination](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
-## Delete destinations from the destination details page{#delete-destination-details-page}
+## Delete destinations from the destination details page {#delete-destination-details-page}
 
 Follow the steps below to delete a destination from the destination details page.
 
-1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. To view your existing destinations, select **[!UICONTROL Browse]** from the top header.
+1. Go to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destinations.
 
     ![Browse destinations](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -69,6 +69,6 @@ Follow the steps below to delete a destination from the destination details page
 
     ![Delete destination confirm](..//assets/ui/delete-destinations/delete-destinations-delete.png)
 
-    >[!NOTE]
-    >
-    >Depending on server load, it can take a few minutes for [!DNL Experience Platform] to delete the destination.
+>[!NOTE]
+>
+>Depending on server load, it can take a few minutes for [!DNL Experience Platform] to delete the destination.

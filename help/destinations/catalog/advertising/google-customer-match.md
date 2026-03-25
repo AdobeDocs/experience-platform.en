@@ -1,7 +1,7 @@
 ---
 keywords: google customer match;Google customer match;Google Customer Match
 title: Google Customer Match connection
-description: Google Customer Match lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, and Gmail.
+description: Google Customer Match uses your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, and Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
 ---
 # [!DNL Google Customer Match] connection
@@ -16,7 +16,7 @@ exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
 ><br/>
 >Customers who have not purchased Adobe Privacy & Security Shield must use the [segment definition](../../../segmentation/home.md#segment-definitions) capabilities within [Segment Builder](../../../segmentation/ui/segment-builder.md) to filter out non-consented profiles, to continue using the existing [!DNL Real-Time CDP] Google Destinations without interruption.
 
-[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], and [!DNL Gmail].
+[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) uses your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], and [!DNL Gmail].
 
 >[!TIP]
 >
@@ -153,7 +153,7 @@ Do **not** provide pre-hashed values for `address_info_first_name` or `address_i
 
 ### Using custom namespaces {#custom-namespaces}
 
-Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. Refer to the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information.
+Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. See the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information.
 
 <!-- Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
@@ -221,7 +221,7 @@ In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL 
 
 ![Google Customer Match App ID field highlighted in the Segment schedule step of the activation workflow.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-For details on how to find the [!DNL App ID], refer to the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative.
+For details on how to find the [!DNL App ID], see the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative.
 
 ### Mapping example: activating audience data in [!DNL Google Customer Match] {#example-gcm}
 

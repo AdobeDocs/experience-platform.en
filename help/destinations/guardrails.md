@@ -165,7 +165,7 @@ Read more about [exporting datasets](/help/destinations/ui/export-datasets.md).
 
 ### Destination SDK guardrails {#destination-sdk-guardrails}
 
-[Destination SDK](/help/destinations/destination-sdk/overview.md) is a suite of configuration APIs that allow you to configure destination integration patterns for Experience Platform to deliver audience and profile data to your endpoint, based on data and authentication formats of your choice. The guardrails below apply to the destinations you configure using Destination SDK.
+[Destination SDK](/help/destinations/destination-sdk/overview.md) is a suite of configuration APIs for configuring destination integration patterns for Experience Platform to deliver audience and profile data to your endpoint, based on data and authentication formats of your choice. The guardrails below apply to the destinations you configure using Destination SDK.
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
