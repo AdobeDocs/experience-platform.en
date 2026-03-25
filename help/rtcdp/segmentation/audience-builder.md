@@ -52,7 +52,7 @@ When selecting an attribute, you can see summary data by selecting the [informat
 
 The **[!UICONTROL Populated]** section shows the number of records where the attribute is populated compared to the total number of available records as well as the percentage of accounts that have a value for this field.
 
-The **[!UICONTROL Top values]** section displays the most frequently occurring values for this attributes, and includes details such as the value, the number of records that have the value, as well as the percentage of total records the value represents.
+The **[!UICONTROL Top values]** section displays the most frequently occurring values for the attribute, and includes details such as the value, the number of records that have the value, as well as the percentage of total records the value represents.
 
 ![A popover that displays a fully populated version of the summary data for an attribute.](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
 

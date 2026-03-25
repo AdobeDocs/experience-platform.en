@@ -23,6 +23,7 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Agent Orchestrator](#agent-orchestrator)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
+- [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
 ## Advanced data lifecycle management {#advanced-data-lifecycle-management}
@@ -102,6 +103,19 @@ Inspect, troubleshoot, and optimize your Experience Platform implementations wit
 {style="table-layout:auto"}
 
 For more information, read the [Run and Operate overview](../run-and-operate/overview.md), [Inspect job schedules](../run-and-operate/job-schedules.md), and the [Platform UI guide](../landing/ui-guide.md). -->
+
+## Segmentation Service {#segmentation-service}
+
+[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Audiences can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Ingestion type | You can now view the ingestion type of your attributes. This lets you know the origin of your data, letting you create better audiences. For more information about this feature, read the [Segment Builder guide](/help/segmentation/ui/segment-builder.md). |
+| Summary data | You can now view the summary data for your attributes for account and people-based audiences. For more information about this feature in account audiences, read the account [Audience Builder guide](/help/rtcdp/segmentation/audience-builder.md). For more information about this feature in people-based audiences, read the [Segment Builder guide](/help/segmentation/ui/segment-builder.md). |
+
+For more information, read the [[!DNL Segmentation Service] overview](../../segmentation/home.md).
 
 ## Sources
 

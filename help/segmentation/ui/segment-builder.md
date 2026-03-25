@@ -153,7 +153,7 @@ For more detailed information on the time and date functions, read the [time con
 
 When you select an attribute, you can see the summary data by selecting the [information icon](../../images/icons/info.png). The summary data includes information such as an explanation of what the field is, the record count of the values, as well as the percentage of accounts that contain values for this attribute.
 
-The **[!UICONTROL Top values]** section displays the most frequently occurring values for this attributes, and includes details such as the value, the number of records that have the value, as well as the percentage of total records the value represents.
+The **[!UICONTROL Top values]** section displays the most frequently occurring values for the attribute, and includes details such as the value, the number of records that have the value, as well as the percentage of total records the value represents.
 
 ![A popover that displays the summary data for an attribute](/help/segmentation/images/ui/segment-builder/summary-data.png)
 
