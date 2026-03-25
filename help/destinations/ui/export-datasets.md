@@ -16,7 +16,7 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 >
 >For any of those dataflows, you need to update the end date in the dataflow manually before the end date, otherwise your exports will stop on that date. Use the Experience Platform UI to view which dataflows will be set to stop on September 1st 2025. 
 >
->Refer to the [scheduling section](#scheduling) for information on how to edit the end date of a dataset export dataflow.
+>See the [scheduling section](#scheduling) for information on how to edit the end date of a dataset export dataflow.
 
 This article explains the workflow required to export [datasets](/help/catalog/datasets/overview.md) from [!DNL Adobe Experience Platform] to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage] by using the Experience Platform UI. 
 
@@ -279,7 +279,7 @@ Exports to JSON files are supported *in a compressed mode only*. Exports to Parq
 
 To remove datasets from an existing dataflow, follow the steps below:
 
-1. Log in to the [Experience Platform UI](https://experience.adobe.com/platform/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destination dataflows.
+1. Go to the [Experience Platform UI](https://experience.adobe.com/platform/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destination dataflows.
 
     ![Destination browse view with a destination connection shown and the rest blurred out.](../assets/ui/export-datasets/browse-dataset-connections.png)
 

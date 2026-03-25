@@ -8,7 +8,7 @@ exl-id: c28cf31a-890c-4dcd-b936-5a030dc6e83e
 
 ## Overview {#overview}
 
-Deploy [!DNL Medallia] quickly and seamlessly on your web properties. The extension also lets you detect survey events, capture customer feedback in real time through Data elements, use it in rules to personalize your customer's experience and share data with [!DNL Adobe Analytics].
+Deploy [!DNL Medallia] quickly and seamlessly on your web properties. The extension also detects survey events, captures customer feedback in real time through Data elements, uses it in rules to personalize your customer's experience and shares data with [!DNL Adobe Analytics].
 
 [!DNL Medallia] is a voice of the customer extension in [!DNL Adobe Experience Platform]. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
 

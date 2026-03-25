@@ -156,7 +156,7 @@ If you are using the PubMatic Connect (Custom Audience ID Mapping) destination, 
 
 ## Exported data / Validate data export {#exported-data}
 
-The [!DNL PubMatic] UI lets you check if the data has been pushed correctly and that the segments are available. It can take up to 24 hours after data has been pushed for the [!DNL PubMatic] UI to be updated.
+Use the [!DNL PubMatic] UI to check if the data has been pushed correctly and that the segments are available. It can take up to 24 hours after data has been pushed for the [!DNL PubMatic] UI to be updated.
 
 ## Data usage and governance {#data-usage-governance}
 

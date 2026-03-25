@@ -626,11 +626,11 @@ To successfully connect to the destinations using the attached [!DNL Postman] co
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. See [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully connected Experience Platform to one of your preferred streaming destinations and set up a data flow to the respective destination. Outgoing data can now be used in the destination for customer analytics or any other data operations you may wish to perform. See the following pages for more details:
+You have successfully connected Experience Platform to one of your preferred streaming destinations and set up a data flow to the respective destination. Outgoing data can now be used in the destination for customer analytics or any other data operations you may wish to perform. See the following pages for more details:
 
 *   [Destinations overview](../home.md)
 *   [Destinations Catalog overview](../catalog/overview.md)

@@ -51,7 +51,7 @@ Supported audiences by audience data type:
 
 ## Export type and frequency {#export-type-frequency}
 
-Refer to the table below for information about the destination export type and frequency.
+See the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 |---------|----------|---------|
@@ -201,7 +201,7 @@ If you prefer not to allow the entire Adobe account, you can restrict access to 
 }
 ```
 
-For more information, refer to the [AWS documentation on creating roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html). 
+For more information, see the [AWS documentation on creating roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
 
 

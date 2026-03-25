@@ -44,7 +44,7 @@ Before you can create a [!DNL Mailchimp Interest Categories] destination, you mu
 
 You need your [!DNL Mailchimp] **API key** to authenticate the [!DNL Mailchimp Interest Categories] destination against your [!DNL Mailchimp] account. The **API key** serves as the **Password** when you [authenticate the destination](#authenticate).
 
-If you do not have your **API key**, sign in to your account and refer to the [[!DNL Mailchimp] Generate your API key](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) documentation to create one. 
+If you do not have your **API key**, sign in to your account and see the [[!DNL Mailchimp] Generate your API key](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) documentation to create one.
 
 An example of an API key is `0123456789abcdef0123456789abcde-us14`. 
 
@@ -62,13 +62,13 @@ It's also appended to your API key in the form *key-dc*; if your API key is `012
 
 Write down the data center value *(`us14` in this example)*, you need this value when you [fill in destination details](#destination-details).
 
-If you require further guidance, refer to the [[!DNL Mailchimp] Fundamentals documentation](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure).
+If you require further guidance, see the [[!DNL Mailchimp] Fundamentals documentation](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure).
 
 ### Guardrails {#guardrails}
 
-Each of your [!DNL Mailchimp] audiences can contain up to 60 group names (or interest categories) in a single group or across several groups within the same audience. Refer to [!DNL Mailchimp] [groups](https://mailchimp.com/help/getting-started-with-groups/) for any clarifications required. When you reach this limit, you get a `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` message as an error response from the [!DNL Mailchimp] API.
+Each of your [!DNL Mailchimp] audiences can contain up to 60 group names (or interest categories) in a single group or across several groups within the same audience. See [!DNL Mailchimp] [groups](https://mailchimp.com/help/getting-started-with-groups/) for any clarifications required. When you reach this limit, you get a `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` message as an error response from the [!DNL Mailchimp] API.
 
-Additionally, refer to the [!DNL Mailchimp] [rate limits](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) for detailed information about the limits imposed by the [!DNL Mailchimp] API.
+Additionally, see the [!DNL Mailchimp] [rate limits](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) for detailed information about the limits imposed by the [!DNL Mailchimp] API.
 
 ## Supported identities {#supported-identities}
 
@@ -216,7 +216,7 @@ When you have finished providing the mappings for your destination connection, s
 
 To validate that you have correctly set up the destination, follow the steps below:
 
-* Log in to your [[!DNL Mailchimp]](https://login.mailchimp.com/) account. Then, navigate to the **[!DNL Audience]** page. Next, expand the **[!DNL Manage Contacts]** menu and select **[!DNL Groups]**.
+* Go to your [[!DNL Mailchimp]](https://login.mailchimp.com/) account. Then, navigate to the **[!DNL Audience]** page. Next, expand the **[!DNL Manage Contacts]** menu and select **[!DNL Groups]**.
 
 ![Mailchimp UI screenshot showing the Audience group page.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 

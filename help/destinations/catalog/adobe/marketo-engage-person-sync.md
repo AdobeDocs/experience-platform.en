@@ -81,7 +81,7 @@ Refer to the table below for information about the destination export type and f
 >
 >* To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions).
 
-If your company has access to multiple organizations, make sure that you use the same organization in both Marketo Engage and [!DNL Real-Time CDP], where you are setting up the destination connector to Marketo.  If you have already configured a destination, you may select an existing Marketo account to use with your new configuration.  If not, click the Connector to Destination prompt, which will allow you to set the name, description, and Marketo Munchkin ID of the desired destination.  Your Marketo Instance's Munchkin ID can be found in the Admin->Munchkin menu. 
+If your company has access to multiple organizations, make sure that you use the same organization in both Marketo Engage and [!DNL Real-Time CDP], where you are setting up the destination connector to Marketo.  If you have already configured a destination, you may select an existing Marketo account to use with your new configuration.  If not, click the Connector to Destination prompt to set the name, description, and Marketo Munchkin ID of the desired destination.  Your Marketo Instance's Munchkin ID can be found in the Admin->Munchkin menu. 
 
 >[!IMPORTANT]
 >

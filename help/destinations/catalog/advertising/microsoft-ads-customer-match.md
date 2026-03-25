@@ -165,4 +165,4 @@ To verify if data has been exported successfully to the [!DNL Microsoft Ads Cust
 
 ## Additional resources {#additional-resources}
 
-Refer to the [Microsoft Advertising Help Center](https://help.ads.microsoft.com/) for additional information.
+See the [Microsoft Advertising Help Center](https://help.ads.microsoft.com/) for additional information.

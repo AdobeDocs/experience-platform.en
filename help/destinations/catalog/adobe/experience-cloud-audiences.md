@@ -39,7 +39,7 @@ In Audience Manager, you can use [!DNL Real-Time CDP] audiences for Data Managem
 
 ### Granular control of exported audiences {#segments-control}
 
-To select which audiences to export to Audience Manager and beyond, use the new self-service audience-sharing integration via the Experience Cloud Audiences destination.  This lets you determine which audiences you want to share with other Experience Cloud solutions and which audiences you want to keep in [!DNL Real-Time CDP] exclusively.
+To select which audiences to export to Audience Manager and beyond, use the new self-service audience-sharing integration via the Experience Cloud Audiences destination.  Use this to determine which audiences you want to share with other Experience Cloud solutions and which audiences you want to keep in [!DNL Real-Time CDP] exclusively.
 
 The legacy audience-sharing integration did not allow for a granular control of which audiences should be exported to Audience Manager and beyond.
 

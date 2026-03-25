@@ -119,7 +119,7 @@ To set up this authorization method for your destination, add the following line
 |`authType` | String | Use "OAUTH2". |
 |`grant` | String | Use "OAUTH2_AUTHORIZATION_CODE". |
 |`accessTokenUrl` | String | The URL on your side, which issues access tokens and, optionally, refresh tokens.|
-|`authorizationUrl` | String | The URL of your authorization server, where you redirect the user to log in to your application. |
+|`authorizationUrl` | String | The URL of your authorization server, where you redirect the user to go to your application. |
 |`refreshTokenUrl` | String | *Optional.* The URL on your side, which issues refresh tokens. Often, the `refreshTokenUrl` is the same as the `accessTokenUrl`. |
 |`clientId` | String | The client ID that your system assigns to [!DNL Adobe Experience Platform]. |
 |`clientSecret` | String | The client secret that your system assigns to [!DNL Adobe Experience Platform]. |
@@ -466,17 +466,17 @@ You can use the following parameters in `accessTokenRequest` to customize your t
 |`accessTokenRequest.urlBasedDestination.url.templatingStrategy` | String | <ul><li>Use `PEBBLE_V1` if you use templates for the value in `accessTokenRequest.urlBasedDestination.url.value`.</li><li> Use `NONE` if the value in the field `accessTokenRequest.urlBasedDestination.url.value` is a constant. </li></li>  |
 |`accessTokenRequest.urlBasedDestination.url.value` | String | The URL where Experience Platform requests the access token. |
 |`accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | String | <ul><li>Use `PEBBLE_V1` if you use templates for the values in `accessTokenRequest.httpTemplate.requestBody.value`.</li><li> Use `NONE` if the value in the field `accessTokenRequest.httpTemplate.requestBody.value` is a constant. </li></li> |
-|`accessTokenRequest.httpTemplate.requestBody.value` | String | Use templating language to customize fields in the HTTP request to the access token endpoint. For information on how to use templating to customize fields, refer to the [templating conventions](#templating-conventions) section. |
+|`accessTokenRequest.httpTemplate.requestBody.value` | String | Use templating language to customize fields in the HTTP request to the access token endpoint. For information on how to use templating to customize fields, see the [templating conventions](#templating-conventions) section. |
 |`accessTokenRequest.httpTemplate.httpMethod` | String | Specifies the HTTP method used to call your access token endpoint. In most cases, this value is `POST`. |
 |`accessTokenRequest.httpTemplate.contentType` | String | Specifies the content type of the HTTP call to your access token endpoint. <br> For example: `application/x-www-form-urlencoded` or `application/json`. |
 |`accessTokenRequest.httpTemplate.headers` | String | Specifies if any headers should be added to the HTTP call to your access token endpoint. |
 |`accessTokenRequest.responseFields.templatingStrategy` | String | <ul><li>Use `PEBBLE_V1` if you use templates for the values in `accessTokenRequest.responseFields.value`.</li><li> Use `NONE` if the value in the field `accessTokenRequest.responseFields.value` is a constant. </li></li> |
-|`accessTokenRequest.responseFields.value` | String | Use templating language to access fields in the HTTP response from your access token endpoint. For information on how to use templating to customize fields, refer to the [templating conventions](#templating-conventions) section. |
+|`accessTokenRequest.responseFields.value` | String | Use templating language to access fields in the HTTP response from your access token endpoint. For information on how to use templating to customize fields, see the [templating conventions](#templating-conventions) section. |
 |`accessTokenRequest.validations.name` | String | Indicates the name you provided for this validation. |
 |`accessTokenRequest.validations.actualValue.templatingStrategy` | String | <ul><li>Use `PEBBLE_V1` if you use templates for the values in `accessTokenRequest.validations.actualValue.value`.</li><li> Use `NONE` if the value in the field `accessTokenRequest.validations.actualValue.value` is a constant. </li></li>  |
-|`accessTokenRequest.validations.actualValue.value` | String | Use templating language to access fields in the HTTP response. For information on how to use templating to customize fields, refer to the [templating conventions](#templating-conventions) section. |
+|`accessTokenRequest.validations.actualValue.value` | String | Use templating language to access fields in the HTTP response. For information on how to use templating to customize fields, see the [templating conventions](#templating-conventions) section. |
 |`accessTokenRequest.validations.expectedValue.templatingStrategy` | String | <ul><li>Use `PEBBLE_V1` if you use templates for the values in `accessTokenRequest.validations.expectedValue.value`.</li><li> Use `NONE` if the value in the field `accessTokenRequest.validations.expectedValue.value` is a constant. </li></li>  |
-|`accessTokenRequest.validations.expectedValue.value` | String | Use templating language to access fields in the HTTP response. For information on how to use templating to customize fields, refer to the [templating conventions](#templating-conventions) section. |
+|`accessTokenRequest.validations.expectedValue.value` | String | Use templating language to access fields in the HTTP response. For information on how to use templating to customize fields, see the [templating conventions](#templating-conventions) section. |
 
 {style="table-layout:auto"}
 
@@ -497,4 +497,4 @@ Depending on your authorization customization, you might need to access data fie
 
 ## Next steps {#next-steps}
 
-By reading this article, you now have an understanding of the OAuth 2 authorization patterns supported by [!DNL Adobe Experience Platform] and know how to configure your destination with OAuth 2 authorization support. Next, you can set up your OAuth 2-supported destination using Destination SDK. Read [Use Destination SDK to configure your destination](../../guides/configure-destination-instructions.md) for next steps.
+You now have an understanding of the OAuth 2 authorization patterns supported by [!DNL Adobe Experience Platform] and know how to configure your destination with OAuth 2 authorization support. Next, you can set up your OAuth 2-supported destination using Destination SDK. Read [Use Destination SDK to configure your destination](../../guides/configure-destination-instructions.md) for next steps.

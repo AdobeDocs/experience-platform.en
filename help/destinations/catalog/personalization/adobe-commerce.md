@@ -7,7 +7,7 @@ exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
 
 ## Overview {#overview}
 
-The [!DNL Adobe Commerce] destination connector lets you select one or more [!DNL Real-Time CDP] audiences to activate to your [!DNL Adobe Commerce] account to deliver a dynamic personalized experience for your shoppers. Within [!DNL Adobe Commerce], you can then select those [!DNL Real-Time CDP] audiences to personalize unique offers in the cart such as 'buy 2 get 1 free,'. You can also display hero banners and modify product pricing through promotional offers, all customized to Adobe [!DNL Real-Time CDP] audiences.
+Use the [!DNL Adobe Commerce] destination connector to select one or more [!DNL Real-Time CDP] audiences to activate to your [!DNL Adobe Commerce] account to deliver a dynamic personalized experience for your shoppers. Within [!DNL Adobe Commerce], you can then select those [!DNL Real-Time CDP] audiences to personalize unique offers in the cart such as 'buy 2 get 1 free,'. You can also display hero banners and modify product pricing through promotional offers, all customized to Adobe [!DNL Real-Time CDP] audiences.
 
 ## Prerequisites {#prerequisites}
 

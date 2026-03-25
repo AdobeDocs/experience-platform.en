@@ -18,7 +18,7 @@ In the [!DNL Adobe Experience Platform] user interface, you can view and monitor
 
 Follow the steps below to view more details about an existing destination. You can find out the destination ID of a destination, the user who created the destination, when it was created, and other information.
 
-1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destinations.
+1. Go to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destinations.
 
     ![Browse destinations](../assets/ui/details-page/browse-destinations.png)
 
@@ -49,7 +49,7 @@ The following table covers the controls and details provided by the right rail:
 | Right rail item | Description |
 | --- | --- |
 | [!UICONTROL Activate audiences] | Select this control to edit which audiences are mapped to the destination, update export schedules, or add and remove mapped attributes and identities. See the guides on [activating audience data to audience streaming destinations](./activate-segment-streaming-destinations.md), [activating audience data to batch profile-based destinations](./activate-batch-profile-destinations.md), and [activating audience data to streaming profile-based destinations](./activate-streaming-profile-destinations.md) for more information. |
-| [!UICONTROL Delete] | Allows you to delete this dataflow and unmaps the audiences that were previously activated, if any exist. |
+| [!UICONTROL Delete] | Deletes this dataflow and unmaps any previously activated audiences. |
 | [!UICONTROL Destination name] | This field can be edited to update the destination's name. |
 | [!UICONTROL Description] |  This field can be edited to update or add an optional description to the destination. |
 | [!UICONTROL Destination] | Represents the destination platform that audiences are sent to. See the [destinations catalog](../catalog/overview.md) for more information. |
@@ -152,7 +152,7 @@ To edit the existing activation schedule of multiple audiences at the same time,
 
 >[!NOTE]
 >
->For details on exploring the details page of a audience, refer to the [Audience Portal overview](../../segmentation/ui/audience-portal.md#audience-details).
+>For details on the audience details page, see the [Audience Portal overview](../../segmentation/ui/audience-portal.md#audience-details).
 
 ### Edit file names for multiple audiences exported to batch destinations {#bulk-edit-file-names}
 

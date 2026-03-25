@@ -1,7 +1,7 @@
 ---
 keywords: crm;CRM;crm destinations;Microsoft Dynamics 365;Microsoft Dynamics 365 crm destination
 title: Microsoft Dynamics 365 connection
-description: The Microsoft Dynamics 365 destination allows you to export your account data and activate it within Microsoft Dynamics 365 for your business needs.
+description: Use the Microsoft Dynamics 365 destination to export your account data and activate it within Microsoft Dynamics 365 for your business needs.
 last-substantial-update: 2022-11-08
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
 ---
@@ -11,7 +11,7 @@ exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
 
 [[!DNL Microsoft Dynamics 365]](https://dynamics.microsoft.com/en-us/) is a cloud-based business application platform that combines Enterprise Resource Planning (ERP) and Customer Relationship Management (CRM) along with productivity applications and AI tools, to bring end-to-end smoother and more controlled operations, better growth potential and reduced costs.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Contact Entity Reference API]](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1), which lets you update identities within an audience into [!DNL Dynamics 365].
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Contact Entity Reference API]](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) to update identities within an audience into [!DNL Dynamics 365].
 
 [!DNL Dynamics 365] uses OAuth 2 with Authorization Grant as the authentication mechanism to communicate with the [!DNL Contact Entity Reference API]. Instructions to authenticate to your [!DNL Dynamics 365] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
@@ -112,7 +112,7 @@ Supported audiences by audience data type:
 
 ## Export type and frequency {#export-type-frequency}
 
-Refer to the table below for information about the destination export type and frequency.
+See the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 |---------|----------|---------|
@@ -190,7 +190,7 @@ To correctly send your audience data from [!DNL Adobe Experience Platform] to th
       |---|---|---|
       |`contactid`|`contactid`| Yes |
 
-    * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you define in the **[!UICONTROL Attribute name]** field. Refer to [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) for a comprehensive list of supported attributes.
+    * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you define in the **[!UICONTROL Attribute name]** field. See [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) for a comprehensive list of supported attributes.
     ![Experience Platform UI screenshot showing Target mapping for email.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
        >[!IMPORTANT]
@@ -239,7 +239,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Monitor the audience summary and ensure that the count of profiles corresponds to the count created within the audience.
 ![Experience Platform UI screenshot example showing audience.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
 
-1. Log in to the [!DNL Dynamics 365] website, then navigate to the [!DNL Customers] > [!DNL Contacts] page and check if the profiles from the audience have been added. You can see that each audience status in [!DNL Dynamics 365] was updated with the corresponding audience status from Experience Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-audience-export-example) step.
+1. Go to the [!DNL Dynamics 365] website, then navigate to the [!DNL Customers] > [!DNL Contacts] page and check if the profiles from the audience have been added. You can see that each audience status in [!DNL Dynamics 365] was updated with the corresponding audience status from Experience Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-audience-export-example) step.
 ![Dynamics 365 UI screenshot showing the Contacts page with updated audience statuses.](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
 
 ## Data usage and governance {#data-usage-governance}
