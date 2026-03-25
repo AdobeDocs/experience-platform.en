@@ -29,7 +29,7 @@ For more information about guardrails in Experience Platform, please read the [R
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingthroughput"
 >title="Streaming throughput"
->abstract="The streaming throughput value measures the combined peak inbound events per second for streaming ingestion into Profile service, across your production and development sandboxes."
+>abstract="The streaming throughput value measures the combined peak inbound events per second for streaming ingestion into Profile, across your production and development sandboxes."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
@@ -110,7 +110,7 @@ The Streaming capacities section outlines information about your organization's 
 
 #### Streaming throughput {#streaming-throughput}
 
-The **[!UICONTROL Streaming throughput]** section displays information about the streaming throughput within your organization's sandboxes. The streaming throughput value measures the combined peak inbound events per second for streaming ingestion into Profile service.
+The **[!UICONTROL Streaming throughput]** section displays information about the streaming throughput within your organization's sandboxes. The streaming throughput value measures the combined peak inbound events per second for streaming ingestion into Profile.
 
 ![The streaming throughput section within the capacity details page is displayed.](/help/landing/images/capacity/streaming-throughput-section.png)
 
@@ -168,7 +168,7 @@ The **[!UICONTROL Edge capacities]** section outlines information about your org
 
 #### Edge segmentation throughput {#edge-streaming-throughput}
 
-The **[!UICONTROL Edge segmentation throughput]** section displays information about the edge segmentation throughput within your organization and organization's sandboxes. The edge segmentation throughput value measures the combined peak inbound events per second for edge ingestion into Profile service.
+The **[!UICONTROL Edge segmentation throughput]** section displays information about the edge segmentation throughput within your organization and organization's sandboxes. The edge segmentation throughput value measures the combined peak inbound events per second for edge ingestion into Profile.
 
 ![The Edge segmentation throughput section is displayed. This shows information about the edge segmentation throughput within your organization and its sandboxes.](/help/landing/images/capacity/edge-segmentation-throughput.png)
 
@@ -222,7 +222,7 @@ You can resolve your edge segmentation throughput violations by adopting one of 
 
 1. Identify high throughput datastreams in the [monitoring dashboard](/help/dataflows/ui/monitor-edge.md) and apply throttling or filtering against these datastreams if needed.
 2. Optimize your ingestion by using batch ingestion for lower latency use cases.
-3. Contact your Adobe Customer Care representative if issues still persist
+3. Contact your Adobe Customer Care representative if issues still persist.
 
 ## Video overview {#video}
 
