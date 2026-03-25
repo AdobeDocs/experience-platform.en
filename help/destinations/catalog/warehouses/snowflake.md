@@ -138,12 +138,11 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Snowflake Account ID]**: Your Snowflake account ID. Use the following Account ID format depending on whether your account is linked to an organization:
     * If your account is linked to an organization:`OrganizationName.AccountName`.
     * If your account is not linked to an organization:`AccountName`.
-* **[!UICONTROL Snowflake Region]**: Select the region of your Snowflake account from the dropdown. See the Snowflake [documentation](https://docs.snowflake.com/en/user-guide/intro-regions) for detailed information on supported regions.
 * **[!UICONTROL Account acknowledgment]**: Toggle on the Snowflake Account ID acknowledgment to confirm that your Account ID is correct and it belongs to you.
 
 >[!NOTE]
 >
-> The **[!UICONTROL Snowflake Account ID]** and **[!UICONTROL Snowflake Region]** cannot be edited through the [edit destination](../../ui/edit-destination.md) workflow after you create the destination. To use different account or region values, [create a new destination connection](../../ui/connect-destination.md).
+> The **[!UICONTROL Snowflake Account ID]** cannot be edited through the [edit destination](../../ui/edit-destination.md) workflow after you create the destination. To use a different account, [create a new destination connection](../../ui/connect-destination.md).
 
 >[!IMPORTANT]
 >
