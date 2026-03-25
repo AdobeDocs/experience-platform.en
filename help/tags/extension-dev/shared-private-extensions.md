@@ -7,11 +7,9 @@ exl-id: 3dfd801a-febc-4461-bd99-5f97682518ce
 
 Adobe Experience Platform allows you to manage **[!UICONTROL Owned]** extensions. You can upload new extensions, deploy new versions, and release them to either private or public availability. 
 
-**[!UICONTROL Usage Authorizations]** is a powerful feature that you can use to securely share private extension packages with trusted partners without making them publicly available in the extension catalog. Use this feature to create a secure bridge between organizations, allowing you to leverage each other's custom extension code while maintaining privacy and control over your proprietary solutions.
-
 ## Manage an extension  {#manage-extension}
 
-Extension developers can build extensions locally and use open source NPM-based tools to package, upload, and release them to development, private, or public availability from the command line. The extension can then be installed on a property and used for testing.
+After you have prepared your extension package locally, use **[!UICONTROL Extension Management]** in the Data Collection UI to upload it, validate the package, and release versions through **Development**, **Private**, and **Public** availability. You can then install the extension on a property and use it for testing.
 
 ### Upload an extension {#upload-extension}
 
@@ -37,7 +35,7 @@ You are returned to the [!UICONTROL Owned] tab where your updloaded extension is
 
 >[!IMPORTANT]
 >
->The extension is uploaded in **Development**. These extensions cannot be shared until they are made **Private**.
+>Extensions are uploaded in **Development** availability. Extensions in **Development** availability cannot be shared until they are released to **Private** availability.
 
 ### Release an extension {#release-extension}
 
@@ -75,7 +73,7 @@ A new brower tab is opened containing the request form. Copy and paste the infor
 >
 >All guidance regarding the sharing of private extension packages also applies if you later choose to make these packages public. The same considerations around visibility, versioning, security, compatibility, support, and documentation remain relevant regardless of the package's availability status.
 
-Both public and private extension packages can be shared through [!UICONTROL Usage Authorizations], though extensions in Development availability cannot have authorizations tied to them. 
+**[!UICONTROL Usage Authorizations]** is a powerful feature that you can use to securely share private extension packages with trusted partners without making them publicly available in the extension catalog. Use this feature to create a secure bridge between organizations, allowing you to leverage each other's custom extension code while maintaining privacy and control over your proprietary solutions.
 
 Organizations often develop specialized extensions tailored to their unique business requirements. These extensions may contain proprietary logic, custom integrations, or sensitive configurations that shouldn't be made publicly available. Usage authorizations solve this challenge by enabling:
 
