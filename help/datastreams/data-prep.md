@@ -5,7 +5,7 @@ exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
 ---
 # Data Prep for Data Collection
 
-Data Prep is an Adobe Experience Platform service that allows you to map, transform, and validate data to and from [Experience Data Model (XDM)](../xdm/home.md). When configuring an Experience Platform-enabled [datastream](./overview.md), you can use Data Prep capabilities to map your source data to XDM when sending it to the Experience Platform Edge Network.
+Data Prep is an Adobe Experience Platform service that you can use to map, transform, and validate data to and from [Experience Data Model (XDM)](../xdm/home.md). When configuring an Experience Platform-enabled [datastream](./overview.md), you can use Data Prep capabilities to map your source data to XDM when sending it to the Experience Platform Edge Network.
 
 All data sent from a web page must land in Experience Platform as XDM. There are 3 ways to translate data from an on-page data layer to the XDM accepted by Experience Platform:
 
@@ -152,7 +152,7 @@ You can select the option to upload the object as a file, or paste the raw objec
 
 >[!NOTE]
 >
-> Use a sample JSON object that represents every data layer element that may be used on any page. For example, not all pages use shopping cart data layer elements. However, the shopping cart data layer elements should be included in this sample JSON object.
+>Use a sample JSON object that represents every data layer element that may be used on any page. For example, not all pages use shopping cart data layer elements. However, the shopping cart data layer elements should be included in this sample JSON object.
 
 ## [!UICONTROL Mapping]
 
