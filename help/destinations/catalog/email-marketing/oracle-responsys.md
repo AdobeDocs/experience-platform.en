@@ -52,7 +52,7 @@ Refer to the table below for information about the destination export type and f
 
 When setting up email marketing destinations with SFTP storage, Adobe recommends that you add certain IP ranges to your allowlist.
 
-Refer to [IP address allowlist for SFTP destinations](../cloud-storage/ip-address-allow-list.md) if you need to add Adobe IPs to your allowlist.
+See [IP address allowlist for SFTP destinations](../cloud-storage/ip-address-allow-list.md) if you need to add Adobe IPs to your allowlist.
 
 ## Connect to the destination {#connect}
 
@@ -112,7 +112,7 @@ See [Activate audience data to batch profile export destinations](../../ui/activ
 
 ### Destination attributes {#destination-attributes}
 
-When activating audiences to this destination, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, refer to [best practices when activating audiences to email marketing destinations](overview.md#best-practices).
+When activating audiences to this destination, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, see [best practices when activating audiences to email marketing destinations](overview.md#best-practices).
 
 ## Exported data {#exported-data}
 

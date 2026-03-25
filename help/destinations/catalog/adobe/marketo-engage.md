@@ -1,6 +1,6 @@
 ---
 title: Marketo Engage Destination
-description: Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
+description: Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. Use it to automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 ---
 # (Legacy) (V2) Marketo Engage destination {#beta-marketo-engage-destination}
@@ -28,7 +28,7 @@ Improvements in the Marketo V2 destination include:
 
 ## Overview {#overview}
 
-[!DNL Marketo Engage] is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
+[!DNL Marketo Engage] is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. Use it to automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
 
 The destination enables marketers to push audiences created in [!DNL Adobe Experience Platform] to Marketo where they will appear as static lists.
 

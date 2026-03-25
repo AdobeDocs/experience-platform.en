@@ -181,4 +181,4 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully created a dataflow to export profile data from Experience Platform to your [!DNL Merkury] managed S3 location. Next, you need to contact your [!DNL Merkury] representative with the name of the account, file names, and the bucket path so that processing can set up.
+You have successfully created a dataflow to export profile data from Experience Platform to your [!DNL Merkury] managed S3 location. Next, you need to contact your [!DNL Merkury] representative with the name of the account, file names, and the bucket path so that processing can set up.

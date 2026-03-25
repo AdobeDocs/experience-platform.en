@@ -255,10 +255,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `httpMethod` | String | The method used on your endpoint to programmatically create, update, delete, or validate the audience in your destination. For example: `POST`, `PUT`, `DELETE` | 
 | `headers.header` | String | Specifies any HTTP headers that should be added to the call to your API. For example, `"Content-Type"` |
 | `headers.value` | String | Specifies the value of HTTP headers that should be added to the call to your API. For example, `"application/x-www-form-urlencoded"` |
-| `requestBody` | String | Specifies the content of the message body that should be sent to your API. The parameters that should be added to the `requestBody` object depend on which fields your API accepts. Refer to the [supported macros documentation](../functionality/audience-metadata-management.md#macros) to learn what you can include in the message body. |
-| `responseFields.name` | String | Specify any response fields that your API returns when called. For an example, refer to the [template examples](../functionality/audience-metadata-management.md#configuration-examples) in the Audience metadata functionality document.|
+| `requestBody` | String | Specifies the content of the message body that should be sent to your API. The parameters that should be added to the `requestBody` object depend on which fields your API accepts. See the [supported macros documentation](../functionality/audience-metadata-management.md#macros) to learn what you can include in the message body. |
+| `responseFields.name` | String | Specify any response fields that your API returns when called. For an example, see the [template examples](../functionality/audience-metadata-management.md#configuration-examples) in the Audience metadata functionality document.|
 | `responseFields.value` | String | Specify the value of any response fields that your API returns when called. |
-| `responseErrorFields.name` | String | Specify any response fields that your API returns when called. For an example, refer to the [template examples](../functionality/audience-metadata-management.md#configuration-examples) in the Audience metadata functionality document. |
+| `responseErrorFields.name` | String | Specify any response fields that your API returns when called. For an example, see the [template examples](../functionality/audience-metadata-management.md#configuration-examples) in the Audience metadata functionality document. |
 | `responseErrorFields.value` | String | Parses any error messages returned on API call responses from your destination. These error messages will be surfaced to users in the Experience Platform user interface. |
 | `validations.field` | String | Indicates if validations should be run for any fields before API calls are made to your destination. For example, you can use `{{validations.accountId}}` to validate the user's account ID. |
 | `validations.regex` | String | Indicates how the field should be structured in order for the validation to pass.  |
@@ -275,7 +275,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 ## API error handling {#error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps {#next-steps}
 

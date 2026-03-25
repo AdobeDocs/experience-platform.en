@@ -11,7 +11,7 @@ This page describes how to use the information in [Configuration options in Dest
 
 ## Prerequisites {#prerequisites}
 
-Before advancing to the steps illustrated below, please read the [Destination SDK getting started](../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs. This assumes that you have completed the partnership and permission prerequisites and are ready to start developing your destination.
+Before advancing to the steps illustrated below, read the [Destination SDK getting started](../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs. This assumes that you have completed the partnership and permission prerequisites and are ready to start developing your destination.
 
 ## Steps to use the configuration options in Destination SDK to set up your destination {#steps}
 
@@ -172,7 +172,7 @@ Once you have crafted a message transformation template that works for you, add 
 
 ## Step 4: Create audience metadata configuration {#create-audience-metadata-configuration}
 
-For some destinations, Destination SDK requires that you configure an audience metadata configuration to programmatically create, update, or delete audiences in your destination. Refer to [Audience metadata management](../functionality/audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
+For some destinations, Destination SDK requires that you configure an audience metadata configuration to programmatically create, update, or delete audiences in your destination. See [Audience metadata management](../functionality/audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
 
 If you use an audience metadata configuration, you must connect it to the destination configuration you created in step 2. Add the instance ID of your audience metadata configuration to your destination configuration as `audienceTemplateId`.
 

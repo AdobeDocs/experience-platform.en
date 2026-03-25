@@ -457,8 +457,8 @@ A successful response returns your base connection ID and an updated etag. You c
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. See [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have learned how to update various components of a destination connection using the [!DNL Flow Service] API. For more information on destinations, see the [destinations overview](../home.md).
+You have learned how to update various components of a destination connection using the [!DNL Flow Service] API. For more information on destinations, see the [destinations overview](../home.md).
