@@ -29,7 +29,7 @@ When using a global authentication system, you must set `"authenticationRule":"P
 
 ## Getting started with credentials API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Delete a credential configuration {#delete}
 
@@ -46,6 +46,8 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 | Parameter | Description |
 | --------- | ----------- |
 | `{INSTANCE_ID}` | The `ID` of the credential configuration you want to delete. |
+
+{style="table-layout:auto"}
 
 The following request deletes a credential configuration defined by the `{INSTANCE_ID}` parameter.
 

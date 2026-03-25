@@ -5,7 +5,7 @@ exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
 ---
 # Aggregation policy
 
-To ensure maximum efficiency when exporting data to your API endpoint, you can use various settings to aggregate exported profiles into larger or smaller batches, group them by identity, and other use cases. This also allows you to tailor data exports to any downstream limitations on your API endpoint (rate limiting, number of identities per API call, etc.).
+To ensure maximum efficiency when exporting data to your API endpoint, you can use various settings to aggregate exported profiles into larger or smaller batches, group them by identity, and other use cases. This also lets you tailor data exports to any downstream limitations on your API endpoint (rate limiting, number of identities per API call, etc.).
 
 Use configurable aggregation to dive deep into the settings provided by Destination SDK or use best effort aggregation to tell Destination SDK to batch the API calls as best as it can.
 
@@ -90,7 +90,7 @@ The example configuration below shows a best effort aggregation configuration. F
 
 ## Configurable aggregation {#configurable-aggregation}
 
-Configurable aggregation works best if you'd rather take in large batches, with thousands of profiles on the same call. This option also allows you to aggregate the exported profiles based on complex aggregation rules.
+Configurable aggregation works best if you'd rather take in large batches, with thousands of profiles on the same call. This option also lets you aggregate the exported profiles based on complex aggregation rules.
 
 The example configuration below shows a configurable aggregation configuration. For an example of best effort aggregation, see the [best effort aggregation](#best-effort-aggregation) section. The parameters applicable to configurable aggregation are documented in the table below.
 

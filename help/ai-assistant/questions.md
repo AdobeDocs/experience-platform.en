@@ -1,26 +1,26 @@
 ---
-title: Question guide for AI Assistant
-description: Read this document to learn example questions that you can use when querying AI Assistant.
+title: Question guide for AI Assistant (Legacy)
+description: Read this document to learn example questions that you can use when querying AI Assistant (Legacy).
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
 ---
-# Question guide for AI Assistant
+# Question guide for AI Assistant (Legacy)
 
-Read this document to for a set of example questions that you can use when querying AI Assistant. 
+Read this document to for a set of example questions that you can use when querying AI Assistant (Legacy). 
 
-You can also use this document to learn tips on [how to phrase your questions](#phrasing-your-questions) to get optimal responses from AI Assistant.
+You can also use this document to learn tips on [how to phrase your questions](#phrasing-your-questions) to get optimal responses from AI Assistant (Legacy).
 
 ## Objective-based questions {#objectives-questions}
 
-The following example questions are grouped by objectives that you can accomplish when using AI Assistant:
+The following example questions are grouped by objectives that you can accomplish when using AI Assistant (Legacy):
 
 | Objective | Description | Example |
 | --- | --- | --- |
-| Learning concepts and continuing workflows | <ul><li>As a novice user, you can use AI Assistant to learn Real-Time CDP and Adobe Journey Optimizer concepts and onboard yourself to products and features that you are unfamiliar with.</li><li>As an experienced user, you can use AI Assistant to solve an edge case that may be blocking your workflow. |<ul><li>How do I set up a dashboard in Journey Analytics?</li><li>Tell me some use-cases for Real-Time CDP.</li></ul> |
-| Troubleshooting | Use AI Assistant to learn how to debug basic errors that you may encounter in your workflow. | <ul><li>What does this error {ERROR_MESSAGE} mean?</li><li>Why am I not able to delete the audience named "Luma: Email Audience"?</li></ul> |
-| Sandbox hygiene | Use AI Assistant to identify any duplicates or unused objects so you can efficiently maintain your sandbox. | <ul><li>Can you show me audiences that are similar?</li><li>Are there any schemas which do not have an associated dataset?</li></ul> |
-| Value analysis | Use AI Assistant to identify your most used data objects and assess any performance indicators or find the most valuable data objects. | <ul><li>How many profiles are in our "Luma: Email Audience" segment definition?</li><li>When were audiences activated to Experience Cloud Audiences destination?</li></ul> |
-| Search | Use AI Assistant to find supported Experience Platform objects such as audiences, datasets, destinations, schemas, and sources. | <ul><li>List the audiences containing "Luma" in the name that were created in the last quarter.</li><li>What attributes are in the "Luma: Custom Actions" XDM schema?</li></ul> |
-| Impact analysis | Use AI Assistant to identify data objects that have been used in certain workflows so that you can assess the impact of any changes. | <ul><li>Which audiences use `homeAddress.city` in "Luma: PersonProfiles" schema?</li><li>Which datasets are the `consents.marketing.push.val` profile attribute stored in?</li></ul> |
+| Learning concepts and continuing workflows | <ul><li>As a novice user, you can use AI Assistant (Legacy) to learn Real-Time CDP and Adobe Journey Optimizer concepts and onboard yourself to products and features that you are unfamiliar with.</li><li>As an experienced user, you can use AI Assistant (Legacy) to solve an edge case that may be blocking your workflow. |<ul><li>How do I set up a dashboard in Journey Analytics?</li><li>Tell me some use-cases for Real-Time CDP.</li></ul> |
+| Troubleshooting | Use AI Assistant (Legacy) to learn how to debug basic errors that you may encounter in your workflow. | <ul><li>What does this error {ERROR_MESSAGE} mean?</li><li>Why am I not able to delete the audience named "Luma: Email Audience"?</li></ul> |
+| Sandbox hygiene | Use AI Assistant (Legacy) to identify any duplicates or unused objects so you can efficiently maintain your sandbox. | <ul><li>Can you show me audiences that are similar?</li><li>Are there any schemas which do not have an associated dataset?</li></ul> |
+| Value analysis | Use AI Assistant (Legacy) to identify your most used data objects and assess any performance indicators or find the most valuable data objects. | <ul><li>How many profiles are in our "Luma: Email Audience" segment definition?</li><li>When were audiences activated to Experience Cloud Audiences destination?</li></ul> |
+| Search | Use AI Assistant (Legacy) to find supported Experience Platform objects such as audiences, datasets, destinations, schemas, and sources. | <ul><li>List the audiences containing "Luma" in the name that were created in the last quarter.</li><li>What attributes are in the "Luma: Custom Actions" XDM schema?</li></ul> |
+| Impact analysis | Use AI Assistant (Legacy) to identify data objects that have been used in certain workflows so that you can assess the impact of any changes. | <ul><li>Which audiences use `homeAddress.city` in "Luma: PersonProfiles" schema?</li><li>Which datasets are the `consents.marketing.push.val` profile attribute stored in?</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -75,26 +75,26 @@ The following questions are grouped by data objects and are classified as either
   * When should I use a data type vs a field group?
   * What is the difference between an identity and a primary or foreign key?
 * **Troubleshooting - Product knowledge (Real-Time CDP and Journey Optimizer)**
-  * What can AI Assistant help with?
+  * What can AI Assistant (Legacy) help with?
   * Can I delete a profile enabled schema after data is ingested?
   * Why can't I delete an audience?
   * How long does it take for audiences to be evaluated and results to be available for targeting?
 
 ## Phrasing your questions {#phrasing-your-questions}
 
-You must phrase your questions to AI Assistant with clarity and context in order to get as accurate a response as a possible. Refer to the following list of tips for guidance on how to ask a clear question with context:
+You must phrase your questions to AI Assistant (Legacy) with clarity and context in order to get as accurate a response as a possible. Refer to the following list of tips for guidance on how to ask a clear question with context:
 
 * State your task and/or question in a concise manner.
 * Avoid ambiguous language or overly complex syntax to facilitate comprehension.
-* Provide relevant context regarding your task and/or question as context can help AI Assistant generate more relevant responses.
+* Provide relevant context regarding your task and/or question as context can help AI Assistant (Legacy) generate more relevant responses.
 
-Read the tables below for further guidance on best practices to follow when asking questions to AI Assistant.
+Read the tables below for further guidance on best practices to follow when asking questions to AI Assistant (Legacy).
 
-The following tables outline best practices you can follow when using AI Assistant:
+The following tables outline best practices you can follow when using AI Assistant (Legacy):
 
 | Do | Example |
 | --- | --- |
-| <ul><li>Be specific about the object or information that you want to retrieve or analyze.</li><li>Try placing your data object names in quotes. If you only know a part of the object name, you may also specify that in the question.</li><li>Use [object auto-complete](./ui-guide.md#use-auto-complete) to help AI Assistant better understand the context of your query.</li></ul> | <ul><li>Which datasets use the "Luma - Loyalty" schema?</li><li>Show me the activated segments which have "Luma" in their names. Rank them by profile count.</li></ul> |
+| <ul><li>Be specific about the object or information that you want to retrieve or analyze.</li><li>Try placing your data object names in quotes. If you only know a part of the object name, you may also specify that in the question.</li><li>Use [object auto-complete](./ui-guide.md#use-auto-complete) to help AI Assistant (Legacy) better understand the context of your query.</li></ul> | <ul><li>Which datasets use the "Luma - Loyalty" schema?</li><li>Show me the activated segments which have "Luma" in their names. Rank them by profile count.</li></ul> |
 | <ul><li>Avoid ambiguity and use clear language</li><li>Use precise terminology to ensure better clarity in your query.</li><li>When asking questions regarding Adobe Experience Platform, try to use terminology specific to Experience Platform to improve relevance of responses.</li></ul> | <ul><li>How many profiles do I have in "ACME Audience".</li><li>Show me the top 5 XDM attributes used in activated audiences.</li></ul> |
 | <ul><li>Provide context or specify a criteria to filter your results.</li><li>Use a filter criteria in the questions to limit the volume of data in the response.</li></ul> | <ul><li>Show me audiences that have not been activated and were created more than 6 months ago and have never been modified.</li><li>Show me audiences activated to "ACME Destination" and have more than 10000 profiles.</li></ul> |
 
@@ -112,7 +112,7 @@ The following tables outline best practices you can follow when using AI Assista
 
 ## Dataset Observability {#dataset-observability}
 
-AI Assistant can now answer questions about specific dataset metrics such as storage size and row count.
+AI Assistant (Legacy) can now answer questions about specific dataset metrics such as storage size and row count.
 
 * What are my biggest datasets by size?
 * What are my biggest dataset by rows?
@@ -181,7 +181,7 @@ You can also refine your data observability questions with a qualifier to filter
 
 ## Examples of unsupported questions {#unsupported-questions}
 
-The following is a list of examples of questions that are currently not supported by AI Assistant.
+The following is a list of examples of questions that are currently not supported by AI Assistant (Legacy).
 
 +++Select to view examples of unsupported questions
 
@@ -190,12 +190,10 @@ The following is a list of examples of questions that are currently not supporte
 * How many profiles in this sandbox live in California? (**Note**: for similar questions, you must provide a specific criteria to give enough context for your request, in this case, the specific criteria is "live in California").
 * What are the segments this profile {PROFILE_INFO/ATTRIBUTE_VALUE} is in?
 * How many profiles in the dataset have an email?
-* Which dataset constitutes to maximum number of profiles in this sandbox ?
-* Which dataset has the highest number of records?
+* Which dataset constitutes to maximum number of profiles in this sandbox?
 * How many segments have been deleted in {RELATIVE_DATE}?
-* Which of my datasets has the largest size?
 * Give me a profile in the {AUDIENCE_NAME}. 
-* What is the total number of profiles in my sandbox
+* What is the total number of profiles in my sandbox?
 * How many identity namespaces are associated with the audience {AUDIENCE_NAME}?
 * Show me a report of all the audience segments that were evaluated today
 * How many segments have overlapping profiles?
@@ -226,4 +224,4 @@ The following is a list of examples of questions that are currently not supporte
 
 ## Next steps
 
-By reading this document, you now have an understanding on how to optimize your questions for AI Assistant. For information on how to use the feature during your workflows, read the [AI Assistant UI guide](ui-guide.md).
+By reading this document, you now have an understanding on how to optimize your questions for AI Assistant (Legacy). For information on how to use the feature during your workflows, read the [AI Assistant (Legacy) UI guide](ui-guide.md).

@@ -9,7 +9,7 @@ exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
 
 ## Overview {#overview}
 
-In the Adobe Experience Platform user interface, you can delete existing connections to destinations.
+In the [!DNL Adobe Experience Platform] user interface, you can delete existing connections to destinations.
 
 Deleting a destination removes any existing dataflows to that destination. All audiences activated to the destinations that you delete are unmapped before the dataflow is deleted.
 

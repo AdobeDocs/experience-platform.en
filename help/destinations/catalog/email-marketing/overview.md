@@ -9,11 +9,11 @@ exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
 
 ## Overview {#overview}
 
-Email Service Providers (ESPs) enable you to manage your email marketing activities, such as sending promotional email campaigns. Adobe Experience Platform integrates with ESPs by allowing you to activate audiences to email marketing destinations.
+Email Service Providers (ESPs) enable you to manage your email marketing activities, such as sending promotional email campaigns. [!DNL Adobe Experience Platform] integrates with ESPs by allowing you to activate audiences to email marketing destinations.
 
 ## Supported email marketing destinations {#supported-destinations}
 
-Adobe Experience Platform supports the following email marketing destinations:
+[!DNL Adobe Experience Platform] supports the following email marketing destinations:
 
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
