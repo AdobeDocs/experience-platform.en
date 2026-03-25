@@ -114,7 +114,7 @@ Real-Time Customer Profile gives you a complete view of each individual customer
 
 | Feature | Description |
 | ------- | ----------- |
-| Events | You can now set the lookback period of events when browsing your profiles. This lets you see the events that the profile is associated with for the specified time period. For more information, read the [Profile UI guide](/help/profile/ui/user-guide.md#events). |
+| Events | You can now set the lookback period of events when browsing your profiles. This lets you see the events that the profile is associated with for the specified time period. For more information, read the [Profile UI guide](../../profile/ui/user-guide.md#events). |
 
 {style="table-layout:auto"}
 
@@ -133,7 +133,7 @@ Inspect, troubleshoot, and optimize your Experience Platform implementations wit
 
 {style="table-layout:auto"}
 
-For more information, read the [Run and Operate overview](../run-and-operate/overview.md), [Inspect job schedules](../run-and-operate/job-schedules.md), and the [Platform UI guide](../landing/ui-guide.md). 
+For more information, read the [Run and Operate overview](../../run-and-operate/overview.md), [Inspect job schedules](../../run-and-operate/job-schedules.md), and the [Platform UI guide](../../landing/ui-guide.md). 
 
 ## Segmentation Service {#segmentation-service}
 
@@ -143,8 +143,8 @@ For more information, read the [Run and Operate overview](../run-and-operate/ove
 
 | Feature | Description |
 | ------- | ----------- |
-| Ingestion type | You can now view the ingestion type of your attributes. This lets you know the origin of your data, letting you create better audiences. For more information about this feature, read the [Segment Builder guide](/help/segmentation/ui/segment-builder.md). |
-| Summary data | You can now view the summary data for your attributes for account and people-based audiences. For more information about this feature in account audiences, read the account [Audience Builder guide](/help/rtcdp/segmentation/audience-builder.md). For more information about this feature in people-based audiences, read the [Segment Builder guide](/help/segmentation/ui/segment-builder.md). |
+| Ingestion type | You can now view the ingestion type of your attributes. This lets you know the origin of your data, letting you create better audiences. For more information about this feature, read the [Segment Builder guide](../../segmentation/ui/segment-builder.md). |
+| Summary data | You can now view the summary data for your attributes for account and people-based audiences. For more information about this feature in account audiences, read the account [Audience Builder guide](../../rtcdp/segmentation/audience-builder.md). For more information about this feature in people-based audiences, read the [Segment Builder guide](../../segmentation/ui/segment-builder.md). |
 
 For more information, read the [[!DNL Segmentation Service] overview](../../segmentation/home.md).
 
