@@ -8,7 +8,7 @@ exl-id: 6a2c661f-1ad0-4d96-b1bb-bf8c158c8521
 
 ## Overview {#overview}
 
-The [!DNL Facebook Pixel] is an analytics tool that lets you measure the effectiveness of your advertising by understanding the actions people take on your website.
+The [!DNL Facebook Pixel] is an analytics tool for measuring the effectiveness of your advertising by understanding the actions people take on your website.
 
 [!DNL Facebook Pixel] is an advertising extension in [!DNL Adobe Experience Platform]. For more information about the extension functionality, see the [Facebook Pixel website](https://developers.facebook.com/docs/facebook-pixel/).
 

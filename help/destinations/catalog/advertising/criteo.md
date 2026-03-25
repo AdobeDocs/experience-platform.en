@@ -76,7 +76,7 @@ To help you better understand how to use the [!DNL Criteo] destination, here are
 
 ### Use case 1 : Get traffic {#use-case-1}
 
-Showcase your business with relevant product offers and flexible creatives. With intelligent product recommendations, your ads will automatically feature the products most likely to trigger visits and engagement. Flexible targeting lets you build audiences from Criteo's commerce data set or from your own prospect lists and Adobe CDP segments.
+Showcase your business with relevant product offers and flexible creatives. With intelligent product recommendations, your ads will automatically feature the products most likely to trigger visits and engagement. Flexible targeting enables you to build audiences from Criteo's commerce data set or from your own prospect lists and Adobe CDP segments.
 
 ### Use case 2 : Increase website conversions {#use-case-2}
 

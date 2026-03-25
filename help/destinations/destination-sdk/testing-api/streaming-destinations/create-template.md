@@ -22,7 +22,7 @@ One of the first steps in creating your destination in Destination SDK is to thi
 
 For the transformation to succeed, you must provide a transformation template, similar to this example: [Create a template that sends segments, identities, and profile attributes](../../functionality/destination-server/message-format.md#segments-identities-attributes). 
 
-Adobe provides a template tool that lets you create and test the message template that transforms data from the Adobe XDM format into the format supported by your destination. The tool has two API endpoints that you can use:
+Adobe provides a template tool for creating and testing the message template that transforms data from the Adobe XDM format into the format supported by your destination. The tool has two API endpoints that you can use:
 
 * Use the *sample template API* to get a sample template.
 * Use the *render template API* to render the sample template so you can compare the result against your destination's expected data format. After comparing the exported data against the data format expected by your destination, you can edit the template. This way, the exported data you generate matches the data format expected by your destination.
@@ -160,9 +160,9 @@ You can use an online character escaping tool. The demo above uses the [JSON Esc
 
 ## Render template API {#render-template-api}
 
-After creating a message transformation template using the [sample template API](create-template.md#sample-template-api), you can [render the template](render-template-api.md) to generate exported data based on it. This lets you verify if the profiles that [!DNL Adobe Experience Platform] would export to your destination match your destination's expected format.
+After creating a message transformation template using the [sample template API](create-template.md#sample-template-api), you can [render the template](render-template-api.md) to generate exported data based on it. Use this to verify if the profiles that [!DNL Adobe Experience Platform] would export to your destination match your destination's expected format.
 
-Refer to the API reference for examples of calls that you can make:
+See the API reference for examples of calls that you can make:
 
 * [Render a template with no profiles sent in body](render-template-api.md#best-effort)
 * [Render a template with profiles sent in body](render-template-api.md#configurable-aggregation)

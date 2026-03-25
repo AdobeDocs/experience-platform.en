@@ -6,7 +6,7 @@ exl-id: d65f390a-a980-49b8-9570-840f03534553
 ---
 # [!DNL Adobe Experience Platform] Destination SDK glossary 
 
-Refer to this glossary for definitions of terms used in Destination SDK. For other [!DNL Adobe Experience Platform] terms, refer to the [Experience Platform glossary](/help/landing/glossary.md).
+See this glossary for definitions of terms used in Destination SDK. For other [!DNL Adobe Experience Platform] terms, see the [Experience Platform glossary](/help/landing/glossary.md).
 
 ## A {#a}
 
@@ -38,6 +38,6 @@ Refer to this glossary for definitions of terms used in Destination SDK. For oth
 
 **Template specs and templating strategies**: Template specs are configurations used to format HTTP requests sent from [!DNL Adobe Experience Platform] to a destination. They transform profile attribute fields from the XDM schema into a format supported by the destination platform. Using a templating language similar to [!DNL Jinja], these specs allow for dynamic data transformations based on specific rules and input data. [Learn more](/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md). 
 
-**Testing API**: The Testing API lets you validate your destination configurations before submitting a publishing request. It provides tools to generate sample profiles and test the data flow, ensuring that the configuration matches the destination's requirements. The API supports both streaming and file-based (batch) destinations, offering a way to simulate data and troubleshoot potential issues in the setup process. Read more about the testing API for [streaming](/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md) and [file-based destinations](/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md).
+**Testing API**: Use the Testing API to validate your destination configurations before submitting a publishing request. It provides tools to generate sample profiles and test the data flow, ensuring that the configuration matches the destination's requirements. The API supports both streaming and file-based (batch) destinations, offering a way to simulate data and troubleshoot potential issues in the setup process. Read more about the testing API for [streaming](/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md) and [file-based destinations](/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md).
 
 **Transformation template**: A transformation template customizes data format from the Adobe XDM schema to the destination's expected format. [Learn more](/help/destinations/destination-sdk/functionality/destination-server/message-format.md).

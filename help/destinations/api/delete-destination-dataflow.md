@@ -80,11 +80,11 @@ A successful response returns HTTP status 202 (No Content) and a blank body. You
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. See [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully used the [!DNL Flow Service] API to delete an existing dataflow to a destination.
+You have successfully used the [!DNL Flow Service] API to delete an existing dataflow to a destination.
 
 For steps on how to perform these operations using the user interface, refer to the tutorial on [deleting dataflows in the UI](../ui/delete-destinations.md).
 

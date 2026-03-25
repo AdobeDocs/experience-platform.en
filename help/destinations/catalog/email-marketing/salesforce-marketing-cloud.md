@@ -1,13 +1,13 @@
 ---
 title: Salesforce Marketing Cloud connection
-description: Salesforce Marketing Cloud is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
+description: Salesforce Marketing Cloud is a digital marketing suite formerly known as ExactTarget that you can use to build and customize journeys for visitors and customers to personalize their experience.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
 ---
 # [!DNL (Files) Salesforce Marketing Cloud] connection
 
 ## Overview {#overview}
 
-[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) is a digital marketing suite formerly known as ExactTarget that lets you build and customize journeys for visitors and customers to personalize their experience.
+[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) is a digital marketing suite formerly known as ExactTarget that you can use to build and customize journeys for visitors and customers to personalize their experience.
 
 To send audience data to [!DNL Salesforce Marketing Cloud], you must first [connect to the destination](#connect-destination) in Experience Platform, and then [set up a data import](#import-data-into-salesforce) from your storage location into [!DNL Salesforce Marketing Cloud].
 
@@ -38,7 +38,7 @@ Supported audiences by audience data type:
 
 ## Export type and frequency {#export-type-frequency}
 
-Refer to the table below for information about the destination export type and frequency.
+See the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 |---------|----------|---------|
@@ -51,7 +51,7 @@ Refer to the table below for information about the destination export type and f
 
 When setting up email marketing destinations with SFTP storage, Adobe recommends that you add certain IP ranges to your allowlist.
 
-Refer to [IP address allowlist for SFTP destinations](../cloud-storage/ip-address-allow-list.md) if you need to add Adobe IPs to your allowlist.
+See [IP address allowlist for SFTP destinations](../cloud-storage/ip-address-allow-list.md) if you need to add Adobe IPs to your allowlist.
 
 ## Connect to the destination {#connect}
 
@@ -112,7 +112,7 @@ See [Activate audience data to batch profile export destinations](../../ui/activ
 
 ### Destination attributes {#destination-attributes}
 
-When activating audiences to this destination, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, refer to [best practices when activating audiences to email marketing destinations](overview.md#best-practices).
+When activating audiences to this destination, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, see [best practices when activating audiences to email marketing destinations](overview.md#best-practices).
 
 ## Exported data {#exported-data}
 

@@ -74,7 +74,7 @@ Supported audiences by audience data type:
 
 ## Export type and frequency {#export-type-frequency}
 
-Refer to the table below for information about the destination export type and frequency.
+See the table below for information about the destination export type and frequency.
 
 | Item             | Type                           | Notes                                                                                                                                                                                                                                                                                                                  |
 |------------------|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -181,7 +181,7 @@ To verify if data has been exported successfully, check your [!DNL Amazon S3 Sto
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully created a dataflow to export batch data from Experience Platform to your [!DNL Acxiom] managed S3 location. You would need to contact your Acxiom representative with the name of the account, filename, and the bucket path so that processing can set up.
+You have successfully created a dataflow to export batch data from Experience Platform to your [!DNL Acxiom] managed S3 location. You would need to contact your Acxiom representative with the name of the account, filename, and the bucket path so that processing can set up.
 
 ## Data usage and governance {#data-usage-governance}
 

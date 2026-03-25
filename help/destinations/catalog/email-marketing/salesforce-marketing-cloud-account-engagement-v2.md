@@ -8,7 +8,7 @@ exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
 ---
 # [!DNL (V2) Salesforce Marketing Cloud Account Engagement] connection
 
-The [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) (formerly known as [!DNL Pardot]) destination lets you export your [!DNL Adobe Experience Platform] profile data to Salesforce's B2B marketing automation platform.
+The [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) (formerly known as [!DNL Pardot]) destination exports your [!DNL Adobe Experience Platform] profile data to Salesforce's B2B marketing automation platform.
 
 This integration enables seamless data synchronization between your customer profiles in [!DNL Adobe Experience Platform] and your marketing campaigns in [!DNL Salesforce Marketing Cloud Account Engagement].
 
@@ -213,7 +213,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Navigate to one of the audiences you had selected. Select the **[!DNL Activation data]** tab. The **[!UICONTROL Mapping ID]** column displays the name of the custom field which is generated within the [!DNL Marketing Cloud Account Engagement Prospects] page.
 ![Experience Platform UI screenshot example showing the Mapping ID for a selected segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/selected-segment-mapping-id.png)
 
-1. Log in to the [[!DNL Salesforce]](https://login.salesforce.com/) website. Then navigate to the **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** page and check if the prospects from the audience have been added/updated. Alternatively you can also access [[!DNL Account Engagement]](https://pi.pardot.com/) and access the **[!DNL Prospects]** page.
+1. Go to the [[!DNL Salesforce]](https://login.salesforce.com/) website. Then navigate to the **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** page and check if the prospects from the audience have been added/updated. Alternatively you can also access [[!DNL Account Engagement]](https://pi.pardot.com/) and access the **[!DNL Prospects]** page.
 ![Salesforce UI screenshot showing the Prospects page.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/prospects.png)
 
 1. To check if the prospects have been updated, select a prospect and verify if the custom prospect field has been updated with the Experience Platform audience status.

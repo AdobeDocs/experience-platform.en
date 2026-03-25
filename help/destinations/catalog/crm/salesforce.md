@@ -1,7 +1,7 @@
 ---
 keywords: crm;CRM;crm destinations;salesforce crm;salesforce crm destination
 title: Salesforce CRM connection
-description: The Salesforce CRM destination allows you to export your account data and activate it within Salesforce CRM for your business needs.
+description: Use the Salesforce CRM destination to export your account data and activate it within Salesforce CRM for your business needs.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
 ---
 # [!DNL Salesforce CRM] connection
@@ -150,7 +150,7 @@ Supported audiences by audience data type:
 
 ## Export type and frequency {#export-type-frequency}
 
-Refer to the table below for information about the destination export type and frequency.
+See the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 |---------|----------|---------|
@@ -304,7 +304,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Monitor the audience summary and ensure that the count of profiles corresponds to the count created within the segment.
 ![Experience Platform UI screenshot example showing Segment.](../../assets/catalog/crm/salesforce/segment.png)
 
-1. Finally, log in to the Salesforce website and validate if the profiles from the audience have been updated.
+1. Finally, go to the Salesforce website and validate if the profiles from the audience have been updated.
 
     **Working with Contacts**
 

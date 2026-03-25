@@ -19,7 +19,7 @@ To send profile data to HTTP endpoints, you must first [connect to the destinati
 
 ## Use cases {#use-cases}
 
-The HTTP API destination lets you export XDM profile data and audiences to generic HTTP endpoints. There, you can run your own analytics or perform any other operations you may need on profile data exported out of Experience Platform.
+Use the HTTP API destination to export XDM profile data and audiences to generic HTTP endpoints. There, you can run your own analytics or perform any other operations you may need on profile data exported out of Experience Platform.
 
 HTTP endpoints can be either customers' own systems or third-party solutions.
 
@@ -97,7 +97,7 @@ See the [public certificate endpoint documentation](../../../data-governance/mtl
 
 ## IP address allowlist {#ip-address-allowlist}
 
-To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the HTTP API destination. Refer to [IP address allowlist for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
+To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the HTTP API destination. See [IP address allowlist for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
 
 ## Supported authentication types {#supported-authentication-types}
 
@@ -230,8 +230,8 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Headers]**: Enter any custom headers that you want to be included in the destination calls, following this format: `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL HTTP Endpoint]**: The URL of the HTTP endpoint where you want to send the profile data to. This is your data receiving endpoint. If you are using mTLS, this endpoint must have TLS disabled and only mTLS enabled.
 * **[!UICONTROL Query parameters]**: Optionally, you can add query parameters to the HTTP endpoint URL. Format the query parameters you use like this: `parameter1=value&parameter2=value`.
-* **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the audiences you are exporting. **Note**: Segment names are only included for segments that are mapped to the destination. Unmapped segments that appear in the export will not include the `name` field. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
-* **[!UICONTROL Include Segment Timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
+* **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the audiences you are exporting. **Note**: Segment names are only included for segments that are mapped to the destination. Unmapped segments that appear in the export will not include the `name` field. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
+* **[!UICONTROL Include Segment Timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
 
 ### Enable alerts {#enable-alerts}
 

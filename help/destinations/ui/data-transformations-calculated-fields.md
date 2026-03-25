@@ -95,7 +95,7 @@ The functions below, specific to handling exports of arrays, or applying hashing
 
 ## Examples of functions used to perform data transformations {#examples}
 
-See examples and further information in the sections below for some of the functions listed above. For the rest of the listed functions, refer to the [general functions documentation in the Data Prep section](/help/data-prep/functions.md).
+See examples and further information in the sections below for some of the functions listed above. For the rest of the listed functions, see the [general functions documentation in the Data Prep section](/help/data-prep/functions.md).
 
 ### `array_to_string` function to export arrays {#array-to-string-function-export-arrays}
 

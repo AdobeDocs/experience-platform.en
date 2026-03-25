@@ -38,7 +38,7 @@ To export data from Experience Platform to your [!DNL SAP Commerce] account, you
 
 #### Generate a service key {#prerequisites-service-key}
 
-* The [!DNL SAP Commerce] service key lets you access the [!DNL SAP Subscription Billing] API through Experience Platform. Refer to the [!DNL SAP Commerce] [create a Service Key with Client ID and Client Secret](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) to create a service key. [!DNL SAP Commerce] requires the following:
+* The [!DNL SAP Commerce] service key provides access to the [!DNL SAP Subscription Billing] API through Experience Platform. See the [!DNL SAP Commerce] [create a Service Key with Client ID and Client Secret](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) to create a service key. [!DNL SAP Commerce] requires the following:
   * Client ID
   * Client secret
   * URL. The URL pattern is as follows: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. This value will be used later to obtain values for `Region` and `Endpoint`.
@@ -80,7 +80,7 @@ To create the custom references, log in to your [!DNL SAP Subscription Billing] 
 An example of how to create a custom **[!UICONTROL Reference Type]** within [!DNL SAP Subscription Billing] is shown below:
 ![Image showing where to create a custom reference in SAP Subscription Billing.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
-For additional guidance, refer to the [!DNL SAP Subscription Billing] [custom references](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27) documentation.
+For additional guidance, see the [!DNL SAP Subscription Billing] [custom references](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27) documentation.
 
 ### Gather required credentials {#gather-credentials}
 
@@ -300,7 +300,7 @@ When performing the [Schedule audience export](/help/destinations/ui/activate-se
 An example of the Schedule audience export step, with the location of the [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** highlighted, is shown below:
 ![Image from Experience Platform showing schedule audience export with Mapping IDs populated.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
 
-To do this, select each segment, then enter name of the custom reference from [!DNL SAP Subscription Billing] in the [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** destination connector field. For guidance on creating custom references, refer to the [Create custom references in [!DNL SAP Subscription Billing]](#prerequisites-custom-reference) section.
+To do this, select each segment, then enter name of the custom reference from [!DNL SAP Subscription Billing] in the [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** destination connector field. For guidance on creating custom references, see the [Create custom references in [!DNL SAP Subscription Billing]](#prerequisites-custom-reference) section.
 
 >[!IMPORTANT]
 >
@@ -330,7 +330,7 @@ Based on the image shown above where you have selected two audiences, the mappin
 
 To validate that you have correctly set up the destination, follow the steps below:
 
-Log in to the [!DNL SAP Subscription Billing] account, then navigate to the **[!UICONTROL Contacts]** page to check the audience statuses. The list can be configured to display columns for the custom references and display the corresponding audience statuses.
+Go to the [!DNL SAP Subscription Billing] account, then navigate to the **[!UICONTROL Contacts]** page to check the audience statuses. The list can be configured to display columns for the custom references and display the corresponding audience statuses.
 ![Image of SAP Subscription Billing showing the customer overview page with column headers showing the audience name and cells audience statuses](../../assets/catalog/ecommerce/sap-commerce/customer-overview.png)
 
 ## Data usage and governance {#data-usage-governance}
