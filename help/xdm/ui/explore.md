@@ -44,7 +44,7 @@ You can also use the search bar to narrow down results further.
 The resources displayed in search results are ordered first by title matches, then by description matches. In turn, the more word matches in either of these categories, the higher the resource appears in the list.
 
 When you have found the resource you want to explore, select its name from the list to view its structure in the canvas.
-<!--  ... -->
+
 ## Manage schemas, classes, field groups, and data types: actions and deletion {#xdm-resource-actions}
 
 Use this section when you need to manage or delete XDM resources, or when an action (such as delete) is unavailable and you need to understand why.
@@ -119,7 +119,7 @@ These constraints are reflected directly in the UI. When an action is unavailabl
 If you cannot delete a resource, review the conditions above to determine whether you need to update permissions, remove dependencies, or adjust your data model.
 
 For additional schema editing workflows in the canvas, see [Create and edit schemas in the UI](./resources/schemas.md).
-<!--  ... -->
+
 ## Explore an XDM resource in the canvas {#explore}
 
 Once you select a resource, its structure opens in the canvas.
