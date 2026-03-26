@@ -34,7 +34,7 @@ Experience Platform provides a suite of data hygiene capabilities to help you ma
 
 | Feature | Description |
 | --- | --- |
-| Multi-dataset and profile-only record delete (API only) | You can submit a single dataset ID, a comma-separated list of dataset IDs, or the literal `ALL` in `datasetId` to delete identities across one, many, or all datasets. You can also limit deletion to profile-related services by setting `targetServices` to `["identity","profile","ajo"]`, which leaves the datalake unchanged; this functionality is available via the Data Hygiene API only. See the [Record delete work orders guide](../../hygiene/api/workorder.md) for more details. |
+| Multi-dataset record delete (API only) | Delete identities across one, multiple, or all datasets in a single API request, simplifying data hygiene workflows. You can also restrict deletion to profile services only, leaving data lake records unchanged. See the [Record delete work orders guide](../../hygiene/api/workorder.md) for more details. |
 
 {style="table-layout:auto"}
 
