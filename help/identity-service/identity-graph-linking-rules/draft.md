@@ -18,6 +18,8 @@ You can also use the tool to rehearse configuration changes and to debug identit
 
 To access [!DNL Graph Simulation], navigate to the Identity Service workspace in the Adobe Experience Platform user interface and then select **[!UICONTROL Graph Simulation]**.
 
+![The Graph Simulation interface.]
+
 You can divide [!DNL Graph Simulation] into three sections:
 
 >[!BEGINTABS]
