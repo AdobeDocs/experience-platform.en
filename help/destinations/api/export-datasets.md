@@ -9,7 +9,7 @@ exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 
 >[!AVAILABILITY]
 >
->* This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package, Adobe Journey Optimizer, or Customer Journey Analytics. Contact your Adobe representative for more information.
+>* This functionality is available to customers who have purchased the [!DNL Real-Time CDP] Prime and Ultimate package, [!DNL Adobe Journey Optimizer], or Customer Journey Analytics. Contact your Adobe representative for more information.
 
 >[!IMPORTANT]
 >
@@ -26,7 +26,7 @@ exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 
 -->
 
-This article explains the workflow required to use the [!DNL Flow Service API] to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage].
+This article explains the workflow required to use the [!DNL Flow Service API] to export [datasets](/help/catalog/datasets/overview.md) from [!DNL Adobe Experience Platform] to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage].
 
 >[!TIP]
 >
@@ -34,9 +34,9 @@ This article explains the workflow required to use the [!DNL Flow Service API] t
 
 ## Datasets available for exporting {#datasets-to-export}
 
-The datasets that you can export depend on the Experience Platform application (Real-Time CDP, Adobe Journey Optimizer), the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller). 
+The datasets that you can export depend on the Experience Platform application ([!DNL Real-Time CDP], [!DNL Adobe Journey Optimizer]), the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller). 
 
-Refer to the [table on the UI tutorial page](/help/destinations/ui/export-datasets.md#datasets-to-export) to understand which datasets you can export.
+See the [table on the UI tutorial page](/help/destinations/ui/export-datasets.md#datasets-to-export) to understand which datasets you can export.
 
 ## Supported destinations {#supported-destinations}
 
@@ -53,7 +53,7 @@ Currently, you can export datasets to the cloud storage destinations highlighted
 
 ## Prerequisites {#prerequisites}
 
-Note the following prerequisites in order to export datasets:
+Note the following prerequisites to export datasets:
 
 * To export datasets to cloud storage destinations, you must have successfully [connected to a destination](/help/destinations/ui/connect-destination.md). If you haven't done so already, go to the [destinations catalog](/help/destinations/catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 * Profile datasets need to be enabled for use in Real-Time Customer Profile. [Read more](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) about how to enable this option. 
@@ -62,12 +62,12 @@ Note the following prerequisites in order to export datasets:
 
 ![Overview - the steps to create a destination and export datasets](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
-This guide requires a working understanding of the following components of Adobe Experience Platform:
+This guide requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
-* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): All data that is successfully ingested into Adobe Experience Platform is persisted within the [!DNL Data Lake] as datasets. A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Datasets also contain metadata that describes various aspects of the data they store. 
+* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): All data that is successfully ingested into [!DNL Adobe Experience Platform] is persisted within the [!DNL Data Lake] as datasets. A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Datasets also contain metadata that describes various aspects of the data they store. 
   * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you must know in order to export datasets to cloud storage destinations in Experience Platform.
+The following sections provide additional information that you must know to export datasets to cloud storage destinations in Experience Platform.
 
 ### Required permissions {#permissions}
 
@@ -81,7 +81,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values-headers}
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+To make calls to [!DNL Experience Platform] APIs, you must first complete the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -101,7 +101,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ### API reference documentation {#api-reference-documentation}
 
-You can find accompanying reference documentation for all the API operations in this tutorial. Refer to the [[!DNL Flow Service] - Destinations API documentation on the Adobe Developer website](https://developer.adobe.com/experience-platform-apis/references/destinations/). We recommend that you use this tutorial and the API reference documentation in parallel.
+You can find accompanying reference documentation for all the API operations in this tutorial. See the [[!DNL Flow Service] - Destinations API documentation on the Adobe Developer website](https://developer.adobe.com/experience-platform-apis/references/destinations/). We recommend that you use this tutorial and the API reference documentation in parallel.
 
 ### Glossary {#glossary}
 
@@ -123,7 +123,7 @@ Before starting the workflow to export a dataset, identify the connection spec a
 
 {style="table-layout:auto"}
 
-You need these IDs to construct various [!DNL Flow Service] entities. You also need to refer to parts of the [!DNL Connection Spec] itself to set up certain entities so you can retrieve the [!DNL Connection Spec] from [!DNL Flow Service APIs]. See the examples below of retrieving connection specs for all the destinations in the table:
+You need these IDs to construct various [!DNL Flow Service] entities. You also need to reference parts of the [!DNL Connection Spec] itself to set up certain entities so you can retrieve the [!DNL Connection Spec] from [!DNL Flow Service APIs]. See the examples below of retrieving connection specs for all the destinations in the table:
 
 >[!BEGINTABS]
 
@@ -443,7 +443,7 @@ Note that to retrieve eligible datasets, the [!DNL connection spec] ID used in t
 
 A successful response contains a list of datasets eligible for activation. These datasets can be used when constructing the source connection in the next step.
 
-For information about the various response parameters for each returned dataset, refer to the [Datasets API developer documentation](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
+For information about the various response parameters for each returned dataset, see the [Datasets API developer documentation](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
 
 ## Create a source connection {#create-source-connection}
 
@@ -822,7 +822,7 @@ Note the highlighted line with inline comments in the [!DNL connection spec] exa
 
 >[!ENDTABS]
 
-Using the properties specified in the authentication spec (i.e. `authSpec` from the response) you can create a base connection with the required credentials, specific to each destination type, as shown in the examples below:
+Using the properties specified in the authentication spec (that is `authSpec` from the response) you can create a base connection with the required credentials, specific to each destination type, as shown in the examples below:
 
 >[!BEGINTABS]
 
@@ -834,7 +834,7 @@ Using the properties specified in the authentication spec (i.e. `authSpec` from 
 
 >[!TIP]
 >
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) section of the Amazon S3 destination documentation page.
+>For information on how to obtain the required authentication credentials, see the [authenticate to destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) section of the Amazon S3 destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -885,7 +885,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) section of the Azure Blob Storage destination documentation page.
+>For information on how to obtain the required authentication credentials, see the [authenticate to destination](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) section of the Azure Blob Storage destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -935,7 +935,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) section of the Azure Data Lake Gen 2(ADLS Gen2) destination documentation page.
+>For information on how to obtain the required authentication credentials, see the [authenticate to destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) section of the Azure Data Lake Gen 2(ADLS Gen2) destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -988,7 +988,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->No authentication credentials are required for the Data Landing Zone destination. For more information, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) section of the Data Landing Zone destination documentation page.
+>No authentication credentials are required for the Data Landing Zone destination. For more information, see the [authenticate to destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) section of the Data Landing Zone destination documentation page.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1030,7 +1030,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) section of the Google Cloud Storage destination documentation page.
+>For information on how to obtain the required authentication credentials, see the [authenticate to destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) section of the Google Cloud Storage destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -1081,7 +1081,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) section of the SFTP destination documentation page.
+>For information on how to obtain the required authentication credentials, see the [authenticate to destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) section of the SFTP destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -1116,7 +1116,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) section of the SFTP destination documentation page.
+>For information on how to obtain the required authentication credentials, see the [authenticate to destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) section of the SFTP destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -1168,7 +1168,7 @@ Note the connection ID from the response. This ID will be required in the next s
 
 ![Diagram showing step 4 in the export datasets workflow](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
-Next, you need to create a target connection which stores the export parameters for your datasets. Export parameters include location, file format, compression, and other details. Refer to the `targetSpec` properties provided in the destination's connection spec to understand the supported properties for each destination type. Reference the tabs below for the `targetSpec` properties of all supported destinations.
+Next, you need to create a target connection which stores the export parameters for your datasets. Export parameters include location, file format, compression, and other details. See the `targetSpec` properties provided in the destination's connection spec to understand the supported properties for each destination type. Reference the tabs below for the `targetSpec` properties of all supported destinations.
 
 >[!IMPORTANT]
 >
@@ -1625,7 +1625,7 @@ By using the above spec, you can construct a target connection request specific 
 
 >[!TIP]
 >
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) section of the [!DNL Amazon S3] destination documentation page.
+>For information on how to obtain the required target parameters, see the [fill in destination details](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) section of the [!DNL Amazon S3] destination documentation page.
 >For other supported values of `datasetFileType`, see the API reference documentation.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
@@ -1678,7 +1678,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) section of the [!DNL Azure Blob Storage] destination documentation page.
+>For information on how to obtain the required target parameters, see the [fill in destination details](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) section of the [!DNL Azure Blob Storage] destination documentation page.
 >For other supported values of `datasetFileType`, see the API reference documentation.
 
 
@@ -1732,7 +1732,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) section of the Azure [!DNL Data Lake Gen 2(ADLS Gen2)] destination documentation page.
+>For information on how to obtain the required target parameters, see the [fill in destination details](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) section of the Azure [!DNL Data Lake Gen 2(ADLS Gen2)] destination documentation page.
 >For other supported values of `datasetFileType`, see the API reference documentation.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
@@ -1784,7 +1784,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) section of the [!DNL Data Landing Zone] destination documentation page.
+>For information on how to obtain the required target parameters, see the [fill in destination details](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) section of the [!DNL Data Landing Zone] destination documentation page.
 >For other supported values of `datasetFileType`, see the API reference documentation.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
@@ -1836,7 +1836,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) section of the [!DNL Google Cloud Storage] destination documentation page.
+>For information on how to obtain the required target parameters, see the [fill in destination details](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) section of the [!DNL Google Cloud Storage] destination documentation page.
 >For other supported values of `datasetFileType`, see the API reference documentation.
 
 
@@ -1890,7 +1890,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) section of the SFTP destination documentation page.
+>For information on how to obtain the required target parameters, see the [fill in destination details](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) section of the SFTP destination documentation page.
 >For other supported values of `datasetFileType`, see the API reference documentation.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
@@ -1988,11 +1988,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-The table below provides descriptions of all parameters in the `scheduleParams` section, which allows you to customize export times, frequency, location, and more for your dataset exports.
+The table below provides descriptions of all parameters in the `scheduleParams` section for customizing export times, frequency, location, and more for your dataset exports.
 
 | Parameter | Description |
 |---------|----------|
-| `exportMode` | Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, refer to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. The three available export options are: <br> **Full file - Once**: `"DAILY_FULL_EXPORT"` can only be used in combination with `timeUnit`:`day` and `interval`:`0` for a one-time full export of the dataset. Daily full exports of datasets are not supported. If you need daily exports, use the incremental export option. <br> **Incremental daily exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, and `interval` :`1` for daily incremental exports. <br> **Incremental hourly exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, and `interval` :`3`,`6`,`9`, or `12` for hourly incremental exports. |
+| `exportMode` | Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, see [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. The three available export options are: <br> **Full file - Once**: `"DAILY_FULL_EXPORT"` can only be used in combination with `timeUnit`:`day` and `interval`:`0` for a one-time full export of the dataset. Daily full exports of datasets are not supported. If you need daily exports, use the incremental export option. <br> **Incremental daily exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, and `interval` :`1` for daily incremental exports. <br> **Incremental hourly exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, and `interval` :`3`,`6`,`9`, or `12` for hourly incremental exports. |
 | `timeUnit` | Select `day` or `hour` depending on the frequency with which you want to export dataset files. |
 | `interval` | Select `1` when the `timeUnit` is day and `3`,`6`,`9`,`12` when the time unit is `hour`. |
 | `startTime` | The date and time in UNIX seconds when dataset exports should start. |
@@ -2057,11 +2057,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-The table below provides descriptions of all parameters in the `scheduleParams` section, which allows you to customize export times, frequency, location, and more for your dataset exports.
+The table below provides descriptions of all parameters in the `scheduleParams` section for customizing export times, frequency, location, and more for your dataset exports.
 
 | Parameter | Description |
 |---------|----------|
-| `exportMode` | Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, refer to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. The three available export options are: <br> **Full file - Once**: `"DAILY_FULL_EXPORT"` can only be used in combination with `timeUnit`:`day` and `interval`:`0` for a one-time full export of the dataset. Daily full exports of datasets are not supported. If you need daily exports, use the incremental export option. <br> **Incremental daily exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, and `interval` :`1` for daily incremental exports. <br> **Incremental hourly exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, and `interval` :`3`,`6`,`9`, or `12` for hourly incremental exports. |
+| `exportMode` | Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, see [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. The three available export options are: <br> **Full file - Once**: `"DAILY_FULL_EXPORT"` can only be used in combination with `timeUnit`:`day` and `interval`:`0` for a one-time full export of the dataset. Daily full exports of datasets are not supported. If you need daily exports, use the incremental export option. <br> **Incremental daily exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, and `interval` :`1` for daily incremental exports. <br> **Incremental hourly exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, and `interval` :`3`,`6`,`9`, or `12` for hourly incremental exports. |
 | `timeUnit` | Select `day` or `hour` depending on the frequency with which you want to export dataset files. |
 | `interval` | Select `1` when the `timeUnit` is day and `3`,`6`,`9`,`12` when the time unit is `hour`. |
 | `startTime` | The date and time in UNIX seconds when dataset exports should start. |
@@ -2127,11 +2127,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-The table below provides descriptions of all parameters in the `scheduleParams` section, which allows you to customize export times, frequency, location, and more for your dataset exports.
+The table below provides descriptions of all parameters in the `scheduleParams` section for customizing export times, frequency, location, and more for your dataset exports.
 
 | Parameter | Description |
 |---------|----------|
-| `exportMode` | Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, refer to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. The three available export options are: <br> **Full file - Once**: `"DAILY_FULL_EXPORT"` can only be used in combination with `timeUnit`:`day` and `interval`:`0` for a one-time full export of the dataset. Daily full exports of datasets are not supported. If you need daily exports, use the incremental export option. <br> **Incremental daily exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, and `interval` :`1` for daily incremental exports. <br> **Incremental hourly exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, and `interval` :`3`,`6`,`9`, or `12` for hourly incremental exports. |
+| `exportMode` | Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, see [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. The three available export options are: <br> **Full file - Once**: `"DAILY_FULL_EXPORT"` can only be used in combination with `timeUnit`:`day` and `interval`:`0` for a one-time full export of the dataset. Daily full exports of datasets are not supported. If you need daily exports, use the incremental export option. <br> **Incremental daily exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, and `interval` :`1` for daily incremental exports. <br> **Incremental hourly exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, and `interval` :`3`,`6`,`9`, or `12` for hourly incremental exports. |
 | `timeUnit` | Select `day` or `hour` depending on the frequency with which you want to export dataset files. |
 | `interval` | Select `1` when the `timeUnit` is day and `3`,`6`,`9`,`12` when the time unit is `hour`. |
 | `startTime` | The date and time in UNIX seconds when dataset exports should start. |
@@ -2197,11 +2197,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-The table below provides descriptions of all parameters in the `scheduleParams` section, which allows you to customize export times, frequency, location, and more for your dataset exports.
+The table below provides descriptions of all parameters in the `scheduleParams` section for customizing export times, frequency, location, and more for your dataset exports.
 
 | Parameter | Description |
 |---------|----------|
-| `exportMode` | Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, refer to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. The three available export options are: <br> **Full file - Once**: `"DAILY_FULL_EXPORT"` can only be used in combination with `timeUnit`:`day` and `interval`:`0` for a one-time full export of the dataset. Daily full exports of datasets are not supported. If you need daily exports, use the incremental export option. <br> **Incremental daily exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, and `interval` :`1` for daily incremental exports. <br> **Incremental hourly exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, and `interval` :`3`,`6`,`9`, or `12` for hourly incremental exports. |
+| `exportMode` | Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, see [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. The three available export options are: <br> **Full file - Once**: `"DAILY_FULL_EXPORT"` can only be used in combination with `timeUnit`:`day` and `interval`:`0` for a one-time full export of the dataset. Daily full exports of datasets are not supported. If you need daily exports, use the incremental export option. <br> **Incremental daily exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, and `interval` :`1` for daily incremental exports. <br> **Incremental hourly exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, and `interval` :`3`,`6`,`9`, or `12` for hourly incremental exports. |
 | `timeUnit` | Select `day` or `hour` depending on the frequency with which you want to export dataset files. |
 | `interval` | Select `1` when the `timeUnit` is day and `3`,`6`,`9`,`12` when the time unit is `hour`. |
 | `startTime` | The date and time in UNIX seconds when dataset exports should start. |
@@ -2266,11 +2266,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-The table below provides descriptions of all parameters in the `scheduleParams` section, which allows you to customize export times, frequency, location, and more for your dataset exports.
+The table below provides descriptions of all parameters in the `scheduleParams` section for customizing export times, frequency, location, and more for your dataset exports.
 
 | Parameter | Description |
 |---------|----------|
-| `exportMode` | Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, refer to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. The three available export options are: <br> **Full file - Once**: `"DAILY_FULL_EXPORT"` can only be used in combination with `timeUnit`:`day` and `interval`:`0` for a one-time full export of the dataset. Daily full exports of datasets are not supported. If you need daily exports, use the incremental export option. <br> **Incremental daily exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, and `interval` :`1` for daily incremental exports. <br> **Incremental hourly exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, and `interval` :`3`,`6`,`9`, or `12` for hourly incremental exports. |
+| `exportMode` | Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, see [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. The three available export options are: <br> **Full file - Once**: `"DAILY_FULL_EXPORT"` can only be used in combination with `timeUnit`:`day` and `interval`:`0` for a one-time full export of the dataset. Daily full exports of datasets are not supported. If you need daily exports, use the incremental export option. <br> **Incremental daily exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, and `interval` :`1` for daily incremental exports. <br> **Incremental hourly exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, and `interval` :`3`,`6`,`9`, or `12` for hourly incremental exports. |
 | `timeUnit` | Select `day` or `hour` depending on the frequency with which you want to export dataset files. |
 | `interval` | Select `1` when the `timeUnit` is day and `3`,`6`,`9`,`12` when the time unit is `hour`. |
 | `startTime` | The date and time in UNIX seconds when dataset exports should start. |
@@ -2336,11 +2336,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-The table below provides descriptions of all parameters in the `scheduleParams` section, which allows you to customize export times, frequency, location, and more for your dataset exports.
+The table below provides descriptions of all parameters in the `scheduleParams` section for customizing export times, frequency, location, and more for your dataset exports.
 
 | Parameter | Description |
 |---------|----------|
-| `exportMode` | Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, refer to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. The three available export options are: <br> **Full file - Once**: `"DAILY_FULL_EXPORT"` can only be used in combination with `timeUnit`:`day` and `interval`:`0` for a one-time full export of the dataset. Daily full exports of datasets are not supported. If you need daily exports, use the incremental export option. <br> **Incremental daily exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, and `interval` :`1` for daily incremental exports. <br> **Incremental hourly exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, and `interval` :`3`,`6`,`9`, or `12` for hourly incremental exports. |
+| `exportMode` | Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, see [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. The three available export options are: <br> **Full file - Once**: `"DAILY_FULL_EXPORT"` can only be used in combination with `timeUnit`:`day` and `interval`:`0` for a one-time full export of the dataset. Daily full exports of datasets are not supported. If you need daily exports, use the incremental export option. <br> **Incremental daily exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, and `interval` :`1` for daily incremental exports. <br> **Incremental hourly exports**: Select `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, and `interval` :`3`,`6`,`9`, or `12` for hourly incremental exports. |
 | `timeUnit` | Select `day` or `hour` depending on the frequency with which you want to export dataset files. |
 | `interval` | Select `1` when the `timeUnit` is day and `3`,`6`,`9`,`12` when the time unit is `hour`. |
 | `startTime` | The date and time in UNIX seconds when dataset exports should start. |
@@ -2471,7 +2471,7 @@ Note the difference in file format between the two file types, when compressed:
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. See [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
 
 ## Known limitations {#known-limitations}
 
@@ -2483,7 +2483,7 @@ View a [list of frequently asked questions](/help/destinations/ui/export-dataset
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully connected Experience Platform to one of your preferred batch cloud storage destinations and set up a dataflow to the respective destination to export datasets. See the following pages for more details, such as how to edit existing dataflows using the Flow Service API:
+You have successfully connected Experience Platform to one of your preferred batch cloud storage destinations and set up a dataflow to the respective destination to export datasets. See the following pages for more details, such as how to edit existing dataflows using the Flow Service API:
 
 * [Destinations overview](../home.md)
 * [Destinations catalog overview](../catalog/overview.md)

@@ -8,15 +8,15 @@ exl-id: a5452183-289c-49c3-9574-e09b0153dc00
 
 >[!NOTE]
 >
->The destination connector and documentation page are created and maintained by the [!DNL Merkury] team. For any inquiries or update requests, please contact your [!DNL Merkury] account representative.
+>The destination connector and documentation page are created and maintained by the [!DNL Merkury] team. For any inquiries or update requests, contact your [!DNL Merkury] account representative.
 
-## Overview
+## Overview {#overview}
 
 Use the [!DNL Merkury Enterprise Identity] destination to build more accurate, comprehensive, and insightful consumer profiles. With improved profile data, marketers can power better insights, segments, and models resulting in more accurate targeting and predictive modeling.
 
 ![A diagram showing the interconnection between Merkury and Experience Platform, including ingestion and activation](../../assets/catalog/data-partners/merkury-identity/media/image1.png)
 
-Follow the steps in this documentation page to create a [!DNL Merkury Identity] destination connection and activate audiences for identification and enrichment using the Adobe Experience Platform user interface.
+Follow the steps in this documentation page to create a [!DNL Merkury Identity] destination connection and activate audiences for identification and enrichment using the [!DNL Adobe Experience Platform] user interface.
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ Follow the steps in this documentation page to create a [!DNL Merkury Identity] 
 
 ![The Merkury Enterprise Identity destination card highlighted in the Experience Platform destinations catalog.](../../assets/catalog/data-partners/merkury-identity/media/image2.png)
 
-## Use Cases
+## Use Cases {#use-cases}
 
 The [!DNL Merkury Enterprise Identity] destination provides the ability to securely transfer consumer PII for the following [!DNL Merkury] capabilities:
 
@@ -34,9 +34,9 @@ The [!DNL Merkury Enterprise Identity] destination provides the ability to secur
 
 >[!NOTE]
 >
->These use cases are executed through a combination of both destination and source connectors. The customer would start by exporting their existing customer records for enrichment using this destination connector. [!DNL Merkury]'s service would search for the file, retrieve it, enrich it with [!DNL Merkury]'s data and generate a file. The customer would then use the corresponding [!DNL Merkury] Source connector source card to ingest the hydrated customer profiles back into Adobe Real-Time CDP.
+>These use cases are executed through a combination of both destination and source connectors. The customer would start by exporting their existing customer records for enrichment using this destination connector. [!DNL Merkury]'s service would search for the file, retrieve it, enrich it with [!DNL Merkury]'s data and generate a file. The customer would then use the corresponding [!DNL Merkury] Source connector source card to ingest the hydrated customer profiles back into Adobe [!DNL Real-Time CDP].
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 >[!IMPORTANT]
 >
@@ -49,9 +49,9 @@ The [!DNL Merkury Enterprise Identity] destination provides the ability to secur
 |---|---|---|
 |GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
 |IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
-|phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
-|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
+|ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "[!DNL Adobe Experience Cloud] ID", "[!DNL Adobe Experience Platform] ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
+|phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by [!DNL Adobe Experience Platform]. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
+|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by [!DNL Adobe Experience Platform]. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
 |extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
 
 {style="table-layout:auto"}
@@ -63,7 +63,7 @@ This section describes which type of audiences you can export to this destinatio
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -76,12 +76,12 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
 
-## Export type and frequency
+## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
 
@@ -92,7 +92,7 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
-## Connect to the destination
+## Connect to the destination {#connect}
 
 >[!IMPORTANT]
 >
@@ -100,7 +100,7 @@ Refer to the table below for information about the destination export type and f
 
 To connect to this destination, follow the steps described in the [[destination configuration tutorial]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). In the destination configuration workflow, fill in the fields listed in the two sections below.
 
-### Authenticate to destination
+### Authenticate to destination {#authenticate}
 
 To authenticate to the destination, fill in the required fields and select **Connect to destination**.
 
@@ -116,7 +116,7 @@ To access your bucket on Experience Platform, you need to provide valid values f
 
 ![new destination creation screen](../../assets/catalog/data-partners/merkury-identity/media/image4.png)
 
-### Fill in destination details
+### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
@@ -135,20 +135,20 @@ To configure details for the destination, fill in the required and optional fiel
 
 ![image of csv option](../../assets/catalog/data-partners/merkury-identity/media/image8.png)
 
-### Existing Account
+### Existing Account {#existing-account}
 
 Accounts already defined using the Merkury Enterprise Identity destination appear in a list pop-up. When selected, you can see details on the account in the right rail. View the example from the UI, when you navigate to **Destinations** > **Accounts**;
 
 ![A screenshot of destination account in destination accounts page](../../assets/catalog/data-partners/merkury-identity/media/image5.png)
 
 
-### Enable alerts
+### Enable alerts {#enable-alerts}
 
 You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts).
 
 When you are finished providing details for your destination connection, select **Next**.
 
-## Activate audiences to this destination
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 >
@@ -157,7 +157,7 @@ When you are finished providing details for your destination connection, select�
 
 Read [Activate audience data to batch profile export destinations](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) for instructions on activating audiences to this destination.
 
-## Mapping suggestions
+## Mapping suggestions {#mapping-suggestions}
 
 The correct processing of files on the [!DNL Merkury] side requires name and address elements. While not all elements are required, providing as much as possible will aid in successful matching.
 
@@ -178,14 +178,14 @@ Mapping suggestions are provided in the table below listing attributes on your d
 
 {style="table-layout:auto"}
 
-## Validate data export
+## Validate data export {#validate-data-export}
 
 To verify if data has been exported successfully, check your Amazon S3 Storage bucket, and make sure that the exported files contain the expected profile populations.
 
-## Data usage and governance
+## Data usage and governance {#data-usage-governance}
 
-All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. For detailed information on how Adobe Experience Platform enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
+All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
 
-## Next steps
+## Next steps {#next-steps}
 
-By following this tutorial, you have successfully created a dataflow to export profile data from Experience Platform to your [!DNL Merkury] managed S3 location. Next, you need to contact your [!DNL Merkury] representative with the name of the account, file names, and the bucket path so that processing can set up.
+You have successfully created a dataflow to export profile data from Experience Platform to your [!DNL Merkury] managed S3 location. Next, you need to contact your [!DNL Merkury] representative with the name of the account, file names, and the bucket path so that processing can set up.

@@ -1,14 +1,14 @@
 ---
 keywords: advertising destinations;destinations;platform destinations
 title: Advertising destinations overview
-description: Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
+description: Connect Adobe Experience Platform to a 3rd-party advertising platform (for example DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
 ---
 # Advertising destinations overview {#advertising-destinations}
 
 ## Overview {#overview}
 
-Connect Adobe Experience Platform to advertising platforms such as demand-side platforms (DSP), supply-side platforms (SSP), ad networks to share known and pseudonymous audiences to these platforms.
+Connect [!DNL Adobe Experience Platform] to advertising platforms such as demand-side platforms (DSP), supply-side platforms (SSP), ad networks to share known and pseudonymous audiences to these platforms.
 
 When connecting to an advertising destination, your audiences are sent as IDs to the destination platform, where they are mapped to an ID known by the destination platform.
 
@@ -18,11 +18,12 @@ Currently, Experience Platform supports the advertising destinations listed belo
 
 To understand the difference between connections and extensions, see [Connections](../../destination-types.md#connections) in the Destination Types and Categories page.
 
-### Connections
+### Connections {#connections}
 
 * [(Beta) Acxiom Audience Distribution](acxiom-audience-connection.md)
 * [(Beta) Acxiom Real ID Audience Connection](acxiom-real-id-audience-connection.md)
-* [Adobe Advertising Cloud connection](adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP connection](adobe-advertising-dsp-connection.md)
+* [Legacy Adobe Advertising Cloud DSP connection](adobe-advertising-cloud-dsp-connection-legacy.md)
 * [Amazon Ads connection](amazon-ads.md)
 * [Bombora connection](bombora.md)
 * [Criteo connection](criteo.md)
@@ -43,7 +44,7 @@ To understand the difference between connections and extensions, see [Connection
 * [(Beta) The Trade Desk CRM connection](tradedesk-emails.md)
 * [Yahoo/Verizon DataX](datax.md)
 
-### Extensions
+### Extensions {#extensions}
 
 * [Adobe Advertising Cloud extension](adobe-advertising-cloud.md)
 * [Awin Advertising Conversion Tag extension](awin-conversiontag.md)

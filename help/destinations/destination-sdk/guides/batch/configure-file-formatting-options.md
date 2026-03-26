@@ -7,13 +7,13 @@ exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
 
 ## Overview {#overview}
 
-Destination SDK allows you to extensively adjust the formatting and compression options of your exported files, to match any downstream requirements in your storage location. 
+Use Destination SDK to extensively adjust the formatting and compression options of your exported files, to match any downstream requirements in your storage location. 
 
 This page describes how to use Destination SDK to configure file formatting options for file-based destinations.
 
 ## Prerequisites {#prerequisites}
 
-Before advancing to the steps outlined below, please read the [Destination SDK getting started](../../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
+Before advancing to the steps outlined below, read the [Destination SDK getting started](../../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
 
 Adobe also recommends that you read and familiarize yourself with the following documentation before proceeding:
 
@@ -485,7 +485,7 @@ Below, you can see the resulting UI screen, based on the configuration above. Wh
 
 ![Screen recording showing the conditional file formatting option for CSV files.](../../assets/guides/batch/conditional-file-formatting.gif)
 
-### Complete API request which includes all options shown above
+### Complete API request which includes all options shown above {#complete-api-request}
 
 The API request below combines in one configuration all the options described in the sections above.
 
@@ -716,7 +716,7 @@ A successful response returns the destination configuration, including the uniqu
 A certain combination of file formatting options can lead to undesired file export results. 
 Adobe recommends against selecting the following combination of CSV options: 
 
-```
+```properties
 
 nullValue -> ""
 quote -> "
@@ -744,4 +744,4 @@ James,Smith,"","\"\""
 
 ## Next steps {#next-steps}
 
-By reading this article, you now know how to set up custom file formatting options for your exported files, by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](../../../ui/activate-batch-profile-destinations.md) to export data to the destination.
+You now know how to set up custom file formatting options for your exported files, by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](../../../ui/activate-batch-profile-destinations.md) to export data to the destination.

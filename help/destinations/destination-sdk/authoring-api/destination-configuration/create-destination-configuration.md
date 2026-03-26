@@ -28,7 +28,7 @@ For a detailed description of the capabilities that you can configure through th
 
 ## Getting started with destination configuration API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Create a destination configuration {#create}
 
@@ -198,11 +198,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`customerDataFields.default`|String|Defines the default value from an `enum` list.|
 |`customerDataFields.pattern` | String | Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field. <br/><br/> See [Customer data fields](../../functionality/destination-configuration/customer-data-fields.md) for detailed information about these settings.|
 |`uiAttributes.documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html#catalog) for your destination. Use `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `https://www.adobe.com/go/destinations-moviestar-en`. Note that this link works only after Adobe sets your destination live and the documentation is published. <br/><br/> See [UI attributes](../../functionality/destination-configuration/ui-attributes.md) for detailed information about these settings. ![Experience Platform UI image showing the documentation link.](../../assets/authoring-api/destination-configuration/documentation-url.png "Documentation URL"){width="100" zoomable="yes"}|
-|`uiAttributes.category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html#destination-categories). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br/><br/> See [UI attributes](../../functionality/destination-configuration/ui-attributes.md) for detailed information about these settings. |
+|`uiAttributes.category` | String | Refers to the category assigned to your destination in [!DNL Adobe Experience Platform]. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html#destination-categories). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br/><br/> See [UI attributes](../../functionality/destination-configuration/ui-attributes.md) for detailed information about these settings. |
 |`uiAttributes.connectionType` | String | The type of connection, depending on the destination. Supported values: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul> |
 |`uiAttributes.frequency` | String | Refers to the type of data export supported by the destination. Set to `Streaming` for API-based integrations, or `Batch` when you export files to your destinations. |
 |`identityNamespaces.externalId.acceptsAttributes` | Boolean | Indicates if customers can map standard profile attributes to the identity that you are configuring. |
-|`identityNamespaces.externalId.acceptsCustomNamespaces` | Boolean |  Indicates if customers can map identities belonging to [custom namespaces](/help/identity-service/features/namespaces.md#manage-namespaces) to the identity that you are configuring. |
+|`identityNamespaces.externalId.acceptsCustomNamespaces` | Boolean |  Indicates if customers can map identities belonging to [custom namespaces](/help/identity-service/features/namespaces.md#create-namespaces) to the identity that you are configuring. |
 |`identityNamespaces.externalId.transformation` | String | _Not shown in example configuration_. Used, for example, when the [!DNL Experience Platform] customer has plain email addresses as an attribute and your platform only accepts hashed emails. This is where you would provide the transformation that needs to be applied (for example, transform the email to lowercase, then hash).   |
 |`identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Indicates which [standard identity namespaces](/help/identity-service/features/namespaces.md#standard) (for example, IDFA) customers can map to the identity that you are configuring. <br> When you use `acceptedGlobalNamespaces`, you can use `"requiredTransformation":"sha256(lower($))"` to lowercase and hash email addresses or phone numbers. |
 |`destinationDelivery.authenticationRule` | String | Indicates how [!DNL Experience Platform] customers connect to your destination. Accepted values are `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` if Experience Platform customers log into your system via a username and password, a bearer token, or another method of authentication. For example, you would select this option if you also selected `authType: OAUTH2` or `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> Use `PLATFORM_AUTHENTICATION` if there is a global authentication system between Adobe and your destination and the [!DNL Experience Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must create a credentials object using the [credentials API](../../credentials-api/create-credential-configuration.md) configuration and pass the credential object's ID in the `authenticationId` parameter in the [destination delivery](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) configuration. </li><li>Use `NONE` if no authentication is required to send data to your destination platform. </li></ul> |
@@ -215,7 +215,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`schemaConfig.profileFields` | Array | When you add predefined `profileFields` as shown in the configuration above, users will have the option of mapping Experience Platform attributes to the predefined attributes on your destination's side. |
 |`schemaConfig.profileRequired` | Boolean | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination's side, as shown in the example configuration above.|
 |`schemaConfig.segmentRequired` | Boolean | Always use `segmentRequired:true`. |
-|`schemaConfig.identityRequired` | Boolean | Use `true` if you users should be able to map identity namespaces from Experience Platform to your desired schema. |
+|`schemaConfig.identityRequired` | Boolean | Use `true` if users should be able to map identity namespaces from Experience Platform to your desired schema. |
 
 {style="table-layout:auto"}
 
@@ -227,11 +227,11 @@ A successful response returns HTTP status 200 with details of your newly created
 
 +++
 
-## API error handling
+## API error handling {#error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
-## Next steps
+## Next steps {#next-steps}
 
 After reading this document, you now know how to create a new destination configuration through the Destination SDK `/authoring/destinations` API endpoint.
 

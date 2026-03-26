@@ -9,7 +9,7 @@ exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
 
 Use the enhanced file export capabilities to access enhanced customization functionality when exporting files out of Experience Platform: 
 
-* Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
+* Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names).
 * Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * Ability to select the [file type](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) of the exported file.
 * [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -23,7 +23,7 @@ This functionality is supported by the six cloud storage cards listed below:
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) 
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-This article explains the workflow required to use the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) to export qualified profiles from Adobe Experience Platform to one of the cloud storage locations linked above.
+This article explains the workflow required to use the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) to export qualified profiles from [!DNL Adobe Experience Platform] to one of the cloud storage locations linked above.
 
 >[!TIP]
 >
@@ -41,13 +41,13 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
-This guide requires a working understanding of the following components of Adobe Experience Platform:
+This guide requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
 *   [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-*   [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] allows you to build audiences and generate audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-Time Customer Profile] data.
+*   [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] builds audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-Time Customer Profile] data.
 *   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you need to know in order to activate data to file-based destinations in Experience Platform.
+The following sections provide additional information that you need to know to activate data to file-based destinations in Experience Platform.
 
 ### Required permissions {#permissions}
 
@@ -61,7 +61,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values-headers}
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+To make calls to [!DNL Experience Platform] APIs, you must first complete the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -81,7 +81,7 @@ All requests that contain a payload (`POST`, `PUT`, `PATCH`) require an addition
 
 ### API reference documentation {#api-reference-documentation}
 
-You can find accompanying reference documentation for all the API operations in this tutorial. Refer to the [Flow Service - Destinations API documentation on the Adobe Developer website](https://developer.adobe.com/experience-platform-apis/references/destinations/). We recommend that you use this tutorial and the API reference documentation in parallel.
+You can find accompanying reference documentation for all the API operations in this tutorial. See the [Flow Service - Destinations API documentation on the Adobe Developer website](https://developer.adobe.com/experience-platform-apis/references/destinations/). We recommend that you use this tutorial and the API reference documentation in parallel.
 
 ### Glossary {#glossary}
 
@@ -104,7 +104,7 @@ Before starting the workflow to export profiles, identify the connection spec an
 
 {style="table-layout:auto"}
 
-You need these IDs to construct various the flow service entities in the next steps of this tutorial. You also need to refer to parts of the connection spec itself to set up certain entities so you can retrieve the Connection Spec from Flow Service APIs. See the examples below of retrieving connection specs for all the destinations in the table:
+You need these IDs to construct various the flow service entities in the next steps of this tutorial. You also need to reference parts of the connection spec itself to set up certain entities so you can retrieve the Connection Spec from Flow Service APIs. See the examples below of retrieving connection specs for all the destinations in the table:
 
 >[!BEGINTABS]
 
@@ -697,7 +697,7 @@ Note the highlighted line with inline comments in the [!DNL connection spec] exa
 
 >[!ENDTABS]
 
-Using the properties specified in the authentication spec (i.e. `authSpec` from the response) you can create a base connection with the required credentials, specific to each destination type, as shown in the examples below:
+Using the properties specified in the authentication spec (that is `authSpec` from the response) you can create a base connection with the required credentials, specific to each destination type, as shown in the examples below:
 
 >[!BEGINTABS]
 
@@ -709,7 +709,7 @@ Using the properties specified in the authentication spec (i.e. `authSpec` from 
 
 >[!TIP]
 >
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) section of the Amazon S3 destination documentation page.
+>For information on how to obtain the required authentication credentials, see the [authenticate to destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) section of the Amazon S3 destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -743,7 +743,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) section of the Amazon S3 destination documentation page.
+>For information on how to obtain the required authentication credentials, see the [authenticate to destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) section of the Amazon S3 destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -793,7 +793,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) section of the Azure Blob Storage destination documentation page.
+>For information on how to obtain the required authentication credentials, see the [authenticate to destination](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) section of the Azure Blob Storage destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -843,7 +843,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) section of the Azure Data Lake Gen 2(ADLS Gen2) destination documentation page.
+>For information on how to obtain the required authentication credentials, see the [authenticate to destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) section of the Azure Data Lake Gen 2(ADLS Gen2) destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -896,7 +896,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->No authentication credentials are required for the Data Landing Zone destination. For more information, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) section of the Data Landing Zone destination documentation page.
+>No authentication credentials are required for the Data Landing Zone destination. For more information, see the [authenticate to destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) section of the Data Landing Zone destination documentation page.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -934,7 +934,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) section of the Google Cloud Storage destination documentation page.
+>For information on how to obtain the required authentication credentials, see the [authenticate to destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) section of the Google Cloud Storage destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -985,7 +985,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) section of the SFTP destination documentation page.
+>For information on how to obtain the required authentication credentials, see the [authenticate to destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) section of the SFTP destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -1031,7 +1031,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) section of the SFTP destination documentation page.
+>For information on how to obtain the required authentication credentials, see the [authenticate to destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) section of the SFTP destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -1088,7 +1088,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-### Add encryption to exported files
+### Add encryption to exported files {#add-encryption}
 
 Optionally, you can add encryption to your exported files. To do this, you need to add items from the `encryption` object. See the request example below with the mandatory parameters highlighted:
 
@@ -1198,7 +1198,7 @@ Note the connection ID from the response. This ID will be required in the next s
 
 Next, you need to create a target connection. [Target connections](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) store the export parameters for the exported audiences. Export parameters include export location, file format, compression, and other details. For example, for CSV files, you can select several export options. Get extensive information about all supported CSV export options in the [file formatting configurations page](/help/destinations/ui/batch-destinations-file-formatting-options.md). 
 
-Refer to the `targetSpec` properties provided in the destination's `connection spec` to understand the supported properties for each destination type. Reference the tabs below for the `targetSpec` properties of all supported destinations.
+See the `targetSpec` properties provided in the destination's `connection spec` to understand the supported properties for each destination type. Reference the tabs below for the `targetSpec` properties of all supported destinations.
 
 >[!BEGINTABS]
 
@@ -2398,7 +2398,7 @@ By using the above spec, you can construct a target connection request specific 
 
 >[!TIP]
 >
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) section of the [!DNL Amazon S3] destination documentation page.
+>For information on how to obtain the required target parameters, see the [fill in destination details](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) section of the [!DNL Amazon S3] destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -2434,7 +2434,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For extensive information about the available CSV options for file export, refer to the [file formatting configurations page](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>For extensive information about the available CSV options for file export, see the [file formatting configurations page](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2492,7 +2492,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) section of the [!DNL Azure Blob Storage] destination documentation page.
+>For information on how to obtain the required target parameters, see the [fill in destination details](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) section of the [!DNL Azure Blob Storage] destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -2528,7 +2528,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For extensive information about the available CSV options for file export, refer to the [file formatting configurations page](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>For extensive information about the available CSV options for file export, see the [file formatting configurations page](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2586,7 +2586,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) section of the Azure [!DNL Data Lake Gen 2(ADLS Gen2)] destination documentation page.
+>For information on how to obtain the required target parameters, see the [fill in destination details](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) section of the Azure [!DNL Data Lake Gen 2(ADLS Gen2)] destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -2621,7 +2621,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For extensive information about the available CSV options for file export, refer to the [file formatting configurations page](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>For extensive information about the available CSV options for file export, see the [file formatting configurations page](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2679,7 +2679,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) section of the [!DNL Data Landing Zone] destination documentation page.
+>For information on how to obtain the required target parameters, see the [fill in destination details](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) section of the [!DNL Data Landing Zone] destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -2714,7 +2714,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For extensive information about the available CSV options for file export, refer to the [file formatting configurations page](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>For extensive information about the available CSV options for file export, see the [file formatting configurations page](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2772,7 +2772,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) section of the [!DNL Google Cloud Storage] destination documentation page.
+>For information on how to obtain the required target parameters, see the [fill in destination details](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) section of the [!DNL Google Cloud Storage] destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -2808,7 +2808,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For extensive information about the available CSV options for file export, refer to the [file formatting configurations page](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>For extensive information about the available CSV options for file export, see the [file formatting configurations page](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2866,7 +2866,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For information on how to obtain the required target parameters, refer to the [fill in destination details](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) section of the SFTP destination documentation page.
+>For information on how to obtain the required target parameters, see the [fill in destination details](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) section of the SFTP destination documentation page.
 
 Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
 
@@ -2901,7 +2901,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->For extensive information about the available CSV options for file export, refer to the [file formatting configurations page](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>For extensive information about the available CSV options for file export, see the [file formatting configurations page](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -3269,7 +3269,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Note the Dataflow ID from the response. This ID will be required in later steps.
 
-### Add audiences to the export
+### Add audiences to the export {#add-audiences}
 
 In this step, you can also select which audiences you want to export to the destination. For extensive information about this step and the request format to add an audience to the dataflow, view the examples in the [Update a destination dataflow](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) section of the API reference documentation.
 
@@ -3288,7 +3288,7 @@ For example, to obtain the following mapping shown in the UI, you would need to 
 
 ![Example of mapping step](/help/destinations/assets/api/file-based-segment-export/mapping-example.png)
 
-### Create an input schema
+### Create an input schema {#create-input-schema}
 
 To create an input schema, you first need to retrieve your [union schema](/help/profile/ui/union-schema.md) and the identities that can be exported to the destination. This is the schema of attributes and identities which you can select as your source mapping. 
 
@@ -3492,7 +3492,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ View available identities to use in the input schema
 
-The response returns the identities that you can use when creating the input schema. Note that this response returns both [standard](/help/identity-service/features/namespaces.md#standard) and [custom](/help/identity-service/features/namespaces.md#manage-namespaces) identity namespaces that you set up in Experience Platform. 
+The response returns the identities that you can use when creating the input schema. Note that this response returns both [standard](/help/identity-service/features/namespaces.md#standard) and [custom](/help/identity-service/features/namespaces.md#create-namespaces) identity namespaces that you set up in Experience Platform. 
 
 ```json
 
@@ -3739,7 +3739,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 The ID in the response represents the unique identifier of the input schema that you have created. Copy the ID from the response as you will reuse this in a later step.
 
-### Create an output schema
+### Create an output schema {#create-output-schema}
 
 Next, you must set up the output schema for your export. First, you need to find and inspect your existing partner schema.  
 
@@ -4901,11 +4901,11 @@ You can find information about the [various parameters returned by the Dataflow 
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. See [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully connected Experience Platform to one of your preferred cloud storage destinations and set up a dataflow to the respective destination to export audiences. See the following pages for more details, such as how to edit existing dataflows using the Flow Service API:
+You have successfully connected Experience Platform to one of your preferred cloud storage destinations and set up a dataflow to the respective destination to export audiences. See the following pages for more details, such as how to edit existing dataflows using the Flow Service API:
 
 * [Destinations overview](../home.md)
 * [Destinations Catalog overview](../catalog/overview.md)

@@ -11,57 +11,57 @@ exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
 >
 > This destination is available to [Adobe Real-Time Customer Data Platform Prime and Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 
-Use this destination to activate audiences from Real-Time CDP to Audience Manager and Adobe Analytics.
+Use this destination to activate audiences from [!DNL Real-Time CDP] to Audience Manager and [!DNL Adobe Analytics].
 
-To send audiences to Adobe Analytics, you need an Audience Manager license. For more details, see the [Audience Analytics overview](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=en).
+To send audiences to [!DNL Adobe Analytics], you need an Audience Manager license. For more details, see the [Audience Analytics overview](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=en).
 
-To send audiences to other Adobe solutions, use the direct connections from Real-Time CDP to [Adobe Target](../personalization/adobe-target-connection.md), [Adobe Advertising](../advertising/adobe-advertising-cloud-connection.md), [Adobe Campaign](../email-marketing/adobe-campaign.md) and [Marketo Engage](../adobe/marketo-engage.md).
+To send audiences to other Adobe solutions, use the direct connections from [!DNL Real-Time CDP] to [Adobe Target](../personalization/adobe-target-connection.md), [Adobe Advertising](../advertising/adobe-advertising-dsp-connection.md), [Adobe Campaign](../email-marketing/adobe-campaign.md) and [Marketo Engage](../adobe/marketo-engage.md).
 
 >[!IMPORTANT]
 >
->This destination replaces the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) from Real-Time Customer Data Platform to various Experience Cloud solutions.
+>This destination replaces the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) from [!DNL Real-Time Customer Data Platform] to various Experience Cloud solutions.
 > 
->If you are already sharing audiences from Real-Time CDP to Audience Manager and other Experience Cloud solutions via the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), you must contact Customer Care to disable the legacy integration before using this destination.
+>If you are already sharing audiences from [!DNL Real-Time CDP] to Audience Manager and other Experience Cloud solutions via the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), you must contact Customer Care to disable the legacy integration before using this destination.
 
 ![The Experience Cloud Audiences destination, highlighted in the destinations catalog.](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png)
 
 ## Use cases and benefits {#use-cases}
 
-To help you better understand how and when you should use the [!UICONTROL Experience Cloud Audiences] destination, here are sample use cases that Real-Time CDP customers can solve by using this destination.
+To help you better understand how and when you should use the [!UICONTROL Experience Cloud Audiences] destination, here are sample use cases that [!DNL Real-Time CDP] customers can solve by using this destination.
 
 ### Enable Data Management Platform use cases {#dmp-use-cases}
 
-In Audience Manager, you can use Real-Time CDP audiences for Data Management Platform use cases, such as:
+In Audience Manager, you can use [!DNL Real-Time CDP] audiences for Data Management Platform use cases, such as:
 
 * Adding [third-party data](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html#third-party-data) to your segments;
 * [Algorithmic modeling](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html);
-* Activating your audiences to cookie-based destinations that are not yet supported in the Real-Time CDP destinations catalog.
+* Activating your audiences to cookie-based destinations that are not yet supported in the [!DNL Real-Time CDP] destinations catalog.
 
 ### Granular control of exported audiences {#segments-control}
 
-To select which audiences to export to Audience Manager and beyond, use the new self-service audience-sharing integration via the Experience Cloud Audiences destination.  This allows you to determine which audiences you want to share with other Experience Cloud solutions and which audiences you want to keep in Real-Time CDP exclusively.
+To select which audiences to export to Audience Manager and beyond, use the new self-service audience-sharing integration via the Experience Cloud Audiences destination.  Use this to determine which audiences you want to share with other Experience Cloud solutions and which audiences you want to keep in [!DNL Real-Time CDP] exclusively.
 
 The legacy audience-sharing integration did not allow for a granular control of which audiences should be exported to Audience Manager and beyond.
 
-### Share Real-Time CDP audiences with Adobe Analytics {#share-audiences-with-analytics}
+### Share [!DNL Real-Time CDP] audiences with [!DNL Adobe Analytics] {#share-audiences-with-analytics}
 
-Audiences that you send to the Experience Cloud Audiences destination do not appear automatically in Adobe Analytics.
+Audiences that you send to the Experience Cloud Audiences destination do not appear automatically in [!DNL Adobe Analytics].
 
-Before you can send audiences to Adobe Analytics, you must [implement the Experience Cloud Identity Service for Analytics and Audience Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=en).
+Before you can send audiences to [!DNL Adobe Analytics], you must [implement the Experience Cloud Identity Service for Analytics and Audience Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=en).
 
 >[!IMPORTANT]
 >
->To send audiences from Real-Time CDP to Adobe Analytics through the Experience Cloud Audiences destination, you must have an Audience Manager license.
+>To send audiences from [!DNL Real-Time CDP] to [!DNL Adobe Analytics] through the Experience Cloud Audiences destination, you must have an Audience Manager license.
 
-### Share Real-Time CDP audiences with other Experience Cloud solutions {#share-segments-with-other-solutions}
+### Share [!DNL Real-Time CDP] audiences with other Experience Cloud solutions {#share-segments-with-other-solutions}
 
-You can use the Real-Time CDP Audiences destination card to share audiences with other Experience Cloud solutions.
+You can use the [!DNL Real-Time CDP] Audiences destination card to share audiences with other Experience Cloud solutions.
 
 However, Adobe strongly recommends using the following dedicated destination cards if you want to share audiences with these solutions:
 
 * [Adobe Campaign](../email-marketing/adobe-campaign.md)
 * [Adobe Target](../personalization/adobe-target-connection.md)
-* [Advertising Cloud](../advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP](../advertising/adobe-advertising-dsp-connection.md)
 * [Marketo](../adobe/marketo-engage.md)
 
 ## Prerequisites {#prerequisites}
@@ -69,18 +69,18 @@ However, Adobe strongly recommends using the following dedicated destination car
 >[!IMPORTANT]
 >
 > * You need an Audience Manager license to enable the [Data Management Platform use cases](#dmp-use-cases) mentioned further above.
-> * You *do* need an Audience Manager license to share Real-Time CDP audiences with Adobe Analytics.
-> * You *do not need* an Audience Manager license to share Real-Time CDP audiences with Adobe Advertising Cloud, Adobe Target, Marketo, and other Experience Cloud solutions, mentioned in the [section above](#share-segments-with-other-solutions).
+> * You *do* need an Audience Manager license to share [!DNL Real-Time CDP] audiences with [!DNL Adobe Analytics].
+> * You *do not need* an Audience Manager license to share [!DNL Real-Time CDP] audiences with [!DNL Adobe Advertising Cloud], [!DNL Adobe Target], Marketo, and other Experience Cloud solutions, mentioned in the [section above](#share-segments-with-other-solutions).
 
-### For customers who are using the legacy audience-sharing solution
+### For customers who are using the legacy audience-sharing solution {#legacy-audience-sharing}
 
-If you are already sharing audiences from Real-Time CDP to Audience Manager and other Experience Cloud solutions via the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), you must contact Customer Care to disable the legacy integration.
+If you are already sharing audiences from [!DNL Real-Time CDP] to Audience Manager and other Experience Cloud solutions via the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), you must contact Customer Care to disable the legacy integration.
 
 The turnaround time to resolve the deprovisioning ticket is six business days or less. After the existing legacy integration has been disabled, you can proceed to [create a connection](#connect) via the self-service destination card. 
 
 >[!IMPORTANT]
 >
->The audience export from Real-Time CDP to your other solutions is stopped in the time between the ticket resolution and the time that a new connection is established through the destination card. You can minimize this downtime by creating the connection via the destination card after the ticket is closed.  
+>The audience export from [!DNL Real-Time CDP] to your other solutions is stopped in the time between the ticket resolution and the time that a new connection is established through the destination card. You can minimize this downtime by creating the connection via the destination card after the ticket is closed.  
 
 ## Known limitations and callouts {#known-limitations}
 
@@ -93,7 +93,7 @@ Note the following known limitations and important callouts while using the Expe
 
 ### Latency when activating audiences {#audience-activation-latency}
 
-There is a four-hour latency between the time that audiences are first activated in Real-Time CDP and the time they are ready to be used in Audience Manager and other Experience Cloud solutions.
+There is a four-hour latency between the time that audiences are first activated in [!DNL Real-Time CDP] and the time they are ready to be used in Audience Manager and other Experience Cloud solutions.
 
 It can take up to 24 hours for audiences to be fully available in Audience Manager for all use-cases. It can take up to 48 hours for audiences from Experience Cloud Audiences to appear in Audience Manager reports.
 
@@ -105,10 +105,10 @@ The profiles that are exported to the [!UICONTROL Experience Cloud Audiences] de
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|ECID|Experience Cloud ID| A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
-|GAID|Google Advertising ID| Profiles ingested into Real-Time CDP with a primary identity of Google Advertising ID (GAID) can be exported to this destination.|
-|IDFA|Apple ID for Advertisers| Profiles ingested into Real-Time CDP with a primary identity of Apple ID for Advertisers (IDFA) can be exported to this destination.|
-|email_lc_sha256| Email addresses hashed with the SHA256 algorithm|Profiles ingested into Real-Time CDP with a primary identity of hashed email address can be exported to this destination.|
+|ECID|Experience Cloud ID| A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "[!DNL Adobe Experience Cloud] ID", "[!DNL Adobe Experience Platform] ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
+|GAID|Google Advertising ID| Profiles ingested into [!DNL Real-Time CDP] with a primary identity of Google Advertising ID (GAID) can be exported to this destination.|
+|IDFA|Apple ID for Advertisers| Profiles ingested into [!DNL Real-Time CDP] with a primary identity of Apple ID for Advertisers (IDFA) can be exported to this destination.|
+|email_lc_sha256| Email addresses hashed with the SHA256 algorithm|Profiles ingested into [!DNL Real-Time CDP] with a primary identity of hashed email address can be exported to this destination.|
 
 {style="table-layout:auto"}
 
@@ -119,7 +119,7 @@ This section describes which type of audience you can export to this destination
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -132,7 +132,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -144,14 +144,14 @@ Refer to the table below for information about the destination export type and f
 | Item | Type | Notes |
 |---------|----------|---------|
 | Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience keyed off the identities listed in the section above.|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. When a profile is updated in Real-Time CDP based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. When a profile is updated in [!DNL Real-Time CDP] based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -174,7 +174,7 @@ To configure details for the destination, fill in the required and optional fiel
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination. No [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) is required and no [scheduling step](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) is available for this destination.
@@ -183,29 +183,29 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 To validate successful data export, you can check that your audiences have successfully made it through to your desired Experience Cloud solution.
 
-### Validate data in Audience Manager
+### Validate data in Audience Manager {#validate-audience-manager}
 
-Your Real-Time CDP audiences appear in Audience Manager as [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-signals), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-traits), and [segments](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-segments). You can verify in Audience Manager if the data has appeared as described in the documentation links above. 
+Your [!DNL Real-Time CDP] audiences appear in Audience Manager as [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-signals), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-traits), and [segments](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-segments). You can verify in Audience Manager if the data has appeared as described in the documentation links above. 
 
-Segment names begin populating in Audience Manager 15 minutes after the audiences had been sent from Real-Time CDP.
+Segment names begin populating in Audience Manager 15 minutes after the audiences had been sent from [!DNL Real-Time CDP].
 
-Segment population begins flowing into Audience Manager within 6 hours from being sent from Real-Time CDP, and is updated every 24 hours in Audience Manager.
+Segment population begins flowing into Audience Manager within 6 hours from being sent from [!DNL Real-Time CDP], and is updated every 24 hours in Audience Manager.
 
-The full population will be visible in Audience Manager after 72 hours, and populations will continue to flow to Audience Manager unless the audience is removed from the destination in Real-Time CDP.
+The full population will be visible in Audience Manager after 72 hours, and populations will continue to flow to Audience Manager unless the audience is removed from the destination in [!DNL Real-Time CDP].
 
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Real-Time CDP] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
 
-Data governance in Real-Time CDP is enforced by both [data usage labels](/help/data-governance/labels/reference.md) and marketing actions.
-Data usage labels transfer to applications but marketing actions do not. This means that once they land in Audience Manager, audiences from Real-Time CDP can be exported to any available destinations. In Audience Manager, you can use [data export controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html) to block audiences from being exported to certain destinations.
+Data governance in [!DNL Real-Time CDP] is enforced by both [data usage labels](/help/data-governance/labels/reference.md) and marketing actions.
+Data usage labels transfer to applications but marketing actions do not. This means that once they land in Audience Manager, audiences from [!DNL Real-Time CDP] can be exported to any available destinations. In Audience Manager, you can use [data export controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html) to block audiences from being exported to certain destinations.
 
-Audiences marked with the [!DNL HIPAA] marketing action are not sent from Real-Time CDP to Audience Manager.
+Audiences marked with the [!DNL HIPAA] marketing action are not sent from [!DNL Real-Time CDP] to Audience Manager.
 
-### Permissions management in Audience Manager
+### Permissions management in Audience Manager {#audience-manager-permissions}
 
 Audiences and traits in Audience Manager are subject to [Role-Based Access Controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) (RBAC). 
 
-Audiences exported from Real-Time CDP are assigned to a specific datasource in Audience Manager called **[!UICONTROL Experience Platform Segments]**.
+Audiences exported from [!DNL Real-Time CDP] are assigned to a specific datasource in Audience Manager called **[!UICONTROL Experience Platform Segments]**.
 
-To allow only certain users access to the audiences, use [Role-Based Access Controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) to configure user access to the audiences and traits created from Real-Time CDP audiences.
+To allow only certain users access to the audiences, use [Role-Based Access Controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) to configure user access to the audiences and traits created from [!DNL Real-Time CDP] audiences.

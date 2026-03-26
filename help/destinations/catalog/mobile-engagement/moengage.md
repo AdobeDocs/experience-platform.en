@@ -10,31 +10,31 @@ exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
 
 Use the [!DNL Moengage] destination to connect and map your Adobe data (user attributes, segments and events) to MoEngage in real-time. Customers can then act on this data, delivering personalized, targeted experiences.
 
-With Adobe, the integration is very simple and intuitive. Simply take any Adobe user profile, and map it to a MoEngage user attribute.
+With Adobe, the integration is very simple and intuitive. Take any Adobe user profile, and map it to a MoEngage user attribute.
 
 >[!IMPORTANT]
 >
->This destination connector and documentation page are created and maintained by the *Moengage* team. For any inquiries or update requests, please contact them directly at *`https://help.moengage.com/hc/en-us`.*
+>This destination connector and documentation page are created and maintained by the *Moengage* team. For any inquiries or update requests, contact them directly at *`https://help.moengage.com/hc/en-us`.*
 
 ## Use cases {#use-cases}
 
-A marketer wants to target a user segment (built in Adobe Experience Platform) via [!DNL Moengage] campaigns. Also, they want to personalize campaign content based on attributes from Adobe Experience Platform profiles. With this integration, users and attributes are updated in MoEngage as soon as segments and profiles are updated in Adobe Experience Platform.
+A marketer wants to target a user segment (built in [!DNL Adobe Experience Platform]) via [!DNL Moengage] campaigns. Also, they want to personalize campaign content based on attributes from [!DNL Adobe Experience Platform] profiles. With this integration, users and attributes are updated in MoEngage as soon as segments and profiles are updated in [!DNL Adobe Experience Platform].
 
 ## Prerequisites {#prerequisites}
 
-Before you can send your Adobe Experience Platform data to [!DNL Moengage], note the following prerequisites:
+Before you can send your [!DNL Adobe Experience Platform] data to [!DNL Moengage], note the following prerequisites:
 
-* To use the MoEngage destination with Adobe Experience Platform, users must first have access to their [!DNL Moengage] Account. Visit the following page to sign up or login to your MoEngage account: https://app.moengage.com
+* To use the MoEngage destination with [!DNL Adobe Experience Platform], users must first have access to their [!DNL Moengage] Account. Visit the following page to sign up or login to your MoEngage account: https://app.moengage.com
 
 
 ## Supported identities {#supported-identities}
 
 [!DNL Moengage] supports the activation of identities described in the table below.
 
-|Target Identity| Description                                                                              | Considerations                                                                         |
+|Target Identity| Description | Considerations |
 |---|------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
 |user_id| Unique identifier that uniquely identifies a user profile in the [!DNL Moengage] system. | This identifier supports string type. Either one of user_id or anonymous_id is required |
-|anonymous_id| Another identifier for an unknown user profile - meaning a profile that does not exist in the system. | This identifier supports string type. Either one of user_id or anonymous_id is required  |
+|anonymous_id| Another identifier for an unknown user profile - meaning a profile that does not exist in the system. | This identifier supports string type. Either one of user_id or anonymous_id is required |
 
 {style="table-layout:auto"}
 
@@ -45,7 +45,7 @@ This section describes which types of audiences you can export to this destinati
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -58,7 +58,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -67,9 +67,9 @@ Supported audiences by audience data type:
 
 Refer to the table below for information about the destination export type and frequency.
 
-| Item | Type | Notes                                                                                                                                                                                                                                                                                                                              |
+| Item | Type | Notes |
 |---------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment (audience) with the identifiers (user_id, anonymous_id) along with custom attributes defined by you exported to [!DNL Moengage].                                                                                                                                                        |
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment (audience) with the identifiers (user_id, anonymous_id) along with custom attributes defined by you exported to [!DNL Moengage]. |
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -77,7 +77,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -93,7 +93,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 ![Moengage Destination Authentication](../../assets/catalog/mobile-engagement/moengage/settings.png)
 
-* **[!UICONTROL USERNAME]**: DATA APP ID of  settings page of [!DNL Moengage] dashboard.
+* **[!UICONTROL USERNAME]**: DATA APP ID of settings page of [!DNL Moengage] dashboard.
 * **[!UICONTROL PASSWORD]**: DATA APP KEY from settings page of [!DNL Moengage] dashboard.
 
 ![Moengage Destination Authentication](../../assets/catalog/mobile-engagement/moengage/destination_details.png)
@@ -108,10 +108,10 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
@@ -165,7 +165,7 @@ To add more mappings, repeat the previous steps.
 
 ## Exported data / Validate data export {#exported-data}
 
-To verify if data has been exported successfully to the [!DNL Moengage] destination, go to the user profile in your [!DNL Moengage] account. Here, you should find a user attribute named `AEPSegments`, created automatically and the other custom attributes that have been mapped in the earlier steps in Adobe Experience Platform.
+To verify if data has been exported successfully to the [!DNL Moengage] destination, go to the user profile in your [!DNL Moengage] account. Here, you should find a user attribute named `AEPSegments`, created automatically and the other custom attributes that have been mapped in the earlier steps in [!DNL Adobe Experience Platform].
 
 `AEPSegments` is an array-type attribute in [!DNL Moengage]. It lists all of the Adobe audience names that the user is associated with in Experience Platform.
  
