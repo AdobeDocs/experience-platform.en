@@ -35,7 +35,7 @@ A technology company launched a new product and wants to drive awareness among c
 
 | Target Identity | Description | Considerations |
 |---|---|---|
-| `email` | Plain text email addresses | Only plain text email addresses are supported by the [!DNL Microsoft Ads Customer Match] connection. Experience Platform automatically hashes email addresses on export to match Microsoft's requirements. |
+| `email` | Plain text email addresses | Only plain text (unhashed) email addresses are supported as **source** fields in the mapping step. Pre-hashed source fields are not supported. Experience Platform always hashes email addresses before exporting them to [!DNL Microsoft Ads]. |
 
 {style="table-layout:auto"}
 
@@ -169,7 +169,7 @@ In the **[!UICONTROL Mapping]** step, you must map the email identity from your 
 
 >[!IMPORTANT]
 >
->You must use unhashed (plain text) source fields. Do not use pre-hashed source identities such as `Emails (SHA256, lowercased)`. Experience Platform automatically hashes the email addresses on export to match Microsoft's requirements.
+>You must map plain text (unhashed) email addresses as **source** fields. Pre-hashed source identities such as `Emails (SHA256, lowercased)` are not supported. Experience Platform always hashes email addresses before exporting them to [!DNL Microsoft Ads].
 
 ![UI image showing the mapping step with IdentityMap Email mapped to Identity email.](../../assets/catalog/advertising/microsoft-ads-customer-match/mapping.png)
 
