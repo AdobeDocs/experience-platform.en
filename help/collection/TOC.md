@@ -12,6 +12,12 @@ role: Developer
 
 + [Overview](home.md)
 + [Permissions](permissions.md)
++ Identity {#identity}
+  + [Overview](identity/overview.md)
+  + [First-party device IDs](identity/first-party-device-ids.md)
+  + [Unified identity support (Beta)](identity/unified-identity-support.md)
+  + [Cross-domain sharing](identity/cross-domain-sharing.md)
+  + [Mobile apps to mobile web/WebViews](identity/mobile-to-web.md)
 + BrightScript {#brightscript}
   + [BrightScript overview](brightscript/brs-overview.md)
 + JavaScript {#js}
@@ -93,10 +99,6 @@ role: Developer
   + [Configure a CSP](use-cases/configuring-a-csp.md)
   + [Debugging](use-cases/debugging.md)
   + [Event deduplication](use-cases/event-duplication.md)
-  + Identity {#identity}
-    + [Overview](use-cases/identity/id-overview.md)
-    + [First-party device IDs](use-cases/identity/first-party-device-ids.md)
-    + [ID sharing](use-cases/identity/id-sharing.md)
   + MCP {#mcp}
     + [ChatGPT apps](use-cases/mcp/chatgpt.md)
   + [Multiple SDK instances](use-cases/multiple-instances.md)
