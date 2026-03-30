@@ -85,8 +85,8 @@ To configure details for the destination, fill in the fields below.
 ## Activate audiences to this destination {#activate} 
 >[!IMPORTANT]
 >
->- To activate data, you need the **View Destinations**, **Activate Destinations**, **View Profiles**, and **View Segments** ![access control permissions](/help/access-control/home.md#permissions). Read the ![access control overview](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) or contact your product administrator to obtain the required permissions.<br>
->- To export identities, you need the **View Identity Graph** ![access control permission](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).
+>- To activate data, you need the **View Destinations**, **Activate Destinations**, **View Profiles**, and **View Segments** ![access control permissions](/help/access-control/home.md#permissions). Read the ![access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.<br>
+>- To export identities, you need the **View Identity Graph** ![access control permission](/help/access-control/home.md#permissions).
 
 <br>
 
