@@ -56,11 +56,11 @@ To create a new account, select **[!UICONTROL New account]** and then provide a 
 
 ### Connect to Experience Platform on Azure {#azure}
 
-You can connect your [!DNL Snowflake] account to Experience Platform on Azure withkey-pair authentication. 
+You can connect your [!DNL Snowflake] account to Experience Platform on Azure with key-pair authentication. 
 
 To use key-pair authentication, select **[!UICONTROL KeyPair authentication]**, provide values for your account, username, private key, private key passphrase, database, and warehouse, then select **[!UICONTROL Connect to source]**. 
 
-![The account key-pair authentication interface.](../../../../images/tutorials/create/snowflake/key-pair-auth.png)
+![The account key-pair authentication interface.](../../../../images/tutorials/create/snowflake/new.png)
 
 With key-pair authentication, you must generate a 2048-bit RSA key pair and then provide the following values when creating an account for your [!DNL Snowflake] source.
 
