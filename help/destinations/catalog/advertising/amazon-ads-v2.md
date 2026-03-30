@@ -22,7 +22,7 @@ To learn more about Ads Data Manager, see:
 
 ## Use cases {#use-cases}
 
-You can use *[!DNL Amazon Ads v2]* destination, for below purposes.
+To help you better understand how and when you should use the *[!DNL Amazon Ads v2]* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
 ### Audience ingestion and activation {#activation-and-targeting}
 
@@ -149,17 +149,20 @@ When you are finished providing details for your destination connection, select 
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
-### Map attributes and identities {#map}
+### Mandatory mappings {#map}
 
-Map identity fields (email, phone, address, and external IDs) as shown below.
+The *[!DNL Amazon Ads v2]* destination requires you to configure the following mappings for successful data activation.
+
+|Source field | Target field | Description |
+|---------|----------|---------|
+| 'IdentityMap: Email_LC_SHA256 or 'IdentityMap: Email'| `Identity: email` | When your source field contains unhashed attributes, check the Apply transformation option, to have Experience Platform automatically hash the data on activation.|
+| `xdm: homeAddress.countryCode` | `Identity: countryCode` | Country of the user (2-character ISO code) |
 
 ![Adobe to Amazon Ads mapping](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-mapping.png)
 
 ### Mapping best practices {#mapping-best-practices}
 
-For best results, Include countryCode (2-character ISO). Example (US, IN, DE etc.)
-
-You can combine first-party identifiers (such as email or phone) with partner-provided identifiers when both are available. This allows Amazon Ads to use multiple identity signals during audience matching.
+Combine first-party identifiers (such as phone, address, etc.) with partner-provided identifiers. This allows Amazon Ads to use multiple identity signals during audience matching leading to better match rates.
 
 Use partner-provided identifiers only when they are populated in your source data. If a mapped partner identifier field is empty or not present for a given profile, it will be ignored during audience matching and will not contribute to match rates.
 
