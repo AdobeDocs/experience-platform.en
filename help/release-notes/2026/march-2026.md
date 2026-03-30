@@ -21,6 +21,7 @@ New features and updates to existing features in Adobe Experience Platform:
 
 - [Advanced data lifecycle management](#advanced-data-lifecycle-management)
 - [Agent Orchestrator](#agent-orchestrator)
+- [Capacity](#capacity)
 - [Datastreams](#datastreams)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
@@ -53,6 +54,19 @@ Use Agent Orchestrator to build and deploy AI-powered agents that automate workf
 {style="table-layout:auto"}
 
 For more information, read the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+
+## Capacity {#capacity}
+
+Capacity provides a comprehensive view of your organization's [guardrails](../../rtcdp/guardrails/overview.md) and gives recommendations on how to resolve potential capacity violations by allocating your capacities on a sandbox level.
+
+**New feature**
+
+| Feature | Description |
+| ------- | ----------- |
+| Edge segmentation throughput | You can now see and manage guardrails related to edge segmentation throughput. For more information, read the [Capacity overview](/help/landing/license-usage-and-guardrails/capacity.md#edge-segmentation-throughput). |
+| Support for monitoring edge datastreams | Real-time monitoring for your edge datastreams is now available, providing transparency into throughput and other metrics. For more information, read the [monitoring edge guide](/help/dataflows/ui/monitor-edge.md). |
+
+For more information, please read the [Capacity overview](../../landing/license-usage-and-guardrails/capacity.md).
 
 ## Datastreams {#datastreams}
 
