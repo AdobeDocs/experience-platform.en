@@ -1,7 +1,6 @@
 ---
 title: Acxiom Real ID™ Audience Connection
 description: Use the [!DNL Acxiom Real ID™ Audience Connection] destination to enhance audiences with [!DNL Acxiom's Real ID] technology and activate audiences to multiple platforms, such as [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], and more.
-badge: 
 ---
 # [!DNL Acxiom Real ID™ Audience Connection] destination 
 
