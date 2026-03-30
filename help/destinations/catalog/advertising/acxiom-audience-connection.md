@@ -90,7 +90,7 @@ To configure details for the destination, fill in the fields below.
 
 <br>
 
-Read ![Activate audience data to batch profile export destinations](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) for instructions on activating audiences to this destination.
+Read ![Activate audience data to batch profile export destinations](/help/destinations/ui/activate/activate-batch-profile-destinations) for instructions on activating audiences to this destination.
 
 <br>
 
