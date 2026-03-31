@@ -1,65 +1,67 @@
 ---
 title: Reddit Custom Audience
-description: Reddit Ads connect brands to people who are actively exploring their passions and problems in real time. By pairing high-intent, community-driven conversations with flexible ad formats and robust targeting, Reddit Ads help advertisers reach engaged audiences, drive performance outcomes, and learn directly from the communities that shape culture online. This guide is for advertisers and media teams using Adobe Experience Platform to send audiences to Reddit Ads. It covers what you need to connect your accounts, map identities, and activate segments.
+description: Reddit Ads connect brands to people who are actively exploring their passions and problems in real time. By pairing high-intent, community-driven conversations with flexible ad formats and robust targeting, Reddit Ads help advertisers reach engaged audiences, drive performance outcomes, and learn directly from the communities that shape culture online. This guide is for advertisers and media teams using Adobe Experience Platform to send audiences to Reddit Ads. It covers what you need to connect your accounts, map identities, and activate audiences.
+last-substantial-update: 2026-03-31
 ---
 
 # [!DNL Reddit Custom Audience] connection {#reddit-custom-audience-connection}
 
-
 ## Overview {#overview}
 
-**Reddit Ads** connect brands to people who are actively exploring their passions and problems in real time. By pairing *high-intent, community-driven* conversations with flexible *ad formats* and *robust targeting*, **Reddit Ads** help advertisers reach engaged audiences, drive performance outcomes, and learn directly from the communities that shape culture online.
+[!DNL Reddit Ads] connect brands to people who are actively exploring their passions and problems in real time. By pairing high-intent, community-driven conversations with flexible ad formats and robust targeting, [!DNL Reddit Ads] help advertisers reach engaged audiences, drive performance outcomes, and learn directly from the communities that shape culture online.
 
-This guide is for **advertisers and media teams** using **Adobe Experience Platform** to send audiences to **Reddit Ads**. It covers what you need to connect your accounts, map identities, and activate segments.
+This guide is for advertisers and media teams using [!DNL Adobe Experience Platform] to send audiences to [!DNL Reddit Ads]. It covers what you need to connect your accounts, map identities, and activate audiences.
 
 >[!IMPORTANT]
 >
->The destination connector and documentation page are created and maintained by the Reddit team. For any inquiries or update requests, please contact them directly at adsapi-partner-support@reddit.com*
+>This destination connector and documentation page are created and maintained by the [!DNL Reddit] team. For any inquiries or update requests, contact them directly at <adsapi-partner-support@reddit.com>.
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Reddit Custom Audiences destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Reddit Custom Audience] destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
-### Use case #1 {#use-case-1}
+### Retargeting existing customers with personalized offers {#use-case-1}
 
-An online retailer wants to reach existing customers through social platforms and show them personalized offers based on their previous orders. The online retailer can ingest **email addresses** and device IDs (**IDFA**  & **GAID**) from their own CRM to Adobe Experience Platform, build audiences from their own offline data, and send these audiences to Reddit Ads Platform, optimizing their advertising spending.
+An online retailer wants to reach existing customers through social platforms and show them personalized offers based on their previous orders. The online retailer can ingest email addresses and device IDs (IDFA and GAID) from their own CRM to [!DNL Adobe Experience Platform], build audiences from their own offline data, and send these audiences to [!DNL Reddit Ads], optimizing their advertising spending.
 
 ## Prerequisites {#prerequisites}
-Before configuring this destination, make sure you meet/collect the following prerequisites:
 
-* **Reddit Ads account** that is allowed to use custom audiences / customer lists (per Reddit’s current product rules).
-* **Permission to authorize the connection** — someone who can log into Reddit and approve access for Experience Platform to manage audiences on behalf of the ad account.
-* **Reddit Ad Account ID** — the identifier for the ad account where audiences should be created. Your team may label this in the connection screen as Reddit Ad Account ID or similar. If you are unsure where to find it, you can check your ads account ID in [Accounts](https://ads.reddit.com/accounts). (*ex: a2_1b2c34d*). 
+Before configuring this destination, make sure you meet the following prerequisites:
+
+* A [!DNL Reddit Ads] account that is allowed to use custom audiences and customer lists.
+* Permission to authorize the connection. This must be a user who can sign in to [!DNL Reddit] and approve access for [!DNL Experience Platform] to manage audiences on behalf of the ad account.
+* Your [!DNL Reddit] Ad Account ID: the identifier for the ad account where audiences are created. You can find your ad account ID in [Accounts](https://ads.reddit.com/accounts). For example: `a2_1b2c34d`.
 
 ## Supported identities {#supported-identities}
 
-Reddit Custom Audiences supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Reddit Custom Audience] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-|Target Identity|Description|Considerations|
-|---|---|---|
-|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
-|maid|Google Advertising ID **or** Apple ID for Advertisers, both hashed with the SHA256 algorithm| Map either GAID or IDFA onto **maid**. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
+| Target Identity | Description | Considerations |
+| --- | --- | --- |
+| email_lc_sha256 | Email addresses hashed with the SHA256 algorithm | Both plain text and SHA256 hashed email addresses are supported by [!DNL Adobe Experience Platform]. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option so that [!DNL Platform] automatically hashes the data on activation. |
+| maid | Google Advertising ID or Apple ID for Advertisers, both hashed with the SHA256 algorithm | Map either GAID or IDFA onto **maid**. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option so that [!DNL Platform] automatically hashes the data on activation. |
 
 {style="table-layout:auto"}
 
 ## Supported audiences {#supported-audiences}
 
+This section describes which types of audiences you can export to this destination.
 
-This section describes which type of audiences you can export to this destination.
-
-| Audience origin | Supported | Description | 
----------|----------|----------|
-| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
-| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the Segmentation Service. Read about the [various audience origins](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#customize). |
+| Audience origin | Supported | Description |
+| --- | --- | --- |
+| [!DNL Segmentation Service] | Yes | Audiences generated through the [!DNL Experience Platform] [Segmentation Service](../../../segmentation/home.md). |
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the Segmentation Service. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). |
 
 {style="table-layout:auto"}
 
 Supported audiences by data type:
-| Audience data type | Supported | Description | Use cases | 
----------|----------|----------|----------|
-| [!DNL People audiences] | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns.| Frequent buyers, cart abandoners |
-| [!DNL Account audiences] | Yes | Target individuals within specific organizations for account-based marketing strategies.| B2B marketing |
-| [!DNL Prospect audiences] | Yes | Target individuals who are not yet customers but share characteristics with your target audience.| Prospecting with third-party data |
+
+| Audience data type | Supported | Description | Use cases |
+| --- | --- | --- | --- |
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -68,40 +70,39 @@ Supported audiences by data type:
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
-| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the YourDestination destination. |
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| --- | --- | --- |
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL Reddit Custom Audience] destination. |
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
->To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
-
 ### Authenticate to destination {#authenticate}
+
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![alt text](../../assets/catalog/advertising/redditcustomaudience/configure_new_destination_fields.png)
+![The Reddit Custom Audience destination authentication screen showing fields required to connect.](../../assets/catalog/advertising/redditcustomaudience/configure_new_destination_fields.png)
 
-* You will now be redirected to Sign in with **Reddit** (if logged out) and **allow** the requested permissions so the platform can create audiences and update membership. After reviewing the permissions, click **Allow**.
+You are redirected to sign in with [!DNL Reddit]. After reviewing the requested permissions, select **[!UICONTROL Allow]** so that [!DNL Experience Platform] can create audiences and update membership on behalf of your ad account.
 
-![alt text](../../assets/catalog/advertising/redditcustomaudience/reddit_oauth.png)
-
+![The Reddit OAuth permission screen.](../../assets/catalog/advertising/redditcustomaudience/reddit_oauth.png)
 
 ### Fill in destination details {#destination-details}
 
-* To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![alt text](../../assets/catalog/advertising/redditcustomaudience/reddit_account_details.png)
+![The Reddit Custom Audience destination details screen.](../../assets/catalog/advertising/redditcustomaudience/reddit_account_details.png)
 
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future. Can use the name of your Reddit Account.
-*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Ad Account ID]**: Your Reddit **Ad Account ID**.
+* **[!UICONTROL Name]**: A name by which you recognize this destination.
+* **[!UICONTROL Description]**: A description that helps you identify this destination.
+* **[!UICONTROL Ad Account ID]**: Your [!DNL Reddit] Ad Account ID.
 
 ### Enable alerts {#enable-alerts}
 
@@ -112,36 +113,36 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
-
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ### Map attributes and identities {#map}
 
-The following target identity namespace(s) must be mapped depending on the use case:
+The following target identity namespaces must be mapped depending on the use case:
 
 | Source Field | Target Field | Notes |
----------|----------|---------|
-| ex: email | email_lc_sha256 | Your source field can be hashed or unhashed, even though Reddit only accepts hashed values. You can force hashing the email before it’s sent by checking the “Apply transformation" |
-| ex:maid | maid | Your source field can be hashed or unhashed, even though Reddit only accepts hashed values. You can force hashing the maid before it’s sent by checking the “Apply transformation" |
+| --- | --- | --- |
+| Email (plain text or hashed) | email_lc_sha256 | Your source field can be hashed or unhashed. [!DNL Reddit] only accepts hashed values. Enable **[!UICONTROL Apply transformation]** so that [!DNL Experience Platform] hashes the email before sending. |
+| MAID (plain text or hashed) | maid | Your source field can be hashed or unhashed. [!DNL Reddit] only accepts hashed values. Enable **[!UICONTROL Apply transformation]** so that [!DNL Experience Platform] hashes the value before sending. |
 
-It is MANDATORY to map atleast one of the values.
+You must map at least one of the identities.
 
-![alt text](../../assets/catalog/advertising/redditcustomaudience/mapping.png)
+![The identity mapping screen showing source and target fields configured for Reddit Custom Audience.](../../assets/catalog/advertising/redditcustomaudience/mapping.png)
 
 ## Exported data / Validate data export {#exported-data}
 
-* After activating your audiences, you can see them in your Reddit's Ads Manager account.
+After activating your audiences, you can see them in your [!DNL Reddit] Ads Manager account.
 
-* Audiences newly created in Reddit will show up in a pending state. Once your dataflow runs and profiles are pushed out, Reddit will match the profile against Reddit users. Once data is processed you will see the audience status in Reddit change to Valid. *Audience size needs [≥ 1,000](https://ads-api.reddit.com/docs/v3/manage-customer-lists) users to be considered* **Valid**. You will see the audience status as **Invalid** if you don’t have the *required audience size*.
-![alt text](../../assets/catalog/advertising/redditcustomaudience/see_audience_in_reddit.png)
+Audiences newly created in [!DNL Reddit] appear in a pending state. Once your dataflow runs and profiles are exported, [!DNL Reddit] matches the profiles against [!DNL Reddit] users. Once data is processed, the audience status changes to **[!UICONTROL Valid]**. Audience size must reach [1,000 users or more](https://ads-api.reddit.com/docs/v3/manage-customer-lists) to be considered valid. Audiences that do not meet the required size are shown as **[!UICONTROL Invalid]**.
 
-This is how the payload to Reddit looks like:
+![The Reddit Ads Manager showing an exported audience and its status.](../../assets/catalog/advertising/redditcustomaudience/see_audience_in_reddit.png)
 
-```
+The following is an example of the payload sent to [!DNL Reddit]:
+
+```json
 {
   "data": {
     "action_type": "ADD",
@@ -157,8 +158,8 @@ This is how the payload to Reddit looks like:
     ]
   }
 }
-
 ```
+
 See the [Reddit API documentation](https://ads-api.reddit.com/docs/v3/operations/Update%20Custom%20Audience%20Users) for additional details.
 
 ## Data usage and governance {#data-usage-governance}
@@ -167,5 +168,4 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-* See the Reddit's [API Documenation](https://ads-api.reddit.com/docs/v3/operations/Update%20Custom%20Audience%20Users) for details about how the custom audiences endpoint functions.
-
+See the [Reddit API documentation](https://ads-api.reddit.com/docs/v3/operations/Update%20Custom%20Audience%20Users) for details about how the custom audiences endpoint functions.
