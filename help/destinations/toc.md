@@ -76,6 +76,7 @@ role: Admin,User
         * [Adobe Advertising Cloud extension](./catalog/advertising/adobe-advertising-cloud.md)
         * [Adform connection](./catalog/advertising/adform.md)
         * [Amazon Ads connection](./catalog/advertising/amazon-ads.md)
+        * [Amazon Ads v2 connection](./catalog/advertising/amazon-ads-v2.md)
         * [Awin Advertiser Conversion Tag extension](./catalog/advertising/awin-conversiontag.md)
         * [Awin Advertiser Mastertag extension](./catalog/advertising/awin-mastertag.md)
         * [Bing Ads Universal Event Tracking (UET) extension](./catalog/advertising/bing-ads.md)
