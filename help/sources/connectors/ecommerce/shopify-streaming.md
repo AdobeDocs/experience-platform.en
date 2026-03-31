@@ -120,7 +120,7 @@ curl -X POST \
 
 | Parameter | Description |
 | --- | --- | 
-| `webhook.address` | The http endpoint where streaming messages are sent. The template for the webhook is: `https://dcs.adobedc.net/collection/%7BINLET_ID%7D?{x-adobe-flow-id}={FLOW_ID}.` |
+| `webhook.address` | The http endpoint where streaming messages are sent. The template for the webhook is: `https://dcs.adobedc.net/collection/{INLET_ID}?x-adobe-flow-id={FLOW_ID}.` |
 | `webhook.topic` | The topic of your webhook subscription. For more information, read the [[!DNL Shopify] webhook event topics guide](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
 | `webhook.format` | The format of your data. |
 

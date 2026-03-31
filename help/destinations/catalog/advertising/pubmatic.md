@@ -15,7 +15,7 @@ There are two destinations available that let you send audience data to the PubM
 
 1. PubMatic Connect
 
-   During the initial activation, this destination will automatically register the audiences in the PubMatic platform and use the internal Adobe Experience Platform ID for mapping.
+   During the initial activation, this destination will automatically register the audiences in the PubMatic platform and use the internal [!DNL Adobe Experience Platform] ID for mapping.
 
 2. PubMatic Connect (Custom Audience ID Mapping)
 
@@ -29,11 +29,11 @@ There are two destinations available that let you send audience data to the PubM
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL PubMatic Connect] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL PubMatic Connect] destination, here is a sample use case that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 ### Targeting users on mobile, web, and CTV platforms {#targeting}
 
-Publishers or data providers want to send audiences from Adobe Experience Platform to [!DNL PubMatic Connect] to target users on mobile, web, and CTV platforms, using a large range of identifiers.
+Publishers or data providers want to send audiences from [!DNL Adobe Experience Platform] to [!DNL PubMatic Connect] to target users on mobile, web, and CTV platforms, using a large range of identifiers.
 
 ## Prerequisites {#prerequisites}
 
@@ -58,7 +58,7 @@ This section describes which type of audiences you can export to this destinatio
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -71,7 +71,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -125,7 +125,7 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 >
@@ -133,7 +133,7 @@ When you are finished providing details for your destination connection, select 
 >
 > - To export _identities_, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](../../assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
-Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate audiences to streaming destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ### Map attributes and identities {#map}
 
@@ -148,7 +148,7 @@ Selecting target fields:
 
 ![Map attributes and identities](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
 
-### Audience scheduling
+### Audience scheduling {#audience-scheduling}
 
 If you are using the PubMatic Connect (Custom Audience ID Mapping) destination, you have to provide a mapping ID for each audience that corresponds to the 'Source Audience ID' in the PubMatic platform.
 
@@ -156,7 +156,7 @@ If you are using the PubMatic Connect (Custom Audience ID Mapping) destination, 
 
 ## Exported data / Validate data export {#exported-data}
 
-The [!DNL PubMatic] UI allows you to check if the data has been pushed correctly and that the segments are available. It can take up to 24 hours after data has been pushed for the [!DNL PubMatic] UI to be updated.
+Use the [!DNL PubMatic] UI to check if the data has been pushed correctly and that the segments are available. It can take up to 24 hours after data has been pushed for the [!DNL PubMatic] UI to be updated.
 
 ## Data usage and governance {#data-usage-governance}
 

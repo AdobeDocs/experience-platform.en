@@ -16,12 +16,12 @@ This tutorial covers the steps for deleting dataflows to both batch and streamin
 
 This tutorial requires you to have a valid flow ID. If you do not have a valid flow ID, select your destination of choice from the [destinations catalog](../catalog/overview.md) and follow the steps outlined to [connect to the destination](../ui/connect-destination.md) and [activate data](../ui/activation-overview.md) before attempting this tutorial.
 
-This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
+This tutorial also requires you to have a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
-* [Destinations](../home.md): [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+* [Destinations](../home.md): [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from [!DNL Adobe Experience Platform]. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 * [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully delete a dataflow using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know to successfully delete a dataflow using the [!DNL Flow Service] API.
 
 ### Reading sample API calls {#reading-sample-api-calls}
 
@@ -29,7 +29,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers {#gather-values-for-required-headers}
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+To make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -61,6 +61,8 @@ DELETE /flows/{FLOW_ID}
 | --------- | ----------- |
 | `{FLOW_ID}` | The unique `id` value for the destination dataflow you want to delete. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 ```shell
@@ -78,12 +80,12 @@ A successful response returns HTTP status 202 (No Content) and a blank body. You
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. See [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully used the [!DNL Flow Service] API to delete an existing dataflow to a destination.
+You have successfully used the [!DNL Flow Service] API to delete an existing dataflow to a destination.
 
-For steps on how to perform these operations using the user interface, please refer to the tutorial on [deleting dataflows in the UI](../ui/delete-destinations.md).
+For steps on how to perform these operations using the user interface, refer to the tutorial on [deleting dataflows in the UI](../ui/delete-destinations.md).
 
 You can now go on and [delete destination accounts](/help/destinations/api/delete-destination-account.md) using the [!DNL Flow Service] API.

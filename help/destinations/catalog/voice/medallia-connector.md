@@ -11,17 +11,17 @@ Activate profiles for targeted Medallia surveys and feedback collection to bette
 
 >[!IMPORTANT]
 >
->This destination connector and documentation page are created and maintained by the Medallia team. For any inquiries or update requests, please contact them directly at adobe-integrations@medallia.com.
+>This destination connector and documentation page are created and maintained by the Medallia team. For any inquiries or update requests, contact them directly at adobe-integrations@medallia.com.
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Medallia destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the Medallia destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
-### Use case #1
+### Use case #1 {#use-case-1}
 
 A B2B brand wants to evaluate and streamline its onboarding program. They'd like to send personalized surveys in real-time to clients who just completed the onboarding process.
 
-### Use case #2
+### Use case #2 {#use-case-2}
 
 A retailer is looking to better understand customer preferences for order fulfillment. They want to send a short 1-question SMS survey to customers who have made online and in-store purchases over the past month.
 
@@ -55,7 +55,7 @@ This section describes which types of audiences you can export to this destinati
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -87,7 +87,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -122,7 +122,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -147,12 +147,12 @@ It is strongly recommended that you also map additional target custom attributes
 ![Image showing a sample mapping for identities and attributes.](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
 
 >[!IMPORTANT]
-> 
+>
 > Share with your Medallia delivery team the exact **Attribute names** for every target custom attribute you map using **Target field** > **Select custom attributes** > **Attribute name**. You may wish to take a screenshot of the mapping page to share directly.
 
 ## Exported data {#exported-data}
 
-Once you have activated your segment(s) to the destination, inform your Medallia delivery team, who will be able to validate the exported data from Adobe Experience Platform to Medallia. Note that surveys can only be activated within Medallia after successful data verification; prior to this, data will be exported to Medallia but will not trigger surveys to customers.
+Once you have activated your segment(s) to the destination, inform your Medallia delivery team, who will be able to validate the exported data from [!DNL Adobe Experience Platform] to Medallia. Note that surveys can only be activated within Medallia after successful data verification; prior to this, data will be exported to Medallia but will not trigger surveys to customers.
 
 A sample JSON of the exported data is provided below, which uses the example mapping from the screenshot above in the **Map attributes and identities** section:
 
