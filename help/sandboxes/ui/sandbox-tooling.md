@@ -132,6 +132,24 @@ You are returned to the **[!UICONTROL Packages]** tab in the [!UICONTROL Sandbox
 
 ![List of sandbox packages highlighting the new published package.](../images/ui/sandbox-tooling/published-packages.png)
 
+### Express copy an object to a sandbox {#express-copy}
+
+>[!IMPORTANT]
+>
+>The express copy feature is currently in beta and only available to select customers.
+
+To view a list of the available schemas, select **[!UICONTROL Schemas]** from the left navigation and then select the **[!UICONTROL Browse]** tab. Next, select the ellipsis (`...`) next to the selected schema to see control options in a dropdown menu. Select **[!UICONTROL Add to package]** from the dropdown.
+
+![List of schemas showing the dropdown menu highlighting the [!UICONTROL Add to package] control.](../images/ui/sandbox-tooling/add-to-package-express.png)
+
+The **[!UICONTROL Add to package]** dialog appears. Select the **[!UICONTROL Express copy]** option, then select the **[!UICONTROL Target sandbox]** from the dropdown. Finally, select **[!UICONTROL Add]** to confirm your choices.
+
+![[!UICONTROL Add to package] dialog, showing a selected package from the dropdown.](../images/ui/sandbox-tooling/express-copy.png)
+
+To check the status of your express copy request, select **[!UICONTROL Sandboxes]** from the left navigation and then select the **[!UICONTROL Jobs]** tab. A list of all jobs and the current processing status are displayed.
+
+![The jobs tab showing a list of jobs.](../images/ui/sandbox-tooling/sandboxes-jobs.png)
+
 ## Import a package to a target sandbox {#import-package-to-target-sandbox}
 
 >[!NOTE]
