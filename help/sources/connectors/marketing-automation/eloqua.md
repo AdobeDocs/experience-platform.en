@@ -97,7 +97,6 @@ You must provide values for the following credentials to connect [!DNL Eloqua] t
 >- **Contacts:** `C_DateModified`
 >- **Accounts:** `M_DateModified`
 >- **Activity:** `CreatedAt`
->- **Custom Objects:** `UpdatedAt`
 >- **Campaign:** `updatedAt`
 
 The following tables provide detailed mappings between [!DNL Eloqua] source fields and their corresponding Experience Data Model (XDM) destination fields in Experience Platform. Each row outlines the transformation logic, whether the field is immutable, and provides additional notes to help you understand how your [!DNL Eloqua] data will be ingested and structured in Experience Platform.
