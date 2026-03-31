@@ -46,7 +46,7 @@ To update the end date of dataflows:
   ![Select end date control highlighted in the Scheduling step.](/help/destinations/assets/ui/export-datasets/select-end-date.png)
 4. Proceed to the end of the workflow and save your updates.
 
-For extensive information about the scheduling step, read the [export datasets UI tutorial](/help/destinations/api/export-datasets.md#scheduling). 
+For extensive information about the scheduling step, read the [export datasets UI tutorial](/help/destinations/api/export-datasets.md#export-datasets-by-using-the). 
 
 ## Use the API to update the end date {#use-api}
 

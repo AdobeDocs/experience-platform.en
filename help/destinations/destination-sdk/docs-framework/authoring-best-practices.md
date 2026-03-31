@@ -7,7 +7,7 @@ exl-id: b12059f1-6635-41cd-acc5-6ff471111164
 
 ## Overview {#overview}
 
-This page describes rules that you should follow when [authoring your destination documentation](./documentation-instructions.md) page, to ensure that it meets the Adobe Experience Platform documentation quality standards.
+This page describes rules that you should follow when [authoring your destination documentation](./documentation-instructions.md) page, to ensure that it meets the [!DNL Adobe Experience Platform] documentation quality standards.
 
 ## General guidance {#general-guidance}
 
@@ -31,9 +31,9 @@ Follow the provided documentation template and don't edit the existing links in 
 
 ## Branding guidelines {#branding}
 
-* AEP is not an approved public-facing term. Please use Adobe Experience Platform on first use, then Experience Platform, then Experience Platform.
+* AEP is not an approved public-facing term. Please use [!DNL Adobe Experience Platform] on first use, then Experience Platform, then Experience Platform.
   * **Don't use**: Before you can export data from AEP to YourDestination, make sure you read and complete these prerequisites. 
-  * **Use**: Before you can export data from Adobe Experience Platform to YourDestination, make sure you read and complete these prerequisites.
+  * **Use**: Before you can export data from [!DNL Adobe Experience Platform] to YourDestination, make sure you read and complete these prerequisites.
 
 ## Images and screenshots {#images-and-screenshots}
 

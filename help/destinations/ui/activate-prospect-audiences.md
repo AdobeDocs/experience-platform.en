@@ -8,9 +8,9 @@ exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
 
 >[!AVAILABILITY]
 >
->This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Contact your Adobe representative for more information. 
+>This functionality is available to customers who have purchased the [!DNL Real-Time CDP] Prime and Ultimate package. Contact your Adobe representative for more information. 
 
-This article explains the workflow required to export [prospect audiences](/help/segmentation/types/prospect-audiences.md) from Adobe Experience Platform to your preferred destination. 
+This article explains the workflow required to export [prospect audiences](/help/segmentation/types/prospect-audiences.md) from [!DNL Adobe Experience Platform] to your preferred destination. 
 
 ## Supported destinations {#supported-destinations}
 
@@ -71,7 +71,7 @@ For the rest of the activation workflow to export prospect audiences, read the t
 
 >[!NOTE]
 >
->Note that in the scheduling step, the workflow to activate prospect audiences only allows you to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files). Incremental file exports are not supported.
+>Note that in the scheduling step, the workflow to activate prospect audiences only lets you [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files). Incremental file exports are not supported.
 
 <!--
 
@@ -81,8 +81,8 @@ Note that we will need to add links to other destination types here as more dest
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 
-Explore further use cases enabled through partner data support in Real-Time CDP:
+Explore further use cases enabled through partner data support in [!DNL Real-Time CDP]:
 
 * [Supplement first-party profiles with attributes from trusted data partners](/help/rtcdp/partner-data/supplement-first-party-profiles.md) to improve your data foundation and gain new insights into your customer base and gain better audience optimization.
-* Use third-party data support in Real-Time CDP to [expand your profile base with prospect profiles from data partners and engage with them to acquire or reach new customers](/help/rtcdp/partner-data/prospecting.md).
+* Use third-party data support in [!DNL Real-Time CDP] to [expand your profile base with prospect profiles from data partners and engage with them to acquire or reach new customers](/help/rtcdp/partner-data/prospecting.md).
 * [Leverage partner aided recognition for personalizing on-site experiences](/help/rtcdp/partner-data/onsite-personalization.md) during the visit without the user authenticating or having prior history with your brand.

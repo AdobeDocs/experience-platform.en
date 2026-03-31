@@ -4,12 +4,11 @@ description: Learn how to use health checks in Adobe Experience Platform to proa
 solution: Experience Platform
 type: Documentation
 role: Admin, User
-hide: yes
 exl-id: b35aef7c-54f4-4758-9b36-a981510ae21b
 ---
 # Health Checks
 
-Health checks scan your schemas and identities used in your sandbox and provide a summary of issues that you can use to explore and troubleshoot with [!UICONTROL AI Assistant]. In the future, more objects can be scanned for a more comprehensive report.
+Health checks scan your schemas and identities used in your sandbox and provide a summary of issues that you can use to explore and troubleshoot with AI Assistant. In the future, more objects can be scanned for a more comprehensive report.
 
 Poor schema and identity configurations lead to significant downstream issues, including incorrect profile creation, failed segment qualification, and inaccurate activation. These issues are difficult to detect and often require specialized expertise to diagnose. Health checks shift your approach from reactive troubleshooting to proactive, preventative maintenance.
 
@@ -17,7 +16,7 @@ With health checks, you can:
 
 * **Detect configuration issues early**: Identify missing best practices, misconfigurations, and patterns that lead to inefficiencies in personalization, activation, and more.
 * **Receive guided remediation**: Get clear guidance on what each issue is and what to do about it.
-* **Monitor continuously**: At this moment, health checks run daily automatic scans so that you can catch problems before they become critical failures. The schedule may change in future releases.
+* **Monitor continuously**: Currently, health checks run daily automatic scans so that you can catch problems before they become critical failures. The schedule may change in future releases.
 
 ## Prerequisites {#prerequisites}
 
@@ -67,14 +66,14 @@ Scans to ensure identity fields have minimum and maximum length constraints and 
 | Detail | Description |
 | --- | --- |
 | **Issue** | Fields marked as identities are missing minimum/maximum length or pattern validation. |
-| **Impact** | Without validation, garbage values can enter [!UICONTROL Identity Service]. Values such as "0", "Guest", or mismatched casing (for example, "xyz123" versus "XYZ123") compromise the integrity of the profile that is assembled during segmentation and activation. |
+| **Impact** | Without validation, garbage values can enter [!DNL Identity Service]. Values such as "0", "Guest", or mismatched casing (for example, "xyz123" versus "XYZ123") compromise the integrity of the profile that is assembled during segmentation and activation. |
 | **Remediation** | Set minimum/maximum length and pattern constraints on custom fields marked as identities. Use regular expressions to enforce rules such as digits only, uppercase or lowercase, or specific character combinations. |
 
 When you select the **[!UICONTROL Identity Field Validation]** card, a detail panel opens on the right. The panel shows:
 
 * **[!UICONTROL Description]**: Scans to ensure identity fields have min/max lengths and regex pattern rules for data integrity. Lists affected schemas and fields.
 * **[!UICONTROL Impact]**: If identity fields in schemas do not have min/max lengths and pattern validations set, it can lead to inconsistent data, which can compromise integrity and quality of data.
-* **[!UICONTROL General areas of impact]**: Low-quality identifiers in [!UICONTROL Identity Service]; unreliable stitching.
+* **[!UICONTROL General areas of impact]**: Low-quality identifiers in [!DNL Identity Service]; unreliable stitching.
 * **[!UICONTROL Experience League Documentation]**: A link to best practices for data modeling.
 * **[!UICONTROL Affected Schemas]**: A list of affected schemas, each with an expander to view more details and a link to open the schema.
 
@@ -112,12 +111,12 @@ Validates the correct use of people and non-people identity types across schema 
 | --- | --- |
 | **Issue** | Non-people identifiers are used on Individual Profile or Experience Event class schemas, or people identifiers are used on lookup schemas. |
 | **Impact** | Non-people identifiers on profile schemas do not participate in the identity graph, which leads to incomplete identity resolution. People identifiers on lookup schemas inflate the profile count and make the data ineligible for lookup use cases. Both cases risk future product enhancements breaking your implementation. |
-| **Remediation** | Review flagged schemas and correct the identity type assignments. Remove non-person identifiers from Individual Profile schemas when possible. For schemas already in use by datasets, refer to the [schema evolution rules](/help/xdm/schema/composition.md#evolution). |
+| **Remediation** | Review flagged schemas and correct the identity type assignments. Remove non-people identifiers from Individual Profile schemas when possible. For schemas already in use by datasets, refer to the [schema evolution rules](/help/xdm/schema/composition.md#evolution). |
 
 When you select the **[!UICONTROL People & Non-People Identity Config]** card, a detail panel opens on the right. The panel shows:
 
 * **[!UICONTROL Description]**: Validates proper use of identity types across schema classes. Lists misconfigured schemas and highlights wrong assignments.
-* **[!UICONTROL Impact]**: If a non-person entity is given a person identity, this will inflate the profile count and make this data ineligible as a lookup. If a person entity is given a non-person identity, the data is not available for streaming or edge segmentation.
+* **[!UICONTROL Impact]**: If a non-people entity is given a person identity, this will inflate the profile count and make this data ineligible as a lookup. If a person entity is given a non-people identity, the data is not available for streaming or edge segmentation.
 * **[!UICONTROL General areas of impact]**: Incomplete identity graphs; inflated profile counts; lookup misuse.
 * **[!UICONTROL Affected Schemas]**: A list of schemas with issues. Expand a schema row to see the path, identity name, and schema type for each misconfiguration. Use the link icon to open the schema.
 

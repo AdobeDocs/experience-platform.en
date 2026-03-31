@@ -55,6 +55,6 @@ By using the Experience Platform UI or the Flow Service API, you can edit variou
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully used the **[!UICONTROL destinations]** workspace to update existing destination connections.
+You have successfully updated existing destination connections using the **[!UICONTROL destinations]** workspace.
 
-For more information about destinations, refer to the [destinations overview](../catalog/overview.md).
+For more information about destinations, see the [destinations overview](../catalog/overview.md).

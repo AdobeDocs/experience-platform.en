@@ -8,7 +8,7 @@ exl-id: 9cab2f99-bab5-48b2-b893-f974a1886407
 
 ## Overview {#overview}
 
-[!DNL DialogTech] is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the [Dialogtech website](https://www.dialogtech.com/).
+[!DNL DialogTech] is an analytics extension in [!DNL Adobe Experience Platform]. For more information about the extension functionality, see the [Dialogtech website](https://www.dialogtech.com/).
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
@@ -18,7 +18,7 @@ This destination is a tag extension. For more information about how tag extensio
 
 This extension is available in the Destinations catalog for all customers who have purchased Experience Platform.
 
-To use this extension, you need access to tags in Adobe Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+To use this extension, you need access to tags in [!DNL Adobe Experience Platform]. Tags are offered to [!DNL Adobe Experience Cloud] customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 

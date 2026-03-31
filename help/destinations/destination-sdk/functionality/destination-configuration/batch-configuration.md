@@ -100,7 +100,7 @@ The values that you set up here are surfaced in the [Schedule audience export](.
 
 ## File name configuration {#file-name-configuration}
 
-Use file name configuration macros to define what the exported file names should include. The macros in the table below describe elements found in the UI in the [file name configuration](../../../ui/activate-batch-profile-destinations.md#file-names) screen.
+Use file name configuration macros to define what the exported file names should include. The macros in the table below describe elements found in the UI in the [file name configuration](../../../ui/activate-batch-profile-destinations.md#configure-file-names) screen.
 
 >[!TIP]
 >
@@ -113,7 +113,7 @@ Use file name configuration macros to define what the exported file names should
 |`SEGMENT_NAME`|[!UICONTROL Segment Name]|User-defined audience name|VIP subscriber|
 |`DESTINATION_INSTANCE_ID`|[!UICONTROL Destination ID]|Unique, Experience Platform-generated ID of the destination instance|7b891e5f-025a-4f0d-9e73-1919e71da3b0|
 |`DESTINATION_INSTANCE_NAME`|[!UICONTROL Destination Name]|User-defined name of the destination instance.|My 2022 Advertising Destination|
-|`ORGANIZATION_NAME`|[!UICONTROL Organization Name]|Name of the customer organization in Adobe Experience Platform.|My Organization Name|
+|`ORGANIZATION_NAME`|[!UICONTROL Organization Name]|Name of the customer organization in [!DNL Adobe Experience Platform].|My Organization Name|
 |`SANDBOX_NAME`|[!UICONTROL Sandbox Name]|Name of the sandbox used by the customer.|prod|
 |`DATETIME` / `TIMESTAMP`|[!UICONTROL Date and time]|`DATETIME` and `TIMESTAMP` both define when the file was generated, but in different formats. <br><br><ul><li>`DATETIME` uses the following format: YYYYMMDD_HHMMSS.</li><li>`TIMESTAMP` uses the 10-digit Unix format. </li></ul> `DATETIME` and `TIMESTAMP` are mutually exclusive, and cannot be used simultaneously. |<ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul>|
 |`CUSTOM_TEXT`|[!UICONTROL Custom text]|User-defined custom text to be included in the file name. Cannot be used in `defaultFilename`.|My_Custom_Text|

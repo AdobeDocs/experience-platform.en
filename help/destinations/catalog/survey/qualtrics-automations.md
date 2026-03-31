@@ -11,7 +11,7 @@ exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
 
 Synchronize experience and operational customer data to unlock personalization at scale. 
 
-Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience iD to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers.
+Use the aggregation of multiple sources of operational data in [!DNL Adobe Experience Platform] as an input in Qualtrics Experience iD to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers.
 
 >[!IMPORTANT]
 >
@@ -19,23 +19,23 @@ Use the aggregation of multiple sources of operational data in Adobe Experience 
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the *Qualtrics Automations* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the *Qualtrics Automations* destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 ### Use case #1 {#use-case-1}
 
-**Scenario**: A company wants to measure customer satisfaction across various digital touchpoints, such as their website and mobile app. They use Adobe Experience Platform to trigger Qualtrics surveys based on user interactions, such as completing a purchase or visiting a specific webpage.
+**Scenario**: A company wants to measure customer satisfaction across various digital touchpoints, such as their website and mobile app. They use [!DNL Adobe Experience Platform] to trigger Qualtrics surveys based on user interactions, such as completing a purchase or visiting a specific webpage.
 
 **Outcome**: By collecting real-time feedback, the company can make data-driven improvements to their customer experience, leading to increased satisfaction and loyalty.
 
 ### Use case #2 {#use-case-2}
 
-**Scenario**: An organization aims to enhance its employee onboarding process. They utilize Adobe Experience Platform to gather feedback from new hires through Qualtrics surveys. Surveys are automatically triggered after a predefined onboarding period.
+**Scenario**: An organization aims to enhance its employee onboarding process. They utilize [!DNL Adobe Experience Platform] to gather feedback from new hires through Qualtrics surveys. Surveys are automatically triggered after a predefined onboarding period.
 
 **Outcome**: Continuous feedback enables the organization to adapt and improve the onboarding process, resulting in better engagement and productivity among new employees.
 
 ## Prerequisites {#prerequisites}
 
-Before setting up the Qualtrics destination in Adobe Experience Platform, ensure the following prerequisites have been met:
+Before setting up the Qualtrics destination in [!DNL Adobe Experience Platform], ensure the following prerequisites have been met:
 
 * You have a Qualtrics account.
 * You have obtained the necessary API token from Qualtrics.
@@ -67,7 +67,7 @@ This section describes which types of audiences you can export to this destinati
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -80,7 +80,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -199,7 +199,7 @@ As previously mentioned, this destination uses an open schema, so any properties
 
 To verify data has been ingested in Qualtrics, head over to the workflow containing your **JSON Event**, from there, go to **Run history** where you should see the executions of your workflow. Each workflow has a status of either **Succeeded** or **Failed**. Selecting a particular execution will reveal more information about it, allowing you to troubleshoot should you run into any issues.
 
-If there are no executions visible in **Run history**, it means the workflow hasn't been triggered yet, indicating that there may be an issue. Ensure the workflow is enabled, and that the **URL** in the destination in Adobe Experience Platform is correct. Workflow executions aren't instant, so you may have to wait a short while before it completes.
+If there are no executions visible in **Run history**, it means the workflow hasn't been triggered yet, indicating that there may be an issue. Ensure the workflow is enabled, and that the **URL** in the destination in [!DNL Adobe Experience Platform] is correct. Workflow executions aren't instant, so you may have to wait a short while before it completes.
 
 ## Data usage and governance {#data-usage-governance}
 

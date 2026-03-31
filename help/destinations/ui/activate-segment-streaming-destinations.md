@@ -17,7 +17,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 
 ## Overview {#overview}
 
-This article explains the workflow required to activate audiences in Adobe Experience Platform streaming destinations.
+This article explains the workflow required to activate audiences in [!DNL Adobe Experience Platform] streaming destinations.
 
 ## Prerequisites {#prerequisites}
 
@@ -96,9 +96,9 @@ Some audience streaming destinations require you to select source attributes or 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="Apply transformation"
->abstract="Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
+>abstract="Check this option when using unhashed source fields, to have [!DNL Adobe Experience Platform] automatically hash them on activation."
 
-When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have Adobe Experience Platform automatically hash the source attributes on activation.
+When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have [!DNL Adobe Experience Platform] automatically hash the source attributes on activation.
 
 ![Apply transformation control highlighted in the Identity mapping step.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
@@ -166,5 +166,5 @@ For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL 
 
 >[!TIP]
 >
->The integration between Adobe Experience Platform and [!DNL Facebook] supports historical audience backfills. All historical audience qualifications are sent to [!DNL Facebook] when you activate the audiences to the destination.
+>The integration between [!DNL Adobe Experience Platform] and [!DNL Facebook] supports historical audience backfills. All historical audience qualifications are sent to [!DNL Facebook] when you activate the audiences to the destination.
 -->

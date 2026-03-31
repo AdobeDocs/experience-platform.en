@@ -8,7 +8,7 @@ exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
 
 ## Overview {#overview}
 
-Manage your customer experience by connecting your data in Adobe Experience Platform to other Adobe Experience Cloud solutions for ad targeting, personalization, marketing automation and more.
+Manage your customer experience by connecting your data in [!DNL Adobe Experience Platform] to other [!DNL Adobe Experience Cloud] solutions for ad targeting, personalization, marketing automation and more.
 
 ## Supported Adobe destinations {#supported-destinations}
 
@@ -18,7 +18,7 @@ To understand the difference between connections and extensions, see [Connection
 
 ### Connections {#connections}
 
-* [Adobe Advertising Cloud DSP connection](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP connection](/help/destinations/catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Adobe Campaign connection](../email-marketing/adobe-campaign.md)
 * [Adobe Target connection](/help/destinations/catalog/personalization/adobe-target-connection.md)
 * [(Beta) Experience Cloud audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md)

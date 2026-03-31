@@ -8,7 +8,7 @@ exl-id: f422f21b-174a-4b93-b05d-084b42623314
 
 ## Overview {#overview}
 
-Use the [!DNL Pega Profile Connector] in Adobe Experience Platform to create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export profile data to CSV files from Adobe Experience Platform into your own S3 buckets. In [!DNL Pega Customer Decision Hub], you can schedule data jobs to import this profile data from S3 storage to update the [!DNL Pega Customer Decision Hub] profile.
+Use the [!DNL Pega Profile Connector] in [!DNL Adobe Experience Platform] to create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export profile data to CSV files from [!DNL Adobe Experience Platform] into your own S3 buckets. In [!DNL Pega Customer Decision Hub], you can schedule data jobs to import this profile data from S3 storage to update the [!DNL Pega Customer Decision Hub] profile.
 
 This connector helps set up the initial export of profile data and also helps sync up new profiles periodically into [!DNL Pega Customer Decision Hub].  Having up-to-date data in Customer Decision Hub provides a better and updated view of your customer base for next-best-action decisioning.
 
@@ -18,19 +18,19 @@ This connector helps set up the initial export of profile data and also helps sy
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL Pega Profile Connector] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Pega Profile Connector] destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 ### Use case 1 {#use-case-1}
 
-A marketer wants to initially set up [!DNL Pega Customer Decision Hub] with profile data loaded from Adobe Experience Platform. This is an initial full load followed by delta loads on a scheduled basis.
+A marketer wants to initially set up [!DNL Pega Customer Decision Hub] with profile data loaded from [!DNL Adobe Experience Platform]. This is an initial full load followed by delta loads on a scheduled basis.
 
 ### Use case 2 {#use-case-2}
 
-A marketer wants up-to-date profile data from Adobe Experience Platform available in [!DNL Pega Customer Decision Hub] that enhances the Pega insights around customer profiles on an ongoing basis.
+A marketer wants up-to-date profile data from [!DNL Adobe Experience Platform] available in [!DNL Pega Customer Decision Hub] that enhances the Pega insights around customer profiles on an ongoing basis.
 
 ## Prerequisites {#prerequisites}
 
-Before you can use this destination to export data out of Adobe Experience Platform and import profiles into [!DNL Pega Customer Decision Hub], make sure you complete the following prerequisites:
+Before you can use this destination to export data out of [!DNL Adobe Experience Platform] and import profiles into [!DNL Pega Customer Decision Hub], make sure you complete the following prerequisites:
 
 * Configure [!DNL Amazon S3] bucket and the folder path to be used for export and import of data files.
 * Configure the [!DNL Amazon S3] access key and [!DNL Amazon S3] secret key: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant Experience Platform access to your [!DNL Amazon S3] account.
@@ -43,7 +43,7 @@ Before you can use this destination to export data out of Adobe Experience Platf
 
 |Target Identity|Description|
 |---|---|
-|*CustomerID*|Common User Identifier that uniquely identifies a profile in [!DNL Pega Customer Decision Hub] and Adobe Experience Platform|
+|*CustomerID*|Common User Identifier that uniquely identifies a profile in [!DNL Pega Customer Decision Hub] and [!DNL Adobe Experience Platform]|
 
 {style="table-layout:auto"}
 
@@ -54,7 +54,7 @@ This section describes which types of audiences you can export to this destinati
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -67,7 +67,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -95,7 +95,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-* **[!DNL Amazon S3] access key** and **[!DNL Amazon S3] secret key**: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant Adobe Experience Platform access to your [!DNL Amazon S3] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon S3] access key** and **[!DNL Amazon S3] secret key**: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant [!DNL Adobe Experience Platform] access to your [!DNL Amazon S3] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 ### Fill in destination details {#destination-details}
 

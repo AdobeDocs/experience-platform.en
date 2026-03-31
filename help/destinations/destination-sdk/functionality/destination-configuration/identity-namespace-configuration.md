@@ -23,7 +23,7 @@ When configuring identity namespaces for your destination, you can fine tune the
 
 * Allowing users to map XDM attributes to identity namespaces.
 * Allowing users to map [standard identity namespaces](../../../../identity-service/features/namespaces.md#standard) to your own identity namespaces.
-* Allowing users to map [custom identity namespaces](../../../../identity-service/features/namespaces.md#manage-namespaces) to your own identity namespaces.
+* Allowing users to map [custom identity namespaces](../../../../identity-service/features/namespaces.md#create-namespaces) to your own identity namespaces.
 
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
@@ -112,9 +112,9 @@ The configuration below enables the optional [Apply transformation](../../../ui/
    }
 ```
 
-Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation.
+Check this option when using unhashed source fields, to have [!DNL Adobe Experience Platform] automatically hash them on activation.
 
-When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have Adobe Experience Platform automatically hash the source attributes on activation.
+When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have [!DNL Adobe Experience Platform] automatically hash the source attributes on activation.
 
 ## Configure mandatory source field hashing {#configure-mandatory-hashing}
 

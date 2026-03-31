@@ -8,7 +8,7 @@ exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
 
 ## Overview {#overview}
 
-Connect Adobe Experience Platform to advertising platforms such as demand-side platforms (DSP), supply-side platforms (SSP), ad networks to share known and pseudonymous audiences to these platforms.
+Connect [!DNL Adobe Experience Platform] to advertising platforms such as demand-side platforms (DSP), supply-side platforms (SSP), ad networks to share known and pseudonymous audiences to these platforms.
 
 When connecting to an advertising destination, your audiences are sent as IDs to the destination platform, where they are mapped to an ID known by the destination platform.
 
@@ -22,8 +22,8 @@ To understand the difference between connections and extensions, see [Connection
 
 * [(Beta) Acxiom Audience Distribution](acxiom-audience-connection.md)
 * [(Beta) Acxiom Real ID Audience Connection](acxiom-real-id-audience-connection.md)
-* [Adobe Advertising Cloud connection](adobe-advertising-cloud-connection.md)
-* [Legacy Adobe Advertising Cloud connection](adobe-advertising-cloud-connection-legacy.md)
+* [Adobe Advertising DSP connection](adobe-advertising-dsp-connection.md)
+* [Legacy Adobe Advertising Cloud DSP connection](adobe-advertising-cloud-dsp-connection-legacy.md)
 * [Amazon Ads connection](amazon-ads.md)
 * [Bombora connection](bombora.md)
 * [Criteo connection](criteo.md)

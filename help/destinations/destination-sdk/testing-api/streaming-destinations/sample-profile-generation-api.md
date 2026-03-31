@@ -191,13 +191,13 @@ A successful response returns HTTP status 200 with the specified number of sampl
 
 >[!IMPORTANT]
 >
->Use the sample profiles generated here when crafting your template, in the [render template step](render-template-api.md#multiple-profiles-with-body). 
+>Use the sample profiles generated here when crafting your template, in the [render template step](render-template-api.md#configurable-aggregation). 
 
 You can generate sample profiles based on the target schema making a GET request to the `authoring/sample-profiles/` endpoint and providing the destination ID of the destination configuration based on which you are creating your template.
 
 >[!TIP]
 >
->* The destination ID that you should use here is the `instanceId` that corresponds to a destination configuration, created using the `/destinations` endpoint. Refer to [retrieve a destination configuration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) for more details.
+>* The destination ID that you should use here is the `instanceId` that corresponds to a destination configuration, created using the `/destinations` endpoint. See [retrieve a destination configuration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) for more details.
 
 **API format**
 
@@ -377,7 +377,7 @@ A successful response returns HTTP status 200 with the specified number of sampl
 
 ## API error handling {#api-error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps {#next-steps}
 

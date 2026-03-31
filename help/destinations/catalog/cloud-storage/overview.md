@@ -8,13 +8,13 @@ exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
 
 ## Overview {#overview}
 
-Adobe Experience Platform can deliver your audiences as data files to your cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV files for [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage], and SFTP. For [!DNL Amazon Kinesis] and [!DNL Azure Event Hubs] destinations, data is streamed out of Experience Platform in [!DNL JSON] format.
+[!DNL Adobe Experience Platform] can deliver your audiences as data files to your cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV files for [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage], and SFTP. For [!DNL Amazon Kinesis] and [!DNL Azure Event Hubs] destinations, data is streamed out of Experience Platform in [!DNL JSON] format.
 
 ![Adobe cloud storage destinations](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
 ## Supported cloud storage destinations {#supported-destinations}
 
-Adobe Experience Platform supports data exports to the following cloud storage destinations:
+[!DNL Adobe Experience Platform] supports data exports to the following cloud storage destinations:
 
 * [Amazon Kinesis connection](amazon-kinesis.md)
 * [Amazon S3 connection](amazon-s3.md)
@@ -69,7 +69,7 @@ Similar to the examples above, you can use further macros to create a custom fol
 Cloud storage destinations support the following export types: 
 
 * **Profile-based export**. This means that you are exporting details about the individuals in the audience. These details are needed for personalization and can include attributes, events, audience memberships, and more.
-* **Dataset export**. This functionality allows you to export entire datasets to cloud storage destinations. [Read more](/help/destinations/ui/export-datasets.md) about the functionality. 
+* **Dataset export**. Use this functionality to export entire datasets to cloud storage destinations. [Read more](/help/destinations/ui/export-datasets.md) about the functionality.
 
 ## Next steps {#next-steps}
 

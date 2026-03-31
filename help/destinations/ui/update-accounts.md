@@ -9,7 +9,7 @@ exl-id: afb41878-4205-4c64-af4d-e2740f852785
 
 ## Overview {#overview}
 
-The **[!UICONTROL Accounts]** tab shows you details about the connections that you have established with various destinations. Refer to the [Accounts overview](../ui/destinations-workspace.md#accounts) for all the information you can get on each destination account.
+The **[!UICONTROL Accounts]** tab shows details about the connections that you have established with various destinations. See the [Accounts overview](../ui/destinations-workspace.md#accounts) for all the information available for each destination account.
 
 This tutorial covers the steps to update destination account details by using the Experience Platform UI.
 
@@ -23,7 +23,7 @@ For batch destinations, you can update the access or secret key, if any of those
 
 Follow the steps below to update connection details to existing destinations.
 
-1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Accounts]** from the top header to view your existing accounts.
+1. Go to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Accounts]** from the top header to view your existing accounts.
 
     ![Accounts tab](../assets/ui/update-accounts/accounts-tab.png)
 
@@ -57,6 +57,6 @@ Follow the steps below to update connection details to existing destinations.
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully used the **[!UICONTROL destinations]** workspace to update existing accounts.
+You have successfully updated existing accounts using the **[!UICONTROL destinations]** workspace.
 
-For more information about destinations, refer to the [destinations overview](../catalog/overview.md).
+For more information about destinations, see the [destinations overview](../catalog/overview.md).

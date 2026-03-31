@@ -17,7 +17,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 
 ## Overview {#overview}
 
-This article explains the workflow required to activate audiences in Adobe Experience Platform to batch profile file-based destinations, such as cloud storage and email marketing destinations.
+This article explains the workflow required to activate audiences in [!DNL Adobe Experience Platform] to batch profile file-based destinations, such as cloud storage and email marketing destinations.
 
 ## Prerequisites {#prerequisites}
 
@@ -567,7 +567,7 @@ As a temporary workaround if you need to add identity namespaces to your exporte
 >
 >All cloud storage destinations in the catalog can view an improved [[!UICONTROL Mapping] step](#mapping) which replaces the **[!UICONTROL Select attributes]** step described in this section. 
 >
->This **[!UICONTROL Select attributes]** step is still displayed for the Adobe Campaign, Oracle Responsys, Oracle Eloqua, and Salesforce Marketing Cloud email marketing destinations.
+>This **[!UICONTROL Select attributes]** step is still displayed for the [!DNL Adobe Campaign], Oracle Responsys, Oracle Eloqua, and Salesforce Marketing Cloud email marketing destinations.
 
 For profile-based destinations, you must select the profile attributes that you want to send to the target destination.
 
@@ -587,7 +587,7 @@ For profile-based destinations, you must select the profile attributes that you 
 
 >[!NOTE]
 >
-> Adobe Experience Platform prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
+> [!DNL Adobe Experience Platform] prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
 ![Image showing prefilled recommended attributes in the mapping step of the audience activation workflow.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png) 
 
@@ -643,7 +643,7 @@ Select **[!UICONTROL Next]** to move to the [Review](#review) step.
 >* The fields are used in the audience definition.
 >* The fields are configured as projected attributes for the target destination.
 >
-> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing action, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing action, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in [!DNL Adobe Experience Platform]](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
@@ -674,7 +674,7 @@ If you are satisfied with your selection and no policy violations have been dete
 
 ## Verify audience activation {#verify}
 
-When exporting audiences to cloud storage destinations, Adobe Experience Platform creates a `.csv`, `.json`, or `.parquet` file in the storage location that you provided. Expect a new file to be created in your storage location according to the schedule you set in the workflow. The default file format is shown below, but you can [edit the components of the file name](#configure-file-names):
+When exporting audiences to cloud storage destinations, [!DNL Adobe Experience Platform] creates a `.csv`, `.json`, or `.parquet` file in the storage location that you provided. Expect a new file to be created in your storage location according to the schedule you set in the workflow. The default file format is shown below, but you can [edit the components of the file name](#configure-file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 For example, if you selected a daily export frequency, the files you would receive on three consecutive days could look like this:

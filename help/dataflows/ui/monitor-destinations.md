@@ -1,7 +1,7 @@
 ---
 description: Learn how you can monitor dataflows for your destinations using the Experience Platform user interface.
 solution: Experience Platform
-title: Monitor dataflows for Destinations in the UI
+title: Monitor dataflows for destinations in the UI
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 ---
@@ -20,7 +20,7 @@ This guide requires a working understanding of the following components of Adobe
 - [Dataflows](../home.md): Dataflows are a representation of data jobs that move data across Experience Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
     - [Dataflow runs](../../sources/notifications.md): Dataflow runs are the recurring scheduled jobs based on the frequency configuration of selected dataflows.
 - [Destinations](../../destinations/home.md): Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Experience Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
-- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes that partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Monitor dataflows in the Destinations workspace {#monitor-dataflows-in-the-destinations-workspace}
 
@@ -64,7 +64,7 @@ See the following table for more information on statuses:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
 >title="Identities failed"
->abstract="The count of individual profile identities which failed for the selected destination. Please check error diagnostics for details."
+>abstract="The count of individual profile identities that failed for the selected destination. Check error diagnostics for details."
 
 For streaming destinations, the [!UICONTROL Dataflow runs] tab provides an hourly update for metric data on your dataflow runs. The most prominent statistics labelled are for identities.
 
@@ -88,15 +88,15 @@ Each individual dataflow run shows the following details:
 - **[!UICONTROL Audience]**: The number of audiences associated with each dataflow run.
 - **[!UICONTROL Processing duration]**: The amount of time that it took for the dataflow run to process.
   - For **[!UICONTROL completed]** runs, the processing time metric always shows one hour.
-  - For dataflow runs which are still in a **[!UICONTROL processing]** state, the window to capture all the metrics stays open for more than an hour, to process all metrics that correspond to the dataflow run. For example, a dataflow run that started at 9:30 AM might stay in a processing state for one hour and thirty minutes to capture and process all the metrics. The length of the processing time is directly affected by the retries done as a result of the destination's failed response. Then, once the processing window closes and the status of the dataflow run updates to **completed**, the displayed processing time is changed to one hour.
+  - For dataflow runs that are still in a **[!UICONTROL processing]** state, the window to capture all the metrics stays open for more than an hour, to process all metrics that correspond to the dataflow run. For example, a dataflow run that started at 9:30 AM might stay in a processing state for one hour and thirty minutes to capture and process all the metrics. The length of the processing time is directly affected by the retries done as a result of the destination's failed response. Then, once the processing window closes and the status of the dataflow run updates to **completed**, the displayed processing time is changed to one hour.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow.
 - **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination as part of the dataflow run. This metric includes identities that are created, updated, and removed from exported audiences.
 - **[!UICONTROL Identities excluded]**: The total number of profile identities that are excluded from activation based on missing attributes and consent violation.
-- **[!UICONTROL Identities failed]** The total number of profile identities that are not activated to the destination due to errors.
+- **[!UICONTROL Identities failed]**: The total number of profile identities that are not activated to the destination due to errors.
 
   >[!IMPORTANT]
   >
-  > Starting with March 2025, Adobe is rolling out an update to increase reporting accuracy for streaming destinations. This enhancement ensures a better alignment between the reporting in Experience Platform and the destination platforms.
+  > Starting in March 2025, Adobe is rolling out an update to increase reporting accuracy for streaming destinations. This enhancement ensures a better alignment between the reporting in Experience Platform and the destination platforms.
   >
   > Before this update, **[!UICONTROL Identities failed]** included all activation retries. After this update, only the last activation retry is included in the total count.
   > 
@@ -141,7 +141,7 @@ Audience-level monitoring for streaming destinations is only available for certa
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
 >title="Profiles received"
->abstract="The total number of profiles received in the dataflow. This value is updated every 60 minutes."
+>abstract="The total number of profiles received in the dataflow run. For scheduled exports, this includes profiles from the latest audience snapshot plus any profiles whose audience membership or identity changed between the snapshot creation time and the export time. As a result, this count may be higher than the number of profiles in the audience."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
@@ -202,7 +202,7 @@ You can also select to view rich information about a certain dataflow and its da
 >
 >You can now view information about the dataflow and its associated dataflow runs in the monitoring dashboard. Read the section below for further information. 
 
-## Monitoring Destinations dashboard {#monitoring-destinations-dashboard}
+## Monitoring destinations dashboard {#monitoring-destinations-dashboard}
 
 >[!NOTE]
 >
@@ -274,7 +274,7 @@ A list of dataflows appears, sorted by the last dataflow run. You can see additi
 
 ![All dataflows highlighted in the monitoring dashboard.](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
-Once you select a dataflow for further inspection, the dataflow details page contains a toggle which allows you to see the activated data in the dataflow, broken down by dataflow runs or audiences.
+Once you select a dataflow for further inspection, the dataflow details page contains a toggle that allows you to see the activated data in the dataflow, broken down by dataflow runs or audiences.
 
 ### Dataflow runs view {#dataflow-runs-view}
 
@@ -292,9 +292,9 @@ Use the **[!UICONTROL Show failures only]** toggle to display only the failed ru
 
 ![Dataflow runs view with the show failures only toggle highlighted](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
 
-### Audience-level view {#segment-level-view}
+### Audience-level view {#audience-level-view}
 
-When **[!UICONTROL Audiences]** is selected, you see a list of the audiences which were activated to the selected dataflow, within the selected time range. This screen includes audience-level information about the records activated, records excluded, as well as the status and the time of the last dataflow run. By reviewing the metrics for records excluded and activated, you can verify if an audience has been successfully activated or not.
+When **[!UICONTROL Audiences]** is selected, you see a list of the audiences that were activated to the selected dataflow, within the selected time range. This screen includes audience-level information about the records activated, records excluded, as well as the status and the time of the last dataflow run. By reviewing the metrics for records excluded and activated, you can verify if an audience has been successfully activated or not.
 
 For example, you are activating an audience called "Loyalty Members in California" to an Amazon S3 destination "Loyalty Members California December". Let's assume that there are 100 profiles in the selected audience but only 80 out of 100 records contain Loyalty ID attributes and you have defined the export mapping rules as `loyalty.id` is required. In this case, on an audience level, you will see 80 records activated, and 20 records excluded.
 
@@ -345,11 +345,11 @@ Use the filter button ![filter](/help/images/icons/filter-add.png) to drill down
 
 The dataflow runs page displays information on your dataflow runs, including the dataflow run start time, processing time, records received, records activated, records excluded, records failed, activation rate, and status.
 
-When you drill down into the dataflow runs page from the [audience-level view](#segment-level-view), you have the option of filtering the dataflow runs by the following options:
+When you drill down into the dataflow runs page from the [audience-level view](#audience-level-view), you have the option of filtering the dataflow runs by the following options:
 
 - **[!UICONTROL Dataflow runs with failed records]**: For the selected audience, this option lists all the dataflow runs that failed for activation. To inspect why records in a certain dataflow run failed, see the [dataflow run details page](#dataflow-run-details-page) for that dataflow run.
 - **[!UICONTROL Dataflow runs with excluded records]**: For the selected audience, this option lists all the dataflow runs where some of the records were not fully activated and some profiles were skipped. To inspect why records in a certain dataflow run were skipped, see the [dataflow run details page](#dataflow-run-details-page) for that dataflow run.
-- **[!UICONTROL Dataflow runs with activated records]**: For the selected audience, this option lists all the dataflow runs that have records which were successfully activated.
+- **[!UICONTROL Dataflow runs with activated records]**: For the selected audience, this option lists all the dataflow runs that have records that were successfully activated.
 
 ![Radio buttons showing how to filter dataflow runs for audiences.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
@@ -365,13 +365,13 @@ The dataflow run details page, in addition to the details shown on the dataflow 
 - **[!UICONTROL IMS org ID]**: The organization the dataflow belongs to.
 - **[!UICONTROL Last updated]**: The time the dataflow run was last updated.
 
-The details page also has a toggle to switch between dataflow run errors and audiences. This option is available for the destinations listed in the [audience-level view](#segment-level-view) section. 
+The details page also has a toggle to switch between dataflow run errors and audiences. This option is available for the destinations listed in the [audience-level view](#audience-level-view) section.
 
 The dataflow run errors view displays a list of records that failed and records that were skipped. Information for both the failed and skipped records is displayed, including the error code, identity count, and description. By default, the list displays the failed records. To show skipped records, select the **[!UICONTROL Records skipped]** toggle.
 
 ![Identities excluded toggle highlighted in the monitoring view](../assets/ui/monitor-destinations/identities-excluded.png)
 
-When **[!UICONTROL Audiences]** is selected, you see a list of the audiences which were activated in the selected dataflow run. This screen includes audience-level information about the records activated, records excluded, as well as the status and the time of the last dataflow run.
+When **[!UICONTROL Audiences]** is selected, you see a list of the audiences that were activated in the selected dataflow run. This screen includes audience-level information about the records activated, records excluded, as well as the status and the time of the last dataflow run.
 
 ![Audiences view in the dataflow run details screen.](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
 

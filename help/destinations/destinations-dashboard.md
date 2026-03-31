@@ -7,7 +7,7 @@ type: Documentation
 
 # [!UICONTROL Destinations] dashboard {#destinations-dashboard}
 
-The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your organization's active destinations, as captured during a daily snapshot. 
+The [!DNL Adobe Experience Platform] user interface (UI) provides a dashboard through which you can view important information about your organization's active destinations, as captured during a daily snapshot. 
 
 <!--
 Broken links; this article is not in TOC

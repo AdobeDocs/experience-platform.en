@@ -21,6 +21,7 @@ role: Developer
   - [Monitor dataflows in destinations](./ui/monitor-destinations.md)
   - [Monitor dataflows for streaming profile ingestion](./ui/monitor-streaming-profile.md)
   - [Monitor dataflows for streaming segmentation](./ui/monitor-streaming-audiences.md)
+  - [Monitor datastreams in edge](./ui/monitor-edge.md)
   - B2B monitoring {#b2b}
     - [Monitor profile enrichment jobs](./ui/b2b/monitor-profile-enrichment.md)
 - [Flow Service API](https://www.adobe.io/experience-platform-apis/references/flow-service/)

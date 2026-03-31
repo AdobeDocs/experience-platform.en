@@ -1,14 +1,12 @@
 ---
 title: Run and Operate overview
 description: Inspect, troubleshoot, and optimize your Experience Platform implementations with the Run and Operate tools. Gain visibility into scheduled batch activations, identify configuration issues, and improve system reliability.
-hide: yes
+solution: Experience Platform
+type: Documentation
+role: Admin, User
 exl-id: 7f44cdf3-4db1-47f9-bcde-401f6dcfc551
 ---
 # Run and Operate overview
-
->[!AVAILABILITY]
->
->Run and Operate features are currently available as a limited release.
 
 When batch jobs fail or deliver incomplete data, you need to quickly understand what caused the issue. The root cause could be data availability issues, incorrect timing, configuration problems, or system capacity constraints. Without clear visibility, you may spend hours investigating multiple systems before finding the answer.
 
@@ -24,13 +22,11 @@ With [!UICONTROL Run and Operate] tools, you can:
 
 * **Data and IT teams**: System administrators and data engineers who maintain reliable data pipelines and troubleshoot technical issues.
 * **Marketing operations**: Marketing technologists who inspect data delivery to marketing platforms and resolve activation issues.
-* **Implementers**: Practitioners who validate implementation efficiency, reliability, and troubleshoot technical issues.
+* **Implementers**: Practitioners who validate implementation efficiency and reliability, and who troubleshoot technical issues.
 
 ## Prerequisites {#prerequisites}
 
-To access Run and Operate tools, you need the **[!UICONTROL View Job Schedules]** and **[!UICONTROL View Profile Management]** [access control permissions](/help/access-control/home.md#permissions).
-The [!UICONTROL Job Schedules] page provides an overview of all your scheduled batch processing jobs.
-Contact your system administrator to ensure you have the appropriate permissions.
+To access Run and Operate tools, you need the **[!UICONTROL View Job Schedules]** and **[!UICONTROL View Profile Management]** [access control permissions](/help/access-control/home.md#permissions). Contact your system administrator to ensure you have the appropriate permissions.
 
 ## Getting started {#getting-started}
 
@@ -38,10 +34,6 @@ To access the Run and Operate tools from the Experience Platform UI:
 
 1. Log in to your Experience Platform account and select **[!UICONTROL Run and Operate]** from the left navigation.
 2. Select the tool that matches your inspection or troubleshooting needs.
-    
-    >[!NOTE]
-    >
-    >Currently, the available capabilities are [Job Schedules](job-schedules.md) and [Health Checks](health-checks.md).
 
 ![Experience Platform UI showing the Run and Operate left nav.](assets/overview/run-and-operate.png)
 
@@ -57,8 +49,8 @@ The following tools help you inspect and optimize your data operations.
 >
 > * Batch data lake ingestion
 > * Batch profile ingestion
-> * Batch sgmentation
-> * Batch destination activation.
+> * Batch segmentation
+> * Batch destination activation
 
 With [Job Schedules](job-schedules.md), you can inspect all scheduled batch operations across your organization, per sandbox, including data lake ingestion, profile ingestion, segmentation, and destination activation. View job execution status, performance metrics, and execution history to identify patterns and diagnose configuration issues that affect reliability.
 
@@ -74,18 +66,14 @@ You can also understand dependencies between data processing stages, helping you
 
 ### Health checks {#health-checks}
 
->[!IMPORTANT]
->
->[!UICONTROL Health checks] are currently available as a limited release.
-
-With [Health Checks](health-checks.md), you can proactively detect schema and identity configuration issues before they impact your business operations. At this moment, health checks run daily static scans across your schemas and identity namespaces, surfacing missing best practices, misconfigurations, and patterns that lead to downstream failures.
+With [Health Checks](health-checks.md), you can proactively detect schema and identity configuration issues before they impact your business operations. Currently, health checks run daily static scans across your schemas and identity namespaces, surfacing missing best practices, misconfigurations, and patterns that lead to downstream failures.
 
 Health checks currently evaluate five foundational areas:
 
 * **[Identity field validation](health-checks.md#identity-field-validation)**: Verify that identity fields have proper length and pattern constraints.
 * **[Identity graph linking rules](health-checks.md#identity-graph-linking-rules)**: Confirm that linking rules are configured to prevent profile collapse.
 * **[People and non-people identity configuration](health-checks.md#people-non-people-identity)**: Validate correct identity type usage across schema classes.
-* **[Custom identity namespace descriptions](health-checks.md#namespace-missing-description)**: Ensure namespace metadata is complete.
+* **[Custom identity namespace description](health-checks.md#namespace-missing-description)**: Ensure namespace metadata is complete.
 * **[Deprecated identity namespaces](health-checks.md#deprecated-namespace)**: Detect obsolete namespaces for cleanup.
 
 ## Next steps {#next-steps}

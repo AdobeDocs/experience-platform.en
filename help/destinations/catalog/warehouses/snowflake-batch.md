@@ -88,7 +88,7 @@ This section describes which types of audiences you can export to this destinati
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -99,7 +99,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -188,12 +188,19 @@ The data is staged into your Snowflake account via a dynamic table. Check your S
 
 The dynamic table contains the following columns:
 
-* **TS**: A timestamp column that indicates when each row from the shared table was last updated
-* **Merge policy ID**: The ID of the [merge policy](../../../profile/merge-policies/overview.md) that the audience being activated belongs to
-* **Mapping attributes**: Every mapping attribute that you select during the activation workflow is represented as a column header in Snowflake
-* **Audience membership**: Membership to any audience mapped to the dataflow is indicated via an `active` entry in the corresponding cell
+* **TS**: A timestamp indicating when each row was last updated
+* **MERGE_POLICY_ID**: The ID of the [merge policy](../../../profile/merge-policies/overview.md) that the activated audience belongs to
+* **AUDIENCE_ID**: The ID of the audience
+* **AUDIENCE_NAME**: The name of the audience as configured in Experience Platform
+* **AUDIENCE_ORIGIN**: The [origin](../../../segmentation/ui/audience-portal.md) of the audience (for example, `Segmentation Service` or `Custom upload`)
+* **AUDIENCE_STATUS**: The membership status of the profile in the audience (for example, `active` or `realized`)
+* **Mapping attributes**: Every mapping attribute selected during the activation workflow is represented as a column
 
 ![Screenshot showing the Snowflake interface with dynamic table data](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
+
+>[!NOTE]
+>
+>The table structure described above applies to destination connections created after the March 2026 Experience Platform release. During the transition period, new connectors use both table structures, with the new structure prefixed by `V2` (for example, `V2_<table-name>`). Existing connections continue to use the previous structure, where each audience is represented as a separate column (for example, `ups_<audience-id>` = `active`). The previous structure will be deprecated at the end of June 2026.
 
 ## Data usage and governance {#data-usage-governance}
 

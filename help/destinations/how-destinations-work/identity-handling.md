@@ -65,7 +65,7 @@ The takeaway is that the number of records you export depends on your chosen mer
 
 ## API-based streaming destinations {#streaming-destinations}
 
-[API-based streaming destinations](/help/destinations/destination-types.md#streaming-destination) built with [Destination SDK](/help/destinations/destination-sdk/overview.md) (for example [!DNL Facebook], [!DNL Google Customer Match], [!DNL Pinterest], [!DNL Braze], and others) only support specific IDs for export. For detailed information about the specific identities that can be exported to each destination, read the *supported identities* section in each destination documentation page (for example, see the [supported identities section](/help/destinations/catalog/advertising/pinterest.md) in the [!DNL Pinterest] destination page). 
+[API-based streaming destinations](/help/destinations/destination-types.md#streaming-audience-export-destinations) built with [Destination SDK](/help/destinations/destination-sdk/overview.md) (for example [!DNL Facebook], [!DNL Google Customer Match], [!DNL Pinterest], [!DNL Braze], and others) only support specific IDs for export. For detailed information about the specific identities that can be exported to each destination, read the *supported identities* section in each destination documentation page (for example, see the [supported identities section](/help/destinations/catalog/advertising/pinterest.md) in the [!DNL Pinterest] destination page). 
 
 Note, however, that you have the flexibility to use data from either [private graphs](/help/profile/merge-policies/overview.md#id-stitching) or from attributes as identities. This means that you can map XDM attributes to the identity field required by the destination. See below an example for the [!DNL Pinterest] destination, where the XDM attribute `personalEmail.address` is mapped to the required [!DNL Pinterest] identity `pinterest_audience`.
 
@@ -95,7 +95,7 @@ When configuring a datastream as described in the documentation linked above, yo
 
 ## Personalization destinations {#personalization-destinations}
 
-[Personalization (or edge) destinations](/help/destinations/destination-types.md#edge-personalization-destinations) (for example: Adobe Target, [!DNL Custom Personalization]) do not require any identity selection in the activation workflow, as the integration is a profile lookup. The client ([!DNL Target], [!DNL Web SDK], or others) queries the [[!UICONTROL Edge]](/help/collection/home.md#edge) and pulls the profile information that it needs for on-site personalization.
+[Personalization (or edge) destinations](/help/destinations/destination-types.md#edge-personalization-destinations) (for example: [!DNL Adobe Target], [!DNL Custom Personalization]) do not require any identity selection in the activation workflow, as the integration is a profile lookup. The client ([!DNL Target], [!DNL Web SDK], or others) queries the [[!UICONTROL Edge]](/help/collection/home.md) and pulls the profile information that it needs for on-site personalization.
 
 <!--
 ![Table with all supported identities](/help/destinations/assets/how-destinations-work/identities-table.png)

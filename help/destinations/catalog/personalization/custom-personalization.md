@@ -25,7 +25,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 
 ## Overview {#overview}
 
-Set up this destination to allow external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites to retrieve audience information from Adobe Experience Platform.
+Set up this destination to allow external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites to retrieve audience information from [!DNL Adobe Experience Platform].
 
 ## Prerequisites {#prerequisites}
 
@@ -52,7 +52,7 @@ This section describes which types of audiences you can export to this destinati
 | Audience origin | Supported | Description | 
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -120,7 +120,7 @@ If you are using [Tags in Adobe Experience Platform](/help/tags/home.md) to depl
 
 Here is a sample value for the `event.destinations` variable:
 
-```
+```json
 [
    {
       "type":"profileLookup",
@@ -140,9 +140,9 @@ Here is a sample value for the `event.destinations` variable:
 
 If you are not using [Tags](/help/tags/home.md) to deploy the Experience Platform Web SDK, use [command responses](/help/collection/js/commands/command-responses.md) to see the exported data.
 
-The JSON response from Adobe Experience Platform can be parsed to find the corresponding integration alias of the application you are integrating with Adobe Experience Platform. The audience IDs can be passed into the application's code as targeting parameters. Below is a sample of what this would look like specific to the destination response.
+The JSON response from [!DNL Adobe Experience Platform] can be parsed to find the corresponding integration alias of the application you are integrating with [!DNL Adobe Experience Platform]. The audience IDs can be passed into the application's code as targeting parameters. Below is a sample of what this would look like specific to the destination response.
 
-```
+```js
 alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {
