@@ -250,7 +250,7 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
 
 | Parameter | Description |
 | --------- | ----------- |
-| `op` | The operation that is completed. To update a specific tag category, set this value to `replace`. | 
+| `op` | The operation that is completed. To update a specific tag category, set this value to `replace`. |
 | `path` | The path of the field that will be updated. Supported values include `name` and `description`. |
 | `value` | The updated value of the field you want to update. |
 | `from` | The original value of the field you want to update. |

@@ -45,7 +45,7 @@ The [!DNL Acxiom Audience Connection] destination currently supports audience ac
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
@@ -102,7 +102,7 @@ For the [!DNL Acxiom Audience Connection] destination to correctly receive the a
 [!DNL Acxiom Audience Connection] only allows mapping to the following target fields. The target fields described in the table below must be mapped in the order shown below. 
 
 | Field Name | Description|Required | Field Order | Max Length |
-|---|---|---|---|---|          
+|---|---|---|---|---|
 |First Name|First name of individual|No|1|255|
 |Middle|Middle name or initial of the individual|No|2|50|
 |Last Name|Last name of the individual|Yes|3|255|

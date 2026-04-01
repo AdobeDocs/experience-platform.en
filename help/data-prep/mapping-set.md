@@ -60,7 +60,7 @@ The following JSON is an example of a typical mapping set:
 }
 ```
 
-| Property | Description | 
+| Property | Description |
 | -------- | ----------- |
 | `id` | A unique identifier for the mapping set. |
 | `name` | The name of the mapping set. |

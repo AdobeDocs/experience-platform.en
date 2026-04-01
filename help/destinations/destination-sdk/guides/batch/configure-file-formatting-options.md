@@ -729,7 +729,7 @@ To exemplify the limitation, consider the export of a file with the values below
 |firstname | lastname | country| state|
 |---------|----------|---------|--------|
 | Michael | Rose | USA | NY |
-| James | Smith |  | null | 
+| James | Smith |  | null |
 
 {style="table-layout:auto"}
 

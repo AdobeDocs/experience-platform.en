@@ -46,7 +46,7 @@ GET /system/jobs?{QUERY_PARAMETERS}
 | `start` | Offset the page of results returned, as per the create time of the request. | `start=4`|
 | `limit` | Limit the number of results returned. | `limit=10`|
 | `page` | Return a specific page of results, as per the create time of the request. | `page=2`|
-| `sort` | Sort results by a specific field in ascending (`asc`) or descending (`desc`) order. The sort parameter does not work when returning multiple pages of results. | `sort=batchId:asc`| 
+| `sort` | Sort results by a specific field in ascending (`asc`) or descending (`desc`) order. The sort parameter does not work when returning multiple pages of results. | `sort=batchId:asc`|
 
 **Request**
 

@@ -64,7 +64,7 @@ The Magnite: Batch destination can receive *any* identity sources from the Adobe
 
 ## Supported audiences {#supported-audiences}
 
-| Audience origin             | Supported | Description | 
+| Audience origin             | Supported | Description |
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
@@ -87,7 +87,7 @@ Supported audiences by audience data type:
 
 ## Export type and frequency {#export-type-frequency}
 
-| Item | Type | Notes | 
+| Item | Type | Notes |
 |-----------------------------|----------|----------|
 | Export type | Audience export | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the Magnite: Batch destination. |
 | Export frequency | Batch | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about batch [file-based destinations](/help/destinations/destination-types.md). |

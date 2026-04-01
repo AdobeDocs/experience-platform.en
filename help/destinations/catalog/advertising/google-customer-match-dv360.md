@@ -69,7 +69,7 @@ To promote the release, they upload email addresses from their CRM database into
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
@@ -171,20 +171,26 @@ To learn about ingesting email addresses in Experience Platform, see the [batch 
 
 If you select to hash the email addresses yourself, make sure to comply with Google's requirements, outlined in the links above.
 
-<!-- ### Using custom namespaces {#custom-namespaces}
+<!-- 
+### Using custom namespaces {#custom-namespaces}
 
-Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. Refer to the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information. -->
+Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. Refer to the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information. 
+-->
 
-<!-- Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
+<!-- 
+Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
-![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
+![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) 
+-->
 
-<!-- ## Configure destination - video walkthrough {#video}
+<!-- 
+## Configure destination - video walkthrough {#video}
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) 
+-->
 
 ## Connect to the destination {#connect}
 
@@ -225,11 +231,13 @@ When you are finished providing details for your destination connection, select 
 
 See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
-<!-- In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] audiences to [!DNL Google Customer Match].
+<!-- 
+In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] audiences to [!DNL Google Customer Match].
 
 ![Google Customer Match App ID field highlighted in the Segment schedule step of the activation workflow.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-For details on how to find the [!DNL App ID], refer to the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative. -->
+For details on how to find the [!DNL App ID], refer to the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative. 
+-->
 
 ### Mapping example: activating audience data in [!DNL Google Customer Match + Display & Video 360] {#example-gcm}
 

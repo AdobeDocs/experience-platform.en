@@ -4081,7 +4081,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **Response**
 
-+++Create output schema - Response
++++ Create output schema - Response
 
 ```json
 
@@ -4390,6 +4390,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 The ID in the response represents the unique identifier of the input schema that you have created. Copy the ID from the response as you will reuse this in a later step.
 
++++
+
 >[!ENDSHADEBOX]
 
 ### Create mapping set {#create-mapping-set}
@@ -4400,7 +4402,7 @@ Next, use the [data prep API](https://developer.adobe.com/experience-platform-ap
 
 **Request**
 
-+++Create mapping set - Request
++++ Create mapping set - Request
 
 >[!IMPORTANT]
 >
@@ -4801,7 +4803,7 @@ To add file manifest generation to an existing destination, you need to update t
 
 **Request** 
 
-+++Add file manifest to existing target connection - Request
++++ Add file manifest to existing target connection - Request
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/targetConnections/{TARGET_CONNECTION_ID}' \
@@ -4821,6 +4823,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]'
 ```
 
++++
+
 >[!ENDSHADEBOX]
 
 ## Validate dataflow (Get the dataflow runs) {#get-dataflow-runs}
@@ -4833,7 +4837,7 @@ To check the executions of a dataflow, use the Dataflow Runs API:
 
 **Request** 
 
-+++Get dataflow runs - Request
++++ Get dataflow runs - Request
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
@@ -4849,7 +4853,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-+++Get dataflow runs - Response
++++ Get dataflow runs - Response
 
 ```json
 {

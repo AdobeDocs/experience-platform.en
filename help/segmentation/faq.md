@@ -112,7 +112,7 @@ Payload attributes are attributes that are ingested as part of the CSV upload of
 
 Enrichment attributes are attributes that come from a dataset and are joined with an audience in Audience Composition. These attributes can currently only be used in Adobe Journey Optimizer campaigns. Support for Adobe Journey Optimizer journeys is coming soon, with support for downstream destinations pending future release.
 
-| Activation channel | Audiences from CSV custom upload | Audiences from Audience Composition | 
+| Activation channel | Audiences from CSV custom upload | Audiences from Audience Composition |
 | --- | --- | --- |
 | Real-Time CDP Destinations | Both the payload attributes and the audiences can be activated. | Only the audience can be activated. Enrichment attributes **cannot** be activated. |
 | Adobe Journey Optimizer Campaigns | Neither the audience nor the payload attributes can be activated. | Both the audience and the enrichment attributes can be activated. |

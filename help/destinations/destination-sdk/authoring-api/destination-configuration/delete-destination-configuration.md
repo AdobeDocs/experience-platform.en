@@ -37,7 +37,7 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 
 {style="table-layout:auto"}
 
-+++Request
++++ Request
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
@@ -47,7 +47,9 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-+++Response
++++
+
++++ Response
 
 A successful response returns HTTP status 200 along with an empty HTTP response.
 
@@ -65,3 +67,5 @@ To learn more about what you can do with this endpoint, see the following articl
 * [Create a destination configuration](create-destination-configuration.md)
 * [Retrieve a destination configuration](retrieve-destination-configuration.md)
 * [Update a destination configuration](update-destination-configuration.md)
+
++++

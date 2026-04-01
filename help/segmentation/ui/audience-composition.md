@@ -238,7 +238,8 @@ The **[!UICONTROL Enrichment attributes]** popover appears. You can select the a
 
 ![The enrichment attributes you want to add are highlighted.](../images/ui/audience-composition/select-enrichment-attribute.png)
 
-<!-- ## [!UICONTROL Join] {#join-block}
+<!-- 
+## [!UICONTROL Join] {#join-block}
 
 The **[!UICONTROL Join]** block type allows you to add in external audiences from datasets that have not yet been processed by Adobe Experience Platform.
 
@@ -256,7 +257,8 @@ After selecting **[!UICONTROL Add Audience]**, a list of audiences appears. Sele
 
 Your selected audiences now appear within the right rail when the **[!UICONTROL Join]** block is selected. 
 
-![The audiences that were added as part of the Join are shown.](../images/ui/audience-composition/selected-audiences.png) -->
+![The audiences that were added as part of the Join are shown.](../images/ui/audience-composition/selected-audiences.png) 
+-->
 
 ## [!UICONTROL Rank] {#rank-block}
 

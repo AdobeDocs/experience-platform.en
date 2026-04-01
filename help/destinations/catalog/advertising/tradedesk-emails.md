@@ -43,10 +43,10 @@ Both unhashed and hashed emails addresses and phone numbers are supported by [!D
 
 |Target Identity|Description|
 |---|---|
-|Email|Email addresses (clear text)| 
-|Email_LC_SHA256|Email addresses need to be hashed using SHA256 and lowercased. You won't be able to change this setting later.| 
+|Email|Email addresses (clear text)|
+|Email_LC_SHA256|Email addresses need to be hashed using SHA256 and lowercased. You won't be able to change this setting later.|
 |Phone (E.164)|Phone numbers that need to be normalized in E.164 format. The E.164 format includes a plus sign (+), an international country calling code, a local area code, and a phone number. For example: (+)(country code)(area code)(phone number). This identifier is not available for The Trade Desk – First-Party Data (EU).|
-|Phone (SHA256_E.164)|Phone numbers that have already been normalized to E.164 format and then hashed using SHA-256, with the resulting hash Base64-encoded. This identifier is not available for The Trade Desk – First-Party Data (EU).| 
+|Phone (SHA256_E.164)|Phone numbers that have already been normalized to E.164 format and then hashed using SHA-256, with the resulting hash Base64-encoded. This identifier is not available for The Trade Desk – First-Party Data (EU).|
 |TDID|Cookie ID in The Trade Desk|
 |GAID|Google Advertising ID|
 |IDFA|Apple ID for Advertisers|
@@ -64,7 +64,7 @@ Both unhashed and hashed emails addresses and phone numbers are supported by [!D
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |

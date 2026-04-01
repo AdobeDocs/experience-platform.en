@@ -94,7 +94,7 @@ Add the **[!UICONTROL Converted]** action to your tag rule to send converted eve
 
 | Property | Description |
 | --- | --- |
-| [!UICONTROL Event Name] | The Event Name that will be used to further refine this **convert** event. | 
+| [!UICONTROL Event Name] | The Event Name that will be used to further refine this **convert** event. |
 | [!UICONTROL Event Details Data Element]| The Data Element returns event details, including: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optional)</li><li>`recordID` (optional)</li></ul> |
 
 >[!NOTE]
@@ -113,7 +113,7 @@ Add the **[!UICONTROL Added to Cart]** action to your tag rule to send added to 
 
 | Property | Description |
 | --- | --- |
-| [!UICONTROL Event Name ] | The Event Name that will be used to further refine this **add to cart** event. | 
+| [!UICONTROL Event Name ] | The Event Name that will be used to further refine this **add to cart** event. |
 | [!UICONTROL Event Details Data Element ] | The Data Element returns event details in JSON format, including: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`</li><li>`price`</li><li>`quantity`</li><li>`discount` (optional)</li><li>`queryID` (optional)</li><li>`currency` (optional)</li></ul>. |
 
 >[!NOTE]
@@ -134,7 +134,7 @@ Add the **[!UICONTROL Purchased]** action to your tag rule to send purchased eve
 
 | Property | Description |
 | --- | --- |
-| [!UICONTROL Event Name ] | The Event Name that will be used to further refine this **purchase** event. | 
+| [!UICONTROL Event Name ] | The Event Name that will be used to further refine this **purchase** event. |
 | [!UICONTROL Event Details Data Element ] | The Data Element returns event details in JSON format, including: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`</li><li>`price`</li><li>`quantity`</li><li>`discount` (optional)</li><li>`queryID` (optional)</li><li>`currency` (optional)</li></ul>. |
 
 >[!NOTE]
@@ -154,7 +154,7 @@ Add the **[!UICONTROL Viewed]** action to your tag rule to send purchased events
 
 | Property | Description |
 | --- | --- |
-| [!UICONTROL Event Name ] | The Event Name that will be used to further refine this **view** event. | 
+| [!UICONTROL Event Name ] | The Event Name that will be used to further refine this **view** event. |
 | [!UICONTROL Event Details Data Element ] | The Data Element returns event details in JSON format, including: <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
 
 >[!NOTE]

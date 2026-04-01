@@ -57,7 +57,7 @@ To upload multiple identity types, create separate instances of the [!DNL Index 
 
 This section explains which audience types you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 | --------- | ---------- | ---------- |
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
@@ -83,7 +83,7 @@ Supported audiences by audience data type:
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
-| --------- | ---------- | --------- | 
+| --------- | ---------- | --------- |
 | Export type | **[!UICONTROL Segment export]** | Exports all members of a segment (audience) with the identifiers (IDFA, GAID, or others) used in the [!DNL Index Exchange] destination. |
 | Export frequency | **[!UICONTROL Batch]** | Exports files to downstream platforms at intervals of 3, 6, 8, 12, or 24 hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based). |
 
@@ -110,9 +110,9 @@ To configure details for the destination, fill in the fields below. An asterisk 
 
 #### Supported Identifier Types {#supported-identifier-types}
 
-| Identifier Type | Description | 
+| Identifier Type | Description |
 |------------------ | ------------- |
-| [!DNL appbundle] | Mobile App Bundle | 
+| [!DNL appbundle] | Mobile App Bundle |
 | [!DNL contentid] | Content ID |
 | [!DNL deviceid] | Device ID (eg. IDFA, GAID, WAID, etc) |
 | [!DNL ip] | IP Address |

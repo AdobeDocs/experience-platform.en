@@ -68,7 +68,7 @@ Some destinations in Experience Platform have certain rules and obligations for 
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
@@ -155,16 +155,20 @@ Do **not** provide pre-hashed values for `address_info_first_name` or `address_i
 
 Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. See the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information.
 
-<!-- Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
+<!-- 
+Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
-![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
+![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) 
+-->
 
-<!-- ## Configure destination - video walkthrough {#video}
+<!-- 
+## Configure destination - video walkthrough {#video}
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) 
+-->
 
 ## Video overview {#video-overview}
 

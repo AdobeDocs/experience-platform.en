@@ -136,7 +136,7 @@ curl -X POST https://experience.adobe.io/unifiedfolders/folders/dataset
  }'
 ```
 
-| Property | Description | 
+| Property | Description |
 | -------- | ----------- |
 | `name` | The name of the folder you want to create. |
 | `parentId` | The ID of the parent folder. |
