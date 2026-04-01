@@ -43,7 +43,7 @@ If you need to evaluate a segment definition using streaming or edge segmentatio
 
 For example, let's say you have two audiences, with one audience housing profile schema data and the other housing experience event schema data:
 
-| Audience | Schema | Source type | Query definition | Audience ID | 
+| Audience | Schema | Source type | Query definition | Audience ID |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | California Residents | Profile | Batch | Home address is in the state of California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
 | Recent checkouts | Experience Event | Streaming | Has at least one checkout in the the last 24 hours | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
@@ -64,7 +64,7 @@ However, if you want to combine two audiences with event data, you **cannot** ju
 
 For example, let's say you have two audiences, with both audiences housing experience event schema data:
 
-| Audience | Schema | Source type | Query definition | Audience ID | 
+| Audience | Schema | Source type | Query definition | Audience ID |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | Recent abandons | Experience event | Batch | Has at least one abandon event in the last 24 hours | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
 | Recent checkouts | Experience Event | Streaming | Has at least one checkout in the the last 24 hours | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
@@ -142,7 +142,7 @@ In order to combine data from both batch and streaming sources, you'll need to s
 
 For example, let's take the following two sample audiences into account:
 
-| Audience | Schema | Source type | Query definition | Audience ID | 
+| Audience | Schema | Source type | Query definition | Audience ID |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | California Residents | Profile | Batch | Home address is in the state of California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
 | Recent checkouts | Experience Event | Streaming | Has at least one checkout in the the last 24 hours | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
@@ -165,7 +165,7 @@ If you want to combine multiple audiences with event data, you **cannot** just c
 
 For example, let's say you have two audiences, with both audiences housing experience event schema data:
 
-| Audience | Schema | Source type | Query definition | Audience ID | 
+| Audience | Schema | Source type | Query definition | Audience ID |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | Recent abandons | Experience event | Batch | Has at least one abandon event in the last 48 hours | `7deb246a-49b4-4687-95f9-6316df049948` |
 | Recent checkouts | Experience Event | Streaming | Has at least one checkout in the the last 24 hours | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |

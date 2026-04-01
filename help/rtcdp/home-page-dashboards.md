@@ -70,7 +70,8 @@ Finally, the resources widget provides you with additional documentation resourc
 * [Connecting destinations](../destinations/home.md)
 * [Manage access](../access-control/abac/overview.md)
 
-<!-- ### Successful profile records
+<!-- 
+### Successful profile records
 
 In the leaderboard **[!UICONTROL Successful profile records]** shows the total number of records that have been successfully processed into the profile.
 
@@ -102,4 +103,5 @@ In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of
 
 The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Select **[!UICONTROL View datasets]** to see more details about the profile records.
 
-The number of failed profile records is updated hourly. -->
+The number of failed profile records is updated hourly. 
+-->
