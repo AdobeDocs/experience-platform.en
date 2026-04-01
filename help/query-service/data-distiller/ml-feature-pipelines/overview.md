@@ -5,9 +5,11 @@ exl-id: 3b452181-e254-4155-8bf5-0990533f202d
 ---
 # AI/ML feature pipelines
 
-<!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided [!DNL Python] notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
+<!-- 
+This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided [!DNL Python] notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
 
-This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
+This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. 
+-->
 
 Data Distiller enables data scientists and engineers to enrich their machine learning pipelines with high-value customer experience data that has been collected and curated in Adobe Experience Platform. From a [!DNL Python] notebook in any environment, you can interactively explore customer data in the Experience Platform, define and compute features from the data, and read the computed features into your machine learning environment for modeling.
 

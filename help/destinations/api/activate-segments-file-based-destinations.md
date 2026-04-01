@@ -4390,6 +4390,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 The ID in the response represents the unique identifier of the input schema that you have created. Copy the ID from the response as you will reuse this in a later step.
 
++++
+
 >[!ENDSHADEBOX]
 
 ### Create mapping set {#create-mapping-set}
@@ -4400,7 +4402,7 @@ Next, use the [data prep API](https://developer.adobe.com/experience-platform-ap
 
 **Request**
 
-+++Create mapping set - Request
++++ Create mapping set - Request
 
 >[!IMPORTANT]
 >
@@ -4820,6 +4822,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
   }
 ]'
 ```
+
++++
 
 >[!ENDSHADEBOX]
 

@@ -53,7 +53,8 @@ You will receive an alert showing that the role has been saved successfully. Sel
 
 The new role is successfully created, and you are redirected to the **[!UICONTROL Roles]** page, where you will see the newly created role appear in the list. 
 
-<!-- The following video is intended to support your understanding of creating a new role and managing users for that role.
+<!-- 
+The following video is intended to support your understanding of creating a new role and managing users for that role.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on) -->
 

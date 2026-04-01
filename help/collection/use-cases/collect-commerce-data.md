@@ -45,7 +45,7 @@ This section describes the fields available in the `commerce` object.
 
 Expand the section below to see an example of a Web SDK command using a field from the `commerce` object.
 
-+++ `productViews`
++++ productViews
 
 A basic Web SDK `sendEvent` call setting the `productViews` field to `1`:
 

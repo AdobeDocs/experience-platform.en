@@ -81,7 +81,8 @@ The table below highlights the major differences between running Experience Plat
 
 {style="table-layout:auto"}
 
-<!-- To be determined if we need to add this part about the AI Assistant 
+<!-- 
+To be determined if we need to add this part about the AI Assistant 
 
 | [Experience Platform AI Assistant](/help/ai-assistant/home.md) | Supported | Not supported |
 

@@ -29,7 +29,8 @@ Refer to the table below for details on which types of integrations support the 
 |---------|----------|------|
 |`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when audiences are activated to the destination. <br> <ul><li> `true`: [!DNL Experience Platform] sends the historical user profiles that qualified for the audience before the audience is activated. </li><li> `false`: [!DNL Experience Platform] only includes user profiles that qualify for the audience after the audience is activated. </li></ul> |
 
-{style="table-layout:auto"} -->
+{style="table-layout:auto"} 
+-->
 
 
 ## Next steps {#next-steps}
