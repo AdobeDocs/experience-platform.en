@@ -110,7 +110,7 @@ Filters are often required to find a particular batch to retrieve relevant data 
 GET /batches?createdAfter={START_TIMESTAMP}&dataSet={DATASET_ID}&sort={SORT_BY}
 ```
 
-| Property | Description | 
+| Property | Description |
 | -------- | ----------- |
 | `{START_TIMESTAMP}` | The start timestamp in milliseconds (for example, 1514836799000). |
 | `{DATASET_ID}` | The dataset identifier. |
@@ -342,7 +342,7 @@ Depending on whether the file ID points to an individual file or a directory, th
 ```
 
 | Property | Description |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `data._links.self.href` | The URL to download the associated file. |
 
 This response returns a directory containing two separate files, with IDs `{FILE_ID_2}` and `{FILE_ID_3}`. In this scenario, you must follow the URL of each file to access the file.
@@ -437,7 +437,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 ```
 
 | Property | Description |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `Range: bytes=0-99` | Specifies the range of bytes to download. If this is not specified, the API downloads the entire file. In this example, the first 100 bytes are downloaded. |
 
 **Response**
@@ -464,7 +464,7 @@ GET /batches/{BATCH_ID}/files?limit={LIMIT}
 GET /batches/{BATCH_ID}/files?start={OFFSET}&limit={LIMIT}
 ```
 
-| Property | Description | 
+| Property | Description |
 | -------- | ----------- |
 | `{BATCH_ID}` | Batch identifier of the batch that you are trying to access. |
 | `{OFFSET}` | The specified index to start the result array (for example, start=0) |

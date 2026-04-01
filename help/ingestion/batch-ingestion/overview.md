@@ -129,7 +129,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 | Property | Description |
 | -------- | ----------- |
-| `id` | The ID of the batch that was just created (used in subsequent requests). |  
+| `id` | The ID of the batch that was just created (used in subsequent requests). |
 | `relatedObjects.id` | The ID of the dataset to upload the files into. |
 
 ## File upload
@@ -156,8 +156,8 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Property | Description |
 | -------- | ----------- |
-| `{BATCH_ID}` | The ID of the batch. |  
-| `{DATASET_ID}` | The ID of the dataset to upload files. | 
+| `{BATCH_ID}` | The ID of the batch. |
+| `{DATASET_ID}` | The ID of the dataset to upload files. |
 | `{FILE_NAME}` | The name of file as it will be seen in the dataset. |
 
 **Request**
@@ -192,7 +192,7 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}?action=initiali
 
 | Property | Description |
 | -------- | ----------- |
-| `{BATCH_ID}` | The ID of the batch. |  
+| `{BATCH_ID}` | The ID of the batch. |
 | `{DATASET_ID}` | The ID of the dataset ingesting the files. |
 | `{FILE_NAME}` | The name of file as it will be seen in the dataset. |
 
@@ -222,7 +222,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Property | Description |
 | -------- | ----------- |
-| `{BATCH_ID}` | The ID of the batch. |  
+| `{BATCH_ID}` | The ID of the batch. |
 | `{DATASET_ID}` | The ID of the dataset to upload the files into. |
 | `{FILE_NAME}` | Name of file as it will be seen in the dataset. |
 

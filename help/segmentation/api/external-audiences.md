@@ -722,7 +722,7 @@ The following section lists the available error codes when using the external au
 
 | Platform error code | Status code | Message | Description |
 | ------------------- | ----------- | ------- | ----------- |
-| 100910-400 | 400 | `BAD_REQUEST` | A bad request has occurred, due to a failure occurring while validating the requests. | 
+| 100910-400 | 400 | `BAD_REQUEST` | A bad request has occurred, due to a failure occurring while validating the requests. |
 | 100911-400 | 400 | `BAD_REQUEST` | An invalid token is provided. |
 | 100920-401 | 401 | `UNAUTHORIZED` | A header is missing. |
 | 100921-401 | 401 | `UNAUTHORIZED` | An invalid `imsOrgId` is provided. |

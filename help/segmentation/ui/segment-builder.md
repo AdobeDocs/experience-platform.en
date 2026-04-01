@@ -68,7 +68,7 @@ The **[!UICONTROL Attributes]** tab allows you to browse [!DNL Profile] attribut
 
 The attributes you add can be one of the following data types:
 
-| Data type | Common use cases | 
+| Data type | Common use cases |
 | --------- | ---------------- |
 | String | Names, email addresses, product categories |
 | Numeric | Age, revenue, product quantities, loyalty scores |
@@ -208,7 +208,7 @@ For example, consider a situation where you had two report suites with the follo
 | Field | Report Suite Schema A | Report Suite Schema B |
 | ----- | --------------------- | --------------------- |
 | eVar1 | Referring Domain | Logged in Y/N |
-| eVar2 | Page Name | Member Loyalty ID | 
+| eVar2 | Page Name | Member Loyalty ID |
 | eVar3 | URL | Page Name |
 | eVar4 | Search Terms | Product Name |
 | event1 | Clicks | Page Views |
@@ -452,7 +452,7 @@ The list of available time constraints for this operation differs from the main 
 | Time constraint | Description |
 | --------------- | ----------- |
 | After | The latter event **must at least** take place after the prior event. |
-| Within | The two events **must** take place during the time period listed within the time constraint. | 
+| Within | The two events **must** take place during the time period listed within the time constraint. |
 
 >[!NOTE]
 >

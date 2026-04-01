@@ -132,7 +132,7 @@ These buckets are regularly re-computed to ensure the data is kept up-to-date.
 >
 >The influential factors are sorted in order of importance and are independent of each other.
 
-| Field | Description | 
+| Field | Description |
 | ----- | ----------- |
 | Type | The type of data that the influential factor is derived from. This can be a profile attribute, an experience event, or an audience membership. |
 | Key | The name of the data field. For keys of the audience membership type, this value represents the **namespace** of the audience where the data comes from. Possible values include `ups` (Segmentation Service) and `AO` (Audience Orchestration). For keys of other types, this value represents the XDM field path. For example, if the company Luma has a custom field called income, the key would be `_luma.income` |

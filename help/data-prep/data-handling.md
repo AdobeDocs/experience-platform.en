@@ -93,9 +93,9 @@ The following table shows which pattern letters are defined for format strings. 
 | H | Hour in day (0-23) | Number | 0 |
 | k | Hour in day (1-24) | Number | 24 |
 | K | Hour in AM/PM (0-11) | Number | 0 |
-| h | Hour in AM/PM (1-12) | Number | 12 | 
-| m | Minute in the hour | Number | 38 | 
-| s | Second in the minute | Number | 44 | 
+| h | Hour in AM/PM (1-12) | Number | 12 |
+| m | Minute in the hour | Number | 38 |
+| s | Second in the minute | Number | 44 |
 | S | Millisecond | Number | 245 |
 | z | Time zone | General time zone | Pacific Standard Time; PST; GMT-08:00 |
 | Z | Time zone | RFC 822 time zone | -0800 |

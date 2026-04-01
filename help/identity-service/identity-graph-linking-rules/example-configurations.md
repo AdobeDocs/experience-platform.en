@@ -234,7 +234,7 @@ You are ingesting both an unhashed (offline) CRMID and a hashed (online) CRMID. 
 Configure the following settings in the Graph Simulation interface before you simulate your graph.
 
 | Display name | Identity symbol | Identity type | Unique per graph | Namespace priority |
-| --- | --- | --- | --- | --- | 
+| --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | CRMIDhash | CRMIDhash | CROSS_DEVICE | ✔️ | 2 |
 | ECID | ECID | COOKIE | | 3 |
@@ -502,7 +502,7 @@ Configure the following settings in the Graph Simulation interface before you si
 
 | Display name | Identity symbol | Identity type | Unique per graph | Namespace priority |
 | --- | --- | --- | --- | --- |
-| CRMID | CRMID | CROSS_DEVICE |  ✔️  | 1 | 
+| CRMID | CRMID | CROSS_DEVICE |  ✔️  | 1 |
 | loyaltyID | loyaltyID | CROSS_DEVICE |   ✔️  | 2 |
 | Email | Email | Email |  ✔️   | 3 |
 | thirdPartyID | thirdPartyID | CROSS_DEVICE | | 4 |
