@@ -56,7 +56,8 @@ The new role is successfully created, and you are redirected to the **[!UICONTRO
 <!-- 
 The following video is intended to support your understanding of creating a new role and managing users for that role.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on) 
+-->
 
 ## Duplicate a role
 
