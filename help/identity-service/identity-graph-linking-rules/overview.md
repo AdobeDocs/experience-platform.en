@@ -32,7 +32,8 @@ The following documents are essential in understanding [!DNL Identity Graph Link
 
 Watch the following videos to learn about some of the fundamental aspects of Identity Graph Linking Rules.
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _blank}
 * https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
 * https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 

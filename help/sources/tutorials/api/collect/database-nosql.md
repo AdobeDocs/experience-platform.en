@@ -652,8 +652,6 @@ curl -X POST \
     }'
 ```
 
-+++
-
 | Property | Description |
 | -------- | ----------- |
 | `flowSpec.id` | The [flow spec ID](#specs) retrieved in the previous step. |

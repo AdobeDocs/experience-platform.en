@@ -65,7 +65,7 @@ The datastream view section displays a list of the latest datastreams that passe
 | Field | Description |
 | ----- | ----------- |
 | Datastream name | The name of the datastream. |
-| Datasets | The name of datasets the datastream belongs to. | 
+| Datasets | The name of datasets the datastream belongs to. |
 | Service enabled | The names of the services the datastream is enabled for. |
 | Requests | The number of requests that passed through the datastream. |
 | Peak throughput | The highest rate of requests that passed through the datastream. |
