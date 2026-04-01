@@ -45,7 +45,7 @@ This section describes the fields available in the `commerce` object.
 
 Expand the section below to see an example of a Web SDK command using a field from the `commerce` object.
 
-+++`productViews`
++++ `productViews`
 
 A basic Web SDK `sendEvent` call setting the `productViews` field to `1`:
 
@@ -85,7 +85,7 @@ This section describes all the fields supported by the `order` object.
 
 Expand the section below to see an example of a Web SDK command using the `commerce` object.
 
-+++`Order` object example
++++ `Order` object example
 
 A Web SDK `sendEvent` call setting the `order` object that applies to multiple products in the `productListItems` array:
 
@@ -145,7 +145,7 @@ The product list indicates which products are related to the corresponding actio
 
 Expand the sections below to see examples of Web SDK commands using the `productListItems` object.
 
-+++`productListItems` example
++++ `productListItems` example
 
 A Web SDK `sendEvent` call setting the `productViews` for multiple products in the `productListItems` array:
 
@@ -173,7 +173,7 @@ alloy("sendEvent",{
 
 +++
 
-+++`productListAdds` example
++++ `productListAdds` example
 
 A Web SDK `sendEvent` call setting the `productListAdds` event for multiple products in the `productListItems` array:
 
@@ -207,7 +207,7 @@ alloy("sendEvent",{
 
 +++
 
-+++`checkouts` example
++++ `checkouts` example
 
 A Web SDK `sendEvent` call setting the `checkouts` event for multiple products in the `productListItems` array:
 

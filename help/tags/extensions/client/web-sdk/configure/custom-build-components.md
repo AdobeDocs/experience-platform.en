@@ -31,7 +31,7 @@ Adobe offers the ability to disable the following Web SDK build components:
 | **[!UICONTROL Activity collector]** | Allows automatic link collection and Activity Map tracking. | |
 | **[!UICONTROL Advertising]** | Enables Adobe Advertising integration with Customer Journey Analytics. | |
 | **[!UICONTROL Audiences]** | Supports the integration with Adobe Audience Manager, such as ID syncs. | |
-| **[!UICONTROL Brand concierge]** | Enables integration with Brand concierge. |
+| **[!UICONTROL Brand concierge]** | Enables integration with Brand concierge. | |
 | **[!UICONTROL Consent]** | Allows the ability to use consent features. | [[!UICONTROL Set consent]](../actions/set-consent.md) action |
 | **[!UICONTROL Event merge]** | Deprecated. | [[!UICONTROL Event merge ID]](../data-element-types.md) data element (deprecated)<br>[[!UICONTROL Reset event merge ID]](../actions/reset-event-merge-id.md) action (deprecated) |
 | **[!UICONTROL Media Analytics bridge]** | Supports the integration with legacy Media Analytics. | [[!UICONTROL Get media analytics tracker]](../actions/get-media-analytics-tracker.md) action |

@@ -85,7 +85,7 @@ Supported audiences by audience data type:
 
 Refer to the table below for information about the destination export type and frequency.
 
-|**Audience**|**Supported**|**Description origin**|            
+|**Audience**|**Supported**|**Description origin**|
 |---|---|---|
 |Segmentation Service| Yes |Audiences generated through the Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
 |Custom uploads| No |Audiences [[imported]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) into Experience Platform from CSV files.|

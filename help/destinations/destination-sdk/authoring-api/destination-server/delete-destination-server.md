@@ -44,7 +44,7 @@ DELETE /authoring/destination-servers/{INSTANCE_ID}
 
 {style="table-layout:auto"}
 
-+++Request
++++ Request
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
@@ -54,9 +54,13 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-+++Response
++++
+
++++ Response
 
 A successful response returns HTTP status 200 along with an empty HTTP response.
+
++++
 
 ## API error handling {#error-handling}
 

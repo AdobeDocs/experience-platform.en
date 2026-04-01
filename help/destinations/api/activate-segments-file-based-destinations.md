@@ -4081,7 +4081,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **Response**
 
-+++Create output schema - Response
++++ Create output schema - Response
 
 ```json
 
@@ -4801,7 +4801,7 @@ To add file manifest generation to an existing destination, you need to update t
 
 **Request** 
 
-+++Add file manifest to existing target connection - Request
++++ Add file manifest to existing target connection - Request
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/targetConnections/{TARGET_CONNECTION_ID}' \
@@ -4833,7 +4833,7 @@ To check the executions of a dataflow, use the Dataflow Runs API:
 
 **Request** 
 
-+++Get dataflow runs - Request
++++ Get dataflow runs - Request
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
@@ -4849,7 +4849,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-+++Get dataflow runs - Response
++++ Get dataflow runs - Response
 
 ```json
 {

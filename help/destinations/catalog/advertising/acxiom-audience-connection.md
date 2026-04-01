@@ -102,7 +102,7 @@ For the [!DNL Acxiom Audience Connection] destination to correctly receive the a
 [!DNL Acxiom Audience Connection] only allows mapping to the following target fields. The target fields described in the table below must be mapped in the order shown below. 
 
 | Field Name | Description|Required | Field Order | Max Length |
-|---|---|---|---|---|          
+|---|---|---|---|---|
 |First Name|First name of individual|No|1|255|
 |Middle|Middle name or initial of the individual|No|2|50|
 |Last Name|Last name of the individual|Yes|3|255|
