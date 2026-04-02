@@ -112,7 +112,7 @@ When performing GET requests to explore your source's file structure and content
 | `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. For this source the value would be `json`. |
 | `fileType=json` | The file type of the file you want to bring to Experience Platform. Currently, `json` is the only supported file type. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
-| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Experience Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `{"projectId":"2671127","timezone":"Pacific Standard Time"}` string in base64. **Note**: In the example below, `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` encoded in base64 equates to `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. | 
+| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Experience Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `{"projectId":"2671127","timezone":"Pacific Standard Time"}` string in base64. **Note**: In the example below, `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` encoded in base64 equates to `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. |
 
 
 **Request**

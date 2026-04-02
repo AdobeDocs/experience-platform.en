@@ -123,7 +123,7 @@ The returned audit log data contains the following information on all queries th
 | [!UICONTROL Asset Name] | The value for the [!UICONTROL Asset Name] field depends on the category chosen as a filter. |
 | [!UICONTROL Category] | This field matches the category selected in the filter dropdown.  |
 | [!UICONTROL Action] | The available actions depend on the category chosen as a filter. |
-| [!UICONTROL User] | This field provides the user ID that executed the query. | 
+| [!UICONTROL User] | This field provides the user ID that executed the query. |
 
 ![The Audits dashboard with the filtered activity log highlighted.](../../images/audit-logs/filtered.png)
 

@@ -60,7 +60,7 @@ The table below provides a breakdown of differences between dataset deletion in 
 
 | Dataset deletion | Catalog Service | Data hygiene |
 | --- | --- | --- |
-| Accepted use cases |  Delete full datasets and their associated identity information in Experience Platform. | Management of data stored in Experience Platform. | 
+| Accepted use cases |  Delete full datasets and their associated identity information in Experience Platform. | Management of data stored in Experience Platform. |
 | Estimated latency | Days | Days |
 | Services impacted | Dataset deletion through Catalog Service deletes data from Identity Service, Real-Time Customer Profile, and data lake. | Dataset deletion through Data hygiene deletes data from Identity Service, Real-Time Customer Profile, and data lake. |
 | Deletion pattern | Delete linked identities from Identity Service established by a particular dataset. | Delete linked identities from Identity Service established by a particular dataset, based on expiration schedule. |

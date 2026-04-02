@@ -58,7 +58,7 @@ Through the Permissions interface you can define resource-based access control f
 | Permission | Description |
 |---|---|
 | [!UICONTROL Manage Datasets] | This permission provides read-only access for schemas and allows access to read, create, edit, and delete datasets for use with Query Service.  |
-| [!UICONTROL View Datasets] | This permission allows read-only access for datasets and schemas for use with Query Service. | 
+| [!UICONTROL View Datasets] | This permission allows read-only access for datasets and schemas for use with Query Service. |
 
 #### Access control for columns/fields
 

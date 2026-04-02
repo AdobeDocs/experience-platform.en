@@ -13,7 +13,7 @@ exl-id: 4f841f5a-3840-4da5-a3a4-ceecde87c684
 >
 >Each display name contains a link to further information on its audio and video parameters. The linked pages contain details on the video ad data collected by Adobe, implementation values, network parameters, reporting, and important considerations.
 
-| Display name                                                                                                                                                            | Property      | Data type | Required | Description                                       | 
+| Display name                                                                                                                                                            | Property      | Data type | Required | Description                                       |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------|----------|---------------------------------------------------|
 | [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-length)| `length`      | integer   |   Yes    | The length of the chapter, in seconds.            |
 | [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-name)                | `friendlyName`| string    |   No     | The name of the chapter and/or segment.           |

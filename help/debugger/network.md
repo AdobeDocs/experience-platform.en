@@ -29,9 +29,11 @@ Select on an item in the Network view to see an expanded view. From the expanded
 
 ![](images/network-expand.jpg)
 
-<!--Use the icon at the top of each column to copy the server call URL to your clipboard, where you can paste it into another document for reference or debugging purposes.
+<!--
+Use the icon at the top of each column to copy the server call URL to your clipboard, where you can paste it into another document for reference or debugging purposes.
 
-![](images/copy.jpg)-->
+![](images/copy.jpg)
+-->
 
 To clear the list, select **[!UICONTROL Remove Events]**.
 

@@ -500,20 +500,20 @@ When exporting profiles to file-based destinations, deduplication ensures that o
 
 Consider the following data, where the deduplication key is the `Email` column:
 
-|Email*|first_name|last_name|timestamp|  
-|---|---|---|---|  
-|`test1@test.com`|John|Morris|2024-10-12T09:50|  
-|`test1@test.com`|John|Doe|2024-10-12T09:50|  
-|`test2@test.com`|Frank|Smith|2024-10-12T09:50|  
+|Email*|first_name|last_name|timestamp|
+|---|---|---|---|
+|`test1@test.com`|John|Morris|2024-10-12T09:50|
+|`test1@test.com`|John|Doe|2024-10-12T09:50|
+|`test2@test.com`|Frank|Smith|2024-10-12T09:50|
 
 {style="table-layout:auto"}
 
 After deduplication, the export file will contain:
 
-|Email*|first_name|last_name|timestamp|  
-|---|---|---|---|  
-|`test1@test.com`|John|Doe|2024-10-12T09:50|  
-|`test2@test.com`|Frank|Smith|2024-10-12T09:50|  
+|Email*|first_name|last_name|timestamp|
+|---|---|---|---|
+|`test1@test.com`|John|Doe|2024-10-12T09:50|
+|`test2@test.com`|Frank|Smith|2024-10-12T09:50|
 
 {style="table-layout:auto"}
 
