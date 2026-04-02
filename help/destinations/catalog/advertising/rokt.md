@@ -1,13 +1,13 @@
 ---
 title: Rokt
-description: Rokt uses AI, first-party data, and real-time decisioning to make every customer interaction more relevant and valuable. It delivers personalized experiences and connects advertisers with high-intent customers. By connecting Adobe Experience Platform audiences to Rokt, partners can improve campaign performance through smarter targeting, suppression, and personalization.
+description: Rokt unlocks value in ecommerce by using AI-driven real-time decisioning to make each Transaction Moment™ more relevant. It delivers personalized experiences and connects advertisers with high-intent customers. By connecting Adobe Experience Platform audiences to Rokt, partners can improve campaign performance through smarter targeting, suppression, and personalization.
 ---
 
 # Rokt connection {#rokt-destination}
 
 ## Overview {#overview}
 
-[Rokt](https://www.rokt.com) uses AI, first-party data, and real-time decisioning to make every customer interaction more relevant and valuable. It delivers personalized experiences and connects advertisers with high-intent customers. By connecting Adobe Experience Platform audiences to Rokt, partners can improve campaign performance through smarter targeting, suppression, and personalization. This helps ensure marketing reaches the right customers at the right time while reducing wasted spend.
+[Rokt](https://www.rokt.com) unlocks value in ecommerce by using AI-driven real-time decisioning to make each Transaction Moment™ more relevant. It delivers personalized experiences and connects advertisers with high-intent customers. By connecting Adobe Experience Platform audiences to Rokt, partners can improve campaign performance through smarter targeting, suppression, and personalization. This helps ensure marketing reaches the right customers at the right time while reducing wasted spend.
 
 >[!IMPORTANT]
 >
