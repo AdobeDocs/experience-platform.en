@@ -48,11 +48,15 @@ The [!UICONTROL Attributes] tab lets you browse Account attributes belonging to 
 
 ![The Attributes tab is displayed in the Audience Builder](../assets/segmentation/audience-builder/attributes.png)
 
+>[!NOTE]
+>
+>Summary data is in **Limited availability**. 
+
 When selecting an attribute, you can see summary data by selecting the [information icon](../../images/icons/info.png). The summary data includes information such as top values, an explanation of what the field is, the record count of the values, as well as the percentage of accounts that contain values for this attribute.
 
 The **[!UICONTROL Populated]** section shows the number of records where the attribute is populated compared to the total number of available records as well as the percentage of accounts that have a value for this field.
 
-The **[!UICONTROL Top values]** section displays the most frequently occurring values for the attribute, and includes details such as the value, the number of records that have the value, as well as the percentage of total records the value represents.
+The **[!UICONTROL Top values]** section displays the most frequently occurring values for the attribute, and includes details such as the value, the number of records that have the value, as well as the percentage of total records the value represents. The number of records for each field is determined by the profile snapshot, which provides a consolidated view of the records after all the contributing dataset data has been merged.
 
 ![A popover that displays a fully populated version of the summary data for an attribute.](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
 

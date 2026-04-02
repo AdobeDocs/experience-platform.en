@@ -223,6 +223,28 @@ You are taken to the [!UICONTROL Package object and dependencies] page where you
 
 Allow some time for the import to complete. The time to complete can vary depending on the number of objects in the package. You can monitor the import job from the [!UICONTROL Sandboxes] **[!UICONTROL Jobs]** tab.
 
+### Express copy an object to a sandbox {#express-copy}
+
+>[!IMPORTANT]
+>
+>The express copy feature is currently in beta and only available to select customers. Express copy (Beta) currently only supports schema and source dataflows.
+
+You can access express copy from the object inventory page. For example, to view a list of available schemas, select **[!UICONTROL Schemas]** from the left navigation, then select the **[!UICONTROL Browse]** tab.. Next, select the ellipsis (`...`) next to the selected schema to see control options in a dropdown menu. Select **[!UICONTROL Add to package]** from the dropdown.
+
+![List of schemas showing the dropdown menu highlighting the [!UICONTROL Add to package] control.](../images/ui/sandbox-tooling/add-to-package-express.png)
+
+The **[!UICONTROL Add to package]** dialog appears. Select the **[!UICONTROL Express copy]** option, then select the **[!UICONTROL Target sandbox]** from the dropdown. Finally, select **[!UICONTROL Add]** to confirm your choices.
+
+![[!UICONTROL Add to package] dialog, showing a selected package from the dropdown.](../images/ui/sandbox-tooling/express-copy.png)
+
+>[!NOTE]
+>
+> Express Copy automatically packages the selected objects along with their required dependencies and deploys them to the target sandbox. If a dependent object already exists in the target sandbox, it is reused, otherwise, a new object is created.
+
+To check the status of your express copy request, select **[!UICONTROL Sandboxes]** from the left navigation and then select the **[!UICONTROL Jobs]** tab. A list of all jobs and the current processing status are displayed.
+
+![The jobs tab showing a list of jobs.](../images/ui/sandbox-tooling/sandboxes-jobs.png)
+
 ## Monitor import details {#view-import-details}
 
 To view the imported details, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Jobs]** tab and select the package from the list. Alternatively, use the search bar to search for the package.
