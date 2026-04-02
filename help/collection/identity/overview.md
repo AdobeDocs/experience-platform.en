@@ -5,70 +5,28 @@ exl-id: 03060cdb-becc-430a-b527-60c055c2a906
 ---
 # Identity in Data Collection
 
-Adobe Data Collection uses identity signals to recognize returning visitors and carry context across experiences. For web implementations, the Experience Cloud ID (ECID) is the primary device identifier used by the Web SDK and the Web SDK tag extension.
+Adobe Data Collection uses identity signals to recognize returning visitors and carry context across experiences. When a visitor reaches your site, the Edge Network generates an Experience Cloud ID (ECID) and persists it in a first-party cookie. That ECID is the primary device identifier used across Adobe Experience Cloud applications and is the foundation that analytics, personalization, and audience activation build on. In your implementation, you can access the visitor's ECID on the client side through the [`getIdentity`](/help/collection/js/commands/getidentity.md) command. At the datastream level, you can use [Data Prep for Data Collection](/help/datastreams/data-prep.md) to map the ECID into a custom XDM field before it reaches downstream services.
 
-This page covers the cross-cutting identity concepts that apply across the identity docs in this section and helps you choose the right identity pattern for your implementation.
+The ECID identifies a device, not a person. To tie activity to a known person, you can send additional identifiers, such as a CRM ID or hashed email, alongside the ECID using the XDM [`identityMap`](/help/xdm/schema/composition.md#identityMap). Adobe recommends setting a person-level namespace as the [primary identity](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map) whenever one is available.
 
-## Choose the identity path that matches your goal {#choose-your-path}
+Beyond the default ECID, Data Collection supports additional identity signals depending on your implementation:
 
-* **Preserve identity on your own domains**: Use [first-party device IDs](./first-party-device-ids.md) when browser restrictions are shortening cookie life and you need stronger continuity for analytics and personalization on sites you control.
-* **Pass identity from a mobile app to mobile web or a WebView**: Use [mobile-to-web identity sharing](./mobile-to-web.md) when the visitor starts in your app and continues in mobile web content.
-* **Keep identity continuous across domains that you own**: Use [cross-domain sharing](./cross-domain-sharing.md) when visitors move between your organization's web properties and you want consistent reporting and personalization.
-* **Keep first-party persistence while supporting third-party activation in supported browsers**: Use [unified identity support (Beta)](./unified-identity-support.md) when you need both owned-property durability and supported third-party activation flows.
-* **Migrate from an older identity approach**: Start with [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md) if you are upgrading from Visitor API or reconciling older identity behavior.
+* **First-party device IDs (FPIDs)**: Device identifiers that you generate and manage on infrastructure you control. The Edge Network uses an FPID to [seed the ECID](./first-party-device-ids.md), giving you stronger cookie persistence on owned properties when browser restrictions shorten the life of Adobe-managed cookies.
+* **CORE IDs**: A separate, demdex-based identifier that participates in third-party identity workflows when third-party cookies are available. The CORE ID is distinct from the ECID and can be retrieved through [`getIdentity`](/help/collection/js/commands/getidentity.md). For details on how first-party and third-party identity contexts work together, see [Unified identity support](./unified-identity-support.md).
 
-## ECID as the primary identifier
+If you are upgrading from the Visitor API or reconciling older identity behavior, see [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md) to migrate existing AMCV cookies.
 
-For web data collection, the Edge Network generates and maintains an ECID for the visitor. That ECID is the primary device identifier used across Adobe Experience Cloud applications.
+## First-party and third-party collection {#first-party-and-third-party-collection}
 
-Depending on your setup, the ECID can be:
+The Web SDK always sets identity [cookies](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) (such as `kndctr_` cookies) as first-party cookies on your domain, regardless of which endpoint receives the data collection request. The collection endpoint (the domain that your implementation sends data to) is a separate choice that affects how browsers and network policies treat the request itself.
 
-* generated automatically by the Edge Network
-* persisted through first-party data collection on your domain
-* seeded from a first-party device ID (FPID)
-* linked to third-party identity infrastructure when supported conditions exist
+**First-party collection** routes data collection requests through a domain that your organization controls (for example, `data.example.com`), using a CNAME that points to Adobe's Edge Network. Because the request stays on your domain, it is less likely to be blocked by ad blockers or browser network restrictions. First-party collection is also a prerequisite for setting [first-party device IDs](./first-party-device-ids.md) from your own server infrastructure, which is the most durable identity strategy available. Adobe recommends using the [Adobe-managed certificate program](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) to configure first-party collection for your implementation.
 
-## CORE ID and third-party identity {#core-id-and-third-party-identity}
+**Third-party collection** sends requests directly to an Adobe-owned [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) (such as `example.data.adobedc.net`). While identity cookies are still set as first-party on your domain, the request itself goes to a third-party domain, which some browsers and ad blockers can restrict.
 
-When third-party cookies are enabled and available, the identity flow can also involve a demdex-based CORE ID. The CORE ID is different from the ECID, but it participates in third-party identity workflows and can be requested through [`getIdentity`](/help/collection/js/commands/getidentity.md).
+## Choose the right identity pattern {#choose-your-path}
 
-If you need a technical overview of how first-party and third-party identity contexts work together, see [Unified identity support in Data Collection (Beta)](./unified-identity-support.md).
-
-## First-party and third-party data collection {#first-party-and-third-party-data-collection}
-
-How you collect data affects identity behavior.
-
-**First-party data collection**
-
-First-party data collection uses a domain that your organization controls. This generally provides stronger cookie persistence on owned properties and is the foundation for first-party durability strategies such as [first-party device IDs](./first-party-device-ids.md).
-
-**Third-party data collection**
-
-Third-party data collection depends on browser support for third-party cookies. When available, it can support third-party identity and activation workflows. When blocked, identity falls back to first-party behavior on the owned domain.
-
-The choice between first-party and third-party behavior directly affects visitor continuity, reporting, and personalization.
-
-## Use `identityMap` to send additional identities {#identitymap}
-
-The Web SDK can send additional identities in the XDM `identityMap`. This lets you include person-level or business identifiers alongside the ECID.
-
-Each identity entry can include:
-
-| Property | Description |
-| --- | --- |
-| `id` | The identifier value for the namespace. |
-| `authenticatedState` | The authentication state of the identifier. |
-| `primary` | Whether that identifier should be treated as primary. |
-
-If you do not mark another identity as primary, the ECID remains the default primary identity. When possible, Adobe recommends using a person-level namespace as the primary identity.
-
-For schema-level details, see [identityMap in XDM schema composition](/help/xdm/schema/composition.md#identityMap). For tag-based configuration details, see [Data element types](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-
-## Related tasks
-
-* Retrieve the current visitor identity through [`getIdentity`](/help/collection/js/commands/getidentity.md)
-* Access the ECID through [Data Prep for Data Collection](/help/datastreams/data-prep.md) or [tags](/help/tags/extensions/client/web-sdk/accessing-the-ecid.md)
-* Migrate existing AMCV cookies with [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md)
-* Configure [first-party device IDs](./first-party-device-ids.md)
-* Configure [unified identity support (Beta)](./unified-identity-support.md)
-* Share identity [across domains](./cross-domain-sharing.md) or [from mobile apps to web](./mobile-to-web.md)
+* **Strengthen identity persistence on owned properties**: Use [first-party device IDs](./first-party-device-ids.md) when browser restrictions shorten cookie life and you need stronger continuity for analytics and personalization on sites you control.
+* **Hand off identity from an app to mobile web**: Use [mobile-to-web identity sharing](./mobile-to-web.md) when the visitor starts in your mobile app and continues in a WebView or mobile web page.
+* **Keep identity continuous across your domains**: Use [cross-domain sharing](./cross-domain-sharing.md) when visitors move between web properties that your organization owns and you want consistent reporting and personalization.
+* **Combine first-party persistence with third-party activation**: Use [Unified identity support](./unified-identity-support.md) when you need durable first-party identification alongside supported third-party activation flows.
