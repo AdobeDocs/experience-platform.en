@@ -229,7 +229,7 @@ Allow some time for the import to complete. The time to complete can vary depend
 >
 >The express copy feature is currently in beta and only available to select customers. Express copy (Beta) currently only supports schema and source dataflows.
 
-To view a list of the available schemas, select **[!UICONTROL Schemas]** from the left navigation and then select the **[!UICONTROL Browse]** tab. Next, select the ellipsis (`...`) next to the selected schema to see control options in a dropdown menu. Select **[!UICONTROL Add to package]** from the dropdown.
+You can access express copy from the object inventory page. For example, to view a list of available schemas, select **[!UICONTROL Schemas]** from the left navigation, then select the **[!UICONTROL Browse]** tab.. Next, select the ellipsis (`...`) next to the selected schema to see control options in a dropdown menu. Select **[!UICONTROL Add to package]** from the dropdown.
 
 ![List of schemas showing the dropdown menu highlighting the [!UICONTROL Add to package] control.](../images/ui/sandbox-tooling/add-to-package-express.png)
 
