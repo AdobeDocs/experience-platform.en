@@ -388,9 +388,11 @@ For frequently asked questions about streaming segmentation, please read the [st
 
 ## Appendix
 
+This section provides supplemental information about streaming segmentation.
+
 ### May 20th, 2025 eligibility update {#may-20-eligibility-update}
 
-
+The following section outlines, for posterity, the full details of the eligibility update for streaming segmentation that occurred during the May 2025 release of Experience Platform.
 
 +++Eligibility updates
 
