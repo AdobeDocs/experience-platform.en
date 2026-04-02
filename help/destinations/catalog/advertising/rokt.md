@@ -1,17 +1,17 @@
 ---
 title: Rokt
-description: Rokt helps ecommerce partners and brands make every customer interaction more relevant and valuable by using AI, first-party data, and real-time decisioning to deliver personalized experiences and connect advertisers with high-intent customers. By sending audiences to Rokt, partners can improve campaign performance through smarter targeting, suppression, and personalization—helping ensure marketing reaches the right customers at the right time while reducing wasted spend.
+description: Rokt uses AI, first-party data, and real-time decisioning to make every customer interaction more relevant and valuable. It delivers personalized experiences and connects advertisers with high-intent customers. By connecting Adobe Experience Platform audiences to Rokt, partners can improve campaign performance through smarter targeting, suppression, and personalization.
 ---
 
 # Rokt connection {#rokt-destination}
 
 ## Overview {#overview}
 
-[Rokt](https://www.rokt.com) helps ecommerce partners and brands make every customer interaction more relevant and valuable by using AI, first-party data, and real-time decisioning to deliver personalized experiences and connect advertisers with high-intent customers. By connecting Adobe Experience Platform audiences to Rokt, partners can improve campaign performance through smarter targeting, suppression, and personalization — helping ensure marketing reaches the right customers at the right time while reducing wasted spend.
+[Rokt](https://www.rokt.com) uses AI, first-party data, and real-time decisioning to make every customer interaction more relevant and valuable. It delivers personalized experiences and connects advertisers with high-intent customers. By connecting Adobe Experience Platform audiences to Rokt, partners can improve campaign performance through smarter targeting, suppression, and personalization. This helps ensure marketing reaches the right customers at the right time while reducing wasted spend.
 
 >[!IMPORTANT]
 >
->The destination connector and documentation page are created and maintained by the Rokt team. For any inquiries or update requests, please contact your Rokt Account Manager or reach out at `support@rokt.com`.
+>The destination connector and documentation page are created and maintained by the Rokt team. For any inquiries or update requests, contact your Rokt Account Manager or reach out at `support@rokt.com`.
 
 ## Use cases {#use-cases}
 
@@ -19,11 +19,11 @@ To help you better understand how and when you should use the Rokt destination, 
 
 ### Use case #1: Retargeting {#use-case-1}
 
-Re-engage high-intent customers who have previously visited your site or app but did not convert. By building an AEP audience of users who browsed specific product categories or abandoned a checkout flow, you can push that segment to Rokt and serve them personalized offers at the point of purchase on partner sites. Because Rokt operates within the transaction moment — immediately after a customer completes a purchase elsewhere — retargeted audiences are reached when purchase intent is at its peak, driving higher conversion rates compared to traditional display retargeting.
+Re-engage high-intent customers who visited your site or app but did not convert. Build an audience in Experience Platform including  users who browsed specific product categories or abandoned a checkout flow. Then push that audience to Rokt to serve  personalized offers at the point of purchase on partner sites. Rokt operates within the transaction moment, immediately after a customer completes a purchase elsewhere, which means retargeted audiences are reached when purchase intent is at its peak, driving higher conversion rates than traditional display retargeting.
 
 ### Use case #2: Suppression lists {#use-case-2}
 
-Prevent wasted spend and irrelevant experiences by suppressing audiences who should not receive certain Rokt offers. Common suppression use cases include excluding recent converters (customers who purchased in the last 30 days), loyalty members already enrolled in a promotion, or users who have explicitly opted out of marketing. By syncing these suppression segments from AEP to Rokt in real time, you ensure your Rokt campaigns stay focused on net-new or re-engageable users — improving ROI and protecting the customer experience.
+Prevent wasted spend and irrelevant experiences by suppressing audiences who should not receive certain Rokt offers. Common suppression use cases include excluding recent converters (customers who purchased in the last 30 days), loyalty members already enrolled in a promotion, or users who opted out of marketing. Sync these suppression segments from Experience Platform to Rokt in real time to keep campaigns focused on net-new or re-engageable users. This improves ROI and protects the customer experience.
 
 ## Prerequisites {#prerequisites}
 
@@ -46,7 +46,7 @@ Rokt supports the activation of identities described in the table below. Learn m
 | phone_sha256 | Phone numbers hashed with the SHA256 algorithm | Both plain text and SHA256 hashed phone numbers are supported. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option to have [!DNL Platform] automatically hash the data on activation. |
 | GAID | Google Advertising ID | Select the GAID target identity when your source identity is a GAID namespace. |
 | IDFA | Apple ID for Advertisers | Select the IDFA target identity when your source identity is an IDFA namespace. |
-| aepProfileId | Adobe Experience Platform Profile ID | Maps the AEP Profile ID (`xdm:_id`) as a fallback identifier. |
+| aepProfileId | Adobe Experience Platform Profile ID | Maps the  Profile ID (`xdm:_id`) as a fallback identifier. |
 
 {style="table-layout:auto"}
 
@@ -87,7 +87,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 * **[!UICONTROL Username]**: Your API Key, provided by your Rokt Account Manager.
 * **[!UICONTROL Password]**: Your API Secret, provided by your Rokt Account Manager.
 
-![aep-1](/help/destinations/assets/catalog/advertising/rokt/aep-configure-destination.png)
+![Image of the Experience Platform UI, showing the Rokt destination configuration screen with account details, authentication fields, and destination details filled in.](/help/destinations/assets/catalog/advertising/rokt/aep-configure-destination.png)
 
 ### Fill in destination details {#destination-details}
 
@@ -113,7 +113,7 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 ### Map attributes and identities {#map}
 
-The Rokt destination supports the mapping of identity namespaces from AEP to Rokt's identity fields. You must map at least one identity to successfully activate an audience. The recommended mappings are shown in the table below.
+The Rokt destination supports the mapping of identity namespaces from Experience Platform to Rokt's identity fields. You must map at least one identity to successfully activate an audience. The recommended mappings are shown in the table below.
 
 | Source field | Target field | Required |
 |---|---|---|
@@ -127,9 +127,9 @@ The Rokt destination supports the mapping of identity namespaces from AEP to Rok
 
 {style="table-layout:auto"}
 
-To add a mapping, select **Add new mapping** in the Mapping step of the activation workflow. For each mapping, choose the source field from your AEP identity map and the corresponding Rokt target identity from the dropdown. Here is an example of a full mapping:
+To add a mapping, select **Add new mapping** in the Mapping step of the activation workflow. For each mapping, choose the source field from your Experience Platform identity map and the corresponding Rokt target identity from the dropdown. Here is an example of a full mapping:
 
-![aep-2](/help/destinations/assets/catalog/advertising/rokt/aep-identity-mapping.png)
+![Image of the Experience Platform UI, showing the mapping step of the Rokt destination activation workflow with source and target identity fields configured.](/help/destinations/assets/catalog/advertising/rokt/aep-identity-mapping.png)
 
 >[!NOTE]
 >
