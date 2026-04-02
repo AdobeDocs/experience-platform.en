@@ -144,7 +144,7 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL B2B Channel Configurations] | [!UICONTROL Manage B2B Channels Configurations] | Ability to view and access **[!UICONTROL Channels]** in the left nav. Users with access to **[!UICONTROL Channels]** should have access to all Channels CRUD functions: `/channels-config`. |
 | [!DNL B2B Journeys] | [!UICONTROL Manage B2B Account Journeys] | Ability to view and access **[!UICONTROL Account Journeys]** in the left nav. Users with access to **[!UICONTROL Account Journeys]** should have access to all Account Journeys CRUD functions: `/account-journeys`. |
 | [!DNL Campaigns] | [!UICONTROL Manage Campaigns] | Access to read, create, edit, and delete campaigns. |
-| [!DNL Campaigns] | [!UICONTROL Approve and Publish Campaigns] | The ability to approve and publish campaigns. | 
+| [!DNL Campaigns] | [!UICONTROL Approve and Publish Campaigns] | The ability to approve and publish campaigns. |
 | [!DNL Campaigns] | [!UICONTROL Publish Campaigns] | Ability to publish campaigns. |
 | [!DNL Campaigns] | [!UICONTROL View Campaigns] | Read-only access to campaigns. |
 | [!DNL Campaigns] | [!UICONTROL View Campaigns Report] | Read-only access to campaign reports. |
@@ -217,9 +217,9 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Decision Management] | [!UICONTROL Manage Experience Decisioning] | Ability to manage experience decisioning entities. |
 | [!DNL Decision Management] | [!UICONTROL View Experience Decisioning] | Read-only access to experience decisioning entities. |
 | [!DNL Decision Management] | [!UICONTROL Manage Decisions] | Access to read, create, edit, and delete decisioning entities. |
-| [!DNL Decisions Management] | [!UICONTROL View Decisions] | Read-only access to decision entities. | 
+| [!DNL Decisions Management] | [!UICONTROL View Decisions] | Read-only access to decision entities. |
 | [!DNL Decision Management] | [!UICONTROL Manage Offers] | Access to read, create, edit, and delete all offers and components. Read-only access to decisions and collections. |
-| [!DNL Decsion Management] | [!UICONTROL Manage Ranking Strategies] | Access to read, create, edit, and delete custom reports and use action features. | 
+| [!DNL Decsion Management] | [!UICONTROL Manage Ranking Strategies] | Access to read, create, edit, and delete custom reports and use action features. |
 | [!DNL Destinations] | [!UICONTROL View Destinations] | Read-only access to view available destinations in the **[!UICONTROL Catalog]** tab and authenticated destinations in the **[!UICONTROL Browse]** tab. |
 | [!DNL Destinations] | [!UICONTROL Manage Destinations] | Access to read, create, and delete destinations connections and destination accounts. |
 | [!DNL Destinations] | [!UICONTROL Activate Destinations] | Ability to activate data to active destinations that have been created. This permission also requires either [!UICONTROL View Destinations] or [!UICONTROL Manage Destinations] to be granted to the user who will activate destinations.|

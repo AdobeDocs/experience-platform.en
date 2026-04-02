@@ -366,7 +366,7 @@ LIMIT 100;
 
 ### How do I change the time zone to and from a UTC Timestamp?
 
-+++Answer
++++ Answer
 Adobe Experience Platform persists data in UTC (Coordinated Universal Time) timestamp format. An example of the UTC format is `2021-12-22T19:52:05Z`
 
 Query Service supports built-in SQL functions to convert a given timestamp to and from UTC format. Both the `to_utc_timestamp()` and the `from_utc_timestamp()` methods take two parameters: timestamp and timezone. 
@@ -375,6 +375,8 @@ Query Service supports built-in SQL functions to convert a given timestamp to an
 |-----------|---------------|
 | Timestamp | The timestamp can be written in either UTC format or simple `{year-month-day}` format. If no time is provided, the default value is midnight on the morning of the given day. |
 | Timezone  | The timezone is written in a `{continent/city})` format. It must be one of the recognized timezone codes as found in the [public-domain TZ database](https://data.iana.org/time-zones/tz-link.html#tzdb). |
+
++++
 
 #### Convert to the UTC timestamp
 
@@ -414,7 +416,7 @@ The query returns a timestamp in UTC format for the timezone passed as a paramet
 
 ### How should I filter my time-series data?
 
-+++Answer
++++ Answer
 When querying with time-series data, you should use the timestamp filter whenever possible for more accurate analysis.
 
 >[!NOTE]
