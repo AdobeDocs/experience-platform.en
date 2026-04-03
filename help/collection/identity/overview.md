@@ -7,7 +7,7 @@ exl-id: 03060cdb-becc-430a-b527-60c055c2a906
 
 Adobe Data Collection uses identity signals to recognize returning visitors and carry context across experiences. When a visitor reaches your site, the Edge Network generates an Experience Cloud ID (ECID) and persists it in a first-party cookie. That ECID is the primary device identifier used across Adobe Experience Cloud applications and is the foundation that analytics, personalization, and audience activation build on. In your implementation, you can access the visitor's ECID on the client side through the [`getIdentity`](/help/collection/js/commands/getidentity.md) command. At the datastream level, you can use [Data Prep for Data Collection](/help/datastreams/data-prep.md) to map the ECID into a custom XDM field before it reaches downstream services.
 
-The ECID identifies a device, not a person. To tie activity to a known person, you can send additional identifiers, such as a CRM ID or hashed email, alongside the ECID using the XDM [`identityMap`](/help/xdm/schema/composition.md#identityMap). Adobe recommends setting a person-level namespace as the [primary identity](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map) whenever one is available.
+The ECID identifies a device, not a person. To tie activity to a known person, you can send additional identifiers, such as a CRM ID or hashed email, alongside the ECID using the XDM [`identityMap`](./identity-map.md). Adobe recommends setting a person-level namespace as the [primary identity](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map) whenever one is available.
 
 Beyond the default ECID, Data Collection supports additional identity signals depending on your implementation:
 
@@ -30,3 +30,7 @@ The Web SDK always sets identity [cookies](https://experienceleague.adobe.com/en
 * **Hand off identity from an app to mobile web**: Use [mobile-to-web identity sharing](./mobile-to-web.md) when the visitor starts in your mobile app and continues in a WebView or mobile web page.
 * **Keep identity continuous across your domains**: Use [cross-domain sharing](./cross-domain-sharing.md) when visitors move between web properties that your organization owns and you want consistent reporting and personalization.
 * **Combine first-party persistence with third-party activation**: Use [Unified identity support](./unified-identity-support.md) when you need durable first-party identification alongside supported third-party activation flows.
+* **Send person-level identifiers**: Use [`identityMap`](./identity-map.md) to send CRM IDs, hashed emails, and other person-level identifiers alongside the ECID so that downstream services can stitch activity to a known person.
+* **Understand how consent affects identity**: Read [Consent and identity](./consent.md) to learn how `defaultConsent` and `setConsent` control when the Web SDK generates an ECID, sets cookies, and sends data.
+
+For help diagnosing identity issues such as visitor inflation, ECID inconsistencies, or FPID problems, see [Troubleshooting identity](./troubleshooting.md).

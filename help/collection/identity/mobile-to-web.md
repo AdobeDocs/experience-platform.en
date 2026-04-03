@@ -6,7 +6,7 @@ description: Pass identity from a mobile app into mobile web content or a WebVie
 
 When a visitor moves from a mobile app into a WebView or mobile web page, the app and web contexts each maintain their own identity. Without an explicit handoff, the web experience treats the visitor as a new, unknown person, which fragments reporting and restarts personalization.
 
-Mobile-to-web identity sharing solves this by passing the visitor's Experience Cloud ID (ECID) from the mobile app to the web destination through an `adobe_mc` query-string parameter. The parameter carries the ECID, your Experience Cloud organization ID, and a timestamp. When the web destination loads with a valid `adobe_mc` parameter, the Web SDK automatically reads it and applies the handed-off identity on its first Edge Network request, so both contexts share the same visitor.
+Mobile-to-web identity sharing solves this by passing the visitor's [Experience Cloud ID (ECID)](./overview.md) from the mobile app to the web destination through an `adobe_mc` query-string parameter. The parameter carries the ECID, your Experience Cloud organization ID, and a timestamp. When the web destination loads with a valid `adobe_mc` parameter, the Web SDK automatically reads it and applies the handed-off identity on its first Edge Network request, so both contexts share the same visitor.
 
 Use this pattern when your mobile app opens a WebView or mobile web page that your organization controls and you want app activity and web activity to remain tied to the same visitor. If your goal is identity continuity between websites on different domains, use [cross-domain sharing](cross-domain-sharing.md) instead.
 

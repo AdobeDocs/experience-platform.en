@@ -74,7 +74,7 @@ Note that `A` or `AAAA` records are only supported for setting and tracking cook
 
 ### When to set the cookie {#when-to-set-cookie}
 
-The FPID cookie is ideally set before sending data to the Edge Network. Visitor inflation is reduced when you ensure that the FPID is available to seed the ECID from the first request. In scenarios where that is not possible, an ECID is still generated using existing methods and acts as the primary identifier as long as the cookie exists. The generated FPID does not become the primary identifier until the ECID is no longer present. Assuming the ECID is eventually impacted by a browser deletion policy, but the FPID is not, the FPID becomes the primary identifier on the next visit and is used to seed the ECID on each subsequent visit.
+The FPID cookie is ideally set before sending data to the Edge Network. If your implementation requires consent before collecting data, see [Consent with first-party device IDs](./consent.md#consent-with-fpids) for guidance on coordinating the FPID cookie with your consent flow. Visitor inflation is reduced when you ensure that the FPID is available to seed the ECID from the first request. In scenarios where that is not possible, an ECID is still generated using existing methods and acts as the primary identifier as long as the cookie exists. The generated FPID does not become the primary identifier until the ECID is no longer present. Assuming the ECID is eventually impacted by a browser deletion policy, but the FPID is not, the FPID becomes the primary identifier on the next visit and is used to seed the ECID on each subsequent visit.
 
 ### Setting the expiration {#set-expiration}
 

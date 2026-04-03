@@ -151,7 +151,7 @@ Next, select the the identity type that you want to assign to the custom namespa
 
 ## Namespaces in identity data
 
-Supplying the namespace for an identity depends on the method you use for providing identity data. For details on providing data identity data, please read the [[!DNL Identity Service] implementation guide](../implementation.md).
+Supplying the namespace for an identity depends on the method you use for providing identity data. For details on providing data identity data, please read the [[!DNL Identity Service] implementation guide](../implementation.md). If you are sending identities through the Web SDK `identityMap`, see [Using identityMap in Data Collection](/help/collection/identity/identity-map.md) for guidance on how to prepare and format identity values before sending them.
 
 ## Next steps
 

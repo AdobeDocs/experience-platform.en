@@ -14,10 +14,13 @@ role: Developer
 + [Permissions](permissions.md)
 + Identity {#identity}
   + [Overview](identity/overview.md)
+  + [Using identityMap](identity/identity-map.md)
   + [First-party device IDs](identity/first-party-device-ids.md)
-  + [Unified identity support (Beta)](identity/unified-identity-support.md)
   + [Cross-domain sharing](identity/cross-domain-sharing.md)
   + [Mobile apps to mobile web/WebViews](identity/mobile-to-web.md)
+  + [Unified identity support](identity/unified-identity-support.md)
+  + [Consent and identity](identity/consent.md)
+  + [Troubleshooting](identity/troubleshooting.md)
 + BrightScript {#brightscript}
   + [BrightScript overview](brightscript/brs-overview.md)
 + JavaScript {#js}

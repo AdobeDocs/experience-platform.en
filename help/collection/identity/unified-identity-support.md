@@ -11,7 +11,7 @@ badge: Beta
 >
 >This feature is currently in beta. Availability, behavior, and documentation can change.
 
-Unified identity support lets the Edge Network work across both first-party and third-party identity contexts. It brings together durable first-party identification on your owned properties with third-party activation workflows in browsers that support third-party cookies.
+Unified identity support lets the Edge Network work across both first-party and third-party identity contexts. It brings together durable first-party identification on your owned properties with third-party activation workflows in browsers that support third-party cookies. For background on how the Web SDK handles ECIDs, FPIDs, and other identity signals, see [Identity in Data Collection](./overview.md).
 
 With unified identity support, you can:
 

@@ -4,64 +4,39 @@ description: Understand how consent choices affect identity behavior in Web SDK 
 ---
 # Consent and identity in Data Collection
 
-Consent and identity are closely connected in Web SDK implementations. The timing and method of how you collect consent directly affects when and whether the Web SDK generates an ECID, sets identity cookies, and sends data to the Edge Network. When consent is not handled carefully, the result is often unexpected visitor inflation, gaps in identity continuity, or both.
+Consent and identity are closely connected in Web SDK implementations. How and when you collect consent directly affects when and whether the Web SDK generates an ECID, sets identity cookies, and sends data to the Edge Network. When consent is not handled carefully, the result is often unexpected visitor inflation, gaps in identity continuity, or both.
 
-This page explains how consent choices interact with identity behavior and provides guidance for configuring your implementation to avoid common pitfalls.
+This page explains how consent choices interact with identity behavior and provides guidance for configuring your implementation to avoid common pitfalls. For background on how the Web SDK handles ECIDs, FPIDs, and other identity signals, see [Identity in Data Collection](./overview.md).
 
 ## How consent affects identity {#how-consent-affects-identity}
 
-The Web SDK uses the [`defaultConsent`](/help/collection/js/commands/configure/defaultconsent.md) configuration and the [`setConsent`](/help/collection/js/commands/setconsent.md) command to control whether it sends data to the Edge Network. Consent status directly determines when an ECID is generated and when identity cookies are set.
+The Web SDK uses both the [`defaultConsent`](/help/collection/js/commands/configure/defaultconsent.md) configuration variable and the [`setConsent`](/help/collection/js/commands/setconsent.md) command to control if it sends data to the Edge Network. Consent status directly determines when an ECID is generated and when identity cookies are set.
 
-### Consent states and identity behavior {#consent-states}
+The following table shows the combined effect of `defaultConsent` and `setConsent` on data collection, cookie setting, and identity behavior.
 
-| `defaultConsent` | Visitor action | Identity behavior |
-| --- | --- | --- |
-| `in` | No consent interaction needed | The Web SDK sends requests and sets identity cookies immediately on page load. An ECID is generated on the first request. This is the default behavior for implementations that do not require explicit consent before data collection. |
-| `pending` | Visitor grants consent | The Web SDK queues events until consent is granted. Once [`setConsent`](/help/collection/js/commands/setconsent.md) is called with `"general": "in"`, the queued events are sent and an ECID is generated on the first request. Identity cookies are set at this point. |
-| `pending` | Visitor denies consent | The Web SDK does not send any requests and does not set identity cookies. No ECID is generated. Queued events are discarded. |
-| `out` | No consent interaction needed | The Web SDK does not send any requests and does not generate an ECID. This configuration is used when you need to collect consent before any data processing occurs. |
+| `defaultConsent` | `setConsent` | Data collection occurs | Browser cookies set | Identity behavior |
+| --- | --- | --- | --- | --- |
+| `in` | Not set | Yes | Yes | An ECID is generated immediately on the first request. Identity cookies are set on page load. |
+| `in` | `in` | Yes | Yes | The visitor's existing ECID is preserved. Identity behavior is unchanged. |
+| `in` | `out` | No | Yes | Data collection stops. The existing ECID and `kndctr_` identity cookies remain in the browser until they expire. |
+| `pending` | Not set | No | No | No ECID is generated. No cookies are set. Events are queued locally until `setConsent` is called. |
+| `pending` | `in` | Yes | Yes | Queued events are sent. An ECID is generated on the first request and identity cookies are set. |
+| `pending` | `out` | No | Yes | Queued events are discarded. No ECID is generated. The consent cookie is set to record the visitor's preference. |
+| `out` | Not set | No | No | No ECID is generated. No cookies are set. No events are sent. |
+| `out` | `in` | Yes | Yes | An ECID is generated on the first request and identity cookies are set. |
+| `out` | `out` | No | Yes | No ECID is generated. The consent cookie is set to record the visitor's preference. |
 
 >[!NOTE]
 >
->When `defaultConsent` is set to `pending`, the Web SDK does not communicate with the Edge Network at all until consent is explicitly set. This means no ECID is generated, no cookies are set, and no events are sent — even page views — until your consent logic calls `setConsent`.
+>Identity and consent cookies are set even when a visitor opts out. These cookies are necessary to honor the visitor's data collection preferences. See [Web SDK cookies](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) for a full list of cookies that the Web SDK sets.
 
-### Consent withdrawal {#consent-withdrawal}
+When a visitor re-grants consent after previously revoking it (by calling `setConsent` with `"general": "in"` after `"general": "out"`), the Web SDK resumes sending events and uses the existing ECID from the cookie if it has not expired. The visitor's identity is preserved.
 
-When a visitor revokes consent after previously granting it (by calling `setConsent` with `"general": "out"`):
+After a visitor grants or denies consent, the Web SDK persists their preference in a `kndctr_` consent cookie. On subsequent page loads, the SDK reads this cookie and applies the stored preference automatically — you do not need to call `setConsent` again unless the visitor's preference changes. Note that the `defaultConsent` configuration value does not persist between page loads, but the visitor's resolved consent (set through `setConsent`) does.
 
-* The Web SDK stops sending events to the Edge Network.
-* Existing `kndctr_` identity cookies remain in the browser until they expire. The Web SDK does not delete them.
-* If the visitor later re-grants consent, the Web SDK resumes sending events and uses the existing ECID from the cookie (if it has not expired). The visitor's identity is preserved.
-
-## Common pitfalls {#common-pitfalls}
-
-### Consent banner clears identity cookies {#banner-clears-cookies}
-
-**Problem**: Some consent management platforms (CMPs) clear all cookies — including `kndctr_` identity cookies — when presenting the consent banner, before the visitor makes a choice. When the visitor grants consent, the Web SDK generates a new ECID because the previous one was deleted. The visitor appears as a new person in reporting.
-
-**Symptoms**:
-* A spike in unique visitor counts after deploying a consent banner.
-* Returning visitors are counted as new visitors every time their consent expires and they interact with the banner again.
-
-**Solution**: Configure your CMP to preserve `kndctr_` cookies. These cookies are identity cookies, not tracking cookies — they identify the device and do not contain behavioral data. If your CMP requires clearing cookies, add `kndctr_` prefixed cookies to an exclusion list. Alternatively, delay clearing cookies until after the visitor explicitly denies consent rather than clearing them preemptively.
-
-### Delayed consent causes duplicate identity {#delayed-consent}
-
-**Problem**: When `defaultConsent` is set to `pending`, the Web SDK waits for consent before sending any data. If consent is granted late in the page lifecycle (for example, after a banner interaction that triggers a page reload), the following sequence can cause issues:
-
-1. Page loads. `defaultConsent: "pending"`. Web SDK does not send requests.
-2. Visitor grants consent. CMP triggers a page reload.
-3. Page loads again. Web SDK initializes with consent now granted and generates an ECID.
-
-This flow is normal and works correctly. The issue arises when the CMP or your implementation inadvertently clears cookies between steps 2 and 3 (see above), or when the Web SDK is configured differently on the reload.
-
-**Solution**: Ensure that the Web SDK configuration (especially `orgId` and `defaultConsent`) is identical on every page load. If your CMP triggers a reload after consent, verify that identity cookies survive the reload.
-
-### Using `defaultConsent: "in"` with a consent banner {#default-in-with-banner}
-
-**Problem**: Some implementations set `defaultConsent: "in"` and then call `setConsent` with `"general": "out"` if the visitor declines. This approach generates an ECID and sends at least one request before consent is denied. Depending on your regulatory requirements, this initial data collection may not be permissible.
-
-**Solution**: If your regulatory environment requires consent before any data collection or ECID generation, use `defaultConsent: "pending"` instead. This ensures that the Web SDK does not communicate with the Edge Network until consent is explicitly granted.
+>[!NOTE]
+>
+>Events queued while consent is `pending` are held in memory and do not survive page reloads. If a visitor navigates to a new page before consent is resolved, queued events from the previous page are lost.
 
 ## Implementation patterns {#implementation-patterns}
 
@@ -88,7 +63,7 @@ alloy("setConsent", {
 
 With this pattern:
 * No ECID is generated until consent is granted.
-* Events sent before consent (such as the initial page view) are queued and sent after consent is granted.
+* Events triggered before consent (such as the initial page view) are queued and sent after consent is granted.
 * Identity cookies are set only after the first successful Edge Network request.
 
 ### Opt-out model (collection by default, stop on denial) {#opt-out}
@@ -119,22 +94,45 @@ With this pattern:
 
 ## Consent with first-party device IDs {#consent-with-fpids}
 
-If your implementation uses [first-party device IDs (FPIDs)](./first-party-device-ids.md), the FPID cookie is set by your server independently of the Web SDK's consent state. The FPID cookie is an identifier you manage on your own infrastructure.
-
-However, the FPID is only sent to the Edge Network when the Web SDK makes a request — which is gated by consent. This means:
+If your implementation uses [first-party device IDs (FPIDs)](./first-party-device-ids.md), the FPID cookie is set by your server independently of the Web SDK's consent state. The FPID cookie is an identifier you manage on your own infrastructure. However, the FPID is only sent to the Edge Network when the Web SDK makes a request (which is gated by consent):
 
 * With `defaultConsent: "pending"`, the FPID exists in the browser but is not used to seed an ECID until consent is granted.
 * With `defaultConsent: "in"`, the FPID is used on the first request and seeds the ECID immediately.
 
-If your consent implementation requires that no identifier be associated with a visitor before consent, you may need to delay setting the FPID cookie on your server until after consent is communicated, rather than relying solely on the Web SDK's consent gating.
+If your consent implementation requires that no identifier be set before consent, delay setting the FPID cookie until after consent is communicated. The Web SDK's consent gating alone does not prevent the FPID cookie from being set, since it is managed by your server.
 
-## Validation {#validation}
+## Common pitfalls {#common-pitfalls}
 
-To verify that consent and identity are working together correctly:
++++**Consent banner clears identity cookies**
 
-1. **Test the pending state**: Load a page with `defaultConsent: "pending"`. Confirm that no Edge Network requests are sent and no `kndctr_` cookies are set.
-2. **Grant consent**: Call `setConsent` with `"general": "in"`. Confirm that queued events are sent and an ECID is generated.
-3. **Test cookie survival**: After granting consent, reload the page. Confirm that the same ECID persists (check the `kndctr_` cookie).
-4. **Test consent withdrawal**: Call `setConsent` with `"general": "out"`. Confirm that subsequent `sendEvent` calls do not generate Edge Network requests.
-5. **Test re-consent**: After withdrawal, call `setConsent` with `"general": "in"` again. Confirm that the original ECID is used (if the cookie has not expired).
-6. **Test your CMP flow end to end**: Walk through the full consent banner interaction. Verify that ECID continuity is maintained across consent grant, page reload, and subsequent visits.
+**Problem**: Some consent management platforms (CMPs) clear all cookies — including `kndctr_` identity cookies — when presenting the consent banner, before the visitor makes a choice. When the visitor grants consent, the Web SDK generates a new ECID because the previous one was deleted. The visitor appears as a new person in reporting.
+
+**Symptoms**:
+* A spike in unique visitor counts after deploying a consent banner.
+* Returning visitors are counted as new visitors every time their consent expires and they interact with the banner again.
+
+**Solution**: Configure your CMP to preserve `kndctr_` cookies. These cookies are identity cookies, not tracking cookies — they identify the device and do not contain behavioral data. If your CMP requires clearing cookies, add `kndctr_` prefixed cookies to an exclusion list. Alternatively, delay clearing cookies until after the visitor explicitly denies consent rather than clearing them preemptively.
+
++++
+
++++**Delayed consent causes duplicate identity**
+
+**Problem**: When `defaultConsent` is set to `pending`, the Web SDK waits for consent before sending any data. If consent is granted late in the page lifecycle (for example, after a banner interaction that triggers a page reload), the following sequence can cause issues:
+
+1. Page loads. `defaultConsent: "pending"`. Web SDK does not send requests.
+2. Visitor grants consent. CMP triggers a page reload.
+3. Page loads again. Web SDK initializes with consent now granted and generates an ECID.
+
+This flow is normal and works correctly. The issue arises when the CMP or your implementation inadvertently clears cookies between steps 2 and 3, or when the Web SDK is configured differently on the reload.
+
+**Solution**: Ensure that the Web SDK configuration (especially `orgId` and `defaultConsent`) is identical on every page load. If your CMP triggers a reload after consent, verify that identity cookies survive the reload.
+
++++
+
++++**Using `defaultConsent: "in"` with a consent banner**
+
+**Problem**: Some implementations set `defaultConsent: "in"` and then call `setConsent` with `"general": "out"` if the visitor declines. This approach generates an ECID and sends at least one request before consent is denied. Depending on your regulatory requirements, this initial data collection might not align with your organization's privacy policy.
+
+**Solution**: If your regulatory environment requires consent before any data collection or ECID generation, use `defaultConsent: "pending"` instead. This setting ensures that the Web SDK does not communicate with the Edge Network until consent is explicitly granted.
+
++++
