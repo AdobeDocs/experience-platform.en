@@ -93,7 +93,7 @@ The following metrics are available for this dashboard view:
 >
 >![The profile ingestion readiness bubble is displayed.](../assets/ui/monitor-profiles/profile-ingestion-readiness.png){zoomable="yes" width="300"}
 
-| Metric | Description | 
+| Metric | Description |
 | ------ | ----------- |
 | **[!UICONTROL Dataflow run start]** | The time the dataflow run started in UTC. |
 | **[!UICONTROL Data type]** | The type of data received by the dataflow. |

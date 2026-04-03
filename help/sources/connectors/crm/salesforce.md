@@ -436,7 +436,7 @@ public class Main {
 | `claimArray[2]` | Update `claimArray[2]` with your [!DNL Salesforce] login URL. |
 | `claimArray[3]` | Update `claimArray[3]` with an expiration date formatted in milliseconds since epoch time. For example `3660624000000` is 12-31-2085. |
 | `/path/to/keystore` | Replace `/path/to/keystore` with the correct path to your keystore.jks |
-| `keystorepassword` |  Replace `keystorepassword` with your destination keystore password. | 
+| `keystorepassword` |  Replace `keystorepassword` with your destination keystore password. |
 | `privatekeypassword` | Replace `privatekeypassword` with your source keystore password. |
 
 ## Next steps
