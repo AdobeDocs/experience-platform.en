@@ -94,7 +94,7 @@ With this pattern:
 
 ## Consent with first-party device IDs {#consent-with-fpids}
 
-If your implementation uses [first-party device IDs (FPIDs)](./first-party-device-ids.md), the FPID cookie is set by your server independently of the Web SDK's consent state. The FPID cookie is an identifier you manage on your own infrastructure. However, the FPID is only sent to the Edge Network when the Web SDK makes a request (which is gated by consent):
+If your implementation uses [first-party device IDs (FPIDs)](./fpid.md), the FPID cookie is set by your server independently of the Web SDK's consent state. The FPID cookie is an identifier you manage on your own infrastructure. However, the FPID is only sent to the Edge Network when the Web SDK makes a request (which is gated by consent):
 
 * With `defaultConsent: "pending"`, the FPID exists in the browser but is not used to seed an ECID until consent is granted.
 * With `defaultConsent: "in"`, the FPID is used on the first request and seeds the ECID immediately.

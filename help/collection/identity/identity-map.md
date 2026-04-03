@@ -57,7 +57,7 @@ Before you include a value in `identityMap`, prepare it according to the format 
 | **Email (raw)** | Lowercase the full email address and trim leading and trailing whitespace. | `user@example.com` |
 | **Email (hashed)** | Lowercase and trim the email address first, then hash with SHA-256. Send the resulting 64-character hex string. Do not add a salt unless your namespace definition requires one. | `a1b2c3d4e5f6a7b8c9...` |
 | **Phone (E.164)** | Format the number in [E.164](https://en.wikipedia.org/wiki/E.164): a leading `+`, the country code, and the subscriber number with no spaces or punctuation. | `+15551234567` |
-| **FPID** | Generate a [UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122) string. See [first-party device IDs](./first-party-device-ids.md) for generation requirements. | `123e4567-e89b-42d3-9456-426614174000` |
+| **FPID** | Generate a [UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122) string. See [first-party device IDs](./fpid.md) for generation requirements. | `123e4567-e89b-42d3-9456-426614174000` |
 
 For the full list of standard namespaces and their definitions, see [Identity namespace overview](/help/identity-service/features/namespaces.md#standard).
 
@@ -245,7 +245,7 @@ You can send multiple identity namespaces in the same event. This scenario is co
 
 +++**Anonymous visitors**
 
-For anonymous visitors, you typically do not need to send any `identityMap` at all. The Edge Network automatically assigns an ECID and uses it as the primary identity. If you use [first-party device IDs](./first-party-device-ids.md), the FPID is the only identity you need to include for anonymous visitors.
+For anonymous visitors, you typically do not need to send any `identityMap` at all. The Edge Network automatically assigns an ECID and uses it as the primary identity. If you use [first-party device IDs](./fpid.md), the FPID is the only identity you need to include for anonymous visitors.
 
 +++
 

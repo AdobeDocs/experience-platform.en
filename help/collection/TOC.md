@@ -15,7 +15,7 @@ role: Developer
 + Identity {#identity}
   + [Overview](identity/overview.md)
   + [Using identityMap](identity/identity-map.md)
-  + [First-party device IDs](identity/first-party-device-ids.md)
+  + [First-party device IDs](identity/fpid.md)
   + [Cross-domain sharing](identity/cross-domain-sharing.md)
   + [Mobile apps to mobile web/WebViews](identity/mobile-to-web.md)
   + [Unified identity support](identity/unified-identity-support.md)

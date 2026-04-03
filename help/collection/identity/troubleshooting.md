@@ -34,8 +34,8 @@ You can also inspect identity values in your browser's developer tools:
 
 | Cause | How to identify | Resolution |
 | --- | --- | --- |
-| Short cookie lifetime | Check the expiration of `kndctr_` cookies in the browser. If they expire in 7 days or less, browser policies are likely restricting cookie duration. | Implement [first-party device IDs (FPIDs)](./first-party-device-ids.md) set from a server using a DNS A/AAAA record for longer cookie persistence. |
-| Missing FPID on first request | Inspect the first Edge Network request on page load. If no FPID cookie is present, the Edge Network generates a new ECID. If the FPID is set after the first request, the ECID generated on that first request is orphaned. | Set the FPID cookie before the Web SDK sends its first request. See [When to set the cookie](./first-party-device-ids.md#when-to-set-cookie). |
+| Short cookie lifetime | Check the expiration of `kndctr_` cookies in the browser. If they expire in 7 days or less, browser policies are likely restricting cookie duration. | Implement [first-party device IDs (FPIDs)](./fpid.md) set from a server using a DNS A/AAAA record for longer cookie persistence. |
+| Missing FPID on first request | Inspect the first Edge Network request on page load. If no FPID cookie is present, the Edge Network generates a new ECID. If the FPID is set after the first request, the ECID generated on that first request is orphaned. | Set the FPID cookie before the Web SDK sends its first request. See [When to set the cookie](./fpid.md#when-to-set-cookie). |
 | `orgId` mismatch across domains | Compare the `orgId` configuration value across your domains. Mismatched values cause separate identity scopes. | Use the same [`orgId`](/help/collection/js/commands/configure/orgid.md) on all domains within your organization. |
 | Consent banner deleting cookies | If your consent implementation clears all cookies before consent is granted and then the Web SDK initializes, a new ECID is generated. | Configure your consent banner to preserve `kndctr_` cookies or delay Web SDK initialization until consent is established. See also [Consent and identity](./consent.md). |
 | JavaScript-set FPID cookies | Cookies set using `document.cookie` are subject to browser restrictions (ITP, ETP) that cap their lifetime, sometimes to as little as 24 hours. | Set FPID cookies from the server using a DNS A/AAAA record, not from JavaScript. |
@@ -62,9 +62,9 @@ You can also inspect identity values in your browser's developer tools:
 **Diagnostic steps**:
 
 1. **Verify the FPID cookie format**: The FPID must be a valid [UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122). Open your browser's developer tools, find the FPID cookie, and confirm that the value matches the pattern `xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx`.
-2. **Check the cookie name in the datastream**: If you are using the [datastream cookie method](./first-party-device-ids.md#setting-cookie-datastreams), the cookie name configured in the datastream must exactly match the name of the cookie that your server sets.
+2. **Check the cookie name in the datastream**: If you are using the [datastream cookie method](./fpid.md#setting-cookie-datastreams), the cookie name configured in the datastream must exactly match the name of the cookie that your server sets.
 3. **Confirm that the cookie is sent on the request**: In the Network tab, inspect the `Cookie` header on the Edge Network request. The FPID cookie must be included.
-4. **Check identity priority**: If an existing ECID is already stored in a `kndctr_` cookie, it takes precedence over the FPID. The FPID only seeds a new ECID when no existing ECID is present. See [How FPIDs work](./first-party-device-ids.md#how-fpids-work) for the full priority order.
+4. **Check identity priority**: If an existing ECID is already stored in a `kndctr_` cookie, it takes precedence over the FPID. The FPID only seeds a new ECID when no existing ECID is present. See [How FPIDs work](./fpid.md#how-fpids-work) for the full priority order.
 5. **Validate the CNAME**: If using the datastream cookie method, confirm that your first-party collection CNAME is correctly configured and that requests are routed through it.
 
 +++
