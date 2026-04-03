@@ -84,7 +84,7 @@ POST /connections
 
 To create base connection with project-based authentication, make a POST request to the `/connections` endpoint and provide your `projectId` and `credentials` in the request body.
 
-+++Request
++++ Request
 
 ```shell
 curl -X POST \
@@ -117,9 +117,9 @@ curl -X POST \
 | `auth.params.credentials` | The credential or key required to authenticate [!DNL PubSub]. |
 | `connectionSpec.id` | The [!DNL PubSub] connection spec ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
-++++
++++
 
-+++Response
++++ Response
 
 A successful response returns details of the newly created connection, including its unique identifier (`id`). This base connection ID is required in the next step to create a source connection.
 
@@ -130,13 +130,13 @@ A successful response returns details of the newly created connection, including
 }
 ```
 
-++++
++++
 
 >[!TAB Topic and subscription-based authentication]
 
 To create base connection with topic and subscription-based authentication, make a POST request to the `/connections` endpoint and provide your `credentials`, `topicName`, and `subscriptionName` in the request body.
 
-+++Request
++++ Request
 
 ```shell
 curl -X POST \
@@ -173,7 +173,7 @@ curl -X POST \
 
 +++
 
-+++Response
++++ Response
 
 A successful response returns details of the newly created connection, including its unique identifier (`id`). This base connection ID is required in the next step to create a source connection.
 
@@ -184,7 +184,7 @@ A successful response returns details of the newly created connection, including
 }
 ```
 
-++++
++++
 
 >[!ENDTABS]
 

@@ -12,7 +12,7 @@ tutorials-url: https://experienceleague.adobe.com/docs/platform-learn/tutorials/
 git-repo: https://github.com/AdobeDocs/experience-platform.en
 solution: Experience Platform
 type: Documentation
-index: yes
+index: true
 role: Developer, User, Admin, Leader
 auto-video-transcripts: true
 ---

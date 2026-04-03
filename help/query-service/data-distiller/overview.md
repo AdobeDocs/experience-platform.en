@@ -7,7 +7,8 @@ exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
 
 Data Distiller is a package offering that includes a subset of the functionalities from Adobe Experience Platform. With Data Distiller you can perform post-ingestion data preparation (such as cleaning, shaping, and manipulation) for real-time customer profile or analytical use cases by executing batch queries in Query Service. Your use of Data Distiller is dependent on your entitlement for Experience Platform-based applications.
 
-<!-- Commented out references to licence usage dashboard. It is temporarily hidden:
+<!-- 
+Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}
 
 
@@ -16,7 +17,8 @@ The [Data Distiller license usage dashboard](./license-usage.md) is available o
 The Data Distiller license usage dashboard is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours.
 -->
 
-<!-- Update these descriptions post 23.3 release
+<!-- 
+Update these descriptions post 23.3 release
 ## Scoping parameters {#scoping-parameters}
 
 Scoping parameters are usage limits that relate to the scoping of your required set up, and are defined by your license capacity. Without add-ons, Data Distiller's scoping parameters are as follows: 
@@ -31,7 +33,8 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 
 See the [Query Service guardrails](../guardrails.md) document regarding default usage limits for Query Service data in relation to your licensing entitlement.
 
-<!-- Update these descriptions post 23.3 release
+<!-- 
+Update these descriptions post 23.3 release
 ## Static limits
 
 A static limit is the usage limit that relates to the functional boundaries of Adobe Experience Platform Activation. [More information on Adobe Experience Platform Activation](https://helpx.adobe.com/ca/legal/product-descriptions/adobe-experience-platform0.html) can be found in the Adobe help documents. A summary of Data Distiller static limits are listed below, for more complete information please refer to the Query Service guardrail document.  

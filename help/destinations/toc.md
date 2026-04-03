@@ -109,6 +109,7 @@ role: Admin,User
         * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)
         * [Pinterest connection upgrade](./catalog/advertising/pinterest-upgrade.md)
         * [PubMatic Connect connection](./catalog/advertising/pubmatic.md)
+        * [Reddit Custom Audience connection](./catalog/advertising/reddit-custom-audience.md)
         * [Snapchat Ads connection](./catalog/advertising/snap-inc.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
         * [The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
