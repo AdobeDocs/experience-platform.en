@@ -62,7 +62,7 @@ Unified identity support requires all of the following:
 
 1. **Enable third-party ID sync in the datastream**: Enable the **[!UICONTROL Third-Party ID Sync]** option in your datastream's advanced settings. See [Create and configure datastreams](/help/datastreams/configure.md#advanced-options).
 
-1. **Ensure that first-party persistence is in place**: Confirm that your first-party persistence strategy (such as FPIDs) is already deployed on your owned domain. See [First-party device IDs in Data Collection](first-party-device-ids.md).
+1. **Ensure that first-party persistence is in place**: Confirm that your first-party persistence strategy (such as FPIDs) is already deployed on your owned domain. See [First-party device IDs in Data Collection](fpid.md).
 
 ## Validation
 
