@@ -1,6 +1,7 @@
 ---
 title: Troubleshooting identity in Data Collection
 description: Diagnose common identity issues in Web SDK implementations, including visitor inflation, ECID inconsistencies, cookie conflicts, and FPID problems.
+exl-id: c569b1a1-1171-4264-872c-87e15779bd28
 ---
 # Troubleshooting identity in Data Collection
 

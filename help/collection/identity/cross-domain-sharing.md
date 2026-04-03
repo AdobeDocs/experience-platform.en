@@ -1,6 +1,7 @@
 ---
 title: Share identity across domains
 description: Maintain identity continuity across domains that your organization owns to improve personalization and reporting.
+exl-id: 5856eef0-81a6-4f16-ac93-1057ba05c3e6
 ---
 # Share identity across domains
 

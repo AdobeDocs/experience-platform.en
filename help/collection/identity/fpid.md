@@ -1,6 +1,7 @@
 ---
 title: Use first-party device IDs in Data Collection
 description: Configure first-party device IDs (FPIDs) for durable identity in web implementations that send data to the Edge Network.
+exl-id: 476eacee-0ba7-45f2-8888-e80b2107b17a
 ---
 # Use first-party device IDs in Data Collection
 
