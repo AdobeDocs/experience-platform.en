@@ -255,7 +255,7 @@ The `bottomN` function is used to return the last `N` items in an array, when so
 ```
 
 | Argument | Description |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{ARRAY}` | The array or list that is to be sorted. |
 | `{VALUE}` | The property in which to sort the array or list. |
 | `{AMOUNT}` | The number of items to be returned. |

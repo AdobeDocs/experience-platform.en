@@ -82,7 +82,8 @@ is ingested as a batch, and identified by a [!UICONTROL Batch ID]. A panel on th
 
 ![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-dataset-details.png)
 
-<!-- ![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]() 
+<!-- 
+![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]() 
 My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix? 
 -->
 

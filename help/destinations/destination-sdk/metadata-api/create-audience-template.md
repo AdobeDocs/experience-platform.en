@@ -251,8 +251,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | Property | Type | Description |
 | -------- | ----------- | ----------- |
 | `name` | String | The name of the audience metadata template for your destination. This name will appear in any partner-specific error message in the Experience Platform user interface. |
-| `url` | String | The URL and endpoint of your API, which is used for creating, updating, deleting, or validating audiences and/or dataflows in your platform. Two industry examples are: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` and `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. | 
-| `httpMethod` | String | The method used on your endpoint to programmatically create, update, delete, or validate the audience in your destination. For example: `POST`, `PUT`, `DELETE` | 
+| `url` | String | The URL and endpoint of your API, which is used for creating, updating, deleting, or validating audiences and/or dataflows in your platform. Two industry examples are: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` and `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
+| `httpMethod` | String | The method used on your endpoint to programmatically create, update, delete, or validate the audience in your destination. For example: `POST`, `PUT`, `DELETE` |
 | `headers.header` | String | Specifies any HTTP headers that should be added to the call to your API. For example, `"Content-Type"` |
 | `headers.value` | String | Specifies the value of HTTP headers that should be added to the call to your API. For example, `"application/x-www-form-urlencoded"` |
 | `requestBody` | String | Specifies the content of the message body that should be sent to your API. The parameters that should be added to the `requestBody` object depend on which fields your API accepts. See the [supported macros documentation](../functionality/audience-metadata-management.md#macros) to learn what you can include in the message body. |

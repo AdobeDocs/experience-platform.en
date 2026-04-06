@@ -81,7 +81,7 @@ POST /accounts/{ACCOUNT_ID}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{ACCOUNT_ID}` | The ID of the Query Service integration account you want to update. | 
+| `{ACCOUNT_ID}` | The ID of the Query Service integration account you want to update. |
 
 **Request**
 
@@ -210,7 +210,7 @@ DELETE /accounts/{ACCOUNT_ID}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{ACCOUNT_ID}` | The ID of the Query Service integration account you want to delete. | 
+| `{ACCOUNT_ID}` | The ID of the Query Service integration account you want to delete. |
 
 **Request**
 

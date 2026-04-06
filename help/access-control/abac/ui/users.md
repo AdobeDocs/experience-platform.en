@@ -16,7 +16,8 @@ Users are the individuals that have access to Adobe Experience Platform. An indi
 
 ## Manage users
 
-<!-- ADD LINKS INTO IMPORTANT NOTE BELOW
+<!-- 
+ADD LINKS INTO IMPORTANT NOTE BELOW
 >[!IMPORTANT]
 >
 >[!UICONTROL Permissions] manages access control for existing Experience Platform users. To add users to Experience Platform, navigate to Adobe Admin Console through the **[!UICONTROL Edit in admin console]** option. To learn how to add users through the Admin Console, follow the [adding users to Experience Platform](...){#target="_blank"} guide.
@@ -50,7 +51,8 @@ The **[!UICONTROL Add Roles]** dialog appears. Select the role(s) you wish to ad
 
 To remove a role from the user, select the **X** next to the role's name. 
 
-<!-- ADD LINKS INTO IMPORTANT NOTE BELOW
+<!-- 
+ADD LINKS INTO IMPORTANT NOTE BELOW
 
 >[!NOTE]
 >
@@ -67,11 +69,12 @@ A confirm dialog appears. Select **[!UICONTROL Confirm]** to finish removing the
 
 User groups are multiple users that have been grouped together and have the access to execute the same functions. 
 
-<!-- ADD LINKS INTO IMPORTANT NOTE BELOW
+<!-- 
+ADD LINKS INTO IMPORTANT NOTE BELOW
 >[!IMPORTANT]
 >
 >[!UICONTROL Permissions] manages access control for existing Experience Platform user groups. To add user groups to Experience Platform, navigate to Admin Console through the **[!UICONTROL Edit in admin console]** option. To learn how to add user groups in the Admin Console, follow the [adding user groups to Experience Platform](...){#target="_blank"} guide.
- -->
+-->
 
 To view your organization's users, navigate to **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}.Select **[!UICONTROL Groups]** from the **[!UICONTROL Users]** section in the left panel.
 

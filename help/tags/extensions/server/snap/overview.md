@@ -42,8 +42,10 @@ Once the desired property is selected, follow these steps:
 When finished, select **[!UICONTROL Save]**.
 
 ![Image showing Pixel ID and API token button](../../../images/extensions/server/snap/configure.png)
+
 <!-- 
-![[!DNL Snap] configuration screen for the [!DNL Snap] conversion API extension.](../../../images/extensions/server/snap/configure.png) -->
+![[!DNL Snap] configuration screen for the [!DNL Snap] conversion API extension.](../../../images/extensions/server/snap/configure.png) 
+-->
 
 ## Create data elements {#create-data-elements}
 
