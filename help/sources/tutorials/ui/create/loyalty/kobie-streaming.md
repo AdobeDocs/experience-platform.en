@@ -4,6 +4,7 @@ description: Learn how to stream data from Kobie into Adobe Experience Platform 
 badge: Beta
 hide: true
 hidefromtoc: true
+exl-id: 4e2e3287-3673-4426-8666-5f2ee284ca3d
 ---
 # Stream data from [!DNL Kobie] to Experience Platform using the UI
 
