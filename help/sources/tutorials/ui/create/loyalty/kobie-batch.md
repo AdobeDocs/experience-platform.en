@@ -1,9 +1,10 @@
 ---
 title: Ingest Batch Data From Kobie Into Experience Platform Using The UI
-description: Learn how to ingest batch data from Kobie into Adobe Experience Platform using the UI. 
+description: Learn how to ingest batch data from Kobie into Adobe Experience Platform using the UI.
 badge: Beta
 hide: true
 hidefromtoc: true
+exl-id: 3527aa64-bc5b-423b-80f8-616e21d43a01
 ---
 # Ingest batch data from [!DNL Kobie] into Experience Platform using the UI
 

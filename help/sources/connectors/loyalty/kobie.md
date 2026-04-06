@@ -3,6 +3,7 @@ title: Kobie Source Overview
 description: Learn how to connect your Kobie account to Adobe Experience Platform.
 hide: true
 hidefromtoc: true
+exl-id: e0a263f1-2803-45c2-be88-21a1975d3286
 ---
 # [!DNL Kobie]
 
@@ -24,4 +25,4 @@ Provide values for the following credentials to authenticate and connect the [!D
 
 <!-- Mapping info here -->
 
-## Next steps 
+## Next steps
