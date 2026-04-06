@@ -50,7 +50,7 @@ The [!UICONTROL Attributes] tab lets you browse Account attributes belonging to 
 
 >[!AVAILABILITY]
 >
->Summary data is in **Limited availability**. 
+>Summary data is in **Limited availability**, and for use in both B2B Edition and B2P Edition.
 
 When selecting an attribute, you can see summary data by selecting the [information icon](../../images/icons/info.png). The summary data includes information such as top values, an explanation of what the field is, the record count of the values, as well as the percentage of accounts that contain values for this attribute.
 
