@@ -9,6 +9,12 @@ last-substantial-update: 2026-03-31
 
 [!DNL Amazon Ads v2] enables advertisers to efficiently ingest, manage, activate, and reuse audience data across [!DNL Amazon Ads] products.
 
+>[!IMPORTANT]
+>
+>[!DNL Amazon Ads v2] is the current destination for all new [!DNL Amazon Ads] connections. If you have an existing [(Legacy) [!DNL Amazon Ads]](./amazon-ads.md) connection, it continues to function without any required changes. [!DNL Amazon Ads v2] connects to [!DNL Ads Data Manager], which provides support for expanded identity types, address-related fields, and data-sharing across [!DNL Amazon Ads] products, improving targeting and audience match rates compared to [(Legacy) [!DNL Amazon Ads]](./amazon-ads.md).
+>
+>After the end of April 2026, [!DNL Amazon Ads v2] will be renamed to [!DNL Amazon Ads], and the legacy card will be hidden, leaving a single destination card in the catalog. Existing legacy dataflows will continue to work and you can manage them in the **[!UICONTROL Browse]** tab beyond that date.
+
 The [!DNL Amazon Ads v2] integration with [!DNL Adobe Experience Platform] provides a direct connection for ingesting audience members into [!DNL Amazon Ads]. The uploaded audiences are available in the [!DNL Ads Data Manager (ADM)] console within [!DNL Amazon Ads]. You can use the [!DNL Ads Data Manager] console to share data across different [!DNL Amazon Ads] products.
 
 To learn more about [!DNL Ads Data Manager], see:
@@ -16,10 +22,6 @@ To learn more about [!DNL Ads Data Manager], see:
 * [Ads Data Manager - Console Overview](https://advertising.amazon.com/API/docs/en-us/adm/1_ads-data-manager-console-overview)
 * [Using the Ads Data Manager Console](https://advertising.amazon.com/API/docs/en-us/adm/2_ads-data-manager-console)
 * [Account setup in Ads Data Manager](https://advertising.amazon.com/API/docs/en-us/adm/2a_ads-data-manager_account_setup)
-
->[!IMPORTANT]
->
->[!DNL Amazon Ads v2] is the current destination for all new [!DNL Amazon Ads] connections. If you have an existing [[!DNL Amazon Ads] v1](./amazon-ads.md) connection, it continues to function without any required changes. [!DNL Amazon Ads v2] connects to [!DNL Ads Data Manager], which provides support for expanded identity types, address-related fields, and data-sharing across [!DNL Amazon Ads] products, improving targeting and audience match rates compared to [[!DNL Amazon Ads] v1](./amazon-ads.md).
 
 >[!IMPORTANT]
 >
@@ -133,7 +135,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Description]**: A description that helps you identify this destination.
 * **[!UICONTROL Manager Account]**: The target manager account ID from the dropdown.
 * **[!UICONTROL All audience members sent to Amazon are consented for use for Advertising]**: Specify consent for data usage (`GRANTED` or `DENIED`).
-* **[!UICONTROL Ads data manager Terms & Conditions]**: Accept the [!DNL Amazon Ads] Data Manager terms and conditions. See the [accept terms](#accept-terms) section for details.
+* **[!UICONTROL Ads data manager Terms & Conditions]**: Accept the [!DNL Amazon Ads] Data Manager terms and conditions. Read the [accept terms](#accept-terms) section for details.
 
 ### Enable alerts {#enable-alerts}
 
@@ -169,12 +171,12 @@ Use partner-provided identifiers only when they are populated in your source dat
 
 ### Examples {#examples}
 
-* Use kantarId when activating audiences built or enriched using [!DNL Kantar] identity data.
-* Use merkleId when your audience data originates from [!DNL Merkle]-managed identity solutions.
-* Use neustarId when your data is linked through [!DNL Neustar] identity resolution.
-* Use experianId for audiences enriched using [!DNL Experian] identity data.
-* Use liveRampId when activating audiences that rely on [!DNL LiveRamp] identity resolution.
-* Use sambaTvId when working with [!DNL Samba TV]-provided audience data.
+* Use `kantarId` when activating audiences built or enriched using [!DNL Kantar] identity data.
+* Use `merkleId` when your audience data originates from [!DNL Merkle]-managed identity solutions.
+* Use `neustarId` when your data is linked through [!DNL Neustar] identity resolution.
+* Use `experianId` for audiences enriched using [!DNL Experian] identity data.
+* Use `liveRampId` when activating audiences that rely on [!DNL LiveRamp] identity resolution.
+* Use `sambaTvId` when working with [!DNL Samba TV]-provided audience data.
 
 These identifiers are typically provided by the respective partners as plain text identifiers and do not require hashing.
 
@@ -188,7 +190,7 @@ Navigate to **[!UICONTROL Audiences]** → **[!UICONTROL Uploaded Sources]**. Ch
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
 
-## Additional resource {#additional-resources}
+## Additional resources {#additional-resources}
 
 For more information about [!DNL Amazon Ads Data Manager], see the following resource:
 
