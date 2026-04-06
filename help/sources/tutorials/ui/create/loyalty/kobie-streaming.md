@@ -1,17 +1,13 @@
 ---
-title: Stream Data From Talon.One To Experience Platform Using The UI
-description: Learn how to stream data from Talon.One into Adobe Experience Platform using the UI. This guide covers setup, data selection, and dataflow configuration.
+title: Stream Data From Kobie To Experience Platform Using The UI
+description: Learn how to stream data from Kobie into Adobe Experience Platform using the UI.
 badge: Beta
-last-substantial-update: 2026-04-06
-exl-id: a92e17dd-123c-4e83-a851-3cf2861751e5
+hide: true
+hidefromtoc: true
 ---
-# Stream [!DNL Talon.One] data to Experience Platform using the UI
+# Stream data from [!DNL Kobie] to Experience Platform using the UI
 
->[!AVAILABILITY]
->
->The [!DNL Talon.One] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
-
-Read this guide to learn how to connect and stream your data from [!DNL Talon.One] to Adobe Experience Platform using the sources workspace in the UI.
+Read this guide to learn how to connect and stream your data from [!DNL Kobie] to Adobe Experience Platform using the sources workspace in the UI.
 
 ## Getting started
 
@@ -24,25 +20,25 @@ This tutorial requires a working understanding of the following components of Ex
 
 >[!IMPORTANT]
 >
->Read the [[!DNL Talon.One] overview](../../../../connectors/loyalty/talon-one.md) to learn about prerequisite steps that you need to complete before connecting your account to Experience Platform.
+>Read the [[!DNL Kobie] overview](../../../../connectors/loyalty/kobie.md) to learn about prerequisite steps that you need to complete before connecting your account to Experience Platform.
 
 ## Navigate the sources catalog
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. Select the appropriate category in the *[!UICONTROL Categories]* panel. Alternatively, use the search bar to navigate to the specific source that you want to use.
 
-To stream data from [!DNL Talon.One], select the **[!UICONTROL Talon.One Streaming Events]** source card under *[!UICONTROL Loyalty]* and then select **[!UICONTROL Add data]**.
+To stream data from [!DNL Kobie], select the **[!UICONTROL Kobie Streaming Events]** source card under *[!UICONTROL Loyalty]* and then select **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
 >Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account is created, this option changes to **[!UICONTROL Add data]**.
 
-![The sources catalog in the UI with the Talon.One Streaming Events card selected.](../../../../images/tutorials/create/talon-one-streaming/catalog.png)
+![The sources catalog in the UI with the Kobie Streaming Events card selected.](../../../../images/tutorials/create/kobie/catalog.png)
 
 ## Select data
 
 Next, use the *[!UICONTROL Select data]* interface to upload a sample JSON file to define your source schema. During this step, you can use the preview interface to view the file structure of the payload. When finished, select **[!UICONTROL Next]**.
 
-![The select data step of the sources workflow](../../../../images/tutorials/create/talon-one-streaming/select-data.png)
+![The select data step of the sources workflow](../../../../images/tutorials/create/kobie/select-data.png)
 
 ## Dataflow details
 
@@ -71,7 +67,7 @@ If your dataset is enabled for Real-Time Customer Profile, then during this step
 
 Once your dataset is configured, you must then provide details on your dataflow, including a name, an optional description, and alert configurations.
 
-![The dataflow details interface](../../../../images/tutorials/create/talon-one-streaming/dataflow-details.png)
+![The dataflow details interface](../../../../images/tutorials/create/kobie/dataflow-details.png)
 
 | Dataflow configurations | Description |
 | --- | --- |
@@ -85,13 +81,7 @@ Once your dataset is configured, you must then provide details on your dataflow,
 
 Use the mapping interface to map your source data to the appropriate schema fields before ingesting data to Experience Platform. For more information, read the [mapping guide in the UI](../../../../../data-prep/ui/mapping.md).
 
-<!--
->[!TIP]
->
->You can download the [Events and Profile mappings](../../../../images/tutorials/create/capillary/mappings.zip) for [!DNL Capillary] and [import the files to Data Prep](../../../../../data-prep/ui/mapping.md#import-mapping) when you are ready to map your data.
--->
-
-![The mapping interface for Talon.One streaming.](../../../../images/tutorials/create/talon-one-streaming/mapping.png)
+![The mapping step of the workflow](../../../../images/tutorials/create/kobie/mapping.png)
 
 ## Review
 
@@ -102,18 +92,14 @@ The *[!UICONTROL Review]* step appears, allowing you to review the details of yo
 
 After confirming the details are correct, select **[!UICONTROL Finish]**.
 
-![The review step in the sources workflow.](../../../../images/tutorials/create/talon-one-streaming/review.png)
+![The review step in the sources workflow.](../../../../images/tutorials/create/kobie/review.png)
 
 ## Retrieve the streaming endpoint URL
 
 With the connection created, the sources detail page appears. This page shows details of your newly created connection, including previously run dataflows, ID, and streaming endpoint URL.
 
-![The streaming endpoint URL.](../../../../images/tutorials/create/talon-one-streaming/streaming-endpoint.png)
+![The streaming endpoint URL.](../../../../images/tutorials/create/kobie/streaming-endpoint.png)
 
 ## Monitor your dataflow
 
 Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on ingestion rates, success, and errors. For more information on how to monitor dataflow, see the tutorial on [monitoring accounts and dataflows in the UI](../../monitor-streaming.md).
-
-## Known limitations
-
-To ensure accurate data ingestion, you should send data from [!DNL Talon.One]'s loyalty points changed, tier upgrade, and tier downgrade notifications to the connector. Because the loyalty points changed notification does not include tier information, you must send these notifications to a separate profile dataset. If you combine points changed data with tier upgrade or downgrade notifications in the same dataset, tier information will be lost or overwritten with null values. Tier upgrade and downgrade notifications can use the same dataset, as both include tier details. After ingestion, Profile merge rules will automatically update the merged profile to reflect the most recent points and tier information.

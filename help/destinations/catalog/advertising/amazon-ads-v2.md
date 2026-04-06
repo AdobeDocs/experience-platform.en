@@ -2,6 +2,7 @@
 title: Amazon Ads v2
 description: Amazon Ads v2 offers a range of options to help you achieve your advertising goals to registered sellers, vendors, book vendors, Kindle Direct Publishing (KDP) authors, app developers, or agencies. The Amazon Ads v2 integration with Adobe Experience Platform provides turn-key integration to Amazon Ads products.
 last-substantial-update: 2026-03-31
+exl-id: 8656e114-af22-4696-b109-ffdf99b5316e
 ---
 # Amazon Ads v2 connection {#amazon-ads-v2}
 

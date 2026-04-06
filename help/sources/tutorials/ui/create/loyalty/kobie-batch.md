@@ -1,19 +1,13 @@
 ---
-title: Ingest Batch Data From Talon.One Into Experience Platform Using The UI
-description: Learn how to ingest batch data from Talon.One into Adobe Experience Platform using the UI. This guide covers setup, data selection, and dataflow configuration.
+title: Ingest Batch Data From Kobie Into Experience Platform Using The UI
+description: Learn how to ingest batch data from Kobie into Adobe Experience Platform using the UI. 
 badge: Beta
-last-substantial-update: 2026-04-06
-exl-id: 65a8ae42-0c0f-4bc5-b99e-52b02ab2130a
+hide: true
+hidefromtoc: true
 ---
-# Ingest batch data from [!DNL Talon.One] into Experience Platform using the UI
+# Ingest batch data from [!DNL Kobie] into Experience Platform using the UI
 
->[!AVAILABILITY]
->
->The [!DNL Talon.One] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
-
-The [!DNL Talon.One] source for batch data receives events recorded for a [!DNL Talon.One] application. A common use-case is to filter for `talon_session_closed` to receive completed transactions, including loyalty points gained or redeemed, coupons redeemed, discounts granted, etc. Read the [[!DNL Talon.One] Management API reference](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount) for more information on the API.
-
-Follow this tutorial to learn how to ingest batch data from your [!DNL Talon.One] account into Adobe Experience Platform using the sources workspace in the UI.
+Read this tutorial to learn how to ingest batch data from your [!DNL Kobie] account into Adobe Experience Platform using the sources workspace in the UI.
 
 ## Getting started
 
@@ -26,43 +20,35 @@ This tutorial requires a working understanding of the following components of Ex
 
 >[!IMPORTANT]
 >
->Read the [[!DNL Talon.One] overview](../../../../connectors/loyalty/talon-one.md) to learn about prerequisite steps that you need to complete before connecting your account to Experience Platform.
+>Read the [[!DNL Kobie] overview](../../../../connectors/loyalty/kobie.md) to learn about prerequisite steps that you need to complete before connecting your account to Experience Platform.
 
 ## Navigate the sources catalog
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. Select the appropriate category in the *[!UICONTROL Categories]* panel. Alternatively, use the search bar to navigate to the specific source that you want to use.
 
-To ingest data from [!DNL Talon.One], select the **[!UICONTROL Talon.One Batch Source Connector]** source card under *[!UICONTROL Loyalty]* and then select **[!UICONTROL Add data]**.
+To ingest data from [!DNL Kobie], select the **[!UICONTROL Kobie Batch Source Connector]** source card under *[!UICONTROL Loyalty]* and then select **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
 >Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account is created, this option changes to **[!UICONTROL Add data]**.
 
-![The sources catalog with the Talon.One batch source connector card selected.](../../../../images/tutorials/create/talon-one-batch/catalog.png)
+![The sources catalog with the Kobie batch source connector card selected.]
 
 ### Create a new account
 
->[!TIP]
->
->Before creating a new account, review the [prerequisites](../../../../connectors/loyalty/talon-one.md#prerequisites) in the [!DNL Talon.One] overview to learn which authentication credentials are required.
+To create a new account for your [!DNL Kobie] source, select **[!UICONTROL New account]** and provide a name and an optional description for your account. Next, provide your [!DNL Kobie] domain and your [!UICONTROL Kobie Management API Key]. When finished, select **[!UICONTROL Connect to source]** and allow for a few moments for your connection to establish.
 
-To create a new account for your [!DNL Talon.One] source, select **[!UICONTROL New account]** and provide a name and an optional description for your account. Next, provide your [!DNL Talon.One] domain and your [!UICONTROL Talon.One Management API Key]. When finished, select **[!UICONTROL Connect to source]** and allow for a few moments for your connection to establish.
-
-![The create new account step of the sources workflow.](../../../../images/tutorials/create/talon-one-batch/new.png)
+![The create new account step of the sources workflow.]
 
 ### Use an existing account
 
-To use an existing account, select **[!UICONTROL Existing account]** and select the [!DNL Talon.One] account that you want to use from the accounts interface.
+To use an existing account, select **[!UICONTROL Existing account]** and select the [!DNL Kobie] account that you want to use from the accounts interface.
 
 ## Select data
 
 Once you have authenticated, provide values for your **applicationId** and **sessionType**. During this step, you can use the preview functionalities to inspect the structure of your data. When finished, select **[!UICONTROL Next]** to proceed.
 
->[!TIP]
->
->To capture completed transactions—including loyalty points earned or redeemed, redeemed coupons, and granted discounts—select the `talon_session_closed` event type. For details on filtering events by type, refer to the ["type" query parameter in the [!DNL Talon.One] API documentation](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount).
-
-![The select data and preview steps of the sources workflow.](../../../../images/tutorials/create/talon-one-batch/select-data.png)
+![The select data and preview steps of the sources workflow.]
 
 ## Configure dataset and dataflow details
 
@@ -91,7 +77,7 @@ If your dataset is enabled for Real-Time Customer Profile, then during this step
 
 Once your dataset is configured, you must then provide details on your dataflow, including a name, an optional description, and alert configurations.
 
-![The dataflow details interface.](../../../../images/tutorials/create/talon-one-batch/dataflow-detail.png)
+![The dataflow details interface.]
 
 | Dataflow configurations | Description |
 | --- | --- |
@@ -107,9 +93,9 @@ With your dataset and dataflow details configured, you can now proceed to map yo
 
 >[!IMPORTANT]
 >
->For additional guidance on mapping your [!DNL Talon.One] source data, read the [[!DNL Talon.One] overview](../../../../connectors/loyalty/talon-one.md#mapping).
+>For additional guidance on mapping your [!DNL Kobie] source data, read the [[!DNL Kobie] overview]
 
-![The mapping interface of the sources workflow.](../../../../images/tutorials/create/talon-one-batch/mapping.png)
+![The mapping interface of the sources workflow.]
 
 ## Schedule your dataflow ingestion
 
@@ -132,7 +118,7 @@ See the table below for more information on scheduling configurations.
 | Start Time | The timestamp for the projected run, presented in UTC time zone. |
 | Backfill | Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to the start time will not be ingested. |
 
-![The schedule configuration step of the sources workflow.](../../../../images/tutorials/create/talon-one-batch/scheduling.png)
+![The schedule configuration step of the sources workflow.]
 
 ## Review
 
@@ -143,12 +129,8 @@ The *[!UICONTROL Review]* step appears, allowing you to review the details of yo
 
 After confirming the details are correct, select **[!UICONTROL Finish]**.
 
-![The review step of the sources workflow.](../../../../images/tutorials/create/talon-one-batch/review.png)
+![The review step of the sources workflow.]
 
 ## Monitor your dataflow
 
 Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on ingestion rates, success, and errors. For more information on how to monitor dataflow, see the tutorial on [monitoring accounts and dataflows in the UI](../../../../../dataflows/ui/monitor-sources.md).
-
-## Known limitations
-
-When mapping data from [!DNL Talon.One]'s schema to Adobe Experience Platform, it is currently not possible to capture multiple effects of the same type within a single transaction. For example, if a transaction includes multiple `setDiscount` effects (such as discounts from different campaigns), only one of those effects will be retained during mapping, and the others will be overwritten.
