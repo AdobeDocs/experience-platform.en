@@ -6,11 +6,9 @@ exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
 ---
 # Adobe Campaign Managed Cloud Services
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Campaign Managed Cloud Services offers a managed platform for designing cross-channel customer experiences, supporting visual campaign orchestration, real-time interaction management, and cross-channel execution. For more details, see the [Adobe Campaign v8 documentation](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html).
 
-Adobe Campaign Managed Cloud Services provides a Managed Services platform for designing cross-channel customer experiences and provides an environment for visual campaign orchestration, real time interaction management, and cross-channel execution. Visit the [Adobe Campaign v8 documentation](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html) for more information.
-
-The Adobe Campaign Managed Cloud Services source allows you to bring Adobe Campaign v8 delivery logs and tracking logs data to Adobe Experience Platform.
+The Adobe Campaign Managed Cloud Services source connector allows you to ingest delivery and tracking log data from Adobe Campaign v8 into Adobe Experience Platform. This connector operates as a batch source within the Platform.
 
 ## Prerequisites 
 
@@ -63,6 +61,20 @@ For detailed instructions on how to create a schema, read the guide on [creating
 ### Create a dataset {#create-a-dataset}
 
 Finally, you must create a dataset for your schemas. For detailed instructions on how to create a dataset, read the guide on [creating a dataset in the UI](../../../catalog/datasets/user-guide.md).
+
+## Expected latency for Adobe Campaign Managed Cloud Services source {#latency}
+
+End‑to‑end latency from a Campaign event to data availability in Experience Platform is typically 15–30 minutes in standard configurations (including 15‑minute replication, micro‑batch export, and a scheduled Experience Platform dataflow), assuming normal data volumes and no backlog. This is a near‑real‑time process achieved through scheduled micro‑batch synchronization (usually on the order of tens of minutes), but it is not continuous streaming.
+
+| Scenario | Details | Expected latency |
+| --- | --- | --- |
+| Campaign event is generated in a mid-sourcing / message center instance | A delivery or tracking event (send, open, click, etc.) occurs on a Campaign v8 execution (mid / message center) node. | Real time within Campaign runtime (currently not visible in Experience Platform). |
+| Replication from runtime to Campaign marketing database | Event data is replicated from mid/message center to the Campaign marketing database ([!DNL Snowflake] or [!DNL Postgres], depending on customer size). Standard integration patterns assume a regular replication job. | ~15 minutes, based on the the standard 15-minute replication cadence. |
+| Export from Campaign marketing database to landing zone (such as [!DNL Data Landing Zone], [!DNL Amazon S3] or [!DNL Azure Blob]) | An export workflow (Export Service) in Campaign runs on a schedule to extract new/changed delivery and tracking logs and write them as micro‑batches to a file‑based landing zone. | Minutes, plus the export schedule interval. |
+| Experience Platform source dataflow picks up exported files | The Adobe Campaign Managed Cloud Services source is configured as a batch dataflow in Experience Platform [!DNL Flow Service]. It periodically scans the landing zone, ingests new files, and writes them into the configured ExperienceEvent dataset(s). Monitoring exposes "successful batches" and "failed batches". | Minutes, plus the dataflow schedule interval. |
+| Data available in data lake and Real-Time Customer Profile | Once the batch is ingested, records are landed in the data lake and (if the dataset is profile‑enabled) upserted into Real‑Time Customer Profile. Standard Experience Platform SLAs for batch ingestion and profile ingestion apply | Within the same run window as the dataflow, i.e., shortly after the batch run completes. Records typically become available in minutes for downstream services. |
+
+{style="table-layout:auto"}
 
 ## Create an Adobe Campaign Managed Cloud Services source connection using the Experience Platform UI
 
