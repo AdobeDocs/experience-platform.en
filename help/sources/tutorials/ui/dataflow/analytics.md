@@ -24,7 +24,8 @@ This tutorial requires a working understanding of the following components of Ex
 * [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [[!DNL Data Prep]](../../../../data-prep/home.md): Allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
-<!-- ## Add data
+<!-- 
+## Add data
 
 After creating your analytics source account, the **[!UICONTROL Add data]** step appears, providing an interface for you to explore your analytics account's table hierarchy.
 
@@ -37,7 +38,8 @@ After creating your analytics source account, the **[!UICONTROL Add data]** step
 
 Once you find the source data, select the table, then select **[!UICONTROL Next]**.
 
-![select-data](../../../images/tutorials/dataflow/table-based/select-data.png) -->
+![select-data](../../../images/tutorials/dataflow/table-based/select-data.png) 
+-->
 
 ## Provide dataflow details
 

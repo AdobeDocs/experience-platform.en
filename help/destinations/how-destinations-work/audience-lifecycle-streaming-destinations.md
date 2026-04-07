@@ -22,7 +22,7 @@ The following streaming destinations support automatic audience name updates whe
 
 * [Acxiom Audience Connection](../catalog/advertising/acxiom-audience-connection.md)
 * [Adobe Campaign Managed Cloud](../catalog/email-marketing/adobe-campaign-managed-services.md)
-* [Advertising Cloud DSP](../catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP](../catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Bombora](../catalog/advertising/bombora.md)
 * [Criteo](../catalog/advertising/criteo.md)
 * [Demandbase](../catalog/advertising/demandbase.md)
@@ -61,7 +61,7 @@ The following streaming destinations support automatic audience removal when you
 * [(API) Oracle Eloqua](../catalog/email-marketing/oracle-eloqua-api.md)
 * [(Companies) LinkedIn Matched Audience](../catalog/social/linkedin-b2b.md)
 * [(Legacy) (V2) Marketo Engage](../catalog/adobe/marketo-engage.md)
-* [Adobe Advertising Cloud DSP](../catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP](../catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Bombora Account Audiences](../catalog/advertising/bombora.md)
 * [Criteo](../catalog/advertising/criteo.md)
 * [Experience Cloud Audiences](../catalog/adobe/experience-cloud-audiences.md)
@@ -80,6 +80,6 @@ The following streaming destinations support automatic audience removal when you
 * [Twitter Custom Audiences](../catalog/social/twitter.md)
 * [Yahoo DataX](../catalog/advertising/datax.md)
 
-### Destinations which do not support audience removal
+### Destinations which do not support audience removal {#no-removal-support}
 
 For destinations not listed above, when you unmap an audience from the destination, Experience Platform only removes the mapping. The audience in the destination platform remains active until you manually delete it in the partner platform.

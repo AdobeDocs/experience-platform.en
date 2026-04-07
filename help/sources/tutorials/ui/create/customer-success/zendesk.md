@@ -105,7 +105,7 @@ The table below lists the supported mappings that must be set up for Zendesk.
 
 | Source | Type |
 |---|---|
-| `results.active` | Boolean | 
+| `results.active` | Boolean |
 | `results.alias` | String |
 | `results.created_at` | String |
 | `results.custom_role_id` | Integer |

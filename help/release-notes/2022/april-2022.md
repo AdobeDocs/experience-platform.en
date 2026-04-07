@@ -40,7 +40,7 @@ The following widgets are available through the Widget library on their respecti
 | [!UICONTROL Activated audiences across all destinations] | Destinations | This widget provides the total number of audiences activated across all destinations in a single metric. |
 | [!UICONTROL Audience activation order] | Segments | This widget provides a three-column table that lists the destination name, the platform, and the activation date of the audience. |
 | [!UICONTROL Audience size trend] | Segments | This widget provides a line graph illustration for the total number of profiles that meet the criteria of any segment definition over 30 days, 90 days, and 12 month periods. |
-| [!UICONTROL Audience size change trend] | Segments | This widget provides a line graph illustration of the difference in the total number of profiles that qualified for a given segment between the most recent daily snapshots. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. |           
+| [!UICONTROL Audience size change trend] | Segments | This widget provides a line graph illustration of the difference in the total number of profiles that qualified for a given segment between the most recent daily snapshots. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. |
 | [!UICONTROL Audience size trend by identity] | Segments | This widget illustrates the audience size trend for a particular segment based on a selected identity type. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. |
 
 **New features** {#new-features}

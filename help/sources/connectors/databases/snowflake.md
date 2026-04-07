@@ -72,7 +72,7 @@ Provide values for the following credentials to connect [!DNL Snowflake] to Expe
 | --- | --- |
 | `host` | The host URL that your [!DNL Snowflake] account connects to. |
 | `port` | The port number that is used by [!DNL Snowflake] when connecting to a server over the internet. |
-| `username` | The username associated with your [!DNL Snowflake] account. | 
+| `username` | The username associated with your [!DNL Snowflake] account. |
 | `password` | The password associated with your [!DNL Snowflake] account. |
 | `database` | The [!DNL Snowflake] database from where the data will be pulled from. |
 | `schema` | The name of the schema associated with your [!DNL Snowflake] database. You must ensure that the user you want to give database access to, also has access to this schema. |

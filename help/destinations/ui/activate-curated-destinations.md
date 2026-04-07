@@ -6,13 +6,13 @@ exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
 ---
 # Activate audiences to curated destinations based on LiveRamp identifiers
 
-Use the Adobe Real-Time CDP integration with [!DNL LiveRamp] to activate audiences to a curated list of destinations which use [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) for activation, including connected TV and audio destinations, such as the ones listed below.
+Use the Adobe [!DNL Real-Time CDP] integration with [!DNL LiveRamp] to activate audiences to a curated list of destinations which use [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) for activation, including connected TV and audio destinations, such as the ones listed below.
 
 >[!IMPORTANT]
 >
 >You do not need to ingest or in any way work with LiveRamp RampIDs in the Experience Platform interface.
 >
-> You can export identities from Real-Time CDP, such as PII-based identifiers, known identifiers, and custom IDs, as described in the official [LiveRamp documentation](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers). These identities are then matched with [!DNL LiveRamp RampIDs] further downstream in the activation process.
+> You can export identities from [!DNL Real-Time CDP], such as PII-based identifiers, known identifiers, and custom IDs, as described in the official [LiveRamp documentation](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers). These identities are then matched with [!DNL LiveRamp RampIDs] further downstream in the activation process.
 
 
 * [[!DNL 4C Insights]](#insights)
@@ -36,7 +36,7 @@ Use the Adobe Real-Time CDP integration with [!DNL LiveRamp] to activate audienc
 * [[!DNL Teads]](#teads)
 * [[!DNL WB Discovery]](#wb-discovery)
 
-This article explains the workflow required to activate audiences from Real-Time CDP to the destinations listed above, directly from the Real-Time CDP UI.
+This article explains the workflow required to activate audiences from [!DNL Real-Time CDP] to the destinations listed above, directly from the [!DNL Real-Time CDP] UI.
 
 ## Activation workflow {#workflow}
 
@@ -44,13 +44,13 @@ You activate audiences to connected TV and audio destinations by going through a
 
 ![Diagram showing the workflow for activating audiences from Real-Time CDP to curated destinations, through LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png){width="1920" zoomable="yes"}
 
-First, you export your audiences from Real-Time CDP to the [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) destination, as CSV files.
+First, you export your audiences from [!DNL Real-Time CDP] to the [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) destination, as CSV files.
 
 After you've exported your audiences, you activate them by using the [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md) destination.
 
 >[!TIP]
 >
->This process enables you to activate your audiences to destinations such as [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney), and more, directly from the Real-Time CDP UI, without the need to log in to your [!DNL LiveRamp] account for activation.
+>This process enables you to activate your audiences to destinations such as [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney), and more, directly from the [!DNL Real-Time CDP] UI, without the need to log in to your [!DNL LiveRamp] account for activation.
 
 ### Video tutorial {#video}
 
@@ -60,7 +60,7 @@ Watch the video below for an end-to-end explanation of the workflow described in
 
 ### Step 1: Send your audiences from Experience Platform to LiveRamp, through the [!DNL LiveRamp - Onboarding] destination {#onboarding}
 
-The first thing that you must do in order to activate your audiences to curated destinations based on LiveRamp RampIDs is to **export your audiences from Experience Platform to [!DNL LiveRamp]**.
+The first thing that you must do to activate your audiences to curated destinations based on LiveRamp RampIDs is to **export your audiences from Experience Platform to [!DNL LiveRamp]**.
 
 You do this by using the **[!DNL LiveRamp - Onboarding]** destination.
 

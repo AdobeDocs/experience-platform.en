@@ -43,7 +43,7 @@ The returned audit log data contains the following information on all queries th
 | [!UICONTROL Asset Name] | The value for the [!UICONTROL Asset Name] field depends on the category chosen as a filter. When using the [!UICONTROL Scheduled query] category this is the **schedule name**. When using the [!UICONTROL Query template] category, this is the **template name**. When using the [!UICONTROL Query] category, this is the **session ID**  |
 | [!UICONTROL Category] | This field matches the category selected by you in the filter dropdown.  |
 | [!UICONTROL Action] |  This can be either create, delete, update, or execute. The available actions depend on the category chosen as a filter. |
-| [!UICONTROL User] | This field provides the user ID that executed the query. | 
+| [!UICONTROL User] | This field provides the user ID that executed the query. |
 
 ![The Audits dashboard with the filtered activity log highlighted.](../images/audit-log/filtered-activity.png)
 

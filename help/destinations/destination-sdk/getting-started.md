@@ -7,7 +7,7 @@ exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
 
 ## Overview {#overview}
 
-This page describes how to authenticate and start using Adobe Experience Platform Destination SDK. It includes instructions on how to obtain Adobe I/O authentication credentials, a sandbox name, and the destination authoring access control permission.
+This page describes how to authenticate and start using [!DNL Adobe Experience Platform] Destination SDK. It includes instructions on how to obtain Adobe I/O authentication credentials, a sandbox name, and the destination authoring access control permission.
 
 ## Terminology {#terminology}
 
@@ -74,5 +74,5 @@ By following the steps in this article, you obtained authentication credentials 
   * [Use Destination SDK to configure a streaming destination](guides/configure-destination-instructions.md)
   * [Use Destination SDK to configure a file-based destination](guides/configure-file-based-destination-instructions.md)
 
-* For all operations, refer to the [Destination Authoring API documentation](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
+* For all operations, see the [Destination Authoring API documentation](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
 * Use the [Destination Authoring API Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) to configure your destination using the Destination SDK API endpoints. To get started with Postman, see the [steps for importing environments and collections](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) and a [video guide for creating the Postman environment](https://video.tv.adobe.com/v/28832).

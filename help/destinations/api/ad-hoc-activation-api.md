@@ -26,17 +26,17 @@ The diagram below illustrates the end-to-end workflow for activating audiences v
 
 ## Use cases {#use-cases}
 
-### Flash sales or promotions
+### Flash sales or promotions {#flash-sales}
 
 An online retailer is preparing a limited flash sale and wants to notify customers on a short notice. Through the Experience Platform ad-hoc activation API, the marketing team can export audiences on-demand, and quickly send promotional emails to the customer base.
 
-### Current events or breaking news
+### Current events or breaking news {#current-events}
 
 A hotel expects inclement weather over the following days, and the team wants to inform the arriving guests quickly, so they can plan accordingly. The marketing team can use the Experience Platform ad-hoc activation API to export audiences on-demand, and notify the guests.
 
-### Integration testing
+### Integration testing {#integration-testing}
 
-IT managers can use the Experience Platform ad-hoc activation API to export audiences on-demand, so they can test their custom integration with Adobe Experience Platform, and ensure everything is working correctly.
+IT managers can use the Experience Platform ad-hoc activation API to export audiences on-demand, so they can test their custom integration with [!DNL Adobe Experience Platform], and ensure everything is working correctly.
 
 ## Guardrails {#guardrails}
 
@@ -48,19 +48,19 @@ Keep in mind the following guardrails when using the ad-hoc activation API.
 
 ## Segmentation considerations {#segmentation-considerations}
 
-Adobe Experience Platform runs scheduled segmentation jobs once every 24 hours. The ad-hoc activation API runs based on the latest segmentation results.
+[!DNL Adobe Experience Platform] runs scheduled segmentation jobs once every 24 hours. The ad-hoc activation API runs based on the latest segmentation results.
 
 ## Step 1: Prerequisites {#prerequisites}
 
-Before you can make calls to the Adobe Experience Platform APIs, make sure you meet the following prerequisites:
+Before you can make calls to the [!DNL Adobe Experience Platform] APIs, make sure you meet the following prerequisites:
 
-* You have an organization account with access to Adobe Experience Platform.
-* Your Experience Platform account has the `developer` and `user` roles enabled for the Adobe Experience Platform API product profile. Contact your [Admin Console](../../access-control/home.md) administrator to enable these roles for your account.
+* You have an organization account with access to [!DNL Adobe Experience Platform].
+* Your Experience Platform account has the `developer` and `user` roles enabled for the [!DNL Adobe Experience Platform] API product profile. Contact your [Admin Console](../../access-control/home.md) administrator to enable these roles for your account.
 * You have an Adobe ID. If you do not have an Adobe ID, go to the [Adobe Developer Console](https://developer.adobe.com/console) and create a new account.
 
 ## Step 2: Gather credentials {#credentials}
 
-In order to make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+To make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
@@ -101,7 +101,7 @@ Follow the instructions described [here](../../segmentation/api/export-jobs.md#r
 
 In the response, look for the first record that includes the schema property below.
 
-```
+```json
 "schema":{
    "name":"_xdm.context.profile"
 }
@@ -114,7 +114,7 @@ The audience export job ID is in the `id` property, as shown below.
 
 ## Step 5: Run the ad-hoc activation job {#activation-job}
 
-Adobe Experience Platform runs scheduled segmentation jobs once every 24 hours. The ad-hoc activation API runs based on the latest segmentation results.
+[!DNL Adobe Experience Platform] runs scheduled segmentation jobs once every 24 hours. The ad-hoc activation API runs based on the latest segmentation results.
 
 >[!IMPORTANT]
 >
@@ -132,7 +132,11 @@ Once the audience export job has completed, you can trigger the activation.
 
 >[!IMPORTANT]
 >
->It is mandatory to include the `Accept: application/vnd.adobe.adhoc.activation+json; version=2` header in your request in order to use v2 of the ad-hoc activation API.
+>It is mandatory to include the `Accept: application/vnd.adobe.adhoc.activation+json; version=2` header in your request to use v2 of the ad-hoc activation API.
+
+For non–segmentation service audiences (for example, [external or custom upload audiences](../../segmentation/ui/audience-portal.md#import-audience)), you must specify the audience ID generated by Experience Platform in your request, not the external audience ID. You can find the system-generated ID at the top of the [audience summary panel](../../segmentation/ui/audience-portal.md#audience-summary), displayed as **ID#** followed by a UUID, when you open the audience details page in the audiences UI.
+
+![The Audience summary panel showing the system-generated ID field highlighted at the top of the panel.](../assets/api/ad-hoc-activation/audience-summary-id.png)
 
 ```shell
 
@@ -234,7 +238,7 @@ A successful response returns HTTP status 200.
 
 ## API error handling {#api-error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ### API error codes and messages specific to the ad-hoc activation API {#specific-error-messages}
 
@@ -248,4 +252,4 @@ When using the ad-hoc activation API, you can come across error messages that ar
 ## Related information {#related-information}
 
 * [Connect to batch destinations and activate data using the Flow Service API](/help/destinations/api/connect-activate-batch-destinations.md)
-* [(Beta) Export files on-demand to batch destinations using the Experience Platform UI](/help/destinations/ui/export-file-now.md)
+* [Export files on-demand to batch destinations using the Experience Platform UI](/help/destinations/ui/export-file-now.md)

@@ -21,7 +21,7 @@ On the next page, select the environment you would like to use for this set up. 
 >
 >A property is limited to one development, one staging, and one production environment.
 
-| Environment | Description | 
+| Environment | Description |
 | --- | --- |
 | Development | The development environment is for team members to test libraries or changes in Event Forwarding.|
 | Staging | The staging environment is optional and allows approved team members to test and approve a library before it's published. |
@@ -43,7 +43,7 @@ To view the certificate details for an environment select the **[!UICONTROL Envi
 
 The following certificate details are displayed:
 
-| Field Name | Description | 
+| Field Name | Description |
 | --- | --- |
 | Certificate | Details of the certificate, which include:<ul><li>**Name**: The name of the cerificate.</li><li>**Date created**: The date when the certificate was created.</li><li>**Status**: The current status of the certificate:<ul><li>**Current**: The certificate is actively in use.</li><li>**Obsolete**: The certificate is not in use but hasn't expired yet. It can still be selected for use.</li><li>**Expired**: The certificate is expired, grayed out, and no longer available for use.</li></ul></ul>  |
 | Expires | Date the certificate will expire. |

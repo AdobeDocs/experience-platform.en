@@ -1,7 +1,7 @@
 ---
 keywords: crm;CRM;crm destinations;Outreach;Outreach crm destination
 title: Outreach connection
-description: The Outreach destination allows you to export your account data and activate it within Outreach for your business needs.
+description: Use the Outreach destination to export your account data and activate it within Outreach for your business needs.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
 ---
 # [!DNL Outreach] connection
@@ -10,13 +10,13 @@ exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
 
 [[!DNL Outreach]](https://www.outreach.io/) is a Sales Execution Platform with the most B2B buyer-seller interaction data in the world and significant investments in proprietary AI technologies to translate sales data into intelligence. [!DNL Outreach] helps organizations automate sales engagement and act on revenue intelligence to improve their efficiency, predictability, and growth.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Outreach Update Resource API](https://api.outreach.io/api/v2/docs#update-an-existing-resource), which allows you to update identities within an audience corresponding to prospects in [!DNL Outreach].
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Outreach Update Resource API](https://api.outreach.io/api/v2/docs#update-an-existing-resource) to update identities within an audience corresponding to prospects in [!DNL Outreach].
 
 [!DNL Outreach] uses OAuth 2 with Authorization Grant as the authentication mechanism to communicate with the [!DNL Outreach] [!DNL Update Resource API]. Instructions to authenticate to your [!DNL Outreach] instance are further below, within [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
-As a marketer, you can deliver personalized experiences to your prospects, based on attributes from their Adobe Experience Platform profiles. You can build audiences from your offline data and send these audiences to [!DNL Outreach], to display in the prospects' feeds as soon as audiences and profiles are updated in Adobe Experience Platform.
+As a marketer, you can deliver personalized experiences to your prospects, based on attributes from their [!DNL Adobe Experience Platform] profiles. You can build audiences from your offline data and send these audiences to [!DNL Outreach], to display in the prospects' feeds as soon as audiences and profiles are updated in [!DNL Adobe Experience Platform].
 
 ## Prerequisites {#prerequisites}
 
@@ -28,7 +28,7 @@ Refer to Adobe's documentation for [Audience Membership Details schema field gro
 
 ### Outreach prerequisites {#prerequisites-destination}
 
-Note the following prerequisites in [!DNL Outreach], in order to export data from Experience Platform to your [!DNL Outreach] account:
+Note the following prerequisites in [!DNL Outreach], to export data from Experience Platform to your [!DNL Outreach] account:
 
 #### You need to have an Outreach account {#prerequisites-account}
 
@@ -43,7 +43,7 @@ Note down the items below before you authenticate to the [!DNL Outreach] CRM des
 
 #### Set up custom field labels {#prerequisites-custom-fields}
 
-[!DNL Outreach] supports custom fields for [prospects](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Refer to [How To add a custom field in Outreach](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) for additional guidance. For ease of identification it is recommended to manually update the labels to their corresponding audience names instead of keeping the defaults. For example as below:
+[!DNL Outreach] supports custom fields for [prospects](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). See [How To add a custom field in Outreach](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) for additional guidance. For ease of identification it is recommended to manually update the labels to their corresponding audience names instead of keeping the defaults. For example as below:
 
 [!DNL Outreach] settings page for prospects displaying custom fields.
 ![Outreach UI screenshot showing the custom fields on the settings page.](../../assets/catalog/crm/outreach/outreach-custom-fields.png)
@@ -55,7 +55,7 @@ Note down the items below before you authenticate to the [!DNL Outreach] CRM des
 >
 > Label names are for ease of identification only. They are not used when updating prospects.
 
-## Guardrails
+## Guardrails {#guardrails}
 
 The [!DNL Outreach] API has a rate limit of 10,000 requests per hour per user. If you reach this limit you will receive a `429` response with the following message: `You have exceeded your permitted rate limit of 10,000; please try again at 2017-01-01T00:00:00.`.
 
@@ -75,10 +75,10 @@ Refer to the [[!DNL Outreach] documentation](https://api.outreach.io/api/v2/docs
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -91,14 +91,14 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
 
 ## Export type and frequency {#export-type-frequency}
 
-Refer to the table below for information about the destination export type and frequency.
+See the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 |---------|----------|---------|
@@ -110,7 +110,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 > To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -153,7 +153,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -161,9 +161,9 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL Outreach] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Outreach] destination fields, follow these steps:
+To correctly send your audience data from [!DNL Adobe Experience Platform] to the [!DNL Outreach] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Outreach] destination fields, follow these steps:
 
-1. In the [!UICONTROL Mapping] step, click **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
+1. In the [!UICONTROL Mapping] step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 ![Experience Platform UI screenshot showing how to Add new mapping](../../assets/catalog/crm/outreach/add-new-mapping.png)
 
 1. In the [!UICONTROL Select source field] window, choose the **[!UICONTROL Select identity namespace]** category and add the desired mappings.
@@ -179,7 +179,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
       |---|---|---|
       |`Oid`|`OutreachId`| Yes |
 
-    * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you define in the [!UICONTROL Attribute name] field. Refer to [[!DNL Outreach] prospect documentation](https://api.outreach.io/api/v2/docs#prospect) for a comprehensive list of supported attributes.
+    * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you define in the [!UICONTROL Attribute name] field. See [[!DNL Outreach] prospect documentation](https://api.outreach.io/api/v2/docs#prospect) for a comprehensive list of supported attributes.
     ![Experience Platform UI screenshot showing Target mapping using LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
     * For instance, depending on the values you want to update, add the following mapping between your XDM profile schema and your [!DNL Outreach] instance:
@@ -203,7 +203,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
     > * The numeric value *(`N`)* used within the [!UICONTROL Mapping ID] should match the custom attribute key suffixed with the numeric value within [!DNL Outreach]. Example: *Custom Field `N` Label*.
     > * You only need to specify the numeric value, not the whole custom field label.
     > * [!DNL Outreach] supports a maximum of 150 custom label fields.
-    > * Refer to [[!DNL Outreach] prospect documentation](https://api.outreach.io/api/v2/docs#prospect) for details.
+    > * See [[!DNL Outreach] prospect documentation](https://api.outreach.io/api/v2/docs#prospect) for details.
 
     * For example:
     
@@ -229,7 +229,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Monitor the audience summary and ensure that the count of profiles corresponds to the count created within the segment.
 ![Experience Platform UI screenshot showing Segment summary.](../../assets/catalog/crm/outreach/segment.png)
 
-1. Log in to the [!DNL Outreach] website, then navigate to the [!DNL Apps] > [!DNL Contacts] page and check if the profiles from the audience have been added. You can see that each audience status in [!DNL Outreach] was updated with the corresponding audience status from Experience Platform, based on the [!UICONTROL Mapping ID] value provided during the [audience scheduling](#schedule-segment-export-example) step.
+1. Go to the [!DNL Outreach] website, then navigate to the [!DNL Apps] > [!DNL Contacts] page and check if the profiles from the audience have been added. You can see that each audience status in [!DNL Outreach] was updated with the corresponding audience status from Experience Platform, based on the [!UICONTROL Mapping ID] value provided during the [audience scheduling](#schedule-segment-export-example) step.
 
 ![Outreach UI screenshot showing the Outreach Prospects page with the updated audience statuses.](../../assets/catalog/crm/outreach/outreach-prospect.png)
 

@@ -7,7 +7,7 @@ exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 ---
 # Edit activation dataflows {#edit-activation-flows}
 
-In Adobe Experience Platform, you can configure various components of existing activation dataflows to destinations, such as:
+In [!DNL Adobe Experience Platform], you can configure various components of existing activation dataflows to destinations, such as:
 
 * [Enable or disable](#enable-disable-dataflows) activation dataflows
 * [Add additional audiences](#add-audiences) to activation dataflows
@@ -22,7 +22,7 @@ In Adobe Experience Platform, you can configure various components of existing a
 
 Follow the steps below to browse your existing activation dataflows and identify the one you want to edit.
 
-1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destination dataflows.
+1. Go to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destination dataflows.
 
     ![Browse destinations](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -62,7 +62,7 @@ Select **[!UICONTROL Activate audiences]** in the right rail. This action takes 
 
 ![Experience Platform UI image showing the Activate audiences dataflow run option.](../assets/ui/edit-activation/activate-audiences.png)
 
-Select the **[!UICONTROL Scheduling]** step in the activation workflow to edit the activation schedule and export frequency for your dataflow. This step allows you to configure how often data is exported to the destination.
+Select the **[!UICONTROL Scheduling]** step in the activation workflow to edit the activation schedule and export frequency for your dataflow. Use this step to configure how often data is exported to the destination.
 
 In the **[!UICONTROL Scheduling]** step of the activation workflow, you can:
 
@@ -81,7 +81,7 @@ Select **[!UICONTROL Activate audiences]** in the right rail. This action takes 
 
 ![Experience Platform UI image showing the Activate audiences dataflow run option.](../assets/ui/edit-activation/activate-audiences.png)
 
-Select the **[!UICONTROL Mapping]** step in the activation workflow to edit the mapped attributes and identities for your activation dataflow. This allows you to adjust which profile attributes and identities should be exported to the destination.
+Select the **[!UICONTROL Mapping]** step in the activation workflow to edit the mapped attributes and identities for your activation dataflow. Use this step to adjust which profile attributes and identities are exported to the destination.
 
 In the **[!UICONTROL Mapping]** step of the activation workflow, you can:
 
@@ -136,6 +136,6 @@ To edit the activation dataflow name and description, use the **[!UICONTROL Dest
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully used the **[!UICONTROL destinations]** workspace to update existing destination dataflows.
+You have successfully updated your destination dataflows using the **[!UICONTROL destinations]** workspace.
 
-For more information about destinations, refer to the [destinations overview](../catalog/overview.md).
+For more information about destinations, see the [destinations overview](../catalog/overview.md).

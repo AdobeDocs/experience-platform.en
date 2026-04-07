@@ -28,6 +28,8 @@ Real-time (streaming) destinations built with Destination SDK support the mappin
 | XDM attribute | Custom attribute |
 | Identity namespace | Identity namespace |
 
+{style="table-layout:auto"}
+
 The configuration example below allows customers to use both mappings in the table above.
 
 ```json
@@ -81,6 +83,8 @@ File-based destinations built with Destination SDK support the mapping configura
 | XDM attribute | Attribute / Custom attribute |
 | Identity namespace | Attribute / Custom attribute |
 | Identity namespace | Identity namespace |
+
+{style="table-layout:auto"}
 
 The configuration example below allows customers to use all the mappings from the table above.
 

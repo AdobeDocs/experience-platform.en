@@ -130,7 +130,7 @@ Use sources in Experience Platform to ingest data from an Adobe application or a
 
 | Feature | Description |
 | --- | --- |
-| Updates to the Adobe Analytics source connector | The dataset activity page does not display information about batches since the Analytics Source Connector is entirely managed by Adobe. You can monitor that data is flowing by looking at the metrics around ingested records. Read the guide on creating a [source connection for Analytics data](../../sources/tutorials/ui/create/adobe-applications/analytics.md) for more information. | 
+| Updates to the Adobe Analytics source connector | The dataset activity page does not display information about batches since the Analytics Source Connector is entirely managed by Adobe. You can monitor that data is flowing by looking at the metrics around ingested records. Read the guide on creating a [source connection for Analytics data](../../sources/tutorials/ui/create/adobe-applications/analytics.md) for more information. |
 
 **Updated documentation**
 

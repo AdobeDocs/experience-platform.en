@@ -59,7 +59,7 @@ The configuration options are divided into three main sections as outlined below
 
 **[!UICONTROL Basic Request Properties]**
 
-| Input | Description | 
+| Input | Description |
 | --- | --- |
 | Tracker ID | The platform ID of the event tracker. |
 | UPixel ID | The universal pixel ID for the event. |
@@ -95,7 +95,7 @@ Refer to the [Real-Time Conversions Event](https://partner.thetradedesk.com/v3/p
 >
 >The [!UICONTROL Configuration Overrides] fields allow you to set a different [!DNL Advertiser ID] and/or [!DNL Merchant ID] on every rule.
 
-| Input | Description | 
+| Input | Description |
 | --- | --- |
 | Advertiser ID | Unique identifier for the advertiser which this event is associated. A different Advertiser ID can be provided to override the ID you supplied in the extension configuration. |
 | Merchant ID | The unique identifier that each merchant is given by [!DNL The Trade Desk] throughout the onboarding procedure. A different Merchant ID can be provided to override the ID you supplied in the extension configuration. |

@@ -22,7 +22,7 @@ For more detailed information about the functions, including their syntax, usage
 | [`%`](https://spark.apache.org/docs/latest/api/sql/index.html#_3) | Returns the remainder of the two numbers |
 | [`*`](https://spark.apache.org/docs/latest/api/sql/index.html#_5) | Multiplies the two numbers |
 | [`+`](https://spark.apache.org/docs/latest/api/sql/index.html#_6) | Adds the two numbers |
-| [`-`](https://spark.apache.org/docs/latest/api/sql/index.html#_7) | Subtracts the two numbers | 
+| [`-`](https://spark.apache.org/docs/latest/api/sql/index.html#_7) | Subtracts the two numbers |
 | [`/`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | Divides the two numbers |
 | [`abs`](https://spark.apache.org/docs/latest/api/sql/index.html#abs) | Returns the absolute value of the input |
 | [`acos`](https://spark.apache.org/docs/latest/api/sql/index.html#acos) | Returns the inverse cosine value |
@@ -33,7 +33,7 @@ For more detailed information about the functions, including their syntax, usage
 | [`atan2`](https://spark.apache.org/docs/latest/api/sql/index.html#atan2) | Returns the angle between the positive x-axis plane and the points given by the coordinates |
 | [`avg`](https://spark.apache.org/docs/latest/api/sql/index.html#avg) | Returns the average value |
 | [`cbrt`](https://spark.apache.org/docs/latest/api/sql/index.html#cbrt) | Returns the cube root |
-| [`ceil`](https://spark.apache.org/docs/latest/api/sql/index.html#ceil) or [`ceiling`](https://spark.apache.org/docs/latest/api/sql/index.html#ceiling) | Returns the smallest integer not larger than the inputted value | 
+| [`ceil`](https://spark.apache.org/docs/latest/api/sql/index.html#ceil) or [`ceiling`](https://spark.apache.org/docs/latest/api/sql/index.html#ceiling) | Returns the smallest integer not larger than the inputted value |
 | [`conv`](https://spark.apache.org/docs/latest/api/sql/index.html#conv) | Convert from one base to another |
 | [`corr`](https://spark.apache.org/docs/latest/api/sql/index.html#corr) | Returns the Pearson coefficient between the numbers |
 | [`cos`](https://spark.apache.org/docs/latest/api/sql/index.html#cos) | Returns the cosine value |
@@ -51,7 +51,7 @@ For more detailed information about the functions, including their syntax, usage
 | [`least`](https://spark.apache.org/docs/latest/api/sql/index.html#least) | Returns the smallest value of all the parameters |
 | [`ln`](https://spark.apache.org/docs/latest/api/sql/index.html#ln) | Returns the natural logarithm of the value |
 | [`log`](https://spark.apache.org/docs/latest/api/sql/index.html#log) | Returns the logarithm of the value |
-| [`log10`](https://spark.apache.org/docs/latest/api/sql/index.html#log10) | Returns the logarithm, in base 10, of the value  | 
+| [`log10`](https://spark.apache.org/docs/latest/api/sql/index.html#log10) | Returns the logarithm, in base 10, of the value  |
 | [`log1p`](https://spark.apache.org/docs/latest/api/sql/index.html#log1p) | Returns the logarithm of the value plus 1 |
 | [`log2`](https://spark.apache.org/docs/latest/api/sql/index.html#log2) | Returns the logarithm, in base 2, of the value |
 | [`max`](https://spark.apache.org/docs/latest/api/sql/index.html#max) | Returns the maximum value of the expression |
@@ -62,7 +62,7 @@ For more detailed information about the functions, including their syntax, usage
 | [`percent_rank`](https://spark.apache.org/docs/latest/api/sql/index.html#percent_rank) | Returns the percentage ranking of a value |
 | [`percentile`](https://spark.apache.org/docs/latest/api/sql/index.html#percentile) | Returns the exact percentile at a given percentage |
 | [`percentile_approx`](https://spark.apache.org/docs/latest/api/sql/index.html#percentile_approx) | Returns the approximate percentile at a given percentage |
-| [`pi`](https://spark.apache.org/docs/latest/api/sql/index.html#pi) | Returns pi | 
+| [`pi`](https://spark.apache.org/docs/latest/api/sql/index.html#pi) | Returns pi |
 | [`pmod`](https://spark.apache.org/docs/latest/api/sql/index.html#pmod) | Returns the positive modulo between two values |
 | [`positive`](https://spark.apache.org/docs/latest/api/sql/index.html#positive) | Returns the positive value |
 | [`pow`](https://spark.apache.org/docs/latest/api/sql/index.html#pow), [`power`](https://spark.apache.org/docs/latest/api/sql/index.html#power) | Returns the first value to the power of the second value |
@@ -72,7 +72,7 @@ For more detailed information about the functions, including their syntax, usage
 | [`rint`](https://spark.apache.org/docs/latest/api/sql/index.html#rint) | Returns the closest double value |
 | [`round`](https://spark.apache.org/docs/latest/api/sql/index.html#round) | Returns the closest rounded value |
 | [`sign`](https://spark.apache.org/docs/latest/api/sql/index.html#sign), [`signum`](https://spark.apache.org/docs/latest/api/sql/index.html#signum) | Returns the number's sign |
-| [`sin`](https://spark.apache.org/docs/latest/api/sql/index.html#sin) | Returns sine of the value | 
+| [`sin`](https://spark.apache.org/docs/latest/api/sql/index.html#sin) | Returns sine of the value |
 | [`sinh`](https://spark.apache.org/docs/latest/api/sql/index.html#sinh) | Returns hyperbolic sine of the value |
 | [`sqrt`](https://spark.apache.org/docs/latest/api/sql/index.html#sqrt) | Returns the square root of the value |
 | [`stddev`](https://spark.apache.org/docs/latest/api/sql/index.html#stddev) | Returns the standard deviation of the value |
@@ -101,8 +101,8 @@ For more detailed information about the functions, including their syntax, usage
 | [`assert_true`](https://spark.apache.org/docs/latest/api/sql/index.html#assert_true) | Asserts if the expression is true |
 | [`if`](https://spark.apache.org/docs/latest/api/sql/index.html#if) | If the expression evaluates to true, return the second expression. Otherwise, return the third expression. |
 | [`ifnull`](https://spark.apache.org/docs/latest/api/sql/index.html#ifnull) | If the expression is null, it returns the second expression. Otherwise, it returns the first expression. |
-| [`in`](https://spark.apache.org/docs/latest/api/sql/index.html#in) | Returns true if the first expression is in any of the subsequent expressions. | 
-| [`isnan`](https://spark.apache.org/docs/latest/api/sql/index.html#isnan) | Returns true if the value is not a number | 
+| [`in`](https://spark.apache.org/docs/latest/api/sql/index.html#in) | Returns true if the first expression is in any of the subsequent expressions. |
+| [`isnan`](https://spark.apache.org/docs/latest/api/sql/index.html#isnan) | Returns true if the value is not a number |
 | [`isnotnull`](https://spark.apache.org/docs/latest/api/sql/index.html#isnotnull) | Returns true if the value is not null |
 | [`isnull`](https://spark.apache.org/docs/latest/api/sql/index.html#isnull) | Returns true if the value is null |
 | [`nanvl`](https://spark.apache.org/docs/latest/api/sql/index.html#nanvl) | Returns the first expression if not a number, returns the second expression otherwise |
@@ -127,7 +127,7 @@ For more detailed information about the functions, including their syntax, usage
 | [`from_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#from_utc_timestamp) | Returns date in UTC time |
 | [`hour`](https://spark.apache.org/docs/latest/api/sql/index.html#hour) | Returns the hour of the input |
 | [`last_day`](https://spark.apache.org/docs/latest/api/sql/index.html#last_day) | Returns the last day of the month that the date belongs to |
-| [`minute`](https://spark.apache.org/docs/latest/api/sql/index.html#minute) | Returns the minute of the input | 
+| [`minute`](https://spark.apache.org/docs/latest/api/sql/index.html#minute) | Returns the minute of the input |
 | [`month`](https://spark.apache.org/docs/latest/api/sql/index.html#month) | Returns the month of the input |
 | [`months_between`](https://spark.apache.org/docs/latest/api/sql/index.html#months_between) | Number of months between |
 | [`next_day`](https://spark.apache.org/docs/latest/api/sql/index.html#next_day) | Returns the first day later than the input |
@@ -147,9 +147,9 @@ For more detailed information about the functions, including their syntax, usage
 
 | Function | Description |
 | -------- | ----------- |
-| [`array`](https://spark.apache.org/docs/latest/api/sql/index.html#array) | Creates an array with the given elements | 
+| [`array`](https://spark.apache.org/docs/latest/api/sql/index.html#array) | Creates an array with the given elements |
 | [`array_contains`](https://spark.apache.org/docs/latest/api/sql/index.html#array_contains) | Checks if the array contains the value |
-| [`array_distinct`](https://spark.apache.org/docs/latest/api/sql/index.html#array_distinct) | Removes duplicate values from the array | 
+| [`array_distinct`](https://spark.apache.org/docs/latest/api/sql/index.html#array_distinct) | Removes duplicate values from the array |
 | [`array_except`](https://spark.apache.org/docs/latest/api/sql/index.html#array_except) | Returns an array of the elements in the first array, but not the second |
 | [`array_intersect`](https://spark.apache.org/docs/latest/api/sql/index.html#array_intersect) | Returns the intersection of the two arrays |
 | [`array_join`](https://spark.apache.org/docs/latest/api/sql/index.html#array_join) | Joins two arrays together |
@@ -237,7 +237,7 @@ For more detailed information about the functions, including their syntax, usage
 
 | Function | Description |
 | -------- | ----------- |
-| [`coalesce`](https://spark.apache.org/docs/latest/api/sql/index.html#coalesce) | Return the first non-null argument | 
+| [`coalesce`](https://spark.apache.org/docs/latest/api/sql/index.html#coalesce) | Return the first non-null argument |
 | [`collect_list`](https://spark.apache.org/docs/latest/api/sql/index.html#collect_list) | Return a list of non-unique elements |
 | [`collect_set`](https://spark.apache.org/docs/latest/api/sql/index.html#collect_set) | Return a set of unique elements |
 | [`concat`](https://spark.apache.org/docs/latest/api/sql/index.html#concat) | Concatenation |

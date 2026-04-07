@@ -1,6 +1,6 @@
 ---
 title: Pinterest destination migration to new API. Customer action required.
-description: Pinterest is deprecating the v4 advertiser API currently used by the Pinterest destination in Real-Time CDP. Understand your action items in order to seamlessly transition to the new API without disruption to your Pinterest campaigns.
+description: Pinterest is deprecating the v4 advertiser API currently used by the Pinterest destination in Real-Time CDP. Understand your action items to seamlessly transition to the new API without disruption to your Pinterest campaigns.
 hide: yes
 hidefromtoc: yes
 exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
@@ -11,21 +11,21 @@ exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
 >
 >The customer action items on this page apply to you if your organization has set up dataflows to export data to Pinterest before November 16, 2023, the date when the new **[!UICONTROL Pinterest]** destination, using the latest Pinterest API, was added to the destinations catalog.
 
-## What is happening?
+## What is happening? {#what-is-happening}
 
-Pinterest has deprecated the v4 advertiser API that was used by the [Pinterest destination](/help/destinations/catalog/advertising/pinterest.md) in Real-Time CDP. Adobe updated the destination to use the [v5 advertiser API](https://developers.pinterest.com/docs/getting-started/migration/). Read this page to understand your action items in order to seamlessly transition to the new API without disruption to your Pinterest campaigns.
+Pinterest has deprecated the v4 advertiser API that was used by the [Pinterest destination](/help/destinations/catalog/advertising/pinterest.md) in [!DNL Real-Time CDP]. Adobe updated the destination to use the [v5 advertiser API](https://developers.pinterest.com/docs/getting-started/migration/). Read this page to understand your action items to seamlessly transition to the new API without disruption to your Pinterest campaigns.
 
-## Why am I being notified?
+## Why am I being notified? {#why-notified}
 
 We have identified your organization as having active dataflows to activate audiences to Pinterest.
 
-## What is the plan?
+## What is the plan? {#what-is-the-plan}
 
 Adobe has released a new Pinterest destination card that leverages the Pinterest API v5 and will preserve your existing dataflows in the new connection.
 
-## Do I need to do anything to keep my activated audiences functioning?
+## Do I need to do anything to keep my activated audiences functioning? {#action-required}
 
-Yes, before January 18th, 2024, you need to authenticate to the new Pinterest destination with your Pinterest advertiser account in Real-Time CDP. See the detailed instructions below.
+Yes, before January 18th, 2024, you need to authenticate to the new Pinterest destination with your Pinterest advertiser account in [!DNL Real-Time CDP]. See the detailed instructions below.
 
 ### Reauthenticate to Pinterest {#reauthenticate}
 
@@ -52,9 +52,9 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 -->
 
-## Can you share some high-level timelines?
+## Can you share some high-level timelines? {#high-level-timelines}
 
-Yes, please see below:
+Yes, see below:
  
 **By November 16, 2023**: The new destination is ready, and you should see two Pinterest cards side by side in the catalog until Pinterest stops supporting the old v4 API. All your existing dataflows to the current Pinterest card are copied to the new destination.
 
@@ -81,7 +81,7 @@ Yes, please see below:
 
 -->
 
-**After January 18, 2024**: <span class="preview">Pinterest has turned off access to the V4 advertiser API. Any Real-Time CDP customers who have not upgraded to the new destination will now find their dataflows to the Pinterest destination failing. [Reauthenticate to Pinterest](#reauthenticate) and [enable the dataflows](#disable-old-enable-new-flows) to the upgraded destination to resume your campaigns to Pinterest.</span>
+**After January 18, 2024**: <span class="preview">Pinterest has turned off access to the V4 advertiser API. Any [!DNL Real-Time CDP] customers who have not upgraded to the new destination will now find their dataflows to the Pinterest destination failing. [Reauthenticate to Pinterest](#reauthenticate) and [enable the dataflows](#disable-old-enable-new-flows) to the upgraded destination to resume your campaigns to Pinterest.</span>
 
 <!--
 

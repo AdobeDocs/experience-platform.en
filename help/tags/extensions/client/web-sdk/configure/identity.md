@@ -29,7 +29,3 @@ A checkbox that allows the Web SDK to read the `AMCV` and `s_ecid` cookies and s
 ## [!UICONTROL Use third-party cookies]
 
 When this option is enabled, the Web SDK attempts to store a user identifier in a third-party cookie. If successful, the user is identified as a single user as they navigate across multiple domains, rather than being identified as a separate user on each domain. If this option is enabled, the SDK might still be unable to store the user identifier in a third-party cookie if the browser does not support third-party cookies or has been configured by the user to not allow third-party cookies. In this case, the SDK only stores the identifier in the first-party domain. The JavaScript library equivalent to this checkbox is [`thirdPartyCookiesEnabled`](/help/collection/js/commands/configure/thirdpartycookiesenabled.md).
-
->[!IMPORTANT]
->
->Third-party cookies are not compatible with the [first-party device ID](/help/collection/use-cases/identity/first-party-device-ids.md) functionality in Web SDK. You can either use first-party device IDs or you can use third-party cookies; you cannot use both features simultaneously.

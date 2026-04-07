@@ -45,6 +45,81 @@ The resources displayed in search results are ordered first by title matches, th
 
 When you have found the resource you want to explore, select its name from the list to view its structure in the canvas.
 
+## Manage schemas, classes, field groups, and data types: actions and deletion {#xdm-resource-actions}
+
+Use this section when you need to manage or delete XDM resources, or when an action (such as delete) is unavailable and you need to understand why.
+
+### Where to find actions (inline vs detail page) {#where-to-find-actions}
+
+To perform actions such as deleting, exporting, or copying a resource, use one of the following entry points:
+
+On the **[!UICONTROL Browse]**, **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, and **[!UICONTROL Data types]** tabs, management actions are available in two locations:
+
+- **Inline in the table**: Each resource row includes an actions menu (for example, **[!UICONTROL …]**) that provides direct access to available actions.
+
+![The schema inventory showing inline actions available from the ellipsis menu for each resource.](../images/ui/explore/xdm-schema-inventory-inline-actions-menu.png)
+
+- **Resource detail view**: To access full actions in the detail view, you must select a **custom (tenant-defined)** resource. Standard (Adobe-provided) resources have limited actions and do not show options such as Delete, Copy JSON structure, or Add to package. Select a custom resource from the inventory to open its detail view, then use the **[!UICONTROL More]** menu in the page header to access the same available actions.
+
+![The resource detail view header showing the More menu with available actions such as Delete, Copy JSON structure, and Download sample file.](../images/ui/explore/more-actions.png)
+
+These actions are consistent across both entry points for supported resource types (schemas, classes, field groups, and data types).
+
+### Available actions {#available-actions}
+
+Depending on the resource type and your permissions, the following actions may be available:
+
+- **[!UICONTROL Delete]** — Permanently remove a custom resource from your organization (when constraints allow). If delete is blocked, see [Constraints](#delete-constraints).
+- **[!UICONTROL Download sample file]** — Generate a sample data file based on the resource structure. Step-by-step: [Generate sample XDM data](./sample.md).
+- **[!UICONTROL Copy JSON structure]** — Copy the resource definition in JSON format for reuse, export, or inspection. Step-by-step: [Export XDM schemas](./export.md).
+- **[!UICONTROL Add to package]** — Include the resource in a sandbox package for export or import across sandboxes. Step-by-step: [Export objects into a package](../../sandboxes/ui/sandbox-tooling.md#export-objects).
+
+The following applies to different resource types:
+
+- For **custom (tenant-defined)** schemas, classes, field groups, and data types, all actions above may be available.
+- For **standard (Adobe-defined)** classes, field groups, and data types:
+  - Only **[!UICONTROL Download sample file]** is available.
+  - **Delete**, **Copy JSON structure**, and **Add to package** are not available.
+
+### Delete behavior {#delete-behavior}
+
+Use the **[!UICONTROL Delete]** action when you want to remove a custom resource that is no longer needed.
+
+>[!IMPORTANT]
+>
+> Deleting a resource permanently removes it from your organization and cannot be undone. Some resources cannot be deleted due to usage, permissions, or system constraints.
+
+To delete a resource:
+
+1. Locate the resource in the table or open its detail view.
+2. Select the actions menu (**[!UICONTROL …]** or **[!UICONTROL More]**).
+3. Select **[!UICONTROL Delete]**.
+4. Confirm the action in the dialog by selecting **[!UICONTROL Delete]** again.
+
+The resource is permanently removed from your organization after confirmation.
+
+If deletion is not available for a resource, the option appears disabled with a tooltip explaining why the action cannot be performed.
+
+![The schema inventory with a disabled delete inline action tooltip explaining the restriction.](../images/ui/explore/xdm-schema-inventory-disabled-delete-tooltip.png)
+
+### Constraints (dataset, Profile, RBAC, tenant vs global) {#delete-constraints}
+
+If an action such as **[!UICONTROL Delete]** is unavailable or disabled, it is typically due to one of the following conditions:
+
+- **Permissions (RBAC)**: You must have the required permissions (such as **[!UICONTROL Manage Schemas]**) to perform management actions. If permissions are missing, actions appear disabled with tooltips. To learn how permissions are configured, see the [access control UI overview](../../access-control/ui/overview.md).
+
+- **Dataset association**: Resources that are used by one or more datasets (such as schemas associated with datasets) cannot be deleted. To identify and remove dataset dependencies, see [Delete a dataset](../../catalog/datasets/user-guide.md#delete).
+
+- **Profile enablement**: Schemas enabled for Real-Time Customer Profile cannot be deleted. For guidance on how Profile enablement affects your schema, see [Planning for Real-Time Customer Profile enablement](../schema/profile-enablement-planning.md).
+
+- **Tenant vs global resources**: Tenant-defined (custom) resources can be deleted (subject to constraints), while standard (Adobe-provided) classes, field groups, and data types cannot be deleted.
+
+These constraints are reflected directly in the UI. When an action is unavailable, it appears disabled and includes a tooltip explaining the specific limitation.
+
+If you cannot delete a resource, review the conditions above to determine whether you need to update permissions, remove dependencies, or adjust your data model.
+
+For additional schema editing workflows in the canvas, see [Create and edit schemas in the UI](./resources/schemas.md).
+
 ## Explore an XDM resource in the canvas {#explore}
 
 Once you select a resource, its structure opens in the canvas.

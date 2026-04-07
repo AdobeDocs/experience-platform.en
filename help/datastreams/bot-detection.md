@@ -39,7 +39,7 @@ Before enabling bot detection on your datastreams, here are a few key points to 
 
 ## Prerequisites {#prerequisites}
 
-For bot detection to work on your datastream, you must add the **[!UICONTROL Bot Detection Information]** field group to your schema. See the [XDM schema](../xdm/ui/resources/schemas.md#add-field-groups) documentation to learn how to add fields groups to a schema.
+For bot detection to work on your datastream, you must add the **[!UICONTROL Bot Detection Information]** field group to your schema. See the [XDM schema](../xdm/ui/resources/schemas.md#add-field-groups) documentation to learn how to add field groups to a schema.
 
 ## Configure bot detection for datastreams {#configure}
 
@@ -59,7 +59,7 @@ The **[!UICONTROL Bot Detection Rules]** page is shown.
 
 From the Bot Detection Rules page, you can configure bot detection by using the following functionalities:
 
-* Using the [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
+* Using the [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
 * Creating your own bot detection rules.
 
 ### Use the IAB/ABC International Spiders and Bots List {#iab-list}
@@ -113,7 +113,7 @@ To create a bot detection rule, follow the steps below:
 
     >[!TIP]
     >
-    >The IP conditions are based on a logical `OR` operation. A request is marked as originating from a bot if matches any of the IP conditions which you defined.
+    >The IP conditions are based on a logical `OR` operation. A request is marked as originating from a bot if it matches any of the IP conditions that you defined.
 
 4. If you want to add header conditions to your rule, select **[!UICONTROL Add header conditions group]**, and then select the headers which you want the rule to use.
 

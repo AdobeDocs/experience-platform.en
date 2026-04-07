@@ -91,6 +91,8 @@ role: Developer
     - [Bombora Intent](connectors/data-partners/bombora.md)
     - [Demandbase Intent](connectors/data-partners/demandbase.md)
     - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
+  - Data sharing {#data-sharing}
+    - [Deltashare](connectors/data-sharing/deltashare.md)
   - eCommerce {#ecommerce}
     - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
     - [Shopify](connectors/ecommerce/shopify.md)
@@ -99,6 +101,7 @@ role: Developer
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Loyalty {#loyalty}
     - [Capillary Streaming Events](connectors/loyalty/capillary.md)
+    - [Kobie](connectors/loyalty/kobie.md)
     - [Talon.One](connectors/loyalty/talon-one.md)
   - Marketing automation {#marketing-automation}
     - [Braze Currents](connectors/marketing-automation/braze.md)
@@ -304,6 +307,8 @@ role: Developer
       - [Bombora Intent](tutorials/ui/create/data-partners/bombora.md)
       - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
       - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
+    - Data sharing {#data-sharing}
+      - [Deltashare](tutorials/ui/create/data-sharing/deltashare.md)
     - eCommerce {#ecommerce}
       - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -312,6 +317,8 @@ role: Developer
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Loyalty {#loyalty}
       - [Capillary Streaming Events](tutorials/ui/create/loyalty/capillary.md)
+      - [Kobie (Batch)](tutorials/ui/create/loyalty/kobie-batch.md)
+      - [Kobie (Streaming)](tutorials/ui/create/loyalty/kobie-streaming.md)
       - [Talon.One Streaming Events](tutorials/ui/create/loyalty/talon-one-streaming.md)
       - [Talon.One Batch Source Connector](tutorials/ui/create/loyalty/talon-one-batch.md)
     - Marketing automation {#marketing-automation}

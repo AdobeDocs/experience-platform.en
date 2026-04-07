@@ -13,7 +13,7 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 
 Read the following table for information on streaming media parameters.
 
-| Data feed | XDM field path | Data type | Description | 
+| Data feed | XDM field path | Data type | Description |
 | --- | --- | --- | --- |
 | `videoname` | `mediaReporting.sessionDetails.friendlyName` | string | The friendly (human-readable) name of the video. |
 | `videoaudioauthor` | `mediaReporting.sessionDetails.author` | string | The name of the media author. |
@@ -55,8 +55,8 @@ Read the following table for information on streaming media parameters.
 | `videoresume` | `mediaReporting.sessionDetails.hasResume` | boolean | A boolean value that marks each playback that was resumed after more than 30 minutes of buffer, pause, or a stall period. |
 | `videosegmentviews` | `mediaReporting.sessionDetails.hasSegmentView` | boolean | A boolean value that indicates that at least one frame has been viewed. This frame does not have to be the first frame. |
 | `videoaudiolabel` | `mediaReporting.sessionDetails.label` | string | The name of the record label. |
-| `videoaudiostation` | `mediaReporting.sessionDetails.station` | string | The radio station or name on which  the audio is played. | 
-| `videoaudiopublisher` | `mediaReporting.sessionDetails.publisher` | string | The name of the audio content publisher. | 
+| `videoaudiostation` | `mediaReporting.sessionDetails.station` | string | The radio station or name on which  the audio is played. |
+| `videoaudiopublisher` | `mediaReporting.sessionDetails.publisher` | string | The name of the audio content publisher. |
 | `videosecondssincelastcall` | `mediaReporting.sessionDetails.secondsSinceLastCall` | number | Indicates the amount of time (in seconds) that passed between a user's last known interaction and the moment the session was closed. |
 | `videoadload` | `mediaReporting.sessionDetails.adLoad` | string | The type of ad loaded as defined by your own internal representation. |
 
@@ -66,7 +66,7 @@ Read the following table for information on streaming media parameters.
 
 Read the following table for information on advertising parameters.
 
-| Data feed | XDM field path | Data type | Description | 
+| Data feed | XDM field path | Data type | Description |
 | --- | --- | --- | --- |
 | `videoad` | `mediaReporting.advertisingDetails.name` | string | The name of the ad. In reporting, "Ad Name" is the classification and "Ad Name (variable)" is the eVar. |
 | `videoadinpod` | `mediaReporting.advertisingDetails.podPosition` | integer  | The index of the ad inside the parent ad start. For example, the first ad has index 0 and the second ad has index 1. |
@@ -86,7 +86,7 @@ Read the following table for information on advertising parameters.
 
 Read the following table for information on chapter parameters.
 
-| Data feed | XDM field path | Data type | Description | 
+| Data feed | XDM field path | Data type | Description |
 | --- | --- | --- | --- |
 | `videochapter` | `mediaReporting.chapterDetails.ID` | string | The auto-generated ID of the chapter. |
 | `videochapterstart` | `mediaReporting.chapterDetails.isStarted` | boolean | A boolean value that indicates whether or not the chapter has been started. |
@@ -99,7 +99,7 @@ Read the following table for information on chapter parameters.
 
 Read the following table for information on player state parameters.
 
-| Data feed | XDM field path | Data type | Description | 
+| Data feed | XDM field path | Data type | Description |
 | --- | --- | --- | --- |
 | `videostatefullscreen` | `mediaReporting.states[].isSet` | boolean | A boolean value that indicates whether or not the video state is set to full screen. |
 | `videostatefullscreencount` | `mediaReporting.states[].count` | integer | The number of times that a video state was set to full screen. |
@@ -123,7 +123,7 @@ Read the following table for information on player state parameters.
 
 Read the following table for information on quality parameters.
 
-| Data feed | XDM field path | Data type | Description | 
+| Data feed | XDM field path | Data type | Description |
 | --- | --- | --- | --- |
 | `videoqoebitrateaverage` | `mediaReporting.qoeDataDetails.bitrateAverage` | number | The average bitrate (in kbps, integer). This metric is computed as a weighted average of all bitrate values related to the play duration that occurred during a playback session. |
 | `videoqoebitratechange` | `mediaReporting.qoeDataDetails.hasBitrateChangeImpactedStreams` | boolean | A boolean value that indicates the number of streams in which bitrate changes occurred. This metric is set to true only if at least one bitrate change event occurred during a playback session. |
@@ -221,7 +221,7 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 | `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Object | Custom Analytics props, configured to be list props. It contains a delimited list of values. `{}` |
 | `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Object | Used by hierarchy variables. It contains a delimited list of values. `{values (array), delimiter (string)}` |
 | `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | Custom Analytics list variables. Contains a delimited list of values.  `{value (string), key (string)}` |
-| `m_color` | `device.colorDepth` | integer | The color depth ID, which is based off the value of the c_color column. | 
+| `m_color` | `device.colorDepth` | integer | The color depth ID, which is based off the value of the c_color column. |
 | `m_cookies` | `environment.browserDetails.cookiesEnabled` | boolean | A variable used in the Cookie Support dimension. |
 | `m_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Object | Standard commerce events triggered on the hit. `{id (string), value (number)}` |
 | `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Custom events triggered on the hit. `{id (Object), value (Object)}` |
@@ -294,7 +294,7 @@ To learn more about performing these transformations using Query Service, see [A
 | Data feed | XDM field | XDM type | Description |
 | --- | --- | --- | --- ||
 | `post_evar1`<br/>`[...]`<br/>`post_evar250` | `_experience.analytics.customDimensions.`<br/>`eVars.eVar1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`eVars.eVar250` | string | Custom Analytics eVars. Each organization can use eVars differently. |
-| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | string | Custom Analytics props. Each organization can use props differently. | 
+| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | string | Custom Analytics props. Each organization can use props differently. |
 | `post_browser_height` | `environment.browserDetails.viewportHeight` | integer | The height of the browser, in pixels. |
 | `post_browser_width` | `environment.browserDetails.viewportWidth` | integer | The width of the browser, in pixels. |
 | `post_campaign` | `marketing.trackingCode` | string | The variable used in the Tracking Code dimension. |
@@ -332,7 +332,7 @@ To learn more about performing these transformations using Query Service, see [A
 | `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Custom events triggered on the hit.| {id (Object), value (Object)} |
 | `post_java_enabled` | `environment.browserDetails.javaEnabled` | boolean | A flag indicating whether Java&trade; is enabled. |
 | `post_latitude` | `placeContext.geo._schema.latitude` | number |   |
-| `post_longitude` | `placeContext.geo._schema.longitude` | number |   | 
+| `post_longitude` | `placeContext.geo._schema.longitude` | number |   |
 | `post_page_event` | `web.webInteraction.type` | string | The type of hit that is sent in the image request (standard hit, download link, exit link, or custom link clicked). |
 | `post_page_event` | `web.webInteraction.linkClicks.value` | number | Equals 1 if the hit is a link click. This is similar to the Page Events metric in Adobe Analytics. |
 | `post_page_event_var1` | `web.webInteraction.URL` | string | This variable is only used in link tracking image requests. It is the URL of the download link, exit link, or custom link clicked. |

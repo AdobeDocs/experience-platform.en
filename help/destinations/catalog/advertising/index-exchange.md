@@ -10,9 +10,9 @@ exl-id: 6d2a8553-5e8c-4eeb-ac25-5e4c2bdc5758
 
 [!DNL Index] is a global advertising supply-side platform that helps media owners maximize the value of their content across every screen. With over 20 years of industry leadership, [!DNL Index] connects the world's largest brands with premium experience makers to deliver high-quality consumer experiences.
 
-Use this destination connector to export audience segments from Adobe Experience Platform directly to [!DNL Index Exchange]'s programmatic advertising platform.
+Use this destination connector to export audience segments from [!DNL Adobe Experience Platform] directly to [!DNL Index Exchange]'s programmatic advertising platform.
 
-Once exported, these audience segments can be used to target deals by media owners, marketplace partners, or shared with publishers and curators by marketplace vendors.
+Once exported, these audience segments target deals by media owners, marketplace partners, or shared with publishers and curators by marketplace vendors.
 
 >[!IMPORTANT]
 >
@@ -38,7 +38,9 @@ Audience segments must be registered with [!DNL Index] using an additional proce
 
 [!DNL Index] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-Note that [!DNL Index Exchange] destinations support only one identity type per upload. You must specify the appropriate identifier type when configuring the destination details (see the ["Fill in destination details"](#destination-details) section below).
+>[!NOTE]
+>
+>[!DNL Index Exchange] destinations support only one identity type per upload. You must specify the appropriate identifier type when configuring the destination details (see the ["Fill in destination details"](#destination-details) section below).
 
 To upload multiple identity types, create separate instances of the [!DNL Index Exchange] destination for each identity type.
 
@@ -55,10 +57,10 @@ To upload multiple identity types, create separate instances of the [!DNL Index 
 
 This section explains which audience types you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 | --------- | ---------- | ---------- |
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -71,7 +73,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -81,7 +83,7 @@ Supported audiences by audience data type:
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
-| --------- | ---------- | --------- | 
+| --------- | ---------- | --------- |
 | Export type | **[!UICONTROL Segment export]** | Exports all members of a segment (audience) with the identifiers (IDFA, GAID, or others) used in the [!DNL Index Exchange] destination. |
 | Export frequency | **[!UICONTROL Batch]** | Exports files to downstream platforms at intervals of 3, 6, 8, 12, or 24 hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based). |
 
@@ -90,7 +92,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -106,11 +108,11 @@ To configure details for the destination, fill in the fields below. An asterisk 
 * [!UICONTROL Identifier Type]: Select the Index–provided identifier type that matches the identifier you are sending to [!DNL Index]. See the table of supported identifier types below. If you are unsure which identifier type to use, contact your [!DNL Index] Representative. To send multiple identifier types, create separate instances of this destination.
 * [!UICONTROL Account ID]: Enter your [!DNL Index] account ID. This is not the same as your publisher ID. If you are unsure about which ID to use, contact your [!DNL Index] Representative.
 
-#### Supported Identifier Types
+#### Supported Identifier Types {#supported-identifier-types}
 
-| Identifier Type | Description | 
+| Identifier Type | Description |
 |------------------ | ------------- |
-| [!DNL appbundle] | Mobile App Bundle | 
+| [!DNL appbundle] | Mobile App Bundle |
 | [!DNL contentid] | Content ID |
 | [!DNL deviceid] | Device ID (eg. IDFA, GAID, WAID, etc) |
 | [!DNL ip] | IP Address |
@@ -125,10 +127,10 @@ To configure details for the destination, fill in the fields below. An asterisk 
 You can enable alerts to receive notifications about the status of your dataflow to this destination. Select one or more alerts from the list to subscribe to status notifications for your dataflow. For more information, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
