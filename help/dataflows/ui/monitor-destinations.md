@@ -206,7 +206,7 @@ You can also select to view rich information about a certain dataflow and its da
 
 >[!NOTE]
 >
->Destinations monitoring functionality is currently supported for all destinations in Experience Platform *except* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
+>Destinations monitoring functionality is currently supported for all destinations in Experience Platform *except* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destination.
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"

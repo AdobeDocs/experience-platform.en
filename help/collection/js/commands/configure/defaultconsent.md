@@ -14,7 +14,7 @@ Set the `defaultConsent` string property to the desired consent level when runni
 
 >[!IMPORTANT]
 >
->The `defaultConsent` value does not persist between page loads. Make sure that you set the desired default consent every time that you call the `configure` command.
+>The `defaultConsent` value does not persist between page loads. Make sure that you set the desired default consent every time that you call the `configure` command. In contrast, a visitor's resolved consent (set through [`setConsent`](../setconsent.md)) is persisted in a cookie and applied automatically on subsequent page loads.
 
 ```js
 alloy("configure", {
@@ -34,32 +34,7 @@ alloy("configure", {
 
 ## Using `defaultConsent` together with `setConsent` {#using-consent}
 
-The Web SDK offers two complementary consent options:
-
-* `defaultConsent` (this page): Determines the default consent preferences.
-* [`setConsent`](../setconsent.md): Capture the consent preferences of visitors.
-
-When used together, these settings can lead to different data collection and cookie setting results, depending on their configured values.
-
-See the table below to understand when data collection occurs and when cookies are set, based on consent settings.
-
-| `defaultConsent` | `setConsent` | Data collection occurs | Web SDK sets browser cookies |
-|---------|----------|---------|---------|
-| `in` | `in` | Yes |  Yes |
-| `in` | `out` | No | Yes |
-| `in` | Not set | Yes | Yes |
-| `pending` | `in` | Yes | Yes |
-| `pending` | `out` | No | Yes |
-| `pending` | Not set | No | No |
-| `out` | `in` | Yes | Yes |
-| `out` | `out` | No | Yes |
-| `out` | Not set | No | No |
-
-See [Adobe Experience Platform Web SDK cookies](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) for a list of cookies that the library sets.
-
->[!NOTE]
->
->Identity and consent cookies are set even if a visitor opts out of tracking. These cookies are necessary to honor their data collection preferences.
+When used together, `defaultConsent` and `setConsent` produce different data collection, cookie setting, and identity results depending on their configured values. See [Consent and identity in Data Collection](/help/collection/identity/consent.md#how-consent-affects-identity) for a complete interaction table.
 
 ## Setting default consent based on `gdprApplies`
 

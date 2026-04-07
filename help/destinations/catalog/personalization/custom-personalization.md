@@ -1,81 +1,84 @@
 ---
 keywords: custom personalization; destination; experience platform custom destination;
-title: Custom personalization connection
-description: This destination provides external personalization, content management systems, ad servers, and other applications that are running on your site a way to retrieve audience information from Adobe Experience Platform. This destination provides real-time personalization based on user profile audience membership.
+title: Custom Personalization Connection
+description: Learn how to set up the Custom Personalization destination to retrieve audience data from Adobe Experience Platform for real-time on-site personalization.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 ---
 
-# Custom personalization connection {#custom-personalization-connection} 
+# Custom Personalization Connection {#custom-personalization-connection}
 
 ## Destination changelog {#changelog}
 
-|Release month|Update type|Description|
-|---|---|---|
-|May 2023|Functionality and documentation update| As of May 2023, the **[!UICONTROL Custom personalization]** connection supports [attribute-based personalization](../../ui/activate-edge-personalization-destinations.md#map-attributes) and is generally available to all customers.|
+Use this changelog to track updates to the Custom Personalization destination.
+
+| Release month | Update type | Description |
+| --- | --- | --- |
+| May 2023 | Functionality and documentation update | As of May 2023, the **[!UICONTROL Custom personalization]** connection supports [attribute-based personalization](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) and is generally available to all customers. |
 
 {style="table-layout:auto"}
 
 >[!IMPORTANT]
 >
->Profile attributes may contain sensitive data. To protect this data,  you must use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) when configuring the **[!UICONTROL Custom Personalization]** destination for attribute-based personalization. All the Edge Network API calls must be made in an [authenticated context](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication).
+>Profile attributes may contain sensitive data. To protect this data, use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) when configuring the **[!UICONTROL Custom Personalization]** destination for attribute-based personalization. All Edge Network API calls must be made in an [authenticated context](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication).
 >
-><br>You can retrieve profile attributes via the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) by adding a server-side integration that utilizes the same datastream that you are already using for your Web or Mobile SDK implementation.
+>Retrieve profile attributes via the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) by adding a server-side integration that uses the same datastream you are already using for your Web or Mobile SDK implementation.
 >
-><br>If you do not follow the requirements above, personalization will be based on audience membership only.
+>If you do not follow the requirements above, personalization is based on audience membership only.
 
 ## Overview {#overview}
 
-Set up this destination to allow external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites to retrieve audience information from [!DNL Adobe Experience Platform].
+Set up this destination to allow external personalization platforms, content management systems, ad servers, and other applications running on customer websites to retrieve audience information from [!DNL Adobe Experience Platform].
 
 ## Prerequisites {#prerequisites}
 
-This destination requires the use of one of the following data collection methods, depending on your implementation:
+This destination requires one of the following data collection methods, depending on your implementation:
 
-* Use the [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) if you want to collect data from your website.
-* Use the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) if you want to collect data from your mobile application.
+* Use the [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) to collect data from your website.
+* Use the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) to collect data from your mobile application.
 * Use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) if you are not using the Web SDK or Mobile SDK, or if you want to personalize the user experience based on profile attributes.
 
 >[!IMPORTANT]
 >
->**Attribute-based personalization requirements:** If you want to personalize based on profile attributes (not just audience membership), you **must** use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) with authenticated server-side integration, regardless of whether you are also using Web SDK or Mobile SDK for data collection.
+>**Attribute-based personalization requirements:** To personalize based on profile attributes (not just audience membership), you **must** use the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) with authenticated server-side integration, regardless of whether you are also using Web SDK or Mobile SDK for data collection.
 >
->Web SDK and Mobile SDK alone only support personalization based on audience membership. The Edge Network API is **required** to securely retrieve profile attributes for personalization.
+>Web SDK and Mobile SDK alone support personalization based on audience membership only. The Edge Network API is **required** to securely retrieve profile attributes for personalization.
 
 >[!IMPORTANT]
 >
->Before creating a custom personalization connection, read the guide on how to [activate audience data to edge personalization destinations](../../ui/activate-edge-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components.
+>Before creating a Custom Personalization connection, read the guide on how to [activate audience data to edge personalization destinations](/help/destinations/ui/activate-edge-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components.
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which types of audiences you can export to this destination.
+The following table lists the audience types you can export to this destination.
 
 | Audience origin | Supported | Description |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](/help/segmentation/home.md). |
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li>custom upload audiences [imported](/help/segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li>look-alike audiences,</li><li>federated audiences,</li><li>audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer],</li><li>and more.</li></ul> |
 
 {style="table-layout:auto"}
-
-
 
 Supported audiences by audience data type:
 
 | Audience data type | Supported | Description | Use cases |
 |--------------------|-----------|-------------|-----------|
-| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Target specific groups of people based on customer profiles. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
 | [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
-
 ## Export type and frequency {#export-type-frequency}
 
+The following table describes the export type and frequency for this destination.
+
 | Item | Type | Notes |
-|---------|----------|---------|
-| Export type | **[!DNL Profile request]** | You are requesting all the audiences that are mapped in the custom personalization destination for a single profile. Different custom personalization destinations can be set up for different [Adobe Data Collection datastreams](../../../datastreams/overview.md).|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| --- | --- | --- |
+| Export type | **[!UICONTROL Profile request]** | Requests all audiences mapped in the Custom Personalization destination for a single profile. Different Custom Personalization destinations can be set up for different [Adobe Data Collection datastreams](/help/datastreams/overview.md). |
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are always-on API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style="table-layout:auto"}
 
 ## Connect to the destination {#connect}
 
@@ -89,20 +92,20 @@ Supported audiences by audience data type:
 >
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
+To connect to this destination, follow the steps described in the [destination configuration tutorial](/help/destinations/ui/connect-destination.md).
 
 ### Connection parameters {#parameters}
 
-While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
+While [setting up](/help/destinations/ui/connect-destination.md) this destination, you must provide the following information:
 
-*  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
-*  **[!UICONTROL Description]**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
-*  **[!UICONTROL Integration alias]**: This value is sent to the Experience Platform Web SDK as a JSON object name. 
-*  **[!UICONTROL Datastream]**: This determines in which Data Collection datastream the audiences will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../datastreams/overview.md) for more details.
+* **[!UICONTROL Name]**: Fill in the preferred name for this destination.
+* **[!UICONTROL Description]**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
+* **[!UICONTROL Integration alias]**: A required string that identifies this destination in the personalization response. The alias value is returned to your website or app together with the audiences (and, if configured, attributes) associated with this destination. Use the alias in your client-side or server-side code to locate and process the correct personalization object when multiple personalization destinations are active on the same datastream. The alias must be unique within a sandbox across all Custom Personalization destinations.
+* **[!UICONTROL Datastream]**: This determines in which Data Collection datastream the audiences will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](/help/datastreams/overview.md) for more details.
 
 ### Enable alerts {#enable-alerts}
 
-You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+Enable alerts to receive notifications on the status of your dataflow to this destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](/help/destinations/ui/alerts.md).
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
@@ -112,11 +115,11 @@ When you are finished providing details for your destination connection, select 
 >
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [Activate profiles and audiences edge personalization destinations](../../ui/activate-edge-personalization-destinations.md) for instructions on activating audiences to this destination.
+Read [Activate profiles and audiences to edge personalization destinations](/help/destinations/ui/activate-edge-personalization-destinations.md) for instructions on activating audiences to this destination.
 
 ## Exported data {#exported-data}
 
-If you are using [Tags in Adobe Experience Platform](/help/tags/home.md) to deploy the Experience Platform Web SDK, use the [send event complete](/help/tags/extensions/client/web-sdk/event-types.md) functionality and your custom code action will have an `event.destinations` variable that you can use to see the exported data.
+If you are using [Tags in Adobe Experience Platform](/help/tags/home.md) to deploy the Experience Platform Web SDK, use the [send event complete](/help/tags/extensions/client/web-sdk/event-types.md) functionality. Your custom code action will have an `event.destinations` variable that you can use to see the exported data.
 
 Here is a sample value for the `event.destinations` variable:
 
@@ -140,7 +143,7 @@ Here is a sample value for the `event.destinations` variable:
 
 If you are not using [Tags](/help/tags/home.md) to deploy the Experience Platform Web SDK, use [command responses](/help/collection/js/commands/command-responses.md) to see the exported data.
 
-The JSON response from [!DNL Adobe Experience Platform] can be parsed to find the corresponding integration alias of the application you are integrating with [!DNL Adobe Experience Platform]. The audience IDs can be passed into the application's code as targeting parameters. Below is a sample of what this would look like specific to the destination response.
+Parse the JSON response from [!DNL Adobe Experience Platform] to find the integration alias of the application you are integrating with [!DNL Adobe Experience Platform]. Pass the audience IDs into the application's code as targeting parameters. Below is a sample of what this looks like specific to the destination response.
 
 ```js
 alloy("sendEvent", {
@@ -157,7 +160,7 @@ alloy("sendEvent", {
   }
 }).then(function(result) {
     if(result.destinations) { // Looking to see if the destination results are there
- 
+
         // Get the destination with a particular alias
         var personalizationDestinations = result.destinations.filter(x => x.alias == "personalizationAlias")
         if(personalizationDestinations.length > 0) {
@@ -174,7 +177,7 @@ alloy("sendEvent", {
   });
 ```
 
-### Example response for [!UICONTROL Custom Personalization With Attributes] {#example-response-custom-personalization-with-attributes}
+### Example response for Custom Personalization With Attributes {#example-response-attributes}
 
 When using **[!UICONTROL Custom Personalization With Attributes]**, the API response will look similar to the example below.
 
@@ -193,7 +196,7 @@ The difference between **[!UICONTROL Custom Personalization With Attributes]** a
              "membershipStatus": {
                    "value" : "PREMIUM"
               }
-         },         
+         },
         "segments": [
             {
                 "id": "399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
@@ -208,4 +211,4 @@ The difference between **[!UICONTROL Custom Personalization With Attributes]** a
 
 ## Data usage and governance {#data-usage-governance}
 
-All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](../../../data-governance/home.md).
+All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).

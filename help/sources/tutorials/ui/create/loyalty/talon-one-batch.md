@@ -2,8 +2,7 @@
 title: Ingest Batch Data From Talon.One Into Experience Platform Using The UI
 description: Learn how to ingest batch data from Talon.One into Adobe Experience Platform using the UI. This guide covers setup, data selection, and dataflow configuration.
 badge: Beta
-hide: true
-hidefromtoc: true
+last-substantial-update: 2026-04-06
 exl-id: 65a8ae42-0c0f-4bc5-b99e-52b02ab2130a
 ---
 # Ingest batch data from [!DNL Talon.One] into Experience Platform using the UI

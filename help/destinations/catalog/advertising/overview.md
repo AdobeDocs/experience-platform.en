@@ -25,6 +25,7 @@ To understand the difference between connections and extensions, see [Connection
 * [Adobe Advertising DSP connection](adobe-advertising-dsp-connection.md)
 * [Legacy Adobe Advertising Cloud DSP connection](adobe-advertising-cloud-dsp-connection-legacy.md)
 * [Amazon Ads connection](amazon-ads.md)
+* [Amazon Ads v2 connection](amazon-ads-v2.md)
 * [Bombora connection](bombora.md)
 * [Criteo connection](criteo.md)
 * [Demandbase connection](demandbase.md)

@@ -70,7 +70,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **Fixes and improvements**
 
 - Fixed an error in the [Media Analytics tracker](commands/getmediaanalyticstracker.md) where the `length` property of the media object incorrectly accepted invalid data types.
-- Improved [identity management](../use-cases/identity/id-overview.md) error handling to properly process promise rejections when identity lookup fails.
+- Improved [identity management](../identity/overview.md) error handling to properly process promise rejections when identity lookup fails.
 - Resolved an issue where personalization content with HTML content items failed to render with an error relating to a missing `renderStatusHandler`.
 - Fixed activity map [URL collection](commands/configure/clickcollectionenabled.md) to properly handle non-HTTP URLs.
 
@@ -141,7 +141,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-- Added support for requesting the [CORE ID](/help/collection/use-cases/identity/id-overview.md) in the [getIdentity](commands/getidentity.md) command.
+- Added support for requesting the [CORE ID](/help/collection/identity/overview.md#core-id-and-third-party-identity) in the [getIdentity](commands/getidentity.md) command.
 
 **Fixes and improvements**
 
@@ -290,7 +290,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-- You can now deliver personalized experiences more accurately, by sharing visitor IDs between mobile apps and mobile web content, and across domains. See the [dedicated documentation](../use-cases/identity/id-sharing.md) to learn more.
+- You can now deliver personalized experiences more accurately, by sharing visitor IDs between mobile apps and mobile web content, and across domains. See [Identity in Data Collection](../identity/overview.md) to learn more.
 - You can now render or execute an array of propositions from [!DNL Adobe Target] into single-page applications, without incrementing the analytics metrics. This reduces reporting errors and increases analytics accuracy.
 - Added additional information to the `getLibraryInfo` command including available commands and the final configuration for the instance.
 
