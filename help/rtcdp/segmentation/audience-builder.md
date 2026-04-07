@@ -48,13 +48,13 @@ The [!UICONTROL Attributes] tab lets you browse Account attributes belonging to 
 
 ![The Attributes tab is displayed in the Audience Builder](../assets/segmentation/audience-builder/attributes.png)
 
->[!NOTE]
+>[!AVAILABILITY]
 >
->Summary data is in **Limited availability**. 
+>Summary data is in **Limited availability**, and for use in both B2B Edition and B2P Edition.
 
 When selecting an attribute, you can see summary data by selecting the [information icon](../../images/icons/info.png). The summary data includes information such as top values, an explanation of what the field is, the record count of the values, as well as the percentage of accounts that contain values for this attribute.
 
-The **[!UICONTROL Populated]** section shows the number of records where the attribute is populated compared to the total number of available records as well as the percentage of accounts that have a value for this field.
+The **[!UICONTROL Populated]** section shows the percentage of accounts that have a value for this field.
 
 The **[!UICONTROL Top values]** section displays the most frequently occurring values for the attribute, and includes details such as the value, the number of records that have the value, as well as the percentage of total records the value represents. The number of records for each field is determined by the profile snapshot, which provides a consolidated view of the records after all the contributing dataset data has been merged.
 
@@ -68,11 +68,17 @@ If an attribute is populated by less than 25% of accounts, the ![data notice ico
 
 ![A popover that displays a version of the summary data for an attribute when it's populated by less than 25% of accounts.](../assets/segmentation/audience-builder/empty-summary-data.png){width="300"}
 
+When you add an attribute with summary data, you can also see the summary data in the rule building canvas.
+
+![The attribute with the summary data is displayed.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary.png)
+
+You can either use the dropdown to select from the top values or enter your value, which can automatically resolve to one of the top values.
+
+![The dropdown where you can add the attribute's value is highlighted.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary-dialog.png)
+
 >[!NOTE]
 >
->Summary data is only available if the attribute belongs to the Account, Person, or Opportunity schema. Additionally, the top values are only displayed if the field does **not** contain too many different values and if those field's values are commonly repeated.
->
->This summary data is updated on a **daily** basis.
+>The summary data is updated on a **daily** basis. Additionally, summary data is **not** supported for attributes whose values are either arrays or key/value pairs.
 
 Additionally, the attribute has an **[!UICONTROL Ingestion Type]**. The ingestion type lets you know the origin of the data, and can be one of the following values: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]**, or **[!UICONTROL No Data Ingested]**. 
 
