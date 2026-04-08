@@ -470,5 +470,3 @@ Any **new or edited** segment definitions that qualify for streaming or edge seg
 If there is no active merge policy set, you'll need to [configure your merge policy](../../profile/merge-policies/ui-guide.md#configure) and set it to be active on edge.
 
 +++
-
->[!ENDSHADEBOX]
