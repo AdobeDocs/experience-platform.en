@@ -420,9 +420,12 @@ The list of available time constraints are as follows:
 
 >[!TIP]
 >
->The difference between the "Today" time constraint and "Now" time constraint is subtle, but significant. If you're comparing to "Today", that means you're checking to see if the attribute or event being compared is happening at **midnight** of today. If you're comparing to "Now", that means you're checking to see if the attribute or event being compared is happening **right now**.
+>The difference between the "Today" time constraint and "Now" time constraint is subtle, but significant. 
 >
->However, there's one major exception - if you're using "Today" as a top-level time constraint, that means you're checking to see if the attribute or event occurred at **any** point today.
+>- Use the "Today" time constraint to check if the attribute or event being compared is happening at **midnight** of the current day. 
+>- Use the "Now" time constraint to check if the attribute or event being compared is happening **right now**.
+>
+>However, there's one major exception - if you're using "Today" as a top-level time constraint, that means you're checking if the attribute or event occurred at **any** point today.
 
 +++
 
