@@ -32,7 +32,7 @@ role: User
     - [Audience Composition](ui/audience-composition.md)
     - [Audience Composition enhancements](ui/composition-enhancements.md)
     - [Segment Builder](ui/segment-builder.md)
-    - [Segment Builder (B2B Edition)](../rtcdp/segmentation/audience-builder.md)
+    - [Segment Builder (B2B Edition)](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/segmentation/audience-builder)
     - [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
     - [Ignore year time constraint update](ui/ignore-year.md)
     - [Time constraints refactoring](ui/segment-refactoring.md)
