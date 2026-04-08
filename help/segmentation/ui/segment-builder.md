@@ -402,6 +402,7 @@ The list of available time constraints are as follows:
 | Time constraint | Description | Can enable ignore year | Example |
 | --------------- | ----------- | ------------------- | ------- |
 | Today | The attribute or event being compared **must** occur today. | Yes | ![An example of the "Today" time constraint being used.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Now | The attribute or event being compared **must** occur right now. | No | |
 | Yesterday | The attribute or event being compared **must** occur yesterday. | Yes | ![An example of the "Yesterday" time constraint being used.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | This month | The attribute or event being compared **must** occur this calendar month. | Yes | ![An example of the "This month" time constraint being used.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | This year | The attribute or event being compared **must** occur this calendar year. | No | ![An example of the "This year" time constraint being used.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -416,6 +417,14 @@ The list of available time constraints are as follows:
 | In next | The attribute or event being compared must occur within the next period of time selected. The selected periods of time include minutes, hours, days, weeks, months, and years. | No | ![An example of the "In next" time constraint being used.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
 | Exists | The attribute exists. | No | ![An example of the "Exists" time constraint being used.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
 | Does not exist | The attribute does not exist. | No | ![An example of the "Does not exist" time constraint being used.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+
+>[!TIP]
+>
+>The difference between the "Today" time constraint and "Now" time constraint is subtle, but significant. If you're comparing to "Today", that means you're checking to see if the attribute or event being compared is happening at **midnight** of today. If you're comparing to "Now", that means you're checking to see if the attribute or event being compared is happening **right now**.
+>
+>However, there are a couple of exceptions - if you're using "Today" with "Occurs", that means you're checking to see if the attribute or event occurred at **any** point today. If you're using "Now" with "Occurs", that means you're checking to see if the attribute or event occurred **right now**.
+>
+>Similarly, if you're using "Today" with "Occurs after", where today is "June 3rd", that means you're checking to see if the attribute or event occurred on or after midnight on June 4th. If you're using "Now" with "Occurs after", where now is "June 3rd at 10AM", that means you're checking to see if the attribute or event occurred on or after June 3rd at 10AM. 
 
 +++
 
