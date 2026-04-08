@@ -46,7 +46,7 @@ The following table contains example values as well as additional information on
 | `IMS_ORG` | A corporate entity that can own or license products and services and allow access to its members. See the tutorial on [setting up developer console and [!DNL Postman]](../../../../landing/postman.md) for instructions on how to retrieve your `{ORG_ID}` information. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | The name of the virtual sandbox partition that you are using. | `prod` |
 | `TENANT_ID` | An ID used to ensure that the resources you create are namespaced properly and are contained within your organization. | `b2bcdpproductiontest` |
-| `PLATFORM_URL` | The URL endpoint that you are making API calls to. This value is fixed and is always set to: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
+| `PLATFORM_URL` | The URL endpoint that you are making API calls to. This value is fixed and is always set to: `platform.adobe.io/`. | `platform.adobe.io/` |
 
 {style="table-layout:auto"}
 
