@@ -68,7 +68,7 @@ The **[!UICONTROL Attributes]** tab allows you to browse [!DNL Profile] attribut
 
 The attributes you add can be one of the following data types:
 
-| Data type | Common use cases | 
+| Data type | Common use cases |
 | --------- | ---------------- |
 | String | Names, email addresses, product categories |
 | Numeric | Age, revenue, product quantities, loyalty scores |
@@ -138,7 +138,7 @@ You can use the following operators for the respective data types:
 | This month | The value occurred this calendar month. | Birth month **is** This month |
 | This year | The value occurred this calendar year. | Sign up date **is** This year |
 | Custom date | The value occurred on the given date. | Purchase date **is on** Custom date |
-| In last | The value occurred within the last period of time chosen. Birthday **is** In last month |
+| In last | The value occurred within the last period of time chosen. Birthday **is** In last month | |
 | From (to) | The value occurred within the two calendar dates chosen. This period of time is **inclusive** of both dates. | Account creation date **is** From April 20th to July 13th |
 | During | The value occurred within the selected month or year. | Sale **is** During March |
 | Within (+/-) | The value occurred within days, weeks, months, or years of the selected date. This period of time is **inclusive** of both dates. | Cart abandon is **Within** 3 days |
@@ -208,7 +208,7 @@ For example, consider a situation where you had two report suites with the follo
 | Field | Report Suite Schema A | Report Suite Schema B |
 | ----- | --------------------- | --------------------- |
 | eVar1 | Referring Domain | Logged in Y/N |
-| eVar2 | Page Name | Member Loyalty ID | 
+| eVar2 | Page Name | Member Loyalty ID |
 | eVar3 | URL | Page Name |
 | eVar4 | Search Terms | Product Name |
 | event1 | Clicks | Page Views |
@@ -452,7 +452,7 @@ The list of available time constraints for this operation differs from the main 
 | Time constraint | Description |
 | --------------- | ----------- |
 | After | The latter event **must at least** take place after the prior event. |
-| Within | The two events **must** take place during the time period listed within the time constraint. | 
+| Within | The two events **must** take place during the time period listed within the time constraint. |
 
 >[!NOTE]
 >

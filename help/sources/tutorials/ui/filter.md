@@ -38,10 +38,10 @@ You can filter your sources dataflows by the following parameters:
 | Filter | Description |
 | --- | --- |
 | [Source platform](#filter-dataflows-by-source-platform) | Filter your dataflows based on the source that they were created with. |
-| [Tags](#filter-dataflows-by-tags) | Filter your dataflows based on the tags applied to them. | 
+| [Tags](#filter-dataflows-by-tags) | Filter your dataflows based on the tags applied to them. |
 | [Status](#filter-dataflows-by-status) | Filter your dataflows based on their current status. |
 | [Target dataset](#filter-dataflows-by-target-dataset) | Filter your dataflows based on the target dataset they were created with. |
-| [Account name](#filter-dataflows-by-account-name) | Filter your dataflows based on the name of the account that they correspond with. | 
+| [Account name](#filter-dataflows-by-account-name) | Filter your dataflows based on the name of the account that they correspond with. |
 | [Created by](#filter-dataflows-by-user) | Filter your dataflows based on who created them. |
 | [Creation date](#filter-dataflows-by-creation-date) | Filter your dataflows based on the date they were created. |
 | [Modified date](#filter-dataflows-by-modification-date) | Filter your dataflows based on the date they were last updated. |
@@ -68,7 +68,7 @@ You can filter by status using the [!UICONTROL Status] panel.
 
 | Status | Description |
 | --- | --- |
-| Enabled | Select **[!UICONTROL Enabled]** to filter your view and display only active dataflows. | 
+| Enabled | Select **[!UICONTROL Enabled]** to filter your view and display only active dataflows. |
 | Disabled | Select **[!UICONTROL Disabled]** to filter your view and display only deactivated dataflows. |
 | Draft | Select **[!UICONTROL Draft]** to filter your view and display only dataflows that are in draft mode. |
 
