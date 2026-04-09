@@ -167,6 +167,10 @@ In the dialog, enter a namespace and identity value that belong to the graph you
 
 When the load succeeds, [!DNL Graph Simulation] shows the graph that contains that identity.
 
+>[!TIP]
+>
+>You can use the **load existing graphs** capability to view simulations based on settings that you configure in [Identity Settings](./identity-settings-ui.md).
+
 ![Graph Simulation populated from an existing graph: activities, algorithm settings, and the simulated graph view reflect the loaded identity graph.](../images/graph-simulation/existing-graph-loaded.png)
 
 ## Next steps
