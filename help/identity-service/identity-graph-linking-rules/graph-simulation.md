@@ -169,7 +169,7 @@ When the load succeeds, [!DNL Graph Simulation] shows the graph that contains th
 
 >[!TIP]
 >
->You can use the **load existing graphs** capability to view simulations based on settings that you configure in [Identity Settings](./identity-settings-ui.md).
+>After you configure your settings on the first [Identity Settings](./identity-settings-ui.md) screen, you can use the **load existing graphs** option to simulate your graph based on those exact settings. The simulation will use the configuration you defined.
 
 ![Graph Simulation populated from an existing graph: activities, algorithm settings, and the simulated graph view reflect the loaded identity graph.](../images/graph-simulation/existing-graph-loaded.png)
 
