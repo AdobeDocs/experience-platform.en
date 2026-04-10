@@ -34,7 +34,7 @@ For more information on creating your relational schema, read the [create a sche
 
 ### Create a dataset
 
-Once you created your schema, you'll need to create a dataset for the schema's data to go to. 
+Once you created your schema, you'll need to create a dataset that uses the schema to house your custom objects data.
 
 IMAGE
 
@@ -62,9 +62,13 @@ The
 
 With your schema fully created, you can start ingesting data from your source into the dataset. 
 
-To get data from your source to Experience Platform, you'll need to create a dataflow to ingest batch data from your source into the dataset.
+To get data from your source to Experience Platform, you'll need to create a dataflow to ingest batch data from your source into the dataset. The following cloud storage source providers are supported: Amazon S3, SFTP, and Data Landing Zone.
 
-For more information on creating a dataflow, read the [configure a dataflow to ingest batch data from a cloud storage source guide](/help/sources/tutorials/ui/dataflow/batch/cloud-storage.md).
+Your data within your cloud storage source must conform to the following specifications:
+
+- The file type is either delimited (such as a CSV or TSV) or JSON
+- The file contains one row per primary key in the file
+- The file's column names match the schema's field names
 
 >[!NOTE]
 >
@@ -73,6 +77,9 @@ For more information on creating a dataflow, read the [configure a dataflow to i
 >- You **must** enable **[!UICONTROL Enable change data capture]**. 
 >- You **must** select the dataset you previously created.
 >- You do **not** need to map the `_change_request_type` field in your dataflow.
+>- Your ingestion frequency can be up to once every 15 minutes.
+
+For more information on creating a dataflow, read the [configure a dataflow to ingest batch data from a cloud storage source guide](/help/sources/tutorials/ui/dataflow/batch/cloud-storage.md).
 
 ## Use custom object in Audience Builder
 
