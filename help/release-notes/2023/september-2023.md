@@ -76,7 +76,7 @@ Adobe Experience Platform Data Governance is a series of strategies and technolo
 
 **New features**
 
-| Feature | Description | 
+| Feature | Description |
 | --- | --- |
 | New Partner Ecosystem labels for third-party data | New data usage labels for third-party enrichment and prospecting are available. See the [documentation on Partner Ecosystem labels](../../data-governance/labels/reference.md#partner) for more information. |
 
@@ -119,7 +119,7 @@ For more information on Experience Platform's data hygiene capabilities, refer t
 
 Add these to release notes as they go out
 
-| [[!DNL Qualtrics]] | New | Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience ID to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers. | 
+| [[!DNL Qualtrics]] | New | Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience ID to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers. |
 
 -->
 

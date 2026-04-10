@@ -132,7 +132,8 @@ Under the new architecture, the "create a segment job" endpoint and flexible aud
 
 You can now retrieve account and opportunity schemas as lookup dimension entities only after they have completed the daily entity resolution process. Newly ingested records will not be available for profile enrichment or segment definitions until the next entity resolution cycle completes (typically every 24 hours).
 
-<!-- ### Deprecation of audience creation via API for B2B entities
+<!-- 
+### Deprecation of audience creation via API for B2B entities
 
 Creation of audiences using B2B entities via API is being deprecated. The list of affected B2B entities include:
 
@@ -145,7 +146,8 @@ Creation of audiences using B2B entities via API is being deprecated. The list o
 * Marketing List
 * Marketing List Member
 
-Read the [segment definitions endpoint API guide](../segmentation/api/segment-definitions.md) for more information. -->
+Read the [segment definitions endpoint API guide](../segmentation/api/segment-definitions.md) for more information. 
+-->
 
 ### Changes to multi-entity audience imports in sandbox tooling
 

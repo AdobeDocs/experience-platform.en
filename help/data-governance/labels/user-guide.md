@@ -83,7 +83,8 @@ Labels added at the dataset level have an "x" next to their card. This allows yo
 
 <!-- ## View labels at the dataset field level {#view-labels-at-dataset-field-level} -->
 
-<!-- To view labels inherited by the dataset from the schema level, select **[!UICONTROL Datasets]** to navigate to the datasets workspace and select the relevant dataset from the list. 
+<!-- 
+To view labels inherited by the dataset from the schema level, select **[!UICONTROL Datasets]** to navigate to the datasets workspace and select the relevant dataset from the list. 
 
 ![The Browse tab of the Datasets workspace with Datasets highlighted in the left sidebar.](../images/labels/dataset-navigation.png)
 
@@ -91,7 +92,8 @@ Next, select the **[!UICONTROL Data Governance]** tab to show the labels that ha
 
 ![Dataset Labels inherited by fields](../images/labels/dataset-labels-applied.png)
 
-The inherited labels beside each field do not have an "x" next to them and appear "greyed out" with no ability to remove or edit. This is because **inherited fields are read-only**, meaning they cannot be removed at the field level. -->
+The inherited labels beside each field do not have an "x" next to them and appear "greyed out" with no ability to remove or edit. This is because **inherited fields are read-only**, meaning they cannot be removed at the field level. 
+-->
 
 <!--Beleive can cut above here  -->
 
@@ -99,9 +101,11 @@ The **[!UICONTROL Show Inherited Labels]** toggle is on by default, which allows
 
 ![The Data Governance tab of the Datasets workspace with the Show inherited labels toggle highlighted.](../images/labels/inherited-labels.png)
 
-<!-- Labels applied to the dataset appear in read-only form within the **[!UICONTROL Data Governance]** view for that dataset. 
+<!-- 
+Labels applied to the dataset appear in read-only form within the **[!UICONTROL Data Governance]** view for that dataset. 
 
-![The Data Governance tab of the Datasets workspace with labels highlighted.](../images/labels/read-only-governance-labels.png) -->
+![The Data Governance tab of the Datasets workspace with labels highlighted.](../images/labels/read-only-governance-labels.png) 
+-->
 
 >[!NOTE]
 >
@@ -144,10 +148,12 @@ Now that you have added data usage labels at the dataset and field level, you ca
 
 You can also now define data usage policies based on the labels you have applied. For more information, see the [data usage policies overview](../policies/overview.md).
 
-<!-- The workflow of this video is now outdated. This can be enabled once the video has been updated
+<!-- 
+The workflow of this video is now outdated. This can be enabled once the video has been updated
 
 ## Additional resources
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
->[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) 
+-->

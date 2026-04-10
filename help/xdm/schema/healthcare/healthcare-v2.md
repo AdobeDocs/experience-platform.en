@@ -26,7 +26,7 @@ The following table outlines the recommended classes and schema field groups for
 
 The following table outlines the data types created as per the [!DNL HL7 FHIR Release 5] specifications.
 
-| Name | Description | 
+| Name | Description |
 | --- | --- |
 | [[!UICONTROL Address]](./data-types/address.md) | Describes an address expressed using postal conventions (as opposed to GPS or other location definition formats). |
 | [[!UICONTROL Annotation]](./data-types/annotation.md) | A text node with attribution to the author. |

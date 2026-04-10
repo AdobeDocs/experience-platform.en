@@ -13,7 +13,7 @@ This page exemplifies the API request and payload that you can use to delete an 
 
 ## Getting started with destination configuration API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Delete a destination configuration {#delete}
 
@@ -35,7 +35,9 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 | --------- | ----------- |
 | `{INSTANCE_ID}` | The `ID` of the destination configuration you want to delete. |
 
-+++Request
+{style="table-layout:auto"}
+
++++ Request
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
@@ -45,16 +47,18 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-+++Response
++++
+
++++ Response
 
 A successful response returns HTTP status 200 along with an empty HTTP response.
 
 
 ## API error handling {#error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
-## Next steps
+## Next steps {#next-steps}
 
 After reading this document, you now know how to delete an existing destination configuration through the Destination SDK `/authoring/destinations` API endpoint.
 
@@ -63,3 +67,5 @@ To learn more about what you can do with this endpoint, see the following articl
 * [Create a destination configuration](create-destination-configuration.md)
 * [Retrieve a destination configuration](retrieve-destination-configuration.md)
 * [Update a destination configuration](update-destination-configuration.md)
+
++++

@@ -9,7 +9,7 @@ exl-id: 54b03147-9bca-46af-86c8-90e42b4de26b
 
 ![A diagram of the  Error Details Information data type.](../images/data-types/error-details-collection.png)
 
-| Display name               | Property     | Data type | Required | Description                                   | 
+| Display name               | Property     | Data type | Required | Description                                   |
 |----------------------------|--------------|-----------|----------|-----------------------------------------------|
 | [!UICONTROL Error ID]      | `name`       | string    |    No    | The error ID.                                 |
 | [!UICONTROL Error Source]  | `source`     | string    |    No    | The error source. Enumerated: "player", "external" with respective meanings.  |

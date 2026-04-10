@@ -341,7 +341,8 @@ WHERE destination_id = 1458738325;
 
 See the [Mapped audiences widget documentation](../guides/destinations.md#mapped-audiences) for information on the appearance and functionality of this insight.
 
-<!-- Commented out until the Jan release as the SQL IS MISSING:
+<!-- 
+Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
 
 Questions answered by this insight:
@@ -480,7 +481,8 @@ LIMIT
 
 See the [Recently created destinations widget documentation](../guides/destinations.md#recently-created-destinations) for information on the appearance and functionality of this insight.
 
-<!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
+<!-- 
+Commented out until the Jan release as SQL MISSING FROM WIKI:
 
 ## Unmapped audiences by identity {#unmapped-audiences-by-identity}
 

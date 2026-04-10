@@ -9,7 +9,7 @@ The List of States End Collection data type data type is an Experience Data Mode
 
 ![A diagram of List of States End Collection data type.](../images/data-types/list-of-states-end-collection.png)
 
-| Display name                   | Property     | Data type | Required  | Description                                     | 
+| Display name                   | Property     | Data type | Required  | Description                                     |
 |--------------------------------|--------------|-----------|-----------|-------------------------------------------------|
 | [!UICONTROL Player State Name] | `name`       | string    |    No     | The name of the player state. Enumerated: "fullscreen", "mute", "closedCaptioning", "pictureInPicture", "inFocus" with respective meanings. |
 

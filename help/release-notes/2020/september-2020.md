@@ -26,7 +26,7 @@ Adobe Experience Platform Data Governance is a series of strategies and technolo
 
 **New features**
 
-| Feature | Description | 
+| Feature | Description |
 | ------- | ----------- |
 | Dataset labeling UI enhancements | Several new sorting and filtering controls have been added to the dataset labeling UI in order to make working with large schemas easier: <ul><li>Sort fields by alphabetic order based on the full schema path.</li><li>Perform partial searches on field path names.</li><li>Filter fields with no labels, a selected label, or a label category.</li></ul> |
 

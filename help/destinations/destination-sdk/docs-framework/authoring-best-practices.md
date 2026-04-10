@@ -7,7 +7,7 @@ exl-id: b12059f1-6635-41cd-acc5-6ff471111164
 
 ## Overview {#overview}
 
-This page describes rules that you should follow when [authoring your destination documentation](./documentation-instructions.md) page, to ensure that it meets the Adobe Experience Platform documentation quality standards.
+This page describes rules that you should follow when [authoring your destination documentation](./documentation-instructions.md) page, to ensure that it meets the [!DNL Adobe Experience Platform] documentation quality standards.
 
 ## General guidance {#general-guidance}
 
@@ -16,7 +16,7 @@ This page describes rules that you should follow when [authoring your destinatio
 * In Experience Platform documentation, Adobe writers use **bold formatting** to refer to user interface controls, like this:
   * Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select the **[!UICONTROL Catalog]** tab. View an example of how user interface controls are documented in a [destinations tutorial](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-destination).
 
-## Writing style
+## Writing style {#writing-style}
 
 >[!IMPORTANT]
 >
@@ -31,14 +31,14 @@ Follow the provided documentation template and don't edit the existing links in 
 
 ## Branding guidelines {#branding}
 
-* AEP is not an approved public-facing term. Please use Adobe Experience Platform on first use, then Experience Platform, then Experience Platform.
+* AEP is not an approved public-facing term. Please use [!DNL Adobe Experience Platform] on first use, then Experience Platform, then Experience Platform.
   * **Don't use**: Before you can export data from AEP to YourDestination, make sure you read and complete these prerequisites. 
-  * **Use**: Before you can export data from Adobe Experience Platform to YourDestination, make sure you read and complete these prerequisites.
+  * **Use**: Before you can export data from [!DNL Adobe Experience Platform] to YourDestination, make sure you read and complete these prerequisites.
 
 ## Images and screenshots {#images-and-screenshots}
 
 * For information on [how to link to images](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#images), refer to the contributor guide.
-* When using screenshots, please ensure that your screenshot captures the entire Experience Platform UI screen.
+* When using screenshots, ensure that your screenshot captures the entire Experience Platform UI screen.
 * When marking up images to highlight a certain control or label on the page, try to follow the markup style used by the Experience Platform documentation team. Notice how Profile-based is highlighted in [this screenshot](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency).
 * Please use `png` format images.
 * Please don't use numbered screenshots as filenames. Image filenames should be descriptive.

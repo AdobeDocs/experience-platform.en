@@ -130,10 +130,11 @@ You can also chat with [!DNL Copilot] directly about your code. Use **Control (o
 
 ![The inline chat window with diff view](../images/clients/github-copilot/inline-chat.png)
 
-<!-- THis section is poss unnecessary:
+<!-- 
+THis section is poss unnecessary:
 There are inline features for chat including doc, expalin, fix and test
 ![fix, document, explain](../images/clients/github-copilot/fix-document-explain.png)
- -->
+-->
 
 ## Dedicated chat view {#dedicated-chat}
 

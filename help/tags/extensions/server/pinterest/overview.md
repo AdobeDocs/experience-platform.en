@@ -74,13 +74,13 @@ After selection, additional controls appear to further configure the event. You 
 
 The following event data will be required to create the new rule:
 
-| Field name | Description | Example | 
-| --- | --- | --- | 
-| [!UICONTROL Event Name] | The type of the user event. This can be any event type however, to leverage [!DNL Pinterest Analytics] it is recommended to use [[!DNL Pinterest] event codes](https://help.pinterest.com/en/business/article/add-event-codes) | &ast; checkout <br> &ast; add_to_cart <br> &ast; page_visit <br> &ast; signup <br> &ast; [User-defined event] | 
-| [!UICONTROL Action Source] | The source indicating where the conversion event occurred. | &ast; app_android <br> &ast; app_ios <br> &ast; web <br> &ast; offline | 
+| Field name | Description | Example |
+| --- | --- | --- |
+| [!UICONTROL Event Name] | The type of the user event. This can be any event type however, to leverage [!DNL Pinterest Analytics] it is recommended to use [[!DNL Pinterest] event codes](https://help.pinterest.com/en/business/article/add-event-codes) | &ast; checkout <br> &ast; add_to_cart <br> &ast; page_visit <br> &ast; signup <br> &ast; [User-defined event] |
+| [!UICONTROL Action Source] | The source indicating where the conversion event occurred. | &ast; app_android <br> &ast; app_ios <br> &ast; web <br> &ast; offline |
 | [!UICONTROL Event Time] | This refers to the event time. The default time format used is UNIX, in the format `<seconds>.<miliseconds>` depending on your local timezone. For more information, refer to the [[!DNL Pinterest] API](https://developers.pinterest.com/docs/api/v5/#operation/events/create). | 1433188255.500 indicates 1433188255 seconds and 500 milliseconds after epoch, or Monday, June 1, 2015, at 7:50:55 PM GMT. |
-| [!UICONTROL Event ID] | A unique id string that identifies this event and can be used for deduping between events ingested via both the conversion API and Pinterest tracking. Without this, the event's data is likely to be double counted and will report metric inflation. | ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad | 
-| [!UICONTROL Event Properties] |  A JSON object containing custom properties of the event. Select from providing raw JSON or using a simplified set of key-value inputs. | { "event_source_url": "http://site.com" } | 
+| [!UICONTROL Event ID] | A unique id string that identifies this event and can be used for deduping between events ingested via both the conversion API and Pinterest tracking. Without this, the event's data is likely to be double counted and will report metric inflation. | ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad |
+| [!UICONTROL Event Properties] |  A JSON object containing custom properties of the event. Select from providing raw JSON or using a simplified set of key-value inputs. | { "event_source_url": "http://site.com" } |
 
 ![The [!DNL Pinterest] [!UICONTROL Event Data] highlighted in the rule action.](../../../images/extensions/server/pinterest/event-data.png)
 
@@ -103,9 +103,9 @@ The following event properties can be configured:
 
 The following user data can be entered by are not required fields:
 
-| Field name | Description | Example | 
-| --- | --- | --- | 
-| [!UICONTROL Email] | User email address or a SHA256 hash of the user address email. | ebd543592...f2b7e1 | 
+| Field name | Description | Example |
+| --- | --- | --- |
+| [!UICONTROL Email] | User email address or a SHA256 hash of the user address email. | ebd543592...f2b7e1 |
 | [!UICONTROL Mobile Adverstising IDs] | Sha256 hashes of user's "Google Advertising IDs" (GAIDs) or "Apple's Identifier for Advertisers" (IDFAs) | ebd543592...f2b7e1 |
 | [!UICONTROL Client IP Address] | The user's IP address, which can be either in IPv4 or IPv6 format. Used for matching. | 192.168.0.1 |
 | [!UICONTROL Client User Agent] | The user agent string of the user's web browser. | Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion |

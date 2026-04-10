@@ -43,7 +43,7 @@ Below are some examples of the settings that you can update for [Amazon S3](../c
 >
 >Your destination connection settings are now updated.
 
-## Other editing options
+## Other editing options {#other-editing-options}
 
 By using the Experience Platform UI or the Flow Service API, you can edit various destination configurations, as detailed in the links below:
 
@@ -53,8 +53,8 @@ By using the Experience Platform UI or the Flow Service API, you can edit variou
 | [Edit accounts](/help/destinations/ui/update-accounts.md) | [Edit base connection components (authentication parameters and other components)](/help/destinations/api/edit-destination.md#patch-base-connection) |
 | [Edit activation dataflows](/help/destinations/ui/edit-activation.md) | [Update destination dataflows](/help/destinations/api/update-destination-dataflows.md) |
 
-## Next steps
+## Next steps {#next-steps}
 
-By following this tutorial, you have successfully used the **[!UICONTROL destinations]** workspace to update existing destination connections.
+You have successfully updated existing destination connections using the **[!UICONTROL destinations]** workspace.
 
-For more information about destinations, refer to the [destinations overview](../catalog/overview.md).
+For more information about destinations, see the [destinations overview](../catalog/overview.md).

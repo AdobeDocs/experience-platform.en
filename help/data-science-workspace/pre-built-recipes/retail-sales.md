@@ -41,7 +41,7 @@ This recipe uses [XDM schemas](../../xdm/schema/field-dictionary.md) to model th
 
 | Field Name | Type |
 | --- | --- |
-| date | String | 
+| date | String |
 | store | Integer |
 | storeType | String |
 | weeklySales | Number |

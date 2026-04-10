@@ -123,7 +123,7 @@ A successful response returns a list of sandboxes belonging to your organization
 | --- | --- |
 | `name` | The name of the sandbox. This property is used for lookup purposes in API calls. |
 | `title` | The display name for the sandbox. |
-| `state` | The current processing state of the sandbox. A sandbox's state can be any of the following: <br/><ul><li>`creating`: The sandbox has been created, but is still being provisioned by the system.</li><li>`active`: The sandbox is created and active.</li><li>`failed`: Due to an error, the sandbox was not able to be provisioned by the system and is disabled.</li><li>`deleted`: The sandbox has been manually disabled.</li></ul>|  
+| `state` | The current processing state of the sandbox. A sandbox's state can be any of the following: <br/><ul><li>`creating`: The sandbox has been created, but is still being provisioned by the system.</li><li>`active`: The sandbox is created and active.</li><li>`failed`: Due to an error, the sandbox was not able to be provisioned by the system and is disabled.</li><li>`deleted`: The sandbox has been manually disabled.</li></ul>|
 | `type` | The sandbox type. The current supported sandbox types include `development` and `production`. |
 | `isDefault` | A boolean property indicating whether this sandbox is the default production sandbox for the organization. |
 | `eTag` | An identifier for a specific version of the sandbox. Used for version control and caching efficiency, this value is updated each time a change is made to the sandbox. |

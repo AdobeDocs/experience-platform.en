@@ -8,17 +8,17 @@ exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
 # Activation overview
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
-Adobe Experience Platform supports a wide range of destinations. The audience activation workflow varies between the destinations, based on the type of audience data they support, and the frequency of the data export.
+[!DNL Adobe Experience Platform] supports a wide range of destinations. The audience activation workflow varies between the destinations, based on the type of audience data they support, and the frequency of the data export.
 
 ## Activation methods {#activation-methods}
 
 After you [configure your destination](connect-destination.md), you can activate audiences in multiple ways:
 
-### Activate audiences from the destinations catalog
+### Activate audiences from the destinations catalog {#activate-from-catalog}
 
 See the following guides for detailed information on activating audiences to your destination from the destinations catalog:
 
@@ -26,7 +26,7 @@ See the following guides for detailed information on activating audiences to you
 * [Activate audience data to streaming profile export destinations](activate-streaming-profile-destinations.md)
 * [Activate audience data to batch profile export destinations](activate-batch-profile-destinations.md)
 
-### Activate audiences from the [!UICONTROL Browse] page
+### Activate audiences from the [!UICONTROL Browse] page {#activate-from-browse}
 
 Follow the steps below to activate data to your destinations from the **[!UICONTROL Browse]** page.
 

@@ -49,7 +49,7 @@ For more information about sessionization in Adobe Analytics, see the documentat
 SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-| Parameter | Description | 
+| Parameter | Description |
 | --------- | ----------- |
 | `{TIMESTAMP}` | The timestamp field found in the dataset. |
 | `{EXPIRATION_IN_SECONDS}` | The number of seconds needed between events to qualify the end of the current session and the start of a new session. |
@@ -96,7 +96,7 @@ For the sample query given, the results are given in the `session` column. The `
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
 ```
 
-| Parameters |  Description  | 
+| Parameters |  Description  |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | The difference in time, in seconds, between the current record and the prior record. |
 | `{NUM}` | A unique session number, starting at 1, for the key defined in the `PARTITION BY` of the window function.   |
@@ -161,7 +161,7 @@ For the sample query given, the results are given in the `session` column. The `
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
 ```
 
-| Parameters |  Description  | 
+| Parameters |  Description  |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | The difference in time, in seconds, between the current record and the prior record. |
 | `{NUM}` | A unique session number, starting at 1, for the key defined in the `PARTITION BY` of the window function. |
@@ -226,7 +226,7 @@ For the sample query given, the results are given in the `session` column. The `
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
 ```
 
-| Parameters |  Description  | 
+| Parameters |  Description  |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | The difference in time, in seconds, between the current record and the prior record. |
 | `{NUM}` | A unique session number, starting at 1, for the key defined in the `PARTITION BY` of the window function.   |
@@ -250,7 +250,7 @@ Determines the previous value of a particular field a defined number of steps aw
 PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-| Parameter | Description | 
+| Parameter | Description |
 | --------- | ----------- |
 | `{KEY}` | The column or field from the event. |
 | `{SHIFT}` | (Optional) The number of events away from the current event. By default, the value is 1. |
@@ -276,11 +276,11 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```console
                 id                 |       timestamp       |                 name                |                    previous_page                    
 |-----------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
- 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | 
- 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                | 
+ 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     |
+ 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                |
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:45.0 | Kids                                | (Home)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 19:22:34.0 |                                     | (Kids)
- 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:01:12.0 | Home                                | 
+ 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:01:12.0 | Home                                |
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:01:57.0 | Kids                                | (Home)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:03:36.0 | Search Results                      | (Kids)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:04:30.0 | Product Details: Pemmican Power Bar | (Search Results)
@@ -301,7 +301,7 @@ Determines the next value of a particular field a defined number of steps away w
 NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-| Parameter | Description | 
+| Parameter | Description |
 | --------- | ----------- |
 | `{KEY}` | The column or field from the event. |
 | `{SHIFT}` | (Optional) The number of events away from the current event. By default, the value is 1. |
@@ -359,7 +359,7 @@ TIME_BETWEEN_PREVIOUS_MATCH(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-| Parameter | Description | 
+| Parameter | Description |
 | --------- | ----------- |
 | `{TIMESTAMP}` | A timestamp field found in the dataset populated on all events. |
 | `{EVENT_DEFINITION}` | The expression to qualify the previous event. |
@@ -421,7 +421,7 @@ This query returns a negative number representing the unit of time behind the ne
 TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-| Parameter | Description | 
+| Parameter | Description |
 | --------- | ----------- |
 | `{TIMESTAMP}` | A timestamp field found in the dataset populated on all events. |
 | `{EVENT_DEFINITION}` | The expression to qualify the next event. |

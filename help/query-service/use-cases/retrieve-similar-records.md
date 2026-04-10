@@ -691,7 +691,7 @@ WHERE jaccard_similarity>=0.4
 
 The results of this query give the columns for the similarity join, as seen below:
 
-+++Select to expand
++++ Select to expand
 
 |   | SetA_ProductNames        | SetA_ProductNames      |
 |---|--------------------------|------------------------|
@@ -701,7 +701,7 @@ The results of this query give the columns for the similarity join, as seen belo
 
 {style="table-layout:auto"}
 
-+++:
++++
 
 ### Next steps {#next-steps}
 

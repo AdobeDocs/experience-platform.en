@@ -56,7 +56,7 @@ If you do not provide an alias name in advance, Query Service automatically gene
 An example output of a `COMPUTE STATISTICS` query is as follows:
 
 ```console
-| Statistics ID         | 
+| Statistics ID         |
 | --------------------- |
 | adc_geometric_stats_1 |
 (1 row)

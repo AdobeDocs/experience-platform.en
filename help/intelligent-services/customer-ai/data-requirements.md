@@ -139,9 +139,9 @@ The following are a selection of industry-specific custom event examples:
 | --- | --- |
 | Retail | In-store transaction<br>Sign up for club card<br>Clip mobile coupon. |
 | Entertainment | Purchase season membership <br> Stream video.|
-| Hospitality | Make restaurant reservation <br> Purchase loyalty points. | 
-| Travel | Add known traveler info Purchase miles. | 
-| Communications | Upgrade/downgrade/cancel plan. | 
+| Hospitality | Make restaurant reservation <br> Purchase loyalty points. |
+| Travel | Add known traveler info Purchase miles. |
+| Communications | Upgrade/downgrade/cancel plan. |
 
 Custom events must represent user-initiated actions in order to be selected. For example, "Email Send" is an action initiated by a marketer and not by the user, so it shouldn't be used as a custom event.  
 

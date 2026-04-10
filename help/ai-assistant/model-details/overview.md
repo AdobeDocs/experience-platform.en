@@ -166,7 +166,7 @@ The robustness and generalization section contains information on how well your 
 
 | Question | Information needed | Example answer |
 | --- | --- | --- |
-| How well does the model perform on unseen data? | The findings on generalization performance testing. | The model maintains **80% AUC-ROC** when tested on unseen datasets, demonstrating strong generalization to new customer records. Performance remains stable across different customer segments but shows slight degradation when user behavior significantly deviates from historical patterns. | 
+| How well does the model perform on unseen data? | The findings on generalization performance testing. | The model maintains **80% AUC-ROC** when tested on unseen datasets, demonstrating strong generalization to new customer records. Performance remains stable across different customer segments but shows slight degradation when user behavior significantly deviates from historical patterns. |
 | Has the model been stress-tested for adversarial inputs? | The details from the robustness evaluation. | The model has been evaluated against perturbed and adversarial inputs, including missing data, outlier injection, and intentional mislabeling. While performance remains robust under normal conditions, minor accuracy degradation (approximately 3-5%) was observed under extreme adversarial modifications. |
 
 {style="table-layout:auto"}

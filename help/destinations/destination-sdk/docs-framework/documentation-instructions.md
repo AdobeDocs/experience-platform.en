@@ -3,7 +3,7 @@ title: Document your destination in Adobe Experience Platform
 description: Step-by-step instructions for you to create a documentation page for your destination in Adobe Experience Platform
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
 ---
-# Document your destination in Adobe Experience Platform
+# Document your destination in [!DNL Adobe Experience Platform]
 
 >[!IMPORTANT]
 >
@@ -11,8 +11,8 @@ exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
 
 ## Overview {#overview}
 
-Welcome to Adobe Experience Platform, great to have you here!
-Documenting your destination is the final step before it can be set live in Adobe Experience Platform.
+Welcome to [!DNL Adobe Experience Platform], great to have you here!
+Documenting your destination is the final step before it can be set live in [!DNL Adobe Experience Platform].
 
 This documentation section includes:
 
@@ -28,11 +28,11 @@ To create documentation for your destination according to the instructions in th
 
 * **A GitHub account**. Sign up for [GitHub](https://github.com/) if you don't have an account yet.
 * **GitHub Desktop**. If you select to [create the documentation in your local environment](./work-in-local-environment.md), you must use [GitHub Desktop](https://desktop.github.com/).
-* Your integration with Adobe must be in a testing phase with your destination deployed in a staging environment in Adobe Experience Platform.
+* Your integration with Adobe must be in a testing phase with your destination deployed in a staging environment in [!DNL Adobe Experience Platform].
 
-## High-level instructions to create documentation for your destination in Adobe Experience Platform {#high-level-instructions}
+## High-level instructions to create documentation for your destination in [!DNL Adobe Experience Platform] {#high-level-instructions}
 
-At a high level, to create documentation for your destination, you need to [create a fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) of the Adobe Experience Platform documentation repository and edit the [provided documentation template](./self-service-template.md) in a new branch. Use the Adobe-provided template to create a new destination page. Open a pull request (PR) when you are ready. Instructions to do this are further below, in [Steps to create your new destination page](./documentation-instructions.md#steps-to-create-docs-page).
+At a high level, to create documentation for your destination, you need to [create a fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) of the [!DNL Adobe Experience Platform] documentation repository and edit the [provided documentation template](./self-service-template.md) in a new branch. Use the Adobe-provided template to create a new destination page. Open a pull request (PR) when you are ready. Instructions to do this are further below, in [Steps to create your new destination page](./documentation-instructions.md#steps-to-create-docs-page).
 
 <!--
 
@@ -51,7 +51,7 @@ Instructions on using the template to create your documentation page are further
 
 ## Steps to create your new destination page {#steps-to-create-docs-page}
 
-You can use the GitHub web interface or your local environment to create documentation for your new destination in Adobe Experience Platform. Find instructions for both options in the links below:
+You can use the GitHub web interface or your local environment to create documentation for your new destination in [!DNL Adobe Experience Platform]. Find instructions for both options in the links below:
 
 * [Use the GitHub web interface to create a destination documentation page](./use-github-interface-to-create-documentation.md)
 * [Use a text editor in your local environment to create a destination documentation page](./work-in-local-environment.md)

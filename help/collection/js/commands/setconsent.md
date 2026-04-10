@@ -26,26 +26,7 @@ The `setConsent` command only uses the `ECID` from the identity map, as the comm
 
 ## Using `defaultConsent` together with `setConsent` {#using-consent}
 
-The Web SDK offers two complementary consent configuration commands:
-
-* [`defaultConsent`](configure/defaultconsent.md): This command automatically sets the visitor's default consent preference before calling `setConsent`.
-* `setConsent` (current page): This command explicitly sets the visitor's consent preference.
-
-When used together, these settings can lead to different data collection and cookie setting results, depending on their configured values:
-
-| `defaultConsent` | `setConsent` | Data collection occurs | Web SDK sets browser cookies |
-| --- | --- | --- | --- |
-| `in` | `in` | Yes |  Yes |
-| `in` | `out` | No | Yes |
-| `in` | Not set | Yes | Yes |
-| `pending` | `in` | Yes | Yes |
-| `pending` | `out` | No | Yes |
-| `pending` | Not set | No | No |
-| `out` | `in` | Yes | Yes |
-| `out` | `out` | No | Yes |
-| `out` | Not set | No | No |
-
-See [Adobe Experience Platform Web SDK cookies](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) in the Core Services guide for a full list of cookies that can be set.
+When used together, `defaultConsent` and `setConsent` produce different data collection, cookie setting, and identity results depending on their configured values. See [Consent and identity in Data Collection](/help/collection/identity/consent.md#how-consent-affects-identity) for a complete interaction table.
 
 ## Using the `setConsent` command
 
