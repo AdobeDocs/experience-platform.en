@@ -14,7 +14,9 @@ Computed attributes help quickly convert profile behavioral data into aggregated
 - Standardization of aggregated profile behavioral data for usage across platforms and apps
 - Better data management with consolidation of old profile events data into meaningful behavioral insights
 
-These aggregates are computed based on user-created Profile-enabled Experience Event datasets ingested into Adobe Experience Platform. Each computed attribute is a profile attribute created on your profile union schema, and is grouped under the "SystemComputedAttribute" field group in your union schema.
+These aggregates are computed based on user-created Profile-enabled Experience Event datasets ingested into Adobe Experience Platform. This means that system-generated datasets that are created via service tokens through the SDK, such as the AJO System Dataset **cannot** be used.
+
+Each computed attribute is a profile attribute created on your profile union schema, and is grouped under the "SystemComputedAttribute" field group in your union schema.
 
 Sample use cases include:
 
