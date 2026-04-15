@@ -1,21 +1,21 @@
 ---
 title: Custom Objects With B2B CDP
-description: ???
+description: Learn how to create a one-to-many relationship custom object for B2B CDP.
 ---
 
 # Using custom objects with B2B CDP
 
-custom objects info
+You can now enable custom objects with relational one-to-many (1:M) joins, which lets import and use custom objects for use cases including segmentation and Query Service. You can use these one-to-many relationship custom objects to support your custom CRM objects, track product entitlements and purchases, as well as manage offers for customers.
 
 ## Create a relational schema
 
-To start creating a custom object, you'll first need to create a relational schema to model your data.
+To start connecting your custom object using a one-to-many relationship, you'll first need to create a relational schema to model your data.
 
-Under the **Data management** section, select **Schemas**. On the Schema overview page, select **Create schema** followed by **Relational**.
+Under the **[!UICONTROL Data management]** section, select **[!UICONTROL Schemas]**. On the Schema overview page, select **[!UICONTROL Create schema]** followed by **[!UICONTROL Relational]**.
 
 IMAGE
 
-The **Create relational schema** page appears. You can add the details of the schema including the display name, description, and the schema behavior. 
+The **[!UICONTROL Create relational schema]** page appears. You can add the details of the schema including the display name, description, and the schema behavior. 
 
 IMAGE
 
@@ -42,7 +42,13 @@ For more information on creating a dataset, read the [create a dataset guide](/h
 
 ## Enable the schema for segmentation
 
-Once you've created your dataset, you can now enable the schema for segmentation. You **must** mark the schema as enabled for segmentation in order to use this schema with custom objects in B2B CDP.
+>[!NOTE]
+>
+>If you are **only** using custom objects with Query Service, you do **not** need to enable the schema for segmentation.
+>
+>Additionally, you can only enable a maximum of **20** schemas per sandbox for segmentation. Once a schema is enabled, you **cannot** disable the schema from segmentation - you have to delete the schema in order to remove it.
+
+Once you've created your dataset, you can now enable the schema for segmentation. You **must** mark the schema as enabled for segmentation in order to use this schema for segmentation use cases with custom objects in B2B CDP.
 
 IMAGE
 
@@ -51,8 +57,6 @@ IMAGE
 Now that you've enabled your schema for segmentation, you can continue creating your schema by defining the relationships for the schema's fields. To add a relationship to the field, select **Add relationship** on the field you want to add the relationship to.
 
 IMAGE
-
-The 
 
 ## Ingest data into the dataset
 
@@ -70,6 +74,8 @@ Your data within your cloud storage source must conform to the following specifi
 - The file contains one row per primary key in the file
 - The file's column names match the schema's field names
 
+When 
+
 >[!NOTE]
 >
 >When you create your dataflow, keep the following items in mind:
@@ -83,7 +89,7 @@ For more information on creating a dataflow, read the [configure a dataflow to i
 
 ## Use custom object in Audience Builder
 
-Now that your dataflow has been created, you can use the custom object data within Audience Builder.
+Now that your dataflow has been created, you can use the custom object data within Audience Builder. The custom object can be found in Audience Builder under the same relationship path you created for your custom object schema.
 
 IMAGE
 
