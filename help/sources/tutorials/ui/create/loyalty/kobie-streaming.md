@@ -1,14 +1,19 @@
 ---
 title: Stream Data From Kobie To Experience Platform Using The UI
 description: Learn how to stream data from Kobie into Adobe Experience Platform using the UI.
-badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 4e2e3287-3673-4426-8666-5f2ee284ca3d
 ---
-# Stream data from [!DNL Kobie] to Experience Platform using the UI
+# Stream data from [!DNL Kobie Streaming Events] to Experience Platform using the UI
 
-Read this guide to learn how to connect and stream your data from [!DNL Kobie] to Adobe Experience Platform using the sources workspace in the UI.
+[!DNL Kobie Alchemy Loyalty Cloud (KALC)] is a highly configurable, secure, and scalable MACH platform that adapts to your loyalty strategy—accelerating time to value, improving efficiency, and safeguarding your brand with enterprise-grade governance. With seamless integrations across CDPs, CRMs, CMS, and more, [!DNL KALC] empowers marketers to deliver real-time personalization across every channel while providing the flexibility and traceability to evolve as your brand loyalty grows.
+
+Read this guide to learn how to connect and stream your data from [!DNL Kobie Streaming Events] to Adobe Experience Platform using the sources workspace in the UI.
+
+>[!IMPORTANT]
+>
+>For information on prerequisite set up and mapping, please contact your [!DNL Kobie Client Services] representative directly.
 
 ## Getting started
 
