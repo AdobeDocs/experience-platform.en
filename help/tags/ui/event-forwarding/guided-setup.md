@@ -21,9 +21,9 @@ This setup can auto-install extensions. This hybrid implementation is recommende
 
 ## Get started with guided setup {#guided-setup}
 
-To get started with the feature, select **[!UICONTROL Get Started]** in the right navigation in the **[!UICONTROL Event Forwarding]** Data Collections UI.
+To get started with the feature, select **[!UICONTROL Get Started]** in the **[!UICONTROL Event Forwarding]** Data Collections UI.
 
-![Event Forwarding home page showing the Get Started card in the right panel](../../images/ui/guided-setup/get-started.png)
+![Event Forwarding home page showing the Get Started card in the Data Collections UI](../../images/ui/guided-setup/get-started.png)
 
 ### Create a new tags property {#new-property}
 

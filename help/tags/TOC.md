@@ -51,7 +51,7 @@ role: Developer
 * Event forwarding {#event-forwarding}
   * [Overview](./ui/event-forwarding/overview.md)
   * [Getting started](./ui/event-forwarding/getting-started.md)
-  * [Guided Setup](./ui/event-forwarding/event-forwarding-guided-setup.md)
+  * [Guided Setup](./ui/event-forwarding/guided-setup.md)
   * [Configuring secrets](./ui/event-forwarding/secrets.md)
   * [Monitoring (Beta)](./ui/event-forwarding/monitoring.md)
 * Administration {#admin}
