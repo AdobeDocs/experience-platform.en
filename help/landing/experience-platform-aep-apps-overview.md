@@ -127,15 +127,15 @@ When we say platform and applications work together, we mean three things.
 | Activate | Destinations and controlled export of audiences and attributes | [!DNL Real-Time CDP] supports many activation patterns. Journeys send messages through the channels you set up. |
 | Measure | Events and identities that follow one model in the data layer | [!DNL Customer Journey Analytics] for journey and campaign reporting. [!DNL Adobe Mix Modeler] for unified marketing measurement and planning that uses platform-connected data. |
 
-### Example: One workflow that uses the platform and all four applications {#example-full-stack-workflow}
+## Example: One workflow that uses the platform and all four applications {#example-full-stack-workflow}
 
 The story below is one common pattern. Your teams might change the order or skip a step. The goal is to show how [!DNL Adobe Experience Platform] and [!DNL Real-Time CDP], [!DNL Adobe Journey Optimizer], [!DNL Customer Journey Analytics], and [!DNL Adobe Mix Modeler] can all appear in the same program.
 
-#### The scenario {#example-scenario}
+### The scenario {#example-scenario}
 
 A retail brand runs a seasonal acquisition and onboarding program. Leadership wants to plan spend, reach new buyers with paid media, welcome new customers with messages, and report on results. The brand uses unified customer data on [!DNL Adobe Experience Platform].
 
-#### What happens in the workflow {#example-steps}
+### What happens in the workflow {#example-steps}
 
 1. [!DNL Adobe Experience Platform] (the platform)  
    Teams bring in web and app events, orders, consent, and cost or performance data from ads where available. Data uses shared XDM schemas. [!DNL Identity Service] links known customers. [!DNL Real-Time Customer Profile] updates as people shop and sign up. Data rules and consent are stored on the platform.  
@@ -159,13 +159,13 @@ A retail brand runs a seasonal acquisition and onboarding program. Leadership wa
 
 Teams often run steps 2 through 5 in parallel across a quarter. Mix Modeler updates may happen on a slower cycle than live audiences or journeys. That is normal.
 
-#### How the applications work together {#example-together}
+### How the applications work together {#example-together}
 
 - One profile and one event model. The same person and the same events flow from the platform into [!DNL Real-Time CDP], [!DNL Adobe Journey Optimizer], and [!DNL Customer Journey Analytics]. Mix Modeler uses connected and harmonized data from the platform. It may use summaries (for example weekly spend) as well as event-level data, depending on setup.  
 - Different jobs, same truth. [!DNL Real-Time CDP] pushes who to reach. [!DNL Adobe Journey Optimizer] runs what happens next after an action. [!DNL Customer Journey Analytics] shows what occurred across steps. [!DNL Adobe Mix Modeler] supports why to shift budget at a higher level.  
 - Data rules travel with the data. Labels and consent on the platform affect which profiles can be used in segments, journeys, and reporting.
 
-#### Configuration cautions {#example-gotchas}
+### Configuration cautions {#example-gotchas}
 
 >[!IMPORTANT]
 >
@@ -182,7 +182,7 @@ Teams often run steps 2 through 5 in parallel across a quarter. Mix Modeler upda
 | Sandboxes | Configuration in a sandbox does not automatically move to production. Plan a promotion process for schemas, segments, journeys, and connections. |
 | Time zones | Journeys, reporting windows, and ad platforms may use different time zones. Misaligned windows cause "wrong" counts and broken journey entry. |
 
-#### Guardrails and limitations {#example-guardrails}
+### Guardrails and limitations {#example-guardrails}
 
 Adobe publishes guardrails for [!DNL Adobe Experience Platform] and for each application. Guardrails describe limits, expected performance, and safe ranges for configuration. They help you avoid errors, slowdowns, or unstable behavior. Guardrails are not service level agreements (SLAs). They do not guarantee speed or uptime in a legal sense.
 
