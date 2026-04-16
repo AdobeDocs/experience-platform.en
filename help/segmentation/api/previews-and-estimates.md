@@ -185,7 +185,7 @@ A successful response returns HTTP status 200 with detailed information about th
 }
 ```
 
-| Property | Description | 
+| Property | Description |
 | -------- | ----------- |
 | `results` | A list of entity IDs, along with their related identities. The links provided can be used to look up the specified entities, using the [profile access API endpoint](../../profile/api/entities.md). |
 

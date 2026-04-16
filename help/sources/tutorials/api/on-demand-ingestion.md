@@ -119,7 +119,8 @@ A successful response returns the details of the newly created flow run, includi
 | `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your firs flow run. |
 | `params.deltaColumn.name` | The name of the delta column. |
 | `etag` | The resource version of the flow run. |
-| `metrics` | This property displays a status summary for the flow run. | -->
+| `metrics` | This property displays a status summary for the flow run. | 
+-->
 
 ## Create a flow run for a file-based source
 

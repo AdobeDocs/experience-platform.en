@@ -10,6 +10,12 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.32.0 - March 23, 2026
+
+- Shared core utilities are now published as a standalone npm package ([@adobe/alloy-core](https://www.npmjs.com/package/@adobe/alloy-core)) for use by extensions and integrations.
+- Now includes the IANA time zone in the XDM field `xdm.placeContext.ianaTimezone` when `placeContext` is included in the [`context`](/help/collection/js/commands/configure/context.md) configuration variable.
+- Brand concierge: Fixed a session ID issue when [`stickyConversationSession`](/help/collection/js/commands/configure/conversation.md) is disabled.
+
 ## Version 2.31.1 - February 11, 2026
 
 - Fixed an issue where the Web SDK would crash when there are multiple advertising-related `s_kwcid` or `ef_id` parameters in the URL.
@@ -28,8 +34,6 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **Fixes and improvements**
 
 - The `aria-label` and `name` attributes are now considered in [automatic link collection](commands/configure/clickcollectionenabled.md).
-- Fixed a possible race condition with identity map integrations.
-- Fixed an issue where timestamp was not included in `streamingMedia`.
 - Fixed an issue where custom code actions were only running once.
 
 ## Version 2.30.0 - September 24, 2025
@@ -66,7 +70,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **Fixes and improvements**
 
 - Fixed an error in the [Media Analytics tracker](commands/getmediaanalyticstracker.md) where the `length` property of the media object incorrectly accepted invalid data types.
-- Improved [identity management](../use-cases/identity/id-overview.md) error handling to properly process promise rejections when identity lookup fails.
+- Improved [identity management](../identity/overview.md) error handling to properly process promise rejections when identity lookup fails.
 - Resolved an issue where personalization content with HTML content items failed to render with an error relating to a missing `renderStatusHandler`.
 - Fixed activity map [URL collection](commands/configure/clickcollectionenabled.md) to properly handle non-HTTP URLs.
 
@@ -137,7 +141,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-- Added support for requesting the [CORE ID](/help/collection/use-cases/identity/id-overview.md) in the [getIdentity](commands/getidentity.md) command.
+- Added support for requesting the [CORE ID](/help/collection/identity/overview.md#core-id-and-third-party-identity) in the [getIdentity](commands/getidentity.md) command.
 
 **Fixes and improvements**
 
@@ -286,7 +290,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-- You can now deliver personalized experiences more accurately, by sharing visitor IDs between mobile apps and mobile web content, and across domains. See the [dedicated documentation](../use-cases/identity/id-sharing.md) to learn more.
+- You can now deliver personalized experiences more accurately, by sharing visitor IDs between mobile apps and mobile web content, and across domains. See [Identity in Data Collection](../identity/overview.md) to learn more.
 - You can now render or execute an array of propositions from [!DNL Adobe Target] into single-page applications, without incrementing the analytics metrics. This reduces reporting errors and increases analytics accuracy.
 - Added additional information to the `getLibraryInfo` command including available commands and the final configuration for the instance.
 

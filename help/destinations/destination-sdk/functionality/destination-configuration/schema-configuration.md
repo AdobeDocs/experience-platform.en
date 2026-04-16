@@ -198,7 +198,7 @@ The example below shows both required source and destination mappings. When both
 
 {style="table-layout:auto"}
 
-As a result, both the **[!UICONTROL Source field]** and **[!UICONTROL Target field]** sections in the Experience Platform UI are greyed out.
+As a result, both the **[!UICONTROL Source field]** and **[!UICONTROL Target field]** sections in the Experience Platform UI are grayed out.
 
 ![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
@@ -228,7 +228,7 @@ The example below shows a required destination mapping. If only the destination 
 
 {style="table-layout:auto"}
 
-As a result, the **[!UICONTROL Target field]** section in the Experience Platform UI is greyed out, while the **[!UICONTROL Source field]** section is active and users can interact with it. The **[!UICONTROL Mandatory key]** and **[!UICONTROL Deduplication key]** options are active, and users cannot change them.
+As a result, the **[!UICONTROL Target field]** section in the Experience Platform UI is grayed out, while the **[!UICONTROL Source field]** section is active and users can interact with it. The **[!UICONTROL Mandatory key]** and **[!UICONTROL Deduplication key]** options are active, and users cannot change them.
 
 ![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 

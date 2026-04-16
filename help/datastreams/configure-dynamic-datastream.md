@@ -1,16 +1,9 @@
 ---
 title: Create dynamic datastream configurations
 description: Learn how to create dynamic datastream configurations, to route your data to various Experience Cloud services, based on rules.
-hide: yes
-hidefromtoc: yes
-badge: label="Beta" type="Informative"
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
 ---
 # Create dynamic datastream configurations
-
->[!AVAILABILITY]
->
->* The option to define dynamic datastream configurations is currently in Beta and available to a limited number of customers. To receive access to this functionality, contact your Adobe representative. The documentation and the functionality are subject to change.
 
 By default, the Experience Platform Edge Network sends all the events that reach a datastream to all the Experience Cloud [services](configure.md#add-services) that you have enabled for your datastreams. This might not always be the ideal workflow for you, depending on your use cases.
 
@@ -53,29 +46,29 @@ After you have [created a datastream](configure.md) and [added a service](config
 
 1. Go to the **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]** page and select the datastream that you created.
     
-    ![Image of the datastreams user interface showing the list of datastreams.](assets/configure-dynamic-datastream/select-datastream.png)
+    ![Datastreams user interface showing the list of datastreams.](assets/configure-dynamic-datastream/select-datastream.png)
 
 1. Select the **[!UICONTROL Edit]** option on the service for which you want to define a dynamic configuration.
     
-    ![Image of the datastreams user interface showing the services added to a datastream.](assets/configure-dynamic-datastream/select-service.png)
+    ![Datastreams user interface showing the services added to a datastream.](assets/configure-dynamic-datastream/select-service.png)
 
 1. In the **[!UICONTROL Configure]** page, select **[!UICONTROL Save and Edit Dynamic Configuration]**.
 
-    ![Image of the datastreams user interface showing the datastream configuration page.](assets/configure-dynamic-datastream/save-and-edit.png)
+    ![Datastreams user interface showing the datastream configuration page.](assets/configure-dynamic-datastream/save-and-edit.png)
 
 1. Select **[!UICONTROL Add Dynamic Configuration]**.
     
-    ![Image of the datastreams user interface showing the dynamic configuration no rule added message.](assets/configure-dynamic-datastream/add-dynamic-config.png)
+    ![Datastreams user interface showing the dynamic configuration page before any rules are added.](assets/configure-dynamic-datastream/add-dynamic-config.png)
 
 1. From the **[!UICONTROL Resources]** panel, drag and drop the items that you want to build your rule with to the right side of the window. You can combine multiple resources to build complex rules.
 
     Use each resource's options, such as **[!UICONTROL equals]**, **[!UICONTROL does not equal]**, **[!UICONTROL exists]**, and more, to fine tune your rules.
 
-    ![Image of the datastreams user interface showing the dynamic configuration rule.](assets/configure-dynamic-datastream/drag-resources.png)
+    ![Datastreams user interface showing the dynamic configuration rule builder with resources being dragged.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. In the **[!UICONTROL Configuration]** section, toggle the services that you want to enable or disable for each rule, depending on whether you want the data to be sent to each service. If you turn the toggle off, the service routing is disabled and *no data* will be sent to the upstream service.
+1. In the **[!UICONTROL Configuration]** section, toggle the services that you want to enable or disable for each rule, depending on whether you want the data to be sent to each service. If you turn the toggle off, the service routing is disabled and *no data* will be sent to the downstream service.
 
-    ![Image of the datastreams user interface showing the dynamic configuration rule.](assets/configure-dynamic-datastream/enable-service.png)
+    ![Datastreams user interface showing the dynamic configuration rule with service toggles.](assets/configure-dynamic-datastream/enable-service.png)
 
 1. When you are done configuring your rules, select **[!UICONTROL Save]**.
 
@@ -136,9 +129,9 @@ For example, consider the complex rule shown in the image below.
 
 You can break this rule into the following simpler rules:
 
-![Platform UI image showing a complex rule.](assets/configure-dynamic-datastream/simple-rule-1.png)
+![Platform UI image showing the first simplified rule.](assets/configure-dynamic-datastream/simple-rule-1.png)
 
-![Platform UI image showing a complex rule.](assets/configure-dynamic-datastream/simple-rule-2.png)
+![Platform UI image showing the second simplified rule.](assets/configure-dynamic-datastream/simple-rule-2.png)
 
 **Avoid complex rules**. Simpler rules ensure faster evaluation and better maintainability.
 

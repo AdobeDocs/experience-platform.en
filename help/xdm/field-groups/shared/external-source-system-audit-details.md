@@ -9,7 +9,7 @@ exl-id: 6aa154f3-620f-4a2e-9e33-a0757d0491c1
 
 ![A schema diagram of the External Source System Audit Details field group.](../../images/field-groups/shared/external-source-system-audit-details.png)
 
-| Display name                                     | Property                                 | Data type | Description                      | 
+| Display name                                     | Property                                 | Data type | Description                      |
 | -------------------------------------------------| ---------------------------------------- | --------- | --- |
 | [!UICONTROL External Source System Audit Details] |  `external-source-system-audit-details`  | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md)  |  The '[!UICONTROL External Source System Audit Details]' field group extends the core 'External Source System Audit Attributes' data type by referencing its properties and adding contextual metadata. This facilitates detailed audit tracking and flexible data integration for external sources, accommodating the asynchronous nature of profile ingestion.  |
 

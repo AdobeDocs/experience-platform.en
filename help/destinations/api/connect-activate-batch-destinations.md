@@ -9,7 +9,7 @@ exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 # Connect to file-based email marketing destinations and activate data using the Flow Service API
 
 >[!IMPORTANT]
-> 
+>
 >* To connect to a destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). 
 >
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
@@ -21,7 +21,7 @@ exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 This tutorial demonstrates how to use the Flow Service API to create a file-based [email marketing destination](../catalog/email-marketing/overview.md), create a dataflow to your newly created destination, and export data to your newly created destination via CSV files.
 
 >[!TIP]
-> 
+>
 >To learn how to activate data to cloud storage destinations using the Flow Service API, read the [dedicated API tutorial](/help/destinations/api/activate-segments-file-based-destinations.md).
 
 This tutorial uses the [!DNL Adobe Campaign] destination in all examples, but the steps are identical for file-based email marketing destinations.
@@ -32,13 +32,13 @@ If you prefer to use the Experience Platform user interface to connect to a dest
 
 ## Getting started {#get-started}
 
-This guide requires a working understanding of the following components of Adobe Experience Platform:
+This guide requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
 *   [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-*   [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] allows you to build audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-Time Customer Profile] data.
+*   [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] builds audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-Time Customer Profile] data.
 *   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you need to know in order to activate data to batch destinations in Experience Platform.
+The following sections provide additional information that you need to know to activate data to batch destinations in Experience Platform.
 
 ### Gather required credentials {#gather-required-credentials}
 
@@ -59,7 +59,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values-headers}
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+To make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -79,7 +79,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ### API reference documentation {#api-reference-documentation}
 
-You can find accompanying reference documentation for all the API operations in this tutorial. Refer to the [Flow Service API documentation on Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). We recommend that you use this tutorial and the API reference documentation in parallel.
+You can find accompanying reference documentation for all the API operations in this tutorial. See the [Flow Service API documentation on Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). We recommend that you use this tutorial and the API reference documentation in parallel.
 
 ## Get the list of available destinations {#get-the-list-of-available-destinations}
 
@@ -138,7 +138,7 @@ Next, you must connect to your [!DNL Experience Platform] data, so you can expor
 1. First, you must perform a call to authorize access to your data in [!DNL Experience Platform], by setting up a base connection.
 2. Then, using the base connection ID, perform another call in which you create a *source connection*, which establishes the connection to your [!DNL Experience Platform] data.
 
-### Authorize access to your data in [!DNL Experience Platform]
+### Authorize access to your data in [!DNL Experience Platform] {#authorize-access-experience-platform}
 
 **API format**
 
@@ -525,7 +525,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 |`name`| Provide a name for the base connection to the batch destination. |
 |`description` | Optionally, you can provide a description for the base connection. |
 | `connectionSpec.id`| Use the connection spec ID for your desired batch destination. You obtained this ID in the step [Get the list of available destinations](#get-the-list-of-available-destinations).|
-| `auth.specname`| Indicates the authentication format for the destination. To find out the specName for your destination, perform a [GET call to the connection specs endpoint](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), providing the connection spec of your desired destination. Look for the parameter `authSpec.name` in the response. <br> For example, for Adobe Campaign destinations, you can use any of `S3`, `SFTP with Password`, or `SFTP with SSH Key`. |
+| `auth.specname`| Indicates the authentication format for the destination. To find out the specName for your destination, perform a [GET call to the connection specs endpoint](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), providing the connection spec of your desired destination. Look for the parameter `authSpec.name` in the response. <br> For example, for [!DNL Adobe Campaign] destinations, you can use any of `S3`, `SFTP with Password`, or `SFTP with SSH Key`. |
 | `params`| Depending on the destination that you are connecting to, you must provide different required authentication parameters. For Amazon S3 connections, you must provide your access ID and secret key to your Amazon S3 storage location. <br> To find out the required parameters for your destination, perform a [GET call to the connection specs endpoint](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), providing the connection spec of your desired destination. Look for the parameter `authSpec.spec.required` in the response. |
 
 {style="table-layout:auto"}
@@ -545,7 +545,7 @@ A successful response contains the base connection's unique identifier (`id`). S
 [!DNL Adobe Experience Platform] exports data for batch email marketing and cloud storage destinations in the form of [!DNL CSV] files. In this step, you can determine the path in your storage location where the files will be exported.
 
 >[!IMPORTANT]
-> 
+>
 >[!DNL Adobe Experience Platform] automatically splits the export files at 5 million records (rows) per file. Each row represents one profile.
 >
 >Split file names are appended with a number that indicates the file is part of a larger export, as such: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
@@ -928,7 +928,7 @@ curl -X POST \
 | --------- | ----------- |
 |`name`| Provide a name for the dataflow you are creating. |
 |`description` | Optionally, you can provide a description for the dataflow. |
-| `flowSpec.Id`| Use the flow spec ID for the batch destination that you want to connect to. To retrieve the flow spec ID, perform a GET operation on the `flowspecs` endpoint, as shown in the [flow specs API reference documentation](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). In the response, look for `upsTo` and copy the corresponding ID of the batch destination that you want to connect to. For example, for Adobe Campaign, look for `upsToCampaign` and copy the `id` parameter.|
+| `flowSpec.Id`| Use the flow spec ID for the batch destination that you want to connect to. To retrieve the flow spec ID, perform a GET operation on the `flowspecs` endpoint, as shown in the [flow specs API reference documentation](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). In the response, look for `upsTo` and copy the corresponding ID of the batch destination that you want to connect to. For example, for [!DNL Adobe Campaign], look for `upsToCampaign` and copy the `id` parameter.|
 | `sourceConnectionIds`| Use the source connection ID you obtained in the step [Connect to your Experience Platform data](#connect-to-your-experience-platform-data).|
 | `targetConnectionIds`| Use the target connection ID you obtained in the step [Connect to batch destination](#connect-to-batch-destination).|
 | `transformations`| In the next step, you will populate this section with the audiences and profile attributes to be activated. |
@@ -959,7 +959,7 @@ A successful response returns the ID (`id`) of the newly created dataflow and an
 
 Having created all the connections and the dataflow, you now can activate your profile data to the destination platform. In this step, you select which audiences and which profile attributes to export to the destination.
 
-You can also determine the file naming format of the exported files and which attributes should be used as [deduplication keys](../ui/activate-batch-profile-destinations.md#mandatory-keys) or [mandatory attributes](../ui/activate-batch-profile-destinations.md#mandatory-attributes). In this step, you can also determine the schedule to send data to the destination.
+You can also determine the file naming format of the exported files and which attributes should be used as [deduplication keys](../ui/activate-batch-profile-destinations.md#mandatory-attributes) or [mandatory attributes](../ui/activate-batch-profile-destinations.md#mandatory-attributes). In this step, you can also determine the schedule to send data to the destination.
 
 To activate audiences to your new destination, you must perform a JSON PATCH operation, similar to the example below. You can activate mutiple audiences and profile attributes in one call. To learn more about JSON PATCH, see the [RFC specification](https://tools.ietf.org/html/rfc6902). 
 
@@ -1044,8 +1044,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `value` | The new value you want to update your parameter with. |
 | `id` | Specify the ID of the audience you are adding to the destination dataflow.  |
 | `name` | *Optional*. Specify the name of the audience you are adding to the destination dataflow. Note that this field is not mandatory and you can successfully add an audience to the destination dataflow without providing its name. |
-| `filenameTemplate` | This field determines the file name format of the files that are exported to your destination. <br> The following options are available: <br> <ul><li>`%DESTINATION_NAME%`: Mandatory. The exported files contain the destination name.</li><li>`%SEGMENT_ID%`: Mandatory. The exported files contain the ID of the exported audience.</li><li>`%SEGMENT_NAME%`: Optional. The exported files contain the name of the exported audience.</li><li>`DATETIME(YYYYMMdd_HHmmss)` or `%TIMESTAMP%`: Optional. Select one of these two options for your files to include the time when they are generated by Experience Platform.</li><li>`custom-text`: Optional. Replace this placeholder with any custom text that you would like to append at the end of your file names.</li></ul> <br> For more information about configuring file names, refer to the [configure file names](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) section in the batch destinations activation tutorial.  |
-| `exportMode` | Mandatory. Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, refer to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. |
+| `filenameTemplate` | This field determines the file name format of the files that are exported to your destination. <br> The following options are available: <br> <ul><li>`%DESTINATION_NAME%`: Mandatory. The exported files contain the destination name.</li><li>`%SEGMENT_ID%`: Mandatory. The exported files contain the ID of the exported audience.</li><li>`%SEGMENT_NAME%`: Optional. The exported files contain the name of the exported audience.</li><li>`DATETIME(YYYYMMdd_HHmmss)` or `%TIMESTAMP%`: Optional. Select one of these two options for your files to include the time when they are generated by Experience Platform.</li><li>`custom-text`: Optional. Replace this placeholder with any custom text that you would like to append at the end of your file names.</li></ul> <br> For more information about configuring file names, see the [configure file names](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) section in the batch destinations activation tutorial.  |
+| `exportMode` | Mandatory. Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, see [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. |
 | `startDate` | Select the date when the audience should start exporting profiles to your destination. |
 | `frequency` | Mandatory. <br> <ul><li>For the `"DAILY_FULL_EXPORT"` export mode, you can select `ONCE`, `DAILY`, `WEEKLY`, or `MONTHLY`.</li><li>For the `"FIRST_FULL_THEN_INCREMENTAL"` export mode, you can select `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul>   |
 | `triggerType` | For *batch destinations* only. This field is required only when selecting the `"DAILY_FULL_EXPORT"` mode in the `frequency` selector. <br> Mandatory. <br> <ul><li>Select `"AFTER_SEGMENT_EVAL"` to have the activation job run immediately after the daily Experience Platform batch segmentation job completes. This ensures that when the activation job runs, the most up-to-date profiles are exported to your destination.</li><li>Select `"SCHEDULED"` to have the activation job run at a fixed time. This ensures that Experience Platform profile data is exported at the same time each day, but the profiles you export may not be the most up-to-date, depending on whether the batch segmentation job has completed before the activation job starts. When selecting this option, you must also add a `startTime` to indicate at which time in UTC the daily exports should occur.</li></ul> |
@@ -1248,11 +1248,11 @@ The returned response should include in the `transformations` parameter the audi
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. See [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide for more information on interpreting error responses.
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully connected Experience Platform to one of your preferred file-based email marketing destinations and set up a dataflow to the respective destination to export data files. Outgoing data can now be used in the destination for email campaigns, targeted advertising, and many other use cases. See the following pages for more details, such as how to edit existing dataflows using the Flow Service API:
+You have successfully connected Experience Platform to one of your preferred file-based email marketing destinations and set up a dataflow to the respective destination to export data files. Outgoing data can now be used in the destination for email campaigns, targeted advertising, and many other use cases. See the following pages for more details, such as how to edit existing dataflows using the Flow Service API:
 
 * [Destinations overview](../home.md)
 * [Destinations Catalog overview](../catalog/overview.md)

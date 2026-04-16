@@ -886,7 +886,7 @@ The `FILTER CONTEXT` command calculates statistics on a subset of the dataset ba
 The console output appears as seen below.
 
 ```console
-|     Statistics ID      | 
+|     Statistics ID      |
 | ---------------------- |
 | adc_geometric_stats_1  |
 (1 row)

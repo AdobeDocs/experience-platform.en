@@ -10,7 +10,7 @@ exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
 
 Adobe Livefyre enables you to discover, organize, and publish a constant flow of user generated content onto your website to create authentic and highly personalized experiences.
 
-Adobe Livefyre is a social extension in Adobe Experience Platform. For more information about the Adobe Livefyre, read the [Livefyre implementation guide](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
+Adobe Livefyre is a social extension in [!DNL Adobe Experience Platform]. For more information about the Adobe Livefyre, read the [Livefyre implementation guide](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
 
 This destination is a tag extension. For more information about how tags extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
@@ -20,7 +20,7 @@ This destination is a tag extension. For more information about how tags extensi
 
 This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Experience Platform.
 
-To use this extension, you need access to tags in Adobe Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+To use this extension, you need access to tags in [!DNL Adobe Experience Platform]. Tags are offered to [!DNL Adobe Experience Cloud] customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 
@@ -30,7 +30,7 @@ In the [Experience Platform interface](https://platform.adobe.com/), go to **[!U
 
 Select the extension from the catalog or use the search bar.
 
-Click on the destination to highlight it, then select **[!UICONTROL Configure]** in the right rail. If the **[!UICONTROL Configure]** control is greyed out, you are missing the **[!UICONTROL manage_properties]** permission. See [Prerequisites](#prerequisites).
+Select the destination, then select **[!UICONTROL Configure]** in the right rail. If the **[!UICONTROL Configure]** control is grayed out, you are missing the **[!UICONTROL manage_properties]** permission. See [Prerequisites](#prerequisites).
 
 Select the tag property in which you want to install the extension. You also have the option of creating a new property. A property is a collection of rules, data elements, configured extensions, environments, and libraries. Learn about properties in the [tags documentation](../../../tags/ui/administration/companies-and-properties.md).
 

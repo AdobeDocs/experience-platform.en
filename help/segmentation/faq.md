@@ -112,7 +112,7 @@ Payload attributes are attributes that are ingested as part of the CSV upload of
 
 Enrichment attributes are attributes that come from a dataset and are joined with an audience in Audience Composition. These attributes can currently only be used in Adobe Journey Optimizer campaigns. Support for Adobe Journey Optimizer journeys is coming soon, with support for downstream destinations pending future release.
 
-| Activation channel | Audiences from CSV custom upload | Audiences from Audience Composition | 
+| Activation channel | Audiences from CSV custom upload | Audiences from Audience Composition |
 | --- | --- | --- |
 | Real-Time CDP Destinations | Both the payload attributes and the audiences can be activated. | Only the audience can be activated. Enrichment attributes **cannot** be activated. |
 | Adobe Journey Optimizer Campaigns | Neither the audience nor the payload attributes can be activated. | Both the audience and the enrichment attributes can be activated. |
@@ -411,8 +411,6 @@ Streaming segmentation works on all data that was ingested using a streaming sou
 ### How are segments defined as batch or streaming segmentation?
 
 A segment definition is defined as batch, streaming, or edge segmentation based on a combination of query type and event history duration. A list of which segments will be evaluated as a streaming segment definition can be found in the [streaming segmentation query types section](#query-types).
-
-Please note that if a segment definition contains **both** an `inSegment` expression and a direct single-event chain, it cannot qualify for streaming segmentation. If you want to have this segment definition qualify for streaming segmentation, you should make the direct single-event chain its own segment.
 
 ### Why does the number of "total qualified" segments keep increasing while the number under "Last X days" remains at zero within the segment definition details section?
 

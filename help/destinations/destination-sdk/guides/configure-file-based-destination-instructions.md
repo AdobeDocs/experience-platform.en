@@ -11,7 +11,7 @@ This page describes how to use the information in [Configuration options in Dest
 
 ## Prerequisites {#prerequisites}
 
-Before advancing to the steps illustrated below, please read the [Destination SDK getting started](../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
+Before advancing to the steps illustrated below, read the [Destination SDK getting started](../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
 
 ## Steps to use the configuration options in Destination SDK to set up your destination {#steps}
 
@@ -249,7 +249,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Step 3: Create audience metadata configuration {#create-audience-metadata-configuration}
 
-For some destinations, Destination SDK requires that you configure an audience metadata configuration to programmatically create, update, or delete audiences in your destination. Refer to [Audience metadata management](../functionality/audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
+For some destinations, Destination SDK requires that you configure an audience metadata configuration to programmatically create, update, or delete audiences in your destination. See [Audience metadata management](../functionality/audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
 
 If you use an audience metadata configuration, you must connect it to the destination configuration you created in step 2. Add the instance ID of your audience metadata configuration to your destination configuration as `audienceTemplateId`.
 
@@ -404,14 +404,14 @@ Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION
     * [Azure Blob](../functionality/destination-configuration/customer-authentication.md#blob)
     * [Azure Data Lake Storage](../functionality/destination-configuration/customer-authentication.md#adls)
     * [Google Cloud Storage](../functionality/destination-configuration/customer-authentication.md#gcs)
-    * [SFTP authentication with SSH key](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
-    * [SFTP authentication with password](../functionality/destination-configuration/customer-authentication.md#sftp-password)
+    * [SFTP authentication with SSH key](../functionality/destination-configuration/customer-authentication.md#sftp-ssh-key-auth)
+    * [SFTP authentication with password](../functionality/destination-configuration/customer-authentication.md#sftp-password-auth)
 
 * If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, you must create a [credentials configuration](../credentials-api/create-credential-configuration.md) and pass the credential object's ID in the `authenticationId` parameter in the [destination delivery](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) configuration.
 
 ## Step 5: Test your destination {#test-destination}
 
-After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](../testing-api/batch-destinations/file-based-destination-testing-overview.md) to test the integration between Adobe Experience Platform and your destination.
+After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](../testing-api/batch-destinations/file-based-destination-testing-overview.md) to test the integration between [!DNL Adobe Experience Platform] and your destination.
 
 As part of the process to test your destination, you must use the Experience Platform UI to create audiences, which you will activate to your destination. Refer to the two resources below for instructions how to create audiences in Experience Platform:
 

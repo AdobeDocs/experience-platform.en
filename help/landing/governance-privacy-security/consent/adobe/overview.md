@@ -111,7 +111,8 @@ See the section on [browsing profiles by identity](../../../../profile/ui/user-g
 
 The new consent attributes will not appear on a profile's dashboard by default. Therefore, you must navigate to the **[!UICONTROL Attributes]** tab on the details page of a profile in order to confirm that they have been ingested as expected. See the guide on the [profile dashboard](../../../../profile/ui/profile-dashboard.md) to learn how to customize the dashboard to suit your needs.
 
-<!-- (To be included once CJM is GA)
+<!-- 
+(To be included once CJM is GA)
 ## Handling consent in Customer Journey Management
 
 If you are using Customer Journey Management, after confirming that your profiles and segments contain consent data, you can start honoring customer [marketing preferences](../../../../xdm/data-types/consents.md#marketing) when pulling segments from Experience Platform. Specifically, profiles who have opted out of the email marketing preference should not be included in segments that are targeted for email campaigns.

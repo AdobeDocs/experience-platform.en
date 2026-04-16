@@ -312,7 +312,8 @@ Row-level expiration requires the following technical conditions:
 Dataset TTLs are evaluated and processed every 30 days, deleting all expired records. An event is considered expired if it was ingested into Experience Platform more than 30 days ago (ingestion date > 30 days) and its event date exceeds the defined retention period (TTL).
 +++
 
-<!-- ### How soon will the Dataset Retention job delete data from Profile services?
+<!-- 
+### How soon will the Dataset Retention job delete data from Profile services?
 
 +++Answer
 Once a retention policy is set, existing events that already exceed the newly defined TTL are immediately deleted. Newer events remain until their timestamps surpass the retention period.
@@ -322,7 +323,8 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 - New events receive a 30-day expiration as they are ingested.
 - Existing events with a timestamp older than April 15th are immediately deleted.
 - Existing events with a timestamp after April 15th are set to expire 30 days after their timestamp (for example, an event from April 18th would be deleted on May 18th).
-+++ -->
++++ 
+-->
 
 ### Can I set different retention policies for data lake and Profile services?
 

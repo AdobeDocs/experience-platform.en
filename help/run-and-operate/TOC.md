@@ -15,4 +15,4 @@ role: Admin, User
   * [Inspect job schedules](job-schedules.md)
   * [View job details](job-schedules-details.md)
   * [Identify anti-patterns](job-schedules-anti-patterns.md)
-
+* [Health Checks](health-checks.md)

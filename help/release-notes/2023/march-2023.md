@@ -195,7 +195,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | --- | --- |
-| Beta availability of [!DNL Chatlio] | The [!DNL Chatlio] source is now available in beta. Use the [!DNL Chatlio] source to stream your [!DNL Chatlio] events data to Experience Platform. For more information, read the [[!DNL Chatlio] overview](../../sources/connectors/marketing-automation/chatlio-webhook.md). | 
+| Beta availability of [!DNL Chatlio] | The [!DNL Chatlio] source is now available in beta. Use the [!DNL Chatlio] source to stream your [!DNL Chatlio] events data to Experience Platform. For more information, read the [[!DNL Chatlio] overview](../../sources/connectors/marketing-automation/chatlio-webhook.md). |
 | Beta availability of [!DNL Customer.io] | The [!DNL Customer.io] source is now available in beta. Use the [!DNL Customer.io] source to stream your customer events data to Experience Platform. For more information, read the [[!DNL Customer.io] overview](../../sources/connectors/marketing-automation/customerio-webhook.md). |
 | Beta availability of [!DNL Pendo] | The [!DNL Pendo] source is now available in beta. Use the [!DNL Pendo] source to stream your product analytics data to Experience Platform. For more information, read the [[!DNL Pendo] overview](../../sources/connectors/analytics/pendo-webhook.md). |
 | Support for draft dataflows | You can now use the Flow Service API to set your dataflows to a draft state. Drafted dataflows can later be updated and published with new information. For more information, read the guide on [setting your sources dataflows as drafts](../../sources/tutorials/api/draft.md). |

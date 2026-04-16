@@ -23,7 +23,7 @@ For detailed descriptions of the parameters used below, see [configuration optio
 
 ## Prerequisites {#prerequisites}
 
-Before advancing to the steps outlined below, please read the [Destination SDK getting started](../../getting-started.md) page for information on obtaining the necessary authentication credentials and other prerequisites to work with Destination SDK APIs.
+Before advancing to the steps outlined below, read the [Destination SDK getting started](../../getting-started.md) page for information on obtaining the necessary authentication credentials and other prerequisites to work with Destination SDK APIs.
 
 ## Step 1: Create a server and file configuration {#create-server-file-configuration}
 
@@ -451,4 +451,4 @@ If you are an Independent Software Vendor (ISV) or System Integrator (SI) creati
 
 ## Next steps {#next-steps}
 
-By reading this article, you now know how to use Destination SDK to author a custom [!DNL Amazon S3] destination to export prospect audiences.
+You now know how to use Destination SDK to author a custom [!DNL Amazon S3] destination to export prospect audiences.

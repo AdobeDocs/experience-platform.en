@@ -50,13 +50,13 @@ df_labels.head()
 
 Number of classes: 50000
 
-|   |   eventType  |   userId  |   subscriptionOccurred  |   random_row_number_for_user| 
-| ---  |   ---  |   ---  |   ---  |   --- | 
-| 0  |   directMarketing.emailClicked |    01027994177972439148069092698714414382  |   0 |    1| 
-| 1  |   directMarketing.emailOpened  |   01054714817856066632264746967668888198  |   0 |    1| 
-| 2  |   web.formFilledOut  |   01117296890525140996735553609305695042  |   1  |   15| 
-| 3  |   directMarketing.emailClicked |    01149554820363915324573708359099551093 |    0  |   1| 
-| 4  |   directMarketing.emailClicked  |   01172121447143590196349410086995740317  |   0  |   1| 
+|   |   eventType  |   userId  |   subscriptionOccurred  |   random_row_number_for_user|
+| ---  |   ---  |   ---  |   ---  |   --- |
+| 0  |   directMarketing.emailClicked |    01027994177972439148069092698714414382  |   0 |    1|
+| 1  |   directMarketing.emailOpened  |   01054714817856066632264746967668888198  |   0 |    1|
+| 2  |   web.formFilledOut  |   01117296890525140996735553609305695042  |   1  |   15|
+| 3  |   directMarketing.emailClicked |    01149554820363915324573708359099551093 |    0  |   1|
+| 4  |   directMarketing.emailClicked  |   01172121447143590196349410086995740317  |   0  |   1|
 
 {style="table-layout:auto"}
 
@@ -141,12 +141,12 @@ df_features.head()
 **Sample output**
 
 |   |   userId  |  emailsReceived  |  emailsOpened  |  emailsClicked  |  productsViewed   | propositionInteracts  |  propositionDismissed  |  webLinkClicks |   minutes_since_emailSent  |  minutes_since_emailOpened  |  minutes_since_emailClick   | minutes_since_productView |   minutes_since_propositionInteract    |minutes_since_propositionDismiss |   minutes_since_linkClick|
-| --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- | 
-| 0 |    01102546977582484968046916668339306826 |    1   |  0  |   0  |   0  |   0  |   0  |   0  |   0.0  |   NaN  |   NaN  |   NaN  |   NaN  |   None  |   NaN| 
-| 1  |   01102546977582484968046916668339306826  |   2  |   0  |   0  |   0  |   0  |   0  |   0  |   0.0  |   NaN  |   NaN  |   NaN  |   NaN  |   None  |   NaN| 
-| 2  |   01102546977582484968046916668339306826  |   3  |   0  |   0  |   0  |   0  |   0  |   0  |   0.0  |   NaN  |   NaN  |   NaN  |   NaN  |   None  |   NaN| 
-| 3  |   01102546977582484968046916668339306826  |   3  |   1  |   0  |   0  |   0  |   0  |   0  |   540.0  |   0.0  |   NaN  |   NaN  |   NaN  |   None  |   NaN| 
-| 4  |   01102546977582484968046916668339306826  |   3  |   2  |   0  |   0  |   0  |   0  |   0  |   588.0   |  0.0  |   NaN  |   NaN  |  NaN  |   None  |   NaN| 
+| --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- |
+| 0 |    01102546977582484968046916668339306826 |    1   |  0  |   0  |   0  |   0  |   0  |   0  |   0.0  |   NaN  |   NaN  |   NaN  |   NaN  |   None  |   NaN|
+| 1  |   01102546977582484968046916668339306826  |   2  |   0  |   0  |   0  |   0  |   0  |   0  |   0.0  |   NaN  |   NaN  |   NaN  |   NaN  |   None  |   NaN|
+| 2  |   01102546977582484968046916668339306826  |   3  |   0  |   0  |   0  |   0  |   0  |   0  |   0.0  |   NaN  |   NaN  |   NaN  |   NaN  |   None  |   NaN|
+| 3  |   01102546977582484968046916668339306826  |   3  |   1  |   0  |   0  |   0  |   0  |   0  |   540.0  |   0.0  |   NaN  |   NaN  |   NaN  |   None  |   NaN|
+| 4  |   01102546977582484968046916668339306826  |   3  |   2  |   0  |   0  |   0  |   0  |   0  |   588.0   |  0.0  |   NaN  |   NaN  |  NaN  |   None  |   NaN|
 
 {style="table-layout:auto"}
 
@@ -224,7 +224,7 @@ df_training_set.head()
 **Sample output**
 
 |  |  userId |   eventType  |  timestamp   | subscriptionOccurred |   emailsReceived  |  emailsOpened   | emailsClicked  |  productsViewed  |  propositionInteracts  |  propositionDismissed  |  webLinkClicks  |  minutes_since_emailSent   | minutes_since_emailOpened  |  minutes_since_emailClick  |  minutes_since_productView |   minutes_since_propositionInteract  |  minutes_since_propositionDismiss  |  minutes_since_linkClick  |  random_row_number_for_user|
-| ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |    
+| ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |
 |0  |  02554909162592418347780983091131567290 |   directMarketing.emailSent  |  2023-06-17 13:44:59.086  |  0  |  2  |  0  |  0  |  0  |  0  |  0  |  0  |  0.0  |  NaN  |  NaN  |  NaN   | NaN  |  None  |  NaN  |  1|
 |1  |  01130334080340815140184601481559659945  |  directMarketing.emailOpened   | 2023-06-19 06:01:55.366 |   0  |  1  |  3 |   0  |  1 |   0  |  0  |  0  |  1921.0  |  0.0  |  NaN  |  1703.0  |  NaN  |  None  |  NaN |   1|
 |2  |  01708961660028351393477273586554010192  |  web.formFilledOut  |  2023-06-19 18:36:49.083  |  1  |  1  |  2  |  2  |  0  |  0  |  0  |  0  |  2365.0  |  26.0  |  1.0  |  NaN |   NaN  |  None |   NaN  |  7|
