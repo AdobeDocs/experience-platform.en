@@ -1,23 +1,21 @@
 ---
 title: Custom Objects With B2B CDP
-description: ???
+description: Learn how to create a one-to-many relationship custom object for B2B CDP.
 ---
 
 # Using custom objects with B2B CDP
 
-custom objects info
+You can now enable custom objects with relational one-to-many (1:M) joins, which lets import and use custom objects for use cases including segmentation and Query Service. You can use these one-to-many relationship custom objects to support your custom CRM objects, track product entitlements and purchases, as well as manage offers for customers.
 
-## Create a custom object
+## Create a relational schema
 
-### Create a relational schema
+To start connecting your custom object using a one-to-many relationship, you'll first need to create a relational schema to model your data.
 
-To start creating a custom object, you'll first need to create a relational schema to model your data.
-
-Under the **Data management** section, select **Schemas**. On the Schema overview page, select **Create schema** followed by **Relational**.
+Under the **[!UICONTROL Data management]** section, select **[!UICONTROL Schemas]**. On the Schema overview page, select **[!UICONTROL Create schema]** followed by **[!UICONTROL Relational]**.
 
 IMAGE
 
-The **Create relational schema** page appears. You can add the details of the schema including the display name, description, and the schema behavior. 
+The **[!UICONTROL Create relational schema]** page appears. You can add the details of the schema including the display name, description, and the schema behavior. 
 
 IMAGE
 
@@ -26,7 +24,7 @@ IMAGE
 | Record | Record data provides information about the attributes of a subject. This subject can be an organization or an individual. |
 | Time series | Time series data provides a snapshot of the system at the time an action was taken either directly or indirectly by a record subject. |
 
-### Add your fields
+## Add your fields
 
 Once you created your relational schema, you can add the fields for your schema, including marking the primary key and version identifier, in the Schema Editor.
 
@@ -36,24 +34,64 @@ For more information on creating your relational schema, read the [create a sche
 
 ### Create a dataset
 
-Once you created your schema, you'll need to create a dataset for the schema's data to go to. 
+Once you created your schema, you'll need to create a dataset that uses the schema to house your custom objects data.
 
 IMAGE
 
-### Enable the schema for segmentation
+For more information on creating a dataset, read the [create a dataset guide](/help/catalog/datasets/user-guide.md#create)
 
-In order to use this schema with custom objects in B2B CDP, you **must** mark the schema as enabled for segmentation. Make sure you select **Enable for segmentation** when you create your schema.
+## Enable the schema for segmentation
+
+>[!NOTE]
+>
+>If you are **only** using custom objects with Query Service, you do **not** need to enable the schema for segmentation.
+>
+>Additionally, you can only enable a maximum of **20** schemas per sandbox for segmentation. Once a schema is enabled, you **cannot** disable the schema from segmentation - you have to delete the schema in order to remove it.
+
+Once you've created your dataset, you can now enable the schema for segmentation. You **must** mark the schema as enabled for segmentation in order to use this schema for segmentation use cases with custom objects in B2B CDP.
 
 IMAGE
 
 ## Add your relationships
 
-Now that you've added your fields to your schema, you can define the relationships for those fields. To add a relationship to the field, select **Add relationship** on the field you want to add the relationship to.
+Now that you've enabled your schema for segmentation, you can continue creating your schema by defining the relationships for the schema's fields. To add a relationship to the field, select **Add relationship** on the field you want to add the relationship to.
 
 IMAGE
 
-The 
+## Ingest data into the dataset
 
-how to use them in segment builder
+>[!IMPORTANT]
+>
+>You **must** include a file that includes `_change_request_type` within the source, as this lets Experience Platform know that the data will be used for custom objects.
+
+With your schema fully created, you can start ingesting data from your source into the dataset. 
+
+To get data from your source to Experience Platform, you'll need to create a dataflow to ingest batch data from your source into the dataset. The following cloud storage source providers are supported: Amazon S3, SFTP, and Data Landing Zone.
+
+Your data within your cloud storage source must conform to the following specifications:
+
+- The file type is either delimited (such as a CSV or TSV) or JSON
+- The file contains one row per primary key in the file
+- The file's column names match the schema's field names
+
+When 
+
+>[!NOTE]
+>
+>When you create your dataflow, keep the following items in mind:
+>
+>- You **must** enable **[!UICONTROL Enable change data capture]**. 
+>- You **must** select the dataset you previously created.
+>- You do **not** need to map the `_change_request_type` field in your dataflow.
+>- Your ingestion frequency can be up to once every 15 minutes.
+
+For more information on creating a dataflow, read the [configure a dataflow to ingest batch data from a cloud storage source guide](/help/sources/tutorials/ui/dataflow/batch/cloud-storage.md).
+
+## Use custom object in Audience Builder
+
+Now that your dataflow has been created, you can use the custom object data within Audience Builder. The custom object can be found in Audience Builder under the same relationship path you created for your custom object schema.
+
+IMAGE
 
 ## Next steps
+
