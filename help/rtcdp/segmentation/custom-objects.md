@@ -62,7 +62,7 @@ IMAGE
 
 >[!IMPORTANT]
 >
->You **must** include a file that includes `_change_request_type` within the source, as this lets Experience Platform know that the data will be used for custom objects.
+>You **must** include a file that includes a `_change_request_type` attribute within the source, as this lets Experience Platform know that the data will be used for custom objects. If you want to insert or update data, set `_change_request_type` to `u` for upsert. If you want to delete data, set `_change_request_type` to `d` for delete. 
 
 With your schema fully created, you can start ingesting data from your source into the dataset. 
 
@@ -72,9 +72,7 @@ Your data within your cloud storage source must conform to the following specifi
 
 - The file type is either delimited (such as a CSV or TSV) or JSON
 - The file contains one row per primary key in the file
-- The file's column names match the schema's field names
-
-When 
+- The file's column names match the schema's field names 
 
 >[!NOTE]
 >
@@ -89,9 +87,14 @@ For more information on creating a dataflow, read the [configure a dataflow to i
 
 ## Use custom object in Audience Builder
 
-Now that your dataflow has been created, you can use the custom object data within Audience Builder. The custom object can be found in Audience Builder under the same relationship path you created for your custom object schema.
+Now that your dataflow has been created, you can use the custom object data within Audience Builder. This custom object data can be used for both people audiences and account audiences. 
+
+The custom object can be found in Audience Builder following the same relationship path that was created for your custom object schema.
 
 IMAGE
 
 ## Next steps
 
+This guide explains how to add one-to-many relationship custom objects to B2B CDP as well as how to use custom object data in segmentation use cases.
+
+To learn more about Audience Builder, read the [Audience Builder guide](./audience-builder.md).
