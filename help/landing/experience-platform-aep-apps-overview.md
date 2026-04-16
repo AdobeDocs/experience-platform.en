@@ -20,7 +20,7 @@ Share this topic with marketers, product owners, and people who build or run the
 
 >[!NOTE]
 >
->This topic is an overview. For how-to steps, user interface actions, and API details, see the links in [Additional resources](#additional-resources).
+>This topic is an overview. For how-to steps, user interface actions, and API details, see [Additional resources](#additional-resources).
 
 ## What the applications are, and the main purpose of each {#applications-at-a-glance}
 
@@ -206,10 +206,10 @@ Your contract, product description, and sales order may set contractual limits o
 
 ### Where to read more {#where-to-read-guardrails}
 
-* [Experience Platform and application guardrails](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-diagrams/architecture-overview/guardrails) — Overview of how guardrails work across the platform and applications.  
-* [Guardrails for data ingestion](https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/guardrails) — Ingestion throughput and related limits.  
-* [Real-Time CDP guardrails](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/guardrails/overview) — Segments, activation, and Real-Time CDP usage.  
-* [License usage](https://experienceleague.adobe.com/en/docs/experience-platform/landing/license-usage-and-guardrails/data-management-best-practices) — Data management and license usage practices on Experience Platform (where applicable to your org).
+- [Experience Platform and application guardrails](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-diagrams/architecture-overview/guardrails) — Overview of how guardrails work across the platform and applications.  
+- [Guardrails for data ingestion](https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/guardrails) — Ingestion throughput and related limits.  
+- [Real-Time CDP guardrails](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/guardrails/overview) — Segments, activation, and Real-Time CDP usage.  
+- [License usage](https://experienceleague.adobe.com/en/docs/experience-platform/landing/license-usage-and-guardrails/data-management-best-practices) — Data management and license usage practices on Experience Platform (where applicable to your org).
 
 If your workflow leans heavily on [!DNL Customer Journey Analytics], [!DNL Adobe Journey Optimizer], [!DNL Adobe Mix Modeler], or [!DNL Query Service], read the guardrails topics for those products in their product help as well.
 
@@ -238,19 +238,15 @@ Use this table to see what you want, what the platform provides, and which appli
 
 ## Terminology {#terminology}
 
-* [!DNL Adobe Experience Platform] — Shared services and features: bringing data in, data modeling, [!DNL Identity Service], [!DNL Real-Time Customer Profile], segmentation, destinations, data governance, privacy, and features such as [!DNL Data Science Workspace] and [!DNL Query Service].
-* Applications — Licensed products on the platform (for example [!DNL Real-Time CDP], [!DNL Adobe Journey Optimizer], [!DNL Customer Journey Analytics], [!DNL Adobe Mix Modeler]) that package workflows for specific jobs. They are not the same as platform services such as [!DNL Query Service] and [!DNL Data Science Workspace].
+- [!DNL Adobe Experience Platform] — Shared services and features: bringing data in, data modeling, [!DNL Identity Service], [!DNL Real-Time Customer Profile], segmentation, destinations, data governance, privacy, and features such as [!DNL Data Science Workspace] and [!DNL Query Service].
+- Applications — Licensed products on the platform (for example [!DNL Real-Time CDP], [!DNL Adobe Journey Optimizer], [!DNL Customer Journey Analytics], [!DNL Adobe Mix Modeler]) that package workflows for specific jobs. They are not the same as platform services such as [!DNL Query Service] and [!DNL Data Science Workspace].
 
 This matches the way the [Experience Platform documentation overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/documentation/overview) groups content.
 
 ## Additional resources {#additional-resources}
 
-* [Adobe Experience Platform overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home) — Main entry points for help.
-* [Experience Platform documentation overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/documentation/overview) — How help topics are organized.
-* [Digital experience blueprints](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/overview/experience-cloud) — Example designs by use case and industry.
+- [Adobe Experience Platform overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home) — Main entry points for help.
+- [Experience Platform documentation overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/documentation/overview) — How help topics are organized.
+- [Digital experience blueprints](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/overview/experience-cloud) — Example designs by use case and industry.
 
 For hands-on learning, see tutorials and courses in [!DNL Experience League] on [!DNL Experience Platform Web SDK], XDM and schemas, identity, segmentation, and destinations.
-
->[!NOTE]
->
->When you add this topic to an Adobe documentation repository, check `exl-id`, `feature`, and `topic` against your repo rules. Replace the placeholder `exl-id` in the YAML header if your workflow assigns a new id.
