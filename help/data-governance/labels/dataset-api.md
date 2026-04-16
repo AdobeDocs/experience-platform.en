@@ -125,9 +125,9 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `entityId` | This identifies the specific dataset entity to be updated. |
-| `entityId.namespace` | This is used to avoid ID collisions. The `namespace` is `AEP`. | 
-| `entityId.id` | The ID of the resource being updated. This refers to the `datasetId`. | 
-| `entityId.type` | The type of the resource being updated. This will always be `dataset`.| 
+| `entityId.namespace` | This is used to avoid ID collisions. The `namespace` is `AEP`. |
+| `entityId.id` | The ID of the resource being updated. This refers to the `datasetId`. |
+| `entityId.type` | The type of the resource being updated. This will always be `dataset`.|
 | `labels` | A list of data usage labels that you want to add to the entire dataset. |
 | `parents` | The `parents` array contains a list of `entityId`s that this dataset will inherit labels from. Datasets can inherit labels from schemas and/or datasets. |
 
@@ -231,7 +231,7 @@ curl -X PUT \
 
 | Parameter | Description |
 | --- | --- |
-| `entityId` | This identifies the specific dataset entity to be updated. The `entityId` must include the following three values:<br/><br/>`namespace`: This is used to avoid ID collisions. The `namespace` is `AEP`.<br/>`id`: The ID of the resource being updated. This refers to the `datasetId`.<br/>`type`: The type of the resource being updated. This will always be `dataset`. | 
+| `entityId` | This identifies the specific dataset entity to be updated. The `entityId` must include the following three values:<br/><br/>`namespace`: This is used to avoid ID collisions. The `namespace` is `AEP`.<br/>`id`: The ID of the resource being updated. This refers to the `datasetId`.<br/>`type`: The type of the resource being updated. This will always be `dataset`. |
 | `labels` | A list of data usage labels that you want to add to the entire dataset. |
 | `parents` | The `parents` array contains a list of `entityId`s that this dataset will inherit labels from. Datasets can inherit labels from schemas and/or datasets. |
 | `optionalLabels` | This parameter is used to remove labels previously applied to a dataset field. A list of any individual fields within the dataset that you want to remove the labels from. Each item in this array must have the following properties: <br/><br/>`option`: An object that contains the [!DNL Experience Data Model] (XDM) attributes of the field. The following three properties are required:<ul><li><code>id</code>: The URI <code>$id</code> value of the schema associated with the field.</li><li><code>contentType</code>: The content type and version number of the schema. This should take the form of one of the valid <a href="../../xdm/api/getting-started.md#accept">Accept headers</a> for an XDM lookup request.</li><li><code>schemaPath</code>: The path to the field within the dataset's schema.</li></ul>`labels`: This value must contain either a subset of the existing field labels applied, or be empty to remove all the existing field labels. PUT or POST methods now return an error if the `optionalLabels` field has any new or modified labels. |

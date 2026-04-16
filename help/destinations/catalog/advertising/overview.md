@@ -22,9 +22,10 @@ To understand the difference between connections and extensions, see [Connection
 
 * [(Beta) Acxiom Audience Distribution](acxiom-audience-connection.md)
 * [(Beta) Acxiom Real ID Audience Connection](acxiom-real-id-audience-connection.md)
-* [Adobe Advertising Cloud connection](adobe-advertising-cloud-connection.md)
-* [Legacy Adobe Advertising Cloud connection](adobe-advertising-cloud-connection-legacy.md)
+* [Adobe Advertising DSP connection](adobe-advertising-dsp-connection.md)
+* [Legacy Adobe Advertising Cloud DSP connection](adobe-advertising-cloud-dsp-connection-legacy.md)
 * [Amazon Ads connection](amazon-ads.md)
+* [Amazon Ads v2 connection](amazon-ads-v2.md)
 * [Bombora connection](bombora.md)
 * [Criteo connection](criteo.md)
 * [Demandbase connection](demandbase.md)

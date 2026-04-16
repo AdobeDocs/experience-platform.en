@@ -177,7 +177,7 @@ A successful response returns HTTP status 200 with a list of audiences that were
 ```
 
 | Property | Audience type | Description |
-| -------- | ------------- | ----------- | 
+| -------- | ------------- | ----------- |
 | `id` | Both | A system-generated read-only identifier for the audience. |
 | `audienceId` | Both | If the audience is a Platform-generated audience, this is the same value as the `id`. If the audience is externally generated, this value is provided by the client. |
 | `schema` | Both | The Experience Data Model (XDM) schema of the audience. |
@@ -240,7 +240,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 ```
 
 | Property | Description |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `name` | The name of the audience. |
 | `description` | A description of the audience. |
 | `type` | A field that displays whether the audience is Platform-generated or is an externally generated audience. Possible values include `SegmentDefinition` and `ExternalSegment`. A `SegmentDefinition` refers to an audience that was generated in Platform, while an `ExternalSegment` refers to an audience that was not generated in Platform. |
@@ -333,7 +333,7 @@ GET /audiences/{AUDIENCE_ID}
 ```
 
 | Parameter | Description |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{AUDIENCE_ID}` | The ID of the audience you are trying to retrieve. Please note that this is the `id` field, and is **not** the `audienceId` field. |
 
 **Request**
@@ -466,7 +466,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 ```
 
 | Property | Description |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `audienceId` | The ID of the audience. For externally generated audiences, this value may be supplied by the user.  |
 | `name` | The name of the audience. |
 | `namespace` | The namespace for the audience. |

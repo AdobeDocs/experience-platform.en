@@ -17,7 +17,7 @@ Content is an essential component of these experiences. To better answer marketi
 
 | Content Type | Features | Overview of functionality |
 | --- | --- | --- |
-| Text | - Keyword tagging <br> | - Automatically extract keywords and tags from enterprise documents and webpages using an out-of-the-box AI service. <br> | 
+| Text | - Keyword tagging <br> | - Automatically extract keywords and tags from enterprise documents and webpages using an out-of-the-box AI service. <br> |
 | Images | - Color tagging <br> - Optical Character Recognition (OCR)|  - Accurately extract dominant colors (labels and hex values) and their weightage from a product image. <br> - Accurately extract any text present from a product image.  |
 
 ## Understanding Content Tagging 

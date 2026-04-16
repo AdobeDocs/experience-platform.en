@@ -27,7 +27,7 @@ Before you can send audience data to a destination, you must set up a connection
    * **[!UICONTROL Activate]**. A connection has already been set up to this destination. This destination supports audience activation and dataset exports.
    * **[!UICONTROL Activate audiences]**. A connection has already been set up to this destination. This destination supports audience activation only.
    
-   For more information about the difference between these controls, you can also refer to the [Catalog](../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.
+   For more information about the difference between these controls, see the [Catalog](../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.
 
    Select either **[!UICONTROL Set up]**, **[!UICONTROL Activate]**, or **[!UICONTROL Activate audiences]**, depending on which control is available to you.
 
@@ -103,7 +103,7 @@ Some file-based destinations support audience activation to known customers, acc
 
 ### Enable destination alerts {#enable-alerts}
 
-1. (Optional) Select the destination dataflow alerts that you want to subscribe to. You can subscribe to alerts when creating a dataflow to receive alert messages regarding the status, success, or failure of your flow run. The available alerts differ based on the destination type (file-based or streaming) that you are connecting to. Read [Subscribe to in-context destination alerts](alerts.md) for detailed information on destination dataflow alerts.
+1. (Optional) Select the destination dataflow alerts that you want to subscribe to. Subscribe to alerts when creating a dataflow to receive alert messages regarding the status, success, or failure of your flow run. The available alerts differ based on the destination type (file-based or streaming) that you are connecting to. Read [Subscribe to in-context destination alerts](alerts.md) for detailed information on destination dataflow alerts.
 
    ![The Configure new destination dialog with the in-context destination alerts subscription options highlighted.](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
@@ -121,6 +121,6 @@ Some file-based destinations support audience activation to known customers, acc
 
 ## Next steps {#next-steps}
 
-By reading this document, you have learned how to use the Experience Platform UI to establish a connection to a destination. As a reminder, the available and required connection parameters vary from destination to destination. You should also consult the destination documentation page in the [destinations catalog](/help/destinations/catalog/overview.md) for specific information about the required inputs and available options per destination type. 
+You now know how to use the Experience Platform UI to establish a connection to a destination. The available and required connection parameters vary from destination to destination. Consult the destination documentation page in the [destinations catalog](/help/destinations/catalog/overview.md) for specific information about the required inputs and available options per destination type.
 
-Next, you can proceed to [activating audiences](/help/destinations/ui/activation-overview.md) or [exporting datasets](/help/destinations/ui/export-datasets.md) to your destination.
+Next, proceed to [activating audiences](/help/destinations/ui/activation-overview.md) or [exporting datasets](/help/destinations/ui/export-datasets.md) to your destination.

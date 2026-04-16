@@ -1,14 +1,13 @@
 ---
 title: Acxiom Audience Connection
 description: Use the [!DNL Acxiom Audience Connection] destination to enhance audiences with [!DNL Acxiom's Real ID] technology and activate audiences to multiple platforms, such as [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], and more.
-badge: label="Beta" type="Informative"
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
 ---
 # [!DNL Acxiom Audience Connection] destination 
 
 >[!NOTE]
 >
->The [!DNL Acxiom Audience Connection] destination is in beta. This destination connector and documentation page are created and maintained by the [!DNL Acxiom] team. For any inquiries or update requests, contact Acxiom directly [here](mailto:acxiom-adobe-help@acxiom.com).
+>This destination connector and documentation page are created and maintained by the [!DNL Acxiom] team. For any inquiries or update requests, contact Acxiom directly [here](mailto:acxiom-adobe-help@acxiom.com).
 
 Use the [!DNL Acxiom Audience Connection] destination to enhance audiences with [!DNL Acxiom's] [Real ID&trade;](https://www.acxiom.com/real-id/real-id/) technology and activate audiences to multiple platforms, such as [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], and more.
 
@@ -45,7 +44,7 @@ The [!DNL Acxiom Audience Connection] destination currently supports audience ac
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
@@ -102,7 +101,7 @@ For the [!DNL Acxiom Audience Connection] destination to correctly receive the a
 [!DNL Acxiom Audience Connection] only allows mapping to the following target fields. The target fields described in the table below must be mapped in the order shown below. 
 
 | Field Name | Description|Required | Field Order | Max Length |
-|---|---|---|---|---|          
+|---|---|---|---|---|
 |First Name|First name of individual|No|1|255|
 |Middle|Middle name or initial of the individual|No|2|50|
 |Last Name|Last name of the individual|Yes|3|255|
@@ -143,7 +142,7 @@ You will need to provide the following information to your [!DNL Adobe] represen
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully activated an audience to the selected destination platform. Next, contact your destination platform representative to begin setting up your campaign.
+You have successfully activated an audience to the selected destination platform. Next, contact your destination platform representative to begin setting up your campaign.
 
 ## Data usage and governance {#data-usage-governance}
 

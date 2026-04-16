@@ -655,7 +655,7 @@ View the complete legacy and new base connection and target connection examples 
 
 ### Backwards-incompatible changes common to [!DNL Amazon S3], [!DNL Azure Blob], and SFTP destinations {#changes-all-destinations}
 
-The profile selector step in all three destinations is replaced by a mapping step which lets you rename the column headers in your exported files, if desired. See the side-by-side image below with the old attribute selector step on the left and the new mapping step on the right.
+The profile selector step in all three destinations is replaced by a mapping step for renaming the column headers in your exported files, if desired. See the side-by-side image below with the old attribute selector step on the left and the new mapping step on the right.
 
 ![Migration guide overview image](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 
@@ -793,4 +793,4 @@ Note that there is no impact on your existing schedule for exports during or aft
 
 ## Next steps {#next-steps}
 
-By reading this page, you now know if you need to take any action in preparation for the migration of the cloud storage destinations. You also know which documentation pages to reference as you set up API-based workflows to export files out of Experience Platform to your preferred cloud storage destinations. Next, you can view the API tutorial to [export data to cloud storage destinations](/help/destinations/api/activate-segments-file-based-destinations.md).
+You now know if you need to take any action in preparation for the migration of the cloud storage destinations. You also know which documentation pages to reference as you set up API-based workflows to export files out of Experience Platform to your preferred cloud storage destinations. Next, you can view the API tutorial to [export data to cloud storage destinations](/help/destinations/api/activate-segments-file-based-destinations.md).

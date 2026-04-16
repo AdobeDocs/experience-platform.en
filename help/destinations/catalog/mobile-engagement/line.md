@@ -1,7 +1,7 @@
 ---
 keywords: mobile;mobile engagement destinations;LINE;LINE mobile engagement destination
 title: LINE connection
-description: The LINE destination allows you to add profiles to your Experience Platform audience and deliver personalized experiences to connected users.
+description: Use the LINE destination to add profiles to your Experience Platform audience and deliver personalized experiences to connected users.
 last-substantial-update: 2022-11-08
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
 ---
@@ -59,7 +59,7 @@ Refer to the [[!DNL LINE] documentation](https://developers.line.biz/en/docs/mes
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |

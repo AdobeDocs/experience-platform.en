@@ -8,7 +8,7 @@ exl-id: 61f32bc1-97a6-45ff-a962-990a2e522735
 
 ## Overview {#overview}
 
-The [!DNL InMoment] tag extension lets you quickly and easily enable online feedback via the Digital Intercept product. In the app, intercepts can be configured and managed via the CXI Cloud Admin allowing CX managers more control of their program.
+The [!DNL InMoment] tag extension enables online feedback quickly and easily via the Digital Intercept product. In the app, intercepts can be configured and managed via the CXI Cloud Admin allowing CX managers more control of their program.
 
 [!DNL InMoment] is a survey extension in [!DNL Adobe Experience Platform]. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100847.html).
 

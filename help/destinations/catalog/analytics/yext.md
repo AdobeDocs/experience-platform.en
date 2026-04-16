@@ -8,7 +8,7 @@ exl-id: 786ea14c-25a3-40ac-906d-6a8f7de04f41
 
 ## Overview {#overview}
 
-The [!DNL Yext Conversion Tracking] Extension lets you measure conversions that can be attributed to your use of Yext products.
+Use the [!DNL Yext Conversion Tracking] Extension to measure conversions that can be attributed to your use of Yext products.
 
 [!DNL Yext Conversion Tracking] is an analytics extension in [!DNL Adobe Experience Platform]. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html).
 

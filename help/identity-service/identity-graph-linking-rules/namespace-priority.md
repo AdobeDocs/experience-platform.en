@@ -210,5 +210,5 @@ To ensure applications on the Edge Network have access to the Edge Profile witho
 
 * Applications on Edge Network such as Adobe Target, Offer Decisioning, and Custom Personalization Destinations will continue to depend on the primary identity in events to access profiles from Edge Profile.
 * Read the [Experience Platform Web SDK & Edge Network architecture diagram](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) for more information on Edge Network behavior.
-* Read the documentation on [Data element types](/help/tags/extensions/client/web-sdk/data-element-types.md) and [Identity data in Web SDK](/help/collection/use-cases/identity/id-overview.md) for more information on how to configure primary identity on Web SDK.
+* Read the documentation on [Data element types](/help/tags/extensions/client/web-sdk/data-element-types.md) and [Identity in Data Collection](/help/collection/identity/overview.md) for more information on how to configure primary identity on Web SDK.
 * Ensure the ECID is included in the experience event. If the ECID is missing, then it will be added to the event payload with `primary=true`, which may lead to unexpected results.
