@@ -9,7 +9,7 @@ exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 
 ## Overview {#overview}
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 > This destination is available only to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 
