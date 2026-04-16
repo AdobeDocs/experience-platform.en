@@ -7,7 +7,7 @@ exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
 ---
 # Snowflake Batch connection {#snowflake-destination}
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 > This destination is available only to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 
