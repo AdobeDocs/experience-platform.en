@@ -292,7 +292,7 @@ To learn more about performing these transformations using Query Service, see [A
 +++Select to view a table of deprecated advanced mapping fields
 
 | Data feed | XDM field | XDM type | Description |
-| --- | --- | --- | --- ||
+| --- | --- | --- | --- |
 | `post_evar1`<br/>`[...]`<br/>`post_evar250` | `_experience.analytics.customDimensions.`<br/>`eVars.eVar1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`eVars.eVar250` | string | Custom Analytics eVars. Each organization can use eVars differently. |
 | `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | string | Custom Analytics props. Each organization can use props differently. |
 | `post_browser_height` | `environment.browserDetails.viewportHeight` | integer | The height of the browser, in pixels. |
