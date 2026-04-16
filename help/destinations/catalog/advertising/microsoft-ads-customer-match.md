@@ -19,23 +19,23 @@ Use the [!DNL Microsoft Ads Customer Match] destination to match customers by em
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when to use the [!DNL Microsoft Ads Customer Match] destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this feature.
+To help you better understand how and when to use the [!DNL Microsoft Ads Customer Match] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this feature.
 
-### Use case #1 {#use-case-1}
+### Retarget existing customers with personalized offers {#use-case-1}
 
 An e-commerce brand wants to reach existing customers through [!DNL Microsoft Search] and [!DNL Microsoft Audience Network] to personalize offers based on their past purchases and browsing history. The brand can ingest email addresses from their own CRM into Experience Platform, build audiences from their own offline data, and send these audiences to [!DNL Microsoft Ads Customer Match] to be used across search and audience ads, optimizing their advertising spending.
 
-### Use case #2 {#use-case-2}
+### Promote new products to existing customers {#use-case-2}
 
-A technology company launched a new product. To promote this new product, they are looking to drive awareness among customers who previously purchased related products. They upload email addresses from their CRM database into Experience Platform, using the email addresses as identifiers. Audiences are created based on customers who own related products. Those audiences get sent to [!DNL Microsoft Ads Customer Match], so the company can target current customers and similar customers across the [!DNL Microsoft Advertising Network].
+A technology company launched a new product and wants to drive awareness among customers who previously purchased related products. They upload email addresses from their CRM database into Experience Platform, using the email addresses as identifiers. Audiences are created based on customers who own related products. Those audiences are sent to [!DNL Microsoft Ads Customer Match], so the company can target current customers and similar customers across the [!DNL Microsoft Advertising Network].
 
 ## Supported identities {#supported-identities}
 
 [!DNL Microsoft Ads Customer Match] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-|Target Identity|Description|Considerations|
+| Target Identity | Description | Considerations |
 |---|---|---|
-|`email`|Plain text email addresses|Only plain text email addresses are supported by the [!DNL Microsoft Ads Customer Match] connection. Experience Platform automatically hashes email addresses on export to match Microsoft's requirements.|
+| `email` | Plain text email addresses | Only plain text (unhashed) email addresses are supported as **source** fields in the mapping step. Pre-hashed source fields are not supported. Experience Platform always hashes email addresses before exporting them to [!DNL Microsoft Ads]. |
 
 {style="table-layout:auto"}
 
@@ -43,7 +43,7 @@ A technology company launched a new product. To promote this new product, they a
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
@@ -79,6 +79,20 @@ To send audience data to [!DNL Microsoft Ads], you need to have an active [!DNL 
 ### Accept customer match terms and conditions {#accept-customer-match-terms}
 
 Before activating audiences through this destination, you must first manually create a customer match list in your [!DNL Microsoft Advertising] account. This initial manual creation is required to accept the customer match terms and conditions, which enables audiences sent from Experience Platform to be created automatically. Failure to complete this step may result in errors when activating audiences.
+
+### Work account (MS Entra) IT admin approval {#work-account-admin-approval}
+
+If you are authenticating with a Microsoft Work Account (also known as a Microsoft Entra account), your organization's IT admin may need to grant approval before you can connect to [!DNL Microsoft Advertising].
+
+When you attempt to authenticate using a Work Account, you may be redirected to an **Approval required** page. This page requests a justification for linking the app and lists the required permissions, including `ads.manage`. Submit the request and your IT admin will receive a notification to review it. You will also receive a confirmation email that your request was submitted.
+
+Once the IT admin approves the request in the Azure Portal, you can return to Experience Platform and authenticate using your Work Account. For guidance, see the Microsoft documentation:
+
+* [Review and take action on admin consent requests](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests)
+* [Configure the admin consent workflow](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-admin-consent-workflow)
+* [Configure how users consent to applications](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent)
+
+If the IT admin has not yet approved the request, authentication will fail with the following error: `AADSTS650052: The app needs access to a service ('https://ads.microsoft.com') that your organization has not subscribed to or enabled. Contact your IT Admin to review the configuration of your service subscriptions.`
 
 ### Account configuration {#account-configuration}
 
@@ -129,7 +143,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 * **[!UICONTROL Membership Duration]**: The number of days a user remains in the customer match list. Accepted values are between 1 and 390 days.
 * **[!UICONTROL Customer Match List Availability]**: Select the availability of the customer match list. In [!DNL Microsoft Advertising], a Customer ID can have multiple Customer Account IDs (advertiser accounts) under it. Select **[!UICONTROL Customer ID (all advertising accounts)]** to make the list available across all advertiser accounts under your Customer ID, or **[!UICONTROL Customer Account ID (single advertising account)]** to restrict the list to the specific Customer Account ID you provided above. See the [Microsoft Advertising documentation](https://help.ads.microsoft.com/apex/index/3/en/56727) for more details.
 
-![Platform UI image showing the destination details fields for the Microsoft Ads Customer Match destination.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
+    ![Platform UI image showing the destination details fields for the Microsoft Ads Customer Match destination.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
 
 ### Enable alerts {#enable-alerts}
 
@@ -155,7 +169,7 @@ In the **[!UICONTROL Mapping]** step, you must map the email identity from your 
 
 >[!IMPORTANT]
 >
->You must use unhashed (plain text) source fields. Do not use pre-hashed source identities such as `Emails (SHA256, lowercased)`. Experience Platform automatically hashes the email addresses on export to match Microsoft's requirements.
+>You must map plain text (unhashed) email addresses as **source** fields. Pre-hashed source identities such as `Emails (SHA256, lowercased)` are not supported. Experience Platform always hashes email addresses before exporting them to [!DNL Microsoft Ads].
 
 ![UI image showing the mapping step with IdentityMap Email mapped to Identity email.](../../assets/catalog/advertising/microsoft-ads-customer-match/mapping.png)
 
@@ -165,4 +179,4 @@ To verify if data has been exported successfully to the [!DNL Microsoft Ads Cust
 
 ## Additional resources {#additional-resources}
 
-Refer to the [Microsoft Advertising Help Center](https://help.ads.microsoft.com/) for additional information.
+See the [Microsoft Advertising Help Center](https://help.ads.microsoft.com/) for additional information.

@@ -40,7 +40,7 @@ Criteo supports the activation of identities described in the table below. Learn
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
@@ -76,7 +76,7 @@ To help you better understand how to use the [!DNL Criteo] destination, here are
 
 ### Use case 1 : Get traffic {#use-case-1}
 
-Showcase your business with relevant product offers and flexible creatives. With intelligent product recommendations, your ads will automatically feature the products most likely to trigger visits and engagement. Flexible targeting lets you build audiences from Criteo's commerce data set or from your own prospect lists and Adobe CDP segments.
+Showcase your business with relevant product offers and flexible creatives. With intelligent product recommendations, your ads will automatically feature the products most likely to trigger visits and engagement. Flexible targeting enables you to build audiences from Criteo's commerce data set or from your own prospect lists and Adobe CDP segments.
 
 ### Use case 2 : Increase website conversions {#use-case-2}
 

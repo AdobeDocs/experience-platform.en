@@ -64,7 +64,8 @@ Use these transformers to convert and encode categorical data into formats suita
 
 Next, focus on selecting a subset of the most important features from the original set. This process helps reduce the dimensionality of your data, making it easier for your models to process and improving overall model performance.
 
-<!-- Commented out as it 
+<!-- 
+Commented out as it 
 ## Supported machine learning algorithms {#supported-ml-algorithms}
 
 Once you have preprocessed your data, use the feature engineering SQL extension to prepare your data for the following machine learning algorithms:
@@ -80,7 +81,8 @@ Use logical regression to predict categorical outcomes and linear regression to 
 
 Use a clustering algorithm to group data points into distinct clusters based on their similarities.
 
-- **[`K-Means`](./feature-transformation.md#kmeans)**: Use `K-Means` for unsupervised learning tasks to partition data into a specified number of clusters, with each data point assigned to the cluster with the nearest mean. -->
+- **[`K-Means`](./feature-transformation.md#kmeans)**: Use `K-Means` for unsupervised learning tasks to partition data into a specified number of clusters, with each data point assigned to the cluster with the nearest mean. 
+-->
 
 ## Implement the OPTIONS clause {#options-clause}
 

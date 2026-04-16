@@ -8,7 +8,7 @@ hidefromtoc: yes
 ---
 # Audience Analysis destination
 
-The [!UICONTROL Audience Analysis] destination lets you enrich [!DNL Adobe Experience Platform] audience data into [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html). You can select which audiences that you want to include in the resulting enriched data. Audience qualifications are then available as dimensions in [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html) reporting.
+Use the [!UICONTROL Audience Analysis] destination to enrich [!DNL Adobe Experience Platform] audience data into [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html). You can select which audiences that you want to include in the resulting enriched data. Audience qualifications are then available as dimensions in [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html) reporting.
 
 >[!AVAILABILITY]
 >
@@ -41,7 +41,7 @@ Audience Analysis supports the activation of identities described in the table b
 
 The following types of audiences are supported when using this destination:
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
@@ -100,7 +100,7 @@ When you are finished providing details for your destination connection, select 
 
 ### Governance policy & enforcement actions {#governance-policy}
 
-This optional section lets you define your data governance policies and ensure that the data used is compliant when audiences are sent and active.
+This optional section enables you to define your data governance policies and ensure that the data used is compliant when audiences are sent and active.
 
 When you are finished selecting the desired marketing actions for the destination, select **[!UICONTROL Create]**.
 

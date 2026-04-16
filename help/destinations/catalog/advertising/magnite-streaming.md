@@ -44,7 +44,7 @@ The [!DNL Magnite: Real-Time] destination supports the activation of identities 
 
 | Target Identity | Description | Considerations |
 |-------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| device_id | A unique identifier for a device or identity. We accept any device ID and first-party ID regardless of type. | Identity types supported by Magnite include but are not limited to PPUID, GAID, IDFA, and TV Device IDs. | 
+| device_id | A unique identifier for a device or identity. We accept any device ID and first-party ID regardless of type. | Identity types supported by Magnite include but are not limited to PPUID, GAID, IDFA, and TV Device IDs. |
 
 {style="table-layout:auto"}
 
@@ -52,7 +52,7 @@ The [!DNL Magnite: Real-Time] destination supports the activation of identities 
 
 This section describes which type of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |

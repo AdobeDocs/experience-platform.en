@@ -50,8 +50,8 @@ See the documentation below for details about each of the destination configurat
 
 ## Audience metadata configuration {#audience-metadata-configuration}
 
-This component lets you configure how audiences are programmatically created, updated, or deleted in your destination. For file-based destinations, it lets you set up a notification whenever files are successfully delivered to your destination. You can configure this functionality via the [audience-templates endpoint](../metadata-api/create-audience-template.md).
+Use this component to configure how audiences are programmatically created, updated, or deleted in your destination. For file-based destinations, use it to set up a notification whenever files are successfully delivered to your destination. You can configure this functionality via the [audience-templates endpoint](../metadata-api/create-audience-template.md).
 
 ## Next steps {#next-steps}
 
-By reading this article, you now have a general overview of the functionality provided by Destination SDK and which pages to read for more information about specific configurations. Next, you can read the guides which include all the steps to [configure a streaming](../guides/configure-destination-instructions.md) or a [file-based destination](../guides/configure-file-based-destination-instructions.md) by using Destination SDK.
+You now have a general overview of the functionality provided by Destination SDK and which pages to read for more information about specific configurations. Next, you can read the guides which include all the steps to [configure a streaming](../guides/configure-destination-instructions.md) or a [file-based destination](../guides/configure-file-based-destination-instructions.md) by using Destination SDK.

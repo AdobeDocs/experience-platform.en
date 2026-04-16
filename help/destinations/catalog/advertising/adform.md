@@ -20,7 +20,7 @@ To help you better understand how and when you should use the Adform destination
 
 ### Adobe [!DNL Real-Time CDP] audience activation {#use-case-1}
 
-Use this destination to send Adobe [!DNL Real-Time CDP] audiences to Adform for activation based on the Experience Cloud ID (ECID) and Adform's ID Fusion. Adform's ID Fusion is Adform's ID resolution service that lets you activate your first party audiences based on the Experience Cloud ID (ECID).
+Use this destination to send Adobe [!DNL Real-Time CDP] audiences to Adform for activation based on the Experience Cloud ID (ECID) and Adform's ID Fusion. Adform's ID Fusion is Adform's ID resolution service for activating your first party audiences based on the Experience Cloud ID (ECID).
 
 A common case is re-targeting of your website visitors to your website or app based on the Experience Cloud ID (ECID). All you need to do is to send the Experience Cloud ID (ECID) to Adform via the readily available [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) or [client-side](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) Adform extensions. After that you can share audiences with Adform via the Adform destination for activation - solely based on the Experience Cloud ID (ECID).
 
@@ -48,7 +48,7 @@ Adform supports the activation of identities described in the table below. Learn
 
 This section describes which type of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |

@@ -37,7 +37,7 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 
 {style="table-layout:auto"}
 
-+++Request
++++ Request
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
@@ -47,14 +47,16 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-+++Response
++++
+
++++ Response
 
 A successful response returns HTTP status 200 along with an empty HTTP response.
 
 
 ## API error handling {#error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps {#next-steps}
 
@@ -65,3 +67,5 @@ To learn more about what you can do with this endpoint, see the following articl
 * [Create a destination configuration](create-destination-configuration.md)
 * [Retrieve a destination configuration](retrieve-destination-configuration.md)
 * [Update a destination configuration](update-destination-configuration.md)
+
++++

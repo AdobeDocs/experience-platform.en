@@ -114,19 +114,19 @@ funnel_df
 
 |   | eventType  |  distinctUsers | distinctEvents  |
 |---|---|---|---|
-| 0  |   directMarketing.emailSent  |   598840  |   598840 | 
-| 1  |   directMarketing.emailOpened  |   239028  |   239028 | 
-| 2  |   web.webpagedetails.pageViews  |   120118  |   120118 | 
-| 3  |   advertising.impressions  |   119669 |    119669 | 
-| 4  |   directMarketing.emailClicked  |   51581  |   51581 | 
-| 5  |   commerce.productViews  |   37915  |   37915 | 
-| 6  |   decisioning.propositionDisplay  |   37650  |   37650 | 
-| 7  |   web.webinteraction.linkClicks  |   37581  |   37581 | 
-| 8  |   web.formFilledOut  |   17860  |   17860 | 
-| 9  |   advertising.clicks  |   7610  |   7610 | 
-| 10  |   decisioning.propositionInteract |    2964  |   2964 | 
-| 11  |   decisioning.propositionDismiss  |   2889  |   2889 | 
-| 12  |   commerce.purchases  |   2858  |   2858 | 
+| 0  |   directMarketing.emailSent  |   598840  |   598840 |
+| 1  |   directMarketing.emailOpened  |   239028  |   239028 |
+| 2  |   web.webpagedetails.pageViews  |   120118  |   120118 |
+| 3  |   advertising.impressions  |   119669 |    119669 |
+| 4  |   directMarketing.emailClicked  |   51581  |   51581 |
+| 5  |   commerce.productViews  |   37915  |   37915 |
+| 6  |   decisioning.propositionDisplay  |   37650  |   37650 |
+| 7  |   web.webinteraction.linkClicks  |   37581  |   37581 |
+| 8  |   web.formFilledOut  |   17860  |   17860 |
+| 9  |   advertising.clicks  |   7610  |   7610 |
+| 10  |   decisioning.propositionInteract |    2964  |   2964 |
+| 11  |   decisioning.propositionDismiss  |   2889  |   2889 |
+| 12  |   commerce.purchases  |   2858  |   2858 |
 
 {style="table-layout:auto"}
 
@@ -207,7 +207,7 @@ large_correlation_df
 
 **Sample output**:
 
-|   | webFormsFilled_totalUsers |    advertisingClicks_totalUsers  |   productViews_totalUsers  |   productPurchases_totalUsers  |   propositionDismisses_totaUsers |    propositionDisplays_totaUsers  |   propositionInteracts_totalUsers  |   emailClicks_totalUsers  |   emailOpens_totalUsers  |   webLinksClicks_totalUsers  |   …  |   webForms_advertisingClicks|     webForms_productViews  |   webForms_productPurchases  |   webForms_propositionDismisses  |   webForms_propositionInteracts  |   webForms_emailClicks |    webForms_emailOpens   |  webForms_emailSends  |   webForms_webLinkClicks  |   webForms_webPageViews | 
+|   | webFormsFilled_totalUsers |    advertisingClicks_totalUsers  |   productViews_totalUsers  |   productPurchases_totalUsers  |   propositionDismisses_totaUsers |    propositionDisplays_totaUsers  |   propositionInteracts_totalUsers  |   emailClicks_totalUsers  |   emailOpens_totalUsers  |   webLinksClicks_totalUsers  |   …  |   webForms_advertisingClicks|     webForms_productViews  |   webForms_productPurchases  |   webForms_propositionDismisses  |   webForms_propositionInteracts  |   webForms_emailClicks |    webForms_emailOpens   |  webForms_emailSends  |   webForms_webLinkClicks  |   webForms_webPageViews |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 0 |   17860 |   7610  |  37915  |  0  |  2889  |  37650  |  2964  |  51581 |   239028  |  37581  |  …  |  0.026805  |  0.2779  |  None  |  0.06014  |  0.143656  |  0.305657  |  0.218874  |  0.192836  |  0.259353  |  None |
 

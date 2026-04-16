@@ -1,21 +1,21 @@
 ---
 title: (API) Salesforce Marketing Cloud connection
-description: The Salesforce Marketing Cloud (formerly known as ExactTarget) destination allows you to export your account data and activate it within Salesforce Marketing Cloud for your business needs.
+description: Use the Salesforce Marketing Cloud (formerly known as ExactTarget) destination to export your account data and activate it within Salesforce Marketing Cloud for your business needs.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
 ---
 # [!DNL (API) Salesforce Marketing Cloud] connection
 
 ## Overview {#overview}
 
-[[!DNL (API) Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/engagement/) (formerly known as [!DNL ExactTarget]) is a digital marketing suite that lets you build and customize journeys for visitors and customers to personalize their experience.
+[[!DNL (API) Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/engagement/) (formerly known as [!DNL ExactTarget]) is a digital marketing suite you can use to build and customize journeys for visitors and customers to personalize their experience.
 
 >[!IMPORTANT]
 >
-> Note the difference between this connection and the other [[!DNL Salesforce Marketing Cloud] connection](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) that exists within the Email marketing catalog section. The other Salesforce Marketing Cloud connection lets you export files to a specified storage location, whereas this is an API-based streaming connection.
+> Note the difference between this connection and the other [[!DNL Salesforce Marketing Cloud] connection](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) that exists within the Email marketing catalog section. The other Salesforce Marketing Cloud connection exports files to a specified storage location, whereas this is an API-based streaming connection.
 
 Compared to [!DNL Salesforce Marketing Cloud Account Engagement] which is more oriented towards **B2B** marketing, the [!DNL (API) Salesforce Marketing Cloud] destination is ideal for **B2C** use cases with shorter transactional decision-making cycles. You can consolidate larger datasets representing your target audience's behavior to adjust and improve marketing campaigns by prioritizing and segmenting contacts, especially from datasets outside [!DNL Salesforce]. *Note, Experience Platform also has a connection for the [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md).*
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) uses the [!DNL Salesforce Marketing Cloud] [update contacts](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API, which lets you **add contacts and update contact data** for your business needs after activating them within a new [!DNL Salesforce Marketing Cloud] segment.
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) uses the [!DNL Salesforce Marketing Cloud] [update contacts](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API to **add contacts and update contact data** for your business needs after activating them within a new [!DNL Salesforce Marketing Cloud] segment.
 
 [!DNL Salesforce Marketing Cloud] uses OAuth 2 with Client Credentials as the authentication mechanism to communicate with the [!DNL Salesforce Marketing Cloud] API. Instructions to authenticate to your [!DNL Salesforce Marketing Cloud] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
@@ -131,7 +131,7 @@ Note down the items below before you authenticate to the [!DNL (API) Salesforce 
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
@@ -263,7 +263,7 @@ Repeat this section for each activated Experience Platform segment.
 
 A typical example based on the image shown above could be.
 
-| [!DNL (API) Salesforce Marketing Cloud] segment name | [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** | 
+| [!DNL (API) Salesforce Marketing Cloud] segment name | [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** |
 | --- | --- | --- |
 | salesforce mc audience 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
 | salesforce mc audience 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
@@ -286,7 +286,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Monitor the audience summary and ensure that the count of profiles corresponds to the count created within the segment.
 ![Experience Platform UI screenshot example showing Segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/segment.png)
 
-1. Log in to the [[!DNL Salesforce Marketing Cloud]](https://mc.exacttarget.com/) website. Then navigate to the **[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** page and check if the profiles from the audience have been added.
+1. Go to the [[!DNL Salesforce Marketing Cloud]](https://mc.exacttarget.com/) website. Then navigate to the **[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** page and check if the profiles from the audience have been added.
 ![Salesforce Marketing Cloud UI screenshot showing the Contacts page with profiles used in the segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contacts.png)
 
 1. To check if any profiles have been updated, navigate to the **[!UICONTROL Email]** page and verify if the attribute values for the profile from the audience have been updated. If successful, you can see that each audience status in [!DNL Salesforce Marketing Cloud] was updated with the corresponding audience status from Experience Platform, based on the **[!UICONTROL Mapping ID]** value provided in the [audience scheduling](#schedule-segment-export-example) step.

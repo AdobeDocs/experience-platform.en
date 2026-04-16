@@ -1,13 +1,13 @@
 ---
 title: Marketo Engage Connection
-description: Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
+description: Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. Use it to automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
 exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
 ---
 # Marketo Engage connection
 
 ## Overview {#overview}
 
-[!DNL Marketo Engage] is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
+[!DNL Marketo Engage] is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. Use it to automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
 
 Use this destination for real-time synchronization of audience data and profile attributes between [!DNL Adobe Experience Platform] and Marketo Engage.
 
@@ -57,7 +57,7 @@ They can activate their audiences in Marketo Engage and use the **[!UICONTROL Au
 
 This section describes which types of audiences you can export to this destination. The two tables below indicate which audiences this connector supports, by _audience origin_ and _profile types included in the audience_:
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> <br>|
@@ -139,7 +139,7 @@ To configure details for the destination, fill in the required and optional fiel
     * **[!UICONTROL Audience and profile]**: Select this option when you want to both add audience members to Marketo lists and keep their profile information current.
     * **[!UICONTROL Profile only]**: Select this option when you want to keep Marketo lead profiles up to date with the latest information from Experience Platform.
     * **[!UICONTROL Audience only]**: Select this option when you want to add audience members to Marketo lists without updating their profile information.
-* **[!UICONTROL Partition]**: *Partition selection is available only when choosing **[!UICONTROL Profile only]** or **[!UICONTROL Audience and profile]** sync types*. Select a Marketo partition ID associated with your chosen workspace. This lets you specify which lead partition in Marketo will receive the exported data. If you don't choose a specific partition, your data will be sent to the **[!UICONTROL Default]** partition in Marketo.
+* **[!UICONTROL Partition]**: *Partition selection is available only when choosing **[!UICONTROL Profile only]** or **[!UICONTROL Audience and profile]** sync types*. Select a Marketo partition ID associated with your chosen workspace. This specifies which lead partition in Marketo will receive the exported data. If you don't choose a specific partition, your data will be sent to the **[!UICONTROL Default]** partition in Marketo.
 * **[!UICONTROL Marketo deduplication field]**: Select the Marketo deduplication field that you want to use when updating existing Marketo leads. This selector shows the fields that you marked as deduplication fields in Marketo. If you want a specific field from Marketo to show up as a deduplication field, you must mark the field as a [searchable field](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo.
     
     >[!NOTE]

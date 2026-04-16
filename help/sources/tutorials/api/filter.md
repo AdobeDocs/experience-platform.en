@@ -410,8 +410,8 @@ The following table outlines the standard activity types for [!DNL Marketo]. Use
 | Activity type ID | Activity type name |
 | --- | --- |
 | 1 | Visit Webpage |
-| 2 |  Fill Out Form | 
-| 3 | Click Link | 
+| 2 |  Fill Out Form |
+| 3 | Click Link |
 | 6 | Send Email |
 | 7 | Email Delivered |
 | 8 | Email Bounced |

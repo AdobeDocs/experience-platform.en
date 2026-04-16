@@ -28,7 +28,7 @@ One of the core functionalities of Experience Platform is ingesting your first-p
 
 ## Controls {#controls}
 
-The controls in the [destinations workspace](./ui/destinations-workspace.md) allow you to:
+Use the controls in the [destinations workspace](./ui/destinations-workspace.md) to:
 
 * Browse the catalog of destination platforms where you can activate your data;
 * Create, edit, activate, and disable data flows to the destinations in the catalog;

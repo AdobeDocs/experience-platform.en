@@ -59,13 +59,13 @@ The table below lists [!DNL Adobe Journey Optimizer] objects that are currently 
 | [!DNL Adobe Journey Optimizer] | Audience | | An audience can be copied as a dependent object of the journey object. You can select create a new audience or reuse an existing one in the target sandbox. |
 | [!DNL Adobe Journey Optimizer] | Schema | | The schemas used in the journey can be copied as dependent objects. You can select create a new schema or reuse an existing one in the target sandbox. |
 | [!DNL Adobe Journey Optimizer] | Merge policy | | The merge policies used in the journey can be copied as dependent objects. In the target sandbox, you **cannot** create a new merge policy, you can only use an existing one. |
-| [!DNL Adobe Journey Optimizer] | Journey | The following objects used in the journey are copied as dependent objects. During the import workflow, you can choose either **[!UICONTROL Create new]** or **[!UICONTROL Use existing]** for each: <ul><li>Audiences</li><li>Canvas details</li><li>Content templates</li><li>Custom actions</li><li>Data Sources</li><li>Events</li><li>Field Groups</li><li>Fragments</li><li>Schemas</li></ul> | When you select **[!UICONTROL Use existing]** during the import process to copy a journey to another sandbox, the existing custom actions you choose **must** be an exact match to the source custom action. If they don’t match, the new journey will generate unresolvable errors.<br>The system copies the events and event details used in the journey and creates a new version in the target sandbox. |
+| [!DNL Adobe Journey Optimizer] | Journey | The following objects used in the journey are copied as dependent objects. During the import workflow, you can choose either **[!UICONTROL Create new]** or **[!UICONTROL Use existing]** for each: <ul><li>Audiences</li><li>Canvas details</li><li>Content templates</li><li>Custom actions</li><li>Data Sources</li><li>Events</li><li>Field Groups</li><li>Fragments</li><li>Schemas</li></ul> | When you select **[!UICONTROL Use existing]** during the import process to copy a journey to another sandbox, the existing custom actions you choose **must** be an exact match to the source custom action. If they don't match, the new journey will generate unresolvable errors.<br>The system copies the events and event details used in the journey and creates a new version in the target sandbox. |
 | [!DNL Adobe Journey Optimizer] | Action | | Email and push messages used in the journey can be copied as dependent objects. The channel action activities used in the journey fields, which are used for personalization in the message, are not checked for completeness. Content blocks are not copied.<br><br>The update profile action used in the journey can be copied. Custom actions can be added to a package independently. Action details used in the journey are also copied. It will always create a new version in the target sandbox.|
 | [!DNL Adobe Journey Optimizer] | Custom Actions |  | Custom actions can be added to a package independently. Once a custom action is assigned to a journey, it can no longer be edited. To make updates to custom actions, you should: <ul><li>move custom actions prior to migrating a journey</li><li>update configurations (such as request headers, query parameters, and authentication) for custom actions post migration</li><li>migrate journey objects with the custom actions you added during the first step</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Content template | | A content template can be copied as a dependent object of the journey object. Standalone templates allow you to easily reuse custom content across Journey Optimizer campaigns and journeys. |
 | [!DNL Adobe Journey Optimizer] | Fragment | All nested fragments. | A fragment can be copied as a dependent object of the journey object. Fragments are reusable components that can be referenced in one or more emails across Journey Optimizer campaigns and journeys.  |
 | [!DNL Adobe Journey Optimizer] | Campaigns | The following objects used in the campaign are copied as dependent objects: <ul><li>Campaigns</li><li>Audiences</li><li>Schemas</li><li>Content templates</li><li>Fragments</li><li>Message/Content</li><li>Channel configuration</li><li>Unified decision objects</li><li>Experiment settings/variants</li></ul>| <ul><li>Campaigns can be copied along with all items related to the profile, audience, schema, inline messages, and dependent objects. Some items are not copied, such as data usage labels and language settings. For a complete list of objects that cannot be copied, refer to the [exporting objects to another sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) guide.</li><li>The system will automatically detect and resuse an existing channel configuration object in the target sandbox if an identical configuration exists. If no matching configuration is found, the channel configuration is skipped during import, and users must manually update the channel settings in the target sandbox for this journey.</li><li>Users may reuse existing experiments and audiences in the target sandbox as dependent objects of selected campaigns.</li></ul> |
-| [!DNL Adobe Journey Optimizer] | Decisioning | The following objects must be present in the destination sandbox before copying Decisioning objects: <ul><li>Profile Attributes used across Decisioning objects</li><li>The field group of custom Offer Attributes</li><li>The schemas of Datastreams used for Context Attributes across Rules, Ranking or Capping.</li></ul> | <ul><li>Copying ranking formulas that use AI models is not currently supported.</li><li>Decision items (offer items) are not included automatically. To ensure they’re transferred, add them manually using the **Add to Package** option.</li><li>Policies that use a selection strategy require associated decision items to be added manually during the copy process. Policies that use manual or fallback decision items will have those items automatically included as direct dependencies.</li><li>Decision items must be copied first, before any other related objects.</li><li>For a complete list of supported objects, refer to the [exporting objects to another sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) guide.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Decisioning | The following objects must be present in the destination sandbox before copying Decisioning objects: <ul><li>Profile Attributes used across Decisioning objects</li><li>The field group of custom Offer Attributes</li><li>The schemas of Datastreams used for Context Attributes across Rules, Ranking or Capping.</li></ul> | <ul><li>Copying ranking formulas that use AI models is not currently supported.</li><li>Decision items (offer items) are not included automatically. To ensure they're transferred, add them manually using the **Add to Package** option.</li><li>Policies that use a selection strategy require associated decision items to be added manually during the copy process. Policies that use manual or fallback decision items will have those items automatically included as direct dependencies.</li><li>Decision items must be copied first, before any other related objects.</li><li>For a complete list of supported objects, refer to the [exporting objects to another sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) guide.</li></ul> |
 
 ## Export objects into a package {#export-objects}
 
@@ -223,13 +223,36 @@ You are taken to the [!UICONTROL Package object and dependencies] page where you
 
 Allow some time for the import to complete. The time to complete can vary depending on the number of objects in the package. You can monitor the import job from the [!UICONTROL Sandboxes] **[!UICONTROL Jobs]** tab.
 
+### Express copy an object to a sandbox {#express-copy}
+
+>[!IMPORTANT]
+>
+>The express copy feature is currently in beta and only available to select customers. Express copy (Beta) currently only supports schema and source dataflows.
+
+You can access express copy from the object inventory page. For example, to view a list of available schemas, select **[!UICONTROL Schemas]** from the left navigation, then select the **[!UICONTROL Browse]** tab.. Next, select the ellipsis (`...`) next to the selected schema to see control options in a dropdown menu. Select **[!UICONTROL Add to package]** from the dropdown.
+
+![List of schemas showing the dropdown menu highlighting the [!UICONTROL Add to package] control.](../images/ui/sandbox-tooling/add-to-package-express.png)
+
+The **[!UICONTROL Add to package]** dialog appears. Select the **[!UICONTROL Express copy]** option, then select the **[!UICONTROL Target sandbox]** from the dropdown. Finally, select **[!UICONTROL Add]** to confirm your choices.
+
+![[!UICONTROL Add to package] dialog, showing a selected package from the dropdown.](../images/ui/sandbox-tooling/express-copy.png)
+
+>[!NOTE]
+>
+> Express Copy automatically packages the selected objects along with their required dependencies and deploys them to the target sandbox. If a dependent object already exists in the target sandbox, it is reused, otherwise, a new object is created.
+
+To check the status of your express copy request, select **[!UICONTROL Sandboxes]** from the left navigation and then select the **[!UICONTROL Jobs]** tab. A list of all jobs and the current processing status are displayed.
+
+![The jobs tab showing a list of jobs.](../images/ui/sandbox-tooling/sandboxes-jobs.png)
+
 ## Monitor import details {#view-import-details}
 
 To view the imported details, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Jobs]** tab and select the package from the list. Alternatively, use the search bar to search for the package.
 
 ![The sandboxes [!UICONTROL Jobs] tab highlights the import package selection.](../images/ui/sandbox-tooling/imports-tab.png)
 
-<!--### View imported objects {#view-imported-objects}
+<!--
+### View imported objects {#view-imported-objects}
 
 On the **[!UICONTROL Jobs]** tab in the [!UICONTROL Sandboxes] environment, select **[!UICONTROL View imported objects]** from the right details pane.
 
@@ -239,7 +262,8 @@ Select **[!UICONTROL View imported objects]** from the right details pane on the
 
 Use the arrows to expand objects to view the full list of fields that have been imported into the package.
 
-![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)-->
+![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)
+-->
 
 Select **[!UICONTROL View import summary]** from the right details pane in the **[!UICONTROL Jobs]** tab in the Sandboxes environment.
 

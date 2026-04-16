@@ -40,7 +40,7 @@ When [creating](../../authoring-api/destination-server/create-destination-server
 
 ## Hard-coded versus templatized fields {#templatized-fields}
 
-When creating a destination server through Destination SDK, you can define configuration parameter values either by hard-coding them into the configuration, or by using templatized fields. Templatized fields allow you to read user-provided values from the Experience Platform UI.
+When creating a destination server through Destination SDK, you can define configuration parameter values either by hard-coding them into the configuration, or by using templatized fields. Templatized fields read user-provided values from the Experience Platform UI.
 
 Destination server parameters have two configurable fields. These options dictate whether you are using hard-coded or templatized values.
 
@@ -154,7 +154,7 @@ The sample below shows an example of a destination server configuration for a re
 
 ## [!DNL Amazon S3] destination server {#s3-example}
 
-This destination server lets you export files containing [!DNL Adobe Experience Platform] data to your Amazon S3 storage.
+Use this destination server to export files containing [!DNL Adobe Experience Platform] data to your Amazon S3 storage.
 
 The sample below shows an example of a destination server configuration for an Amazon S3 destination.
 
@@ -188,7 +188,7 @@ The sample below shows an example of a destination server configuration for an A
 
 ## [!DNL SFTP] destination server {#sftp-example}
 
-This destination server lets you export files containing [!DNL Adobe Experience Platform] data to your [!DNL SFTP] storage server.
+Use this destination server to export files containing [!DNL Adobe Experience Platform] data to your [!DNL SFTP] storage server.
 
 The sample below shows an example of a destination server configuration for an SFTP destination.
 
@@ -226,7 +226,7 @@ The sample below shows an example of a destination server configuration for an S
 
 ## [!DNL Azure Data Lake Storage] ([!DNL ADLS]) destination server {#adls-example}
 
-This destination server lets you export files containing [!DNL Adobe Experience Platform] data to your [!DNL Azure Data Lake Storage] account.
+Use this destination server to export files containing [!DNL Adobe Experience Platform] data to your [!DNL Azure Data Lake Storage] account.
 
 The sample below shows an example of a destination server configuration for an [!DNL Azure Data Lake Storage] destination.
 
@@ -254,7 +254,7 @@ The sample below shows an example of a destination server configuration for an [
 
 ## [!DNL Azure Blob Storage] destination server {#blob-example}
 
-This destination server lets you export files containing [!DNL Adobe Experience Platform] data to your [!DNL Azure Blob Storage] container.
+Use this destination server to export files containing [!DNL Adobe Experience Platform] data to your [!DNL Azure Blob Storage] container.
 
 The sample below shows an example of a destination server configuration for an [!DNL Azure Blob Storage] destination.
 
@@ -288,7 +288,7 @@ The sample below shows an example of a destination server configuration for an [
 
 ## [!DNL Data Landing Zone] ([!DNL DLZ]) destination server {#dlz-example}
 
-This destination server lets you export files containing Experience Platform data to a [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md) storage.
+Use this destination server to export files containing Experience Platform data to a [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md) storage.
 
 The sample below shows an example of a destination server configuration for a [!DNL Data Landing Zone] ([!DNL DLZ]) destination.
 
@@ -318,7 +318,7 @@ The sample below shows an example of a destination server configuration for a [!
 
 ## [!DNL Google Cloud Storage] destination server {#gcs-example}
 
-This destination server lets you export files containing Experience Platform data to your [!DNL Google Cloud Storage] account.
+Use this destination server to export files containing Experience Platform data to your [!DNL Google Cloud Storage] account.
 
 The sample below shows an example of a destination server configuration for a [!DNL Google Cloud Storage] destination.
 

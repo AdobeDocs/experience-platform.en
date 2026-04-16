@@ -110,7 +110,7 @@ In other words, if you decide to use Adobe Experience Platform Web SDK for non-s
 
 ## Can I migrate the ECIDs when I start using Web SDK so my website visitors don't start showing up as new visitors?
 
-Yes, Adobe Experience Platform Web SDK provides an Identity Migration feature. Follow the instructions for ID migration in the [Experience Platform Web SDK identity documentation](/help/collection/use-cases/identity/id-overview.md#migrating-visitor-api-ecid) for more details.
+Yes, Adobe Experience Platform Web SDK provides an Identity Migration feature. Follow the instructions in [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md) for more details.
 
 ## How is the Web SDK different than tags?
 

@@ -8,7 +8,7 @@ exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
 
 ## Overview {#overview}
 
-This document provides answers to frequently asked questions about [!DNL Adobe Experience Platform] destinations. For questions and troubleshooting related to other [!DNL Experience Platform] services, including those encountered across all [!DNL Experience Platform] APIs, refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about [!DNL Adobe Experience Platform] destinations. For questions and troubleshooting related to other [!DNL Experience Platform] services, including those encountered across all [!DNL Experience Platform] APIs, see the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
 ## General destinations questions {#general}
 
@@ -210,9 +210,11 @@ Yes, same-page and next-page personalization use cases support a maximum of 30 a
 Currently, only static, single-value attributes are supported, such as `person.name.firstName`. Array attributes are currently not supported.
 +++
 
-<!-- **Is there a limit on the number of audiences that can be activated to Adobe Target and Custom Personalization destinations?**
+<!-- 
+**Is there a limit on the number of audiences that can be activated to Adobe Target and Custom Personalization destinations?**
 
-Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more information on activation guardrails, see the [default guardrails for activation](guardrails.md#edge-destinations-activation). -->
+Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more information on activation guardrails, see the [default guardrails for activation](guardrails.md#edge-destinations-activation). 
+-->
 
 ### After I create an audience in Experience Platform, how long will it take for that audience to be available for edge segmentation use cases? {#edge-segmentation-availability}
 

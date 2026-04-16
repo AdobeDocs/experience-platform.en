@@ -8,7 +8,7 @@ exl-id: c2313474-05d5-4c06-8aa5-ed10e9e9226e
 
 ## Overview {#overview}
 
-[!DNL KickFire's] IP address intelligence & B2B firmographic data lets you translate IP addresses to companies, identify anonymous web visitors, and integrate account data into your technology stack – all based on a company's IP address.
+[!DNL KickFire's] IP address intelligence & B2B firmographic data translates IP addresses to companies, identifies anonymous web visitors, and integrates account data into your technology stack – all based on a company's IP address.
 
 [!DNL KickFire] is a personalization extension in [!DNL Adobe Experience Platform]. For more information about the extension functionality, see [Kickfire website](https://www.kickfire.com/).
 

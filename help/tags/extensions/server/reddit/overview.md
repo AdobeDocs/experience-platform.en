@@ -55,7 +55,7 @@ After you set up your data elements, create event forwarding rules to determine 
     ![Event forwarding rule configuration interface for the Reddit Conversions API extension, with the extension and action type fields highlighted.](../../../images/extensions/server/reddit/reddit-rule.png)
 4. Configure the additional controls for your event as shown in the table below:
 
-    | Field name | Description | Example | 
+    | Field name | Description | Example |
     | --- | --- | --- |
     | `Event Name` | Specify the name of the conversion event. | `Purchase` |
     | `Event Type` | Define the type of event that can be a [supported Reddit conversion event](https://business.reddithelp.com/s/article/supported-conversion-events#supported-conversion-events) or a custom one. | `SignUp`, `MyCustomEvent` |
