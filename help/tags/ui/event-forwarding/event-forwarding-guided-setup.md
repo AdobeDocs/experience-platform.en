@@ -23,17 +23,17 @@ This setup can auto-install extensions. This hybrid implementation is recommende
 
 To get started with the feature, select **[!UICONTROL Get Started]** in the right navigation in the **[!UICONTROL Event Forwarding]** Data Collections UI.
 
-![Event Forwarding home page showing the Get Started card in the right panel](../images/extensions/guided-setup/get-started.png)
+![Event Forwarding home page showing the Get Started card in the right panel](../../images/ui/guided-setup/get-started.png)
 
 ### Create a new tags property {#new-property}
 
 In the Configure Properties section, select **[!UICONTROL New]** and enter the new **[!UICONTROL Property Domain]** details.
 
-![Configure properties showing new domain details](../images/extensions/guided-setup/configure-properties-new.png)
+![Configure properties showing new domain details](../../images/ui/guided-setup//configure-properties-new.png)
 
 Select **[!UICONTROL Add]** for the [!DNL Meta Conversion API] in the Add Extensions section. In the Configure [!DNL Meta] Information page, you have the option to manually enter your **[!UICONTROL Meta Pixel ID]**, **[!UICONTROL Meta System User Access Token]**, and **[!UICONTROL Data Layer Path]**, or you can use the **[!UICONTROL Connect to Meta]** option.
 
-![Configure Meta Information page showing the Connect to Meta option](../images/extensions/guided-setup/connect-to-meta.png)
+![Configure Meta Information page showing the Connect to Meta option](../../images/ui/guided-setup/connect-to-meta.png)
 
 #### Connect to [!DNL Meta] using your credentials {#meta-credentials}
 
@@ -41,7 +41,7 @@ Select **[!UICONTROL Connect to Meta]**, then enter your [!DNL Meta] credentials
 
 You will now be requested to **Create business portfolio**. Enter the **[!UICONTROL Business portfolio name]** and select **[!UICONTROL Next]**.
 
-![Create business portfolio page shown with a portfolio name](../images/extensions/guided-setup/portfolio-name.png)
+![Create business portfolio page shown with a portfolio name](../../images/ui/guided-setup/portfolio-name.png)
 
 Select your business portfolio from the list, then select **[!UICONTROL Next]**. You can see the settings for Business Portfolio, Ad Account, and [!DNL Meta Pixel]. Select **[!UICONTROL Continue]** to confirm settings, then select **[!UICONTROL Next]**.
 
@@ -49,17 +49,17 @@ Allow a few minutes for the setup process to complete, then select **[!UICONTROL
 
 Your **[!UICONTROL Meta Pixel ID]**, **[!UICONTROL Meta System User Access Token]**, and **[!UICONTROL Data Layer Path]** will be automatically populated. Select **[!UICONTROL Save]**.
 
-![Configure Meta Information page showing Meta information populated](../images/extensions/guided-setup/meta-info.png)
+![Configure Meta Information page showing Meta information populated](../../images/ui/guided-setup/meta-info.png)
 
 #### Create resources for your new tags property {#create-resources}
 
 In the Create Resources section, select **[!UICONTROL Pre-check resources]** to check you organization and properties for collisions or existing necessary resources for your implementation.
 
-![Create resources showing pre-check resources](../images/extensions/guided-setup/pre-check-resources.png)
+![Create resources showing pre-check resources](../../images/ui/guided-setup/pre-check-resources.png)
 
 The Task Actions page displays a list of tasks and actions. Select **[!UICONTROL Create Resources]** to create these tasks.
 
-![Task Actions showing a list of tasks and actions to be taken](../images/extensions/guided-setup/create-resources.png)
+![Task Actions showing a list of tasks and actions to be taken](../../images/ui/guided-setup/create-resources.png)
 
 Allow a few minutes for the required rules, data elements, extensions, libraries, SDKs, and so on to finish installing. The Create Resources section provides links to the properties and resources created.
 
@@ -73,17 +73,17 @@ Select **[!UICONTROL Send PageView Event]** to send a test event through the Ado
 >
 >If any failures occur during the validation process, select the **[!UICONTROL Assurance]** link to review events that may have failed.
 
-![Validation page showing validation results](../images/extensions/guided-setup/finished-validation.png)
+![Validation page showing validation results](../../images/ui/guided-setup/finished-validation.png)
 
 ### Use an existing tags property {#existing-property}
 
 In the Configure Properties section, select **[!UICONTROL Existing]**, then select your tags property from the drop-down menu. The system attempts to find the event forwarding property that's already attached to this property through the datastreams. You can now continue to reconfigure the [!DNL Meta Conversion API], then pre-check and create resources.
 
-![Configure existing property showing existing tag property selected](../images/extensions/guided-setup/configure-properties-existing.png)
+![Configure existing property showing existing tag property selected](../../images/ui/guided-setup/configure-properties-existing.png)
 
 If the selected tags property is not connected to an event forwarding property or if datastreams are missing, they will be automatically created.
 
-![Configure existing property showing existing tag property selected](../images/extensions/guided-setup/configure-properties-existing-no-event-fw.png)
+![Configure existing property showing existing tag property selected](../../images/ui/guided-setup/configure-properties-existing-no-event-fw.png)
 
 To configure your [!DNL Meta Conversion API] follow the process highlighted above in the [Connect to [!DNL Meta] using your credentials](#meta-credentials).
 
@@ -91,7 +91,7 @@ Now that you have generated **[!UICONTROL Meta Pixel ID]**, **[!UICONTROL Meta S
 
 Since you are using an existing tags property, the setup process differs slightly from the new property workflow. You can see the system will skip the creation of the web property, host, and environment since these already exist. Finally, select **[!UICONTROL Create Resources]** to create the tasks that are not yet available.
 
-![Task Actions showing a list of tasks and actions to be taken highlighting those that will be skipped](../images/extensions/guided-setup/create-resources-skip.png)
+![Task Actions showing a list of tasks and actions to be taken highlighting those that will be skipped](../../images/ui/guided-setup/create-resources-skip.png)
 
 >[!INFO]
 >
@@ -107,7 +107,7 @@ Select **[!UICONTROL Send PageView Event]** to send a test event through the Ado
 >
 >If any failures occur during the validation process, select the **[!UICONTROL Assurance]** link to review events that may have failed.
 
-![Validation page showing validation results](../images/extensions/guided-setup/finished-validation.png)
+![Validation page showing validation results](../../images/ui/guided-setup/finished-validation.png)
 
 ## Next steps {#next-steps}
 
