@@ -16,7 +16,7 @@ Move from one-off use cases to scalable, repeatable customer experiences. Use th
 - **Who:** Defined audience or segment  
 - **What:** Message, offer, or call to action  
 - **Where:** Channel or touchpoint  
-- **How:** Execution across five pillars — data, audience, journey, measurement, and content  
+- **How:** Execution across five pillars, data, audience, journey, measurement, and content *(e.g., data inputs, segmentation logic, orchestration, test/control, content assets)*  
 
 This structure ensures teams work from the same script and stay aligned as complexity increases.
 
@@ -24,7 +24,7 @@ This structure ensures teams work from the same script and stay aligned as compl
 
 - **Ideate:** Define use cases in a standard format (why → who/what/where → how) in a cross-functional session  
 - **Prioritize:** Use a value vs. feasibility model as a value compass—not a precise ROI model—and document a testable hypothesis  
-- **Plan & Activate:** Define requirements and measurement upfront, then build and launch (data, audiences, journeys, content, QA)  
+- **Plan & Activate:** Define requirements and measurement upfront *(KPI, baseline, test/control)*, then build and launch (data, audiences, journeys, content, QA)  
 - **Measure:** Evaluate performance against KPIs using test-and-control to verify impact  
 - **Scale:** Refine and expand based on results; maintain a prioritized, cross-functional roadmap (not a wish list)  
 
