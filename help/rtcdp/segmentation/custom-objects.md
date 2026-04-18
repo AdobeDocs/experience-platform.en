@@ -13,11 +13,11 @@ To start connecting your custom object using a one-to-many relationship, you'll 
 
 Under the **[!UICONTROL Data management]** section, select **[!UICONTROL Schemas]**. On the Schema overview page, select **[!UICONTROL Create schema]** followed by **[!UICONTROL Relational]**.
 
-IMAGE
+![The Schemas section under Data management is highlighted, as well as the Relational button under the Create schema area.](/help/rtcdp/assets/segmentation/custom-objects/create-relational.png)
 
 The **[!UICONTROL Create relational schema]** page appears. You can add the details of the schema including the display name, description, and the schema behavior. 
 
-IMAGE
+![The create a schema page is displayed.](/help/rtcdp/assets/segmentation/custom-objects/create-schema.png)
 
 | Schema behavior | Description |
 | --------------- | ----------- |
@@ -28,7 +28,7 @@ IMAGE
 
 Once you created your relational schema, you can add the fields for your schema, including marking the primary key and version identifier, in the Schema Editor.
 
-IMAGE
+![The add a field button is highlighted within the Schema Editor.](/help/rtcdp/assets/segmentation/custom-objects/add-field.png)
 
 For more information on creating your relational schema, read the [create a schema guide](/help/xdm/ui/resources/schemas.md#create-manually).
 
@@ -36,7 +36,7 @@ For more information on creating your relational schema, read the [create a sche
 
 Once you created your schema, you'll need to create a dataset that uses the schema to house your custom objects data.
 
-IMAGE
+![The previously created schema is selected on the create dataset page.](/help/rtcdp/assets/segmentation/custom-objects/create-dataset.png)
 
 For more information on creating a dataset, read the [create a dataset guide](/help/catalog/datasets/user-guide.md#create)
 
@@ -50,13 +50,17 @@ For more information on creating a dataset, read the [create a dataset guide](/h
 
 Once you've created your dataset, you can now enable the schema for segmentation. You **must** mark the schema as enabled for segmentation in order to use this schema for segmentation use cases with custom objects in B2B CDP.
 
-IMAGE
+![The toggle to enable the schema for segmentation is highlighted.](/help/rtcdp/assets/segmentation/custom-objects/enable-for-segmentation.png)
 
 ## Add your relationships
 
-Now that you've enabled your schema for segmentation, you can continue creating your schema by defining the relationships for the schema's fields. To add a relationship to the field, select **Add relationship** on the field you want to add the relationship to.
+Now that you've enabled your schema for segmentation, you can continue creating your schema by defining the relationships for the schema's fields. To add a relationship to the field, select **[!UICONTROL Add relationship]** on the field you want to add the relationship to.
 
-IMAGE
+![The Add relationship button is highlighted within the Schema Editor.](/help/rtcdp/assets/segmentation/custom-objects/select-add-relationship.png)
+
+The relationship editor appears. You can now define the relationship between the field and the schemas.
+
+![The Add relationship popover is displayed, showing an example of a completed relationship.](/help/rtcdp/assets/segmentation/custom-objects/add-relationship.png)
 
 ## Ingest data into the dataset
 
@@ -83,15 +87,17 @@ Your data within your cloud storage source must conform to the following specifi
 >- You do **not** need to map the `_change_request_type` field in your dataflow.
 >- Your ingestion frequency can be up to once every 15 minutes.
 
+IMAGE (sample file)
+
 For more information on creating a dataflow, read the [configure a dataflow to ingest batch data from a cloud storage source guide](/help/sources/tutorials/ui/dataflow/batch/cloud-storage.md).
 
 ## Use custom object in Audience Builder
 
 Now that your dataflow has been created, you can use the custom object data within Audience Builder. This custom object data can be used for both people audiences and account audiences. 
 
-The custom object can be found in Audience Builder following the same relationship path that was created for your custom object schema.
+The custom object can be found under **[!UICONTROL Attributes]** in Audience Builder following the same relationship path that was created for your custom object schema.
 
-IMAGE
+![The custom object is highlighted within Audience Builder.](/help/rtcdp/assets/segmentation/custom-objects/audience-builder.png)
 
 ## Next steps
 
