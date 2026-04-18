@@ -34,7 +34,7 @@ This structure ensures teams work from the same script and stay aligned as compl
 - **Walk:** Triggered, cross-channel journeys with more integrated data and measurement  
 - **Run:** Real-time, individualized experiences powered by unified profiles and advanced decisioning  
 
-You don't need to start at "run" to deliver value—focus on the next step based on your current capabilities.
+You don't need to start at "run" to deliver value, focus on the next step based on your current capabilities.
 
 ## How to apply
 
