@@ -31,7 +31,7 @@ Before continuing with this tutorial, please read the following documents to bet
 ## Create an encryption key pair {#create-an-encryption-key-pair}
 
 >[!CONTEXTUALHELP]
->id="platform_sources_encrypted_encryptionKeyId"
+>id="platform_sources_encrypted_encryptionkeyid"
 >title="Encryption Key ID"
 >abstract="Provide the encryption key ID that corresponds with your encryption key that was used to encrypt your source data."
 
