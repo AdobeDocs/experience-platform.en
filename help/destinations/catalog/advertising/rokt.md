@@ -15,11 +15,11 @@ description: Rokt unlocks value in ecommerce by using AI-driven real-time decisi
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Rokt destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the Rokt destination, here are sample use cases that Experience Platform customers can solve by using this destination.
 
 ### Use case #1: Retargeting {#use-case-1}
 
-Re-engage high-intent customers who visited your site or app but did not convert. Build an audience in Experience Platform including  users who browsed specific product categories or abandoned a checkout flow. Then push that audience to Rokt to serve  personalized offers at the point of purchase on partner sites. Rokt operates within the transaction moment, immediately after a customer completes a purchase elsewhere, which means retargeted audiences are reached when purchase intent is at its peak, driving higher conversion rates than traditional display retargeting.
+Re-engage high-intent customers who visited your site or app but did not convert. Build an audience in Experience Platform including users who browsed specific product categories or abandoned a checkout flow. Then push that audience to Rokt to serve  personalized offers at the point of purchase on partner sites. Rokt operates within the transaction moment, immediately after a customer completes a purchase elsewhere, which means retargeted audiences are reached when purchase intent is at its peak, driving higher conversion rates than traditional display retargeting.
 
 ### Use case #2: Suppression lists {#use-case-2}
 
@@ -41,12 +41,12 @@ Rokt supports the activation of identities described in the table below. Learn m
 | Target Identity | Description | Considerations |
 |---|---|---|
 | email | Plain text email address | Recommended. Used for profile matching in Rokt. |
-| email_lc_sha256 | Email addresses hashed with the SHA256 algorithm | Both plain text and SHA256 hashed email addresses are supported. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option to have [!DNL Platform] automatically hash the data on activation. |
+| email_lc_sha256 | Email addresses hashed with the SHA256 algorithm | Both plain text and SHA256 hashed email addresses are supported. When your source field contains unhashed attributes, select the **[!UICONTROL Apply transformation]** option to have Experience Platform automatically hash the data on activation. |
 | phone | Plain text phone number | Used for profile matching in Rokt. |
-| phone_sha256 | Phone numbers hashed with the SHA256 algorithm | Both plain text and SHA256 hashed phone numbers are supported. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option to have [!DNL Platform] automatically hash the data on activation. |
+| phone_sha256 | Phone numbers hashed with the SHA256 algorithm | Both plain text and SHA256 hashed phone numbers are supported. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option to have Experience Platform automatically hash the data on activation. |
 | GAID | Google Advertising ID | Select the GAID target identity when your source identity is a GAID namespace. |
 | IDFA | Apple ID for Advertisers | Select the IDFA target identity when your source identity is an IDFA namespace. |
-| aepProfileId | Adobe Experience Platform Profile ID | Maps the  Profile ID (`xdm:_id`) as a fallback identifier. |
+| aepProfileId | Adobe Experience Platform Profile ID | Maps the Profile ID (`xdm:_id`) as a fallback identifier. |
 
 {style="table-layout:auto"}
 
@@ -55,7 +55,7 @@ Rokt supports the activation of identities described in the table below. Learn m
 This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
@@ -66,7 +66,7 @@ This section describes which types of audiences you can export to this destinati
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (email, phone, mobile ad ID, or others) used in the Rokt destination. |
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to Rokt. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
 
@@ -137,11 +137,11 @@ To add a mapping, select **Add new mapping** in the Mapping step of the activati
 
 ### Configure audience schedule {#audience-schedule}
 
-After completing the mapping step, you will be prompted to configure an audience schedule for each selected segment. Provide a **Start date** for when the audience should begin syncing, and a **Mapping ID** — a label used to identify this audience segment within Rokt. You can use the AEP audience name or any descriptive string that helps you and your Rokt Account Manager identify the segment.
+After completing the mapping step, you will be prompted to configure an audience schedule for each selected segment. Provide a **Start date** for when the audience should begin syncing, and a **Mapping ID** — a label used to identify this audience segment within Rokt. You can use the Experience Platform audience name or any descriptive string that helps you and your Rokt Account Manager identify the segment.
 
 ## Data usage and governance {#data-usage-governance}
 
-All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
+All Experience Platform destinations are compliant with data usage policies when handling your data. For detailed information on how Experience Platform enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
 
 ## Additional resources {#additional-resources}
 
