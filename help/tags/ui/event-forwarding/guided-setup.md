@@ -25,6 +25,10 @@ To get started with the feature, select **[!UICONTROL Get Started]** in the **[!
 
 ![Event Forwarding home page showing the Get Started card in the Data Collections UI](../../images/ui/guided-setup/get-started.png)
 
+>[!INFO]
+>
+>You can also access the guided setup directly from the Data Collections home page.
+
 ### Create a new tags property {#new-property}
 
 In the Configure Properties section, select **[!UICONTROL New]** and enter the new **[!UICONTROL Property Domain]** details.
