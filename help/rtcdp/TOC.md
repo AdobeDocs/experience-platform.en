@@ -15,13 +15,13 @@ role: Admin
     * [Real-Time CDP overview](overview.md)
     * [Get started with Real-Time CDP](get-started.md)
     * [Home page](home-page-dashboards.md)
-    * [Real-Time CDP MCP](rtcdp-mcp.md)
   * Real-Time CDP B2B Edition {#rtcdpb2b-intro}
     * [Real-Time CDP B2B Edition overview](b2b-overview.md)
     * [Example use case](./b2b-use-case.md)
     * [End-to-end tutorial](./b2b-tutorial.md)
     * [Real-Time CDP B2B Edition guardrails](b2b-guardrails.md)
     * [Real-Time CDP B2B Edition architecture upgrades](b2b-architecture-upgrade.md)
+  * [Real-Time CDP MCP](rtcdp-mcp.md)
 * Audience Manager and Real-Time CDP {#evolution}
   * [Evolution from Audience Manager](aam-to-rtcdp.md)
 * Account profiles {#account}
