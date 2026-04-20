@@ -1,6 +1,7 @@
 ---
 title: Event Forwarding Guided Setup
 description: Learn how to set up event forwarding using the guided setup.
+exl-id: c155dec0-9130-4452-834a-08d98a15b006
 ---
 # Event Forwarding guided setup overview
 
