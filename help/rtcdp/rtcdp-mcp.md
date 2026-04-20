@@ -9,6 +9,7 @@ badge: label="Beta" type="Informative"
 role: User, Developer
 level: Beginner, Intermediate
 hide: true
+hidefromtoc: true
 ---
 # Work with MCP clients (Beta) {#rtcdp-mcp}
 
