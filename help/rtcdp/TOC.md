@@ -15,6 +15,7 @@ role: Admin
     * [Real-Time CDP overview](overview.md)
     * [Get started with Real-Time CDP](get-started.md)
     * [Home page](home-page-dashboards.md)
+    * [Real-Time CDP MCP](rtcdp-mcp.md)
   * Real-Time CDP B2B Edition {#rtcdpb2b-intro}
     * [Real-Time CDP B2B Edition overview](b2b-overview.md)
     * [Example use case](./b2b-use-case.md)
