@@ -31,6 +31,17 @@ This topic explains three ideas.
 
 Share this topic with marketers, product owners, and people who build or run the solution. After you read it, use step-by-step guides in Experience League when you need product tasks or technical details.
 
+## What you will understand after reading {#learning-outcomes}
+
+After you read this topic, you should be able to do the following.
+
+1. Describe Experience Platform by itself: Explain what Adobe Experience Platform does as the shared base for data and data rules. You can explain this without naming a specific application.
+2. Describe each main application by itself: Say what business goal each application supports and what type of work it is for.
+3. Describe how Experience Platform and applications fit together: Explain how customer profiles, identities, data shapes (schemas), and data rules move from Experience Platform into applications. Explain why teams do not need to build separate, conflicting data pipelines for each tool.
+4. Connect a goal to the right part of the solution: For a sample goal (for example "run onboarding across email and mobile"), name which parts of Experience Platform and which applications usually support that goal.
+
+In this topic, "your goals" means what your organization wants (for example growth, efficiency, or customer trust). "Your customers" means people who interact with your brand. Experience Platform and applications exist to help your teams serve those customers.
+
 ## What are Adobe Experience Platform and its applications? {#platform}
 
 Adobe Experience Platform is the real-time data and decisioning base for experience applications such as Real-Time CDP, Adobe Journey Optimizer, and Customer Journey Analytics. Those applications are built on Experience Platform and share the same services for data, identity, profiles, audiences, and governance so your teams can move from insight to activation in one connected system instead of stitching separate tools together. Use Experience Platform to standardize and unify data once, then use applications to analyze, orchestrate, and activate experiences across channels at scale.
@@ -73,17 +84,6 @@ The table below lists each application. It gives a short description and main pu
 >[!NOTE]
 >
 >Other Adobe Experience Cloud products can connect to Adobe Experience Platform. This topic focuses on applications that use Experience Platform as their main source of customer data. Product names, editions, and what is sold can differ by license and country or region.
-
-## What you will understand after reading {#learning-outcomes}
-
-After you read this topic, you should be able to do the following.
-
-1. Describe Experience Platform by itself: Explain what Adobe Experience Platform does as the shared base for data and data rules. You can explain this without naming a specific application.
-2. Describe each main application by itself: Say what business goal each application supports and what type of work it is for.
-3. Describe how Experience Platform and applications fit together: Explain how customer profiles, identities, data shapes (schemas), and data rules move from Experience Platform into applications. Explain why teams do not need to build separate, conflicting data pipelines for each tool.
-4. Connect a goal to the right part of the solution: For a sample goal (for example "run onboarding across email and mobile"), name which parts of Experience Platform and which applications usually support that goal.
-
-In this topic, "your goals" means what your organization wants (for example growth, efficiency, or customer trust). "Your customers" means people who interact with your brand. Experience Platform and applications exist to help your teams serve those customers.
 
 ## How Adobe Experience Platform works on its own {#platform-alone}
 
