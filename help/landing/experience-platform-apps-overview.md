@@ -250,7 +250,20 @@ Teams often run the applications in parallel across a quarter. Mix Modeler updat
 - Different jobs, same truth. Real-Time CDP pushes who to reach. Adobe Journey Optimizer runs what happens next after an action. Customer Journey Analytics shows what occurred across steps. Adobe Mix Modeler supports why to shift budget at a higher level.  
 - Data rules travel with the data. Labels and consent on Experience Platform affect which profiles can be used in segments, journeys, and reporting.
 
-### Configuration cautions {#example-gotchas}
+## Example: Cart abandonment across Experience Platform, Customer Journey Analytics, Real-Time CDP, and Adobe Journey Optimizer {#example-cart-abandonment}
+
+The table below is a second common pattern. It highlights insight to audience to orchestration on the same profile and events. It does not include Adobe Mix Modeler. Your steps and order can differ.
+
+| Step | What happens |
+| --- | --- |
+| Collect and unify (Adobe Experience Platform) | Web and app events are collected with the Experience Platform Web SDK or Experience Platform Mobile SDK. Orders or point-of-sale data can come in by batch. Identity Service links identifiers into Real-Time Customer Profile. |
+| Understand behavior (Customer Journey Analytics) | Analysts see where shoppers drop off and define a group (for example high-value customers who added to cart but did not purchase within 24 hours) using [!UICONTROL Data views] and reporting. |
+| Create an audience (Customer Journey Analytics to Experience Platform to Real-Time CDP) | Analysts save that group as an audience published to Adobe Experience Platform. Real-Time CDP exposes it as a segment for activation and for journeys. |
+| Orchestrate recovery (Adobe Journey Optimizer) | A journey uses segment qualification or events as a trigger (for example entry into the cart-abandoner segment). Messages can branch across email, web or in-app, SMS, or push depending on your setup. |
+| Activate elsewhere (Real-Time CDP) | The same segment can go to destinations (for example ads) for retargeting or suppression so you do not message people who already converted. |
+| Measure and refine (Customer Journey Analytics) | Teams measure lift and refine the audience, journey logic, and channel mix. |
+
+## Configuration cautions {#example-gotchas}
 
 >[!IMPORTANT]
 >
@@ -267,7 +280,7 @@ Teams often run the applications in parallel across a quarter. Mix Modeler updat
 | Sandboxes | Configuration in a sandbox does not automatically move to production. Plan a promotion process for schemas, segments, journeys, and connections. |
 | Time zones | Journeys, reporting windows, and ad platforms may use different time zones. Misaligned windows cause "wrong" counts and broken journey entry. |
 
-### Guardrails and limitations {#example-guardrails}
+## Guardrails and limitations {#example-guardrails}
 
 Adobe publishes guardrails for Adobe Experience Platform and for each application. Guardrails describe limits, expected performance, and safe ranges for configuration. They help you avoid errors, slowdowns, or unstable behavior. Guardrails are not service level agreements (SLAs). They do not guarantee speed or uptime in a legal sense.
 
@@ -289,7 +302,7 @@ Your contract, product description, and sales order may set contractual limits o
 >
 >Numeric limits and default values change over time. Do not copy limits from this overview into a design document. Use the current guardrails pages in Experience League, your license usage views where your organization has them, and your contract.
 
-### Where to read more {#where-to-read-guardrails}
+## Where to read more {#where-to-read-guardrails}
 
 - [Experience Platform and application guardrails](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-diagrams/architecture-overview/guardrails) — Overview of how guardrails work across Experience Platform and applications.  
 - [Guardrails for data ingestion](https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/guardrails) — Ingestion throughput and related limits.  
@@ -297,19 +310,6 @@ Your contract, product description, and sales order may set contractual limits o
 - [License usage](https://experienceleague.adobe.com/en/docs/experience-platform/landing/license-usage-and-guardrails/data-management-best-practices) — Data management and license usage practices on Experience Platform (where applicable to your org).
 
 If your workflow leans heavily on Customer Journey Analytics, Adobe Journey Optimizer, Adobe Mix Modeler, or Query Service, read the guardrails topics for those products in their product help as well.
-
-## Example: Cart abandonment across Experience Platform, Customer Journey Analytics, Real-Time CDP, and Adobe Journey Optimizer {#example-cart-abandonment}
-
-The table below is a second common pattern. It highlights insight to audience to orchestration on the same profile and events. It does not include Adobe Mix Modeler. Your steps and order can differ.
-
-| Step | What happens |
-| --- | --- |
-| Collect and unify (Adobe Experience Platform) | Web and app events are collected with the Experience Platform Web SDK or Experience Platform Mobile SDK. Orders or point-of-sale data can come in by batch. Identity Service links identifiers into Real-Time Customer Profile. |
-| Understand behavior (Customer Journey Analytics) | Analysts see where shoppers drop off and define a group (for example high-value customers who added to cart but did not purchase within 24 hours) using [!UICONTROL Data views] and reporting. |
-| Create an audience (Customer Journey Analytics to Experience Platform to Real-Time CDP) | Analysts save that group as an audience published to Adobe Experience Platform. Real-Time CDP exposes it as a segment for activation and for journeys. |
-| Orchestrate recovery (Adobe Journey Optimizer) | A journey uses segment qualification or events as a trigger (for example entry into the cart-abandoner segment). Messages can branch across email, web or in-app, SMS, or push depending on your setup. |
-| Activate elsewhere (Real-Time CDP) | The same segment can go to destinations (for example ads) for retargeting or suppression so you do not message people who already converted. |
-| Measure and refine (Customer Journey Analytics) | Teams measure lift and refine the audience, journey logic, and channel mix. |
 
 ## Map your goals to Experience Platform and to applications {#goals-map}
 
