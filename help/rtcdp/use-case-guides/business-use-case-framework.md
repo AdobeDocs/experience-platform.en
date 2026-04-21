@@ -43,4 +43,5 @@ You don't need to start at "run" to deliver value, focus on the next step based 
 
 ## Get started
 
-Download the framework template and supporting resources to run a structured workshop and produce a prioritized, measurable roadmap ready for activation.
+Download [the framework template and supporting resources](../assets/S651-use-case-framework-template.pdf) to run a structured workshop and produce a prioritized, measurable roadmap ready for activation.
+
