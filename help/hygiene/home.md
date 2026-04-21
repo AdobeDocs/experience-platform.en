@@ -25,6 +25,8 @@ The [!UICONTROL Data Lifecycle] UI is built on top of the Data Hygiene API, whos
 
 ## Timelines and transparency {#timelines-and-transparency}
 
+The following sections explain how lifecycle operations behave once submitted.
+
 [Record delete](./ui/record-delete.md) and dataset expiration requests each have their own processing timelines and provide transparency updates at key points in their respective workflows. 
 
 >[!TIP]
@@ -44,6 +46,25 @@ The following takes place when a [dataset expiration request](./ui/dataset-expir
 | Hard deletion complete | 15 days | All data related to the dataset is hard deleted from the data lake and profile service. The [status of the data lifecycle job](./ui/browse.md#view-details) that deleted the dataset is updated to reflect this. |
 
 {style="table-layout:auto"}
+
+### Record delete timelines {#record-delete-transparency}
+
+The following takes place after a [record delete request](./ui/record-delete.md) is submitted. Timings are approximate and represent the standard 30-day SLA flow.
+
+>[!NOTE]
+>
+>The stages below describe the general sequence of processing. Exact timing within each stage can vary based on system load, batch scheduling, and your organization's entitlement tier. These timelines are guidelines, not contractual commitments at the stage level. The end-to-end SLA (30 days standard, 15 days premium) is the operative commitment.
+
+| Stage | Approx. timing | Description |
+| --- | --- | --- |
+| Request submitted and batched | Day 1–15 | A work order is created and queued. Requests are batched for up to 14 days before processing begins. Batching is the primary reason deletion is not immediate. |
+| Downstream systems processed | Day 16 | Identity Service, Real-Time Customer Profile, and Adobe Journey Optimizer receive the record delete request and begin execution. These systems are processed before the data lake. |
+| Data lake deletion | Approx. day 25 | Records are removed from the data lake. The data lake is required to retain all data and is the last system to delete as a data integrity measure. |
+| Buffer — integrity checks and resubmissions | Day 25–30 | A buffer window allows for integrity checks and resubmission of any failed jobs before the SLA window closes. The work order status updates to `completed` once all systems confirm deletion. |
+
+{style="table-layout:auto"}
+
+For entitlement-based queue durations and maximum SLA values, see [Processing timelines for identifier submissions](./ui/record-delete.md#sla-processing-timelines).
 
 ## Next steps
 
