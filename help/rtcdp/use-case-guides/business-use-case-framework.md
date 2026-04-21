@@ -1,8 +1,6 @@
 ---
 title: Leverage Customer Experience Use Cases to Drive Business Goals
 description: Use a practical, workshop-ready framework to define, prioritize, and activate customer experience use cases tied to measurable business outcomes. Apply a simple Why → Who/What/Where → How model to align teams, guide execution, and deliver impact.
-hide: yes
-hidefromtoc: yes
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
 ---
@@ -43,4 +41,5 @@ You don't need to start at "run" to deliver value, focus on the next step based 
 
 ## Get started
 
-Download the framework template and supporting resources to run a structured workshop and produce a prioritized, measurable roadmap ready for activation.
+Download [the framework template and supporting resources](../assets/S651-use-case-framework-template.pdf) to run a structured workshop and produce a prioritized, measurable roadmap ready for activation.
+
