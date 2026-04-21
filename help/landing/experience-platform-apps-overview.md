@@ -252,7 +252,7 @@ Teams often run the applications in parallel across a quarter. Mix Modeler updat
 
 ## Example: Cart abandonment across Experience Platform, Customer Journey Analytics, Real-Time CDP, and Adobe Journey Optimizer {#example-cart-abandonment}
 
-The table below is a second common pattern. It highlights insight to audience to orchestration on the same profile and events. It does not include Adobe Mix Modeler. Your steps and order can differ.
+The table below shows a second common pattern. It highlights insight to audience to orchestration on the same profile and events. It does not include Adobe Mix Modeler. Your steps and order can differ.
 
 | Step | What happens |
 | --- | --- |
