@@ -23,45 +23,13 @@ exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 
 New features and updates to existing features in Adobe Experience Platform:
 
-- [Advanced data lifecycle management](#advanced-data-lifecycle-management)
-- [Agent Orchestrator](#agent-orchestrator)
 - [Destinations](#destinations)
+- [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
-- [Real-Time CDP Collaboration](#rtcdp-collaboration)
+- [Real-Time CDP](#rtcdp)
 - [Sandboxes](#sandboxes)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
-- [XDM (Experience Data Model)](#xdm)
-
-## Advanced data lifecycle management {#advanced-data-lifecycle-management}
-
-Experience Platform provides a suite of data hygiene capabilities that let you manage your stored data through programmatic deletions of consumer records and datasets. Use the Data Lifecycle workspace in the UI or calls to the Data Hygiene API to manage your data stores. These capabilities ensure that information is used as expected, updated when incorrect data needs fixing, and deleted when organizational policies require it.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| Selective profile data deletion | Delete profile data selectively across multiple datasets or limit deletion to specific services (profile vs. data lake). Use a single dataset ID, a list of dataset IDs, or the literal `ALL` in `datasetId` to target one, many, or all datasets. Scope deletion to specific services by setting `targetServices` accordingly. See the [Record Delete Work Orders guide](../hygiene/api/workorder.md) for details. |
-
-{style="table-layout:auto"}
-
-For more information, read the [advanced data lifecycle management overview](../hygiene/home.md).
-
-## Agent Orchestrator {#agent-orchestrator}
-
-Use Agent Orchestrator to build and deploy AI-powered agents that automate workflows and interact with customers across multiple channels.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| Data Onboarding skill | The Data Engineering Agent now includes Data Onboarding skills covering source connection, data quality, semantic enrichment, schema recommendation, and data ingestion. Use step-by-step workflows and example prompts to connect sources, check data quality, and ingest data for B2C and B2B flows. |
-| Data Validation skills | Two validation skills, DataField and DataSet, are now available in the Data Engineering Agent. Use these skills to validate data fields and datasets through natural language prompts. |
-| Data Collection skills | The Data Engineering Agent now includes Data Collection skills powered by Product Knowledge and Operational Insights. Use Product Knowledge to get in-context guidance for complex Data Collection configurations. Use Operational Insights to explore lineage, dependencies, and relationships across your data collection objects. |
-
-{style="table-layout:auto"}
-
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 ## Destinations {#destinations}
 
@@ -88,6 +56,20 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 
 For more information, read the [Destinations overview](../destinations/home.md).
 
+## Experience Data Model (XDM) {#xdm}
+
+XDM is an open-source specification that provides common structures and definitions (schemas) for data brought into Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Field group schema usage visibility | View which schemas use a field group from the detail page and explore them in a sortable dialog with schema metadata. This helps you quickly assess dependencies and impact without navigating away. |
+
+{style="table-layout:auto"}
+
+For more information, read the [XDM System overview](../xdm/home.md).
+
 ## Query Service {#query-service}
 
 Use Query Service to query data in Adobe Experience Platform [!DNL Data Lake] with standard SQL. Join any datasets from the [!DNL Data Lake] and capture query results as a new dataset for use in reporting, Data Science Workspace, or ingestion into Real-Time Customer Profile.
@@ -96,27 +78,25 @@ Use Query Service to query data in Adobe Experience Platform [!DNL Data Lake] wi
 
 | Feature | Description |
 | --- | --- |
-| Data Distiller Accelerators | Pick an accelerator from the **[!UICONTROL Accelerators]** tab, enter the required parameters, and run or schedule the generated SQL without writing it yourself. Accelerators are Adobe-managed, read-only SQL templates for common scenarios. Clone any accelerator into a custom template to edit it for your organization's specific needs. |
+| Data Distiller Accelerators | Run and schedule Adobe-managed, parameterized SQL templates in the Query Service UI to perform common analyses without writing SQL. This helps you standardize analytics workflows and reuse trusted query logic across your organization. |
 
 {style="table-layout:auto"}
 
 For more information, read the [Query Service overview](../query-service/home.md).
 
-## Real-Time CDP Collaboration {#rtcdp-collaboration}
+## Real-Time CDP {#rtcdp}
 
-[!DNL Real-Time CDP Collaboration] is a privacy-safe data collaboration environment where you can discover and activate high-value audiences with advertising partners while maintaining full data control.
+[!DNL Real-Time CDP] provides unified, actionable customer profiles by ingesting, processing, and activating data across multiple channels in real time. With Real-Time CDP, organizations can connect existing data sources, build and activate rich audiences, and ensure privacy-compliant activation across destinations—all from within Adobe Experience Platform. This enables marketers, analysts, and IT teams to deliver highly personalized, timely experiences for their customers through seamless, cross-channel marketing campaigns.
 
 **New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| New collaboration role types | Three collaboration patterns are now available in [!DNL Real-Time CDP Collaboration]: advertiser-to-data partner, agency-to-publisher, and advertiser-to-agency platform. Use these patterns to collaborate directly with brands, agencies, and data providers in a privacy-safe environment. Account roles for agency and data partner are also available. See the [account roles](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/overview/roles) and [collaboration patterns](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/overview/collaboration-patterns) pages for details. |
-| [!DNL Demdex] ID (ECID) match key | [!DNL Real-Time CDP Collaboration] now supports [!DNL Demdex] ID (ECID) as a match key. Use this match key to expand overlap discovery and audience activation with partners who share [!DNL Adobe] identity infrastructure. |
-| Real-Time CDP MCP (Beta) | Use the [!DNL Real-Time CDP] MCP to bring [!DNL Adobe Real-Time CDP] into AI agents and MCP-compatible clients. Connect an MCP-compatible client (such as [!DNL Claude], [!DNL ChatGPT], [!DNL Claude Code], or [!DNL VS Code]) to the [!DNL Real-Time CDP] MCP server. Inspect audiences, destination configuration, and activation run history through natural language, without writing Experience Platform REST API calls or navigating multiple UI workflows. Available tools include Search Existing Audiences, Preview Audience Membership, List Destination Types, List Configured Accounts, List Configured Destinations, List Source Connections, List Target Connections, and Inspect Activation Runs. Write operations are not supported in this Beta release. |
+| Real-Time CDP MCP (Beta) | Use the Real-Time CDP MCP to bring Real-Time CDP into AI agents and MCP-compatible clients, enabling you to interact with Real-Time CDP tools directly through your native LLM experience. By connecting an MCP-compatible client (such as Claude, ChatGPT, Claude Code, Codex, Cursor, or VS Code) to `https://rtcdp-mcp.adobe.io/mcp`, you can use natural language to inspect audiences, destination configuration, and activation run history—without writing Experience Platform REST API calls or navigating multiple UI workflows. After completing a browser-based Adobe sign-in, you will have read-only access to tools including Search Existing Audiences, Preview Audience Membership, List Destination Types, List Configured Accounts, List Configured Destinations, List Source Connections, List Target Connections, and Inspect Activation Runs. Each request requires `imsOrgId` and `sandboxName` parameters to ensure actions are scoped to your organization and sandbox. Note that write operations are not supported in this Beta release. |
 
 {style="table-layout:auto"}
 
-For more information, read the [Real-Time CDP Collaboration documentation](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home).
+For more information, read the [Real-Time CDP overview](../rtcdp/home.md).
 
 ## Sandboxes {#sandboxes}
 
@@ -126,7 +106,7 @@ Adobe Experience Platform is built to enrich digital experience applications on 
 
 | Feature | Description |
 | --- | --- |
-| Express Copy | Use Express Copy to duplicate objects (such as schemas and sources) across sandboxes in a single action from the Sandbox Tooling UI. Select the target sandbox, and dependency objects are detected and created or reused automatically. Packages and export/import jobs run in the background. Previously, copying objects required a multi-step workflow: creating a package, adding objects, exporting the package, then importing it in the target sandbox. |
+| Express Copy | Use Express Copy to copy objects to a target sandbox in a single action from the [Sandbox Tooling UI](/help/sandboxes/ui/sandbox-tooling.md#express-copy). Dependent objects are detected automatically and are created in the target sandbox or reused when they already exist. |
 
 {style="table-layout:auto"}
 
@@ -154,27 +134,11 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| [!DNL Meta Ads] (Beta) | Use the [!DNL Meta Ads] source to configure the complete [!DNL Meta Ads] ingestion workflow in the Sources UI. Connect your [!DNL Meta Ads] account and bring paid media data directly into Experience Platform for activation and analysis. |
-| [!DNL Deltashare] | Use the [!DNL Deltashare] source to bring live, shared datasets from partners or internal lakehouse environments into Adobe's applications without copying or manually uploading files. Connect to a [!DNL Deltashare] endpoint, choose the tables you need, and use that governed data alongside your existing profiles and insights. |
-| [!DNL Kobie] | The [!DNL Kobie] source connector now supports streaming ingestion. Stream loyalty data from [!DNL Kobie Alchemy&reg; Loyalty Cloud] (KALC) directly into Experience Platform alongside batch ingestion. Updated documentation reflects the streaming-only connector release, updated authentication requirements, and the endpoint URL configuration from the **[!UICONTROL Copy schema payload]** option. |
-| [!DNL Capillary] and [!DNL Talon.One] loyalty sources | Updated documentation for [!DNL Capillary] includes a downloadable mapping sample. Updated documentation for [!DNL Talon.One] includes changes to the Management Key V1 and Management API Key configuration. |
-| Automatic dataflow disabling | Sources dataflows that fail continuously for 30 days are automatically disabled. When a dataflow is disabled, review the failure reason in Monitoring, apply the necessary updates, and re-enable the dataflow. Common failure reasons include credentials, permissions, or schema and mapping configuration changes. |
-| Self-service sourcing for [!DNL Snowflake] | Updated prerequisite documentation for [!DNL Snowflake] and [!DNL GCS] audience sourcing now includes more detailed permission setup steps for both platforms. |
+| Automatic dataflow disabling | Sources ingestion dataflows that fail continuously for 30 days are automatically disabled, helping to surface unhealthy dataflows and reduce repeated failed runs. |
+| [!DNL Delta Sharing] | You can use the [!DNL Delta Sharing] source to bring Delta tables into Experience Platform through a secure, open data‑sharing protocol. After you configure a [!DNL Delta Sharing] connection and select the shares and tables you want to ingest, Platform automatically brings that data into your datasets so you can use it for analysis, segmentation, and activation. |
+| [!DNL Meta Ads] (Beta) | You can use the [!DNL Meta Ads] source connector (Beta) in the Sources workspace to authenticate to [!DNL Meta], select your ad accounts, and schedule ingestion of [!DNL Meta Ads] campaign and performance data into Experience Platform datasets. |
+| [!DNL Talon.One] | You can now connect Experience Platform to [!DNL Talon.One] using the new [!DNL Talon.One] batch and streaming sources. Use the new sources to ingest loyalty profile data as well as transaction and loyalty activity events to Experience Platform. |
 
 {style="table-layout:auto"}
 
 For more information, read the [sources overview](../sources/home.md).
-
-## XDM (Experience Data Model) {#xdm}
-
-XDM is an open-source specification that provides common structures and definitions (schemas) for data brought into Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| Field group browse and detail pages | The field group browse table now includes columns and filters for compatible classes and industry tags. The information rail shown when you select a row also includes this information. On the field group detail page, the properties rail now shows which schemas use the field group and what the required fields are. If RBAC labels are applied, the option to view those labels on the field tree is also available. When you select a field, the field properties rail shows the labels on that field by category. |
-
-{style="table-layout:auto"}
-
-For more information, read the [XDM System overview](../xdm/home.md).
