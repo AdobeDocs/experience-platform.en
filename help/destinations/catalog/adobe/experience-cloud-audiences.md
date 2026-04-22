@@ -70,7 +70,7 @@ However, Adobe strongly recommends using the following dedicated destination car
 >
 > * You need an Audience Manager license to enable the [Data Management Platform use cases](#dmp-use-cases) mentioned further above.
 > * You *do* need an Audience Manager license to share [!DNL Real-Time CDP] audiences with [!DNL Adobe Analytics].
-> * You *do not need* an Audience Manager license to share [!DNL Real-Time CDP] audiences with [!DNL Adobe Advertising Cloud], [!DNL Adobe Target], Marketo, and other Experience Cloud solutions, mentioned in the [section above](#share-segments-with-other-solutions).
+> * You *do not need* an Audience Manager license to share [!DNL Real-Time CDP] audiences with [!DNL Adobe Advertising], [!DNL Adobe Target], Marketo, and other Experience Cloud solutions, mentioned in the [section above](#share-segments-with-other-solutions).
 
 ### For customers who are using the legacy audience-sharing solution {#legacy-audience-sharing}
 
