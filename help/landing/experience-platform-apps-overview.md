@@ -1,6 +1,6 @@
 ﻿---
 title: How Adobe Experience Platform and applications work together
-description: Adobe Experience Platform and each application works alone, and they work together to support your customer goals. 
+description: What Adobe Experience Platform does, what each application does, and how they work together to support your customer goals.
 solution: Experience Platform
 feature: Getting Started
 topic: Overview
@@ -12,9 +12,9 @@ exl-id: c4f8e2a1-6b3d-4f92-9c7e-1a2b3c4d5e6f
 
 This topic explains three ideas.
 
-1. What Adobe Experience Platform does by itself.
-2. What each application does by itself.
-3. How Experience Platform and applications work together so your organization can meet its goals and serve your customers well.
+1. What Adobe Experience Platform does.
+2. What each application does.
+3. How Experience Platform and applications work together so your organization can meet its goals and serve your customers well, including a real-world example scenario.
 
 >[!NOTE]
 >
@@ -24,19 +24,19 @@ This topic explains three ideas.
 
 | Your role | Primary questions | How this topic helps |
 | --- | --- | --- |
-| Business and marketing leaders | What value do we get from Experience Platform and applications together? | Connect customer and brand goals to Experience Platform features and applications. Use the same words as your technical teams. |
-| People in marketing operations, analytics, or customer experience | How do I run campaigns and journeys, and how does data line up? | See where data comes together, where choices are made, and which application fits which step. |
-| Architects, engineers, and developers | How do we make this work reliably at scale? | Use the same simple model and terms as the rest of Experience League when you design or build. |
-| Analysts and data practitioners | How do I answer questions and find opportunities to activate? | See how analysis on Experience Platform data connects to audiences and journeys. |
+| Business and marketing leaders | What value do you get from Experience Platform and applications together? | Connect customer and brand goals to Experience Platform features and applications. Use the same words as your technical teams. |
+| People in marketing operations, analytics, or customer experience | How do you run campaigns and journeys, and how does data line up? | See where data comes together, where choices are made, and which application fits which step. |
+| Architects, engineers, and developers | How do you make this work reliably at scale? | Use the same simple model and terms as the rest of Experience League when you design or build. |
+| Analysts and data practitioners | How do you answer questions and find opportunities to activate? | See how analysis on Experience Platform data connects to audiences and journeys. |
 
-Share this topic with marketers, product owners, and people who build or run the solution. After you read it, use step-by-step guides in Experience League when you need product tasks or technical details.
+Share this topic with marketers, product owners, and people who build or run the solution. After you read it, use step-by-step guides in Experience League for product tasks or technical details.
 
 ## What you will understand after reading {#learning-outcomes}
 
 After you read this topic, you should be able to do the following.
 
-1. Describe Experience Platform by itself: Explain what Adobe Experience Platform does as the shared base for data and data rules. You can explain this without naming a specific application.
-2. Describe each main application by itself: Say what business goal each application supports and what type of work it is for.
+1. Describe Experience Platform: Explain what Adobe Experience Platform does as the shared base for data and data rules. You can explain this without naming a specific application.
+2. Describe each main application: Explain which business goal each application supports and what type of work it is for.
 3. Describe how Experience Platform and applications fit together: Explain how customer profiles, identities, data shapes (schemas), and data rules move from Experience Platform into applications. Explain why teams do not need to build separate, conflicting data pipelines for each tool.
 4. Connect a goal to the right part of the solution: For a sample goal (for example "run onboarding across email and mobile"), name which parts of Experience Platform and which applications usually support that goal.
 
@@ -46,7 +46,7 @@ In this topic, "your goals" means what your organization wants (for example grow
 
 Adobe Experience Platform is the real-time data and decisioning base for experience applications such as Real-Time CDP, Adobe Journey Optimizer, and Customer Journey Analytics. Those applications are built on Experience Platform and share the same services for data, identity, profiles, audiences, and governance so your teams can move from insight to activation in one connected system instead of stitching separate tools together. Use Experience Platform to standardize and unify data once, then use applications to analyze, orchestrate, and activate experiences across channels at scale.
 
-In typical workflows, teams access Experience Platform and these applications through Adobe CX Enterprise, the unified interface and shared services layer for Adobe's customer experience portfolio. Read [Adobe CX Enterprise](#cx-enterprise) for how that fits with the stack below.
+In typical workflows, teams access Experience Platform and these applications through Adobe CX Enterprise (Formerly Adobe Experience Cloud), the unified interface and shared services layer for Adobe's customer experience portfolio. Read [Adobe CX Enterprise](#cx-enterprise) for how that fits with the stack below.
 
 ## Adobe CX Enterprise {#cx-enterprise}
 
@@ -65,29 +65,51 @@ Adobe Experience Platform includes features and services. It also supports licen
 | Term | What it means in this documentation | Common examples |
 | --- | --- | --- |
 | Platform feature | A capability available in Experience Platform that teams use directly for a purpose (often analysis, testing, or control). It is not a separate licensed application. | Sandboxes and data governance and privacy capabilities |
-| Platform service | A background service that provides shared behavior that multiple products rely on through Experience Platform. Services are foundational and are not marketed as standalone day-to-day applications. | Identity Service, Real-Time Customer Profile, Query Service, segmentation, destinations, ingestion |
+| Platform service | A background service that provides shared behavior that multiple products rely on through Experience Platform. Services are foundational and are not marketed as standalone day-to-day applications. | Identity Service, Real-Time Customer Profile, Query Service, segmentation, destinations, data ingestion |
 | Platform application | A licensed product built on Adobe Experience Platform that adds its own user experience, workflows, and product-specific capabilities on top of the shared foundation. | Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, Adobe Mix Modeler |
 
 ## Purpose of each application {#applications-at-a-glance}
 
 In this documentation, an application is a licensed Adobe product that runs on Adobe Experience Platform. Applications use the same customer profile, data structure, identity links, and data rules as Experience Platform. Each application adds its own screens and workflows for a type of work (for example sending audiences to channels, running journeys, or reporting results).
 
-The table below lists each application. It gives a short description and main purpose. It does not list every product edition. What you can access depends on your license.
+The table below lists each application. It gives a short description and main purpose. It does not list every application edition. What you can access depends on your license.
 
 | Application | What it is | Main purpose |
 | --- | --- | --- |
-| [Real-Time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/home) | Application for customer data and audiences | Bring your own customer data together. Build audiences that update often. Send audiences and attributes to ads, email, mobile apps, and other tools. Data rules are applied. The same product family supports consumer businesses, business customers, and mixed models. See product help for editions. |
+| [Real-Time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/home) | Application for customer data and audiences | Bring your own customer data together. Build audiences that update often. Send audiences and attributes to ads, email, mobile apps, and other tools. Data rules are applied. The same product family supports consumer businesses, business customers, and mixed models. See application help for available editions. |
 | [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer) | Application for journeys and messages | Plan and run personalized journeys (for example welcome paths, retention, or follow-up after service). Send messages across channels using live events and profile data. |
 | [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/customer-journey-analytics) | Application for analysis across channels | Measure and study how customers move through journeys and how marketing performs. Uses data that is prepared in Adobe Experience Platform. |
 | [Adobe Mix Modeler](https://experienceleague.adobe.com/en/docs/mix-modeler) | Application for marketing measurement and planning | Bring measurement together (including marketing mix modeling). Plan spending scenarios for marketing. Uses data connected through Adobe Experience Platform so teams can see what drives results and plan budgets. |
 
 >[!NOTE]
 >
->Other Adobe Experience Cloud products can connect to Adobe Experience Platform. This topic focuses on applications that use Experience Platform as their main source of customer data. Product names, editions, and what is sold can differ by license and country or region.
+>Other Adobe CX Enterprise products can connect to Adobe Experience Platform. This topic focuses on applications that use Experience Platform as their main source of customer data. Product names, editions, and what is sold can differ by license and country or region.
 
-## How Adobe Experience Platform works on its own {#platform-alone}
+## Map your goals to Experience Platform and to applications {#goals-map}
 
-Adobe Experience Platform is the base layer for customer experience data. It is not a single marketing screen. It is built on services that run in the background. Before you open an application, Experience Platform can do the following.
+Use this table to see what you want, what Experience Platform provides, and which applications help.
+
+| Your goal | What to use from Experience Platform | What to use from applications |
+| --- | --- | --- |
+| See one person or account across channels | Identity Service, Real-Time Customer Profile, XDM | All listed applications benefit. Real-Time CDP and Adobe Journey Optimizer use Profile for sending audiences and journeys. |
+| Run campaigns and lists with up-to-date membership | Profile, segmentation, destinations, data rules | Real-Time CDP for how audiences are sent. Destinations carry policy context. |
+| Run multi-step experiences that react to behavior | Profile, live events, data rules | Adobe Journey Optimizer for journey logic and messages. |
+| Report on journeys and channels with matching numbers | Shared XDM events and identities | Customer Journey Analytics for analysis on the same data. |
+| Turn analysis into audiences for activation | Audiences published from Customer Journey Analytics to Adobe Experience Platform | Real-Time CDP and Adobe Journey Optimizer use those audiences like other segments from Experience Platform. |
+| See how channels contribute and plan marketing budgets | United datasets, data rules, data ready for models | Adobe Mix Modeler for mix modeling and spend planning. |
+| Keep marketing and service aligned on customer facts | Profile, data rules, optional connections to other systems | How you connect other systems can vary. Experience Platform stays the base for customer data. |
+
+## How Adobe Experience Platform provides value {#platform-alone}
+
+The subsections that follow show how the platform foundation turns into value for your teams.
+
+- The same data and rules
+- Faster paths to audiences, analysis, and activations
+- Governed use across tools
+
+Adobe Experience Platform is the base layer for customer experience data. It is not a single marketing screen. It is built on services that run in the background. You set up data, identity, and rules once. Licensed applications reuse that foundation, which speeds time to audiences, analysis, and activations that teams can run with confidence.
+
+Before you open an application, Experience Platform can do the following.
 
 | What Experience Platform does | Why this helps you |
 | --- | --- |
@@ -98,7 +120,7 @@ Adobe Experience Platform is the base layer for customer experience data. It is 
 | Builds audiences (segmentation) from profile data, behavior, and consent | You define who is included in one place. Other steps reuse that logic. |
 | Sends data out to destinations (exports and connected systems) and applies data rules through labels, policies, and Privacy Service | Teams can move faster while still following consent and law. |
 
-In short, Experience Platform unites customer data, applies rules, and prepares data for use. It does not replace the full screens that applications provide for journey design, media workflows, or cross-channel reports. Applications provide those experiences.
+In short, Experience Platform unites customer data, applies rules, and prepares data for use, so the value of that work shows up in applications (audiences, journeys, analytics) instead of remaining trapped in one-off data projects. It does not replace the full screens that applications provide for journey design, media workflows, or cross-channel reports. Applications provide those experiences.
 
 ### Experience Platform services at a glance {#core-platform-services}
 
@@ -112,8 +134,8 @@ In short, Experience Platform unites customer data, applies rules, and prepares 
 | Segmentation | Define audiences from profile data and events. |
 | Destinations | Send audiences and attributes to other systems that run marketing or service. |
 | Data governance, Privacy Service, consent | Control how data may be used. |
-| Sandboxes | Create isolated environments to develop and test schemas, data flows, identity rules, and segmentation before you promote work to production. This is an Experience Platform feature, not an application. |
-| Query Service | Run SQL on Experience Platform data for analysis and reporting. This is an Experience Platform service, not an application. |
+| Sandboxes | Create isolated environments to develop and test schemas, data flows, identity rules, and segmentation before you promote work to production. |
+| Query Service | Run SQL on Experience Platform data for analysis and reporting. |
 
 These areas support an end-to-end pattern:
 
@@ -123,19 +145,20 @@ These areas support an end-to-end pattern:
 4. Activate audiences and attributes to your selected destinations.
 5. Measure results, statistics, and performance.
 
-Data rules apply at each step.
+That flow is how raw data on Experience Platform becomes customer insight and activations you can use in your applications, with one governed stack instead of a separate data path for every channel or team. Data rules apply at each step.
 
 >[!NOTE]
 >
->When you configure schemas, identities, governance, and data ingestion on Experience Platform, that work is available to applications that your license includes. You do not repeat the same foundation setup inside each application.
+>When you configure schemas, identities, governance, and data ingestion on Experience Platform, that work is available to applications that your license includes. You do not repeat the same foundation setup inside each application, so teams reach productive use in those applications sooner and with fewer mismatched definitions.
 
-## How applications work on their own {#applications-alone}
+## How the applications provide value {#applications-alone}
 
-A short list of each application and its main purpose is in [What the applications are, and the main purpose of each](#applications-at-a-glance). The table below adds detail. It shows what each application does on its own and what goal it supports.
+The subsections that follow show how each application provides value. A short list of each application and its main purpose is in [What the applications are, and the main purpose of each](#applications-at-a-glance). The table below adds detail. It shows what each application does and what goal it supports.
 
-Applications are user experiences and workflows on Experience Platform. Each one helps your teams do a main type of work. All of them draw from the same profile and data rules. Teams do not need to copy the full data stack for each tool.
+- Each application is a full workflow for a type of work (for example activation, journeys, cross-channel analysis, or marketing measurement) on the same Real-Time Customer Profile and data rules on Experience Platform.
+- Applications are the user experiences and screens on that foundation. Each one helps your teams do a main type of work. All of them draw from the same profile and data rules, so you do not copy the full data stack for each product.
 
-| Application | What it does on its own (main job) | What goal it helps you reach |
+| Application | What it does (main job) | What goal it helps you reach |
 | --- | --- | --- |
 | [Real-Time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/home) | Manage audiences and activation: build segments, update membership often, send audiences and attributes to destinations. Supports consumer, business, and mixed use cases depending on your license. | Reach the right people and exclude the wrong ones across paid, owned, and partner channels using your own unified customer data. |
 | [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer) | Design journeys and send messages: react to events, branch paths, and send across channels from one journey workspace. | Run personalized sequences (for example onboarding, retention, or service follow-up) that respond to what the customer just did. |
@@ -171,6 +194,14 @@ In short, applications are how teams do their daily work (activation, journeys, 
 
 ## How Experience Platform and applications work together {#platform-and-apps-together}
 
+Experience Platform and applications are built to be used as one system.
+
+- A shared data, identity, and decisioning base
+- Applications for activation, orchestration, analysis, and measurement
+- For most work, a common entry and shared services in Adobe CX Enterprise
+
+The subsections below show that system from a few views so you can match the stack to your role. The first view is a high-level stack table—Experience Platform, applications, and the CX Enterprise experience layer—followed by an alternative layer model and a stage view of how work runs end to end.
+
 ### Experience Platform stack inside Adobe CX Enterprise {#cx-enterprise-stack}
 
 The table below shows the high-level architecture. CX Enterprise is the experience, shared-services, and AI entry layer. Experience Platform is the foundation. Applications run on Experience Platform.
@@ -184,8 +215,8 @@ The table below shows the high-level architecture. CX Enterprise is the experien
 Experience Platform and applications working together means three things.
 
 1. One customer profile, many products: Real-Time Customer Profile, Identity Service, and data rules are shared. Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, and Adobe Mix Modeler read from that same base (and related data). You do not maintain one customer list for analytics and a different list for marketing unless your process requires it.
-2. One meaning for what happened: Data is shaped with XDM schemas. The same event can feed reporting, journeys, and audience rules. Teams spend less time arguing about definitions.
-3. One place for data rules: Labels and policies apply to the data that applications use. Data rules are not only added later inside each tool.
+2. One set of event and field definitions, many use cases: Data is shaped with XDM schemas. The same event can feed reporting, journeys, and audience rules. Teams spend less time arguing about definitions.
+3. One place for data rules: You apply labels and policies to the data in Experience Platform, and applications use that governed data. You do not have to define compliance again inside each product, separate from the data the product reads from the platform.
 
 ### A simple layer model (another way to picture the stack) {#layer-model}
 
@@ -207,9 +238,9 @@ The table below zooms in on patterns inside the application and foundation layer
 | Activate | Destinations and controlled export of audiences and attributes | Real-Time CDP supports many activation patterns. Journeys send messages through the channels you set up. |
 | Measure | Events and identities that follow one model in the data layer | Customer Journey Analytics for journey and campaign reporting. Audiences you define in Customer Journey Analytics can be published to Adobe Experience Platform for activation in Real-Time CDP and Adobe Journey Optimizer. Adobe Mix Modeler for unified marketing measurement and planning that uses data connected to Experience Platform. |
 
-## Example: One workflow that uses Experience Platform and all four applications {#example-full-stack-workflow}
+## Example: Using Experience Platform and all four applications in a single workflow {#example-full-stack-workflow}
 
-The scenario below is one common pattern. Your teams might change the order or skip a step. The goal is to show how Adobe Experience Platform and Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, and Adobe Mix Modeler can all appear in the same program.
+The scenario below shows one common pattern. Your teams might change the order or skip a step. The goal is to show how Adobe Experience Platform and Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, and Adobe Mix Modeler can all appear in the same workflow.
 
 ### The scenario {#example-scenario}
 
@@ -217,37 +248,50 @@ A retail brand runs a seasonal acquisition and onboarding program. Leadership wa
 
 ### What happens in the workflow {#example-steps}
 
+The workflow below summarizes a typical workflow. The order is illustrative. Teams often overlap or reorder work.
+
+1. Adobe Experience Platform: Ingest, identity, and profile to provide the data foundation the other steps rely on.
+2. Adobe Mix Modeler: Plan spend and channel mix for the program using connected marketing and outcome data.
+3. Real-Time CDP: Build and activate audiences, and use suppression lists where needed.
+4. Adobe Journey Optimizer: Run welcome and lifecycle journeys and messages.
+5. Customer Journey Analytics: Measure paths from touch to purchase and show how programs perform.
+
 #### Adobe Experience Platform
 
-   Teams bring in web and app events, orders, consent, and cost or performance data from ads where available. Data uses shared XDM schemas. Identity Service links known customers. Real-Time Customer Profile updates as people shop and sign up. Data rules and consent are stored on Experience Platform.  
+   Teams bring in web and app events, orders, consent, and cost or performance data from ads where available. Data uses shared XDM schemas. Identity Service links known customers. Real-Time Customer Profile updates as people shop and sign up. Data rules and consent are stored on Experience Platform.
+
    *Without this step, the applications below have nothing reliable to read.*
 
 #### Adobe Mix Modeler
 
-   Marketing and finance review how channels contribute to sales and how to split budget across media for the season. They use models and planning views that draw on harmonized marketing and outcome data connected to Experience Platform.  
-   *This step answers "how should we invest" at a planning level. It does not send email or build day-to-day audiences by itself.*
+   Marketing and finance review how channels contribute to sales and how to split budget across media for the season. They use models and planning views that draw on harmonized marketing and outcome data connected to Experience Platform.
+
+   *This step answers "how should we invest" at a planning level. It is not the step for email or for day-to-day audience builds.*
 
 #### Real-Time CDP
 
-   Acquisition teams build audiences (for example likely buyers or people who left items in a cart). They activate those audiences to advertising and other destinations. They may also build suppression audiences so current customers are not targeted as prospects.  
+   Acquisition teams build audiences (for example likely buyers or people who left items in a cart). They activate those audiences to advertising and other destinations. They may also build suppression audiences so current customers are not targeted as prospects.
+
    *This step answers "who should we reach or exclude in paid and owned channels."*
 
 #### Adobe Journey Optimizer
 
-   Lifecycle teams run a welcome journey after a purchase or signup. The journey listens for profile or event conditions, branches (for example first purchase vs repeat), and sends email or mobile messages.  
+   Lifecycle teams run a welcome journey after a purchase or signup. The journey listens for profile or event conditions, branches (for example first purchase vs repeat), and sends email or mobile messages.
+
    *This step answers "what message or path does this person get next."*
 
 #### Customer Journey Analytics
 
-   Analytics teams build reports and dashboards on the full path from ad touch to purchase and onboarding. They measure funnels, channels, and segments using the same event and profile-backed definitions the business uses elsewhere.  
+   Analytics teams build reports and dashboards on the full path from ad touch to purchase and onboarding. They measure funnels, channels, and segments using the same event and profile-backed definitions the business uses elsewhere.
+
    *This step answers "what happened in the journey and which parts worked."*
 
 Teams often run the applications in parallel across a quarter. Mix Modeler updates may happen on a slower cycle than live audiences or journeys. That is normal.
 
 ### How the applications work together {#example-together}
 
-- One profile and one event model. The same person and the same events flow from Experience Platform into Real-Time CDP, Adobe Journey Optimizer, and Customer Journey Analytics. Mix Modeler uses connected and harmonized data from Experience Platform. It may use summaries (for example weekly spend) as well as event-level data, depending on setup.  
-- Different jobs, same truth. Real-Time CDP pushes who to reach. Adobe Journey Optimizer runs what happens next after an action. Customer Journey Analytics shows what occurred across steps. Adobe Mix Modeler supports why to shift budget at a higher level.  
+- One profile and one event model. The same person and the same events flow from Experience Platform into Real-Time CDP, Adobe Journey Optimizer, and Customer Journey Analytics. Mix Modeler uses connected and harmonized data from Experience Platform. It may use summaries (for example, weekly spend) as well as event-level data, depending on setup.  
+- Different jobs, same truth. Real-Time CDP determines who to reach. Adobe Journey Optimizer runs what happens next after an action. Customer Journey Analytics shows what occurred across steps. Adobe Mix Modeler supports why to shift budget at a higher level.  
 - Data rules travel with the data. Labels and consent on Experience Platform affect which profiles can be used in segments, journeys, and reporting.
 
 ## Example: Cart abandonment across Experience Platform, Customer Journey Analytics, Real-Time CDP, and Adobe Journey Optimizer {#example-cart-abandonment}
@@ -257,7 +301,7 @@ The table below shows a second common pattern. It highlights insight to audience
 | Step | What happens |
 | --- | --- |
 | Collect and unify (Adobe Experience Platform) | Web and app events are collected with the Experience Platform Web SDK or Experience Platform Mobile SDK. Orders or point-of-sale data can come in by batch. Identity Service links identifiers into Real-Time Customer Profile. |
-| Understand behavior (Customer Journey Analytics) | Analysts see where shoppers drop off and define a group (for example high-value customers who added to cart but did not purchase within 24 hours) using [!UICONTROL Data views] and reporting. |
+| Understand behavior (Customer Journey Analytics) | Analysts see where shoppers drop off and define a group (for example high-value customers who added to cart but did not purchase within 24 hours) using data views and reporting. |
 | Create an audience (Customer Journey Analytics to Experience Platform to Real-Time CDP) | Analysts save that group as an audience published to Adobe Experience Platform. Real-Time CDP exposes it as a segment for activation and for journeys. |
 | Orchestrate recovery (Adobe Journey Optimizer) | A journey uses segment qualification or events as a trigger (for example entry into the cart-abandoner segment). Messages can branch across email, web or in-app, SMS, or push depending on your setup. |
 | Activate elsewhere (Real-Time CDP) | The same segment can go to destinations (for example ads) for retargeting or suppression so you do not message people who already converted. |
@@ -274,26 +318,26 @@ The table below shows a second common pattern. It highlights insight to audience
 | Identity | If web, app, and CRM send different identifiers or namespace settings, the profile can split one person into two. Segments, journeys, and reports will not match. Align identity rules and primary IDs before you scale activation. |
 | Consent and data rules | If datasets used in Real-Time CDP or Adobe Journey Optimizer are not labeled or consented correctly, you can activate or message people you should not. Review labels, policies, and consent fields on the same datasets you use for audiences and journeys. |
 | Real-Time CDP and Adobe Journey Optimizer at the same time | The same person can be in an activated audience and in a journey. You can double-message or conflict with offers if you do not use suppression lists, journey entry filters, or clear rules for who enters a journey. Coordinate teams and test in a sandbox first. |
-| Customer Journey Analytics definitions | Reports use [!UICONTROL Data views] and metric rules. If those definitions do not match the events or attributes your marketers use in Real-Time CDP or Adobe Journey Optimizer, dashboards will disagree with campaign reports. Align dimension and metric definitions with stakeholders. |
+| Customer Journey Analytics definitions | Reports use data views and metric rules. If those definitions do not match the events or attributes your marketers use in Real-Time CDP or Adobe Journey Optimizer, dashboards will disagree with campaign reports. Align dimension and metric definitions with stakeholders. |
 | Adobe Mix Modeler timing and data shape | Mix modeling often uses harmonized or rolled-up inputs and scheduled refreshes. Do not expect the same real-time answer as Real-Time Customer Profile. Spend and outcome data must be mapped and cleaned in harmonization. Bad mappings skew channel credit and budget advice. |
 | Mix Modeler compared to Journey Analytics | Mix Modeler focuses on channel-level contribution and planning. Customer Journey Analytics focuses on journey paths and segments. They answer related but different questions. Do not force one KPI to match the other without a documented bridge. |
 | Sandboxes | Configuration in a sandbox does not automatically move to production. Plan a promotion process for schemas, segments, journeys, and connections. |
-| Time zones | Journeys, reporting windows, and ad platforms may use different time zones. Misaligned windows cause "wrong" counts and broken journey entry. |
+| Time zones | Journeys, reporting windows, and ad platforms might use different time zones. Misaligned windows cause "wrong" counts and broken journey entry. |
 
 ## Guardrails and limitations {#example-guardrails}
 
 Adobe publishes guardrails for Adobe Experience Platform and for each application. Guardrails describe limits, expected performance, and safe ranges for configuration. They help you avoid errors, slowdowns, or unstable behavior. Guardrails are not service level agreements (SLAs). They do not guarantee speed or uptime in a legal sense.
 
-Your contract, product description, and sales order may set contractual limits or entitlements. Those rules can differ from general documentation. When in doubt, use your agreement and Adobe account team together with Experience League.
+Your contract, product description, and sales order might set contractual limits or entitlements. Those rules can differ from general documentation. When in doubt, refer to your agreement and Adobe account team, together with Experience League.
 
 | Topic | What to plan for |
 | --- | --- |
-| Soft limits and hard limits | Some limits are guidance. If you go far past them, performance may drop or latency may grow. Other limits are fixed by the system or by your contract. You cannot exceed them without a change to your setup or purchase. |
-| Where limits apply | Many limits apply at the organization level, not per sandbox. Sandbox environments often have smaller caps than production. Test results in a sandbox may not show full-scale performance. |
+| Soft limits and hard limits | Some limits are guidance. If you go far past them, performance might drop or latency might grow. Other limits are fixed by the system or by your contract. You cannot exceed them without a change to your setup or purchase. |
+| Where limits apply | Many limits apply at the organization level, not per sandbox. Sandbox environments often have smaller caps than production. Test results in a sandbox might not show full-scale performance. |
 | Ingestion and Profile | High event volume, identity volume, or profile counts affect cost, speed, and stability. Follow guardrails for data ingestion and Profile when you design pipelines. Very large audiences or very frequent updates can stress activation paths. |
 | Segmentation and activation | Real-Time CDP has guardrails for segments, activation, and destinations. Partner destinations also have their own caps, file sizes, or required fields. A segment that works in the UI can still fail or truncate at a destination if you ignore both sides. |
 | Adobe Journey Optimizer | Journeys, channels, and message rates have product limits. Complex journeys or high volume need review against Adobe Journey Optimizer guardrails so messages stay reliable. |
-| Customer Journey Analytics | Reporting has limits on connections, [!UICONTROL Data views], rows, and cardinality. Heavy dimensions or very large event volumes need design review so reports stay usable. |
+| Customer Journey Analytics | Reporting has limits on connections, data views, rows, and cardinality. Heavy dimensions or very large event volumes need design review so reports stay usable. |
 | Adobe Mix Modeler | Modeling and planning depend on enough history and clean harmonized data. There are product limits on datasets, models, and refresh behavior. Thin or noisy data produces weak or unstable models. |
 | APIs and automation | Programmatic calls use rate limits and quotas. Batch jobs that ignore those limits can fail or throttle. |
 | Regions and availability | Some features, destinations, or applications are not available in every region. Confirm region for data residency and product availability before you design the full workflow. |
@@ -310,20 +354,6 @@ Your contract, product description, and sales order may set contractual limits o
 - [License usage](https://experienceleague.adobe.com/en/docs/experience-platform/landing/license-usage-and-guardrails/data-management-best-practices) — Data management and license usage practices on Experience Platform (where applicable to your org).
 
 If your workflow leans heavily on Customer Journey Analytics, Adobe Journey Optimizer, Adobe Mix Modeler, or Query Service, read the guardrails topics for those products in their product help as well.
-
-## Map your goals to Experience Platform and to applications {#goals-map}
-
-Use this table to see what you want, what Experience Platform provides, and which applications help.
-
-| Your goal | What to use from Experience Platform | What to use from applications |
-| --- | --- | --- |
-| See one person or account across channels | Identity Service, Real-Time Customer Profile, XDM | All listed applications benefit. Real-Time CDP and Adobe Journey Optimizer use Profile for sending audiences and journeys. |
-| Run campaigns and lists with up-to-date membership | Profile, segmentation, destinations, data rules | Real-Time CDP for how audiences are sent. Destinations carry policy context. |
-| Run multi-step experiences that react to behavior | Profile, live events, data rules | Adobe Journey Optimizer for journey logic and messages. |
-| Report on journeys and channels with matching numbers | Shared XDM events and identities | Customer Journey Analytics for analysis on the same data. |
-| Turn analysis into audiences for activation | Audiences published from Customer Journey Analytics to Adobe Experience Platform | Real-Time CDP and Adobe Journey Optimizer use those audiences like other segments from Experience Platform. |
-| See how channels contribute and plan marketing budgets | United datasets, data rules, data ready for models | Adobe Mix Modeler for mix modeling and spend planning. |
-| Keep marketing and service aligned on customer facts | Profile, data rules, optional connections to other systems | How you connect other systems can vary. Experience Platform stays the base for customer data. |
 
 ## Roles and handoffs {#roles-and-handoffs}
 
