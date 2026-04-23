@@ -23,7 +23,7 @@ To understand the difference between connections and extensions, see [Connection
 * [(Beta) Acxiom Audience Distribution](acxiom-audience-connection.md)
 * [(Beta) Acxiom Real ID Audience Connection](acxiom-real-id-audience-connection.md)
 * [Adobe Advertising DSP connection](adobe-advertising-dsp-connection.md)
-* [Legacy Adobe Advertising Cloud DSP connection](adobe-advertising-cloud-dsp-connection-legacy.md)
+* [Legacy Adobe Advertising DSP connection](adobe-advertising-cloud-dsp-connection-legacy.md)
 * [Amazon Ads connection](amazon-ads.md)
 * [Amazon Ads v2 connection](amazon-ads-v2.md)
 * [Bombora connection](bombora.md)
@@ -47,7 +47,7 @@ To understand the difference between connections and extensions, see [Connection
 
 ### Extensions {#extensions}
 
-* [Adobe Advertising Cloud extension](adobe-advertising-cloud.md)
+* [Adobe Advertising extension](adobe-advertising-cloud.md)
 * [Awin Advertising Conversion Tag extension](awin-conversiontag.md)
 * [Awin Advertising Mastertag extension](awin-mastertag.md)
 * [Bing Ads Universal Event Tracking extension](bing-ads.md)
