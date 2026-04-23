@@ -6,7 +6,6 @@ feature: Getting Started
 topic: Overview
 keywords: Experience Platform, applications, Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, Adobe Mix Modeler, Adobe CX Enterprise, customer data platform, journey orchestration, omnichannel analytics, overview, getting started
 role: Architect, Developer, Data Architect, Data Engineer, Business Practitioner
-exl-id: c4f8e2a1-6b3d-4f92-9c7e-1a2b3c4d5e6f
 ---
 
 # How Adobe Experience Platform and applications work together
