@@ -21,6 +21,7 @@ role: Admin
     * [End-to-end tutorial](./b2b-tutorial.md)
     * [Real-Time CDP B2B Edition guardrails](b2b-guardrails.md)
     * [Real-Time CDP B2B Edition architecture upgrades](b2b-architecture-upgrade.md)
+  * [Real-Time CDP MCP](rtcdp-mcp.md)
 * Audience Manager and Real-Time CDP {#evolution}
   * [Evolution from Audience Manager](aam-to-rtcdp.md)
 * Account profiles {#account}
@@ -71,6 +72,7 @@ role: Admin
   * [Sources in Real-Time CDP B2B Edition](sources/b2b.md)
 * Use cases {#use-cases}
   * [Overview of sample use cases](/help/rtcdp/use-case-guides/overview.md)
+  * [Leverage customer experience use cases to drive business goals](/help/rtcdp/use-case-guides/business-use-case-framework.md)
   * Customer acquisition {#customer-acquisition}
     * [Engage and acquire new customers without dependency on third-party cookies](/help/rtcdp/partner-data/prospecting.md)  
     * [Personalize onsite experiences for unknown visitors using partner-aided visitor recognition](/help/rtcdp/partner-data/onsite-personalization.md)
