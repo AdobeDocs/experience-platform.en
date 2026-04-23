@@ -103,20 +103,24 @@ Read ![Activate audience data to batch profile export destinations](/help/destin
 For the [!DNL Acxiom Audience Connection] destination to correctly receive the audience data, you must map the source fields from Experience Platform to the correct [!DNL Acxiom Audience Connection] target fields.
 
 [!DNL Acxiom Audience Connection] only allows mapping to the following target fields. The target fields described in the table below must be mapped in the order shown below. 
+>[!IMPORTANT]
+>
+> All fields must be mapped to continue through the UI. However, only specific attributes are required to be populated in order to export and process data. See the table below for the requirements.
 
-| Field Name | Description|Required | Field Order | Max Length |
-|--------------------|------------|--------|-------------|------------|          
-|First Name|First name of individual|No|1|255|
-|Middle|Middle name or initial of the individual|No|2|50|
-|Last Name|Last name of the individual|Yes|3|255|
-|Generational Suffix |Suffix of the individual|No|4|10|
-|Address Line 1|Address 1 field of primary residence|Yes|5|255|
-|Address Line 2|Address 2 field of primary residence|No|6|255|
-|City|City of primary residence|Yes|7|255|
-|State|State abbreviation of primary residence|Yes|8|2|
-|Zip Code|Full zip code of primary residence|Yes|9|10|
-|Email|Primary email By default, this field is used as a deduplication key to make the records unique|No|10|255|
-|Phone|Phone number of individual (area code + number)<br> By default, this field is used as a deduplication key to make the records unique.|No|11|10|
+
+| Field Name | Description|Mapping Required for UI |Data Required for Processing| Field Order | Max Length |
+|--------------------|------------|--------|------------|-------------|------------|          
+|First Name|First name of individual|Yes |No|1|255|
+|Middle|Middle name or initial of the individual|Yes|No|2|50|
+|Last Name|Last name of the individual|Yes|Yes|3|255|
+|Generational Suffix |Suffix of the individual|Yes|No|4|10|
+|Address Line 1|Address 1 field of primary residence|Yes|Yes|5|255|
+|Address Line 2|Address 2 field of primary residence|Yes|No|6|255|
+|City|City of primary residence|Yes|Yes|7|255|
+|State|State abbreviation of primary residence|Yes|Yes|8|2|
+|Zip Code|Full zip code of primary residence|Yes|Yes|9|10|
+|Email|Primary email By default, this field is used as a deduplication key to make the records unique|Yes|No|10|255|
+|Phone|Phone number of individual (area code + number)<br> By default, this field is used as a deduplication key to make the records unique.|Yes|No|11|10|
 
 
 In the **[!UICONTROL Source Field]** column, enter the name of each of the source attributes that you want to map to the corresponding target field, or select the arrow icon to open the **[!UICONTROL  Select source field]** screen.<br>
