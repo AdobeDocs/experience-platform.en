@@ -35,8 +35,7 @@ For example, the Marketing Operations department at a global financial services 
 
 |Target Identity |Description |Considerations |
 |---------------|----------------|----------------|
-|Real ID|[!DNL Acxiom Real ID]|Select this target identity when your source identity is an Acxiom Real ID namespace.|
-|extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
+|Real ID|Real ID|Select this target identity when your source identity is an Acxiom Real ID or a client specific Real ID namespace.|
 
 ## Supported audiences {#supported-audiences}
 
