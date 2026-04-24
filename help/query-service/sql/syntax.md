@@ -537,7 +537,7 @@ $$BEGIN
      AS SELECT _id AS id FROM email_tracking_experience_event_dataset SNAPSHOT BETWEEN @v_snapshot_from AND @v_snapshot_to;
 
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
 $$END;
@@ -641,7 +641,7 @@ $$BEGIN
     ELSE    
        SELECT 'DEFAULT';
     END IF;  
-EXCEPTION WHEN OTHER THEN 
+EXCEPTION WHEN OTHERS THEN 
   SELECT 'THERE WAS AN ERROR';    
  END$$;
 ```
@@ -718,7 +718,7 @@ Insert Into
       cast( @to_snapshot_id AS string) last_snapshot_id,
       cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 END
 $$;
