@@ -115,8 +115,8 @@ For `claude.ai` and Claude Desktop, add the Real-Time CDP MCP server as a **cust
 
 In ChatGPT, add the Real-Time CDP MCP server as a **custom app/connector** using the endpoint provided by your Adobe representative. Depending on your ChatGPT plan, this may require **Developer mode** and workspace admin approval. After the app/connector is created or enabled, connect it from **Settings > Apps** or **Settings > Apps & Connectors**, then authenticate through the Adobe browser login when prompted.
 
-
 #### Cursor
+
 In Cursor, add the Real-Time CDP MCP server as a remote MCP server using the endpoint provided by your Adobe representative. Open **Settings > MCP**, add a new server, and paste the endpoint URL. Once added, enable the server for your workspace by selecting **connect** to authenticate via the browser.
 
 #### Other UI-based clients
