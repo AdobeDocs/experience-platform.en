@@ -37,7 +37,7 @@ Before configuring the [!DNL Acxiom Real ID Audience Connection] destination, co
 
 | Target identity | Description | Considerations |
 | --------------- | ----------- | -------------- |
-| [!DNL Real ID] | [!DNL Real ID] | Select this target identity when your source identity is an [!DNL Acxiom] [!DNL Real ID] or a client-specific [!DNL Real ID] namespace. |
+| [!DNL Real ID] | [!DNL Real ID] | Map a source field to this target identity. Your source field can be either an [!DNL Acxiom] [!DNL Real ID] or a custom identifier. |
 
 {style="table-layout:auto"}
 
