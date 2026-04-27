@@ -317,7 +317,6 @@ role: Developer
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Loyalty {#loyalty}
       - [Capillary Streaming Events](tutorials/ui/create/loyalty/capillary.md)
-      - [Kobie (Streaming)](tutorials/ui/create/loyalty/kobie-streaming.md)
       - [Talon.One Streaming Events](tutorials/ui/create/loyalty/talon-one-streaming.md)
       - [Talon.One Batch Source Connector](tutorials/ui/create/loyalty/talon-one-batch.md)
     - Marketing automation {#marketing-automation}
