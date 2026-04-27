@@ -101,7 +101,7 @@ role: Developer
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Loyalty {#loyalty}
     - [Capillary Streaming Events](connectors/loyalty/capillary.md)
-    - [Kobie](connectors/loyalty/kobie.md)
+    - [Kobie](tutorials/ui/create/loyalty/kobie-streaming.md)
     - [Talon.One](connectors/loyalty/talon-one.md)
   - Marketing automation {#marketing-automation}
     - [Braze Currents](connectors/marketing-automation/braze.md)
@@ -317,8 +317,6 @@ role: Developer
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Loyalty {#loyalty}
       - [Capillary Streaming Events](tutorials/ui/create/loyalty/capillary.md)
-      - [Kobie (Batch)](tutorials/ui/create/loyalty/kobie-batch.md)
-      - [Kobie (Streaming)](tutorials/ui/create/loyalty/kobie-streaming.md)
       - [Talon.One Streaming Events](tutorials/ui/create/loyalty/talon-one-streaming.md)
       - [Talon.One Batch Source Connector](tutorials/ui/create/loyalty/talon-one-batch.md)
     - Marketing automation {#marketing-automation}
