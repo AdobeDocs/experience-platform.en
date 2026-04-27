@@ -177,7 +177,7 @@ The data is shared into your Snowflake account via a shared table. Check your Sn
 
 The following example shows sample rows from a shared table: some columns store identities and segment membership as JSON; mapped profile attributes appear as separate string columns.
 
-![Sample Snowflake worksheet rows showing IDENTITYMAP, SEGMENT_MEMBERSHIP, and mapped attribute columns](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
+![Sample Snowflake worksheet rows showing TS, IDENTITYMAP, SEGMENT_MEMBERSHIP, and mapped attribute columns.](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
 
 ### Data structure {#data-structure}
 
