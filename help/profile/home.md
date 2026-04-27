@@ -107,7 +107,7 @@ Real-time input is made possible through a process called streaming ingestion. A
 
 >[!NOTE]
 >
->Data collected through Adobe solutions, including [!DNL Analytics Cloud], [!DNL Marketing Cloud], and [!DNL Advertising Cloud], flows into [!DNL Experience Platform] and is ingested into [!DNL Profile].
+>Data collected through Adobe solutions, including [!DNL Analytics Cloud], [!DNL Marketing Cloud], and [!DNL Adobe Advertising], flows into [!DNL Experience Platform] and is ingested into [!DNL Profile].
 
 ### Profile ingestion metrics
 
