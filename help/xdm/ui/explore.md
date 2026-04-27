@@ -18,7 +18,7 @@ In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left navig
 
 ![The Schemas workspace with several tabs highlighted.](../images/ui/explore/tabs.png)
 
-The filter icon (![Filter Icon Image](/help/images/icons/filter.png)) reveals controls in the left rail to narrow down listed results. Resource filters are available for schemas and relationships on the **[!UICONTROL Browse]** and **[!UICONTROL Relationships]** tabs respectively.
+The filter icon (![Filter Icon Image](/help/images/icons/filter.png)) reveals controls in the left rail to narrow down listed results. Resource filters are available for schemas and relationships on the **[!UICONTROL Browse]** and **[!UICONTROL Relationships]** tabs respectively. On the **[!UICONTROL Field groups]** tab, use the filters described in [Field group metadata and filtering](#field-group-metadata-and-filtering) to narrow the list by compatible class and industry tags.
 
 On the [!UICONTROL Browse] tab of the [!UICONTROL Schemas] workspace, you can filter your schema inventory. Use the **[!UICONTROL Included in Profile]** toggle to only show schemas that have been enabled for use in [Real-Time Customer Profile](../../profile/home.md). Use the **[!UICONTROL Show adhoc schemas]** toggle to filter the list of schemas created with fields namespaced for use only by a single dataset.
 
@@ -158,7 +158,7 @@ If an array field is based on an object type, you can select its icon in the can
 
 ### [!UICONTROL Field properties] {#field-properties}
 
-When you select the name of any field in the canvas, the right rail updates to show details about that field under **[!UICONTROL Field properties]**. This can include a description of the field's intended use case, default values, patterns, formats, whether or not the field is required, and more.
+When you select the name of any field in the canvas, the right rail updates to show details about that field under **[!UICONTROL Field properties]**. This can include a description of the field's intended use case, default values, patterns, formats, whether or not the field is required, and more. When you are exploring a field group, label-related details for the selected field can also appear here; see [Labels in the structure view](#field-group-labels-in-structure).
 
 ![A field selected from the Commerce data type with the field properties highlighted.](../images/ui/explore/field-properties.png)
 
@@ -189,6 +189,76 @@ To view the identity namespace of the reference schema's primary identity, selec
 ![The Edit relationship dialog with the relationship parameters displayed.](../images/ui/explore/edit-relationship-dialog.png)
 
 See the tutorial on [creating a relationship in the UI](../tutorials/relationship-ui.md) for more information on the use of relationships in XDM schemas.
+
+When exploring field groups specifically, additional capabilities are available to help you understand their usage and metadata.
+
+## Explore field groups: usage and metadata {#explore-field-groups}
+
+When exploring field groups in the **[!UICONTROL Field groups]** tab, additional capabilities are available to help you understand both:
+
+- **Where a field group is used** across schemas
+- **What the field group includes and supports**, such as compatibility, required fields, and governance signals
+
+These features help you evaluate impact before making changes and quickly identify relevant field groups.
+
+### View schema usage for field groups {#view-schema-usage-for-field-groups}
+
+To understand how a field group is used across your data model, select a field group to open its detail view.
+
+#### Schemas using this field group
+
+In the right-hand properties rail, the **[!UICONTROL Schemas using this field group]** section lists schemas that currently include the field group. This allows you to assess dependencies before modifying or reusing the group.
+
+#### View more and full schema list
+
+If more schemas exist than can be shown inline, select **[!UICONTROL View more]** to open the full dialog.
+
+In this dialog, you can:
+
+- Browse all schemas that use the field group
+- Page through large result sets
+- Sort results to organize the list
+- Customize visible columns
+- Open a schema to inspect its structure and downstream usage
+
+This workflow is intended for **impact analysis and exploration only**. To modify schemas or field groups, see [Create and edit schemas in the UI](./resources/schemas.md) and [Create and edit schema field groups in the UI](./resources/field-groups.md).
+
+### Field group metadata and filtering {#field-group-metadata-and-filtering}
+
+The **[!UICONTROL Field groups]** tab also provides metadata and filtering tools to help you locate and evaluate field groups.
+
+#### Browse table and filters
+
+The field group inventory table can include columns such as:
+
+- **[!UICONTROL Compatible classes]** — Indicates which classes the field group can extend
+- **[!UICONTROL Industry tags]** — Categorizes field groups for easier discovery
+
+Use the filter panel to narrow results:
+
+- **[!UICONTROL Compatible classes]** — Filter by class compatibility
+- **[!UICONTROL Industry tags]** — Filter by one or more industry categories
+
+While browsing, the info rail summarizes the selected field group so you can quickly review key metadata without leaving the table.
+
+#### Field group detail metadata
+
+When viewing a field group, the properties rail can include:
+
+- **[!UICONTROL Compatible classes]**
+- **[!UICONTROL Required fields]**
+- **[!UICONTROL Labels]** — Indicates whether governance-related labels apply
+
+These provide additional context about how the field group behaves and any constraints it introduces.
+
+#### Labels in the structure view
+
+When a field group is open in the canvas:
+
+- Enable **[!UICONTROL Show labels on tree]** to display label indicators directly on fields
+- Select a field to view label-related details in the **[!UICONTROL Field properties]** rail
+
+These indicators help surface governance signals during exploration. For full details on applying and managing labels, see [Manage data usage labels for a schema](../tutorials/labels.md).
 
 ## Next steps
 
