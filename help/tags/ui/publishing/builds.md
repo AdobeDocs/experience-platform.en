@@ -28,7 +28,7 @@ Builds are divided into the main library file and potentially many smaller files
 
 The smaller files contain code and configuration for individual Actions that are loaded onto the page as needed. When a Rule is triggered and its Conditions are evaluated such that the Actions need to be executed, the necessary code and configuration for that specific action are retrieved from one of the smaller files. This means that only the code needed to perform the necessary Actions is ever loaded onto the page, making the main library as small as possible.
 
-## File format {file-format}
+## File format {#file-format}
 
 The default file format for builds is a package of files that contain all the required code for your extensions, data elements, and rules to run in the way that you want them to.
 
