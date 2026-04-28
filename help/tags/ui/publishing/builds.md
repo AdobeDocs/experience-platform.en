@@ -74,11 +74,11 @@ When performing a build it will construct the un-minified library first, then mi
 
 >[!IMPORTANT]
 >
->A library stores revisions of your tag resources, but a **build** is a point-in-time snapshot of that library containing the files that are delivered to your site.
+>A library stores revisions of your tag resources, but a **Build** is a point-in-time snapshot of that library containing the files that are delivered to your site.
 
-Build lists and build details can be accessed from a **library** or an **environment** to view current live builds, and inspect what a build contents (extensions, data elements, and rules).
+Builds and build details can be accessed from a **library** or an **environment** to view current live builds, and inspect what a build contains (extensions, data elements, and rules).
 
-### View builds details from a library
+### View build details from a library
 
 In your tags property, open the **[!UICONTROL Publishing Flow]** and select a library.
 
@@ -109,6 +109,6 @@ Next, select a build to open its details. The build detail shows the **Extension
 
 >[!NOTE]
 >
->The build can include more than the resources listed on the library alone. **Extensions**, **Data Elements**, and **Rules** in the build can also include items from upstream dependencies.
+>A build can include more than the resources listed on the library alone. The **Extensions**, **Data Elements**, and **Rules** packaged in the build include the library's contents as well as upstream contents. It is the full snapshot that gets published to the site or app. 
 
 Use the details panel to navigate back to the **[!UICONTROL Environment]** or **[!UICONTROL Library]**.
