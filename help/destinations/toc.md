@@ -110,6 +110,7 @@ role: Admin,User
         * [Pinterest connection upgrade](./catalog/advertising/pinterest-upgrade.md)
         * [PubMatic Connect connection](./catalog/advertising/pubmatic.md)
         * [(Beta) Reddit Custom Audience connection](./catalog/advertising/reddit-custom-audience.md)
+        * [Rokt connection](./catalog/advertising/rokt.md)
         * [Snapchat Ads connection](./catalog/advertising/snap-inc.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
         * [The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
