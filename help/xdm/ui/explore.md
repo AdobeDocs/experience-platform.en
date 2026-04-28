@@ -190,8 +190,6 @@ To view the identity namespace of the reference schema's primary identity, selec
 
 See the tutorial on [creating a relationship in the UI](../tutorials/relationship-ui.md) for more information on the use of relationships in XDM schemas.
 
-When exploring field groups specifically, additional capabilities are available to help you understand their usage and metadata.
-
 ## Explore field groups: usage and metadata {#explore-field-groups}
 
 Navigate to **[!UICONTROL Schemas]** > **[!UICONTROL Field groups]** to explore field groups. In the **[!UICONTROL Field groups]** tab, additional capabilities help you understand where a field group is used across schemas and what it includes, such as compatibility, required fields, and governance signals.
@@ -225,11 +223,10 @@ The **[!UICONTROL Schemas using this field group]** dialog appears, showing the 
 
 In the **[!UICONTROL Schemas using this field group]** dialog, you can:
 
-- Browse all schemas that use the field group  
-- Page through large result sets  
-- Sort results to organize the list  
-- Customize visible columns  
-- Select a schema to open its detail view in a new tab  
+- Browse all schemas that use the field group
+- Page through large result sets
+- Sort results to organize the list
+- Select a schema to open its detail view in a new tab
 
 You can view schema details such as schema name, class, and other attributes.
 
@@ -262,13 +259,13 @@ The properties rail can display the following metadata:
 
 - **[!UICONTROL Compatible classes]** — Classes that the field group can extend  
 - **[!UICONTROL Required attributes]** — Attributes within the field group that must be present when the group is used  
-- **[!UICONTROL Labels]** — Indicates whether governance-related labels are applied to the field group  
+- **[!UICONTROL Labels]** — Labels are not shown at the field group level. Select a field to view label details in the **[!UICONTROL Field properties]** rail
 
 This information helps you understand constraints and requirements before using or modifying the field group.
 
 #### Labels in the structure view
 
-When a field group is open in the canvas, you can view label information directly in the structure. Select the settings icon in the canvas toolbar (gear icon) and enable **[!UICONTROL Show labels on tree]** to display label indicators on fields in the canvas.
+When a field group is open in the canvas, you can view label information directly in the structure. Select the settings icon (![The settings icon.](../../images/icons/settings.png)) in the canvas toolbar and enable **[!UICONTROL Show labels on tree]** to display label indicators on fields in the canvas.
 
 ![The field group canvas showing the tree display options dialog with Show labels on tree highlighted.](../images/ui/explore/show-labels-on-tree.png)
 
