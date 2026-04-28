@@ -11,7 +11,7 @@ It is a composite of the changes you specified within your library, as well as e
 
 The build consists of client-side code files that reference each other. These files are delivered to your hosting location using the environment and host that you have chosen for the library. The code that you deploy on your site points to this same location so the files can load when a user accesses your site or application.
 
-## File contents {file-contents}
+## File contents {#file-contents}
 
 A library defines a discreet set of tag resources (extensions, rules, and data elements) that should be included within it.
 
@@ -42,7 +42,7 @@ Regardless of file format, the build is always delivered to the location specifi
 
 To complete a build, select a library and select the Build option that is available at that level of the publishing process (Build for Development, Build for Staging, and so on.
 
-## Minification {minification}
+## Minification {#minification}
 
 Minification lowers bandwidth costs and improves speed by stripping data that isn't required for execution from a file.
 
@@ -70,7 +70,7 @@ For more information about minification, see [this stackpath article](https://bl
 
 When performing a build it will construct the un-minified library first, then minify the entire library all at once.
 
-## View build details {build-details}
+## View build details {#build-details}
 
 >[!IMPORTANT]
 >
