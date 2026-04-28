@@ -412,7 +412,7 @@ When using OAuth 2.0 client credentials with [!DNL Salesforce] sources, row-leve
 * For Boolean values, use the keywords `true` or `false` instead of numeric values (`0` or `1`).
 * Date and dateTime values in `WHERE` clauses should be written as unquoted SOQL date or dateTime literals, rather than as quoted strings, when the filter indicates they represent date/time types.
 
-For PQL-based row-level filtering, every literal node whose value is a boolean or a `dateTime` must include a `literalType` so values are interpreted and translated correctly.
+For PQL-based row-level filtering, every literal node whose value is a `boolean` or a `dateTime` must include a `literalType` so values are interpreted and translated correctly.
 
 PQL examples:
 
@@ -486,7 +486,7 @@ PQL examples:
 
 #### Retrieve connection specs for [!DNL Salesforce]
 
-To retrieve the connection spec information for a [!DNL Salesforce] source, make a GET request to the `/connectionSpecs` endpoint of the [!DNL Flow Service] API and providing the property name of your source as part of your query parameters.
+To retrieve the connection spec information for a [!DNL Salesforce] source, make a GET request to the `/connectionSpecs` endpoint of the [!DNL Flow Service] API and provide the property name of your source as part of your query parameters.
 
 **API format**
 
