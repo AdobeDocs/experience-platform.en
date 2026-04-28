@@ -1,14 +1,19 @@
 ---
 title: Stream Data From Kobie To Experience Platform Using The UI
 description: Learn how to stream data from Kobie into Adobe Experience Platform using the UI.
-badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 4e2e3287-3673-4426-8666-5f2ee284ca3d
 ---
-# Stream data from [!DNL Kobie] to Experience Platform using the UI
+# Stream data from [!DNL Kobie Streaming Events] to Experience Platform using the UI
 
-Read this guide to learn how to connect and stream your data from [!DNL Kobie] to Adobe Experience Platform using the sources workspace in the UI.
+[!DNL Kobie Alchemy Loyalty Cloud (KALC)] is a highly configurable, secure, and scalable MACH platform that adapts to your loyalty strategy—accelerating time to value, improving efficiency, and safeguarding your brand with enterprise-grade governance. With seamless integrations across CDPs, CRMs, CMS, and more, [!DNL KALC] empowers marketers to deliver real-time personalization across every channel while providing the flexibility and traceability to evolve as your brand loyalty grows.
+
+Read this guide to learn how to connect and stream your data from [!DNL Kobie Streaming Events] to Adobe Experience Platform using the sources workspace in the UI.
+
+>[!IMPORTANT]
+>
+>For information on prerequisite set up and mapping, please contact your [!DNL Kobie Client Services] representative directly.
 
 ## Getting started
 
@@ -18,10 +23,6 @@ This tutorial requires a working understanding of the following components of Ex
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-
->[!IMPORTANT]
->
->Read the [[!DNL Kobie] overview](../../../../connectors/loyalty/kobie.md) to learn about prerequisite steps that you need to complete before connecting your account to Experience Platform.
 
 ## Navigate the sources catalog
 
