@@ -10,11 +10,11 @@ exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
 
 Marketo Measure (formerly Bizible) gives marketers insight into which marketing efforts are the most effective in driving revenue and maximizing return on investment for their company. Marketo Measure is a marketing attribution solution that automatically tracks and reports on channel performance, providing visibility into which channels are driving the most customer engagement and allowing you to optimize your marketing spend accordingly.
 
-The destination enables the business-to-business (B2B) data flows from Adobe Experience Platform to Marketo Measure. The card is only available to Marketo Measure Ultimate customers. 
+The destination enables the business-to-business (B2B) data flows from [!DNL Adobe Experience Platform] to Marketo Measure. The card is only available to Marketo Measure Ultimate customers. 
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Marketo Measure destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination. This integration:
+To help you better understand how and when you should use the Marketo Measure destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination. This integration:
 
 * Satisfies the complex data and performance reporting requirements of large enterprises.
 * Enables B2B attribution reporting with multiple CRM and marketing automation systems. 
@@ -32,10 +32,10 @@ Note the following prerequisites for the Marketo Measure destination:
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -48,7 +48,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | No | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | Yes | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | Yes | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -67,7 +67,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the section below.
@@ -90,7 +90,7 @@ When you are finished providing details for your destination connection, select 
 ## Export datasets to this destination {#export-datasets}
 
 >[!IMPORTANT]
-> 
+>
 >To activate data, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Read the [Export datasets](/help/destinations/ui/export-datasets.md) tutorial for extensive instructions on exporting datasets to this destination.

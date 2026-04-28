@@ -13,9 +13,9 @@ Adobe Experience Platform extension developers use extensions and the rule build
 
 This document contains information about how to prevent Adobe tags from firing until consent is acquired.
 
-## Advertising Cloud
+## Adobe Advertising
 
-Adobe Experience Platform does not fire [!DNL Advertising Cloud] automatically. [!DNL Advertising Cloud] only fires if you specifically tell it to in a rule action. Use the rule conditions to determine when and what to fire. For example, to use cookies to determine opt-in status, set a data element to read that cookie and use it as a condition in the rule to determine when to fire the Track Conversion action.
+Adobe Experience Platform does not fire [!DNL Adobe Advertising] automatically. [!DNL Advertising] only fires if you specifically tell it to in a rule action. Use the rule conditions to determine when and what to fire. For example, to use cookies to determine opt-in status, set a data element to read that cookie and use it as a condition in the rule to determine when to fire the Track Conversion action.
 
 Integrations with consent managers (such as OneTrust) can set and track the consent cookies for customers, which can then be used in the rule builder.
 

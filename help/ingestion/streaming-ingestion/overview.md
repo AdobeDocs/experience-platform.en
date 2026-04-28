@@ -35,7 +35,7 @@ For more information on enabling a dataset for Profile and [!DNL Identity Servic
 >
 >Guardrails for streaming ingestion are bound to the total license usage entitlement that corresponds with your entire organization. Additionally, data usage in development sandboxes are limited to 10% of your total profiles. For more information about license usage entitlement, read the [data management best practices guide](/help/landing/license-usage-and-guardrails/data-management-best-practices.md). To learn how to set limits to your streaming throughput, read the [Capacity overview](../../landing/license-usage-and-guardrails/capacity.md).
 
-| Destination | Expected latency | 
+| Destination | Expected latency |
 | --------- | ---------------- |
 | Real-Time Customer Profile | <ul><li>< 15 minutes at the 95th percentile for B2C Data Ingestion.</li><li>< 30 minutes at the 95th percentile for B2B Data Ingestion.</li></ul> |
 | Data lake | < 60 minutes |

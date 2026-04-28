@@ -6,13 +6,13 @@ exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
 ---
 # [!DNL LiveRamp - Onboarding] connection {#liveramp-onboarding}
 
-Use the [!DNL LiveRamp - Onboarding] connection to onboard audiences from Adobe Real-Time Customer Data Platform to [!DNL LiveRamp Connect].
+Use the [!DNL LiveRamp - Onboarding] connection to onboard audiences from Adobe [!DNL Real-Time Customer Data Platform] to [!DNL LiveRamp Connect].
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL LiveRamp - Onboarding] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL LiveRamp - Onboarding] destination, here is a sample use case that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
-As a marketer, I want to send audiences from Adobe Experience Platform to onboard identities into [!DNL LiveRamp Connect] so that I can target users on mobile, open web, social, and [!DNL CTV] platforms, using the [!DNL Ramp ID] identifier. 
+As a marketer, I want to send audiences from [!DNL Adobe Experience Platform] to onboard identities into [!DNL LiveRamp Connect] so that I can target users on mobile, open web, social, and [!DNL CTV] platforms, using the [!DNL Ramp ID] identifier. 
 
 ## Prerequisites {#prerequisites}
 
@@ -30,10 +30,10 @@ In the [mapping step](#map) of the activation workflow, you must define the targ
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -46,7 +46,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -117,7 +117,7 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Region]**: Geographic region for your instance of the LiveRamp SFTP storage.
-*  **[!UICONTROL Folder path]**: The path to the [!DNL LiveRamp] `uploads` subfolder that will host the exported files. The `uploads` prefix is automatically added to the folder path. [!DNL LiveRamp] recommends creating a dedicated subfolder for deliveries from Adobe Real-Time CDP to keep the files separate from any other existing feeds and to ensure all automation runs smoothly. 
+*  **[!UICONTROL Folder path]**: The path to the [!DNL LiveRamp] `uploads` subfolder that will host the exported files. The `uploads` prefix is automatically added to the folder path. [!DNL LiveRamp] recommends creating a dedicated subfolder for deliveries from Adobe [!DNL Real-Time CDP] to keep the files separate from any other existing feeds and to ensure all automation runs smoothly. 
     *  For example, if you want to export your files to `uploads/my_export_folder`, type in `my_export_folder` in the **[!UICONTROL Folder path]** field.
 *  **[!UICONTROL Compression format]**: Select the compression type that Experience Platform should use for the exported files. Available options are **[!UICONTROL GZIP]** or **[!UICONTROL None]**.
 
@@ -130,7 +130,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.

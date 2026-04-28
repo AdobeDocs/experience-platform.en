@@ -223,7 +223,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 | Parameter | Description |
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the newly created batch. |
-| `{DATASET_ID}` | The ID of the referenced dataset. | 
+| `{DATASET_ID}` | The ID of the referenced dataset. |
 | `{USER_ID}` | The ID of the user who created the batch. |
 
 ### Upload files
@@ -547,7 +547,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{TENANT_ID}` | This ID is used to ensure that resources you create are namespaced properly and contained within your organization. | 
+| `{TENANT_ID}` | This ID is used to ensure that resources you create are namespaced properly and contained within your organization. |
 | `{SCHEMA_ID}` | The ID of the schema you've created. |
 
 ### Create batch
@@ -797,7 +797,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 ```
 
 | Parameter | Description |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{DATASET_ID}` | The ID of the reference dataset. |
 
 **Response**
