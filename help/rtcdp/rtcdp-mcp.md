@@ -1,6 +1,5 @@
 ---
 solution: Real-Time Customer Data Platform
-product: real-time customer data platform
 title: Work with MCP clients (Beta)
 description: Learn how to connect Adobe Real-Time CDP to MCP clients using the MCP server
 feature: Integrations
