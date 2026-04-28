@@ -192,7 +192,7 @@ See the tutorial on [creating a relationship in the UI](../tutorials/relationshi
 
 ## Explore field groups: usage and metadata {#explore-field-groups}
 
-Navigate to **[!UICONTROL Schemas]** > **[!UICONTROL Field groups]** to explore field groups. In the **[!UICONTROL Field groups]** tab, additional capabilities help you understand where a field group is used across schemas and what it includes, such as compatibility, required fields, and governance signals.
+Navigate to **[!UICONTROL Schemas]** > **[!UICONTROL Field groups]** to explore field groups. In the **[!UICONTROL Field groups]** tab, additional capabilities help you understand where a field group is used across schemas andwhat it includes, such as compatibility, required fields (which enforce ingestion requirements), and governance signals.
 
 These features help you evaluate impact before making changes and identify relevant field groups more efficiently during schema design.
 
@@ -238,7 +238,7 @@ The **[!UICONTROL Field groups]** tab provides metadata and filtering tools to h
 
 #### Browse table and filters
 
-The field group inventory table includes additional columns that expose metadata directly in the list view, such as **[!UICONTROL Compatible classes]**, which indicates how many classes the field group can extend (and may display **All** when the field group is compatible with all classes), and **[!UICONTROL Industry tags]**, which categorize field groups for discovery.
+The field group inventory table includes additional columns that expose metadata directly in the list view, such as **[!UICONTROL Compatible classes]**, which indicates which classes a field group can be applied to. Field groups can only be added to schemas that use one of the listed compatible classes, based on the behavior of the data they represent (for example, record-based or time-series data). The table may display **All** when the field group is compatible with all classes. **[!UICONTROL Industry tags]** categorize field groups for discovery.
 
 To refine the list, select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to open the filter panel in the left rail. The following image shows the filter panel open in the left rail.
 
@@ -258,7 +258,7 @@ When you open a field group, the properties rail displays additional metadata as
 The properties rail can display the following metadata:
 
 - **[!UICONTROL Compatible classes]** — Classes that the field group can extend  
-- **[!UICONTROL Required attributes]** — Attributes within the field group that must be present when the group is used  
+- **[!UICONTROL Required attributes]** — Attributes that must have valid values in every record when data is ingested using a schema that includes this field group. If these attributes are missing or invalid, ingestion validation fails for that record
 - **[!UICONTROL Labels]** — Labels are not shown at the field group level. Select a field to view label details in the **[!UICONTROL Field properties]** rail
 
 This information helps you understand constraints and requirements before using or modifying the field group.
