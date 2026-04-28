@@ -1,14 +1,13 @@
 ---
 title: Acxiom Audience Connection
 description: Use the [!DNL Acxiom Audience Connection] destination to enhance audiences with [!DNL Acxiom's Real ID] technology and activate audiences to multiple platforms, such as [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], and more.
-badge: label="Beta" type="Informative"
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
 ---
 # [!DNL Acxiom Audience Connection] destination 
 
 >[!NOTE]
 >
->The [!DNL Acxiom Audience Connection] destination is in beta. This destination connector and documentation page are created and maintained by the [!DNL Acxiom] team. For any inquiries or update requests, contact Acxiom directly [here](mailto:acxiom-adobe-help@acxiom.com).
+>This destination connector and documentation page are created and maintained by the [!DNL Acxiom] team. For any inquiries or update requests, contact Acxiom directly [here](mailto:acxiom-adobe-help@acxiom.com).
 
 Use the [!DNL Acxiom Audience Connection] destination to enhance audiences with [!DNL Acxiom's] [Real ID&trade;](https://www.acxiom.com/real-id/real-id/) technology and activate audiences to multiple platforms, such as [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], and more.
 
