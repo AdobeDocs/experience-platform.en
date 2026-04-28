@@ -87,9 +87,19 @@ The table below lists each application. It gives a short description and main pu
 | [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/customer-journey-analytics) | Application for analysis across channels | Measure and analyze how customers move through journeys across multiple channels (including web, mobile, call center, and point-of-sale systems), and how marketing performs. Uses data that is prepared in Adobe Experience Platform. |
 | [Adobe Mix Modeler](https://experienceleague.adobe.com/en/docs/mix-modeler) | Application for marketing measurement and planning | Bring measurement together (including marketing mix modeling). Plan spending scenarios for marketing. Uses data connected through Adobe Experience Platform so teams can see what drives results and plan budgets. |
 
+## Other applications and editions on Experience Platform {#other-applications-and-editions}
+
+The table above describes four applications that work together in many discussions of Experience Platform. Your organization may also use related licensed offerings that sit on the same foundation (schemas, Identity Service, Real-Time Customer Profile, segmentation, and governance). The table below lists examples. It does not replace product-specific documentation. What you can access depends on your license, region, and Adobe portfolio.
+
+| Topic | Role |
+| --- | --- |
+| [Real-Time CDP B2B Edition](../rtcdp/b2b-overview.md) | Account and lead-focused activation on the same Experience Platform foundation as solutions oriented to consumers or mixed B2B and B2C models. |
+| [Journey Orchestration](https://experienceleague.adobe.com/en/docs/journey-orchestration/using/orchestration/orchestration-home) | Orchestration built on Experience Platform with documentation separate from Adobe Journey Optimizer. Confirm with your Adobe team which journey product your organization purchased and implements. |
+| [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) | Partner collaboration use cases (for example overlapping audiences with publishers or partners) in the Real-Time CDP family. Audiences may surface in Audience Portal alongside audiences from Experience Platform. |
+
 >[!NOTE]
 >
->Other Adobe CX Enterprise products can connect to Adobe Experience Platform. This topic focuses on applications that use Experience Platform as their main source of customer data, so product names, editions, and what is sold can differ by license and country or region.
+>Other Adobe CX Enterprise products can connect to Adobe Experience Platform without being listed here or above. For a high-level map of common integration patterns (sources and destinations—for example Adobe Analytics as a source or Adobe Target as a destination), see [Adobe Experience Platform integrations](experience-platform-integrations.md). Product names, editions, and what is sold can differ by license and country or region.
 
 ## Map your goals to Experience Platform and to applications {#goals-map}
 
@@ -399,7 +409,7 @@ This topic uses the following terms in specific ways.
 
 - Adobe Experience Platform: Shared services and features: bringing data in, data modeling, Identity Service, Real-Time Customer Profile, segmentation, destinations, data governance, privacy, services such as Query Service, and features such as sandboxes. For how those terms differ, see [How Experience Platform features, services, and applications differ](#feature-service-application).
 - Adobe CX Enterprise: The unified interface and shared services layer through which users typically access Experience Platform and Experience Platform applications. See [Adobe CX Enterprise](#cx-enterprise).
-- Applications: Licensed products on Experience Platform (for example Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, Adobe Mix Modeler) that package workflows for specific jobs. They are not the same as Experience Platform services such as Query Service and Identity Service.
+- Applications: Licensed products on Experience Platform (for example Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, Adobe Mix Modeler) that package workflows for specific jobs. They are not the same as Experience Platform services such as Query Service and Identity Service. Related editions and applications appear in [Other applications and editions on Experience Platform](#other-applications-and-editions).
 
 This matches the way the [Experience Platform documentation overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/documentation/overview) groups content.
 
@@ -407,6 +417,7 @@ This matches the way the [Experience Platform documentation overview](https://ex
 
 The following help topics and collections expand on the concepts in this page.
 
+- [Adobe Experience Platform integrations](experience-platform-integrations.md) — How other Adobe CX Enterprise products connect to Experience Platform (sources and destinations).
 - [Adobe Experience Platform overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home) — Main entry points for help.
 - [Experience Platform documentation overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/documentation/overview) — How help topics are organized.
 - [Adobe Experience Platform and applications (architecture diagrams)](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications) — How Experience Platform and applications fit together at a high level.
