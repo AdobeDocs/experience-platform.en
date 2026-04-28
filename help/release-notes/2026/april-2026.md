@@ -19,7 +19,25 @@ exl-id:
 
 New features and updates to existing features in Adobe Experience Platform:
 
+- [Data Collection](#data-collection)
 - [Destinations](#destinations)
+- [Experience Data Model (XDM)](#xdm)
+- [Query Service](#query-service)
+- [Real-Time CDP](#rtcdp)
+- [Sandboxes](#sandboxes)
+- [Sources](#sources)
+ 
+## Data collection {#data-collection}
+
+Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| View build details | You can now access Builds and build details from either a Library or an Environment to view the currently live build and inspect the contents (extensions, data elements, and rules). For more information, see the [Builds overview](../../tags/ui/publishing/builds.md#build-details). |
+
+{style="table-layout:auto"}
 
 ## Destinations {#destinations}
 
@@ -39,6 +57,16 @@ New features and updates to existing features in Adobe Experience Platform:
 
 {style="table-layout:auto"}
 
+## Experience Data Model (XDM) {#xdm}
+
+XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+| Feature | Description |
+| --- | --- |
+| Field Group Usage And Discovery Enhancements | View which schemas use a field group and access metadata such as compatible classes, required attributes, and governance labels directly in the UI. You can also filter field groups by class compatibility and industry tags to more efficiently discover relevant resources and assess impact before making changes. See the [Explore field groups guide](../../xdm/ui/explore.md#explore-field-groups.md) for more details. |
+
+For more information, read the [XDM overview](../../xdm/home.md).
+
 **Fixes and improvements**
 
 | Fix | Description |
@@ -53,3 +81,70 @@ New features and updates to existing features in Adobe Experience Platform:
 {style="table-layout:auto"}
 
 For more information, read the [Destinations overview](../../destinations/home.md).
+
+## Query Service {#query-service}
+
+Use Query Service to query data in Adobe Experience Platform [!DNL Data Lake] with standard SQL. Join any datasets from the [!DNL Data Lake] and capture query results as a new dataset for use in reporting, Data Science Workspace, or ingestion into Real-Time Customer Profile.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Data Distiller Accelerators | Run and schedule Adobe-managed, parameterized SQL templates in the Query Service UI to perform common analyses without writing SQL. This helps you standardize analytics workflows and reuse trusted query logic across your organization. See the [Data Distiller accelerators guide](../../query-service/ui/accelerators.md) for more details. |
+| Query Service Session Management | View and end active Query Service sessions from the [!UICONTROL Admin] tab to monitor usage and free idle session capacity. This helps administrators maintain reliable Data Distiller workflows by reclaiming capacity from inactive sessions. See the [Manage Query Service sessions guide](.../../query-service/ui/session-management.md) for more details. |
+
+{style="table-layout:auto"}
+
+For more information, read the [Query Service overview](../../query-service/home.md).
+
+## Real-Time CDP {#rtcdp}
+
+[!DNL Real-Time CDP] provides unified, actionable customer profiles by ingesting, processing, and activating data across multiple channels in real time. With Real-Time CDP, organizations can connect existing data sources, build and activate rich audiences, and ensure privacy-compliant activation across destinations, all from within Experience Platform. This enables marketers, analysts, and IT teams to deliver highly personalized, timely experiences for their customers through seamless, cross-channel marketing campaigns.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Real-Time CDP MCP (Beta) | Use the [Real-Time CDP MCP](../../rtcdp/rtcdp-mcp.md) to bring Real-Time CDP into AI agents and MCP-compatible clients, enabling you to interact with Real-Time CDP tools directly through your native LLM experience. By connecting an MCP-compatible client (such as Claude, ChatGPT, Claude Code, Codex, Cursor, or VS Code) to the endpoint provided by your Adobe representative, you can use natural language to inspect audiences, destination configuration, and activation run history, without writing Experience Platform REST API calls or navigating multiple UI workflows. After completing a browser-based Adobe sign-in, you will have read-only access to tools including: <ul><li>Search Existing Audiences</li><li>Preview Audience Membership</li><li>List Destination Types</li><li>List Configured Accounts</li><li>List Configured Destinations</li><li>List Source Connections</li><li>List Target Connections</li><li>Inspect Activation Runs</li></ul>. Each request requires `imsOrgId` and `sandboxName` parameters to ensure actions are scoped to your organization and sandbox. Note that write operations are not supported in this Beta release. |
+
+{style="table-layout:auto"}
+
+For more information, read the [Real-Time CDP overview](../../rtcdp/home.md).
+
+## Sandboxes {#sandboxes}
+
+Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater to the development, testing, and deployment of these applications while ensuring operational compliance.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Express Copy | Use Express Copy to copy objects to a target sandbox in a single action from the [Sandbox Tooling UI](/help/sandboxes/ui/sandbox-tooling.md#express-copy). Dependent objects are detected automatically and are created in the target sandbox or reused when they already exist. |
+
+{style="table-layout:auto"}
+
+For more information, read the [sandboxes overview](../../sandboxes/home.md).
+
+## Sources {#sources}
+
+Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+
+**New or updated sources**
+
+| Source | Description |
+| --- | --- |
+| Automatic dataflow disabling | Sources ingestion dataflows that fail continuously for 30 days are automatically disabled, helping to surface unhealthy dataflows and reduce repeated failed runs. |
+| [!BADGE Beta]{type=Informative} [!DNL Talon.One] | The [[!DNL Talon.One] source](../../sources/connectors/loyalty/talon-one.md) for Experience Platform is now available in both batch and streaming modes. Use the [[!DNL Talon.One Batch Source Connector]](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md) to periodically ingest closed sessions and historical loyalty transactions, and the [[!DNL Talon.One Streaming Events]](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md) source to bring [!DNL Talon.One] events into Experience Platform in near real-time. Together, they make it easier to load and activate [!DNL Talon.One] loyalty data across Real-Time CDP, Adobe Journey Optimizer, and Offer Decisioning.|
+| Row-level filtering support for [!DNL Salesforce] using SOQL | You can now apply [!DNL Salesforce] Object Query Language (SOQL) filters directly in [!DNL Salesforce] source connections, allowing you to restrict row-level data before it is ingested into Experience Platform. Use the capability to: <ul><li>Define SOQL where-clause style conditions on Salesforce objects (for example, only leads with Email != null or opportunities in specific stages)</li><li>Limit ingestion to only the rows that meet your criteria, reducing unnecessary data movement, storage, and downstream processing</li><li>Align Experience Platform ingestion more closely with your CRM data access and compliance rules, by controlling which records are brought into Experience Platform at the source</li></ul>. |
+
+{style="table-layout:auto"}
+
+For more information, read the [sources overview](../sources/home.md).
+
+<!--
+
+| [!DNL Delta Sharing] | You can use the [!DNL Delta Sharing] source to bring Delta tables into Experience Platform through a secure, open data‑sharing protocol. After you configure a [!DNL Delta Sharing] connection and select the shares and tables you want to ingest, Platform automatically brings that data into your datasets so you can use it for analysis, segmentation, and activation. |
+| [!DNL Meta Ads] (Beta) | You can use the [!DNL Meta Ads] source connector (Beta) in the Sources workspace to authenticate to [!DNL Meta], select your ad accounts, and schedule ingestion of [!DNL Meta Ads] campaign and performance data into Experience Platform datasets. |
+
+-->
+
