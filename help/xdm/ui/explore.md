@@ -194,10 +194,7 @@ When exploring field groups specifically, additional capabilities are available 
 
 ## Explore field groups: usage and metadata {#explore-field-groups}
 
-When exploring field groups in the **[!UICONTROL Field groups]** tab, additional capabilities are available to help you understand both:
-
-- **Where a field group is used** across schemas
-- **What the field group includes and supports**, such as compatibility, required fields, and governance signals
+When exploring field groups in the **[!UICONTROL Field groups]** tab, additional capabilities help you understand where a field group is used across schemas and what it includes, such as compatibility, required fields, and governance signals.
 
 These features help you evaluate impact before making changes and identify relevant field groups more efficiently during schema design.
 
@@ -209,24 +206,32 @@ To understand how a field group is used across your data model, select a field g
 
 In the right-hand properties rail, the **[!UICONTROL Schemas using this field group]** section lists schemas that currently include the field group.
 
-- If fewer than three schemas use the field group, all schema names are displayed.
-- If more schemas exist, a subset is shown with an option to view the full list.
+![The field group properties rail showing the Schemas using this field group section.](../images/ui/explore/field-group-properties.png)
+
+- If fewer than three schemas use the field group, all schema names are displayed.  
+- If more than three schemas use the field group, only a subset is shown, with an option to view the full list.
 
 Select a schema name to open its detail view in a new tab and inspect how the field group is implemented within that schema.
 
 #### View more and full schema list
 
-If more schemas exist than can be shown inline, select **[!UICONTROL View more]** to open the full **[!UICONTROL Schemas using this field group]** dialog.
+If more schemas exist than can be shown inline, select **[!UICONTROL View more]** to open the full dialog.
 
-In this dialog, you can:
+![The View more option in the Schemas using this field group section.](../images/ui/explore/view-more-schemas.png)
 
-- Browse all schemas that use the field group
-- Page through large result sets
-- Sort results to organize the list
-- Customize visible columns using the same column configuration controls as the schema inventory **[UNVERIFIED]**
-- Select a schema to open its detail view in a new tab
+The **[!UICONTROL Schemas using this field group]** dialog appears, showing the full list of schemas that use the field group.
 
-The dialog reflects schema inventory information such as names, classes, and other schema attributes **[UNVERIFIED]**.
+![The Schemas using this field group dialog showing schema list and columns.](../images/ui/explore/schemas-using-this-field-group-dialog.png)
+
+In the **[!UICONTROL Schemas using this field group]** dialog, you can:
+
+- Browse all schemas that use the field group  
+- Page through large result sets  
+- Sort results to organize the list  
+- Customize visible columns  
+- Select a schema to open its detail view in a new tab  
+
+The dialog displays schema inventory details such as schema name, class, and other attributes.
 
 This workflow is intended for **impact analysis and exploration only**. It does not modify schemas or field groups. To change schema structure, see [Create and edit schemas in the UI](./resources/schemas.md) and [Create and edit schema field groups in the UI](./resources/field-groups.md).
 
@@ -236,19 +241,18 @@ The **[!UICONTROL Field groups]** tab provides metadata and filtering tools to h
 
 #### Browse table and filters
 
-The field group inventory table includes additional columns that expose metadata directly in the list view:
+The field group inventory table includes additional columns that expose metadata directly in the list view, such as **[!UICONTROL Compatible classes]**, which indicates how many classes the field group can extend (and may display **All** when the field group is compatible with all classes), and **[!UICONTROL Industry tags]**, which categorize field groups for discovery.
 
-- **[!UICONTROL Compatible classes]** — Indicates how many classes the field group can extend. In some cases, this may display **All** when the field group is compatible with all classes **[UNVERIFIED]**.
-- **[!UICONTROL Industry tags]** — Indicates industry categories assigned to the field group. These tags are defined by Adobe and are not editable **[UNVERIFIED]**.
+To refine the list, select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to open the filter panel in the left rail. The filter panel appears and provides controls to narrow the field group inventory.
 
-To refine the list, select the filter icon to open the filter panel:
+![The Field groups tab showing compatible classes, industry tags, and the filter panel.](../images/ui/explore/field-group-filters.png)
 
-- **[!UICONTROL Compatible classes]** — Use the dropdown to filter field groups by class compatibility
-- **[!UICONTROL Industry tags]** — Use checkboxes to filter by one or more industry categories
+In the filter panel, you can:
 
-Multiple filters may be applied together **[UNVERIFIED]**.
+- **[!UICONTROL Compatible classes]** — Use the dropdown to filter field groups by class compatibility  
+- **[!UICONTROL Industry tags]** — Use checkboxes to filter by one or more industry categories  
 
-While browsing, select a row in the table to update the info rail. The info rail summarizes metadata such as compatible classes and industry tags without requiring you to open the field group detail view.
+While browsing, select a row in the table to update the info rail. The info rail displays metadata such as compatible classes and industry tags so you can review key details without opening the field group.
 
 #### Field group detail metadata
 
@@ -256,20 +260,23 @@ When you open a field group, the properties rail displays additional metadata as
 
 This can include:
 
-- **[!UICONTROL Compatible classes]** — Classes that the field group can extend
-- **[!UICONTROL Required fields]** — Fields within the group that must be present when the field group is used
+- **[!UICONTROL Compatible classes]** — Classes that the field group can extend  
+- **[!UICONTROL Required attributes]** — Attributes within the field group that must be present when the group is used
 - **[!UICONTROL Labels]** — Indicates whether governance-related labels are applied to the field group
 
 This information helps you understand constraints and requirements before using or modifying the field group.
 
 #### Labels in the structure view
 
-When a field group is open in the canvas, you can view label information directly in the structure.
+When a field group is open in the canvas, you can view label information directly in the structure. Select the settings icon and enable **[!UICONTROL Show labels on tree]** to display label indicators on fields in the canvas  
 
-- Select the settings icon and enable **[!UICONTROL Show labels on tree]** to display label indicators on fields in the canvas
-- Select a field in the canvas to view label details in the **[!UICONTROL Field properties]** rail, including labels applied to that field
+![The field group canvas showing the tree display options dialog with SHow labels on tree highlighted.](../images/ui/explore/show-labels-on-tree.png)
 
-Labels are displayed by category and provide visibility into governance or access-related constraints applied to the data **[UNVERIFIED]**.
+Select a field in the canvas to view label details in the **[!UICONTROL Field properties]** rail, including labels applied to that field  
+
+![The field group canvas showing labels on fields and label details in the field properties rail.](../images/ui/explore/field-group-labels.png)
+
+Labels are displayed by category (for example, identity and sensitive labels) and provide visibility into governance or access-related constraints applied to the data.
 
 These indicators are for visibility only and do not change schema structure. For full details on applying and managing labels, see [Manage data usage labels for a schema](../tutorials/labels.md).
 
