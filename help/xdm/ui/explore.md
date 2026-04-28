@@ -200,7 +200,7 @@ These features help you evaluate impact before making changes and identify relev
 
 ### View schema usage for field groups {#view-schema-usage-for-field-groups}
 
-To understand how a field group is used across your data model, select a field group to open its detail view. The canvas updates to display the field group structure, and the properties rail shows additional information about the selected resource.
+To understand how a field group is used across your data model, select a field group from the **[!UICONTROL Field groups]** table to open its detail view. The canvas updates to display the field group structure, and the properties rail shows additional information about the selected resource.
 
 #### Schemas using this field group
 
@@ -258,21 +258,21 @@ While browsing, select a row in the table to update the info rail. The info rail
 
 When you open a field group, the properties rail displays additional metadata associated with the resource.
 
-This can include:
+The properties rail can display the following metadata:
 
 - **[!UICONTROL Compatible classes]** — Classes that the field group can extend  
-- **[!UICONTROL Required attributes]** — Attributes within the field group that must be present when the group is used
-- **[!UICONTROL Labels]** — Indicates whether governance-related labels are applied to the field group
+- **[!UICONTROL Required attributes]** — Attributes within the field group that must be present when the group is used  
+- **[!UICONTROL Labels]** — Indicates whether governance-related labels are applied to the field group  
 
 This information helps you understand constraints and requirements before using or modifying the field group.
 
 #### Labels in the structure view
 
-When a field group is open in the canvas, you can view label information directly in the structure. Select the settings icon and enable **[!UICONTROL Show labels on tree]** to display label indicators on fields in the canvas  
+When a field group is open in the canvas, you can view label information directly in the structure. Select the settings icon in the canvas toolbar and enable **[!UICONTROL Show labels on tree]** to display label indicators on fields in the canvas.
 
-![The field group canvas showing the tree display options dialog with SHow labels on tree highlighted.](../images/ui/explore/show-labels-on-tree.png)
+![The field group canvas showing the tree display options dialog with Show labels on tree highlighted.](../images/ui/explore/show-labels-on-tree.png)
 
-Select a field in the canvas to view label details in the **[!UICONTROL Field properties]** rail, including labels applied to that field  
+Select a field in the canvas to view label details in the **[!UICONTROL Field properties]** rail, including labels applied to that field.
 
 ![The field group canvas showing labels on fields and label details in the field properties rail.](../images/ui/explore/field-group-labels.png)
 
