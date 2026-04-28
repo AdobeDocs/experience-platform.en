@@ -192,7 +192,7 @@ See the tutorial on [creating a relationship in the UI](../tutorials/relationshi
 
 ## Explore field groups: usage and metadata {#explore-field-groups}
 
-Navigate to **[!UICONTROL Schemas]** > **[!UICONTROL Field groups]** to explore field groups. In the **[!UICONTROL Field groups]** tab, additional capabilities help you understand where a field group is used across schemas andwhat it includes, such as compatibility, required fields (which enforce ingestion requirements), and governance signals.
+Navigate to **[!UICONTROL Schemas]** > **[!UICONTROL Field groups]** to explore field groups. In the **[!UICONTROL Field groups]** tab, additional capabilities help you understand where a field group is used across schemas and what it includes, such as compatibility, required fields (which enforce ingestion requirements), and governance signals.
 
 These features help you evaluate impact before making changes and identify relevant field groups more efficiently during schema design.
 
@@ -225,7 +225,6 @@ In the **[!UICONTROL Schemas using this field group]** dialog, you can:
 
 - Browse all schemas that use the field group
 - Page through large result sets
-- Sort results to organize the list
 - Select a schema to open its detail view in a new tab
 
 You can view schema details such as schema name, class, and other attributes.
@@ -258,7 +257,7 @@ When you open a field group, the properties rail displays additional metadata as
 The properties rail can display the following metadata:
 
 - **[!UICONTROL Compatible classes]** — Classes that the field group can extend  
-- **[!UICONTROL Required attributes]** — Attributes that must have valid values in every record when data is ingested using a schema that includes this field group. If these attributes are missing or invalid, ingestion validation fails for that record
+- **[!UICONTROL Required attributes]** — Attributes that must have valid values when required by the field group during data ingestion. Requirements depend on the data structure, and records with missing or invalid required values fail validation
 - **[!UICONTROL Labels]** — Labels are not shown at the field group level. Select a field to view label details in the **[!UICONTROL Field properties]** rail
 
 This information helps you understand constraints and requirements before using or modifying the field group.
