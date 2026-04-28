@@ -233,7 +233,7 @@ In the **[!UICONTROL Schemas using this field group]** dialog, you can:
 
 The dialog displays schema inventory details such as schema name, class, and other attributes.
 
-This workflow is intended for **impact analysis and exploration only**. It does not modify schemas or field groups. To change schema structure, see [Create and edit schemas in the UI](./resources/schemas.md) and [Create and edit schema field groups in the UI](./resources/field-groups.md).
+This workflow is intended for **impact analysis and exploration only**. It does not modify schemas or field groups. To change schema structure, see [Create and edit schemas in the UI](./resources/schemas.md).
 
 ### Field group metadata and filtering {#field-group-metadata-and-filtering}
 
@@ -278,7 +278,7 @@ Select a field in the canvas to view label details in the **[!UICONTROL Field pr
 
 Labels are displayed by category (for example, identity and sensitive labels) and provide visibility into governance or access-related constraints applied to the data.
 
-These indicators are for visibility only and do not change schema structure. For full details on applying and managing labels, see [Manage data usage labels for a schema](../tutorials/labels.md).
+These indicators are for visibility only and do not change schema structure. For more information, see [Manage data usage labels for a schema](../tutorials/labels.md).
 
 ## Next steps
 
