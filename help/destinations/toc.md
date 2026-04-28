@@ -69,7 +69,7 @@ role: Admin,User
         * [Federated Audience Composition connection](https://www.adobe.com/go/destinations-federated-audience-composition)
     * Advertising destinations{#advertising}
         * [Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
-        * [Acxiom RealID Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
+        * [Acxiom Real ID™ Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
         * [Advertising destinations overview](./catalog/advertising/overview.md)
         * [Adobe Advertising DSP connection](./catalog/advertising/adobe-advertising-dsp-connection.md)
         * [Legacy Adobe Advertising DSP connection](./catalog/advertising/adobe-advertising-cloud-dsp-connection-legacy.md)
