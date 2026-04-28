@@ -38,23 +38,27 @@ The [!UICONTROL Data Distiller capabilities] section provides documentation link
 
 ### Accelerators {#accelerators}
 
-<!-- PLACEHOLDER: Describe the Accelerators tab. State that it displays a table of Adobe-approved parameterized SQL templates. Explain that selecting an accelerator opens it in the Query Editor. Link to the Data Distiller Accelerators guide for full documentation. Add screenshot when available. -->
+The **[!UICONTROL Accelerators]** tab in the Queries workspace provides a catalog of Adobe-authored, parameterized SQL templates for common analytical use cases. Each accelerator appears as a row in a table with a name, SQL preview, and metadata.
 
-See the [Data Distiller Accelerators](./accelerators.md) guide to learn how to discover, run, and schedule accelerators, or create editable copies using Create Custom Template.
+Select an accelerator to open it in the Query Editor. Provide parameter values and run the query to generate results. Accelerators are read-only and maintained by Adobe to ensure consistency. To modify the logic, create an editable copy using **[!UICONTROL Create custom template]**. See the [Data Distiller Accelerators](./accelerators.md) guide to learn how to discover, run, schedule, and customize accelerators.
 
 ### Recommended Data Distiller accelerators {#recommended-accelerators}
 
-<!-- PLACEHOLDER: Consider revising intro to clarify two accelerator types: (1) cards that link to dashboards, (2) cards that link to Query Editor/Accelerators tab. Add link to accelerators.md for users who want the full guide. -->
+The **[!UICONTROL Recommended Data Distiller accelerators]** section on the Overview tab provides quick access to commonly used accelerators. These appear as cards and support two workflows:
 
-Select a quick link to navigate to the relevant Data Distiller dashboards [!UICONTROL Templates]. Each accelerator provides powerful tools and visualizations to help you analyze audience data, optimize segmentation, and enhance targeting strategies. For the full list of accelerators and SQL-based templates, see the [Accelerators tab](./accelerators.md#discovery-paths) or the [Data Distiller Accelerators guide](./accelerators.md).
+- **Dashboard-linked accelerators** open in the Dashboards workspace with prebuilt visualizations. These do not require parameter input or manual query execution.
+- **Query-based accelerators** open in the Query Editor, where you provide parameter values, run the query, or schedule it.
 
-- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: From this dashboard you can analyze audience intersections between multiple audience segments to uncover valuable insights and optimize segmentation strategies. You can also export your insights for further offline analysis or reporting purposes.
-- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: From this dashboard, you can compare and contrast key audience metrics side-by-side to analyze two audience groups in detail. These insights help you understand audience size, growth, and other key performance indicators, enabling you to refine segmentation and optimize targeting strategies with data-driven decisions.
-- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**: Use the [!UICONTROL Audience trends] dashboard to visualize how your audiences evolve over time through key metrics like audience growth, identity counts, and single identity profiles. Track trends to uncover valuable insights into audience behavior, empowering you to refine segmentation, enhance engagement, and optimize targeting strategies for more effective campaigns.
-Track audience metrics over time to monitor changes in audience size, identity growth, and overall engagement.
-- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**: Use the Audience Identity Overlaps dashboard to analyze identity overlaps within selected audiences. Visualizations and tabulated data provide insights to optimize identity stitching, reduce redundancy, and improve segmentation. These insights enable more effective targeting, enhanced personalization, and streamlined customer interactions.
+Select a card to open the accelerator. Use this section for quick access to common workflows, or navigate to the **[!UICONTROL Accelerators]** tab to browse the full catalog. For the complete list of accelerators and detailed instructions, see the [Accelerators tab](./accelerators.md#discovery-paths) or the [Data Distiller Accelerators guide](./accelerators.md).
 
-![The Query Service workspace with the Data Distiller accelerators section highlighted.](../images/ui/overview/data-distiller-accelerators.png)
+The following dashboard-linked accelerators are available:
+  
+- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: Analyze intersections between audience segments to identify overlap patterns and refine segmentation. 
+- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: Compare key metrics between two audiences, including size, composition, and changes over time. 
+- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**: Track how audience metrics change over time, including audience size and identity counts. 
+- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**: Examine how identity types overlap within audiences to support identity stitching and segmentation accuracy.
+
+![Query Service Overview showing the Data Distiller accelerators section with recommended accelerator cards.](../images/ui/overview/data-distiller-accelerators.png)
 
 ### Data Distiller examples {#data-distiller-examples}
 

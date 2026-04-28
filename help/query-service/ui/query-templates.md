@@ -23,9 +23,11 @@ See the documentation for instructions on how to use the Query Editor to [write]
 
 ### Create a template from a Data Distiller accelerator {#create-from-accelerator}
 
-<!-- PLACEHOLDER: Explain that users can create an editable template by cloning a Data Distiller accelerator. Select Create custom template from the Query Editor when an accelerator is open; the cloned query appears in the Templates tab. Link to Data Distiller Accelerators guide for full workflow. -->
+Data Distiller accelerators are read-only. To modify an accelerator, create an editable template from it in the Query Editor.
 
-You can also create a query template by cloning a Data Distiller accelerator. Open an accelerator in the Query Editor, select **[!UICONTROL Create custom template]**, then save the query. The cloned template appears in the [!UICONTROL Templates] tab and is fully editable. See the [Data Distiller Accelerators](./accelerators.md#create-custom-template) guide for step-by-step instructions.
+Open an accelerator, then select **[!UICONTROL Create custom template]** to clone the SQL. Save the template to add it to the **[!UICONTROL Templates]** tab. The cloned template is fully editable and can be run, scheduled, or modified as needed.
+
+See the [Data Distiller Accelerators](./accelerators.md#create-custom-template) guide for detailed instructions.
 
 >[!TIP]
 >
