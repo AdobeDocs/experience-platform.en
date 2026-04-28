@@ -194,13 +194,13 @@ When exploring field groups specifically, additional capabilities are available 
 
 ## Explore field groups: usage and metadata {#explore-field-groups}
 
-When exploring field groups in the **[!UICONTROL Field groups]** tab, additional capabilities help you understand where a field group is used across schemas and what it includes, such as compatibility, required fields, and governance signals.
+Navigate to **[!UICONTROL Schemas]** > **[!UICONTROL Field groups]** to explore field groups. In the **[!UICONTROL Field groups]** tab, additional capabilities help you understand where a field group is used across schemas and what it includes, such as compatibility, required fields, and governance signals.
 
 These features help you evaluate impact before making changes and identify relevant field groups more efficiently during schema design.
 
 ### View schema usage for field groups {#view-schema-usage-for-field-groups}
 
-To understand how a field group is used across your data model, select a field group from the **[!UICONTROL Field groups]** table to open its detail view. The canvas updates to display the field group structure, and the properties rail shows additional information about the selected resource.
+From the **[!UICONTROL Field groups]** table, select a field group to open its detail view. The canvas updates to display the field group structure, and the properties rail shows additional information about the selected resource.
 
 #### Schemas using this field group
 
@@ -231,7 +231,7 @@ In the **[!UICONTROL Schemas using this field group]** dialog, you can:
 - Customize visible columns  
 - Select a schema to open its detail view in a new tab  
 
-The dialog displays schema inventory details such as schema name, class, and other attributes.
+You can view schema details such as schema name, class, and other attributes.
 
 This workflow is intended for **impact analysis and exploration only**. It does not modify schemas or field groups. To change schema structure, see [Create and edit schemas in the UI](./resources/schemas.md).
 
@@ -243,7 +243,7 @@ The **[!UICONTROL Field groups]** tab provides metadata and filtering tools to h
 
 The field group inventory table includes additional columns that expose metadata directly in the list view, such as **[!UICONTROL Compatible classes]**, which indicates how many classes the field group can extend (and may display **All** when the field group is compatible with all classes), and **[!UICONTROL Industry tags]**, which categorize field groups for discovery.
 
-To refine the list, select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to open the filter panel in the left rail. The filter panel appears and provides controls to narrow the field group inventory.
+To refine the list, select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to open the filter panel in the left rail. The following image shows the filter panel open in the left rail.
 
 ![The Field groups tab showing compatible classes, industry tags, and the filter panel.](../images/ui/explore/field-group-filters.png)
 
@@ -268,7 +268,7 @@ This information helps you understand constraints and requirements before using 
 
 #### Labels in the structure view
 
-When a field group is open in the canvas, you can view label information directly in the structure. Select the settings icon in the canvas toolbar and enable **[!UICONTROL Show labels on tree]** to display label indicators on fields in the canvas.
+When a field group is open in the canvas, you can view label information directly in the structure. Select the settings icon in the canvas toolbar (gear icon) and enable **[!UICONTROL Show labels on tree]** to display label indicators on fields in the canvas.
 
 ![The field group canvas showing the tree display options dialog with Show labels on tree highlighted.](../images/ui/explore/show-labels-on-tree.png)
 
