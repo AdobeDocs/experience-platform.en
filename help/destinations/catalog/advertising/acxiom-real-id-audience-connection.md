@@ -1,8 +1,8 @@
 ---
 title: Acxiom Real ID&trade; Audience Connection
-description: "Use the [!DNL Acxiom Real ID&trade; Audience Connection] destination to enhance and activate audiences across platforms such as [!DNL Altice], [!DNL Ampersand], and [!DNL Comcast]."
+description: Use the [!DNL Acxiom Real ID&trade; Audience Connection] destination to enhance and activate audiences across platforms such as [!DNL Altice], [!DNL Ampersand], and [!DNL Comcast].
+exl-id: 5f1f0f7f-ac46-42bd-8002-be50fab5a76b
 ---
-
 # [!DNL Acxiom Real ID&trade; Audience Connection] destination
 
 Use the [!DNL Acxiom Real ID Audience Connection] destination to enhance audiences with [!DNL Acxiom]'s [Real ID&trade;](https://www.acxiom.com/real-id/real-id/) technology. Then activate those audiences across platforms such as [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], and more.
