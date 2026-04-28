@@ -1,8 +1,8 @@
 ---
 title: Rokt
 description: Learn how to connect Adobe Experience Platform audiences to Rokt to improve campaign performance through smarter targeting, suppression, and personalization.
+exl-id: 50eaefeb-d394-49b1-9748-5d68f11b79a0
 ---
-
 # [!DNL Rokt] connection {#rokt-destination}
 
 ## Overview {#overview}
