@@ -158,7 +158,7 @@ If an array field is based on an object type, you can select its icon in the can
 
 ### [!UICONTROL Field properties] {#field-properties}
 
-When you select the name of any field in the canvas, the right rail updates to show details about that field under **[!UICONTROL Field properties]**. This can include a description of the field's intended use case, default values, patterns, formats, whether or not the field is required, and more. When you are exploring a field group, label-related details for the selected field can also appear here; see [Labels in the structure view](#field-group-labels-in-structure).
+When you select the name of any field in the canvas, the right rail updates to show details about that field under **[!UICONTROL Field properties]**. This can include a description of the field's intended use case, default values, patterns, formats, whether the field is required, and more. When you are exploring a field group, label-related details for the selected field can also appear here; see [Labels in the structure view](#field-group-labels-in-structure).
 
 ![A field selected from the Commerce data type with the field properties highlighted.](../images/ui/explore/field-properties.png)
 
@@ -206,8 +206,8 @@ In the right-hand properties rail, the **[!UICONTROL Schemas using this field gr
 
 ![The field group properties rail showing the Schemas using this field group section.](../images/ui/explore/field-group-properties.png)
 
-- If fewer than three schemas use the field group, all schema names are displayed.  
-- If more than three schemas use the field group, only a subset is shown, with an option to view the full list.
+- If the field group is used by three or fewer schemas, all schema names are displayed.
+- If it is used by more than three schemas, only some names are displayed, along with an option to view the complete list.
 
 Select a schema name to open its detail view in a new tab and inspect how the field group is implemented within that schema.
 
@@ -237,7 +237,7 @@ The **[!UICONTROL Field groups]** tab provides metadata and filtering tools to h
 
 #### Browse table and filters
 
-The field group inventory table includes additional columns that expose metadata directly in the list view, such as **[!UICONTROL Compatible classes]**, which indicates which classes a field group can be applied to. Field groups can only be added to schemas that use one of the listed compatible classes, based on the behavior of the data they represent (for example, record-based or time-series data). The table may display **All** when the field group is compatible with all classes. **[!UICONTROL Industry tags]** categorize field groups for discovery.
+The field group inventory table includes additional columns that expose metadata directly in the list view, such as **[!UICONTROL Compatible classes]**, which indicates which classes a field group can be applied to. Field groups can only be added to schemas that use one of the listed compatible classes, based on the behavior of the data they represent (for example, record-based or time-series data). The table may display **[!UICONTROL All]** when the field group is compatible with all classes. **[!UICONTROL Industry tags]** help categorize field groups for discovery.
 
 To refine the list, select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to open the filter panel in the left rail. The following image shows the filter panel open in the left rail.
 
@@ -272,7 +272,7 @@ Select a field in the canvas to view label details in the **[!UICONTROL Field pr
 
 ![The field group canvas showing labels on fields and label details in the field properties rail.](../images/ui/explore/field-group-labels.png)
 
-Labels are displayed by category (for example, identity and sensitive labels) and provide visibility into governance or access-related constraints applied to the data.
+Labels are grouped by category (for example, identity and sensitive labels) and provide visibility into governance or access-related constraints applied to the data.
 
 These indicators are for visibility only and do not change schema structure. For more information, see [Manage data usage labels for a schema](../tutorials/labels.md).
 
