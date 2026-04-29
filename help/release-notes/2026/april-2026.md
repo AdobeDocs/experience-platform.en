@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes April 2026
 description: The April 2026 release notes for Adobe Experience Platform.
+exl-id: 47070fcf-b585-43f4-b43b-0d62c18f0693
 ---
 # Adobe Experience Platform release notes
 
@@ -150,4 +151,3 @@ For more information, read the [sources overview](../../sources/home.md).
 | Automatic dataflow disabling | Sources ingestion dataflows that fail continuously for 30 days are automatically disabled, helping to surface unhealthy dataflows and reduce repeated failed runs. |
 
 -->
-
