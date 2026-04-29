@@ -151,7 +151,7 @@ Refer to the table below for information about the destination export type and f
 
 >[!NOTE]
 >
->The **[!UICONTROL Export file now]** feature is not yet available for [!DNL The Trade Desk] CRM destination. To export audiences, use the scheduled daily batch export described above.
+>The **[Export file now](/help/destinations/ui/export-file-now.md)** feature is not available for [!DNL The Trade Desk] CRM destination. To export audiences, use the [scheduled daily batch export](#activate).
 
 ## Connect to the destination {#connect}
 
