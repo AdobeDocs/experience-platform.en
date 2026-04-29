@@ -78,6 +78,10 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 *   Content-Type: `application/json`
 
+### API reference documentation {#api-reference-documentation}
+
+You can find accompanying reference documentation for all the API operations in this tutorial. See the [Ad Hoc Activation API reference](https://developer.adobe.com/experience-platform-apis/references/ad-hoc-activation).
+
 ## Step 3: Create activation flow in the Experience Platform UI {#activation-flow}
 
 Before you can activate audiences through the ad-hoc activation API, you must first have an activation flow configured in the Experience Platform UI, for the chosen destination.

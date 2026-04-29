@@ -68,7 +68,7 @@ The **[!UICONTROL Attributes]** tab allows you to browse [!DNL Profile] attribut
 
 The attributes you add can be one of the following data types:
 
-| Data type | Common use cases | 
+| Data type | Common use cases |
 | --------- | ---------------- |
 | String | Names, email addresses, product categories |
 | Numeric | Age, revenue, product quantities, loyalty scores |
@@ -138,7 +138,7 @@ You can use the following operators for the respective data types:
 | This month | The value occurred this calendar month. | Birth month **is** This month |
 | This year | The value occurred this calendar year. | Sign up date **is** This year |
 | Custom date | The value occurred on the given date. | Purchase date **is on** Custom date |
-| In last | The value occurred within the last period of time chosen. Birthday **is** In last month |
+| In last | The value occurred within the last period of time chosen. Birthday **is** In last month | |
 | From (to) | The value occurred within the two calendar dates chosen. This period of time is **inclusive** of both dates. | Account creation date **is** From April 20th to July 13th |
 | During | The value occurred within the selected month or year. | Sale **is** During March |
 | Within (+/-) | The value occurred within days, weeks, months, or years of the selected date. This period of time is **inclusive** of both dates. | Cart abandon is **Within** 3 days |
@@ -208,7 +208,7 @@ For example, consider a situation where you had two report suites with the follo
 | Field | Report Suite Schema A | Report Suite Schema B |
 | ----- | --------------------- | --------------------- |
 | eVar1 | Referring Domain | Logged in Y/N |
-| eVar2 | Page Name | Member Loyalty ID | 
+| eVar2 | Page Name | Member Loyalty ID |
 | eVar3 | URL | Page Name |
 | eVar4 | Search Terms | Product Name |
 | event1 | Clicks | Page Views |
@@ -401,7 +401,7 @@ The list of available time constraints are as follows:
 
 | Time constraint | Description | Can enable ignore year | Example |
 | --------------- | ----------- | ------------------- | ------- |
-| Today | The attribute or event being compared **must** occur today. | Yes | ![An example of the "Today" time constraint being used.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Today | The attribute or event being compared **must** occur today. This is the default time constraint selected. | Yes | ![An example of the "Today" time constraint being used.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | Yesterday | The attribute or event being compared **must** occur yesterday. | Yes | ![An example of the "Yesterday" time constraint being used.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | This month | The attribute or event being compared **must** occur this calendar month. | Yes | ![An example of the "This month" time constraint being used.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | This year | The attribute or event being compared **must** occur this calendar year. | No | ![An example of the "This year" time constraint being used.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -416,6 +416,16 @@ The list of available time constraints are as follows:
 | In next | The attribute or event being compared must occur within the next period of time selected. The selected periods of time include minutes, hours, days, weeks, months, and years. | No | ![An example of the "In next" time constraint being used.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
 | Exists | The attribute exists. | No | ![An example of the "Exists" time constraint being used.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
 | Does not exist | The attribute does not exist. | No | ![An example of the "Does not exist" time constraint being used.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+| Now | The attribute or event being compared **must** occur right when the audience is evaluated. This time constraint can only be used as a secondary-level option, within time constraints such as "Before" or "After". | Yes | ![An example of the "Now" time constraint being used.](../images/ui/segment-builder/time-constraints/now.png){width="100" zoomable="yes"} |
+
+>[!TIP]
+>
+>The difference between the "Today" time constraint and "Now" time constraint is subtle, but significant. 
+>
+>- Use the "Today" time constraint to check if the attribute or event being compared is happening at **midnight** of the current day. 
+>- Use the "Now" time constraint to check if the attribute or event being compared is happening **right now**.
+>
+>However, there's one major exception - if you're using "Today" as a top-level time constraint, that means you're checking if the attribute or event occurred at **any** point today.
 
 +++
 
@@ -452,7 +462,7 @@ The list of available time constraints for this operation differs from the main 
 | Time constraint | Description |
 | --------------- | ----------- |
 | After | The latter event **must at least** take place after the prior event. |
-| Within | The two events **must** take place during the time period listed within the time constraint. | 
+| Within | The two events **must** take place during the time period listed within the time constraint. |
 
 >[!NOTE]
 >

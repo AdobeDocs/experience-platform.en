@@ -22,7 +22,7 @@ This destination allows customers to share first-party audiences with any or all
 
   * Identifiers for Advertisers (IDFAs) for [!DNL Apple iOS] devices
 
-This connection replaces the [Legacy Adobe Advertising Cloud DSP connection](adobe-advertising-cloud-dsp-connection-legacy.md), which supports only hashed email addresses.
+This connection replaces the [Legacy Adobe Advertising DSP connection](adobe-advertising-cloud-dsp-connection-legacy.md), which supports only hashed email addresses.
 
 >[!IMPORTANT]
 >
@@ -86,7 +86,7 @@ The Adobe Advertising DSP destination supports the activation of identities desc
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |

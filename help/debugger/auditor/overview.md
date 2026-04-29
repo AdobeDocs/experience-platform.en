@@ -40,8 +40,8 @@ It is **recommended** that you fix any level 1 to 3 results.
 
 The auditor feature is able to grade the following Adobe technologies:
 
-* Adobe Advertising Cloud DSP 
-* Adobe Advertising Cloud Search 
+* Adobe Advertising DSP 
+* Adobe Advertising Search 
 * Adobe Analytics 
 * Adobe Experience Cloud Identity Service
 * Adobe Target

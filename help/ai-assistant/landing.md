@@ -87,7 +87,8 @@ You can use Product Support Agent in AI Assistant (Legacy) to seamlessly trouble
 
 >[!ENDTABS]
 
-<!-- ## Security features of AI Assistant {#security}
+<!-- 
+## Security features of AI Assistant {#security}
 
 
 Watch the following video for more information on the security features of AI Assistant:
@@ -100,7 +101,8 @@ Watch the following video for more information on the security features of AI As
 
 For more information about AI Assistant, read the [security fact sheet for AI Assistant in Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
 
->[!ENDSHADEBOX] -->
+>[!ENDSHADEBOX] 
+-->
 
 ## Understanding the basics
 

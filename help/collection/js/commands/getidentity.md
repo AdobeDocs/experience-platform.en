@@ -7,6 +7,10 @@ exl-id: 28b99f62-14c4-4e52-a5c7-9f6fe9852a87
 
 When you run the [`sendEvent`](sendevent/overview.md) command, the Web SDK automatically obtains the visitor's identity if one is not already present. The `getIdentity` command allows you to obtain a visitor ID without sending event data. If you require separate calls to generate a visitor ID and send data, you can use this command.
 
+>[!IMPORTANT]
+>
+>Use `getIdentity` when you need identity information on the client side. If you only need to map the ECID into XDM, use [Data Prep for Data Collection](/help/datastreams/data-prep.md) or the [tags ECID access guidance](/help/tags/extensions/client/web-sdk/accessing-the-ecid.md) instead.
+
 The `getIdentity` command goes through the following flow to retrieve the `ECID`.
 
 1. You use the Web SDK to call either `getIdentity` or [`appendIdentityToUrl`](appendidentitytourl.md).

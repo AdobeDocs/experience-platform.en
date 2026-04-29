@@ -16,11 +16,11 @@ The features of this extension are being ported over to new extension. Here is a
 | Support for Custom Customer IDs | Support for Custom Cusotmer IDs|
 | Client-Side Mapping UI for XDM | Build in ECID (No need for visitor.js)|
 | Ability to create a streaming connection | Opt-in Support |
-| | XDM Support as a data element | 
-| | First Party Domain Support | 
-| | Debugging tools built in | 
-| | Automatically collects browser context | 
-| | Fully open source | 
+| | XDM Support as a data element |
+| | First Party Domain Support |
+| | Debugging tools built in |
+| | Automatically collects browser context |
+| | Fully open source |
 
 
 ## Configure the Adobe Experience Platform extension

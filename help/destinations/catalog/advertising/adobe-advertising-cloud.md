@@ -1,20 +1,20 @@
 ---
-keywords: Advertising Cloud;advertising cloud extension; advertising cloud destination
-title: Adobe Advertising Cloud extension
-description: The Adobe Advertising Cloud extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+keywords: advertising extension; advertising destination
+title: Adobe Advertising extension
+description: The Adobe Advertising extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
 ---
-# [!DNL Adobe Advertising Cloud] extension {#adobe-advertising-cloud-extension}
+# [!DNL Adobe Advertising] extension {#adobe-advertising-cloud-extension}
 
 ## Overview {#overview}
 
-This is the [!DNL Advertising Cloud] extension for implementing [!DNL Advertising Cloud] conversion and audience tags for both the DSP and Search (DCO is not supported currently).
+This is the [!DNL Adobe Advertising] extension for implementing advertising conversion and audience tags for both the DSP and Search (DCO is not supported currently).
 
-[!DNL Adobe Advertising Cloud] is an advertising extension in [!DNL Adobe Experience Platform].
+[!DNL Adobe Advertising] is an advertising extension in [!DNL Adobe Experience Platform].
 
 This destination is a tag extension. For more information about how tags extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Adobe Advertising Cloud extension](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
+![Adobe Advertising extension](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
 
 ## Prerequisites {#prerequisites}
 
@@ -24,7 +24,7 @@ To use this extension, you need access to tags in Experience Platform. Tags are 
 
 ## Install extension {#install-extension}
 
-To install the [!DNL Adobe Advertising Cloud] extension:
+To install the [!DNL Adobe Advertising] extension:
 
 In the [Experience Platform interface](https://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
