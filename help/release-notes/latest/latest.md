@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes March 2026
-description: The March 2026 release notes for Adobe Experience Platform.
+title: Adobe Experience Platform Release Notes April 2026
+description: The April 2026 release notes for Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes
@@ -15,7 +15,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 >- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**Release date: March 24, 2026**
+**Release date: April 28, 2026**
 
 New features and updates to existing features in Adobe Experience Platform:
 
