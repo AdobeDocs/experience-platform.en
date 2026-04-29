@@ -1,7 +1,7 @@
 ---
 title: Snowflake Streaming connection
 description: Create a live Snowflake data share to receive streaming audience updates directly as shared tables into your account.
-last-substantial-update: 2026-03-24
+last-substantial-update: 2026-04-28
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 ---
@@ -177,12 +177,13 @@ The data is shared into your Snowflake account via a shared table. Check your Sn
 
 The following example shows sample rows from a shared table: some columns store identities and segment membership as JSON; mapped profile attributes appear as separate string columns.
 
-![Sample Snowflake worksheet rows showing IDENTITYMAP, SEGMENT_MEMBERSHIP, and mapped attribute columns](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
+![Sample Snowflake worksheet rows showing TS, IDENTITYMAP, SEGMENT_MEMBERSHIP, and mapped attribute columns.](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
 
 ### Data structure {#data-structure}
 
 The screenshot above shows the following columns:
 
+* **TS**: A timestamp indicating when each row was last updated.
 * **IDENTITYMAP**: JSON object for each profile identity map.
 * **SEGMENT_MEMBERSHIP**: JSON object for each audience activated on the dataflow. Value include `lastQualificationTime` and `status` (for example `realized` when the profile qualifies for the segment).
 * **Mapping attributes**: Every mapping attribute that you select during the activation workflow is represented as a column header in [!DNL Snowflake].
