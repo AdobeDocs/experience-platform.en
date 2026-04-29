@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes April 2026
 description: The April 2026 release notes for Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+exl-id: 47070fcf-b585-43f4-b43b-0d62c18f0693
 ---
 # Adobe Experience Platform release notes
 
@@ -19,7 +19,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 
 New features and updates to existing features in Adobe Experience Platform:
 
-- [Data collection](#data-collection)
+- [Data Collection](#data-collection)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
@@ -64,10 +64,10 @@ For more information, read the [Data collection overview](../../tags/home.md).
 | Fix | Description |
 | --- | --- |
 | New `TS` column for [Snowflake Streaming](../../destinations/catalog/warehouses/snowflake.md) destinations | The [Snowflake Streaming](../../destinations/catalog/warehouses/snowflake.md) destination now includes a `TS` timestamp column in the shared table, showing when each row was last updated. This update is rolling out through the end of April.|
-| Monitoring support for [Custom Personalization](../../destinations/catalog/personalization/custom-personalization.md) destinations | The [dataflow runs page](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) now shows metrics for [Custom Personalization](../../destinations/catalog/personalization/custom-personalization.md) destinations. Previously, these metrics were not available for this destination type. Use them to verify that audiences are activating as expected and to diagnose issues. <br> ![Dataflow runs metrics displayed for a Custom Personalization destination, showing identities activated, excluded, and failed.](../2026/assets/april/dataflow-run-custom-personalization.png "Dataflow runs metrics for Custom Personalization destinations."){zoomable="yes"} |
-| Profile counts in the activation workflow review step | The review step of the activation workflow now shows profile counts for audiences that are already activated. Profile counts are also shown for [streaming destinations](../../destinations/ui/activate-segment-streaming-destinations.md), not just [batch destinations](../../destinations/ui/activate-batch-profile-destinations.md). <br> ![Profile counts displayed in the review step of the activation workflow for already-activated and streaming audiences.](../2026/assets/april/profile-count-review.png "Profile counts in the activation workflow review step."){zoomable="yes"} |
+| Monitoring support for [Custom Personalization](../../destinations/catalog/personalization/custom-personalization.md) destinations | The [dataflow runs page](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) now shows metrics for [Custom Personalization](../../destinations/catalog/personalization/custom-personalization.md) destinations. Previously, these metrics were not available for this destination type. Use them to verify that audiences are activating as expected and to diagnose issues. <br> ![Dataflow runs metrics displayed for a Custom Personalization destination, showing identities activated, excluded, and failed.](./assets/april/dataflow-run-custom-personalization.png "Dataflow runs metrics for Custom Personalization destinations."){zoomable="yes"} |
+| Profile counts in the activation workflow review step | The review step of the activation workflow now shows profile counts for audiences that are already activated. Profile counts are also shown for [streaming destinations](../../destinations/ui/activate-segment-streaming-destinations.md), not just [batch destinations](../../destinations/ui/activate-batch-profile-destinations.md). <br> ![Profile counts displayed in the review step of the activation workflow for already-activated and streaming audiences.](./assets/april/profile-count-review.png "Profile counts in the activation workflow review step."){zoomable="yes"} |
 | [!DNL Pinterest] token expiry visibility | The [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) destination now displays the token expiration date so you can see when re-authentication is needed. [!DNL Pinterest] tokens expire every 30 days. When a token expires, data exports stop working. To avoid interruptions, [refresh your authentication credentials](../../destinations/catalog/advertising/pinterest.md#refresh-authentication-credentials) before the token expires. |
-| Export file now disabled for expired schedules | When your audience schedule is expired, **[!UICONTROL Export file now]** is now disabled before you attempt to use it, and a tooltip explains why. Previously, selecting the action would result in an error. <br> ![The Export file now action disabled with a tooltip explaining why the action is unavailable.](../2026/assets/april/export-file-now-disabled.png "The Export file now action disabled."){zoomable="yes"} |
+| Export file now disabled for expired schedules | When your audience schedule is expired, **[!UICONTROL Export file now]** is now disabled before you attempt to use it, and a tooltip explains why. Previously, selecting the action would result in an error. <br> ![The Export file now action disabled with a tooltip explaining why the action is unavailable.](./assets/april/export-file-now-disabled.png "The Export file now action disabled."){zoomable="yes"} |
 | Column visibility fix in activation workflow | Fixed an issue where changing visible columns in one table incorrectly affected other tables in the activation workflow. |
 
 {style="table-layout:auto"}
@@ -145,6 +145,9 @@ For more information, read the [sources overview](../../sources/home.md).
 
 | Data Distiller Accelerators | Run and schedule Adobe-managed, parameterized SQL templates in the Query Service UI to perform common analyses without writing SQL. This helps you standardize analytics workflows and reuse trusted query logic across your organization. See the [Data Distiller accelerators guide](../../query-service/ui/accelerators.md) for more details. |
 
+| [!DNL Delta Sharing] | You can use the [!DNL Delta Sharing] source to bring Delta tables into Experience Platform through a secure, open data‑sharing protocol. After you configure a [!DNL Delta Sharing] connection and select the shares and tables you want to ingest, Platform automatically brings that data into your datasets so you can use it for analysis, segmentation, and activation. |
+| [!DNL Meta Ads] (Beta) | You can use the [!DNL Meta Ads] source connector (Beta) in the Sources workspace to authenticate to [!DNL Meta], select your ad accounts, and schedule ingestion of [!DNL Meta Ads] campaign and performance data into Experience Platform datasets. |
+
 | Automatic dataflow disabling | Sources ingestion dataflows that fail continuously for 30 days are automatically disabled, helping to surface unhealthy dataflows and reduce repeated failed runs. |
 
---->
+-->
