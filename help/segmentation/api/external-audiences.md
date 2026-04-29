@@ -97,7 +97,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
         "labels": ["core/C1"],
         "audienceType": "people",
         "originName": "CUSTOM_UPLOAD",
-        "fasterActivation": true
+        "expressActivation": true
     }'
 ```
 
@@ -111,7 +111,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `ttlInDays` | Integer | The data expiration for the external audience, in days. This value can be set from 1 to 90. By default, the data expiration is set to 30 days. |
 | `audienceType` | String | The audience type for the external audience. Currently, only `people` is supported. |
 | `originName` | String | **Required** The origin of the audience. This states where the audience comes from. For external audiences, you should use `CUSTOM_UPLOAD`. |
-| `fasterActivation` | Boolean | *Optional* A boolean that enables the faster activation job to be ran. The faster activation job creates an additional that is directly consumed by the downstream activation pipeline, which lets the audience membership data be received quicker. This field is best used on **subsequent** audience activations and may not result is faster activation times for **initial** audience activations. By default, the value is set to `false`. |
+| `expressActivation` | Boolean | *Optional* A boolean that enables the faster activation job to be ran. The faster activation job creates an additional job that is directly consumed by the downstream activation pipeline, reducing the time to deliver audience membership data to configured batch destinations. This field is best used on **subsequent** audience activations and may not result is faster activation times for **initial** audience activations. By default, the value is set to `false`. |
 | `namespace` | String | The namespace for the audience. By default, this value is set to `CustomerAudienceUpload`. |
 | `labels` | Array of strings | The access control labels that apply to the external audience. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). |
 | `tags` | Array of strings | The tags you want to apply to the external audience. When you add the array of tags, you **must** use the `tagId`. More information about tags can be found in the [managing tags guide](/help/administrative-tags/ui/managing-tags.md). |
