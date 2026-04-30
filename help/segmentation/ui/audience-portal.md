@@ -92,10 +92,10 @@ The pie chart appears, displaying a breakdown of the audiences by audience evalu
 
 You can add additional fields to Audience Portal by selecting ![the filter attribute icon](/help/images/icons/column-settings.png). These additional fields include lifecycle status, update frequency, last updated by, description, created by, and access labels.
 
-| Field | Description | 
+| Field | Description |
 | ----- | ----------- |
 | [!UICONTROL Name] | The name of the audience. |
-| [!UICONTROL Profile count] | The total number of profiles that qualify for the audience. | 
+| [!UICONTROL Profile count] | The total number of profiles that qualify for the audience. |
 | [!UICONTROL Origin] | The origin of the audience. This states where the audience comes from. Possible values include [Segmentation Service](#segment-builder), [Custom upload](#import-audience), [Audience composition](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Look-alike audience](../types/lookalike-audiences.md), [Federated Audience Composition](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview), and [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
 | [!UICONTROL Lifecycle status] | The status of the audience. Possible values for this field include `Draft`, `Inactive`, and `Published`. More information about lifecycle statuses, including what the different states mean and how to move audiences to different lifecycle states, read the [lifecycle status section of the Segmentation FAQ](../faq.md#lifecycle-status). |
 | [!UICONTROL Update frequency] | A value that states how often the audience's data is updated. Possible values for this field include [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge], and [!UICONTROL Not Scheduled]. |
@@ -258,6 +258,19 @@ Selecting **[!UICONTROL Open composition]** lets you view your audience in Audie
 ![The audience details page is shown, with the [!UICONTROL Update audience] button highlighted.](../images/ui/audience-portal/audience-details-update-audience.png)
 
 Selecting **[!UICONTROL Update audience]** lets you re-upload an externally generated audience. For more information on importing an externally generated audience, please read the section on [importing an audience](#import-audience).
+
+If your audience is within seven days of expiring, you can select **[!UICONTROL Refresh data expiration]** to re-ingest the last successful batch for the audience. 
+
+![The [!UICONTROL Refresh data expiration] button is highlighted within the audience details page.](../images/ui/audience-portal/refresh-data-expiration.png)
+
+This extends the data expiration by the number of days defined on the initial upload and uses the same audience metadata. If the data expiration was not previously defined, the data expiration is extended by 30 days. Once the button has been pressed, you cannot select it for another 20 minutes.
+
+This button will **not** be selectable in the following situations:
+
+- There are no successful batches for the audience
+- The initial refresh failed
+- The data expiration is greater than seven days
+- The audience has already expired
 
 >[!TAB Segmentation Service]
 

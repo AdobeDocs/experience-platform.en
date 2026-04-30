@@ -5,10 +5,6 @@ exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
 ---
 # SFTP hosts
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Experience Platform allows you to deliver tag library builds to a secured SFTP server that you host, giving you greater control over how your builds are stored and managed. This guide covers how to set up an SFTP host for a tag property in the Experience Platform UI or Data Collection UI.
 
 >[!NOTE]

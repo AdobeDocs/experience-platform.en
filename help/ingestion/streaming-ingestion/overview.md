@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;popular topics;data ingestion;ingested data;streaming;overview;streaming ingestion;latency;streaming latency;
 solution: Experience Platform
 title: Streaming Ingestion Overview
-description: Streaming ingestion for Adobe Experience Platform provides users a method to send data from client and server-side devices to Experience Platform in real time.
+description: Learn about streaming ingestion in Adobe Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
 ---
 # Streaming ingestion overview
 
-Streaming ingestion for Adobe Experience Platform provides users a method to send data from client and server-side devices to [!DNL Experience Platform] in real time.
+Streaming ingestion for Adobe Experience Platform provides users a method to send data from client and server-side devices to Experience Platform in real time.
 
 ## What can you do with streaming ingestion?
 
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences by generating a [!DNL Real-Time Customer Profile] for each of your individual customers. Streaming ingestion plays a key role in building these profiles by enabling you to deliver [!DNL Profile] data into the [!DNL Data Lake] with as little latency as possible. 
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences by generating a Real-Time Customer Profile for each of your individual customers. Streaming ingestion plays a key role in building these profiles by enabling you to deliver Profile data into data lake with as little latency as possible. 
 
 The following video is designed to help support your understanding of streaming ingestion, and outlines the concepts above.
 
@@ -19,25 +19,25 @@ The following video is designed to help support your understanding of streaming 
 
 ### Stream profile records and [!DNL ExperienceEvents]
 
-With streaming ingestion, users can stream profile records and [!DNL ExperienceEvents] to [!DNL Experience Platform] in seconds to help drive real-time personalization. All data sent to streaming ingestion APIs is automatically persisted in the [!DNL Data Lake].
+With streaming ingestion, users can stream profile records and [!DNL ExperienceEvents] to Experience Platform in seconds to help drive real-time personalization. All data sent to streaming ingestion APIs is automatically persisted in data lake.
 
 Please read the [create a streaming connection guide](../tutorials/create-streaming-connection.md) for more information.
 
 ### Stream to datasets
 
-Once you are confident that your data is clean, you can enable your datasets for [!DNL Real-Time Customer Profile] and [!DNL Identity Service].
+Once you are confident that your data is clean, you can enable your datasets for Real-Time Customer Profile and [!DNL Identity Service].
 
-For more information on enabling a dataset for [!DNL Profile] and [!DNL Identity Service], please read the [configure a dataset guide](../../profile/tutorials/dataset-configuration.md). 
+For more information on enabling a dataset for Profile and [!DNL Identity Service], please read the [configure a dataset guide](/help/profile/tutorials/dataset-configuration.md). 
 
 ## What is the expected latency for streaming ingestion on Experience Platform?
 
 >[!IMPORTANT]
 >
->Guardrails for streaming ingestion are bound to the total license usage entitlement that corresponds with your entire organization. Additionally, data usage in development sandboxes are limited to 10% of your total profiles. For more information about license usage entitlement, read the [data management best practices guide](../../landing/license-usage-and-guardrails/data-management-best-practices.md). To learn how to set limits to your streaming throughput, read the [Capacity overview](../../landing/license-usage-and-guardrails/capacity.md).
+>Guardrails for streaming ingestion are bound to the total license usage entitlement that corresponds with your entire organization. Additionally, data usage in development sandboxes are limited to 10% of your total profiles. For more information about license usage entitlement, read the [data management best practices guide](/help/landing/license-usage-and-guardrails/data-management-best-practices.md). To learn how to set limits to your streaming throughput, read the [Capacity overview](../../landing/license-usage-and-guardrails/capacity.md).
 
-| Destination | Expected latency | 
+| Destination | Expected latency |
 | --------- | ---------------- |
-| Real-Time Customer Profile | < 15 minutes at the 95th percentile |
+| Real-Time Customer Profile | <ul><li>< 15 minutes at the 95th percentile for B2C Data Ingestion.</li><li>< 30 minutes at the 95th percentile for B2B Data Ingestion.</li></ul> |
 | Data lake | < 60 minutes |
 
 ## Request per seconds (RPS) guidance on streaming ingestion
@@ -55,4 +55,4 @@ The table below displays guidance on the request per seconds limits for streamin
 
 ## Adobe Experience Platform extension
 
-You can use the Adobe Experience Platform extension to create a new streaming connection. The [!DNL Experience Platform] extension provides actions to send beacons formatted in [!DNL Experience Data Model] (XDM) for real-time ingestion to [!DNL Experience Platform]. Visit the [Experience Platform Extension](../../tags/extensions/client/web-sdk/overview.md) documentation for more information.
+You can use the Adobe Experience Platform extension to create a new streaming connection. The [!DNL Experience Platform] extension provides actions to send beacons formatted in [!DNL Experience Data Model] (XDM) for real-time ingestion to [!DNL Experience Platform]. Visit the [Experience Platform Extension](/help/tags/extensions/client/web-sdk/overview.md) documentation for more information.

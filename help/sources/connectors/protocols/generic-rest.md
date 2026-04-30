@@ -17,9 +17,9 @@ Experience Platform provides support for ingesting data from protocols applicati
 
 The [!DNL Generic REST API] source allows you to bring data from REST-based applications into Experience Platform. [!DNL Generic REST API] supports both basic authentication and OAuth 2 refresh code-based authentication.
 
-## IP address allow list
+## IP address allowlist
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform](../../ip-address-allow-list.md) for more information.
 
 The documentation below provides information on how to connect a [!DNL Generic REST API] source to Experience Platform using APIs.
 

@@ -1,12 +1,12 @@
 ---
 title: HubSpot connection
-description: The HubSpot destination allows you to manage contact records in your HubSpot account.
+description: Use the HubSpot destination to manage contact records in your HubSpot account.
 last-substantial-update: 2023-09-28
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
 ---
 # [!DNL HubSpot] connection
 
-[[!DNL HubSpot]](https://www.hubspot.com) is a CRM platform with all the software, integrations, and resources you need to connect marketing, sales, content management, and customer service. It allows you to connect your data, teams, and customers on one CRM platform.
+[[!DNL HubSpot]](https://www.hubspot.com) is a CRM platform with all the software, integrations, and resources you need to connect marketing, sales, content management, and customer service. Use it to connect your data, teams, and customers on one CRM platform.
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL HubSpot] Contacts API](https://developers.hubspot.com/docs/api/crm/contacts), to update contacts within [!DNL HubSpot] from an existing Experience Platform audience after activation.
 
@@ -14,13 +14,13 @@ Instructions to authenticate to your [!DNL HubSpot] instance are further below, 
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL HubSpot] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL HubSpot] destination, here is a sample use case that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 [!DNL HubSpot] contacts store information about the individuals that interact with your business. Your team uses the contacts that exist in [!DNL HubSpot] to build the Experience Platform audiences. After sending these audiences to [!DNL HubSpot], their information is updated and each contact is assigned a property with its value as the audience name that indicates which audience the contact belongs to.
 
 ## Prerequisites {#prerequisites}
 
-Refer to the sections below for any prerequisites that you need to set up in Experience Platform and [!DNL HubSpot] and for information that you must gather before working with the [!DNL HubSpot] destination.
+See the sections below for any prerequisites that you need to set up in Experience Platform and [!DNL HubSpot] and for information that you must gather before working with the [!DNL HubSpot] destination.
 
 ### Experience Platform prerequisites {#prerequisites-in-experience-platform}
 
@@ -30,11 +30,11 @@ Refer to Experience Platform documentation for [Audience Membership Details sche
 
 ### Prerequisites for the [!DNL HubSpot] destination {#prerequisites-destination}
 
-Note the following prerequisites in order to export data from Experience Platform to your [!DNL HubSpot] account:
+Note the following prerequisites to export data from Experience Platform to your [!DNL HubSpot] account:
 
 #### You must have a [!DNL HubSpot] account {#prerequisites-account}
 
-In order to export data from Experience Platform to your [!DNL Hubspot] account you need to have a [!DNL HubSpot] account. If you do not have one already, visit the [Set up your HubSpot account](https://knowledge.hubspot.com/get-started/set-up-your-account) page and follow the guidance to register and create your account.
+To export data from Experience Platform to your [!DNL Hubspot] account you need to have a [!DNL HubSpot] account. If you do not have one already, visit the [Set up your HubSpot account](https://knowledge.hubspot.com/get-started/set-up-your-account) page and follow the guidance to register and create your account.
 
 #### Gather the [!DNL HubSpot] private app access token {#gather-credentials}
 
@@ -54,7 +54,7 @@ If you do not have a private app, follow the documentation to [Create a private 
 
 ## Guardrails {#guardrails}
 
-[!DNL HubSpot] private apps are subject to [Rate Limits](https://developers.hubspot.com/docs/api/usage-details). The number of calls your private app can make is based on your [!DNL HubSpot] account subscription and whether you've purchased the API add-on. Additionally also refer to the [Other Limits](https://developers.hubspot.com/docs/api/usage-details#other-limits).
+[!DNL HubSpot] private apps are subject to [Rate Limits](https://developers.hubspot.com/docs/api/usage-details). The number of calls your private app can make is based on your [!DNL HubSpot] account subscription and whether you've purchased the API add-on. Additionally also see the [Other Limits](https://developers.hubspot.com/docs/api/usage-details#other-limits).
 
 ## Supported identities {#supported-identities}
 
@@ -72,15 +72,30 @@ This destination supports the activation of all audiences generated through the 
 
 This destination also supports the activation of the audiences described in the table below.
 
-| Audience type | Description | 
-|---------|----------|
-| Custom uploads | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
+| Audience origin | Supported | Description |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
+
 ## Export type and frequency {#export-type-frequency}
 
-Refer to the table below for information about the destination export type and frequency.
+See the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 |---------|----------|---------|
@@ -101,7 +116,7 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL
 
 ### Authenticate to destination {#authenticate}
 
-Fill in the required fields below. Refer to the [Gather the [!DNL HubSpot] private app access token](#gather-credentials) section for any guidance.
+Fill in the required fields below. See the [Gather the [!DNL HubSpot] private app access token](#gather-credentials) section for any guidance.
 
 * **[!UICONTROL Bearer token]**: The access token for your [!DNL HubSpot] private app.
 
@@ -134,11 +149,11 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Map attributes and identities {#map}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL HubSpot] destination, you must go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination.
+To correctly send your audience data from [!DNL Adobe Experience Platform] to the [!DNL HubSpot] destination, you must go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination.
 
 To correctly map your XDM fields to the [!DNL HubSpot] destination fields, follow the steps below:
 
-#### Mapping the `Email` identity
+#### Mapping the `Email` identity {#map-email-identity}
 
 The `Email` identity is a mandatory mapping for this destination. Follow the steps below to map it:
 
@@ -156,7 +171,7 @@ The `Email` identity is a mandatory mapping for this destination. Follow the ste
 An example with the identity mapping is shown below:
 ![Experience Platform UI screenshot example with email identity mapping.](../../assets/catalog/crm/hubspot/mapping-identities.png)
 
-#### Mapping **optional** attributes
+#### Mapping **optional** attributes {#mapping-optional-attributes}
 
 To add any other attributes you want to update between your XDM profile schema and your [!DNL HubSpot] account repeat the steps below:
 
@@ -186,7 +201,7 @@ When you are finished providing the mappings for your destination connection, se
 
 To validate that you have correctly set up the destination, follow the steps below:
 
-1. Log in to the [!DNL HubSpot] website, then navigate to the **[!UICONTROL Contacts]** page to check the audience statuses. This list can be configured to display columns for the custom properties created with the audience name with their value being the audience statuses.
+1. Go to the [!DNL HubSpot] website, then navigate to the **[!UICONTROL Contacts]** page to check the audience statuses. This list can be configured to display columns for the custom properties created with the audience name with their value being the audience statuses.
 ![HubSpot UI screenshot showing the Contacts page with column headers showing the audience name and cells audience statuses](../../assets/catalog/crm/hubspot/contacts.png)
 
 1. You can alternatively drill down into an individual **[!UICONTROL Person]** page and navigate to the properties displaying the audience name and audience statuses.
@@ -203,7 +218,7 @@ Additional useful information from the [!DNL HubSpot] documentation is below:
 * [Authentication methods on HubSpot](https://developers.hubspot.com/docs/api/intro-to-auth)
 * [!DNL HubSpot] API references for the [Contacts](https://developers.hubspot.com/docs/api/crm/contacts) and [Properties](https://developers.hubspot.com/docs/api/crm/properties) APIs.
 
-### Changelog
+### Changelog {#changelog}
 
 This section captures the functionality and significant documentation updates made to this destination connector.
 

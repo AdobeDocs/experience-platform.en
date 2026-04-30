@@ -10,7 +10,7 @@ exl-id: 9f4ad50e-d964-41b0-b58e-71611bff3ead
 
 [!DNL TMMData's] Foundation platform for Adobe Marketing Cloud provides marketing teams with the tools to access and blend all their critical data sources - including internal/external and online/off-line data - for confident, comprehensive cross-channel analysis, with automated campaign setup and direct imports to Adobe and other analytics and BI tools.
 
-[!DNL TMMData] is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
+[!DNL TMMData] is an analytics extension in [!DNL Adobe Experience Platform]. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
@@ -20,7 +20,7 @@ This destination is a tag extension. For more information about how tag extensio
 
 This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Experience Platform.
 
-To use this extension, you need access to tags in Adobe Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+To use this extension, you need access to tags in [!DNL Adobe Experience Platform]. Tags are offered to [!DNL Adobe Experience Cloud] customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 
@@ -30,7 +30,7 @@ In the [Experience Platform interface](https://platform.adobe.com/), go to **[!U
 
 Select the extension from the catalog or use the search bar.
 
-Click on the destination to highlight it, then select **[!UICONTROL Configure]** in the right rail. If the **[!UICONTROL Configure]** control is greyed out, you are missing the **[!UICONTROL manage_properties]** permission. See [Prerequisites](#prerequisites).
+Select the destination, then select **[!UICONTROL Configure]** in the right rail. If the **[!UICONTROL Configure]** control is grayed out, you are missing the **[!UICONTROL manage_properties]** permission. See [Prerequisites](#prerequisites).
 
 Select the property in which you want to install the extension. You also have the option of creating a new property. A property is a collection of rules, data elements, configured extensions, environments, and libraries. Learn about properties in the [Properties page section](../../../tags/ui/administration/companies-and-properties.md#properties-page) of in the tags documentation.
 

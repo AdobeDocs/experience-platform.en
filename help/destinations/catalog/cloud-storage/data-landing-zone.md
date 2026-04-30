@@ -13,7 +13,7 @@ exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
 
 ## Overview {#overview}
 
-[!DNL Data Landing Zone] is a cloud storage interface provisioned by Adobe Experience Platform, granting you access to a secure, cloud-based file storage facility to export files out of Experience Platform. You have access to one [!DNL Data Landing Zone] container per sandbox, and the total data volume across all containers is limited to the total data provided with your Experience Platform Products and Services license. All customers of Experience Platform and its applications such as [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], and [!DNL Real-Time Customer Data Platform] are provisioned with one [!DNL Data Landing Zone] container per sandbox. 
+[!DNL Data Landing Zone] is a cloud storage interface provisioned by [!DNL Adobe Experience Platform], granting you access to a secure, cloud-based file storage facility to export files out of Experience Platform. You have access to one [!DNL Data Landing Zone] container per sandbox, and the total data volume across all containers is limited to the total data provided with your Experience Platform Products and Services license. All customers of Experience Platform and its applications such as [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], and [!DNL Real-Time Customer Data Platform] are provisioned with one [!DNL Data Landing Zone] container per sandbox. 
 
 Experience Platform enforces a strict seven-day time-to-live (TTL) on all files uploaded to a [!DNL Data Landing Zone] container. All files are deleted after seven days.
 
@@ -30,16 +30,30 @@ The [!DNL Data Landing Zone] destination connector is available to customers usi
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | Yes | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | Yes | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | Yes | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
+
 ## Export type and frequency {#export-type-frequency}
 
-Refer to the table below for information about the destination export type and frequency.
+See the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 |---------|----------|---------|
@@ -71,9 +85,9 @@ You can read and write files to your container through [!DNL Azure Storage Explo
 
 [!DNL Data Landing Zone] supports SAS-based authentication and its data is protected with standard [!DNL Azure Blob] storage security mechanisms at rest and in transit. SAS stands for [shared access signature](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
 
-To protect your data over a public internet connection, use SAS-based authentication to securely access your [!DNL Data Landing Zone] container. There are no network changes required for you to access your [!DNL Data Landing Zone] container, which means you do not need to configure any allow lists or cross-region setups for your network. 
+To protect your data over a public internet connection, use SAS-based authentication to securely access your [!DNL Data Landing Zone] container. There are no network changes required for you to access your [!DNL Data Landing Zone] container, which means you do not need to configure any allowlists or cross-region setups for your network. 
 
-### Connect your [!DNL Data Landing Zone] container to [!DNL Azure Storage Explorer] 
+### Connect your [!DNL Data Landing Zone] container to [!DNL Azure Storage Explorer] {#connect-container-to-storage-explorer}
 
 You can use [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) to manage the contents of your [!DNL Data Landing Zone] container. To start using [!DNL Data Landing Zone], you must first retrieve your credentials, input them in [!DNL Azure Storage Explorer], and connect your [!DNL Data Landing Zone] container to [!DNL Azure Storage Explorer].
 
@@ -153,7 +167,7 @@ POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&ac
 | Query parameters | Description |
 | --- | --- |
 | `dlz_destination` |  The `dlz_destination` type allows the API to distinguish a landing zone destination container from the other types of containers that are available to you. |
-| `refresh` | The `refresh` action allows you to reset your landing zone credentials and automatically generate a new `SASToken`. |
+| `refresh` | The `refresh` action resets your landing zone credentials and automatically generates a new `SASToken`. |
 
 {style="table-layout:auto"}
 
@@ -273,7 +287,7 @@ The following response returns the credential information for your landing zone,
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). In the destination configuration workflow, fill in the fields listed in the two sections below.
@@ -309,15 +323,15 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
-### Scheduling
+### Scheduling {#scheduling}
 
-In the **[!UICONTROL Scheduling]** step, you can [set up the export schedule](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) for your [!DNL Data Landing Zone] destination and you can also [configure the name of your exported files](/help/destinations/ui/activate-batch-profile-destinations.md#file-names). 
+In the **[!UICONTROL Scheduling]** step, you can [set up the export schedule](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) for your [!DNL Data Landing Zone] destination and you can also [configure the name of your exported files](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names). 
 
 ### Map attributes and identities {#map}
 

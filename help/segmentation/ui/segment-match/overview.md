@@ -11,7 +11,7 @@ exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
 >
 >Adobe introduced [!DNL Segment Match] in 2021 for customers to collaborate and exchange audiences. In early 2025, Adobe introduced [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), which is the longer-term approach to meet this use-case.
 >
->* For customers in the United States, Canada, Australia, and New Zealand: Adobe recommends Real-Time CDP Prime and Ultimate customers transition data collaboration use cases from [!DNL Segment Match] to Real-Time CDP Collaboration. View the [documentation](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) and [quick-start guide](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide) for Real-Time CDP Collaboration and contact your Adobe account team to learn more.
+>* For customers in the United States, Canada, Australia, New Zealand, and EMEA: Adobe recommends Real-Time CDP Prime and Ultimate customers transition data collaboration use cases from [!DNL Segment Match] to Real-Time CDP Collaboration. View the [documentation](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) and [quick-start guide](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide) for Real-Time CDP Collaboration and contact your Adobe account team to learn more.
 >* For customers in all other geographies: [!DNL Segment Match] is the recommended option until Real-Time CDP Collaboration is released in those geographies in 2026.
 
 Adobe Experience Platform Segment Match is a segment-sharing service that allows for two or more Experience Platform users to exchange segment data in a secure, governed, and privacy-friendly manner. [!DNL Segment Match] uses Experience Platform privacy standards and personal identifiers such as hashed emails, hashed phone numbers, and device identifiers like IDFAs and GAIDs.
@@ -53,11 +53,11 @@ The list of supported namespaces are as follows:
 
 ### Set up consent configuration
 
-You must provide a consent configuration and set its default value to either `opt-in` or `opt-out` for a consent check.
+You must provide a consent configuration and set its default value to either opt-in or opt-out for a consent check. 
 
-The opt-in and opt-out consent check determines whether you can operate with the consent to share user data by default. If the consent configuration default is set to `opt-out`, then user data can be shared, unless a user explicitly opts out. If the default is set to `opt-in`, then user data cannot be shared, unless a user explicitly opts in.
+The opt-in and opt-out consent check determines whether you can operate with the consent to share user data by default. If the consent configuration default is set to opt-in, then user data can be shared, unless a user explicitly opts out. If the default is set to opt-out, then user data cannot be shared, unless a user explicitly opts in. 
 
-The default consent configuration for [!DNL Segment Match] is set to `opt-out`. To enforce an opt-in model for your data, please send an email request to your Adobe account team.
+The default consent configuration for Segment Match is set to opt-out. To enforce an opt-in model for your data, please send an email request to your Adobe account team. 
 
 For more information on the `share` attribute used to set data-sharing consent value, see the following documentation on [privacy and consents field group](../../../xdm/field-groups/profile/consents.md). For information on the specific field group used to capture consumer consent for collection and use of data related to privacy, personalization and marketing preferences, see the following [Consent for Privacy, Personalization and Marketing Preferences GitHub example](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 

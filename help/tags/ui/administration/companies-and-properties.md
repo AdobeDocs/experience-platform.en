@@ -5,10 +5,6 @@ exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
 ---
 # Properties
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 ## Web properties
 
 A web property is a collection of rules, data elements, configured extensions, environments, and libraries.  Each web property has its own set of embed codes and can be deployed on any number of distinct websites (different domains).
@@ -106,8 +102,8 @@ Follow the instructions to create a web property.
    **Domains:** The base URL of any sites you plan to deploy this property to
 
 1. (Advanced) **[!UICONTROL Run rule components in sequence]** Select this checkbox to make conditions and actions wait for the previous one to complete before they run
-1. (Advanced) **[!UICONTROL Return an empty string for missing data elements:]** If you reference a data element that does not exist within a library, that would normally return `undefined`.  Select this check box if you want that scenario to return an empty string instead.
-1. (Advanced) **[!UICONTROL Configure for extension development:]** Select this check box if you plan to install development extensions that are being actively developed by your company
+1. (Advanced) **[!UICONTROL Return an empty string for missing data elements:]** If you reference a data element that does not exist within a library, that would normally return `undefined`. Enable this checkbox if you want that scenario to return an empty string instead.
+1. (Advanced) **[!UICONTROL Configure for extension development:]** Enable this checkbox if you plan to install development extensions that are being actively developed by your company
 1. Select **[!UICONTROL Save]**.
 
 ### For Mobile

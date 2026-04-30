@@ -8,15 +8,15 @@ exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
 ---
 # [!DNL (V2) Salesforce Marketing Cloud Account Engagement] connection
 
-The [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) (formerly known as [!DNL Pardot]) destination allows you to export your Adobe Experience Platform profile data to Salesforce's B2B marketing automation platform.
+The [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) (formerly known as [!DNL Pardot]) destination exports your [!DNL Adobe Experience Platform] profile data to Salesforce's B2B marketing automation platform.
 
-This integration enables seamless data synchronization between your customer profiles in Adobe Experience Platform and your marketing campaigns in [!DNL Salesforce Marketing Cloud Account Engagement].
+This integration enables seamless data synchronization between your customer profiles in [!DNL Adobe Experience Platform] and your marketing campaigns in [!DNL Salesforce Marketing Cloud Account Engagement].
 
 This destination uses the [[!DNL Salesforce Import API v5]](https://developer.salesforce.com/docs/marketing/pardot/guide/import-v5.html) to efficiently process batch data exports.
 
 
 >[!IMPORTANT]
-> 
+>
 > This is the V2 version of the [Salesforce Marketing Cloud Account Engagement](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) destination. This version replaces the previous destination and is currently in Alpha release.
 > <br>
 > If you are currently using the previous version of the [Salesforce Marketing Cloud Account Engagement](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) destination, you must migrate to this V2 version before **January 2026**. After January 2026, Adobe will decommission the previous version and it will no longer be available.
@@ -24,19 +24,19 @@ This destination uses the [[!DNL Salesforce Import API v5]](https://developer.sa
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL (V2) Marketing Cloud Account Engagement] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL (V2) Marketing Cloud Account Engagement] destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 ### B2B Lead management {#use-case-lead-management}
 
-Synchronize lead data from Adobe Experience Platform to [!DNL Salesforce Marketing Cloud Account Engagement] for comprehensive lead nurturing and scoring. Your marketing team can build rich audience profiles in Experience Platform and export them to [!DNL Salesforce Marketing Cloud Account Engagement] for automated B2B marketing campaigns.
+Synchronize lead data from [!DNL Adobe Experience Platform] to [!DNL Salesforce Marketing Cloud Account Engagement] for comprehensive lead nurturing and scoring. Your marketing team can build rich audience profiles in Experience Platform and export them to [!DNL Salesforce Marketing Cloud Account Engagement] for automated B2B marketing campaigns.
 
 ### Campaign automation {#use-case-campaign-automation}
 
-You can trigger marketing campaigns in [!DNL Salesforce Marketing Cloud Account Engagement] by using audiences that you define in Adobe Experience Platform. After you export your targeted audiences to [!DNL Salesforce], you can use them to run email campaigns and manage your leads through nurturing, scoring, and campaign segmentation.
+You can trigger marketing campaigns in [!DNL Salesforce Marketing Cloud Account Engagement] by using audiences that you define in [!DNL Adobe Experience Platform]. After you export your targeted audiences to [!DNL Salesforce], you can use them to run email campaigns and manage your leads through nurturing, scoring, and campaign segmentation.
 
 ### Profile enrichment {#use-case-profile-enrichment}
 
-Enhance your [!DNL Salesforce Marketing Cloud Account Engagement] prospect profiles with rich customer data from Adobe Experience Platform. Export comprehensive profile attributes to create more detailed prospect records in [!DNL Salesforce Marketing Cloud Account Engagement] for improved targeting and personalization.
+Enhance your [!DNL Salesforce Marketing Cloud Account Engagement] prospect profiles with rich customer data from [!DNL Adobe Experience Platform]. Export comprehensive profile attributes to create more detailed prospect records in [!DNL Salesforce Marketing Cloud Account Engagement] for improved targeting and personalization.
 
 ## Prerequisites {#prerequisites}
 
@@ -48,7 +48,7 @@ Before activating data to the [!DNL (V2) Marketing Cloud Account Engagement] des
 
 ### [!DNL Salesforce Marketing Cloud Account Engagement] prerequisites {#prerequisites-destination}
 
-Note the following prerequisites in order to export data from Experience Platform to your [!DNL Marketing Cloud Account Engagement] account:
+Note the following prerequisites to export data from Experience Platform to your [!DNL Marketing Cloud Account Engagement] account:
 
 #### You need to have a [!DNL Marketing Cloud Account Engagement] account {#prerequisites-account}
 
@@ -68,7 +68,7 @@ Write down the items below before you authenticate to the [!DNL (V2) Marketing C
 
 [!DNL (V2) Marketing Cloud Account Engagement] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-If a match is found using one of these identifiers, the existing Account Engagement prospect record will be updated with the data from Adobe Experience Platform. If no match is found, a new prospect record will be created in Account Engagement.
+If a match is found using one of these identifiers, the existing Account Engagement prospect record will be updated with the data from [!DNL Adobe Experience Platform]. If no match is found, a new prospect record will be created in Account Engagement.
 
 | Target identity | Description | Considerations |
 |---|---|---|
@@ -77,6 +77,31 @@ If a match is found using one of these identifiers, the existing Account Engagem
 | `matchEmail` | Email address of the prospect | At least one of these three identities is required |
 
 {style="table-layout:auto"}
+
+## Supported audiences {#supported-audiences}
+
+This section describes which types of audiences you can export to this destination.
+
+| Audience origin | Supported | Description |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -107,7 +132,7 @@ You will be redirected to the [!DNL Salesforce] login page. Enter your [!DNL Mar
 
 ![Salesforce login page](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/salesforce-auth.png "Salesforce login page.")
 
-Next, select **[!UICONTROL Allow]** to give permissions to the **Adobe Experience Platform** app to access your [!DNL Salesforce Marketing Cloud Account Engagement] account. *You need to do this only once*.
+Next, select **[!UICONTROL Allow]** to give permissions to the **[!DNL Adobe Experience Platform]** app to access your [!DNL Salesforce Marketing Cloud Account Engagement] account. *You need to do this only once*.
 
 ![Salesforce App screenshot confirmation popup to give permissions to the Experience Platform app access to Marketing Cloud Account Engagement.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/allow-app.png)
 
@@ -132,7 +157,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -140,7 +165,7 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To send audience data from Adobe Experience Platform to the [!DNL (V2) Marketing Cloud Account Engagement] destination, you must map your Experience Data Model (XDM) schema fields to the corresponding fields in the destination.
+To send audience data from [!DNL Adobe Experience Platform] to the [!DNL (V2) Marketing Cloud Account Engagement] destination, you must map your Experience Data Model (XDM) schema fields to the corresponding fields in the destination.
 
 Refer to the [Salesforce Prospect API v5 documentation](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html) for a complete list of supported fields. Note that [custom fields](https://developer.salesforce.com/docs/marketing/pardot/guide/custom-field-v5.html) are not supported in the Alpha release.
 
@@ -152,7 +177,7 @@ The Salesforce Marketing Cloud Account Engagement destination supports the targe
 |---------|----------|----------|
 | `salesforceId` | String | The Salesforce ID of the prospect |
 | `salesforceOwnerId` | Integer | The Salesforce user ID of the prospect owner |
-| `salutation` | String | The prospect's salutation (e.g., Mr., Ms., Dr.) |
+| `salutation` | String | The prospect's salutation (for example, Mr., Ms., Dr.) |
 | `score` | Integer | The prospect's score in Account Engagement |
 | `source` | String | The source of the prospect record |
 | `state` | String | The state/province of the prospect |
@@ -188,7 +213,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Navigate to one of the audiences you had selected. Select the **[!DNL Activation data]** tab. The **[!UICONTROL Mapping ID]** column displays the name of the custom field which is generated within the [!DNL Marketing Cloud Account Engagement Prospects] page.
 ![Experience Platform UI screenshot example showing the Mapping ID for a selected segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/selected-segment-mapping-id.png)
 
-1. Log in to the [[!DNL Salesforce]](https://login.salesforce.com/) website. Then navigate to the **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** page and check if the prospects from the audience have been added/updated. Alternatively you can also access [[!DNL Account Engagement]](https://pi.pardot.com/) and access the **[!DNL Prospects]** page.
+1. Go to the [[!DNL Salesforce]](https://login.salesforce.com/) website. Then navigate to the **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** page and check if the prospects from the audience have been added/updated. Alternatively you can also access [[!DNL Account Engagement]](https://pi.pardot.com/) and access the **[!DNL Prospects]** page.
 ![Salesforce UI screenshot showing the Prospects page.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/prospects.png)
 
 1. To check if the prospects have been updated, select a prospect and verify if the custom prospect field has been updated with the Experience Platform audience status.

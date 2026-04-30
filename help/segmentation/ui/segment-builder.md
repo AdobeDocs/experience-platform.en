@@ -50,11 +50,128 @@ You can see these building blocks in the **[!UICONTROL Fields]** section on the 
 
 ![The fields section of the Segment Builder is highlighted.](../images/ui/segment-builder/segment-fields.png)
 
+You can select the ![settings icon](/help/images/icons/settings.png) to adjust the settings for the displayed fields.
+
+For the **[!UICONTROL Available fields]**, you can either show only the fields that contain data or the full XDM schema.
+
+For the **[!UICONTROL Data sources]**, you can filter to show attributes that come from the specified ingestion types. Supported values include **[!UICONTROL Show batch data]**, **[!UICONTROL Show streaming/edge data]**, and **[!UICONTROL Show fields with no ingested data]**.
+
+For the **[!UICONTROL Merge policy]**, you can choose which merge policy the fields belong to.
+
+![The settings area is displayed within Segment Builder.](../images/ui/segment-builder/settings.png)
+
 ### Attributes
 
 The **[!UICONTROL Attributes]** tab allows you to browse [!DNL Profile] attributes belonging to the [!DNL XDM Individual Profile] class. Each folder can be expanded to reveal additional attributes, where each attribute is a tile that can be dragged onto the rule builder canvas in the center of the workspace. The [rule builder canvas](#rule-builder-canvas) is discussed in more detail later in this guide.
 
-![The attributes section of the Segment Builder fields is highlighted.](../images/ui/segment-builder/attributes.png)  
+![The attributes section of the Segment Builder fields is highlighted.](../images/ui/segment-builder/attributes.png)
+
+The attributes you add can be one of the following data types:
+
+| Data type | Common use cases |
+| --------- | ---------------- |
+| String | Names, email addresses, product categories |
+| Numeric | Age, revenue, product quantities, loyalty scores |
+| Boolean | Preferences, status indicators, user flags |
+| Enum | Predefined lists such as gender or status |
+| Date/Time | Purchase dates, visit times, birthday |
+
+You can use the following operators for the respective data types:
+
++++ String operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Equals | Find an exact match to the specified value | Email **equals** "sample@example.com" |
+| Not equals | Excludes the specified value | Status **does not equal** "Cancelled" |
+| Contains | The text includes the specified value | Product name **contains** "iPhone" |
+| Does not contain | The text does not include the specified value | Description **does not contain** "discontinued" |
+| Starts with | The text begins with the specified value | Customer ID **starts with** "PREM" |
+| Ends with | The text finishes with the specified value | Email **ends with** "@company.com" |
+| Exists | The value exists | Middle name **exists** |
+| Does not exist | The value does not exist | Loyalty status **does not exist** |
+
++++
+
++++ Numeric operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Equals | Find an exact match to the specified value | Age **equals** 25 |
+| Not equals | Excludes the specified value | Order count **does not equal** 0 |
+| Greater than | The number is **larger** than the specified value. This value is **exclusive** of the specified number. | Annual revenue **greater than** 50000 |
+| Greater than or equal | The number is **larger** than the specified value. This value is **inclusive** of the specified number.| Age **greater than or equal** 21 |
+| Less than | The number is **smaller** than the specified value. This value is **exclusive** of the specified number. | Days since purchase **less than** 30 |
+| Less than or equal | The number is **smaller** than the specified value. This value is **inclusive** of the specified number.| Cart value **less than or equal** 100 |
+| Between | The number is **between** the specified values. These values are **inclusive** of the specified numbers. | Age **between** 25 and 45 |
+| Exists | The value exists | Credit score **exists** |
+| Does not exist | The value does not exist | Credit score **does not exist** |
+
++++
+
++++ Boolean operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Equals | The boolean value is set to the specified value (True or False) | Email opt-in **equals True** |
+| Not equals | The boolean value is **not** set to the specified value (True or False) | Mobile app installed **not equals True** |
+
++++
+
++++ Enum operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Equals | The value equals the specified enum values | Gender **equals** Female |
+| Not equals | The value does not equal the specified enum value | Order status **does not equal** Cancelled |
+| Exists | The enum value has been set | Preferred language **exists** |
+| Does not exist | The enum value has not been set | Preferred language **does not exist** |
+
++++
+
++++ Date/Time operators
+
+| Operator | Description | Example |
+| -------- | ----------- | ------- |
+| Today | The value occurred today. You can select the **Ignore year** checkbox to make the comparison ignore the year.| Birth date **is** Today |
+| Yesterday | The value occurred yesterday. | Cart purchase **is** Yesterday |
+| This month | The value occurred this calendar month. | Birth month **is** This month |
+| This year | The value occurred this calendar year. | Sign up date **is** This year |
+| Custom date | The value occurred on the given date. | Purchase date **is on** Custom date |
+| In last | The value occurred within the last period of time chosen. Birthday **is** In last month | |
+| From (to) | The value occurred within the two calendar dates chosen. This period of time is **inclusive** of both dates. | Account creation date **is** From April 20th to July 13th |
+| During | The value occurred within the selected month or year. | Sale **is** During March |
+| Within (+/-) | The value occurred within days, weeks, months, or years of the selected date. This period of time is **inclusive** of both dates. | Cart abandon is **Within** 3 days |
+| Before | The value occurred before the selected date. | Membership join date is **before** January 3rd, 2025 |
+| After | The value occurred after the selected date. | Purchase date is **after** March 14th, 2024 |
+| Rolling range | The value occurred between the two relative dates. | Last purchase date is in rolling range of seven days ago to three days ago. |
+| In next | The value occurred within the next period of time selected. | Cart abandon is in next 2 days |
+
+For more detailed information on the time and date functions, read the [time constraints section](#time-constraints).
+
++++
+
+When you select an attribute, you can see the summary data by selecting the [information icon](../../images/icons/info.png). The summary data includes information such as an explanation of what the field is, the record count of the values, as well as the percentage of accounts that contain values for this attribute.
+
+The **[!UICONTROL Top values]** section displays the most frequently occurring values for the attribute, and includes details such as the value, the number of records that have the value, as well as the percentage of total records the value represents.
+
+![A popover that displays the summary data for an attribute](/help/segmentation/images/ui/segment-builder/summary-data.png)
+
+If an attribute is populated by less than 25% of profiles, the ![data notice icon](../../images/icons/data-notice.png) will be displayed instead. The same summary data will be displayed for the attribute, regardless.
+
+>[!NOTE]
+>
+>The top values are only displayed if the field does **not** contain too many different values and if those field's values are commonly repeated. Additionally, this summary data is updated on a **daily** basis.
+
+Additionally, the attribute has an **[!UICONTROL Ingestion Type]**. The ingestion type lets you know the origin of the data, and can be one of the following values: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]**, or **[!UICONTROL No Data Ingested]**. 
+
+![The ingestion type for the attribute is displayed.](/help/segmentation/images/ui/segment-builder/ingestion-type.png)
+
+#### Computed attributes {#computed-attributes}
+
+Computed attributes are fields that are calculated from other attributes using aggregations or formulas. You can use computed attributes if you need aggregated data such as sums, counts, or averages across multiple events or if you are building frequently-used audiences that require complex calculations. 
+
+For more information on computed attributes, including how to create them, what functions you can use within them, and how to manage them, read the [computed attributes overview](/help/profile/computed-attributes/overview.md).
 
 ### Events
 
@@ -91,7 +208,7 @@ For example, consider a situation where you had two report suites with the follo
 | Field | Report Suite Schema A | Report Suite Schema B |
 | ----- | --------------------- | --------------------- |
 | eVar1 | Referring Domain | Logged in Y/N |
-| eVar2 | Page Name | Member Loyalty ID | 
+| eVar2 | Page Name | Member Loyalty ID |
 | eVar3 | URL | Page Name |
 | eVar4 | Search Terms | Product Name |
 | event1 | Clicks | Page Views |
@@ -183,6 +300,22 @@ Please note that there is a maximum of 250 values allowed. If you exceed this am
 
 ![A warning that shows that you have reached the maximum number of values is displayed.](../images/ui/segment-builder/maximum-values.png)
 
+### Audience validation {#audience-validation}
+
+Segment Builder automatically analyzes and validates your audience definition to ensure you adhere to audience definition best practices. These best practices can be set into two categories: critical validation and performance optimization.
+
+If an audience definition breaks a critical validation best practice, you will **not** be able to save your changes in order to keep your sandbox stable. If an audience definition breaks a performance optimization best practice, you will be able to save your changes, but it is *highly recommended* to update your audience definition to avoid performance issues.
+
+| Validation check | Type | Threshold |
+| ---------------- | ---- | --------- |
+| Logical complexity | Critical validation | The audience definition is too complicated. |
+| Sequential events | Critical validation | There are more than 6 sequential events within an audience definition. |
+| Aggregated count | Performance optimization | There are more than 3 aggregation functions within an audience definition. |
+| Nested data | Performance optimization | There are more than 2 levels of nested data (array or map data types) depth within an audience definition. |
+| Audience size | Performance optimization | The audience qualification size is greater than 30% of the total number of profiles in the sandbox. |
+
+For more information on how audience validation works, read the [audience validation guide](/help/segmentation/validation.md).
+
 ### Adding audiences
 
 >[!CONTEXTUALHELP]
@@ -268,7 +401,7 @@ The list of available time constraints are as follows:
 
 | Time constraint | Description | Can enable ignore year | Example |
 | --------------- | ----------- | ------------------- | ------- |
-| Today | The attribute or event being compared **must** occur today. | Yes | ![An example of the "Today" time constraint being used.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Today | The attribute or event being compared **must** occur today. This is the default time constraint selected. | Yes | ![An example of the "Today" time constraint being used.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | Yesterday | The attribute or event being compared **must** occur yesterday. | Yes | ![An example of the "Yesterday" time constraint being used.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | This month | The attribute or event being compared **must** occur this calendar month. | Yes | ![An example of the "This month" time constraint being used.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | This year | The attribute or event being compared **must** occur this calendar year. | No | ![An example of the "This year" time constraint being used.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -283,6 +416,16 @@ The list of available time constraints are as follows:
 | In next | The attribute or event being compared must occur within the next period of time selected. The selected periods of time include minutes, hours, days, weeks, months, and years. | No | ![An example of the "In next" time constraint being used.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
 | Exists | The attribute exists. | No | ![An example of the "Exists" time constraint being used.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
 | Does not exist | The attribute does not exist. | No | ![An example of the "Does not exist" time constraint being used.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+| Now | The attribute or event being compared **must** occur right when the audience is evaluated. This time constraint can only be used as a secondary-level option, within time constraints such as "Before" or "After". | Yes | ![An example of the "Now" time constraint being used.](../images/ui/segment-builder/time-constraints/now.png){width="100" zoomable="yes"} |
+
+>[!TIP]
+>
+>The difference between the "Today" time constraint and "Now" time constraint is subtle, but significant. 
+>
+>- Use the "Today" time constraint to check if the attribute or event being compared is happening at **midnight** of the current day. 
+>- Use the "Now" time constraint to check if the attribute or event being compared is happening **right now**.
+>
+>However, there's one major exception - if you're using "Today" as a top-level time constraint, that means you're checking if the attribute or event occurred at **any** point today.
 
 +++
 
@@ -319,7 +462,7 @@ The list of available time constraints for this operation differs from the main 
 | Time constraint | Description |
 | --------------- | ----------- |
 | After | The latter event **must at least** take place after the prior event. |
-| Within | The two events **must** take place during the time period listed within the time constraint. | 
+| Within | The two events **must** take place during the time period listed within the time constraint. |
 
 >[!NOTE]
 >
@@ -334,7 +477,7 @@ The list of available time constraints for this operation differs from the main 
 
 ## Containers {#containers}
 
-Segment rules are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.
+Audiences are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.
 
 Once you have added at least one tile to the rule builder canvas, you can begin to add containers. To create a new container, select the ellipses (...) in the top-right corner of the tile, then select **[!UICONTROL Add container]**. 
 
@@ -353,6 +496,36 @@ Once you select **[!UICONTROL Unwrap container]** the child container is removed
 >When unwrapping containers, be careful that the logic continues to meet the desired segment definition.
 
 ![The container is shown after being unwrapped.](../images/ui/segment-builder/unwrapped-container.png)
+
+### Examples {#container-examples}
+
+You can use your containers within Segment Builder in three different ways: to group your rules with boolean logic, to control whether to include or exclude profiles matching the container's criteria, and to define event sequences with time constraints.
+
++++ Mixed boolean logic
+
+The following example mixes **both** AND and OR logic within a single expression. Without using containers, you cannot mix both AND with OR logic in a single level.
+
+![An image showing how to use containers to mix boolean logic and use include/exclude logic.](/help/segmentation/images/ui/segment-builder/mixed-boolean-container.png)
+
++++
+
++++ Event sequence
+
+The following example uses containers to build the sequence of events.
+
+![An image showing how to sequence events using containers.](/help/segmentation/images/ui/segment-builder/event-sequence-container.png)
+
++++
+
+### Best practices {#container-best-practices}
+
+When you add containers to your audience, keep the following guidelines in mind:
+
+- Build your containers incrementally, testing the logic with each step you add
+  - This is especially important if you use "Exclude" logic, as this can significantly change your results
+- Clearly name your containers to understand what they're meant to do
+- Avoid having too many nested levels of containers as it reduces performance
+- Ensure your order of containers is accurate, since event order greatly affects sequence containers
 
 ## Merge policies
 
@@ -439,7 +612,7 @@ More information about the different segment definition evaluation methods can b
 Segment Builder provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-Time Customer Profile] data. After reading this guide you should now be able to:
 
 - Create segment definitions using a combination of attributes, events, and existing audiences as building blocks.  
-- Use the rule builder canvas and containers to control the order in which segment rules are executed.
+- Use the rule builder canvas and containers to control the order in which audience rules are executed.
 - View estimates of your prospective audience, allowing you to adjust your segment definitions as required.
 - Enable all segment definitions for scheduled segmentation.
 - Enable specified segment definitions for streaming segmentation.

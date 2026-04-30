@@ -5,10 +5,6 @@ exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
 ---
 # Adobe Target release notes
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 ## September 16, 2021
 
 ### Adobe Target Extension 0.11.4

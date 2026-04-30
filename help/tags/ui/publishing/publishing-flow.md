@@ -10,10 +10,6 @@ exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
 >title="Publishing flow"
 >abstract="Understand the levels of user permissions required for the publishing flow, including Develop, Approve, and Publish rights."
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 The tags publishing flow in Adobe Experience Platform refers to the process of creating libraries, testing builds, and approving them for production.
 
 The available actions that you can make on a library depend on the library's state and the level of permission you have. In addition, a library's state also affects the resources it contains (rules, data elements, and extensions) depending on what is upstream in the publishing flow.

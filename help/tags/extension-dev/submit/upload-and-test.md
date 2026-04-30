@@ -5,10 +5,6 @@ exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
 ---
 # Upload and implement end-to-end testing
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 To test tag extensions in Adobe Experience Platform, use the tags API and/or command-line tools to upload your extension packages. Next, use the Experience Platform UI or Data Collection UI to install your extension package to a property and exercise its capabilities inside a tag library and build.
 
 This document covers how to implement end-to-end testing for your extension. 

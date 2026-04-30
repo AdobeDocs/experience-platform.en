@@ -7,7 +7,7 @@ exl-id: afd07ddc-652e-4e22-b298-feba27332462
 
 ![Destinations overview banner.](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+**[!DNL Destinations]** are pre-built integrations with destination platforms that allow for the seamless activation of data from [!DNL Adobe Experience Platform]. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -28,7 +28,7 @@ One of the core functionalities of Experience Platform is ingesting your first-p
 
 ## Controls {#controls}
 
-The controls in the [destinations workspace](./ui/destinations-workspace.md) allow you to:
+Use the controls in the [destinations workspace](./ui/destinations-workspace.md) to:
 
 * Browse the catalog of destination platforms where you can activate your data;
 * Create, edit, activate, and disable data flows to the destinations in the catalog;
@@ -49,7 +49,7 @@ For partner-authored and maintained connectors, this means that issues with the 
 
 ## Destinations and access controls {#access-controls}
 
-The destinations functionality in Experience Platform works with Adobe Experience Platform access control permissions. Depending on your user's permission level, you can view, manage, and activate destinations. For information about the individual permissions, go to [access control in Adobe Experience Platform](../access-control/home.md) and scroll down to the table at the bottom of the page.
+The destinations functionality in Experience Platform works with [!DNL Adobe Experience Platform] access control permissions. Depending on your user's permission level, you can view, manage, and activate destinations. For information about the individual permissions, go to [access control in Adobe Experience Platform](../access-control/home.md) and scroll down to the table at the bottom of the page.
 
 The following table outlines the permissions and permission combinations required to perform certain actions on destinations.
 
@@ -72,7 +72,7 @@ For more information about access controls, see the [Access control user guide](
 
 ### Attribute-based access control for destinations {#attribute-based-access}
 
-Attribute-based access control in Adobe Experience Platform allows administrators to control access to specific objects and/or capabilities based on attributes. 
+Attribute-based access control in [!DNL Adobe Experience Platform] allows administrators to control access to specific objects and/or capabilities based on attributes. 
 
 With attribute-based access control, you can apply mapping configurations to fields that you have permissions to. Furthermore, you cannot export data to a destination if you do not have access to all fields in the dataset.
 
@@ -94,6 +94,12 @@ After establishing a connection to a destination and completing the activation w
 
 You can also validate if data is coming through successfully to your destination. Most destination documentation pages in the catalog have a *Validate data export section*, which indicates how you can check in the destination platform that data is being successfully brought in from Experience Platform. View an example of this section for the [Amazon Ads destination](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
 
+## Data encryption {#encryption}
+
+All data in transit exported from [!DNL Experience Platform] through destinations travels over secure, encrypted connections using [HTTPS TLS 1.2](https://datatracker.ietf.org/doc/html/rfc5246) or newer. The TLS protocol used by [!DNL Experience Platform] in outbound communication also supports [Server Name Indication (SNI)](https://www.rfc-editor.org/rfc/rfc6066#page-6).
+
+For more information about how data is ingested, encrypted, and persisted, see [data encryption in Experience Platform](../landing/governance-privacy-security/encryption.md).
+
 ## Data governance restrictions on activating data to destinations {#data-governance}
 
 Data governance is enforced for Experience Platform destinations through:
@@ -108,6 +114,8 @@ For more information about selecting marketing actions in the create destination
 * [Advertising destinations - Google Ad Manager](./catalog/advertising/google-ad-manager.md)
 * [Advertising destinations - Google Ads](./catalog/advertising/google-ads-destination.md)
 * [Advertising destinations - Google Display & Video 360](./catalog/advertising/google-dv360.md)
+* [Advertising Account destinations - Bombora ABM Audience connection](./catalog/advertising/bombora.md)
+* [Advertising Account destinations - Demandbase connection](./catalog/advertising/demandbase.md)
 * [Cloud storage destinations](./catalog/cloud-storage/overview.md)
 * [Email marketing destinations](./catalog/email-marketing/overview.md)
 * [Social destinations](./catalog/social/overview.md)

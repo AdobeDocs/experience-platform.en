@@ -5,10 +5,6 @@ exl-id: 4a7e0c5c-4bd1-4fb8-8509-f88a0aa42ac4
 ---
 # Extension upgrades
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Extension developers continually add new features to their extensions, and frequently fix bugs. These updates are packaged into new versions of an extension and made available in the extensions catalog as upgrades.
 
 ## Extension Catalog

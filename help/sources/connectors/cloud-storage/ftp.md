@@ -19,9 +19,9 @@ Cloud storage sources can bring your own data into [!DNL Experience Platform] wi
 >
 >When creating a dataflow with the FTP source connector, it is strongly recommended to set for a one-time ingestion schedule due to lingering issues with incremental updates encountered within FTP servers.
 
-## IP address allow list
+## IP address allowlist
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform](../../ip-address-allow-list.md) for more information.
 
 ## Naming constraints for files and directories
 

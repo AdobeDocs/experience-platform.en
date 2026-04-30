@@ -9,25 +9,25 @@ exl-id: cd7132eb-4047-4faa-a224-47366846cb56
 
 ## Overview {#overview}
 
-Adobe Experience Platform uses [edge segmentation](../../segmentation/methods/edge-segmentation.md) together with [edge destinations](/help/destinations/destination-types.md#edge-personalization-destinations) to enable customers to create and target audiences at high scale, in real time. This capability helps you configure same-page and next-page personalization use cases.
+[!DNL Adobe Experience Platform] uses [edge segmentation](../../segmentation/methods/edge-segmentation.md) together with [edge destinations](/help/destinations/destination-types.md#edge-personalization-destinations) to enable customers to create and target audiences at high scale, in real time. This capability helps you configure same-page and next-page personalization use cases.
 
-Examples of edge destinations are the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and the [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) connections.
+Examples of edge destinations are the [[!DNL Adobe Target]](../../destinations/catalog/personalization/adobe-target-connection.md) and the [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) connections.
 
 >[!NOTE]
 >
->When [configuring the Adobe Target connection](../catalog/personalization/adobe-target-connection.md) *without* using a datastream ID, the use cases described in this article are not supported. Only next-session personalization use cases are supported in the absence of a datastream.
+>When [configuring the [!DNL Adobe Target] connection](../catalog/personalization/adobe-target-connection.md) *without* using a datastream ID, the use cases described in this article are not supported. Only next-session personalization use cases are supported in the absence of a datastream.
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 >* To activate data without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 > 
 > Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-This article explains the workflow required to activate audiences to Adobe Experience Platform edge destinations. When used together with [edge segmentation](../../segmentation/methods/edge-segmentation.md) and the optional [profile attributes mapping](#mapping), these destinations enable same-page and next-page personalization use cases on your web and mobile properties. 
+This article explains the workflow required to activate audiences to [!DNL Adobe Experience Platform] edge destinations. When used together with [edge segmentation](../../segmentation/methods/edge-segmentation.md) and the optional [profile attributes mapping](#mapping), these destinations enable same-page and next-page personalization use cases on your web and mobile properties. 
 
-For a brief overview on how to configure the Adobe Target connection for edge personalization, watch the video below.
+For a brief overview on how to configure the [!DNL Adobe Target] connection for edge personalization, watch the video below.
 
 >[!NOTE]
 >
@@ -35,17 +35,17 @@ For a brief overview on how to configure the Adobe Target connection for edge pe
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
-For a brief overview of how to share audiences and profile attributes to Adobe Target and custom personalization destinations, watch the video below.
+For a brief overview of how to share audiences and profile attributes to [!DNL Adobe Target] and custom personalization destinations, watch the video below.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
 ## Use cases {#use-cases}
 
-Use Adobe personalization solutions, such as Adobe Target, or your own personalization partner platforms (for example, [!DNL Optimizely], [!DNL Pega]), as well as proprietary systems (for example, in-house CMS) to power a deeper customer personalization experience via the [Custom Personalization](../catalog/personalization/custom-personalization.md) destination. All this while also leveraging Experience Platform Edge Network data collection & segmentation capabilities.
+Use Adobe personalization solutions, such as [!DNL Adobe Target], or your own personalization partner platforms (for example, [!DNL Optimizely], [!DNL Pega]), as well as proprietary systems (for example, in-house CMS) to power a deeper customer personalization experience via the [Custom Personalization](../catalog/personalization/custom-personalization.md) destination. All this while also leveraging Experience Platform Edge Network data collection & segmentation capabilities.
 
 The use cases described below include both site personalization and targeted on-site advertising.
 
-To enable these use cases, customers need a quick, streamlined way of retrieving both audiences and profile attribute information from Experience Platform, and sending this information to either the [Adobe Target](../catalog/personalization/adobe-target-connection.md) or the [Custom Personalization](../catalog/personalization/custom-personalization.md) connections in the Experience Platform UI.
+To enable these use cases, customers need a quick, streamlined way of retrieving both audiences and profile attribute information from Experience Platform, and sending this information to either the [[!DNL Adobe Target]](../catalog/personalization/adobe-target-connection.md) or the [Custom Personalization](../catalog/personalization/custom-personalization.md) connections in the Experience Platform UI.
 
 ### Same-page personalization {#same-page}
 
@@ -63,7 +63,7 @@ The following day, the user returns to the same customer website. The audiences 
 
 ### Personalize a home page banner {#home-page-banner}
 
-A home rental and sales company wants to personalize their home page with a banner, based on audience qualifications in Adobe Experience Platform. The company can select what audiences should get a personalized experience and send those audiences to Adobe Target as targeting criteria for their Target offer.
+A home rental and sales company wants to personalize their home page with a banner, based on audience qualifications in [!DNL Adobe Experience Platform]. The company can select what audiences should get a personalized experience and send those audiences to [!DNL Adobe Target] as targeting criteria for their Target offer.
 
 ## Prerequisites {#prerequisites}
 
@@ -75,7 +75,7 @@ When configuring the datastream, under **[!UICONTROL Adobe Experience Platform]*
 
 >[!TIP]
 >
->Starting with the April 2024 release, you are not required to select the Edge Segmentation checkbox when [configuring the connection to Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md). In this case, [next-session personalization](#next-session) is the only available personalization use case.
+>Starting with the April 2024 release, you are not required to select the Edge Segmentation checkbox when [configuring the connection to [!DNL Adobe Target]](/help/destinations/catalog/personalization/adobe-target-connection.md). In this case, [next-session personalization](#next-session) is the only available personalization use case.
 
 ![Datastream configuration with Edge Segmentation and Personalization Destinations highlighted!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
@@ -105,7 +105,7 @@ Follow the [destination connection creation tutorial](../ui/connect-destination.
 
 Depending on the destination that you are configuring, refer to the following articles for destination-specific prerequisites and related information:
 
-* [Adobe Target connection](../catalog/personalization/adobe-target-connection.md#parameters)
+* [[!DNL Adobe Target] connection](../catalog/personalization/adobe-target-connection.md#parameters)
 * [Custom personalization connection](../catalog/personalization/custom-personalization.md#parameters)
 
 ## Select your destination {#select-destination}
@@ -128,9 +128,9 @@ After you completed the prerequisites, you can now select the edge personalizati
 
 ## Select your audiences {#select-audiences}
 
-Use the check boxes to the left of the audience names to select the audiences that you want to activate to the destination, then select **[!UICONTROL Next]**.
+Use the checkboxes to the left of the audience names to select the audiences that you want to activate to the destination, then select **[!UICONTROL Next]**.
 
-To select the audiences that you want to activate to the destination, use the check boxes to the left of the audience names, then select **[!UICONTROL Next]**.
+To select the audiences that you want to activate to the destination, use the checkboxes to the left of the audience names, then select **[!UICONTROL Next]**.
 
 You can select from multiple types of audiences, depending on their origin:
 
@@ -168,7 +168,7 @@ To add target attributes, select the **[!UICONTROL Add new field]** control on t
 
 >[!NOTE]
 >
->The selection of target attributes only applies to the [Custom Personalization](../catalog/personalization/custom-personalization.md) activation workflow, in order to support friendly-name field mapping in the destination platform.
+>The selection of target attributes only applies to the [Custom Personalization](../catalog/personalization/custom-personalization.md) activation workflow, to support friendly-name field mapping in the destination platform.
 
 ![Screen recording showing how to select an XDM attribute in the mapping step](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 

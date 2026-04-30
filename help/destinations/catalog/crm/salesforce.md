@@ -1,7 +1,7 @@
 ---
 keywords: crm;CRM;crm destinations;salesforce crm;salesforce crm destination
 title: Salesforce CRM connection
-description: The Salesforce CRM destination allows you to export your account data and activate it within Salesforce CRM for your business needs.
+description: Use the Salesforce CRM destination to export your account data and activate it within Salesforce CRM for your business needs.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
 ---
 # [!DNL Salesforce CRM] connection
@@ -21,7 +21,7 @@ When [activating segments](#activate), you can select between either leads or co
 
 ## Use cases {#use-cases}
 
-As a marketer, you can deliver personalized experiences to your users, based on attributes from their Adobe Experience Platform profiles. You can build audiences from your offline data and send these audiences to Salesforce CRM, to update CRM membership as soon as audiences and profiles are updated in Adobe Experience Platform.
+As a marketer, you can deliver personalized experiences to your users, based on attributes from their [!DNL Adobe Experience Platform] profiles. You can build audiences from your offline data and send these audiences to Salesforce CRM, to update CRM membership as soon as audiences and profiles are updated in [!DNL Adobe Experience Platform].
 
 ## Prerequisites {#prerequisites}
 
@@ -31,7 +31,7 @@ Before activating data to the Salesforce CRM destination, you must have a [schem
 
 ### Prerequisites in [!DNL Salesforce CRM] {#prerequisites-destination}
 
-Note the following prerequisites in [!DNL Salesforce CRM], in order to export data from Experience Platform to your Salesforce account:
+Note the following prerequisites in [!DNL Salesforce CRM], to export data from Experience Platform to your Salesforce account:
 
 #### You need to have a [!DNL Salesforce] account {#prerequisites-account}
 
@@ -102,8 +102,8 @@ Note down the items below before you authenticate to the [!DNL Salesforce CRM] d
 | `Password` | Your [!DNL Salesforce] account password. | |
 | `Security Token` | Your [!DNL Salesforce] security token which you will later append to the end of your [!DNL Salesforce] Password to create a concatenated string to be used as the **[!UICONTROL Password]** when [authenticating to the destination](#authenticate).<br> Refer to the [!DNL Salesforce] documentation to [reset your security token](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&type=5) to learn how to regenerate it from the [!DNL Salesforce] interface if you do not have the Security Token. |  |
 | `Custom Domain` | Your [!DNL Salesforce] domain prefix. <br> See the [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) to learn how to obtain this value from the [!DNL Salesforce] interface. | If your [!DNL Salesforce] domain is<br> *`d5i000000isb4eak-dev-ed`.my.salesforce.com*,<br> you will need `d5i000000isb4eak-dev-ed` as the value.|
-| `Client ID` | Your Salesforce `Consumer Key`. <br> Refer to the [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) to learn how to obtain this value from the [!DNL Salesforce] interface. | | 
-| `Client Secret` | Your Salesforce `Consumer Secret`. <br> Refer to the [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) to learn how to obtain this value from the [!DNL Salesforce] interface. | | 
+| `Client ID` | Your Salesforce `Consumer Key`. <br> Refer to the [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) to learn how to obtain this value from the [!DNL Salesforce] interface. | |
+| `Client Secret` | Your Salesforce `Consumer Secret`. <br> Refer to the [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) to learn how to obtain this value from the [!DNL Salesforce] interface. | |
 
 ### Guardrails {#guardrails}
 
@@ -123,9 +123,34 @@ If your [!DNL Salesforce] account administrator has enforced IP restrictions, yo
 |---|---|---|
 | `SalesforceId` | The [!DNL Salesforce CRM] identifier for the contact or lead identities that you export or update through your segment.|Mandatory|
 
+## Supported audiences {#supported-audiences}
+
+This section describes which types of audiences you can export to this destination.
+
+| Audience origin | Supported | Description |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
+
 ## Export type and frequency {#export-type-frequency}
 
-Refer to the table below for information about the destination export type and frequency.
+See the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 |---------|----------|---------|
@@ -182,7 +207,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -190,7 +215,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL Salesforce CRM] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination.
+To correctly send your audience data from [!DNL Adobe Experience Platform] to the [!DNL Salesforce CRM] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination.
 
 Attributes specified in the **[!UICONTROL Target field]** should be named exactly as described in the attribute mappings table as these attributes will form the request body.
 
@@ -213,7 +238,7 @@ To correctly map your XDM fields to the [!DNL (API) Salesforce CRM] destination 
        |Source Field|Target Field| Notes |
        | --- | --- | --- |
        |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`|
-       |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Last name of the contact up to 80 characters. |    
+       |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Last name of the contact up to 80 characters. |
        |`xdm: person.name.firstName`|`Attribute: FirstName`| The contact's first name up to 40 characters. |
        |`xdm: personalEmail.address`|`Attribute: Email`| The contact's email address. |
 
@@ -229,7 +254,7 @@ To correctly map your XDM fields to the [!DNL (API) Salesforce CRM] destination 
        |Source Field|Target Field| Notes |
        | --- | --- | --- |
        |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`|
-       |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Last name of the lead up to 80 characters. |    
+       |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Last name of the lead up to 80 characters. |
        |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. The lead's company. |
        |`xdm: personalEmail.address`|`Attribute: Email`| The lead's email address. |
 
@@ -256,7 +281,7 @@ As shown above the [!DNL Salesforce] **[!UICONTROL Field Name]** exactly matches
 
 Depending on your use case, all activated audiences can be mapped to the same [!DNL Salesforce] custom field or to different **[!UICONTROL Field Name]** in [!DNL Salesforce CRM]. A typical example based on the image shown above could be.
 
-| [!DNL Salesforce CRM] segment name | [!DNL Salesforce] **[!UICONTROL Field Name]** | [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** | 
+| [!DNL Salesforce CRM] segment name | [!DNL Salesforce] **[!UICONTROL Field Name]** | [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** |
 | --- | --- | --- |
 | crm_1_seg | `crm_1_seg` | `crm_1_seg` |
 | crm_2_seg | `crm_2_seg` | `crm_2_seg` |
@@ -279,7 +304,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Monitor the audience summary and ensure that the count of profiles corresponds to the count created within the segment.
 ![Experience Platform UI screenshot example showing Segment.](../../assets/catalog/crm/salesforce/segment.png)
 
-1. Finally, log in to the Salesforce website and validate if the profiles from the audience have been updated.
+1. Finally, go to the Salesforce website and validate if the profiles from the audience have been updated.
 
     **Working with Contacts**
 

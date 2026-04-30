@@ -25,7 +25,7 @@ Interactive query execution has the following limitations:
 | Parameter | Limitation |
 | --------- | ---------- |
 | Query timeout | 10 minutes |
-| Maximum rows returned | 50,000 | 
+| Maximum rows returned | 50,000 |
 | Maximum concurrent queries | 5 |
 
 >[!NOTE]
@@ -232,21 +232,21 @@ The following example shows the schema information for the `luma_midvalues` tabl
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
 |-------------------+-----------------------------+-----------+----------+---------
- timestamp         | timestamp                   |           |          | 
- _id               | text                        |           |          | 
- productlistitems  | anyarray                    |           |          | 
- commerce          | luma_midvalues_commerce     |           |          | 
- receivedtimestamp | timestamp                   |           |          | 
- enduserids        | luma_midvalues_enduserids   |           |          | 
- datasource        | datasource                  |           |          | 
- web               | luma_midvalues_web          |           |          | 
- placecontext      | luma_midvalues_placecontext |           |          | 
- identitymap       | anymap                      |           |          | 
- marketing         | marketing                   |           |          | 
- environment       | luma_midvalues_environment  |           |          | 
- _experience       | luma_midvalues__experience  |           |          | 
- device            | device                      |           |          | 
- search            | search                      |           |          | 
+ timestamp         | timestamp                   |           |          |
+ _id               | text                        |           |          |
+ productlistitems  | anyarray                    |           |          |
+ commerce          | luma_midvalues_commerce     |           |          |
+ receivedtimestamp | timestamp                   |           |          |
+ enduserids        | luma_midvalues_enduserids   |           |          |
+ datasource        | datasource                  |           |          |
+ web               | luma_midvalues_web          |           |          |
+ placecontext      | luma_midvalues_placecontext |           |          |
+ identitymap       | anymap                      |           |          |
+ marketing         | marketing                   |           |          |
+ environment       | luma_midvalues_environment  |           |          |
+ _experience       | luma_midvalues__experience  |           |          |
+ device            | device                      |           |          |
+ search            | search                      |           |          |
 ```
 
 Additionally, you can get further information about a particular column by appending the name of the column to the table name. This would be written in the format `\d {TABLE_NAME}_{COLUMN}`.
@@ -257,8 +257,8 @@ The following example shows additional information for the `web` column, and wou
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
 |----------------+-----------------------------------+-----------+----------+---------
- webpagedetails | luma_midvalues_web_webpagedetails |           |          | 
- webreferrer    | web_webreferrer                   |           |          | 
+ webpagedetails | luma_midvalues_web_webpagedetails |           |          |
+ webreferrer    | web_webreferrer                   |           |          |
 ```
 
 ## Joining datasets

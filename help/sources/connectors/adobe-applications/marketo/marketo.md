@@ -68,12 +68,12 @@ The following table outlines the expected latency for bringing [!DNL Marketo Eng
 
 | Destination | Expected Latency |
 | ----------- | ---------------- |
-| [!DNL Real-Time Customer Profile] | < 10 minutes |
+| [!DNL Real-Time Customer Profile] | < 20 minutes |
 | Data lake | < 60 minutes |
 
 >[!NOTE]
 >
->The latency figures above represent expectations at a 95% confidence level. Actual latencies will vary and may extend beyond those figures by 50% in rare cases.
+>The latency figures above represent expectations at a 95% confidence level. Actual latencies will vary and will extend beyond those figures in some cases.
 
 ## Next steps and additional resources
 

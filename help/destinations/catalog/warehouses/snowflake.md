@@ -1,7 +1,7 @@
 ---
 title: Snowflake Streaming connection
 description: Create a live Snowflake data share to receive streaming audience updates directly as shared tables into your account.
-last-substantial-update: 2025-10-23
+last-substantial-update: 2026-04-28
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 ---
@@ -9,7 +9,7 @@ exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 
 >[!AVAILABILITY]
 >
->This destination connector is in limited availability and only available to Real-Time CDP Ultimate customers provisioned in the [VA7 region](/help/landing/multi-cloud.md#azure-regions).
+>This destination connector is in limited availability and only available to [!DNL Real-Time CDP] Ultimate customers provisioned in the [VA7 region](/help/landing/multi-cloud.md#azure-regions).
 
 ## Overview {#overview}
 
@@ -23,7 +23,7 @@ This destination uses a [!DNL Snowflake] data share, which means that no data is
 
 The first time you share data from Adobe's Snowflake instance to yours, you are prompted to accept the private listing from Adobe.
 
-![Screenshot showing the Snowflake private listing acceptance screen](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
+![Screenshot showing the Snowflake private listing acceptance screen](../../assets/catalog/warehouses/snowflake/snowflake-accept-listing.png)
 
 ### Data retention and Time-to-Live (TTL) {#ttl}
 
@@ -35,11 +35,11 @@ If your audience is evaluated in [batch mode](../../../segmentation/methods/batc
 
 ### Incremental export logic {#incremental-export}
 
-When a dataflow runs for an audience for the first time, it performs a backfill and shares all currently qualified profiles. After this initial backfill, only incremental updates are reflected in the shared table. This means profiles which are added to or removed from the audience. This approach ensures efficient updates and keeps the shared table up to date.
+When a dataflow runs for an audience for the first time, it performs a backfill and shares all currently qualified profiles. After this initial backfill, only incremental updates are reflected in the shared table. This means profiles that are added to or removed from the audience. This approach ensures efficient updates and keeps the shared table up to date.
 
 ## Streaming versus batch data sharing {#batch-vs-streaming}
 
-Experience Platform provides two types of Snowflake destinations: [Snowflake Streaming](snowflake.md) and [Snowflake Batch](snowflake-batch.md).
+[!DNL Adobe Experience Platform] provides two types of [!DNL Snowflake] destinations: [Snowflake Streaming](snowflake.md) and [Snowflake Batch](snowflake-batch.md).
 
 The table below will help you decide which destination to use by outlining the scenarios where each data sharing method is most appropriate.
 
@@ -63,14 +63,15 @@ Streaming data sharing is ideal for scenarios where you need immediate updates w
 * **Efficiency and nuance**: Enable greater efficiency and nuance in marketing efforts by allowing quick response to user behavior changes
 * **Real-time customer journey optimization**: Update customer experiences immediately when segment membership or profile attributes change
 
-Streaming data sharing provides continuous updates based on segment changes, identity map changes, or attribute changes, making it suitable for scenarios where latency is critical and immediate updates are required.
+Streaming data sharing provides continuous updates based on segment changes, identity map changes, or attribute changes, making it suitable when low latency matters.
 
 ## Prerequisites {#prerequisites}
 
 Before configuring your Snowflake connection, make sure you meet the following prerequisites:
 
 * You have access to a [!DNL Snowflake] account.
-* Your Snowflake account is subscribed to private listings. You or someone in your company who has account administrator privileges on Snowflake can configure this.
+* Your [!DNL Snowflake] account is subscribed to private listings. You or someone in your company who has account administrator privileges on [!DNL Snowflake] can configure this.
+* You know your [!DNL Snowflake] account region, which you will select from a dropdown when connecting to the destination.
 
 Read the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) for more information on the necessary permissions.
 
@@ -78,10 +79,21 @@ Read the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/collabor
 
 This section describes which types of audiences you can export to this destination. The two tables below indicate which audiences this connector supports, by _audience origin_ and _profile types included in the audience_:
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | ✓ | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| [!DNL Segmentation Service] | Yes | Audiences generated through the [!DNL Adobe Experience Platform] [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into [!DNL Adobe Experience Platform] from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other [!DNL Adobe Experience Platform] apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
+
+{style="table-layout:auto"}
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -92,14 +104,14 @@ Refer to the table below for information about the destination export type and f
 | Item | Type | Notes |
 |---------|----------|---------|
 | Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL Snowflake] destination.|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in [!DNL Adobe Experience Platform] based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -108,18 +120,18 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
 
-![Sample screenshot showing how to authenticate to the destination](../../assets/catalog/cloud-storage/snowflake/authenticate-destination.png)
+![Sample screenshot showing how to authenticate to the destination](../../assets/catalog/warehouses/snowflake/authenticate-destination.png)
 
 ### Fill in destination details {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_accountID"
 >title="Enter your Snowflake Account ID"
->abstract="If your account is linked to an organization use this format: `OrganizationName.AccountName`<br><br> If your account is not linked to an organization use this format:`AccountName`"
+>abstract="If your account is linked to an organization, use this format: `OrganizationName.AccountName`<br><br>If your account is not linked to an organization, use this format: `AccountName`"
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Sample screenshot showing how to fill in details for your destination](../../assets/catalog/cloud-storage/snowflake/configure-destination-details.png)
+![Sample screenshot showing how to fill in details for your destination](../../assets/catalog/warehouses/snowflake/configure-destination-details.png)
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -128,9 +140,13 @@ To configure details for the destination, fill in the required and optional fiel
     * If your account is not linked to an organization:`AccountName`.
 * **[!UICONTROL Account acknowledgment]**: Toggle on the Snowflake Account ID acknowledgment to confirm that your Account ID is correct and it belongs to you.
 
+>[!NOTE]
+>
+> The **[!UICONTROL Snowflake Account ID]** cannot be edited through the [edit destination](../../ui/edit-destination.md) workflow after you create the destination. To use a different account, [create a new destination connection](../../ui/connect-destination.md).
+
 >[!IMPORTANT]
 >
-> Special characters used in the destination name and Experience Platform sandbox name are automatically converted to underscores (`_`) in Snowflake. To avoid confusion, do not use any special characters in your destination and sandbox name.
+> Special characters used in the destination name and [!DNL Adobe Experience Platform] sandbox name are automatically converted to underscores (`_`) in [!DNL Snowflake]. To avoid confusion, do not use any special characters in your destination and sandbox name.
 
 ### Enable alerts {#enable-alerts}
 
@@ -141,7 +157,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -151,23 +167,26 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 The Snowflake destination supports the mapping of profile attributes to custom attributes.
 
-![Experience Platform user interface image showing the mapping screen for the Snowflake destination.](../../assets/catalog/cloud-storage/snowflake/mapping.png)
+![Experience Platform user interface image showing the mapping screen for the Snowflake destination.](../../assets/catalog/warehouses/snowflake/mapping.png)
 
 The target attributes are automatically created in Snowflake using the attribute name that you provide in the **[!UICONTROL Attribute name]** field.
 
 ## Exported data / Validate data export {#exported-data}
 
-Check your Snowflake account to verify that the data was exported correctly.
+The data is shared into your Snowflake account via a shared table. Check your Snowflake account to verify that the data was exported correctly.
 
-## Known limitations {#known-limitations}
+The following example shows sample rows from a shared table: some columns store identities and segment membership as JSON; mapped profile attributes appear as separate string columns.
 
-### Default merge policy restriction {#default-merge-policy-restriction}
+![Sample Snowflake worksheet rows showing TS, IDENTITYMAP, SEGMENT_MEMBERSHIP, and mapped attribute columns.](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
 
-Currently, only audiences mapped to the default merge policy can be exported.
+### Data structure {#data-structure}
 
-### Regional availability {#regional-availability}
+The screenshot above shows the following columns:
 
-The [!DNL Snowflake] streaming destination is currently only available to Real-Time CDP customers provisioned in the Experience Platform VA7 region.
+* **TS**: A timestamp indicating when each row was last updated.
+* **IDENTITYMAP**: JSON object for each profile identity map.
+* **SEGMENT_MEMBERSHIP**: JSON object for each audience activated on the dataflow. Value include `lastQualificationTime` and `status` (for example `realized` when the profile qualifies for the segment).
+* **Mapping attributes**: Every mapping attribute that you select during the activation workflow is represented as a column header in [!DNL Snowflake].
 
 ## Data usage and governance {#data-usage-governance}
 

@@ -5,10 +5,6 @@ exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
 ---
 # Action types for edge extensions
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 In a tag rule, an action is something that is performed after the rule conditions have passed evaluation. Action types are provided by extensions, and their effects are entirely defined by the extension author.
 
 As an example, an extension could provide a "show support chat" action type which could display a support chat dialog to help users who may be struggling while checking out.

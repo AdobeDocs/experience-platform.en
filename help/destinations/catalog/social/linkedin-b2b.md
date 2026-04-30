@@ -1,15 +1,13 @@
 ---
 title: (Companies) LinkedIn connection
 description: Use this destination to activate your account audiences for Account-Based Marketing (ABM) use cases. Activate profiles for your LinkedIn campaigns for audience targeting, personalization, and suppression, based on hashed emails.
-badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 68d2cca3-952b-49d0-8ea2-e776a233b752
 ---
 # (Companies) LinkedIn Match Audiences connection {#companies-linkedin}
 
 >[!AVAILABILITY]
 >
->The functionality to activate account audiences to the (Companies) LinkedIn destination is available for companies purchasing the [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) and [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) editions of Real-Time Customer Data Platform.
+>The functionality to activate account audiences to the (Companies) LinkedIn destination is available for companies purchasing the [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) and [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) editions of [!DNL Real-Time Customer Data Platform].
 
 Use this destination to activate your [account audiences](/help/segmentation/types/account-audiences.md) for Account-Based Marketing (ABM) use cases. Advertise to relevant personas and roles in your target accounts via the **[!UICONTROL (Companies) LinkedIn]** business-to-business destination. Visit the LinkedIn documentation to [learn more about account targeting](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting) on the LinkedIn platform.
 
@@ -23,12 +21,26 @@ Use this destination to activate your [account audiences](/help/segmentation/typ
 
 This section describes which type of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | X | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | Yes | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
 
 ## Export type and frequency {#export-type-and-frequency} 
 
@@ -43,7 +55,7 @@ Refer to the table below for information about the destination export type and f
 
 ## Prerequisites {#prerequisites}
 
-Make sure you meet the prerequisites below in order to export account audiences to LinkedIn:
+Make sure you meet the prerequisites below to export account audiences to LinkedIn:
 
 ### LinkedIn account prerequisites {#LinkedIn-account-prerequisites}
 
@@ -54,7 +66,7 @@ To learn how to edit your [!DNL LinkedIn Campaign Manager] user permissions, see
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -81,7 +93,7 @@ You are now ready to activate account audiences to LinkedIn.
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate account audiences to destinations.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Select identity namespace highlighted in the workflow to activate account audiences to destinations."){width="100" zoomable="yes"}
 

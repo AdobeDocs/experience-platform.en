@@ -117,11 +117,13 @@ The [!UICONTROL Format text] feature makes your query more readable by adding st
 
 ![The Query Editor with [!UICONTROL Format text] and the SQL statements highlighted.](../images/ui/query-editor/format-text.png)
 
-<!-- ### Undo text {#undo-text}
+<!-- 
+### Undo text {#undo-text}
 
 If you format your SQL in the Query Editor, you can undo the formatting applied by the [!UICONTROL Format text] feature. To return your SQL back to its original form, select **[!UICONTROL Undo text]**.
 
-![The Query Editor with [!UICONTROL Undo text] and the SQL statements highlighted.](../images/ui/query-editor/undo-text.png) -->
+![The Query Editor with [!UICONTROL Undo text] and the SQL statements highlighted.](../images/ui/query-editor/undo-text.png) 
+-->
 
 ### Copy SQL {#copy-sql}
 
@@ -307,6 +309,12 @@ The following video shows how to run queries in the Adobe Experience Platform in
 >The UI depicted in the video is outdated but the logic used in the workflow remains the same.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+
+## Monitor and manage concurrent sessions {#monitor-manage-sessions}
+
+Use session management to view active Query Editor sessions across sandboxes, identify idle sessions, and end them to free shared capacity. You cannot interrupt sessions that are actively running queries. This capability is only intended for administrators and requires the **[!UICONTROL Manage Query Session]** permission.
+
+To access session management, select the **[!UICONTROL Admin]** tab in the Query Service workspace. For step-by-step instructions to view session details, interpret session status, and end idle sessions, see [Manage Query Service sessions](session-management.md).
 
 ## Next steps
 

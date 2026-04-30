@@ -126,9 +126,9 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Experience Event expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expiration"
 
-You can view important information about your organization's license usage through the Adobe Experience Platform [!UICONTROL License usage] dashboard. The information displayed here is captured during a daily snapshot of your Experience Platform instance. 
+You can view important information about your organization's license usage through the **[!UICONTROL License usage]** dashboard. The dashboard is available to eligible Experience Cloud organizations, including those that license Adobe Experience Platform and those that do not. The information displayed is captured during a daily snapshot of your organization's environment and is not updated in real time.
 
-License usage reports provide a high degree of granularity. Most metrics are shared across multiple products and reflect aggregated usage across all products that use them, not per-product totals. The dashboard provides consolidated usage of these metrics in all production or development sandboxes, and the usage metric from a specific sandbox. The following Experience Platform applications can be tracked with usage metrics: Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics.
+License usage reports provide a high degree of granularity. Most metrics are shared across multiple products and reflect aggregated usage across all products that use them, not per-product totals.
 
 This guide outlines how to access and work with the license usage dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.
 
@@ -140,6 +140,8 @@ The [!UICONTROL License usage] dashboard displays a list of all the Experience P
 
 The data in this dashboard is displayed exactly as it appeared at the specific point in time when the snapshot was taken. It is not an approximation or sample, but the dashboard is not updated in real time.
 
+For organizations without an Adobe Experience Platform application (such as Real-time Customer Data Platform, Adobe Journey Optimizer, Customer Journey Analytics, and so on), the dashboard displays AI credit usage metrics only.
+
 >[!NOTE]
 >
 >Most metrics in the dashboard are updated daily, based on a snapshot of your Experience Platform instance. [!UICONTROL CJA Rows Available] is an exception and is updated monthly. Metrics labeled with "packs", such as [!UICONTROL Adhoc Query Service Users Packs], [!UICONTROL Profile Richness No of Packs], and [!UICONTROL Streaming Segmentation No of Packs], reflect license entitlements for add-on offerings and do not track ongoing usage. Changes made after the snapshot are not visible until the next snapshot is taken.
@@ -150,7 +152,11 @@ To navigate to the license usage dashboard within the Experience Platform UI, se
 
 >[!NOTE]
 >
->The license usage dashboard is not enabled by default. Users must be granted "View License Usage Dashboard" permission to view the dashboard. For steps on granting access permissions, refer to the [dashboard permissions guide](../permissions.md).
+>The license usage dashboard is not enabled by default. You must be granted the **"[!UICONTROL View License Usage Dashboard]"** permission to access it.
+>
+>If your organization licenses Adobe Experience Platform applications, grant this permission in the applicable product profile and sandbox.
+>
+>For organizations without an Adobe Experience Platform application (for example, AEM-only or Workflow-only organizations), this permission is available in the Adobe Admin Console under the Adobe Experience Platform product card (if provisioned for your organization). An administrator must add the permission to a product profile before users can view the dashboard.
 
 ## [!UICONTROL Metrics] tab {#metrics-tab}
 
@@ -283,10 +289,11 @@ The predicted usage feature supports the following metrics:
 >
 >Starting August 20th, customers with entitlements for '[!UICONTROL Average Profile Richness]' and '[!UICONTROL Total Storage]' instead saw '[!UICONTROL Total Data Volume]' in the License Usage Dashboard. There was no change to customer entitlements, only a simplification of tracking metrics. [!UICONTROL Total Data Volume] represents the data available in Real-Time Customer Profile for engagement and personalization workflows. This simplified metric improved the management and measurement of Real-Time Customer Profile use. Customers were are encouraged to contact their Adobe representative for further clarification on this change.
 
-The license usage dashboard reports on several unique metrics that are applicable to multiple products in the organization. The available metrics are:
+The metrics that appear in your dashboard depend on the products and entitlements associated with your organization. If your organization participates in the [Adobe Experience Platform Agents usage-bound trial](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) or licenses Adobe Experience Platform Agents, the dashboard includes the [!UICONTROL AI credits] metric. If your organization does not license Adobe Experience Platform, AI credit usage appears as the primary metric.
 
 | Metric | Description |
 |---|---|
+| [!UICONTROL AI credits] | The number of AI credits consumed by your organization when using Adobe Experience Platform Agents. AI credits are used during the Adobe Experience Platform Agents usage-bound trial and when licensed for paid agent usage. This metric enables you to monitor AI credit consumption against your available entitlement. |
 | [!UICONTROL Audience Activation Size] | The total size of profiles activated to any file-based destination in a year. Note: This does not include profiles sent through streaming destinations. |
 |[!UICONTROL Addressable Audience] | The set of person profiles in Real-Time Customer Profile that your organization is entitled to engage, including both directly identifiable and Pseudonymous Profiles. These profiles may contain attributes, behaviors, and segment membership data. Profile volumes are calculated using Adobe Experience Platform's default deterministic Identity Graph and are considered a shared feature. |
 | [!UICONTROL Adhoc Query Service Users Packs]  | An add-on to increase your authorized concurrent Query Service Users entitlement by five additional concurrent Query Service users and one additional concurrently running ad hoc query per pack. Multiple additional Ad Hoc Query User packs may be licensed. |

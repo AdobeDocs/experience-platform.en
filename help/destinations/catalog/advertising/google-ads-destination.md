@@ -40,12 +40,26 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -60,11 +74,11 @@ Refer to the table below for information about the destination export type and f
 
 ## Prerequisites {#prerequisites}
 
-### Existing [!DNL Google Ads] account
+### Existing [!DNL Google Ads] account {#existing-google-ads-account}
 
 >[!IMPORTANT]
 >
-> [!DNL Google] has deprecated new [!DNL Google Ads] cookie integrations with third-party vendors. In order to perform the allowlist steps in the next section, you must have an existing integration with [!DNL Google Ads]. As a result, the recommended approach for using [!DNL Google Ads] is setting up a [!DNL Google Customer Match] integration. For more details on creating a [!DNL Google Customer Match] integration, read the tutorial on creating a [[!DNL Google Customer Match]](./google-customer-match.md) connection.
+> [!DNL Google] has deprecated new [!DNL Google Ads] cookie integrations with third-party vendors. To perform the allowlist steps in the next section, you must have an existing integration with [!DNL Google Ads]. As a result, the recommended approach for using [!DNL Google Ads] is setting up a [!DNL Google Customer Match] integration. For more details on creating a [!DNL Google Customer Match] integration, read the tutorial on creating a [[!DNL Google Customer Match]](./google-customer-match.md) connection.
 
 ### Allow-listing {#allow-listing}
 
@@ -83,7 +97,7 @@ Before creating the [!DNL Google Ads] destination in Experience Platform, you mu
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
@@ -106,12 +120,12 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
-## Exported data 
+## Exported data {#exported-data}
 
 To verify if data has been exported successfully to the [!DNL Google Ads] destination, check your [!DNL Google Ads] account. If activation was successful, audiences are populated in your account.
 

@@ -5,10 +5,6 @@ exl-id: f3713652-ac32-4171-8dda-127c8c235849
 ---
 # Cloud Connector extension overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 The Cloud Connector event forwarding extension allows you to create custom HTTP requests to send data to a destination or retrieve data from a destination. The Cloud Connector extension is like having Postman on Adobe Experience Platform Edge Network and can be used to send data to an endpoint that does not have a dedicated extension yet. 
 
 Use this reference for information about the options available when using this extension to build a rule. 
@@ -69,7 +65,7 @@ The following table lists the predefined headers. You are not limited to these h
 |[Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)|Directives for caching mechanisms in both requests and responses.|
 |[Connection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Connection)|Controls whether the network connection stays open after the current transaction finishes.|
 |[Content-Length](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length)|The size of the resource, in decimal number of bytes. |
-|[Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type)|Indicates the media type of the resource. | 
+|[Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type)|Indicates the media type of the resource. |
 |Cookie|Contains stored [HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) previously sent by the server with the [`Set-Cookie`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) header.|
 |Date|General HTTP header contains the date and time at which the message was originated. |
 |[DNT](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DNT)|Expresses the user's tracking preference. |
@@ -84,12 +80,12 @@ The following table lists the predefined headers. You are not limited to these h
 |[If-Unmodified-Since](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since)| |
 |[Max-Forwards](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since)| |
 |[Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin)| |
-|[Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma)|Implementation-specific header that may have various effects anywhere along the request-response chain. Used for backwards compatibility with HTTP/1.0 caches where the Cache-Control header is not yet present.| 
+|[Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma)|Implementation-specific header that may have various effects anywhere along the request-response chain. Used for backwards compatibility with HTTP/1.0 caches where the Cache-Control header is not yet present.|
 |[Proxy-Authorization](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization) ||
-|[Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range)|Indicates the part of a document that the server should return.| 
-|[Referer](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer)|The address of the previous web page from which a link to the currently requested page was followed. | 
+|[Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range)|Indicates the part of a document that the server should return.|
+|[Referer](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer)|The address of the previous web page from which a link to the currently requested page was followed. |
 |TE|Specifies the transfer encodings the user agent is willing to accept. (You could informally call it `Accept-Transfer-Encoding`, which would be more intuitive). |
-|Upgrade|The relevant RFC document for the [`Upgrade` header field is RFC 7230, section 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to HTTP 2.0, assuming the server decides to acknowledge and implement the `Upgrade` header field. Neither party is required to accept the terms specified in the `Upgrade` header field. It can be used in both client and server headers. If the `Upgrade` header field is specified, then the sender MUST also send the `Connection` header field with the `upgrade` option specified.| 
+|Upgrade|The relevant RFC document for the [`Upgrade` header field is RFC 7230, section 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to HTTP 2.0, assuming the server decides to acknowledge and implement the `Upgrade` header field. Neither party is required to accept the terms specified in the `Upgrade` header field. It can be used in both client and server headers. If the `Upgrade` header field is specified, then the sender MUST also send the `Connection` header field with the `upgrade` option specified.|
 |[User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)|Contains a characteristic string that allows the network protocol peers to identify the application type, operating system, software vendor or software version of the requesting software user agent. |
 |[Via](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Via) | Added by proxies, both forward and reverse proxies, and can appear in the request headers and the response headers. |
 |[Warning](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning)|General warning information about possible problems. |

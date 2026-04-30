@@ -31,10 +31,6 @@ In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in 
 >
 >Data Mirror and relational schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
 
->[!NOTE]
->
->Relational schemas were previously referred to as model-based schemas in earlier versions of Adobe Experience Platform documentation.
-
 Select **[!UICONTROL Relational]** to define structured, relational-style schemas with fine-grained control over records. Relational schemas support primary key enforcement, record-level versioning, and schema-level relationships through primary and foreign keys. They are also optimized for incremental ingestion using change data capture, and support multiple data models used in Campaign Orchestration, Data Distiller, and B2B implementations.
 
 To learn more, see the [Data Mirror](../../data-mirror/overview.md) or [Relational schema](../../schema/relational.md) overview.
@@ -176,6 +172,12 @@ To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then sel
 Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add field groups](#add-field-groups) to the schema (or [add individual fields](#add-individual-fields) from those groups), [edit field display names](#display-names), or [edit existing custom field groups](./field-groups.md#edit) if the schema employs any.
 
 ## More actions {#more}
+
+>[!NOTE]
+>
+>XDM actions are available from the inventory table and the resource detail view (**[!UICONTROL More]**). Full actions apply only to custom (tenant-defined) resources; standard resources have limited options. See [Manage schemas, classes, field groups, and data types: actions and deletion](../explore.md#xdm-resource-actions).
+
+The following describes Schema Editor header actions.
 
 Within the Schema Editor you can also conduct quick actions to copy the JSON structure of the schema or delete the schema if it has not been enabled for Real-Time Customer Profile or has associated datasets. Select [!UICONTROL More] at the top of the view to display a drop down with quick actions. 
 

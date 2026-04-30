@@ -2,8 +2,6 @@
 title: Demandbase Intent
 description: Learn about the Demandbase Intent source on Experience Platform.
 last-substantial-update: 2025-03-26
-badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
 ---
 # [!DNL Demandbase Intent]
@@ -51,6 +49,10 @@ The restrictions listed below must be taken into consideration when naming your 
 For more information on these credentials, read the [[!DNL Google Cloud Storage] HMAC keys guide](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). For steps on how to generate your own access key, read the [prerequisite guide in the [!DNL Google Cloud Storage] source overview](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account).
 
 ## [!DNL Demandbase] schema
+
+>[!IMPORTANT]
+>
+>When creating a B2B Demandbase Account Intent schema in the Experience Platform UI, make sure to enable Profile ingestion for the schema. For more information, read the guide on [creating and editing schemas in the UI](../../../xdm/ui/resources/schemas.md).
 
 Read this section for information on the [!DNL Demandbase] schema and data structure. 
 

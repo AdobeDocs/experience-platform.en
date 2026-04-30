@@ -4,7 +4,12 @@ title: Data Prep UI Guide
 description: Learn how to use data prep functions in the Experience Platform UI to map CSV files to an XDM schema.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
 ---
-# Data Prep UI Guide
+# Data Prep UI Guide {#data-prep-ui-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_data_prep_import_mapping"
+>title="Download Template"
+>abstract="Download the csv template to perform the mapping offline."
 
 Read this guide to learn how to use [data prep](../home.md) mapping functions in the Adobe Experience Platform user interface to map CSV files to an [Experience Data Model (XDM) schema](../../xdm/home.md).
 

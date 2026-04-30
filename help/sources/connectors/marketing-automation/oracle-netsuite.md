@@ -25,9 +25,9 @@ View the following table for more information on the two [!DNL Oracle NetSuite] 
 | [[!DNL Oracle NetSuite Entities]](#oracle-netsuite-entities) | Customer | Retrieve specific customer data, including details such as customer names, addresses, and key identifiers. |
 | [[!DNL Oracle NetSuite Entities]](#oracle-netsuite-entities) | Contact | Retrieve contact names, emails, phone numbers, and any custom contact-related fields associated with customers. |
 
-## IP address allow list {#ip-allow-list}
+## IP address allowlist {#ip-allow-list}
 
-A list of IP addresses may require to be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform](../../ip-address-allow-list.md) for more information.
 
 ## Prerequisites {#prerequisites}
 

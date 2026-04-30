@@ -1,7 +1,7 @@
 ---
 title: Google Customer Match + Display & Video 360 connection
 description: With the Google Customer Match + Display & Video 360 destination connector, you can use your online and offline data from Experience Platform to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, Gmail, and YouTube.
-badge: Limited Availability
+badge: label="Limited Availability" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
 ---
 # [!DNL Google Customer Match + Display & Video 360] connection
@@ -12,25 +12,25 @@ exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
 
 Use this destination to activate your first-party PII-based [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) lists directly to [!DNL Google Display & Video 360] properties such as [!DNL Search], [!DNL YouTube], [!DNL Gmail], and the [!DNL Google Display Network].
 
-Certain Google-integrated third parties, such as Adobe Real-Time CDP, can use the [!DNL Google Audience Partner API] to create [!DNL Customer Match] audiences directly in customers' [!DNL Display & Video 360] account.
+Certain Google-integrated third parties, such as Adobe [!DNL Real-Time CDP], can use the [!DNL Google Audience Partner API] to create [!DNL Customer Match] audiences directly in customers' [!DNL Display & Video 360] account.
 
 With the newly introduced capability of being able to utilize [!DNL Customer Matched] audiences across [!DNL Display & Video 360], you are now able to target audiences across an expanded roster of inventory sources. 
 
 ![Google Customer Match + DV360 destination in the Adobe Experience Platform UI.](/help/destinations/assets/catalog/advertising/gcm-dv360/catalog.png)
 
-## Important notice about changes to Google destinations related to updated consent requirements in the European Union
+## Important notice about changes to Google destinations related to updated consent requirements in the European Union {#eu-consent-notice}
 
 >[!IMPORTANT]
 >
-> Google is releasing changes to the [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), and the [Display & Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) in order to support the compliance and consent-related requirements defined under the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in the European Union ([EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/)). Enforcement of these changes to consent requirements is live as of March 6, 2024.
+> Google is releasing changes to the [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), and the [Display & Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) to support the compliance and consent-related requirements defined under the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in the European Union ([EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/)). Enforcement of these changes to consent requirements is live as of March 6, 2024.
 ><br/>
 >To adhere to the EU user consent policy and continue creating audience lists for users in the European Economic Area (EEA), advertisers and partners must ensure they are passing end-user consent when uploading audience data. As a Google Partner, Adobe provides you with the necessary tools to comply with these consent requirements under the DMA in the European Union.
 ><br/>
 >Customers who have purchased Adobe Privacy & Security Shield and have configured a [consent policy](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) to filter out non-consented profiles do not need to take any action.
 ><br/>
->Customers who have not purchased Adobe Privacy & Security Shield must use the [segment definition](../../../segmentation/home.md#segment-definitions) capabilities within [Segment Builder](../../../segmentation/ui/segment-builder.md) to filter out non-consented profiles, in order to continue using the existing Real-Time CDP Google Destinations without interruption.
+>Customers who have not purchased Adobe Privacy & Security Shield must use the [segment definition](../../../segmentation/home.md#segment-definitions) capabilities within [Segment Builder](../../../segmentation/ui/segment-builder.md) to filter out non-consented profiles, to continue using the existing [!DNL Real-Time CDP] Google Destinations without interruption.
 
-## When to use this destination
+## When to use this destination {#when-to-use}
 
 Several integrations with Google are available in the destinations catalog and it might be difficult to understand when to use each of the available Google destinations. Make sense of the different use cases by reading the information in the table below:
 
@@ -40,13 +40,13 @@ Several integrations with Google are available in the destinations catalog and i
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when to use this destination, here are sample use cases that Adobe Experience Platform customers can solve by using this feature.
+To help you better understand how and when to use this destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this feature.
 
-### Use case #1
+### Use case #1 {#use-case-1}
 
 An athletic apparel brand wants to reach existing customers through [!DNL Google Search] and [!DNL Google Shopping] to personalize offers and items based on their past purchases and browsing history. The apparel brand can ingest email addresses from their own CRM to Experience Platform, and build audiences from their own offline data. Then, they can send these audiences to the [!DNL Google Customer Match + Display & Video 360] destination to be used across [!DNL Google Display & Video 360] properties such as [!DNL Search], [!DNL YouTube], [!DNL Gmail], and the [!DNL Google Display Network].
 
-### Use case #2
+### Use case #2 {#use-case-2}
 
 A prominent technology company has launched a new phone. To promote this new phone model, they are looking to drive awareness of the new features and functionality of the phone to customers who own previous models of their phones. 
 
@@ -60,8 +60,8 @@ To promote the release, they upload email addresses from their CRM database into
 |---|---|---|
 |GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
 |IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|phone_sha256_e.164|Phone numbers in E164 format, hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
-|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
+|phone_sha256_e.164|Phone numbers in E164 format, hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by [!DNL Adobe Experience Platform]. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
+|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by [!DNL Adobe Experience Platform]. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.|
 
 {style="table-layout:auto"}
 
@@ -69,12 +69,26 @@ To promote the release, they upload email addresses from their CRM database into
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -129,7 +143,7 @@ Customers with compliant accounts are automatically allowlisted by Google.
 
 [!DNL Google] requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to [!DNL Google Customer Match] must be keyed off *hashed* identifiers, such as hashed email addresses or phone numbers.
 
-Depending on the type of IDs that you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements.
+Depending on the type of IDs that you ingest into [!DNL Adobe Experience Platform], you must adhere to their corresponding requirements.
 
 ### Phone number hashing requirements {#phone-number-hashing-requirements}
 
@@ -144,7 +158,7 @@ There are two methods to activate phone numbers in [!DNL Google Customer Match]:
 
 ### Email hashing requirements {#hashing-requirements}
 
-You can hash email addresses before ingesting them into Adobe Experience Platform, or use email addresses in clear in Experience Platform, and have [!DNL Experience Platform] hash them on activation.
+You can hash email addresses before ingesting them into [!DNL Adobe Experience Platform], or use email addresses in clear in Experience Platform, and have [!DNL Experience Platform] hash them on activation.
 
 For more information about Google's hashing requirements and other restrictions on activation, see the following sections in Google's documentation:
 
@@ -157,20 +171,26 @@ To learn about ingesting email addresses in Experience Platform, see the [batch 
 
 If you select to hash the email addresses yourself, make sure to comply with Google's requirements, outlined in the links above.
 
-<!-- ### Using custom namespaces {#custom-namespaces}
+<!-- 
+### Using custom namespaces {#custom-namespaces}
 
-Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. Refer to the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information. -->
+Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. Refer to the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information. 
+-->
 
-<!-- Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
+<!-- 
+Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
-![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
+![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) 
+-->
 
-<!-- ## Configure destination - video walkthrough {#video}
+<!-- 
+## Configure destination - video walkthrough {#video}
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) 
+-->
 
 ## Connect to the destination {#connect}
 
@@ -180,7 +200,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 >abstract="Make sure the Google Account ID that you enter here is already linked to your Adobe account. If you have a manager Google account with multiple client accounts and you intend to export data from Experience Platform to a specific client account, you must link that client account with your Adobe account and enter the Account ID here."
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
@@ -205,17 +225,19 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities* to destinations, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](../../assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
-<!-- In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] audiences to [!DNL Google Customer Match].
+<!-- 
+In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] audiences to [!DNL Google Customer Match].
 
 ![Google Customer Match App ID field highlighted in the Segment schedule step of the activation workflow.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-For details on how to find the [!DNL App ID], refer to the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative. -->
+For details on how to find the [!DNL App ID], refer to the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative. 
+-->
 
 ### Mapping example: activating audience data in [!DNL Google Customer Match + Display & Video 360] {#example-gcm}
 
@@ -243,7 +265,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ## Monitor destination {#monitor-destination}
 
-After connecting to the destination and establishing a destination dataflow, you can use the [monitoring functionality](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP to get extensive information about the profile records activated to your destination in each dataflow run. 
+After connecting to the destination and establishing a destination dataflow, you can use the [monitoring functionality](/help/dataflows/ui/monitor-destinations.md) in [!DNL Real-Time CDP] to get extensive information about the profile records activated to your destination in each dataflow run. 
 
 The monitoring information for the [!DNL Google Customer Match + Display & Video 360] connection includes audience-level information related to activated, excluded, and failed identities in each dataflow and dataflow run. [Read more](/help/dataflows/ui/monitor-destinations.md#segment-level-view) about the functionality. 
 
@@ -251,9 +273,9 @@ The monitoring information for the [!DNL Google Customer Match + Display & Video
 
 After completing the activation flow, switch to your **[!UICONTROL Google Ads]** account. The activated audiences are shown in your Google account as customer lists. Depending on your audience size, some audiences do not populate unless there are over 1000 active users to serve. Find further information in the [Google Audience Partner documentation](https://developers.google.com/audience-partner/api/docs/customer-match/get-started#verify-list). Note that you need to ask Google for access to the documentation in the link.
 
-## Data governance
+## Data governance {#data-governance}
 
-Some destinations in Experience Platform have certain rules and obligations for data sent to, or received from, the destination platform. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform and the destination platform. Adobe Experience Platform provides data governance tools to help you manage some of those data usage obligations. [Learn more](../../../data-governance/labels/overview.md) about data governance tools and policies.
+Some destinations in Experience Platform have certain rules and obligations for data sent to, or received from, the destination platform. You are responsible for understanding the limitations and obligations of your data and how you use that data in [!DNL Adobe Experience Platform] and the destination platform. [!DNL Adobe Experience Platform] provides data governance tools to help you manage some of those data usage obligations. [Learn more](../../../data-governance/labels/overview.md) about data governance tools and policies.
 
 ## Troubleshooting {#troubleshooting}
 

@@ -134,7 +134,7 @@ For more information, see the section on [use in Real-Time Customer Profile](./t
 
 The schema is not automatically enabled for for Real-Time Customer Profile. You need to explicitly enable the dataset for Profile based on which schema is enabled for Profile. See the documentation to learn the [steps and requirements needed to enable a dataset for use in Real-Time Customer Profile](../catalog/datasets/user-guide.md#enable-profile).
 
-### Can I delete Profile-enabled schemas?
+### Can I delete Profile-enabled schemas? {#delete-profile-enabled}
 
 You cannot delete a schema after it has been enabled for Real-Time Customer Profile. Once a schema is enabled for Profile, it cannot be disabled or deleted, and fields cannot be removed from the schema. Therefore, it is crucial to carefully plan and verify the schema configuration before enabling it for Profile. You can however, delete a Profile-enabled dataset. Information is found here: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset> 
 

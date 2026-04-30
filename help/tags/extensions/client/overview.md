@@ -5,10 +5,6 @@ exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
 ---
 # Tag extensions reference
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 The following is a list of documentation for client-side tag extensions. For a list of available server-side extensions, see the [event forwarding extensions reference](../server/overview.md) instead.
 
 >[!NOTE]
@@ -19,7 +15,7 @@ The following is a list of documentation for client-side tag extensions. For a l
 * [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)*
 * [Action Page Refresh](https://exchange.adobe.com/apps/ec/102848)*
 * [Adform Website Tracking](https://exchange.adobe.com/apps/ec/103195)*
-* [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
+* [Adobe Advertising](https://exchange.adobe.com/apps/ec/100155)*
 * [Adobe Analytics](./analytics/overview.md)
 * [Adobe Analytics & Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)*
 * [Adobe Analytics & Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
@@ -43,7 +39,6 @@ The following is a list of documentation for client-side tag extensions. For a l
 * [Adobe Target](./target/overview.md)
 * [Adobe Target v2](./target-v2/overview.md)
 * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)*
-* [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)*
 * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)*
 * [Airbrake JS Notifier](https://exchange.adobe.com/apps/ec/103342)*
 * [Amplitude](https://exchange.adobe.com/apps/ec/108010)*
@@ -59,7 +54,7 @@ The following is a list of documentation for client-side tag extensions. For a l
 * [Cheetah Experiences](https://exchange.adobe.com/apps/ec/102759)*
 * [Clicktale](https://exchange.adobe.com/apps/ec/100082)*
 * [Common Analytics Plugins](./plugins/overview.md)
-* [Common Web SDK Plugins](./web-sdk/web-sdk-plugins.md)
+* [Common Web SDK Plugins](web-sdk-plugins/web-sdk-plugins.md)
 * [Concat](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
 * [Cookie Consent Management by Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/*107037)*

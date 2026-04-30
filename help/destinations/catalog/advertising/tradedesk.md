@@ -8,23 +8,7 @@ exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 
 ## Overview {#overview}
 
-
->[!IMPORTANT]
->
-> Following the [internal upgrade](../../../release-notes/2025/july-2025.md#destinations) to the destinations service from July 2025, you may notice a **drop in the number of activated profiles** in your dataflows to [!DNL The Trade Desk].
-> This drop is caused by improved monitoring visibility. Profiles without ECID are now correctly counted as dropped in the activation metrics. See the [mandatory mapping](#mandatory-mappings) section in this page for detailed information.
->
->**What changed:**
->
->* The destinations service now correctly reports when profiles without ECID are dropped from activation.
->* **Important:** Profiles without ECID never made it to [!DNL The Trade Desk] even before this upgrade. The integration has always required ECID. This upgrade fixes a bug that previously prevented these drops from being visible in your metrics.
->
->**What you need to do:**
->
->* Review your audience data to confirm profiles have valid ECID values.
->* Monitor your activation metrics to verify expected profile counts. Lower counts reflect accurate reporting, not a change in destination behavior.
-
-Use this destination connector to send profile data to [!DNL The Trade Desk]. This connector sends data to the [!DNL The Trade Desk] first-party endpoint. The integration between Adobe Experience Platform and [!DNL The Trade Desk] does not support exporting data to the [!DNL The Trade Desk] third-party endpoint.
+Use this destination connector to send profile data to [!DNL The Trade Desk]. This connector sends data to the [!DNL The Trade Desk] first-party endpoint. The integration between [!DNL Adobe Experience Platform] and [!DNL The Trade Desk] does not support exporting data to the [!DNL The Trade Desk] third-party endpoint.
 
 [!DNL The Trade Desk] is a self-service platform for ad buyers to execute retargeting and audience-targeted digital campaigns across display, video, and mobile inventory sources.
 
@@ -38,16 +22,16 @@ As a marketer, I want to be able to use audiences built off of [!DNL Trade Desk 
 
 [!DNL The Trade Desk] supports the activation of audiences based on the identities shown in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-Below are the identities supported by [!DNL The Trade Desk] destination. These identities can be used to activate audiences to [!DNL The Trade Desk].
+Below are the identities supported by [!DNL The Trade Desk] destination. Use these identities to activate audiences to [!DNL The Trade Desk].
 
-All identities in the table below are mandatory mappings.
+All identities in the table below are preconfigured and automatically mapped during activation. You do not need to manually configure these mappings in the activation workflow.
 
 |Target identity|Description|Considerations|
 |---|---|---|
-|GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|ECID|Experience Cloud ID|This identity is mandatory for the integration to work correctly but is not used for audience activation.|
-|The Trade Desk ID|Advertiser ID in the [!DNL The Trade Desk] platform|Use this identity when activating audiences based on The Trade Desk's proprietary ID.|
+|GAID|Google Advertising ID|Activated when a GAID is present on the profile.|
+|IDFA|Apple ID for Advertisers|Activated when an IDFA is present on the profile.|
+|ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "[!DNL Adobe Experience Cloud] ID", "[!DNL Adobe Experience Platform] ID". Read the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
+|[!DNL Tradedesk]|[!DNL TDID] in the [!DNL The Trade Desk] platform|Activated when a profile has an ECID and an ECID-to-Trade Desk ID mapping exists in Experience Platform.|
 
 {style="table-layout:auto"}
 
@@ -55,12 +39,26 @@ All identities in the table below are mandatory mappings.
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -75,14 +73,21 @@ Refer to the table below for information about the destination export type and f
 
 ## Prerequisites {#prerequisites}
 
->[!IMPORTANT]
->
->If you are looking to create your first destination with [!DNL The Trade Desk] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL The Trade Desk] integrations in Audience Manager, the ID syncs you had set up carry over to Experience Platform.
+Prerequisites depend on which identity types you plan to use for audience activation:
+
+**For mobile ID activation only**, there are no prerequisites. As long as you are collecting and managing IDs (GAID and/or IDFA) for your customers, you can start activating audiences to [!DNL The Trade Desk].
+
+**For cookie-based targeting on [!DNL The Trade Desk]**, make sure that a mapping between ECID and [!DNL Trade Desk ID] is established. Complete the steps below to do so:
+
+1. **Enable ID sync functionality**: If this is your first time setting up [!DNL The Trade Desk ID] activation and you have not enabled the [ID sync functionality](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), contact Adobe Consulting or Customer Care to enable ID syncs. 
+   * If you have previously set up [!DNL The Trade Desk] integrations in Audience Manager, your existing ID syncs automatically carry over to Experience Platform.
+
+2. **Instrument your web pages**: Implement code on your web pages to create mappings between [!DNL The Trade Desk ID] and Adobe ECID. This allows Experience Platform to associate Trade Desk IDs with your customer profiles.
 
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
@@ -112,7 +117,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -122,35 +127,43 @@ In the [Audience schedule](../../ui/activate-segment-streaming-destinations.md#s
 
 When mapping audiences, Adobe recommends that you use the Experience Platform audience name or a shorter form of it, for ease of use. However, the audience ID or name in your destination does not need to match the one in your Experience Platform account. Any value you insert in the mapping field will be reflected by the destination.
 
-### Mandatory mappings {#mandatory-mappings}
+### Preconfigured mappings {#preconfigured-mappings}
 
-All target identities described in the [supported identities](#supported-identities) section must be mapped in the mapping step of the audience activation workflow. This includes:
+>[!CONTEXTUALHELP]
+>id="platform_destinations_required_mappings_ttd"
+>title="Preconfigured mapping sets"
+>abstract="We have preconfigured these four mapping sets for you. When you activate data to The Trade Desk, the profiles qualified for the activated audiences do not necessarily need to have all four identities present on the profiles, as this destination will work with any of the target identities shown here. <br> For cookie-based targeting based on The Trade Desk ID, you need ECID present on the profile and an ID sync mapping between The Trade Desk ID and ECID."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="Read more about the preconfigured mappings"
 
-* [!DNL GAID] (Google Advertising ID)
-* [!DNL IDFA] (Apple ID for Advertisers)
-* [!DNL ECID] (Experience Cloud ID)
+The following identity mappings are **preconfigured and automatically populated** for you in the audience activation workflow:
+
+* GAID (Google Advertising ID)
+* IDFA (Apple ID for Advertisers)
+* ECID (Experience Cloud ID)
 * [!DNL The Trade Desk ID]
 
 ![Screenshot showing the mandatory mappings](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
 
-Mapping all target identities ensures the activation can correctly split and deliver profiles using any identity present. This does not mean that all identities must be present on each profile.
+These mappings are grayed out and read-only. You do not need to configure anything in this step. Select **[!UICONTROL Next]** to continue.
 
-For export to The Trade Desk to succeed, a profile must contain:
+Experience Platform automatically checks each profile that belongs to audiences mapped in the activation workflow for all supported identity types and then activates the profile using any identities that are present.
 
-* [!DNL ECID], and
-* at least one of: [!DNL GAID], [!DNL IDFA], or [!DNL The Trade Desk ID]
+### Identity requirements by activation type {#identity-requirements-by-activation-type}
 
-Examples:
+**Mobile ID activation (GAID/IDFA):** Profiles with just GAID or IDFA are sufficient for activation. No additional identities or prerequisites are required.
 
-* [!DNL ECID] only: not exported
-* [!DNL ECID] + [!DNL The Trade Desk ID]: exported
-* [!DNL ECID] + [!DNL IDFA]: exported
-* [!DNL ECID] + [!DNL GAID]: exported
-* [!DNL IDFA] + [!DNL The Trade Desk ID] (no [!DNL ECID]): not exported
+**Cookie-based targeting ([!DNL Trade Desk ID]):** Requires both:
 
->[!NOTE]
-> 
->Following the [July 2025 upgrade](/help/release-notes/2025/july-2025.md#destinations) to the destinations service, profiles missing [!DNL ECID] are now correctly reported as dropped in activation metrics. This has always been the behavior of the integration - profiles without [!DNL ECID] never reached [!DNL The Trade Desk] - but the drops are now properly visible in your dataflow monitoring. Lower activation counts reflect accurate reporting, not a change in destination functionality.
+* ECID present on the profile
+* An ID sync mapping between the [!DNL Trade Desk ID] and ECID (configured as described in the [prerequisites](#prerequisites) section)
+
+**Multiple IDs behavior:** If a profile contains multiple supported identities, each identity will be activated separately to [!DNL The Trade Desk]. This ensures maximum reach and flexibility in your audience activation.
+
+### Activation examples {#activation-examples}
+
+* **Mobile ID profiles:** Profiles with GAID and/or IDFA are activated using their respective advertising IDs. If a profile contains both GAID and IDFA, each ID will be activated separately.
+* **Cookie-based profile:** A profile with ECID and a corresponding [!DNL Trade Desk ID] mapping will be activated using the Trade Desk ID for cookie-based targeting.
+* **ECID-only profile:** A profile with only ECID and no [!DNL Trade Desk ID] mapping will **not be exported**. ECID alone is insufficient for activation.
 
 ## Exported data {#exported-data}
 

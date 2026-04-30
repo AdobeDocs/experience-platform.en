@@ -93,9 +93,9 @@ First, ensure that you have the latest version of [!DNL VS Code] installed. An o
 
 ![The [!DNL VS Code] editor with the [!DNL GitHub Copilot Menu] displayed and the [!DNL Copilot] icon and Edit Settings highlighted.](../images/clients/github-copilot/github-copilot-menu.png)
 
-Scroll down the options and ensure the check box is enabled for the [!DNL Enable Auto Completions] setting.
+Scroll down the options and ensure that the checkbox is enabled for the [!DNL Enable Auto Completions] setting.
 
-![The settings panel for [!DNL GitHub Copilot] with the Enable Auto Completions check box selected and highlighted.](../images/clients/github-copilot/enable-auto-completions.png)
+![The settings panel for [!DNL GitHub Copilot] with the Enable Auto Completions checkbox selected and highlighted.](../images/clients/github-copilot/enable-auto-completions.png)
 
 ## Code completions {#code-completions}
 
@@ -130,10 +130,11 @@ You can also chat with [!DNL Copilot] directly about your code. Use **Control (o
 
 ![The inline chat window with diff view](../images/clients/github-copilot/inline-chat.png)
 
-<!-- THis section is poss unnecessary:
+<!-- 
+THis section is poss unnecessary:
 There are inline features for chat including doc, expalin, fix and test
 ![fix, document, explain](../images/clients/github-copilot/fix-document-explain.png)
- -->
+-->
 
 ## Dedicated chat view {#dedicated-chat}
 

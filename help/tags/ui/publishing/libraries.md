@@ -5,10 +5,6 @@ exl-id: 4d6f86e6-5684-4635-aaf1-87ba10cd7d94
 ---
 # Libraries
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 A library is a set of instructions for how extensions, data elements, and rules interact with one another after they are deployed. When creating a library, you specify the changes you want to make to your library. At build time, these changes are combined with everything that has been submitted, approved, or published in previous libraries.
 
 Libraries contain the addition or removal of:

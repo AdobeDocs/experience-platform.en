@@ -5,10 +5,6 @@ exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
 ---
 # Core extension overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 The Core tag extension is the default extension released with Adobe Experience Platform.
 
 This document provides information regarding the options available when using the Core extension to build a rule.
@@ -120,7 +116,7 @@ The event triggers if a custom event type occurs. Named JavaScript functions tha
 
 #### Data Element Changed
 
-The event triggers if a specified data element changes. You must provide a name for the data element. You can select the data element by either typing its name into the text field, or selecting the data element icon to the right side of the text field and choosing from a list provided within the dialog that appears.
+The event triggers if a specified data element changes. Polls for changes happen once a second. You must provide a name for the data element. You can select the data element by either typing its name into the text field, or selecting the data element icon to the right side of the text field and choosing from a list provided within the dialog that appears.
 
 #### Direct Call {#direct-call-event}
 
@@ -630,7 +626,7 @@ This action triggers all rules that use a specific [direct call event](#direct-c
 
 ![Screenshot of a Trigger Direct Call action in the Data Collection UI](../../../images/extensions/client/core/direct-call-action.png)
 
-The action maps directly to the [`track` method](../../../ui/client-side/satellite-object.md#track) in the `satellite` object, which can be accessed by client-side code.
+This action maps directly to [`_satellite.track()`](/help/collection/tags/track.md).
 
 ## Core extension data element types
 

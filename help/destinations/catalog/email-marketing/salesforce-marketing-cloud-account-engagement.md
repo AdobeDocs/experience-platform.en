@@ -16,15 +16,15 @@ This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) 
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL Marketing Cloud Account Engagement] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Marketing Cloud Account Engagement] destination, here is a sample use case that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 ### Send emails to contacts for marketing campaigns {#use-case-send-emails}
 
-The marketing department of an online platform wants to broadcast an email-based marketing campaign to a curated audience of B2B leads. The platform's marketing team can add new leads or update existing lead information through Adobe Experience Platform, build audiences from their own offline data, and send these audiences to [!DNL Marketing Cloud Account Engagement], which can then be used to send the marketing campaign email.
+The marketing department of an online platform wants to broadcast an email-based marketing campaign to a curated audience of B2B leads. The platform's marketing team can add new leads or update existing lead information through [!DNL Adobe Experience Platform], build audiences from their own offline data, and send these audiences to [!DNL Marketing Cloud Account Engagement], which can then be used to send the marketing campaign email.
 
 ## Prerequisites {#prerequisites}
 
-Refer to the sections below for any prerequisites that you need to set up in Experience Platform and [!DNL Salesforce] and for information that you need to gather before working with the [!DNL Marketing Cloud Account Engagement] destination.
+See the sections below for any prerequisites that you need to set up in Experience Platform and [!DNL Salesforce] and for information that you need to gather before working with the [!DNL Marketing Cloud Account Engagement] destination.
 
 ### Prerequisites in Experience Platform {#prerequisites-in-experience-platform}
 
@@ -32,7 +32,7 @@ Before activating data to the [!DNL Marketing Cloud Account Engagement] destinat
 
 ### Prerequisites in [!DNL Marketing Cloud Account Engagement] {#prerequisites-destination}
 
-Note the following prerequisites in order to export data from Experience Platform to your [!DNL Marketing Cloud Account Engagement] account:
+Note the following prerequisites to export data from Experience Platform to your [!DNL Marketing Cloud Account Engagement] account:
 
 #### You need to have a [!DNL Marketing Cloud Account Engagement] account {#prerequisites-account}
 
@@ -52,7 +52,7 @@ Note down the items below before you authenticate to the [!DNL Marketing Cloud A
 | --- | --- |
 | `Username` | Your [!DNL Marketing Cloud Account Engagement] account username. |
 | `Password` | Your [!DNL Marketing Cloud Account Engagement] account password. |
-| `Account Engagement Business Unit ID` | To find the Account Engagement Business Unit ID, use Setup in [!DNL Salesforce]. From Setup, enter *Business Unit Setup* in the Quick Find box. Your Account Engagement Business Unit ID begins with `0Uv` and is 18 characters long. If you can't access the Business Unit Setup information, ask your [!DNL Salesforce] Account Administrator to provide you with the `Account Engagement Business Unit ID`. If you require any additional guidance refer to the [[!DNL Salesforce] Authentication](https://developer.salesforce.com/docs/marketing/pardot/guide/authentication) guideline page. |
+| `Account Engagement Business Unit ID` | To find the Account Engagement Business Unit ID, use Setup in [!DNL Salesforce]. From Setup, enter *Business Unit Setup* in the Quick Find box. Your Account Engagement Business Unit ID begins with `0Uv` and is 18 characters long. If you can't access the Business Unit Setup information, ask your [!DNL Salesforce] Account Administrator to provide you with the `Account Engagement Business Unit ID`. If you require any additional guidance, see the [[!DNL Salesforce] Authentication](https://developer.salesforce.com/docs/marketing/pardot/guide/authentication) guideline page. |
 
 {style="table-layout:auto"}
 
@@ -73,6 +73,31 @@ Refer to the [!DNL Marketing Cloud Account Engagement] [rate limits](https://dev
 | Email | Prospect Email Address | Mandatory |
 
 {style="table-layout:auto"}
+
+## Supported audiences {#supported-audiences}
+
+This section describes which types of audiences you can export to this destination.
+
+| Audience origin | Supported | Description |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -101,7 +126,7 @@ To authenticate to the destination, select **[!UICONTROL Connect to destination]
 
 ![Experience Platform UI screenshot showing how to authenticate to Marketing Cloud Account Engagement.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/authenticate-destination.png)
 
-Next, Select [!UICONTROL Allow] in the subsequent window to give permissions to the **Adobe Experience Platform** app to access your [!DNL Salesforce Marketing Cloud Account Engagement] account. *You will need to do this only once*.
+Next, Select [!UICONTROL Allow] in the subsequent window to give permissions to the **[!DNL Adobe Experience Platform]** app to access your [!DNL Salesforce Marketing Cloud Account Engagement] account. *You will need to do this only once*.
 
 ![Salesforce App screenshot confirmation popup to give permissions to the Experience Platform app access to Marketing Cloud Account Engagement.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/allow-app.png)
 
@@ -130,7 +155,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -138,7 +163,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL Marketing Cloud Account Engagement] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination. 
+To correctly send your audience data from [!DNL Adobe Experience Platform] to the [!DNL Marketing Cloud Account Engagement] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Experience Platform account and their corresponding equivalents from the target destination. 
 
 To correctly map your XDM fields to the [!DNL Marketing Cloud Account Engagement] destination fields, follow the steps below.
 
@@ -166,7 +191,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Navigate to one of the audiences you had selected. Select the **[!DNL Activation data]** tab. The **[!UICONTROL Mapping ID]** column displays the name of the custom field which is generated within the [!DNL Marketing Cloud Account Engagement Prospects] page.
 ![Experience Platform UI screenshot example showing the Mapping ID for a selected segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/selected-segment-mapping-id.png)
 
-1. Log in to the [[!DNL Salesforce]](https://login.salesforce.com/) website. Then navigate to the **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** page and check if the prospects from the audience have been added / updated. Alternatively you can also access [[!DNL Salesforce Pardot]](https://pi.pardot.com/) and access the **[!DNL Prospects]** page.
+1. Go to the [[!DNL Salesforce]](https://login.salesforce.com/) website. Then navigate to the **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** page and check if the prospects from the audience have been added / updated. Alternatively you can also access [[!DNL Salesforce Pardot]](https://pi.pardot.com/) and access the **[!DNL Prospects]** page.
 ![Salesforce UI screenshot showing the Prospects page.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospects.png)
 
 1. To check if the prospects have been updated, select a prospect and verify if the custom prospect field has been updated with the Experience Platform audience status.

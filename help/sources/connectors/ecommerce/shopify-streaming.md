@@ -111,7 +111,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \; request_method=POST' \
   -d '{
   "webhook": {
-    "address": "https://dcs.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "address": "https://dcs.adobedc.net/collection/114ae3c01f3ac77c704465f83d7d79be150fc39a5a794a214cd4ab65a5901340?x-adobe-flow-id=d9eb4a58-6a6b-4f11-9dba-6d1e0ed43bad",
     "topic": "orders/create",
     "format": "json"
   }
@@ -119,8 +119,8 @@ curl -X POST \
 ```
 
 | Parameter | Description |
-| --- | --- | 
-| `webhook.address` | The http endpoint where streaming messages are sent. |
+| --- | --- |
+| `webhook.address` | The http endpoint where streaming messages are sent. The template for the webhook is: `https://dcs.adobedc.net/collection/{INLET_ID}?x-adobe-flow-id={FLOW_ID}.` |
 | `webhook.topic` | The topic of your webhook subscription. For more information, read the [[!DNL Shopify] webhook event topics guide](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
 | `webhook.format` | The format of your data. |
 
@@ -132,7 +132,7 @@ A successful response returns information on your webhook, including its corresp
 {
   "webhook": {
     "id": 1091138715786,
-    "address": "https://dcs.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "address": "https://dcs.adobedc.net/collection/114ae3c01f3ac77c704465f83d7d79be150fc39a5a794a214cd4ab65a5901340?x-adobe-flow-id=d9eb4a58-6a6b-4f11-9dba-6d1e0ed43bad",
     "topic": "orders/create",
     "created_at": "2022-07-20T07:15:23-04:00",
     "updated_at": "2022-07-20T07:15:23-04:00",

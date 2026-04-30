@@ -11,7 +11,7 @@ exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
 
 >[!IMPORTANT]
 >
->This destination connector and documentation page are created and maintained by the *Snap Inc* team. For any inquiries or update requests, please contact them directly at *dev-support@snap.com*
+>This destination connector and documentation page are created and maintained by the *Snap Inc* team. For any inquiries or update requests, contact them directly at *dev-support@snap.com*
 
 ## Use cases {#use-cases}
 
@@ -19,7 +19,7 @@ This destination allows marketers to import user audiences created in Experience
 
 ## Prerequisites {#prerequisites}
 
-To use this destination, you must have a Snapchat Ads account. Please refer to this documentation for information about how to create one:
+To use this destination, you must have a Snapchat Ads account. Refer to this documentation for information about how to create one:
 
 [Get Started with Snapchat Advertising](https://businesshelp.snapchat.com/s/article/overview?language=en_US)
 
@@ -36,12 +36,12 @@ The *Snap Inc* destination supports the activation of identities described in th
 All identifiers sent to the *Snap Inc* destination must be hashed in SHA-256 format. To hash plain text identifiers before sending them to the destination, check the **[!UICONTROL Apply transformation]** option when mapping target identifiers for the destination. 
 
 >[!WARNING]
-> 
+>
 > Unhashed identifiers will not be accepted by the Snap Inc destination and sending them could cause errors.
 
 
 >[!IMPORTANT]
-> 
+>
 > The Snap Inc destination does not support multiple identities. Please select only one identity.
 
 |Target Identity|Description|Considerations|
@@ -57,13 +57,27 @@ All identifiers sent to the *Snap Inc* destination must be hashed in SHA-256 for
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
-|[!DNL Federated Audience Composition] | ✓ | Audiences imported into Experience Platform through [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences).| 
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
+|[!DNL Federated Audience Composition] | Yes | Audiences imported into Experience Platform through [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences).|
 
 {style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -79,22 +93,22 @@ Refer to the table below for information about the destination export type and f
 ## Connecting to Snap Inc {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 ### Authenticate to destination {#authenticate}
 
 To authenticate to the destination, follow these steps:
 
-1. Find the *Snap Inc* destination from Adobe Experience Platform's Destination Catalog and select **Set Up**.
+1. Find the *Snap Inc* destination from [!DNL Adobe Experience Platform]'s Destination Catalog and select **Set Up**.
 2. Select **[!UICONTROL Connect to destination]**. You will be redirected to the following screen:
     ![Auth Screen 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
 3. Enter your Snapchat credentials and select **Log In**.
-4. You will be shown the Snapchat data that Adobe Experience Platform will be be able to access. Select **Continue** to proceed with the connection process. 
+4. You will be shown the Snapchat data that [!DNL Adobe Experience Platform] will be be able to access. Select **Continue** to proceed with the connection process. 
 
 ![Auth Screen 2](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
 
-After selecting continue, wait until you are redirected back to Adobe Experience Platform.
+After selecting continue, wait until you are redirected back to [!DNL Adobe Experience Platform].
 
 ### Fill in destination details {#destination-details}
 
@@ -104,10 +118,10 @@ To configure details for the destination, fill in the required fields and select
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Account ID]**: The Ad Account ID that is associated with the Ad Account that you will like to import your audiences to. For more information about how to find this, please refer to [this documentation on the Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+*  **[!UICONTROL Account ID]**: The Ad Account ID that is associated with the Ad Account that you will like to import your audiences to. For more information about how to find this, see [this documentation on the Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
-> 
+>
 >Entering an incorrect or invalid Snapchat Ad Account ID will cause audience activation to fail. Please double check that you have entered the proper Ad Account ID.
 
 ### Enable alerts {#enable-alerts}
@@ -119,7 +133,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -130,11 +144,11 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 After activating audiences to the *Snap Inc* destination, you will be able to see the audiences in the Snap Ads Manager's [**Audiences** section](https://businesshelp.snapchat.com/s/article/audience-sharing). To navigate to this section, follow these steps:
 
 1. Log into the [Snap Ads Manager](https://ads.snapchat.com/)
-2. Select **Audiences** from the pulldown menu in the upper left corner of the screen. You will see the audiences that you activated in Adobe Experience Platform in the Audience Library:
+2. Select **Audiences** from the pulldown menu in the upper left corner of the screen. You will see the audiences that you activated in [!DNL Adobe Experience Platform] in the Audience Library:
 
 ![Audiences](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Please note that when an Adobe audience is first activated to Snap Inc, you will initially see it as an empty audience. This is because Adobe Experience Platform does not export member data to Snap Inc until it evaluates the audience. For more information about how audiences are evaluated in Experience Platform, please refer to the [Segmentation Service overview](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
+Note that when an Adobe audience is first activated to Snap Inc, you will initially see it as an empty audience. This is because [!DNL Adobe Experience Platform] does not export member data to Snap Inc until it evaluates the audience. For more information about how audiences are evaluated in Experience Platform, see the [Segmentation Service overview](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
 
 ## Data usage and governance {#data-usage-governance}
 

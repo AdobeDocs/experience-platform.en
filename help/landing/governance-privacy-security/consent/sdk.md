@@ -21,8 +21,8 @@ This tutorial assumes that you have already determined how to generate consent d
 This guide follows the workflow for setting up the SDK using the tag extension in the UI. If you do not want to use the extension and would prefer to directly embed the standalone version of the SDK on your site, please refer to the following docs instead of this guide:
 
 * [Configure a datastream](/help/datastreams/overview.md)
-* [Install the SDK](/help/web-sdk/install/overview.md)
-* [Configure the SDK for consent commands](/help/web-sdk/commands/configure/defaultconsent.md)
+* [Install the SDK](/help/collection/js/install/overview.md)
+* [Configure the SDK for consent commands](/help/collection/js/commands/configure/defaultconsent.md)
 
 The installation steps in this guide require a working understanding of tag extensions and how they are installed in web applications. Refer to the following documentation for more information:
 
@@ -40,7 +40,7 @@ After creating a new datastream or selecting an existing one to edit, select the
 
 | Datastream field | Value |
 | --- | --- |
-| [!UICONTROL Sandbox] | The name of the Experience Platform [sandbox](../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the datastream. |
+| [!UICONTROL Sandbox] | The name of the Experience Platform [sandbox](/help/sandboxes/home.md) that contains the required streaming connection and datasets to set up the datastream. |
 | [!UICONTROL Event Dataset] | An [!DNL XDM ExperienceEvent] dataset that you plan on sending event data to using the SDK. While you are required to provide an event dataset in order to create an Experience Platform datastream, please note that consent data sent via events is not honored in downstream enforcement workflows. |
 | [!UICONTROL Profile Dataset] | The [!DNL Profile]-enabled dataset with customer consent fields that you created [earlier](#prerequisites). |
 
@@ -86,7 +86,7 @@ Once the data element is created, navigate back to the Web SDK extension config 
 
 ### Deploy the extension on your website
 
-Once you have finished configuring the extension, it can be integrated into your website. Refer to the [publishing guide](../../../tags/ui/publishing/overview.md) in the tags documentation for detailed information on how to deploy your updated library build.
+Once you have finished configuring the extension, it can be integrated into your website. Refer to the [publishing guide](/help/tags/ui/publishing/overview.md) in the tags documentation for detailed information on how to deploy your updated library build.
 
 ## Making consent-change commands {#commands}
 
@@ -95,7 +95,7 @@ Once you have integrated the SDK extension into your website, you can start usin
 The `setConsent` command performs two actions: 
 
 1. Updates the user's profile attributes directly in the Profile store. This does not send any data to the data lake.
-1. Creates an [Experience Event](../../../xdm/classes/experienceevent.md) that records a timestamped account of the consent change event. This data is sent directly to the data lake and can be used to keep track of consent preference changes over time.
+1. Creates an [Experience Event](/help/xdm/classes/experienceevent.md) that records a timestamped account of the consent change event. This data is sent directly to the data lake and can be used to keep track of consent preference changes over time.
 
 ### When to call `setConsent`
 
@@ -106,7 +106,7 @@ There are two scenarios where `setConsent` should be called on your site:
 
 ### `setConsent` syntax
 
-The [`setConsent`](/help/web-sdk/commands/setconsent.md) command expects a payload object that contains a single array-type property: `consent`. The `consent` array must contain at least one object that provides the required consent fields for the Adobe standard.
+The [`setConsent`](/help/collection/js/commands/setconsent.md) command expects a payload object that contains a single array-type property: `consent`. The `consent` array must contain at least one object that provides the required consent fields for the Adobe standard.
 
 The required consent fields for the Adobe standard are shown in the following example `setConsent` call:
 
@@ -189,9 +189,9 @@ var setConsent = function () {
 
 ## Handling SDK responses
 
-All [!DNL Experience Platform SDK] commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See [Command responses](/help/web-sdk/commands/command-responses.md) for more information.
+All [!DNL Experience Platform SDK] commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See [Command responses](/help/collection/js/commands/command-responses.md) for more information.
 
-Once you have successfully made `setConsent` calls with the SDK, you can use the profile viewer in the Experience Platform UI to verify whether data is landing in the Profile store. See the section on [browsing profiles by identity](../../../profile/ui/user-guide.md#browse-identity) for more information.
+Once you have successfully made `setConsent` calls with the SDK, you can use the profile viewer in the Experience Platform UI to verify whether data is landing in the Profile store. See the section on [browsing profiles by identity](/help/profile/ui/user-guide.md#browse-identity) for more information.
 
 ## Next steps
 

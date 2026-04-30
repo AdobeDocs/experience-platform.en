@@ -126,6 +126,10 @@ The following table outlines key terms related to Data Governance and theData Go
 
 The following video is intended to support your understanding of the Data Governance framework.
 
+>[!IMPORTANT]
+>
+>The video references applying labels to individual dataset fields. This workflow has been deprecated. [Labels must now be applied at the schema field level](./e2e.md#labels). The concepts in the video remain accurate, but the labeling workflow has changed.
+
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
 The following video provides guidance on how to apply data usage labels to your schemas or the entirety of a dataset in Experience Platform.

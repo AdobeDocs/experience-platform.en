@@ -10,10 +10,6 @@ exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 >title="Asynchronous deployment"
 >abstract="If this option is enabled, when this script tag is parsed the browser will begin loading the JavaScript file, but instead of waiting for the library to be loaded and executed, it will continue to parse and render the rest of the document. This can improve web page performance but has important implications when it comes to how certain rules are executed. See the documentation for details."
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Performance and non-blocking deployment of the JavaScript libraries required by our products is increasingly important to Adobe Experience Cloud users. Tools like [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) recommend that users change they way they deploy the Adobe libraries on their site. This article explains how to use the Adobe JavaScript libraries in an asynchronous fashion.
 
 ## Synchronous vs asynchronous

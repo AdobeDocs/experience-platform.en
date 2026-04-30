@@ -12,10 +12,6 @@ exl-id: bb92c77a-6c7a-47df-885a-794cf55811dd
 >
 >Data Mirror and relational schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
 
->[!NOTE]
->
->Relational schemas were previously referred to as model-based schemas in earlier versions of Adobe Experience Platform documentation. The functionality remains the same.
-
 Data Mirror is an Adobe Experience Platform capability that enables row-level change ingestion from external databases into the data lake using relational schemas. It preserves data relationships, enforces uniqueness, and supports versioning without requiring upstream extract, transform, load (ETL) processes.
 
 Use Data Mirror to synchronize inserts, updates, and deletes (mutable data) from external systems such as [!DNL Snowflake], [!DNL Databricks], or [!DNL BigQuery] directly into Experience Platform. This helps you preserve your existing database model structure and data integrity as you bring data into Platform.

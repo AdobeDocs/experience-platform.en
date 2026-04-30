@@ -21,9 +21,9 @@ Experience Platform provides support for ingesting data from a third-party datab
 
 Follow the steps below to learn how you can set up your [!DNL Amazon Redshift] account for Experience Platform on Azure.
 
-### IP address allow list
+### IP address allowlist
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform on Azure. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform on Azure](../../ip-address-allow-list.md) for more information.
 
 ## Set up your [!DNL Amazon Redshift] source for Experience Platform on Amazon Web Services {#aws}
 

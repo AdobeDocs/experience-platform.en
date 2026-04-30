@@ -9,7 +9,7 @@ exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
 
 ## Overview {#overview}
 
-The **[!UICONTROL Accounts]** tab shows you details about the connections that you have established with various destinations. Refer to the [Accounts overview](../ui/destinations-workspace.md#accounts) for all the information you can get on each destination account.
+The **[!UICONTROL Accounts]** tab shows details about the connections that you have established with various destinations. See the [Accounts overview](../ui/destinations-workspace.md#accounts) for all the information available for each destination account.
 
 This tutorial covers the steps to delete destination accounts that are not needed anymore by using the Experience Platform UI.
 
@@ -23,7 +23,7 @@ This tutorial covers the steps to delete destination accounts that are not neede
 
 Follow the steps below to delete existing destination accounts.
 
-1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Accounts]** from the top header to view your existing accounts.
+1. Go to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Accounts]** from the top header to view your existing accounts.
 
     ![Accounts tab](../assets/ui/delete-accounts/accounts-tab.png)
 
@@ -39,8 +39,8 @@ Follow the steps below to delete existing destination accounts.
 
 ![Confirm account deletion](../assets/ui/delete-accounts/confirm-account-deletion.png)
 
-## Next steps
+## Next steps {#next-steps}
 
-By following this tutorial, you have successfully used the destinations workspace to delete existing accounts.
+You have successfully used the destinations workspace to delete existing accounts.
 
-For steps on how to perform these operations programmatically using the [!DNL Flow Service] API, please refer to the tutorial on [deleting connections using the Flow Service API](../api/delete-destination-account.md)
+For steps on how to perform these operations programmatically using the [!DNL Flow Service] API, refer to the tutorial on [deleting connections using the Flow Service API](../api/delete-destination-account.md)

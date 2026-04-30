@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;relational schema;relational schemas;schema;Schema;xdm;experience data model;
 solution: Experience Platform
 title: Relational schemas
-description: Learn about relational schemas (formerly known as model-based schemas) in Adobe Experience Platform, including features, required fields, relationships, and limitations.
+description: Learn about relational schemas in Adobe Experience Platform, including features, required fields, relationships, and limitations.
 badge: Limited Availability
 exl-id: 397e5937-b892-4fd3-b90e-29ed9229dc69
 ---
@@ -17,10 +17,6 @@ Relational schemas provide a flexible, controlled modeling pattern for represent
 >[!IMPORTANT]
 >
 >Data deletion considerations apply to all relational schema implementations. Applications using these schemas must understand how deletions affect related datasets, compliance requirements, and downstream processes. Plan for deletion scenarios and review [data hygiene guidance](../../hygiene/ui/record-delete.md#relational-record-delete) before implementation.
-
->[!NOTE]
->
->Relational schemas were previously referred to as model-based schemas in earlier versions of the Adobe Experience Platform documentation.
 
 Use relational schemas to:
 
