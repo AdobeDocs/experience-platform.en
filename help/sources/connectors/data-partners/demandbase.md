@@ -194,7 +194,7 @@ Intent data can be utilized in [Account Audiences](../../../segmentation/types/a
 
 +++
 
-### Is there a plan to add the standard [!DNL Account Key] field group to the [!DNL Demandbase Account Intent] schema, or should I continue using only the custom field group?
+### Is there a plan to add the standard [!DNL Account Key] field group to the [!DNL Demandbase Account Intent] schema?
 
 +++Answer
 
