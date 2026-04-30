@@ -94,6 +94,12 @@ After establishing a connection to a destination and completing the activation w
 
 You can also validate if data is coming through successfully to your destination. Most destination documentation pages in the catalog have a *Validate data export section*, which indicates how you can check in the destination platform that data is being successfully brought in from Experience Platform. View an example of this section for the [Amazon Ads destination](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
 
+## Data encryption {#encryption}
+
+All data in transit exported from [!DNL Experience Platform] through destinations travels over secure, encrypted connections using [HTTPS TLS 1.2](https://datatracker.ietf.org/doc/html/rfc5246) or newer. The TLS protocol used by [!DNL Experience Platform] in outbound communication also supports [Server Name Indication (SNI)](https://www.rfc-editor.org/rfc/rfc6066#page-6).
+
+For more information about how data is ingested, encrypted, and persisted, see [data encryption in Experience Platform](../landing/governance-privacy-security/encryption.md).
+
 ## Data governance restrictions on activating data to destinations {#data-governance}
 
 Data governance is enforced for Experience Platform destinations through:
