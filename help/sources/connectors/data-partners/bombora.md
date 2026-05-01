@@ -201,11 +201,11 @@ Intent data can be utilized in [Account Audiences](../../../segmentation/types/a
 
 +++
 
-### Is there a plan to add the standard [!DNL Account Key] field group to the [!DNL Bombora Account Intent] schema?
+### Is the standard [!DNL Account Key] field group compatible with the [!DNL Bombora Account Intent] schema?
 
 +++Answer
 
-Currently, there are no plans to add the standard [!DNL Account Key] field group to the [!DNL Bombora Account Intent] schema. You should continue using the existing approach with the `accountID` field for establishing relationships with the B2B Account schema. This avoids the need to introduce the entire field group in either the referencing or source schema.
+No. Use the `accountID` field for establishing relationships with the B2B Account schema. This avoids the need to introduce the entire field group in either the referencing or source schema.
 +++
 
 ### How does the [!DNL Bombora Account Intent] schema establish a relationship with the B2B Account schema?
@@ -220,6 +220,6 @@ The [!DNL Bombora Account Intent] schema uses the `accountID` field to link to t
 
 +++Answer
 
-[!DNL Bombora Intent] schemas were designed with a focus on storage and processing efficiency. Rather than using an entire field group, the schema uses a streamlined single field (`accountID`) for establishing relationships, which reduces complexity and aligns with optimal processing patterns for intent data. As a result, there are no immediate plans to add the full [!DNL Account Key] field group to the [!DNL Bombora Intent] schema.
+[!DNL Bombora Intent] schemas focus on storage and processing efficiency. Rather than using an entire field group, the schema uses a streamlined single field (`accountID`) for establishing relationships. This reduces complexity and aligns with optimal processing patterns for intent data.
 
 +++
