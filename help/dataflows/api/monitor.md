@@ -195,3 +195,5 @@ A successful response returns details regarding your flow run, including informa
 ## Next steps
 
 By following this tutorial, you have retrieved metrics and error information on your dataflow using the [!DNL Flow Service] API. You can now continue to monitor your dataflow, depending on your ingestion schedule, to track its status and ingestion rates. For information on how to monitor dataflows for sources, please read the [monitoring dataflows for sources using the user interface](../ui/monitor-sources.md) tutorial. For more information on how to monitor dataflows for destinations, please read the [monitoring dataflows for destinations using the user interface](../ui/monitor-destinations.md) tutorial.
+
+To send multiple XDM entities to a dataflow, use a `messages` array in your HTTP request or upload a file (CSV, JSON, or Parquet) with multiple records. For detailed guidance and best practices, read [how to send multiple XDM entities to a dataflow](../../ingestion/tutorials/streaming-multiple-messages.md#send-multiple-xdm-entities-to-a-dataflow).
