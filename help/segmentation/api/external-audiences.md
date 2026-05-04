@@ -751,7 +751,7 @@ You now want to confirm that the audience has successfully been processed. Make 
 
 When you add the audience to a destination, there is a 30 minute configuration between the audience and destination. Wait for at least 30 minutes before triggering the flow run.
 
-Once you've added the audience to a destination, you can now trigger a flow run to ingest the data into your destination.
+Once you've added the audience to a destination, you can trigger an audience ingestion to activate the data into your destination.
 
 >[!IMPORTANT]
 >
