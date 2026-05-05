@@ -56,9 +56,8 @@ The following takes place after a [record delete request](./ui/record-delete.md)
 
 | Stage | Approx. timing | Description |
 | --- | --- | --- |
-| Request submitted and batched | Day 1–15 | A work order is created and queued. Requests are batched for up to 14 days before processing begins. Batching is the primary reason deletion is not immediate. |
-| Downstream systems processed | Day 16 | Identity Service, Real-Time Customer Profile, and Adobe Journey Optimizer receive the record delete request and begin execution. These systems are processed before the data lake. |
-| Data lake deletion | Approx. day 25 | Records are removed from the data lake. The data lake is required to retain all data and is the last system to delete as a data integrity measure. |
+| Request submitted and batched | Day 1–15 | A work order is created and queued. Requests may be queued and batched for up to 14 days before processing begins. Batching is the primary reason deletion is not immediate. |
+| Downstream systems process deletion request | Day 16–25 | Downstream services receive and execute the record delete request. |
 | Buffer — integrity checks and resubmissions | Day 25–30 | A buffer window allows for integrity checks and resubmission of any failed jobs before the SLA window closes. The work order status updates to `completed` once all systems confirm deletion. |
 
 {style="table-layout:auto"}
