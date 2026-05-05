@@ -25,12 +25,13 @@ The [!UICONTROL Data Lifecycle] UI is built on top of the Data Hygiene API, whos
 
 ## Timelines and transparency {#timelines-and-transparency}
 
-[Record delete](./ui/record-delete.md) and dataset expiration requests each have their own processing timelines and provide transparency updates at key points in their respective workflows. 
+[Record delete](./ui/record-delete.md) and dataset expiration requests each have their own processing timelines and provide transparency updates at key points in their respective workflows.
 
 >[!TIP]
 >
->To monitor your current usage against quota limits, see the [Quota reference guide](./api/quota.md).  
->For entitlement rules, monthly caps, SLA timelines, and exception handling policies, see the [Record delete (UI)](./ui/record-delete.md#quotas) and [Workorder (API)](./api/workorder.md#quotas) documentation.
+>For additional reference information:
+>- To monitor your current usage against quota limits, see the [Quota reference guide](./api/quota.md).
+>- For entitlement rules, monthly caps, SLA timelines, and exception handling policies, see the [Record delete quota guide (UI)](./ui/record-delete.md#quotas) and [Work order quota guide (API)](./api/workorder.md#quotas).
 
 The following takes place when a [dataset expiration request](./ui/dataset-expiration.md) is created:
 
@@ -45,6 +46,24 @@ The following takes place when a [dataset expiration request](./ui/dataset-expir
 
 {style="table-layout:auto"}
 
-## Next steps
+### Record delete timelines {#record-delete-transparency}
 
-This document provided an overview of Experience Platform's Data Lifecycle capabilities. To get started making data hygiene requests in the UI, refer to the [UI guide](./ui/overview.md). To learn how to create Data Lifecycle jobs programmatically, refer to the [Data Hygiene API guide](./api/overview.md)
+The following takes place after a [record delete request](./ui/record-delete.md) is submitted.
+
+>[!NOTE]
+>
+>Timings are approximate and vary based on system load, batch scheduling, and entitlement tier. The end-to-end SLA (30 days standard, 15 days for Privacy and Security Shield or Healthcare Shield) is the operative commitment.
+
+| Stage | Approx. timing | Description |
+| --- | --- | --- |
+| Request submitted and batched | Day 1–15 | A work order is created and queued. Requests may be queued and batched for up to 14 days before processing begins. Batching is the primary reason deletion is not immediate. |
+| Downstream systems process deletion request | Day 16–25 | Downstream services receive and execute the record delete request. |
+| Buffer — integrity checks and resubmissions | Day 25–30 | A buffer window allows for integrity checks and resubmission of any failed jobs before the SLA window closes. The work order status updates to `completed` once all systems confirm deletion. |
+
+{style="table-layout:auto"}
+
+For entitlement-based queue durations and maximum SLA values, see [Processing timelines for identifier submissions](./ui/record-delete.md#sla-processing-timelines).
+
+## Next steps {#next-steps}
+
+This document provides an overview of Experience Platform's Data Lifecycle capabilities. To get started making data hygiene requests in the UI, see the [data lifecycle UI guide](./ui/overview.md). To create Data Lifecycle jobs programmatically, see the [Data Hygiene API guide](./api/overview.md).
