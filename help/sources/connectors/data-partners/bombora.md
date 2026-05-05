@@ -200,3 +200,26 @@ Domain matching in Experience Platform is based on an exact match of the scrubbe
 Intent data can be utilized in [Account Audiences](../../../segmentation/types/account-audiences.md) to enhance targeting, segmentation, and personalization. By leveraging intent signals, businesses can identify and engage with accounts showing high interest in specific topics, optimizing marketing and sales outreach.
 
 +++
+
+### Is the standard [!DNL Account Key] field group compatible with the [!DNL Bombora Account Intent] schema?
+
++++Answer
+
+No. Use the `accountID` field for establishing relationships with the B2B Account schema. This avoids the need to introduce the entire field group in either the referencing or source schema.
++++
+
+### How does the [!DNL Bombora Account Intent] schema establish a relationship with the B2B Account schema?
+
++++Answer
+
+The [!DNL Bombora Account Intent] schema uses the `accountID` field to link to the corresponding B2B Account record. This field is automatically populated during ingestion when a matching domain is found in both datasets. Specifically, the `accountID` in the [!DNL Bombora] schema references the `accountKey.sourceKey` in the standard B2B Account schema.
+
++++
+
+### Why does the [!DNL Bombora Account Intent] schema use `accountID` instead of the typical [!DNL Account Key] field group structure?
+
++++Answer
+
+[!DNL Bombora Intent] schemas focus on storage and processing efficiency. Rather than using an entire field group, the schema uses a streamlined single field (`accountID`) for establishing relationships. This reduces complexity and aligns with optimal processing patterns for intent data.
+
++++
