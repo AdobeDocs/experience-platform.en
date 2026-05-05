@@ -3,14 +3,13 @@ title: Manage Query Service sessions in Adobe Experience Platform
 description: Learn how administrators can view, monitor, and end active Query Service sessions to free idle capacity and maintain reliable Data Distiller workflows.
 keywords: Experience Platform;Query Service;sessions;session management;Data Distiller;admin
 solution: Experience Platform
-badgeLimitedAvailability: label="Limited availability" type="Informative"
 exl-id: f986177a-9a46-4fc6-927e-98b6b7dc8cfe
 ---
 # Manage Query Service sessions
 
 >[!AVAILABILITY]
 >
->Session management for Query Service is currently in limited availability and is only available to organizations with **Data Distiller** entitlements. To request access, contact your Adobe Account Team.
+>Session management for Query Service is only available to organizations with **Data Distiller** entitlements. To request access, contact your Adobe Account Team.
 
 Use this guide to manage active Query Service sessions from the Adobe Experience Platform user interface. Session management helps administrators monitor concurrent Query Editor sessions across sandboxes and free capacity when users leave sessions open.
 

@@ -66,7 +66,7 @@ role: Developer
     * [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)
     * [Action Page Refresh](https://exchange.adobe.com/apps/ec/102848)
     * [Adform Website Tracking](https://exchange.adobe.com/apps/ec/103195)
-    * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)
+    * [Adobe Advertising](https://exchange.adobe.com/apps/ec/100155)
     * Adobe Analytics {#analytics}
       * [Overview](./extensions/client/analytics/overview.md)
       * [Shared modules](./extensions/client/analytics/shared-modules.md)
@@ -151,7 +151,7 @@ role: Developer
       * [Overview](./extensions/client/target-v2/overview.md)
       * [Release notes](./extensions/client/target-v2/release-notes.md)
     * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)
-    * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
+    * [Adobe Advertising](https://exchange.adobe.com/apps/ec/100640)
     * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)
     * [Airbrake JS Notifier](https://exchange.adobe.com/apps/ec/103342)
     * [!DNL Algolia] Insights {#algolia-insights}

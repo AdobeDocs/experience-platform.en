@@ -5,10 +5,6 @@ exl-id: a5cf4817-a4c2-4cf1-8f3a-7e92b807de8f
 ---
 # `pushNotifications` {#push-notifications}
 
->[!AVAILABILITY]
->
->Push notifications for the Web SDK are currently in **beta**. The functionality and documentation are subject to change.
-
 The `pushNotifications` property lets you configure push notifications for web applications. This feature allows your web app to receive messages pushed from a server, even when the website is not currently loaded in the browser.
 
 ## Prerequisites {#prerequisites}
