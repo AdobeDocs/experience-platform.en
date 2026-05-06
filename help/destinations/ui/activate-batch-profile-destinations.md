@@ -649,6 +649,68 @@ If you want to activate external audiences to your destinations without exportin
 
 Select **[!UICONTROL Next]** to move to the [Review](#review) step.
 
+### Export arrays and objects from enrichment attributes {#export-arrays-enrichment-attributes}
+
+>[!AVAILABILITY]
+>
+>The ability to export arrays and objects from enrichment attributes is in beta and available to select customers. To request access, contact your Adobe representative.
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_info_alert"
+>title="Hierarchical output enabled"
+>abstract="This destination supports hierarchical output because the Enable export of arrays, maps, and objects toggle is on. You can export top-level arrays, array elements, or multiple fields from the same array in one mapping. See the documentation for details."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_source_field"
+>title="Source field"
+>abstract="Select an enrichment attribute to export. For fields inside an array, the source auto-populates with a transform expression. To export multiple fields in one mapping, add one field first, then edit the source expression. See the documentation for details."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_target_field"
+>title="Target field"
+>abstract="The target field auto-populates with the source field name. Edit it to use a different alias if you want the field to have a different name in your exported files."
+
+When exporting [!UICONTROL Custom upload] audiences to cloud storage destinations with JSON or [!DNL Parquet] output and [hierarchical output enabled](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle), you can export complex data structures, including selected fields from arrays of objects, as enrichment attributes.
+
+The enrichment attributes step shows a two-column mapping interface:
+
+* **[!UICONTROL Source field]**: the full schema path, which may include a calculated `transformArray` expression when the selected field is inside an array.
+* **[!UICONTROL Target field]**: the alias used as the field name in the exported file. Edit this to give the exported field a shorter or more meaningful name.
+
+This functionality is available only when all three conditions are met:
+
+* The destination connection has file type set to JSON or [!DNL Parquet].
+* The destination connection has hierarchical output enabled.
+* You are activating a [!UICONTROL Custom upload] audience.
+
+#### Export a single field from an array {#export-single-array-field}
+
+When you select a field that is nested inside an array of objects, the **[!UICONTROL Source field]** automatically populates with a `transformArray` calculated expression that extracts that field from every object in the array.
+
+For example, selecting `someArray[*].amount` produces:
+
+```
+transformArray(someArray, x->x.amount)
+```
+
+The exported output contains an array of values for that field across all objects.
+
+#### Export multiple fields from an array in one mapping {#export-multiple-array-fields}
+
+To export multiple fields from the same array as a single mapped output, add the first field and then manually edit the generated `transformArray` expression in the **[!UICONTROL Source field]** to use the `to_object` function.
+
+For example, to export both `apples` and `date` from `someArray`:
+
+```
+transformArray(someArray, x-> to_object('apples', x.apples, 'date', x.date))
+```
+
+Each object in the exported array contains only the specified fields.
+
+>[!NOTE]
+>
+>The UI currently supports selecting one field at a time from an array. To export multiple fields from the same array in one mapping, add the first field and then edit the source expression manually as shown above.
+
 ## Review {#review}
 
 >[!NOTE]
