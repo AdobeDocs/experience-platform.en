@@ -655,21 +655,6 @@ Select **[!UICONTROL Next]** to move to the [Review](#review) step.
 >
 >The ability to export arrays and objects from enrichment attributes is in beta and available to select customers. To request access, contact your Adobe representative.
 
->[!CONTEXTUALHELP]
->id="platform_destinations_enrichment_attributes_info_alert"
->title="Hierarchical output enabled"
->abstract="This destination supports hierarchical output because the Enable export of arrays, maps, and objects toggle is on. You can export top-level arrays, array elements, or multiple fields from the same array in one mapping. See the documentation for details."
-
->[!CONTEXTUALHELP]
->id="platform_destinations_enrichment_attributes_source_field"
->title="Source field"
->abstract="Select an enrichment attribute to export. For fields inside an array, the source auto-populates with a transform expression. To export multiple fields in one mapping, add one field first, then edit the source expression. See the documentation for details."
-
->[!CONTEXTUALHELP]
->id="platform_destinations_enrichment_attributes_target_field"
->title="Target field"
->abstract="The target field auto-populates with the source field name. Edit it to use a different alias if you want the field to have a different name in your exported files."
-
 When exporting [!UICONTROL Custom upload] audiences to cloud storage destinations with JSON or [!DNL Parquet] output and [hierarchical output enabled](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle), you can export complex data structures, including selected fields from arrays of objects, as enrichment attributes.
 
 The enrichment attributes step shows a two-column mapping interface:
