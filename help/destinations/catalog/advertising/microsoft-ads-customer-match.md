@@ -3,8 +3,6 @@ keywords: advertising; microsoft ads; customer match;
 title: Microsoft Ads Customer Match connection
 description: Use the Microsoft Ads Customer Match destination to match customers by email address and reengage with them across the Microsoft Advertising Network, including Search and Audience ads.
 badge: label="Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
 ---
 # [!DNL Microsoft Ads Customer Match] connection {#microsoft-ads-customer-match-destination}
