@@ -99,7 +99,9 @@ To load these packages, in the Platform UI, select **[!UICONTROL Sandboxes]** fr
 }
 ```
 
-Once the package is created, select it and click [!UICONTROL Import Package].
+For more information on loading the package, see the [package sharing tutorial](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs#create-a-new-package-using-a-package-payload).
+
+Once the package is created, select it and click [!UICONTROL Import Package] in the "..." menu. For more imformation on importing the package, see [the sandbox tooling guide](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling#import-entire-sandbox-package)
 
 ## Connect your [!DNL LAVA] account
 
