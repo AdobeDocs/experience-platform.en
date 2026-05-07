@@ -1,7 +1,6 @@
 ---
 title: Create a source connection and dataflow to stream LAVA data using the Flow Service API
 description: Learn how to bring streaming data from LAVA to Adobe Experience Platform using the Flow Service API.
-exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
 badge: Beta
 ---
 # Create a source connection and dataflow to stream [!DNL LAVA] data using the [!DNL Flow Service] API
@@ -18,7 +17,7 @@ The [!DNL LAVA] Source Connector can be used for several different sets of profi
 
 ### Member Profiles
 
-The member profile lists key profile attributes LAVA stores on a member. By using `email` as an identity field, [!DNL Adobe Real-time Customer Profiles] can stitch [!DNL LAVA] records with other Adobe profiles.
+The member profile lists key profile attributes [!DNL LAVA] stores on a member. By using `email` as an identity field, Adobe Real-time Customer Profiles can stitch [!DNL LAVA] records with other Adobe profiles.
 
 | [!DNL LAVA] Source Connector Field | Sample Value                         | Description                                     |
 | ---------------------------------- | ------------------------------------ | ----------------------------------------------- |
@@ -31,7 +30,7 @@ The member profile lists key profile attributes LAVA stores on a member. By usin
 | `id`                               | c448e091-af0f-4eab-98ff-2c758c149051 | A unique ID for the the record.                 |
 | `timestamp`                        | 2025-10-22T12:51:04.317084Z          | When this the profile had these attributes set. |
 
-[Sample data file download](lava_profile_sample.json).
+[Download sample profile JSON](lava_profile_sample.json).
 
 ### Member Balances
 
@@ -51,7 +50,7 @@ The member balance source lists balances of rewards your members have. `balances
 | `id`                               | 8fefe232-0375-4d56-a24c-d009e9d351e8 | A unique ID for the the record.                                                                                                                                                                                                                                                                        |
 | `timestamp`                        | 2025-10-22T12:51:04.317084Z          | When this data was recorded.                                                                                                                                                                                                                                                                           |
 
-[Sample data file download](lava_balance_sample.json).
+[Download sample member balance JSON](lava_balance_sample.json).
 
 ### Ticket Scan Events
 
@@ -73,14 +72,14 @@ The member balance source lists balances of rewards your members have. `balances
 | `id`                               | 1234567/GRE1234A/GA4/GA3/13/0        | A unique ID for the ticket scan event.                          |
 | `timestamp`                        | 2025-11-03T01:41:00Z                 | When the ticket scan occurred.                                  |
 
-[Sample data file download](lava_ticketscan_sample.json).
+[Download sample ticket scan event JSON](lava_ticketscan_sample.json).
 
 ## Prerequisites
 
 To use this source connector you must:
 
 * Be an existing [!DNL LAVA] customer with Adobe export entitlement.
-* Have an account on the [LAVA Console](https://app.lava.ai/) with "[!UICONTROL Administrator]" or "[!UICONTROL Export Manager]" role.
+* Have an account on the [LAVA Console](https://app.lava.ai/) with "**[!DNL Administrator]**" or "**[!DNL Export Manager]**" role.
 * (Recommended) Have sandbox manager permission in Adobe Experience Cloud.
 
 ## (Recommended) Load the [!DNL LAVA] package
@@ -139,7 +138,9 @@ A succcessful response returns details on the imported public package.
 }
 ```
 
-After importing the package, retrieve the `LAVA Events` and `LAVA Profile` scheamas:
+After importing the package, retrieve the `LAVA Events` and `LAVA Profile` schemas:
+
+**Request**
 
 ```shell
 curl -X GET \
@@ -177,6 +178,8 @@ A successful respons returns a list of schemas. Use these IDs as target XDM sche
 ```
 
 Retrieve the Dataset IDs. Use these IDs as target datasets below.
+
+**Request**
 
 ```shell
 curl -X GET \
@@ -273,7 +276,10 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ### Create a target XDM schema {#target-schema}
 
-Skip this if you imported the [!DNL LAVA] package, as this includes target XDM schemas.
+>[!IMPORTANT]
+>
+>Skip this if you imported the [!DNL LAVA] package, as this includes target XDM schemas.
+
 
 In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained. If you are using multiple LAVA sets of data, for example both member balances and ticket scan events, you may want or need more than one target XDM schema.
 
@@ -283,7 +289,10 @@ For detailed steps on how to create a target XDM schema, see the tutorial on [cr
 
 ### Create a target dataset {#target-dataset}
 
-Skip this if you imported the [!DNL LAVA] package, as this includes target XDM dataset. If you are using multiple LAVA sets of data, for example both member balances and ticket scan events, you may want or need more than one target dataset.
+>[!IMPORTANT]
+>
+>Skip this if you imported the [!DNL LAVA] package, as this includes target XDM dataset. If you are using multiple LAVA sets of data, for example both member balances and ticket scan events, you may want or need more than one target dataset.
+
 
 A target dataset can be created by performing a POST request to the [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/), providing the ID of the target schema within the payload.
 
@@ -768,7 +777,7 @@ In the [LAVA Console](https://app.lava.ai/) navigate to **[!UICONTROL Resources 
 
 ![Data export menu](../../../../images/tutorials/create/lava/data-export-menu.png)
 
-Click **[!UICONTROL Create New Export]**. Select **[!UICONTROL Adobe Source Connector]** as the destination type, and the desired source data to send. Use the streaming endpoint URL and dataflow ID.
+Select **[!UICONTROL Create New Export]**. Select **[!UICONTROL Adobe Source Connector]** as the destination type, and the desired source data to send. Use the streaming endpoint URL and dataflow ID.
 
 ![Create new export](../../../../images/tutorials/create/lava/create-export.png)
 

@@ -6,7 +6,7 @@ hidefromtoc: true
 ---
 # Create a source connection and dataflow to stream [!DNL LAVA] data using the UI
 
-This tutorial provides steps for creating a [!DNL LAVA.ai] source connector using the Platform user interface.
+This tutorial provides steps for creating a [!DNL LAVA.ai] source connector using the Experience Platform user interface.
 
 ## Overview
 
@@ -90,7 +90,7 @@ To use this source connector you must:
 
 [!DNL LAVA] provides a package that includes our recommended field groups, schemas, identity namespace and datasets for using [!DNL LAVA] in Adobe Experience Platform. Using these is not required.
 
-To load these packages, in the Platform UI, select **[!UICONTROL Sandboxes]** from the left navigation bar to access the [!UICONTROL Sandboxes] workspace. The [!UICONTROL Packages] screen displays available packages. Click [!UICONTROL Create package] and [!UICONTROL Paste package payload] and paste in
+To load these packages, in the Experience Platform UI, select **[!UICONTROL Sandboxes]** from the left navigation bar to access the [!UICONTROL Sandboxes] workspace. The [!UICONTROL Packages] screen displays available packages. Click [!UICONTROL Create package] and [!UICONTROL Paste package payload] and paste in
 
 ```json
 {
@@ -105,15 +105,11 @@ Once the package is created, select it and click [!UICONTROL Import Package] in 
 
 ## Connect your [!DNL LAVA] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
 Under the **Streaming** category, select [!DNL LAVA], and then select **[!UICONTROL Add data]**.
-
->[!TIP]
->
->The screenshots used below are examples. When creating your documentation, please replace the images with screenshots of your actual source. You can use the same mark up pattern and color, as well as the same file names. Please ensure that your screenshot captures the entire Platform UI screen. For information on how to upload your screenshots, see the guide on [submitting your documentation for review](../documentation/github.md).
 
 ![The Experience Platform sources catalog](../../../../images/tutorials/create/lava/catalog.png)
 
