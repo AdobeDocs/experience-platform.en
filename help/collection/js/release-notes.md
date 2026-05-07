@@ -10,6 +10,19 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.33.0 - May 7, 2026
+
+- Fixed an issue where bridged media analytics adBreak, Chapter, and QoE events would return API errors
+- Added Adobe Advertising Cloud `stitchId` to outgoing experience events when Advertising is configured.
+- Improve performance of send event calls by removing a block on ID destination processing
+- Fixed an issue where advertising identity resolution was loading 3rd party scripts and iframes, even when advertising was not configured
+- Added the ability to read `adobe_mc` identity transfer parameter from the hash (previously was just in the query parameters)
+- Fixed an issue where `adobe_mc` was unable to be read when url encoded multiple times
+
+## Version 2.33.0 - May 7. 2026
+
+- Fixed an issue where
+
 ## Version 2.32.0 - March 23, 2026
 
 - Shared core utilities are now published as a standalone npm package ([@adobe/alloy-core](https://www.npmjs.com/package/@adobe/alloy-core)) for use by extensions and integrations.
