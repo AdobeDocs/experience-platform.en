@@ -43,14 +43,7 @@ The following table shows identifier submission limits by product and entitlemen
 
 ### Processing timelines for identifier submissions {#sla-processing-timelines}
 
-After submission, record delete work orders are queued and processed based on your entitlement level.
-
-| Product & Entitlement Description  | Queue Duration      | Maximum Processing Time (SLA) |
-|------------------------------------|---------------------|-------------------------------|
-| Without Privacy and Security Shield or Healthcare Shield add-on                   | Up to 15 days       | 30 days                       |
-| With Privacy and Security Shield or Healthcare Shield add-on                      | Typically 24 hours  | 15 days                       |
-
-If your organization requires higher limits, contact your Adobe representative for an entitlement review.
+Record delete requests are processed based on entitlement tier, with different SLA commitments for standard and Shield customers. For a full breakdown of processing stages and timelines, see [Data Lifecycle processing timelines](../data-lifecycle-processing-timelines.md).
 
 >[!TIP]
 >

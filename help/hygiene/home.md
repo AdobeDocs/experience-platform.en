@@ -48,21 +48,7 @@ The following takes place when a [dataset expiration request](./ui/dataset-expir
 
 ### Record delete timelines {#record-delete-transparency}
 
-The following takes place after a [record delete request](./ui/record-delete.md) is submitted.
-
->[!NOTE]
->
->Timings are approximate and vary based on system load, batch scheduling, and entitlement tier. The end-to-end SLA (30 days standard, 15 days for Privacy and Security Shield or Healthcare Shield) is the operative commitment.
-
-| Stage | Approx. timing | Description |
-| --- | --- | --- |
-| Request submitted and batched | Day 1–15 | A work order is created and queued. Requests may be queued and batched for up to 14 days before processing begins. Batching is the primary reason deletion is not immediate. |
-| Downstream systems process deletion request | Day 16–25 | Downstream services receive and execute the record delete request. |
-| Buffer — integrity checks and resubmissions | Day 25–30 | A buffer window allows for integrity checks and resubmission of any failed jobs before the SLA window closes. The work order status updates to `completed` once all systems confirm deletion. |
-
-{style="table-layout:auto"}
-
-For entitlement-based queue durations and maximum SLA values, see [Processing timelines for identifier submissions](./ui/record-delete.md#sla-processing-timelines).
+Record delete requests are processed based on entitlement tier, with different SLA commitments for standard and Shield customers. For a full breakdown of processing stages and timelines, see [Data Lifecycle processing timelines](./data-lifecycle-processing-timelines.md).
 
 ## Next steps {#next-steps}
 

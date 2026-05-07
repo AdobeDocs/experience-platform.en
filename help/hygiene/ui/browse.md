@@ -83,7 +83,7 @@ The details of a record delete request include its current status and the time e
 
 >[!TIP]
 >
->Record delete requests are batched before processing begins and can take up to 30 days to complete under the standard SLA. For a breakdown of what happens at each stage, see [Record delete timelines](../home.md#record-delete-transparency).
+>Record delete requests are batched before processing begins and can take up to 30 days to complete under the standard SLA. For a breakdown of what happens at each stage, see [Data Lifecycle processing timelines](../data-lifecycle-processing-timelines.md).
 
 ![Image showing the details page for a record delete work order](../images/ui/browse/record-delete-details.png)
 
