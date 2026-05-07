@@ -19,10 +19,6 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 - Added the ability to read `adobe_mc` identity transfer parameter from the hash (previously was just in the query parameters)
 - Fixed an issue where `adobe_mc` was unable to be read when url encoded multiple times
 
-## Version 2.33.0 - May 7. 2026
-
-- Fixed an issue where
-
 ## Version 2.32.0 - March 23, 2026
 
 - Shared core utilities are now published as a standalone npm package ([@adobe/alloy-core](https://www.npmjs.com/package/@adobe/alloy-core)) for use by extensions and integrations.
