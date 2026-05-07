@@ -8,7 +8,7 @@ Use this document to understand when a record delete request completes and what 
 
 ## Overview {#overview}
 
-After you submit a record delete request, it moves through three stages: it enters a queue and is batched with other requests, downstream services execute the deletion, and the work order is confirmed as complete. All entitlement tiers follow the same high-level flow; what differs is how long each stage takes. The end-to-end duration is governed by your organization's SLA: 30 days for standard entitlements, and 15 days for organizations with Privacy and Security Shield or Healthcare Shield add-ons. If you have already submitted a request and want to confirm it is progressing normally, use the phase descriptions and timelines below to check where your request should be based on elapsed time.
+After you submit a [record delete request](./ui/record-delete.md), it moves through three stages: it enters a queue and is batched with other requests, downstream services execute the deletion, and the work order is confirmed as complete. All entitlement tiers follow the same high-level flow; what differs is how long each stage takes. The end-to-end duration is governed by your organization's SLA: 30 days for standard entitlements, and 15 days for organizations with Privacy and Security Shield or Healthcare Shield add-ons. If you have already submitted a request and want to confirm it is progressing normally, use the phase descriptions and timelines below to check where your request should be based on elapsed time.
 
 ## How record delete requests are processed {#how-requests-are-processed}
 
@@ -22,11 +22,11 @@ Queue duration varies by entitlement tier. Standard requests may remain in queue
 
 ### Phase 2: Downstream processing {#downstream-processing}
 
-Once a batch leaves the queue, downstream services process the deletion across your Experience Platform data stores. Work order status does not update during this phase; it reflects the overall outcome once processing is confirmed. Duration varies based on system load and entitlement tier, and occurs within the operative SLA window for your entitlement tier.
+Once a batch leaves the queue, downstream services process the deletion across your Experience Platform data stores. Work order status does not update during this phase; it reflects the overall outcome once processing is confirmed. To check the current state of your request, see [Monitoring request status](#monitoring-request-status). Duration varies based on system load and entitlement tier, and occurs within the operative SLA window for your entitlement tier.
 
 ### Phase 3: Completion {#completion}
 
-The work order status updates to `completed` once all systems confirm deletion.
+The work order status updates to `completed` once all systems confirm deletion. You can verify completion status in the [Data Lifecycle workspace](./ui/browse.md).
 
 For standard entitlements, a buffer window exists near the end of the SLA period. This window allows for integrity checks and resubmission of any failed deletion jobs before the SLA closes. For Privacy and Security Shield or Healthcare Shield entitlements, completion and any equivalent checks are handled within the 15-day SLA window; no separate buffer phase is defined.
 
@@ -73,7 +73,7 @@ The following timeline applies to organizations without a Privacy and Security S
 
 ## Quota and submission limits {#quota-and-submission-limits}
 
-Processing timelines apply after a request is accepted. Record delete requests are also subject to monthly and daily identifier submission quotas that are separate from and independent of processing SLAs. If a submitted request does not appear to be progressing, confirm it was accepted before attributing the delay to batching — a request blocked by quota exhaustion requires action and does not enter the processing queue. Exceeding your quota prevents new requests from being accepted, regardless of your SLA tier.
+Processing timelines apply after a request is accepted. Record delete requests are also subject to monthly and daily identifier submission quotas that are separate from and independent of processing SLAs. If a submitted request does not appear to be progressing, [confirm it was accepted](./ui/browse.md) before attributing the delay to batching — a request blocked by quota exhaustion requires action and does not enter the processing queue. Exceeding your quota prevents new requests from being accepted, regardless of your SLA tier.
 
 For quota tiers, monthly caps, and entitlement-based limits, see:
 
@@ -88,7 +88,6 @@ For detailed instructions, see [Browse data lifecycle work orders](./ui/browse.m
 
 ## Next steps {#next-steps}
 
-- [Browse and monitor data lifecycle work orders](./ui/browse.md)
 - [Create a record delete request in the UI](./ui/record-delete.md)
 - [Create a record delete request using the API](./api/workorder.md)
 - [Monitor quota usage](./api/quota.md)
