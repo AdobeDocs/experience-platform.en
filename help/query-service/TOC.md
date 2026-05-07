@@ -99,6 +99,7 @@ role: User,Developer
     - [UI overview](ui/overview.md)
     - [Query Editor user guide](ui/user-guide.md)
     - [Query templates](ui/query-templates.md)
+    - [Data Distiller Accelerators](ui/accelerators.md)
     - [Parameterized queries](ui/parameterized-queries.md)
     - [Query schedules](ui/query-schedules.md)
     - [Query logs](ui/query-logs.md)

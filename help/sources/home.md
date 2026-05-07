@@ -219,7 +219,7 @@ You can use the following sources to ingest data from your local system to Exper
 
 ### Loyalty {#loyalty}
 
-You can use the following sources to ingest data loyalty to Experience Platform.
+You can use the following sources to ingest loyalty data to Experience Platform.
 
 | Source | Ingestion type | Cloud |
 | --- | --- | --- |

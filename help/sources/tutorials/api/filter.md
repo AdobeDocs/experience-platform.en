@@ -399,6 +399,177 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 +++
 
+## Filter [!DNL Salesforce] dataflows
+
+The following example shows end‑to‑end how to apply row‑level filtering to an existing [!DNL Salesforce] dataflow using the [!DNL Flow Service] API.
+
+### Query language and escaping
+
+When using OAuth 2.0 client credentials with [!DNL Salesforce] sources, row-level filtering is performed using SOQL ([!DNL Salesforce] Object Query Language).
+
+* Column names in SOQL filters use the exact [!DNL Salesforce] field API names, without backticks or other special characters.
+* String values should be enclosed in single quotes, as required by SOQL syntax.
+* For Boolean values, use the keywords `true` or `false` instead of numeric values (`0` or `1`).
+* Date and dateTime values in `WHERE` clauses should be written as unquoted SOQL date or dateTime literals, rather than as quoted strings, when the filter indicates they represent date/time types.
+
+For PQL-based row-level filtering, every literal node whose value is a `boolean` or a `dateTime` must include a `literalType` so values are interpreted and translated correctly.
+
+PQL examples:
+
+>[!BEGINTABS]
+
+>[!TAB PQL Example 1]
+
+```json
+{
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": "like",
+    "params": [
+      {
+        "nodeType": "fieldLookup",
+        "fieldName": "Name"
+      },
+      {
+        "nodeType": "literal",
+        "value": "ro%"
+      }
+    ]
+  }
+}
+```
+
+>[!TAB PQL Example 2]
+
+```json
+{
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": ">",
+    "params": [
+      { "nodeType": "fieldLookup", "fieldName": "CreatedDate" },
+      {
+        "nodeType": "literal",
+        "literalType": "DateTime",
+        "value": "2024-05-15T00:00:00Z"
+      }
+    ]
+  }
+}
+```
+
+>[!TAB PQL Example 3]
+
+```json
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": "=",
+    "params": [
+      { "nodeType": "fieldLookup", "fieldName": "IsDeleted" },
+      {
+        "nodeType": "literal",
+        "literalType": "boolean",
+        "value": false
+      }
+    ]
+  }
+}
+```
+
+>[!ENDTABS]
+
+#### Retrieve connection specs for [!DNL Salesforce]
+
+To retrieve the connection spec information for a [!DNL Salesforce] source, make a GET request to the `/connectionSpecs` endpoint of the [!DNL Flow Service] API and provide the property name of your source as part of your query parameters.
+
+**API format**
+
+```http
+GET /connectionSpecs/{QUERY_PARAMS}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{QUERY_PARAMS}` | The optional query parameters to filter results by. You can retrieve the [!DNL Salesforce] connection spec by applying the `name` property and specifying `"salesforce"` in your search. |
+
++++Request
+
+The following request retrieves the connection specs for [!DNL Salesforce]. 
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="salesforce"' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-api-key: {API_KEY}'
+```
+
++++Response
+
+A successful response returns the status code 200 and the connection specs for [!DNL Salesforce], including information on its supported query language and logical operators.
+
+
+```json
+ "attributes": {
+    "filterAtSource": {
+      "enabled": true,
+      "queryLanguage": "SQL",
+      "logicalOperators": [
+        "and",
+        "or",
+        "not"
+      ],
+      "comparisonOperators": [
+        "=",
+        "!=",
+        "<",
+        "<=",
+        ">",
+        ">=",
+        "like",
+        "in",
+        "isNull",
+        "isNotNull"
+      ],
+      "columnNameEscapeChar": "`",
+      "valueEscapeChar": "'",
+      "v2": {
+        "oAuth2ClientCredential": {
+          "queryLanguage": "SOQL",
+          "logicalOperators": [
+            "and",
+            "or",
+            "not"
+          ],
+          "comparisonOperators": [
+            "=",
+            "!=",
+            "<",
+            "<=",
+            ">",
+            ">=",
+            "like",
+            "in",
+            "isNull",
+            "isNotNull"
+          ],
+          "columnNameEscapeChar": "",
+          "valueEscapeChar": "'"
+        }
+      }
+    }
+  }
+```
+
++++
+
 ## Filter activity entities for [!DNL Marketo Engage] {#filter-for-marketo}
 
 You can use row-level filtering to filter for activity entities when using the [[!DNL Marketo Engage] source connector](../../connectors/adobe-applications/marketo/marketo.md). Currently, you can only filter for activity entities and standard activity types. Custom activities remain governed under [[!DNL Marketo] field mappings](../../connectors/adobe-applications/mapping/marketo.md).

@@ -33,7 +33,7 @@ Security in regard to Query Service is divided into the following categories:
 
 ### Access control {#access-control}
 
-Access control in Adobe Experience Platform lets you use [Adobe Admin Console](https://adminconsole.adobe.com/) to manage access to Query Service features using role-based permissions. Similarly, you can control access to specific data attributes through label management on schemas and data fields.
+Access control in Adobe Experience Platform is managed by role-based permissions that determine which users can use Query Service features. Similarly, you can control access to specific data attributes through label management on schemas and data fields.
 
 This section outlines the required access control permissions that a user must have in order to fully utilize Query Service features. See the documents on [managing permissions](../../access-control/ui/permissions.md) and [managing users](../../access-control/ui/users.md) for detailed instructions on assigning access to a product profile.
 
