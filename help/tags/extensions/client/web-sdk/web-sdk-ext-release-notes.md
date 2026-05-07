@@ -8,7 +8,7 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Adobe Experience Platform Web SDK release notes](/help/collection/js/release-notes.md).
 
-## Version 2.34.0 - May 7, 2026
+## Version 2.35.0 - May 7, 2026
 
 - Contains [version 2.33.0](/help/collection/js/release-notes.md) of the Adobe Experience Platform Web SDK.
 - Removed the beta flag from Advertising and Push notifications sections in the extension's configuration page
