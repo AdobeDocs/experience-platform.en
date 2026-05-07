@@ -1,13 +1,7 @@
 ---
 title: Data Lifecycle processing timelines
 description: Understand how record delete requests are queued and processed in Adobe Experience Platform, including SLA commitments for standard and Shield entitlements.
-keywords:
-- data lifecycle
-- record delete
-- processing timelines
-- SLA
-- shield entitlement
-- work order
+keywords: data lifecycle
 solution: Experience Platform
 ---
 # Data Lifecycle processing timelines {#data-lifecycle-processing-timelines}
