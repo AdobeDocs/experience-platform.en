@@ -18,7 +18,7 @@ Record delete requests follow three high-level processing phases regardless of e
 
 After submission, a work order is created and your request enters a processing queue. Requests are held in the queue and grouped into batches before processing begins. Batching—not a system error—is the primary reason deletion does not occur immediately after submission.
 
-Queue duration varies by entitlement tier. Standard requests may remain in queue for up to 14 days. Requests submitted under Privacy and Security Shield or Healthcare Shield entitlements are typically within approximately 24 hours, depending on system conditions.
+Queue duration varies by entitlement tier. Standard requests may remain in queue for up to 14 days. Requests under Privacy and Security Shield or Healthcare Shield entitlements are typically batched within approximately 24 hours, depending on system conditions.
 
 ### Phase 2: Downstream processing {#downstream-processing}
 
@@ -58,11 +58,9 @@ The following timeline applies to organizations without a Privacy and Security S
 >
 >The accelerated timeline below applies only to organizations that have purchased the Privacy and Security Shield or Healthcare Shield add-on. To verify your entitlement tier, contact your Adobe representative or review your [quota usage](./api/quota.md).
 
-The following timeline applies to organizations with a Privacy and Security Shield or Healthcare Shield add-on.
-
 >[!NOTE]
 >
->Timings are approximate and vary based on system load. The 15-day end-to-end SLA is the operative commitment.
+>The 15-day end-to-end SLA is the operative commitment.
 
 | Stage | Approximate timing | Description |
 |---|---|---|
@@ -79,8 +77,8 @@ Processing timelines apply after a request is accepted. Record delete requests a
 
 For quota tiers, monthly caps, and entitlement-based limits, see:
 
-- [Quotas and processing timelines (UI)](./ui/record-delete.md#quotas)
-- [Quotas and processing timelines (API)](./api/workorder.md#quotas)
+- [Identifier submission quotas (UI)](./ui/record-delete.md#quotas)
+- [Identifier submission quotas (API)](./api/workorder.md#quotas)
 
 ## Monitoring request status {#monitoring-request-status}
 
