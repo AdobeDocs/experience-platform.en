@@ -14,6 +14,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 - Removed the beta flag from Advertising and Push notifications sections in the extension's configuration page
 - Fixed an issue where configuration of push notifications would show errors before being edited.
 - Fixed an issue where analytics events are overwritten in sequential Update Variable actions
+- Include XDM on all outgoing Brand Concierge events.
 
 ## Version 2.34.2 - March 23, 2026
 
