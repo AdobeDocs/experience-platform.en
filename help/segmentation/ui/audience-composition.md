@@ -103,13 +103,45 @@ To add a custom rule to the Audience block, select **[!UICONTROL Build rule]**.
 
 ![The Build rule button is highlighted.](../images/ui/audience-composition/select-build-rule.png)
 
-The Segment Builder appears. You can use the Segment Builder to create a custom rule for the audience to follow. More information about using the Segment Builder can be found in the [Segment Builder guide](./segment-builder.md).
+The rule builder canvas in Audience Builder appears. You can use Audience Builder to create a custom rule for the audience to follow. More information about using the Segment Builder can be found in the [Segment Builder guide](./segment-builder.md).
 
 ![The Segment Builder UI is displayed.](../images/ui/audience-composition/segment-builder.png)
 
 After adding a custom rule, select **[!UICONTROL Save]** to add the rule to your audience.
 
 ![](../images/ui/audience-composition/custom-rule.png)
+
+#### Audience payload {#audience-payload}
+
+Alternatively, you can add audience payloads to your composition. After selecting **Build rule**, the rule builder canvas appears. 
+
+You can now create a filter criteria for your audience enrichment. This filter criteria **must** include an attribute that is within an array. The attribute being an array is dependent on your organization's schema structure. After you created your filter criteria, select **[!UICONTROL View enrichment]** within the right-hand panel. UPDATE THIS
+
+IMAGE
+
+Choose the object array, as well as the fields you want to be used in the payload from the list on the left panel. If there is only one array on the profile, the array is automatically selected for you. Select **[!UICONTROL Save]** to return to audience composition.
+
+![The schema tree for the enrichment tree is displayed.](/help/segmentation/images/ui/composition-enhancements/enrichment-tree.png)
+
++++ Behavior details and guardrails
+
+Please keep the following details and guardrails in mind while using audience payloads:
+
+- You can only use audience payloads within audiences created within Audience Composition
+- The first block used within the composition **must** be a rule-based audience.
+- You **cannot** use any other operations within the composition.
+- Once published, you **cannot** edit the composition on the rule-based audience.
+
+  - You *can* copy the composition into a draft and edit the draft if you wish to make changes to the base composition or rule-based audience.
+
+- Only **one** object array can be used to generate the payload within a single audience
+
+  - The payload array can be nested within an object (up to seven layers within the profile schema), but **cannot** be contained in another array.
+  - The payload array **must** have 50 or fewer rows.
+  - All the columns output within the payload **must** be a primitive type.
+  - Only the first **twenty** columns of the array are outputted.
+
++++
 
 ## [!UICONTROL Exclude] {#exclude-block}
 
@@ -381,6 +413,10 @@ After creating your composition, you can save and publish it by selecting **[!UI
 If there are any errors in creating the audience, an alert appears, letting you know how to resolve the issue.
 
 ![The Publish button is highlighted, showing you how to save and publish your composition.](../images/ui/audience-composition/audience-alert.png)
+
+### Faster activation {#faster-activation}
+
+
 
 ## Next steps
 
