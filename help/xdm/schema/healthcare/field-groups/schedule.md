@@ -3,7 +3,6 @@ title: Schedule Schema Field Group
 description: Learn about the Schedule schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
-hidefromtoc: yes
 exl-id: fcabef50-203c-4239-81b4-210aaf5b26ca
 ---
 # [!UICONTROL Schedule] schema field group

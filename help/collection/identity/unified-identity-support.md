@@ -2,7 +2,6 @@
 title: Unified identity support in Data Collection
 description: Learn how unified identity support brings first-party persistence and supported third-party activation together in web data collection.
 hide: yes
-hidefromtoc: yes
 badge: Beta
 exl-id: 8a755b61-6280-47f9-87a1-2d1da331a1c6
 ---

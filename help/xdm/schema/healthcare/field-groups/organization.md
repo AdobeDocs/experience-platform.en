@@ -3,7 +3,6 @@ title: Organization Schema Field Group
 description: Learn about the Organization schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
-hidefromtoc: yes
 exl-id: b0698d36-ebc3-4b76-adcc-1deb2cbb1564
 ---
 # [!UICONTROL Organization] schema field group

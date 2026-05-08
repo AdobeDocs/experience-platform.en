@@ -2,7 +2,6 @@
 title: FreeWheel connection
 description: Learn how to activate audiences from Adobe Experience Platform to FreeWheel for programmatic advertising across connected TV, display, and video inventory.
 hide: yes
-hidefromtoc: yes
 badge: label="Beta" type="Informative"
 exl-id: 1f1d3e57-a8ef-4971-b3d1-43521bd158bb
 ---

@@ -3,7 +3,6 @@ title: Account Schema Field Group
 description: Learn about the Account schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
-hidefromtoc: yes
 exl-id: 376716bd-f79f-421d-b163-0f0e50876b48
 ---
 # [!UICONTROL Account] schema field group

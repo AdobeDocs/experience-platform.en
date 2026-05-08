@@ -3,7 +3,6 @@ title: Coverage Schema Field Group
 description: Learn about the Coverage schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
-hidefromtoc: yes
 exl-id: 7b84c0cf-3bd4-4ba8-a8cc-85e6b3f2b59e
 ---
 # [!UICONTROL Coverage] schema field group

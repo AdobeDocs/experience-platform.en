@@ -3,7 +3,6 @@ title: Immunization Schema Field Group
 description: Learn about the Immunization schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
-hidefromtoc: yes
 exl-id: a392e26b-7631-4f54-b9ad-cc4586673ac5
 ---
 # [!UICONTROL Immunization] schema field group
