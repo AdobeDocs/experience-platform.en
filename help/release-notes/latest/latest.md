@@ -146,4 +146,4 @@ For more information, read the [sources overview](../../sources/home.md).
 
 | Automatic dataflow disabling | Sources ingestion dataflows that fail continuously for 30 days are automatically disabled, helping to surface unhealthy dataflows and reduce repeated failed runs. |
 
---->
+-->

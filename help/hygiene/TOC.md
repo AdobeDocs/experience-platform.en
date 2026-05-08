@@ -18,7 +18,7 @@ role: User, Developer, Admin
 * Data Hygiene API {#api}
   * [Overview](./api/overview.md)
   * [Dataset expirations (ttl endpoint)](./api/dataset-expiration.md)
-  * [Record deletes](./api/jobs.md)
+  * {hide-from-toc} [Record deletes](./api/jobs.md)
   * [Record delete requests (Workorder endpoint)](./api/workorder.md)
   * [Quota](./api/quota.md)
 * [Best practices](./best-practices.md)
