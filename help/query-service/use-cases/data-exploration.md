@@ -31,13 +31,13 @@ Next, to view the system fields of the dataset, execute a SELECT all statement t
  
 ![The DBVisualizer UI with the movie_data table and its metadata columns displayed and highlighted.](../images/use-cases/movie_data-table-with-metadata-columns.png)
 
-When data is ingested into Experience Platform, it is assigned a logical partition based on the incoming data. This logical partition is represented by `_acp_system_metadata.sourceBatchId`. This ID helps to group and identify the data batches logically before they are processed and stored.
+When data is ingested into Experience Platform, it is assigned a logical partition based on the incoming data. This logical partition is represented by `_acp_system_metadata.acp_sourceBatchId`. This ID helps to group and identify the data batches logically before they are processed and stored.
 
 After the data is processed and ingested into the data lake, it is assigned a physical partition represented by `_ACP_BATCHID`. This ID reflects the actual storage partition in the data lake where the ingested data resides.
 
 ### Use SQL to understand logical and physical partitions {#understand-partitions}
 
-To help understand how the data is grouped and distributed after ingestion, use the following query to count the number of distinct physical partitions (`_ACP_BATCHID`) for each logical partition (`_acp_system_metadata.sourceBatchId`).
+To help understand how the data is grouped and distributed after ingestion, use the following query to count the number of distinct physical partitions (`_ACP_BATCHID`) for each logical partition (`_acp_system_metadata.acp_sourceBatchId`).
 
 ```SQL
 SELECT  _acp_system_metadata, COUNT(DISTINCT _ACP_BATCHID) FROM movie_data

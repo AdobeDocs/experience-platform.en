@@ -20,7 +20,7 @@ The following table outlines several commonly used, pre-defined identity types m
 | --- | --- | --- |
 | Email | `Email` | `6` |
 | Phone | `Phone`  | `7` |
-| Adobe Advertising Cloud ID | `AdCloud` | `411` |
+| Adobe Advertising ID | `AdCloud` | `411` |
 | Adobe Audience Manager UUID | `CORE` | `0` |
 | Adobe Experience Cloud ID | `ECID` | `4` |
 | Adobe Target ID | `TNTID` | `9` |

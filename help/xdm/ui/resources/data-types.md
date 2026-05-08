@@ -41,6 +41,10 @@ From here, you have the following options:
 - [Filter data types](#filter)
 - [Select an existing data type to edit](#edit)
 
+>[!NOTE]
+>
+>XDM actions are available from the inventory table and the resource detail view (**[!UICONTROL More]**). Full actions apply only to custom (tenant-defined) resources; standard resources have limited options. See [Manage schemas, classes, field groups, and data types: actions and deletion](../explore.md#xdm-resource-actions).
+
 ### Create a new data type {#create}
 
 From the **[!UICONTROL Data types]** tab, select **[!UICONTROL Create data type]**.

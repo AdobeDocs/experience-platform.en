@@ -5,10 +5,6 @@ exl-id: 7cb13834-46f4-481c-bd9d-600083eb6cfb
 ---
 # `sendPushSubscription` {#send-push-subscription}
 
->[!AVAILABILITY]
->
->Push notifications for the Web SDK are currently in **beta**. The functionality and documentation are subject to change.
-
 The `sendPushSubscription` command registers push notification subscriptions with Adobe Experience Platform. This command handles the retrieval of push subscription details from the browser and sends them to your configured datastream. It is available in Web SDK versions 2.29.0 or later.
 
 ## Prerequisites {#prerequisites}

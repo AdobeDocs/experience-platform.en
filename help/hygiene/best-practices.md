@@ -13,7 +13,7 @@ This guide requires a working understanding of the Data Lifecycle workspace and 
 
 ## Work order creation guidelines {#work-order-creation-guidelines}
 
-You can use the `/workorder` endpoint in the Data Hygiene API to programmatically manage record delete requests in Experience Platform. With this endpoint, you can create a delete request, check on its status, or update an existing request. See the [Work order endpoint document](./api/workorder.md) to learn how to perform these actions using the API.
+You can use the `/workorder` endpoint in the Data Hygiene API to programmatically manage record delete requests in Experience Platform. With this endpoint, you can create a delete request, check on its status, or update an existing request. See the [Work order endpoint document](./api/workorder.md) to learn how to perform these actions using the API. Record delete requests are batched before processing begins and can take up to 30 days (standard SLA) or 15 days (Privacy and Security Shield or Healthcare Shield) to complete. For a full breakdown of what happens at each stage, see [Record delete timelines](./home.md#record-delete-transparency).
 
 >[!TIP]
 >

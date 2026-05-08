@@ -692,7 +692,7 @@ curl -X GET \
 
 | Property | Description |
 | --- | --- |
-| `policyIds` | A list of core policy IDs that are to be enabled. Any core policies that are not included are set to `DISABLED` status and will not participate in evaluation. | 
+| `policyIds` | A list of core policy IDs that are to be enabled. Any core policies that are not included are set to `DISABLED` status and will not participate in evaluation. |
 
 **Response**
 

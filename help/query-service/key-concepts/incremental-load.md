@@ -78,7 +78,7 @@ The steps below demonstrate how to create and incrementally load data using snap
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
  
    EXCEPTION
-     WHEN OTHER THEN
+     WHEN OTHERS THEN
        SELECT 'ERROR';
    END 
    $$;
@@ -110,7 +110,7 @@ The steps below demonstrate how to create and incrementally load data using snap
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
  
    EXCEPTION
-     WHEN OTHER THEN
+     WHEN OTHERS THEN
        SELECT 'ERROR';
    END
    $$;
@@ -148,7 +148,7 @@ Insert Into
       cast( @to_snapshot_id AS string) last_snapshot_id,
       cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 END
 $$;

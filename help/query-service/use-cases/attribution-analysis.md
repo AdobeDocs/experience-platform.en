@@ -51,12 +51,12 @@ The results for the attribution queries are given in either the `first_touch` or
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
 ```
 
-| Parameters | Description | 
+| Parameters | Description |
 | ---------- | ----------- |
 | `{NAME}` | The `{CHANNEL_NAME}`, entered as a label in the Azure Data Factory (ADF). |
 | `{VALUE}` | The value from `{CHANNEL_VALUE}` that is the last touch within the specified `{EXP_TIMEOUT}` interval |
 | `{TIMESTAMP}` | The timestamp of the [!DNL Experience Event] where the last touch occurred |
-| `{FRACTION}` | The attribution of the last touch, expressed as a decimal fraction. | 
+| `{FRACTION}` | The attribution of the last touch, expressed as a decimal fraction. |
 
 ### First touch attribution {#first-touch}
 

@@ -3,19 +3,18 @@ description: Learn how to identify and resolve common job schedule configuration
 solution: Experience Platform
 title: Identify Job Schedule Anti-Patterns
 type: Tutorial
-hide: yes
 exl-id: f94e3ef3-2252-46f5-8075-45b5483d9d83
 ---
 # Identify job schedule anti-patterns
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] are currently available as a limited release and only for the following Real-Time CDP jobs:
+>[!UICONTROL Job schedules] are currently available only for the following Real-Time CDP jobs:
 >
 > * Batch data lake ingestion
 > * Batch profile ingestion
-> * Batch sgmentation
-> * Batch destination activation.
+> * Batch segmentation
+> * Batch destination activation
 
 The [Job Schedules](job-schedules.md) timeline view helps you identify common configuration issues that can negatively impact your data pipeline performance and reliability. These anti-patterns often lead to job failures, data inconsistencies, or degraded system performance. By spotting these patterns early, you can reconfigure your jobs to avoid problems before they affect your business operations.
 
@@ -41,7 +40,7 @@ Before identifying anti-patterns, you should:
 
 **What to look for**: Multiple jobs scheduled to run at the same time or in close succession, particularly when resource-intensive jobs overlap.
 
-In this example, you can see batch ingestion jobs running at the same time as a scheduled segmentation job. This creates resource contention because both operations require significant processing power and memory.
+A common example is batch ingestion jobs running at the same time as a scheduled segmentation job. This creates resource contention because both operations require significant processing power and memory.
 
 **Why this is problematic**:
 
@@ -62,7 +61,7 @@ In this example, you can see batch ingestion jobs running at the same time as a 
 
 **What to look for**: Too many datasets with multiple batches scheduled within the same hour, particularly when these batches are stacked close together and scheduled near critical processing windows like segmentation start times.
 
-In this pattern, you'll see:
+This pattern typically includes:
 
 * Multiple datasets each running several batches per day
 * ETL jobs (data lake ingestion and profile ingestion) clustered within the same hour
@@ -74,14 +73,14 @@ In this pattern, you'll see:
 * **Delayed profile availability**: Profile ingestion jobs that run too close to segmentation start times may not complete in time, resulting in incomplete or stale audience evaluations.
 * **Unpredictable segmentation**: If upstream ingestion jobs are still running when segmentation begins, you risk evaluating audiences against incomplete data, leading to incorrect audience membership.
 * **Cascading failures**: A single delayed batch in a densely stacked schedule can cause a domino effect, delaying all subsequent batches and downstream processes.
-* **Resource straining**: The system may struggle to allocate sufficient resources when processing too many concurrent ingestion jobs, leading to slower processing times or failures.
+* **Resource strain**: The system may struggle to allocate sufficient resources when processing too many concurrent ingestion jobs, leading to slower processing times or failures.
 
 **How to fix it**:
 
 * **Consolidate batches**: Reduce batch frequency by combining multiple small batches into fewer, larger batches per dataset.
 * **Distribute evenly**: Spread ingestion jobs throughout the day rather than clustering them in specific hours.
 * **Add buffer time**: Ensure a minimum 1-2 hour buffer between profile ingestion completion and segmentation start.
-* **Review requirements**: Assess whether all datasets truly need multiple daily batches—many use cases work with less frequent updates.
+* **Review requirements**: Assess whether all datasets truly need multiple daily batches. Many use cases work with fewer frequent updates.
 
 ## Excessive batches per dataset {#excessive-batches-per-dataset}
 
@@ -89,7 +88,7 @@ In this pattern, you'll see:
 
 **What to look for**: A single dataset with an excessive number of individual batch jobs scheduled throughout the day, creating a long vertical stack of jobs on the timeline.
 
-In this pattern, you'll see one dataset row with many individual batch ingestion jobs scheduled at frequent intervals—sometimes dozens of batches per day for a single dataset.
+This pattern involves a single dataset with many individual batch ingestion jobs scheduled at frequent intervals, sometimes dozens of batches per day.
 
 **Why this is problematic**:
 

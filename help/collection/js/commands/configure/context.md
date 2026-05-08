@@ -52,6 +52,7 @@ The `"placeContext"` keyword collects information about the user's location.
 | State province | The state province code of the end user. |`xdm.placeContext.geo.stateProvince`| `CA` |
 | Latitude | The latitude of the end user location. |`xdm.placeContext.geo._schema.latitude`| `37.3307447` |
 | Longitude | The longitude of the end user location. |`xdm.placeContext.geo._schema.longitude`| `-121.8945965` |
+| IANA time zone | The IANA time zone of the end user. Included in library versions 2.32.0 or greater. | `xdm.placeContext.ianaTimezone` | `America/Denver` |
 
 ### Timestamp
 

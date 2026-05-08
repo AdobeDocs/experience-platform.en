@@ -12,7 +12,7 @@ With social destinations, you can activate profiles for your campaigns for audie
 
 ## Supported social destinations {#supported-destinations}
 
-Adobe Experience Platform currently supports the following social destinations:
+[!DNL Adobe Experience Platform] currently supports the following social destinations:
 
 * [[!DNL Facebook] connection](facebook.md)
 * [[!DNL LinkedIn Matched Audiences] connection](linkedin.md)

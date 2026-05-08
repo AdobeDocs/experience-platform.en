@@ -23,7 +23,7 @@ exists {VARIABLE} from {EXPRESSION} : {CONDITION}
 | ---------- | ----------- |
 | `{VARIABLE}` | A name of a variable. |
 | `{EXPRESSION}` | The array which is being checked. |
-| `{CONDITION}` | An optional expression which filters the values in the array returned. |  
+| `{CONDITION}` | An optional expression which filters the values in the array returned. |
 
 **Example**
 
@@ -48,7 +48,7 @@ forall {VARIABLE} from {EXPRESSION} : {CONDITION}
 | ---------- | ----------- |
 | `{VARIABLE}` | A name of a variable. |
 | `{EXPRESSION}` | The array which is being checked. |
-| `{CONDITION}` | An optional expression which filters the values in the array returned. | 
+| `{CONDITION}` | An optional expression which filters the values in the array returned. |
 
 **Example**
 

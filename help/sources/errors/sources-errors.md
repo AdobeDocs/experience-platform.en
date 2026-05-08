@@ -67,7 +67,7 @@ This document provides a catalog of error messages, descriptions, and suggested 
 | `1309-400` | Bad Request | The encryption transformation provided is invalid because {requiredParam} is missing in the params. Please provide {requiredParam} and try again. |
 | `1310-400` | Bad Request | The provided publicKeyId in the params is expired. Please provide a valid publicKeyId and try again. |
 | `1311-400` | Bad Request | The publicKeyId provided in params is invalid. Please provide a valid publicKeyId and try again. |
-| 1312-400 | Bad Request | The provided param value {paramValue} is not a valid input for property={requestParam}. Please provide a valid param value and try again. | 
+| 1312-400 | Bad Request | The provided param value {paramValue} is not a valid input for property={requestParam}. Please provide a valid param value and try again. |
 | `1313-400` | Bad Request | The path attribute {attribute} does not exist. Please make sure the attribute exists and try again. |
 | `1314-400` | Bad Request | A complex path has been provided but is not allowed. Please make sure complex path is not provided and try again. |
 | `1315-400` | Bad Request | The provided path {path} should point to an array of records. Please make sure the provided path points to the array of records and try again. |
@@ -79,7 +79,7 @@ This document provides a catalog of error messages, descriptions, and suggested 
 | `1321-400` | Bad Request | The length of {idType} should be one, supplied size is {size}. Please provide valid size and try again. |
 | `1322-400` | Bad Request | The source connection cannot be null for building the schema ref. Please provide valid source connection and try again. |
 | `1323-400` | Bad Request | The {entity} cannot be null or empty in the source connection: {sourceConnection}. Please provide valid {entity} and try again. |
-| `1324-400` | Bad Request | The target connection cannot be null when extracting the dataset ID. Please provide valid target connection and try again. | 
+| `1324-400` | Bad Request | The target connection cannot be null when extracting the dataset ID. Please provide valid target connection and try again. |
 | `1325-400` | Bad Request | The dataSetId param cannot be null or empty in target connection: {TargetConnection}. Please provide valid dataSetId param and try again. |
 | `1326-400` | Bad Request | The source connection cannot be null when fetching the source format. Please provide valid source connection and try again. |
 | `1327-400` | Bad Request | The format of source data supplied={sourceFormat} in SourceConnection is not supported. The allowed values are: {values}. Please provide allowed values and try again. |

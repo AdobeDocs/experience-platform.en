@@ -205,11 +205,11 @@ The following response returns HTTP status 200 with a list of successfully compl
 | `fields` | A list of the exported fields, separated by commas. |
 | `schema.name` | The name of the schema associated with the dataset where data is to be exported. |
 | `filter.segments` | The segments that are exported. The following fields are included:<ul><li>`segmentId`: The segment ID that profiles will be exported to.</li><li>`segmentNs`: Segment namespace for the given `segmentID`.</li><li>`status`: An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized"]` which represents all profiles that fall into the segment at the current time. Possible values include: `realized` and `exited`. A value of `realized` means the profile qualifies for the segment. A value of `exiting` means the profile is exiting the segment.</li></ul> |
-| `mergePolicy` | Merge policy information for the exported data. | 
+| `mergePolicy` | Merge policy information for the exported data. |
 | `metrics.totalTime` | A field indicating the total time that export job took to run. |
 | `metrics.profileExportTime` | A field indicating the time it took for the profiles to export. |
-| `page` | Information about the pagination of the requested export jobs. | 
-| `link.next` | A link to the next page of export jobs. | 
+| `page` | Information about the pagination of the requested export jobs. |
+| `link.next` | A link to the next page of export jobs. |
 
 +++
 
@@ -491,7 +491,7 @@ A successful response returns HTTP status 200 with detailed information about th
 | `fields` | A list of the exported fields, separated by commas.  |
 | `schema.name` | The name of the schema associated with the dataset where data is to be exported. |
 | `filter.segments` | The segments that are exported. The following fields are included:<ul><li>`segmentId`: Segment ID for profiles to be exported.</li><li>`segmentNs`: Segment namespace for the given `segmentID`.</li><li>`status`: An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized"]` which represents all profiles that fall into the segment at the current time. Possible values include: `realized` and `exited`.  A value of `realized` means the profile qualifies for the segment. A value of `exiting` means the profile is exiting the segment.</li></ul> |
-| `mergePolicy` | Merge policy information for the exported data. | 
+| `mergePolicy` | Merge policy information for the exported data. |
 | `metrics.totalTime` | A field indicating the total time that export job took to run. |
 | `metrics.profileExportTime` | A field indicating the time it took for the profiles to export. |
 | `totalExportedProfileCounter` | The total number of profile exported across all batches. |

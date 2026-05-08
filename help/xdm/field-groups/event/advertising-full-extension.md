@@ -1,18 +1,18 @@
 ---
-title: Adobe Advertising Cloud ExperienceEvent Full Extension Schema Field Group
-description: Learn about the Adobe Advertising Cloud ExperienceEvent Full Extension schema field group.
+title: Adobe Advertising ExperienceEvent Full Extension Schema Field Group
+description: Learn about the Adobe Advertising ExperienceEvent Full Extension schema field group.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 4a9f6bff-6098-424a-b8f4-0f14ec52d906
 ---
-# [!UICONTROL Adobe Advertising Cloud ExperienceEvent Full Extension] schema field group
+# [!UICONTROL Adobe Advertising ExperienceEvent Full Extension] schema field group
 
 >[!AVAILABILITY]
 >
->The [!UICONTROL Adobe Advertising Cloud ExperienceEvent Full Extension] field group is currently in beta. The documentation and the functionality are subject to change.
+>The [!UICONTROL Adobe Advertising ExperienceEvent Full Extension] field group is currently in beta. The documentation and the functionality are subject to change.
 
-[!UICONTROL Adobe Advertising Cloud ExperienceEvent Full Extension] is a standard schema field group for the [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), which captures common metrics that are collected by Adobe Advertising (formerly called "[!DNL Advertising Cloud]").
+[!UICONTROL Adobe Advertising ExperienceEvent Full Extension] is a standard schema field group for the [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), which captures common metrics that are collected by Adobe Advertising (formerly called "[!DNL Advertising Cloud]").
 
-This document describes the structure and use case of the [!DNL Advertising Cloud] extension field group.
+This document describes the structure and use case of the [!DNL Advertising] extension field group.
 
 >[!NOTE]
 >
@@ -22,7 +22,7 @@ This document describes the structure and use case of the [!DNL Advertising Clou
 
 The field group provides a single `_experience` object to a schema, which itself contains a single `adcloud` object.
 
-![Top-level fields for the [!DNL Advertising Cloud] field group](../../images/field-groups/advertising-full-extension/full-schema.png "Top-level fields for the [!DNL Advertising Cloud] field group")
+![Top-level fields for the [!DNL Advertising] field group](../../images/field-groups/advertising-full-extension/full-schema.png "Top-level fields for the [!DNL Advertising] field group")
 
 | Property | Data type | Description |
 | --- | --- | --- |
@@ -81,7 +81,7 @@ The campaign object defines the ad campaign hierarchy, including account, advert
 | Property | Data type | Description |
 | --- | --- | --- |
 | `accountId` | String | The identifier for the account. |
-| `dspId` | String | The identifier for the Demand Side Platform (DSP) in which the campaign is defined. Usually, this identifier is the ID for Adobe Advertising Cloud DSP. |
+| `dspId` | String | The identifier for the Demand Side Platform (DSP) in which the campaign is defined. Usually, this identifier is the ID for Adobe Advertising DSP. |
 | `campaignId` | String | The identifier for the campaign. |
 | `placementId` | String | The identifier for the placement. |
 | `packageId` | String | The identifier for the Advertising DSP package. |
@@ -137,10 +137,10 @@ The inventory object records details about the ad inventory opportunity, includi
 | --- | --- | --- |
 | `sessionId` | String | The session ID associated with an experience event, used to link independent events that occurred in the same session. |
 | `feedID` | String | A composite ID of the publisher, ad exchange, and other features.|
-| `sspPartnerCode` | String | The partner (exchange) through which Adobe Advertising Cloud receives the inventory opportunity. |
+| `sspPartnerCode` | String | The partner (exchange) through which Adobe Advertising receives the inventory opportunity. |
 | `siteID` | String | The identifier for the website where the ad impression was served. |
 | `costCurrency` | String | The ISO 4217 currency code used to pay a partner for an ad opportunity. The value must follow the regular expression pattern ^[A-Z]{3}$ (three uppercase letters). For example: USD, EUR. |
-| `inventorySourceId` | String | The ID of the Adobe Advertising Cloud inventory source on which this opportunity was delivered. |
+| `inventorySourceId` | String | The ID of the Adobe Advertising inventory source on which this opportunity was delivered. |
 | `segment` | Object | Details associated with user segmentation rules. Its properties include:<ul><li>`attributablePartnerId` (String): The identifier for the segment provider who owns the attributableSegmentId.</li><li>`attributableSegmentId` (String): The segment credited for user targeting in the placement's targeting rule. This is used for the purposes of tracking costs and paying partners.</li><li>`segments` (String): The intersection of the user segments a\) to which the user belonged, and b\) that the ad was targeting. This is not the full list of segments to which the user belonged at the time of the auction.</li></ul> |
 | `optimizationTag` | String | The tag related to optimization. |
 | `attributableDeviceGraphId` | String | The identifier for the device graph attributed to a conversion event. |
@@ -162,6 +162,6 @@ The `productDetails` object contains information about products featured in shop
 
 ## Next steps
 
-This document covered the structure and use case for the [!DNL Advertising Cloud] extension field group. For more details on the field group itself, refer to the [public XDM repository](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/adcloud/experienceevent-all.schema.json).
+This document covered the structure and use case for the [!DNL Adobe Advertising] extension field group. For more details on the field group itself, refer to the [public XDM repository](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/adcloud/experienceevent-all.schema.json).
 
 If you are using this field group to collect [!DNL Advertising] data using the Adobe Experience Platform Web SDK, see the guide on [configuring a datastream](../../../datastreams/overview.md) to learn how to map data to XDM on the server side.

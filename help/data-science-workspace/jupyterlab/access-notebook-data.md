@@ -46,7 +46,7 @@ When reading datasets with PySpark and Scala notebooks, you have the option to u
 | Number of Rows          | 1K     | 10K    | 100K  | 1M    | 2M    |
 | ----------------------- | ------ | ------ | ----- | ----- | ----- |
 | Size on disk (MB)       | 18.73  | 187.5  | 308   | 3000  | 6050  |
-| SDK (in seconds)        | 20.3   | 86.8   | 63    | 659   | 1315  | 
+| SDK (in seconds)        | 20.3   | 86.8   | 63    | 659   | 1315  |
 
 **ad-hoc schema:** You should be able to read a maximum of 5 million rows (~5.6 GB data on disk) of non-XDM (ad-hoc) data in less than 14 minutes. Adding additional rows may result in errors.
 

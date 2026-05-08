@@ -63,15 +63,15 @@ Ensure you add the [!DNL Algolia] event field group to your schema before you us
 
 ![Algolia event field group configuration](../../../images/extensions/server/algolia/algolia-field-groups.png)
 
-### Add the [!DNL Algolia] event field group to your schema {#add-algolia-field-group}
+### Add the [!UICONTROL Algolia Event Details] field group to your schema {#add-algolia-field-group}
 
-To add the [!DNL Algolia] event field group:
+To add the [!UICONTROL Algolia Event Details] field group:
 
 Navigate to **[!UICONTROL Schemas]** and select **[!UICONTROL Browse]**.
 
 Add a new schema or update an existing schema that you use to send web events and hover over the **[!UICONTROL Add]** icon. Enter *[!DNL Algolia]* in the search box to narrow down the results.
 
-Select the **[!DNL Algolia] Event Details** field group > **[!UICONTROL Add field group]** button > **[!UICONTROL Save]**.
+Select the **[!UICONTROL Algolia Event Details]** field group > **[!UICONTROL Add field group]** button > **[!UICONTROL Save]**.
 
 ![Algolia profile field group configuration in Experience Platform](../../../images/extensions/server/algolia/algolia-profile-field-group.png)
 

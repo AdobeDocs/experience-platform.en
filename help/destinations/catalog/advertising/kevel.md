@@ -10,10 +10,10 @@ exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
 
 [[!DNL Kevel]](https://www.kevel.com/) provides the AI-enabled technology and expert guidance that help innovative commerce leaders launch, scale, and succeed in retail media. [!DNL Kevel]'s Retail Media Cloud powers targeted, attributable, customizable ad formats for on-site and off-site advertising.
 
-The [!DNL Kevel] streaming destination for Adobe Experience Platform enables customers to activate Adobe audiences directly into [!DNL Kevel]'s UserDB and Segment Management APIs to support real-time targeting at ad decision time.
+The [!DNL Kevel] streaming destination for [!DNL Adobe Experience Platform] enables customers to activate Adobe audiences directly into [!DNL Kevel]'s UserDB and Segment Management APIs to support real-time targeting at ad decision time.
 
 >[!IMPORTANT]
-> 
+>
 >If you have questions or would like to request an update regarding the [!DNL Kevel] destination or its documentation, please email the [!DNL Kevel] team at [support@kevel.com](mailto:support@kevel.com).
 
 ## Use cases {#use-cases}
@@ -44,7 +44,7 @@ The [!DNL Kevel] destination supports activation for any identity that your appl
 
 {style="table-layout:auto"}
 
-### Support for custom identity namespaces
+### Support for custom identity namespaces {#custom-identity-namespaces}
 
 The [!DNL Kevel] destination **also accepts custom namespaces**, as defined in your Experience Platform implementation.
 
@@ -54,7 +54,7 @@ This means:
 - These namespaces can be assigned to `kevel_user_key1`, `kevel_user_key2`, or `kevel_user_key3` the same way as global namespaces.
 - [!DNL Kevel] will generate **one UserDB record per instance of each mapped identity**, allowing real-time matching at ad-decision time for each identifier your systems send.
 
-### Identity mapping behavior
+### Identity mapping behavior {#identity-mapping-behavior}
 
 - You may map **up to three** Experience Platform identity namespaces to [!DNL Kevel]'s three identity slots.
 - For each activated profile, [!DNL Kevel] receives **one UserDB record per instance of each mapped identity**.
@@ -67,7 +67,7 @@ This means:
 | Audience origin        | Supported | Description                                              |
 |-----------------------|-----------|---------------------------------------------------------- |
 | Segmentation Service  | Yes       | Adobe Profile audiences evaluated by the segmentation engine. |
-| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -80,7 +80,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -99,7 +99,7 @@ Supported audiences by audience data type:
 Follow the standard Experience Platform [connect a destination](../../ui/connect-destination.md) workflow.
 
 >[!IMPORTANT]
-> 
+>
 >You must have **View Destinations** and **Manage Destinations** permissions.
 
 ### Authenticate to destination {#authenticate}
@@ -120,10 +120,9 @@ After authentication, configure:
 
 ![Destination details for Kevel Destination](/help/destinations/assets/catalog/advertising/kevel-destination-details.png)
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
-To send audiences to [!DNL Kevel], follow the workflow in  
-[Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md).
+To send audiences to [!DNL Kevel], follow the workflow in [Activate audiences to streaming destinations](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ### Deactivating audiences {#deactivate}
 
@@ -149,7 +148,7 @@ During activation, select the identity namespaces you have configured for [!DNL 
 
 When a profile qualifies for or exits an audience, Experience Platform sends a streaming update to [!DNL Kevel].
 
-### Sample payload received by [!DNL Kevel] UserDB
+### Sample payload received by [!DNL Kevel] UserDB {#sample-payload}
 
 ```json
 PUT /udb/{networkId}/segments?userKey=ECID-12345
@@ -207,7 +206,7 @@ Below is an example of an exported profile showing:
 }
 ```
 
-#### How [!DNL Kevel] interprets this profile
+#### How [!DNL Kevel] interprets this profile {#kevel-profile-interpretation}
 
 With the [!DNL Kevel] destination configuration, each mapped identity generates a distinct UserDB record, meaning [!DNL Kevel] receives:
 

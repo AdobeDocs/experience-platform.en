@@ -20,31 +20,7 @@ If you already have an authenticated [!DNL Salesforce] account, you may skip the
 
 ### Gather required credentials {#gather-required-credentials}
 
->[!WARNING]
->
->Basic authentication for the [!DNL Salesforce] source will be deprecated in January 2026. You must move to OAuth 2 Client Credential authentication in order to continue using the source and ingesting data from your [!DNL Salesforce] account to Experience Platform.
-
-The [!DNL Salesforce] source supports basic authentication and OAuth2 Client Credential.
-
->[!BEGINTABS]
-
->[!TAB Basic authentication]
-
-You must provide values for the following credentials to connect your [!DNL Salesforce] account using basic authentication.
-
-| Credential | Description |
-| --- | --- |
-| Environment URL | The URL of the [!DNL Salesforce] source instance. The format for environment URL is `https://[domain].my.salesforce.com`. |
-| Username | The username for the [!DNL Salesforce] user account. |
-| Password | The password for the [!DNL Salesforce] user account. |
-| Security Token | The security token for the [!DNL Salesforce] user account. |
-| API version | (Optional) The REST API version of the [!DNL Salesforce] instance that you are using. The value for the API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0`. If this field is left blank, then Experience Platform will automatically use the latest available version. |
-
-For more information on authentication, refer to [this [!DNL Salesforce] authentication guide](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
-
->[!TAB OAuth2 Client Credential]
-
-You must provide values for the following credentials to connect your [!DNL Salesforce] account using OAuth2 Client Credential.
+The [!DNL Salesforce] source supports authentication via OAuth2 Client Credential.
 
 | Credential | Description |
 | --- | --- |
@@ -55,10 +31,6 @@ You must provide values for the following credentials to connect your [!DNL Sale
 | Include deleted objects |  A boolean value used to determine whether to include soft deleted records. If set to true, soft-deleted records can be included in your [!DNL Salesforce] query and ingested from your account into Experience Platform If you do not specify your configuration, this value defaults to `false`. |
 
 For more information on using OAuth for [!DNL Salesforce], read the [[!DNL Salesforce] guide on OAuth Authorization Flows](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
-
->[!ENDTABS]
-
-Once you have gathered your required credentials, you can follow the steps below to connect your [!DNL Salesforce] account to Experience Platform.
 
 ## Connect your [!DNL Salesforce] account
 
@@ -84,27 +56,6 @@ To use an existing account, select **[!UICONTROL Existing account]** and then se
 
 To create a new account, select **[!UICONTROL New account]** and provide a name and a description for your new [!DNL Salesforce] account.
 
-![The interface in which you can create a new Salesforce account by providing the appropriate authentication credentials.](../../../../images/tutorials/create/salesforce/new.png)
-
-Next, select the authentication type that you would like to use for your new account.
-
->[!BEGINTABS]
-
->[!TAB Basic authentication]
-
-For basic authentication, select **[!UICONTROL Basic authentication]** and then provide values for the following credentials:
-
-* Environment URL
-* Username
-* Password
-* API version (optional)
-
-When finished, select **[!UICONTROL Connect to source]**.
-
-![The basic authentication interface for Salesforce account creation.](../../../../images/tutorials/create/salesforce/basic.png)
-
->[!TAB OAuth2 Client Credential]
-
 For OAuth 2 Client Credential, select **[!UICONTROL OAuth2 Client Credential]** and then provide values for the following credentials:
 
 * Environment URL
@@ -115,9 +66,8 @@ For OAuth 2 Client Credential, select **[!UICONTROL OAuth2 Client Credential]** 
 
 When finished, select **[!UICONTROL Connect to source]**.
 
-![The OAuth interface for Salesforce account creation.](../../../../images/tutorials/create/salesforce/oauth.png)
 
->[!ENDTABS]
+![The interface in which you can create a new Salesforce account by providing the appropriate authentication credentials.](../../../../images/tutorials/create/salesforce/new.png)
 
 ### Skip preview of sample data {#skip-preview-of-sample-data}
 

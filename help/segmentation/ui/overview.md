@@ -72,10 +72,10 @@ A popover appears, listing all the fields that can be displayed within the table
 ![The attributes that can be displayed for the Composition section.](../images/ui/overview/compositions-customize-table.png)
 
 | Field | Description |
-| ----- | ----------- | 
+| ----- | ----------- |
 | [!UICONTROL Name] | The name of the audience. |
 | [!UICONTROL Status] | The status of the audience. Possible values for this field include `Draft`, `Inactive`, and `Published`.  |
-| [!UICONTROL Created] | The time and date the audience was created. | 
+| [!UICONTROL Created] | The time and date the audience was created. |
 | [!UICONTROL Created by] | The name of the person who created the audience. |
 | [!UICONTROL Updated] | The time and date the audience was last updated. |
 | [!UICONTROL Updated by] | The name of the person who last updated the audience. |

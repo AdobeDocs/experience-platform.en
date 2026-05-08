@@ -134,40 +134,9 @@ The following video provides an introduction to the quick start feature.
 
 >[!NOTE]
 >
->This feature is designed to help you get started with an event forwarding implementation. It will not deliver an end to end, fully functional implementation that accommodates all use cases.
+>The guided setup feature helps you get set up with ease and efficiency. This tool automates multiple steps that are performed in Adobe tags and event forwarding. It will not deliver an end to end, fully functional implementation that accommodates all use cases.
 
-This setup auto installs both the Meta Conversions API and the Meta Pixel extensions. This hybrid implementation is recommended by Meta to collect and forward event conversions server side.
-The quick setup feature is designed to help customers get started with an event forwarding implementation and is not intended to deliver an end to end, fully functional implementation that accommodates all use cases.
-
-To install the feature, Select **[!UICONTROL Get Started]** for **[!DNL Send Conversions Data to Meta]** on the Adobe Experience Platform Data Collection **[!UICONTROL Home]** page.
-
-![Data collection home page showing conversions data to meta](../../../images/extensions/server/meta/conversion-data-to-meta.png)
-
-Enter your **[!UICONTROL Domain]**, then select **[!UICONTROL Next]**. This domain will be used as a naming convention for your auto generated Tags and Event Forwarding properties, rules, data elements, datastreams, and so on.
-
-![Welcome screen requesting domain name](../../../images/extensions/server/meta/welcome.png)
-
-In the **[!UICONTROL Initial Setup]** dialog enter your **[!UICONTROL Meta Pixel ID]**, **[!UICONTROL Meta Conversion API Access Token]**, and **[!UICONTROL Data Layer Path]**, then select **[!UICONTROL Next]**.
-
-![Initial setup dialog](../../../images/extensions/server/meta/initial-setup.png)
-
-Allow a few minutes for the initial setup process to complete, then select **[!UICONTROL Next]**.
-
-![Initial setup complete confirmation screen](../../../images/extensions/server/meta/setup-complete.png)
-
-From the **[!UICONTROL Add Code on Your Site]** dialog copy the code provided using the copy ![Copy](/help/images/icons/copy.png) function and paste this into the `<head>` of your source website. Once implemented, select **[!UICONTROL Start Validation]**
-
-![Add code on your site dialog](../../../images/extensions/server/meta/add-code-on-your-site.png)
-
-The [!UICONTROL Validation Results] dialog displays the Meta extension implementation results. Select **[!UICONTROL Next]**. You can also see additional validation results by selecting the **[!UICONTROL Assurance]** link.
-
-![Test results dialog displaying implementation results](../../../images/extensions/server/meta/test-results.png)
-
-The **[!UICONTROL Next Steps]** screen display confirms completion of setup. From here you have the option to optimize your implementation by adding new events, which are shown in the next section.
-
-If you do not want to add additional events, select **[!UICONTROL Close]**.
-
-![Next steps dialog](../../../images/extensions/server/meta/next-steps.png)
+To get started with the guided setup, follow the instructions in the [Event Forwarding guided setup](../../../ui/event-forwarding/guided-setup.md).
 
 #### Adding Additional Events
 
