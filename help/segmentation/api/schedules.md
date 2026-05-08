@@ -108,7 +108,7 @@ A successful response returns HTTP status 200 with a list of schedules for the s
 | `children.properties.segments` | Using `["*"]` ensures all segments are included. |
 | `children.schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day. |
 | `children.state` | A string containing the schedule state. The two supported states are "active" and "inactive". By default, the state is set to "inactive". |
-| `children.frequency` | A string that states how often the schedule runs. Possible values include `daily`, `weekly`, and `monthly`. | 
+| `children.frequency` | A string that states how often the schedule runs. Possible values include `daily`, `weekly`, and `monthly`. |
 | `children.owner` | A string that indicates who the owner of the schedule is. Possible values include `system` and `user`. |
 
 +++
