@@ -1,14 +1,14 @@
 ---
 keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising; audience manager; adobe target destination; target; audience manager destination;
 title: Adobe destinations overview
-description: Manage your customer experience by connecting your data in Experience Platform to other Adobe Experience Cloud solutions for ad targeting, personalization, marketing automation and more
+description: Manage your customer experience by connecting your data in Experience Platform to other Adobe CX Enterprise solutions for ad targeting, personalization, marketing automation and more
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
 ---
 # Adobe destinations overview {#adobe-destinations}
 
 ## Overview {#overview}
 
-Manage your customer experience by connecting your data in [!DNL Adobe Experience Platform] to other [!DNL Adobe Experience Cloud] solutions for ad targeting, personalization, marketing automation and more.
+Manage your customer experience by connecting your data in [!DNL Adobe Experience Platform] to other [!DNL Adobe CX Enterprise] solutions for ad targeting, personalization, marketing automation and more.
 
 ## Supported Adobe destinations {#supported-destinations}
 
