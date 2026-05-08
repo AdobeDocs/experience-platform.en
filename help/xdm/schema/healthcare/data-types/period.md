@@ -2,8 +2,7 @@
 title: Period Data Type
 description: Learn about the Period Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+hide: true
 exl-id: aecd09e4-2797-4d2d-be62-acad28fb7bba
 ---
 # [!UICONTROL Period] data type

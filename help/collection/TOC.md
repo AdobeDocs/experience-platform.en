@@ -18,7 +18,7 @@ role: Developer
   + [First-party device IDs](identity/fpid.md)
   + [Cross-domain sharing](identity/cross-domain-sharing.md)
   + [Mobile apps to mobile web/WebViews](identity/mobile-to-web.md)
-  + [Unified identity support](identity/unified-identity-support.md)
+  + {hide-from-toc} [Unified identity support](identity/unified-identity-support.md)
   + [Consent and identity](identity/consent.md)
   + [Troubleshooting](identity/troubleshooting.md)
 + BrightScript {#brightscript}

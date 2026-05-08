@@ -2,7 +2,6 @@
 title: Filter Sources Objects In The UI
 description: Learn how to navigate through your sources objects such as accounts and dataflows in the Experience Platform UI.
 hide: true
-hidefromtoc: true
 exl-id: 59c200cc-1be7-45a8-9d7a-55e6f11dbcf2
 ---
 # Filter sources objects in the UI

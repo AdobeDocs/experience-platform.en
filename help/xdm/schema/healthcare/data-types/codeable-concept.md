@@ -2,8 +2,7 @@
 title: Codeable Concept Data Type
 description: Learn about the Codeable Concept Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+hide: true
 exl-id: c172a7cd-24c6-484b-8552-8745dfd3a8e9
 ---
 # [!UICONTROL Codeable Concept] data type

@@ -2,8 +2,7 @@
 title: Coding Data Type
 description: Learn about the Coding Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+hide: true
 exl-id: 23b789da-1feb-4001-8268-f0d7e2e8563b
 ---
 # [!UICONTROL Coding] data type

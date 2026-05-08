@@ -22,10 +22,10 @@ role: Admin,User,Developer,Leader
   * [Monitor significant changes and forecast audiences](./new-features/audience-forecasting.md)
   * [Natural language estimation](./new-features/natural-language.md)
   * [Product Support Agent](./new-features/customer-support.md)
-  * [XDM field discovery for audience creation](./new-features/xdm-field-discovery.md)
+  * {hide-from-toc} [XDM field discovery for audience creation](./new-features/xdm-field-discovery.md)
 * Model details {#model-details}
-  * [Model details overview](./model-details/overview.md)
+  * {hide-from-toc} [Model details overview](./model-details/overview.md)
   * [AI Assistant (Legacy) Natural Operational Insights Language to SQL](./model-details/natural-language-to-sql.md)
-  * [Send-Time Optimization](./model-details/send-time-optimization.md)
+  * {hide-from-toc} [Send-Time Optimization](./model-details/send-time-optimization.md)
 * [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 

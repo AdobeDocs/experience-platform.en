@@ -4,7 +4,6 @@ title: Create a Pinterest Ads source connection in the UI
 description: Learn how to create a Pinterest Ads source connection using the Adobe Experience Platform UI.
 badge: Beta
 hide: true
-hidefromtoc: true
 exl-id: ca7b99c8-f1d9-4120-85d5-720f5b9ad41a
 ---
 # Create a [!DNL Pinterest Ads] source connection in the UI

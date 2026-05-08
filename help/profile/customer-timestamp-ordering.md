@@ -3,7 +3,6 @@ title: Customer Timestamp Ordering
 description: Learn how to add customer timestamp ordering to your datasets to ensure consistency in your profile data.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
-hidefromtoc: true
 exl-id: 1cd9f0b5-6334-4815-860a-78596a9cea1a
 ---
 # Customer timestamp ordering

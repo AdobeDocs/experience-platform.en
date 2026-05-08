@@ -31,7 +31,7 @@ A common case is re-targeting of your website visitors to your website or app ba
     * If you don't have Adform Audience Base Data Connection credentials, contact your Adform representative.
 * For proper synchronization you need to either have an [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) or [client-side](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) connection from your entities to Adform Site Tracking.
     * If you don't have an Event Streaming or client-side connection from your entities to Adform Site Tracking, contact your Adform representative.
-    * Adform provides [!DNL Adobe Experience Cloud] extensions for both [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) and [client-side](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform).
+    * Adform provides [!DNL Adobe CX Enterprise] extensions for both [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) and [client-side](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform).
 
 
 ## Supported identities {#supported-identities}

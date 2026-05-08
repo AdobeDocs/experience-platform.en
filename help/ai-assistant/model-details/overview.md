@@ -2,7 +2,6 @@
 title: Model Details For AI Model Transparency In Adobe Experience Platform
 description: Learn about model detailss in Adobe Experience Platform.
 hide: true
-hidefromtoc: true
 exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
 ---
 # Model details for AI model transparency in Adobe Experience Platform

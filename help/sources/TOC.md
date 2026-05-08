@@ -32,7 +32,7 @@ role: Developer
       - [ECID mapping migration guide](connectors/adobe-applications/marketo/migration.md)
   - Advertising {#advertising}
     - [Google Ads connector](connectors/advertising/ads.md)
-    - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
+    - {hide-from-toc} [Pinterest Ads](connectors/advertising/pinterest-ads.md)
   - Analytics {#analytics}
     - [Mixpanel connector](connectors/analytics/mixpanel.md)
     - [Pendo](connectors/analytics/pendo-webhook.md)
@@ -92,7 +92,7 @@ role: Developer
     - [Demandbase Intent](connectors/data-partners/demandbase.md)
     - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
   - Data sharing {#data-sharing}
-    - [Deltashare](connectors/data-sharing/deltashare.md)
+    - {hide-from-toc} [Deltashare](connectors/data-sharing/deltashare.md)
   - eCommerce {#ecommerce}
     - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
     - [Shopify](connectors/ecommerce/shopify.md)
@@ -126,7 +126,7 @@ role: Developer
   - Create a base connection {#create}
     - Advertising {#advertising}
       - [Google Ads](tutorials/api/create/advertising/ads.md)
-      - [Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
+      - {hide-from-toc} [Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
       - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
@@ -246,7 +246,7 @@ role: Developer
       - [Marketo Custom Activities](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
     - Advertising {#advertising}
       - [Google Ads](tutorials/ui/create/advertising/ads.md)
-      - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
+      - {hide-from-toc} [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
@@ -307,7 +307,7 @@ role: Developer
       - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
       - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
     - Data sharing {#data-sharing}
-      - [Deltashare](tutorials/ui/create/data-sharing/deltashare.md)
+      - {hide-from-toc} [Deltashare](tutorials/ui/create/data-sharing/deltashare.md)
     - eCommerce {#ecommerce}
       - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -316,7 +316,7 @@ role: Developer
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Loyalty {#loyalty}
       - [Capillary Streaming Events](tutorials/ui/create/loyalty/capillary.md)
-      - [Kobie Streaming Events](tutorials/ui/create/loyalty/kobie-streaming.md)
+      - {hide-from-toc} [Kobie Streaming Events](tutorials/ui/create/loyalty/kobie-streaming.md)
       - [Talon.One Streaming Events](tutorials/ui/create/loyalty/talon-one-streaming.md)
       - [Talon.One Batch Source Connector](tutorials/ui/create/loyalty/talon-one-batch.md)
     - Marketing automation {#marketing-automation}
@@ -355,7 +355,7 @@ role: Developer
     - [Payment connection dataflow](tutorials/ui/dataflow/payments.md)
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
   - [Create a sources dataflow using templates in the UI](tutorials/ui/templates.md)
-  - [Filter sources objects](tutorials/ui/filter.md)
+  - {hide-from-toc} [Filter sources objects](tutorials/ui/filter.md)
   - [Ingest encrypted data](tutorials/ui/encryped-ingestion.md)
   - [On-demand ingestion](tutorials/ui/on-demand-ingestion.md)
   - [Monitor batch dataflows](tutorials/ui/monitor.md)
