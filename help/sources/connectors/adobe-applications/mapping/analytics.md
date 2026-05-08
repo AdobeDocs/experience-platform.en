@@ -318,18 +318,18 @@ To learn more about performing these transformations using Query Service, see [A
 | `geo_region` | `placeContext.geo.stateProvince` | string | The name of either the state or region of the hit. This is based off the hit's IP address. |
 | `geo_zip` | `placeContext.geo.postalCode` | string | The ZIP code of the hit. This is based off the hit's IP address. |
 | `os` | `_experience.analytics.environment.`<br/>`operatingSystemID` | integer | The numeric ID representing the operating system of the visitor. This is based on the user_agent column. |
-| `search_page_num` | `search.pageDepth` | integer | This variable is used by the All Search Page Rank dimension, and indicates which page of search results your site | appeared on before the user clicked through to your site. |
+| `search_page_num` | `search.pageDepth` | integer | This variable is used by the All Search Page Rank dimension, and indicates which page of search results your site \| appeared on before the user clicked through to your site. |
 | `visit_keywords` | `_experience.analytics.session.`<br/>`search.keywords` | string | A variable used in the Search Keywords dimension. |
 | `visit_num` | `_experience.analytics.session.`<br/>`num` | integer | A variable used in the Visit Number dimension. This starts at 1, and increments each time a new visit starts (per user). |
 | `visit_page_num` | `_experience.analytics.session.`<br/>`depth` | integer | A variable used in the Hit Depth dimension. This value increases by 1 for each hit the user generates, and resets after each visit. |
 | `visit_referrer` | `_experience.analytics.session.`<br/>`web.webReferrer.URL` | string | The first referrer of the visit. |
 | `visit_search_page_num` | `_experience.analytics.session.`<br/>`search.pageDepth` | integer | The first Page Name of the visit. |
 | `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Object | Custom Analytics props, configured to be list props. It contains a delimited list of values. |
-| `post_hier1`<br/>`[...]`<br/>`post_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Object | Used by hierarchy variables and contains a delimited list of values. | {values (array), delimiter (string)} |
-| `post_mvvar1`<br/>`[...]`<br/>`post_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | A list of variable values. Contains a delimited list of custom values, depending on implementation. | {value (string), key (string)} |
+| `post_hier1`<br/>`[...]`<br/>`post_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Object | Used by hierarchy variables and contains a delimited list of values. \| `{values (array), delimiter (string)}` |
+| `post_mvvar1`<br/>`[...]`<br/>`post_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | A list of variable values. Contains a delimited list of custom values, depending on implementation. \| `{value (string), key (string)}` |
 | `post_cookies` | `environment.browserDetails.cookiesEnabled` | boolean | Variable used in the Cookie Support dimension. |
-| `post_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Object | Standard commerce events triggered on the hit. | {id (string), value (number)} |
-| `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Custom events triggered on the hit.| {id (Object), value (Object)} |
+| `post_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Object | Standard commerce events triggered on the hit. \| `{id (string), value (number)}` |
+| `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Custom events triggered on the hit.\| `{id (Object), value (Object)}` |
 | `post_java_enabled` | `environment.browserDetails.javaEnabled` | boolean | A flag indicating whether Java&trade; is enabled. |
 | `post_latitude` | `placeContext.geo._schema.latitude` | number |   |
 | `post_longitude` | `placeContext.geo._schema.longitude` | number |   |
@@ -339,7 +339,7 @@ To learn more about performing these transformations using Query Service, see [A
 | `post_page_event_var2` | `web.webInteraction.name` | string | This variable is only used in link tracking image requests. It is the custom name of the link. |
 | `post_page_type` | `web.webPageDetails.isErrorPage` | boolean | This is used to populate the Pages Not Found dimension. This variable should either be empty or contain "ErrorPage" |
 | `post_pagename_no_url` | `web.webPageDetails.name` | number | The name of the page (if set). If no page is specified, this value is left empty. |
-| `post_product_list` | `productListItems[].items` | array | The product list, as passed in through the products variable. | {SKU (string), quantity (integer), priceTotal (number)} |
+| `post_product_list` | `productListItems[].items` | array | The product list, as passed in through the products variable. \| `{SKU (string), quantity (integer), priceTotal (number)}` |
 | `post_search_engine` | `search.searchEngine` | string | The numeric ID representing the search engine that referred the visitor to your site. |
 | `mvvar1_instances` | `.list.items[]` | Object | List of variable values. Contains a delimited list of custom values, depending on implementation. |
 | `mvvar2_instances` | `.list.items[]` | Object | List of variable values. Contains a delimited list of custom values, depending on implementation. |
