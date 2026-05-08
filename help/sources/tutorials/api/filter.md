@@ -511,6 +511,8 @@ curl -X GET \
   -H 'x-api-key: {API_KEY}'
 ```
 
++++
+
 +++Response
 
 A successful response returns the status code 200 and the connection specs for [!DNL Salesforce], including information on its supported query language and logical operators.

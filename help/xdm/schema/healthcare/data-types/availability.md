@@ -2,7 +2,7 @@
 title: Availability Data Type
 description: Learn about the Availability Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
+hide: true
 exl-id: 18c0b767-adf0-480e-9cf2-63e21d05b362
 ---
 # [!UICONTROL Availability] data type

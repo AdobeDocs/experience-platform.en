@@ -2,7 +2,7 @@
 title: Address Data Type
 description: Learn about the Address Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
+hide: true
 exl-id: 21213bd5-00f4-43cc-80cf-2c0dcf878a23
 ---
 # [!UICONTROL Address] data type

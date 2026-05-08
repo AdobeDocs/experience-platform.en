@@ -2,7 +2,7 @@
 title: (V2) Salesforce Marketing Cloud Account Engagement
 description: Learn how to use the (V2) Salesforce Marketing Cloud Account Engagement (formerly known as Pardot) destination to export your profile data and activate it within Salesforce Marketing Cloud Account Engagement using batch processing for your business needs.
 badge: label="Alpha" type="Informative"
-hide: yes
+hide: true
 exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
 ---
 # [!DNL (V2) Salesforce Marketing Cloud Account Engagement] connection

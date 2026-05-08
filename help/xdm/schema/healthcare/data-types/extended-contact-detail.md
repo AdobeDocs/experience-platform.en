@@ -2,7 +2,7 @@
 title: Extended Contact Detail Data Type
 description: Learn about the Extended Contact Detail Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
+hide: true
 exl-id: 4ac9b3d7-acc8-4a82-b34f-ec63a8bf12e0
 ---
 # [!UICONTROL Extended Contact Detail] data type

@@ -2,7 +2,7 @@
 title: Healthcare Data Model V2
 description: Learn about some common healthcare use cases and the best classes, related field groups, and datatypes to use.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
+hide: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
 ---
 # [!UICONTROL Healthcare] Data Model V2

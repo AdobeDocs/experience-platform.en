@@ -2,7 +2,7 @@
 title: Location Class
 description: Learn about the Location class in Experience Data Model (XDM).
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
+hide: true
 exl-id: 1d100981-49fb-4f02-b2c6-324f9c541f76
 ---
 # [!UICONTROL Location] class

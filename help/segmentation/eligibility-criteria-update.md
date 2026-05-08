@@ -1,7 +1,7 @@
 ---
 title: Segmentation Eligibility Criteria Update
 description: Learn about the segmentation eligibility criteria updates that affect the types of audiences that can be evaluated using streaming and edge segmentation.
-hide: yes
+hide: true
 exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
 ---
 # Segmentation eligibility criteria update

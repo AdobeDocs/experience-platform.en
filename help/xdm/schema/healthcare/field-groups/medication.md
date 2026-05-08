@@ -2,7 +2,7 @@
 title: Medication Schema Field Group
 description: Learn about the Medication schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
+hide: true
 exl-id: e1f53ff8-3079-4b2f-9e73-31a773907a63
 ---
 # [!UICONTROL Medication] schema field group
