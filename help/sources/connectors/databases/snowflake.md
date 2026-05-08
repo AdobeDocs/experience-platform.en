@@ -66,7 +66,11 @@ Provide values for the following credentials to connect [!DNL Snowflake] to Expe
 
 >[!WARNING]
 >
->Basic authentication (or account key authentication) for the [!DNL Snowflake] source will be deprecated on November 2025. You must move to key-pair based authentication in order to continue using the source and ingesting data from your database to Experience Platform. For more information on the deprecation, read the [[!DNL Snowflake] best practices guide on mitigating the risks of credential compromise](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+>Basic authentication (also called account key authentication) for the [!DNL Snowflake] source is **fully deprecated for connections to Experience Platform in Azure regions**—you must use key-pair authentication for all new and existing Azure-based connections.  
+>
+>For [!DNL Snowflake] sources connecting to Experience Platform in **AWS regions**, basic authentication is still supported for now but is in the process of deprecation and will be removed in the future. It is strongly recommended to migrate to key-pair authentication as soon as possible to ensure continued connectivity.  
+>
+>For more information on the deprecation and guidance, see the [[!DNL Snowflake] best practices guide on mitigating the risks of credential compromise](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
 | Credential | Description |
 | --- | --- |
