@@ -118,14 +118,14 @@ To configure details for the destination, fill in the fields below.
 - **Advertiser ID**: Enter the Advertiser ID for this destination.
 - **Campaign duration in days**: Enter the campaign run time in number of days.
 	
-![Roku destination details](../../assets/catalog/advertising/acxiom-real-id-audience-distribution/roku_destination_details.png)
+![Roku destination details](../../assets/catalog/advertising/acxiom-real-id-audience-connection/roku_destination_details.png)
 
 ### [!DNL Samsung Ads] {#samsung}
 To configure details for the destination, fill in the fields below.
 - **Advertiser Name**: Enter the name of the advertiser for this destination.
 - **Advertiser ID**: Enter the Advertiser ID for this destination.
 	
-![Samsung Ads destination details](../../assets/catalog/advertising/acxiom-real-id-audience-distribution/samsung_ads_destination_details.png)
+![Samsung Ads destination details](../../assets/catalog/advertising/acxiom-real-id-audience-connection/samsung_ads_destination_details.png)
 
 ### [!DNL The Trade Desk] (1st Party) {#ttd}
 To configure details for the destination, fill in the fields below.
@@ -133,7 +133,7 @@ To configure details for the destination, fill in the fields below.
 - **Advertiser Secret Key on The Trade Desk platform**: Enter the advertiser's secret key from their Trade Desk account. The client or their agency will need to provide this — it is tied to their specific advertiser seat on the TTD platform. Note: Do not leave this field blank or enter only spaces — this will cause the distribution to fail
 - **Campaign duration in days**: Enter the campaign run time in number of days.
 	
-![The Trade Desk destination details](../../assets/catalog/advertising/acxiom-real-id-audience-distribution/the_trade_desk_destination_details.png)
+![The Trade Desk destination details](../../assets/catalog/advertising/acxiom-real-id-audience-connection/the_trade_desk_destination_details.png)
 
 ### [!DNL Vizio] {#vizio}
 To configure details for the destination, fill in the fields below.
