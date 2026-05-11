@@ -92,7 +92,7 @@ role: Developer
     - [Demandbase Intent](connectors/data-partners/demandbase.md)
     - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
   - Data sharing {#data-sharing}
-    - {hide-from-toc} [Deltashare](connectors/data-sharing/deltashare.md)
+    - {hide-from-toc} [Delta Sharing](connectors/data-sharing/delta-sharing.md)
   - eCommerce {#ecommerce}
     - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
     - [Shopify](connectors/ecommerce/shopify.md)
@@ -307,7 +307,7 @@ role: Developer
       - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
       - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
     - Data sharing {#data-sharing}
-      - {hide-from-toc} [Deltashare](tutorials/ui/create/data-sharing/deltashare.md)
+      - {hide-from-toc} [Delta Sharing](tutorials/ui/create/data-sharing/delta-sharing.md)
     - eCommerce {#ecommerce}
       - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
