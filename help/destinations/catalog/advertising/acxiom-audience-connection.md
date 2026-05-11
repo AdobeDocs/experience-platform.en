@@ -117,7 +117,8 @@ To configure details for the destination, fill in the fields below.
 
 ### [!DNL Yahoo] {#yahoo}
 To configure details for the destination, fill in the fields below.
-- **Client name for Open AP**: Enter the Open AP client name.
+- **Destination Account ID**: Enter the destination account ID for this destination.
+- **Campaign duration in days**: Enter the campaign run time in number of days.
 	
 ![Yahoo destination details](../../assets/catalog/advertising/acxiom-audience-distribution/yahoo_destination_details.png)
 
