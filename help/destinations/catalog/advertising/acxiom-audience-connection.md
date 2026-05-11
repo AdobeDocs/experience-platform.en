@@ -43,7 +43,7 @@ For example, the Marketing Operations department at a global financial services 
 - [[!DNL Roku]](#roku)
 - [[!DNL Samsung Ads]](#samsung)
 - [!DNL Spectrum]
-- [[!DNL The Trade Desk]](#ttd)
+- [[!DNL The Trade Desk 1st party]](#ttd)
 - [!DNL Viant]
 - [[!DNL Vizio]](#vizio)
 - [[!DNL Warner Bros. Discovery]](#warner)
