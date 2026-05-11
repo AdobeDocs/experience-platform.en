@@ -98,7 +98,7 @@ To configure details for the destination, fill in the fields below.
 ### [!DNL The Trade Desk] (1st Party) {#ttd}
 To configure details for the destination, fill in the fields below.
 - **Advertiser ID**: Enter the Advertiser ID for this destination.
-- **Advertiser Secret Key on The Trade Desk platform**: Enter the advertiser's secret key from their Trade Desk account. The client or their agency will need to provide this — it is tied to their specific advertiser seat on the TTD platform. Note: Do not leave this field blank or enter only spaces — this will cause the distribution to fail
+- **Advertiser Secret Key on The Trade Desk platform**: Enter the advertiser's secret key for this Advertiser ID. Note: Leaving this field blank will cause the distribution to fail.
 - **Campaign duration in days**: Enter the campaign run time in number of days.
 	
 ![The Trade Desk destination details](../../assets/catalog/advertising/acxiom-audience-distribution/the_trade_desk_destination_details.png)
@@ -111,7 +111,7 @@ To configure details for the destination, fill in the fields below.
 
 ### [!DNL Warner Bros. Discovery] {#warner}
 To configure details for the destination, fill in the fields below.
-- **Client name for Open AP**: Enter the Open AP client name.
+- **Client name for Open AP**: Enter the client name for Warner Bros. Discovery via Open AP. **Note**: Your Warner Bros. Discovery representative will activate your audience on your behalf through coordination with Open AP.
 	
 ![Warner Bros. Discovery destination details](../../assets/catalog/advertising/acxiom-audience-distribution/warner_bros_discovery_destination_details.png)
 
