@@ -40,9 +40,14 @@ For example, the Marketing Operations department at a global financial services 
 - [[!DNL Facebook]](#facebook)
 - [[!DNL LG Ads]](#lg-ads)
 - [[!DNL Pinterest]](#pinterest)
+- [[!DNL Roku]](#roku)
+- [[!DNL Samsung Ads]](#samsung)
 - [!DNL Spectrum]
+- [[!DNL The Trade Desk]](#ttd)
 - [!DNL Viant]
 - [[!DNL Vizio]](#vizio)
+- [[!DNL Warner Bros. Discovery]](#warner)
+- [[!DNL Yahoo]](#yahoo)
 
 
 ## Connect to the destination {#connect}
@@ -76,11 +81,45 @@ To configure details for the destination, fill in the fields below.
 	
 ![Pinterest destination details](../../assets/catalog/advertising/acxiom-audience-distribution/pinterest_destination_details.png)
 
+### [!DNL Roku] {#roku}
+To configure details for the destination, fill in the fields below.
+- **Advertiser ID**: Enter the Advertiser ID for this destination.
+- **Campaign duration in days**: Enter the campaign run time in number of days.
+	
+![Roku destination details](../../assets/catalog/advertising/acxiom-audience-distribution/roku_destination_details.png)
+
+### [!DNL Samsung Ads] {#samsung}
+To configure details for the destination, fill in the fields below.
+- **Advertiser Name**: Enter the name of the advertiser for this destination.
+- **Advertiser ID**: Enter the Advertiser ID for this destination.
+	
+![Samsung Ads destination details](../../assets/catalog/advertising/acxiom-audience-distribution/samsung_ads_destination_details.png)
+
+### [!DNL The Trade Desk] (1st Party) {#ttd}
+To configure details for the destination, fill in the fields below.
+- **Advertiser ID**: Enter the Advertiser ID for this destination.
+- **Advertiser Secret Key on The Trade Desk platform**: Enter the advertiser's secret key from their Trade Desk account. The client or their agency will need to provide this — it is tied to their specific advertiser seat on the TTD platform. Note: Do not leave this field blank or enter only spaces — this will cause the distribution to fail
+- **Campaign duration in days**: Enter the campaign run time in number of days.
+	
+![The Trade Desk destination details](../../assets/catalog/advertising/acxiom-audience-distribution/the_trade_desk_destination_details.png)
+
 ### [!DNL Vizio] {#vizio}
 To configure details for the destination, fill in the fields below.
 - **Advertiser Name**: Enter the name of the advertiser for this destination.
 	
 ![Vizio destination details](../../assets/catalog/advertising/acxiom-audience-distribution/vizio_destination_details.png)
+
+### [!DNL Warner Bros. Discovery] {#warner}
+To configure details for the destination, fill in the fields below.
+- **Client name for Open AP**: Enter the Open AP client name.
+	
+![Warner Bros. Discovery destination details](../../assets/catalog/advertising/acxiom-audience-distribution/warner_bros_discovery_destination_details.png)
+
+### [!DNL Yahoo] {#yahoo}
+To configure details for the destination, fill in the fields below.
+- **Client name for Open AP**: Enter the Open AP client name.
+	
+![Yahoo destination details](../../assets/catalog/advertising/acxiom-audience-distribution/yahoo_destination_details.png)
 
 ## Activate audiences to this destination {#activate} 
 >[!IMPORTANT]
