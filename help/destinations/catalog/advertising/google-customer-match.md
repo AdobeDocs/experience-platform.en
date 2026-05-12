@@ -270,11 +270,11 @@ Selecting target fields:
 
 The following example shows a correct identity mapping. Both `Phone_E.164` and `Email` belong to the `CONTACT_INFO` key type, so you can use them together in the same connection.
 
-![The Mapping step showing Phone_E.164 mapped to phone_sha256_e.164 and Email mapped to email_lc_sha256. A callout confirms both identities belong to the CONTACT_INFO key type.](../../assets/catalog/advertising/google-customer-match/correct-mapping.png)
+![The Mapping step showing Phone_E.164 mapped to phone_sha256_e.164 and Email mapped to email_lc_sha256. A callout confirms both identities belong to the CONTACT_INFO key type.](../../assets/catalog/advertising/google-customer-match/correct-mapping.png){zoomable="yes"}
 
 The following example shows an incorrect identity mapping. `GAID` belongs to the `MOBILE_ADVERTISING_ID` key type, while `Phone_E.164` belongs to `CONTACT_INFO`. Mapping identities from different key type categories in the same connection resets match rates to 0%. For more information about key types, see the [One key type per destination connection](#single-key-type) section.
 
-![The Mapping step showing GAID mapped to gaid and Phone_E.164 mapped to phone_sha256_e.164. A callout indicates GAID belongs to MOBILE_ADVERTISING_ID and Phone_E.164 belongs to CONTACT_INFO, which is an invalid mixed-key-type mapping.](../../assets/catalog/advertising/google-customer-match/incorrect-mapping.png)
+![The Mapping step showing GAID mapped to gaid and Phone_E.164 mapped to phone_sha256_e.164. A callout indicates GAID belongs to MOBILE_ADVERTISING_ID and Phone_E.164 belongs to CONTACT_INFO, which is an invalid mixed-key-type mapping.](../../assets/catalog/advertising/google-customer-match/incorrect-mapping.png){zoomable="yes"}
 
 Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
