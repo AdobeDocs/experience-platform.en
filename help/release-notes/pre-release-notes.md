@@ -23,28 +23,12 @@ exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 
 New features and updates to existing features in Adobe Experience Platform:
 
-- [Agent Orchestrator](#agent-orchestrator)
 - [Alerts](#alerts)
 - [Computed attributes](#computed-attributes)
 - [Destinations](#destinations)
 - [Real-Time Customer Profile](#profile)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
-
-## Agent Orchestrator {#agent-orchestrator}
-
-Use Agent Orchestrator to build and deploy AI-powered agents that automate workflows and interact with customers across multiple channels.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| Data onboarding skills | The Data Engineering Agent now includes data onboarding skills covering source connection, data quality, semantic enrichment, schema recommendation, and data ingestion. Use step-by-step workflows and example prompts to connect sources, check data quality, and ingest data for B2C and B2B flows. |
-| Data validation skills | Two validation skills, DataField and DataSet, are now available in the Data Engineering Agent. Use these skills to validate data fields and datasets through natural language prompts. |
-
-{style="table-layout:auto"}
-
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 ## Alerts {#alerts}
 
@@ -66,7 +50,9 @@ Computed attributes enable capability to easily summarize event data into profil
 
 | Feature | Description |
 | --- | --- |
-| List function in computed attributes | Use the List function in computed attributes to return an array of values from qualifying events. This function is intended for use when the qualifying events come from a single dataset. If the source events span multiple datasets, results may be incomplete. |
+| List function in computed attributes | Use the List function in computed attributes to return an array of values from qualifying events. This function is intended for use when the qualifying events come from a single dataset. If the qualifying events span multiple datasets, results may be incomplete. |
+
+{style="table-layout:auto"}
 
 To learn more about computed attributes, please read the [computed attributes overview](../profile/computed-attributes/overview.md).
 
@@ -91,7 +77,7 @@ To learn more about computed attributes, please read the [computed attributes ov
 | [[!DNL Google Cloud Storage]](../destinations/catalog/cloud-storage/google-cloud-storage.md) macro support | The [`%SEGMENT_NAME%`](../destinations/catalog/cloud-storage/overview.md#use-macros) and other folder path macros now work correctly for [!DNL Google Cloud Storage] destinations. Previously, macros were not replaced with the audience name in the export path. |
 | [[!DNL Federated Audiences]](https://www.adobe.com/go/destinations-federated-audience-composition) export file now | The **[!UICONTROL Export file now]** option is now supported for [!DNL Federated Audience Composition] destinations. |
 | [[!DNL Snowflake]](../destinations/catalog/warehouses/snowflake.md) scheduling UI fix | Fixed an issue where toggling the export frequency between daily and once in the [!DNL Snowflake] destination configuration caused the UI to crash. |
-| [[!DNL Google Customer Match]](../destinations/catalog/advertising/google-customer-match.md) key type behavior | Updated documentation to clarify how [!DNL Google] handles identity key types in a destination dataflow. You can map multiple key types in the same connection, but if you update mappings, any identity you add must be the same key type as the one you removed. Removing all fields of a given key type, or switching key types across activation runs, causes [!DNL Google] to delete the corresponding audience list. See the [key type behavior](../destinations/catalog/advertising/google-customer-match.md#key-type-behavior) section for details. |
+| [[!DNL Google Customer Match]](../destinations/catalog/advertising/google-customer-match.md) key type behavior | Updated documentation to clarify how [!DNL Google] handles identity key types in a destination dataflow. You can map multiple key types in the same connection, but if you update mappings, any identity you add must use the same key type as the identity you removed. Removing all fields of a given key type, or switching key types across activation runs, causes [!DNL Google] to delete the corresponding audience list. See the [key type behavior](../destinations/catalog/advertising/google-customer-match.md#key-type-behavior) section for details. |
 | [View datasets in a dataset export dataflow](../destinations/api/export-datasets.md#view-datasets-in-dataflow) | Updated documentation to show how to retrieve which datasets are associated with an existing dataset export dataflow using the Flow Service API. See the [export datasets documentation](../destinations/api/export-datasets.md#view-datasets-in-dataflow) for details. |
 
 {style="table-layout:auto"}
@@ -106,7 +92,7 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 | Feature | Description |
 | --- | --- |
-| Batch profile ingestion progress | Track batch profile ingestion jobs in real time from the monitoring dashboard. View job initiation, queued time, and critical checkpoint progress, including when data is ready for segmentation and ready for profile lookup. Use these insights to predict downstream data availability and plan campaign launches with confidence. |
+| Batch profile ingestion progress | Track batch profile ingestion jobs in real time from the monitoring dashboard. View job initiation, queued time, and critical checkpoint progress, including when data is ready for segmentation and profile lookup. Use these insights to predict downstream data availability and plan campaign launches with confidence. |
 
 {style="table-layout:auto"}
 
@@ -148,7 +134,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | --- | --- |
 | NLD2 region IP allowlist update | Five IP ranges have been added to the NLD2 region allowlist: `20.105.215.28/30`, `20.105.244.48/29`, `57.153.246.72/29`, `57.153.246.80/28`, and `57.153.246.96/30`. Update your network allowlist if you use sources in the NLD2 region. |
 | [!DNL Shopify] batch field limitations | Certain [!DNL Shopify] fields are only supported in preview mode. To ingest these fields, use the API to create your dataflows instead of the UI workflow. See the [!DNL Shopify] source documentation for the list of affected fields. |
-| Automatic dataflow disabling | Sources dataflows that fail continuously for 30 days are automatically disabled. When a dataflow is disabled, review the failure reason in Monitoring, apply the necessary updates, and re-enable the dataflow. Common failure reasons include credentials, permissions, or schema and mapping configuration changes. |
+| Automatic dataflow disabling | Source dataflows that fail continuously for 30 days are automatically disabled. When a dataflow is disabled, review the failure reason in Monitoring, apply the necessary updates, and re-enable the dataflow. Common failure reasons include credentials, permissions, or schema and mapping configuration changes. |
 
 {style="table-layout:auto"}
 
