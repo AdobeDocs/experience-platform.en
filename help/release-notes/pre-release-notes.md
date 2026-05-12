@@ -52,7 +52,8 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 
 | Feature | Description |
 | --- | --- |
-| Export arrays for enrichment attributes (Beta) | Export array fields as enrichment attributes when activating audiences to cloud storage destinations. Select individual inner fields from an array, and they are exported as separate columns in JSON and Parquet output. See the [enrichment attributes documentation](../destinations/ui/activate/activate-batch-profile-destinations.md#select-enrichment-attributes) for details. |
+| [!BADGE Beta]{type=Informative} Export arrays for enrichment attributes | Export array fields as enrichment attributes when activating audiences to cloud storage destinations. Select individual inner fields from an array, and they are exported as separate columns in JSON and Parquet output. See the [enrichment attributes documentation](../destinations/ui/activate/activate-batch-profile-destinations.md#select-enrichment-attributes) for details. |
+| External audience support for [!DNL Criteo] | Activate audiences from origins beyond Segmentation Service to the [Criteo](../destinations/catalog/advertising/criteo.md) destination, including custom upload audiences (imported from CSV), look-alike audiences, federated audiences, and audiences created in other Experience Platform apps such as [!DNL Adobe Journey Optimizer]. See the [supported audiences](../destinations/catalog/advertising/criteo.md#supported-audiences) section for details. |
 
 {style="table-layout:auto"}
 
@@ -60,8 +61,10 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 
 | Fix | Description |
 | --- | --- |
-| [!DNL Google Customer Match] mixed identity types | [!DNL Google] does not support mixing multiple identity key types under a single destination dataflow. Using more than one key type causes mapping IDs to be overwritten, already-activated audiences to be closed and restarted, and match rates to reset to 0%. Create a separate dataflow for each identity key type. |
-| [!DNL Snowflake] scheduling UI fix | Fixed an issue where switching the export trigger or frequency in the [!DNL Snowflake] destination configuration caused the screen to crash. |
+| [!DNL Google Cloud Storage] macro support | The [`%SEGMENT_NAME%`](../destinations/catalog/cloud-storage/overview.md#use-macros) and other folder path macros now work correctly for [!DNL Google Cloud Storage] destinations. Previously, macros were not replaced with the audience name in the export path. |
+| [!DNL Federated Audiences] export file now | The **[!UICONTROL Export file now]** option is no longer shown for [!DNL Federated Audiences] destinations, where ad-hoc export is not supported. Previously, selecting this option resulted in a failed activation. |
+| [!DNL Google Customer Match] identity type requirement | Updated documentation to clarify that [!DNL Google] requires a single identity key type per destination dataflow. Mixing multiple key types causes mapping IDs to be overwritten, already-activated audiences to be closed and restarted, and match rates to reset to 0%. This is a [!DNL Google] requirement, not an Experience Platform limitation. See the [Google Customer Match documentation](../destinations/catalog/advertising/google-customer-match.md) for details. |
+| [!DNL Snowflake] scheduling UI fix | Fixed an issue where switching the export trigger or frequency in the [!DNL Snowflake] destination configuration caused the UI to crash. |
 | Search by dataflow name in activation workflow | Search by dataflow name in the **[!UICONTROL Select destination]** step of the activation workflow to locate the right destination dataflow. |
 
 {style="table-layout:auto"}
