@@ -52,9 +52,9 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 
 | Feature | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} Export arrays for enrichment attributes | Export array fields as enrichment attributes when activating audiences to cloud storage destinations. Select individual inner fields from an array, and they are exported as separate columns in JSON and Parquet output. This feature is available to a limited number of customers. To request access, contact your Adobe representative. See the [enrichment attributes documentation](../destinations/ui/activate/activate-batch-profile-destinations.md#select-enrichment-attributes) for details. |
-| External audience support for [!DNL Criteo] | Activate audiences from origins beyond Segmentation Service to the [Criteo](../destinations/catalog/advertising/criteo.md) destination, including custom upload audiences (imported from CSV), look-alike audiences, federated audiences, and audiences created in other Experience Platform apps such as [!DNL Adobe Journey Optimizer]. See the [supported audiences](../destinations/catalog/advertising/criteo.md#supported-audiences) section for details. |
-| New supported destinations for [!DNL Acxiom Audience Connection] and [!DNL Acxiom Real ID Audience Connection] | Five new destinations are now supported: [!DNL Roku], [!DNL Samsung Ads], [!DNL The Trade Desk] (1st Party), [!DNL Warner Bros. Discovery], and [!DNL Yahoo]. See the [Acxiom Audience Connection](../destinations/catalog/advertising/acxiom-audience-connection.md) and [Acxiom Real ID Audience Connection](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) documentation for details. |
+| [!BADGE Beta]{type=Informative} [Export arrays for enrichment attributes](../destinations/ui/activate/activate-batch-profile-destinations.md#select-enrichment-attributes) | Export array fields as enrichment attributes when activating audiences to cloud storage destinations. Select individual inner fields from an array, and they are exported as separate columns in JSON and Parquet output. This feature is available to a limited number of customers. To request access, contact your Adobe representative. See the [enrichment attributes documentation](../destinations/ui/activate/activate-batch-profile-destinations.md#select-enrichment-attributes) for details. |
+| External audience support for [[!DNL Criteo]](../destinations/catalog/advertising/criteo.md) | Activate audiences from origins beyond Segmentation Service to the [Criteo](../destinations/catalog/advertising/criteo.md) destination, including custom upload audiences (imported from CSV), look-alike audiences, federated audiences, and audiences created in other Experience Platform apps such as [!DNL Adobe Journey Optimizer]. See the [supported audiences](../destinations/catalog/advertising/criteo.md#supported-audiences) section for details. |
+| New supported destinations for [[!DNL Acxiom Audience Connection]](../destinations/catalog/advertising/acxiom-audience-connection.md) and [[!DNL Acxiom Real ID Audience Connection]](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | Five new destinations are now supported: [!DNL Roku], [!DNL Samsung Ads], [!DNL The Trade Desk] (1st Party), [!DNL Warner Bros. Discovery], and [!DNL Yahoo]. See the [Acxiom Audience Connection](../destinations/catalog/advertising/acxiom-audience-connection.md) and [Acxiom Real ID Audience Connection](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) documentation for details. |
 
 {style="table-layout:auto"}
 
@@ -62,11 +62,11 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 
 | Fix | Description |
 | --- | --- |
-| [!DNL Google Cloud Storage] macro support | The [`%SEGMENT_NAME%`](../destinations/catalog/cloud-storage/overview.md#use-macros) and other folder path macros now work correctly for [!DNL Google Cloud Storage] destinations. Previously, macros were not replaced with the audience name in the export path. |
+| [[!DNL Google Cloud Storage]](../destinations/catalog/cloud-storage/google-cloud-storage.md) macro support | The [`%SEGMENT_NAME%`](../destinations/catalog/cloud-storage/overview.md#use-macros) and other folder path macros now work correctly for [!DNL Google Cloud Storage] destinations. Previously, macros were not replaced with the audience name in the export path. |
 | [[!DNL Federated Audiences]](https://www.adobe.com/go/destinations-federated-audience-composition) export file now | The **[!UICONTROL Export file now]** option is no longer shown for [!DNL Federated Audiences] destinations, where ad-hoc export is not supported. Previously, selecting this option resulted in a failed activation. |
 | [[!DNL Snowflake]](../destinations/catalog/warehouses/snowflake.md) scheduling UI fix | Fixed an issue where switching the export trigger or frequency in the [!DNL Snowflake] destination configuration caused the UI to crash. |
-| [!DNL Google Customer Match] identity type requirement | Updated documentation to clarify that [!DNL Google] requires a single identity key type per destination dataflow. Mixing multiple key types causes mapping IDs to be overwritten, already-activated audiences to be closed and restarted, and match rates to reset to 0%. This is a [!DNL Google] requirement, not an Experience Platform limitation. See the [Google Customer Match documentation](../destinations/catalog/advertising/google-customer-match.md) for details. |
-| View datasets in a dataset export dataflow | Updated documentation to show how to retrieve which datasets are associated with an existing dataset export dataflow using the Flow Service API. See the [export datasets documentation](../destinations/api/export-datasets.md#view-datasets-in-dataflow) for details. |
+| [[!DNL Google Customer Match]](../destinations/catalog/advertising/google-customer-match.md) identity type requirement | Updated documentation to clarify that [!DNL Google] requires a single identity key type per destination dataflow. Mixing multiple key types causes mapping IDs to be overwritten, already-activated audiences to be closed and restarted, and match rates to reset to 0%. This is a [!DNL Google] requirement, not an Experience Platform limitation. See the [Google Customer Match documentation](../destinations/catalog/advertising/google-customer-match.md) for details. |
+| [View datasets in a dataset export dataflow](../destinations/api/export-datasets.md#view-datasets-in-dataflow) | Updated documentation to show how to retrieve which datasets are associated with an existing dataset export dataflow using the Flow Service API. See the [export datasets documentation](../destinations/api/export-datasets.md#view-datasets-in-dataflow) for details. |
 
 {style="table-layout:auto"}
 
@@ -80,8 +80,8 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 | Feature | Description |
 | --- | --- |
-| List function in computed attributes | Use the List function in computed attributes to return an array of values from qualifying events. This function is intended for use when the qualifying events come from a single dataset. If the source events span multiple datasets, results may be incomplete. See the [computed attributes UI guide](../profile/computed-attributes/ui.md) for details. |
-| Batch profile ingestion progress | Track batch profile ingestion jobs in real time from the monitoring dashboard. View job initiation, queued time, and critical checkpoint progress, including when data is ready for segmentation and ready for profile lookup. Use these insights to predict downstream data availability and plan campaign launches with confidence. |
+| [List function in computed attributes](../profile/computed-attributes/ui.md) | Use the List function in computed attributes to return an array of values from qualifying events. This function is intended for use when the qualifying events come from a single dataset. If the source events span multiple datasets, results may be incomplete. See the [computed attributes UI guide](../profile/computed-attributes/ui.md) for details. |
+| [Batch profile ingestion progress](../ingestion/quality/monitor-data-ingestion.md) | Track batch profile ingestion jobs in real time from the monitoring dashboard. View job initiation, queued time, and critical checkpoint progress, including when data is ready for segmentation and ready for profile lookup. Use these insights to predict downstream data availability and plan campaign launches with confidence. |
 
 {style="table-layout:auto"}
 
@@ -95,9 +95,9 @@ Use Segmentation Service to create audiences from your customer data and manage 
 
 | Feature | Description |
 | --- | --- |
-| Audience Composition enhancements | All customers now have a baseline of 50 compositions. Additional enhancements include chained activation and audience enrichment improvements. See the [Audience Composition documentation](../segmentation/ui/audience-composition.md) for details. |
-| Express mode for external audiences | Use express mode to activate external audiences directly through the API without the full activation workflow. This mode supports batch double-activation for external audience use cases. See the [external audiences documentation](../segmentation/ui/audience-portal.md) for details. |
-| Account audiences with experience events (B2B) | After the B2B CDP architecture upgrade, account audiences with experience events are no longer supported directly. To create an account audience that uses experience events, first build a people audience with the experience events, then reference that people audience when creating the account audience. See the [account audiences documentation](../segmentation/types/account-audiences.md) for updated guidance. |
+| [Audience Composition enhancements](../segmentation/ui/audience-composition.md) | All customers now have a baseline of 50 compositions. Additional enhancements include chained activation and audience enrichment improvements. See the [Audience Composition documentation](../segmentation/ui/audience-composition.md) for details. |
+| [Express mode for external audiences](../segmentation/ui/audience-portal.md) | Use express mode to activate external audiences directly through the API without the full activation workflow. This mode supports batch double-activation for external audience use cases. See the [external audiences documentation](../segmentation/ui/audience-portal.md) for details. |
+| [Account audiences with experience events (B2B)](../segmentation/types/account-audiences.md) | After the B2B CDP architecture upgrade, account audiences with experience events are no longer supported directly. To create an account audience that uses experience events, first build a people audience with the experience events, then reference that people audience when creating the account audience. See the [account audiences documentation](../segmentation/types/account-audiences.md) for updated guidance. |
 
 {style="table-layout:auto"}
 
@@ -113,7 +113,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | --- | --- |
 | [!DNL LAVA] | Use the [!DNL LAVA] source connector to ingest data from [!DNL LAVA] into Experience Platform using standardized schemas and governance controls, reducing custom integration effort and improving time-to-value for downstream activation and insights. |
 | [!DNL Meta Ads] (Beta) | Use the [!DNL Meta Ads] source to configure the complete [!DNL Meta Ads] ingestion workflow in the Sources UI. Connect your [!DNL Meta Ads] account and bring paid media data directly into Experience Platform for activation and analysis. |
-| [!DNL Deltashare] | Use the [!DNL Deltashare] source to bring live, shared datasets from partners or internal lakehouse environments into Experience Platform without copying or manually uploading files. Connect to a [!DNL Deltashare] endpoint, choose the tables you need, and use that governed data alongside your existing profiles and insights. |
+| [[!DNL Deltashare]](../sources/connectors/data-sharing/deltashare.md) | Use the [!DNL Deltashare] source to bring live, shared datasets from partners or internal lakehouse environments into Experience Platform without copying or manually uploading files. Connect to a [!DNL Deltashare] endpoint, choose the tables you need, and use that governed data alongside your existing profiles and insights. |
 
 {style="table-layout:auto"}
 
@@ -121,8 +121,8 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| NLD2 region IP allowlist update | Five IP ranges have been added to the NLD2 region allowlist: `20.105.215.28/30`, `20.105.244.48/29`, `57.153.246.72/29`, `57.153.246.80/28`, and `57.153.246.96/30`. Update your network allowlist if you use sources in the NLD2 region. |
-| [!DNL Shopify] batch field limitations | Certain [!DNL Shopify] fields are only supported in preview mode. To ingest these fields, use the API to create your dataflows instead of the UI workflow. See the [!DNL Shopify] source documentation for the list of affected fields. |
+| [NLD2 region IP allowlist update](../sources/ip-address-allow-list.md) | Five IP ranges have been added to the NLD2 region allowlist: `20.105.215.28/30`, `20.105.244.48/29`, `57.153.246.72/29`, `57.153.246.80/28`, and `57.153.246.96/30`. Update your network allowlist if you use sources in the NLD2 region. |
+| [[!DNL Shopify]](../sources/connectors/ecommerce/shopify.md) batch field limitations | Certain [!DNL Shopify] fields are only supported in preview mode. To ingest these fields, use the API to create your dataflows instead of the UI workflow. See the [!DNL Shopify] source documentation for the list of affected fields. |
 | Automatic dataflow disabling | Sources dataflows that fail continuously for 30 days are automatically disabled. When a dataflow is disabled, review the failure reason in Monitoring, apply the necessary updates, and re-enable the dataflow. Common failure reasons include credentials, permissions, or schema and mapping configuration changes. |
 
 {style="table-layout:auto"}
