@@ -42,7 +42,7 @@ Experience Platform allows you to subscribe to event-based alerts for various Ex
 
 {style="table-layout:auto"}
 
-To learn more about alerts, read the [[!DNL Observability Insights] overview](/help/observability/home.md).
+For more information, read the [[!DNL Observability Insights] overview](/help/observability/home.md).
 
 ## Computed attributes {#computed-attributes}
 
