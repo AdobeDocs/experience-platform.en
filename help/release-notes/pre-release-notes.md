@@ -24,6 +24,8 @@ exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 New features and updates to existing features in Adobe Experience Platform:
 
 - [Agent Orchestrator](#agent-orchestrator)
+- [Alerts](#alerts)
+- [Computed attributes](#computed-attributes)
 - [Destinations](#destinations)
 - [Real-Time Customer Profile](#profile)
 - [Segmentation Service](#segmentation-service)
@@ -37,12 +39,36 @@ Use Agent Orchestrator to build and deploy AI-powered agents that automate workf
 
 | Feature | Description |
 | --- | --- |
-| Data Onboarding skill | The Data Engineering Agent now includes Data Onboarding skills covering source connection, data quality, semantic enrichment, schema recommendation, and data ingestion. Use step-by-step workflows and example prompts to connect sources, check data quality, and ingest data for B2C and B2B flows. |
-| Data Validation skills | Two validation skills, DataField and DataSet, are now available in the Data Engineering Agent. Use these skills to validate data fields and datasets through natural language prompts. |
+| Data onboarding skills | The Data Engineering Agent now includes data onboarding skills covering source connection, data quality, semantic enrichment, schema recommendation, and data ingestion. Use step-by-step workflows and example prompts to connect sources, check data quality, and ingest data for B2C and B2B flows. |
+| Data validation skills | Two validation skills, DataField and DataSet, are now available in the Data Engineering Agent. Use these skills to validate data fields and datasets through natural language prompts. |
 
 {style="table-layout:auto"}
 
 For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+
+## Alerts {#alerts}
+
+Experience Platform allows you to subscribe to event-based alerts for various Experience Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Experience Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Alert History: Filtering and Discoverability | The Alert History page now shows the associated object name, adds search by alert type and filtering by object name, and includes an improved time range selector, making it easier to correlate alerts and find what you need. |
+
+{style="table-layout:auto"}
+
+To learn more about alerts, read the [[!DNL Observability Insights] overview](/help/observability/home.md).
+
+## Computed attributes {#computed-attributes}
+
+Computed attributes enable capability to easily summarize event data into profile attributes via an intuitive UI for enhanced behavior-based segmentation, personalization, and activation. With this feature, you can create computed attributes in a self serve manner, manage them, and use them in segmentation, Real-Time CDP destinations, or Adobe Journey Optimizer. Additionally, computed attributes simplify segmentation and journey workflows to help you seamlessly deliver relevant experiences. 
+
+| Feature | Description |
+| --- | --- |
+| List function in computed attributes | Use the List function in computed attributes to return an array of values from qualifying events. This function is intended for use when the qualifying events come from a single dataset. If the source events span multiple datasets, results may be incomplete. |
+
+To learn more about computed attributes, please read the [computed attributes overview](../profile/computed-attributes/overview.md).
 
 ## Destinations {#destinations}
 
@@ -80,8 +106,7 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 | Feature | Description |
 | --- | --- |
-| [List function in computed attributes](../profile/computed-attributes/ui.md) | Use the List function in computed attributes to return an array of values from qualifying events. This function is intended for use when the qualifying events come from a single dataset. If the source events span multiple datasets, results may be incomplete. See the [computed attributes UI guide](../profile/computed-attributes/ui.md) for details. |
-| [Batch profile ingestion progress](../ingestion/quality/monitor-data-ingestion.md) | Track batch profile ingestion jobs in real time from the monitoring dashboard. View job initiation, queued time, and critical checkpoint progress, including when data is ready for segmentation and ready for profile lookup. Use these insights to predict downstream data availability and plan campaign launches with confidence. |
+| Batch profile ingestion progress | Track batch profile ingestion jobs in real time from the monitoring dashboard. View job initiation, queued time, and critical checkpoint progress, including when data is ready for segmentation and ready for profile lookup. Use these insights to predict downstream data availability and plan campaign launches with confidence. |
 
 {style="table-layout:auto"}
 
@@ -95,9 +120,9 @@ Use Segmentation Service to create audiences from your customer data and manage 
 
 | Feature | Description |
 | --- | --- |
-| [Audience Composition enhancements](../segmentation/ui/audience-composition.md) | All customers now have a baseline of 50 compositions. Additional enhancements include chained activation and audience enrichment improvements. See the [Audience Composition documentation](../segmentation/ui/audience-composition.md) for details. |
-| [Express mode for external audiences](../segmentation/ui/audience-portal.md) | Use express mode to activate external audiences directly through the API without the full activation workflow. This mode supports batch double-activation for external audience use cases. See the [external audiences documentation](../segmentation/ui/audience-portal.md) for details. |
-| [Account audiences with experience events (B2B)](../segmentation/types/account-audiences.md) | After the B2B CDP architecture upgrade, account audiences with experience events are no longer supported directly. To create an account audience that uses experience events, first build a people audience with the experience events, then reference that people audience when creating the account audience. See the [account audiences documentation](../segmentation/types/account-audiences.md) for updated guidance. |
+| Audience Composition enhancements | All customers now have a baseline of 50 compositions. Additional enhancements include chained activation and audience enrichment improvements. |
+| Express mode for external audiences | Use express mode to activate external audiences directly through the API without the full activation workflow. |
+| Account audiences with experience events (B2B) | After the B2B CDP architecture upgrade, account audiences with experience events are no longer supported directly. To create an account audience that uses experience events, first build a people audience with the experience events, then reference that people audience when creating the account audience. |
 
 {style="table-layout:auto"}
 
@@ -111,9 +136,9 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
+| [!DNL Delta Sharing] | You can use the [!DNL Delta Sharing] source to bring Delta tables into Experience Platform through a secure, open data‑sharing protocol. After you configure a [!DNL Delta Sharing] connection and select the shares and tables you want to ingest, Experience Platform automatically brings that data into your datasets so you can use it for analysis, segmentation, and activation. |
 | [!DNL LAVA] | Use the [!DNL LAVA] source connector to ingest data from [!DNL LAVA] into Experience Platform using standardized schemas and governance controls, reducing custom integration effort and improving time-to-value for downstream activation and insights. |
-| [!DNL Meta Ads] (Beta) | Use the [!DNL Meta Ads] source to configure the complete [!DNL Meta Ads] ingestion workflow in the Sources UI. Connect your [!DNL Meta Ads] account and bring paid media data directly into Experience Platform for activation and analysis. |
-| [[!DNL Deltashare]](../sources/connectors/data-sharing/deltashare.md) | Use the [!DNL Deltashare] source to bring live, shared datasets from partners or internal lakehouse environments into Experience Platform without copying or manually uploading files. Connect to a [!DNL Deltashare] endpoint, choose the tables you need, and use that governed data alongside your existing profiles and insights. |
+| [!DNL Meta Ads] (Beta) | You can use the [!DNL Meta Ads] source connector (Beta) in the Sources workspace to authenticate to [!DNL Meta], select your ad accounts, and schedule ingestion of [!DNL Meta Ads] campaign and performance data into Experience Platform datasets. |
 
 {style="table-layout:auto"}
 
@@ -121,8 +146,8 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| [NLD2 region IP allowlist update](../sources/ip-address-allow-list.md) | Five IP ranges have been added to the NLD2 region allowlist: `20.105.215.28/30`, `20.105.244.48/29`, `57.153.246.72/29`, `57.153.246.80/28`, and `57.153.246.96/30`. Update your network allowlist if you use sources in the NLD2 region. |
-| [[!DNL Shopify]](../sources/connectors/ecommerce/shopify.md) batch field limitations | Certain [!DNL Shopify] fields are only supported in preview mode. To ingest these fields, use the API to create your dataflows instead of the UI workflow. See the [!DNL Shopify] source documentation for the list of affected fields. |
+| NLD2 region IP allowlist update | Five IP ranges have been added to the NLD2 region allowlist: `20.105.215.28/30`, `20.105.244.48/29`, `57.153.246.72/29`, `57.153.246.80/28`, and `57.153.246.96/30`. Update your network allowlist if you use sources in the NLD2 region. |
+| [!DNL Shopify] batch field limitations | Certain [!DNL Shopify] fields are only supported in preview mode. To ingest these fields, use the API to create your dataflows instead of the UI workflow. See the [!DNL Shopify] source documentation for the list of affected fields. |
 | Automatic dataflow disabling | Sources dataflows that fail continuously for 30 days are automatically disabled. When a dataflow is disabled, review the failure reason in Monitoring, apply the necessary updates, and re-enable the dataflow. Common failure reasons include credentials, permissions, or schema and mapping configuration changes. |
 
 {style="table-layout:auto"}
