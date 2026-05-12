@@ -5,10 +5,6 @@ exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
 ---
 # Extension submission process overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Submitting an extension to the data collection catalog in Adobe Experience Platform can appear to be a daunting task. This document provides a step by step guide to submitting your extension through the use of individual sequential guides. In order to submit your extension, you will need to complete the following steps:
 
 1. [Set up an Adobe Experience Cloud organization](./setup.md)

@@ -5,10 +5,6 @@ exl-id: 04948cd8-6cf0-4159-a9d3-3130b97af106
 ---
 # Transport Layer Security (TLS) Information
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. For a consolidated reference of the terminology changes, refer to the [term updates](../../term-updates.md) document.
-
 Transport Layer Security (TLS) is a cryptographic protocol that provides end-to-end security for data sent between applications over the internet. For more detailed information on TLS, read the [TLS basics](https://www.internetsociety.org/deploy360/tls/basics/) documentation.
 
 Tags in Adobe Experience Platform are a tag management system that is designed to dynamically load scripts on your website. TLS secures the communication between the Adobe host `assets.adobedtm.com` and your website when these scripts are loaded.

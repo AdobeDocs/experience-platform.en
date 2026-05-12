@@ -5,10 +5,6 @@ exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
 ---
 # Notes
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Notes are textual annotations that you can add to certain tag resources in Adobe Experience Platform. Notes can be attached to the following resources:
 
 * Extensions

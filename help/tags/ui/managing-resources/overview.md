@@ -5,10 +5,6 @@ exl-id: 3ec0078e-76a6-42ac-94cf-df9572b37b52
 ---
 # Manage resources
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 In the context of tags in Experience Platform, the word "resources" refers to any of the following:
 
 * [Extensions](extensions/overview.md) - Extensions provide data element types and rules for you to work with

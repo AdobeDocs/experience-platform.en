@@ -75,7 +75,7 @@ User context parameters contain customer information that is used to match web v
 | IP Address | Non-hashed public IP address of the browser. Support is provided for IPv4 and IPv6 addresses. Both the full and compressed forms of IPv6 addresses are recognized. |
 | User Agent | The non-hashed user agent from the user's device. |
 | Email | Email address of the contact associated with the conversion event. |
-| Phone | The phone number must be in E164 format [+][country code][area code][local phone number] before hashing. |
+| Phone | The phone number must be in E164 format `[+][country code][area code][local phone number]` before hashing. |
 | Cookie ID | If you are using Pixel SDK will automatically save a unique identifier in the `_ttp` cookie, if cookies are enabled. The `_ttp` value can  extracted and used for this field. |
 | External ID | Any unique identifier such as user IDs, external cookie IDs and so on and must be hashed with SHA256. |
 | TikTok Click ID | The `ttclid` which is added to the URL of the landing page each time an advertisement is selected on [!DNL TikTok]. |

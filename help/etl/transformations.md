@@ -36,6 +36,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### Mapping
 
 The mapping requirements for the CRM data are outlined in the following table and include the following transformations:
+
 - Identity columns to `identityMap` properties
 - Date of Birth (DOB) to Year and Month-Day
 - Strings to Doubles or Short Integers.
@@ -278,9 +279,9 @@ The mapping requirements for the array of identities are outlined in the followi
 
 | Identity Field | identityMap Field | Data Type |
 | -------------- | ----------------- | --------- |
-| identities[0].id | identityMap[Email][{"id"}] | copy as string |
-| identities[1].id | identityMap[CRMID][{"id"}] | copy as string |
-| identities[2].id | identityMap[LOYALTYID][{"id"}] | copy as string |
+| `identities[0].id` | `identityMap[Email][{"id"}]` | copy as string |
+| `identities[1].id` | `identityMap[CRMID][{"id"}]` | copy as string |
+| `identities[2].id` | `identityMap[LOYALTYID][{"id"}]` | copy as string |
 
 ### Output XDM
 

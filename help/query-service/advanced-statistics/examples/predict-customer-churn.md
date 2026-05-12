@@ -123,7 +123,7 @@ The output dataset contains customer-related metrics and their churn status. Eac
 
 ```console
  customer_id  | total_purchases | total_revenue | avg_order_value  | customer_lifetime | days_since_last_purchase | purchase_frequency | churned |
---------------+-----------------+---------------+------------------+-------------------+--------------------------+--------------------+----------
+|--------------+-----------------+---------------+------------------+-------------------+--------------------------+--------------------+----------
   100001      | 25              | 1250.00       | 50.00            | 540               | 20                       | 10                 | 0       
   100002      | 3               | 90.00         | 30.00            | 120               | 95                       | 1                  | 1       
   100003      | 60              | 7200.00       | 120.00           | 800               | 5                        | 24                 | 0       
@@ -198,7 +198,7 @@ The evaluation output includes key performance metrics, such as AUC-ROC, accurac
 
 ```console
  auc_roc | accuracy | precision | recall 
----------+----------+-----------+--------
+|---------+----------+-----------+--------
 1        | 0.99998  |  1        |  1      
 ```
 
@@ -274,7 +274,7 @@ The output dataset includes key customer features and their predicted churn stat
 
 ```console
  total_purchases | total_revenue | avg_order_value | customer_lifetime | days_since_last_purchase | purchase_frequency | churned | prediction
------------------+---------------+-----------------+-------------------+--------------------------+--------------------+---------+------------
+|-----------------+---------------+-----------------+-------------------+--------------------------+--------------------+---------+------------
  2               | 299           | 149.5           | 0                 | 13                        | 1                  | 0       | 0
  1               | 710           | 710.00          | 0                 | 149                       | 1                  | 1       | 1
  1               | 19.99         | 19.99           | 0                 | 30                        | 1                  | 0       | 0

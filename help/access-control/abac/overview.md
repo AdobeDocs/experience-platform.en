@@ -135,3 +135,9 @@ With attribute-based access control, you can:
 * Configure user access to specific XDM schema fields depending on the permission sets applied to roles assigned to users.
 
 For more information on XDM, refer to the [XDM overview](../../xdm/home.md).
+
+### Customer Journey Analytics (CJA)
+
+Customer Journey Analytics (CJA) access permissions are managed at the application level in CJA. CJA uses its own attribute-based access controls and does not inherit or apply the attribute-based access controls defined in Adobe Experience Platform.
+
+For more information on CJA access control, refer to the [CJA access control](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control) documentation.

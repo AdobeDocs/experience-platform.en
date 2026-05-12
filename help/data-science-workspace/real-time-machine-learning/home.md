@@ -60,6 +60,7 @@ Real-time Machine Learning is currently in alpha. The functionality outlined bel
 >[!NOTE]
 >
 > Alpha limitations:
+>
 > - Currently, only ONNX based models are supported.
 > - Functions used in nodes cannot be serialized. For example, a lambda function used in a Pandas node.
 > - There is a 20 second sleep after [!DNL Edge] deployment is done manually.

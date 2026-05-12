@@ -5,10 +5,6 @@ exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
 ---
 # Self-hosting libraries
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Tags in Adobe Experience Platform allows for the production of a set of files called a [build](../builds.md). This set of files control the behavior of your application at run-time. 
 
 Builds need to be hosted somewhere so client devices can retrieve them at run-time as needed.

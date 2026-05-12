@@ -106,7 +106,7 @@ You can also enroll a scheduled query into the quarantine feature from the inlin
 
 ### Set alerts for a scheduled query status {#alerts-for-query-status}
 
-You can also subscribe to query alerts as part of your scheduled query settings. You can configure your settings to receive notifications for a variety of situations. Alerts can be set for a quarantined state, delays in query processing, or a change in status of your query. The available query-state alert options include start, success, and failure. Alerts can be received either as pop-up notifications or emails. Select the check box to subscribe to alerts for that status of scheduled query. 
+You can also subscribe to query alerts as part of your scheduled query settings. You can configure your settings to receive notifications for a variety of situations. Alerts can be set for a quarantined state, delays in query processing, or a change in status of your query. The available query-state alert options include start, success, and failure. Alerts can be received either as pop-up notifications or emails. Select the checkbox to subscribe to alerts for that status of scheduled query. 
 
 ![The Schedule details panel with the Alert options highlighted.](../images/ui/query-editor/alerts.png)
 

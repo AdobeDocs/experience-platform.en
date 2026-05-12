@@ -41,7 +41,7 @@ You are taken to the sources workflow where you can proceed to update aspects of
 
 >[!NOTE]
 >
->The edit mapping feature is currently not supported for the following sources: Adobe Analytics, Adobe Audience Manager, HTTP API, and [!DNL Marketo Engage].
+>The edit mapping feature is currently not supported for the following sources: Adobe Analytics, Adobe Audience Manager, and HTTP API.
 
 During this process, you can also update the mapping sets associated with your dataflow.  The mapping interface displays your dataflow's existing mapping and not a new recommended mapping set. Mapping updates are only applied to dataflow runs scheduled in the future. A dataflow that was scheduled for one-time ingestion cannot have its mapping sets updated.
 
@@ -62,6 +62,15 @@ From the dataflows page, select the ellipses (`...`) beside the dataflow name an
 The **[!UICONTROL Edit schedule]** dialog box provides you with options to update your dataflow's ingestion frequency and interval rate. Once you set your updated frequency and interval values, select **[!UICONTROL Save]**.
 
 ![A pop-up window that you can use to edit your dataflow's ingestion schedule.](../../images/tutorials/update-dataflows/edit_schedule.png)
+
+Read the following section for details on how weekly ingestion schedules work.
+
+#### Understanding weekly ingestion schedule {#weekly}
+
+When you choose to set your dataflow to run on a weekly schedule, the dataflow will run based on one of these scenarios:
+
+* If your data source has been created but no data has been ingested yet, the first weekly dataflow will run 7 days after the source creation date. This 7-day interval always starts from when the source was created, regardless of when you set up the schedule. After the initial run, the dataflow will continue to execute on a weekly basis according to the configured schedule.
+* If data from your source has been previously ingested and you schedule it for weekly ingestion again, the next dataflow will run 7 days after the most recent successful ingestion.
 
 ### Disable dataflow
 

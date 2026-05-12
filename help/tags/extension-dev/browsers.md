@@ -5,10 +5,6 @@ exl-id: fc9ff6f5-7d54-4f13-8286-44791499d704
 ---
 # Supported browsers
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
-
 The tag runtime in Adobe Experience Platform (delivered to clients' websites) is compatible with multiple browsers:
 
 - Chrome (latest)

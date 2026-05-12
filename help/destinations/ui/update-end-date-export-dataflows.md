@@ -12,7 +12,7 @@ exl-id: 3f8ff535-3c54-47ac-b297-32f8298881db
 >
 >The action items on this page apply if your organization set up dataset export dataflows before the September 2024 release of Experience Platform.
 
-## What is happening?
+## What is happening? {#what-is-happening}
 
 The [September 2024 release of Experience Platform](/help/release-notes/latest/latest.md#destinations) introduced the option to set an `endTime` date for export dataset dataflows. Adobe has also introduced a default end date of May 1, 2025, for all dataset export dataflows created *prior to the September 2024 release*. These dataflows currently display a message similar to the one shown below.
 
@@ -20,21 +20,21 @@ The [September 2024 release of Experience Platform](/help/release-notes/latest/l
 
 **Action item**: For any of these dataflows, you must manually update the end date before it expires; otherwise, your exports will stop. Use the Experience Platform UI to identify which dataflows are set to stop on May 1, 2025.
 
-## Why am I being notified?
+## Why am I being notified? {#why-notified}
 
 Your organization has been identified as having active dataset export dataflows with an end date of May 1, 2025.
 
-## Use the UI to update the end date
+## Use the UI to update the end date {#use-ui}
 
 Use the Experience Platform UI to identify dataflows with an end date of May 1, 2025, and update them to a future date.
 
-### Find the dataflows that need updating
+### Find the dataflows that need updating {#find-dataflows}
 
 Navigate to **Destinations > Browse** and look for the data type **Datasets** in the **Data Type** column, as shown below. Select the desired dataflows to inspect them.
 
 ![Dataset export dataflows highlighted in the Browse tab.](/help/destinations/assets/ui/export-datasets/view-dataset-dataflows.png)
 
-### Update the end date of the dataflows
+### Update the end date of the dataflows {#update-end-date}
 
 To update the end date of dataflows:
 
@@ -46,10 +46,10 @@ To update the end date of dataflows:
   ![Select end date control highlighted in the Scheduling step.](/help/destinations/assets/ui/export-datasets/select-end-date.png)
 4. Proceed to the end of the workflow and save your updates.
 
-For extensive information about the scheduling step, read the [export datasets UI tutorial](/help/destinations/api/export-datasets.md#scheduling). 
+For extensive information about the scheduling step, read the [export datasets UI tutorial](/help/destinations/api/export-datasets.md#export-datasets-by-using-the). 
 
-## Use the API to update the end date
+## Use the API to update the end date {#use-api}
 
-### Find the dataflows that need updating
+### Find the dataflows that need updating {#find-dataflows-api}
 
-### Update the end date of the dataflows
+### Update the end date of the dataflows {#update-end-date-api}

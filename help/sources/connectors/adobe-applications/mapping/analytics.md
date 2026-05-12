@@ -13,14 +13,14 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 
 Read the following table for information on streaming media parameters.
 
-| Data feed | XDM field path | Data type | Description | 
+| Data feed | XDM field path | Data type | Description |
 | --- | --- | --- | --- |
 | `videoname` | `mediaReporting.sessionDetails.friendlyName` | string | The friendly (human-readable) name of the video. |
 | `videoaudioauthor` | `mediaReporting.sessionDetails.author` | string | The name of the media author. |
 | `videoaudioartist` | `mediaReporting.sessionDetails.artist` | string | The name of the album artist or group performing the music recording or video. |
 | `videoaudioalbum` | `mediaReporting.sessionDetails.album` | string | The name of the album that the music recording or video belongs to. |
-| `videolength` | `mediaReporting.sessionDetails.length ` | integer | The length or runtime of the video. |
-| `videoshowtype` | `mediaReporting.sessionDetails.showType` | string |
+| `videolength` | `mediaReporting.sessionDetails.length` | integer | The length or runtime of the video. |
+| `videoshowtype` | `mediaReporting.sessionDetails.showType` | string ||
 | `video` | `mediaReporting.sessionDetails.name` | string | The ID of the video. |
 | `videoshow` | `mediaReporting.sessionDetails.show` | string | The name of the program or series. The program/series name is only required if the show is part of a series. |
 | `videostreamtype` | mediaReporting.sessionDetails.streamType | string | The type of streaming media such as "video" or "audio". |
@@ -28,12 +28,12 @@ Read the following table for information on streaming media parameters.
 | `videoepisode` | `mediaReporting.sessionDetails.episode` | string | The number of the episode. |
 | `videogenre` | `mediaReporting.sessionDetails.genreList[]` | string[] | The genre of the video. |
 | `videosessionid` | `mediaReporting.sessionDetails.ID` | string | An identifier for an instance of a content stream unique to an individual playback. |
-| `videoplayername` | `mediaReporting.sessionDetails.playerName ` | string | The name of the video player. |
+| `videoplayername` | `mediaReporting.sessionDetails.playerName` | string | The name of the video player. |
 | `videochannel` | `mediaReporting.sessionDetails.channel` | string | The distribution channel from where the content was played. |
 | `videocontenttype` | `mediaReporting.sessionDetails.contentType` | string | The type of stream delivery used for the content. This is automatically set to "Video" for all video views. Recommended values include: VOD, Live, Linear, UGC, DVOD, Radio, Podcast, Audiobook, and Song. |
 | `videonetwork` | `mediaReporting.sessionDetails.network` | string | The network or channel name. |
 | `videofeedtype` | `mediaReporting.sessionDetails.feed` | string | The type of feed. This can either represent actual feed-related data such as "East HD" or "SD", or the source of the feed, such as a URL. |
-| `videosegment` | `mediaReporting.sessionDetails.segment` | string |
+| `videosegment` | `mediaReporting.sessionDetails.segment` | string ||
 | `videostart` | `mediaReporting.sessionDetails.isViewed` | boolean | A boolean value that indicates whether the video has been started or not. This occurs once the user selects the play button and will count even if there are pre-roll ads, buffering, errors, and so on. |
 | `videoplay` | `mediaReporting.sessionDetails.isPlayed` | boolean | A boolean value that indicates if the first frame of the media has started. If the user drops during any ads or buffering time, then the "content start" would not qualify. |
 | `videotime` | `mediaReporting.sessionDetails.timePlayed` | integer | The duration (in seconds) for all events of `type=PLAY` on the main content. |
@@ -51,12 +51,12 @@ Read the following table for information on streaming media parameters.
 | `videopausetime` | `mediaReporting.sessionDetails.pauseTime` | integer | The total duration (in seconds) in which playback was paused by a user. |
 | `videomvpd` | `mediaReporting.sessionDetails.mvpd` | string | An MVPD identifier provided via Adobe authentication. |
 | `videoauthorized` | `mediaReporting.sessionDetails.authorized` | string |  Defines that the user has been authorized via Adobe authentication. |
-| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | Defines the time of the day when the content was broadcast or played. |
+| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | Defines the time of the day when the content was broadcast or played. ||
 | `videoresume` | `mediaReporting.sessionDetails.hasResume` | boolean | A boolean value that marks each playback that was resumed after more than 30 minutes of buffer, pause, or a stall period. |
 | `videosegmentviews` | `mediaReporting.sessionDetails.hasSegmentView` | boolean | A boolean value that indicates that at least one frame has been viewed. This frame does not have to be the first frame. |
 | `videoaudiolabel` | `mediaReporting.sessionDetails.label` | string | The name of the record label. |
-| `videoaudiostation` | `mediaReporting.sessionDetails.station` | string | The radio station or name on which  the audio is played. | 
-| `videoaudiopublisher` | `mediaReporting.sessionDetails.publisher` | string | The name of the audio content publisher. | 
+| `videoaudiostation` | `mediaReporting.sessionDetails.station` | string | The radio station or name on which  the audio is played. |
+| `videoaudiopublisher` | `mediaReporting.sessionDetails.publisher` | string | The name of the audio content publisher. |
 | `videosecondssincelastcall` | `mediaReporting.sessionDetails.secondsSinceLastCall` | number | Indicates the amount of time (in seconds) that passed between a user's last known interaction and the moment the session was closed. |
 | `videoadload` | `mediaReporting.sessionDetails.adLoad` | string | The type of ad loaded as defined by your own internal representation. |
 
@@ -66,7 +66,7 @@ Read the following table for information on streaming media parameters.
 
 Read the following table for information on advertising parameters.
 
-| Data feed | XDM field path | Data type | Description | 
+| Data feed | XDM field path | Data type | Description |
 | --- | --- | --- | --- |
 | `videoad` | `mediaReporting.advertisingDetails.name` | string | The name of the ad. In reporting, "Ad Name" is the classification and "Ad Name (variable)" is the eVar. |
 | `videoadinpod` | `mediaReporting.advertisingDetails.podPosition` | integer  | The index of the ad inside the parent ad start. For example, the first ad has index 0 and the second ad has index 1. |
@@ -86,7 +86,7 @@ Read the following table for information on advertising parameters.
 
 Read the following table for information on chapter parameters.
 
-| Data feed | XDM field path | Data type | Description | 
+| Data feed | XDM field path | Data type | Description |
 | --- | --- | --- | --- |
 | `videochapter` | `mediaReporting.chapterDetails.ID` | string | The auto-generated ID of the chapter. |
 | `videochapterstart` | `mediaReporting.chapterDetails.isStarted` | boolean | A boolean value that indicates whether or not the chapter has been started. |
@@ -99,7 +99,7 @@ Read the following table for information on chapter parameters.
 
 Read the following table for information on player state parameters.
 
-| Data feed | XDM field path | Data type | Description | 
+| Data feed | XDM field path | Data type | Description |
 | --- | --- | --- | --- |
 | `videostatefullscreen` | `mediaReporting.states[].isSet` | boolean | A boolean value that indicates whether or not the video state is set to full screen. |
 | `videostatefullscreencount` | `mediaReporting.states[].count` | integer | The number of times that a video state was set to full screen. |
@@ -123,11 +123,11 @@ Read the following table for information on player state parameters.
 
 Read the following table for information on quality parameters.
 
-| Data feed | XDM field path | Data type | Description | 
+| Data feed | XDM field path | Data type | Description |
 | --- | --- | --- | --- |
 | `videoqoebitrateaverage` | `mediaReporting.qoeDataDetails.bitrateAverage` | number | The average bitrate (in kbps, integer). This metric is computed as a weighted average of all bitrate values related to the play duration that occurred during a playback session. |
 | `videoqoebitratechange` | `mediaReporting.qoeDataDetails.hasBitrateChangeImpactedStreams` | boolean | A boolean value that indicates the number of streams in which bitrate changes occurred. This metric is set to true only if at least one bitrate change event occurred during a playback session. |
-| `videoqoebitratechangecountevar` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | integer |
+| `videoqoebitratechangecountevar` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | integer ||
 | `videoqoebitrateaverageevar` | `mediaReporting.qoeDataDetails.bitrateAverageBucket` | string | The number of bitrate changes. This value is computed as a sum of all bitrate change events that occurred during a playback session. |
 | `videoqoetimetostartevar`| `mediaReporting.qoeDataDetails.timeToStart` | integer | The duration, measured in seconds, that passed between video load and video start. |
 | `videoqoedroppedframes` | `mediaReporting.qoeDataDetails.hasDroppedFrameImpactedStreams` | boolean | A boolean value that indicates the number of streams in which frames were dropped. This metric is set to true only if at least one frame was dropped during a playback session. |
@@ -176,7 +176,7 @@ Read this section for information on deprecated Analytics mapping fields.
 | `m_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | string | A variable used to populate the Zip Code dimension. |
 | `accept_language` | `environment.browserDetails.acceptLanguage` | string | Lists all the accepted languages, as indicated in the Accept-Language HTTP header. |
 | `homepage` | `web.webPageDetails.isHomePage` | boolean | No longer used. Indicated if the current URL is the browser's homepage. |
-| `ipv6` | `environment.ipV6` | string |
+| `ipv6` | `environment.ipV6` | string ||
 | `j_jscript` | `environment.browserDetails.javaScriptVersion` | string | The version of JavaScript supported by the browser. |
 | `user_agent` | `environment.browserDetails.userAgent` | string | The user agent string sent in the HTTP header. |
 | `mobileappid` | `application.name` | string | The mobile app ID, stored in the following format: `[AppName][BundleVersion]`. |
@@ -190,21 +190,21 @@ Read this section for information on deprecated Analytics mapping fields.
 | `mobilebeaconmajor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMajor` | number | Mobile Services beacon major. |
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | number | Mobile Services beacon minor. |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | string | Mobile Services beacon UUID. |
-| `mobileinstalls` | `application.firstLaunches` | Object  | This is triggered at the first run after installation or reinstallation | {id (string), value (number)} |
-| `mobileupgrades` | `application.upgrades` | Object | Reports the number of app upgrades. Triggers at the first run after upgrade or any time the version number changes. | {id (string), value (number)} |
-| `mobilelaunches` | `application.launches` | Object | The number of times the app has been launched. | {id (string), value (number)} |
-| `mobilecrashes` | `application.crashes` | Object |  | {id (string), value (number)} |
-| `mobilemessageclicks` | `directMarketing.clicks` | Object |  | {id (string), value (number)} |
-| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | Object | | {id (string), value (number)} |
-| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | Object | | {id (string), value (number)} |
-| `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | Object | The video quality time to start. | {id (string), value (number)} |
-| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | Object | | {id (string), value (number)} |
-| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | Object | Video quality buffer count | {id (string), value (number)} |
-| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | Object | Video quality buffer time | {id (string), value (number)} |
-| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | Object | Video quality change count | {id (string), value (number)} |
-| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | Object | Video quality average bit rate | {id (string), value (number)} |
-| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | Object | Video quality error count | {id (string), value (number)} |
-| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | Object | | {id (string), value (number)} |
+| `mobileinstalls` | `application.firstLaunches` | Object  | This is triggered at the first run after installation or reinstallation `{id (string), value (number)}` |
+| `mobileupgrades` | `application.upgrades` | Object | Reports the number of app upgrades. Triggers at the first run after upgrade or any time the version number changes. `{id (string), value (number)}` |
+| `mobilelaunches` | `application.launches` | Object | The number of times the app has been launched.  `{id (string), value (number)}` |
+| `mobilecrashes` | `application.crashes` | Object |  `{id (string), value (number)}` |
+| `mobilemessageclicks` | `directMarketing.clicks` | Object |  `{id (string), value (number)}` |
+| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | Object | `{id (string), value (number)}` |
+| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | Object | `{id (string), value (number)}` |
+| `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | Object | The video quality time to start. `{id (string), value (number)}` |
+| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | Object | `{id (string), value (number)}` |
+| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | Object | Video quality buffer count `{id (string), value (number)}` |
+| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | Object | Video quality buffer time `{id (string), value (number)}` |
+| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | Object | Video quality change count `{id (string), value (number)}` |
+| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | Object | Video quality average bit rate `{id (string), value (number)}` |
+| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | Object | Video quality error count `{id (string), value (number)}` |
+| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | Object | `{id (string), value (number)}` |
 
 {style="table-layout:auto"}
 
@@ -218,13 +218,13 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 
 | Data feed | XDM field | XDM type | Description |
 | --- | --- | --- | --- |
-| `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Object | Custom Analytics props, configured to be list props. It contains a delimited list of values. | {} |
-| `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Object | Used by hierarchy variables. It contains a delimited list of values. | {values (array), delimiter (string)} |
-| `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | Custom Analytics list variables. Contains a delimited list of values. | {value (string), key (string)} |
-| `m_color` | `device.colorDepth` | integer | The color depth ID, which is based off the value of the c_color column. | 
+| `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Object | Custom Analytics props, configured to be list props. It contains a delimited list of values. `{}` |
+| `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Object | Used by hierarchy variables. It contains a delimited list of values. `{values (array), delimiter (string)}` |
+| `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | Custom Analytics list variables. Contains a delimited list of values.  `{value (string), key (string)}` |
+| `m_color` | `device.colorDepth` | integer | The color depth ID, which is based off the value of the c_color column. |
 | `m_cookies` | `environment.browserDetails.cookiesEnabled` | boolean | A variable used in the Cookie Support dimension. |
-| `m_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Object | Standard commerce events triggered on the hit.| {id (string), value (number)} |
-| `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Custom events triggered on the hit. | {id (Object), value (Object)} |
+| `m_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Object | Standard commerce events triggered on the hit. `{id (string), value (number)}` |
+| `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Custom events triggered on the hit. `{id (Object), value (Object)}` |
 | `m_geo_country` | `placeContext.geo.countryCode` | string | Abbreviation of the country where the hit came from, which is based off the IP. |
 | `m_geo_latitude` | `placeContext.geo._schema.latitude` | number | |
 | `m_geo_longitude` | `placeContext.geo._schema.longitude` | number | |
@@ -236,7 +236,7 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 | `m_page_type` | `web.webPageDetails.isErrorPage` | boolean | A variable that is used to populate the Pages Not Found dimension. This variable should either be empty, or contain "ErrorPage". |
 | `m_pagename_no_url` | `web.webPageDetails.name` | number | The name of the page (if set). If no page is specified, this value is left empty. |
 | `m_paid_search` | `search.isPaid` | boolean | A flag that is set if the hit matches paid search detection. |
-| `m_product_list` | `productListItems[].items` | array | The product list, as passed in through the products variable. | {SKU (string), quantity (integer), priceTotal (number)} |
+| `m_product_list` | `productListItems[].items` | array | The product list, as passed in through the products variable. `{SKU (string), quantity (integer), priceTotal (number)}` |
 | `m_ref_type` | `web.webReferrer.type` | string | A numeric ID representing the type of referral for the hit.<br/>`1`: Inside your site<br/>`2`: Other websites<br/>`3`: Search engines<br/>`4`: Hard drive<br/>`5`: USENET<br/>`6`: Typed/Bookmarked (no referrer)<br/>`7`: email<br/>`8`: No JavaScript<br/>`9`: Social Networks |
 | `m_search_engine` | `search.searchEngine` | string | The numeric ID representing the search engine that referred the visitor to your site. |
 | `post_currency` | `commerce.order.currencyCode` | string | The currency code that was used during the transaction. |
@@ -292,9 +292,9 @@ To learn more about performing these transformations using Query Service, see [A
 +++Select to view a table of deprecated advanced mapping fields
 
 | Data feed | XDM field | XDM type | Description |
-| --- | --- | --- | --- ||
+| --- | --- | --- | --- |
 | `post_evar1`<br/>`[...]`<br/>`post_evar250` | `_experience.analytics.customDimensions.`<br/>`eVars.eVar1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`eVars.eVar250` | string | Custom Analytics eVars. Each organization can use eVars differently. |
-| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | string | Custom Analytics props. Each organization can use props differently. | 
+| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | string | Custom Analytics props. Each organization can use props differently. |
 | `post_browser_height` | `environment.browserDetails.viewportHeight` | integer | The height of the browser, in pixels. |
 | `post_browser_width` | `environment.browserDetails.viewportWidth` | integer | The width of the browser, in pixels. |
 | `post_campaign` | `marketing.trackingCode` | string | The variable used in the Tracking Code dimension. |
@@ -332,7 +332,7 @@ To learn more about performing these transformations using Query Service, see [A
 | `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Custom events triggered on the hit.| {id (Object), value (Object)} |
 | `post_java_enabled` | `environment.browserDetails.javaEnabled` | boolean | A flag indicating whether Java&trade; is enabled. |
 | `post_latitude` | `placeContext.geo._schema.latitude` | number |   |
-| `post_longitude` | `placeContext.geo._schema.longitude` | number |   | 
+| `post_longitude` | `placeContext.geo._schema.longitude` | number |   |
 | `post_page_event` | `web.webInteraction.type` | string | The type of hit that is sent in the image request (standard hit, download link, exit link, or custom link clicked). |
 | `post_page_event` | `web.webInteraction.linkClicks.value` | number | Equals 1 if the hit is a link click. This is similar to the Page Events metric in Adobe Analytics. |
 | `post_page_event_var1` | `web.webInteraction.URL` | string | This variable is only used in link tracking image requests. It is the URL of the download link, exit link, or custom link clicked. |

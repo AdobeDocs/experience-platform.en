@@ -36,17 +36,29 @@ The [!UICONTROL Data Distiller capabilities] section provides documentation link
 
 ![The Query Service workspace with the Data Distiller capabilities section highlighted.](../images/ui/overview/data-distiller-capabilities.png)
 
+### Accelerators {#accelerators}
+
+The **[!UICONTROL Accelerators]** tab in the Queries workspace provides a catalog of Adobe-authored, parameterized SQL templates for common analytical use cases. Each accelerator appears as a row in a table with a name, SQL preview, and metadata.
+
+Select an accelerator to open it in the Query Editor. Provide parameter values and run the query to generate results. Accelerators are read-only and maintained by Adobe to ensure consistency. To modify the logic, create an editable copy using **[!UICONTROL Create custom template]**. See the [Data Distiller Accelerators](./accelerators.md) guide to learn how to discover, run, schedule, and customize accelerators.
+
 ### Recommended Data Distiller accelerators {#recommended-accelerators}
 
-Select a quick link to navigate to the relevant Data Distiller dashboards [!UICONTROL Templates]. Each accelerator provides powerful tools and visualizations to help you analyze audience data, optimize segmentation, and enhance targeting strategies.
+The **[!UICONTROL Recommended Data Distiller accelerators]** section on the Overview tab provides quick access to commonly used accelerators. These appear as cards and support two workflows:
 
-- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: From this dashboard you can analyze audience intersections between multiple audience segments to uncover valuable insights and optimize segmentation strategies. You can also export your insights for further offline analysis or reporting purposes.
-- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: From this dashboard, you can compare and contrast key audience metrics side-by-side to analyze two audience groups in detail. These insights help you understand audience size, growth, and other key performance indicators, enabling you to refine segmentation and optimize targeting strategies with data-driven decisions.
-- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**: Use the [!UICONTROL Audience trends] dashboard to visualize how your audiences evolve over time through key metrics like audience growth, identity counts, and single identity profiles. Track trends to uncover valuable insights into audience behavior, empowering you to refine segmentation, enhance engagement, and optimize targeting strategies for more effective campaigns.
-Track audience metrics over time to monitor changes in audience size, identity growth, and overall engagement.
-- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**: Use the Audience Identity Overlaps dashboard to analyze identity overlaps within selected audiences. Visualizations and tabulated data provide insights to optimize identity stitching, reduce redundancy, and improve segmentation. These insights enable more effective targeting, enhanced personalization, and streamlined customer interactions.
+- **Dashboard-linked accelerators** open in the Dashboards workspace with prebuilt visualizations. These do not require parameter input or manual query execution.
+- **Query-based accelerators** open in the Query Editor, where you provide parameter values, run the query, or schedule it.
 
-![The Query Service workspace with the Data Distiller accelerators section highlighted.](../images/ui/overview/data-distiller-accelerators.png)
+Select a card to open the accelerator. Use this section for quick access to common workflows, or navigate to the **[!UICONTROL Accelerators]** tab to browse the full catalog. For the complete list of accelerators and detailed instructions, see the [Accelerators tab](./accelerators.md#discovery-paths) or the [Data Distiller Accelerators guide](./accelerators.md).
+
+The following dashboard-linked accelerators are available:
+  
+- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: Analyze intersections between audience segments to identify overlap patterns and refine segmentation. 
+- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: Compare key metrics between two audiences, including size, composition, and changes over time. 
+- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**: Track how audience metrics change over time, including audience size and identity counts. 
+- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**: Examine how identity types overlap within audiences to support identity stitching and segmentation accuracy.
+
+![Query Service Overview showing the Data Distiller accelerators section with recommended accelerator cards.](../images/ui/overview/data-distiller-accelerators.png)
 
 ### Data Distiller examples {#data-distiller-examples}
 
@@ -181,6 +193,12 @@ See the [query logs documentation](./query-logs.md) for more information on the 
 The **[!UICONTROL Credentials]** tab displays both your expiring and non-expiring credentials. For more information on how to use these credentials to connect with external clients, please read the [credentials guide](../clients/overview.md).
 
 ![The Queries dashboard with the Credentials tab highlighted.](../images/ui/overview/credentials.png)
+
+## Administration {#admin}
+
+Use the **[!UICONTROL Admin]** tab to monitor and manage concurrent Query Editor sessions across your organization. This capability is intended for administrators and is not required for writing or running queries.
+
+From the **[!UICONTROL Admin]** tab, administrators can view active sessions across sandboxes and end idle sessions to free shared capacity. This action does not interrupt queries that are actively running. See the [Manage Query Service sessions guide](session-management.md) for detailed instructions and permission requirements.
 
 ## Next steps
 

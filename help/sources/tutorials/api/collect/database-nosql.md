@@ -652,8 +652,6 @@ curl -X POST \
     }'
 ```
 
-+++
-
 | Property | Description |
 | -------- | ----------- |
 | `flowSpec.id` | The [flow spec ID](#specs) retrieved in the previous step. |
@@ -679,7 +677,7 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 
 ## Monitor your dataflow
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For more information on how to monitor dataflows, see the tutorial on [monitoring dataflows in the API ](../monitor.md)
+Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For more information on how to monitor dataflows, see the tutorial on [monitoring dataflows in the API](../monitor.md)
 
 ## Next steps
 

@@ -5,10 +5,6 @@ exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
 ---
 # Tags troubleshooting guide
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](./term-updates.md) for a consolidated reference of the terminology changes.
-
 This document provides answers to frequently asked questions about tags in Adobe Experience Platform.
 
 ## What are tags?

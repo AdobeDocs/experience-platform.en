@@ -10,10 +10,6 @@ exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
 ---
 # Mailchimp event forwarding extension overview
 
->[!NOTE]
->  
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) for a consolidated reference of the terminology changes.
-
 The Mailchimp [event forwarding](../../../ui/event-forwarding/overview.md) extension sends events to the Mailchimp Marketing API that can trigger emails for Mailchimp marketing campaigns, journeys, or transactions.
 
 This document covers how to set up the extension and configure rules using the Add Event action.
@@ -99,7 +95,7 @@ The extension is now installed and configured for use in your property.
 
 When using this extension in a [rule](../../../ui/managing-resources/rules.md), there are several data values that the extension sends to Mailchimp with each event. For a typical implementation, you can configure the [Adobe Experience Platform Web SDK extension](../../client/web-sdk/overview.md) to send that data to [!DNL Experience Platform Edge Network] for use by the extension in the event forwarding property.
 
-The data required by this extension can be sent from Web SDK as either XDM data (using the [`xdm`](/help/web-sdk/commands/sendevent/xdm.md) object) or non-XDM data (using the [`data`](/help/web-sdk/commands/sendevent/data.md) object).
+The data required by this extension can be sent from Web SDK as either XDM data (using the [`xdm`](/help/collection/js/commands/sendevent/xdm.md) object) or non-XDM data (using the [`data`](/help/collection/js/commands/sendevent/data.md) object).
 
 For example, if a customer makes a purchase or registers for an event on your site, you could send a confirmation email through Mailchimp with this extension. Once you send the required information from Web SDK to the Edge Network, the extension triggers the email with Mailchimp.
 
@@ -117,7 +113,7 @@ The table below provides more detail for each possible value.
 | `listId` | `arc.event.xdm._tenant.listId`<br /> or<br /> `arc.event.data._tenant.listid` | String | Audience ID | **Yes** | Must match an existing Audience ID|
 | `name` | `arc.event.xdm._tenant.name`<br /> or<br /> `arc.event.data._tenant.name` | String | The event name | **Yes** | 2-30 characters in length |
 | `properties` | `arc.event.xdm._tenant.properties`<br /> or<br /> `arc.event.data._tenant.properties`| Object | An optional list of properties in JSON format with details about the event | No ||
-| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> or<br /> `arc.event.data._tenant.isSyncing` | boolean | Events created with `is_syncing` set to `true` **will not** trigger automations | No ||    
+| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> or<br /> `arc.event.data._tenant.isSyncing` | boolean | Events created with `is_syncing` set to `true` **will not** trigger automations | No ||
 | `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> or `arc.event.data._tenant.occuredAt` | String | An ISO 8601 timestamp of when the event occurred | No ||
 
 {style="table-layout:auto"}

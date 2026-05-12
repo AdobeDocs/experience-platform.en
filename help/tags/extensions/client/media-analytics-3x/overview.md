@@ -5,10 +5,6 @@ exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
 ---
 # Adobe Media Analytics (3.x SDK) for Audio and Video extension overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Use this documentation for information on installing, configuring, and implementing the Adobe Media Analytics (3.x SDK) for Audio and Video extension (Media Analytics extension). Included are the options available when using this extension to build a rule, along with examples and links to samples.
 
 The Media Analytics (MA) extension adds the core JavaScript Media SDK (Media 3.x SDK). This extension provides the functionality for adding the `Media` tracker instance to a tags-enabled site or project. The MA extension requires two additional extensions:

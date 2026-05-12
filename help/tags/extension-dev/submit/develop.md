@@ -5,10 +5,6 @@ exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
 ---
 # Develop an extension
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 A tag extension should be thought of as a (small) product with its own requirements. Determining how an Adobe Experience Platform user will want to use your extension can help you sort the functionality into what event types, condition types, action types, and data element types your extension should provide.
 
 With that knowledge, you can plan out what components should be provided in your extension.
@@ -36,11 +32,7 @@ There are also a number of npm tools to help you with your extension package dev
 
 ## Example extensions
 
-There are example extensions on GitHub you can review or use as starter projects:
-
-* [Hello World example extension](https://github.com/adobe/reactor-helloworld-extension)
-* [Typekit example extension](https://github.com/jeffchasin/extension-typekit)
-* [Pinterest example extension](https://github.com/jeffchasin/extension-pinterest)
+You can review or use example extensions from GitHub, such as the [Hello World example extension](https://github.com/adobe/reactor-helloworld-extension), as starter projects.
 
 ## Slack workspace
 

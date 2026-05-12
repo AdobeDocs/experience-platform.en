@@ -7,8 +7,10 @@ exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
 
 This documentation provides examples and best practices on how to use the Adobe Client Data Layer extension.
 
-<!-- (Missing document?)
-If you would like to have more details on development consideration, [please reach this page](./dev.md). -->
+<!-- 
+(Missing document?)
+If you would like to have more details on development consideration, [please reach this page](./dev.md). 
+-->
 
 ## Installation
 
@@ -16,12 +18,14 @@ In order to install the extension, navigate to the extension catalog in the Expe
 
 ![ACDL Extension view in Catalog](./images/catalog.png)
 
-<!-- (GitHub link?)
+<!-- 
+(GitHub link?)
 There is also the possibility to fork this project. You can download this github project, realize the change that you deem required for your specific use-case and re-upload it on your Organization as a private extension.
 This installation will not be supported on our end.<br>
 >[!NOTE]
 >
-> _Consider renaming the extension name in the extension.json file_ -->
+> _Consider renaming the extension name in the extension.json file_ 
+-->
 
 ## Extension View
 
@@ -45,12 +49,12 @@ If you select this option, your event listener listens to any change made to the
 
 The following example push events would be tracked by the listener:
 
-* ` adobeDataLayer.push({"data":"something"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"data":"something"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 The following example push event would not be tracked by the listener:
 
-* ` adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent"})`
 
 ### Listen to all events
 
@@ -58,8 +62,8 @@ If you select this option, your event listener listens to any event pushed to th
 
 The following example push events would be tracked by the listener:
 
-* ` adobeDataLayer.push({"event":"myevent"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 The following example push event would not be tracked by the listener:
 

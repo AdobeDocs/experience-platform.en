@@ -25,6 +25,7 @@ This tutorial requires a packaged recipe in the form of a Docker image URL. See 
 Importing a packaged recipe into [!DNL Data Science Workspace] requires specific recipe configurations, compiled into a single JavaScript Object Notation (JSON) file, this compilation of recipe configurations is referred to as the configuration file. A packaged recipe with a particular set of configurations is referred to as a recipe instance. One recipe can be used to create many recipe instances in [!DNL Data Science Workspace].
 
 The workflow for importing a package recipe consists of the following steps:
+
 - [Configure a recipe](#configure)
 - [Import Docker based recipe - Python](#python)
 - [Import Docker based recipe - R](#r)

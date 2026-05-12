@@ -13,6 +13,7 @@ role: Developer
 * Schemas {#schema}
   * [Basics of schema composition](schema/composition.md)
   * [Best practices for data modeling](schema/best-practices.md)
+  * [Planning for Profile Enablement](./schema/profile-enablement-planning.md)
   * [Sensitive and personal data](./schema/sensitive-and-personal-data.md)
   * [XDM field type constraints](schema/field-constraints.md)
   * [Relational schema](./schema/relational.md)
@@ -109,7 +110,7 @@ role: Developer
     * [Partner Prospect Details (Sample)](./field-groups/prospect-profile/partner-prospect-details.md)
   * XDM ExperienceEvent {#event}
     * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
-    * [Adobe Advertising Cloud Full Extension](./field-groups/event/advertising-full-extension.md)
+    * [Adobe Advertising Full Extension](./field-groups/event/advertising-full-extension.md)
     * [Advertising Details](./field-groups/event/advertising-details.md)
     * [Application Details](./field-groups/event/application-details.md)
     * [Balance Transfers](./field-groups/event/balance-transfers.md)

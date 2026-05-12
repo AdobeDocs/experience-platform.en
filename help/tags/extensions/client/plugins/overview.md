@@ -5,10 +5,6 @@ exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
 ---
 # Common Analytics Plugins extension overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Use this reference for information about configuring the Common Analytics Plugins extension, and the options available when using this extension to augment the [!DNL Adobe Analytics] Extension.
 
 ## Configure the Common Analytics Plugins extension

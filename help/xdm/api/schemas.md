@@ -281,10 +281,6 @@ To add additional fields to a schema, you can perform a [PATCH operation](#patch
 >
 >Data Mirror and relational schemas are available to Adobe Journey Optimizer **Orchestrated campaigns** license holders. They are also available as a **limited release** for Customer Journey Analytics users, depending on your license and feature enablement. Contact your Adobe representative for access.
 
->[!NOTE]
->
->Relational schemas were previously referred to as model-based schemas in earlier versions of the Adobe Experience Platform API documentation. The functionality remains the same - only the terminology has changed for clarity.
-
 Create a relational schema by making a POST request to the `/schemas` endpoint. Relational schemas store structured, relational-style data **without** classes or field groups. Define fields directly on the schema, and identify the schema as relational using a logical behavior tag.
 
 >[!IMPORTANT]

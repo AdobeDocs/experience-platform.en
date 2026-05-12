@@ -161,7 +161,7 @@ An example of this command's output can be seen below:
 
 ```sql
        name          |        dataSetId         |     dataSet    | description | labels 
----------------------+--------------------------+----------------+-------------+----------
+|---------------------+--------------------------+----------------+-------------+----------
  luma_midvalues      | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
  luma_postvalues     | 5c86b896b3c162151785b43c | Luma midValues |             | false
  table_with_a_decile | 5c86b896b3c162151785b43c | Luma midValues |             | 'UPSERT', 'PROFILE'
@@ -221,7 +221,7 @@ An example of this command's output can be seen below:
 
 ```sql
        name                      |        fieldgroupId                             |     owner      |
----------------------------------+-------------------------------------------------+-----------------
+|---------------------------------+-------------------------------------------------+-----------------
  AEP Mobile Lifecycle Details    | _experience.aep-mobile-lifecycle-details        | Luma midValues |
  AEP Web SDK ExperienceEvent     | _experience.aep-web-sdk-experienceevent         | Luma midValues |
  AJO Classification Fields       | _experience.journeyOrchestration.classification | Luma midValues |

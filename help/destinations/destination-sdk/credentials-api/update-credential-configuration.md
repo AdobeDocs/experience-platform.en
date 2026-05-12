@@ -29,7 +29,7 @@ When using a global authentication system, you must set `"authenticationRule":"P
 
 ## Getting started with credentials API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Update a credential configuration {#update}
 
@@ -246,7 +246,7 @@ A successful response returns HTTP status 200 with the details of your updated c
 
 ## API error handling {#error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps {#next-steps}
 

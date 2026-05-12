@@ -30,6 +30,7 @@ The data layer name default is the Google default name `dataLayer`.
 >[!NOTE]
 >
 >The word _event_ is overloaded when an event-driven data layer is used in Adobe Experience Platform Tags. _Events_ can be:
+>
 > - Adobe Experience Platform Tags events (Library Loaded and so on).
 > - JavaScript events.
 > - Data pushed to the data layer with the _event_ keyword.

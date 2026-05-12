@@ -225,35 +225,55 @@ For Adobe Analytics, ECID is the default primary identity. If an ECID value is n
 
 ## Data validation fields {#data-validation-fields}
 
-When you ingest data into the data lake, data validation is only enforced for constrained fields. To validate a particular field during a batch ingestion, you must mark the field as constrained in the XDM schema. To prevent bad data from being ingested into Experience Platform, you are recommended to define the criteria for field level validation when you create your schemas.
+When you ingest data into the data lake, data validation is only enforced for constrained fields. To validate a particular field during batch ingestion, you must mark the field as constrained in the XDM schema. To prevent bad data from entering Experience Platform, define your validation requirements when you create your schemas.
 
 >[!IMPORTANT]
 >
->Validation does not apply to nested columns. If the field format is located within an array column, the data will not be validated.
+>Validation does not apply to nested columns. If the field format is located within an array column, the data is not validated.
 
-To set constraints on a particular field, select the field from the Schema Editor to open the **[!UICONTROL Field properties]** sidebar. See the documentation on [type-specific field properties](../ui/fields/overview.md#type-specific-properties) for exact descriptions of the available fields.
+To set constraints on a field, select the field in the Schema Editor to open the **[!UICONTROL Field properties]** sidebar. See the documentation on [type-specific field properties](../ui/fields/overview.md#type-specific-properties) for exact descriptions of the available fields.
 
 ![The Schema Editor with the constraint fields highlighted in the [!UICONTROL Field properties] sidebar.](../images/best-practices/data-validation-fields.png)
 
 ### Tips to maintain data integrity {#data-integrity-tips}
 
-The following are a collection of suggestions to maintain data integrity when you create a schema.
+The following suggestions help you maintain data integrity when you create a schema.
 
 * **Consider primary identities**: For Adobe products like web SDK, mobile SDK, Adobe Analytics, and Adobe Journey Optimizer, the `identityMap` field often serves as the primary identity. Avoid designating additional fields as primary identities for that schema.
-* **Ensure `_id` is not used as an identity**: The `_id` field in Experience Event schemas cannot be used as an identity as it is meant for record uniqueness.
+* **Ensure `_id` is not used as an identity**: The `_id` field in Experience Event schemas cannot be used as an identity because it is meant for record uniqueness.
 * **Set length constraints**: It is best practice to set minimum and maximum lengths on fields marked as identities. A warning triggers if you try to assign a custom namespace to an identity field without meeting the minimum and maximum length constraints. These limitations help maintain consistency and data quality.
-* **Apply patterns for consistent values**: If your identity values follow a specific pattern, you should use the **[!UICONTROL Pattern]** setting to enforce this constraint. This setting can include rules like digits only, uppercase or lowercase, or specific character combinations. Use regular expressions to match patterns in your strings.
+* **Apply patterns for consistent values**: If your identity values follow a specific pattern, use the **[!UICONTROL Pattern]** setting to enforce constraints. This setting can include rules like digits only, uppercase or lowercase, or specific character combinations. Use regular expressions to match patterns in your strings.
 * **Limit eVars in Analytics schemas**: Typically, an Analytics schema should have only one eVar designated as an identity. If you intend to use more than one eVar as an identity, you should double-check whether the data structure can be optimized.
-* **Ensure uniqueness of a selected field**: Your chosen field should be unique compared to the primary identity in the schema. If it is not, do not mark it as an identity. For instance, if multiple customers can provide the same email address, then that namespace is not a suitable identity. This principle also applies to other identity namespaces like phone numbers. Marking a non-unique field as an identity could cause unwanted profile collapse. 
+* **Ensure uniqueness of a selected field**: Your chosen field should be unique compared to the primary identity in the schema. If it is not, do not mark it as an identity. For instance, if multiple customers can provide the same email address, then that namespace is not a suitable identity. This principle also applies to other identity namespaces like phone numbers. Marking a non-unique field as an identity could cause unwanted profile collapse.
 * **Verify minimum string lengths**: All string fields should be at least one character in length, as string values should never be empty. Null values for non-required fields, however, are acceptable. New string fields are given a minimum length of one by default.
+
+## Managing Profile-enabled schemas {#managing-profile-enabled-schemas}
+
+This section explains how to manage schemas that are already enabled for Real-Time Customer Profile. After a schema is enabled, you cannot disable or delete it. You must determine how to prevent further use and how to manage datasets that you cannot delete.
+
+Once a schema is enabled for Profile, the configuration cannot be reversed. If a schema should no longer be used, rename it to clarify its status and create a replacement schema with the correct structure and identity configuration. This helps prevent accidental reuse of the deprecated schema when users create new datasets or configure ingestion workflows.
+
+System datasets sometimes appear alongside Real-Time Customer Profile-enabled schemas. You cannot delete system datasets, even when the associated schema is deprecated. To prevent unintended use, rename the deprecated Profile-enabled schema and confirm that no ingestion workflows point to the system dataset that remains in place.
+
+Use the following best practices to prevent accidental reuse of deprecated Profile-enabled schemas:
+
+* Use a clear naming convention when you deprecate a schema. Include labels such as "Deprecated," "Do Not Use," or a version tag.
+* Stop ingesting data into any dataset based on the schema you want to retire.
+* Create a new schema with the correct structure, identity configuration, and naming pattern.
+* Review system datasets that cannot be deleted and verify that no ingestion workflows reference them.
+* Document the change internally so other users understand why the schema is deprecated.
+
+>[!TIP]
+>
+>See the [XDM troubleshooting guide](../troubleshooting-guide.md#delete-profile-enabled) for additional guidance on Profile-enabled schemas and related limitations.
 
 ## Next steps
 
-This document covered the general guidelines and best practices for designing your data model for Experience Platform. To summarize:
+This document covers general guidelines and best practices for designing your data model for Experience Platform. To summarize:
 
-* Use a top-down approach by sorting your data tables into profile, lookup, and event categories before constructing your schemas.
-* There are often multiple approaches and options when it comes to designing schemas for different purposes.
-* Your data model should support your business use cases such as segmentation or customer journey analysis.
-* Make your schemas as simple as possible, and only add new fields when absolutely necessary.
+* Sort your data tables into profile, lookup, and event categories before constructing your schemas.
+* Evaluate multiple approaches when you design schemas for different use cases.
+* Ensure that your data model supports your segmentation or customer journey goals.
+* Keep schemas as simple as possible. Add new fields only when necessary.
 
-Once you are ready, see the tutorial on [creating a schema in the UI](../tutorials/create-schema-ui.md) for step-by-step instructions on how to create a schema, assign the appropriate class for the entity, and add fields to map your data to.
+When you are ready, see the tutorial on [creating a schema in the UI](../tutorials/create-schema-ui.md) for step-by-step instructions on schema creation, class assignment, and field mapping.

@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes October 2025
 description: The October 2025 release notes for Adobe Experience Platform.
+exl-id: 93feff2b-d998-41f1-8d93-332238a1d88d
 ---
 # Adobe Experience Platform release notes
 
@@ -32,7 +33,7 @@ Adobe Experience Platform Agent Orchestrator is the new agentic layer in Adobe E
 
 | Feature | Description |
 | ------- | ----------- |
-| Audience Agent | The Audience Agent now supports account-based audiences for conversational audience exploration and detecting duplicate audiences. For more information, read the [Audience Agent documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). | 
+| Audience Agent | The Audience Agent now supports account-based audiences for conversational audience exploration and detecting duplicate audiences. For more information, read the [Audience Agent documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
 
 For more information on agents, read the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home).
 

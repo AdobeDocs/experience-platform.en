@@ -1,9 +1,9 @@
 ---
-title: Adobe Analytics Source Connector for Report-Suite Data
+title: Adobe Analytics source connector for report suite data
 description: This document provides an overview of Analytics and describes the use-cases for Analytics data.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
 ---
-# Adobe Analytics source connector for report-suite data
+# Adobe Analytics source connector for report suite data
 
 Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics source connector. The [!DNL Analytics] source connector streams data collected by [!DNL Analytics] to Experience Platform in real-time, converting SCDS-formatted [!DNL Analytics] data into [!DNL Experience Data Model] (XDM) fields for consumption by Experience Platform.
 
@@ -36,6 +36,14 @@ To learn more about XDM, please see the [XDM System overview](../../../xdm/home.
 When a source connection is established for bringing [!DNL Analytics] data into Experience Platform using the Experience Platform user interface, data fields are automatically mapped and ingested into [!DNL Real-Time Customer Profile] within minutes. For instructions on creating a source connection with [!DNL Analytics] using the Experience Platform UI, see the [Analytics source connector tutorial](../../tutorials/ui/create/adobe-applications/analytics.md).
 
 For detailed information on the field mapping that occurs between [!DNL Analytics] and Experience Platform, see the [Adobe Analytics field mapping](./mapping/analytics.md) guide.
+
+>[!TIP]
+>
+>Follow these best practices to avoid exceeding your license entitlements and overwhelming your total storage and data richness metrics:
+>
+>* Set up the Experience Event Dataset Retention Time-To-Live (TTL) in the beginning to optimize data lifecycle management and storage efficiency. For more details, see the guide on [managing Experience Event Dataset Retention in the data lake using TTL](../../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+>
+>* When you create an Analytics source dataflow, start by configuring the connector to ingest data only into the data lake. After confirming that the dataflow is working, you can enable profile ingestion for the dataset. This approach works best when row and column filters effectively reduce the data volume. Learn more in the [connecting Adobe Analytics to Experience Platform](../../tutorials/ui/create/adobe-applications/analytics.md) documentation.
 
 ## What is the expected latency for Analytics Data on Experience Platform?
 

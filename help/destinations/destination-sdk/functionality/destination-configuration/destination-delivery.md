@@ -5,7 +5,7 @@ exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
 ---
 # Destination delivery
 
-To offer more control over where the data exported to your destination lands, Destination SDK allows you to specify destination delivery settings.
+To offer more control over where the data exported to your destination lands, use Destination SDK to specify destination delivery settings.
 
 The destination delivery section indicates where the exported data goes and what authentication rule is used in the location where the data will land.
 
@@ -29,7 +29,7 @@ This article describes all the supported destination delivery options that you c
 
 ## Supported integration types {#supported-integration-types}
 
-Refer to the table below for details on which types of integrations support the functionality described on this page.
+See the table below for details on which types of integrations support the functionality described on this page.
 
 |Integration type| Supports functionality |
 |---|---|

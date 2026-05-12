@@ -266,4 +266,4 @@ There are two reasons that metrics may not be available on your batch:
 | 200 | The batch has been accepted for processing, and will transition to a final state, such as Active or Failure. Once submitted, the batch can be monitored using the `GetBatch` endpoint. |
 | 400 | Bad Request. Returned if there are either missing or overlapping chunks in a batch. |
 
-[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files
+`[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files`

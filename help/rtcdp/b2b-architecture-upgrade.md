@@ -1,7 +1,7 @@
 ---
 title: Architecture Upgrades to Real-Time CDP B2B Edition
 description: Read this document to learn about the comprehensive architecture upgrades to Real-Time CDP B2B Edition.
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
 ---
 # Architecture upgrades to Real-Time CDP B2B Edition
@@ -16,7 +16,13 @@ Use the enhanced architecture for the following benefits:
 
 * **Scalability of data ingestion**: Improved support for high-cardinality B2B relationships, such as accounts connected to thousands of people. 
 * **Performant and reliable audience evaluation**: Faster and more resilient segmentation for complex B2B audiences.  
-* **entity resolution**: Enhanced identity resolution for B2B entities, improved data quality, and reduced duplication to enable more accurate segmentation and aggregation.  
+* **Entity resolution**: Enhanced identity resolution for B2B entities, improved data quality, and reduced duplication to enable more accurate segmentation and aggregation.
+
+>[!TIP]
+>
+>Depending on audience size and complexity, you may experience minor changes in the time required for audience evaluation and audience activation.
+>
+>You are encouraged to monitor segmentation run times, particularly if your business processes rely on the timely completion of segmentation and activation. This helps ensure your workflows continue to run smoothly and allow you to proactively address any unexpected changes.
 
 ## New features
 
@@ -118,11 +124,16 @@ Delete requests for the following B2B entities using the [!DNL Profile Access] A
 
 Read the [[!DNL Profile Access] API](../profile/api/entities.md) for more information.
 
+### Deprecation of Segment Job API
+
+Under the new architecture, the "create a segment job" endpoint and flexible audience evaluation are *not supported.
+
 ### Account and opportunity profile lookups
 
 You can now retrieve account and opportunity schemas as lookup dimension entities only after they have completed the daily entity resolution process. Newly ingested records will not be available for profile enrichment or segment definitions until the next entity resolution cycle completes (typically every 24 hours).
 
-<!-- ### Deprecation of audience creation via API for B2B entities
+<!-- 
+### Deprecation of audience creation via API for B2B entities
 
 Creation of audiences using B2B entities via API is being deprecated. The list of affected B2B entities include:
 
@@ -135,7 +146,8 @@ Creation of audiences using B2B entities via API is being deprecated. The list o
 * Marketing List
 * Marketing List Member
 
-Read the [segment definitions endpoint API guide](../segmentation/api/segment-definitions.md) for more information. -->
+Read the [segment definitions endpoint API guide](../segmentation/api/segment-definitions.md) for more information. 
+-->
 
 ### Changes to multi-entity audience imports in sandbox tooling
 

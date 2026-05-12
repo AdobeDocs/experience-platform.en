@@ -96,7 +96,7 @@ You have also implemented WebSDK and ingested a WebSDK dataset (Experience Event
 | `t=3` | ECID:44675 | View home page |
 | `t=4` | ECID:44675, CRMID: 31260XYZ | View purchase history |
 
-The primary identity for each event will be determined based on [how you configure data element types](../../tags/extensions/client/web-sdk/data-element-types.md).
+The primary identity for each event will be determined based on [how you configure data element types](/help/tags/extensions/client/web-sdk/data-element-types.md).
 
 >[!NOTE]
 >

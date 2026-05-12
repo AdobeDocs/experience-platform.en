@@ -7,15 +7,6 @@ exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 
 Adobe Experience Platform provides a robust set of tools to manage large, complicated data operations in order to orchestrate consumer experiences. As data is ingested into the system over time, it becomes increasingly important to manage your data stores so that data is used as expected, is updated when incorrect data needs correcting, and is deleted when organizational policies deem it necessary.
 
-<!-- Experience Platform's data lifecycle capabilities allow you to manage your stored data through the following:
-
-* Scheduling automated dataset expirations
-* Deleting individual records from one or all datasets
-
->[!IMPORTANT]
->
->Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead. -->
-
 These activities can be performed using the [[!UICONTROL Data Lifecycle] UI workspace](#ui) or the [Data Hygiene API](#api). When a data lifecycle job executes, the system provides transparency updates at each step of process. See the section on [timelines and transparency](#timelines-and-transparency) for more information on how each job type is represented in the system.
 
 >[!NOTE]
@@ -34,49 +25,45 @@ The [!UICONTROL Data Lifecycle] UI is built on top of the Data Hygiene API, whos
 
 ## Timelines and transparency {#timelines-and-transparency}
 
-[Record delete](./ui/record-delete.md) and dataset expiration requests each have their own processing timelines and provide transparency updates at key points in their respective workflows. 
+[Record delete](./ui/record-delete.md) and dataset expiration requests each have their own processing timelines and provide transparency updates at key points in their respective workflows.
 
 >[!TIP]
 >
->To monitor your current usage against quota limits, see the [Quota reference guide](./api/quota.md).  
->For entitlement rules, monthly caps, SLA timelines, and exception handling policies, see the [Record delete (UI)](./ui/record-delete.md#quotas) and [Workorder (API)](./api/workorder.md#quotas) documentation.
+>For additional reference information:
+>- To monitor your current usage against quota limits, see the [Quota reference guide](./api/quota.md).
+>- For entitlement rules, monthly caps, SLA timelines, and exception handling policies, see the [Record delete quota guide (UI)](./ui/record-delete.md#quotas) and [Work order quota guide (API)](./api/workorder.md#quotas).
 
 The following takes place when a [dataset expiration request](./ui/dataset-expiration.md) is created:
 
 | Stage | Time after scheduled expiration | Description |
 | --- | --- | --- |
-| Request is submitted | 0 hours | A data steward or privacy analyst submits a request for a dataset to expire at a given time. The request is visible in the [!UICONTROL Data Lifecycle UI] after it has been submitted, and remains in a pending status until the scheduled expiration time, after which the request will execute. |
-| Dataset is flagged for deletion | 0-2 hours | Once the request is executed, the dataset is flagged for deletion. If using Amazon Web Services (AWS) data storage, this process takes up to two hours. During this time, operations like batch and streaming segmentation, preview or estimate, export, and access disregard this dataset. |
-| Dataset is dropped | 3 hours | **One hour after the dataset is flagged for deletion**, it is fully removed from the system. At this point, the dataset is dropped from the [dataset inventory page](../catalog/datasets/user-guide.md) in the UI. However, the data within the data lake is only soft deleted at this stage and will remain so until the hard deletion process is completed. |
-| Profile count updated | 30 hours | Depending on the contents of the dataset being deleted, some profiles may be removed from the system if all of their component attributes are tied to that dataset. 30 hours after the dataset is deleted, any resulting changes in overall profile counts are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
-| Audiences updated | 48 hours | Once all affected profiles are updated, all related [audiences](../segmentation/home.md) are updated to reflect their new size. Depending on the dataset that was removed and the attributes that you are segmenting on, the size of each audience could increase or decrease as a result of the deletion. |
+| Request is submitted | 0 hours | A data steward or privacy analyst submits a request for a dataset to expire at a given time. The request is visible in the [!UICONTROL Data Lifecycle UI] after it has been submitted and remains in a pending status until the scheduled expiration time, after which the request will execute. |
+| Dataset is dropped from data lake | 1 hour | The dataset is dropped from the [dataset inventory page](../catalog/datasets/user-guide.md) in the UI. The data within the data lake is only soft deleted, and will remain so until the end of the process, after which it will be hard deleted. |
+| Dataset is dropped from profile service | 3 hours | From this point forward, operations including batch and streaming segmentation, preview or estimation, export, and entity access will no longer read data from this dataset. The data within the profile service is only soft deleted and will remain so until the end of the process, after which it will be hard deleted. |
+| Profile count and audiences updated | 48 hours | Once all affected profiles are updated, all related [audiences](../segmentation/home.md) are updated to reflect their new size. Depending on the dataset that was removed and the attributes that you are segmenting on, the size of each audience could increase or decrease because of the deletion. At this point any resulting changes in overall profile counts are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
 | Journeys and destinations updated | 50 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
-| Hard deletion complete | 15 days | All data related to the dataset is hard deleted from the data lake. The [status of the data lifecycle job](./ui/browse.md#view-details) that deleted the dataset is updated to reflect this. |
+| Hard deletion complete | 15 days | All data related to the dataset is hard deleted from the data lake and profile service. The [status of the data lifecycle job](./ui/browse.md#view-details) that deleted the dataset is updated to reflect this. |
 
 {style="table-layout:auto"}
 
->[!IMPORTANT]
+### Record delete timelines {#record-delete-transparency}
+
+The following takes place after a [record delete request](./ui/record-delete.md) is submitted.
+
+>[!NOTE]
 >
->Dataset deletions in Amazon Web Services (AWS) are subject to a latency of around three hours before changes are fully applied. This includes up to two hours for the dataset to be flagged for deletion, followed by an additional hour before it is fully dropped from the system. In contrast, deletion requests for Experience Platform instances that use Azure Data Lake result in immediate changes across business functions. 
->
->For AWS users, this delay may impact batch segmentation, streaming segmentation, previews, estimates, exports, and data access. This latency only affects customers using AWS, as Azure Data Lake users experience immediate updates. For AWS users, it may take up to three hours for deletion requests to fully propagate through all impacted systems. Adjust your expectations accordingly.
+>Timings are approximate and vary based on system load, batch scheduling, and entitlement tier. The end-to-end SLA (30 days standard, 15 days for Privacy and Security Shield or Healthcare Shield) is the operative commitment.
 
-
-<!-- ### Record deletes {#record-delete-transparency}
-
-The following takes place when a [record delete request](./ui/record-delete.md) is created:
-
-| Stage | Time after request submission | Description |
+| Stage | Approx. timing | Description |
 | --- | --- | --- |
-| Request is submitted | 0 hours | A data steward or privacy analyist submits a record delete request. The request is visible in the [!UICONTROL Data Lifecycle UI] after it has been submitted. |
-| Profile lookups updated | 3 hours | The change in profile counts caused by the deleted identity are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
-| Segments updated | 24 hours | Once profiles are removed, all related [segments](../segmentation/home.md) are updated to reflect their new size. |
-| Journeys and destinations updated | 26 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
-| Records soft deleted in data lake | 7 days | The data is soft deleted from the data lake. |
-| Data vacuuming completed | 14 days | The [status of the lifecycle job](./ui/browse.md#view-details) updates to indicate that the job has completed, meaning that data vacuuming has been completed on the data lake and the relevant records have been hard deleted. |
+| Request submitted and batched | Day 1–15 | A work order is created and queued. Requests may be queued and batched for up to 14 days before processing begins. Batching is the primary reason deletion is not immediate. |
+| Downstream systems process deletion request | Day 16–25 | Downstream services receive and execute the record delete request. |
+| Buffer — integrity checks and resubmissions | Day 25–30 | A buffer window allows for integrity checks and resubmission of any failed jobs before the SLA window closes. The work order status updates to `completed` once all systems confirm deletion. |
 
-{style="table-layout:auto"} -->
+{style="table-layout:auto"}
 
-## Next steps
+For entitlement-based queue durations and maximum SLA values, see [Processing timelines for identifier submissions](./ui/record-delete.md#sla-processing-timelines).
 
-This document provided an overview of Experience Platform's Data Lifecycle capabilities. To get started making data hygiene requests in the UI, refer to the [UI guide](./ui/overview.md). To learn how to create Data Lifecycle jobs programmatically, refer to the [Data Hygiene API guide](./api/overview.md)
+## Next steps {#next-steps}
+
+This document provides an overview of Experience Platform's Data Lifecycle capabilities. To get started making data hygiene requests in the UI, see the [data lifecycle UI guide](./ui/overview.md). To create Data Lifecycle jobs programmatically, see the [Data Hygiene API guide](./api/overview.md).

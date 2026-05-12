@@ -222,9 +222,9 @@ The following JSON shows an example of the type of data that the [!UICONTROL Con
 | --- | --- |
 | `preferred` | Indicates the customer's preferred channel for receiving communications. See the [appendix](#preferred-values) for accepted values. |
 | `any` |  Represents the customer's preferences for direct marketing as a whole. The consent preference provided in this field is considered the "default" preference for any marketing channel, unless overridden by additional sub-fields provided under `marketing`. If you plan on using more granular consent options, it is recommended that you exclude this field.<br><br>If the value is set to `n`, then all more specific personalization settings should be ignored. If the value is set to `y`, then all finer-grained personalization options should also be treated as `y`, unless explicitly set to `n`. If the value is unset, then the values for each personalization option should be honored as specified. |
-| `email` | Indicates whether the customer agrees to receive email messages. | 
-| `push` | Indicates whether the customer permits receiving push notifications. | 
-| `sms` | Indicates whether the customer agrees to receive text messages. | 
+| `email` | Indicates whether the customer agrees to receive email messages. |
+| `push` | Indicates whether the customer permits receiving push notifications. |
+| `sms` | Indicates whether the customer agrees to receive text messages. |
 | `val` | The customer-provided preference for the specified use case. In cases where the customer does not have to be prompted to provide consent, the value of this field should indicate the basis on which the marketing use case should take place. See the [appendix](#choice-values) for accepted values and definitions. |
 | `time` | An ISO 8601 timestamp of when the marketing preference changed, if applicable. Note that if the timestamp for any individual preference is the same as the one provided under `metadata`, then this field does not to be set for that preference. |
 | `reason` | When a customer opts out of a marketing use case, this string field represents the reason why the customer opted out. |
@@ -261,7 +261,7 @@ See the tutorial on [creating a schema in the UI](https://www.adobe.com/go/xdm-s
 
 ## Handling consent and preference changes
 
-When a customer changes their consents or preferences on your website, these changes should be collected and immediately enforced using the [Adobe Experience Platform Web SDK](../../web-sdk/commands/setconsent.md). If a customer opts out of data collection, all data collection must immediately cease. If a customer opts out of personalization, then there should be no personalization present on the next page they visit. 
+When a customer changes their consents or preferences on your website, these changes should be collected and immediately enforced by setting consent in the data collection library used. If a customer opts out of data collection, all data collection must immediately cease. If a customer opts out of personalization, then there should be no personalization present on the next page they visit. See [`setConsent`](/help/collection/js/commands/setconsent.md) using the JavaScript library, or the [[!UICONTROL Set consent]](/help/tags/extensions/client/web-sdk/actions/set-consent.md) action using the tag extension.
 
 ## Appendix {#appendix}
 

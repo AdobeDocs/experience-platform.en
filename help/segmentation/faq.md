@@ -112,7 +112,7 @@ Payload attributes are attributes that are ingested as part of the CSV upload of
 
 Enrichment attributes are attributes that come from a dataset and are joined with an audience in Audience Composition. These attributes can currently only be used in Adobe Journey Optimizer campaigns. Support for Adobe Journey Optimizer journeys is coming soon, with support for downstream destinations pending future release.
 
-| Activation channel | Audiences from CSV custom upload | Audiences from Audience Composition | 
+| Activation channel | Audiences from CSV custom upload | Audiences from Audience Composition |
 | --- | --- | --- |
 | Real-Time CDP Destinations | Both the payload attributes and the audiences can be activated. | Only the audience can be activated. Enrichment attributes **cannot** be activated. |
 | Adobe Journey Optimizer Campaigns | Neither the audience nor the payload attributes can be activated. | Both the audience and the enrichment attributes can be activated. |
@@ -402,7 +402,7 @@ The following section lists questions related to streaming segmentation.
 
 ### Does streaming segmentation "unqualification" also happen in real time?
 
-For most instances, streaming segmentation unqualification happens in real-time. However, streaming segments that use segments of segments do **not** unqualify in real-time, instead unqualifying after 24 hours.
+Streaming segmentation disqualification occurs depending on the composition of the audience. For event-based audiences, disqualification occurs in real-time as the lookback window expires. For profile-based audiences or audiences that use profile attributes, disqualification occurs when profile attribute values are changed via a streaming source or during the daily batch evaluation job. 
 
 ### What data does streaming segmentation work on?
 
@@ -411,8 +411,6 @@ Streaming segmentation works on all data that was ingested using a streaming sou
 ### How are segments defined as batch or streaming segmentation?
 
 A segment definition is defined as batch, streaming, or edge segmentation based on a combination of query type and event history duration. A list of which segments will be evaluated as a streaming segment definition can be found in the [streaming segmentation query types section](#query-types).
-
-Please note that if a segment definition contains **both** an `inSegment` expression and a direct single-event chain, it cannot qualify for streaming segmentation. If you want to have this segment definition qualify for streaming segmentation, you should make the direct single-event chain its own segment.
 
 ### Why does the number of "total qualified" segments keep increasing while the number under "Last X days" remains at zero within the segment definition details section?
 

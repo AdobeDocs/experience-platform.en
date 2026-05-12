@@ -32,11 +32,11 @@ Read the documentation on [XDM Experience Event class](../../../../xdm/classes/e
 |  |  | `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | Primary identity. MUNCHKIN_ID will be replaced as part of explore API |
 | `activityTypeId` |  | `eventType` | `eventType` |  |
 | <ul><li>If the <code>activityTypeId</code> is 1, 2, 3, 9, 10, or 11 &rarr; mark <code>producedBy</code> as <strong>self</strong>.</li><li>If the <code>activityTypeId</code> is 6, 7, 8, 12, 21, 22, 24, 25, 27, 32, 34, 35, 36, 46, 101, 104, 110, 113, 114, or 115 &rarr; mark <code>producedBy</code> as <strong>system</strong>.</li><li>For all other values &rarr; mark <code>producedBy</code> as <strong>self</strong>.</li></ul> |  | `producedBy` | `producedBy` |  |
-| `activityDate` |  | `timestamp` | `timestamp` |  | 
-| `attributes.Webpage URL` |  | `web.webPageDetails.URL`| `web.webPageDetails.URL` |  |  
+| `activityDate` |  | `timestamp` | `timestamp` |  |
+| `attributes.Webpage URL` |  | `web.webPageDetails.URL`| `web.webPageDetails.URL` |  |
 | `attributes.User Agent` |  | `environment.browserDetails.userAgent` | `environment.browserDetails.userAgent` |  |
 | `attributes.Client IP Address` |  | `environment.ipV4` | `environment.ipV4` |  |
-| `attributes.Search Query` |  | `search.keywords` | `search.keywords` |  |  
+| `attributes.Search Query` |  | `search.keywords` | `search.keywords` |  |
 | `attributes.Search Engine` |  | `search.searchEngine` | `search.searchEngine` |  |
 | `primaryAttributeValue when activityTypeId = 1` | 1 | `web.webPageDetails.webPageID` | `web.webPageDetails.webPageID` |  |
 | `primaryAttributeValue when activityTypeId = 1` | 1 | `web.webPageDetails.name` | `web.webPageDetails.name` |  |
@@ -60,7 +60,7 @@ Read the documentation on [XDM Experience Event class](../../../../xdm/classes/e
 | primaryAttributeValueId when activityTypeId in (7, 8, 9, 10, 11, 27) | 7, 8, 9, 10, 11, 27 | `directMarketing.mailingName` | `directMarketing.mailingName` |  |
 |  |  | `directMarketing.testVariantName` | `directMarketing.testVariantName` |  |
 | `attributes.Test Variant` |  | `directMarketing.testVariantID` | `directMarketing.testVariantID` |  |
-| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 &rarr; MESSAGE BLOCKED</li><li>1003 &rarr; SPAM BLOCKED ON SOURCE</li><li>1004 &rarr; SPAM BLOCKED ON MESSAGE</li><li>2003 &rarr; EMAIL ADDRESS INVALID</li><li>2001 &rarr; EMAIL ADDRESS ERROR</li><li>* &rarr; UNKNOWN REASON FOR BOUNCE</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 &rarr; MESSAGE NOT ACCEPTED</li><li>3001 &rarr; MAILBOX FULL</li><li>3004 &rarr; TIMEOUT OCCURRED</li><li>4003 &rarr; DNS FAILURE</li><li>4002 &rarr; MESSAGE TOO LARGE</li><li>4006 &rarr; POLICY VIOLATION</li><li>4999 &rarr; TRANSIENT FAILURE</li><li>9999 &rarr; BAD RESPONSE RECEIVED</li><li>* &rarr; UNKNOWN REASON FOR SOFT BOUNCE</li></ul></li></ul> | 8, 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
+| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 &rarr; MESSAGE BLOCKED</li><li>1003 &rarr; SPAM BLOCKED ON SOURCE</li><li>1004 &rarr; SPAM BLOCKED ON MESSAGE</li><li>2003 &rarr; EMAIL ADDRESS INVALID</li><li>2001 &rarr; EMAIL ADDRESS ERROR</li><li> `&rarr;` UNKNOWN REASON FOR BOUNCE</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 &rarr; MESSAGE NOT ACCEPTED</li><li>3001 &rarr; MAILBOX FULL</li><li>3004 &rarr; TIMEOUT OCCURRED</li><li>4003 &rarr; DNS FAILURE</li><li>4002 &rarr; MESSAGE TOO LARGE</li><li>4006 &rarr; POLICY VIOLATION</li><li>4999 &rarr; TRANSIENT FAILURE</li><li>9999 &rarr; BAD RESPONSE RECEIVED</li><li> &rarr; UNKNOWN REASON FOR SOFT BOUNCE</li></ul></li></ul> | 8, 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
 | `attributes.Details` |  | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |  |
 | `attributes.Email` |  | `directMarketing.email` | `directMarketing.email` |  |
 | `attributes.Is Mobile Device` |  | `device.isMobileDevice` | `device.isMobileDevice` |  |
@@ -123,7 +123,7 @@ Read the documentation on [XDM Experience Event class](../../../../xdm/classes/e
 | primaryAttributeValueId when activityTypeId = 6 | 6 | `directMarketing.emailSent.mailingName` | `directMarketing.emailSent.mailingName` |  |
 | `attributes.Test Variant` | 6 | `directMarketing.emailSent.testVariantID` | `directMarketing.emailSent.testVariantID` |  |
 | Note - derived from secondary assets value |  | `directMarketing.emailSent.testVariantName` | `directMarketing.emailSent.testVariantName` |  |
-| `attributes.Campaign Run ID` | 6 | `directMarketing.emailSent.automationRunID` |  `directMarketing.emailSent.automationRunID` |  |  
+| `attributes.Campaign Run ID` | 6 | `directMarketing.emailSent.automationRunID` |  `directMarketing.emailSent.automationRunID` |  |
 |  |  | `directMarketing.automationRunID` |  `directMarketing.automationRunID` |  |
 
 {style="table-layout:auto"}

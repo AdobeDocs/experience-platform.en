@@ -82,7 +82,7 @@ You can use non-expiring credentials to set up a more permanent connection to an
 >Non-expiring credentials have the following limitations:
 >
 >- Users must log in with their username and password in the format of `{technicalAccountId}:{credential}`. More information can be found in the [Generate credentials](#generate-credentials) section.
->- By default, non-expiring credentials are granted permissions to execute only `SELECT` queries. To run `CTAS` or `ITAS` queries, manually add the "Manage Dataset" and "Manage Schemas" permissions to the role associated with the non-expiring credential. The "Manage Schemas" permission can be found under the "Data Modeling" section, and the "Manage Datasets" permission is located under the "Data Management" section of the [Adobe Developer Console](<https://developer.adobe.com/console/>).
+>- By default, non-expiring credentials are granted permissions to execute only `SELECT` queries. To run `CTAS` or `ITAS` queries, manually add the "Manage Dataset" and "Manage Schemas" permissions to the role associated with the non-expiring credential. The "Manage Schemas" permission can be found under the "Data Modeling" section, and the "Manage Datasets" permission is located under the "Data Management" section of the [Adobe Developer Console](https://developer.adobe.com/console/).
 >- Third-party clients may perform differently than expected when listing out query objects. For example, some third-party clients such as [!DNL DB Visualizer] will not display the view name in the left panel. However, the view name is accessible if called within a `SELECT` query. Similarly, [!DNL PowerUI] might not list the temporary views created through SQL for selection in dashboard creation.
 
 ### Prerequisites

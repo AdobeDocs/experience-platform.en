@@ -2,7 +2,7 @@
 title: Segmentation Use Cases for Real-Time Customer Data Platform B2B Edition
 description: An overview of the various available Adobe Real-Time Customer Data Platform B2B Edition use cases.
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
 ---
 # Segmentation use cases for Real-Time Customer Data Platform B2B Edition
@@ -159,6 +159,7 @@ Find all the people who are targeted for campaigns where the actualCost exceeded
 Find all the people belonging to the Marketo Static list "Anniversary users" where isDeleted=false.
 
 ![UI displaying segmentation parent org](../assets/segmentation/b2b/example-13.png)
+
 <!-- 
 ### Example 14: Find "decision makers" by opportunity status using streaming or edge segmentation {#find-decision-makers-personalization}
 
@@ -174,7 +175,8 @@ To create this audience, you must use "segment of segments" by creating a base a
 
 After creating the first audience, you can combine that with another audience of  people who are a "Decision Maker" of any opportunity where both the "Closed Flag" is set to true and the "Lost Flag" is set to false.
 
-![UI displaying example 14 settings](../assets/segmentation/b2b/example-14.png) -->
+![UI displaying example 14 settings](../assets/segmentation/b2b/example-14.png) 
+-->
 
 ## Next steps {#next-steps}
 

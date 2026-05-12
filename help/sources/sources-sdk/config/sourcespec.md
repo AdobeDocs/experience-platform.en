@@ -223,36 +223,37 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
 
 | Property | Description | Example |
 | --- | --- | --- |
-| `sourceSpec.attributes` | Contains information on the source specific to the UI or API. |
-| `sourceSpec.attributes.uiAttributes` | Displays information on the source specific to the UI. |
+| `sourceSpec.attributes` | Contains information on the source specific to the UI or API. ||
+| `sourceSpec.attributes.uiAttributes` | Displays information on the source specific to the UI. ||
+| `sourceSpec.attributes.uiAttributes.isPreview` | A boolean attribute that indicates whether the source displays as a preview (not for production/general availability). | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.isBeta` | A boolean attribute that indicates whether the source requires more feedback from customers to add to its functionality. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | Defines the category of the source. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.icon` | Defines the icon used for the rendering of the source in the Experience Platform UI. | `mailchimp-icon.svg` |
-| `sourceSpec.attributes.uiAttributes.description` | Displays a brief description of the source. |
-| `sourceSpec.attributes.uiAttributes.label` | Displays the label to be used for the rendering of the source in the Experience Platform UI. |
-| `sourceSpec.attributes.spec.properties.urlParams`| Contains information on the URL resource path, method, and supported query parameters. |
+| `sourceSpec.attributes.uiAttributes.description` | Displays a brief description of the source. ||
+| `sourceSpec.attributes.uiAttributes.label` | Displays the label to be used for the rendering of the source in the Experience Platform UI. ||
+| `sourceSpec.attributes.spec.properties.urlParams`| Contains information on the URL resource path, method, and supported query parameters. ||
 | `sourceSpec.attributes.spec.properties.urlParams.properties.path` | Defines the resource path from where to fetch the data from. | `/3.0/reports/${campaignId}/email-activity` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.method` | Defines the HTTP method to be used to make the request to the resource to fetch data. | `GET`, `POST` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Defines the supported query parameters that can be used to append the source URL when making a request to fetch data. **Note**: Any user-provided parameter value must be formatted as a placeholder. For example: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` will be appended to the source URL as: `/?key=value&key1=value1` |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Defines headers that need to be supplied in the HTTP request to source URL while fetching data. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
-| `sourceSpec.attributes.spec.properties.bodyParams` | This attribute can be configured to send HTTP body through a POST request. |
+| `sourceSpec.attributes.spec.properties.bodyParams` | This attribute can be configured to send HTTP body through a POST request. ||
 | `sourceSpec.attributes.spec.properties.contentPath` | Defines the node that contains the list of items required to be ingested to Experience Platform. This attribute should follow valid JSON path syntax and must point to a particular array. | View the [additional resources section](#content-path) for an example of the resource contained within a content path. |
 | `sourceSpec.attributes.spec.properties.contentPath.path` | The path that points to the collection records to be ingested to Experience Platform. | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | This property allows you to identify specific items from the resource identified in the content path that are to be excluded from being ingested. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | This property allows you to explicitly specify the individual attributes that you want to keep. |  `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | This property allows you to override the value of attribute name you specified in `contentPath`. | `email` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath` | This property allows you to flatten two arrays and transform resource data to Experience Platform resource. |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath` | This property allows you to flatten two arrays and transform resource data to Experience Platform resource. ||
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | The path that points to the collection records that you want to flatten. | `$.email.activity` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | This property allows you to identify specific items from the resource identified in the entity path that are to be excluded from being ingested. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | This property allows you to explicitly specify the individual attributes that you want to keep. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | This property allows you to override the value of attribute name you specified in `explodeEntityPath`. | `activity` |
-| `sourceSpec.attributes.spec.properties.paginationParams` | Defines the parameters or fields that must be supplied to get a link to the next page from the user's current page response, or while creating a next page URL. |
+| `sourceSpec.attributes.spec.properties.paginationParams` | Defines the parameters or fields that must be supplied to get a link to the next page from the user's current page response, or while creating a next page URL. ||
 | `sourceSpec.attributes.spec.properties.paginationParams.type` | Displays the type of the supported pagination type for your source. | <ul><li>`OFFSET`: This pagination type allows you to parse through results by specifying an index from where to start the resulting array, and a limit on how many results are returned.</li><li>`POINTER`: This pagination type allows you to use a `pointer` variable to point to a particular item that needs to be sent with a request. The pointer type pagination requires path in payload that point to next page.</li><li>`CONTINUATION_TOKEN`: This pagination type allows you to append your query or header parameters with a continuation token to retrieve remaining return data from your source, that was not initially returned due to a pre-determined maximum.</li><li>`PAGE`: This pagination type allows you to append your query parameter with a paging parameter to traverse through return data by pages, starting from page zero.</li><li>`NONE`: This pagination type can be used for sources that do not support any of the available pagination types. Pagination type `NONE` returns the entire response data after a request.</li></ul> |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitName` | The name for the limit through which the API can specify the number of records to be fetched in a page. | `limit` or `count` |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | The number of records to be fetched in a page. | `limit=10` or `count=10` |
 | `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | The offset attribute name. This is required if pagination type is set to `offset`. | `offset` |
 | `sourceSpec.attributes.spec.properties.paginationParams.pointerPath` | The pointer attribute name. This requires json path to the attribute that will point to next page. This is required if pagination type is set to `pointer`. | `pointer` |
-| `sourceSpec.attributes.spec.properties.scheduleParams` | Contains parameters that define supported scheduling formats for your source. Schedule parameters include `startTime` and `endTime`, both of which allows you to set specific time intervals for batch runs, which then ensures that records fetched in a previous batch run are not fetched again. |
+| `sourceSpec.attributes.spec.properties.scheduleParams` | Contains parameters that define supported scheduling formats for your source. Schedule parameters include `startTime` and `endTime`, both of which allows you to set specific time intervals for batch runs, which then ensures that records fetched in a previous batch run are not fetched again. ||
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamName` | Defines the start time parameter name | `since_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | Defines the end time parameter name | `before_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | Defines the supported format for the `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
@@ -397,7 +398,7 @@ This pagination type allows you to parse through results by specifying an index 
 | --- | --- |
 | `type` | The type of pagination used to return data. |
 | `limitName` | The name for the limit through which the API can specify the number of records to be fetched in a page. |
-| `limitValue` | The number of records to be fetched in a page. | 
+| `limitValue` | The number of records to be fetched in a page. |
 | `offSetName` | The offset attribute name. This is required if pagination type is set to `offset`. |
 | `endConditionName` | A user-defined value that indicates the condition that will end the pagination loop in the next HTTP request. You must provide the attribute name on which you want to put the end condition. |
 | `endConditionValue` | The attribute value on which you want to put the end condition. |
@@ -419,7 +420,7 @@ This pagination type allows you to parse through results by specifying an index 
 | --- | --- |
 | `type` | The type of pagination used to return data. |
 | `limitName` | The name for the limit through which the API can specify the number of records to be fetched in a page. |
-| `limitValue` | The number of records to be fetched in a page. | 
+| `limitValue` | The number of records to be fetched in a page. |
 | `pointerPath` | The pointer attribute name. This requires json path to the attribute that will point to next page. |
 
 >[!TAB Continuation token]
@@ -443,7 +444,7 @@ A source that supports continuation token type of pagination may have a paginati
 | `type` | The type of pagination used to return data. |
 | `continuationTokenPath` | The value that must be appended to the query params in order to move to the next page of the returned results. |
 | `parameterType` | The `parameterType` property defines where the `parameterName` must be added. The `QUERYPARAM` type allows you to append your query with the `parameterName`. The `HEADERPARAM` allows you to add your `parameterName` to your header request. |
-| `parameterName` | The name of the parameter used to incorporate the continuation token. The format is as follows: `{PARAMETER_NAME}={CONTINUATION_TOKEN}`. | 
+| `parameterName` | The name of the parameter used to incorporate the continuation token. The format is as follows: `{PARAMETER_NAME}={CONTINUATION_TOKEN}`. |
 | `delayRequestMillis` | The `delayRequestMillis` property in pagination allows you to control the rate of requests made to your source. Some sources can have a limit to the number of requests you can make per minute. For example, [!DNL Zendesk] has a limit of 100 requests per minute and defining  `delayRequestMillis` to `850` allows you to configure the source to make calls at just around 80 requests per minute, well under the 100 request per minute threshold. |
 
 The following is an example of a response returned using continuation token type of pagination:

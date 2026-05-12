@@ -316,7 +316,7 @@ PUT /ttl/{DATASET_EXPIRATION_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{DATASET_EXPIRATION_ID}` | The unique identifier for the dataset expiration configuration. **NOTE**: This is referred to as the `ttlId` in the response. | 
+| `{DATASET_EXPIRATION_ID}` | The unique identifier for the dataset expiration configuration. **NOTE**: This is referred to as the `ttlId` in the response. |
 
 **Request**
 

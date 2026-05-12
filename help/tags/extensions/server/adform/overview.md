@@ -100,6 +100,7 @@ The extension must be attached to a rule to function properly. If no conditions 
 ## Validate and deploy
 
 Ensure that the extension is installed and configured correctly and that all the required data elements are mapped including:
+
 * [ECID](/help/identity-service/features/ecid.md)
 * Page Name 
 * Referral URL 

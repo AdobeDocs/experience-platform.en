@@ -2,7 +2,7 @@
 keywords: IP address, IP range, allow list destinations, allowlist, allowlist streaming destinations
 title: IP address allowlist for streaming destinations
 type: Documentation
-description: This page provides IP ranges that you can add to your allow list, to safely export data from Experience Platform to your HTTP REST API endpoint, Amazon Kinesis, or Azure Event Hubs instance.
+description: This page provides IP ranges that you can add to your allowlist, to safely export data from Experience Platform to your HTTP REST API endpoint, or Amazon Kinesis instance.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
 ---
 
@@ -16,9 +16,14 @@ exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
 
 The IP ranges documented in this page apply to the following destinations:
 
-* [Advanced enterprise destinations](../../destination-types.md#advanced-enterprise-destinations): [HTTP API destination](./http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Advanced enterprise destinations](../../destination-types.md#advanced-enterprise-destinations): [HTTP API destination](./http-destination.md), and [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
 * [Streaming audience export destinations](../../destination-types.md#streaming-destinations), such as [Pega CDH Realtime Audience](/help/destinations/catalog/personalization/pega-v2.md), API-based integrations with [Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) and [Oracle Eloqua](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
 * Public or private destinations built through [Destination SDK](../../destination-sdk/getting-started.md)
+
+>[!IMPORTANT]
+>
+>The IP ranges documented on this page are *not* supported for [!DNL Azure Event Hubs] destinations and streaming API-based destinations hosted on Microsoft Azure.
+
 
 Outbound traffic from Experience Platform to these destinations always goes through the IPs listed on this page.
 

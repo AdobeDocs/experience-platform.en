@@ -14,7 +14,7 @@ The endpoint generates random values for your customer data fields, and returns 
 
 ## Getting started {#getting-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Prerequisites {#prerequisites}
 
@@ -71,8 +71,10 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 | Parameters | Description |
 | -------- | ----------- |
-| `destinationId` | The ID of the [destination configuration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) that you are testing.| 
+| `destinationId` | The ID of the [destination configuration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) that you are testing.|
 | `templates`| The templatized field names defined in your [destination server configuration](../../authoring-api/destination-server/create-destination-server.md).|
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -92,7 +94,7 @@ This response can help you validate the correct structure of your customer data 
 
 ## API error handling {#api-error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps {#next-steps}
 

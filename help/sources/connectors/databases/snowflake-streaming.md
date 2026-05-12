@@ -94,9 +94,9 @@ openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8
 If successful, you should receive your private key in PEM format.
 
 ```shell
------BEGIN ENCRYPTED PRIVATE KEY-----
+|-----BEGIN ENCRYPTED PRIVATE KEY-----
 MIIE6T...
------END ENCRYPTED PRIVATE KEY-----
+|-----END ENCRYPTED PRIVATE KEY-----
 ```
 
 >[!TAB Create an unencrypted private key]
@@ -110,9 +110,9 @@ openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out rsa_key.p8 -nocrypt
 If successful, you should receive your private key in PEM format.
 
 ```shell
------BEGIN PRIVATE KEY-----
+|-----BEGIN PRIVATE KEY-----
 MIIE6T...
------END PRIVATE KEY-----
+|-----END PRIVATE KEY-----
 ```
 
 >[!ENDTABS]
@@ -154,7 +154,7 @@ For more information on role and privilege management, refer to the [[!DNL Snowf
 
 ## Convert Unix time to date fields
 
-The [!DNL Snowflake Streaming] parses and writes` DATE` fields as the number of days since the Unix epoch (1970-01-01). For example, a `DATE` value of 0 means January 1, 1970, while a value of 1 means January 2, 1970. Therefore, When preparing the file to create mappings in the [!DNL Snowflake Streaming] source, ensure that the `DATE` column is represented as an integer.
+The [!DNL Snowflake Streaming] parses and writes `DATE` fields as the number of days since the Unix epoch (1970-01-01). For example, a `DATE` value of 0 means January 1, 1970, while a value of 1 means January 2, 1970. Therefore, When preparing the file to create mappings in the [!DNL Snowflake Streaming] source, ensure that the `DATE` column is represented as an integer.
 
 You can use [Data Prep data and time functions](../../../data-prep/functions.md#date-and-time-functions) to convert Unix time into date fields that can be ingested into Experience Platform. For example:
 

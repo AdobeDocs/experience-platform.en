@@ -49,7 +49,7 @@ For more information about sessionization in Adobe Analytics, see the documentat
 SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-| Parameter | Description | 
+| Parameter | Description |
 | --------- | ----------- |
 | `{TIMESTAMP}` | The timestamp field found in the dataset. |
 | `{EXPIRATION_IN_SECONDS}` | The number of seconds needed between events to qualify the end of the current session and the start of a new session. |
@@ -76,7 +76,7 @@ LIMIT 10
 
 ```console
                 id                |       timestamp       |      session       
-----------------------------------+-----------------------+--------------------
+|----------------------------------+-----------------------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | (0,1,true,1)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | (58,1,false,2)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | (56,1,false,3)
@@ -96,7 +96,7 @@ For the sample query given, the results are given in the `session` column. The `
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
 ```
 
-| Parameters |  Description  | 
+| Parameters |  Description  |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | The difference in time, in seconds, between the current record and the prior record. |
 | `{NUM}` | A unique session number, starting at 1, for the key defined in the `PARTITION BY` of the window function.   |
@@ -141,7 +141,7 @@ SELECT
 
 ```console
                 id                |       timestamp       | isLaunch |      session       
-----------------------------------+-----------------------+----------+--------------------
+|----------------------------------+-----------------------+----------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | true     | (0,1,true,1)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | false    | (56,1,false,3)
@@ -161,7 +161,7 @@ For the sample query given, the results are given in the `session` column. The `
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
 ```
 
-| Parameters |  Description  | 
+| Parameters |  Description  |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | The difference in time, in seconds, between the current record and the prior record. |
 | `{NUM}` | A unique session number, starting at 1, for the key defined in the `PARTITION BY` of the window function. |
@@ -206,7 +206,7 @@ SELECT
 
 ```console
                 id                |       timestamp       | isExit   |      session       
-----------------------------------+-----------------------+----------+--------------------
+|----------------------------------+-----------------------+----------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | false    | (0,1,true,1)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | true     | (56,1,false,3)
@@ -226,7 +226,7 @@ For the sample query given, the results are given in the `session` column. The `
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
 ```
 
-| Parameters |  Description  | 
+| Parameters |  Description  |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | The difference in time, in seconds, between the current record and the prior record. |
 | `{NUM}` | A unique session number, starting at 1, for the key defined in the `PARTITION BY` of the window function.   |
@@ -250,7 +250,7 @@ Determines the previous value of a particular field a defined number of steps aw
 PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-| Parameter | Description | 
+| Parameter | Description |
 | --------- | ----------- |
 | `{KEY}` | The column or field from the event. |
 | `{SHIFT}` | (Optional) The number of events away from the current event. By default, the value is 1. |
@@ -275,12 +275,12 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                 id                 |       timestamp       |                 name                |                    previous_page                    
------------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
- 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | 
- 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                | 
+|-----------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
+ 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     |
+ 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                |
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:45.0 | Kids                                | (Home)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 19:22:34.0 |                                     | (Kids)
- 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:01:12.0 | Home                                | 
+ 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:01:12.0 | Home                                |
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:01:57.0 | Kids                                | (Home)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:03:36.0 | Search Results                      | (Kids)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:04:30.0 | Product Details: Pemmican Power Bar | (Search Results)
@@ -301,7 +301,7 @@ Determines the next value of a particular field a defined number of steps away w
 NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-| Parameter | Description | 
+| Parameter | Description |
 | --------- | ----------- |
 | `{KEY}` | The column or field from the event. |
 | `{SHIFT}` | (Optional) The number of events away from the current event. By default, the value is 1. |
@@ -327,7 +327,7 @@ LIMIT 10
 
 ```console
                 id                 |       timestamp       |                name                 |             previous_page             
------------------------------------+-----------------------+-------------------------------------+---------------------------------------
+|-----------------------------------+-----------------------+-------------------------------------+---------------------------------------
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | (Home)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                | (Kids)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:45.0 | Kids                                | (Home)
@@ -359,7 +359,7 @@ TIME_BETWEEN_PREVIOUS_MATCH(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-| Parameter | Description | 
+| Parameter | Description |
 | --------- | ----------- |
 | `{TIMESTAMP}` | A timestamp field found in the dataset populated on all events. |
 | `{EVENT_DEFINITION}` | The expression to qualify the previous event. |
@@ -395,7 +395,7 @@ LIMIT 10
 
 ```console
              page_name             | average_minutes_since_registration 
------------------------------------+------------------------------------
+|-----------------------------------+------------------------------------
                                    |                                   
  Account Registration|Confirmation |                                0.0
  Seasonal                          |                   5.47029702970297
@@ -421,7 +421,7 @@ This query returns a negative number representing the unit of time behind the ne
 TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-| Parameter | Description | 
+| Parameter | Description |
 | --------- | ----------- |
 | `{TIMESTAMP}` | A timestamp field found in the dataset populated on all events. |
 | `{EVENT_DEFINITION}` | The expression to qualify the next event. |
@@ -457,7 +457,7 @@ LIMIT 10
 
 ```console
              page_name             | average_minutes_until_order_confirmation 
------------------------------------+------------------------------------------
+|-----------------------------------+------------------------------------------
  Shopping Cart|Order Confirmation  |                                      0.0
  Men                               |                       -9.465295629820051
  Equipment                         |                       -9.682098765432098

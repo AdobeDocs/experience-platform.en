@@ -1,8 +1,6 @@
 ---
 title: Account Audiences
 description: Learn how to create and use account audiences to target account profiles in downstream destinations.
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 ---
 # Account audiences
@@ -54,10 +52,6 @@ To create an account audience, select **[!UICONTROL Create audience]** on the [!
 The Segment Builder appears. The account attributes and audiences are displayed on the left navigation bar. Under the [!UICONTROL Attributes] tab, you can add both Experience-Platform-created and custom attributes.
 
 ![The Segment Builder is displayed. Note that only the attributes and audiences are displayed.](../images/types/account/segment-builder.png)
-
-When creating account audiences, please note that events are listed under **[!UICONTROL People]**, rather than being their own tab, since these attributes are associated with people.
-
-![The location to find events, which is within the [!UICONTROL People] folder, is highlighted.](../images/types/account/attributes.png)
 
 Under the [!UICONTROL Audiences] tab, you can add previously created people-based audiences to build off of when creating your own account audience.
 
@@ -202,8 +196,8 @@ When using account audiences, the audience **must** comply with the following co
   - A cross entity is when you change between different entities within your audience. For example, going from an Account to a Person to a Marketing List.
 - The maximum number of values that can be checked for a single field is **50**.
   - For example, if you have a field of "City Name", you can check that value against 50 city names.
-- Account audiences **cannot** use sequential events.
 - Account audiences **cannot** use maps.
+- Account audiences **cannot** use events.
 - The maximum depth of nested arrays is **5**.
 - The maximum number of nested objects is **10**.
 

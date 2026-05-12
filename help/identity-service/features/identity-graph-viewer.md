@@ -75,8 +75,8 @@ The right rail displays information on a selected identity, including its last u
 The following table provides additional information on the data source properties displayed in the right rail:
 
 | Data source | Description |
-| --- | --- | 
-| Batch ID | The auto-generated identifier that corresponds with your batch data. | 
+| --- | --- |
+| Batch ID | The auto-generated identifier that corresponds with your batch data. |
 | Dataset ID | The auto-generated identifier that corresponds with your dataset. |
 | Dataset name | The name of the dataset that contains your batch data. |
 | Schema name | The name of the schema. The schema provides a set of rules that represent and validate the structure and format of data. |

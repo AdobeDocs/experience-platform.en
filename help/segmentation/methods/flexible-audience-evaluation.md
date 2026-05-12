@@ -25,7 +25,9 @@ When you run flexible audience evaluation, please keep the following conditions 
 
 - You can only use flexible audience evaluation **twice** per day per sandbox. This limit resets at midnight (UTC).
 - You have a **maximum** of 50 flexible audience evaluation runs per year per **production** sandbox.
+  - A year is defined as one year starting on the date of your Experience Platform contract for flexible audience evaluation. For example, if you contract started on May 18th, your number of flexible audience evaluation runs will reset every May 18th.
 - You have a **maximum** of 100 flexible audience evaluation runs per year per **development** sandbox.
+  - A year is defined as one year starting on the date of your Experience Platform contract for flexible audience evaluation. For example, if you contract started on May 18th, your number of flexible audience evaluation runs will reset every May 18th.
 - All the audiences **must** have an origin of "Segmentation Service".
 - All the audiences **must** be evaluated using batch segmentation.
 - All the audiences **must** be people-based audiences.

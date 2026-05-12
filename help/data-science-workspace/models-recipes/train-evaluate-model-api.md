@@ -435,6 +435,7 @@ The GET call will provide the status in the `state` parameter as shown below:
 `{EXPERIMENT_ID}`: The ID that represents the Experiment which the Experiment Run is under.  
 
 In addition to the `DONE` state, other states include:
+
 - `PENDING`
 - `RUNNING`
 - `FAILED`

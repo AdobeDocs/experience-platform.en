@@ -15,9 +15,9 @@ Adobe Experience Platform provides native connectivity for database providers li
 
 Different types of third-party databases are supported, including relational, NoSQL, or data warehouses. Support for database providers includes [!DNL HP Vertica].
 
-## IP address allow list
+## IP address allowlist
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform](../../ip-address-allow-list.md) for more information.
 
 The documentation below provides information on how to connect [!DNL HP Vertica] to [!DNL Experience Platform] using APIs or the user interface:
 

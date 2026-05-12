@@ -5,10 +5,6 @@ exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
 ---
 # Event forwarding extensions reference
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
 <div id="recs-overview-body-3"></div>

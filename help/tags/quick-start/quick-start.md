@@ -5,10 +5,6 @@ exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
 ---
 # Quickstart guide
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
-
 Tags are Adobe Experience Platform's next generation of tag management technology. It is built from the ground up to support an open and sustainable ecosystem where anyone can build their own integrations that Adobe customers can deploy to their sites. It is an API first application so anything you can do through the UI you can also do programmatically through an API.
 
 The basic tags workflow:

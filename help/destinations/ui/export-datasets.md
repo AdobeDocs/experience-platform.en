@@ -8,7 +8,7 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 
 >[!AVAILABILITY]
 >
->This functionality is available to customers who have purchased the Real-Time CDP Prime or Ultimate package, Adobe Journey Optimizer, or Customer Journey Analytics. Contact your Adobe representative for more information.
+>This functionality is available to customers who have purchased the [!DNL Real-Time CDP] Prime or Ultimate package, [!DNL Adobe Journey Optimizer], or Customer Journey Analytics. Contact your Adobe representative for more information.
 
 >[!IMPORTANT]
 >
@@ -16,15 +16,15 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 >
 >For any of those dataflows, you need to update the end date in the dataflow manually before the end date, otherwise your exports will stop on that date. Use the Experience Platform UI to view which dataflows will be set to stop on September 1st 2025. 
 >
->Refer to the [scheduling section](#scheduling) for information on how to edit the end date of a dataset export dataflow.
+>See the [scheduling section](#scheduling) for information on how to edit the end date of a dataset export dataflow.
 
-This article explains the workflow required to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage] by using the Experience Platform UI. 
+This article explains the workflow required to export [datasets](/help/catalog/datasets/overview.md) from [!DNL Adobe Experience Platform] to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage] by using the Experience Platform UI. 
 
 You can also use the Experience Platform APIs to export datasets. Read the [export datasets API tutorial](/help/destinations/api/export-datasets.md) for more information.  
 
 ## Datasets available for exporting {#datasets-to-export}
 
-The datasets that you can export vary based on the Experience Platform application (Real-Time CDP, Adobe Journey Optimizer), the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller).
+The datasets that you can export vary based on the Experience Platform application ([!DNL Real-Time CDP], [!DNL Adobe Journey Optimizer]), the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller).
 
 Use the table below to understand which dataset types you can export depending on your application, product tier, and any add-ons purchased:
 
@@ -38,7 +38,7 @@ Use the table below to understand which dataset types you can export depending o
 </thead>
 <tbody>
   <tr>
-    <td rowspan="2">Real-Time CDP</td>
+    <td rowspan="2">[!DNL Real-Time CDP]</td>
     <td>Prime</td>
     <td>Profile and Experience Event datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.</td>
   </tr>
@@ -47,13 +47,13 @@ Use the table below to understand which dataset types you can export depending o
     <td><ul><li>Profile and Experience Event datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">System-generated Profile Snapshot dataset</a>.</li></td>
   </tr>
   <tr>
-    <td rowspan="2">Adobe Journey Optimizer</td>
+    <td rowspan="2">[!DNL Adobe Journey Optimizer]</td>
     <td>Prime</td>
-    <td>Refer to the <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> documentation.</td>
+    <td>Refer to the <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> [!DNL Adobe Journey Optimizer]</a> documentation.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Refer to the <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> documentation.</td>
+    <td>Refer to the <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> [!DNL Adobe Journey Optimizer]</a> documentation.</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -98,7 +98,7 @@ This document contains all the information necessary to export datasets. If you 
 
 ## Prerequisites {#prerequisites}
 
-Note the following prerequisites in order to export datasets:
+Note the following prerequisites to export datasets:
 
 * To export datasets to cloud storage destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 * Profile datasets need to be enabled for use in Real-Time Customer Profile. [Read more](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) about how to enable this option. 
@@ -133,9 +133,13 @@ Follow the instructions to select a destination where you can export your datase
 
 ## Select your datasets {#select-datasets}
 
-Use the check boxes to the left of the dataset names to select the datasets that you want to export to the destination, then select **[!UICONTROL Next]**.
+Use the checkboxes to the left of the dataset names to select the datasets that you want to export to the destination, then select **[!UICONTROL Next]**.
 
 ![Dataset export workflow showing the Select datasets step where you can select which datasets to export.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
+
+>[!NOTE]
+>
+>All datasets selected here will share the same export schedule. If you need different export schedules (for example, incremental exports for some datasets and one-time full exports for others), create separate dataflows for each schedule type.
 
 ## Schedule dataset export {#scheduling}
 
@@ -154,6 +158,16 @@ Use the check boxes to the left of the dataset names to select the datasets that
 >title="Update the end date for this dataflow body"
 >abstract="Because of recent updates to this destination, the dataflow now requires an end date. Adobe has set a default end date to September 1st 2025. Please update to your desired end date, otherwise the data exports will stop on the default date."
 
+>[!IMPORTANT]
+>
+>**Schedule applies to all datasets in the dataflow**
+>
+>When you configure or modify the export schedule, it applies to **all datasets** currently being exported through the dataflow you are configuring. You cannot set different schedules for individual datasets within the same dataflow.
+>
+>If you need different export schedules for different datasets, you must create separate dataflows (separate destination connections) for each schedule type.
+>
+>**Example:** If you have Dataset A exporting incrementally and you add Dataset B with a one-time full export schedule, Dataset A will also be updated to the one-time full export schedule.
+
 Use the **[!UICONTROL Scheduling]** step to: 
 
 * Set a start date and an end date, as well as an export cadence for your dataset exports.
@@ -161,6 +175,10 @@ Use the **[!UICONTROL Scheduling]** step to:
 * Customize the folder path in your storage location where datasets should be exported. Read more about how to [edit the export folder path](#edit-folder-path).
 
 Use the **[!UICONTROL Edit schedule]** control on the page to edit the export cadence of exports, as well as to select whether to export full or incremental files.
+
+>[!WARNING]
+>
+>Modifying the schedule here will update the export behavior for all datasets in this dataflow. If this dataflow contains multiple datasets, all of them will be affected by this change.
 
 ![Edit schedule control highlighted in the Scheduling step.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
 
@@ -183,8 +201,8 @@ The **[!UICONTROL Export incremental files]** option is selected by default. Thi
 
 4. Select **[!UICONTROL Save]** to save the schedule and proceed to the **[!UICONTROL Review]** step.
 
->[!NOTE] 
-> 
+>[!NOTE]
+>
 >For dataset exports, the file names have a preset, default format, which cannot be modified. See the section [Verify successful dataset export](#verify) for more information and examples of exported files.
 
 ## Edit folder path {#edit-folder-path}
@@ -207,9 +225,18 @@ You can use several available macros to customize a desired folder name. Double-
 
 ![Macros selection highlighted in custom folder modal window.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
 
-After selecting the desired macros, you can see a preview of the folder structure that will be created in your storage location. The first level in the folder structure represents the **[!UICONTROL Folder path]** that you indicated when you [connected to the destination](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) to export datasets. 
+After selecting the desired macros, you can see a preview of the folder structure that will be created in your storage location. The first level in the folder structure represents the **[!UICONTROL Folder path]** that you indicated when you [connected to the destination](/help/destinations/ui/connect-destination.md#set-up-connection-parameters) to export datasets. 
 
 ![Preview of folder path highlighted in custom folder modal window.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
+
+### Best practices for managing multiple datasets {#best-practices-multiple-datasets}
+
+When exporting multiple datasets, consider the following best practices:
+
+* **Same schedule requirements**: Group datasets that need the same export schedule (frequency, type) into a single dataflow for easier management.
+* **Different schedule requirements**: Create separate dataflows for datasets that require different export schedules or export types (incremental vs. full). This ensures each dataset exports according to its specific needs.
+* **Review before modifying**: Before changing the schedule on an existing dataflow, review which datasets are already being exported through that dataflow to avoid unintended changes to their export behavior.
+* **Document your setup**: Keep track of which datasets are in which dataflows, especially when managing multiple export schedules across different destinations.
 
 ## Review {#review}
 
@@ -223,9 +250,9 @@ When exporting datasets, Experience Platform creates one or multiple `.json` or 
 
 Experience Platform creates a folder structure in the storage location you specified, where it deposits the exported dataset files. The default folder export pattern is shown below, but you can [customize the folder structure with your preferred macros](#edit-folder-path).
 
->[!TIP] 
-> 
->The first level in this folder structure - `folder-name-you-provided` -  represents the **[!UICONTROL Folder path]** that you indicated when you [connected to the destination](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) to export datasets. 
+>[!TIP]
+>
+>The first level in this folder structure - `folder-name-you-provided` -  represents the **[!UICONTROL Folder path]** that you indicated when you [connected to the destination](/help/destinations/ui/connect-destination.md#set-up-connection-parameters) to export datasets. 
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -252,12 +279,12 @@ Exports to JSON files are supported *in a compressed mode only*. Exports to Parq
 
 To remove datasets from an existing dataflow, follow the steps below:
 
-1. Log in to the [Experience Platform UI](https://experience.adobe.com/platform/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destination dataflows.
+1. Go to the [Experience Platform UI](https://experience.adobe.com/platform/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destination dataflows.
 
     ![Destination browse view with a destination connection shown and the rest blurred out.](../assets/ui/export-datasets/browse-dataset-connections.png)
 
-    >[!TIP] 
-    > 
+    >[!TIP]
+    >
     >Select the filter icon ![Filter-icon](/help/images/icons/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
 
 2. From the **[!UICONTROL Activation data]** column, select the datasets control to view all datasets mapped to this export dataflow.
@@ -274,9 +301,9 @@ To remove datasets from an existing dataflow, follow the steps below:
 
 ## Dataset export entitlements {#licensing-entitlement}
 
-Refer to the product description documents to understand how much data you are entitled to export for each Experience Platform application, per year. For example, you can view the Real-Time CDP Product Description [here](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Refer to the product description documents to understand how much data you are entitled to export for each Experience Platform application, per year. For example, you can view the [!DNL Real-Time CDP] Product Description [here](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
-Note that the data export entitlements for different applications are not additive. For example, this means that if you purchase Real-Time CDP Ultimate and Adobe Journey Optimizer Ultimate, the profile export entitlement will be the larger of the two entitlements, as per the product descriptions. Your volume entitlements are calculated by taking your total number of licensed profiles and multiplying by 500 KB for Real-Time CDP Prime or 700 KB for Real-Time CDP Ultimate to determine how much volume of data you are entitled to.
+Note that the data export entitlements for different applications are not additive. For example, this means that if you purchase [!DNL Real-Time CDP] Ultimate and [!DNL Adobe Journey Optimizer] Ultimate, the profile export entitlement will be the larger of the two entitlements, as per the product descriptions. Your volume entitlements are calculated by taking your total number of licensed profiles and multiplying by 500 KB for [!DNL Real-Time CDP] Prime or 700 KB for [!DNL Real-Time CDP] Ultimate to determine how much volume of data you are entitled to.
 
 On the other hand, if you purchased add-ons such as Data Distiller, the data export limit that you are entitled to represents the sum of the product tier and the add-on. 
 
@@ -290,7 +317,7 @@ Keep in mind the following limitations for the general availability release of d
 * Exported file names are currently not customizable.
 * The UI does not currently block you from deleting a dataset that is being exported to a destination. Do not delete any datasets that are being exported to destinations. [Remove the dataset](#remove-dataset) from a destination dataflow before deleting it.
 * Monitoring metrics for dataset exports are currently mixed with numbers for profile exports so they do not reflect the true export numbers.
-* Data with a timestamp older than 365 days is excluded from dataset exports. For more information, view the [guardrails for scheduled dataset exports](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
+* Data with a timestamp older than 365 days is excluded from dataset exports. For more information, view the [guardrails for scheduled dataset exports](/help/destinations/guardrails.md#scheduled-dataset-exports)
 
 ## Frequently Asked Questions {#faq}
 
@@ -324,7 +351,7 @@ The manifest file is in .json format.
 No API is available for the manifest file, but it includes a list of files comprising the export.
 +++
 
-**Can we add additional details to the manifest file (i.e., record count)? If so, how?**
+**Can we add additional details to the manifest file (that is, record count)? If so, how?**
 
 +++Answer
 There is no possibility to add additional info to the manifest file. The record count is available via the `flowRun` entity (queryable via API). Read more in destinations monitoring.
@@ -346,4 +373,10 @@ No, it is not possible.
 
 +++Answer
 Retries are in place automatically for most types of system errors.
++++
+
+**Can I set different export schedules for different datasets in the same dataflow?**
+
++++Answer
+No, all datasets within a single dataflow share the same export schedule. If you need different export schedules for different datasets, you must create separate dataflows (destination connections) for each schedule type. For example, if you want Dataset A to export incrementally every day and Dataset B to export as a one-time full export, you need to create two separate dataflows.
 +++

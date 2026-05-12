@@ -100,7 +100,7 @@ The following JSON shows an example of the type of data that the [!UICONTROL Con
 >* If the customer has opted out at the channel level, then any equivalent consents or preferences in `idSpecific` are ignored.
 >* If the channel-level consent or preference is not set, or the customer has opted in, then the equivalent consents or preferences in `idSpecific` are honored.
 
-Each key in the `idSpecific` object represents a specific identity namespace recognized by Adobe Experience Platform Identity Service. While you can define your own custom namespaces to categorize different identifiers, it is recommended that you use one of the standard namespaces provided by Identity Service to reduce storage sizes for Real-Time Customer Profile. For more information on identity namespaces, see the [identity namespace overview](../../../identity-service/features/namespaces.md) in the Identity Service documentation.
+Each key in the `idSpecific` object represents a specific identity namespace recognized by Adobe Experience Platform Identity Service. While you can define your own custom namespaces to categorize different identifiers, it is recommended that you use one of the standard namespaces provided by Identity Service to reduce storage sizes for Real-Time Customer Profile. For more information on identity namespaces, see the [identity namespace overview](/help/identity-service/features/namespaces.md) in the Identity Service documentation.
 
 The keys for each namespace object represent the unique identity values that the customer has set preferences for. Each identity value can contain a complete set of consents and preferences, formatted in the same way as `consents`.
 
@@ -169,17 +169,17 @@ The `adID` consent represents the customer's consent for whether an advertiser I
 
 In order to use the [!UICONTROL Consents and Preferences] field group to ingest consent data from your customers, you must create a dataset based on a schema that contains that field group.
 
-See the tutorial on [creating a schema in the UI](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) for steps on how to assign field groups to fields. Once you have created a schema containing a field with the [!UICONTROL Consents and Preferences] field group, refer to the section on [creating a dataset](../../../catalog/datasets/user-guide.md#create) in the dataset user guide, following the steps to create a dataset with an existing schema.
+See the tutorial on [creating a schema in the UI](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) for steps on how to assign field groups to fields. Once you have created a schema containing a field with the [!UICONTROL Consents and Preferences] field group, refer to the section on [creating a dataset](/help/catalog/datasets/user-guide.md#create) in the dataset user guide, following the steps to create a dataset with an existing schema.
 
 >[!IMPORTANT]
 >
 >If you want to send consent data to [!DNL Real-Time Customer Profile], it is required that you create a [!DNL Profile]-enabled schema based on the [!DNL XDM Individual Profile] class that contains the [!UICONTROL Consents and Preferences] field group. The dataset that you create based on that schema must also be enabled for [!DNL Profile]. Refer to the tutorials linked above for specific steps related to [!DNL Real-Time Customer Profile] requirements for schemas and datasets.
 >
->In addition, you must also ensure that your merge policies are configured to prioritize the dataset(s) that contain the latest consent and preference data, in order for customer profiles to be updated correctly. See the overview on [merge policies](../../../rtcdp/profile/merge-policies.md) for more information.
+>In addition, you must also ensure that your merge policies are configured to prioritize the dataset(s) that contain the latest consent and preference data, in order for customer profiles to be updated correctly. See the overview on [merge policies](/help/rtcdp/profile/merge-policies.md) for more information.
 
 ## Handling consent and preference changes
 
-When a customer changes their consents or preferences on your website, these changes should be collected and immediately enforced using the [Adobe Experience Platform Web SDK](../../../web-sdk/commands/setconsent.md). If a customer opts out of data collection, all data collection must immediately cease. If a customer opts out of personalization, then there should be no personalization present on the next page they load. 
+When a customer changes their consents or preferences on your website, these changes should be collected and immediately enforced by setting consent in the data collection library used. If a customer opts out of data collection, all data collection must immediately cease. If a customer opts out of personalization, then there should be no personalization present on the next page that they load. See [`setConsent`](/help/collection/js/commands/setconsent.md) using the JavaScript library, or the [[!UICONTROL Set consent]](/help/tags/extensions/client/web-sdk/actions/set-consent.md) action using the Web SDK tag extension.
 
 ## Next steps
 

@@ -7,10 +7,6 @@ exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
->[!NOTE]
->
 >This extension has been deprecated in favor of the [Adobe Experience Platform Web SDK](../web-sdk/overview.md).
 
 The features of this extension are being ported over to new extension. Here is a quick comparison of current features. 
@@ -20,11 +16,11 @@ The features of this extension are being ported over to new extension. Here is a
 | Support for Custom Customer IDs | Support for Custom Cusotmer IDs|
 | Client-Side Mapping UI for XDM | Build in ECID (No need for visitor.js)|
 | Ability to create a streaming connection | Opt-in Support |
-| | XDM Support as a data element | 
-| | First Party Domain Support | 
-| | Debugging tools built in | 
-| | Automatically collects browser context | 
-| | Fully open source | 
+| | XDM Support as a data element |
+| | First Party Domain Support |
+| | Debugging tools built in |
+| | Automatically collects browser context |
+| | Fully open source |
 
 
 ## Configure the Adobe Experience Platform extension

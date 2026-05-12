@@ -5,10 +5,6 @@ exl-id: ec013a39-966c-43f3-bc36-31198990a17e
 ---
 # Shared modules in web extensions
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 A shared module is a mechanism by which you can communicate with other extensions. For example, Extension A may load a piece of data asynchronously and make it available to Extension B via a [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 In JavaScript implementations, all shared modules are instantiated using the [`getSharedModule`](../turbine.md#shared) method provided by the `turbine` free variable.

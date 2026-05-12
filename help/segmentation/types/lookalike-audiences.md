@@ -6,10 +6,6 @@ exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
 ---
 # Look-alike audiences guide
 
->[!AVAILABILITY]
->
->Look-alike insights and Look-alike audiences are only available in the **B2C edition**.
-
 >[!IMPORTANT]
 >
 >Look-alike insights and Look-alike audiences are automatically disabled for environments that show low usage. Low usage is defined as not viewing look-alike insights for the last three months or not creating a new look-alike audience for the last six months.
@@ -136,7 +132,7 @@ These buckets are regularly re-computed to ensure the data is kept up-to-date.
 >
 >The influential factors are sorted in order of importance and are independent of each other.
 
-| Field | Description | 
+| Field | Description |
 | ----- | ----------- |
 | Type | The type of data that the influential factor is derived from. This can be a profile attribute, an experience event, or an audience membership. |
 | Key | The name of the data field. For keys of the audience membership type, this value represents the **namespace** of the audience where the data comes from. Possible values include `ups` (Segmentation Service) and `AO` (Audience Orchestration). For keys of other types, this value represents the XDM field path. For example, if the company Luma has a custom field called income, the key would be `_luma.income` |

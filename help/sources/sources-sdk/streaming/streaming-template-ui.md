@@ -24,7 +24,7 @@ This tutorial provides steps for creating a *YOURSOURCE* source connector using 
 
 *Add information in this section about anything that customers need to be aware of before starting to set up the source in the Adobe Experience Platform user interface. This can be about:*
 
-* *needing to be added to an allow list*
+* *needing to be added to an allowlist*
 * *requirements for email hashing*
 * *any account specifics on your side*
 * *how to obtain the authentication credentials to connect to your platform*

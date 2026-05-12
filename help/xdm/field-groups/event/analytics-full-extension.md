@@ -11,7 +11,7 @@ This document describes the structure and use case of the Analytics extension fi
 
 >[!NOTE]
 >
->Due to the size and number of repeated elements in this field group, many of the fields shown in this guide have been collapsed to save on space. To explore the full structure of this field group, you can [look it up in the Experience Platform UI ](../../ui/explore.md) or view the complete schema in the [public XDM repository](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
+>Due to the size and number of repeated elements in this field group, many of the fields shown in this guide have been collapsed to save on space. To explore the full structure of this field group, you can [look it up in the Experience Platform UI](../../ui/explore.md) or view the complete schema in the [public XDM repository](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
 ## Field group structure
 

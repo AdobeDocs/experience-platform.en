@@ -29,8 +29,8 @@ GET /search/namespaces?schema.name={SCHEMA}
 GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 ```
 
-| Parameters | Description | 
-| ---------- | ----------- | 
+| Parameters | Description |
+| ---------- | ----------- |
 | `schema.name={SCHEMA}` | **(Required)** Where {SCHEMA} represents the schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
 | `s={SEARCH_TERM}` | *(Optional)* Where {SEARCH_TERM} represents a query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
 
@@ -89,8 +89,8 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&s={SEARCH_TERM}
 GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY_ID}
 ```
 
-| Parameters | Description | 
-| ---------- | ----------- | 
+| Parameters | Description |
+| ---------- | ----------- |
 | `schema.name={SCHEMA}`| **(Required)** Where {SCHEMA} contains the schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
 | `namespace={NAMESPACE}` | **(Required)** Where {NAMESPACE} contains the namespace you wish to search within. |
 | `s={SEARCH_TERM}` | *(Optional)* Where {SEARCH_TERM} contains a query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
@@ -160,8 +160,8 @@ This search endpoint can be used to get the structural information about the req
 GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY_ID}
 ```
 
-| Parameters | Description | 
-| ---------- | ----------- | 
+| Parameters | Description |
+| ---------- | ----------- |
 | `schema.name={SCHEMA}` | **(Required)** Where {SCHEMA} contains the schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
 | `namespace={NAMESPACE}` | **(Required)** Where {NAMESPACE} contains the namespace you wish to search within. |
 | `entityId={ENTITY_ID}` | **(Required)** The ID of the search object you want to get the structural information about, specified with {ENTITY_ID}. |
@@ -219,7 +219,9 @@ After reading this guide you now have a better understanding of how Segment Sear
 
 The following sections provide additional information about how search terms work. Search queries are written in the following manner: `s={FieldName}:{SearchExpression}`. So, for example, to search for a segment definition named AAM or [!DNL Platform], you would use the following search query: `s=segmentName:AAM%20OR%20Platform`.
 
-> ![NOTE] For best practices, the search expression should be HTML encoded, like the example shown above.
+>[!NOTE]
+>
+>For best practices, the search expression should be HTML encoded, like the example shown above.
 
 ### Search fields {#search-fields}
 
@@ -229,7 +231,7 @@ The following table lists the fields which can be searched within the search que
 | ---------- | ----------- |
 | folderId | The folder or folders that have the folder ID of your specified search. |
 | folderLocation | The location or locations that have the folder location of your specified search. |
-| parentFolderId | The segment definition or folder that have the parent folder ID of your specified search. | 
+| parentFolderId | The segment definition or folder that have the parent folder ID of your specified search. |
 | segmentId | The segment definition that matches the segment ID of your specified search. |
 | segmentName | The segment definition that matches the segment name of your specified search. |
 | segmentDescription | The segment definition that matches the segment description of your specified search. |
@@ -238,7 +240,9 @@ The following table lists the fields which can be searched within the search que
 
 The following table lists the specifics of how search queries works when using the Segment Search API. 
 
-> ![NOTE] The following examples are shown in a non-HTML encoded format for better clarity. For best practices, HTML encode your search expression. 
+>[!NOTE]
+>
+>The following examples are shown in a non-HTML encoded format for better clarity. For best practices, HTML encode your search expression. 
 
 | Example search expression | Description |
 | ------------------------- | ----------- |

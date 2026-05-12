@@ -161,6 +161,7 @@ For example, you can enforce the email address field to always be sent to the de
 >[!NOTE]
 >
 >The following combinations of required mappings are currently supported: 
+>
 >* You can configure a required source field and a required destination field. In this case, users cannot edit or select any of the two fields and can only view the selection.
 >* You can configure a required destination field only. In this case, users will be allowed to select a source field to map to the destination.
 >
@@ -197,7 +198,7 @@ The example below shows both required source and destination mappings. When both
 
 {style="table-layout:auto"}
 
-As a result, both the **[!UICONTROL Source field]** and **[!UICONTROL Target field]** sections in the Experience Platform UI are greyed out.
+As a result, both the **[!UICONTROL Source field]** and **[!UICONTROL Target field]** sections in the Experience Platform UI are grayed out.
 
 ![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
@@ -227,7 +228,7 @@ The example below shows a required destination mapping. If only the destination 
 
 {style="table-layout:auto"}
 
-As a result, the **[!UICONTROL Target field]** section in the Experience Platform UI is greyed out, while the **[!UICONTROL Source field]** section is active and users can interact with it. The **[!UICONTROL Mandatory key]** and **[!UICONTROL Deduplication key]** options are active, and users cannot change them.
+As a result, the **[!UICONTROL Target field]** section in the Experience Platform UI is grayed out, while the **[!UICONTROL Source field]** section is active and users can interact with it. The **[!UICONTROL Mandatory key]** and **[!UICONTROL Deduplication key]** options are active, and users cannot change them.
 
 ![Image of the required mappings in the UI activation flow.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 

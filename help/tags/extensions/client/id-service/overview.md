@@ -5,10 +5,6 @@ exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
 ---
 # Adobe Experience Cloud Identity Service extension overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 Use this reference for information about configuring the Adobe Experience Cloud ID extension, and the options available when using this extension to build a rule.
 
 Use this extension to integrate the Experience Cloud Identity Service with your property. With the Experience Cloud Identity Service, you can create and store unique and persistent identifiers for your site visitors.

@@ -2,8 +2,6 @@
 title: Demandbase Intent
 description: Learn about the Demandbase Intent source on Experience Platform.
 last-substantial-update: 2025-03-26
-badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
 ---
 # [!DNL Demandbase Intent]
@@ -51,6 +49,10 @@ The restrictions listed below must be taken into consideration when naming your 
 For more information on these credentials, read the [[!DNL Google Cloud Storage] HMAC keys guide](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). For steps on how to generate your own access key, read the [prerequisite guide in the [!DNL Google Cloud Storage] source overview](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account).
 
 ## [!DNL Demandbase] schema
+
+>[!IMPORTANT]
+>
+>When creating a B2B Demandbase Account Intent schema in the Experience Platform UI, make sure to enable Profile ingestion for the schema. For more information, read the guide on [creating and editing schemas in the UI](../../../xdm/ui/resources/schemas.md).
 
 Read this section for information on the [!DNL Demandbase] schema and data structure. 
 
@@ -189,5 +191,28 @@ Domain matching in Experience Platform is based on an exact match of the scrubbe
 +++Answer
 
 Intent data can be utilized in [Account Audiences](../../../segmentation/types/account-audiences.md) to enhance targeting, segmentation, and personalization. By leveraging intent signals, businesses can identify and engage with accounts showing high interest in specific topics, optimizing marketing and sales outreach 
+
++++
+
+### Is the standard [!DNL Account Key] field group compatible with the [!DNL Demandbase Account Intent] schema?
+
++++Answer
+
+No. Use the `accountID` field for establishing relationships with the B2B Account schema. This avoids the need to introduce the entire field group in either the referencing or source schema.
++++
+
+### How does the [!DNL Demandbase Account Intent] schema establish a relationship with the B2B Account schema?
+
++++Answer
+
+The [!DNL Demandbase Account Intent] schema uses the `accountID` field to link to the corresponding B2B Account record. This field is automatically populated during ingestion when a matching domain is found in both datasets. Specifically, the `accountID` in the [!DNL Demandbase] schema references the `accountKey.sourceKey` in the standard B2B Account schema.
+
++++
+
+### Why does the [!DNL Demandbase Account Intent] schema use `accountID` instead of the typical [!DNL Account Key] field group structure?
+
++++Answer
+
+[!DNL Demandbase Intent] schemas focus on storage and processing efficiency. Rather than using an entire field group, the schema uses a streamlined single field (`accountID`) for establishing relationships. This reduces complexity and aligns with optimal processing patterns for intent data.
 
 +++

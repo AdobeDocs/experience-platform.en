@@ -14,7 +14,7 @@ This page lists and describes all the API operations that you can perform using 
 
 ## Getting started with render template API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Render exported profiles based on the message transformation template {#render-exported-data}
 
@@ -24,7 +24,7 @@ You can start by using a simple template that exports your raw profiles without 
 
 >[!TIP]
 >
->* The destination ID that you should use here is the `instanceId` that corresponds to a destination configuration, created using the `/destinations` endpoint. Refer to [retrieve a destination configuration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) for more details.
+>* The destination ID that you should use here is the `instanceId` that corresponds to a destination configuration, created using the `/destinations` endpoint. See [retrieve a destination configuration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) for more details.
 
 **API format**
 
@@ -1069,7 +1069,7 @@ An unsuccessful response returns HTTP status 400 along with descriptions of the 
 
 ## API error handling {#api-error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps {#next-steps}
 

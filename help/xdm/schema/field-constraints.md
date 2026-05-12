@@ -80,7 +80,7 @@ The following table outlines how each XDM type is represented in JSON Schema, al
         <pre class="JSON language-JSON hljs">
 {
   "type": "integer",
-  "maximum": 32768,
+  "maximum": 32767,
   "minimum": -32768
 }</pre>
       </td>
@@ -149,7 +149,7 @@ The sections below describe how each XDM type maps to other common serialization
 
 ### Parquet, Spark SQL, and Java {#parquet}
 
-| XDM type | Parquet | Spark SQL | Java | 
+| XDM type | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | Type: `BYTE_ARRAY`<br>Annotation: `UTF8` | `StringType` | `java.lang.String` |
 | [!UICONTROL Number] | Type: `DOUBLE` | `LongType` | `java.lang.Double` |
@@ -183,7 +183,7 @@ The sections below describe how each XDM type maps to other common serialization
 
 ### MongoDB, Aerospike, and Protobuf 2 {#mongo}
 
-| XDM type | MongoDB | Aerospike | Protobuf 2 | 
+| XDM type | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `string` | `String` | `string` |
 | [!UICONTROL Number] | `double` | `Double` | `double` |

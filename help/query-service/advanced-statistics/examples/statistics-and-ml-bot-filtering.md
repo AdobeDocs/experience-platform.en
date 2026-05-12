@@ -205,7 +205,7 @@ In the results displayed below, the model `bot_filtering_model` is successfully 
 ```console
 
            Created Model ID           |       Created Model       | Version
---------------------------------------+---------------------------+---------
+|--------------------------------------+---------------------------+---------
  2fb4b49e-d35c-44cf-af19-cc210e7dc72c | bot_filtering_model       |       1
 ```
 
@@ -240,7 +240,7 @@ The response includes metrics such as accuracy, precision, recall, and AUC-ROC. 
 
 ```console
 auc_roc | accuracy | precision | recall
----------+----------+-----------+--------
+|---------+----------+-----------+--------
      1.0 |      1.0 |       1.0 |    1.0
 ```
 
@@ -278,7 +278,7 @@ The response includes predictions for each user (`id`) along with details about 
 
 ```console
          id          | count.one_minute | count.five_minute | count.thirty_minute |                                                                  web.webpagedetails.name                                                                  | prediction
----------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
+|---------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
                      |              110 |                   |                     |   4UNDilcY5VAgu2pRmX4/gtVnj+YxDDQaJd1G8p8WX46//wYcrHy+APUN0I556E80j1gIzFmilA6DV4s0Zcs4ruiP36gLgC7bj4TH0q6LU0E=                                             |        1.0  
                      |              105 |                   |                     |   lrSaZk04Yq+5P9+6l4BohwXik0s0/XeW9X28ZgWt1yj1QQztiAt9Qgt2WYrWcAeoGZChAJw/l8e4ojZDT5WHCjteSt35S01Vv1JzDGPAg+IyhIzMTsVyLpW8WWpXjJoMCt6Tv7fFdF73EIH+IrK5fA== |        1.0
  2553215812530219515 |               99 |                 1 |                   1 |   KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg==                                                                 |        1.0

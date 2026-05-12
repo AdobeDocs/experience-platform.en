@@ -25,7 +25,7 @@ Experience Platform alerts can be sent one time, or they can repeat over a pre-d
 | --- | --- |
 | Does not necessarily indicate a problem. |  Indicates a potentially undesirable state. |
 | Does not repeat. | Can repeat if the anomalous condition persists. |
-| Examples include:<ul><li>Data ingestion has successfully completed.</li><li>A query execution has finished.</li><li>Data has been deleted.</li></ul> | Examples include:<ul><li>Ingestion duration is exceeding the service-level agreement (SLA).</li><li>Daily ingestion did not happen over the past 24 hours.</li><li>The stream processor's rate of error is above the configured threshold.</li><li>The total number of profiles is exceeding entitlement.</li></ul> |
+| Examples include:<ul><li>Data ingestion has successfully completed.</li><li>A query execution has finished.</li><li>Data has been deleted.</li></ul> | Examples include:<ul><li>Ingestion duration is exceeding the service-level agreement (SLA).</li><li>Daily ingestion did not happen over the past 24 hours.</li><li>The stream processor's rate of error is above the configured threshold.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -86,6 +86,14 @@ With the View Alerts permission, can view received alerts by selecting the bell 
 > Select an alert to navigate to a related dashboard for more detailed information on why the alert has been triggered.
 
 In addition, the [!UICONTROL Alerts] tab in the UI allows individual users to subscribe to specific alert types, and allows admins to enable or disable alert rules altogether. See the [UI guide](./ui.md) for more information on managing alerts.
+
+### Slack integration {#slack-integration}
+
+You can use a webhook proxy on [Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) to receive [Adobe I/O Events](https://developer.adobe.com/events/docs/guides/) from Experience Platform to your [!DNL Slack]. The proxy handles Adobe’s verification handshake and turns event payloads into [!DNL Slack] messages, so you can receive customer-facing alerts directly to your workspace.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
+
+For more information on how to receive Experience Platform notifications in [!DNL Slack] by integrating with an Adobe App Builder webhook proxy, see [monitor Experience Platform events in [!DNL Slack]](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack).
 
 ## Next steps
 

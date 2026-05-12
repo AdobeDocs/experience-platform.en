@@ -5,7 +5,7 @@ exl-id: bccb6e78-4ac8-4786-b398-6e55109d99dd
 ---
 # Paginating responses in the Reactor API
 
-Responses returned by the Reactor API are paginated. The default page size is 25 elements. Details about the pagination are reported in the `meta.pagination `section of the API response object:
+Responses returned by the Reactor API are paginated. The default page size is 25 elements. Details about the pagination are reported in the `meta.pagination` section of the API response object:
 
 ```json
 "meta": {

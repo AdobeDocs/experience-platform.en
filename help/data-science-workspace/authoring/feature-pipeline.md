@@ -34,10 +34,11 @@ The following workflow takes place when a feature pipeline is run:
 ## Getting started
 
 To run a recipe in any organization, the following is required:
--  An input dataset.
--  The Schema of the dataset.
--  A transformed schema and an empty dataset based on that  schema. 
--  An output schema and an empty dataset based on that schema.
+
+- An input dataset.
+- The Schema of the dataset.
+- A transformed schema and an empty dataset based on that  schema. 
+- An output schema and an empty dataset based on that schema.
 
 All of the above datasets need to be uploaded to the [!DNL Experience Platform] UI. To set this up, use the Adobe-provided [bootstrap script](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
 

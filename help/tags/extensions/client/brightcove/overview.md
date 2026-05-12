@@ -5,10 +5,6 @@ exl-id: d27eff21-2abf-4495-8382-08cab32742e0
 ---
 # BrightCove Video Tracking extension overview
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
-
 ## Pre-Requisites
 
 Each tag property in Adobe Experience Platform needs the following extensions installed and configured in the Extension screen:

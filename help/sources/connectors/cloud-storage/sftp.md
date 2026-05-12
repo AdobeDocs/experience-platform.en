@@ -19,7 +19,7 @@ Read this section for prerequisite steps that you must complete in order to succ
 
 ### IP address allowlist
 
-A list of IP addresses must be added to an allowlist prior to working with source connectors. Failing to add your region-specific IP addresses to your allowlist may lead to errors or non-performance when using sources. See the [IP address allowlist](../../ip-address-allow-list.md) page for more information.
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform](../../ip-address-allow-list.md) for more information.
 
 ### Naming constraints for files and directories
 
@@ -87,7 +87,7 @@ The key's randomart image is:
 Next, run the following command while providing the file path of the private key, to encode your private key in [!DNL Base64]:
 
 ```shell
-C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\id_rsa" -Encoding byte)) > C:\Users\lucy\.ssh\id_rsa_base64
+C:\Users\lucy> [convert]::ToBase64String((Get-Content "C:\Users\lucy\.ssh\id_rsa" -AsByteStream)) > "C:\Users\lucy\.ssh\id_rsa_base64"
 ```
 
 The above command saves the [!DNL Base64]-encoded private key in the file path you designated. You can then use that private key to authenticate to [!DNL SFTP] and connect to Experience Platform.

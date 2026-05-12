@@ -22,7 +22,7 @@ For a detailed description of the capabilities that you can configure through th
 
 ## Getting started with destination server API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Create a destination server configuration {#create}
 
@@ -94,7 +94,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`urlBasedDestination.url.value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to. |
 |`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 |`httpTemplate.requestBody.templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
-|`httpTemplate.requestBody.value` | String | *Required.* This string is the character-escaped version that transforms the data of Experience Platform customers to the format your service expects. <br> <ul><li> For information on how to write the template, read the [Using templating section](../../functionality/destination-server/message-format.md#using-templating). </li><li> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, refer to the [Profile Attributes](../../functionality/destination-server/message-format.md#attributes) transformation. </li></ul> |
+|`httpTemplate.requestBody.value` | String | *Required.* This string is the character-escaped version that transforms the data of Experience Platform customers to the format your service expects. <br> <ul><li> For information on how to write the template, read the [Using templating section](../../functionality/destination-server/message-format.md#using-templating). </li><li> For more information about character escaping, see the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, see the [Profile Attributes](../../functionality/destination-server/message-format.md#attributes) transformation. </li></ul> |
 |`httpTemplate.contentType` | String | *Required.* The content type that your server accepts. This value is most likely `application/json`. |
 
 {style="table-layout:auto"}
@@ -242,7 +242,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
-      }, 
+      },
+      "hostName":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.hostName}}"
+      },
       "port": 22,
       "encryptionMode" : "PGP"
    },
@@ -573,7 +577,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.path}}"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    },
    "fileConfigurations": {
         "compression": {
@@ -772,7 +776,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 ### Create dynamic schema destination servers {#dynamic-schema-servers}
 
-Dynamic schemas allow you to dynamically retrieve the supported target attributes and generate schemas based on your own API. You need to configure a destination server for dynamic schemas before you can configure the schema.
+Dynamic schemas dynamically retrieve the supported target attributes and generate schemas based on your own API. You need to configure a destination server for dynamic schemas before you can configure the schema.
 
 See in the tab below an example of a destination server for destinations which use [dynamic schemas](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
 
@@ -826,7 +830,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`urlBasedDestination.url.value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to and retrieve the schema fields to populate as target fields in the mapping step of the activation workflow. |
 |`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. For dynamic schema servers, use `GET`. |
 |`responseFields.templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
-|`responseFields.value` | String | *Required.* This string is the character-escaped transformation template that transforms the response received from the partner API into the partner schema that will be displayed in the Experience Platform UI. <br> <ul><li> For information on how to write the template, read the [Using templating section](../../functionality/destination-server/message-format.md#using-templating). </li><li> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, refer to the [Profile Attributes](../../functionality/destination-server/message-format.md#attributes) transformation. </li></ul> |
+|`responseFields.value` | String | *Required.* This string is the character-escaped transformation template that transforms the response received from the partner API into the partner schema that will be displayed in the Experience Platform UI. <br> <ul><li> For information on how to write the template, read the [Using templating section](../../functionality/destination-server/message-format.md#using-templating). </li><li> For more information about character escaping, see the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, see the [Profile Attributes](../../functionality/destination-server/message-format.md#attributes) transformation. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -924,7 +928,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. For dynamic dropdown servers, use `GET`. |
 |`httpTemplate.headers` | Object | *Optiona.l* Include any headers required to connect to the dynamic dropdown server. |
 |`responseFields.templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
-|`responseFields.value` | String | *Required.* This string is the character-escaped transformation template that transforms the response received from your API into the values that will be displayed in the Experience Platform UI. <br> <ul><li> For information on how to write the template, read the [Using templating section](../../functionality/destination-server/message-format.md#using-templating). </li><li> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). |
+|`responseFields.value` | String | *Required.* This string is the character-escaped transformation template that transforms the response received from your API into the values that will be displayed in the Experience Platform UI. <br> <ul><li> For information on how to write the template, read the [Using templating section](../../functionality/destination-server/message-format.md#using-templating). </li><li> For more information about character escaping, see the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). |
 
 {style="table-layout:auto"}
 
@@ -940,7 +944,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 ## API error handling {#error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps {#next-steps}
 

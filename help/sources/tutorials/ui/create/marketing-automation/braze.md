@@ -80,7 +80,7 @@ Once the new calculated field is added, select **[!UICONTROL Map target field]**
 >
 >Braze timestamps are not expressed in milliseconds, but rather in seconds. In order for the timestamps in Experience Platform to be accurately reflected, you need to create calculated fields in milliseconds. A calculation of "time * 1000" will properly convert to milliseconds, suitable for mapping to a timestamp field within Experience Platform.
 >
->![Creating a calculated field for timestamp ](../../../../images/tutorials/create/braze/create-calculated-field.png)
+>![Creating a calculated field for timestamp](../../../../images/tutorials/create/braze/create-calculated-field.png)
 
 ![The mapping with no errors.](../../../../images/tutorials/create/braze/completed_mapping.png)
 

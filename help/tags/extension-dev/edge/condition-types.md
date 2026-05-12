@@ -5,10 +5,6 @@ exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
 ---
 # Condition types for edge extensions
 
->[!NOTE]
->
-> Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 In a tag rule, a condition is evaluated after an event has occurred. All conditions must return true in order for the rule to continue processing. Condition types are provided by extensions and evaluate whether something is true or false, returning a boolean value.
 
 As an example, an extension could provide a "viewport contains" condition type wherein the user could specify a CSS selector. When the condition is evaluated on the client's website, the extension would be able to find elements matching the CSS selector and return whether any of them are contained within the user's viewport.

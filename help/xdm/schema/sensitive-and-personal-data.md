@@ -34,7 +34,8 @@ Experience Platform allows you to define your own custom field groups and data t
 * [Create a custom field group](../ui/resources/field-groups.md#create)
 * [Create a custom data type](../ui/resources/data-types.md#create)
 
-<!-- (To include once features are available)
+<!-- 
+(To include once features are available)
 * Marking fields as sensitive
 * Remove fields from standard field groups pre-ingestion
 * Deprecate fields post-ingestion

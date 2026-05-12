@@ -114,6 +114,7 @@ If you restart your kernel and run all the cells again, you should get the same 
 ### Explore your data
 
 Now that we can access your data, let's focus on the data itself by using statistics and visualization. The dataset that we are using is a retail dataset which gives miscellaneous information about 45 different stores on a given day. Some characteristics for a given `date` and `store` include the following:
+
 - `storeType`
 - `weeklySales`
 - `storeSize`
@@ -155,6 +156,7 @@ This means 22 stores are of `storeType` `A`, 17 are `storeType` `B`, and 6 are `
 #### Data visualization
 
 Now that we know our data frame values, we want to supplement this with visualizations to make things clearer and easier to identify patterns. Graphs are also useful when conveying results to an audience. Some [!DNL Python] libraries which are useful for visualization include:
+
 - [Matplotlib](https://matplotlib.org/)
 - [pandas](https://pandas.pydata.org/)
 - [seaborn](https://seaborn.pydata.org/)
@@ -195,6 +197,7 @@ Notice the diagonal of 1's down the center. This shows that when comparing a var
 ## Next steps
 
 This tutorial went over how to create a new Jupyter Notebook in the Data Science Workspace and how to access data externally as well as from [!DNL Adobe Experience Platform]. Specifically, we went over the following steps:
+
 - Create a new Jupyter Notebook
 - Access datasets and schemas
 - Explore datasets 

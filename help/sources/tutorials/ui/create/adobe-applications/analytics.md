@@ -49,7 +49,7 @@ You can ingest report suites from any region (United States, United Kingdom, or 
 
 Multiple in-bound connections can be made to bring multiple report suites into the same sandbox. If the report suites have differing schemas for variables (such as eVars or events), they should be mapped to specific fields in the custom field groups and avoid data conflicts using [Data Prep](../../../../../data-prep/ui/mapping.md). Report suites can only be added to a single sandbox.
 
-Select **[!UICONTROL Report suite]** and then use the *[!UICONTROL Analytics source add data]* interface to navigate through the list and identify the Analytics report suite that you want to ingest to Experience Platform. Select **[!UICONTROL Next]** to proceed.
+Select **[!UICONTROL Report suite]** and then use the *[!UICONTROL Analytics source add data]* interface to navigate through the list and identify the Analytics report suite that you want to ingest to Experience Platform. Alternatively, you can search for a specific report suite. Select **[!UICONTROL Next]** to proceed.
 
 ![An analytics report suite is selected for ingestion and the "Next" button is highlighted](../../../../images/tutorials/create/analytics/add-data.png)
 
@@ -107,6 +107,12 @@ Experience Platform automatically detects your mapping for any name conflicts. I
 
 ## Custom mappings {#custom-mappings}
 
+>[!CONTEXTUALHELP]
+>id="platform_analytics_import_mapping"
+>title="Download Template"
+>abstract="Download the csv template to perform the mapping offline."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="Import mapping"
+
 You can use Data Prep functions to add new custom mappings or calculated fields for custom attributes. To add custom mappings, select **[!UICONTROL Custom]**.
 
 ![The custom mapping tab in the Analytics source workflow.](../../../../images/tutorials/create/analytics/custom.png)
@@ -152,7 +158,8 @@ Similar to the source schema, you can use the interface to navigate through the 
 
 With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
-![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
+![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) 
+-->
 
 ## Filtering for Real-Time Customer Profile {#filtering-for-profile}
 
@@ -262,6 +269,14 @@ The [!UICONTROL Review] step appears, allowing you to review your new Analytics 
 * [!UICONTROL Data type]: Displays the selected Report Suite and its corresponding Report Suite ID.
 
 ![The review interface of the ingestion workflow.](../../../../images/tutorials/create/analytics/review.png)
+
+>[!TIP]
+>
+>Follow these best practices to avoid exceeding your license entitlements and overwhelming your total storage and data richness metrics:
+>
+>* Set up the Experience Event Dataset Retention Time-To-Live (TTL) in the beginning to optimize data lifecycle management and storage efficiency. For more details, see the guide on [managing Experience Event Dataset Retention in the data lake using TTL](../../../../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+>
+>* When you create an Analytics source dataflow, start by configuring the connector to ingest data only into the data lake. After confirming that the dataflow is working, you can enable profile ingestion for the dataset. This approach works best when row and column filters effectively reduce the data volume.
 
 ## Monitor your dataflow {#monitor-your-dataflow}
 

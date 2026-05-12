@@ -15,9 +15,9 @@ Adobe Experience Platform provides native connectivity for cloud providers like 
 
 Cloud storage sources can bring your own data into Experience Platform without the need to download, format, or upload. Ingested data can be formatted as JSON or Parquet that is compliant with Experience Data Model (XDM), or in a delimited format. Every step of the process is integrated into the sources workflow. Experience Platform allows you to bring in data from [!DNL Google Cloud Storage] through batches.
 
-## IP address allow list
+## IP address allowlist
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+You must add region-specific IP addresses to your allowlist prior to connecting your sources to Experience Platform. For more information, read the guide on [allowlisting IP addresses to connect to Experience Platform](../../ip-address-allow-list.md) for more information.
 
 ## Prerequisite setup for connecting your [!DNL Google Cloud Storage] account
 

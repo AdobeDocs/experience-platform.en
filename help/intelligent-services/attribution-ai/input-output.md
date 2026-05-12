@@ -58,6 +58,7 @@ Experience event (EE) Datasets do not need to explicitly have Channel and Market
 >[!IMPORTANT]
 >
 > The minimum amount of data that is needed for Attribution AI to function is as follows:
+>
 > - You need to provide at least 3 months (90 days) of data to run a good model.
 > - You need at least 1000 conversions.
 
@@ -96,9 +97,10 @@ Attribution AI outputs attribution scores in the most granular level possible so
 
 >[!NOTE]
 >
-> You are able to see any desired reporting column from the input dataset in the score output dataset only if either of the following are true:
-> - The reporting column is included in the configuration page either as part of touchpoint or conversion definition configuration.
-> - The reporting column is included in additional score dataset columns.
+>You are able to see any desired reporting column from the input dataset in the score output dataset only if either of the following are true:
+>
+>- The reporting column is included in the configuration page either as part of touchpoint or conversion definition configuration.
+>- The reporting column is included in additional score dataset columns.
 
 The following table outlines the schema fields in the raw scores example output:
 
@@ -131,7 +133,7 @@ The following table outlines the schema fields in the raw scores example output:
 | identity (Object) | False | Contains the details of the user used to build the model such as `id` and `namespace`. |
 | id (String) | True | Identity ID of the user such as cookie ID, Adobe Analytics ID (AAID), or Experience Cloud ID (ECID, also known as MCID or as visitor ID) etc. <br> **Example:** 17348762725408656344688320891369597404 |
 | namespace (String) | True | Identity namespace used to build the paths and thereby the model. <br> **Example:** aaid |
-| touchpointsDetail (Object Array) | True | The list of touchpoint details leading to the conversion ordered by | touchpoint occurrence or timestamp. |
+| touchpointsDetail (Object Array) | True | The list of touchpoint details leading to the conversion ordered by touchpoint occurrence or timestamp. |
 | touchpointName (String) | True | Name of the touchpoint that was configured during setup. <br> **Example:** PAID_SEARCH_CLICK |
 | scores (Object) | True | Touchpoint contribution to this conversion as score. For more information on the scores produced within this object, see the [aggregated attribution scores](#aggregated-attribution-scores) section. |
 | touchPoint (Object) | True | Touchpoint Metadata. For more information on the scores produced within this object, see the [aggregated scores](#aggregated-scores) section. |
@@ -176,13 +178,13 @@ The table below maps the attribution scores to the raw scores. If you wish to do
 
 | Attribution scores | Raw score reference column |
 | --- | --- |
-Influenced (algorithmic) | _tenantID.your_schema_name.element.touchpoint.algorithmicInfluenced |
-Incremental (algorithmic) | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.algorithmicInfluenced |
-First Touch | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.firstTouch |
-Last Touch | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.lastTouch |
-Linear | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.linear |
-U-Shaped | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.uShape |
-Time Decay | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.decayUnits |
+| Influenced (algorithmic) | _tenantID.your_schema_name.element.touchpoint.algorithmicInfluenced |
+| Incremental (algorithmic) | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.algorithmicInfluenced |
+| First Touch | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.firstTouch |
+| Last Touch | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.lastTouch |
+| Linear | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.linear |
+| U-Shaped | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.uShape |
+| Time Decay | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.decayUnits |
 
 ### Aggregated Scores {#aggregated-scores}
 
@@ -190,20 +192,20 @@ Aggregated scores can be downloaded in CSV format from the Experience Platform U
 
 | Column Name | Constraint | Nullable | Description |
 | --- | --- | --- | --- |
-customerevents_date (DateTime) | User defined & fixed format | False | Customer Event Date in YYYY-MM-DD format. <br> **Example**: 2016-05-02 |
-mediatouchpoints_date (DateTime) | User defined & fixed format | True | Media Touchpoint Date in YYYY-MM-DD format <br> **Example**: 2017-04-21 |
-segment (String) | Calculated | False | Conversion Segment such as geo segmentation which the model is built against. In case of absence of segments, segment is same as conversion_scope. <br> **Example**: ORDER_AMER |
-conversion_scope (String) | User defined | False | Name of the Conversion as configured by the user. <br> **Example**: ORDER |
-touchpoint_scope (String) | User defined | True | Name of the Touchpoint as configured by the user <br> **Example**: PAID_SEARCH_CLICK |
-product (String) | User defined | True | The XDM identifier of the product. <br> **Example**: CC |
-product_type (String) | User defined | True | The display name for the product as presented to the user for this product view. <br> **Example**: gpus, laptops |
-geo (String) | User defined | True | The geographic location where the conversion was delivered (placeContext.geo.countryCode) <br> **Example**: US |
-event_type (String) | User defined | True | The primary event type for this time-series record <br> **Example**: Paid Conversion |
-media_type (String) | ENUM | False | Describes whether the media type is paid,owned or earned. <br> **Example**: PAID, OWNED |
-channel (String) | ENUM | False | The `channel._type` property that is used to provide a rough classification of channels with similar properties in [!DNL Consumer Experience Event] XDM. <br> **Example**: SEARCH |
-action (String) | ENUM | False | The `mediaAction` property is used to provide a type of experience event media action. <br> **Example**: CLICK |
-campaign_group (String) | User defined | True | Name of the campaign group where multiple campaigns are grouped together like '50%_DISCOUNT'. <br> **Example**: COMMERCIAL |
-campaign_name (String) | User defined | True | Name of the campaign used to identify marketing campaign like '50%_DISCOUNT_USA' or '50%_DISCOUNT_ASIA'. <br> **Example**: Thanksgiving Sale |
+| customerevents_date (DateTime) | User defined & fixed format | False | Customer Event Date in YYYY-MM-DD format. <br> **Example**: 2016-05-02 |
+| mediatouchpoints_date (DateTime) | User defined & fixed format | True | Media Touchpoint Date in YYYY-MM-DD format <br> **Example**: 2017-04-21 |
+| segment (String) | Calculated | False | Conversion Segment such as geo segmentation which the model is built against. In case of absence of segments, segment is same as conversion_scope. <br> **Example**: ORDER_AMER |
+| conversion_scope (String) | User defined | False | Name of the Conversion as configured by the user. <br> **Example**: ORDER |
+| touchpoint_scope (String) | User defined | True | Name of the Touchpoint as configured by the user <br> **Example**: PAID_SEARCH_CLICK |
+| product (String) | User defined | True | The XDM identifier of the product. <br> **Example**: CC |
+| product_type (String) | User defined | True | The display name for the product as presented to the user for this product view. <br> **Example**: gpus, laptops |
+| geo (String) | User defined | True | The geographic location where the conversion was delivered (placeContext.geo.countryCode) <br> **Example**: US |
+| event_type (String) | User defined | True | The primary event type for this time-series record <br> **Example**: Paid Conversion |
+| media_type (String) | ENUM | False | Describes whether the media type is paid,owned or earned. <br> **Example**: PAID, OWNED |
+| channel (String) | ENUM | False | The `channel._type` property that is used to provide a rough classification of channels with similar properties in [!DNL Consumer Experience Event] XDM. <br> **Example**: SEARCH |
+| action (String) | ENUM | False | The `mediaAction` property is used to provide a type of experience event media action. <br> **Example**: CLICK |
+| campaign_group (String) | User defined | True | Name of the campaign group where multiple campaigns are grouped together like '50%_DISCOUNT'. <br> **Example**: COMMERCIAL |
+| campaign_name (String) | User defined | True | Name of the campaign used to identify marketing campaign like '50%_DISCOUNT_USA' or '50%_DISCOUNT_ASIA'. <br> **Example**: Thanksgiving Sale |
 
 **Raw Score reference (aggregated)**
 

@@ -14,7 +14,7 @@ exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 >   - This permission lets you **view** the capacity home.
 >- **Manage Sandboxes**
 >   - This permission lets you **edit** your capacity allocations.
->   - Additionally, you **must** be assigned access to all the sandboxes you want to edit the capacity allocations for.
+>   - Additionally, you **must** be assigned access to all sandboxes in order to edit **any** sandbox capacity. 
 >
 >More information about permissions within Experience Platform can be found in the [access control overview](/help/access-control/home.md#permissions)
 >
@@ -29,7 +29,7 @@ For more information about guardrails in Experience Platform, please read the [R
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingthroughput"
 >title="Streaming throughput"
->abstract="The streaming throughput value measures the combined peak inbound events per second for streaming ingestion into Profile service, across your production and development sandboxes."
+>abstract="The streaming throughput value measures the combined peak inbound events per second for streaming ingestion into Profile, across your production and development sandboxes."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
@@ -45,14 +45,16 @@ Currently, Capacity supports the following services:
 
 - Streaming segmentation
 - Streaming ingestion
+- Edge segmentation
 
 Within these services, the following guardrails are tracked:
 
 - The maximum number of streaming audiences is 500
-  - Of these 500 streaming audiences, the maximum number of edge audiences is 150
+- The maximum number of edge audiences is 150
 - The initial combined throughput for streaming ingestion is 1500 records per second (rps)
   - This combined streaming throughput measures the combined peak inbound events per second for streaming ingestion into Real-Time Customer Profile across your production and development sandboxes.
   - You can purchase additional streaming segmentation support of up to 13,500 records per second. More information about purchasing additional entitlements can be found in the [Real-Time CDP product description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+- The combined throughput for edge segmentation is 1500 records per second (rps)
 
 The audience capacity is at a **sandbox** level. This means that, for every sandbox you have in your organization, you can have 500 streaming audiences, of which 150 of those can be edge audiences.
 
@@ -62,7 +64,17 @@ Experience Platform calculates the sandbox's throughput in 15 minute rolling int
 
 If your usage reaches 80% and 90% of your licensed capacity, Experience Platform will issue an alert, notifying that you are reaching the maximum of your specified capacity. You can modify the settings to customize the capacity percentage to receive the alert or remove the alert entirely.
 
-If your usage goes to above 100% of your licensed capacity, you will be considered in breach of your capacity. At this point, you will experience performance latency, and your service level targets (SLTs) will **not** be guaranteed.
+If your usage goes above 100% of your licensed capacity, you will be considered in breach of your capacity. If you're in breach of your capacity, the following limitations will be applied:
+
+>[!NOTE]
+>
+>If you have access to Adobe Journey Optimizer, the following limitations will **not** apply.
+
+- Event data **can** be removed from streaming personalization if the event processing queue exceeds 12 hours
+- Removed event data will **not** be ingested into Profile
+  - You will be able to see when events were removed
+  - Events will be available within the data lake, according to your entitlements
+  - You *can* use Query Service to directly re-ingest the data, if required
 
 ## Access {#access}
 
@@ -72,7 +84,7 @@ To access the Capacity overview, select **[!UICONTROL License usage]** followed 
 
 The Capacity overview page is displayed, showing information including a history of alerts as well as details of your organization's capacities.
 
-![The Capacity overview page is displayed in full, showing the alert history and the capacity details sections.](/help/landing/images/capacity/capacity-overview.png) {zoomable="yes" width="80%"}
+![The Capacity overview page is displayed, showing the alert history and the capacity details sections.](/help/landing/images/capacity/capacity-overview.png) {zoomable="yes" width="80%"}
 
 ### Alert history {#alert-history}
 
@@ -90,17 +102,15 @@ To view a full history of the alerts for your organization, select the ![three d
 
 ![The full alert history is displayed for an organization.](/help/landing/images/capacity/full-alert-history.png)
 
-### Capacity details {#capacity-details}
+### Streaming capacities {#streaming-capacities}
 
-The Capacity details section outlines information about your organization's capacities. In this section, you can filter per sandbox and change the lookback period.
+The Streaming capacities section outlines information about your organization's streaming capacities. Specifically, this section displays capacity information about streaming throughput and streaming audiences. You can filter this information on a per sandbox basis and change the lookback period.
 
 ![The sandbox selector and the date picker for the lookback period are highlighted.](/help/landing/images/capacity/filter-sandbox-and-date.png)
 
-Currently, this displays capacity information about streaming throughput, streaming audiences, and edge audiences.
-
 #### Streaming throughput {#streaming-throughput}
 
-The streaming throughput section displays information about the streaming throughput within your organization's sandboxes. The streaming throughput value measures the combined peak inbound events per second for streaming ingestion into Profile service.
+The **[!UICONTROL Streaming throughput]** section displays information about the streaming throughput within your organization's sandboxes. The streaming throughput value measures the combined peak inbound events per second for streaming ingestion into Profile.
 
 ![The streaming throughput section within the capacity details page is displayed.](/help/landing/images/capacity/streaming-throughput-section.png)
 
@@ -137,11 +147,52 @@ The allocation page appears. On this page, you can set your capacities for your 
 
 After updating the capacity allocations, select **[!UICONTROL Save]** to finish the updates. Please note, it may take up to 10 minutes for the changes to be reflected on your organization.
 
-#### Audience count {#audience-count}
+#### Streaming audience count {#streaming-audience-count}
 
-The **[!UICONTROL Streaming audience count]** and **[!UICONTROL Edge audience count]** sections display the number of streaming and edge audiences within the sandbox as well as the maximum number of streaming and edge audiences allowed within the sandbox.
+The **[!UICONTROL Streaming audience count]** section displays the number of streaming audiences within the sandbox as well as the maximum number of streaming audiences allowed within the sandbox.
 
 ![The Audience counts sections are displayed.](/help/landing/images/capacity/audience-count.png)
+
+| Column name | Description |
+| ----------- | ----------- |
+| Sandbox | The name of the sandbox. |
+| Services | The service that is in use for the sandbox. |
+| Usage | The number of streaming audiences that are in the sandbox. |
+| Capacity | The maximum number of streaming audiences that are allowed in the sandbox. |
+
+### Edge capacities {#edge-capacities}
+
+The **[!UICONTROL Edge capacities]** section outlines information about your organization's edge capacities. Specifically, this section displays capacity information about edge segmentation throughput and edge audiences. You can change the lookback period for the organization's edge capacities.
+
+![The Edge capacities section is displayed. This outlines information including the edge segmentation throughput and the edge audience count.](/help/landing/images/capacity/edge-capacities.png)
+
+#### Edge segmentation throughput {#edge-streaming-throughput}
+
+The **[!UICONTROL Edge segmentation throughput]** section displays information about the edge segmentation throughput within your organization and organization's sandboxes. The edge segmentation throughput value measures the combined peak inbound events per second for edge ingestion into Profile.
+
+![The Edge segmentation throughput section is displayed. This shows information about the edge segmentation throughput within your organization and its sandboxes.](/help/landing/images/capacity/edge-segmentation-throughput.png)
+
+| Column name | Description |
+| ----------- | ----------- |
+| Organization | The name of the organization. The available sandboxes for the organization are listed under the organization's name. |
+| Usage RPS (Peak) | The peak throughput of data in the sandbox within the selected lookback period. |
+| Capacity RPS | The maximum peak throughput for the organization. |
+| Violation | If a violation has occurred, the type of violation for edge segmentation throughput. |
+| Recommended actions | A column that describes the recommended action to alleviate the violation. |
+
+You can select the organization to see a more detailed view of the organization's edge segmentation throughput.
+
+![The organization is highlighted.](/help/landing/images/capacity/select-organization.png)
+
+The **[!UICONTROL Edge Segmentation Throughput]** page is displayed. You can see a graph that displays the request throughput compared to the capacity limit. Within this page, you can adjust the lookback period for the displayed graph.
+
+![The Edge Segmentation Throughput page is displayed. This shows a graph detailing the throughput compared to the capacity limit.](/help/landing/images/capacity/edge-segmentation-throughput-details.png)
+
+#### Edge audience count {#edge-audience-count}
+
+The **[!UICONTROL Edge audience count]** section displays the number of edge audiences within each sandbox as well as the maximum number of edge audiences allowed within the sandbox.
+
+![The Edge audience count section is displayed. This shows information related to the edge audience count.](/help/landing/images/capacity/edge-audience-count.png)
 
 | Column name | Description |
 | ----------- | ----------- |
@@ -150,9 +201,9 @@ The **[!UICONTROL Streaming audience count]** and **[!UICONTROL Edge audience co
 | Usage | The number of audiences of the listed type that are in the sandbox. |
 | Capacity | The maximum number of audiences of the listed type that are allowed in the sandbox. |
 
-## Streaming throughput best practices {#suggestions}
+## Streaming throughput best practices {#streaming-throughput-suggestions}
 
-You can resolve your streaming throughput violations by adopting one of the following recommendations:
+You can resolve your throughput violations by adopting one of the following recommendations:
 
 1. Increase the allocated capacity for the sandbox.
 2. Identify high throughput dataflows in the [monitoring dashboard](/help/dataflows/ui/monitor-streaming-profile.md) and apply throttling or filtering against these dataflows if needed.
@@ -164,6 +215,14 @@ Additionally, you can look at your dataflows and see if you can optimize your da
 | --- | --- | --- | --- |
 | Batch to streaming conversion | Batch workloads converted to streaming can significantly increase throughput, affecting performance and resource allocation. For example, performing a bulk profile update after an event without rate limits. | Streaming strategies are unnecessary for batch use cases when low-latency processing isn't required. | Evaluate use case requirements. For batch outbound marketing, consider using [batch ingestion](/help/ingestion/batch-ingestion/overview.md) instead of streaming to manage data ingestion more efficiently.  |
 | Unnecessary data ingestion | Ingesting data not required for personalization increases throughput without adding value, wasting resources. For example, ingesting all analytics traffic into profiles regardless of relevance.| Excess non-relevant data creates noise, making it harder to identify impactful data points. It can also cause friction when defining and managing audiences and profiles. | Ingest only data that is required for your use cases. Ensure that you filter out unnecessary data.<ul><li>**Adobe Analytics**: Use [row-level filtering](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) to optimize your data intake.</li><li>**Sources**: Use the [[!DNL Flow Service] API to filter row-level data](/help/sources/tutorials/api/filter.md) for supported sources like [!DNL Snowflake] and [!DNL Google BigQuery].</li></li>**Edge datastream**: Configure [dynamic datastreams](/help/datastreams/configure-dynamic-datastream.md) to perform row-level filtering of traffic coming in from WebSDK.</li></ul> |
+
+## Edge segmentation throughput best practices {#edge-best-practices}
+
+You can resolve your edge segmentation throughput violations by adopting one of the following recommendations:
+
+1. Identify high throughput datastreams in the [monitoring dashboard](/help/dataflows/ui/monitor-edge.md) and apply throttling or filtering against these datastreams if needed.
+2. Optimize your ingestion by using batch ingestion for lower latency use cases.
+3. Contact your Adobe Customer Care representative if issues still persist.
 
 ## Video overview {#video}
 

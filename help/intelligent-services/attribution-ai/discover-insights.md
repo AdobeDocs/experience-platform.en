@@ -149,9 +149,9 @@ The **[!UICONTROL Breakdown by touchpoint position]** graph is a breakdown of at
 - **Player:** Indicates the touchpoint was not the first or the last touch leading to a conversion.
 - **Closer:** Indicates the touchpoint was the last touch before a conversion.
 
->![NOTE]
+>[!NOTE]
 >
-> The sum of percentage contribution for an attribution model across all touchpoints and positions should be equal to 100.
+>The sum of percentage contribution for an attribution model across all touchpoints and positions should be equal to 100.
 
 ![user-path breakdown touchpoint](./images/insights/user-paths.png)
 

@@ -54,7 +54,7 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Last evaluation method]** | The evaluation method of the audience. Since only batch segmentation is supported, the only possible value is **[!UICONTROL Batch]**. |
 | **[!UICONTROL Last evaluation profiles]** | The number of profiles that were evaluated in the audience's last evaluation job. |
 | **[!UICONTROL Last activation timestamp]** | The date and time that the audience's last activation job ran. |
-| **[!UICONTROL Last activation status]** | The status of the audience's last activation job. Possible values include **[!UICONTROL Success]**, **[!UICONTROL No runs]**, and **[!UICONTROL Failed]**. | 
+| **[!UICONTROL Last activation status]** | The status of the audience's last activation job. Possible values include **[!UICONTROL Success]**, **[!UICONTROL No runs]**, and **[!UICONTROL Failed]**. |
 | **[!UICONTROL Last activation identities]** | The number of identities that were activated in the audience's last activation job. |
 | **[!UICONTROL Last activation destination]** | The name of the destination that the audience's last activation job activated to. |
 
@@ -113,7 +113,7 @@ Under the audiences section, you can see a list of audiences that were activated
 
 For the audiences section, the following metrics are available:
 
-| Metric | Description | 
+| Metric | Description |
 | ------ | ----------- |
 | **[!UICONTROL Name]** | The name of the audience that was activated. |
 | **[!UICONTROL Identities activated]** | The total number of identities that were successfully activated to the destination, based on the profiles received.  |
@@ -154,7 +154,7 @@ Under the [!UICONTROL Audiences] section, you can see a list of audiences that a
 
 For the [!UICONTROL Audiences] section, the following metrics are available:
 
-| Metric | Description | 
+| Metric | Description |
 | ------ | ----------- |
 | **[!UICONTROL Name]** | The name of the audience that is being evaluated. |
 | **[!UICONTROL Profile count]** | The number of profiles that are being evaluated. |

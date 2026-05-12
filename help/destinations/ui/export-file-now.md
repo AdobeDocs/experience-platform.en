@@ -8,10 +8,10 @@ exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 # Export files on-demand to batch destinations using the Experience Platform UI
 
 >[!IMPORTANT]
-> 
+>
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-## **[!UICONTROL Export file now]** overview {#overview}
+## [!UICONTROL Export file now] overview {#overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"
@@ -20,9 +20,26 @@ exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 
 This article explains how to use the Experience Platform UI to export files on-demand to batch destinations such as [cloud storage](/help/destinations/catalog/cloud-storage/overview.md) and [email marketing](/help/destinations/catalog/email-marketing/overview.md) destinations.
 
-The **[!UICONTROL Export file now]** control allows you to export a full file without interrupting the current export schedule of a previously scheduled audience. This export happens in addition to previously scheduled exports and does not change the export frequency of the audience. The file export is triggered immediately and it picks up the latest results from Experience Platform segmentation runs.
+Use the **[!UICONTROL Export file now]** control to export a full file without interrupting the current export schedule of a previously scheduled audience. This export happens in addition to previously scheduled exports and does not change the export frequency of the audience. 
+
+The file export is triggered immediately and uses data from the most recent audience evaluation snapshot only. It does not include profile or identity changes that occur after snapshot creation. In contrast, scheduled exports include both snapshot data and incremental changes that occur between snapshot creation and export time.
 
 You can also use the Experience Platform APIs for this purpose. Read how to [activate audiences on-demand to batch destinations via the ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md).
+
+## Scheduled exports vs on-demand exports {#scheduled-vs-ondemand}
+
+On-demand exports and scheduled exports use different data sources, which can result in differences in exported data. Refer to the table below to understand what gets exported in each case.
+
+|  | Export file now | Scheduled exports |
+|--------|-----------------|-------------------|
+| **Data source** | Snapshot only | Snapshot + incremental changes |
+| **Profile attributes** | Values at snapshot time | Current values at export time |
+
+>[!NOTE]
+>
+>Scheduled exports may show different profile counts or attribute values than on-demand exports because they include profile updates that occur after the audience evaluation.
+
+For more information, see [Understanding scheduled export behavior](/help/destinations/ui/activate-batch-profile-destinations.md#export-behavior).
 
 ## Prerequisites {#prerequisites}
 
@@ -59,6 +76,7 @@ Keep in mind the following considerations when using the **[!UICONTROL Export fi
 * **[!UICONTROL Export file now]** works only for audiences whose schedule in the batch activation dataflow overlaps with the present date. This includes audiences with schedules that have no end date (export frequency of **[!UICONTROL Once]**), or where the end date has not yet passed.
 * When adding an audience to an existing dataflow, wait for at least **one hour** before using the **[!UICONTROL Export file now]** control.
 * If you change an audience's merge policy, or if you create an audience which uses a new merge policy, wait 24 hours until using the **[!UICONTROL Export file now]** control.
+* **[!UICONTROL Export file now]** uses data from scheduled snapshot exports only. It does not pick up data from API-triggered export jobs. To export the latest data after an API-triggered export job, wait for the next scheduled export to run.
 
 ## UI error messages {#ui-error-messages}
 

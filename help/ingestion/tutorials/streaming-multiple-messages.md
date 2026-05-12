@@ -33,7 +33,7 @@ You must first create a streaming connection before you can start streaming data
 
 After registering a streaming connection, you, as the data producer, will have a unique URL which can be used to stream data to Experience Platform.
 
-## Stream to a dataset
+## Stream to a dataset {#stream-to-dataset}
 
 The following example shows how to send multiple messages to a specific dataset within a single HTTP request. Insert the dataset ID in the message header to have that message directly ingested into it.
 
@@ -213,6 +213,7 @@ Before proceeding with this tutorial, it is recommended to first review the [ret
 The following example shows what happens when the batch includes valid and invalid messages.
 
 The request payload is an array of JSON objects representing the event in XDM schema. Note that the following conditions needs to be met for successful validation of the message:
+
 - The `imsOrgId` field in the message header has to match the inlet definition. If the request payload does not include an `imsOrgId` field, the [!DNL Data Collection Core Service] (DCCS) will add the field automatically.
 - The header of the message should reference an existing XDM schema created in the [!DNL Experience Platform] UI.
 - The `datasetId` field needs to reference an existing dataset in [!DNL Experience Platform], and its schema needs to match the schema provided in the `header` object within each message included in the request body.
@@ -512,6 +513,42 @@ Failed messages are identified by an error status code in the response array.
 The invalid messages are collected and stored in an "error" batch within the dataset specified by `{DATASET_ID}`.
 
 Read the [retrieving failed batches](../quality/retrieve-failed-batches.md) guide for more information on recovering failed batch messages.
+
+### Send multiple XDM entities to a dataflow {#send-multiple-xdm-entities-to-a-dataflow}
+
+To send multiple XDM entities to a dataflow, you can either:
+
+- Send one or more entities in a `messages` array within one HTTP request to the streaming endpoint.
+- Upload a file with multiple entities using batch ingestion.
+
+Choose the method that matches your data volume and use case.
+
+>[!BEGINTABS]
+
+>[!TAB Group entities in an HTTP request]
+
+You can include multiple XDM entities in a `messages` array within a single HTTP request to the streaming ingestion endpoint. All messages can target the same or different datasets and schemas, as long as they all belong to the **same** organization and sandbox.
+
+Use this option when you want to:
+
+- Reduce requests by sending multiple XDM entities in one HTTP call.
+- Stream data in real time through the ingestion endpoint.
+
+For more information and detailed instructions on how to send the request, read the [streaming to a dataset](#stream-to-dataset) section.
+
+>[!TAB Upload a batch file]
+
+You can upload a batch file containing one or more XDM entities to a dataflow. All files uploaded under the same batch are processed together as a single ingestion unit.
+
+Use this method when you:
+
+- Ingest larger data volumes (for example, CSV, JSON, or Parquet files).
+- Are working with file-based exports from upstream systems.
+- Prefer scheduled or bulk ingestion.
+
+See [Batch ingestion guide](../batch-ingestion/api-overview.md) for step-by-step instructions.
+
+>[!ENDTABS]
 
 ## Confirm messages ingested
 

@@ -258,6 +258,7 @@ For a list of supported packages in Python, R, and PySpark, copy and paste `!con
 ![example](../images/jupyterlab/user-guide/libraries.PNG)
 
 In addition, the following dependencies are used but not listed:
+
 * CUDA 11.2
 * CUDNN 8.1
 

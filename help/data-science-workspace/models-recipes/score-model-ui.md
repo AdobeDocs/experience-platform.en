@@ -54,6 +54,7 @@ Review and confirm the scoring configurations and select **[!UICONTROL Finish]**
 ![scoring runs tab](../images/models-recipes/score/scoring_runs_tab.png)
 
 A scoring run can be displayed with one of the following statuses: 
+
 - Pending
 - Complete
 - Failed

@@ -27,6 +27,7 @@ Today's enterprise puts a high priority on mining big data for predictions and i
 As important as it is, getting from data to insights can come at a high cost. It typically requires skilled data scientists who conduct intensive and time-consuming data research to develop machine-learning models, or recipes, which power intelligent services. The process is lengthy, the technology is complex, and skilled data scientists can be hard to find.  
 
 With [!DNL Data Science Workspace], Adobe Experience Platform allows you to bring experience-focused AI across the enterprise, streamlining and accelerating data-to-insights-to-code with:
+
 - A machine learning framework and runtime
 - Integrated access to your data stored in Adobe Experience Platform
 - A unified data schema built on [!DNL Experience Data Model] (XDM)

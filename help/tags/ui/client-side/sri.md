@@ -5,10 +5,6 @@ exl-id: bd8bc3f7-9a85-44e2-ae07-f0664179b51c
 ---
 # Subresource integrity (SRI) support
 
->[!NOTE]
->
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
-
 This document covers how subresource integrity (SRI) is supported in Adobe Experience Platform.
 
 Modern websites are built by referencing images, content, and scripts from various locations around the web. SRI allows a browser to verify that the contents of a requested file have not been unexpectedly modified.

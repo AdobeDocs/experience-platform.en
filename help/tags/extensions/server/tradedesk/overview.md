@@ -59,7 +59,7 @@ The configuration options are divided into three main sections as outlined below
 
 **[!UICONTROL Basic Request Properties]**
 
-| Input | Description | 
+| Input | Description |
 | --- | --- |
 | Tracker ID | The platform ID of the event tracker. |
 | UPixel ID | The universal pixel ID for the event. |
@@ -95,7 +95,7 @@ Refer to the [Real-Time Conversions Event](https://partner.thetradedesk.com/v3/p
 >
 >The [!UICONTROL Configuration Overrides] fields allow you to set a different [!DNL Advertiser ID] and/or [!DNL Merchant ID] on every rule.
 
-| Input | Description | 
+| Input | Description |
 | --- | --- |
 | Advertiser ID | Unique identifier for the advertiser which this event is associated. A different Advertiser ID can be provided to override the ID you supplied in the extension configuration. |
 | Merchant ID | The unique identifier that each merchant is given by [!DNL The Trade Desk] throughout the onboarding procedure. A different Merchant ID can be provided to override the ID you supplied in the extension configuration. |
@@ -108,6 +108,6 @@ When you are satisfied with the rule, select **[!UICONTROL Save to Library]**. F
 
 This guide covered how to send server-side event data to [!DNL The Trade Desk] using the [!DNL The Trade Desk] Real-Time Conversions API extension. From here, it is recommended to expand your integration by creating distinct rules that send specific conversion events as applicable per campaign. For more information on event forwarding capabilities in [!DNL Adobe Experience Platform], read the [event forwarding overview](../../../ui/event-forwarding/overview.md).
 
-See the [!DNL The Trade Desk] documentation on [best practices for the [!DNL The Trade Desk] Real-Time Conversions API](https://www.facebook.com/business/help/308855623839366?id=818859032317965) for more guidance on how to effectively implement your integration. 
+See the [!DNL The Trade Desk] documentation on [best practices for the [!DNL The Trade Desk] Real-Time Conversions API](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) for more guidance on how to effectively implement your integration. 
 
 For details on how to debug your implementation using the Experience Platform Debugger and Event Forwarding Monitoring tool, read the [Adobe Experience Platform Debugger overview](../../../../debugger/home.md) and [Monitor activities in event forwarding](../../../ui/event-forwarding/monitoring.md).

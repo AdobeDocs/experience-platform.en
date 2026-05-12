@@ -12,6 +12,7 @@ role: User
 - [Segmentation Service overview](home.md)
 - [Segmentation data types](data-types.md)
 - [Segmentation guardrails](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [Audience validation](./validation.md)
 - Segmentation API {#api}
     - [Overview](api/overview.md)
     - [Getting started](api/getting-started.md)
@@ -29,6 +30,7 @@ role: User
     - [Audience dashboard](ui/audience-dashboard.md)
     - [Audience Portal](ui/audience-portal.md)
     - [Audience Composition](ui/audience-composition.md)
+    - [Audience Composition enhancements](ui/composition-enhancements.md)
     - [Segment Builder](ui/segment-builder.md)
     - [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
     - [Ignore year time constraint update](ui/ignore-year.md)
@@ -56,7 +58,7 @@ role: User
   - [Multi-entity segmentation](tutorials/multi-entity-segmentation.md)
   - [Honoring consent](tutorials/consents.md)
   - [Evaluate a segment definition](tutorials/evaluate-a-segment.md)
-  - [Creating an external audiences](tutorials/create-external-audience.md)
+  - [Creating an external audience](tutorials/create-external-audience.md)
   - [Create a dataset to export data](tutorials/create-dataset-export-segment.md)
   - [Enforce data usage compliance for audiences](tutorials/governance.md)
 - Profile Query Language {#pql}
