@@ -122,7 +122,7 @@ Use Segmentation Service to create audiences from your customer data and manage 
 | --- | --- |
 | Audience Composition enhancements | All customers now have a baseline of 50 compositions. Additional enhancements include chained activation and audience enrichment improvements. |
 | Express mode for external audiences | Use express mode to activate external audiences directly through the API without the full activation workflow. |
-| Account audiences with experience events (B2B) | After the B2B CDP architecture upgrade, account audiences with experience events are no longer supported directly. To create an account audience that uses experience events, first build a people audience with the experience events, then reference that people audience when creating the account audience. |
+| Account audiences with experience events (B2B) | After the B2B CDP architecture upgrade, account audiences with experience events are no longer directly supported. To create an account audience that uses experience events, first build a people audience with the experience events, then reference that people audience when creating the account audience. |
 
 {style="table-layout:auto"}
 
