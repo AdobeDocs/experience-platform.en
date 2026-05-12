@@ -67,6 +67,7 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 | [!DNL Google Customer Match] identity type requirement | Updated documentation to clarify that [!DNL Google] requires a single identity key type per destination dataflow. Mixing multiple key types causes mapping IDs to be overwritten, already-activated audiences to be closed and restarted, and match rates to reset to 0%. This is a [!DNL Google] requirement, not an Experience Platform limitation. See the [Google Customer Match documentation](../destinations/catalog/advertising/google-customer-match.md) for details. |
 | [!DNL Snowflake] scheduling UI fix | Fixed an issue where switching the export trigger or frequency in the [!DNL Snowflake] destination configuration caused the UI to crash. |
 | Search by dataflow name in activation workflow | Search by dataflow name in the **[!UICONTROL Select destination]** step of the activation workflow to locate the right destination dataflow. |
+| View datasets in a dataset export dataflow | Updated documentation to show how to retrieve which datasets are associated with an existing dataset export dataflow using the Flow Service API. See the [export datasets documentation](../destinations/api/export-datasets.md#view-datasets-in-dataflow) for details. |
 
 {style="table-layout:auto"}
 
