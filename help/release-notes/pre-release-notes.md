@@ -48,7 +48,7 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
-**New or updated features**
+**New or updated destinations**
 
 | Feature | Description |
 | --- | --- |
