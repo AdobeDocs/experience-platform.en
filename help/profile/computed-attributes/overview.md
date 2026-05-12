@@ -49,6 +49,7 @@ Computed attributes let you define event aggregates in a self-serve manner by le
 | MIN | A function that finds the **minimum** value for the qualified events. | Integers, Numbers, Longs, Timestamps | First purchase data in the last 7 days<br/>Minimum order amount in the last 4 weeks |
 | MAX | A function that finds the **maximum** value for the qualified events. | Integers, Numbers, Longs, Timestamps | Last purchase data in the last 7 days<br/>Maximum order amount in the last 4 weeks |
 | MOST_RECENT | A function that finds the specified attribute value from the latest qualified event. This function gives **both** the value as well as the timestamp of the attribute. | All primitive values, Arrays of primitive values | Latest product viewed in the last 7 days |
+| LIST | A function that | |  |
 
 ### Lookback periods
 
