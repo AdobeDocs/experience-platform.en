@@ -118,6 +118,26 @@ Customers with compliant accounts are automatically allowlisted by Google.
 
 Depending on the type of IDs that you ingest into [!DNL Adobe Experience Platform], you must adhere to their corresponding requirements.
 
+### One key type per destination connection {#single-key-type}
+
+[!DNL Google Customer Match] requires that each customer list uses a single identifier category, called a key type. Google defines three key types in the [CustomerMatchUploadKeyType](https://developers.google.com/google-ads/api/reference/rpc/v23/CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType) reference:
+
+* `CONTACT_INFO`: email addresses, phone numbers, and mailing addresses
+* `CRM_ID`: advertiser-assigned custom user IDs
+* `MOBILE_ADVERTISING_ID`: mobile device IDs ([!DNL IDFA] and [!DNL GAID])
+
+>[!IMPORTANT]
+>
+>Each destination connection must use identities from a single key type only. Do not map identities from different key type categories in the same connection. For example, do not combine an email address (`CONTACT_INFO`) with a mobile device ID (`MOBILE_ADVERTISING_ID`). Also, do not change the key type of an existing connection by switching the identity mapping to a different category on a subsequent activation run.
+>
+>If you mix or switch key types, [!DNL Google] overwrites the mapping IDs in the destination, closes the corresponding user lists in [!DNL Google Ads] so they stop accepting new members, and creates new activations. This resets match rates to 0%.
+>
+>This is a [!DNL Google] requirement, not an [!DNL Adobe Experience Platform] limitation.
+
+**Exception:** Within the `CONTACT_INFO` key type, you can combine email addresses, phone numbers, and mailing addresses in the same connection. Google recommends this approach because it improves match rates.
+
+For examples of correct and incorrect identity mappings, see the [Mapping example](#example-gcm) section.
+
 ### Phone number hashing requirements {#phone-number-hashing-requirements}
 
 There are two methods to activate phone numbers in [!DNL Google Customer Match]:
@@ -248,7 +268,13 @@ Selecting target fields:
 * Select the `IDFA` or `GAID` namespaces as target identity when your source namespaces are `IDFA` or `GAID`.
 * Select the `User_ID` namespace as target identity when your source namespace is a custom one.
 
-![Identity mapping between source and target fields shown in the Mapping step of the activation workflow.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
+The following example shows a correct identity mapping. Both `Phone_E.164` and `Email` belong to the `CONTACT_INFO` key type, so you can use them together in the same connection.
+
+![The Mapping step showing Phone_E.164 mapped to phone_sha256_e.164 and Email mapped to email_lc_sha256. A callout confirms both identities belong to the CONTACT_INFO key type.](../../assets/catalog/advertising/google-customer-match/correct-mapping.png){zoomable="yes"}
+
+The following example shows an incorrect identity mapping. `GAID` belongs to the `MOBILE_ADVERTISING_ID` key type, while `Phone_E.164` belongs to `CONTACT_INFO`. Mapping identities from different key type categories in the same connection resets match rates to 0%. For more information about key types, see the [One key type per destination connection](#single-key-type) section.
+
+![The Mapping step showing GAID mapped to gaid and Phone_E.164 mapped to phone_sha256_e.164. A callout indicates GAID belongs to MOBILE_ADVERTISING_ID and Phone_E.164 belongs to CONTACT_INFO, which is an invalid mixed-key-type mapping.](../../assets/catalog/advertising/google-customer-match/incorrect-mapping.png){zoomable="yes"}
 
 Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
@@ -271,6 +297,28 @@ After completing the activation flow, switch to your **[!UICONTROL Google Ads]**
 When mapping an audience to both [!DNL IDFA] and [!DNL GAID] mobile IDs, [!DNL Google Customer Match] creates a separate audience for each ID mapping. Your [!DNL Google Ads] account shows two different segments, one for the [!DNL IDFA], and one for the [!DNL GAID] mapping.
 
 ## Troubleshooting {#troubleshooting}
+
+### Match rates drop to 0% after activation {#match-rate-reset}
+
+If your match rates drop to 0% after activation, a potential cause is a key type mismatch in your destination connection.
+
+[!DNL Google Customer Match] requires each customer list to use a single key type. Two scenarios trigger this problem:
+
+* **Mixing key types:** mapping identities from different key type categories simultaneously in the same connection (for example, an email address and a mobile device ID).
+* **Switching key types:** changing the identity mapping of an existing connection to a different key type category on a subsequent activation run (for example, activating with `USER_ID` one time, then switching to `FIRST_NAME`/`LAST_NAME` the next).
+
+In both cases, [!DNL Google] overwrites the mapping IDs, closes the corresponding user lists in [!DNL Google Ads] so they stop accepting new members, and creates new activations, resetting match rates to 0%.
+
+To fix this issue:
+
+1. Identify the key type category of the identities you are currently mapping in the affected connection.
+2. Create separate destination connections, one per key type category:
+   * One connection for `CONTACT_INFO` identities (email, phone, mailing address)
+   * One connection for `MOBILE_ADVERTISING_ID` identities ([!DNL IDFA] and [!DNL GAID])
+   * One connection for `CRM_ID` identities (custom user IDs)
+3. Activate the relevant audiences to each connection, keeping the identity mapping consistent across all activation runs.
+
+For more information, see the [One key type per destination connection](#single-key-type) section.
 
 ### 400 Bad Request error message {#bad-request}
 
