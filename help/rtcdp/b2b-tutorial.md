@@ -70,6 +70,10 @@ The source connector provides an auto-mapping feature to make the process of map
 
 The Bodea marketer checks that all field groups are appropriately mapped and continues the sources setup process by initializing a dataflow. By creating a dataflow to bring in source data, incoming data can be used by downstream Experience Platform services. During the initial ingestion process, data is brought into Experience Platform as a batch. After this, subsequent ingested data is then streamed into Profile with near-real-time updates.
 
+>[!IMPORTANT]
+>
+>After ingesting the B2B data, you **must** enable batch segmentation (scheduled segmentation) and create at least one account audience (relational audience) to activate B2B data visibility and navigation. Without completing these steps, neither account nor opportunity data will be appear in the user interface.
+
 ## Create an audience to evaluate your data
 
 The next task is to create an audience for Bodea's new email marketing campaign based on specific attributes from related entities in the source data. Within the Experience Platform UI, the Bodea marketer first selects **[!UICONTROL Segments]** in the left navigation, then **[!UICONTROL Create segment]**.
