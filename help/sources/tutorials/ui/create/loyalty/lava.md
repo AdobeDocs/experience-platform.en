@@ -8,100 +8,9 @@ hide: true
 
 This tutorial provides steps for creating a [!DNL LAVA.ai] source connector using the Experience Platform user interface.
 
-## Overview
-
-[LAVA](https://lava.ai/) is a customer engagement platform. [!DNL LAVA] integrates with your ticketing, point of sales, mobile app and other touch points and creates moments that matter with our automation, loyalty and mobile pass solutions. 
-
 >[!IMPORTANT]
 >
->This documentation page was created by the [!DNL LAVA] team. For any inquiries or update requests, please contact them directly at info@lava.ai.
-
-The [!DNL LAVA] Source Connector can be used for several different sets of profile data and events. You can decide which are relevant for you. For each type of data you would like to stream from [!DNL LAVA] to Adobe repeat the "Connect your LAVA account" steps.
-
-
-### Member Profiles
-
-The member profile lists key profile attributes LAVA stores on a member. By using `email` as an identity field, [!DNL Adobe Real-time Customer Profiles] can stitch [!DNL LAVA] records with other Adobe profiles.
-
-| [!DNL LAVA] Source Connector Field | Sample Value                         | Description                                     |
-| ---------------------------------- | ------------------------------------ | ----------------------------------------------- |
-| `lavaId`                           | c448e091-af0f-4eab-98ff-2c758c149051 | The [!DNL LAVA] ID for the user.                |
-| `firstName`                        | John                                 | The user's first name.                          |
-| `lastName`                         | Doe                                  | The user's last name.                           |
-| `email`                            | jdoe@example.com                     | The user's email address.                       |
-| `phone`                            | +12223334444                         | The user's phone number.                        |
-| `type`                             | profile                              | An indicator for what type of record this is.   |
-| `id`                               | c448e091-af0f-4eab-98ff-2c758c149051 | A unique ID for the the record.                 |
-| `timestamp`                        | 2025-10-22T12:51:04.317084Z          | When this the profile had these attributes set. |
-
-[Sample data file download](lava_profile_sample.json).
-
-### Member Balances
-
-The member balance source lists balances of rewards your members have. `balances` is an array. When using these in audiences, content personalization, conditions and other such locations, you will often have to either select out one particular entry, repeat something for all entries, or aggregate across several entries.
-
-| [!DNL LAVA] Source Connector Field | Sample Value                         | Description                                                                                                                                                                                                                                                                                            |
-| ---------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `lavaId`                           | c448e091-af0f-4eab-98ff-2c758c149051 | The [!DNL LAVA] ID for the user.                                                                                                                                                                                                                                                                       |
-| `balances[]`                       |                                      | List of reward balances in LAVA. A balance is an instance of a reward with a specific expiration. If a member has some amount of reward expiring on date A and some amount of the same reward expiring on date B, they will be recorded as separate balances. See balanceSummaries for an aggregation. |
-| `balances[].amount`                | 500                                  | The amount of reward items in this balance. For stored value, this is in the lowest unit of denomination (cents).                                                                                                                                                                                      |
-| `balances[].expiresAt`             | 2025-10-22T12:51:04.317084Z          | When this balance expires.                                                                                                                                                                                                                                                                             |
-| `balances[].rewardId`              | 123                                  | The ID for a [!DNL LAVA] reward. This never changes for a given reward.                                                                                                                                                                                                                                |
-| `balances[].rewardName`            | F&B Credit                           | The name for the reward configured in the [!DNL LAVA] Moment Activation Console. This can be changed.                                                                                                                                                                                                  |
-| `balances[].rewardSlug`            | Credit                               | The primary slug for the reward configured in the [!DNL LAVA] Moment Activation Console. This can be changed.                                                                                                                                                                                          |
-| `balances[].rewardType`            | stored                               | The type of reward (access, offer, points, stored or voucher)                                                                                                                                                                                                                                          |
-| `type`                             | rewards                              | An indicator for what type of record this is.                                                                                                                                                                                                                                                          |
-| `id`                               | 8fefe232-0375-4d56-a24c-d009e9d351e8 | A unique ID for the the record.                                                                                                                                                                                                                                                                        |
-| `timestamp`                        | 2025-10-22T12:51:04.317084Z          | When this data was recorded.                                                                                                                                                                                                                                                                           |
-
-[Sample data file download](lava_balance_sample.json).
-
-### Ticket Scan Events
-
-| [!DNL LAVA] Source Connector Field | Sample Value                         | Description                                                     |
-| ---------------------------------- | ------------------------------------ | --------------------------------------------------------------- |
-| `lavaId`                           | aff0ee5f-da62-4054-8cdb-076f5b60bfc3 | The [!DNL LAVA] ID for the user who scanned the ticket.         |
-| `eventId`                          | 1234                                 | Identifier for an event provided by a ticketing service.        |
-| `eventName`                        | GRE1234A                             | The event name provided by the ticketing service.               |
-| `eventLabel`                       | Green Vs Blue                        | Description of an event as provided by the ticketing provider.  |
-| `venue`                            | ABC                                  | Venue code used by the ticketing provider.                      |
-| `venueLabel`                       | ABC Stadium                          | Description of the venue as provided by the ticketing provider. |
-| `section`                          | GA4                                  | Seating section on the scanned ticket.                          |
-| `sectionLabel`                     | General                              | A label for the section provided by the ticketing provider.     |
-| `row`                              | GA3                                  | Row on the scanned ticket.                                      |
-| `seat`                             | 13                                   | Seat on the scanned ticket.                                     |
-| `gate`                             | TEAM ST1                             | gate on the scanned ticket.                                     |
-| `gateLabel`                        | General                              | A label for the gate provided by the ticket provider.           |
-| `type`                             | event-ticketscan                     | An indicator for what type of record this is.                   |
-| `id`                               | 1234567/GRE1234A/GA4/GA3/13/0        | A unique ID for the ticket scan event.                          |
-| `timestamp`                        | 2025-11-03T01:41:00Z                 | When the ticket scan occurred.                                  |
-
-[Sample data file download](lava_ticketscan_sample.json).
-
-## Prerequisites
-
-To use this source connector you must:
-
-* Be an existing [!DNL LAVA] customer with Adobe export entitlement.
-* Have an account on the [LAVA Console](https://app.lava.ai/) with "[!UICONTROL Administrator]" or "[!UICONTROL Export Manager]" role.
-* (Recommended) Have sandbox manager permission in Adobe Experience Cloud.
-
-## (Recommended) Load the [!DNL LAVA] package
-
-[!DNL LAVA] provides a package that includes our recommended field groups, schemas, identity namespace and datasets for using [!DNL LAVA] in Adobe Experience Platform. Using these is not required.
-
-To load these packages, in the Experience Platform UI, select **[!UICONTROL Sandboxes]** from the left navigation bar to access the [!UICONTROL Sandboxes] workspace. The [!UICONTROL Packages] screen displays available packages. Click [!UICONTROL Create package] and [!UICONTROL Paste package payload] and paste in
-
-```json
-{
-  "imsOrgId": "1EF71E43679AAD1E0A495C77@AdobeOrg",
-  "packageId": "416a0c2a32794092aa1a957cbe9a6698"
-}
-```
-
-For more information on loading the package, see the [package sharing tutorial](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs#create-a-new-package-using-a-package-payload).
-
-Once the package is created, select it and click [!UICONTROL Import Package] in the "..." menu. For more imformation on importing the package, see [the sandbox tooling guide](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling#import-entire-sandbox-package)
+>This documentation page was created by the [!DNL LAVA] team. For any inquiries or update requests, please contact them directly at [info@lava.ai](mailto:info@lava.ai).
 
 ## Connect your [!DNL LAVA] account
 
@@ -144,42 +53,45 @@ The [!UICONTROL Mapping] step appears, providing you with an interface to map th
 
 If you are using [!DNL LAVA]'s provided schema, we recommended the following mapping:
 
-For member profiles:
+>[!BEGINTABS]
+
+>[!TAB Member Profiles]
 
 | [!DNL LAVA] Source Connector Field | [!DNL LAVA] Profile Schema Field |
-| ---------------------------------- | -------------------------------- |
-| `lavaId`                           | `_tenant.lavaId`                 |
-| `firstName`                        | `person.name.firstName`          |
-| `lastName`                         | `person.name.lastName`           |
-| `email`                            | `personalEmail.address`          |
-| `phone`                            | `mobilePhone.number`             |
+| --- | --- |
+| `lavaId` | `_tenant.lavaId` |
+| `firstName` | `person.name.firstName` |
+| `lastName` | `person.name.lastName` |
+| `email` | `personalEmail.address` |
+| `phone` | `mobilePhone.number` |
 
-For member balances:
+>[!TAB Member Balances]
 
 | [!DNL LAVA] Source Connector Field | [!DNL LAVA] Profile Schema Field |
-| ---------------------------------- | -------------------------------- |
-| `lavaId`                           | `_tenant.lavaId`                 |
-| `balances[]`                       | `_tenant.balances[]`             |
+| --- | --- |
+| `lavaId` | `_tenant.lavaId` |
+| `balances[]` | `_tenant.balances[]` |
 
-For ticket scan events:
+>[!TAB Ticket Scan Events]
 
-| [!DNL LAVA] Source Connector Field                                                        | [!DNL LAVA] Event Schema Field    |
-| ----------------------------------------------------------------------------------------- | --------------------------------- |
-| calculated field `to_map("LavaId",to_array(false,to_object("id",lavaId,"primary",true)))` | `identityMap`                     |
-| `eventId`                                                                                 | `_tenant.ticketScan.eventId`      |
-| `eventName`                                                                               | `_tenant.ticketScan.eventName`    |
-| `eventLabel`                                                                              | `_tenant.ticketScan.eventLabel`   |
-| `venue`                                                                                   | `_tenant.ticketScan.venue`        |
-| `venueLabel`                                                                              | `_tenant.ticketScan.venueLabel`   |
-| `section`                                                                                 | `_tenant.ticketScan.section`      |
-| `sectionLabel`                                                                            | `_tenant.ticketScan.sectionLabel` |
-| `row`                                                                                     | `_tenant.ticketScan.row`          |
-| `seat`                                                                                    | `_tenant.ticketScan.seat`         |
-| `gate`                                                                                    | `_tenant.ticketScan.gate`         |
-| `gateLabel`                                                                               | `_tenant.ticketScan.gateLabel`    |
-| `type`                                                                                    | `eventType`                       |
-| `timestamp`                                                                               | `timestamp`                       |
+| [!DNL LAVA] Source Connector Field | [!DNL LAVA] Event Schema Field |
+| --- | --- |
+| calculated field `to_map("LavaId",to_array(false,to_object("id",lavaId,"primary",true)))` | `identityMap` |
+| `eventId` | `_tenant.ticketScan.eventId` |
+| `eventName` | `_tenant.ticketScan.eventName` |
+| `eventLabel` | `_tenant.ticketScan.eventLabel` |
+| `venue` | `_tenant.ticketScan.venue` |
+| `venueLabel` | `_tenant.ticketScan.venueLabel` |
+| `section` | `_tenant.ticketScan.section` |
+| `sectionLabel` | `_tenant.ticketScan.sectionLabel` |
+| `row` | `_tenant.ticketScan.row` |
+| `seat` | `_tenant.ticketScan.seat` |
+| `gate` | `_tenant.ticketScan.gate` |
+| `gateLabel` | `_tenant.ticketScan.gateLabel` |
+| `type` | `eventType` |
+| `timestamp` | `timestamp` |
 
+>[!ENDTABS]
 
 Alternatively, you can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
