@@ -3,6 +3,19 @@ title: Customer.io Source Overview
 description: Learn how to connect Customer.io to Adobe Experience Platform using APIs or the user interface by leveraging webhooks
 badge: Beta
 exl-id: 0f4ee106-c22b-465c-9c5e-83709e8424f5
+TQID: https://experienceleague.adobe.com/xO-8cbLN-U2NLLi5ChDaKnNNaGpNZxHIV9FYkITxkw8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
 ---
 # [!DNL Customer.io]
 

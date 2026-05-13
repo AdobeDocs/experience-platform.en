@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Explore an Advertising System Using the Flow Service API
 description: Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable. This tutorial uses the Flow Service API to explore advertising systems.
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
+TQID: https://experienceleague.adobe.com/D-5QZa41FqhL6hvGzA9gqIOsWJsYCxq5-auweRCnfOk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Explore an advertising system using the [!DNL Flow Service] API
 

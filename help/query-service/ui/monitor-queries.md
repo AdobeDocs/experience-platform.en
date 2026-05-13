@@ -2,6 +2,15 @@
 title: Monitor Scheduled Queries
 description: Learn how to monitor queries through the Query Service UI.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
+TQID: https://experienceleague.adobe.com/w0AEwVkNeV5Bls6rqmVrb-67dUePifYsaxg8odpQLQE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Monitor scheduled queries
 

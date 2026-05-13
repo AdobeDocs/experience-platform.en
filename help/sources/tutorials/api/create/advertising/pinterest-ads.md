@@ -4,6 +4,13 @@ description: Learn how to connect Adobe Experience Platform to Pinterest Ads usi
 badge: Beta
 hide: true
 exl-id: 293a3ec9-38ea-4b71-a923-1f4e28a41236
+TQID: https://experienceleague.adobe.com/cxTTKeEFwJ0gZFMhv0TcOKsf6y2-CDpA4rcmI5-Lk58
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a source connection and dataflow for [!DNL Pinterest Ads] using the [!DNL Flow Service] API
 

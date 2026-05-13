@@ -2,6 +2,13 @@
 title: Provider Class
 description: Learn about the Provider class in Experience Data Model (XDM).
 exl-id: acb9b8a3-f911-49c5-9d2a-3a0d6aeebef9
+TQID: https://experienceleague.adobe.com/D6d4ICCmnIq95CldmroXFy-GmYPMIJjDtr85znlH7to
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Provider] class
 

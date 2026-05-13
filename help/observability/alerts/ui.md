@@ -4,6 +4,19 @@ title: Alerts UI Guide
 description: Learn how to manage alerts in the Experience Platform user interface.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
+TQID: https://experienceleague.adobe.com/X1LmSIA3VvcE4j6XH2p4oRKZwDVz24HPuRwwqijiPHU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Alerts UI guide
 

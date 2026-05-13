@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Shopify Source Connector Overview
 description: Learn how to connect Shopify to Adobe Experience Platform using APIs or the user interface.
 exl-id: 636b31a7-e5f9-434a-acd1-226096522495
+TQID: https://experienceleague.adobe.com/jQm1yV7duOKceC-5mGXjVahXqF6UwZZ5MES-VUb1vvI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL Shopify] connector
 

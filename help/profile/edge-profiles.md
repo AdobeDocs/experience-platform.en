@@ -2,6 +2,25 @@
 title: Edge Profiles
 description: Learn about edge profiles, as well as related terminology, available regions for edge profiles, as well as available services for edge profiles.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
+TQID: https://experienceleague.adobe.com/dJIlhuP0Mmueznbg2BVa203uleBLaMAjLX5gkCOHICM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # Edge profiles
 

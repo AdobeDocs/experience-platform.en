@@ -2,6 +2,26 @@
 title: Salesforce Source Connector Overview
 description: Learn how to connect Salesforce to Adobe Experience Platform using APIs or the user interface.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
+TQID: https://experienceleague.adobe.com/WLjE4nEG-EVBlqpx4VBmvHed6uprWNmhZJuGqFZ3I0g
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+subfeature_v2:
+  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+    internal-label: B2B
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 ---
 # [!DNL Salesforce]
 

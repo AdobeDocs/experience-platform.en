@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Audit Log API Endpoint
 description: The /auditlog endpoint in the Schema Registry API allows you to retrieve a chronological list of changes that have been made to an existing XDM resource.
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
+TQID: https://experienceleague.adobe.com/AfEinzGCnILUsnkIdlbFyKB70HIIwF9zjLdQCB-UEag
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Audit log endpoint
 

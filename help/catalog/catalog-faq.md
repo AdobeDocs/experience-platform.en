@@ -3,6 +3,23 @@ keywords: catalog service; questions; frequently asked questions; faq; datasets 
 title: Frequently asked questions
 description: Answers to the most frequently asked questions about Adobe Experience Platform Catalog Service and datasets.
 exl-id: 70d2a352-75bd-4bbc-98e6-aeea16306f63
+TQID: https://experienceleague.adobe.com/-i6RsPnqixtyC2sdzhoXw-MLbnnmqqGUMMHTmq3XJvE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Frequently asked questions {#faq}
 

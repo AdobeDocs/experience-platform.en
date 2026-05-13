@@ -2,6 +2,20 @@
 description: This page provides all the information you need to submit a productized destination for review when authored using Destination SDK.
 title: Submit a productized destination for review
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
+TQID: https://experienceleague.adobe.com/k89G2gOl6kPgWHdC9MlhheDeJEt-ujTy-nIpgcwM9Zc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Submit a productized destination for review
 

@@ -2,6 +2,16 @@
 title: SFTP Source Connector Overview
 description: Learn how to connect an SFTP server to Adobe Experience Platform using APIs or the user interface.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
+TQID: https://experienceleague.adobe.com/t2GzTNYjViYzDAd4NA8SNIyD8UV-7jcHhhrvvi625Gk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # SFTP connector
 

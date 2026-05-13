@@ -2,6 +2,18 @@
 description: Learn how to configure destination server specs in Adobe Experience Platform Destination SDK via the `/authoring/destination-servers` endpoint.
 title: Server specs for destinations created with Destination SDK
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
+TQID: https://experienceleague.adobe.com/b5tA04VgOSrzrzn-WfVgCP8ayZXPv9wMQbpMH7JUbHw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Server specs for destinations created with Destination SDK
 

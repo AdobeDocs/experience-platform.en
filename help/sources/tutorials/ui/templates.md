@@ -1,8 +1,18 @@
 ---
 description: Learn how to use templates in the Adobe Experience Platform UI to accelerate your data ingestion process for B2B data.
 title: Create a sources dataflow using templates in the UI
-badge1: "Beta"
+badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
+TQID: https://experienceleague.adobe.com/lQ3pu73KNg5lIXXqxXMIypdvKS51HyiRPlT-TK3Qh4c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a sources dataflow using templates in the UI {#create-a-sources-dataflow-using-templates-in-the-ui}
 

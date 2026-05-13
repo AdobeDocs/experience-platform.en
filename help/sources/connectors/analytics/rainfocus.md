@@ -1,9 +1,22 @@
 ---
 title: RainFocus source overview
 description: Learn how to bring event management and analytics data from your RainFocus account to Experience Platform
-last-substantial-update: 2023-06-21
+last-substantial-update: 2023-06-21T00:00:00.000Z
 badge: Beta
 exl-id: 88e333e3-2b93-4d66-8412-efadea58ac46
+TQID: https://experienceleague.adobe.com/olP6fi0NQZKb4kQcDLgJvHqBV72QX56-af7BMPddSms
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+    internal-label: Audience segmentation
 ---
 # [!DNL RainFocus]
 

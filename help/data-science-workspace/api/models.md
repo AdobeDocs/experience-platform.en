@@ -5,6 +5,19 @@ title: Models API Endpoint
 description: A model is an instance of a machine learning recipe that is trained using historical data and configurations to solve for a business use case.
 role: Developer
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
+TQID: https://experienceleague.adobe.com/mPaSRE4XUkupJvVrH5lw3oUXS0-UrVZa6QQVN3tNCPc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Models endpoint
 

@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Geo Circle Data Type
 description: Learn about the Geo Circle XDM data type.
 exl-id: fa041f4f-9955-44e9-b235-a643e07d402c
+TQID: https://experienceleague.adobe.com/HyRugrJeTrQHUiCVGvvXlzt91lQebXNttDx7ye4dohs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # [!UICONTROL Geo Circle] data type
 

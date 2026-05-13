@@ -4,6 +4,22 @@ solution: Experience Platform
 title: Experience Platform Documentation Overview
 description: Adobe Experience Platform documentation is provided in multiple formats, including overviews, tutorials, and guides for both the user interface and API. Here is a brief description of the most common documentation types that are available for Experience Platform services.
 exl-id: 1c201d42-4a53-4076-9363-a89dddbd0ba5
+TQID: https://experienceleague.adobe.com/j6VJOkZCL4Y-NMePC0U3lViEZX-a32-E2AqB7SbiJXE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Experience Platform documentation overview
 

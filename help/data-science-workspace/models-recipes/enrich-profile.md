@@ -5,6 +5,30 @@ title: Enrich Real-Time Customer Profile with Machine Learning Insights
 type: Tutorial
 description: This document provides a guide on how to enrich Real-Time Customer Profile with machine learning insights.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
+TQID: https://experienceleague.adobe.com/N7JMlkEuiEAqw2AZO3SuzmSoPQIYxNyI9d12cZopGyI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Enrich [!DNL Real-Time Customer Profile] with machine learning insights
 

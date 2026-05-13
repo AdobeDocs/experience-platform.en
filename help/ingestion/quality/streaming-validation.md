@@ -5,6 +5,18 @@ title: Streaming Ingestion Validation
 type: Tutorial
 description: Streaming ingestion allows you to upload your data to Adobe Experience Platform using streaming endpoints in real time. Streaming ingestion APIs support two modes of validation - synchronous and asynchronous.
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
+TQID: https://experienceleague.adobe.com/ZoZWx4l4uuWPr-mgTcbnGafkn6p4K0XADyme-wmS3kk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Streaming ingestion validation
 

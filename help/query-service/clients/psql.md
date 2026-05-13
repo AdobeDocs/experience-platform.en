@@ -4,6 +4,15 @@ solution: Experience Platform
 title: Connect PSQL to Query Service
 description: Learn how to connect the PSQL client to Adobe Experience Platform Query Service, including supported PostgreSQL versions and setup instructions.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
+TQID: https://experienceleague.adobe.com/RqOocxtvDgcplcIAuISBiFusNpdOjAxPdFaypSEq6EQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Connect PSQL to Query Service
 

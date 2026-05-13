@@ -2,6 +2,13 @@
 title: Migrate ECID Mapping From Person to Activity Using The Marketo Engage source
 description: Learn how to migrate your ECID mapping from the person dataset to the activity dataset using the Marketo Engage source.
 exl-id: bcc91c53-aeca-4d7c-89b5-cf025d0357a0
+TQID: https://experienceleague.adobe.com/SoKZ0Cg-VzZ-ooMrTYiun62RQnglkhMM-DonNSjc6Ac
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Migrate ECID mapping from [!DNL Person] dataset to [!DNL Activity] dataset
 

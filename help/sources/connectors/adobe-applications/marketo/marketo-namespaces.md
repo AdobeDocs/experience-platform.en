@@ -2,6 +2,16 @@
 title: B2B namespaces and schemas
 description: This document provides an overview of custom namespaces required when creating a B2B source connector.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
+TQID: https://experienceleague.adobe.com/fpS9jKlXKvJ7K9tx7n26Z3j2IojojimoP0zoenb5YU8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # B2B namespaces and schemas
 

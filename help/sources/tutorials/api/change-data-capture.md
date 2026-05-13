@@ -2,6 +2,16 @@
 title: Enable change data capture for source connections in the API
 description: Learn how to enable change data capture for source connections in the API
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
+TQID: https://experienceleague.adobe.com/9bn3tG2S9UUvOXuf8TY6LgQDDqexyxnCbbpaXdYKgVA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+    internal-label: Data modeling
 ---
 # Enable change data capture for source connections in the API
 

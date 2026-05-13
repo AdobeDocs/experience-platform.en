@@ -2,6 +2,21 @@
 title: Manage Suggested Values in the API
 description: Learn how to add suggested values to a string field in the Schema Registry API.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
+TQID: https://experienceleague.adobe.com/ZFUjIljLTwbivMqKMrt75sd-zL0KRkG7lmSyS8LjNuw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: fe06da76-5b92-43de-9bda-c5c9c01b55e8
+    internal-label: Segmentation UI
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Manage suggested values in the API
 

@@ -1,8 +1,21 @@
 ---
 title: SugarCRM Source Overview
 description: Learn how to connect SugarCRM to Adobe Experience Platform using APIs or the user interface.
-last-substantial-update: 2023-08-23
+last-substantial-update: 2023-08-23T00:00:00.000Z
 exl-id: 03fbc4e9-974d-494e-8463-756c96665fd5
+TQID: https://experienceleague.adobe.com/qG7LEnygjU69oZVCXgOZmZyI6sfBOp4TbnlbbxEh0WE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
 ---
 # [!DNL SugarCRM]
 
