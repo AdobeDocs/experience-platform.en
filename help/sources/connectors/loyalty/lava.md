@@ -104,7 +104,7 @@ After the package is created, select the ellipses (`...`) to open menu and selec
 
 ## Next steps
 
-The [!DNL LAVA] source connector ingests member profiles, reward balances, and ticket scan events into Adobe Experience Platform. Plan for the listed prerequisites, map and extend schemas using the field reference tables and sample JSON files, and optionally import [!DNL LAVA]'s recommended package into a sandbox before you create connections and dataflows.
+The [!DNL LAVA] source connector ingests member profiles, reward balances, and ticket scan events into Experience Platform. Plan for the listed prerequisites, map and extend schemas using the field reference tables and sample JSON files, and optionally import [!DNL LAVA]'s recommended package into a sandbox before you create connections and dataflows.
 
 For step-by-step setup:
 
