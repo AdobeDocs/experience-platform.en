@@ -110,22 +110,22 @@ More information about edge segmentation can be found in the [edge segmentation 
 
 The **[!UICONTROL Evaluation]** tab displays a list of schedules available for segmentation in your organization. This page displays both the system-created schedule and user-created schedules for your organization.
 
+![](/help/segmentation/images/ui/overview/evaluation.png)
+
 - **System-created schedule**: The daily schedule for batch segmentation that is created by the Experience Platform system. Every sandbox has only **one** system created schedule.
 - **User-created schedule**: A schedule for batch segmentation that you created. The user-crated lets you evaluate your specified audiences on a daily, weekly, or monthly cadence.
 
-IMAGE
-
 On the **[!UICONTROL Evaluation]** screen, you can see a list of schedules that are available to use in your organization, including details such as the schedule's title, state, type, scheduled run time, next run, and assigned audiences.
 
-IMAGE
+![The batch schedules, including both system and custom schedules, are displayed.](/help/segmentation/images/ui/overview/schedules.png)
 
-Aside from viewing the system-created schedules, you create your own user-created schedule. Select **Create schedule** to open the **Create schedule** module.
+Aside from viewing the system-created schedules, you create your own user-created schedule. Select **[!UICONTROL Create schedule]** to open the **[!UICONTROL Create schedule]** popover.
 
-IMAGE
+![The Create schedule button is highlighted.](/help/segmentation/images/ui/overview/create-schedule.png)
 
-Within the **Create schedule** module, you can add details for your schedule.
+Within the **[!UICONTROL Create schedule]** popover, you can add details for your schedule.
 
-IMAGE
+![The Create schedule popover is displayed.](/help/segmentation/images/ui/overview/create-schedule-dialog.png)
 
 | Field | Description |
 | ----- | ----------- |
