@@ -17,7 +17,33 @@ Using secure API access to your [!DNL Shopify] store, you can set up the connect
 
 By centralizing your [!DNL Shopify] data through scheduled batch jobs, the [!DNL Shopify] (batch) source connector helps you create a dependable foundation for insights and experience orchestration, while reducing the operational effort required to keep your data up to date.
 
-The documentation below provides information on how to connect [!DNL Shopify] to Experience Platform using APIs or the user interface:
+## Prerequisites {#prerequisites}
+
+### Gather required credentials
+
+To connect your [!DNL Shopify] account to Experience Platform, you can use either **basic authentication** or an **access token based**. Make sure you have the following credentials ready:
+
+>[!BEGINTABS]
+
+>[!TAB Basic authentication]
+
+| Credential | Description |
+| --- | --- |
+| `host` | The end point of your [!DNL Shopify] server. |
+| `accessToken` | The access token for your [!DNL Shopify] user account. |
+| `connectionSpec.id` | (**API only**) The `connectionSpec.id` is required when creating connections via API. For [!DNL Shopify], use: `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. This value specifies the connector type and its supported authentication methods. |
+
+For more information about getting started, refer to this [Shopify authentication document](https://shopify.dev/concepts/about-apis/authentication).
+
+>[!TAB Access token based]
+
+| Credential | Description |
+| --- | --- |
+| `host` | The end point of your [!DNL Shopify] server. |
+| `accessToken` | The access token for your [!DNL Shopify] user account. |
+| `connectionSpec.id` | (**API only**) The `connectionSpec.id` is required when creating connections via API. For [!DNL Shopify], use: `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. This value specifies the connector type and its supported authentication methods. |
+
+>[!ENDTABS]
 
 ## Connect [!DNL Shopify] to Experience Platform using APIs
 
@@ -32,7 +58,7 @@ The documentation below provides information on how to connect [!DNL Shopify] to
 
 ## Limitations
 
-The following columns are not supported in **Table** mode:
+Preview is not supported for the following columns. As a workaround, mappings for these fields can be created using the API.
 
 - `amountSpent`
 - `totalPriceSet`
@@ -41,223 +67,3 @@ The following columns are not supported in **Table** mode:
 - `lineItems.sku`
 - `transactions.formattedGateway`
 - `variants.sku`
-
-You must use **Query** mode in order to support these columns.
-
-### Customers
-
-View the following for examples of queries for the Customers table.
-
->[!BEGINTABS]
-
->[!TAB Basic Query]
-
-```graphql
-query customers {
-  customers(first: 10) {
-    edges {
-      node {
-        id
-        firstName
-        lastName
-        defaultEmailAddress {
-          emailAddress
-          marketingState
-        }
-        defaultPhoneNumber {
-          marketingState
-        }
-        amountSpent {
-          amount
-          currencyCode
-        }
-        numberOfOrders
-      }
-    }
-    pageInfo {
-      endCursor
-      hasNextPage
-    }
-  }
-}
-```
-
->[!TAB With filters]
-
-```graphql
-query customers {
-  customers(first: 250, query: "first_name:John* AND orders_count:>3") {
-    edges {
-      node {
-        id
-        firstName
-        lastName
-        defaultEmailAddress {
-          emailAddress
-          marketingState
-        }
-        defaultPhoneNumber {
-          marketingState
-        }
-        amountSpent {
-          amount
-          currencyCode
-        }
-        numberOfOrders
-      }
-    }
-    pageInfo {
-      endCursor
-      hasNextPage
-    }
-  }
-}
-```
-
->[!ENDTABS]
-
-### Orders
-
-View the following for an example query for the Orders table.
-
-#### Basic query
-
-```graphql
-query orders {
-  orders(first: 250) {
-    edges {
-      node {
-        name
-        email
-        displayFinancialStatus
-        totalPriceSet {
-          presentmentMoney {
-            amount
-            currencyCode
-          }
-          shopMoney {
-            amount
-            currencyCode
-          }
-        }
-        discountCode
-        createdAt
-        billingAddress {
-          address1
-          address2
-          city
-          zip
-          province
-          countryCodeV2
-        }
-        shippingAddress {
-          address1
-          address2
-          zip
-          province
-          countryCodeV2
-        }
-        transactions {
-          formattedGateway
-        }
-        lineItems(first: 250) {
-          edges {
-            node {
-              quantity
-              name
-              sku
-            }
-          }
-          pageInfo {
-            endCursor
-            hasNextPage
-          }
-        }
-      }
-    }
-    pageInfo {
-      endCursor
-      hasNextPage
-    }
-  }
-}
-```
-
-### Products
-
-View the following for examples of queries for the Products table.
-
->[!BEGINTABS]
-
->[!TAB Basic Query]
-
-```graphql
-query products {
-  products(first: 250) {
-    edges {
-      node {
-        title
-        createdAt
-        variants(first: 250) {
-          edges {
-            node {
-              sku
-            }
-          }
-        }
-      }
-    }
-    pageInfo {
-      hasNextPage
-      endCursor
-    }
-  }
-}
-```
-
->[!TAB With filters]
-
-```graphql
-query products {
-  products(
-    first: 250
-    query: "created_at:>='2025-07-07T00:00:00Z' created_at:<='2025-07-31T23:59:59Z'"
-  ) {
-    edges {
-      node {
-        title
-        createdAt
-        variants(first: 250) {
-          edges {
-            node {
-              sku
-            }
-          }
-        }
-      }
-    }
-    pageInfo {
-      hasNextPage
-      endCursor
-    }
-  }
-}
-```
-
->[!ENDTABS]
-
-### Filter support
-
-Filters are supported in queries. Use filters on any fields to s
-
-### Pagination support
-
-Pagination is only supported on the top-level resource you query (the "outer" table). For example, if you request products and include variants for each product, products are considered the outer table and variants are nested within them. You can include as many nested tables as required in your query, but only the outer table—such as products in this case—supports pagination.
-
-[!DNL Shopify] limits the number of items returned per page to 250. This means that for any requested table or nested table, you can retrieve up to 250 records in a single query. If there are more than 250 items in the outer table, you can use pagination to fetch additional pages of results for that table.
-
-Currently, pagination is not supported for nested tables. However, this rarely poses an issue. Nested tables (for example, product variants in a products query) typically contain fewer than 250 records for each outer table entry. In practice, if you filter and structure your queries appropriately, the lack of pagination on nested data should not be a limitation.
-
-When constructing your queries, think of the relationship between outer and nested tables as similar to an inner join in SQL: for each item in the outer table, any related nested data is included up to the maximum page size.
-
-If you anticipate nested tables might occasionally exceed this limit, consider filtering or restructuring your queries to manage the data volume.

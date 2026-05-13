@@ -1,8 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;Shopify;shopify;ecommerce
-solution: Experience Platform
 title: Create a Shopify connector Base Connection Using the Flow Service API
-type: Tutorial
 description: Learn how to connect Shopify to Adobe Experience Platform using the Flow Service API.
 exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
 ---
@@ -10,28 +8,19 @@ exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL Shopify] (hereinafter referred to as "[!DNL Shopify]") using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read this guide to learn how to create a base connection for the [!DNL Shopify] source connector using the
+[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [[!DNL Sources]](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
-* [[!DNL Sandboxes]](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Experience Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
-
-The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Shopify] using the [!DNL Flow Service] API.
+* [[!DNL Sources]](../../../../home.md): Use Sources to easily bring in data from a variety of external systems and platforms. This feature enables you to organize, label, and enrich your incoming data so you can get more value from it using Experience Platform services.
+* [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Sandboxes let you safely experiment, test, and develop digital experiences by providing separate spaces within your Experience Platform instance—so you can make changes without impacting your production environment.
 
 ### Gather required credentials
 
-In order for [!DNL Flow Service] to connect with [!DNL Shopify], you must provide values for the following connection properties:
-
-| Credential | Description |
-| ---------- | ----------- |
-| `host` | The end point of your [!DNL Shopify] server. |
-| `accessToken` | The access token for your [!DNL Shopify] user account. |
-| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Shopify] is: `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. |
-
-For more information about getting started, refer to this [Shopify authentication document](https://shopify.dev/concepts/about-apis/authentication).
+You must have valid [!DNL Shopify] authentication credentials to create a base connection. For details on the required credentials and how to obtain them, refer to the [[!DNL Shopify] source connector overview](../../../../connectors/ecommerce/shopify.md#prerequisites).
 
 ### Using Experience Platform APIs
 
@@ -49,33 +38,35 @@ To create a base connection ID, make a POST request to the `/connections` endpoi
 POST /connections
 ```
 
-**Request**
+### Basic authentication
 
-The following request creates a base connection for [!DNL Shopify]:
+The following request creates a base connection for [!DNL Shopify] using basic authentication:
+
++++Request
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Shopify source",
-        "description": "Shopify source",
-        "auth": {
-            "specName": "Basic Authentication",
-            "params": {
-                "host": "{HOST}",
-                "accessToken": "{ACCESS_TOKEN}"
-            }
-        },
-        "connectionSpec": {
-            "id": "4f63aa36-bd48-4e33-bb83-49fbcd11c708",
-            "version": "1.0"
-        }
-    }
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Shopify source",
+      "description": "Shopify source",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "host": "{HOST}",
+              "accessToken": "{ACCESS_TOKEN}"
+          }
+      },
+      "connectionSpec": {
+          "id": "4f63aa36-bd48-4e33-bb83-49fbcd11c708",
+          "version": "1.0"
+      }
+  }
 ```
 
 | Property | Description |
@@ -84,7 +75,9 @@ curl -X POST \
 | `auth.params.accessToken` | The access token for your [!DNL Shopify] user account. |
 | `connectionSpec.id` | The [!DNL Shopify] connection specification ID: `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. |
 
-**Response**
++++
+
++++Response
 
 A successful response returns the newly created connection, including its unique connection identifier (`id`). This ID is required to explore your data in the next tutorial.
 
@@ -94,6 +87,60 @@ A successful response returns the newly created connection, including its unique
     "etag": "\"d600d3ae-0000-0200-0000-5fa99a3d0000\""
 }
 ```
+
++++
+
+### Access token based
+
+The following request creates a base connection for [!DNL Shopify] using basic authentication:
+
++++Request
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Create shopify v2 Test Connection",
+    "description": "Connection creation for Shopify",
+    "auth": {
+      "specName": "Access Token Based",
+      "params": {
+        "host": "{HOST}",
+        "accessToken": "{ACCESS_TOKEN}"
+      }
+    },
+    "connectionSpec": {
+      "id": "4f63aa36-bd48-4e33-bb83-49fbcd11c708",
+      "version": "1.0"
+    }
+}'
+```
+
+| Property | Description |
+| --------- | ----------- |
+| `auth.params.host` | The endpoint of the [!DNL Shopify] server. |
+| `auth.params.accessToken` | The access token for your [!DNL Shopify] user account. |
+| `connectionSpec.id` | The [!DNL Shopify] connection specification ID: `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. |
+
++++
+
++++Response
+
+A successful response returns the newly created connection, including its unique connection identifier (`id`). This ID is required to explore your data in the next tutorial.
+
+```json
+{
+    "id": "92a00150-f3cc-4283-8fc4-6232725bcf33",
+    "etag": "\"bb04d1f7-0000-0200-0000-69807e830000\""
+}
+```
+
++++
 
 ## Next steps
 
