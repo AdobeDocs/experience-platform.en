@@ -653,6 +653,8 @@ Select **[!UICONTROL Next]** to move to the [Review](#review) step.
 
 When exporting [!UICONTROL Custom upload] audiences to cloud storage destinations with JSON or [!DNL Parquet] output and [hierarchical output enabled](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle), you can export complex data structures, including selected fields from arrays of objects, as enrichment attributes.
 
+![The Select enrichment attributes dialog showing the Hierarchical output enabled banner and the two-column Source and Target mapping interface.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attribute-array.png)
+
 The enrichment attributes step shows a two-column mapping interface:
 
 * **[!UICONTROL Source field]**: the full schema path, which may include a calculated `transformArray` expression when the selected field is inside an array.
