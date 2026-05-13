@@ -119,7 +119,19 @@ On the **[!UICONTROL Evaluation]** screen, you can see a list of schedules that 
 
 ![The batch schedules, including both system and custom schedules, are displayed.](/help/segmentation/images/ui/overview/schedules.png)
 
-Aside from viewing the system-created schedules, you create your own user-created schedule. Select **[!UICONTROL Create schedule]** to open the **[!UICONTROL Create schedule]** popover.
+Next to each schedule is an ellipsis icon. Selecting this displays a list of available quick actions for the schedules.
+
+![The quick actions available for schedules are displayed.](/help/segmentation/images/ui/overview/schedule-quick-actions.png)
+
+| Action | Description |
+| ------ | ----------- |
+| [!UICONTROL Run schedule] | A popover appears to confirm if you want to run the schedule. If you select **[!UICONTROL Start]**, the schedule immediately starts to run. |
+| [!UICONTROL Schedule audiences] | Opens a popover that lets you add audiences to the schedule. You can **only** use this quick action for custom schedules. For more information, read the [schedule audiences section](#schedule-audiences). |
+| [!UICONTROL Edit] | The **[!UICONTROL Edit schedule]** popover appears, letting you edit the schedule. |
+| [!UICONTROL Disable] | Disables the schedule. Disabling a schedule will pause all future runs. However, the settings will be saved and can be reactivated anytime. |
+| [!UICONTROL Delete] | Deletes the schedule. Deleting a schedule permanently removes the schedule from your organization. You can **only** use this quick action for custom schedules. |
+
+You create your own user-created schedule by selecting **[!UICONTROL Create schedule]**. This opens the **[!UICONTROL Create schedule]** popover.
 
 ![The Create schedule button is highlighted.](/help/segmentation/images/ui/overview/create-schedule.png)
 
@@ -133,6 +145,14 @@ Within the **[!UICONTROL Create schedule]** popover, you can add details for you
 | Cadence | How often the schedule will run. This can be **Daily**, **Weekly**, **Monthly**, or **Advanced**. |
 | Repeat every day(s) | This field **only** shows up if your cadence is set to daily. This determines after how many days you want your schedule to repeat. |
 | Time | This field determines what time the schedule will run. |
+
+### Schedule audiences {#schedule-audiences}
+
+If you select **[!UICONTROL Schedule audiences]**, the **[!UICONTROL Schedule audiences]** popover appears. 
+
+![The Schedule audiences popover is displayed.](/help/segmentation/images/ui/overview/schedule-audiences.png)
+
+On this page, you can select which audiences you want to be activated by the schedule.
 
 ## Policy violations
 
