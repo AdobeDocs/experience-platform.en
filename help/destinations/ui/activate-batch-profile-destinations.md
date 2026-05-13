@@ -638,22 +638,23 @@ Select **[!UICONTROL Next]** to move to the [Review](#review) step.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_enrichment_attributes_info_alert"
->title="Hierarchical output enabled"
->abstract="This destination supports hierarchical output because the Enable export of arrays, maps, and objects toggle is on. You can export top-level arrays, array elements, or multiple fields from the same array in one mapping. See the documentation for details."
+>title="Export arrays and complex objects enabled"
+>abstract="This destination supports exporting arrays and complex objects because the Export arrays, maps, and objects toggle is on. You can export top-level arrays, array elements, or multiple fields from the same array in one mapping. See the documentation for details."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_enrichment_attributes_source_field"
 >title="Source field"
 >abstract="Select an enrichment attribute to export. For fields inside an array, the source auto-populates with a transform expression. To export multiple fields in one mapping, add one field first, then edit the source expression. See the documentation for details."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-multiple-array-fields" text="Export multiple fields from an array"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_enrichment_attributes_target_field"
 >title="Target field"
 >abstract="The target field auto-populates with the source field name. Edit it to use a different alias if you want the field to have a different name in your exported files."
 
-When exporting [!UICONTROL Custom upload] audiences to cloud storage destinations with JSON or [!DNL Parquet] output and [hierarchical output enabled](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle), you can export complex data structures, including selected fields from arrays of objects, as enrichment attributes.
+When exporting audiences to cloud storage destinations with JSON or [!DNL Parquet] output and the [**[!UICONTROL Export arrays, maps, and objects]** toggle enabled](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle), you can export complex data structures, including selected fields from arrays of objects, as enrichment attributes.
 
-![The Select enrichment attributes dialog showing the Hierarchical output enabled banner and the two-column Source and Target mapping interface.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attribute-array.png)
+![The Select enrichment attributes dialog showing the Export arrays and complex objects enabled banner and the two-column Source and Target mapping interface.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attribute-array.png)
 
 The enrichment attributes step shows a two-column mapping interface:
 
@@ -663,8 +664,8 @@ The enrichment attributes step shows a two-column mapping interface:
 This functionality is available only when all three conditions are met:
 
 * The destination connection has file type set to JSON or [!DNL Parquet].
-* The destination connection has hierarchical output enabled.
-* You are activating a [!UICONTROL Custom upload] audience.
+* The destination connection has the **[!UICONTROL Export arrays, maps, and objects]** toggle set *on*.
+* The audience you are activating originates from outside of the [!DNL Segmentation Service]. This includes audiences such as [Audience Composition](/help/segmentation/ui/audience-composition.md) audiences, look-alike audiences, federated audiences, audiences generated in other [!DNL Experience Platform] apps such as [!DNL Adobe Journey Optimizer], and more. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize).
 
 #### Export a single field from an array {#export-single-array-field}
 
