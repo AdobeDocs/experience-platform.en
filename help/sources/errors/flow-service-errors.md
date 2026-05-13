@@ -22,7 +22,7 @@ The following table outlines errors regarding internal validation in Flow Servic
 | `1104-504` | Gateway Timeout | A gateway timeout has occurred. Please try again. If the problem persists, please contact customer support. |
 | `1400-500` | Internal Error | An internal error has occurred. Please try again. If the problem persists, please contact customer support. |
 | `1401-400` | Invalid request | The limit and count parameters cannot be given together in the same request. Please provide either only the limit or the count parameter and try again. |
-| `1402-400` | Invalid request | The action 'finalize' is supported for provider requests only. | 
+| `1402-400` | Invalid request | The action 'finalize' is supported for provider requests only. |
 | `1403-400` | Header is missing | The header 'If-Match' is missing in the request. Please provide the header and try again. |
 | `1404-412` | Version not matching | The supplied version 'v1' does not match the current version on entity 'cc01fc2c-0000-0200'. Please ensure that the supplied version matches the current version on entity and try again. |
 | `1405-400` | Invalid request | The request body cannot be null or empty. Please provide a request body and try again. |
@@ -31,7 +31,7 @@ The following table outlines errors regarding internal validation in Flow Servic
 | `1408-400` | Invalid request | The percent-completed should be 100 for the completed or failed states. Please update the percent-completed and try again. |
 | `1409-400` | Invalid request | The operation 'finalize' cannot be applied on the current state enabled-finalizing. Please update the operation and try again. |
 | `1410-400` | Invalid request | `State` is not allowed in the create flow request. |
-| `1411-400` | Invalid request | Unable to retrieve entityId. Invalid request received with path 'baseConnections/123'. | 
+| `1411-400` | Invalid request | Unable to retrieve entityId. Invalid request received with path 'baseConnections/123'. |
 | `1412-400` | Invalid request | Invalid Mapping Version in request. Please provide correct mapping version. |
 | `1413-400` | Invalid request | The spec ID provided is  invalid. Please provide a valid spec ID and try again. |
 | `1414-400` | Invalid request | The connection spec of a connection cannot be updated. |
@@ -94,7 +94,7 @@ The following table outlines errors regarding verification of the user token for
 | `2002-401` | Header is missing | The header x-gw-ims-org-id is missing in the request. Please update the header value and try again. |
 | `2100-404` | Sandbox not found | The sandbox with the name 'dev' could not be found. Please ensure that the sandbox name is correct and try again. |
 | `2101-404` | Sandbox not found | The sandbox with the name 'dev' could not be found. Error from Sandbox Management API: Sandbox with name 'dev' not present. Please check if resource exists. |
-| `2102-500` | Get sandbox by name error | There was a problem retrieving a sandbox with the name 'dev'. Error from Sandbox Management API: Something went wrong. Please try again. | 
+| `2102-500` | Get sandbox by name error | There was a problem retrieving a sandbox with the name 'dev'. Error from Sandbox Management API: Something went wrong. Please try again. |
 | `2103-404` | Sandbox not found | The sandbox with ID 8da3ef09-b469-404a and name dev could not be found. Please ensure that the ID and sandbox name values are correct and try again. |
 | `2104-500` | Get sandbox by identifier error | There was a problem retrieving a sandbox with id '8da3ef09-b469-404a' and name 'dev'. Error from Sandbox Management API: Something went wrong. Please try again. |
 | `2105-400` | Header is missing | The header x-sandbox-name is missing in the request. Please add the header in the request and try again. |
@@ -106,7 +106,7 @@ The following table outlines errors regarding verification of the user token for
 | `2112-400` | Headers with different value not allowed | The headers x-sandbox-name and x-sandbox-id both must have the value * for cross sandbox query. Please update the headers and try again. |
 | `2113-400` | Headers with value not allowed | The headers x-sandbox-id and x-sandbox-name with value * are not allowed for the request. Please update the headers and try again. |
 | `2114-400` | Empty token | Empty token provided. Please provide a token and try again. |
-| `2115-400` | Invalid token | Invalid token provided. Please provide a valid token and try again. | 
+| `2115-400` | Invalid token | Invalid token provided. Please provide a valid token and try again. |
 | `2116-500` | Internal Error | An internal error has occurred during offline decoding of bearer token for scope resolution. |
 | `2117-500` | Internal Error | An internal error has occurred while checking permissions for user. Please try again. If the problem persists, please contact customer support. |
 | `2118-403` | Missing permission | The permission write is missing. Please contact your administrator to resolve permissions and try again. |

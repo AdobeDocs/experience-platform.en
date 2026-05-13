@@ -4,7 +4,6 @@ solution: Experience Platform
 title: ECID Overview
 description: The Experience Cloud Identifier (ECID) is the client side module providing access to identity management, serving three primary functions.
 hide: true
-hidefromtoc: true
 exl-id: da7717d2-da2e-414b-978d-2eab8ff2c5a0
 ---
 # ECID overview

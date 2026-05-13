@@ -420,7 +420,7 @@ A successful response returns HTTP status 200 with information about the dataset
 | `365days` | The number of records that will remain in the dataset after a data expiration of 365 days.  |
 | `60days` | The number of records that will remain in the dataset after a data expiration of 60 days.  |
 | `7days` | The number of records that will remain in the dataset after a data expiration of 7 days.  |
-| `90days` | The number of records that will remain in the dataset after a data expiration of 90 days.  | 
+| `90days` | The number of records that will remain in the dataset after a data expiration of 90 days.  |
 | `datasetId` | The ID of the dataset. |
 | `datasetType` | The dataset type. This value can be either `Profiles` or `ExperienceEvents`. |
 | `percentEvents` | The percentage of Experience Events records that are within the dataset. |

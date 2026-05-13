@@ -64,7 +64,7 @@ Use the [permissions UI](../access-control/abac/ui/roles.md) to grant permission
 
 ![The permissions UI page with the Enable AI Assistant (Legacy) and View Operational Insights permissions included in a given role.](./images/access/access-permissions.png)
 
-Once you have the necessary permissions, you can access AI Assistant (Legacy) by selecting the AI Assistant (Legacy) icon on the top header of the application that you are using.
+Once you have the necessary permissions, you can access AI Assistant (Legacy) by selecting the ![AI Assistant (Legacy)](/help/images/icons/ai-assistant.png) icon on the top header of the application that you are using.
 
 ![AI Assistant (Legacy) with first-time user experience.](./images/access/access-home.png)
 

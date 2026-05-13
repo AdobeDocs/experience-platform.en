@@ -20,7 +20,7 @@ For a detailed description of the capabilities used by destination servers, read
 
 ## Getting started with destination server API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Retrieve a destination server configuration {#retrieve}
 
@@ -163,6 +163,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | -------- | ----------- |
 | `{INSTANCE_ID}` | The ID of the destination server configuration you want to retrieve. |
 
+{style="table-layout:auto"}
+
 +++
 
 +++Response
@@ -215,7 +217,7 @@ A successful response returns HTTP status 200 with the configuration of the dest
 
 ## API error handling {#error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps {#next-steps}
 

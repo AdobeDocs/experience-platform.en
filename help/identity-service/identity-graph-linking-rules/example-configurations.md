@@ -234,7 +234,7 @@ You are ingesting both an unhashed (offline) CRMID and a hashed (online) CRMID. 
 Configure the following settings in the Graph Simulation interface before you simulate your graph.
 
 | Display name | Identity symbol | Identity type | Unique per graph | Namespace priority |
-| --- | --- | --- | --- | --- | 
+| --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | CRMIDhash | CRMIDhash | CROSS_DEVICE | ✔️ | 2 |
 | ECID | ECID | COOKIE | | 3 |
@@ -275,6 +275,7 @@ CRMID: Jane, CRMIDhash: aaaa
 ![A shared device graph with an error in the hashing process, leading to a non-unique hashed CRMID.](../images/configs/intermediate/hashing-error.png)
 
 >[!ENDTABS]
+
 <!-- 
 ### Use case: You are using Real-Time CDP and Adobe Commerce
 
@@ -333,7 +334,8 @@ Email: jane@g, ECID: 111
 
 ![A graph that displays a member and a guest who share a device.](../images/configs/intermediate/shared-device-member-and-guest.png)
 
->[!ENDTABS] -->
+>[!ENDTABS] 
+-->
 
 ### Use case: Your data includes three unique namespaces
 
@@ -502,7 +504,7 @@ Configure the following settings in the Graph Simulation interface before you si
 
 | Display name | Identity symbol | Identity type | Unique per graph | Namespace priority |
 | --- | --- | --- | --- | --- |
-| CRMID | CRMID | CROSS_DEVICE |  ✔️  | 1 | 
+| CRMID | CRMID | CROSS_DEVICE |  ✔️  | 1 |
 | loyaltyID | loyaltyID | CROSS_DEVICE |   ✔️  | 2 |
 | Email | Email | Email |  ✔️   | 3 |
 | thirdPartyID | thirdPartyID | CROSS_DEVICE | | 4 |

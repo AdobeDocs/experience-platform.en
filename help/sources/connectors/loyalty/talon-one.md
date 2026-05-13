@@ -2,8 +2,7 @@
 title: Talon.One Source Overview
 description: Learn about the Talon.One sources on Adobe Experience Platform
 badge: Beta
-hide: true
-hidefromtoc: true
+last-substantial-update: 2026-04-06
 exl-id: 92ed180a-6175-45e2-a831-0f40fd8606b0
 ---
 # [!DNL Talon.One]
@@ -36,7 +35,29 @@ Provide values for the following credentials to authenticate and connect the [!D
 
 To help you map each effect object based on its unique `effectType` value, you can use the data prep `array_to_map` function. This allows you to easily convert an unordered array of effects into key-value pairs that match your requirements. See the example below for guidance.
 
-| Source  | Destination |
+You can also use the standardized loyalty field groups that Adobe provides to model your loyalty-program concepts in a consistent way. 
+
+>[!BEGINTABS]
+
+>[!TAB Loyalty Details]
+
+This is a standard XDM field group for XDM Individual Profile, used to describe the loyalty membership status of a person by capturing their record attributes, rather than event data. Use this field group in your Profile schemas to capture:
+
+* **Who** the member is in the program (`loyaltyID`, `program`, `status`, `tier`)
+* Their **current & lifetime balances** (`points`, `lifetimePoints`, `expiredPoints`, etc.)
+* Key **membership dates** (`joinDate`, `upgradeDate`, `tierExpiryDate`)
+
+>[!TAB Loyalty Event Details]
+
+The Loyalty Event Details field group is designed to capture loyalty activity at the event level, such as points earned or redeemed in a specific transaction. This field group includes fields like `xdm:points`, `xdm:pointsRedeemed`, `xdm:pointsAsOfDate`, and `xdm:program`. Use this event-level field group in your Experience Event schemas to capture:
+
+* **Per‑event movements** in points (gained, redeemed, expired)
+* **Discounts** that were driven by loyalty coupons or referrals
+* **Program IDs** and transaction IDs for reconciliation with the loyalty provider.
+
+>[!ENDTABS]
+
+| Source | Destination |
 | ---- | --- |
 | `array_to_map(data.effects, "effectType").addLoyaltyPoints.campaignId` | `_{TENANT_ID}.loyalty.pointsGained[0].promotionId` |
 | `array_to_map(data.effects, "effectType").addLoyaltyPoints.props.value`| `_{TENANT_ID}.loyalty.pointsGained[0].value` |

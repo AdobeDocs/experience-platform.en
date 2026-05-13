@@ -2,8 +2,7 @@
 title: Contact Point Data Type
 description: Learn about the Contact Point Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+hide: true
 exl-id: bbb9a5e1-b0d5-4c07-93a9-c1573dacad73
 ---
 # [!UICONTROL Contact Point] data type

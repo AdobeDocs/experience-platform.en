@@ -1,7 +1,7 @@
 ---
-title: IP address allow list for file-based cloud storage destinations
+title: IP address allowlist for file-based cloud storage destinations
 type: Documentation
-description: This page provides IP ranges that you can add to your allow list, to safely export data from Experience Platform to cloud storage destinations.
+description: This page provides IP ranges that you can add to your allowlist, to safely export data from Experience Platform to cloud storage destinations.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 ---
 # IP address allowlist for file-based cloud storage destinations {#ip-address-allow-list-cloud-storage}

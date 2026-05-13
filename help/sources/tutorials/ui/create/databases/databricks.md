@@ -1,17 +1,13 @@
 ---
 title: Connect Databricks To Experience Platform Using The UI
 description: Learn how to connect Databricks to Experience Platform using the user interface.
-badgeUltimate: label="Ultimate" type="Positive"
-badgeBeta: label="Beta" type="Informative"
 exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
 ---
 # Connect [!DNL Databricks] to Experience Platform in the UI
 
 >[!AVAILABILITY]
 >
->* The [!DNL Databricks] source is available in the sources catalog to users who have purchased Real-Time CDP Ultimate.
->
->* The [!DNL Databricks] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
+>The [!DNL Databricks] source is available in the sources catalog to users who have purchased Real-Time CDP Ultimate.
 
 Read this guide to learn how to connect your [!DNL Databricks] account to Adobe Experience Platform using the sources workspace in the UI.
 

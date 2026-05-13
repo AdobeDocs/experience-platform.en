@@ -89,7 +89,7 @@ After selection, additional controls appear to further configure the event. You 
 
 **[!UICONTROL Conversion Data]**
 
-| Field name | Description | Example | Required | 
+| Field name | Description | Example | Required |
 | --- | --- | --- | --- |
 | [!UICONTROL Conversion Time] | Date-time as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. | 2022-02-18T01:14:00.603Z | Yes |
 | [!UICONTROL Event Id] | The base-36 ID of a specific event. This Id should match a pre-configured event contained within your [!DNL Twitter] ad account. This is known as the ID for the corresponding event in Events Manager. | o87ne or tw-o8z6j-o87ne (tw-pixel_id-event-id) | Yes |

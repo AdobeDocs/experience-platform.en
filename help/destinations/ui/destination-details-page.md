@@ -8,7 +8,7 @@ exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
 
 ## Overview {#overview}
 
-In the Adobe Experience Platform user interface, you can view and monitor the attributes and activities of your destinations. These details include the destination's name and ID, controls to activate or disable the destinations, and more. Details also include metrics for activated profile records, identities activated, failed, and excluded, and a history of dataflow runs.
+In the [!DNL Adobe Experience Platform] user interface, you can view and monitor the attributes and activities of your destinations. These details include the destination's name and ID, controls to activate or disable the destinations, and more. Details also include metrics for activated profile records, identities activated, failed, and excluded, and a history of dataflow runs.
 
 >[!NOTE]
 >
@@ -18,7 +18,7 @@ In the Adobe Experience Platform user interface, you can view and monitor the at
 
 Follow the steps below to view more details about an existing destination. You can find out the destination ID of a destination, the user who created the destination, when it was created, and other information.
 
-1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destinations.
+1. Go to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destinations.
 
     ![Browse destinations](../assets/ui/details-page/browse-destinations.png)
 
@@ -49,9 +49,9 @@ The following table covers the controls and details provided by the right rail:
 | Right rail item | Description |
 | --- | --- |
 | [!UICONTROL Activate audiences] | Select this control to edit which audiences are mapped to the destination, update export schedules, or add and remove mapped attributes and identities. See the guides on [activating audience data to audience streaming destinations](./activate-segment-streaming-destinations.md), [activating audience data to batch profile-based destinations](./activate-batch-profile-destinations.md), and [activating audience data to streaming profile-based destinations](./activate-streaming-profile-destinations.md) for more information. |
-| [!UICONTROL Delete] | Allows you to delete this dataflow and unmaps the audiences that were previously activated, if any exist. |
-| [!UICONTROL Destination name] | This field can be edited in order to update the destination's name. |
-| [!UICONTROL Description] |  This field can be edited in order to update or add an optional description to the destination. |
+| [!UICONTROL Delete] | Deletes this dataflow and unmaps any previously activated audiences. |
+| [!UICONTROL Destination name] | This field can be edited to update the destination's name. |
+| [!UICONTROL Description] |  This field can be edited to update or add an optional description to the destination. |
 | [!UICONTROL Destination] | Represents the destination platform that audiences are sent to. See the [destinations catalog](../catalog/overview.md) for more information. |
 | [!UICONTROL Status] | Indicates whether the destination is enabled or disabled. |
 | [!UICONTROL Marketing actions] | Indicates the marketing actions (use cases) that apply for this destination for data-governance purposes. |
@@ -152,7 +152,7 @@ To edit the existing activation schedule of multiple audiences at the same time,
 
 >[!NOTE]
 >
->For details on exploring the details page of a audience, refer to the [Audience Portal overview](../../segmentation/ui/audience-portal.md#segment-details).
+>For details on the audience details page, see the [Audience Portal overview](../../segmentation/ui/audience-portal.md#audience-details).
 
 ### Edit file names for multiple audiences exported to batch destinations {#bulk-edit-file-names}
 

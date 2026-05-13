@@ -8,11 +8,13 @@ exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 Use Adobe Experience Platform Dashboards to expedite insights and customize visualization through the Dashboards feature. Use this feature to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics relevant to your organization.
 
 
-<!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
+<!-- 
+Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
 ## Getting started
 
-To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
+To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. 
+-->
 
 ## Create a custom dashboard
 
@@ -22,10 +24,12 @@ To create a custom dashboard, first, navigate to the dashboard inventory. Select
 
 Before adding a custom dashboard, the dashboards inventory is empty and displays a "No dashboards found." message. Once created, all of your dashboards are listed in the dashboard inventory. 
 
-<!-- >[!NOTE]
+<!-- 
+>[!NOTE]
 >
 >To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](/help/images/icons/edit.png))
->![A custom inventory listed in the dashboard inventory.](./images/standard-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
+>![A custom inventory listed in the dashboard inventory.](./images/standard-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} 
+-->
 
 The [!UICONTROL Create dashboard] dialog appears. Enter a human-friendly, descriptive name for the collection of widgets you intend to create, and select **[!UICONTROL Save]**.
 

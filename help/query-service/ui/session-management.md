@@ -7,13 +7,13 @@ exl-id: f986177a-9a46-4fc6-927e-98b6b7dc8cfe
 ---
 # Manage Query Service sessions
 
+>[!AVAILABILITY]
+>
+>Session management for Query Service is only available to organizations with **Data Distiller** entitlements. To request access, contact your Adobe Account Team.
+
 Use this guide to manage active Query Service sessions from the Adobe Experience Platform user interface. Session management helps administrators monitor concurrent Query Editor sessions across sandboxes and free capacity when users leave sessions open.
 
 ## Permissions required for session management {#permissions} 
-
->[!AVAILABILITY]
->
->Session management is available only to organizations with Data Distiller entitlements.
 
 >[!IMPORTANT]
 >

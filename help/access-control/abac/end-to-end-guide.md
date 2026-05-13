@@ -156,7 +156,8 @@ Confirmation of policy activation is received and you are returned to the [!UICO
 
 ![Activate policy confirmation](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
-<!-- ## Create an access control policy {#policy}
+<!-- 
+## Create an access control policy {#policy}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
@@ -231,7 +232,8 @@ Select **[!UICONTROL The following being false]** and then select **[!UICONTROL 
 
 Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears which prompts you to confirm activation. Select **[!UICONTROL Confirm]** and then select **[!UICONTROL Close]**.
 
-![Image showing the Policy being activated](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png) -->
+![Image showing the Policy being activated](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png) 
+-->
 
 ## Next steps
 

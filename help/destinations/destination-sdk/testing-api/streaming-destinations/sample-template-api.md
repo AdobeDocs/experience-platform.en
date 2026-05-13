@@ -14,7 +14,7 @@ This page lists and describes all the API operations that you can perform using 
 
 ## Getting started with sample template API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Get sample template {#generate-sample-template}
 
@@ -22,7 +22,7 @@ You can get a sample template by making a GET request to the `authoring/testing/
 
 >[!TIP]
 >
->* The destination ID that you should use here is the `instanceId` that corresponds to a destination configuration, created using the `/destinations` endpoint. Refer to the [retrieve a destination configuration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) for more details.
+>* The destination ID that you should use here is the `instanceId` that corresponds to a destination configuration, created using the `/destinations` endpoint. See the [retrieve a destination configuration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) for more details.
 
 **API format**
 
@@ -33,6 +33,8 @@ GET authoring/testing/template/sample/{DESTINATION_ID}
 | Parameter | Description |
 | -------- | ----------- |
 | `{DESTINATION_ID}` | The ID of the destination configuration for which you are generating a message transformation template. |
+
+{style="table-layout:auto"}
 
 **Request**
 
@@ -129,7 +131,7 @@ If the destination ID you provide corresponds to a destination server template w
 
 ## API error handling {#api-error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps {#next-steps}
 

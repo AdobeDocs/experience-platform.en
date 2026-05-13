@@ -552,7 +552,8 @@ You can retrieve all the ingestion runs for the selected external audience by ma
 GET /external-audience/{AUDIENCE_ID}/runs
 ```
 
-<!-- **Query parameters**
+<!-- 
+**Query parameters**
 
 +++ A list of available query parameters. 
 
@@ -562,7 +563,8 @@ GET /external-audience/{AUDIENCE_ID}/runs
 | `sortBy` | The order in which the returned items are sorted. You can sort by either `name` or by `createdAt`. Additionally, you can add a `-` sign to sort by **descending** order instead of **ascending** order. By default, the items are sorted by `createdAt` in descending order. | `sortBy=name` |
 | `property` | A filter to determine which audience ingestion runs are displayed. You can filter on the following properties: <ul><li>`name`: Lets you filter by the audience name. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li><li>`createdAt`: Lets you filter by the ingestion time. If using this property, you can compare by using `>=` or `<=`.</li><li>`status`: Lets you filter by the ingestion run's status. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li></ul>  | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
-+++ -->
++++ 
+-->
 
 **Request**
 
@@ -615,7 +617,8 @@ A successful response returns HTTP status 200 with a list of ingestion runs for 
 }
 ```
 
-<!-- ,
+<!--
+ ,
     "_page": {
         "limit": 20,
         "count": 2,
@@ -623,7 +626,8 @@ A successful response returns HTTP status 200 with a list of ingestion runs for 
     }
     
 | `_page` | Object | An object that contains the pagination information about the list of results. |
-     -->
+   
+-->
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
@@ -722,7 +726,7 @@ The following section lists the available error codes when using the external au
 
 | Platform error code | Status code | Message | Description |
 | ------------------- | ----------- | ------- | ----------- |
-| 100910-400 | 400 | `BAD_REQUEST` | A bad request has occurred, due to a failure occurring while validating the requests. | 
+| 100910-400 | 400 | `BAD_REQUEST` | A bad request has occurred, due to a failure occurring while validating the requests. |
 | 100911-400 | 400 | `BAD_REQUEST` | An invalid token is provided. |
 | 100920-401 | 401 | `UNAUTHORIZED` | A header is missing. |
 | 100921-401 | 401 | `UNAUTHORIZED` | An invalid `imsOrgId` is provided. |

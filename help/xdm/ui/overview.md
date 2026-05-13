@@ -21,6 +21,10 @@ It is also recommended that you follow the [schema creation tutorial](../tutoria
 
 ## Creating and managing XDM resources
 
+>[!NOTE]
+>
+>XDM actions are available from the inventory table and the resource detail view (**[!UICONTROL More]**). Full actions apply only to custom (tenant-defined) resources; standard resources have limited options. See [Manage schemas, classes, field groups, and data types: actions and deletion](./explore.md#xdm-resource-actions).
+
 The [!UICONTROL Schemas] workspace provides powerful tools for creating and customizing your organization's XDM resources. Refer to the following documentation to learn how to create and edit each resource type in the UI:
 
 * [Schemas](./resources/schemas.md)

@@ -2,8 +2,7 @@
 title: Healthcare Data Model V2
 description: Learn about some common healthcare use cases and the best classes, related field groups, and datatypes to use.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+hide: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
 ---
 # [!UICONTROL Healthcare] Data Model V2
@@ -26,7 +25,7 @@ The following table outlines the recommended classes and schema field groups for
 
 The following table outlines the data types created as per the [!DNL HL7 FHIR Release 5] specifications.
 
-| Name | Description | 
+| Name | Description |
 | --- | --- |
 | [[!UICONTROL Address]](./data-types/address.md) | Describes an address expressed using postal conventions (as opposed to GPS or other location definition formats). |
 | [[!UICONTROL Annotation]](./data-types/annotation.md) | A text node with attribution to the author. |

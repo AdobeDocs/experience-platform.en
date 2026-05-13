@@ -13,7 +13,7 @@ Adobe Experience Platform allows you to ingest Adobe Analytics data through the 
 
 Read the following table for information on streaming media parameters.
 
-| Data feed | XDM field path | Data type | Description | 
+| Data feed | XDM field path | Data type | Description |
 | --- | --- | --- | --- |
 | `videoname` | `mediaReporting.sessionDetails.friendlyName` | string | The friendly (human-readable) name of the video. |
 | `videoaudioauthor` | `mediaReporting.sessionDetails.author` | string | The name of the media author. |
@@ -55,8 +55,8 @@ Read the following table for information on streaming media parameters.
 | `videoresume` | `mediaReporting.sessionDetails.hasResume` | boolean | A boolean value that marks each playback that was resumed after more than 30 minutes of buffer, pause, or a stall period. |
 | `videosegmentviews` | `mediaReporting.sessionDetails.hasSegmentView` | boolean | A boolean value that indicates that at least one frame has been viewed. This frame does not have to be the first frame. |
 | `videoaudiolabel` | `mediaReporting.sessionDetails.label` | string | The name of the record label. |
-| `videoaudiostation` | `mediaReporting.sessionDetails.station` | string | The radio station or name on which  the audio is played. | 
-| `videoaudiopublisher` | `mediaReporting.sessionDetails.publisher` | string | The name of the audio content publisher. | 
+| `videoaudiostation` | `mediaReporting.sessionDetails.station` | string | The radio station or name on which  the audio is played. |
+| `videoaudiopublisher` | `mediaReporting.sessionDetails.publisher` | string | The name of the audio content publisher. |
 | `videosecondssincelastcall` | `mediaReporting.sessionDetails.secondsSinceLastCall` | number | Indicates the amount of time (in seconds) that passed between a user's last known interaction and the moment the session was closed. |
 | `videoadload` | `mediaReporting.sessionDetails.adLoad` | string | The type of ad loaded as defined by your own internal representation. |
 
@@ -66,7 +66,7 @@ Read the following table for information on streaming media parameters.
 
 Read the following table for information on advertising parameters.
 
-| Data feed | XDM field path | Data type | Description | 
+| Data feed | XDM field path | Data type | Description |
 | --- | --- | --- | --- |
 | `videoad` | `mediaReporting.advertisingDetails.name` | string | The name of the ad. In reporting, "Ad Name" is the classification and "Ad Name (variable)" is the eVar. |
 | `videoadinpod` | `mediaReporting.advertisingDetails.podPosition` | integer  | The index of the ad inside the parent ad start. For example, the first ad has index 0 and the second ad has index 1. |
@@ -86,7 +86,7 @@ Read the following table for information on advertising parameters.
 
 Read the following table for information on chapter parameters.
 
-| Data feed | XDM field path | Data type | Description | 
+| Data feed | XDM field path | Data type | Description |
 | --- | --- | --- | --- |
 | `videochapter` | `mediaReporting.chapterDetails.ID` | string | The auto-generated ID of the chapter. |
 | `videochapterstart` | `mediaReporting.chapterDetails.isStarted` | boolean | A boolean value that indicates whether or not the chapter has been started. |
@@ -99,7 +99,7 @@ Read the following table for information on chapter parameters.
 
 Read the following table for information on player state parameters.
 
-| Data feed | XDM field path | Data type | Description | 
+| Data feed | XDM field path | Data type | Description |
 | --- | --- | --- | --- |
 | `videostatefullscreen` | `mediaReporting.states[].isSet` | boolean | A boolean value that indicates whether or not the video state is set to full screen. |
 | `videostatefullscreencount` | `mediaReporting.states[].count` | integer | The number of times that a video state was set to full screen. |
@@ -123,7 +123,7 @@ Read the following table for information on player state parameters.
 
 Read the following table for information on quality parameters.
 
-| Data feed | XDM field path | Data type | Description | 
+| Data feed | XDM field path | Data type | Description |
 | --- | --- | --- | --- |
 | `videoqoebitrateaverage` | `mediaReporting.qoeDataDetails.bitrateAverage` | number | The average bitrate (in kbps, integer). This metric is computed as a weighted average of all bitrate values related to the play duration that occurred during a playback session. |
 | `videoqoebitratechange` | `mediaReporting.qoeDataDetails.hasBitrateChangeImpactedStreams` | boolean | A boolean value that indicates the number of streams in which bitrate changes occurred. This metric is set to true only if at least one bitrate change event occurred during a playback session. |
@@ -221,7 +221,7 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 | `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Object | Custom Analytics props, configured to be list props. It contains a delimited list of values. `{}` |
 | `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Object | Used by hierarchy variables. It contains a delimited list of values. `{values (array), delimiter (string)}` |
 | `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | Custom Analytics list variables. Contains a delimited list of values.  `{value (string), key (string)}` |
-| `m_color` | `device.colorDepth` | integer | The color depth ID, which is based off the value of the c_color column. | 
+| `m_color` | `device.colorDepth` | integer | The color depth ID, which is based off the value of the c_color column. |
 | `m_cookies` | `environment.browserDetails.cookiesEnabled` | boolean | A variable used in the Cookie Support dimension. |
 | `m_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Object | Standard commerce events triggered on the hit. `{id (string), value (number)}` |
 | `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Custom events triggered on the hit. `{id (Object), value (Object)}` |
@@ -292,9 +292,9 @@ To learn more about performing these transformations using Query Service, see [A
 +++Select to view a table of deprecated advanced mapping fields
 
 | Data feed | XDM field | XDM type | Description |
-| --- | --- | --- | --- ||
+| --- | --- | --- | --- |
 | `post_evar1`<br/>`[...]`<br/>`post_evar250` | `_experience.analytics.customDimensions.`<br/>`eVars.eVar1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`eVars.eVar250` | string | Custom Analytics eVars. Each organization can use eVars differently. |
-| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | string | Custom Analytics props. Each organization can use props differently. | 
+| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | string | Custom Analytics props. Each organization can use props differently. |
 | `post_browser_height` | `environment.browserDetails.viewportHeight` | integer | The height of the browser, in pixels. |
 | `post_browser_width` | `environment.browserDetails.viewportWidth` | integer | The width of the browser, in pixels. |
 | `post_campaign` | `marketing.trackingCode` | string | The variable used in the Tracking Code dimension. |
@@ -318,28 +318,28 @@ To learn more about performing these transformations using Query Service, see [A
 | `geo_region` | `placeContext.geo.stateProvince` | string | The name of either the state or region of the hit. This is based off the hit's IP address. |
 | `geo_zip` | `placeContext.geo.postalCode` | string | The ZIP code of the hit. This is based off the hit's IP address. |
 | `os` | `_experience.analytics.environment.`<br/>`operatingSystemID` | integer | The numeric ID representing the operating system of the visitor. This is based on the user_agent column. |
-| `search_page_num` | `search.pageDepth` | integer | This variable is used by the All Search Page Rank dimension, and indicates which page of search results your site | appeared on before the user clicked through to your site. |
+| `search_page_num` | `search.pageDepth` | integer | This variable is used by the All Search Page Rank dimension, and indicates which page of search results your site \| appeared on before the user clicked through to your site. |
 | `visit_keywords` | `_experience.analytics.session.`<br/>`search.keywords` | string | A variable used in the Search Keywords dimension. |
 | `visit_num` | `_experience.analytics.session.`<br/>`num` | integer | A variable used in the Visit Number dimension. This starts at 1, and increments each time a new visit starts (per user). |
 | `visit_page_num` | `_experience.analytics.session.`<br/>`depth` | integer | A variable used in the Hit Depth dimension. This value increases by 1 for each hit the user generates, and resets after each visit. |
 | `visit_referrer` | `_experience.analytics.session.`<br/>`web.webReferrer.URL` | string | The first referrer of the visit. |
 | `visit_search_page_num` | `_experience.analytics.session.`<br/>`search.pageDepth` | integer | The first Page Name of the visit. |
 | `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Object | Custom Analytics props, configured to be list props. It contains a delimited list of values. |
-| `post_hier1`<br/>`[...]`<br/>`post_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Object | Used by hierarchy variables and contains a delimited list of values. | {values (array), delimiter (string)} |
-| `post_mvvar1`<br/>`[...]`<br/>`post_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | A list of variable values. Contains a delimited list of custom values, depending on implementation. | {value (string), key (string)} |
+| `post_hier1`<br/>`[...]`<br/>`post_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Object | Used by hierarchy variables and contains a delimited list of values. \| `{values (array), delimiter (string)}` |
+| `post_mvvar1`<br/>`[...]`<br/>`post_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | A list of variable values. Contains a delimited list of custom values, depending on implementation. \| `{value (string), key (string)}` |
 | `post_cookies` | `environment.browserDetails.cookiesEnabled` | boolean | Variable used in the Cookie Support dimension. |
-| `post_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Object | Standard commerce events triggered on the hit. | {id (string), value (number)} |
-| `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Custom events triggered on the hit.| {id (Object), value (Object)} |
+| `post_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Object | Standard commerce events triggered on the hit. \| `{id (string), value (number)}` |
+| `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Custom events triggered on the hit.\| `{id (Object), value (Object)}` |
 | `post_java_enabled` | `environment.browserDetails.javaEnabled` | boolean | A flag indicating whether Java&trade; is enabled. |
 | `post_latitude` | `placeContext.geo._schema.latitude` | number |   |
-| `post_longitude` | `placeContext.geo._schema.longitude` | number |   | 
+| `post_longitude` | `placeContext.geo._schema.longitude` | number |   |
 | `post_page_event` | `web.webInteraction.type` | string | The type of hit that is sent in the image request (standard hit, download link, exit link, or custom link clicked). |
 | `post_page_event` | `web.webInteraction.linkClicks.value` | number | Equals 1 if the hit is a link click. This is similar to the Page Events metric in Adobe Analytics. |
 | `post_page_event_var1` | `web.webInteraction.URL` | string | This variable is only used in link tracking image requests. It is the URL of the download link, exit link, or custom link clicked. |
 | `post_page_event_var2` | `web.webInteraction.name` | string | This variable is only used in link tracking image requests. It is the custom name of the link. |
 | `post_page_type` | `web.webPageDetails.isErrorPage` | boolean | This is used to populate the Pages Not Found dimension. This variable should either be empty or contain "ErrorPage" |
 | `post_pagename_no_url` | `web.webPageDetails.name` | number | The name of the page (if set). If no page is specified, this value is left empty. |
-| `post_product_list` | `productListItems[].items` | array | The product list, as passed in through the products variable. | {SKU (string), quantity (integer), priceTotal (number)} |
+| `post_product_list` | `productListItems[].items` | array | The product list, as passed in through the products variable. \| `{SKU (string), quantity (integer), priceTotal (number)}` |
 | `post_search_engine` | `search.searchEngine` | string | The numeric ID representing the search engine that referred the visitor to your site. |
 | `mvvar1_instances` | `.list.items[]` | Object | List of variable values. Contains a delimited list of custom values, depending on implementation. |
 | `mvvar2_instances` | `.list.items[]` | Object | List of variable values. Contains a delimited list of custom values, depending on implementation. |
