@@ -2,7 +2,13 @@
 title: LAVA
 description: Learn about the LAVA source on Adobe Experience Platform
 badge: Beta
+hide: true
 ---
+# [!DNL LAVA]
+
+>[!AVAILABILITY]
+>
+>The [!DNL LAVA] source is in beta. Read the [terms and conditions](../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
 [[!DNL LAVA]](https://lava.ai/) is a customer engagement platform. [!DNL LAVA] integrates with your ticketing, point of sales, mobile app and other touch points and creates moments that matter with our automation, loyalty and mobile pass solutions. 
 

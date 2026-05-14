@@ -6,7 +6,11 @@ hide: true
 ---
 # Create a source connection and dataflow to stream [!DNL LAVA] data using the UI
 
-This tutorial provides steps for creating a [!DNL LAVA.ai] source connector using the Experience Platform user interface.
+>[!AVAILABILITY]
+>
+>The [!DNL LAVA] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
+
+Follow this step-by-step guide to help you set up your own [!DNL LAVA] source connector in the Experience Platform user interface.
 
 >[!IMPORTANT]
 >
@@ -64,7 +68,7 @@ When finished, select **[!UICONTROL Next]**.
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
-If you are using [!DNL LAVA]'s provided schema, we recommended the following mapping:
+When using [!DNL LAVA]'s provided schema, use the following recommended mapping:
 
 >[!BEGINTABS]
 
@@ -78,12 +82,16 @@ If you are using [!DNL LAVA]'s provided schema, we recommended the following map
 | `email` | `personalEmail.address` |
 | `phone` | `mobilePhone.number` |
 
+{style="table-layout:auto"}
+
 >[!TAB Member Balances]
 
 | [!DNL LAVA] Source Connector Field | [!DNL LAVA] Profile Schema Field |
 | --- | --- |
 | `lavaId` | `_tenant.lavaId` |
 | `balances[]` | `_tenant.balances[]` |
+
+{style="table-layout:auto"}
 
 >[!TAB Ticket Scan Events]
 
@@ -104,9 +112,11 @@ If you are using [!DNL LAVA]'s provided schema, we recommended the following map
 | `type` | `eventType` |
 | `timestamp` | `timestamp` |
 
+{style="table-layout:auto"}
+
 >[!ENDTABS]
 
-Alternatively, you can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+Alternatively, you can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
@@ -133,10 +143,10 @@ To retrieve your streaming endpoint, go to the [!UICONTROL Dataflow activity] pa
 
 ### Integrate [!DNL LAVA] with your webhook
 
-In the [LAVA Console](https://app.lava.ai/) navigate to **[!UICONTROL Resources > Data Export]**.
+In the [LAVA Console](https://app.lava.ai/) navigate to **[!DNL Resources > Data Export]**.
 
 ![Data export menu](../../../../images/tutorials/create/lava/data-export-menu.png)
 
-Click **[!UICONTROL Create New Export]**. Select **[!UICONTROL Adobe Source Connector]** as the destination type, and the desired source data to send. Use the streaming endpoint URL and dataflow ID.
+Select **[!DNL Create New Export]**, then choose **[!DNL Adobe Source Connector]** as the destination type. Next, select the source data you want to send and enter the streaming endpoint URL along with the dataflow ID.
 
 ![Create new export](../../../../images/tutorials/create/lava/create-export.png)

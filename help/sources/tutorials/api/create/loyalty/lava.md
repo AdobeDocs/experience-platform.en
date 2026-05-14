@@ -2,89 +2,30 @@
 title: Create a source connection and dataflow to stream LAVA data using the Flow Service API
 description: Learn how to bring streaming data from LAVA to Adobe Experience Platform using the Flow Service API.
 badge: Beta
+hide: true
 ---
 # Create a source connection and dataflow to stream [!DNL LAVA] data using the [!DNL Flow Service] API
 
-## Overview
-
-[LAVA](https://lava.ai/) is a customer engagement platform. [!DNL LAVA] integrates with your ticketing, point of sales, mobile app and other touch points and creates moments that matter with our automation, loyalty and mobile pass solutions. 
-
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->This documentation page was created by the [!DNL LAVA] team. For any inquiries or update requests, please contact them directly at info@lava.ai.
+>The [!DNL LAVA] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
-The [!DNL LAVA] Source Connector can be used for several different sets of profile data and events. You can decide which are relevant for you. For each type of data you would like to stream from [!DNL LAVA] to Adobe repeat the "Connect your LAVA account" steps.
+## Getting started
 
-### Member Profiles
+This guide requires a working understanding of the following components of Experience Platform:
 
-The member profile lists key profile attributes [!DNL LAVA] stores on a member. By using `email` as an identity field, Adobe Real-time Customer Profiles can stitch [!DNL LAVA] records with other Adobe profiles.
+* [Sources](../../../../home.md): Use Sources in Experience Platform to easily bring in data from a variety of systems. Sources help you gather, organize, and prepare your data so you can make the most of Experience Platform's capabilities.
+* [Sandboxes](../../../../../sandboxes/home.md): Sandboxes let you safely build, test, and experiment in Experience Platform without affecting your production data. They create separate environments so you can try things out, develop new features, or collaborate with your team risk-free.
 
-| [!DNL LAVA] Source Connector Field | Sample Value                         | Description                                     |
-| ---------------------------------- | ------------------------------------ | ----------------------------------------------- |
-| `lavaId`                           | c448e091-af0f-4eab-98ff-2c758c149051 | The [!DNL LAVA] ID for the user.                |
-| `firstName`                        | John                                 | The user's first name.                          |
-| `lastName`                         | Doe                                  | The user's last name.                           |
-| `email`                            | jdoe@example.com                     | The user's email address.                       |
-| `phone`                            | +12223334444                         | The user's phone number.                        |
-| `type`                             | profile                              | An indicator for what type of record this is.   |
-| `id`                               | c448e091-af0f-4eab-98ff-2c758c149051 | A unique ID for the the record.                 |
-| `timestamp`                        | 2025-10-22T12:51:04.317084Z          | When this the profile had these attributes set. |
+>[!TIP]
+>
+>Before starting this tutorial, review the [[!DNL LAVA] source connector overview](../../../../connectors/loyalty/lava.md) to make sure you meet all prerequisites.
 
-[Download sample profile JSON](lava_profile_sample.json).
+## Load the [!DNL LAVA] package
 
-### Member Balances
+[!DNL LAVA] provides a package that includes our recommended field groups, schemas, identity namespace and datasets for using [!DNL LAVA] in Experience Platform. Use of these packages is recommended, but not required.
 
-The member balance source lists balances of rewards your members have. `balances` is an array. When using these in audiences, content personalization, conditions and other such locations, you will often have to either select out one particular entry, repeat something for all entries, or aggregate across several entries.
-
-| [!DNL LAVA] Source Connector Field | Sample Value                         | Description                                                                                                                                                                                                                                                                                            |
-| ---------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `lavaId`                           | c448e091-af0f-4eab-98ff-2c758c149051 | The [!DNL LAVA] ID for the user.                                                                                                                                                                                                                                                                       |
-| `balances[]`                       |                                      | List of reward balances in LAVA. A balance is an instance of a reward with a specific expiration. If a member has some amount of reward expiring on date A and some amount of the same reward expiring on date B, they will be recorded as separate balances. See balanceSummaries for an aggregation. |
-| `balances[].amount`                | 500                                  | The amount of reward items in this balance. For stored value, this is in the lowest unit of denomination (cents).                                                                                                                                                                                      |
-| `balances[].expiresAt`             | 2025-10-22T12:51:04.317084Z          | When this balance expires.                                                                                                                                                                                                                                                                             |
-| `balances[].rewardId`              | 123                                  | The ID for a [!DNL LAVA] reward. This never changes for a given reward.                                                                                                                                                                                                                                |
-| `balances[].rewardName`            | F&B Credit                           | The name for the reward configured in the [!DNL LAVA] Moment Activation Console. This can be changed.                                                                                                                                                                                                  |
-| `balances[].rewardSlug`            | Credit                               | The primary slug for the reward configured in the [!DNL LAVA] Moment Activation Console. This can be changed.                                                                                                                                                                                          |
-| `balances[].rewardType`            | stored                               | The type of reward (access, offer, points, stored or voucher)                                                                                                                                                                                                                                          |
-| `type`                             | rewards                              | An indicator for what type of record this is.                                                                                                                                                                                                                                                          |
-| `id`                               | 8fefe232-0375-4d56-a24c-d009e9d351e8 | A unique ID for the the record.                                                                                                                                                                                                                                                                        |
-| `timestamp`                        | 2025-10-22T12:51:04.317084Z          | When this data was recorded.                                                                                                                                                                                                                                                                           |
-
-[Download sample member balance JSON](lava_balance_sample.json).
-
-### Ticket Scan Events
-
-| [!DNL LAVA] Source Connector Field | Sample Value                         | Description                                                     |
-| ---------------------------------- | ------------------------------------ | --------------------------------------------------------------- |
-| `lavaId`                           | aff0ee5f-da62-4054-8cdb-076f5b60bfc3 | The [!DNL LAVA] ID for the user who scanned the ticket.         |
-| `eventId`                          | 1234                                 | Identifier for an event provided by a ticketing service.        |
-| `eventName`                        | GRE1234A                             | The event name provided by the ticketing service.               |
-| `eventLabel`                       | Green Vs Blue                        | Description of an event as provided by the ticketing provider.  |
-| `venue`                            | ABC                                  | Venue code used by the ticketing provider.                      |
-| `venueLabel`                       | ABC Stadium                          | Description of the venue as provided by the ticketing provider. |
-| `section`                          | GA4                                  | Seating section on the scanned ticket.                          |
-| `sectionLabel`                     | General                              | A label for the section provided by the ticketing provider.     |
-| `row`                              | GA3                                  | Row on the scanned ticket.                                      |
-| `seat`                             | 13                                   | Seat on the scanned ticket.                                     |
-| `gate`                             | TEAM ST1                             | gate on the scanned ticket.                                     |
-| `gateLabel`                        | General                              | A label for the gate provided by the ticket provider.           |
-| `type`                             | event-ticketscan                     | An indicator for what type of record this is.                   |
-| `id`                               | 1234567/GRE1234A/GA4/GA3/13/0        | A unique ID for the ticket scan event.                          |
-| `timestamp`                        | 2025-11-03T01:41:00Z                 | When the ticket scan occurred.                                  |
-
-[Download sample ticket scan event JSON](lava_ticketscan_sample.json).
-
-## Prerequisites
-
-To use this source connector you must:
-
-* Be an existing [!DNL LAVA] customer with Adobe export entitlement.
-* Have an account on the [LAVA Console](https://app.lava.ai/) with "**[!DNL Administrator]**" or "**[!DNL Export Manager]**" role.
-* (Recommended) Have sandbox manager permission in Adobe Experience Cloud.
-
-## (Recommended) Load the [!DNL LAVA] package
-
-[!DNL LAVA] provides a package that includes our recommended field groups, schemas, identity namespace and datasets for using [!DNL LAVA] in Adobe Experience Platform. This section details how to import this into your sandbox and get the IDs required for later steps. Using the package is not required, you can instead create your own schemas and datasets.
+Read this section to learn how to import this into your sandbox and get the IDs required for later steps. 
 
 **API format**
 
@@ -113,12 +54,12 @@ curl -X POST \
 
 | Property | Description | Type | Required |
 | --- | --- | --- | --- |
-| `imsOrgId` | The id from the package's source organization. Must be `1EF71E43679AAD1E0A495C77@AdobeOrg`. | String | Yes |
-| `packageId` | The id from the package to import. Must be `416a0c2a32794092aa1a957cbe9a6698`. | String | Yes |
+| `imsOrgId` | The ID from the package's source organization. Must be `1EF71E43679AAD1E0A495C77@AdobeOrg`. | String | Yes |
+| `packageId` | The ID from the package to import. Must be `416a0c2a32794092aa1a957cbe9a6698`. | String | Yes |
 
 **Response**
 
-A succcessful response returns details on the imported public package.
+A successful response returns details on the imported public package.
 
 ```json
 {
@@ -138,6 +79,8 @@ A succcessful response returns details on the imported public package.
 }
 ```
 
+### Retrieve your schemas
+
 After importing the package, retrieve the `LAVA Events` and `LAVA Profile` schemas:
 
 **Request**
@@ -154,7 +97,7 @@ curl -X GET \
 
 **Response**
 
-A successful respons returns a list of schemas. Use these IDs as target XDM schemas below.
+A successful response returns a list of schemas. Use these IDs as target XDM schemas in a later step.
 
 ```json
 {
@@ -177,7 +120,9 @@ A successful respons returns a list of schemas. Use these IDs as target XDM sche
 }
 ```
 
-Retrieve the Dataset IDs. Use these IDs as target datasets below.
+### Retrieve your datasets
+
+Next, use the following calls to retrieve your dataset IDs.
 
 **Request**
 
@@ -280,7 +225,6 @@ A successful response returns the unique identifier (`id`) of the newly created 
 >
 >Skip this if you imported the [!DNL LAVA] package, as this includes target XDM schemas.
 
-
 In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained. If you are using multiple LAVA sets of data, for example both member balances and ticket scan events, you may want or need more than one target XDM schema.
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
@@ -291,8 +235,7 @@ For detailed steps on how to create a target XDM schema, see the tutorial on [cr
 
 >[!IMPORTANT]
 >
->Skip this if you imported the [!DNL LAVA] package, as this includes target XDM dataset. If you are using multiple LAVA sets of data, for example both member balances and ticket scan events, you may want or need more than one target dataset.
-
+>If you have already imported the [!DNL LAVA] package, you can skip this step because the package provides a target XDM dataset for you. However, if you need multiple [!DNL LAVA] datasets (such as one for member balances and another for ticket scan events), you should create additional target datasets as required.
 
 A target dataset can be created by performing a POST request to the [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/), providing the ID of the target schema within the payload.
 
@@ -302,7 +245,7 @@ For detailed steps on how to create a target dataset, see the tutorial on [creat
 
 A target connection represents the connection to the destination where the ingested data is to be stored. To create a target connection, you must provide the fixed connection specification ID that corresponds to the data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-You now have the unique identifiers a target schema a target dataset and the connection spec ID to the data lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
+You now have the unique identifiers for a target schema, a target dataset, and the connection spec ID for the data lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
 
 **API format**
 
@@ -348,7 +291,7 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | The name of your target connection. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
 | `description` | An optional value that you can include to provide more information on your target connection. |
-| `connectionSpec.id` | The connection specification ID that corresponds to data lake. This fixed ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | The connection specification ID that corresponds to the data lake. This fixed ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 | `data.format` | The format of the [!DNL LAVA] data that you want to bring to Experience Platform. |
 | `params.dataSetId` | The target dataset ID retrieved in a previous step. |
 
@@ -366,11 +309,13 @@ A successful response returns the new target connection's unique identifier (`id
 
 ### Create a mapping {#mapping}
 
-In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) with data mappings defined within the request payload.
+In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep) with data mappings defined within the request payload.
 
-If you are using [!DNL LAVA]'s provided schema, we recommended the following mapping:
+When utilizing the schema provided by [!DNL LAVA], the following mapping is recommended:
 
-For member profiles:
+>[!BEGINTABS]
+
+>[!TAB Member profiles]
 
 ```json
 {
@@ -412,7 +357,7 @@ For member profiles:
 }
 ```
 
-For member balances:
+>[!TAB Member balances]
 
 ```json
 {
@@ -436,7 +381,7 @@ For member balances:
 }
 ```
 
-For ticket scan events:
+>[!TAB Ticket scan events]
 
 ```json
 {
@@ -532,6 +477,8 @@ For ticket scan events:
   ]
 }
 ```
+
+>[!ENDTABS]
 
 
 **API format**
@@ -651,7 +598,7 @@ curl -X POST \
 | `flowSpec.version` | The corresponding version of the flow specification ID. This value defaults to `1.0`. |
 | `sourceConnectionIds` | The [source connection ID](#source-connection) generated in an earlier step. |
 | `targetConnectionIds` | The [target connection ID](#target-connection) generated in an earlier step. |
-| `transformations` | This property contains the various transformations that are needed to be applied to your data. This property is required when bringing non-XDM-compliant data to Experience Platform. |
+| `transformations` | This property contains the various transformations that need to be applied to your data. This property is required when bringing non-XDM-compliant data to Experience Platform. |
 | `transformations.name` | The name assigned to the transformation. |
 | `transformations.params.mappingId` | The [mapping ID](#mapping) generated in an earlier step. |
 | `transformations.params.mappingVersion` | The corresponding version of the mapping ID. This value defaults to `0`. |
@@ -773,19 +720,17 @@ A successful response returns information on your dataflow, including your endpo
 
 ### Integrate [!DNL LAVA] with your webhook
 
-In the [LAVA Console](https://app.lava.ai/) navigate to **[!UICONTROL Resources > Data Export]**.
+In the [LAVA Console](https://app.lava.ai/), navigate to **[!DNL Resources > Data Export]**.
 
-![Data export menu](../../../../images/tutorials/create/lava/data-export-menu.png)
+![Screenshot of the "Data Export" menu in LAVA Console](../../../../images/tutorials/create/lava/data-export-menu.png)
 
-Select **[!UICONTROL Create New Export]**. Select **[!UICONTROL Adobe Source Connector]** as the destination type, and the desired source data to send. Use the streaming endpoint URL and dataflow ID.
+Select **[!DNL Create New Export]**. Select **[!DNL Adobe Source Connector]** as the destination type, and the desired source data to send. Use the streaming endpoint URL and dataflow ID.
 
-![Create new export](../../../../images/tutorials/create/lava/create-export.png)
+![Screenshot of the "Create New Export" screen in LAVA Console](../../../../images/tutorials/create/lava/create-export.png)
 
+## Appendix
 
-
-## Appendix 
-
-The following section provides information on the steps you can to monitor, update, and delete your dataflow.
+The following section provides information on the steps you can take to monitor, update, and delete your dataflow.
 
 ### Monitor your dataflow
 
@@ -793,7 +738,7 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 ### Update your dataflow
 
-Update the details of your dataflow, such as its name and description, as well as its run schedule and associated mapping sets by making a PATCH request to the `/flows` endpoint of [!DNL Flow Service] API, while providing the ID of your dataflow. When making a PATCH request, you must provide your dataflow's unique `etag` in the `If-Match` header. For complete API examples, read the guide on [updating sources dataflows using the API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+Update the details of your dataflow, such as its name and description, as well as its run schedule and associated mapping sets by making a PATCH request to the `/flows` endpoint of the [!DNL Flow Service] API, while providing the ID of your dataflow. When making a PATCH request, you must provide your dataflow's unique `etag` in the `If-Match` header. For complete API examples, read the guide on [updating sources dataflows using the API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html).
 
 ### Update your account
 
