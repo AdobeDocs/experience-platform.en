@@ -33,7 +33,7 @@ To connect your [!DNL Shopify] account to Experience Platform, you can use eithe
 | `accessToken` | The access token for your [!DNL Shopify] user account. |
 | `connectionSpec.id` | (**API only**) The `connectionSpec.id` is required when creating connections via API. For [!DNL Shopify], use: `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. This value specifies the connector type and its supported authentication methods. |
 
-For more information about getting started, refer to this [Shopify authentication document](https://shopify.dev/concepts/about-apis/authentication).
+For more information about getting started, refer to this [[!DNL Shopify] authentication document](https://shopify.dev/concepts/about-apis/authentication).
 
 >[!TAB Access token based]
 

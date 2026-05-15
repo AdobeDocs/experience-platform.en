@@ -8,8 +8,7 @@ exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-Read this guide to learn how to create a base connection for the [!DNL Shopify] source connector using the
-[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
+Read this guide to learn how to create a base connection for the [!DNL Shopify] source connector using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 
