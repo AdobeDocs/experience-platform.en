@@ -10,7 +10,7 @@ hide: true
 >
 >The [!DNL LAVA] source is in beta. Read the [terms and conditions](../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
-[[!DNL LAVA]](https://lava.ai/) is a customer engagement platform. [!DNL LAVA] integrates with your ticketing, point of sales, mobile app and other touch points and creates moments that matter with our automation, loyalty and mobile pass solutions. 
+[[!DNL LAVA]](https://lava.ai/) is a customer engagement platform. [!DNL LAVA] integrates with your ticketing, point-of-sale, mobile app and other touch points and creates moments that matter with our automation, loyalty and mobile pass solutions. 
 
 The [!DNL LAVA] source connector can be used for several different sets of profile data and events. You can decide which are relevant for you. For each type of data you would like to stream from [!DNL LAVA] to Adobe, repeat the "Connect your LAVA account" steps.
 
@@ -58,9 +58,9 @@ Download the [sample Member Balances data file here.](../../assets/lava/lava_bal
 | `balances[].rewardId` | 123 | The ID for a [!DNL LAVA] reward. This never changes for a given reward. |
 | `balances[].rewardName` | F&B Credit | The name for the reward configured in the [!DNL LAVA] Moment Activation Console. This can be changed. |
 | `balances[].rewardSlug` | Credit | The primary slug for the reward configured in the [!DNL LAVA] Moment Activation Console. This can be changed. |
-| `balances[].rewardType` | stored | The type of reward (access, offer, points, stored or voucher) |
+| `balances[].rewardType` | stored | The type of reward (access, offer, points, stored or voucher). |
 | `type` | rewards | An indicator for what type of record this is. |
-| `id` | `8fefe232-0375-4d56-a24c-d009e9d351e8` | A unique ID for the the record. |
+| `id` | `8fefe232-0375-4d56-a24c-d009e9d351e8` | A unique ID for the record. |
 | `timestamp` | `2025-10-22T12:51:04.317084Z` | When this data was recorded. |
 
 {style="table-layout:auto"}
@@ -83,7 +83,7 @@ Download the [sample Ticket Scan Events data file here.](../../assets/lava/lava_
 | `sectionLabel` | General | A label for the section provided by the ticketing provider. |
 | `row` | GA3 | Row on the scanned ticket. |
 | `seat` | 13 | Seat on the scanned ticket. |
-| `gate` | TEAM ST1 | gate on the scanned ticket. |
+| `gate` | TEAM ST1 | Gate on the scanned ticket. |
 | `gateLabel` | General | A label for the gate provided by the ticket provider. |
 | `type` | event-ticketscan | An indicator for what type of record this is. |
 | `id` | `1234567/GRE1234A/GA4/GA3/13/0` | A unique ID for the ticket scan event. |
@@ -104,9 +104,9 @@ To load these packages, in the Experience Platform UI, select **[!UICONTROL Sand
 }
 ```
 
-For more information on loading the package, read the [package sharing tutorial](../../../sandboxes/ui/sharing-packages-across-orgs.md#create-a-new-package-using-a-package-payload)
+For more information on loading the package, read the [package sharing tutorial](../../../sandboxes/ui/sharing-packages-across-orgs.md#create-a-new-package-using-a-package-payload).
 
-After the package is created, select the ellipses (`...`) to open menu and select **[!UICONTROL Import Package]** to import the package. For more information on how to import a package, refer to the [sandbox tooling guide](../../../sandboxes/ui/sandbox-tooling.md#import-a-package-to-a-target-sandbox).
+After the package is created, select the ellipses (`...`) to open the menu and select **[!UICONTROL Import Package]** to import the package. For more information on how to import a package, refer to the [sandbox tooling guide](../../../sandboxes/ui/sandbox-tooling.md#import-a-package-to-a-target-sandbox).
 
 ## Next steps
 

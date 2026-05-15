@@ -46,7 +46,7 @@ The **[!UICONTROL Select data]** step appears, providing an interface for you to
 * The left part of the interface is a browser that allows you to view the available data streams within your account;
 * The right part of the interface lets you preview up to 100 rows of data from a JSON file.
 
-Select **[!UICONTROL Upload files]** to upload a JSON file from your local system, upload the sample file from the Overview section corresponding to the data set you are setting up. Alternatively, you can drag and drop the JSON file you want to upload into the [!UICONTROL Drag and drop files] panel.
+Select **[!UICONTROL Upload files]** to upload a JSON file from your local system, or upload the sample file from the Overview section corresponding to the dataset you are setting up. Alternatively, you can drag and drop the JSON file you want to upload into the [!UICONTROL Drag and drop files] panel.
 
 ![The add data step of the sources workflow.](../../../../images/tutorials/create/lava/add-data.png)
 
@@ -66,7 +66,7 @@ When finished, select **[!UICONTROL Next]**.
 
 ## Mapping
 
-The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
+The [!UICONTROL Mapping] step appears, providing you with an interface to map the fields from your source schema to their appropriate target XDM fields in the target schema.
 
 When using [!DNL LAVA]'s provided schema, use the following recommended mapping:
 
@@ -126,16 +126,16 @@ Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
 The **[!UICONTROL Review]** step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
 
-* **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
+* **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source file, and the number of columns within that source file.
 * **[!UICONTROL Assign dataset & map fields]**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
 
-Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
+Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
 ![The review step of the sources workflow.](../../../../images/tutorials/create/lava/review.png)
 
 ## Get your streaming endpoint URL and Dataflow ID
 
-With your streaming dataflow created, you can now retrieve your streaming endpoint URL and Dataflow ID. These will be used to configure [!DNL LAVA], allowing your streaming source to communicate with Experience Platform. 
+With your streaming dataflow created, you can now retrieve your streaming endpoint URL and Dataflow ID. These will be used to configure [!DNL LAVA], allowing your streaming source to communicate with Experience Platform.
 
 To retrieve your streaming endpoint, go to the [!UICONTROL Dataflow activity] page of the dataflow that you just created and copy the endpoint from the bottom of the [!UICONTROL Properties] panel.
 
@@ -143,7 +143,7 @@ To retrieve your streaming endpoint, go to the [!UICONTROL Dataflow activity] pa
 
 ### Integrate [!DNL LAVA] with your webhook
 
-In the [LAVA Console](https://app.lava.ai/) navigate to **[!DNL Resources > Data Export]**.
+In the [LAVA Console](https://app.lava.ai/), navigate to **[!DNL Resources > Data Export]**.
 
 ![Data export menu](../../../../images/tutorials/create/lava/data-export-menu.png)
 
