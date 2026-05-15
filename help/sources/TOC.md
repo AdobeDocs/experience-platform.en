@@ -322,7 +322,7 @@ role: Developer
       - {hide-from-toc} [Kobie Streaming Events](tutorials/ui/create/loyalty/kobie-streaming.md)
       - {hide-from-toc} [LAVA](tutorials/ui/create/loyalty/lava.md)
       - [Talon.One Streaming Events](tutorials/ui/create/loyalty/talon-one-streaming.md)
-      - [Talon.One Batch Source Connector](tutorials/ui/create/loyalty/talon-one-batch.md)
+      - [Talon.One Batch source connector](tutorials/ui/create/loyalty/talon-one-batch.md)
     - Marketing automation {#marketing-automation}
       - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
       - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
