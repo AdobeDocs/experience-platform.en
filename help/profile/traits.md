@@ -2,7 +2,6 @@
 title: Traits Overview
 description: a
 hide: true
-hidefromtoc: true
 ---
 
 # Traits overview
@@ -19,18 +18,26 @@ Currently, you can store the entire "raw event" in Profile through Experience Ev
 
 With traits, you can add "precomputed" data that is based on rules you defined. Traits are based on the conditional logic you specify, and are more storage-efficient than the raw Experience Event.
 
-Traits provide a more lightweight and efficient approach to storing profile activity. As a result, this can help maintain compliance with your profile license entitlements while preserving rich profile data activation. 
+Traits provide a more lightweight and efficient approach to storing profile activity. As a result, this can help maintain compliance with your profile license entitlements while preserving rich profile data activation. For example, you can use traits to support data collection if you have high ingestion throughput.
 
 ## Prerequisites {#prerequisites}
 
 To use traits, you **must** meet the following prerequisites:
 
 - At least **one** Experience Event dataset that's ingested using Adobe Data Collection on Edge Network
+  - You must have the **Manage datasets** permission to enable a dataset for traits.
 - The **View traits** permission
   - This lets you see your traits and use traits in Segment Builder
 - The **Manage traits** permission
   - This lets you create, edit, and delete your traits
   - Manage traits **includes** all the **View traits** permissions
+
+## Beta limitations {#beta}
+
+With the current traits beta, keep the following limitations in mind:
+
+- You can create a **maximum** of 1000 traits
+- The **maximum** request per second (rps) is 1500 rps
 
 ## Create a trait {#create}
 
@@ -53,13 +60,19 @@ IMAGE
 
 >[!IMPORTANT]
 >
->Enabling a dataset for trait is an **irreversible process**. If you enable a dataset for traits, it cannot be enabled for Profile.
+>Enabling a dataset for traits is an **irreversible process**. If you enable a dataset for traits, it cannot be enabled for Profile.
+>
+>In order to enable a dataset for traits, the dataset **must** satisfy the following conditions:
+>
+>- The dataset **must** be for Experience Events
+>- THe dataset **must** have no data already ingested in it
+>- The dataset **must** be Profile-enabled
 
 The **Enable dataset for traits** popover appears. A list of all your datasets is displayed. Select which datasets you want to enable for traits, followed by **Continue**.
 
 IMAGE
 
-Now that you have a trait-enabled dataset, you can create your trait. Select **Create trait** followed by the dataset to bring up the trait builder.
+Now that you have a trait-enabled dataset, you can create your trait. Select **Create trait** to bring up the trait builder.
 
 IMAGE
 
@@ -112,7 +125,7 @@ IMAGE
 | Dataset | The dataset the trait belongs to. |
 | Created by | The username of the person who created the trait. |
 | Data expiration | The data expiration value for the trait. This determines the length of time the data within the trait is active. |
-| Lifecycle status | The status of the trait. Possible values include ??? |
+| Lifecycle status | The status of the trait. Possible values include **[!UICONTROL Invalid]**, **[!UICONTROL Pending]**, and **[!UICONTROL Published]**. |
 | Last updated | The date and time the trait was last updated. |
 | Created | The date and time the trait was created. |
 
@@ -122,10 +135,10 @@ In the **Profile viewer**, you can see a list of all the traits the profile qual
 
 IMAGE
 
-In the **audience details** page, you can see all the traits that were used within that audience.
+<!-- In the **audience details** page, you can see all the traits that were used within that audience.
 
 IMAGE
 
 In the **dataset details** page, you can see all the traits that were created from that dataset.
 
-IMAGE
+IMAGE -->
