@@ -15,7 +15,7 @@ The following is a list of documentation for client-side tag extensions. For a l
 * [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)*
 * [Action Page Refresh](https://exchange.adobe.com/apps/ec/102848)*
 * [Adform Website Tracking](https://exchange.adobe.com/apps/ec/103195)*
-* [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
+* [Adobe Advertising](https://exchange.adobe.com/apps/ec/100155)*
 * [Adobe Analytics](./analytics/overview.md)
 * [Adobe Analytics & Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)*
 * [Adobe Analytics & Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
@@ -39,7 +39,6 @@ The following is a list of documentation for client-side tag extensions. For a l
 * [Adobe Target](./target/overview.md)
 * [Adobe Target v2](./target-v2/overview.md)
 * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)*
-* [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)*
 * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)*
 * [Airbrake JS Notifier](https://exchange.adobe.com/apps/ec/103342)*
 * [Amplitude](https://exchange.adobe.com/apps/ec/108010)*

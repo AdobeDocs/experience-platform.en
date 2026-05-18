@@ -63,7 +63,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 
 ||Experience Cloud Audiences|Adobe Target|
 |---|---|---|
-| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, [!DNL Adobe Target], [!DNL Adobe Analytics], Advertising Cloud, Marketo, [!DNL Adobe Campaign] | Supports audience activation only to [!DNL Adobe Target] |
+| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, [!DNL Adobe Target], [!DNL Adobe Analytics], Adobe Advertising, Marketo, [!DNL Adobe Campaign] | Supports audience activation only to [!DNL Adobe Target] |
 | **Supports audience activation** | ✓ | ✓ |
 | **Supports attribute activation** | X | ✓ |
 | **Latency** | Profiles begin activating in 6 hours. Full population is visible in 48 hours​. |Depends on implementation​ type. <ul><li>Web SDK enables same-page/next-page​ personalization.</li><li>AT.js enables next-session personalization.</li></ul> |
