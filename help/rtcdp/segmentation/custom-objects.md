@@ -19,10 +19,15 @@ The **[!UICONTROL Create relational schema]** page appears. You can add the deta
 
 ![The create a schema page is displayed.](/help/rtcdp/assets/segmentation/custom-objects/create-schema.png)
 
+>[!IMPORTANT]
+>
+>Currently, only **record** data is supported. Time series data is **not** supported at this time.
+
 | Schema behavior | Description |
 | --------------- | ----------- |
 | Record | Record data provides information about the attributes of a subject. This subject can be an organization or an individual. |
-| Time series | Time series data provides a snapshot of the system at the time an action was taken either directly or indirectly by a record subject. |
+
+<!-- | Time series | Time series data provides a snapshot of the system at the time an action was taken either directly or indirectly by a record subject. | -->
 
 ## Add your fields
 
@@ -70,7 +75,15 @@ The relationship editor appears. You can now define the relationship between the
 
 With your schema fully created, you can start ingesting data from your source into the dataset. 
 
-To get data from your source to Experience Platform, you'll need to create a dataflow to ingest batch data from your source into the dataset. The following cloud storage source providers are supported: Amazon S3, SFTP, and Data Landing Zone.
+To get data from your source to Experience Platform, you'll need to create a dataflow to ingest batch data from your source into the dataset. The following cloud storage source providers are supported: Amazon S3, SFTP, Data Landing Zone, Marketo Connector, Salesforce CRM, Microsoft Dynamics CRM, and HTTP API connectors.
+
+>[!NOTE]
+>
+>If you use the Marketo Connector, the Marketo Connector can **automatically** create the schema for the selected custom object if the schema doesn't already exist. 
+>
+>The created schema will be prefixed with `MKTO_CUST_OBJ_$(Custom object name)` and includes the primaryKey and versionDescriptors by default. However, you **must** manually update the schema if changes are required, since modifications made after the schema is generated are **not** automatically applied.
+>
+>Similarly to the other connectors, you **must** enable the dataset for segmentation and configure relationships.
 
 Your data within your cloud storage source must conform to the following specifications:
 
@@ -86,8 +99,6 @@ Your data within your cloud storage source must conform to the following specifi
 >- You **must** select the dataset you previously created.
 >- You do **not** need to map the `_change_request_type` field in your dataflow.
 >- Your ingestion frequency can be up to once every 15 minutes.
-
-IMAGE (sample file)
 
 For more information on creating a dataflow, read the [configure a dataflow to ingest batch data from a cloud storage source guide](/help/sources/tutorials/ui/dataflow/batch/cloud-storage.md).
 
