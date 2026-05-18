@@ -3,11 +3,11 @@ title: Custom Objects With B2B CDP
 description: Learn how to create a one-to-many relationship custom object for B2B CDP.
 ---
 
-# Using custom objects with B2B CDP
+# Use custom objects with B2B CDP
 
-You can now enable custom objects with relational one-to-many (1:M) joins, which lets import and use custom objects for use cases including segmentation and Query Service. You can use these one-to-many relationship custom objects to support your custom CRM objects, track product entitlements and purchases, as well as manage offers for customers.
+B2B CDP supports custom objects with one-to-many (1:M) relationships. You can use these custom objects in segmentation and Query Service use cases. For example, you can model custom CRM objects, track product entitlements and purchases, and manage customer offers."
 
-## Create a relational schema
+## Create a relational schema {#create-relational}
 
 To start connecting your custom object using a one-to-many relationship, you'll first need to create a relational schema to model your data.
 
@@ -29,7 +29,7 @@ The **[!UICONTROL Create relational schema]** page appears. You can add the deta
 
 <!-- | Time series | Time series data provides a snapshot of the system at the time an action was taken either directly or indirectly by a record subject. | -->
 
-## Add your fields
+## Add your fields {#add-fields}
 
 Once you created your relational schema, you can add the fields for your schema, including marking the primary key and version identifier, in the Schema Editor.
 
@@ -37,7 +37,7 @@ Once you created your relational schema, you can add the fields for your schema,
 
 For more information on creating your relational schema, read the [create a schema guide](/help/xdm/ui/resources/schemas.md#create-manually).
 
-### Create a dataset
+## Create a dataset {#create-dataset}
 
 Once you created your schema, you'll need to create a dataset that uses the schema to house your custom objects data.
 
@@ -45,7 +45,7 @@ Once you created your schema, you'll need to create a dataset that uses the sche
 
 For more information on creating a dataset, read the [create a dataset guide](/help/catalog/datasets/user-guide.md#create)
 
-## Enable the schema for segmentation
+## Enable the schema for segmentation {#enable-schema}
 
 >[!NOTE]
 >
@@ -57,7 +57,7 @@ Once you've created your dataset, you can now enable the schema for segmentation
 
 ![The toggle to enable the schema for segmentation is highlighted.](/help/rtcdp/assets/segmentation/custom-objects/enable-for-segmentation.png)
 
-## Add your relationships
+## Add your relationships {#add-relationship}
 
 Now that you've enabled your schema for segmentation, you can continue creating your schema by defining the relationships for the schema's fields. To add a relationship to the field, select **[!UICONTROL Add relationship]** on the field you want to add the relationship to.
 
@@ -67,7 +67,7 @@ The relationship editor appears. You can now define the relationship between the
 
 ![The Add relationship popover is displayed, showing an example of a completed relationship.](/help/rtcdp/assets/segmentation/custom-objects/add-relationship.png)
 
-## Ingest data into the dataset
+## Ingest data into the dataset {#ingest-data}
 
 >[!IMPORTANT]
 >
@@ -102,7 +102,7 @@ Your data within your cloud storage source must conform to the following specifi
 
 For more information on creating a dataflow, read the [configure a dataflow to ingest batch data from a cloud storage source guide](/help/sources/tutorials/ui/dataflow/batch/cloud-storage.md).
 
-## Use custom object in Audience Builder
+## Use custom object in Audience Builder {#use-custom}
 
 Now that your dataflow has been created, you can use the custom object data within Audience Builder. This custom object data can be used for both people audiences and account audiences. 
 
@@ -110,7 +110,7 @@ The custom object can be found under **[!UICONTROL Attributes]** in Audience Bui
 
 ![The custom object is highlighted within Audience Builder.](/help/rtcdp/assets/segmentation/custom-objects/audience-builder.png)
 
-## Next steps
+## Next steps {#next-steps}
 
 This guide explains how to add one-to-many relationship custom objects to B2B CDP as well as how to use custom object data in segmentation use cases.
 
