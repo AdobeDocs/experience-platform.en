@@ -102,6 +102,7 @@ role: Developer
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Loyalty {#loyalty}
     - [Capillary Streaming Events](connectors/loyalty/capillary.md)
+    - {hide-from-toc} [LAVA](connectors/loyalty/lava.md)
     - [Talon.One](connectors/loyalty/talon-one.md)
   - Marketing automation {#marketing-automation}
     - [Braze Currents](connectors/marketing-automation/braze.md)
@@ -181,6 +182,8 @@ role: Developer
       - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
+    - Loyalty {#loyalty}
+      - {hide-from-toc} [LAVA](tutorials/api/create/loyalty/lava.md)
     - Marketing automation {#marketing-automation}
       - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
       - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -319,8 +322,9 @@ role: Developer
     - Loyalty {#loyalty}
       - [Capillary Streaming Events](tutorials/ui/create/loyalty/capillary.md)
       - {hide-from-toc} [Kobie Streaming Events](tutorials/ui/create/loyalty/kobie-streaming.md)
+      - {hide-from-toc} [LAVA](tutorials/ui/create/loyalty/lava.md)
       - [Talon.One Streaming Events](tutorials/ui/create/loyalty/talon-one-streaming.md)
-      - [Talon.One Batch Source Connector](tutorials/ui/create/loyalty/talon-one-batch.md)
+      - [Talon.One Batch source connector](tutorials/ui/create/loyalty/talon-one-batch.md)
     - Marketing automation {#marketing-automation}
       - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
       - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
