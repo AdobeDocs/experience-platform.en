@@ -33,7 +33,7 @@ role: User,Developer
         - [Exploratory data analysis](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
         - [Engineer features for ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
         - [Export data to ML environments](data-distiller/ml-feature-pipelines/export-data.md)
-        - [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+        - {hide-from-toc} [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
     - [Summit 2025 Session](data-distiller/top-tips-to-maximize-value.md)
 - Data Distiller statistics and machine learning {#advanced-statistics}
     - [Overview](advanced-statistics/overview.md)
@@ -99,6 +99,7 @@ role: User,Developer
     - [UI overview](ui/overview.md)
     - [Query Editor user guide](ui/user-guide.md)
     - [Query templates](ui/query-templates.md)
+    - [Data Distiller Accelerators](ui/accelerators.md)
     - [Parameterized queries](ui/parameterized-queries.md)
     - [Query schedules](ui/query-schedules.md)
     - [Query logs](ui/query-logs.md)

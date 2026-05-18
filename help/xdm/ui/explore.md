@@ -18,7 +18,7 @@ In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left navig
 
 ![The Schemas workspace with several tabs highlighted.](../images/ui/explore/tabs.png)
 
-The filter icon (![Filter Icon Image](/help/images/icons/filter.png)) reveals controls in the left rail to narrow down listed results. Resource filters are available for schemas and relationships on the **[!UICONTROL Browse]** and **[!UICONTROL Relationships]** tabs respectively.
+The filter icon (![Filter Icon Image](/help/images/icons/filter.png)) reveals controls in the left rail to narrow down listed results. Resource filters are available for schemas and relationships on the **[!UICONTROL Browse]** and **[!UICONTROL Relationships]** tabs respectively. On the **[!UICONTROL Field groups]** tab, use the filters described in [Field group metadata and filtering](#field-group-metadata-and-filtering) to narrow the list by compatible class and industry tags.
 
 On the [!UICONTROL Browse] tab of the [!UICONTROL Schemas] workspace, you can filter your schema inventory. Use the **[!UICONTROL Included in Profile]** toggle to only show schemas that have been enabled for use in [Real-Time Customer Profile](../../profile/home.md). Use the **[!UICONTROL Show adhoc schemas]** toggle to filter the list of schemas created with fields namespaced for use only by a single dataset.
 
@@ -158,7 +158,7 @@ If an array field is based on an object type, you can select its icon in the can
 
 ### [!UICONTROL Field properties] {#field-properties}
 
-When you select the name of any field in the canvas, the right rail updates to show details about that field under **[!UICONTROL Field properties]**. This can include a description of the field's intended use case, default values, patterns, formats, whether or not the field is required, and more.
+When you select the name of any field in the canvas, the right rail updates to show details about that field under **[!UICONTROL Field properties]**. This can include a description of the field's intended use case, default values, patterns, formats, whether the field is required, and more. When you are exploring a field group, label-related details for the selected field can also appear here; see [Labels in the structure view](#field-group-labels-in-structure).
 
 ![A field selected from the Commerce data type with the field properties highlighted.](../images/ui/explore/field-properties.png)
 
@@ -189,6 +189,92 @@ To view the identity namespace of the reference schema's primary identity, selec
 ![The Edit relationship dialog with the relationship parameters displayed.](../images/ui/explore/edit-relationship-dialog.png)
 
 See the tutorial on [creating a relationship in the UI](../tutorials/relationship-ui.md) for more information on the use of relationships in XDM schemas.
+
+## Explore field groups: usage and metadata {#explore-field-groups}
+
+Navigate to **[!UICONTROL Schemas]** > **[!UICONTROL Field groups]** to explore field groups. In the **[!UICONTROL Field groups]** tab, additional capabilities help you understand where a field group is used across schemas and what it includes, such as compatibility, required fields (which enforce ingestion requirements), and governance signals.
+
+These features help you evaluate impact before making changes and identify relevant field groups more efficiently during schema design.
+
+### View schema usage for field groups {#view-schema-usage-for-field-groups}
+
+From the **[!UICONTROL Field groups]** table, select a field group to open its detail view. The canvas updates to display the field group structure, and the properties rail shows additional information about the selected resource.
+
+#### Schemas using this field group
+
+In the right-hand properties rail, the **[!UICONTROL Schemas using this field group]** section lists schemas that currently include the field group.
+
+![The field group properties rail showing the Schemas using this field group section.](../images/ui/explore/field-group-properties.png)
+
+- If the field group is used by three or fewer schemas, all schema names are displayed.
+- If it is used by more than three schemas, only some names are displayed, along with an option to view the complete list.
+
+Select a schema name to open its detail view in a new tab and inspect how the field group is implemented within that schema.
+
+#### View more and full schema list
+
+If more schemas exist than can be shown inline, select **[!UICONTROL View more]** to open the full dialog.
+
+![The View more option in the Schemas using this field group section.](../images/ui/explore/view-more-schemas.png)
+
+The **[!UICONTROL Schemas using this field group]** dialog appears, showing the full list of schemas that use the field group.
+
+![The Schemas using this field group dialog showing schema list and columns.](../images/ui/explore/schemas-using-this-field-group-dialog.png)
+
+In the **[!UICONTROL Schemas using this field group]** dialog, you can:
+
+- Browse all schemas that use the field group
+- Page through large result sets
+- Select a schema to open its detail view in a new tab
+
+You can view schema details such as schema name, class, and other attributes.
+
+This workflow is intended for **impact analysis and exploration only**. It does not modify schemas or field groups. To change schema structure, see [Create and edit schemas in the UI](./resources/schemas.md).
+
+### Field group metadata and filtering {#field-group-metadata-and-filtering}
+
+The **[!UICONTROL Field groups]** tab provides metadata and filtering tools to help you locate and evaluate field groups before selecting them.
+
+#### Browse table and filters
+
+The field group inventory table includes additional columns that expose metadata directly in the list view, such as **[!UICONTROL Compatible classes]**, which indicates which classes a field group can be applied to. Field groups can only be added to schemas that use one of the listed compatible classes, based on the behavior of the data they represent (for example, record-based or time-series data). The table may display **[!UICONTROL All]** when the field group is compatible with all classes. **[!UICONTROL Industry tags]** help categorize field groups for discovery.
+
+To refine the list, select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to open the filter panel in the left rail. The following image shows the filter panel open in the left rail.
+
+![The Field groups tab showing compatible classes, industry tags, and the filter panel.](../images/ui/explore/field-group-filters.png)
+
+In the filter panel, you can:
+
+- **[!UICONTROL Compatible classes]** — Use the dropdown to filter field groups by class compatibility  
+- **[!UICONTROL Industry tags]** — Use checkboxes to filter by one or more industry categories  
+
+While browsing, select a row in the table to update the info rail. The info rail displays metadata such as compatible classes and industry tags so you can review key details without opening the field group.
+
+#### Field group detail metadata
+
+When you open a field group, the properties rail displays additional metadata associated with the resource.
+
+The properties rail can display the following metadata:
+
+- **[!UICONTROL Compatible classes]** — Classes that the field group can extend  
+- **[!UICONTROL Required attributes]** — Attributes that must have valid values when required by the field group during data ingestion. Requirements depend on the data structure, and records with missing or invalid required values fail validation
+- **[!UICONTROL Labels]** — Labels are not shown at the field group level. Select a field to view label details in the **[!UICONTROL Field properties]** rail
+
+This information helps you understand constraints and requirements before using or modifying the field group.
+
+#### Labels in the structure view
+
+When a field group is open in the canvas, you can view label information directly in the structure. Select the settings icon (![The settings icon.](../../images/icons/settings.png)) in the canvas toolbar and enable **[!UICONTROL Show labels on tree]** to display label indicators on fields in the canvas.
+
+![The field group canvas showing the tree display options dialog with Show labels on tree highlighted.](../images/ui/explore/show-labels-on-tree.png)
+
+Select a field in the canvas to view label details in the **[!UICONTROL Field properties]** rail, including labels applied to that field.
+
+![The field group canvas showing labels on fields and label details in the field properties rail.](../images/ui/explore/field-group-labels.png)
+
+Labels are grouped by category (for example, identity and sensitive labels) and provide visibility into governance or access-related constraints applied to the data.
+
+These indicators are for visibility only and do not change schema structure. For more information, see [Manage data usage labels for a schema](../tutorials/labels.md).
 
 ## Next steps
 

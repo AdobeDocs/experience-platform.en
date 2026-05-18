@@ -1,7 +1,7 @@
 ---
 title: The Trade Desk - CRM connection
 description: Activate profiles to your Trade Desk account for audience targeting and suppression based on CRM data.
-last-substantial-update: 2025-01-16
+last-substantial-update: 2026-04-29
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 ---
 # The [!DNL Trade Desk] - CRM connection
@@ -148,6 +148,10 @@ Refer to the table below for information about the destination export type and f
 | Export frequency | **[!UICONTROL Daily Batch]** | As a profile is updated in Experience Platform based on audience evaluation, the profile (identities) are updated once a day downstream to the destination platform. Read more about [batch exports](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
+
+>[!NOTE]
+>
+>The **[Export file now](/help/destinations/ui/export-file-now.md)** feature is not available for [!DNL The Trade Desk] CRM destination. To export audiences, use the [scheduled daily batch export](#activate).
 
 ## Connect to the destination {#connect}
 

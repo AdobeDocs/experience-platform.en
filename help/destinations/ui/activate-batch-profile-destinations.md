@@ -320,10 +320,6 @@ In this step, you must select the profile attributes that you want to add to the
     ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
 
 1. (Optional) The order of the mapped fields in the UI reflects in the order of the columns in the exported CSV file, from top to bottom, with the top row being the leftmost column in the CSV file. You can reorder the mapped fields in any way you want, by dragging and dropping the mapping rows, as shown below. 
-
-    >[!NOTE]
-    >
-    >This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative.
     
     ![Recording showing the mapping fields reordering by drag and drop.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
@@ -608,6 +604,21 @@ File exports vary in the following ways, depending on whether `segmentMembership
 >id="platform_destinations_activate_exclude_enrichment_attributes"
 >title="Exclude enrichment attributes"
 >abstract="Enable this option to export the profiles from the selected custom uploaded audiences to your destination, while excluding all of their attributes."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_info_alert"
+>title="Hierarchical output enabled"
+>abstract="This destination supports hierarchical output because the Enable export of arrays, maps, and objects toggle is on. You can export top-level arrays, array elements, or multiple fields from the same array in one mapping. See the documentation for details."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_source_field"
+>title="Source field"
+>abstract="Select an enrichment attribute to export. For fields inside an array, the source auto-populates with a transform expression. To export multiple fields in one mapping, add one field first, then edit the source expression. See the documentation for details."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_target_field"
+>title="Target field"
+>abstract="The target field auto-populates with the source field name. Edit it to use a different alias if you want the field to have a different name in your exported files."
 
 >[!IMPORTANT]
 >

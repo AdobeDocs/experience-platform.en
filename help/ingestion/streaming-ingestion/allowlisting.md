@@ -2,7 +2,6 @@
 title: IP Address Allowlisting For Streaming Ingestion API
 description: Learn how to secure access to the Streaming Ingestion API by allowing only specified IP addresses through allowlisting. This guide explains how to set up, enable, and manage IP-address-based restrictions for API security.
 hide: true
-hidefromtoc: true
 badge: beta
 exl-id: 6df6745b-c166-4eb8-ae0b-5575a57dace1
 ---

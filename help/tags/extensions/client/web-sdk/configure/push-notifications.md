@@ -10,10 +10,6 @@ exl-id: 96ab7ea8-7180-46bb-9c15-eecba2009c52
 >title="Push notifications"
 >abstract="Sets a VAPID public key for push notification authentication."
 
->[!AVAILABILITY]
->
->Push notifications for the Web SDK are currently in **beta**. The functionality and documentation are subject to change.
-
 This configuration section allows you to set a VAPID public key for push notification authentication.
 
 >[!NOTE]

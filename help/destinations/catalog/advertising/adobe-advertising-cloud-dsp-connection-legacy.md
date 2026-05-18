@@ -1,9 +1,9 @@
 ---
-title: Legacy Adobe Advertising Cloud DSP connection
-description: Adobe Advertising Cloud DSP is an integrated destination for Adobe Real-Time Customer Data Platform, allowing you to share authenticated first-party audiences with approved advertisers and users for campaign activation.
+title: Legacy Adobe Advertising DSP connection
+description: Adobe Advertising DSP is an integrated destination for Adobe Real-Time Customer Data Platform, allowing you to share authenticated first-party audiences with approved advertisers and users for campaign activation.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
 ---
-# Legacy [!DNL Adobe Advertising Cloud] DSP connection
+# Legacy [!DNL Adobe Advertising] DSP connection
 
 >[!NOTE]
 >
@@ -11,15 +11,15 @@ exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
 
 ## Overview {#overview}
 
-The [!DNL Adobe Advertising Cloud] [!DNL Demand-Side Platform] (DSP) destination shares authenticated first-party audiences with approved advertisers and users for campaign activation with DSP. To learn more about the [!DNL Real-Time CDP] integration with DSP, see [About Activating Authenticated Audiences from Audience Sources](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
+The [!DNL Adobe Advertising] [!DNL Demand-Side Platform] (DSP) destination shares authenticated first-party audiences with approved advertisers and users for campaign activation with DSP. To learn more about the [!DNL Real-Time CDP] integration with DSP, see [About Activating Authenticated Audiences from Audience Sources](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
 
 >[!IMPORTANT]
 >
->This page was created by the DSP team. For any inquiries or update requests, contact Advertising Cloud support directly at `adcloud_support@adobe.com`.
+>This page was created by the DSP team. For any inquiries or update requests, contact Advertising support directly at `adcloud_support@adobe.com`.
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Advertising Cloud DSP destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
+To help you better understand how and when you should use the Advertising DSP destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 ### Brand advertising use case {#brand-advertising}
 
@@ -34,12 +34,12 @@ A media agency with a DSP account is running a retargeting campaign on behalf of
 * DSP account-level and campaign-level settings to enable audience sharing with [!DNL LiveRamp RampID], which will translate customer data to [!DNL RampIDs] to create targetable segments. Your DSP account team will perform this configuration. [!DNL RampID] is available via a partnership between DSP and [!DNL LiveRamp], and you don't need your own [!DNL LiveRamp] membership to use it.
 * The Experience Cloud organization ID for the Experience Platform account. You can find your ID on your [!DNL Real-Time CDP] user profile page.
 * A [[!DNL Real-Time CDP] source in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) to receive audiences for campaign activation. Your DSP account team will create the source using your Experience Cloud organization ID.
-* The source key for the DSP account or advertiser, which is generated when a [[!DNL Real-Time CDP] source is created in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Your DSP account team will share this key with you. You'll use it within Experience Platform to create a destination connection to the Advertising Cloud DSP destination, as [explained below](#authenticate).
+* The source key for the DSP account or advertiser, which is generated when a [[!DNL Real-Time CDP] source is created in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Your DSP account team will share this key with you. You'll use it within Experience Platform to create a destination connection to the Advertising DSP destination, as [explained below](#authenticate).
 * Customer data consisting of emails or hashed emails.
 
 ## Supported identities {#supported-identities}
 
-The [!DNL Adobe Advertising Cloud] DSP destination supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
+The [!DNL Adobe Advertising] DSP destination supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
@@ -53,7 +53,7 @@ Refer to the following table for information about the destination export type a
 
 | Item | Type | Notes |
 |---------|----------|---------|
-| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (email or hashed email) used in the Advertising Cloud DSP destination.|
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (email or hashed email) used in the Advertising DSP destination.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. When a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
@@ -100,7 +100,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ## Validate data export {#exported-data}
 
-To verify that data audience was shared with Advertising Cloud, check the following:
+To verify that data audience was shared with Adobe Advertising, check the following:
 
 * The data flow in your [!DNL Real-Time CDP] destination is successful.
 
