@@ -102,6 +102,10 @@ Once you have your trait details set, you can either **[!UICONTROL Save as draft
 
 ## Using traits {#using}
 
+>[!IMPORTANT]
+>
+>You can **only** use traits in audiences that are evaluated using either batch segmentation or edge segmentation. Streaming segmentation is **not** supported at this time.
+
 Once you've created your trait, you can use them within your audience definitions. To open Segment Builder, select **[!UICONTROL Audiences]** followed by **[!UICONTROL Create audience]**, **[!UICONTROL Build rule]**, and **[!UICONTROL Create]**. 
 
 ![The path to access Audience Builder is displayed and highlighted.](/help/profile/images/traits/create-audience.png)
@@ -139,10 +143,10 @@ You can view more details by selecting the trait's name. The traits details page
 
 ![The traits detail page is displayed, showing the available information about the trait.](/help/profile/images/traits/traits-details.png)
 
-<!-- In the **audience details** page, you can see all the traits that were used within that audience.
+<!-- In the **audience details** page, you can see all the traits that were used within that audience. -->
 
-IMAGE
+<!-- IMAGE -->
 
-In the **dataset details** page, you can see all the traits that were created from that dataset.
+<!-- In the **dataset details** page, you can see all the traits that were created from that dataset. -->
 
-IMAGE -->
+<!-- IMAGE -->
