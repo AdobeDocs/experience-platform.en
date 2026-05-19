@@ -34,11 +34,11 @@ Experience Platform allows you to subscribe to event-based alerts for various Ex
 
 | Feature | Description |
 | --- | --- |
-| Alert History: Filtering and Discoverability | The Alert History page now shows the associated object name, adds search by alert type and filtering by object name, and includes an improved time range selector, making it easier to correlate alerts and find what you need. |
+| Alert History: Filtering and Discoverability | The Alert History page now shows the associated object name, adds search by alert type and filtering by object name, and includes an improved time range selector, making it easier to correlate alerts and find what you need. For more information, read the guide on using [alert history](../../observability/alerts/ui.md#alert-history). |
 
 {style="table-layout:auto"}
 
-For more information, read the [[!DNL Observability Insights] overview](/help/observability/home.md).
+For more information, read the [[!DNL Observability Insights] overview](../../observability/home.md).
 
 ## Computed attributes {#computed-attributes}
 
@@ -46,7 +46,7 @@ Computed attributes enable capability to easily summarize event data into profil
 
 | Feature | Description |
 | --- | --- |
-| List function in computed attributes | Use the List function in computed attributes to return an array of values from qualifying events. This function is intended for use when the qualifying events come from a single dataset. If the qualifying events span multiple datasets, results may be incomplete. |
+| List function in computed attributes | Use the List function in computed attributes to return an array of values from qualifying events. This function is intended for use when the qualifying events come from a single dataset. If the qualifying events span multiple datasets, results may be incomplete. For more details, read the [computed attributes overview](../../profile/computed-attributes/overview.md) |
 
 {style="table-layout:auto"}
 
@@ -101,9 +101,10 @@ Use Segmentation Service to create audiences from your customer data and manage 
 
 | Feature | Description |
 | --- | --- |
-| Audience Composition enhancements | All customers now have a baseline of 50 compositions. Additional enhancements include chained activation and audience enrichment improvements. |
-| Express mode for external audiences | Use express mode to activate external audiences directly through the API without the full activation workflow. |
-| Account audiences with experience events (B2B) | After the B2B CDP architecture upgrade, account audiences with experience events are no longer directly supported. To create an account audience that uses experience events, first build a people audience with the experience events, then reference that people audience when creating the account audience. |
+| Audience Composition enhancements | All customers now have a baseline of 50 compositions. Additional enhancements include chained activation and audience enrichment improvements. To learn more about Audience Composition, read the [Audience Composition UI guide](../../segmentation/ui/audience-composition.md).  |
+| Express activation for external audiences | You can now set the `expressActivation` flag for your external audiences. The express activation job creates an additional job that is directly consumed by the downstream activation pipeline, reducing the time to deliver audience membership data to configured batch destinations. This field is best used on **subsequent** audience activations and may not result is faster activation times for **initial** audience activations. For more information, read the [external audiences endpoint guide](../../segmentation/api/external-audiences.md#create-audience). |
+| Account audiences with experience events (B2B) | After the B2B CDP architecture upgrade, account audiences with experience events are no longer directly supported. To create an account audience that uses experience events, first build a people audience with the experience events, then reference that people audience when creating the account audience. To learn how to conduct multi-entity streaming segmentation, read the [multi-entity streaming segmentation guide](../../rtcdp/segmentation/multi-entity-segmentation.md). |
+| Custom objects (B2B) | You can now use custom objects with one-to-many relationships for segmentation use cases in B2BCDP. To learn how to use custom objects, read the [use custom objects tutorial](../../rtcdp/segmentation/custom-objects.md). |
 
 {style="table-layout:auto"}
 
@@ -117,9 +118,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| [!DNL Delta Sharing] | You can use the [!DNL Delta Sharing] source to bring Delta tables into Experience Platform through a secure, open data‑sharing protocol. After you configure a [!DNL Delta Sharing] connection and select the shares and tables you want to ingest, Experience Platform automatically brings that data into your datasets so you can use it for analysis, segmentation, and activation. |
-| [!DNL LAVA] | Use the [!DNL LAVA] source connector to ingest data from [!DNL LAVA] into Experience Platform using standardized schemas and governance controls, reducing custom integration effort and improving time-to-value for downstream activation and insights. |
-| [!DNL Meta Ads] (Beta) | You can use the [!DNL Meta Ads] source connector (Beta) in the Sources workspace to authenticate to [!DNL Meta], select your ad accounts, and schedule ingestion of [!DNL Meta Ads] campaign and performance data into Experience Platform datasets. |
+| [!BADGE Beta]{type=Informative} [!DNL LAVA] | You can now bring loyalty and engagement data from [!DNL LAVA] into Experience Platform using the [[!DNL LAVA] source](../../sources/connectors/loyalty/lava.md). Stream member profiles, reward balances, and ticket scan events to enrich [!DNL Real-Time Customer Profile] and support segmentation, personalization, and activation. Create a separate source connection for each data type you need, and map `email` on member profiles to stitch [!DNL LAVA] records with your existing profiles. For prerequisites, an optional setup package, and step-by-step setup, read the [[!DNL LAVA] source documentation](../../sources/connectors/loyalty/lava.md). |
 
 {style="table-layout:auto"}
 
@@ -127,8 +126,8 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| NLD2 region IP allowlist update | Five IP ranges have been added to the NLD2 region allowlist: `20.105.215.28/30`, `20.105.244.48/29`, `57.153.246.72/29`, `57.153.246.80/28`, and `57.153.246.96/30`. Update your network allowlist if you use sources in the NLD2 region. |
-| [!DNL Shopify] batch field limitations | Certain [!DNL Shopify] fields are only supported in preview mode. To ingest these fields, use the API to create your dataflows instead of the UI workflow. See the [!DNL Shopify] source documentation for the list of affected fields. |
+| NLD2 region IP allowlist update | Five IP ranges have been added to the NLD2 region allowlist for batch sources: <ul><li>`20.105.215.28/30`</li><li> `20.105.244.48/29`</li><li>`57.153.246.72/29`</li><li>`57.153.246.80/28`</li><li> `57.153.246.96/30`</li></ul>. Update your network allowlist to continue successfully using batch sources in the NLD2 region. For more information, read the guide on [allowlisting IP addresses for sources](../../sources/ip-address-allow-list.md).|
+| [!DNL Shopify] batch field limitations | Preview is not supported for the following [!DNL Shopify] fields: <ul><li>`amountSpent`</li><li>`totalPriceSet`</li><li>`lineItems.quantity`</li><li>`lineItems.name`</li><li>`lineItems.sku`</li><li>`transactions.formattedGateway`</li><li>`variants.sku`</li></ul> To ingest these fields, use the API to create your dataflows instead of the UI workflow. See the [[!DNL Shopify] source documentation](../../sources/connectors/ecommerce/shopify.md#limitations) for details. |
 | Automatic dataflow disabling | Source dataflows that fail continuously for 30 days are automatically disabled. When a dataflow is disabled, review the failure reason in Monitoring, apply the necessary updates, and re-enable the dataflow. Common failure reasons include credentials, permissions, or schema and mapping configuration changes. |
 
 {style="table-layout:auto"}
