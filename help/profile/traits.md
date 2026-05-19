@@ -1,6 +1,6 @@
 ---
 title: Traits Overview
-description: a
+description: Learn how to use traits, which are a lightweight and more efficient way to store profile activity. You can use traits to maintain compliance with your profile license entitlements while preserving rich profile activation.
 hide: true
 ---
 
@@ -52,11 +52,11 @@ With the current traits beta, keep the following limitations in mind:
 
 To create a trait, go to the **[!UICONTROL Profiles]** section and select **[!UICONTROL Traits]**. 
 
-IMAGE
+![The Traits button is highlighted.](/help/profile/images/traits/access-traits.png)
 
-The traits browse page appears. Before you can create a trait, you need to enable datasets for use with traits by selecting **Enable dataset for traits**.
+The traits browse page appears. Before you can create a trait, you need to enable datasets for use with traits by selecting **[!UICONTROL Enable dataset for traits]**.
 
-IMAGE
+![The Enable dataset for traits button is highlighted.](/help/profile/images/traits/select-enable.png)
 
 >[!IMPORTANT]
 >
@@ -68,17 +68,21 @@ IMAGE
 >- THe dataset **must** have no data already ingested in it
 >- The dataset **must** be Profile-enabled
 
-The **Enable dataset for traits** popover appears. A list of all your datasets is displayed. Select which datasets you want to enable for traits, followed by **Continue**.
+The **[!UICONTROL Enable dataset for traits]** popover appears. A list of all your datasets is displayed. Select which datasets you want to enable for traits, followed by **[!UICONTROL Continue]**.
 
-IMAGE
+>[!NOTE]
+>
+>In order to select continue, you **must** agree that you understand that enabling a dataset for traits is irreversible.
 
-Now that you have a trait-enabled dataset, you can create your trait. Select **Create trait** to bring up the trait builder.
+![The Enable dataset for traits popover is displayed. The Continue button is highlighted.](/help/profile/images/traits/enable-traits-popover.png)
 
-IMAGE
+Now that you have a trait-enabled dataset, you can create your trait. Select **[!UICONTROL Create trait]** to bring up the trait builder.
+
+![The Dataset enabled for traits popover is displayed. The Create trait button is highlighted.](/help/profile/images/traits/select-create-trait.png)
 
 Within the trait builder, you can create your trait and set your details for the trait. To create a trait, choose an event from the left navigation bar and add it to the canvas.
 
-IMAGE
+![The trait builder is displayed.](/help/profile/images/traits/trait-builder.png)
 
 After adding your events, you can add the trait details.
 
@@ -90,7 +94,7 @@ After adding your events, you can add the trait details.
 | Description | A description for the trait. |
 | Data expiration | The data expiration for the trait. This determines the length of time the data within the trait is active. This value can be set to a maximum of 120 days. By default, this value is set to 1 day. |
 
-Once you have your trait details set, you can either **Save as draft** or **Publish** your trait. In order to use your trait within an audience, you **must** publish the trait.
+Once you have your trait details set, you can either **[!UICONTROL Save as draft]** or **[!UICONTROL Publish]** your trait. In order to use your trait within an audience, you **must** publish the trait.
 
 >[!NOTE]
 >
@@ -98,25 +102,25 @@ Once you have your trait details set, you can either **Save as draft** or **Publ
 
 ## Using traits {#using}
 
-Once you've created your trait, you can use them within your audience definitions. To open Segment Builder, select **Audiences** followed by **Create audience**, **Build rule**, and **Create**. 
+Once you've created your trait, you can use them within your audience definitions. To open Segment Builder, select **[!UICONTROL Audiences]** followed by **[!UICONTROL Create audience]**, **[!UICONTROL Build rule]**, and **[!UICONTROL Create]**. 
 
-IMAGE
+![The path to access Audience Builder is displayed and highlighted.](/help/profile/images/traits/create-audience.png)
 
 The Segment Builder appears. In Segment Builder, you can see all the published traits that belong to your sandbox.
 
-IMAGE
+![The Traits tab is displayed within Audience Builder, showing all the Traits you can use during audience creation.](/help/profile/images/traits/traits-in-audience-builder.png)
 
-After adding the traits to the rule building canvas, you can choose to create an audience that either **includes** or **excludes** the added trait. Optionally, you can select **Recency** to check if the trait condition has been met in the specified time frame.
+After adding the traits to the rule building canvas, you can choose to create an audience that either **includes** or **excludes** the added trait. Optionally, you can select **[!UICONTROL Recency]** to check if the trait condition has been met in the specified time frame.
 
-IMAGE
+![The options available within traits in Audience Builder are displayed.](/help/profile/images/traits/trait-attribute.png)
 
 ## Manage traits {#manage}
 
 You can monitor and manage your traits through a variety of different interfaces.
 
-In the **Traits** list view, you can see all the traits that were created within the sandbox, along with an overview of all the trait definitions.
+In the **[!UICONTROL Traits]** list view, you can see all the traits that were created within the sandbox, along with an overview of all the trait definitions.
 
-IMAGE
+![The Browse traits page is displayed, showing the available traits for the sandbox.](/help/profile/images/traits/browse-traits.png)
 
 | Field | Description |
 | ----- | ----------- |
@@ -131,9 +135,9 @@ IMAGE
 
 You can also select the ellipses (...) next to the trait for additional options, including creating an audience using the selected trait, deactivating the trait, and deleting the trait.
 
-In the **Profile viewer**, you can see a list of all the traits the profile qualifies for.
+You can view more details by selecting the trait's name. The traits details page appears. This page displays information including the trait summary, profiles qualified over time, and audiences with this trait.
 
-IMAGE
+![The traits detail page is displayed, showing the available information about the trait.](/help/profile/images/traits/traits-details.png)
 
 <!-- In the **audience details** page, you can see all the traits that were used within that audience.
 
