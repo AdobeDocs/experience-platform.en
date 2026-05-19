@@ -32,6 +32,7 @@ role: Developer
       - [ECID mapping migration guide](connectors/adobe-applications/marketo/migration.md)
   - Advertising {#advertising}
     - [Google Ads connector](connectors/advertising/ads.md)
+    - [Meta Ads connector](connectors/advertising/meta-ads.md)
     - {hide-from-toc} [Pinterest Ads](connectors/advertising/pinterest-ads.md)
   - Analytics {#analytics}
     - [Mixpanel connector](connectors/analytics/mixpanel.md)
@@ -249,6 +250,7 @@ role: Developer
       - [Marketo Custom Activities](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
     - Advertising {#advertising}
       - [Google Ads](tutorials/ui/create/advertising/ads.md)
+      - [Meta Ads](tutorials/ui/create/advertising/meta-ads.md)
       - {hide-from-toc} [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
