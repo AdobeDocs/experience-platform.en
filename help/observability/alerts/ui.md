@@ -132,3 +132,4 @@ You return to the **[!UICONTROL History]** tab which shows the filtered results.
 ## Next steps
 
 This guide showed how to view and manage alerts in the Experience Platform UI. See the [[!DNL Observability Insights] overview](../home.md) for more ways to monitor activity across Experience Platform.
+
