@@ -5,7 +5,7 @@ description: Learn how to create a one-to-many relationship custom object for B2
 
 # Use custom objects with B2B CDP
 
-B2B CDP supports custom objects with one-to-many (1:M) relationships. You can use these custom objects in segmentation and Query Service use cases. For example, you can model custom CRM objects, track product entitlements and purchases, and manage customer offers."
+B2B CDP supports custom objects with one-to-many (1:M) relationships. You can use these custom objects in segmentation and Query Service use cases. For example, you can model custom CRM objects, track product entitlements and purchases, and manage customer offers.
 
 ## Create a relational schema {#create-relational}
 
