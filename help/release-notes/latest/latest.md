@@ -25,7 +25,6 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Query Service](#query-service)
 - [Real-Time CDP](#rtcdp)
 - [Sandboxes](#sandboxes)
-- [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
  
 ## Data collection {#data-collection}
@@ -125,18 +124,6 @@ Adobe Experience Platform is built to enrich digital experience applications on 
 {style="table-layout:auto"}
 
 For more information, read the [sandboxes overview](../../sandboxes/home.md).
-
-## Segmentation Service {#segmentation-service}
-
-[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Audiences can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
-
-**New or updated features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Express activation for external audiences | You can now set the `expressActivation` flag for your external audiences. The express activation job creates an additional job that is directly consumed by the downstream activation pipeline, reducing the time to deliver audience membership data to configured batch destinations. This field is best used on **subsequent** audience activations and may not result is faster activation times for **initial** audience activations. For more information, read the [external audiences endpoint guide](/help/segmentation/api/external-audiences.md#create-audience). |
-
-For more information, read the [[!DNL Segmentation Service] overview](../../segmentation/home.md).
 
 ## Sources {#sources}
 
