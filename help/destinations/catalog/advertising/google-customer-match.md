@@ -118,6 +118,33 @@ Customers with compliant accounts are automatically allowlisted by Google.
 
 Depending on the type of IDs that you ingest into [!DNL Adobe Experience Platform], you must adhere to their corresponding requirements.
 
+### Key type behavior when updating identity mappings {#key-type-behavior}
+
+[!DNL Google Customer Match] uses three identifier categories, called key types, to maintain separate customer lists in [!DNL Google Ads]. Google defines three key types in the [CustomerMatchUploadKeyType](https://developers.google.com/google-ads/api/reference/rpc/v23/CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType) reference:
+
+* `CONTACT_INFO`: email addresses, phone numbers, and mailing addresses
+* `CRM_ID`: advertiser-assigned custom user IDs
+* `MOBILE_ADVERTISING_ID`: mobile device IDs ([!DNL IDFA] and [!DNL GAID])
+
+You can map identities from multiple key type categories in the same destination connection. [!DNL Google] maintains a separate customer list for each key type.
+
+**Deletion rule:** [!DNL Google] deletes a customer list only when you remove all identity fields belonging to that key type from the destination. Removing one field is safe as long as at least one other field of the same key type remains mapped.
+
+For example, if you have `email_lc_sha256` and `address_info_first_name` mapped (both belong to the `CONTACT_INFO` key type), removing `address_info_first_name` is safe. The `CONTACT_INFO` customer list is preserved because `email_lc_sha256` is still part of it.
+
+>[!IMPORTANT]
+>
+>Avoid the following actions. Both delete the customer list for the affected key type and permanently remove all historical match data:
+>
+>* **Removing all fields of a key type:** For example, if `user_id` is your only `CRM_ID` field and you remove it, [!DNL Google] deletes the entire `CRM_ID` customer list. Adding `user_id` back later creates a new, empty list. Previous data is not recoverable.
+>* **Toggling between key types:** Removing `user_id` to switch to `address_info_first_name` and `address_info_last_name`, then later reversing the change, deletes and re-creates the affected customer list each time. Historical audience data is lost.
+>
+>This is a [!DNL Google] requirement, not an [!DNL Adobe Experience Platform] limitation.
+
+If you need to keep multiple key types active, consider [creating a separate destination connection](../../ui/connect-destination.md) for each key type. This eliminates the risk of accidentally removing all fields of one type when editing the other.
+
+Within the `CONTACT_INFO` key type, you can combine email addresses, phone numbers, and mailing addresses in the same connection. Google recommends this approach because it improves match rates.
+
 ### Phone number hashing requirements {#phone-number-hashing-requirements}
 
 There are two methods to activate phone numbers in [!DNL Google Customer Match]:
@@ -227,9 +254,9 @@ In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL 
 
 For details on how to find the [!DNL App ID], see the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative.
 
-### Mapping example: activating audience data in [!DNL Google Customer Match] {#example-gcm}
+### Identity mapping: activating audience data in [!DNL Google Customer Match] {#example-gcm}
 
-This is an example of correct identity mapping when activating audience data in [!DNL Google Customer Match].
+Use the following guidance to select the correct source and target identity namespaces when activating audience data in [!DNL Google Customer Match].
 
 Selecting source fields:
 
@@ -247,8 +274,6 @@ Selecting target fields:
 * Select the `Phone_SHA256_E.164` namespace as target identity when your source namespaces are either `PHONE_E.164` or `Phone_SHA256_E.164`.
 * Select the `IDFA` or `GAID` namespaces as target identity when your source namespaces are `IDFA` or `GAID`.
 * Select the `User_ID` namespace as target identity when your source namespace is a custom one.
-
-![Identity mapping between source and target fields shown in the Mapping step of the activation workflow.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
 
 Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
@@ -271,6 +296,24 @@ After completing the activation flow, switch to your **[!UICONTROL Google Ads]**
 When mapping an audience to both [!DNL IDFA] and [!DNL GAID] mobile IDs, [!DNL Google Customer Match] creates a separate audience for each ID mapping. Your [!DNL Google Ads] account shows two different segments, one for the [!DNL IDFA], and one for the [!DNL GAID] mapping.
 
 ## Troubleshooting {#troubleshooting}
+
+### Match rates drop to 0% after activation {#match-rate-reset}
+
+If your match rates drop to 0% after activation, the likely cause is that all identity fields for a key type were removed from the destination connection.
+
+[!DNL Google] deletes a customer list when all fields belonging to a given key type are removed from a destination. Two scenarios trigger this:
+
+* **Removing all fields of a key type:** For example, if `user_id` is the only `CRM_ID` field in the connection and you remove it, [!DNL Google] deletes the `CRM_ID` customer list. Match rates reset to 0% because [!DNL Google] creates a new, empty customer list.
+* **Toggling between key types:** Removing all fields of one key type to add fields from a different type, then later reversing the change. This deletes and re-creates the affected customer list each time. Historical audience data is lost.
+
+Removing an individual field is safe as long as at least one other field of the same key type remains mapped in the connection.
+
+To prevent this from happening:
+
+1. Do not remove all identity fields for a key type in a single activation run. Keep at least one field of the affected key type mapped.
+2. If you need multiple key types active, create separate destination connections for each key type pointing to the same source audience. This eliminates the risk of accidentally removing all fields of one type when editing the other.
+
+For more information, see the [Key type behavior when updating identity mappings](#key-type-behavior) section.
 
 ### 400 Bad Request error message {#bad-request}
 

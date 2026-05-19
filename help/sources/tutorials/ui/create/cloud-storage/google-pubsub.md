@@ -102,7 +102,7 @@ To create an account with restricted access only to a particular [!DNL PubSub] t
 
 >[!NOTE]
 >
->Principal (roles) assigned to a [!DNL PubSub] project are inherited in all of the topics and subscriptions created inside a [!DNL PubSub] project. If you want a principal (role) to have access to a specific topic, then that principal (role) must also be added to the topic's corresponding subscription as well. For more information, read the [[!DNL PubSub] documentation on access control](<https://cloud.google.com/pubsub/docs/access-control>).
+>Principal (roles) assigned to a [!DNL PubSub] project are inherited in all of the topics and subscriptions created inside a [!DNL PubSub] project. If you want a principal (role) to have access to a specific topic, then that principal (role) must also be added to the topic's corresponding subscription as well. For more information, read the [[!DNL PubSub] documentation on access control](https://cloud.google.com/pubsub/docs/access-control).
 
 ## Select data
 
