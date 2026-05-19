@@ -92,6 +92,8 @@ The following metrics are available for this dashboard view:
 >When the dataflow run is in the **[!UICONTROL Processing]** state, you can see information about the readiness by seeing the checkpoint statuses in the ingestion process.
 >
 >![The profile ingestion readiness bubble is displayed.](../assets/ui/monitor-profiles/profile-ingestion-readiness.png){zoomable="yes" width="300"}
+>
+>If the dataflow has the **[!UICONTROL Success]** state for one of the checkpoints, you can proceed to use the data in the respective service.
 
 | Metric | Description |
 | ------ | ----------- |
@@ -103,7 +105,7 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Profile fragments updated]** | The number of existing [!DNL Profile] fragments updated. |
 | **[!UICONTROL Total profile fragments]** | The total number of records written into [!DNL Profile], including all existing [!DNL Profile] fragments updated and new [!DNL Profile] fragments created. |
 | **[!UICONTROL Processing time]** | The amount of time it took for the dataflow run to process. |
-| **[!UICONTROL Status]** | The status of the dataflow run. Possible values include [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued], and [!UICONTROL Processing]. |
+| **[!UICONTROL Status]** | The status of the dataflow run. Possible values include:<ul><li>[!UICONTROL Success]: The dataflow has successfully ran.</li><li>[!UICONTROL Failed]: The dataflow has failed.</li><li>[!UICONTROL Queued]: The dataflow has been initiated, and is waiting to be processed.</li><li>[!UICONTROL Processing]: The dataflow is being processed. </li></ul> |
 | **[!UICONTROL Ready for customer segmentation]** | A status showing if the ingested records are ready to be used in customer segmentation. Possible values include [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued], and [!UICONTROL Processing]. Even if the **Status** of the dataflow is processing, if the value of this field is Yes, you can use the profiles in customer segmentation. |
 | **[!UICONTROL Ready for lookup]** | A status showing if the ingested records are ready to used in Adobe Journey Optimizer lookup.  Possible values include [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued], and [!UICONTROL Processing]. Even if the **Status** of the dataflow is processing, if the value of this field is Yes, you can use the profiles in Journey Optimizer lookup. |
 
