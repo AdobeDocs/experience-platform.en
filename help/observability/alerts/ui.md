@@ -19,9 +19,9 @@ To get started, select **[!UICONTROL Alerts]** in the left navigation.
 
 ## Manage alert rules {#manage-rules}
 
-The **[!UICONTROL Browse]** tab lists the available rules that may trigger an alert. Select a rule from the list to view its description and its configuration parameters in the right rail, including threshold and severity.
+The **[!UICONTROL Browse]** tab lists the available rules that may trigger an alert. Select a rule from the list to view its description and its configuration parameters in the right panel, including threshold and severity.
 
-![An alert rule highlighted showing details in the right rail.](../images/alerts/ui/rule-details.png)
+![An alert rule highlighted showing details in the right panel.](../images/alerts/ui/rule-details.png)
 
 Select the ellipsis (**...**) next to a rule's name. A menu opens where you can enable or disable the alert (depending on its current status) and subscribe or unsubscribe from email notifications for that rule.
 
@@ -91,9 +91,9 @@ On the **[!UICONTROL Customize alert]** page, set the threshold for that rule to
 
 ![The Customize alert page highlighting [!UICONTROL Threshold] and [!UICONTROL Confirm] options.](../images/alerts/ui/threshold-update.png)
 
-You return to the **[!UICONTROL Alerts]** page. To check the threshold, select the rule in the list. The right rail shows the threshold, status, severity, and other details.
+You return to the **[!UICONTROL Alerts]** page. To check the threshold, select the rule in the list. The right panel shows the threshold, status, severity, and other details.
 
-![An alert selected with details in the right rail, including threshold.](../images/alerts/ui/threshold-view.png)
+![An alert selected with details in the right panel, including threshold.](../images/alerts/ui/threshold-view.png)
 
 ## View alert history {#alert-history}
 
@@ -101,9 +101,9 @@ The **[!UICONTROL History]** tab lists alerts your organization has received, in
 
 ![Received alerts listed on the [!UICONTROL History] tab.](../images/alerts/ui/history.png)
 
-Select an alert to open more detail in the right rail, including a short summary of what triggered it.
+Select an alert from the list to view more details in the right panel, including a short summary of what triggered it. Use global search to find and open the related object.
 
-![An alert highlighted showing details in the right rail.](../images/alerts/ui/history-details.png)
+![An alert highlighted showing details in the right panel.](../images/alerts/ui/history-details.png)
 
 ### Search alerts by alert name
 
