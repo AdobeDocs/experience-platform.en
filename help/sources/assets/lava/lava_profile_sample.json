@@ -1,0 +1,10 @@
+{
+    "type": "profile",
+    "id": "38fbee44-332d-4793-a623-0f55daf6e8b9",
+    "timestamp": "2025-10-22T12:51:04.317084Z",
+    "lavaId": "fa68941c-8d10-4eeb-9ddc-50daba801a94",
+    "email": "jdoe@example.com",
+    "firstName": "John",
+    "lastName": "Doe",
+    "phone": "+155512312345"
+}

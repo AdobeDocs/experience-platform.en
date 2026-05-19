@@ -11,8 +11,4 @@ exl-id: 4e889401-08c1-4c81-85e7-49fe1328c65d
 >title="Schema structure"
 >abstract="Ensure that you review your schema structure because once you proceed, you will no longer be able to make changes to your schema."
 
-Read this guide to learn how to use the [!DNL Deltashare] source connector in the Adobe Experience Platform user interface.
-
-**Note:** Once you select **Next**, you will not be able to change the selected schema structure.
-
-If you have already selected **Next** and moved past the schema selection step, you can no longer update your selected schema if you return to a previous step. To modify your schema, you must restart the dataflow configuration process and begin from the initial step.
+_Coming Soon_

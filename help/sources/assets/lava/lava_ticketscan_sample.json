@@ -1,0 +1,17 @@
+{
+	"type": "event-ticketscan",
+	"id": "1234567/GRE1234A/GA4/GA3/13/0",
+	"timestamp": "2025-11-03T01:41:00Z",
+	"lavaId": "aff0ee5f-da62-4054-8cdb-076f5b60bfc3",
+	"seat": "13",
+	"section": "GA4",
+	"sectionLabel": "GeneralS",
+	"eventId": "1234",
+	"eventLabel": "Green Vs Blue",
+	"eventName": "GRE1234A",
+	"venue": "ABC",
+	"venueLabel": "ABC Stadium",
+	"gate": "TEAM ST1",
+	"gateLabel": "GeneralG",
+	"row": "GA3"
+}
