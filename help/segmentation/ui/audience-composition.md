@@ -423,3 +423,4 @@ To learn how to manage your destination, read the [activate audiences to batch p
 ## Next steps
 
 Audience Composition provides a rich workflow allowing you to create compositions from the different block types. To learn more about other parts of the Segmentation Service UI, please read the [Segmentation Service user guide](./overview.md).
+

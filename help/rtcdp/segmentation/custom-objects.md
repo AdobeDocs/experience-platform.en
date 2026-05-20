@@ -115,4 +115,3 @@ The custom object can be found under **[!UICONTROL Attributes]** in Audience Bui
 This guide explains how to add one-to-many relationship custom objects to B2B CDP as well as how to use custom object data in segmentation use cases.
 
 To learn more about Audience Builder, read the [Audience Builder guide](./audience-builder.md).
-
