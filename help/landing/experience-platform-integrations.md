@@ -18,7 +18,7 @@ Start with [How Adobe Experience Platform and applications work together](experi
 
 Use this list as a map—you can jump to any section from the headings below.
 
-- **Two mental models:** Platform-first apps versus products that integrate with Platform (sources, destinations, shared CX Enterprise shell).
+- **Two mental models:** Platform-first apps versus products that integrate with Platform (sources, destinations, shared Adobe CX Enterprise shell).
 - **Four integration patterns:** Ingestion, activation, shared services, and Data Collection (collection is part of Platform—not a separate "side product").
 - **Adobe apps as sources:** Analytics, Audience Manager, Campaign, Marketo—examples of bringing data into Platform.
 - **Adobe Target:** How you use Experience Platform segments and attributes in personalization and tests.
@@ -81,7 +81,7 @@ Adobe Target is where many teams run personalization and experimentation—websi
 
 How this typically works for you:
 
-1. **Activate from Platform:** You share segments built from Real-Time Customer Profile (and your segmentation workflows) into Target using the [Adobe Target connection](../destinations/catalog/personalization/adobe-target-connection.md) in the destinations catalog. Where product supports it, you also send profile attributes for personalization, not just list membership.
+1. **Activate from Platform:** You share segments built from Real-Time Customer Profile (and your segmentation workflows) into Target using the [Adobe Target connection](../destinations/catalog/personalization/adobe-target-connection.md) in the destinations catalog. Where the product supports it, you also send profile attributes for personalization, not just list membership.
 2. **Match implementation to your stack:** What you can do depends on how Target is deployed: Experience Platform Web SDK with [datastreams](../datastreams/overview.md), or other paths described in the destination guide. Some scenarios use [edge segmentation](../segmentation/home.md#edge) and [edge personalization](../destinations/ui/activate-edge-personalization-destinations.md). Batch and streaming audiences behave differently depending on setup. The destination documentation spells out the matrix.
 
 Where to read next: Start with [Adobe Target connection](../destinations/catalog/personalization/adobe-target-connection.md) (use cases, sandboxes, workspaces, mapping). For Edge and collection context, see [Data Collection overview](../collection/home.md).
@@ -92,7 +92,7 @@ These stories are simplified for illustration. Your sources, identity setup, and
 
 ### Retail brand: Adobe Analytics history joins unified profiles {#scenario-analytics}
 
-A retailer already relies on Adobe Analytics for digital behavior and campaign attribution. They turn on the [Adobe Analytics source connector](../sources/connectors/adobe-applications/analytics.md) so report-suite data lands in Experience Platform datasets with agreed field mappings. Identity rules tie Analytics identifiers to namespaced IDs used elsewhere (for example CRM or loyalty systems where policy allows). Once that data sits alongside newer web and app events collected through Data Collection, marketers build audiences in Real-Time CDP from a fuller picture—not only "who clicked yesterday" in isolation, but who they are across channels. Those audiences can travel to email, paid media, or Adobe Journey Optimizer journeys using the same governance labels the team set on Platform.
+A retailer already relies on Adobe Analytics for digital behavior and campaign attribution. They turn on the [Adobe Analytics source connector](../sources/connectors/adobe-applications/analytics.md) so report-suite data lands in Experience Platform datasets with agreed field mappings. Identity rules tie Analytics identifiers to namespaced IDs used elsewhere (for example CRM or loyalty systems where policy allows). Once that data sits alongside newer web and app events collected through Data Collection, marketers build audiences in Real-Time CDP from a fuller picture—not only "who clicked yesterday" in isolation, but who they are across channels. Those audiences can be activated to email, paid media, or Adobe Journey Optimizer journeys using the same governance labels the team set on Platform.
 
 Takeaway: Analytics becomes part of the unified customer record on Experience Platform instead of a separate silo, as long as identity and definitions stay aligned.
 
