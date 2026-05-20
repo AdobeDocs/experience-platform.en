@@ -42,7 +42,7 @@ In this topic, "your goals" means what your organization wants (for example grow
 
 ## Adobe CX Enterprise {#cx-enterprise}
 
-Adobe CX Enterprise is the unified interface and shared services layer for Adobe's customer experience portfolio. It is the top-level entry point for the customer experience stack: from Adobe CX Enterprise, users open Adobe Experience Platform and Experience Platform applications (such as Real-Time CDP, Journey Optimizer, and Customer Journey Analytics) with:
+Adobe CX Enterprise is the unified interface and shared services layer for Adobe's customer experience portfolio. It is the top-level entry point for the customer experience stack: from Adobe CX Enterprise, open Adobe Experience Platform and Experience Platform applications (such as Real-Time CDP, Journey Optimizer, and Customer Journey Analytics) with:
 
 - A shared header and navigation
 - An application selector to move between products
@@ -218,7 +218,7 @@ The table below shows the high-level architecture. Adobe CX Enterprise is the ex
 
 | Layer | What it includes | Role |
 | --- | --- | --- |
-| CX Enterprise experience layer | Adobe CX Enterprise: unified UI, shared navigation, application selector, shared services (for example Audience Library, Customer Attributes, shared assets, triggers, Marketplace), AI Assistant and in-product agents | How users access Experience Platform and applications with a consistent experience, shared services, and agentic AI (within product permissions). |
+| CX Enterprise experience layer | Adobe CX Enterprise: unified UI, shared navigation, application selector, shared services (for example Audience Library, Customer Attributes, shared assets, triggers, Marketplace), AI Assistant and in-product agents | How to access Experience Platform and applications with a consistent experience, shared services, and agentic AI (within product permissions). |
 | Applications (built on Adobe Experience Platform) | Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, Adobe Marketing Campaign Analytics, and other Experience Platform applications | Audiences and activation, journey orchestration and cross-channel messaging, omnichannel analytics and insights, and measurement and planning, all using the same profiles, segments, and governance from the foundation. |
 | Adobe Experience Platform foundation | XDM schemas, Identity Service, Real-Time Customer Profile, segmentation, governance, Privacy Service, data lake, Query Service, Edge | Data, identity, decisioning, and compliance base shared by every application. |
 
@@ -391,7 +391,7 @@ Use the following as a high-level order for using the full stack. Your organizat
 This topic uses the following terms in specific ways.
 
 - Adobe Experience Platform: Shared services and features: bringing data in, data modeling, Identity Service, Real-Time Customer Profile, segmentation, destinations, data governance, privacy, services such as Query Service, and features such as sandboxes. For how those terms differ, see [How Experience Platform features, services, and applications differ](#feature-service-application).
-- Adobe CX Enterprise: The unified interface and shared services layer through which users typically access Experience Platform and Experience Platform applications. See [Adobe CX Enterprise](#cx-enterprise).
+- Adobe CX Enterprise: The unified interface and shared services layer through which you typically access Experience Platform and Experience Platform applications. See [Adobe CX Enterprise](#cx-enterprise).
 - Applications: Licensed products on Experience Platform (for example Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, Adobe Marketing Campaign Analytics) that package workflows for specific jobs. They are not the same as Experience Platform services such as Query Service and Identity Service. Related editions and applications appear in [Other applications and editions on Experience Platform](#other-applications-and-editions).
 - Adobe Marketing Campaign Analytics (formerly known as Adobe Mix Modeler): Licensed application for marketing measurement and planning (including marketing mix modeling). Experience League product help may still use the former product name and mix-modeler paths while documentation is updated after the product rename.
 
