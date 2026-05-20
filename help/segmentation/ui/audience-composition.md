@@ -117,7 +117,7 @@ Alternatively, you can add audience payloads to your composition. After selectin
 
 You can now create a filter criteria for your audience payload. This filter criteria **must** include an attribute that is within an array. The attribute being an array is dependent on your organization's schema structure. After you created your filter criteria, select **[!UICONTROL Select payloads]** within the right-hand panel. 
 
-![The Select payloads button is highlighted in Audience Builder.](/help/segmentation/images/ui/audience-composition/select-payloads.md)
+![The Select payloads button is highlighted in Audience Builder.](/help/segmentation/images/ui/audience-composition/select-payloads.png)
 
 From the left panel, choose the object array, as well as the fields you want to be used in the payload. If there is only one array in the profile, the array is automatically selected for you. Select **[!UICONTROL Save]** to return to audience composition.
 
