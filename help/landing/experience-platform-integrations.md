@@ -19,7 +19,7 @@ Start with [How Adobe Experience Platform and applications work together](experi
 Use this list as a map. You can jump to any section from the headings below.
 
 - **Two mental models:** Experience Platform-first apps versus products that integrate with Experience Platform (sources, destinations, shared Adobe CX Enterprise shell).
-- **Four integration patterns:** Ingestion, activation, shared services, and Data Collection (collection is part of Experience Platform, not a separate "side product").
+- **Four integration patterns:** Ingestion, activation, shared services, and Data Collection (collection is part of Experience Platform, not a separate side product).
 - **Adobe apps as sources:** Analytics, Audience Manager, Campaign, Marketo—examples of bringing data into Experience Platform.
 - **Adobe Target:** How you use Experience Platform segments and attributes in personalization and tests.
 - **Real-world scenarios:** Short Analytics-as-source and Target-as-destination examples.
