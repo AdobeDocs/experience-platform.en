@@ -91,7 +91,9 @@ The following metrics are available for this dashboard view:
 >
 >When the dataflow run is in the **[!UICONTROL Processing]** state, you can see information about the readiness by seeing the checkpoint statuses in the ingestion process.
 >
->![The profile ingestion readiness bubble is displayed.](../assets/ui/monitor-profiles/profile-ingestion-readiness.png){zoomable="yes" width="300"}
+>![The profile ingestion readiness bubble is highlighted in the monitoring dashboard.](../assets/ui/monitor-profiles/profile-ingestion-readiness-monitoring.png){zoomable="yes" width="800"}
+>
+>If the dataflow has the **[!UICONTROL Success]** state for one of the checkpoints, you can proceed to use the data in the respective service.
 
 | Metric | Description |
 | ------ | ----------- |
@@ -103,9 +105,9 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Profile fragments updated]** | The number of existing [!DNL Profile] fragments updated. |
 | **[!UICONTROL Total profile fragments]** | The total number of records written into [!DNL Profile], including all existing [!DNL Profile] fragments updated and new [!DNL Profile] fragments created. |
 | **[!UICONTROL Processing time]** | The amount of time it took for the dataflow run to process. |
-| **[!UICONTROL Status]** | The status of the dataflow run. Possible values include [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued], and [!UICONTROL Processing]. |
+| **[!UICONTROL Status]** | The status of the dataflow run. Possible values include:<ul><li>[!UICONTROL Success]: The dataflow has successfully ran.</li><li>[!UICONTROL Failed]: The dataflow has failed.</li><li>[!UICONTROL Queued]: The dataflow has been initiated, and is waiting to be processed.</li><li>[!UICONTROL Processing]: The dataflow is being processed. </li></ul> |
 | **[!UICONTROL Ready for customer segmentation]** | A status showing if the ingested records are ready to be used in customer segmentation. Possible values include [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued], and [!UICONTROL Processing]. Even if the **Status** of the dataflow is processing, if the value of this field is Yes, you can use the profiles in customer segmentation. |
-| **[!UICONTROL Ready for lookup]** | A status showing if the ingested records are ready to used in Adobe Journey Optimizer lookup.  Possible values include [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued], and [!UICONTROL Processing]. Even if the **Status** of the dataflow is processing, if the value of this field is Yes, you can use the profiles in Journey Optimizer lookup. |
+| **[!UICONTROL Ready for lookup]** | A status showing if the ingested records are ready to used in Profile lookup.  Possible values include [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued], and [!UICONTROL Processing]. Even if the **Status** of the dataflow is processing, if the value of this field is Yes, you can use the profiles in Profile lookup. |
 
 The [!UICONTROL Dataflow run details] page displays more information on your [!DNL Profile] dataflow run, including its organization ID and dataflow run ID. This page also displays the corresponding error code and error message provided by [!DNL Profile], should any errors occur in the ingestion process.
 
@@ -119,7 +121,7 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Records failed]** | The number of records that were ingested, but not into [!DNL Profile] due to errors. |
 | **[!UICONTROL Profile fragments created]** | The number of net new [!DNL Profile] fragments added. |
 | **[!UICONTROL Profile fragments updated]** | The number of existing [!DNL Profile] fragments updated. |
-| **[!UICONTROL Status]** | Defines the overall status of a dataflow. The possible status values are: <ul><li>`Success`: Indicates that a dataflow is active and is ingesting data according to the schedule it was provided..</li><li>`Failed`: Indicates that the activation process of a dataflow has been disrupted due to errors. </li><li>`Processing`: Indicates that the dataflow is not yet active. This status is often encountered immediately after a new dataflow is created.</li></ul> |
+| **[!UICONTROL Status]** | Defines the overall status of a dataflow. The possible status values are: <ul><li>`Success`: Indicates that a dataflow is active and is ingesting data according to the schedule it was provided..</li><li>`Failed`: Indicates that the activation process of a dataflow has been disrupted due to errors. </li><li>`Processing`: Indicates that the dataflow is not yet active. This status is often encountered immediately after a new dataflow is created.</li><li>`Queued`: Indicates that the dataflow is not yet active and is waiting to be processed.</li></ul> |
 | **[!UICONTROL Dataflow run start]** | The date and time the dataflow started to run. |
 | **[!UICONTROL Last updated]** | The date and time the dataflow last updated. |
 | **[!UICONTROL Error summary]** | If the dataflow run failed, this displays an error code and summary of why the dataflow run failed. |
