@@ -75,7 +75,7 @@ The relationship editor appears. You can now define the relationship between the
 
 With your schema fully created, you can start ingesting data from your source into the dataset. 
 
-To get data from your source to Experience Platform, you'll need to create a dataflow to ingest batch data from your source into the dataset. The following cloud storage source providers are supported: Amazon S3, SFTP, Data Landing Zone, Marketo Connector, Salesforce CRM, Microsoft Dynamics CRM, and HTTP API connectors.
+To get data from your source to Experience Platform, you'll need to create a dataflow to ingest batch data from your source into the dataset. The following source providers are supported: Amazon S3, SFTP, Data Landing Zone, Marketo Connector, Salesforce CRM, Microsoft Dynamics CRM, and HTTP API connectors.
 
 >[!NOTE]
 >
@@ -85,7 +85,7 @@ To get data from your source to Experience Platform, you'll need to create a dat
 >
 >Similarly to the other connectors, you **must** enable the dataset for segmentation and configure relationships.
 
-Your data within your cloud storage source must conform to the following specifications:
+Your data within your source must conform to the following specifications:
 
 - The file type is either delimited (such as a CSV or TSV) or JSON
 - The file contains one row per primary key in the file
