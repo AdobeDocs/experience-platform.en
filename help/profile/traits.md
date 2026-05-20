@@ -150,3 +150,4 @@ You can view more details by selecting the trait's name. The traits details page
 <!-- In the **dataset details** page, you can see all the traits that were created from that dataset. -->
 
 <!-- IMAGE -->
+
