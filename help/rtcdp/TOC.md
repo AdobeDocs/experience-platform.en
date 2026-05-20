@@ -36,6 +36,7 @@ role: Admin
   * [Segmentation overview](segmentation/segmentation-overview.md)
   * [Audience Builder guide](segmentation/audience-builder.md)
   * [Segmentation in Real-Time CDP B2B Edition](segmentation/b2b.md)
+  * [Custom objects](segmentation/custom-objects.md)
   * [Customer AI](segmentation/customer-ai.md)
 * Datasets {#datasets}
   * [Datasets](datasets/dataset.md)
