@@ -58,7 +58,9 @@ The schedule details page appears. On this page, you can edit a variety of detai
 
 >[!IMPORTANT]
 >
->The queries scheduler UI does not support indefinite or perpetual scheduling. An end date must be specified. There is no upper limit for the end date.
+>Support for scheduled queries without an end date is currently available to a limited set of customers. If this capability is enabled for your organization, you can create scheduled queries that run continuously without specifying an end date. In some system responses and UI views, schedules without an end date may appear with a far-future date, such as `31.12.9999`.
+>
+>If this capability is not enabled for your organization, an end date must be specified. There is no upper limit for the end date.
 
 ![The Schedule details panel highlighted.](../images/ui/query-schedules/schedule-details.png)
 
