@@ -54,6 +54,11 @@ The schedules workspace appears. The UI displays a list of any scheduled runs th
 
 ### Add schedule details {#schedule-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_queryService_querySchedules_noEndDate"
+>title="Scheduled query with no end date"
+>abstract="This scheduled query has no end date and continues running until you manually pause or delete it. Review long-running schedules periodically to avoid unnecessary compute usage."
+
 The schedule details page appears. On this page, you can edit a variety of details for the scheduled query. Details include the [frequency and weekday of the scheduled query](#scheduled-query-frequency) run, the start and end date, the dataset to export the results to, and [query status alerts](#alerts-for-query-status).
 
 >[!IMPORTANT]
