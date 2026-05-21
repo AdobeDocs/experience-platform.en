@@ -292,7 +292,7 @@ Yes! You can use audiences from Audience Composition in Adobe Journey Optimizer 
 >
 >This guardrail only applies to compositions created with Audience Composition and does **not** apply to compositions created with Federated Audience Composition.
 
-At this point in time, you can only have **10** published compositions per sandbox. This guardrail is planned to be increased in a future release. 
+At this point in time, you can only have **50** published compositions per sandbox. This guardrail is planned to be increased in a future release. 
 
 ### What are the workflow guardrails for Audience Composition?
 
@@ -427,3 +427,4 @@ It takes up to one hour for a segment definition to be available.
 ### Are there any limitations to the data being streamed in?
 
 When using edge or streaming segmentation, ensure that events for each profile are spaced out. If too many events are streamed in within the same second, Experience Platform will treat these events as bot-generated data, and they will be discarded. As best practice, you should have **at least** five seconds between event data in order to ensure the data is properly used.
+
