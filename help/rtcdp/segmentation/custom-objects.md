@@ -31,6 +31,12 @@ The **[!UICONTROL Create relational schema]** page appears. You can add the deta
 
 ## Add your fields {#add-fields}
 
+>[!NOTE]
+>
+>If you add a person identifier as part of your relational schema, you **must** tag it as an **[!UICONTROL Identifier]** with an appropriate identity namespace. This ensures that privacy requests correctly deletes these records from the custom objects while they're being processed.
+>
+>![](/help/rtcdp/assets/segmentation/custom-objects/person-identity.png){zoomable="yes" width="50%"}
+
 Once you created your relational schema, you can add the fields for your schema, including marking the primary key and version identifier, in the Schema Editor.
 
 ![The add a field button is highlighted within the Schema Editor.](/help/rtcdp/assets/segmentation/custom-objects/add-field.png)
