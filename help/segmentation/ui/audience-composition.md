@@ -103,13 +103,45 @@ To add a custom rule to the Audience block, select **[!UICONTROL Build rule]**.
 
 ![The Build rule button is highlighted.](../images/ui/audience-composition/select-build-rule.png)
 
-The Segment Builder appears. You can use the Segment Builder to create a custom rule for the audience to follow. More information about using the Segment Builder can be found in the [Segment Builder guide](./segment-builder.md).
+The rule builder canvas in Audience Builder appears. You can use Audience Builder to create a custom rule for the audience to follow. More information about using the Audience Builder can be found in the [Audience Builder guide](./segment-builder.md).
 
 ![The Segment Builder UI is displayed.](../images/ui/audience-composition/segment-builder.png)
 
 After adding a custom rule, select **[!UICONTROL Save]** to add the rule to your audience.
 
-![](../images/ui/audience-composition/custom-rule.png)
+![The custom rule is displayed in Audience Composition.](../images/ui/audience-composition/custom-rule.png)
+
+#### Audience payload {#audience-payload}
+
+Alternatively, you can add audience payloads to your composition. After selecting **[!UICONTROL Build rule]**, the rule builder canvas appears. 
+
+You can now create a filter criteria for your audience payload. This filter criteria **must** include an attribute that is within an array. The attribute being an array is dependent on your organization's schema structure. After you created your filter criteria, select **[!UICONTROL Select payloads]** within the right-hand panel. 
+
+![The Select payloads button is highlighted in Audience Builder.](/help/segmentation/images/ui/audience-composition/select-payloads.png)
+
+From the left panel, choose the object array, as well as the fields you want to be used in the payload. If there is only one array in the profile, the array is automatically selected for you. Select **[!UICONTROL Save]** to return to audience composition.
+
+![The schema tree for the enrichment tree is displayed.](/help/segmentation/images/ui/composition-enhancements/enrichment-tree.png)
+
++++ Behavior details and guardrails
+
+Please keep the following details and guardrails in mind while using audience payloads:
+
+- You can only use audience payloads with audiences created within Audience Composition.
+- The first block used within the composition **must** be a rule-based audience.
+- You **cannot** use any other operations within the composition.
+- Once published, you **cannot** edit the composition of the rule-based audience.
+
+  - You *can* copy the composition into a draft and edit the draft if you wish to make changes to the base composition or rule-based audience.
+
+- Only **one** object array can be used to generate the payload within a single audience
+
+  - The payload array can be nested within an object (up to seven layers within the profile schema), but **cannot** be contained in another array.
+  - The payload array **must** have 50 or fewer rows.
+  - All the columns included the payload **must** be a primitive type.
+  - Only the first **twenty** columns of the array are included in the output.
+
++++
 
 ## [!UICONTROL Exclude] {#exclude-block}
 
@@ -382,6 +414,13 @@ If there are any errors in creating the audience, an alert appears, letting you 
 
 ![The Publish button is highlighted, showing you how to save and publish your composition.](../images/ui/audience-composition/audience-alert.png)
 
+### Faster activation {#faster-activation}
+
+Faster activation lets you activate your audience to a downstream destination immediately after the composition has evaluated. If you set your destination to activate after segment evaluation, you do **no longer** need to wait for 24 hours for the evaluation job to finish.
+
+To learn how to manage your destination, read the [activate audiences to batch profile destinations guide](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files).
+
 ## Next steps
 
 Audience Composition provides a rich workflow allowing you to create compositions from the different block types. To learn more about other parts of the Segmentation Service UI, please read the [Segmentation Service user guide](./overview.md).
+

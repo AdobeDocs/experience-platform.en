@@ -16,9 +16,18 @@ You can create scheduled queries using either a technical account (authenticated
 
 Queries created with a personal user account will fail if that user's access is revoked or their account is disabled. Technical accounts provide greater stability because they are not tied to an individual user's employment status or access rights.
 
+>[!AVAILABILITY]
+>
+>Support for scheduled queries without an end date is currently available to a limited set of customers.
+>
+>If this capability is enabled for your organization, you can create scheduled queries that run continuously without specifying an end date. In some system responses and UI views, schedules without an end date may appear with a far-future date such as `31.12.9999`.
+
 >[!IMPORTANT]
 >
->Important considerations when managing scheduled queries:<ul><li>Scheduled queries will fail if the account (technical or user) used to create them loses access or permissions.</li><li>Scheduled queries must be disabled before deletion via the API or UI.</li><li>Scheduling indefinitely without an end date is not supported; an end date must always be specified.</li></ul>
+>Consider the following behavior when you manage scheduled queries:
+>
+>- Scheduled queries fail if the account used to create the schedule loses access or permissions.
+>- You must disable a scheduled query before you delete it through the API or UI.
 
 For detailed guidance on account requirements, permission setup, and managing scheduled queries, see the [Query schedules documentation](../ui/query-schedules.md#technical-account-user-requirements). For step-by-step instructions on creating and configuring a technical account, refer to [Developer Console setup](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) and [End-to-end technical account setup](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
 
