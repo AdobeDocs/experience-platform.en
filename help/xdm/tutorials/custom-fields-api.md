@@ -97,7 +97,7 @@ You can optionally provide customer-facing labels for each value under a `meta:e
 >
 >The `meta:enum` value does **not** declare an enumeration or drive any data validation on its own. In most cases, strings provided under `meta:enum` are also provided under `enum` to ensure that data is constrained. However, there are some use cases where `meta:enum` is provided without a corresponding `enum` array. See the tutorial on [defining suggested values](../tutorials/suggested-values.md) for more information.
 
-You can optionally provide a `default` property to indicate the default `enum` value that the field will use if no value is provided.
+You can optionally provide a `default` property to indicate the intended default `enum` value for the field. The `default` property is informational metadata defined by the JSON schema specification and is not automatically applied during Experience Platform ingestion or Data Prep flows. See [type-specific field properties in the UI](../ui/fields/overview.md#type-specific-properties).
 
 ```json
 "sampleField": {
@@ -220,7 +220,7 @@ The equivalent of a [!UICONTROL Byte] field created through the Schema Builder U
 }
 ```
 
-You can optionally provide a `default` value that the field will use when no explicit value is provided during ingestion.
+You can optionally provide a `default` property to document the intended value in the schema definition. This follows JSON Schema semantics and is informational metadata; Experience Platform ingestion and Data Prep flows do not automatically apply `default`. See [type-specific field properties in the UI](../ui/fields/overview.md#type-specific-properties).
 
 ```json
 "sampleField": {

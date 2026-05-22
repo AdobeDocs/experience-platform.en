@@ -158,7 +158,7 @@ If an array field is based on an object type, you can select its icon in the can
 
 ### [!UICONTROL Field properties] {#field-properties}
 
-When you select the name of any field in the canvas, the right rail updates to show details about that field under **[!UICONTROL Field properties]**. This can include a description of the field's intended use case, default values, patterns, formats, whether the field is required, and more. When you are exploring a field group, label-related details for the selected field can also appear here; see [Labels in the structure view](#field-group-labels-in-structure).
+When you select the name of any field in the canvas, the right rail updates to show details about that field under **[!UICONTROL Field properties]**. This can include a description of the field's intended use case, **[!UICONTROL Default value]** (informational schema metadata that is not applied during ingestion), patterns, formats, whether the field is required, and more. See [type-specific field properties](./fields/overview.md#type-specific-properties) for how **[!UICONTROL Default value]** differs from ingestion validation settings. When you are exploring a field group, label-related details for the selected field can also appear here; see [Labels in the structure view](#field-group-labels-in-structure).
 
 ![A field selected from the Commerce data type with the field properties highlighted.](../images/ui/explore/field-properties.png)
 

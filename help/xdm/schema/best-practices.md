@@ -233,6 +233,10 @@ When you ingest data into the data lake, data validation is only enforced for co
 
 To set constraints on a field, select the field in the Schema Editor to open the **[!UICONTROL Field properties]** sidebar. See the documentation on [type-specific field properties](../ui/fields/overview.md#type-specific-properties) for exact descriptions of the available fields.
 
+>[!NOTE]
+>
+>Not every control in **[!UICONTROL Field properties]** enforces ingestion validation. Unlike validation controls such as **[!UICONTROL Pattern]**, **[!UICONTROL Format]**, length bounds, numeric minimum and maximum values, and **[!UICONTROL Required]**, **[!UICONTROL Default value]** is informational schema metadata defined by the JSON schema specification and is not automatically applied during ingestion or Data Prep flows. See [type-specific field properties](../ui/fields/overview.md#type-specific-properties).
+
 ![The Schema Editor with the constraint fields highlighted in the [!UICONTROL Field properties] sidebar.](../images/best-practices/data-validation-fields.png)
 
 ### Tips to maintain data integrity {#data-integrity-tips}
