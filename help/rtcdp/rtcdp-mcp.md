@@ -309,12 +309,3 @@ You can access audiences, destination types, configured destination accounts, de
 No. The MCP server is designed for both marketing and technical personas. Marketers can interact with it using natural language prompts in any supported MCP client, while data engineers and developers can use it in developer tools that support MCP.
 +++
 
-+++What's the difference between Preview Audience Membership and Search Existing Audiences?
-
-`Search Existing Audiences` returns audiences that have already been authored and saved in your sandbox. `Preview Audience Membership` takes a raw PQL or SDD segment expression and returns a size estimate for it — useful for sizing a query *before* you save it as an audience.
-+++
-
-+++Can I query account audiences as well as profile audiences?
-
-Yes. Both `Search Existing Audiences` and `Preview Audience Membership` support an entity type parameter. Profile audiences can be expressed in PQL or SDD; account audiences always use SDD (relational) syntax.
-+++
