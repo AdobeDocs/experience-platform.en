@@ -182,8 +182,8 @@ For clients that accept a JSON-based MCP server configuration — such as Claude
 
 For `claude.ai` and Claude Desktop, add the Real-Time CDP MCP server as a **custom connector** using the server URL `https://rtcdp-mcp.adobe.io/mcp`.
 
-- **Individual plans** — In Claude, navigate to **Customize → Connectors**, click **Add connector**, and enter the server URL.
-- **Team and Enterprise plans** — A workspace **Owner** or **Primary Owner** adds the connector under **Organization settings → Connectors**. Once added, each user enables it in their own Claude settings.
+* **Individual plans** — In Claude, navigate to **Customize → Connectors**, click **Add connector**, and enter the server URL.
+* **Team and Enterprise plans** — A workspace **Owner** or **Primary Owner** adds the connector under **Organization settings → Connectors**. Once added, each user enables it in their own Claude settings.
 
 After the connector is added, enable it in a conversation and complete the Adobe browser sign-in on first use. Claude discovers Adobe IMS as the authorization server automatically — no Client ID or Client Secret is required.
 
