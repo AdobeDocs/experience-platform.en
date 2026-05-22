@@ -235,7 +235,7 @@ To set constraints on a field, select the field in the Schema Editor to open the
 
 >[!NOTE]
 >
->Not every control in **[!UICONTROL Field properties]** enforces ingestion validation. Unlike validation controls such as **[!UICONTROL Pattern]**, **[!UICONTROL Format]**, length bounds, numeric min/max values, and **[!UICONTROL Required]**, **[!UICONTROL Default value]** is informational schema metadata aligned with JSON Schema and is not automatically applied during ingestion or Data Prep. See [type-specific field properties](../ui/fields/overview.md#type-specific-properties).
+>Not every control in **[!UICONTROL Field properties]** enforces ingestion validation. Unlike validation controls such as **[!UICONTROL Pattern]**, **[!UICONTROL Format]**, length bounds, numeric minimum and maximum values, and **[!UICONTROL Required]**, **[!UICONTROL Default value]** is informational schema metadata defined by the JSON schema specification and is not automatically applied during ingestion or Data Prep flows. See [type-specific field properties](../ui/fields/overview.md#type-specific-properties).
 
 ![The Schema Editor with the constraint fields highlighted in the [!UICONTROL Field properties] sidebar.](../images/best-practices/data-validation-fields.png)
 
