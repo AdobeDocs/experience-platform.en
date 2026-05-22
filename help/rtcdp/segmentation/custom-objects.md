@@ -33,7 +33,7 @@ The **[!UICONTROL Create relational schema]** page appears. You can add the deta
 
 >[!NOTE]
 >
->If you add a person identifier as part of your relational schema, you **must** tag it as an **[!UICONTROL Identifier]** with an appropriate identity namespace. This ensures that privacy requests correctly deletes these records from the custom objects while they're being processed.
+>If you add a person identifier as part of your relational schema, you **must** tag it as an **[!UICONTROL Identifier]** with an appropriate identity namespace. This ensures that privacy requests correctly delete these records from the custom objects while they're being processed.
 >
 >![](/help/rtcdp/assets/segmentation/custom-objects/person-identity.png){zoomable="yes" width="50%"}
 
