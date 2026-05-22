@@ -309,16 +309,6 @@ You can access audiences, destination types, configured destination accounts, de
 No. The MCP server is designed for both marketing and technical personas. Marketers can interact with it using natural language prompts in any supported MCP client, while data engineers and developers can use it in developer tools that support MCP.
 +++
 
-+++What permissions do I need in Real-Time CDP?
-
-You need at minimum **View** permissions for the objects you want to query — audiences, destinations, and flow service entities. No write permissions are required because the MCP server only performs read operations. Contact your [!DNL Adobe Experience Platform] administrator if you are unsure about your current access level.
-+++
-
-+++Can I use the MCP server in sandbox environments?
-
-Yes. Every tool call requires a `sandboxName` parameter, so the MCP server always respects your [!DNL Adobe Experience Platform] sandbox configuration. You can query any sandbox you have access to by specifying its name in your prompt.
-+++
-
 +++What's the difference between Preview Audience Membership and Search Existing Audiences?
 
 `Search Existing Audiences` returns audiences that have already been authored and saved in your sandbox. `Preview Audience Membership` takes a raw PQL or SDD segment expression and returns a size estimate for it — useful for sizing a query *before* you save it as an audience.
