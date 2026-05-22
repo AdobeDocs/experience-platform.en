@@ -309,11 +309,6 @@ You can access audiences, destination types, configured destination accounts, de
 No. The MCP server is designed for both marketing and technical personas. Marketers can interact with it using natural language prompts in any supported MCP client, while data engineers and developers can use it in developer tools that support MCP.
 +++
 
-+++Is my data sent to the MCP client provider?
-
-When you submit a prompt, the MCP client may send relevant context (including Real-Time CDP data returned by the MCP server) to its model for processing. Review the privacy and data-handling policies of your MCP client provider before connecting to production data.
-+++
-
 +++What permissions do I need in Real-Time CDP?
 
 You need at minimum **View** permissions for the objects you want to query — audiences, destinations, and flow service entities. No write permissions are required because the MCP server only performs read operations. Contact your [!DNL Adobe Experience Platform] administrator if you are unsure about your current access level.
