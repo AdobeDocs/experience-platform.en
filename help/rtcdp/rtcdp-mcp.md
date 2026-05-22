@@ -17,11 +17,11 @@ You can use the Adobe Real-Time CDP MCP integration to query audiences, destinat
 
 >[!AVAILABILITY]
 >
->The Real-Time CDP MCP server is distributed as a **remote HTTP transport server** that users install and configure in supported MCP clients and app platforms (for example, Claude, ChatGPT, Claude Code, Codex, Cursor, or VS Code). Authentication is handled through a **browser-based login flow** — when your client first connects to the server, it opens your default browser so you can sign in with your Adobe credentials and authorize access. Please contact your Adobe representative to access this Beta program. 
+>The Real-Time CDP MCP server is distributed as a **remote HTTP transport server** that users install and configure in supported MCP clients and app platforms (for example, Claude, ChatGPT, Claude Code, Codex, Cursor, or VS Code). Authentication is handled through a **browser-based login flow** — when your client first connects to the server, it opens your default browser so you can sign in with your Adobe credentials and authorize access. Please contact your Adobe representative to access this Beta program.
 
 ## Beta, security, and legal notices {#mcp-notices}
 
-**Beta documentation notice:** This documentation covers a Beta feature and does not constitute final documentation. The content described herein relates to a Beta release and is subject to change prior to general availability. Adobe makes no representations about the completeness or accuracy of this documentation.
+**Beta documentation notice:** This documentation covers an Beta feature and does not constitute final documentation. The content described herein relates to an Beta release and is subject to change prior to general availability. Adobe makes no representations about the completeness or accuracy of this documentation.
 
 By using the Adobe Real-Time CDP MCP Server (Beta) ("Beta"), You hereby acknowledge that the Beta is provided **"as is" without warranty of any kind**. Adobe shall have no obligation to maintain, correct, update, change, modify or otherwise support the Beta. You are advised to use caution and not to rely in any way on the correct functioning or performance of such Beta and/or accompanying materials. The Beta is considered Confidential Information of Adobe. Any "Feedback" (information regarding the Beta including but not limited to problems or defects you encounter while using the Beta, suggestions, improvements, and recommendations) provided by You to Adobe is hereby assigned to Adobe including all rights, title, and interest in and to such Feedback.
 
@@ -51,7 +51,7 @@ The Real-Time CDP MCP server lets you inspect, summarize, and troubleshoot audie
 
 ## Available tools {#mcp-tools}
 
-Tool availability is rapidly changing as we enable new tools. Please contact your Adobe representative to get a list of the latest available tools. 
+Tool availability is rapidly changing as we enable new tools. Please contact your Adobe representative to get a list of the latest available tools.
 
 >[!NOTE]
 >
@@ -77,50 +77,115 @@ The following examples show how to interact with the [!DNL Adobe Real-Time CDP] 
 | **Cross-filter: audience × activation** | "Show me audiences with size greater than 1,000 that are activated on at least 2 destinations." / "Large audiences that are only activated to a single destination." |
 | **Audience membership preview** | "Preview the membership size for audience `High-Value Loyalty Members`." / "Estimate the size of this PQL query before I save it: {EXPRESSION}." |
 
+## Access and enablement {#mcp-access}
+
+The Real-Time CDP MCP server is in Beta and is not open for self-service enrollment. Access is by invitation only and requires your Adobe IMS Organization to be explicitly allowlisted before you can connect.
+
+To request access:
+
+1. Contact your Adobe account representative (CSM, TAM, or AE) and express your interest in the Real-Time CDP MCP Beta program.
+2. Your Adobe representative will coordinate with the product team to evaluate eligibility and enable your IMS Org ID.
+3. Once enabled, your Adobe representative will confirm access and provide any additional onboarding materials.
+
+>[!NOTE]
+>
+>Only IMS Organizations that have been explicitly enabled can connect to the Real-Time CDP MCP server. Attempting to connect before enablement will result in an authentication error.
+
 ## Prerequisites {#mcp-prerequisites}
 
 Before connecting the Real-Time CDP MCP server to your MCP client, ensure the following:
 
 * You have an active Real-Time CDP license.
-* You have access to a supported client that can connect to a remote MCP server or custom MCP app, such as Claude, ChatGPT, Claude Code, Codex, Cursor, or VS Code.
-* You have your Organization ID and the name of the sandbox you want to query.
+* Your Adobe IMS Organization has been enabled for the Beta program by your Adobe representative (see [Access and enablement](#mcp-access)).
+* You have access to a supported MCP client such as Claude, ChatGPT, Claude Code, Codex, Cursor, or VS Code.
+* You have your IMS Organization ID and the name of the sandbox you want to query.
 * You have the necessary permissions in Adobe Experience Platform to view audiences, destinations, and flow service entities.
 
 ## Connect the Real-Time CDP MCP server {#mcp-connect}
 
->[!NOTE]
->
->This integration is in Beta. Client menus, plan requirements, and admin controls may vary by application and version.
+The Real-Time CDP MCP server endpoint is:
 
-Before you start, make sure you have the following:
+```
+https://rtcdp-mcp.adobe.io/mcp
+```
 
-* The MCP server endpoint URL: `Available to Beta customers through your Adobe representative`.
-* Confirmation that your Adobe user has access to the target Experience Platform organization and sandbox.
+The server uses a **remote HTTP (Streamable HTTP) transport** with a **browser-based Adobe sign-in flow**. In every client, the setup pattern is the same:
 
-The Real-Time CDP MCP server is a **remote HTTP MCP server**. In every client, setup follows the same pattern:
-
-1. Add the server URL.
+1. Add the server URL: `https://rtcdp-mcp.adobe.io/mcp`
 2. Save or enable the connection.
 3. Complete the **browser-based Adobe login** the first time the client invokes a tool.
-4. Provide `imsOrgId` and `sandboxName` with each request.
+4. Provide `imsOrgId` and `sandboxName` at the start of each session.
+
+### General JSON configuration {#mcp-connect-json}
+
+For clients that accept a JSON-based MCP server configuration — such as Claude Desktop (`claude_desktop_config.json`), VS Code, or any client that reads a `mcp.json` file — use one of the following formats depending on whether your client supports native remote HTTP or requires a local bridge:
+
+**Via `mcp-remote` bridge (Claude Desktop and other clients that require a local bridge)**
+
+```json
+{
+  "mcpServers": {
+    "rtcdp": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://rtcdp-mcp.adobe.io/mcp"
+      ]
+    }
+  }
+}
+```
+
+**Native remote HTTP (clients that support it directly)**
+
+```json
+{
+  "mcpServers": {
+    "rtcdp": {
+      "url": "https://rtcdp-mcp.adobe.io/mcp",
+      "transport": "http"
+    }
+  }
+}
+```
+
+>[!NOTE]
+>
+>No API keys, bearer tokens, or additional headers are required in the configuration. Authentication is handled entirely through the browser-based Adobe sign-in flow on first use.
 
 ### Install in UI-based clients {#mcp-connect-ui}
 
 #### Claude
 
-For `claude.ai` and Claude Desktop, add the Real-Time CDP MCP server as a **custom connector** using the endpoint provided by your Adobe representative. In individual Claude plans, add it under **Customize > Connectors**. In Team and Enterprise plans, an owner may need to add it first under **Organization settings > Connectors**, after which each user connects it in their own Claude settings. Once configured, enable the connector in a conversation and complete the Adobe browser login on first use.
+For `claude.ai` and Claude Desktop, add the Real-Time CDP MCP server as a **custom connector** using the server URL `https://rtcdp-mcp.adobe.io/mcp`.
+
+- **Individual plans** — In Claude, navigate to **Customize → Connectors**, click **Add connector**, and enter the server URL.
+- **Team and Enterprise plans** — A workspace **Owner** or **Primary Owner** adds the connector under **Organization settings → Connectors**. Once added, each user enables it in their own Claude settings.
+
+After the connector is added, enable it in a conversation and complete the Adobe browser sign-in on first use. Claude discovers Adobe IMS as the authorization server automatically — no Client ID or Client Secret is required.
 
 #### ChatGPT
 
-In ChatGPT, add the Real-Time CDP MCP server as a **custom app/connector** using the endpoint provided by your Adobe representative. Depending on your ChatGPT plan, this may require **Developer mode** and workspace admin approval. After the app/connector is created or enabled, connect it from **Settings > Apps** or **Settings > Apps & Connectors**, then authenticate through the Adobe browser login when prompted.
+In ChatGPT, add the Real-Time CDP MCP server as a **custom connector**:
+
+1. Navigate to **Settings → Connectors** (or **Settings → Apps & Connectors**, depending on your plan).
+2. Click **Add connector** and enter `https://rtcdp-mcp.adobe.io/mcp` as the server URL.
+3. Save the connector. Depending on your ChatGPT plan, this step may require **Developer mode** or workspace admin approval.
+4. Once the connector is enabled, authenticate through the Adobe browser sign-in when prompted on first use.
 
 #### Cursor
 
-In Cursor, add the Real-Time CDP MCP server as a remote MCP server using the endpoint provided by your Adobe representative. Open **Settings > MCP**, add a new server, and paste the endpoint URL. Once added, enable the server for your workspace by selecting **connect** to authenticate via the browser.
+In Cursor, add the Real-Time CDP MCP server as a remote MCP server:
+
+1. Open **Settings → MCP**.
+2. Click **Add new server** and enter `https://rtcdp-mcp.adobe.io/mcp` as the server URL.
+3. Select **connect** to trigger the browser-based Adobe sign-in and authenticate.
+
+Once connected, Real-Time CDP tools are available in Cursor's Composer and Agent modes.
 
 #### Other UI-based clients
 
-For clients such VS Code or other desktop and web applications with remote MCP support, add the Real-Time CDP MCP server as a **remote HTTP** server using the endpoint provided by your Adobe representative. If the client supports optional headers or bearer tokens, leave them empty unless Adobe specifically instructs otherwise; authentication is handled through the browser-based Adobe sign-in flow on first use.
+For clients such as VS Code or other desktop and web applications with remote MCP support, add the Real-Time CDP MCP server as a **remote HTTP** server using `https://rtcdp-mcp.adobe.io/mcp`. If the client supports optional headers or bearer tokens, leave them empty — authentication is handled through the browser-based Adobe sign-in flow on first use.
 
 ### Install in technical clients {#mcp-connect-technical}
 
@@ -129,7 +194,7 @@ For clients such VS Code or other desktop and web applications with remote MCP s
 Add the server from the terminal:
 
 ```bash
-claude mcp add --transport http rtcdp <endpoint provided by your Adobe representative>
+claude mcp add --transport http rtcdp https://rtcdp-mcp.adobe.io/mcp
 ```
 
 Then start Claude Code and run:
@@ -138,14 +203,14 @@ Then start Claude Code and run:
 /mcp
 ```
 
-Select the `rtcdp` server and complete the Adobe login flow in your browser. If you already added the server in `claude.ai`, it can also appear automatically in Claude Code when both are using the same account.
+Select the `rtcdp` server and complete the Adobe login flow in your browser. If you already added the server in `claude.ai`, it may appear automatically in Claude Code when both are signed in to the same account.
 
 #### Codex
 
 Add the server from the terminal:
 
 ```bash
-codex mcp add rtcdp --url <endpoint provided by your Adobe representative>
+codex mcp add rtcdp --url https://rtcdp-mcp.adobe.io/mcp
 ```
 
 Authenticate the server:
@@ -164,15 +229,21 @@ You can also add the server directly to `~/.codex/config.toml`:
 
 ```toml
 [mcp_servers.rtcdp]
-url = "<endpoint provided by your Adobe representative>"
+url = "https://rtcdp-mcp.adobe.io/mcp"
 ```
 
 ### Required request parameters {#mcp-connect-params}
 
-Every tool call requires two parameters that scope the request:
+Every tool call requires two parameters that scope the request to your Adobe Experience Platform tenant:
 
 * `imsOrgId` — your Organization ID, mapped to the `x-gw-ims-org-id` header on downstream Experience Platform API calls.
 * `sandboxName` — the Experience Platform sandbox name, mapped to the `x-sandbox-name` header.
+
+Provide these at the start of each session. For example:
+
+> "Use org `1234ABCD@AdobeOrg` and sandbox `prod` for this session."
+
+If you don't know your IMS Org ID, ask your AI assistant to call `search_organizations` — it will return every org your Adobe credentials can access.
 
 ## Known limitations (Beta) {#mcp-limitations}
 
@@ -191,7 +262,12 @@ The following limitations apply to the current Beta release of the [!DNL Adobe R
 
 +++Which MCP clients are supported?
 
-The Real-Time CDP MCP server works with supported clients that can connect to remote MCP servers or custom MCP apps — including Claude, ChatGPT, Claude Code, Codex, Cursor, and VS Code. The setup flow depends on the client: UI-based clients typically add the server from settings, while technical clients such as Claude Code and Codex can add it from the command line or configuration files.
+The Real-Time CDP MCP server works with any client that supports remote MCP servers or custom connectors — including Claude, ChatGPT, Claude Code, Codex, Cursor, and VS Code. The setup flow depends on the client: UI-based clients typically add the server from a settings or connectors panel, while technical clients such as Claude Code and Codex can add it from the command line or configuration files.
++++
+
++++How do I get access?
+
+Access is by invitation only during the Beta. Contact your Adobe account representative (CSM, TAM, or AE) to request enrollment. Your Adobe representative will coordinate with the product team to enable your IMS Organization. See [Access and enablement](#mcp-access) for details.
 +++
 
 +++How does authentication work?
