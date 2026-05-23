@@ -4,6 +4,19 @@ solution: Experience Platform
 title: Batch Ingestion API Guide
 description: This document provides a comprehensive guide for developers working with batch ingestion APIs for Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
+TQID: https://experienceleague.adobe.com/oCAUvP0cM4dw1wEXnVCbjIkNGIlwSKb31A5h5s3-MTM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Batch ingestion developer guide
 

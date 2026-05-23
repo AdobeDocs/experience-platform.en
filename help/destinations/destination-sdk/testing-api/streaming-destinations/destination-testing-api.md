@@ -2,8 +2,22 @@
 description: Learn how to use the destination testing API to test if your streaming destination is configured correctly and to verify the integrity of data flows to your configured destination.
 title: Test your streaming destination with sample profiles
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
+TQID: https://experienceleague.adobe.com/iBK4oJed8u-XU9h3giI-jG-tZvDKAsysvJhCXaYA0MY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
-
 # Test your streaming destination with sample profiles {#template-api-operations}
 
 >[!IMPORTANT]

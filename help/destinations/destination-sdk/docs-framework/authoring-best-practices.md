@@ -2,6 +2,18 @@
 title: Authoring best practices
 description: Learn which rules and tips you should follow when authoring your destination documentation page, to ensure that it meets the Adobe Experience Platform documentation quality standards.
 exl-id: b12059f1-6635-41cd-acc5-6ff471111164
+TQID: https://experienceleague.adobe.com/SJ38avlncjFbrK-gAbCTh1CykXtri-HwXYhwMQdes8U
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Authoring best practices
 

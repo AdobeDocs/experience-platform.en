@@ -4,6 +4,16 @@ description: Learn how to programmatically correct or delete your customers' sto
 role: Developer
 hide: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
+TQID: https://experienceleague.adobe.com/M21EMs89R1ZjTgMBAvLmm6KpEKEM12FLpwShHh7LUJs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Delete records using the Data Hygiene API
 

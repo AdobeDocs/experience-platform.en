@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Create a MailChimp Campaigns source connection using Experience Platform UI
 description: Learn how to connect Adobe Experience Platform to MailChimp Campaigns using Experience Platform UI.
 exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
+TQID: https://experienceleague.adobe.com/0LnGSDHJ1KBgPXn-7as0mQfUxlel5y1Zpx4j0Kyngv4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a [!DNL Mailchimp Campaigns] source connection using Experience Platform UI
 

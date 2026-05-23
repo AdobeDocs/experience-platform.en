@@ -2,6 +2,21 @@
 title: Deprecate an XDM Field in the UI
 description: Learn how to deprecate Experience Data Model (XDM) fields using the Schema Editor within Experience Platform.
 exl-id: f4c5f58a-5190-47d7-8bfc-b33ed238bf25
+TQID: https://experienceleague.adobe.com/I1k95rHbY66tqi81Bj1nE2Z6ssgepZx62HGKNWk4g9Q
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Deprecate an XDM field in the UI
 

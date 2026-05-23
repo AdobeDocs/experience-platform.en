@@ -3,6 +3,25 @@ keywords: destinations;experience cloud solutions; target;target destination; ad
 title: Adobe destinations overview
 description: Manage your customer experience by connecting your data in Experience Platform to other Adobe CX Enterprise solutions for ad targeting, personalization, marketing automation and more
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
+TQID: https://experienceleague.adobe.com/C87hauQXI61ApvTAtw3-RxEecd25QxNr8PCrAWRi2FY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # Adobe destinations overview {#adobe-destinations}
 

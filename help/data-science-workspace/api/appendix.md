@@ -5,6 +5,18 @@ title: Sensei Machine Learning API Guide Appendix
 description: The following sections provide reference information for various features of the Sensei Machine Learning API.
 role: Developer
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
+TQID: https://experienceleague.adobe.com/XYM1i7-nK2MJRUdCv3HI0s2lYbTA3LlOdrXuyAeZtYE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # [!DNL Sensei Machine Learning] API guide appendix
 

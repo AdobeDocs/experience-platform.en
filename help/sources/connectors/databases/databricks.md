@@ -2,8 +2,20 @@
 title: Databricks
 description: Learn about the prerequisite steps needed in order to connect Databricks to Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
-last-substantial-update: 2026-03-14
+last-substantial-update: 2026-03-14T00:00:00.000Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
+TQID: https://experienceleague.adobe.com/VptaHDuBe-Nrreb-kb73ajDcAzEPmV-eERjCpCsyRI0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # [!DNL Databricks]
 

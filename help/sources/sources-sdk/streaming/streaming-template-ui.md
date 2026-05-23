@@ -3,6 +3,19 @@ title: Documentation Self-Service Template for Streaming SDK UI
 description: Learn how to bring streaming data from a source to Adobe Experience Platform using the UI.
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
 badge: Beta
+TQID: https://experienceleague.adobe.com/gKKoCn2nqsYRKYfHdcgZMJS67BTvJILS2iDJoDxvKSk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Create a source connection and dataflow to stream *YOURSOURCE* data using the UI
 

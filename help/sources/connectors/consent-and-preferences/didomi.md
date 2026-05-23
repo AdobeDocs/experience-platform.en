@@ -1,9 +1,22 @@
 ---
 title: Didomi Source Overview
 description: Learn how to connect Didomi to Adobe Experience Platform using the user interface.
-last-substantial-update: 2025-07-29
+last-substantial-update: 2025-07-29T00:00:00.000Z
 badge: Beta
 exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
+TQID: https://experienceleague.adobe.com/kNG516Ux3USmcbDNuhvRZUhzuBjss8wsPAabgG16KTM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # [!DNL Didomi]
 

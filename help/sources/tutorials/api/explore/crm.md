@@ -4,6 +4,18 @@ solution: Experience Platform
 title: Explore a CRM System Using the Flow Service API
 description: This tutorial uses the Flow Service API to explore CRM systems.
 exl-id: 9a8c553a-a93d-4539-a9d2-5f76a3927d92
+TQID: https://experienceleague.adobe.com/MoWIxCr67hdscc7aclhAL3sF4GBl2yK3tGhIp4pCCkg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Explore a CRM system using the [!DNL Flow Service] API
 

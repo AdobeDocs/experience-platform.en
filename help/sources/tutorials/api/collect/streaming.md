@@ -5,6 +5,21 @@ title: Create a Streaming Dataflow for Raw Data Using the Flow Service API
 type: Tutorial
 description: This tutorial covers the steps for retrieving streaming data and bringing them in to Experience Platform using source connectors and APIs.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
+TQID: https://experienceleague.adobe.com/gSGoLUNRnBZc--pYoLQXN0u8KHRovw4QRUU0Tu03ekQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a streaming dataflow for raw data using the [!DNL Flow Service] API
 

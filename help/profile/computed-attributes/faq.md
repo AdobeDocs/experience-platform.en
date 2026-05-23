@@ -2,6 +2,28 @@
 title: Computed Attributes Frequently Asked Questions
 description: Find out answers to frequently asked questions about using computed attributes.
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
+TQID: https://experienceleague.adobe.com/jufXPDBHwGfjvNeRsgicMAeecLiR1S3JdxIp3d5NfN0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: d3f95e25-a50e-4fd0-bc23-9a22409a183b
+    internal-label: Profile enrichment
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+    internal-label: Behavioral data
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # Frequently asked questions
 

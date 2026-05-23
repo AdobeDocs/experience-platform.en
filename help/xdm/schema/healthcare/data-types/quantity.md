@@ -4,6 +4,13 @@ description: Learn about the Quantity Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 881fe8a4-0253-4b75-9833-b97bb50cc87e
+TQID: https://experienceleague.adobe.com/BVN3txQTtu8hga-gsZzWYKWt3FUFvsQLWxcptLTCwus
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Quantity] data type
 

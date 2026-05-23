@@ -2,6 +2,15 @@
 title: Inline Templates
 description: Learn how to reuse multiple conditions in numerous queries with inline templates.
 exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
+TQID: https://experienceleague.adobe.com/DZFag9t7-LKVavtSNbVvuqC-CRZ6xPGziJAzOliOdqQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Inline templates
 

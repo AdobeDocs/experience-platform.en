@@ -5,6 +5,16 @@ description: An overview and more information about the lead to account matching
 feature: Get Started, Profiles, B2B
 badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
+TQID: https://experienceleague.adobe.com/T0r5AmDCHdLs7QqTm2TGv4hnC0FqYa8gJkw63jwEsUQ
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Lead to account matching in Real-Time CDP B2B
 
