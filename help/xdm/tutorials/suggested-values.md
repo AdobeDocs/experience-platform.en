@@ -41,7 +41,11 @@ It is also strongly recommended that you review the [evolution rules for enums a
 
 ## Composition 
 
-In the API, the constrained values for an **enum** field are represented by an `enum` array, while a `meta:enum` object provides friendly display names for those values:
+In the API, the constrained values for an **enum** field are represented by an `enum` array, while a `meta:enum` object provides friendly display names for those values.
+
+>[!NOTE]
+>
+>The optional JSON Schema `default` property documents an intended value in the schema definition. Experience Platform does not automatically apply `default` during ingestion or Data Prep flows. See [type-specific field properties in the UI](../ui/fields/overview.md#type-specific-properties).
 
 ```json
 "exampleStringField": {

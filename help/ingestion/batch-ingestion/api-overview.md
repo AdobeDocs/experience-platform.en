@@ -36,7 +36,7 @@ Before continuing, please review the [batch ingestion API overview](overview.md)
 >
 >- The following steps are applicable for small files (256 MB or less). If you hit a gateway timeout or request body size errors, you need to switch to large file upload.
 >
->- Use single-line JSON instead of multi-line JSON as input for batch ingestion. Single-line JSON allows for better performance as the system can divide one input file into multiple chunks and process them in parallel, whereas multi-line JSON cannot be split. This can significantly reduce data processing costs and improve batch processing latency.
+>- Use single-line JSON objects (JSONL) instead of multi-line JSON as input for batch ingestion. Single-line JSON objects (JSONL) allows for better performance as the system can divide one input file into multiple chunks and process them in parallel, whereas multi-line JSON cannot be split. This can significantly reduce data processing costs and improve batch processing latency.
 
 ### Create batch
 
@@ -44,7 +44,7 @@ Firstly, you will need to create a batch, with JSON as the input format. When cr
 
 >[!NOTE]
 >
->The examples below are for single-line JSON. To ingest multi-line JSON, the `isMultiLineJson` flag will need to be set. For more information, please read the [batch ingestion troubleshooting guide](./troubleshooting.md).
+>The examples below are for single-line JSON (JSONL). To ingest multi-line JSON, the `isMultiLineJson` flag will need to be set. For more information, please read the [batch ingestion troubleshooting guide](./troubleshooting.md).
 
 **API format**
 
@@ -930,9 +930,22 @@ The following section contains additional information for ingesting data in Expe
 
 ### Data transformation for batch ingestion
 
-In order to ingest a data file into [!DNL Experience Platform], the hierarchical structure of the file must comply with the [Experience Data Model (XDM)](../../xdm/home.md) schema associated with the dataset being uploaded to.
+In order to ingest a data file into Experience Platform, the hierarchical structure of the file must comply with the [Experience Data Model (XDM)](../../xdm/home.md) schema associated with the dataset being uploaded to.
 
 Information on how to map a CSV file to comply with an XDM schema can be found in the [sample transformations](../../etl/transformations.md) document, along with an example of a properly formatted JSON data file. Sample files provided in the document can be found here:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
+
+The following is an example of a JSONL (single-line JSON) payload formatted for ingestion into Experience Platform, taken from the file "CRM_single_line_profiles.json":
+
++++Select to view payload
+
+```json
+{"person":{"name":{"courtesyTitle":"Mr","firstName":"Ewart","lastName":"Bennedsen"},"gender":"male","birthDayAndMonth":"09-25","birthDate":"2004-09-25","birthYear":2004},"identityMap":{"CRMID":[{"id":"71a16013-d805-7ece-9ac4-8f2cd66e8eaa","primary":false}],"ECID":[{"id":"87098882279810196101440938110216748923","primary":false},{"id":"55019962992006103186215643814973128178","primary":false}],"LOYALTYID":[{"id":"2e33192000007456-0365c00000000000","primary":true}]},"homePhone":{"number":"256-284-7231"},"personalEmail":{"address":"ebennedsenex@jiathis.com"},"homeAddress":{"street1":"72BuhlerCrossing","city":"Anniston","stateProvince":"Alabama","country":"US","postalCode":"36205","_schema":{"latitude":33.708276,"longitude":-85.7922905}}}
+{"person":{"name":{"courtesyTitle":"Dr","firstName":"Novelia","lastName":"Ansteys"},"gender":"female","birthDayAndMonth":"10-31","birthDate":"1987-10-31","birthYear":1987},"identityMap":{"CRMID":[{"id":"2eeb6532-82e1-0d58-8955-bf97de66a6f5","primary":false}],"ECID":[{"id":"50829196174854544323574004005273946998","primary":false},{"id":"65233136134594262632703695260919939885","primary":false}],"LOYALTYID":[{"id":"2e3319208000765b-3811c00000000001","primary":true}]},"homePhone":{"number":"704-181-6371"},"personalEmail":{"address":"nansteysdk@spotify.com"},"homeAddress":{"street1":"79NorthfieldHill","city":"Charlotte","stateProvince":"NorthCarolina","country":"US","postalCode":"28299","_schema":{"latitude":35.2188655,"longitude":-80.8108888}}}
+{"person":{"name":{"courtesyTitle":"Mr","firstName":"Ulises","lastName":"Mochan"},"gender":"male","birthDayAndMonth":"03-20","birthDate":"1996-03-20","birthYear":1996},"identityMap":{"CRMID":[{"id":"6f393075-addb-bdd6-73f8-31c393b700f5","primary":false}],"ECID":[{"id":"70086119428645095847094710218289660855","primary":false},{"id":"82011353387947708954389153068944017636","primary":false}],"LOYALTYID":[{"id":"2e33192080003023-26b2000000000002","primary":true}]},"homePhone":{"number":"720-837-4159"},"personalEmail":{"address":"umochanco@gnu.org"},"homeAddress":{"street1":"00671MifflinTrail","city":"Lacolle","stateProvince":"Québec","country":"CA","postalCode":"E5A","_schema":{"latitude":45.08338,"longitude":-73.36585}}}
+{"person":{"name":{"courtesyTitle":"Mrs","firstName":"Friederike","lastName":"Durrell"},"gender":"female","birthDayAndMonth":"01-3","birthDate":"1979-01-3","birthYear":1979},"identityMap":{"CRMID":[{"id":"33d018ec-5fed-f1a3-56aa-079370a9511b","primary":false}],"ECID":[{"id":"50164729868919217963697788808932473456","primary":false},{"id":"64452712468609735658703639722261004071","primary":false}],"LOYALTYID":[{"id":"2e33192080006dfc-0cdf400000000003","primary":true}]},"homePhone":{"number":"798-528-3458"},"personalEmail":{"address":"fdurrellbj@utexas.edu"},"homeAddress":{"street1":"47FremontHill","city":"Independencia","stateProvince":"VeracruzLlave","country":"MX","postalCode":"91891","_schema":{"latitude":19.3803931,"longitude":-99.1476908}}}
+```
+
++++

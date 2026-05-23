@@ -63,6 +63,11 @@ You must add the following IP addresses to your allowlist to let traffic flow fo
 - `40.74.26.0/23`
 - `40.113.176.232/29`
 - `52.236.187.112/28`
+- `20.105.215.28/30`
+- `20.105.244.48/29`
+- `57.153.246.72/29`
+- `57.153.246.80/28`
+- `57.153.246.96/30`
 
 >[!TAB AUS5: Australia]
 

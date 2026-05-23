@@ -50,7 +50,7 @@ To select which fields are visible, you can select ![the configure columns icon]
 | [!UICONTROL Name] | The display name of the computed attribute. |
 | [!UICONTROL Description] | The description for the computed attribute. |
 | [!UICONTROL Evaluation method] | The evaluation method for the computed attribute. At this time, only **batch** is supported. |
-| [!UICONTROL Last evaluated] | This timestamp represents the last successful evaluation run. Only events that ocurred **before** this timestamp are considered in the last successful evaluation. |
+| [!UICONTROL Last evaluated] | This timestamp represents the last successful evaluation run. Only events that occurred **before** this timestamp are considered in the last successful evaluation. |
 | [!UICONTROL Last evaluation status] | The status that states whether or not the computed attribute was successfully calculated in the last evaluation run. Possible values include **[!UICONTROL Success]** or **[!UICONTROL Failed]**. |
 | [!UICONTROL Refresh frequency] | An indication on how frequently the computed attribute is expected to be refreshed. Possible values include hourly, daily, weekly, or monthly. |
 | [!UICONTROL Fast refresh] | A value that shows whether or not fast refresh is enabled for this compute attribute. If fast refresh is enabled, this lets the computed attribute be refreshed on a daily basis, rather than on a weekly, bi-weekly, or monthly basis. This value is only applicable for computed attributes with a lookback period greater than a weekly basis. |
@@ -84,7 +84,7 @@ The **[!UICONTROL Create computed attribute]** page appears. On this page, you c
 
 ![The [!UICONTROL Basic information] section of the [!UICONTROL Create computed attribute] page is highlighted.](./images/ui/basic-information.png)
 
-After adding the computed attribute details, you can start  defining your rules. 
+After adding the computed attribute details, you can start defining your rules. 
 
 ### Specify event filtering conditions
 
@@ -176,3 +176,4 @@ After creating a computed attribute, you can use **published** computed attribut
 ## Next steps
 
 To learn more about computed attributes, please read the [computed attributes overview](./overview.md). For information on creating and configuring computed attributes using the API, please read the [computed attributes developer guide](./api.md).
+

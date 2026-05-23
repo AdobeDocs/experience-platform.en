@@ -26,4 +26,3 @@ The audience that contains the streaming event would look as follows, with **onl
 After you create the two component audiences, you'll need to create an audience that **includes** both of the constituent audiences. This combined audience is evaluated using **streaming** segmentation.
 
 ![An audience that combines both the B2B entity audience and the streaming event audience.](/help/rtcdp/assets/segmentation/multi-entity/combined.png)
-

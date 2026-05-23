@@ -98,7 +98,7 @@ To learn more about computed attributes, please read the [computed attributes ov
 
 | Feature | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [Export arrays for enrichment attributes](../destinations/ui/activate-batch-profile-destinations.md#select-enrichment-attributes) | Export array fields as enrichment attributes when activating audiences to cloud storage destinations. Select individual inner fields from an array, and they are exported as separate columns in JSON and Parquet output. This feature is available to a limited number of customers. To request access, contact your Adobe representative. See the [enrichment attributes documentation](../destinations/ui/activate-batch-profile-destinations.md#select-enrichment-attributes) for details. |
+| [!BADGE Beta]{type=Informative} Export arrays for enrichment attributes | Export array fields as enrichment attributes when activating audiences to cloud storage destinations. Select individual inner fields from an array, and they are exported as separate columns in JSON and Parquet output. This feature is available to a limited number of customers. To request access, contact your Adobe representative. |
 | External audience support for [[!DNL Criteo]](../destinations/catalog/advertising/criteo.md) | Activate audiences from origins beyond Segmentation Service to the [Criteo](../destinations/catalog/advertising/criteo.md) destination, including custom upload audiences (imported from CSV), look-alike audiences, federated audiences, and audiences created in other Experience Platform apps such as [!DNL Adobe Journey Optimizer]. See the [supported audiences](../destinations/catalog/advertising/criteo.md#supported-audiences) section for details. |
 | New supported destinations for [[!DNL Acxiom Audience Connection]](../destinations/catalog/advertising/acxiom-audience-connection.md) and [[!DNL Acxiom Real ID Audience Connection]](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | Five new destinations are now supported: [!DNL Roku], [!DNL Samsung Ads], [!DNL The Trade Desk] (1st Party), [!DNL Warner Bros. Discovery], and [!DNL Yahoo]. See the [Acxiom Audience Connection](../destinations/catalog/advertising/acxiom-audience-connection.md) and [Acxiom Real ID Audience Connection](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) documentation for details. |
 
@@ -173,3 +173,4 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 {style="table-layout:auto"}
 
 For more information, read the [sources overview](../sources/home.md).
+

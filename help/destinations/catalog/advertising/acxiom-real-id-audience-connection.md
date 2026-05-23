@@ -124,9 +124,14 @@ Activate audiences to the following platforms through the [!DNL Acxiom Real ID A
 * [[!DNL Facebook]](#facebook)
 * [[!DNL LG Ads]](#lg-ads)
 * [[!DNL Pinterest]](#pinterest)
+* [[!DNL Roku]](#roku)
+* [[!DNL Samsung Ads]](#samsung)
 * [!DNL Spectrum]
+* [[!DNL The Trade Desk 1st Party]](#ttd)
 * [!DNL Viant]
 * [[!DNL Vizio]](#vizio)
+* [[!DNL Warner Bros. Discovery]](#warner)
+* [[!DNL Yahoo]](#yahoo)
 
 ## Connect to the destination {#connect}
 
@@ -160,7 +165,7 @@ To configure details for the destination, complete the following fields.
 
 To configure details for the destination, complete the following fields.
 
-* **[!UICONTROL Segment Category]**: The target category or vertical that your segment falls into. Example: financial services, automotive, or health.
+* **[!UICONTROL Segment Category]**: The target category or vertical that your audience falls into. Example: financial services, automotive, or health.
 
     ![Screenshot of the [!DNL LG Ads] destination details panel showing the Segment Category field.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_lg_ads_destination_details.png){zoomable="yes"}
 
@@ -172,6 +177,34 @@ To configure details for the destination, complete the following fields.
 
     ![Screenshot of the [!DNL Pinterest] destination details panel showing the Destination Account ID field.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_pinterest_destination_details.png){zoomable="yes"}
 
+### [!DNL Roku] {#roku}
+
+To configure details for the destination, complete the following fields.
+
+* **[!UICONTROL Advertiser ID]**: Enter the Advertiser ID for this destination.
+* **[!UICONTROL Campaign duration in days]**: Enter the campaign run time in number of days.
+
+    ![Screenshot of the [!DNL Roku] destination details panel showing the Advertiser ID and Campaign duration in days fields.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/roku_destination_details.png){zoomable="yes"}
+
+### [!DNL Samsung Ads] {#samsung}
+
+To configure details for the destination, complete the following fields.
+
+* **[!UICONTROL Advertiser Name]**: Enter the name of the advertiser for this destination.
+* **[!UICONTROL Advertiser ID]**: Enter the Advertiser ID for this destination.
+
+    ![Screenshot of the [!DNL Samsung Ads] destination details panel showing the Advertiser Name and Advertiser ID fields.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/samsung_ads_destination_details.png){zoomable="yes"}
+
+### [!DNL The Trade Desk] (1st Party) {#ttd}
+
+To configure details for the destination, complete the following fields.
+
+* **[!UICONTROL Advertiser ID]**: Enter the Advertiser ID for this destination.
+* **[!UICONTROL Advertiser Secret Key on The Trade Desk platform]**: Enter the advertiser's secret key for this Advertiser ID. Leaving this field blank causes the distribution to fail.
+* **[!UICONTROL Campaign duration in days]**: Enter the campaign run time in number of days.
+
+    ![Screenshot of the [!DNL The Trade Desk] destination details panel showing the Advertiser ID, Advertiser Secret Key, and Campaign duration in days fields.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/the_trade_desk_destination_details.png){zoomable="yes"}
+
 ### [!DNL Vizio] {#vizio}
 
 To configure details for the destination, complete the following fields.
@@ -179,6 +212,23 @@ To configure details for the destination, complete the following fields.
 * **[!UICONTROL Advertiser Name]**: Enter the name of the advertiser for this destination.
 
     ![Screenshot of the [!DNL Vizio] destination details panel showing the Advertiser Name field.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_vizio_destination_details.png){zoomable="yes"}
+
+### [!DNL Warner Bros. Discovery] {#warner}
+
+To configure details for the destination, complete the following fields.
+
+* **[!UICONTROL Client name for Open AP]**: Enter the client name for [!DNL Warner Bros. Discovery] via [!DNL Open AP]. Your [!DNL Warner Bros. Discovery] representative activates your audience on your behalf through coordination with [!DNL Open AP].
+
+    ![Screenshot of the [!DNL Warner Bros. Discovery] destination details panel showing the Client name for [!DNL Open AP] field.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/warner_bros_discovery_destination_details.png){zoomable="yes"}
+
+### [!DNL Yahoo] {#yahoo}
+
+To configure details for the destination, complete the following fields.
+
+* **[!UICONTROL Destination Account ID]**: Enter the destination account ID for this destination.
+* **[!UICONTROL Campaign duration in days]**: Enter the campaign run time in number of days.
+
+    ![Screenshot of the [!DNL Yahoo] destination details panel showing the Destination Account ID and Campaign duration in days fields.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/yahoo_destination_details.png){zoomable="yes"}
 
 ## Activate audiences to this destination {#activate}
 
