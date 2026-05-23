@@ -3,7 +3,6 @@ audience: user
 user-guide-title: Adobe Experience Platform Overview
 breadcrumb-title: Experience Platform overview
 user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real time with guides, documentation, and tutorials.
-nudge: true
 ---
 
 # Adobe Experience Platform overview {#landing}
