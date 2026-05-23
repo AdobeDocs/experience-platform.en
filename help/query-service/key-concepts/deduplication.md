@@ -5,6 +5,15 @@ title: Data Deduplication in Query Service
 type: Tutorial
 description: This document outlines sub-select and full sample query examples for deduplicating three common use cases Experience Events, purchases, and metrics.
 exl-id: 46ba6bb6-67d4-418b-8420-f2294e633070
+TQID: https://experienceleague.adobe.com/J-flNv6tlRRZG6AeP0aof4yHYL2IxgglqVVy8NXGT50
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Data deduplication in [!DNL Query Service]
 

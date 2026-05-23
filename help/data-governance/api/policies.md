@@ -5,6 +5,16 @@ title: Data Governance Policies API Endpoint
 description: Data governance policies are rules your organization adopts that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform. The /policies endpoint is used for all API calls related to viewing, creating, updating, or deleting data governance policies.
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
+TQID: https://experienceleague.adobe.com/drRzpVXCNSmAKAM-rzNng6NOtjkFH83whP0IxCkFaiE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Data governance policies endpoint
 

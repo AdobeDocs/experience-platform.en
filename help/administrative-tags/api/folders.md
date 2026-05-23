@@ -3,6 +3,16 @@ title: Folders Endpoint
 description: Learn how to create, update, manage, and delete folders using the Adobe Experience Platform APIs.
 role: Developer
 exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
+TQID: https://experienceleague.adobe.com/0OQl3U9h1csv9C0al2IvTMhQZd9WU6A9RRbv4vXWvk4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Folders endpoint
 

@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Ad-hoc Schemas
 description: In specific circumstances, it may be necessary to create an XDM schema with fields that are namespaced for usage only by a single dataset. This is referred to as an ad-hoc schema.
 exl-id: 8ee43bdc-3f16-4ec9-b17a-9942e4599023
+TQID: https://experienceleague.adobe.com/GF0CdcFbSZiZbtCaUUGTXifcJ7t1QjPmXkQJQCfIZaA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Ad-hoc schemas
 

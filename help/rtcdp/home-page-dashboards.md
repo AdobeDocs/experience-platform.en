@@ -4,6 +4,16 @@ title: Real-Time Customer Data Platform Home Page and Dashboards
 description: Understand various dashboards, the home page, and the first-time user experience of Adobe Real-Time CDP.
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
+TQID: https://experienceleague.adobe.com/THfxsas5dP7HBk-tWzE43tkcZspHzw-wqAyKQa55xDU
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # [!DNL Real-Time Customer Data Platform] home page
 

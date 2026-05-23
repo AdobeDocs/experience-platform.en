@@ -4,6 +4,19 @@ title: Navigate to Use Case Playbooks
 description: Learn how to navigate a gallery of playbooks and get started with an inspirational sandbox.
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
+TQID: https://experienceleague.adobe.com/XcrelsauHLgOt29zk-d-c5yY0OWtU2EC-f902RlAo0E
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # Navigate to Use Case Playbooks
 

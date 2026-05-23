@@ -4,6 +4,13 @@ solution: Experience Platform
 title: HTTP API Source Connector Overview
 description: Learn how to create streaming connectors to connect with Adobe Experience Platform using APIs or the user interface.
 exl-id: 41e079f3-75b2-4033-8138-73162c31461a
+TQID: https://experienceleague.adobe.com/QKsB4fHjl0AmFF0mD6vUdayKCmIQsojYi-yerC64ENI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL HTTP API] connector
 

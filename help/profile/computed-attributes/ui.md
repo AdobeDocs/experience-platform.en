@@ -2,6 +2,23 @@
 title: Computed Attributes UI guide
 description: Learn how to create, view, and update computed attributes using the Adobe Experience Platform UI.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
+TQID: https://experienceleague.adobe.com/sqJpd3a2M-USLYMwICnNt9pxexuC1293kZRDtYiIhgA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Computed attributes UI guide
 

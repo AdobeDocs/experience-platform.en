@@ -5,6 +5,23 @@ title: Create a Dataflow Using an E-Commerce Source in the UI
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Experience Platform dataset. This tutorial provides steps on how to create a dataflow for an e-commerce source using Experience Platform UI.
 exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
+TQID: https://experienceleague.adobe.com/38S9mXRjCTo85-89hj9QMYmdh-nfpmggYsyt-wkTRjo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+    internal-label: Data integration
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Create a dataflow using an e-commerce source in the UI
 

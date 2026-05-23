@@ -5,6 +5,13 @@ title: Create an Oracle Object Storage Source Connection in the UI
 type: Tutorial
 description: Learn how to create an Oracle Object Storage source connection using the Adobe Experience Platform UI.
 exl-id: 32284163-5dde-4171-8977-f76ceeebcef2
+TQID: https://experienceleague.adobe.com/CoYgItMa8NLFiR0Z60K5aDKQX5l6qXcIM24Na7ywckI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create an [!DNL Oracle Object Storage] Source Connection in the UI
 

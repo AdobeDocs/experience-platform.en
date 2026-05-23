@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Explore a Protocol System Using the Flow Service API
 description: This tutorial uses the Flow Service API to explore protocols applications.
 exl-id: e4b24312-543e-4014-aa53-e8ca9c620950
+TQID: https://experienceleague.adobe.com/6n8i6LEphVXR5yXqklAds3BaNuECNik8rZRVnffT5vU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Explore a protocol system using the [!DNL Flow Service] API
 

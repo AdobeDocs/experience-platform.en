@@ -2,6 +2,13 @@
 title: Connect Google Ads To Experience Platform Using APIs
 description: Learn how to connect Adobe Experience Platform to Google Ads using the Flow Service API.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
+TQID: https://experienceleague.adobe.com/-LBtfXxOo-UC7Aqtsg-YItREUlz-VkASj57vh8YmuVA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Connect [!DNL Google Ads] to Experience Platform using the [!DNL Flow Service] API
 

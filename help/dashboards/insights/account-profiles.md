@@ -1,12 +1,23 @@
 ---
 title: Account Profile Insights
 description: Discover the SQL that powers your Account Profile insights and use these queries to generate custom insights that further explore your customers and their consumer experiences.
-badgeB2B:
-  label="B2B Edition"
-  type="Informative"
-  url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions"
-  newtab=true
+badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
+TQID: https://experienceleague.adobe.com/PuxetMqlwAVAisy27-r1SCPriB8iE-dEfL24Azn2JEA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Account Profile insights
 

@@ -4,6 +4,13 @@ description: Learn about the Extended Contact Detail Experience Data Model (XDM)
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 4ac9b3d7-acc8-4a82-b34f-ec63a8bf12e0
+TQID: https://experienceleague.adobe.com/1ODx6i0IjQdtEftw6u6-ah3HPJNaYY7t3mDsosJpI-k
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Extended Contact Detail] data type
 

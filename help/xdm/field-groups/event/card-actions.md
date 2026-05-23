@@ -2,6 +2,13 @@
 title: Card Actions Schema Field Group
 description: Learn about the Card Actions schema field group.
 exl-id: 49851544-9118-4b73-b1d1-4cf49b3f1dee
+TQID: https://experienceleague.adobe.com/yEkB4QzAstJgzhhroOYGcURFJFbdpS55WOp-I2NeNXI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Card Actions] schema field group
 

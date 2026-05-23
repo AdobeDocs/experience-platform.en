@@ -5,6 +5,13 @@ title: List Identity Mappings
 description: A mapping is a collection of all identities in a cluster, for a specified namespace.
 role: Developer
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
+TQID: https://experienceleague.adobe.com/yTcdjG3F5QSo7RhrnkUu-ouMqXHxr9qpjCYo98ZuDhI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # List identity mappings
 

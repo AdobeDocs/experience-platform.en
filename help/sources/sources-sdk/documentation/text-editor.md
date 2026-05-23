@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Use a Text Editor in Your Local Environment to Create a Sources Documentation Page
 description: This document provides steps on how to use your local environment to author documentation for your source and submit a pull request (PR).
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
+TQID: https://experienceleague.adobe.com/2cI60PYEFSn-EAZCnKuJDC9TO7Qys6-pfCzzLHjEL2E
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Use a text editor in your local environment to create a sources documentation page
 

@@ -5,6 +5,19 @@ title: Create a Dataflow for Marketing Automation Sources Using the Flow Service
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a marketing automation system and bringing them into Adobe Experience Platform using source connectors and APIs.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
+TQID: https://experienceleague.adobe.com/KXO2to2u-oDC5FoU28dMrTzyrWnESaeNn0NDjenM5sk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a dataflow for marketing automation sources using the [!DNL Flow Service] API
 

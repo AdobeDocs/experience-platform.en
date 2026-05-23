@@ -2,6 +2,13 @@
 title: Return Item Data Type
 description: Learn about the Return Item Experience Data Model (XDM) data type.
 exl-id: e703d65b-a133-484e-96d6-6b1f50fc1e48
+TQID: https://experienceleague.adobe.com/L7f0Y1UQQlslZr4oLtAoc7EDOG2DJndUtpU56-boWZw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Return Item] data type
 

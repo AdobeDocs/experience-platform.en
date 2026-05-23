@@ -4,6 +4,19 @@ description: Learn about the Dosage Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 56eda38b-a7f7-40da-af08-73cfe9db0c7e
+TQID: https://experienceleague.adobe.com/JMpEoTBulgs8ogC93z9pq7gZ1ZJmUxrGgEE9E6fqGRg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+    internal-label: Administration
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 ---
 # [!UICONTROL Dosage] data type
 

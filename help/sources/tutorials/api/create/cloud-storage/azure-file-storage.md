@@ -5,6 +5,13 @@ title: Create an Azure File Storage Base Connection Using the Flow Service API
 type: Tutorial
 description: Learn how to connect Azure File Storage to Adobe Experience Platform using the Flow Service API.
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
+TQID: https://experienceleague.adobe.com/8NK-0-xk6KsDz6OzHKnWTaIdkeFEaCgd6Pp9aBdkSl0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create an [!DNL Azure File Storage] base connection using the [!DNL Flow Service] API
 

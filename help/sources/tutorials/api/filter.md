@@ -2,6 +2,16 @@
 title: Filter Row-Level Data For A Source Using The Flow Service API
 description: This tutorial covers the steps on how to filter data at the source level using the Flow Service API
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
+TQID: https://experienceleague.adobe.com/uUOQaQF4llmEs3v-F7Q2m30cnkwPCMPk6AaNtpBO7cE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Filter row-level data for a source using the [!DNL Flow Service] API
 

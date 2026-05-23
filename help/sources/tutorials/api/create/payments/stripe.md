@@ -3,6 +3,16 @@ title: Ingest payments data from your [!DNL Stripe] account to Experience Platfo
 description: Learn how to ingest payments data from your Stripe account to Experience Platform using the Flow Service API
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
+TQID: https://experienceleague.adobe.com/JoKGfLa3Fwqfo4TKo6TSqbQKmLYkIl-5X50iq2R839g
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Ingest payments data from your [!DNL Stripe] account to Experience Platform using APIs
 

@@ -2,6 +2,19 @@
 title: Commerce Scope Data Type
 description: Learn about the Commerce Scope Experience Data Model (XDM) data type.
 exl-id: c2888c3a-a49c-43c4-8d36-0a485cb76a58
+TQID: https://experienceleague.adobe.com/PDBCsaYP6y57O9XzKCrAnDFG58lRZpR2qNkqNQ8p-0U
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
 ---
 # [!UICONTROL Commerce Scope] data type
 
