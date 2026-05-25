@@ -158,6 +158,14 @@ For more information, read the [Audiences overview](../../segmentation/home.md).
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
+**New or updated sources**
+
+| Source | Description |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} [!DNL LAVA] | You can now bring loyalty and engagement data from [!DNL LAVA] into Experience Platform using the [[!DNL LAVA] source](../../sources/connectors/loyalty/lava.md). Stream member profiles, reward balances, and ticket scan events to enrich [!DNL Real-Time Customer Profile] and support segmentation, personalization, and activation. Create a separate source connection for each data type you need, and map `email` on member profiles to stitch [!DNL LAVA] records with your existing profiles. For prerequisites, an optional setup package, and step-by-step setup, read the [[!DNL LAVA] source documentation](../../sources/connectors/loyalty/lava.md). |
+
+{style="table-layout:auto"}
+
 **Updates and fixes**
 
 | Source | Description |
@@ -170,14 +178,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 For more information, read the [sources overview](../../sources/home.md).
 
 <!--
-
-**New or updated sources**
-
-| Source | Description |
-| --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL LAVA] | You can now bring loyalty and engagement data from [!DNL LAVA] into Experience Platform using the [[!DNL LAVA] source](../../sources/connectors/loyalty/lava.md). Stream member profiles, reward balances, and ticket scan events to enrich [!DNL Real-Time Customer Profile] and support segmentation, personalization, and activation. Create a separate source connection for each data type you need, and map `email` on member profiles to stitch [!DNL LAVA] records with your existing profiles. For prerequisites, an optional setup package, and step-by-step setup, read the [[!DNL LAVA] source documentation](../../sources/connectors/loyalty/lava.md). |
-
-{style="table-layout:auto"}
 
 | Automatic dataflow disabling | Source dataflows that fail continuously for 30 days are automatically disabled. When a dataflow is disabled, review the failure reason in Monitoring, apply the necessary updates, and re-enable the dataflow. Common failure reasons include credentials, permissions, or schema and mapping configuration changes. |
 -->
