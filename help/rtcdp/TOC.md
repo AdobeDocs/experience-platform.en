@@ -8,6 +8,7 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform Guide
 user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audiences from those profiles, and activate those audiences to third-party destinations.
 role: Admin
+nudge: true
 ---
 
 # Real-Time Customer Data Platform Help {#rtcdp}
