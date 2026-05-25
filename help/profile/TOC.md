@@ -4,6 +4,7 @@ user-guide-title: Real-Time Customer Profile Guide
 user-guide-description: Merge customer data to create a unified view of customer interactions across channels.
 feature: Profiles
 role: User
+nudge: true
 ---
 
 # [!DNL Real-Time Customer Profile] {#profile}
