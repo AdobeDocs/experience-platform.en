@@ -2,6 +2,16 @@
 title: Healthcare Medication Schema Field Group
 description: Learn about the Healthcare medication schema field group.
 exl-id: 3423d067-fe8c-44e5-a6f9-ce0458d26ebc
+TQID: https://experienceleague.adobe.com/u3yvWq3IDCt5sqCD2xGMtagNhm9wFVE5HhB35PUf9TE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
 ---
 # [!UICONTROL Healthcare medication] schema field group
 

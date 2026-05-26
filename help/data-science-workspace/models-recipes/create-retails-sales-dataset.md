@@ -5,8 +5,19 @@ title: Create the Retail Sales Schema and Dataset
 type: Tutorial
 description: This tutorial provides you with the prerequisites and assets required for all other Adobe Experience Platform Data Science Workspace tutorials. Upon completion, the Retail Sales schema and datasets will be available for you and members of your organization on Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
+TQID: https://experienceleague.adobe.com/2vsG8MTypwkIp59v95c4uYmWIGac5jgvdtylh3L0T-0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
-
 # Create the retail sales schema and dataset
 
 >[!NOTE]

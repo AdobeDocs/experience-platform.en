@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Create a new connection specification using the Flow Service API
 description: The following document provides steps on how to create a connection specification using the Flow Service API and integrate a new source through Self-Serve Sources.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
+TQID: https://experienceleague.adobe.com/VPuDpFnbt40Dfq0HlcykCbkR39CghqeDCT-65twzPA4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a new connection specification using the [!DNL Flow Service] API
 

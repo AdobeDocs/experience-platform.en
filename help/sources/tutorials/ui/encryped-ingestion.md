@@ -2,6 +2,16 @@
 title: Ingest Encrypted Data in the Sources UI Workspace
 description: Learn how to ingest encrypted data in the sources UI workspace.
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
+TQID: https://experienceleague.adobe.com/qQ1M2BDcSWJsSA-AF-dj6-1fPq-yF4aFsJ3k6VPRsRY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 ---
 # Ingest encrypted data in the sources UI
 

@@ -3,6 +3,18 @@ title: Privacy Service API Guide
 description: Learn how to use the Privacy Service API to programmatically manage privacy jobs for supported Adobe Experience Cloud applications.
 role: Developer
 exl-id: 665466ac-2447-4a9d-a8cf-62092c09e431
+TQID: https://experienceleague.adobe.com/R3W8RDh35UrxTL-ZQAHrRC6nr1Ix3snMEBD8v87nUY8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # [!DNL Privacy Service] API guide
 

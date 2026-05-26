@@ -5,6 +5,13 @@ title: Schedules Endpoint
 description: The following sections walks through the various API calls you can make for scheduled queries with the Query Service API.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
+TQID: https://experienceleague.adobe.com/h2IwzihCHWZhZ9I78SbmBoZ3Se72-aXzHWqhlDZkJ18
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Schedules endpoint
 

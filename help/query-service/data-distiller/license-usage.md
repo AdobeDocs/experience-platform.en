@@ -2,6 +2,15 @@
 title: Monitor Batch Query License Usage
 description: The Adobe Experience Platform UI provides a dashboard through which you can view important information about your organization's Data Distiller license usage.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
+TQID: https://experienceleague.adobe.com/CU3pM7HOX13NjRGJEYiELoxHyzznwECc1Yk7mAVZVbs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Monitor batch query license usage {#monitor-license-usage}
 

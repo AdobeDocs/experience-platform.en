@@ -4,6 +4,13 @@ description: Learn about the Coverage schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 7b84c0cf-3bd4-4ba8-a8cc-85e6b3f2b59e
+TQID: https://experienceleague.adobe.com/VErK3GE5VWp11FPYJiGQU3qlRmK2TlIyVoCMMsbW3P4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Coverage] schema field group
 

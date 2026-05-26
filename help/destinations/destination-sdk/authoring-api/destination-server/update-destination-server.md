@@ -2,6 +2,21 @@
 description: This page exemplifies the API call used to update an existing destination server configuration through Adobe Experience Platform Destination SDK.
 title: Update a destination server configuration
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
+TQID: https://experienceleague.adobe.com/r-OmoLDKGVSmzpYPRBwEq1bAXk2WCzfE5vmGPuduMrA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Update a destination server configuration
 

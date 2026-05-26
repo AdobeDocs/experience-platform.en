@@ -4,6 +4,13 @@ solution: Experience Platform
 title: GreenPlum Source Connector Overview
 description: Learn how to connect GreenPlum to Adobe Experience Platform using APIs or the user interface.
 exl-id: 41757062-9ac8-42d3-91f6-a00866195882
+TQID: https://experienceleague.adobe.com/PGxj0t9t6DQnfWMveGaki-deD3k3iUizZntng-nUBEk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL GreenPlum] connector
 

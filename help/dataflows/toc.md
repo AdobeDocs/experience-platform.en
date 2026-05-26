@@ -4,6 +4,7 @@ user-guide-title: Dataflows Guide
 user-guide-description: Learn about dataflows and how to configure them across different services.
 feature: Dataflows
 role: Developer
+nudge: true
 ---
 
 # Dataflows {#dataflows}

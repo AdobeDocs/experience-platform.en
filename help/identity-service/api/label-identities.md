@@ -5,6 +5,13 @@ title: Label a Field as an Identity
 description: Fields that contain personally identifiable information (PII) can be labeled as identity fields. A value provided in an identity field is interpreted as an identity by Identity Service. The namespace of the identity is specified as a part of labeling the field.
 role: Developer
 exl-id: f0b3f18b-7302-4a0b-b444-2d4b59787681
+TQID: https://experienceleague.adobe.com/j8K5cX4bRdHe9Aip7UwBsh2UXRMfYE8OeB5qXVol7ms
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Label a field as an identity
 

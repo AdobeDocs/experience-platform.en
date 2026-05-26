@@ -2,6 +2,16 @@
 title: CSV Template to Schema Conversion API Endpoint
 description: The /rpc/csv2schema endpoint in the Schema Registry API allows you to use CSV templates to automatically create Experience Data Model (XDM) schemas.
 exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
+TQID: https://experienceleague.adobe.com/5kR3-cOBH1lBfzP0iuY-Z3wmxJh4DlG2jWOBWh5CRRs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # CSV template to schema conversion API endpoint
 

@@ -5,6 +5,16 @@ title: Get the Native ID for an Identity
 description: Identity data is typically provided as an ID string value and identity namespace in XDM data ingested, and when supplying an identity for use in an API call. When identities are persisted in Identity Service, an ID is generated and assigned to that identity, called the native XID. Experience Platform APIs requiring identity data support using this more compact form for the aggregated ID and namespace. XID is a base64 encoded string.
 role: Developer
 exl-id: e734f5d8-e00b-43fa-b06c-97c73e1f7c71
+TQID: https://experienceleague.adobe.com/TWpdGYH0ayfxFkF6JQQzMSf-iUpZSlP8p3vHwYA3gfU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Get the native ID for an identity 
 

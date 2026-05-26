@@ -5,6 +5,20 @@ title: Enforce Data Usage Policies Using the Policy Service API
 type: Tutorial
 description: Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the Policy Service API to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. You can then set up your own internal protocols to handle policy violations based on the API response.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
+TQID: https://experienceleague.adobe.com/eordh1Zdh55wHA9XzXWN0MTQH3WRiAk8JEjN6MKflVc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Enforce data usage policies using the [!DNL Policy Service] API
 

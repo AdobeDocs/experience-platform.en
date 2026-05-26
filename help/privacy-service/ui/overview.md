@@ -4,6 +4,18 @@ solution: Experience Platform
 title: Privacy Service UI Overview
 description: Get started using the Privacy Service user interface to coordinate and monitor privacy requests across various Experience Cloud applications.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
+TQID: https://experienceleague.adobe.com/-eHJWnCRW23gVWmIXo7JYXHCFjE3nLx-fE44skX6yAg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # [!DNL Privacy Service] UI overview {#privacy-ui-guide}
 

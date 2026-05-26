@@ -3,6 +3,19 @@ solution: Experience Platform
 title: Generic Marketing Preference Field With Subscriptions Data Type
 description: Learn about the Generic Marketing Preference Field with Subscriptions XDM data type.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
+TQID: https://experienceleague.adobe.com/oUaU1EIHqOc47hVGosT2jelr7-vurd2K83zuDBtdH4I
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # [!UICONTROL Generic Marketing Preference Field with Subscriptions] data type
 

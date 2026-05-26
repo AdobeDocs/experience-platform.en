@@ -2,6 +2,21 @@
 title: Alert Test Reference
 description: Learn how the auditor feature tests for alerts in Adobe Experience Platform Debugger.
 exl-id: ac6f8675-6c34-48b4-b5dd-48e92af217fd
+TQID: https://experienceleague.adobe.com/Y1MPMYJLHlDHzYYeIRfT1yGCTJcA48rfGV7I0O77E24
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 ---
 # Alert test reference
 

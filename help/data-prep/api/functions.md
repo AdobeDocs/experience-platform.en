@@ -3,6 +3,13 @@ keywords: Experience Platform;home;popular topics;data prep;api guide;schemas;
 title: Functions API Endpoint
 description: You can use the `/functions` endpoint in the Data Prep API to validate your mapping expressions and list available mapping set functions.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
+TQID: https://experienceleague.adobe.com/ih-7v7zg75UrJyvAJ-lnp7nmCpQyWTvgRMF5CbaotZ8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Functions endpoints
 

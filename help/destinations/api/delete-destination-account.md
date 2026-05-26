@@ -5,6 +5,21 @@ title: Delete a destination account using the Flow Service API
 type: Tutorial
 description: Learn how to delete a destination account using the Flow Service API.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
+TQID: https://experienceleague.adobe.com/xCKyodhDyqpezTLcoGBypwZvx8vr6cpoaUKRhsRhXjU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Delete a destination account using the Flow Service API
 

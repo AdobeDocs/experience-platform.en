@@ -2,6 +2,19 @@
 title: Create a Marketo Engage Source Connection and Dataflow for Custom Activity data in the UI
 description: This tutorial provides steps for creating a Marketo Engage source connection and dataflow in the UI to bring custom activities data into Adobe Experience Platform.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
+TQID: https://experienceleague.adobe.com/VP2MYYJnuWKRdGgfqxSd0sCNKn3OhzahWXEnord6sso
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a [!DNL Marketo Engage] source connection and dataflow for custom activity data in the UI
 

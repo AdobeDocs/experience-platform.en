@@ -2,6 +2,19 @@
 title: Sandbox Tooling API Guide
 description: Sandbox Tooling in Adobe Experience Platform allows you to export and import a snapshot of sandbox configurations between sandboxes.
 exl-id: 4bcc095b-5db1-4824-8b7c-c2ea5a393b98
+TQID: https://experienceleague.adobe.com/8d-cc04rk3OD9MKJwPb6LZomp5oI13jEVkV9-E7VfkA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL Sandbox] tooling API guide
 

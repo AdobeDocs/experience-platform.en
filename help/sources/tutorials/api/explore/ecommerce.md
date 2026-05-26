@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Explore an eCommerce Connection Using the Flow Service API
 description: This tutorial uses the Flow Service API to explore eCommerce connections.
 exl-id: 832ce399-6c9f-40da-8e7c-5434503c16b6
+TQID: https://experienceleague.adobe.com/oWl85RUwdwn8MKBlxIW6EzVISNdSKV0H22RQpk7ZAvs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Explore an eCommerce connection using the [!DNL Flow Service] API
 

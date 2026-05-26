@@ -2,6 +2,13 @@
 title: List of States End Collection Data Type
 description: Learn about the List of States End Collection Data Type Experience Data Model (XDM) data type.
 exl-id: e59d12e0-2f18-4637-8a51-41b7b5b59b57
+TQID: https://experienceleague.adobe.com/aRF5lJ7YEzL66F0EE8rGCv94hydwmB1LDARvbyG27Rc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL List of States End] data type
 

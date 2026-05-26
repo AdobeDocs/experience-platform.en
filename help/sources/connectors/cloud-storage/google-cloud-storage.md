@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Google Cloud Storage Source Connector Overview
 description: Learn how to connect Google Cloud Storage to Adobe Experience Platform using APIs or the user interface.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
+TQID: https://experienceleague.adobe.com/TZ9EefnEfaLwRWIGe-9uegtb4FOmDI3d5kOjygBLDrQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Google Cloud Storage connector
 
