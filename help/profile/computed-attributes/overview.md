@@ -2,6 +2,34 @@
 title: Computed Attributes overview
 description: Computed attributes are functions to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
+TQID: https://experienceleague.adobe.com/lArWfzhmDHc6dTO3vqdACuOSp7KzgtDx2YDD1jjloK8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+    internal-label: Behavioral data
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
+  - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+    internal-label: Audience segmentation
 ---
 # Computed attributes overview
 
@@ -49,6 +77,11 @@ Computed attributes let you define event aggregates in a self-serve manner by le
 | MIN | A function that finds the **minimum** value for the qualified events. | Integers, Numbers, Longs, Timestamps | First purchase data in the last 7 days<br/>Minimum order amount in the last 4 weeks |
 | MAX | A function that finds the **maximum** value for the qualified events. | Integers, Numbers, Longs, Timestamps | Last purchase data in the last 7 days<br/>Maximum order amount in the last 4 weeks |
 | MOST_RECENT | A function that finds the specified attribute value from the latest qualified event. This function gives **both** the value as well as the timestamp of the attribute. | All primitive values, Arrays of primitive values | Latest product viewed in the last 7 days |
+| LIST | A function that **lists**, in an array, the last specified number of attribute values that match the given rule. | N/A | List the names of the last 50 orders in the past week. |
+
+>[!NOTE]
+>
+>If you use the LIST function, the source events **must** come from a single dataset. If the source events span multiple datasets, the merge behavior is not supported, so the results may be incomplete or unexpected.
 
 ### Lookback periods
 
@@ -88,3 +121,4 @@ Fast refresh allows you to keep your attributes up-to-date. Enabling this option
 ## Next steps
 
 To learn more about creating and managing computed attributes, please read the [computed attributes API guide](./api.md) or the [computed attributes UI guide](./ui.md).
+

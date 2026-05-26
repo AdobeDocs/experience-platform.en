@@ -3,6 +3,13 @@ title: Create a new connection specification for Streaming SDK using the Flow Se
 description: The following document provides steps on how to create a connection specification using the Flow Service API and integrate a new source through Self-Serve Sources.
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
 badge: Beta
+TQID: https://experienceleague.adobe.com/0IHC3r9y4NeUP1IAQN8C997fNtoOlIHPD2Pfg52JBtE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a new connection specification using the [!DNL Flow Service] API
 

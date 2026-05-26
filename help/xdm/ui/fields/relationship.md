@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Define Relationship Fields in the UI
 description: Learn how to define a relationship field in the Experience Platform user interface.
 exl-id: 8a6be545-0edb-4b9c-b164-e44a7a5f54f5
+TQID: https://experienceleague.adobe.com/5ojlMvkRONGd1yVuWMvv0BYMHzzw-cled0PiNX3eFo4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Define relationship fields in the UI
 

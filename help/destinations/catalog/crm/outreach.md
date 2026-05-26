@@ -3,6 +3,26 @@ keywords: crm;CRM;crm destinations;Outreach;Outreach crm destination
 title: Outreach connection
 description: Use the Outreach destination to export your account data and activate it within Outreach for your business needs.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
+TQID: https://experienceleague.adobe.com/f7jqxCw4wXZg4-t0YRrb6pqCtwsxSgbjwTdQPQfCXqA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # [!DNL Outreach] connection
 

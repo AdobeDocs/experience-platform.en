@@ -4,8 +4,24 @@ title: IP address allowlist for streaming destinations
 type: Documentation
 description: This page provides IP ranges that you can add to your allowlist, to safely export data from Experience Platform to your HTTP REST API endpoint, or Amazon Kinesis instance.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
+TQID: https://experienceleague.adobe.com/SXNhATifMFb3FVH3nc3mT-Kbu4KpuxKMD68NucHFhzs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
-
 # IP address allowlist for streaming API-based destinations {#ip-address-allowlist}
 
 >[!IMPORTANT]

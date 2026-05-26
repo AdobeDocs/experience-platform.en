@@ -2,6 +2,19 @@
 title: Connect PostgreSQL To Experience Platform Using The Flow Service API
 description: Learn how to connect your [!DNL PostgreSQL] database to Experience Platform using APIs.
 exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
+TQID: https://experienceleague.adobe.com/vng5WtwoISMZeYr7e7cYteqgpbbhyczWEm7QxWTh-dY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 ---
 # Connect [!DNL PostgreSQL] to Experience Platform using the [!DNL Flow Service] API
 

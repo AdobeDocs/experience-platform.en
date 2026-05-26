@@ -2,9 +2,15 @@
 title: Range Data Type
 description: Learn about the Range Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+hide: true
 exl-id: 66f8b574-04d9-435f-8743-4ff89c4c0079
+TQID: https://experienceleague.adobe.com/wBFhJ7IX7jlGNWui41-hD6eNRcwQK0cwZghxV9dlWnQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Range] data type
 

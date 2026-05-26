@@ -3,6 +3,20 @@ title: Snowflake Source Connector Overview
 description: Learn how to connect Snowflake to Adobe Experience Platform using APIs or the user interface.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
+TQID: https://experienceleague.adobe.com/bjgXiwFqHpLiYU9OpnvbaaZN3ab3Ch0jClm8HB6iaFE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+    internal-label: Data integration
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # [!DNL Snowflake] source
 
@@ -66,7 +80,11 @@ Provide values for the following credentials to connect [!DNL Snowflake] to Expe
 
 >[!WARNING]
 >
->Basic authentication (or account key authentication) for the [!DNL Snowflake] source will be deprecated on November 2025. You must move to key-pair based authentication in order to continue using the source and ingesting data from your database to Experience Platform. For more information on the deprecation, read the [[!DNL Snowflake] best practices guide on mitigating the risks of credential compromise](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+>Basic authentication (also called account key authentication) for the [!DNL Snowflake] source is **fully deprecated for connections to Experience Platform in Azure regions**—you must use key-pair authentication for all new and existing Azure-based connections.  
+>
+>For [!DNL Snowflake] sources connecting to Experience Platform in **AWS regions**, basic authentication is still supported for now but is in the process of deprecation and will be removed in the future. It is strongly recommended to migrate to key-pair authentication as soon as possible to ensure continued connectivity.  
+>
+>For more information on the deprecation and guidance, see the [[!DNL Snowflake] best practices guide on mitigating the risks of credential compromise](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
 | Credential | Description |
 | --- | --- |

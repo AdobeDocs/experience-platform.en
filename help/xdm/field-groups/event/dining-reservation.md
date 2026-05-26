@@ -3,6 +3,13 @@ keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEv
 title: Dining Reservation Schema Field Group
 description: Learn about the Dining Reservation schema field group.
 exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
+TQID: https://experienceleague.adobe.com/0sz89MbTwJBtXL45o65mBiosH6SO-WA4HctlCiX7OZU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Dining Reservation] schema field group
 

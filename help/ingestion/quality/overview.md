@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Data Quality
 description: The following document provides a summary of the supported checks and validation behaviors for batch and streaming ingestion in Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
+TQID: https://experienceleague.adobe.com/6WfJEb0xsEjGlUf2BtUOIBDRDOyy8axoqpXfPp1gImM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
+    internal-label: Data quality
 ---
 # Data quality in Adobe Experience Platform
 

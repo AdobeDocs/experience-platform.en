@@ -5,6 +5,13 @@ title: Scheduled Query Runs API Endpoint
 description: The following sections walks through the various API calls you can make for running scheduled queries with the Query Service API.
 role: Developer
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
+TQID: https://experienceleague.adobe.com/uPePS-K2izEuJ9sbI3JUVR44j8fHlOFUeS7Kqtgt-yo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Scheduled query runs endpoint
 

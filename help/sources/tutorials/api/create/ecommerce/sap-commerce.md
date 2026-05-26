@@ -3,6 +3,13 @@ title: Create a source connection and dataflow for SAP Commerce using the Flow S
 description: Learn how to create a source connection and dataflow to bring SAP Commerce data to Experience Platform using the Flow Service API.
 badge: Beta
 exl-id: 580731b9-0c04-4f83-a475-c1890ac5b7cd
+TQID: https://experienceleague.adobe.com/B05a7-7L-2DfqhFv6nfuTHHHSu6oaYVLGAwYgIOP5-o
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a source connection and dataflow for [!DNL SAP Commerce] using the Flow Service API
 

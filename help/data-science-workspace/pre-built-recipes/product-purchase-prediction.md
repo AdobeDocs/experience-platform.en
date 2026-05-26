@@ -4,6 +4,21 @@ solution: Experience Platform
 title: Product Purchase Prediction Recipe
 description: The Product Purchase Prediction recipe enables you to predict the likelihood of a certain type of customer purchase event - a product purchase, for instance.
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
+TQID: https://experienceleague.adobe.com/fmc8bdmnE95niE0F6Qjzwk94M6GbQ-5XJnYHaXMFmuU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Product purchase prediction recipe
 

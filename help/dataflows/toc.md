@@ -4,6 +4,7 @@ user-guide-title: Dataflows Guide
 user-guide-description: Learn about dataflows and how to configure them across different services.
 feature: Dataflows
 role: Developer
+nudge: true
 ---
 
 # Dataflows {#dataflows}
@@ -20,7 +21,7 @@ role: Developer
   - [Monitor dataflows in audiences](./ui/monitor-audiences.md)
   - [Monitor dataflows in destinations](./ui/monitor-destinations.md)
   - [Monitor dataflows for streaming profile ingestion](./ui/monitor-streaming-profile.md)
-  - [Monitor dataflows for streaming segmentation](./ui/monitor-streaming-audiences.md)
+  - {hide-from-toc} [Monitor dataflows for streaming segmentation](./ui/monitor-streaming-audiences.md)
   - [Monitor datastreams in edge](./ui/monitor-edge.md)
   - B2B monitoring {#b2b}
     - [Monitor profile enrichment jobs](./ui/b2b/monitor-profile-enrichment.md)

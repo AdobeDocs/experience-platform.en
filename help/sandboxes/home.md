@@ -4,6 +4,42 @@ solution: Experience Platform
 title: Sandboxes Overview
 description: Sandboxes are virtual partitions within a single instance of Experience Platform, which allow for seamless integration with the development process of your digital experience applications.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
+TQID: https://experienceleague.adobe.com/vr1vffpJC5dHt9bUDI1zcH0t2Ak-qxw2zMa3asD3CaE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+    internal-label: Administration
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+    internal-label: Access control
+  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
+    internal-label: Adobe Admin Console
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+    internal-label: Permissions
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+    internal-label: Roles
+  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+    internal-label: Sandboxes
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 ---
 # Sandboxes overview
 
@@ -20,6 +56,7 @@ Sandboxes are virtual partitions within a single instance of Experience Platform
 * **Production sandbox**: A production sandbox is meant to be used with profiles in your production environment. Experience Platform allows you to create multiple production sandboxes in order to provide the right functionality for data while still maintaining operational isolation. This feature allows you to dedicate specific production sandboxes to distinct lines of business, brands, projects, or regions. Production sandboxes support a volume of production profiles up to your licensed [!DNL Profile] commitment (measured cumulatively across all of your authorized production sandboxes). You are entitled to use your entire licensed Total Data Volume (measured cumulatively across all of your authorized production sandboxes).
 
 * **Development sandbox**: A development sandbox is a sandbox that can be used exclusively for development and testing with non-production profiles. Development sandboxes support a volume of non-production profiles up to 10% of your licensed [!DNL Profile] commitment (measured cumulatively across all of your authorized development sandboxes). You are entitled to up to:
+
   * One batch segmentation job per day, per development sandbox;
   * An average of 120 [!DNL Profile] API calls, per [!DNL Profile], per year (measured cumulatively across all of your authorized development sandboxes.
 

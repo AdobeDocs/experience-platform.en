@@ -2,6 +2,16 @@
 title: Apply access labels to manage user access to sources dataflows using the API
 description: Learn how to use use the Flow Service API to apply access labels and manage user access to your sources dataflows.
 exl-id: 572d6838-3e4c-4fd5-89fa-32cad6280325
+TQID: https://experienceleague.adobe.com/5czWcoSjOAHSQYhcLU0llUpPe3mQzM2gQvnNTZhrl80
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Apply access labels to manage user access to sources dataflows using the API
 

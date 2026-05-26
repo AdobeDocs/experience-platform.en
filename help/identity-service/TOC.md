@@ -5,6 +5,7 @@ breadcrumb-title: Experience Platform Identity Service Guide
 user-guide-description: Bridge customer identities across devices and systems to deliver personalized digital experiences.
 feature: Identities
 role: Admin,Developer
+nudge: true
 ---
 
 # Adobe Experience Platform Identity Service {#identity}
@@ -25,12 +26,12 @@ role: Admin,Developer
     - [Namespace priority](./identity-graph-linking-rules/namespace-priority.md)
     - [Graph Simulation UI](./identity-graph-linking-rules/graph-simulation.md)
     - [Identity settings UI](./identity-graph-linking-rules/identity-settings-ui.md)
-  - [ECID overview](./features/ecid.md)
+  - {hide-from-toc} [ECID overview](./features/ecid.md)
 - [Implementation guide](implementation.md)
 - [Guardrails for Identity data](guardrails.md)
 - Identity Service API {#api}
   - [Getting Started](api/getting-started.md)
-  - [Label a field as identity](api/label-identities.md)
+  - {hide-from-toc} [Label a field as identity](api/label-identities.md)
   - [List cluster identities](api/list-cluster-identites.md)
   - [List cluster history of an identity](api/list-cluster-history.md)
   - [List identity mappings](api/list-identity-mappings.md)
@@ -38,7 +39,7 @@ role: Admin,Developer
   - [Create a custom namespace](api/create-custom-namespace.md)
   - [List the native ID for an identity](api/list-native-id.md)
   - [API reference](https://www.adobe.io/experience-platform-apis/references/identity-service)
-- [Define identity fields in the UI](label-identities.md)
+- {hide-from-toc} [Define identity fields in the UI](label-identities.md)
 - [Privacy request processing](privacy.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
 - [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

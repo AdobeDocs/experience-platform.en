@@ -2,6 +2,20 @@
 title: Create a Date Filter
 description: Learn how to filter your custom insights by date.
 exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
+TQID: https://experienceleague.adobe.com/Xj8c2b0JvHomqp3oiIUJxQyycPM7nBW-A-eIYdXF-tk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Create a date filter {#create-date-filter}
 

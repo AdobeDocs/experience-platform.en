@@ -2,6 +2,18 @@
 title: Create a Salesforce Service Cloud Source Connection Using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Salesforce Service Cloud using the Flow Service API.
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
+TQID: https://experienceleague.adobe.com/wQObLlPjITd2k-cm6CzSmFX-IQDxhfG0q5I1OmffcQo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 ---
 # Create a [!DNL Salesforce Service Cloud] source connection using the [!DNL Flow Service] API
 
@@ -20,44 +32,7 @@ The following sections provide additional information that you will need to know
 
 ### Gather required credentials
 
->[!WARNING]
->
->Basic authentication for the [!DNL Salesforce Service Cloud] source will be deprecated in January 2026. You must move to OAuth 2 Client Credential authentication in order to continue using the source and ingesting data from your [!DNL Salesforce Service Cloud] account to Experience Platform.
-
-The [!DNL Salesforce Service Cloud] source supports basic authentication and OAuth2 Client Credential.
-
->[!BEGINTABS]
-
->[!TAB Basic authentication]
-
-To connect your [!DNL Salesforce Service Cloud] account to [!DNL Flow Service] using basic authentication, provide values for the following credentials:
-
-| Credential | Description |
-| --- | --- |
-| `environmentUrl` | The URL of the [!DNL Salesforce Service Cloud] source instance. |
-| `username` | The username for the [!DNL Salesforce Service Cloud] user account. |
-| `password` | The password for the [!DNL Salesforce Service Cloud] user account. |
-| `securityToken` | The security token for the [!DNL Salesforce Service Cloud] user account. |
-| `apiVersion` | (Optional) The REST API version of the [!DNL Salesforce Service Cloud] instance that you are using. The value for the API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0`. If this field is left blank, Experience Platform will automatically use the latest available version. |
-| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce Service Cloud] is: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
-
-For more information on getting started, visit [this Salesforce document](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
-
->[!TAB OAuth 2 Client Credential]
-
-To connect your [!DNL Salesforce Service Cloud] account to [!DNL Flow Service] using OAuth 2 Client Credential, provide values for the following credentials:
-
-| Credential | Description |
-| --- | --- |
-| `environmentUrl` | The URL of the [!DNL Salesforce Service Cloud] source instance. |
-| `clientId` | The client ID is used in tandem with the client secret as part of OAuth2 authentication. Together, the client ID and client secret enable your application to operate on behalf of your account by identifying your application to [!DNL Salesforce Service Cloud]. |
-| `clientSecret` | The client secret is used in tandem with the client ID as part of OAuth2 authentication. Together, the client ID and client secret enable your application to operate on behalf of your account by identifying your application to [!DNL Salesforce Service Cloud]. |
-| `apiVersion` | The REST API version of the [!DNL Salesforce Service Cloud] instance that you are using. The value for the API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0`. If this field is left blank, Experience Platform will automatically use the latest available version. This value is mandatory for OAuth2 Client Credential authentication. |
-| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce Service Cloud] is: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
-
-For more information on using OAuth for [!DNL Salesforce Service Cloud], read the [[!DNL Salesforce Service Cloud] guide on OAuth Authorization Flows](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
-
->[!ENDTABS]
+Read the [authentication guide](../../../../connectors/customer-success/salesforce-service-cloud.md#credentials) for more information on retrieving your credentials.
 
 ### Using Experience Platform APIs
 
@@ -76,49 +51,6 @@ POST /connections
 ```
 
 **Request**
-
->[!BEGINTABS]
-
->[!TAB Basic authentication]
-
-The following request creates a base connection for [!DNL Salesforce Service Cloud] using basic authentication:
-
-```shell
-curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-      "name": "Salesforce Service Cloud account for ACME data (basic auth)",
-      "description": "Salesforce Service Cloud account for ACME data (basic auth)",
-      "auth": {
-          "specName": "Basic Authentication",
-          "params": {
-            "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
-            "username": "acme-salesforce-service-cloud",
-            "password": "xxxx",
-            "securityToken": "xxxx"
-        }
-      },
-      "connectionSpec": {
-          "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
-          "version": "1.0"
-      }
-  }'
-```
-
-| Parameter | Description |
-| ---| --- |
-| `auth.params.environmentUrl` | The URL of your [!DNL Salesforce Service Cloud] instance. |
-| `auth.params.username` | The username associated with your [!DNL Salesforce Service Cloud] account. |
-| `auth.params.password` | The password associated with your [!DNL Salesforce Service Cloud] account. |
-| `auth.params.securityToken` | The security token associated with your [!DNL Salesforce Service Cloud] account. |
-| `connectionSpec.id` | The [!DNL Salesforce Service Cloud] connection specification ID: `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
-
->[!TAB OAuth2 Client Credential]
 
 The following request creates a base connection for [!DNL Salesforce Service Cloud] using OAuth 2 Client Credential:
 
@@ -156,8 +88,6 @@ curl -X POST \
 | `auth.params.clientSecret` | The client secret associated with your [!DNL Salesforce Service Cloud] account. |
 | `auth.params.apiVersion` | The REST API version of the [!DNL Salesforce Service Cloud] instance that you are using. |
 | `connectionSpec.id` |  The [!DNL Salesforce Service Cloud] connection specification ID: `cb66ab34-8619-49cb-96d1-39b37ede86ea`. |
-
->[!ENDTABS]
 
 **Response**
 

@@ -2,9 +2,18 @@
 title: Healthcare Data Model V2
 description: Learn about some common healthcare use cases and the best classes, related field groups, and datatypes to use.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+hide: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
+TQID: https://experienceleague.adobe.com/N6v3Rl-yiECDFpD-Vuns3b-GP1cUoAefqHQtX4A54AY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Healthcare] Data Model V2
 

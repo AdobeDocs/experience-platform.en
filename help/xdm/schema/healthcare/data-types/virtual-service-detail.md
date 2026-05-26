@@ -2,9 +2,15 @@
 title: Virtual Service Detail Data Type
 description: Learn about the Virtual Service Detail Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+hide: true
 exl-id: bde7363c-43b7-402d-96b2-7aa0160cd2ea
+TQID: https://experienceleague.adobe.com/RNyZBglQGRj-B0-fO3PXMSSRnD05hdP-XhkaRdjH3fs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Virtual Service Detail] data type
 

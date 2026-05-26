@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Web Details Schema Field Group
 description: Learn about the Web Details schema field group.
 exl-id: eb42606b-ade4-4d72-b601-c560009c98e8
+TQID: https://experienceleague.adobe.com/ro1cdG-u-GHTcyT-gZAo2OTFumHboyqBmB1aID9vORs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Web Details] schema field group
 

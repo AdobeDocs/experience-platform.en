@@ -2,6 +2,32 @@
 title: Monitoring dashboard overview
 description: Learn how to use the monitoring dashboard in the Adobe Experience Platform UI
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
+TQID: https://experienceleague.adobe.com/P2kYxc4xqjDV33vMs5BnCTRFboTenGDKb8VQxrDgaqA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: d3f95e25-a50e-4fd0-bc23-9a22409a183b
+    internal-label: Profile enrichment
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Monitoring dashboard overview
 

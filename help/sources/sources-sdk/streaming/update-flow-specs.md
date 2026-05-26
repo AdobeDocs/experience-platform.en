@@ -3,6 +3,13 @@ title: Update flow specifications for Streaming SDK using the Flow Service API
 description: The following document provides steps on how to retrieve and update flow specifications using the Flow Service API for Self-Serve Sources (Streaming SDK).
 exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
 badge: Beta
+TQID: https://experienceleague.adobe.com/ls6GnhzgPZ2ntR-WOI-mLZrRXfig7VOQMuzKkVohfto
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Update flow specifications using the [!DNL Flow Service] API
 

@@ -2,6 +2,21 @@
 title: Pinterest Customer List connection
 description: Create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
+TQID: https://experienceleague.adobe.com/5cJhm-hyGHuOGO2CNiWwXeIWAF29ZFOQnuFh8P6b83I
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # [!DNL Pinterest Customer List] connection
 
@@ -92,9 +107,9 @@ When [setting up](../../ui/connect-destination.md) this destination, you must pr
 
 ### Refresh authentication credentials {#refresh-authentication-credentials}
 
-Pinterest tokens expire every 30 days. You can monitor your token expiration dates from the **[!UICONTROL Account expiration date]** column in either the **[[!UICONTROL Accounts]](../../ui/destinations-workspace.md#accounts)** or the **[[!UICONTROL Browse]](../../ui/destinations-workspace.md#browse)** tabs.
+Pinterest tokens remain valid for 365 days. You can monitor your token expiration dates from the **[!UICONTROL Account expiration date]** column in either the **[[!UICONTROL Accounts]](../../ui/destinations-workspace.md#accounts)** or the **[[!UICONTROL Browse]](../../ui/destinations-workspace.md#browse)** tabs.
 
-Once the token is expired, data exports to the destination stop working. To prevent this situation, reauthenticate by performing the following steps:
+Once the token expires, data exports to the destination stop working. To prevent this, reauthenticate by performing the following steps:
 
 1. Navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
 2. (Optional) Use the available filters on the page to display Pinterest accounts only.
@@ -106,7 +121,7 @@ Once the token is expired, data exports to the destination stop working. To prev
 
 >[!SUCCESS]
 >
->Your authentication credentials are refreshed and their expiration time is reset to 30 days.
+>Your authentication credentials are refreshed and their expiration is reset to 365 days.
 
 ### Enable alerts {#enable-alerts}
 

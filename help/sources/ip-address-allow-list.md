@@ -2,6 +2,16 @@
 description: Learn about the IP addresses that you need to add to your allowlist in order to successfully use Adobe Experience Platform sources.
 title: IP Address Allowlist for Sources
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
+TQID: https://experienceleague.adobe.com/QRulb6wq-HKA1uNGobKCVmMOknufp8hbVNL3nIy4EeA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # IP address allowlist
 
@@ -53,6 +63,11 @@ You must add the following IP addresses to your allowlist to let traffic flow fo
 - `40.74.26.0/23`
 - `40.113.176.232/29`
 - `52.236.187.112/28`
+- `20.105.215.28/30`
+- `20.105.244.48/29`
+- `57.153.246.72/29`
+- `57.153.246.80/28`
+- `57.153.246.96/30`
 
 >[!TAB AUS5: Australia]
 

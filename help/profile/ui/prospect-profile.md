@@ -3,6 +3,19 @@ title: Prospect Profiles
 description: Learn how to create and use prospect profiles to gather information about unknown customers using third-party information.
 type: Documentation
 exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
+TQID: https://experienceleague.adobe.com/JwVYHMSFTXwblcjLW-C3hzW4MJBbsJG2oaG8ADmF2o0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Prospect profiles
 

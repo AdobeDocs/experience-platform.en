@@ -4,6 +4,7 @@ user-guide-title: Sandboxes in Adobe Experience Platform Help
 breadcrumb-title: Sandboxes Guide
 user-guide-description: Find out how sandboxes work and partition an Experience Platform instance into virtual environments for development, testing, and application deployment.
 feature: Sandboxes
+nudge: true
 ---
 
 # Sandboxes {#sandbox}

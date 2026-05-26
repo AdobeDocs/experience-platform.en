@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Select a Product Profile to Edit Access Control Permissions
 description: This document covers the necessary steps needed to browse the access control workspace. In order to configure access control for Experience Platform through the Adobe Admin Console, you must be an administrator for an organization that has a subscription to Experience Platform.
 exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
+TQID: https://experienceleague.adobe.com/YGFfMP1AMDVsbjDsKEZVetjL4Kx-n0Y-Hia8-Ura0Zo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Select a product profile to manage its access control permissions
 

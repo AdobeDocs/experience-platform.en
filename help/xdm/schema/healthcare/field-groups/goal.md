@@ -2,9 +2,18 @@
 title: Goal Schema Field Group
 description: Learn about the Goal schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+hide: true
 exl-id: 87715274-cc9d-41da-9ca7-1634903b4e8f
+TQID: https://experienceleague.adobe.com/WczidfWnKkDGZ-rszfoocParYCnoG9LLv8uscnQnKMw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Goal] schema field group
 

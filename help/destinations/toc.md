@@ -5,6 +5,7 @@ user-guide-description: Activate your known and unknown data for cross-channel m
 description: This document lists the table of contents for Adobe Experience Platform destinations
 feature: Destinations
 role: Admin,User
+nudge: true
 ---
 
 # Destinations {#destinations}
@@ -69,7 +70,7 @@ role: Admin,User
         * [Federated Audience Composition connection](https://www.adobe.com/go/destinations-federated-audience-composition)
     * Advertising destinations{#advertising}
         * [Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
-        * [Acxiom Real ID™ Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
+        * [Acxiom Real ID&trade; Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
         * [Advertising destinations overview](./catalog/advertising/overview.md)
         * [Adobe Advertising DSP connection](./catalog/advertising/adobe-advertising-dsp-connection.md)
         * [Legacy Adobe Advertising DSP connection](./catalog/advertising/adobe-advertising-cloud-dsp-connection-legacy.md)
@@ -107,7 +108,7 @@ role: Admin,User
         * [Microsoft Bing connection](./catalog/advertising/bing.md)
         * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest-extension.md)
         * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)
-        * [Pinterest connection upgrade](./catalog/advertising/pinterest-upgrade.md)
+        * {hide-from-toc} [Pinterest connection upgrade](./catalog/advertising/pinterest-upgrade.md)
         * [PubMatic Connect connection](./catalog/advertising/pubmatic.md)
         * [(Beta) Reddit Custom Audience connection](./catalog/advertising/reddit-custom-audience.md)
         * [Rokt connection](./catalog/advertising/rokt.md)
@@ -157,7 +158,7 @@ role: Admin,User
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
-        * [Zeta Marketing Platform](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
+        * {hide-from-toc} [Zeta Marketing Platform](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
     * Data & Identity Partner {#data-partner}
         * [Acxiom Prospect Suppression](./catalog/data-partner/acxiom-prospect-suppression.md)
         * [Acxiom Data Enhancement](./catalog/data-partner/acxiom-data-enhancement.md)
@@ -182,7 +183,7 @@ role: Admin,User
         * [(API) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
         * [(Files) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud.md)
         * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
-        * [[!DNL (V2) Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2.md)
+        * {hide-from-toc} [[!DNL (V2) Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2.md)
         * [SendGrid connection](./catalog/email-marketing/sendgrid.md)
     * Tag extensions {#launch-extensions}
         * [Tag extension overview](./catalog/launch-extensions/overview.md)

@@ -6,6 +6,7 @@ breadcrumb-title: Data Collection
 user-guide-description: Learn how to send data to Adobe Experience Platform.
 feature: Data Collection
 role: Developer
+nudge: true
 ---
 
 # Data collection {#collection}
@@ -18,7 +19,7 @@ role: Developer
   + [First-party device IDs](identity/fpid.md)
   + [Cross-domain sharing](identity/cross-domain-sharing.md)
   + [Mobile apps to mobile web/WebViews](identity/mobile-to-web.md)
-  + [Unified identity support](identity/unified-identity-support.md)
+  + {hide-from-toc} [Unified identity support](identity/unified-identity-support.md)
   + [Consent and identity](identity/consent.md)
   + [Troubleshooting](identity/troubleshooting.md)
 + BrightScript {#brightscript}

@@ -3,6 +3,20 @@ title: Data Distiller Authorization API Guide
 description: Learn how to use the Data Distiller Authorization API to enforce network-based IP restrictions for secure connections through SQL. Use this API to enhance data access control for your Adobe Experience Platform data.
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
+TQID: https://experienceleague.adobe.com/izhBYvTjwM53PhUn5rYM8pLls9oHZtB14rd8v3O2UA0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Data Distiller Authorization API Guide
 
