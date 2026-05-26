@@ -20,7 +20,7 @@ Record delete requests follow three high-level processing phases regardless of e
 
 After submission, a work order is created and your request enters a processing queue. Requests are held in the queue and grouped into batches before processing begins. Batching, not a system error, is the primary reason deletion does not occur immediately after submission.
 
-Queue duration varies by entitlement tier. Standard requests may remain in queue for up to 14 days. Requests under Privacy and Security Shield or Healthcare Shield entitlements are typically batched within approximately 24 hours.
+Queue duration varies by entitlement tier. Standard requests may remain in queue for up to 14 days. Requests under Privacy and Security Shield or Healthcare Shield entitlements are typically batched within approximately 24 hours, although large requests may be promoted earlier.
 
 ### Phase 2: Downstream processing {#downstream-processing}
 
@@ -29,8 +29,6 @@ Once a batch leaves the queue, downstream services process the deletion across y
 ### Phase 3: Completion {#completion}
 
 The work order status updates to `completed` once all systems confirm deletion. You can verify completion status in the [Data Lifecycle workspace](./ui/browse.md).
-
-For standard entitlements, a buffer window exists near the end of the SLA period. This window allows for integrity checks and resubmission of any failed deletion jobs before the SLA closes. For Privacy and Security Shield or Healthcare Shield entitlements, completion and any equivalent checks are handled within the 15-day SLA window; no separate buffer phase is defined.
 
 ## Processing timelines by entitlement {#processing-timelines-by-entitlement}
 
@@ -48,7 +46,7 @@ The following timeline applies to organizations **without** a Privacy and Securi
 |---|---|---|
 | Request submitted and batched | Up to 14 days | A work order is created and queued. Requests are grouped into batches before processing begins. Batching is the primary reason deletion is not immediate. |
 | Downstream processing | Day 15–25 | Downstream services receive and execute the record delete request. Duration varies based on system load. |
-| Buffer — integrity checks and resubmissions | Day 25–30 | A buffer window allows for integrity checks and resubmission of any failed jobs before the SLA window closes. The work order status updates to `completed` once all systems confirm deletion. |
+| Work order finalization | Day 25–30 | Final processing and validation steps complete before the work order status updates to `completed`. |
 
 {style="table-layout:auto"}
 
@@ -63,7 +61,7 @@ The accelerated timeline below applies only to organizations that have purchased
 | Stage | Approximate timing | Description |
 |---|---|---|
 | Request submitted and batched | Typically ~24 hours | A work order is created and queued. Requests are grouped into batches before processing begins, which is why deletion is not immediate. |
-| Downstream processing and completion | Within 15-day SLA | Downstream services receive and execute the record delete request. Completion, including any integrity checks, is handled within the 15-day SLA window. The work order status updates to `completed` once all systems confirm deletion. |
+| Downstream processing and completion | Within 15-day SLA | Downstream services receive and execute the record delete request. The work order status updates to `completed` once all systems confirm deletion. |
 
 {style="table-layout:auto"}
 
