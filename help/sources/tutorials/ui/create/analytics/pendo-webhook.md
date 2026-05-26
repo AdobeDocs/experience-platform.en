@@ -141,7 +141,7 @@ To retrieve your **[!UICONTROL Dataflow ID]** and **[!UICONTROL Streaming endpoi
 
 ![The streaming endpoint in dataflow activity.](../../../../images/tutorials/create/analytics-pendo-webhook/endpoint-test.png)
 
-Once you have retrieved your streaming endpoint and dataflow ID, build a URL based on the following pattern: ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```. For example, a constructed webhook URL may look like: ```https://dcs.adobedc.net/collection/0c61859cc71939a0caf01123f91b2fc52589018800ad46b6c76c2dff3595ee95```
+Once you have retrieved your streaming endpoint and dataflow ID, build a URL based on the following pattern: `{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}`. For example, a constructed webhook URL may look like: `https://dcs.adobedc.net/collection/0c61859cc71939a0caf01123f91b2fc52589018800ad46b6c76c2dff3595ee95`
 
 ## Set up Webhook in [!DNL Pendo] {#set-up-webhook}
 
