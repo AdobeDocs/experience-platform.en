@@ -7,7 +7,6 @@ topic: Content Management, Artificial Intelligence
 badge: label="Beta" type="Informative"
 role: User, Developer
 level: Beginner, Intermediate
-hide: true
 exl-id: 48dba0d2-7df9-4d76-bc87-5af49a8a40cc
 ---
 # Work with MCP clients (Beta) {#rtcdp-mcp}

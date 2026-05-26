@@ -25,7 +25,7 @@ nudge: true
     * [End-to-end tutorial](./b2b-tutorial.md)
     * [Real-Time CDP B2B Edition guardrails](b2b-guardrails.md)
     * [Real-Time CDP B2B Edition architecture upgrades](b2b-architecture-upgrade.md)
-  * {hide-from-toc} [Real-Time CDP MCP](rtcdp-mcp.md)
+    * [Real-Time CDP MCP](rtcdp-mcp.md)
 * Audience Manager and Real-Time CDP {#evolution}
   * [Evolution from Audience Manager](aam-to-rtcdp.md)
 * Account profiles {#account}
