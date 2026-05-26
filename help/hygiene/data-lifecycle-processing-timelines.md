@@ -18,7 +18,7 @@ If you have already submitted a request and want to confirm it is progressing no
 
 After submission, a work order is created and your request enters a processing queue. Requests are held in the queue and grouped into batches before processing begins. Batching, not a system error, is the primary reason deletion does not occur immediately after submission.
 
-Queue duration varies by entitlement tier. Standard requests may remain in queue for up to 14 days. Requests under Privacy and Security Shield or Healthcare Shield entitlements are typically batched within approximately 24 hours, although large requests may be promoted earlier.
+Queue duration varies by entitlement tier. Standard requests may remain in queue for up to 14 days. Requests under Privacy and Security Shield or Healthcare Shield entitlements are typically batched within approximately 24 hours, although large requests may be promoted earlier based on volume thresholds.
 
 ### Phase 2: Downstream processing {#downstream-processing}
 
