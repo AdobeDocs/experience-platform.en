@@ -8,7 +8,6 @@ badge: label="Beta" type="Informative"
 role: User, Developer
 level: Beginner, Intermediate
 hide: true
-hidefromtoc: true
 exl-id: 48dba0d2-7df9-4d76-bc87-5af49a8a40cc
 ---
 # Work with MCP clients (Beta) {#rtcdp-mcp}
@@ -17,7 +16,7 @@ You can use the Adobe Real-Time CDP MCP integration to query audiences, destinat
 
 >[!AVAILABILITY]
 >
->The Real-Time CDP MCP server is distributed as a **remote HTTP transport server** that users install and configure in supported MCP clients and app platforms (for example, Claude, ChatGPT, Claude Code, Codex, Cursor, or VS Code). Authentication is handled through a **browser-based login flow** — when your client first connects to the server, it opens your default browser so you can sign in with your Adobe credentials and authorize access. Please contact your Adobe representative to access this Beta program.
+>The Real-Time CDP MCP server is distributed as a **remote HTTP transport server** that users install and configure in supported MCP clients and app platforms (for example, [!DNL Claude], [!DNL ChatGPT], [!DNL Claude Code], [!DNL Codex], [!DNL Cursor], or [!DNL VS Code]). Authentication is handled through a **browser-based login flow** — when your client first connects to the server, it opens your default browser so you can sign in with your Adobe credentials and authorize access. Please contact your Adobe representative to access this Beta program.
 
 ## Beta, security, and legal notices {#mcp-notices}
 
@@ -56,9 +55,9 @@ The Beta release includes the following 18 tools:
 | `inspect_audience_evaluation_jobs` | Retrieve segment evaluation job records to diagnose why a batch audience isn't refreshing or to confirm recent evaluation history. |
 | `inspect_audience_export_jobs` | Retrieve audience export job records to confirm exports completed or to surface failure details. |
 | | |
-| `search_destination_connectors` | List the destination connector types available in the platform (e.g. Amazon S3, Google Ads, Salesforce CRM). |
+| `search_destination_connectors` | List the destination connector types available in the platform (e.g. [!DNL Amazon S3], [!DNL Google Ads], [!DNL Salesforce] CRM). |
 | `search_destination_accounts` | List authenticated destination accounts — configured instances of a destination connector type. |
-| `search_destination_input_connections` | Retrieve the AEP-side input of a destination flow — the audience or dataset being exported. |
+| `search_destination_input_connections` | Retrieve the Experience Platform-side input of a destination flow — the audience or dataset being exported. |
 | `search_destination_output_connections` | Retrieve the external endpoint of a destination flow — target path, file format, and delivery configuration. |
 | `search_destination_flows` | List and inspect configured destination activation flows including their state, mappings, and schedule. |
 | `inspect_flow_runs` | Retrieve execution history for source and destination flows — status, timing, record counts, and failure details per run. |
@@ -66,12 +65,12 @@ The Beta release includes the following 18 tools:
 | `search_source_connectors` | List the source connector types available in the platform. |
 | `search_source_accounts` | List authenticated source accounts — configured instances of a source connector type. |
 | `search_source_input_connections` | Retrieve the data selection layer of a source flow — what is being pulled from an account. |
-| `search_source_output_connections` | Retrieve the AEP dataset destination of a source flow — where ingested data lands. |
+| `search_source_output_connections` | Retrieve the Experience Platform dataset destination of a source flow — where ingested data lands. |
 | `search_source_flows` | List and inspect configured source ingestion pipelines including their state, mappings, and schedule. |
 | | |
 | `search_identity_namespaces` | List identity namespace definitions in your sandbox — both Adobe-standard and custom namespaces. |
 | `search_merge_policies` | List merge policy records that control how Real-Time Customer Profiles are assembled from profile fragments. |
-| `search_organizations` | List the Adobe IMS organizations accessible to the authenticated user. |
+| `search_organizations` | List the Adobe organizations accessible to the authenticated user. |
 
 ## Use cases {#mcp-use-cases}
 
@@ -99,30 +98,32 @@ The Real-Time CDP MCP server is designed for **monitoring and triage**. Because 
 | | |
 | **List identity namespaces** | "What identity namespaces are configured in my sandbox?" |
 | **List merge policies** | "List my merge policies and show which is the default." |
-| **Find your IMS Org ID** | "List the Adobe IMS organizations I have access to." |
+| **Find your Organization ID** | "List the Adobe organizations I have access to." |
 
 ## Access and enablement {#mcp-access}
 
-The Real-Time CDP MCP server is in Beta and is not open for self-service enrollment. Access is by invitation only and requires your Adobe IMS Organization to be explicitly allowlisted before you can connect.
+>[!AVAILABILITY]
+>
+>The Real-Time CDP MCP server is in Beta and is not open for self-service enrollment. Access is by invitation only and requires your Adobe organization to be explicitly allowlisted before you can connect.
 
 To request access:
 
-1. Contact your Adobe account representative (CSM, TAM, or AE) and express your interest in the Real-Time CDP MCP Beta program.
-2. Your Adobe representative will coordinate with the product team to evaluate eligibility and enable your IMS Org ID.
+1. Contact your Adobe account representative (Customer Success Manager, Technical Account Manager, or Account Executive) and express your interest in the Real-Time CDP MCP Beta program.
+2. Your Adobe representative will coordinate with the product team to evaluate eligibility and enable your Organization ID.
 3. Once enabled, your Adobe representative will confirm access and provide any additional onboarding materials.
 
 >[!NOTE]
 >
->Only IMS Organizations that have been explicitly enabled can connect to the Real-Time CDP MCP server. Attempting to connect before enablement will result in an authentication error.
+>Only organizations that have been explicitly enabled can connect to the Real-Time CDP MCP server. Attempting to connect before enablement will result in an authentication error.
 
 ## Prerequisites {#mcp-prerequisites}
 
 Before connecting the Real-Time CDP MCP server to your MCP client, ensure the following:
 
 * You have an active Real-Time CDP license.
-* Your Adobe IMS Organization has been enabled for the Beta program by your Adobe representative (see [Access and enablement](#mcp-access)).
-* You have access to a supported MCP client such as Claude, ChatGPT, Claude Code, Codex, Cursor, or VS Code.
-* You have your IMS Organization ID and the name of the sandbox you want to query.
+* Your Adobe organization has been enabled for the Beta program by your Adobe representative (see [Access and enablement](#mcp-access)).
+* You have access to a supported MCP client such as [!DNL Claude], [!DNL ChatGPT], [!DNL Claude Code], [!DNL Codex], [!DNL Cursor], or [!DNL VS Code].
+* You have your Organization ID and the name of the sandbox you want to query.
 * You have the necessary permissions in Adobe Experience Platform to view audiences, destinations, and flow service entities.
 
 ## Connect the Real-Time CDP MCP server {#mcp-connect}
@@ -183,18 +184,18 @@ For clients that accept a JSON-based MCP server configuration — such as Claude
 
 For `claude.ai` and Claude Desktop, add the Real-Time CDP MCP server as a **custom connector** using the server URL `https://rtcdp-mcp.adobe.io/mcp`.
 
-* **Individual plans** — In Claude, navigate to **Customize → Connectors**, click **Add connector**, and enter the server URL.
+* **Individual plans** — In Claude, navigate to **Customize → Connectors**, select **Add connector**, and enter the server URL.
 * **Team and Enterprise plans** — A workspace **Owner** or **Primary Owner** adds the connector under **Organization settings → Connectors**. Once added, each user enables it in their own Claude settings.
 
-After the connector is added, enable it in a conversation and complete the Adobe browser sign-in on first use. Claude discovers Adobe IMS as the authorization server automatically — no Client ID or Client Secret is required.
+After the connector is added, enable it in a conversation and complete the Adobe browser sign-in on first use. Claude discovers the Adobe authorization server automatically — no Client ID or Client Secret is required.
 
 #### ChatGPT
 
-In ChatGPT, add the Real-Time CDP MCP server as a **custom connector**:
+In [!DNL ChatGPT], add the Real-Time CDP MCP server as a **custom connector**:
 
 1. Navigate to **Settings → Connectors** (or **Settings → Apps & Connectors**, depending on your plan).
-2. Click **Add connector** and enter `https://rtcdp-mcp.adobe.io/mcp` as the server URL.
-3. Save the connector. Depending on your ChatGPT plan, this step may require **Developer mode** or workspace admin approval.
+2. Select **Add connector** and enter `https://rtcdp-mcp.adobe.io/mcp` as the server URL.
+3. Save the connector. Depending on your [!DNL ChatGPT] plan, this step may require **Developer mode** or workspace admin approval.
 4. Once the connector is enabled, authenticate through the Adobe browser sign-in when prompted on first use.
 
 #### Cursor
@@ -202,7 +203,7 @@ In ChatGPT, add the Real-Time CDP MCP server as a **custom connector**:
 In Cursor, add the Real-Time CDP MCP server as a remote MCP server:
 
 1. Open **Settings → MCP**.
-2. Click **Add new server** and enter `https://rtcdp-mcp.adobe.io/mcp` as the server URL.
+2. Select **Add new server** and enter `https://rtcdp-mcp.adobe.io/mcp` as the server URL.
 3. Select **connect** to trigger the browser-based Adobe sign-in and authenticate.
 
 Once connected, Real-Time CDP tools are available in Cursor's Composer and Agent modes.
@@ -267,7 +268,7 @@ Provide these at the start of each session. For example:
 
 > "Use org `1234ABCD@AdobeOrg` and sandbox `prod` for this session."
 
-If you don't know your IMS Org ID, ask your AI assistant to call `search_organizations` — it will return every org your Adobe credentials can access.
+If you don't know your Organization ID, ask your AI assistant to call `search_organizations` — it will return every org your Adobe credentials can access.
 
 ## Known limitations (Beta) {#mcp-limitations}
 
@@ -275,23 +276,23 @@ The following limitations apply to the current Beta release of the [!DNL Adobe R
 
 | Limitation | Description | Workaround |
 | --- | --- | --- |
-| **Read-only surface** | The MCP server only exposes retrieve APIs. You cannot create, update, activate, or delete audiences, destinations, or dataflows. | Use the Real-Time CDP UI or the AEP REST APIs for write operations. |
+| **Read-only surface** | The MCP server only exposes retrieve APIs. You cannot create, update, activate, or delete audiences, destinations, or dataflows. | Use the Real-Time CDP UI or the Experience Platform REST APIs for write operations. |
 | **No engagement or delivery metrics** | The MCP server does not return downstream delivery stats, engagement, or conversion metrics from destination platforms. | Use the destination platform's own reporting, Customer Journey Analytics MCP, or Adobe Analytics MCP for engagement and conversion data. |
 | **Segment query must be authored externally** | `Preview Audience Membership` requires a valid PQL or SDD expression as input; the MCP server does not compose the query for you. | Author the PQL/SDD expression in the Segment Builder UI or via the Segmentation Service API, then paste into the MCP prompt. |
 | **Pagination via continuation tokens** | List tools return paginated results. Full enumeration across very large sandboxes requires chaining `continuationToken` calls. | Narrow queries using filters (name, state, connection spec, time range) rather than enumerating the full list. |
 | **Activation run filtering is time-based only** | `Inspect Activation Runs` supports filtering by status and completion timestamp (epoch ms UTC), but not by error type or destination platform directly. | Filter by `flowId` first (obtained from `List Configured Destinations`) to scope runs to a specific destination. |
-| **IMS Org ID required at session start** | Every tool call (except `search_organizations`) requires `imsOrgId` and `sandboxName` as explicit parameters. If these are not provided, tool calls will fail. | At the start of each session, tell your AI assistant: "Use org `<YOUR_ORG_ID>` and sandbox `<SANDBOX_NAME>` for this session." If you don't know your IMS Org ID, call `search_organizations` first — it will return the orgs your credentials can access. |
+| **Organization ID required at session start** | Every tool call (except `search_organizations`) requires `imsOrgId` and `sandboxName` as explicit parameters. If these are not provided, tool calls will fail. | At the start of each session, tell your AI assistant: "Use org `<YOUR_ORG_ID>` and sandbox `<SANDBOX_NAME>` for this session." If you don't know your Organization ID, call `search_organizations` first — it will return the orgs your credentials can access. |
 
 ## Frequently asked questions {#mcp-faq}
 
 +++Which MCP clients are supported?
 
-The Real-Time CDP MCP server works with any client that supports remote MCP servers or custom connectors — including Claude, ChatGPT, Claude Code, Codex, Cursor, and VS Code. The setup flow depends on the client: UI-based clients typically add the server from a settings or connectors panel, while technical clients such as Claude Code and Codex can add it from the command line or configuration files.
+The Real-Time CDP MCP server works with any client that supports remote MCP servers or custom connectors — including [!DNL Claude], [!DNL ChatGPT], [!DNL Claude Code], [!DNL Codex], [!DNL Cursor], and [!DNL VS Code]. The setup flow depends on the client: UI-based clients typically add the server from a settings or connectors panel, while technical clients such as Claude Code and Codex can add it from the command line or configuration files.
 +++
 
 +++How do I get access?
 
-Access is by invitation only during the Beta. Contact your Adobe account representative (CSM, TAM, or AE) to request enrollment. Your Adobe representative will coordinate with the product team to enable your IMS Organization. See [Access and enablement](#mcp-access) for details.
+Access is by invitation only during the Beta. Contact your Adobe account representative (Customer Success Manager, Technical Account Manager, or Account Executive) to request enrollment. Your Adobe representative will coordinate with the product team to enable your organization. See [Access and enablement](#mcp-access) for details.
 +++
 
 +++How does authentication work?
