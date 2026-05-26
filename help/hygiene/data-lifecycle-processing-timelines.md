@@ -8,13 +8,11 @@ solution: Experience Platform
 
 Use this document to understand when a record delete request completes and what affects that timeline. Timelines differ by entitlement tier, either the standard (30-day SLA) or Privacy and Security Shield or Healthcare Shield (15-day SLA). If you are unsure which tier applies to your organization, check your [quota usage](./api/quota.md) or contact your Adobe representative. For dataset expiration timelines, see the [dataset expiration guide](./ui/dataset-expiration.md).
 
-## How record delete timelines work {#how-record-delete-timelines-work}
+## How record delete requests are processed {#how-record-delete-timelines-work}
 
-After you submit a [record delete request](./ui/record-delete.md), it moves through three stages: it enters a queue and is batched with other requests, downstream services execute the deletion, and the work order is confirmed as complete. All entitlement tiers follow the same high-level flow; what differs is how long each stage takes. The end-to-end duration is governed by your organization's SLA: 30 days for standard entitlements, and 15 days for organizations with Privacy and Security Shield or Healthcare Shield add-ons. If you have already submitted a request and want to confirm it is progressing normally, use the phase descriptions and timelines below to check where your request should be based on elapsed time.
+After you submit a [record delete request](./ui/record-delete.md), it moves through three phases: queuing and batching, downstream processing, and completion. All entitlement tiers follow the same flow; your SLA determines how long each phase takes. Your SLA is 30 days for standard entitlements and 15 days for organizations with a Privacy and Security Shield or Healthcare Shield add-on.
 
-## How record delete requests are processed {#how-requests-are-processed}
-
-Record delete requests follow three high-level processing phases regardless of entitlement tier. The phase structure is consistent for all users; durations vary based on entitlement and system load. For entitlement-specific stage timings, see [Processing timelines by entitlement](#processing-timelines-by-entitlement).
+If you have already submitted a request and want to confirm it is progressing normally, use the [Processing timelines by entitlement](#processing-timelines-by-entitlement) section to determine where your request should be based on elapsed time.
 
 ### Phase 1: Queuing and batching {#queuing-and-batching}
 
@@ -42,23 +40,23 @@ The following timeline applies to organizations **without** a Privacy and Securi
 >
 >The **30-day end-to-end SLA** is the operative commitment.
 
-| Stage | Approximate timing | Description |
+| Phase | Approximate timing | Description |
 |---|---|---|
-| Request submitted and batched | Up to 14 days | A work order is created and queued. Requests are grouped into batches before processing begins. Batching is the primary reason deletion is not immediate. |
+| Request submitted and batched | Up to 14 days | A work order is created and enters the processing queue. Requests are batched before processing begins. Batching is the primary reason deletion is not immediate. |
 | Downstream processing | Day 15–25 | Downstream services receive and execute the record delete request. Duration varies based on system load. |
-| Work order finalization | Day 25–30 | Final processing and validation steps complete before the work order status updates to `completed`. |
+| Completion | Day 25–30 | Final processing and validation steps complete before the work order status updates to `completed`. |
 
 {style="table-layout:auto"}
 
 ### Privacy and Security Shield / Healthcare Shield {#shield-entitlement}
 
-The accelerated timeline below applies only to organizations that have purchased the Privacy and Security Shield or Healthcare Shield add-on. To verify your entitlement tier, contact your Adobe representative or review your [quota usage](./api/quota.md). 
+The accelerated timeline below applies only to organizations that have purchased the Privacy and Security Shield or Healthcare Shield add-on. To verify your entitlement tier, contact your Adobe representative or review your [quota usage](./api/quota.md).
 
 >[!IMPORTANT]
 >
 >The **15-day end-to-end SLA** is the operative commitment.
 
-| Stage | Approximate timing | Description |
+| Phase | Approximate timing | Description |
 |---|---|---|
 | Request submitted and batched | Typically ~24 hours | A work order is created and queued. Requests are grouped into batches before processing begins, which is why deletion is not immediate. |
 | Downstream processing and completion | Within 15-day SLA | Downstream services receive and execute the record delete request. The work order status updates to `completed` once all systems confirm deletion. |
@@ -76,7 +74,7 @@ For quota tiers, monthly caps, and entitlement-based limits, see:
 
 ## Monitoring request status {#monitoring-request-status}
 
-To check the status of a submitted record delete request, navigate to the **[!UICONTROL Data Lifecycle]** workspace in the Experience Platform UI and select the **[!UICONTROL Record]** tab. A list of submitted record delete requests and their current statuses appears. For programmatic status checks, use the work order API endpoint.
+To check the status of a submitted record delete request, navigate to the **[!UICONTROL Data Lifecycle]** workspace in the Experience Platform UI and select the **[!UICONTROL Record]** tab. A list of submitted record delete requests and their current statuses appears. For programmatic status checks, use the [work order API](./api/workorder.md).
 
 For detailed instructions, see [Browse data lifecycle work orders](./ui/browse.md) or the [Work order endpoint guide](./api/workorder.md).
 
