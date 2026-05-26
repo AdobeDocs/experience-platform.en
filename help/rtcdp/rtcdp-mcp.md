@@ -16,7 +16,7 @@ You can use the Adobe Real-Time CDP MCP integration to query audiences, destinat
 
 >[!AVAILABILITY]
 >
->The Real-Time CDP MCP server is distributed as a **remote HTTP transport server** that users install and configure in supported MCP clients and app platforms (for example, Claude, ChatGPT, Claude Code, Codex, Cursor, or VS Code). Authentication is handled through a **browser-based login flow** — when your client first connects to the server, it opens your default browser so you can sign in with your Adobe credentials and authorize access. Please contact your Adobe representative to access this Beta program. 
+>The Real-Time CDP MCP server is distributed as a **remote HTTP transport server** that users install and configure in supported MCP clients and app platforms (for example, [!DNL Claude], [!DNL ChatGPT], [!DNL Claude Code], [!DNL Codex], [!DNL Cursor], or [!DNL VS Code]). Authentication is handled through a **browser-based login flow** — when your client first connects to the server, it opens your default browser so you can sign in with your Adobe credentials and authorize access. Please contact your Adobe representative to access this Beta program.
 
 ## Beta, security, and legal notices {#mcp-notices}
 
@@ -40,86 +40,177 @@ Real-Time CDP now provides an MCP server that surfaces audience, destination, an
 
 ## Key capabilities {#mcp-capabilities}
 
-The Real-Time CDP MCP server lets you inspect, summarize, and troubleshoot audiences and destinations directly from your AI assistant. All operations are **read-only** — the MCP server surfaces retrieve APIs as plain-language answers so you can:
+The Real-Time CDP MCP server is a **read-only** monitoring and triage surface. It exposes retrieve APIs across audiences, destinations, sources, identity, and profile resolution as plain-language answers inside your AI assistant — without writing queries or navigating product screens. No data can be created, modified, or deleted through the MCP server.
 
-* **Get instant audience visibility** — Ask about audience definitions, lifecycle state, and namespace in plain language without navigating menus or pulling reports manually.
-* **Estimate audience size before activation** — Preview membership counts and confidence intervals for a PQL or SDD segment query before you commit to building an audience.
-* **Audit your activation portfolio** — Review configured destinations, the dataflows feeding them, and the source/target connections behind each flow — without parsing JSON or jumping across product screens.
-* **Spot activation problems early** — Surface failed or in-progress destination runs the moment you ask, so your team can act fast.
-* **Collaborate around live data** — Marketers, data engineers, and stakeholders can all query the same live Real-Time CDP data through their AI assistant, making it easier to align, decide, and move together.
-
-## Available tools {#mcp-tools}
-
-Tool availability is rapidly changing as we enable new tools. Please contact your Adobe representative to get a list of the latest available tools. 
-
->[!NOTE]
+>[!IMPORTANT]
 >
->All tools are **read-only**. Write operations (creating, updating, or deleting audiences, destinations, or dataflows) are not supported in the current Beta release.
+>All tools in the current Beta are **read-only**. Write operations — including creating, activating, updating, or deleting audiences, destinations, or dataflows — are not supported.
+
+The Beta release includes the following 18 tools:
+
+| Tool | Description |
+| --- | --- |
+| `search_audiences` | List and look up audiences by name, entity type, lifecycle state, identity namespace, or origin. |
+| `preview_audience_membership` | Estimate the size of a PQL or SDD segment expression before saving it as an audience. |
+| `inspect_audience_evaluation_jobs` | Retrieve segment evaluation job records to diagnose why a batch audience isn't refreshing or to confirm recent evaluation history. |
+| `inspect_audience_export_jobs` | Retrieve audience export job records to confirm exports completed or to surface failure details. |
+| | |
+| `search_destination_connectors` | List the destination connector types available in the platform (e.g. [!DNL Amazon S3], [!DNL Google Ads], [!DNL Salesforce] CRM). |
+| `search_destination_accounts` | List authenticated destination accounts — configured instances of a destination connector type. |
+| `search_destination_input_connections` | Retrieve the Experience Platform-side input of a destination flow — the audience or dataset being exported. |
+| `search_destination_output_connections` | Retrieve the external endpoint of a destination flow — target path, file format, and delivery configuration. |
+| `search_destination_flows` | List and inspect configured destination activation flows including their state, mappings, and schedule. |
+| `inspect_flow_runs` | Retrieve execution history for source and destination flows — status, timing, record counts, and failure details per run. |
+| | |
+| `search_source_connectors` | List the source connector types available in the platform. |
+| `search_source_accounts` | List authenticated source accounts — configured instances of a source connector type. |
+| `search_source_input_connections` | Retrieve the data selection layer of a source flow — what is being pulled from an account. |
+| `search_source_output_connections` | Retrieve the Experience Platform dataset destination of a source flow — where ingested data lands. |
+| `search_source_flows` | List and inspect configured source ingestion pipelines including their state, mappings, and schedule. |
+| | |
+| `search_identity_namespaces` | List identity namespace definitions in your sandbox — both Adobe-standard and custom namespaces. |
+| `search_merge_policies` | List merge policy records that control how Real-Time Customer Profiles are assembled from profile fragments. |
+| `search_organizations` | List the Adobe organizations accessible to the authenticated user. |
 
 ## Use cases {#mcp-use-cases}
 
-The following examples show how to interact with the [!DNL Adobe Real-Time CDP] MCP server using natural language:
+The Real-Time CDP MCP server is designed for **monitoring and triage**. Because the server works with IDs rather than names, a typical workflow starts with a list — ask Claude to show you what's available, pick the item you want, then ask follow-up questions using the ID it returns.
 
 | Goal | Example prompt |
 | --- | --- |
-| **Destination catalog discovery** | "Is TikTok available as a destination in my sandbox?" / "Which destination types do I already have accounts configured for?" |
-| **Destination inventory by type** | "List all my Amazon S3 destinations." / "Do I have any dataset export destinations set up?" |
-| **Destination configuration audit** | "Which bucket is my `Loyalty S3 Export` destination writing to?" / "Show me the target path and file format for dataflow [ID]." |
-| **Account health** | "Which of my destination accounts have expired credentials?" / "Are any Pinterest or Facebook accounts in an error state?" |
-| **Activation health — last 24 hours** | "List every destination with a failed run in the last 24 hours." / "Did my dataset export destination send any data in the past 24 hours?" |
-| **Activation history by destination** | "Did `Weekly Loyalty Export` export anything in the past 30 days?" / "Show me the full run history for destination {NAME}." |
-| **Failure analysis** | "What's the most common failure reason across my file-based destinations this week?" / "Group recent failed runs by error type." |
-| **Audience discovery & filtering** | "List every CSV-based audience in the `marketing-prod` sandbox." / "Which audiences have an external audience ID defined?" |
-| **Audience sizing audit** | "Show me every audience with size 0." / "Which audiences are larger than 1,000 profiles?" |
-| **Audience expiration audit** | "Which destinations have audiences whose end date has already passed?" / "List audiences scheduled to expire in the next 7 days." |
-| **Audience activation footprint** | "Which destinations have more than 10 audiences activated to them?" / "Which audience is activated to the most destinations?" |
-| **Cross-filter: audience × activation** | "Show me audiences with size greater than 1,000 that are activated on at least 2 destinations." / "Large audiences that are only activated to a single destination." |
-| **Audience membership preview** | "Preview the membership size for audience `High-Value Loyalty Members`." / "Estimate the size of this PQL query before I save it: {EXPRESSION}." |
+| **List your audiences** | "List my audiences in the `prod` sandbox." |
+| **Inspect a specific audience** | "Show me the details and lifecycle state for audience ID `abc123`." |
+| **Diagnose an evaluation failure** | "Show me the most recent evaluation jobs and flag any failures." |
+| **Check an export job** | "List recent audience export jobs and show me the status of each." |
+| **Estimate audience size** | "Estimate the size of this PQL expression before I save it: `homeAddress.country = 'US'`." |
+| | |
+| **List destination connector types** | "What destination connector types are available in my sandbox?" |
+| **List configured destination accounts** | "List my destination accounts and their connection state." |
+| **List destination flows** | "List my destination activation flows and show which are enabled or disabled." |
+| **Inspect a destination flow** | "Show me the full configuration for destination flow ID `xyz789`." |
+| **Check destination account health** | "List my destination accounts and flag any that are in an error state." |
+| **Monitor recent activation runs** | "Show me flow runs from the last 24 hours and flag any failures." |
+| **Investigate a failed run** | "Show me the run history for flow ID `xyz789` and summarize any errors." |
+| | |
+| **List source flows** | "List my source ingestion flows and show their current state." |
+| **Inspect a source flow** | "Show me the configuration for source flow ID `src456` — what is it ingesting and where does it land?" |
+| **Check ingestion run health** | "Show me recent run history for source flow ID `src456` and flag failures." |
+| | |
+| **List identity namespaces** | "What identity namespaces are configured in my sandbox?" |
+| **List merge policies** | "List my merge policies and show which is the default." |
+| **Find your Organization ID** | "List the Adobe organizations I have access to." |
+
+## Access and enablement {#mcp-access}
+
+>[!AVAILABILITY]
+>
+>The Real-Time CDP MCP server is in Beta and is not open for self-service enrollment. Access is by invitation only and requires your Adobe organization to be explicitly allowlisted before you can connect.
+
+To request access:
+
+1. Contact your Adobe account representative (Customer Success Manager, Technical Account Manager, or Account Executive) and express your interest in the Real-Time CDP MCP Beta program.
+2. Your Adobe representative will coordinate with the product team to evaluate eligibility and enable your Organization ID.
+3. Once enabled, your Adobe representative will confirm access and provide any additional onboarding materials.
+
+>[!NOTE]
+>
+>Only organizations that have been explicitly enabled can connect to the Real-Time CDP MCP server. Attempting to connect before enablement will result in an authentication error.
 
 ## Prerequisites {#mcp-prerequisites}
 
 Before connecting the Real-Time CDP MCP server to your MCP client, ensure the following:
 
 * You have an active Real-Time CDP license.
-* You have access to a supported client that can connect to a remote MCP server or custom MCP app, such as Claude, ChatGPT, Claude Code, Codex, Cursor, or VS Code.
+* Your Adobe organization has been enabled for the Beta program by your Adobe representative (see [Access and enablement](#mcp-access)).
+* You have access to a supported MCP client such as [!DNL Claude], [!DNL ChatGPT], [!DNL Claude Code], [!DNL Codex], [!DNL Cursor], or [!DNL VS Code].
 * You have your Organization ID and the name of the sandbox you want to query.
 * You have the necessary permissions in Adobe Experience Platform to view audiences, destinations, and flow service entities.
 
 ## Connect the Real-Time CDP MCP server {#mcp-connect}
 
->[!NOTE]
->
->This integration is in Beta. Client menus, plan requirements, and admin controls may vary by application and version.
+The Real-Time CDP MCP server endpoint is:
 
-Before you start, make sure you have the following:
+```
+https://rtcdp-mcp.adobe.io/mcp
+```
 
-* The MCP server endpoint URL: `Available to Beta customers through your Adobe representative`.
-* Confirmation that your Adobe user has access to the target Experience Platform organization and sandbox.
+The server uses a **remote HTTP (Streamable HTTP) transport** with a **browser-based Adobe sign-in flow**. In every client, the setup pattern is the same:
 
-The Real-Time CDP MCP server is a **remote HTTP MCP server**. In every client, setup follows the same pattern:
-
-1. Add the server URL.
+1. Add the server URL: `https://rtcdp-mcp.adobe.io/mcp`
 2. Save or enable the connection.
 3. Complete the **browser-based Adobe login** the first time the client invokes a tool.
-4. Provide `imsOrgId` and `sandboxName` with each request.
+4. Provide `imsOrgId` and `sandboxName` at the start of each session.
+
+### General JSON configuration {#mcp-connect-json}
+
+For clients that accept a JSON-based MCP server configuration — such as Claude Desktop (`claude_desktop_config.json`), VS Code, or any client that reads a `mcp.json` file — use one of the following formats depending on whether your client supports native remote HTTP or requires a local bridge:
+
+**Via `mcp-remote` bridge (Claude Desktop and other clients that require a local bridge)**
+
+```json
+{
+  "mcpServers": {
+    "rtcdp": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://rtcdp-mcp.adobe.io/mcp"
+      ]
+    }
+  }
+}
+```
+
+**Native remote HTTP (clients that support it directly)**
+
+```json
+{
+  "mcpServers": {
+    "rtcdp": {
+      "url": "https://rtcdp-mcp.adobe.io/mcp",
+      "transport": "http"
+    }
+  }
+}
+```
+
+>[!NOTE]
+>
+>No API keys, bearer tokens, or additional headers are required in the configuration. Authentication is handled entirely through the browser-based Adobe sign-in flow on first use.
 
 ### Install in UI-based clients {#mcp-connect-ui}
 
 #### Claude
 
-For `claude.ai` and Claude Desktop, add the Real-Time CDP MCP server as a **custom connector** using the endpoint provided by your Adobe representative. In individual Claude plans, add it under **Customize > Connectors**. In Team and Enterprise plans, an owner may need to add it first under **Organization settings > Connectors**, after which each user connects it in their own Claude settings. Once configured, enable the connector in a conversation and complete the Adobe browser login on first use.
+For `claude.ai` and Claude Desktop, add the Real-Time CDP MCP server as a **custom connector** using the server URL `https://rtcdp-mcp.adobe.io/mcp`.
+
+* **Individual plans** — In Claude, navigate to **Customize → Connectors**, select **Add connector**, and enter the server URL.
+* **Team and Enterprise plans** — A workspace **Owner** or **Primary Owner** adds the connector under **Organization settings → Connectors**. Once added, each user enables it in their own Claude settings.
+
+After the connector is added, enable it in a conversation and complete the Adobe browser sign-in on first use. Claude discovers the Adobe authorization server automatically — no Client ID or Client Secret is required.
 
 #### ChatGPT
 
-In ChatGPT, add the Real-Time CDP MCP server as a **custom app/connector** using the endpoint provided by your Adobe representative. Depending on your ChatGPT plan, this may require **Developer mode** and workspace admin approval. After the app/connector is created or enabled, connect it from **Settings > Apps** or **Settings > Apps & Connectors**, then authenticate through the Adobe browser login when prompted.
+In [!DNL ChatGPT], add the Real-Time CDP MCP server as a **custom connector**:
+
+1. Navigate to **Settings → Connectors** (or **Settings → Apps & Connectors**, depending on your plan).
+2. Select **Add connector** and enter `https://rtcdp-mcp.adobe.io/mcp` as the server URL.
+3. Save the connector. Depending on your [!DNL ChatGPT] plan, this step may require **Developer mode** or workspace admin approval.
+4. Once the connector is enabled, authenticate through the Adobe browser sign-in when prompted on first use.
 
 #### Cursor
 
-In Cursor, add the Real-Time CDP MCP server as a remote MCP server using the endpoint provided by your Adobe representative. Open **Settings > MCP**, add a new server, and paste the endpoint URL. Once added, enable the server for your workspace by selecting **connect** to authenticate via the browser.
+In Cursor, add the Real-Time CDP MCP server as a remote MCP server:
+
+1. Open **Settings → MCP**.
+2. Select **Add new server** and enter `https://rtcdp-mcp.adobe.io/mcp` as the server URL.
+3. Select **connect** to trigger the browser-based Adobe sign-in and authenticate.
+
+Once connected, Real-Time CDP tools are available in Cursor's Composer and Agent modes.
 
 #### Other UI-based clients
 
-For clients such VS Code or other desktop and web applications with remote MCP support, add the Real-Time CDP MCP server as a **remote HTTP** server using the endpoint provided by your Adobe representative. If the client supports optional headers or bearer tokens, leave them empty unless Adobe specifically instructs otherwise; authentication is handled through the browser-based Adobe sign-in flow on first use.
+For clients such as VS Code or other desktop and web applications with remote MCP support, add the Real-Time CDP MCP server as a **remote HTTP** server using `https://rtcdp-mcp.adobe.io/mcp`. If the client supports optional headers or bearer tokens, leave them empty — authentication is handled through the browser-based Adobe sign-in flow on first use.
 
 ### Install in technical clients {#mcp-connect-technical}
 
@@ -128,7 +219,7 @@ For clients such VS Code or other desktop and web applications with remote MCP s
 Add the server from the terminal:
 
 ```bash
-claude mcp add --transport http rtcdp <endpoint provided by your Adobe representative>
+claude mcp add --transport http rtcdp https://rtcdp-mcp.adobe.io/mcp
 ```
 
 Then start Claude Code and run:
@@ -137,14 +228,14 @@ Then start Claude Code and run:
 /mcp
 ```
 
-Select the `rtcdp` server and complete the Adobe login flow in your browser. If you already added the server in `claude.ai`, it can also appear automatically in Claude Code when both are using the same account.
+Select the `rtcdp` server and complete the Adobe login flow in your browser. If you already added the server in `claude.ai`, it may appear automatically in Claude Code when both are signed in to the same account.
 
 #### Codex
 
 Add the server from the terminal:
 
 ```bash
-codex mcp add rtcdp --url <endpoint provided by your Adobe representative>
+codex mcp add rtcdp --url https://rtcdp-mcp.adobe.io/mcp
 ```
 
 Authenticate the server:
@@ -163,15 +254,21 @@ You can also add the server directly to `~/.codex/config.toml`:
 
 ```toml
 [mcp_servers.rtcdp]
-url = "<endpoint provided by your Adobe representative>"
+url = "https://rtcdp-mcp.adobe.io/mcp"
 ```
 
 ### Required request parameters {#mcp-connect-params}
 
-Every tool call requires two parameters that scope the request:
+Every tool call requires two parameters that scope the request to your Adobe Experience Platform tenant:
 
 * `imsOrgId` — your Organization ID, mapped to the `x-gw-ims-org-id` header on downstream Experience Platform API calls.
 * `sandboxName` — the Experience Platform sandbox name, mapped to the `x-sandbox-name` header.
+
+Provide these at the start of each session. For example:
+
+> "Use org `1234ABCD@AdobeOrg` and sandbox `prod` for this session."
+
+If you don't know your Organization ID, ask your AI assistant to call `search_organizations` — it will return every org your Adobe credentials can access.
 
 ## Known limitations (Beta) {#mcp-limitations}
 
@@ -179,18 +276,23 @@ The following limitations apply to the current Beta release of the [!DNL Adobe R
 
 | Limitation | Description | Workaround |
 | --- | --- | --- |
-| **Read-only surface** | The MCP server only exposes retrieve APIs. You cannot create, update, activate, or delete audiences, destinations, or dataflows. | Use the Real-Time CDP UI or the AEP REST APIs for write operations. |
+| **Read-only surface** | The MCP server only exposes retrieve APIs. You cannot create, update, activate, or delete audiences, destinations, or dataflows. | Use the Real-Time CDP UI or the Experience Platform REST APIs for write operations. |
 | **No engagement or delivery metrics** | The MCP server does not return downstream delivery stats, engagement, or conversion metrics from destination platforms. | Use the destination platform's own reporting, Customer Journey Analytics MCP, or Adobe Analytics MCP for engagement and conversion data. |
 | **Segment query must be authored externally** | `Preview Audience Membership` requires a valid PQL or SDD expression as input; the MCP server does not compose the query for you. | Author the PQL/SDD expression in the Segment Builder UI or via the Segmentation Service API, then paste into the MCP prompt. |
 | **Pagination via continuation tokens** | List tools return paginated results. Full enumeration across very large sandboxes requires chaining `continuationToken` calls. | Narrow queries using filters (name, state, connection spec, time range) rather than enumerating the full list. |
 | **Activation run filtering is time-based only** | `Inspect Activation Runs` supports filtering by status and completion timestamp (epoch ms UTC), but not by error type or destination platform directly. | Filter by `flowId` first (obtained from `List Configured Destinations`) to scope runs to a specific destination. |
-| **Region configuration required** | Tool calls will fail with HTTP 403 "User region is missing" if the MCP gateway is not configured for your user's region. | Contact your Adobe representative to confirm the gateway is configured for your region before first use. |
+| **Organization ID required at session start** | Every tool call (except `search_organizations`) requires `imsOrgId` and `sandboxName` as explicit parameters. If these are not provided, tool calls will fail. | At the start of each session, tell your AI assistant: "Use org `<YOUR_ORG_ID>` and sandbox `<SANDBOX_NAME>` for this session." If you don't know your Organization ID, call `search_organizations` first — it will return the orgs your credentials can access. |
 
 ## Frequently asked questions {#mcp-faq}
 
 +++Which MCP clients are supported?
 
-The Real-Time CDP MCP server works with supported clients that can connect to remote MCP servers or custom MCP apps — including Claude, ChatGPT, Claude Code, Codex, Cursor, and VS Code. The setup flow depends on the client: UI-based clients typically add the server from settings, while technical clients such as Claude Code and Codex can add it from the command line or configuration files.
+The Real-Time CDP MCP server works with any client that supports remote MCP servers or custom connectors — including [!DNL Claude], [!DNL ChatGPT], [!DNL Claude Code], [!DNL Codex], [!DNL Cursor], and [!DNL VS Code]. The setup flow depends on the client: UI-based clients typically add the server from a settings or connectors panel, while technical clients such as Claude Code and Codex can add it from the command line or configuration files.
++++
+
++++How do I get access?
+
+Access is by invitation only during the Beta. Contact your Adobe account representative (Customer Success Manager, Technical Account Manager, or Account Executive) to request enrollment. Your Adobe representative will coordinate with the product team to enable your organization. See [Access and enablement](#mcp-access) for details.
 +++
 
 +++How does authentication work?
@@ -208,27 +310,3 @@ You can access audiences, destination types, configured destination accounts, de
 No. The MCP server is designed for both marketing and technical personas. Marketers can interact with it using natural language prompts in any supported MCP client, while data engineers and developers can use it in developer tools that support MCP.
 +++
 
-+++Is my data sent to the MCP client provider?
-
-When you submit a prompt, the MCP client may send relevant context (including Real-Time CDP data returned by the MCP server) to its model for processing. Review the privacy and data-handling policies of your MCP client provider before connecting to production data.
-+++
-
-+++What permissions do I need in Real-Time CDP?
-
-You need at minimum **View** permissions for the objects you want to query — audiences, destinations, and flow service entities. No write permissions are required because the MCP server only performs read operations. Contact your [!DNL Adobe Experience Platform] administrator if you are unsure about your current access level.
-+++
-
-+++Can I use the MCP server in sandbox environments?
-
-Yes. Every tool call requires a `sandboxName` parameter, so the MCP server always respects your [!DNL Adobe Experience Platform] sandbox configuration. You can query any sandbox you have access to by specifying its name in your prompt.
-+++
-
-+++What's the difference between Preview Audience Membership and Search Existing Audiences?
-
-`Search Existing Audiences` returns audiences that have already been authored and saved in your sandbox. `Preview Audience Membership` takes a raw PQL or SDD segment expression and returns a size estimate for it — useful for sizing a query *before* you save it as an audience.
-+++
-
-+++Can I query account audiences as well as profile audiences?
-
-Yes. Both `Search Existing Audiences` and `Preview Audience Membership` support an entity type parameter. Profile audiences can be expressed in PQL or SDD; account audiences always use SDD (relational) syntax.
-+++
