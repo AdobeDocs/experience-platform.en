@@ -68,7 +68,7 @@ The **[!UICONTROL Populated]** section shows the percentage of accounts that hav
 >
 >The top values are only displayed if the attribute's values are **not** stored in an array or a key/value pairing.
 
-The **[!UICONTROL Top values]** section displays the 50 most frequently occurring values for the attribute, and includes details such as the value, the number of records that have the value, as well as the percentage of total records the value represents. The number of records for each field is determined by the profile snapshot, which provides a consolidated view of the records after all the contributing dataset data has been merged.
+The **[!UICONTROL Top values]** section displays the 50 most frequently occurring values for the attribute, and includes details such as the value, as well as the percentage of total records the value represents. The number of records for each field is determined by the profile snapshot, which provides a consolidated view of the records after all the contributing dataset data has been merged.
 
 ![A popover that displays a fully populated version of the summary data for an attribute.](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
 
