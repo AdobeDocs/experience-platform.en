@@ -15,7 +15,7 @@ You can use the Adobe Real-Time CDP MCP integration to query audiences, destinat
 
 >[!AVAILABILITY]
 >
->The Real-Time CDP MCP server is distributed as a **remote HTTP transport server** that users install and configure in supported MCP clients and app platforms (for example, [!DNL Claude], [!DNL ChatGPT], [!DNL Claude Code], [!DNL Codex], [!DNL Cursor], or [!DNL VS Code]). Authentication is handled through a **browser-based login flow** — when your client first connects to the server, it opens your default browser so you can sign in with your Adobe credentials and authorize access. Please contact your Adobe representative to access this Beta program.
+>Real-Time CDP MCP is in Beta. The feature and documentation are subject to change. The Real-Time CDP MCP server is distributed as a **remote HTTP transport server** that users install and configure in supported MCP clients and app platforms (for example, [!DNL Claude], [!DNL ChatGPT], [!DNL Claude Code], [!DNL Codex], [!DNL Cursor], or [!DNL VS Code]). Authentication is handled through a **browser-based login flow** — when your client first connects to the server, it opens your default browser so you can sign in with your Adobe credentials and authorize access. Please contact your Adobe representative to access this Beta program.
 
 ## Beta, security, and legal notices {#mcp-notices}
 
