@@ -183,7 +183,7 @@ When you select an attribute, you can see the summary data by selecting the [inf
 
 The **[!UICONTROL Top values]** section displays the 50 most frequently occurring values for the attribute, and includes details such as the value, as well as the percentage of total records the value represents.
 
-![A popover that displays the summary data for an attribute](/help/segmentation/images/ui/segment-builder/summary-data.png)
+![A popover that displays the summary data for an attribute](/help/segmentation/images/ui/segment-builder/summary-data.png){width="300"}
 
 If an attribute is populated by less than 25% of profiles, the ![data notice icon](../../images/icons/data-notice.png) will be displayed instead. The same summary data will be displayed for the attribute, regardless.
 
@@ -193,7 +193,7 @@ If an attribute is populated by less than 25% of profiles, the ![data notice ico
 
 Additionally, the attribute has an **[!UICONTROL Ingestion Type]**. The ingestion type lets you know the origin of the data, and can be one of the following values: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]**, or **[!UICONTROL No Data Ingested]**. 
 
-![The ingestion type for the attribute is displayed.](/help/segmentation/images/ui/segment-builder/ingestion-type.png)
+![The ingestion type for the attribute is displayed.](/help/segmentation/images/ui/segment-builder/ingestion-type.png){width="300"}
 
 #### Computed attributes {#computed-attributes}
 
