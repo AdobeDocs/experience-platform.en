@@ -11,7 +11,7 @@ exl-id: 48dba0d2-7df9-4d76-bc87-5af49a8a40cc
 ---
 # Work with MCP clients (Beta) {#rtcdp-mcp}
 
-You can use the Adobe Real-Time CDP MCP integration to query audiences, destinations, and activation health using plain-language prompts — without writing API calls or navigating product screens. This integration serves both Adobe Real-Time CDP and Adobe Real-Time CDP B2B Edition customers, providing a conversational way to inspect supported Real-Time CDP data and workflows from MCP-compatible clients. This page explains how the integration works, what you can do with it, and how to get started.
+You can use the Adobe Real-Time CDP MCP integration to query audiences, destinations, and activation health using plain-language prompts — without writing API calls or navigating product screens. This integration serves both Adobe Real-Time CDP and Adobe Real-Time CDP B2B Edition customers, providing a conversational way to inspect supported Real-Time CDP data and workflows from MCP-compatible clients. Read this guide to learn how the integration works, what you can do with it, and how to get started.
 
 >[!AVAILABILITY]
 >
