@@ -139,6 +139,12 @@ Before you can send your audiences to [!DNL Facebook], make sure you meet the fo
   >
   >When signing the [!DNL Facebook Custom Audiences] Terms of Service, make sure to use the same user account that you used to authenticate in the Facebook API.
 
+## Restricted audience data {#restricted-audience-data}
+
+[!DNL Facebook] enforces rules around restricted or sensitive audience data (such as health or financial information) under its Terms of Service. Starting June 4, 2026, Experience Platform customers will be subject to these restrictions. Audiences that violate [!DNL Facebook]'s Terms of Service will be blocked from activation and will not receive data from Experience Platform. There is no way to unblock a restricted audience on the [!DNL Facebook] side.
+
+If your audiences are affected, see [Restricted audiences](#restricted-audiences) in the Troubleshooting section for steps to resolve this.
+
 ## ID matching requirements {#id-matching-requirements}
 
 [!DNL Facebook] requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to [!DNL Facebook] can be keyed off *hashed* identifiers, such as email addresses or phone numbers.
@@ -341,4 +347,19 @@ This error occurs when customers are using newly created accounts, and the [!DNL
 
 If you receive the `400 Bad Request` error message after following the steps in [Facebook account prerequisites](#facebook-account-prerequisites), allow a few days for the [!DNL Facebook] permissions to come into effect.
 
+### Restricted audiences {#restricted-audiences}
+
+[!DNL Facebook] enforces rules that block audiences containing data not permitted under its Terms of Service, such as health or financial information.
+
+Starting June 4, 2026, Experience Platform customers will be subject to these restrictions, and blocked audiences will not receive data from Experience Platform.
+
+To identify restricted audiences, check the audience status in [!DNL Facebook Ads Manager]. Restricted audiences display a notice that the audience is blocked from running ads.
+
+To resolve a restricted audience, choose one of the following options:
+
+* Review the audience and remove any information not permitted under [!DNL Facebook]'s Terms of Service, then rebuild it.
+* Create a new custom audience that does not include restricted information.
+* Choose a different existing audience that complies with [!DNL Facebook]'s Terms of Service.
+
+For more information, see the [!DNL Facebook] documentation on [resolving flagged audiences](https://www.facebook.com/business/help/1055828013359808?id=188852726110565).
 
