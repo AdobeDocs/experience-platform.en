@@ -141,7 +141,7 @@ Before you can send your audiences to [!DNL Facebook], make sure you meet the fo
 
 ## Restricted audience data {#restricted-audience-data}
 
-[!DNL Facebook] enforces rules around restricted or sensitive audience data (such as health or financial information) under its Terms of Service. Starting June 4, 2026, Experience Platform customers will be subject to these restrictions. Audiences that violate [!DNL Facebook]'s Terms of Service will be blocked from activation and will not receive data from Experience Platform. There is no way to unblock a restricted audience on the [!DNL Facebook] side.
+[!DNL Facebook] enforces rules around restricted or sensitive audience data (such as health or financial information) under its Terms of Service. These restrictions were introduced in [Meta Advertiser API v24](https://developers.facebook.com/documentation/ads-commerce/marketing-api/marketing-api-changelog/version24.0#audiences) and apply to all API versions from v24 onward. Starting June 4, 2026, Experience Platform upgrades to Meta Advertiser API v25, and audiences sent from Experience Platform to [!DNL Facebook] will be subject to these restrictions. Audiences that violate [!DNL Facebook]'s Terms of Service will be blocked from activation and will not receive data from Experience Platform. To resolve a restricted audience, you must either update the audience to remove restricted data or contact [!DNL Facebook] directly. For more information, see [Resolve flagged audiences](https://www.facebook.com/business/help/1055828013359808?id=188852726110565) in the [!DNL Facebook] documentation.
 
 If your audiences are affected, see [Restricted audiences](#restricted-audiences) in the Troubleshooting section for steps to resolve this.
 
