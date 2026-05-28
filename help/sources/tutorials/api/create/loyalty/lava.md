@@ -2,7 +2,6 @@
 title: Create a source connection and dataflow to stream LAVA data using the Flow Service API
 description: Learn how to bring streaming data from LAVA to Adobe Experience Platform using the Flow Service API.
 badge: Beta
-hide: true
 ---
 # Create a source connection and dataflow to stream [!DNL LAVA] data using the [!DNL Flow Service] API
 

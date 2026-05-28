@@ -6,6 +6,7 @@ user-guide-description: Learn to deploy and manage analytics, marketing, and adv
 feature: Tags
 solution: Data Collection
 role: Developer
+nudge: true
 ---
 
 # Tags {#tags}

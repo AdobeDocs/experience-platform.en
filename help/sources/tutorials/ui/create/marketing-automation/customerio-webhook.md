@@ -160,7 +160,7 @@ To retrieve your **[!UICONTROL Dataflow ID]** and **[!UICONTROL Streaming endpoi
 
 ![The streaming endpoint in dataflow activity.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/endpoint-test.png)
 
-Once you have retrieved your streaming endpoint and dataflow ID, build a URL based on the following pattern: ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```. For example, a constructed webhook URL may look like: ``https://dcs.adobedc.net/collection/febc116d22ba0ea2868e9c93b199375302afb8a589617700991bb8f3f0341ad7?x-adobe-flow-id=439b3fc4-3042-4a3a-b5e0-a494898d3fb0``
+Once you have retrieved your streaming endpoint and dataflow ID, build a URL based on the following pattern: `{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}`. For example, a constructed webhook URL may look like: `https://dcs.adobedc.net/collection/febc116d22ba0ea2868e9c93b199375302afb8a589617700991bb8f3f0341ad7?x-adobe-flow-id=439b3fc4-3042-4a3a-b5e0-a494898d3fb0`
 
 ## Set up reporting webhook in [!DNL Customer.io] {#set-up-webhook}
 

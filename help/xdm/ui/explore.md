@@ -258,7 +258,7 @@ In the filter panel, you can:
 - **[!UICONTROL Compatible classes]** — Use the dropdown to filter field groups by class compatibility  
 - **[!UICONTROL Industry tags]** — Use checkboxes to filter by one or more industry categories  
 
-While browsing, select a row in the table to update the info rail. The info rail displays metadata such as compatible classes and industry tags so you can review key details without opening the field group.
+While browsing, select a row in the table to trigger the info rail. The info rail displays metadata such as compatible classes and industry tags so you can review key details without opening the field group.
 
 #### Field group detail metadata
 
