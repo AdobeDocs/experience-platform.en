@@ -7,7 +7,7 @@ description: Learn how to use the
 
 >[!AVAILABILITY]
 >
->The Field Discovery Agent-enabled Audience Builder is currently in **closed beta**. The documentation and the functionality are subject to change.
+>The updated Audience Builder is currently in **closed beta**. The documentation and the functionality are subject to change.
 
 Audience Builder provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing your audience's rules.
 
@@ -15,7 +15,15 @@ IMAGE
 
 ## Audience Builder workspace {#workspace}
 
-In the Audience Builder workspace, you can add either **attributes** or **events** to the rule building canvas. Attributes let you add either Profile attributes that belong to the XDM Individual Profile class or other previously created audiences, while events let you add actions or events that take place using XDM ExperienceEvent data elements.
+The Audience Builder workspace provides three different types of views: **[!UICONTROL Rule view]**, **[!UICONTROL Code view]**, and **[!UICONTROL Profile view]**. 
+
+- [Rule view](#rule-view): Lets you create the rules to define your audience.
+- [Code view](#code-view): Lets you view the PQL that defines your audience. This view is only visible once you have defined a rule for your audience.
+- [Profile view](#profile-view): Lets you view a sample of profiles that would qualify for you audience. This view is only visible once an estimate job has run.
+
+## Rule view {#rule-view}
+
+In the rule view canvas, you can add either **attributes** or **events** to the rule building canvas. Attributes let you add either Profile attributes that belong to the XDM Individual Profile class or other previously created audiences, while events let you add actions or events that take place using XDM ExperienceEvent data elements.
 
 ### Attributes {#attributes}
 
@@ -60,3 +68,9 @@ IMAGE
 >[!TAB Saved conditions]
 
 >[!ENDTABS]
+
+### Events {#events}
+
+## Profile view {#profile-view}
+
+## Code view {#code-view}
