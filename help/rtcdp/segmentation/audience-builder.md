@@ -60,7 +60,7 @@ The [!UICONTROL Attributes] tab lets you browse Account attributes belonging to 
 
 ![The Attributes tab is displayed in the Audience Builder](../assets/segmentation/audience-builder/attributes.png)
 
-When selecting an attribute, you can see summary data by selecting the [information icon](../../images/icons/info.png). The summary data includes information such as top values, an explanation of what the field is, the record count of the values, as well as the percentage of accounts that contain values for this attribute.
+When selecting an attribute, you can see the data insights by selecting the [information icon](../../images/icons/info.png). The data insights summary includes information such as top values, an explanation of what the field is, the record count of the values, as well as the percentage of accounts that contain values for this attribute.
 
 The **[!UICONTROL Populated]** section shows the percentage of accounts that have a value for this field.
 
