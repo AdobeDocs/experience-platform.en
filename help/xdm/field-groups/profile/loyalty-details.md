@@ -21,27 +21,91 @@ role_v2:
 >
 >The names of several schema field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
 
-[!UICONTROL Loyalty Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The field group provides a single object-type field, `loyalty`, which captures information related to a person's membership in a customer loyalty program.
+[!UICONTROL Loyalty Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The field group provides a single object-type field, `loyalty`, which captures information related to a person's membership in a customer loyalty program, including loyalty IDs, points balances, tiers, rewards, challenges, and loyalty card details. Use this field group to model loyalty profile state for segmentation, personalization, and loyalty-aware customer experiences.
 
-![](../../images/field-groups/loyalty-details.png)
+>[!IMPORTANT]
+>
+>This field group stores loyalty profile and membership state information. Loyalty challenge events and transactional loyalty events are documented separately.
+
+![Loyalty Details field group structure](../../images/field-groups/loyalty-details.png)
+
+## Field group structure {#structure}
+
+The `loyalty` object captures details related to the customer's participation in a loyalty program.
 
 | Property | Data type | Description |
 | --- | --- | --- |
-| `pointsExpiration` | Array of objects | Lists any loyalty points (or groups of loyalty points) that are going to expire, and the dates they will expire on. Each array item must be an object that contains the following two properties: <ul><li>`pointsExpirationDate`: An ISO 8601 datetime of when the points will expire.</li><li>`pointsExpiring`: The point balance expiring as of the associated expiration date.</li></ul> |
-| `joinDate` | DateTime | An ISO 8601 datetime of when the person joined the loyalty program. |
-| `loyaltyID` | Array of strings | Represents the loyalty program ID(s) associated with the loyalty program member.  |
-| `points` | Double | The current balance of loyalty points or awards for the loyalty member. |
-| `pointsRedeemed` | Double | The amount of points the loyalty member has applied towards a purchase or has otherwise redeemed. |
-| `program` | String | The name of the loyalty program in which the person is enrolled.  |
-| `status` | String | The current status of the person's loyalty membership, such as `active`, `disabled`, or `suspended`. |
-| `tier` | String | Captures the loyalty program tier in which the person is enrolled. |
-| `upgradeDate` | String | The date when the loyalty member was upgraded to their most recent tier level. |
+| `adjustedPoints` | Double | Points adjusted due to corrections, returns, or other modifications. |
+| `cardsDetails` | Array of objects | Lists loyalty cards associated with the member. See the [cardsDetails subsection](#cardsDetails) for more information. |
+| `challenges` | Array of objects | Lists loyalty challenges associated with the member. See the [challenges subsection](#challenges) for more information. |
+| `expiredPoints` | Double | Total number of points that have expired and are no longer available for use. |
+| `joinDate` | DateTime | An ISO 8601 datetime indicating when the person joined the loyalty program. |
+| `lifetimePoints` | Double | Total points earned throughout the customer's loyalty program membership. |
+| `lifetimePurchases` | Double | Total monetary value of all purchases made throughout the customer's loyalty program membership. |
+| `loyaltyID` | Array of strings | Loyalty program identifiers associated with the member. |
+| `nextTier` | String | The next loyalty tier the member can obtain. |
+| `points` | Double | Current balance of loyalty points or awards for the member. |
+| `pointsExpiration` | Array of objects | Lists loyalty points, or groups of loyalty points, that are scheduled to expire. Each array item contains: <ul><li>`pointsExpirationDate`: The date and time when the points expire.</li><li>`pointsExpiring`: The number of points expiring on the associated date.</li></ul> |
+| `pointsRedeemed` | Double | Total amount of points redeemed toward purchases or other rewards. |
+| `pointsToNextTier` | Double | Number of points required before the member qualifies for the next loyalty tier. |
+| `program` | String | Name of the loyalty program in which the person is enrolled. |
+| `promisedPoints` | Double | Points promised to the customer but not yet credited to the account. |
+| `returnedPoints` | Double | Points returned to the customer's account due to refunds or adjustments. |
+| `rewards` | Object | Captures rewards available or assigned to the member through the loyalty program. See the [rewards subsection](#rewards) for more information. |
+| `status` | String | Current status of the loyalty membership, such as `active`, `disabled`, or `suspended`. |
+| `tier` | String | Current loyalty tier in which the member is enrolled. |
+| `tierExpiryDate` | DateTime | Date and time when the customer's current loyalty tier expires. |
+| `tierUpgradeDate` | DateTime | Date and time when the customer was upgraded to the next loyalty tier level. |
+| `upgradeDate` | String | Deprecated. Use `tierUpgradeDate` instead. |
 
 {style="table-layout:auto"}
+
+## `cardsDetails` {#cardsDetails}
+
+`cardsDetails` is an array of objects that captures information about loyalty cards associated with the member.
+
+| Property | Data type | Description |
+| --- | --- | --- |
+| `number` | String | Loyalty card number or identifier. |
+| `series` | String | Series or collection to which the loyalty card belongs. |
+| `status` | String | Current loyalty card status, such as `active`, `inactive`, or `suspended`. |
+
+{style="table-layout:auto"}
+
+## `challenges` {#challenges}
+
+`challenges` is an array of objects that captures loyalty challenges associated with the member, including challenge progress and related tasks.
+
+| Property | Data type | Description |
+| --- | --- | --- |
+| `description` | String | Detailed description of the loyalty challenge. |
+| `endDate` | DateTime | Date and time when the challenge ends. |
+| `frequencyType` | String | Frequency associated with the challenge, such as daily, weekly, or monthly. |
+| `id` | String | Unique identifier for the loyalty challenge. |
+| `name` | String | Name of the loyalty challenge. |
+| `series` | String | Series or collection to which the challenge belongs. |
+| `startDate` | DateTime | Date and time when the challenge begins. |
+| `state` | String | Current challenge state, such as `active`, `completed`, or `expired`. |
+| `tasks` | Array of objects | Lists tasks associated with the loyalty challenge. Each array item contains: <ul><li>`endDate`: The task end date and time.</li><li>`entity`: The entity associated with the task.</li><li>`goal`: The target value for the task.</li><li>`name`: The task name.</li><li>`progress`: Current progress toward the task goal.</li><li>`startDate`: The task start date and time.</li><li>`state`: Current task state.</li><li>`type`: Task type or category.</li></ul> |
+
+{style="table-layout:auto"}
+
+## `rewards` {#rewards}
+
+The `rewards` object captures rewards associated with the loyalty program.
+
+| Property | Data type | Description |
+| --- | --- | --- |
+| `badges` | Array of objects | Achievement badges earned by the member. Each array item contains: <ul><li>`id`: Badge identifier.</li><li>`name`: Badge name.</li><li>`series`: Badge series or collection.</li><li>`startDate`: Date and time when the badge became active.</li><li>`endDate`: Date and time when the badge expires.</li><li>`state`: Current badge state.</li></ul> |
+| `coupons` | Array of objects | Loyalty coupons available to the member. Each array item contains: <ul><li>`discountValue`: Monetary discount value.</li><li>`endDate`: Coupon expiration date.</li><li>`id`: Coupon identifier.</li><li>`name`: Coupon name.</li><li>`redemptionCount`: Number of times the coupon has been redeemed.</li><li>`redemptionLimit`: Maximum number of coupon redemptions.</li><li>`series`: Coupon series or campaign.</li><li>`startDate`: Date and time when the coupon becomes valid.</li><li>`state`: Current coupon state.</li><li>`storeName`: Name of the associated store.</li></ul> |
+| `giveaways` | Array of objects | Giveaway promotions associated with the member. Each array item contains: <ul><li>`endDate`: Giveaway end date.</li><li>`id`: Giveaway identifier.</li><li>`name`: Giveaway name.</li><li>`partnerId`: Partner identifier.</li><li>`partnerName`: Partner name.</li><li>`series`: Giveaway series or campaign.</li><li>`startDate`: Giveaway start date.</li><li>`state`: Current giveaway state.</li><li>`type`: Giveaway type or category.</li></ul> |
+| `referrals` | Array of objects | Referral rewards earned by the member. Each array item contains: <ul><li>`endDate`: Referral end date.</li><li>`id`: Referral identifier.</li><li>`name`: Referral reward name.</li><li>`recipient`: Identifier or name of the referred person.</li><li>`series`: Referral series or campaign.</li><li>`startDate`: Referral start date.</li><li>`state`: Current referral state.</li></ul> |
+
+{style="table-layout:auto"}
+
+For more information about challenge and task semantics, see the Adobe Journey Optimizer Loyalty Challenges documentation.
 
 For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-loyalty-details.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-loyalty-details.schema.json)
-
-<!-- ... -->
