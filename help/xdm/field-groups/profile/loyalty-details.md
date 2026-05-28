@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;loyalty details;Schema design;field group;Field group;
 solution: Experience Platform
 title: Loyalty Details Schema Field Group
-description: Learn about the Loyalty Details schema field group.
+description: Reference documentation for the Loyalty Details XDM schema field group. Covers loyalty membership state fields including points balances, tier assignments, rewards, challenges, and card details for the XDM Individual Profile class.
 exl-id: 12c9fef5-4f9e-49b5-894f-f4938bb95c23
 TQID: https://experienceleague.adobe.com/ejWOFx2swDsfq7xDXuppY0yaqCFCbgcrH8IxdLHh7AQ
 product_v2:
@@ -17,29 +17,29 @@ role_v2:
 ---
 # [!UICONTROL Loyalty Details] schema field group
 
-[!UICONTROL Loyalty Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). It provides a single object-type field, `loyalty`, that models a customer's loyalty program membership state, including loyalty IDs, points balances, tier assignments, rewards, challenges, and card details.
+[!UICONTROL Loyalty Details] is a standard schema field group for the [[!UICONTROL XDM Individual Profile] class](../../classes/individual-profile.md). It provides a single object-type field, `loyalty`, that models a customer's loyalty program membership state, including loyalty IDs, points balances, tier assignments, rewards, challenges, and card details.
 
 This page is for schema designers and data engineers familiar with XDM Individual Profile and [schema field groups](../../ui/resources/field-groups.md). After reading this page, you can identify the correct `loyalty` field paths for source data mapping.
+
+>[!IMPORTANT]
+>
+>This field group captures loyalty membership state. Individual loyalty events are typically modeled in [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) schemas.
 
 >[!NOTE]
 >
 >The names of several schema field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
 
->[!IMPORTANT]
->
->This field group captures loyalty membership state. Individual loyalty events are typically modeled in [[!DNL XDM ExperienceEvent]](../../classes/experienceevent.md) schemas.
-
 ## When to use this field group {#when-to-use}
 
-Use this field group when:
+This field group is appropriate when all of the following conditions apply.
 
 - The schema class is XDM Individual Profile and represents a loyalty program member's current state.
 - The schema stores persistent loyalty attributes in Real-Time Customer Profile.
 - Downstream use cases require loyalty membership state for segmentation or personalization.
 
-Use [[!DNL XDM ExperienceEvent]](../../classes/experienceevent.md) schemas for event-based loyalty activity such as points accrual, challenge completions, or tier change events.
+Use [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) schemas for event-based loyalty activity such as points accrual, challenge completions, or tier change events.
 
-![Loyalty Details field group structure](../../images/field-groups/loyalty-details.png)
+![Diagram showing the loyalty object with top-level fields including points, tier, status, and nested arrays for cardsDetails, challenges, pointsExpiration, and a rewards object](../../images/field-groups/loyalty-details.png)
 
 ## Field group structure {#structure}
 
@@ -68,7 +68,7 @@ The `loyalty` object contains the following properties.
 | `tier` | String | Current loyalty tier in which the member is enrolled. |
 | `tierExpiryDate` | DateTime | Date and time when the customer's current loyalty tier expires. |
 | `tierUpgradeDate` | DateTime | Date and time when the customer was upgraded to the next loyalty tier level. |
-| `upgradeDate` | String | Deprecated. Use `tierUpgradeDate` instead. |
+| `upgradeDate` | String | Deprecated. Use `tierUpgradeDate` instead. Update existing schemas and source mappings that reference `upgradeDate` to use `tierUpgradeDate`. |
 
 {style="table-layout:auto"}
 
@@ -94,8 +94,8 @@ The following example shows the `loyalty` object with representative values for 
       }
     ],
     "rewards": {
-  "badges": [
-    { "id": "BDG-100", "state": "active" }
+      "badges": [
+        { "id": "BDG-100", "state": "active" }
       ]
     }
   }
@@ -147,6 +147,8 @@ The `rewards` object captures rewards associated with the loyalty program.
 
 ## Next steps {#next-steps}
 
-- Add this field group to an XDM Individual Profile schema by [adding field groups to schemas](../../ui/resources/field-groups.md) before ingesting loyalty profile data.
+After reviewing the field reference, take the following actions.
+
+- Add this field group to an XDM Individual Profile schema using the [Schema Editor field group guide](../../ui/resources/field-groups.md) before ingesting loyalty profile data.
 - Use the [populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-loyalty-details.example.1.json) in the XDM repository to validate loyalty payload mappings.
 - Consult the [full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-loyalty-details.schema.json) for data type constraints and required field definitions.
