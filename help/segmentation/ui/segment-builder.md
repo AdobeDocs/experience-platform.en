@@ -175,7 +175,7 @@ For more detailed information on the time and date functions, read the [time con
 
 +++
 
-When you select an attribute, you can see the summary data by selecting the [information icon](../../images/icons/info.png). The summary data includes information such as an explanation of what the field is, the record count of the values, as well as the percentage of profiles that contain values for this attribute.
+When you select an attribute, you can see the data insights for the attribute by selecting the [information icon](../../images/icons/info.png). The data insights summary includes information such as an explanation of what the field is, the record count of the values, as well as the percentage of profiles that contain values for this attribute.
 
 >[!NOTE]
 >
