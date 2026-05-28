@@ -21,17 +21,29 @@ role_v2:
 >
 >The names of several schema field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
 
-[!UICONTROL Loyalty Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The field group provides a single object-type field, `loyalty`, which captures information related to a person's membership in a customer loyalty program, including loyalty IDs, points balances, tiers, rewards, challenges, and loyalty card details. Use this field group to model loyalty profile state for segmentation, personalization, and loyalty-aware customer experiences.
+[!UICONTROL Loyalty Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). It provides a single object-type field, `loyalty`, that models a customer's loyalty program membership state, including loyalty IDs, points balances, tier assignments, rewards, challenges, and card details.
+
+This page is for schema designers and data engineers familiar with XDM Individual Profile and schema field groups. After reading this page, you can identify the correct `loyalty` field paths for source data mapping.
 
 >[!IMPORTANT]
 >
->This field group stores loyalty profile and membership state information. Loyalty challenge events and transactional loyalty events are documented separately.
+>This field group captures loyalty membership state. Individual loyalty events belong in XDM ExperienceEvent schemas.
+
+## When to use this field group {#when-to-use}
+
+Use this field group when:
+
+- The schema class is XDM Individual Profile and represents a loyalty program member's current state.
+- The schema stores persistent loyalty attributes in Real-Time Customer Profile.
+- Downstream use cases require loyalty membership state for segmentation or personalization.
+
+Do not use this field group for loyalty events. Event-stream data (points earned, tier upgrades, challenge completions) belongs in XDM ExperienceEvent schemas.
 
 ![Loyalty Details field group structure](../../images/field-groups/loyalty-details.png)
 
 ## Field group structure {#structure}
 
-The `loyalty` object captures details related to the customer's participation in a loyalty program.
+The `loyalty` object contains the following properties.
 
 | Property | Data type | Description |
 | --- | --- | --- |
@@ -59,6 +71,32 @@ The `loyalty` object captures details related to the customer's participation in
 | `upgradeDate` | String | Deprecated. Use `tierUpgradeDate` instead. |
 
 {style="table-layout:auto"}
+
+The following example shows the `loyalty` object with representative values for the nested structures. See the [populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-loyalty-details.example.1.json) in the XDM repository for a complete valid payload.
+
+```json
+{
+  "loyalty": {
+    "program": "Acme Rewards",
+    "tier": "gold",
+    "points": 4200,
+    "pointsExpiration": [
+      { "pointsExpirationDate": "2026-12-31T00:00:00Z", "pointsExpiring": 500 }
+    ],
+    "cardsDetails": [
+      { "number": "LC-0042", "status": "active" }
+    ],
+    "challenges": [
+      {
+        "id": "CH-001",
+        "state": "active",
+        "tasks": [{ "name": "Make 3 purchases", "goal": 3, "progress": 1 }]
+      }
+    ],
+    "rewards": { "badges": [], "coupons": [], "giveaways": [], "referrals": [] }
+  }
+}
+```
 
 ## `cardsDetails` {#cardsDetails}
 
@@ -103,9 +141,8 @@ The `rewards` object captures rewards associated with the loyalty program.
 
 {style="table-layout:auto"}
 
-For more information about challenge and task semantics, see the Adobe Journey Optimizer Loyalty Challenges documentation.
+## Next steps {#next-steps}
 
-For more details on the field group, refer to the public XDM repository:
-
-* [Populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-loyalty-details.example.1.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-loyalty-details.schema.json)
+- Review the [populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-loyalty-details.example.1.json) in the XDM repository for a complete valid `loyalty` payload.
+- Consult the [full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-loyalty-details.schema.json) for data type constraints and required field definitions.
+- For challenge and task semantics, see the Adobe Journey Optimizer Loyalty Challenges documentation.
