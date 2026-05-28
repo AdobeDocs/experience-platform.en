@@ -683,48 +683,56 @@ Select **[!UICONTROL Next]** to move to the [Review](#review) step.
 >title="Target field"
 >abstract="The target field auto-populates with the source field name. Edit it to use a different alias if you want the field to have a different name in your exported files."
 
-When exporting audiences to cloud storage destinations with JSON or [!DNL Parquet] output and the [**[!UICONTROL Export arrays, maps, and objects]** toggle enabled](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle), you can export complex data structures, including selected fields from arrays of objects, as enrichment attributes.
+When exporting audiences to cloud storage destinations with JSON or [!DNL Parquet] output and the [**[!UICONTROL Export arrays, maps, and objects]** toggle enabled](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle), you can export complex data structures, including entire arrays or selected fields from arrays of objects, as enrichment attributes.
 
 ![The Select enrichment attributes dialog showing the Export arrays and complex objects enabled banner and the two-column Source and Target mapping interface.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attribute-array.png)
 
 The enrichment attributes step shows a two-column mapping interface:
 
-* **[!UICONTROL Source field]**: the full schema path, which may include a calculated `transformArray` expression when the selected field is inside an array.
-* **[!UICONTROL Target field]**: the alias used as the field name in the exported file. Edit this to give the exported field a shorter or more meaningful name.
+* **[!UICONTROL Source field]**: the full schema path, which may include a calculated `transformArray` expression when the selected field is inside an array. You can identify calculated expressions by the function icon (**ƒ**) on the right side of the source field, as opposed to the schema icon shown for regular attributes.
+* **[!UICONTROL Target field]**: the alias used as the field name in the exported file. Edit this to use a different name in your exported files. The target field may only contain letters, numbers, and underscores. Dots, dashes, and other special characters are not permitted.
 
-This functionality is available only when all three conditions are met:
+This functionality is available only when all of the following conditions are met:
 
+* The destination is a cloud storage destination ([!DNL Amazon S3], [!DNL SFTP], [!DNL Azure Blob Storage], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], or [!DNL Google Cloud Storage]).
 * The destination connection has file type set to JSON or [!DNL Parquet].
 * The destination connection has the **[!UICONTROL Export arrays, maps, and objects]** toggle set *on*.
 * The audience you are activating originates from outside of the [!DNL Segmentation Service]. This includes audiences such as [Audience Composition](/help/segmentation/ui/audience-composition.md) audiences, look-alike audiences, federated audiences, audiences generated in other [!DNL Experience Platform] apps such as [!DNL Adobe Journey Optimizer], and more. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize).
 
-#### Export a single field from an array {#export-single-array-field}
+#### Export an entire array {#export-entire-array}
 
-When you select a field that is nested inside an array of objects, the **[!UICONTROL Source field]** automatically populates with a `transformArray` calculated expression that extracts that field from every object in the array.
+Select the array attribute itself from the source field picker to export it whole. The source field populates with the array path and the target field auto-populates with the array name.
+
+#### Export a single field from an array of objects {#export-single-array-field}
+
+When you select a property nested inside an array of objects, the **[!UICONTROL Source field]** automatically populates with a `transformArray` calculated expression using `to_object` to extract that property from every object in the array.
 
 For example, selecting `someArray[*].amount` produces:
 
 ```
-transformArray(someArray, x->x.amount)
+transformArray(someArray, x -> to_object("amount", x.amount))
 ```
 
-The exported output contains an array of values for that field across all objects.
+The target field auto-populates with the leaf node name (`amount`).
 
-#### Export multiple fields from an array in one mapping {#export-multiple-array-fields}
+#### Export multiple fields from an array of objects {#export-multiple-array-fields}
 
-To export multiple fields from the same array as a single mapped output, add the first field and then manually edit the generated `transformArray` expression in the **[!UICONTROL Source field]** to use the `to_object` function.
+To export more than one property from the same array of objects, use a two-step process:
 
-For example, to export both `apples` and `date` from `someArray`:
+1. Select one property from the array using the source field picker. The dialog auto-populates the calculated expression for that field.
+2. Manually edit the generated `transformArray` expression in the **[!UICONTROL Source field]** to add the additional properties inside the `to_object` function.
+
+For example, to export both `amount` and `date` from `someArray`, start by selecting `someArray[*].amount`, then edit the expression to:
 
 ```
-transformArray(someArray, x-> to_object('apples', x.apples, 'date', x.date))
+transformArray(someArray, x -> to_object("amount", x.amount, "date", x.date))
 ```
 
 Each object in the exported array contains only the specified fields.
 
 >[!NOTE]
 >
->The UI currently supports selecting one field at a time from an array. To export multiple fields from the same array in one mapping, add the first field and then edit the source expression manually as shown above.
+>The UI currently supports selecting one field at a time from an array. To export multiple fields from the same array in one mapping, select the first field and then edit the source expression manually as shown above.
 
 ## Review {#review}
 
