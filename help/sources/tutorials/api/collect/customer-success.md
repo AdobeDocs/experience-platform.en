@@ -5,6 +5,19 @@ title: Create a Dataflow for Customer Success Sources Using the Flow Service API
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a customer success system and ingesting it into Experience Platform using source connectors and APIs.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
+TQID: https://experienceleague.adobe.com/c7nu-pPHdE9NysJ4AXOP8fWXwplJjpsq8uHVt2i79RY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a dataflow for customer success sources using the [!DNL Flow Service] API
 

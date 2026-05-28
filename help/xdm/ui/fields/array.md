@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Define Array Fields in the UI
 description: Learn how to define an array field in the Experience Platform user interface.
 exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
+TQID: https://experienceleague.adobe.com/XtVQvLNWT1sxSvUqk48goaCaX-KYBqH0QqkPaU3UyJM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Define array fields in the UI
 

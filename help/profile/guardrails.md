@@ -5,6 +5,34 @@ product: experience platform
 type: Documentation
 description: Learn about performance and system-enforced guardrails for profile data and segmentation to ensure an optimal use of Real-Time CDP functionality.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
+TQID: https://experienceleague.adobe.com/KAewofch1CMa4WA-wU3yQsIAKxbgzeea3UAiKeIBDHQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
+    internal-label: Data quality
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Default guardrails for [!DNL Real-Time Customer Profile] data and segmentation
 
@@ -121,7 +149,7 @@ The guardrails outlined in this section refer to the number and nature of audien
 | Streaming throughput across all sandboxes | 1500 RPS | Performance guardrail | Streaming segmentation supports a combined peak value of 1500 inbound events per second across your production and development sandboxes. Streaming segmentation may take up to 5 minutes to qualify a profile for segment membership. Read more about [streaming audiences](/help/segmentation/methods/streaming-segmentation.md). |
 | Batch audiences per sandbox | 4000 | Performance guardrail | You can have up to 4000 **active** batch audiences per sandbox. You can have more than 4000 batch audiences per organization, as long as there are less than 4000 batch audiences in each **individual** sandbox. Attempting to create additional batch audiences may affect system performance.|
 | Account audiences per sandbox | 50 | System-enforced guardrail | You can create a maximum of 50 account audiences in a sandbox. After you reach 50 audiences in a sandbox, the **[!UICONTROL Create audience]** control is disabled when trying to create a new account audience. Read more about [account audiences](/help/segmentation/types/account-audiences.md). |
-| Published compositions per sandbox | 10 | Performance guardrail | You can have a maximum of  10 published compositions in a sandbox. Read more about [audience composition in the UI guide](/help/segmentation/ui/audience-composition.md). **Note**: Compositions created with Federated Audience Composition are **not** counted with this guardrail. |
+| Published compositions per sandbox | 50 | Performance guardrail | You can have a maximum of  50 published compositions in a sandbox. Read more about [audience composition in the UI guide](/help/segmentation/ui/audience-composition.md). **Note**: Compositions created with Federated Audience Composition are **not** counted with this guardrail. |
 | Maximum audience size | 30 percent | Performance guardrail | The recommended maximum membership of an audience is 30 percent of the total number of profiles in the system. Creating audiences with more than 30% of the profiles as members or multiple large audiences is possible but will impact system performance. |
 | Flexible audience evaluation runs | 50 per year (production sandbox)<br/>100 per year (development sandbox) | System-enforced guardrail | You have a maximum of 50 flexible audience evaluation runs per year per **production** sandbox. You have a maximum of 100 flexible audience evaluation runs per year per **development** sandbox. |
 | Flexible audience evaluation runs | 2 per day | System-enforced guardrail | You have a maximum of 2 runs per day per sandbox. |
@@ -191,3 +219,4 @@ See the following documentation for more information on other Experience Platfor
 * [Real-Time Customer Data Platform (B2C Edition - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-Time Customer Data Platform (B2P - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-Time Customer Data Platform (B2B - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+

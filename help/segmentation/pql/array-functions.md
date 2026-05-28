@@ -3,6 +3,23 @@ solution: Experience Platform
 title: Array, List, and Set PQL Functions
 description: Profile Query Language (PQL) offers functions to make interaction with arrays, lists, and strings easier.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
+TQID: https://experienceleague.adobe.com/AQ915GAYiqzEfneHPsInm60px86cSCkZg-iOXYvxznE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 ---
 # Array, list, and set functions
 

@@ -3,6 +3,15 @@ keywords: Experience Platform;home;popular topics;query service;Query service;ex
 title: List the Page Views of a User
 description: Learn how to write queries that use Experience Events to create a list of the last 100 pages that a specified user has used.
 exl-id: d831910d-d3a4-4a5a-b897-b09f0546dab0
+TQID: https://experienceleague.adobe.com/xH-DPI0rRWclRAgkKl2KxAO-Tz7rXhY8hd10dNQaigs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # List the page views of a user
 

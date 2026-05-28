@@ -5,6 +5,15 @@ hide: true
 hidefromtoc: yes
 description: Learn how to update the end date for dataset export dataflows with a current end date of May 1, 2025.
 exl-id: 3f8ff535-3c54-47ac-b297-32f8298881db
+TQID: https://experienceleague.adobe.com/pGLaEcZbgiYiUjmn6x9cZV8BZC4HeGc4WFlfkulp3Ws
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Update the end date of dataset export dataflows (Action required by May 1, 2025)
 

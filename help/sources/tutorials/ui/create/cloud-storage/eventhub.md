@@ -3,6 +3,19 @@ title: Create an Azure Event Hubs  Source Connection in the UI
 description: Learn how to create an Azure Event Hubs source connection using the Adobe Experience Platform UI.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
+TQID: https://experienceleague.adobe.com/nVdU3MAx-woCdGY7Q4y0QyYmOiyqgJC1gL1qCpGSgvo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create an [!DNL Azure Event Hubs] source connection in the UI
 

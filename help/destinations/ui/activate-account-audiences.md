@@ -3,6 +3,23 @@ title: Activate account audiences to destinations
 type: Tutorial
 description: Learn how to activate account audiences to destinations
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
+TQID: https://experienceleague.adobe.com/8p1sSi-jEHg-4xQPFM6n0Xu17YReuG8Zr5yvB16Uqyk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
 ---
 # Activate account audiences
 

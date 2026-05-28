@@ -5,6 +5,16 @@ title: Explore Schema Resources in the UI
 description: Learn how to explore existing schemas, classes, schema field groups, and data types in the Experience Platform user interface.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
+TQID: https://experienceleague.adobe.com/xB6Pe34IWxVlkDy9oP9k4tTWHa62UUhaGUbzXRIGjlU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Explore schema resources in the UI
 
@@ -158,7 +168,7 @@ If an array field is based on an object type, you can select its icon in the can
 
 ### [!UICONTROL Field properties] {#field-properties}
 
-When you select the name of any field in the canvas, the right rail updates to show details about that field under **[!UICONTROL Field properties]**. This can include a description of the field's intended use case, default values, patterns, formats, whether the field is required, and more. When you are exploring a field group, label-related details for the selected field can also appear here; see [Labels in the structure view](#field-group-labels-in-structure).
+When you select the name of any field in the canvas, the right rail updates to show details about that field under **[!UICONTROL Field properties]**. This can include a description of the field's intended use case, **[!UICONTROL Default value]** (informational schema metadata that is not applied during ingestion), patterns, formats, whether the field is required, and more. See [type-specific field properties](./fields/overview.md#type-specific-properties) for how **[!UICONTROL Default value]** differs from ingestion validation settings. When you are exploring a field group, label-related details for the selected field can also appear here; see [Labels in the structure view](#field-group-labels-in-structure).
 
 ![A field selected from the Commerce data type with the field properties highlighted.](../images/ui/explore/field-properties.png)
 
@@ -248,7 +258,7 @@ In the filter panel, you can:
 - **[!UICONTROL Compatible classes]** — Use the dropdown to filter field groups by class compatibility  
 - **[!UICONTROL Industry tags]** — Use checkboxes to filter by one or more industry categories  
 
-While browsing, select a row in the table to update the info rail. The info rail displays metadata such as compatible classes and industry tags so you can review key details without opening the field group.
+While browsing, select a row in the table to trigger the info rail. The info rail displays metadata such as compatible classes and industry tags so you can review key details without opening the field group.
 
 #### Field group detail metadata
 

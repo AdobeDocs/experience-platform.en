@@ -5,6 +5,25 @@ title: Create a model using JupyterLab Notebooks
 type: Tutorial
 description: This tutorial walks you through the required steps to create a recipe using the JupyterLab notebooks recipe builder template.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
+TQID: https://experienceleague.adobe.com/o6DENUmMRTCx311RaRHbSfVlrcuEi2myKsmALQC1aTc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Create a model using JupyterLab Notebooks
 

@@ -4,6 +4,23 @@ title: Enable a Dataset for Profile Updates using APIs
 type: Tutorial
 description: This tutorial shows you how to use Adobe Experience Platform APIs to enable a dataset with "upsert" capabilities in order to make updates to Real-Time Customer Profile data.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
+TQID: https://experienceleague.adobe.com/p5jj3hqMYlEi9cSWvZnWF7grBtIrY0L-lUtZQ6R1wH8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Enable a dataset for profile updates using APIs
 

@@ -3,6 +3,13 @@ title: Connect Azure Synapse Analytics To Experience Platform Using The Flow Ser
 description: Learn how to connect your Azure Synapse Analytics account to Experience Platform using APIs.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
+TQID: https://experienceleague.adobe.com/zDNEXfKF43hVSVsfIDrKT4oxQxYFIIfXGzQ3p-4ADRQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Connect [!DNL Azure Synapse Analytics] to Experience Platform using the [!DNL Flow Service] API
 

@@ -5,6 +5,7 @@ breadcrumb-title: Advanced Data Lifecycle Management Guide
 user-guide-description: Delete individual records and schedule dataset expirations in Experience Platform for data cleansing, removing anonymous data, and data minimization.
 feature: Data Hygiene
 role: User, Developer, Admin
+nudge: true
 ---
 
 # Advanced Data Lifecycle Management {#data-lifecycle}

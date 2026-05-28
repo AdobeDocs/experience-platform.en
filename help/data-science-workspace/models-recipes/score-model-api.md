@@ -5,6 +5,21 @@ title: Score a Model Using the Sensei Machine Learning API
 type: Tutorial
 description: This tutorial will show you how to leverage the Sensei Machine Learning APIs to create an Experiment and an Experiment Run.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
+TQID: https://experienceleague.adobe.com/5bu-W9ypp2xDunBHXRk6UPX9eCCW4JlE2yF1bIWe4-A
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Score a model using the [!DNL Sensei Machine Learning API]
 

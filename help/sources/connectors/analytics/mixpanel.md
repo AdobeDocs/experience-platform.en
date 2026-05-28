@@ -1,8 +1,18 @@
 ---
 title: Mixpanel Source Connector Overview
 description: Learn how to connect Mixpanel to Adobe Experience Platform using APIs or the user interface.
-last-substantial-update: 2023-06-21
+last-substantial-update: 2023-06-21T00:00:00.000Z
 exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
+TQID: https://experienceleague.adobe.com/NH-xFyej5uq5PptsqLjSXEETCRe0hAmYLUx-dL-DrDM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # [!DNL Mixpanel]
 
