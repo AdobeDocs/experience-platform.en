@@ -2,6 +2,13 @@
 title: Balance Transfers Schema Field Group
 description: Learn about the Balance Transfers schema field group.
 exl-id: be0d2ed6-6547-432a-af2f-409c33e268d4
+TQID: https://experienceleague.adobe.com/lDicLKYOQvOOPKBURFIUm5267guI6HuDijYuFflMoUs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Balance Transfers] schema field group
 

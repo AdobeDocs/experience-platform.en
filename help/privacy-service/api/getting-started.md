@@ -3,6 +3,21 @@ title: Authenticate and access the Privacy Service API
 description: Learn how to authenticate to the Privacy Service API and how to interpret example API calls in the documentation.
 role: Developer
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
+TQID: https://experienceleague.adobe.com/qDlbSic6BGkU-guPQirXmVXlandmsoq5LIY48Rlk7g4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Authenticate and access the Privacy Service API
 

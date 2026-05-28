@@ -4,6 +4,18 @@ solution: Experience Platform
 title: Subscribe to Privacy Service Events
 description: Learn how to subscribe to Privacy Service events using a preconfigured webhook.
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
+TQID: https://experienceleague.adobe.com/J05-9wr8DJ49kDAkn21TNhtiT-Yr-PogcK-aGrnr2ik
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Subscribe to [!DNL Privacy Service Events]
 

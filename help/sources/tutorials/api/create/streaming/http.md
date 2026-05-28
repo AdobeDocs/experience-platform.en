@@ -3,8 +3,17 @@ keywords: Experience Platform;home;popular topics;streaming connection;create st
 title: Create an HTTP API Streaming Connection Using The Flow Service API
 description: This tutorial provides steps on how to create a streaming connection using the HTTP API source for both raw and XDM data using the Flow Service API
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
+TQID: https://experienceleague.adobe.com/ZbdJ2H8j5XRcJTtz0WOyX-SWsd7u-d98XrgsIZ0bJhM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
-
 # Create an HTTP API streaming connection using the [!DNL Flow Service] API
 
 Flow Service is used to collect and centralize customer data from different sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.

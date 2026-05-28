@@ -2,8 +2,19 @@
 description: Learn how to use the destination testing API to test your streaming destination configuration before publishing it.
 title: Streaming destination testing API overview
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
+TQID: https://experienceleague.adobe.com/qLrehyJCv1-Vb5904hXJqTch7PJD2W1PfhZ-Xf-PMQs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
-
 # Streaming destination testing API overview
 
 As part of Destination SDK, Adobe provides developer tools to assist you in configuring and testing your destination. This page describes how to test your destination configuration. For information on how to create a message transformation template, read [Create and test a message transformation template](../../testing-api/streaming-destinations/create-template.md).

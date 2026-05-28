@@ -4,6 +4,21 @@ title: Email marketing destinations overview
 type: Tutorial
 description: Email Service Providers (ESPs) enable you to manage your email marketing activities, such as for sending promotional email campaigns. Learn which ESPs are supported as Experience Platform destinations.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
+TQID: https://experienceleague.adobe.com/WsJhY8--XG2DWKr8oN4Wy2Yp64P826XZ8VfGW8VfSfI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
 ---
 # Email marketing destinations overview {#email-marketing-destinations}
 

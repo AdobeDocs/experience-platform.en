@@ -2,6 +2,24 @@
 title: setVar()
 description: Sets a value that you can retrieve later using getVar().
 exl-id: b73e1f1e-4675-4086-ac9c-96be549a8588
+TQID: https://experienceleague.adobe.com/773o0s4qnuf3LGvdovgpm8OtSQI7jtWI61vua1sBMG0
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # `setVar()`
 

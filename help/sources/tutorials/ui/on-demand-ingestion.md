@@ -2,6 +2,16 @@
 title: On-demand Ingestion for Sources Dataflows In The UI
 description: Learn how to create dataflows on demand for your source connections using the Experience Platform user interface.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
+TQID: https://experienceleague.adobe.com/Oew01M64EfZm0r606wC3vAtoPVYMtbX6AKGHp6084s8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # On-demand ingestion for sources dataflows in the UI
 

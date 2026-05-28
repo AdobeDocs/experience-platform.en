@@ -2,6 +2,23 @@
 description: Learn how to configure the file export settings for destinations built with Destination SDK.
 title: Batch configuration
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
+TQID: https://experienceleague.adobe.com/wqtETHVbW7en7bCuO-3khGwjEzT4la5uQc3zwEaC288
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Batch configuration {#batch-configuration}
 

@@ -2,6 +2,21 @@
 title: Activate Audience Manager Audiences through Expanded Activation
 description: Learn how to activate Audience Manager audiences to social and advertising destinations, through Audience Manager Expanded Activation.
 exl-id: 4105f5c5-db69-414f-9ee4-8630b0a86da7
+TQID: https://experienceleague.adobe.com/Y4A-nsIFEc9jMpWdVbD6yZYh9QF2wT-YpJqnVRdvv6s
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+    internal-label: Administration
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 ---
 # Activate audiences through Audience Manager Expanded Activation
 

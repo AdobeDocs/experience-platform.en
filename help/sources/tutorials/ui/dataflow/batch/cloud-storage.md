@@ -3,6 +3,23 @@ keywords: Experience Platform;home;popular topics;dataflow;Dataflow
 title: Configure a Dataflow to Ingest Batch Data from a Cloud Storage Source in the UI
 description: This tutorial provides steps on how to configure a new dataflow to ingest batch data from a cloud storage source in the UI
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
+TQID: https://experienceleague.adobe.com/w4qX8u-hPYQd7UCjAIa3jqjJGTpZRaH0ZVi40aR-PuM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Configure a dataflow to ingest batch data from a cloud storage source in the UI
 

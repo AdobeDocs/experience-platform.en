@@ -5,6 +5,26 @@ type: Documentation
 description: The Profile API getting started guide outlines the key concepts and basic functionality that you need to know in order to use Real-Time Customer Profile API endpoints to perform basic CRUD operations against Profile data.
 role: Developer
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
+TQID: https://experienceleague.adobe.com/RiJCMvzj44PaQGtgPK3bSUi9qax78MVieL-G5WLB4-Y
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Getting started with the [!DNL Real-Time Customer Profile] API {#getting-started}
 

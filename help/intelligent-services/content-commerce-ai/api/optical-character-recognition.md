@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Text Presence and Optical Character Recognition
 description: In the Content Tagging API, the Text Presence/Optical Character Recognition (OCR) service can indicate if text is present in a given image. If text is present, OCR can return the text.
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
+TQID: https://experienceleague.adobe.com/lz0Dfck2IrmPigJ-EhtvPOIMF9ct9DU9wfiW2CESlsA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Text Presence and Optical Character Recognition
 

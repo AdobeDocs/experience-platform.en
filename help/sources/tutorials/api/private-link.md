@@ -2,6 +2,18 @@
 title: Private Link Support For Sources In The API
 description: Learn how to create and use private links for Adobe Experience Platform Sources
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
+TQID: https://experienceleague.adobe.com/TRQbOSUO5M2HmbsO462bbflW6GgjXrVWE2QawUwI5pk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Private Link Support for Sources in the API
 

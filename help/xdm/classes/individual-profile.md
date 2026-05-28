@@ -4,6 +4,16 @@ solution: Experience Platform
 title: XDM Individual Profile Class
 description: Learn about the XDM Individual Profile class.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
+TQID: https://experienceleague.adobe.com/xmmRm3YYGivqP8Ou7pYY52C4GKqsMAZm0q0kTLYUMTQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL XDM Individual Profile] class
 

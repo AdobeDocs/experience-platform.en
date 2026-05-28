@@ -2,9 +2,15 @@
 title: Repeat Data Type
 description: Learn about the Repeat Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+hide: true
 exl-id: 9d40bc1d-33d1-4c33-a143-13fdcf8dc255
+TQID: https://experienceleague.adobe.com/hL2smAVf4o-qCbpsVkO9LT7xwxJlVGg---7OQ-G7ISc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Repeat] data type
 

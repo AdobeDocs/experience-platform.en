@@ -2,9 +2,15 @@
 title: Duration Data Type
 description: Learn about the Duration Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+hide: true
 exl-id: 01aac0d0-0503-4f8b-a306-cf3c187a76e0
+TQID: https://experienceleague.adobe.com/l7GgwGWnX9-t7-WzVtiBkIDsFoV3cUAmAZ-nZse0LIw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Duration] data type
 

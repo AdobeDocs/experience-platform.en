@@ -3,8 +3,23 @@ title: XDM Field Discovery With AI Assistant
 description: Read this document to learn how you can use AI Assistant for Experience Data Model (XDM) field discovery.
 badge: Alpha
 hide: true
-hidefromtoc: true
 exl-id: 041034c6-da45-437f-ad46-f9c2ded9f82c
+TQID: https://experienceleague.adobe.com/-dXeZqH5-zPYNKFnEZa44lUtTWNkkUhdJso9flRSUQo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+    internal-label: AI Assistant
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # XDM field discovery with AI Assistant
 

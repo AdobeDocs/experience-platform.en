@@ -4,6 +4,15 @@ title: Delete destinations
 type: Tutorial
 description: This tutorial lists the steps to delete an existing destination in the Adobe Experience Platform UI
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
+TQID: https://experienceleague.adobe.com/RzgP2Pf1j4arjAwC6jNg6CofW-2tb7NYpmWumTJFdes
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Delete destinations {#delete-destinations}
 

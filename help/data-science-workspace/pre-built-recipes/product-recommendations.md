@@ -4,6 +4,18 @@ solution: Experience Platform
 title: Product Recommendation Recipe
 description: The Product Recommendations recipe enables you to provide personalized product recommendations that are tailored to your customer's needs and interests. With an accurate prediction model, a customer's purchase history can provide you with insight on what products they may be interested in.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
+TQID: https://experienceleague.adobe.com/8PXA9KOa5wiwCZwrXdddJFQMfzlmho-FFMRl2CLv4iE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Product recommendation recipe
 

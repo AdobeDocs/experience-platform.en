@@ -2,6 +2,16 @@
 title: XDM Business Account Class
 description: Learn about the XDM Business Account class in Experience Data Model (XDM).
 exl-id: abe4c919-a680-4aad-918e-6e56cae8bd4d
+TQID: https://experienceleague.adobe.com/lBNwtc9uiwXWnRKxbCCUmU67oQxpi4Tdal6QZYryKY8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL XDM Business Account] class
 

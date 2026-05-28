@@ -3,6 +3,13 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 title: Configuration options in Self-Serve Sources (Batch SDK)
 description: This document provides an overview of the configurations you need to prepare in order to use Self-Serve Sources (Batch SDK).
 exl-id: a41b3b80-599a-47ed-a391-419721be5aa2
+TQID: https://experienceleague.adobe.com/s8-DfhoZ8Q5ypehsoE4sKcXco6IbiwAPx9x94ssvupA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Configuration options in Self-Serve Sources (Batch SDK)
 

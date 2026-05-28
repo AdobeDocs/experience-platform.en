@@ -4,6 +4,13 @@ solution: Experience Platform
 title: FTP Source Connector Overview
 description: Learn how to connect an FTP server to Adobe Experience Platform using APIs or the user interface.
 exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
+TQID: https://experienceleague.adobe.com/bPAvGDHZWR8JwMmXa6dFCJ32BRffKbMxDNa6fCYvetc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # (Beta) FTP connector
 

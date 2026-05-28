@@ -3,6 +3,18 @@ title: MTLS API Guide
 description: Learn how to use the mTLS Service API to securely retrieve and verify the public certificates issued by Adobe.
 role: Developer
 exl-id: eb40691a-a866-4acb-849b-c5dce2d74224
+TQID: https://experienceleague.adobe.com/L-uQyr67fW6dlb5we7u9reemDlZ-FU3ymIkT6vbx8-c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 ---
 # MTLS Service API overview
 

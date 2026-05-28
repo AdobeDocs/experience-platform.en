@@ -4,6 +4,19 @@ solution: Experience Platform
 title: Update a Catalog Object
 description: You can update part of a Catalog object by including its ID in the path of a PATCH request. This document covers using fields and using JSON Patch notation for performing PATCH operations on Catalog objects.
 exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
+TQID: https://experienceleague.adobe.com/JwwAe9V-v0nHlBooAG4XvPzbq4h6adYhq3Omv1PcgxY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Update a Catalog object
 

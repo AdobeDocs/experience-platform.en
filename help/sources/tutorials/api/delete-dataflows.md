@@ -5,6 +5,13 @@ title: Delete a Dataflow Using the Flow Service API
 type: Tutorial
 description: Learn how to delete batch and streaming dataflows using the Flow Service API.
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
+TQID: https://experienceleague.adobe.com/Z7UYXXZQNH--E0B9GAma24TP4Q8fdXaEgMRWgC1PFQo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Delete a dataflow using the Flow Service API
 

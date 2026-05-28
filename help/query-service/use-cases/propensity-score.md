@@ -2,6 +2,22 @@
 title: Determine A Propensity Score Using A Machine Learning Generated Predictive Model
 description: Learn how to use Query Service to apply your predictive model to Experience Platform data. This document demonstrates how to use Experience Platform data to predict a customer's propensity to purchase on each visit.
 exl-id: 29587541-50dd-405c-bc18-17947b8a5942
+TQID: https://experienceleague.adobe.com/K4Nf0gb4l0e5MDRm1WtWMieZhJHGVr8ccSJMZUYSEj4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+    internal-label: Behavioral data
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Determine a propensity score using a machine-learning-generated predictive model
 

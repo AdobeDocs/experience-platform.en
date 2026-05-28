@@ -4,6 +4,24 @@ solution: Experience Platform
 title: Define XDM Fields in the UI
 description: Learn how to define XDM fields in the Experience Platform user interface.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
+TQID: https://experienceleague.adobe.com/syA6AOVPFb5DmmDsj76bsefVxMU6BXzHaMrcmQwpoEk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+subfeature_v2:
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+    internal-label: Data modeling
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 ---
 # Define XDM fields in the UI
 
@@ -78,7 +96,14 @@ You can continue to follow the steps above to add more fields to the schema. Onc
 
 ## Type-specific field properties {#type-specific-properties}
 
-When defining a new field, additional configuration options may appear in the right rail depending on the **[!UICONTROL Type]** you choose for the field. The following table outlines these additional field properties along with their compatible types:
+>[!CONTEXTUALHELP]
+>id="platform_xdm_schema_fieldproperties_defaultvalue"
+>title="Default value"
+>abstract="Defines a reference value for the field in the schema. This value is not automatically populated during data ingestion."
+
+When defining a new field, additional configuration options may appear in the right rail depending on the **[!UICONTROL Type]** you choose for the field. The following table outlines these additional field properties along with their compatible types.
+
+Properties such as **[!UICONTROL Pattern]**, **[!UICONTROL Format]**, and length or numeric bounds are enforced during ingestion when configured. **[!UICONTROL Default value]** is different: it records informational schema metadata and does not validate or populate ingested data. See the **[!UICONTROL Default value]** row below and the note that follows the table.
 
 | Field property | Compatible types | Description |
 | --- | --- | --- |
@@ -91,6 +116,7 @@ When defining a new field, additional configuration options may appear in the ri
 | [!UICONTROL Maximum value] | [!UICONTROL Double] | The maximum value for the Double to be accepted during ingestion. If the ingested value exactly matches the one entered here, then the value is accepted. When using this constraint, the "[!UICONTROL Exclusive maximum value]" constraint must be left blank. |
 | [!UICONTROL Exclusive minimum value] | [!UICONTROL Double] | The maximum value for the Double to be accepted during ingestion. If the ingested value exactly matches the one entered here, then the value is rejected. When using this constraint, the "[!UICONTROL Minimum value]" (non-exclusive) constraint must be left blank. |
 | [!UICONTROL Exclusive maximum value] | [!UICONTROL Double] | The maximum value for the Double to be accepted during ingestion. If the ingested value exactly matches the one entered here, then the value is rejected. When using this constraint, the "[!UICONTROL Maximum value]" (non-exclusive) constraint must be left blank. |
+| [!UICONTROL Default value] | Scalar types in the Schema Editor that support JSON schema `default` (such as [!UICONTROL String] and [!UICONTROL Boolean]) | Informational metadata aligned with [JSON Schema](https://json-schema.org/understanding-json-schema/reference/generic.html#annotations) `default` semantics and stored in the schema definition. The configured value is not automatically applied during ingestion or Data Prep flows. Omitted fields remain absent unless explicitly mapped or transformed in your dataflow. See [defining required fields](./required.md). |
 
 {style="table-layout:auto"}
 

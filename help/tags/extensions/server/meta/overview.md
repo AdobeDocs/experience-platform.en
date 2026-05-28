@@ -2,6 +2,84 @@
 title: Meta Conversions API Extension Overview
 description: Learn about the Meta Conversions API extension for event forwarding in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
+TQID: https://experienceleague.adobe.com/GrTuIOPkhlhBNYFBjXEyyhmjqJ3eUR64QXJ57jUc3c8
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+    internal-label: Advertising
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+    internal-label: Acrobat Sign
+  - id: dfc56824-e8b9-499e-85d4-21aedb507314
+    internal-label: Campaign
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+feature_v2:
+  - id: a075b2c1-7748-4328-b7f6-343aa314616a
+    internal-label: Campaigns
+  - id: b12f6872-9271-4369-85e5-86969a0b99a2
+    internal-label: APIs
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+    internal-label: Use cases
+  - id: bef6f891-2e8a-425e-8f99-7ddf22070daa
+    internal-label: APIs
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+    internal-label: API
+subfeature_v2:
+  - id: a94ced60-8199-4549-b453-ede2acb4101e
+    internal-label: Hybrid implementation
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+    internal-label: Best practices
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+    internal-label: Data collection UI
+  - id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4
+    internal-label: Assurance
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+    internal-label: Datastreams
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+    internal-label: Event forwarding
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+    internal-label: Get started
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+    internal-label: Properties
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+    internal-label: Data elements
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # [!DNL Meta Conversions API] extension overview
 
@@ -134,40 +212,9 @@ The following video provides an introduction to the quick start feature.
 
 >[!NOTE]
 >
->This feature is designed to help you get started with an event forwarding implementation. It will not deliver an end to end, fully functional implementation that accommodates all use cases.
+>The guided setup feature helps you get set up with ease and efficiency. This tool automates multiple steps that are performed in Adobe tags and event forwarding. It will not deliver an end to end, fully functional implementation that accommodates all use cases.
 
-This setup auto installs both the Meta Conversions API and the Meta Pixel extensions. This hybrid implementation is recommended by Meta to collect and forward event conversions server side.
-The quick setup feature is designed to help customers get started with an event forwarding implementation and is not intended to deliver an end to end, fully functional implementation that accommodates all use cases.
-
-To install the feature, Select **[!UICONTROL Get Started]** for **[!DNL Send Conversions Data to Meta]** on the Adobe Experience Platform Data Collection **[!UICONTROL Home]** page.
-
-![Data collection home page showing conversions data to meta](../../../images/extensions/server/meta/conversion-data-to-meta.png)
-
-Enter your **[!UICONTROL Domain]**, then select **[!UICONTROL Next]**. This domain will be used as a naming convention for your auto generated Tags and Event Forwarding properties, rules, data elements, datastreams, and so on.
-
-![Welcome screen requesting domain name](../../../images/extensions/server/meta/welcome.png)
-
-In the **[!UICONTROL Initial Setup]** dialog enter your **[!UICONTROL Meta Pixel ID]**, **[!UICONTROL Meta Conversion API Access Token]**, and **[!UICONTROL Data Layer Path]**, then select **[!UICONTROL Next]**.
-
-![Initial setup dialog](../../../images/extensions/server/meta/initial-setup.png)
-
-Allow a few minutes for the initial setup process to complete, then select **[!UICONTROL Next]**.
-
-![Initial setup complete confirmation screen](../../../images/extensions/server/meta/setup-complete.png)
-
-From the **[!UICONTROL Add Code on Your Site]** dialog copy the code provided using the copy ![Copy](/help/images/icons/copy.png) function and paste this into the `<head>` of your source website. Once implemented, select **[!UICONTROL Start Validation]**
-
-![Add code on your site dialog](../../../images/extensions/server/meta/add-code-on-your-site.png)
-
-The [!UICONTROL Validation Results] dialog displays the Meta extension implementation results. Select **[!UICONTROL Next]**. You can also see additional validation results by selecting the **[!UICONTROL Assurance]** link.
-
-![Test results dialog displaying implementation results](../../../images/extensions/server/meta/test-results.png)
-
-The **[!UICONTROL Next Steps]** screen display confirms completion of setup. From here you have the option to optimize your implementation by adding new events, which are shown in the next section.
-
-If you do not want to add additional events, select **[!UICONTROL Close]**.
-
-![Next steps dialog](../../../images/extensions/server/meta/next-steps.png)
+To get started with the guided setup, follow the instructions in the [Event Forwarding guided setup](../../../ui/event-forwarding/guided-setup.md).
 
 #### Adding Additional Events
 

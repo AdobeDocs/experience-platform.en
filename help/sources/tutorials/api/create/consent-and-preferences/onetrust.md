@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Create a dataflow for a OneTrust Integration source using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to OneTrust Integration using the Flow Service API.
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
+TQID: https://experienceleague.adobe.com/tAfeK4m6cuZkjewjWaBc3qHu9B7tAxtOe7nK0xU-FZ0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a dataflow for a [!DNL OneTrust Integration] source using the [!DNL Flow Service] API
 

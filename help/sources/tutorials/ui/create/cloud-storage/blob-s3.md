@@ -5,6 +5,13 @@ title: Create an Azure Blob or Amazon S3  Source Connection in the UI
 type: Tutorial
 description: Learn how to create an Azure Blob or Amazon S3 source connection using the Adobe Experience Platform UI.
 exl-id: de2db0cb-3ce4-46d1-96c4-00f779f81670
+TQID: https://experienceleague.adobe.com/QWvYqagZlPF9rsoo5od0EJpLnTFa6bFz---LCeR6pwY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create an [!DNL Azure Blob] or [!DNL Amazon] S3 source connection in the UI
 

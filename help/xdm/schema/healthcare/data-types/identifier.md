@@ -2,9 +2,15 @@
 title: Identifier Data Type
 description: Learn about the Identifier Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+hide: true
 exl-id: 0664f52d-bea6-4aa1-b2a5-de0bd6d5edd9
+TQID: https://experienceleague.adobe.com/JE-CBy0UEi0yljUHHIT7UX4ERkqtSTu9Rm1pSbMzutg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Identifier] data type
 

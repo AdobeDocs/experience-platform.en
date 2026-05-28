@@ -2,8 +2,22 @@
 description: Learn how to use the destination testing API to validate the output to your streaming destination, based on your message transformation template.
 title: Validate exported profile structure
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
+TQID: https://experienceleague.adobe.com/fW6k1ec2bmzNhEJyqQAYJrWB-7fwOJ7gO2vdvbYGsFk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
-
 # Validate exported profile structure {#render-template-api-operations}
 
 >[!IMPORTANT]

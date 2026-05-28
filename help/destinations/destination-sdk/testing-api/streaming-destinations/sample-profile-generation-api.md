@@ -2,8 +2,22 @@
 description: Learn how to use the destination testing API to generate sample profiles for your streaming destination, which you can use in destination testing.
 title: Generate sample profiles based on a source schema
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
+TQID: https://experienceleague.adobe.com/zcllSUYnmG9X7LzTTq57Zp6dZnHjEw9TNtnT-Ub5gzs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
-
 # Generate sample profiles based on a source schema {#sample-profile-api-operations}
 
 >[!IMPORTANT]

@@ -2,6 +2,18 @@
 title: Use a text editor in your local environment to create a destination documentation page
 description: The instructions on this page show you how to use a text editor to work in your local environment to author a documentation page for your Experience Platform destination and submit it for review.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
+TQID: https://experienceleague.adobe.com/n2NvyC5LSYmj4s2vf1fvYggCL7mLtcBDXGIx1B7M9C8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # Use a text editor in your local environment to create a destination documentation page {#local-authoring}
 

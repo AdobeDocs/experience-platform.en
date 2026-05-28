@@ -3,6 +3,16 @@ keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEv
 title: Flight Reservation Schema Field Group
 description: Learn about the Flight Reservation schema field group.
 exl-id: df4bb525-c2d3-4e1d-921f-903142a570ac
+TQID: https://experienceleague.adobe.com/uFbfqsOkp-tGLbUQmKp7j9IwHkd-uGG4A0mNnIMpkMA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 ---
 # [!UICONTROL Flight Reservation] schema field group
 

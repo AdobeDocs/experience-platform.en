@@ -4,6 +4,25 @@ description: Learn how to retrieve audit events in Experience Platform using the
 role: Developer
 feature: Audits, API
 exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
+TQID: https://experienceleague.adobe.com/Hbz-W8NmDQYyeJXcIfwLoJHLYcHQx18-vy3qIxH3klw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Audit events endpoint
 

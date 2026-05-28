@@ -2,6 +2,21 @@
 title: Tag Presence Test Reference
 description: Learn how the auditor feature tests for tag presence in Adobe Experience Platform Debugger.
 exl-id: 8f01f89e-2a3b-41bc-b971-f3c60d0ae3fa
+TQID: https://experienceleague.adobe.com/cXxLoQFNTcSSROkTutWNWo5pvebzQjWNRkIuqhMlXdg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 ---
 # Tag presence test reference
 
@@ -15,8 +30,8 @@ Tag presence tests evaluate whether certain tags exists on the page, and whether
 
 | Test | Weight | Criteria | Recommendation |
 | --- | --- | --- | --- |
-| Advertising Cloud - Code presence  | 5 | The Advertising Cloud tag is not available in the DOM. | Implement the Advertising Cloud tag using the [Advertising Cloud tag extension](../../destinations/catalog/advertising/adobe-advertising-cloud.md). |
-| Advertising Cloud - Segment Pixel Implemented  | 5 | Upgrade your Advertising Cloud segment pixels to the new Advertising Cloud image-only tags. Using the deprecated AMO segment tags can result in data loss. | Implement the Advertising Cloud segment pixel using the [Advertising Cloud tag extension](../../destinations/catalog/advertising/adobe-advertising-cloud.md). |
+| Adobe Advertising - Code presence  | 5 | The Adobe Advertising tag is not available in the DOM. | Implement the Adobe Advertising tag using the [Adobe Advertising tag extension](../../destinations/catalog/advertising/adobe-advertising-cloud.md). |
+| Adobe Advertising - Segment Pixel Implemented  | 5 | Upgrade your Adobe Advertising segment pixels to the new Adobe Advertising image-only tags. Using the deprecated AMO segment tags can result in data loss. | Implement the Adobe Advertising segment pixel using the [Adobe Advertising tag extension](../../destinations/catalog/advertising/adobe-advertising-cloud.md). |
 | Analytics - Loaded in DOM  | 5 | The Adobe Analytics tag was not detected. | Install the latest version of Analytics. <br><br>[Additional information](https://experienceleague.adobe.com/docs/analytics/implementation/home.html) |
 | Launch - Library loaded  | 5 | A `global _satellite` object was not found in the DOM, meaning that the tag library is either not installed or failing to execute. | Verify that the tag library is implemented on the page and is not blocked by subsequent script activities. |
 | Launch - Not have multiple embed scripts | 5 | Production sites should only load one embed code per page. | Verify that only the production library is loading on the page. |

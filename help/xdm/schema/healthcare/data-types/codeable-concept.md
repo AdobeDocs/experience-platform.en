@@ -2,9 +2,15 @@
 title: Codeable Concept Data Type
 description: Learn about the Codeable Concept Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+hide: true
 exl-id: c172a7cd-24c6-484b-8552-8745dfd3a8e9
+TQID: https://experienceleague.adobe.com/NGQ1TQA12L3DILwGzF5vTd9tCcdkuvsV-rkyQwVZ4JU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Codeable Concept] data type
 

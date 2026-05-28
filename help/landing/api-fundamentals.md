@@ -6,6 +6,18 @@ description: This document provides a brief overview of some the underlying tech
 role: Developer
 feature: API
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
+TQID: https://experienceleague.adobe.com/qkaw8aYKh9qEK5NLk-2GjFvq9-Gi1wwgLR-UPil9pF4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Experience Platform API fundamentals
 

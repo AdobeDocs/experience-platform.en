@@ -4,6 +4,15 @@ solution: Experience Platform
 title: Connect Postico to Query Service
 description: This document contains the link for installing the backup client Postico for Adobe Experience Platform Query Service.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
+TQID: https://experienceleague.adobe.com/huBmzVsvhS0lKblXU3kxmrPt8SFD1d0o02ZMiQpgMAc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Connect [!DNL Postico] to Query Service (Mac)
 

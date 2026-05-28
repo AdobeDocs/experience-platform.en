@@ -4,6 +4,18 @@ solution: Experience Platform
 title: Getting Started with the Observability Insights API
 description: The Observability Insights API allows you to retrieve metric data for various Adobe Experience Platform features. This document provides an introduction to the core concepts you need to know before attempting to make calls to the Observability Insights API.
 exl-id: 3b120bd6-155d-467e-b98e-05478f8a4cc5
+TQID: https://experienceleague.adobe.com/L8DRiiM-jr0UXkbvr-nBTLM6Mo-HqjAHuxWsaMzlohE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Getting started with the [!DNL Observability Insights] API
 

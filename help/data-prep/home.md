@@ -4,8 +4,17 @@ solution: Experience Platform
 title: Data Prep Overview
 description: This document introduces Data Prep within Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
+TQID: https://experienceleague.adobe.com/0D2-QwchRCWOd7vkat9gEZSbp1QFCo-oMQkBsUUHlSY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
-
 # Data Prep overview
 
 Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM). Data Prep appears as a "Map" step in the Data Ingestion processes, including CSV Ingestion workflow. Data engineers can use Data Prep to perform the following data manipulation during ingestion:
@@ -36,7 +45,20 @@ To learn more about calculated fields, please read the [calculated fields guide]
 
 ### Escape special characters {#escape-special-characters}
 
-You can escape special characters in a field by using `${...}`. However, JSON files that contain fields with a period (`.`) are not supported by this mechanism. When interacting with hierarchies, if a child attribute has a period (`.`), you must use a backslash (`\`) to escape special characters. For example, `address` is an object that contains the attribute `street.name`, this can then be referred to as `address.street\.name` instead of `address.street.name`.
+You can escape special characters in a field by using `${...}`. However, JSON files that contain fields with a period (`.`) are not supported by this mechanism. 
+
+When interacting with hierarchies, if a child attribute has a period (`.`), you must use a backslash (`\`) to escape special characters. For example, the following `address` is an object that contains the attribute `street.name`:
+
+```json
+{ 
+  "address": 
+      { 
+        "street.name": "myId" 
+      }
+}
+```
+
+To reference this field in a mapping, you must use `${address.street\.name}`.
 
 ## Mapping set
 

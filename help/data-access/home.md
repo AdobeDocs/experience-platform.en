@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Data Access Overview
 description: Data Access supports Adobe Experience Platform by providing users tools focused on the discoverability and accessibility of ingested Experience Platform datasets.
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
+TQID: https://experienceleague.adobe.com/wDm32nCR70IzCWYvT-MDaeBxViM6V-55M0-DJeXEmnY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+    internal-label: Accessibility
 ---
 # [!DNL Data Access] overview
 

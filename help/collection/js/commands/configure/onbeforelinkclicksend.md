@@ -2,6 +2,23 @@
 title: onBeforeLinkClickSend
 description: Callback that runs just before link tracking data is sent.
 exl-id: 8c73cb25-2648-4cf7-b160-3d06aecde9b4
+TQID: https://experienceleague.adobe.com/YwogdzhVCX18A0mzpd1WfsIqyC6zGsUDTEH9O70-FXM
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+    internal-label: Acrobat Sign
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # `onBeforeLinkClickSend`
 

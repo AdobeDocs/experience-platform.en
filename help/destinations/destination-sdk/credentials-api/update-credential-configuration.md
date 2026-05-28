@@ -2,6 +2,18 @@
 description: This page exemplifies the API call used to update an existing credential configuration through Adobe Experience Platform Destination SDK.
 title: Update a credential configuration
 exl-id: ebff370c-9189-48df-871f-ed0e1cd535c8
+TQID: https://experienceleague.adobe.com/Z7X-EF6ZuA2Z4w9352vM3-9nyhuQ8Ae9fqA6O7M3xtY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Update a credential configuration
 

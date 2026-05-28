@@ -5,6 +5,23 @@ title: Create the Luma web schemas and datasets
 type: Tutorial
 description: This tutorial provides you with the prerequisites and assets required for the Luma demo propensity model.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
+TQID: https://experienceleague.adobe.com/DlhzBQXCTsTdFlEKmLqtPAypSWSL8uU5wOyf2beQ1Zc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
 ---
 # Create the Luma propensity model schemas and datasets
 

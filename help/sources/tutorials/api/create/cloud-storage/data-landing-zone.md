@@ -2,6 +2,13 @@
 title: Connect Data Landing Zone to Adobe Experience Platform using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Data Landing Zone using the Flow Service API.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
+TQID: https://experienceleague.adobe.com/X0dgc1KobP6xMAWX7CEWjWDTOpXpsKn64U4mL3HoLUY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Connect [!DNL Data Landing Zone] to Adobe Experience Platform using the Flow Service API
 

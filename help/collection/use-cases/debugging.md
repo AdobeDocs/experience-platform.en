@@ -3,6 +3,25 @@ title: Debugging methods
 description: Learn how to toggle debugging capabilities in the Web SDK.
 keywords: debugging web sdk;debugging;debug command;setDebug;debugEnabled;debug
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
+TQID: https://experienceleague.adobe.com/Cvj77rryCZSYnrUW1jeoGHHBSIgLcttgOGvrf5Gfwgs
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # Debugging methods
 

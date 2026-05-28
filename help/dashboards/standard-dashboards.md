@@ -2,6 +2,28 @@
 title: Standard dashboards
 description: Learn how to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
+TQID: https://experienceleague.adobe.com/nQr3TIHFHRIUOM8pdEea-Y8P-rwu-YO7VXw9pqwiHQI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+subfeature_v2:
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Standard dashboards
 

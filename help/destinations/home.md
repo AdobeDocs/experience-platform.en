@@ -2,6 +2,32 @@
 title: Destinations overview
 description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use Destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
+TQID: https://experienceleague.adobe.com/8SrY16bMqdWbGh1KDivFWche2Ldi8SgakawwbZABhB4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # [!DNL Destinations] overview {#overview}
 
@@ -93,6 +119,12 @@ After establishing a connection to a destination and completing the activation w
 ![Destinations monitoring page example.](./assets/overview/monitoring-page-example.png)
 
 You can also validate if data is coming through successfully to your destination. Most destination documentation pages in the catalog have a *Validate data export section*, which indicates how you can check in the destination platform that data is being successfully brought in from Experience Platform. View an example of this section for the [Amazon Ads destination](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
+
+## Data encryption {#encryption}
+
+All data in transit exported from [!DNL Experience Platform] through destinations travels over secure, encrypted connections using [HTTPS TLS 1.2](https://datatracker.ietf.org/doc/html/rfc5246) or newer. The TLS protocol used by [!DNL Experience Platform] in outbound communication also supports [Server Name Indication (SNI)](https://www.rfc-editor.org/rfc/rfc6066#page-6).
+
+For more information about how data is ingested, encrypted, and persisted, see [data encryption in Experience Platform](../landing/governance-privacy-security/encryption.md).
 
 ## Data governance restrictions on activating data to destinations {#data-governance}
 

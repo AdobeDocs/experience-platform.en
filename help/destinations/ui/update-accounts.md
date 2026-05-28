@@ -4,6 +4,15 @@ title: Update destination accounts
 type: Tutorial
 description: This tutorial lists the steps to update destination accounts in the Adobe Experience Platform UI
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
+TQID: https://experienceleague.adobe.com/B-bSqB84ntetfYZlODDhcf8yDTKK5zeeYKV1HFzu98g
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Update destination accounts
 

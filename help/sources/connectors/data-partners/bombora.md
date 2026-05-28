@@ -1,8 +1,21 @@
 ---
 title: Bombora Intent
 description: Learn about the Bombora Intent source on Experience Platform.
-last-substantial-update: 2025-03-26
+last-substantial-update: 2025-03-26T00:00:00.000Z
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
+TQID: https://experienceleague.adobe.com/DFFKck5q-ru1dPHZBGsX-15E-RJ343Dl4u-5CbUxAeA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # [!DNL Bombora Intent]
 
@@ -198,5 +211,28 @@ Domain matching in Experience Platform is based on an exact match of the scrubbe
 +++Answer
 
 Intent data can be utilized in [Account Audiences](../../../segmentation/types/account-audiences.md) to enhance targeting, segmentation, and personalization. By leveraging intent signals, businesses can identify and engage with accounts showing high interest in specific topics, optimizing marketing and sales outreach.
+
++++
+
+### Is the standard [!DNL Account Key] field group compatible with the [!DNL Bombora Account Intent] schema?
+
++++Answer
+
+No. Use the `accountID` field for establishing relationships with the B2B Account schema. This avoids the need to introduce the entire field group in either the referencing or source schema.
++++
+
+### How does the [!DNL Bombora Account Intent] schema establish a relationship with the B2B Account schema?
+
++++Answer
+
+The [!DNL Bombora Account Intent] schema uses the `accountID` field to link to the corresponding B2B Account record. This field is automatically populated during ingestion when a matching domain is found in both datasets. Specifically, the `accountID` in the [!DNL Bombora] schema references the `accountKey.sourceKey` in the standard B2B Account schema.
+
++++
+
+### Why does the [!DNL Bombora Account Intent] schema use `accountID` instead of the typical [!DNL Account Key] field group structure?
+
++++Answer
+
+[!DNL Bombora Intent] schemas focus on storage and processing efficiency. Rather than using an entire field group, the schema uses a streamlined single field (`accountID`) for establishing relationships. This reduces complexity and aligns with optimal processing patterns for intent data.
 
 +++

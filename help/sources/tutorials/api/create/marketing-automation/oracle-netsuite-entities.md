@@ -2,6 +2,13 @@
 title: Create a source connection and dataflow for Oracle NetSuite Entities using the Flow Service API
 description: Learn how to create a source connection and dataflow to bring Oracle NetSuite contacts and customer data to Experience Platform using the Flow Service API.
 exl-id: ddbb413e-a6ca-49df-b68d-37c9d2aab61b
+TQID: https://experienceleague.adobe.com/fqvuH79vrgdbXu4KpuDQgBY9LXLP2GgMC8uei6wB3IY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a source connection and dataflow for [!DNL Oracle NetSuite Entities] using the Flow Service API
 

@@ -4,6 +4,25 @@ description: Learn how to create a new enterprise account with Azure, or use an 
 role: Developer
 feature: Privacy
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
+TQID: https://experienceleague.adobe.com/HXIcD-4G1y1GAt0GJvBY7RJDbtIK16rV-Osgth4qO38
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Configure an [!DNL Azure] Key Vault for Customer Managed Keys
 
