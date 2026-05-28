@@ -178,7 +178,7 @@ Data is first loaded to a dataset from a source as defined in [retail.config.jso
 
 ## Using pre-built metrics and visualization charts
 
-The [!DNL Sensei Model Insights Framework] will support one default template for each type of machine learning algorithm. The table below shows common high-level machine learning algorithm classes and corresponding evaluation metrics and visualizations. 
+The Adobe AI Model Insights Framework will support one default template for each type of machine learning algorithm. The table below shows common high-level machine learning algorithm classes and corresponding evaluation metrics and visualizations. 
 
 | ML Algorithm Type | Evaluation Metrics | Visualizations |
 | --- | --- | --- |
