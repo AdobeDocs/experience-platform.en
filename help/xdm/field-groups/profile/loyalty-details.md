@@ -19,19 +19,15 @@ role_v2:
 
 [!UICONTROL Loyalty Details] is a standard schema field group for the [[!UICONTROL XDM Individual Profile] class](../../classes/individual-profile.md). It provides a single object-type field, `loyalty`, that models a customer's loyalty program membership state, including loyalty IDs, points balances, tier assignments, rewards, challenges, and card details.
 
-This page is for schema designers and data engineers familiar with XDM Individual Profile and [schema field groups](../../ui/resources/field-groups.md). After reading this page, you can identify the correct `loyalty` field paths for source data mapping.
+This page is for schema designers and data engineers familiar with XDM Individual Profile and [schema field groups](../../ui/resources/field-groups.md). After reading this page, you can map loyalty profile data to the correct `loyalty` field paths.
 
 >[!IMPORTANT]
 >
 >This field group captures loyalty membership state. Individual loyalty events are typically modeled in [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) schemas.
 
->[!NOTE]
->
->The names of several schema field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
-
 ## When to use this field group {#when-to-use}
 
-This field group is appropriate when all of the following conditions apply.
+Use this field group when all of the following conditions apply.
 
 - The schema class is XDM Individual Profile and represents a loyalty program member's current state.
 - The schema stores persistent loyalty attributes in Real-Time Customer Profile.
@@ -147,7 +143,7 @@ The `rewards` object captures rewards associated with the loyalty program.
 
 ## Next steps {#next-steps}
 
-After reviewing the field reference, take the following actions.
+Use the following resources when implementing loyalty profile schemas.
 
 - Add this field group to an XDM Individual Profile schema using the [Schema Editor field group guide](../../ui/resources/field-groups.md) before ingesting loyalty profile data.
 - Use the [populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-loyalty-details.example.1.json) in the XDM repository to validate loyalty payload mappings.
