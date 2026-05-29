@@ -81,7 +81,7 @@ The Data Science Workspace course is split into five lessons.
 
 ## Next steps
 
-After completing the Data Science Workspace course, visit the [Sensei Machine Learning API guides](./api/getting-started.md) to learn how to utilize RESTful APIs to do everything you just learned and more.
+After completing the Data Science Workspace course, visit the [Adobe AI Machine Learning API guides](./api/getting-started.md) to learn how to utilize RESTful APIs to do everything you just learned and more.
 
 
 
