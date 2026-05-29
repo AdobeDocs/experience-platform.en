@@ -31,6 +31,10 @@ role_v2:
 
 Read this page to learn to create a live outbound connection to your [[!DNL Azure Data Lake Storage Gen2]](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) ([!DNL ADLS Gen2]) data lake to periodically export data files from Experience Platform.
 
+## Connect using Azure Private Link {#private-link}
+
+If your organization has strict network security requirements, you can configure this destination to route data exports over the [!DNL Microsoft Azure] private backbone instead of the public internet. See [Azure Private Link for destinations](./azure-private-link.md) for prerequisites, guardrails, and setup steps.
+
 ## Connect to your [!DNL ADLS Gen2] storage through API or UI {#connect-api-or-ui}
 
 * To connect to your [!DNL ADLS Gen2] storage location using the Experience Platform user interface, read the sections [Connect to the destination](#connect) and [Activate audiences to this destination](#activate) below.

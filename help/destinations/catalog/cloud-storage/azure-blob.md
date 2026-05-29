@@ -42,6 +42,10 @@ With the July 2023 Experience Platform release, the [!DNL Azure Blob] destinatio
 
 [!DNL Azure Blob] (hereinafter referred to as [!DNL Blob]) is Microsoft's object storage solution for the cloud. This tutorial provides steps for creating a [!DNL Blob] destination using the [!DNL Experience Platform] user interface.
 
+## Connect using Azure Private Link {#private-link}
+
+If your organization has strict network security requirements, you can configure this destination to route data exports over the [!DNL Microsoft Azure] private backbone instead of the public internet. See [Azure Private Link for destinations](./azure-private-link.md) for prerequisites, guardrails, and setup steps.
+
 ## Connect to your [!UICONTROL Azure Blob] storage through API or UI {#connect-api-or-ui}
 
 * To connect to your [!UICONTROL Azure Blob] storage location using the Experience Platform user interface, read the sections [Connect to the destination](#connect) and [Activate audiences to this destination](#activate) below.

@@ -149,6 +149,7 @@ nudge: true
         * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
         * [IP address allowlist for file-based cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
+        * [Azure Private Link for destinations](./catalog/cloud-storage/azure-private-link.md)
     * Customer Relationship Management (CRM) destinations {#crm}
         * [Hubspot connection](./catalog/crm/hubspot.md)
         * [Salesforce CRM connection](./catalog/crm/salesforce.md)
