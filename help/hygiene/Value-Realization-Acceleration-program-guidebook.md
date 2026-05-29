@@ -140,7 +140,7 @@ Before diving into a customer evaluation, it's important to gather the right con
 | **3. Plan** | **Validate the Latest Contract Terms and Entitlements:** Review the most recent contract and term sheet. <br><br>**Objective:** Ensure that purchased entitlements align with what's reflected in your reporting tools. <br><br>**Watch for:** Reporting discrepancies or special terms that may not be captured in standard dashboards. | — |
 | **4. Execute** | **Inventory Additional Entitlements:** Compile a list of any additional entitlements the customer may have through other applications or add-on packs. <br><br>**Why it matters:** This helps determine whether the customer is truly exceeding their license or if reporting needs to be updated to reflect all entitlements accurately. | — |
 
-![Recommended Actions flowchart](images/ui/value-realization-guidebook/page-08-img-01.png)
+![Flowchart for diagnosing RT-CDP license usage by reviewing entitlement reports, checking Pangea contract status and Data Management Best Practices adoption, and routing to ideal-range, over-utilization, or under-utilization flowcharts based on assessment findings.](images/ui/value-realization-guidebook/page-08-img-01.png)
 
 ## Evaluating a Customer's License Usage
 
@@ -531,7 +531,7 @@ Determining the provisioning status may require having a conversation with your 
 - AEP Training: Getting Started  
 - Supplemental Resources: (Provisioning) Adding Users — Access Control Overview; AEP Training — Adobe Experience Platform Tutorials; Adobe Experience Platform overview; Use Case Playbooks — Use Case Playbooks overview; Adobe Experience Platform Use Case Playbooks  
 
-![Flow 1 Team Provisioning](images/ui/value-realization-guidebook/page-23-img-01.png)
+![Flowchart for RT-CDP underutilization caused by team provisioning issues, checking Admin Console provisioning, feature permissions, and daily active users in production and development environments, with recommendations that vary based on how long ago the contract was signed.](images/ui/value-realization-guidebook/page-23-img-01.png)
 
 #### Flow 2: Value Pillars
 
@@ -549,7 +549,7 @@ Value Pillars (Sponsorship, Resource Investment, Road to Value, Organizational R
 
 **References:** Comparison & Positioning Guide — ACS Professional Services & Ultimate Success Comparison and Positioning Guide. Supplemental Resources: Ultimate Success Accelerators — Success Accelerator Overview; Consulting Services — ACS Offer Catalog
 
-![Flow 2 Value Pillars diagram](images/ui/value-realization-guidebook/page-24-img-01.png)
+![Flowchart for RT-CDP underutilization caused by value pillars below 40 percent, with separate tracks for organizational readiness pillars and the Technology pillar, routing to Ultimate Success, ACS or partner leads, or the account team based on the current engagement model.](images/ui/value-realization-guidebook/page-24-img-01.png)
 
 #### Flow 3: Implementation Deficiencies
 
@@ -592,9 +592,9 @@ Use cases provide insight on how a customer intends to leverage Adobe products. 
 
 **Supplemental Resources:** Use Case — Sample use cases in Real-Time CDP  
 
-![Flow 4 Use Case Status](images/ui/value-realization-guidebook/page-26-img-01.png)
+![Flowchart for underutilization caused by implementation deficiency, checking PAS score, data-in behaviors, and Profiles and Audiences adoption.](images/ui/value-realization-guidebook/page-26-img-01.png)
 
-![Flow 4 continued](images/ui/value-realization-guidebook/page-28-img-01.png)
+![Flowchart for RT-CDP underutilization caused by use-case status issues, checking whether use cases are defined, their current phase (planning, live, or cancelled), time in phase, the presence of technical blockers, and routing to Value Pillars or Implementation Deficiency flows as needed.](images/ui/value-realization-guidebook/page-28-img-01.png)
 
 ### Stage: Ideal Utilization
 
@@ -614,7 +614,7 @@ The various flows in this section designed to support you are:
 | **Opportunity to influence** | Dive deeper into the PAS scorecard, conducting discovery into how and why customers are utilizing individual product features. |
 | **Outcome** | This flow will help you (as assessors) develop contextual understanding on the features and behaviors included in the PAS scorecard, linking these to use-case and customer objective categories, with the aim of providing recommendations on how to discuss these with your customer in adoption development conversations. |
 
-![Ideal Utilization Flow 1](images/ui/value-realization-guidebook/page-29-img-01.png)
+![Diagram showing feature adoption progression from dataflows created and edited to datasets created and segments activated.](images/ui/value-realization-guidebook/page-29-img-01.png)
 
 **What to look for:**
 
@@ -626,7 +626,7 @@ The various flows in this section designed to support you are:
 
 **References:** Real-Time CDP PAS Playbook — Here; Critical Product Capabilities (CPCs) — Here. Supplemental Resources: PAS Behavior Recommendation Tool Wiki — Here
 
-![Flow 1 diagram](images/ui/value-realization-guidebook/page-30-img-01.png)
+![Flowchart for RT-CDP ideal utilization covering under-adopted features, evaluating PAS Scorecard trends, customer discovery on unadopted behaviors, and routing to the Panorama behavior recommendation tool or a connecting resource that maps feature behaviors to customer use cases and value signals.](images/ui/value-realization-guidebook/page-30-img-01.png)
 
 #### Flow 2: Under-utilized and under-adopted strategy and use-cases
 
@@ -649,7 +649,7 @@ If, after following the initial flowchart, it's clear that a customer is exceedi
 
 > **Important:** Over-utilization does not automatically mean an upsell is required. These flows are structured to help you explore whether the issue can be resolved through corrective actions, optimization, existing tools or features, or better data management—often without additional cost to the customer.
 
-![Over-utilization overview](images/ui/value-realization-guidebook/page-32-img-01.png)
+![Flowchart for ideal utilization discovery that connects customer objectives, brand-consumer alignment, business-unit consistency, and case study resources.](images/ui/value-realization-guidebook/page-32-img-01.png)
 
 - Flow 1: Overusage of Addressable Audience  
 - Flow 2: Overusage of Average Profile Richness or Total Data Volume – Missing E-TTL policy  
@@ -678,7 +678,7 @@ Addressable Audience is relevant for Real-Time CDP B2C, B2B and B2P customers. S
 
 **References:** Pseudonymous Profiles — Pseudonymous Profiles data expiration; Pseudonymous profile and Experience event expirations video tutorial. Data Management — Data Management Best Practices document; Value Accelerator: Efficient Data Management Tools and Best Practices (Post Sales Conversation) – under NDA; Browsing Cookie Lifespan. Profile Deletion Options — Record Delete; Real-Time Customer Profile API Guide; Profile system jobs endpoint (Delete requests); Delete profiles video tutorial. Data Distiller — Data Distiller Overview; Data Distiller Use Cases. Other Options — CJA – Create and publish Audiences; Federated Audience Composition. Supplemental Resources: Real-Time CDP — Real-Time CDP Upsell FAQs  
 
-![Flow 1 Overusage Addressable Audience](images/ui/value-realization-guidebook/page-34-img-01.png)
+![Flowchart for RT-CDP overusage caused by addressable audience volume, checking pseudonymous profile ingestion, entitlement type, profile exclusion options, Data Distiller usage, and B2B licensing, with upsell opportunities for additional data capacity or Data Distiller when volume cannot be reduced.](images/ui/value-realization-guidebook/page-34-img-01.png)
 
 #### Flow 2: Overusage of Average Profile Richness or TDV (Missing or misconfigured E-TTL)
 
@@ -726,9 +726,9 @@ Too many known profiles and/or data that exceeds what's necessary for the custom
 
 **References:** Datasets — Delete datasets and batches video tutorial; Schedule dataset deletes tutorial video; Automated dataset expiration. Experience Events — Experience Event Expirations; Manage Experience Event Dataset Retention in the data lake using TTL; Pseudonymous profile and Experience event expirations video tutorial. Data Management — Data Management Best Practices document; Value Accelerator (under NDA). Profile Deletion Options; Data Distiller; Other Options (CJA, Federated Audience Composition). Bot Detection & Best Practices — Bot Detection Field Group; Bot Filtering with Query Service; Bot detection for datastreams. Default Guardrails for RTCDP Sandboxes — Sandboxes Limitations; Sandbox Tooling. Supplemental Resources: Real-Time CDP Upsell FAQs  
 
-![Flow 3 Bloated Datasets](images/ui/value-realization-guidebook/page-36-img-01.png)
+![Flowchart for overusage driven by total data volume and missing or incorrect event TTL policies, including retention and remediation guidance.](images/ui/value-realization-guidebook/page-36-img-01.png)
 
-![Flow 3 continued](images/ui/value-realization-guidebook/page-38-img-01.png)
+![Flowchart for RT-CDP overusage caused by bloated datasets and excess profile volume, evaluating dataset removal, expiration policy configuration, profile merge maximization, Data Distiller usage, B2B licensing, and upsell options for additional data capacity or Data Distiller when volume reduction is not achievable.](images/ui/value-realization-guidebook/page-38-img-01.png)
 
 #### Flow 4: Overusage of Non-Production Sandboxes
 
@@ -749,7 +749,7 @@ Too many known profiles and/or data that exceeds what's necessary for the custom
 
 > **NEXT STEPS:** After taking steps to mitigate over-usage, continue to monitor usage often while revisiting the license usage workflows in the guidebook as appropriate.
 
-![Flow 4 Non-Production Sandboxes](images/ui/value-realization-guidebook/page-40-img-01.png)
+![Flowchart for overusage in non-production sandboxes, including sandbox volume thresholds, retention controls, and cleanup actions.](images/ui/value-realization-guidebook/page-40-img-01.png)
 
 ## Appendix
 
@@ -797,7 +797,7 @@ For reporting on Unified Metric contracts or questions please email: **Unified@A
 
 Go to Panorama and check the top bar where the customer's name appears. To the right you should see if a customer is under Pangea or not. See image below.
 
-![Pangea check](images/ui/value-realization-guidebook/page-42-img-01.png)
+![Screenshot of an account dashboard showing a customer record with the Pangea account flag highlighted.](images/ui/value-realization-guidebook/page-42-img-01.png)
 
 ### Pseudonymous Profile Data Expiration
 
@@ -821,7 +821,7 @@ Experience event expirations limit the number of days that behavioral event data
 | **Step 1: Controls** | Experience Event TTLs are set on datasets within sandboxes. Include sandbox name, dataset name, dataset ID, and time-to-live in days when contacting support to set an Experience Event TTL. Self-serve Experience Event TTLs are expected to be available at the end of April 2025. |
 | **Step 2: Best Practices & Application** | Experience event data that is no longer useful for your use cases is automatically removed. Adobe generally recommends starting with a 30-day expiration window for event data, but length should align to use cases. **Impact:** Enables customers to manage their Average profile richness and Total Data Volume. **Additional Resources:** Exp League Documentation; Tutorial video |
 
-![Experience Event TTL](images/ui/value-realization-guidebook/page-43-img-01.png)
+![Timeline showing a returning visitor and a one-time visitor under a 14-day pseudonymous TTL, including profile deletion points.](images/ui/value-realization-guidebook/page-43-img-01.png)
 
 ### Setting an Efficient Data Management Strategy
 
@@ -845,7 +845,7 @@ Good data management isn't a one-time task—it's a continuous process. It inclu
 - Transforming or cleaning up existing data  
 - Removing outdated or low-value data  
 
-![Data Management lifecycle](images/ui/value-realization-guidebook/page-44-img-01.png)
+![Timeline comparing two experience event scenarios: one where expirations are not configured and raw event data accumulates indefinitely, contributing to Total Data Volume through Day 90, and one where a 30-day TTL is applied and stale event data no longer contributes to Total Data Volume after expiration.](images/ui/value-realization-guidebook/page-44-img-01.png)
 
 **Why it matters:** Without strong data management practices, organizations may face: privacy risks and regulatory issues; poor data hygiene that complicates workflows; unintended outcomes in segmentation and activation; overage charges or the need for additional products. By implementing data management best practices to promote Data Hygiene, organizations will be able to operate in a more efficient environment where conversations can be focused on value instead of compliance leading to better opportunities for upsell.
 
@@ -885,7 +885,7 @@ To request this report, email: **Grp-AEP-Usage-Request** — aep-usage-request@a
 
 Once run, this report will contain the profile entity ID, namespace and namespace value of offending profiles. These profiles should be checked with the customer in the AEP Profile Viewer for their event traffic, looking at the frequency of timestamps and whether they are stitched to any other namespace. Common examples: ECID only, ECID/Customer CRMID.
 
-![Bot Traffic report](images/ui/value-realization-guidebook/page-46-img-01.png)
+![Diagram within Adobe Experience Platform contrasting Analytical Workflows (data-driven insights) on the left with Engagement Workflows (Real-time Customer Profile) on the right, showing data flowing from the analytical layer into RT-CDP as the engagement layer.](images/ui/value-realization-guidebook/page-46-img-01.png)
 
 Once all bot-related profiles have been purged, proactive measures should be implemented to avoid future issues. Discuss with the customer Data Management Best Practices and bot filtering solutions.
 
@@ -913,4 +913,4 @@ As seen in the example above, a customer does not incur any overusage fees until
 
 **Additional Resources:** Real-Time CDP Upsell FAQs – for a more detailed explanation of how overage fees work and are calculated.
 
-![Overusage calculation](images/ui/value-realization-guidebook/page-48-img-01.png)
+![Chart showing quarterly grace-period behavior for addressable profiles in use, with overage and non-overage periods highlighted.](images/ui/value-realization-guidebook/page-48-img-01.png)
