@@ -168,7 +168,7 @@ To authenticate to the destination, select **[!UICONTROL Connect to destination]
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_privatelink"
 >title="Private Link Enabled"
->abstract="Enable this toggle only if your Snowflake account has Private Link enabled and public access to Snowflake service endpoints is disabled. Enabling it on an account that does not use Private Link bypasses account validation and can cause connection or data sharing failures. If your account requires Private Link and this toggle is off, Adobe cannot resolve your account or share audience data."
+>abstract="Enable this toggle if your Snowflake account has Private Link enabled and public access to Snowflake service endpoints is disabled.<br>Enabling it on an account that does not use Private Link bypasses account validation and can cause connection or data sharing failures. If your account requires Private Link and this toggle is off, Adobe cannot resolve your account or share audience data."
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
