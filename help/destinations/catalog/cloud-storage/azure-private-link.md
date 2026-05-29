@@ -1,6 +1,6 @@
 ---
-title: Private Link for [!DNL Azure] destinations
-description: Learn how to use Azure Private Link to route data exports from Experience Platform to your Azure resources over the Microsoft Azure private network instead of the public internet.
+title: Private Link for [!DNL Azure] Destinations
+description: Learn how to route data exports from [!DNL Experience Platform] to your [!DNL Azure] resources over the [!DNL Microsoft Azure] private backbone using [!DNL Azure] Private Link.
 ---
 
 # Private Link for [!DNL Azure] destinations
@@ -17,29 +17,27 @@ description: Learn how to use Azure Private Link to route data exports from Expe
 
 [!DNL Azure] Private Link is supported for the following destinations:
 
-* [[!DNL Azure Blob Storage]](./azure-blob.md)
-* [[!DNL Azure Data Lake Storage Gen2]](./adls-gen2.md)
-* [[!DNL Azure Event Hubs]](./azure-event-hubs.md)
+* [Azure Blob Storage](./azure-blob.md)
+* [Azure Data Lake Storage Gen2](./adls-gen2.md)
+* [Azure Event Hubs](./azure-event-hubs.md)
 
 ## Prerequisites {#prerequisites}
 
 [!DNL Azure] Private Link for destinations requires an [Adobe Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) or Adobe Privacy & Security Shield entitlement.
 
-## How Azure Private Link works {#how-it-works}
+## How [!DNL Azure] Private Link works {#how-it-works}
 
 [!DNL Adobe Experience Platform] maintains a dedicated Private Connectivity Hub VNet. When you request Private Link setup, [!DNL Adobe] provisions a Private Endpoint in this VNet that targets your [!DNL Azure] resource. [!DNL Azure] then brokers a pending approval request to you.
 
-After you approve the request in your [!DNL Azure] portal, all existing and new destination dataflows for that resource route through the private endpoint over the [!DNL Microsoft Azure] backbone. Your [!DNL Azure] resource does not need to accept connections from public Adobe IP addresses.
+After you approve the request in your [!DNL Azure] portal, all existing and new destination dataflows for that resource route through the private endpoint over the [!DNL Microsoft Azure] backbone.
 
-The private routing is transparent to your existing destination configuration in Experience Platform. You do not need to update hostnames, credentials, or any other destination settings after the Private Endpoint is approved.
+The private routing is transparent to your existing destination configuration in [!DNL Experience Platform]. You do not need to update hostnames, credentials, or any other destination settings after the Private Endpoint is approved.
 
-If Private Link is deactivated, traffic reverts automatically to the public internet. Existing dataflows continue without interruption.
+If you disable Private Link, traffic is automatically routed through the public internet. Existing dataflows continue without interruption.
 
 ## Guardrails {#guardrails}
 
->[!IMPORTANT]
->
->Confirm exact limits with your Adobe account team before publishing or relying on them for capacity planning. These values are subject to change.
+The following limits apply to [!DNL Azure] Private Link for destinations.
 
 | Guardrail | Limit |
 |-----------|-------|
@@ -49,45 +47,49 @@ If Private Link is deactivated, traffic reverts automatically to the public inte
 
 ## Request Private Link setup {#request-setup}
 
-Private Link for destinations has no self-service UI. Contact your Adobe account manager to request setup. Your account manager creates an internal task that routes to the Adobe technical team, who configure the connection on your behalf. Provide the following information:
+Private Link for destinations has no self-service UI. Contact your Adobe account manager to request Private Link configuration and provide the following information:
 
 * [!DNL Azure] Resource ID of your Event Hubs namespace or storage account
 * Namespace or storage hostname (FQDN)
-* [!DNL Azure] region (align with your Experience Platform data region for best performance)
+* [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
 * Authentication details: [!DNL Microsoft Entra ID] (formerly [!DNL Azure Active Directory]) or Shared Access Signature (SAS)
 * Target resource name
 
-[!DNL Adobe] engineers create the Private Endpoint and notify you when the approval request is available in your [!DNL Azure] portal.
+[!DNL Adobe] creates the Private Endpoint and notifies you when the approval request is available in your [!DNL Azure] portal.
 
 ## Approve the Private Endpoint {#approve-private-endpoint}
 
 After [!DNL Adobe] creates the Private Endpoint, a pending approval request appears in your [!DNL Azure] portal. To approve it:
 
-1. In your [!DNL Azure] portal, go to your Event Hubs namespace or storage account.
+1. In your [!DNL Azure] portal, go to the resource you shared with [!DNL Adobe]: your [!DNL Event Hubs] namespace, [!DNL Blob Storage] account, or [!DNL Data Lake Storage Gen2] account.
 1. Select **[!UICONTROL Networking]**, then select **[!UICONTROL Private endpoint connections]**.
 1. Locate the pending connection from [!DNL Adobe] and select **[!UICONTROL Approve]**.
 
 Within minutes, all existing and new destination dataflows for that resource route over the private endpoint.
 
-If you select **[!UICONTROL Reject]** instead, data continues to flow over public infrastructure.
+If you select **[!UICONTROL Reject]** instead, data continues to flow over the public internet.
 
 ## Best practices {#best-practices}
 
-* You do not need to create a dedicated VNet or open your network to [!DNL Adobe]. The Private Endpoint lives entirely in Adobe's VNet.
-* Align your [!DNL Azure] resource region with your Experience Platform data region for best performance.
+Follow these recommendations to get the most out of [!DNL Azure] Private Link for destinations.
+
+* Do not create a dedicated VNet or open your network to [!DNL Adobe]. The Private Endpoint lives entirely in Adobe's VNet.
+* Align your [!DNL Azure] resource region with your [!DNL Experience Platform] data region for best performance.
 * After the Private Endpoint is active, disable public network access to your [!DNL Azure] resource for full security benefit.
-* No reconfiguration of your destination in Experience Platform is needed after approval. Routing changes transparently.
+* Do not reconfigure your destination in [!DNL Experience Platform] after approval. Routing changes transparently.
 
 ## Limitations {#limitations}
 
-* Private Link is available for [!DNL Azure] destinations only. [!DNL AWS] and [!DNL GCP] destinations are not supported.
-* Setup requires [!DNL Adobe] engineer involvement. Self-service provisioning is planned for a future release.
-* Requires an Adobe Healthcare Shield or Adobe Privacy & Security Shield entitlement.
+Be aware of the following constraints before requesting [!DNL Azure] Private Link setup.
 
-## Before deleting your Azure resource {#resource-deletion}
+* Private Link is available for [!DNL Azure] destinations only. [!DNL AWS] and [!DNL GCP] destinations are not supported.
+* Configuration requires [!DNL Adobe] engineering involvement. Self-service provisioning is not currently available.
+* Private Link requires an [!DNL Adobe Healthcare Shield] or [!DNL Adobe Privacy & Security Shield] entitlement.
+
+## [!DNL Azure] resource deletion {#resource-deletion}
+
+When you delete the resource, the Private Endpoint becomes orphaned. An orphaned endpoint has a **Disconnected** status, cannot deliver data, and continues to incur charges on Adobe's infrastructure. Contact [!DNL Adobe] before deleting any [!DNL Azure] resource that has an active Private Endpoint.
 
 >[!WARNING]
 >
 >Do not delete an [!DNL Azure] resource that has an active Private Endpoint without first notifying [!DNL Adobe].
-
-When you delete the resource, the Private Endpoint becomes orphaned. An orphaned endpoint has a **Disconnected** status, cannot deliver data, and continues to incur charges on Adobe's infrastructure. Contact [!DNL Adobe] before deleting any [!DNL Azure] resource that has an active Private Endpoint.
