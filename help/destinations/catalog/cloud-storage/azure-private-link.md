@@ -1,9 +1,9 @@
 ---
-title: Azure Private Link for Destinations
+title: Private Link for [!DNL Azure] destinations
 description: Learn how to use Azure Private Link to route data exports from Experience Platform to your Azure resources over the Microsoft Azure private network instead of the public internet.
 ---
 
-# [!DNL Azure] Private Link for destinations
+# Private Link for [!DNL Azure] destinations
 
 [!DNL Azure] Private Link lets you route data exports from [!DNL Adobe Experience Platform] to your [!DNL Azure] resources over private IP addresses on the [!DNL Microsoft Azure] backbone, instead of over the public internet. Your activation data never traverses public infrastructure.
 
@@ -37,6 +37,8 @@ After you approve the request in your [!DNL Azure] portal, all existing and new 
 
 The private routing is transparent to your existing destination configuration in Experience Platform. You do not need to update hostnames, credentials, or any other destination settings after the Private Endpoint is approved.
 
+If Private Link is deactivated, traffic reverts automatically to the public internet. Existing dataflows continue without interruption.
+
 ## Guardrails {#guardrails}
 
 >[!IMPORTANT]
@@ -45,13 +47,13 @@ The private routing is transparent to your existing destination configuration in
 
 | Guardrail | Limit |
 |-----------|-------|
-| Data transfer | Up to 2 TB per year across all sandboxes and organizations |
+| Data transfer | Up to 2 TB per year across all sandboxes and organizations. Exceeding this limit may incur additional charges. |
 | Production sandbox endpoints | Maximum of 10 endpoints per organization |
 | Development sandbox endpoints | Maximum of 1 endpoint per organization |
 
 ## Request Private Link setup {#request-setup}
 
-Private Link for destinations has no self-service UI. Contact your Adobe account manager to request setup. Provide the following information:
+Private Link for destinations has no self-service UI. Contact your Adobe account manager to request setup. Your account manager creates an internal task that routes to the Adobe technical team, who configure the connection on your behalf. Provide the following information:
 
 * [!DNL Azure] Resource ID of your Event Hubs namespace or storage account
 * Namespace or storage hostname (FQDN)
