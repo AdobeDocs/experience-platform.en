@@ -146,5 +146,5 @@ The `rewards` object captures rewards associated with the loyalty program.
 Use the following resources when implementing loyalty profile schemas.
 
 - Add this field group to an XDM Individual Profile schema using the [Schema Editor field group guide](../../ui/resources/field-groups.md) before ingesting loyalty profile data.
-- Use the [populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-loyalty-details.example.1.json) in the XDM repository to validate loyalty payload mappings.
+- Use the [populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-loyalty-details.example.2.json) in the XDM repository to validate loyalty payload mappings.
 - Consult the [full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-loyalty-details.schema.json) for data type constraints and required field definitions.
