@@ -63,7 +63,7 @@ Standardization and interoperability are key concepts behind [!DNL Experience Pl
 
 *   **[!DNL Catalog Service]:** Access and explore datasets with read and write functionalities.
 *   **[!DNL Query Service]:** Access and explore datasets using SQL, providing lower data access overheads when dealing with large amounts of data.
-*   **[!DNL Sensei ML Framework]:** Model development with the ability to train and score data, as well as recipe creation with a single click.
+*   **[!DNL Adobe AI ML Framework]:** Model development with the ability to train and score data, as well as recipe creation with a single click.
 *   **[!DNL Experience Data Model (XDM)]:** Standardization and interoperability are key concepts behind Adobe Experience Platform. [Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
 
 >[!NOTE]
@@ -167,9 +167,9 @@ Certain features and functionalities are limited to particular kernels as descri
 
 | Kernel | Library installation support | [!DNL Experience Platform] integrations |
 | :----: | :--------------------------: | :-------------------- |
-| **[!DNL Python]** | Yes | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li><li>[!DNL Query Service]</li></ul> |
-| **R** | Yes | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
-| **Scala** | No | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
+| **[!DNL Python]** | Yes | <ul><li>Adobe AI ML Framework</li><li>[!DNL Catalog Service]</li><li>[!DNL Query Service]</li></ul> |
+| **R** | Yes | <ul><li>Adobe AI Framework</li><li>[!DNL Catalog Service]</li></ul> |
+| **Scala** | No | <ul><li>Adobe AI Framework</li><li>[!DNL Catalog Service]</li></ul> |
 
 ### Kernel sessions {#kernel-sessions}
 

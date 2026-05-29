@@ -44,7 +44,7 @@ In order to complete this tutorial, you must have access to [!DNL Experience Pla
 
 This tutorial requires an existing Model with a successful training run. If you do not have a publishable Model, follow the [Train and evaluate a Model in the UI](./train-evaluate-model-ui.md) tutorial before continuing.
 
-If you prefer to publish a Model by using Sensei Machine Learning APIs, refer to the [API tutorial](./publish-model-service-api.md).
+If you prefer to publish a Model by using Adobe AI Machine Learning APIs, refer to the [API tutorial](./publish-model-service-api.md).
 
 ## Publish a Model {#publish-a-model}
 

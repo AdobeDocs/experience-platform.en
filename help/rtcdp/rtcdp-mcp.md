@@ -7,16 +7,15 @@ topic: Content Management, Artificial Intelligence
 badge: label="Beta" type="Informative"
 role: User, Developer
 level: Beginner, Intermediate
-hide: true
 exl-id: 48dba0d2-7df9-4d76-bc87-5af49a8a40cc
 ---
 # Work with MCP clients (Beta) {#rtcdp-mcp}
 
-You can use the Adobe Real-Time CDP MCP integration to query audiences, destinations, and activation health using plain-language prompts — without writing API calls or navigating product screens. This page explains how the integration works, what you can do with it, and how to get started.
+You can use the Adobe Real-Time CDP MCP integration to query audiences, destinations, and activation health using plain-language prompts — without writing API calls or navigating product screens. This integration serves both Adobe Real-Time CDP and Adobe Real-Time CDP B2B Edition customers, providing a conversational way to inspect supported Real-Time CDP data and workflows from MCP-compatible clients. Read this guide to learn how the integration works, what you can do with it, and how to get started.
 
 >[!AVAILABILITY]
 >
->The Real-Time CDP MCP server is distributed as a **remote HTTP transport server** that users install and configure in supported MCP clients and app platforms (for example, [!DNL Claude], [!DNL ChatGPT], [!DNL Claude Code], [!DNL Codex], [!DNL Cursor], or [!DNL VS Code]). Authentication is handled through a **browser-based login flow** — when your client first connects to the server, it opens your default browser so you can sign in with your Adobe credentials and authorize access. Please contact your Adobe representative to access this Beta program.
+>Real-Time CDP MCP is in Beta. The feature and documentation are subject to change. The Real-Time CDP MCP server is distributed as a **remote HTTP transport server** that users install and configure in supported MCP clients and app platforms (for example, [!DNL Claude], [!DNL ChatGPT], [!DNL Claude Code], [!DNL Codex], [!DNL Cursor], or [!DNL VS Code]). Authentication is handled through a **browser-based login flow** — when your client first connects to the server, it opens your default browser so you can sign in with your Adobe credentials and authorize access. Please contact your Adobe representative to access this Beta program.
 
 ## Beta, security, and legal notices {#mcp-notices}
 
