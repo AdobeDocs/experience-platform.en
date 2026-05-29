@@ -21,15 +21,11 @@ description: Learn how to use Azure Private Link to route data exports from Expe
 * [[!DNL Azure Data Lake Storage Gen2]](./adls-gen2.md)
 * [[!DNL Azure Event Hubs]](./azure-event-hubs.md)
 
->[!NOTE]
->
->Private Link is currently available for [!DNL Azure] destinations only. [!DNL AWS] and [!DNL GCP] destinations are not supported at this time.
-
 ## Prerequisites {#prerequisites}
 
-[!DNL Azure] Private Link for destinations requires an Adobe Healthcare Shield or Adobe Privacy & Security Shield entitlement.
+[!DNL Azure] Private Link for destinations requires an [Adobe Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) or Adobe Privacy & Security Shield entitlement.
 
-## How it works {#how-it-works}
+## How Azure Private Link works {#how-it-works}
 
 [!DNL Adobe Experience Platform] maintains a dedicated Private Connectivity Hub VNet. When you request Private Link setup, [!DNL Adobe] provisions a Private Endpoint in this VNet that targets your [!DNL Azure] resource. [!DNL Azure] then brokers a pending approval request to you.
 
