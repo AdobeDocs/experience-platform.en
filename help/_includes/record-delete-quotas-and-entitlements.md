@@ -30,14 +30,3 @@ Quotas reset on the first day of each calendar month. Unused quota does **not** 
 >Quotas are based on your organization's licensed monthly entitlement for **submitted identifiers**. These are not enforced by system guardrails but may be monitored and reviewed.  
 >
 >Record Delete is a **shared service**. Your monthly cap reflects the highest entitlement across Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics, and any applicable Shield add-ons.
-
-### Processing timelines for identifier submissions {#sla-processing-timelines}
-
-After submission, record delete requests are queued and processed based on your entitlement level.
-
-| Product & Entitlement Description                                                  | Queue Duration      | Maximum Processing Time (SLA) |
-|------------------------------------------------------------------------------------|---------------------|-------------------------------|
-| Without Privacy and Security Shield or Healthcare Shield add-on                   | Up to 15 days       | 30 days                       |
-| With Privacy and Security Shield or Healthcare Shield add-on                      | Typically 24 hours  | 15 days                       |
-
-If your organization requires higher limits, contact your Adobe representative for an entitlement review.

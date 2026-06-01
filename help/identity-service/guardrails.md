@@ -62,7 +62,7 @@ The following table outlines static limits applied to identity data.
 | Guardrail | Limit | Notes |
 | --- | --- | --- |
 | Number of identities in a graph | 50 | When a graph with 50 linked identities is updated, Identity Service will apply a "first-in, first-out" mechanism and deletes the oldest identity to make space for the newest identity for this graph (**Note**: Real-Time Customer Profile is unaffected). Deletion is based on identity type and timestamp. The limit is applied at the sandbox level. For more information, read the section on [understanding the deletion logic](#deletion-logic). |
-| Number of links to an identity for a single batch ingestion | 50 | A single batch could contain anomalous identities that cause unwanted graph merges. To prevent this, Identity Service will not ingest identities that are already linked to 50 or more identities. |
+| Number of links to an identity for a single batch ingestion | 50 | If a single identity in a batch is linked to 50 or more other identities in the batch, the identity is considered invalid, and will be filtered out of the batch linkages. |
 | Number of identities in an XDM record | 20 | The minimum number of XDM records required is two. |
 | Number of custom namespaces | None | There are no limits to the number of custom namespaces you can create. |
 | Number of characters for a namespace display name or identity symbol | None | There are no limits to the number of characters of a namespace display name or identity symbol. |

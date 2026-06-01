@@ -5,6 +5,7 @@ breadcrumb-title: Experience Data Model (XDM) Guide
 user-guide-description: Explore an overview of the Experience Data Model (XDM) system within Experience Platform and learn how to use classes and schema field groups to standardize experience data.
 feature: Schemas
 role: Developer
+nudge: true
 ---
 
 # Experience Data Model (XDM) System {#xdm} 
