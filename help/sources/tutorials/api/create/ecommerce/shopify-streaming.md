@@ -61,13 +61,12 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-    "name": "Shopify Streaming source",
-    "description": "Shopify Streaming source",
+    "name": "Shopify Streaming Base Connection",
+    "description": "Shopify Streaming Base Conn",
     "auth": {
       "specName": "HMACAuth",
       "params": {
-        "primarySecretKey": "shopify_hmac_secret_current_2026_05",
-        "secondarySecretKey": "shopify_hmac_secret_previous_2026_04"
+        "primarySecretKey": "shopify_hmac_secret_current_2026_05"
       }
     },
     "connectionSpec": {
@@ -77,20 +76,24 @@ curl -X POST \
   }'
 ```
 
+| Parameter | Description |
+| --- | --- |
+| `primarySecretKey` | The current active [!DNL Shopify] webhook shared secret. If you are rotating your [!DNL Shopify] web hook secret, then you must include the `secondarySecretKey` as well. For more information on HMAC keys, read the [[!DNL Shopify Streaming] authentication guide](../../../../connectors/ecommerce/shopify-streaming.md#authentication). |
+
 **Response**
 
-A successful response returns the newly created connection, including its unique connection identifier (`id`). This ID is required to explore your data in the next tutorial.
+A successful response returns the newly created connection, including its unique connection identifier (`id`). Use this ID to create a source connection in the next step.
 
 ```json
-{
-    "id": "582f4f8d-71e9-4a5c-a164-9d2056318d6c",
-    "etag": "\"d600d3ae-0000-0200-0000-5fa99a3d0000\""
+{  
+ "id": "302f44a9-e3fd-4386-bb62-213c648cd023", 
+ "etag": "\"8d004e1e-0000-0200-0000-6a00cf720000\""
 }
 ```
 
 ### Create a source connection {#source-connection}
 
-Create a source connection by making a POST request to the [!DNL Flow Service] API, while providing the connection spec ID of your source, details like name and description, and the format of your data.
+To create a source connection, make a POST request to the [!DNL Flow Service] API. Be sure to provide the connection spec ID of your source, along with details such as the name, description, and data format.
 
 **API format**
 
@@ -111,17 +114,18 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Shopify Streaming Source Connection",
-      "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
-      "description": "Shopify Streaming Source Connection",
-      "connectionSpec": {
-          "id": "e1d4cd44-ccad-11ed-afa1-0242ac120002",
-          "version": "1.0"
-      },
-      "data": {
-          "format": "json"
-      }
-    }'
+    "name": "Shopify Streaming Source Connection",
+    "description": "Shopify Streaming Source Connection",
+    "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
+    "baseConnectionId": "302f44a9-e3fd-4386-bb62-213c648cd023",
+    "connectionSpec": {
+      "id": "e1d4cd44-ccad-11ed-afa1-0242ac120002",
+      "version": "1.0"
+    },
+    "data": {
+      "format": "json"
+    }
+  }'
 ```
 
 | Property | Description |
@@ -129,6 +133,7 @@ curl -X POST \
 | `name` | The name of your source connection. Ensure that the name of your source connection is descriptive, as you can use this to look up information on your source connection. |
 | `description` | An optional value that you can include to provide more information on your source connection. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
+| `baseConnectionId` | The connection ID that was generated in an earlier step when creating an account and authenticating with HMAC keys. |
 | `data.format` | The format of the [!DNL Shopify] data that you want to ingest. Currently, the only supported data format is `json`. |
 
 **Response**
@@ -146,7 +151,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../../xdm/api/schemas.md).
 
@@ -170,7 +175,7 @@ POST /targetConnections
 
 **Request**
 
-The following request creates a target connection for [!DNL Shopify]:
+The following request creates a target connection for [!DNL Shopify Streaming]:
 
 
 ```shell
@@ -224,7 +229,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 ### Create a mapping {#mapping}
 
-In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) with data mappings defined within the request payload.
+In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep) with data mappings defined within the request payload.
 
 **API format**
 
@@ -243,23 +248,23 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "version": 0,
-      "xdmSchema": "{TARGET_XDM_SCHEMA}",
-      "xdmVersion": "1.0",
-      "mappings": [
-          {
-              "destinationXdmPath": "person.name.firstName",
-              "sourceAttribute": "firstName",
-              "identity": false,
-              "version": 0
-          },
-          {
-              "destinationXdmPath": "person.name.lastName",
-              "sourceAttribute": "lastName",
-              "identity": false,
-              "version": 0
-          }
-      ]
+    "version": 0,
+    "xdmSchema": "{TARGET_XDM_SCHEMA}",
+    "xdmVersion": "1.0",
+    "mappings": [
+      {
+        "destinationXdmPath": "person.name.firstName",
+        "sourceAttribute": "firstName",
+        "identity": false,
+        "version": 0
+      },
+      {
+        "destinationXdmPath": "person.name.lastName",
+        "sourceAttribute": "lastName",
+        "identity": false,
+        "version": 0
+      }
+    ]
   }'
 ```
 
