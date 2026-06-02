@@ -15,24 +15,78 @@ role_v2:
 
 >[!NOTE]
 >
->The [!DNL Shopify] streaming source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
+>The [!DNL Shopify Streaming] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-The following tutorial provides steps on how to create a streaming source connection and dataflow to stream data from [[!DNL Shopify]](https://www.shopify.com/) to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read this guide to learn how to stream data from the [[!DNL Shopify Streaming] source](../../../../connectors/ecommerce/shopify-streaming.md) to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started {#getting-started}
 
 This guide requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Use Sources in Experience Platform to easily bring in data from a variety of systems, and organize and enrich it with tools that help meet your business needs.
+* [Sandboxes](../../../../../sandboxes/home.md): Sandboxes let you safely experiment, develop, and test digital experience solutions by providing separate, isolated environments within your Experience Platform instance.
 
 ### Using Experience Platform APIs
 
 For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
+### Gather required credentials
+
+Read the [[!DNL Shopify Streaming] overview](../../../../connectors/ecommerce/shopify-streaming.md) for information on how to use HMAC keys and authenticate your account.
+
 ## Stream [!DNL Shopify] data to Experience Platform using the Flow Service API
 
 The following outlines the steps you need to make in order to create a source connection and a dataflow to stream your [!DNL Shopify] data to Experience Platform.
+
+### Create a base connection {#base-connection}
+
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Shopify Streaming] authentication credentials as part of the request parameters.
+
+**API format**
+
+```http
+POST /connections
+```
+
+**Request**
+
+The following request creates a base connection for [!DNL Shopify Streaming] using HMAC secret keys.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Shopify Streaming source",
+    "description": "Shopify Streaming source",
+    "auth": {
+      "specName": "HMACAuth",
+      "params": {
+        "primarySecretKey": "shopify_hmac_secret_current_2026_05",
+        "secondarySecretKey": "shopify_hmac_secret_previous_2026_04"
+      }
+    },
+    "connectionSpec": {
+      "id": "e1d4cd44-ccad-11ed-afa1-0242ac120002",
+      "version": "1.0"
+    }
+  }'
+```
+
+**Response**
+
+A successful response returns the newly created connection, including its unique connection identifier (`id`). This ID is required to explore your data in the next tutorial.
+
+```json
+{
+    "id": "582f4f8d-71e9-4a5c-a164-9d2056318d6c",
+    "etag": "\"d600d3ae-0000-0200-0000-5fa99a3d0000\""
+}
+```
 
 ### Create a source connection {#source-connection}
 
@@ -46,7 +100,7 @@ POST /sourceConnections
 
 **Request**
 
-The following request creates a source connection for *YOURSOURCE*:
+The following request creates a source connection for [!DNL Shopify Streaming]:
 
 ```shell
 curl -X POST \
@@ -61,7 +115,7 @@ curl -X POST \
       "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
       "description": "Shopify Streaming Source Connection",
       "connectionSpec": {
-          "id": "e77fd9d2-22a8-11ed-861d-0242ac120002",
+          "id": "e1d4cd44-ccad-11ed-afa1-0242ac120002",
           "version": "1.0"
       },
       "data": {
