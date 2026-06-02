@@ -134,7 +134,7 @@ She navigates to the home page to browse some more.
 
 Sarah receives a personalized home page experience that is dynamically delivered, based on her [!DNL Real-Time Customer Profile] in Adobe Experience Platform.  
 
-She sees relevant content, thanks to Adobe Sensei-powered personalization in Adobe Target, which takes into account her past purchases and affinity toward running apparel and gear. Luma also tailors the men's catalog content toward running gear for men based on her most recent browse.
+She sees relevant content, thanks to Adobe AI-powered personalization in Adobe Target, which takes into account her past purchases and affinity toward running apparel and gear. Luma also tailors the men's catalog content toward running gear for men based on her most recent browse.
 
 Further down the page, Sarah is shown featured products, as well as a new recommendations tray based on her most recently viewed items.  
 

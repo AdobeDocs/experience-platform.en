@@ -97,7 +97,7 @@ topic_v2:
 
 **Adobe I/O**: Adobe I/O is part of Experience Platform and provides access to everything developers need to integrate, extend, and customize Experience Platform including APIs, events, developer console, and helpful tooling.
 
-**Adobe Sensei**: Adobe Sensei is the intelligence framework that powers Experience Platform. It also provides a set of AI services that empowers brands to enhance their ability to deliver real-time, personalized customer experiences.
+**Adobe AI**: Adobe AI is the intelligence framework that powers Experience Platform. It also provides a set of AI services that empowers brands to enhance their ability to deliver real-time, personalized customer experiences.
 
 **Amazon S3 bucket**: [!DNL Amazon S3] buckets are the foundational containers for data stored in the [!DNL Amazon] ecosystem. Buckets contain objects, each object is stored and retrieved using a unique developer-assigned key.
 
@@ -115,7 +115,7 @@ topic_v2:
 
 **Attribute merge**: When defining a merge policy using the Real-Time Customer Profile API, the `attributeMerge` object indicates the manner by which the merge policy will prioritize profile attributes in the case of data conflicts. It is equivalent to selecting a [!UICONTROL Merge method] when defining a merge policy in the Experience Platform UI.
 
-**Attribution AI**: [!DNL Attribution AI] is an Intelligent Service powered by Adobe Sensei that delivers algorithmic multi-channel attribution capabilities across the entire customer lifecycle.
+**Attribution AI**: [!DNL Attribution AI] is an Intelligent Service powered by Adobe AI that delivers algorithmic multi-channel attribution capabilities across the entire customer lifecycle.
 
 **Audience**: An audience is the resulting set of profiles that meet the criteria of a segment definition.
 
@@ -203,7 +203,7 @@ topic_v2:
 
 **Custom labels**: Custom data usage labels allow you to create and apply specific labels to data fields that meet specific business needs.
 
-**Customer AI**: Customer AI is an Intelligent Service powered by Adobe Sensei that enriches customer profiles with AI-based propensities and empowers customer segmentation and targeting efforts.
+**Customer AI**: Customer AI is an Intelligent Service powered by Adobe AI that enriches customer profiles with AI-based propensities and empowers customer segmentation and targeting efforts.
 
 ## D
 
@@ -559,7 +559,7 @@ topic_v2:
 
 **Segmentation**: Segmentation is the process of dividing a large group of customers, prospects, or consumers into smaller groups that share similar attributes and will respond similarly to specific marketing strategies.
 
-**Sensei ML Framework**: Sensei ML Framework is a unified machine-learning (ML) framework that leverages Experience Platform data to empower data scientists to development of ML-driven intelligence services in a faster, scalable, and reusable manner.
+**Adobe AI ML Framework**: Adobe AI ML Framework is a unified machine-learning (ML) framework that leverages Experience Platform data to empower data scientists to development of ML-driven intelligence services in a faster, scalable, and reusable manner.
 
 **Sensitive ("S") labels**: Sensitive ("S") labels are used to categorize data deemed sensitive, such as different types of behavioral or geographic data that you want marked as sensitive.
 
