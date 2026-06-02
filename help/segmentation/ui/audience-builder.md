@@ -9,7 +9,7 @@ description: Learn how to use the
 >
 >The updated Audience Builder is currently in **closed beta**. The documentation and the functionality are subject to change.
 
-Audience Builder provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing your audience's rules.
+Audience Builder provides a rich workspace that lets you interact with Profile data elements. The workspace provides intuitive controls for building and editing your audience's rules.
 
 IMAGE
 
@@ -101,17 +101,33 @@ Within the rule view, you can use the undo and redo buttons to revert changes yo
 
 IMAGE
 
+You can also adjust the settings of the visible fields by selecting ![the settings icon](/help/images/icons/settings.png).
+
+For the **[!UICONTROL Available fields]**, you can either show only the fields that contain data or the full XDM schema.
+
+For the **[!UICONTROL Data sources]**, you can filter to show attributes that come from the specified ingestion types. Supported values include **[!UICONTROL Show batch data]**, **[!UICONTROL Show streaming/edge data]**, and **[!UICONTROL Show fields with no ingested data]**.
+
+For the **[!UICONTROL Merge policy]**, you can choose which merge policy the fields belong to.
+
 ### Attributes {#attributes}
 
-The **[!UICONTROL Attributes]** section allows you to browse [!DNL Profile] attributes belonging to the [!DNL XDM Individual Profile] class. 
+The **[!UICONTROL Attributes]** section lets you browse [!DNL Profile] attributes belonging to the [!DNL XDM Individual Profile] class. 
 
 IMAGE
 
-You can select **Add field** to add an attribute or audience to the rule building canvas or you can select **Add group** to add a container to the canvas. 
+You can select **[!UICONTROL Add field]** to add an attribute or audience to the rule building canvas or you can select **[!UICONTROL Add group]** to add a container to the canvas. 
 
 IMAGE
 
-If you select **Add field**, the fields popover appears. This popover lets you intelligently search for the field you want to add. 
+If you select **[!UICONTROL Add field]**, the Discovery Panel appears. This panel lets you search for the field you want to add. 
+
+IMAGE
+
+If you have access to AI Assistant, the Discovery Panel will intelligently display suggestions based on the searched field.
+
+IMAGE
+
+If you do not have access to AI Assistant, the Discovery Panel will display fields based off of the searched criterion.
 
 IMAGE
 
@@ -139,13 +155,49 @@ IMAGE
 
 >[!TAB Attributes]
 
+If you select **Attributes**, a full list of the available XDM Individual Profile attributes appears. Additionally, you can see custom added attributes that belong to your sandbox.
+
+IMAGE
+
+To add an attribute to the rule-building canvas, select the name of the attribute you want to add. You may need to navigate through the folder structure of the XDM schema in order to find the attribute.
+
+IMAGE
+
+After selecting the attribute, details of the attribute appear. This includes information such as the path of the attribute, description, and type. You can select [the star icon]() to favorite the attribute or **Add field** to add the attribute to your audience's rules.
+
+IMAGE
+
 >[!TAB Audiences]
 
+If you select **Audiences**, a full list of previously created audiences for your sandbox and merge policy appears. 
+
+IMAGE
+
+To add an audience to the rule-building canvas, select the name of the audience you want to add.
+
+IMAGE
+
+After selecting the audience, details of the audience appear. This includes the name and description of the audience. You can select the [the star icon]() to favorite the audience or **Add field** to add the audience your audience's rules.
+
 >[!TAB Saved conditions]
+
+If you select **Saved conditions**, a full list of previously created saved conditions for your sandbox appears.
+
+IMAGE
+
+To add a saved condition to the rule-building canvas, select the name of the saved condition you want to add.
+
+IMAGE
+
+After selecting the saved condition, ???
 
 >[!ENDTABS]
 
 ### Events {#events}
+
+The **Events** section lets you add ExperienceEvents to your audience's rules. 
+
+### Groups {#groups}
 
 ## Profile view {#profile-view}
 
