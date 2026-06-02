@@ -40,6 +40,10 @@ topic_v2:
 ---
 # [!DNL Facebook] connection
 
+>[!IMPORTANT]
+>
+>Starting June 4th, with the update to Ads API v25, certain audiences may no longer be accepted by Facebook and will not be flagged. For details, see the section on [restricted audience data](#restricted-audience-data).
+
 ## Overview {#overview}
 
 Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization, and suppression based on hashed emails.
