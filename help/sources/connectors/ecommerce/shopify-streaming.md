@@ -160,7 +160,7 @@ A successful response returns information on your webhook, including its corresp
 You can use HMAC (Hash-based Message Authentication Code) key-based authentication when creating a [!DNL Shopify Streaming] source account in Experience Platform. You can configure shared secrets during account setup so that incoming Shopify webhook payloads can be validated before ingestion.
 
 | Field | Required | Description |
-| --- | --- | --- | 
+| --- | --- | --- |
 | `primarySecretKey` | Yes | The current HMAC shared secret configured for the [!DNL Shopify] webhook. Experience Platform uses this key to validate incoming [!DNL Shopify] webhook payloads. |
 | `secondarySecretKey` | No | The previous HMAC shared secret. Provide this during key rotation so in-flight messages signed with the old secret continue to be accepted while new traffic uses the new secret. Leave this value blank on first-time setup. |
 
