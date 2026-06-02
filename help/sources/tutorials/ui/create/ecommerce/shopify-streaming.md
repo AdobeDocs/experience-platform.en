@@ -50,7 +50,9 @@ To stream data from [!DNL Shopify], select the **[!UICONTROL Shopify Streaming]*
 
 To create a new account for your [!DNL Shopify Streaming] source, select **[!UICONTROL New account]** and provide a name and an optional description for your account. Next, provide values for your **[!UICONTROL primarySecretKey]** and **[!UICONTROL secondarySecretKey]** and then select **[!UICONTROL Connect to source]**. Allow for a few moments for the connection to establish, and then select **[!UICONTROL Next]** to proceed.
 
-![The new account creation interface]
+For more information on HMAC key-based authentication, read the [[!DNL Shopify Streaming] authentication overview](../../../../connectors/ecommerce/shopify-streaming.md).
+
+![The new account creation interface](../../../../images/tutorials/create/shopify-streaming/new.png)
 
 ## Select data
 
