@@ -42,7 +42,7 @@ topic_v2:
 
 >[!IMPORTANT]
 >
->Starting June 4th, with the update to Ads API v25, certain audiences may no longer be accepted by Facebook and will not be flagged. For details, see the section on [restricted audience data](#restricted-audience-data).
+>Starting June 4th, with the update to Ads API v25, certain audiences will be flagged and not accepted by Facebook. For details, see the section on [restricted audience data](#restricted-audience-data).
 
 ## Overview {#overview}
 
@@ -145,7 +145,7 @@ Before you can send your audiences to [!DNL Facebook], make sure you meet the fo
 
 ## Restricted audience data {#restricted-audience-data}
 
-[!DNL Facebook] enforces rules around restricted or sensitive audience data (such as health or financial information) under its Terms of Service. These restrictions were introduced in [Meta Advertiser API v24](https://developers.facebook.com/documentation/ads-commerce/marketing-api/marketing-api-changelog/version24.0#audiences) and apply to all API versions from v24 onward. Starting June 4, 2026, Experience Platform upgrades to Meta Advertiser API v25, and audiences sent from Experience Platform to [!DNL Facebook] will be subject to these restrictions. Audiences that violate [!DNL Facebook]'s Terms of Service will be blocked from activation and will not receive data from Experience Platform. To resolve a restricted audience, you must either update the audience to remove restricted data or contact [!DNL Facebook] directly. For more information, see [Resolve flagged audiences](https://www.facebook.com/business/help/1055828013359808?id=188852726110565) in the [!DNL Facebook] documentation.
+[!DNL Facebook] enforces rules around restricted or sensitive audience data (such as health or financial information) under its Terms of Service. These restrictions were introduced in [Meta Advertiser API v24](https://developers.facebook.com/documentation/ads-commerce/marketing-api/marketing-api-changelog/version24.0#audiences) and apply to all API versions from v24 onward. Since September 5, 2025, audiences that violate these rules [could not be used for advertising in [!DNL Facebook] anyway](https://developers.facebook.com/documentation/ads-commerce/marketing-api/audiences/guides/lookalike-audiences). Starting June 4, 2026, Experience Platform upgrades to Meta Advertiser API v25. When audiences are sent from Experience Platform to [!DNL Facebook] through the Ads API, audiences that violate [!DNL Facebook]'s Terms of Service are flagged in addition to being unusable for campaigns. Audiences that are flagged will be blocked from activation and will not receive data from Experience Platform. To resolve a restricted audience, you must either update the audience to remove restricted data or contact [!DNL Facebook] directly. For more information, see [Resolve flagged audiences](https://www.facebook.com/business/help/1055828013359808?id=188852726110565) in the [!DNL Facebook] documentation.
 
 If your audiences are affected, see [Restricted audiences](#restricted-audiences) in the Troubleshooting section for steps to resolve this.
 
