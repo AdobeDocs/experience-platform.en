@@ -75,7 +75,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 ## Version 2.35.1 - May 7, 2026
 
-- Contains [version 2.35.1](/help/collection/js/release-notes.md) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.33.1](/help/collection/js/release-notes.md) of the Adobe Experience Platform Web SDK.
 - Fixed an issue where required components, like Context, were excluded from the SDK bundle and prevented events from being sent.
 
 ## Version 2.35.0 - May 7, 2026
