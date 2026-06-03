@@ -2,18 +2,30 @@
 description: Configure file formatting options for file-based destinations
 title: Learn how to use Destination SDK to configure file formatting options for file-based destinations.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
+TQID: https://experienceleague.adobe.com/7kG5Slg0-FP68gZzYwHvALutSlsn3eVe0DjBABn-B5I
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Configure file formatting options for file-based destinations
 
 ## Overview {#overview}
 
-Destination SDK allows you to extensively adjust the formatting and compression options of your exported files, to match any downstream requirements in your storage location. 
+Use Destination SDK to extensively adjust the formatting and compression options of your exported files, to match any downstream requirements in your storage location. 
 
 This page describes how to use Destination SDK to configure file formatting options for file-based destinations.
 
 ## Prerequisites {#prerequisites}
 
-Before advancing to the steps outlined below, please read the [Destination SDK getting started](../../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
+Before advancing to the steps outlined below, read the [Destination SDK getting started](../../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
 
 Adobe also recommends that you read and familiarize yourself with the following documentation before proceeding:
 
@@ -485,7 +497,7 @@ Below, you can see the resulting UI screen, based on the configuration above. Wh
 
 ![Screen recording showing the conditional file formatting option for CSV files.](../../assets/guides/batch/conditional-file-formatting.gif)
 
-### Complete API request which includes all options shown above
+### Complete API request which includes all options shown above {#complete-api-request}
 
 The API request below combines in one configuration all the options described in the sections above.
 
@@ -716,7 +728,7 @@ A successful response returns the destination configuration, including the uniqu
 A certain combination of file formatting options can lead to undesired file export results. 
 Adobe recommends against selecting the following combination of CSV options: 
 
-```
+```properties
 
 nullValue -> ""
 quote -> "
@@ -729,7 +741,7 @@ To exemplify the limitation, consider the export of a file with the values below
 |firstname | lastname | country| state|
 |---------|----------|---------|--------|
 | Michael | Rose | USA | NY |
-| James | Smith |  | null | 
+| James | Smith |  | null |
 
 {style="table-layout:auto"}
 
@@ -744,4 +756,4 @@ James,Smith,"","\"\""
 
 ## Next steps {#next-steps}
 
-By reading this article, you now know how to set up custom file formatting options for your exported files, by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](../../../ui/activate-batch-profile-destinations.md) to export data to the destination.
+You now know how to set up custom file formatting options for your exported files, by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](../../../ui/activate-batch-profile-destinations.md) to export data to the destination.

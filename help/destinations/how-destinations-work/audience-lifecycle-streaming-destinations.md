@@ -2,6 +2,18 @@
 title: Audience lifecycle in Experience Platform and streaming destinations
 description: Learn how audience names and mappings from Experience Platform are reflected in streaming destination platforms.
 exl-id: 8a9a9e2f-d52f-41c9-ae27-9d2cd797bb85
+TQID: https://experienceleague.adobe.com/wYmjqdfHHr-APhlTRJQabz2EwB4AFjDA83z45CwzLgI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Audience lifecycle in streaming destinations
 
@@ -22,7 +34,7 @@ The following streaming destinations support automatic audience name updates whe
 
 * [Acxiom Audience Connection](../catalog/advertising/acxiom-audience-connection.md)
 * [Adobe Campaign Managed Cloud](../catalog/email-marketing/adobe-campaign-managed-services.md)
-* [Advertising Cloud DSP](../catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP](../catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Bombora](../catalog/advertising/bombora.md)
 * [Criteo](../catalog/advertising/criteo.md)
 * [Demandbase](../catalog/advertising/demandbase.md)
@@ -61,7 +73,7 @@ The following streaming destinations support automatic audience removal when you
 * [(API) Oracle Eloqua](../catalog/email-marketing/oracle-eloqua-api.md)
 * [(Companies) LinkedIn Matched Audience](../catalog/social/linkedin-b2b.md)
 * [(Legacy) (V2) Marketo Engage](../catalog/adobe/marketo-engage.md)
-* [Adobe Advertising Cloud DSP](../catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP](../catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Bombora Account Audiences](../catalog/advertising/bombora.md)
 * [Criteo](../catalog/advertising/criteo.md)
 * [Experience Cloud Audiences](../catalog/adobe/experience-cloud-audiences.md)
@@ -80,6 +92,6 @@ The following streaming destinations support automatic audience removal when you
 * [Twitter Custom Audiences](../catalog/social/twitter.md)
 * [Yahoo DataX](../catalog/advertising/datax.md)
 
-### Destinations which do not support audience removal
+### Destinations which do not support audience removal {#no-removal-support}
 
 For destinations not listed above, when you unmap an audience from the destination, Experience Platform only removes the mapping. The audience in the destination platform remains active until you manually delete it in the partner platform.

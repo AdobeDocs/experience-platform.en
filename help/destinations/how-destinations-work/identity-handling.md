@@ -2,6 +2,32 @@
 title: Identity handling in the destinations activation workflow
 description: Learn how identity export is handled in the activation workflow, depending on destination type
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
+TQID: https://experienceleague.adobe.com/zSP6vyySfsJz7SoVfUGSKAiJSGsQuV5n7UuXeb4u9Q8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # Identity handling in the destinations activation workflow
 
@@ -11,7 +37,7 @@ This page describes the particularities of how identities are exported to differ
 >
 > For extensive information about identities, identity namespaces, and definitions of identity-related terms, read the [identity service overview](/help/identity-service/home.md).
 
-Each destination in the [catalog](/help/destinations/catalog/overview.md) is slightly different, so there is no one-size-fits-all setup across all destinations. However, there are a few patterns that guide the setup of  destinations and their identity requirements, as described in the sections below.
+Each destination in the [catalog](/help/destinations/catalog/overview.md) is slightly different, so there is no one-size-fits-all setup across all destinations. However, there are a few patterns that guide the setup of destinations and their identity requirements, as described in the sections below.
 
 ## File-based destinations {#file-based}
 
@@ -37,6 +63,7 @@ For example, consider that from two different datasets, you have the following p
 |---------|----------|---------|--------|
 | email1, Loyalty ID1 | John | Doe | email 1|
 
+{style="table-layout:auto"}
 
 **Profile fragment two**
 
@@ -44,11 +71,15 @@ For example, consider that from two different datasets, you have the following p
 |---------|----------|---------|--------|
 | email2, Loyalty ID1 | John | Doe | email 2|
 
+{style="table-layout:auto"}
+
 The merged profile would look like below:
 
 |Identity map | First Name| Last Name| Email attribute|
 |---------|----------|---------|--------|
 | email 1, email2, Loyalty ID1 | John | Doe | email 2|
+
+{style="table-layout:auto"}
 
 The export behavior differs based on whether you select `IdentityMap: Email` or `xdm: personalEmail.address` for export. 
 
@@ -60,7 +91,7 @@ The takeaway is that the number of records you export depends on your chosen mer
 
 ## API-based streaming destinations {#streaming-destinations}
 
-[API-based streaming destinations](/help/destinations/destination-types.md#streaming-destination) built with [Destination SDK](/help/destinations/destination-sdk/overview.md) (for example [!DNL Facebook], [!DNL Google Customer Match], [!DNL Pinterest], [!DNL Braze], and others) only support specific IDs for export. For detailed information about the specific identities that can be exported to each destination, read the *supported identities* section in each destination documentation page (for example, see the [supported identities section](/help/destinations/catalog/advertising/pinterest.md) in the [!DNL Pinterest] destination page). 
+[API-based streaming destinations](/help/destinations/destination-types.md#streaming-audience-export-destinations) built with [Destination SDK](/help/destinations/destination-sdk/overview.md) (for example [!DNL Facebook], [!DNL Google Customer Match], [!DNL Pinterest], [!DNL Braze], and others) only support specific IDs for export. For detailed information about the specific identities that can be exported to each destination, read the *supported identities* section in each destination documentation page (for example, see the [supported identities section](/help/destinations/catalog/advertising/pinterest.md) in the [!DNL Pinterest] destination page). 
 
 Note, however, that you have the flexibility to use data from either [private graphs](/help/profile/merge-policies/overview.md#id-stitching) or from attributes as identities. This means that you can map XDM attributes to the identity field required by the destination. See below an example for the [!DNL Pinterest] destination, where the XDM attribute `personalEmail.address` is mapped to the required [!DNL Pinterest] identity `pinterest_audience`.
 
@@ -90,7 +121,7 @@ When configuring a datastream as described in the documentation linked above, yo
 
 ## Personalization destinations {#personalization-destinations}
 
-[Personalization (or edge) destinations](/help/destinations/destination-types.md#edge-personalization-destinations) (for example: Adobe Target, [!DNL Custom Personalization]) do not require any identity selection in the activation workflow, as the integration is a profile lookup. The client ([!DNL Target], [!DNL Web SDK], or others) queries the [[!UICONTROL Edge]](/help/collection/home.md#edge) and pulls the profile information that it needs for on-site personalization.
+[Personalization (or edge) destinations](/help/destinations/destination-types.md#edge-personalization-destinations) (for example: [!DNL Adobe Target], [!DNL Custom Personalization]) do not require any identity selection in the activation workflow, as the integration is a profile lookup. The client ([!DNL Target], [!DNL Web SDK], or others) queries the [[!UICONTROL Edge]](/help/collection/home.md) and pulls the profile information that it needs for on-site personalization.
 
 <!--
 ![Table with all supported identities](/help/destinations/assets/how-destinations-work/identities-table.png)

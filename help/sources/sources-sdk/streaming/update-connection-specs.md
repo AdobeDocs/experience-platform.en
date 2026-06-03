@@ -3,6 +3,13 @@ title: Update a connection specification for Streaming SDK using the Flow Servic
 description: The following document provides steps on how to a connection specification using the Flow Service API for Self-Serve Sources (Streaming SDK).
 exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
 badge: Beta
+TQID: https://experienceleague.adobe.com/ustM5EAwEdENFDs8sDhb80oTgXzKoqa1ecGHvg4It4Y
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Update a connection specification using the Flow Service API
 

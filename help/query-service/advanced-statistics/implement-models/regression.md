@@ -3,6 +3,18 @@ title: Regression Algorithms
 description: Learn how to configure and optimize various regression algorithms with key parameters, descriptions, and example code to help you implement advanced statistical models.
 role: Developer
 exl-id: d38733bb-0420-40bf-a70b-19e0e0e58730
+TQID: https://experienceleague.adobe.com/XHag5c1xKlcp572IXdzXoEiWS-G8EBcNDlHHS1bXfNI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Regression algorithms {#regression-algorithms}
 

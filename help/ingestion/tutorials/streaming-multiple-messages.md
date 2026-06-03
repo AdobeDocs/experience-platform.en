@@ -5,6 +5,30 @@ title: Send Multiple Messages in a Single HTTP Request
 type: Tutorial
 description: This document provides a tutorial for sending multiple messages to Adobe Experience Platform within a single HTTP request using streaming ingestion.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
+TQID: https://experienceleague.adobe.com/2xJYZLgRjlCRLNbPmn4Fox1YanluEgSMMpdHJRErpiY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+    internal-label: XDM
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+    internal-label: Data ingestion
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+    internal-label: Schemas
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # Send multiple messages in a single HTTP request
 
@@ -33,7 +57,7 @@ You must first create a streaming connection before you can start streaming data
 
 After registering a streaming connection, you, as the data producer, will have a unique URL which can be used to stream data to Experience Platform.
 
-## Stream to a dataset
+## Stream to a dataset {#stream-to-dataset}
 
 The following example shows how to send multiple messages to a specific dataset within a single HTTP request. Insert the dataset ID in the message header to have that message directly ingested into it.
 
@@ -513,6 +537,42 @@ Failed messages are identified by an error status code in the response array.
 The invalid messages are collected and stored in an "error" batch within the dataset specified by `{DATASET_ID}`.
 
 Read the [retrieving failed batches](../quality/retrieve-failed-batches.md) guide for more information on recovering failed batch messages.
+
+### Send multiple XDM entities to a dataflow {#send-multiple-xdm-entities-to-a-dataflow}
+
+To send multiple XDM entities to a dataflow, you can either:
+
+- Send one or more entities in a `messages` array within one HTTP request to the streaming endpoint.
+- Upload a file with multiple entities using batch ingestion.
+
+Choose the method that matches your data volume and use case.
+
+>[!BEGINTABS]
+
+>[!TAB Group entities in an HTTP request]
+
+You can include multiple XDM entities in a `messages` array within a single HTTP request to the streaming ingestion endpoint. All messages can target the same or different datasets and schemas, as long as they all belong to the **same** organization and sandbox.
+
+Use this option when you want to:
+
+- Reduce requests by sending multiple XDM entities in one HTTP call.
+- Stream data in real time through the ingestion endpoint.
+
+For more information and detailed instructions on how to send the request, read the [streaming to a dataset](#stream-to-dataset) section.
+
+>[!TAB Upload a batch file]
+
+You can upload a batch file containing one or more XDM entities to a dataflow. All files uploaded under the same batch are processed together as a single ingestion unit.
+
+Use this method when you:
+
+- Ingest larger data volumes (for example, CSV, JSON, or Parquet files).
+- Are working with file-based exports from upstream systems.
+- Prefer scheduled or bulk ingestion.
+
+See [Batch ingestion guide](../batch-ingestion/api-overview.md) for step-by-step instructions.
+
+>[!ENDTABS]
 
 ## Confirm messages ingested
 

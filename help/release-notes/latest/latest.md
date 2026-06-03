@@ -1,7 +1,51 @@
 ---
-title: Adobe Experience Platform Release Notes February 2026
-description: The February 2026 release notes for Adobe Experience Platform.
+title: Adobe Experience Platform Release Notes May 2026
+description: The May 2026 release notes for Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+TQID: https://experienceleague.adobe.com/RvjQSbQ2NNwBYQJD4G6jsXWdAAg3vzbXKYvRlMwbBW0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+  - id: f8e8ea8a-6020-40da-99f7-6504fe599cb1
+    internal-label: AI Assistant
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+    internal-label: B2B
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+    internal-label: Get started
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Adobe Experience Platform release notes
 
@@ -15,16 +59,17 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 >- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**Release date: February 17, 2026**
+**Release date: May 19, 2026**
 
 New features and updates to existing features in Adobe Experience Platform:
 
 - [Alerts](#alerts)
+- [Computed attributes](#computed-attributes)
 - [Destinations](#destinations)
+- [Real-Time Customer Profile](#profile)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
-- [Experience Data Model (XDM)](#xdm)
-  
+
 ## Alerts {#alerts}
 
 Experience Platform allows you to subscribe to event-based alerts for various Experience Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Experience Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
@@ -33,11 +78,23 @@ Experience Platform allows you to subscribe to event-based alerts for various Ex
 
 | Feature | Description |
 | --- | --- |
-| [!DNL Slack] integration for customer-facing alerts | You can now deliver customer-facing alerts to [!DNL Slack]. Follow the [step-by-step tutorial](../../observability/alerts/slack-integration.md) to set up the [!DNL Slack] integration and receive alert notifications directly in your [!DNL Slack] workspace. |
+| Alert History: Filtering and Discoverability | The Alert History page now shows the associated object name, adds search by alert type and filtering by object name, and includes an improved time range selector, making it easier to correlate alerts and find what you need. For more information, read the guide on using [alert history](../../observability/alerts/ui.md#alert-history). |
 
 {style="table-layout:auto"}
 
 For more information, read the [[!DNL Observability Insights] overview](../../observability/home.md).
+
+## Computed attributes {#computed-attributes}
+
+Computed attributes enable capability to easily summarize event data into profile attributes via an intuitive UI for enhanced behavior-based segmentation, personalization, and activation. With this feature, you can create computed attributes in a self serve manner, manage them, and use them in segmentation, Real-Time CDP destinations, or Adobe Journey Optimizer. Additionally, computed attributes simplify segmentation and journey workflows to help you seamlessly deliver relevant experiences.
+
+| Feature | Description |
+| --- | --- |
+| List function in computed attributes | Use the List function in computed attributes to return an array of values from qualifying events. This function is intended for use when the qualifying events come from a single dataset. If the qualifying events span multiple datasets, results may be incomplete. For more details, read the [computed attributes overview](../../profile/computed-attributes/overview.md) |
+
+{style="table-layout:auto"}
+
+To learn more about computed attributes, read the [computed attributes overview](../../profile/computed-attributes/overview.md).
 
 ## Destinations {#destinations}
 
@@ -45,9 +102,10 @@ For more information, read the [[!DNL Observability Insights] overview](../../ob
 
 **New or updated destinations**
 
-| Destination | Description |
+| Feature | Description |
 | --- | --- |
-| [[!DNL Snowflake] Batch](../../destinations/catalog/warehouses/snowflake-batch.md) generally available | The [!DNL Snowflake] Batch destination is now generally available. Real-Time CDP customers worldwide can now use this connector to activate data into their Snowflake accounts without needing to physically copy the data. All limitations from the limited release have been lifted (availability for US-only customers, support for audiences belonging to the default merge policy only). |
+| External audience support for [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) | Activate audiences from origins beyond Segmentation Service to the [Criteo](../../destinations/catalog/advertising/criteo.md) destination, including custom upload audiences (imported from CSV), look-alike audiences, federated audiences, and audiences created in other Experience Platform apps such as [!DNL Adobe Journey Optimizer]. See the [supported audiences](../../destinations/catalog/advertising/criteo.md#supported-audiences) section for details. |
+| New supported destinations for [[!DNL Acxiom Audience Connection]](../../destinations/catalog/advertising/acxiom-audience-connection.md) and [[!DNL Acxiom Real ID Audience Connection]](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | Five new destinations are now supported: [!DNL Roku], [!DNL Samsung Ads], [!DNL The Trade Desk] (1st Party), [!DNL Warner Bros. Discovery], and [!DNL Yahoo]. See the [Acxiom Audience Connection](../../destinations/catalog/advertising/acxiom-audience-connection.md) and [Acxiom Real ID Audience Connection](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) documentation for details. |
 
 {style="table-layout:auto"}
 
@@ -55,25 +113,47 @@ For more information, read the [[!DNL Observability Insights] overview](../../ob
 
 | Fix | Description |
 | --- | --- |
-| Activation Failed Rate Exceeded alert | The Activation Failed Rate Exceeded destination alert now correctly uses the threshold you configure when evaluating and sending the alert. Previously, the alert triggered at a 1% failure rate regardless of the percentage you configured. See [standard alert rules](../../observability/alerts/rules.md#destinations) for more details on this alert. |
-| Google Customer Match excluded identities reporting | Fixed a bug in the skipped records counting logic that caused inflated excluded profiles counts to be displayed for Google Customer Match destinations. Activation and export behavior were not affected; only the reported numbers were incorrect. |
+| [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) macro support | The [`%SEGMENT_NAME%`](../../destinations/catalog/cloud-storage/overview.md#use-macros) and other folder path macros now work correctly for [!DNL Google Cloud Storage] destinations. Previously, macros were not replaced with the audience name in the export path. |
+| [[!DNL Federated Audiences]](https://www.adobe.com/go/destinations-federated-audience-composition) export file now | The **[!UICONTROL Export file now]** option is now supported for [!DNL Federated Audience Composition] destinations. |
+| [[!DNL Snowflake]](../../destinations/catalog/warehouses/snowflake.md) scheduling UI fix | Fixed an issue where toggling the export frequency between daily and once in the [!DNL Snowflake] destination configuration caused the UI to crash. |
+| [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md) key type behavior | Updated documentation to clarify how [!DNL Google] handles identity key types in a destination dataflow. You can map multiple key types in the same connection, but if you update mappings, any identity you add must use the same key type as the identity you removed. Removing all fields of a given key type, or switching key types across activation runs, causes [!DNL Google] to delete the corresponding audience list. See the [key type behavior](../../destinations/catalog/advertising/google-customer-match.md#key-type-behavior) section for details. |
+| [View datasets in a dataset export dataflow](../../destinations/api/export-datasets.md#view-datasets-in-dataflow) | Updated documentation to show how to retrieve the datasets associated with an existing dataset export dataflow using the Flow Service API. See the [export datasets documentation](../../destinations/api/export-datasets.md#view-datasets-in-dataflow) for details. |
 
 {style="table-layout:auto"}
 
 For more information, read the [Destinations overview](../../destinations/home.md).
 
-## Segmentation Service {#segmentation-service}
+## Real-Time Customer Profile {#profile}
 
-[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Audiences can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-Time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third-party data.
 
 **New or updated features**
 
 | Feature | Description |
-| ------- | ----------- |
-| Editable API audiences | You can now edit audiences created using either the Segmentation Service API or the Audience Agent in Segment Builder. **Note:** Audiences that contain time-series data **cannot** be edited using Segment Builder at this time. |
-| External audience data expiration refresh | You can use the Segmentation Service API to extend the data expiration of your external audiences. For more information, read the [external audiences API guide](/help/segmentation/api/external-audiences.md#extend-data-expiration). |
+| --- | --- |
+| Batch profile ingestion progress | Track batch profile ingestion jobs in real time from the monitoring dashboard. View job initiation, queued time, and critical checkpoint progress, including when data is ready for segmentation and profile lookup. Use these insights to predict downstream data availability and plan campaign launches with confidence. |
 
-For more information, read the [[!DNL Segmentation Service] overview](../../segmentation/home.md).
+{style="table-layout:auto"}
+
+For more information, read the [Real-Time Customer Profile overview](../../profile/home.md).
+
+## Segmentation Service {#segmentation-service}
+
+Use Segmentation Service to create audiences from your customer data and manage their full lifecycle in Experience Platform.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Audience Composition enhancements | All customers now have a baseline of 50 compositions. Additional enhancements include chained activation and audience enrichment improvements. To learn more about Audience Composition, read the [Audience Composition UI guide](../../segmentation/ui/audience-composition.md).  |
+| Express activation for external audiences | You can now set the `expressActivation` flag for your external audiences. The express activation job creates an additional job that is directly consumed by the downstream activation pipeline, reducing the time to deliver audience membership data to configured batch destinations. This field is best used on **subsequent** audience activations and may not result is faster activation times for **initial** audience activations. For more information, read the [external audiences endpoint guide](../../segmentation/api/external-audiences.md#create-audience). |
+| Account audiences with experience events (B2B) | After the B2B CDP architecture upgrade, account audiences with experience events are no longer directly supported. To create an account audience that uses experience events, first build a people audience with the experience events, then reference that people audience when creating the account audience. To learn how to conduct multi-entity streaming segmentation, read the [multi-entity streaming segmentation guide](../../rtcdp/segmentation/multi-entity-segmentation.md). |
+| Custom objects (B2B) | You can now use custom objects with one-to-many relationships for segmentation use cases in B2BCDP. To learn how to use custom objects, read the [use custom objects tutorial](../../rtcdp/segmentation/custom-objects.md). |
+| Data insights for audiences | You can now view summary data for your people-based and account-based audiences. For more information on the summary data for people-based audiences, read the [Segment Builder overview](/help/segmentation/ui/segment-builder.md#attributes). For more information on the summary data for account-based audiences, read the [Audience Builder overview](/help/rtcdp/segmentation/audience-builder.md#attributes). |
+
+{style="table-layout:auto"}
+
+For more information, read the [Audiences overview](../../segmentation/home.md).
 
 ## Sources {#sources}
 
@@ -83,19 +163,22 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| Unity Catalog support in [!DNL Databricks] source connector | The [!DNL Databricks] source connector now supports Unity Catalog. Read the updated [[!DNL Databricks]](../../sources/connectors/databases/databricks.md) documentation to learn how to use Unity Catalog when you configure your source connection. |
+| [!BADGE Beta]{type=Informative} [!DNL LAVA] | You can now bring loyalty and engagement data from [!DNL LAVA] into Experience Platform using the [[!DNL LAVA] source](../../sources/connectors/loyalty/lava.md). Stream member profiles, reward balances, and ticket scan events to enrich [!DNL Real-Time Customer Profile] and support segmentation, personalization, and activation. Create a separate source connection for each data type you need, and map `email` on member profiles to stitch [!DNL LAVA] records with your existing profiles. For prerequisites, an optional setup package, and step-by-step setup, read the [[!DNL LAVA] source documentation](../../sources/connectors/loyalty/lava.md). |
+
+{style="table-layout:auto"}
+
+**Updates and fixes**
+
+| Source | Description |
+| --- | --- |
+| NLD2 region IP allowlist update | Five IP ranges have been added to the NLD2 region allowlist for batch sources: <ul><li>`20.105.215.28/30`</li><li> `20.105.244.48/29`</li><li>`57.153.246.72/29`</li><li>`57.153.246.80/28`</li><li> `57.153.246.96/30`</li></ul>. Update your network allowlist to continue successfully using batch sources in the NLD2 region. For more information, read the guide on [allowlisting IP addresses for sources](../../sources/ip-address-allow-list.md).|
+| [!DNL Shopify] batch field limitations | Preview is not supported for the following [!DNL Shopify] fields: <ul><li>`amountSpent`</li><li>`totalPriceSet`</li><li>`lineItems.quantity`</li><li>`lineItems.name`</li><li>`lineItems.sku`</li><li>`transactions.formattedGateway`</li><li>`variants.sku`</li></ul> To ingest these fields, use the API to create your dataflows instead of the UI workflow. See the [[!DNL Shopify] source documentation](../../sources/connectors/ecommerce/shopify.md#limitations) for details. |
 
 {style="table-layout:auto"}
 
 For more information, read the [sources overview](../../sources/home.md).
 
-## Experience Data Model (XDM) {#xdm}
+<!--
 
-XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
-
-| Feature | Description |
-| --- | --- |
-| Restricted Editing for Schemas with Datasets | Editing operations that result in breaking changes are now restricted once a dataset exists for a schema. When a dataset is associated, you can no longer rename or delete fields, change field data types or formats, modify identity descriptors, manage related fields to remove existing fields, or change the assigned class; additive changes and field deprecation remain supported. |
-
-For more information, read the [XDM overview](../../xdm/home.md).
-
+| Automatic dataflow disabling | Source dataflows that fail continuously for 30 days are automatically disabled. When a dataflow is disabled, review the failure reason in Monitoring, apply the necessary updates, and re-enable the dataflow. Common failure reasons include credentials, permissions, or schema and mapping configuration changes. |
+-->

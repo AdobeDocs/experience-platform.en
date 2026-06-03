@@ -3,6 +3,16 @@ keywords: Experience Platform;home;popular topics;flow service;
 title: Create a Flow Run for On-Demand Ingestion Using the Flow Service API
 description: Learn how to create a flow run for on-demand ingestion using the Flow Service API
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
+TQID: https://experienceleague.adobe.com/SfngohD2hHnDRi4d6uiZxlsMuZKlFTCf3oJG4gfHRDw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a flow run for on-demand ingestion using the [!DNL Flow Service] API 
 
@@ -119,7 +129,8 @@ A successful response returns the details of the newly created flow run, includi
 | `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your firs flow run. |
 | `params.deltaColumn.name` | The name of the delta column. |
 | `etag` | The resource version of the flow run. |
-| `metrics` | This property displays a status summary for the flow run. | -->
+| `metrics` | This property displays a status summary for the flow run. | 
+-->
 
 ## Create a flow run for a file-based source
 

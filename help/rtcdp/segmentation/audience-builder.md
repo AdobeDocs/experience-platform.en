@@ -4,6 +4,18 @@ description: Learn how to use the Audience Builder in Real-Time Customer Data Pl
 feature: Get Started, Audiences
 badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
+TQID: https://experienceleague.adobe.com/oIUjDYEGD0j8r2vn-nItHAoL7GIhtDRUUlEftr87hT0
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Audience Builder in Real-Time Customer Data Platform
 
@@ -34,10 +46,6 @@ You can select the ![settings icon](../../images/icons/settings.png) to adjust t
 
 ![The settings icons is highlighted in Audience Builder.](../assets/segmentation/audience-builder/select-settings.png){zoomable="yes"}
 
->[!NOTE]
->
->The **[!UICONTROL Field options]** section is currently in beta, and is available only to select customers. Please contact Adobe Customer Care for more information.
-
 The [!UICONTROL Settings] section is displayed. In this section, you can update which fields are displayed as well as the relationship of the fields.
 
 For the **[!UICONTROL Field options]**, you can either show only the fields that contain data or the full XDM schema.
@@ -52,21 +60,43 @@ The [!UICONTROL Attributes] tab lets you browse Account attributes belonging to 
 
 ![The Attributes tab is displayed in the Audience Builder](../assets/segmentation/audience-builder/attributes.png)
 
-When selecting an attribute, you can see summary data by selecting the [information icon](../../images/icons/info.png). The summary data includes information such as top values, an explanation of what the field is, as well as the percentage of accounts that contain values for this attribute.
+When selecting an attribute, you can see the data insights by selecting the [information icon](../../images/icons/info.png). The data insights summary includes information such as top values, an explanation of what the field is, the record count of the values, as well as the percentage of accounts that contain values for this attribute.
+
+The **[!UICONTROL Populated]** section shows the percentage of accounts that have a value for this field.
+
+>[!NOTE]
+>
+>The top values are only displayed if the attribute's values are **not** stored in an array or a key/value pairing.
+
+The **[!UICONTROL Top values]** section displays the 50 most frequently occurring values for the attribute, and includes details such as the value, as well as the percentage of total records the value represents. The number of records for each field is determined by the profile snapshot, which provides a consolidated view of the records after all the contributing dataset data has been merged.
 
 ![A popover that displays a fully populated version of the summary data for an attribute.](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
+
+Alternatively, you can see the distribution of your data with the minimum, mean (average), and maximum values displayed.
+
+![A popover that displays the statistics for an attribute, including the minimum, mean, and maximum values.](../assets/segmentation/audience-builder/statistics.png){width="300"}
 
 If an attribute is populated by less than 25% of accounts, the ![data notice icon](../../images/icons/data-notice.png) will be displayed instead. The same summary data will be displayed for the attribute, regardless.
 
 ![A popover that displays a version of the summary data for an attribute when it's populated by less than 25% of accounts.](../assets/segmentation/audience-builder/empty-summary-data.png){width="300"}
 
+When you add an attribute with summary data, you can also see the summary data in the rule building canvas.
+
+![The attribute with the summary data is displayed.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary.png)
+
+You can either use the dropdown to select from the top values or enter your value, which can automatically resolve to one of the top values.
+
+![The dropdown where you can add the attribute's value is highlighted.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary-dialog.png)
+
 >[!NOTE]
 >
->Summary data is only available if the attribute belongs to the Account, Person, or Opportunity schema. Additionally, the top values are only displayed if the field does **not** contain too many different values and if those field's values are commonly repeated.
->
->This summary data is updated on a **daily** basis.
+>The summary data is updated on a **daily** basis.
 
-For a more detailed guide on the Audience Builder, read the [Audience Builder user guide](../../segmentation/ui/segment-builder.md){target="_blank"}.
+Additionally, the attribute has an **[!UICONTROL Ingestion Type]**. The ingestion type lets you know the origin of the data, and can be one of the following values: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]**, or **[!UICONTROL No Data Ingested]**. 
+
+![The ingestion type for the attribute is displayed.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png){width="300"}
+
+For a more detailed guide on attributes within Audience Builder, read the [Audience Builder user guide](../../segmentation/ui/segment-builder.md){target="_blank"}.
 
 ### Audiences {#audiences}
 

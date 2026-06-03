@@ -1,9 +1,25 @@
 ---
 title: Segmentation Eligibility Criteria Update
 description: Learn about the segmentation eligibility criteria updates that affect the types of audiences that can be evaluated using streaming and edge segmentation.
-hide: yes
-hidefromtoc: yes
+hide: true
 exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
+TQID: https://experienceleague.adobe.com/xyQ6nsneyxiMeFGPF4ywLlpOGZ91K96gPr8-fn4wvzA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 ---
 # Segmentation eligibility criteria update
 
@@ -39,7 +55,7 @@ If you need to evaluate a segment definition using streaming or edge segmentatio
 
 For example, let's say you have two audiences, with one audience housing profile schema data and the other housing experience event schema data:
 
-| Audience | Schema | Source type | Query definition | Audience ID | 
+| Audience | Schema | Source type | Query definition | Audience ID |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | California Residents | Profile | Batch source | Home address is in the state of California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
 | Recent checkouts | Experience Event | Streaming source | Has at least one checkout in the the last 24 hours | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
@@ -60,7 +76,7 @@ However, if you want to combine two audiences with event data, you **cannot** ju
 
 For example, let's say you have two audiences, with both audiences housing experience event schema data:
 
-| Audience | Schema | Source type | Query definition | Audience ID | 
+| Audience | Schema | Source type | Query definition | Audience ID |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | Recent abandons | Experience event | Batch source | Has at least one abandon event in the last 48 hours | `7deb246a-49b4-4687-95f9-6316df049948` |
 | Recent checkouts | Experience Event | Streaming source | Has at least one checkout in the the last 24 hours | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |

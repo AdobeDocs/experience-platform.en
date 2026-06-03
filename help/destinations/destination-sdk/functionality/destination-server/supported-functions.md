@@ -2,6 +2,23 @@
 description: Experience Platform Destination SDK uses Pebble templates, allowing you to transform the data exported from Experience Platform into the format required by your destination.
 title: Supported transformation functions in Destination SDK
 exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
+TQID: https://experienceleague.adobe.com/Ffcr9a1289gNnWda79YxgEHcwuJCF9uYq2wEMroMo-A
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 ---
 # Supported transformation functions in Destination SDK
 
@@ -21,7 +38,7 @@ The message transformation template is used in the [destination server configura
 
 ## Prerequisites {#prerequisites}
 
-To understand the concepts and functions in this reference page, read the [message format](message-format.md) document first. You need to understand the [structure of a profile](message-format.md#profile-structure) in Experience Platform before you can use [!DNL Pebble] templates to transform and the exported data.
+To understand the concepts and functions in this reference page, read the [message format](message-format.md) document first. You need to understand the [structure of a profile](message-format.md#profile-structure) in Experience Platform before you can use [!DNL Pebble] templates to transform the exported data.
 
 Before you advance to the functions documented below, review the templating examples in the section [Using a templating language for the identity, attributes, and audience membership transformations](message-format.md#using-templating). The examples in there start off very simple and increase in complexity.
 
@@ -39,7 +56,7 @@ From the [!DNL Pebble] tags section, Destination SDK only supports:
 >Using `for` is different when iterating through *array* or *map* elements in a template. When you iterate through an array, you can obtain the element directly. When you iterate through a map, you obtain each map entry, which has a key-value pair.
 >
 > * For an example of an array element, think about the identities in an [identityMap](message-format.md#identities) namespace, where you could iterate through elements such as `identityMap.gaid`, `identityMap.email`, or similar.
-> * For an example of a map element, think about [segmentMembership](message-format.md#segment-membership).
+> * For an example of a map element, think about [segmentMembership](message-format.md#audience-membership).
 
 From the [!DNL Pebble] filter section, Destination SDK supports all functions. An example further below shows how the `date` function can be used within Destination SDK.
 
@@ -47,15 +64,15 @@ From the [!DNL Pebble] functions section, Adobe does *not* support the [range](h
 
 ## Example of how the `date` function is used {#date-function}
 
-To exemplify how [!DNL Pebble] functions are used in Destination SDK, see below how the date function ([link in Pebble documentation](https://pebbletemplates.io/wiki/filter/date/)) is used to transform the format of a timestamp.
+To exemplify how [!DNL Pebble] functions are used in Destination SDK, see below how the date function ([link in Pebble documentation](https://pebbletemplates.io/wiki/filter/date/)) transforms the format of a timestamp.
 
-### Use case
+### Use case {#date-use-case}
 
 You want to change the `lastQualificationTime` timestamp from the default [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) value that Experience Platform exports to another value preferred by your destination.
 
-### Example
+### Example {#date-example}
 
-#### Input
+#### Input {#date-input}
 
 ```json
 {
@@ -63,13 +80,13 @@ You want to change the `lastQualificationTime` timestamp from the default [ISO 8
 }
 ```
 
-#### Format
+#### Format {#date-format}
 
 ```java
 {{ lastQualificationTime | date(existingFormat="yyyy-MM-dd'T'HH:mm:sss.SSSX", format="yyyy-MM-dd'T'HH:mm:ssX") }}
 ```
 
-#### Output
+#### Output {#date-output}
 
 ```json
 {
@@ -83,13 +100,13 @@ In addition to the out-of-the-box functions provided by [!DNL Pebble], see below
 
 ### `addedSegments` and `removedSegments` functions {#addedsegments-removedsegments-functions}
 
-#### Use case
+#### Use case {#segments-use-case}
 
 These functions can be used on order to obtain a list of audiences that were added to or removed from a profile.
 
-#### Example
+#### Example {#segments-example}
 
-##### Input
+##### Input {#segments-input}
 
 ```json
 {
@@ -122,13 +139,13 @@ These functions can be used on order to obtain a list of audiences that were add
 }
 ```
 
-##### Format
+##### Format {#segments-format}
 
 ```java
 added: {% for s in addedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %}; removed: {% for s in removedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %}
 ```
 
-##### Output
+##### Output {#segments-output}
 
 ```json
 added: <111111><333333>; removed: <222222>

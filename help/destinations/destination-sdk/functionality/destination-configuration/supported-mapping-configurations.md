@@ -2,6 +2,21 @@
 description: Learn how to configure your destination for the supported identity and attribute mapping configurations.
 title: Supported mapping configurations
 exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
+TQID: https://experienceleague.adobe.com/0qvliHOcv6pRrRhvBLuVMRf3UAylu6djz-suxcouGvM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Supported mapping configurations
 
@@ -27,6 +42,8 @@ Real-time (streaming) destinations built with Destination SDK support the mappin
 | --- | --- |
 | XDM attribute | Custom attribute |
 | Identity namespace | Identity namespace |
+
+{style="table-layout:auto"}
 
 The configuration example below allows customers to use both mappings in the table above.
 
@@ -81,6 +98,8 @@ File-based destinations built with Destination SDK support the mapping configura
 | XDM attribute | Attribute / Custom attribute |
 | Identity namespace | Attribute / Custom attribute |
 | Identity namespace | Identity namespace |
+
+{style="table-layout:auto"}
 
 The configuration example below allows customers to use all the mappings from the table above.
 

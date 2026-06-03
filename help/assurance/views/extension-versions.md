@@ -2,6 +2,13 @@
 title: Extensions Versions View
 description: This guide details information about the Extensions Versions view in Adobe Experience Platform Assurance.
 exl-id: a3a649da-1ef1-45a3-a1ed-6a7bc16c2987
+TQID: https://experienceleague.adobe.com/gv2F7ceZv5wnWwYkXPj2zq8oVQh7BYfSVWg32IDY-Cc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Extension Versions view
 

@@ -3,6 +3,18 @@ title: Overview of Advanced Statistical Modeling with Trusted Flow
 description: Learn how to use SQL to leverage ML models and transform raw data into actionable insights with improved accuracy. Enjoy simplified and automated data preprocessing on large datasets in a timely, parallel, and scalable manner with Data Distiller Feature Engineering SQL extension functions.
 role: Developer
 exl-id: 52df146a-2052-4720-919b-7dd40c06f160
+TQID: https://experienceleague.adobe.com/s1HnK-VzhQU27yXkrVrFYdWCI8y3-N01n9EPH22OE4U
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Overview of advanced statistical modeling with Trusted Flow
 

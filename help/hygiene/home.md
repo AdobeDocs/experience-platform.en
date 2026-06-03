@@ -2,19 +2,27 @@
 title: Advanced Data Lifecycle Management Overview
 description: Advanced Data Lifecycle Management allows you to manage the lifecycle of your data by updating or purging outdated or inaccurate records.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
+TQID: https://experienceleague.adobe.com/iUo7h2mcsIwyECpzhl3NMAkqayBZuBSI1kvcYwOcupw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Advanced Data Lifecycle Management in Adobe Experience Platform
 
 Adobe Experience Platform provides a robust set of tools to manage large, complicated data operations in order to orchestrate consumer experiences. As data is ingested into the system over time, it becomes increasingly important to manage your data stores so that data is used as expected, is updated when incorrect data needs correcting, and is deleted when organizational policies deem it necessary.
-
-<!-- Experience Platform's data lifecycle capabilities allow you to manage your stored data through the following:
-
-* Scheduling automated dataset expirations
-* Deleting individual records from one or all datasets
-
->[!IMPORTANT]
->
->Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead. -->
 
 These activities can be performed using the [[!UICONTROL Data Lifecycle] UI workspace](#ui) or the [Data Hygiene API](#api). When a data lifecycle job executes, the system provides transparency updates at each step of process. See the section on [timelines and transparency](#timelines-and-transparency) for more information on how each job type is represented in the system.
 
@@ -34,12 +42,13 @@ The [!UICONTROL Data Lifecycle] UI is built on top of the Data Hygiene API, whos
 
 ## Timelines and transparency {#timelines-and-transparency}
 
-[Record delete](./ui/record-delete.md) and dataset expiration requests each have their own processing timelines and provide transparency updates at key points in their respective workflows. 
+[Record delete](./ui/record-delete.md) and dataset expiration requests each have their own processing timelines and provide transparency updates at key points in their respective workflows.
 
 >[!TIP]
 >
->To monitor your current usage against quota limits, see the [Quota reference guide](./api/quota.md).  
->For entitlement rules, monthly caps, SLA timelines, and exception handling policies, see the [Record delete (UI)](./ui/record-delete.md#quotas) and [Workorder (API)](./api/workorder.md#quotas) documentation.
+>For additional reference information:
+>- To monitor your current usage against quota limits, see the [Quota reference guide](./api/quota.md).
+>- For entitlement rules, monthly caps, SLA timelines, and exception handling policies, see the [Record delete quota guide (UI)](./ui/record-delete.md#quotas) and [Work order quota guide (API)](./api/workorder.md#quotas).
 
 The following takes place when a [dataset expiration request](./ui/dataset-expiration.md) is created:
 
@@ -54,28 +63,10 @@ The following takes place when a [dataset expiration request](./ui/dataset-expir
 
 {style="table-layout:auto"}
 
->[!IMPORTANT]
->
->Dataset deletions in Amazon Web Services (AWS) are subject to a latency of around three hours before changes are fully applied. This includes up to two hours for the dataset to be flagged for deletion, followed by an additional hour before it is fully dropped from the system. In contrast, deletion requests for Experience Platform instances that use Azure Data Lake result in immediate changes across business functions. 
->
->For AWS users, this delay may impact batch segmentation, streaming segmentation, previews, estimates, exports, and data access. This latency only affects customers using AWS, as Azure Data Lake users experience immediate updates. For AWS users, it may take up to three hours for deletion requests to fully propagate through all impacted systems. Adjust your expectations accordingly.
+### Record delete timelines {#record-delete-transparency}
 
+Record delete requests are processed based on entitlement tier, with different SLA commitments for standard and Shield customers. For a full breakdown of processing stages and timelines, see [Data Lifecycle processing timelines](./data-lifecycle-processing-timelines.md).
 
-<!-- ### Record deletes {#record-delete-transparency}
+## Next steps {#next-steps}
 
-The following takes place when a [record delete request](./ui/record-delete.md) is created:
-
-| Stage | Time after request submission | Description |
-| --- | --- | --- |
-| Request is submitted | 0 hours | A data steward or privacy analyist submits a record delete request. The request is visible in the [!UICONTROL Data Lifecycle UI] after it has been submitted. |
-| Profile lookups updated | 3 hours | The change in profile counts caused by the deleted identity are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
-| Segments updated | 24 hours | Once profiles are removed, all related [segments](../segmentation/home.md) are updated to reflect their new size. |
-| Journeys and destinations updated | 26 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
-| Records soft deleted in data lake | 7 days | The data is soft deleted from the data lake. |
-| Data vacuuming completed | 14 days | The [status of the lifecycle job](./ui/browse.md#view-details) updates to indicate that the job has completed, meaning that data vacuuming has been completed on the data lake and the relevant records have been hard deleted. |
-
-{style="table-layout:auto"} -->
-
-## Next steps
-
-This document provided an overview of Experience Platform's Data Lifecycle capabilities. To get started making data hygiene requests in the UI, refer to the [UI guide](./ui/overview.md). To learn how to create Data Lifecycle jobs programmatically, refer to the [Data Hygiene API guide](./api/overview.md)
+This document provides an overview of Experience Platform's Data Lifecycle capabilities. To get started making data hygiene requests in the UI, see the [data lifecycle UI guide](./ui/overview.md). To create Data Lifecycle jobs programmatically, see the [Data Hygiene API guide](./api/overview.md).

@@ -2,6 +2,13 @@
 title: Update Dataflows Using the Flow Service API
 description: Learn how to a dataflow, including its name, description, and schedule, using the Flow Service API.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
+TQID: https://experienceleague.adobe.com/A9CUkHDJHIucIGXLe8vI7I0z0CWGJu9LmCBX5sl-lUo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Update dataflows using the Flow Service API
 

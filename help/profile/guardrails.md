@@ -5,6 +5,34 @@ product: experience platform
 type: Documentation
 description: Learn about performance and system-enforced guardrails for profile data and segmentation to ensure an optimal use of Real-Time CDP functionality.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
+TQID: https://experienceleague.adobe.com/KAewofch1CMa4WA-wU3yQsIAKxbgzeea3UAiKeIBDHQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: b4dd41a7-ccf8-4e9d-918e-acaab534a307
+    internal-label: Data quality
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Default guardrails for [!DNL Real-Time Customer Profile] data and segmentation
 
@@ -59,11 +87,11 @@ The following guardrails provide recommended limits when modeling Real-Time Cust
 | XDM Individual Profile class datasets | 20 | Performance guardrail | A maximum of 20 datasets that leverage the XDM Individual Profile class is recommended. |
 | XDM ExperienceEvent class datasets | 20 | Performance guardrail | A maximum of 20 datasets that leverage the XDM ExperienceEvent class is recommended. |
 | Adobe Analytics report suite datasets enabled for Profile | 1 | Performance guardrail | A maximum of one (1) Analytics report suite dataset should be enabled for Profile. Attempting to enable multiple Analytics report suite datasets for Profile may have unintended consequences for data quality. For more information, see the section on [Adobe Analytics datasets](#aa-datasets) in the Appendix. |
-| Multi-entity relationships | 5 | Performance guardrail | A maximum of 5 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
+| Multi-entity relationships | 5 | Performance guardrail | A maximum of 5 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. |
 | JSON depth for ID field used in multi-entity relationship| 4 | Performance guardrail | The recommended maximum JSON depth for an ID field used in multi-entity relationships is 4. This means that in a highly nested schema, fields that are nested more than 4 levels deep should not be used as an ID field in a relationship.|
 | Array cardinality in a profile fragment|<=500|Performance guardrail|The optimal array cardinality in a profile fragment (time-independent data) is <=500. |
 | Array cardinality in ExperienceEvent | <=10 | Performance guardrail | The optimal array cardinality in an ExperienceEvent (time series data) is <=10. |
-| Identity count for individual profile Identity Graph | 50 | System-enforced guardrail | **The maximum number of identities in an Identity Graph for an individual profile is 50.** Any profiles with more than 50 identities are excluded from segmentation, exports, and lookups. For more information, read the guide on [understanding identity deletion logic](../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated). | 
+| Identity count for individual profile Identity Graph | 50 | System-enforced guardrail | **The maximum number of identities in an Identity Graph for an individual profile is 50.** Any profiles with more than 50 identities are excluded from segmentation, exports, and lookups. For more information, read the guide on [understanding identity deletion logic](../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated). |
 
 {style="table-layout:auto"}
 
@@ -94,7 +122,7 @@ The following guardrails refer to data size and provide recommended limits for d
 | Maximum profile fragment size | 50MB | System-enforced guardrail | **The maximum size of a single profile fragment is 50MB.** Segmentation, exports, and lookups may fail for any [profile fragment](#profile-fragments) that is larger than 50MB.|
 | Maximum profile storage size | 50MB | Performance guardrail | **The maximum size of a stored profile is 50MB.** Adding new [profile fragments](#profile-fragments) into a profile that is larger than 50MB will affect system performance. For example, a profile could contain a single fragment that is 50MB or it could contain multiple fragments across multiple datasets with a combined total size of 50MB. Attempting to store a profile with a single fragment larger than 50MB, or multiple fragments that total more than 50MB in combined size, will affect system performance.|
 | Number of Profile or ExperienceEvent batches ingested per day | 90 | Performance guardrail | **The maximum number of Profile or ExperienceEvent batches ingested per day is 90.** This means that the combined total of Profile and ExperienceEvent batches ingested each day cannot exceed 90. Ingesting additional batches will affect system performance.|
-| Number of ExperienceEvents per profile record | 5000 | Performance guardrail | **The maximum number of ExperienceEvents per profile record is 5000.** Profiles with more than 5000 ExperienceEvents will only use the **latest** 5000 ExperienceEvents when used with segmentation. | 
+| Number of ExperienceEvents per profile record | 5000 | Performance guardrail | **The maximum number of ExperienceEvents per profile record is 5000.** Profiles with more than 5000 ExperienceEvents will only use the **latest** 5000 ExperienceEvents when used with segmentation. |
 
 {style="table-layout:auto"}
 
@@ -115,13 +143,13 @@ The guardrails outlined in this section refer to the number and nature of audien
 | Guardrail | Limit | Limit Type | Description |
 | --------- | ----- | ---------- | ----------- |
 | Audiences per sandbox | 4000 | Performance guardrail | You can have up to 4000 **active** audiences per sandbox. You can have more than 4000 audiences per organization, as long as there are less than 4000 audiences in each **individual** sandbox. This is inclusive of batch, streaming, and edge audiences. Attempting to create additional audiences may affect system performance. Read more about [creating audiences](/help/segmentation/ui/segment-builder.md) through the segment builder.|
-| Edge audiences per sandbox | 150 | Performance guardrail | You can have up to 150 **active** edge audiences per sandbox. You can have more than 150 edge audiences per organization, as long as there are less than 150 edge audiences in each **individual** sandbox. Attempting to create additional edge audiences may affect system performance. Read more about [edge audiences](/help/segmentation/methods/edge-segmentation.md).| 
+| Edge audiences per sandbox | 150 | Performance guardrail | You can have up to 150 **active** edge audiences per sandbox. You can have more than 150 edge audiences per organization, as long as there are less than 150 edge audiences in each **individual** sandbox. Attempting to create additional edge audiences may affect system performance. Read more about [edge audiences](/help/segmentation/methods/edge-segmentation.md).|
 | Edge throughput across all sandboxes | 1500 RPS | Performance guardrail | Edge segmentation supports a combined peak value of 1500 inbound events per second entering the Adobe Experience Platform Edge Network across your production and development sandboxes. Edge segmentation may take up to 350 milliseconds to process an inbound event after it enters the Adobe Experience Platform Edge Network. Read more about [edge audiences](/help/segmentation/methods/edge-segmentation.md). |
 | Streaming audiences per sandbox | 500 | Performance guardrail | You can have up to 500 **active** streaming audiences per sandbox. You can have more than 500 streaming audiences per organization, as long as there are less than 500 streaming audiences in each **individual** sandbox. This is inclusive of both streaming and edge audiences. Attempting to create additional streaming audiences may affect system performance. Read more about [streaming audiences](/help/segmentation/methods/streaming-segmentation.md).|
 | Streaming throughput across all sandboxes | 1500 RPS | Performance guardrail | Streaming segmentation supports a combined peak value of 1500 inbound events per second across your production and development sandboxes. Streaming segmentation may take up to 5 minutes to qualify a profile for segment membership. Read more about [streaming audiences](/help/segmentation/methods/streaming-segmentation.md). |
 | Batch audiences per sandbox | 4000 | Performance guardrail | You can have up to 4000 **active** batch audiences per sandbox. You can have more than 4000 batch audiences per organization, as long as there are less than 4000 batch audiences in each **individual** sandbox. Attempting to create additional batch audiences may affect system performance.|
 | Account audiences per sandbox | 50 | System-enforced guardrail | You can create a maximum of 50 account audiences in a sandbox. After you reach 50 audiences in a sandbox, the **[!UICONTROL Create audience]** control is disabled when trying to create a new account audience. Read more about [account audiences](/help/segmentation/types/account-audiences.md). |
-| Published compositions per sandbox | 10 | Performance guardrail | You can have a maximum of  10 published compositions in a sandbox. Read more about [audience composition in the UI guide](/help/segmentation/ui/audience-composition.md). **Note**: Compositions created with Federated Audience Composition are **not** counted with this guardrail. |
+| Published compositions per sandbox | 50 | Performance guardrail | You can have a maximum of  50 published compositions in a sandbox. Read more about [audience composition in the UI guide](/help/segmentation/ui/audience-composition.md). **Note**: Compositions created with Federated Audience Composition are **not** counted with this guardrail. |
 | Maximum audience size | 30 percent | Performance guardrail | The recommended maximum membership of an audience is 30 percent of the total number of profiles in the system. Creating audiences with more than 30% of the profiles as members or multiple large audiences is possible but will impact system performance. |
 | Flexible audience evaluation runs | 50 per year (production sandbox)<br/>100 per year (development sandbox) | System-enforced guardrail | You have a maximum of 50 flexible audience evaluation runs per year per **production** sandbox. You have a maximum of 100 flexible audience evaluation runs per year per **development** sandbox. |
 | Flexible audience evaluation runs | 2 per day | System-enforced guardrail | You have a maximum of 2 runs per day per sandbox. |
@@ -191,3 +219,4 @@ See the following documentation for more information on other Experience Platfor
 * [Real-Time Customer Data Platform (B2C Edition - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-Time Customer Data Platform (B2P - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-Time Customer Data Platform (B2B - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+

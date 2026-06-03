@@ -4,6 +4,13 @@ solution: Experience Platform
 title: XDM Field Type Constraints
 description: A reference for field type constraints in Experience Data Model (XDM), including the other serialization formats they can be mapped to and how to define your own field types in the API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
+TQID: https://experienceleague.adobe.com/Tn19LbfmJL2BzSKZHyBKo7YG8mm--fuWb-UrMeJ-mpg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # XDM field type constraints
 
@@ -149,7 +156,7 @@ The sections below describe how each XDM type maps to other common serialization
 
 ### Parquet, Spark SQL, and Java {#parquet}
 
-| XDM type | Parquet | Spark SQL | Java | 
+| XDM type | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | Type: `BYTE_ARRAY`<br>Annotation: `UTF8` | `StringType` | `java.lang.String` |
 | [!UICONTROL Number] | Type: `DOUBLE` | `LongType` | `java.lang.Double` |
@@ -183,7 +190,7 @@ The sections below describe how each XDM type maps to other common serialization
 
 ### MongoDB, Aerospike, and Protobuf 2 {#mongo}
 
-| XDM type | MongoDB | Aerospike | Protobuf 2 | 
+| XDM type | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `string` | `String` | `string` |
 | [!UICONTROL Number] | `double` | `Double` | `double` |

@@ -3,6 +3,32 @@ title: Flexible Audience Evaluation Guide
 description: Learn how to use flexible audience evaluation to run batch segmentation jobs on demand.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
+TQID: https://experienceleague.adobe.com/ziSkEBzlEJIQmFi06RdYIAG5XdWPzIa4mw6XQL8-Uwk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Flexible audience evaluation guide
 
@@ -25,7 +51,9 @@ When you run flexible audience evaluation, please keep the following conditions 
 
 - You can only use flexible audience evaluation **twice** per day per sandbox. This limit resets at midnight (UTC).
 - You have a **maximum** of 50 flexible audience evaluation runs per year per **production** sandbox.
+  - A year is defined as one year starting on the date of your Experience Platform contract for flexible audience evaluation. For example, if you contract started on May 18th, your number of flexible audience evaluation runs will reset every May 18th.
 - You have a **maximum** of 100 flexible audience evaluation runs per year per **development** sandbox.
+  - A year is defined as one year starting on the date of your Experience Platform contract for flexible audience evaluation. For example, if you contract started on May 18th, your number of flexible audience evaluation runs will reset every May 18th.
 - All the audiences **must** have an origin of "Segmentation Service".
 - All the audiences **must** be evaluated using batch segmentation.
 - All the audiences **must** be people-based audiences.

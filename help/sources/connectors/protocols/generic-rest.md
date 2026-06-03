@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Generic REST API Source Connector Overview
 description: Learn how to connect Generic REST API to Adobe Experience Platform using APIs or the user interface.
 exl-id: e3449e33-7261-4aa2-bce9-5530eb4fcc68
+TQID: https://experienceleague.adobe.com/wI2PFa0uIpGWcMmC0-62bp7ZGPipfml60g4EjRo-eRE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # (Beta) [!DNL Generic REST API]
 

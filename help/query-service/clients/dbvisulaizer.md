@@ -4,6 +4,18 @@ solution: Experience Platform
 title: Connect DbVisualizer to Query Service
 description: This document walks through the steps for connecting DbVisualizer with Adobe Experience Platform Query Service.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
+TQID: https://experienceleague.adobe.com/GtA4-9y9x4viiBEQX7v5HYN0mC2x3zZ9sHBnLaRKOxk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Connect [!DNL DbVisualizer] to [!DNL Query Service] {#connect-dbvisualizer}
 
@@ -76,7 +88,7 @@ You can make a connection using expiring or non-expiring credentials. To make a 
 |**[!UICONTROL Database Server]**| This is your Experience Platform **[!UICONTROL Host]** credential. |
 |**[!UICONTROL Database Port]**| The port for [!DNL Query Service]. You must use port **80** or **5432** to connect with [!DNL Query Service].|
 |**[!UICONTROL Database]**| Use your Experience Platform **[!UICONTROL Database]** credential value: `prod:all`.|
-|**[!UICONTROL Database Userid]**| This is your Experience Platform organization Id. Use your Experience Platform **[!UICONTROL Username]** credential value. The ID will be in the format of `ORG_ID@AdobeOrg`.| 
+|**[!UICONTROL Database Userid]**| This is your Experience Platform organization Id. Use your Experience Platform **[!UICONTROL Username]** credential value. The ID will be in the format of `ORG_ID@AdobeOrg`.|
 |**[!UICONTROL Database Password]**| This alphanumeric string is your Experience Platform **[!UICONTROL Password]** credential. If you want to use non-expiring credentials, this value is the concatenated arguments from the `technicalAccountID` and the `credential` downloaded in the configuration JSON file. The password value takes the form: {technicalAccountId}:{credential}. The configuration JSON file for non-expiring credentials is a one-time download during their initialization that Adobe does not keep a copy of. |
 
 After you have input all relevant credentials, select **[!DNL Connect]**. 

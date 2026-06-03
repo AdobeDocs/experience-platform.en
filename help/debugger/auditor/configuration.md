@@ -2,6 +2,26 @@
 title: Configuration Test Reference
 description: Learn how the auditor feature tests for configurations in Adobe Experience Platform Debugger.
 exl-id: 92b07224-57f1-4891-9923-aa079945e6bc
+TQID: https://experienceleague.adobe.com/vbv1mzjyh8KEqZFwPHbVOGQj1zL3NAn7UJY-nWJq7Y4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+    internal-label: Best practices
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
 ---
 # Configuration test reference
 
@@ -15,9 +35,9 @@ Configuration tests scan for specific settings, values, or potential conflicts i
 
 | Test | Weight |  Criteria | Recommendation |
 | --- | --- | --- | --- |
-| Advertising Cloud - Conversion names use only alpha-numeric characters | 3 | The `ev_conversion_property_name` parameter should only contain numeric and decimal values EXCEPT for the `ev_transid` parameter, which can contain text or numeric values. Look for `everesttech.net` pixels that contain a URL parameter starting with  `ev_`. | Make sure your transaction property parameters only contain numeric and decimal values.<br><br>Warning: Any other value types might cause data loss. |
-| Advertising Cloud - Conversion names use URL-safe characters | 3 | Conversion property names should not contain an ampersand or question mark. | Make sure transaction property parameters do not contain a non-encoded ampersand or question mark. These break the URL format.<br><br>Warning: Property parameters that contain a non-encoded ampersand or question mark, (for example:  `ev_formComplete?=1` or  `ev_formComplete&Submit=1`), might result in data loss. |
-| Advertising Cloud - Transaction ID Implemented Correctly | 1 | The property name  `ev_transid=` should not be empty. | The property name  `ev_transid=` should not be left without a value. If this is left without a value, there could be transaction data loss. Assign a value to `ev_transid=` or remove the parameter from the pixel. |
+| Adobe Advertising - Conversion names use only alpha-numeric characters | 3 | The `ev_conversion_property_name` parameter should only contain numeric and decimal values EXCEPT for the `ev_transid` parameter, which can contain text or numeric values. Look for `everesttech.net` pixels that contain a URL parameter starting with  `ev_`. | Make sure your transaction property parameters only contain numeric and decimal values.<br><br>Warning: Any other value types might cause data loss. |
+| Adobe Advertising - Conversion names use URL-safe characters | 3 | Conversion property names should not contain an ampersand or question mark. | Make sure transaction property parameters do not contain a non-encoded ampersand or question mark. These break the URL format.<br><br>Warning: Property parameters that contain a non-encoded ampersand or question mark, (for example:  `ev_formComplete?=1` or  `ev_formComplete&Submit=1`), might result in data loss. |
+| Adobe Advertising - Transaction ID Implemented Correctly | 1 | The property name  `ev_transid=` should not be empty. | The property name  `ev_transid=` should not be left without a value. If this is left without a value, there could be transaction data loss. Assign a value to `ev_transid=` or remove the parameter from the pixel. |
 | Analytics - Instantiated in DOM | 5 | The Adobe Analytics code is either not installed or failing to execute. Returns 0 when no Analytics code is found on the web page. | Verify that the Analytics tag is implemented on the page and is not blocked by subsequent script activities.<br><br>[Additional information](https://experienceleague.adobe.com/docs/analytics/implementation/home.html) |
 | Analytics - Instantiated once | 5 | The Adobe Analytics code was detected more than once on the page. . Returns 0 when no A-nalytics code is found on the web page. | Make sure there is only one Analytics tag on the page.<br><br>[Additional information](https://experienceleague.adobe.com/docs/analytics/implementation/home.html) |
 | Analytics - Latest version | 3 | Your pages are not running the latest version of the Analytics code library. Code libraries that power Experience Cloud technologies are constantly being updated and tweaked in order to take advantage of performance improvements and provide the latest features. Returns 0 when no Analytics code is found on the web page. | Install the latest version of the Analytics library.<br><br>[Additional information](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) |

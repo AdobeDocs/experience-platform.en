@@ -4,6 +4,20 @@ solution: Experience Platform
 title: Privacy Service Troubleshooting Guide
 description: This document provides answers to frequently asked questions about Privacy Service, as well as information on commonly encountered errors in the API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
+TQID: https://experienceleague.adobe.com/aa6yePFPHhlFpnSOWs0AhpzXLeGBL-hCvfyeiUSzHf0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # [!DNL Privacy Service] troubleshooting guide
 

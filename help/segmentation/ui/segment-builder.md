@@ -3,6 +3,30 @@ solution: Experience Platform
 title: Segment Builder UI Guide
 description: The Segment Builder in the Adobe Experience Platform UI provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
+TQID: https://experienceleague.adobe.com/-WKclcOvYGl1pg6jrUR2UwrXy9BAw9j--sXM3DxRILo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: f0c9f224-75f2-4864-8de6-859ae7856690
+    internal-label: Segment Match
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
 ---
 # [!DNL Segment Builder] UI guide
 
@@ -50,6 +74,16 @@ You can see these building blocks in the **[!UICONTROL Fields]** section on the 
 
 ![The fields section of the Segment Builder is highlighted.](../images/ui/segment-builder/segment-fields.png)
 
+You can select the ![settings icon](/help/images/icons/settings.png) to adjust the settings for the displayed fields.
+
+For the **[!UICONTROL Available fields]**, you can either show only the fields that contain data or the full XDM schema.
+
+For the **[!UICONTROL Data sources]**, you can filter to show attributes that come from the specified ingestion types. Supported values include **[!UICONTROL Show batch data]**, **[!UICONTROL Show streaming/edge data]**, and **[!UICONTROL Show fields with no ingested data]**.
+
+For the **[!UICONTROL Merge policy]**, you can choose which merge policy the fields belong to.
+
+![The settings area is displayed within Segment Builder.](../images/ui/segment-builder/settings.png)
+
 ### Attributes
 
 The **[!UICONTROL Attributes]** tab allows you to browse [!DNL Profile] attributes belonging to the [!DNL XDM Individual Profile] class. Each folder can be expanded to reveal additional attributes, where each attribute is a tile that can be dragged onto the rule builder canvas in the center of the workspace. The [rule builder canvas](#rule-builder-canvas) is discussed in more detail later in this guide.
@@ -58,7 +92,7 @@ The **[!UICONTROL Attributes]** tab allows you to browse [!DNL Profile] attribut
 
 The attributes you add can be one of the following data types:
 
-| Data type | Common use cases | 
+| Data type | Common use cases |
 | --------- | ---------------- |
 | String | Names, email addresses, product categories |
 | Numeric | Age, revenue, product quantities, loyalty scores |
@@ -128,7 +162,7 @@ You can use the following operators for the respective data types:
 | This month | The value occurred this calendar month. | Birth month **is** This month |
 | This year | The value occurred this calendar year. | Sign up date **is** This year |
 | Custom date | The value occurred on the given date. | Purchase date **is on** Custom date |
-| In last | The value occurred within the last period of time chosen. Birthday **is** In last month |
+| In last | The value occurred within the last period of time chosen. Birthday **is** In last month | |
 | From (to) | The value occurred within the two calendar dates chosen. This period of time is **inclusive** of both dates. | Account creation date **is** From April 20th to July 13th |
 | During | The value occurred within the selected month or year. | Sale **is** During March |
 | Within (+/-) | The value occurred within days, weeks, months, or years of the selected date. This period of time is **inclusive** of both dates. | Cart abandon is **Within** 3 days |
@@ -140,6 +174,34 @@ You can use the following operators for the respective data types:
 For more detailed information on the time and date functions, read the [time constraints section](#time-constraints).
 
 +++
+
+When you select an attribute, you can see the data insights for the attribute by selecting the [information icon](../../images/icons/info.png). The data insights summary includes information such as an explanation of what the field is, the record count of the values, as well as the percentage of profiles that contain values for this attribute.
+
+>[!NOTE]
+>
+>The top values are only displayed if the attribute's values are **not** stored in an array or a key/value pairing.
+
+The **[!UICONTROL Top values]** section displays the 50 most frequently occurring values for the attribute, and includes details such as the value, as well as the percentage of total records the value represents.
+
+![A popover that displays the summary data for an attribute](/help/segmentation/images/ui/segment-builder/summary-data.png){width="300"}
+
+If an attribute is populated by less than 25% of profiles, the ![data notice icon](../../images/icons/data-notice.png) will be displayed instead. The same summary data will be displayed for the attribute, regardless.
+
+>[!NOTE]
+>
+>The top values are only displayed if the field does **not** contain too many different values and if those field's values are commonly repeated. Additionally, this summary data is updated on a **daily** basis.
+
+When you add an attribute with summary data, you can also see the summary data in the rule building canvas.
+
+![The attribute with the summary data is displayed.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary.png)
+
+You can either use the dropdown to select from the top values or enter your value, which can automatically resolve to one of the top values.
+
+![The dropdown where you can add the attribute's value is highlighted.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary-dialog.png)
+
+Additionally, the attribute has an **[!UICONTROL Ingestion Type]**. The ingestion type lets you know the origin of the data, and can be one of the following values: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]**, or **[!UICONTROL No Data Ingested]**. 
+
+![The ingestion type for the attribute is displayed.](/help/segmentation/images/ui/segment-builder/ingestion-type.png){width="300"}
 
 #### Computed attributes {#computed-attributes}
 
@@ -182,7 +244,7 @@ For example, consider a situation where you had two report suites with the follo
 | Field | Report Suite Schema A | Report Suite Schema B |
 | ----- | --------------------- | --------------------- |
 | eVar1 | Referring Domain | Logged in Y/N |
-| eVar2 | Page Name | Member Loyalty ID | 
+| eVar2 | Page Name | Member Loyalty ID |
 | eVar3 | URL | Page Name |
 | eVar4 | Search Terms | Product Name |
 | event1 | Clicks | Page Views |
@@ -375,7 +437,7 @@ The list of available time constraints are as follows:
 
 | Time constraint | Description | Can enable ignore year | Example |
 | --------------- | ----------- | ------------------- | ------- |
-| Today | The attribute or event being compared **must** occur today. | Yes | ![An example of the "Today" time constraint being used.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Today | The attribute or event being compared **must** occur today. This is the default time constraint selected. | Yes | ![An example of the "Today" time constraint being used.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | Yesterday | The attribute or event being compared **must** occur yesterday. | Yes | ![An example of the "Yesterday" time constraint being used.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | This month | The attribute or event being compared **must** occur this calendar month. | Yes | ![An example of the "This month" time constraint being used.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | This year | The attribute or event being compared **must** occur this calendar year. | No | ![An example of the "This year" time constraint being used.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -390,6 +452,16 @@ The list of available time constraints are as follows:
 | In next | The attribute or event being compared must occur within the next period of time selected. The selected periods of time include minutes, hours, days, weeks, months, and years. | No | ![An example of the "In next" time constraint being used.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
 | Exists | The attribute exists. | No | ![An example of the "Exists" time constraint being used.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
 | Does not exist | The attribute does not exist. | No | ![An example of the "Does not exist" time constraint being used.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+| Now | The attribute or event being compared **must** occur right when the audience is evaluated. This time constraint can only be used as a secondary-level option, within time constraints such as "Before" or "After". | Yes | ![An example of the "Now" time constraint being used.](../images/ui/segment-builder/time-constraints/now.png){width="100" zoomable="yes"} |
+
+>[!TIP]
+>
+>The difference between the "Today" time constraint and "Now" time constraint is subtle, but significant. 
+>
+>- Use the "Today" time constraint to check if the attribute or event being compared is happening at **midnight** of the current day. 
+>- Use the "Now" time constraint to check if the attribute or event being compared is happening **right now**.
+>
+>However, there's one major exception - if you're using "Today" as a top-level time constraint, that means you're checking if the attribute or event occurred at **any** point today.
 
 +++
 
@@ -426,7 +498,7 @@ The list of available time constraints for this operation differs from the main 
 | Time constraint | Description |
 | --------------- | ----------- |
 | After | The latter event **must at least** take place after the prior event. |
-| Within | The two events **must** take place during the time period listed within the time constraint. | 
+| Within | The two events **must** take place during the time period listed within the time constraint. |
 
 >[!NOTE]
 >

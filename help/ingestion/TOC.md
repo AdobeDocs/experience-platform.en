@@ -5,6 +5,7 @@ breadcrumb-title: Data Ingestion Guide
 user-guide-description: Bring your data into Experience Platform through batch or streaming ingestion.
 feature: Data Ingestion
 role: Developer
+nudge: true
 ---
 
 # Adobe Experience Platform Data Ingestion {#ingestion}
@@ -14,7 +15,7 @@ role: Developer
   - [Overview](streaming-ingestion/overview.md)
   - [Kafka connector](streaming-ingestion/kafka.md)
   - [Troubleshooting](streaming-ingestion/troubleshooting.md)
-  - [IP Address Allowlisting](streaming-ingestion/allowlisting.md)
+  - {hide-from-toc} [IP Address Allowlisting](streaming-ingestion/allowlisting.md)
 - Batch ingestion{#batch}
   - [Getting started with batch ingestion APIs](batch-ingestion/getting-started.md)
   - [API Overview](batch-ingestion/overview.md)

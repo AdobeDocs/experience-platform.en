@@ -3,6 +3,23 @@ description: Learn how you can monitor dataflows during segmentation using the E
 title: Monitor Dataflows for Audiences in the UI
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
+TQID: https://experienceleague.adobe.com/Glp4nPQuXeX12qBheEqWlSZTiSsthDznCzTEw5sLp1k
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Monitor dataflows for audiences in the UI
 
@@ -54,7 +71,7 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Last evaluation method]** | The evaluation method of the audience. Since only batch segmentation is supported, the only possible value is **[!UICONTROL Batch]**. |
 | **[!UICONTROL Last evaluation profiles]** | The number of profiles that were evaluated in the audience's last evaluation job. |
 | **[!UICONTROL Last activation timestamp]** | The date and time that the audience's last activation job ran. |
-| **[!UICONTROL Last activation status]** | The status of the audience's last activation job. Possible values include **[!UICONTROL Success]**, **[!UICONTROL No runs]**, and **[!UICONTROL Failed]**. | 
+| **[!UICONTROL Last activation status]** | The status of the audience's last activation job. Possible values include **[!UICONTROL Success]**, **[!UICONTROL No runs]**, and **[!UICONTROL Failed]**. |
 | **[!UICONTROL Last activation identities]** | The number of identities that were activated in the audience's last activation job. |
 | **[!UICONTROL Last activation destination]** | The name of the destination that the audience's last activation job activated to. |
 
@@ -113,7 +130,7 @@ Under the audiences section, you can see a list of audiences that were activated
 
 For the audiences section, the following metrics are available:
 
-| Metric | Description | 
+| Metric | Description |
 | ------ | ----------- |
 | **[!UICONTROL Name]** | The name of the audience that was activated. |
 | **[!UICONTROL Identities activated]** | The total number of identities that were successfully activated to the destination, based on the profiles received.  |
@@ -154,7 +171,7 @@ Under the [!UICONTROL Audiences] section, you can see a list of audiences that a
 
 For the [!UICONTROL Audiences] section, the following metrics are available:
 
-| Metric | Description | 
+| Metric | Description |
 | ------ | ----------- |
 | **[!UICONTROL Name]** | The name of the audience that is being evaluated. |
 | **[!UICONTROL Profile count]** | The number of profiles that are being evaluated. |

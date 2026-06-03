@@ -2,6 +2,13 @@
 title: Product Class
 description: Learn about the Product class in Experience Data Model (XDM).
 exl-id: 911680ae-b761-4945-9ad3-0233eaea89b0
+TQID: https://experienceleague.adobe.com/sCziat3nUG4ol9xb26ssVJmkwKVvz-1ya5pqjx8CsSA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Product] class
 

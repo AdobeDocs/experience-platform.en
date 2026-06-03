@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Channel Details Schema Field Group
 description: Learn about the Channel Details schema field group.
 exl-id: b8ec2f57-6882-466e-9b22-61fb2178fb1e
+TQID: https://experienceleague.adobe.com/XdT9A0-YF5x0k-XPjmN5kABrIBqao1gOcLbIKcujues
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Channel Details] schema field group
 

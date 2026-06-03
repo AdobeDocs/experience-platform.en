@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Getting Started with Self-Serve Sources (Batch SDK)
 description: This document provides an introduction to the prerequisite information you need to know before attempting to create a new source using Self-Serve Sources (Batch SDK).
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
+TQID: https://experienceleague.adobe.com/jG8-cM2uupkzf7H-YWHeLqtAbnLWW9eLnO1qQAur9yc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Getting Started with Self-Serve Sources (Batch SDK)
 

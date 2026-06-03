@@ -4,6 +4,30 @@ solution: Experience Platform
 title: Query Editor UI Guide
 description: The Query Editor is an interactive tool provided by Adobe Experience Platform Query Service, which allows you to write, validate, and run queries for customer experience data within the Experience Platform user interface. Query Editor supports developing queries for analysis and data exploration, and allows you to run interactive queries for development purposes as well as non-interactive queries to populate datasets in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
+TQID: https://experienceleague.adobe.com/heUDuv13asGb6RZOgLqm2-3ngvI1dx1EylCbSRBAsL0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+subfeature_v2:
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+    internal-label: Monitoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Query Editor UI guide
 
@@ -117,11 +141,13 @@ The [!UICONTROL Format text] feature makes your query more readable by adding st
 
 ![The Query Editor with [!UICONTROL Format text] and the SQL statements highlighted.](../images/ui/query-editor/format-text.png)
 
-<!-- ### Undo text {#undo-text}
+<!-- 
+### Undo text {#undo-text}
 
 If you format your SQL in the Query Editor, you can undo the formatting applied by the [!UICONTROL Format text] feature. To return your SQL back to its original form, select **[!UICONTROL Undo text]**.
 
-![The Query Editor with [!UICONTROL Undo text] and the SQL statements highlighted.](../images/ui/query-editor/undo-text.png) -->
+![The Query Editor with [!UICONTROL Undo text] and the SQL statements highlighted.](../images/ui/query-editor/undo-text.png) 
+-->
 
 ### Copy SQL {#copy-sql}
 
@@ -307,6 +333,12 @@ The following video shows how to run queries in the Adobe Experience Platform in
 >The UI depicted in the video is outdated but the logic used in the workflow remains the same.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+
+## Monitor and manage concurrent sessions {#monitor-manage-sessions}
+
+Use session management to view active Query Editor sessions across sandboxes, identify idle sessions, and end them to free shared capacity. You cannot interrupt sessions that are actively running queries. This capability is only intended for administrators and requires the **[!UICONTROL Manage Query Session]** permission.
+
+To access session management, select the **[!UICONTROL Admin]** tab in the Query Service workspace. For step-by-step instructions to view session details, interpret session status, and end idle sessions, see [Manage Query Service sessions](session-management.md).
 
 ## Next steps
 

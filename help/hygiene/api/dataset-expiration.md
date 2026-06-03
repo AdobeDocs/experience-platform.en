@@ -3,6 +3,19 @@ title: Dataset Expiration API Endpoint
 description: The /ttl endpoint in the Data Hygiene API allows you to programmatically schedule dataset expirations in Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
+TQID: https://experienceleague.adobe.com/qogvisuUp6clLY74nrRcMMOIjZRDCxrlHY-pvQM2J0U
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Dataset expiration endpoint
 
@@ -316,7 +329,7 @@ PUT /ttl/{DATASET_EXPIRATION_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{DATASET_EXPIRATION_ID}` | The unique identifier for the dataset expiration configuration. **NOTE**: This is referred to as the `ttlId` in the response. | 
+| `{DATASET_EXPIRATION_ID}` | The unique identifier for the dataset expiration configuration. **NOTE**: This is referred to as the `ttlId` in the response. |
 
 **Request**
 

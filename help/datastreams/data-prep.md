@@ -2,49 +2,91 @@
 title: Data Prep for Data Collection
 description: Learn how to map your data to an Experience Data Model (XDM) event schema when configuring a datastream for the Adobe Experience Platform Web and Mobile SDKs.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
+TQID: https://experienceleague.adobe.com/OxbD7DdFHDJhcokH0HqcuWskgc4NejSCJV6LPUcxxgI
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+    internal-label: XDM
+  - id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13
+    internal-label: Data prep
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+    internal-label: Datastreams
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+    internal-label: Properties
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+    internal-label: Data elements
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # Data Prep for Data Collection
 
-Data Prep is an Adobe Experience Platform service that allows you to map, transform, and validate data to and from [Experience Data Model (XDM)](../xdm/home.md). When configuring an Experience Platform-enabled [datastream](./overview.md), you can use Data Prep capabilities to map your source data to XDM when sending it to the Experience Platform Edge Network.
+Use [!DNL Data Prep], an [!DNL Adobe Experience Platform] service, to map, transform, and validate data to and from [Experience Data Model (XDM)](/help/xdm/home.md). When configuring an Experience Platform-enabled [datastream](/help/datastreams/overview.md), you can use [!DNL Data Prep] capabilities to map your source data to XDM when sending it to the [!DNL Adobe Experience Platform Edge Network].
 
-All data sent from a web page must land in Experience Platform as XDM. There are 3 ways to translate data from an on-page data layer to the XDM accepted by Experience Platform:
+All data sent from a web page must land in Experience Platform as XDM. You have three ways to translate data from an on-page data layer to the XDM accepted by Experience Platform:
 
 1. Reformat the data layer into XDM on the web page itself.
-2. Use the Tags native data elements functionality to reformat a web page's existing data layer format into XDM.
-3. Reformat a web page's existing data layer format into XDM via the Edge Network, using Data Prep for Data Collection.
+2. Use the [!DNL Tags] built-in data elements functionality to reformat a web page's existing data layer format into XDM.
+3. Reformat a web page's existing data layer format into XDM via the [!DNL Edge Network], using Data Prep for Data Collection.
 
-This guide focuses on the 3rd option. 
+This guide covers the third option.
 
 ## When to use Data Prep for Data Collection {#when-to-use-data-prep}
 
-There are two uses cases where Data Prep for Data Collection is useful:
+Data Prep for Data Collection is useful in two situations:
 
-1. The website has a well-formed, governed, and maintained data layer and there is a preference for sending it directly to the Edge Network instead of using JavaScript manipulation to convert it to XDM on the page (either via Tags data elements or via manual JavaScript manipulation).
-2. A tagging system other than Tags is deployed on the site.
+1. The website has a well-formed, governed, and maintained data layer, and you prefer to send it directly to the [!DNL Edge Network] instead of using JavaScript manipulation to convert it to XDM on the page (either via [!DNL Tags] data elements or via manual JavaScript manipulation).
+2. A tagging system other than [!DNL Tags] is deployed on the site.
 
-## Send an existing data layer to the Edge Network via WebSDK {#send-datalayer-via-websdk}
+## Send an existing data layer to the Edge Network via Web SDK {#send-datalayer-via-websdk}
 
 The existing data layer must be sent using the [`data`](/help/collection/js/commands/sendevent/data.md) object within the `sendEvent` command.
 
-If you are using Tags, you must use the **[!UICONTROL Data]** field of the [**[!UICONTROL Send Event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md) action type.
+If you are using [!DNL Tags], you must use the **[!UICONTROL Data]** field of the [**[!UICONTROL Send Event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md) action type.
 
-The rest of this guide will focus on how to map the data layer to XDM standards after it has been sent by the WebSDK. 
+The rest of this guide covers how to map the data layer to XDM standards after it has been sent by the Web SDK.
 
 >[!NOTE]
 >
->For comprehensive guidance on all Data Prep capabilities, including transformation functions for calculated fields, refer to the following documentation:
+>For comprehensive guidance on all [!DNL Data Prep] capabilities, including transformation functions for calculated fields, see the following documentation:
 >
->* [Data Prep overview](../data-prep/home.md)
->* [Data Prep mapping functions](../data-prep/functions.md)
->* [Handling data formats with Data Prep](../data-prep/data-handling.md)
+>* [Data Prep overview](/help/data-prep/home.md)
+>* [Data Prep mapping functions](/help/data-prep/functions.md)
+>* [Handling data formats with Data Prep](/help/data-prep/data-handling.md)
 
-This guide covers how to map your data within the UI. To follow along with the steps, start the process of creating a datastream up to (and including) the [basic configuration step](./overview.md#create).
+This guide covers how to map your data within the UI. To complete the steps, start the process of creating a datastream up to (and including) the [basic configuration step](/help/datastreams/configure.md#create).
 
-For a quick demonstration of the Data Prep for Data Collection process, refer to the following video:
+For a quick demonstration of the Data Prep for Data Collection process, see the following video:
 
 >[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
-## [!UICONTROL Select data] {#select-data}
+## Provide sample data {#select-data}
 
 Select **[!UICONTROL Save and Add Mapping]** after completing the basic configuration for a datastream, and the **[!UICONTROL Select data]** step appears. From here, you must provide a sample JSON object that represents the structure of the data that you plan on sending to Experience Platform.
 
@@ -152,9 +194,9 @@ You can select the option to upload the object as a file, or paste the raw objec
 
 >[!NOTE]
 >
-> Use a sample JSON object that represents every data layer element that may be used on any page. For example, not all pages use shopping cart data layer elements. However, the shopping cart data layer elements should be included in this sample JSON object.
+>Use a sample JSON object that represents every data layer element that may be used on any page. For example, not all pages use shopping cart data layer elements. However, include shopping cart data layer elements in this sample JSON object.
 
-## [!UICONTROL Mapping]
+## Map your data {#mapping}
 
 The **[!UICONTROL Mapping]** step appears, allowing you to map the fields in your source data to that of the target event schema in Experience Platform. From here, you can configure the mapping in two ways:
 
@@ -163,7 +205,7 @@ The **[!UICONTROL Mapping]** step appears, allowing you to map the fields in you
 
 >[!IMPORTANT]
 >
->Data Prep mapping overrides `identityMap` XDM payloads, which can further impact profile matching against Real-Time CDP audiences.
+>[!DNL Data Prep] mapping overrides `identityMap` XDM payloads, which can further impact profile matching against [!DNL Real-Time CDP] audiences.
 
 ### Create mapping rules {#create-mapping}
 
@@ -171,11 +213,11 @@ To create a mapping rule, select **[!UICONTROL Add new mapping]**.
 
 ![Adding a new mapping.](assets/data-prep/add-new-mapping.png)
 
-Select the source icon (![Source icon](/help/images/icons/source.png)), and in the dialog that appears select the source field that you want to map in the provided canvas. Once you have chosen a field, use the **[!UICONTROL Select]** button to continue.
+Select the source icon (![Source field selector icon](/help/images/icons/source.png)), and in the dialog that appears select the source field that you want to map in the provided canvas. Once you have chosen a field, use the **[!UICONTROL Select]** button to continue.
 
 ![Selecting the field to be mapped in the source schema.](assets/data-prep/source-mapping.png)
 
-Next, select the schema icon (![Schema icon](/help/images/icons/schema.png)) to open a similar dialog for the target event schema. Choose the field that you want to map the data to before confirming with **[!UICONTROL Select]**.
+Next, select the schema icon (![Target schema selector icon](/help/images/icons/schema.png)) to open a similar dialog for the target event schema. Choose the field that you want to map the data to before confirming with **[!UICONTROL Select]**.
 
 ![Selecting the field to be mapped in the target schema.](assets/data-prep/target-mapping.png)
 
@@ -207,7 +249,7 @@ In the dialog that appears, select the datastream whose mapping rules you want t
 
 >[!NOTE]
 >
->Datastreams can only be imported within the same [sandbox](../sandboxes/home.md). In other words, you cannot import a datastream from one sandbox to another.
+>Datastreams can only be imported within the same [sandbox](/help/sandboxes/home.md). You cannot import a datastream from one sandbox to another.
 
 The next screen shows a preview of the saved mapping rules for the selected datastream. Make sure that the displayed mappings are what you expect, and then select **[!UICONTROL Import]** to confirm and add the mappings to the new datastream.
 
@@ -217,14 +259,14 @@ The next screen shows a preview of the saved mapping rules for the selected data
 >
 >If any source fields in the imported mapping rules are not included in the sample JSON data that you [provided earlier](#select-data), those field mappings will not be included in the import.
 
-### Complete the mapping
+### Complete the mapping {#complete-mapping}
 
-Continue following the above steps to map the rest of the fields to the target schema. While you do not have to map all available source fields, any fields in the target schema that are set as required must be mapped to complete this step. The **[!UICONTROL Required fields]** counter indicates how many required fields are not yet mapped in the current configuration.
+Continue mapping the remaining fields to the target schema. While you do not have to map all available source fields, any fields in the target schema that are set as required must be mapped to complete this step. The **[!UICONTROL Required fields]** counter indicates how many required fields are not yet mapped in the current configuration.
 
-Once the required field count reaches zero and you are satisfied with your mapping, select **[!UICONTROL Save]** to finalize your changes.
+When the required field count reaches zero and you are satisfied with your mapping, select **[!UICONTROL Save]** to finalize your changes.
 
-![Mapping complete](assets/data-prep/mapping-complete.png)
+![The mapping interface showing all required fields successfully mapped with a zero required field count.](assets/data-prep/mapping-complete.png)
 
-## Next steps
+## Next steps {#next-steps}
 
-This guide covered how to map your data to XDM when setting up a datastream in the UI. If you were following general datastreams tutorial, you can now return to the step on [viewing datastream details](./overview.md).
+This guide covered how to map your data to XDM when setting up a datastream in the UI. If you were following the general datastreams tutorial, you can now return to the step on [viewing datastream details](/help/datastreams/overview.md).

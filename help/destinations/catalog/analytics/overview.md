@@ -3,6 +3,18 @@ keywords: analytics destinations;analytics destination
 title: Analytics destinations overview
 description: Analytics destinations track how visitors interact with content on your site and collect data to understand the behavior of your audience. These platforms deliver unique insights on engagement and conversion of your most valuable visitors.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
+TQID: https://experienceleague.adobe.com/7wQLLLpCGKxeBLUGwAtpS6JI-MhTrJ7WBGh4xXqWOEo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Analytics destinations overview {#analytics-destinations}
 
@@ -12,7 +24,7 @@ Analytics destinations track how visitors interact with content on your site and
 
 ## Supported analytics destinations {#supported-destinations}
 
-Currently, Adobe Experience Platform supports the analytics destinations listed below. For information on how to connect to these destinations, see the individual links:
+Currently, [!DNL Adobe Experience Platform] supports the analytics destinations listed below. For information on how to connect to these destinations, see the individual links:
 
 * [Adform Website Tracking extension](adform.md)
 * [Adobe Analytics extension](adobe-analytics.md)
@@ -29,7 +41,6 @@ Currently, Adobe Experience Platform supports the analytics destinations listed 
 * [Nielsen BSDK extension](nielsen-bsdk.md)
 * [Nielsen IMA Handler extension](nielsen-ima.md)
 * [Nielsen VideoJS Player Handler extension](nielsen-videojs.md)
-* [Parse.ly Analytics extension](parsely.md)
 * [Quantum Metric extension](quantum-metric.md)
 * [SessionCam extension](sessioncam.md)
 * [TMMData extension](tmmdata.md)

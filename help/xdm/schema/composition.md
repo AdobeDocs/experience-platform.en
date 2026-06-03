@@ -4,6 +4,35 @@ solution: Experience Platform
 title: Basics of Schema Composition
 description: Learn about Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
+TQID: https://experienceleague.adobe.com/aWe8rBHi9h54CeVw2w7-s5itqPHoBy3y8ABtRj-J5Ak
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+    internal-label: Data modeling
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Basics of schema composition
 
@@ -110,6 +139,11 @@ As the example above shows, each key in the `identityMap` object represents an i
 >A boolean value for whether the value is a primary identity (`primary`) can also be provided for each identity value. You only need to set primary identities for schemas intended to be used in [!DNL Real-Time Customer Profile].
 
 ### Schema evolution principles {#evolution}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_schema_editing_breaking_change_warning"
+>title="Edit a schema in use"
+>abstract="This schema is already used by datasets or ingestion workflows. Changes to existing fields or identities can cause ingestion failures if dataflows are running or scheduled. After ingestion begins, only additive schema changes are supported."
 
 As the nature of digital experiences continues to evolve, so must the schemas used to represent them. A well-designed schema is therefore able to adapt and evolve as needed, without causing destructive changes to previous versions of the schema.
 

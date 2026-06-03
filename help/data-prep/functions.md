@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Data Prep Mapping Functions
 description: This document introduces the mapping functions used with Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
+TQID: https://experienceleague.adobe.com/GdQ3BXSXU3Josmr2L0hgyzy1InLAB1O5J3Ytk5YeOUk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Data Prep mapping functions
 
@@ -137,7 +147,7 @@ The following tables list all supported mapping functions, including sample expr
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | is_empty | Checks whether or not an object is empty. | <ul><li>INPUT: **Required** The object that you're trying to check is empty.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
-| arrays_to_object | Creates a list of objects. | <ul><li>INPUT: **Required** A grouping of key and array pairs.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
+| arrays_to_object | Creates a list of objects. | <ul><li>INPUT: **Required** A grouping of key and array pairs.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | `[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]` |
 | to_object | Creates an object based on the flat key/value pairs given. | <ul><li>INPUT: **Required** A flat list of key/value pairs.</li></ul> | to_object(INPUT) | to_object​("firstName", "John", "lastName", "Doe") | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Creates an object from the input string. | <ul><li>STRING: **Required** The string that is being parsed to create an object.</li><li>VALUE_DELIMITER: *Optional* The delimiter that separates a field from the value. The default delimiter is `:`.</li><li>FIELD_DELIMITER: *Optional* The delimiter that separates field value pairs. The default delimiter is `,`.</li></ul> | str_to_object​(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Note**: You can use the `get()` function along with `str_to_object()` to retrieve values for the keys in the string. | <ul><li>Example #1: str_to_object("firstName - John ; lastName - ; - 123 345 7890", "-", ";")</li><li>Example #2: str_to_object("firstName - John ; lastName - ; phone - 123 456 7890", "-", ";").get("firstName")</li></ul> | <ul><li>Example #1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Example #2: "John"</li></ul> |
 | contains_key | Checks if the object exists within the source data. **Note:** This function replaces the deprecated `is_set()` function. | <ul><li>INPUT: **Required** The path to be checked if it exists within the source data.</li></ul> | contains_key(INPUT) | contains_key("evars.evar.field1") | true |
@@ -147,7 +157,7 @@ The following tables list all supported mapping functions, including sample expr
 | map_get_values | Takes a map and a key input. If the input is a single key, then the function returns the value associated with that key. If the input is a string array, then the function returns all values corresponding to the keys provided. If the incoming map has duplicate keys, the return value must de-duplicate the keys and return unique values. | <ul><li>MAP: **Required** The input map data.</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | get_values(MAP, KEY) | Please see the [appendix](#map_get_values) for a code sample. | |
 | map_has_keys | If one or more input keys are provided, then the function returns true. If a string array is provided as input, then the function returns true on the first key that is found. | <ul><li>MAP:  **Required** The input map data</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | map_has_keys(MAP, KEY) | Please see the [appendix](#map_has_keys) for a code sample. | |
 | add_to_map | Accepts at least two inputs. Any number of maps can be provided as inputs. Data Prep returns a single map that has all key-value pairs from all the inputs. If one or more keys are repeated (in the same map or across maps), Data Prep de-duplicates the keys so that the first key-value pair persists in the order that they were passed in the input. | MAP: **Required** The input map data. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Please see the [appendix](#add_to_map) for a code sample. | |
-| object_to_map (Syntax 1) | Use this function to create Map data types. |<ul><li>KEY: **Required** Keys must be a string. If any other primitive values such as integers or dates are provided, then they are auto-converted to strings and are treated as strings.</li><li>ANY_TYPE: **Required** Refers to any supported XDM data type except Maps.</li></ul> | object_to_map(KEY, ANY_TYPE, KEY, ANY_TYPE, ... )| Please see the [appendix](#object_to_map) for a code sample. | | 
+| object_to_map (Syntax 1) | Use this function to create Map data types. |<ul><li>KEY: **Required** Keys must be a string. If any other primitive values such as integers or dates are provided, then they are auto-converted to strings and are treated as strings.</li><li>ANY_TYPE: **Required** Refers to any supported XDM data type except Maps.</li></ul> | object_to_map(KEY, ANY_TYPE, KEY, ANY_TYPE, ... )| Please see the [appendix](#object_to_map) for a code sample. | |
 | object_to_map (Syntax 2) | Use this function to create Map data types.| <ul><li>OBJECT: **Required** You can provide an incoming object or object array and point to an attribute inside the object as key.</li></ul> | object_to_map(OBJECT) | Please see the [appendix](#object_to_map) for a code sample. ||
 | object_to_map (Syntax 3) | Use this function to create Map data types.| <ul><li>OBJECT: **Required** You can provide an incoming object or object array and point to an attribute inside the object as key.</li></ul> | object_to_map(OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | Please see the [appendix](#object_to_map) for a code sample. ||
 
@@ -304,8 +314,10 @@ For more information on device field values, please read the [list of device fie
 
 {style="table-layout:auto"}
 
-<!-- | aa_get_product_events | Extracts a named event from the products string as an array of objects. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_events(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_events(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | [`{"id": "1","value", "5"}`, `{"id": "2","value", "1"}`] |
-| aa_get_product_event_ids | Extracts the IDs for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_event_ids(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_ids(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | ["1", "2"] | -->
+<!-- 
+| aa_get_product_events | Extracts a named event from the products string as an array of objects. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_events(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_events(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | [`{"id": "1","value", "5"}`, `{"id": "2","value", "1"}`] |
+| aa_get_product_event_ids | Extracts the IDs for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_event_ids(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_ids(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | ["1", "2"] | 
+-->
 
 ### Object copy {#object-copy}
 
@@ -382,7 +394,7 @@ The table below outlines a list of reserved characters and their corresponding e
 | ? | %3F |
 | @ | %40 |
 | &#91; | %5B |
-| &#124; | %5C |
+| `\|` | %5C |
 | &#93; | %5D |
 | ^ | %5E |
 | &#96; | %60 |

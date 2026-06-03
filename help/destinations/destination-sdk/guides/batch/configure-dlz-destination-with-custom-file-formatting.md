@@ -2,6 +2,20 @@
 description: Learn how to use Destination SDK to configure a Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration.
 title: Configure a Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration.
 exl-id: 3a5c1188-c2b5-4e81-ae41-9fff797f08a6
+TQID: https://experienceleague.adobe.com/Pu094HXFGjuP9dX1AC-zqlaefivMIgNDA81SgCqqlYY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Configure a [!DNL Data Landing Zone (DLZ)] destination with custom file formatting options and custom file name configuration
 
@@ -15,7 +29,7 @@ For detailed descriptions of the parameters used below, see [configuration optio
 
 ## Prerequisites {#prerequisites}
 
-Before advancing to the steps outlined below, please read the [Destination SDK getting started](../../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
+Before advancing to the steps outlined below, read the [Destination SDK getting started](../../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
 
 ## Step 1: Create a server and file configuration {#create-server-file-configuration}
 
@@ -447,4 +461,4 @@ If you are an Independent Software Vendor (ISV) or System Integrator (SI) creati
 
 ## Next steps {#next-steps}
 
-By reading this article, you now know how to author a custom [!DNL Data Landing Zone] destination by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](../../../ui/activate-batch-profile-destinations.md) to export data to the destination.
+You now know how to author a custom [!DNL Data Landing Zone] destination by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](../../../ui/activate-batch-profile-destinations.md) to export data to the destination.

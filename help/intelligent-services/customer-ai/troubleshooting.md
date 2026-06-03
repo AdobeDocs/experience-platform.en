@@ -6,6 +6,27 @@ title: Customer AI error troubleshooting
 description: Find answers to common errors in Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
+TQID: https://experienceleague.adobe.com/n-K-k-zwoIZ-x96onn4hIoH27T8iAMaMuZgjfo8thG4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Customer AI error troubleshooting
 
@@ -63,7 +84,7 @@ If restricting the eligibility population did not work or is not possible, chang
 | 407 | NOT ENOUGH HISTORICAL EVENT DATA | There is not enough data to build a model. From 2020-04-01 to 2021-04-01, there are only 90 days of data. <br><br>We require 120 days of recent data. For more information, please check the data requirement documentation. <br><br>Suggested solutions: <br>1. Check data availability <br>2. Decrease the prediction goal timeframe <br>3. If an Eligible population definition is provided, decrease the eligibility filter timeframe <br>4. If an Eligible population definition is not provided, try adding one (Error code: VALIDATION-407 NOT_ENOUGH_HISTORICAL_EVENT_DATA)| There is not enough data to build a model. From 2020-04-01 to 2021-04-01, there there are only 90 days of data.<br><br>We require 120 days of recent data. For more information, please check the data requirement documentation.<br><br>Suggested solutions:<br>1. Check data availability.<br>2. Decrease the prediction goal timeframe.<br>3. If an Eligible population definition is provided, decrease the eligibility filter timeframe.<br>4. If an Eligible population definition is not provided, try adding one. (Error code: VALIDATION-407 NOT_ENOUGH_HISTORICAL_EVENT_DATA)|
 | 408 | NO RECENT DATA FOR ELIGIBLE | There is no user behavior data for eligible users in the `{{data_days}}` days prior to `{{etl_window_end}}`. Please check the dataset to ensure it is being updated on a regular basis. (Error code: VALIDATION-408 NO_RECENT_DATA_FOR_ELIGIBLE_POPULATION)| There is no user behavior data for eligible users in the 60 days prior to 2021-04-01. Please check the dataset to ensure it is being updated on a regular basis. (Error code: VALIDATION-408 NO_RECENT_DATA_FOR_ELIGIBLE_POPULATION)|
 | 409 | NO OBJECTIVE | There are no users meeting the prediction goal definition from `{{outcome_window_start}}` to `{{outcome_window_end}}`. We require at least `{{min_num_samples}}` users with qualifying events to build a model. <br><br>Suggested solutions: <br>1. Check data availability <br>2. Modify the prediction goal definition (Error code: VALIDATION-409 NO_OBJECTIVE)| There are no users meeting the prediction goal definition from 2020-04-01 to 2021-04-01. We require at least 500 users with qualifying events to build a model. <br><br>Suggested solutions:<br>1. Check data availability.<br>2. Modify the prediction goal definition. (Error code: VALIDATION-409 NO_OBJECTIVE)|
-| 410 | NO POPULATION |  There are no eligible users from `{{eligibility_window_start}}` to `{{eligibility_window_end}}`. We require at least `{{min_num_samples}}` eligible users to build a model. <br><br>Suggested solutions: <br>1. Check data availability <br>2. If an Eligible population definition is provided, modify the condition or increase the eligibility filter timeframe (Error code: VALIDATION-410 NO_POPULATION)| There are no eligible users from 2020-04-01 to 2021-04-01. We require at least 500 eligible users to build a model. <br><br>Suggested solutions:<br>1. Check data availability. <br> 2. If an Eligible population definition is provided, modify the condition or increase the eligibility filter timeframe. (Error code: VALIDATION-410 NO_POPULATION)|                          
+| 410 | NO POPULATION |  There are no eligible users from `{{eligibility_window_start}}` to `{{eligibility_window_end}}`. We require at least `{{min_num_samples}}` eligible users to build a model. <br><br>Suggested solutions: <br>1. Check data availability <br>2. If an Eligible population definition is provided, modify the condition or increase the eligibility filter timeframe (Error code: VALIDATION-410 NO_POPULATION)| There are no eligible users from 2020-04-01 to 2021-04-01. We require at least 500 eligible users to build a model. <br><br>Suggested solutions:<br>1. Check data availability. <br> 2. If an Eligible population definition is provided, modify the condition or increase the eligibility filter timeframe. (Error code: VALIDATION-410 NO_POPULATION)|
 | 411 | NO INPUT DATA AFTER ETL | There is no user behavior or profile data available for the model to use between `{{etl_start_date}}` and `{{etl_end_date}}`. Please make sure the dataset has sufficient data. (Error code: VALIDATION-411 NO_INPUT_DATA_AFTER_ETL)| There is no user behavior or profile data available for the model to use between 2020-04-01 and 2021-04-01. Please make sure the dataset has sufficient data. (Error code: VALIDATION-411 NO_INPUT_DATA_AFTER_ETL)|
 | 412 | NO EVENT AFTER ETL | There is no user behavior data available for the model to use between `{{etl_start_date}}` and `{{etl_end_date}}`. Please make sure the dataset has sufficient data.| There is no user behavior data available for the model to use between 2020-04-01 and 2021-04-01. Please make sure the dataset has sufficient data. (Error code: VALIDATION-412 NO_EVENT_DATA_AFTER_ETL)|
 | 413 | SINGLE VALUE IN OBJECTIVE | CustomerAI requires the dataset to have both qualifying and non-qualifying events for the prediction goal definition. The input dataset contains only qualifying events between `{{etl_window_start}}` and `{{etl_window_end}}`. <br><br>Suggested solutions: <br>1. Modify the prediction goal definition <br>2. Verify data completeness or use a different that includes examples of non-qualifying events for the prediction goal (Error code: VALIDATION-413 SINGLE_VALUE_IN_OBJECTIVE)| CustomerAI requires the dataset to have both qualifying and non-qualifying events for the prediction goal definition. The input dataset contains only qualifying events between 2020-04-01 and 2021-04-01.<br><br>Suggested solutions:<br>1. Modify the prediction goal definition.<br>2. Verify data completeness or use a different that includes examples of non-qualifying events for the prediction goal. (Error code: VALIDATION-413 SINGLE_VALUE_IN_OBJECTIVE)|

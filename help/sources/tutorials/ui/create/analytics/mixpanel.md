@@ -2,6 +2,19 @@
 title: Create a Mixpanel Source Connection in the UI
 description: Learn how to create a Mixpanel source connection using the Adobe Experience Platform UI.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
+TQID: https://experienceleague.adobe.com/YhMYWkXGUeE2vlWxQPrF9jGuyt9Ps5IHP-d5a-Uq9Rs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a [!DNL Mixpanel] source connection in the UI
 

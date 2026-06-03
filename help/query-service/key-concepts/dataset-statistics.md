@@ -2,6 +2,18 @@
 title: Dataset Statistics Computation
 description: This document describes how to compute column-level statistics on Azure Data Lake Storage (ADLS) datasets with SQL commands.
 exl-id: 66f11cd4-b115-40b8-ba8a-c4bb3606bbbf
+TQID: https://experienceleague.adobe.com/osO8YNSbHVUgLNITzIi8BLKScqr2DEGI-xPFQKR-mnA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Dataset statistics computation
 
@@ -56,7 +68,7 @@ If you do not provide an alias name in advance, Query Service automatically gene
 An example output of a `COMPUTE STATISTICS` query is as follows:
 
 ```console
-| Statistics ID         | 
+| Statistics ID         |
 | --------------------- |
 | adc_geometric_stats_1 |
 (1 row)

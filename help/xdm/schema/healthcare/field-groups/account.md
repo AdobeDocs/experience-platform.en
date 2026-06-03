@@ -2,9 +2,23 @@
 title: Account Schema Field Group
 description: Learn about the Account schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+hide: true
 exl-id: 376716bd-f79f-421d-b163-0f0e50876b48
+TQID: https://experienceleague.adobe.com/mkgLk7-wG6mWyhvNtri04SIKXz06Y0cEEXLY-YU4GP0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
 ---
 # [!UICONTROL Account] schema field group
 

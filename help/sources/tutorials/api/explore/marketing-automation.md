@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Explore a Marketing Automation System Using the Flow Service API
 description: This tutorial uses the Flow Service API to explore marketing automation systems.
 exl-id: 250c1ba0-1baa-444f-ab2b-58b3a025561e
+TQID: https://experienceleague.adobe.com/z7QD-3r3Ja53WRQ-sLBL8awn1c3Ey9LZEL7Dsro02Q8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Explore a marketing automation system using the [!DNL Flow Service] API
 

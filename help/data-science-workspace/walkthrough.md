@@ -4,8 +4,24 @@ solution: Experience Platform
 title: Data Science Workspace course
 description: This document provides a link and description for the Adobe Experience Platform Data Science Workspace course.
 exl-id: d814846e-52a9-46c6-831a-3399241959f2
+TQID: https://experienceleague.adobe.com/pTsvNlJOSEGs8VwjcYSEEtHkcRD-5mfVFq66CpHdQ6w
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
-
 # [!DNL Data Science Workspace] course
 
 >[!NOTE]
@@ -65,7 +81,7 @@ The Data Science Workspace course is split into five lessons.
 
 ## Next steps
 
-After completing the Data Science Workspace course, visit the [Sensei Machine Learning API guides](./api/getting-started.md) to learn how to utilize RESTful APIs to do everything you just learned and more.
+After completing the Data Science Workspace course, visit the [Adobe AI Machine Learning API guides](./api/getting-started.md) to learn how to utilize RESTful APIs to do everything you just learned and more.
 
 
 

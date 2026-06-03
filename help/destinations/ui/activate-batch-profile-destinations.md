@@ -3,21 +3,52 @@ title: Activate audiences to batch profile export destinations
 type: Tutorial
 description: Learn how to activate the audiences you have in Adobe Experience Platform by sending them to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
+TQID: https://experienceleague.adobe.com/lw8XX2QCjJqNvd1GXAMQtuhr8uVi9giAKIDhgcQAtwA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
-
 # Activate audiences to batch profile export destinations
 
 >[!IMPORTANT]
-> 
+>
 >* To activate audiences and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 >* To activate audiences without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
-> 
+>
 > Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 ## Overview {#overview}
 
-This article explains the workflow required to activate audiences in Adobe Experience Platform to batch profile file-based destinations, such as cloud storage and email marketing destinations.
+This article explains the workflow required to activate audiences in [!DNL Adobe Experience Platform] to batch profile file-based destinations, such as cloud storage and email marketing destinations.
 
 ## Prerequisites {#prerequisites}
 
@@ -199,7 +230,7 @@ If profiles get updated after audience evaluation, scheduled exports will includ
 
 For on-demand exports, see the documentation on [exporting files on-demand](/help/destinations/ui/export-file-now.md#scheduled-vs-ondemand).
 
-### Export incremental files
+### Export incremental files {#export-incremental-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_something"
@@ -271,8 +302,8 @@ To edit multiple file names at the same time, select the audiences by using the 
 
 Select **[!UICONTROL Apply changes]** to confirm your selection.
 
->[!IMPORTANT] 
-> 
+>[!IMPORTANT]
+>
 >If you don't select the **[!UICONTROL Date and Time]** component, the file names will be static and the new exported file will overwrite the previous file in your storage location with each export. When running a recurring import job from a storage location into an email marketing platform, this is the recommended option.
 
 Once you have finished configuring all your audiences, select **[!UICONTROL Next]** to continue.
@@ -291,8 +322,8 @@ In this step, you must select the profile attributes that you want to add to the
 
 1. In the **[!UICONTROL Select source field]** page, select the profile attributes and identities that you want to include in the exported files to the destination, then choose **[!UICONTROL Select]**.
 
-    >[!TIP] 
-    > 
+    >[!TIP]
+    >
     >You can use the search field to narrow down your selection, as shown in the image below.
 
     Use the **[!UICONTROL Show only fields with data]** toggle to only display schema fields populated with values. By default, only populated schema fields are shown.
@@ -320,10 +351,6 @@ In this step, you must select the profile attributes that you want to add to the
     ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
 
 1. (Optional) The order of the mapped fields in the UI reflects in the order of the columns in the exported CSV file, from top to bottom, with the top row being the leftmost column in the CSV file. You can reorder the mapped fields in any way you want, by dragging and dropping the mapping rows, as shown below. 
-
-    >[!NOTE]
-    >
-    >This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative.
     
     ![Recording showing the mapping fields reordering by drag and drop.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
@@ -492,7 +519,7 @@ Adobe recommends selecting an identity namespace such as a [!DNL CRM ID] or emai
 
 When exporting profiles to file-based destinations, deduplication ensures that only one profile is exported when multiple profiles share the same deduplication key and the same reference timestamp. This timestamp represents the moment a profile's audience membership or identity graph was last updated. For more information on how profiles are updated and exported, see the [profile export behavior](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) document.
 
-#### Key considerations
+#### Key considerations {#key-considerations}
 
 * **Deterministic selection**: When multiple profiles have identical deduplication keys and the same reference timestamp, the deduplication logic determines which profile to export by sorting the values of other selected columns (excluding complex types such as arrays, maps, or objects). The sorted values are evaluated in lexicographical order, and the first profile is selected.
 
@@ -500,20 +527,20 @@ When exporting profiles to file-based destinations, deduplication ensures that o
 
 Consider the following data, where the deduplication key is the `Email` column:
 
-|Email*|first_name|last_name|timestamp|  
-|---|---|---|---|  
-|`test1@test.com`|John|Morris|2024-10-12T09:50|  
-|`test1@test.com`|John|Doe|2024-10-12T09:50|  
-|`test2@test.com`|Frank|Smith|2024-10-12T09:50|  
+|Email*|first_name|last_name|timestamp|
+|---|---|---|---|
+|`test1@test.com`|John|Morris|2024-10-12T09:50|
+|`test1@test.com`|John|Doe|2024-10-12T09:50|
+|`test2@test.com`|Frank|Smith|2024-10-12T09:50|
 
 {style="table-layout:auto"}
 
 After deduplication, the export file will contain:
 
-|Email*|first_name|last_name|timestamp|  
-|---|---|---|---|  
-|`test1@test.com`|John|Doe|2024-10-12T09:50|  
-|`test2@test.com`|Frank|Smith|2024-10-12T09:50|  
+|Email*|first_name|last_name|timestamp|
+|---|---|---|---|
+|`test1@test.com`|John|Doe|2024-10-12T09:50|
+|`test2@test.com`|Frank|Smith|2024-10-12T09:50|
 
 {style="table-layout:auto"}
 
@@ -529,7 +556,7 @@ You can use the [Calculated fields](/help/destinations/ui/data-transformations-c
 
 The new **[!UICONTROL Mapping]** page has the following known limitations:
 
-#### Audience membership attribute cannot be selected through the mapping workflow
+#### Audience membership attribute cannot be selected through the mapping workflow {#audience-membership-attribute-mapping}
 
 Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.seg_namespace.seg_id.status` to your file exports. Instead, you need to manually paste the value `xdm: segmentMembership.seg_namespace.seg_id.status` into the schema field, as shown below.
 
@@ -550,7 +577,7 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 
 Read more about [profile export behavior for file-based destinations](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
-#### Identity namespaces cannot currently be selected for exports
+#### Identity namespaces cannot currently be selected for exports {#identity-namespaces-export-limitation}
 
 Selecting identity namespaces for export, as shown in the image below, is currently not supported. Selecting any identity namespaces for export will result in an error in the **[!UICONTROL Review]** step.
 
@@ -563,11 +590,11 @@ As a temporary workaround if you need to add identity namespaces to your exporte
 
 ## Select profile attributes {#select-attributes}
 
->[!IMPORTANT] 
-> 
+>[!IMPORTANT]
+>
 >All cloud storage destinations in the catalog can view an improved [[!UICONTROL Mapping] step](#mapping) which replaces the **[!UICONTROL Select attributes]** step described in this section. 
 >
->This **[!UICONTROL Select attributes]** step is still displayed for the Adobe Campaign, Oracle Responsys, Oracle Eloqua, and Salesforce Marketing Cloud email marketing destinations.
+>This **[!UICONTROL Select attributes]** step is still displayed for the [!DNL Adobe Campaign], Oracle Responsys, Oracle Eloqua, and Salesforce Marketing Cloud email marketing destinations.
 
 For profile-based destinations, you must select the profile attributes that you want to send to the target destination.
 
@@ -585,13 +612,13 @@ For profile-based destinations, you must select the profile attributes that you 
 
 4. To add more mappings, repeat steps one to three.
 
->[!NOTE] 
+>[!NOTE]
 >
-> Adobe Experience Platform prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
+> [!DNL Adobe Experience Platform] prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
 ![Image showing prefilled recommended attributes in the mapping step of the audience activation workflow.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png) 
 
->[!IMPORTANT] 
+>[!IMPORTANT]
 >
 >Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.seg_namespace.seg_id.status` to your file exports. Instead, you must manually paste the value `xdm: segmentMembership.seg_namespace.seg_id.status` into the schema field, as shown below.
 >
@@ -608,6 +635,21 @@ File exports vary in the following ways, depending on whether `segmentMembership
 >id="platform_destinations_activate_exclude_enrichment_attributes"
 >title="Exclude enrichment attributes"
 >abstract="Enable this option to export the profiles from the selected custom uploaded audiences to your destination, while excluding all of their attributes."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_info_alert"
+>title="Hierarchical output enabled"
+>abstract="This destination supports hierarchical output because the Enable export of arrays, maps, and objects toggle is on. You can export top-level arrays, array elements, or multiple fields from the same array in one mapping. See the documentation for details."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_source_field"
+>title="Source field"
+>abstract="Select an enrichment attribute to export. For fields inside an array, the source auto-populates with a transform expression. To export multiple fields in one mapping, add one field first, then edit the source expression. See the documentation for details."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_target_field"
+>title="Target field"
+>abstract="The target field auto-populates with the source field name. Edit it to use a different alias if you want the field to have a different name in your exported files."
 
 >[!IMPORTANT]
 >
@@ -636,14 +678,14 @@ Select **[!UICONTROL Next]** to move to the [Review](#review) step.
 
 ## Review {#review}
 
->[!NOTE] 
-> 
+>[!NOTE]
+>
 >If any data usage labels have been applied to certain fields within a dataset (rather than the entire dataset), enforcement of those field-level labels on activation occurs under the following conditions:
 >
 >* The fields are used in the audience definition.
 >* The fields are configured as projected attributes for the target destination.
 >
-> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing action, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing action, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in [!DNL Adobe Experience Platform]](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
@@ -674,7 +716,7 @@ If you are satisfied with your selection and no policy violations have been dete
 
 ## Verify audience activation {#verify}
 
-When exporting audiences to cloud storage destinations, Adobe Experience Platform creates a `.csv`, `.json`, or `.parquet` file in the storage location that you provided. Expect a new file to be created in your storage location according to the schedule you set in the workflow. The default file format is shown below, but you can [edit the components of the file name](#configure-file-names):
+When exporting audiences to cloud storage destinations, [!DNL Adobe Experience Platform] creates a `.csv`, `.json`, or `.parquet` file in the storage location that you provided. Expect a new file to be created in your storage location according to the schedule you set in the workflow. The default file format is shown below, but you can [edit the components of the file name](#configure-file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 For example, if you selected a daily export frequency, the files you would receive on three consecutive days could look like this:

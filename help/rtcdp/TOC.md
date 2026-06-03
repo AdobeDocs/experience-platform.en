@@ -1,10 +1,14 @@
 ---
 product: adobe experience platform
 solution: Real-Time Customer Data Platform
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: "Real-Time Customer Data Platform"
 audience: user
 user-guide-title: Real-Time Customer Data Platform Guide
 user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audiences from those profiles, and activate those audiences to third-party destinations.
 role: Admin
+nudge: true
 ---
 
 # Real-Time Customer Data Platform Help {#rtcdp}
@@ -21,6 +25,7 @@ role: Admin
     * [End-to-end tutorial](./b2b-tutorial.md)
     * [Real-Time CDP B2B Edition guardrails](b2b-guardrails.md)
     * [Real-Time CDP B2B Edition architecture upgrades](b2b-architecture-upgrade.md)
+  * [Real-Time CDP MCP](rtcdp-mcp.md)
 * Audience Manager and Real-Time CDP {#evolution}
   * [Evolution from Audience Manager](aam-to-rtcdp.md)
 * Account profiles {#account}
@@ -32,6 +37,8 @@ role: Admin
   * [Segmentation overview](segmentation/segmentation-overview.md)
   * [Audience Builder guide](segmentation/audience-builder.md)
   * [Segmentation in Real-Time CDP B2B Edition](segmentation/b2b.md)
+  * [Custom objects](segmentation/custom-objects.md)
+  * [Multi-entity segmentation](segmentation/multi-entity-segmentation.md)
   * [Customer AI](segmentation/customer-ai.md)
 * Datasets {#datasets}
   * [Datasets](datasets/dataset.md)
@@ -71,6 +78,7 @@ role: Admin
   * [Sources in Real-Time CDP B2B Edition](sources/b2b.md)
 * Use cases {#use-cases}
   * [Overview of sample use cases](/help/rtcdp/use-case-guides/overview.md)
+  * [Leverage customer experience use cases to drive business goals](/help/rtcdp/use-case-guides/business-use-case-framework.md)
   * Customer acquisition {#customer-acquisition}
     * [Engage and acquire new customers without dependency on third-party cookies](/help/rtcdp/partner-data/prospecting.md)  
     * [Personalize onsite experiences for unknown visitors using partner-aided visitor recognition](/help/rtcdp/partner-data/onsite-personalization.md)

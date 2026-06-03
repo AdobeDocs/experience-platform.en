@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Create a Dataset in the API
 description: This document covers how to create a dataset object in the Catalog Service API.
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
+TQID: https://experienceleague.adobe.com/xqmuInOH0ircjNOJUexBCN6imZt8wjw1U5bDA15uwVk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Create a dataset in the API
 

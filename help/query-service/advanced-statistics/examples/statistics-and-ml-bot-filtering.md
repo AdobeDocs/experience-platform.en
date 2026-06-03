@@ -2,6 +2,20 @@
 title: Bot Filtering Using Statistics and Machine Learning
 description: Learn how to use Data Distiller statistics and machine learning to identify and filter bot activity to ensure accurate analytics and improved data integrity.
 exl-id: 30d98281-7d15-47a6-b365-3baa07356010
+TQID: https://experienceleague.adobe.com/11YKESkt6dwRmAaXFGzfdmSBLSdLsiGKPXXB8rNaL8g
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Bot filtering using statistics and machine learning
 
