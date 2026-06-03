@@ -179,23 +179,15 @@ IMAGE
 
 After selecting the audience, details of the audience appear. This includes the name and description of the audience. You can select the [the star icon]() to favorite the audience or **Add field** to add the audience your audience's rules.
 
->[!TAB Saved conditions]
-
-If you select **Saved conditions**, a full list of previously created saved conditions for your sandbox appears.
-
-IMAGE
-
-To add a saved condition to the rule-building canvas, select the name of the saved condition you want to add.
-
-IMAGE
-
-After selecting the saved condition, ???
-
 >[!ENDTABS]
 
 ### Events {#events}
 
-The **Events** section lets you add ExperienceEvents to your audience's rules. 
+The **Events** section lets you add ExperienceEvents to your audience's rules. Select **Add event** to choose from a list of ExperienceEvents that you can add to your audience.
+
+IMAGE
+
+
 
 ### Groups {#groups}
 
