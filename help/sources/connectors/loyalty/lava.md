@@ -106,6 +106,8 @@ For more information on loading the package, read the [package sharing tutorial]
 
 After the package is created, select the ellipses (`...`) to open the menu and select **[!UICONTROL Import Package]** to import the package. For more information on how to import a package, refer to the [sandbox tooling guide](../../../sandboxes/ui/sandbox-tooling.md#import-a-package-to-a-target-sandbox).
 
+The [!DNL LAVA] package includes three datasets: LAVA Profiles, LAVA Balances and LAVA Events. Although the profiles and balances use the same schema, they must be separate datasets so that balance updates do not overwrite profile updates, and vice-versa.
+
 ## Next steps
 
 The [!DNL LAVA] source connector ingests member profiles, reward balances, and ticket scan events into Experience Platform. Plan for the listed prerequisites, map and extend schemas using the field reference tables and sample JSON files, and optionally import [!DNL LAVA]'s recommended package into a sandbox before you create connections and dataflows.
