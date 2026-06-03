@@ -89,6 +89,59 @@ Download the [sample Ticket Scan Events data file here.](../../assets/lava/lava_
 
 {style="table-layout:auto"}
 
+### Transaction Events
+
+The transaction event source provides detailed information each time a purchase is made at a point of sale system by a user identified to LAVA. This data can be used to evaluate the utilization rate of promotions, understand customer preferences and evaluate sales performance. By streaming ticket scan events to Adobe Experience Platform, you can augment member profiles and enable event-driven personalization or analytics. Each transaction event record includes metadata about the purchase, LAVA rewards used and items purchased. Note that some vendors only provide this data when a reward was applied.
+
+Download the [sample Transaction Events data file here.](../../assets/lava/lava_transaction_sample.json)
+
+| [!DNL LAVA] Source Connector Field | Sample Value | Description |
+| --- | --- | --- |
+| `lavaId` | `52b6a289-f5a0-47f5-b5b5-da3e08aaedb9` | The [!DNL LAVA] ID for the user who made a purchase. |
+| `transactionId` | `8d515630-eb0f-43bc-a9f6-221f3813f438` | The [!DNL LAVA]-created ID for the transaction. |
+| `referenceId` | `2aed9e2c-77a4-496c-81cc-e9772d128c0e` | The point-of-sale-created ID for the transaction. |
+| `subtotal` | `974` | The transaction subtotal in the lowest unit of denomination (cents). |
+| `total` | `974` | The transaction total in the lowest unit of denomination (cents). |
+| `location` | `64312` | The location where the transaction occurred. |
+| `items[]` | - | List of items purchased in this transaction. This field is absent (not an empty list) when item-level data is not provided by the vendor. |
+| `items[].sku` | `1083947` | The SKU for the item. |
+| `items[].amount` | `1949` | The unit price of the item in the lowest unit of denomination (cents). |
+| `items[].quantity` | `1` | The quantity of this item purchased. |
+| `items[].adjustedTotal` | `1949` | The total price of this line item after applying any item-level rewards, in the lowest unit of denomination (cents). |
+| `items[].rewardsApplied[]` | - | List of rewards applied to this item. |
+| `items[].rewardsApplied[].amount` | `975` | The discount amount applied by this reward, in the lowest unit of denomination (cents). |
+| `items[].rewardsApplied[].rewardId` | `5` | The [!DNL LAVA] ID of the reward applied. |
+| `redeemedAmount` | `0` | The amount of stored value redeemed in this transaction, in the lowest unit of denomination (cents). |
+| `rewardsApplied[]` | - | List of rewards applied to this transaction. |
+| `rewardsApplied[].amount` | `975` | The discount amount applied by this reward, in the lowest unit of denomination (cents). |
+| `rewardsApplied[].rewardId` | `5` | The [!DNL LAVA] ID of the reward applied. |
+| `type` | `transaction` | An indicator for what type of record this is. |
+| `id` | `8aa43866-173f-4c6e-bfa1-f231e34d6d71` | A unique ID for the record. |
+| `timestamp` | `2026-05-09T22:24:43.951Z` | When the transaction was completed. |
+
+{style="table-layout:auto"}
+
+### Ledger Events
+
+The ledger event source provides a record of each change to a member's balances, including grants in a Moment, grants from filling out a form, redemptions happening in a purchase or via the LAVA App, and transfers. A positive `amount` indicates rewards were added to the balance; a negative `amount` indicates rewards were redeemed or removed. Transfers events produce two records: one for the member losing the balance and one for the member receiving it. Payments and transactions may use multiple balances, each of which will come as a separate event.
+
+Download the [sample Ledger Events data file here.](../../assets/lava/lava_ledger_sample.json)
+
+| [!DNL LAVA] Source Connector Field | Sample Value | Description |
+| --- | --- | --- |
+| `lavaId` | `292c367c-19ee-4d56-8d33-b2ab2c8fd553` | The [!DNL LAVA] ID for the member whose balance changed. |
+| `amount` | `-100` | The change in reward balance. Positive values indicate grants; negative values indicate redemptions or deductions. For stored value, this is in the lowest unit of denomination (cents). |
+| `expiresAt` | `2026-05-31T22:40:43.109Z` | When the affected balance expires. |
+| `rewardId` | `1` | The ID for a [!DNL LAVA] reward. This never changes for a given reward. |
+| `rewardName` | `F&B Credit` | The name for the reward configured in the [!DNL LAVA] Moment Activation Console. This can be changed. |
+| `rewardSlug` | `Credit` | The primary slug for the reward configured in the [!DNL LAVA] Moment Activation Console. This can be changed. |
+| `rewardType` | `stored` | The type of reward (access, offer, points, stored or voucher). |
+| `type` | `ledger` | An indicator for what type of record this is. |
+| `id` | `8aa43866-173f-4c6e-bfa1-f231e34d6d71` | A unique ID for the record. |
+| `timestamp` | `2026-05-21T22:40:43.109Z` | When the balance change occurred. |
+
+{style="table-layout:auto"}
+
 ### Load the [!DNL LAVA] package
 
 [!DNL LAVA] provides a package that includes our recommended field groups, schemas, identity namespace and datasets for using [!DNL LAVA] in Experience Platform. Use of these packages is recommended, but not required.
