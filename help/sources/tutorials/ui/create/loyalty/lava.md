@@ -1,7 +1,6 @@
 ---
 title: Create a source connection and dataflow to stream LAVA data using the UI
 description: Learn how to stream data from LAVA to Adobe Experience Platform using the UI.
-badge: beta
 ---
 # Create a source connection and dataflow to stream [!DNL LAVA] data using the UI
 

@@ -1,7 +1,6 @@
 ---
 title: LAVA
 description: Learn about the LAVA source on Adobe Experience Platform
-badge: Beta
 ---
 # [!DNL LAVA]
 
