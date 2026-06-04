@@ -661,7 +661,7 @@ If you want to activate external audiences to your destinations without exportin
 
 Select **[!UICONTROL Next]** to move to the [Review](#review) step.
 
-### Export arrays and objects from enrichment attributes {#export-arrays-enrichment-attributes}
+### [!BADGE Beta]{type=Informative} Export arrays and objects from enrichment attributes {#export-arrays-enrichment-attributes}
 
 >[!AVAILABILITY]
 >
@@ -709,13 +709,13 @@ Select the name of the array attribute from the source field selection screen. T
 
 When you select a property nested inside an array of objects, the **[!UICONTROL Source field]** automatically populates with a `transformArray` calculated expression using `to_object` to extract that property from every object in the array.
 
-For example, selecting `someArray[*].amount` populates the field with:
+For example, selecting `someArray[*].amount` populates the source field with:
 
 ```
 transformArray(someArray, x -> to_object("amount", x.amount))
 ```
 
-The target field auto-populates with the leaf node name (`amount`).
+The target field auto-populates with the leaf node name (`amount`). You can change the name of the target field if you desire to do so.
 
 ![Recording showing how to select a nested field inside an array to auto-populate the source field with a transformArray calculated expression.](../assets/ui/activate-batch-profile-destinations/export-array-field.gif)
 
@@ -732,7 +732,7 @@ For example, to export both `amount` and `date` from `someArray`, start by selec
 transformArray(someArray, x -> to_object("amount", x.amount, "date", x.date))
 ```
 
-Each object in the exported array contains only the specified fields.
+Only the fields you specify are included in each object within the exported array. Additionally, you can change the name of the top-level array in your exported file if desired.
 
 ![Recording showing how to select one field from an array, then manually edit the transformArray expression to include multiple fields.](../assets/ui/activate-batch-profile-destinations/export-array-multiple-fields.gif)
 
