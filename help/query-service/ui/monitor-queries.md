@@ -66,9 +66,9 @@ Toggle the relevant checkboxes to remove or add a table column. Next, select **[
 
 ## Manage scheduled queries with inline actions {#inline-actions}
 
-The [!UICONTROL Scheduled Queries] view offers various inline actions to manage all of your scheduled queries from one location. Inline actions are indicated in each row with ellipsis. Select the ellipsis of a scheduled query that you want to manage to see the available options in a pop-up menu. The available options include [[!UICONTROL Disable schedule]](#disable) or [!UICONTROL Enable schedule], [[!UICONTROL Delete schedule]](#delete), [[!UICONTROL Subscribe]](#alert-subscription) to query alerts, and [Enable or [!UICONTROL Disable quarantine]](#quarantined-queries).
+The [!UICONTROL Scheduled Queries] view offers various inline actions to manage all of your scheduled queries from one location. Inline actions are indicated in each row with ellipsis. Select the ellipsis of a scheduled query that you want to manage to see the available options in a pop-up menu. The available options include [[!UICONTROL Disable schedule]](#disable) or [!UICONTROL Enable schedule], [[!UICONTROL Edit schedule]](#edit), [[!UICONTROL Delete schedule]](#delete), [[!UICONTROL Subscribe]](#alert-subscription) to query alerts, and [Enable or [!UICONTROL Disable quarantine]](#quarantined-queries).
 
-![The Scheduled Queries tab with the inline action ellipses and popup menu highlighted.](../images/ui/monitor-queries/inline-actions.png)
+![The Scheduled Queries tab with the inline action ellipses and popup menu highlighted, including the Edit schedule option.](../images/ui/monitor-queries/inline-actions.png)
 
 ### Disable or enable a scheduled query {#disable}
 
@@ -79,6 +79,14 @@ Once a scheduled query is disabled, you can enable the schedule through the same
 >[!NOTE]
 >
 >If a query has been Quarantined, you should review the template's SQL before you enable its schedule. This prevents a waste of compute hours if the template query still has issues.
+
+### Edit a scheduled query {#edit}
+
+To edit a scheduled query, select the ellipsis (**...**) for the schedule you want to modify, then select **[!UICONTROL Edit schedule]** from the options in the pop-up menu. The edit workflow opens, allowing you to update supported schedule settings such as frequency, end date, Query Quarantine enrollment, and alert subscriptions.
+
+The **[!UICONTROL Edit schedule]** option is only available for active schedules. Schedules that have ended, been deleted, or are still registering do not display this option.
+
+For complete instructions on the edit workflow, editable fields, and eligibility requirements, see [Edit a schedule](./query-schedules.md#edit-schedule).
 
 ### Delete a scheduled query {#delete}
 
@@ -168,11 +176,11 @@ To filter the list of queries based on their run frequency, select either the **
 
 Once you have enabled your filter criteria, select **[!UICONTROL Hide Filters]** to close the filter panel.
 
-## Query runs schedule details {#query-runs}
+## Schedule details page {#query-runs}
 
-To open the schedule details page, select a query name from the [!UICONTROL Scheduled Queries] tab. This view provides a list of all the runs executed as part of that scheduled query. The information provided includes the start and end time, status, and dataset used. 
+To open the schedule details page, select a query name from the [!UICONTROL Scheduled Queries] tab. This view provides a list of all the runs executed as part of that scheduled query. The information provided includes the start and end time, status, and dataset used. For active schedules, select **[!UICONTROL Edit schedule]** from the top-right corner to modify the schedule configuration. See [Edit a schedule](./query-schedules.md#edit-schedule) for full instructions.
 
-![The schedule details page.](../images/ui/monitor-queries/schedule-details.png) 
+![The schedule details page with the Edit schedule button highlighted.](../images/ui/monitor-queries/schedule-details.png) 
 
 This information is provided in a five-column table. Each row denotes a query execution. 
 
