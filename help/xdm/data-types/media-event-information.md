@@ -25,16 +25,14 @@ topic_v2:
 ---
 # [!UICONTROL Media Event Information] data type
 
-[!UICONTROL Media Event Information] is a standard Experience Data Model (XDM) data type that describes media details information related to the experience event. 
+[!UICONTROL Media Event Information] is a standard Experience Data Model (XDM) data type that describes media event details related to the experience event.
 
 ![A diagram of the Media Event Information data type.](../images/data-types/media-event-information.png)
 
 | Property | Data type | Description |
-| --- | --- | --- |
-| `mediaCollection` | [!UICONTROL mediaDetails] | Media details information related to the experience event. This data type is used for both [media data collection](./media-collection-details.md) and [media data reporting](./media-reporting-details.md). |
-| `mediaEventTimestamp` | [!UICONTROL String] | The time when a media event occurred. |
-| `mediaEventType` | [!UICONTROL String] | The media event type. |
+|---|---|---|
+| `mediaCollection` | [!UICONTROL mediaDetails] | Media details related to the experience event. This data type is used for both [media data collection](./media-collection-details.md) and [media data reporting](./media-reporting-details.md). |
+| `mediaEventTimestamp` | [!UICONTROL String] | The time when a media event occurred, in ISO 8601 format (for example, `2024-09-26T15:52:24+00:00`). |
+| `mediaEventType` | [!UICONTROL String] | The type of media event. Accepted values: `media.sessionStart`, `media.adBreakStart`, `media.adStart`, `media.adComplete`, `media.adBreakComplete`, `media.play`, `media.pauseStart`, `media.ping`, `media.bufferStart`, `media.bitrateChange`, `media.statesUpdate`, `media.error`, `media.chapterStart`, `media.chapterComplete`, `media.sessionComplete`, `media.sessionEnd`, `media.downloaded`. |
 
-{style="table-layout:auto"}
-
-For more details on the field group, refer to the [public XDM repository](https://github.com/adobe/xdm/blob/master/components/datatypes/mediaevent.schema.json)
+See [mediaevent.schema.json](https://github.com/adobe/xdm/blob/master/components/datatypes/mediaevent.schema.json) in the public XDM repository for the full schema definition.
