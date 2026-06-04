@@ -397,11 +397,11 @@ If you select **[!UICONTROL Random split]**, the audiences will be randomly spli
 
 ![The random split section and options are  highlighted.](../images/ui/audience-composition/random-split.png)
 
-If you select **[!UICONTROL Persistent split]**, the audiences will stay in the same bucket. When you select persistent split, you need to provide an identity. Available identity types include all the identity namespace available on your organization.
+If you select **[!UICONTROL Persistent split]**, the audiences will stay in the same bucket. For example, you can use persistent split when you want to have a control group that remains constant. 
+
+When you select persistent split, you need to provide an identity. Available identity types include all the identity namespace available on your organization.
 
 ![The Persistent split section and options are highlighted.](/help/segmentation/images/ui/audience-composition/persistent-split.png)
-
-![The Split by identity checkbox is highlighted. Additionally, the dropdown that lets you select with identity to split by is highlighted.](../images/ui/audience-composition/split-by-identity.png)
 
 ### Split by attribute {#split-attribute}
 
