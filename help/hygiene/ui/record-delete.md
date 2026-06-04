@@ -202,14 +202,7 @@ Quotas reset on the first day of each calendar month. Unused quota does **not** 
 
 ### Processing timelines for identifier submissions {#sla-processing-timelines}
 
-After submission, record delete requests are queued and processed based on your entitlement level.
-
-| Product & Entitlement Description                                                  | Queue Duration      | Maximum Processing Time (SLA) |
-|------------------------------------------------------------------------------------|---------------------|-------------------------------|
-| Without Privacy and Security Shield or Healthcare Shield add-on                   | Up to 15 days       | 30 days                       |
-| With Privacy and Security Shield or Healthcare Shield add-on                      | Typically 24 hours  | 15 days                       |
-
-If your organization requires higher limits, contact your Adobe representative for an entitlement review.
+Record delete requests are processed based on entitlement tier, with different SLA commitments for standard and Shield customers. For a full breakdown of processing stages and timelines, see [Data Lifecycle processing timelines](../data-lifecycle-processing-timelines.md).
 
 >[!TIP]
 >
@@ -233,7 +226,7 @@ After the request is submitted, a work order is created and appears on the [!UIC
 
 >[!NOTE]
 >
->Refer to the overview section on [timelines and transparency](../home.md#record-delete-transparency) for details on how record deletes are processed once they are executed.
+>For details on how record deletes are processed once they are executed, see [Data Lifecycle processing timelines](../data-lifecycle-processing-timelines.md).
 
 ![The [!UICONTROL Record] tab of the [!UICONTROL Data Lifecycle] workspace with the new request highlighted.](../images/ui/record-delete/request-log.png)
 

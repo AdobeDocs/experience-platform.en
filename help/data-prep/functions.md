@@ -394,7 +394,7 @@ The table below outlines a list of reserved characters and their corresponding e
 | ? | %3F |
 | @ | %40 |
 | &#91; | %5B |
-| &#124; | %5C |
+| `\|` | %5C |
 | &#93; | %5D |
 | ^ | %5E |
 | &#96; | %60 |
