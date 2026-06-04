@@ -146,7 +146,7 @@ You can also select the ellipses (...) next to the trait for quick actions, incl
 | Quick action | Description |
 | ------------ | ----------- |
 | Create audience using trait | Automatically opens Audience Builder with the trait added to the audience's rules. |
-| Deactivate | Deactivates the trait. Deactivating the trait does **not** remove the trait from the UI. However, it no longer affects your license entitlements nor can it be used in audiences. |
+| Deactivate | Deactivates the trait. Deactivating the trait does **not** remove the trait from the UI. However, it no longer affects your license entitlements nor can it be used in audiences. Once a trait is deactivated, you can re-activate the trait for future use. |
 | Delete | Deletes the trait. Deleting the trait removes the trait from the UI, so it can no longer be used. |
 
 You can view more details by selecting the trait's name. The traits details page appears. This page displays information including the trait summary, profiles qualified over time, and audiences with this trait.
