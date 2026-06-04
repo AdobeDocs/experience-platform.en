@@ -71,7 +71,7 @@ The schedules workspace appears. The UI displays a list of any scheduled runs th
 >title="Scheduled query with no end date"
 >abstract="This scheduled query has no end date and continues running until you manually pause or delete it. Review long-running schedules periodically to avoid unnecessary compute usage."
 
-The schedule details page appears. On this page, you can edit a variety of details for the scheduled query. Details include the [frequency and weekday of the scheduled query](#scheduled-query-frequency) run, the start and end date, the dataset to export the results to, and [query status alerts](#alerts-for-query-status).
+The schedule details page appears. On this page, you can configure the details for the scheduled query. Details include the [frequency and weekday of the scheduled query](#scheduled-query-frequency) run, the start and end date, the dataset to export the results to, and [query status alerts](#alerts-for-query-status).
 
 >[!IMPORTANT]
 >
@@ -204,7 +204,7 @@ You can modify supported configuration settings for an existing scheduled query 
 
 >[!IMPORTANT]
 >
->You can only edit schedules that are currently active. The **[!UICONTROL Edit schedule]** option is not displayed for schedules that have ended, been deleted, or are still registering.
+>The **[!UICONTROL Edit schedule]** option is only displayed for eligible schedules. Schedules that have ended, been deleted, or are still registering cannot be edited.
 
 ### Access the edit workflow {#access-edit-workflow}
 
@@ -230,58 +230,35 @@ See [Manage scheduled queries with inline actions](./monitor-queries.md#inline-a
 2. Select the schedule ID from the list to open the schedule details page.
 3. Select **[!UICONTROL Edit schedule]**.
 
-### Schedule edit eligibility {#edit-eligibility}
-
-The **[!UICONTROL Edit schedule]** option is only displayed when a schedule is eligible for editing. When a schedule is not eligible, the option is hidden and users cannot enter the edit workflow.
-
-A schedule cannot be edited under the following conditions:
-
-| Condition | Description |
-|---|---|
-| End date in the past | The schedule's end date has already passed. |
-| Deleted | The schedule has been deleted. |
-| Registering | The system is still processing the creation of the schedule. |
-
 ### Edit schedule settings {#edit-schedule-settings}
 
-The edit workflow uses the same schedule configuration form as schedule creation. Update the applicable fields, then save the form.
+The edit workflow displays the current schedule configuration and allows you to modify supported settings. Review the fields available for editing below, update them as needed, then select **[!UICONTROL Save]**.
 
 The following settings can be modified:
 
 | Setting | Description |
 |---|---|
-| **[!UICONTROL Frequency]** | How often the query runs. Options include Hourly, Daily, Weekly, Monthly, and Yearly. |
-| **[!UICONTROL Days]** | The days on which the query runs, applicable to Weekly and Monthly frequencies. |
+| **[!UICONTROL Frequency]** | How often the query runs. Options include [!UICONTROL Hourly], [!UICONTROL Daily],[!UICONTROL  Weekly], [!UICONTROL Monthly], and [!UICONTROL Yearly]. |
+| **[!UICONTROL Days]** | The days on which the query runs, applicable to weekly frequencies. |
 | **[!UICONTROL End date]** | The date after which the scheduled query stops running. |
 | **[!UICONTROL End time]** | The time at which the schedule ends on the specified end date. |
 | **[!UICONTROL No end date]** | Configures the schedule to run continuously without an end date, if this option is enabled for your organization. |
 | **[!UICONTROL Query Quarantine]** | Enrolls or removes the query from the quarantine feature. See [Quarantine queries if they continuously fail](#quarantine) for details. |
 | **[!UICONTROL Alerts]** | Adds, removes, or modifies alert subscriptions for this scheduled query. See [Set alerts for a scheduled query status](#alerts-for-query-status) for available alert types. |
 
-The following settings cannot be modified after a schedule is created:
-
-| Setting | Description |
-|---|---|
-| **[!UICONTROL Start date]** | The date on which the schedule begins. Fixed at creation. |
-| **[!UICONTROL Start time]** | The time at which the schedule begins on the start date. Fixed at creation. |
-
 >[!NOTE]
 >
->Editing a schedule does not modify the underlying SQL query. To change query logic, open the query template in the Query Editor. If the start date or start time must change, a new schedule is required.
+>The **[!UICONTROL Start date]** and **[!UICONTROL Start time]** fields are fixed at creation and cannot be modified. To use a different start date or start time, create a new schedule.
 
 ### Save schedule changes {#save-schedule-changes}
 
 After updating the schedule settings, select **[!UICONTROL Save]** to apply the changes. A confirmation message appears when the schedule has been updated successfully.
 
->[!NOTE]
->
->**[UNVERIFIED]** Capture the exact text of the confirmation toast after saving a schedule update.
-
 ### Verify updated schedule information {#verify-schedule-updates}
 
-Updated schedule configuration is reflected in the following locations after saving:
+After saving, verify the updated schedule configuration in the following locations:
 
-- The [!UICONTROL Scheduled Queries] tab, in the schedule details for the updated entry.
+- The [!UICONTROL Scheduled Queries] tab.
 - The [!UICONTROL Properties] panel on the [schedule details page](./monitor-queries.md#query-runs).
 
 ## Enable, disable, or delete a schedule {#delete-schedule}
