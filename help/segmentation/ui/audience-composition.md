@@ -389,11 +389,17 @@ When splitting your audience, you can either split by percentage or split by att
 >title="Persistent split"
 >abstract="You can make the percentage split persistent by enabling this option and selecting an identity namespace."
 
-When splitting by percentage, the audiences will be randomly split, based on the number of paths and percentages provided.
+When splitting by percentage, you can set the **[!UICONTROL Profile distribution]** to either be **[!UICONTROL Random split]** or **[!UICONTROL Persistent split]**.
 
-![The percent split is highlighted.](../images/ui/audience-composition/split-by-percentage.png)
+![The Profile distribution section is highlighted, showing you can choose between Random or Persistent splits.](/help/segmentation/images/ui/audience-composition/profile-distribution.png)
 
-Alternatively, you can also provide an identity, which would make the percentage-based split persistent. Available identity types include all the identity namespace available on your organization.
+If you select **[!UICONTROL Random split]**, the audiences will be randomly split, based on the number of paths and percentages provided.
+
+![The random split section and options are  highlighted.](../images/ui/audience-composition/random-split.png)
+
+If you select **[!UICONTROL Persistent split]**, the audiences will stay in the same bucket. When you select persistent split, you need to provide an identity. Available identity types include all the identity namespace available on your organization.
+
+![The Persistent split section and options are highlighted.](/help/segmentation/images/ui/audience-composition/persistent-split.png)
 
 ![The Split by identity checkbox is highlighted. Additionally, the dropdown that lets you select with identity to split by is highlighted.](../images/ui/audience-composition/split-by-identity.png)
 
