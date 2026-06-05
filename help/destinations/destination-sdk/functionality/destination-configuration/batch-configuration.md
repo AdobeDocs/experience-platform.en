@@ -2,6 +2,23 @@
 description: Learn how to configure the file export settings for destinations built with Destination SDK.
 title: Batch configuration
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
+TQID: https://experienceleague.adobe.com/wqtETHVbW7en7bCuO-3khGwjEzT4la5uQc3zwEaC288
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Batch configuration {#batch-configuration}
 
@@ -100,10 +117,10 @@ The values that you set up here are surfaced in the [Schedule audience export](.
 
 ## File name configuration {#file-name-configuration}
 
-Use file name configuration macros to define what the exported file names should include. The macros in the table below describe elements found in the UI in the [file name configuration](../../../ui/activate-batch-profile-destinations.md#file-names) screen.
+Use file name configuration macros to define what the exported file names should include. The macros in the table below describe elements found in the UI in the [file name configuration](../../../ui/activate-batch-profile-destinations.md#configure-file-names) screen.
 
 >[!TIP]
-> 
+>
 >As a best practice, you should always include the `SEGMENT_ID` macro in your exported file names. Segment IDs are unique, so including them in the file name is the best way to ensure that file names are unique as well. 
 
 |Macro|UI label|Description|Example|
@@ -113,7 +130,7 @@ Use file name configuration macros to define what the exported file names should
 |`SEGMENT_NAME`|[!UICONTROL Segment Name]|User-defined audience name|VIP subscriber|
 |`DESTINATION_INSTANCE_ID`|[!UICONTROL Destination ID]|Unique, Experience Platform-generated ID of the destination instance|7b891e5f-025a-4f0d-9e73-1919e71da3b0|
 |`DESTINATION_INSTANCE_NAME`|[!UICONTROL Destination Name]|User-defined name of the destination instance.|My 2022 Advertising Destination|
-|`ORGANIZATION_NAME`|[!UICONTROL Organization Name]|Name of the customer organization in Adobe Experience Platform.|My Organization Name|
+|`ORGANIZATION_NAME`|[!UICONTROL Organization Name]|Name of the customer organization in [!DNL Adobe Experience Platform].|My Organization Name|
 |`SANDBOX_NAME`|[!UICONTROL Sandbox Name]|Name of the sandbox used by the customer.|prod|
 |`DATETIME` / `TIMESTAMP`|[!UICONTROL Date and time]|`DATETIME` and `TIMESTAMP` both define when the file was generated, but in different formats. <br><br><ul><li>`DATETIME` uses the following format: YYYYMMDD_HHMMSS.</li><li>`TIMESTAMP` uses the 10-digit Unix format. </li></ul> `DATETIME` and `TIMESTAMP` are mutually exclusive, and cannot be used simultaneously. |<ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul>|
 |`CUSTOM_TEXT`|[!UICONTROL Custom text]|User-defined custom text to be included in the file name. Cannot be used in `defaultFilename`.|My_Custom_Text|
@@ -123,7 +140,7 @@ Use file name configuration macros to define what the exported file names should
 
 {style="table-layout:auto"}
 
-### File name configuration example
+### File name configuration example {#file-name-configuration-example}
 
 The configuration example below shows the correspondence between the configuration used in the API call and the options shown in the UI.
 

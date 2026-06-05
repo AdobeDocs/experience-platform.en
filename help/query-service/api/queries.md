@@ -5,6 +5,16 @@ title: Queries API Endpoint
 description: The following sections walk through calls you can make using the /queries endpoint in the Query Service API.
 role: Developer
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
+TQID: https://experienceleague.adobe.com/ykkfHt89KrZocPZSkN21t3l3Zd-nFOKcJOwPcn7nkfE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Queries endpoint
 

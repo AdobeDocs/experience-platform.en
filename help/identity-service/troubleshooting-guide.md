@@ -4,6 +4,23 @@ solution: Experience Platform
 title: Identity Service Troubleshooting Guide
 description: This document provides answers to frequently asked questions about Adobe Experience Platform Identity Service, as well as a troubleshooting guide for common errors.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
+TQID: https://experienceleague.adobe.com/CkZNMxP3j8J7cExgVAM9aJJeb32p8bFqtVWglAluo98
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Identity Service troubleshooting guide
 
@@ -90,7 +107,8 @@ Identity Service has standard namespaces to support the ingestion of hashed iden
 If you are sending hashed PII values to Identity Service, you must use the same encryption method across your datasets. This ensures that the same identity value across datasets generates the same hashed values and are able to be properly matched and linked in the identity graph.
 
 <!-- Documentation does not show any methods of editing the identityMap directly, and this table never overtly recommends using identityMap anyway. This should probably be removed unless PM thinks otherwise. -->
-<!-- ## When should I use the Identity map rather than labeling individual XDM schema fields?
+<!-- 
+## When should I use the Identity map rather than labeling individual XDM schema fields?
 
 The following table describes when the recommended approach for including identity data in your XDM would be identity map and when an identity field is the better method.
 
@@ -105,7 +123,8 @@ Developer|Recommended|Supported
 ETL|Recommended|Avoid - While this is supported, data should be formatted naturally when using an ETL, favoring identity fields over `identityMap`.
 Internal solutions|Preferred|Common
 
---- -->
+--- 
+-->
 
 ## Why can't I access the identity graph page or APIs?
 

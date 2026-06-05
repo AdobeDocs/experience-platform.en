@@ -2,12 +2,34 @@
 title: Query Service Audit Log Integration
 description: Query Service audit logs maintain records for various user actions to form an audit trail for troubleshooting issues or adhering to corporate data stewardship policies and regulatory requirements. This tutorial provides an overview of the audit log features specific to Query Service.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
+TQID: https://experienceleague.adobe.com/vXV3gcTNSwMY-jOb9O5dKtXS7DanR4VJWBqun5qME4Q
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # [!DNL Query Service] audit log integration
 
 The Adobe Experience Platform [!DNL Query Service] audit log integration provides records of query-related user actions. Audit logs are an essential tool for troubleshooting and adhering to corporate data stewardship policies and regulatory requirements. The capability allows you to return an action log for many event types and filter and export the records. The logs can be accessed either through the Experience Platform UI or the [Audit Query API](https://www.adobe.io/experience-platform-apis/references/audit-query/) and downloaded in either CSV or JSON file formats.
 
-To learn more about the audit logs user interface, refer to the [audit logs overview document](../../landing/governance-privacy-security/audit-logs/overview.md). To learn more about making calls to Experience Platform APIs, refer to the [audit logs API guide](../../landing/api-guide.md). 
+To learn more about the audit logs user interface, refer to the [audit logs overview document](../../landing/governance-privacy-security/audit-logs/overview.md). To learn more about making calls to Experience Platform APIs, refer to the [audit logs API guide](../../landing/api-guide.md).
+
+>[!NOTE]
+>
+>Session eviction actions are logged. For UI workflows, see [Manage Query Service sessions](../ui/session-management.md).
 
 ## Prerequisites
 
@@ -39,7 +61,7 @@ The returned audit log data contains the following information on all queries th
 | [!UICONTROL Asset Name] | The value for the [!UICONTROL Asset Name] field depends on the category chosen as a filter. When using the [!UICONTROL Scheduled query] category this is the **schedule name**. When using the [!UICONTROL Query template] category, this is the **template name**. When using the [!UICONTROL Query] category, this is the **session ID**  |
 | [!UICONTROL Category] | This field matches the category selected by you in the filter dropdown.  |
 | [!UICONTROL Action] |  This can be either create, delete, update, or execute. The available actions depend on the category chosen as a filter. |
-| [!UICONTROL User] | This field provides the user ID that executed the query. | 
+| [!UICONTROL User] | This field provides the user ID that executed the query. |
 
 ![The Audits dashboard with the filtered activity log highlighted.](../images/audit-log/filtered-activity.png)
 

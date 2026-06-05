@@ -3,6 +3,18 @@ keywords: Experience Platform;data prep;data prep api;troubleshooting;API
 title: Getting started with Data Prep API
 description: Learn the key concepts and basic functionality that you need to know in order to use the Data Prep API endpoints to perform basic CRUD operations for use with Mapper.
 exl-id: 027e6fbe-9a0d-420b-8d67-659ca7f5ec22
+TQID: https://experienceleague.adobe.com/UqC9yeVg01NLvfBiSJV6R-Zrp5qXcGL-2USVNBXfaRQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Getting started with the [!DNL Data Prep] API {#getting-started}
 

@@ -2,6 +2,13 @@
 title: Create Drafts Of Your Flow Service Entities API
 description: Learn how to create drafts of your base connection, source connection, target connection, and dataflow using the Flow Service API
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
+TQID: https://experienceleague.adobe.com/A8ttLAKsXX1DjRRUcrtNyysaMHUZNHQcHp84oPr6-NU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create drafts of your [!DNL Flow Service] entities using the API
 

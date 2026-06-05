@@ -3,6 +3,21 @@ title: Connect AWS Redshift To Experience Platform Using The Flow Service API
 description: Learn how to connect Adobe Experience Platform to AWS Redshift using the Flow Service API.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
+TQID: https://experienceleague.adobe.com/ECSrEdFIZQecQQrp4gF2bMAO-eu3rVDdJtr9Np5mqOI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Connect [!DNL AWS Redshift] to Experience Platform using the [!DNL Flow Service] API
 

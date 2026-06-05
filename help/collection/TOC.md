@@ -6,12 +6,22 @@ breadcrumb-title: Data Collection
 user-guide-description: Learn how to send data to Adobe Experience Platform.
 feature: Data Collection
 role: Developer
+nudge: true
 ---
 
 # Data collection {#collection}
 
 + [Overview](home.md)
 + [Permissions](permissions.md)
++ Identity {#identity}
+  + [Overview](identity/overview.md)
+  + [Using identityMap](identity/identity-map.md)
+  + [First-party device IDs](identity/fpid.md)
+  + [Cross-domain sharing](identity/cross-domain-sharing.md)
+  + [Mobile apps to mobile web/WebViews](identity/mobile-to-web.md)
+  + {hide-from-toc} [Unified identity support](identity/unified-identity-support.md)
+  + [Consent and identity](identity/consent.md)
+  + [Troubleshooting](identity/troubleshooting.md)
 + BrightScript {#brightscript}
   + [BrightScript overview](brightscript/brs-overview.md)
 + JavaScript {#js}
@@ -19,6 +29,7 @@ role: Developer
   + [Release notes](js/release-notes.md)
   + Installation {#install}
     + [Install overview](js/install/overview.md)
+    + [Base code](js/install/base-code.md)
     + [Library](js/install/library.md)
     + [NPM](js/install/npm.md)
     + [Custom build](js/install/create-custom-build.md)
@@ -32,6 +43,7 @@ role: Developer
       + [clickCollection](js/commands/configure/clickcollection.md)
       + [clickCollectionEnabled](js/commands/configure/clickcollectionenabled.md)
       + [context](js/commands/configure/context.md)
+      + [conversation](js/commands/configure/conversation.md)
       + [datastreamId](js/commands/configure/datastreamid.md)
       + [debugEnabled](js/commands/configure/debugenabled.md)
       + [defaultConsent](js/commands/configure/defaultconsent.md)
@@ -91,14 +103,14 @@ role: Developer
   + [Configure a CSP](use-cases/configuring-a-csp.md)
   + [Debugging](use-cases/debugging.md)
   + [Event deduplication](use-cases/event-duplication.md)
-  + Identity {#identity}
-    + [Overview](use-cases/identity/id-overview.md)
-    + [First-party device IDs](use-cases/identity/first-party-device-ids.md)
-    + [ID sharing](use-cases/identity/id-sharing.md)
+  + MCP {#mcp}
+    + [ChatGPT apps](use-cases/mcp/chatgpt.md)
   + [Multiple SDK instances](use-cases/multiple-instances.md)
   + Personalization {#personalization}
     + [Overview](use-cases/personalization/pers-overview.md)
-    + [Display events](use-cases/personalization/display-events.md)
+    + [Render DOM actions automatically](use-cases/personalization/render-auto-pers-content.md)
+    + [Render HTML offers](use-cases/personalization/render-html-offers.md)
+    + [Render propositions manually](use-cases/personalization/render-manual-propositions.md)
     + [Manage flicker](use-cases/personalization/manage-flicker.md)
-    + [Rendering personalized content](use-cases/personalization/rendering-personalization-content.md)
+    + [Display events](use-cases/personalization/display-events.md)
     + [Top and bottom page events](use-cases/personalization/top-bottom-page-events.md)

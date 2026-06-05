@@ -4,12 +4,33 @@ type: Tutorial
 description: Learn how to activate the audience data you have in Adobe Experience Platform by sending audiences to streaming profile-based destinations.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
+TQID: https://experienceleague.adobe.com/bO1nMDaAs7jYfFQNYuzrNkAdv3weRFR7SxPDObo-qOI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
-
 # Activate audiences to streaming profile export destinations
 
 >[!IMPORTANT]
-> 
+>
 > * To activate data and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 > * To activate data without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 > 
@@ -17,7 +38,7 @@ exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
 
 ## Overview {#overview}
 
-This article explains the workflow required to activate audience data in Adobe Experience Platform to streaming profile-based destinations (also referred to as [enterprise destinations](/help/destinations/destination-types.md#advanced-enterprise-destinations)).
+This article explains the workflow required to activate audience data in [!DNL Adobe Experience Platform] to streaming profile-based destinations (also referred to as [enterprise destinations](/help/destinations/destination-types.md#advanced-enterprise-destinations)).
 
 This article applies to the following three destinations:
 

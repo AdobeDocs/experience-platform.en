@@ -2,6 +2,42 @@
 title: Cloud Connector Extension Overview
 description: Learn about the Cloud Connector event forwarding extension in Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
+TQID: https://experienceleague.adobe.com/NDCI4yJ7qlJYtRARL7KQtGeYHxUJmjaC3NB5gVG00gI
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+    internal-label: Advertising
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+    internal-label: Event forwarding
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # Cloud Connector extension overview
 
@@ -65,7 +101,7 @@ The following table lists the predefined headers. You are not limited to these h
 |[Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)|Directives for caching mechanisms in both requests and responses.|
 |[Connection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Connection)|Controls whether the network connection stays open after the current transaction finishes.|
 |[Content-Length](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length)|The size of the resource, in decimal number of bytes. |
-|[Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type)|Indicates the media type of the resource. | 
+|[Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type)|Indicates the media type of the resource. |
 |Cookie|Contains stored [HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) previously sent by the server with the [`Set-Cookie`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) header.|
 |Date|General HTTP header contains the date and time at which the message was originated. |
 |[DNT](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DNT)|Expresses the user's tracking preference. |
@@ -80,12 +116,12 @@ The following table lists the predefined headers. You are not limited to these h
 |[If-Unmodified-Since](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since)| |
 |[Max-Forwards](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since)| |
 |[Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin)| |
-|[Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma)|Implementation-specific header that may have various effects anywhere along the request-response chain. Used for backwards compatibility with HTTP/1.0 caches where the Cache-Control header is not yet present.| 
+|[Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma)|Implementation-specific header that may have various effects anywhere along the request-response chain. Used for backwards compatibility with HTTP/1.0 caches where the Cache-Control header is not yet present.|
 |[Proxy-Authorization](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization) ||
-|[Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range)|Indicates the part of a document that the server should return.| 
-|[Referer](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer)|The address of the previous web page from which a link to the currently requested page was followed. | 
+|[Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range)|Indicates the part of a document that the server should return.|
+|[Referer](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer)|The address of the previous web page from which a link to the currently requested page was followed. |
 |TE|Specifies the transfer encodings the user agent is willing to accept. (You could informally call it `Accept-Transfer-Encoding`, which would be more intuitive). |
-|Upgrade|The relevant RFC document for the [`Upgrade` header field is RFC 7230, section 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to HTTP 2.0, assuming the server decides to acknowledge and implement the `Upgrade` header field. Neither party is required to accept the terms specified in the `Upgrade` header field. It can be used in both client and server headers. If the `Upgrade` header field is specified, then the sender MUST also send the `Connection` header field with the `upgrade` option specified.| 
+|Upgrade|The relevant RFC document for the [`Upgrade` header field is RFC 7230, section 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to HTTP 2.0, assuming the server decides to acknowledge and implement the `Upgrade` header field. Neither party is required to accept the terms specified in the `Upgrade` header field. It can be used in both client and server headers. If the `Upgrade` header field is specified, then the sender MUST also send the `Connection` header field with the `upgrade` option specified.|
 |[User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)|Contains a characteristic string that allows the network protocol peers to identify the application type, operating system, software vendor or software version of the requesting software user agent. |
 |[Via](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Via) | Added by proxies, both forward and reverse proxies, and can appear in the request headers and the response headers. |
 |[Warning](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning)|General warning information about possible problems. |

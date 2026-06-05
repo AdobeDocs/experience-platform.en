@@ -1,36 +1,62 @@
 ---
-keywords: Advertising Cloud;advertising cloud extension; advertising cloud destination
-title: Adobe Advertising Cloud extension
-description: The Adobe Advertising Cloud extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+keywords: advertising extension; advertising destination
+title: Adobe Advertising extension
+description: The Adobe Advertising extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
+TQID: https://experienceleague.adobe.com/4hYx-JGJE4F7GP5JoI-JSPOp7NRNbGEvHzOrXAv8AGw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+    internal-label: Data collection UI
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+    internal-label: Properties
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+    internal-label: Data elements
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
-# Adobe Advertising Cloud extension {#adobe-advertising-cloud-extension}
+# [!DNL Adobe Advertising] extension {#adobe-advertising-cloud-extension}
 
 ## Overview {#overview}
 
-This is the [!DNL Advertising Cloud] extension for implementing [!DNL Advertising Cloud] conversion and audience tags for both the DSP and Search (DCO is not supported currently).
+This is the [!DNL Adobe Advertising] extension for implementing advertising conversion and audience tags for both the DSP and Search (DCO is not supported currently).
 
-Adobe Advertising Cloud is an advertising extension in Adobe Experience Platform.
+[!DNL Adobe Advertising] is an advertising extension in [!DNL Adobe Experience Platform].
 
 This destination is a tag extension. For more information about how tags extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
-![Adobe Advertising Cloud extension](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
+![Adobe Advertising extension](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
 
 ## Prerequisites {#prerequisites}
 
 This extension is available in the Destinations catalog for all customers who have purchased Experience Platform.
 
-To use this extension, you need access to tags in Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to Data Collection features in the UI and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+To use this extension, you need access to tags in Experience Platform. Tags are offered to [!DNL Adobe CX Enterprise] customers as an included, value-add feature. Contact your organization administrator to get access to Data Collection features in the UI and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 
-To install the Adobe Advertising Cloud extension:
+To install the [!DNL Adobe Advertising] extension:
 
 In the [Experience Platform interface](https://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Select the extension from the catalog or use the search bar.
 
-Click on the destination to highlight it, then select **[!UICONTROL Configure]** in the right rail. If the **[!UICONTROL Configure]** control is greyed out, you are missing the **[!UICONTROL manage_properties]** permission. See [Prerequisites](#prerequisites).
+Select the destination, then select **[!UICONTROL Configure]** in the right rail. If the **[!UICONTROL Configure]** control is grayed out, you are missing the **[!UICONTROL manage_properties]** permission. See [Prerequisites](#prerequisites).
 
 Select the tag property in which you want to install the extension. You also have the option of creating a new property. A property is a collection of rules, data elements, configured extensions, environments, and libraries. Learn about properties in the [tags documentation](../../../tags/ui/administration/companies-and-properties.md).
 

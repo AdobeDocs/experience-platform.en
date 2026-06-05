@@ -1,9 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;dataset api;manage data usage;data usage api
 solution: Experience Platform
-title: Manage Data Usage Labels for Datasets Using APIs 
+title: Manage Data Usage Labels for Datasets Using APIs
 description: The Dataset Service API allows you to apply and edit usage labels for datasets. It is part of Adobe Experience Platform's data catalog capabilities, but is separate from the Catalog Service API which manages dataset metadata.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
+TQID: https://experienceleague.adobe.com/KY2QKiJVoCcdoeKcjCyshXfIES2MWxtw6d8u7sozjU8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Manage data usage labels for datasets using APIs
 
@@ -125,9 +141,9 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `entityId` | This identifies the specific dataset entity to be updated. |
-| `entityId.namespace` | This is used to avoid ID collisions. The `namespace` is `AEP`. | 
-| `entityId.id` | The ID of the resource being updated. This refers to the `datasetId`. | 
-| `entityId.type` | The type of the resource being updated. This will always be `dataset`.| 
+| `entityId.namespace` | This is used to avoid ID collisions. The `namespace` is `AEP`. |
+| `entityId.id` | The ID of the resource being updated. This refers to the `datasetId`. |
+| `entityId.type` | The type of the resource being updated. This will always be `dataset`.|
 | `labels` | A list of data usage labels that you want to add to the entire dataset. |
 | `parents` | The `parents` array contains a list of `entityId`s that this dataset will inherit labels from. Datasets can inherit labels from schemas and/or datasets. |
 
@@ -231,7 +247,7 @@ curl -X PUT \
 
 | Parameter | Description |
 | --- | --- |
-| `entityId` | This identifies the specific dataset entity to be updated. The `entityId` must include the following three values:<br/><br/>`namespace`: This is used to avoid ID collisions. The `namespace` is `AEP`.<br/>`id`: The ID of the resource being updated. This refers to the `datasetId`.<br/>`type`: The type of the resource being updated. This will always be `dataset`. | 
+| `entityId` | This identifies the specific dataset entity to be updated. The `entityId` must include the following three values:<br/><br/>`namespace`: This is used to avoid ID collisions. The `namespace` is `AEP`.<br/>`id`: The ID of the resource being updated. This refers to the `datasetId`.<br/>`type`: The type of the resource being updated. This will always be `dataset`. |
 | `labels` | A list of data usage labels that you want to add to the entire dataset. |
 | `parents` | The `parents` array contains a list of `entityId`s that this dataset will inherit labels from. Datasets can inherit labels from schemas and/or datasets. |
 | `optionalLabels` | This parameter is used to remove labels previously applied to a dataset field. A list of any individual fields within the dataset that you want to remove the labels from. Each item in this array must have the following properties: <br/><br/>`option`: An object that contains the [!DNL Experience Data Model] (XDM) attributes of the field. The following three properties are required:<ul><li><code>id</code>: The URI <code>$id</code> value of the schema associated with the field.</li><li><code>contentType</code>: The content type and version number of the schema. This should take the form of one of the valid <a href="../../xdm/api/getting-started.md#accept">Accept headers</a> for an XDM lookup request.</li><li><code>schemaPath</code>: The path to the field within the dataset's schema.</li></ul>`labels`: This value must contain either a subset of the existing field labels applied, or be empty to remove all the existing field labels. PUT or POST methods now return an error if the `optionalLabels` field has any new or modified labels. |

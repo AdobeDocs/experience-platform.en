@@ -2,10 +2,27 @@
 description: Learn how to configure the destination delivery settings for destinations built with Destination SDK, to indicate where the exported data goes and what authentication rule is used in the location where the data will land.
 title: Destination delivery
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
+TQID: https://experienceleague.adobe.com/djc-GUK544m-HsP0gFvoGiXjuYCZsEFfvTnc6SB-qbU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Destination delivery
 
-To offer more control over where the data exported to your destination lands, Destination SDK allows you to specify destination delivery settings.
+To offer more control over where the data exported to your destination lands, use Destination SDK to specify destination delivery settings.
 
 The destination delivery section indicates where the exported data goes and what authentication rule is used in the location where the data will land.
 
@@ -29,7 +46,7 @@ This article describes all the supported destination delivery options that you c
 
 ## Supported integration types {#supported-integration-types}
 
-Refer to the table below for details on which types of integrations support the functionality described on this page.
+See the table below for details on which types of integrations support the functionality described on this page.
 
 |Integration type| Supports functionality |
 |---|---|

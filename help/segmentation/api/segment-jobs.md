@@ -4,6 +4,23 @@ title: Segment Jobs API Endpoint
 description: The segment jobs endpoint in the Adobe Experience Platform Segmentation Service API allows you to programmatically manage segment jobs for your organization.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
+TQID: https://experienceleague.adobe.com/aiV12LUaPOFR9WdyQRTd7bFUr5-lURoORMbAnG-uAoQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Segment jobs endpoint
 
@@ -168,18 +185,18 @@ A successful response returns HTTP status 200 with a list of segment jobs for th
 
 | Property | Description |
 | -------- | ----------- |
-| `id` | A system-generated read-only identifier for the segment job. | 
+| `id` | A system-generated read-only identifier for the segment job. |
 | `status` | The current status for the segment job. Potential values for the status include "NEW", "PROCESSING", "CANCELLING", "CANCELLED", "FAILED", and "SUCCEEDED". |
 | `segments` | An object that contains information about the segment definitions returned within the segment job. |
 | `segments.segment.id` | The ID of the segment definition. |
 | `segments.segment.expression` | An object that contains information about the segment definition's expression, written in PQL. |
 | `metrics` | An object that contains diagnostic information about the segment job. |
 | `metrics.totalTime` | An object that contains information on the times the segmentation job started and ended, as well as the total time taken. |
-| `metrics.profileSegmentationTime` | An object that contains information on the times the segmentation evaluation started and ended, as well as the total time taken. | 
-| `metrics.segmentProfileCounter` | The number of profiles qualified on a per segment basis. | 
+| `metrics.profileSegmentationTime` | An object that contains information on the times the segmentation evaluation started and ended, as well as the total time taken. |
+| `metrics.segmentProfileCounter` | The number of profiles qualified on a per segment basis. |
 | `metrics.segmentedProfileByNamespaceCounter` | The number of profiles qualified for each identity namespace on a per segment definition basis. |
 | `metrics.segmentProfileByStatusCounter` | The count of profiles for each statuses. The following three statuses are supported: <ul><li>"realized" - The number of profiles that qualify for the segment definition.</li><li>"exited" - The number of profiles  that no longer exist in the segment definition.</li></ul>|
-| `metrics.totalProfilesByMergePolicy` | The total number of merged profiles on a per merge policy basis. | 
+| `metrics.totalProfilesByMergePolicy` | The total number of merged profiles on a per merge policy basis. |
 
 +++
 
@@ -333,7 +350,7 @@ A successful response returns HTTP status 200 with information about your newly 
 
 | Property | Description |
 | -------- | ----------- |
-| `id` | A system-generated read-only identifier for the newly created segment job. | 
+| `id` | A system-generated read-only identifier for the newly created segment job. |
 | `status` | The current status for the segment job. Since the segment job is newly created, the status will always be "NEW". |
 | `segments` | An object that contains information about the segment definitions that this segment job is running for. |
 | `segments.segment.id` | The ID of the segment definition that you provided. |
@@ -352,7 +369,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 ```
 
 | Property | Description |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{SEGMENT_JOB_ID}` | The `id` value of the segment job you want to retrieve. |
 
 **Request**
@@ -437,7 +454,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 | Property | Description |
 | -------- | ----------- |
-| `id` | A system-generated read-only identifier for the segment job. | 
+| `id` | A system-generated read-only identifier for the segment job. |
 | `status` | The current status for the segment job. Potential values for the status include "NEW", "PROCESSING", "CANCELLING", "CANCELLED", "FAILED", and "SUCCEEDED". |
 | `segments` | An object that contains information about the segment definitions returned within the segment job. |
 | `segments.segment.id` | The ID of the segment definition. |
@@ -445,8 +462,6 @@ A successful response returns HTTP status 200 with detailed information about th
 | `metrics` | An object that contains diagnostic information about the segment job. |
 
 +++
-
->[!ENDTABS]
 
 ## Bulk retrieve segment jobs {#bulk-get}
 
@@ -554,7 +569,7 @@ A successful response returns HTTP status 207 with the requested segment jobs.
 
 | Property | Description |
 | -------- | ----------- |
-| `id` | A system-generated read-only identifier for the segment job. | 
+| `id` | A system-generated read-only identifier for the segment job. |
 | `status` | The current status for the segment job. Potential values for the status include "NEW", "PROCESSING", "CANCELLING", "CANCELLED", "FAILED", and "SUCCEEDED". |
 | `segments` | An object that contains information about the segment definitions returned within the segment job. |
 | `segments.segment.id` | The ID of the segment definition. |
@@ -577,7 +592,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 ```
 
 | Property | Description |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{SEGMENT_JOB_ID}` | The `id` value of the segment job you want to delete. |
 
 **Request**

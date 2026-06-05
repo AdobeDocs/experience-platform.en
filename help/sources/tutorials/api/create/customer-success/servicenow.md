@@ -5,6 +5,16 @@ title: Create a ServiceNow Base Connection Using the Flow Service API
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to a ServiceNow server using the Flow Service API.
 exl-id: 39d0e628-5c07-4371-a5af-ac06385db891
+TQID: https://experienceleague.adobe.com/oMfs6wWJtkWq5SxGV5jDXdVwqPZuC36pACzXNlpoABw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a [!DNL ServiceNow] base connection using the [!DNL Flow Service] API
 

@@ -5,6 +5,19 @@ title: Policy Evaluation API Endpoints
 description: Once marketing actions have been created and policies have been defined, you can use the Policy Service API to evaluate if any policies are violated by certain actions. The returned constraints take the form of a set of policies that would be violated by attempting the marketing action on the specified data containing data usage labels.
 role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
+TQID: https://experienceleague.adobe.com/ukXQJtJ3MKbRjBG2zSO0WGWVbMIHvAbtbCJHgmaPxOo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Policy evaluation endpoints
 

@@ -3,10 +3,50 @@ title: Look up edge profile attributes in real-time
 description: Learn how to look up edge profile attributes in real-time, using the Custom Personalization destination and Edge Network API
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
+TQID: https://experienceleague.adobe.com/VeOprxGtqpOre2e-JWEEZYqmbwvatrEnfw-gw36Xn6w
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+    internal-label: XDM
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+    internal-label: Datastreams
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Look up profile attributes on the edge in real-time
 
-Adobe Experience Platform uses the [Real-Time Customer Profile](../../profile/home.md) as the single source of truth for all profile data. For quick, real-time data retrieval, it uses [edge profiles](../../profile/edge-profiles.md), which are lightweight profiles distributed throughout the [Edge Network](../../collection/home.md#edge). This allows for fast, real-time personalization use cases.
+[!DNL Adobe Experience Platform] uses the [Real-Time Customer Profile](../../profile/home.md) as the single source of truth for all profile data. For quick, real-time data retrieval, it uses [edge profiles](../../profile/edge-profiles.md), which are lightweight profiles distributed throughout the [Edge Network](../../collection/home.md). This allows for fast, real-time personalization use cases.
 
 ## Use Cases {#use-cases}
 
@@ -35,6 +75,8 @@ Edge profile lookup use cases are subject to the specific performance guardrails
 | [Custom personalization destination](../catalog/personalization/custom-personalization.md) via [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) | Yes | 1500 |
 | [Custom personalization destination](../catalog/personalization/custom-personalization.md) via [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) | No | 1500 |
 
+{style="table-layout:auto"}
+
 ## Step 1: Create and configure a datastream {#create-datastream}
 
 Follow the steps in the [datastream configuration](../../datastreams/configure.md#create-a-datastream) documentation to create a new datastream with the following **[!UICONTROL Service]** settings:
@@ -44,9 +86,11 @@ Follow the steps in the [datastream configuration](../../datastreams/configure.m
 * **[!UICONTROL Edge Segmentation]**: If you require edge segmentation, enable this option. If you are only interested in looking up profile attributes on the edge, but do not want to perform any segmentation based on the edge profiles, then leave this option disabled.
 
 
-<!-- >[!IMPORTANT]
+<!-- 
+>[!IMPORTANT]
 >
->Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
+>Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. 
+-->
 
 ![Experience Platform UI image showing the datastream configuration screen.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
@@ -65,7 +109,7 @@ Follow the instructions on [creating a merge policy](../../profile/merge-policie
 
 ## Step 3: Send profile attribute data to the Edge Network{#configure-custom-personalization-connection}
 
-In order to look up edge profiles, including attributes and audience membership data, in real-time, the data needs to be made available on the Edge Network. For this purpose, you must create a connection to a **[!UICONTROL Custom Personalization With Attributes]** destination and activate the audiences, including the attributes that you would like to look up on the edge profiles.
+To look up edge profiles, including attributes and audience membership data, in real-time, the data needs to be made available on the Edge Network. For this purpose, you must create a connection to a **[!UICONTROL Custom Personalization With Attributes]** destination and activate the audiences, including the attributes that you would like to look up on the edge profiles.
 
 +++ Configure a Custom Personalization With Attributes connection
 
@@ -82,7 +126,7 @@ When configuring the new destination, select the datastream which you created in
 After you have created a **[!UICONTROL Custom Personalization With Attributes]** connection, you are now ready to send profile data to the Edge Network.
 
 >[!IMPORTANT]
-> 
+>
 > * To activate data and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 > 
 > Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
@@ -91,7 +135,7 @@ After you have created a **[!UICONTROL Custom Personalization With Attributes]**
     
     ![Destination Catalog tab highlighted in the Experience Platform UI.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
-1. Find the **[!UICONTROL Custom Personalization With Attributes]**  destination card, then select **[!UICONTROL Activate audiences]**, as shown in the image below.
+1. Find the **[!UICONTROL Custom Personalization With Attributes]** destination card, then select **[!UICONTROL Activate audiences]**, as shown in the image below.
 
     ![Activate audience control highlighted on a destination card in the catalog.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
@@ -104,7 +148,7 @@ After you have created a **[!UICONTROL Custom Personalization With Attributes]**
     You can select from multiple types of audiences, depending on their origin:
     
     * **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [segmentation documentation](../../segmentation/ui/overview.md) for more details.
-    * **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Experience Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/overview.md#import-audience).
+    * **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Experience Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/audience-portal.md#import-audience).
     * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
 
       ![Select audiences step of the activation workflow with several audiences highlighted.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -198,6 +242,8 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Yes. | The datastream ID of the datastream that you created in [step 1](#create-datastream). |
 
+{style="table-layout:auto"}
+
 ### Response {#response}
 
 A successful response returns HTTP status `200 OK`, with a `Handle` object that includes information similar to the examples in the tabs below, depending on whether the profile is found on the edge or not.
@@ -277,6 +323,8 @@ The `handle` object provides the information described in the table below.
 | `type` | `handle` objects are grouped by type. For edge profile lookup use cases, the type of the `handle` object is always `activation:pull`.|
 | `eventIndex` | The Edge Network receives events frßom the client in the form of arrays. The order of the events in the array is preserved during their processing and reflected by this index. Event indexing starts with `0`. |
 
+{style="table-layout:auto"}
+
 >[!TAB Profile does not exist on the edge]
 
 If the profile does not exist on the edge, you can expect a response similar to the one below.
@@ -301,6 +349,8 @@ The `handle` object provides the information described in the table below.
 | `payload` | When the profile is not present on the edge, the `payload` object is empty. |
 | `type` | `payload` objects are grouped by type. For edge profile lookup use cases, the type of the `payload` object is always `activation:pull`.|
 | `eventIndex` | The Edge Network receives events from the client in the form of arrays. The order of the events in the array is preserved during their processing and reflected by this index. Event indexing starts with `0`. |
+
+{style="table-layout:auto"}
 
 >[!ENDTABS]
 

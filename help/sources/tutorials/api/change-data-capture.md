@@ -2,12 +2,24 @@
 title: Enable change data capture for source connections in the API
 description: Learn how to enable change data capture for source connections in the API
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
+TQID: https://experienceleague.adobe.com/9bn3tG2S9UUvOXuf8TY6LgQDDqexyxnCbbpaXdYKgVA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+    internal-label: Data modeling
 ---
 # Enable change data capture for source connections in the API
 
 >[!AVAILABILITY]
 >
->You can now use change data capture for the [!DNL Amazon S3] and [!DNL Data Landing Zone] sources when running Adobe Experience Platform on Amazon Web Services (AWS) while connected to a VA6 data center. Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
+>* Change data capture is supported for the following sources: [!DNL Amazon S3], [!DNL Data Landing Zone], [!DNL Marketo Engage], [!DNL Microsoft Dynamics], and [!DNL Salesforce].  
+>
+>* You can also enable change data capture for [!DNL Amazon S3] and [!DNL Data Landing Zone] sources when using Adobe Experience Platform on Amazon Web Services (AWS) in a VA6 data center. Note that Experience Platform on AWS is currently available to a limited audience. For more details about infrastructure support, see the [Experience Platform multi-cloud overview](../../../landing/multi-cloud.md).
 
 Use change data capture in Adobe Experience Platform sources to keep your source and destination systems synchronized in near real-time.
 

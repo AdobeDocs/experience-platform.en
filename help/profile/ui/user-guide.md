@@ -3,6 +3,32 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Real-Time Customer Profile UI Guide
 description: Real-Time Customer Profile creates a holistic view of each of your individual customers, combining data from multiple channels including online, offline, CRM, and third-party data. This document serves as a guide for interacting with Real-Time Customer Profile in the Adobe Experience Platform user interface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
+TQID: https://experienceleague.adobe.com/b9odWss-7RSBhizpqXf5OmoId9XZhVdml2Rau3yO8Ic
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # [!DNL Real-Time Customer Profile] UI guide
 
@@ -34,9 +60,9 @@ To learn more, visit the [profile dashboard guide](../../dashboards/guides/profi
 
 ## [!UICONTROL Browse] tab 
 
-On the **[!UICONTROL Browse]** tab you can view your profiles either in a **card** view or a **graph** view by selecting the toggle.
+On the **[!UICONTROL Browse]** tab you can view your profiles either in a **card** view or a **table** view by selecting the toggle.
 
-![The card and graph view toggle is highlighted.](../images/user-guide/change-browse-view.png)
+![The card and table view toggle is highlighted.](../images/user-guide/change-browse-view.png)
 
 Additionally, you can browse your profiles using a merge policy or look up specific profiles using an identity namespace and value.
 
@@ -105,11 +131,11 @@ Additionally, you can view other details about profiles such as its [attributes]
 
 ### Details tab {#profile-detail}
 
-The **[!UICONTROL Details]** tab provides more detailed information about the selected profile, and is separated into four sections:  Customer profile insights, AI insight widgets, customizable widgets, and auto-classified widgets.
+The **[!UICONTROL Details]** tab provides more detailed information about the selected profile. The details tab is separated into various sections, depending if you're in card or graph view. For card view, the customer profile insights, AI insight widgets, customizable widgets, and auto-classified widgets are displayed while for graph view, the profile attributes and experience events sections are displayed.
 
 ![The profile details page is displayed.](../images/user-guide/profile-details.png)
 
-Additionally, you can toggle whether the AI-generated insights are displayed, show the details for hub compared to edge, as well as view the details in graph view.
+Additionally, you can toggle whether the AI-generated insights are displayed, show the details for hub compared to edge, as well as choosing between card or graph views.
 
 ![The toggles listed above (AI-generated insights, Hub or Edge data, and Card or Graph view) are highlighted.](../images/user-guide/profile-toggles.png)
 
@@ -153,6 +179,24 @@ These widgets combine both event data (with the Experience events widget) and at
 
 ![The auto-classified widgets section is displayed.](../images/user-guide/auto-classified-widgets.png)
 
+#### Profile attributes {#profile-attributes}
+
+The **[!UICONTROL Profile attributes]** section displays a hierarchical graph representation of the profile data. In this view, the central node represents the profile itself, secondary nodes represent the field groups, and the remaining nodes represent properties within each field group.
+
+Within the graph view, you can drag and drop the nodes to re-arrange the node order, collapse and expand the nodes to see more details about the attributes, search and filter by attribute, as well as zoom in and out to better view the attribute details.
+
+![The graph view for the profile is displayed, showing the various nodes that make up the profile.](/help/profile/images/user-guide/profile-attribute-graph.png)
+
+#### Experience events {#experience-events}
+
+The **[!UICONTROL Experience events]** section displays a timeline of experience events that contain the profile. By default, this section displays experience events within the last 48 hours. However, you can set the date range for up to 30 days.
+
+![The Experience events section is displayed, showing a timeline of experience events that contain the profile.](/help/profile/images/user-guide/experience-event-graph.png)
+
+If you select **[!UICONTROL View event]**, you can see the event attributes linked to the selected event. These details include the path, attribute, display name, and the value.
+
+![The Event attributes popover is displayed, showing further details related to the event.](/help/profile/images/user-guide/event-attributes-graph.png)
+
 ### Attributes tab {#attributes}
 
 The **[!UICONTROL Attributes]** tab provides a list view summarizing all of the attributes related to a single profile, after the specified merge policy has been applied.
@@ -169,7 +213,11 @@ For more information on edge profiles, please read the [edge profiles documentat
 
 ### Events tab {#events}
 
-The **[!UICONTROL Events]** tab contains data from the 100 most recent ExperienceEvents associated with the customer. This data could include email opens, cart activities, and page views. Selecting **[!UICONTROL View all]** for any individual event provides additional fields and values captures as part of the event.
+>[!NOTE]
+>
+>Display of the events can be delayed by up to 15 minutes.
+
+By default, **[!UICONTROL Events]** tab contains data from the past 48 hours with the 100 most recent ExperienceEvents associated with the customer. This data could include email opens, cart activities, and page views. You can also set the date range for up to 30 days. Selecting **[!UICONTROL View all]** for any individual event provides additional fields and values captures as part of the event.
 
 Events can also be viewed as a JSON object by selecting to **[!UICONTROL View JSON]**. This is helpful for understanding how events are captured in Experience Platform.
 

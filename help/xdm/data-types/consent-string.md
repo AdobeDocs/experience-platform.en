@@ -3,6 +3,16 @@ solution: Experience Platform
 title: Consent String Data Type
 description: Learn about the Consent String XDM data type.
 exl-id: 288ec79e-074a-4d72-9c5f-e9cd8485b804
+TQID: https://experienceleague.adobe.com/2HaTtDeP-lJSF25z7wqRfUjPSHhXPEZV9vD9gPBhGvk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Consent String] data type
 

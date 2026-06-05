@@ -4,6 +4,16 @@ solution: Experience Platform
 title: List Catalog Objects
 description: You can retrieve a list of all available objects of a specific type through a single API call, with best practice being to include filters that limit the size of the response.
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
+TQID: https://experienceleague.adobe.com/D9kta9wIdF6XxGsLc-09mvxkyT0r5k8zfXpNJ2CLSO4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # List Catalog objects
 

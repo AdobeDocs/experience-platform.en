@@ -3,15 +3,36 @@ title: Export files on-demand to batch destinations using the Experience Platfor
 type: Tutorial
 description: Learn how to export files on-demand to batch destinations using the Experience Platform UI.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
+TQID: https://experienceleague.adobe.com/myJdR28L35Jy-ovdkeg1j-wHZJ40FvGGyjsw0-GGcVU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
 ---
-
 # Export files on-demand to batch destinations using the Experience Platform UI
 
 >[!IMPORTANT]
-> 
+>
 >To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-## **[!UICONTROL Export file now]** overview {#overview}
+## [!UICONTROL Export file now] overview {#overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"
@@ -20,9 +41,26 @@ exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 
 This article explains how to use the Experience Platform UI to export files on-demand to batch destinations such as [cloud storage](/help/destinations/catalog/cloud-storage/overview.md) and [email marketing](/help/destinations/catalog/email-marketing/overview.md) destinations.
 
-The **[!UICONTROL Export file now]** control allows you to export a full file without interrupting the current export schedule of a previously scheduled audience. This export happens in addition to previously scheduled exports and does not change the export frequency of the audience. The file export is triggered immediately and it picks up the latest results from Experience Platform segmentation runs.
+Use the **[!UICONTROL Export file now]** control to export a full file without interrupting the current export schedule of a previously scheduled audience. This export happens in addition to previously scheduled exports and does not change the export frequency of the audience. 
+
+The file export is triggered immediately and uses data from the most recent audience evaluation snapshot only. It does not include profile or identity changes that occur after snapshot creation. In contrast, scheduled exports include both snapshot data and incremental changes that occur between snapshot creation and export time.
 
 You can also use the Experience Platform APIs for this purpose. Read how to [activate audiences on-demand to batch destinations via the ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md).
+
+## Scheduled exports vs on-demand exports {#scheduled-vs-ondemand}
+
+On-demand exports and scheduled exports use different data sources, which can result in differences in exported data. Refer to the table below to understand what gets exported in each case.
+
+|  | Export file now | Scheduled exports |
+|--------|-----------------|-------------------|
+| **Data source** | Snapshot only | Snapshot + incremental changes |
+| **Profile attributes** | Values at snapshot time | Current values at export time |
+
+>[!NOTE]
+>
+>Scheduled exports may show different profile counts or attribute values than on-demand exports because they include profile updates that occur after the audience evaluation.
+
+For more information, see [Understanding scheduled export behavior](/help/destinations/ui/activate-batch-profile-destinations.md#export-behavior).
 
 ## Prerequisites {#prerequisites}
 

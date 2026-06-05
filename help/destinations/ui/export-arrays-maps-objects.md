@@ -3,8 +3,25 @@ title: Export arrays, maps, and objects from Real-Time CDP
 type: Tutorial
 description: Learn how to export arrays, maps, and objects from Real-Time CDP to cloud storage destinations.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
+TQID: https://experienceleague.adobe.com/phkEIfPLpUrOhiwg3xkRXCGcV1Thzpm7yFqXgPnvcJ4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
-# Export arrays, maps, and objects from Real-Time CDP {#export-arrays-cloud-storage}
+# Export arrays, maps, and objects from [!DNL Real-Time CDP] {#export-arrays-cloud-storage}
 
 >[!AVAILABILITY]
 >
@@ -13,12 +30,12 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 >Additionally, you can export map-type fields to the following destinations: [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md).
 
 
-Learn how to export arrays, maps, and objects from Real-Time CDP to [cloud storage destinations](/help/destinations/catalog/cloud-storage/overview.md). Additionally, you can export map-type fields to [enterprise destinations](/help/destinations/destination-types.md#advanced-enterprise-destinations) and limited [edge personalization destinations](/help/destinations/destination-types.md#edge-personalization-destinations). Read this document to understand the export workflow, the use cases enabled by this functionality, and known limitations. View the table below to understand the functionality available per destination type.
+Learn how to export arrays, maps, and objects from [!DNL Real-Time CDP] to [cloud storage destinations](/help/destinations/catalog/cloud-storage/overview.md). Additionally, you can export map-type fields to [enterprise destinations](/help/destinations/destination-types.md#advanced-enterprise-destinations) and limited [edge personalization destinations](/help/destinations/destination-types.md#edge-personalization-destinations). Read this document to understand the export workflow, the use cases enabled by this functionality, and known limitations. View the table below to understand the functionality available per destination type.
 
 | Type of destination | Ability to export arrays, maps, and other custom objects |
 |---|---|
 | Adobe-authored cloud storage destinations (Amazon S3, Azure Blob, Azure Data Lake Storage Gen2, Data Landing Zone, Google Cloud Storage, SFTP) | Yes, with the Enable export of arrays, maps, and objects toggle turned ON when setting up a destination connection. |
-| File-based email marketing destinations (Adobe Campaign, Oracle Eloqua, Oracle Responsys, Salesforce Marketing Cloud) | No |
+| File-based email marketing destinations ([!DNL Adobe Campaign], Oracle Eloqua, Oracle Responsys, Salesforce Marketing Cloud) | No |
 | Existing custom partner-built cloud storage destinations (custom file-based destinations built via Destination SDK) | No |
 | Enterprise destinations (Amazon Kinesis, Azure Event Hubs, HTTP API) | Partially. You can select and export map-type objects in the mapping step of the activation workflow. |
 | Streaming destinations (for example: Facebook, Braze, Google Customer Match, and more) | No |
@@ -28,7 +45,7 @@ Learn how to export arrays, maps, and objects from Real-Time CDP to [cloud stora
 
 Consider this page your go-to place for anything that you want to know about exporting arrays, maps, and other object types from Experience Platform.
 
-## Bottom line up front
+## Bottom line up front {#bottom-line}
 
 Get the most important information about the functionality in this section, and continue below to the other sections in the document for detailed information.
 
@@ -42,7 +59,7 @@ In Experience Platform, you can use [XDM schemas](/help/xdm/home.md) to manage d
 
 Other field types in Experience Platform include array fields. Read more about [managing array fields in the Experience Platform UI](/help/xdm/ui/fields/array.md). You can now export array objects such as the example below.
 
-``` 
+```js
 organizations = [{
   id: 123,
   orgName: "Acme Inc",

@@ -1,12 +1,26 @@
 ---
 keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;data science workspace;data science
 solution: Experience Platform
-title: Sensei Machine Learning API Guide
-description: The Sensei Machine Learning API allows developers to perform CRUD operations on various Data Science Workspace resources. Follow this guide to learn how to perform key operations using the API.
+title: Adobe AI Machine Learning API Guide
+description: The Adobe AI Machine Learning API allows developers to perform CRUD operations on various Data Science Workspace resources. Follow this guide to learn how to perform key operations using the API.
 role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
+TQID: https://experienceleague.adobe.com/CXuMFUClC9RJvEH6Q4Cbp7L8D4XclUrm42eGM75VNJE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
-# [!DNL Sensei Machine Learning] API guide
+# Adobe AI Machine Learning API guide
 
 >[!NOTE]
 >
@@ -14,9 +28,9 @@ exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
 >
 >This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
-The [!DNL Sensei Machine Learning] API provides a mechanism for data scientists to organize and manage machine learning services, from algorithm onboarding through experimentation and to service deployment.
+The Adobe AI Machine Learning API provides a mechanism for data scientists to organize and manage machine learning services, from algorithm onboarding through experimentation and to service deployment.
 
-This developer guide provides steps to help you start using the [Sensei Machine Learning API](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/), and demonstrates API calls for performing CRUD operations on various Data Science Workspace resources.
+This developer guide provides steps to help you start using the [Adobe AI Machine Learning API](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/), and demonstrates API calls for performing CRUD operations on various Data Science Workspace resources.
 
 ## Getting started
 

@@ -5,6 +5,16 @@ title: Sandbox management API Endpoint
 description: The /sandboxes endpoint in the Sandbox API allows you to  programmatically manage sandboxes in Adobe Experience Platform.
 role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
+TQID: https://experienceleague.adobe.com/EC2I30Bvl49lt1B0hLmPJrhk-JAkXE5qr58jbUUwf3M
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Sandbox management endpoint
 
@@ -123,7 +133,7 @@ A successful response returns a list of sandboxes belonging to your organization
 | --- | --- |
 | `name` | The name of the sandbox. This property is used for lookup purposes in API calls. |
 | `title` | The display name for the sandbox. |
-| `state` | The current processing state of the sandbox. A sandbox's state can be any of the following: <br/><ul><li>`creating`: The sandbox has been created, but is still being provisioned by the system.</li><li>`active`: The sandbox is created and active.</li><li>`failed`: Due to an error, the sandbox was not able to be provisioned by the system and is disabled.</li><li>`deleted`: The sandbox has been manually disabled.</li></ul>|  
+| `state` | The current processing state of the sandbox. A sandbox's state can be any of the following: <br/><ul><li>`creating`: The sandbox has been created, but is still being provisioned by the system.</li><li>`active`: The sandbox is created and active.</li><li>`failed`: Due to an error, the sandbox was not able to be provisioned by the system and is disabled.</li><li>`deleted`: The sandbox has been manually disabled.</li></ul>|
 | `type` | The sandbox type. The current supported sandbox types include `development` and `production`. |
 | `isDefault` | A boolean property indicating whether this sandbox is the default production sandbox for the organization. |
 | `eTag` | An identifier for a specific version of the sandbox. Used for version control and caching efficiency, this value is updated each time a change is made to the sandbox. |

@@ -6,6 +6,23 @@ description: Adobe Experience Platform uses a highly denormalized hybrid data mo
 badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
+TQID: https://experienceleague.adobe.com/mLv1KpXtfh-JtGWfgomCnXkouD7WjGkggCArJBleskA
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+    internal-label: Use cases
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Default Guardrails for Real-Time Customer Data Platform B2B Edition
 
@@ -51,8 +68,8 @@ The following guardrails provide recommended limits when modeling Real-Time Cust
 | Guardrail | Limit | Limit Type | Description |
 | --------- | ----- | ---------- | ----------- |
 | Real-Time CDP B2B Edition standard XDM class datasets | 60 | Performance guardrail| A maximum of 60 datasets that leverage the standard Experience Data Model (XDM) classes provided by Real-Time CDP B2B Edition is recommended. For a complete list of standard XDM classes for B2B use cases, refer to the [schemas in Real-Time CDP B2B Edition documentation](schemas/b2b.md). <br/><br/>*Note: Due to the nature of Experience Platform's denormalized hybrid data model, most customers do not exceed this limit. For questions about how to model your data, or if you would like to learn more about custom limits, please contact your customer care representative.* |
-| Identity count for individual account in an Identity Graph | 50 | Performance guardrail | The maximum number of identities in an Identity Graph for an individual account is 50. Any profiles with more than 50 identities are excluded from segmentation, exports, and lookups. | 
-| Legacy multi-entity relationships| 20 | Performance guardrail | A maximum of 20 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
+| Identity count for individual account in an Identity Graph | 50 | Performance guardrail | The maximum number of identities in an Identity Graph for an individual account is 50. Any profiles with more than 50 identities are excluded from segmentation, exports, and lookups. |
+| Legacy multi-entity relationships| 20 | Performance guardrail | A maximum of 20 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. |
 | Many-to-one relationships per XDM class | 2 | Performance guardrail | A maximum of 2 many-to-one relationships defined per XDM class is recommended. Additional relationship should not be made until an existing relationship is removed or disabled. For steps on how to create a relationship between two schemas, refer to the tutorial on [defining B2B schema relationships](../xdm/tutorials/relationship-b2b.md). |
 
 ### Dimension entity guardrails

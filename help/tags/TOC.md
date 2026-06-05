@@ -6,6 +6,7 @@ user-guide-description: Learn to deploy and manage analytics, marketing, and adv
 feature: Tags
 solution: Data Collection
 role: Developer
+nudge: true
 ---
 
 # Tags {#tags}
@@ -51,6 +52,7 @@ role: Developer
 * Event forwarding {#event-forwarding}
   * [Overview](./ui/event-forwarding/overview.md)
   * [Getting started](./ui/event-forwarding/getting-started.md)
+  * [Guided Setup](./ui/event-forwarding/guided-setup.md)
   * [Configuring secrets](./ui/event-forwarding/secrets.md)
   * [Monitoring (Beta)](./ui/event-forwarding/monitoring.md)
 * Administration {#admin}
@@ -65,7 +67,7 @@ role: Developer
     * [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)
     * [Action Page Refresh](https://exchange.adobe.com/apps/ec/102848)
     * [Adform Website Tracking](https://exchange.adobe.com/apps/ec/103195)
-    * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)
+    * [Adobe Advertising](https://exchange.adobe.com/apps/ec/100155)
     * Adobe Analytics {#analytics}
       * [Overview](./extensions/client/analytics/overview.md)
       * [Shared modules](./extensions/client/analytics/shared-modules.md)
@@ -102,7 +104,7 @@ role: Developer
       * [Getting started](extensions/client/web-sdk/getting-started.md)
       * Configure {#configure}
         * [Overview](extensions/client/web-sdk/configure/config-overview.md)
-        * [Custom build components](extensions/client/web-sdk/configure/custom-build-components.md)
+        * [Build options](extensions/client/web-sdk/configure/custom-build-components.md)
         * [SDK instance](extensions/client/web-sdk/configure/general.md)
         * [Datastreams](extensions/client/web-sdk/configure/datastreams.md)
         * [Consent](extensions/client/web-sdk/configure/consent.md)
@@ -111,6 +113,7 @@ role: Developer
         * [Data collection](extensions/client/web-sdk/configure/data-collection.md)
         * [Streaming media](extensions/client/web-sdk/configure/streaming-media.md)
         * [Push notifications](extensions/client/web-sdk/configure/push-notifications.md)
+        * [Brand Concierge](extensions/client/web-sdk/configure/brand-concierge.md)
         * [Advertising](extensions/client/web-sdk/configure/advertising.md)
         * [Configuration overrides](extensions/client/web-sdk/configure/configuration-overrides.md)
         * [Advanced settings](extensions/client/web-sdk/configure/advanced-settings.md)
@@ -149,7 +152,7 @@ role: Developer
       * [Overview](./extensions/client/target-v2/overview.md)
       * [Release notes](./extensions/client/target-v2/release-notes.md)
     * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)
-    * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
+    * [Adobe Advertising](https://exchange.adobe.com/apps/ec/100640)
     * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)
     * [Airbrake JS Notifier](https://exchange.adobe.com/apps/ec/103342)
     * [!DNL Algolia] Insights {#algolia-insights}

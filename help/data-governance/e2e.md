@@ -2,6 +2,20 @@
 title: Data Governance End-to-End Guide
 description: Follow the complete process for enforcing data usage constraints for fields and datasets in Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
+TQID: https://experienceleague.adobe.com/1MTKJuyrdltX7iDluo2im9AdFjSv885Rk-J1WrxYAVY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Data governance end-to-end guide
 

@@ -1,12 +1,46 @@
 ---
 title: Real-Time Customer Data Platform Insights data model B2C Edition
 description: Learn how to use SQL queries with the Real-Time Customer Data Platform Insights Data Models (B2C Edition) to customize your own Real-Time CDP reports for your marketing and KPI use cases.
-badgeB2C:
-  label="B2C Edition"
-  type="Caution"
-  url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions"
-  newtab=true
+badgeB2C: label="B2C Edition" type="Caution" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
+TQID: https://experienceleague.adobe.com/Dtv1Iuf0L3tvAZw9dfKiyLH-Gu-3DR-BeFQh1DAfBSo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: b08f50f9-9135-4961-a21e-47e56473ae77
+    internal-label: Profiles dashboard
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+  - id: fa38bdc7-753a-4772-8c86-33cee8139fb5
+    internal-label: Audiences dashboard
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Real-Time Customer Data Platform Insights data model B2C Edition
 
@@ -446,7 +480,8 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-<!-- Commented out as Anil wanted to add something but did not provide information yet:
+<!-- 
+Commented out as Anil wanted to add something but did not provide information yet:
 ### Overlap Namespace-Audience model {#overlap-namespace-audience-model}
 
 The overlap namespace-audience model is comprised of the following datasets: 
@@ -461,11 +496,13 @@ The overlap namespace-audience model is comprised of the following datasets:
 - `adwh_dim_destination`
 - `adwh_dim_destination_platform`
 
-![An ERD of the overlap namespace-audience model.](../images/cdp-insights/overlap-namespace-audience-model.png) -->
+![An ERD of the overlap namespace-audience model.](../images/cdp-insights/overlap-namespace-audience-model.png) 
+-->
 
 <!-- What insights are gathered from this particular data model? -->
 
-<!-- Commented out as Anil wanted to add something but did not provide information yet:
+<!-- 
+Commented out as Anil wanted to add something but did not provide information yet:
 ### AI model {#ai-model}
 
 The AI model is comprised of the following datasets: 
@@ -475,7 +512,8 @@ The AI model is comprised of the following datasets:
 - `adwh_dim_merge_policies`
 - `adwh_dim_ai_models`
 
-![An ERD of the AI model.](./images/cdp-insights/ai-model.png) -->
+![An ERD of the AI model.](./images/cdp-insights/ai-model.png) 
+-->
 
 <!-- What insights are gathered from this particular data model? -->
 

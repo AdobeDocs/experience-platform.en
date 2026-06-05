@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Point of Interest Details Data Type
 description: Learn about the Point Of Interest Details XDM data type.
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
+TQID: https://experienceleague.adobe.com/lSWaSXrzoBhrytInM7ZP-geqfFuJAF9EKzIE-8ui9PY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Point of interest details] data type
 

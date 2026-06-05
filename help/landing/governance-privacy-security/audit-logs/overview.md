@@ -4,6 +4,31 @@ description: Learn how audit logs allow you to see who did what actions in Adobe
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
+TQID: https://experienceleague.adobe.com/I5y-Sbsz7sauzkzknWJBPuRwfZ-DD5ToRBwvthv6ZUs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Audit logs {#audit-logs}
 
@@ -123,7 +148,7 @@ The returned audit log data contains the following information on all queries th
 | [!UICONTROL Asset Name] | The value for the [!UICONTROL Asset Name] field depends on the category chosen as a filter. |
 | [!UICONTROL Category] | This field matches the category selected in the filter dropdown.  |
 | [!UICONTROL Action] | The available actions depend on the category chosen as a filter. |
-| [!UICONTROL User] | This field provides the user ID that executed the query. | 
+| [!UICONTROL User] | This field provides the user ID that executed the query. |
 
 ![The Audits dashboard with the filtered activity log highlighted.](../../images/audit-logs/filtered.png)
 

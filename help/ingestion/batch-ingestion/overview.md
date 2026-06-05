@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Batch Ingestion API Overview
 description: The Adobe Experience Platform Batch Ingestion API allows you to ingest data into Experience Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a Parquet file), or data that conforms to a known schema in the Experience Data Model (XDM) registry.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
+TQID: https://experienceleague.adobe.com/tEpXMJkU-0HQD3FyI02pbPBSO9By9dCiwj7BmjvCzWY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Batch ingestion API overview
 
@@ -129,7 +139,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 | Property | Description |
 | -------- | ----------- |
-| `id` | The ID of the batch that was just created (used in subsequent requests). |  
+| `id` | The ID of the batch that was just created (used in subsequent requests). |
 | `relatedObjects.id` | The ID of the dataset to upload the files into. |
 
 ## File upload
@@ -156,8 +166,8 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Property | Description |
 | -------- | ----------- |
-| `{BATCH_ID}` | The ID of the batch. |  
-| `{DATASET_ID}` | The ID of the dataset to upload files. | 
+| `{BATCH_ID}` | The ID of the batch. |
+| `{DATASET_ID}` | The ID of the dataset to upload files. |
 | `{FILE_NAME}` | The name of file as it will be seen in the dataset. |
 
 **Request**
@@ -192,7 +202,7 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}?action=initiali
 
 | Property | Description |
 | -------- | ----------- |
-| `{BATCH_ID}` | The ID of the batch. |  
+| `{BATCH_ID}` | The ID of the batch. |
 | `{DATASET_ID}` | The ID of the dataset ingesting the files. |
 | `{FILE_NAME}` | The name of file as it will be seen in the dataset. |
 
@@ -222,7 +232,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Property | Description |
 | -------- | ----------- |
-| `{BATCH_ID}` | The ID of the batch. |  
+| `{BATCH_ID}` | The ID of the batch. |
 | `{DATASET_ID}` | The ID of the dataset to upload the files into. |
 | `{FILE_NAME}` | Name of file as it will be seen in the dataset. |
 

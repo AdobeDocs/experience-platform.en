@@ -3,6 +3,40 @@ keywords: Experience Platform;troubleshooting;guardrails;guidelines;
 title: Guardrails for Data Ingestion
 description: Learn about guardrails for data ingestion in Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
+TQID: https://experienceleague.adobe.com/miZ-K7DpzfXPKrtp3PVJOHn7wEOVsMIuVvqhjKPi6Kg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+    internal-label: Sources
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+    internal-label: Data ingestion
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+  - id: f5efb499-54f9-432b-ac5c-599dbac103af
+    internal-label: Data management
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+    internal-label: Properties
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
 ---
 # Guardrails for Data Ingestion
 
@@ -43,7 +77,7 @@ The following table outlines guardrails to consider when using the streaming sou
 
 | Type of ingestion | Guidelines | Notes |
 | --- | --- | --- |
-| Streaming sources | <ul><li>The maximum record size is 1 MB, with the recommended size being 10 KB.</li><li>Streaming sources support between 4000 to 5000 requests per second when ingesting to the data lake. This applies for both newly created source connections in addition to existing source connections. **Note**: It can take up to 30 minutes for streaming data to be completely processed to data lake.</li><li>Streaming sources support a maximum of 1500 requests per second when ingesting data to profile or streaming segmentation.</li></ul> | Streaming sources such as [!DNL Kafka], [!DNL Azure Event Hubs], and [!DNL Amazon Kinesis] do not use the [!DNL Data Collection Core Service] (DCCS) route and can have different throughput limits. See the [sources overview](../sources/home.md) for a catalog of sources you can use for data ingestion. |
+| Streaming sources | <ul><li>The maximum record size is 1 MB, with the recommended size being 10 KB.</li><li>Streaming sources support between 4000 to 5000 requests per second when ingesting to the data lake. This applies for both newly created source connections in addition to existing source connections. **Note**: It can take up to 60 minutes for streaming data to be completely processed to data lake.</li><li>Streaming sources support a maximum of 1500 requests per second when ingesting data to profile or streaming segmentation.</li></ul> | Streaming sources such as [!DNL Kafka], [!DNL Azure Event Hubs], and [!DNL Amazon Kinesis] do not use the [!DNL Data Collection Core Service] (DCCS) route and can have different throughput limits. See the [sources overview](../sources/home.md) for a catalog of sources you can use for data ingestion. |
 
 {style="table-layout:auto"}
 

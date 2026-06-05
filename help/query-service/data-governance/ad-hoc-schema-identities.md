@@ -2,6 +2,22 @@
 title: Set Primary Identities in an Ad Hoc Dataset
 description: Adobe Experience Platform Query Service allows you to set an identity or a primary identity for ad hoc schema dataset fields directly through the SQL ALTER TABLE command. The document explains how to use the ALTER TABLE command to set a primary identity or secondary identity.
 exl-id: b8e6b87e-c6e5-4688-a936-a3a1510a3c5b
+TQID: https://experienceleague.adobe.com/16zSIbsPi0k7TvnwJgCVXuApgR5CbDU88F3Ol65V9zs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Set primary identities in an ad hoc dataset
 

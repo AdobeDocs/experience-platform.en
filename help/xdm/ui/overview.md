@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Schemas UI Overview
 description: This overview covers the major capabilities of the Schemas workspace in Experience Platform.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
+TQID: https://experienceleague.adobe.com/gsUJn2PR6W64I2ozu2z93ZixPLZN0V-ggLvRVxhKhkA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Schemas] UI overview
 
@@ -20,6 +27,10 @@ If you are using the workspace for the first time, start with the guide on [expl
 It is also recommended that you follow the [schema creation tutorial](../tutorials/create-schema-ui.md) to create an example schema and get a full tour of the [!DNL Schema Editor]'s capabilities in the process.
 
 ## Creating and managing XDM resources
+
+>[!NOTE]
+>
+>XDM actions are available from the inventory table and the resource detail view (**[!UICONTROL More]**). Full actions apply only to custom (tenant-defined) resources; standard resources have limited options. See [Manage schemas, classes, field groups, and data types: actions and deletion](./explore.md#xdm-resource-actions).
 
 The [!UICONTROL Schemas] workspace provides powerful tools for creating and customizing your organization's XDM resources. Refer to the following documentation to learn how to create and edit each resource type in the UI:
 

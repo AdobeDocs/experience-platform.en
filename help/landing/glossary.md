@@ -4,6 +4,70 @@ solution: Experience Platform
 title: Adobe Experience Platform Glossary
 description: A glossary of important terminology in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
+TQID: https://experienceleague.adobe.com/BamtoDSzzhu0E1flZK7kaWvPXgD-xq9Qv2iQfBdaTt4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: addf009e-030a-4310-8534-776a3e62ed48
+    internal-label: Customer lifecycle
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+    internal-label: Data modeling
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+    internal-label: Artificial intelligence
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+    internal-label: Behavioral data
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+    internal-label: Data integration
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Adobe Experience Platform glossary {#adobe-experience-platform-glossary}
 
@@ -33,7 +97,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Adobe I/O**: Adobe I/O is part of Experience Platform and provides access to everything developers need to integrate, extend, and customize Experience Platform including APIs, events, developer console, and helpful tooling.
 
-**Adobe Sensei**: Adobe Sensei is the intelligence framework that powers Experience Platform. It also provides a set of AI services that empowers brands to enhance their ability to deliver real-time, personalized customer experiences.
+**Adobe AI**: Adobe AI is the intelligence framework that powers Experience Platform. It also provides a set of AI services that empowers brands to enhance their ability to deliver real-time, personalized customer experiences.
 
 **Amazon S3 bucket**: [!DNL Amazon S3] buckets are the foundational containers for data stored in the [!DNL Amazon] ecosystem. Buckets contain objects, each object is stored and retrieved using a unique developer-assigned key.
 
@@ -51,7 +115,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Attribute merge**: When defining a merge policy using the Real-Time Customer Profile API, the `attributeMerge` object indicates the manner by which the merge policy will prioritize profile attributes in the case of data conflicts. It is equivalent to selecting a [!UICONTROL Merge method] when defining a merge policy in the Experience Platform UI.
 
-**Attribution AI**: [!DNL Attribution AI] is an Intelligent Service powered by Adobe Sensei that delivers algorithmic multi-channel attribution capabilities across the entire customer lifecycle.
+**Attribution AI**: [!DNL Attribution AI] is an Intelligent Service powered by Adobe AI that delivers algorithmic multi-channel attribution capabilities across the entire customer lifecycle.
 
 **Audience**: An audience is the resulting set of profiles that meet the criteria of a segment definition.
 
@@ -139,7 +203,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Custom labels**: Custom data usage labels allow you to create and apply specific labels to data fields that meet specific business needs.
 
-**Customer AI**: Customer AI is an Intelligent Service powered by Adobe Sensei that enriches customer profiles with AI-based propensities and empowers customer segmentation and targeting efforts.
+**Customer AI**: Customer AI is an Intelligent Service powered by Adobe AI that enriches customer profiles with AI-based propensities and empowers customer segmentation and targeting efforts.
 
 ## D
 
@@ -171,7 +235,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Data usage labels**: Data usage labels allow you to categorize data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and corporate policies. Data usage labels added to a dataset are inherited down or applied to all fields within that dataset. Data usage labels can also be applied directly to fields.
 
-**Dataflow**: A dataflow is a virtual pipeline of data that flows into Experience Platform from a source and out to destinations. 
+**Dataflow**: A dataflow is a virtual pipeline of data that flows into Experience Platform from a source and out to destinations. In the context of destinations, a dataflow is synonymous with a [destination instance](#destination-instance). {#dataflow}
 
 **Dataflow run**: A dataflow run is a dataflow that lands in Experience Platform based on a user specified schedule.
 
@@ -194,6 +258,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 **Destination category**: A destination category is a grouping of destinations that have similar characteristics.
 
 **Destination catalog**: A destination catalog is a list of available destinations in Experience Platform.
+
+**Destination instance**: A destination instance is an individual, configured connection to a specific destination in Experience Platform, created through the UI or API. It represents a single activation pipeline from Experience Platform to a destination endpoint. Also referred to as a [dataflow](#dataflow). {#destination-instance}
 
 **Direct call rules**: In the context of tags, a direct-call rule is a rule that executes when it is called directly from the page, bypassing event-detection and lookup systems.
 
@@ -493,7 +559,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Segmentation**: Segmentation is the process of dividing a large group of customers, prospects, or consumers into smaller groups that share similar attributes and will respond similarly to specific marketing strategies.
 
-**Sensei ML Framework**: Sensei ML Framework is a unified machine-learning (ML) framework that leverages Experience Platform data to empower data scientists to development of ML-driven intelligence services in a faster, scalable, and reusable manner.
+**Adobe AI ML Framework**: Adobe AI ML Framework is a unified machine-learning (ML) framework that leverages Experience Platform data to empower data scientists to development of ML-driven intelligence services in a faster, scalable, and reusable manner.
 
 **Sensitive ("S") labels**: Sensitive ("S") labels are used to categorize data deemed sensitive, such as different types of behavioral or geographic data that you want marked as sensitive.
 

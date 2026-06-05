@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Payment Item Data Type
 description: Learn about the Payment Item Experience Data Model (XDM) data type.
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
+TQID: https://experienceleague.adobe.com/lxki-3fVq4DqBDEX1eyRiYsUq81pqOzkoBBghlkxI0Q
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Payment Item] data type
 

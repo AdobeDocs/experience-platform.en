@@ -4,12 +4,21 @@ title: Delete destination accounts
 type: Tutorial
 description: This tutorial lists the steps to delete destination accounts in the Adobe Experience Platform UI
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
+TQID: https://experienceleague.adobe.com/3dwqYSVa-P46Yu401egYBUwx9Ims1ODNzV9a1gAs1hY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Delete destination accounts
 
 ## Overview {#overview}
 
-The **[!UICONTROL Accounts]** tab shows you details about the connections that you have established with various destinations. Refer to the [Accounts overview](../ui/destinations-workspace.md#accounts) for all the information you can get on each destination account.
+The **[!UICONTROL Accounts]** tab shows details about the connections that you have established with various destinations. See the [Accounts overview](../ui/destinations-workspace.md#accounts) for all the information available for each destination account.
 
 This tutorial covers the steps to delete destination accounts that are not needed anymore by using the Experience Platform UI.
 
@@ -23,7 +32,7 @@ This tutorial covers the steps to delete destination accounts that are not neede
 
 Follow the steps below to delete existing destination accounts.
 
-1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Accounts]** from the top header to view your existing accounts.
+1. Go to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Accounts]** from the top header to view your existing accounts.
 
     ![Accounts tab](../assets/ui/delete-accounts/accounts-tab.png)
 
@@ -39,8 +48,8 @@ Follow the steps below to delete existing destination accounts.
 
 ![Confirm account deletion](../assets/ui/delete-accounts/confirm-account-deletion.png)
 
-## Next steps
+## Next steps {#next-steps}
 
-By following this tutorial, you have successfully used the destinations workspace to delete existing accounts.
+You have successfully used the destinations workspace to delete existing accounts.
 
-For steps on how to perform these operations programmatically using the [!DNL Flow Service] API, please refer to the tutorial on [deleting connections using the Flow Service API](../api/delete-destination-account.md)
+For steps on how to perform these operations programmatically using the [!DNL Flow Service] API, refer to the tutorial on [deleting connections using the Flow Service API](../api/delete-destination-account.md)

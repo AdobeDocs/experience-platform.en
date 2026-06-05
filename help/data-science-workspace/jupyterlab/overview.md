@@ -4,6 +4,27 @@ solution: Experience Platform
 title: JupyterLab UI Overview
 description: JupyterLab is a web-based user interface for Project Jupyter and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter Notebooks, code, and data. This document provides an overview of JupyterLab and its features as well as instructions to perform common actions.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
+TQID: https://experienceleague.adobe.com/iOMfV8qywfflOSlbiuRtzlqwLFstW3pthBabXRWlSso
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # [!DNL JupyterLab] UI overview
 
@@ -42,7 +63,7 @@ Standardization and interoperability are key concepts behind [!DNL Experience Pl
 
 *   **[!DNL Catalog Service]:** Access and explore datasets with read and write functionalities.
 *   **[!DNL Query Service]:** Access and explore datasets using SQL, providing lower data access overheads when dealing with large amounts of data.
-*   **[!DNL Sensei ML Framework]:** Model development with the ability to train and score data, as well as recipe creation with a single click.
+*   **[!DNL Adobe AI ML Framework]:** Model development with the ability to train and score data, as well as recipe creation with a single click.
 *   **[!DNL Experience Data Model (XDM)]:** Standardization and interoperability are key concepts behind Adobe Experience Platform. [Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
 
 >[!NOTE]
@@ -146,9 +167,9 @@ Certain features and functionalities are limited to particular kernels as descri
 
 | Kernel | Library installation support | [!DNL Experience Platform] integrations |
 | :----: | :--------------------------: | :-------------------- |
-| **[!DNL Python]** | Yes | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li><li>[!DNL Query Service]</li></ul> |
-| **R** | Yes | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
-| **Scala** | No | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
+| **[!DNL Python]** | Yes | <ul><li>Adobe AI ML Framework</li><li>[!DNL Catalog Service]</li><li>[!DNL Query Service]</li></ul> |
+| **R** | Yes | <ul><li>Adobe AI Framework</li><li>[!DNL Catalog Service]</li></ul> |
+| **Scala** | No | <ul><li>Adobe AI Framework</li><li>[!DNL Catalog Service]</li></ul> |
 
 ### Kernel sessions {#kernel-sessions}
 

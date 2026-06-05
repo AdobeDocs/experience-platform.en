@@ -3,6 +3,16 @@ title: Accelerated Queries Endpoint
 description: Learn how to access to query accelerated store in a stateless manner to quickly return results based on aggregated data. This document provides a sample HTTP request and response for the Query Service accelerated-queries endpoint.
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
+TQID: https://experienceleague.adobe.com/AH6kgvi3x04U4efD9cFbV-Cg1ly3FeVetFKHjj1gKKw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Accelerated queries endpoint
 
@@ -199,10 +209,10 @@ A successful response returns HTTP status 200 with the ad hoc schema created by 
 
 | Property | Description |
 |---|---|
-| `queryId`  | The ID value of the query created. | 
-| `resultsMeta`  | This object contains the metadata for each column returned in results so users know the name and type of each column. | 
-| `resultsMeta._adhoc`  | An ad-hoc Experience Data Model (XDM) schema with fields that are namespaced for usage only by a single dataset.  | 
-| `resultsMeta._adhoc.type`  | The data type of the ad hoc schema. | 
-| `resultsMeta._adhoc.meta:xdmType`  | This is a system-generated value for the XDM field type. For more information on the available types see the documentation on [available XDM types](../../xdm/tutorials/custom-fields-api.md). | 
-| `resultsMeta._adhoc.properties`  | These are the column names of the queried dataset. | 
+| `queryId`  | The ID value of the query created. |
+| `resultsMeta`  | This object contains the metadata for each column returned in results so users know the name and type of each column. |
+| `resultsMeta._adhoc`  | An ad-hoc Experience Data Model (XDM) schema with fields that are namespaced for usage only by a single dataset.  |
+| `resultsMeta._adhoc.type`  | The data type of the ad hoc schema. |
+| `resultsMeta._adhoc.meta:xdmType`  | This is a system-generated value for the XDM field type. For more information on the available types see the documentation on [available XDM types](../../xdm/tutorials/custom-fields-api.md). |
+| `resultsMeta._adhoc.properties`  | These are the column names of the queried dataset. |
 | `resultsMeta._adhoc.results`  | These are the row names of the queried dataset. They reflect each of the returned columns.  |

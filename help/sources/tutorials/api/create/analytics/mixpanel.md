@@ -2,6 +2,16 @@
 title: Create a Source Connection and Dataflow for Mixpanel using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Mixpanel using the Flow Service API.
 exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
+TQID: https://experienceleague.adobe.com/CqROpTBrGDtBoM5lUyltgj2XCLuwCinKQuJaOhoNbDc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a source connection and dataflow for [!DNL Mixpanel] using the [!DNL Flow Service] API
 
@@ -112,7 +122,7 @@ When performing GET requests to explore your source's file structure and content
 | `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. For this source the value would be `json`. |
 | `fileType=json` | The file type of the file you want to bring to Experience Platform. Currently, `json` is the only supported file type. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
-| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Experience Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `{"projectId":"2671127","timezone":"Pacific Standard Time"}` string in base64. **Note**: In the example below, `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` encoded in base64 equates to `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. | 
+| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Experience Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `{"projectId":"2671127","timezone":"Pacific Standard Time"}` string in base64. **Note**: In the example below, `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` encoded in base64 equates to `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. |
 
 
 **Request**

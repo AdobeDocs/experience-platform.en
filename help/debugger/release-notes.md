@@ -4,18 +4,56 @@ description: The latest release notes for Adobe Experience Platform Debugger.
 keywords: debugger;experience Platform Debugger extension;chrome;extension;release notes
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
+TQID: https://experienceleague.adobe.com/0e-7UfIMyZvMEsptkp3VmNDPDWL0dsTCgMTwR93ngoo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: c1f1ac67-ccab-4be9-a93a-b7faba1192c4
+    internal-label: Assurance
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Adobe Experience Platform Debugger release notes
 
-## Version 1.6.4 - May 6, 2025
+## Version 1.7.0 - May 27, 2026
 
-### Fixes and improvements
+* Improved search capabilities of the [!UICONTROL Logs] tool, including:
+  * Better search filtering, ensuring that only relevant logs are shown.
+  * Phrase match highlighting.
+  * Expansion of nested log objects to show search matches.
+  * A **[!UICONTROL Download CSV]** button to export log data to view in Microsoft Excel or to share with an AI agent.
+
+## Version 1.6.5 - March 24, 2026
+
+* Fixed an issue that prevented events from AppMeasurement being sent in active Assurance sessions.
+
+## Version 1.6.4 - May 6, 2025
 
 * Fixed an issue where sign-in was unavailable.
 
 ## Version 1.6.3 - April 30, 2025
-
-### Fixes and improvements
 
 * Fixed an issue where the Debugger would prevent DTM and Tags functions from working.
 * Fixed an issue where Analytics Post-Processed Hits would not appear in logs.
@@ -23,24 +61,15 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 
 ## Version 1.6.2 - October 1, 2024
 
-### Fixes and improvements
-
-* Fixed an issue where the Debugger was too sensitive to all CSP errors
+* Fixed an issue where the Debugger was too sensitive to all CSP errors.
 
 ## Version 1.6.1 - July 25, 2024
-
-### Fixes and improvements
 
 * Fixed an issue that prevented users from adding new Tags embed codes to pages without them.
 
 ## Version 1.6.0 - July 11, 2024
 
-### New features
-
 * Allow for users to opt-in/out of technical and personal data collection.
-
-### Fixes and improvements
-
 * Fix Firefox script injection and privacy policy link.
 * Capture missing Analytics requests.
 * Fix crashes on pages with lots of complex console messages.
@@ -48,19 +77,12 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 
 ## Version 1.5.4 - December 19, 2023
 
-### Fixes and improvements
-
 * Fixed an issue where settings were not being retained.
 * Fixed an issue that caused the Debugger to crash while viewing Analytics Post-Processed hits.
 
 ## Version 1.5.3 - December 6, 2023
 
-### New features
-
 * Added a "lock to the active tab when opening the Debugger" setting.
-
-### Fixes and improvements
-
 * Fixed an issue where Analytics requests were missing on private domains.
 * Fixed an issue where Activity Map data would be missing from Analytics requests table.
 * Fixed an issue where viewing the Target Trace would cause a crash.
@@ -70,13 +92,9 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 
 (Firefox Only)
 
-### Fixes and improvements
-
 * Updated the organization of files.
 
 ## Version 1.5.1 - November 2, 2023
-
-### Fixes and improvements
 
 * Fixed issues where Analytics events would be ignored or duplicated.
 * Fixed an issue where the maximum state storage size was exceeded.
@@ -84,12 +102,7 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 
 ## Version 1.5.0 - October 19, 2023
 
-### New features
-
 * Show links to property, environment, and rules in Tags summary and logs.
-
-### Fixes and improvements
-
 * Fixed an issue where Tags summary data was not sent.
 * Fixed issue where Assurance sessions would give a CORS error
 * Fixed an issue that prevented Target Trace from appearing.

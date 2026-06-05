@@ -5,6 +5,58 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
+TQID: https://experienceleague.adobe.com/Nz3NU3sHJrr7SALPseT6pliDoPHIrRlksm4ynWK46yw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+    internal-label: Best practices
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Adobe Experience Platform release notes 
 
@@ -35,7 +87,7 @@ With Real-Time CDP, you can:
 
 * Achieve a single view of your customer with streaming collection of customer data from across the enterprise.
 * Responsibly manage profiles with trusted governance and privacy controls for known and unknown identifiers.
-* Generate actionable insights and scale audiences with AI and machine learning powered by Adobe Sensei and built for marketers.
+* Generate actionable insights and scale audiences with AI and machine learning powered by Adobe AI and built for marketers.
 * Deliver personalized experiences in realtime across all channels and destinations.
 
 For more information, see the [Real-Time Customer Data Platform documentation](../../rtcdp/overview.md).
@@ -122,7 +174,7 @@ XDM is a publicly documented specification designed to improve the power of digi
 | Feature    | Description  |
 | ---------- | ------------ |
 | Notification schema | New schema that represents notification data sent during the data ingestion process. |
-| Adobe AdCloud DSP schemas | Five new schemas have been added to represent Adobe Advertising Cloud demand-side platform (DSP) metadata: Placement, Campaign, Package, Advertiser, Account.|
+| Adobe AdCloud DSP schemas | Five new schemas have been added to represent Adobe Advertising demand-side platform (DSP) metadata: Placement, Campaign, Package, Advertiser, Account.|
 | ExperienceEvent Implementation Details schema field groups | New ExperienceEvent field groups that adds a standard field to store information about the software used to collect the event. |
 | [!DNL Profile Privacy] field groups | New profile field groups that adds fields to accept general out-out and sales/sharing opt-out signals for [!DNL Real-Time Customer Profile]. |
 | Format constraints for `xdm:alternateDisplayInfo` | The "Title" and "Description" fields for `xdm:alternateDisplayInfo` must both be strings to pass validation. |

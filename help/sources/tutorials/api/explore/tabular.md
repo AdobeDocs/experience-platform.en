@@ -3,6 +3,16 @@ keywords: Experience Platform;home;popular topics;sources;API;explore;flow servi
 title: Explore a Tabular Source using the Flow Service API
 description: This tutorial uses the Flow Service API to explore the contents and structure of a table-based source.
 exl-id: 0c7a5b8a-2071-4ac2-b2d1-c5534e7c7d9c
+TQID: https://experienceleague.adobe.com/cSaXWkL4Bl5tp1uPvaLVh-1Wd2iLtOKRfygpDA0nnJA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Explore data tables using the [!DNL Flow Service] API
 

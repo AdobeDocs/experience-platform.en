@@ -2,6 +2,18 @@
 description: This page exemplifies the API call used to retrieve a credential configuration through Adobe Experience Platform Destination SDK.
 title: Retrieve a credential configuration
 exl-id: cec55073-6e2f-4412-a9dd-1aeb445279c0
+TQID: https://experienceleague.adobe.com/GL2Yk368Lqh0ST3J26-ukRq2cBxPSxD9E9-we7ZBjCQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Retrieve a credential configuration
 
@@ -29,7 +41,7 @@ When using a global authentication system, you must set `"authenticationRule":"P
 
 ## Getting started with credentials API operations {#get-started}
 
-Before continuing, please review the [getting started guide](../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Retrieve a credential configuration {#retrieve}
 
@@ -118,6 +130,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 | -------- | ----------- |
 | `{INSTANCE_ID}` | The ID of the credential configuration you want to retrieve. |
 
+{style="table-layout:auto"}
+
 +++
 
 +++Response
@@ -144,7 +158,7 @@ A successful response returns HTTP status 200 with the details of the credential
 
 ## API error handling {#error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
 ## Next steps {#next-steps}
 

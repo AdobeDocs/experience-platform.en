@@ -2,6 +2,27 @@
 title: clickCollectionEnabled
 description: Learn how to configure Web SDK to tetermine if link click data is automatically collected.
 exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
+TQID: https://experienceleague.adobe.com/yQpTqRt4bZSH7fToCyuYkXAac7MTBFazfQEoFmgwrTI
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+    internal-label: API
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # `clickCollectionEnabled`
 
@@ -23,7 +44,21 @@ The Web SDK tracks all clicks on `<a>` and `<area>` HTML elements if it doesn't 
 1. If the link target domain differs from the current `window.location.hostname`, `xdm.web.webInteraction.type` is set to `"exit"` (if `clickCollection.exitLinkEnabled` is enabled).
 1. If the link doesn't qualify for either `"download"` or `"exit"`, `xdm.web.webInteraction.type` is set to `"other"`.
 
-In all cases, `xdm.web.webInteraction.name` is set to the link text label and `xdm.web.webInteraction.URL` is set to the link destination URL. If you want to set the link name to the URL as well, you can override this XDM field using the `filterClickDetails` callback in the `clickCollection` object.
+In all cases, `xdm.web.webInteraction.name` checks the clicked element and its descendants for the first non-empty value in the following order:
+
+1. `innerText` (falls back to `textContent`)
+1. Concatenated `nodeValue` from supported descendant text nodes
+1. `alt` attribute
+1. `title` attribute
+1. `<input value="...">` attribute
+1. `<img src="...">` attribute
+1. `aria-label` attribute
+1. `name` attribute
+1. Empty string
+
+The `xdm.web.webInteraction.URL` field is set to the link destination URL. If you want to set the link name to the URL as well, you can override this XDM field using the `filterClickDetails` callback in the `clickCollection` object.
+
+## Implementation
 
 Set the `clickCollectionEnabled` boolean when running the `configure` command. If you omit this property when configuring the Web SDK, it defaults to `true`. Set this value to `false` if you prefer to set `xdm.web.webInteraction.type` and `xdm.web.webInteraction.value` manually.
 

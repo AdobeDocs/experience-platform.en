@@ -2,6 +2,13 @@
 title: Upgrade Details Schema Field Group
 description: Learn about the Upgrade Details schema field group.
 exl-id: cd3f4cd9-ee0e-4bdf-a630-dd2c3c3cc8c7
+TQID: https://experienceleague.adobe.com/v0SpTekNz7uk9qRdDVvATGYqcvka6YtzfGkweF4DT44
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Upgrade Details] schema field group
 

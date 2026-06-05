@@ -2,6 +2,18 @@
 title: Incremental Load in Query Service
 description: The incremental load feature uses both anonymous block and snapshot features to provide a near real-time solution for moving data from the data lake to your data warehouse whilst ignoring matching data.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
+TQID: https://experienceleague.adobe.com/XuMS9at2AZz75GuLKEZVD42e56Q9XgABJQN2-WIVgRw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Incremental load in Query Service
 
@@ -78,7 +90,7 @@ The steps below demonstrate how to create and incrementally load data using snap
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
  
    EXCEPTION
-     WHEN OTHER THEN
+     WHEN OTHERS THEN
        SELECT 'ERROR';
    END 
    $$;
@@ -110,7 +122,7 @@ The steps below demonstrate how to create and incrementally load data using snap
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
  
    EXCEPTION
-     WHEN OTHER THEN
+     WHEN OTHERS THEN
        SELECT 'ERROR';
    END
    $$;
@@ -148,7 +160,7 @@ Insert Into
       cast( @to_snapshot_id AS string) last_snapshot_id,
       cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 END
 $$;

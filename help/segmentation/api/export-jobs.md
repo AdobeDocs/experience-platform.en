@@ -4,6 +4,23 @@ title: Segment Export Jobs API Endpoint
 description: Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the /export/jobs endpoint in the Adobe Experience Platform Segmentation Service API, which allows you to programmatically retrieve, create, and cancel export jobs.
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
+TQID: https://experienceleague.adobe.com/2JJ7os9adwfeed-vKOYR8L9rlScxeBtbWcyqyfpUq88
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Segment export jobs endpoint
 
@@ -205,11 +222,11 @@ The following response returns HTTP status 200 with a list of successfully compl
 | `fields` | A list of the exported fields, separated by commas. |
 | `schema.name` | The name of the schema associated with the dataset where data is to be exported. |
 | `filter.segments` | The segments that are exported. The following fields are included:<ul><li>`segmentId`: The segment ID that profiles will be exported to.</li><li>`segmentNs`: Segment namespace for the given `segmentID`.</li><li>`status`: An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized"]` which represents all profiles that fall into the segment at the current time. Possible values include: `realized` and `exited`. A value of `realized` means the profile qualifies for the segment. A value of `exiting` means the profile is exiting the segment.</li></ul> |
-| `mergePolicy` | Merge policy information for the exported data. | 
+| `mergePolicy` | Merge policy information for the exported data. |
 | `metrics.totalTime` | A field indicating the total time that export job took to run. |
 | `metrics.profileExportTime` | A field indicating the time it took for the profiles to export. |
-| `page` | Information about the pagination of the requested export jobs. | 
-| `link.next` | A link to the next page of export jobs. | 
+| `page` | Information about the pagination of the requested export jobs. |
+| `link.next` | A link to the next page of export jobs. |
 
 +++
 
@@ -491,7 +508,7 @@ A successful response returns HTTP status 200 with detailed information about th
 | `fields` | A list of the exported fields, separated by commas.  |
 | `schema.name` | The name of the schema associated with the dataset where data is to be exported. |
 | `filter.segments` | The segments that are exported. The following fields are included:<ul><li>`segmentId`: Segment ID for profiles to be exported.</li><li>`segmentNs`: Segment namespace for the given `segmentID`.</li><li>`status`: An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized"]` which represents all profiles that fall into the segment at the current time. Possible values include: `realized` and `exited`.  A value of `realized` means the profile qualifies for the segment. A value of `exiting` means the profile is exiting the segment.</li></ul> |
-| `mergePolicy` | Merge policy information for the exported data. | 
+| `mergePolicy` | Merge policy information for the exported data. |
 | `metrics.totalTime` | A field indicating the total time that export job took to run. |
 | `metrics.profileExportTime` | A field indicating the time it took for the profiles to export. |
 | `totalExportedProfileCounter` | The total number of profile exported across all batches. |

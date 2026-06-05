@@ -2,6 +2,21 @@
 description: This page explains how to use the /testing/destinationInstance API endpoint to test if your file-based destination is configured correctly and to verify the integrity of data flows to your configured destination.
 title: Test your file-based destination with sample profiles
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
+TQID: https://experienceleague.adobe.com/ecETG8hP61A71pRlGrBDvCTSw3j-rbx0zkjNiQoikA0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Test your file-based destination with sample profiles
 
@@ -15,7 +30,7 @@ The auto-generated sample profiles contain generic data. If you want to test you
 
 ## Getting started {#getting-started}
 
-Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+Before continuing, please review the [getting started guide](../../getting-started.md) for important information that you need to know to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Prerequisites {#prerequisites}
 
@@ -232,9 +247,9 @@ A successful response returns HTTP status 200 along with the response payload.
 
 ## API error handling {#api-error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. See [API status codes](../../../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../../../landing/troubleshooting.md#request-header-errors) in the Experience Platform troubleshooting guide.
 
-## Next steps
+## Next steps {#next-steps}
 
 After reading this document, you now know how to test your file-based destination configuration.
 

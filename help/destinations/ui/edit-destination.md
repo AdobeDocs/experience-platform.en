@@ -3,6 +3,15 @@ title: Edit destinations
 type: Tutorial
 description: Learn how to edit and update existing destinations accounts in the Adobe Experience Platform UI
 exl-id: f3298836-668b-43fb-b4f3-85a650766f05
+TQID: https://experienceleague.adobe.com/AqQPdWQS5LXVdZc69Tdffyn-WVovfOsN5zPD4huCA48
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Edit destinations
 
@@ -43,7 +52,7 @@ Below are some examples of the settings that you can update for [Amazon S3](../c
 >
 >Your destination connection settings are now updated.
 
-## Other editing options
+## Other editing options {#other-editing-options}
 
 By using the Experience Platform UI or the Flow Service API, you can edit various destination configurations, as detailed in the links below:
 
@@ -53,8 +62,8 @@ By using the Experience Platform UI or the Flow Service API, you can edit variou
 | [Edit accounts](/help/destinations/ui/update-accounts.md) | [Edit base connection components (authentication parameters and other components)](/help/destinations/api/edit-destination.md#patch-base-connection) |
 | [Edit activation dataflows](/help/destinations/ui/edit-activation.md) | [Update destination dataflows](/help/destinations/api/update-destination-dataflows.md) |
 
-## Next steps
+## Next steps {#next-steps}
 
-By following this tutorial, you have successfully used the **[!UICONTROL destinations]** workspace to update existing destination connections.
+You have successfully updated existing destination connections using the **[!UICONTROL destinations]** workspace.
 
-For more information about destinations, refer to the [destinations overview](../catalog/overview.md).
+For more information about destinations, see the [destinations overview](../catalog/overview.md).

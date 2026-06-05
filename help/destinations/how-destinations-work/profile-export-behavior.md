@@ -1,7 +1,30 @@
 ---
 title: Profile export behavior
-description: Learn how profile export behavior varies between the different integration patters supported in Experience Platform destinations.
+description: Learn how profile export behavior varies between the different integration patterns supported in Experience Platform destinations.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
+TQID: https://experienceleague.adobe.com/DCZplb-dOVBCw3VGErsd1uCvdKfpLubZ-oDuidXFCn4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Profile export behavior for different destination types
 
@@ -18,7 +41,7 @@ There are several destination types in Experience Platform, as shown in the diag
 
 ![Types of destinations diagram](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
-## Message aggregation in streaming destinations
+## Message aggregation in streaming destinations {#message-aggregation}
 
 Before diving into specific information per destination type, it is important to understand the concept of message aggregation for *streaming destinations*.
 
@@ -53,7 +76,9 @@ Experience Platform optimizes the profile export behavior to your enterprise des
 
 In all the cases described above, only the profiles where relevant updates have occurred are exported to your destination. For example, if an audience mapped to the destination flow has a hundred members, and five new profiles qualify for the segment, the export to your destination is incremental and only includes the five new profiles.
 
-Note that all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
+>[!NOTE]
+>
+>All the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
 
 ### What determines a data export and what is included in the export {#enterprise-behavior}
 
@@ -61,7 +86,7 @@ Regarding the data that is exported for a given profile, it is important to unde
 
 |What determines a destination export | What is included in the destination export |
 |---------|----------|
-|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if the `segmentMembership` status of a profile changes  to `realized` or `exiting` or any mapped attributes are updated, a destination export would be kicked off.</li><li>Since identities cannot currently be mapped to enterprise destinations, changes in any identity on a given profile also determine destination exports.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li></ul> | <ul><li>The `segmentMembership` object includes the segment mapped in the activation dataflow, for which the status of the profile has changed following a qualification or segment exit event. Note that other unmapped segments for which the profile qualified for can be part of the destination export, if these segments belong to the same [merge policy](/help/profile/merge-policies/overview.md) as the segment mapped in the activation dataflow. </li><li>All identities in the `identityMap` object are included as well (Experience Platform currently does not support identity mapping in the enterprise destination).</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
+|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if the `segmentMembership` status of a profile changes to `realized` or `exiting` or any mapped attributes are updated, a destination export would be kicked off.</li><li>Since identities cannot currently be mapped to enterprise destinations, changes in any identity on a given profile also determine destination exports.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li></ul> | <ul><li>The `segmentMembership` object includes the segment mapped in the activation dataflow, for which the status of the profile has changed following a qualification or segment exit event. Note that other unmapped segments for which the profile qualified for can be part of the destination export, if these segments belong to the same [merge policy](/help/profile/merge-policies/overview.md) as the segment mapped in the activation dataflow. </li><li>All identities in the `identityMap` object are included as well (Experience Platform currently does not support identity mapping in the enterprise destination).</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -100,7 +125,9 @@ Experience Platform optimizes the profile export behavior to your streaming dest
 
 In all the cases described above, only the profiles where relevant updates have occurred are exported to your destination. For example, if an audience mapped to the destination flow has a hundred members, and five new profiles qualify for the segment, the export to your destination is incremental and only includes the five new profiles.
 
-Note that all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
+>[!NOTE]
+>
+>All the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
 
 ### What determines a data export and what is included in the export {#streaming-behavior}
 
@@ -108,7 +135,7 @@ Regarding the data that is exported for a given profile, it is important to unde
 
 |What determines a destination export | What is included in the destination export |
 |---------|----------|
-|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if the `segmentMembership` status of a profile changes  to `realized` or `exiting` or any mapped attributes are updated, a destination export would be kicked off.</li><li>A change in the identity map is defined as an identity that is added / removed for the [identity graph](/help/identity-service/features/identity-graph-viewer.md) of the profile, for identity namespaces that are mapped for export.</li><li>A change for an attribute is defined as any update on the attribute, for attributes that are mapped to the destination.</li></ul> | <ul><li>The segments that are mapped to the destination and have changed will be included in the `segmentMembership` object. In some scenarios they might be exported using multiple calls. Also, in some scenarios, some segments that have not changed might be included in the call as well. In any case, only mapped segments will be exported.</li><li>All identities from the namespaces that are mapped to the destination in the `identityMap` object are included as well .</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
+|<ul><li>Mapped attributes and segments serve as the cue for a destination export. This means that if the `segmentMembership` status of a profile changes to `realized` or `exiting` or any mapped attributes are updated, a destination export would be kicked off.</li><li>A change in the identity map is defined as an identity that is added / removed for the [identity graph](/help/identity-service/features/identity-graph-viewer.md) of the profile, for identity namespaces that are mapped for export.</li><li>A change for an attribute is defined as any update on the attribute, for attributes that are mapped to the destination.</li></ul> | <ul><li>The segments that are mapped to the destination and have changed will be included in the `segmentMembership` object. In some scenarios they might be exported using multiple calls. Also, in some scenarios, some segments that have not changed might be included in the call as well. In any case, only mapped segments will be exported.</li><li>All identities from the namespaces that are mapped to the destination in the `identityMap` object are included as well .</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -165,7 +192,7 @@ For example, in the export setting illustrated below, where an audience is expor
 
 >[!ENDSHADEBOX]
 
-### What determines a data export and what is included in the export
+### What determines a data export and what is included in the export {#file-based-export-details}
 
 Based on the information in the section above, the profile export behavior to file-based destinations can be summarized as described below:
 
@@ -185,7 +212,7 @@ In the first file export after setting up the activation workflow, the entire po
 
 |What determines a destination export | What is included in the exported file |
 |---------|----------|
-|<ul><li>The export schedule set in the UI or API determines the start of a destination export.</li><li>Any changes in audience membership of a profile, whether it qualifies or disqualifies from the segment, or changes in identity maps, qualify a profile to be included in incremental exports. Changes in attributes for a profile *do not* qualify a profile to be included in incremental exports.</li></ul> | <p>The profiles for which the audience membership has changed, along with the latest information for each XDM attribute selected for export.</p><p>Profiles with the exited status are included in destination exports, if the `segmentMembership.status` XDM field is selected in the mapping step.</p>  |
+|<ul><li>The export schedule set in the UI or API determines the start of a destination export.</li><li>Any changes in audience membership of a profile, whether it qualifies or disqualifies from the segment, or changes in identity maps, qualify a profile to be included in incremental exports. Changes in attributes for a profile *do not* qualify a profile to be included in incremental exports.</li></ul> | <p>The profiles for which the audience membership has changed, along with the latest information for each XDM attribute selected for export.</p><p>Profiles with the exited status are included in destination exports, if the `segmentMembership.status` XDM field is selected in the mapping step.</p> |
 
 {style="table-layout:fixed"}
 

@@ -4,6 +4,36 @@ solution: Experience Platform
 title: Source Connectors Overview
 description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Experience Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
+TQID: https://experienceleague.adobe.com/V-4eFafnVuOwDnYpLjkxnFTznwbqb4usTiPyPv6j60M
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+    internal-label: Sources
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+    internal-label: XDM
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+    internal-label: Data ingestion
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+    internal-label: Schemas
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Source connectors overview
 
@@ -32,6 +62,10 @@ For partner-authored and maintained connectors, this means that issues with the 
 
 ## Sources catalog
 
+>[!NOTE]
+>
+>Source ingestion dataflows that fail continuously for 30 days will automatically be disabled. Use [Monitoring Dashboard](/help/dataflows/ui/monitor-sources.md) to review your dataflow, identify why it failed (for example, credentials, permissions, or schema or mapping changes), apply the necessary updates, and re-enable the dataflow once resolved.
+
 Read the following sections for a list of all sources available in the sources catalog.
 
 ### Adobe applications {#adobe-applications}
@@ -55,7 +89,7 @@ Experience Platform allows data to be ingested from other Adobe applications, in
 
 ### Advanced enterprise sources {#advanced-enterprise-sources}
 
-The following sources are available to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) customers only.
+The following sources are only available to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) or customers who have licensed the standalone Advanced Enterprise Source Connectors SKU.
 
 | Source | Category | Ingestion type | Cloud |
 | --- | --- | --- | --- |
@@ -215,11 +249,13 @@ You can use the following sources to ingest data from your local system to Exper
 
 ### Loyalty {#loyalty}
 
-You can use the following sources to ingest data loyalty to Experience Platform.
+You can use the following sources to ingest loyalty data to Experience Platform.
 
 | Source | Ingestion type | Cloud |
 | --- | --- | --- |
 | [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Streaming | Azure |
+| [[!DNL LAVA]](connectors/loyalty/lava.md) | Streaming | Azure |
+| [[!DNL Talon.One]](connectors/loyalty/talon-one.md) | Batch, Streaming | Azure |
 
 {style="table-layout:auto"}
 

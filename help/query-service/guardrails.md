@@ -3,6 +3,28 @@ keywords: Experience Platform;query;query service;troubleshooting;guardrails;gui
 title: Guardrails for Query Service
 description: This document provides information on usage limits for Query Service data to help you optimize your query use.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
+TQID: https://experienceleague.adobe.com/UXuXXBlvQcXfg9Uvub7-fSQQ636ZSvVT9dRXvF1fl-Y
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+subfeature_v2:
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
 ---
 # Guardrails for Query Service
 

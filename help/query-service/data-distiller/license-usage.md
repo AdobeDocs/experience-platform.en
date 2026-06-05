@@ -2,12 +2,21 @@
 title: Monitor Batch Query License Usage
 description: The Adobe Experience Platform UI provides a dashboard through which you can view important information about your organization's Data Distiller license usage.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
+TQID: https://experienceleague.adobe.com/CU3pM7HOX13NjRGJEYiELoxHyzznwECc1Yk7mAVZVbs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Monitor batch query license usage {#monitor-license-usage}
 
 The license usage dashboard provides granular reports about your organization's Query Service license usage and usage metrics for each purchased product. To learn more about the available metrics displayed in the dashboard, visit the [license usage dashboard guide](../../dashboards/guides/license-usage.md#available-metrics). 
 
-The dashboard provides usage metrics for each purchased product, the consolidated usage of metrics in all production or development sandboxes, and the usage metrics from a specific sandbox. Information displayed here is captured during a daily snapshot of your Experience Platform instance. 
+The dashboard provides usage metrics for each purchased product, the consolidated usage of metrics in all production or development sandboxes, and the usage metrics from a specific sandbox. Information displayed here is captured during a daily snapshot of your Experience Platform instance. Administrators can monitor and end idle Query Service sessions to free up capacity when no additional sessions are available and users are blocked due to idle (non-active) sessions. See [Manage Query Service sessions](../ui/session-management.md) for details.
 
 Annual Data Distiller compute hours reset on the anniversary date of your Data Distiller contract. This date corresponds to when your Data Distiller license was purchased or renewed, as listed on your sales order.
 
