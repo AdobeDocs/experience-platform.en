@@ -212,7 +212,7 @@ Use one of the following paths from the **[!UICONTROL Scheduled Queries]** tab t
 
 Either, select the ellipsis (**...**) for the schedule you want to modify, then **[!UICONTROL Edit schedule]** from the inline actions menu. This opens the schedule editor directly. See [Manage scheduled queries with inline actions](./monitor-queries.md#inline-actions) for more information.
 
-![The Scheduled Queries tab with the inline action ellipses and Edit schedule highlighted from the popup menu.](../images/ui/query-schedules/inline-actions-edit)
+![The Scheduled Queries tab with the inline action ellipses and Edit schedule highlighted from the popup menu.](../images/ui/query-schedules/inline-actions-edit.png)
 
 Or select a schedule name from the table to open the schedule details page. On the schedule details page, select **[!UICONTROL Edit schedule]** from the top-right corner of the page to open the schedule editor.
 
