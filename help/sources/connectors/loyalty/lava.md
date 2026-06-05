@@ -162,7 +162,7 @@ To load these packages, in the Experience Platform UI, select **[!UICONTROL Sand
 ```json
 {
   "imsOrgId": "1EF71E43679AAD1E0A495C77@AdobeOrg",
-  "packageId": "416a0c2a32794092aa1a957cbe9a6698"
+  "packageId": "7ec94330c1ca43a09266a9a3b85f3727"
 }
 ```
 
