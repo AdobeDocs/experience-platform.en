@@ -68,7 +68,7 @@ Toggle the relevant checkboxes to remove or add a table column. Next, select **[
 
 The [!UICONTROL Scheduled Queries] view offers various inline actions to manage all of your scheduled queries from one location. Inline actions are indicated in each row with ellipsis. Select the ellipsis of a scheduled query that you want to manage to see the available options in a pop-up menu. The available options include [[!UICONTROL Disable schedule]](#disable) or [!UICONTROL Enable schedule], [[!UICONTROL Edit schedule]](#edit), [[!UICONTROL Delete schedule]](#delete), [[!UICONTROL Subscribe]](#alert-subscription) to query alerts, and [Enable or [!UICONTROL Disable quarantine]](#quarantined-queries).
 
-![The Scheduled Queries tab with the inline action ellipses and popup menu highlighted, including the Edit schedule option.](../images/ui/monitor-queries/inline-actions.png)
+![The Scheduled Queries tab with the inline action ellipses and popup menu highlighted](../images/ui/monitor-queries/inline-actions.png)
 
 ### Disable or enable a scheduled query {#disable}
 
