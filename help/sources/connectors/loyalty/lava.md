@@ -10,8 +10,6 @@ description: Learn about the LAVA source on Adobe Experience Platform
 
 [[!DNL LAVA]](https://lava.ai/) is a customer engagement platform. [!DNL LAVA] integrates with your ticketing, point-of-sale, mobile app and other touch points and creates moments that matter with our automation, loyalty and mobile pass solutions. 
 
-The [!DNL LAVA] source connector can be used for several different sets of profile data and events. You can decide which are relevant for you. For each type of data you would like to stream from [!DNL LAVA] to Adobe, repeat the "Connect your LAVA account" steps.
-
 ## Prerequisites
 
 Before you can use this source connector, ensure the following:
@@ -20,6 +18,9 @@ Before you can use this source connector, ensure the following:
 * You have a [LAVA Console](https://app.lava.ai/) account with either "Administrator" or "Export Manager" access.
 * (Recommended) You have sandbox manager permissions in Adobe Experience Cloud.
 
+## Data streams
+
+The [!DNL LAVA] source connector can be used for several different sets of profile data and events. You can decide which are relevant for you, streaming only those records to Adobe.
 
 ### Member Profiles
 
@@ -146,7 +147,13 @@ Download the [sample Ledger Events data file here.](../../assets/lava/lava_ledge
 
 Use this [combined sample event data file](../../assets/lava/lava_transaction_sample.json) to set up a single dataflow that ingests all event types.
 
-### Load the [!DNL LAVA] package
+## Deployment considerations
+
+1. Create a dataflow for the Member Profile data if you need basic data about LAVA members and/or you would like LAVA data to be stitched into other profiles by email address.
+2. If you use the Member balances data, it must be stored in a separate Dataset from Member Profile.
+3. Events can be stored either in a single dataset or multiple datasets. To store in a single dataset, create one Dataflow using the "combined" event data file/mapping, and then set up multiple exports in the LAVA MAC to the same ingestion URL and flow ID. To store each event type in a different dataset, create a Dataflow for each dataset, and then configure each export in the LAVA MAC to the ingestion URL and flow ID for the appropriate dataflow.
+
+## Load the [!DNL LAVA] package
 
 [!DNL LAVA] provides a package that includes our recommended field groups, schemas, identity namespace and datasets for using [!DNL LAVA] in Experience Platform. Use of these packages is recommended, but not required.
 
@@ -167,7 +174,7 @@ The [!DNL LAVA] package includes three datasets: LAVA Profiles, LAVA Balances an
 
 ## Next steps
 
-The [!DNL LAVA] source connector ingests member profiles, reward balances, and ticket scan events into Experience Platform. Plan for the listed prerequisites, map and extend schemas using the field reference tables and sample JSON files, and optionally import [!DNL LAVA]'s recommended package into a sandbox before you create connections and dataflows.
+The [!DNL LAVA] source connector ingests member profiles, reward balances, ticket scan events, transaction events and ledger events into Experience Platform. Plan for the listed prerequisites, map and extend schemas using the field reference tables and sample JSON files, and optionally import [!DNL LAVA]'s recommended package into a sandbox before you create connections and dataflows.
 
 For step-by-step setup:
 
