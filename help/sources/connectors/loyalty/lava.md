@@ -142,6 +142,10 @@ Download the [sample Ledger Events data file here.](../../assets/lava/lava_ledge
 
 {style="table-layout:auto"}
 
+### Combined Events
+
+Use this [combined sample event data file](../../assets/lava/lava_transaction_sample.json) to set up a single dataflow that ingests all event types.
+
 ### Load the [!DNL LAVA] package
 
 [!DNL LAVA] provides a package that includes our recommended field groups, schemas, identity namespace and datasets for using [!DNL LAVA] in Experience Platform. Use of these packages is recommended, but not required.
