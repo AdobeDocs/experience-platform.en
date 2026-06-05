@@ -200,7 +200,7 @@ To monitor scheduled queries using the Query Service API, see the [scheduled que
 
 ## Edit a schedule {#edit-schedule}
 
-You can modify supported configuration settings for an existing scheduled query without recreating the schedule. Editing a schedule only updates the schedule configuration, it does not modify the underlying SQL query definition.
+You can access the schedule editor from the [!UICONTROL Scheduled Queries] workspace, the schedule details page, or the Query Editor. You can modify supported configuration settings for an existing scheduled query without recreating the schedule. Editing a schedule only updates the schedule configuration. It does not modify the underlying SQL query definition.
 
 >[!IMPORTANT]
 >
@@ -212,7 +212,7 @@ Use one of the following paths from the **[!UICONTROL Scheduled Queries]** tab t
 
 Either, select the ellipsis (**...**) for the schedule you want to modify, then **[!UICONTROL Edit schedule]** from the inline actions menu. This opens the schedule editor directly. See [Manage scheduled queries with inline actions](./monitor-queries.md#inline-actions) for more information.
 
-![The Scheduled Queries tab with the inline action ellipses and Edit schedule highlighted form the popup menu.](../images/ui/query-scheduless/inline-actions-edit.png)
+![The Scheduled Queries tab with the inline action ellipses and Edit schedule highlighted from the popup menu.](../images/ui/query-scheduless/inline-actions-edit.png)
 
 Or select a schedule name from the table to open the schedule details page. On the schedule details page, select **[!UICONTROL Edit schedule]** from the top-right corner of the page to open the schedule editor.
 
@@ -226,7 +226,7 @@ You can also edit an existing qualifying schedule from the Query Editor.
 
 ### Edit schedule settings {#edit-schedule-settings}
 
-Use schedule editor to review the current schedule configuration and update supported settings.
+Use the schedule editor to review the current schedule configuration and update supported settings.
 
 >[!NOTE]
 >
@@ -239,7 +239,7 @@ The following settings can be modified:
 | Setting | Description |
 |---|---|
 | **[!UICONTROL Frequency]** | How often the query runs. Options include **[!UICONTROL Hourly]**, **[!UICONTROL Daily]**, **[!UICONTROL Weekly]**, **[!UICONTROL Monthly]**, and **[!UICONTROL Yearly]**. |
-| **[!UICONTROL Days]** | The days on which the query runs. Choose one or multiple weekdays to run on a weekly weekly cadence or a specific day of the month if you run monthly or yearly frequencies. |
+| **[!UICONTROL Days]** | The days on which the query runs. Choose one or multiple weekdays to run on a weekly cadence or a specific day of the month if you run monthly or yearly frequencies. |
 | **[!UICONTROL End date]** | The date after which the scheduled query stops running. |
 | **[!UICONTROL End time]** | The time at which the schedule ends on the specified end date. |
 | **[!UICONTROL No end date]** | Configures the schedule to run continuously without an end date, if this option is enabled for your organization. |
@@ -248,11 +248,11 @@ The following settings can be modified:
 
 ### Save schedule changes {#save-schedule-changes}
 
-After updating the schedule settings, select **[!UICONTROL Save]** to apply the changes. A confirmation message appears to confirm that the schedule updated successfully.
+After updating the schedule settings, select **[!UICONTROL Save]** to apply the changes. A confirmation message appears when the schedule updates successfully.
 
 ### Verify updated schedule information {#verify-schedule-updates}
 
-After saving, verify the updated schedule configuration in the following locations:
+After saving, verify that the updated schedule configuration appears in the following locations:
 
 - The **[!UICONTROL Scheduled Queries]** tab.
 - The **[!UICONTROL Properties]** panel on the [schedule details page](./monitor-queries.md#query-runs).
