@@ -189,7 +189,7 @@ The audience model is comprised of the following datasets:
 The image below contains the relevant data fields in each dataset.
 
 ![An ERD of the audience model.](../images/cdp-insights/audience-model.png)
-<!--  -->
+
 #### Segment trendline metrics {#segment-trendline-metrics}
 
 The `adwh_fact_profile_by_segment_trendlines` table is an Adobe-managed system dataset that tracks audience population size and membership movement over time. Each row represents a daily record of profile counts for a given audience and merge policy. The following columns are available for use in custom queries and reports.
@@ -208,7 +208,7 @@ The `adwh_fact_profile_by_segment_trendlines` table is an Adobe-managed system d
 >[!NOTE]
 >
 >Prior to a recent calculation update, the following relationship held for this dataset: `count_of_profiles = count_of_calculated_realized_profiles + count_of_calculated_existing_profiles`. Following an update to how `count_of_calculated_existing_profiles` is calculated, this relationship is no longer guaranteed. If you have custom dashboards or reports built on this identity, review and update your queries accordingly.
-<!--  -->
+
 #### Audience size use case {#audience-size}
 
 The logic used for the [!UICONTROL Audience size] widget returns the total number of merged profiles within the selected audience at the time of the most recent snapshot. See the [[!UICONTROL Audience size] widget documentation](../guides/audiences.md#audience-size) for more information.
