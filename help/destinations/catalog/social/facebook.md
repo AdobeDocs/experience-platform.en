@@ -42,7 +42,7 @@ topic_v2:
 
 >[!IMPORTANT]
 >
->Starting June 4th, with the update to Ads API v25, certain audiences will be flagged and not accepted by Facebook. For details, see the section on [restricted audience data](#restricted-audience-data).
+>Starting June 8th, with the update to Ads API v25, certain audiences will be flagged and not accepted by Facebook. For details, see the section on [restricted audience data](#restricted-audience-data).
 
 ## Overview {#overview}
 
