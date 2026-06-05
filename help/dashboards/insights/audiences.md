@@ -601,3 +601,4 @@ By reading this document, you now understand the SQL that generates dashboard in
 See the [View SQL documentation](../view-sql.md) for more information on how to adapt your insights' SQL directly through the PLatform UI.
 
 You can also read and understand the SQL that generates insights for the [Profiles](./profiles.md), [Account Profiles](./account-profiles.md) and [Destinations](./destinations.md) dashboards.
+
