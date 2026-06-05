@@ -189,26 +189,26 @@ The audience model is comprised of the following datasets:
 The image below contains the relevant data fields in each dataset.
 
 ![An ERD of the audience model.](../images/cdp-insights/audience-model.png)
-
+<!--  -->
 #### Segment trendline metrics {#segment-trendline-metrics}
 
-The `adwh_fact_profile_by_segment_trendlines` table is an Adobe-managed system dataset that tracks segment population size and membership movement over time. Each row represents a daily record of profile counts for a given segment and merge policy. The following columns are available for use in custom queries and reports.
+The `adwh_fact_profile_by_segment_trendlines` table is an Adobe-managed system dataset that tracks audience population size and membership movement over time. Each row represents a daily record of profile counts for a given audience and merge policy. The following columns are available for use in custom queries and reports.
 
 >[!IMPORTANT]
 >
->The profile count metrics in `adwh_fact_profile_by_segment_trendlines` are derived from daily segment qualification and membership calculations. Some metrics, such as `count_of_profiles`, may align with total segment membership counts from a profile snapshot export, while event-based metrics such as `count_of_calculated_realized_profiles`, `count_of_calculated_existing_profiles`, and `count_of_calculated_exited_profiles` represent qualification activity and should not be directly compared to snapshot membership totals.
+>The profile count metrics in `adwh_fact_profile_by_segment_trendlines` are derived from daily audience qualification and membership calculations. Some metrics, such as `count_of_profiles`, may align with total audience membership counts from a profile snapshot export, while event-based metrics such as `count_of_calculated_realized_profiles`, `count_of_calculated_existing_profiles`, and `count_of_calculated_exited_profiles` represent qualification activity and should not be directly compared to snapshot membership totals.
 
 | Column | Definition |
 | --- | --- |
-| `count_of_profiles` | The total number of profiles in the segment at the time of the daily record. |
+| `count_of_profiles` | The total number of profiles in the audience at the time of the daily record. |
 | `count_of_calculated_realized_profiles` | The number of profiles that had a qualification event yesterday. The number of profiles that had a qualification event yesterday. |
-| `count_of_calculated_existing_profiles` | The number of profiles whose last qualification event occurred before yesterday. These profiles have continued to exist in the segment since their most recent qualification event.|
-| `count_of_calculated_exited_profiles` | The number of profiles that exited the segment yesterday. |
+| `count_of_calculated_existing_profiles` | The number of profiles whose last qualification event occurred before yesterday. These profiles have continued to exist in the segment since their most recent qualification event. |
+| `count_of_calculated_exited_profiles` | The number of profiles that exited the audience yesterday. |
 
 >[!NOTE]
 >
 >Prior to a recent calculation update, the following relationship held for this dataset: `count_of_profiles = count_of_calculated_realized_profiles + count_of_calculated_existing_profiles`. Following an update to how `count_of_calculated_existing_profiles` is calculated, this relationship is no longer guaranteed. If you have custom dashboards or reports built on this identity, review and update your queries accordingly.
-
+<!--  -->
 #### Audience size use case {#audience-size}
 
 The logic used for the [!UICONTROL Audience size] widget returns the total number of merged profiles within the selected audience at the time of the most recent snapshot. See the [[!UICONTROL Audience size] widget documentation](../guides/audiences.md#audience-size) for more information.
