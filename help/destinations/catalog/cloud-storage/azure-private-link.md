@@ -1,6 +1,7 @@
 ---
 title: Private Link for [!DNL Azure] Destinations
 description: Learn how to route data exports from [!DNL Experience Platform] to your [!DNL Azure] resources over the [!DNL Microsoft Azure] private backbone using [!DNL Azure] Private Link.
+nudge: true
 ---
 
 # Private Link for [!DNL Azure] destinations
