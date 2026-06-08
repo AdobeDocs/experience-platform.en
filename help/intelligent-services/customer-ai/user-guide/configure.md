@@ -3,7 +3,7 @@ keywords: Experience Platform;user guide;customer ai;popular topics;configure in
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Configure a Customer AI Instance
-description: AI/ML Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
+description: AI/ML Services provide Customer AI as a simple-to-use Adobe AI service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 TQID: https://experienceleague.adobe.com/Eu5uG-1g0jnRAJdqlvjWOJZVGxQeGqUo5cCpbW0yVas
 product_v2:
@@ -31,7 +31,7 @@ topic_v2:
 
 Customer AI, as part of AI/ML Services enables you to generate custom propensity scores without having to worry about machine learning.
 
-AI/ML Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
+AI/ML Services provide Customer AI as a simple-to-use Adobe AI service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
 
 ## Create an instance {#set-up-your-instance}
 

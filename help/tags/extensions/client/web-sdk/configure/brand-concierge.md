@@ -1,6 +1,6 @@
 ---
 title: Brand Concierge configuration settings
-description: Configure session persistence and stream timeouts for Brand Concierge chat.
+description: Configure desired settings for Brand Concierge chat.
 exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
 ---
 # Brand Concierge configuration settings {#brand-concierge}
@@ -22,11 +22,17 @@ The **[!UICONTROL Brand Concierge]** section lets you control how Brand Concierg
 1. Navigate to **[!UICONTROL Extensions]**, then select **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
 1. Scroll down to the **[!UICONTROL Brand Concierge]** section.
 
-The following options are available:
+The following options are available. For equivalent JavaScript library settings, see [`conversation`](/help/collection/js/commands/configure/conversation.md) in the Web SDK documentation.
+
+## [!UICONTROL Region]
+
+A text field that routes Brand Concierge conversation requests to a specific data center instead of the nearest available one. Most organizations do not need to set this value. Only set it if conversation events do not arrive at the desired data center.
+
+This setting only affects conversation events; standard send event commands are unaffected. Some possible example values include `va7`, `or2`, or `irl1`.
 
 ## [!UICONTROL Sticky conversation session]
 
-A checkbox that persists Brand Concierge sessions across page loads using a session cookie. This option is disabled by default. See [`conversation`](/help/collection/js/commands/configure/conversation.md) in the JavaScript library documentation for guidance setting this value.
+A checkbox that persists Brand Concierge sessions across page loads using a session cookie. This option is disabled by default.
 
 ## [!UICONTROL Stream timeout (seconds)]
 

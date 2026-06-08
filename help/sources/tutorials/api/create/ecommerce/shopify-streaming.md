@@ -15,28 +15,85 @@ role_v2:
 
 >[!NOTE]
 >
->The [!DNL Shopify] streaming source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
+>The [!DNL Shopify Streaming] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-The following tutorial provides steps on how to create a streaming source connection and dataflow to stream data from [[!DNL Shopify]](https://www.shopify.com/) to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read this guide to learn how to stream data from the [[!DNL Shopify Streaming] source](../../../../connectors/ecommerce/shopify-streaming.md) to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started {#getting-started}
 
 This guide requires a working understanding of the following components of Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Experience Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Use Sources in Experience Platform to easily bring in data from a variety of systems, and organize and enrich it with tools that help meet your business needs.
+* [Sandboxes](../../../../../sandboxes/home.md): Sandboxes let you safely experiment, develop, and test digital experience solutions by providing separate, isolated environments within your Experience Platform instance.
 
 ### Using Experience Platform APIs
 
 For information on how to successfully make calls to Experience Platform APIs, see the guide on [getting started with Experience Platform APIs](../../../../../landing/api-guide.md).
 
+### Gather required credentials
+
+Read the [[!DNL Shopify Streaming] overview](../../../../connectors/ecommerce/shopify-streaming.md) for information on how to use HMAC keys and authenticate your account.
+
 ## Stream [!DNL Shopify] data to Experience Platform using the Flow Service API
 
 The following outlines the steps you need to make in order to create a source connection and a dataflow to stream your [!DNL Shopify] data to Experience Platform.
 
+### Create a base connection {#base-connection}
+
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Shopify Streaming] authentication credentials as part of the request parameters.
+
+**API format**
+
+```http
+POST /connections
+```
+
+**Request**
+
+The following request creates a base connection for [!DNL Shopify Streaming] using HMAC secret keys.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Shopify Streaming Base Connection",
+    "description": "Shopify Streaming Base Conn",
+    "auth": {
+      "specName": "HMACAuth",
+      "params": {
+        "primarySecretKey": "shopify_hmac_secret_current_2026_05"
+      }
+    },
+    "connectionSpec": {
+      "id": "e1d4cd44-ccad-11ed-afa1-0242ac120002",
+      "version": "1.0"
+    }
+  }'
+```
+
+| Parameter | Description |
+| --- | --- |
+| `primarySecretKey` | The current active [!DNL Shopify] webhook shared secret. If you are rotating your [!DNL Shopify] web hook secret, then you must include the `secondarySecretKey` as well. For more information on HMAC keys, read the [[!DNL Shopify Streaming] authentication guide](../../../../connectors/ecommerce/shopify-streaming.md#authentication). |
+
+**Response**
+
+A successful response returns the newly created connection, including its unique connection identifier (`id`). Use this ID to create a source connection in the next step.
+
+```json
+{  
+ "id": "302f44a9-e3fd-4386-bb62-213c648cd023", 
+ "etag": "\"8d004e1e-0000-0200-0000-6a00cf720000\""
+}
+```
+
 ### Create a source connection {#source-connection}
 
-Create a source connection by making a POST request to the [!DNL Flow Service] API, while providing the connection spec ID of your source, details like name and description, and the format of your data.
+To create a source connection, make a POST request to the [!DNL Flow Service] API. Be sure to provide the connection spec ID of your source, along with details such as the name, description, and data format.
 
 **API format**
 
@@ -46,7 +103,7 @@ POST /sourceConnections
 
 **Request**
 
-The following request creates a source connection for *YOURSOURCE*:
+The following request creates a source connection for [!DNL Shopify Streaming]:
 
 ```shell
 curl -X POST \
@@ -57,17 +114,18 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Shopify Streaming Source Connection",
-      "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
-      "description": "Shopify Streaming Source Connection",
-      "connectionSpec": {
-          "id": "e77fd9d2-22a8-11ed-861d-0242ac120002",
-          "version": "1.0"
-      },
-      "data": {
-          "format": "json"
-      }
-    }'
+    "name": "Shopify Streaming Source Connection",
+    "description": "Shopify Streaming Source Connection",
+    "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
+    "baseConnectionId": "302f44a9-e3fd-4386-bb62-213c648cd023",
+    "connectionSpec": {
+      "id": "e1d4cd44-ccad-11ed-afa1-0242ac120002",
+      "version": "1.0"
+    },
+    "data": {
+      "format": "json"
+    }
+  }'
 ```
 
 | Property | Description |
@@ -75,6 +133,7 @@ curl -X POST \
 | `name` | The name of your source connection. Ensure that the name of your source connection is descriptive, as you can use this to look up information on your source connection. |
 | `description` | An optional value that you can include to provide more information on your source connection. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
+| `baseConnectionId` | The connection ID that was generated in an earlier step when creating an account and authenticating with HMAC keys. |
 | `data.format` | The format of the [!DNL Shopify] data that you want to ingest. Currently, the only supported data format is `json`. |
 
 **Response**
@@ -92,7 +151,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../../xdm/api/schemas.md).
 
@@ -116,7 +175,7 @@ POST /targetConnections
 
 **Request**
 
-The following request creates a target connection for [!DNL Shopify]:
+The following request creates a target connection for [!DNL Shopify Streaming]:
 
 
 ```shell
@@ -170,7 +229,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 ### Create a mapping {#mapping}
 
-In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) with data mappings defined within the request payload.
+In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep) with data mappings defined within the request payload.
 
 **API format**
 
@@ -189,23 +248,23 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "version": 0,
-      "xdmSchema": "{TARGET_XDM_SCHEMA}",
-      "xdmVersion": "1.0",
-      "mappings": [
-          {
-              "destinationXdmPath": "person.name.firstName",
-              "sourceAttribute": "firstName",
-              "identity": false,
-              "version": 0
-          },
-          {
-              "destinationXdmPath": "person.name.lastName",
-              "sourceAttribute": "lastName",
-              "identity": false,
-              "version": 0
-          }
-      ]
+    "version": 0,
+    "xdmSchema": "{TARGET_XDM_SCHEMA}",
+    "xdmVersion": "1.0",
+    "mappings": [
+      {
+        "destinationXdmPath": "person.name.firstName",
+        "sourceAttribute": "firstName",
+        "identity": false,
+        "version": 0
+      },
+      {
+        "destinationXdmPath": "person.name.lastName",
+        "sourceAttribute": "lastName",
+        "identity": false,
+        "version": 0
+      }
+    ]
   }'
 ```
 

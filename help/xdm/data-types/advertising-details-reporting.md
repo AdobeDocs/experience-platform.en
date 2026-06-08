@@ -26,23 +26,27 @@ topic_v2:
 ![A diagram of the Advertising Details Reporting data type.](../images/data-types/advertising-details-information.png)
 +++
 
-| Display name                           | Property        | Data type | Description                                                                                   |
-|----------------------------------------|-----------------|-----------|-----------------------------------------------------------------------------------------------|
-| [!UICONTROL Ad Name]                   | `friendlyName`| string    | The human readable name of the ad. In reporting, "Ad Name" is the classification and "Ad Name (variable)" is the eVar. |
-| [!UICONTROL Ad ID]                      | `name`        | string    | The ID of the ad. Any integer and/or letter combination.                                           |
-| [!UICONTROL Ad Length Or Duration]      | `length`      | integer   | The length of video ad in seconds.                                                                 |
-| [!UICONTROL Ad In Pod Position (Ad Start)] | `podPosition` | integer   | The index of the ad inside the parent ad start, for example, the first ad has index 0 and the second ad has index 1. |
-| [!UICONTROL Ad Player Name]             | `playerName`  | string    | The name of the player responsible for rendering the ad.                                       |
-| [!UICONTROL Ad Advertiser]              | `advertiser`  | string    | The company or brand whose product is featured in the ad.                                             |
-| [!UICONTROL Ad Campaign]                | `campaignID`  | string    | The ID of the ad campaign.                                                                         |
-| [!UICONTROL Ad Creative ID]             | `creativeID`  | string    | The ID of the ad creative.                                                                         |
-| [!UICONTROL Ad Site ID]                 | `siteID`      | string    | The ID of the ad site.                                                                             |
-| [!UICONTROL Ad Creative URL]            | `creativeURL` | string    | The URL of the ad creative.                                                                       |
-| [!UICONTROL Ad Placement ID]            | `placementID` | string    | The placement ID of the ad.                                                                        |
-| [!UICONTROL Ad Completed]               | `isCompleted` | boolean   | Tracks whether the ad has completed.                                                                               |
-| [!UICONTROL Ad Started]                 | `isStarted`   | boolean   | Tracks whether the Ad has started.                                                                                 |
-| [!UICONTROL Ad Time Played]             | `timePlayed`  | integer   | The total amount of time, in seconds, spent watching the ad (that is, the number of seconds played). |
+>[!NOTE]
+>
+>This data type belongs to the `mediaReporting` schema — fields computed by the streaming media backend from `mediaCollection` data sent by your implementation. These are the fields that Adobe ingests into Platform datasets. See [Streaming media XDM reporting schema](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge/reporting-schema) for details.
 
-{style="table-layout:auto"}
+Each display name contains a link to further information on its reporting dimension or metric. The linked pages contain details on how Adobe computes and reports this data, including breakdowns by reporting system.
 
-For more details on the field group, refer to the [public XDM repository](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json)
+| Display name | Property | Data type | Description |
+|---|---|---|---|
+| [[!UICONTROL Ad Name]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/ad-name) | `friendlyName` | string | The human readable name of the ad. |
+| [[!UICONTROL Ad ID]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/ad) | `name` | string | The ID of the ad. Any integer and/or letter combination. |
+| [[!UICONTROL Ad Length Or Duration]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/ad-length) | `length` | integer | The length of the ad in seconds. |
+| [[!UICONTROL Ad In Pod Position (Ad Start)]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/ad-in-pod-position) | `podPosition` | integer | The index of the ad inside the parent ad break start, for example, the first ad has index 0 and the second ad has index 1. |
+| [[!UICONTROL Ad Player Name]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/ad-player-name) | `playerName` | string | The name of the player responsible for rendering the ad. |
+| [[!UICONTROL Ad Advertiser]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/advertiser) | `advertiser` | string | The company or brand whose product is featured in the ad. |
+| [[!UICONTROL Ad Campaign]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/campaign-id) | `campaignID` | string | The ID of the ad campaign. |
+| [[!UICONTROL Ad Creative ID]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/creative-id) | `creativeID` | string | The ID of the ad creative. |
+| [[!UICONTROL Ad Site ID]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/site-id) | `siteID` | string | The ID of the ad site. |
+| [[!UICONTROL Ad Creative URL]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/creative-url) | `creativeURL` | string | The URL of the ad creative. |
+| [[!UICONTROL Ad Placement ID]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/dimensions/placement-id) | `placementID` | string | The placement ID of the ad. |
+| [[!UICONTROL Ad Completed]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/metrics/ad-completes) | `isCompleted` | boolean | Tracks whether the ad has completed. |
+| [[!UICONTROL Ad Started]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/metrics/ad-starts) | `isStarted` | boolean | Tracks whether the ad has started. |
+| [[!UICONTROL Ad Time Played]](https://experienceleague.adobe.com/en/docs/media-analytics/using/reporting/metrics/ad-time-spent) | `timePlayed` | integer | The total amount of time, in seconds, spent watching the ad (that is, the number of seconds played). |
+
+See [advertisingdetails.schema.json](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) in the public XDM repository for the full schema definition.
