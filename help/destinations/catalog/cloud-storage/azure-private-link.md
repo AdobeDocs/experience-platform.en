@@ -5,7 +5,7 @@ description: Learn how to route data exports from [!DNL Experience Platform] to 
 
 # Private Link for [!DNL Azure] destinations
 
-[!DNL Azure] Private Link lets you route data exports from [!DNL Adobe Experience Platform] to your [!DNL Azure] resources over private IP addresses on the [!DNL Microsoft Azure] backbone, instead of over the public internet. Your activation data never traverses public infrastructure.
+[!DNL Azure] [Private Link](https://azure.microsoft.com/en-us/products/private-link) lets you route data exports from [!DNL Adobe Experience Platform] to your [!DNL Azure] resources over private IP addresses on the [!DNL Microsoft Azure] backbone, instead of over the public internet. Your activation data never traverses public infrastructure.
 
 [!DNL Adobe] creates and manages a Private Endpoint in an Adobe-owned virtual network (VNet) that points to your [!DNL Azure] resource. When [!DNL Azure] brokers the connection request, you approve it from your [!DNL Azure] portal. After approval, all activation traffic for that resource routes through the private endpoint.
 
@@ -23,7 +23,10 @@ description: Learn how to route data exports from [!DNL Experience Platform] to 
 
 ## Prerequisites {#prerequisites}
 
-[!DNL Azure] Private Link for destinations requires an [Adobe Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) or Adobe Privacy & Security Shield entitlement.
+[!DNL Azure] Private Link for destinations requires one of the following entitlements:
+
+* [Adobe Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html)
+* Adobe Privacy & Security Shield
 
 ## How [!DNL Azure] Private Link works {#how-it-works}
 
@@ -82,9 +85,8 @@ Follow these recommendations to get the most out of [!DNL Azure] Private Link fo
 
 Be aware of the following constraints before requesting [!DNL Azure] Private Link setup.
 
-* Private Link is available for [!DNL Azure] destinations only. [!DNL AWS] and [!DNL GCP] destinations are not supported.
+* Private Link is available for [!DNL Azure] destinations only. [!DNL AWS] and [!DNL GCP] destinations are not supported yet.
 * Configuration requires [!DNL Adobe] engineering involvement. Self-service provisioning is not currently available.
-* Private Link requires an [!DNL Adobe Healthcare Shield] or [!DNL Adobe Privacy & Security Shield] entitlement.
 
 ## [!DNL Azure] resource deletion {#resource-deletion}
 
