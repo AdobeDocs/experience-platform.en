@@ -76,14 +76,7 @@ For more information, read the [advanced data lifecycle management overview](../
 | [[!DNL Snowflake]](../destinations/catalog/warehouses/snowflake.md) and [[!DNL Snowflake Batch]](../destinations/catalog/warehouses/snowflake-batch.md) Private Link support | A new Private Link toggle is now available when configuring [!DNL Snowflake] streaming and batch destination connections. Enable this toggle only if your [!DNL Snowflake] account is configured for private link-only inbound access. Leaving the toggle off for private link-only accounts causes data sharing to fail. |
 | Azure Private Link for Azure destinations | Route data exports to [[!DNL Azure Blob Storage]](../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL Azure Data Lake Storage Gen2]](../destinations/catalog/cloud-storage/adls-gen2.md), and [[!DNL Azure Event Hubs]](../destinations/catalog/cloud-storage/azure-event-hubs.md) over private IP addresses on the [!DNL Microsoft Azure] backbone instead of the public internet. This feature is available to customers with Healthcare Shield or Privacy and Security Shield entitlements. Contact your Adobe representative to request setup. |
 | [!BADGE Beta]{type=Informative} [Export arrays as enrichment attributes](../destinations/ui/activate-batch-profile-destinations.md#select-enrichment-attributes) | Use `transformArray` expressions to export a single array field or multiple fields from an array in one mapping row as enrichment attributes. Applies to JSON and Parquet cloud storage destinations with hierarchical output enabled. Contact your Adobe representative to request access. |
-
-{style="table-layout:auto"}
-
-**Fixes and improvements**
-
-| Fix | Description |
-| --- | --- |
-| [[!DNL Facebook]](../destinations/catalog/social/facebook.md) restricted audience enforcement | Updated documentation to clarify that [!DNL Facebook] blocks audiences containing restricted or sensitive data (such as health or financial information) under its Terms of Service. Experience Platform customers are subject to these restrictions starting June 4, 2026. See the [restricted audience data](../destinations/catalog/social/facebook.md#restricted-audiences) section for troubleshooting steps. |
+| [[!DNL Facebook]](../destinations/catalog/social/facebook.md) restricted audience enforcement | Starting June 4, 2026, [!DNL Facebook] blocks audiences containing restricted or sensitive data (such as health or financial information) under its Terms of Service. See the [restricted audience data](../destinations/catalog/social/facebook.md#restricted-audiences) section for troubleshooting steps. |
 
 {style="table-layout:auto"}
 
