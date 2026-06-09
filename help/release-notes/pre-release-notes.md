@@ -83,6 +83,7 @@ For more information, read the [advanced data lifecycle management overview](../
 | Fix | Description |
 | --- | --- |
 | [[!DNL Shopify] Streaming](../sources/connectors/ecommerce/shopify-streaming.md) HMAC authentication | Updated documentation for HMAC-based authentication in the [!DNL Shopify Streaming] connector, including key rotation behavior. |
+| [Export arrays as enrichment attributes](../destinations/ui/activate-batch-profile-destinations.md#select-enrichment-attributes) | Updated documentation for the beta array export feature for enrichment attributes. Use `transformArray` expressions to export a single array field or multiple fields from an array in one mapping row. Applies to JSON and Parquet cloud storage destinations with hierarchical output enabled. Contact your Adobe representative to request access. |
 | [[!DNL Facebook]](../destinations/catalog/social/facebook.md) restricted audience enforcement | Updated documentation to clarify that [!DNL Facebook] blocks audiences containing restricted or sensitive data (such as health or financial information) under its Terms of Service. Experience Platform customers are subject to these restrictions starting June 4, 2026. See the [restricted audience data](../destinations/catalog/social/facebook.md#restricted-audiences) section for troubleshooting steps. |
 
 {style="table-layout:auto"}
