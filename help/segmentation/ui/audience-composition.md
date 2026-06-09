@@ -389,13 +389,19 @@ When splitting your audience, you can either split by percentage or split by att
 >title="Persistent split"
 >abstract="You can make the percentage split persistent by enabling this option and selecting an identity namespace."
 
-When splitting by percentage, the audiences will be randomly split, based on the number of paths and percentages provided.
+When splitting by percentage, you can set the **[!UICONTROL Profile distribution]** to either be **[!UICONTROL Random split]** or **[!UICONTROL Persistent split]**.
 
-![The percent split is highlighted.](../images/ui/audience-composition/split-by-percentage.png)
+![The Profile distribution section is highlighted, showing you can choose between Random or Persistent splits.](/help/segmentation/images/ui/audience-composition/profile-distribution.png)
 
-Alternatively, you can also provide an identity, which would make the percentage-based split persistent. Available identity types include all the identity namespace available on your organization.
+If you select **[!UICONTROL Random split]**, the audiences will be randomly split, based on the number of paths and percentages provided.
 
-![The Split by identity checkbox is highlighted. Additionally, the dropdown that lets you select with identity to split by is highlighted.](../images/ui/audience-composition/split-by-identity.png)
+![The random split section and options are  highlighted.](../images/ui/audience-composition/random-split.png)
+
+If you select **[!UICONTROL Persistent split]**, the audiences will stay in the same bucket. For example, you can use persistent split when you want to have a control group that remains constant. 
+
+When you select persistent split, you need to provide an identity. Available identity types include all the identity namespace available on your organization.
+
+![The Persistent split section and options are highlighted.](/help/segmentation/images/ui/audience-composition/persistent-split.png)
 
 ### Split by attribute {#split-attribute}
 
@@ -436,7 +442,7 @@ If there are any errors in creating the audience, an alert appears, letting you 
 
 ### Faster activation {#faster-activation}
 
-Faster activation lets you activate your audience to a downstream destination immediately after the composition has evaluated. If you set your destination to activate after segment evaluation, you do **no longer** need to wait for 24 hours for the evaluation job to finish.
+Faster activation lets you activate your audience to a downstream destination immediately after the composition has evaluated. If you set your destination to activate after segment evaluation, you **no longer** need to wait for 24 hours after the evaluation job has run.
 
 To learn how to manage your destination, read the [activate audiences to batch profile destinations guide](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files).
 

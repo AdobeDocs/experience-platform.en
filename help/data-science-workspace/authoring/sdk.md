@@ -410,7 +410,7 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-The DatasetTransformer class modifies and transforms the structure of a dataset. The [!DNL Sensei Machine Learning Runtime] does not require this component to be defined, and is implemented based on your requirements. 
+The DatasetTransformer class modifies and transforms the structure of a dataset. The Adobe AI Machine Learning Runtime does not require this component to be defined, and is implemented based on your requirements. 
 
 In regards to a feature pipeline, dataset transformers can be used cooporatively with a feature pipeline factory to prepare data for feature engineering.
 
