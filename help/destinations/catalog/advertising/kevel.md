@@ -173,18 +173,17 @@ When a profile qualifies for or exits an audience, Experience Platform sends a s
 ### Sample payload received by [!DNL Kevel] UserDB
 
 ```json
-PUT /udb/{networkId}/segments?userKey=ECID-12345
+PUT /udb/{networkId}/segments?userKey=ECID-12345&group=42
 {
-  "segments": [1723, 3344, 9988],
-  "group": 42
+  "segments": [1723, 3344, 9988]
 }
 ```
 
 | Parameter | Description |
 |-----------|-------------|
 | **userKey** | Derived from the mapped Adobe identity. |
+| **group** | *(Optional)* Sent as a query parameter. The user's incrementality testing group (1-100). Only included if a profile attribute is mapped to the `kevelGroup` target field. |
 | **segments** | The set of [!DNL Kevel] segment IDs corresponding to the Adobe audiences for which the profile is currently realized. |
-| **group** | *(Optional)* The user's incrementality testing group (1-100). Only included if a profile attribute is mapped to the `kevelGroup` target field. |
 
 {style="table-layout:auto"}
 
