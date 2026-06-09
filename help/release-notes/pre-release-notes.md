@@ -24,7 +24,6 @@ exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
 New features and updates to existing features in Adobe Experience Platform:
 
 - [Agent Orchestrator](#agent-orchestrator)
-- [Advanced data lifecycle management](#advanced-data-lifecycle-management)
 - [Destinations](#destinations)
 - [Query Service](#query-service)
 - [Run and Operate](#run-and-operate)
@@ -46,20 +45,6 @@ Use Agent Orchestrator to build and deploy AI-powered agents that automate workf
 {style="table-layout:auto"}
 
 For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
-
-## Advanced data lifecycle management {#advanced-data-lifecycle-management}
-
-Experience Platform provides a suite of data hygiene capabilities that let you manage your stored data through programmatic deletions of consumer records and datasets.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| [Multi-dataset and targeted services for work orders](../hygiene/api/jobs.md) | Two new API-only capabilities are now available for data lifecycle work orders. Use targeted services to scope deletion to specific services (profile, identity, or [!DNL Adobe Journey Optimizer]) without touching data in the lake. Use multi-dataset support to target one, many, or all datasets in a single work order submission. |
-
-{style="table-layout:auto"}
-
-For more information, read the [advanced data lifecycle management overview](../hygiene/home.md).
 
 ## Destinations {#destinations}
 
@@ -100,7 +85,7 @@ Experience Data Model (XDM) is an open-source specification that provides common
 
 | Feature | Description |
 | --- | --- |
-| [Schema inventory enhancements](../xdm/ui/resources/schemas.md) | The schema browse page now includes updated columns (name, class, datasets, identities, relationships, profile enablement, behavior, schema type, tags, creation date, and last modified date). New filters let you narrow results by profile enablement, schema type, class, tags, creator, creation date, modification date, primary identity, and relationship status. Use inline actions to edit, delete, apply labels, create datasets, manage tags, organize by folders, and more. |
+| [Schema inventory enhancements](../xdm/ui/resources/schemas.md) | The schema browse page now includes additional schema metadata, enhanced filtering options, user-defined tags and folders, and inline actions for common schema management tasks. These updates help you find, organize, and manage schemas more efficiently from a single location. |
 
 {style="table-layout:auto"}
 
@@ -114,8 +99,7 @@ Use Query Service to query data in Adobe Experience Platform using standard SQL.
 
 | Feature | Description |
 | --- | --- |
-| [Scheduled queries with no end date](../query-service/api/scheduled-queries.md) | Create scheduled queries that run indefinitely without specifying an end date. Use this for continuous recurring workflows. The UI may display indefinite schedules using a far-future date such as 31.12.9999. |
-| [Long-term personalization with Data Distiller Accelerators](../query-service/home.md) | Use Data Distiller Accelerators to support long-term personalization use cases with lookback windows of 6, 12, 18, or 24 months. Build derived signals, scores, tiers, and audience memberships from historical data in the lake without storing excessive event history in the Profile Store. |
+| Long-Term Personalization with Data Distiller Accelerators | New guidance explains how to use Data Distiller Accelerators and historical data stored in the Data Lake to generate activation-ready insights for personalization and audience activation. This approach helps you support extended lookback windows while optimizing Profile Store usage and Total Data Volume consumption. |
 
 {style="table-layout:auto"}
 
@@ -169,3 +153,23 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 {style="table-layout:auto"}
 
 For more information, read the [sources overview](../sources/home.md).
+
+<!--
+
+| [Scheduled queries with no end date](../query-service/api/scheduled-queries.md) | Create scheduled queries that run indefinitely without specifying an end date. Use this for continuous recurring workflows. The UI may display indefinite schedules using a far-future date such as 31.12.9999. |
+
+## Advanced data lifecycle management {#advanced-data-lifecycle-management}
+
+Experience Platform provides a suite of data hygiene capabilities that let you manage your stored data through programmatic deletions of consumer records and datasets.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| [Multi-dataset and targeted services for work orders](../hygiene/api/jobs.md) | Two new API-only capabilities are now available for data lifecycle work orders. Use targeted services to scope deletion to specific services (profile, identity, or [!DNL Adobe Journey Optimizer]) without touching data in the lake. Use multi-dataset support to target one, many, or all datasets in a single work order submission. |
+
+{style="table-layout:auto"}
+
+For more information, read the [advanced data lifecycle management overview](../hygiene/home.md).
+
+-->
