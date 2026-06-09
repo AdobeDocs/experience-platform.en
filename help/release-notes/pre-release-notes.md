@@ -85,6 +85,7 @@ For more information, read the [advanced data lifecycle management overview](../
 | Fix | Description |
 | --- | --- |
 | [[!DNL Reddit Custom Audience]](../destinations/catalog/advertising/reddit-custom-audience.md) activation fix | Fixed an issue where customers could not activate data more than 24 hours after authentication. |
+| [External audiences activation guardrail update](../destinations/guardrails.md#batch-file-based-activation) | The maximum number of external audiences (such as custom upload, Federated Audience Composition, and Audience Composition) that can be activated per destination instance has been updated to 100. |
 
 {style="table-layout:auto"}
 
