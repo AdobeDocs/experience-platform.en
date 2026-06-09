@@ -113,7 +113,7 @@ For more information, read the [Query Service overview](../query-service/home.md
 
 | Feature | Description |
 | --- | --- |
-| [Anti-pattern detection in Job Schedules](../run-and-operate/job-schedules-anti-patterns.md) | Three anti-patterns are now automatically detected in the Job Schedules view: exceeding 90 profile ingestion runs per day, profile ingestion scheduled too close to segmentation, and segmentation scheduled too close to destination activation. An alert option is available for the ingestion guardrail. The last-7-days lookback now includes a calendar view for date selection. |
+| [Anti-pattern detection in Job Schedules](../run-and-operate/job-schedules-anti-patterns.md) | Three anti-patterns are now automatically detected in the Job Schedules view: exceeding 90 profile ingestion runs per day, profile ingestion scheduled too close to segmentation, and segmentation scheduled too close to destination activation. The last-7-days lookback now includes a calendar view for date selection. This feature is being rolled out throughout the end of June 2026. |
 | [Health checks for P-TTL and e-TTL](../run-and-operate/health-checks.md) | Two new health checks are now available: Pseudonymous Profile TTL scans whether the expiration policy is active for your sandbox and lists relevant unauthenticated namespaces. Experience Event Datasets TTL scans lake and profile event datasets to identify where automatic data expiration is not configured. |
 
 {style="table-layout:auto"}
