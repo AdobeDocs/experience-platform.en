@@ -41,8 +41,7 @@ Use Agent Orchestrator to build and deploy AI-powered agents that automate workf
 | Feature | Description |
 | --- | --- |
 | Notifications Agent | Use the Notifications Agent to surface alerts, system events, and audience or journey updates through conversational prompts. The agent delivers contextual notification summaries so you can act on critical events without navigating multiple dashboards. |
-| [!BADGE Beta]{type=Informative} Adobe Marketing Agent for AI Platforms | Use the Adobe Marketing Agent to bring [!DNL Experience Platform] operational insights, audience data, journey information, and asset discovery into third-party AI platforms including [!DNL ChatGPT], [!DNL Claude], [!DNL Gemini], [!DNL Amazon Q], [!DNL Databricks Genie], and [!DNL IBM Watson X]. Contact your Adobe representative to request access. |
-| [Data Collection Agent skills](../collection/home.md) | Two new skill sets are now available in the Data Engineering Agent. Use Product Knowledge skills to get in-context guidance for data collection configurations and concepts. Use Operational Insights skills to visualize lineage, dependencies, and relationships across data collection objects through conversational prompts. |
+| [!BADGE Beta]{type=Informative} Adobe Marketing Agent for AI Platforms | Use the Adobe Marketing Agent to bring Experience Platform operational insights, audience data, journey information, and asset discovery into third-party AI platforms including [!DNL ChatGPT], [!DNL Claude], [!DNL Gemini], [!DNL Amazon Q], [!DNL Databricks Genie], and [!DNL IBM Watsonx]. Contact your Adobe representative to request access. |
 
 {style="table-layout:auto"}
 
@@ -93,6 +92,20 @@ For more information, read the [advanced data lifecycle management overview](../
 
 For more information, read the [Destinations overview](../destinations/home.md).
 
+## Experience Data Model (XDM) {#xdm}
+
+Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Experience Platform.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| [Schema inventory enhancements](../xdm/ui/resources/schemas.md) | The schema browse page now includes updated columns (name, class, datasets, identities, relationships, profile enablement, behavior, schema type, tags, creation date, and last modified date). New filters let you narrow results by profile enablement, schema type, class, tags, creator, creation date, modification date, primary identity, and relationship status. Use inline actions to edit, delete, apply labels, create datasets, manage tags, organize by folders, and more. |
+
+{style="table-layout:auto"}
+
+For more information, read the [XDM overview](../xdm/home.md).
+
 ## Query Service {#query-service}
 
 Use Query Service to query data in Adobe Experience Platform using standard SQL.
@@ -128,7 +141,6 @@ Use Segmentation Service to create audiences from your customer data and manage 
 | Feature | Description |
 | --- | --- |
 | [Persistent vs. Random split in Audience Composition](../segmentation/ui/audience-composition.md) | Use the new split mode selector in Audience Composition to choose between Persistent and Random percentage splits. Persistent split keeps the same profile in the same bucket across evaluations. Random split may place a profile in a different bucket across evaluations. When using Persistent split, select an identity namespace with low variance to ensure reliable audience membership. |
-| [Audience Hybrid Builder](../segmentation/ui/segment-builder.md) | Use the updated Hybrid Audience Builder experience for an enhanced audience building workflow in [!DNL Real-Time CDP]. The updated interface provides improved usage patterns for combining rule-based and uploaded audiences. |
 
 {style="table-layout:auto"}
 
@@ -142,9 +154,8 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| [[!DNL Meta Ads]](../sources/home.md) (Beta) | Use the [!DNL Meta Ads] source to configure the complete [!DNL Meta Ads] ingestion workflow in the Sources UI. Connect your [!DNL Meta Ads] account and bring paid media data directly into Experience Platform for activation and analysis. This source is available to a limited number of customers. Contact your Adobe representative to request access. |
-| [[!DNL Deltashare]](../sources/connectors/data-sharing/deltashare.md) | Use the [!DNL Deltashare] source to bring live, shared datasets from partners or internal lakehouse environments into Experience Platform without copying or manually uploading files. Connect to a [!DNL Deltashare] endpoint, choose the tables you need, and use that governed data alongside your existing profiles and insights. |
-| [Streaming SDK](../sources/home.md) now generally available | The Streaming SDK is now generally available. Authentication is now mandatory for all self-built streaming source connectors. Implement either OAuth or HMAC-based authentication when building connectors with the Streaming SDK. |
+| [!BADGE Beta]{type=Informative} [!DNL Meta Ads] | Use the [!DNL Meta Ads] source to configure the complete [!DNL Meta Ads] ingestion workflow in the Sources UI. Connect your [!DNL Meta Ads] account and bring paid media data directly into Experience Platform for activation and analysis. This source is available to a limited number of customers. Contact your Adobe representative to request access. |
+| [!BADGE Beta]{type=Informative} [!DNL Delta Sharing] | Use the [!DNL Delta Sharing] source to bring live, shared datasets from partners or internal lakehouse environments into Experience Platform without copying or manually uploading files. Connect to a [!DNL Delta Sharing] endpoint, choose the tables you need, and use that governed data alongside your existing profiles and insights. |
 
 {style="table-layout:auto"}
 
@@ -152,23 +163,9 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| [[!DNL Shopify Streaming]](../sources/connectors/ecommerce/shopify-streaming.md) HMAC authentication | HMAC-based authentication is now supported in the [!DNL Shopify Streaming] connector, available in both the UI and API. See the documentation for key rotation behavior and setup instructions. |
+| [[!DNL Shopify Streaming]](../sources/connectors/ecommerce/shopify-streaming.md) HMAC authentication | HMAC-based authentication is now supported in the [!DNL Shopify Streaming] connector, available in both the UI and API. See the [[!DNL Shopify Streaming] overview](../sources/connectors/ecommerce/shopify-streaming.md) for key rotation behavior and setup instructions. |
 | [Automatic dataflow disabling](../sources/home.md) | Sources dataflows that fail continuously for 30 days are automatically disabled. When a dataflow is disabled, review the failure reason in Monitoring, apply the necessary updates, and re-enable the dataflow. Common failure reasons include credentials, permissions, or schema and mapping configuration changes. |
 
 {style="table-layout:auto"}
 
 For more information, read the [sources overview](../sources/home.md).
-
-## Experience Data Model (XDM) {#xdm}
-
-XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Experience Platform.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| [Schema inventory enhancements](../xdm/ui/resources/schemas.md) | The schema browse page now includes updated columns (name, class, datasets, identities, relationships, profile enablement, behavior, schema type, tags, creation date, and last modified date). New filters let you narrow results by profile enablement, schema type, class, tags, creator, creation date, modification date, primary identity, and relationship status. Use inline actions to edit, delete, apply labels, create datasets, manage tags, organize by folders, and more. |
-
-{style="table-layout:auto"}
-
-For more information, read the [XDM overview](../xdm/home.md).
