@@ -80,6 +80,14 @@ For more information, read the [advanced data lifecycle management overview](../
 
 {style="table-layout:auto"}
 
+**Fixes and improvements**
+
+| Fix | Description |
+| --- | --- |
+| [[!DNL Reddit Custom Audience]](../destinations/catalog/advertising/reddit-custom-audience.md) activation fix | Fixed an issue where customers could not activate data more than 24 hours after authentication. |
+
+{style="table-layout:auto"}
+
 For more information, read the [Destinations overview](../destinations/home.md).
 
 ## Query Service {#query-service}
