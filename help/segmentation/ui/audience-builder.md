@@ -119,7 +119,7 @@ You can select **[!UICONTROL Add field]** to add an attribute or audience to the
 
 IMAGE
 
-If you select **[!UICONTROL Add field]**, the Discovery Panel appears. This panel lets you search for the field you want to add. 
+If you select **[!UICONTROL Add field]**, the Discovery Panel appears. This panel lets you search for the field you want to add. Type in the name of the field you're looking for and press enter.
 
 IMAGE
 
@@ -139,7 +139,7 @@ You can select ![the filter icon]() to adjust the settings for the displayed fie
 
 For the **[!UICONTROL Field settings]**, you can either show only the fields that contain data or the full XDM schema.
 
-For the **[!UICONTROL Field types]**, you can show **[!UICONTROL Attributes]**, **[!UICONTROL Audiences]**, or **[!UICONTROL Saved conditions]**.
+For the **[!UICONTROL Field types]**, you can show **[!UICONTROL Attributes]** or **[!UICONTROL Audiences]**.
 
 IMAGE
 
@@ -147,7 +147,7 @@ Alternatively, you can view all the available fields for your audience by select
 
 IMAGE
 
-In the **[!UICONTROL Browse fields]** area, you can select between **[!UICONTROL Attributes]**, **[!UICONTROL Audiences]**, or **[!UICONTROL Saved conditions]**.
+In the **[!UICONTROL Browse fields]** area, you can select between **[!UICONTROL Attributes]** or **[!UICONTROL Audiences]**.
 
 IMAGE
 
@@ -181,15 +181,117 @@ After selecting the audience, details of the audience appear. This includes the 
 
 >[!ENDTABS]
 
+After adding your attribute, you can 
+
 ### Events {#events}
 
-The **Events** section lets you add ExperienceEvents to your audience's rules. Select **Add event** to choose from a list of ExperienceEvents that you can add to your audience.
+The **Events** section lets you add ExperienceEvents to your audience's rules. 
+
+Select **Add event** to choose from a list of ExperienceEvents that you can add to your audience.
 
 IMAGE
 
+After adding an event to your canvas, you can add additional events to the timeline. These events can be added before, after, above, or below the already selected event.
 
+IMAGE
+
+If you add an event **before**, the event must take place **before** the initial event. If you add an event **after**, the event must take place **after** the initial event.
+
+You can add a time constraint at a canvas-level or event-level. Time constraints let you set specified temporal limitations for your events. For more information, read the [time constraints](#time-constraints) section.
+
+IMAGE
+
+You can also set a 
 
 ### Groups {#groups}
+
+### Time constraints {#time-constraints}
+
+Time constraints let you apply time restrictions on time-based attributes, events, and the sequence between the events.
+
+The list of available time constraints are as follows:
+
++++ Available time constraints
+
+>[!NOTE]
+>
+>All time constraints are based off of UTC.
+>
+>Additionally, if the [!UICONTROL Ignore year] checkbox is enabled, the year will **not** be compared as part of the segment definition evaluation.
+
+| Time constraint | Description | Can enable ignore year | Example |
+| --------------- | ----------- | ------------------- | ------- |
+| Today | The attribute or event being compared **must** occur today. This is the default time constraint selected. | Yes | ![An example of the "Today" time constraint being used.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Yesterday | The attribute or event being compared **must** occur yesterday. | Yes | ![An example of the "Yesterday" time constraint being used.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
+| This month | The attribute or event being compared **must** occur this calendar month. | Yes | ![An example of the "This month" time constraint being used.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
+| This year | The attribute or event being compared **must** occur this calendar year. | No | ![An example of the "This year" time constraint being used.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
+| Custom date | The attribute or event being compared **must** occur on the date given. | Yes | ![An example of the "Custom date" time constraint being used.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
+| In last | The attribute or event being compared **must** occur within the last period of time chosen. This period of time is **inclusive** until the evaluation time. | No | ![An example of the "In last" time constraint being used.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
+| From (to) | The attribute or event being compared **must** occur within the two calendar dates chosen. This period of time is **inclusive** of both dates. | Yes, if custom date | ![An example of the "From to" being used.](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
+| During | The attribute or event being compared **must** occur within the selected month or year. If a month is selected, you need to choose both the month and a year that the attribute or event took place in.  If a year is selected, you need to just choose the year that the attribute or event took place in. If you select a month, you can also enable the [!UICONTROL Ignore year] checkbox. | Yes | ![An example of the "During" time constraint being used.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| Within (+/-) | The attribute or event being compared **must** occur within days, weeks, months, or years of the selected date. This period of time is **inclusive** of both dates. The selected date can be today, yesterday, or another custom date of your choosing. | Yes | ![An example of the "Within" time constraint being used.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
+| Before | The attribute or event being compared **must** occur before the selected date. The selected date can be a custom date of your choosing, or a selection between days, weeks, months, or years ago. | Yes | ![An example of the "Before" time constraint being used.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
+| After | The attribute or event being compared **must** occur after the selected date. The selected date can be a custom date of your choosing, or a selection between days, weeks, months, or years ago. | Yes | ![An example of the "After" time constraint being used.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| Rolling range | The attribute or event being compared must occur between the two relative dates. The dates can be represented in seconds, minutes, hours, days, weeks, months, or years. | No | ![An example of the "Rolling range" time constraint being used.](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
+| In next | The attribute or event being compared must occur within the next period of time selected. The selected periods of time include minutes, hours, days, weeks, months, and years. | No | ![An example of the "In next" time constraint being used.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
+| Exists | The attribute exists. | No | ![An example of the "Exists" time constraint being used.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| Does not exist | The attribute does not exist. | No | ![An example of the "Does not exist" time constraint being used.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+| Now | The attribute or event being compared **must** occur right when the audience is evaluated. This time constraint can only be used as a secondary-level option, within time constraints such as "Before" or "After". | Yes | ![An example of the "Now" time constraint being used.](../images/ui/segment-builder/time-constraints/now.png){width="100" zoomable="yes"} |
+
+>[!TIP]
+>
+>The difference between the "Today" time constraint and "Now" time constraint is subtle, but significant. 
+>
+>- Use the "Today" time constraint to check if the attribute or event being compared is happening at **midnight** of the current day. 
+>- Use the "Now" time constraint to check if the attribute or event being compared is happening **right now**.
+>
+>However, there's one major exception - if you're using "Today" as a top-level time constraint, that means you're checking if the attribute or event occurred at **any** point today.
+
++++
+
+#### Canvas-level constraint
+
+You can add a canvas-level constraint by selecting the clock icon that appears above the timeline of events.
+
+IMAGE
+
+When you apply a time constraint on the canvas-level, this applies the time constraint to **all** events in the audience.
+
+#### Event-level constraint
+
+To apply an event-level constraint, select the event you want to apply the time constraint on, followed by the ellipses icon, and **[!UICONTROL Apply time rule]**. This lets you select a time constraint within the **[!UICONTROL Event Rules]** container.
+
+IMAGE
+
+When you apply a time constraint on the event-level, this applies the time constraint on the **specified** event in the audience.
+
+#### Between events constraint
+
+To apply a time constraint between events, select the clock icon between the two events you want to apply the time constraint on.
+
+IMAGE
+
+When you apply a time constraint between the event, this applies the time constraint to the time **between** the events. 
+
+The list of available time constraints for this operation differs from the main list of time constraints, and are as follows:
+
++++ Available time constraints
+
+| Time constraint | Description |
+| --------------- | ----------- |
+| After | The latter event **must at least** take place after the prior event. |
+| Within | The two events **must** take place during the time period listed within the time constraint. |
+
+>[!NOTE]
+>
+>When using the "After" time constraint, the latter event can take place more than the amount of time listed within the time constraint. >
+>For example, if you have a Page View event and a Checkout event, and you put the "After 1 hour" time constraint between these two events, a segment definition with a Checkout event 2 hours after the Page View event would qualify.
+>
+>Additionally, these two time constraints can be used in coordination with each other.
+>
+>For example, if you have a Page View event and a Checkout event, and you put both the "After 1 hour" and "Within 24 hours" time constraints, a segment definition with a Checkout event 12 hours after the Page View event would qualify, but a segment definition with a Checkout event 36 hours after the Page View event would not qualify.
+
++++
 
 ## Profile view {#profile-view}
 
