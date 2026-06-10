@@ -562,7 +562,6 @@ Due to a known limitation, you cannot currently use the **[!UICONTROL Select fie
 
 ![Screen recording showing the audience membership workaround in the mapping step of the activation workflow.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
-
 >[!NOTE]
 >
 >For cloud storage destinations, the following attributes are added to the mapping by default:
