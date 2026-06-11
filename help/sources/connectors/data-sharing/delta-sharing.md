@@ -1,11 +1,16 @@
 ---
 title: Delta Sharing
 description: Learn how to use the Delta Sharing source on Adobe Experience Platform.
+badge: Beta
 exl-id: 69c4e250-aa9b-4db1-b44b-6056bdddb637
 ---
-# [!DNL Deltashare]
+# [!DNL Delta Sharing]
 
-You can use the [!DNL Deltashare] source connector to establish a secure connectivity to [!DNL Databricks Delta Sharing] servers and create virtual datasets in Adobe Experience Platform. With this feature, you can query virtual datasets, inspect and map external tables to Experience Data Model (XDM) schemas and leverage them across Experience Platform applications and services. Through [!DNL Deltashare], you can eschew physical ingestion of datasets, thereby reducing duplication, storage costs, and operational overhead.
+>[!AVAILABILITY]
+>
+>This feature is currently in a closed beta and is not available to all users. Contact your Adobe account team to request access to the beta.
+
+With the [!DNL Delta Sharing] source connector, you can securely connect to your [!DNL Databricks Delta Sharing] servers and easily create virtual datasets right inside Adobe Experience Platform. This means you can query and use external tables as if they were native to Platform, mapping them directly to Experience Data Model (XDM) schemas for use across all your Platform applications and services—without the need to physically ingest the data. By relying on [!DNL Delta Sharing], you avoid duplicate data storage, cut down on storage costs, and simplify your data management.
 
 ## Prerequisites {#prerequisites}
 
