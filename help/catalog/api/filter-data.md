@@ -4,6 +4,19 @@ solution: Experience Platform
 title: Filter Catalog Data Using Query Parameters
 description: Use query parameters to filter response data in the Catalog Service API and retrieve only the information you need. Apply filters to your API calls to reduce load and improves performance, ensuring faster and more efficient data retrieval.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
+TQID: https://experienceleague.adobe.com/5HYETHCp7k3J64Q4-bn6dleWrCUMmHiTg72v1-Uyjr8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Filter [!DNL Catalog] data using query parameters
 

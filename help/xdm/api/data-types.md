@@ -4,6 +4,19 @@ solution: Experience Platform
 title: Data Types API Endpoint
 description: The /datatypes endpoint in the Schema Registry API allows you to programmatically manage XDM data types within your experience application.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
+TQID: https://experienceleague.adobe.com/oMgDIVX-9jw9HAmXCFGke0cRnoCwpR91zFcuMkInl-A
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Data types endpoint
 

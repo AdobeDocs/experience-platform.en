@@ -2,6 +2,13 @@
 title: Quote Request Details Schema Field Group
 description: Learn about the Quote Request Details schema field group.
 exl-id: 19be76fa-d212-4b00-815a-d3869c1054e2
+TQID: https://experienceleague.adobe.com/etiH-gznPetXYziBrel1CnXhINKNsCbCZQicBz7eKVE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Quote Request Details] schema field group
 

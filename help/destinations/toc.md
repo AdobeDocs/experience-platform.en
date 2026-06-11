@@ -5,6 +5,7 @@ user-guide-description: Activate your known and unknown data for cross-channel m
 description: This document lists the table of contents for Adobe Experience Platform destinations
 feature: Destinations
 role: Admin,User
+nudge: true
 ---
 
 # Destinations {#destinations}
@@ -33,6 +34,7 @@ role: Admin,User
     * [Create a new destination connection](./ui/connect-destination.md)
     * Activate data to destinations{#activate}
         * [Activation overview](./ui/activation-overview.md)
+        * [(Beta) When to activate](./ui/when-to-activate.md)
         * [Activate audiences to streaming audience export destinations](./ui/activate-segment-streaming-destinations.md)
         * [Activate audiences to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
         * [Activate audiences to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
@@ -69,7 +71,7 @@ role: Admin,User
         * [Federated Audience Composition connection](https://www.adobe.com/go/destinations-federated-audience-composition)
     * Advertising destinations{#advertising}
         * [Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
-        * [Acxiom Real ID™ Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
+        * [Acxiom Real ID&trade; Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
         * [Advertising destinations overview](./catalog/advertising/overview.md)
         * [Adobe Advertising DSP connection](./catalog/advertising/adobe-advertising-dsp-connection.md)
         * [Legacy Adobe Advertising DSP connection](./catalog/advertising/adobe-advertising-cloud-dsp-connection-legacy.md)

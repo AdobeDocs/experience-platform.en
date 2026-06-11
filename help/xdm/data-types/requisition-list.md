@@ -2,6 +2,13 @@
 title: Requisition List Data Type
 description: Learn about the Requisition List Experience Data Model (XDM) data type.
 exl-id: cbea6b08-9d4d-4cbe-b0c5-506bccc6df67
+TQID: https://experienceleague.adobe.com/PJjU5TIr7vs8HD1Y5Ymo3KwDU1jprtGjLD6OGqRAazQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Requisition List] data type
 

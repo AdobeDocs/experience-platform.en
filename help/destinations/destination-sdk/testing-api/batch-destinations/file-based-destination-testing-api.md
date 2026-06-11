@@ -2,6 +2,21 @@
 description: This page explains how to use the /testing/destinationInstance API endpoint to test if your file-based destination is configured correctly and to verify the integrity of data flows to your configured destination.
 title: Test your file-based destination with sample profiles
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
+TQID: https://experienceleague.adobe.com/ecETG8hP61A71pRlGrBDvCTSw3j-rbx0zkjNiQoikA0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Test your file-based destination with sample profiles
 

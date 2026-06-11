@@ -2,6 +2,24 @@
 title: Connect Salesforce To Experience Platform Using The Flow Service API
 description: Learn how to connect Adobe Experience Platform to a Salesforce account using the Flow Service API.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
+TQID: https://experienceleague.adobe.com/aXoILBkyZWWQM46X0QKyz3ZdwIXj28A0bAEmtLK4xc4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+subfeature_v2:
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+    internal-label: Get started
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 ---
 # Connect [!DNL Salesforce] to Experience Platform using the [!DNL Flow Service] API
 

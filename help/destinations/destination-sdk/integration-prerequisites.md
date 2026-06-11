@@ -2,6 +2,26 @@
 description: To use Destination SDK, a partner company must meet the prerequisites listed in this document.
 title: Integration prerequisites
 exl-id: 031af9f1-ce18-4056-bd53-199ce8b56be5
+TQID: https://experienceleague.adobe.com/N4-F6aO64EDtasmxMYrRF2bCUW-en2G9S2llv0T1soI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: d3f95e25-a50e-4fd0-bc23-9a22409a183b
+    internal-label: Profile enrichment
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
 ---
 # Integration prerequisites
 

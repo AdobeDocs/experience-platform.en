@@ -2,6 +2,17 @@
 title: Browse Data Lifecycle Work Orders
 description: Learn how to view and manage existing data lifecycle work orders in the Adobe Experience Platform user interface.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
+TQID: https://experienceleague.adobe.com/e8rzCUkYUbNbxNCublKt3eAFmqTJh4uodaz38SOJU30
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Browse data lifecycle work orders {#browse-work-orders}
 
@@ -83,7 +94,7 @@ The details of a record delete request include its current status and the time e
 
 >[!TIP]
 >
->Record delete requests are batched before processing begins and can take up to 30 days to complete under the standard SLA. For a breakdown of what happens at each stage, see [Record delete timelines](../home.md#record-delete-transparency).
+>Record delete requests are batched before processing begins and can take up to 30 days to complete under the standard SLA. For a breakdown of what happens at each stage, see [Data Lifecycle processing timelines](../data-lifecycle-processing-timelines.md).
 
 ![Image showing the details page for a record delete work order](../images/ui/browse/record-delete-details.png)
 

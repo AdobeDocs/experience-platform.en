@@ -3,6 +3,16 @@ keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataf
 description: Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for monitoring streaming dataflows from the Sources workspace.
 title: Monitor Dataflows for Streaming Sources in the UI
 exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
+TQID: https://experienceleague.adobe.com/HAuaPKWlY2uLn8xo8lptRQt6N-SUX08R4X84O4XoNj4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Monitor Dataflows for Streaming Sources in the UI
 

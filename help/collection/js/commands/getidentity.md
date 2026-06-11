@@ -2,6 +2,23 @@
 title: getIdentity
 description: Obtain a visitor's identity without sending event data.
 exl-id: 28b99f62-14c4-4e52-a5c7-9f6fe9852a87
+TQID: https://experienceleague.adobe.com/dJQdcfriMQ61Xyijd5wG3Ew6SmBpPxFcMqeTsx-bgY4
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1
+    internal-label: Audience Manager
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # `getIdentity`
 

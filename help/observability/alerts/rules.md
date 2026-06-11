@@ -4,6 +4,31 @@ title: Standard alert rules
 description: This document covers the predefined alert rules provided by Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
+TQID: https://experienceleague.adobe.com/R0DgxagdfYwL4-qOxLp-IzuLi0smrnQwaZzTw1snmIg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Standard alert rules
 
@@ -131,3 +156,4 @@ The following alert rules are specific to [capacity management](../../landing/li
 | streaming_throughput_capacity_breached | Streaming throughput capacity breached | The streaming throughput has exceeded allocated capacity. | <pre>{<br>   "status": "FIRING",<br>   "name": "streaming_throughput_capacity_breached", <br>   "message": "Triggered : The rate of incoming events has reached 115% of the streaming throughput capacity in last 2 minutes for sandbox 'prod'", <br>   "createdAt": "2025-08-09T06:12:29.628Z", <br>   "severity": "high", <br>   "imsOrgId": "060E44945B3445240A494023@AdobeOrg", <br>   "sandboxName": "prod", <br>   "sandboxId": "d0d98060-d0f9-11e9-b164-ed6a398c8b35", <br>   "value": "115", <br>   "url": "https://experience-stage.adobe.com/#/@060E44945B3445240A494023@AdobeOrg/sname:prod/platform/license-usage/capacity", <br>   "alertName": "Streaming Throughput Capacity Breached"}</pre> |
 | streaming_throughput_capacity_approaching_80 | Streaming throughput at 80% capacity | The streaming throughput has reached 80% of allocated capacity. | <pre>{<br>   "status": "FIRING", <br>   "name": "streaming_throughput_capacity_approaching_80", <br>   "message": "Triggered : The rate of incoming events has reached 80% of the streaming throughput capacity 85% in last 2 minutes for sandbox 'prod'",<br>   "createdAt": "2025-08-09T05:31:29.628Z",<br>   "severity": "medium",<br>   "imsOrgId": "060E44945B3445240A494023@AdobeOrg",<br>   "sandboxName": "prod",<br>   "sandboxId": "d0d98060-d0f9-11e9-b164-ed6a398c8b35",<br>   "value": "85",<br>   "url": "https://experience-stage.adobe.com/#/@060E44945B3445240A494023@AdobeOrg/sname:prod/platform/license-usage/capacity",<br>   "alertName": "Streaming Throughput At 80% Capacity"}</pre> |
 | streaming_throughput_capacity_approaching_90 | Streaming throughput at 90% capacity | The streaming throughput has reached 90% of allocated capacity. | <pre>{<br>   "status": "FIRING",<br>   "name": "streaming_throughput_capacity_approaching_90",<br>   "message": "Triggered : The rate of incoming events has reached 90% of the streaming throughput capacity 98% in last 2 minutes for sandbox 'prod'",<br>   "createdAt": "2025-08-09T05:52:29.628Z",<br>   "severity": "medium",<br>   "imsOrgId": "060E44945B3445240A494023@AdobeOrg",<br>   "sandboxName": "prod",<br>   "sandboxId": "d0d98060-d0f9-11e9-b164-ed6a398c8b35",<br>   "value": "98",<br>   "url": "https://experience-stage.adobe.com/#/@060E44945B3445240A494023@AdobeOrg/sname:prod/platform/license-usage/capacity",<br>   "alertName": "Streaming Throughput At 90% Capacity"}</pre> |
+| streaming_throughput_capacity_zero | Streaming throughput set to zero | The streaming throughput capacity is set to zero, but a rate of incoming events was detected. | <pre>{<br>   "status": "FIRING",<br>   "name": "streaming_throughput_capacity_zero",<br>   "message": "Triggered : The streaming throughput capacity is set to zero, but a rate of incoming events was detected. Please review the configured capacity.",<br>   "createdAt": "2025-08-09T05:52:29.628Z",<br>   "severity": "high",<br>   "imsOrgId": "060E44945B3445240A494023@AdobeOrg",<br>   "sandboxName": "prod",<br>   "sandboxId": "d0d98060-d0f9-11e9-b164-ed6a398c8b35",<br>   "value": "0",<br>   "url": "https://experience-stage.adobe.com/#/@060E44945B3445240A494023@AdobeOrg/sname:prod/platform/license-usage/capacity",<br>   "alertName": "Streaming Throughput Set to Zero",<br>   "header": {<br>      "_adobeio": {<br>         "imsOrgId": "060E44945B3445240A494023A@AdobeOrg",<br>         "providerMetadata": "${provider_metadata_id}",<br>         "eventCode": "streaming_throughput_capacity_zero"<br>      }<br>   }<br>}</pre> |

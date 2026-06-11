@@ -4,6 +4,23 @@ solution: Experience Platform
 title: Create a Dataset using APIs
 description: This document provides general steps for creating a dataset using Adobe Experience Platform APIs and populating the dataset using a file.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
+TQID: https://experienceleague.adobe.com/93GhtRJGqGA8Bb2MNGHi--0Ih5XIPa5Erqru-j53jPo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Create a dataset using APIs
 

@@ -4,6 +4,13 @@ description: Learn about the Human Name Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 5dd6fda4-c076-4c34-bdd9-259203b6ea73
+TQID: https://experienceleague.adobe.com/MbkrIZ-lNUCvhqUg44kttkEykroqKJXcAEJMICo1oFE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Human Name] data type
 

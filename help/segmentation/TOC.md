@@ -5,6 +5,7 @@ breadcrumb-title: Segmentation Service Guide
 user-guide-description: Build audiences from your Real-Time Customer Profile data using Adobe Experience Platform generated segment definitions or external sources.
 feature: Segments
 role: User
+nudge: true
 ---
 
 # Adobe Experience Platform Segmentation Service {#segmentation}
@@ -32,6 +33,7 @@ role: User
     - [Audience Composition](ui/audience-composition.md)
     - {hide-from-toc} [Audience Composition enhancements](ui/composition-enhancements.md)
     - [Segment Builder](ui/segment-builder.md)
+    - [Segment Builder (B2B Edition)](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/segmentation/audience-builder)
     - [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
     - {hide-from-toc} [Ignore year time constraint update](ui/ignore-year.md)
     - {hide-from-toc} [Time constraints refactoring](ui/segment-refactoring.md)

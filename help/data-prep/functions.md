@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Data Prep Mapping Functions
 description: This document introduces the mapping functions used with Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
+TQID: https://experienceleague.adobe.com/GdQ3BXSXU3Josmr2L0hgyzy1InLAB1O5J3Ytk5YeOUk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Data Prep mapping functions
 
@@ -137,7 +147,7 @@ The following tables list all supported mapping functions, including sample expr
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | is_empty | Checks whether or not an object is empty. | <ul><li>INPUT: **Required** The object that you're trying to check is empty.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
-| arrays_to_object | Creates a list of objects. | <ul><li>INPUT: **Required** A grouping of key and array pairs.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
+| arrays_to_object | Creates a list of objects. | <ul><li>INPUT: **Required** A grouping of key and array pairs.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | `[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]` |
 | to_object | Creates an object based on the flat key/value pairs given. | <ul><li>INPUT: **Required** A flat list of key/value pairs.</li></ul> | to_object(INPUT) | to_object​("firstName", "John", "lastName", "Doe") | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Creates an object from the input string. | <ul><li>STRING: **Required** The string that is being parsed to create an object.</li><li>VALUE_DELIMITER: *Optional* The delimiter that separates a field from the value. The default delimiter is `:`.</li><li>FIELD_DELIMITER: *Optional* The delimiter that separates field value pairs. The default delimiter is `,`.</li></ul> | str_to_object​(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Note**: You can use the `get()` function along with `str_to_object()` to retrieve values for the keys in the string. | <ul><li>Example #1: str_to_object("firstName - John ; lastName - ; - 123 345 7890", "-", ";")</li><li>Example #2: str_to_object("firstName - John ; lastName - ; phone - 123 456 7890", "-", ";").get("firstName")</li></ul> | <ul><li>Example #1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Example #2: "John"</li></ul> |
 | contains_key | Checks if the object exists within the source data. **Note:** This function replaces the deprecated `is_set()` function. | <ul><li>INPUT: **Required** The path to be checked if it exists within the source data.</li></ul> | contains_key(INPUT) | contains_key("evars.evar.field1") | true |
@@ -384,7 +394,7 @@ The table below outlines a list of reserved characters and their corresponding e
 | ? | %3F |
 | @ | %40 |
 | &#91; | %5B |
-| &#124; | %5C |
+| `\|` | %5C |
 | &#93; | %5D |
 | ^ | %5E |
 | &#96; | %60 |

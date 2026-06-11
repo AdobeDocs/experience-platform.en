@@ -6,6 +6,7 @@ breadcrumb-title: Data Collection
 user-guide-description: Learn how to send data to Adobe Experience Platform.
 feature: Data Collection
 role: Developer
+nudge: true
 ---
 
 # Data collection {#collection}

@@ -2,6 +2,23 @@
 title: Advanced Data Lifecycle Management Overview
 description: Advanced Data Lifecycle Management allows you to manage the lifecycle of your data by updating or purging outdated or inaccurate records.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
+TQID: https://experienceleague.adobe.com/iUo7h2mcsIwyECpzhl3NMAkqayBZuBSI1kvcYwOcupw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Advanced Data Lifecycle Management in Adobe Experience Platform
 
@@ -48,21 +65,7 @@ The following takes place when a [dataset expiration request](./ui/dataset-expir
 
 ### Record delete timelines {#record-delete-transparency}
 
-The following takes place after a [record delete request](./ui/record-delete.md) is submitted.
-
->[!NOTE]
->
->Timings are approximate and vary based on system load, batch scheduling, and entitlement tier. The end-to-end SLA (30 days standard, 15 days for Privacy and Security Shield or Healthcare Shield) is the operative commitment.
-
-| Stage | Approx. timing | Description |
-| --- | --- | --- |
-| Request submitted and batched | Day 1–15 | A work order is created and queued. Requests may be queued and batched for up to 14 days before processing begins. Batching is the primary reason deletion is not immediate. |
-| Downstream systems process deletion request | Day 16–25 | Downstream services receive and execute the record delete request. |
-| Buffer — integrity checks and resubmissions | Day 25–30 | A buffer window allows for integrity checks and resubmission of any failed jobs before the SLA window closes. The work order status updates to `completed` once all systems confirm deletion. |
-
-{style="table-layout:auto"}
-
-For entitlement-based queue durations and maximum SLA values, see [Processing timelines for identifier submissions](./ui/record-delete.md#sla-processing-timelines).
+Record delete requests are processed based on entitlement tier, with different SLA commitments for standard and Shield customers. For a full breakdown of processing stages and timelines, see [Data Lifecycle processing timelines](./data-lifecycle-processing-timelines.md).
 
 ## Next steps {#next-steps}
 

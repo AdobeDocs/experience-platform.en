@@ -4,6 +4,21 @@ solution: Experience Platform
 title: Define Enum Fields and Suggested Values in the UI
 description: Learn how to define enums and suggested values for string fields in the Experience Platform user interface.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
+TQID: https://experienceleague.adobe.com/faZiFJz31YgwU3BtX5YkdEj0c-KsujZu6DE1NilqS5w
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: fe06da76-5b92-43de-9bda-c5c9c01b55e8
+    internal-label: Segmentation UI
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Define enums and suggested values in the UI {#enums-and-suggested-values}
 

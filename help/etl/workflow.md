@@ -4,6 +4,16 @@ solution: Experience Platform
 title: ETL Workflow
 description: Various extract, transform, and load (ETL) tools may differ in format, but most expose similar functionality to assist with the combining of multiple data sources.
 exl-id: 09de6c50-ad04-4d7c-99e6-33784fb0dd58
+TQID: https://experienceleague.adobe.com/z709WSX9n7CPwTlDvdlSif3V5Tk5CTL4aqjAd8OEMMk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # ETL workflow
 

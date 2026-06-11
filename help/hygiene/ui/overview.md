@@ -2,6 +2,17 @@
 title: Data Lifecycle UI Guide
 description: Learn how to manage data lifecycle tasks in the Adobe Experience Platform user interface.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
+TQID: https://experienceleague.adobe.com/O5IGbHT7Vcal8Cws40hcCFg6HDOZRg-wphbPbbQGVLo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Data lifecycle UI guide {#lifecycle-ui-guide}
 

@@ -4,8 +4,17 @@ solution: Experience Platform
 title: Personal Contact Details Schema Field Group
 description: Learn about the Personal Contact Details schema field group.
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
+TQID: https://experienceleague.adobe.com/gU25SitmtH-ON-x0PqZqk1aPIAoVcz8d-G3FT8VxYFg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
-
 # [!UICONTROL Personal Contact Details] schema field group
 
 >[!NOTE]

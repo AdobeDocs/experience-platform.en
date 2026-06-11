@@ -3,6 +3,30 @@ solution: Experience Platform
 title: Segment Builder UI Guide
 description: The Segment Builder in the Adobe Experience Platform UI provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
+TQID: https://experienceleague.adobe.com/-WKclcOvYGl1pg6jrUR2UwrXy9BAw9j--sXM3DxRILo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: f0c9f224-75f2-4864-8de6-859ae7856690
+    internal-label: Segment Match
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
 ---
 # [!DNL Segment Builder] UI guide
 
@@ -151,11 +175,15 @@ For more detailed information on the time and date functions, read the [time con
 
 +++
 
-When you select an attribute, you can see the summary data by selecting the [information icon](../../images/icons/info.png). The summary data includes information such as an explanation of what the field is, the record count of the values, as well as the percentage of accounts that contain values for this attribute.
+When you select an attribute, you can see the data insights for the attribute by selecting the [information icon](../../images/icons/info.png). The data insights summary includes information such as an explanation of what the field is, the record count of the values, as well as the percentage of profiles that contain values for this attribute.
 
-The **[!UICONTROL Top values]** section displays the most frequently occurring values for the attribute, and includes details such as the value, the number of records that have the value, as well as the percentage of total records the value represents.
+>[!NOTE]
+>
+>The top values are only displayed if the attribute's values are **not** stored in an array or a key/value pairing.
 
-![A popover that displays the summary data for an attribute](/help/segmentation/images/ui/segment-builder/summary-data.png)
+The **[!UICONTROL Top values]** section displays the 50 most frequently occurring values for the attribute, and includes details such as the value, as well as the percentage of total records the value represents.
+
+![A popover that displays the summary data for an attribute](/help/segmentation/images/ui/segment-builder/summary-data.png){width="300"}
 
 If an attribute is populated by less than 25% of profiles, the ![data notice icon](../../images/icons/data-notice.png) will be displayed instead. The same summary data will be displayed for the attribute, regardless.
 
@@ -163,9 +191,17 @@ If an attribute is populated by less than 25% of profiles, the ![data notice ico
 >
 >The top values are only displayed if the field does **not** contain too many different values and if those field's values are commonly repeated. Additionally, this summary data is updated on a **daily** basis.
 
+When you add an attribute with summary data, you can also see the summary data in the rule building canvas.
+
+![The attribute with the summary data is displayed.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary.png)
+
+You can either use the dropdown to select from the top values or enter your value, which can automatically resolve to one of the top values.
+
+![The dropdown where you can add the attribute's value is highlighted.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary-dialog.png)
+
 Additionally, the attribute has an **[!UICONTROL Ingestion Type]**. The ingestion type lets you know the origin of the data, and can be one of the following values: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]**, or **[!UICONTROL No Data Ingested]**. 
 
-![The ingestion type for the attribute is displayed.](/help/segmentation/images/ui/segment-builder/ingestion-type.png)
+![The ingestion type for the attribute is displayed.](/help/segmentation/images/ui/segment-builder/ingestion-type.png){width="300"}
 
 #### Computed attributes {#computed-attributes}
 

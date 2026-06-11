@@ -8,6 +8,7 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform Guide
 user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audiences from those profiles, and activate those audiences to third-party destinations.
 role: Admin
+nudge: true
 ---
 
 # Real-Time Customer Data Platform Help {#rtcdp}
@@ -24,7 +25,7 @@ role: Admin
     * [End-to-end tutorial](./b2b-tutorial.md)
     * [Real-Time CDP B2B Edition guardrails](b2b-guardrails.md)
     * [Real-Time CDP B2B Edition architecture upgrades](b2b-architecture-upgrade.md)
-  * {hide-from-toc} [Real-Time CDP MCP](rtcdp-mcp.md)
+  * [Real-Time CDP MCP](rtcdp-mcp.md)
 * Audience Manager and Real-Time CDP {#evolution}
   * [Evolution from Audience Manager](aam-to-rtcdp.md)
 * Account profiles {#account}
@@ -36,6 +37,8 @@ role: Admin
   * [Segmentation overview](segmentation/segmentation-overview.md)
   * [Audience Builder guide](segmentation/audience-builder.md)
   * [Segmentation in Real-Time CDP B2B Edition](segmentation/b2b.md)
+  * [Custom objects](segmentation/custom-objects.md)
+  * [Multi-entity segmentation](segmentation/multi-entity-segmentation.md)
   * [Customer AI](segmentation/customer-ai.md)
 * Datasets {#datasets}
   * [Datasets](datasets/dataset.md)

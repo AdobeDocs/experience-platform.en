@@ -2,6 +2,23 @@
 title: Audiences Insights
 description: Discover the SQL that powers your audience insights and use these queries to generate custom insights to further explore audience data from Adobe Experience Platform.
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
+TQID: https://experienceleague.adobe.com/Kx1JQHDv0aIMA-RF9T-R3qDn2wVuptUQCugz8TglAtE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Audiences insights
 
@@ -14,6 +31,10 @@ See the [View SQL documentation](../view-sql.md) for more information on how to 
 The following insights are all available for you to use as part of the [Audiences dashboard](../guides/audiences.md) or a custom [user-defined dashboard](../standard-dashboards.md). See the [customization overview](../customize/overview.md) for instructions on how to customize your dashboard or [create and edit new widgets](../customize/custom-widgets.md) in the widget library and [user-defined dashboard](../standard-dashboards.md#create-widget). 
 
 The following insights are all available for you to use as part of the [Audiences dashboard](../guides/audiences.md) or a custom dashboard.
+
+>[!NOTE]
+>
+>Several insights in this document use profile count metrics from `adwh_fact_profile_by_segment_trendlines`. For definitions of `count_of_profiles`, `count_of_calculated_realized_profiles`, `count_of_calculated_existing_profiles`, and `count_of_calculated_exited_profiles`, and guidance on how these metrics differ from profile snapshot data, see the [segment trendline metrics](../data-models/cdp-insights-data-model-b2c.md#segment-trendline-metrics) section of the Real-Time CDP Insights data model (B2C Edition) documentation.
 
 ## Audience overlap report {#audience-overlap-report}
     
@@ -580,3 +601,4 @@ By reading this document, you now understand the SQL that generates dashboard in
 See the [View SQL documentation](../view-sql.md) for more information on how to adapt your insights' SQL directly through the PLatform UI.
 
 You can also read and understand the SQL that generates insights for the [Profiles](./profiles.md), [Account Profiles](./account-profiles.md) and [Destinations](./destinations.md) dashboards.
+

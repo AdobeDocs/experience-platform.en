@@ -2,6 +2,26 @@
 title: External Audiences API Endpoint
 description: Learn how to use the external audiences API to create, update, activate, and delete your external audiences from Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
+TQID: https://experienceleague.adobe.com/LMW9Y9JhBUhwz-p6hBNSwdriklaDaQg0BG-E9M7-bYQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # External audiences endpoint
 
@@ -96,7 +116,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
         "ttlInDays": "40",
         "labels": ["core/C1"],
         "audienceType": "people",
-        "originName": "CUSTOM_UPLOAD"
+        "originName": "CUSTOM_UPLOAD",
+        "expressActivation": true
     }'
 ```
 
@@ -110,6 +131,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `ttlInDays` | Integer | The data expiration for the external audience, in days. This value can be set from 1 to 90. By default, the data expiration is set to 30 days. |
 | `audienceType` | String | The audience type for the external audience. Currently, only `people` is supported. |
 | `originName` | String | **Required** The origin of the audience. This states where the audience comes from. For external audiences, you should use `CUSTOM_UPLOAD`. |
+| `expressActivation` | Boolean | *Optional* A boolean that enables the express activation job to be ran. The express activation job creates an additional job that is directly consumed by the downstream activation pipeline, reducing the time to deliver audience membership data to configured batch destinations. This field is best used on **subsequent** audience activations and may not result is faster activation times for **initial** audience activations. By default, the value is set to `false`. For more information on how to use express activation, read the [express activation section](#express-activation). |
 | `namespace` | String | The namespace for the audience. By default, this value is set to `CustomerAudienceUpload`. |
 | `labels` | Array of strings | The access control labels that apply to the external audience. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). |
 | `tags` | Array of strings | The tags you want to apply to the external audience. When you add the array of tags, you **must** use the `tagId`. More information about tags can be found in the [managing tags guide](/help/administrative-tags/ui/managing-tags.md). |
@@ -722,7 +744,11 @@ After reading this guide, you now have a better understanding of how to create, 
 
 ## Appendix {#appendix}
 
-The following section lists the available error codes when using the external audiences API.
+The following section lists additional information related to the external audiences endpoint.
+
+### Error codes {#error-codes}
+
+The following section displays the available error codes when using the external audiences API.
 
 | Platform error code | Status code | Message | Description |
 | ------------------- | ----------- | ------- | ----------- |
@@ -736,3 +762,18 @@ The following section lists the available error codes when using the external au
 | 100960-422 | 422 | `UNPROCESSABLE_ENTITY` | The request structure is valid, but it cannot be processed due to logical or semantic errors. |
 | 100970-500 | 500 | `INTERNAL_SERVER_ERROR` | There was an issue processing the request in the system. |
 | 100970-502 | 502 | `BAD_GATEWAY` | There are downstream dependency issues. |
+
+### Express activation {#express-activation}
+
+To use express activation, you need to first make a POST request to the `/external-audience` endpoint with `expressActivation` set to `true`. Within the response, make sure to note the `operationId`.
+
+You now want to confirm that the audience has successfully been processed. Make a GET request to the `/external-audience/operations` while providing the `operationId` you previously noted. If the status is `SUCCESS` you can add the audience to your destination.
+
+When you add the audience to a destination, there is a 30 minute configuration between the audience and destination. Wait for at least 30 minutes before triggering the flow run.
+
+Once you've added the audience to a destination, you can trigger an audience ingestion to activate the data into your destination.
+
+>[!IMPORTANT]
+>
+>Currently, data is activated twice - the first time due to the express activation job, which occurs soon after batch ingestion and the second time after the audience evaluation job.
+

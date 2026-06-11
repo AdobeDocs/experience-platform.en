@@ -4,6 +4,18 @@ description: Learn how to use the Audience Builder in Real-Time Customer Data Pl
 feature: Get Started, Audiences
 badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
+TQID: https://experienceleague.adobe.com/oIUjDYEGD0j8r2vn-nItHAoL7GIhtDRUUlEftr87hT0
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Audience Builder in Real-Time Customer Data Platform
 
@@ -48,15 +60,15 @@ The [!UICONTROL Attributes] tab lets you browse Account attributes belonging to 
 
 ![The Attributes tab is displayed in the Audience Builder](../assets/segmentation/audience-builder/attributes.png)
 
->[!AVAILABILITY]
->
->Summary data is in **Limited availability**, and for use in both B2B Edition and B2P Edition.
-
-When selecting an attribute, you can see summary data by selecting the [information icon](../../images/icons/info.png). The summary data includes information such as top values, an explanation of what the field is, the record count of the values, as well as the percentage of accounts that contain values for this attribute.
+When selecting an attribute, you can see the data insights by selecting the [information icon](../../images/icons/info.png). The data insights summary includes information such as top values, an explanation of what the field is, the record count of the values, as well as the percentage of accounts that contain values for this attribute.
 
 The **[!UICONTROL Populated]** section shows the percentage of accounts that have a value for this field.
 
-The **[!UICONTROL Top values]** section displays the most frequently occurring values for the attribute, and includes details such as the value, the number of records that have the value, as well as the percentage of total records the value represents. The number of records for each field is determined by the profile snapshot, which provides a consolidated view of the records after all the contributing dataset data has been merged.
+>[!NOTE]
+>
+>The top values are only displayed if the attribute's values are **not** stored in an array or a key/value pairing.
+
+The **[!UICONTROL Top values]** section displays the 50 most frequently occurring values for the attribute, and includes details such as the value, as well as the percentage of total records the value represents. The number of records for each field is determined by the profile snapshot, which provides a consolidated view of the records after all the contributing dataset data has been merged.
 
 ![A popover that displays a fully populated version of the summary data for an attribute.](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
 
@@ -78,7 +90,7 @@ You can either use the dropdown to select from the top values or enter your valu
 
 >[!NOTE]
 >
->The summary data is updated on a **daily** basis. Additionally, summary data is **not** supported for attributes whose values are either arrays or key/value pairs.
+>The summary data is updated on a **daily** basis.
 
 Additionally, the attribute has an **[!UICONTROL Ingestion Type]**. The ingestion type lets you know the origin of the data, and can be one of the following values: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]**, or **[!UICONTROL No Data Ingested]**. 
 

@@ -2,6 +2,26 @@
 title: Audience types
 description: Learn about the different types of audiences you can create on Adobe Experience Platform.
 exl-id: c95c6276-d1a4-4d92-95cf-60d895c3fe10
+TQID: https://experienceleague.adobe.com/EfsYo4L3KxG5odoGkFG9f8hV3jl-fVqzZ6unPUn43J4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Audience types
 

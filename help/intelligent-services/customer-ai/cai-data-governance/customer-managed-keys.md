@@ -3,6 +3,22 @@ keywords: insights;customer ai;customer ai insights;AAI query service;customer a
 title: Customer Managed Keys in Customer AI.
 description: Learn how to set up Customer Managed Keys for Customer AI.
 exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
+TQID: https://experienceleague.adobe.com/QB1nPpdo4BlYg2ePFDb7DI4tNeoI-zalFdm5uTOLCZU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Customer Managed Keys in Customer AI
 
