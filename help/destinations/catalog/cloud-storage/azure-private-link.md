@@ -58,24 +58,18 @@ There is currently no UI that allows you to set up Private Link connections for 
 * [!DNL Azure] Resource ID of your [!DNL Event Hubs] namespace
 * Namespace hostname (FQDN)
 * [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
-* Authentication details: [!DNL Microsoft Entra ID] (formerly [!DNL Azure Active Directory]) or Shared Access Signature (SAS)
-* Target resource name
 
 ### [!DNL Azure Blob Storage] {#request-setup-blob}
 
 * [!DNL Azure] Resource ID of your storage account
 * Storage account hostname (FQDN)
 * [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
-* Authentication details: [!DNL Microsoft Entra ID] (formerly [!DNL Azure Active Directory]) or Shared Access Signature (SAS)
-* Target resource name
 
 ### [!DNL Azure Data Lake Storage Gen2] {#request-setup-adls}
 
 * [!DNL Azure] Resource ID of your storage account
 * Storage account hostname (FQDN)
 * [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
-* Authentication details: [!DNL Microsoft Entra ID] (formerly [!DNL Azure Active Directory]) or Shared Access Signature (SAS)
-* Target resource name
 
 [!DNL Adobe] creates the Private Endpoint and notifies you when the approval request is available in your [!DNL Azure] portal.
 
