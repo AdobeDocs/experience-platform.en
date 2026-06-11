@@ -45,8 +45,7 @@ The following limits apply to [!DNL Azure] Private Link for destinations.
 
 | Guardrail | Limit |
 |-----------|-------|
-| Data transfer | Up to 2 TB per year across all sandboxes and organizations. Exceeding this limit may incur additional charges. |
-| Production sandbox endpoints | Maximum of 10 endpoints per organization |
+| Production sandbox endpoints | Maximum of 10 endpoints per organization, across all Azure destination types ([!DNL Azure Blob Storage], [!DNL Azure Data Lake Storage Gen2], and [!DNL Azure Event Hubs]) |
 | Development sandbox endpoints | Maximum of 1 endpoint per organization |
 
 ## Request Private Link setup {#request-setup}
@@ -59,16 +58,22 @@ There is currently no UI that allows you to set up Private Link connections for 
 * Namespace hostname (FQDN)
 * [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
 
+>[!TIP]
+>
+>If you already have a Private Endpoint for [!DNL Azure Event Hubs] set up for an [!DNL Experience Platform] source, that endpoint can also be used for destinations. You do not need to provision a separate endpoint.
+
 ### [!DNL Azure Blob Storage] {#request-setup-blob}
 
 * [!DNL Azure] Resource ID of your storage account
 * Storage account hostname (FQDN)
+* Whether you need a Blob endpoint, a DFS endpoint, or both
 * [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
 
 ### [!DNL Azure Data Lake Storage Gen2] {#request-setup-adls}
 
 * [!DNL Azure] Resource ID of your storage account
 * Storage account hostname (FQDN)
+* Whether you need a Blob endpoint, a DFS endpoint, or both
 * [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
 
 [!DNL Adobe] creates the Private Endpoint and notifies you when the approval request is available in your [!DNL Azure] portal.
