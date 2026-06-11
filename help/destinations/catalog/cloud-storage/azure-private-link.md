@@ -51,10 +51,28 @@ The following limits apply to [!DNL Azure] Private Link for destinations.
 
 ## Request Private Link setup {#request-setup}
 
-Private Link for destinations has no self-service UI. Contact your Adobe account manager to request Private Link configuration and provide the following information:
+There is currently no UI that allows you to set up Private Link connections for destinations in a self-service mode. Contact your Adobe account manager to request Private Link configuration and provide the following information.
 
-* [!DNL Azure] Resource ID of your Event Hubs namespace or storage account
-* Namespace or storage hostname (FQDN)
+### [!DNL Azure Event Hubs] {#request-setup-event-hubs}
+
+* [!DNL Azure] Resource ID of your [!DNL Event Hubs] namespace
+* Namespace hostname (FQDN)
+* [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
+* Authentication details: [!DNL Microsoft Entra ID] (formerly [!DNL Azure Active Directory]) or Shared Access Signature (SAS)
+* Target resource name
+
+### [!DNL Azure Blob Storage] {#request-setup-blob}
+
+* [!DNL Azure] Resource ID of your storage account
+* Storage account hostname (FQDN)
+* [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
+* Authentication details: [!DNL Microsoft Entra ID] (formerly [!DNL Azure Active Directory]) or Shared Access Signature (SAS)
+* Target resource name
+
+### [!DNL Azure Data Lake Storage Gen2] {#request-setup-adls}
+
+* [!DNL Azure] Resource ID of your storage account
+* Storage account hostname (FQDN)
 * [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
 * Authentication details: [!DNL Microsoft Entra ID] (formerly [!DNL Azure Active Directory]) or Shared Access Signature (SAS)
 * Target resource name
@@ -86,7 +104,7 @@ Follow these recommendations to get the most out of [!DNL Azure] Private Link fo
 
 Be aware of the following constraints before requesting [!DNL Azure] Private Link setup.
 
-* Private Link is available for [!DNL Azure] destinations only. [!DNL AWS] and [!DNL GCP] destinations are not supported yet.
+* Private Link is available for [!DNL Azure] destinations only. [!DNL AWS] and Google Cloud Platform destinations are not supported yet.
 * Configuration requires [!DNL Adobe] engineering involvement. Self-service provisioning is not currently available.
 
 ## [!DNL Azure] resource deletion {#resource-deletion}
