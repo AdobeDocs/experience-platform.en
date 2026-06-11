@@ -45,19 +45,36 @@ The following limits apply to [!DNL Azure] Private Link for destinations.
 
 | Guardrail | Limit |
 |-----------|-------|
-| Data transfer | Up to 2 TB per year across all sandboxes and organizations. Exceeding this limit may incur additional charges. |
-| Production sandbox endpoints | Maximum of 10 endpoints per organization |
+| Production sandbox endpoints | Maximum of 10 endpoints per organization, across all Azure destination types ([!DNL Azure Blob Storage], [!DNL Azure Data Lake Storage Gen2], and [!DNL Azure Event Hubs]) |
 | Development sandbox endpoints | Maximum of 1 endpoint per organization |
 
 ## Request Private Link setup {#request-setup}
 
-Private Link for destinations has no self-service UI. Contact your Adobe account manager to request Private Link configuration and provide the following information:
+There is currently no UI that allows you to set up Private Link connections for destinations in a self-service mode. Contact your Adobe account manager to request Private Link configuration and provide the following information.
 
-* [!DNL Azure] Resource ID of your Event Hubs namespace or storage account
-* Namespace or storage hostname (FQDN)
+### [!DNL Azure Event Hubs] {#request-setup-event-hubs}
+
+* [!DNL Azure] Resource ID of your [!DNL Event Hubs] namespace
+* Namespace hostname (FQDN)
 * [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
-* Authentication details: [!DNL Microsoft Entra ID] (formerly [!DNL Azure Active Directory]) or Shared Access Signature (SAS)
-* Target resource name
+
+>[!TIP]
+>
+>If you already have a Private Endpoint for [!DNL Azure Event Hubs] set up for an [!DNL Experience Platform] source, that endpoint can also be used for destinations. You do not need to provision a separate endpoint. See [Private Link support for sources](/help/sources/tutorials/ui/private-link.md) for more information.
+
+### [!DNL Azure Blob Storage] {#request-setup-blob}
+
+* [!DNL Azure] Resource ID of your storage account
+* Storage account hostname (FQDN)
+* Whether you need a Blob endpoint, a DFS endpoint, or both
+* [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
+
+### [!DNL Azure Data Lake Storage Gen2] {#request-setup-adls}
+
+* [!DNL Azure] Resource ID of your storage account
+* Storage account hostname (FQDN)
+* Whether you need a Blob endpoint, a DFS endpoint, or both
+* [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
 
 [!DNL Adobe] creates the Private Endpoint and notifies you when the approval request is available in your [!DNL Azure] portal.
 
@@ -66,8 +83,11 @@ Private Link for destinations has no self-service UI. Contact your Adobe account
 After [!DNL Adobe] creates the Private Endpoint, a pending approval request appears in your [!DNL Azure] portal. To approve it:
 
 1. In your [!DNL Azure] portal, go to the resource you shared with [!DNL Adobe]: your [!DNL Event Hubs] namespace, [!DNL Blob Storage] account, or [!DNL Data Lake Storage Gen2] account.
-1. Select **[!UICONTROL Networking]**, then select **[!UICONTROL Private endpoint connections]**.
+1. In the left navigation, select **[!UICONTROL Security + networking]**, then select **[!UICONTROL Networking]**.
+1. Select **[!UICONTROL Private endpoints]** to see a list of private endpoints associated with your account and their current connection states.
 1. Locate the pending connection from [!DNL Adobe] and select **[!UICONTROL Approve]**.
+
+![The Azure portal showing a list of pending private endpoints awaiting approval.](../../assets/catalog/cloud-storage/private-link/azure-portal-approve-private-endpoint.png)
 
 Within minutes, all existing and new destination dataflows for that resource route over the private endpoint.
 
@@ -86,7 +106,7 @@ Follow these recommendations to get the most out of [!DNL Azure] Private Link fo
 
 Be aware of the following constraints before requesting [!DNL Azure] Private Link setup.
 
-* Private Link is available for [!DNL Azure] destinations only. [!DNL AWS] and [!DNL GCP] destinations are not supported yet.
+* Private Link is available for [!DNL Azure] destinations only. [!DNL AWS] and Google Cloud Platform destinations are not supported yet.
 * Configuration requires [!DNL Adobe] engineering involvement. Self-service provisioning is not currently available.
 
 ## [!DNL Azure] resource deletion {#resource-deletion}
