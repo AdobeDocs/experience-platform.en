@@ -92,7 +92,7 @@ Download the [sample Ticket Scan Events data file here.](../../assets/lava/lava_
 
 ### Transaction Events
 
-The transaction event source provides detailed information each time a purchase is made at a point of sale system by a user identified to LAVA. This data can be used to evaluate the utilization rate of promotions, understand customer preferences and evaluate sales performance. By streaming ticket scan events to Adobe Experience Platform, you can augment member profiles and enable event-driven personalization or analytics. Each transaction event record includes metadata about the purchase, LAVA rewards used and items purchased. Note that some vendors only provide this data when a reward was applied.
+The transaction event source provides detailed information each time a purchase is made at a point of sale system by a user identified to [!DNL LAVA]. This data can be used to evaluate the utilization rate of promotions, understand customer preferences and evaluate sales performance. By streaming ticket scan events to Experience Platform, you can augment member profiles and enable event-driven personalization or analytics. Each transaction event record includes metadata about the purchase, [!DNL LAVA] rewards used and items purchased. Note that some vendors only provide this data when a reward was applied.
 
 Download the [sample Transaction Events data file here.](../../assets/lava/lava_transaction_sample.json)
 
@@ -124,7 +124,7 @@ Download the [sample Transaction Events data file here.](../../assets/lava/lava_
 
 ### Ledger Events
 
-The ledger event source provides a record of each change to a member's balances, including grants in a Moment, grants from filling out a form, redemptions happening in a purchase or via the LAVA App, and transfers. A positive `amount` indicates rewards were added to the balance; a negative `amount` indicates rewards were redeemed or removed. Transfers events produce two records: one for the member losing the balance and one for the member receiving it. Payments and transactions may use multiple balances, each of which will come as a separate event.
+The ledger event source provides a record of each change to a member's balances, including grants in a Moment, grants from filling out a form, redemptions happening in a purchase or via the [!DNL LAVA] App, and transfers. A positive `amount` indicates rewards were added to the balance; a negative `amount` indicates rewards were redeemed or removed. Transfers events produce two records: one for the member losing the balance and one for the member receiving it. Payments and transactions may use multiple balances, each of which will come as a separate event.
 
 Download the [sample Ledger Events data file here.](../../assets/lava/lava_ledger_sample.json)
 
@@ -149,9 +149,9 @@ Use this [combined sample event data file](../../assets/lava/lava_transaction_sa
 
 ## Deployment considerations
 
-1. Create a dataflow for the Member Profile data if you need basic data about LAVA members and/or you would like LAVA data to be stitched into other profiles by email address.
+1. Create a dataflow for the Member Profile data if you need basic data about [!DNL LAVA] members and/or you would like [!DNL LAVA] data to be stitched into other profiles by email address.
 2. If you use the Member balances data, it must be stored in a separate Dataset from Member Profile.
-3. Events can be stored either in a single dataset or multiple datasets. To store in a single dataset, create one Dataflow using the "combined" event data file/mapping, and then set up multiple exports in the LAVA MAC to the same ingestion URL and flow ID. To store each event type in a different dataset, create a Dataflow for each dataset, and then configure each export in the LAVA MAC to the ingestion URL and flow ID for the appropriate dataflow.
+3. Events can be stored either in a single dataset or multiple datasets. To store in a single dataset, create one dataflow using the "combined" event data file/mapping, and then set up multiple exports in the [!DNL LAVA MAC] to the same ingestion URL and flow ID. To store each event type in a different dataset, create a Dataflow for each dataset, and then configure each export in the [!DNL LAVA MAC] to the ingestion URL and flow ID for the appropriate dataflow.
 
 ## Load the [!DNL LAVA] package
 
@@ -170,7 +170,7 @@ For more information on loading the package, read the [package sharing tutorial]
 
 After the package is created, select the ellipses (`...`) to open the menu and select **[!UICONTROL Import Package]** to import the package. For more information on how to import a package, refer to the [sandbox tooling guide](../../../sandboxes/ui/sandbox-tooling.md#import-a-package-to-a-target-sandbox).
 
-The [!DNL LAVA] package includes three datasets: LAVA Profiles, LAVA Balances and LAVA Events. Although the profiles and balances use the same schema, they must be separate datasets so that balance updates do not overwrite profile updates, and vice-versa.
+The [!DNL LAVA] package includes three datasets: [!DNL LAVA Profiles], [!DNL LAVA Balances] and [!DNL LAVA Events]. Although the profiles and balances use the same schema, they must be separate datasets so that balance updates do not overwrite profile updates, and vice-versa.
 
 ## Next steps
 
