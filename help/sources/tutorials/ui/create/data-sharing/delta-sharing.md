@@ -1,6 +1,7 @@
 ---
 title: Use The Delta Sharing Source Connector In The UI
 description: Learn how to use the Delta Sharing source connector in the Experience Platform user interface.
+badge: Beta
 exl-id: 4e889401-08c1-4c81-85e7-49fe1328c65d
 ---
 # Use the [!DNL Delta Sharing] source connector in the UI {#use-deltashare-in-the-ui}
@@ -10,8 +11,11 @@ exl-id: 4e889401-08c1-4c81-85e7-49fe1328c65d
 >title="Schema structure"
 >abstract="Ensure that you review your schema structure because once you proceed, you will no longer be able to make changes to your schema."
 
-Read this guide to learn how to use the [!DNL Delta Sharing] source connector in the Adobe Experience Platform user interface.
+>[!AVAILABILITY]
+>
+>This feature is currently in a closed beta and is not available to all users. Contact your Adobe account team to request access to the beta.
 
+Read this guide to learn how to use the [!DNL Delta Sharing] source connector in the Adobe Experience Platform user interface.
 
 ## Get started
 
