@@ -78,8 +78,11 @@ There is currently no UI that allows you to set up Private Link connections for 
 After [!DNL Adobe] creates the Private Endpoint, a pending approval request appears in your [!DNL Azure] portal. To approve it:
 
 1. In your [!DNL Azure] portal, go to the resource you shared with [!DNL Adobe]: your [!DNL Event Hubs] namespace, [!DNL Blob Storage] account, or [!DNL Data Lake Storage Gen2] account.
-1. Select **[!UICONTROL Networking]**, then select **[!UICONTROL Private endpoint connections]**.
+1. In the left navigation, select **[!UICONTROL Security + networking]**, then select **[!UICONTROL Networking]**.
+1. Select **[!UICONTROL Private endpoints]** to see a list of private endpoints associated with your account and their current connection states.
 1. Locate the pending connection from [!DNL Adobe] and select **[!UICONTROL Approve]**.
+
+![The Azure portal showing a list of pending private endpoints awaiting approval.](../../assets/catalog/cloud-storage/private-link/azure-portal-approve-private-endpoint.png)
 
 Within minutes, all existing and new destination dataflows for that resource route over the private endpoint.
 
