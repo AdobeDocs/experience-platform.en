@@ -30,7 +30,7 @@ The **[!UICONTROL When to activate]** feature is supported for the following des
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activation_triggers"
 >title="When to activate"
->abstract="Select which types of profile changes trigger exports to this destination. All three triggers are enabled by default. <ul><li><b>Attribute changes:</b> Profile attributes are updated from any upstream data source.</li><li><b>Segmentation changes:</b> Profile enters or exits an audience evaluated by Experience Platform Segmentation Service.</li><li><b>Identity changes:</b> Profile identity graph is updated, for example when a new identity is added.</li></ul>
+>abstract="Select which types of profile changes trigger exports to this destination. All three triggers are enabled by default. Attribute changes occur when profile attributes are updated from any upstream data source. Segmentation changes occur when a profile enters or exits an audience evaluated by Experience Platform Segmentation Service. Identity changes occur when a profile identity graph is updated, for example when a new identity is added."
 
 The table below describes each trigger type. Triggers are listed in order of expected activation volume, from highest to lowest.
 
