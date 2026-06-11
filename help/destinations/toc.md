@@ -34,6 +34,7 @@ nudge: true
     * [Create a new destination connection](./ui/connect-destination.md)
     * Activate data to destinations{#activate}
         * [Activation overview](./ui/activation-overview.md)
+        * [(Beta) When to activate](./ui/when-to-activate.md)
         * [Activate audiences to streaming audience export destinations](./ui/activate-segment-streaming-destinations.md)
         * [Activate audiences to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
         * [Activate audiences to batch profile export destinations](./ui/activate-batch-profile-destinations.md)

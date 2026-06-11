@@ -40,6 +40,10 @@ topic_v2:
 ---
 # [!DNL Facebook] connection
 
+>[!IMPORTANT]
+>
+>Starting June 8th, with the update to Ads API v25, certain audiences will be flagged and not accepted by Facebook. For details, see the section on [restricted audience data](#restricted-audience-data).
+
 ## Overview {#overview}
 
 Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization, and suppression based on hashed emails.
@@ -138,6 +142,14 @@ Before you can send your audiences to [!DNL Facebook], make sure you meet the fo
   >[!IMPORTANT]
   >
   >When signing the [!DNL Facebook Custom Audiences] Terms of Service, make sure to use the same user account that you used to authenticate in the Facebook API.
+
+## Restricted audience data {#restricted-audience-data}
+
+[!DNL Facebook] enforces rules around restricted or sensitive audience data (such as health or financial information) under its Terms of Service. These restrictions were introduced in [Meta Advertiser API v24](https://developers.facebook.com/documentation/ads-commerce/marketing-api/marketing-api-changelog/version24.0#audiences) and apply to all API versions from v24 onward. Since September 5, 2025, audiences that violate these rules [could not be used for advertising in [!DNL Facebook] anyway](https://developers.facebook.com/documentation/ads-commerce/marketing-api/audiences/guides/lookalike-audiences). 
+
+Starting June 4, 2026, Experience Platform upgrades to Meta Advertiser API v25. When audiences are sent from Experience Platform to [!DNL Facebook] through the Ads API, audiences that violate [!DNL Facebook]'s Terms of Service are flagged in addition to being unusable for campaigns. Audiences that are flagged will be blocked from activation and will not receive data from Experience Platform. To resolve a restricted audience, you must either update the audience to remove restricted data or contact [!DNL Facebook] directly. For more information, see [Resolve flagged audiences](https://www.facebook.com/business/help/1055828013359808?id=188852726110565) in the [!DNL Facebook] documentation.
+
+If your audiences are affected, see [Restricted audiences](#restricted-audiences) in the Troubleshooting section for steps to resolve this.
 
 ## ID matching requirements {#id-matching-requirements}
 
@@ -341,4 +353,19 @@ This error occurs when customers are using newly created accounts, and the [!DNL
 
 If you receive the `400 Bad Request` error message after following the steps in [Facebook account prerequisites](#facebook-account-prerequisites), allow a few days for the [!DNL Facebook] permissions to come into effect.
 
+### Restricted audiences {#restricted-audiences}
+
+[!DNL Facebook] enforces rules that block audiences containing data not permitted under its Terms of Service, such as health or financial information.
+
+Starting June 4, 2026, Experience Platform customers will be subject to these restrictions, and blocked audiences will not receive data from Experience Platform.
+
+To identify restricted audiences, check the audience status in [!DNL Facebook Ads Manager]. Restricted audiences display a notice that the audience is blocked from running ads.
+
+To resolve a restricted audience, choose one of the following options:
+
+* Review the audience and remove any information not permitted under [!DNL Facebook]'s Terms of Service, then rebuild it.
+* Create a new custom audience that does not include restricted information.
+* Choose a different existing audience that complies with [!DNL Facebook]'s Terms of Service.
+
+For more information, see the [!DNL Facebook] documentation on [resolving flagged audiences](https://www.facebook.com/business/help/1055828013359808?id=188852726110565).
 
