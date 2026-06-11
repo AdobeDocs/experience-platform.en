@@ -1,5 +1,5 @@
 {
-	"type": "event-ticketscan",
+	"type": "ticketscan",
 	"id": "1234567/GRE1234A/GA4/GA3/13/0",
 	"timestamp": "2025-11-03T01:41:00Z",
 	"lavaId": "aff0ee5f-da62-4054-8cdb-076f5b60bfc3",
