@@ -16,7 +16,7 @@ exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
 
 The **[!UICONTROL Brand Concierge]** section lets you control how Brand Concierge chat sessions behave in the Web SDK tag extension.
 
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Log in to [CX Enterprise](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Select the desired tag property.
 1. Navigate to **[!UICONTROL Extensions]**, then select **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
