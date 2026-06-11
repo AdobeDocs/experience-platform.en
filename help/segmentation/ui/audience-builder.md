@@ -181,7 +181,29 @@ After selecting the audience, details of the audience appear. This includes the 
 
 >[!ENDTABS]
 
-After adding your attribute, you can 
+After adding your attribute, you can select the ellipses icon (...) to change the **condition type** or **delete** the condition.
+
+IMAGE
+
+You can use the following condition types for your attributes:
+
+| Condition type | Description |
+| -------------- | ----------- |
+| Compare to input | Compares the attribute value to the specified input value. This is the default option when choosing an attribute. |
+| Compare to another attribute | Compares the attribute value to the value of another attribute. You can choose the attribute you want to compare using the Discovery Panel. |
+| Has any value | Checks to see if the attribute has any value. This is equivalent to seeing if the attribute "exists". |
+| Has no value | Checks to see if the attribute has no value. This is equivalent to seeing if the attribute "does not exist". |
+
+If you select **Compare to input**, you can choose one of the additional options:
+
+- Allow multiple inputs
+- Case sensitive
+
+If you select **Allow multiple inputs**, you can compare the attribute's value to multiple values.
+
+
+
+actions: Undo, move down, upload file
 
 ### Events {#events}
 
