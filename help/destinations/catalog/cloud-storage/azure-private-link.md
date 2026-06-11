@@ -60,7 +60,7 @@ There is currently no UI that allows you to set up Private Link connections for 
 
 >[!TIP]
 >
->If you already have a Private Endpoint for [!DNL Azure Event Hubs] set up for an [!DNL Experience Platform] source, that endpoint can also be used for destinations. You do not need to provision a separate endpoint.
+>If you already have a Private Endpoint for [!DNL Azure Event Hubs] set up for an [!DNL Experience Platform] source, that endpoint can also be used for destinations. You do not need to provision a separate endpoint. See [Private Link support for sources](/help/sources/tutorials/ui/private-link.md) for more information.
 
 ### [!DNL Azure Blob Storage] {#request-setup-blob}
 
