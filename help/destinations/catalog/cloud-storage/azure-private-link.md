@@ -12,7 +12,7 @@ nudge: true
 
 >[!IMPORTANT]
 >
->[!DNL Azure] Private Link for destinations has no self-service UI. To request setup, contact your Adobe account manager.
+>[!DNL Azure] Private Link for destinations has no self-service UI. To request setup, contact your Adobe account manager. Allow up to five business days for [!DNL Adobe] to provision the endpoint after you submit your request.
 
 ## Supported destinations {#supported-destinations}
 
@@ -50,11 +50,11 @@ The following limits apply to [!DNL Azure] Private Link for destinations.
 
 ## Request Private Link setup {#request-setup}
 
-There is currently no UI that allows you to set up Private Link connections for destinations in a self-service mode. Contact your Adobe account manager to request Private Link configuration and provide the following information.
+There is currently no UI that allows you to set up Private Link connections for destinations in a self-service mode. Contact your Adobe account manager to request Private Link configuration and provide the following information, depending on the destination that you are setting up the private link connection for.
 
 ### [!DNL Azure Event Hubs] {#request-setup-event-hubs}
 
-* [!DNL Azure] Resource ID of your [!DNL Event Hubs] namespace
+* [!DNL Azure] [Resource ID](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/voice-video-calling/get-resource-id) of your [!DNL Event Hubs] namespace
 * Namespace hostname (FQDN)
 * [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
 
@@ -64,14 +64,14 @@ There is currently no UI that allows you to set up Private Link connections for 
 
 ### [!DNL Azure Blob Storage] {#request-setup-blob}
 
-* [!DNL Azure] Resource ID of your storage account
+* [!DNL Azure] [Resource ID](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/voice-video-calling/get-resource-id) of your storage account
 * Storage account hostname (FQDN)
 * Whether you need a Blob endpoint, a DFS endpoint, or both
 * [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
 
 ### [!DNL Azure Data Lake Storage Gen2] {#request-setup-adls}
 
-* [!DNL Azure] Resource ID of your storage account
+* [!DNL Azure] [Resource ID](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/voice-video-calling/get-resource-id) of your storage account
 * Storage account hostname (FQDN)
 * Whether you need a Blob endpoint, a DFS endpoint, or both
 * [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
