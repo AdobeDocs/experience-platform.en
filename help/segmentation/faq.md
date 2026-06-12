@@ -458,5 +458,5 @@ It takes up to one hour for a segment definition to be available.
 
 ### Are there any limitations to the data being streamed in?
 
-When using edge or streaming segmentation, ensure that events for each profile are appropriately spaced out. To maintain system stability and performance, if too many events are streamed in within the same second, Segmentation Service may treat these events as bot-generated data and skip audience evaluation for these events. These events will still be stored. As best practice, you should have **at least** five seconds between events for the same profile to ensure reliable audience evaluation.
+When using edge or streaming segmentation, ensure that events for each profile are appropriately spaced out. To maintain system stability and performance, if too many events are streamed in within the same second (for example, 1000 events in 3 seconds using the same ECID), Segmentation Service may treat these events as bot-generated data and skip audience evaluation for these events. These events will still be stored. As best practice, you should have **at least** five seconds between events for the same profile to ensure reliable audience evaluation.
 
