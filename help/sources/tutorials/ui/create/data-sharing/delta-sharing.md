@@ -4,7 +4,7 @@ description: Learn how to use the Delta Sharing source connector in the Experien
 badge: Beta
 exl-id: 4e889401-08c1-4c81-85e7-49fe1328c65d
 ---
-# Use the [!DNL Delta Sharing] source connector in the UI {#use-deltashare-in-the-ui}
+# Use the [!DNL Databricks Delta Sharing] source connector in the UI {#use-deltashare-in-the-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_deltashare_schema"
@@ -13,18 +13,18 @@ exl-id: 4e889401-08c1-4c81-85e7-49fe1328c65d
 
 >[!AVAILABILITY]
 >
->This feature is currently in a closed beta and is not available to all users. Contact your Adobe account team to request access to the beta.
+>This feature is currently in a **limited beta** and will only be available until July 15, 2026. Contact your Adobe account team to request access to the beta.
 
-Read this guide to learn how to use the [!DNL Delta Sharing] source connector in the Adobe Experience Platform user interface.
+Read this guide to learn how to use the [!DNL Databricks Delta Sharing] source connector in the Adobe Experience Platform user interface.
 
 ## Get started
 
-This tutorial requires a working understanding of the following components of Experience Platform:
+This tutorial requires a working understanding of the following Experience Platform components: 
 
-- [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-  - [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-  - [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [Sources](../../../../home.md): Use Sources to create connections and dataflows for supported external data sources.
+- [Experience Data Model (XDM) schemas](../../../../../xdm/home.md): Shared tables are represented in Experience Platform through relational schemas.
+- [Datasets](../../../../../catalog/home.md): Shared data is represented as virtual datasets in Experience Platform. The source data is not physically ingested or copied into the Experience Platform data lake. 
+- [Query Service / Data Distiller](../../../../../query-service/home.md): Use Query Service or Data Distiller to query and work with virtual datasets. 
 
 >[!IMPORTANT]
 >
@@ -34,7 +34,7 @@ This tutorial requires a working understanding of the following components of Ex
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. Select the appropriate category in the *[!UICONTROL Categories]* panel. Alternatively, use the search bar to navigate to the specific source that you want to use.
 
-To use [!DNL Delta Sharing], select the **[!UICONTROL Delta Sharing]** source card under the *[!UICONTROL Data sharing]* and then select **[!UICONTROL Add data]**.
+To use [!DNL Delta Sharing], select the **[!UICONTROL Delta Sharing for Databricks]** source card under the *[!UICONTROL Data sharing]* and then select **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
@@ -67,7 +67,7 @@ When finished, select **[!UICONTROL Connect to source]** and allow for a few mom
 
 ## Select your data
 
-Next, select the data that you want to ingest to Experience Platform. Use the table directory to navigate to the data that you want to ingest and use the preview interface to view the contents and structure of your data. When finished, select **[!UICONTROL Next]**.
+Next, select the for which you want to create a virtual dataset in Experience Platform and platform-based applications. Use the table directory to navigate to the desired data and use the preview interface to view the contents and structure of the selected data. When finished, select **[!UICONTROL Next]** to select columns for your schema.
 
 ![The select data step showing the table directory and preview of the data to ingest.](../../../../images/tutorials/create/delta-sharing/select-data.png)
 
@@ -104,9 +104,9 @@ You can leave the version descriptor empty if you fall into the following scenar
 
 ## Provide dataset and dataflow details
 
-A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns/fields) and records (rows). Data that is successfully ingested into Experience Platform is persisted within the data lake as datasets. 
+A dataset is a management construct for a collection of data, typically a table, that contains a schema with columns or fields. In **Data Sharing**, the selected data is represented in Experience Platform as a virtual dataset. The data remains in the source system and is not ingested or persisted into the data lake.
 
-Once your dataset is configured, you must then provide details on your dataflow, including a name, an optional description, and alert configurations.
+Once your virtual dataset is configured, provide details for your dataflow, including a name, an optional description, and alert configurations.
 
 | Dataflow configurations | Description |
 | --- | --- |
@@ -131,4 +131,4 @@ After confirming the details are correct, select **[!UICONTROL Finish]**.
 
 ## Monitor your dataflow
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on ingestion rates, success, and errors. For more information on how to monitor dataflow, see the tutorial on [monitoring accounts and dataflows in the UI](../../../../../dataflows/ui/monitor-sources.md).
+Once your dataflow has been created, you can monitor its status and activity to view information such as run status, success, and errors. For more information, see the tutorial on [monitoring accounts and dataflows in the UI](../../../../../dataflows/ui/monitor-sources.md).
