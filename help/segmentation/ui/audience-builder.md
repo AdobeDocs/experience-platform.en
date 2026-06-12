@@ -115,7 +115,7 @@ The **[!UICONTROL Attributes]** section lets you browse [!DNL Profile] attribute
 
 IMAGE
 
-You can select **[!UICONTROL Add field]** to add an attribute or audience to the rule building canvas or you can select **[!UICONTROL Add group]** to add a container to the canvas. 
+You can select **[!UICONTROL Add field]** to add an attribute or audience to the rule building canvas or you can select **[!UICONTROL Add group]** to add a container to the canvas. More information about groups can be found in the [Groups section](#groups).
 
 IMAGE
 
@@ -185,6 +185,8 @@ After adding your attribute, you can select the ellipses icon (...) to change th
 
 IMAGE
 
++++ Attribute additional options
+
 You can use the following condition types for your attributes:
 
 | Condition type | Description |
@@ -199,11 +201,29 @@ If you select **Compare to input**, you can choose one of the additional options
 - Allow multiple inputs
 - Case sensitive
 
-If you select **Allow multiple inputs**, you can compare the attribute's value to multiple values.
+If you select **Allow multiple inputs**, the **Multiple Inputs** popover is displayed. On this popover, you can add the values to compare the attribute to.
 
+IMAGE
 
+You can either add the values on a line-by-line basis in the **Values** box, or choose the values from the **Suggested values** section.
 
-actions: Undo, move down, upload file
+IMAGE
+
+The popover also provides the following available actions. If you select the ![undo icon](), the inputs revert to the initial state. If you select the ![move down icon](), the selected value moves down one line. If you select the ![upload file icon](), you can upload a CSV or TSV file that contain the values you want to compare against.
+
+IMAGE
+
+If you select **Case sensitive**, the attribute's value **must** match the exact casing of specified input value.
+
++++
+
+You can add additional attributes to the audience by selecting **Add field**. If you add an additional attribute, you can choose if the audience requires **all** of the added attributes or if the audience requires **one** of the added attributes.
+
+IMAGE
+
+If you want to remove an attribute you've added, select the ![minus icon]().
+
+IMAGE
 
 ### Events {#events}
 
@@ -223,7 +243,34 @@ You can add a time constraint at a canvas-level or event-level. Time constraints
 
 IMAGE
 
-You can also set a 
+You can edit settings related to the event by selecting the event, followed by the bubble that appears. 
+
+IMAGE
+
+Once you've selected the bubble, you can choose if the event should be or should not be included as well as modify the count function. Count functions are used to look for the specified event and count the number of times they're done. 
+
+| Count function | Description |
+| -------------- | ----------- |
+| At least | There must be **at least** the number of events specified. |
+| At most | There must be **at most** the number of events specified. | 
+| Exactly | There must be **exactly** the number of events specified. |
+| Between | There must be **between** the two number of events specified. |
+
+IMAGE
+
+You can select the ellipses icon for additional options for the event. Options include [**Add group**](#groups), **Remove event type**, **Aggregate**, and [**Apply time rule**](#time-constraints).
+
+If you select **Remove event type**, you remove the event from the audience.
+
+If you select **Aggregate**, you can add an aggregation function to the event. An aggregation is a calculation on a group of XDM attributes whose data type is a number (either a double or an integer). The four supported aggregation functions are count, sum, average, min, and max.
+
+| Aggregation function | Description |
+| -------------------- | ----------- |
+| Count | A function that **counts** the number of events that occurred. |
+| Sum | A function that **sums** the  |
+| Average | |
+| Min | |
+| Max | |
 
 ### Groups {#groups}
 
