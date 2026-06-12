@@ -117,6 +117,7 @@ nudge: true
         * [Advertising](extensions/client/web-sdk/configure/advertising.md)
         * [Configuration overrides](extensions/client/web-sdk/configure/configuration-overrides.md)
         * [Advanced settings](extensions/client/web-sdk/configure/advanced-settings.md)
+        * [Repair data element references](extensions/client/web-sdk/configure/repair-data-element-references.md)
       * [Event types](extensions/client/web-sdk/event-types.md)
       * Action types {#actions}
         * [Overview](extensions/client/web-sdk/actions/actions-overview.md)

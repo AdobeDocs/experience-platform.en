@@ -78,7 +78,7 @@ alloy("configure", {
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   pushNotifications: {
     vapidPublicKey: "BEl62iUYgU[...]KGP4jAQlJz",
-    applicationId: "my-app-id",
+    appId: "my-app-id",
     trackingDatasetId: "4dc19305cdd27e03dd9a6bbe",
   },
 });
@@ -89,7 +89,7 @@ alloy("configure", {
 | Property | Type | Required | Description |
 |---|---|---|---|
 | **`vapidPublicKey`** | String | Yes | The VAPID public key used for push subscriptions. Must be a Base64-encoded string. |
-| **`applicationId`** | String | Yes | The application ID associated with the VAPID public key. |
+| **`appId`** | String | Yes | The application ID associated with the VAPID public key. |
 | **`trackingDatasetId`** | String | Yes | The system dataset ID used for push notification tracking. |
 
 ## Important considerations {#important-considerations}
