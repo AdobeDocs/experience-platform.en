@@ -100,7 +100,6 @@ Follow these recommendations to get the most out of [!DNL Azure] Private Link fo
 * Do not create a dedicated VNet or open your network to [!DNL Adobe]. The Private Endpoint lives entirely in Adobe's VNet.
 * Align your [!DNL Azure] resource region with your [!DNL Experience Platform] data region for best performance.
 * After the Private Endpoint is active, disable public network access to your [!DNL Azure] resource for full security benefit.
-* Do not reconfigure your destination in [!DNL Experience Platform] after approval. Routing changes transparently.
 
 ## Limitations {#limitations}
 
