@@ -8,9 +8,9 @@ exl-id: 69c4e250-aa9b-4db1-b44b-6056bdddb637
 
 >[!AVAILABILITY]
 >
->This feature is currently in a closed beta and is not available to all users. Contact your Adobe account team to request access to the beta.
+>This feature is currently in a **limited beta** and will only be available until July 15, 2026. Contact your Adobe account team to request access to the beta.
 
-With the [!DNL Delta Sharing] source connector, you can securely connect to your [!DNL Databricks Delta Sharing] servers and easily create virtual datasets right inside Adobe Experience Platform. This means you can query and use external tables as if they were native to Platform, mapping them directly to Experience Data Model (XDM) schemas for use across all your Platform applications and services—without the need to physically ingest the data. By relying on [!DNL Delta Sharing], you avoid duplicate data storage, cut down on storage costs, and simplify your data management.
+With the [!DNL Delta Sharing] source connector, you can securely connect to your [!DNL Databricks Delta Sharing] source and create virtual datasets in Adobe Experience Platform. This allows you to query and use external tables through Experience Platform services, while representing the shared data through relational schemas, without physically ingesting the data into Platform. By using [!DNL Delta Sharing], you can reduce duplicate data storage, lower storage costs, and simplify data management. 
 
 ## Prerequisites {#prerequisites}
 
@@ -18,7 +18,7 @@ Before you connect to a [!DNL Databricks Delta Sharing] source from Adobe Experi
 
 >[!IMPORTANT]
 >
->Currently, Experience Platform can only ingest files in JSON format through [!DNL Delta Sharing]. Make sure that any source files you want to bring into Experience Platform using [!DNL Delta Sharing] are saved in JSON format.
+>[!DNL Delta Sharing] does not physically ingest or copy source data into Experience Platform. Instead, shared data is represented in Experience Platform as virtual datasets. Ensure that the shared tables you want to use are available through Delta Sharing and can be represented through relational schemas in Experience Platform. 
 
 ### [!DNL Databricks] provider prerequisites 
 
@@ -69,7 +69,7 @@ Download the [!DNL Delta Sharing] credentials file (.share) for this recipient. 
 
 #### Network and firewall configuration
 
-If your cloud storage accounts ([!DNL Azure Data Lake Storage Gen2], [!DNL Amazon S3], [!DNL Google Cloud Storage]) are firewalled, you must allow Experience Platform's [!DNL Databricks] workspaces to reach:
+If your cloud storage accounts such as, [!DNL Azure Data Lake Storage Gen2], [!DNL Amazon S3], [!DNL Google Cloud Storage] are protected by firewall rules, ensure that Experience Platform can access the required [!DNL Delta Sharing resource, including]:
 
 - The [!DNL Delta Sharing] endpoint from the `.share` file.
 - The underlying storage paths for the shared tables.
@@ -79,18 +79,18 @@ If your cloud storage accounts ([!DNL Azure Data Lake Storage Gen2], [!DNL Amazo
 #### Supported environment
 
 - Your Experience Platform organization must be hosted in a supported Azure region.
-- The [!DNL Delta Sharing] source feature must be enabled for your organization. (If you do not see the "Data Sharing → Databricks Delta Share" card in the Sources catalog, contact Adobe Support or your Adobe representative).
+- The [!DNL Delta Sharing] source feature must be enabled for your organization. If you do not see the "Data Sharing → Databricks Delta Share" card in the Sources catalog, contact Adobe Support or your Adobe representative.
 
-Additionally, the user creating the connection must have, in the target sandbox:
+Additionally, the user creating the connection must have the following permissions in the target sandbox:
 
-- Access to Sources and permission to create source connections / dataflows.
-- Permission to create schemas and datasets (virtual datasets).
+- Access to Sources and Permission to create source connections / dataflows.
+- Permission to create schemas and datasets, including virtual datasets.
 
 #### Governance expectations
 
-- [!DNL Delta Sharing] connections create virtual datasets in Catalog: type = `"virtual", access = "read_only", ingestionType = "virtual"`.
-- No rows are ingested into Experience Platform; only metadata (schema, lineage, connection ID) is stored.
-- Standard governance labels and policies can be applied to the virtual schema, but privacy/retention jobs do not modify the external data.
+- [!DNL Delta Sharing] connections create virtual datasets in Catalog. These datasets are read-only and are represented as virtual datasets in Experience Platform.
+- No rows are ingested into Experience Platform. Only metadata, such as schema, lineage, and connection details, is stored. 
+- Standard governance labels and policies can be applied to the virtual schema, but privacy/retention jobs do not modify the source data.
 
 ### Gather required credentials {#gather-required-credentials}
 
@@ -115,6 +115,6 @@ When mapping shared tables to Experience Platform schemas, only the following XD
 - **Structural:** Array, Object
 - **Constrained string variants:** Enum / Suggested list (meta:enum)
 
-## Connect to [!DNL Delta Sharing] in the UI
+## Connect to [!DNL Databricks Delta Sharing] in the UI
 
-Read the [[!DNL Delta Sharing ] UI guide](../../tutorials/ui/create/data-sharing/delta-sharing.md) to learn how you can ingest data to Experience Platform with the [!DNL Delta Sharing] source.
+Read the [[!DNL Databricks Delta Sharing ] UI guide](../../tutorials/ui/create/data-sharing/delta-sharing.md) to learn how you can ingest data to Experience Platform with the [!DNL Delta Sharing] source.
