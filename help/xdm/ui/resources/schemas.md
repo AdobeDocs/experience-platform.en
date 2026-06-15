@@ -7,7 +7,7 @@ exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 ---
 # Create and edit schemas in the UI {#create-edit-schemas-in-ui}
 
-This guide provides an overview of how to create, edit, and manage Experience Data Model (XDM) schemas for your organization in the Adobe Experience Platform UI. You'll learn how to create both relational and standard schemas, customize schema structures, manage schemas from the Browse view, and finalize schemas for production use.
+Use the Adobe Experience Platform UI to create, edit, and manage Experience Data Model (XDM) schemas for your organization. This guide shows you how to create standard and relational schemas, customize schema structures, manage schemas from the [!UICONTROL Browse] workspace, and prepare schemas for production use.
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ For guidance on how to enable change data capture in Experience Platform Sources
 
 ### Create a standard schema {#create-standard-schema}
 
-Select **[!UICONTROL Standard]** from the schema type dropdown menu. The [!UICONTROL Create a schema] dialog appears. In this dialog, you can choose to either manually create a schema by adding fields and field groups, or you can upload a CSV file and use ML algorithms to generate a schema. Select a schema creation workflow from the dialog.
+Select **[!UICONTROL Standard]** from the schema type menu. The [!UICONTROL Create a schema] dialog appears. From this dialog, choose a schema creation workflow. You can manually create a schema by adding fields and field groups, or upload a CSV file to generate a schema automatically.
 
 ![The Create a schema dialog with the workflow options and select highlighted.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
