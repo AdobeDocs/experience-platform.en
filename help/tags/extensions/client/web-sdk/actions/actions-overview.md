@@ -26,7 +26,7 @@ topic_v2:
 
 This page lists all supported actions within a tag rule. To create or edit the actions within a tag rule:
 
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Log in to [CX Enterprise](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Select the desired tag property.
 1. Navigate to **[!UICONTROL Rules]**, then select the desired rule.
