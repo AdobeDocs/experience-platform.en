@@ -156,6 +156,7 @@ The Bombora destination requires you to configure the following mappings for suc
 |---------|----------|---------|
 | Any value | `Identity: primaryId` | This mapping is mandatory for Experience Platform to establish a connection to Bombora. This value does not get exported to Bombora, but is required for the destination configuration. You can select any attribute for the source field.|
 | `xdm: accountOrganization.domain` | `xdm: companyWebsiteDomain` | Bombora uses website or domain addresses to create an account list. |
+| `xdm: accountKey.sourceKey` | `xdm: externalAccountId` | A unique account identifier. Bombora uses this field to uniquely identify accounts. If multiple records share the same domain value but have no unique account ID, Bombora's API rejects the request. |
 
 ![Add mandatory mappings](../..//assets/catalog/advertising/bombora/mappings.png)
 
