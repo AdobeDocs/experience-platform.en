@@ -485,7 +485,11 @@ Takes you straight to the Schemas workspace [!UICONTROL Label] tab. For full ins
 >
 >This action is available only for standard (non-relational) schemas.
 
-Creates a dataset directly from the selected schema. This action opens the dataset creation workflow with the schema pre-selected as the dataset's underlying structure.
+Opens the **[!UICONTROL Create dataset from schema]** dialog with the source schema name pre-populated. Enter a dataset **[!UICONTROL Name]** and, optionally, a **[!UICONTROL Description]**, then select **[!UICONTROL Create dataset]** to create the dataset.
+
+![The Create dataset from schema dialog with the Name and Description fields highlighted and the Create dataset button.](../../images/ui/explore/create-dataset-from-schema-dialog.png)
+
+After the dataset is created, it opens in the [!UICONTROL Datasets] workspace.
 
 #### Manage tags {#manage-tags}
 

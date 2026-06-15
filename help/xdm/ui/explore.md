@@ -30,8 +30,8 @@ Filter schemas by their fundamental characteristics and organizational attribute
 
 | Filter | Control Type | Description |
 |--------|-------------|-------------|
-| [!UICONTROL Show profiles] | Radio buttons | Display [!UICONTROL All schemas], [!UICONTROL Profile-enabled schemas] only, or [!UICONTROL Profile-disabled schemas] only. Profile-enabled schemas participate in [Real-Time Customer Profile](../../profile/home.md) and support unified customer views across your organization. |
-| [!UICONTROL Schema type] | Checkboxes | Filter by schema origin: [!UICONTROL Standard] schemas (provided by Adobe), [!UICONTROL Relational] schemas (structured, relational data modeling capabilities), or [!UICONTROL Adhoc] schemas (fields namespaced for use by a single dataset). |
+| [!UICONTROL Show profiles] | Radio buttons | Display [!UICONTROL All], [!UICONTROL Enabled] only, or [!UICONTROL Disabled] only. Profile-enabled schemas participate in [Real-Time Customer Profile](../../profile/home.md) and support unified customer views across your organization. |
+| [!UICONTROL Schema type] | Checkboxes | Filter by schema origin: [!UICONTROL Standard] schemas (provided by Adobe), [!UICONTROL Relational] schemas (structured, relational data modeling capabilities), or [!UICONTROL Ad hoc] schemas (fields namespaced for use by a single dataset). |
 | [!UICONTROL Class] | Dropdown | Show only schemas built on specific class foundations such as XDM Individual Profile, XDM ExperienceEvent, or custom classes defined by your organization. |
 | [!UICONTROL Tags] | Dropdown | Filter schemas by user-applied, user-defined tags. Options include [!UICONTROL Has any tag] and [!UICONTROL Has all tags]. Use tags to locate schemas organized by project, team, business domain, or custom taxonomies that support your organizational schema management practices. |
 
@@ -78,9 +78,11 @@ When viewing schema relationships on the [!UICONTROL Relationships] tab, use add
 
 ### Combine multiple filters
 
-Apply multiple filters simultaneously to create precise schema discovery queries. For example, find [!UICONTROL Standard schemas] with custom tags that are [!UICONTROL Profile-enabled] and created within the last month, or locate Adhoc schemas with an email primary identity that contain relationship fields.
+Apply multiple filters simultaneously to create precise schema discovery queries. For example, find [!UICONTROL Standard schemas] with custom tags that are [!UICONTROL Profile-enabled] and created within the last month, or locate [!UICONTROL Ad hoc] schemas with an email primary identity that contain relationship fields.
 
 ![The enhanced filter panel in the Schemas workspace showing multiple filter types applied simultaneously.](../images/ui/explore/enhanced-filters.png)
+
+Applied filters appear as removable cards in the inventory header row. To remove an individual filter, select the **×** on its card. To remove all active filters at once, select **[!UICONTROL Clear all]**.
 
 Use the search bar to narrow down results further.
 
@@ -90,13 +92,13 @@ The resources displayed in search results are ordered first by title matches, th
 
 When you have found the resource you want to explore, select its name from the list to view its structure in the canvas.
 
-## Enhanced schema browsing and organization
+## Browse, organize, and manage schemas {#browse-organize-manage-schemas}
 
 Use the [!UICONTROL Schemas] workspace filtering capabilities and organizational tools to find, organize, and act on schemas. The inline actions reduce navigation steps for common schema operations.
 
 ### Browse and filter metadata
 
-The schema inventory columns provide immediate visibility into schema characteristics and usage. View tags, schema type, Profile enablement status, created date, last modified, class, identities, relationships, behavior, and other metadata directly in the table view without opening individual schemas.
+The schema inventory columns provide immediate visibility into schema characteristics and usage. View tags, schema type, Profile enablement status, created date, last modified, class, identities, relationships, behavior, and other metadata directly in the table view without opening individual schemas. When the inventory contains more results than fit on a single page, use the page counter at the bottom of the list to navigate between pages.
 
 ![The Schemas workspace schema inventory showing the tags, schema type, Profile enablement, created date, last modified, class, identities, relationships, and behavior columns.](../images/ui/explore/schema-inventory-columns.png) 
 
@@ -112,7 +114,7 @@ Edit schema properties, apply data governance labels, delete schemas, and manage
 >
 >Sample files are for testing schema structure and should not contain production data.
 
-These inline actions enable batch operations on multiple schemas when needed. For detailed guidance on each inline action, see the [schema actions guide](./resources/schemas.md#more).
+These inline actions enable batch operations on multiple schemas when needed. For detailed guidance on each inline action, see the [schema actions guide](./resources/schemas.md#manage-from-browse).
 
 ### Navigate schemas using tags and folders
 
@@ -126,7 +128,7 @@ To open your folder structure, select the show folders icon (![The show folders 
 
 ![Navigate folder hierarchies in the left rail to browse and locate schemas.](../images/ui/explore/move-to-folder.png)
 
-Both organizational approaches integrate with the filtering system, allowing you to quickly locate schemas based on their assigned tags or folder placement. For detailed guidance on creating and managing tags across Experience Platform, see the [managing unified tags guide](../../../administrative-tags/ui/managing-tags.md). <!-- PLAT-247143 -->
+Both organizational approaches integrate with the filtering system, allowing you to quickly locate schemas based on their assigned tags or folder placement. For detailed guidance on creating and managing tags across Experience Platform, see the [managing unified tags guide](../../../administrative-tags/ui/managing-tags.md).
 
 ## Explore an XDM resource in the canvas {#explore}
 
@@ -200,7 +202,7 @@ See the tutorial on [creating a relationship in the UI](../tutorials/relationshi
 
 ## Related documentation
 
-The schema exploration capabilities detailed in this guide work seamlessly with other Experience Platform organizational and governance features. For comprehensive information on organizing your business objects with user-defined tags and categories, see the [managing unified tags guide](../../../administrative-tags/ui/managing-tags.md). <!-- PLAT-247143 --> To understand consistent UI patterns for advanced search, filtering, and inline actions that are applied across Experience Platform workspaces, refer to the [datasets user guide](../../../catalog/datasets/user-guide.md). <!-- PLAT-247143 --> When working with data governance labels and policies on your schemas, consult the [data usage labels user guide](../../../data-governance/labels/user-guide.md) for instructions on applying and managing labels to support compliance requirements. <!-- PLAT-247143 -->
+The schema exploration capabilities detailed in this guide work seamlessly with other Experience Platform organizational and governance features. For comprehensive information on organizing your business objects with user-defined tags and categories, see the [managing unified tags guide](../../../administrative-tags/ui/managing-tags.md). To understand consistent UI patterns for advanced search, filtering, and inline actions that are applied across Experience Platform workspaces, refer to the [datasets user guide](../../../catalog/datasets/user-guide.md). When working with data governance labels and policies on your schemas, consult the [data usage labels user guide](../../../data-governance/labels/user-guide.md) for instructions on applying and managing labels to support compliance requirements. 
 
 ## Next steps
 
