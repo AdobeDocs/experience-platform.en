@@ -349,7 +349,6 @@ For example, you are activating an audience called "Loyalty Members in Californi
 >   - [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
 >   - [[!DNL SendGrid]](../../destinations/catalog/email-marketing/sendgrid.md)
 >   - [[!DNL Snap Inc]](../../destinations/catalog/advertising/snap-inc.md)
->   - ZoomInfo
 >
 >- For batch destinations, audience-level metrics are currently recorded for successful dataflow runs only. They are not recorded for failed dataflow runs and excluded records. For dataflow runs to streaming destinations, metrics are captured and displayed for activated and excluded records.
 
