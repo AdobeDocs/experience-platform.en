@@ -82,7 +82,7 @@ Apply multiple filters simultaneously to create precise schema discovery queries
 
 ![The enhanced filter panel in the Schemas workspace showing multiple filter types applied simultaneously.](../images/ui/explore/enhanced-filters.png)
 
-Applied filters appear as removable cards in the inventory header row. To remove an individual filter, select the **×** on its card. To remove all active filters at once, select **[!UICONTROL Clear all]**.
+Applied filters appear as removable chips in the inventory header row. To remove an individual filter, select the **×** on its chip. To remove all active filters at once, select **[!UICONTROL Clear all]**.
 
 Use the search bar to narrow down results further.
 
@@ -98,7 +98,7 @@ Use the [!UICONTROL Schemas] workspace filtering capabilities and organizational
 
 ### Browse and filter metadata
 
-The schema inventory columns provide immediate visibility into schema characteristics and usage. View tags, schema type, Profile enablement status, created date, last modified, class, identities, relationships, behavior, and other metadata directly in the table view without opening individual schemas. When the inventory contains more results than fit on a single page, use the page counter at the bottom of the list to navigate between pages.
+The schema inventory columns provide immediate visibility into schema characteristics and usage. View tags, schema type, Profile enablement status, created date, last modified, class, identities, relationships, behavior, and other metadata directly in the table view without opening individual schemas. Select any column header to sort the inventory by that column; select it again to reverse the sort order. When the inventory contains more results than fit on a single page, use the page counter at the bottom of the list to navigate between pages.
 
 ![The Schemas workspace schema inventory showing the tags, schema type, Profile enablement, created date, last modified, class, identities, relationships, and behavior columns.](../images/ui/explore/schema-inventory-columns.png) 
 
@@ -114,7 +114,7 @@ Edit schema properties, apply data governance labels, delete schemas, and manage
 >
 >Sample files are for testing schema structure and should not contain production data.
 
-These inline actions enable batch operations on multiple schemas when needed. For detailed guidance on each inline action, see the [schema actions guide](./resources/schemas.md#manage-from-browse).
+For detailed guidance on each inline action, see the [schema actions guide](./resources/schemas.md#manage-from-browse).
 
 ### Navigate schemas using tags and folders
 
