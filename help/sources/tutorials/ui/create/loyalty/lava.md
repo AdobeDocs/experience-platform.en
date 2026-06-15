@@ -4,10 +4,6 @@ description: Learn how to stream data from LAVA to Adobe Experience Platform usi
 ---
 # Create a source connection and dataflow to stream [!DNL LAVA] data using the UI
 
->[!AVAILABILITY]
->
->The [!DNL LAVA] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
-
 Follow this step-by-step guide to help you set up your own [!DNL LAVA] source connector in the Experience Platform user interface.
 
 >[!IMPORTANT]
