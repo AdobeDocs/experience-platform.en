@@ -35,7 +35,7 @@ topic_v2:
 
 The **[!UICONTROL Evaluate rulesets]** action type lets you manually trigger ruleset evaluations. Rulesets are returned by Adobe Journey Optimizer to support features like in-browser messages.
 
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Log in to [CX Enterprise](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Select the desired tag property.
 1. Navigate to **[!UICONTROL Rules]**, then select the desired rule.
