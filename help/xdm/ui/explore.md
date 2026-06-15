@@ -108,31 +108,33 @@ If the inventory contains more results than fit on a single page, use the page c
 
 ### Take inline actions on schemas
 
-Each schema row provides access to contextual actions through an ellipsis menu, eliminating the need to navigate into individual schema details for common tasks.
+Use the ellipsis menu for a schema row to perform common schema actions directly from the inventory view.
 
 ![The ellipsis menu for a schema row showing inline actions such as Edit, Delete, Apply labels, and Manage tags.](../images/ui/explore/schema-inline-actions.png)
 
-Edit schema properties, apply data governance labels, delete schemas, and manage organizational metadata directly from the browse view. Additional actions include moving schemas to folders, adding them to deployment packages, copying JSON structures for development workflows, and downloading sample files for testing.
+You can edit schema properties, apply data governance labels, delete schemas, and manage tags without opening the schema. Additional actions include moving schemas to folders, adding schemas to deployment packages, copying schema JSON, and downloading sample files for testing.
 
 >[!NOTE]
 >
->Sample files are for testing schema structure and should not contain production data.
+>Use sample files only to test schema structure. Do not include production data.
 
-For detailed guidance on each inline action, see the [schema actions guide](./resources/schemas.md#manage-from-browse).
+For detailed instructions on each action, see the [schema actions guide](./resources/schemas.md#manage-from-browse).
 
 ### Navigate schemas using tags and folders
 
-The workspace supports both [tag-based](./resources/schemas.md#manage-tags) and [folder-based organization](./resources/schemas.md#move-to-folder) systems to help you discover and navigate schemas efficiently. Use the tag filtering system to locate schemas categorized by project, team, data domain, or any custom taxonomy applied by your organization. Alternatively, browse folder hierarchies in the left rail for structured schema discovery and access.
+Use tags and folders to organize and locate schemas in the inventory. Tags help you group schemas by project, team, data domain, or other categories defined by your organization. Folders provide a hierarchical structure for organizing related schemas.
 
-To filter schemas using tags, select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to open the filter panel. Then, use the **[!UICONTROL Has any tag]** dropdown to choose from your available tags.
+To filter schemas by tag, select the filter icon (![Filter icon](/help/images/icons/filter.png)) to open the filter panel. Then select one or more tags from the **[!UICONTROL Has any tag]** dropdown.
 
 ![Filter schemas by user-defined tags in the schema inventory to locate specific schemas.](../images/ui/explore/user-defined-tags.png)
 
-To open your folder structure, select the show folders icon (![The show folders icon](/help/images/icons/rail-left.png)). Next, select your chosen folder to see all associated schemas.
+To browse schemas by folder, select the show folders icon (![Show folders icon](/help/images/icons/rail-left.png)). The folder hierarchy appears in the left rail. Select a folder to view its associated schemas.
 
 ![Navigate folder hierarchies in the left rail to browse and locate schemas.](../images/ui/explore/move-to-folder.png)
 
-Both organizational approaches integrate with the filtering system, allowing you to quickly locate schemas based on their assigned tags or folder placement. For detailed guidance on creating and managing tags across Experience Platform, see the [managing unified tags guide](../../../administrative-tags/ui/managing-tags.md).
+Tags and folders work with the inventory filtering system, allowing you to narrow the list of schemas based on their assigned tags and folder locations.
+
+For information on creating and managing tags across Experience Platform, see the [managing unified tags guide](../../../administrative-tags/ui/managing-tags.md).
 
 ## Explore an XDM resource in the canvas {#explore}
 
@@ -146,11 +148,11 @@ All object-type fields containing sub-properties are collapsed by default when t
 
 ### Standard class and field group indicator {#standard-class-and-field-group-indicator}
 
-Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](/help/images/icons/lock-closed.png)). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
+In the Schema Editor, standard classes and field groups display a padlock icon (![Padlock icon.](/help/images/icons/lock-closed.png)). The icon identifies Adobe-generated resources that have editing restrictions. It appears in the left rail next to class and field group names, and next to fields that belong to Adobe-generated resources in the schema diagram.
 
 ![The Schema Editor with the padlock icon highlighted](../images/ui/explore/schema-editor-padlock-icon.png)
 
-See the [Add custom fields to standard field groups](./resources/schemas.md#custom-fields-for-standard-groups) documentation for guidance. You cannot edit a standard class.
+You cannot edit a standard class. To extend a standard field group, see the [Add custom fields to standard field groups](./resources/schemas.md#custom-fields-for-standard-groups) documentation.
 
 ### System-generated fields {#system-fields}
 
