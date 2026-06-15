@@ -14,13 +14,13 @@ This tutorial covers the steps for exploring existing schemas, classes, field gr
 
 ## Look up a schema resource {#lookup}
 
-In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left rail. The [!UICONTROL Schemas] workspace provides a **[!UICONTROL Browse]** tab to explore all schemas in your organization, along with additional dedicated tabs for exploring **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, **[!UICONTROL Data types]**, and **[!UICONTROL Relationships]** respectively.
+In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left rail. The [!UICONTROL Schemas] workspace provides a **[!UICONTROL Browse]** tab where you can view all schemas in your organization. You can also use the **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, **[!UICONTROL Data types]**, and **[!UICONTROL Relationships]** tabs to view those resources.
 
 ![The Schemas workspace with several tabs highlighted.](../images/ui/explore/tabs.png)
 
 ## Filter and search schemas {#filter-search}
 
-Use the filter panel to locate schemas efficiently based on multiple criteria. Select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to access filtering options that help you discover schemas that meet specific requirements for your data modeling and governance workflows.
+Use the filter panel to find schemas that match specific criteria. Select the filter icon (![Filter Icon Image](/help/images/icons/filter.png)) to view the available filters and narrow the list of schemas.
 
 ![The [!UICONTROL Schemas] workspace [!UICONTROL Browse] tab with the comprehensive filters panel highlighted.](../images/ui/explore/schemas-filter-sidebar.png)
 
@@ -78,27 +78,31 @@ When viewing schema relationships on the [!UICONTROL Relationships] tab, use add
 
 ### Combine multiple filters
 
-Apply multiple filters simultaneously to create precise schema discovery queries. For example, find [!UICONTROL Standard schemas] with custom tags that are [!UICONTROL Profile-enabled] and created within the last month, or locate [!UICONTROL Ad hoc] schemas with an email primary identity that contain relationship fields.
+Combine filters to narrow the list of schemas and find specific resources more quickly. For example, you can find [!UICONTROL Profile-enabled] standard schemas with custom tags that were created within the last month, or locate ad hoc schemas that use an email primary identity and contain relationship fields.
 
 ![The enhanced filter panel in the Schemas workspace showing multiple filter types applied simultaneously.](../images/ui/explore/enhanced-filters.png)
 
-Applied filters appear as removable chips in the inventory header row. To remove an individual filter, select the **×** on its chip. To remove all active filters at once, select **[!UICONTROL Clear all]**.
+Applied filters appear as removable chips in the inventory header row. To remove a filter, select the **×** on its chip. To remove all active filters at once, select **[!UICONTROL Clear all]**.
 
 Use the search bar to narrow down results further.
 
 ![The Browse tab of the Schemas workspace with the search field highlighted.](../images/ui/explore/search.png)
 
-The resources displayed in search results are ordered first by title matches, then by description matches. Accordingly, the more word matches in either of these categories, the higher the resource appears in the list.
+Search results are ranked based on matches in resource titles and descriptions. Title matches are prioritized over description matches, and resources with more matching terms appear higher in the results list.
 
 When you have found the resource you want to explore, select its name from the list to view its structure in the canvas.
 
 ## Browse, organize, and manage schemas {#browse-organize-manage-schemas}
 
-Use the [!UICONTROL Schemas] workspace filtering capabilities and organizational tools to find, organize, and act on schemas. The inline actions reduce navigation steps for common schema operations.
+Use the [!UICONTROL Schemas] workspace to find, organize, and manage schemas. You can filter the schema inventory, sort metadata columns, and perform common schema actions directly from the inventory view.
 
 ### Browse and filter metadata
 
-The schema inventory columns provide immediate visibility into schema characteristics and usage. View tags, schema type, Profile enablement status, created date, last modified, class, identities, relationships, behavior, and other metadata directly in the table view without opening individual schemas. Select any column header to sort the inventory by that column; select it again to reverse the sort order. When the inventory contains more results than fit on a single page, use the page counter at the bottom of the list to navigate between pages.
+The schema inventory displays key schema metadata in a single table view. You can view tags, schema type, Profile enablement status, created date, last modified date, class, identities, relationships, behavior, and other metadata without opening individual schemas.
+
+To sort the inventory, select a column header. Select the same column header again to reverse the sort order.
+
+If the inventory contains more results than fit on a single page, use the page controls at the bottom of the list to navigate between pages.
 
 ![The Schemas workspace schema inventory showing the tags, schema type, Profile enablement, created date, last modified, class, identities, relationships, and behavior columns.](../images/ui/explore/schema-inventory-columns.png) 
 
