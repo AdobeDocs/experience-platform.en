@@ -206,10 +206,11 @@ To view the identity namespace of the reference schema's primary identity, selec
 
 See the tutorial on [creating a relationship in the UI](../tutorials/relationship-ui.md) for more information on the use of relationships in XDM schemas.
 
-## Related documentation
-
-The schema exploration capabilities detailed in this guide work seamlessly with other Experience Platform organizational and governance features. For comprehensive information on organizing your business objects with user-defined tags and categories, see the [managing unified tags guide](../../../administrative-tags/ui/managing-tags.md). To understand consistent UI patterns for advanced search, filtering, and inline actions that are applied across Experience Platform workspaces, refer to the [datasets user guide](../../../catalog/datasets/user-guide.md). When working with data governance labels and policies on your schemas, consult the [data usage labels user guide](../../../data-governance/labels/user-guide.md) for instructions on applying and managing labels to support compliance requirements. 
-
 ## Next steps
 
-This document covers how to explore existing XDM resources in the Experience Platform UI. For more information on the different features of the [!UICONTROL Schemas] workspace and [!DNL Schema Editor], see the [[!UICONTROL Schemas] workspace overview](./overview.md).
+Use the following resources to continue working with XDM schemas and related Experience Platform features:
+
+- To learn more about the **[!UICONTROL Schemas]** workspace and **[!DNL Schema Editor]**, see the [[!UICONTROL Schemas] workspace overview](./overview.md).
+- For information on creating and managing tags, see the [managing unified tags guide](../../../administrative-tags/ui/managing-tags.md).
+- For guidance on inventory views, filtering, search, and workspace navigation patterns, see the [datasets user guide](../../../catalog/datasets/user-guide.md).
+- For information on applying and managing data governance labels, see the [data usage labels user guide](../../../data-governance/labels/user-guide.md).
