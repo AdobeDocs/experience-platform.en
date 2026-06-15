@@ -55,7 +55,7 @@ There is currently no UI that allows you to set up Private Link connections for 
 ### [!DNL Azure Event Hubs] {#request-setup-event-hubs}
 
 * [!DNL Azure] [Resource ID](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/voice-video-calling/get-resource-id) of your [!DNL Event Hubs] namespace
-* The fully qualified domain name (FQDN) of your [!DNL Event Hubs] namespace (for example, `<namespace>.servicebus.windows.net`)
+* The [fully qualified domain name (FQDN)](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-get-connection-string) of your [!DNL Event Hubs] namespace (for example, `<namespace>.servicebus.windows.net`)
 * [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
 
 >[!TIP]
@@ -65,14 +65,14 @@ There is currently no UI that allows you to set up Private Link connections for 
 ### [!DNL Azure Blob Storage] {#request-setup-blob}
 
 * [!DNL Azure] [Resource ID](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/voice-video-calling/get-resource-id) of your storage account
-* The fully qualified domain name (FQDN) of your storage account (for example, `<account>.blob.core.windows.net`)
+* The [fully qualified domain name (FQDN)](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview#standard-endpoints) of your storage account (for example, `<account>.blob.core.windows.net`)
 * Whether you need a Blob endpoint, a DFS endpoint, or both
 * [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
 
 ### [!DNL Azure Data Lake Storage Gen2] {#request-setup-adls}
 
 * [!DNL Azure] [Resource ID](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/voice-video-calling/get-resource-id) of your storage account
-* The fully qualified domain name (FQDN) of your storage account (for example, `<account>.dfs.core.windows.net`)
+* The [fully qualified domain name (FQDN)](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview#standard-endpoints) of your storage account (for example, `<account>.dfs.core.windows.net`)
 * Whether you need a Blob endpoint, a DFS endpoint, or both
 * [!DNL Azure] region (align with your [!DNL Experience Platform] data region for best performance)
 
