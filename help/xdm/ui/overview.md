@@ -1,72 +1,77 @@
 ---
-keywords: Experience Platform; XDM; schemas; schema discovery; schema filtering; schema organization; schema governance; administrative tags; inline actions; enterprise schema management; ML schema generation; data stewardship;
+keywords: Experience Platform; XDM; schemas; schema discovery; schema filtering; schema organization; schema governance; administrative tags; inline actions; schema management; data stewardship;
 solution: Experience Platform
 title: Schemas UI Overview
-description: Learn about the major capabilities of the Schemas workspace in Experience Platform, including advanced discovery tools, ML-assisted creation, governance integration, and streamlined operations for enterprise schema management at scale.
+description: Learn about the capabilities of the Schemas workspace in Experience Platform, including schema discovery, organization, governance, and resource management workflows.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
 ---
-# [!UICONTROL Schemas] UI overview 
 
-The [!UICONTROL Schemas] workspace in the Adobe Experience Platform user interface allows you to manage Experience Data Model (XDM) resources, including schemas, classes, schema field groups, and data types. You can view and explore core resources provided by Adobe, and create custom resources and schemas for your organization.
+# [!UICONTROL Schemas] UI overview
+
+Use the **[!UICONTROL Schemas]** workspace in Adobe Experience Platform to create, manage, and organize Experience Data Model (XDM) resources. From this workspace, you can work with schemas, classes, schema field groups, data types, and relationships. You can also view Adobe-provided resources and create custom resources for your organization.
 
 To access the workspace in the Experience Platform UI, select **[!UICONTROL Schemas]** in the left rail.
 
 ![The Schemas workspace with Schemas highlighted in the Experience Platform UI left rail.](../images/ui/overview/schemas-tab.png)
 
-## Enterprise schema management at scale
+## Getting started {#getting-started}
 
-The [!UICONTROL Schemas] workspace enables enterprise-grade data modeling with advanced discovery tools, automated schema generation, and integrated governance workflows. Organizations can organize schemas across teams, ensure compliance through built-in labeling, and use machine learning-assisted creation for schema development. The workspace supports large schema inventories while maintaining performance and governance standards required for enterprise environments.
+If you are using the workspace for the first time, start with the guide on [exploring schema resources in the UI](./explore.md) to learn how to browse resources, filter inventory views, use tags and folders, and manage schemas from the inventory.
 
-## Key capabilities by user role
+To create your first schema, follow the [schema creation tutorial](../tutorials/create-schema-ui.md). The tutorial walks through the schema creation process and introduces the core features of the **[!DNL Schema Editor]**.
 
-Different roles across the organization benefit from distinct schema capabilities, such as compliance tagging, machine learning-assisted schema development, and advanced metadata filtering.
+## Discover and organize schemas {#discover-and-organize-schemas}
 
-The following image illustrates how key roles interact with the Schemas workspace:
-
-![Graphic to convey the key capabilities by user role, with quotes about the schema-related goals of each role.](../images/ui/overview/capabilities-by-role.png)
-
-## Getting started
-
-If you are using the workspace for the first time, start with the guide on [exploring existing resources in the UI](./explore.md) to familiarize yourself with the different tabs, filtering capabilities, and the schema canvas.
-
-It is also recommended that you follow the [schema creation tutorial](../tutorials/create-schema-ui.md) to create an example schema and get a full tour of the [!DNL Schema Editor]'s capabilities in the process.
-
-## Discovering and organizing schemas
+Use the **[!UICONTROL Browse]** workspace to locate and organize schemas. You can search and filter schemas, sort inventory columns, view schema metadata, and organize resources using tags and folders.
 
 ![The Schemas browse tab showing comprehensive metadata columns including tags, schema type, identities, and relationships with the filter sidebar highlighted.](../images/ui/explore/schemas-filter-sidebar.png)
 
-Locate and organize schemas efficiently using the workspace's discovery tools, metadata inventory, and organizational options. For filters, inventory columns, tags, and folders, see the [exploring schemas guide](./explore.md).
+For detailed information on filtering, inventory management, tags, folders, and inline actions, see the [explore schema resources guide](./explore.md).
 
-## Schema governance and compliance
+## Manage schema governance {#manage-schema-governance}
 
-Maintain data governance standards and regulatory compliance through integrated labeling and organizational tools. Apply data governance labels at the schema level to automatically propagate compliance classifications to all associated datasets. Use administrative tags and folder structures to support organizational governance policies and audit requirements.
+Apply governance controls directly to schemas to help maintain data management and compliance requirements across your organization. You can apply data governance labels to schemas, organize resources with tags and folders, and manage schema metadata from inventory views.
 
-Learn more about [data governance labels](../../../data-governance/labels/user-guide.md) and [administrative tags](../../../administrative-tags/ui/managing-tags.md) for comprehensive governance workflows. <!-- PLAT-247143 -->
+For more information, see the following documentation:
 
-## Streamlined schema operations
+- [Data usage labels](../../../data-governance/labels/user-guide.md)
+- [Managing unified tags](../../../administrative-tags/ui/managing-tags.md)
 
-Perform schema management tasks through inline actions and automated workflows directly from the browse view, reducing the need to open individual schema details. These operational enhancements reduce development time and minimize context switching for teams managing large schema inventories. For inline actions from the browse view, see [exploring schemas](./explore.md).
+## Manage schemas from inventory views {#manage-schemas-from-inventory-views}
 
-## Creating and managing XDM resources
+Use inline actions to perform common schema management tasks without opening individual schemas. Depending on the resource type, you can edit schema properties, apply labels, manage tags, move resources to folders, add resources to deployment packages, and perform other inventory-level actions.
 
-The [!UICONTROL Schemas] workspace provides powerful tools for creating and customizing your organization's XDM resources. Refer to the following documentation to learn how to create and edit each resource type in the UI:
+For more information, see the [explore schema resources guide](./explore.md).
 
-* [Schemas](./resources/schemas.md)
-* [Schema actions and workflows](./resources/schemas.md#more)
-* [ML-assisted schema creation](./ml-assisted-schema-creation.md) - Generate schemas from sample data using machine learning algorithms
-* [Industry data models](../schema/industries/overview.md) - Pre-built schemas for common industry use cases <!-- PLAT-247143 -->
-* [Classes](./resources/classes.md)
-* [Field groups](./resources/field-groups.md)
-* [Data types](./resources/data-types.md)
+## Create and manage XDM resources {#create-and-manage-xdm-resources}
 
-## Integration with Experience Platform ecosystem
+The **[!UICONTROL Schemas]** workspace provides tools for creating and managing XDM resources. Use the following documentation to learn more about each resource type:
 
-Schemas integrate seamlessly with Real-Time Customer Profile for customer data unification, Query Service for data analysis workflows, and destination platforms for activation. The workspace supports enterprise-scale deployments with folder-based access control, bulk operations capabilities, and automated governance label propagation to maintain performance and compliance across large schema inventories.
+- [Schemas](./resources/schemas.md)
+- [Schema actions and workflows](./resources/schemas.md#manage-schemas)
+- [ML-assisted schema creation](./ml-assisted-schema-creation.md)
+- [Industry data models](../schema/industries/overview.md)
+- [Classes](./resources/classes.md)
+- [Field groups](./resources/field-groups.md)
+- [Data types](./resources/data-types.md)
 
-## Defining XDM fields
+## Integration with Experience Platform services {#integration-with-experience-platform-services}
 
-In standard XDM schemas, classes, field groups, and data types all contribute fields to a schema. You can choose from a list of standard field types when adding fields to these resources, and can also define specialized fields for certain use cases. Refer to the guide on [defining XDM fields in the UI](./fields/overview.md) for more information.
+Schemas support several Experience Platform workflows and services. Depending on your use case, schemas can be used with Real-Time Customer Profile, Query Service, destinations, governance workflows, and other Platform capabilities.
 
-## Next steps
+Refer to the documentation for those services to learn how schemas are used within each workflow.
 
-This document introduces the [!UICONTROL Schemas] workspace in the Experience Platform UI. Refer to the documentation linked throughout this overview to learn more about how to manage your schemas and other XDM resources.
+## Define XDM fields {#define-xdm-fields}
+
+Schemas, classes, field groups, and data types all contribute fields to your XDM data model. When creating custom resources, you can define standard field types and specialized fields for specific use cases.
+
+For more information, see the guide on [defining XDM fields in the UI](./fields/overview.md).
+
+## Next steps {#next-steps}
+
+Use the following resources to continue learning about XDM schemas and related capabilities:
+
+- [Explore schema resources in the UI](./explore.md)
+- [Create and edit schemas](./resources/schemas.md)
+- [Experience Data Model (XDM) overview](../home.md)
+  
