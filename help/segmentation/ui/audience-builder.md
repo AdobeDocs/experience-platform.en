@@ -163,7 +163,11 @@ To add an attribute to the rule-building canvas, select the name of the attribut
 
 IMAGE
 
-After selecting the attribute, details of the attribute appear. This includes information such as the path of the attribute, description, and type. You can select [the star icon]() to favorite the attribute or **Add field** to add the attribute to your audience's rules.
+>[!NOTE]
+>
+>The samples values are only displayed if the field does **not** contain too many different values and if those field's values are commonly repeated. Additionally, this summary data is updated on a **daily** basis.
+
+After selecting the attribute, details of the attribute appear. This includes information such as the path of the attribute, sample values, description, and type. You can select [the star icon]() to favorite the attribute or **Add field** to add the attribute to your audience's rules.
 
 IMAGE
 
@@ -225,6 +229,12 @@ If you want to remove an attribute you've added, select the ![minus icon]().
 
 IMAGE
 
+#### Computed attributes {#computed-attributes}
+
+Computed attributes are fields that are calculated from other attributes using aggregations or formulas. You can use computed attributes if you need aggregated data such as sums, counts, or averages across multiple events or if you are building frequently-used audiences that require complex calculations. 
+
+For more information on computed attributes, including how to create them, what functions you can use within them, and how to manage them, read the [computed attributes overview](/help/profile/computed-attributes/overview.md).
+
 ### Events {#events}
 
 The **Events** section lets you add ExperienceEvents to your audience's rules. 
@@ -266,13 +276,30 @@ If you select **Aggregate**, you can add an aggregation function to the event. A
 
 | Aggregation function | Description |
 | -------------------- | ----------- |
-| Count | A function that **counts** the number of events that occurred. |
-| Sum | A function that **sums** the  |
-| Average | |
-| Min | |
-| Max | |
+| Count | A function that **counts** the number of the event that has occurred. |
+| Sum | A function that **sums** the values of the specified attribute that occur within the event. |
+| Average | A function that **averages** the values of the specified attribute that occur within the event. |
+| Min | A function that finds the **minimum value** of the specified attribute that occurs within the event. |
+| Max | A function that finds the **maximum value** of the specified attribute that occurs within the event. |
 
 ### Groups {#groups}
+
+You can add groups of either attributes or events within Audience Builder. Groups let you control the order of execution through the use of nested queries.
+
+When you add a group, it automatically appears as a child of the the first group. You can adjust the hierarchy by dragging and moving the containers.
+
+By default, the group will **include** all the attributes, events, or audiences within the group. You can change this by selecting the dropdown at the top of the group.
+
+IMAGE
+
+When you select the dropdowns on the top of the group, you are presented with the following options:
+
+| Option | Description |
+| ------ | ----------- |
+| **have** | The audience **must** contain the elements within the group. |
+| **do NOT have** | The audience **must not** contain the elements within the group. |
+| **all of** | **All** of the elements must be accounted for within the group. |
+| **any of** | **At least one** of the elements must be accounted for within the group. |
 
 ### Time constraints {#time-constraints}
 
@@ -365,3 +392,27 @@ The list of available time constraints for this operation differs from the main 
 ## Profile view {#profile-view}
 
 ## Code view {#code-view}
+
+You can view a code-based version of the audience created in Audience Builder in the **Code view**. Once you have created your rule within the rule builder canvas, select **[!UICONTROL Code view]** to see your audience as PQL.
+
+IMAGE
+
+Code view provides a button that allows you to copy the value of the audience to use in API calls. To get the latest version of the audience, make sure you have saved your latest changes to the audience.
+
+IMAGE
+
+## Audience validation {#audience-validation}
+
+Audience Builder automatically analyzes and validates your audience definition to ensure you adhere to audience definition best practices. These best practices can be set into two categories: critical validation and performance optimization.
+
+If an audience definition breaks a critical validation best practice, you will **not** be able to save your changes in order to keep your sandbox stable. If an audience definition breaks a performance optimization best practice, you will be able to save your changes, but it is *highly recommended* to update your audience definition to avoid performance issues.
+
+| Validation check | Type | Threshold |
+| ---------------- | ---- | --------- |
+| Logical complexity | Critical validation | The audience definition is too complicated. |
+| Sequential events | Critical validation | There are more than 6 sequential events within an audience definition. |
+| Aggregated count | Performance optimization | There are more than 3 aggregation functions within an audience definition. |
+| Nested data | Performance optimization | There are more than 2 levels of nested data (array or map data types) depth within an audience definition. |
+| Audience size | Performance optimization | The audience qualification size is greater than 30% of the total number of profiles in the sandbox. |
+
+For more information on how audience validation works, read the [audience validation guide](/help/segmentation/validation.md).
