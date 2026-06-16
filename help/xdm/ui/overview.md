@@ -67,9 +67,9 @@ The **[!UICONTROL Schemas]** workspace provides tools for creating and managing 
 
 Schemas support several Experience Platform workflows and services. Depending on your use case, schemas can be used with the following services:
 
-- [Real-Time Customer Profile](../../../profile/home.md)
-- [Query Service](../../../query-service/home.md)
-- [Destinations](../../../destinations/home.md)
+- [Real-Time Customer Profile](../../profile/home.md)
+- [Query Service](../../query-service/home.md)
+- [Destinations](../../destinations/home.md)
 
 Refer to the documentation for each service to learn how schemas are used within those workflows.
 

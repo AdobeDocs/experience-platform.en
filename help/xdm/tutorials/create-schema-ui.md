@@ -53,7 +53,7 @@ This tutorial requires a working understanding of the various aspects of Adobe E
 
 ## Open the [!UICONTROL Schemas] workspace {#browse}
 
-Use the [!UICONTROL Schemas] workspace in the [!DNL Experience Platform] UI to view and manage the schemas available to your organization. The workspace also includes the [!DNL Schema Editor], where you create and edit schemas throughout this tutorial.
+Use the [!UICONTROL Schemas] workspace in the Experience Platform UI to view and manage the schemas available to your organization. The workspace also includes the [!DNL Schema Editor], where you create and edit schemas throughout this tutorial.
 
 After logging into [!DNL Experience Platform], select **[!UICONTROL Schemas]** in the left navigation to open the **[!UICONTROL Schemas]** workspace. The **[!UICONTROL Browse]** tab displays a list of schemas (a representation of the [!DNL Schema Library]) for you to view and customize. The list includes the name, type, class, and behavior (record or time-series) on which the schema is based, as well as the date and time the schema was last modified. 
 
