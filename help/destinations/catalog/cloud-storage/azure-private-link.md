@@ -116,7 +116,7 @@ When you delete the resource, the Private Endpoint becomes orphaned. An orphaned
 >
 >Do not delete an [!DNL Azure] resource that has an active Private Endpoint without first notifying [!DNL Adobe].
 
-## Internal: activate Private Link for a customer {#internal-activation}
+## Adobe internal instructions: activate Private Link for a customer {#internal-activation}
 
 +++Adobe teams only. Expand for activation instructions.
 
