@@ -117,8 +117,8 @@ role: Developer
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
     - [Salesforce Marketing Cloud (V2)](connectors/marketing-automation/sfmc.md)
   - Payments {#payments}
-    - [Square connector](connectors/payments/square.md)
-    - [Stripe connector](connectors/payments/stripe.md)
+    - [Square](connectors/payments/square.md)
+    - [Stripe](connectors/payments/stripe.md)
   - Protocols {#protocols}
     - [Generic OData connector](connectors/protocols/odata.md)
     - [Generic REST API connector](connectors/protocols/generic-rest.md)

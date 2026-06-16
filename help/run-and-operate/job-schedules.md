@@ -71,6 +71,10 @@ Use the time period selectors to choose how far back to look at scheduled jobs.
 * **Yesterday**: View jobs that ran yesterday.
 * **Last 7 days**: View jobs from the past week.
 
+When you select **[!UICONTROL Last 7 days]**, a calendar date picker becomes available. Select the calendar icon next to the displayed date range to open the picker and choose a specific 7-day window. Only 7-day ranges are supported.
+
+![The Last 7 days date range selector in Job Schedules showing a calendar pop-up for May 2026 with a seven-day range highlighted from May 19 to May 25.](assets/job-schedules/calendar-date-picker.png)
+
 ### Batch job schedules details {#job-schedules-details}
 
 The main view shows you when your batch jobs are scheduled to run throughout the day. You can:
