@@ -118,7 +118,7 @@ When you delete the resource, the Private Endpoint becomes orphaned. An orphaned
 
 ## Internal: activate Private Link for a customer {#internal-activation}
 
-+++Adobe teams only — expand for activation instructions
++++Adobe teams only. Expand for activation instructions.
 
 To activate Private Link for a customer, clone Jira ticket PLATIR-64767 and populate it with the customer details collected by the account manager.
 
