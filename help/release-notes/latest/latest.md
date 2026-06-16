@@ -67,6 +67,7 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
+- [Run and Operate](#run-and-operate)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
@@ -144,8 +145,6 @@ Use Query Service to query data in Adobe Experience Platform using standard SQL.
 
 For more information, read the [Query Service overview](../../query-service/home.md).
 
-<!--
-
 ## Run and Operate {#run-and-operate}
 
 **New or updated features**
@@ -156,8 +155,6 @@ For more information, read the [Query Service overview](../../query-service/home
 | [Health checks for P-TTL and e-TTL](../../run-and-operate/health-checks.md) | Two new health checks are now available: Pseudonymous Profile TTL (P-TTL) scans whether the expiration policy is active for your sandbox and lists relevant unauthenticated namespaces. Experience Event Datasets TTL (e-TTL) scans data lake and profile event datasets to identify where automatic data expiration is not configured. |
 
 {style="table-layout:auto"}
-
--->
 
 ## Segmentation Service {#segmentation-service}
 
