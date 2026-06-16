@@ -115,3 +115,38 @@ When you delete the resource, the Private Endpoint becomes orphaned. An orphaned
 >[!WARNING]
 >
 >Do not delete an [!DNL Azure] resource that has an active Private Endpoint without first notifying [!DNL Adobe].
+
+## Internal: activate Private Link for a customer {#internal-activation}
+
++++Adobe teams only — expand for activation instructions
+
+To activate Private Link for a customer, clone Jira ticket PLATIR-64767 and populate it with the customer details collected by the account manager.
+
+Required fields vary by destination type. Collect the following from the customer before cloning the ticket.
+
+**[!DNL Azure Event Hubs]**
+
+* [!DNL Azure] Resource ID of the [!DNL Event Hubs] namespace
+* Namespace FQDN (for example, `<namespace>.servicebus.windows.net`)
+* [!DNL Azure] region
+* IMS Org ID
+
+**[!DNL Azure Blob Storage]**
+
+* [!DNL Azure] Resource ID of the storage account
+* Storage account FQDN (for example, `<account>.blob.core.windows.net`)
+* Whether a Blob endpoint, a DFS endpoint, or both are needed
+* [!DNL Azure] region
+* IMS Org ID
+
+**[!DNL Azure Data Lake Storage Gen2]**
+
+* [!DNL Azure] Resource ID of the storage account
+* Storage account FQDN (for example, `<account>.dfs.core.windows.net`)
+* Whether a Blob endpoint, a DFS endpoint, or both are needed
+* [!DNL Azure] region
+* IMS Org ID
+
+After provisioning, notify the customer that the Private Endpoint approval request is available in their [!DNL Azure] portal.
+
++++
