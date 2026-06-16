@@ -59,32 +59,17 @@ topic_v2:
 >- [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**Release date: June 2026**
+**Release date: June 16, 2026**
 
 New features and updates to existing features in Adobe Experience Platform:
 
-- [Agent Orchestrator](#agent-orchestrator)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
+- [Real-Time Customer Profile](#profile)
 - [Run and Operate](#run-and-operate)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
-
-## Agent Orchestrator {#agent-orchestrator}
-
-Use Agent Orchestrator to build and deploy AI-powered agents that automate workflows and interact with customers across multiple channels.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| Notifications Agent | Use the Notifications Agent to surface alerts, system events, and audience or journey updates through conversational prompts. The agent delivers contextual notification summaries so you can act on critical events without navigating multiple dashboards. |
-| [!BADGE Beta]{type=Informative} Adobe Marketing Agent for AI Platforms | Use the Adobe Marketing Agent to bring Experience Platform operational insights, audience data, journey information, and asset discovery into third-party AI platforms including [!DNL ChatGPT], [!DNL Claude], [!DNL Gemini], [!DNL Amazon Q], [!DNL Databricks Genie], and [!DNL IBM Watsonx]. Contact your Adobe representative to request access. |
-
-{style="table-layout:auto"}
-
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 ## Destinations {#destinations}
 
@@ -125,25 +110,21 @@ Experience Data Model (XDM) is an open-source specification that provides common
 
 | Feature | Description |
 | --- | --- |
-| [Schema inventory enhancements](../../xdm/ui/resources/schemas.md) | The schema browse page now includes additional schema metadata, enhanced filtering options, user-defined tags and folders, and inline actions for common schema management tasks. These updates help you find, organize, and manage schemas more efficiently from a single location. |
+| [Schema inventory enhancements](../../xdm/ui/resources/schemas.md) | The schema browse page now includes additional schema metadata, enhanced filtering options, user-defined tags and folders, and inline actions for common schema management tasks. These updates help you find, organize, and manage schemas more efficiently from a single location. <br> ![The Schemas brows page with filtering options, schema metadata columns, schema details, and inline actions for common schema management tasks.](../2026/assets/june/schema-inventory-enhancements.png){zoomable="yes"} |
 
 {style="table-layout:auto"}
 
 For more information, read the [XDM overview](../../xdm/home.md).
 
-## Query Service {#query-service}
+## Real-Time Customer Profile {#real-time-customer-profile}
 
-Use Query Service to query data in Adobe Experience Platform using standard SQL.
+Real-Time Customer Profile gives you a complete view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third-party data. Use Profile to consolidate your customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 
 **New or updated features**
 
 | Feature | Description |
-| --- | --- |
-| Long-Term Personalization with Data Distiller Accelerators | New guidance explains how to use Data Distiller Accelerators and historical data stored in the Data Lake to generate activation-ready insights for personalization and audience activation. This approach helps you support extended lookback windows while optimizing Profile Store usage and Total Data Volume consumption. |
-
-{style="table-layout:auto"}
-
-For more information, read the [Query Service overview](../../query-service/home.md).
+| ------- | ----------- |
+| Batch profile ingestion | Batch profile ingestion now enforces format validation on Experience Event `_id` values. Records containing restricted characters in the `_id` field are rejected at ingestion time in the Profile Store. This validation is applied at the record level - batches continue to process successfully, while only non-compliant records are dropped by Profile Store. Customers can correct invalid `_id` values and resend the affected records, ensuring no permanent data loss. See the [XDM ExperienceEvent class documentation](/help/xdm/classes/experienceevent.md) for more details. |
 
 ## Run and Operate {#run-and-operate}
 
@@ -163,8 +144,8 @@ Use Segmentation Service to create audiences from your customer data and manage 
 **New or updated features**
 
 | Feature | Description |
-| --- | --- |
-| [Persistent vs. Random split in Audience Composition](../../segmentation/ui/audience-composition.md) | Use the new split mode selector in Audience Composition to choose between Persistent and Random percentage splits. Persistent split keeps the same profile in the same bucket across evaluations. Random split may place a profile in a different bucket across evaluations. When using Persistent split, select an identity namespace with low variance to ensure reliable audience membership. |
+| ------- | ----------- |
+| Persistent split support | You can now choose between persistent and random percentage splits in Audience Composition. Persistent split keeps the same profile in the same bucket across evaluations while random split may place a profile in a different bucket across evaluations. When using persistent split, select an identity namespace with low variance to ensure reliable audience membership. Read the [Audience Composition guide](/help/segmentation/ui/audience-composition.md) for more details. |
 
 {style="table-layout:auto"}
 
@@ -178,8 +159,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Meta Ads] | Use the [!DNL Meta Ads] source to configure the complete [!DNL Meta Ads] ingestion workflow in the Sources UI. Connect your [!DNL Meta Ads] account and bring paid media data directly into Experience Platform for activation and analysis. This source is available to a limited number of customers. Contact your Adobe representative to request access. |
-| [!BADGE Beta]{type=Informative} [!DNL Delta Sharing] | Use the [!DNL Delta Sharing] source to bring live, shared datasets from partners or internal lakehouse environments into Experience Platform without copying or manually uploading files. Connect to a [!DNL Delta Sharing] endpoint, choose the tables you need, and use that governed data alongside your existing profiles and insights. |
+| General availability of the [!DNL LAVA] source | You can now bring loyalty and engagement data from [[!DNL LAVA]](https://www.lava.ai/) into Experience Platform using the [[!DNL LAVA] source](../../sources/connectors/loyalty/lava.md). Stream member profiles, rewards and events from [!DNL LAVA] and [!DNL LAVA] integrations to enrich Real-Time Customer Profile and support segmentation, personalization, and activation. Create a separate source connection for each data type you need, and map email on member profiles to stitch [!DNL LAVA] records with your existing profiles. For prerequisites, an optional setup package, and step-by-step setup, read the [[!DNL LAVA] source documentation](../../sources/connectors/loyalty/lava.md).|
 
 {style="table-layout:auto"}
 
@@ -187,8 +167,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Source | Description |
 | --- | --- |
-| [[!DNL Shopify Streaming]](../../sources/connectors/ecommerce/shopify-streaming.md) HMAC authentication | HMAC-based authentication is now supported in the [!DNL Shopify Streaming] connector, available in both the UI and API. See the [[!DNL Shopify Streaming] overview](../../sources/connectors/ecommerce/shopify-streaming.md) for key rotation behavior and setup instructions. |
-| [Automatic dataflow disabling](../../sources/home.md) | Sources dataflows that fail continuously for 30 days are automatically disabled. When a dataflow is disabled, review the failure reason in Monitoring, apply the necessary updates, and re-enable the dataflow. Common failure reasons include credentials, permissions, or schema and mapping configuration changes. |
+| HMAC-based authentication support for [!DNL Shopify Streaming] | HMAC-based authentication is now supported in the [!DNL Shopify Streaming] source connector, available in both the UI and API. See the [[!DNL Shopify Streaming] overview](../../sources/connectors/ecommerce/shopify-streaming.md) for key rotation behavior and setup instructions. |
 
 {style="table-layout:auto"}
 
@@ -211,5 +190,29 @@ Experience Platform provides a suite of data hygiene capabilities that let you m
 {style="table-layout:auto"}
 
 For more information, read the [advanced data lifecycle management overview](../../hygiene/home.md).
+
+## Query Service {#query-service}
+
+Use Query Service to query data in Adobe Experience Platform using standard SQL.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Long-Term Personalization with Data Distiller Accelerators | New guidance explains how to use Data Distiller Accelerators and historical data stored in the Data Lake to generate activation-ready insights for personalization and audience activation. This approach helps you support extended lookback windows while optimizing Profile Store usage and Total Data Volume consumption. |
+
+{style="table-layout:auto"}
+
+For more information, read the [Query Service overview](../../query-service/home.md).
+
+SOURCES
+
+| Source | Description |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} [!DNL Meta Ads] | Use the [!DNL Meta Ads] source to configure the complete [!DNL Meta Ads] ingestion workflow in the Sources UI. Connect your [!DNL Meta Ads] account and bring paid media data directly into Experience Platform for activation and analysis. This source is available to a limited number of customers. Contact your Adobe representative to request access. |
+| [!BADGE Beta]{type=Informative} [!DNL Delta Sharing] | Use the [!DNL Delta Sharing] source to bring live, shared datasets from partners or internal lakehouse environments into Experience Platform without copying or manually uploading files. Connect to a [!DNL Delta Sharing] endpoint, choose the tables you need, and use that governed data alongside your existing profiles and insights. |
+
+| Automatic dataflow disabling for failed sources dataflows | Sources dataflows that fail continuously for 30 days are automatically disabled. When a dataflow is disabled, review the failure reason in Monitoring, apply the necessary updates, and re-enable the dataflow. Common failure reasons include credentials, permissions, or schema and mapping configuration changes. |
+
 
 -->
