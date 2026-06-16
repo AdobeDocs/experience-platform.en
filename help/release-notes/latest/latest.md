@@ -169,6 +169,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | --- | --- |
 | Automatic dataflow disabling for failed sources dataflows | Sources dataflows that fail continuously for 30 days are automatically disabled. When a dataflow is disabled, review the failure reason in Monitoring, apply the necessary updates, and re-enable the dataflow. Common failure reasons include credentials, permissions, or schema and mapping configuration changes. |
 | HMAC-based authentication support for [!DNL Shopify Streaming] | HMAC-based authentication is now supported for the [!DNL Shopify Streaming] source connector, available in both the UI and API. See the [[!DNL Shopify Streaming] overview](../../sources/connectors/ecommerce/shopify-streaming.md) for key rotation behavior and setup instructions. |
+| Improved source dataflow inventory management | The Sources dataflow inventory has been modernized with advanced search and filtering, support for tags and folders, resizable columns, and more contextual actions to help users organize and manage dataflows more efficiently. Read the [documentation](../../sources/tutorials/ui/filter.md) for more information. |
 
 {style="table-layout:auto"}
 
