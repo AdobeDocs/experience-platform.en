@@ -34,8 +34,8 @@ Apply governance controls directly to schemas to help maintain data management a
 
 For more information, see the following documentation:
 
-- [Data usage labels](../../../data-governance/labels/user-guide.md)
-- [Managing unified tags](../../../administrative-tags/ui/managing-tags.md)
+- [Data usage labels](../../data-governance/labels/user-guide.md)
+- [Managing unified tags](../../administrative-tags/ui/managing-tags.md)
 
 ## Manage schemas from inventory views {#manage-schemas-from-inventory-views}
 

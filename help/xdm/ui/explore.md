@@ -134,7 +134,7 @@ To browse schemas by folder, select the show folders icon (![Show folders icon](
 
 Tags and folders work with the inventory filtering system, allowing you to narrow the list of schemas based on their assigned tags and folder locations.
 
-For information on creating and managing tags across Experience Platform, see the [managing unified tags guide](../../../administrative-tags/ui/managing-tags.md).
+For information on creating and managing tags across Experience Platform, see the [managing unified tags guide](../../administrative-tags/ui/managing-tags.md).
 
 ## Explore an XDM resource in the canvas {#explore}
 
@@ -211,6 +211,6 @@ See the tutorial on [creating a relationship in the UI](../tutorials/relationshi
 Use the following resources to continue working with XDM schemas and related Experience Platform features:
 
 - To learn more about the **[!UICONTROL Schemas]** workspace and **[!DNL Schema Editor]**, see the [[!UICONTROL Schemas] workspace overview](./overview.md).
-- For information on creating and managing tags, see the [managing unified tags guide](../../../administrative-tags/ui/managing-tags.md).
-- For guidance on inventory views, filtering, search, and workspace navigation patterns, see the [datasets user guide](../../../catalog/datasets/user-guide.md).
-- For information on applying and managing data governance labels, see the [data usage labels user guide](../../../data-governance/labels/user-guide.md).
+- For information on creating and managing tags, see the [managing unified tags guide](../../administrative-tags/ui/managing-tags.md).
+- For guidance on inventory views, filtering, search, and workspace navigation patterns, see the [datasets user guide](../../catalog/datasets/user-guide.md).
+- For information on applying and managing data governance labels, see the [data usage labels user guide](../../data-governance/labels/user-guide.md).
