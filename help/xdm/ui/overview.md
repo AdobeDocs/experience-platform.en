@@ -41,7 +41,7 @@ For more information, see the following documentation:
 
 Use inline actions to perform common schema management tasks without opening individual schemas. Depending on the resource type, you can edit schema properties, apply labels, manage tags, move resources to folders, add resources to deployment packages, and perform other inventory-level actions.
 
-For more information, see the [explore schema resources guide](./explore.md).
+For more information, see the [explore schema resources guide](./explore.md#browse-organize-manage-schemas).
 
 ## Create and manage XDM resources {#create-and-manage-xdm-resources}
 
@@ -54,12 +54,17 @@ The **[!UICONTROL Schemas]** workspace provides tools for creating and managing 
 - [Classes](./resources/classes.md)
 - [Field groups](./resources/field-groups.md)
 - [Data types](./resources/data-types.md)
+- [Relationships](../tutorials/relationship-ui.md)
 
 ## Integration with Experience Platform services {#integration-with-experience-platform-services}
 
-Schemas support several Experience Platform workflows and services. Depending on your use case, schemas can be used with Real-Time Customer Profile, Query Service, destinations, governance workflows, and other Platform capabilities.
+Schemas support several Experience Platform workflows and services. Depending on your use case, schemas can be used with the following services:
 
-Refer to the documentation for those services to learn how schemas are used within each workflow.
+- [Real-Time Customer Profile](../../../profile/home.md)
+- [Query Service](../../../query-service/home.md)
+- [Destinations](../../../destinations/home.md)
+
+Refer to the documentation for each service to learn how schemas are used within those workflows.
 
 ## Define XDM fields {#define-xdm-fields}
 
