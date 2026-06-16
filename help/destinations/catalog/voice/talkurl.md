@@ -3,12 +3,42 @@ keywords: Talk URL Inbox;talk url inbox;Talk URL inbox;talk URL inbox;talk url;T
 title: Talk URL Inbox extension
 description: The Talk URL Inbox extension is a voice of the customer destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 exl-id: f3e962c6-82c0-4d2f-9a78-275f261f058d
+TQID: https://experienceleague.adobe.com/CUOaB7EDWVZAGN0A30GX9nzZfyp0B2oAFLsJ9As2Rxw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+    internal-label: Data collection UI
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+    internal-label: Properties
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+    internal-label: Data elements
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # [!DNL Talk URL Inbox] extension {#talk-url-extension}
 
 Receive voice messages from your web page visitors. Includes hosted UI and cloud-based machine learning to transcribe your voice messages into text insights instantly.
 
-[!DNL Talk URL Inbox] is a voice of the customer extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
+[!DNL Talk URL Inbox] is a voice of the customer extension in [!DNL Adobe Experience Platform]. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
 
 This destination is a tag extension. For more information about how tag extensions work in Experience Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
@@ -18,7 +48,7 @@ This destination is a tag extension. For more information about how tag extensio
 
 This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Experience Platform.
 
-To use this extension, you need access to tags in Adobe Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+To use this extension, you need access to tags in [!DNL Adobe Experience Platform]. Tags are offered to [!DNL Adobe CX Enterprise] customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 
@@ -28,7 +58,7 @@ In the [Experience Platform interface](https://platform.adobe.com/), go to **[!U
 
 Select the extension from the catalog or use the search bar.
 
-Click on the destination to highlight it, then select **[!UICONTROL Configure]** in the right rail. If the **[!UICONTROL Configure]** control is greyed out, you are missing the **[!UICONTROL manage_properties]** permission. See [Prerequisites](#prerequisites).
+Select the destination, then select **[!UICONTROL Configure]** in the right rail. If the **[!UICONTROL Configure]** control is grayed out, you are missing the **[!UICONTROL manage_properties]** permission. See [Prerequisites](#prerequisites).
 
 Select the property in which you want to install the extension. You also have the option of creating a new property. A property is a collection of rules, data elements, configured extensions, environments, and libraries. Learn about properties in the [Properties page section](../../../tags/ui/administration/companies-and-properties.md#properties-page) of in the tags documentation.
 

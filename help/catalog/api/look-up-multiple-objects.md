@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Look Up Multiple Catalog Objects
 description: If you wish to view several specific objects, rather than making one request per object, Catalog provides a simple shortcut for requesting multiple objects of the same type. You can use a single GET request to return multiple specific objects by including a comma-separated list of IDs.
 exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
+TQID: https://experienceleague.adobe.com/3XALKVnTerGjsrvQDoKYtmemEZ21PSrM-6qXLEOgWyc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Look up multiple Catalog objects
 

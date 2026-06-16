@@ -4,6 +4,23 @@ solution: Experience Platform
 title: Model Authoring SDK
 description: The Model Authoring SDK enables you to develop custom machine learning Recipes and Feature Pipelines which can be used in Adobe Experience Platform Data Science Workspace, providing implementable templates in PySpark and Spark (Scala).
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
+TQID: https://experienceleague.adobe.com/OT-XeVDIl682BGceLNDLSe7osR5GSu3GrEBeumkFe3Y
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Model Authoring SDK
 
@@ -393,7 +410,7 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-The DatasetTransformer class modifies and transforms the structure of a dataset. The [!DNL Sensei Machine Learning Runtime] does not require this component to be defined, and is implemented based on your requirements. 
+The DatasetTransformer class modifies and transforms the structure of a dataset. The Adobe AI Machine Learning Runtime does not require this component to be defined, and is implemented based on your requirements. 
 
 In regards to a feature pipeline, dataset transformers can be used cooporatively with a feature pipeline factory to prepare data for feature engineering.
 

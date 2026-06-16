@@ -3,19 +3,32 @@ title: Create A Shopify Streaming Connection And Dataflow In The UI
 description: Learn how to create a Shopify Streaming source connection and dataflow using the Experience Platform user interface
 badge: Beta
 exl-id: d53f4ab5-8bdc-4647-83d5-ee898abda0f2
+TQID: https://experienceleague.adobe.com/Qll7Tj5-LLV63DoKEHTCZNuJM0e-UP8ISXJghEZEBMU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a source connection and dataflow for [!DNL Shopify Streaming] data using the UI
 
-This tutorial provides steps for creating a [!DNL Shopify Streaming] source connection and dataflow using the Experience Platform user interface.
+Read this guide to learn how to stream data from a [!DNL Shopify Streaming] source to Adobe Experience Platform through the user interface.
 
 ## Getting started {#getting-started}
 
-This tutorial requires a working understanding of the following components of Experience Platform:
+Before you begin, make sure you're familiar with the following parts of Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-  * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-  * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [Experience Data Model (XDM) System](../../../../../xdm/home.md): A standardized framework designed to help you organize and manage your customer experience data in a consistent way across Adobe Experience Platform.
+  * [Basics of schema composition](../../../../../xdm/schema/composition.md): An introduction to building your own data schemas, including simple best practices and how to structure your data effectively for your specific needs.
+  * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Step-by-step instructions to guide you through creating custom data schemas directly in the Platform UI, so you can tailor your data model to your business requirements.
+* [Real-Time Customer Profile](../../../../../profile/home.md): Empowers you to create comprehensive, real-time customer profiles that aggregate data from multiple sources, enabling a unified view of each individual customer.
 
 >[!IMPORTANT]
 >
@@ -23,13 +36,23 @@ This tutorial requires a working understanding of the following components of Ex
 
 ## Connect your [!DNL Shopify Streaming] account
 
-In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the *[!UICONTROL Sources]* workspace. Select the appropriate category in the *[!UICONTROL Categories]* panel. Alternatively, use the search bar to navigate to the specific source that you want to use.
 
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+To stream data from [!DNL Shopify], select the **[!UICONTROL Shopify Streaming]** source card under *[!UICONTROL ecommerce]* and then select **[!UICONTROL Set up]**.
 
-Under the **eCommerce** category, select [!DNL Shopify Streaming], and then select **[!UICONTROL Add data]**.
+>[!TIP]
+>
+>Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account is created, this option changes to **[!UICONTROL Add data]**.
 
 ![The Experience Platform sources catalog](../../../../images/tutorials/create/shopify-streaming/catalog.png)
+
+### Create a new account
+
+To create a new account for your [!DNL Shopify Streaming] source, select **[!UICONTROL New account]** and provide a name and an optional description for your account. Next, provide values for your **[!UICONTROL primarySecretKey]** and **[!UICONTROL secondarySecretKey]** and then select **[!UICONTROL Connect to source]**. Allow for a few moments for the connection to establish, and then select **[!UICONTROL Next]** to proceed.
+
+For more information on HMAC key-based authentication, read the [[!DNL Shopify Streaming] authentication overview](../../../../connectors/ecommerce/shopify-streaming.md).
+
+![The new account creation interface](../../../../images/tutorials/create/shopify-streaming/new.png)
 
 ## Select data
 

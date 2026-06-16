@@ -2,8 +2,17 @@
 title: Filter Sources Objects In The UI
 description: Learn how to navigate through your sources objects such as accounts and dataflows in the Experience Platform UI.
 hide: true
-hidefromtoc: true
 exl-id: 59c200cc-1be7-45a8-9d7a-55e6f11dbcf2
+TQID: https://experienceleague.adobe.com/3FiBm2yGXVE6xK8BI2RSTZeI-O62yIK5LyZdXHETQik
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Filter sources objects in the UI
 
@@ -38,10 +47,10 @@ You can filter your sources dataflows by the following parameters:
 | Filter | Description |
 | --- | --- |
 | [Source platform](#filter-dataflows-by-source-platform) | Filter your dataflows based on the source that they were created with. |
-| [Tags](#filter-dataflows-by-tags) | Filter your dataflows based on the tags applied to them. | 
+| [Tags](#filter-dataflows-by-tags) | Filter your dataflows based on the tags applied to them. |
 | [Status](#filter-dataflows-by-status) | Filter your dataflows based on their current status. |
 | [Target dataset](#filter-dataflows-by-target-dataset) | Filter your dataflows based on the target dataset they were created with. |
-| [Account name](#filter-dataflows-by-account-name) | Filter your dataflows based on the name of the account that they correspond with. | 
+| [Account name](#filter-dataflows-by-account-name) | Filter your dataflows based on the name of the account that they correspond with. |
 | [Created by](#filter-dataflows-by-user) | Filter your dataflows based on who created them. |
 | [Creation date](#filter-dataflows-by-creation-date) | Filter your dataflows based on the date they were created. |
 | [Modified date](#filter-dataflows-by-modification-date) | Filter your dataflows based on the date they were last updated. |
@@ -68,7 +77,7 @@ You can filter by status using the [!UICONTROL Status] panel.
 
 | Status | Description |
 | --- | --- |
-| Enabled | Select **[!UICONTROL Enabled]** to filter your view and display only active dataflows. | 
+| Enabled | Select **[!UICONTROL Enabled]** to filter your view and display only active dataflows. |
 | Disabled | Select **[!UICONTROL Disabled]** to filter your view and display only deactivated dataflows. |
 | Draft | Select **[!UICONTROL Draft]** to filter your view and display only dataflows that are in draft mode. |
 

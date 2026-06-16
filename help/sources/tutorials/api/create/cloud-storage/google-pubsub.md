@@ -3,6 +3,13 @@ title: Create a Google PubSub Source Connection Using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to a Google PubSub account using the Flow Service API.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
+TQID: https://experienceleague.adobe.com/oA7vCQNK7rXP-qMJboztPITnBnGBvr9ggIJhMB1G4Jo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a [!DNL Google PubSub] Source Connection Using the Flow Service API
 
@@ -70,7 +77,7 @@ The [!DNL PubSub] source allows you to specify the type of access that you want 
 
 >[!NOTE]
 >
->Principal (roles) assigned to a [!DNL PubSub] project are inherited in all of the topics and subscriptions created inside a [!DNL PubSub] project. If you want a principal (role) to have access to a specific topic, then that principal (role) must also be added to the topic's corresponding subscription as well. For more information, read the [[!DNL PubSub] documentation on access control](<https://cloud.google.com/pubsub/docs/access-control>).
+>Principal (roles) assigned to a [!DNL PubSub] project are inherited in all of the topics and subscriptions created inside a [!DNL PubSub] project. If you want a principal (role) to have access to a specific topic, then that principal (role) must also be added to the topic's corresponding subscription as well. For more information, read the [[!DNL PubSub] documentation on access control](https://cloud.google.com/pubsub/docs/access-control).
 
 **API format**
 
@@ -84,7 +91,7 @@ POST /connections
 
 To create base connection with project-based authentication, make a POST request to the `/connections` endpoint and provide your `projectId` and `credentials` in the request body.
 
-+++Request
++++ Request
 
 ```shell
 curl -X POST \
@@ -117,9 +124,9 @@ curl -X POST \
 | `auth.params.credentials` | The credential or key required to authenticate [!DNL PubSub]. |
 | `connectionSpec.id` | The [!DNL PubSub] connection spec ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
-++++
++++
 
-+++Response
++++ Response
 
 A successful response returns details of the newly created connection, including its unique identifier (`id`). This base connection ID is required in the next step to create a source connection.
 
@@ -130,13 +137,13 @@ A successful response returns details of the newly created connection, including
 }
 ```
 
-++++
++++
 
 >[!TAB Topic and subscription-based authentication]
 
 To create base connection with topic and subscription-based authentication, make a POST request to the `/connections` endpoint and provide your `credentials`, `topicName`, and `subscriptionName` in the request body.
 
-+++Request
++++ Request
 
 ```shell
 curl -X POST \
@@ -173,7 +180,7 @@ curl -X POST \
 
 +++
 
-+++Response
++++ Response
 
 A successful response returns details of the newly created connection, including its unique identifier (`id`). This base connection ID is required in the next step to create a source connection.
 
@@ -184,7 +191,7 @@ A successful response returns details of the newly created connection, including
 }
 ```
 
-++++
++++
 
 >[!ENDTABS]
 

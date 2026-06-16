@@ -5,6 +5,19 @@ title: Create a Dataflow for Protocols Sources Using the Flow Service API
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a protocols application and ingesting it into Experience Platform using source connectors and APIs.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
+TQID: https://experienceleague.adobe.com/6s1B0uWI-v3uevi3TTQO-MRjeTJ53oJ10q3Q3305Q-E
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a dataflow for protocols sources Using the [!DNL Flow Service] API
 

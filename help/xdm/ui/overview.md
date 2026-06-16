@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Schemas UI Overview
 description: Learn about the capabilities of the Schemas workspace in Experience Platform, including schema discovery, organization, governance, and resource management workflows.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
+TQID: https://experienceleague.adobe.com/gsUJn2PR6W64I2ozu2z93ZixPLZN0V-ggLvRVxhKhkA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 
 # [!UICONTROL Schemas] UI overview

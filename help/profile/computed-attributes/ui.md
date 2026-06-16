@@ -2,6 +2,23 @@
 title: Computed Attributes UI guide
 description: Learn how to create, view, and update computed attributes using the Adobe Experience Platform UI.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
+TQID: https://experienceleague.adobe.com/sqJpd3a2M-USLYMwICnNt9pxexuC1293kZRDtYiIhgA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Computed attributes UI guide
 
@@ -33,11 +50,11 @@ To select which fields are visible, you can select ![the configure columns icon]
 | [!UICONTROL Name] | The display name of the computed attribute. |
 | [!UICONTROL Description] | The description for the computed attribute. |
 | [!UICONTROL Evaluation method] | The evaluation method for the computed attribute. At this time, only **batch** is supported. |
-| [!UICONTROL Last evaluated] | This timestamp represents the last successful evaluation run. Only events that ocurred **before** this timestamp are considered in the last successful evaluation. |
-| [!UICONTROL Last evaluation status] | The status that states whether or not the computed attribute was successfully calculated in the last evaluation run. Possible values include **[!UICONTROL Success]** or **[!UICONTROL Failed]**. | 
+| [!UICONTROL Last evaluated] | This timestamp represents the last successful evaluation run. Only events that occurred **before** this timestamp are considered in the last successful evaluation. |
+| [!UICONTROL Last evaluation status] | The status that states whether or not the computed attribute was successfully calculated in the last evaluation run. Possible values include **[!UICONTROL Success]** or **[!UICONTROL Failed]**. |
 | [!UICONTROL Refresh frequency] | An indication on how frequently the computed attribute is expected to be refreshed. Possible values include hourly, daily, weekly, or monthly. |
 | [!UICONTROL Fast refresh] | A value that shows whether or not fast refresh is enabled for this compute attribute. If fast refresh is enabled, this lets the computed attribute be refreshed on a daily basis, rather than on a weekly, bi-weekly, or monthly basis. This value is only applicable for computed attributes with a lookback period greater than a weekly basis. |
-| [!UICONTROL Lifecycle status] | The current status of the computed attribute. There are three possible statuses: <ul><li>**[!UICONTROL Draft]:** The computed attribute does **not** have a field created on the schema yet. In this state, the computed attribute can be edited. </li><li>**[!UICONTROL Published]:** The computed attribute has a field created on the schema and is ready to be used. In this state, the computed attribute **cannot** be edited.</li><li>**[!UICONTROL Inactive]:** The computed attribute is disabled. For more information about the inactive status, please read the [FAQ page](./faq.md#inactive-status). </li> | 
+| [!UICONTROL Lifecycle status] | The current status of the computed attribute. There are three possible statuses: <ul><li>**[!UICONTROL Draft]:** The computed attribute does **not** have a field created on the schema yet. In this state, the computed attribute can be edited. </li><li>**[!UICONTROL Published]:** The computed attribute has a field created on the schema and is ready to be used. In this state, the computed attribute **cannot** be edited.</li><li>**[!UICONTROL Inactive]:** The computed attribute is disabled. For more information about the inactive status, please read the [FAQ page](./faq.md#inactive-status). </li> |
 | [!UICONTROL Created] | A timestamp showing the date and time the computed attribute was created. |
 | [!UICONTROL Last modified ]| A timestamp showing the date and time the computed attribute was last modified. |
 
@@ -67,7 +84,7 @@ The **[!UICONTROL Create computed attribute]** page appears. On this page, you c
 
 ![The [!UICONTROL Basic information] section of the [!UICONTROL Create computed attribute] page is highlighted.](./images/ui/basic-information.png)
 
-After adding the computed attribute details, you can start  defining your rules. 
+After adding the computed attribute details, you can start defining your rules. 
 
 ### Specify event filtering conditions
 
@@ -159,3 +176,4 @@ After creating a computed attribute, you can use **published** computed attribut
 ## Next steps
 
 To learn more about computed attributes, please read the [computed attributes overview](./overview.md). For information on creating and configuring computed attributes using the API, please read the [computed attributes developer guide](./api.md).
+

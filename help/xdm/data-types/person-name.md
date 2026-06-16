@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Person Name Data Type
 description: Learn about the Person Name XDM data type.
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
+TQID: https://experienceleague.adobe.com/9m-caim56fk6RIJgUXSb-SZiKsWF-9UDhuhDevWMAtQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Person name] data type
 

@@ -2,6 +2,23 @@
 title: Exploratory Data Analysis
 description: Learn how to use Data Distiller to explore and analyze data from a Python notebook.
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
+TQID: https://experienceleague.adobe.com/Sk-1y-qbaPLWaUmkjXN-LmaJ-gLqByBXXK77JvG2T74
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Exploratory data analysis
 
@@ -114,19 +131,19 @@ funnel_df
 
 |   | eventType  |  distinctUsers | distinctEvents  |
 |---|---|---|---|
-| 0  |   directMarketing.emailSent  |   598840  |   598840 | 
-| 1  |   directMarketing.emailOpened  |   239028  |   239028 | 
-| 2  |   web.webpagedetails.pageViews  |   120118  |   120118 | 
-| 3  |   advertising.impressions  |   119669 |    119669 | 
-| 4  |   directMarketing.emailClicked  |   51581  |   51581 | 
-| 5  |   commerce.productViews  |   37915  |   37915 | 
-| 6  |   decisioning.propositionDisplay  |   37650  |   37650 | 
-| 7  |   web.webinteraction.linkClicks  |   37581  |   37581 | 
-| 8  |   web.formFilledOut  |   17860  |   17860 | 
-| 9  |   advertising.clicks  |   7610  |   7610 | 
-| 10  |   decisioning.propositionInteract |    2964  |   2964 | 
-| 11  |   decisioning.propositionDismiss  |   2889  |   2889 | 
-| 12  |   commerce.purchases  |   2858  |   2858 | 
+| 0  |   directMarketing.emailSent  |   598840  |   598840 |
+| 1  |   directMarketing.emailOpened  |   239028  |   239028 |
+| 2  |   web.webpagedetails.pageViews  |   120118  |   120118 |
+| 3  |   advertising.impressions  |   119669 |    119669 |
+| 4  |   directMarketing.emailClicked  |   51581  |   51581 |
+| 5  |   commerce.productViews  |   37915  |   37915 |
+| 6  |   decisioning.propositionDisplay  |   37650  |   37650 |
+| 7  |   web.webinteraction.linkClicks  |   37581  |   37581 |
+| 8  |   web.formFilledOut  |   17860  |   17860 |
+| 9  |   advertising.clicks  |   7610  |   7610 |
+| 10  |   decisioning.propositionInteract |    2964  |   2964 |
+| 11  |   decisioning.propositionDismiss  |   2889  |   2889 |
+| 12  |   commerce.purchases  |   2858  |   2858 |
 
 {style="table-layout:auto"}
 
@@ -207,7 +224,7 @@ large_correlation_df
 
 **Sample output**:
 
-|   | webFormsFilled_totalUsers |    advertisingClicks_totalUsers  |   productViews_totalUsers  |   productPurchases_totalUsers  |   propositionDismisses_totaUsers |    propositionDisplays_totaUsers  |   propositionInteracts_totalUsers  |   emailClicks_totalUsers  |   emailOpens_totalUsers  |   webLinksClicks_totalUsers  |   …  |   webForms_advertisingClicks|     webForms_productViews  |   webForms_productPurchases  |   webForms_propositionDismisses  |   webForms_propositionInteracts  |   webForms_emailClicks |    webForms_emailOpens   |  webForms_emailSends  |   webForms_webLinkClicks  |   webForms_webPageViews | 
+|   | webFormsFilled_totalUsers |    advertisingClicks_totalUsers  |   productViews_totalUsers  |   productPurchases_totalUsers  |   propositionDismisses_totaUsers |    propositionDisplays_totaUsers  |   propositionInteracts_totalUsers  |   emailClicks_totalUsers  |   emailOpens_totalUsers  |   webLinksClicks_totalUsers  |   …  |   webForms_advertisingClicks|     webForms_productViews  |   webForms_productPurchases  |   webForms_propositionDismisses  |   webForms_propositionInteracts  |   webForms_emailClicks |    webForms_emailOpens   |  webForms_emailSends  |   webForms_webLinkClicks  |   webForms_webPageViews |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 0 |   17860 |   7610  |  37915  |  0  |  2889  |  37650  |  2964  |  51581 |   239028  |  37581  |  …  |  0.026805  |  0.2779  |  None  |  0.06014  |  0.143656  |  0.305657  |  0.218874  |  0.192836  |  0.259353  |  None |
 

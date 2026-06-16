@@ -2,15 +2,26 @@
 description: Learn how to use the destination testing API to test your streaming destination message transformation template before publishing the destination.
 title: Create and test a message transformation template
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
+TQID: https://experienceleague.adobe.com/HqZTztpNer2jNAWih6MqzOtcsULT0ThFRCVH8xs3PcA
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
-
 # Create and test a message transformation template {#create-template}
 
 ## Overview {#overview}
 
 As part of Destination SDK, Adobe provides developer tools to assist you in configuring and testing your destination. This page describes how to create and test a message transformation template. For information on how to test your destination, read [Test your destination configuration](streaming-destination-testing-overview.md).
 
-To **create and test a message transformation template** between the target schema in Adobe Experience Platform and the message format supported by your destination, use the *Template authoring tool* described further below.  Read more about the data transformation between source and target schema in the [message format document](../../functionality/destination-server/message-format.md#using-templating).
+To **create and test a message transformation template** between the target schema in [!DNL Adobe Experience Platform] and the message format supported by your destination, use the *Template authoring tool* described further below.  Read more about the data transformation between source and target schema in the [message format document](../../functionality/destination-server/message-format.md#using-templating).
 
 Illustrated below is how creating and testing a message transformation template fits into the [destination configuration workflow](../../guides/configure-destination-instructions.md) in Destination SDK:
 
@@ -18,11 +29,11 @@ Illustrated below is how creating and testing a message transformation template 
 
 ## Why you need to create and test a message transformation template {#why-create-message-transformation-template}
 
-One of the first steps in creating your destination in Destination SDK is to think about how the data format for audience membership, identities, and profile attributes is transformed when exported from Adobe Experience Platform to your destination. Find information about the transformation between Adobe XDM schema and your destination schema in the [message format document](../../functionality/destination-server/message-format.md#using-templating). 
+One of the first steps in creating your destination in Destination SDK is to think about how the data format for audience membership, identities, and profile attributes is transformed when exported from [!DNL Adobe Experience Platform] to your destination. Find information about the transformation between Adobe XDM schema and your destination schema in the [message format document](../../functionality/destination-server/message-format.md#using-templating). 
 
 For the transformation to succeed, you must provide a transformation template, similar to this example: [Create a template that sends segments, identities, and profile attributes](../../functionality/destination-server/message-format.md#segments-identities-attributes). 
 
-Adobe provides a template tool that allows you to create and test the message template that transforms data from the Adobe XDM format into the format supported by your destination. The tool has two API endpoints that you can use:
+Adobe provides a template tool for creating and testing the message template that transforms data from the Adobe XDM format into the format supported by your destination. The tool has two API endpoints that you can use:
 
 * Use the *sample template API* to get a sample template.
 * Use the *render template API* to render the sample template so you can compare the result against your destination's expected data format. After comparing the exported data against the data format expected by your destination, you can edit the template. This way, the exported data you generate matches the data format expected by your destination.
@@ -160,15 +171,15 @@ You can use an online character escaping tool. The demo above uses the [JSON Esc
 
 ## Render template API {#render-template-api}
 
-After creating a message transformation template using the [sample template API](create-template.md#sample-template-api), you can [render the template](render-template-api.md) to generate exported data based on it. This allows you to verify if the profiles that Adobe Experience Platform would export to your destination match your destination's expected format.
+After creating a message transformation template using the [sample template API](create-template.md#sample-template-api), you can [render the template](render-template-api.md) to generate exported data based on it. Use this to verify if the profiles that [!DNL Adobe Experience Platform] would export to your destination match your destination's expected format.
 
-Refer to the API reference for examples of calls that you can make:
+See the API reference for examples of calls that you can make:
 
-* [Render a template with no profiles sent in body](render-template-api.md#multiple-profiles-no-body)
-* [Render a template with profiles sent in body](render-template-api.md#multiple-profiles-with-body)
+* [Render a template with no profiles sent in body](render-template-api.md#best-effort)
+* [Render a template with profiles sent in body](render-template-api.md#configurable-aggregation)
 
 Edit the template and make calls to the render template API endpoint until the exported profiles match your destination's expected data format.
 
-## Add your character-escaped template to the destination server configuration
+## Add your character-escaped template to the destination server configuration {#add-template-to-server-config}
 
 Once you are satisfied with your message transformation template, add it to your [destination server configuration](../../authoring-api/destination-server/create-destination-server.md), in `httpTemplate.requestBody.value`.

@@ -4,6 +4,36 @@ solution: Experience Platform
 title: XDM ExperienceEvent Class
 description: Learn about the XDM ExperienceEvent class, and best practices for event data modeling.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
+TQID: https://experienceleague.adobe.com/p32ANGxnF35Q3a7ZoZVtNUvf4s0v4inzr0rje0nVFgo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+    internal-label: Best practices
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+    internal-label: Data modeling
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: d00e9f03-e50b-4162-b143-0c0817c937c2
+    internal-label: Customer journeys
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # [!DNL XDM ExperienceEvent] class
 
@@ -17,7 +47,7 @@ The [!DNL XDM ExperienceEvent] class itself provides several time-series-related
 
 | Property | Description |
 | --- | --- |
-| `_id`<br>**(Required)** | The Experience Event Class `_id` field uniquely identifies individual events that are ingested into Adobe Experience Platform. This field is used to track the uniqueness of an individual event, prevent duplication of data, and look up that event in downstream services.<br><br>Where duplicate events are detected, Experience Platform applications and services may handle the duplication differently. For example, duplicate events in Profile Service are dropped if the event with the same `_id` already exists in the Profile store. However, these events are still recorded in the data lake.<br><br>In some cases, `_id` can be a [Universally Unique Identifier (UUID)](https://datatracker.ietf.org/doc/html/rfc4122) or [Globally Unique Identifier (GUID)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>If you are streaming data from a source connection or ingesting directly from a Parquet file, you should generate this value by concatenating a certain combination of fields that make the event unique. Examples of events that could be concatenated include primary ID, timestamp, event type, and so on. The concatenated value must be a `uri-reference` formatted string, meaning any colon characters must be removed. Afterwards, the concatenated value should be hashed using SHA-256 or another algorithm of your choice.<br><br>It is important to distinguish that **this field does not represent an identity related to an individual person**, but rather the record of data itself. Identity data relating to a person should be relegated to [identity fields](../schema/composition.md#identity) provided by compatible field groups instead. |
+| `_id`<br>**(Required)** | The Experience Event Class `_id` field uniquely identifies individual events that are ingested into Adobe Experience Platform. This field is used to track the uniqueness of an individual event, prevent duplication of data, and look up that event in downstream services.<br><br>Where duplicate events are detected, Experience Platform applications and services may handle the duplication differently. For example, duplicate events in Real-Time Customer Profile are dropped if the event with the same `_id` already exists in the Profile store. However, these events are still recorded in the data lake.<br><br>In some cases, `_id` can be a [Universally Unique Identifier (UUID)](https://datatracker.ietf.org/doc/html/rfc4122) or [Globally Unique Identifier (GUID)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>If you are streaming data from a source connection or ingesting directly from a Parquet file, you should generate this value by concatenating a certain combination of fields that make the event unique. Examples of events that could be concatenated include primary ID, timestamp, event type, and so on. The concatenated value must be a `uri-reference` formatted string, meaning any colon characters must be removed. Afterwards, the concatenated value should be hashed using SHA-256 or another algorithm of your choice.<br><br>It is important to distinguish that **this field does not represent an identity related to an individual person**, but rather the record of data itself. Identity data relating to a person should be relegated to [identity fields](../schema/composition.md#identity) provided by compatible field groups instead.<br><br>When adding an `_id`, the field **cannot** contain the following characters: `/`, `\`, `?`, or `#`. If an `_id` contains these values, the record will be rejected during batch ingestion, in order to keep the rest of the records deletable. Rejected records can be re-ingested once the `_id` value is corrected. |
 | `eventMergeId` | If using the [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) to ingest data, this represents the ID of the ingested batch that caused the record to be created. This field is automatically populated by the system upon data ingestion. The use of this field outside of the context of a Web SDK implementation is not supported. |
 | `eventType` | A string that indicates the type or category for the event. This field can be used if you want to distinguish different event types within the same schema and dataset, such as distinguishing a product view event from an add-to-shopping-cart event for a retail company.<br><br>Standard values for this property are provided in the [appendix section](#eventType), including descriptions of their intended use case. This field is an extensible enum, meaning that you can also use your own event type strings to categorize the events you are tracking.<br><br>`eventType` limits you to using only a single event per hit on your application, and therefore you must use calculated fields to let the system know which event is most important. For more information, see the section on [best practices for calculated fields](#calculated). |
 | `producedBy` | A string value that describes the producer or origin of the event. This field can be used to filter out certain event producers if needed for segmentation purposes.<br><br>Some suggested values for this property are provided in the [appendix section](#producedBy). This field is an extensible enum, meaning that you can also use your own strings to represent different event producers. |
@@ -59,7 +89,7 @@ If you are streaming data to Experience Platform using a source connection, you 
 Adobe provides several standard field groups for use with the [!DNL XDM ExperienceEvent] class. The following is a list of some commonly used field groups for the class:
 
 * [[!UICONTROL Adobe Analytics ExperienceEvent Full Extension]](../field-groups/event/analytics-full-extension.md)
-* [[!UICONTROL Adobe Advertising Cloud ExperienceEvent Full Extension]](../field-groups/event/advertising-full-extension.md)
+* [[!UICONTROL Adobe Advertising ExperienceEvent Full Extension]](../field-groups/event/advertising-full-extension.md)
 * [[!UICONTROL Balance Transfers]](../field-groups/event/balance-transfers.md)
 * [[!UICONTROL Campaign Marketing Details]](../field-groups/event/campaign-marketing-details.md)
 * [[!UICONTROL Card Actions]](../field-groups/event/card-actions.md)

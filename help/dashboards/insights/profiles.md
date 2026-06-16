@@ -2,6 +2,21 @@
 title: Profile Insights
 description: Discover the SQL that powers your profile insights and use these queries to generate custom insights that further explore your customers and their consumer experiences.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
+TQID: https://experienceleague.adobe.com/x-B2yvty3I-jNBhwgspFI8T5dg6n6Ah3H-Sh4a5bcbw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Profile insights
 
@@ -188,6 +203,10 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 See the [Audiences mapped to destination status widget documentation](../guides/profiles.md#audiences-mapped-to-destination-status) for information on the appearance and functionality of this insight.
 
 ## Audiences size {#audiences-size}
+
+>[!NOTE]
+>
+>The SQL for this insight uses `count_of_profiles` from `adwh_fact_profile_by_segment_trendlines`. For the definition of this metric and how it differs from profile snapshot data, see the [segment trendline metrics](../data-models/cdp-insights-data-model-b2c.md#segment-trendline-metrics) section of the Real-Time CDP Insights data model (B2C Edition) documentation.
 
 Questions answered by this insight:
 
@@ -776,3 +795,4 @@ By reading this document, you now understand the SQL that generates dashboard in
 See the [View SQL documentation](../view-sql.md) for more information on how to adapt your insights' SQL directly through the PLatform UI.
 
 You can also read and understand the SQL that generates insights for the [Audiences](./audiences.md), [Account Profiles](./account-profiles.md), and [Destinations](./destinations.md) dashboards.
+

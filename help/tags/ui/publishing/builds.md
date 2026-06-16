@@ -2,6 +2,30 @@
 title: Builds
 description: Learn about the concept of builds and how they function within Adobe Experience Platform.
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
+TQID: https://experienceleague.adobe.com/-VNR0edaytLc0bPW-eZH17537-819HIeT9yyBUf0x-Q
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+    internal-label: Advertising
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # Builds
 
@@ -11,7 +35,7 @@ It is a composite of the changes you specified within your library, as well as e
 
 The build consists of client-side code files that reference each other. These files are delivered to your hosting location using the environment and host that you have chosen for the library. The code that you deploy on your site points to this same location so the files can load when a user accesses your site or application.
 
-## File Contents
+## File contents {#file-contents}
 
 A library defines a discreet set of tag resources (extensions, rules, and data elements) that should be included within it.
 
@@ -28,7 +52,7 @@ Builds are divided into the main library file and potentially many smaller files
 
 The smaller files contain code and configuration for individual Actions that are loaded onto the page as needed. When a Rule is triggered and its Conditions are evaluated such that the Actions need to be executed, the necessary code and configuration for that specific action are retrieved from one of the smaller files. This means that only the code needed to perform the necessary Actions is ever loaded onto the page, making the main library as small as possible.
 
-## File Format
+## File format {#file-format}
 
 The default file format for builds is a package of files that contain all the required code for your extensions, data elements, and rules to run in the way that you want them to.
 
@@ -42,7 +66,7 @@ Regardless of file format, the build is always delivered to the location specifi
 
 To complete a build, select a library and select the Build option that is available at that level of the publishing process (Build for Development, Build for Staging, and so on.
 
-## Minification
+## Minification {#minification}
 
 Minification lowers bandwidth costs and improves speed by stripping data that isn't required for execution from a file.
 
@@ -69,3 +93,46 @@ If an extension developer provides minified code with their extension, Experienc
 For more information about minification, see [this stackpath article](https://blog.stackpath.com/glossary/minification/).
 
 When performing a build it will construct the un-minified library first, then minify the entire library all at once.
+
+## View build details {#build-details}
+
+>[!IMPORTANT]
+>
+>A library stores revisions of your tag resources, but a **Build** is a point-in-time snapshot of that library containing the files that are delivered to your site.
+
+Builds and build details can be accessed from a **library** or an **environment** to view current live builds, and inspect what a build contains (extensions, data elements, and rules).
+
+### View build details from a library
+
+In your tags property, open the **[!UICONTROL Publishing Flow]** and select a library.
+
+![Publishing flow in Data Collections UI highlighting a library.](../publishing/images/builds/library.png)
+
+In the details panel, you can review the following:
+
+* **[!UICONTROL Last Build Environment]** — Link to the environment that received the last build. Indicates whether this library is the current build for that environment (**Current** or **Not current**).
+* **[!UICONTROL Current Builds]** — Builds that are currently live on their environments. For published libraries, the live production build is indicated by the lightning bolt icon in this section.
+* For each build listed, you can view:
+    * **[!UICONTROL Status]** - When the build was created. 
+    * **[!UICONTROL Environment]** - The environment where the build was deployed. 
+    * **[!UICONTROL User]** - User who created the build.
+
+![Library details shown in the right details panel](../publishing/images/builds/library-details.png)
+
+### View builds from an environment
+
+A build is associated with an environment and the library that was built to that environment. The build is what actually contains the compiled resources.
+
+Select the **[!UICONTROL Environment]** from the details panel. The Environment details panel shows a list of recent builds, the current live build, and related libraries.
+
+![Environment details panel highlighting current builds.](../publishing/images/builds/environment.png)
+
+Next, select a build to open its details. The build detail shows the **Extensions**, **Data Elements**, and **Rules** included in that build.
+
+![Build details highlighting extensions, data elements, and rules.](../publishing/images/builds/build.png)
+
+>[!NOTE]
+>
+>A build can include more than the resources listed on the library alone. The **Extensions**, **Data Elements**, and **Rules** packaged in the build include the library's contents as well as upstream contents. It is the full snapshot that gets published to the site or app. 
+
+Use the details panel to navigate back to the **[!UICONTROL Environment]** or **[!UICONTROL Library]**.

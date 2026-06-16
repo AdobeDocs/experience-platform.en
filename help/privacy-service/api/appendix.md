@@ -5,6 +5,19 @@ title: Privacy Service API Guide Appendix
 description: This document contains additional information for working with the Privacy Service API.
 role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
+TQID: https://experienceleague.adobe.com/sTfXLUp5MYhKzUb2k478ur0b3s2rdoR5NWswtV3cp6U
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Privacy Service API guide appendix
 
@@ -20,7 +33,7 @@ The following table outlines several commonly used, pre-defined identity types m
 | --- | --- | --- |
 | Email | `Email` | `6` |
 | Phone | `Phone`  | `7` |
-| Adobe Advertising Cloud ID | `AdCloud` | `411` |
+| Adobe Advertising ID | `AdCloud` | `411` |
 | Adobe Audience Manager UUID | `CORE` | `0` |
 | Adobe Experience Cloud ID | `ECID` | `4` |
 | Adobe Target ID | `TNTID` | `9` |
@@ -36,7 +49,7 @@ The following table outlines several commonly used, pre-defined identity types m
 
 You can retrieve a list of identity namespaces in use by your organization by making a GET request to the `idnamespace/identities` endpoint in the [!DNL Identity Service] API. See the [Identity Service developer guide](../../identity-service/api/getting-started.md) for more information.
 
-## Namespace qualifiers
+## Namespace qualifiers {#namespace-qualifiers}
 
 When specifying a `namespace` value in the [!DNL Privacy Service] API, a **namespace qualifier** must be included in a corresponding `type` parameter. The following table outlines the different accepted namespace qualifiers.
 
@@ -52,28 +65,31 @@ When specifying a `namespace` value in the [!DNL Privacy Service] API, a **names
 
 {style="table-layout:auto"}
 
-## Accepted product values
+## Accepted product values {#accepted-product-values}
 
-The following table outlines the accepted values for specifying an Adobe product in the `include` attribute of a job creation request.
+This section lists the product identifier values accepted in the `include` attribute when creating Privacy Service jobs (API or UI). Use these values in the `include` array of your job request.
+
+The following table lists the supported products, their UI display names, and their corresponding code values.
 
 >[!NOTE]
 >
->The values for the list of products are case-insensitive. Camel-case is recommended but not enforced.
+>- Product values are case-insensitive; camel case is recommended for consistency.
+>- Only the products listed above are supported in the UI and API. If a product is not provisioned for your organization, it may be ignored or cause a validation error—refer to your Adobe contract or provisioning documentation to confirm entitlement.
 
-| Product | Value for use in the `include` attribute |
-| --- | --- |
-| Adobe Advertising Cloud | `adCloud` |
-| Adobe Analytics | `analytics` |
-| Adobe Audience Manager | `audienceManager` |
-| Adobe Campaign | `campaign` |
-| Adobe Experience Platform (data lake) | `aepDataLake` |
-| Adobe Experience Platform (Real-Time Customer Profile) | `profileService` |
-| Adobe Pass Authentication | `primetimeAuthentication` |
-| Adobe Target | `target` |
-| Customer Attributes (CRS) | `CRS` |
-| Customer Journey Management | `cjm` |
-| Identity Service | `identity` |
-| Marketo Engage | `marketo` |
-| Marketo Measure | `marketomeasure` |
+| Branded product name                                   | UI display name            | `include` value |
+| ------------------------------------------------------ | -------------------------- | ---------------------------------------- |
+| Adobe Analytics                                        | [!UICONTROL Analytics]                 | `analytics`                              |
+| Adobe Audience Manager                                 | [!UICONTROL Audience Manager]          | `audienceManager`                        |
+| Adobe Advertising                                      | [!UICONTROL Ad Cloud]                  | `adCloud`                                |
+| Adobe Experience Platform (Profile store)              | [!UICONTROL Profile]                   | `profileService`                         |
+| Adobe Experience Platform (data lake)                  | [!UICONTROL AEP Data Lake]             | `aepDataLake`                            |
+| Adobe Campaign                                         | [!UICONTROL Campaign]                  | `campaign`                               |
+| Adobe Target                                           | [!UICONTROL Target]                    | `target`                                 |
+| Customer Attributes                                    | [!UICONTROL Customer Attributes (CRS)] | `CRS`                                    |
+| Adobe Journey Optimizer                                | [!UICONTROL Adobe Journey Optimizer]   | `cjm`                                    |
+| Marketo Engage                                         | [!UICONTROL Marketo Engage / AJO B2B]  | `marketo`                                |
+| Identity Service                                       | [!UICONTROL Identity]                  | `identity`                               |
+| Marketo Measure                                        | [!UICONTROL Marketo Measure]           | `marketomeasure`                         |
+| Adobe Commerce                                         | [!UICONTROL Commerce (Personalization)]| `commerceMarketingData`                  |
 
 {style="table-layout:auto"}

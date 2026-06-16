@@ -5,6 +5,28 @@ description: Through the use of account profiles, Adobe Real-Time Customer Data 
 badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
+TQID: https://experienceleague.adobe.com/Yo5q-kUX7-DhWBa32yIwibmv3JgFDMX2FKp4D7A4Z5w
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+feature_v2:
+  - id: a3f1e846-82a6-4574-9832-7d46ef69f306
+    internal-label: Administration
+subfeature_v2:
+  - id: a3118268-59a6-4679-b8b5-7e62de26c61f
+    internal-label: Account profile, Account profile (RTCDP)
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Account profile UI guide
 
@@ -112,7 +134,7 @@ The **[!UICONTROL Attributes]** tab lists all of the record information related 
 
 In addition to being able to view the data in a list, you can use the search bar to search for specific attributes or view the record data as JSON.
 
-![Attributes tab](images/b2b-account-attributes.png)
+![Attributes tab](images/account-profile-attributes.png)
 
 ## People tab {#people-tab}
 

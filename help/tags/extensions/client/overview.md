@@ -2,6 +2,44 @@
 title: Tag Extensions Reference
 description: Find documentation for tag extensions in Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
+TQID: https://experienceleague.adobe.com/4UqjDOdBSp2kPqCrXSdTn8ePwjiMABhYjtEmezGI3H4
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+    internal-label: Advertising
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: df80eeb1-8d72-467e-b0df-9d51c7d3a0a1
+    internal-label: Audience Manager
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b3f03848-ae12-48b2-8aab-cad18567eb32
+    internal-label: Metrics
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Tag extensions reference
 
@@ -15,7 +53,7 @@ The following is a list of documentation for client-side tag extensions. For a l
 * [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)*
 * [Action Page Refresh](https://exchange.adobe.com/apps/ec/102848)*
 * [Adform Website Tracking](https://exchange.adobe.com/apps/ec/103195)*
-* [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
+* [Adobe Advertising](https://exchange.adobe.com/apps/ec/100155)*
 * [Adobe Analytics](./analytics/overview.md)
 * [Adobe Analytics & Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)*
 * [Adobe Analytics & Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
@@ -39,7 +77,6 @@ The following is a list of documentation for client-side tag extensions. For a l
 * [Adobe Target](./target/overview.md)
 * [Adobe Target v2](./target-v2/overview.md)
 * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)*
-* [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)*
 * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)*
 * [Airbrake JS Notifier](https://exchange.adobe.com/apps/ec/103342)*
 * [Amplitude](https://exchange.adobe.com/apps/ec/108010)*

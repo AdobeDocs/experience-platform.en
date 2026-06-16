@@ -2,12 +2,34 @@
 title: Twitter Custom Audiences connection
 description: Target your existing followers and customers in Twitter and create relevant re-marketing campaigns by activating your audiences built within Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
+TQID: https://experienceleague.adobe.com/HXSjHQw4-N7xpnm8S7Tsk2OnaPJ3Bwf0FHFOt2aqYo8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # [!DNL Twitter Custom Audiences] connection
 
 ## Overview {#overview}
 
-Target your existing followers and customers in Twitter and create relevant re-marketing campaigns by activating your audiences built within Adobe Experience Platform.
+Target your existing followers and customers in Twitter and create relevant re-marketing campaigns by activating your audiences built within [!DNL Adobe Experience Platform].
 
 ## Prerequisites {#prerequisites}
 
@@ -22,8 +44,8 @@ Before you configure your [!DNL Twitter Custom Audiences] destination, make sure
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|device_id|IDFA/AdID/Android ID|Google Advertising ID (GAID) and Apple ID for Advertisers (IDFA) are supported in Adobe Experience Platform. Please map these namespaces and/or attributes from your source schema accordingly in the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the destination activation workflow.|
-|email|Email address(es) for the user|Please map your plain text email addresses and your SHA256-hashed email addresses to this field. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation. If you hash your customer email addresses before uploading them to Adobe Experience Platform, please note these identities must be hashed using SHA256, without a salt.|
+|device_id|IDFA/AdID/Android ID|Google Advertising ID (GAID) and Apple ID for Advertisers (IDFA) are supported in [!DNL Adobe Experience Platform]. Please map these namespaces and/or attributes from your source schema accordingly in the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the destination activation workflow.|
+|email|Email address(es) for the user|Please map your plain text email addresses and your SHA256-hashed email addresses to this field. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation. If you hash your customer email addresses before uploading them to [!DNL Adobe Experience Platform], note these identities must be hashed using SHA256, without a salt.|
 
 {style="table-layout:auto"}
 
@@ -31,12 +53,26 @@ Before you configure your [!DNL Twitter Custom Audiences] destination, make sure
 
 This section describes which types of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | No | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -51,16 +87,16 @@ Refer to the table below for information about the destination export type and f
 
 ## Use Cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL Twitter Custom Audiences] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Twitter Custom Audiences] destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
-### Use Case #1
+### Use Case #1 {#use-case-1}
 
-Target your existing followers and customers in Twitter and create relevant re-marketing campaigns by activating your audiences built within Adobe Experience Platform as [!DNL List Custom Audiences] in Twitter.
+Target your existing followers and customers in Twitter and create relevant re-marketing campaigns by activating your audiences built within [!DNL Adobe Experience Platform] as [!DNL List Custom Audiences] in Twitter.
 
 ## Connect to destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -98,7 +134,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 

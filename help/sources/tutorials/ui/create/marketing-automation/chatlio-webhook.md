@@ -3,6 +3,19 @@ title: Create a Chatlio Source Connection in the UI
 description: Learn how to create a Chatlio source connection using the Adobe Experience Platform UI.
 badge: Beta
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
+TQID: https://experienceleague.adobe.com/eUCjbXjFkNvivawbfF2BrFR1vGw7kzpKYiUL7g4cZ7c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a [!DNL Chatlio] source connection in the UI
 
@@ -123,7 +136,7 @@ To retrieve your **[!UICONTROL Dataflow ID]** and **[!UICONTROL Streaming endpoi
 
 ![The streaming endpoint in dataflow activity.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/endpoint-test.png)
 
-Once you have retrieved your streaming endpoint and dataflow ID, build a URL based on the following pattern: ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```. For example, a constructed webhook URL may look like: ``https://dcs.adobedc.net/collection/d56b47ee3985104beaf724efcd78a3e1a863d720471a482bebac0acc1ab95983``
+Once you have retrieved your streaming endpoint and dataflow ID, build a URL based on the following pattern: `{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}`. For example, a constructed webhook URL may look like: `https://dcs.adobedc.net/collection/d56b47ee3985104beaf724efcd78a3e1a863d720471a482bebac0acc1ab95983`
 
 ## Set up webhook in [!DNL Chatlio] {#set-up-webhook}
 

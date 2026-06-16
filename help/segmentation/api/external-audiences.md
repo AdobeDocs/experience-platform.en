@@ -2,6 +2,26 @@
 title: External Audiences API Endpoint
 description: Learn how to use the external audiences API to create, update, activate, and delete your external audiences from Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
+TQID: https://experienceleague.adobe.com/LMW9Y9JhBUhwz-p6hBNSwdriklaDaQg0BG-E9M7-bYQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # External audiences endpoint
 
@@ -86,13 +106,18 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
                 "path": "activation/sample-source/example.csv",
                 "type": "file",
                 "sourceType": "Cloud Storage",
-                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b",
+                "encryption": {
+                    "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2",
+                    "signVerificationId": "ZTMxYWU4OTUtNzg5Ni00NjlhLThlMDYtZWI5MjA3ZGRmMWMy"
+                }
             }
         },
         "ttlInDays": "40",
         "labels": ["core/C1"],
         "audienceType": "people",
-        "originName": "CUSTOM_UPLOAD"
+        "originName": "CUSTOM_UPLOAD",
+        "expressActivation": true
     }'
 ```
 
@@ -101,14 +126,15 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `name` | String | The name for the external audience. |
 | `description` | String | An optional description for the external audience. |
 | `customAudienceId` | String | An optional identifier for your external audience. |
-| `fields` | Array of objects | The list of fields and their data types. When creating the list of fields, you can add the following items: <ul><li>`name`: **Required** The name of the field that is part of the external audience specification.</li><li>`type`: **Required** The type of data that goes into the field. Supported values include `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`), and `boolean`.</li><li>`identityNs`: **Required for identity field** The namespace that is used by the identity field. Supported values include all valid namespaces, such as `ECID` or `email`.</li><li>`labels`: *Optional* An array of access control labels for the field. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). </li></ul> |
-| `sourceSpec` | Object | An object that contains the information where the external audience is located. When using this object, you **must** include the following information: <ul><li>`path`: **Required**: The location of the external audience or the folder that contains the external audience within the source. The file path **cannot** contain any spaces. For example, if your path is `activation/sample-source/Example CSV File.csv`, set the path to `activation/sample-source/ExampleCSVFile.csv`. You can find the path to your source within the **Source data** column of the dataflows section.</li><li>`type`: **Required** The type of the object you're retrieving from the source. This value can either be `file` or `folder`.</li><li>`sourceType`: *Optional* The type of source you're retrieving from. Currently, the only supported value is `Cloud Storage`.</li><li>`cloudType`: **Required** The type of cloud storage, based off of the source type. Supported values include `S3`, `DLZ`, `GCS`, `Azure`, and `SFTP`.</li><li>`baseConnectionId`: The ID of the base connection, and is provided from your source provider. This value is **required** if using a `cloudType` value of `S3`, `GCS`, or `SFTP`. Otherwise, you do **not** need to include this parameter. For more information, please read the [source connectors overview](../../sources/home.md).</li></ul> |
+| `fields` | Array of objects | The list of fields and their data types. You must have a minimum of 1 field and a maximum of 41 fields in your array. One of the fields **must** be an identity field, and include the `identityNs`. When creating the list of fields, you can add the following items: <ul><li>`name`: **Required** The name of the field that is part of the external audience specification.</li><li>`type`: **Required** The type of data that goes into the field. Supported values include `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`), and `boolean`.</li><li>`identityNs`: **Required for identity field** The namespace that is used by the identity field. Supported values include all valid namespaces, such as `ECID` or `email`.</li><li>`labels`: *Optional* An array of access control labels for the field. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). </li></ul> |
+| `sourceSpec` | Object | An object that contains the information where the external audience is located. When using this object, you **must** include the following information: <ul><li>`path`: **Required**: The location of the external audience or the folder that contains the external audience within the source. The file path **cannot** contain any spaces. For example, if your path is `activation/sample-source/Example CSV File.csv`, set the path to `activation/sample-source/ExampleCSVFile.csv`. You can find the path to your source within the **Source data** column of the dataflows section.</li><li>`type`: **Required** The type of the object you're retrieving from the source. This value can either be `file` or `folder`.</li><li>`sourceType`: *Optional* The type of source you're retrieving from. Currently, the only supported value is `Cloud Storage`.</li><li>`cloudType`: **Required** The type of cloud storage, based off of the source type. Supported values include `S3`, `DLZ`, `GCS`, `Azure`, and `SFTP`.</li><li>`baseConnectionId`: The ID of the base connection, and is provided from your source provider. This value is **required** if using a `cloudType` value of `S3`, `GCS`, or `SFTP`. Otherwise, you do **not** need to include this parameter. For more information, please read the [source connectors overview](../../sources/home.md).</li><li>`encryption`: *Optional* An object that contains the encryption key required for asynchronous encrypted data ingestion.</li><ul><li>`publicKeyId`: **Required**: The public key ID that was returned when you generated the encryption key pair. For more information, read the [encrypt data guide](/help/sources/tutorials/api/encrypt-data.md#create-encryption-key-pair). </li><li>`signVerificationKeyId`: *Optional*: The public key ID that was returned when you shared your customer managed key with Experience Platform. **Note:** This field is labeled as `publicKeyId` in the response for that API request. For more information, read the [encrypt data guide](/help/sources/tutorials/api/encrypt-data.md##share-your-public-key-to-experience-platform).</li></ul></ul> |
 | `ttlInDays` | Integer | The data expiration for the external audience, in days. This value can be set from 1 to 90. By default, the data expiration is set to 30 days. |
 | `audienceType` | String | The audience type for the external audience. Currently, only `people` is supported. |
 | `originName` | String | **Required** The origin of the audience. This states where the audience comes from. For external audiences, you should use `CUSTOM_UPLOAD`. |
+| `expressActivation` | Boolean | *Optional* A boolean that enables the express activation job to be ran. The express activation job creates an additional job that is directly consumed by the downstream activation pipeline, reducing the time to deliver audience membership data to configured batch destinations. This field is best used on **subsequent** audience activations and may not result is faster activation times for **initial** audience activations. By default, the value is set to `false`. For more information on how to use express activation, read the [express activation section](#express-activation). |
 | `namespace` | String | The namespace for the audience. By default, this value is set to `CustomerAudienceUpload`. |
 | `labels` | Array of strings | The access control labels that apply to the external audience. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). |
-| `tags` | Array of strings | The tags you want to apply to the external audience. More information about tags can be found in the [managing tags guide](/help/administrative-tags/ui/managing-tags.md). |
+| `tags` | Array of strings | The tags you want to apply to the external audience. When you add the array of tags, you **must** use the `tagId`. More information about tags can be found in the [managing tags guide](/help/administrative-tags/ui/managing-tags.md). |
 
 +++
 
@@ -149,7 +175,11 @@ A successful response returns HTTP status 202 with details of your newly created
                 "path": "activation/sample-source/example.csv",
                 "type": "file",
                 "sourceType": "Cloud Storage",
-                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b",
+                "encryption": {
+                    "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2",
+                    "signVerificationId": "ZTMxYWU4OTUtNzg5Ni00NjlhLThlMDYtZWI5MjA3ZGRmMWMy"
+                }
             }
         },
         "ttlInDays": 40,
@@ -167,10 +197,10 @@ A successful response returns HTTP status 202 with details of your newly created
 | `name` | String | The name for the external audience. |
 | `description` | String | The description for the external audience. |
 | `fields` | Array of objects | The list of fields and their data types. This array determines what fields you need in your external audience. |
-| `sourceSpec` | Object | An object that contains the information where the external audience is located.  |
+| `sourceSpec` | Object | An object that contains the information where the external audience is located. |
 | `ttlInDays` | Integer | The data expiration for the external audience, in days. This value can be set from 1 to 90. By default, the data expiration is set to 30 days. |
 | `audienceType` | String | The audience type for the external audience. |
-| `originName` | String | **Required** The origin of the audience. This states where the audience comes from.  |
+| `originName` | String | **Required** The origin of the audience. This states where the audience comes from. |
 | `namespace` | String | The namespace for the audience. |
 | `labels` | Array of strings | The access control labels that apply to the external audience. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). |
 
@@ -384,6 +414,8 @@ A successful response returns HTTP status 200 with details of the updated extern
 >[!NOTE]
 >
 >To use the following endpoint, you need to have the `audienceId` of your external audience. You can get your `audienceId` from a successful call to the `GET /external-audiences/operations/{OPERATION_ID}` endpoint.
+>
+>Additionally, this endpoint can be used to refresh the data for the audience if it was previously ingested.
 
 You can start an audience ingestion by making a POST request to the following endpoint while providing the audience ID.
 
@@ -542,7 +574,8 @@ You can retrieve all the ingestion runs for the selected external audience by ma
 GET /external-audience/{AUDIENCE_ID}/runs
 ```
 
-<!-- **Query parameters**
+<!-- 
+**Query parameters**
 
 +++ A list of available query parameters. 
 
@@ -552,7 +585,8 @@ GET /external-audience/{AUDIENCE_ID}/runs
 | `sortBy` | The order in which the returned items are sorted. You can sort by either `name` or by `createdAt`. Additionally, you can add a `-` sign to sort by **descending** order instead of **ascending** order. By default, the items are sorted by `createdAt` in descending order. | `sortBy=name` |
 | `property` | A filter to determine which audience ingestion runs are displayed. You can filter on the following properties: <ul><li>`name`: Lets you filter by the audience name. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li><li>`createdAt`: Lets you filter by the ingestion time. If using this property, you can compare by using `>=` or `<=`.</li><li>`status`: Lets you filter by the ingestion run's status. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li></ul>  | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
-+++ -->
++++ 
+-->
 
 **Request**
 
@@ -605,7 +639,8 @@ A successful response returns HTTP status 200 with a list of ingestion runs for 
 }
 ```
 
-<!-- ,
+<!--
+ ,
     "_page": {
         "limit": 20,
         "count": 2,
@@ -613,11 +648,59 @@ A successful response returns HTTP status 200 with a list of ingestion runs for 
     }
     
 | `_page` | Object | An object that contains the pagination information about the list of results. |
-     -->
+   
+-->
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `runs` | Object | An object that contains the list of ingestion runs that belongs to the audience. More information about this object can be found in the [retrieve ingestion status section](#retrieve-ingestion-status). |
+
++++
+
+## Extend data expiration for an external audience {#extend-data-expiration}
+
+>[!NOTE]
+>
+>To use the following endpoint, you need to have the `audienceId` of your external audience. You can get your `audienceId` from a successful call to the `GET /external-audiences/operations/{OPERATION_ID}` endpoint.
+
+You can extend the data expiration of an external audience by making a POST request to the following endpoint while providing the audience ID. 
+
+The data expiration is extended by the original duration set during ingestion. If no duration was specified, a default extension of 30 days is applied. When you extend the data expiration, the audience will be re-ingested with the data from the last successful ingestion.
+
+**API format**
+
+```http
+/ais/external-audience/extend-ttl/{AUDIENCE_ID}
+```
+
+**Request**
+
+The following request extends the data expiration of the specified external audience.
+
++++ A sample request to extend the data expiration of an external audience.
+
+```shell
+curl -x POST https://platform.adobe.io/data/core/ais/external-audience/extend-ttl/60ccea95-1435-4180-97a5-58af4aa285ab \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**Response**
+
+A successful response returns HTTP status 200 with details of the audience.
+
++++ A sample response when extending the data expiration.
+
+```json
+{
+    "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
+    "name": "Sample external audience"
+}
+```
 
 +++
 
@@ -661,11 +744,15 @@ After reading this guide, you now have a better understanding of how to create, 
 
 ## Appendix {#appendix}
 
-The following section lists the available error codes when using the external audiences API.
+The following section lists additional information related to the external audiences endpoint.
+
+### Error codes {#error-codes}
+
+The following section displays the available error codes when using the external audiences API.
 
 | Platform error code | Status code | Message | Description |
 | ------------------- | ----------- | ------- | ----------- |
-| 100910-400 | 400 | `BAD_REQUEST` | A bad request has occurred, due to a failure occurring while validating the requests. | 
+| 100910-400 | 400 | `BAD_REQUEST` | A bad request has occurred, due to a failure occurring while validating the requests. |
 | 100911-400 | 400 | `BAD_REQUEST` | An invalid token is provided. |
 | 100920-401 | 401 | `UNAUTHORIZED` | A header is missing. |
 | 100921-401 | 401 | `UNAUTHORIZED` | An invalid `imsOrgId` is provided. |
@@ -675,3 +762,18 @@ The following section lists the available error codes when using the external au
 | 100960-422 | 422 | `UNPROCESSABLE_ENTITY` | The request structure is valid, but it cannot be processed due to logical or semantic errors. |
 | 100970-500 | 500 | `INTERNAL_SERVER_ERROR` | There was an issue processing the request in the system. |
 | 100970-502 | 502 | `BAD_GATEWAY` | There are downstream dependency issues. |
+
+### Express activation {#express-activation}
+
+To use express activation, you need to first make a POST request to the `/external-audience` endpoint with `expressActivation` set to `true`. Within the response, make sure to note the `operationId`.
+
+You now want to confirm that the audience has successfully been processed. Make a GET request to the `/external-audience/operations` while providing the `operationId` you previously noted. If the status is `SUCCESS` you can add the audience to your destination.
+
+When you add the audience to a destination, there is a 30 minute configuration between the audience and destination. Wait for at least 30 minutes before triggering the flow run.
+
+Once you've added the audience to a destination, you can trigger an audience ingestion to activate the data into your destination.
+
+>[!IMPORTANT]
+>
+>Currently, data is activated twice - the first time due to the express activation job, which occurs soon after batch ingestion and the second time after the audience evaluation job.
+

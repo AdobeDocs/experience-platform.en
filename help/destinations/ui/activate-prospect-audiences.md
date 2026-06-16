@@ -3,14 +3,33 @@ title: Activate prospect audiences to destinations
 type: Tutorial
 description: Learn how to activate prospect audiences to destinations
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
+TQID: https://experienceleague.adobe.com/ehh6VrkoICKHlBbFIP-0rSQbWkjm9FcqYA-6HURbIjQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Activate prospect audiences
 
 >[!AVAILABILITY]
 >
->This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Contact your Adobe representative for more information. 
+>This functionality is available to customers who have purchased the [!DNL Real-Time CDP] Prime and Ultimate package. Contact your Adobe representative for more information. 
 
-This article explains the workflow required to export [prospect audiences](/help/segmentation/types/prospect-audiences.md) from Adobe Experience Platform to your preferred destination. 
+This article explains the workflow required to export [prospect audiences](/help/segmentation/types/prospect-audiences.md) from [!DNL Adobe Experience Platform] to your preferred destination. 
 
 ## Supported destinations {#supported-destinations}
 
@@ -57,17 +76,21 @@ Follow the instructions to select a destination where you can export your datase
 
 ## Select your prospect audiences {#select-prospect-audiences}
 
-Use the checkboxes to the left of the prospect audiences names to select the audiences that you want to export to the destination, then select **[!UICONTROL Next]**. Note that only the prospect audiences are shown in this view, and no other audiences are displayed. 
+Use the checkboxes to the left of the prospect audiences names to select the audiences that you want to export to the destination, then select **[!UICONTROL Next]**.
+
+>[!NOTE]
+>
+>Only the prospect audiences are shown in this view, and no other audiences are displayed.
 
 ![Dataset export workflow showing the Select audiences step where you can select which prospect audiences to export.](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
 
-## Scheduling and next steps
+## Scheduling and next steps {#scheduling-and-next-steps}
 
 For the rest of the activation workflow to export prospect audiences, read the tutorial on activating data to file based-destinations. Continue from the [schedule audience export step](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 
 >[!NOTE]
 >
->Note that in the scheduling step, the workflow to activate prospect audiences only allows you to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files). Incremental file exports are not supported.
+>Note that in the scheduling step, the workflow to activate prospect audiences only lets you [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files). Incremental file exports are not supported.
 
 <!--
 
@@ -77,8 +100,8 @@ Note that we will need to add links to other destination types here as more dest
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 
-Explore further use cases enabled through partner data support in Real-Time CDP:
+Explore further use cases enabled through partner data support in [!DNL Real-Time CDP]:
 
 * [Supplement first-party profiles with attributes from trusted data partners](/help/rtcdp/partner-data/supplement-first-party-profiles.md) to improve your data foundation and gain new insights into your customer base and gain better audience optimization.
-* Use third-party data support in Real-Time CDP to [expand your profile base with prospect profiles from data partners and engage with them to acquire or reach new customers](/help/rtcdp/partner-data/prospecting.md).
+* Use third-party data support in [!DNL Real-Time CDP] to [expand your profile base with prospect profiles from data partners and engage with them to acquire or reach new customers](/help/rtcdp/partner-data/prospecting.md).
 * [Leverage partner aided recognition for personalizing on-site experiences](/help/rtcdp/partner-data/onsite-personalization.md) during the visit without the user authenticating or having prior history with your brand.

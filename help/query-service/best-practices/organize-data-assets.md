@@ -2,6 +2,15 @@
 title: Best Practices for Data Asset Organization in Query Service
 description: This document outlines a logical means of organizing data for ease of use with Query Service.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
+TQID: https://experienceleague.adobe.com/fc4XqaiiZX35ogs6r6w0szZrkdJjAIJb7RPz6wsoDB8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Organize data assets in Query Service
 

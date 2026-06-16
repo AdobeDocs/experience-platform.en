@@ -2,6 +2,15 @@
 title: Query Templates
 description: Query templates are reusable saved SQL queries that can be reused by other users to save time and effort. They can be created using the Query Editor or the Query Service API and are available for use on all Experience Platform datasets.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
+TQID: https://experienceleague.adobe.com/062tOtRs7XMWwNdV6KX34V5xYxI2c4HQWWNDf29G9js
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Query Templates
 
@@ -20,6 +29,14 @@ You can create query templates through two methods, either by making a POST requ
 ### Use the Query Editor to author and save a query as a template
 
 See the documentation for instructions on how to use the Query Editor to [write](./user-guide.md#query-authoring) and [save queries](./user-guide.md#saving-queries). Once you have named and saved your query, it is available to be reused as a query template from the [!UICONTROL Templates] tab.
+
+### Create a template from a Data Distiller accelerator {#create-from-accelerator}
+
+Data Distiller accelerators are read-only. To modify an accelerator, create an editable template from it in the Query Editor.
+
+Open an accelerator, then select **[!UICONTROL Create custom template]** to clone the SQL. Save the template to add it to the **[!UICONTROL Templates]** tab. The cloned template is fully editable and can be run, scheduled, or modified as needed.
+
+See the [Data Distiller Accelerators](./accelerators.md#create-custom-template) guide for detailed instructions.
 
 >[!TIP]
 >

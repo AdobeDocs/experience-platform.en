@@ -6,6 +6,58 @@ description: Adobe Experience Platform provides API services that are closely li
 role: Developer
 feature: API
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
+TQID: https://experienceleague.adobe.com/HZc00JZcbSNcB3grMH-LKhLVKA-ZsOUYqqIS4KoMi7U
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: a230274e-7e6e-49eb-b817-514495a710ac
+    internal-label: query service
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+    internal-label: Sources
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+    internal-label: XDM
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+    internal-label: Data ingestion
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+    internal-label: Schemas
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Getting started with Adobe Experience Platform APIs
 
@@ -132,7 +184,7 @@ For more information on specific endpoints in Experience Platform APIs, includin
 | [Sandbox API guide](.././sandboxes/api/getting-started.md) | The Sandbox API allows developers to programmatically manage isolated virtual sandbox environments in Adobe Experience Platform. |
 | [[!DNL Schema Registry] API guide](.././xdm/api/overview.md) <br> (XDM) | The [!DNL Schema Registry] API allows developers to programmatically manage all schemas and related Experience Data Model (XDM) resources within Adobe Experience Platform. |
 | [[!DNL Segmentation Service] API guide](.././segmentation/api/overview.md) | The [!DNL Segmentation Service] API allows developers to programmatically manage segmentation operations in Adobe Experience Platform. This includes building segments and generating audiences from your Real-Time Customer Profile data. |
-| [[!DNL Sensei Machine Learning] API guide](.././data-science-workspace/api/getting-started.md) <br> (Data Science Workspace) | The [!DNL Sensei Machine Learning] API provides a mechanism for data scientists to organize and manage machine learning (ML) services from algorithm onboarding, experimentation, and to service deployment. |
+| [[!DNL Adobe AI Machine Learning] API guide](.././data-science-workspace/api/getting-started.md) <br> (Data Science Workspace) | The [!DNL Adobe AI Machine Learning] API provides a mechanism for data scientists to organize and manage machine learning (ML) services from algorithm onboarding, experimentation, and to service deployment. |
 
 For more information on specific endpoints and operations available for each service, please see the [API reference documentation](https://www.adobe.com/go/platform-api-reference-en) on Adobe I/O.
 

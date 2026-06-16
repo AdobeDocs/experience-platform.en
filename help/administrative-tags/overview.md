@@ -3,6 +3,22 @@ keywords: Experience Platform;home;popular topics;unified tags;tags;
 title: Unified Tags Overview
 description: This document provides information on unified tags in Adobe Experience Platform
 exl-id: a19e37c3-697a-4000-9cb8-d67478b47dc6
+TQID: https://experienceleague.adobe.com/1frhbFeXBd9yoDeo42vdtAHRmH9l-uvbnvPG-xgDf1w
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Unified tags overview
 
@@ -19,7 +35,7 @@ Tagging involves the following components:
 | Archived | A state for a tag that keeps current associations with objects but restricts the tag from being applied to further objects.  Archived tags are hidden from the tag picker. |
 | Object | An Experience Cloud item that can have a tag applied.  Examples: Segment, Journey, Dataset. |
 | Tag | Tags are metadata and may be thought of as keywords that can be attached to a segment, dataset, journey, or other objects to enable searches to find that object and related objects. |
-| Tag Category | Tag Categories group tags into meaningful sets to provide greater context or describe the purpose of the tag.  Administrators manage tag categories and tags within categories. | 
+| Tag Category | Tag Categories group tags into meaningful sets to provide greater context or describe the purpose of the tag.  Administrators manage tag categories and tags within categories. |
 | Uncategorized Tag | A new tag that is created in-line where tags are applied. These tags can be created and applied by any user, but they are not bound to a category.  Administrators may move these tags to a category to align with other similar tags. |
 
 ## Tags inventory

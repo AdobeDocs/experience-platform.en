@@ -5,6 +5,13 @@ title: Create a HubSpot Base Connection Using the Flow Service API
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to HubSpot using the Flow Service API.
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
+TQID: https://experienceleague.adobe.com/gBeL4MOksIKqh1qrUW4LRpnpGl9vEnXDsLgKX0ezQLU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a [!DNL HubSpot] base connection using the [!DNL Flow Service] API
 

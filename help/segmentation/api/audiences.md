@@ -3,6 +3,28 @@ title: Audiences API Endpoint
 description: Use the audiences endpoint in the Adobe Experience Platform Segmentation Service API to programmatically create, manage, and update audiences for your organization.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
+TQID: https://experienceleague.adobe.com/YtQlw4OHZtAGH7bx3WS7KnicD3uzN6F9J4OSjj0Hm2w
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: fe06da76-5b92-43de-9bda-c5c9c01b55e8
+    internal-label: Segmentation UI
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Audiences endpoint
 
@@ -177,7 +199,7 @@ A successful response returns HTTP status 200 with a list of audiences that were
 ```
 
 | Property | Audience type | Description |
-| -------- | ------------- | ----------- | 
+| -------- | ------------- | ----------- |
 | `id` | Both | A system-generated read-only identifier for the audience. |
 | `audienceId` | Both | If the audience is a Platform-generated audience, this is the same value as the `id`. If the audience is externally generated, this value is provided by the client. |
 | `schema` | Both | The Experience Data Model (XDM) schema of the audience. |
@@ -240,7 +262,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 ```
 
 | Property | Description |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `name` | The name of the audience. |
 | `description` | A description of the audience. |
 | `type` | A field that displays whether the audience is Platform-generated or is an externally generated audience. Possible values include `SegmentDefinition` and `ExternalSegment`. A `SegmentDefinition` refers to an audience that was generated in Platform, while an `ExternalSegment` refers to an audience that was not generated in Platform. |
@@ -333,7 +355,7 @@ GET /audiences/{AUDIENCE_ID}
 ```
 
 | Parameter | Description |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{AUDIENCE_ID}` | The ID of the audience you are trying to retrieve. Please note that this is the `id` field, and is **not** the `audienceId` field. |
 
 **Request**
@@ -466,7 +488,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 ```
 
 | Property | Description |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `audienceId` | The ID of the audience. For externally generated audiences, this value may be supplied by the user.  |
 | `name` | The name of the audience. |
 | `namespace` | The namespace for the audience. |

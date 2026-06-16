@@ -3,12 +3,37 @@ title: Activate audience data to streaming destinations
 type: Tutorial
 description: Learn how to activate the audiences you have in Adobe Experience Platform by mapping them to streaming destinations.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
+TQID: https://experienceleague.adobe.com/Ot4xQ3-lFqYm70OGq-YJMVS4Fc1hwCClArMhYIEWb7w
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
-
 # Activate audiences to streaming destinations
 
 >[!IMPORTANT]
-> 
+>
 > * To activate audiences and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 > * To activate audiences without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 > * To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
@@ -17,7 +42,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 
 ## Overview {#overview}
 
-This article explains the workflow required to activate audiences in Adobe Experience Platform streaming destinations.
+This article explains the workflow required to activate audiences in [!DNL Adobe Experience Platform] streaming destinations.
 
 ## Prerequisites {#prerequisites}
 
@@ -96,9 +121,9 @@ Some audience streaming destinations require you to select source attributes or 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="Apply transformation"
->abstract="Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
+>abstract="Check this option when using unhashed source fields, to have [!DNL Adobe Experience Platform] automatically hash them on activation."
 
-When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have Adobe Experience Platform automatically hash the source attributes on activation.
+When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have [!DNL Adobe Experience Platform] automatically hash the source attributes on activation.
 
 ![Apply transformation control highlighted in the Identity mapping step.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
@@ -166,5 +191,5 @@ For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL 
 
 >[!TIP]
 >
->The integration between Adobe Experience Platform and [!DNL Facebook] supports historical audience backfills. All historical audience qualifications are sent to [!DNL Facebook] when you activate the audiences to the destination.
+>The integration between [!DNL Adobe Experience Platform] and [!DNL Facebook] supports historical audience backfills. All historical audience qualifications are sent to [!DNL Facebook] when you activate the audiences to the destination.
 -->

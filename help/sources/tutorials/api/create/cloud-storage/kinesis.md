@@ -3,6 +3,13 @@ title: Create an Amazon Kinesis Source Connection Using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to an Amazon Kinesis source using the Flow Service API.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
+TQID: https://experienceleague.adobe.com/JC-ype8Fv0SVK-WoA1XEANp5Z60cy-O0mxZ0A8u4-bc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create an [!DNL Amazon Kinesis] source connection using the Flow Service API
 

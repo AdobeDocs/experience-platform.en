@@ -1,19 +1,65 @@
 ---
 title: Marketo Engage Connection
-description: Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
+description: Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. Use it to automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
 exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
+TQID: https://experienceleague.adobe.com/BQFXDvrinG9A6uC2-p6-C6d9mj8NqpfQ8S7xjMW8iRY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+    internal-label: Administration
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+    internal-label: Access control
+  - id: a7150a74-b8a9-4042-b066-147c5f0ca505
+    internal-label: Alerts
+  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
+    internal-label: Adobe Admin Console
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+    internal-label: Permissions
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+    internal-label: Roles
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+    internal-label: Customer engagement
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Marketo Engage connection
 
 ## Overview {#overview}
 
-[!DNL Marketo Engage] is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
+[!DNL Marketo Engage] is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. Use it to automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
 
-Use this destination for real-time synchronization of audience data and profile attributes between Adobe Experience Platform and Marketo Engage.
+Use this destination for real-time synchronization of audience data and profile attributes between [!DNL Adobe Experience Platform] and Marketo Engage.
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL Marketo Engage] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Marketo Engage] destination, here are sample use cases that [!DNL Adobe Experience Platform] customers can solve by using this destination.
 
 ### Audience sync use cases {#audience-sync-use-cases}
 
@@ -33,14 +79,14 @@ They can activate the audiences to Marketo Engage and use the **[!UICONTROL Audi
 
 **Re-engage and expand reach with full profile sync**
 
-The marketing team wants to activate a product interest audience for a new campaign. While many of the profiles already exist in Marketo, some are new and only present in Real-Time CDP. For the existing people, they want to make sure they update those people in Marketo, but also create new profiles.
+The marketing team wants to activate a product interest audience for a new campaign. While many of the profiles already exist in Marketo, some are new and only present in [!DNL Real-Time CDP]. For the existing people, they want to make sure they update those people in Marketo, but also create new profiles.
 
-They can activate their audiences in Marketo Engage and use the **[!UICONTROL Audience and Profile]** sync type combined with the **[!UICONTROL Update existing and create new persons]** action to make sure they target existing leads from Marketo and create new ones for the new audiences exported from Real-Time CDP.
+They can activate their audiences in Marketo Engage and use the **[!UICONTROL Audience and Profile]** sync type combined with the **[!UICONTROL Update existing and create new persons]** action to make sure they target existing leads from Marketo and create new ones for the new audiences exported from [!DNL Real-Time CDP].
 
 ## Prerequisites {#prerequisites}
 
 * The user setting up the destination must have the [Edit Person](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) permission in their Marketo instance and partition.
-* Only Marketo Engage instances on the same Adobe Real-Time CDP organization will be available when setting up this destination.
+* Only Marketo Engage instances on the same Adobe [!DNL Real-Time CDP] organization will be available when setting up this destination.
 * Only Marketo Engage instances that have their users managed in the Adobe Admin Console can utilize this destination. 
 
 ## Supported identities {#supported-identities}
@@ -57,10 +103,10 @@ They can activate their audiences in Marketo Engage and use the **[!UICONTROL Au
 
 This section describes which types of audiences you can export to this destination. The two tables below indicate which audiences this connector supports, by _audience origin_ and _profile types included in the audience_:
 
-| Audience origin | Supported | Description | 
+| Audience origin | Supported | Description |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| All other audience origins | ✓ | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> <br>|
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> <br>|
 
 {style="table-layout:auto"}
 
@@ -71,7 +117,7 @@ Supported audiences by audience data type:
 | [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
-| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the Adobe Experience Platform Data Lake. | Reporting, data science workflows |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
 
 {style="table-layout:auto"}
 
@@ -102,7 +148,7 @@ Marketo uses the **[!UICONTROL Marketo deduplication field]** you select to matc
 
 {style="table-layout:auto"}
 
-### Important considerations
+### Important considerations {#important-considerations}
 
 * **Deduplication field selection**: Choose a field that is consistently available and unique across your customer profiles (for example: email address, customer ID)
 * **Partition handling**: When creating new leads, they are placed in your selected partition (or **[!UICONTROL Default]** partition if you did not select a partition)
@@ -112,7 +158,7 @@ Marketo uses the **[!UICONTROL Marketo deduplication field]** you select to matc
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >* To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions).
 >
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
@@ -139,7 +185,7 @@ To configure details for the destination, fill in the required and optional fiel
     * **[!UICONTROL Audience and profile]**: Select this option when you want to both add audience members to Marketo lists and keep their profile information current.
     * **[!UICONTROL Profile only]**: Select this option when you want to keep Marketo lead profiles up to date with the latest information from Experience Platform.
     * **[!UICONTROL Audience only]**: Select this option when you want to add audience members to Marketo lists without updating their profile information.
-* **[!UICONTROL Partition]**: *Partition selection is available only when choosing **[!UICONTROL Profile only]** or **[!UICONTROL Audience and profile]** sync types*. Select a Marketo partition ID associated with your chosen workspace. This allows you to specify which lead partition in Marketo will receive the exported data. If you don't choose a specific partition, your data will be sent to the **[!UICONTROL Default]** partition in Marketo.
+* **[!UICONTROL Partition]**: *Partition selection is available only when choosing **[!UICONTROL Profile only]** or **[!UICONTROL Audience and profile]** sync types*. Select a Marketo partition ID associated with your chosen workspace. This specifies which lead partition in Marketo will receive the exported data. If you don't choose a specific partition, your data will be sent to the **[!UICONTROL Default]** partition in Marketo.
 * **[!UICONTROL Marketo deduplication field]**: Select the Marketo deduplication field that you want to use when updating existing Marketo leads. This selector shows the fields that you marked as deduplication fields in Marketo. If you want a specific field from Marketo to show up as a deduplication field, you must mark the field as a [searchable field](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo.
     
     >[!NOTE]
@@ -159,7 +205,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -187,7 +233,7 @@ If you are using a different deduplication field, you must manually map all thre
 
 After exporting audiences to Marketo Engage, you should log in to your Marketo account to verify that the audiences have been activated as expected. Check the relevant lead partitions and workspaces in Marketo to confirm that the audience data appears correctly and that the intended actions (such as updating or creating persons) have been performed. 
 
-If you do not see the expected data, review your mapping and export settings in Adobe Experience Platform and try the export again.
+If you do not see the expected data, review your mapping and export settings in [!DNL Adobe Experience Platform] and try the export again.
 
 ## Data usage and governance {#data-usage-governance}
 

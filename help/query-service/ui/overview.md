@@ -4,6 +4,40 @@ solution: Experience Platform
 title: Query Service UI Guide
 description: Adobe Experience Platform Query Service provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your organization.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
+TQID: https://experienceleague.adobe.com/tUz-nMRZ61kKfz-dc23gdX8dvwPd1nJMqgCc7BMt5jk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Query Service UI guide
 
@@ -36,17 +70,29 @@ The [!UICONTROL Data Distiller capabilities] section provides documentation link
 
 ![The Query Service workspace with the Data Distiller capabilities section highlighted.](../images/ui/overview/data-distiller-capabilities.png)
 
+### Accelerators {#accelerators}
+
+The **[!UICONTROL Accelerators]** tab in the Queries workspace provides a catalog of Adobe-authored, parameterized SQL templates for common analytical use cases. Each accelerator appears as a row in a table with a name, SQL preview, and metadata.
+
+Select an accelerator to open it in the Query Editor. Provide parameter values and run the query to generate results. Accelerators are read-only and maintained by Adobe to ensure consistency. To modify the logic, create an editable copy using **[!UICONTROL Create custom template]**. See the [Data Distiller Accelerators](./accelerators.md) guide to learn how to discover, run, schedule, and customize accelerators.
+
 ### Recommended Data Distiller accelerators {#recommended-accelerators}
 
-Select a quick link to navigate to the relevant Data Distiller dashboards [!UICONTROL Templates]. Each accelerator provides powerful tools and visualizations to help you analyze audience data, optimize segmentation, and enhance targeting strategies.
+The **[!UICONTROL Recommended Data Distiller accelerators]** section on the Overview tab provides quick access to commonly used accelerators. These appear as cards and support two workflows:
 
-- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: From this dashboard you can analyze audience intersections between multiple audience segments to uncover valuable insights and optimize segmentation strategies. You can also export your insights for further offline analysis or reporting purposes.
-- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: From this dashboard, you can compare and contrast key audience metrics side-by-side to analyze two audience groups in detail. These insights help you understand audience size, growth, and other key performance indicators, enabling you to refine segmentation and optimize targeting strategies with data-driven decisions.
-- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**: Use the [!UICONTROL Audience trends] dashboard to visualize how your audiences evolve over time through key metrics like audience growth, identity counts, and single identity profiles. Track trends to uncover valuable insights into audience behavior, empowering you to refine segmentation, enhance engagement, and optimize targeting strategies for more effective campaigns.
-Track audience metrics over time to monitor changes in audience size, identity growth, and overall engagement.
-- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**: Use the Audience Identity Overlaps dashboard to analyze identity overlaps within selected audiences. Visualizations and tabulated data provide insights to optimize identity stitching, reduce redundancy, and improve segmentation. These insights enable more effective targeting, enhanced personalization, and streamlined customer interactions.
+- **Dashboard-linked accelerators** open in the Dashboards workspace with prebuilt visualizations. These do not require parameter input or manual query execution.
+- **Query-based accelerators** open in the Query Editor, where you provide parameter values, run the query, or schedule it.
 
-![The Query Service workspace with the Data Distiller accelerators section highlighted.](../images/ui/overview/data-distiller-accelerators.png)
+Select a card to open the accelerator. Use this section for quick access to common workflows, or navigate to the **[!UICONTROL Accelerators]** tab to browse the full catalog. For the complete list of accelerators and detailed instructions, see the [Accelerators tab](./accelerators.md#discovery-paths) or the [Data Distiller Accelerators guide](./accelerators.md).
+
+The following dashboard-linked accelerators are available:
+  
+- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: Analyze intersections between audience segments to identify overlap patterns and refine segmentation. 
+- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: Compare key metrics between two audiences, including size, composition, and changes over time. 
+- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**: Track how audience metrics change over time, including audience size and identity counts. 
+- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**: Examine how identity types overlap within audiences to support identity stitching and segmentation accuracy.
+
+![Query Service Overview showing the Data Distiller accelerators section with recommended accelerator cards.](../images/ui/overview/data-distiller-accelerators.png)
 
 ### Data Distiller examples {#data-distiller-examples}
 
@@ -181,6 +227,12 @@ See the [query logs documentation](./query-logs.md) for more information on the 
 The **[!UICONTROL Credentials]** tab displays both your expiring and non-expiring credentials. For more information on how to use these credentials to connect with external clients, please read the [credentials guide](../clients/overview.md).
 
 ![The Queries dashboard with the Credentials tab highlighted.](../images/ui/overview/credentials.png)
+
+## Administration {#admin}
+
+Use the **[!UICONTROL Admin]** tab to monitor and manage concurrent Query Editor sessions across your organization. This capability is intended for administrators and is not required for writing or running queries.
+
+From the **[!UICONTROL Admin]** tab, administrators can view active sessions across sandboxes and end idle sessions to free shared capacity. This action does not interrupt queries that are actively running. See the [Manage Query Service sessions guide](session-management.md) for detailed instructions and permission requirements.
 
 ## Next steps
 

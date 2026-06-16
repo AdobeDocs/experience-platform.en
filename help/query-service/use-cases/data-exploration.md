@@ -2,6 +2,20 @@
 title: Explore, Troubleshoot, and Verify Batch Ingestion with SQL
 description: Learn how to understand and manage the data ingestion process in Adobe Experience Platform. This document includes how to verify batches and query ingested data.
 exl-id: 8f49680c-42ec-488e-8586-50182d50e900
+TQID: https://experienceleague.adobe.com/AUqT3UL99Y69g6fxVInVJ-gLovfWid6DX4MoYtAlRt8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Explore, troubleshoot, and verify batch ingestion with SQL
 
@@ -31,13 +45,13 @@ Next, to view the system fields of the dataset, execute a SELECT all statement t
  
 ![The DBVisualizer UI with the movie_data table and its metadata columns displayed and highlighted.](../images/use-cases/movie_data-table-with-metadata-columns.png)
 
-When data is ingested into Experience Platform, it is assigned a logical partition based on the incoming data. This logical partition is represented by `_acp_system_metadata.sourceBatchId`. This ID helps to group and identify the data batches logically before they are processed and stored.
+When data is ingested into Experience Platform, it is assigned a logical partition based on the incoming data. This logical partition is represented by `_acp_system_metadata.acp_sourceBatchId`. This ID helps to group and identify the data batches logically before they are processed and stored.
 
 After the data is processed and ingested into the data lake, it is assigned a physical partition represented by `_ACP_BATCHID`. This ID reflects the actual storage partition in the data lake where the ingested data resides.
 
 ### Use SQL to understand logical and physical partitions {#understand-partitions}
 
-To help understand how the data is grouped and distributed after ingestion, use the following query to count the number of distinct physical partitions (`_ACP_BATCHID`) for each logical partition (`_acp_system_metadata.sourceBatchId`).
+To help understand how the data is grouped and distributed after ingestion, use the following query to count the number of distinct physical partitions (`_ACP_BATCHID`) for each logical partition (`_acp_system_metadata.acp_sourceBatchId`).
 
 ```SQL
 SELECT  _acp_system_metadata, COUNT(DISTINCT _ACP_BATCHID) FROM movie_data

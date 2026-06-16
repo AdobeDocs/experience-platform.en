@@ -5,6 +5,16 @@ title: Create a GreenPlum Base Connection Using the Flow Service API
 type: Tutorial
 description: Learn how to connect GreenPlum to Adobe Experience Platform using the Flow Service API.
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
+TQID: https://experienceleague.adobe.com/P117zI4xelzJI8kwYCK4eFWh7osuYM7OT9EBBkNggJU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 ---
 # Create a [!DNL GreenPlum] base connection using the [!DNL Flow Service] API
 

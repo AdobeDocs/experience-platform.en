@@ -2,6 +2,23 @@
 title: Deletions in Identity Service
 description: This document provides an overview of the various mechanisms that you can use to delete your identity data in Experience Platform, and to provide clarity on how identity graphs may be impacted.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
+TQID: https://experienceleague.adobe.com/NjcJ2bCtpJA6rCqhv3rogjaRaUEQZd4mDI2p-CqQ6-A
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Deletions in Identity Service
 
@@ -60,7 +77,7 @@ The table below provides a breakdown of differences between dataset deletion in 
 
 | Dataset deletion | Catalog Service | Data hygiene |
 | --- | --- | --- |
-| Accepted use cases |  Delete full datasets and their associated identity information in Experience Platform. | Management of data stored in Experience Platform. | 
+| Accepted use cases |  Delete full datasets and their associated identity information in Experience Platform. | Management of data stored in Experience Platform. |
 | Estimated latency | Days | Days |
 | Services impacted | Dataset deletion through Catalog Service deletes data from Identity Service, Real-Time Customer Profile, and data lake. | Dataset deletion through Data hygiene deletes data from Identity Service, Real-Time Customer Profile, and data lake. |
 | Deletion pattern | Delete linked identities from Identity Service established by a particular dataset. | Delete linked identities from Identity Service established by a particular dataset, based on expiration schedule. |

@@ -1,8 +1,23 @@
 ---
 title: The Trade Desk - CRM connection
 description: Activate profiles to your Trade Desk account for audience targeting and suppression based on CRM data.
-last-substantial-update: 2025-01-16
+last-substantial-update: 2026-04-29T00:00:00.000Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
+TQID: https://experienceleague.adobe.com/ffAWVtX2AVWGf99mqthLKZI8prjJWRKJ2vM--zkSYag
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # The [!DNL Trade Desk] - CRM connection
 
@@ -13,7 +28,7 @@ exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 >* If you source data in the EU, use the **[!DNL The Trade Desk - CRM (EU)]** destination. 
 >* If you source data in the APAC or NAMER regions, use the **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destination. 
 >
->This destination connector and documentation page are created and maintained by the *[!DNL Trade Desk]* team. For any inquiries or update requests, please contact your [!DNL Trade Desk] representative. 
+>This destination connector and documentation page are created and maintained by the *[!DNL Trade Desk]* team. For any inquiries or update requests, contact your [!DNL Trade Desk] representative. 
 
 ## Overview {#overview}
 
@@ -33,20 +48,20 @@ This connector sends data to [!DNL The Trade Desk] for First-Party Data activati
 
 ## ID Matching Requirements {#id-matching-requirements}
 
-Depending on the type of IDs that you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements. Please read the [Identity Namespace overview](/help/identity-service/features/namespaces.md) for more information.  
+Depending on the type of IDs that you ingest into [!DNL Adobe Experience Platform], you must adhere to their corresponding requirements. Read the [Identity Namespace overview](/help/identity-service/features/namespaces.md) for more information.  
 
 ## Supported identities {#supported-identities}
 
 [!DNL The Trade Desk] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-Both unhashed and hashed emails addresses and phone numbers are supported by Adobe Experience Platform. Follow the instructions in the ID matching requirements section and use the appropriate namespaces for plain text and hashed email addresses, respectively.
+Both unhashed and hashed emails addresses and phone numbers are supported by [!DNL Adobe Experience Platform]. Follow the instructions in the ID matching requirements section and use the appropriate namespaces for plain text and hashed email addresses, respectively.
 
 |Target Identity|Description|
 |---|---|
-|Email|Email addresses (clear text)| 
-|Email_LC_SHA256|Email addresses need to be hashed using SHA256 and lowercased. You won't be able to change this setting later.| 
+|Email|Email addresses (clear text)|
+|Email_LC_SHA256|Email addresses need to be hashed using SHA256 and lowercased. You won't be able to change this setting later.|
 |Phone (E.164)|Phone numbers that need to be normalized in E.164 format. The E.164 format includes a plus sign (+), an international country calling code, a local area code, and a phone number. For example: (+)(country code)(area code)(phone number). This identifier is not available for The Trade Desk – First-Party Data (EU).|
-|Phone (SHA256_E.164)|Phone numbers that have already been normalized to E.164 format and then hashed using SHA-256, with the resulting hash Base64-encoded. This identifier is not available for The Trade Desk – First-Party Data (EU).| 
+|Phone (SHA256_E.164)|Phone numbers that have already been normalized to E.164 format and then hashed using SHA-256, with the resulting hash Base64-encoded. This identifier is not available for The Trade Desk – First-Party Data (EU).|
 |TDID|Cookie ID in The Trade Desk|
 |GAID|Google Advertising ID|
 |IDFA|Apple ID for Advertisers|
@@ -60,9 +75,32 @@ Both unhashed and hashed emails addresses and phone numbers are supported by Ado
 
 {style="table-layout:auto"}
 
+## Supported audiences {#supported-audiences}
+
+This section describes which types of audiences you can export to this destination.
+
+| Audience origin | Supported | Description |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as Adobe Journey Optimizer, </li><li> and more. </li></ul> |
+
+{style="table-layout:auto"}
+
+Supported audiences by audience data type:
+
+| Audience data type | Supported | Description | Use cases |
+|--------------------|-----------|-------------|-----------|
+| [People audiences](/help/segmentation/types/people-audiences.md) | Yes | Based on customer profiles, allowing you to target specific groups of people for marketing campaigns. | Frequent buyers, cart abandoners |
+| [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
+| [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
+| [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
+
+{style="table-layout:auto"}
+
+
 ## Email hashing requirements {#email-hashing}
 
-You can hash email addresses before ingesting them into Adobe Experience Platform or use raw email addresses.
+You can hash email addresses before ingesting them into [!DNL Adobe Experience Platform] or use raw email addresses.
 
 To learn about ingesting email addresses in Experience Platform, read the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md). 
 
@@ -126,6 +164,10 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
+>[!NOTE]
+>
+>The **[Export file now](/help/destinations/ui/export-file-now.md)** feature is not available for [!DNL The Trade Desk] CRM destination. To export audiences, use the [scheduled daily batch export](#activate).
+
 ## Connect to the destination {#connect}
 
 ### Authenticate to Destination {#authenticate}
@@ -148,7 +190,7 @@ When connecting to the destination, setting a data governance policy is complete
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -158,7 +200,7 @@ In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the 
 
 ![Experience Platform UI screenshot to schedule audience activation.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
->[!NOTE] 
+>[!NOTE]
 >
 >All audiences activated to [!DNL The Trade Desk] CRM Destination are automatically set to a daily frequency and full file export.
 
@@ -190,13 +232,14 @@ Selecting source and target fields:
 |netID|net_id|
 |FirstID|first_id|
 
+{style="table-layout:auto"}
 
 ## Validate Data Export {#validate}
 
 To validate that data is correctly exported out of Experience Platform and into [!DNL The Trade Desk], please find the audiences under the Adobe 1PD tab within [!DNL The Trade Desk] "Advertiser Data and identity" library. Here are the steps to finding the corresponding ID within the [!DNL Trade Desk] UI: 
 
 1. First, select the **[!UICONTROL Libraries]** tab, and review the **[!UICONTROL Advertiser data and identity]** section.
-2. Click on the **[!UICONTROL Adobe 1PD]**, and it will list out all audiences activated to [!DNL The Trade Desk]. 
+2. Select the **[!UICONTROL Adobe 1PD]**, and it will list out all audiences activated to [!DNL The Trade Desk].
 3. The Segment Name or Segment ID from Experience Platform will appear as the Segment Name in the [!DNL Trade Desk] UI. 
 
 ## Data usage and governance {#data-usage-governance}

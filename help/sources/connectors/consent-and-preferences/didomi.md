@@ -1,9 +1,22 @@
 ---
 title: Didomi Source Overview
 description: Learn how to connect Didomi to Adobe Experience Platform using the user interface.
-last-substantial-update: 2025-07-29
+last-substantial-update: 2025-07-29T00:00:00.000Z
 badge: Beta
 exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
+TQID: https://experienceleague.adobe.com/kNG516Ux3USmcbDNuhvRZUhzuBjss8wsPAabgG16KTM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # [!DNL Didomi]
 
@@ -74,7 +87,7 @@ To create a dataset, select [!UICONTROL Datasets] in the left-navigation of the 
 To ensure compatibility with Experience Platform, your webhook must meet the following requirements.
 
 | Field | Description | Example |
-| --- | --- | --- | 
+| --- | --- | --- |
 | Client secret | The secret key associated with your Adobe API credentials. | `d8f3b2e1-4c9a-4a7f-9b2e-8f1c3d2a1b6e` |
 | API key | The public API key used to authenticate requests to Adobe services. ||
 | Grant type | The method by which an application obtains an access token from the authorization server. Set this value to `client_credentials`. | `client_credentials` |
@@ -88,7 +101,7 @@ To ensure compatibility with Experience Platform, your webhook must meet the fol
 Next, configure the following options for your [!DNL webhook].
 
 | Field | Description | Value  |
-| ---| --- | --- | 
+| ---| --- | --- |
 | Request Headers | The custom headers for the [!DNL webhook]. Ensure that you include the `x-adobe-flow-id`. You can retrieve this value after your [dataflow is created](../../tutorials/ui/create/consent-and-preferences/didomi.md#retrieve-the-streaming-endpoint-url).  | `{"Content-Type": "application/json", "Cache-Control": "no-cache", "x-adobe-flow-id": "{DATAFLOW_ID}"}` |
 | Flatten   | This property must be checked as it ensures that the [!DNL webhook] data is sent as a flat object. | Enabled  |
 | Event Types  | Select the specific group of [!DNL Didomi] events (`event.*` or `user.*`) that should trigger the [!DNL webhook]. Use `event.*` to track consent or preference changes, and use `user.*` to track user profile updates. This selection is required to ensure that only compatible events are sent to Adobe. Adobe supports only one schema per dataflow, so selecting both event types can cause ingestion errors. | The list of supported event types are: <ul><li>`Event.created`</li><li>`Event.updated`</li><li>`Event.deleted`</li><li>`User.created`</li><li>`User.updated`</li><li>`User.deleted`</li></ul> |

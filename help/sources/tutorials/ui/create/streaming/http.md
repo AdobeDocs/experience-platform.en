@@ -2,8 +2,20 @@
 title: Create an HTTP API Streaming Connection Using the UI
 description: This UI guide will help you create a streaming connection using Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
+TQID: https://experienceleague.adobe.com/hJCqDpKKk85JEmO4d8OFSVCUoUHQzCZ-zr7MwumVU1Y
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
-
 # Create an [!DNL HTTP API] streaming connection using the UI
 
 This tutorial provides steps for creating a streaming source connection using the [!UICONTROL Sources] workspace.

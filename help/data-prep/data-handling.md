@@ -4,6 +4,13 @@ solution: Experience Platform
 title: Handling data formats with Data Prep
 description: This document gives an overview of how different data types are handled in Data Prep.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
+TQID: https://experienceleague.adobe.com/C2IVb0smhO7BczWeWgum2xhCJ2dSzBeO3ZpnEUogedo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Handling data formats with Data Prep
 
@@ -93,9 +100,9 @@ The following table shows which pattern letters are defined for format strings. 
 | H | Hour in day (0-23) | Number | 0 |
 | k | Hour in day (1-24) | Number | 24 |
 | K | Hour in AM/PM (0-11) | Number | 0 |
-| h | Hour in AM/PM (1-12) | Number | 12 | 
-| m | Minute in the hour | Number | 38 | 
-| s | Second in the minute | Number | 44 | 
+| h | Hour in AM/PM (1-12) | Number | 12 |
+| m | Minute in the hour | Number | 38 |
+| s | Second in the minute | Number | 44 |
 | S | Millisecond | Number | 245 |
 | z | Time zone | General time zone | Pacific Standard Time; PST; GMT-08:00 |
 | Z | Time zone | RFC 822 time zone | -0800 |

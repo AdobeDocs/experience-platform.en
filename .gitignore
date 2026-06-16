@@ -1,4 +1,8 @@
 .DS_Store
 .vscode/
 .cursor/
+setup-agent.md
 .cursor-agents/
+mcp-server.log
+.claude/
+usage-agents.log

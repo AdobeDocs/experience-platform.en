@@ -4,6 +4,18 @@ solution: Experience Platform
 title: Retail Sales Recipe
 description: The Retail Sales recipe enables you to predict sales forecast for all stores seeded for a certain time period. With an accurate prediction model, the retailer would be able to find the relationship between demand and pricing policies and make optimized pricing decisions to maximize sales and revenue.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
+TQID: https://experienceleague.adobe.com/XkDQ7H-IOqqf6hqriHfcJDJpeMIk-PWaBHR5LL8Vw08
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Retail sales recipe
 
@@ -41,7 +53,7 @@ This recipe uses [XDM schemas](../../xdm/schema/field-dictionary.md) to model th
 
 | Field Name | Type |
 | --- | --- |
-| date | String | 
+| date | String |
 | store | Integer |
 | storeType | String |
 | weeklySales | Number |

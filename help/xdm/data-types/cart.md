@@ -2,6 +2,13 @@
 title: Cart Data Type
 description: Learn about the Cart Experience Data Model (XDM) data type.
 exl-id: 24ae3882-60f3-4962-b0b5-7dba48170da8
+TQID: https://experienceleague.adobe.com/nLecQnTD7NRmR4pWkqqPJM0GuJWrhqPzA9P3geuVgTc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Cart] data type
 

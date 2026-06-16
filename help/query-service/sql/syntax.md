@@ -4,6 +4,23 @@ solution: Experience Platform
 title: SQL Syntax in Query Service
 description: This document details and explains the SQL syntax supported by Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
+TQID: https://experienceleague.adobe.com/gka6v-qb0W1NT-MwtcS6CWNAaKeDS6st781D3jsivpM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # SQL syntax in Query Service
 
@@ -519,7 +536,7 @@ $$BEGIN
 $$END
 
 exceptionHandler:
-      WHEN OTHER
+      WHEN OTHERS
       THEN statementList
 
 statementList:
@@ -537,7 +554,7 @@ $$BEGIN
      AS SELECT _id AS id FROM email_tracking_experience_event_dataset SNAPSHOT BETWEEN @v_snapshot_from AND @v_snapshot_to;
 
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
 $$END;
@@ -641,7 +658,7 @@ $$BEGIN
     ELSE    
        SELECT 'DEFAULT';
     END IF;  
-EXCEPTION WHEN OTHER THEN 
+EXCEPTION WHEN OTHERS THEN 
   SELECT 'THERE WAS AN ERROR';    
  END$$;
 ```
@@ -718,7 +735,7 @@ Insert Into
       cast( @to_snapshot_id AS string) last_snapshot_id,
       cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 END
 $$;
@@ -769,7 +786,7 @@ CREATE TABLE IF NOT EXISTS target_table_name AS
                      WHERE  @mytableexist = 'true' limit 20
               ) ;
 EXCEPTION
-WHEN other THEN SELECT 'ERROR';
+WHEN OTHERS THEN SELECT 'ERROR';
 
 END $$; 
 ```
@@ -886,7 +903,7 @@ The `FILTER CONTEXT` command calculates statistics on a subset of the dataset ba
 The console output appears as seen below.
 
 ```console
-|     Statistics ID      | 
+|     Statistics ID      |
 | ---------------------- |
 | adc_geometric_stats_1  |
 (1 row)

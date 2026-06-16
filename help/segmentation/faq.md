@@ -2,6 +2,38 @@
 title: Audiences Frequently Asked Questions
 description: Find out answers to frequently asked questions about audiences and other segmentation related concepts.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
+TQID: https://experienceleague.adobe.com/uIgNpBdbgynUJcsisLGwpNGOnRZ-Wkws2YlWzQIJFWY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+subfeature_v2:
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+    internal-label: Monitoring
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Frequently asked questions
 
@@ -112,7 +144,7 @@ Payload attributes are attributes that are ingested as part of the CSV upload of
 
 Enrichment attributes are attributes that come from a dataset and are joined with an audience in Audience Composition. These attributes can currently only be used in Adobe Journey Optimizer campaigns. Support for Adobe Journey Optimizer journeys is coming soon, with support for downstream destinations pending future release.
 
-| Activation channel | Audiences from CSV custom upload | Audiences from Audience Composition | 
+| Activation channel | Audiences from CSV custom upload | Audiences from Audience Composition |
 | --- | --- | --- |
 | Real-Time CDP Destinations | Both the payload attributes and the audiences can be activated. | Only the audience can be activated. Enrichment attributes **cannot** be activated. |
 | Adobe Journey Optimizer Campaigns | Neither the audience nor the payload attributes can be activated. | Both the audience and the enrichment attributes can be activated. |
@@ -292,7 +324,7 @@ Yes! You can use audiences from Audience Composition in Adobe Journey Optimizer 
 >
 >This guardrail only applies to compositions created with Audience Composition and does **not** apply to compositions created with Federated Audience Composition.
 
-At this point in time, you can only have **10** published compositions per sandbox. This guardrail is planned to be increased in a future release. 
+At this point in time, you can only have **50** published compositions per sandbox. This guardrail is planned to be increased in a future release. 
 
 ### What are the workflow guardrails for Audience Composition?
 
@@ -412,8 +444,6 @@ Streaming segmentation works on all data that was ingested using a streaming sou
 
 A segment definition is defined as batch, streaming, or edge segmentation based on a combination of query type and event history duration. A list of which segments will be evaluated as a streaming segment definition can be found in the [streaming segmentation query types section](#query-types).
 
-Please note that if a segment definition contains **both** an `inSegment` expression and a direct single-event chain, it cannot qualify for streaming segmentation. If you want to have this segment definition qualify for streaming segmentation, you should make the direct single-event chain its own segment.
-
 ### Why does the number of "total qualified" segments keep increasing while the number under "Last X days" remains at zero within the segment definition details section?
 
 The number of total qualified segments is drawn from the daily segmentation job, which includes audiences that qualify for both batch and streaming segments. This value is shown for both batch and streaming segments.
@@ -428,4 +458,5 @@ It takes up to one hour for a segment definition to be available.
 
 ### Are there any limitations to the data being streamed in?
 
-When using edge or streaming segmentation, ensure that events for each profile are spaced out. If too many events are streamed in within the same second, Experience Platform will treat these events as bot-generated data, and they will be discarded. As best practice, you should have **at least** five seconds between event data in order to ensure the data is properly used.
+When using edge or streaming segmentation, ensure that events for each profile are appropriately spaced out. To maintain system stability and performance, if too many events are streamed in within the same second (for example, 1000 events in 3 seconds using the same ECID), Segmentation Service may treat these events as bot-generated data and skip audience evaluation for these events. These events will still be stored. As best practice, you should have **at least** five seconds between events for the same profile to ensure reliable audience evaluation.
+

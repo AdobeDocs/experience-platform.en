@@ -2,8 +2,18 @@
 title: Shopify Streaming Source
 description: Learn how to create a source connection and dataflow to ingest streaming data from your Shopify instance to Adobe Experience Platform
 badge: Beta
-last-substantial-update: 2023-04-26
+last-substantial-update: 2023-04-26T00:00:00.000Z
 exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
+TQID: https://experienceleague.adobe.com/WHz5WqfeMaaBKIfSRVo1PP347-YmLfo9rQXzr7qFEYk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # [!DNL Shopify Streaming]
 
@@ -111,7 +121,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \; request_method=POST' \
   -d '{
   "webhook": {
-    "address": "https://dcs.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "address": "https://dcs.adobedc.net/collection/114ae3c01f3ac77c704465f83d7d79be150fc39a5a794a214cd4ab65a5901340?x-adobe-flow-id=d9eb4a58-6a6b-4f11-9dba-6d1e0ed43bad",
     "topic": "orders/create",
     "format": "json"
   }
@@ -119,8 +129,8 @@ curl -X POST \
 ```
 
 | Parameter | Description |
-| --- | --- | 
-| `webhook.address` | The http endpoint where streaming messages are sent. |
+| --- | --- |
+| `webhook.address` | The http endpoint where streaming messages are sent. The template for the webhook is: `https://dcs.adobedc.net/collection/{INLET_ID}?x-adobe-flow-id={FLOW_ID}.` |
 | `webhook.topic` | The topic of your webhook subscription. For more information, read the [[!DNL Shopify] webhook event topics guide](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
 | `webhook.format` | The format of your data. |
 
@@ -132,7 +142,7 @@ A successful response returns information on your webhook, including its corresp
 {
   "webhook": {
     "id": 1091138715786,
-    "address": "https://dcs.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "address": "https://dcs.adobedc.net/collection/114ae3c01f3ac77c704465f83d7d79be150fc39a5a794a214cd4ab65a5901340?x-adobe-flow-id=d9eb4a58-6a6b-4f11-9dba-6d1e0ed43bad",
     "topic": "orders/create",
     "created_at": "2022-07-20T07:15:23-04:00",
     "updated_at": "2022-07-20T07:15:23-04:00",
@@ -144,6 +154,19 @@ A successful response returns information on your webhook, including its corresp
   }
 }
 ```
+
+## Authentication for [!DNL Shopify Streaming] {#authentication}
+
+You can use HMAC (Hash-based Message Authentication Code) key-based authentication when creating a [!DNL Shopify Streaming] source account in Experience Platform. You can configure shared secrets during account setup so that incoming Shopify webhook payloads can be validated before ingestion.
+
+| Field | Required | Description |
+| --- | --- | --- |
+| `primarySecretKey` | Yes | The current HMAC shared secret configured for the [!DNL Shopify] webhook. Experience Platform uses this key to validate incoming [!DNL Shopify] webhook payloads. |
+| `secondarySecretKey` | No | The previous HMAC shared secret. Provide this during key rotation so in-flight messages signed with the old secret continue to be accepted while new traffic uses the new secret. Leave this value blank on first-time setup. |
+
+>[!TIP]
+>
+>To rotate your HMAC secret without interrupting webhook delivery, provide the new secret as `primarySecretKey` and the previous secret as `secondarySecretKey`. This allows in-flight messages signed with the previous secret to continue to be accepted while new traffic uses the current secret.
 
 ### Limitations {#limitations}
 

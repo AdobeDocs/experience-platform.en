@@ -4,6 +4,19 @@ solution: Experience Platform
 title: Create and Edit Classes in the UI
 description: Learn how to create and edit classes in the Experience Platform user interface.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
+TQID: https://experienceleague.adobe.com/E2xWaqsTJYoYPW-M3os1PMCKDNfZ5i73Ju-Bt8j2UxQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Create and edit classes in the UI {#ui-create-and-edit}
 
@@ -17,6 +30,10 @@ In Adobe Experience Platform, a schema's class defines the behavioral aspects of
 Adobe provides several standard ("core") Experience Data Model (XDM) classes, including [XDM Individual Profile](../../classes/individual-profile.md) and [XDM ExperienceEvent](../../classes/experienceevent.md). In addition to these core classes, you can also create your own custom classes to describe more specific use cases for your organization.
 
 This document provides an overview of how to create, edit, and manage custom classes in the Experience Platform UI.
+
+>[!NOTE]
+>
+>XDM actions are available from the inventory table and the resource detail view (**[!UICONTROL More]**). Full actions apply only to custom (tenant-defined) resources; standard resources have limited options. See [Manage schemas, classes, field groups, and data types: actions and deletion](../explore.md#xdm-resource-actions).
 
 ## Prerequisites {#prerequisites}
 

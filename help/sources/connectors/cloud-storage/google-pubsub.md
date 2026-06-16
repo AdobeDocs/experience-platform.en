@@ -3,6 +3,13 @@ title: Google PubSub Source Overview
 description: Learn how to connect Google PubSub to Adobe Experience Platform using APIs or the user interface.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
+TQID: https://experienceleague.adobe.com/2-wL2xk8ojzmjgTROqPG25QJi8mJDODvC0DrZfFblxo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL Google PubSub] source
 

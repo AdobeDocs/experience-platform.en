@@ -2,6 +2,27 @@
 title: context
 description: Automatically collect device, environment, or location data.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
+TQID: https://experienceleague.adobe.com/9rYD-3NrLBMxgby-DnScJGouV7mrCy-YDJfVa0dyu18
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+    internal-label: Acrobat Sign
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # `context`
 
@@ -52,6 +73,7 @@ The `"placeContext"` keyword collects information about the user's location.
 | State province | The state province code of the end user. |`xdm.placeContext.geo.stateProvince`| `CA` |
 | Latitude | The latitude of the end user location. |`xdm.placeContext.geo._schema.latitude`| `37.3307447` |
 | Longitude | The longitude of the end user location. |`xdm.placeContext.geo._schema.longitude`| `-121.8945965` |
+| IANA time zone | The IANA time zone of the end user. Included in library versions 2.32.0 or greater. | `xdm.placeContext.ianaTimezone` | `America/Denver` |
 
 ### Timestamp
 

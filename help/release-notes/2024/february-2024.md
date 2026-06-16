@@ -2,6 +2,58 @@
 title: Adobe Experience Platform Release Notes February 2024
 description: The February 2024 release notes for Adobe Experience Platform.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
+TQID: https://experienceleague.adobe.com/cl8peHi3nYEJeVe4tMsxe3XwtwvkKLLn2r5kBOImVr8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+    internal-label: Sources
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+    internal-label: Data ingestion
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+    internal-label: Schemas
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Adobe Experience Platform release notes 
 
@@ -44,7 +96,8 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 To learn more about data collections, read the [data collections overview](/help/tags/home.md).
 
-<!-- ## Data Prep {#data-prep}
+<!-- 
+## Data Prep {#data-prep}
 
 Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
@@ -56,7 +109,8 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 {style="table-layout:auto"}
 
-For more information on Data Prep, read the [Data Prep overview](/help/data-prep/home.md). -->
+For more information on Data Prep, read the [Data Prep overview](/help/data-prep/home.md). 
+-->
 
 ## Destinations {#destinations}
 

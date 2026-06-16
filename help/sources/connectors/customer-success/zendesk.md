@@ -1,8 +1,21 @@
 ---
 title: Zendesk Source Connector Overview
 description: Learn how to connect Zendesk to Adobe Experience Platform using APIs or the user interface.
-last-substantial-update: 2023-06-21
+last-substantial-update: 2023-06-21T00:00:00.000Z
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
+TQID: https://experienceleague.adobe.com/9sBpP4FLIF7sSG9Yi9tVuRyhgoVgUE9-e6W6SrMW2TE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # [!DNL Zendesk]
 
