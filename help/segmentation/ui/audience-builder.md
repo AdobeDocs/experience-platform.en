@@ -301,6 +301,8 @@ When you select the dropdowns on the top of the group, you are presented with th
 | **all of** | **All** of the elements must be accounted for within the group. |
 | **any of** | **At least one** of the elements must be accounted for within the group. |
 
+You can also select additional options for the group by selecting the ellipses icon. Available options include **Add group**, **Delete group**, and **Name group**.
+
 ### Time constraints {#time-constraints}
 
 Time constraints let you apply time restrictions on time-based attributes, events, and the sequence between the events.
@@ -391,9 +393,25 @@ The list of available time constraints for this operation differs from the main 
 
 ## Profile view {#profile-view}
 
+Profile view displays a sampling of profiles that would qualify for the audience, based on its current rules. Once you've generated at least one estimate for the audience, select **Profile view** to see the sample profiles.
+
+IMAGE
+
+A selection of profiles is displayed. This includes information such as ID, first name, last name and audience membership.
+
+IMAGE
+
+| Field | Description |
+| ----- | ----------- |
+| ID | The ID for the profile. You can select the ID and see the profile details page. For more information on profiles, read the [profile user guide](/help/profile/ui/user-guide.md#profile-detail). |
+| First name | The first name of the profile's user. |
+| Last name | The last name of the profile's user. |
+| Audience membership | The number of audiences the profile belongs to. |
+| Full name | The full name of the profile's user. | 
+
 ## Code view {#code-view}
 
-You can view a code-based version of the audience created in Audience Builder in the **Code view**. Once you have created your rule within the rule builder canvas, select **[!UICONTROL Code view]** to see your audience as PQL.
+Code view displays a code-based version of the audience created in Audience Builder. Once you've created your rule within the rule builder canvas, select **[!UICONTROL Code view]** to see your audience as PQL.
 
 IMAGE
 
