@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Monitor dataflows for destinations in the UI
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
+nudge: true
 TQID: https://experienceleague.adobe.com/mPpX2-qdMt0QCJa3ZXmia9z4A14EcIGGuWdApdoTC5U
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
