@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Monitor dataflows for destinations in the UI
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
+nudge: true
 TQID: https://experienceleague.adobe.com/mPpX2-qdMt0QCJa3ZXmia9z4A14EcIGGuWdApdoTC5U
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
@@ -332,39 +333,25 @@ For example, you are activating an audience called "Loyalty Members in Californi
 >
 >Note the current limitations related to audience-level metrics:
 >
->- The audience-level view is currently available for the destinations listed below. Rollout is planned for further streaming destinations.
+>- The audience-level view is available for all destinations, except the following:
 >
->   - [[!DNL (API) Oracle Eloqua] connection](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
->   - [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
->   - [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
->   - [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md)
->   - [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)
->   - [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)
->   - [[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)
->   - [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)
->   - [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)
->   - [[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)
+>   - [[!DNL Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md)
+>   - [[!DNL Adobe Target]](../../destinations/catalog/personalization/adobe-target-connection.md)
+>   - [[!DNL Bombora]](../../destinations/catalog/advertising/bombora.md)
+>   - [[!DNL Custom Personalization]](../../destinations/catalog/personalization/custom-personalization.md)
+>   - [[!DNL Demandbase]](../../destinations/catalog/advertising/demandbase.md)
+>   - [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md)
+>   - [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/connections/destinations){target="_blank"}
+>   - [[!DNL Google Ad Manager]](../../destinations/catalog/advertising/google-ad-manager.md)
+>   - [[!DNL Google Ads]](../../destinations/catalog/advertising/google-ads-destination.md)
+>   - [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md)
+>   - [[!DNL Google DV360]](../../destinations/catalog/advertising/google-dv360.md)
+>   - [[!DNL LINE]](../../destinations/catalog/mobile-engagement/line.md)
 >   - [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
->   - [[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)
->   - [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md)
->   - [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)
->   - [[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)
->   - [[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)
->   - [[!DNL Pega CDH Realtime Audience (V1)]](../../destinations/catalog/personalization/pega.md)
->   - [[!DNL Pega CDH Realtime Audience (V2)]](../../destinations/catalog/personalization/pega-v2.md)
->   - [[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic.md)
->   - [[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic.md)
->   - [[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)
->   - [[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)
->   - [[!DNL Salesforce Marketing Cloud] (API)](../../destinations/catalog/email-marketing/salesforce-marketing-cloud.md)
->   - [[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)
->   - [[!DNL Snowflake]](../../destinations/catalog/warehouses/snowflake-batch.md)
->   - [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md)
->   - [[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)
->   - [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
->   - Batch (file-based) destinations
-> 
->- For batch destinations, audience-level metrics are currently recorded for successful dataflow runs only. They are not recorded for failed dataflow runs and excluded records. For dataflow runs to streaming destinations, metrics are captured and displayed for activated and excluded records. 
+>   - [[!DNL SendGrid]](../../destinations/catalog/email-marketing/sendgrid.md)
+>   - [[!DNL Snap Inc]](../../destinations/catalog/advertising/snap-inc.md)
+>
+>- For batch destinations, audience-level metrics are currently recorded for successful dataflow runs only. They are not recorded for failed dataflow runs and excluded records. For dataflow runs to streaming destinations, metrics are captured and displayed for activated and excluded records.
 
 ![Audiences highlighted in the dataflow panel.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 

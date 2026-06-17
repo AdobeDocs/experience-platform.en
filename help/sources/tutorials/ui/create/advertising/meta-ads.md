@@ -2,6 +2,7 @@
 title: Connect Meta Ads to Experience Platform UI
 description: Learn how to connect your Meta Ads account to Adobe Experience Platform in the UI.
 badge: Beta
+hide: true
 ---
 # Ingest [!DNL Meta Ads] data to Experience Platform in the UI
 

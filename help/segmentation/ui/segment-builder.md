@@ -78,8 +78,6 @@ You can select the ![settings icon](/help/images/icons/settings.png) to adjust t
 
 For the **[!UICONTROL Available fields]**, you can either show only the fields that contain data or the full XDM schema.
 
-For the **[!UICONTROL Data sources]**, you can filter to show attributes that come from the specified ingestion types. Supported values include **[!UICONTROL Show batch data]**, **[!UICONTROL Show streaming/edge data]**, and **[!UICONTROL Show fields with no ingested data]**.
-
 For the **[!UICONTROL Merge policy]**, you can choose which merge policy the fields belong to.
 
 ![The settings area is displayed within Segment Builder.](../images/ui/segment-builder/settings.png)

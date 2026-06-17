@@ -1,7 +1,7 @@
 ---
 title: Snowflake Batch connection
 description: Create a live Snowflake data share to receive daily audience updates directly as shared tables into your account.
-last-substantial-update: 2026-02-17T00:00:00.000Z
+last-substantial-update: 2026-05-29
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
 TQID: https://experienceleague.adobe.com/9rHuZjQpD9FAjKdktXxBEUjhc5ZGeKlqFFl2K-Y-9HE
@@ -117,10 +117,6 @@ Before configuring your Snowflake connection, make sure you meet the following p
 
 Read the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) for more information on the necessary permissions.
 
->[!IMPORTANT]
->
->This destination does not support Snowflake accounts that are behind a firewall or that use [[!DNL Azure Private Link]](https://docs.snowflake.com/en/user-guide/privatelink-azure).
-
 ## Supported audiences {#supported-audiences}
 
 This section describes which types of audiences you can export to this destination. The two tables below indicate which audiences this connector supports, by _audience origin_ and _profile types included in the audience_:
@@ -178,7 +174,7 @@ To authenticate to the destination, select **[!UICONTROL Connect to destination]
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_batch_privatelink"
 >title="Private Link Enabled"
->abstract="Enable this toggle if your Snowflake account has Private Link enabled and public access to Snowflake service endpoints is disabled.<br>Enabling it on an account that does not use Private Link bypasses account validation and can cause connection or data sharing failures. If your account requires Private Link and this toggle is off, Adobe cannot resolve your account or share audience data."
+>abstract="Select True if your Snowflake account has Private Link enabled and public access to Snowflake service endpoints is disabled.<br>Selecting True on an account that does not use Private Link bypasses account validation and can cause connection or data sharing failures. If your account requires Private Link and you select False, Adobe cannot resolve your account or share audience data."
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
@@ -189,6 +185,12 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Snowflake Account ID]**: Your [Snowflake Data Sharing Account Identifier](https://docs.snowflake.com/en/user-guide/admin-account-identifier#label-account-name-data-sharing). Use the following format depending on whether your account is linked to an organization:
     * If your account is linked to an organization: enter the organization name and account name separated by a **period** (`.`). For example, if your organization name is ACME and your account name is AsiaRegion, enter `ACME.AsiaRegion`.
     * If your account is not linked to an organization: `AccountName`.
+* **[!UICONTROL Private Link Enabled]**: Select **[!UICONTROL True]** if your [!DNL Snowflake] account has Private Link enabled and public access to [!DNL Snowflake] service endpoints is disabled. If your account uses privatelink-only access and you select **[!UICONTROL False]**, [!DNL Adobe] cannot resolve your [!DNL Snowflake] account or share audience data. See the [!DNL Snowflake] documentation on [enforcement of privatelink-only access](https://docs.snowflake.com/en/user-guide/security-disable-public-access-privatelink).
+
+  >[!IMPORTANT]
+  >
+  >Select **[!UICONTROL True]** for **[!UICONTROL Private Link Enabled]** only if your [!DNL Snowflake] account enforces privatelink-only access. Selecting **[!UICONTROL True]** on an account that does not use Private Link bypasses account validation and can cause connection or data sharing failures. See the [!DNL Snowflake] documentation on [enforcement of privatelink-only access](https://docs.snowflake.com/en/user-guide/security-disable-public-access-privatelink).
+
 * **[!UICONTROL Snowflake Region]**: Select the region where your Snowflake instance is provisioned. See the Snowflake [documentation](https://docs.snowflake.com/en/user-guide/intro-regions) for detailed information on supported cloud regions.
 * **[!UICONTROL Account acknowledgment]**: After entering your **[!UICONTROL Snowflake Account ID]**, select **[!UICONTROL Yes]** in this dropdown to confirm that your **[!UICONTROL Snowflake Account ID]** is correct and it belongs to you.
 

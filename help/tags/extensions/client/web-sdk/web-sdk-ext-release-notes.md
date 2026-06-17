@@ -67,32 +67,37 @@ topic_v2:
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Adobe Experience Platform Web SDK release notes](/help/collection/js/release-notes.md).
 
+## Version 2.37.0 - June 10, 2026
+
+- Contains [version 2.34.1](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.
+- Added [Repair data element references](configure/repair-data-element-references.md), which refreshes stale data element references across all rules after copying a rule to a new property.
+
 ## Version 2.36.0 - May 26, 2026
 
-- Contains [version 2.34.0](/help/collection/js/release-notes.md) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.34.0](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.
 - Added the [!UICONTROL Region] text field to the [[!UICONTROL Brand Concierge]](configure/brand-concierge.md) component.
 - Fixed an issue where data elements could break after copying a rule to a new property.
 
 ## Version 2.35.1 - May 7, 2026
 
-- Contains [version 2.33.1](/help/collection/js/release-notes.md) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.33.1](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.
 - Fixed an issue where required components, like Context, were excluded from the SDK bundle and prevented events from being sent.
 
 ## Version 2.35.0 - May 7, 2026
 
-- Contains [version 2.33.0](/help/collection/js/release-notes.md) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.33.0](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.
 - Removed the beta flag from Advertising and Push notifications sections in the extension's configuration page.
 - Fixed an issue where configuration of push notifications would show errors before being edited.
 - Fixed an issue where analytics events are overwritten in sequential Update Variable actions.
 
 ## Version 2.34.2 - March 23, 2026
 
-- Contains [version 2.32.0](/help/collection/js/release-notes.md) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.32.0](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.
 - Fixed an issue specific to copying a Tags property where Update Variable actions could retain references to data elements from the original property. To repair existing copied properties, open and re-save each affected Update Variable action and its rule. Avoid renaming the copied data elements until after re-saving.
 
 ## Version 2.34.1 - February 11, 2026
 
-- Contains [version 2.31.1](/help/collection/js/release-notes.md) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.31.1](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.
 - Fixed an issue where [Adobe Advertising configuration settings](configure/advertising.md) were unable to be edited in [Send Event](actions/send-event.md) actions.
 - Added a fallback to `edge.adobedc.net` for the [Edge domain](configure/general.md) configuration setting when a `tenant-id` is not available.
 
@@ -100,7 +105,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 **New features**
 
-- Contains [version 2.31.0](/help/collection/js/release-notes.md) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.31.0](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.
 - Added [Base code support](/help/collection/js/install/base-code.md) for the tag extension.
 - Added **[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [context](configure/data-collection.md#context-settings) to the extension settings.
 - Added Brand Concierge component.
@@ -124,13 +129,13 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 **New features**
 
 - Added support for showing push notifications.
-- Contains [version 2.30.0](/help/collection/js/release-notes.md#2-30-0) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.30.0](/help/collection/js/release-notes.md#2-30-0) of the Web SDK JavaScript library.
 
 ## Version 2.32.0 - September 4, 2025
 
 **New features**
 
-- Contains [version 2.29.0](/help/collection/js/release-notes.md#2-29-0) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.29.0](/help/collection/js/release-notes.md#2-29-0) of the Web SDK JavaScript library.
 - Added support for Adobe Advertising as a new custom build component. Configure in the extension configuration and in send event calls.
 - Added support for recording push subscription details in Profile. This is through a new action, "Push subscription details"
 
@@ -141,13 +146,13 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 ## Version 2.31.1 - July 31, 2025
 
 - Fixed an issue that prevented custom builds from running.
-- Contains [version 2.28.1](/help/collection/js/release-notes.md#2-28-1) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.28.1](/help/collection/js/release-notes.md#2-28-1) of the Web SDK JavaScript library.
 
 ## Version 2.31.0 - July 24, 2025
 
 **New features**
 
-- Contains [version 2.28.0](/help/collection/js/release-notes.md#2-28-0) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.28.0](/help/collection/js/release-notes.md#2-28-0) of the Web SDK JavaScript library.
 
 **Fixes and improvements**
 
@@ -171,7 +176,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 - You can now specify a data element when enabling third party cookies.
 - Added clear buttons to code fields.
-- Contains [version 2.27.0](/help/collection/js/release-notes.md) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.27.0](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.
 
 **Fixes and improvements**
 
@@ -188,7 +193,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 **New features**
 
 - You can now create custom Web SDK builds and choose the components that you need from the tag extension user interface. This can result in smaller builds by excluding unused components. See [Custom build components](configure/custom-build-components.md).
-- Contains [version 2.26.0](/help/collection/js/release-notes.md) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.26.0](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.
 
 **Fixes and improvements**
 
@@ -207,7 +212,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 **New features**
 
 - Added a new feature to toggle between technical names and display names in the XDM Object.
-- Contains [version 2.25.0](/help/collection/js/release-notes.md) of the Adobe Experience Platform Web SDK.
+- Contains [version 2.25.0](/help/collection/js/release-notes.md) of the Web SDK JavaScript library.
 
 ## Version 2.27.0 - October 31, 2024
 

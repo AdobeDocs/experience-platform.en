@@ -1,7 +1,7 @@
 ---
 title: Azure Data Lake Storage Gen2 connection
 description: Learn how to connect to Azure Data Lake Storage Gen2 to activate audiences and export datasets.
-last-substantial-update: 2023-07-26T00:00:00.000Z
+last-substantial-update: 2023-07-26
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
 TQID: https://experienceleague.adobe.com/mI7udBGz-yyB1wGO-j6IbpQDX7Zhyk1lxE-sTYyWkd4
 product_v2:
@@ -82,6 +82,10 @@ This destination supports dataset exports. For complete information on how to se
 When exporting *audience data*, Experience Platform creates a `.csv`, `parquet`, or `.json` file in the storage location that you provided. For more information about the files, see the [supported file formats for export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) section in the audience activation tutorial.
 
 When exporting *datasets*, Experience Platform creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
+
+## Connect using Azure Private Link {#private-link}
+
+If your organization has strict network security requirements, you can configure this destination to route data exports over the [!DNL Microsoft Azure] private backbone instead of the public internet. See [Azure Private Link for destinations](./azure-private-link.md) for prerequisites, guardrails, and setup steps.
 
 ## Connect to the destination {#connect}
 

@@ -16,7 +16,17 @@ exl-id: f94e3ef3-2252-46f5-8075-45b5483d9d83
 > * Batch segmentation
 > * Batch destination activation
 
-The [Job Schedules](job-schedules.md) timeline view helps you identify common configuration issues that can negatively impact your data pipeline performance and reliability. These anti-patterns often lead to job failures, data inconsistencies, or degraded system performance. By spotting these patterns early, you can reconfigure your jobs to avoid problems before they affect your business operations.
+The [!UICONTROL Job Schedules] timeline view helps you identify common configuration issues that can negatively impact your data pipeline performance and reliability. These anti-patterns often lead to job failures, data inconsistencies, or degraded system performance. Three of the most common anti-patterns are automatically detected and surfaced through warning indicators in the interface. By spotting these patterns early, you can reconfigure your jobs to avoid problems before they affect your business operations.
+
+## Automatically detected anti-patterns {#auto-detection}
+
+[!UICONTROL Job Schedules] automatically detects three common anti-patterns and surfaces warning indicators on the relevant [summary cards](job-schedules.md#summary-cards). Select a warning indicator to open a details panel with a description of the issue, recommended actions, and a list of affected datasets or destinations.
+
+| Auto-detected anti-pattern | Warning indicator location | More information |
+|---|---|---|
+| Profile ingestion daily limit | **[!UICONTROL Profile ingestion]** card | [Profile ingestion daily limit](#profile-ingestion-daily-limit) |
+| Profile ingestion too close to segmentation | **[!UICONTROL Segmentation]** card | [Scheduled job density](#scheduled-density) |
+| Segmentation too close to scheduled destination activation | **[!UICONTROL Destination activation]** card | [Schedule overlap](#schedule-overlap-pattern) |
 
 ## Prerequisites {#prerequisites}
 
@@ -28,10 +38,11 @@ Before identifying anti-patterns, you should:
 
 ## Quick reference {#anti-pattern-quick-reference}
 
-| Anti-pattern | What you'll see on the timeline | Primary impact | Severity |
-|--------------|----------------------------------|----------------|----------|
+| Anti-pattern | What you'll see | Primary impact | Severity |
+|---|---|---|---|
 | [Schedule overlap](#schedule-overlap-pattern) | Multiple jobs running simultaneously | Resource contention and job failures | High |
 | [Scheduled job density](#scheduled-density) | Many datasets with batches clustered in same hour | Pipeline bottlenecks and incomplete segmentation | High |
+| [Profile ingestion daily limit](#profile-ingestion-daily-limit) | Warning indicator on the Profile ingestion summary card | System guardrail exceeded | High |
 | [Excessive batches per dataset](#excessive-batches-per-dataset) | Single dataset with dozens of daily batches | Inefficient processing and operational complexity | Medium |
 
 ## Schedule overlap {#schedule-overlap-pattern}
@@ -54,6 +65,10 @@ A common example is batch ingestion jobs running at the same time as a scheduled
 * **Stagger job schedules**: Ensure resource-intensive operations run sequentially rather than concurrently.
 * **Add buffer time**: Leave adequate spacing between jobs to account for processing variations.
 * **Review dependencies**: Identify which jobs must complete before others can start safely.
+
+When [!UICONTROL Job Schedules] detects segmentation running too close to a scheduled destination activation, a warning indicator appears on the **[!UICONTROL Destination activation]** summary card. Select the warning indicator to open a panel showing the number of detected occurrences, a description of the timing conflict, recommendations, and a table of affected destinations.
+
+![The Segmentation too close to scheduled destination activation panel in Job Schedules, showing a description of the timing conflict, recommendations, and a table of affected destinations.](assets/job-schedules/segmentation-too-close-to-activation.png)
 
 ## Scheduled job density {#scheduled-density}
 
@@ -82,6 +97,35 @@ This pattern typically includes:
 * **Add buffer time**: Ensure a minimum 1-2 hour buffer between profile ingestion completion and segmentation start.
 * **Review requirements**: Assess whether all datasets truly need multiple daily batches. Many use cases work with fewer frequent updates.
 
+When [!UICONTROL Job Schedules] detects profile ingestion jobs running too close to a scheduled segmentation run, a warning indicator appears on the **[!UICONTROL Segmentation]** summary card. Select the warning indicator to open a panel showing the number of detected occurrences, a description of the timing conflict, recommendations, and a table of affected datasets.
+
+![The Profile ingestion too close to segmentation panel in Job Schedules, showing a blue vertical line marking the segmentation run time, a description of the timing conflict, recommendations, and a table of affected datasets.](assets/job-schedules/profile-ingestion-too-close-to-segmentation.png)
+
+## Profile ingestion daily limit {#profile-ingestion-daily-limit}
+
+**Impact severity**: High | **Primary issue**: System guardrail
+
+**What to look for**: A warning indicator on the **[!UICONTROL Profile ingestion]** summary card when daily profile ingestion runs approach or exceed the 90-run system guardrail. Select the warning indicator to view a bar chart showing the daily run count for each day in the selected time period.
+
+The chart uses color-coded bars to indicate where counts fall relative to the limit:
+
+* **Red bars (90 or more runs)**: The daily limit is exceeded. Processing inefficiencies may affect all profile-enabled datasets.
+* **Orange bars (72 to 89 runs)**: Approaching the daily limit.
+* **Green bars (below 72 runs)**: Within the acceptable range.
+
+![The Daily number of profile ingestion runs chart in Job Schedules, showing daily run counts color-coded as red bars that exceeded the 90-run daily limit, orange bars in the warning zone between 72 and 89 runs, and one green bar within the acceptable range.](assets/job-schedules/profile-ingestion-daily-limit.png)
+
+**Why this is problematic**:
+
+* **Processing inefficiency**: Exceeding 90 profile ingestion runs per day creates processing overhead that can affect all profile-enabled datasets.
+* **Resource contention**: A high total run count can delay downstream segmentation and activation jobs.
+* **Data staleness**: When profile processing runs continuously, individual batches may take longer to complete, delaying data availability for segmentation.
+
+**How to fix it**:
+
+* **Reduce batch frequency per dataset**: Consolidate batches so fewer profile ingestion runs are triggered each day. See [Excessive batches per dataset](#excessive-batches-per-dataset) for detailed guidance.
+* **Audit all ingestion schedules**: Review all datasets scheduled for profile ingestion and identify those with unnecessarily high batch frequency.
+
 ## Excessive batches per dataset {#excessive-batches-per-dataset}
 
 **Impact severity**: Medium | **Primary issue**: Inefficient processing
@@ -105,6 +149,7 @@ This pattern involves a single dataset with many individual batch ingestion jobs
 * **Increase batch size**: Accumulate more data before triggering ingestion rather than ingesting immediately.
 * **Align with business needs**: Verify whether hourly updates are truly required, or if daily/twice-daily updates suffice.
 * **Use streaming for real-time**: Switch to streaming ingestion for genuine real-time requirements instead of simulating it with frequent batches.
+* **Monitor total daily runs**: If multiple datasets have high batch frequency, the combined total may exceed the system guardrail. See [Profile ingestion daily limit](#profile-ingestion-daily-limit).
 
 ## Next steps {#next-steps}
 
@@ -115,3 +160,4 @@ After identifying anti-patterns in your job schedules:
 * Learn about [batch ingestion](../ingestion/batch-ingestion/overview.md) to optimize your data loading schedules.
 * Understand [segmentation schedules](../segmentation/home.md) to ensure proper timing of audience evaluations.
 * Explore [monitoring destination dataflows](../dataflows/ui/monitor-destinations.md) for end-to-end pipeline visibility.
+* Set up [alerts](/help/observability/alerts/overview.md) to receive notifications when the profile ingestion daily limit is approached.

@@ -50,6 +50,8 @@ The [!UICONTROL Data Lifecycle] UI is built on top of the Data Hygiene API, whos
 >- To monitor your current usage against quota limits, see the [Quota reference guide](./api/quota.md).
 >- For entitlement rules, monthly caps, SLA timelines, and exception handling policies, see the [Record delete quota guide (UI)](./ui/record-delete.md#quotas) and [Work order quota guide (API)](./api/workorder.md#quotas).
 
+### Dataset expiration timelines {#dataset-expiration-timelines}
+
 The following takes place when a [dataset expiration request](./ui/dataset-expiration.md) is created:
 
 | Stage | Time after scheduled expiration | Description |
