@@ -103,11 +103,11 @@ IMAGE
 
 You can also adjust the settings of the visible fields by selecting ![the settings icon](/help/images/icons/settings.png).
 
-For the **[!UICONTROL Available fields]**, you can either show only the fields that contain data or the full XDM schema.
+For **[!UICONTROL Available fields]**, you can either show only the fields that contain data or the full XDM schema.
 
-For the **[!UICONTROL Data sources]**, you can filter to show attributes that come from the specified ingestion types. Supported values include **[!UICONTROL Show batch data]**, **[!UICONTROL Show streaming/edge data]**, and **[!UICONTROL Show fields with no ingested data]**.
+For **[!UICONTROL Data sources]**, you can filter to show attributes that come from the specified ingestion types. Supported values include **[!UICONTROL Show batch data]**, **[!UICONTROL Show streaming/edge data]**, and **[!UICONTROL Show fields with no ingested data]**.
 
-For the **[!UICONTROL Merge policy]**, you can choose which merge policy the fields belong to.
+For **[!UICONTROL Merge policy]**, you can choose which merge policy the fields belong to.
 
 ### Attributes {#attributes}
 
@@ -303,6 +303,8 @@ When you select the dropdowns on the top of the group, you are presented with th
 
 You can also select additional options for the group by selecting the ellipses icon. Available options include **Add group**, **Delete group**, and **Name group**.
 
+If you select **Add group**, you add another group as a child of the currently selected group. If you select **Delete group**, the currently selected group will be removed. If you select **Name group**, you can give a name to the currently selected group.
+
 ### Time constraints {#time-constraints}
 
 Time constraints let you apply time restrictions on time-based attributes, events, and the sequence between the events.
@@ -434,3 +436,13 @@ If an audience definition breaks a critical validation best practice, you will *
 | Audience size | Performance optimization | The audience qualification size is greater than 30% of the total number of profiles in the sandbox. |
 
 For more information on how audience validation works, read the [audience validation guide](/help/segmentation/validation.md).
+
+## Next steps {#next-steps}
+
+Audience Builder provides a rich workflow letting you create audiences from Profile data. After reading this guide, you should now be able to:
+
+- Create audiences using a combination of attributes, events, and existing audiences as building blocks.
+- Use the rule builder canvas and containers to control the order in which rules are executed
+- View estimates for your prospective audience, letting you adjust your audience's rules as necessary.
+
+To learn more about [!DNL Segmentation Service], please continue reading the documentation and supplement your learning by watching the related videos. To learn more about the other parts of the [!DNL Segmentation Service] UI, please read the [[!DNL Segmentation Service] user guide](./overview.md).
