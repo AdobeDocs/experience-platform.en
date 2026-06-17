@@ -2,6 +2,7 @@
 title: Google Customer Match + Display & Video 360 connection
 description: With the Google Customer Match + Display & Video 360 destination connector, you can use your online and offline data from Experience Platform to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, Gmail, and YouTube.
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
+nudge: yes
 TQID: https://experienceleague.adobe.com/EQw7wxAqZYEha2OjNkfiyITaeVgx-hz5eHHeJPb41Uc
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
