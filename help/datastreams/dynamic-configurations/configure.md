@@ -1,6 +1,6 @@
 ---
-title: Create dynamic datastream configurations
-description: Learn how to create dynamic datastream configurations, to route your data to various Experience Cloud services, based on rules.
+title: Create [!DNL Dynamic Datastream Configurations]
+description: "Learn how to add routing rules to a [!DNL Dynamic Datastream Configuration] and route events to specific datasets and Experience Cloud services based on event data."
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
 TQID: https://experienceleague.adobe.com/9wUD6vPq5i-OsBDqy57fa2j5QD2-wZiiOpAVgMnGIp4
 product_v2:
@@ -33,7 +33,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
-# Create dynamic datastream configurations
+# Create [!DNL Dynamic Datastream Configurations]
 
 By default, the [!DNL Adobe Experience Platform Edge Network] sends all events that reach a datastream to all [!DNL Experience Cloud] [services](/help/datastreams/configure.md#add-services) you have enabled for your datastreams. Depending on your use cases, this may not always be the ideal workflow.
 
@@ -54,25 +54,25 @@ Dynamic datastream configurations have specific limits and performance constrain
 
 | Guardrail | Limit | Limit type |
 |---------|------------|------|
-| Maximum number of dynamic datastream configurations per datastream for Experience Platform services | 5 | Performance guardrail |
-| Maximum number of dynamic datastream configurations per datastream for Event Forwarding | 5 | Performance guardrail |
-| Maximum number of dynamic datastream configurations per datastream for [!DNL Adobe Analytics] | 5 | Performance guardrail |
-| Maximum number of dynamic datastream configurations per datastream for [!DNL Adobe Target] | 5 | Performance guardrail |
-| Maximum number of dynamic datastream configurations per datastream for [!DNL Adobe Audience Manager] | 5 | Performance guardrail |
+| Maximum number of [!DNL Dynamic Datastream Configurations] per datastream for Experience Platform services | 5 | Performance guardrail |
+| Maximum number of [!DNL Dynamic Datastream Configurations] per datastream for Event Forwarding | 5 | Performance guardrail |
+| Maximum number of [!DNL Dynamic Datastream Configurations] per datastream for [!DNL Adobe Analytics] | 5 | Performance guardrail |
+| Maximum number of [!DNL Dynamic Datastream Configurations] per datastream for [!DNL Adobe Target] | 5 | Performance guardrail |
+| Maximum number of [!DNL Dynamic Datastream Configurations] per datastream for [!DNL Adobe Audience Manager] | 5 | Performance guardrail |
 | Maximum number of conditions (predicates) that you can combine within a single rule | 100 | Performance guardrail |
-| Maximum time allowed for evaluating all dynamic datastream configurations per datastream before timing out | 25 ms | System-enforced guardrail |
+| Maximum time allowed for evaluating all [!DNL Dynamic Datastream Configurations] per datastream before timing out | 25 ms | System-enforced guardrail |
 
 ## Dynamic datastream configurations versus datastream configuration overrides {#dynamic-versus-overrides}
 
 Dynamic datastream configurations and [datastream configuration overrides](/help/datastreams/overrides.md) are mutually exclusive functionalities.
 
-You cannot use dynamic datastream configurations along with datastream configuration overrides. You must choose one or the other.
+You cannot use [!DNL Dynamic Datastream Configurations] along with datastream configuration overrides. You must choose one or the other.
 
-If you enable both, configuration overrides take precedence and the system ignores the dynamic datastream configuration rules.
+If you enable both, configuration overrides take precedence and the system ignores the [!DNL Dynamic Datastream Configuration] rules.
 
-## Create a dynamic datastream configuration {#create-dynamic-configuration}
+## Create a [!DNL Dynamic Datastream Configuration] {#create-dynamic-configuration}
 
-After you have [created a datastream](configure.md) and [added a service](configure.md#add-services) to it, follow the steps below to add a dynamic configuration to the service.
+After you have [created a datastream](configure.md) and [added a service](configure.md#add-services) to it, follow these steps to add a dynamic configuration to the service.
 
 1. Go to the **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]** page and select the datastream that you created.
     
@@ -104,7 +104,7 @@ After you have [created a datastream](configure.md) and [added a service](config
 
 ## Rule priority considerations {#rule-priority}
 
-You can define multiple rules for each dynamic datastream configuration. However, if your data matches the conditions of multiple rules, only the first matching rule in the list is taken into consideration, and all the other matching rules are ignored.
+You can define multiple rules for each [!DNL Dynamic Datastream Configuration]. However, if your data matches the conditions of multiple rules, only the first matching rule in the list is taken into consideration, and all the other matching rules are ignored.
 
 To achieve the desired data routing behavior, pay attention to the order in which you arrange the rules.
 
@@ -149,7 +149,7 @@ Rules can use the following operators, depending on the data type:
 
 ### Rule structure {#rule-structure}
 
-When creating rules for dynamic datastream configurations, it's important to understand the structural requirements that ensure optimal performance and system compatibility. The rule structure directly impacts how efficiently your data is processed and routed through the system.
+When creating rules for [!DNL Dynamic Datastream Configurations], it's important to understand the structural requirements that ensure optimal performance and system compatibility. The rule structure directly impacts how efficiently your data is processed and routed through the system.
 
 **Use flat expressions only**. You must define rules as flat logical expressions. Nested logical expressions (using containers or multiple levels of [!DNL AND]/[!DNL OR]) are not supported. If you need complex logic, break it into multiple flat rules.
 
@@ -167,7 +167,7 @@ You can break this rule into the following simpler rules:
 
 ### Best practices {#best-practices}
 
-Following best practices when creating dynamic datastream configuration rules ensures optimal performance, system reliability, and maintainable configurations. These guidelines help you avoid common pitfalls and create efficient rules that work seamlessly with the platform's architecture.
+Following best practices when creating [!DNL Dynamic Datastream Configuration] rules ensures optimal performance, system reliability, and maintainable configurations. These guidelines help you avoid common pitfalls and create efficient rules that work seamlessly with the platform's architecture.
 
 * **Keep rules simple and flat.** If you need to express complex logic, use multiple rules instead of nesting.
 * **Use only [supported data types](#supported-data-types) and [operators](#supported-operators).**

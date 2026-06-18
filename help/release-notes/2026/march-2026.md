@@ -74,7 +74,7 @@ A datastream represents the server-side configuration when implementing the Adob
 
 | Feature | Description |
 | --- | --- |
-| Dynamic datastream configurations general availability | Dynamic datastream configurations are now generally available. With dynamic datastream configurations, you can define user-configurable sets of rules for each service enabled for your datastream, which dictate what Experience Cloud solution should receive each type of data. See the [dynamic datastream configurations guide](../../datastreams/configure-dynamic-datastream.md) for more information. |
+| Dynamic datastream configurations general availability | Dynamic datastream configurations are now generally available. With dynamic datastream configurations, you can define user-configurable sets of rules for each service enabled for your datastream, which dictate what Experience Cloud solution should receive each type of data. See the [dynamic datastream configurations guide](../../datastreams/dynamic-configurations/configure.md) for more information. |
 
 {style="table-layout:auto"}
 
