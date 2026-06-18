@@ -45,4 +45,4 @@ Validate each event path in Assurance before moving to platform-level validation
 
 - Review [best practices for [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/best-practices.md) for ongoing operational guidance.
 - See the [FAQ](/help/datastreams/dynamic-configurations/faq.md) if you encounter unexpected routing behavior.
-- Return to [Create Dynamic Datastream Configurations](/help/datastreams/dynamic-configurations/configure.md) to adjust rule conditions or rule order.
+- Return to [Create Dynamic Datastream Configurations](/help/datastreams/configure-dynamic-datastream.md) to adjust rule conditions or rule order.

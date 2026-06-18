@@ -39,7 +39,7 @@ Understanding how the Edge Network evaluates **rules** helps you design configur
 - **25ms evaluation budget.** All rules in a datastream must evaluate within 25ms total. If evaluation exceeds this budget, the event falls back to the default datastream configuration. Keep rules simple and focused on reliable fields such as `eventType`.
 - **Flat expressions only.** The system does not support nested logical expressions (containers within containers). If your logic requires nesting, break it into multiple flat rules instead.
 
-For the full list of supported data types, operators, and guardrails, see [Create Dynamic Datastream Configurations](/help/datastreams/dynamic-configurations/configure.md).
+For the full list of supported data types, operators, and guardrails, see [Create Dynamic Datastream Configurations](/help/datastreams/configure-dynamic-datastream.md).
 
 ## Event value taxonomy {#event-taxonomy}
 
@@ -67,4 +67,4 @@ Plan your implementation to use one approach or the other per event type. Do not
 
 - Review the [prerequisites and planning checklist](/help/datastreams/dynamic-configurations/prerequisites.md) before configuring your first rules.
 - Read [Dynamic datastream configuration patterns](/help/datastreams/dynamic-configurations/configuration-patterns.md) to choose the right dataset strategy.
-- Follow the UI steps to [create [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/configure.md).
+- Follow the UI steps to [create [!DNL Dynamic Datastream Configurations]](/help/datastreams/configure-dynamic-datastream.md).

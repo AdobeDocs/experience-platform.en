@@ -55,7 +55,7 @@ No. Dynamic datastream configurations route events within the same sandbox as th
 
 The 5-rule-per-service limit determines the answer. If your current multi-datastream setup requires more than 5 distinct routing paths per service, you may still need multiple datastreams. However, most implementations find that 5 rules are sufficient to consolidate two to four datastreams into one.
 
-See [Create Dynamic Datastream Configurations](/help/datastreams/dynamic-configurations/configure.md#guardrails) for the full list of guardrails, including maximum rules per service and maximum conditions per rule.
+See [Create Dynamic Datastream Configurations](/help/datastreams/configure-dynamic-datastream.md#guardrails) for the full list of guardrails, including maximum rules per service and maximum conditions per rule.
 
 ## What is the performance impact of [!DNL Dynamic Datastream Configurations]?
 
@@ -67,4 +67,4 @@ To stay within the budget, keep rules simple, use `eventType` as your primary co
 
 - See [Dynamic datastream configuration use cases](/help/datastreams/dynamic-configurations/use-cases.md) for step-by-step rule configurations.
 - Read [best practices for [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/best-practices.md) for operational guidance.
-- Return to [Create Dynamic Datastream Configurations](/help/datastreams/dynamic-configurations/configure.md) to adjust rule conditions or rule order.
+- Return to [Create Dynamic Datastream Configurations](/help/datastreams/configure-dynamic-datastream.md) to adjust rule conditions or rule order.

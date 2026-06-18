@@ -33,11 +33,25 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
+
 # Create [!DNL Dynamic Datastream Configurations]
 
 By default, the [!DNL Adobe Experience Platform Edge Network] sends all events that reach a datastream to all [!DNL Experience Cloud] [services](/help/datastreams/configure.md#add-services) you have enabled for your datastreams. Depending on your use cases, this may not always be the ideal workflow.
 
 Dynamic datastream configurations address this through sets of rules that you define for each service enabled for your datastream, which control what [!DNL Experience Cloud] solution receives each type of data.
+
+## [!DNL Dynamic Datastream Configurations] guide {#guide}
+
+If you are new to [!DNL Dynamic Datastream Configurations] or are planning a production implementation, read the full guide before configuring rules. The guide covers the event taxonomy, dataset strategies, use cases, best practices, and testing approach.
+
+* [Overview](/help/datastreams/dynamic-configurations/overview.md) — How rules are evaluated, the event taxonomy, and mutual exclusivity with client-side overrides
+* [Prerequisites and planning checklist](/help/datastreams/dynamic-configurations/prerequisites.md) — Datastream setup, schema and dataset preparation, and event inventory
+* [Configuration patterns](/help/datastreams/dynamic-configurations/configuration-patterns.md) — Actionable first versus Analytical first dataset strategies
+* [Use cases](/help/datastreams/dynamic-configurations/use-cases.md) — Six common routing scenarios with example rule tables
+* [End-to-end example](/help/datastreams/dynamic-configurations/example.md) — A complete e-commerce implementation
+* [Best practices](/help/datastreams/dynamic-configurations/best-practices.md) — Rule design, dataset strategy, and operational guidance
+* [Test and validate](/help/datastreams/dynamic-configurations/testing.md) — Assurance-based testing checklist
+* [FAQ](/help/datastreams/dynamic-configurations/faq.md) — Common questions about rule behavior and system interactions
 
 ## Prerequisites {#prerequisites}
 
@@ -72,33 +86,33 @@ If you enable both, configuration overrides take precedence and the system ignor
 
 ## Create a [!DNL Dynamic Datastream Configuration] {#create-dynamic-configuration}
 
-After you have [created a datastream](configure.md) and [added a service](configure.md#add-services) to it, follow these steps to add a dynamic configuration to the service.
+After you have [created a datastream](/help/datastreams/configure.md) and [added a service](/help/datastreams/configure.md#add-services) to it, follow these steps to add a dynamic configuration to the service.
 
 1. Go to the **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]** page and select the datastream that you created.
     
-    ![Datastreams user interface showing the list of datastreams.](assets/configure-dynamic-datastream/select-datastream.png)
+    ![Datastreams user interface showing the list of datastreams.](assets/dynamic-datastreams/select-datastream.png)
 
 1. Select the **[!UICONTROL Edit]** option on the service for which you want to define a dynamic configuration.
     
-    ![Datastreams user interface showing the services added to a datastream.](assets/configure-dynamic-datastream/select-service.png)
+    ![Datastreams user interface showing the services added to a datastream.](assets/dynamic-datastreams/select-service.png)
 
 1. In the **[!UICONTROL Configure]** page, select **[!UICONTROL Save and Edit Dynamic Configuration]**.
 
-    ![Datastreams user interface showing the datastream configuration page.](assets/configure-dynamic-datastream/save-and-edit.png)
+    ![Datastreams user interface showing the datastream configuration page.](assets/dynamic-datastreams/save-and-edit.png)
 
 1. Select **[!UICONTROL Add Dynamic Configuration]**.
     
-    ![Datastreams user interface showing the dynamic configuration page before any rules are added.](assets/configure-dynamic-datastream/add-dynamic-config.png)
+    ![Datastreams user interface showing the dynamic configuration page before any rules are added.](assets/dynamic-datastreams/add-dynamic-config.png)
 
 1. From the **[!UICONTROL Resources]** panel, drag and drop the items that you want to build your rule with to the right side of the window. You can combine multiple resources to build complex rules.
 
     Use each resource's options, such as **[!UICONTROL equals]**, **[!UICONTROL does not equal]**, **[!UICONTROL exists]**, and more, to fine tune your rules.
 
-    ![Datastreams user interface showing the dynamic configuration rule builder with resources being dragged.](assets/configure-dynamic-datastream/drag-resources.png)
+    ![Datastreams user interface showing the dynamic configuration rule builder with resources being dragged.](assets/dynamic-datastreams/drag-resources.png)
 
 1. In the **[!UICONTROL Configuration]** section, enable or disable the services for each rule, depending on whether you want the data sent to each service. If you disable a service, the routing is disabled and *no data* is sent to the downstream service.
 
-    ![Datastreams user interface showing the dynamic configuration rule with service toggles.](assets/configure-dynamic-datastream/enable-service.png)
+    ![Datastreams user interface showing the dynamic configuration rule with service toggles.](assets/dynamic-datastreams/enable-service.png)
 
 1. When you are done configuring your rules, select **[!UICONTROL Save]**.
 
@@ -110,7 +124,7 @@ To achieve the desired data routing behavior, pay attention to the order in whic
 
 To configure the rule order, you can drag and drop the rule windows in the order you want.
 
-![Reordering dynamic datastream rules using drag and drop.](assets/configure-dynamic-datastream/move-rules.gif)
+![Reordering dynamic datastream rules using drag and drop.](assets/dynamic-datastreams/move-rules.gif)
 
 ## Rule eligibility criteria {#eligibility-criteria}
 
@@ -153,17 +167,16 @@ Rules must be flat logical expressions. Nested logical expressions (using contai
 
 For example, consider the following complex rule.
 
-![Example of a nested complex rule with multiple AND/OR conditions.](assets/configure-dynamic-datastream/complex-rule.png)
+![Example of a nested complex rule with multiple AND/OR conditions.](assets/dynamic-datastreams/complex-rule.png)
 
 You can break this rule into the following simpler rules:
 
-![The first simplified rule, replacing the nested complex rule.](assets/configure-dynamic-datastream/simple-rule-1.png)
+![The first simplified rule, replacing the nested complex rule.](assets/dynamic-datastreams/simple-rule-1.png)
 
-![The second simplified rule, replacing the nested complex rule.](assets/configure-dynamic-datastream/simple-rule-2.png)
+![The second simplified rule, replacing the nested complex rule.](assets/dynamic-datastreams/simple-rule-2.png)
 
 ## Next steps
 
 * Review [best practices for [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/best-practices.md) for rule design, dataset strategy, and operational guidance.
 * See [Dynamic datastream configuration use cases](/help/datastreams/dynamic-configurations/use-cases.md) for complete rule configurations.
 * Follow [Test and validate [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/testing.md) to verify your rules are routing correctly.
-

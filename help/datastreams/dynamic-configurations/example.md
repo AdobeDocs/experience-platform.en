@@ -60,7 +60,7 @@ The following table shows the complete rule set for the [!DNL Adobe Experience P
 
 This configuration uses **4 explicit rules** out of the 5-rule-per-service limit for [!DNL Adobe Experience Platform]. One rule slot remains available for future needs, for example, filtering internal traffic by email domain or routing a new event type.
 
-For the full list of guardrails, see [Create Dynamic Datastream Configurations](/help/datastreams/dynamic-configurations/configure.md#guardrails).
+For the full list of guardrails, see [Create Dynamic Datastream Configurations](/help/datastreams/configure-dynamic-datastream.md#guardrails).
 
 If you need more granularity, combine additional event types as [!DNL OR] conditions within an existing rule. For example, Rule 4 already combines `commerce.productViews` and `commerce.productListAdds`. You could add `commerce.productListOpens` or `commerce.saveForLaters` to the same rule without using an additional rule slot. Each rule supports up to 100 conditions.
 

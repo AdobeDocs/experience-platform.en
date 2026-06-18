@@ -71,4 +71,4 @@ Choose based on which event type makes up the majority of your traffic.
 
 - See [Dynamic datastream configuration use cases](/help/datastreams/dynamic-configurations/use-cases.md) for concrete rule configurations built on these patterns.
 - Review the [end-to-end example](/help/datastreams/dynamic-configurations/example.md) to see both patterns applied together in a production scenario.
-- Follow the UI instructions in [Create Dynamic Datastream Configurations](/help/datastreams/dynamic-configurations/configure.md) to build your rules.
+- Follow the UI instructions in [Create Dynamic Datastream Configurations](/help/datastreams/configure-dynamic-datastream.md) to build your rules.

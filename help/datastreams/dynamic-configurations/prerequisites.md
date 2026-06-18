@@ -67,4 +67,4 @@ After completing this checklist, you are ready to design your rules:
 
 - Read [Dynamic datastream configuration patterns](/help/datastreams/dynamic-configurations/configuration-patterns.md) to choose the right dataset strategy.
 - See [Dynamic datastream configuration use cases](/help/datastreams/dynamic-configurations/use-cases.md) for step-by-step rule configurations.
-- Follow the UI instructions in [Create Dynamic Datastream Configurations](/help/datastreams/dynamic-configurations/configure.md) to build and save your rules.
+- Follow the UI instructions in [Create Dynamic Datastream Configurations](/help/datastreams/configure-dynamic-datastream.md) to build and save your rules.

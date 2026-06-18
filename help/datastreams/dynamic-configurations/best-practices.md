@@ -5,7 +5,7 @@ description: "Learn best practices for designing, organizing, and operating [!DN
 
 # Best practices for [!DNL Dynamic Datastream Configurations]
 
-Use these practices when you design and operate [!DNL Dynamic Datastream Configuration] rules. They help you manage [system guardrails](/help/datastreams/dynamic-configurations/configure.md#guardrails), avoid common mistakes, and maintain configurations that are easy to understand and troubleshoot.
+Use these practices when you design and operate [!DNL Dynamic Datastream Configuration] rules. They help you manage [system guardrails](/help/datastreams/configure-dynamic-datastream.md#guardrails), avoid common mistakes, and maintain configurations that are easy to understand and troubleshoot.
 
 ## Rule design {#rule-design}
 
