@@ -44,14 +44,14 @@ Dynamic datastream configurations address this through sets of rules that you de
 
 If you are new to [!DNL Dynamic Datastream Configurations] or are planning a production implementation, read the full guide before configuring rules. The guide covers the event taxonomy, dataset strategies, use cases, best practices, and testing approach.
 
-* [Overview](/help/datastreams/dynamic-configurations/overview.md) — How rules are evaluated, the event taxonomy, and mutual exclusivity with client-side overrides
-* [Prerequisites and planning checklist](/help/datastreams/dynamic-configurations/prerequisites.md) — Datastream setup, schema and dataset preparation, and event inventory
-* [Configuration patterns](/help/datastreams/dynamic-configurations/configuration-patterns.md) — Actionable first versus Analytical first dataset strategies
-* [Use cases](/help/datastreams/dynamic-configurations/use-cases.md) — Six common routing scenarios with example rule tables
-* [End-to-end example](/help/datastreams/dynamic-configurations/example.md) — A complete e-commerce implementation
-* [Best practices](/help/datastreams/dynamic-configurations/best-practices.md) — Rule design, dataset strategy, and operational guidance
-* [Test and validate](/help/datastreams/dynamic-configurations/testing.md) — Assurance-based testing checklist
-* [FAQ](/help/datastreams/dynamic-configurations/faq.md) — Common questions about rule behavior and system interactions
+* [Overview](/help/datastreams/dynamic-configurations/overview.md): how rules are evaluated, the event taxonomy, and mutual exclusivity with client-side overrides
+* [Prerequisites and planning checklist](/help/datastreams/dynamic-configurations/prerequisites.md): datastream setup, schema and dataset preparation, and event inventory
+* [Configuration patterns](/help/datastreams/dynamic-configurations/configuration-patterns.md): Actionable first versus Analytical first dataset strategies
+* [Use cases](/help/datastreams/dynamic-configurations/use-cases.md): six common routing scenarios with example rule tables
+* [End-to-end example](/help/datastreams/dynamic-configurations/example.md): a complete e-commerce implementation
+* [Best practices](/help/datastreams/dynamic-configurations/best-practices.md): rule design, dataset strategy, and operational guidance
+* [Test and validate](/help/datastreams/dynamic-configurations/testing.md): Assurance-based testing checklist
+* [FAQ](/help/datastreams/dynamic-configurations/faq.md): common questions about rule behavior and system interactions
 
 ## Prerequisites {#prerequisites}
 
