@@ -1,7 +1,7 @@
 ---
 title: Kevel Connection
 description: Use the Kevel streaming destination to activate audiences directly into Kevel's UserDB and Segment Management APIs and support real-time targeting at decision time.
-last-substantial-update: 2026-02-25
+last-substantial-update: 2026-06-18
 exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
 ---
 # [!DNL Kevel] connection {#kevel}
@@ -160,7 +160,7 @@ You can optionally map XDM profile attributes to [!DNL Kevel]. The following tar
 To map a group attribute, add a new mapping row in the **Mapping** step and configure:
 
 1. **Source field**: Select the XDM attribute or computed attribute that contains the user's group number (for example, `_yourSchema.incrementalityGroup`).
-2. **Target field**: Type `kevelGroup` exactly as shown (case-sensitive).
+2. **Target field**: Select **kevelGroup** from the predefined target-field list. If you use a free-form custom attribute instead, it must be named exactly `kevelGroup` (case-sensitive).
 
 >[!IMPORTANT]
 >
@@ -200,9 +200,7 @@ Below is an example of an exported profile showing:
 ```json
 {
   "attributes": {
-    "kevelGroup": {
-      "value": 42
-    }
+    "kevelGroup": 42
   },
   "segmentMembership": {
     "ups": {
@@ -246,7 +244,7 @@ With the [!DNL Kevel] destination configuration, each mapped identity generates 
 
 This allows the same person to be recognized at ad decision time using any of their available identities, with each identity carrying an identical set of segment memberships.
 
-When a `kevelGroup` attribute is mapped, each UserDB update also includes the user's group assignment, enabling [!DNL Kevel]'s incrementality testing feature to determine test and control cohort membership at ad decision time.
+When a `kevelGroup` attribute is mapped and present on the profile, each UserDB update also includes the user's group assignment as the `group` query parameter, enabling [!DNL Kevel]'s incrementality testing feature to determine test and control cohort membership at ad decision time.
 
 ## Data usage and governance {#data-usage-governance}
 
