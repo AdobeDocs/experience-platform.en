@@ -168,7 +168,13 @@ Select **[!UICONTROL Throughput]** to view information on the amount of data tha
 
 >[!ENDTABS]
 
-### Use the dataflow metrics table
+### Use the dataflow metrics table {#dataflow-metrics-table}
+
+>[!CONTEXTUALHELP]
+>id="platform_dataflow_metrics_refresh_rates"
+>title="Metrics refresh intervals"
+>abstract="The aggregated metrics shown in the leaderboard card refresh every minute. In contrast, dataflow runs are generated in hourly windows and updated every 15 minutes, so some lag in the flow run-level metrics is expected."
+
 
 The dataflow table lists all streaming ingestion activities with their corresponding set of metrics for Real-Time Customer Profile. Each dataflow is listed with it's corresponding dataset. 
 
