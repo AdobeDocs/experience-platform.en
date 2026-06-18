@@ -114,7 +114,7 @@ To configure the rule order, you can drag and drop the rule windows in the order
 
 ## Rule eligibility criteria {#eligibility-criteria}
 
-Dynamic datastream configurations must meet specific eligibility criteria to ensure high performance, maintainability, and clarity. Below are the main requirements and best practices for defining rules.
+Dynamic datastream configurations must meet specific eligibility criteria to ensure high performance and reliable routing.
 
 ### Supported data types {#supported-data-types}
 
@@ -149,9 +149,7 @@ Rules can use the following operators, depending on the data type:
 
 ### Rule structure {#rule-structure}
 
-When creating rules for [!DNL Dynamic Datastream Configurations], it's important to understand the structural requirements that ensure optimal performance and system compatibility. The rule structure directly impacts how efficiently your data is processed and routed through the system.
-
-**Use flat expressions only**. You must define rules as flat logical expressions. Nested logical expressions (using containers or multiple levels of [!DNL AND]/[!DNL OR]) are not supported. If you need complex logic, break it into multiple flat rules.
+Rules must be flat logical expressions. Nested logical expressions (using containers or multiple levels of [!DNL AND]/[!DNL OR]) are not supported. If you need complex logic, break it into multiple flat rules.
 
 For example, consider the following complex rule.
 
@@ -163,13 +161,9 @@ You can break this rule into the following simpler rules:
 
 ![The second simplified rule, replacing the nested complex rule.](assets/configure-dynamic-datastream/simple-rule-2.png)
 
-**Avoid complex rules**. Simpler rules ensure faster evaluation and better maintainability.
+## Next steps
 
-### Best practices {#best-practices}
-
-Following best practices when creating [!DNL Dynamic Datastream Configuration] rules ensures optimal performance, system reliability, and maintainable configurations. These guidelines help you avoid common pitfalls and create efficient rules that work seamlessly with the platform's architecture.
-
-* **Keep rules simple and flat.** If you need to express complex logic, use multiple rules instead of nesting.
-* **Use only [supported data types](#supported-data-types) and [operators](#supported-operators).**
-* **Test your rules for performance.** Overly complex or unsupported rules may cause the system to reject them or could impact system performance.
+* Review [best practices for [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/best-practices.md) for rule design, dataset strategy, and operational guidance.
+* See [Dynamic datastream configuration use cases](/help/datastreams/dynamic-configurations/use-cases.md) for complete rule configurations.
+* Follow [Test and validate [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/testing.md) to verify your rules are routing correctly.
 
