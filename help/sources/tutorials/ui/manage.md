@@ -28,7 +28,7 @@ It is helpful to have an understanding of the following Experience Platform feat
 
 In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the Sources workspace. Next, **[!UICONTROL Dataflows]** from the top header. The *[!UICONTROL Dataflows]* page displays a list of existing dataflows in your organization. From this page, you can search for specific dataflows, apply filters to narrow results, organize dataflows with tags, inspect metadata in the table, and continue to related actions such as updating or deleting a dataflow.
 
-![](../../images/tutorials/manage/dataflows.png)
+![The dataflows page in the sources workspace.](../../images/tutorials/manage/dataflows.png)
 
 ## Search and filter dataflows
 
@@ -66,7 +66,7 @@ To filter your dataflows:
 
 Use filters when you want to find dataflows by source, identify dataflows with a particular status, or narrow the table to dataflows associated with a specific dataset or account.
 
-![](../../images/tutorials/manage/filter.png)
+![The filter panel on the Dataflows page with source platform and tag filters applied.](../../images/tutorials/manage/filter.png)
 
 ## Organize dataflows with tags
 
@@ -83,7 +83,7 @@ To organize a dataflow with tags:
 
 Use tags to create an organizational layer for browsing and filtering workflows. Additionally, you can use tags to manage larger numbers of dataflows more efficiently.
 
-![](../../images/tutorials/manage/tags.png)
+![The Add or remove tags dialog displaying tags applied to a dataflow.](../../images/tutorials/manage/tags.png)
 
 ## Resize table columns
 
@@ -93,7 +93,7 @@ To resize a column, hover over the edge of a column header and drag the column b
 
 Resize columns as needed to make it easier to review dataflow details before you take action.
 
-![](../../images/tutorials/manage/resize.png)
+![A resized column on the Dataflows table showing the full dataflow name and target dataset.](../../images/tutorials/manage/resize.png)
 
 ## Take action on a dataflow
 
@@ -103,7 +103,7 @@ Depending on the dataflow and workflow, available actions can include updating a
 
 Select the ellipses (`...`) beside a dataflow name for a list of inline actions that you can use to make modifications to your dataflow.
 
-![](../../images/tutorials/manage/actions.png)
+![The selection of inline actions you can choose from for a given dataflow.](../../images/tutorials/manage/actions.png)
 
 | Inline actions | Description |
 | --- | --- |
