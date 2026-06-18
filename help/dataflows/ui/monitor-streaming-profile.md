@@ -173,7 +173,7 @@ Select **[!UICONTROL Throughput]** to view information on the amount of data tha
 >[!CONTEXTUALHELP]
 >id="platform_dataflow_metrics_refresh_rates"
 >title="Metrics refresh intervals"
->abstract="The aggregated metrics shown in the leaderboard card refresh every minute. In contrast, dataflow runs are generated in hourly windows and updated every 15 minutes, so some lag in the flow run-level metrics is expected."
+>abstract="The aggregated metrics shown in the leaderboard card refresh every minute. In contrast, dataflow runs are generated in hourly windows and updated every 15 minutes, so some lag in the dataflow run-level metrics is expected."
 
 
 The dataflow table lists all streaming ingestion activities with their corresponding set of metrics for Real-Time Customer Profile. Each dataflow is listed with it's corresponding dataset. 
@@ -185,6 +185,10 @@ To monitor the data that is being ingested in a specific dataflow, select the fi
 ![The metrics page](../assets/ui/streaming-profiles/metrics.png)
 
 Next, use the dataflow metrics interface to select the specific flow run that you want to inspect. Select the filter icon ![filter](/help/images/icons/filter-add.png) beside a flow run iteration to view metrics particular to the selected flow run.
+
+>[!NOTE]
+>
+>The aggregated metrics shown in the leaderboard card refresh every minute. In contrast, dataflow runs are generated in hourly windows and updated every 15 minutes, so some lag in the dataflow run-level metrics is expected.
 
 ![The dataflow metrics interface.](../assets/ui/streaming-profiles/flows.png)
 
