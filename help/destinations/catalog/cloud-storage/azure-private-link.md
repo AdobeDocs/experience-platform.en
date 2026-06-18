@@ -47,6 +47,10 @@ The following limits apply to [!DNL Azure] Private Link for destinations.
 | Production sandbox endpoints | Maximum of 10 endpoints per organization, across all Azure destination types ([!DNL Azure Blob Storage], [!DNL Azure Data Lake Storage Gen2], and [!DNL Azure Event Hubs]) |
 | Development sandbox endpoints | Maximum of 1 endpoint per organization |
 
+>[!NOTE]
+>
+>A Private Endpoint is not limited to any individual [!DNL Experience Platform] sandbox. Once [!DNL Adobe] creates a Private Endpoint for your [!DNL Azure] resource, that resource is privately accessible across all sandboxes in your Experience Platform organization.
+
 ## Request Private Link setup {#request-setup}
 
 There is currently no UI that allows you to set up Private Link connections for destinations in a self-service mode. Contact your Adobe account manager to request Private Link configuration and provide the following information, depending on the destination that you are setting up the private link connection for.
