@@ -6,6 +6,7 @@ description: This document lists the table of contents for Adobe Experience Plat
 feature: Destinations
 role: Admin,User
 nudge: true
+debug: true
 ---
 
 # Destinations {#destinations}
