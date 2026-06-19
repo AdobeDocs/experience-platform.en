@@ -1,6 +1,6 @@
 ---
-title: Create dynamic datastream configurations
-description: Learn how to create dynamic datastream configurations, to route your data to various Experience Cloud services, based on rules.
+title: Create [!DNL Dynamic Datastream Configurations]
+description: "Learn how to add routing rules to a [!DNL Dynamic Datastream Configuration] and route events to specific datasets and Experience Cloud services based on event data."
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
 TQID: https://experienceleague.adobe.com/9wUD6vPq5i-OsBDqy57fa2j5QD2-wZiiOpAVgMnGIp4
 product_v2:
@@ -33,11 +33,25 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
-# Create dynamic datastream configurations
+
+# Create [!DNL Dynamic Datastream Configurations]
 
 By default, the [!DNL Adobe Experience Platform Edge Network] sends all events that reach a datastream to all [!DNL Experience Cloud] [services](/help/datastreams/configure.md#add-services) you have enabled for your datastreams. Depending on your use cases, this may not always be the ideal workflow.
 
 Dynamic datastream configurations address this through sets of rules that you define for each service enabled for your datastream, which control what [!DNL Experience Cloud] solution receives each type of data.
+
+## [!DNL Dynamic Datastream Configurations] guide {#guide}
+
+If you are new to [!DNL Dynamic Datastream Configurations] or are planning a production implementation, read the full guide before configuring rules. The guide covers the event taxonomy, dataset strategies, use cases, best practices, and testing approach.
+
+* [Overview](/help/datastreams/dynamic-configurations/overview.md): how rules are evaluated, the event taxonomy, and mutual exclusivity with client-side overrides
+* [Prerequisites and planning checklist](/help/datastreams/dynamic-configurations/prerequisites.md): datastream setup, schema and dataset preparation, and event inventory
+* [Configuration patterns](/help/datastreams/dynamic-configurations/configuration-patterns.md): Actionable first versus Analytical first dataset strategies
+* [Use cases](/help/datastreams/dynamic-configurations/use-cases.md): six common routing scenarios with example rule tables
+* [End-to-end example](/help/datastreams/dynamic-configurations/example.md): a complete e-commerce implementation
+* [Best practices](/help/datastreams/dynamic-configurations/best-practices.md): rule design, dataset strategy, and operational guidance
+* [Test and validate](/help/datastreams/dynamic-configurations/testing.md): Assurance-based testing checklist
+* [FAQ](/help/datastreams/dynamic-configurations/faq.md): common questions about rule behavior and system interactions
 
 ## Prerequisites {#prerequisites}
 
@@ -54,67 +68,67 @@ Dynamic datastream configurations have specific limits and performance constrain
 
 | Guardrail | Limit | Limit type |
 |---------|------------|------|
-| Maximum number of dynamic datastream configurations per datastream for Experience Platform services | 5 | Performance guardrail |
-| Maximum number of dynamic datastream configurations per datastream for Event Forwarding | 5 | Performance guardrail |
-| Maximum number of dynamic datastream configurations per datastream for [!DNL Adobe Analytics] | 5 | Performance guardrail |
-| Maximum number of dynamic datastream configurations per datastream for [!DNL Adobe Target] | 5 | Performance guardrail |
-| Maximum number of dynamic datastream configurations per datastream for [!DNL Adobe Audience Manager] | 5 | Performance guardrail |
+| Maximum number of [!DNL Dynamic Datastream Configurations] per datastream for Experience Platform services | 5 | Performance guardrail |
+| Maximum number of [!DNL Dynamic Datastream Configurations] per datastream for Event Forwarding | 5 | Performance guardrail |
+| Maximum number of [!DNL Dynamic Datastream Configurations] per datastream for [!DNL Adobe Analytics] | 5 | Performance guardrail |
+| Maximum number of [!DNL Dynamic Datastream Configurations] per datastream for [!DNL Adobe Target] | 5 | Performance guardrail |
+| Maximum number of [!DNL Dynamic Datastream Configurations] per datastream for [!DNL Adobe Audience Manager] | 5 | Performance guardrail |
 | Maximum number of conditions (predicates) that you can combine within a single rule | 100 | Performance guardrail |
-| Maximum time allowed for evaluating all dynamic datastream configurations per datastream before timing out | 25 ms | System-enforced guardrail |
+| Maximum time allowed for evaluating all [!DNL Dynamic Datastream Configurations] per datastream before timing out | 25 ms | System-enforced guardrail |
 
 ## Dynamic datastream configurations versus datastream configuration overrides {#dynamic-versus-overrides}
 
 Dynamic datastream configurations and [datastream configuration overrides](/help/datastreams/overrides.md) are mutually exclusive functionalities.
 
-You cannot use dynamic datastream configurations along with datastream configuration overrides. You must choose one or the other.
+You cannot use [!DNL Dynamic Datastream Configurations] along with datastream configuration overrides. You must choose one or the other.
 
-If you enable both, configuration overrides take precedence and the system ignores the dynamic datastream configuration rules.
+If you enable both, configuration overrides take precedence and the system ignores the [!DNL Dynamic Datastream Configuration] rules.
 
-## Create a dynamic datastream configuration {#create-dynamic-configuration}
+## Create a [!DNL Dynamic Datastream Configuration] {#create-dynamic-configuration}
 
-After you have [created a datastream](configure.md) and [added a service](configure.md#add-services) to it, follow the steps below to add a dynamic configuration to the service.
+After you have [created a datastream](/help/datastreams/configure.md) and [added a service](/help/datastreams/configure.md#add-services) to it, follow these steps to add a dynamic configuration to the service.
 
 1. Go to the **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]** page and select the datastream that you created.
     
-    ![Datastreams user interface showing the list of datastreams.](assets/configure-dynamic-datastream/select-datastream.png)
+    ![Datastreams user interface showing the list of datastreams.](assets/dynamic-datastreams/select-datastream.png)
 
 1. Select the **[!UICONTROL Edit]** option on the service for which you want to define a dynamic configuration.
     
-    ![Datastreams user interface showing the services added to a datastream.](assets/configure-dynamic-datastream/select-service.png)
+    ![Datastreams user interface showing the services added to a datastream.](assets/dynamic-datastreams/select-service.png)
 
 1. In the **[!UICONTROL Configure]** page, select **[!UICONTROL Save and Edit Dynamic Configuration]**.
 
-    ![Datastreams user interface showing the datastream configuration page.](assets/configure-dynamic-datastream/save-and-edit.png)
+    ![Datastreams user interface showing the datastream configuration page.](assets/dynamic-datastreams/save-and-edit.png)
 
 1. Select **[!UICONTROL Add Dynamic Configuration]**.
     
-    ![Datastreams user interface showing the dynamic configuration page before any rules are added.](assets/configure-dynamic-datastream/add-dynamic-config.png)
+    ![Datastreams user interface showing the dynamic configuration page before any rules are added.](assets/dynamic-datastreams/add-dynamic-config.png)
 
 1. From the **[!UICONTROL Resources]** panel, drag and drop the items that you want to build your rule with to the right side of the window. You can combine multiple resources to build complex rules.
 
     Use each resource's options, such as **[!UICONTROL equals]**, **[!UICONTROL does not equal]**, **[!UICONTROL exists]**, and more, to fine tune your rules.
 
-    ![Datastreams user interface showing the dynamic configuration rule builder with resources being dragged.](assets/configure-dynamic-datastream/drag-resources.png)
+    ![Datastreams user interface showing the dynamic configuration rule builder with resources being dragged.](assets/dynamic-datastreams/drag-resources.png)
 
 1. In the **[!UICONTROL Configuration]** section, enable or disable the services for each rule, depending on whether you want the data sent to each service. If you disable a service, the routing is disabled and *no data* is sent to the downstream service.
 
-    ![Datastreams user interface showing the dynamic configuration rule with service toggles.](assets/configure-dynamic-datastream/enable-service.png)
+    ![Datastreams user interface showing the dynamic configuration rule with service toggles.](assets/dynamic-datastreams/enable-service.png)
 
 1. When you are done configuring your rules, select **[!UICONTROL Save]**.
 
 ## Rule priority considerations {#rule-priority}
 
-You can define multiple rules for each dynamic datastream configuration. However, if your data matches the conditions of multiple rules, only the first matching rule in the list is taken into consideration, and all the other matching rules are ignored.
+You can define multiple rules for each [!DNL Dynamic Datastream Configuration]. However, if your data matches the conditions of multiple rules, only the first matching rule in the list is taken into consideration, and all the other matching rules are ignored.
 
 To achieve the desired data routing behavior, pay attention to the order in which you arrange the rules.
 
 To configure the rule order, you can drag and drop the rule windows in the order you want.
 
-![Reordering dynamic datastream rules using drag and drop.](assets/configure-dynamic-datastream/move-rules.gif)
+![Reordering dynamic datastream rules using drag and drop.](assets/dynamic-datastreams/move-rules.gif)
 
 ## Rule eligibility criteria {#eligibility-criteria}
 
-Dynamic datastream configurations must meet specific eligibility criteria to ensure high performance, maintainability, and clarity. Below are the main requirements and best practices for defining rules.
+Dynamic datastream configurations must meet specific eligibility criteria to ensure high performance and reliable routing.
 
 ### Supported data types {#supported-data-types}
 
@@ -149,27 +163,20 @@ Rules can use the following operators, depending on the data type:
 
 ### Rule structure {#rule-structure}
 
-When creating rules for dynamic datastream configurations, it's important to understand the structural requirements that ensure optimal performance and system compatibility. The rule structure directly impacts how efficiently your data is processed and routed through the system.
-
-**Use flat expressions only**. You must define rules as flat logical expressions. Nested logical expressions (using containers or multiple levels of [!DNL AND]/[!DNL OR]) are not supported. If you need complex logic, break it into multiple flat rules.
+Rules must be flat logical expressions. Nested logical expressions (using containers or multiple levels of [!DNL AND]/[!DNL OR]) are not supported. If you need complex logic, break it into multiple flat rules.
 
 For example, consider the following complex rule.
 
-![Example of a nested complex rule with multiple AND/OR conditions.](assets/configure-dynamic-datastream/complex-rule.png)
+![Example of a nested complex rule with multiple AND/OR conditions.](assets/dynamic-datastreams/complex-rule.png)
 
 You can break this rule into the following simpler rules:
 
-![The first simplified rule, replacing the nested complex rule.](assets/configure-dynamic-datastream/simple-rule-1.png)
+![The first simplified rule, replacing the nested complex rule.](assets/dynamic-datastreams/simple-rule-1.png)
 
-![The second simplified rule, replacing the nested complex rule.](assets/configure-dynamic-datastream/simple-rule-2.png)
+![The second simplified rule, replacing the nested complex rule.](assets/dynamic-datastreams/simple-rule-2.png)
 
-**Avoid complex rules**. Simpler rules ensure faster evaluation and better maintainability.
+## Next steps
 
-### Best practices {#best-practices}
-
-Following best practices when creating dynamic datastream configuration rules ensures optimal performance, system reliability, and maintainable configurations. These guidelines help you avoid common pitfalls and create efficient rules that work seamlessly with the platform's architecture.
-
-* **Keep rules simple and flat.** If you need to express complex logic, use multiple rules instead of nesting.
-* **Use only [supported data types](#supported-data-types) and [operators](#supported-operators).**
-* **Test your rules for performance.** Overly complex or unsupported rules may cause the system to reject them or could impact system performance.
-
+* Review [best practices for [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/best-practices.md) for rule design, dataset strategy, and operational guidance.
+* See [Dynamic datastream configuration use cases](/help/datastreams/dynamic-configurations/use-cases.md) for complete rule configurations.
+* Follow [Test and validate [!DNL Dynamic Datastream Configurations]](/help/datastreams/dynamic-configurations/testing.md) to verify your rules are routing correctly.
