@@ -360,6 +360,7 @@ role: Developer
     - [Marketing automation connection dataflow](tutorials/ui/dataflow/marketing-automation.md)
     - [Payment connection dataflow](tutorials/ui/dataflow/payments.md)
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
+  - [Manage dataflows in the UI](tutorials/ui/manage.md)
   - [Create a sources dataflow using templates in the UI](tutorials/ui/templates.md)
   - {hide-from-toc} [Filter sources objects](tutorials/ui/filter.md)
   - [Ingest encrypted data](tutorials/ui/encryped-ingestion.md)
