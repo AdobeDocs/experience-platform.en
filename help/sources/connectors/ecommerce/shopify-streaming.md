@@ -1,8 +1,7 @@
 ---
 title: Shopify Streaming Source
 description: Learn how to create a source connection and dataflow to ingest streaming data from your Shopify instance to Adobe Experience Platform
-badge: Beta
-last-substantial-update: 2023-04-26T00:00:00.000Z
+last-substantial-update: 2026-06-19T00:00:00.000Z
 exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
 TQID: https://experienceleague.adobe.com/WHz5WqfeMaaBKIfSRVo1PP347-YmLfo9rQXzr7qFEYk
 product_v2:
@@ -16,10 +15,6 @@ topic_v2:
     internal-label: Metadata
 ---
 # [!DNL Shopify Streaming]
-
->[!NOTE]
->
->The [!DNL Shopify Streaming] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Adobe Experience Platform provides support for ingesting data from streaming applications. Support for streaming providers include [!DNL Shopify].
 

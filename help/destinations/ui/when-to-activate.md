@@ -2,6 +2,7 @@
 title: When to activate
 description: Learn about the When to activate feature for streaming destinations and how to use it to control which profile changes trigger exports to your destinations.
 badgeBeta: label="Beta" type="Informative"
+nudge: true
 ---
 
 # When to activate
