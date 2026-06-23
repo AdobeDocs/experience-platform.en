@@ -57,6 +57,10 @@ All three trigger types are enabled on every new and existing dataflow. When you
 
 The best trigger configuration depends on your use case. Use the following guidance as a starting point.
 
+>[!WARNING]
+>
+>Changing activation trigger settings on existing production dataflows can disrupt live campaigns. Adobe recommends testing any changes in a development sandbox before applying them to production.
+
 ![Decision tree showing which activation trigger to disable based on the problem you are solving: disable attribute changes to reduce overall export volume, or disable identity changes to stop unwanted email service provider triggers from new device logins.](../assets/ui/when-to-activate/trigger-decision-tree-figma.png)
 
 **Start with attribute changes for the largest volume reduction.** Disabling the attribute changes trigger produces the most significant reduction in export volume for most organizations and addresses the most common source of unnecessary exports. For the underlying behavior, see what determines a data export for [enterprise destinations](/help/destinations/how-destinations-work/profile-export-behavior.md#enterprise-behavior) and for [streaming API-based destinations](/help/destinations/how-destinations-work/profile-export-behavior.md#streaming-behavior). The trigger fires whenever any mapped attribute is updated, including from daily batch ingestion that restates values that have not meaningfully changed.
