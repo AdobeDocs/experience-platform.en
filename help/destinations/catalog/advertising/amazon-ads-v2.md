@@ -171,7 +171,6 @@ The [!DNL Amazon Ads] destination requires you to configure the following mappin
 |Source field | Target field | Description |
 |---------|----------|---------|
 | `IdentityMap: Email_LC_SHA256` or `IdentityMap: Email`| `Identity: email` | When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option to have [!DNL Experience Platform] automatically hash the data on activation.|
-| `xdm: homeAddress.countryCode` | `Identity: countryCode` | Country of the user (2-character ISO code) |
 
 ![Identity field mapping configuration for the Amazon Ads destination](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-mapping.png)
 
