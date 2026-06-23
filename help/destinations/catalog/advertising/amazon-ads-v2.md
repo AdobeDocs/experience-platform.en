@@ -16,7 +16,7 @@ exl-id: 8656e114-af22-4696-b109-ffdf99b5316e
 >
 >After the end of April 2026, [!DNL Amazon Ads] will be renamed to [!DNL Amazon Ads], and the legacy card will be hidden, leaving a single destination card in the catalog. Existing legacy dataflows will continue to work and you can manage them in the **[!UICONTROL Browse]** tab beyond that date.
 
-The [!DNL Amazon Ads] integration with [!DNL Adobe Experience Platform] provides a direct connection for ingesting audience members into [!DNL Amazon Ads]. The uploaded audiences are available in the [!DNL Ads Data Manager (ADM)] console within [!DNL Amazon Ads]. You can use the [!DNL Ads Data Manager] console to share data across different [!DNL Amazon Ads] products.
+The [!DNL Amazon Ads] integration with [!DNL Adobe Experience Platform] provides a direct connection for ingesting audience members into [!DNL Amazon Ads]. The uploaded audiences are available in the [!DNL Ads Data Manager (ADM)] console within [!DNL Amazon Ads]. You can use the [!DNL Ads Data Manager] console to share data across different [!DNL Amazon Ads] products, including the Amazon DSP (ADSP) and Amazon Marketing Cloud (AMC).
 
 To learn more about [!DNL Ads Data Manager], see:
 
@@ -39,8 +39,9 @@ An athletic apparel brand wants to reach its existing customers with relevant ad
 ### Analytics and measurement {#analytics-and-measurement}
 
 An advertiser wants to understand the aggregate impact of their advertising campaigns across Amazon inventory. Using the [!DNL Amazon Ads] destination, the advertiser can pass CDP segments from [!DNL Adobe Experience Platform] to Amazon Marketing Cloud (AMC), join the CDP inputs with [!DNL Amazon Ads] signals, and conduct custom analytics on topics such as media impact, audience segments, and customer journeys in a privacy-compliant format. For example, the advertiser can upload a list of existing customers to understand the aggregate advertising campaign performance, or aggregated statistics of on-Amazon conversion events, such as viewing a product detail page, adding a product to a shopping cart, or purchasing a product.
-
 Advertisers can also use Amazon Marketing Cloud SQL to perform overlap analysis, suppressions, additions, or optimizations to audiences on a recurring basis before creating an activation-ready audience in Amazon DSP for targeting.
+
+If sharing to AMC is not available in your Ads Data Manager CX, please contact your account executive or partner manager to associate your Amazon Marketing Cloud instance to your account.
 
 For details, see:
 * [Amazon Marketing Cloud](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
@@ -146,6 +147,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Manager Account]**: The target manager account ID from the dropdown.
 * **[!UICONTROL All audience members sent to Amazon are consented for use for Advertising]**: Specify consent for data usage (`GRANTED` or `DENIED`).
 * **[!UICONTROL Ads data manager Terms & Conditions]**: Accept the [!DNL Amazon Ads] Data Manager terms and conditions. Read the [accept terms](#accept-terms) section for details.
+* **[!UICONTROL Country Code]**: Select the country code from the dropdown.
 
 ### Enable alerts {#enable-alerts}
 
