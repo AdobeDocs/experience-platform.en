@@ -63,6 +63,7 @@ topic_v2:
 
 New features and updates to existing features in Adobe Experience Platform:
 
+- [Agent Orchestrator](#agent-orchestrator)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
@@ -70,6 +71,20 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Run and Operate](#run-and-operate)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
+
+## Agent Orchestrator {#agent-orchestrator}
+
+Use Agent Orchestrator to automate workflows and engage customers across multiple channels with AI-powered agents.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Validate your data in AI Assistant | Identify data quality issues faster and gain greater confidence in your Adobe Experience Platform datasets with data validation in AI Assistant. Powered by Agent Orchestrator, the capability analyzes datasets, identifies data quality issues, and provides actionable insights to help diagnose and resolve problems. For more information, read the guide on [validating your data in AI Assistant](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/data-validation). |
+
+{style="table-layout:auto"}
+
+For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 ## Destinations {#destinations}
 
