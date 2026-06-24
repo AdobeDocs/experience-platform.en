@@ -28,7 +28,7 @@ role_v2:
 | Property | Data type | Description |
 | --- | --- | --- |
 | `person.name` | [Person name](../../data-types/person-name.md)  | An object whose sub-fields describe various elements of a person's name. |
-| `person.birthDate` | Date | The full date a person was born on, in the form of an ISO 8601 timestamp. |
+| `person.birthDate` | Date | The full date a person was born on, in the form of an [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) date (`yyyy-MM-dd`). |
 | `person.birthDayAndMonth` | String | The day and month a person was born, in the format MM-DD. This field should be used when the day and month of a person's birth is known, but not the year. |
 | `person.birthYear` | Integer  | The year a person was born, including the century (such as 1989). This field should be used when only the person's age is known, not the full birth date. |
 | `person.gender` | String | The gender identity of the person. |
