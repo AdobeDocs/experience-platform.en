@@ -32,7 +32,7 @@ During this private beta, the following constraints apply when using customer ti
 - You can only use customer timestamp ordering on **non-production** sandboxes.
 - You can only apply customer timestamp ordering to **5** datasets per sandbox.
 - You **cannot** use streaming upserts to send partial row updates in a dataset that has customer timestamp ordering enabled.
-- The `extSourceSystemAudit.lastUpdatedDate` field **must** be in the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format. When using the ISO 8601 format, it **must** be as a full datetime in the format `yyyy-MM-ddTHH:mm:ss.sssZ` (for example, `2028-11-13T15:06:49.001Z`). 
+- The `extSourceSystemAudit.lastUpdatedDate` field **must** be an [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) UTC timestamp with millisecond precision (`yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`).
 - All rows of data ingested **must** contain the `extSourceSystemAudit.lastUpdatedDate` field as a top level field group. This means that this field **must** not be nested within the XDM schema. If this field is missing or is in an incorrect format, the malformed record will **not** be ingested, and an corresponding error message will be sent.
 - Any dataset enabled for customer timestamp ordering **must** be a new dataset without any previously ingested data.
 - For any given profile fragment, only rows that contain a more recent `extSourceSystemAudit.lastUpdatedDate` will be ingested. Rows that contain an `extSourceSystemAudit.lastUpdatedDate` that is either older or the same age will be discarded.

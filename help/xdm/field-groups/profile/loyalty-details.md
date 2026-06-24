@@ -47,7 +47,7 @@ The `loyalty` object contains the following properties.
 | `cardsDetails` | Array of objects | Lists loyalty cards associated with the member. See the [cardsDetails subsection](#cardsDetails) for more information. |
 | `challenges` | Array of objects | Lists loyalty challenges associated with the member. See the [challenges subsection](#challenges) for more information. |
 | `expiredPoints` | Double | Total number of points that have expired and are no longer available for use. |
-| `joinDate` | DateTime | An ISO 8601 datetime indicating when the person joined the loyalty program. |
+| `joinDate` | DateTime | An [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) datetime (`yyyy-MM-dd'T'HH:mm:ssXXX`) indicating when the person joined the loyalty program. |
 | `lifetimePoints` | Double | Total points earned throughout the customer's loyalty program membership. |
 | `lifetimePurchases` | Double | Total monetary value of all purchases made throughout the customer's loyalty program membership. |
 | `loyaltyID` | Array of strings | Loyalty program identifiers associated with the member. |

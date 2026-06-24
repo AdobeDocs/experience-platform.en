@@ -33,7 +33,7 @@ topic_v2:
 | --- | --- | --- |
 | `reason` | String | When a customer opts out of a marketing use case, this string field represents the reason why the customer opted out. |
 | `subscriptions` | Map | A map of customer marketing preferences for specific subscriptions. See the section on [subscriptions](#subscriptions) for more information. |
-| `time` | DateTime | An ISO 8601 timestamp of when the marketing preference changed, if applicable. |
+| `time` | DateTime | An [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) timestamp (`yyyy-MM-dd'T'HH:mm:ssXXX`) of when the marketing preference changed, if applicable. |
 | `val` | String | The customer-provided preference choice for this marketing use case. See the [next section](#val) for accepted values and definitions. |
 
 {style="table-layout:auto"}
@@ -104,7 +104,7 @@ The following JSON represents an example marketing field for a phone call market
 | `val` | The [consent value](#val) for the subscription. |
 | `type` | The subscription type. This can be any descriptive string, provided it is 15 characters or less. |
 | `topics` | An array of strings that represent the areas of interest a customer as subscribed to, which can be used to send them relevant content. |
-| `subscribers` | An optional map-type field that represents a set of identifiers (such as email addresses or phone numbers) that have subscribed to a particular subscription. Each key in this object represents the identifier in question, and contains two sub-properties: <ul><li>`time`: An ISO 8601 timestamp of when the identity subscribed, if applicable.</li><li>`source`: The source that the subscriber originated from. This can be any descriptive string, provided it is 15 characters or less.</li></ul> |
+| `subscribers` | An optional map-type field that represents a set of identifiers (such as email addresses or phone numbers) that have subscribed to a particular subscription. Each key in this object represents the identifier in question, and contains two sub-properties: <ul><li>`time`: An ISO 8601 timestamp (`yyyy-MM-dd'T'HH:mm:ssXXX`) of when the identity subscribed, if applicable.</li><li>`source`: The source that the subscriber originated from. This can be any descriptive string, provided it is 15 characters or less.</li></ul> |
 
 {style="table-layout:auto"}
 
