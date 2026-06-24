@@ -37,6 +37,11 @@ topic_v2:
 ---
 # Adobe Experience Platform Debugger release notes
 
+## Version 1.7.1 - June 24, 2026
+
+* Fixed an issue where overriding the datastream ID could fail to take effect.
+* Fixed an issue where Analytics debugging could corrupt context data in Analytics requests.
+
 ## Version 1.7.0 - May 27, 2026
 
 * Improved search capabilities of the [!UICONTROL Logs] tool, including:
