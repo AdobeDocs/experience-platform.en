@@ -80,7 +80,7 @@ The "*Adobe Analytics*" tag extension for Adobe Experience Platform must be inst
                         
 1. Enable [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html). In AEM, select **[!UICONTROL Tools > Assets]**, then open the **[!UICONTROL Insights Configuration]** panel. 
                         
-1. Disable UUID Tracking. 
+1. Enable UUID tracking by unselecting the **[!UICONTROL Disable UUID Tracking]** configuration setting.
 
     >[!IMPORTANT] 
     >
