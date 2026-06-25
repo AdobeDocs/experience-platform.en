@@ -69,6 +69,9 @@ Although [!DNL Real-Time Customer Profile] processes ingested data and uses Adob
 
 The Profile store uses a Microsoft Azure Cosmos DB infrastructure and the Experience Platform Data Lake uses Microsoft Azure Data Lake storage.
 
+<!-- Cross-link: Direct readers to architecture guidance that explains when long-term behavioral data should remain outside Profile and be promoted as activation-ready intelligence. -->
+For guidance on separating long-term analytical history from activation-ready Profile data, see [Long-term personalization with Data Distiller Accelerators](../query-service/data-distiller/long-term-personalization.md).
+
 ### Profile guardrails
 
 Experience Platform provides a series of guardrails to help you avoid creating [Experience Data Model (XDM) schemas](../xdm/home.md) which Real-Time Customer Profile cannot support. This includes soft limits that will result in performance degradation, as well as hard limits that will result in errors and system breakages. For more information, including a list of guidelines and example use cases, please read the [Profile guardrails](guardrails.md) documentation.
