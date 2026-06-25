@@ -158,7 +158,7 @@ Next, you must provide an **[!UICONTROL Identity namespace]** from the list of p
 
 #### xdm:timestamp {#timestamp}
 
-This field represents the datetime at which the event occurred. This value must be provided as a string, as per the ISO 8601 standard.
+This field represents the datetime at which the event occurred. This value must be provided as a string, as per the [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) standard.
 
 #### xdm:channel {#channel}
 

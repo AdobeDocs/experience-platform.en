@@ -138,7 +138,7 @@ The following table outlines how each XDM type is represented in JSON Schema, al
   </tbody>
 </table>
 
-**All date-formatted strings must conform to the ISO 8601 standard ([RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)).*
+**All date-formatted strings must conform to the ISO 8601 standard ([RFC 3339, section 5.6](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6)).*
 
 ## Mapping XDM types to other formats
 

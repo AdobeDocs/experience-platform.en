@@ -35,7 +35,7 @@ topic_v2:
 
 The **[!UICONTROL Send push subscription]** action registers push notification subscriptions with Adobe Experience Platform. It handles the retrieval of push subscription details from the browser and sends them to your configured datastream. It is available in Web SDK extension versions 2.32.0 or later.
 
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Log in to [CX Enterprise](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Select the desired tag property.
 1. Navigate to **[!UICONTROL Rules]**, then select the desired rule.

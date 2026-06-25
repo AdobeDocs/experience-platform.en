@@ -1,13 +1,8 @@
 ---
 title: Create a source connection and dataflow to stream LAVA data using the UI
 description: Learn how to stream data from LAVA to Adobe Experience Platform using the UI.
-badge: beta
 ---
 # Create a source connection and dataflow to stream [!DNL LAVA] data using the UI
-
->[!AVAILABILITY]
->
->The [!DNL LAVA] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
 Follow this step-by-step guide to help you set up your own [!DNL LAVA] source connector in the Experience Platform user interface.
 
@@ -92,6 +87,41 @@ When using [!DNL LAVA]'s provided schema, use the following recommended mapping:
 
 {style="table-layout:auto"}
 
+>[!TAB Combined Events]
+
+| [!DNL LAVA] Source Connector Field | [!DNL LAVA] Event Schema Field |
+| --- | --- |
+| calculated field `to_map("LavaId",to_array(false,to_object("id",lavaId,"primary",true)))` | `identityMap` |
+| `type` | `eventType` |
+| `timestamp` | `timestamp` |
+| `eventId` | `_tenant.ticketScan.eventId` |
+| `eventName` | `_tenant.ticketScan.eventName` |
+| `eventLabel` | `_tenant.ticketScan.eventLabel` |
+| `venue` | `_tenant.ticketScan.venue` |
+| `venueLabel` | `_tenant.ticketScan.venueLabel` |
+| `section` | `_tenant.ticketScan.section` |
+| `sectionLabel` | `_tenant.ticketScan.sectionLabel` |
+| `row` | `_tenant.ticketScan.row` |
+| `seat` | `_tenant.ticketScan.seat` |
+| `gate` | `_tenant.ticketScan.gate` |
+| `gateLabel` | `_tenant.ticketScan.gateLabel` |
+| `transactionId` | `_tenant.transaction.transactionId` |
+| `referenceId` | `_tenant.transaction.referenceId` |
+| `subtotal` | `_tenant.transaction.subtotal` |
+| `total` | `_tenant.transaction.total` |
+| `location` | `_tenant.transaction.location` |
+| `items[]` | `_tenant.transaction.items[]` |
+| `redeemedAmount` | `_tenant.transaction.redeemedAmount` |
+| `rewardsApplied[]` | `_tenant.transaction.rewardsApplied[]` |
+| `amount` | `_tenant.ledger.amount` |
+| `expiresAt` | `_tenant.ledger.expiresAt` |
+| `rewardId` | `_tenant.ledger.rewardId` |
+| `rewardName` | `_tenant.ledger.rewardName` |
+| `rewardSlug` | `_tenant.ledger.rewardSlug` |
+| `rewardType` | `_tenant.ledger.rewardType` |
+
+{style="table-layout:auto"}
+
 >[!TAB Ticket Scan Events]
 
 | [!DNL LAVA] Source Connector Field | [!DNL LAVA] Event Schema Field |
@@ -108,6 +138,40 @@ When using [!DNL LAVA]'s provided schema, use the following recommended mapping:
 | `seat` | `_tenant.ticketScan.seat` |
 | `gate` | `_tenant.ticketScan.gate` |
 | `gateLabel` | `_tenant.ticketScan.gateLabel` |
+| `type` | `eventType` |
+| `timestamp` | `timestamp` |
+
+{style="table-layout:auto"}
+
+>[!TAB Transaction Events]
+
+| [!DNL LAVA] Source Connector Field | [!DNL LAVA] Event Schema Field |
+| --- | --- |
+| calculated field `to_map("LavaId",to_array(false,to_object("id",lavaId,"primary",true)))` | `identityMap` |
+| `transactionId` | `_tenant.transaction.transactionId` |
+| `referenceId` | `_tenant.transaction.referenceId` |
+| `subtotal` | `_tenant.transaction.subtotal` |
+| `total` | `_tenant.transaction.total` |
+| `location` | `_tenant.transaction.location` |
+| `items[]` | `_tenant.transaction.items[]` |
+| `redeemedAmount` | `_tenant.transaction.redeemedAmount` |
+| `rewardsApplied[]` | `_tenant.transaction.rewardsApplied[]` |
+| `type` | `eventType` |
+| `timestamp` | `timestamp` |
+
+{style="table-layout:auto"}
+
+>[!TAB Ledger Events]
+
+| [!DNL LAVA] Source Connector Field | [!DNL LAVA] Event Schema Field |
+| --- | --- |
+| calculated field `to_map("LavaId",to_array(false,to_object("id",lavaId,"primary",true)))` | `identityMap` |
+| `amount` | `_tenant.ledger.amount` |
+| `expiresAt` | `_tenant.ledger.expiresAt` |
+| `rewardId` | `_tenant.ledger.rewardId` |
+| `rewardName` | `_tenant.ledger.rewardName` |
+| `rewardSlug` | `_tenant.ledger.rewardSlug` |
+| `rewardType` | `_tenant.ledger.rewardType` |
 | `type` | `eventType` |
 | `timestamp` | `timestamp` |
 

@@ -1,7 +1,6 @@
 ---
 title: Create A Shopify Streaming Connection And Dataflow In The UI
 description: Learn how to create a Shopify Streaming source connection and dataflow using the Experience Platform user interface
-badge: Beta
 exl-id: d53f4ab5-8bdc-4647-83d5-ee898abda0f2
 TQID: https://experienceleague.adobe.com/Qll7Tj5-LLV63DoKEHTCZNuJM0e-UP8ISXJghEZEBMU
 product_v2:

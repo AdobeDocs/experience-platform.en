@@ -95,6 +95,10 @@ See the table below for information about the destination export type and freque
 
 To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the [!DNL Azure Event Hubs] destination. See [IP address allowlist for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
 
+## Connect using Azure Private Link {#private-link}
+
+If your organization has strict network security requirements, you can configure this destination to route data exports over the [!DNL Microsoft Azure] private backbone instead of the public internet. See [Azure Private Link for destinations](./azure-private-link.md) for prerequisites, guardrails, and setup steps.
+
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]

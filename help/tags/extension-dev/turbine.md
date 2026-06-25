@@ -54,7 +54,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | Property | Description |
 | --- | --- |
 | `turbineVersion` | The [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) version used inside the current library. |
-|`turbineBuildDate` | The ISO 8601 date when the version of [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) used inside the container was built. |
+|`turbineBuildDate` | The [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) date when the version of [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) used inside the container was built. |
 |`buildDate` | The ISO 8601 date when the current library was built. |
 
 {style="table-layout:auto"}

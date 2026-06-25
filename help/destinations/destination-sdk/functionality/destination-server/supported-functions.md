@@ -68,7 +68,7 @@ To exemplify how [!DNL Pebble] functions are used in Destination SDK, see below 
 
 ### Use case {#date-use-case}
 
-You want to change the `lastQualificationTime` timestamp from the default [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) value that Experience Platform exports to another value preferred by your destination.
+You want to change the `lastQualificationTime` timestamp from the default [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) value that Experience Platform exports to another value preferred by your destination.
 
 ### Example {#date-example}
 
