@@ -25,10 +25,6 @@ topic_v2:
 ---
 # Profile system jobs endpoint (Delete requests)
 
->[!IMPORTANT]
->
->The following endpoints can differ between implementations of Adobe Experience Platform running on Microsoft Azure and Amazon Web Services (AWS). Experience Platform running on AWS is currently available to a limited number of customers. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
-
 Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into [!DNL Experience Platform] is stored in the [!DNL Data Lake], and if the datasets have been enabled for Profile, that data is stored in the [!DNL Real-Time Customer Profile] data store as well. Occasionally it may be necessary to delete profile data associated with a dataset from the Profile store in order to remove data that is no longer needed or was added in error. This requires using the [!DNL Real-Time Customer Profile] API to create a [!DNL Profile] system job, or "delete request".
 
 >[!NOTE]
@@ -47,11 +43,7 @@ You may also use optional query parameters to filter the list of delete requests
 
 **API format**
 
->[!AVAILABILITY]
->
->The following query parameters are **only** available when using Experience Platform on Microsoft Azure.
->
->When using this endpoint on AWS, the first 100 system jobs are returned in descending order, based on their creation date.
+When using this endpoint, the first 100 system jobs are returned in descending order, based on their creation date.
 
 ```http
 GET /system/jobs
@@ -60,38 +52,16 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 | Parameter | Description | Example |
 | --------- | ----------- | ------- |
-| `start` | Offset the page of results returned, as per the create time of the request. | `start=4`|
-| `limit` | Limit the number of results returned. | `limit=10`|
-| `page` | Return a specific page of results, as per the create time of the request. | `page=2`|
-| `sort` | Sort results by a specific field in ascending (`asc`) or descending (`desc`) order. The sort parameter does not work when returning multiple pages of results. | `sort=batchId:asc`|
+| `start` | Determines the starting page of the returned result set. The page number is 0-based, which means that `start=0` will return results starting from 0. | `start=4` |
+| `limit` | The number of results returned per page. | `limit=10` |
+
+For example, if you had the query parameter of `?start=1&limit=10`, the response will return records 10-19.
 
 **Request**
 
 >[!IMPORTANT]
 >
->The following request differs between the Azure and AWS instances.
-
->[!BEGINTABS]
-
->[!TAB Microsoft Azure]
-
-+++ A sample request to view your system jobs.
-
-```shell
-curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-```
-
-+++
-
->[!TAB Amazon Web Services (AWS)]
-
->[!IMPORTANT]
->
->You **must** use the `x-sandbox-id` request header instead of the `x-sandbox-name` request header when using this endpoint with AWS. 
+>You **must** use the `x-sandbox-id` request header instead of the `x-sandbox-name` request header when using this endpoint.
 
 +++ A sample request to view your system jobs.
 
@@ -105,64 +75,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
 
 +++
 
->[!ENDTABS]
-
 **Response**
-
->[!IMPORTANT]
->
->The following response differs between the Azure and AWS instances.
-
->[!BEGINTABS]
-
->[!TAB Microsoft Azure]
-
-A successful response includes a "children" array with an object for each delete request containing the details of that request.
-
-+++ A successful response for viewing the delete requests
-
-```json
-{
-  "_page": {
-    "count": 100,
-    "next": "K1JJRDpFaWc5QUwyZFgtMEpBQUFBQUFBQUFBPT0jUlQ6MSNUUkM6MiNGUEM6QWdFQUFBQVFBQWZBQUg0Ly9yL25PcmpmZndEZUR3QT0="
-  },
-  "children": [
-    {
-      "id": "9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4",
-      "imsOrgId": "{ORG_ID}",
-      "batchId": "8d075b5a178e48389126b9289dcfd0ac",
-      "jobType": "DELETE",
-      "status": "COMPLETED",
-      "metrics": "{\"recordsProcessed\":5,\"timeTakenInSec\":1}",
-      "createEpoch": 1559026134,
-      "updateEpoch": 1559026137
-    },
-    {
-      "id": "3f225e7e-ac8c-4904-b1d5-0ce79e03c2ec",
-      "imsOrgId": "{ORG_ID}",
-      "dataSetId": "5c802d3cd83fc114b741c4b5",
-      "jobType": "DELETE",
-      "status": "PROCESSING",
-      "metrics": "{\"recordsProcessed\":0,\"timeTakenInSec\":15}",
-      "createEpoch": 1559025404,
-      "updateEpoch": 1559025406
-    }
-  ]
-}
-```
-
-| Property | Description |
-| -------- | ----------- |
-| `_page.count` | The total number of requests. This response has been truncated for space. |
-| `_page.next` | If an additional page of results exists, view the next page of results by replacing the ID value in a [lookup request](#view-a-specific-delete-request) with the `"next"` value provided. |
-| `jobType` | The type of job being created. In this case, it will always return `"DELETE"`. |
-| `status` | The status of the delete request. Possible values include `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, and `"ERROR"`. |
-| `metrics` | An object that includes the number of records that have been processed (`"recordsProcessed"`) and the time in seconds that the request has been processing, or how long the request took to complete (`"timeTakenInSec"`). |
-
-+++
-
->[!TAB Amazon Web Services (AWS)]
 
 A successful response returns an array containing an object for each of the system requests.
 
@@ -170,7 +83,13 @@ A successful response returns an array containing an object for each of the syst
 
 ```json
 {
-    [
+    "_page": {
+        "pageSize": 2,
+        "start": "0",
+        "totalCount": 2,
+        "next": 1
+    },
+    "children:" [
         {
             "requestId": "80a9405a-21ca-4278-aedf-99367f90c055",
             "requestType": "DELETE_EE_BATCH",
@@ -214,8 +133,6 @@ A successful response returns an array containing an object for each of the syst
 | `properties` | An object that contains batch and/or dataset IDs of the system job. |
 
 +++
-
->[!ENDTABS]
 
 ## Create a delete request {#create-a-delete-request}
 
@@ -660,38 +577,6 @@ A successful response returns the details of the specified system request.
 >[!ENDTABS]
 
 Once the delete request status is `"COMPLETED"` you can confirm that the data has been deleted by attempting to access the deleted data using the Data Access API. For instructions on how to use the Data Access API to access datasets and batches, please review the [Data Access documentation](../../data-access/home.md).
-
-## Remove a delete request
-
->[!AVAILABILITY]
->
->This endpoint is **only** supported in the Azure instance of Adobe Experience Platform, and is **not** supported on the AWS instance.
-
-[!DNL Experience Platform] allows you to delete a previous request, which may be useful for a number of reasons including if the delete job did not complete or became stuck in the processing stage. In order to remove a delete request, you can perform a DELETE request to the `/system/jobs` endpoint and include the ID of the delete request that you wish to remove to the request path.
-
-**API format**
-
-```http
-DELETE /system/jobs/{DELETE_REQUEST_ID}
-```
-
-| Parameter | Description |
-| --------- | ----------- |
-|{DELETE_REQUEST_ID} | The ID of the delete request that you wish to remove. |
-
-**Request**
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful delete request returns HTTP Status 200 (OK) and an empty response body. You can confirm the request was deleted by performing a GET request to view the delete request by its ID. This should return an HTTP Status 404 (Not Found), indicating the delete request was removed.
 
 ## Next steps
 
