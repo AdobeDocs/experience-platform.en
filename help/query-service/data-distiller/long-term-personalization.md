@@ -34,9 +34,22 @@ topic_v2:
 
 ## Overview {#overview}
 
+Long-term personalization enables you to deliver real-time experiences using insights derived from customer behavior over extended periods, such as months or years. Rather than storing large volumes of historical event data in Real-Time Customer Profile, you can retain detailed historical data in the analytical layer and promote only the derived signals required for activation. This approach helps you support long-term personalization while managing Profile Store growth and Total Data Volume efficiently.
+
+This guide explains the recommended architecture for long-term personalization in Adobe Experience Platform. It describes the roles of the Profile Store and the Data Lake, compares the available approaches for generating activation-ready signals from historical data, and provides guidance to help you choose the approach that best fits your organization's architecture, technical capabilities, and business requirements.
+
 <!-- Cross-link: Direct readers to foundational Data Distiller concepts before they evaluate architecture options that rely on Data Distiller. -->
 
+For an introduction to Data Distiller, see the [Data Distiller overview](./overview.md).
+
 <!-- Cross-link: Direct readers to Profile concepts that explain Profile responsibilities before applying the optimization guidance in this architecture guide. -->
+
+To learn more about Real-Time Customer Profile, including Profile Store concepts and responsibilities, see the [Real-Time Customer Profile overview](../../profile/home.md).
+
+<!-- Cross-link: Direct readers to existing data-management guidance instead of duplicating Data Lake, Profile Store, retention, and Total Data Volume details. -->
+
+For guidance on data retention, Profile Store optimization, and Total Data Volume management, see [Data management license entitlement best practices](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
+
 
 ### Section Purpose
 
