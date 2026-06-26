@@ -184,147 +184,136 @@ This architecture keeps the Profile Store focused on its intended purpose: fast,
 
 ## Available approaches {#available-approaches}
 
-### Section Purpose
+Adobe Experience Platform provides multiple approaches for long-term personalization. The approach that best fits your organization depends on where your historical data lives, which tools your organization has licensed, and the technical capabilities of your team.
 
-Introduce the supported implementation approaches before discussing each individually.
+The following approaches are available:
 
-### Key Questions Answered
+- **Data Distiller** — transforms historical event data from the Data Lake into computed scores, tiers, and derived attributes using scheduled SQL queries, which are then written to the Profile Store.
+- **Customer Journey Analytics** — provides a visual, no-code environment for exploring cross-channel customer journeys and publishing audience segments directly to the Profile Store.
+- **Federated Audience Composition** — builds and qualifies audiences directly from data in an external enterprise data warehouse without moving the underlying data into Adobe Experience Platform.
+- **Real-Time Customer Data Platform and Adobe Journey Optimizer** — supports personalization based on recent behavioral data and current profile attributes, without requiring additional analytical tooling.
 
-- What approaches are available?
-- Why are there multiple options?
-
-### Expected Content
-
-- Short overview of each approach.
-- Transition to detailed subsections.
-
-### Exclusions
-
-- Detailed product explanations.
-- Comparisons.
-- Recommendations.
-
-### Primary Source Sections
-
-- Your Options
+The following sections describe each approach in detail.
 
 ### Data Distiller {#data-distiller}
 
-### Section Purpose
+Data Distiller is an Adobe Experience Platform add-on that enables data engineers to query, transform, and enrich data at scale using SQL. For long-term personalization, Data Distiller reads historical event data from the Data Lake, applies transformation logic defined in SQL, and writes only the resulting output — a compact, meaningful signal — to the Profile Store. Raw event history remains in the Data Lake.
 
-Explain how Data Distiller supports long-term personalization.
+**Workflow**
 
-### Key Questions Answered
+The core workflow follows a derive-and-promote pattern. A data engineer writes a SQL query that defines the transformation logic — for example, calculating each customer's total transactions over the past 12 months and assigning a loyalty tier. The query runs against historical data in the Data Lake and produces a derived dataset: one row per customer containing only the computed output. That derived dataset is scheduled to refresh automatically at a defined cadence — daily, weekly, or as your use case requires — and is published to the Profile Store, where the derived attribute is available for segmentation and activation.
 
-- When should I use Data Distiller?
-- What problems does it solve?
-- What outputs does it produce?
+Data Distiller can also build and publish audience memberships directly from SQL queries without first generating a derived attribute. This suits targeted campaign audiences where profile enrichment for every customer is not required.
 
-### Expected Content
+**Typical use cases**
 
-- Overview.
-- Workflow.
-- Typical use cases.
-- Strengths.
-- Limitations.
+Data Distiller is well suited to use cases that require mathematically precise outputs derived from large volumes of historical data:
 
-### Exclusions
+- Loyalty tier assignment and scoring from extended transaction histories
+- Churn risk scoring based on engagement patterns over months or years
+- Lifetime value calculations and percentile or decile rankings
+- Recency-frequency-monetary (RFM) modeling
+- Product affinity scoring from long browsing and purchase histories
+- Automated audience refresh on a recurring schedule
 
-- SQL tutorials.
-- Query examples.
-- Product reference.
+**Strengths**
 
-### Primary Source Sections
+- Produces mathematically exact outputs: precise deciles, percentiles, and ranked scores from full historical datasets
+- Fully automated refresh on a defined schedule, with no manual intervention required after initial setup
+- Raw event data remains in the Data Lake; only the derived signal is written to the Profile Store
 
-- Adobe Data Distiller
-- Building Audiences Directly
+**Limitations**
+
+- Requires SQL authorship by a data engineer; business users cannot independently define new transformation logic
+- The transformation question must be defined in advance; Data Distiller is not designed for exploratory analysis
 
 <!-- Cross-link: Direct readers to SQL audience documentation because this architecture discusses Data Distiller audiences as an activation-ready output. -->
 
 ### Customer Journey Analytics {#customer-journey-analytics}
 
-### Section Purpose
+Customer Journey Analytics is an analytics platform that connects customer identities and behavioral data across channels, devices, and time to deliver holistic, customer-level insights. For long-term personalization, it provides a visual environment for exploring historical customer journeys and a direct pathway — Audience Publishing — to promote those insights to the Profile Store for activation, without writing code.
 
-Explain how Customer Journey Analytics supports long-term personalization.
+Historical data analyzed within Customer Journey Analytics does not need to be enabled for the Profile Store. Months or years of event history can reside within Customer Journey Analytics without contributing to your Total Data Volume entitlement.
 
-### Key Questions Answered
+**Audience publishing**
 
-- When should I use Customer Journey Analytics?
-- What problems does it solve?
-- What outputs does it produce?
+Audience Publishing is the capability that connects Customer Journey Analytics insights to activation. Audiences built in the Analysis Workspace are published to the Profile Store, where they appear within minutes and become available for use in Real-Time Customer Data Platform and Adobe Journey Optimizer. Audiences can be published once for a specific campaign, or configured to refresh automatically at an interval of every four hours, daily, weekly, or monthly.
 
-### Expected Content
+**Journey exploration**
 
-- Overview.
-- Audience publishing.
-- Journey exploration.
-- Typical use cases.
-- Strengths.
-- Limitations.
+Analysts use the Analysis Workspace to explore customer journeys visually across any time horizon — days, months, or years. The workspace supports filter-based audience construction: combine behavioral criteria, refine the audience interactively, and preview audience size before publishing. No engineering involvement is required.
 
-### Exclusions
+**Typical use cases**
 
-- Workspace tutorials.
-- Feature documentation.
+Customer Journey Analytics is well suited to use cases involving discovery or where audience definitions are based on multi-step journey logic:
 
-### Primary Source Sections
+- Campaign audiences built from behavioral patterns discovered through visual exploration
+- Multi-channel journey analysis combining web, app, offline, and CRM data
+- Re-engagement audiences based on journeys that span extended time horizons
+- One-time audiences tied to specific past events, such as a product launch or seasonal promotion
+- Recurring audience refresh where membership is defined by journey logic rather than a scored attribute
 
-- Customer Journey Analytics
+**Strengths**
+
+- Self-service audience creation for business analysts and marketing teams, with no SQL or engineering involvement required
+- Exploration-first workflow: audience patterns and definitions can emerge from the data rather than being specified in advance
+- Audience publishing connects analytical insights directly to activation within minutes
+
+**Limitations**
+
+- Audience outputs are membership lists; Customer Journey Analytics does not write computed attributes such as scores or tier labels back to individual profiles
+- Filter-based precision is approximate; exact mathematical rankings — such as the precise top 10% of customers by a calculated metric — require SQL-based tooling
 
 ### Federated Audience Composition {#federated-audience-composition}
 
-### Section Purpose
+Federated Audience Composition enables organizations to build and qualify audiences directly from data in an external enterprise data warehouse, without moving the underlying data into Adobe Experience Platform. It is the appropriate approach when historical data must remain in the warehouse and when a full data ingestion project is not feasible or desirable.
 
-Explain when Federated Audience Composition is the preferred architectural approach.
+**Warehouse-first architecture**
 
-### Key Questions Answered
+In a Federated Audience Composition architecture, the enterprise data warehouse remains the authoritative source for historical customer data. Audience definitions are applied directly against warehouse data using a no-code composition canvas. Only the resulting audience membership — a list of qualifying customer identifiers — is sent to Adobe Experience Platform for activation. The underlying data never moves.
 
-- When should enterprise warehouse data remain outside Platform?
-- When should Federated Audience Composition be used?
+**Audience composition**
 
-### Expected Content
+The no-code composition canvas allows teams to build audience definitions against warehouse data without writing queries or requiring engineering support. Qualified audiences can enrich existing audiences in Adobe Experience Platform and are available for activation through Real-Time Customer Data Platform destinations and Adobe Journey Optimizer.
 
-- Overview.
-- Warehouse-first architecture.
-- Audience composition.
-- Suitable use cases.
-- Benefits.
+**Suitable use cases**
 
-### Exclusions
+Federated Audience Composition is appropriate when:
 
-- Warehouse configuration.
-- Product tutorials.
+- The enterprise data warehouse is the organization's system of record for customer data and historical events
+- Data governance or architecture requirements prevent raw event data from being ingested into Adobe Experience Platform
+- The goal is to build last-mile campaign audiences from warehouse data quickly, without a complex ingestion project
 
-### Primary Source Sections
+Supported warehouses include Snowflake, Databricks, Google BigQuery, and Amazon Redshift.
 
-- Federated Audience Composition
+**Benefits**
+
+- Historical data remains in the warehouse, satisfying data governance and sovereignty requirements
+- No large-scale data ingestion is required to activate warehouse-based audience data
+- Audience membership is available in Adobe Experience Platform for activation through standard channels
 
 ### Real-Time CDP / Journey Optimizer only {#rtcdp-journey-optimizer}
 
-### Section Purpose
+For some organizations, Real-Time Customer Data Platform and Adobe Journey Optimizer alone are sufficient to support their personalization requirements. This is the case when personalization relies entirely on recent behavioral data and current profile attributes, with no requirement to look back beyond the standard activation window.
 
-Describe scenarios where additional analytical products are unnecessary.
+**Appropriate scenarios**
 
-### Key Questions Answered
+This approach is sufficient when:
 
-- When is RTCDP/AJO sufficient?
-- What are its limitations?
+- All segmentation and audience logic operates within a 30–90 day behavioral window
+- Profile attributes and recent events in the Profile Store contain all the information required for personalization decisions
+- Use cases do not involve long purchase cycles, extended engagement histories, or industry patterns that require multi-month lookbacks
 
-### Expected Content
+**Benefits**
 
-- Appropriate scenarios.
-- Benefits.
-- Constraints.
-- Transition to decision guidance.
+- No additional analytical tooling is required
+- The architecture remains straightforward, with activation driven directly from the Profile Store
 
-### Exclusions
+**Constraints**
 
-- Product tutorials.
-- Detailed comparisons.
+Real-Time Customer Data Platform and Adobe Journey Optimizer are designed for activation on current data. When segmentation logic extends beyond 30–90 days, or when personalization depends on insights derived from months or years of behavioral history, storing that history directly in the Profile Store drives up Total Data Volume entitlement without improving personalization outcomes. In those cases, one of the analytical approaches described in the preceding subsections — Data Distiller, Customer Journey Analytics, or Federated Audience Composition — better serves the use case.
 
-### Primary Source Sections
-
-- Your Options
+For guidance on selecting the approach that best fits your requirements, see [Decision guide](#decision-guide).
 
 ## Comparison matrix {#comparison-matrix}
 
