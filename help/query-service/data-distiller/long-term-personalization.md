@@ -317,33 +317,19 @@ For guidance on selecting the approach that best fits your requirements, see [De
 
 ## Comparison matrix {#comparison-matrix}
 
-### Section Purpose
+The following table compares the four available approaches across key architectural dimensions.
 
-Provide a side-by-side comparison of the available approaches.
-
-### Key Questions Answered
-
-- How do the approaches compare?
-- Which characteristics differentiate them?
-
-### Expected Content
-
-- Comparison table.
-- Capabilities.
-- Intended users.
-- Outputs.
-- Strengths.
-- Limitations.
-
-### Exclusions
-
-- Detailed explanations.
-- Recommendations.
-
-### Primary Source Sections
-
-- Data Distiller vs Customer Journey Analytics
-- Quick Decision Guide
+| Dimension | Data Distiller | Customer Journey Analytics | Federated Audience Composition | Real-Time CDP / AJO |
+|---|---|---|---|---|
+| **Intended users** | Data engineers, SQL analysts | Business analysts, marketing teams | Marketing and data teams | Marketing and campaign managers |
+| **Interface** | SQL query editor | Visual drag-and-drop Analysis Workspace | No-code composition canvas | Segment Builder, journey canvas |
+| **Output** | Derived profile attributes (scores, tiers); direct audience lists via SQL | Audience membership lists | Audience membership lists | Audiences from current profile and event data |
+| **Historical data source** | Data Lake | Data Lake | External enterprise warehouse | Profile Store (30–90 day window) |
+| **Requires SQL?** | Yes | No | No | No |
+| **Scheduling** | Fully customizable SQL query schedule | Every 4 hours, daily, weekly, or monthly | Determined by warehouse and composition schedule | Real-time and batch segmentation |
+| **Data movement** | Raw data stays in Data Lake; only derived signal enters Profile Store | Raw data stays in analytical layer; only audience membership enters Profile Store | Underlying data never leaves the warehouse | All data already resides in Profile Store |
+| **Strengths** | Mathematical precision; automated scheduling; lean Profile Store | Self-service; exploration-first; no engineering required | No ingestion needed; supports data governance and sovereignty requirements | Simple architecture; no additional tooling required |
+| **Limitations** | Requires a data engineer; transformation question must be defined in advance | Cannot write computed attributes to profiles; approximate precision | Dependent on warehouse connectivity | Not suited to use cases requiring lookbacks beyond 30–90 days |
 
 ## Decision guide (Which approach should I choose?) {#decision-guide}
 
