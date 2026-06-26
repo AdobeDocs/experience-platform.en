@@ -172,3 +172,4 @@ topic_v2:
 ## Version 1.0.0 May 5, 2021
 
 * First main release of the Experience Platform Debugger. Intended to replace the Experience Cloud Debugger.
+

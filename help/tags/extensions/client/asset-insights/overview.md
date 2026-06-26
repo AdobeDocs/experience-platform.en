@@ -194,3 +194,4 @@ If `a.assets.clickedid` is not in the image request, it's mostly likely because 
 In the resulting Analytics image request, if `a.assets.clickedid` has the Asset ID, the rule is working correctly. 
 
 If `a.assets.clickedid` is not in the image request, it's mostly likely because the asset that was selected did not have [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) enabled in AEM.
+
