@@ -333,32 +333,45 @@ The following table compares the four available approaches across key architectu
 
 ## Decision guide (Which approach should I choose?) {#decision-guide}
 
-### Section Purpose
+Two factors most clearly determine which approach best fits your use case: whether your use case requires mathematically precise outputs, and whether you are starting from a defined question or from exploratory analysis.
 
-Help readers select the most appropriate approach for their requirements.
+**Need mathematically precise outputs?**
 
-### Key Questions Answered
+If your use case requires exact rankings — the top 10% of customers by miles flown, a churn risk score of 0.82, a lifetime value in the eighth decile — Data Distiller is the appropriate tool. This level of precision requires SQL and a data engineer, but the resulting derived attribute is a clean, reusable signal available to everyone downstream in the Profile Store. If you cannot define the calculation precisely before you start, Customer Journey Analytics is the better starting point.
 
-- Which approach fits my use case?
-- When should approaches be combined?
+**Starting from exploration?**
 
-### Expected Content
+If you do not yet know what the audience will look like — if the goal is to examine the data and see what patterns emerge — Customer Journey Analytics is the right starting point. Teams can explore without engineering support, test hypotheses visually, and publish an audience the same day without writing code. Once a pattern is discovered and validated, it can be handed to a data engineer to build a scheduled, precision-scored version in Data Distiller if that level of rigor is required.
 
-- Decision criteria.
-- Selection guidance.
-- Combined approaches.
-- High-level recommendations.
+**Selection guidance**
 
-### Exclusions
+Your choice of approach is also shaped by which tools your organization has licensed and where your historical data resides.
 
-- Product implementation.
-- Best practices.
+- **Data Distiller only:** You can build audiences from historical data using SQL. Every new audience definition requires engineering involvement, and there is no visual exploration layer. Data Distiller is well suited to scoring and profile enrichment but less suited to ad-hoc discovery.
+- **Customer Journey Analytics only:** You can explore journeys and publish audiences without SQL. Filter-based logic approximates but cannot produce mathematically precise rankings, and audience outputs are membership lists only — writing a computed attribute to every profile requires Data Distiller.
+- **Historical data in an enterprise warehouse:** If data must remain in Snowflake, Databricks, Google BigQuery, or Amazon Redshift for governance or architectural reasons, Federated Audience Composition lets you build and activate audiences without moving the underlying data.
+- **Use cases requiring only recent data:** If personalization relies on behavioral data within a 30–90 day window and current profile attributes, Real-Time Customer Data Platform and Adobe Journey Optimizer alone are sufficient.
 
-### Primary Source Sections
+**Combined approaches**
 
-- Two Core Differentiators
-- What If I Have Only One?
-- Quick Decision Guide
+When both Data Distiller and Customer Journey Analytics are available, use each for what it does best. Use Data Distiller for automated, scheduled scoring and profile enrichment. Use Customer Journey Analytics for exploratory analysis and self-service campaign audience building.
+
+The two tools also work together effectively. Data Distiller can compute a derived score — such as a weekly churn risk score — and write it to every profile in the Profile Store. Analysts in Customer Journey Analytics can then use that score as a filter in Analysis Workspace alongside journey behavior discovered visually — for example, high churn risk customers who also viewed a competitor product page in the last 30 days. The result is a precision-scored, journey-aware audience that neither tool could produce as effectively on its own.
+
+**Quick reference**
+
+The following table provides starting-point guidance for common decision scenarios.
+
+| If your situation is… | Start with… |
+|---|---|
+| You know exactly what score or ranking you need to compute | Data Distiller |
+| You want to explore the data and see what patterns emerge | Customer Journey Analytics |
+| You need a derived attribute on every customer profile | Data Distiller |
+| You need a campaign audience without involving engineering | Customer Journey Analytics |
+| You need exact mathematical deciles or percentile rankings | Data Distiller |
+| You want to build an audience based on a multi-step customer journey | Customer Journey Analytics |
+| You need the audience to refresh automatically every week | Data Distiller |
+| You want to publish an audience once for a specific campaign | Customer Journey Analytics |
 
 ## Best practices {#best-practices}
 
