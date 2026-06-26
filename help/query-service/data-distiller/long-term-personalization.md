@@ -375,32 +375,29 @@ The following table provides starting-point guidance for common decision scenari
 
 ## Best practices {#best-practices}
 
-### Section Purpose
+The following practices apply to every Adobe Experience Platform deployment regardless of which approach you use for long-term personalization. They are standard operating practices for managing Profile Store size and Total Data Volume, not remediation steps for organizations already in entitlement overage.
 
-Summarize Adobe's recommended architectural and operational practices.
+**Keep the Profile Store lean**
 
-### Key Questions Answered
+Store derived signals — scores, tiers, labels, and audience memberships — in the Profile Store. Keep raw historical events in the Data Lake. A lean Profile Store performs faster, stays within entitlement, and is easier to manage over time. Define your real-time activation window and treat it as the boundary for what belongs in the Profile Store.
 
-- What should I do?
-- How do I maintain an efficient architecture?
+**Configure Experience Event TTL**
 
-### Expected Content
+The most impactful lever for reducing Profile Store data volume is configuring an Experience Event TTL. This setting defines how long raw behavioral events are retained in the Profile Store before they expire automatically. If your real-time activation logic requires only 30–90 days of event history, there is no value in retaining events beyond that window. A TTL removes expired events on a rolling basis, keeping Total Data Volume within entitlement without requiring manual cleanup.
 
-- Profile Store management.
-- TTL.
-- Data Lifecycle.
-- Signal generation.
-- Operational guidance.
+**Configure pseudonymous profile TTL**
 
-### Exclusions
+Pseudonymous profiles — created from anonymous browser sessions, device fingerprints, or cookie-based activity before a visitor is identified — accumulate silently and can represent a significant share of your Total Data Volume. After a period of inactivity, the cookies and device signals that created these profiles expire, making it no longer possible to resolve them to a known identity. Retaining these profiles beyond that window provides no personalization value while continuing to count toward your entitlement. Configure a pseudonymous profile TTL to remove them automatically after a defined period of inactivity.
 
-- Anti-patterns.
-- Product tutorials.
+**Use Data Lifecycle for targeted dataset cleanup**
 
-### Primary Source Sections
+The Data Lifecycle feature provides a no-code interface and API for setting dataset-level expiration dates. Unlike Experience Event TTL, which acts on individual event records across the Profile Store, dataset expiration removes an entire dataset on a specified date. Use this feature to retire historical datasets that are no longer needed for activation.
 
-- Managing Data Volume
-- Summary
+**Schedule and validate signal generation**
+
+If you are generating derived attributes or audiences from historical data, review and validate the underlying logic on a regular cadence. Confirm that scheduled jobs are completing successfully, that outputs reflect current business requirements, and that derived attributes remain aligned with your active personalization use cases. Signals that are no longer used for personalization decisions should be removed from the Profile Store to avoid unnecessary entitlement consumption.
+
+For comprehensive guidance on license entitlement monitoring, TTL configuration, and dataset hygiene, see [Data management license entitlement best practices](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 ## Common anti-patterns {#anti-patterns}
 
