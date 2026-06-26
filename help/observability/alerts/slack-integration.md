@@ -312,3 +312,4 @@ Select **[!UICONTROL Runtime Action]** as the delivery method and the `slack-web
 Your webhook proxy is now configured. You are returned to the Webhook proxy page. You can test the entire flow end-to-end by selecting the **[!UICONTROL Send sample event]** icon next to any configured event.
 
 ![The webhook proxy page showing configured events and the Send sample event icon.](../images/alerts/slack-integration/send-sample.png)
+
