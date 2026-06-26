@@ -100,63 +100,46 @@ This is an architecture guide, not a product guide. It explains why long-term pe
 
 ## The customer problem {#customer-problem}
 
-### Section Purpose
+Many organizations accumulate large volumes of historical customer event data in Real-Time Customer Profile in the expectation that more stored data produces better personalization. In practice, this approach drives up Profile Store size and Total Data Volume entitlement costs without improving the experiences customers receive.
 
-Explain the business and technical problem that motivates the recommended architecture.
+Long-term personalization is any scenario where tailoring an experience depends on customer behavior stretching back six months, a year, or longer. These use cases are common in industries with long purchase cycles or slowly evolving customer relationships. Common examples include:
 
-### Key Questions Answered
+- A financial services customer who opened a savings account 18 months ago and is now researching mortgage products
+- A retail shopper who browsed seasonal inventory last year but never purchased
+- An airline frequent flyer whose loyalty tier reflects 12 months of cumulative flight activity
+- A telecommunications customer who churned eight months ago and has since returned, identifiable as at-risk based on historical behavior patterns
 
-- What problem are customers trying to solve?
-- Why does the problem occur?
-- Why is the traditional approach inefficient?
+In each case, the relevant data is historical, but the personalization moment must happen in real time. The problem arises when organizations store all of that event-level history directly in the Profile Store to support those moments.
 
-### Expected Content
+The Profile Store is designed for speed, not volume. It responds in milliseconds to real-time activation decisions and is appropriate for current profile attributes, behavioral events within your real-time activation lookback window (typically 30–90 days), and derived signals such as scores, tiers, or audience memberships. Raw behavioral events from 12, 18, or 24 or more months ago are valuable for analysis but do not need to live in the Profile Store to support activation.
 
-- Long lookback personalization.
-- Profile Store growth.
-- Total Data Volume impact.
-- Historical data versus activation data.
-- Business consequences.
-
-### Exclusions
-
-- Solution details.
-- Product comparisons.
-- Best practices.
-
-### Primary Source Sections
-
-- The Challenge
-- Long-Term Personalization Use Cases
+Every record in the Profile Store counts toward your Total Data Volume entitlement. When organizations store years of behavioral events there — every page view, click, and login — entitlement consumption increases significantly, often without contributing to better personalization outcomes. Organizations approaching or exceeding their Total Data Volume limits frequently find that the excess is driven by historical event data that was never required for real-time activation.
 
 ## How to identify this use case {#identify-use-case}
 
-### Section Purpose
+Use the following diagnostic questions to determine whether your organization has a long-term personalization use case. If two or more of these indicators apply, your organization is likely placing analytical demands on the Profile Store that go beyond its intended scope.
 
-Help readers determine whether their organization has a long-term personalization use case.
+**How far back does your segmentation logic look?**
 
-### Key Questions Answered
+If your audiences rely on "any time" logic or lookback windows beyond 30–90 days, that is a strong indicator of a long-term personalization use case. Segmentation that reaches deep into historical data often means raw events are accumulating in the Profile Store to support lookbacks that could instead be served by derived signals.
 
-- Does this guidance apply to me?
-- What indicators suggest this architecture is appropriate?
-- When is a simpler architecture sufficient?
+**Are you approaching or exceeding your Total Data Volume entitlement?**
 
-### Expected Content
+If your Total Data Volume consumption is high or growing, examine how much of that volume is historical event data that is rarely or never used for real-time activation. Historical events stored in the Profile Store count toward your entitlement regardless of whether they contribute to any active personalization decision.
 
-- Diagnostic questions.
-- Typical business scenarios.
-- Indicators of excessive historical Profile usage.
-- Characteristics of suitable use cases.
+**What time-to-live is configured on your Profile data?**
 
-### Exclusions
+If no TTL is configured, or if it is set to 12 or more months, raw events are likely accumulating in the Profile Store without a clear activation purpose. The absence of a TTL policy is a common driver of entitlement growth in organizations with long engagement histories.
 
-- Architectural recommendations.
-- Product implementation.
-- Decision guidance.
+**Is your industry characterized by long purchase cycles?**
 
-### Primary Source Sections
+Mortgages, car insurance, B2B contracts, seasonal retail, and travel rewards programs all involve customer relationships that evolve over months or years. If your business operates in a vertical where purchase decisions follow an extended consideration period, long lookback personalization is likely part of your use case.
 
-- How to Tell If You Have This Use Case
+**Do you have Data Distiller or Customer Journey Analytics licensed but not actively used for audience creation?**
+
+If these tools are licensed but not applied to analytical workloads or audience creation from historical data, your organization may be placing analytical demands on the Profile Store that those tools are designed to handle.
+
+If fewer than two of these indicators apply to your situation, a simpler architecture that relies primarily on the Profile Store is likely sufficient for your current personalization needs.
 
 ## Core architectural principles {#principles}
 
