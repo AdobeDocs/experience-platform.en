@@ -401,32 +401,27 @@ For comprehensive guidance on license entitlement monitoring, TTL configuration,
 
 ## Common anti-patterns {#anti-patterns}
 
-### Section Purpose
+The following patterns commonly arise when organizations scale their data infrastructure without separating analytical and activation responsibilities. Each creates preventable cost or performance problems.
 
-Highlight common architectural mistakes and explain why they should be avoided.
+**Using the Profile Store as a historical archive**
 
-### Key Questions Answered
+The Profile Store is an activation layer, not a data warehouse. When organizations store 12, 18, or 24 or more months of raw behavioral events directly in the Profile Store — every page view, click, login, and transaction — Total Data Volume grows rapidly without improving personalization outcomes. Historical events that are never used for real-time activation decisions have no business justification for residing in the Profile Store.
 
-- What should I avoid?
-- Why are these approaches problematic?
+**Enabling datasets for Profile that belong in the Data Lake**
 
-### Expected Content
+Not every dataset ingested into Adobe Experience Platform needs to be enabled for Profile. Historical event datasets used exclusively for analysis, reporting, or signal computation belong in the Data Lake. Enabling them for Profile is a primary mechanism by which organizations accumulate excess Total Data Volume without realizing it.
 
-- Profile as historical archive.
-- Excessive Profile enablement.
-- Raw event activation.
-- Poor retention practices.
-- Architectural misuse.
+**Activating on raw event history instead of derived signals**
 
-### Exclusions
+Building segments using "any time" lookback logic or multi-year behavioral windows — rather than on signals computed from that history — means the activation layer is performing analytical work it was not designed for. A pre-computed signal stored in the Profile Store activates faster and more reliably than a segment that must scan years of raw events at evaluation time.
 
-- Best practice explanations.
-- Product implementation.
+**Operating without TTL policies**
 
-### Primary Source Sections
+When no Experience Event TTL or pseudonymous profile TTL is configured, data accumulates in the Profile Store indefinitely. Events from two or more years ago that serve no activation purpose continue to count toward your Total Data Volume entitlement on the same basis as events from yesterday. The absence of TTL policies is one of the most common and avoidable causes of entitlement overage.
 
-- Summary
-- Anti-pattern table
+**Treating analytical storage and activation storage as equivalent**
+
+The Data Lake and the Profile Store serve fundamentally different purposes and have different cost models. Assuming that all data stored within Adobe Experience Platform is equivalent — or that moving data into the Profile Store is the same as making it useful for personalization — leads to architectures where volume grows without a corresponding improvement in outcomes. Every record in the Profile Store should have a clear, current activation purpose.
 
 ## Summary and key takeaways {#summary}
 
