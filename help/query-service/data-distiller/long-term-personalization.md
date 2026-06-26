@@ -143,34 +143,28 @@ If fewer than two of these indicators apply to your situation, a simpler archite
 
 ## Core architectural principles {#principles}
 
-### Section Purpose
+The recommended architecture in this guide rests on a clear separation between data used for analysis and data used for activation. Understanding this separation — and the responsibilities of each layer — is the foundation for every approach described in the sections that follow.
 
-Introduce the architectural principles that underpin every recommended solution in this guide.
+**Store signals, not raw history**
 
-### Key Questions Answered
+Personalization should be based on the insight required for the experience happening right now, not on indiscriminately retained historical data. You do not need to store years of raw behavioral events in the Profile Store to know that a customer qualifies as a loyalty tier member, a high-value buyer, or at churn risk. You compute those labels from the historical data and store only the label — the signal — in the Profile Store. The raw history belongs in the Data Lake.
 
-- What architectural principles should guide my design?
-- Why should historical data and activation data be separated?
-- What belongs in Profile?
+**Profile Store responsibilities**
 
-### Expected Content
+The Profile Store is an activation layer, not an analytical store. Its role is to hold the current state of each customer: profile attributes, behavioral events within your real-time activation window, and derived signals such as scores, tiers, and audience memberships. Because the Profile Store must respond in milliseconds, it is optimized for speed rather than volume. Every record it holds counts toward your Total Data Volume entitlement, and it should contain only what is needed to support active personalization decisions.
 
-- Historical data versus signals.
-- Profile Store responsibilities.
-- Data Lake responsibilities.
-- Signal-based personalization.
-- Separation of analysis and activation.
+**Data Lake responsibilities**
 
-### Exclusions
+The Data Lake is designed for scale and depth. It holds the full history of customer interactions across channels and time without contributing to your Profile entitlement. It is the analytical layer where historical data is stored, queried, and transformed into the compact signals that the Profile Store can act on.
 
-- Product-specific implementation.
-- Product comparisons.
-- Decision guidance.
+**Separation of analysis and activation**
 
-### Primary Source Sections
+Adobe Experience Platform reflects this separation through two complementary capabilities that work together:
 
-- The Key Principle
-- The Two-Brain Architecture
+- The **engagement capability**, powered by Real-Time Customer Data Platform and Adobe Journey Optimizer, handles real-time activation and personalization — next best action, triggered emails, site personalization, and real-time offers.
+- The **analytical capability**, powered by Data Distiller and Customer Journey Analytics, handles holistic analysis, insight generation, and signal creation from historical data — journey analysis, loyalty scoring, cohort discovery, and churn prediction.
+
+The right architecture applies each capability to what it does best. The analytical layer processes and distills comprehensive historical data over time. The engagement layer acts on the resulting signals. Together, they enable intelligent, efficient personalization without requiring years of raw event data in the Profile Store.
 
 ## Recommended architecture {#recommended-architecture}
 
