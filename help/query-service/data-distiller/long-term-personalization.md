@@ -168,34 +168,19 @@ The right architecture applies each capability to what it does best. The analyti
 
 ## Recommended architecture {#recommended-architecture}
 
-### Section Purpose
+The recommended architecture separates long-term data storage from real-time activation. Historical event data lives in the Data Lake, where it can be analyzed at scale. Analytical tools process that history and derive compact signals — scores, tiers, labels, or audience memberships. Those signals are promoted to the Profile Store, where they are available for real-time activation. Raw historical events never need to enter the Profile Store.
 
-Describe Adobe's recommended high-level architecture for long-term personalization.
+Data moves through the architecture in the following sequence:
 
-### Key Questions Answered
+1. **Customer event data accumulates in the Data Lake.** Web interactions, app events, purchases, loyalty transactions, and offline records are ingested and retained at full historical depth. Data stored in the Data Lake does not contribute to your Profile entitlement.
 
-- What is the recommended architecture?
-- How does data move through the architecture?
-- What is ultimately activated?
+2. **Analytical tools process the historical data and derive signals.** Queries or analyses run against the Data Lake to transform months or years of event history into compact, meaningful outputs — loyalty tiers, churn risk scores, lifetime value rankings, or qualified audience memberships. This processing happens in the analytical layer, not in the Profile Store.
 
-### Expected Content
+3. **Derived signals are written to the Profile Store.** Only the output of the analytical processing — not the underlying event history — is promoted to the Profile Store. Each customer record holds current profile attributes, recent behavioral events within the activation window, and the derived signals generated from historical analysis.
 
-- High-level architecture.
-- Data flow.
-- Analytical processing.
-- Derived signals.
-- Activation-ready outputs.
+4. **Real-Time Customer Data Platform and Adobe Journey Optimizer activate on those signals.** Audience memberships and profile attributes are available for segmentation, offer decisioning, journey triggers, and real-time personalization. The activation layer operates on lean, current data and responds in milliseconds.
 
-### Exclusions
-
-- Individual product deep dives.
-- Decision guidance.
-
-### Primary Source Sections
-
-- Profile Store
-- Data Lake
-- Two-Brain Architecture
+This architecture keeps the Profile Store focused on its intended purpose: fast, reliable, real-time activation. The Data Lake retains the full analytical record. The signals bridging the two layers contain only the intelligence needed for personalization — not the raw history behind it.
 
 ## Available approaches {#available-approaches}
 
