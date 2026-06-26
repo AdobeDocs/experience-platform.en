@@ -88,35 +88,15 @@ Introduce the long-term personalization challenge, establish the scope of the gu
 
 ## Who should read this {#who-should-read}
 
-### Section Purpose
+This guide is written for data architects, data engineers, and technical decision-makers who are designing or evaluating long-term personalization architectures in Adobe Experience Platform. Business analysts and marketing strategists who want to understand how historical customer data can be used for audience creation and activation will also find the decision guidance and approach comparisons useful.
 
-Identify the intended audience, establish prerequisite knowledge, and clarify the scope of the document.
+This guide assumes familiarity with the following Adobe Experience Platform concepts:
 
-### Key Questions Answered
+- The Profile Store and Data Lake and their respective roles
+- Real-Time Customer Data Platform and Adobe Journey Optimizer for activation
+- Basic audience and segmentation concepts
 
-- Who is this guide intended for?
-- What knowledge is assumed?
-- Is this an architecture guide or a product guide?
-
-### Expected Content
-
-- Primary audience.
-- Secondary audience.
-- Assumed Adobe Experience Platform knowledge.
-- Scope statement.
-- Out-of-scope statement.
-
-### Exclusions
-
-- Product overviews.
-- Architectural guidance.
-- Product comparisons.
-- Implementation details.
-
-### Primary Source Sections
-
-- Introduction
-- Intended positioning throughout the document
+This is an architecture guide, not a product guide. It explains why long-term personalization requires a deliberate architectural approach, describes the available options, and provides guidance to help you choose the right one for your organization. It does not cover product configuration, SQL syntax, workspace tutorials, or API reference documentation. For product-specific documentation, follow the cross-links provided throughout this guide.
 
 ## The customer problem {#customer-problem}
 
