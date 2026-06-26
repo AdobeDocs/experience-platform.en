@@ -425,29 +425,21 @@ The Data Lake and the Profile Store serve fundamentally different purposes and h
 
 ## Summary and key takeaways {#summary}
 
-### Section Purpose
+Long-term personalization does not require storing years of raw event data in the Profile Store. It requires extracting the right signals from that history and making those signals available for real-time activation. The right approach depends on your team, your data, and your existing investments — but the underlying principle is the same in every case: let historical data generate the intelligence, and let the Profile Store act on it.
 
-Reinforce the core architectural message and summarize the recommended approach.
+**Key takeaways**
 
-### Key Questions Answered
+- The Profile Store is for activation: lean, fast, and current. Raw historical events beyond your activation window belong in the Data Lake.
+- Use Data Distiller to automatically compute scores, tiers, and attributes from historical data on a schedule, and write only those compact signals to the Profile Store.
+- Use Customer Journey Analytics to explore multi-channel journeys visually, discover audience patterns over time, and publish audiences to the Profile Store for activation without writing code.
+- Use Federated Audience Composition when data must remain in an external warehouse and only audience membership needs to reach Adobe Experience Platform.
+- When you have both Data Distiller and Customer Journey Analytics, use each for what it does best: Data Distiller for precision, automated scoring; Customer Journey Analytics for discovery and self-service campaign audiences.
+- For most organizations with long purchase cycles or extended engagement patterns, a combination of these tools delivers better personalization outcomes at a lower data volume cost.
 
-- What are the most important things to remember?
-- What should I do next?
+**Next steps**
 
-### Expected Content
+To identify the approach that best fits your requirements, see the [Decision guide](#decision-guide). For additional context, the following resources provide foundational and operational detail:
 
-- Summary of principles.
-- Recommended architecture.
-- High-level recommendations.
-- Final takeaways.
-
-### Exclusions
-
-- New concepts.
-- New recommendations.
-- Detailed comparisons.
-
-### Primary Source Sections
-
-- Summary
-- Key Takeaways
+- [Data Distiller overview](./overview.md)
+- [Real-Time Customer Profile overview](../../profile/home.md)
+- [Data management license entitlement best practices](../../landing/license-usage-and-guardrails/data-management-best-practices.md)
