@@ -59,10 +59,6 @@ For example, if you had the query parameter of `?start=1&limit=10`, the response
 
 **Request**
 
->[!IMPORTANT]
->
->You **must** use the `x-sandbox-id` request header instead of the `x-sandbox-name` request header when using this endpoint.
-
 +++ A sample request to view your system jobs.
 
 ```shell
@@ -70,14 +66,14 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 +++
 
 **Response**
 
-A successful response returns an array containing an object for each of the system requests.
+A successful response returns page information and a children array that contains an object for each of the system requests.
 
 +++ A successful response for viewing the system requests
 
@@ -161,7 +157,7 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "dataSetId": "5c802d3cd83fc114b741c4b5"
+        "dataSetId": "66a92c5910df2d1767de13f3"
       }'
 ```
 
@@ -173,14 +169,14 @@ curl -X POST \
 
 **Response**
 
-A successful response returns the details of the newly created system request.
+A successful response returns the details of the newly created system request, including a unique, system-generated, read-only ID for the request. This can be used to look up the request and check its status. The `status` for the request at time of creation is `NEW` until it begins processing (`IN-PROGRESS`). The dataSetId in the response should match the `dataSetId` sent in the request.
 
 +++ A successful response for creating a delete request.
 
 ```json
 {
     "requestId": "80a9405a-21ca-4278-aedf-99367f90c055",
-    "requestType": "DELETE_EE_BATCH",
+    "requestType": "TRUNCATE_DATASET",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxName": "prod",
@@ -188,7 +184,6 @@ A successful response returns the details of the newly created system request.
     },
     "status": "SUCCESS",
     "properties": {
-        "batchId": "01JFSYFDFW9JAAEKHX672JMPSB",
         "datasetId": "66a92c5910df2d1767de13f3"
     },
     "createdAt": "2024-12-22T19:44:50.250006Z",
@@ -198,7 +193,7 @@ A successful response returns the details of the newly created system request.
 
 | Property | Description |
 | -------- | ----------- |
-| `requestId` | The ID of the system job. |
+| `requestId` | The system-generated, read-only ID of the system job. |
 | `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
 | `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, `FAILED`, and `IN-PROGRESS`. |
 | `properties` | An object that contains batch and/or dataset IDs of the system job. |
@@ -235,7 +230,7 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "datasetId": "66a92c5910df2d1767de13f3",
-        "batchId": "8d075b5a178e48389126b9289dcfd0ac"
+        "batchId": "01JFSYFDFW9JAAEKHX672JMPSB"
       }'
 ```
 
@@ -255,7 +250,7 @@ A successful response returns the details of the newly created system request.
 ```json
 {
     "requestId": "80a9405a-21ca-4278-aedf-99367f90c055",
-    "requestType": "TRUNCATE_DATASET",
+    "requestType": "DELETE_EE_BATCH",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxName": "prod",
@@ -263,7 +258,8 @@ A successful response returns the details of the newly created system request.
     },
     "status": "SUCCESS",
     "properties": {
-        "datasetId": "66a92c5910df2d1767de13f3"
+        "datasetId": "66a92c5910df2d1767de13f3",
+        "batchId": "8d075b5a178e48389126b9289dcfd0ac"
     },
     "createdAt": "2024-12-22T19:44:50.250006Z",
     "updatedAt": "2024-12-22T19:52:13.380706Z"
@@ -279,23 +275,14 @@ A successful response returns the details of the newly created system request.
 
 +++
 
->[!AVAILABILITY]
->
->The following feature is **only** available when using Experience Platform on Microsoft Azure.
-
 If you attempt to initiate a delete request for a Record dataset batch, you will encounter a 400-level error, similar to the following:
 
 ```json
 {
-    "requestId": "bc4eb29f-63a8-4653-9133-71238884bb81",
-    "errors": {
-        "400": [
-            {
-                "code": "500",
-                "message": "Batch can only be specified for EE type 'a294e36d382649dab2cc6ad64a41b674'"
-            }
-        ]
-    }
+    "type": "https://ns.adobe.com/aep/errors/UPAPI-036002-422",
+    "title": "Invalid system job payload.",
+    "status": 422,
+    "requestId": "5YrVbqD3YvxYOn5ihuC3KILIoEPZgdJN"
 }
 ```
 
@@ -311,7 +298,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 | Parameter | Description |
 | --------- | ----------- |
-|`{DELETE_REQUEST_ID}`| The ID of the delete request that you wish to view. |
+| `{DELETE_REQUEST_ID}` | The ID of the delete request that you wish to view. |
 
 **Request**
 
@@ -329,7 +316,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 
 **Response**
 
-A successful response returns the details of the specified system request.
+A successful response returns the details of the specified system request, including its updated status. The ID of the system request in the response should match the ID sent in the request path.
 
 +++ A successful response for viewing a delete request.
 
