@@ -60,22 +60,22 @@ When ingesting data, it is important to understand how [!DNL Experience Data Mod
 
 There is some flexibility when ingesting data - if a type does not match what is in the target schema, the data will be converted to the expressed target type. If it cannot, it will fail the batch with a `TypeCompatibilityException`. 
 
-For example, neither JSON nor CSV has a `date` or `date-time` type. As a result, these values are expressed using [ISO 8601 formatted strings](https://www.iso.org/iso-8601-date-and-time-format.html) ("2018-07-10T15:05:59.000-08:00") or Unix Time formatted in milliseconds (1531263959000) and are converted at ingestion time to the target XDM type.
+For example, neither JSON nor CSV has a `date` or `date-time` type. As a result, these values are expressed using [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format (`yyyy-MM-dd'T'HH:mm:ssXXX`) or Unix Time formatted in milliseconds (`1531263959000`) and are converted at ingestion time to the target XDM type.
 
 The table below shows the conversions supported when ingesting data.
 
 | Inbound (row) vs Target (col) | String  | Byte  | Short  | Integer  | Long  | Double  | Date  | Date-Time | Object | Map |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| String    | X | X | X | X | X | X | X | X |   |   |
-| Byte      | X | X | X | X | X | X |   |   |   |   |
-| Short     | X | X | X | X | X | X |   |   |   |   |
-| Integer   | X | X | X | X | X | X |   |   |   |   |
-| Long      | X | X | X | X | X | X | X | X |   |   |
-| Double    | X | X | X | X | X | X |   |   |   |   |
-| Date      |   |   |   |   |   |   | X |   |   |   |
-| Date-Time |   |   |   |   |   |   |   | X |   |   |
-| Object    |   |   |   |   |   |   |   |   | X | X |
-| Map       |   |   |   |   |   |   |   |   | X | X |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| String    | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |
+| Byte      | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |
+| Short     | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |
+| Integer   | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |
+| Long      | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |
+| Double    | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |
+| Date      |   |   |   |   |   |   | ✓ |   |   |   |
+| Date-Time |   |   |   |   |   |   |   | ✓ |   |   |
+| Object    |   |   |   |   |   |   |   |   | ✓ | ✓ |
+| Map       |   |   |   |   |   |   |   |   | ✓ | ✓ |
 
 >[!NOTE]
 >
