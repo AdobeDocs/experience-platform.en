@@ -15,7 +15,7 @@ This guide is for advertisers and media teams using [!DNL Adobe Experience Platf
 
 >[!IMPORTANT]
 >
->This destination connector and documentation page are created and maintained by the [!DNL Reddit] team. For any inquiries or update requests, [contact them](https://support.reddithelp.com/hc/en-us/requests/new?ticket_form_id=50388520825236) directly.
+>This destination connector and documentation page are created and maintained by the [!DNL Reddit] team. For any inquiries or update requests, [contact Reddit](https://support.reddithelp.com/hc/en-us/requests/new?ticket_form_id=50388520825236) directly.
 
 ## Use cases {#use-cases}
 
