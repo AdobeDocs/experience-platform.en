@@ -15,7 +15,7 @@ Full artifacts: adlm-user-guide-IA-2026-06-30.md, adlm-user-guide-execution-brie
 
 # Advanced Data Lifecycle Management use cases and capabilities
 
-<!-- DRAFT PENDING (Step 06): short intro — what this page helps the reader do (decide which capability to use and why), and that it links out for how-to. Keep to 2–3 sentences, no claims that belong to linked pages. -->
+Advanced Data Lifecycle Management (referred to as [!UICONTROL Data Lifecycle] in the product navigation) helps you manage the data you store in Adobe Experience Platform by removing or expiring data that is no longer useful. This guide explains why data lifecycle management matters and helps you choose the right capability for your goal. For step-by-step instructions, each capability links to its detailed UI and API documentation.
 
 ## Why manage your data lifecycle
 
@@ -31,6 +31,18 @@ Assumptions: reader knows data lake vs Profile store at a basic level [INFERRED]
 Open questions: none blocking. Drafting note: strip any commercial/upsell framing from the source.
 Readiness: READY.
 -->
+
+Adobe Experience Platform ingests data continuously, and the amount of data you store grows over time. As those volumes grow, it becomes possible to exceed your licensing entitlements. Managing your data lifecycle keeps the data in Experience Platform aligned with your active use cases, so you retain what delivers value and remove what no longer does.
+
+When data accumulates beyond what your use cases require, you face several risks:
+
+* **Cost pressure.** Growing data volumes can push you toward or beyond your licensing entitlements, which can lead to overages.
+* **Degraded performance.** Excess data increases system load and can slow processing.
+* **Privacy exposure.** Retaining data longer than it is useful increases privacy risk and regulatory exposure.
+
+To avoid these outcomes, retain data only as long as it supports an active use case. Behavioral data, such as event data, typically consumes far more storage than record data, so it is usually where unmanaged growth has the greatest impact.
+
+A key part of this decision is matching data to the workflow it serves. Experience Platform stores data in two repositories that serve different purposes:
 
 | Workflow | Best suited to | Typical use cases |
 | --- | --- | --- |
