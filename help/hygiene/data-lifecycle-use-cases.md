@@ -70,7 +70,7 @@ Your data management goal determines which capability to use. The following tabl
 | Your goal | Capability |
 | --- | --- |
 | Remove specific individuals' records, matched by identity | **Record delete** |
-| Delete an entire dataset, immediately or on a schedule | **Dataset expiration** |
+| Delete an entire dataset on a date you schedule | **Dataset expiration** |
 | Automatically remove stale events from a dataset over time | **Experience Event TTL** |
 | Automatically remove inactive pseudonymous (unknown) profiles | **Pseudonymous Profile TTL** |
 
@@ -78,7 +78,7 @@ These capabilities fall into two groups. Record delete and dataset expiration ar
 
 >[!IMPORTANT]
 >
->These capabilities manage your data for operational reasons such as data cleansing, removing anonymous data, and data minimization. They are not for privacy or regulatory compliance. To fulfill data subject rights requests under regulations such as the General Data Protection Regulation (GDPR), use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead.
+>Record delete and dataset expiration manage your data for operational reasons such as data cleansing, removing anonymous data, and data minimization. They are not for privacy or regulatory compliance. To fulfill data subject rights requests under regulations such as the General Data Protection Regulation (GDPR), use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead.
 
 ## Record delete
 
