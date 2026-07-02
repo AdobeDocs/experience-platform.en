@@ -52,7 +52,7 @@ These capabilities fall into two groups. Record delete and dataset expiration ar
 
 ## Record delete {#record-delete}
 
-When you need to remove specific individuals' data for operational reasons such as data cleansing, removing anonymous data, or data minimization, use record delete. It removes individual records from Experience Platform based on their primary identity. Record delete is not a compliance tool.
+When you need to remove specific individuals' data for operational reasons such as data cleansing, removing anonymous data, or data minimization, use record delete. It removes individual records from Experience Platform based on their primary identity. Record delete is not a compliance tool; to fulfill data subject rights requests, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md).
 
 Record delete acts only on the primary identity defined in each dataset's schema. Before you use it, note the following limitations:
 
