@@ -142,7 +142,7 @@ RESOLVED (Jordan 2026-06-30): data-lake dataset TTL = brief mention + link only.
 Source: profile/event-expirations.md; profile/pseudonymous-profiles.md.
 -->
 
-Experience Event TTL and Pseudonymous Profile TTL automatically remove data from the Profile store once it is no longer useful, without you submitting individual requests. Unlike record delete and dataset expiration, which are one-time actions, these settings apply on an ongoing basis after you configure them.
+Experience Event TTL and Pseudonymous Profile TTL automatically remove data from the Profile store once it is no longer useful, without you submitting individual requests. Once configured, they apply on an ongoing basis.
 
 Experience Event TTL (also called Experience Event expiration) applies at the dataset level and removes event data once it reaches the age that you set. It removes only events; a profile's attributes remain until all of that profile's data is gone. The minimum expiration is one day. For how to configure it, see [Experience Event expirations](../profile/event-expirations.md).
 
