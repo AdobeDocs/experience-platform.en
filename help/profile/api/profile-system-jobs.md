@@ -33,7 +33,7 @@ Adobe Experience Platform enables you to ingest data from multiple sources and b
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The API endpoint used in this guide is part of the [[!DNL Real-Time Customer Profile API]](https://developer.adobe.com/experience-platform-apis/references/profile). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## View delete requests {#view}
 
@@ -194,9 +194,9 @@ A successful response returns the details of the newly created system request, i
 | Property | Description |
 | -------- | ----------- |
 | `requestId` | The system-generated, read-only ID of the system job. |
-| `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
+| `requestType` | The type of the system job. Since you're deleting a dataset, this value is `TRUNCATE_DATASET`. |
 | `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, `FAILED`, and `IN-PROGRESS`. |
-| `properties` | An object that contains batch and/or dataset IDs of the system job. |
+| `properties` | An object that contains the dataset IDs of the system job. |
 
 +++
 
@@ -259,7 +259,7 @@ A successful response returns the details of the newly created system request.
     "status": "SUCCESS",
     "properties": {
         "datasetId": "66a92c5910df2d1767de13f3",
-        "batchId": "8d075b5a178e48389126b9289dcfd0ac"
+        "batchId": "01JFSYFDFW9JAAEKHX672JMPSB"
     },
     "createdAt": "2024-12-22T19:44:50.250006Z",
     "updatedAt": "2024-12-22T19:52:13.380706Z"
@@ -268,10 +268,10 @@ A successful response returns the details of the newly created system request.
 
 | Property | Description |
 | -------- | ----------- |
-| `requestId` | The ID of the system job. |
-| `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
+| `requestId` | The system-generated, read-only ID of the system job. |
+| `requestType` | The type of the system job. Since you're deleting a batch, this value is `DELETE_EE_BATCH`. |
 | `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, `FAILED`, and `IN-PROGRESS`. |
-| `properties` | An object that contains batch and/or dataset IDs of the system job. |
+| `properties` | An object that contains the batch and dataset IDs of the system job. |
 
 +++
 
@@ -341,14 +341,14 @@ A successful response returns the details of the specified system request, inclu
 
 | Property | Description |
 | -------- | ----------- |
-| `requestId` | The ID of the system job. |
+| `requestId` | The system-generated, read-only ID of the system job. |
 | `requestType` | The type of the system job. Possible values include `BACKFILL_TTL`, `DELETE_EE_BATCH`, and `TRUNCATE_DATASET`. |
 | `status` | The status of the system job. Possible values include `NEW`, `SUCCESS`, `ERROR`, `FAILED`, and `IN-PROGRESS`. |
 | `properties` | An object that contains batch and/or dataset IDs of the system job. |
 
 +++
 
-Once the delete request status is `"COMPLETED"` you can confirm that the data has been deleted by attempting to access the deleted data using the Data Access API. For instructions on how to use the Data Access API to access datasets and batches, please review the [Data Access documentation](../../data-access/home.md).
+Once the delete request status is `"SUCCESS"` you can confirm that the data has been deleted by attempting to access the deleted data using the Data Access API. For instructions on how to use the Data Access API to access datasets and batches, please review the [Data Access documentation](../../data-access/home.md).
 
 ## Next steps
 
