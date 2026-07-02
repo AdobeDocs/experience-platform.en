@@ -52,7 +52,7 @@ These capabilities fall into two groups. Record delete and dataset expiration ar
 
 ## Record delete {#record-delete}
 
-Record delete removes individual records from Experience Platform based on their primary identity. Use it to remove data for specific consumers or entities for operational reasons such as data cleansing, removing anonymous data, or data minimization. Record delete is not a compliance tool.
+When you need to remove specific individuals' data for operational reasons such as data cleansing, removing anonymous data, or data minimization, use record delete. It removes individual records from Experience Platform based on their primary identity. Record delete is not a compliance tool.
 
 Record delete acts only on the primary identity defined in each dataset's schema. Before you use it, note the following limitations:
 
@@ -72,7 +72,7 @@ You can create record delete requests in the [!UICONTROL Data Lifecycle] workspa
 
 ## Dataset expiration {#dataset-expiration}
 
-Dataset expiration deletes an entire dataset on a date that you schedule. When the dataset reaches its expiration date, the data lake, Identity Service, and Real-Time Customer Profile each remove the dataset's contents, and the expiration completes once all three services finish. Use it to retire datasets that are no longer needed for your use cases.
+When you need to retire an entire dataset that is no longer needed for your use cases, use dataset expiration. It deletes the dataset on a date that you schedule. When the dataset reaches its expiration date, the data lake, Identity Service, and Real-Time Customer Profile each remove the dataset's contents, and the expiration completes once all three services finish.
 
 >[!IMPORTANT]
 >
@@ -84,7 +84,7 @@ You can schedule dataset expirations in the [!UICONTROL Data Lifecycle] workspac
 
 ## Automatic expiration: Experience Event and Pseudonymous Profile TTL {#automatic-expiration}
 
-Experience Event TTL and Pseudonymous Profile TTL automatically remove data from the Profile store once it is no longer useful, without you submitting individual requests. Once configured, they apply on an ongoing basis.
+When you want to trim stale data from the Profile store automatically over time, rather than deleting it yourself, use Experience Event TTL or Pseudonymous Profile TTL. These settings remove data once it is no longer useful, without you submitting individual requests, and apply on an ongoing basis once you configure them.
 
 Experience Event TTL (also called Experience Event expiration) applies at the dataset level and removes event data once it reaches the age that you set. It removes only events; a profile's attributes remain until all of that profile's data is gone. The minimum expiration is one day. For how to configure it, see [Experience Event expirations](../profile/event-expirations.md).
 
