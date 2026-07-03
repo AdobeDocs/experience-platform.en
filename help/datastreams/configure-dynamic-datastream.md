@@ -76,6 +76,10 @@ Dynamic datastream configurations have specific limits and performance constrain
 | Maximum number of conditions (predicates) that you can combine within a single rule | 100 | Performance guardrail |
 | Maximum time allowed for evaluating all [!DNL Dynamic Datastream Configurations] per datastream before timing out | 25 ms | System-enforced guardrail |
 
+>[!NOTE]
+>
+>The Edge Network evaluates all rules in a datastream within a 25ms budget. When evaluation exceeds this limit, the Edge Network times out and applies the default datastream configuration for that event. No error is returned.
+
 ## Dynamic datastream configurations versus datastream configuration overrides {#dynamic-versus-overrides}
 
 Dynamic datastream configurations and [datastream configuration overrides](/help/datastreams/overrides.md) are mutually exclusive functionalities.
