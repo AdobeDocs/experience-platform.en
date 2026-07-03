@@ -69,7 +69,7 @@ The data associated with this primary identity column is the **only** data that 
 
 All the other data within the externally generated audience are considered **payload attributes**. These attributes can **only** be used for personalization and enrichment during activation, and are **not** attached to a profile. These attributes are, however, stored in the data lake.
 
-While the externally generated audience can be referenced when creating audiences using the Segment Builder, individual profile attributes **cannot** be used. 
+While the externally generated audience can be referenced when creating audiences using Segment Builder, individual profile attributes **cannot** be used. 
 
 ### Can I reconcile externally generated audience data with an existing profile in Experience Platform?
 

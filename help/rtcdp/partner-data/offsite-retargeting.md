@@ -108,7 +108,7 @@ A dialog appears, asking you to choose between [!UICONTROL Compose audience] and
 
 The Segment Builder page appears. On this page, you can use the components to build your audience.
 
-![The Segment Builder is displayed.](../assets/offsite-retargeting/segment-builder.png)
+![Segment Builder is displayed.](../assets/offsite-retargeting/segment-builder.png)
 
 >[!NOTE]
 >

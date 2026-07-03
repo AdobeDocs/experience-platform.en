@@ -72,7 +72,7 @@ The basic building blocks of segment definitions are attributes and events. In a
 
 You can see these building blocks in the **[!UICONTROL Fields]** section on the left side of the [!DNL Segment Builder] workspace. **[!UICONTROL Fields]** contains a tab for each of the main building blocks: "[!UICONTROL Attributes]", "[!UICONTROL Events]", and "[!UICONTROL Audiences]".
 
-![The fields section of the Segment Builder is highlighted.](../images/ui/segment-builder/segment-fields.png)
+![The fields section of Segment Builder is highlighted.](../images/ui/segment-builder/segment-fields.png)
 
 You can select the ![settings icon](/help/images/icons/settings.png) to adjust the settings for the displayed fields.
 

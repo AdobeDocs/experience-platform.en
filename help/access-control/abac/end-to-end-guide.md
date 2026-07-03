@@ -265,7 +265,7 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 ## Next steps
 
-You have completed the application of labels to a role, schema fields, and audiences. The external agency assigned to these roles are restricted from viewing these labels and their values in the schema, dataset, and profile view. These fields are also restricted from being used in the segment definition when using the Segment Builder.
+You have completed the application of labels to a role, schema fields, and audiences. The external agency assigned to these roles are restricted from viewing these labels and their values in the schema, dataset, and profile view. These fields are also restricted from being used in the segment definition when using Segment Builder.
 
 For more information on attribute-based access control, see the [attribute-based access control overview](./overview.md).
 

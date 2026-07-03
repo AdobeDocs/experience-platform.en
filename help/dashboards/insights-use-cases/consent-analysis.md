@@ -54,9 +54,9 @@ To build a consent dashboard, you must first create an audience of all the profi
 
 ![The [!UICONTROL Audiences] dashboard with [!UICONTROL Customer], [!UICONTROL Audiences], and [!UICONTROL Create segment] highlighted.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
-The Segment Builder appears. Next, select **[!UICONTROL XDM Individual Profile]** from the available options. See the documentation for more information on the [rule builder canvas](../../segmentation/ui/segment-builder.md#rule-builder-canvas). 
+Segment Builder appears. Next, select **[!UICONTROL XDM Individual Profile]** from the available options. See the documentation for more information on the [rule builder canvas](../../segmentation/ui/segment-builder.md#rule-builder-canvas). 
 
-![The Segment Builder with the [!UICONTROL XDM Individual Profile] attribute folder highlighted.](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
+![Segment Builder with the [!UICONTROL XDM Individual Profile] attribute folder highlighted.](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
 
 Locate your consent attributes from the options available. Select **[!UICONTROL Consents and Preferences]**. 
 
@@ -66,11 +66,11 @@ Locate your consent attributes from the options available. Select **[!UICONTROL 
 
 More information can be found on the [handling of consent in segmentation](../../segmentation/tutorials/consents.md#handling-consent-in-segmentation) documentation.
 
-![The Segment Builder with the [!UICONTROL Consent and Preferences] attribute folder highlighted.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
+![Segment Builder with the [!UICONTROL Consent and Preferences] attribute folder highlighted.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 
 The various consent and preference options are displayed. As this demonstration focuses on consent to contact over various marketing channels, select **[!UICONTROL Marketing Preferences]**.
 
-![The Segment Builder with the [!UICONTROL Marketing Preferences] folder highlighted.](../images/insights-use-cases/consent-analysis/marketing-preferences.png)
+![Segment Builder with the [!UICONTROL Marketing Preferences] folder highlighted.](../images/insights-use-cases/consent-analysis/marketing-preferences.png)
 
 The list of marketing preferences are displayed. Although this example use case focuses on email, SMS, and calls, you can build insights for any other combination or the entirety of options as well. For each of the channels, perform the below steps to create an audience.
 
