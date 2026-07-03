@@ -43,7 +43,7 @@ You may also use optional query parameters to filter the list of delete requests
 
 **API format**
 
-When using this endpoint, the first 100 system jobs are returned in descending order, based on their creation date.
+When using this endpoint, the first 100 system jobs are returned in ascending order, based on their creation date.
 
 ```http
 GET /system/jobs
@@ -182,12 +182,12 @@ A successful response returns the details of the newly created system request, i
         "sandboxName": "prod",
         "sandboxId": "8129954b-fa83-43ba-a995-4bfa8373ba2b"
     },
-    "status": "SUCCESS",
+    "status": "NEW",
     "properties": {
         "datasetId": "66a92c5910df2d1767de13f3"
     },
     "createdAt": "2024-12-22T19:44:50.250006Z",
-    "updatedAt": "2024-12-22T19:52:13.380706Z"
+    "updatedAt": "2024-12-22T19:44:50.250006Z"
 }
 ```
 
@@ -256,13 +256,13 @@ A successful response returns the details of the newly created system request.
         "sandboxName": "prod",
         "sandboxId": "8129954b-fa83-43ba-a995-4bfa8373ba2b"
     },
-    "status": "SUCCESS",
+    "status": "NEW",
     "properties": {
         "datasetId": "66a92c5910df2d1767de13f3",
         "batchId": "01JFSYFDFW9JAAEKHX672JMPSB"
     },
     "createdAt": "2024-12-22T19:44:50.250006Z",
-    "updatedAt": "2024-12-22T19:52:13.380706Z"
+    "updatedAt": "2024-12-22T19:44:50.250006Z"
 }
 ```
 
@@ -275,16 +275,7 @@ A successful response returns the details of the newly created system request.
 
 +++
 
-If you attempt to initiate a delete request for a Record dataset batch, you will encounter a 400-level error, similar to the following:
-
-```json
-{
-    "type": "https://ns.adobe.com/aep/errors/UPAPI-036002-422",
-    "title": "Invalid system job payload.",
-    "status": 422,
-    "requestId": "5YrVbqD3YvxYOn5ihuC3KILIoEPZgdJN"
-}
-```
+If you attempt to initiate a delete request for a Record dataset batch, the request will fail.
 
 ## View a specific delete request {#view-a-specific-delete-request}
 
