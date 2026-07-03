@@ -87,7 +87,7 @@ Please note you should **not** include consent information with an externally ge
 
 ### Can I use an externally generated audience to build other audiences?
 
-Yes, any externally generated audience will appear within the audience inventory and can be used when building audiences within the [Segment Builder](./ui/segment-builder.md).
+Yes, any externally generated audience will appear within the audience inventory and can be used when building audiences within [Segment Builder](./ui/segment-builder.md).
 
 ### How often are externally generated audiences evaluated?
 
@@ -296,19 +296,19 @@ At this point in time, no. However, this capability may be available in the futu
 
 The following section lists questions related to Audience Composition.
 
-### When should I use Audience Composition as opposed to using the Segment Builder?
+### When should I use Audience Composition as opposed to using Segment Builder?
 
 Both Audience Composition and Segment Builder have important roles in the creation of building audiences in Experience Platform.
 
-The Segment Builder is more suited for audience **creation** (for building an audience from scratch), while Audience Composition is more suited for audience **curation and personalization** (for creating new audiences based on an existing audience).
+Segment Builder is more suited for audience **creation** (for building an audience from scratch), while Audience Composition is more suited for audience **curation and personalization** (for creating new audiences based on an existing audience).
 
 The following table illustrates the difference between the two services:
 
 | Segment Builder | Audience Composition |
 | --------------- | -------------------- |
-| <ul><li>Single stage audience generation</li><li>Creates the basic blocks of audiences from profile, time-series, and multi-entity data</li><li>Used to create **one** audience</li></ul> | <ul><li>Multi-stage audience generation, using set based operations</li><li>Uses the audiences created by the Segment Builder and applies data enrichment options such as ranking profile attributes and splitting into sub-audiences</li><li>Used to create **multiple** audiences at once</li></ul> |
+| <ul><li>Single stage audience generation</li><li>Creates the basic blocks of audiences from profile, time-series, and multi-entity data</li><li>Used to create **one** audience</li></ul> | <ul><li>Multi-stage audience generation, using set based operations</li><li>Uses the audiences created by Segment Builder and applies data enrichment options such as ranking profile attributes and splitting into sub-audiences</li><li>Used to create **multiple** audiences at once</li></ul> |
 
-To learn more about the Segment Builder, please read the [Segment Builder guide](./ui/segment-builder.md). To learn more about Audience Composition, please read the [Audience Composition guide](./ui/audience-composition.md).
+To learn more about Segment Builder, please read the [Segment Builder guide](./ui/segment-builder.md). To learn more about Audience Composition, please read the [Audience Composition guide](./ui/audience-composition.md).
 
 ### Can I use externally generated audiences in Audience Composition?
 
@@ -408,7 +408,7 @@ For example, let's say you've created two mutually exclusive audiences: Audience
 
 When the batch segmentation evaluation job runs, profile 1 will go to Audience A, while profile 2 will go to Audience B. Later on, but before the next day's batch segmentation evaluation job runs, an event that reconciles the two profiles enters Experience Platform. As a result, a single merged profile that contains profiles 1 and 2 is created. 
 
-Until the next batch segment evaluation job is run, the new merged profile will have audience membership in **both** profile 1 and profile 2. As a result, this means it'll be a member of **both** Audience A and Audience B, despite the fact that these audiences have contradictory definitions. For the end-user, this is the **exact same situation** as before the profiles were connected, since there was always just the one person involved, and Experience Platform just did **not** have enough information to connect the two profiles together. 
+Until the next batch audience evaluation job is run, the new merged profile will have audience membership in **both** profile 1 and profile 2. As a result, this means it'll be a member of **both** Audience A and Audience B, despite the fact that these audiences have contradictory definitions. For the end-user, this is the **exact same situation** as before the profiles were connected, since there was always just the one person involved, and Experience Platform just did **not** have enough information to connect the two profiles together. 
 
 If you use profile lookup to retrieve the newly created profile and look at its audience membership, it'll show that it's a member of **both** Audience A and Audience B, despite the fact that both of these audiences have contradictory definitions. Once the daily batch segmentation evaluation job runs, the audience membership will be updated to reflect this updated state of profile data.
 

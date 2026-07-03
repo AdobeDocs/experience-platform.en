@@ -364,7 +364,7 @@ Yes, the dataset associated with the audience is created on the data lake. The a
 
 +++Answer
 
-No. Enriched attributes in the audience are available for use in both enterprise batch and file-based destinations. If you encounter an error like "The following segment IDs have namespaces that are not allowed for this destination: e917f626-a038-42f7-944c-xyxyxyx," create a new segment in Data Distiller and use it with any available destination.
+No. Enriched attributes in the audience are available for use in both enterprise batch and file-based destinations. If you encounter an error like "The following audience IDs have namespaces that are not allowed for this destination: e917f626-a038-42f7-944c-xyxyxyx," create a new audience in Data Distiller and use it with any available destination.
 
 +++
 

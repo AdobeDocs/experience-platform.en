@@ -164,6 +164,6 @@ Customer Journey Management can also send consent-change signals back to Experie
 
 ## Next steps
 
-This guide covered how to configure your Experience Platform operations to process customer consent data using the Adobe standard, and have those attributes represented in customer profiles. You can now integrate customer consent preferences as a determining factor in segment qualification and other downstream use cases.
+This guide covered how to configure your Experience Platform operations to process customer consent data using the Adobe standard, and have those attributes represented in customer profiles. You can now integrate customer consent preferences as a determining factor in audience qualification and other downstream use cases.
 
 For more information on Experience Platform's privacy-related capabilities, see the overview on [governance, privacy, and security in Experience Platform](../../overview.md).

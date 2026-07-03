@@ -112,7 +112,7 @@ The Segment Builder page appears. On this page, you can use the components to bu
 
 >[!NOTE]
 >
->For more detailed information about using the Segment Builder, please read the [Segment Builder UI guide](/help/segmentation/ui/segment-builder.md).
+>For more detailed information about using Segment Builder, please read the [Segment Builder UI guide](/help/segmentation/ui/segment-builder.md).
 
 To achieve the goal of finding these visitors, you'll first need to add a **[!UICONTROL Page View]** event to your audience. Select the **[!UICONTROL Events]** tab under **[!UICONTROL Fields]**, then drag and drop the **[!UICONTROL Page View]** event and add it to the events section canvas.
 

@@ -170,17 +170,17 @@ You can see that profiles with low propensity to convert are less likely to have
 
 ### Create an audience
 
-Selecting the **[!UICONTROL Create Segment]** button in any of the buckets for low, medium, and high propensity redirects you to Segment Builder.
+Selecting the **[!UICONTROL Create audience]** button in any of the buckets for low, medium, and high propensity redirects you to Segment Builder.
 
 >[!NOTE]
 >
->The **[!UICONTROL Create Segment]** button is only available if Real-Time Customer Profile is enabled for the dataset. For more information on how to enable Real-Time Customer Profile, visit the [Real-Time Customer Profile overview](../../../rtcdp/overview.md).
+>The **[!UICONTROL Create audience]** button is only available if Real-Time Customer Profile is enabled for the dataset. For more information on how to enable Real-Time Customer Profile, visit the [Real-Time Customer Profile overview](../../../rtcdp/overview.md).
 
 ![Button to create an audience from influential factors in Customer AI insights.](../images/insights/influential-factors-create-segment.png)
 
 ![Button to create an audience from influential factors in Customer AI insights.](../images/insights/create-segment.png)
 
-Segment Builder is used to create an audience. When selecting **[!UICONTROL Create Segment]** from the Insights page, Customer AI automatically adds the selected buckets information to the audience. To finish creating your audience, simply fill in the **Name** and **Description** containers located in the right rail of the Segment Builder user interface. After you have given the audience a name and description, select **[!UICONTROL Save]** in the top-right.
+Segment Builder is used to create an audience. When selecting **[!UICONTROL Create audience]** from the Insights page, Customer AI automatically adds the selected buckets information to the audience. To finish creating your audience, simply fill in the **Name** and **Description** containers located in the right rail of the Segment Builder user interface. After you have given the audience a name and description, select **[!UICONTROL Save]** in the top-right.
 
 >[!NOTE]
 >
@@ -190,7 +190,7 @@ Segment Builder is used to create an audience. When selecting **[!UICONTROL Crea
 
 To view your new audience in the Experience Platform UI, select **[!UICONTROL Audiences]** in the left navigation. The **[!UICONTROL Browse]** page appears and displays all available audiences.
 
-![Segments dashboard displaying a list of all available audiences in the Experience Platform UI.](../images/insights/Segments-dashboard.png)
+![Audiences dashboard displaying a list of all available audiences in the Experience Platform UI.](../images/insights/Segments-dashboard.png)
 
 ## Historical performance {#historical-performance}
 
