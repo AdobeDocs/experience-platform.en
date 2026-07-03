@@ -106,7 +106,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 | --------- | ---------- | --------- |
-| Export type | **[!UICONTROL Segment export]** | Exports all members of a segment (audience) with the identifiers (IDFA, GAID, or others) used in the [!DNL Index Exchange] destination. |
+| Export type | **[!UICONTROL Segment export]** | Exports all members of an audience with the identifiers (IDFA, GAID, or others) used in the [!DNL Index Exchange] destination. |
 | Export frequency | **[!UICONTROL Batch]** | Exports files to downstream platforms at intervals of 3, 6, 8, 12, or 24 hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -172,11 +172,11 @@ Selecting target fields:
 
 ### Register segments with [!DNL Index] {#register-segments}
 
-Before or after activating data to the destination, contact your [!DNL Index] Representative to register the segments you plan to activate. Your representative will provide instructions on how to register additional segment details, including names, IDs, descriptions, and pricing, if applicable.
+Before or after activating data to the destination, contact your [!DNL Index] Representative to register the segments you plan to activate. Your representative will provide instructions on how to register additional audience details, including names, IDs, descriptions, and pricing, if applicable.
 
 ## Exported data / Validate data export {#exported-data}
 
-Once registration is complete, the segments will be available for targeting in your [!DNL Index] account. To confirm that data is being received correctly, contact your [!DNL Index] Representative, who can provide details on the volume of segment data received.
+Once registration is complete, the segments will be available for targeting in your [!DNL Index] account. To confirm that data is being received correctly, contact your [!DNL Index] Representative, who can provide details on the volume of audience data received.
 
 ## Data usage and governance {#data-usage-governance}
 

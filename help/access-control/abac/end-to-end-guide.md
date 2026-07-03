@@ -67,7 +67,7 @@ You will:
 
 * [Label the roles for your users](#label-roles): Use the example of a healthcare provider (ACME Business Group) whose marketing group works with external agencies.
 * [Label your resources (schema fields and audiences)](#label-resources): Assign the **[!UICONTROL PHI/ Regulated Health Data]** label to schema resources and audiences.
-* [Activate the policy that will link them together](#policy): Enable the default policy to prevent access to schema fields and audiences by connecting the labels on your resources to the labels in your role. Users with matching labels will then be given access to the schema field and segment across all sandboxes.
+* [Activate the policy that will link them together](#policy): Enable the default policy to prevent access to schema fields and audiences by connecting the labels on your resources to the labels in your role. Users with matching labels will then be given access to the schema field and audience across all sandboxes.
 
 ## Permissions
 
@@ -150,7 +150,7 @@ Select **[!UICONTROL Blood Glucose >100]** (by the audience name, not the checkb
 
 ![Image showing the Blood Glucose >100 being selected from the Audiences tab](../images/abac-end-to-end-user-guide/abac-select-audience.png)
 
-The segment **[!UICONTROL Details]** screen appears. Select **[!UICONTROL Manage Access]**.
+The audience **[!UICONTROL Details]** screen appears. Select **[!UICONTROL Manage Access]**.
 
 ![Image showing the selection of Manages access](../images/abac-end-to-end-user-guide/abac-audience-fields-manage-access.png)
 
@@ -162,7 +162,7 @@ Repeat the above steps with **[!UICONTROL Insulin <50]**.
 
 >[!NOTE]
 >
-> Assign labels created in the [!UICONTROL Permissions] workspace (such as the segment labels above) to various objects in Adobe Journey Optimizer using [Object Level Access Control](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access)." 
+> Assign labels created in the [!UICONTROL Permissions] workspace (such as the audience labels above) to various objects in Adobe Journey Optimizer using [Object Level Access Control](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access)." 
 
 ## Activate the access control policy {#policy}
 

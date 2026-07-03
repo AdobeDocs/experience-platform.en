@@ -53,7 +53,7 @@ The following learning outcomes are covered in the Data Science Workspace course
 - The role of hyper-parameters in model development
 - How to publish trained models as a service
 - How to use Data Science Workspace to enrich your Real-Time Customer Profile data
-- How to create a streaming segment with your model output
+- How to create a streaming audience with your model output
 
 ## Lessons
 

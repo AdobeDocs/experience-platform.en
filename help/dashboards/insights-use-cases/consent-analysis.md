@@ -84,7 +84,7 @@ The [!UICONTROL Subscriptions] folder appears. From the options available, selec
 >
 >There is a soft limit on the number of audiences that you are recommended to create. More information can be found in the [segmentation guardrails documentation](../../profile/guardrails.md#segmentation-guardrails).
 
-![The [!UICONTROL Choice Value] attribute with the [!UICONTROL Yes (opt-in)] value highlighted in the segment builder. The name and description of the audience are also highlighted.](../images/insights-use-cases/consent-analysis/choice-value.png)
+![The [!UICONTROL Choice Value] attribute with the [!UICONTROL Yes (opt-in)] value highlighted in the Segment Builder. The name and description of the audience are also highlighted.](../images/insights-use-cases/consent-analysis/choice-value.png)
 
 After you have created the necessary audiences, they are listed in the [!UICONTROL Audiences] [!UICONTROL Browse] tab. 
 
