@@ -88,6 +88,10 @@ When you want to trim stale data from the Profile store automatically over time,
 
 Experience Event TTL (also called Experience Event expiration) applies at the dataset level and removes event data once it reaches the age that you set. It removes only events; a profile's attributes remain until all of that profile's data is gone. The minimum expiration is one day. For how to configure it, see [Experience Event expirations](../profile/event-expirations.md).
 
+>[!NOTE]
+>
+>Unexpectedly high event volume can also result from bot traffic rather than genuine user activity. For guidance on identifying and filtering bot traffic, see [Bot filtering in Query Service](../query-service/use-cases/bot-filtering.md).
+
 Pseudonymous Profile TTL (Pseudonymous Profile data expiration) applies at the sandbox level and removes pseudonymous (unknown) profiles that have had no activity for the period that you set. It removes both events and profile records. This setting is self-serve, with a default expiration of 14 days in production sandboxes and 3 days in development sandboxes. For how to configure it, see [Pseudonymous profile data expiration](../profile/pseudonymous-profiles.md).
 
 The two settings differ in scope and in what they remove:
