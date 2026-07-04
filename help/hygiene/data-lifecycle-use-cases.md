@@ -20,7 +20,7 @@ When data accumulates beyond what your use cases require, you face several risks
 * **Degraded performance.** Excess data increases system load and can slow processing.
 * **Privacy exposure.** Retaining data longer than it is useful increases privacy risk and regulatory exposure.
 
-To avoid these outcomes, retain data only as long as it supports an active use case. Behavioral data, such as event data, typically consumes far more storage than record data, so it is usually where unmanaged growth has the greatest impact.
+To avoid these outcomes, retain data only as long as it supports an active use case, and apply the same principle at ingestion by bringing in only the data your use cases require. Behavioral data, such as event data, typically consumes far more storage than record data, so it is usually where unmanaged growth has the greatest impact.
 
 A key part of this decision is matching data to the workflow it serves. Experience Platform stores data in two repositories that serve different purposes:
 
@@ -110,12 +110,25 @@ Experience Event TTL and Pseudonymous Profile TTL control data in the Profile st
 
 Managing your data lifecycle is an ongoing practice, not a one-time task. Retain data only as long as it supports an active use case, and set each capability's duration to match how long the data stays useful.
 
+### Key considerations to guide your data strategy
+
+Answer the following questions for each dataset before you set specific retention durations:
+
+* **Is this data still needed for an active use case?** Retaining data beyond what your use cases require increases storage and processing costs without adding value.
+* **Does this data belong in an analytical or engagement workflow?** Align each dataset to the [workflow it serves](#why-manage) so it lives in the right repository.
+* **How long does this data need to be retained to stay useful?** Match each capability's duration to how long the data supports your use case, not to a default or indefinite period.
+* **How often do you review data usage?** Review usage on a regular basis, such as weekly, so you can catch inefficiencies and adjust retention settings before they affect cost or performance.
+
 Use the following guidance when you set retention durations:
 
 * **Experience Event TTL.** Set the expiration to cover the longest lookback your audiences need, and keep your audience lookback windows within that period so that segmentation stays accurate.
 * **Pseudonymous Profile TTL.** Set a shorter period than your Experience Event TTL to remove inactive unknown profiles sooner.
 * **Data lake retention.** Set a longer period for event data you still need for analysis, independent of when the same data expires from the Profile store. The minimum is 30 days; frequently accessed datasets are typically retained for 30–90 days and archival datasets for a year or more.
 
+>[!TIP]
+>
+>Apply the same retention discipline to non-production sandboxes as you do to production. Avoid copying full production datasets into a non-production sandbox without a defined use case, since unmanaged non-production data still counts toward your license usage.
+
 Combine the capabilities based on the data you keep. For example, for high-volume clickstream data, apply an Experience Event TTL with a shorter Pseudonymous Profile TTL to control your Profile store footprint, and set a longer data lake retention period to preserve events for long-term analysis. Use dataset expiration to retire entire datasets you no longer need, and record delete to remove specific records on request.
 
-Review your data usage regularly so that you can adjust these settings before data growth affects cost or performance. For the tools and best practices to track and manage your license entitlements, see [Data management license entitlement best practices](../landing/license-usage-and-guardrails/data-management-best-practices.md).
+For the tools and best practices to track and manage your license entitlements, see [Data management license entitlement best practices](../landing/license-usage-and-guardrails/data-management-best-practices.md).
