@@ -30,7 +30,7 @@ Data Prep supports date functions, both as strings and as datetime objects.
 
 ### Date function format
 
-The date function converts strings and datetime objects to become an ISO 8601 formatted ZonedDateTime object.
+The date function converts strings and datetime objects to become an [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) formatted `ZonedDateTime` object.
 
 **Format**
 

@@ -266,7 +266,7 @@ The following JSON shows an example of the type of data that the [!UICONTROL Con
 | `push` | Indicates whether the customer permits receiving push notifications. |
 | `sms` | Indicates whether the customer agrees to receive text messages. |
 | `val` | The customer-provided preference for the specified use case. In cases where the customer does not have to be prompted to provide consent, the value of this field should indicate the basis on which the marketing use case should take place. See the [appendix](#choice-values) for accepted values and definitions. |
-| `time` | An ISO 8601 timestamp of when the marketing preference changed, if applicable. Note that if the timestamp for any individual preference is the same as the one provided under `metadata`, then this field does not to be set for that preference. |
+| `time` | An [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) timestamp (`yyyy-MM-dd'T'HH:mm:ssXXX`) of when the marketing preference changed, if applicable. Note that if the timestamp for any individual preference is the same as the one provided under `metadata`, then this field does not to be set for that preference. |
 | `reason` | When a customer opts out of a marketing use case, this string field represents the reason why the customer opted out. |
 
 {style="table-layout:auto"}
@@ -283,7 +283,7 @@ The following JSON shows an example of the type of data that the [!UICONTROL Con
 
 | Property | Description |
 | --- | --- |
-| `time` | An ISO 8601 timestamp for the last time any of the customer's consents and preferences were updated. This field can be used instead of applying timestamps to individual preferences in order to reduce load and complexity. Providing an `time` value under an individual preference overrides the `metadata` timestamp for that particular preference. |
+| `time` | An ISO 8601 timestamp (`yyyy-MM-dd'T'HH:mm:ssXXX`) for the last time any of the customer's consents and preferences were updated. This field can be used instead of applying timestamps to individual preferences in order to reduce load and complexity. Providing an `time` value under an individual preference overrides the `metadata` timestamp for that particular preference. |
 
 {style="table-layout:auto"}
 

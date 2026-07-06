@@ -1,6 +1,6 @@
 ---
 title: Health Checks
-description: Learn how to use health checks in Adobe Experience Platform to proactively detect schema and identity configuration issues before they impact your data operations.
+description: Learn how to use health checks in Adobe Experience Platform to detect schema, identity, and dataset configuration issues before they impact your data.
 solution: Experience Platform
 type: Documentation
 role: Admin, User
@@ -8,7 +8,7 @@ exl-id: b35aef7c-54f4-4758-9b36-a981510ae21b
 ---
 # Health Checks
 
-Health checks scan your schemas and identities used in your sandbox and provide a summary of issues that you can use to explore and troubleshoot with AI Assistant. In the future, more objects can be scanned for a more comprehensive report.
+Health checks scan your schemas, identities, and datasets in your sandbox and provide a summary of issues that you can explore and troubleshoot with AI Assistant.
 
 Poor schema and identity configurations lead to significant downstream issues, including incorrect profile creation, failed segment qualification, and inaccurate activation. These issues are difficult to detect and often require specialized expertise to diagnose. Health checks shift your approach from reactive troubleshooting to proactive, preventative maintenance.
 
@@ -39,7 +39,7 @@ The health checks dashboard provides three areas of information to help you asse
 
 ### Objects evaluated {#objects-evaluated}
 
-The **[!UICONTROL Objects evaluated]** section shows the total number of schemas and identity namespaces scanned, along with how many issues were found for each category. This gives you a quick view of the scope and severity of configuration problems in your sandbox.
+The **[!UICONTROL Objects evaluated]** section shows the total number of schemas, identity namespaces, and datasets scanned, along with how many issues were found for each category. This gives you a quick view of the scope and severity of configuration problems in your sandbox.
 
 ### Scan results {#scan-results}
 
@@ -57,7 +57,19 @@ Select any card to explore the details of that health check.
 
 ## Available health checks {#available-health-checks}
 
-Health checks currently evaluate five foundational areas of schema and identity configuration. These checks target the most impactful data modeling issues across the platform.
+Health checks currently evaluate seven areas across schema, identity, and dataset configuration. The following table lists all available checks.
+
+| Check | Object type |
+| --- | --- |
+| [Identity field validation](#identity-field-validation) | Schema |
+| [Identity graph linking rules](#identity-graph-linking-rules) | Identity |
+| [People and non-people identity configuration](#people-non-people-identity) | Schema, identity |
+| [Custom identity namespace description](#namespace-missing-description) | Identity |
+| [Deprecated identity namespace](#deprecated-namespace) | Identity |
+| [Pseudonymous profile TTL](#pseudonymous-profile-ttl) | Profile |
+| [Experience Event datasets TTL](#experience-event-datasets-ttl) | Dataset |
+
+These checks target the most impactful data modeling and data lifecycle issues across the platform.
 
 ### Identity field validation {#identity-field-validation}
 
@@ -168,6 +180,50 @@ When you select the **[!UICONTROL Deprecated Identity Namespace]** card, a detai
 
 For more information, see the [Experience Cloud knowledge base article on obsolete namespaces](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
 
+### Pseudonymous profile TTL {#pseudonymous-profile-ttl}
+
+Scans that the Pseudonymous Profile Expiration policy is active for the sandbox and lists relevant unauthenticated namespaces.
+
+| Detail | Description |
+| --- | --- |
+| **Issue** | The Pseudonymous Profile Expiration policy is not active for this sandbox. |
+| **Impact** | Without an expiration policy, pseudonymous profiles accumulate indefinitely. This is the leading cause of Addressable Audience overages and slows real-time segmentation. |
+| **Remediation** | Activate the Pseudonymous Profile Expiration policy for your sandbox and set an expiration window appropriate for your use case. |
+
+When you select the **[!UICONTROL Pseudonymous Profile TTL]** card, a detail panel opens on the right. The panel shows:
+
+* **[!UICONTROL Description]**: Scans that the Pseudonymous Profile Expiration policy is active for the sandbox and lists relevant unauthenticated namespaces.
+* **[!UICONTROL Impact]**: Accumulation of pseudonymous profiles is the lead cause of Addressable Audience overages. Without a P-TTL policy, profiles reside indefinitely. This bloat slows real-time segmentation.
+* **[!UICONTROL General areas of impact]**: License compliance, as profiles that should have expired still count toward the total Addressable Audience. Performance, as bloated profiles increase the latency of profile lookups. No marketing value of excessive storage.
+* **[!UICONTROL Experience League Documentation]**: Links to pseudonymous profile expiration documentation and data management best practices.
+* **[!UICONTROL Configure profile settings]**: A button to navigate to profile settings and activate the expiration policy.
+
+![Pseudonymous Profile TTL detail panel showing impact, general areas of impact, Experience League documentation links, and Configure profile settings button](assets/health-checks/pseudonymous-profile-ttl-detail.png)
+
+For more information, see the documentation on [pseudonymous profile expiration](/help/profile/pseudonymous-profiles.md) and [data management best practices](/help/landing/license-usage-and-guardrails/data-management-best-practices.md).
+
+### Experience Event datasets TTL {#experience-event-datasets-ttl}
+
+Scans Lake and Profile event datasets to ensure that data expiration is appropriately configured.
+
+| Detail | Description |
+| --- | --- |
+| **Issue** | Profile-enabled Experience Event datasets are missing a configured data expiration. |
+| **Impact** | Without a defined expiration policy, data is retained indefinitely in the Profile Store and Data Lake. This leads to degraded performance for ingestion and segmentation, and can impact [!DNL Adobe Journey Optimizer] performance, including audience qualification and journey execution. |
+| **Remediation** | Set a data expiration on your Experience Event datasets. Align the expiration window with your segmentation lookback windows and follow standard retention best practices for your use case. |
+
+When you select the **[!UICONTROL Experience Event Datasets TTL]** card, a detail panel opens on the right. The panel shows:
+
+* **[!UICONTROL Description]**: Scans Lake and Profile event datasets to ensure that Experience Event Time to Live (E-TTL) is appropriately configured to prevent data bloat and performance degradations.
+* **[!UICONTROL Impact]**: Absence of a defined E-TTL leads to infinite data retention in the Profile Store and Data Lake. This may lead to degraded performance for ingestion and segmentation, and can impact [!DNL Adobe Journey Optimizer] performance, including audience qualification and journey execution.
+* **[!UICONTROL General areas of impact]**: Degraded query speeds and slow segmentation due to excessive data volume. System instability.
+* **[!UICONTROL Experience League Documentation]**: A link to Experience Event dataset retention documentation.
+* **[!UICONTROL Affected datasets]**: A list of Lake and Profile event datasets without a configured data expiration. Select a dataset to open it. When no issues are detected, the panel shows a **[!UICONTROL Check Passed]** confirmation instead.
+
+![Experience Event Datasets TTL detail panel showing impact, general areas of impact, Experience League documentation links, and Check Passed confirmation](assets/health-checks/experience-event-datasets-ttl-detail.png)
+
+For more information, see the documentation on [Experience Event dataset retention](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md) and [Experience Event expirations](/help/profile/event-expirations.md).
+
 ## Next steps {#next-steps}
 
 After reviewing your health check results, explore the following resources to deepen your understanding:
@@ -175,4 +231,6 @@ After reviewing your health check results, explore the following resources to de
 * Learn about [schema best practices](/help/xdm/schema/best-practices.md) for designing reliable data models.
 * Understand [identity graph linking rules](/help/identity-service/identity-graph-linking-rules/overview.md) to prevent profile collapse.
 * Review [identity namespace documentation](/help/identity-service/features/namespaces.md) for namespace management best practices.
+* Configure [pseudonymous profile expiration](/help/profile/pseudonymous-profiles.md) to manage data retention and reduce Addressable Audience overages.
+* Set up [Experience Event dataset retention](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md) to prevent data bloat and performance degradation.
 * Explore other [Run and Operate tools](/help/run-and-operate/overview.md) including [[!UICONTROL Job Schedules]](/help/run-and-operate/job-schedules.md) for batch operation visibility.

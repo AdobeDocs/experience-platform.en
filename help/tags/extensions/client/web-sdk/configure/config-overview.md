@@ -39,14 +39,16 @@ topic_v2:
 
 The Adobe Experience Platform Web SDK tag extension provides several options that you can customize. These configuration settings are the tag equivalent of using the [`configure`](/help/collection/js/commands/configure/overview.md) command in the JavaScript library.
 
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Log in to [CX Enterprise](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Select the desired tag property.
 1. Navigate to **[!UICONTROL Extensions]**, then select **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
 
-## Custom build components
+The configuration page is organized into three accordions: [!UICONTROL Build options], [!UICONTROL SDK instances], and [!UICONTROL Property actions].
 
-If optimizing build size is a priority for your organization, you can disable certain features that you don't use to decrease the extension's build size. See [Custom build components](custom-build-components.md) for more information.
+## Build options
+
+The **[!UICONTROL Build options]** accordion contains library management settings and the option to disable specific Web SDK build components. Disabling unused components reduces the extension's build size and can improve performance. See [Build options](custom-build-components.md) for more information.
 
 ## SDK instances
 
@@ -61,3 +63,9 @@ Most implementations typically need a single SDK instance. However, if your orga
 * [**[!UICONTROL Streaming media]**](streaming-media.md): Settings specific to streaming media collection.
 * [**[!UICONTROL Datastream configuration overrides]**](configuration-overrides.md): Modify configuration settings when certain conditions are met.
 * [**[!UICONTROL Advanced settings]**](advanced-settings.md): Specify the base path for the Edge Network.
+
+## Property actions
+
+The **[!UICONTROL Property actions]** accordion contains property-wide maintenance utilities that apply to the tag property as a whole rather than to individual SDK instances.
+
+* [**[!UICONTROL Repair data element references]**](repair-data-element-references.md): Scan all Web SDK extension actions in the property and replace stale data element references where possible.

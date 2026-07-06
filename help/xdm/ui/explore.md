@@ -20,115 +20,134 @@ role_v2:
 
 In Adobe Experience Platform, all Experience Data Model (XDM) schema resources are stored in the [!DNL Schema Library], including standard resources provided by Adobe and custom resources defined by your organization. In the Experience Platform UI, you can view the structure and fields of any existing schema, class, field group, or data type in the [!DNL Schema Library]. This is especially useful when planning and preparing for data ingestion, as the UI provides information on the expected data types and use cases of each field provided by these XDM resources.
 
-This tutorial covers the steps for exploring existing schemas, classes, field groups, and data types in the Experience Platform UI.
+This guide explains how to explore existing schemas, classes, field groups, data types, and relationships in the Experience Platform UI.
 
 ## Look up a schema resource {#lookup}
 
-In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left navigation. The [!UICONTROL Schemas] workspace provides a **[!UICONTROL Browse]** tab to explore all schemas in your organization, along with additional dedicated tabs for exploring **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, **[!UICONTROL Data types]**, and **[!UICONTROL Relationships]** respectively.
+In the Experience Platform UI, select **[!UICONTROL Schemas]** in the left rail. The [!UICONTROL Schemas] workspace provides a **[!UICONTROL Browse]** tab where you can view all schemas in your organization. You can also use the **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, **[!UICONTROL Data types]**, and **[!UICONTROL Relationships]** tabs to view those resources.
 
 ![The Schemas workspace with several tabs highlighted.](../images/ui/explore/tabs.png)
 
-The filter icon (![Filter Icon Image](/help/images/icons/filter.png)) reveals controls in the left rail to narrow down listed results. Resource filters are available for schemas and relationships on the **[!UICONTROL Browse]** and **[!UICONTROL Relationships]** tabs respectively. On the **[!UICONTROL Field groups]** tab, use the filters described in [Field group metadata and filtering](#field-group-metadata-and-filtering) to narrow the list by compatible class and industry tags.
+## Filter and search schemas {#filter-search}
 
-On the [!UICONTROL Browse] tab of the [!UICONTROL Schemas] workspace, you can filter your schema inventory. Use the **[!UICONTROL Included in Profile]** toggle to only show schemas that have been enabled for use in [Real-Time Customer Profile](../../profile/home.md). Use the **[!UICONTROL Show adhoc schemas]** toggle to filter the list of schemas created with fields namespaced for use only by a single dataset.
+Use the filtering and search tools in the **[!UICONTROL Schemas]** workspace to narrow the list of schemas and locate specific resources more quickly. The filter icon (![Filter icon](/help/images/icons/filter.png)) opens the filter panel, where you can filter schemas using metadata, identity, relationship, date, and ownership criteria. Resource filters are available on the **[!UICONTROL Browse]** and **[!UICONTROL Relationships]** tabs.
 
-![The [!UICONTROL Schemas] workspace [!UICONTROL Browse] tab with the filters panel highlighted.](../images/ui/explore/filters.png)
+![The [!UICONTROL Schemas] workspace [!UICONTROL Browse] tab with the comprehensive filters panel highlighted.](../images/ui/explore/schemas-filter-sidebar.png)
 
-On the [!UICONTROL Relationship] tab of the [!UICONTROL Schemas] workspace, you can filter the list of relationships based on four criteria. The filters include [!UICONTROL Source schema], [!UICONTROL Destination schema], [!UICONTROL Source class], and the [!UICONTROL Destination class]. The table below provides a description of the filters.
 
-| Filter                            |Description |
-|-----------------------------------|------------|
-| [!UICONTROL Source schema]        | To see all relationships where the selected schema is the starting point or "source", select a schema from the [!UICONTROL Source schema] dropdown menu. |
-| [!UICONTROL Destination schema]   | To view all relationships where the selected schema is the target or "destination", select a schema from the [!UICONTROL Destination schema] dropdown menu. |
-| [!UICONTROL Source class]         | To filter relationships based on the class of the initiating schema, select a class from the [!UICONTROL Source class] dropdown menu. |
-| [!UICONTROL Destination class]    | To display relationships that end with schemas of a specific class, select a class from the [!UICONTROL Destination class] dropdown menu. |
+### Schema metadata filters
+
+Filter schemas by their fundamental characteristics and organizational attributes.
+
+| Filter | Control Type | Description |
+|--------|-------------|-------------|
+| [!UICONTROL Show profiles] | Radio buttons | Display [!UICONTROL All], [!UICONTROL Enabled] only, or [!UICONTROL Disabled] only. Profile-enabled schemas participate in [Real-Time Customer Profile](../../profile/home.md) and support unified customer views across your organization. |
+| [!UICONTROL Schema type] | Checkboxes | Filter by schema origin: [!UICONTROL Standard] schemas (provided by Adobe), [!UICONTROL Relational] schemas (structured, relational data modeling capabilities), or [!UICONTROL Ad hoc] schemas (fields namespaced for use by a single dataset). |
+| [!UICONTROL Class] | Dropdown | Show only schemas built on specific class foundations such as XDM Individual Profile, XDM ExperienceEvent, or custom classes defined by your organization. |
+| [!UICONTROL Tags] | Dropdown | Filter schemas by user-applied, user-defined tags. Options include [!UICONTROL Has any tag] and [!UICONTROL Has all tags]. Use tags to locate schemas organized by project, team, business domain, or custom taxonomies that support your organizational schema management practices. |
 
 {style="table-layout:auto"}
 
-![The Relationships tab with the filters section highlighted.](../images/ui/explore/relationships-filter.png)
+### Schema attribute filters
 
-You can also use the search bar to narrow down results further.
+Narrow results based on schema structure and identity configuration.
+
+| Filter | Control Type | Description |
+|--------|-------------|-------------|
+| [!UICONTROL Has relationship] | Yes/No checkboxes | Show only schemas that contain relationship fields connecting to other schemas. Relationship fields enable data connections across different schemas and support complex data modeling scenarios. |
+| [!UICONTROL Has primary identity] | Yes/No checkboxes | Filter for schemas with designated primary identity fields. Primary identity fields are required for Profile enablement and serve as the foundation for customer data unification. |
+| [!UICONTROL Primary identity namespace] | Dropdown | Find schemas using particular identity types such as Email, ECID, Phone, or custom namespaces as their primary identifier. |
+
+{style="table-layout:auto"}
+
+### Temporal and creator filters
+
+Filter schemas based on creation patterns and ownership.
+
+| Filter | Control Type | Description |
+|--------|-------------|-------------|
+| [!UICONTROL Creation date] | Start and end date pickers | Filter schemas by creation date ranges. Locate recently created schemas or find schemas built during specific project phases or time periods. |
+| [!UICONTROL Modified date] | Start and end date pickers | Filter schemas by modification date ranges. Identify schemas with recent updates or changes to support maintenance and governance workflows. |
+| [!UICONTROL Created by] | Dropdown | Filter schemas by their original creator. Locate schemas built by specific team members, systems, or service accounts to support ownership tracking and collaboration. |
+
+{style="table-layout:auto"}
+
+### Relationship tab filters
+
+When viewing schema relationships on the [!UICONTROL Relationships] tab, use additional filters to explore schema connections:
+
+| Filter | Control Type | Description |
+|--------|-------------|-------------|
+| [!UICONTROL Source schema] | Dropdown | Display relationships where the selected schema is the starting point or "source". |
+| [!UICONTROL Destination schema] | Dropdown | Show relationships where the selected schema is the target or "destination". |
+| [!UICONTROL Source class] | Dropdown | Filter relationships based on the class of the initiating schema. |
+| [!UICONTROL Destination class] | Dropdown | Display relationships that end with schemas of a specific class. |
+
+{style="table-layout:auto"}
+
+![The Relationship tab of the Schemas workspace with the filter fields highlighted.](../images/ui/explore/relationships-filter.png)
+
+### Combine multiple filters
+
+Combine filters to narrow the list of schemas and find specific resources more quickly. For example, you can find [!UICONTROL Profile-enabled] standard schemas with custom tags that were created within the last month, or locate ad hoc schemas that use an email primary identity and contain relationship fields.
+
+![The enhanced filter panel in the Schemas workspace showing multiple filter types applied simultaneously.](../images/ui/explore/enhanced-filters.png)
+
+Applied filters appear as removable chips in the inventory header row. To remove a filter, select the **×** on its chip. To remove all active filters at once, select **[!UICONTROL Clear all]**.
+
+Use the search bar to narrow down results further.
 
 ![The Browse tab of the Schemas workspace with the search field highlighted.](../images/ui/explore/search.png)
 
-The resources displayed in search results are ordered first by title matches, then by description matches. In turn, the more word matches in either of these categories, the higher the resource appears in the list.
+Search results are ranked based on matches in resource titles and descriptions. Title matches are prioritized over description matches, and resources with more matching terms appear higher in the results list.
 
 When you have found the resource you want to explore, select its name from the list to view its structure in the canvas.
 
-## Manage schemas, classes, field groups, and data types: actions and deletion {#xdm-resource-actions}
+## Browse, organize, and manage schemas {#browse-organize-manage-schemas}
 
-Use this section when you need to manage or delete XDM resources, or when an action (such as delete) is unavailable and you need to understand why.
+Use the [!UICONTROL Schemas] workspace to find, organize, and manage schemas. You can filter the schema inventory, sort metadata columns, and perform common schema actions directly from the inventory view.
 
-### Where to find actions (inline vs detail page) {#where-to-find-actions}
+### Browse and filter metadata
 
-To perform actions such as deleting, exporting, or copying a resource, use one of the following entry points:
+The schema inventory displays key schema metadata in a single table view. You can view tags, schema type, Profile enablement status, created date, last modified date, class, identities, relationships, behavior, and other metadata without opening individual schemas.
 
-On the **[!UICONTROL Browse]**, **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, and **[!UICONTROL Data types]** tabs, management actions are available in two locations:
+To sort the inventory, select a column header. Select the same column header again to reverse the sort order.
 
-- **Inline in the table**: Each resource row includes an actions menu (for example, **[!UICONTROL …]**) that provides direct access to available actions.
+If the inventory contains more results than fit on a single page, use the page controls at the bottom of the list to navigate between pages.
 
-![The schema inventory showing inline actions available from the ellipsis menu for each resource.](../images/ui/explore/xdm-schema-inventory-inline-actions-menu.png)
+![The Schemas workspace schema inventory showing the tags, schema type, Profile enablement, created date, last modified, class, identities, relationships, and behavior columns.](../images/ui/explore/schema-inventory-columns.png) 
 
-- **Resource detail view**: To access full actions in the detail view, you must select a **custom (tenant-defined)** resource. Standard (Adobe-provided) resources have limited actions and do not show options such as Delete, Copy JSON structure, or Add to package. Select a custom resource from the inventory to open its detail view, then use the **[!UICONTROL More]** menu in the page header to access the same available actions.
+### Take inline actions on schemas
 
-![The resource detail view header showing the More menu with available actions such as Delete, Copy JSON structure, and Download sample file.](../images/ui/explore/more-actions.png)
+Use the ellipsis menu for a schema row to perform common schema actions directly from the inventory view.
 
-These actions are consistent across both entry points for supported resource types (schemas, classes, field groups, and data types).
+Actions are available from both the inventory view and resource detail views. Some actions are available only for custom (tenant-defined) resources. Standard Adobe-provided resources may have limited action options.
 
-### Available actions {#available-actions}
+![The ellipsis menu for a schema row showing inline actions such as Edit, Delete, Apply labels, and Manage tags.](../images/ui/explore/schema-inline-actions.png)
 
-Depending on the resource type and your permissions, the following actions may be available:
+Depending on the resource type and permissions, you can edit schema properties, apply data governance labels, delete schemas, and manage tags without opening the schema. Additional actions include moving schemas to folders, adding schemas to deployment packages, copying schema JSON, and downloading sample files for testing.
 
-- **[!UICONTROL Delete]** — Permanently remove a custom resource from your organization (when constraints allow). If delete is blocked, see [Constraints](#delete-constraints).
-- **[!UICONTROL Download sample file]** — Generate a sample data file based on the resource structure. Step-by-step: [Generate sample XDM data](./sample.md).
-- **[!UICONTROL Copy JSON structure]** — Copy the resource definition in JSON format for reuse, export, or inspection. Step-by-step: [Export XDM schemas](./export.md).
-- **[!UICONTROL Add to package]** — Include the resource in a sandbox package for export or import across sandboxes. Step-by-step: [Export objects into a package](../../sandboxes/ui/sandbox-tooling.md#export-objects).
-
-The following applies to different resource types:
-
-- For **custom (tenant-defined)** schemas, classes, field groups, and data types, all actions above may be available.
-- For **standard (Adobe-defined)** classes, field groups, and data types:
-  - Only **[!UICONTROL Download sample file]** is available.
-  - **Delete**, **Copy JSON structure**, and **Add to package** are not available.
-
-### Delete behavior {#delete-behavior}
-
-Use the **[!UICONTROL Delete]** action when you want to remove a custom resource that is no longer needed.
-
->[!IMPORTANT]
+>[!NOTE]
 >
-> Deleting a resource permanently removes it from your organization and cannot be undone. Some resources cannot be deleted due to usage, permissions, or system constraints.
+>Use sample files only to test schema structure. Do not include production data.
 
-To delete a resource:
+For detailed instructions on each action, see the [schema actions guide](./resources/schemas.md#manage-from-browse).
 
-1. Locate the resource in the table or open its detail view.
-2. Select the actions menu (**[!UICONTROL …]** or **[!UICONTROL More]**).
-3. Select **[!UICONTROL Delete]**.
-4. Confirm the action in the dialog by selecting **[!UICONTROL Delete]** again.
+### Navigate schemas using tags and folders
 
-The resource is permanently removed from your organization after confirmation.
+Use tags and folders to organize and locate schemas in the inventory. Tags help you group schemas by project, team, data domain, or other categories defined by your organization. Folders provide a hierarchical structure for organizing related schemas.
 
-If deletion is not available for a resource, the option appears disabled with a tooltip explaining why the action cannot be performed.
+To filter schemas by tag, select the filter icon (![Filter icon](/help/images/icons/filter.png)) to open the filter panel. Then select one or more tags from the **[!UICONTROL Has any tag]** dropdown.
 
-![The schema inventory with a disabled delete inline action tooltip explaining the restriction.](../images/ui/explore/xdm-schema-inventory-disabled-delete-tooltip.png)
+![Filter schemas by user-defined tags in the schema inventory to locate specific schemas.](../images/ui/explore/user-defined-tags.png)
 
-### Constraints (dataset, Profile, RBAC, tenant vs global) {#delete-constraints}
+To browse schemas by folder, select the show folders icon (![Show folders icon](/help/images/icons/rail-left.png)). The folder hierarchy appears in the left rail. Select a folder to view its associated schemas.
 
-If an action such as **[!UICONTROL Delete]** is unavailable or disabled, it is typically due to one of the following conditions:
+![Navigate folder hierarchies in the left rail to browse and locate schemas.](../images/ui/explore/move-to-folder.png)
 
-- **Permissions (RBAC)**: You must have the required permissions (such as **[!UICONTROL Manage Schemas]**) to perform management actions. If permissions are missing, actions appear disabled with tooltips. To learn how permissions are configured, see the [access control UI overview](../../access-control/ui/overview.md).
+Tags and folders work with the inventory filtering system, allowing you to narrow the list of schemas based on their assigned tags and folder locations.
 
-- **Dataset association**: Resources that are used by one or more datasets (such as schemas associated with datasets) cannot be deleted. To identify and remove dataset dependencies, see [Delete a dataset](../../catalog/datasets/user-guide.md#delete).
-
-- **Profile enablement**: Schemas enabled for Real-Time Customer Profile cannot be deleted. For guidance on how Profile enablement affects your schema, see [Planning for Real-Time Customer Profile enablement](../schema/profile-enablement-planning.md).
-
-- **Tenant vs global resources**: Tenant-defined (custom) resources can be deleted (subject to constraints), while standard (Adobe-provided) classes, field groups, and data types cannot be deleted.
-
-These constraints are reflected directly in the UI. When an action is unavailable, it appears disabled and includes a tooltip explaining the specific limitation.
-
-If you cannot delete a resource, review the conditions above to determine whether you need to update permissions, remove dependencies, or adjust your data model.
-
-For additional schema editing workflows in the canvas, see [Create and edit schemas in the UI](./resources/schemas.md).
+For information on creating and managing tags across Experience Platform, see the [managing unified tags guide](../../administrative-tags/ui/managing-tags.md).
 
 ## Explore an XDM resource in the canvas {#explore}
 
@@ -142,11 +161,11 @@ All object-type fields containing sub-properties are collapsed by default when t
 
 ### Standard class and field group indicator {#standard-class-and-field-group-indicator}
 
-Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](/help/images/icons/lock-closed.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
+In the Schema Editor, standard classes and field groups display a padlock icon (![Padlock icon.](/help/images/icons/lock-closed.png)). The icon identifies Adobe-generated resources that have editing restrictions. It appears in the left rail next to class and field group names, and next to fields that belong to Adobe-generated resources in the schema diagram.
 
 ![The Schema Editor with the padlock icon highlighted](../images/ui/explore/schema-editor-padlock-icon.png)
 
-See the [Add custom fields to standard field groups](./resources/schemas.md) documentation for guidance. You cannot edit a standard class.
+You cannot edit a standard class. To extend a standard field group, see the [Add custom fields to standard field groups](./resources/schemas.md#custom-fields-for-standard-groups) documentation.
 
 ### System-generated fields {#system-fields}
 
@@ -288,4 +307,9 @@ These indicators are for visibility only and do not change schema structure. For
 
 ## Next steps
 
-This document covered how to explore existing XDM resources in the Experience Platform UI. For more information on the different features of the [!UICONTROL Schemas] workspace and [!DNL Schema Editor], see the [[!UICONTROL Schemas] workspace overview](./overview.md).
+Use the following resources to continue working with XDM schemas and related Experience Platform features:
+
+- To learn more about the **[!UICONTROL Schemas]** workspace and **[!DNL Schema Editor]**, see the [[!UICONTROL Schemas] workspace overview](./overview.md).
+- For information on creating and managing tags, see the [managing unified tags guide](../../administrative-tags/ui/managing-tags.md).
+- For guidance on inventory views, filtering, search, and workspace navigation patterns, see the [datasets user guide](../../catalog/datasets/user-guide.md).
+- For information on applying and managing data governance labels, see the [data usage labels user guide](../../data-governance/labels/user-guide.md).

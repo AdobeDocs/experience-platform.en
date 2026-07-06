@@ -107,6 +107,10 @@ When exporting *audience data*, Experience Platform creates a `.csv`, `parquet`,
 
 When exporting *datasets*, Experience Platform creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
 
+## Connect using Azure Private Link {#private-link}
+
+If your organization has strict network security requirements, you can configure this destination to route data exports over the [!DNL Microsoft Azure] private backbone instead of the public internet. See [Azure Private Link for destinations](./azure-private-link.md) for prerequisites, guardrails, and setup steps.
+
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]

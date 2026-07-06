@@ -48,7 +48,7 @@ With Real-Time CDP, you can:
 
 * Achieve a single view of your customer by combining data from across the enterprise.
 * Responsibly manage profiles with trusted governance and privacy controls for known and anonymous identifiers.
-* Generate actionable insights and scale audiences with AI and machine learning powered by Adobe Sensei and built for marketers.
+* Generate actionable insights and scale audiences with AI and machine learning powered by Adobe AI and built for marketers.
 * Deliver personalized experiences in real-time across all channels and destinations.
 
 ## Real-Time Customer Data Platform editions (Business-to-Consumer, Business-to-Business, Business-to-Person) {#rtcdp-editions}

@@ -36,7 +36,7 @@ topic_v2:
 >
 >Flexible audience evaluation is **only** available on instances of Experience Platform running on [!DNL Microsoft Azure]. To learn more about the supported Experience Platform infrastructure, see the [Experience Platform multi-cloud overview](../../landing/multi-cloud.md).
 >
->Additionally, flexible audience evaluation is **only** available for use with Real-Time CDP B2C Edition.
+>Additionally, flexible audience evaluation is **only** available for use with Real-Time CDP B2C Edition and Adobe Journey Optimizer.
 
 Flexible audience evaluation lets you run a batch segmentation job on demand. With flexible audience evaluation, you can run ad-hoc campaign launches, just-in-time communications, or other time-sensitive activities.
 

@@ -204,6 +204,10 @@ See the [Audiences mapped to destination status widget documentation](../guides/
 
 ## Audiences size {#audiences-size}
 
+>[!NOTE]
+>
+>The SQL for this insight uses `count_of_profiles` from `adwh_fact_profile_by_segment_trendlines`. For the definition of this metric and how it differs from profile snapshot data, see the [segment trendline metrics](../data-models/cdp-insights-data-model-b2c.md#segment-trendline-metrics) section of the Real-Time CDP Insights data model (B2C Edition) documentation.
+
 Questions answered by this insight:
 
 - Which audience segment has the largest size?
@@ -791,3 +795,4 @@ By reading this document, you now understand the SQL that generates dashboard in
 See the [View SQL documentation](../view-sql.md) for more information on how to adapt your insights' SQL directly through the PLatform UI.
 
 You can also read and understand the SQL that generates insights for the [Audiences](./audiences.md), [Account Profiles](./account-profiles.md), and [Destinations](./destinations.md) dashboards.
+

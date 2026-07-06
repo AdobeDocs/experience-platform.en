@@ -32,7 +32,7 @@ role: Developer
       - [ECID mapping migration guide](connectors/adobe-applications/marketo/migration.md)
   - Advertising {#advertising}
     - [Google Ads connector](connectors/advertising/ads.md)
-    - [Meta Ads connector](connectors/advertising/meta-ads.md)
+    - {hide-from-toc} [Meta Ads connector](connectors/advertising/meta-ads.md)
     - {hide-from-toc} [Pinterest Ads](connectors/advertising/pinterest-ads.md)
   - Analytics {#analytics}
     - [Mixpanel connector](connectors/analytics/mixpanel.md)
@@ -93,7 +93,7 @@ role: Developer
     - [Demandbase Intent](connectors/data-partners/demandbase.md)
     - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
   - Data sharing {#data-sharing}
-    - {hide-from-toc} [Deltashare](connectors/data-sharing/deltashare.md)
+    - [Delta Sharing](connectors/data-sharing/delta-sharing.md)
   - eCommerce {#ecommerce}
     - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
     - [Shopify](connectors/ecommerce/shopify.md)
@@ -117,8 +117,8 @@ role: Developer
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
     - [Salesforce Marketing Cloud (V2)](connectors/marketing-automation/sfmc.md)
   - Payments {#payments}
-    - [Square connector](connectors/payments/square.md)
-    - [Stripe connector](connectors/payments/stripe.md)
+    - [Square](connectors/payments/square.md)
+    - [Stripe](connectors/payments/stripe.md)
   - Protocols {#protocols}
     - [Generic OData connector](connectors/protocols/odata.md)
     - [Generic REST API connector](connectors/protocols/generic-rest.md)
@@ -250,7 +250,7 @@ role: Developer
       - [Marketo Custom Activities](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
     - Advertising {#advertising}
       - [Google Ads](tutorials/ui/create/advertising/ads.md)
-      - [Meta Ads](tutorials/ui/create/advertising/meta-ads.md)
+      - {hide-from-toc} [Meta Ads](tutorials/ui/create/advertising/meta-ads.md)
       - {hide-from-toc} [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
@@ -312,7 +312,7 @@ role: Developer
       - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
       - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
     - Data sharing {#data-sharing}
-      - {hide-from-toc} [Deltashare](tutorials/ui/create/data-sharing/deltashare.md)
+      - [Delta Sharing](tutorials/ui/create/data-sharing/delta-sharing.md)
     - eCommerce {#ecommerce}
       - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -360,6 +360,7 @@ role: Developer
     - [Marketing automation connection dataflow](tutorials/ui/dataflow/marketing-automation.md)
     - [Payment connection dataflow](tutorials/ui/dataflow/payments.md)
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
+  - [Manage dataflows in the UI](tutorials/ui/manage.md)
   - [Create a sources dataflow using templates in the UI](tutorials/ui/templates.md)
   - {hide-from-toc} [Filter sources objects](tutorials/ui/filter.md)
   - [Ingest encrypted data](tutorials/ui/encryped-ingestion.md)

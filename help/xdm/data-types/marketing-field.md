@@ -34,7 +34,7 @@ topic_v2:
 | Property | Data type | Description |
 | --- | --- | --- |
 | `reason` | String | When a customer opts out of a marketing use case, this string field represents the reason why the customer opted out. |
-| `time` | DateTime | An ISO 8601 timestamp of when the marketing preference changed, if applicable. |
+| `time` | DateTime | An [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) timestamp (`yyyy-MM-dd'T'HH:mm:ssXXX`) of when the marketing preference changed, if applicable. |
 | `val` | String | The customer-provided preference choice for this marketing use case. See the table below for accepted values and definitions. |
 
 {style="table-layout:auto"}

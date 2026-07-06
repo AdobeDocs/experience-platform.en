@@ -53,7 +53,7 @@ This tutorial requires a working understanding of the various aspects of Adobe E
 
 ## Open the [!UICONTROL Schemas] workspace {#browse}
 
-The [!UICONTROL Schemas] workspace in the [!DNL Experience Platform] UI provides a visualization of the [!DNL Schema Library], allowing you to view manage the schemas available for your organization. The workspace also includes the [!DNL Schema Editor], the canvas on which you can compose a schema throughout this tutorial.
+Use the [!UICONTROL Schemas] workspace in the Experience Platform UI to view and manage the schemas available to your organization. The workspace also includes the [!DNL Schema Editor], where you create and edit schemas throughout this tutorial.
 
 After logging into [!DNL Experience Platform], select **[!UICONTROL Schemas]** in the left navigation to open the **[!UICONTROL Schemas]** workspace. The **[!UICONTROL Browse]** tab displays a list of schemas (a representation of the [!DNL Schema Library]) for you to view and customize. The list includes the name, type, class, and behavior (record or time-series) on which the schema is based, as well as the date and time the schema was last modified. 
 
@@ -404,7 +404,7 @@ Within the Schema Editor you can also conduct quick actions to copy the JSON str
 >title="Cannot delete schema"
 >abstract="The schema cannot be deleted because it has associated datasets."
 
-A schema can be deleted within the UI from the Schema Editor using [!UICONTROL More] actions and also from the schema details in the [!UICONTROL Browse] tab. There are certain conditions that prevent a schema from being deleted. A schema cannot be deleted if:
+You can delete a schema from the [!UICONTROL Schema Editor] using [!UICONTROL More] actions or from the schema details view in the [!UICONTROL Browse] tab. You cannot delete a schema if:
 
 * The schema is enabled for Profile.
 * The schema is enabled for Profile and has associated datasets.
