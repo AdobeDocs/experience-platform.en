@@ -90,29 +90,29 @@ Once you have successfully generated profiles from your ingested data, you can e
 
 ### Create a segment definition
 
-To get started, you must create a segment definition to cluster your customers to create your target audience. A segment definition is a collection of rules that you can use to define the audience you want to target. To create a segment definition, you can follow the instructions in either the UI guide on using the [Segment Builder](../segmentation/ui/segment-builder.md) or the API tutorial on [creating a segment](../segmentation/tutorials/create-a-segment.md).
+To get started, you must create a segment definition to cluster your customers to create your target audience. A segment definition is a collection of rules that you can use to define the audience you want to target. To create a segment definition, you can follow the instructions in either the UI guide on using the [Segment Builder](../segmentation/ui/segment-builder.md) or the API tutorial on [creating a segment definition](../segmentation/tutorials/create-a-segment.md).
 
 Once you've created a segment definition, ensure that you keep note of the segment definition ID.
 
 ### Evaluate your segment definition
 
-After creating your segment definition, you can either create a segment job to evaluate the segment as a one-time instance or create a schedule to evaluate the segment on an ongoing basis.
+After creating your segment definition, you can either create a segment job to evaluate the segment definition as a one-time instance or create a schedule to evaluate the segment definition on an ongoing basis.
 
-To evaluate a segment definition on demand, you can create a segment job. A segment job is an asynchronous process that creates a new audience segment based on the referred segment definition and merge policies. A merge policy is a set of rules that Experience Platform uses to determine what data will be used to create customer profiles, and which data will be prioritized when there are discrepancies between sources. To learn how to work with merge policies, see the [merge policies UI guide](../profile/merge-policies/ui-guide.md).
+To evaluate a segment definition on demand, you can create a segment job. A segment job is an asynchronous process that creates a new audience based on the referred segment definition and merge policies. A merge policy is a set of rules that Experience Platform uses to determine what data will be used to create customer profiles, and which data will be prioritized when there are discrepancies between sources. To learn how to work with merge policies, see the [merge policies UI guide](../profile/merge-policies/ui-guide.md).
 
-Once the segment job is created and evaluated, you can get information about the segment, such as the size of your audience or errors that may have occurred during processing. To learn how to create a segment job, including all the details you need to provide, please read the [segment job developer guide](../segmentation/api/segment-jobs.md).
+Once the segment job is created and evaluated, you can get information about the segment definition, such as the size of your audience or errors that may have occurred during processing. To learn how to create a segment job, including all the details you need to provide, please read the [segment job developer guide](../segmentation/api/segment-jobs.md).
 
 To evaluate a segment definition on an ongoing basis, you can create and enable a schedule. A schedule is a tool that can be used to automatically run a segment job once a day at a specified time. To learn how to create and enable a schedule, you can follow the instructions in the API guide on the [schedules endpoint](../segmentation/api/schedules.md).
 
 ## Export your evaluated data
 
-After creating your one-time segment job or your ongoing schedule, you can either create a segment export job to export the results to a dataset or export the results to a destination. The following sections provide guidance on both of these options.
+After creating your one-time segment job or your ongoing schedule, you can either create an export job to export the results to a dataset or export the results to a destination. The following sections provide guidance on both of these options.
 
 ### Export your evaluated data to a dataset
 
-After either creating your one-time segment job or your ongoing schedule, you can export the results by creating a segment export job. A segment export job is an asynchronous task that sends information about the evaluated audience to a dataset.
+After either creating your one-time segment job or your ongoing schedule, you can export the results by creating an export job. An export job is an asynchronous task that sends information about the evaluated audience to a dataset.
 
-Before creating an export job, you must first create a dataset to export the data to. To learn how to create a dataset, please read the section on [creating a target dataset](../segmentation/tutorials/evaluate-a-segment.md#create-dataset) in the tutorial on evaluating a segment, ensuring you note the dataset ID after creation. After creating a dataset, you can create an export job. To learn how to create an export job, you can follow the instructions in the API guide on the [export jobs endpoint](../segmentation/api/export-jobs.md).
+Before creating an export job, you must first create a dataset to export the data to. To learn how to create a dataset, please read the section on [creating a target dataset](../segmentation/tutorials/evaluate-a-segment.md#create-dataset) in the tutorial on evaluating a segment definition, ensuring you note the dataset ID after creation. After creating a dataset, you can create an export job. To learn how to create an export job, you can follow the instructions in the API guide on the [export jobs endpoint](../segmentation/api/export-jobs.md).
 
 ### Export your evaluated data to a destination
 

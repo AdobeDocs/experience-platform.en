@@ -48,7 +48,7 @@ A large enterprise technology company is due to open registration for its upcomi
 
 ### Use case #2 {#use-case-2}
 
-A financial services brand is due to host a series of roadshows targeting new and existing customers. They have a series of audience segments with target customers in [!DNL Adobe Experience Platform]. Using the [!DNL RainFocus] Destination Connector, they are able to easily send those profiles to [!DNL RainFocus] for activation.
+A financial services brand is due to host a series of roadshows targeting new and existing customers. They have a series of audiences with target customers in [!DNL Adobe Experience Platform]. Using the [!DNL RainFocus] Destination Connector, they are able to easily send those profiles to [!DNL RainFocus] for activation.
 
 ## Prerequisites {#prerequisites}
 
@@ -101,8 +101,8 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 |---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of an audience, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 

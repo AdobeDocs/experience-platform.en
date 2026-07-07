@@ -53,7 +53,7 @@ Filtering can be applied generically on any property in an entity as long as the
 GET /sourceConnections?property=params.tableName==lead
 ```
 
-**Return all flows for a specific segment ID:**
+**Return all flows for a specific audience ID:**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a
@@ -63,7 +63,7 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 Multiple `property` filters can be included in a query provided they are separated by "and" characters (`&`). An AND relationship is assumed when combining filters, meaning that an entity must satisfy all filters in order for it to be included in the response.
 
-**Return all enabled flows for a segment ID:**
+**Return all enabled flows for a audience ID:**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a&property=state==enabled
@@ -91,7 +91,7 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 GET /sourceConnections?property=params.columns[].name==firstName
 ```
 
-**Look up the flow run ID for a destination by filtering on segment ID:**
+**Look up the flow run ID for a destination by filtering on audience ID:**
 
 ```http
 GET /runs?property=metrics.recordSummary.targetSummaries[].entitySummaries[].id==segment:068d6e2c-b546-4c73-bfb7-9a9d33375659

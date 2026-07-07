@@ -80,7 +80,7 @@ See the [sources in Real-Time CDP B2B Edition](./sources/b2b.md) documentation f
 
 ## B2B destinations
 
-Experience Platform destinations such as Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display & Video 360, Google Ads, and Google Ad Manager are available and fully supported by Real-Time CDP B2B Edition. The Marketo Engage destination also streams segment membership data out of Experience Platform and makes it available as lists in Marketo.
+Experience Platform destinations such as Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display & Video 360, Google Ads, and Google Ad Manager are available and fully supported by Real-Time CDP B2B Edition. The Marketo Engage destination also streams audience membership data out of Experience Platform and makes it available as lists in Marketo.
 
 See the overview on the [Marketo Engage Destination](../destinations/catalog/adobe/marketo-engage.md) for more information.
 

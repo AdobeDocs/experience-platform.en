@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Segment Builder UI Guide
-description: The Segment Builder in the Adobe Experience Platform UI provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties.
+description: Segment Builder in the Adobe Experience Platform UI provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 TQID: https://experienceleague.adobe.com/-WKclcOvYGl1pg6jrUR2UwrXy9BAw9j--sXM3DxRILo
 product_v2:
@@ -32,7 +32,7 @@ topic_v2:
 
 >[!NOTE]
 >
->This guide explains how to create audiences through **segment definitions** using the Segment Builder. To learn how to create audiences using Audience Composition, please read the [Audience Composition UI guide](./audience-composition.md).
+>This guide explains how to create audiences through **segment definitions** using Segment Builder. To learn how to create audiences using Audience Composition, please read the [Audience Composition UI guide](./audience-composition.md).
 
 [!DNL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
 
@@ -72,7 +72,7 @@ The basic building blocks of segment definitions are attributes and events. In a
 
 You can see these building blocks in the **[!UICONTROL Fields]** section on the left side of the [!DNL Segment Builder] workspace. **[!UICONTROL Fields]** contains a tab for each of the main building blocks: "[!UICONTROL Attributes]", "[!UICONTROL Events]", and "[!UICONTROL Audiences]".
 
-![The fields section of the Segment Builder is highlighted.](../images/ui/segment-builder/segment-fields.png)
+![The fields section of Segment Builder is highlighted.](../images/ui/segment-builder/segment-fields.png)
 
 You can select the ![settings icon](/help/images/icons/settings.png) to adjust the settings for the displayed fields.
 
