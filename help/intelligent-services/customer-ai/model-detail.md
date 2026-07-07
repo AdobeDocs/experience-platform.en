@@ -98,7 +98,7 @@ topic_v2:
 
 ## Robustness {#robustness}
 
-**Model robustness**: The model maintains strong generalization to new consumer records. Performance remains stable across different consumer segments but shows slight degradation when user behavior significantly deviates from historical patterns.
+**Model robustness**: The model maintains strong generalization to new consumer records. Performance remains stable across different consumer audiences but shows slight degradation when user behavior significantly deviates from historical patterns.
 
 ## Ethical considerations {#ethical-considerations}
 
