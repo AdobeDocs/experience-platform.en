@@ -20,7 +20,7 @@ When data accumulates beyond what your use cases require, you face several risks
 * **Degraded performance.** Excess data increases system load and can slow processing.
 * **Privacy exposure.** Retaining data longer than it is useful increases privacy risk and regulatory exposure.
 
-To avoid these outcomes, retain data only as long as it supports an active use case, and apply the same principle at ingestion by bringing in only the data your use cases require. Behavioral data, such as event data, typically consumes far more storage than record data, so it is usually where unmanaged growth has the greatest impact.
+To avoid these outcomes, retain data only as long as it supports an active use case. Behavioral data, such as event data, typically consumes far more storage than record data, so it is usually where unmanaged growth has the greatest impact.
 
 A key part of this decision is matching data to the workflow it serves. Experience Platform stores data in two repositories that serve different purposes:
 
