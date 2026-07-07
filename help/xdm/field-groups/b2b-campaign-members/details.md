@@ -23,7 +23,7 @@ role_v2:
 | --- | --- | --- |
 | `acquiredByCampaignKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | The composite ID of the campaign that acquired this campaign member. |
 | `acquiredByCampaignID` | [!UICONTROL String] | A string identifier for the campaign that acquired this campaign member. |
-| `firstRespondedDate` | [!UICONTROL DateTime] | An ISO 8601 timestamp of when the person first responded to the campaign. |
+| `firstRespondedDate` | [!UICONTROL DateTime] | An [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) timestamp (`yyyy-MM-dd'T'HH:mm:ssXXX`) of when the person first responded to the campaign. |
 | `hasReachedSuccess` | [!UICONTROL Boolean] | Indicates whether this campaign member has resulted in a successful conversion. |
 | `hasResponded` | [!UICONTROL Boolean] | Indicates whether this campaign member has responded to the campaign. |
 | `isDeleted` | [!UICONTROL Boolean]  | Indicates whether this campaign member has been deleted in Marketo Engage.<br><br>When using the [Marketo source connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), any records that are deleted in Marketo are automatically reflected in Real-Time Customer Profile. However, records relating to these profiles may still persist in the Data Lake. By setting `isDeleted` to `true`, you can use the field to filter out which records have been deleted from your sources when querying the Data Lake. |
@@ -34,7 +34,7 @@ role_v2:
 | `membershipDate` | [!UICONTROL DateTime] | The reason behind the current status for the campaign member. |
 | `nurtureCadence` | [!UICONTROL String] | The time cadence for campaign-related information to be presented to the campaign member. |
 | `nurtureTrackName` | [!UICONTROL String] | The name of the nurture program that this campaign member is subject to. |
-| `reachedSuccessDate` | [!UICONTROL DateTime] | An ISO 8601 timestamp for when a successful conversion was made for the campaign member. |
+| `reachedSuccessDate` | [!UICONTROL DateTime] | An ISO 8601 timestamp (`yyyy-MM-dd'T'HH:mm:ssXXX`) for when a successful conversion was made for the campaign member. |
 | `webinarConfirmationUrl` | [!UICONTROL String] | The webinar confirmation URL for the campaign member. |
 | `webinarRegistrationID` | [!UICONTROL String] | The webinar registration ID for the campaign member. |
 

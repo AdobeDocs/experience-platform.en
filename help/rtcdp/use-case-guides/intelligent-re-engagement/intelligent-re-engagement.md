@@ -179,7 +179,7 @@ The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) cla
 | Fields | Description |
 | --- | --- |
 | `_id` | Uniquely identifies individual events that are ingested into [!DNL Adobe Experience Platform]. |
-| `timestamp` | An ISO 8601 timestamp of when the event occurred, formatted as per RFC 3339 Section 5.6. This timestamp must occur in the past. |
+| `timestamp` | An [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) timestamp of when the event occurred. This timestamp must occur in the past. |
 | `eventType` | A string that indicates the type of category for the event. |
 
 +++
@@ -237,7 +237,7 @@ The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) cla
 | Fields | Description |
 | --- | --- |
 | `_id` | Uniquely identifies individual events that are ingested into [!DNL Adobe Experience Platform]. |
-| `timestamp` | An ISO 8601 timestamp of when the event occurred, formatted as per RFC 3339 Section 5.6. This timestamp must occur in the past. |
+| `timestamp` | An [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) timestamp of when the event occurred. This timestamp must occur in the past. |
 | `eventType` | A string that indicates the type of category for the event. |
 
 +++
@@ -295,7 +295,7 @@ The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) cla
 | Fields | Description |
 | --- | --- |
 | `_id` | Uniquely identifies individual events that are ingested into [!DNL Adobe Experience Platform]. |
-| `timestamp` | An ISO 8601 timestamp of when the event occurred, formatted as per RFC 3339 Section 5.6. This timestamp must occur in the past. |
+| `timestamp` | An [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) timestamp of when the event occurred. This timestamp must occur in the past. |
 | `eventType` | A string that indicates the type of category for the event. |
 
 +++
