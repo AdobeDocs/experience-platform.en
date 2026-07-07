@@ -129,7 +129,7 @@ A successful response lists the resulting dataset expirations. The following exa
 | `description`  | A description of the expiration configuration. |
 | `imsOrg`       | Your unique organization identifier.         |
 | `status`       | The current status of the expiration. One of: `pending`, `executing`, `cancelled`, `completed`. |
-| `expiry`       | The scheduled expiration date and time (ISO 8601 format). |
+| `expiry`       | The scheduled expiration date and time in [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format. |
 | `updatedAt`    | The timestamp of the last update to this configuration. |
 | `updatedBy`    | The identifier and email of the user or service who last updated the configuration. |
 | `current_page` | The index of the current results page (zero-based). |

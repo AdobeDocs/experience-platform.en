@@ -2,6 +2,7 @@
 title: When to activate
 description: Learn about the When to activate feature for streaming destinations and how to use it to control which profile changes trigger exports to your destinations.
 badgeBeta: label="Beta" type="Informative"
+nudge: true
 ---
 
 # When to activate
@@ -55,6 +56,10 @@ All three trigger types are enabled on every new and existing dataflow. When you
 ## Best practices and recommendations {#best-practices}
 
 The best trigger configuration depends on your use case. Use the following guidance as a starting point.
+
+>[!WARNING]
+>
+>Changing activation trigger settings on existing production dataflows can disrupt live campaigns. Adobe recommends testing any changes in a development sandbox before applying them to production.
 
 ![Decision tree showing which activation trigger to disable based on the problem you are solving: disable attribute changes to reduce overall export volume, or disable identity changes to stop unwanted email service provider triggers from new device logins.](../assets/ui/when-to-activate/trigger-decision-tree-figma.png)
 

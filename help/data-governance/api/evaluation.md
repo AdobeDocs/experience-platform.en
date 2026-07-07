@@ -695,4 +695,4 @@ A successful response returns an array of evaluation results; one for each polic
 
 ## Policy evaluation for [!DNL Real-Time Customer Profile]
 
-The [!DNL Policy Service] API can also be used to check for policy violations involving the use of [!DNL Real-Time Customer Profile] segments. See the tutorial on [enforcing data usage compliance for audience segments](../../segmentation/tutorials/governance.md) for more information.
+The [!DNL Policy Service] API can also be used to check for policy violations involving the use of [!DNL Real-Time Customer Profile] audiences. See the tutorial on [enforcing data usage compliance for audiences](../../segmentation/tutorials/governance.md) for more information.

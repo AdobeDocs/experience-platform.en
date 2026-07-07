@@ -10,7 +10,7 @@ exl-id: b35aef7c-54f4-4758-9b36-a981510ae21b
 
 Health checks scan your schemas, identities, and datasets in your sandbox and provide a summary of issues that you can explore and troubleshoot with AI Assistant.
 
-Poor schema and identity configurations lead to significant downstream issues, including incorrect profile creation, failed segment qualification, and inaccurate activation. These issues are difficult to detect and often require specialized expertise to diagnose. Health checks shift your approach from reactive troubleshooting to proactive, preventative maintenance.
+Poor schema and identity configurations lead to significant downstream issues, including incorrect profile creation, failed audience qualification, and inaccurate activation. These issues are difficult to detect and often require specialized expertise to diagnose. Health checks shift your approach from reactive troubleshooting to proactive, preventative maintenance.
 
 With health checks, you can:
 

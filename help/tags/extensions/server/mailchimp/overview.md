@@ -114,7 +114,7 @@ The table below provides more detail for each possible value.
 | `name` | `arc.event.xdm._tenant.name`<br /> or<br /> `arc.event.data._tenant.name` | String | The event name | **Yes** | 2-30 characters in length |
 | `properties` | `arc.event.xdm._tenant.properties`<br /> or<br /> `arc.event.data._tenant.properties`| Object | An optional list of properties in JSON format with details about the event | No ||
 | `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> or<br /> `arc.event.data._tenant.isSyncing` | boolean | Events created with `is_syncing` set to `true` **will not** trigger automations | No ||
-| `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> or `arc.event.data._tenant.occuredAt` | String | An ISO 8601 timestamp of when the event occurred | No ||
+| `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> or `arc.event.data._tenant.occuredAt` | String | An [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) timestamp of when the event occurred | No ||
 
 {style="table-layout:auto"}
 

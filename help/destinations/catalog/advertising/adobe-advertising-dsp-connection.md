@@ -32,11 +32,11 @@ This connection replaces the [Legacy Adobe Advertising DSP connection](adobe-adv
 
 This destination allows advertisers to reach their audience across browsers with cookies and without cookies.
 
-Advertisers have the choice to share segments either with authenticated first-party identifiers (such as [!DNL RampID] and [!DNL UID2.0]) or as unauthenticated IDs (such as cookies and MAIDs).
+Advertisers have the choice to share audiences either with authenticated first-party identifiers (such as [!DNL RampID] and [!DNL UID2.0]) or as unauthenticated IDs (such as cookies and MAIDs).
 
 ## Prerequisites {#prerequisites}
 
-* For [!DNL RampID activation], [!DNL DSP] account-level and campaign-level settings to enable audience sharing with [!DNL LiveRamp RampID], which translates customer data to [!DNL RampIDs] to create targetable segments. Your Adobe Account Team will perform this configuration. [!DNL RampID] is available via a partnership between [!DNL DSP] and [!DNL LiveRamp], and you do not need your own [!DNL LiveRamp] membership to use it.
+* For [!DNL RampID activation], [!DNL DSP] account-level and campaign-level settings to enable audience sharing with [!DNL LiveRamp RampID], which translates customer data to [!DNL RampIDs] to create targetable audiences. Your Adobe Account Team will perform this configuration. [!DNL RampID] is available via a partnership between [!DNL DSP] and [!DNL LiveRamp], and you do not need your own [!DNL LiveRamp] membership to use it.
 
 * Audience IDs:
 
@@ -75,8 +75,8 @@ The Adobe Advertising DSP destination supports the activation of identities desc
 | Target Identity | Description | Considerations |
 | --------------- | ----------- | -------------- |
 | `email_lc_sha256` | Email addresses hashed with the SHA256 algorithm | Experience Platform supports both plain text and SHA256-hashed email addresses. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option to have Experience Platform automatically hash the data on activation. |
-| `ECID` | First-party cookie for Experience Cloud | Required to create cookie-based segments. |
-| `adcloud` | Third-party cookie for Adobe Advertising | Required to create cookie-based segments. |
+| `ECID` | First-party cookie for Experience Cloud | Required to create cookie-based audiences. |
+| `adcloud` | Third-party cookie for Adobe Advertising | Required to create cookie-based audiences. |
 | `GAID` | [!DNL Android] device ID | Required for targeting [!DNL Android] devices. |
 | `IDFA` | [!DNL iOS] device ID | Required for targeting [!DNL iOS] devices. |
 
@@ -184,7 +184,7 @@ Select **[!UICONTROL Next]** to continue.
 
 >[!IMPORTANT]
 >
->**ECID is required for cookie-based export to succeed.** Profiles without ECID will not be included in cookie-based segments. For authenticated audience segments using [!DNL RampID] or [!DNL UID2.0], profiles must contain hashed email IDs.
+>**ECID is required for cookie-based export to succeed.** Profiles without ECID will not be included in cookie-based audiences. For authenticated audiences using [!DNL RampID] or [!DNL UID2.0], profiles must contain hashed email IDs.
 
 For instructions, see [Map attributes and identities](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
 
@@ -196,7 +196,7 @@ To verify that the audience data was shared with Adobe Advertising, check the fo
 
 * In DSP, the audience is available when you create or edit an audience from **[!UICONTROL Audiences]** > **[!UICONTROL All Audiences]** or from within the **[!UICONTROL Audience Targeting]** section of placement settings. The audience should be visible in the [!UICONTROL Adobe Segments] tab under the [!UICONTROL Real-Time CDP] folder.
 
-![Screenshot of the DSP Audiences interface showing a [!DNL Real-Time CDP] folder with imported audience segments listed under the Adobe Segments tab.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
+![Screenshot of the DSP Audiences interface showing a [!DNL Real-Time CDP] folder with imported audiences listed under the Adobe Segments tab.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
 
 ## Data usage and governance {#data-usage-governance}
 

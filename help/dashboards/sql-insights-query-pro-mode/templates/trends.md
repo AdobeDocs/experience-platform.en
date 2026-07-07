@@ -62,7 +62,7 @@ The **[!UICONTROL Audience size trends]** chart shows the number of profiles wit
 
 ### Audience Identities Trends {#audience-identities-trends}
 
-The **[!UICONTROL Audience identities trends]** chart provides insights into the total number of identities within the audience segment. Use this chart to understand how unique identities are contributing to the overall size of the audience. It provides an indication of audience stability and engagement.
+The **[!UICONTROL Audience identities trends]** chart provides insights into the total number of identities within the audience. Use this chart to understand how unique identities are contributing to the overall size of the audience. It provides an indication of audience stability and engagement.
 
 ![The Audience identities trend chart.](../../images/sql-insights-query-pro-mode/templates/audience-identities-trends.png)
 

@@ -154,7 +154,7 @@ After installing the extension, create a new event forwarding [rule](../../../ui
 | Input | Description | Required |
 | --- | --- | --- |
 | [!UICONTROL Event Name ​] | Name of the event. | Yes |
-| [!UICONTROL Event Time ] | Date-time as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. | Yes |
+| [!UICONTROL Event Time ] | Date-time as string in [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. | Yes |
 | [!UICONTROL App Identifier] | The App Identifier or <strong>app_id</strong> is a parameter associating activity with a specific app in your app group. It designates which app within the app group you are interacting with. Learn more about the [API identifier types](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL Event Properties ​] | A JSON object containing custom properties of the event. |  |
 

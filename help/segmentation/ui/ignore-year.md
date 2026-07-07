@@ -38,4 +38,4 @@ The "ignore year" option is designed to disregard the year component of a date w
 
 However, during leap years such as 2024, the underlying system failed to properly handle this option, resulting in inaccurate audience evaluations. As a result if "ignore year" is enabled in a leap year, the audience evaluation would miss one day.
 
-If you created an audience before this fix was released, you just need to re-save the audience in the Segment Builder in order to apply the fix. If you're unsure if your audience is affected by this resolution, the Segment Builder will prompt the user if the existing audience is affected by this issue.
+If you created an audience before this fix was released, you just need to re-save the audience in Segment Builder in order to apply the fix. If you're unsure if your audience is affected by this resolution, Segment Builder will prompt the user if the existing audience is affected by this issue.
