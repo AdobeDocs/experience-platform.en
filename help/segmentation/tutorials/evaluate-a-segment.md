@@ -102,7 +102,7 @@ On-demand evaluation allows you to create a segment job in order to generate an 
 
 ### Create a segment job
 
-A segment job is an asynchronous process that creates an audience segment on demand. It references a segment definition, as well as any merge policies controlling how [!DNL Real-Time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment definition, such as any errors that may have occurred during processing and the ultimate size of your audience. A segment job needs to be run every time you want to refresh the audience that the segment definition currently qualifies.
+A segment job is an asynchronous process that creates an audience on demand. It references a segment definition, as well as any merge policies controlling how [!DNL Real-Time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment definition, such as any errors that may have occurred during processing and the ultimate size of your audience. A segment job needs to be run every time you want to refresh the audience that the segment definition currently qualifies.
 
 You can create a new segment job by making a POST request to the `/segment/jobs` endpoint in the [!DNL Real-Time Customer Profile] API.
 
@@ -145,7 +145,7 @@ The following example shows what the `segmentMembership` attribute looks like fo
 
 | Property | Description |
 | -------- | ----------- |
-| `lastQualificationTime` | The timestamp when the assertion of segment membership was made and the profile entered or exited the segment definition. |
+| `lastQualificationTime` | The timestamp when the assertion of audience membership was made and the profile entered or exited the segment definition. |
 | `status` | The segment definition's participation status as part of the current request. Must be equal to one of the following known values: <ul><li>`realized`: Entity qualifies for the segment definition.</li><li>`exited`: Entity is exiting the segment definition.</li></ul> |
 
 >[!NOTE]
@@ -162,7 +162,7 @@ The following sections outline these options in more detail.
 
 If you know the specific profile that you would like to access, you can do so using the [!DNL Real-Time Customer Profile] API. The complete steps for accessing individual profiles are available in the [Access Real-Time Customer Profile data using the Profile API](../../profile/api/entities.md) tutorial.
 
-## Export a segment {#export}
+## Export an audience {#export}
 
 After a segmentation job has successfully completed (the value of the `status` attribute is "SUCCEEDED"), you can export your audience to a dataset where it can be accessed and acted upon. 
 

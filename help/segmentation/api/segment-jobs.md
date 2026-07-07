@@ -24,7 +24,7 @@ role_v2:
 ---
 # Segment jobs endpoint
 
-A segment job is an asynchronous process that creates an audience segment on demand. It references a [segment definition](./segment-definitions.md), as well as any [merge policies](../../profile/api/merge-policies.md) controlling how [!DNL Real-Time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment definition, such as any errors that may have occurred during processing and the ultimate size of your audience.
+A segment job is an asynchronous process that creates an audience on demand. It references a [segment definition](./segment-definitions.md), as well as any [merge policies](../../profile/api/merge-policies.md) controlling how [!DNL Real-Time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment definition, such as any errors that may have occurred during processing and the ultimate size of your audience.
 
 This guide provides information to help you better understand segment jobs and includes sample API calls for performing basic actions using the API.
 
@@ -193,7 +193,7 @@ A successful response returns HTTP status 200 with a list of segment jobs for th
 | `metrics` | An object that contains diagnostic information about the segment job. |
 | `metrics.totalTime` | An object that contains information on the times the segmentation job started and ended, as well as the total time taken. |
 | `metrics.profileSegmentationTime` | An object that contains information on the times the segmentation evaluation started and ended, as well as the total time taken. |
-| `metrics.segmentProfileCounter` | The number of profiles qualified on a per segment basis. |
+| `metrics.segmentProfileCounter` | The number of profiles qualified on a per segment definition basis. |
 | `metrics.segmentedProfileByNamespaceCounter` | The number of profiles qualified for each identity namespace on a per segment definition basis. |
 | `metrics.segmentProfileByStatusCounter` | The count of profiles for each statuses. The following three statuses are supported: <ul><li>"realized" - The number of profiles that qualify for the segment definition.</li><li>"exited" - The number of profiles  that no longer exist in the segment definition.</li></ul>|
 | `metrics.totalProfilesByMergePolicy` | The total number of merged profiles on a per merge policy basis. |
