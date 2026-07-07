@@ -1,10 +1,10 @@
 ---
-title: Advanced Data Lifecycle Management use cases and capabilities
+title: Choose the right Data Lifecycle Management capability
 description: Understand why data lifecycle management matters in Adobe Experience Platform and choose the right capability—record delete, dataset expiration, or automatic expiration—for your data management goal.
 solution: Experience Platform
 keywords: Experience Platform;data lifecycle;record delete;dataset expiration;data hygiene;time to live;ttl;data minimization
 ---
-# Advanced Data Lifecycle Management use cases and capabilities
+# Choose the right Data Lifecycle Management capability
 
 Advanced Data Lifecycle Management (referred to as [!UICONTROL Data Lifecycle] in the product navigation) helps you manage the data you store in Adobe Experience Platform by removing or expiring data that is no longer useful. Use this guide to understand why managing your data lifecycle matters and to choose the right capability for your goal. For step-by-step instructions, follow the UI and API links in each section.
 
@@ -78,7 +78,7 @@ When you need to retire an entire dataset that is no longer needed for your use 
 >
 >Before a dataset expires, update any dataflows that ingest data into it so that your downstream workflows are not affected.
 
-You can have a limited number of scheduled dataset expirations pending at one time: 20 for Real-Time CDP, Adobe Journey Optimizer, and Customer Journey Analytics, or 50 with the Healthcare Shield or Privacy and Security Shield add-on. Data Lifecycle Management does not support batch dataset deletion.
+You can have only a limited number of scheduled dataset expirations pending at one time, and the limit depends on your product and any Shield entitlement; for the current limit, see [pending expiration limits](./ui/dataset-expiration.md#schedule-dataset-expiration). Data Lifecycle Management does not support batch dataset deletion.
 
 You can schedule dataset expirations in the [!UICONTROL Data Lifecycle] workspace or with the API. See [Schedule a dataset expiration](./ui/dataset-expiration.md) for the UI workflow and the [dataset expiration endpoint guide](./api/dataset-expiration.md) for the API.
 
@@ -127,7 +127,7 @@ Use the following guidance when you set retention durations:
 
 * **Experience Event TTL.** Set the expiration to cover the longest lookback your audiences need, and keep your audience lookback windows within that period so that segmentation stays accurate.
 * **Pseudonymous Profile TTL.** Set a shorter period than your Experience Event TTL to remove inactive unknown profiles sooner.
-* **Data lake retention.** Set a longer period for event data you still need for analysis, independent of when the same data expires from the Profile store. The minimum is 30 days; frequently accessed datasets are typically retained for 30–90 days and archival datasets for a year or more.
+* **Data lake retention.** Set a longer period for event data you still need for analysis, independent of when the same data expires from the Profile store. Match the duration to how the data is used: shorter for frequently accessed data, longer for archival needs. See [Manage Experience Event dataset retention (TTL)](../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) for recommended durations and minimums.
 
 >[!TIP]
 >
