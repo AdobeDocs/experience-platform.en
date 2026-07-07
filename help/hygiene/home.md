@@ -24,6 +24,8 @@ topic_v2:
 
 Adobe Experience Platform provides a robust set of tools to manage large, complicated data operations in order to orchestrate consumer experiences. As data is ingested into the system over time, it becomes increasingly important to manage your data stores so that data is used as expected, is updated when incorrect data needs correcting, and is deleted when organizational policies deem it necessary.
 
+If you're deciding which capability fits your goal, see [Choose the right Data Lifecycle Management capability](./choose-a-capability.md) to understand why data lifecycle management matters and choose between record delete, dataset expiration, and automatic expiration.
+
 These activities can be performed using the [[!UICONTROL Data Lifecycle] UI workspace](#ui) or the [Data Hygiene API](#api). When a data lifecycle job executes, the system provides transparency updates at each step of process. See the section on [timelines and transparency](#timelines-and-transparency) for more information on how each job type is represented in the system.
 
 >[!NOTE]
