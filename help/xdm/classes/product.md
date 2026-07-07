@@ -22,8 +22,8 @@ In Experience Data Model (XDM), the [!UICONTROL Product] class captures the mini
 | `_id` | String |  A unique, system-generated string identifier for the record. This field is used to track the uniqueness of an individual record, prevent duplication of data, and to look up that record in downstream services.<br><br>Since this field is system-generated, it does not be supplied an explicit value during data ingestion. However, you can still opt to supply your own unique ID values if you wish. |
 | `productDescription` | String | A description of the product. |
 | `productID` | String | A unique identifier for the product. |
-| `productLastModifiedDate` | DateTime | An [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) timestamp of when this product was last modified for any updates. |
-| `productManufacturedDate` | DateTime | An [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) timestamp of when this product was created. |
+| `productLastModifiedDate` | DateTime | An [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) timestamp (`yyyy-MM-dd'T'HH:mm:ssXXX`) of when this product was last modified for any updates. |
+| `productManufacturedDate` | DateTime | An ISO 8601 timestamp (`yyyy-MM-dd'T'HH:mm:ssXXX`) of when this product was created. |
 | `productName` | String | The name of the product. |
 | `productRating` | String | The customer review rating of the product.|
 

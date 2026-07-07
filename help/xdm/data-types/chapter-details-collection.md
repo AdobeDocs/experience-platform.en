@@ -22,19 +22,19 @@ topic_v2:
 ---
 # [!UICONTROL Chapter Details] Collection data type
 
-[!UICONTROL Chapter Details] Collection is a standard Experience Data Model (XDM) data type that describes various attributes related to chapters or segments within media content. Use the [!UICONTROL Chapter Details] Collection data type to capture details such as chapter name, offset, duration, and the chapter index. Media collection fields capture data and send it onto other Adobe services for further processing.
+[!UICONTROL Chapter Details] Collection is a standard Experience Data Model (XDM) data type that describes various attributes related to chapters or segments within media content. Use the [!UICONTROL Chapter Details] Collection data type to capture details such as chapter name, offset, duration, and the chapter index.
 
 ![A diagram of the Chapter Details Collection data type.](../images/data-types/chapter-details-collection.png)
 
 >[!NOTE]
 >
->Each display name contains a link to further information on its audio and video parameters. The linked pages contain details on the video ad data collected by Adobe, implementation values, network parameters, reporting, and important considerations.
+>This data type belongs to the `mediaCollection` schema — fields that your implementation sends to the streaming media backend. Adobe processes this data and produces the corresponding `mediaReporting` fields, which are ingested into Platform datasets. See [Streaming media XDM reporting schema](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge/reporting-schema) for details.
 
-| Display name                                                                                                                                                            | Property      | Data type | Required | Description                                       |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------|----------|---------------------------------------------------|
-| [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-length)| `length`      | integer   |   Yes    | The length of the chapter, in seconds.            |
-| [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-name)                | `friendlyName`| string    |   No     | The name of the chapter and/or segment.           |
-| [[!UICONTROL Chapter Offset]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-offset)            | `offset`      | integer   |   Yes    | The offset of the chapter inside the content (in seconds) from the start. |
-| [[!UICONTROL Chapter Position]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-position)        | `index`       | integer   |   Yes    | The position (index, integer) of the chapter inside the content. |
+Each display name contains a link to further information on its implementation variable. The linked pages contain details on the data collected by Adobe, implementation values, network parameters, and important considerations.
 
-{style="table-layout:auto"}
+| Display name | Property | Data type | Required | Description |
+|---|---|---|---|---|
+| [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/chapters/chapter-length) | `length` | integer | Yes | The length of the chapter, in seconds. |
+| [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/chapters/chapter-name) | `friendlyName` | string | No | The name of the chapter and/or segment. |
+| [[!UICONTROL Chapter Offset]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/chapters/chapter-offset) | `offset` | integer | Yes | The offset of the chapter inside the content (in seconds) from the start. |
+| [[!UICONTROL Chapter Position]](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/chapters/chapter-position) | `index` | integer | Yes | The position (index, integer) of the chapter inside the content. |

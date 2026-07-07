@@ -18,7 +18,7 @@ Currently, you can store the entire "raw event" in Profile through Experience Ev
 
 With traits, you can add "precomputed" data that is based on rules you defined. Traits are based on the conditional logic you specify, and are more storage-efficient than the raw Experience Event.
 
-Traits provide a more lightweight and efficient approach to storing profile activity. As a result, this can help maintain compliance with your profile license entitlements while preserving rich profile data activation. For example, you can use traits to support data collection if you have high ingestion throughput.
+Traits provide a more lightweight and efficient approach to storing profile activity. As a result, this can help capture behavioral signals for activation use cases even when ingesting event data at scale, while maintaining compliance with your profile license entitlements.
 
 ## Prerequisites {#prerequisites}
 
@@ -60,12 +60,12 @@ The traits browse page appears. Before you can create a trait, you need to enabl
 
 >[!IMPORTANT]
 >
->Enabling a dataset for traits is an **irreversible process**. If you enable a dataset for traits, it cannot be enabled for Profile.
+>Enabling a dataset for traits is an **irreversible process**. If you enable a dataset for traits, it will start storing traits and will no longer store experience events going forward.
 >
 >In order to enable a dataset for traits, the dataset **must** satisfy the following conditions:
 >
 >- The dataset **must** be for Experience Events
->- THe dataset **must** have no data already ingested in it
+>- The dataset **must** have no data already ingested in it
 >- The dataset **must** be Profile-enabled
 
 The **[!UICONTROL Enable dataset for traits]** popover appears. A list of all your datasets is displayed. Select which datasets you want to enable for traits, followed by **[!UICONTROL Continue]**.
@@ -79,6 +79,10 @@ The **[!UICONTROL Enable dataset for traits]** popover appears. A list of all yo
 Now that you have a trait-enabled dataset, you can create your trait. Select **[!UICONTROL Create trait]** to bring up the trait builder.
 
 ![The Dataset enabled for traits popover is displayed. The Create trait button is highlighted.](/help/profile/images/traits/select-create-trait.png)
+
+Alternatively, if you've already enabled a dataset for traits, you can select **[!UICONTROL Create trait]** within the traits browse page to open the trait builder.
+
+![The Create traits button is highlighted within the traits browse page.](/help/profile/images/traits/select-create-trait-browse.png)
 
 Within the trait builder, you can create your trait and set your details for the trait. To create a trait, choose an event from the left navigation bar and add it to the canvas.
 
@@ -137,7 +141,13 @@ In the **[!UICONTROL Traits]** list view, you can see all the traits that were c
 | Last updated | The date and time the trait was last updated. |
 | Created | The date and time the trait was created. |
 
-You can also select the ellipses (...) next to the trait for additional options, including creating an audience using the selected trait, deactivating the trait, and deleting the trait.
+You can also select the ellipses (...) next to the trait for quick actions, including creating an audience using the selected trait, deactivating the trait, and deleting the trait.
+
+| Quick action | Description |
+| ------------ | ----------- |
+| Create audience using trait | Automatically opens Audience Builder with the trait added to the audience's rules. |
+| Deactivate | Deactivates the trait. Deactivating the trait does **not** remove the trait from the UI. However, it no longer affects your license entitlements nor can it be used in audiences. Once a trait is deactivated, you can re-activate the trait for future use. |
+| Delete | Deletes the trait. Deleting the trait removes the trait from the UI, so it can no longer be used. |
 
 You can view more details by selecting the trait's name. The traits details page appears. This page displays information including the trait summary, profiles qualified over time, and audiences with this trait.
 

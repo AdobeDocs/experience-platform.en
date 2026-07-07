@@ -5,7 +5,7 @@ exl-id: 09ce5391-3932-4f51-b330-42d7a7acbe10
 ---
 # Slack integration for customer facing alerts
 
-Adobe Experience Platform allows you to use a webhook proxy on [Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) to receive [Adobe I/O Events](https://developer.adobe.com/events/docs/guides/) in [!DNL Slack]. The proxy handles Adobe’s verification handshake and turns event payloads into [!DNL Slack] messages, so you can get customer-facing alerts delivered to your workspace.
+Adobe Experience Platform allows you to use a webhook proxy on [Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) to receive [Adobe I/O Events](https://developer.adobe.com/events/docs/guides/) in [!DNL Slack]. The proxy handles Adobe's verification handshake and turns event payloads into [!DNL Slack] messages, so you can get customer-facing alerts delivered to your workspace.
 
 ## Prerequisites {#prerequisites}
 

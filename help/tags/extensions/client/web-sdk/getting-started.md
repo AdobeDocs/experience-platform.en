@@ -69,7 +69,7 @@ In addition, ensure that you have all [permissions](/help/access-control/home.md
 
 The [Experience Data Model (XDM)](/help/xdm/home.md) is an open-source specification that provides common structures and definitions for data in the form of schemas. Configuring a schema is highly recommended when sending data to the Edge Network.
 
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Log in to [CX Enterprise](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Schemas]**.
 1. Select **[!UICONTROL Create schema]**.
 1. Select **[!UICONTROL Experience Event]**, then select **[!UICONTROL Next]**.

@@ -32,6 +32,10 @@ The following insights are all available for you to use as part of the [Audience
 
 The following insights are all available for you to use as part of the [Audiences dashboard](../guides/audiences.md) or a custom dashboard.
 
+>[!NOTE]
+>
+>Several insights in this document use profile count metrics from `adwh_fact_profile_by_segment_trendlines`. For definitions of `count_of_profiles`, `count_of_calculated_realized_profiles`, `count_of_calculated_existing_profiles`, and `count_of_calculated_exited_profiles`, and guidance on how these metrics differ from profile snapshot data, see the [segment trendline metrics](../data-models/cdp-insights-data-model-b2c.md#segment-trendline-metrics) section of the Real-Time CDP Insights data model (B2C Edition) documentation.
+
 ## Audience overlap report {#audience-overlap-report}
     
 Questions answered by this insight:
@@ -597,3 +601,4 @@ By reading this document, you now understand the SQL that generates dashboard in
 See the [View SQL documentation](../view-sql.md) for more information on how to adapt your insights' SQL directly through the PLatform UI.
 
 You can also read and understand the SQL that generates insights for the [Profiles](./profiles.md), [Account Profiles](./account-profiles.md) and [Destinations](./destinations.md) dashboards.
+

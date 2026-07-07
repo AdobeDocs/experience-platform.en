@@ -25,19 +25,19 @@ role_v2:
 | `subscriber` | [[!UICONTROL Person]](./person.md) | Describes an individual person. This can also represent a person acting in various roles, such as a customer, contact, or owner. |
 | `SKU` | String | The stock-keeping unit (SKU), a unique identifier for a product. |
 | `billingPeriod` | String | The duration between billings. |
-| `billingStartDate` | Date | The date when the first bill is due. The date format (without time) should follow the [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standard. |
+| `billingStartDate` | Date | The date when the first bill is due. The date format (without time) should follow the [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) standard (`yyyy-MM-dd`). |
 | `category` | String | The main, top-level categorization of this type of subscription. |
 | `chargeMethod` | String | The way the billing is set up to charge the customer. |
 | `contractID` | String | The unique ID for the contract that governs this subscription. |
 | `country` | String | The country that the subscription contractual and agreement terms are rooted in. |
-| `endDate` | Date | The date the current subscription term ends. The date format (without time) should follow the [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standard. |
+| `endDate` | Date | The date the current subscription term ends. The date format (without time) should follow the [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) standard (`yyyy-MM-dd`). |
 | `paymentMethod` | String | The payment method for recurring payments. |
 | `paymentStatus` | String | The payment standing of the account. |
 | `planName` | String | The human-readable name for the subscription. |
 | `reason` | String | The general intent the member has for the use of the subscription. |
 | `renew` | String | The agreed way that the subscription may continue after the end date. |
 | `revision` | String | The identification between subscriptions of the same name and category hierarchy. |
-| `startDate` | Date | The date the subscription begins. The date format (without time) should follow the [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standard. |
+| `startDate` | Date | The date the subscription begins. The date format (without time) should follow the [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) standard (`yyyy-MM-dd`). |
 | `status` | String | The current status of the subscription. |
 | `subCategory` | String | The specific sub-categorization of the subscription. |
 | `term` | Integer | The numeric value of the subscription term. |

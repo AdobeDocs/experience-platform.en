@@ -55,7 +55,7 @@ topic_v2:
 
 The **[!UICONTROL Send event]** action sends a payload to a datastream on the Adobe Experience Platform Edge Network. It is a core feature of data collection and personalization; almost all organizations use this action as part of their Web SDK implementation.
 
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Log in to [CX Enterprise](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Select the desired tag property.
 1. Navigate to **[!UICONTROL Rules]**, then select the desired rule.

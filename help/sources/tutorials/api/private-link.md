@@ -26,6 +26,8 @@ topic_v2:
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >
 >Private Link Support is currently only available for organizations that have purchased Adobe Healthcare Shield or Adobe Privacy & Security Shield.
+>
+>Private Link Support is not available when using the VA6 region and connecting to [Adobe Experience Platform on AWS](../../../landing/multi-cloud.md).
 
 You can use the Private Link feature to create private endpoints for your Adobe Experience Platform sources to connect to. Securely connect your sources to  a virtual network using private IP addresses, eliminating the need for public IPs and reduce your attack surface. Simplify your network setup by removing the need for complex firewall or Network Address Translation configurations, while ensuring data traffic only reaches approved services.
 

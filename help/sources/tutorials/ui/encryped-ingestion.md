@@ -15,6 +15,10 @@ topic_v2:
 ---
 # Ingest encrypted data in the sources UI
 
+>[!AVAILABILITY]
+>
+>Encrypted data ingestion is not available when using the VA6 region and connecting to [Adobe Experience Platform on AWS](../../../landing/multi-cloud.md).
+
 You can ingest encrypted data files and folders to Adobe Experience Platform using cloud storage batch sources. With encrypted data ingestion, you can leverage asymmetric encryption mechanisms to securely transfer batch data into Experience Platform. The supported asymmetric encryption mechanisms are PGP and GPG.
 
 Read this guide to learn how you can ingest encrypted data with cloud storage batch sources using the UI.

@@ -221,7 +221,9 @@ To learn more about the evaluation of audiences and how profiles qualify and exi
 
 ### [!UICONTROL Audience size change trend] {#audience-size-change-trend}
 
-This widget provides a line graph illustration of the difference in the total number of profiles that qualified for a given audience between the most recent daily snapshots. The audience chosen for analysis is selected from the overview dropdown. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The audience size is reflected on the y-axis and time on the x-axis.
+This widget provides a line graph illustration of the day-over-day change in audience size for a selected audience, based on the `count_of_profiles` metric from the `adwh_fact_profile_by_segment_trendlines` dataset. The audience chosen for analysis is selected from the overview dropdown. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The audience size is reflected on the y-axis and time on the x-axis.
+
+For definitions of the profile count metrics used by this widget, see the [Segment trendline metrics](../data-models/cdp-insights-data-model-b2c.md#segment-trendline-metrics) section.
 
 ![The Audience size change trend widget.](../images/audiences/audience-size-change-trend.png)
 

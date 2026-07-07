@@ -74,6 +74,6 @@ Please keep the following details and guardrails in mind while using audience en
 
 ## Faster activation {#faster-activation}
 
-Faster activation lets you activate your audience to a downstream destination immediately after the composition has evaluated. As a result, if your destination is set to activate after segment evaluation, you no longer need to wait for 24 hours for the evaluation job to finish.
+Faster activation lets you activate your audience to a downstream destination immediately after the composition has evaluated. If you set your destination to activate after segment evaluation, you **no longer** need to wait for 24 hours after the evaluation job has run.
 
 For more information, read the [activate audiences to batch profile destinations guide](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files).

@@ -29,4 +29,3 @@ nudge: true
   * [AI Assistant (Legacy) Natural Operational Insights Language to SQL](./model-details/natural-language-to-sql.md)
   * {hide-from-toc} [Send-Time Optimization](./model-details/send-time-optimization.md)
 * [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
-

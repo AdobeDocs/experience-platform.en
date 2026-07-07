@@ -25,7 +25,7 @@ The following request classifies text from a fragment based on the input paramet
 
 >[!CAUTION]
 >
->`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. Contact the Content and Commerce AI beta team to receive your `analyzer_id` for this service.
+>`analyzer_id` determines which [!DNL Adobe AI Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. Contact the Content and Commerce AI beta team to receive your `analyzer_id` for this service.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -54,7 +54,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Property | Description | Mandatory |
 | --- | --- | --- |
-| `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the [!DNL Sensei Content Frameworks] are used. For custom services, please contact the Content and Commerce AI team to set up a custom ID. | Yes |
+| `analyzer_id` | The Adobe AI service ID that your request is deployed under. This ID determines which of the [!DNL Adobe AI Content Frameworks] are used. For custom services, please contact the Content and Commerce AI team to set up a custom ID. | Yes |
 | `application-id` | The ID of the application created. | Yes |
 | `data` | An array that contains a JSON object with each object in the array representing a document. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. Any of the remaining properties outlined below in this table can be overridden from within `data`. | Yes |
 | `language` | Language of input text. The default value is `en`. | No |
