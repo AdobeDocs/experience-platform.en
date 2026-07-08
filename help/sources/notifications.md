@@ -19,7 +19,7 @@ topic_v2:
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Experience Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) is used to collect and centralize customer data from various disparate sources within [!DNL Experience Platform]. The service provides a user interface and RESTful API from which all supported sources are connectable.
+[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service) is used to collect and centralize customer data from various disparate sources within [!DNL Experience Platform]. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
 With Adobe I/O Events, you can subscribe to events and use webhooks to receive notifications regarding the status of your flow runs. These notifications contain information about the success of your flow run or errors that contributed to a run's failure.
 
@@ -29,7 +29,7 @@ This document provides steps on how to subscribe to events, register webhooks, a
 
 This tutorial assumes that you have already created at least one source connection whose flow runs you want to monitor. If you have not yet configured a source connection, start by visiting the [sources overview](./home.md) to configure the source of your choice before returning to this guide.
 
-This document also requires a working understanding of webhooks and how to connect a webhook from one application to another. Refer to the [[!DNL I/O Events] documentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) for an introduction to webhooks.
+This document also requires a working understanding of webhooks and how to connect a webhook from one application to another. Refer to the [[!DNL I/O Events] documentation](https://developer.adobe.com/events/docs/guides/runtime-webhooks/) for an introduction to webhooks.
 
 ## Register a webhook for flow run notifications
 

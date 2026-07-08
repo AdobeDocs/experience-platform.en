@@ -15,7 +15,7 @@ role_v2:
 ---
 # Delete a dataflow using the Flow Service API
 
-You can delete batch and streaming dataflows that contain errors or have become obsolete using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+You can delete batch and streaming dataflows that contain errors or have become obsolete using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 This tutorial covers the steps for deleting dataflows made with both batch and streaming sources using [!DNL Flow Service].
 

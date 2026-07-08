@@ -26,7 +26,7 @@ Data governance policies are rules that describe the kinds of marketing actions 
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoint used in this guide is part of the [[!DNL Policy Service] API](https://developer.adobe.com/experience-platform-apis/references/policy-service). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Retrieve a list of policies {#list}
 

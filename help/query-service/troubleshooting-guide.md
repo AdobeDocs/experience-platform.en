@@ -250,7 +250,7 @@ A successful response returns HTTP status 200 and contains the `errors` array. T
 }
 ```
 
-The [Query Service API reference documentation](https://www.adobe.io/experience-platform-apis/references/query-service/) provides more information on all available endpoints.
+The [Query Service API reference documentation](https://developer.adobe.com/experience-platform-apis/references/query-service) provides more information on all available endpoints.
 +++
 
 ### What does "Error validating schema" mean?

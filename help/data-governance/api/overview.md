@@ -22,7 +22,7 @@ Adobe Experience Platform Data Governance allows you to manage customer data and
 
 The [!DNL Policy Service] API provides several endpoints that allow you to programmatically manage data usage labels and policies, as well as evaluate marketing actions for policy violations. These endpoints are outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
 
-To view all available endpoints and CRUD operations, visit the [[!DNL Policy Service] API swagger](https://www.adobe.io/experience-platform-apis/references/policy-service/).
+To view all available endpoints and CRUD operations, visit the [[!DNL Policy Service] API swagger](https://developer.adobe.com/experience-platform-apis/references/policy-service).
 
 ## Labels
 

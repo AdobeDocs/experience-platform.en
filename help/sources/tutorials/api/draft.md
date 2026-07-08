@@ -12,7 +12,7 @@ role_v2:
 ---
 # Create drafts of your [!DNL Flow Service] entities using the API
 
-You can use the `mode=draft` query parameter in the [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) to set your [!DNL Flow Service] entities such as your base connections, source connections, target connections, and dataflows to a draft state. 
+You can use the `mode=draft` query parameter in the [[!DNL Flow Service] API](<https://developer.adobe.com/experience-platform-apis/references/flow-service>) to set your [!DNL Flow Service] entities such as your base connections, source connections, target connections, and dataflows to a draft state. 
 
 Drafts can be updated later with new information and then published once they are ready, by using the `op=publish` query parameter. 
 

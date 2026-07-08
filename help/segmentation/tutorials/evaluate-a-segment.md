@@ -44,7 +44,7 @@ This tutorial requires a working understanding of the various [!DNL Adobe Experi
 
 ### Required headers
 
-This tutorial also requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to [!DNL Experience Platform] APIs. Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+This tutorial also requires you to have completed the [authentication tutorial](/help/landing/api-authentication.md) in order to successfully make calls to [!DNL Experience Platform] APIs. Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -242,7 +242,7 @@ More detailed information about using this endpoint can be found in the [export 
 
 ## Next steps
 
-Once the export has completed successfully, your data is available within the [!DNL Data Lake] in [!DNL Experience Platform]. You can then use the [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) to access the data using the `batchId` associated with the export. Depending on the size of the segment definition, the data may be in chunks and the batch may consist of several files.
+Once the export has completed successfully, your data is available within the [!DNL Data Lake] in [!DNL Experience Platform]. You can then use the [[!DNL Data Access API]](https://developer.adobe.com/experience-platform-apis/references/data-access) to access the data using the `batchId` associated with the export. Depending on the size of the segment definition, the data may be in chunks and the batch may consist of several files.
 
 For step-by-step instructions on how to use the [!DNL Data Access] API to access and download batch files, follow the [Data Access tutorial](../../data-access/tutorials/dataset-data.md).
 

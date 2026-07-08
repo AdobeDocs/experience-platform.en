@@ -19,7 +19,7 @@ This document provides supplemental information related to working with the [!DN
 
 ## Using query parameters {#query}
 
-The [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) supports the use of query parameters to page and filter results when listing sandboxes.
+The [[!DNL Sandbox] API](https://developer.adobe.com/experience-platform-apis/references/sandbox) supports the use of query parameters to page and filter results when listing sandboxes.
 
 >[!NOTE]
 >

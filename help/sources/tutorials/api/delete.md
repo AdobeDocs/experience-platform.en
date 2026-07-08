@@ -15,7 +15,7 @@ role_v2:
 ---
 # Delete an account using the Flow Service API
 
-You can delete sources accounts that contain errors or have become obsolete using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+You can delete sources accounts that contain errors or have become obsolete using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 See the following tutorial for steps on how to delete an account using the API.
 
