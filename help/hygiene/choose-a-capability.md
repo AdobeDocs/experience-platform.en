@@ -1,6 +1,6 @@
 ---
 title: Choose the right Data Lifecycle Management capability
-description: Understand why data lifecycle management matters in Adobe Experience Platform and choose the right capability—record delete, dataset expiration, or automatic expiration—for your data management goal.
+description: Understand why data lifecycle management matters in Adobe Experience Platform. Compare record delete, dataset expiration, Experience Event TTL, and Pseudonymous Profile TTL, and choose the right capability for your data management goal.
 solution: Experience Platform
 keywords: Experience Platform;data lifecycle;record delete;dataset expiration;data hygiene;time to live;ttl;data minimization
 ---
@@ -30,6 +30,8 @@ A key part of managing your data lifecycle is matching data to the workflow it s
 | Engagement | Real-time or near-real-time access, held in the Profile store | Segmentation, activation, personalization |
 
 Aligning each dataset to the workflow it supports helps you keep only the data you need in the Profile store, where it counts toward your license usage, while retaining longer-lived data in the data lake.
+
+![Diagram showing Adobe Experience Platform splitting into two workflows: Analytical Workflows generating data-driven insights, and Engagement Workflows powered by Real-time Customer Profile.](./images/ui/value-realization-guidebook/page-46-img-01.png){width="600" zoomable="yes"}
 
 For guidance on tracking and managing your license entitlements, see [Data management license entitlement best practices](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
