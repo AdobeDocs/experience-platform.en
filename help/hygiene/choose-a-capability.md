@@ -48,11 +48,11 @@ These capabilities fall into two groups. Record delete and dataset expiration ar
 
 >[!IMPORTANT]
 >
->Record delete and dataset expiration manage your data for operational reasons such as data cleansing, removing anonymous data, and data minimization. They are not for privacy or regulatory compliance. To fulfill data subject rights requests under regulations such as the General Data Protection Regulation (GDPR), use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead.
+>Data Lifecycle Management capabilities—including record delete, dataset expiration, Experience Event TTL, and Pseudonymous Profile TTL—manage your data for operational reasons such as data cleansing, removing anonymous data, and data minimization. None of them are for privacy or regulatory compliance. To fulfill data subject rights requests under regulations such as the General Data Protection Regulation (GDPR), use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead.
 
 ## Record delete {#record-delete}
 
-When you need to remove specific individuals' data for operational reasons such as data cleansing, removing anonymous data, or data minimization, use record delete. It removes individual records from Experience Platform based on their primary identity. Record delete is not a compliance tool; to fulfill data subject rights requests, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md).
+When you need to remove specific individuals' data for operational reasons such as data cleansing, removing anonymous data, or data minimization, use record delete. It removes individual records from Experience Platform based on their primary identity, affecting the data lake, Identity Service, and Real-Time Customer Profile by default. Record delete is not a compliance tool; to fulfill data subject rights requests, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md).
 
 Record delete acts only on the primary identity defined in each dataset's schema. Before you use it, note the following limitations:
 
