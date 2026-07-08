@@ -20,7 +20,7 @@ When data accumulates beyond what your use cases require, you face several risks
 * **Degraded performance.** Excess data increases system load and can slow processing.
 * **Privacy exposure.** Retaining data longer than it is useful increases privacy risk and regulatory exposure.
 
-To avoid these outcomes, retain data only as long as it supports an active use case. Behavioral data, such as event data, typically consumes far more storage than record data, so it is usually where unmanaged growth has the greatest impact.
+To avoid these outcomes, retain data only as long as it supports an active use case, and apply the same principle at ingestion by using [ingestion filters](../landing/license-usage-and-guardrails/data-management-best-practices.md#ingestion-filters) to bring in only the data your use cases require. Behavioral data, such as event data, typically consumes far more storage than record data, so it is usually where unmanaged growth has the greatest impact.
 
 A key part of this decision is matching data to the workflow it serves. Experience Platform stores data in two repositories that serve different purposes:
 
@@ -59,6 +59,8 @@ Record delete acts only on the primary identity defined in each dataset's schema
 * Only the primary identity is matched. Records cannot be targeted by secondary identities.
 * Records without a populated primary identity are skipped.
 * Data ingested before the primary identity was configured in the dataset's schema cannot be deleted this way.
+* A dataset with an active dataset expiration cannot also receive a record delete request until that expiration completes.
+* For relational-schema datasets with change data capture, deleted records may be re-ingested unless the source is updated accordingly; see [relational schema considerations](./ui/record-delete.md#relational-record-delete).
 
 Depending on your organization's configuration, you can delete records from a single dataset or from all datasets.
 
@@ -72,11 +74,11 @@ You can create record delete requests in the [!UICONTROL Data Lifecycle] workspa
 
 ## Dataset expiration {#dataset-expiration}
 
-When you need to retire an entire dataset that is no longer needed for your use cases, use dataset expiration. It deletes the dataset on a date that you schedule. When the dataset reaches its expiration date, the data lake, Identity Service, and Real-Time Customer Profile each remove the dataset's contents, and the expiration completes once all three services finish.
+When you need to retire an entire dataset that is no longer needed for your use cases, use dataset expiration. It deletes the dataset on a date that you schedule, and you can modify or cancel the scheduled date at any time before it executes. When the dataset reaches its expiration date, the data lake, Identity Service, and Real-Time Customer Profile each remove the dataset's contents, and the expiration completes once all three services finish.
 
 >[!IMPORTANT]
 >
->Before a dataset expires, update any dataflows that ingest data into it so that your downstream workflows are not affected.
+>Before a dataset expires, update any dataflows that ingest data into it so that your downstream workflows are not affected. Because the dataset is removed from the data lake before the rest of the expiration process completes, any dataflow that still ingests into it begins to fail as soon as the dataset is removed.
 
 You can have only a limited number of scheduled dataset expirations pending at one time, and the limit depends on your product and any Shield entitlement; for the current limit, see [pending expiration limits](./ui/dataset-expiration.md#schedule-dataset-expiration). Data Lifecycle Management does not support batch dataset deletion.
 
@@ -92,7 +94,7 @@ Experience Event TTL (also called Experience Event expiration) applies at the da
 >
 >Unexpectedly high event volume can also result from bot traffic rather than genuine user activity. For guidance on identifying and filtering bot traffic, see [Bot filtering in Query Service](../query-service/use-cases/bot-filtering.md).
 
-Pseudonymous Profile TTL (Pseudonymous Profile data expiration) applies at the sandbox level and removes pseudonymous (unknown) profiles that have had no activity for the period that you set. It removes both events and profile records. This setting is self-serve, with a default expiration of 14 days in production sandboxes and 3 days in development sandboxes. For how to configure it, see [Pseudonymous profile data expiration](../profile/pseudonymous-profiles.md).
+Pseudonymous Profile TTL (Pseudonymous Profile data expiration) applies at the sandbox level and removes pseudonymous (unknown) profiles that have had no activity for the period that you set. It removes both events and profile records. This setting is self-serve, with a default expiration of 14 days in production sandboxes and 3 days in development sandboxes. Removal runs on a recurring cycle rather than instantly, so expect a short delay after a profile becomes eligible. For how to configure it, see [Pseudonymous profile data expiration](../profile/pseudonymous-profiles.md).
 
 The two settings differ in scope and in what they remove:
 
@@ -136,3 +138,7 @@ Use the following guidance when you set retention durations:
 Combine the capabilities based on the data you keep. For example, for high-volume clickstream data, apply an Experience Event TTL with a shorter Pseudonymous Profile TTL to control your Profile store footprint, and set a longer data lake retention period to preserve events for long-term analysis. Use dataset expiration to retire entire datasets you no longer need, and record delete to remove specific records on request.
 
 For the tools and best practices to track and manage your license entitlements, see [Data management license entitlement best practices](../landing/license-usage-and-guardrails/data-management-best-practices.md).
+
+## Next steps {#next-steps}
+
+Once you've chosen a capability, use the linked UI and API pages in each section to carry it out. If you're implementing record delete or dataset expiration through the API, see [Best practices](./best-practices.md) for guidance on batching requests, handling throttling, and monitoring work order status. For broader orientation across any of the four capabilities, see the [Data Lifecycle UI guide](./ui/overview.md) or the [Data Hygiene API guide](./api/overview.md).
