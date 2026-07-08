@@ -41,8 +41,8 @@ Your data management goal determines which capability to use. The following tabl
 | --- | --- |
 | Remove specific individuals' records, matched by identity | [Record delete](#record-delete) |
 | Delete an entire dataset on a date you schedule | [Dataset expiration](#dataset-expiration) |
-| Automatically remove stale events from a dataset over time | [Experience Event TTL](#automatic-expiration) |
-| Automatically remove inactive pseudonymous (unknown) profiles | [Pseudonymous Profile TTL](#automatic-expiration) |
+| Automatically remove stale events from a dataset over time | [Experience Event TTL](#experience-event-ttl) |
+| Automatically remove inactive pseudonymous (unknown) profiles | [Pseudonymous Profile TTL](#pseudonymous-profile-ttl) |
 
 These capabilities fall into two groups. Record delete and dataset expiration are targeted, one-time actions that you submit when you need them. Experience Event TTL and Pseudonymous Profile TTL are automated settings that remove data on an ongoing basis once you configure them. If your goal requires more than one of these—for example, removing specific records while also trimming ongoing event growth—combine capabilities as described in [Plan your retention strategy](#plan-retention).
 
@@ -54,6 +54,10 @@ These capabilities fall into two groups. Record delete and dataset expiration ar
 
 When you need to remove specific individuals' data for operational reasons such as data cleansing, removing anonymous data, or data minimization, use record delete. It removes individual records from Experience Platform based on their primary identity. By default, this affects the data lake, Identity Service, and Real-Time Customer Profile. Record delete is not a compliance tool; to fulfill data subject rights requests, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md).
 
+>[!IMPORTANT]
+>
+>Deleted records cannot be recovered.
+
 Record delete acts only on the primary identity defined in each dataset's schema. Before you use it, note the following limitations:
 
 * Only the primary identity is matched. Records cannot be targeted by secondary identities.
@@ -64,11 +68,7 @@ Record delete acts only on the primary identity defined in each dataset's schema
 
 Depending on your organization's configuration, you can delete records from a single dataset or from all datasets.
 
->[!IMPORTANT]
->
->Deleted records cannot be recovered.
-
-After you submit a request, it is grouped into a batch before processing and completes within the service level agreement (SLA) for your entitlement. For the processing stages and how long each takes, see [Data Lifecycle processing timelines](./data-lifecycle-processing-timelines.md). Record delete requests are also subject to daily and monthly identifier submission limits; for the current limits, see [identifier submission quotas](./ui/record-delete.md#quotas).
+After you submit a request, Experience Platform batches it before processing; processing completes within the service level agreement (SLA) for your entitlement. For the processing stages and how long each takes, see [Data Lifecycle processing timelines](./data-lifecycle-processing-timelines.md). Record delete requests are also subject to daily and monthly identifier submission limits; for the current limits, see [identifier submission quotas](./ui/record-delete.md#quotas).
 
 You can create record delete requests in the [!UICONTROL Data Lifecycle] workspace or with the API. See [Create a record delete request](./ui/record-delete.md) for the UI workflow and the [work order endpoint guide](./api/workorder.md) for the API.
 
@@ -88,11 +88,15 @@ You can schedule dataset expirations in the [!UICONTROL Data Lifecycle] workspac
 
 When you want to trim stale data from the Profile store automatically over time, rather than deleting it yourself, use Experience Event TTL or Pseudonymous Profile TTL. Once you configure these settings, data is removed when it is no longer useful, without requiring you to submit individual requests. The settings continue to apply until you change or remove them.
 
-Experience Event TTL (also called Experience Event expiration) applies at the dataset level and removes event data once it reaches the age that you set. It only removes events, not profile attributes. If a profile has no attributes of its own, it stops existing once all of its events are removed. The minimum expiration is one day. For how to configure it, see [Experience Event expirations](../profile/event-expirations.md).
+### Experience Event TTL {#experience-event-ttl}
+
+Experience Event TTL (also called Experience Event expiration) applies at the dataset level and removes event data once it reaches the age that you set. It only removes events, not profile attributes. If a profile has no attributes of its own, it stops existing once all of its events are removed. The minimum expiration is one day. This setting requires Adobe to enable it for your organization; contact your Adobe account team or Customer Care. For how to configure it, see [Experience Event expirations](../profile/event-expirations.md).
 
 >[!NOTE]
 >
 >Unexpectedly high event volume can also result from bot traffic rather than genuine user activity. For guidance on identifying and filtering bot traffic, see [Bot filtering in Query Service](../query-service/use-cases/bot-filtering.md).
+
+### Pseudonymous Profile TTL {#pseudonymous-profile-ttl}
 
 Pseudonymous Profile TTL (Pseudonymous Profile data expiration) applies at the sandbox level and removes pseudonymous (unknown) profiles that have had no activity for the period that you set. It removes both events and profile records. This setting is self-serve, with a default expiration of 14 days in production sandboxes and 3 days in development sandboxes. Removal runs on a recurring cycle rather than instantly, so expect a short delay after a profile becomes eligible. For how to configure it, see [Pseudonymous profile data expiration](../profile/pseudonymous-profiles.md).
 
@@ -141,4 +145,4 @@ For guidance on tracking and managing your license entitlements, see [Data manag
 
 ## Next steps {#next-steps}
 
-Once you've chosen a capability, use the linked UI and API pages in each section to carry it out. If you're implementing record delete or dataset expiration through the API, see [Best practices](./best-practices.md) for guidance on batching requests, handling throttling, and monitoring work order status. For broader orientation across any of the four capabilities, see the [Data Lifecycle UI guide](./ui/overview.md) or the [Data Hygiene API guide](./api/overview.md).
+Once you've chosen a capability, use the linked UI and API pages in each section to carry it out. If you're implementing record delete or dataset expiration through the API, see [best practices for record delete and dataset expiration requests](./best-practices.md) for guidance on batching requests, handling throttling, and monitoring work order status. For broader orientation across any of the four capabilities, see the [Data Lifecycle UI guide](./ui/overview.md) or the [Data Hygiene API guide](./api/overview.md).
