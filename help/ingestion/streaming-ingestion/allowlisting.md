@@ -35,7 +35,7 @@ The IP allowlisting feature works as follows:
 
 ## Key considerations
 
-* The IP address allowlisting feature applies only to the [Streaming Ingestion API](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) (`dcs.adobedc.net`) and does **not** apply to `server.adobedc.net` or `edge.adobedc.net`.
+* The IP address allowlisting feature applies only to the [Streaming Ingestion API](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion) (`dcs.adobedc.net`) and does **not** apply to `server.adobedc.net` or `edge.adobedc.net`.
 * New sandboxes are open by default until allowlisting is enabled.
 * Removing a sandbox from the allowlist will reopen it to the internet.
 * You must maintain the complete list of sandbox-to-IP-address mappings on your side and always submit the full list in the IP address allowlisting form. Incremental updates are not supported.

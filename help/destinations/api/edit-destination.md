@@ -24,7 +24,7 @@ topic_v2:
 ---
 # Edit destination connections using the Flow Service API
 
-This tutorial covers the steps for editing various components of a destination connection. Learn how to update authentication credentials, export location, and more by using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for editing various components of a destination connection. Learn how to update authentication credentials, export location, and more by using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers {#gather-values-for-required-headers}
 
-To make calls to Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+To make calls to Experience Platform APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

@@ -46,7 +46,7 @@ The [!DNL Real-Time Customer Profile] API documentation provides example API cal
 
 ## Required headers
 
-The API documentation also requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to [!DNL Experience Platform] endpoints. Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
+The API documentation also requires you to have completed the [authentication tutorial](/help/landing/api-authentication.md) in order to successfully make calls to [!DNL Experience Platform] endpoints. Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

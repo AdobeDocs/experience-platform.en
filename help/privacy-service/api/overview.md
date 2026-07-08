@@ -24,7 +24,7 @@ The Privacy Service API provides several endpoints that allow you to programmati
 >
 >This guide covers how to use the [!DNL Privacy Service] API. For details on how to use the UI, see the [Privacy Service UI overview](../ui/overview.md).
 
-To view all available endpoints and CRUD operations, visit the [Privacy Service API reference](https://www.adobe.io/experience-platform-apis/references/privacy-service/).
+To view all available endpoints and CRUD operations, visit the [Privacy Service API reference](https://developer.adobe.com/experience-platform-apis/references/privacy-service).
 
 ## Privacy jobs
 

@@ -18,7 +18,7 @@ role_v2:
 
 [!DNL Data Landing Zone] is a secure, cloud-based file storage facility to bring files into Adobe Experience Platform. Data is automatically deleted from the [!DNL Data Landing Zone] after seven days.
 
-This tutorial walks you through the steps on how to create a [!DNL Data Landing Zone] source connection using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). This tutorial also provides instructions on how to retrieve your [!DNL Data Landing Zone], as well as view and refresh your credentials.
+This tutorial walks you through the steps on how to create a [!DNL Data Landing Zone] source connection using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service). This tutorial also provides instructions on how to retrieve your [!DNL Data Landing Zone], as well as view and refresh your credentials.
 
 ## Getting started
 

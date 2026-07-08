@@ -43,7 +43,7 @@ This tutorial requires a working understanding of Adobe Experience Platform [!DN
 - [Data Ingestion overview](../home.md): Covers the core concepts of [!DNL Experience Platform Data Ingestion], including ingestion methods and data connectors.
 - [Streaming ingestion overview](../streaming-ingestion/overview.md): The workflow and building blocks of streaming ingestion, such as streaming connections, datasets, [!DNL XDM Individual Profile], and [!DNL XDM ExperienceEvent].
 
-This tutorial also requires you to have completed the [Authentication to Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) tutorial in order to successfully make calls to [!DNL Experience Platform] APIs. Completing the authentication tutorial provides the value for the Authorization header required by all API calls in this tutorial. The header is shown in sample calls as follows:
+This tutorial also requires you to have completed the [Authentication to Adobe Experience Platform](/help/landing/api-authentication.md) tutorial in order to successfully make calls to [!DNL Experience Platform] APIs. Completing the authentication tutorial provides the value for the Authorization header required by all API calls in this tutorial. The header is shown in sample calls as follows:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 
@@ -527,7 +527,7 @@ The second message failed because it lacked a message body. The collection reque
     },
 ```
 
-The third message failed due to an invalid organization ID being used in the header. The organization must match with the {CONNECTION_ID} that you are trying to post to. To determine which organization ID matches the streaming connection you are using, you can perform a `GET inlet` request using the [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/). See [retrieving a streaming connection](./create-streaming-connection.md#get-data-collection-url) for an example of how to retrieve previously created streaming connections. 
+The third message failed due to an invalid organization ID being used in the header. The organization must match with the {CONNECTION_ID} that you are trying to post to. To determine which organization ID matches the streaming connection you are using, you can perform a `GET inlet` request using the [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion). See [retrieving a streaming connection](./create-streaming-connection.md#get-data-collection-url) for an example of how to retrieve previously created streaming connections. 
 
 The fourth message failed because it did not follow the expected XDM schema. The `xdmSchema` included in the header and body of the request do not match the XDM schema of the `{DATASET_ID}`. Correcting the schema in the message header and body allows it to pass DCCS validation and be successfully sent to [!DNL Experience Platform]. The message body must also be updated to match the XDM schema of the `{DATASET_ID}` for it to pass streaming validation on [!DNL Experience Platform]. For more information on what happens to messages that successfully stream to Experience Platform, see the [confirm messages ingested](#confirm-messages-ingested) section of this tutorial.
 

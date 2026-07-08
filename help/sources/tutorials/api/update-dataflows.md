@@ -12,7 +12,7 @@ role_v2:
 ---
 # Update dataflows using the Flow Service API
 
-This tutorial covers the steps for updating a dataflow, including its basic information, schedule, and mapping sets using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for updating a dataflow, including its basic information, schedule, and mapping sets using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 >[!TIP]
 >

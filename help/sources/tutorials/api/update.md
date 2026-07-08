@@ -17,7 +17,7 @@ topic_v2:
 
 In some circumstances, it may be required to update the details of an existing base connection. [!DNL Flow Service] provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials.
 
-This tutorial covers the steps for updating the details and credentials of a connection using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for updating the details and credentials of a connection using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 >[!TIP]
 >

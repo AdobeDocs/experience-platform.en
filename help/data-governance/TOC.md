@@ -37,5 +37,5 @@ nudge: true
   * [Policies](api/policies.md)
   * [Marketing actions](api/marketing-actions.md)
   * [Evaluation](api/evaluation.md)
-* [API reference](https://www.adobe.io/experience-platform-apis/references/policy-service/)
+* [API reference](https://developer.adobe.com/experience-platform-apis/references/policy-service)
 * [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

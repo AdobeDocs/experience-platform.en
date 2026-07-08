@@ -23,7 +23,7 @@ topic_v2:
 ---
 # Delete a destination dataflow using the Flow Service API
 
-You can delete dataflows that contain errors or have become obsolete using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+You can delete dataflows that contain errors or have become obsolete using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 This tutorial covers the steps for deleting dataflows to both batch and streaming destinations using [!DNL Flow Service].
 
@@ -44,7 +44,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers {#gather-values-for-required-headers}
 
-To make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+To make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

@@ -19,7 +19,7 @@ role_v2:
 
 The Adobe Experience Platform Batch Ingestion API allows you to ingest data into Experience Platform as batch files. Data being ingested can be profile data from a flat file (such as a Parquet file) or data that conforms to a known schema in the [!DNL Experience Data Model] (XDM) registry.
 
-The [Batch Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) provides additional information on these API calls.
+The [Batch Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion) provides additional information on these API calls.
 
 The following diagram outlines the batch ingestion process:
 
@@ -27,7 +27,7 @@ The following diagram outlines the batch ingestion process:
 
 ## Getting started
 
-The API endpoints used in this guide is part of the [Batch Ingestion API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API. 
+The API endpoints used in this guide is part of the [Batch Ingestion API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API. 
 
 ### [!DNL Data Ingestion] prerequisites
 

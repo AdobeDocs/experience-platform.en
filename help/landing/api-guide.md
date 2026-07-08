@@ -67,7 +67,7 @@ The APIs for each Experience Platform service all share the same set of authenti
 
 ## Authentication and headers
 
-In order to successfully make calls to Experience Platform endpoints, you are required to complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in Experience Platform API calls, as shown below:
+In order to successfully make calls to Experience Platform endpoints, you are required to complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in Experience Platform API calls, as shown below:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`

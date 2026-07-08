@@ -335,7 +335,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       }
    ],
    "uiAttributes":{
-      "documentationLink":"https://www.adobe.io/apis/experienceplatform.html",
+      "documentationLink":"https://developer.adobe.com/experience-platform-apis/",
       "category":"DLZ",
       "connectionType":"Server-to-server",
       "frequency":"Batch",

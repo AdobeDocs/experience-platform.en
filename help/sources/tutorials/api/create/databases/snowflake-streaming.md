@@ -18,7 +18,7 @@ role_v2:
 >
 > The [!DNL Snowflake] streaming source is available in the API to users who have purchased Real-Time Customer Data Platform Ultimate.
 
-This tutorial provides steps on how to connect and stream data from your [!DNL Snowflake] account to Adobe Experience Platform using the [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+This tutorial provides steps on how to connect and stream data from your [!DNL Snowflake] account to Adobe Experience Platform using the [[!DNL Flow Service] API](<https://developer.adobe.com/experience-platform-apis/references/flow-service>).
 
 ## Getting started
 

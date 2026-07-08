@@ -23,7 +23,7 @@ topic_v2:
 
 [!DNL Access control] for [!DNL Experience Platform] is administered through the [Adobe Admin Console](https://adminconsole.adobe.com). This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes. See the [access control overview](../home.md) for more information.
 
-This developer guide provides information on how to format your requests to the [[!DNL Access Control API]](https://www.adobe.io/experience-platform-apis/references/access-control/), and covers the following operations:
+This developer guide provides information on how to format your requests to the [[!DNL Access Control API]](https://developer.adobe.com/experience-platform-apis/references/access-control), and covers the following operations:
 
 - [List names of permissions and resource types](./permissions-and-resource-types.md)
 - [View effective access policies for the current user](./effective-policies.md)
@@ -38,7 +38,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

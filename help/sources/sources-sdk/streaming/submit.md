@@ -22,7 +22,7 @@ role_v2:
 
 The final steps to integrating your new source to Adobe Experience Platform using Self-Serve Sources (Streaming SDK) are to test and submit your new source. Once you have completed your connection specification and updated the streaming flow specification, you can start testing your source's functionality through either the API or the UI. When successful, you can then submit your new source by contacting your Adobe representative.
 
-The following document provides steps on how to test and debug your source using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following document provides steps on how to test and debug your source using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 

@@ -27,7 +27,7 @@ topic_v2:
 ---
 # Create a data governance policy in the API
 
-The [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) allows you to create and manage data governance policies to determine what marketing actions can be taken against data that contains certain data usage labels.
+The [Policy Service API](https://developer.adobe.com/experience-platform-apis/references/policy-service) allows you to create and manage data governance policies to determine what marketing actions can be taken against data that contains certain data usage labels.
 
 This document provides a step-by-step tutorial for creating a governance policy using the [!DNL Policy Service] API.
 
