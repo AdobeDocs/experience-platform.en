@@ -31,7 +31,7 @@ A key part of managing your data lifecycle is matching data to the workflow it s
 
 Aligning each dataset to the workflow it supports helps you keep only the data you need in the Profile store, where it counts toward your license usage, while retaining longer-lived data in the data lake.
 
-![Diagram showing Adobe Experience Platform splitting into two workflows: Analytical Workflows generating data-driven insights, and Engagement Workflows powered by Real-time Customer Profile.](./images/ui/value-realization-guidebook/page-46-img-01.png){width="600" zoomable="yes"}
+![Diagram showing Adobe Experience Platform splitting into two workflows: Analytical Workflows generating data-driven insights, and Engagement Workflows powered by Real-time Customer Profile.](./images/choose-a-capability/analytical-engagement-workflows.png){width="600" zoomable="yes"}
 
 For guidance on tracking and managing your license entitlements, see [Data management license entitlement best practices](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
