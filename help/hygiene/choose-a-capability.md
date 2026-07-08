@@ -16,9 +16,9 @@ Adobe Experience Platform ingests data continuously, and the amount of data you 
 
 When data accumulates beyond what your use cases require, you face several risks:
 
-* **Cost pressure.** Growing data volumes can push you toward or beyond your licensing entitlements, which can lead to overages.
-* **Degraded performance.** Excess data increases system load and can slow processing.
-* **Privacy exposure.** Retaining data longer than it is useful increases privacy risk and regulatory exposure.
+* **Cost pressure:** Growing data volumes can push you toward or beyond your licensing entitlements, which can lead to overages.
+* **Degraded performance:** Excess data increases system load and can slow processing.
+* **Privacy exposure:** Retaining data longer than it is useful increases privacy risk and regulatory exposure.
 
 To avoid these outcomes, retain data only as long as it supports an active use case. Apply the same principle at ingestion by using [ingestion filters](../landing/license-usage-and-guardrails/data-management-best-practices.md#ingestion-filters) to bring in only the data your use cases require. Behavioral data, such as event data, typically consumes far more storage than record data, so it is usually where unmanaged growth has the greatest impact.
 
@@ -133,9 +133,9 @@ Answer the following questions for each dataset before you set specific retentio
 
 Use the following guidance when you set retention durations:
 
-* **Experience Event TTL.** Set the expiration to cover the longest lookback your audiences need, and keep your audience lookback windows within that period so that segmentation stays accurate.
-* **Pseudonymous Profile TTL.** Set a shorter period than your Experience Event TTL to remove inactive unknown profiles sooner.
-* **Data lake retention.** Set a longer period for event data you still need for analysis, independent of when the same data expires from the Profile store. Match the duration to how the data is used: shorter for frequently accessed data, longer for archival needs. See [Manage Experience Event dataset retention (TTL)](../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) for recommended durations and minimums.
+* **Experience Event TTL:** Set the expiration to cover the longest lookback your audiences need, and keep your audience lookback windows within that period so that segmentation stays accurate.
+* **Pseudonymous Profile TTL:** Set a shorter period than your Experience Event TTL to remove inactive unknown profiles sooner.
+* **Data lake retention:** Set a longer period for event data you still need for analysis, independent of when the same data expires from the Profile store. Match the duration to how the data is used: shorter for frequently accessed data, longer for archival needs. See [Manage Experience Event dataset retention (TTL)](../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) for recommended durations and minimums.
 
 >[!TIP]
 >
