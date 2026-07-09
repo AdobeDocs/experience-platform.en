@@ -41,7 +41,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -88,7 +88,7 @@ When an identity is persisted, [!DNL Identity Service] generates and assigns an 
 
 To limit the payload in responses, APIs adapt their responses to the type of identity construct used. That is, if you pass XID your responses will have XIDs, if you pass composite identities, the response will follow the structure used in the request.
 
-The examples in this document do not cover the complete functionality of the [!DNL Identity Service] API. For the complete API, see the [Swagger API Reference](https://www.adobe.io/experience-platform-apis/references/identity-service).
+The examples in this document do not cover the complete functionality of the [!DNL Identity Service] API. For the complete API, see the [Swagger API Reference](https://developer.adobe.com/experience-platform-apis/references/identity-service).
 
 >[!NOTE]
 >

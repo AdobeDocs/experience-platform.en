@@ -17,7 +17,7 @@ role_v2:
 >
 >The [!DNL Amazon Kinesis] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
-This tutorial walks you through the steps to connect [!DNL Amazon Kinesis] (hereinafter referred to as "[!DNL Kinesis]") to Experience Platform, using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial walks you through the steps to connect [!DNL Amazon Kinesis] (hereinafter referred to as "[!DNL Kinesis]") to Experience Platform, using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Getting started
 

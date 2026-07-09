@@ -41,7 +41,7 @@ The [!UICONTROL Audience comparison] dashboard compares and contrasts key audien
 
 ## Set audience comparisons {#set-audience-comparisons}
 
-To allow for more meaningful insights and comparisons, use the system filters to precisely target the audience segments, and the timeframe you are interested in analyzing. Select the filter icon (![The filter icon.](../../../images/icons/filter-icon-white.png)) to choose two different audiences ([!UICONTROL Audience A] and [!UICONTROL Audience B]) and set specific parameters for comparison. 
+To allow for more meaningful insights and comparisons, use the system filters to precisely target the audiences, and the timeframe you are interested in analyzing. Select the filter icon (![The filter icon.](../../../images/icons/filter-icon-white.png)) to choose two different audiences ([!UICONTROL Audience A] and [!UICONTROL Audience B]) and set specific parameters for comparison. 
 
 ![The Filters dialog on the Audience comparison dashboard.](../../images/sql-insights-query-pro-mode/templates/audience-comparison-filters.png)
 

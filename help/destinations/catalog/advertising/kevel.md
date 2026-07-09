@@ -172,7 +172,7 @@ To fully stop targeting in [!DNL Kevel], ensure the segment is removed from any 
 [!DNL Kevel] requires:
 
 - **Identity namespaces** — Up to three identity namespaces mapped to [!DNL Kevel] identity slots.
-- **Segment membership** — No manual mapping required; Experience Platform automatically passes segment membership identifiers and aliases.
+- **Audience membership** — No manual mapping required; Experience Platform automatically passes audience membership identifiers and aliases.
 
 During activation, select the identity namespaces you have configured for [!DNL Kevel]. Each identity will generate its own UserDB update call.
 

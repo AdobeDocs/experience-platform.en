@@ -23,7 +23,7 @@ topic_v2:
 ---
 # Manage data usage labels for datasets using APIs
 
-The [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) allows you to apply and edit usage labels for datasets. It is part of Adobe Experience Platform's data catalog capabilities, but is separate from the [!DNL Catalog Service] API which manages dataset metadata.
+The [[!DNL Dataset Service API]](https://developer.adobe.com/experience-platform-apis/references/dataset-service) allows you to apply and edit usage labels for datasets. It is part of Adobe Experience Platform's data catalog capabilities, but is separate from the [!DNL Catalog Service] API which manages dataset metadata.
 
 >[!IMPORTANT]
 >

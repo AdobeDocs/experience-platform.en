@@ -11,7 +11,7 @@ An extension package is owned by the developer's [company](./companies.md). Owne
 
 ## Getting started
 
-The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
+The endpoint used in this guide is part of the [Reactor API](https://developer.adobe.com/experience-platform-apis/references/reactor). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
 
 ## Retrieve extension package usage authorizations for an extension package {#list}
 

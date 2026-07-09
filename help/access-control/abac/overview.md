@@ -114,7 +114,7 @@ There is limited availability to attribute-based access control for customers wh
 
 * Permissions interface: Provides an interface for you to define user roles, permissions and policies for attribute-based access control.
 
-* Labeling: Add, edit, remove labels to user roles, schema fields, segments, and other supported objects in order to leverage access control policies. **Note:** Any segment that utilizes a labeled attribute must likewise be labeled if you want the same access restrictions to apply to it.
+* Labeling: Add, edit, remove labels to user roles, schema fields, audiences, and other supported objects in order to leverage access control policies. **Note:** Any audience that utilizes a labeled attribute must likewise be labeled if you want the same access restrictions to apply to it.
 
 The administration workflows for all Experience Platform-powered applications from Admin Console to the new Permissions interface are being switched.
 
@@ -139,7 +139,7 @@ As an administrator, you can use attribute-based access control functionalities 
 >
 >In summary, keep in mind the following implications when working with destinations and attribute-based access control:
 >
->* You can only activate audiences that you have permission to access and view in [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) and [select segment step](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) of the activation workflow.
+>* You can only activate audiences that you have permission to access and view in [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) and [select audience step](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) of the activation workflow.
 >* In the [mapping step of the activation workflow](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), you can only view and select for activation the fields that you have access permission to.
 >* When you are looking to activate additional segments to an existing destination where you do not have access to all the fields that are mapped for export, the activation workflow will be blocked for you. 
 

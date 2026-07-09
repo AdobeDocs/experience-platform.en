@@ -22,7 +22,7 @@ topic_v2:
 ---
 # Create a dataflow for [!DNL Mailchimp Members] using the Flow Service API
 
-The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL Mailchimp Members] data to Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL Mailchimp Members] data to Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Prerequisites
 
@@ -404,7 +404,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../../xdm/api/schemas.md).
 
@@ -480,7 +480,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 ## Create a mapping {#mapping}
 
-In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to the [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) with data mappings defined within the request payload.
+In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to the [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep) with data mappings defined within the request payload.
 
 **API format**
 

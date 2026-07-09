@@ -28,11 +28,11 @@ Observability metrics provide insights into usage statistics, historical trends,
 
 >[!NOTE]
 >
->The previous version of the metrics endpoint (V1) has been deprecated. This document focuses exclusively on the current version (V2). For details on the V1 endpoint for legacy implementations, please refer to the [API reference](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
+>The previous version of the metrics endpoint (V1) has been deprecated. This document focuses exclusively on the current version (V2). For details on the V1 endpoint for legacy implementations, please refer to the [API reference](https://developer.adobe.com/experience-platform-apis/references/observability-insights#operation/retrieveMetricsV1).
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Observability Insights] API](https://www.adobe.io/experience-platform-apis/references/observability-insights/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoint used in this guide is part of the [[!DNL Observability Insights] API](https://developer.adobe.com/experience-platform-apis/references/observability-insights). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Retrieve observability metrics
 

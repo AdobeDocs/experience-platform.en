@@ -95,7 +95,7 @@ There are two ways to send identity data to Experience Platform:
 
 `identityMap` is a map-type field that describes the various identity values for an individual, along with their associated namespaces. This field can be used to provide identity information for your schemas, instead of defining identity values within the structure of the schema itself.
 
-The main drawback of using `identityMap` is that identity values are nested and may be harder to work with in tools that expect top-level identity fields, such as the Segment Builder or some third-party integrations.
+The main drawback of using `identityMap` is that identity values are nested and may be harder to work with in tools that expect top-level identity fields, such as Segment Builder or some third-party integrations.
 
 >[!NOTE]
 >

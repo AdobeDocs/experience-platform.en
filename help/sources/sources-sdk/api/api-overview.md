@@ -13,7 +13,7 @@ role_v2:
 ---
 # Self-Serve Sources (Batch SDK) API Guide
 
-This document provides an overview of the process of creating a new source, including steps on how to write and submit a new connection specification using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This document provides an overview of the process of creating a new source, including steps on how to write and submit a new connection specification using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Experience Platform. The service provides a user interface and RESTful API that lets you set up source connections to various data providers with ease. These source connections enable you to authenticate your third-party systems, set times for ingestion runs, and manage data ingestion throughput.
 

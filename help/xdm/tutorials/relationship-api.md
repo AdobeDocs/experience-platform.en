@@ -34,7 +34,7 @@ While schema relationships can be inferred through the use of the union schema a
 >
 >The Schema Registry API refers to reference schemas as "destination schemas". These are not to be confused with destination schemas in [Data Prep mapping sets](../../data-prep/mapping-set.md) or schemas for [destination connections](../../destinations/home.md).
 
-This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 
+This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the [[!DNL Schema Registry API]](https://developer.adobe.com/experience-platform-apis/references/schema-registry). 
 
 ## Getting started
 
