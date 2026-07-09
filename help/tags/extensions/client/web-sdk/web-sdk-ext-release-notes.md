@@ -389,7 +389,7 @@ Contains version 2.14.0 of Adobe Experience Platform Web SDK.
 
 ## Version 2.14.1 - October 13, 2022
 
-- Fixed an issue where the Web SDK does not honor the ID from the Experience Cloud ID Service.
+- Fixed an issue where the Web SDK does not honor the ID from the Visitor ID Service.
 
 Contains version 2.13.1 of the Adobe Experience Platform Web SDK Library.
 
