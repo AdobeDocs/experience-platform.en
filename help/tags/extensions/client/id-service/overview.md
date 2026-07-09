@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Cloud Identity Service Extension Overview
-description: Learn about the Adobe Experience Cloud Identity Service tag extension in Adobe Experience Platform.
+title: Adobe Experience Cloud ID Service Extension Overview
+description: Learn about the Adobe Experience Cloud ID Service tag extension in Adobe Experience Platform.
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
 TQID: https://experienceleague.adobe.com/p0fm5HTNKzXVXYxi2mvAhAIHG46WdcWApvuQ0eGnFLo
 product_v2:
@@ -33,11 +33,11 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
 ---
-# Adobe Experience Cloud Identity Service extension overview
+# Adobe Experience Cloud ID Service extension overview
 
 Use this reference for information about configuring the Adobe Experience Cloud ID extension, and the options available when using this extension to build a rule.
 
-Use this extension to integrate the Experience Cloud Identity Service with your property. With the Experience Cloud Identity Service, you can create and store unique and persistent identifiers for your site visitors.
+Use this extension to integrate the Adobe Visitor ID Service with your property. With the Visitor ID Service, you can create and store unique and persistent identifiers for your site visitors.
 
 ## Configure the Experience Cloud ID extension
 
@@ -109,7 +109,7 @@ Define which categories are approved or denied when no preference has been set b
 
 ### Variables
 
-Set name-value pairs as Experience Cloud ID instance properties. Use the drop-down to select a variable, then type or select a value. For information about each variable, refer to the [Experience Cloud Identity Service documentation](https://experiencecloud.adobe.com/resources/help/en_US/mcvid/mcvid-overview.html).
+Set name-value pairs as Experience Cloud ID instance properties. Use the drop-down to select a variable, then type or select a value. For information about each variable, refer to the [Visitor ID Service documentation](https://experiencecloud.adobe.com/resources/help/en_US/mcvid/mcvid-overview.html).
 
 ## Experience Cloud ID extension action types
 

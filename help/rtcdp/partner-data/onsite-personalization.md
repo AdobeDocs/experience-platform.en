@@ -202,7 +202,7 @@ In the screen to configure Web SDK, navigate down to the **[!UICONTROL Datastrea
 
 Get complete information on [how to install Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html).
 
-#### Install ID Service extension
+#### Install Experience Cloud ID Service extension
 
 Use the [Experience Cloud ID Service extension](/help/tags/extensions/client/id-service/overview.md) to create a unique device-based first-party identity for visitors across all Experience Cloud solutions. Search for **[!UICONTROL ID Service]** in the extension catalog, and install it. Keep all the default settings when installing the extension.
   

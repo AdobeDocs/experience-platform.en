@@ -99,7 +99,7 @@ Experience Platform allows you to collect customer consent data through the foll
 
 In addition to SDK commands triggered by CMP consent-change hooks, consent data can also flow into Experience Platform through any customer-generated XDM data that is uploaded directly to a [!DNL Profile]-enabled dataset.
 
-Any segments shared with Experience Platform by Adobe Audience Manager (through the [!DNL Audience Manager] source connector or otherwise) may also contain consent data if the appropriate fields have been applied to those segments through [!DNL Experience Cloud Identity Service]. For more information on collecting consent data in [!DNL Audience Manager], see the document on the [Adobe Audience Manager plug-in for IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
+Any segments shared with Experience Platform by Adobe Audience Manager (through the [!DNL Audience Manager] source connector or otherwise) may also contain consent data if the appropriate fields have been applied to those segments through the [!DNL Visitor ID Service]. For more information on collecting consent data in [!DNL Audience Manager], see the document on the [Adobe Audience Manager plug-in for IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
 
 ### Downstream consent enforcement
 
@@ -146,9 +146,9 @@ For more information on how to work with merge policies, refer to the [merge pol
 
 >[!NOTE]
 >
->The use of the Experience Platform Web SDK is required to process consent data directly in Adobe Experience Platform. [!DNL Experience Cloud Identity Service] is not supported.
+>The use of the Experience Platform Web SDK is required to process consent data directly in Adobe Experience Platform. The [!DNL Visitor ID Service] is not supported.
 >
->[!DNL Experience Cloud Identity Service] is still supported for consent processing in Adobe Audience Manager, however, and compliance with TCF 2.0 only requires that the library is updated to [version 5.0](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
+>The [!DNL Visitor ID Service] is still supported for consent processing in Adobe Audience Manager, however, and compliance with TCF 2.0 only requires that the library is updated to [version 5.0](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
 
 Once you have configured your CMP to generate consent strings, you must integrate the Experience Platform Web SDK to collect those strings and send them to Experience Platform. The Experience Platform SDK provides two commands that can be used to send TCF consent data to Experience Platform (explained in the subsections below). These commands should be used when a customer provides consent information for the first time, and anytime that consent changes thereafter.
 
