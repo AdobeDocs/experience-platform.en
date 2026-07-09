@@ -29,7 +29,7 @@ topic_v2:
 
 Use the SQL audience extension to build audiences with data from the data lake, including any existing dimension entities (such as customer attributes or product information).
 
-Using this SQL extension improves your ability to create audiences as you don't need raw data in your profiles when defining audience segments. Audiences created using this method are automatically registered in the Audience workspace, where you can further target them to file-based destinations.
+Using this SQL extension improves your ability to create audiences as you don't need raw data in your profiles when defining audiences. Audiences created using this method are automatically registered in the Audience workspace, where you can further target them to file-based destinations.
 
 ![Infographic showing the SQL audience extension workflow. The stages include; building audiences with the Query Service using SQL commands, managing them in the Experience Platform UI, to activating them in file-based destinations.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
@@ -37,7 +37,7 @@ This document covers how to use the SQL audience extension in Adobe Experience P
 
 ## Audience creation lifecycle in Data Distiller {#audience-creation-lifecycle}
 
-Follow these steps to create, manage, and activate your audiences. Created audiences integrate seamlessly into the 'audience flow,' so you can build segments from base audiences and target file-based destinations (for example, CSV uploads or cloud storage locations) for customer outreach. 'Audience flow' refers to the complete process of creating, managing, and activating audiences, ensuring seamless integration across destinations. 
+Follow these steps to create, manage, and activate your audiences. Created audiences integrate seamlessly into the 'audience flow,' so you can build audiences from base audiences and target file-based destinations (for example, CSV uploads or cloud storage locations) for customer outreach. 'Audience flow' refers to the complete process of creating, managing, and activating audiences, ensuring seamless integration across destinations. 
 
 As part of your 'audience flow,' use the following SQL commands to [create](#create-audience), [modify](#add-profiles-to-audience), and [delete](#delete-audience) audiences within Adobe Experience Platform.
 
@@ -119,7 +119,7 @@ SELECT userId, orders, total_revenue, recency, frequency, monetization FROM cust
 
 ### Replace audience data (INSERT OVERWRITE) {#replace-audience}
 
-Use the `INSERT OVERWRITE INTO` command to replace all existing profiles in an audience with the results of a new SQL query. This command is useful for managing dynamic audience segments by allowing you to fully refresh an audience's contents in a single step.
+Use the `INSERT OVERWRITE INTO` command to replace all existing profiles in an audience with the results of a new SQL query. This command is useful for managing dynamic audiences by allowing you to fully refresh an audience's contents in a single step.
 
 >[!AVAILABILITY]
 >
@@ -231,7 +231,7 @@ SELECT
 WHERE false;
 ```
 
-After creating the audience, populate it with customer data and segment the profiles based on their RFM scores. The SQL statement below uses the `NTILE(4)` function to rank customers into quartiles based on their RFM (Recency, Frequency, Monetization) scores. These scores categorize customers into six segments, such as 'Core,' 'Loyal,' and 'Whales.' The segmented customer data is then inserted into the audience `adls_rfm_profile` table."
+After creating the audience, populate it with customer data and segment the profiles based on their RFM scores. The SQL statement below uses the `NTILE(4)` function to rank customers into quartiles based on their RFM (Recency, Frequency, Monetization) scores. These scores categorize customers into six audiences, such as 'Core,' 'Loyal,' and 'Whales.' The segmented customer data is then inserted into the audience `adls_rfm_profile` table."
 
 ```sql
 INSERT INTO Audience adls_rfm_profile
@@ -364,7 +364,7 @@ Yes, the dataset associated with the audience is created on the data lake. The a
 
 +++Answer
 
-No. Enriched attributes in the audience are available for use in both enterprise batch and file-based destinations. If you encounter an error like "The following segment IDs have namespaces that are not allowed for this destination: e917f626-a038-42f7-944c-xyxyxyx," create a new segment in Data Distiller and use it with any available destination.
+No. Enriched attributes in the audience are available for use in both enterprise batch and file-based destinations. If you encounter an error like "The following audience IDs have namespaces that are not allowed for this destination: e917f626-a038-42f7-944c-xyxyxyx," create a new audience in Data Distiller and use it with any available destination.
 
 +++
 

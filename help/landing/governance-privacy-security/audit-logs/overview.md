@@ -184,7 +184,7 @@ Select the desired alert from the list to subscribe to receive notifications. Fo
 
 ## Managing audit logs in the API
 
-All actions that you can perform in the UI can also be done using API calls. See the [API reference document](https://www.adobe.io/experience-platform-apis/references/audit-query/) for more information.
+All actions that you can perform in the UI can also be done using API calls. See the [API reference document](https://developer.adobe.com/experience-platform-apis/references/audit-query) for more information.
 
 ## Managing audit logs for Adobe Admin Console
 

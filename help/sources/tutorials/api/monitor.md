@@ -18,7 +18,7 @@ topic_v2:
 ---
 # Monitor sources dataflows using the Flow Service API
 
-This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 >[!NOTE]
 >

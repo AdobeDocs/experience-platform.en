@@ -41,7 +41,7 @@ The Reactor API provides several endpoints that allow you to programmatically ma
 
 These endpoints are outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](./getting-started.md) for important information on how to authenticate to the API.
 
-To view all available endpoints and CRUD operations, visit the [Reactor API reference](https://www.adobe.io/experience-platform-apis/references/reactor/).
+To view all available endpoints and CRUD operations, visit the [Reactor API reference](https://developer.adobe.com/experience-platform-apis/references/reactor).
 
 ## Companies
 

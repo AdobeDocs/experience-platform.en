@@ -12,17 +12,17 @@ role_v2:
 ---
 # Sorting and filtering responses in the Flow Service API
 
-When performing listing (GET) requests in the [Flow Service API](https://www.adobe.io/experience-platform-apis/references/flow-service/), you can use query parameters to sort and filter responses. This guide provides a reference for how to use these parameters for different use cases.
+When performing listing (GET) requests in the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/flow-service), you can use query parameters to sort and filter responses. This guide provides a reference for how to use these parameters for different use cases.
 
 ## Sorting
 
 You can sort responses by using an `orderby` query param. The following resources can be sorted in the API:
 
-* [Connections](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Connections)
-* [Source connections](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
-* [Target connections](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Target-connections)
-* [Flows](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Flows)
-* [Runs](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Runs)
+* [Connections](https://developer.adobe.com/experience-platform-apis/references/flow-service#tag/Connections)
+* [Source connections](https://developer.adobe.com/experience-platform-apis/references/flow-service#tag/Source-connections)
+* [Target connections](https://developer.adobe.com/experience-platform-apis/references/flow-service#tag/Target-connections)
+* [Flows](https://developer.adobe.com/experience-platform-apis/references/flow-service#tag/Flows)
+* [Runs](https://developer.adobe.com/experience-platform-apis/references/flow-service#tag/Runs)
 
 To use the parameter, you must set its value to the specific property you want to sort by (for example, `?orderby=name`). You can prepend the value with a plus sign (`+`) for ascending order or minus sign (`-`) for descending order. If no ordering prefix is provided, the list is sorted in ascending order by default.
 
@@ -53,7 +53,7 @@ Filtering can be applied generically on any property in an entity as long as the
 GET /sourceConnections?property=params.tableName==lead
 ```
 
-**Return all flows for a specific segment ID:**
+**Return all flows for a specific audience ID:**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a
@@ -63,7 +63,7 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 Multiple `property` filters can be included in a query provided they are separated by "and" characters (`&`). An AND relationship is assumed when combining filters, meaning that an entity must satisfy all filters in order for it to be included in the response.
 
-**Return all enabled flows for a segment ID:**
+**Return all enabled flows for a audience ID:**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a&property=state==enabled
@@ -91,7 +91,7 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 GET /sourceConnections?property=params.columns[].name==firstName
 ```
 
-**Look up the flow run ID for a destination by filtering on segment ID:**
+**Look up the flow run ID for a destination by filtering on audience ID:**
 
 ```http
 GET /runs?property=metrics.recordSummary.targetSummaries[].entitySummaries[].id==segment:068d6e2c-b546-4c73-bfb7-9a9d33375659

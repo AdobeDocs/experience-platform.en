@@ -16,7 +16,7 @@ role_v2:
 
 With a base connection created, you can now use the unique base connection ID to navigate and explore your source's data structure and contents. This allows you to identify the specific items, and their respective data types and formats, before creating a dataflow and bringing them over to Adobe Experience Platform.
 
-This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) to explore advertising systems.
+This tutorial uses the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service) to explore advertising systems.
 
 ## Getting started
 

@@ -14,7 +14,7 @@ role_v2:
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-Read this document to learn how to create a base connection for [!DNL PathFactory] using the [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Read this document to learn how to create a base connection for [!DNL PathFactory] using the [[!DNL Flow Service] API](<https://developer.adobe.com/experience-platform-apis/references/flow-service>).
 
 ## Get started
 

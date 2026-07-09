@@ -49,9 +49,9 @@ To use this destination, you must have a Snapchat Ads account. Refer to this doc
 
 ## Limitations {#limitations}
 
-* Snap Inc does not support multiple identities for a given audience segment. Please map only one identity when activating a segment.
-* Snap Inc does not support renaming segments. To rename a segment, you must deactivate, rename it, and then activate it.
-* It is not possible to define a retention period for an audience segment's members. All members have lifetime retention and will be in the audienceuntil they are removed.
+* Snap Inc does not support multiple identities for a given audience. Please map only one identity when activating an audience.
+* Snap Inc does not support renaming audiences. To rename an audience, you must deactivate, rename it, and then activate it.
+* It is not possible to define a retention period for an audience's members. All members have lifetime retention and will be in the audience until they are removed.
 
 ## Supported identities {#supported-identities}
 

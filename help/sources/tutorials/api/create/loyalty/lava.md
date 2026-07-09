@@ -158,7 +158,7 @@ curl -X GET \
 
 ## Connect [!DNL LAVA] to Experience Platform using the [!DNL Flow Service] API
 
-The following tutorial walks you through the steps to create a [!DNL LAVA] source connection and create a dataflow to bring [!DNL LAVA] data to Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a [!DNL LAVA] source connection and create a dataflow to bring [!DNL LAVA] data to Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ### Create a source connection {#source-connection}
 

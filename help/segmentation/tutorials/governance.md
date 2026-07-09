@@ -52,7 +52,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -201,7 +201,7 @@ A successful response returns the details of the merge policy.
 >
 > This step assumes that you have at least one active data usage policy that prevents specific marketing actions to be performed on data containing certain labels. If you do not have any applicable usage policies for the datasets being evaluated, please follow the [policy creation tutorial](../../data-governance/policies/create.md) to create one before continuing with this step.
 
-Once you have obtained the IDs of the merge policy's source datasets, you can use the [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) to evaluate those datasets against specific marketing actions in order to check for data usage policy violations.
+Once you have obtained the IDs of the merge policy's source datasets, you can use the [Policy Service API](https://developer.adobe.com/experience-platform-apis/references/policy-service) to evaluate those datasets against specific marketing actions in order to check for data usage policy violations.
 
 To evaluate the datasets, you must provide the name of the marketing action in the path of a POST request, while providing the dataset IDs within the request body, as shown in the example below.
 
