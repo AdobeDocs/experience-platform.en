@@ -10,7 +10,7 @@ exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
 
 [[!DNL Kevel]](https://www.kevel.com/) provides the AI-enabled technology and expert guidance that help innovative commerce leaders launch, scale, and succeed in retail media. [!DNL Kevel]'s Retail Media Cloud powers targeted, attributable, customizable ad formats for on-site and off-site advertising.
 
-The [!DNL Kevel] streaming destination for Adobe Experience Platform enables customers to activate Adobe audiences directly into [!DNL Kevel]'s UserDB and Segment Management APIs to support real-time targeting at ad decision time. The destination also supports syncing profile attributes such as incrementality testing group assignments.
+The [!DNL Kevel] streaming destination for Adobe Experience Platform enables customers to activate Adobe audiences directly into [!DNL Kevel]'s UserDB and Segment Management APIs to support real-time targeting at ad decision time. The destination can also export profile attributes—such as a user's [incrementality testing](https://dev.kevel.com/docs/incrementality) group assignment—for [!DNL Kevel] to act on at decision time.
 
 >[!IMPORTANT]
 > 
@@ -18,9 +18,9 @@ The [!DNL Kevel] streaming destination for Adobe Experience Platform enables cus
 
 ## Use cases {#use-cases}
 
-You can activate rich first-party behavioral audiences across your retail media experiences to deliver more relevant ads and stronger performance. In Experience Platform, you build high-value, intent-based audiences, such as frequent category shoppers or users with recent product interest, and sync those memberships to [!DNL Kevel] in real time. [!DNL Kevel] immediately makes these segments available for ad decisioning, enabling precise targeting for sponsored products and other formats across search, browse, and app experiences. As soon as users qualify, you can act on these signals to drive more relevant impressions, better targeting, and improved measurement and ROAS.
+**Target retail media audiences in real time.** You can activate rich first-party behavioral audiences across your retail media experiences to deliver more relevant ads and stronger performance. In Experience Platform, you build high-value, intent-based audiences, such as frequent category shoppers or users with recent product interest, and sync those memberships to [!DNL Kevel] in real time. [!DNL Kevel] immediately makes these segments available for [ad decisioning](https://dev.kevel.com/docs/segment-targeting), enabling precise targeting for sponsored products and other formats across search, browse, and app experiences. As soon as users qualify, you can act on these signals to drive more relevant impressions, better targeting, and improved measurement and ROAS.
 
-Additionally, you can sync profile attributes to [!DNL Kevel] to support features like **incrementality testing**. By mapping a user's group assignment attribute to the `kevelGroup` target field, [!DNL Kevel] can use this value to split users into test and control cohorts for measuring the causal impact of advertising.
+**Measure incremental impact.** You can also export a user's group assignment as a profile attribute to power [!DNL Kevel]'s [incrementality testing](https://dev.kevel.com/docs/incrementality). [!DNL Kevel] holds out a control cohort and compares it against exposed users to quantify the *causal* lift your campaigns drive, rather than relying on proxy metrics such as new-to-brand counts or correlation-based lift. This lets you prove incremental sales and conversions while [!DNL Kevel] minimizes revenue impact by serving the next best eligible ad to held-out users.
 
 ## Prerequisites {#prerequisites}
 
@@ -160,11 +160,9 @@ You can optionally map XDM profile attributes to [!DNL Kevel]. The following tar
 To map a group attribute, add a new mapping row in the **Mapping** step and configure:
 
 1. **Source field**: Select the XDM attribute or computed attribute that contains the user's group number (for example, `_yourSchema.incrementalityGroup`).
-2. **Target field**: Select **kevelGroup** from the predefined target-field list. If you use a free-form custom attribute instead, it must be named exactly `kevelGroup` (case-sensitive).
+2. **Target field**: Open the target-field selector, keep **Select attributes** chosen, and select **`kevelGroup`** (Integer) from the schema.
 
->[!IMPORTANT]
->
->The target field name must be exactly `kevelGroup`. The [!DNL Kevel] destination template references this attribute by name. If a different target name is used, the group value will not be sent to [!DNL Kevel].
+![Example mapping of the Kevel Group target field for Kevel Destination](/help/destinations/assets/catalog/advertising/kevel-destination-group-mapping.png)
 
 ## Exported data / Validate data export {#exported-data}
 
