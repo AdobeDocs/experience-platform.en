@@ -125,3 +125,4 @@ Using the [!DNL Segmentation Service] API, you can look up a preview job's curre
 ## Next steps
 
 Once you have developed, tested, and saved your segment definition, you can create a segment job to build an audience using the [!DNL Segmentation Service] API. See the tutorial on [evaluating and accessing segment results](./evaluate-a-segment.md) for detailed steps on how to accomplish this.
+

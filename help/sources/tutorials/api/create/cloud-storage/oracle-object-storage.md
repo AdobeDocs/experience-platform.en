@@ -114,3 +114,4 @@ A successful response returns the connection ID of the newly created connection.
 ## Next steps
 
 By following this tutorial, you have created an [!DNL Oracle Object Storage] connection using the [!DNL Flow Service] API, and have obtained its unique connection ID. You can use this connection ID to [explore cloud storages using the Flow Service API](../../explore/cloud-storage.md).
+

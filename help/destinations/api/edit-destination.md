@@ -479,3 +479,4 @@ The API endpoints in this tutorial follow the general Experience Platform API er
 ## Next steps {#next-steps}
 
 You have learned how to update various components of a destination connection using the [!DNL Flow Service] API. For more information on destinations, see the [destinations overview](../home.md).
+

@@ -29,3 +29,4 @@ The [[!DNL Sandbox] API](https://developer.adobe.com/experience-platform-apis/re
 | --- | --- |
 | `limit` | The maximum number of records to be returned in the response. |
 | `offset` | The number of entities from the first record to start (offset) the response list from. |
+

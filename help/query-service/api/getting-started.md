@@ -67,3 +67,4 @@ Now that you understand what headers to use, you are ready to begin making calls
 ## Next steps
 
 Now that you have learned how to make calls using the [!DNL Query Service] API, you can create your own non-interactive queries. For more information on how to create queries, please read the [SQL reference guide](../sql/overview.md).
+

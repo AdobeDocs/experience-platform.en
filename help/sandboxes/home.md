@@ -112,3 +112,4 @@ The Sandbox API allows you to manage sandboxes by using RESTful API operations. 
 By reading this document, you have been introduced to the essential concepts about sandboxes in Experience Platform. For detailed steps on how to manage sandboxes, see the [user guide](ui/overview.md) for the UI or the [developer guide](./api/getting-started.md) for the API.
 
 While sandboxes serve as a valuable tool for isolating Experience Platform environments for your development team, you can also manage more granular access control by using the Adobe Admin Console. See the [access control overview](../access-control/home.md) for more information.
+

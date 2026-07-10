@@ -423,3 +423,4 @@ The `"status"` field is what shows the current status of the batch requested. Th
 | Staged | The staging phase of the promotion process for a batch is complete and the ingestion job has been run. |
 | Staging | Data for the batch is being processed. |
 | Stalled | The data for the batch is being processed. However, the batch promotion has stalled after a number of retries. |
+

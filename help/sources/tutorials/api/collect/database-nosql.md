@@ -730,3 +730,4 @@ The following section lists the different cloud storage source connectors and th
 | [!DNL MySQL] | `26d738e0-8963-47ea-aadf-c60de735468a` |
 | [!DNL Oracle] | `d6b52d86-f0f8-475f-89d4-ce54c8527328` |
 | [!DNL PostgreSQL] | `74a1c565-4e59-48d7-9d67-7c03b8a13137` |
+

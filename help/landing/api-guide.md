@@ -195,3 +195,4 @@ This document introduced the required headers, available guides, and provided an
 For answers to frequently asked questions, refer to the [Experience Platform troubleshooting guide](troubleshooting.md).
 
 To set up a Postman environment and explore the available Postman collections, refer to the [Experience Platform Postman guide](postman.md).
+

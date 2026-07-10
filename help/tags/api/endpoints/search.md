@@ -269,3 +269,4 @@ There are additional conventions for specific fields that appear in the API:
 | `name` | Exact match, case-sensitive |
 | `settings` | Text with a partial term analysis, case-insensitive |
 | `type` | Exact match, case-sensitive |
+

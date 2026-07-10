@@ -61,3 +61,4 @@ The step-by-step process to configure your source in Experience Platform is outl
   * You can use this [sources UI documentation template](./documentation/ui-template.md) to structure your UI documentation.
   * See the guide on [using the GitHub web interface](./documentation/github.md) for steps on how to create documentation using GitHub.
   * See the guide on [using a text editor](./documentation/text-editor.md) for steps on how to create documentation using your local machine.
+

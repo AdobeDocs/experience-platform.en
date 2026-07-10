@@ -174,3 +174,4 @@ A successful response returns the unique identifier (`id`) of the newly created 
 ## Next steps
 
 By following this tutorial, you have created a [!DNL Kinesis] source connection using the [!DNL Flow Service] API. You can use this source connection ID in the next tutorial to [create a streaming dataflow using the [!DNL Flow Service] API](../../collect/streaming.md).
+

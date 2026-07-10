@@ -173,3 +173,4 @@ The [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-ap
 ## Next steps
 
 By following this tutorial, you have explored your cloud storage system, found the path of the file you wish to bring in to [!DNL Experience Platform], and viewed its structure. You can use this information in the next tutorial to [collect data from your cloud storage and bring it into Experience Platform](../collect/cloud-storage.md).
+

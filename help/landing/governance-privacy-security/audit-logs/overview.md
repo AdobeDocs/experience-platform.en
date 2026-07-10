@@ -197,3 +197,4 @@ This guide covered how to manage audit logs in Experience Platform. For more inf
 To reinforce your understanding of audit logs in Experience Platform, watch the following video:
 
 >[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
+

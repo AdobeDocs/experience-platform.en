@@ -904,3 +904,4 @@ The following table provides HTTP error codes and their possible causes.
 | 400              | Bad request           | Malformed or illegal query |
 | 401              | Authentication failed | Invalid auth token         |
 | 500              | Internal server error | Internal system failure    |
+

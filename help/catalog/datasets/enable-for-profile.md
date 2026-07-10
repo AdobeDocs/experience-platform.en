@@ -242,3 +242,4 @@ When uploading data to a new dataset for the first time, or as part of a process
 ## Confirm data ingest by Identity Service {#confirm-data-ingest-by-identity-service}
 
 Each data fragment ingested that contains more than one identity creates a link in your private identity graph. For more information on identity graphs and access identity data, please begin by reading the [Identity Service overview](../../identity-service/home.md).
+

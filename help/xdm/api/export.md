@@ -199,3 +199,4 @@ Note that all instances of the resource's tenant ID are replaced with `<XDM_TENA
 After generating the export payload from the CSV file, you can send that payload to the `/rpc/import` endpoint to generate the schema.
 
 See the [import endpoint guide](./import.md) for details on how to generate schemas from export payloads.
+

@@ -1046,3 +1046,4 @@ A successful response returns the details of the specified rule's property.
   }
 }
 ```
+

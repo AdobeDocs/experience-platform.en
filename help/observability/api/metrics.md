@@ -295,3 +295,4 @@ The following table lists the different error codes that can be returned by the 
 | `INSGHT-1003-401` | Sandbox validation error | The request could not be processed due to a sandbox validation error. Ensure that the sandbox name you provided in the `x-sandbox-name` header represents a valid, enabled sandbox for your organization before trying the request again. |
 
 {style="table-layout:auto"}
+

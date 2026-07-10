@@ -653,3 +653,4 @@ You have successfully connected Experience Platform to one of your preferred str
 
 *   [Destinations overview](../home.md)
 *   [Destinations Catalog overview](../catalog/overview.md)
+

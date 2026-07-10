@@ -368,3 +368,4 @@ When ingesting batch data, this error message displays when your organization ha
 ```
 
 This error displays when an unexpected exception occurs during a batch ingestion. Best practice is to program your automated calls to retry their requests a few times at a timed interval when receiving this error. If the problem persists, contact your system administrator.
+

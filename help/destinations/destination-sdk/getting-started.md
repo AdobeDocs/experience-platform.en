@@ -71,3 +71,4 @@ By following the steps in this article, you obtained authentication credentials 
 
 * For all operations, see the [Destination Authoring API documentation](https://developer.adobe.com/experience-platform-apis/references/destination-authoring).
 * Use the [Destination Authoring API Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) to configure your destination using the Destination SDK API endpoints. To get started with Postman, see the [steps for importing environments and collections](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) and a [video guide for creating the Postman environment](https://video.tv.adobe.com/v/28832).
+
