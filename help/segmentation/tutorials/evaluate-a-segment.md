@@ -249,3 +249,4 @@ For step-by-step instructions on how to use the [!DNL Data Access] API to access
 You can also access successfully exported segment definition data using [!DNL Adobe Experience Platform Query Service]. Using the UI or RESTful API, [!DNL Query Service] allows you to write, validate, and run queries on data within the [!DNL Data Lake].
 
 For more information on how to query audience data, please review the documentation on [[!DNL Query Service]](../../query-service/home.md).
+

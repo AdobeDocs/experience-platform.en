@@ -74,3 +74,4 @@ This document covered the prerequisite knowledge required to make calls to the [
 Most of the examples in this guide use the `/dataSets` endpoint, but the principles can be applied to other endpoints within [!DNL Catalog] (such as `/batches`). See the [Catalog Service API reference](https://developer.adobe.com/experience-platform-apis/references/catalog) for a complete list of all calls and operations available for each endpoint.
 
 For a step-by-step workflow that demonstrates how the [!DNL Catalog] API is involved with data ingestion, see the tutorial on [creating a dataset](../datasets/create.md).
+

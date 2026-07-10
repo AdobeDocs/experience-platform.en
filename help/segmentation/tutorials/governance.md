@@ -398,3 +398,4 @@ See the section on [exporting a segment definition](./evaluate-a-segment.md#expo
 ## Next steps
 
 By following this tutorial, you have looked up the data usage labels associated with a segment definition and tested them for policy violations against specific marketing actions. For more information on Data Governance in [!DNL Experience Platform], please read the overview for [Data Governance](../../data-governance/home.md).
+

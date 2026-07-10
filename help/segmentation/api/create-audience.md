@@ -106,3 +106,4 @@ A successful response returns HTTP status 200 with information about the newly c
 | `id` | String | The system generated ID for the audience. |
 | `name` | String | The name of the audience you created. |
 | `audienceId` | String | The externally provided ID of the audience you created. |
+

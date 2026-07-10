@@ -1485,3 +1485,4 @@ A successful response returns the details of the specified property's company.
   }
 }
 ```
+

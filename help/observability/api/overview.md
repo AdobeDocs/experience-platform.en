@@ -24,3 +24,4 @@ To view all available endpoints and CRUD operations, visit the [[!DNL Observabil
 ## Metrics
 
 Observability metrics provide insights into usage statistics, historical trends, and performance indicators for various features in Adobe Experience Platform. To learn how to retrieve metrics using the API, see the [metrics endpoint guide](./metrics.md).
+

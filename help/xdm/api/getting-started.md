@@ -275,3 +275,4 @@ The following sample field illustrates a properly formatted XDM field, with furt
 ## Next steps
 
 To begin making calls using the [!DNL Schema Registry] API, select one of the available endpoint guides.
+

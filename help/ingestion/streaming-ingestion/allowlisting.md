@@ -75,3 +75,4 @@ No. They are open until you provide IP address mappings via the allowlisting for
 ### Can I send only updated IP addresses when my allowlist changes?
 
 No. You must always send the complete list of sandbox and IP address mappings. Partial (incremental) updates are not accepted.
+

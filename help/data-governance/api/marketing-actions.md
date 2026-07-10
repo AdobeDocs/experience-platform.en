@@ -254,3 +254,4 @@ curl -X DELETE \
 A successful response returns HTTP Status 200 (OK) with a blank response body. 
 
 You can confirm the deletion by attempting to [look up the marketing action](#look-up). You should receive an HTTP 404 (Not Found) error if the marketing action has been removed from the system.
+
