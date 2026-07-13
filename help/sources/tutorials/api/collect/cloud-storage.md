@@ -720,3 +720,4 @@ The following section lists the different cloud storage source connectors and th
 | [!DNL Oracle Object Storage] | `c85f9425-fb21-426c-ad0b-405e9bd8a46c` |
 | [!DNL SFTP] | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
 
+

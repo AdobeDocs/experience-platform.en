@@ -334,3 +334,4 @@ Ingestion errors can happen when data is being copied from the source or when th
 | `CONNECTOR-1001-500` | An error occurred while data is being copied from a source. |
 | `CONNECTOR-2001-500` | An error occurred while copied data is being processed to [!DNL Experience Platform]. This error could be regarding parsing, validating, or transforming. |
 
+

@@ -250,3 +250,4 @@ You can also access successfully exported segment definition data using [!DNL Ad
 
 For more information on how to query audience data, please review the documentation on [[!DNL Query Service]](../../query-service/home.md).
 
+

@@ -114,3 +114,4 @@ By following this tutorial, you have created an [!DNL IBM DB2] base connection u
 * [Create a dataflow to bring database data to Experience Platform using the [!DNL Flow Service] API](../../collect/database-nosql.md)
 
 
+
