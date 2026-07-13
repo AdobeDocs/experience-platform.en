@@ -463,3 +463,4 @@ If you are an Independent Software Vendor (ISV) or System Integrator (SI) creati
 
 You now know how to author a custom [!DNL Data Landing Zone] destination by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](../../../ui/activate-batch-profile-destinations.md) to export data to the destination.
 
+

@@ -46,3 +46,4 @@ Currently, the supported sandbox types on Experience Platform are production and
 
 To begin making calls using the [!DNL Sandbox] API, read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints.
 
+
