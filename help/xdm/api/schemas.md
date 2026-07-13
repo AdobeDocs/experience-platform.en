@@ -763,3 +763,4 @@ curl -X DELETE \
 A successful response returns HTTP status 204 (No Content) and a blank body.
 
 You can confirm the deletion by attempting a lookup (GET) request to the schema. You will need to include an `Accept` header in the request, but should receive an HTTP status 404 (Not Found) because the schema has been removed from the Schema Registry.
+

@@ -81,3 +81,4 @@ Segment search is used to search fields contained across various data sources an
 
 To get started with the [!DNL Segmentation Service] API, review the different endpoint guides for detailed steps on how to make calls to the service's various endpoints. To learn more about working with segments using the [!DNL Experience Platform] UI, see the [Segmentation user guide](../ui/overview.md).
 
+

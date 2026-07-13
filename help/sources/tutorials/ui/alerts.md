@@ -129,3 +129,4 @@ A pop-up window appears, providing you with a list of sources alerts. Select any
 ## Next steps
 
 This document provided a step-by-step guide on how to subscribe to in-context alerts for your sources dataflows. For more information, see the [alerts UI guide](../../../observability/alerts/ui.md).
+

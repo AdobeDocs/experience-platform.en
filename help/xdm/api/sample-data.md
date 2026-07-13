@@ -167,3 +167,4 @@ A successful response returns a sample data object for the specified schema.
     "xdm:repositoryLastModifiedBy": "string"
 }
 ```
+

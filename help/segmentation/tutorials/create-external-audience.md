@@ -210,3 +210,4 @@ Once you've confirmed that the external audience has been successfully ingested,
 
 For more information about Audience Portal, read the [Audience Portal UI guide](/help/segmentation/ui/audience-portal.md). For more information on destinations, read the [destinations overview](/help/destinations/home.md).
 
+

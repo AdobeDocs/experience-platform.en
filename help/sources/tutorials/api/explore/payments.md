@@ -189,3 +189,4 @@ A successful response returns the structure of the specified table. Details rega
 
 By following this tutorial, you have explored your payments system, found the path of the table you wish to ingest into [!DNL Experience Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your payments system and bring it into Experience Platform](../collect/payments.md).
 
+
