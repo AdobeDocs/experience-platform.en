@@ -811,3 +811,4 @@ Adobe Experience Platform does not identify deferred data currently, so client i
 | 2019-03-15 | All end-user identifiers map to "identityMap" property | The "identityMap" is an encapsulation of all unique identifiers of a subject, such as CRMID, ECID, or loyalty program ID. This map is used by [[!DNL Identity Service]](../identity-service/home.md) to resolve all known and anonymous identities of a subject, forming a single identity graph for each end-user.|
 | 2019-05-30 | EOL and Remove "schema" property from datasets | The dataset "schema" property provided a reference link to the schema using the deprecated `/xdms` endpoint in the [!DNL Catalog] API. This has been replaced by a "schemaRef" that provides the "id", "version", and "contentType" of the schema as referenced in the new [!DNL Schema Registry] API. |
 
+

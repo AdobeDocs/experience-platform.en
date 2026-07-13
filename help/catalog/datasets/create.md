@@ -485,3 +485,4 @@ Once you have updated the schema, you can re-follow the steps in this tutorial t
 
 It is important to remember that schema evolution is purely additive, meaning you cannot introduce a breaking change to a schema once it has been saved to the registry and used for data ingestion. To learn more about best practices for composing schema for use with Adobe Experience Platform, see the guide on the [basics of schema composition](../../xdm/schema/composition.md).
 
+

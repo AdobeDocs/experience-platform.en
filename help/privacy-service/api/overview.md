@@ -40,3 +40,4 @@ Certain regulations require explicit customer consent before their personal data
 
 To begin making calls using the Privacy Service API, read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints.
 
+

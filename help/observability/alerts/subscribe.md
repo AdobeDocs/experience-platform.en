@@ -112,3 +112,4 @@ By following this tutorial, you have registered a webhook to receive [!DNL I/O E
 
 See the [[!DNL Observability Insights] overview](../home.md) for more information on how you can monitor your activities on [!DNL Experience Platform] and [!DNL Privacy Service].
 
+
