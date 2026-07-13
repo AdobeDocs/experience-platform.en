@@ -323,3 +323,4 @@ A successful response returns the details of the schema, including all fields ne
 By following this tutorial, you have successfully created a new ad-hoc schema. If you were brought to this document as part of another tutorial, you can now use the `$id` of your ad-hoc schema to complete the workflow as directed.
 
 For more information on working with the [!DNL Schema Registry] API, please refer to the [developer guide](../api/getting-started.md).
+

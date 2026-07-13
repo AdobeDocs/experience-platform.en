@@ -149,3 +149,4 @@ A secret contains credentials that allow event forwarding to authenticate to ano
 
 To begin making calls using the Schema Registry API, read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints.
 
+

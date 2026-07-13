@@ -3221,3 +3221,4 @@ The following shows the completed Loyalty Members schema in JSON format:
 ```
 
 +++
+
