@@ -105,3 +105,4 @@ For steps on how to perform these operations using the user interface, refer to 
 
 You can now go on and [delete destination accounts](/help/destinations/api/delete-destination-account.md) using the [!DNL Flow Service] API.
 
+

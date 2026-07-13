@@ -285,3 +285,4 @@ When using the ad-hoc activation API, you can come across error messages that ar
 
 * [Connect to batch destinations and activate data using the Flow Service API](/help/destinations/api/connect-activate-batch-destinations.md)
 * [Export files on-demand to batch destinations using the Experience Platform UI](/help/destinations/ui/export-file-now.md)
+

@@ -605,3 +605,4 @@ The following table shows status codes returned by successful and failed respons
 | 500  | Error in processing payload. See the response body for a more specific error message (For example, Message payload schema not specified, or did not match the XDM definition in [!DNL Experience Platform]). |
 | 503  | Service is not currently available. Clients should retry at least 3 times using an exponential back-off strategy. |
 
+

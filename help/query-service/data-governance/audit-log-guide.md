@@ -107,3 +107,4 @@ By reading this document, you have a better understanding of the [!DNL Query Ser
 
 If you are using the [!DNL Query Service] audit log capability for troubleshooting purposes, you are recommended to read the [troubleshooting guide](../troubleshooting-guide.md).
 
+

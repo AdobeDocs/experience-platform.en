@@ -330,3 +330,4 @@ By reading this document, you have gathered and successfully tested your access 
 
 In addition to the authentication values you have gathered in this tutorial, many Experience Platform APIs also require a valid `{SANDBOX_NAME}` to be provided as a header. See the [sandboxes overview](../sandboxes/home.md) for more information.
 
+

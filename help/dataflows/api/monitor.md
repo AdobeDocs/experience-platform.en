@@ -213,3 +213,4 @@ By following this tutorial, you have retrieved metrics and error information on 
 
 To send multiple XDM entities to a dataflow, use a `messages` array in your HTTP request or upload a file (CSV, JSON, or Parquet) with multiple records. For detailed guidance and best practices, read [how to send multiple XDM entities to a dataflow](../../ingestion/tutorials/streaming-multiple-messages.md#send-multiple-xdm-entities-to-a-dataflow).
 
+

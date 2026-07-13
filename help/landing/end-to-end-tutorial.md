@@ -130,3 +130,4 @@ You can also monitor Experience Platform activities through the use of statistic
 
 By reading this tutorial, you have been given a basic introduction to a simple end-to-end flow for Experience Platform. To learn more about Adobe Experience Platform, please read the [Experience Platform overview](./home.md). To learn more about using the Experience Platform UI and the Experience Platform API, please read the [Experience Platform UI guide](./ui-guide.md) and the [Experience Platform API guide](./api-guide.md) respectively.
 
+

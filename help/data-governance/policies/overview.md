@@ -124,3 +124,4 @@ The table below describes the core marketing actions that are provided out-of-th
 | Segment Match | An action that uses data for Adobe Experience Platform Segment Match, which allows for two or more Experience Platform users to exchange audience data. By enabling policies that reference this action, you can restrict what data is used for Segment Match. For example, if the core policy "Restrict data sharing" is enabled, any data with a [C11 label](../labels/reference.md#c11) cannot be used for Segment Match. |
 | Single Identity Personalization | An action that requires that a single identity be used for personalization purposes instead of stitching identities from multiple sources. |
 
+
