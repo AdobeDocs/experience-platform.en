@@ -482,3 +482,4 @@ A successful response returns the details of the newly created relationship desc
 ## Next steps
 
 By following this tutorial, you have successfully created a one-to-one relationship between two schemas. For more information on working with descriptors using the [!DNL Schema Registry] API, see the [Schema Registry developer guide](../api/descriptors.md). For steps on how to define schema relationships in the UI, see the tutorial on [defining schema relationships using the Schema Editor](relationship-ui.md).
+

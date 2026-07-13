@@ -184,3 +184,4 @@ A successful response returns the structure of the specified table. Details rega
 
 By following this tutorial, you have explored your CS system, found the path of the table you wish to ingest into [!DNL Experience Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your CS system and bring it into Experience Platform](../collect/customer-success.md).
 
+
