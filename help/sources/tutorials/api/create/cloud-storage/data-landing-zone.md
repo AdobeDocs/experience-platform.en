@@ -676,3 +676,4 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 By following this tutorial, you have retrieved your [!DNL Data Landing Zone] credentials, explored its file structure to find the file you wish to bring to Experience Platform, and created a source connection to begin bringing your data to Experience Platform. You can now proceed to the next tutorial, where you will learn how to [create a dataflow to bring cloud storage data to Experience Platform using the [!DNL Flow Service] API](../../collect/cloud-storage.md).
 
+
