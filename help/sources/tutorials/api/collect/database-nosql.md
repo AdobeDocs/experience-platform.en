@@ -148,7 +148,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 In order for the source data to be used in Experience Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create an Experience Platform dataset in which the source data is contained.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../xdm/api/schemas.md).
 
@@ -730,3 +730,5 @@ The following section lists the different cloud storage source connectors and th
 | [!DNL MySQL] | `26d738e0-8963-47ea-aadf-c60de735468a` |
 | [!DNL Oracle] | `d6b52d86-f0f8-475f-89d4-ce54c8527328` |
 | [!DNL PostgreSQL] | `74a1c565-4e59-48d7-9d67-7c03b8a13137` |
+
+

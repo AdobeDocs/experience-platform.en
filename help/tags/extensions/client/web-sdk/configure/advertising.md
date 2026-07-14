@@ -48,7 +48,7 @@ topic_v2:
 
 The **[!UICONTROL Adobe Advertising]** section lets you enable or disable Demand-side Platform (DSP) functionality if used in your implementation. You only need to set this field if your implementation uses a DSP.
 
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Log in to [CX Enterprise](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Select the desired tag property.
 1. Navigate to **[!UICONTROL Extensions]**, then select **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.

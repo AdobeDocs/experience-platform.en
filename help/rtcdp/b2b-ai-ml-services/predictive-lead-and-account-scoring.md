@@ -32,7 +32,7 @@ Accounts, are the ultimate entities that purchase B2B products and services. In 
 
 Account based marketing, in particular, strategize accounts as the marketing targets. Account propensity-to-buy scores greatly help the B2B marketers to prioritize among the accounts to maximize their return on investment.
 
-The predictive lead and account scoring service addresses the above challenges by learning from and predicting for the opportunity stage conversion events, and aggregating person activities onto the account level to produce the account scores. The scores are readily available as custom fields on person profiles and account profiles, and can be easily included as segment criteria to refine your audience. Top influential factors are also available at both the aggregate and the unit level to help B2B marketers better understand what elements drove the scores.
+The predictive lead and account scoring service addresses the above challenges by learning from and predicting for the opportunity stage conversion events, and aggregating person activities onto the account level to produce the account scores. The scores are readily available as custom fields on person profiles and account profiles, and can be easily included as criteria to refine your audience. Top influential factors are also available at both the aggregate and the unit level to help B2B marketers better understand what elements drove the scores.
 
 ## Understanding predictive lead and account scoring {#how-it-works}
 

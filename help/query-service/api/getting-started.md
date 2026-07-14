@@ -38,7 +38,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -67,3 +67,5 @@ Now that you understand what headers to use, you are ready to begin making calls
 ## Next steps
 
 Now that you have learned how to make calls using the [!DNL Query Service] API, you can create your own non-interactive queries. For more information on how to create queries, please read the [SQL reference guide](../sql/overview.md).
+
+

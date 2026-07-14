@@ -133,7 +133,7 @@ GET /insights/{INSIGHT_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{INSIGHT_ID}` | The unique identifier of a Sensei insight. |
+| `{INSIGHT_ID}` | The unique identifier of an Adobe AI insight. |
 
 **Request**
 

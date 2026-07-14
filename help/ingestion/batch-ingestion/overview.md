@@ -19,7 +19,7 @@ role_v2:
 
 The Adobe Experience Platform Batch Ingestion API allows you to ingest data into Experience Platform as batch files. Data being ingested can be profile data from a flat file (such as a Parquet file) or data that conforms to a known schema in the [!DNL Experience Data Model] (XDM) registry.
 
-The [Batch Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) provides additional information on these API calls.
+The [Batch Ingestion API reference](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion) provides additional information on these API calls.
 
 The following diagram outlines the batch ingestion process:
 
@@ -27,7 +27,7 @@ The following diagram outlines the batch ingestion process:
 
 ## Getting started
 
-The API endpoints used in this guide is part of the [Batch Ingestion API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API. 
+The API endpoints used in this guide is part of the [Batch Ingestion API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API. 
 
 ### [!DNL Data Ingestion] prerequisites
 
@@ -60,22 +60,22 @@ When ingesting data, it is important to understand how [!DNL Experience Data Mod
 
 There is some flexibility when ingesting data - if a type does not match what is in the target schema, the data will be converted to the expressed target type. If it cannot, it will fail the batch with a `TypeCompatibilityException`. 
 
-For example, neither JSON nor CSV has a `date` or `date-time` type. As a result, these values are expressed using [ISO 8601 formatted strings](https://www.iso.org/iso-8601-date-and-time-format.html) ("2018-07-10T15:05:59.000-08:00") or Unix Time formatted in milliseconds (1531263959000) and are converted at ingestion time to the target XDM type.
+For example, neither JSON nor CSV has a `date` or `date-time` type. As a result, these values are expressed using [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format (`yyyy-MM-dd'T'HH:mm:ssXXX`) or Unix Time formatted in milliseconds (`1531263959000`) and are converted at ingestion time to the target XDM type.
 
 The table below shows the conversions supported when ingesting data.
 
 | Inbound (row) vs Target (col) | String  | Byte  | Short  | Integer  | Long  | Double  | Date  | Date-Time | Object | Map |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| String    | X | X | X | X | X | X | X | X |   |   |
-| Byte      | X | X | X | X | X | X |   |   |   |   |
-| Short     | X | X | X | X | X | X |   |   |   |   |
-| Integer   | X | X | X | X | X | X |   |   |   |   |
-| Long      | X | X | X | X | X | X | X | X |   |   |
-| Double    | X | X | X | X | X | X |   |   |   |   |
-| Date      |   |   |   |   |   |   | X |   |   |   |
-| Date-Time |   |   |   |   |   |   |   | X |   |   |
-| Object    |   |   |   |   |   |   |   |   | X | X |
-| Map       |   |   |   |   |   |   |   |   | X | X |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| String    | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |
+| Byte      | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |
+| Short     | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |
+| Integer   | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |
+| Long      | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |
+| Double    | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |   |   |   |   |
+| Date      |   |   |   |   |   |   | ✓ |   |   |   |
+| Date-Time |   |   |   |   |   |   |   | ✓ |   |   |
+| Object    |   |   |   |   |   |   |   |   | ✓ | ✓ |
+| Map       |   |   |   |   |   |   |   |   | ✓ | ✓ |
 
 >[!NOTE]
 >
@@ -423,3 +423,5 @@ The `"status"` field is what shows the current status of the batch requested. Th
 | Staged | The staging phase of the promotion process for a batch is complete and the ingestion job has been run. |
 | Staging | Data for the batch is being processed. |
 | Stalled | The data for the batch is being processed. However, the batch promotion has stalled after a number of retries. |
+
+

@@ -1,13 +1,8 @@
 ---
 title: Create a source connection and dataflow to stream LAVA data using the Flow Service API
 description: Learn how to bring streaming data from LAVA to Adobe Experience Platform using the Flow Service API.
-badge: Beta
 ---
 # Create a source connection and dataflow to stream [!DNL LAVA] data using the [!DNL Flow Service] API
-
->[!AVAILABILITY]
->
->The [!DNL LAVA] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
 ## Getting started
 
@@ -163,7 +158,7 @@ curl -X GET \
 
 ## Connect [!DNL LAVA] to Experience Platform using the [!DNL Flow Service] API
 
-The following tutorial walks you through the steps to create a [!DNL LAVA] source connection and create a dataflow to bring [!DNL LAVA] data to Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a [!DNL LAVA] source connection and create a dataflow to bring [!DNL LAVA] data to Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ### Create a source connection {#source-connection}
 
@@ -380,6 +375,187 @@ When utilizing the schema provided by [!DNL LAVA], the following mapping is reco
 }
 ```
 
+>[!TAB Combined events]
+
+```json
+{
+  "version": 0,
+  "xdmSchema": "{TARGET_XDM_SCHEMA}",
+  "xdmVersion": "1.0",
+  "mappings": [
+    {
+      "destinationXdmPath": "identityMap",
+      "sourceExpression": "to_map(\"LavaId\",to_array(false,to_object(\"id\",lavaId,\"primary\",true)))",
+      "sourceType": "EXPRESSION",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "eventType",
+      "sourceAttribute": "type",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "timestamp",
+      "sourceAttribute": "timestamp",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.eventId",
+      "sourceAttribute": "eventId",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.eventName",
+      "sourceAttribute": "eventName",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.eventLabel",
+      "sourceAttribute": "eventLabel",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.venue",
+      "sourceAttribute": "venue",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.venueLabel",
+      "sourceAttribute": "venueLabel",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.section",
+      "sourceAttribute": "section",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.sectionLabel",
+      "sourceAttribute": "sectionLabel",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.row",
+      "sourceAttribute": "row",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.seat",
+      "sourceAttribute": "seat",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.gate",
+      "sourceAttribute": "gate",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ticketScan.gateLabel",
+      "sourceAttribute": "gateLabel",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.transactionId",
+      "sourceAttribute": "transactionId",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.referenceId",
+      "sourceAttribute": "referenceId",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.subtotal",
+      "sourceAttribute": "subtotal",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.total",
+      "sourceAttribute": "total",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.location",
+      "sourceAttribute": "location",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.items",
+      "sourceAttribute": "items",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.redeemedAmount",
+      "sourceAttribute": "redeemedAmount",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.rewardsApplied",
+      "sourceAttribute": "rewardsApplied",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.amount",
+      "sourceAttribute": "amount",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.expiresAt",
+      "sourceAttribute": "expiresAt",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.rewardId",
+      "sourceAttribute": "rewardId",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.rewardName",
+      "sourceAttribute": "rewardName",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.rewardSlug",
+      "sourceAttribute": "rewardSlug",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.rewardType",
+      "sourceAttribute": "rewardType",
+      "identity": false,
+      "version": 0
+    }
+  ]
+}
+```
+
 >[!TAB Ticket scan events]
 
 ```json
@@ -458,6 +634,152 @@ When utilizing the schema provided by [!DNL LAVA], the following mapping is reco
     {
       "destinationXdmPath": "_{TENANT_ID}.ticketScan.gateLabel",
       "sourceAttribute": "gateLabel",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "eventType",
+      "sourceAttribute": "type",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "timestamp",
+      "sourceAttribute": "timestamp",
+      "identity": false,
+      "version": 0
+    }
+  ]
+}
+```
+
+>[!TAB Transaction events]
+
+```json
+{
+  "version": 0,
+  "xdmSchema": "{TARGET_XDM_SCHEMA}",
+  "xdmVersion": "1.0",
+  "mappings": [
+    {
+      "destinationXdmPath": "identityMap",
+      "sourceExpression": "to_map(\"LavaId\",to_array(false,to_object(\"id\",lavaId,\"primary\",true)))",
+      "sourceType": "EXPRESSION",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.transactionId",
+      "sourceAttribute": "transactionId",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.referenceId",
+      "sourceAttribute": "referenceId",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.subtotal",
+      "sourceAttribute": "subtotal",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.total",
+      "sourceAttribute": "total",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.location",
+      "sourceAttribute": "location",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.items",
+      "sourceAttribute": "items",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.redeemedAmount",
+      "sourceAttribute": "redeemedAmount",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.transaction.rewardsApplied",
+      "sourceAttribute": "rewardsApplied",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "eventType",
+      "sourceAttribute": "type",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "timestamp",
+      "sourceAttribute": "timestamp",
+      "identity": false,
+      "version": 0
+    }
+  ]
+}
+```
+
+>[!TAB Ledger events]
+
+```json
+{
+  "version": 0,
+  "xdmSchema": "{TARGET_XDM_SCHEMA}",
+  "xdmVersion": "1.0",
+  "mappings": [
+    {
+      "destinationXdmPath": "identityMap",
+      "sourceExpression": "to_map(\"LavaId\",to_array(false,to_object(\"id\",lavaId,\"primary\",true)))",
+      "sourceType": "EXPRESSION",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.amount",
+      "sourceAttribute": "amount",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.expiresAt",
+      "sourceAttribute": "expiresAt",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.rewardId",
+      "sourceAttribute": "rewardId",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.rewardName",
+      "sourceAttribute": "rewardName",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.rewardSlug",
+      "sourceAttribute": "rewardSlug",
+      "identity": false,
+      "version": 0
+    },
+    {
+      "destinationXdmPath": "_{TENANT_ID}.ledger.rewardType",
+      "sourceAttribute": "rewardType",
       "identity": false,
       "version": 0
     },
@@ -750,3 +1072,5 @@ Delete your dataflow by performing a DELETE request to the [!DNL Flow Service] A
 ### Delete your account
 
 Delete your account by performing a DELETE request to the [!DNL Flow Service] API while providing the base connection ID of the account you want to delete. For complete API examples, read the guide on [deleting your source account using the API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
+
+

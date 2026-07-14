@@ -53,7 +53,7 @@ The following learning outcomes are covered in the Data Science Workspace course
 - The role of hyper-parameters in model development
 - How to publish trained models as a service
 - How to use Data Science Workspace to enrich your Real-Time Customer Profile data
-- How to create a streaming segment with your model output
+- How to create a streaming audience with your model output
 
 ## Lessons
 
@@ -81,7 +81,7 @@ The Data Science Workspace course is split into five lessons.
 
 ## Next steps
 
-After completing the Data Science Workspace course, visit the [Sensei Machine Learning API guides](./api/getting-started.md) to learn how to utilize RESTful APIs to do everything you just learned and more.
+After completing the Data Science Workspace course, visit the [Adobe AI Machine Learning API guides](./api/getting-started.md) to learn how to utilize RESTful APIs to do everything you just learned and more.
 
 
 

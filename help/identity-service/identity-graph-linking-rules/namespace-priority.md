@@ -144,24 +144,24 @@ Given the configurations outlined above, user actions and determination of prima
 
 {style="table-layout:auto"}
 
-## Segmentation Service: segment membership metadata storage
+## Segmentation Service: audience membership metadata storage
 
-![A diagram of segment membership storage.](../images/namespace-priority/segment-membership-storage.png "A diagram of segment membership storage."){zoomable="yes"}
+![A diagram of audience membership storage.](../images/namespace-priority/segment-membership-storage.png "A diagram of audience membership storage."){zoomable="yes"}
 
-For a given merged profile, segment memberships will be stored against the identity with the highest namespace priority.
+For a given merged profile, audience memberships will be stored against the identity with the highest namespace priority.
 
 For example, assume that there are two profiles:
 
 * Profile 1 represents John.
-  * John's profile qualifies for S1 (segment membership 1). For example, S1 could refer to a segment of customers that identify as male.
-  * John's profile also qualifies for S2 (segment membership 2). This could refer to a segment of customers whose loyalty status is gold.
+  * John's profile qualifies for S1 (audience membership 1). For example, S1 could refer to an audience of customers that identify as male.
+  * John's profile also qualifies for S2 (audience membership 2). This could refer to an audience of customers whose loyalty status is gold.
 * Profile 2 represents Jane.
-  * Jane's profile qualifies for S3 (segment membership 3). This could refer to a segment of customers that identify as female.
-  * Jane's profile also qualifies for S4 (segment membership 4). This could refer to a segment of customers whose loyalty status is platinum.
+  * Jane's profile qualifies for S3 (audience membership 3). This could refer to an audience of customers that identify as female.
+  * Jane's profile also qualifies for S4 (audience membership 4). This could refer to an audience of customers whose loyalty status is platinum.
 
-If John and Jane share a device, then the ECID (web browser) transfers from one person to another. However, this does not influence the segment membership information stored against John and Jane.
+If John and Jane share a device, then the ECID (web browser) transfers from one person to another. However, this does not influence the audience membership information stored against John and Jane.
 
-If the segment qualification criteria were solely based on anonymous events stored against the ECID, then Jane would qualify for that segment.
+If the audience qualification criteria were solely based on anonymous events stored against the ECID, then Jane would qualify for that audience.
 
 ## Implications on other Experience Platform services {#implications}
 
@@ -230,7 +230,7 @@ In the context of [!DNL Identity Graph Linking Rules], there are two main behavi
 
 #### Edge segmentation
 
-In a given event, ensure that all of your namespaces that represent a person entity are included in the `identityMap` because [identities sent as XDM fields](/help/xdm/ui/fields/identity.md) are ignored and are not used for segment membership metadata storage.
+In a given event, ensure that all of your namespaces that represent a person entity are included in the `identityMap` because [identities sent as XDM fields](/help/xdm/ui/fields/identity.md) are ignored and are not used for audience membership metadata storage.
 
 * **Event applicability**: This behavior applies only to events sent directly to the Edge Network (such as WebSDK and Mobile SDK). Events ingested from [Experience Platform hub](/help/landing/edge-and-hub-comparison.md), such as those ingested with the HTTP API source, other streaming sources, and batch sources, are not subject to this limitation.
 * **Edge segmentation specificity**: This behavior is specific to edge segmentation. Batch and streaming segmentation are separate services evaluated on the hub and do not follow the same process. Read the [edge segmentation guide](/help/segmentation/methods/edge-segmentation.md) for more information.

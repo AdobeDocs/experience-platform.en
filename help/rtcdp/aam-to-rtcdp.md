@@ -29,13 +29,13 @@ Furthermore, think about the data sources that you currently use in Audience Man
 
 Adobe recommends that you categorize your segments as follows: 
 
-* Segments that can be sent to Experience Platform via the [[!UICONTROL Audience Manager Source Connector]](/help/sources/connectors/adobe-applications/audience-manager.md), as they have no data dependencies, no destination or activation challenges, and their segmentation rules can be created through the Real-Time CDP [segment builder](/help/segmentation/ui/segment-builder.md) later. 
+* Segments that can be sent to Experience Platform via the [[!UICONTROL Audience Manager Source Connector]](/help/sources/connectors/adobe-applications/audience-manager.md), as they have no data dependencies, no destination or activation challenges, and their segmentation rules can be created through the Real-Time CDP [Segment Builder](/help/segmentation/ui/segment-builder.md) later. 
 * Segments that have rules that can be supported but may have contain data that won't be available in Real-Time CDP.
 * Segments that cannot be created in Real-Time CDP and are missing functionality.
 
 >[!TIP]
 >
->Adobe Real-Time CDP offers [three types of segment evaluation](/help/segmentation/home.md#evaluate-segments): [!UICONTROL Batch], [!UICONTROL Streaming], and [!UICONTROL Edge]. Customers who use real-time segments in Audience Manager may be restricted by the current limitation of 500 streaming segments in Real-Time CDP. Read more about [segmentation guardrails](/help/profile/guardrails.md).
+>Adobe Real-Time CDP offers [three types of audience evaluation](/help/segmentation/home.md#evaluate-segments): [!UICONTROL Batch], [!UICONTROL Streaming], and [!UICONTROL Edge]. Customers who use real-time segments in Audience Manager may be restricted by the current limitation of 500 streaming segments in Real-Time CDP. Read more about [segmentation guardrails](/help/profile/guardrails.md).
 
 ## 2. Which segments are critical to send through via [!UICONTROL Audience Manager Source Connector]?
 

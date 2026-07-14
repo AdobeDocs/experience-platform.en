@@ -11,6 +11,7 @@ nudge: true
 # Advanced Data Lifecycle Management {#data-lifecycle}
 
 * [Advanced Data Lifecycle Management overview](./home.md)
+* [Data Lifecycle processing timelines](./data-lifecycle-processing-timelines.md)
 * Data Lifecycle UI {#ui}
   * [Overview](./ui/overview.md)
   * [Automated dataset expirations](./ui/dataset-expiration.md)

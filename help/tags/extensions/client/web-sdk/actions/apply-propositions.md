@@ -47,7 +47,7 @@ topic_v2:
 
 The **[!UICONTROL Apply propositions]** action type allows you to render propositions in single-page applications without incrementing metrics. This action type is useful when working with single-page applications where portions of the page get re-rendered, potentially overwriting any personalizations already applied to the page.
 
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Log in to [CX Enterprise](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Select the desired tag property.
 1. Navigate to **[!UICONTROL Rules]**, then select the desired rule.

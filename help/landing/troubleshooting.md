@@ -53,15 +53,15 @@ For more information on formating API requests, please visit the Experience Plat
 
 ## What is my organization? {#what-is-my-ims-organization}
 
-An organization is an an Adobe representation of a customer. Any licensed Adobe solutions are integrated with this customer organization. When an organization is entitled to [!DNL Experience Platform], it can assign access to developers. The organization ID (`x-gw-ims-org-id`) represents the organization that an API call should be executed for, and is therefore required as a header in all API requests. This ID can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in the **Integrations** tab, navigate to the **Overview** section for any particular integration to find the ID under **Client Credentials**. For a step-by-step walkthrough of how to authenticate into [!DNL Experience Platform], see the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en).
+An organization is an an Adobe representation of a customer. Any licensed Adobe solutions are integrated with this customer organization. When an organization is entitled to [!DNL Experience Platform], it can assign access to developers. The organization ID (`x-gw-ims-org-id`) represents the organization that an API call should be executed for, and is therefore required as a header in all API requests. This ID can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in the **Integrations** tab, navigate to the **Overview** section for any particular integration to find the ID under **Client Credentials**. For a step-by-step walkthrough of how to authenticate into [!DNL Experience Platform], see the [authentication tutorial](/help/landing/api-authentication.md).
 
 ## Where can I find my API key? {#where-can-i-find-my-api-key}
 
-An API key is required as a header in all API requests. It can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Within the console, on the **Integrations** tab, navigate to the **Overview** section for a specific integration and you will find the key under **Client Credentials**. For a step-by-step walkthrough of how to authenticate to [!DNL Experience Platform], see the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en).
+An API key is required as a header in all API requests. It can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Within the console, on the **Integrations** tab, navigate to the **Overview** section for a specific integration and you will find the key under **Client Credentials**. For a step-by-step walkthrough of how to authenticate to [!DNL Experience Platform], see the [authentication tutorial](/help/landing/api-authentication.md).
 
 ## How do I get an access token? {#how-do-i-get-an-access-token}
 
-Access tokens are required in the Authorization header of all API calls. They can be generated using a CURL command, provided you have access to an integration for an organization. Access tokens are only valid for 24 hours, after which a new token must be generated to continue using the API. For details on generating access tokens, see the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en).
+Access tokens are required in the Authorization header of all API calls. They can be generated using a CURL command, provided you have access to an integration for an organization. Access tokens are only valid for 24 hours, after which a new token must be generated to continue using the API. For details on generating access tokens, see the [authentication tutorial](/help/landing/api-authentication.md).
 
 ## How do I use query parameters? {#how-do-i-user-query-parameters}
 
@@ -119,7 +119,7 @@ The following status codes may be encountered on any [!DNL Experience Platform] 
 
 ## Request header errors {#request-header-errors}
 
-All API calls in [!DNL Experience Platform] require specific request headers. To see which headers are required for individual services, please see the [API Reference documentation](https://www.adobe.com/go/platform-api-reference-en). To find the values for the required authentication headers, see the [Authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). If any of these headers are missing or invalid when making an API call, the following errors may occur.
+All API calls in [!DNL Experience Platform] require specific request headers. To see which headers are required for individual services, please see the [API Reference documentation](https://www.adobe.com/go/platform-api-reference-en). To find the values for the required authentication headers, see the [Authentication tutorial](/help/landing/api-authentication.md). If any of these headers are missing or invalid when making an API call, the following errors may occur.
 
 ### OAuth token is missing {#oauth-token-is-missing}
 
@@ -141,7 +141,7 @@ This error message displays when an `Authorization` header is missing from an AP
 }
 ```
 
-This error message displays when the provided access token in the `Authorization` header is not valid. Ensure that the token has been entered correctly, or [generate a new token](https://www.adobe.com/go/platform-api-authentication-en) in the Adobe I/O Console.
+This error message displays when the provided access token in the `Authorization` header is not valid. Ensure that the token has been entered correctly, or [generate a new token](/help/landing/api-authentication.md) in the Adobe I/O Console.
 
 ### API key is required {#api-key-is-required}
 
@@ -232,16 +232,18 @@ The following is a list of troubleshooting guides and API reference documentatio
 
 | Service | API Reference | Troubleshooting |
 | --- | --- | --- |
-| Access control | [Access control API](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Access control troubleshooting guide](../access-control/troubleshooting-guide.md)|
-| Adobe Experience Platform Data Ingestion | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [Batch ingestion troubleshooting guide](../ingestion/batch-ingestion/troubleshooting.md)|
-| Adobe Experience Platform Data Ingestion | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) | [Streaming ingestion troubleshooting guide](../ingestion/streaming-ingestion/troubleshooting.md)|
-| Adobe Experience Platform Data Science Workspace | [[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) | [[!DNL Data Science Workspace] troubleshooting guide](../data-science-workspace/troubleshooting-guide.md) |
-| Adobe Experience Platform Data Governance | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/)||
-| Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] troubleshooting guide](../identity-service/troubleshooting-guide.md)|
-| Adobe Experience Platform Query Service | [[!DNL Query Service API]](https://www.adobe.io/experience-platform-apis/references/query-service/) | [[!DNL Query Service] troubleshooting guide](../query-service/troubleshooting-guide.md)|
-| Adobe Experience Platform Segmentation | [[!DNL Segmentation API]](https://www.adobe.io/experience-platform-apis/references/segmentation/) ||
-| [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/)||
-| [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] FAQ and troubleshooting guide](../xdm/troubleshooting-guide.md)|
-| [!DNL Flow Service] ([!DNL Sources] and [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/)||
+| Access control | [Access control API](https://developer.adobe.com/experience-platform-apis/references/access-control) | [Access control troubleshooting guide](../access-control/troubleshooting-guide.md)|
+| Adobe Experience Platform Data Ingestion | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion) | [Batch ingestion troubleshooting guide](../ingestion/batch-ingestion/troubleshooting.md)|
+| Adobe Experience Platform Data Ingestion | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion) | [Streaming ingestion troubleshooting guide](../ingestion/streaming-ingestion/troubleshooting.md)|
+| Adobe Experience Platform Data Science Workspace | [[!DNL Adobe AI Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) | [[!DNL Data Science Workspace] troubleshooting guide](../data-science-workspace/troubleshooting-guide.md) |
+| Adobe Experience Platform Data Governance | [[!DNL Policy Service API]](https://developer.adobe.com/experience-platform-apis/references/policy-service)||
+| Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://developer.adobe.com/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] troubleshooting guide](../identity-service/troubleshooting-guide.md)|
+| Adobe Experience Platform Query Service | [[!DNL Query Service API]](https://developer.adobe.com/experience-platform-apis/references/query-service) | [[!DNL Query Service] troubleshooting guide](../query-service/troubleshooting-guide.md)|
+| Adobe Experience Platform Segmentation | [[!DNL Segmentation API]](https://developer.adobe.com/experience-platform-apis/references/segmentation) ||
+| [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://developer.adobe.com/experience-platform-apis/references/catalog)||
+| [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://developer.adobe.com/experience-platform-apis/references/schema-registry) | [[!DNL XDM System] FAQ and troubleshooting guide](../xdm/troubleshooting-guide.md)|
+| [!DNL Flow Service] ([!DNL Sources] and [!DNL Destinations]) | [[!DNL Flow Service API]](https://developer.adobe.com/experience-platform-apis/references/flow-service)||
 | [!DNL Real-Time Customer Profile] | [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en)| [[!DNL Profile] troubleshooting guide](../profile/troubleshooting.md) |
-| Sandboxes | [Sandbox API](https://www.adobe.io/experience-platform-apis/references/sandbox) | [Sandboxes troubleshooting guide](../sandboxes/troubleshooting-guide.md)|
+| Sandboxes | [Sandbox API](https://developer.adobe.com/experience-platform-apis/references/sandbox) | [Sandboxes troubleshooting guide](../sandboxes/troubleshooting-guide.md)|
+
+
