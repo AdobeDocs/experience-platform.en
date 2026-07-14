@@ -16,8 +16,8 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 * [A customer experience powered by Experience Platform (Video)](video/customer-experience.md)
 * [Behind the scenes of a customer experience powered by Experience Platform (Video)](video/customer-experience-bts.md)
 * Getting started {#getting-started}
-  * [How Adobe Experience Platform and applications work together](experience-platform-apps-overview.md)
-  * [Adobe Experience Platform integrations](experience-platform-integrations.md)
+  * [How Adobe Experience Platform and applications work together](apps-overview.md)
+  * [Adobe Experience Platform integrations](integrations.md)
   * [End-to-end example workflow](end-to-end-tutorial.md)
   * [Key capabilities (Video)](video/key-capabilities.md)
   * [Key use cases (Video)](video/platform-use-cases.md)
