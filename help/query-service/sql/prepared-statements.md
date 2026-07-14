@@ -4,6 +4,20 @@ solution: Experience Platform
 title: Prepared Statements in Query Service
 description: In SQL, prepared statements are used to template similar queries or updates. Adobe Experience Platform Query Service supports prepared statements by using a parameterized query.
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
+TQID: https://experienceleague.adobe.com/yWxTkcuUryzJnlBOR4llYpRo4tgepvRnOH-h22PNtvw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Prepared statements
 

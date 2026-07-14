@@ -2,6 +2,15 @@
 title: Document your destination in Adobe Experience Platform
 description: Step-by-step instructions for you to create a documentation page for your destination in Adobe Experience Platform
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
+TQID: https://experienceleague.adobe.com/bfOmkpY8eTYmQKIYJQJKIuYPRsuIdWeFSGFGbKWPp94
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Document your destination in [!DNL Adobe Experience Platform]
 

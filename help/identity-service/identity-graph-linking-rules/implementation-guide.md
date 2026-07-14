@@ -2,6 +2,48 @@
 title: Implementation Guide For Identity Graph Linking Rules
 description: Learn the recommended steps to follow when implementing your data with Identity Graph Linking Rules configurations.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
+TQID: https://experienceleague.adobe.com/5cfUeZAbB5do--V0Iz75Wj4NbAWVpNV-k1rA4Ve2zRQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+    internal-label: Sources
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+    internal-label: XDM
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+    internal-label: Troubleshooting
+  - id: cdd3e38b-fec2-4f39-8b10-83ddaab1ac16
+    internal-label: B2B
+  - id: d1a87129-ba05-4f15-98b1-233618f1774a
+    internal-label: Data ingestion
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+    internal-label: Schemas
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Implementation guide for [!DNL Identity Graph Linking Rules]
 

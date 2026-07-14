@@ -5,6 +5,21 @@ title: Attribute-based Access Control API Guide
 description: The Attribute-based access control API allows you to programmatically manage roles and access policies within Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
 role: Developer
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
+TQID: https://experienceleague.adobe.com/8TNUmUgp-4H9M27UgpyAJAZjsOf-qvpYgIZBYaZZPuQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Attribute-based access control API guide
 

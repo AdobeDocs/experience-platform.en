@@ -3,6 +3,22 @@ keywords: insights;customer ai;customer ai insights;CAI query service;customer a
 title: Audit Logs Overview in Customer AI
 description: Learn how to view and manage audit logs in Customer AI.
 exl-id: f5b2d0b0-b6ae-4ccc-b4c9-ac9cc6078d81
+TQID: https://experienceleague.adobe.com/shsHMPdVRPq2oFfNClrHAcKAqKlsNUs28H-Uu5pz4KI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Audit logs in Customer AI
 

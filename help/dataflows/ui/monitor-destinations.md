@@ -4,6 +4,36 @@ solution: Experience Platform
 title: Monitor dataflows for destinations in the UI
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
+TQID: https://experienceleague.adobe.com/mPpX2-qdMt0QCJa3ZXmia9z4A14EcIGGuWdApdoTC5U
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+    internal-label: Destinations dashboard
+subfeature_v2:
+  - id: ac9ff56e-fdaf-4412-aba7-1f588cb8aa2b
+    internal-label: File based Destination
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+    internal-label: Monitoring
+  - id: dcded644-509e-49c5-ae85-3862a2a08609
+    internal-label: Streaming destinations
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Monitor dataflows for destinations in the UI
 

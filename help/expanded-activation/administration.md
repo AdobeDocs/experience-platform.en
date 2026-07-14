@@ -2,6 +2,28 @@
 title: Expanded Activation Account Administration
 description: Learn how to perform administrative tasks on your Expanded Activation account, such as monitoring license usage and assigning the correct permissions.
 exl-id: ee0ec4b9-a083-447b-b7a7-e1307e90c646
+TQID: https://experienceleague.adobe.com/UdI5T0riJi695ZM3d3ymVEDTSFFmPgx46q6Dgjy4PJQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+    internal-label: Administration
+subfeature_v2:
+  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
+    internal-label: Adobe Admin Console
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+    internal-label: Permissions
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+    internal-label: Roles
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 ---
 # Account administration
 

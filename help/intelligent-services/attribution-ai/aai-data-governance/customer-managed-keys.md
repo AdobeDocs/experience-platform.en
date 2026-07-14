@@ -3,6 +3,22 @@ keywords: insights;attribution ai;attribution ai insights;AAI query service;attr
 title: Customer Managed Keys
 description: Learn how to set up Customer Managed Keys for Attribution AI.
 exl-id: c00bf1a0-cc4c-4a34-83f1-d93829576866
+TQID: https://experienceleague.adobe.com/SyXGJ0lKJp86Wodd-0FKMRIYr2YDIFgKqahQaiiJOBw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Customer Managed Keys in Attribution AI
 

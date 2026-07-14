@@ -3,6 +3,64 @@ keywords: target personalization; destination; experience platform target destin
 title: Adobe Target connection
 description: Adobe Target is an application that provides real-time, AI-powered personalization and experimentation capabilities in all inbound customer interactions across websites, mobile apps, and more.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
+TQID: https://experienceleague.adobe.com/-fU-zvoxIhZ2PBnGpr5j7Kh0SOWRIN-7Hx1ESH3juuE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+    internal-label: Administration
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+    internal-label: Access control
+  - id: a7150a74-b8a9-4042-b066-147c5f0ca505
+    internal-label: Alerts
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+    internal-label: Permissions
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+    internal-label: Datastreams
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+    internal-label: Roles
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+    internal-label: Sandboxes
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+    internal-label: Properties
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 ---
 # [!DNL Adobe Target] connection {#adobe-target-connection}
 
@@ -31,12 +89,11 @@ For a brief overview on how to configure the [!DNL Adobe Target] connection in E
 
 ## Supported use cases based on implementation type {#supported-use-cases}
 
-The table below displays the supported use cases for the [!DNL Adobe Target] destination, based on your implementation type, with or without the Web SDK and with or without [edge segmentation](/help/segmentation/home.md#edge) enabled. 
+The table below displays the supported use cases for the Adobe Target destination, based on your implementation type, with or without the Web SDK or Edge Network API, and with or without [edge segmentation](/help/segmentation/home.md#edge) enabled.
 
-|[!DNL Adobe Target] implementation *without* Web SDK| [!DNL Adobe Target] implementation *with* Web SDK | [!DNL Adobe Target] implementation *with* Web SDK *and* edge segmentation off |
+|Adobe Target implementation *without* Web SDK| Adobe Target implementation *with* Web SDK or Edge Network API | Adobe Target implementation *with* Web SDK or Edge Network API *and* edge segmentation off |
 |---|---|---|
-|<ul><li>A datastream is not required. [!DNL Adobe Target] can be deployed through [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [server-side](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation), or [hybrid](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) implementation methods.</li><li>[Edge segmentation](../../../segmentation/methods/edge-segmentation.md) is not supported.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md) are not supported.</li><li>You can share audiences and profile attributes to the [!DNL Adobe Target] connection for the *default production sandbox* and non-default sandboxes.</li><li>To configure next-session personalization without using a datastream, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul>|<ul><li>A datastream with [!DNL Adobe Target] and Experience Platform configured as services is required.</li><li>Edge segmentation works as expected.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md#use-cases) are supported.</li><li>Sharing audiences and profile attributes from other sandboxes is supported.</li></ul>| <ul><li>A datastream with [!DNL Adobe Target] and Experience Platform configured as services is required.</li><li>When [configuring the datastream](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), do not select the **Edge segmentation** checkbox.</li><li>[Next-session personalization](../../ui/activate-edge-personalization-destinations.md#next-session) is supported.</li><li>Sharing audiences and profile attributes from other sandboxes is supported.</li></ul> |
-
+|<ul><li>A datastream is not required. Adobe Target can be deployed through [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [server-side](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation), or [hybrid](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) implementation methods.</li><li>[Edge segmentation](../../../segmentation/methods/edge-segmentation.md) is not supported.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md) are not supported.</li><li>You can share audiences and profile attributes to the Adobe Target connection for the *default production sandbox* and non-default sandboxes.</li><li>To configure next-session personalization without using a datastream, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul>|<ul><li>Adobe Target can be integrated using the [Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home) or the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/).</li><li>A datastream with Adobe Target and Experience Platform configured as services is required.</li><li>Edge segmentation works as expected.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md#use-cases) are supported.</li><li>Sharing audiences and profile attributes from other sandboxes is supported.</li></ul>| <ul><li>Adobe Target can be integrated using the [Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home) or the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/).</li><li>A datastream with Adobe Target and Experience Platform configured as services is required.</li><li>When [configuring the datastream](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), do not select the **Edge segmentation** checkbox.</li><li>[Next-session personalization](../../ui/activate-edge-personalization-destinations.md#next-session) is supported.</li><li>Sharing audiences and profile attributes from other sandboxes is supported.</li></ul> |
 
 ## Prerequisites {#prerequisites}
 
@@ -102,6 +159,15 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
+## Implementation considerations {#implementation-considerations}
+
+Keep the following in mind when implementing the Adobe Target connection:
+
+* **Same IMS Organization**: Adobe Experience Platform and Adobe Target must belong to the same IMS Organization.
+* **Identity management for first-login personalization**: First-login personalization requires the primary identity in the personalization request to match the known customer identity in the Real-Time CDP identity graph. If the primary identity is an ECID or an unstitched identity, identity reconciliation may take several minutes before edge personalization reflects the known customer's data.
+* **Custom identity namespace lookups**: Lookups on custom identity namespaces require a Web SDK or Edge Network API deployment, with the relevant identities mapped appropriately.
+* **Edge profile time-to-live (TTL)**: Edge profiles have a 14-day TTL. After 14 days of inactivity, the edge profile expires and must be retrieved from the hub on the next page visit. This means the first visit after expiry may use a historical profile view rather than real-time data.
+
 ## Connect to the destination {#connect}
 
 >[!CONTEXTUALHELP]
@@ -142,9 +208,9 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
     * **[!UICONTROL None]**: Select this option if you need to configure [!DNL Adobe Target] personalization but you cannot implement the [!DNL Adobe Experience Platform] Web SDK. When using this option, audiences exported from Experience Platform to Target only support next-session personalization, and edge segmentation is disabled. Reference the table in the [supported use cases](#supported-use-cases) section for a comparison of available use cases per implementation type.
 
-    |[!DNL Adobe Target] implementation *without* Web SDK| [!DNL Adobe Target] implementation *with* Web SDK | [!DNL Adobe Target] implementation *with* Web SDK *and* edge segmentation off |
+    |Adobe Target implementation *without* Web SDK| Adobe Target implementation *with* Web SDK or Edge Network API | Adobe Target implementation *with* Web SDK or Edge Network API *and* edge segmentation off |
     |---|---|---|
-    |<ul><li>A datastream is not required. [!DNL Adobe Target] can be deployed through [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [server-side](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation), or [hybrid](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) implementation methods.</li><li>[Edge segmentation](../../../segmentation/methods/edge-segmentation.md) is not supported.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md) are not supported.</li><li>You can share audiences and profile attributes to the [!DNL Adobe Target] connection for the *default production sandbox* and non-default sandboxes.</li><li>To configure next-session personalization without using a datastream, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul>|<ul><li>A datastream with [!DNL Adobe Target] and Experience Platform configured as services is required.</li><li>Edge segmentation works as expected.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md#use-cases) are supported.</li><li>Sharing audiences and profile attributes from other sandboxes is supported.</li></ul>| <ul><li>A datastream with [!DNL Adobe Target] and Experience Platform configured as services is required.</li><li>When [configuring the datastream](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), do not select the **Edge segmentation** checkbox.</li><li>[Next-session personalization](../../ui/activate-edge-personalization-destinations.md#next-session) is supported.</li><li>Sharing audiences and profile attributes from other sandboxes is supported.</li></ul> |
+    |<ul><li>A datastream is not required. Adobe Target can be deployed through [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [server-side](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation), or [hybrid](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) implementation methods.</li><li>[Edge segmentation](../../../segmentation/methods/edge-segmentation.md) is not supported.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md) are not supported.</li><li>You can share audiences and profile attributes to the Adobe Target connection for the *default production sandbox* and non-default sandboxes.</li><li>To configure next-session personalization without using a datastream, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul>|<ul><li>Adobe Target can be integrated using the [Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home) or the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/).</li><li>A datastream with Adobe Target and Experience Platform configured as services is required.</li><li>Edge segmentation works as expected.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md#use-cases) are supported.</li><li>Sharing audiences and profile attributes from other sandboxes is supported.</li></ul>| <ul><li>Adobe Target can be integrated using the [Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home) or the [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/).</li><li>A datastream with Adobe Target and Experience Platform configured as services is required.</li><li>When [configuring the datastream](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), do not select the **Edge segmentation** checkbox.</li><li>[Next-session personalization](../../ui/activate-edge-personalization-destinations.md#next-session) is supported.</li><li>Sharing audiences and profile attributes from other sandboxes is supported.</li></ul> |
 
 * **Workspace**: Select the [!DNL Adobe Target] [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) to which audiences will be shared. You can select a single workspace for each [!DNL Adobe Target] connection. Upon activation, audiences are routed to the selected workspace while following the applicable [Experience Platform data usage labels](../../../data-governance/labels/overview.md).
     

@@ -3,6 +3,23 @@ title: Export arrays, maps, and objects from Real-Time CDP
 type: Tutorial
 description: Learn how to export arrays, maps, and objects from Real-Time CDP to cloud storage destinations.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
+TQID: https://experienceleague.adobe.com/phkEIfPLpUrOhiwg3xkRXCGcV1Thzpm7yFqXgPnvcJ4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # Export arrays, maps, and objects from [!DNL Real-Time CDP] {#export-arrays-cloud-storage}
 

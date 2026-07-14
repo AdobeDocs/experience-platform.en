@@ -3,6 +3,13 @@ title: Braze Currents Source Overview
 description: Learn how to stream data from Braze Currents to Experience Platform.
 badge: Beta
 exl-id: dd304e10-26e5-4586-ab39-8fe3294b19c9
+TQID: https://experienceleague.adobe.com/eHgj1J2Q5SlB6w7GuOu35AJ00fo6341zMRCmU2yW9u8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL Braze Currents]
 

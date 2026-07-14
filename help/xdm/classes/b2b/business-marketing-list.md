@@ -2,6 +2,16 @@
 title: XDM Business Marketing List Class
 description: Learn about the XDM Business Marketing List class in Experience Data Model (XDM).
 exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
+TQID: https://experienceleague.adobe.com/EzFwejeJiw5vZdSnzK9sv-i2cqusF8Xt8U23ebzkaEQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL XDM Business Marketing List] class
 

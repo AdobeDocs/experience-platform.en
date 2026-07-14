@@ -3,6 +3,13 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 title: Self-Serve Sources (Batch SDK) API Guide
 description: This document provides an overview of the process of creating a new source, including steps on how to retrieve, write, and submit a new connection specification using the Flow Service API.
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
+TQID: https://experienceleague.adobe.com/NLSktvAzH7e-WpTIzzfAT8iYDM-6aocmdw1nF2FCg2E
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Self-Serve Sources (Batch SDK) API Guide
 

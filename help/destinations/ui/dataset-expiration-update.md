@@ -3,6 +3,15 @@ title: Extend dataset export schedules for dataflows created prior to November 2
 description: Learn how to extend the export schedule for dataset export dataflows created prior to November 2024 that will stop working on September 1st, 2025.
 type: Tutorial
 exl-id: a756886b-3f4b-4427-bd26-817221ba68aa
+TQID: https://experienceleague.adobe.com/7zT-p4j3iB-SZWaTkTmcloDc-SeFBZDRZqd4QdCrtS0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Extend dataset export schedules for dataflows created prior to November 2024
 

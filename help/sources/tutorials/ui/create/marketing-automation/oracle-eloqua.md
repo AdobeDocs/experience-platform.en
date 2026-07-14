@@ -2,6 +2,13 @@
 title: Create an Oracle Eloqua source connection using Experience Platform UI
 description: Learn how to connect Adobe Experience Platform to Oracle Eloqua using Experience Platform UI.
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
+TQID: https://experienceleague.adobe.com/gvfjMdSAusrSDDGQA-ia8aIyLqznx-5-LZ8SbJmSNSM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create an [!DNL Oracle Eloqua] source connection using Experience Platform UI
 

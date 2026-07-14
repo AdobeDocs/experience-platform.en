@@ -3,6 +3,13 @@ title: Chatlio Source Overview
 description: Learn how to connect Chatlio to Adobe Experience Platform using APIs or the user interface by leveraging webhooks
 badge: Beta
 exl-id: 4a71d1dc-e0eb-443e-a956-8caa0e82fa18
+TQID: https://experienceleague.adobe.com/ilc9Wh-k-QH403GOLGIRYmZ9EpzwnDAZz4RVCp7do-A
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL Chatlio]
 

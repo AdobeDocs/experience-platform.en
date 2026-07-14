@@ -2,6 +2,18 @@
 description: Configure file formatting options for file-based destinations
 title: Learn how to use Destination SDK to configure file formatting options for file-based destinations.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
+TQID: https://experienceleague.adobe.com/7kG5Slg0-FP68gZzYwHvALutSlsn3eVe0DjBABn-B5I
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Configure file formatting options for file-based destinations
 

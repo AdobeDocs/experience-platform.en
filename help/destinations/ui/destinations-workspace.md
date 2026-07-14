@@ -3,6 +3,21 @@ keywords: platform;destinations;destinations workspace;workspace;ui;destinations
 title: Destinations workspace
 description: The Destinations workspace consists of five sections, Overview, Catalog, Browse, Accounts, and System View. They are described in the sections below.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
+TQID: https://experienceleague.adobe.com/dchgYSCdxGfTwsmiNPKEY7Ae6TLUUrkDarT4FLzYA3Y
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: eec185bd-7d60-4193-ba3f-da427569936a
+    internal-label: Destinations dashboard
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
 ---
 # Destinations workspace {#destinations-workspace}
 

@@ -5,6 +5,13 @@ title: Create a Generic OData Base Connection Using the Flow Service API
 type: Tutorial
 description: Learn how to connect Generic OData to Adobe Experience Platform using the Flow Service API.
 exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
+TQID: https://experienceleague.adobe.com/-bYhTi1uQq3dmgLVXOoAURqMdWVwbrjzLYO-afpAPm0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a [!DNL Generic OData] base connection using the [!DNL Flow Service] API
 

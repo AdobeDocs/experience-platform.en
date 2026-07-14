@@ -3,6 +3,19 @@ keywords: Experience Platform;home;popular topics;access control;attribute-based
 title: Manage Access Control Policies
 description: Manage access control policies through the Permissions interface in Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
+TQID: https://experienceleague.adobe.com/CrH7bsZHNIWU3Q7SZyd3k-dUFrSVqlY12OAnnByQx3Y
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Manage access control policies
 

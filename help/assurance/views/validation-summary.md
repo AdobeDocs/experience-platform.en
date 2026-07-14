@@ -2,6 +2,16 @@
 title: Validation Editor View
 description: This guide details information about the Validation Editor view in Adobe Experience Platform Assurance.
 exl-id: 09be531c-8dc3-48b8-814f-b7a06adf1da3
+TQID: https://experienceleague.adobe.com/UCeZJoWRtOJAUSBv4n1jbNXcfhLnnjqw2dn8lYHsFgs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Validation Editor view
 

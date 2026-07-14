@@ -4,6 +4,23 @@ solution: Experience Platform
 title: Privacy Request Processing in the Data Lake
 description: Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by legal and organizational privacy regulations. This document covers essential concepts related to processing privacy requests for customer data stored in the data lake.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
+TQID: https://experienceleague.adobe.com/R5hflyJlXOOucH2ieJ8nM13ygPK6-JEW8wn6g4vptyk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Privacy request processing in the data lake
 
@@ -28,7 +45,7 @@ It is recommended that you have a working understanding of the following [!DNL E
 
 ## Understanding identity namespaces {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] bridges customer identity data across systems and devices. [!DNL Identity Service] uses identity namespaces to provide context to identity values by relating them to their system of origin. A namespace can represent a generic concept such as an email address ("Email") or associate the identity with a specific application, such as an Adobe Advertising Cloud ID ("AdCloud") or Adobe Target ID ("TNTID").
+Adobe Experience Platform [!DNL Identity Service] bridges customer identity data across systems and devices. [!DNL Identity Service] uses identity namespaces to provide context to identity values by relating them to their system of origin. A namespace can represent a generic concept such as an email address ("Email") or associate the identity with a specific application, such as an Adobe Advertising ID or Adobe Target ID.
 
 [!DNL Identity Service] maintains a store of globally defined (standard) and user-defined (custom) identity namespaces. Standard namespaces are available for all organizations (for example, "Email" and "ECID"), while your organization can also create custom namespaces to suit its particular needs.
 

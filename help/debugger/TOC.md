@@ -5,6 +5,7 @@ breadcrumb-title: Adobe Experience Platform Debugger Guide
 user-guide-description: Examine your web pages for problems with your Experience Platform implementations using the Adobe Experience Platform Debugger for Chrome and Firefox.
 feature: Debugger
 role: Developer,User
+nudge: true
 ---
 
 # Adobe Experience Platform Debugger {#debugger}

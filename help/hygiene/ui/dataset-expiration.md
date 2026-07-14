@@ -2,6 +2,25 @@
 title: Automated Dataset Expirations
 description: Learn how to schedule a dataset expiration in the Adobe Experience Platform UI.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
+TQID: https://experienceleague.adobe.com/o5PnNCz6B8K64tDN8j4tlrkDUZwUYn52cS2LzGIRCtw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Automated dataset expirations {#dataset-expiration}
 

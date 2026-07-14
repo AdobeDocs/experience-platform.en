@@ -2,6 +2,32 @@
 title: Google Ads connection
 description: Google Ads, formerly known as Google AdWords, is an online advertising service that allows businesses to pay-per-click advertising across text-based searches, graphic displays, YouTube videos, and in-app mobile displays.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
+TQID: https://experienceleague.adobe.com/V0c6wGtpKBI9Z3xns8EaZcThVPilPiOAY6vb5BZw6fs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
 ---
 # [!DNL Google Ads] connection
 

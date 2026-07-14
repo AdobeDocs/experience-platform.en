@@ -2,6 +2,13 @@
 title: Azure Data Lake Storage Gen2 Source Connector Overview
 description: Learn how to connect Azure Data Lake Storage Gen2 to Adobe Experience Platform using APIs or the user interface.
 exl-id: 424d7278-44d9-4653-82c0-eb21cbb9b623
+TQID: https://experienceleague.adobe.com/7LUxoK4Y5yE7tB-3IhRuHRk1d2MnrDvmecgE7ZIaWgk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Azure Data Lake Storage Gen2 connector
 

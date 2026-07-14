@@ -3,6 +3,19 @@ title: Create a Azure Synapse Analytics Source Connection in the UI
 description: Learn how to create an Azure Synapse Analytics (hereinafter referred to as "Synapse") source connection using the Adobe Experience Platform UI.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
+TQID: https://experienceleague.adobe.com/HGPTo4tt6DawFkFI1WfT5Xj7QMI9FdX5W87hjIFABao
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create an [!DNL Azure Synapse Analytics] source connection in the UI
 

@@ -3,6 +3,36 @@ keywords: airship attributes;airship destination
 title: Airship Attributes connection
 description: Seamlessly pass Adobe Audience Data to Airship as Audience Attributes for targeting within Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
+TQID: https://experienceleague.adobe.com/WL8trhd7FXsjqUvV-4EEDzaWHpx1lF2JHOcoqkZVNFk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: addf009e-030a-4310-8534-776a3e62ed48
+    internal-label: Customer lifecycle
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+    internal-label: Customer engagement
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # [!DNL Airship Attributes] connection {#airship-attributes-destination}
 

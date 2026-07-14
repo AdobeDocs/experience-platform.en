@@ -5,6 +5,20 @@ title: Train and Evaluate a Model in the Data Science Workspace UI
 type: Tutorial
 description: In Adobe Experience Platform Data Science Workspace, a machine learning Model is created by incorporating an existing Recipe that is appropriate for the Model's intent. The Model is then trained and evaluated to optimize its operating efficiency and efficacy by fine-tuning its associated Hyperparameters. Recipes are reusable, meaning that multiple Models can be created and tailored to specific purposes with a single Recipe.
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
+TQID: https://experienceleague.adobe.com/EAfDwR0M2mezkIDXNCjc3dszyw6wKbh7tUulwINb110
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Train and evaluate a model in the Data Science Workspace UI
 

@@ -1,8 +1,29 @@
 ---
 title: Marketo Measure Ultimate destination
 description: Learn how to connect and activate data to the Marketo Measure Ultimate destination.
-last-substantial-update: 2023-03-07
+last-substantial-update: 2023-03-07T00:00:00.000Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
+TQID: https://experienceleague.adobe.com/OtNVIlcZPsIlGkRY07s0pc0hqT6GzIN1lwpTKj-Z9-A
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+    internal-label: Customer engagement
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Marketo Measure Ultimate Destination {#mmu-destination}
 

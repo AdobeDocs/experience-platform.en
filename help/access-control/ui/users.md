@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Manage Users for a Product Profile
 description: This document shows you how to manage users for a product profile in the UI for Adobe Experience Platform.
 exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
+TQID: https://experienceleague.adobe.com/lF6uYHSapneAqq7Pp-pkUkhKrjn4-GDuZvqRS69Op-s
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 ---
 # Manage users for a product profile
 

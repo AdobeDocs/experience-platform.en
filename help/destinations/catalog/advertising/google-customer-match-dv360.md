@@ -3,6 +3,46 @@ title: Google Customer Match + Display & Video 360 connection
 description: With the Google Customer Match + Display & Video 360 destination connector, you can use your online and offline data from Experience Platform to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, Gmail, and YouTube.
 badge: label="Limited Availability" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
+TQID: https://experienceleague.adobe.com/EQw7wxAqZYEha2OjNkfiyITaeVgx-hz5eHHeJPb41Uc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+    internal-label: Troubleshooting
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # [!DNL Google Customer Match + Display & Video 360] connection
 

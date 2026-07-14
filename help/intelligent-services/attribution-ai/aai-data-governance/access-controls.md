@@ -5,6 +5,36 @@ feature: Attribution AI
 title: Access control for Attribution AI
 description: This document provides information on attribute-based access control for Attribution AI.
 exl-id: 3ed672bf-1fa6-4893-99e0-afc2b2179543
+TQID: https://experienceleague.adobe.com/EBwNWb-jybovAgSyrBCxIGgrovs8roXij-sgP2ZqpME
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+    internal-label: Administration
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+    internal-label: Access control
+  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
+    internal-label: Adobe Admin Console
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+    internal-label: Permissions
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+    internal-label: Roles
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 ---
 # Access Control in Attribution AI
 

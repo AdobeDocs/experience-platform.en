@@ -2,8 +2,23 @@
 keywords: mobile;mobile engagement destinations;LINE;LINE mobile engagement destination
 title: LINE connection
 description: Use the LINE destination to add profiles to your Experience Platform audience and deliver personalized experiences to connected users.
-last-substantial-update: 2022-11-08
+last-substantial-update: 2022-11-08T00:00:00.000Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
+TQID: https://experienceleague.adobe.com/s73jkJtTyivW3guYJtBFv1W11u8CRLE-gm3lQavaOi0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # [!DNL LINE] connection
 

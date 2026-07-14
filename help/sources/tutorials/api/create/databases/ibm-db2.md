@@ -5,6 +5,13 @@ title: Create an IBM [!DNL IBM DB2] Base Connection Using the Flow Service API
 type: Tutorial
 description: Learn how to connect IBM [!DNL IBM DB2] to Adobe Experience Platform using the Flow Service API.
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
+TQID: https://experienceleague.adobe.com/A--c3ExvyPuWrLiFnVP-QRU1a6zWDebt40xwRE8hUVo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create an IBM [!DNL IBM DB2] base connection using the [!DNL Flow Service] API
 

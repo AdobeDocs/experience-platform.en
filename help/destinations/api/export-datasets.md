@@ -4,6 +4,23 @@ title: Export datasets by using the Flow Service API
 description: Learn how to use the Flow Service API to export datasets to select destinations.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
+TQID: https://experienceleague.adobe.com/QgDkRqCY8-yoCXo7ba1-62pKKwUlSgxhILGoLuejv9c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 ---
 # Export datasets by using the [!DNL Flow Service API]
 
@@ -2378,7 +2395,7 @@ To check the executions of a dataflow, use the Dataflow Runs API:
 
 **Request** 
 
-+++Get dataflow runs - Request
++++Get dataflow runs
 
 In the request to retrieve dataflow runs, add as query parameter the dataflow ID that you obtained in the previous step, when creating the dataflow.
 
@@ -2395,7 +2412,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-+++Get dataflow runs - Response
++++Get dataflow runs
 
 ```json
 {
@@ -2443,7 +2460,117 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-You can find information about the [various parameters returned by the Dataflow runs API](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) in the API reference documentation. 
+You can find information about the [various parameters returned by the Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) in the API reference documentation. 
+
+## View the datasets in a dataflow {#view-datasets-in-dataflow}
+
+After creating a dataset export dataflow, you can retrieve the list of datasets configured in that dataflow. Use this two-call workflow to verify which datasets a dataflow is currently exporting. This is especially useful when you store dataflow metadata programmatically and need to reconcile it with the current configuration.
+
+### Retrieve the dataflow {#retrieve-dataflow}
+
+Retrieve the dataflow to obtain its `sourceConnectionIds`. Dataset definitions live on the source connection, so you need this ID before you can view the associated datasets.
+
+If you know your dataflow ID, use it directly in the request. If you don't know the ID, first list all dataset export dataflows using the query parameter shown below, then identify the correct dataflow.
+
+>[!BEGINSHADEBOX]
+
+**Request**
+
++++List all dataset export dataflows
+
+```shell
+curl --request GET 'https://platform.adobe.io/data/foundation/flowservice/flows?property=inheritedAttributes.targetConnections[].data.outputType==DATASET_EXPORT' \
+--header 'accept: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
++++
+
++++Get a single dataflow
+
+```shell
+curl --request GET 'https://platform.adobe.io/data/foundation/flowservice/flows/{FLOW_ID}' \
+--header 'accept: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
++++
+
+**Response**
+
++++Get dataflow
+
+```json
+{
+    "id": "eb54b3b3-3949-4f12-89c8-64eafaba858f",
+    "name": "Dataset export dataflow",
+    "sourceConnectionIds": [
+        "f8b5e8e0-6d50-4e32-a48a-9e9e8a42b5c2"
+    ]
+}
+```
+
++++
+
+>[!ENDSHADEBOX]
+
+Note the `sourceConnectionIds` value from the response. You use it in the next step.
+
+### Retrieve the source connection {#retrieve-source-connection}
+
+Use the source connection ID obtained in the previous step to retrieve the datasets configured in the dataflow.
+
+>[!BEGINSHADEBOX]
+
+**Request**
+
++++Get source connection
+
+```shell
+curl --request GET 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections/{SOURCE_CONNECTION_ID}' \
+--header 'accept: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
++++
+
+**Response**
+
++++Get source connection
+
+The `params.datasets` array lists the datasets configured in the dataflow. Each entry includes the dataset ID and name.
+
+```json
+{
+    "id": "f8b5e8e0-6d50-4e32-a48a-9e9e8a42b5c2",
+    "name": "Dataset export source connection",
+    "params": {
+        "datasets": [
+            {
+                "dataSetId": "abc123",
+                "name": "AAM Devices Data"
+            },
+            {
+                "dataSetId": "def456",
+                "name": "Loyalty Members"
+            }
+        ]
+    }
+}
+```
+
++++
+
+>[!ENDSHADEBOX]
 
 ## Verify successful dataset export {#verify}
 

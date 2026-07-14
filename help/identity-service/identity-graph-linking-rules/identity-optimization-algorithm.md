@@ -2,6 +2,30 @@
 title: Identity Optimization Algorithm
 description: Learn about Identity Optimization Algorithm in Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
+TQID: https://experienceleague.adobe.com/-jTCBwCy0CPqbC4x0aGuUwLH5qfTqRxq3p9-CmrfMhQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+subfeature_v2:
+  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+    internal-label: Troubleshooting
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
 ---
 # Identity Optimization Algorithm {#identity-optimization-algorithm}
 

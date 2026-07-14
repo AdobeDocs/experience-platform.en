@@ -4,6 +4,21 @@ solution: Experience Platform
 title: Marketo Engage connector
 description: This document provides an overview of the Marketo Engage source connector, including information about its authentication, mapping, and data latency.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
+TQID: https://experienceleague.adobe.com/tdPj4DvS2gL7z80KzqqdNUikVp3MtiWkzavfB30YnyM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # [!DNL Marketo Engage] connector
 

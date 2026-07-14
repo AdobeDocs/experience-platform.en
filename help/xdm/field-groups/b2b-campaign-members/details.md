@@ -2,6 +2,16 @@
 title: XDM Business Campaign Member Details Schema Field Group
 description: Learn about the XDM Business Campaign Member Details schema field group.
 exl-id: 597629c8-7f41-4c1c-95b6-aed5e16cee72
+TQID: https://experienceleague.adobe.com/lVvzXj4pgMtV8L5FS6nIUy-l9Iikc6iX9CJNfH5bbSs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL XDM Business Campaign Member Details] schema field group
 

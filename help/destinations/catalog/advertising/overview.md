@@ -3,6 +3,18 @@ keywords: advertising destinations;destinations;platform destinations
 title: Advertising destinations overview
 description: Connect Adobe Experience Platform to a 3rd-party advertising platform (for example DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
+TQID: https://experienceleague.adobe.com/8asBs32HsOcweA-KZdt4CFQSUYQudd-bBqAYdau0Tc8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Advertising destinations overview {#advertising-destinations}
 
@@ -23,7 +35,7 @@ To understand the difference between connections and extensions, see [Connection
 * [(Beta) Acxiom Audience Distribution](acxiom-audience-connection.md)
 * [(Beta) Acxiom Real ID Audience Connection](acxiom-real-id-audience-connection.md)
 * [Adobe Advertising DSP connection](adobe-advertising-dsp-connection.md)
-* [Legacy Adobe Advertising Cloud DSP connection](adobe-advertising-cloud-dsp-connection-legacy.md)
+* [Legacy Adobe Advertising DSP connection](adobe-advertising-cloud-dsp-connection-legacy.md)
 * [Amazon Ads connection](amazon-ads.md)
 * [Amazon Ads v2 connection](amazon-ads-v2.md)
 * [Bombora connection](bombora.md)
@@ -47,7 +59,7 @@ To understand the difference between connections and extensions, see [Connection
 
 ### Extensions {#extensions}
 
-* [Adobe Advertising Cloud extension](adobe-advertising-cloud.md)
+* [Adobe Advertising extension](adobe-advertising-cloud.md)
 * [Awin Advertising Conversion Tag extension](awin-conversiontag.md)
 * [Awin Advertising Mastertag extension](awin-mastertag.md)
 * [Bing Ads Universal Event Tracking extension](bing-ads.md)

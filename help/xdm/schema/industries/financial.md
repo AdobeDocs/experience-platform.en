@@ -3,6 +3,25 @@ solution: Experience Platform
 title: Financial Services Industry Data Model ERD
 description: View an entity relationship diagram (ERD) that describes a standardized data model for the banking, financial services, and insurance (BFSI) industry. This data model is compatible with Experience Data Model (XDM) for use in Adobe Experience Platform.
 exl-id: 2e8f6b2a-10e7-4394-b45f-c03db0f25400
+TQID: https://experienceleague.adobe.com/KPSjq3jaeD0i-ZqnQksgCLGYl8KP5Hx5zRzOeQ8JQjQ
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # [!UICONTROL Financial services] industry data model ERD
 

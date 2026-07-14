@@ -6,6 +6,7 @@ user-guide-description: Use machine learning to develop, train, and score models
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
+nudge: true
 ---
 
 # Data Science Workspace {#data-science-workspace}

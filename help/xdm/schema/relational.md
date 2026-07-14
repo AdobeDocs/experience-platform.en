@@ -5,6 +5,30 @@ title: Relational schemas
 description: Learn about relational schemas in Adobe Experience Platform, including features, required fields, relationships, and limitations.
 badge: Limited Availability
 exl-id: 397e5937-b892-4fd3-b90e-29ed9229dc69
+TQID: https://experienceleague.adobe.com/J6ZL1z5vBIfoYehWeu0JaB4MyhQCuUkjpolBDiYhn54
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+subfeature_v2:
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+    internal-label: Data modeling
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Relational schemas
 

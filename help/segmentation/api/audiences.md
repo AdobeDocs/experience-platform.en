@@ -3,6 +3,28 @@ title: Audiences API Endpoint
 description: Use the audiences endpoint in the Adobe Experience Platform Segmentation Service API to programmatically create, manage, and update audiences for your organization.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
+TQID: https://experienceleague.adobe.com/YtQlw4OHZtAGH7bx3WS7KnicD3uzN6F9J4OSjj0Hm2w
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: fe06da76-5b92-43de-9bda-c5c9c01b55e8
+    internal-label: Segmentation UI
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Audiences endpoint
 

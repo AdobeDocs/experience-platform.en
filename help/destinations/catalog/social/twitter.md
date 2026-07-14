@@ -2,6 +2,28 @@
 title: Twitter Custom Audiences connection
 description: Target your existing followers and customers in Twitter and create relevant re-marketing campaigns by activating your audiences built within Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
+TQID: https://experienceleague.adobe.com/HXSjHQw4-N7xpnm8S7Tsk2OnaPJ3Bwf0FHFOt2aqYo8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # [!DNL Twitter Custom Audiences] connection
 

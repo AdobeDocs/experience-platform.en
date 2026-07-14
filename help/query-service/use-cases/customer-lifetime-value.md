@@ -2,6 +2,58 @@
 title: Track Data Signals to Generate Your Customer Lifetime Value
 description: This guide provides an end-to-end demonstration on how to use Data Distiller and user-defined dashboards with Real-Time Customer Data Platform to measure and visualize customer lifetime value.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
+TQID: https://experienceleague.adobe.com/j-VRJe3vGxXBMf-Fj2HeM4f53oFLCEma1bEI9YJmIJw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+subfeature_v2:
+  - id: a230274e-7e6e-49eb-b817-514495a710ac
+    internal-label: query service
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+    internal-label: Sources
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+    internal-label: Email marketing
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Track data signals to generate your customer lifetime value
 

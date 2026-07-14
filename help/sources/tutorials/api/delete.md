@@ -5,6 +5,13 @@ title: Delete an Account Using the Flow Service API
 type: Tutorial
 description: Learn how to delete an account using the Flow Service API.
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
+TQID: https://experienceleague.adobe.com/i1mkGngo5K1Gast4i3t6fvD831rAAtJN-YitHzhu1-Q
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Delete an account using the Flow Service API
 

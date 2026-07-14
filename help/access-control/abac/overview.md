@@ -3,6 +3,58 @@ keywords: Experience Platform;home;popular topics;access control;attribute-based
 title: Attribute-Based Access Control Overview
 description: This document provides information on attribute-based access control in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
+TQID: https://experienceleague.adobe.com/vECqPYq7h4-T7c3fBpgPyioB4ivq8thPTqMyZgLhAmk
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+    internal-label: Administration
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+    internal-label: Access control
+  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
+    internal-label: Adobe Admin Console
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+    internal-label: Permissions
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+    internal-label: Roles
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+    internal-label: Sandboxes
+  - id: fe06da76-5b92-43de-9bda-c5c9c01b55e8
+    internal-label: Segmentation UI
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+    internal-label: Data modeling
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Attribute-based access control overview {#attribute-based-access-control-overview}
 

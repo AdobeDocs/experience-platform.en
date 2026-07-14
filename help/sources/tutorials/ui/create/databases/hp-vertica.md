@@ -5,6 +5,19 @@ title: Create an HP Vertica  Source Connection in the UI
 type: Tutorial
 description: Learn how to create an HP Vertica source connection using the Adobe Experience Platform UI.
 exl-id: d7315ad4-9250-4e66-be33-016efabb512e
+TQID: https://experienceleague.adobe.com/r51g91NwjCOeiVF-kirDiA5EsOOLuYqTGWkFIj4eFCo
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create an HP [!DNL Vertica] source connection in the UI
 

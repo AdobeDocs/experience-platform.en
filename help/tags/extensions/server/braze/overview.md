@@ -2,8 +2,60 @@
 keywords: event forwarding extension;braze;braze event forwarding extension
 title: Braze Event Forwarding Extension
 description: This Adobe Experience Platform event forwarding extension sends Edge Network events to Braze.
-last-substantial-update: 2023-03-29
+last-substantial-update: 2023-03-29T00:00:00.000Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
+TQID: https://experienceleague.adobe.com/dY1OHyH--qDK2hL6FKY0nOOvMiz870Q7xWesqsQfbYY
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+    internal-label: Advertising
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+    internal-label: Acrobat Sign
+  - id: dfc56824-e8b9-499e-85d4-21aedb507314
+    internal-label: Campaign
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a075b2c1-7748-4328-b7f6-343aa314616a
+    internal-label: Campaigns
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
+  - id: b12f6872-9271-4369-85e5-86969a0b99a2
+    internal-label: APIs
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+  - id: f73667dc-d296-4875-8975-ac3fdc3adc42
+    internal-label: Dashboards
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+    internal-label: API
+subfeature_v2:
+  - id: bf97c196-a4d1-4fa3-a151-e68a114c8ac0
+    internal-label: REST API
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+    internal-label: Event forwarding
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+    internal-label: Customer engagement
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # [!DNL Braze Track Events API] event forwarding extension
 

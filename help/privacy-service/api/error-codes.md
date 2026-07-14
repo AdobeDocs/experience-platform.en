@@ -4,6 +4,24 @@ description: Understand Privacy Service error codes so you can diagnose failures
 keywords: privacy service, error codes, privacy jobs, api errors
 solution: Experience Platform
 exl-id: 49b79093-4d4c-4b92-bd38-86879452dbfb
+TQID: https://experienceleague.adobe.com/lxMUF3u8TUF9GrrvlLi9glQ0e6heDlLupKDIDk41Hc0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Privacy Service error codes {#privacy-service-error-codes}
 

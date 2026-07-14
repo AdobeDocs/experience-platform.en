@@ -2,6 +2,32 @@
 title: Connect GitHub Copilot and Visual Studio Code to Query Service
 description: Learn how to connect GitHub Copilot and Visual Studio Code with Adobe Experience Platform Query Service.
 exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
+TQID: https://experienceleague.adobe.com/I-kt0XLWL0-nj-sMLiVHIqW-zL7PbD-UhB6Aq3ZwJYc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+    internal-label: Best practices
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+    internal-label: Get started
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Connect [!DNL GitHub Copilot] and [!DNL Visual Studio Code] to Query Service
 

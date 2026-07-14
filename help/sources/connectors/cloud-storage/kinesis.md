@@ -3,6 +3,13 @@ title: Amazon Kinesis Source Connector Overview
 description: Learn how to connect Amazon Kinesis to Adobe Experience Platform using APIs or the user interface.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
+TQID: https://experienceleague.adobe.com/raGnpTJPfHDbGpAWpPP7vda35IzszeNrKn6xGmwQl7E
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!DNL Amazon Kinesis] source
 

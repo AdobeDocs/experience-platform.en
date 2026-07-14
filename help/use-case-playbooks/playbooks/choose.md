@@ -4,6 +4,16 @@ title: Choose from a selection of playbooks
 description: Learn how to choose right playbook for your use case enable playbooks.
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
+TQID: https://experienceleague.adobe.com/fAHzsQOgehcxvy80mBeQPNk-U-u7cR5RxmvK-YgjwfU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Choose from a selection of playbooks
 

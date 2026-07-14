@@ -4,6 +4,19 @@ description: An overview of the role of sources in Adobe Real-Time Customer Data
 feature: Sources, Data Ingestion, Get Started, B2B
 badgeB2B: label="B2B Edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
+TQID: https://experienceleague.adobe.com/D2sQBwXOeLnNT3KTBtRZBCBOSRbOQZSqa-8kCfd24Ac
+product_v2:
+  - id: fdddec33-c9cb-4459-b8b6-2664395a6f10
+    internal-label: Real-Time Customer Data Platform
+feature_v2:
+  - id: ba929a52-9339-4154-9487-317dc875a3c7
+    internal-label: Use cases
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Sources in Real-Time Customer Data Platform B2B Edition
 

@@ -2,6 +2,62 @@
 title: Adobe Experience Platform Release Notes October 2022
 description: The October 2022 release notes for Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
+TQID: https://experienceleague.adobe.com/sjVeNejYDqY6CWOYJCQnc2K0AfyR-Hf7vTZ7GjGDbBc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: a230274e-7e6e-49eb-b817-514495a710ac
+    internal-label: query service
+  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
+    internal-label: XDM
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: ca3d6bf4-a4af-4944-936b-8de1eb09f149
+    internal-label: Datastreams
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+    internal-label: Event forwarding
+  - id: de9975b2-c43a-4287-9698-4f4cad92b83f
+    internal-label: Schemas
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Adobe Experience Platform release notes 
 

@@ -3,6 +3,40 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 title: Create an Adobe Campaign Managed Cloud Services source connection using Experience Platform UI
 description: Learn how to connect Adobe Experience Platform to Adobe Campaign Managed Cloud Services using Experience Platform UI.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
+TQID: https://experienceleague.adobe.com/ANBl-NSD9cYtBn9jQi4JkRiTbTM6K6Sy-oGdiBZGGsg
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+    internal-label: Administration
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+subfeature_v2:
+  - id: a7150a74-b8a9-4042-b066-147c5f0ca505
+    internal-label: Alerts
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+    internal-label: Best practices
+  - id: b5eb20d5-4893-4245-8a24-ea6bf0e51fbb
+    internal-label: Dataflows
+  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+    internal-label: Sandboxes
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 ---
 # Create an Adobe Campaign Managed Cloud Services source connection using Experience Platform UI
 

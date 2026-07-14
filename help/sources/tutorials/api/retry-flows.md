@@ -2,6 +2,13 @@
 title: Retry Failed Dataflow Runs
 description: Learn how to retry failed dataflow runs using the Flow Service API.
 exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
+TQID: https://experienceleague.adobe.com/YQqnTaU9Iu2kvckkmkkgxeQ-zahQPhs5i8HQGhMGnhs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Retry failed dataflow runs
 

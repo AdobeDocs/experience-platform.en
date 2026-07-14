@@ -3,6 +3,21 @@ title: Use the last qualification time XDM attribute in the new beta cloud stora
 description: Learn how to use the last qualification time XDM attribute in the new beta cloud storage destinations
 badgeBeta: label="Beta" type="Informative"
 exl-id: d077ea10-5ff2-4acc-8ee6-78ea6cd752d1
+TQID: https://experienceleague.adobe.com/owwch5kzbI5Md9T0lgj4GAtgTq9LO6ncHTmSjyuQNkI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
 ---
 # Use the last qualification time XDM attribute in the new beta cloud storage destinations {#last-qualification-time}
 

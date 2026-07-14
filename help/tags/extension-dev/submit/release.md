@@ -2,6 +2,36 @@
 title: Release an Extension
 description: Learn how to privately or publicly release a tag extension in Adobe Experience Platform.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
+TQID: https://experienceleague.adobe.com/QAvAkYBmGV51WG5gvI0LoTJb0V5XYaIew4lEHF7EqS8
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+    internal-label: Advertising
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+    internal-label: Properties
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # Release an extension
 

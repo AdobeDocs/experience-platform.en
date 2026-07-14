@@ -2,6 +2,54 @@
 title: Algolia Tags Extension Overview
 description: Learn about the Algolia Tags extension in Adobe Experience Platform.
 exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
+TQID: https://experienceleague.adobe.com/elJ-5Oy4QJ4LxkAXvGYYj41ne-E5GYPgluZ7UUwh4FA
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+    internal-label: Advertising
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: dc5cf79d-43c4-4731-bffa-1df5d7549cb1
+    internal-label: Acrobat Sign
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+    internal-label: API
+subfeature_v2:
+  - id: abc02dd6-664f-446a-9aaa-675bc0f2fe4a
+    internal-label: Sources
+  - id: ae2cba0e-54f2-464b-a3b3-ad371e8a886a
+    internal-label: Catalog
+  - id: b64298cc-90cc-46b7-8917-ee391f1c7516
+    internal-label: Data collection UI
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+  - id: dc6ebdf7-9a94-43eb-9184-759cfdd0cf1c
+    internal-label: Event forwarding
+  - id: f6ff4d13-7b5c-4533-8556-95e76673d4cb
+    internal-label: Properties
+  - id: f9a2105e-7a47-4e85-9193-31a519a2cb83
+    internal-label: Data elements
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # [!DNL Algolia] Tags extension overview
 

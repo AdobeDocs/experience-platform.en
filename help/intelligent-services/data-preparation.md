@@ -4,6 +4,20 @@ solution: Experience Platform
 title: Prepare Data for Use in Intelligent Services
 description: In order for Intelligent Services to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. Intelligent Services use Experience Data Model (XDM) schemas in order to achieve this.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
+TQID: https://experienceleague.adobe.com/t-DwxAHdmMYKDTjDamh-fo5wJZw9MZ2DbIaaKXK-Ss8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d00e9f03-e50b-4162-b143-0c0817c937c2
+    internal-label: Customer journeys
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Prepare data for use in [!DNL Intelligent Services]
 

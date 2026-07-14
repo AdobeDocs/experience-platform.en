@@ -2,6 +2,29 @@
 title: Monitoring hooks for Adobe Experience Platform Web SDK
 description: Learn how to use the monitoring hooks provided by the Adobe Experience Platform Web SDK to debug your implementation and capture Web SDK logs.
 exl-id: 56633311-2f89-4024-8524-57d45c7d38f7
+TQID: https://experienceleague.adobe.com/i-Drb1tJzH2v45SO222y7WUi1kk6M-7NHgQJAo28dnI
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 ---
 # Monitoring hooks for Web SDK
 

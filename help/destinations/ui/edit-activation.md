@@ -4,6 +4,21 @@ title: Edit activation dataflows
 type: Tutorial
 description: Follow the steps in this article to edit an existing activation dataflow in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
+TQID: https://experienceleague.adobe.com/wE6eVboAogPDZd-rk7pWS3T9S8FDbYPNSwh-xFU6qj4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Edit activation dataflows {#edit-activation-flows}
 

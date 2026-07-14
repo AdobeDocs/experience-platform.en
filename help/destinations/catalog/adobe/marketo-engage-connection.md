@@ -2,6 +2,52 @@
 title: Marketo Engage Connection
 description: Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. Use it to automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
 exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
+TQID: https://experienceleague.adobe.com/BQFXDvrinG9A6uC2-p6-C6d9mj8NqpfQ8S7xjMW8iRY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+    internal-label: Administration
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+subfeature_v2:
+  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
+    internal-label: Access control
+  - id: a7150a74-b8a9-4042-b066-147c5f0ca505
+    internal-label: Alerts
+  - id: a9b953c0-98db-499b-97f5-a0dc3290bda3
+    internal-label: Adobe Admin Console
+  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
+    internal-label: Permissions
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+  - id: d175cb4c-5781-454e-a826-bf6dff786265
+    internal-label: Roles
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+    internal-label: Audiences
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+    internal-label: Customer engagement
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+    internal-label: Customer profiles
 ---
 # Marketo Engage connection
 

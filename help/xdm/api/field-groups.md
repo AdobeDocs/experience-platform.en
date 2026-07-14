@@ -4,6 +4,19 @@ solution: Experience Platform
 title: Field groups API Endpoint
 description: The /fieldgroups endpoint in the Schema Registry API allows you to programmatically manage XDM schema field groups within your experience application.
 exl-id: d26257e4-c7d5-4bff-b555-7a2997c88c74
+TQID: https://experienceleague.adobe.com/VZHagtcVZuZlPgz4c2tb94T0F4eoHxxWrVT2PEzxyh4
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
 ---
 # Schema field groups endpoint
 

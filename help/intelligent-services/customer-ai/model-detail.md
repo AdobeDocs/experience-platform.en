@@ -2,6 +2,34 @@
 title: Customer AI Propensity Scoring Model Details
 description: Learn about the AI model used for Customer AI.
 exl-id: 08210982-10fe-43ef-a54e-e701241ac175
+TQID: https://experienceleague.adobe.com/Buhj2m7HQOePab-KwoKXe7VVI-qrq2toRrmhodTFVXc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+    internal-label: Segmentation
+subfeature_v2:
+  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
+    internal-label: Federated Audience Composition
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+    internal-label: Segments
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
+    internal-label: Customer engagement
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
+  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
+    internal-label: Behavioral data
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+    internal-label: Audience segmentation
 ---
 # Customer AI Propensity Scoring Model Details
 

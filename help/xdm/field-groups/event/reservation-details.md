@@ -3,6 +3,13 @@ keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEv
 title: Reservation Details Schema Field Group
 description: Learn about the Reservation Details schema field group.
 exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
+TQID: https://experienceleague.adobe.com/N1FtdebvPbxQaTHOLf5h2zWt2AAMr2X2GAUjZKqQCrY
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Reservation Details] schema field group
 

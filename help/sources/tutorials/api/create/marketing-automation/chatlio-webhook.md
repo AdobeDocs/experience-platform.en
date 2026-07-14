@@ -3,6 +3,13 @@ title: Create a Source Connection and Dataflow for Chatlio using the Flow Servic
 description: Learn how to connect Adobe Experience Platform to Chatlio using the Flow Service API.
 badge: Beta
 exl-id: 867b8096-0841-4462-9888-e60c97c2115e
+TQID: https://experienceleague.adobe.com/ug--2AEOnj-o2yX1GZaKufNLtJJBFmOe3gskaVogTCs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # Create a source connection and dataflow for [!DNL Chatlio] using the Flow Service API
 

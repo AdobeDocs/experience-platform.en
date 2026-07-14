@@ -4,6 +4,16 @@ solution: Experience Platform
 title: Web Interaction Data Type
 description: Learn about the web interaction Experience Data Model (XDM) data type.
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
+TQID: https://experienceleague.adobe.com/PRnfkE6zrOaGl0JFexMIpCMoWM-OIcx7lQcBLUEQq9g
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
 ---
 # [!UICONTROL Web interaction] data type
 

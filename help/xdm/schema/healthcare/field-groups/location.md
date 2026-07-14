@@ -2,9 +2,15 @@
 title: Location Schema Field Group
 description: Learn about the Location schema field group.
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
+hide: true
 exl-id: 99831093-89da-4329-be29-c130c1d48f63
+TQID: https://experienceleague.adobe.com/Qn4L1lvNPbzC-YMfprA5fs0YXQlHGUrHLc5x9EFxuPw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Location] schema field group
 

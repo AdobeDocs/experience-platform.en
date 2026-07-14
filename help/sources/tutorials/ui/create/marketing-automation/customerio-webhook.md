@@ -3,6 +3,28 @@ title: Create a Customer.io Source Connection and Dataflow in the UI
 description: Learn how to create a Customer.io source connection using the Adobe Experience Platform UI.
 badge: Beta
 exl-id: 7655a34c-808a-46e3-94e3-022a433755a4
+TQID: https://experienceleague.adobe.com/frBTd8fj1-6yG7kHheHTkJy4MejHj1ZLqwzoR8vYWYw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+subfeature_v2:
+  - id: b3ddd7c3-4e07-4269-8660-8dd1e8139d74
+    internal-label: Monitoring
+  - id: e5ae22e3-a3b0-46ed-804f-9abf1bbe3e74
+    internal-label: Guardrails
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
 ---
 # Create a [!DNL Customer.io] source connection and dataflow in the UI
 
@@ -138,7 +160,7 @@ To retrieve your **[!UICONTROL Dataflow ID]** and **[!UICONTROL Streaming endpoi
 
 ![The streaming endpoint in dataflow activity.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/endpoint-test.png)
 
-Once you have retrieved your streaming endpoint and dataflow ID, build a URL based on the following pattern: ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```. For example, a constructed webhook URL may look like: ``https://dcs.adobedc.net/collection/febc116d22ba0ea2868e9c93b199375302afb8a589617700991bb8f3f0341ad7?x-adobe-flow-id=439b3fc4-3042-4a3a-b5e0-a494898d3fb0``
+Once you have retrieved your streaming endpoint and dataflow ID, build a URL based on the following pattern: `{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}`. For example, a constructed webhook URL may look like: `https://dcs.adobedc.net/collection/febc116d22ba0ea2868e9c93b199375302afb8a589617700991bb8f3f0341ad7?x-adobe-flow-id=439b3fc4-3042-4a3a-b5e0-a494898d3fb0`
 
 ## Set up reporting webhook in [!DNL Customer.io] {#set-up-webhook}
 

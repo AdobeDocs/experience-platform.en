@@ -4,6 +4,19 @@ solution: Experience Platform
 title: Data Access API Guide
 description: The Data Access API supports Adobe Experience Platform by providing developers with a RESTful interface focused on the discoverability and accessibility of ingested datasets within Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
+TQID: https://experienceleague.adobe.com/cAIx1TSiuG4V6dXUUTxP2iD-ia8FLY0lPI05Ri6Pmzw
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+    internal-label: Accessibility
 ---
 # Data Access API guide
 

@@ -4,6 +4,26 @@ solution: Experience Platform
 title: Identity Data for Privacy Requests
 description: This document provides general guidance on how to configure your data operations and leverage Adobe technologies to effectively retrieve the appropriate identity information for customer privacy requests.
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
+TQID: https://experienceleague.adobe.com/jmF4PEyHm18ZQDdiFx93ZuUjT8np8kV87JR4I8CcVNs
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+subfeature_v2:
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Identity data for privacy requests
 
@@ -17,7 +37,7 @@ When a customer can interact with your brand through several different channels,
 
 For example, when handling customer data requests in [!DNL Privacy Service], an identity may represent a cookie value set under an Adobe-controlled domain, a cookie value under a third-party domain and shared with Adobe, or a custom identifier that you explicitly define within your organization.
 
-It is therefore required that each identity sent to [!DNL Privacy Service] is accompanied with a namespace that provides context by relating the identity value to its system of origin. A namespace can represent a generic concept such as an email address ("Email") or associate the identity with a specific application, such as an Adobe Advertising Cloud ID ("AdCloud") or Adobe Target ID ("TNTID").
+It is therefore required that each identity sent to [!DNL Privacy Service] is accompanied with a namespace that provides context by relating the identity value to its system of origin. A namespace can represent a generic concept such as an email address ("Email") or associate the identity with a specific application, such as an Adobe Advertising ID or Adobe Target ID.
 
 Adobe Experience Platform Identity Service maintains a store of globally defined and user-defined identity namespaces. For more detailed information on namespaces, see the [identity namespace overview](../identity-service/features/namespaces.md). For a list of standard namespaces and namespace qualifiers that are commonly used in [!DNL Privacy Service], see the [appendix section](api/appendix.md) in the API guide.
 

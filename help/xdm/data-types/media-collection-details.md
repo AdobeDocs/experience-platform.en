@@ -2,6 +2,23 @@
 title: Media Collection Details Data Type
 description: Learn about the Media Collection Details Experience Data Model (XDM) data type.
 exl-id: 1faf60f7-6afb-4ce2-b50d-967776a57715
+TQID: https://experienceleague.adobe.com/q-4VpUsYBDB8i-RmaDywDWCB1BMSsSO78O8qUwK-SbI
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # [!UICONTROL Media Collection Details] data type 
 

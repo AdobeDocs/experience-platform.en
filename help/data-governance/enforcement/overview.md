@@ -4,6 +4,20 @@ solution: Experience Platform
 title: Policy Enforcement Overview
 description: Learn how data usage policies are enforced on Adobe Experience Platform.
 exl-id: d19d8060-85a1-405c-856d-f59041947a33
+TQID: https://experienceleague.adobe.com/oyKG2F221xBKRdWXByxwY-MwI-QmveafBwsXj-8-MCM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
 ---
 # Policy enforcement overview
 

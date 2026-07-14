@@ -5,6 +5,18 @@ title: Score a Model in the Data Science Workspace UI
 type: Tutorial
 description: Scoring in Adobe Experience Platform Data Science Workspace can be achieved by feeding input data into an existing trained Model. Scoring results are then stored and viewable in a specified output dataset as a new batch.
 exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
+TQID: https://experienceleague.adobe.com/x-LrZ8VzNiLMR8qWGhQ9Wmw4XWZsdayKFSz9zDbrkeM
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Score a model in the Data Science Workspace UI
 

@@ -2,6 +2,58 @@
 title: Manage Experience Event Dataset Retention in the Data Lake using TTL
 description: Learn how to evaluate, set, and manage Experience Event Dataset Retention in the data lake using Time-To-Live (TTL) configurations with Adobe Experience Platform APIs. This guide explains how TTL row-level expiration supports data retention policies, optimizes storage efficiency, and ensures effective data lifecycle management. It also provides use cases and best practices to help you apply TTL effectively.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
+TQID: https://experienceleague.adobe.com/qSbHu9ejtvLpiisdp5lrGXXTJaa4IQo7xLlkx9lHeJU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+    internal-label: Reporting
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+    internal-label: Integrations
+subfeature_v2:
+  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+    internal-label: Best practices
+  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+    internal-label: Troubleshooting
+  - id: e0c8953a-a203-4291-bef3-3560160d3041
+    internal-label: Get started
+  - id: ee602049-8a18-43df-9299-a689a025a371
+    internal-label: Use cases
+  - id: f11df5ff-8102-4532-a00c-0b119f4bc11d
+    internal-label: License usage
+  - id: f6ac78a3-5b59-40f5-a37d-45df5303d3a3
+    internal-label: Dashboards
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+    internal-label: Accessibility
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 ---
 # Manage Experience Event Dataset Retention in the data lake using TTL
 

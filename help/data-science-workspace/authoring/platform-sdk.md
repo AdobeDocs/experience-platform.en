@@ -4,6 +4,21 @@ solution: Experience Platform
 title: Model Authoring Using the Adobe Experience Platform SDK
 description: This tutorial provides you with information on converting data_access_sdk_python to the new Python platform_sdk in both Python and R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
+TQID: https://experienceleague.adobe.com/qA2ZrLfipTk6VFVMmCBg0EivqrR0mYxooY4xqIZAwIE
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+    internal-label: Profile
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
 ---
 # Model authoring using the Adobe [!DNL Experience Platform] SDK
 

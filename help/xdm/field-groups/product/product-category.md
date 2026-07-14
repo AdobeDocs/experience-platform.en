@@ -2,6 +2,13 @@
 title: Product Category Schema Field Group
 description: Learn about the Product Category schema field group.
 exl-id: 80825bcf-e646-426b-a3d6-f6759f6cd5cf
+TQID: https://experienceleague.adobe.com/9vVZyHyUlxPKjZX5Pw6CiHImrqJr1FwVRjZVD1-7DcU
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 ---
 # [!UICONTROL Product Category] schema field group
 

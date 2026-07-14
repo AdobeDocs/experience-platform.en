@@ -2,6 +2,26 @@
 title: Connect to Data Distiller from a Jupyter Notebook
 description: Learn how to connect to Data Distiller from a Jupyter Notebook.
 exl-id: e6238b00-aaeb-40c0-a90f-9aebb1a1c421
+TQID: https://experienceleague.adobe.com/Dvo7aOq-BkYp30KCMJlce9vRmiD31LL7FZIABrCC-7I
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
+    internal-label: Data modeling
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+    internal-label: Governance
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
+  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
 ---
 # Connect to Data Distiller from a Jupyter Notebook
 

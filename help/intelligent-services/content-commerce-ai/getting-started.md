@@ -4,6 +4,18 @@ solution: Experience Platform
 title: Getting Started with Content Tagging
 description: Content Tagging utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the authentication tutorial.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
+TQID: https://experienceleague.adobe.com/HOT682PuFoU2fyxdRtKHScIOQSxRSVthbsyd9Yxz8os
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
 ---
 # Getting started with Content Tagging
 

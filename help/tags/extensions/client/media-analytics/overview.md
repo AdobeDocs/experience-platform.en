@@ -2,6 +2,48 @@
 title: Adobe Media Analytics for Audio and Video Extension Overview
 description: Learn about the Adobe Media Analytics for Audio and Video tag extension in Adobe Experience Platform.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
+TQID: https://experienceleague.adobe.com/---WEKSFg9Xfi-wK7GHjdHcsM9AyGlv9Q7N6URjrlN0
+product_v2:
+  - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
+    internal-label: Advertising
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+    internal-label: Experience Platform
+feature_v2:
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+    internal-label: Implementation
+  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
+    internal-label: Data collection
+  - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
+    internal-label: Implementations
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+    internal-label: API
+subfeature_v2:
+  - id: bcc784b7-4ade-4c84-96fa-2f7631b1e5fd
+    internal-label: Media Analytics
+  - id: c069c44e-5426-4c1a-accc-8028662f2fde
+    internal-label: Functions
+  - id: c8add8f2-4250-4fd9-9cde-9707036c567d
+    internal-label: Methods
+  - id: d9830f6f-ceb6-4faa-9744-f281fe4439f9
+    internal-label: Tags
+  - id: df312454-73c4-43f6-a90e-18f5043f074c
+    internal-label: Tags
+  - id: e7d92df1-c5ba-4e93-85df-f83171b889be
+    internal-label: Variables
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
 ---
 # Adobe Media Analytics for Audio and Video extension overview
 
