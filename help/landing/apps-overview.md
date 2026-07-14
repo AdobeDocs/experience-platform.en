@@ -106,7 +106,7 @@ The table above describes four applications that work together in many implement
 
 >[!NOTE]
 >
->Other Adobe CX Enterprise products can connect to Adobe Experience Platform without being listed here or above. For a high-level map of common integration patterns (sources and destinations—for example Adobe Analytics as a source or Adobe Target as a destination), see [Adobe Experience Platform integrations](experience-platform-integrations.md). 
+>Other Adobe CX Enterprise products can connect to Adobe Experience Platform without being listed here or above. For a high-level map of common integration patterns (sources and destinations—for example Adobe Analytics as a source or Adobe Target as a destination), see [Adobe Experience Platform integrations](integrations.md). 
 
 Product names, editions, and what is sold can differ by license and country or region.
 
@@ -406,7 +406,7 @@ This matches the way the [Experience Platform documentation overview](https://ex
 
 The following help topics and collections expand on the concepts in this page.
 
-- [Adobe Experience Platform integrations](experience-platform-integrations.md): How other [!DNL Adobe CX Enterprise] products connect to [!DNL Experience Platform] (sources and destinations).
+- [Adobe Experience Platform integrations](integrations.md): How other [!DNL Adobe CX Enterprise] products connect to [!DNL Experience Platform] (sources and destinations).
 - [Adobe Experience Platform overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home): Main entry points for help.
 - [Experience Platform documentation overview](https://experienceleague.adobe.com/en/docs/experience-platform/landing/documentation/overview): How help topics are organized.
 - [Adobe Experience Platform and applications (architecture diagrams)](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications): How [!DNL Experience Platform] and applications fit together at a high level.
