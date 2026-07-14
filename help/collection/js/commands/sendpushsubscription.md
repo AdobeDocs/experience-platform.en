@@ -84,7 +84,7 @@ Common error conditions and their messages:
 
 | Error   | Cause  |
 | ------- | ---- |
-| `"Push notifications module is not configured. No VAPID public key was provided."` | Missing or invalid pushNotifications configuration  |
+| `"Push notifications module is not configured."` | Missing or invalid `pushNotifications` configuration  |
 | `"Service workers are not supported in this browser."`  | Browser doesn't support service workers  |
 | `"Push notifications are not supported in this browser."`  | Browser doesn't support push notifications or Notification API |
 | `"The user has not given permission to send push notifications."` | User hasn't granted notification permission (`Notification.permission === "granted"`)  |
@@ -99,8 +99,8 @@ The command sends push notification data in the following format:
 {
   pushNotificationDetails: [
     {
-      appID: "example.com", // Current domain
-      token: "...", // Serialized subscription details + ECID
+      appID: "my-app-id", // The configured application ID
+      token: "...", // Serialized push subscription details (endpoint and keys)
       platform: "web", // Always "web" for Web SDK
       denylisted: false, // Always false
       identity: {

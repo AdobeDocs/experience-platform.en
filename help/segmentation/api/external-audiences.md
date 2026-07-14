@@ -43,7 +43,7 @@ Starting with the March release, the following guardrails will be enforced when 
 >
 >The endpoints in this guide are prefixed with `/core/ais`, as opposed to `/core/ups`.
 
-In order to use Experience Platform APIs, you must have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in Experience Platform API calls, as shown below:
+In order to use Experience Platform APIs, you must have completed the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in Experience Platform API calls, as shown below:
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -776,4 +776,6 @@ Once you've added the audience to a destination, you can trigger an audience ing
 >[!IMPORTANT]
 >
 >Currently, data is activated twice - the first time due to the express activation job, which occurs soon after batch ingestion and the second time after the audience evaluation job.
+
+
 

@@ -184,7 +184,7 @@ Select the desired alert from the list to subscribe to receive notifications. Fo
 
 ## Managing audit logs in the API
 
-All actions that you can perform in the UI can also be done using API calls. See the [API reference document](https://www.adobe.io/experience-platform-apis/references/audit-query/) for more information.
+All actions that you can perform in the UI can also be done using API calls. See the [API reference document](https://developer.adobe.com/experience-platform-apis/references/audit-query) for more information.
 
 ## Managing audit logs for Adobe Admin Console
 
@@ -197,3 +197,5 @@ This guide covered how to manage audit logs in Experience Platform. For more inf
 To reinforce your understanding of audit logs in Experience Platform, watch the following video:
 
 >[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
+
+

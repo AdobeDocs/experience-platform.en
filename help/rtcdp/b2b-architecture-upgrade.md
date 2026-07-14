@@ -76,7 +76,7 @@ The following features have been updated as part of the B2B architectural upgrad
 
 As part of the new architecture upgrade, Experience Event filters can no longer be used within a single multi-entity audience that includes B2B attributes.
 
-To achieve the same audience logic, you can use the segment builder to [add audiences and reference audiences](../segmentation/ui/segment-builder.md#adding-audiences)
+To achieve the same audience logic, you can use Segment Builder to [add audiences and reference audiences](../segmentation/ui/segment-builder.md#adding-audiences)
 
 For example:
 
@@ -89,7 +89,7 @@ Once the upgrade is complete, any new multi-entity audiences with B2B attributes
 
 >[!TIP]
 >
->A **segment of segments** is any segment definition that contains one or more batch or edge segments. **Note**: if you use a segment of segments, profile disqualification will happen **every 24 hours**.
+>A **segment of segments** is any segment definition that contains one or more batch or edge audiences. **Note**: if you use a segment of segments, profile disqualification will happen **every 24 hours**.
 
 ### Entity resolution and time-precedence merging in B2B audiences
 

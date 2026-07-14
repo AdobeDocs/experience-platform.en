@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Segment Builder UI Guide
-description: The Segment Builder in the Adobe Experience Platform UI provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties.
+description: Segment Builder in the Adobe Experience Platform UI provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 TQID: https://experienceleague.adobe.com/-WKclcOvYGl1pg6jrUR2UwrXy9BAw9j--sXM3DxRILo
 product_v2:
@@ -32,7 +32,7 @@ topic_v2:
 
 >[!NOTE]
 >
->This guide explains how to create audiences through **segment definitions** using the Segment Builder. To learn how to create audiences using Audience Composition, please read the [Audience Composition UI guide](./audience-composition.md).
+>This guide explains how to create audiences through **segment definitions** using Segment Builder. To learn how to create audiences using Audience Composition, please read the [Audience Composition UI guide](./audience-composition.md).
 
 [!DNL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
 
@@ -72,13 +72,11 @@ The basic building blocks of segment definitions are attributes and events. In a
 
 You can see these building blocks in the **[!UICONTROL Fields]** section on the left side of the [!DNL Segment Builder] workspace. **[!UICONTROL Fields]** contains a tab for each of the main building blocks: "[!UICONTROL Attributes]", "[!UICONTROL Events]", and "[!UICONTROL Audiences]".
 
-![The fields section of the Segment Builder is highlighted.](../images/ui/segment-builder/segment-fields.png)
+![The fields section of Segment Builder is highlighted.](../images/ui/segment-builder/segment-fields.png)
 
 You can select the ![settings icon](/help/images/icons/settings.png) to adjust the settings for the displayed fields.
 
 For the **[!UICONTROL Available fields]**, you can either show only the fields that contain data or the full XDM schema.
-
-For the **[!UICONTROL Data sources]**, you can filter to show attributes that come from the specified ingestion types. Supported values include **[!UICONTROL Show batch data]**, **[!UICONTROL Show streaming/edge data]**, and **[!UICONTROL Show fields with no ingested data]**.
 
 For the **[!UICONTROL Merge policy]**, you can choose which merge policy the fields belong to.
 
@@ -175,11 +173,15 @@ For more detailed information on the time and date functions, read the [time con
 
 +++
 
-When you select an attribute, you can see the summary data by selecting the [information icon](../../images/icons/info.png). The summary data includes information such as an explanation of what the field is, the record count of the values, as well as the percentage of accounts that contain values for this attribute.
+When you select an attribute, you can see the data insights for the attribute by selecting the [information icon](../../images/icons/info.png). The data insights summary includes information such as an explanation of what the field is, the record count of the values, as well as the percentage of profiles that contain values for this attribute.
 
-The **[!UICONTROL Top values]** section displays the most frequently occurring values for the attribute, and includes details such as the value, the number of records that have the value, as well as the percentage of total records the value represents.
+>[!NOTE]
+>
+>The top values are only displayed if the attribute's values are **not** stored in an array or a key/value pairing.
 
-![A popover that displays the summary data for an attribute](/help/segmentation/images/ui/segment-builder/summary-data.png)
+The **[!UICONTROL Top values]** section displays the 50 most frequently occurring values for the attribute, and includes details such as the value, as well as the percentage of total records the value represents.
+
+![A popover that displays the summary data for an attribute](/help/segmentation/images/ui/segment-builder/summary-data.png){width="300"}
 
 If an attribute is populated by less than 25% of profiles, the ![data notice icon](../../images/icons/data-notice.png) will be displayed instead. The same summary data will be displayed for the attribute, regardless.
 
@@ -187,9 +189,17 @@ If an attribute is populated by less than 25% of profiles, the ![data notice ico
 >
 >The top values are only displayed if the field does **not** contain too many different values and if those field's values are commonly repeated. Additionally, this summary data is updated on a **daily** basis.
 
+When you add an attribute with summary data, you can also see the summary data in the rule building canvas.
+
+![The attribute with the summary data is displayed.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary.png)
+
+You can either use the dropdown to select from the top values or enter your value, which can automatically resolve to one of the top values.
+
+![The dropdown where you can add the attribute's value is highlighted.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary-dialog.png)
+
 Additionally, the attribute has an **[!UICONTROL Ingestion Type]**. The ingestion type lets you know the origin of the data, and can be one of the following values: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]**, or **[!UICONTROL No Data Ingested]**. 
 
-![The ingestion type for the attribute is displayed.](/help/segmentation/images/ui/segment-builder/ingestion-type.png)
+![The ingestion type for the attribute is displayed.](/help/segmentation/images/ui/segment-builder/ingestion-type.png){width="300"}
 
 #### Computed attributes {#computed-attributes}
 
@@ -642,3 +652,17 @@ Segment Builder provides a rich workflow allowing you to isolate marketable audi
 - Enable specified segment definitions for streaming segmentation.
   
 To learn more about [!DNL Segmentation Service], please continue reading the documentation and supplement your learning by watching the related videos. To learn more about the other parts of the [!DNL Segmentation Service] UI, please read the [[!DNL Segmentation Service] user guide](./overview.md).
+
+## Appendix {#appendix}
+
+The following appendix lists additional information about Segment Builder.
+
+### Audience dependency not supported error {#error}
+
+If you see the `100128-400: Audience dependency not currently supported. One or more of the audience filters you've added is not currently supported. Please contact Adobe team for details.` error appear when saving your audience, follow the subsequent instructions:
+
+When this error occurs, you'll have two audiences: Audience 1 (A1), which contains Audience 2 (A2).
+
+You'll first need to revert the changes you made in A2. Once you've reverted the changes made in A2, open A1 and remove the audience dependency on A2.
+
+Once the audience dependency has been removed, re-open A2 and add the initial changes back to that audience. Now that those changes have been re-added, you can add the dependency on A2 back to A1.

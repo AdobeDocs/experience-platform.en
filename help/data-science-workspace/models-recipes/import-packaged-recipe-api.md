@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics;recipes;api;sensei machine learning;create engine
 solution: Experience Platform
-title: Import a Packaged Recipe Using the Sensei Machine Learning API
+title: Import a Packaged Recipe Using the Adobe AI Machine Learning API
 type: Tutorial
-description: This tutorial uses the Sensei Machine Learning API to create an Engine, also known as a Recipe in the user interface.
+description: This tutorial uses the Adobe AI Machine Learning API to create an Engine, also known as a Recipe in the user interface.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
 TQID: https://experienceleague.adobe.com/4J5oeJraiqqZfne9eV12TJfy2p1ANhDo990ViyTgC7s
 product_v2:
@@ -18,7 +18,7 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
     internal-label: Machine learning
 ---
-# Import a packaged recipe using the Sensei Machine Learning API
+# Import a packaged recipe using the Adobe AI Machine Learning API
 
 >[!NOTE]
 >
@@ -26,7 +26,7 @@ topic_v2:
 >
 >This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
-This tutorial uses the [[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) to create an [Engine](../api/engines.md), also known as a Recipe in the user interface. 
+This tutorial uses the [[!DNL Adobe AI Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) to create an [Engine](../api/engines.md), also known as a Recipe in the user interface. 
 
 Before getting started, it is important to note that Adobe Experience Platform [!DNL Data Science Workspace] uses different terms to refer to similar elements within the API and UI. The API terms are used throughout this tutorial and the following table outlines the correlating terms:
 
@@ -47,7 +47,7 @@ This tutorial requires a packaged Recipe file in the form of a Docker URL. Follo
  
 -   `{DOCKER_URL}`: An URL address to a Docker image of an intelligent service.
 
-This tutorial requires you to have completed the [Authentication to Adobe Experience Platform tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to [!DNL Experience Platform] APIs. Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+This tutorial requires you to have completed the [Authentication to Adobe Experience Platform tutorial](/help/landing/api-authentication.md) in order to successfully make calls to [!DNL Experience Platform] APIs. Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 -   `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.
 -   `{ORG_ID}`: Your organization credentials found in your unique Adobe Experience Platform integration.
@@ -214,3 +214,5 @@ A successful response shows a JSON payload with information regarding the newly 
 ## Next steps {#next-steps}
 
 You have created an Engine using the API and a unique Engine identifier was obtained as part of the response body. You can use this Engine identifier in the next tutorial as you learn how to [create, train, and evaluate a Model using the API](./train-evaluate-model-api.md).
+
+

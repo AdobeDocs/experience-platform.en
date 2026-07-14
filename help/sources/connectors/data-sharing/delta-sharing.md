@@ -1,0 +1,120 @@
+---
+title: Delta Sharing
+description: Learn how to use the Delta Sharing source on Adobe Experience Platform.
+badge: Beta
+exl-id: 69c4e250-aa9b-4db1-b44b-6056bdddb637
+---
+# [!DNL Delta Sharing]
+
+>[!AVAILABILITY]
+>
+>This feature is currently in a **limited beta** and will only be available until July 15, 2026. Contact your Adobe account team to request access to the beta.
+
+With the [!DNL Delta Sharing] source connector, you can securely connect to your [!DNL Databricks Delta Sharing] source and create virtual datasets in Adobe Experience Platform. This allows you to query and use external tables through Experience Platform services, while representing the shared data through relational schemas, without physically ingesting the data into Platform. By using [!DNL Delta Sharing], you can reduce duplicate data storage, lower storage costs, and simplify data management. 
+
+## Prerequisites {#prerequisites}
+
+Before you connect to a [!DNL Databricks Delta Sharing] source from Adobe Experience Platform, ensure the following requirements are met.
+
+>[!IMPORTANT]
+>
+>[!DNL Delta Sharing] does not physically ingest or copy source data into Experience Platform. Instead, shared data is represented in Experience Platform as virtual datasets. Ensure that the shared tables you want to use are available through Delta Sharing and can be represented through relational schemas in Experience Platform. 
+
+### [!DNL Databricks] provider prerequisites 
+
+On the provider side, ensure that you have the following: 
+
+- **External [!DNL Delta Sharing] is enabled**: External [!DNL Delta Sharing] must be enabled for your [!DNL Databricks] account/workspace, and a default token TTL configured.
+- **Eligible Delta tables**: The tables you plan to share must:
+  - Be **Delta tables**.
+  - Be configured on storage that supports open [!DNL Delta Sharing] (external storage or [!DNL Databricks]‑supported configuration).
+  - **Not** have row filters or column masks applied ([!DNL Databricks] does not allow sharing such tables).
+
+#### Share and recipient configuration
+
+A [!DNL Databricks] admin must complete the following steps:
+
+1. Create a **share** and add tables:
+
+    ```sql
+    CREATE SHARE IF NOT EXISTS my_first_share
+      COMMENT 'Share for Adobe Experience Platform';
+
+    ALTER SHARE my_first_share
+      ADD TABLE {CATALOG}.{SCHEMA}.{TABLE};
+    ```
+
+2. Create a recipient for Experience Platform and grant the share:
+
+    ```sql
+    CREATE RECIPIENT IF NOT EXISTS plat_recipient
+      COMMENT 'Recipient for Platform Delta Sharing source';
+    GRANT SELECT ON SHARE my_first_share TO RECIPIENT plat_recipient;
+    ```
+
+Download the [!DNL Delta Sharing] credentials file (.share) for this recipient. This file contains the four values you will use in the Experience Platform UI.
+
++++Select to view an example `.share` file
+
+```json
+{
+  "shareCredentialsVersion": 1,
+  "endpoint": "https://{WORKSPACE}.azuredatabricks.net/api/2.0/delta-sharing/metastores/{ID}",
+  "bearerToken": "dapi1234567890abcdef1234567890abcdef-1234567890abcdef",
+  "expirationTime": "2026-03-31T23:59:59Z"
+}
+```
+
++++
+
+#### Network and firewall configuration
+
+If your cloud storage accounts such as, [!DNL Azure Data Lake Storage Gen2], [!DNL Amazon S3], [!DNL Google Cloud Storage] are protected by firewall rules, ensure that Experience Platform can access the required [!DNL Delta Sharing resource, including]:
+
+- The [!DNL Delta Sharing] endpoint from the `.share` file.
+- The underlying storage paths for the shared tables.
+
+### Experience Platform prerequisites
+
+#### Supported environment
+
+- Your Experience Platform organization must be hosted in a supported Azure region.
+- The [!DNL Delta Sharing] source feature must be enabled for your organization. If you do not see the "Data Sharing → Databricks Delta Share" card in the Sources catalog, contact Adobe Support or your Adobe representative.
+
+Additionally, the user creating the connection must have the following permissions in the target sandbox:
+
+- Access to Sources and Permission to create source connections / dataflows.
+- Permission to create schemas and datasets, including virtual datasets.
+
+#### Governance expectations
+
+- [!DNL Delta Sharing] connections create virtual datasets in Catalog. These datasets are read-only and are represented as virtual datasets in Experience Platform.
+- No rows are ingested into Experience Platform. Only metadata, such as schema, lineage, and connection details, is stored. 
+- Standard governance labels and policies can be applied to the virtual schema, but privacy/retention jobs do not modify the source data.
+
+### Gather required credentials {#gather-required-credentials}
+
+You must provide values for the following credentials to authenticate and use the [!DNL Delta Sharing] source:
+
+| Credential | Description | Example |
+| --- | --- | --- |
+| Endpoint | The Endpoint is the base URL of the [!DNL Delta Sharing] server that hosts the shared tables. Generated by [!DNL Databricks] when external [!DNL Delta Sharing] is enabled, this endpoint appears in the recipient's `.share` credentials file and is used by Experience Platform to enumerate shares, browse schemas and tables, and fetch metadata and data previews. | `https://adb-1234567890123.4.azuredatabricks.net/api/2.0/delta-sharing/metastores/0a1b2c3d-4e5f-6789-abcd-0123456789ef` |
+| Bearer token | The Bearer token is a read-only [!DNL Delta Sharing] access token associated with a specific recipient in [!DNL Databricks]. It authenticates Experience Platform as the recipient to the [!DNL Delta Sharing] server by being included as an Authorization header in every request (`Authorization: Bearer {BEARER_TOKEN}`). | `dapi1a2b3c4d5e6f7g8h9i0jklmnopqrstuvwx` |
+| Share credentials version | Share credentials version corresponds to `shareCredentialsVersion` in the `.share` file. It is the version of the credentials file schema, not a token version. Experience Platform uses it to understand how to interpret the fields in the profile. For today's [!DNL Databricks Delta Sharing] profiles, the value is 1. | `1` |
+| Expiration time | Expiration time is an optional timestamp specifying when the bearer token will expire. Expiration time must be in a valid UTC ISO‑8601 timestamp. | `2026-03-31T23:59:59Z` |
+
+{style="table-layout:auto"}
+
+## Allowed XDM field data types {#allowed-xdm-field-data-types}
+
+When mapping shared tables to Experience Platform schemas, only the following XDM field data types are allowed:
+
+- **Core primitives:** String, Number, Integer, Boolean
+- **Sub-types via constraints:** Byte, Short, Integer (32‑bit), Long
+- **Temporal:** Date, DateTime
+- **Structural:** Array, Object
+- **Constrained string variants:** Enum / Suggested list (meta:enum)
+
+## Connect to [!DNL Databricks Delta Sharing] in the UI
+
+Read the [[!DNL Databricks Delta Sharing ] UI guide](../../tutorials/ui/create/data-sharing/delta-sharing.md) to learn how you can ingest data to Experience Platform with the [!DNL Delta Sharing] source.

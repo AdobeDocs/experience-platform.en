@@ -38,7 +38,7 @@ topic_v2:
 
 This configuration section allows you to define the behavior of the Web SDK when it comes to handling user identification.
 
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Log in to [CX Enterprise](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Select the desired tag property.
 1. Navigate to **[!UICONTROL Extensions]**, then select **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
@@ -50,7 +50,7 @@ The following options are available:
 
 ## [!UICONTROL Migrate ECID from VisitorAPI]
 
-A checkbox that allows the Web SDK to read the `AMCV` and `s_ecid` cookies and set the `AMCV` cookie used by `Visitor.js`. This feature is important when migrating from libraries that use `VisitorAPI.js` to the Web SDK, as some pages might still be using `Visitor.js`. This option allows the SDK to continue to use the same ECID so that users are not identified as two separate users. The JavaScript library equivalent to this checkbox is [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md).
+A checkbox that allows the Web SDK to read the `AMCV` and `s_ecid` cookies and set the `AMCV` cookie used by the Visitor ID Service. This feature is important when migrating from libraries that use `VisitorAPI.js` to the Web SDK, as some pages might still be using `VisitorAPI.js`. This option allows the SDK to continue to use the same ECID so that users are not identified as two separate users. The JavaScript library equivalent to this checkbox is [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md).
 
 ## [!UICONTROL Use third-party cookies]
 

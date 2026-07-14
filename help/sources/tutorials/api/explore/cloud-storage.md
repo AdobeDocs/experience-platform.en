@@ -16,7 +16,7 @@ role_v2:
 ---
 # Explore your cloud storage folders using the [!DNL Flow Service] API
 
-This tutorial provides steps on how to explore and preview the structure and contents of your cloud storage using the [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API.
+This tutorial provides steps on how to explore and preview the structure and contents of your cloud storage using the [[!DNL Flow Service]](https://developer.adobe.com/experience-platform-apis/references/flow-service) API.
 
 >[!NOTE]
 >
@@ -162,7 +162,7 @@ A successful response returns the structure of the queried file including table 
 
 ## Using query parameters {#query}
 
-The [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) supports the use of query parameters to preview and inspect different file types.
+The [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service) supports the use of query parameters to preview and inspect different file types.
 
 | Parameter | Description |
 | --------- | ----------- |
@@ -173,3 +173,5 @@ The [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/refe
 ## Next steps
 
 By following this tutorial, you have explored your cloud storage system, found the path of the file you wish to bring in to [!DNL Experience Platform], and viewed its structure. You can use this information in the next tutorial to [collect data from your cloud storage and bring it into Experience Platform](../collect/cloud-storage.md).
+
+

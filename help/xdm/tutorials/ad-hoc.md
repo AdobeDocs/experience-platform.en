@@ -27,7 +27,7 @@ topic_v2:
 
 In specific circumstances, it may be necessary to create an [!DNL Experience Data Model] (XDM) schema with fields that are namespaced for usage only by a single dataset. This is referred to as an "ad-hoc" schema. Ad-hoc schemas are used in various data ingestion workflows for [!DNL Experience Platform], including ingesting CSV files and creating certain kinds of source connections.
 
-This document provides general steps for creating an ad-hoc schema using the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). It is intended to be used in conjunction with other [!DNL Experience Platform] tutorials that require creating an ad-hoc schema as part of their workflow. Each of those documents provides detailed information on how to properly configure an ad-hoc schema for its specific use case.
+This document provides general steps for creating an ad-hoc schema using the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry). It is intended to be used in conjunction with other [!DNL Experience Platform] tutorials that require creating an ad-hoc schema as part of their workflow. Each of those documents provides detailed information on how to properly configure an ad-hoc schema for its specific use case.
 
 ## Getting started
 
@@ -323,3 +323,4 @@ A successful response returns the details of the schema, including all fields ne
 By following this tutorial, you have successfully created a new ad-hoc schema. If you were brought to this document as part of another tutorial, you can now use the `$id` of your ad-hoc schema to complete the workflow as directed.
 
 For more information on working with the [!DNL Schema Registry] API, please refer to the [developer guide](../api/getting-started.md).
+

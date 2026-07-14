@@ -67,7 +67,7 @@ The APIs for each Experience Platform service all share the same set of authenti
 
 ## Authentication and headers
 
-In order to successfully make calls to Experience Platform endpoints, you are required to complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in Experience Platform API calls, as shown below:
+In order to successfully make calls to Experience Platform endpoints, you are required to complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in Experience Platform API calls, as shown below:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -184,7 +184,7 @@ For more information on specific endpoints in Experience Platform APIs, includin
 | [Sandbox API guide](.././sandboxes/api/getting-started.md) | The Sandbox API allows developers to programmatically manage isolated virtual sandbox environments in Adobe Experience Platform. |
 | [[!DNL Schema Registry] API guide](.././xdm/api/overview.md) <br> (XDM) | The [!DNL Schema Registry] API allows developers to programmatically manage all schemas and related Experience Data Model (XDM) resources within Adobe Experience Platform. |
 | [[!DNL Segmentation Service] API guide](.././segmentation/api/overview.md) | The [!DNL Segmentation Service] API allows developers to programmatically manage segmentation operations in Adobe Experience Platform. This includes building segments and generating audiences from your Real-Time Customer Profile data. |
-| [[!DNL Sensei Machine Learning] API guide](.././data-science-workspace/api/getting-started.md) <br> (Data Science Workspace) | The [!DNL Sensei Machine Learning] API provides a mechanism for data scientists to organize and manage machine learning (ML) services from algorithm onboarding, experimentation, and to service deployment. |
+| [[!DNL Adobe AI Machine Learning] API guide](.././data-science-workspace/api/getting-started.md) <br> (Data Science Workspace) | The [!DNL Adobe AI Machine Learning] API provides a mechanism for data scientists to organize and manage machine learning (ML) services from algorithm onboarding, experimentation, and to service deployment. |
 
 For more information on specific endpoints and operations available for each service, please see the [API reference documentation](https://www.adobe.com/go/platform-api-reference-en) on Adobe I/O.
 
@@ -195,3 +195,5 @@ This document introduced the required headers, available guides, and provided an
 For answers to frequently asked questions, refer to the [Experience Platform troubleshooting guide](troubleshooting.md).
 
 To set up a Postman environment and explore the available Postman collections, refer to the [Experience Platform Postman guide](postman.md).
+
+

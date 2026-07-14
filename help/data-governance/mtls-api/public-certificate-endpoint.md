@@ -114,7 +114,7 @@ A successful response returns HTTP status 200 and lists the public certificates 
 | --- | --- |
 | `certCommonName` | The common name (CN) of the certificate, which typically represents the name or identity of the server or entity the certificate is issued to.|
 | `publicCertificate` | The actual public certificate in a string format, which is used for authenticating and encrypting communications.|
-| `expiryDate` | The date and time when the public certificate will expire, formatted in ISO 8601 (UTC).|
+| `expiryDate` | The date and time when the public certificate will expire, in [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format (`yyyy-MM-dd'T'HH:mm:ss'Z'`).|
 
 {style="table-layout:auto"}
 

@@ -37,6 +37,19 @@ topic_v2:
 ---
 # Adobe Experience Platform Debugger release notes
 
+## Version 1.7.1 - June 24, 2026
+
+* Fixed an issue where overriding the datastream ID could fail to take effect.
+* Fixed an issue where Analytics debugging could corrupt context data in Analytics requests. 
+
+## Version 1.7.0 - May 27, 2026
+
+* Improved search capabilities of the [!UICONTROL Logs] tool, including:
+  * Better search filtering, ensuring that only relevant logs are shown.
+  * Phrase match highlighting.
+  * Expansion of nested log objects to show search matches.
+  * A **[!UICONTROL Download CSV]** button to export log data to view in Microsoft Excel or to share with an AI agent.
+
 ## Version 1.6.5 - March 24, 2026
 
 * Fixed an issue that prevented events from AppMeasurement being sent in active Assurance sessions.
@@ -53,7 +66,7 @@ topic_v2:
 
 ## Version 1.6.2 - October 1, 2024
 
-* Fixed an issue where the Debugger was too sensitive to all CSP errors
+* Fixed an issue where the Debugger was too sensitive to all CSP errors.
 
 ## Version 1.6.1 - July 25, 2024
 
@@ -159,3 +172,4 @@ topic_v2:
 ## Version 1.0.0 May 5, 2021
 
 * First main release of the Experience Platform Debugger. Intended to replace the Experience Cloud Debugger.
+

@@ -95,7 +95,7 @@ There are two ways to send identity data to Experience Platform:
 
 `identityMap` is a map-type field that describes the various identity values for an individual, along with their associated namespaces. This field can be used to provide identity information for your schemas, instead of defining identity values within the structure of the schema itself.
 
-The main drawback of using `identityMap` is that identity values are nested and may be harder to work with in tools that expect top-level identity fields, such as the Segment Builder or some third-party integrations.
+The main drawback of using `identityMap` is that identity values are nested and may be harder to work with in tools that expect top-level identity fields, such as Segment Builder or some third-party integrations.
 
 >[!NOTE]
 >
@@ -151,7 +151,7 @@ Since maintaining backwards compatibility is crucial for schema evolution, Exper
 
 >[!NOTE]
 >
->You can only introduce a breaking change to a schema if it has not yet been used to ingest data into Experience Platform and hasn't been enabled for use in Real-Time Customer Profile. However, once the schema has been used in Experience Platform, it must adhere to the additive versioning policy. Once a dataset is created for the schema, the rules of Schema Evolution become strictly enforced by the system for all the fields in the schema. The fields will become non-editable across all XDM schemas in which they are referenced.
+>You can only introduce a breaking change to a schema if it has not yet been used to ingest data into Experience Platform and hasn't been enabled for use in Real-Time Customer Profile. However, once the schema has been used in Experience Platform, it must adhere to the additive versioning policy. Once a dataset is created for the schema, the rules of schema evolution become strictly enforced by the system for all the fields in the schema. The fields will become non-editable across all XDM schemas in which they are referenced.
 
 The following table breaks down which changes are supported when editing schemas, field groups, and data types:
 

@@ -31,6 +31,6 @@ nudge: true
   * [Enable a dataset for Profile updates (upsert)](datasets/enable-upsert.md)
   * [Experience Event Dataset Retention in the data lake](datasets/experience-event-dataset-retention-ttl-guide.md)
 * [Privacy request processing in the Data Lake](privacy.md)
-* [API reference](https://www.adobe.io/experience-platform-apis/references/catalog/)
+* [API reference](https://developer.adobe.com/experience-platform-apis/references/catalog)
 * [Frequently asked questions](catalog-faq.md)
 * [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
