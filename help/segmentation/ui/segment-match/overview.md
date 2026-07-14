@@ -47,10 +47,7 @@ topic_v2:
 
 >[!IMPORTANT]
 >
->Adobe introduced [!DNL Segment Match] in 2021 for customers to collaborate and exchange audiences. In early 2025, Adobe introduced [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), which is the longer-term approach to meet this use-case.
->
->* For customers in the United States, Canada, Australia, New Zealand, and EMEA: Adobe recommends Real-Time CDP Prime and Ultimate customers transition data collaboration use cases from [!DNL Segment Match] to Real-Time CDP Collaboration. View the [documentation](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) and [quick-start guide](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide) for Real-Time CDP Collaboration and contact your Adobe account team to learn more.
->* For customers in all other geographies: [!DNL Segment Match] is the recommended option until Real-Time CDP Collaboration is released in those geographies in 2026.
+>Adobe Experience Platform Segment Match will be discontinued and will not be available for use after November 27, 2026. Adobe recommends Real-Time CDP Prime and Ultimate customers transition data collaboration use cases from [!DNL Segment Match] to Real-Time CDP Collaboration. View the [documentation](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) and [quick-start guide](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide) for Real-Time CDP Collaboration and contact your Adobe account team to learn more.
 
 Adobe Experience Platform Segment Match is a segment-sharing service that allows for two or more Experience Platform users to exchange segment data in a secure, governed, and privacy-friendly manner. [!DNL Segment Match] uses Experience Platform privacy standards and personal identifiers such as hashed emails, hashed phone numbers, and device identifiers like IDFAs and GAIDs.
 
