@@ -391,18 +391,6 @@ This table summarizes which roles are often involved at each stage and which par
 | Activate and run day to day | Marketing operations, media, lifecycle teams | Destinations, journey reporting, alerts |
 | Audit and improve | Analytics, compliance, operations | Audit logs, monitoring, dashboards |
 
-## Where to start with the full stack {#where-to-start}
-
-Use the following as a high-level order for using the full stack. Your organization can adapt the phases to your workflows.
-
-| Phase | What to do |
-| --- | --- |
-| Establish the foundation on [!DNL Experience Platform] | Define priority use cases and sources. Design XDM schemas, identity rules, sandboxes, and basic governance and consent. |
-| Stand up [!DNL Real-Time CDP] | Configure audiences that match your use cases. Connect destinations for the channels that matter first. |
-| Add [!DNL Adobe Journey Optimizer] journeys | Start with one or two high-impact journeys. Use [!DNL Real-Time CDP] audiences and [!DNL Experience Platform] events as triggers and conditions. |
-| Add [!DNL Customer Journey Analytics] for closed-loop learning | Connect [!DNL Experience Platform] datasets. Use journey visualizations to find opportunities, then publish audiences back to [!DNL Experience Platform] for [!DNL Real-Time CDP] and [!DNL Adobe Journey Optimizer]. |
-| Iterate and scale | Expand journeys, channels, audiences, and modeled scores as your program matures. |
-
 ## Terminology {#terminology}
 
 This topic uses the following terms in specific ways.
