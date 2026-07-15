@@ -324,7 +324,7 @@ In this step, you must select the profile attributes that you want to add to the
 
     >[!TIP]
     >
-    >Use the search field to narrow down your selection, as shown in the image below. For identity namespaces, search matches partial, case-insensitive text against the namespace name or identity symbol, and works for both standard [!DNL Adobe] namespaces and custom namespaces.
+    >Use the search box to filter the source fields, as shown in the image below. Search matches partial, case-insensitive text, and works for profile attributes as well as standard [!DNL Adobe] and custom identity namespaces.
 
     Use the **[!UICONTROL Show only fields with data]** toggle to only display schema fields populated with values. By default, only populated schema fields are shown.
 
