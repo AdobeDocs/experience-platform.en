@@ -100,9 +100,11 @@ A successful response returns HTTP status 200 with a list of schedules for the s
             "state": "active",
             "type": "batch_segmentation",
             "schedule": "0 0 1 * * ?",
+            "frequency": "daily",
             "properties": {
-                "segments": []
+                "segments": ["sampleSegmentDefinitionId"]
             },
+            "owner": "user",
             "createEpoch": 1573158851,
             "updateEpoch": 1574365202
         }
@@ -113,16 +115,23 @@ A successful response returns HTTP status 200 with a list of schedules for the s
 }
 ```
 
-| Property | Description  |
-| -------- | ------------ |
+| Property | Description |
+| -------- | ----------- |
 | `_page.totalCount` | The total number of schedules returned. |
 | `_page.pageSize` | The size of the page of schedules. |
+| `children.id` | The ID of the schedule. |
+| `children.imsOrgId` | The organization ID of the schedule. |
+| `children.sandbox` | An object containing sandbox information for the schedule. |
 | `children.name` | The name of the schedule as a string. |
-| `children.type` | The type of job as a string. The two supported types are "batch_segmentation" and "export". |
-| `children.properties` | An object containing additional properties related to the schedule. |
-| `children.properties.segments` | Using `["*"]` ensures all segments are included. |
-| `children.schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day. |
 | `children.state` | A string containing the schedule state. The two supported states are "active" and "inactive". By default, the state is set to "inactive". |
+| `children.type` | The type of job as a string. The two supported types are `batch_segmentation` and `export`. |
+| `children.schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day. |
+| `children.frequency` | The frequency that the schedule runs. Possible values include `daily`, `weekly`, `monthly`, and `yearly`. |
+| `children.properties` | An object containing additional properties related to the schedule. |
+| `children.properties.segments` | The IDs of the segment definitions that belong to the schedule. |
+| `children.owner` | The owner of the schedule. Possible values include `user` if the schedule is user-created and `system` if the schedule is system-created. |
+| `children.createEpoch` | The epoch creation time for the schedule in seconds. |
+| `children.updateEpoch` | The epoch time the schedule was last updated in seconds. |
 
 +++
 
@@ -149,26 +158,26 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
 {
-    "name":"profile-default",
-    "type":"batch_segmentation",
-    "properties":{
-        "segments":[
-            "*"
+    "name": "profile-default",
+    "type": "batch_segmentation",
+    "properties": {
+        "segments": [
+            "sampleSegmentDefinitionId"
         ]
     },
-    "schedule":"0 0 1 * * ?",
-    "state":"inactive"
+    "schedule": "0 0 1 * * ?",
+    "state": "inactive"
 }'
 ```
 
-| Property | Description  |
-| -------- | ------------ |
+| Property | Description |
+| -------- | ----------- |
 | `name` | **Required.** The name of the schedule as a string. |
-| `type` | **Required.** The type of job as a string. The two supported types are "batch_segmentation" and "export". |
+| `type` | **Required.** The type of job as a string. The two supported types are `batch_segmentation` and `export`. |
 | `properties` | **Required.** An object containing additional properties related to the schedule. |
-| `properties.segments` | **Required when `type` equals "batch_segmentation".** Using `["*"]` ensures all segments are included. |
-| `schedule` | *Optional.* A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day. <br><br>If this string is not supplied, a system-generated schedule will be automatically generated. |
-| `state` | *Optional.* A string containing the schedule state. The two supported states are "active" and "inactive". By default, the state is set to "inactive". |
+| `properties.segments` | **Required when `type` equals "batch_segmentation".**  The IDs of the segment definitions you want to include as part of the schedule. |
+| `schedule` | **Required.** A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. The job schedule will determine the schedule's frequency. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day. |
+| `state` | *Optional.* A string containing the schedule state. The two supported states are `active` and `inactive`. By default, the state is set to `inactive`. |
 
 +++
 
@@ -192,15 +201,30 @@ A successful response returns HTTP status 200 with details of your newly created
     "state": "inactive",
     "type": "batch_segmentation",
     "schedule": "0 0 1 * * ?",
+    "frequency": "daily",
     "properties": {
         "segments": [
             "*"
         ]
     },
+    "owner": "user",
     "createEpoch": 1568267948,
     "updateEpoch": 1568267948
 }
 ```
+
+| Property | Description |
+| -------- | ----------- |
+| `id` | The ID of the newly created schedule. |
+| `imsOrgId` | The organization ID of the user who created the schedule. |
+| `sandbox` | An object that contains the sandbox information for the schedule. For more information about sandboxes, read the [sandboxes overview](/help/sandboxes/home.md). |
+| `sandbox.sandboxId` | The ID of the sandbox that contains your schedule. |
+| `sandbox.sandboxName` | The name of the sandbox that contains your schedule. |
+| `sandbox.type` | The sandbox's type. Possible values include `production` and `development`. |
+| `sandbox.default` | A boolean that shows whether or not the sandbox is the default sandbox. |
+| `name` | The name that you gave to the schedule. |
+| `state` | The state of the schedule. Possible values include `active` and `inactive`. If you didn't set this as part of the request body, the state will be set to `inactive`. |
+| `type` | |
 
 +++
 
@@ -252,24 +276,28 @@ A successful response returns HTTP status 200 with detailed information about th
     "state": "inactive",
     "type": "batch_segmentation",
     "schedule": "0 0 1 * * ?",
+    "frequency": "daily",
     "properties": {
         "segments": [
             "*"
         ]
     },
+    "owner": "user",
     "createEpoch": 1568267948,
     "updateEpoch": 1568267948
 }
 ```
 
-| Property | Description  |
-| -------- | ------------ |
+| Property | Description |
+| -------- | ----------- |
 | `name` | The name of the schedule as a string. |
-| `type` | The type of job as a string. The two supported types are `batch_segmentation` and `export`. |
-| `properties` | An object containing additional properties related to the schedule. |
-| `properties.segments` | Using `["*"]` ensures all segments are included. |
-| `schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day.|
 | `state` | A string containing the schedule state. The two supported states are `active` and `inactive`. By default, the state is set to `inactive`. |
+| `type` | The type of job as a string. The two supported types are `batch_segmentation` and `export`. |
+| `schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day. |
+| `frequency` | The frequency that the schedule runs. Possible values include `daily`, `weekly`, `monthly`, and `yearly`. |
+| `properties` | An object containing additional properties related to the schedule. |
+| `properties.segments` | The list of segment definition IDs that are part of the schedule. |
+| `owner` | The type of entity that owns the schedule. If a user created the schedule, this value is `user`. If the schedule was a system-created schedule, this value is `system`. |
 
 +++
 
