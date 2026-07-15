@@ -145,7 +145,7 @@ If you select the **[!UICONTROL Standard authentication]** type to connect to yo
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includemappedaudiencesonly"
 >title="Include Mapped Audiences Only"
->abstract="Toggle on to limit the segmentMembership object in the data export to only the audiences mapped in this dataflow. Toggle off to also include audiences that share the same merge policy as the mapped audiences, even if they are not mapped in this dataflow. View the documentation for more information."
+>abstract="Toggle this option on to export only the audiences mapped in this dataflow. Toggle it off to also export audiences that share the same merge policy as the mapped audiences, even if they are not mapped in this dataflow. View the documentation for more information."
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
@@ -156,7 +156,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL eventHubName]**: Provide a name for the stream to your [!DNL Azure Event Hubs] destination.
 * **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the audiences you are exporting. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
 * **[!UICONTROL Include Segment Timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the audiences were created and updated, as well as the UNIX timestamp when the audiences were mapped to the destination for activation. For an example of a data export with this option selected, see the [Exported data](#exported-data) section further below.
-* **[!UICONTROL Include Mapped Audiences Only]**: Toggle on to limit the `segmentMembership` object in the data export to only the audiences mapped in this dataflow. Toggle off to also include audiences that share the same [merge policy](/help/profile/merge-policies/overview.md) as the mapped audiences, even if they are not mapped in this dataflow. This option is turned on by default for new destination connections. Dataflows created before this option was introduced do not display this option and continue to export all audiences that share the same merge policy.
+* **[!UICONTROL Include Mapped Audiences Only]**: Toggle this option on to export only the audiences mapped in this dataflow. Toggle it off to also export audiences that share the same [merge policy](/help/profile/merge-policies/overview.md) as the mapped audiences, even if they are not mapped in this dataflow. This option is turned on by default for new destination connections. Dataflows created before this option was introduced do not display this option and continue to export all audiences that share the same merge policy.
 
 ### Enable alerts {#enable-alerts}
 
