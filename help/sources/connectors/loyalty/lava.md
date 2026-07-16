@@ -141,7 +141,7 @@ Download the [sample Ledger Events data file here.](../../assets/lava/lava_ledge
 
 ### Combined Events
 
-Use this [combined sample event data file](../../assets/lava/lava_transaction_sample.json) to set up a single dataflow that ingests all event types.
+Use this [combined sample event data file](../../assets/lava/lava_combined_event_sample.json) to set up a single dataflow that ingests all event types.
 
 ## Deployment considerations
 

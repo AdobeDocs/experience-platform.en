@@ -79,5 +79,5 @@ nudge: true
   - [Miscellaneous functions](pql/misc-functions.md)
 - {hide-from-toc} [Eligibility criteria update](./eligibility-criteria-update.md)
 - [Frequently asked questions](./faq.md)
-- [API reference](https://www.adobe.io/experience-platform-apis/references/segmentation/)
+- [API reference](https://developer.adobe.com/experience-platform-apis/references/segmentation)
 - [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -63,6 +63,7 @@ topic_v2:
 
 New features and updates to existing features in Adobe Experience Platform:
 
+- [Agent Orchestrator](#agent-orchestrator)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
@@ -70,6 +71,20 @@ New features and updates to existing features in Adobe Experience Platform:
 - [Run and Operate](#run-and-operate)
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
+
+## Agent Orchestrator {#agent-orchestrator}
+
+Use Agent Orchestrator to automate workflows and engage customers across multiple channels with AI-powered agents.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Validate your data in AI Assistant | Identify data quality issues faster and gain greater confidence in your Adobe Experience Platform datasets with data validation in AI Assistant. Powered by Agent Orchestrator, the capability analyzes datasets, identifies data quality issues, and provides actionable insights to help diagnose and resolve problems. For more information, read the guide on [validating your data in AI Assistant](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/data-validation). |
+
+{style="table-layout:auto"}
+
+For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 ## Destinations {#destinations}
 
@@ -86,6 +101,7 @@ New features and updates to existing features in Adobe Experience Platform:
 | [[!DNL Google Ad Manager 360]](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) now generally available | The [!DNL Google Ad Manager 360] destination (formerly in beta) is now generally available. |
 | [[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md) now generally available | The [!DNL Google Customer Match + Display & Video 360] destination (formerly in limited availability) is now generally available. |
 | [Audience-level reporting for additional destinations](../../dataflows/ui/monitor-destinations.md#audience-level-view) | Audience-level reporting is now available for several high-usage destinations: [Facebook](../../destinations/catalog/social/facebook.md), [TikTok](../../destinations/catalog/social/tiktok.md), [(Legacy) Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md), [Braze](../../destinations/catalog/mobile-engagement/braze.md), [LinkedIn Matched Audiences](../../destinations/catalog/social/linkedin.md), [(Companies) LinkedIn](../../destinations/catalog/social/linkedin-b2b.md), [Twitter Custom Audiences](../../destinations/catalog/social/twitter.md), [Pinterest Customer List](../../destinations/catalog/advertising/pinterest.md), [Salesforce CRM](../../destinations/catalog/crm/salesforce.md), [Mailchimp Tags](../../destinations/catalog/email-marketing/mailchimp-tags.md), [Gainsight PX](../../destinations/catalog/analytics/gainsight-px.md), and [Demandbase People](../../destinations/catalog/advertising/demandbase-people.md). Previously, these destinations only supported dataflow run-level reporting, making it harder to understand how many profiles were activated for each audience. For more information, read the [audience-level view](../../dataflows/ui/monitor-destinations.md#audience-level-view) documentation. <br> ![The monitoring dashboard showing the Customer Audiences tab with audience-level activation metrics including records activated, excluded, and failed per audience.](../2026/assets/june/audience-level-reporting.png){zoomable="yes"} |
+| [[!DNL Amazon Ads]](../../destinations/catalog/advertising/amazon-ads-v2.md) renamed from [!DNL Amazon Ads v2] | [!DNL Amazon Ads] (formerly [!DNL Amazon Ads v2]) is now the recommended destination for exporting data to [!DNL Amazon Ads]. The [(Legacy) Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md) destination card will be hidden at the end of July 2026. |
 
 {style="table-layout:auto"}
 
@@ -125,6 +141,7 @@ Real-Time Customer Profile gives you a complete view of each individual customer
 | Feature | Description |
 | ------- | ----------- |
 | Batch profile ingestion | Batch profile ingestion now enforces format validation on Experience Event `_id` values. Records containing restricted characters in the `_id` field are rejected at ingestion time in the Profile Store. This validation is applied at the record level - batches continue to process successfully, while only non-compliant records are dropped by Profile Store. Customers can correct invalid `_id` values and resend the affected records, ensuring no permanent data loss. See the [XDM ExperienceEvent class documentation](/help/xdm/classes/experienceevent.md) for more details. |
+| System job API updates | The system jobs API response format has been updated. With this update, field names, date formats, and response structure may differ from previous versions, with some fields added and others removed. Review the updated response schema before integrating or updating existing integrations. For more information, read the [system job API guide](/help/profile/api/profile-system-jobs.md). |
 
 ## Run and Operate {#run-and-operate}
 
@@ -169,7 +186,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | --- | --- |
 | Automatic dataflow disabling for failed sources dataflows | Sources dataflows that fail continuously for 30 days are automatically disabled. When a dataflow is disabled, review the failure reason in Monitoring, apply the necessary updates, and re-enable the dataflow. Common failure reasons include credentials, permissions, or schema and mapping configuration changes. |
 | HMAC-based authentication support for [!DNL Shopify Streaming] | HMAC-based authentication is now supported for the [!DNL Shopify Streaming] source connector, available in both the UI and API. See the [[!DNL Shopify Streaming] overview](../../sources/connectors/ecommerce/shopify-streaming.md) for key rotation behavior and setup instructions. |
-| Improved source dataflow inventory management | The Sources dataflow inventory has been modernized with advanced search and filtering, support for tags and folders, resizable columns, and more contextual actions to help users organize and manage dataflows more efficiently. Read the [documentation](../../sources/tutorials/ui/filter.md) for more information. |
+| Improved source dataflow inventory management | The Sources dataflow inventory has been modernized with advanced search and filtering, support for tags and folders, resizable columns, and more contextual actions to help users organize and manage dataflows more efficiently. Read the [documentation](../../sources/tutorials/ui/manage.md) for more information. |
 
 {style="table-layout:auto"}
 

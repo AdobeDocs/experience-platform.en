@@ -19,4 +19,4 @@ topic_v2:
 
 Built on top of Adobe Experience Platform, [!DNL Adobe Real-Time Customer Data Platform] is able to make use of the full Segment Builder capabilities that are a part of [!DNL Experience Platform]. Within the Segment Builder's user interface, you can create new audiences, access existing audiences, and modify existing audiences. 
 
-For a more detailed guide on the Segment Builder, read the [Segment Builder user guide](../../segmentation/ui/segment-builder.md).
+For a more detailed guide on Segment Builder, read the [Segment Builder user guide](../../segmentation/ui/segment-builder.md).

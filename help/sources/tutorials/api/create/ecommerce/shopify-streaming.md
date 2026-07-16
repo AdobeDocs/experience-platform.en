@@ -1,7 +1,6 @@
 ---
 title: Create A Streaming Source Connection and Dataflow For Shopify Data Using The Flow Service API
 description: Learn how to create a streaming source connection and dataflow for Shopify data using the Flow Service API.
-badge: Beta
 exl-id: 74660e27-49c0-415f-bd85-15f9d853daee
 TQID: https://experienceleague.adobe.com/ZOHi9eHM3HxtkpiLfOnPOBbrzo4PBbYGB4liRKm0T8Y
 product_v2:
@@ -12,10 +11,6 @@ role_v2:
     internal-label: Developer
 ---
 # Create a streaming source connection and dataflow for [!DNL Shopify] data using the Flow Service API
-
->[!NOTE]
->
->The [!DNL Shopify Streaming] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Read this guide to learn how to stream data from the [[!DNL Shopify Streaming] source](../../../../connectors/ecommerce/shopify-streaming.md) to Adobe Experience Platform using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 

@@ -32,7 +32,7 @@ role: Developer
       - [ECID mapping migration guide](connectors/adobe-applications/marketo/migration.md)
   - Advertising {#advertising}
     - [Google Ads connector](connectors/advertising/ads.md)
-    - [Meta Ads connector](connectors/advertising/meta-ads.md)
+    - {hide-from-toc} [Meta Ads connector](connectors/advertising/meta-ads.md)
     - {hide-from-toc} [Pinterest Ads](connectors/advertising/pinterest-ads.md)
   - Analytics {#analytics}
     - [Mixpanel connector](connectors/analytics/mixpanel.md)
@@ -250,7 +250,7 @@ role: Developer
       - [Marketo Custom Activities](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
     - Advertising {#advertising}
       - [Google Ads](tutorials/ui/create/advertising/ads.md)
-      - [Meta Ads](tutorials/ui/create/advertising/meta-ads.md)
+      - {hide-from-toc} [Meta Ads](tutorials/ui/create/advertising/meta-ads.md)
       - {hide-from-toc} [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
@@ -360,6 +360,7 @@ role: Developer
     - [Marketing automation connection dataflow](tutorials/ui/dataflow/marketing-automation.md)
     - [Payment connection dataflow](tutorials/ui/dataflow/payments.md)
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
+  - [Manage dataflows in the UI](tutorials/ui/manage.md)
   - [Create a sources dataflow using templates in the UI](tutorials/ui/templates.md)
   - {hide-from-toc} [Filter sources objects](tutorials/ui/filter.md)
   - [Ingest encrypted data](tutorials/ui/encryped-ingestion.md)
@@ -409,5 +410,5 @@ role: Developer
 - [Flow run notifications](notifications.md)
 - [IP address allowlist](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)
-- [API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [API reference](https://developer.adobe.com/experience-platform-apis/references/flow-service)
 - [Experience Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

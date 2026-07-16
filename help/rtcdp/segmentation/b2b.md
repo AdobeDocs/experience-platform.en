@@ -55,7 +55,7 @@ Once these requirements have been met you are able to combine these attributes f
 
 ## Getting started {#getting-started}
 
-Once the union schemas for the B2B classes have relationships established and have been used to ingest data, their attributes are made available in the left rail of the Segment Builder. 
+Once the union schemas for the B2B classes have relationships established and have been used to ingest data, their attributes are made available in the left rail of Segment Builder. 
 
 B2B classes and their attributes are appended with a `B2B` label within the Segmentation workspace to differentiate them from those available as standard within Real-Time Customer Data Platform. 
 
@@ -71,9 +71,9 @@ Select the appropriate schema from the available list and select the appropriate
 
 ![source-key example using the people relationship in the schema workspace](../assets/segmentation/b2b/source-key-schema-relationship-example.png)
 
-This relationship is reflected within the Segment Builder through the use of `Key` folders as shown in the image below.
+This relationship is reflected within Segment Builder through the use of `Key` folders as shown in the image below.
 
-![source-key example using the segment builder in the segmentation workspace](../assets/segmentation/b2b/source-key-segmentation-example.png)
+![source-key example using Segment Builder in the segmentation workspace](../assets/segmentation/b2b/source-key-segmentation-example.png)
 
 Please refer to the [schemas in Real-Time Customer Data Platform B2B Edition documentation](../schemas/b2b.md) for more information on the available B2B classes.
 
@@ -81,7 +81,7 @@ The use cases below provide information on which classes are used to establish r
 
 ## Examples of different segmentation use cases {#use-cases}
 
-The following use cases are available for segmentation with the B2B Edition. Each example provides a description of what the audience does and a description of the classes used to create them. The images provided highlight the file path in the [!UICONTROL Attributes] side rail which reflects the structure of the schema. The [!UICONTROL Segment properties] section on the right of the display contains a written breakdown of the audience's attributes. 
+The following use cases are available for segmentation with the B2B Edition. Each example provides a description of what the audience does and a description of the classes used to create them. The images provided highlight the file path in the [!UICONTROL Attributes] side rail which reflects the structure of the schema. The [!UICONTROL Audience properties] section on the right of the display contains a written breakdown of the audience's attributes. 
 
 ### Example 1: Find "decision-makers" for B2B opportunities {#find-decision-maker}
 

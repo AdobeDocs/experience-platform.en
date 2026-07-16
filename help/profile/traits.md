@@ -114,7 +114,7 @@ Once you've created your trait, you can use them within your audience definition
 
 ![The path to access Audience Builder is displayed and highlighted.](/help/profile/images/traits/create-audience.png)
 
-The Segment Builder appears. In Segment Builder, you can see all the published traits that belong to your sandbox.
+Segment Builder appears. In Segment Builder, you can see all the published traits that belong to your sandbox.
 
 ![The Traits tab is displayed within Audience Builder, showing all the Traits you can use during audience creation.](/help/profile/images/traits/traits-in-audience-builder.png)
 

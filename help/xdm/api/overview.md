@@ -32,7 +32,7 @@ These endpoints are outlined below. Please visit the individual endpoint guides 
 >
 >XDM uses JSON Schema formatting to describe and validate the structure of ingested customer experience data. Before working with the Schema Registry API, it is strongly recommended that you review the [official JSON Schema documentation](https://json-schema.org/) for a better understanding of this underlying technology.
 
-To view all available endpoints and CRUD operations, visit the [Schema Registry API reference](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+To view all available endpoints and CRUD operations, visit the [Schema Registry API reference](https://developer.adobe.com/experience-platform-apis/references/schema-registry).
 
 ## Schemas
 
@@ -109,3 +109,4 @@ See the [audit log endpoint guide](./audit-log.md) for more information on the u
 ## Next steps
 
 To begin making calls using the Schema Registry API, read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints.
+

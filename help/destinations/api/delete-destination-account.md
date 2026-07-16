@@ -25,7 +25,7 @@ topic_v2:
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from [!DNL Adobe Experience Platform]. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
-Before activating data, you need to connect to the destination by first setting up a destination account. This tutorial covers the steps to delete destination accounts that are not needed anymore by using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Before activating data, you need to connect to the destination by first setting up a destination account. This tutorial covers the steps to delete destination accounts that are not needed anymore by using the [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers {#gather-values-for-required-headers}
 
-To make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+To make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](/help/landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -197,3 +197,4 @@ The API endpoints in this tutorial follow the general Experience Platform API er
 ## Next steps {#next-steps}
 
 You have successfully used the [!DNL Flow Service] API to delete existing destination accounts. For more information on using destinations, see the [destinations overview](/help/destinations/home.md).
+

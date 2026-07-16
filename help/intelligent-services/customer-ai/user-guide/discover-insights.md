@@ -162,35 +162,35 @@ Hovering over any of the top influential factors further breaks down the data. Y
 
 ![Drilldown visualization showing a detailed breakdown of influential factors for a selected propensity bucket.](../images/insights/drilldown.png)
 
-Additionally, using drilldowns, you are able to compare a distribution factor if it occurs in two or more propensity buckets and create more specific segments with these values. The following example illustrates the first use case:
+Additionally, using drilldowns, you are able to compare a distribution factor if it occurs in two or more propensity buckets and create more specific audiences with these values. The following example illustrates the first use case:
 
 ![Comparison of distribution factors across propensity buckets, highlighting differences in influential factors.](../images/insights/drilldown-compare.png)
 
 You can see that profiles with low propensity to convert are less likely to have made a recent visit to the adobe.com webpages. The "Days since last webVisit" factor has only 8% coverage compared to 26% in medium propensity profiles. Using these numbers, you can compare the distribution within each bucket for the factor. This information can be used to infer that the recency in webvisit is not as influential in the low propensity bucket, as it is in medium propensity bucket.
 
-### Create a segment
+### Create an audience
 
-Selecting the **[!UICONTROL Create Segment]** button in any of the buckets for low, medium, and high propensity redirects you to the segment builder.
-
->[!NOTE]
->
->The **[!UICONTROL Create Segment]** button is only available if Real-Time Customer Profile is enabled for the dataset. For more information on how to enable Real-Time Customer Profile, visit the [Real-Time Customer Profile overview](../../../rtcdp/overview.md).
-
-![Button to create a segment from influential factors in Customer AI insights.](../images/insights/influential-factors-create-segment.png)
-
-![Button to create a segment from influential factors in Customer AI insights.](../images/insights/create-segment.png)
-
-The segment builder is used to define a segment. When selecting **[!UICONTROL Create Segment]** from the Insights page, Customer AI automatically adds the selected buckets information to the segment. To finish creating your segment, simply fill in the **Name** and **Description** containers located in the right rail of the segment builder user interface. After you have given the segment a name and description, select **[!UICONTROL Save]** in the top-right.
+Selecting the **[!UICONTROL Create audience]** button in any of the buckets for low, medium, and high propensity redirects you to Segment Builder.
 
 >[!NOTE]
 >
->Since the propensity scores are written to the individual profile, they are available in the Segment builder like any other profile attributes. When you navigate to the segment builder to create new segments you can see all the various propensity scores under your namespace Customer AI.
+>The **[!UICONTROL Create audience]** button is only available if Real-Time Customer Profile is enabled for the dataset. For more information on how to enable Real-Time Customer Profile, visit the [Real-Time Customer Profile overview](../../../rtcdp/overview.md).
 
-![Segment saving interface showing fields to input segment name and description before saving.](../images/insights/segment-saving.png)
+![Button to create an audience from influential factors in Customer AI insights.](../images/insights/influential-factors-create-segment.png)
 
-To view your new segment in the Experience Platform UI, select **[!UICONTROL Segments]** in the left navigation. The **[!UICONTROL Browse]** page appears and displays all available segments.
+![Button to create an audience from influential factors in Customer AI insights.](../images/insights/create-segment.png)
 
-![Segments dashboard displaying a list of all available segments in the Experience Platform UI.](../images/insights/Segments-dashboard.png)
+Segment Builder is used to create an audience. When selecting **[!UICONTROL Create audience]** from the Insights page, Customer AI automatically adds the selected buckets information to the audience. To finish creating your audience, simply fill in the **Name** and **Description** containers located in the right rail of the Segment Builder user interface. After you have given the audience a name and description, select **[!UICONTROL Save]** in the top-right.
+
+>[!NOTE]
+>
+>Since the propensity scores are written to the individual profile, they are available in Segment Builder like any other profile attributes. When you navigate to Segment Builder to create new audiences you can see all the various propensity scores under your namespace Customer AI.
+
+![Audience saving interface showing fields to input audience name and description before saving.](../images/insights/segment-saving.png)
+
+To view your new audience in the Experience Platform UI, select **[!UICONTROL Audiences]** in the left navigation. The **[!UICONTROL Browse]** page appears and displays all available audiences.
+
+![Audiences dashboard displaying a list of all available audiences in the Experience Platform UI.](../images/insights/Segments-dashboard.png)
 
 ## Historical performance {#historical-performance}
 

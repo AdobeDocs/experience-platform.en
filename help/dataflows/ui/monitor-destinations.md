@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Monitor dataflows for destinations in the UI
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
+nudge: true
 TQID: https://experienceleague.adobe.com/mPpX2-qdMt0QCJa3ZXmia9z4A14EcIGGuWdApdoTC5U
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
@@ -336,19 +337,13 @@ For example, you are activating an audience called "Loyalty Members in Californi
 >
 >   - [[!DNL Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md)
 >   - [[!DNL Adobe Target]](../../destinations/catalog/personalization/adobe-target-connection.md)
->   - [[!DNL Bombora]](../../destinations/catalog/advertising/bombora.md)
 >   - [[!DNL Custom Personalization]](../../destinations/catalog/personalization/custom-personalization.md)
->   - [[!DNL Demandbase]](../../destinations/catalog/advertising/demandbase.md)
 >   - [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md)
 >   - [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/connections/destinations){target="_blank"}
 >   - [[!DNL Google Ad Manager]](../../destinations/catalog/advertising/google-ad-manager.md)
 >   - [[!DNL Google Ads]](../../destinations/catalog/advertising/google-ads-destination.md)
 >   - [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md)
 >   - [[!DNL Google DV360]](../../destinations/catalog/advertising/google-dv360.md)
->   - [[!DNL LINE]](../../destinations/catalog/mobile-engagement/line.md)
->   - [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
->   - [[!DNL SendGrid]](../../destinations/catalog/email-marketing/sendgrid.md)
->   - [[!DNL Snap Inc]](../../destinations/catalog/advertising/snap-inc.md)
 >
 >- For batch destinations, audience-level metrics are currently recorded for successful dataflow runs only. They are not recorded for failed dataflow runs and excluded records. For dataflow runs to streaming destinations, metrics are captured and displayed for activated and excluded records.
 
