@@ -284,7 +284,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
-|June 2026| Functionality and documentation update|<ul><li> Added support for one-time delivery cadence.</li><li> Increased maximum file size to 100 million rows (from 10 million, previously).|
+|July 2026| Functionality and documentation update|<ul><li> Added support for one-time delivery cadence.</li><li> Increased maximum file size to 100 million rows (from 10 million, previously).|
 |February 2025| Functionality and documentation update|<ul><li> Added support for weekly and monthly delivery cadences.|
 |March 2024|Functionality and documentation update|<ul><li>Added support for deliveries to Europe and Australia [!DNL LiveRamp] [!DNL SFTP] instances.</li><li>Updated documentation to describe specific configurations for newly supported regions.</li><li>Increased maximum file size to 10 million rows (from 5 million, previously).</li><li>Updated documentation to reflect increased file sizes.</li></ul>|
 |July 2023|Initial release|Initial destination release and documentation published.|
