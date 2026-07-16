@@ -204,7 +204,7 @@ A successful response returns HTTP status 200 with details of your newly created
     "frequency": "daily",
     "properties": {
         "segments": [
-            "*"
+            "sampleSegmentDefinitionId"
         ]
     },
     "owner": "user",
@@ -224,7 +224,13 @@ A successful response returns HTTP status 200 with details of your newly created
 | `sandbox.default` | A boolean that shows whether or not the sandbox is the default sandbox. |
 | `name` | The name that you gave to the schedule. |
 | `state` | The state of the schedule. Possible values include `active` and `inactive`. If you didn't set this as part of the request body, the state will be set to `inactive`. |
-| `type` | |
+| `type` | The type of job for the schedule. Possible values include `batch_segmentation` and `export`. |
+| `schedule` | The cron expression that represents when your schedule runs. For more information about creating cron expressions, read the the [cron expression format section](#appendix). |
+| `frequency` | The frequency in which the schedule runs. This is directly dependent on the schedule's cron expression. Possible values include `daily`, `weekly`, `monthly`, and `yearly`. |
+| `properties` | An object that contains the segment definition IDs for the schedule, if the schedule is of `batch_segmentation` type. |
+| `owner` | The type of entity that owns the schedule. Since you created the schedule, this value is `user`. |
+| `createEpoch` | The epoch creation time for the schedule in seconds. |
+| `updateEpoch` | The epoch time the schedule was last updated in seconds. |
 
 +++
 
@@ -279,7 +285,7 @@ A successful response returns HTTP status 200 with detailed information about th
     "frequency": "daily",
     "properties": {
         "segments": [
-            "*"
+            "sampleSegmentDefinitionId"
         ]
     },
     "owner": "user",
@@ -290,14 +296,23 @@ A successful response returns HTTP status 200 with detailed information about th
 
 | Property | Description |
 | -------- | ----------- |
+| `id` | The ID of the schedule. |
+| `imsOrgId` | The ID of the organization the schedule belongs to. |
+| `sandbox` | An object that contains the sandbox information for the schedule. For more information about sandboxes, read the [sandboxes overview](/help/sandboxes/home.md). |
+| `sandbox.sandboxId` | The ID of the sandbox that contains your schedule. |
+| `sandbox.sandboxName` | The name of the sandbox that contains your schedule. |
+| `sandbox.type` | The sandbox's type. Possible values include `production` and `development`. |
+| `sandbox.default` | A boolean that shows whether or not the sandbox is the default sandbox. |
 | `name` | The name of the schedule as a string. |
 | `state` | A string containing the schedule state. The two supported states are `active` and `inactive`. By default, the state is set to `inactive`. |
 | `type` | The type of job as a string. The two supported types are `batch_segmentation` and `export`. |
 | `schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. For more information about cron schedules, please read the appendix on the [cron expression format](#appendix). In this example, "`0 0 1 * *`" means that this schedule will run at 1AM every day. |
-| `frequency` | The frequency that the schedule runs. Possible values include `daily`, `weekly`, `monthly`, and `yearly`. |
+| `frequency` | The frequency that the schedule runs. This value is directly dependent on the schedule's cron expression. Possible values include `daily`, `weekly`, `monthly`, and `yearly`. |
 | `properties` | An object containing additional properties related to the schedule. |
 | `properties.segments` | The list of segment definition IDs that are part of the schedule. |
 | `owner` | The type of entity that owns the schedule. If a user created the schedule, this value is `user`. If the schedule was a system-created schedule, this value is `system`. |
+| `createEpoch` | The epoch creation time for the schedule in seconds. |
+| `updateEpoch` | The epoch time the schedule was last updated in seconds. |
 
 +++
 
@@ -422,6 +437,73 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
 **Response**
 
 A successful response returns HTTP status 204 (No Content).
+
+## Add audiences to schedule
+
+You can add audiences to a specific schedule by making a POST request to the `/config/schedules/add-audiences` endpoint.
+
+**API format**
+
+```http
+POST /config/schedules/add-audiences
+```
+
+**Request**
+
++++ A sample request to add audiences to the schedule.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/config/schedules/
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '
+ {
+    "id": "4e538382-dbd8-449e-988a-4ac639ebe72b",
+    "segments": [
+        "sampleSegmentDefinitionId"
+    ]
+ }
+ '
+```
+
++++
+
+| Property | Description |
+| -------- | ----------- |
+| `id` | The ID of the schedule you want to add the audiences to. |
+| `segments` | An array of segment definition IDs you want to add to the designated schedule. |
+
+**Response**
+
+A successful response returns HTTP status 200 with detailed information of the operation.
+
++++ A sample response when adding audiences to the schedule.
+
+```json
+{
+    "added:" [
+        "sampleSegmentDefinitionId"
+    ],
+    "existing": [],
+    "invalid": [],
+    "segmentCount": {
+        "previous": 0,
+        "current": 1,
+        "diff": 1
+    }
+}
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `added` | An array containing the IDs of the segment definitions that were added to the schedule. |
+| `existing` | An array containing the IDs of the segment definitions that already were on the schedule. |
+| `invalid` | An array containing invalid segment definition IDs that were part of the request body. |
+| `segmentCount` | An object that contains the number of segment definitions that were previously part of the schedule (`previous`), the number of segment definitions that are now part of the schedule (`current`), and the difference between those two values (`diff`). |
+
++++
 
 ## Next steps
 
