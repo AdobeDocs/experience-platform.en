@@ -652,3 +652,17 @@ Segment Builder provides a rich workflow allowing you to isolate marketable audi
 - Enable specified segment definitions for streaming segmentation.
   
 To learn more about [!DNL Segmentation Service], please continue reading the documentation and supplement your learning by watching the related videos. To learn more about the other parts of the [!DNL Segmentation Service] UI, please read the [[!DNL Segmentation Service] user guide](./overview.md).
+
+## Appendix {#appendix}
+
+The following appendix lists additional information about Segment Builder.
+
+### Audience dependency not supported error {#error}
+
+If you see the `100128-400: Audience dependency not currently supported. One or more of the audience filters you've added is not currently supported. Please contact Adobe team for details.` error appear when saving your audience, follow the subsequent instructions:
+
+When this error occurs, you'll have two audiences: Audience 1 (A1), which contains Audience 2 (A2).
+
+You'll first need to revert the changes you made in A2. Once you've reverted the changes made in A2, open A1 and remove the audience dependency on A2.
+
+Once the audience dependency has been removed, re-open A2 and add the initial changes back to that audience. Now that those changes have been re-added, you can add the dependency on A2 back to A1.

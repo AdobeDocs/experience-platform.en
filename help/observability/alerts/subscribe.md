@@ -25,7 +25,7 @@ This document provides steps on how you can subscribe to Adobe I/O event notific
 
 ## Getting started
 
-This document requires a working understanding of webhooks and how to connect a webhook from one application to another. Refer to the [[!DNL I/O Events] documentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) for an introduction to webhooks.
+This document requires a working understanding of webhooks and how to connect a webhook from one application to another. Refer to the [[!DNL I/O Events] documentation](https://developer.adobe.com/events/docs/guides/runtime-webhooks/) for an introduction to webhooks.
 
 ## Create a webhook
 
@@ -93,7 +93,7 @@ In the next screen, provide a name and description for the event registration in
 
 ![](../images/notifications/registration-details.png)
 
-Further down on the same screen under the [!UICONTROL How to receive events] section, you can optionally configure how to receive events. **[!UICONTROL Webhook]** allows you to provide a custom webhook address to receive events, whereas **[!UICONTROL Runtime action]** allows you to do the same using [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
+Further down on the same screen under the [!UICONTROL How to receive events] section, you can optionally configure how to receive events. **[!UICONTROL Webhook]** allows you to provide a custom webhook address to receive events, whereas **[!UICONTROL Runtime action]** allows you to do the same using [Adobe I/O Runtime](https://developer.adobe.com/app-builder/docs/intro_and_overview/).
 
 For this tutorial, select **[!UICONTROL Webhook]** and provide the URL of the webhook you created earlier. Once you are finished, select **[!UICONTROL Save configured events]** to complete the event registration.
 
@@ -111,3 +111,5 @@ By following this tutorial, you have registered a webhook to receive [!DNL I/O E
 * [[!DNL Flow Service] (sources) notifications](../../sources/notifications.md)
 
 See the [[!DNL Observability Insights] overview](../home.md) for more information on how you can monitor your activities on [!DNL Experience Platform] and [!DNL Privacy Service].
+
+

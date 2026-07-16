@@ -54,7 +54,7 @@ topic_v2:
 Each tag property in Adobe Experience Platform requires that the following extensions are installed and configured from the Extensions screen:
 
 * Adobe Analytics
-* Experience Cloud Visitor ID Service
+* Experience Cloud ID Service
 * Core extension
 
 Use the ["Embed a player using an \<iframe\> tag"](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) code snippet from the Google developer docs in the HTML of each Web page where a video player is to render.
