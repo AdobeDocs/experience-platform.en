@@ -238,7 +238,6 @@ Exported CSV files contain profiles with the selected attributes and the corresp
 The profiles included in the exported files can match one the following audience qualification statuses:
 
 * `Active`: The profile is currently qualified for the audience.
-* `Expired`: The profile is no longer qualified for the audience, but has qualified in the past.
 * `""`(empty string): The profile never qualfied for the audience.
 
 For instance, an exported CSV file with one `email` attribute, two audiences originating from the Experience Platform [Segmentation Service](../../../segmentation/home.md), and one [imported](../../../segmentation/ui/audience-portal.md#import-audience) external audience, could look like this:
@@ -249,7 +248,7 @@ abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
 abc116@testemailabc.com,active,,
-abc107@testemailabc.com,active,expired,active
+abc107@testemailabc.com,active,,active
 abc101@testemailabc.com,active,active,
 ```
 
