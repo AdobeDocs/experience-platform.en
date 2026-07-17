@@ -262,7 +262,7 @@ Once you've selected the bubble, you can choose if the event should be or should
 | Count function | Description |
 | -------------- | ----------- |
 | At least | There must be **at least** the number of events specified. |
-| At most | There must be **at most** the number of events specified. | 
+| At most | There must be **at most** the number of events specified. |
 | Exactly | There must be **exactly** the number of events specified. |
 | Between | There must be **between** the two number of events specified. |
 
@@ -413,7 +413,7 @@ A selection of profiles is displayed. This includes information such as ID, firs
 | First name | The first name of the profile's user. |
 | Last name | The last name of the profile's user. |
 | Audience membership | The number of audiences the profile belongs to. |
-| Full name | The full name of the profile's user. | 
+| Full name | The full name of the profile's user. |
 
 ## Audience validation {#audience-validation}
 
