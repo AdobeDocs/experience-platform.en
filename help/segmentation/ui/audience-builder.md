@@ -1,6 +1,8 @@
 ---
 title: Audience Builder UI Guide
-description: Learn how to use the 
+description: Learn how to use the Audience Builder so you can create audiences from your Profile data elements.
+hide: true
+hidefromtoc: true
 ---
 
 # Audience Builder UI Guide
@@ -11,7 +13,7 @@ description: Learn how to use the
 
 Audience Builder provides a rich workspace that lets you interact with Profile data elements. The workspace provides intuitive controls for building and editing your audience's rules.
 
-IMAGE
+![The Audience Builder UI is displayed.](/help/segmentation/images/ui/audience-builder/audience-builder.png)
 
 The Audience Builder UI is comprised of two sections: the **[!UICONTROL Audience Properties]** panel and the Audience Builder canvas.
 
@@ -19,7 +21,7 @@ The Audience Builder UI is comprised of two sections: the **[!UICONTROL Audience
 
 The **[!UICONTROL Audience Properties]** panel on the left-hand side of the workspace shows you estimates information for your audience and lets you provide details about your audience, including name, description, and evaluation method.
 
-IMAGE
+![The Audience Properties panel is highlighted within the Audience Builder.](/help/segmentation/images/ui/audience-builder/audience-properties.png)
 
 ### Estimates {#estimates}
 
@@ -35,7 +37,7 @@ When you make changes to the audience's rules, you can select the **[!UICONTROL 
 
 Selecting the information bubble gives the date and time the last sample job was run.
 
-IMAGE
+![The Estimates section within the Audience Properties panel is highlighted.](/help/segmentation/images/ui/audience-builder/estimates.png)
 
 >[!NOTE]
 >
@@ -47,27 +49,27 @@ IMAGE
 
 ### Properties {#properties}
 
-You can also specify important information about your audience within the **Audience properties** panel. This includes your audience's name, description, access labels, tags, and evaluation type.
+You can also specify important information about your audience within the **[!UICONTROL Audience Properties]** panel. This includes your audience's name, description, access labels, tags, and evaluation type.
 
-IMAGE
+![The audience information section is highlighted within the entire properties panel.](/help/segmentation/images/ui/audience-builder/properties.png)
 
 To apply access labels to your audience, select **[!UICONTROL Apply access labels]**. 
 
-IMAGE
+![The Apply access labels button is highlighted.](/help/segmentation/images/ui/audience-builder/select-apply-access-labels.png)
 
 The **[!UICONTROL Apply access and data governance labels]** popover appears. This popover displays a list of available labels for your audience. For more detailed information about applying access and data governance labels, read the [permissions guide](/help/access-control/abac/ui/permissions.md). To learn more about the available access and data governance labels, read the [data usage labels glossary](/help/data-governance/labels/reference.md).
 
-IMAGE
+![The Apply access and data governance labels popover is displayed.](/help/segmentation/images/ui/audience-builder/apply-access-labels.png)
 
 To apply tags to your audience, select the dropdown. A list of the available tags for your audience appears. You can select as many tags as you want to apply to the audience.
 
-IMAGE
+![The tags dropdown is highlighted.](/help/segmentation/images/ui/audience-builder/select-tags.png)
 
 To choose your evaluation method, select the the browse icon ![folder icon with a magnifying glass](/help/images/icons/folder-search.png). 
 
 The [!UICONTROL Evaluation method eligibility] popover appears. This popover displays the available evaluation methods, which are batch, streaming, and edge. The popover shows which evaluation methods are eligible and ineligible.
 
-IMAGE
+![The Evaluation method eligibility popover is displayed.](/help/segmentation/images/ui/audience-builder/evaluation-method-eligibility.png)
 
 >[!NOTE]
 >
@@ -79,7 +81,7 @@ Once you've selected an evaluation method for your audience, you can still chang
 
 If you select an invalid evaluation method, you will be prompted to either change your audience's rules or change the evaluation method.
 
-IMAGE
+![An invalid evaluation method is displayed.](/help/segmentation/images/ui/audience-builder/invalid-eligibility.png)
 
 More information about the different audience evaluation methods can be found in the [segmentation overview](/help/segmentation/home.md#evaluate-audiences).
 
@@ -95,99 +97,103 @@ The Audience Builder canvas provides three different types of views: **[!UICONTR
 
 In the rule view canvas, you can add either **attributes** or **events** to the rule building canvas. Attributes let you add either Profile attributes that belong to the XDM Individual Profile class or other previously created audiences, while events let you add actions or events that take place using XDM ExperienceEvent data elements.
 
-IMAGE
+![The Rule view is highlighted within Audience Builder.](/help/segmentation/images/ui/audience-builder/rule-view.png)
 
 Within the rule view, you can use the undo and redo buttons to revert changes you didn't want to make or re-apply changes you wanted to make.
 
-IMAGE
+![The Undo and Redo buttons are highlighted.](/help/segmentation/images/ui/audience-builder/undo-redo.png)
 
 You can also adjust the settings of the visible fields by selecting ![the settings icon](/help/images/icons/settings.png).
 
-For **[!UICONTROL Available fields]**, you can either show only the fields that contain data or the full XDM schema.
+The **[!UICONTROL Show full XDM schema]** setting determines if you see **all** fields, or only fields that contain data.
+
+The **[!UICONTROL Show relation selectors]** setting determines if you use the standard relations for your organization or if the relation selectors are shown.
+
+The **[!UICONTROL Use AI search suggestions]** setting determines if the AI-enabled search will be used for searching fields.
 
 For **[!UICONTROL Data sources]**, you can filter to show attributes that come from the specified ingestion types. Supported values include **[!UICONTROL Show batch data]**, **[!UICONTROL Show streaming/edge data]**, and **[!UICONTROL Show fields with no ingested data]**.
 
 For **[!UICONTROL Merge policy]**, you can choose which merge policy the fields belong to.
 
+![The available settings for Audience Builder are highlighted.](/help/segmentation/images/ui/audience-builder/settings.png)
+
 ### Attributes {#attributes}
 
 The **[!UICONTROL Attributes]** section lets you browse [!DNL Profile] attributes belonging to the [!DNL XDM Individual Profile] class. 
 
-IMAGE
+![The Attributes section is highlighted within the rule view for Audience Builder.](/help/segmentation/images/ui/audience-builder/attributes.png)
 
 You can select **[!UICONTROL Add field]** to add an attribute or audience to the rule building canvas or you can select **[!UICONTROL Add group]** to add a container to the canvas. More information about groups can be found in the [Groups section](#groups).
 
-IMAGE
+![The Add field and Add group buttons are highlighted.](/help/segmentation/images/ui/audience-builder/add-attributes.png)
 
 If you select **[!UICONTROL Add field]**, the Discovery Panel appears. This panel lets you search for the field you want to add. Type in the name of the field you're looking for and press enter.
 
-IMAGE
+![The Discovery Panel is displayed, showing what happens when you select Add field.](/help/segmentation/images/ui/audience-builder/view-browse-fields.png)
 
-If you have access to AI Assistant, the Discovery Panel will intelligently display suggestions based on the searched field.
+If you have **[!UICONTROL Use AI search suggestions]** enabled, the Discovery Panel will intelligently display AI-powered suggestions based on the searched field.
 
-IMAGE
+![The Discovery Panel search if the AI search suggestions are enabled.](/help/segmentation/images/ui/audience-builder/smart-discovery-panel.png)
 
-If you do not have access to AI Assistant, the Discovery Panel will display fields based off of the searched criterion.
+If you do not have **[!UICONTROL Use AI search suggestions]** enabled, the Discovery Panel will display fields based off of the searched criterion.
 
-IMAGE
+![The Discovery Panel search if the AI search suggestions are disabled.](/help/segmentation/images/ui/audience-builder/non-smart-discovery-panel.png)
 
-You can select ![the star icon]() to add the searched field to your list of favorites, which lets you add that field to your audience more quickly for future references.
+You can select ![the star icon](/help/images/icons/star.png) to add the searched field to your list of favorites, which lets you add that field to your audience more quickly for future references.
 
-IMAGE
+![The Favorited fields section is displayed.](/help/segmentation/images/ui/audience-builder/favorited-fields.png)
 
-You can select ![the filter icon]() to adjust the settings for the displayed fields.
+You can select ![the filter icon](/help/images/icons/filter-unfilled.png) to adjust the settings for the displayed fields.
 
 For the **[!UICONTROL Field settings]**, you can either show only the fields that contain data or the full XDM schema.
 
 For the **[!UICONTROL Field types]**, you can show **[!UICONTROL Attributes]** or **[!UICONTROL Audiences]**.
 
-IMAGE
+![The filter settings for the fields are displayed.](/help/segmentation/images/ui/audience-builder/filter-settings.png){width="100" zoomable="yes"}
 
 Alternatively, you can view all the available fields for your audience by selecting **[!UICONTROL View All]** in the **[!UICONTROL Browse fields]** area.
 
-IMAGE
+![The View all button is highlighted within the Discover Panel.](/help/segmentation/images/ui/audience-builder/select-view-all-browse-fields.png)
 
 In the **[!UICONTROL Browse fields]** area, you can select between **[!UICONTROL Attributes]** or **[!UICONTROL Audiences]**.
 
-IMAGE
+![The Browse fields section, with the choice between attributes and audiences, is displayed.](/help/segmentation/images/ui/audience-builder/view-browse-fields.png)
 
 >[!BEGINTABS]
 
 >[!TAB Attributes]
 
-If you select **Attributes**, a full list of the available XDM Individual Profile attributes appears. Additionally, you can see custom added attributes that belong to your sandbox.
+If you select **[!UICONTROL Attributes]**, a full list of the available XDM Individual Profile attributes appears. Additionally, you can see custom added attributes that belong to your sandbox.
 
-IMAGE
+![The attributes are displayed within the Browse Fields section.](/help/segmentation/images/ui/audience-builder/browse-fields-attributes.png)
 
 To add an attribute to the rule-building canvas, select the name of the attribute you want to add. You may need to navigate through the folder structure of the XDM schema in order to find the attribute.
 
-IMAGE
+After selecting the attribute, details of the attribute appear. This includes information such as the path of the attribute, sample values, description, and type. You can select [the star icon](/help/images/icons/star.png) to favorite the attribute or **[!UICONTROL Add field]** to add the attribute to your audience's rules.
+
+![The Add field button is highlighted and is shown along with details of the attribute.](/help/segmentation/images/ui/audience-builder/add-attribute-field.png)
 
 >[!NOTE]
 >
 >The samples values are only displayed if the field does **not** contain too many different values and if those field's values are commonly repeated. Additionally, this summary data is updated on a **daily** basis.
 
-After selecting the attribute, details of the attribute appear. This includes information such as the path of the attribute, sample values, description, and type. You can select [the star icon]() to favorite the attribute or **Add field** to add the attribute to your audience's rules.
-
-IMAGE
-
 >[!TAB Audiences]
 
-If you select **Audiences**, a full list of previously created audiences for your sandbox and merge policy appears. 
+If you select **[!UICONTROL Audiences]**, a full list of previously created audiences for your sandbox and merge policy appears. 
 
-IMAGE
+![The audiences are displayed within the Browse Fields section.](/help/segmentation/images/ui/audience-builder/browse-fields-audiences.png)
 
 To add an audience to the rule-building canvas, select the name of the audience you want to add.
 
-IMAGE
+After selecting the audience, details of the audience appear. This includes the name and description of the audience. You can select the [the star icon](/help/images/icons/star.png) to favorite the audience or **[!UICONTROL Add field]** to add the audience your audience's rules.
 
-After selecting the audience, details of the audience appear. This includes the name and description of the audience. You can select the [the star icon]() to favorite the audience or **Add field** to add the audience your audience's rules.
+![The Add field button is highlighted and is shown along with details of the audience.](/help/segmentation/images/ui/audience-builder/add-attribute-audience.png)
 
 >[!ENDTABS]
 
-After adding your attribute, you can select the ellipses icon (...) to change the **condition type** or **delete** the condition.
+After adding your attribute, you can select ![the ellipses icon](/help/images/icons/more.png) to change the **condition type** or **delete** the condition.
 
-IMAGE
+![The ellipses icon is highlighted, letting you view additional options for your attribute.](/help/segmentation/images/ui/audience-builder/attributes-view-more.png)
 
 +++ Attribute additional options
 
@@ -200,34 +206,30 @@ You can use the following condition types for your attributes:
 | Has any value | Checks to see if the attribute has any value. This is equivalent to seeing if the attribute "exists". |
 | Has no value | Checks to see if the attribute has no value. This is equivalent to seeing if the attribute "does not exist". |
 
-If you select **Compare to input**, you can choose one of the additional options:
+If you select **[!UICONTROL Compare to input]**, you can choose one of the additional options:
 
 - Allow multiple inputs
 - Case sensitive
 
-If you select **Allow multiple inputs**, the **Multiple Inputs** popover is displayed. On this popover, you can add the values to compare the attribute to.
+If you select **[!UICONTROL Allow multiple inputs]**, the **[!UICONTROL Multiple Inputs]** popover is displayed. On this popover, you can add the values to compare the attribute to.
 
-IMAGE
+![The Multiple Inputs popover is displayed.](/help/segmentation/images/ui/audience-builder/multiple-inputs.png)
 
-You can either add the values on a line-by-line basis in the **Values** box, or choose the values from the **Suggested values** section.
+You can either add the values on a line-by-line basis in the **[!UICONTROL Values]** box, or choose the values from the **[!UICONTROL Suggested values]** section.
 
-IMAGE
+The popover also provides the following available actions. If you select the ![undo icon](/help/images/icons/reset.png), the inputs revert to the initial state. If you select the ![move down icon](/help/images/icons/sort-down.png), the selected value moves down one line. If you select the ![upload file icon](/help/images/icons/upload.png), you can upload a CSV or TSV file that contain the values you want to compare against.
 
-The popover also provides the following available actions. If you select the ![undo icon](), the inputs revert to the initial state. If you select the ![move down icon](), the selected value moves down one line. If you select the ![upload file icon](), you can upload a CSV or TSV file that contain the values you want to compare against.
-
-IMAGE
-
-If you select **Case sensitive**, the attribute's value **must** match the exact casing of specified input value.
+If you select **[!UICONTROL Case sensitive]**, the attribute's value **must** match the exact casing of specified input value.
 
 +++
 
-You can add additional attributes to the audience by selecting **Add field**. If you add an additional attribute, you can choose if the audience requires **all** of the added attributes or if the audience requires **one** of the added attributes.
+You can add additional attributes to the audience by selecting **[!UICONTROL Add field]**. If you add an additional attribute, you can choose if the audience requires **all** of the added attributes or if the audience requires **one** of the added attributes.
 
-IMAGE
+![The section where you can adjust if all or one of the attributes needs to be part of the audience is highlighted.](/help/segmentation/images/ui/audience-builder/all-or-one.png)
 
-If you want to remove an attribute you've added, select the ![minus icon]().
+If you want to remove an attribute you've added, select ![the minus icon](/help/images/icons/remove-circle-unfilled.png).
 
-IMAGE
+![The remove attribute button is highlighted.](/help/segmentation/images/ui/audience-builder/remove-attribute.png)
 
 #### Computed attributes {#computed-attributes}
 
@@ -237,25 +239,23 @@ For more information on computed attributes, including how to create them, what 
 
 ### Events {#events}
 
-The **Events** section lets you add ExperienceEvents to your audience's rules. 
+The **[!UICONTROL Events]** section lets you add ExperienceEvents to your audience's rules. 
 
-Select **Add event** to choose from a list of ExperienceEvents that you can add to your audience.
+Select **[!UICONTROL Add event]** to choose from a list of ExperienceEvents that you can add to your audience.
 
-IMAGE
+![The Add event button is highlighted within the Events section of the Rule view.](/help/segmentation/images/ui/audience-builder/select-add-event.png)
 
 After adding an event to your canvas, you can add additional events to the timeline. These events can be added before, after, above, or below the already selected event.
 
-IMAGE
+![The section where you can choose where to add your next audience is highlighted.](/help/segmentation/images/ui/audience-builder/add-additional-event.png)
 
 If you add an event **before**, the event must take place **before** the initial event. If you add an event **after**, the event must take place **after** the initial event.
 
 You can add a time constraint at a canvas-level or event-level. Time constraints let you set specified temporal limitations for your events. For more information, read the [time constraints](#time-constraints) section.
 
-IMAGE
+You can edit settings related to the event by selecting the event, followed by the bubble that contains "Include" that appears. 
 
-You can edit settings related to the event by selecting the event, followed by the bubble that appears. 
-
-IMAGE
+![The section you can select to update your event settings is highlighted.](/help/segmentation/images/ui/audience-builder/edit-event-settings.png)
 
 Once you've selected the bubble, you can choose if the event should be or should not be included as well as modify the count function. Count functions are used to look for the specified event and count the number of times they're done. 
 
@@ -266,13 +266,11 @@ Once you've selected the bubble, you can choose if the event should be or should
 | Exactly | There must be **exactly** the number of events specified. |
 | Between | There must be **between** the two number of events specified. |
 
-IMAGE
+You can select ![the ellipses icon](/help/images/icons/more.png) for additional options for the event. Options include [**[!UICONTROL Add group]**](#groups), **[!UICONTROL Remove event type]**, **[!UICONTROL Aggregate]**, and [**[!UICONTROL Apply time rule]**](#time-constraints).
 
-You can select the ellipses icon for additional options for the event. Options include [**Add group**](#groups), **Remove event type**, **Aggregate**, and [**Apply time rule**](#time-constraints).
+If you select **[!UICONTROL Remove event type]**, you remove the event from the audience.
 
-If you select **Remove event type**, you remove the event from the audience.
-
-If you select **Aggregate**, you can add an aggregation function to the event. An aggregation is a calculation on a group of XDM attributes whose data type is a number (either a double or an integer). The four supported aggregation functions are count, sum, average, min, and max.
+If you select **[!UICONTROL Aggregate]**, you can add an aggregation function to the event. An aggregation is a calculation on a group of XDM attributes whose data type is a number (either a double or an integer). The four supported aggregation functions are count, sum, average, min, and max.
 
 | Aggregation function | Description |
 | -------------------- | ----------- |
@@ -290,20 +288,20 @@ When you add a group, it automatically appears as a child of the the first group
 
 By default, the group will **include** all the attributes, events, or audiences within the group. You can change this by selecting the dropdown at the top of the group.
 
-IMAGE
+![The include and exclude dropdown is highlighted.](/help/segmentation/images/ui/audience-builder/include-exclude.png)
 
 When you select the dropdowns on the top of the group, you are presented with the following options:
 
 | Option | Description |
 | ------ | ----------- |
-| **have** | The audience **must** contain the elements within the group. |
-| **do NOT have** | The audience **must not** contain the elements within the group. |
+| **include** | The audience **must** contain the elements within the group. |
+| **exclude** | The audience **must not** contain the elements within the group. |
 | **all of** | **All** of the elements must be accounted for within the group. |
 | **any of** | **At least one** of the elements must be accounted for within the group. |
 
-You can also select additional options for the group by selecting the ellipses icon. Available options include **Add group**, **Delete group**, and **Name group**.
+You can also select additional options for the group by selecting the ellipses icon. Available options include **[!UICONTROL Add group]**, **[!UICONTROL Delete group]**, and **[!UICONTROL Name group]**.
 
-If you select **Add group**, you add another group as a child of the currently selected group. If you select **Delete group**, the currently selected group will be removed. If you select **Name group**, you can give a name to the currently selected group.
+If you select **[!UICONTROL Add group]**, you add another group as a child of the currently selected group. If you select **[!UICONTROL Delete group]**, the currently selected group will be removed. If you select **[!UICONTROL Name group]**, you can give a name to the currently selected group.
 
 ### Time constraints {#time-constraints}
 
@@ -351,25 +349,25 @@ The list of available time constraints are as follows:
 
 #### Canvas-level constraint
 
-You can add a canvas-level constraint by selecting the clock icon that appears above the timeline of events.
+You can add a canvas-level constraint by selecting ![the clock icon](/help/images/icons/clock.png) that appears above the timeline of events.
 
-IMAGE
+![The clock icon you select to change the canvas level constraints is highlighted.](/help/segmentation/images/ui/audience-builder/canvas-level-constraint.png)
 
 When you apply a time constraint on the canvas-level, this applies the time constraint to **all** events in the audience.
 
 #### Event-level constraint
 
-To apply an event-level constraint, select the event you want to apply the time constraint on, followed by the ellipses icon, and **[!UICONTROL Apply time rule]**. This lets you select a time constraint within the **[!UICONTROL Event Rules]** container.
+To apply an event-level constraint, select the event you want to apply the time constraint on, followed by ![the ellipses icon](/help/images/icons/more.png), and **[!UICONTROL Apply time rule]**. This lets you select a time constraint within the **[!UICONTROL Event Rules]** container.
 
-IMAGE
+![The section where you add the event level constraints is highlighted.](/help/segmentation/images/ui/audience-builder/event-level-constraint.png)
 
 When you apply a time constraint on the event-level, this applies the time constraint on the **specified** event in the audience.
 
 #### Between events constraint
 
-To apply a time constraint between events, select the clock icon between the two events you want to apply the time constraint on.
+To apply a time constraint between events, select ![the clock icon](/help/images/icons/clock.png) between the two events you want to apply the time constraint on.
 
-IMAGE
+![The clock icon representing the between event time constraints is highlighted.](/help/segmentation/images/ui/audience-builder/between-event-constraint.png)
 
 When you apply a time constraint between the event, this applies the time constraint to the time **between** the events. 
 
@@ -393,15 +391,21 @@ The list of available time constraints for this operation differs from the main 
 
 +++
 
+## Code view {#code-view}
+
+Code view displays a code-based version of the audience created in Audience Builder. Once you've created your rule within the rule builder canvas, select **[!UICONTROL Code view]** to see your audience as PQL.
+
+Code view provides a button that allows you to copy the value of the audience to use in API calls. To get the latest version of the audience, make sure you have saved your latest changes to the audience.
+
+![The Code view within Audience Builder is displayed.](/help/segmentation/images/ui/audience-builder/code-view.png)
+
 ## Profile view {#profile-view}
 
-Profile view displays a sampling of profiles that would qualify for the audience, based on its current rules. Once you've generated at least one estimate for the audience, select **Profile view** to see the sample profiles.
-
-IMAGE
+Profile view displays a sampling of profiles that would qualify for the audience, based on its current rules. Once you've generated at least one estimate for the audience, select **[!UICONTROL Profile view]** to see the sample profiles.
 
 A selection of profiles is displayed. This includes information such as ID, first name, last name and audience membership.
 
-IMAGE
+![The Profile view within Audience Builder is displayed.](/help/segmentation/images/ui/audience-builder/profile-view.png)
 
 | Field | Description |
 | ----- | ----------- |
@@ -410,16 +414,6 @@ IMAGE
 | Last name | The last name of the profile's user. |
 | Audience membership | The number of audiences the profile belongs to. |
 | Full name | The full name of the profile's user. | 
-
-## Code view {#code-view}
-
-Code view displays a code-based version of the audience created in Audience Builder. Once you've created your rule within the rule builder canvas, select **[!UICONTROL Code view]** to see your audience as PQL.
-
-IMAGE
-
-Code view provides a button that allows you to copy the value of the audience to use in API calls. To get the latest version of the audience, make sure you have saved your latest changes to the audience.
-
-IMAGE
 
 ## Audience validation {#audience-validation}
 
