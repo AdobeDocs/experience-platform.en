@@ -639,7 +639,7 @@ If you select an invalid evaluation method, you will be prompted to either chang
 
 ![The evaluation method pop up. If an ineligible evaluation method is selected, the pop up explains why it is ineligible.](../images/ui/segment-builder/ineligible-evaluation-method.png)
 
-More information about the different segment definition evaluation methods can be found in the [segmentation overview](../home.md#evaluate-segments).
+More information about the different segment definition evaluation methods can be found in the [segmentation overview](../home.md#evaluate-audiences).
 
 ## Next steps {#next-steps}
 
