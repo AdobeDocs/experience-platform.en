@@ -31,7 +31,7 @@ For information on how to successfully make calls to Experience Platform APIs, s
 
 ### Gather values for required headers
 
-In order to make calls to Experience Platform APIs, you must first complete the authentication tutorial. Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to Experience Platform APIs, you must first complete the authentication tutorial. Completing the [authentication tutorial](../../../../../landing/api-authentication.md) provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 ```json
 Authorization: Bearer {ACCESS_TOKEN}
