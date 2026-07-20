@@ -34,7 +34,7 @@ A technology company launched a new product and wants to drive awareness among c
 | Target Identity | Source field format | Considerations |
 |---|---|---|
 | `email` | Plain text (unhashed) email addresses | Map unhashed email addresses as the **source** field. Experience Platform sanitizes and hashes the email addresses before exporting them to [!DNL Microsoft Ads]. |
-| `email_lc_sha256` | Already-hashed (SHA-256) email addresses | Map email addresses that you have already sanitized and hashed with SHA-256 as the **source** field. Experience Platform sends these values to [!DNL Microsoft Ads] without further sanitization or hashing. You are responsible for correct sanitization and hashing before mapping. |
+| `email_lc_sha256` | Already-hashed (SHA-256) email addresses | Map email addresses that you have already sanitized and hashed with SHA-256 as the **source** field, following the [!DNL Microsoft Ads] [sanitization and hashing requirements](https://learn.microsoft.com/en-us/advertising/msa-help/hlp_ba_conc_uet_enhancedconversions#format-and-hash-the-data). Experience Platform sends these values to [!DNL Microsoft Ads] without further sanitization or hashing. You are responsible for correct sanitization and hashing before mapping. |
 
 {style="table-layout:auto"}
 
@@ -177,7 +177,7 @@ Experience Platform sanitizes and hashes plain text email addresses before expor
 
 >[!IMPORTANT]
 >
->Experience Platform sends already-hashed email addresses to [!DNL Microsoft Ads] without further sanitization or hashing. Follow the [!DNL Microsoft Ads] sanitization requirements (lowercase, trim, then SHA-256) before mapping. Mapping a non-email field, such as a city name, is still sanitized and hashed but does not produce valid matches.
+>Experience Platform sends already-hashed email addresses to [!DNL Microsoft Ads] without further sanitization or hashing. Follow the [!DNL Microsoft Ads] [sanitization and hashing requirements](https://learn.microsoft.com/en-us/advertising/msa-help/hlp_ba_conc_uet_enhancedconversions#format-and-hash-the-data) (lowercase, trim, then SHA-256) before mapping. Mapping a non-email field, such as a city name, is still sanitized and hashed but does not produce valid matches.
 
 ![UI image showing the mapping step with IdentityMap Email mapped to Identity email.](../../assets/catalog/advertising/microsoft-ads-customer-match/mapping.png)
 
@@ -196,7 +196,7 @@ Match rate refers to the percentage of profiles in a [!DNL Real-Time CDP] audien
 * [!DNL Microsoft Ads] only matches email addresses that already exist in its user graph. Emails that [!DNL Microsoft Ads] does not recognize do not create new user records and are not targetable. This is a common cause of lower-than-expected match rates.
 * Experience Platform filters out profiles that do not have an email address before export. Only profiles with at least one email address are included in the export payload.
 * Experience Platform sends all email addresses associated with a profile. You cannot configure which emails are sent.
-* For the `email_lc_sha256` namespace, match rates depend on correct sanitization and hashing. Follow the [!DNL Microsoft Ads] sanitization requirements (lowercase, trim, then SHA-256) before mapping. Experience Platform does not re-sanitize already-hashed values.
+* For the `email_lc_sha256` namespace, match rates depend on correct sanitization and hashing. Follow the [!DNL Microsoft Ads] [sanitization and hashing requirements](https://learn.microsoft.com/en-us/advertising/msa-help/hlp_ba_conc_uet_enhancedconversions#format-and-hash-the-data) (lowercase, trim, then SHA-256) before mapping. Experience Platform does not re-sanitize already-hashed values.
 * Map only valid email fields as the source for either identity. Mapping a non-email field, such as a city name, is still sanitized and hashed but does not produce valid matches.
 
 ## Additional resources {#additional-resources}
