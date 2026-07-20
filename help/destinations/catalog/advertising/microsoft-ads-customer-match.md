@@ -161,7 +161,7 @@ See [Activate audience data to streaming audience export destinations](../../ui/
 
 ### Mapping {#mapping}
 
-In the **[!UICONTROL Mapping]** step, map an email identity from your source profiles to one of the two target identities in [!DNL Microsoft Ads Customer Match]. Select the option that matches whether your source email addresses are already hashed.
+In the **[!UICONTROL Mapping]** step, map an email identity from your source profiles to one of the two target identities in [!DNL Microsoft Ads Customer Match]. Select the option that matches whether your source email addresses are already hashed. No transformation step is required in the mapping UI. Map a plain text source field to `email`, or a pre-hashed source field to `email_lc_sha256`. Experience Platform hashes plain text email addresses automatically at export time.
 
 **Map a plain text email address**
 
