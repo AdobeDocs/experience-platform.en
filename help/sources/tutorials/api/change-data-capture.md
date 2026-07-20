@@ -121,7 +121,7 @@ Enable change data capture for cloud storage sources by following these steps:
 
 All cloud storage sources use the same `_change_request_type` column format described in the [File-based sources](#file-based-sources) section above.
 
-**Example: enable change data capture when creating a cloud storage source connection**
+### Example: enable change data capture when creating a cloud storage source connection
 
 When creating your cloud storage source connection, set `params.cdcEnabled` to `true` to enable change data capture. For file-based sources, change operations also rely on the `_change_request_type` control column described above.
 
@@ -251,7 +251,7 @@ Read the following documentation for steps on how to enable change data capture 
 * [Create a [!DNL Snowflake] base connection](../api/create/databases/snowflake.md).
 * [Create a source connection for a database](../api/collect/database-nosql.md#create-a-source-connection).
 
-**Example: enable change data capture when creating a database source connection**
+### Example: enable change data capture when creating a database source connection
 
 For supported database sources, set `params.cdcEnabled` to `true` when creating your source connection to enable change data capture. Before using this option, make sure that change tracking is enabled in your source system and that Data Mirror with relational schemas is configured in Experience Platform.
 

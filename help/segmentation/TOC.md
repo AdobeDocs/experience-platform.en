@@ -33,6 +33,7 @@ nudge: true
     - [Audience Composition](ui/audience-composition.md)
     - {hide-from-toc} [Audience Composition enhancements](ui/composition-enhancements.md)
     - [Segment Builder](ui/segment-builder.md)
+    - {hide-from-toc} [Audience Builder](ui/audience-builder.md)
     - [Segment Builder (B2B Edition)](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/segmentation/audience-builder)
     - [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
     - {hide-from-toc} [Ignore year time constraint update](ui/ignore-year.md)
