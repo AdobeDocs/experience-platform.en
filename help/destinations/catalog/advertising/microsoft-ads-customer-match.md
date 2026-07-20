@@ -31,10 +31,10 @@ A technology company launched a new product and wants to drive awareness among c
 
 [!DNL Microsoft Ads Customer Match] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
-| Target Identity | Description | Considerations |
+| Target Identity | Source field format | Considerations |
 |---|---|---|
-| `email` | Plain text email addresses | Map plain text (unhashed) email addresses as the **source** field. Experience Platform sanitizes and hashes the email addresses before exporting them to [!DNL Microsoft Ads]. |
-| `email_lc_sha256` | Already-hashed email addresses | Map email addresses that you have already sanitized and hashed with SHA-256 as the **source** field. Experience Platform sends these values to [!DNL Microsoft Ads] without further sanitization or hashing. You are responsible for correct sanitization and hashing before mapping. |
+| `email` | Plain text (unhashed) email addresses | Map unhashed email addresses as the **source** field. Experience Platform sanitizes and hashes the email addresses before exporting them to [!DNL Microsoft Ads]. |
+| `email_lc_sha256` | Already-hashed (SHA-256) email addresses | Map email addresses that you have already sanitized and hashed with SHA-256 as the **source** field. Experience Platform sends these values to [!DNL Microsoft Ads] without further sanitization or hashing. You are responsible for correct sanitization and hashing before mapping. |
 
 {style="table-layout:auto"}
 
@@ -191,7 +191,7 @@ To verify if data has been exported successfully to the [!DNL Microsoft Ads Cust
 
 ## Match rates {#match-rates}
 
-Match rate refers to the percentage of profiles in an exported audience that [!DNL Microsoft Ads] successfully matches to existing users in its network. Several factors affect match rates for the [!DNL Microsoft Ads Customer Match] destination.
+Match rate refers to the percentage of profiles in a [!DNL Real-Time CDP] audience that [!DNL Microsoft Ads] successfully matches to existing users in its network when the audience is created in [!DNL Microsoft Advertising]. Several factors affect match rates for the [!DNL Microsoft Ads Customer Match] destination.
 
 * [!DNL Microsoft Ads] only matches email addresses that already exist in its user graph. Emails that [!DNL Microsoft Ads] does not recognize do not create new user records and are not targetable. This is a common cause of lower-than-expected match rates.
 * Experience Platform filters out profiles that do not have an email address before export. Only profiles with at least one email address are included in the export payload.
