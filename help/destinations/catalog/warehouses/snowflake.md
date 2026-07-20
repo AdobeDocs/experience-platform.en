@@ -43,6 +43,13 @@ topic_v2:
 ---
 # Snowflake Streaming connection {#snowflake-destination}
 
+## Supported apps {#supported-apps}
+
+This destination is available in the following [!DNL Adobe] apps:
+
+* [[!DNL Real-Time CDP]](../../../rtcdp/home.md)
+* [[!DNL Real-Time CDP Collaboration]](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home)
+
 >[!AVAILABILITY]
 >
 >This destination connector is in limited availability and only available to [!DNL Real-Time CDP] Ultimate customers provisioned in the [VA7 region](/help/landing/multi-cloud.md#azure-regions).
@@ -119,6 +126,7 @@ This section describes which types of audiences you can export to this destinati
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the [!DNL Adobe Experience Platform] [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into [!DNL Adobe Experience Platform] from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other [!DNL Adobe Experience Platform] apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
+| [!DNL Real-Time CDP Collaboration] audiences | Yes | Audiences activated from a [!DNL Real-Time CDP Collaboration] project, sourced from [match keys](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/connect/establishing-connections#match-keys). |
 
 {style="table-layout:auto"}
 
@@ -130,6 +138,7 @@ Supported audiences by audience data type:
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
 | [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
+| [!DNL Real-Time CDP Collaboration] audiences | Yes | Audiences that contain [match keys](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/connect/establishing-connections#match-keys), activated from a [!DNL Real-Time CDP Collaboration] project. | Cross-brand and cross-publisher audience activation |
 
 {style="table-layout:auto"}
 
@@ -203,6 +212,10 @@ When you are finished providing details for your destination connection, select 
 
 ## Activate audiences to this destination {#activate}
 
+You can activate audiences to this destination from [!DNL Real-Time CDP] or from a [!DNL Real-Time CDP Collaboration] project.
+
+### Activate audiences from [!DNL Real-Time CDP] {#activate-rtcdp}
+
 >[!IMPORTANT]
 >
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
@@ -210,13 +223,17 @@ When you are finished providing details for your destination connection, select 
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
-### Map attributes {#map}
+#### Map attributes {#map}
 
 The Snowflake destination supports the mapping of profile attributes to custom attributes.
 
 ![Experience Platform user interface image showing the mapping screen for the Snowflake destination.](../../assets/catalog/warehouses/snowflake/mapping.png)
 
 The target attributes are automatically created in Snowflake using the attribute name that you provide in the **[!UICONTROL Attribute name]** field.
+
+### Activate audiences from [!DNL Real-Time CDP Collaboration] {#activate-collaboration}
+
+For instructions on activating audiences to this destination from a [!DNL Real-Time CDP Collaboration] project, see the [Real-Time CDP Collaboration destinations overview](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/overview).
 
 ## Exported data / Validate data export {#exported-data}
 
