@@ -337,19 +337,13 @@ For example, you are activating an audience called "Loyalty Members in Californi
 >
 >   - [[!DNL Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md)
 >   - [[!DNL Adobe Target]](../../destinations/catalog/personalization/adobe-target-connection.md)
->   - [[!DNL Bombora]](../../destinations/catalog/advertising/bombora.md)
 >   - [[!DNL Custom Personalization]](../../destinations/catalog/personalization/custom-personalization.md)
->   - [[!DNL Demandbase]](../../destinations/catalog/advertising/demandbase.md)
 >   - [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md)
 >   - [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/connections/destinations){target="_blank"}
 >   - [[!DNL Google Ad Manager]](../../destinations/catalog/advertising/google-ad-manager.md)
 >   - [[!DNL Google Ads]](../../destinations/catalog/advertising/google-ads-destination.md)
 >   - [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md)
 >   - [[!DNL Google DV360]](../../destinations/catalog/advertising/google-dv360.md)
->   - [[!DNL LINE]](../../destinations/catalog/mobile-engagement/line.md)
->   - [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
->   - [[!DNL SendGrid]](../../destinations/catalog/email-marketing/sendgrid.md)
->   - [[!DNL Snap Inc]](../../destinations/catalog/advertising/snap-inc.md)
 >
 >- For batch destinations, audience-level metrics are currently recorded for successful dataflow runs only. They are not recorded for failed dataflow runs and excluded records. For dataflow runs to streaming destinations, metrics are captured and displayed for activated and excluded records.
 

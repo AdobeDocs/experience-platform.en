@@ -35,7 +35,7 @@ Adobe recommends that you categorize your segments as follows:
 
 >[!TIP]
 >
->Adobe Real-Time CDP offers [three types of audience evaluation](/help/segmentation/home.md#evaluate-segments): [!UICONTROL Batch], [!UICONTROL Streaming], and [!UICONTROL Edge]. Customers who use real-time segments in Audience Manager may be restricted by the current limitation of 500 streaming segments in Real-Time CDP. Read more about [segmentation guardrails](/help/profile/guardrails.md).
+>Adobe Real-Time CDP offers [three types of audience evaluation](/help/segmentation/home.md#evaluate-audiences): [!UICONTROL Batch], [!UICONTROL Streaming], and [!UICONTROL Edge]. Customers who use real-time segments in Audience Manager may be restricted by the current limitation of 500 streaming segments in Real-Time CDP. Read more about [segmentation guardrails](/help/profile/guardrails.md).
 
 ## 2. Which segments are critical to send through via [!UICONTROL Audience Manager Source Connector]?
 

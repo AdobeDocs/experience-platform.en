@@ -4,7 +4,7 @@ description: Learn about the Repeat Experience Data Model (XDM) data type.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 exl-id: 9d40bc1d-33d1-4c33-a143-13fdcf8dc255
-TQID: https://experienceleague.adobe.com/hL2smAVf4o-qCbpsVkO9LT7xwxJlVGg---7OQ-G7ISc
+TQID: https://experienceleague.adobe.com/hL2smAVf4o-qCbpsVkO9LT7xwxJlVGg%2D%2D%2D7OQ-G7ISc
 product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
     internal-label: Experience Platform
