@@ -58,9 +58,11 @@ To activate audiences to destinations, you must have successfully [connected to 
 
     ![Activate control highlighted in the destinations catalog.](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
 
+1. (Optional) Use the search box to find a destination connection by name, or select the filter icon to narrow down the results based on your preferred criteria.
+
 1. Select the destination connection that you want to use to activate your audiences, then select **[!UICONTROL Next]**.
 
-    ![A destination connection highlighted in the Select destination step.](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
+    ![Search box and filter icon highlighted above the list of destination connections in the Select destination step.](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
 1. Move to the next section to [select your audiences](#select-audiences).
 
@@ -68,13 +70,15 @@ To activate audiences to destinations, you must have successfully [connected to 
 
 To select the audiences that you want to activate to the destination, use the checkboxes to the left of the audience names, then select **[!UICONTROL Next]**.
 
+Use the search box to find an audience by name, or select the filter icon to narrow down the results by evaluation type (edge, streaming, or batch), namespace origin, or tags.
+
 You can select from multiple types of audiences, depending on their origin:
 
 * **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [segmentation documentation](../../segmentation/ui/overview.md) for more details.
 * **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Experience Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/audience-portal.md#import-audience).
 * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
 
-![Several audiences highlighted in the Select audiences step.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
+![Search box, filter icon, and several audiences highlighted in the Select audiences step.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
 ## Map attributes and identities {#mapping}
 

@@ -139,11 +139,15 @@ After you have created a **[!UICONTROL Custom Personalization With Attributes]**
 
     ![Activate audience control highlighted on a destination card in the catalog.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
+1. (Optional) Use the search box to find a destination connection by name, or select the filter icon to narrow down the results based on your preferred criteria.
+
 1. Select the destination connection that you previously configured, then select **[!UICONTROL Next]**.
 
-    ![Select destination step in the activation workflow.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
+    ![Search box and filter icon highlighted above the list of destination connections in the Select destination step of the activation workflow.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
 1. Select your audiences. Use the checkboxes to the left of the audience names to select the audiences that you want to activate to the destination, then select **[!UICONTROL Next]**.
+
+    Use the search box to find an audience by name, or select the filter icon to narrow down the results by evaluation type (edge, streaming, or batch), namespace origin, or tags.
 
     You can select from multiple types of audiences, depending on their origin:
     
@@ -151,7 +155,7 @@ After you have created a **[!UICONTROL Custom Personalization With Attributes]**
     * **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Experience Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/audience-portal.md#import-audience).
     * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
 
-      ![Select audiences step of the activation workflow with several audiences highlighted.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
+      ![Select audiences step of the activation workflow showing the search box, filter icon, and several audiences highlighted.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
 1. Select the profile attributes that you want to be made available for the edge profiles.
 

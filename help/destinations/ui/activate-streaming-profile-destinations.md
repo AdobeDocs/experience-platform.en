@@ -60,9 +60,11 @@ To activate data to destinations, you must have successfully [connected to a des
 
     ![Image highlighting the activate audiences control in the destinations catalog tab.](../assets/ui/activate-streaming-profile-destinations/activate-audiences-button.png)
 
+1. (Optional) Use the search box to find a destination connection by name, or select the filter icon to narrow down the results based on your preferred criteria.
+
 1. Select the destination connection that you want to use to activate your audiences, then select **[!UICONTROL Next]**.
 
-    ![Image showing a selection of two destinations that you can connect to.](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
+    ![Search box and filter icon highlighted above the list of destination connections that you can connect to.](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
 1. Move to the next section to [select your audiences](#select-audiences).
 
@@ -70,13 +72,15 @@ To activate data to destinations, you must have successfully [connected to a des
 
 To select the audiences that you want to activate to the destination, use the checkboxes to the left of the audience names, then select **[!UICONTROL Next]**.
 
+Use the search box to find an audience by name, or select the filter icon to narrow down the results by evaluation type (edge, streaming, or batch), namespace origin, or tags.
+
 You can select from multiple types of audiences, depending on their origin:
 
 * **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [Audience Portal documentation](../../segmentation/ui/audience-portal.md) for more details.
 * **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Experience Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/audience-portal.md#import-audience).
 * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
 
-![Image highlighting the checkboxes selection in the Select audiences step of the activation workflow.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
+![Image highlighting the search box, filter icon, and checkboxes selection in the Select audiences step of the activation workflow.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
 
 ## Select profile attributes {#select-attributes}
 

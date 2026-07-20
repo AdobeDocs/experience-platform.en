@@ -76,15 +76,19 @@ Select your desired file format for export when [creating a connection to the fi
 
     ![Activate audiences control highlighted in the catalo page.](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
+1. (Optional) Use the search box to find a destination connection by name, or select the filter icon to narrow down the results based on your preferred criteria.
+
 1. Select the destination connection that you want to use to activate your audiences, then select **[!UICONTROL Next]**.
 
-    ![Checkboxes highlighted to select one or multiple destinations to activate audiences to.](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+    ![Search box and filter icon highlighted above the list of destination connections, with checkboxes to select one or multiple destinations to activate audiences to.](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. Move to the next section to [select your audiences](#select-audiences).
 
 ## Select your audiences {#select-audiences}
 
 To select the audiences that you want to activate to the destination, use the checkboxes to the left of the audience names, then select **[!UICONTROL Next]**.
+
+Use the search box to find an audience by name, or select the filter icon to narrow down the results by evaluation type (edge, streaming, or batch), namespace origin, or tags.
 
 You can select from multiple types of audiences, depending on their origin:
 
@@ -96,7 +100,7 @@ You can select from multiple types of audiences, depending on their origin:
 >
 >When activating custom upload audiences to batch file-based destinations, there is a limit of 10 such audiences that you can activate in a dataflow.
 
-![Checkboxes shown when selecting one or multiple audiences to activate.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
+![Search box, filter icon, and checkboxes shown when selecting one or multiple audiences to activate.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
