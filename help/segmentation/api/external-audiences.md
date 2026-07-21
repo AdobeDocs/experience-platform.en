@@ -102,6 +102,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
             }
         ],
         "sourceSpec": {
+            "format": "delimited",
             "params": {
                 "path": "activation/sample-source/example.csv",
                 "type": "file",
@@ -127,7 +128,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `description` | String | An optional description for the external audience. |
 | `customAudienceId` | String | An optional identifier for your external audience. |
 | `fields` | Array of objects | The list of fields and their data types. You must have a minimum of 1 field and a maximum of 41 fields in your array. One of the fields **must** be an identity field, and include the `identityNs`. When creating the list of fields, you can add the following items: <ul><li>`name`: **Required** The name of the field that is part of the external audience specification.</li><li>`type`: **Required** The type of data that goes into the field. Supported values include `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`), and `boolean`.</li><li>`identityNs`: **Required for identity field** The namespace that is used by the identity field. Supported values include all valid namespaces, such as `ECID` or `email`.</li><li>`labels`: *Optional* An array of access control labels for the field. More information about the available access control labels can be found in the [data usage labels glossary](/help/data-governance/labels/reference.md). </li></ul> |
-| `sourceSpec` | Object | An object that contains the information where the external audience is located. When using this object, you **must** include the following information: <ul><li>`path`: **Required**: The location of the external audience or the folder that contains the external audience within the source. The file path **cannot** contain any spaces. For example, if your path is `activation/sample-source/Example CSV File.csv`, set the path to `activation/sample-source/ExampleCSVFile.csv`. You can find the path to your source within the **Source data** column of the dataflows section.</li><li>`type`: **Required** The type of the object you're retrieving from the source. This value can either be `file` or `folder`.</li><li>`sourceType`: *Optional* The type of source you're retrieving from. Currently, the only supported value is `Cloud Storage`.</li><li>`cloudType`: **Required** The type of cloud storage, based off of the source type. Supported values include `S3`, `DLZ`, `GCS`, `Azure`, and `SFTP`.</li><li>`baseConnectionId`: The ID of the base connection, and is provided from your source provider. This value is **required** if using a `cloudType` value of `S3`, `GCS`, or `SFTP`. Otherwise, you do **not** need to include this parameter. For more information, please read the [source connectors overview](../../sources/home.md).</li><li>`encryption`: *Optional* An object that contains the encryption key required for asynchronous encrypted data ingestion.</li><ul><li>`publicKeyId`: **Required**: The public key ID that was returned when you generated the encryption key pair. For more information, read the [encrypt data guide](/help/sources/tutorials/api/encrypt-data.md#create-encryption-key-pair). </li><li>`signVerificationKeyId`: *Optional*: The public key ID that was returned when you shared your customer managed key with Experience Platform. **Note:** This field is labeled as `publicKeyId` in the response for that API request. For more information, read the [encrypt data guide](/help/sources/tutorials/api/encrypt-data.md##share-your-public-key-to-experience-platform).</li></ul></ul> |
+| `sourceSpec` | Object | An object that contains the information where the external audience is located. When using this object, you **must** include the following information: <ul><li>`format`: *Optional* The format that the audience comes in. This value can be `delimited`, `json`, or `parquet`. If left empty, this value defaults to `delimited`. </li><li>`path`: **Required**: The location of the external audience or the folder that contains the external audience within the source. The file path **cannot** contain any spaces. For example, if your path is `activation/sample-source/Example CSV File.csv`, set the path to `activation/sample-source/ExampleCSVFile.csv`. You can find the path to your source within the **Source data** column of the dataflows section.</li><li>`type`: **Required** The type of the object you're retrieving from the source. This value can either be `file` or `folder`.</li><li>`sourceType`: *Optional* The type of source you're retrieving from. Currently, the only supported value is `Cloud Storage`.</li><li>`cloudType`: **Required** The type of cloud storage, based off of the source type. Supported values include `S3`, `DLZ`, `GCS`, `Azure`, and `SFTP`.</li><li>`baseConnectionId`: The ID of the base connection, and is provided from your source provider. This value is **required** if using a `cloudType` value of `S3`, `GCS`, or `SFTP`. Otherwise, you do **not** need to include this parameter. For more information, please read the [source connectors overview](../../sources/home.md).</li><li>`encryption`: *Optional* An object that contains the encryption key required for asynchronous encrypted data ingestion.</li><ul><li>`publicKeyId`: **Required**: The public key ID that was returned when you generated the encryption key pair. For more information, read the [encrypt data guide](/help/sources/tutorials/api/encrypt-data.md#create-encryption-key-pair). </li><li>`signVerificationKeyId`: *Optional*: The public key ID that was returned when you shared your customer managed key with Experience Platform. **Note:** This field is labeled as `publicKeyId` in the response for that API request. For more information, read the [encrypt data guide](/help/sources/tutorials/api/encrypt-data.md##share-your-public-key-to-experience-platform).</li></ul></ul> |
 | `ttlInDays` | Integer | The data expiration for the external audience, in days. This value can be set from 1 to 90. By default, the data expiration is set to 30 days. |
 | `audienceType` | String | The audience type for the external audience. Currently, only `people` is supported. |
 | `originName` | String | **Required** The origin of the audience. This states where the audience comes from. For external audiences, you should use `CUSTOM_UPLOAD`. |
@@ -171,6 +172,7 @@ A successful response returns HTTP status 202 with details of your newly created
             }
         ],
         "sourceSpec": {
+            "format": "delimited",
             "params": {
                 "path": "activation/sample-source/example.csv",
                 "type": "file",
@@ -197,7 +199,7 @@ A successful response returns HTTP status 202 with details of your newly created
 | `name` | String | The name for the external audience. |
 | `description` | String | The description for the external audience. |
 | `fields` | Array of objects | The list of fields and their data types. This array determines what fields you need in your external audience. |
-| `sourceSpec` | Object | An object that contains the information where the external audience is located. |
+| `sourceSpec` | Object | An object that contains the information about the external audience, included its format and where it's is located. |
 | `ttlInDays` | Integer | The data expiration for the external audience, in days. This value can be set from 1 to 90. By default, the data expiration is set to 30 days. |
 | `audienceType` | String | The audience type for the external audience. |
 | `originName` | String | **Required** The origin of the audience. This states where the audience comes from. |
@@ -269,6 +271,7 @@ A successful response returns HTTP status 200 with details of the external audie
             }
         ],
         "sourceSpec": {
+            "format": "parquet",
             "params": {
                 "path": "activation/sample-source/example.csv",
                 "type": "file",
@@ -387,11 +390,14 @@ A successful response returns HTTP status 200 with details of the updated extern
         }
     ],
     "sourceSpec": {
-        "path": "activation/sample-source/example.csv",
-        "type": "file",
-        "sourceType": "Cloud Storage",
-        "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
-        },
+        "format": "delimited",
+        "params":{
+            "path": "activation/sample-source/example.csv",
+            "type": "file",
+            "sourceType": "Cloud Storage",
+            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+        }
+    },
     "ttlInDays": 40,
     "labels": ["core/C1"],
     "audienceType": "people",
@@ -427,9 +433,23 @@ POST /external-audience/{AUDIENCE_ID}/runs
 
 **Request**
 
-The following request triggers an ingestion run for the external audience.
+The request to trigger an ingestion run for the external audience differs on the source type of the external audience.
 
-+++ A sample request to start an audience ingestion.
+>[!BEGINTABS]
+
+>[!TAB File]
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+No body is required when triggering an ingestion run for an external audience that is from a file-based source.
+
+>[!TAB Folder]
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
@@ -445,13 +465,17 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `dataFilterStartTime` | Epoch timestamp | **Required** The range specifying the starting time to determine which files will be processed. This means that the files selected will be files **after** the specified time. |
-| `dataFilterEndTime` | Epoch timestamp | The range specifying the ending time which the flow will run to select which files will be processed. This means that the files selected will be files **before** the specified time. |
+| `dataFilterEndTime` | Epoch timestamp | *Optional* The range specifying the ending time which the flow will run to select which files will be processed. This means that the files selected will be files **before** the specified time. If left blank, this value defaults to the current time. |
 
-+++
+>[!ENDTABS]
 
 **Response**
 
-A successful response returns HTTP status 200 with details about the ingestion run.
+A successful response returns HTTP status 200. The details about the ingestion run differ, based off of the external audience's source type.
+
+>[!BEGINTABS]
+
+>[!TAB File]
 
 +++ A sample response when starting the audience ingestion.
 
@@ -478,6 +502,10 @@ A successful response returns HTTP status 200 with details about the ingestion r
 | `dataFilterEndTime` | Epoch timestamp | The range specifying the ending time the flow runs to select which files were processed. |
 | `createdAt` | Long epoch timestamp | The timestamp, in seconds, when the request to create the external audience was submitted. |
 | `createdBy` | String | The ID of the user who created the external audience. |
+
+>[!TAB Folder]
+
+>[!ENDTABS]
 
 +++
 
