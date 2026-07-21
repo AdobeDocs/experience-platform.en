@@ -122,13 +122,16 @@ Read the [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/collabor
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which types of audiences you can export to this destination. The two tables below indicate which audiences this connector supports, by _audience origin_ and _profile types included in the audience_:
+This section describes which types of audiences you can export to this destination. The supported audiences differ depending on the [!DNL Adobe CX Enterprise] application from which you activate them to this destination.
+
+### [!DNL Real-Time CDP] {#supported-audiences-rtcdp}
+
+The two tables below indicate which audiences this connector supports when you activate from [!DNL Real-Time CDP], by _audience origin_ and _profile types included in the audience_:
 
 | Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the [!DNL Adobe Experience Platform] [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into [!DNL Adobe Experience Platform] from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other [!DNL Adobe Experience Platform] apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
-| [!DNL Real-Time CDP Collaboration] audiences | Yes | Audiences built and activated in [!DNL Real-Time CDP Collaboration], not in [!DNL Real-Time CDP]. These audiences are sourced from [match keys](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/connect/establishing-connections#match-keys). |
 
 {style="table-layout:auto"}
 
@@ -140,9 +143,12 @@ Supported audiences by audience data type:
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | No | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
 | [Dataset exports](/help/catalog/datasets/overview.md) | No | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
-| [!DNL Real-Time CDP Collaboration] audiences | Yes | Audiences that contain [match keys](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/connect/establishing-connections#match-keys), built and activated in [!DNL Real-Time CDP Collaboration] rather than in [!DNL Real-Time CDP]. | Cross-brand and cross-publisher audience activation |
 
 {style="table-layout:auto"}
+
+### [!DNL Real-Time CDP Collaboration] {#supported-audiences-collaboration}
+
+In [!DNL Real-Time CDP Collaboration], you can activate audiences that contain [match keys](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/connect/establishing-connections#match-keys). These audiences are built within a Collaboration project rather than through the Experience Platform [!DNL Segmentation Service]. For more information, see the [Real-Time CDP Collaboration destinations overview](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/overview).
 
 ## Export type and frequency {#export-type-frequency}
 

@@ -47,13 +47,16 @@ Create a live outbound connection to [!DNL Google Cloud Storage] to periodically
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which types of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination. The supported audiences differ depending on the [!DNL Adobe CX Enterprise] application from which you activate them to this destination.
+
+### [!DNL Real-Time CDP] {#supported-audiences-rtcdp}
+
+The following audiences are supported when you activate from [!DNL Real-Time CDP]:
 
 | Audience origin | Supported | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Yes | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | All other audience origins | Yes | This category includes all audience origins outside of audiences generated through the [!DNL Segmentation Service]. Read about the [various audience origins](/help/segmentation/ui/audience-portal.md#customize). Some examples include: <ul><li> custom upload audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files,</li><li> look-alike audiences, </li><li> federated audiences, </li><li> audiences generated in other Experience Platform apps such as [!DNL Adobe Journey Optimizer], </li><li> and more. </li></ul> |
-| [!DNL Real-Time CDP Collaboration] audiences | Yes | Audiences built and activated in [!DNL Real-Time CDP Collaboration], not in [!DNL Real-Time CDP]. These audiences are sourced from [match keys](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/connect/establishing-connections#match-keys). |
 
 {style="table-layout:auto"}
 
@@ -67,10 +70,13 @@ Supported audiences by audience data type:
 | [Account audiences](/help/segmentation/types/account-audiences.md) | No | Target individuals within specific organizations for account-based marketing strategies. | B2B marketing |
 | [Prospect audiences](/help/segmentation/types/prospect-audiences.md) | Yes | Target individuals who are not yet customers but share characteristics with your target audience. | Prospecting with third-party data |
 | [Dataset exports](/help/catalog/datasets/overview.md) | Yes | Collections of structured data stored in the [!DNL Adobe Experience Platform] Data Lake. | Reporting, data science workflows |
-| [!DNL Real-Time CDP Collaboration] audiences | Yes | Audiences that contain [match keys](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/connect/establishing-connections#match-keys), built and activated in [!DNL Real-Time CDP Collaboration] rather than in [!DNL Real-Time CDP]. | Cross-brand and cross-publisher audience activation |
 
 {style="table-layout:auto"}
 
+
+### [!DNL Real-Time CDP Collaboration] {#supported-audiences-collaboration}
+
+In [!DNL Real-Time CDP Collaboration], you can activate audiences that contain [match keys](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/connect/establishing-connections#match-keys). These audiences are built within a Collaboration project rather than through the Experience Platform [!DNL Segmentation Service]. For more information, see the [Real-Time CDP Collaboration destinations overview](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/overview).
 
 ## Export type and frequency {#export-type-frequency}
 
